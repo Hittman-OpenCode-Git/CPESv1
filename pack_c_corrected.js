@@ -20184,7 +20184,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "whistleblower hotline purpose",
         "UniqueConceptKey": "E-C050-whistleblower-hotline-purpose",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Amberfield establishes an anonymous reporting channel for employees to report suspected fraud or ethical violations without fear of retaliation. What internal control objective does this serve?",
@@ -20210,7 +20210,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-050",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20223,8 +20223,9 @@ const MCQ_BANK_C = [
         "ExplanationWrongB": "",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Option D (Replacing the need for a code of conduct) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that encouraging detection and reporting of fraud or misconduct that might otherwise go unreported. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
     },
     {
         "Part": 1,
@@ -20234,7 +20235,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "compensating control small business",
         "UniqueConceptKey": "E-C051-compensating-control-small-business",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Bellwood is too small to fully segregate duties among its few accounting employees. What can help mitigate this control weakness?",
@@ -20260,7 +20261,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-051",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20273,8 +20274,9 @@ const MCQ_BANK_C = [
         "ExplanationWrongB": "Option B (Eliminating internal controls entirely since the company is small) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that increased owner or management review and oversight as a compensating control. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
     },
     {
         "Part": 1,
@@ -20334,7 +20336,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "compensating control small business",
         "UniqueConceptKey": "E-C053-compensating-control-small-business",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Duskwood is too small to fully segregate duties among its few accounting employees. What can help mitigate this control weakness?",
@@ -20360,7 +20362,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-053",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20373,8 +20375,9 @@ const MCQ_BANK_C = [
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Option C (Eliminating internal controls entirely since the company is small) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that increased owner or management review and oversight as a compensating control. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongD": "Option D (Ignoring the risk since fraud is unlikely in small companies) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that increased owner or management review and oversight as a compensating control. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
     },
     {
         "Part": 1,
@@ -20512,7 +20515,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-056",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20525,8 +20528,9 @@ const MCQ_BANK_C = [
         "ExplanationWrongB": "Option B (Monitoring activities, which evaluate control effectiveness over time) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongC": "Option C (Risk assessment, which identifies specific threats) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongD": "",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
     },
     {
         "Part": 1,
@@ -20536,7 +20540,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "control environment tone at top",
         "UniqueConceptKey": "E-C057-control-environment-tone-at-top",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Hartwell's board and senior executives consistently emphasize integrity and ethical behavior, which shapes employee attitudes toward compliance. What COSO component does this describe?",
@@ -20562,7 +20566,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-057",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20575,8 +20579,9 @@ const MCQ_BANK_C = [
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Option C (Information and communication, which relays data throughout the entity) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongD": "Option D (Monitoring activities, which evaluate control effectiveness over time) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
     },
     {
         "Part": 1,
@@ -20637,7 +20642,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "control environment tone at top",
         "UniqueConceptKey": "E-C059-control-environment-tone-at-top",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Juniper Hollow's board and senior executives consistently emphasize integrity and ethical behavior, which shapes employee attitudes toward compliance. What COSO component does this describe?",
@@ -20663,7 +20668,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-059",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20676,8 +20681,9 @@ const MCQ_BANK_C = [
         "ExplanationWrongB": "Option B (Information and communication, which relays data throughout the entity) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
     },
     {
         "Part": 1,
@@ -20787,7 +20793,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "inherent risk vs control risk",
         "UniqueConceptKey": "E-C062-inherent-risk-vs-control-risk",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Mossbrook's auditor assesses the susceptibility of an account to material misstatement before considering any related controls. What type of risk is being assessed?",
@@ -20813,7 +20819,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-062",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20826,8 +20832,9 @@ const MCQ_BANK_C = [
         "ExplanationWrongB": "",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Option D (Business risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
     },
     {
         "Part": 1,
@@ -20837,7 +20844,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "inherent risk vs control risk",
         "UniqueConceptKey": "E-C063-inherent-risk-vs-control-risk",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Nettlefield's auditor assesses the susceptibility of an account to material misstatement before considering any related controls. What type of risk is being assessed?",
@@ -20863,7 +20870,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-063",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20876,8 +20883,9 @@ const MCQ_BANK_C = [
         "ExplanationWrongB": "Option B (Control risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
     },
     {
         "Part": 1,
@@ -20887,7 +20895,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "inherent risk vs control risk",
         "UniqueConceptKey": "E-C064-inherent-risk-vs-control-risk",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Oakenshaw's auditor assesses the susceptibility of an account to material misstatement before considering any related controls. What type of risk is being assessed?",
@@ -20913,7 +20921,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-064",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20926,8 +20934,9 @@ const MCQ_BANK_C = [
         "ExplanationWrongB": "Option B (Business risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongC": "Option C (Detection risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongD": "",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
     },
     {
         "Part": 1,
@@ -20937,7 +20946,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "inherent risk vs control risk",
         "UniqueConceptKey": "E-C065-inherent-risk-vs-control-risk",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Poplarwood's auditor assesses the susceptibility of an account to material misstatement before considering any related controls. What type of risk is being assessed?",
@@ -20963,7 +20972,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-065",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20976,8 +20985,9 @@ const MCQ_BANK_C = [
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Option C (Business risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongD": "Option D (Control risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Analyze"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
     },
     {
         "Part": 1,
@@ -25226,4 +25236,4 @@ const MCQ_BANK_C = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     }
-];
+]

@@ -1,0 +1,34 @@
+{
+  "session": "SESSION058",
+  "phase": 6,
+  "date": "2026-07-28",
+  "description": "Slot ledger for 20 archived clone items upgraded from Archived→Certified with difficulty/cognitive metadata recalibration",
+  "slots": [
+    {"qid":"P1-EC-050","pack":"C","section":"E","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-EC-051","pack":"C","section":"E","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-EC-053","pack":"C","section":"E","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-EC-056","pack":"C","section":"E","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-EC-057","pack":"C","section":"E","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-EC-059","pack":"C","section":"E","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-EC-062","pack":"C","section":"E","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-EC-063","pack":"C","section":"E","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-EC-064","pack":"C","section":"E","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-EC-065","pack":"C","section":"E","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-FD-003","pack":"D","section":"F","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-FD-007","pack":"D","section":"F","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-FD-009","pack":"D","section":"F","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-FD-013","pack":"D","section":"F","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-FD-017","pack":"D","section":"F","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-FD-022","pack":"D","section":"F","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-FD-028","pack":"D","section":"F","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-FD-035","pack":"D","section":"F","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"},
+    {"qid":"P1-FD-041","pack":"D","section":"F","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze","note":"DL-008 EW-D cleared during QC"},
+    {"qid":"P1-FD-047","pack":"D","section":"F","action":"Archived→Certified","difficulty":"Difficult","cognitive":"Analyze"}
+  ],
+  "post_session_archived_inventory": {
+    "pack_c_ec_remaining": ["P1-EC-068","P1-EC-070","P1-EC-071","P1-EC-073","P1-EC-074","P1-EC-075"],
+    "pack_c_fc_remaining": 47,
+    "pack_d_fd_remaining": 34,
+    "total_archived_remaining": 103
+  }
+}

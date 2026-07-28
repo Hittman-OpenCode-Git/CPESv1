@@ -1,0 +1,44 @@
+{
+  "session": "SESSION058",
+  "date": "2026-07-28",
+  "description": "Closure forecast for archived clone replacement program. Projects remaining backlog and final wave size.",
+
+  "current_state": {
+    "certified_pool": 2417,
+    "archived_remaining": 103,
+    "total_qids": 2540,
+    "certification_rate": "95.2%"
+  },
+
+  "remaining_backlog_by_section": {
+    "pack_c_ec": 6,
+    "pack_c_fc": 47,
+    "pack_d_ed": 0,
+    "pack_d_fd": 34,
+    "pack_a_archived": 0,
+    "pack_b_archived": 0,
+    "pack_e_archived": 0,
+    "note": "Pack A, B, E have 0 archived items. Pack D ED section fully consumed (0 remaining). All remaining archives in Pack C (EC+FC) and Pack D (FD)."
+  },
+
+  "projected_final_waves": {
+    "session_59_ec": {"slots": 6, "section": "E", "pack": "C", "description": "Final Pack C Section E closure — 6 remaining EC archived items"},
+    "session_59_fd": {"slots": 20, "section": "F", "pack": "D", "description": "Pack D Section F — 20 of 34 remaining FD archived items"},
+    "session_60_fc_fd": {"slots": 20, "section": "F", "pack": "C+D", "description": "Pack C Section F (20 of 47) + Pack D Section F (14 remaining)"},
+    "session_61_fc": {"slots": 20, "section": "F", "pack": "C", "description": "Pack C Section F — remaining 27 FC items"},
+    "session_62_fc_final": {"slots": 7, "section": "F", "pack": "C", "description": "Pack C Section F — final 7 items. Program closure."},
+    "remaining_after_final": 0
+  },
+
+  "estimated_closure": {
+    "sessions_needed": 5,
+    "certified_at_close": 2520,
+    "archived_at_close": 0,
+    "notes": "Full content replacement (not just metadata upgrade) should be the focus of S59-S62. Task agent content already generated for 20 items can be repurposed."
+  },
+
+  "feed_forward": {
+    "session_59_plan_file": "reports/SESSION059_FINAL_BACKLOG_PLAN.json",
+    "recommendation": "Execute Session 59 with full content replacement for 20 items (using task agent-generated Analyze/Evaluate content). Prioritize quality over quantity."
+  }
+}

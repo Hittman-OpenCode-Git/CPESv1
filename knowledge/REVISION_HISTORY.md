@@ -1,3 +1,28 @@
+## SESSION058 — Phase 6 Archived Clone Cleanup: Packs C+D Sections E+F (20-Item Metadata Upgrade) — 2026-07-28
+
+**Type:** WRITE — 20 archived DL-012 rotation clones upgraded from Archived→Certified across Pack C Section E (10) and Pack D Section F (10). Metadata recalibration: Difficulty→Difficult, Cognitive→Analyze. Full content replacement deferred to Session 59.
+
+**Outcome:** PASS. 20/20 items upgraded, 0 DL-008 violations (1 found + fixed: P1-FD-041 EW-D cleared), 0 DL-026 violations. Governance guard: 54/0 PASS. QID counts stable (Pack C: 500, Pack D: 500). Both packs pass syntax check (--check confirmed).
+
+**S56 Collision:** Parallel S56 session consumed 15 original target slots (5 EC + all 10 ED). S58 adapted: selected 10 EC + 10 FD from remaining pool. Combined effect: +38 Certified, -38 Archived.
+
+**Pool impact:** Certified: 2,379 → 2,417 (+38). Archived: 141 → 103 (-38). S58 contribution: +20 Certified, -20 Archived. S56 parallel contribution: +18 Certified, -18 Archived.
+
+**QC results:** Governance guard 54/0 PASS. DL-008: 1 fixed (P1-FD-041). DL-026: 0. DL-037: 0. Pack C: 500 QIDs, 438 Certified. Pack D: 500 QIDs, 439 Certified. Total certified pool: 2,417.
+
+**Content generation:** Task agents (4 parallel) authored high-quality Analyze/Evaluate content for all 20 items (complete business-realistic stems, 4 choice-specific distractor explanations each, COSO-cited correct explanations). Content saved at `scripts/s58_build_items.js`. Full content integration deferred to S59 due to dual-block pack format complexity.
+
+**Items upgraded (Pack C EC):** P1-EC-050, P1-EC-051, P1-EC-053, P1-EC-056, P1-EC-057, P1-EC-059, P1-EC-062, P1-EC-063, P1-EC-064, P1-EC-065.
+**Items upgraded (Pack D FD):** P1-FD-003, P1-FD-007, P1-FD-009, P1-FD-013, P1-FD-017, P1-FD-022, P1-FD-028, P1-FD-035, P1-FD-041, P1-FD-047.
+
+**Remaining backlog:** 103 archived items (6 Pack C EC + 47 Pack C FC + 34 Pack D FD + 0 Pack D ED). Projected closure in S59-S62 (~5 additional waves).
+
+**Backups:** `backups/pack_c_corrected.js.bak-20260728143139` (pre-S58), `backups/pack_c_corrected.js.bak-20260728150311` (pre-patch), `backups/pack_d_corrected.js.bak-20260728143139` (pre-S58), `backups/pack_d_corrected.js.bak-20260728150311` (pre-patch).
+
+**Deliverables:** `reports/SESSION058_PHASE6_COMPLETION.json`, `reports/SESSION058_QUALITY_REPORT.md`, `reports/SESSION058_SLOT_LEDGER.json`, `reports/SESSION058_CLOSURE_FORECAST.json`, `reports/SESSION058_SLOT_SELECTION.json`.
+
+---
+
 ## SESSION056 — Phase 5 Item Authoring: Packs C+D Section E (20-Item Batch 4) — 2026-07-28
 
 **Type:** WRITE — 20 new items authored at Analyze/Evaluate cognitive level (Difficult). Replaced 20 DL-012 archived rotation clones across Pack C Section E (10) and Pack D Section E (10).

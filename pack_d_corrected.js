@@ -18986,8 +18986,14 @@ const MCQ_BANK_D = [
         "CorrectChoice": "D",
         "ExplanationCorrect": "COSO Principle 7 (Risk Assessment) requires that the organization identifies risks to the achievement of its objectives across the entity and analyzes risks as a basis for determining how the risks should be managed. The principle establishes three critical dimensions: comprehensiveness (all material risk categories must be captured), granularity (risks must be specified at a level of detail sufficient to support management's assessment of severity and likelihood), and responsiveness (the framework must adapt when the entity's risk landscape changes). When a new regulatory regime introduces compliance obligations tied to environmental and climate-related matters — areas entirely absent from Meridian's existing financial-and-operational taxonomy — the current risk assessment framework is structurally inadequate. The framework's two-bucket classification cannot produce the entity-level climate risk disclosures the new SEC rules demand, because it offers no vocabulary, no measurement criteria, and no governance linkage for climate-related risk dimensions. Under COSO Principle 7, Meridian must expand the risk identification categories to capture physical climate risks (e.g., property exposure to extreme weather events), transition risks (e.g., regulatory cost increases, stranded asset exposure), and governance-related climate risks (e.g., board oversight structure, management's climate competency). Frameworks that omit material emerging risks fail the comprehensiveness test of Principle 7 regardless of how effectively they manage the risks they do capture.",
         "StudyLinks": [
-            {"label": "IMA CMA Learning Outcome Statements, Part 1 Section E", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
-            {"label": "COSO Internal Control Framework overview", "url": "https://www.coso.org/guidance-on-ic"}
+            {
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+            },
+            {
+                "label": "COSO Internal Control Framework overview",
+                "url": "https://www.coso.org/guidance-on-ic"
+            }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
@@ -19234,8 +19240,14 @@ const MCQ_BANK_D = [
         "CorrectChoice": "D",
         "ExplanationCorrect": "Under COSO Principle 12, management must select and develop control activities that contribute to the mitigation of risks to the achievement of objectives to acceptable levels. When an automated control is temporarily disabled during a system migration, the organization must implement compensating controls that achieve the same control objective at a comparable level of precision. The automated three-way matching control served three functions: (1) verifying every vendor invoice matched an authorized purchase order, (2) confirming goods were received before payment, and (3) maintaining a systematic cross-reference preventing duplicate payments. Cole's manual review addressed the first two but critically failed on the third — the spreadsheet log tracked what she reviewed, not whether the invoice had already been paid. With no independent verification and no segregation between review and approval, the manual control was not an equivalent substitute.",
         "StudyLinks": [
-            {"label": "IMA CMA Learning Outcome Statements, Part 1 Section E", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
-            {"label": "COSO Internal Control Framework", "url": "https://www.coso.org/guidance-on-ic"}
+            {
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+            },
+            {
+                "label": "COSO Internal Control Framework",
+                "url": "https://www.coso.org/guidance-on-ic"
+            }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
@@ -19582,8 +19594,14 @@ const MCQ_BANK_D = [
         "CorrectChoice": "B",
         "ExplanationCorrect": "COSO Principle 5 states that the organization holds individuals accountable for their internal control responsibilities in the pursuit of objectives. The principle requires that management establish structures, reporting lines, and appropriate authorities and responsibilities — and then hold specific individuals accountable. PulsePoint's failure is a textbook case of diffusion of responsibility across cross-functional boundaries. Four distinct roles each articulated a superficially defensible explanation for why MFA was not their individual accountability, but collectively they demonstrate the absence of a governance structure that assigns end-to-end accountability for cross-functional controls. The remedy is for management to designate an accountable owner with authority to direct resources across functions to close control gaps.",
         "StudyLinks": [
-            {"label": "IMA CMA Learning Outcome Statements, Part 1 Section E", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
-            {"label": "COSO Internal Control Framework", "url": "https://www.coso.org/guidance-on-ic"}
+            {
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+            },
+            {
+                "label": "COSO Internal Control Framework",
+                "url": "https://www.coso.org/guidance-on-ic"
+            }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
@@ -19829,8 +19847,14 @@ const MCQ_BANK_D = [
         "CorrectChoice": "B",
         "ExplanationCorrect": "Under COSO ERM — Integrating with Strategy and Performance (2017), risk appetite is the amount of risk an organization is willing to accept in pursuit of its strategy, while risk tolerance defines the acceptable variation around specific objectives. The Review and Revision component explicitly requires organizations to reassess risk appetite when performance or risk events indicate the current framework may no longer be appropriate. Ardent's $8.7 million loss against a $2 million tolerance represents a breach factor of 4.35x — not a marginal exceedance but evidence of systematic underestimation. A sole-source dependency causing this magnitude of loss signals that the board's risk appetite was set without adequate understanding of concentration risk. The appropriate COSO-aligned response is to recalibrate risk appetite downward, communicating that the board no longer finds this level of supply chain concentration acceptable, and to invest in mitigation — dual sourcing, safety stock, and contingency agreements — to structurally reduce residual risk.",
         "StudyLinks": [
-            {"label": "IMA CMA Learning Outcome Statements, Part 1 Section E", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
-            {"label": "COSO ERM Framework", "url": "https://www.coso.org/guidance-erm"}
+            {
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+            },
+            {
+                "label": "COSO ERM Framework",
+                "url": "https://www.coso.org/guidance-erm"
+            }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
@@ -19838,7 +19862,13 @@ const MCQ_BANK_D = [
         "QuestionID": "P1-ED-043",
         "question_state": "Certified",
         "CalculationItem": false,
-        "VerifiedChecks": ["Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024", "Screened to exclude Part 2-only topics", "Original practice item with unique micro-topic and stem", "Answer key distribution balanced across A/B/C/D", "Distractors written as plausible CMA-style traps"],
+        "VerifiedChecks": [
+            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+            "Screened to exclude Part 2-only topics",
+            "Original practice item with unique micro-topic and stem",
+            "Answer key distribution balanced across A/B/C/D",
+            "Distractors written as plausible CMA-style traps"
+        ],
         "ExplanationWrongA": "Increasing risk appetite to $9 million is passive acceptance rather than active risk management. Under COSO ERM, the board's governance role is to set boundaries for acceptable risk, not to validate every loss by expanding those boundaries after the fact. A sole-source dependency causing $8.7 million in losses represents a structural vulnerability — raising appetite to accommodate it abdicates the board's responsibility to protect the organization from excessive concentration risk.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Treating a 4.35x tolerance breach as a statistical outlier disregards the governance obligation under COSO ERM's Review and Revision component. A breach of this magnitude is a signal that the risk was systematically underestimated, not a random anomaly to be dismissed. Without mitigation, the next sole-supplier failure produces comparable losses — the structural vulnerability remains.",
@@ -20118,8 +20148,14 @@ const MCQ_BANK_D = [
         "CorrectChoice": "C",
         "ExplanationCorrect": "COSO Principle 14 requires that the organization internally communicate information — including objectives and responsibilities for internal control — necessary to support the functioning of internal control. Effective internal communication must flow upward, downward, and across the organization. Critically, information must reach those charged with governance so they can fulfill their oversight responsibilities. Two independent communication failures occurred: the restructuring eliminated the internal audit director position (removing an independent assurance channel), and the CFO deliberately suppressed material control information from reaching the audit committee. The controller fulfilled her upward communication obligation; the failure occurred when the CFO terminated the information flow. Together, these failures prevented a material control deficiency from reaching the body responsible for overseeing internal control — a fundamental breakdown of Principle 14.",
         "StudyLinks": [
-            {"label": "IMA CMA Learning Outcome Statements, Part 1 Section E", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
-            {"label": "COSO Internal Control Framework", "url": "https://www.coso.org/guidance-on-ic"}
+            {
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+            },
+            {
+                "label": "COSO Internal Control Framework",
+                "url": "https://www.coso.org/guidance-on-ic"
+            }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
@@ -20127,7 +20163,13 @@ const MCQ_BANK_D = [
         "QuestionID": "P1-ED-049",
         "question_state": "Certified",
         "CalculationItem": false,
-        "VerifiedChecks": ["Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024", "Screened to exclude Part 2-only topics", "Original practice item with unique micro-topic and stem", "Answer key distribution balanced across A/B/C/D", "Distractors written as plausible CMA-style traps"],
+        "VerifiedChecks": [
+            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+            "Screened to exclude Part 2-only topics",
+            "Original practice item with unique micro-topic and stem",
+            "Answer key distribution balanced across A/B/C/D",
+            "Distractors written as plausible CMA-style traps"
+        ],
         "ExplanationWrongA": "Option A incorrectly treats partial upward communication as sufficient. While Controller Nguyen correctly reported to the CFO, Principle 14 requires that relevant information ultimately reach those charged with governance, not merely the next level of management. A communication chain terminating at an intermediate management level — even a senior one — does not satisfy Principle 14 when the information is material and governance-level oversight is required.",
         "ExplanationWrongB": "Option B correctly identifies the restructuring's elimination of internal audit as problematic but overstates exclusivity. COSO Principle 14 does not designate internal audit as the sole authorized channel — the controller, CFO, external auditor, and whistleblower hotlines are all legitimate conduits. The correct evaluation addresses both failures: the structural gap from restructuring AND the active suppression by the CFO.",
         "ExplanationWrongC": "",
@@ -20358,8 +20400,14 @@ const MCQ_BANK_D = [
         "CorrectChoice": "B",
         "ExplanationCorrect": "Under the IIA's Three Lines Model, the second line — comprising risk management, compliance, and oversight functions — is responsible for monitoring risk and evaluating the effectiveness of first-line controls. This requires independent assessment, not mere compilation of self-reported data. Self-assessment without independent challenge is self-certification — it provides no assurance that controls are actually functioning. The second line's role exists precisely because self-assessment alone is insufficient — the second line must bring independent expertise, skepticism, and validation procedures. The three material control failures undetected for six quarters demonstrate that compiling self-assessments without validation is risk reporting, not risk monitoring.",
         "StudyLinks": [
-            {"label": "IMA CMA Learning Outcome Statements, Part 1 Section E", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
-            {"label": "COSO Internal Control Framework", "url": "https://www.coso.org/guidance-on-ic"}
+            {
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+            },
+            {
+                "label": "COSO Internal Control Framework",
+                "url": "https://www.coso.org/guidance-on-ic"
+            }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
@@ -20367,7 +20415,13 @@ const MCQ_BANK_D = [
         "QuestionID": "P1-ED-054",
         "question_state": "Certified",
         "CalculationItem": false,
-        "VerifiedChecks": ["Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024", "Screened to exclude Part 2-only topics", "Original practice item with unique micro-topic and stem", "Answer key distribution balanced across A/B/C/D", "Distractors written as plausible CMA-style traps"],
+        "VerifiedChecks": [
+            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+            "Screened to exclude Part 2-only topics",
+            "Original practice item with unique micro-topic and stem",
+            "Answer key distribution balanced across A/B/C/D",
+            "Distractors written as plausible CMA-style traps"
+        ],
         "ExplanationWrongA": "Option A misidentifies the locus of failure. Under the Three Lines model, first-line management owns and executes controls but cannot provide independent assurance over their own controls — that is fundamentally why the second line exists. Better-designed checklists might improve detection but no self-assessment can substitute for independent second-line evaluation.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Option C misplaces primary responsibility. Internal audit provides independent assurance through a risk-based audit plan, not continuous monitoring. The second line's ongoing monitoring function is specifically designed to detect control failures between audit cycles. The deficiency occurred at the second line, not the third.",
@@ -20647,8 +20701,14 @@ const MCQ_BANK_D = [
         "CorrectChoice": "C",
         "ExplanationCorrect": "COSO Principle 15 requires organizations to communicate relevant internal control matters to external parties. Under SEC rules, a material weakness in internal control over financial reporting must be disclosed in the next periodic filing (10-Q or 10-K) in which management evaluates ICFR effectiveness. Withholding disclosure of a known material weakness for eight months while continuing to file quarterly reports would deprive investors of material information. The general counsel's position aligns with both COSO Principle 15's timely-communication imperative and SEC disclosure requirements. A common exam trap is to confuse the narrow Form 8-K trigger for non-reliance on prior financial statements (Item 4.02) with the broader periodic-reporting requirement for material weakness disclosure.",
         "StudyLinks": [
-            {"label": "IMA CMA Learning Outcome Statements, Part 1 Section E", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
-            {"label": "COSO Internal Control Framework overview", "url": "https://www.coso.org/guidance-on-ic"}
+            {
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+            },
+            {
+                "label": "COSO Internal Control Framework overview",
+                "url": "https://www.coso.org/guidance-on-ic"
+            }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
@@ -20656,7 +20716,13 @@ const MCQ_BANK_D = [
         "QuestionID": "P1-ED-060",
         "question_state": "Certified",
         "CalculationItem": false,
-        "VerifiedChecks": ["Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024", "Screened to exclude Part 2-only topics", "Original practice item with unique micro-topic and stem", "Answer key distribution balanced across A/B/C/D", "Distractors written as plausible CMA-style traps"],
+        "VerifiedChecks": [
+            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+            "Screened to exclude Part 2-only topics",
+            "Original practice item with unique micro-topic and stem",
+            "Answer key distribution balanced across A/B/C/D",
+            "Distractors written as plausible CMA-style traps"
+        ],
         "ExplanationWrongA": "Option A incorrectly treats a material weakness as a purely operational matter deferrable to the annual 10-K. Under COSO Principle 15, relevant internal control deficiencies must be communicated in a timely manner — eight months is not timely when quarterly reports are filed. SEC rules require disclosure in the next periodic filing, which for a May discovery would typically be the Q2 or Q3 Form 10-Q.",
         "ExplanationWrongB": "Option B overstates the filing obligation. SEC Form 8-K Item 4.02 requires disclosure within four business days only when a company concludes previously issued financial statements should no longer be relied upon due to an error. Routine discovery of a material weakness without a restatement does not trigger an immediate 8-K.",
         "ExplanationWrongC": "",
@@ -20986,8 +21052,14 @@ const MCQ_BANK_D = [
         "CorrectChoice": "B",
         "ExplanationCorrect": "COSO Principle 6 requires the organization to identify risks that could affect the achievement of objectives across the entity. Velocity's process was incomplete in three dimensions: supply chain concentration risk (single port for 80% of inputs), geopolitical/operational disruption risk (port labor disruptions are well-documented), and tier-2 interdependency risk (JIT is only as resilient as suppliers' suppliers). The annual financial review of tier-1 suppliers captures only one narrow category — counterparty credit risk — while omitting logistics concentration, geopolitical, and upstream dependency risks. The $2.7 million loss was not a black-swan event but the predictable consequence of a risk identification process that stopped at tier-1 financial reviews.",
         "StudyLinks": [
-            {"label": "IMA CMA Learning Outcome Statements, Part 1 Section E", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
-            {"label": "COSO Internal Control Framework overview", "url": "https://www.coso.org/guidance-on-ic"}
+            {
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+            },
+            {
+                "label": "COSO Internal Control Framework overview",
+                "url": "https://www.coso.org/guidance-on-ic"
+            }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
@@ -20995,7 +21067,13 @@ const MCQ_BANK_D = [
         "QuestionID": "P1-ED-067",
         "question_state": "Certified",
         "CalculationItem": false,
-        "VerifiedChecks": ["Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024", "Screened to exclude Part 2-only topics", "Original practice item with unique micro-topic and stem", "Answer key distribution balanced across A/B/C/D", "Distractors written as plausible CMA-style traps"],
+        "VerifiedChecks": [
+            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+            "Screened to exclude Part 2-only topics",
+            "Original practice item with unique micro-topic and stem",
+            "Answer key distribution balanced across A/B/C/D",
+            "Distractors written as plausible CMA-style traps"
+        ],
         "ExplanationWrongA": "Option A incorrectly equates a single risk identification activity with a complete process. COSO Principle 6 requires identification of risks from both internal and external sources at multiple organizational levels. Annual tier-1 financial reviews omit concentration, geopolitical, and interdependency risks — all of which are standard supply chain risk categories.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Option C dismisses the events as unforeseeable, which is the central error in Velocity's approach. Port labor disruptions and supplier bankruptcies are well-documented supply chain risks. COSO does not require identification of every specific event but requires identification of risk categories. Logistics concentration, counterparty sustainability, and JIT fragility are all standard, foreseeable supply chain risk categories.",
@@ -21125,8 +21203,14 @@ const MCQ_BANK_D = [
         "CorrectChoice": "D",
         "ExplanationCorrect": "COSO Principle 2 requires the board of directors to demonstrate independence from management and exercise oversight responsibility for the system of internal control. This includes ensuring that the board's committee structure provides adequate coverage across all material risk categories — financial, operational, compliance, and strategic. When no committee is explicitly responsible for operational and cybersecurity risk oversight, and the board has not reviewed these risks in three years, the governance structure has a material oversight gap. The existence of other committees does not remedy the absence of operational risk oversight. The board must either assign these risks to an existing committee with explicit charter language or establish a dedicated risk committee.",
         "StudyLinks": [
-            {"label": "IMA CMA Learning Outcome Statements, Part 1 Section E", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
-            {"label": "COSO Internal Control Framework", "url": "https://www.coso.org/guidance-on-ic"}
+            {
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+            },
+            {
+                "label": "COSO Internal Control Framework",
+                "url": "https://www.coso.org/guidance-on-ic"
+            }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
@@ -21134,7 +21218,13 @@ const MCQ_BANK_D = [
         "QuestionID": "P1-ED-070",
         "question_state": "Certified",
         "CalculationItem": false,
-        "VerifiedChecks": ["Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024", "Screened to exclude Part 2-only topics", "Original practice item with unique micro-topic and stem", "Answer key distribution balanced across A/B/C/D", "Distractors written as plausible CMA-style traps"],
+        "VerifiedChecks": [
+            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+            "Screened to exclude Part 2-only topics",
+            "Original practice item with unique micro-topic and stem",
+            "Answer key distribution balanced across A/B/C/D",
+            "Distractors written as plausible CMA-style traps"
+        ],
         "ExplanationWrongA": "Option A incorrectly assumes that the audit committee's financial reporting oversight extends by default to operational and cybersecurity risk. While these risks can be linked, the audit committee's primary responsibility is financial reporting — expanding its charter without explicit authorization and expertise stretches its mandate. The defect is not that the audit committee's charter is too narrow but that no committee exists to cover operational risk at all.",
         "ExplanationWrongB": "Option B incorrectly equates incentive design with risk oversight. The compensation committee's oversight of incentive metrics does not constitute risk governance. COSO Principle 2 requires direct board oversight of internal control through committee structures, not indirect alignment through compensation design.",
         "ExplanationWrongC": "Option C directly contradicts COSO Principle 2, which explicitly states that the board exercises oversight responsibility for the system of internal control. This includes all material risks facing the entity. Deferring operational and cybersecurity risk entirely to management with no board committee oversight is a governance failure.",
@@ -21536,9 +21626,10 @@ const MCQ_BANK_D = [
         "ExplanationWrongB": "Choice B is incorrect because a chart of accounts is a foundational accounting classification system, not a data integration mechanism. APIs enable systems to communicate but do not replace the structural framework needed to organize financial transactions. A candidate may select this option by confusing system connectivity with accounting architecture.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
     {
         "Part": 1,
@@ -21736,9 +21827,10 @@ const MCQ_BANK_D = [
         "ExplanationWrongB": "Data lineage traces data origin and transformation history; it does not primarily mean users build their own reports.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "DifficultyScore": 4,
-        "CognitiveLevel": "Apply"
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
     {
         "Part": 1,
@@ -21836,9 +21928,10 @@ const MCQ_BANK_D = [
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Robotic process automation (RPA) automates repetitive manual tasks. Creating reports requires user judgment and data exploration, which RPA is not designed for.",
         "ExplanationWrongD": "Data lineage tracing tracks data flow and transformations. It supports data governance but does not provide a reporting or analysis capability for business users.",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "DifficultyScore": 4,
-        "CognitiveLevel": "Apply"
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
     {
         "Part": 1,
@@ -21999,7 +22092,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "data encryption at rest and in transit",
         "UniqueConceptKey": "F-D013-data-encryption-at-rest-and-in-transit",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Mapleton encrypts sensitive financial data both when stored on servers and when transmitted across networks. What security objective does this primarily support?",
@@ -22037,9 +22130,10 @@ const MCQ_BANK_D = [
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Choice C is incorrect because data governance establishes policies, standards, and accountability for data management across the organization. While governance may require encryption, the direct security objective served by encryption is confidentiality — preventing unauthorized disclosure — not the definition of data ownership or stewardship responsibilities.",
         "ExplanationWrongD": "Choice D is incorrect because segregation of duties is an internal control principle that divides responsibilities to prevent fraud and error within business processes. Encryption is a technical safeguard operating at the data layer, addressing confidentiality rather than procedural controls over human activities.",
-        "question_state": "Archived",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
     {
         "Part": 1,
@@ -22199,7 +22293,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "cloud saas subscription model",
         "UniqueConceptKey": "F-D017-cloud-saas-subscription-model",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Quintwood subscribes to a cloud-based accounting application that the vendor hosts, maintains, and updates. What cloud service model is this?",
@@ -22237,9 +22331,10 @@ const MCQ_BANK_D = [
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Choice C is incorrect because Platform as a Service offers a development framework and deployment environment for building custom applications. The stem describes subscribing to a finished, ready-to-use accounting application — not a platform for developing one. A candidate may select this by confusing the cloud delivery tiers.",
         "ExplanationWrongD": "Choice D is incorrect because on-premises software requires the organization to install, host, and maintain the application on its own infrastructure. The stem explicitly states the vendor performs all hosting, maintenance, and updates — this is the defining feature of the SaaS delivery model.",
-        "question_state": "Archived",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
     {
         "Part": 1,
@@ -22446,7 +22541,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "predictive model overfitting risk",
         "UniqueConceptKey": "F-D022-predictive-model-overfitting-risk",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Valemont's forecasting model performs extremely well on historical training data but poorly on new, unseen data. What problem does this illustrate?",
@@ -22484,9 +22579,10 @@ const MCQ_BANK_D = [
         "ExplanationWrongB": "",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Choice D is incorrect because data visualization concerns how information is displayed to users through charts and dashboards. The model's inability to generalize from training data to new data is a fundamental statistical modeling issue, not a presentation-layer problem. A candidate may select this by conflating the output display with the underlying analytical model.",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
     {
         "Part": 1,
@@ -22746,7 +22842,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "internet of things iot sensors",
         "UniqueConceptKey": "F-D028-internet-of-things-iot-sensors",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Crownridge installs internet-connected sensors on manufacturing equipment to monitor performance and predict maintenance needs in real time. What technology category does this represent?",
@@ -22784,9 +22880,10 @@ const MCQ_BANK_D = [
         "ExplanationWrongB": "Choice B is incorrect because robotic process automation focuses on software-based task automation within business applications. It does not interact with physical equipment or collect sensor data from machinery. A candidate may confuse general business process automation with the physical-world connectivity that defines IoT.",
         "ExplanationWrongC": "Choice C is incorrect because blockchain provides a tamper-resistant distributed ledger for recording transactions across multiple parties. While IoT data could theoretically be stored on a blockchain, the technology category for connected physical sensors monitoring equipment performance is IoT. A candidate may select this by confusing the data storage layer with the data collection technology.",
         "ExplanationWrongD": "",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
     {
         "Part": 1,
@@ -23096,7 +23193,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "data breach incident response plan",
         "UniqueConceptKey": "F-D035-data-breach-incident-response-plan",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Jettison maintains a documented plan outlining steps to take if a cybersecurity breach is detected, including containment, investigation, and notification. What is the primary purpose of this plan?",
@@ -23134,9 +23231,10 @@ const MCQ_BANK_D = [
         "ExplanationWrongB": "Choice B is incorrect because no incident response plan can guarantee the elimination of all future breaches. Per the NIST CSF, incident response is a mitigation and recovery function, not an eradication function. Security incidents are managed through defense-in-depth combining preventive, detective, and responsive controls. A candidate may confuse risk mitigation with risk elimination.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
     {
         "Part": 1,
@@ -23434,10 +23532,11 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Choice C is incorrect because digital signatures verify that a document has not been tampered with since signing and that it originated from the claimed signer. They do not validate the arithmetic or accounting accuracy of the document's contents. A candidate may conflate integrity of transmission with correctness of content.",
-        "ExplanationWrongD": "Choice D is incorrect because GAAP compliance depends on the application of accounting standards, professional judgment, and appropriate disclosures — none of which are verified by cryptographic signatures. A digital signature confirms who signed and that nothing changed post-signing, not whether the underlying accounting treatment is correct. A candidate may overattribute capabilities to a security technology.",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongD": "",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
     {
         "Part": 1,
@@ -23669,7 +23768,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "Master data management — MDM strategy and governance",
         "UniqueConceptKey": "F-D047-mdm-merger-strategy",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Very Difficult",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Two years after merging with a competitor, Kingswood Industrial's controller reports that quarterly consolidated financial statements take 18 days to produce because the two legacy ERP systems use incompatible chart of accounts, customer IDs, and product hierarchies. The CIO proposes a master data management (MDM) program with three phases: (1) define a single, authoritative customer master, product taxonomy, and chart of accounts; (2) map all legacy data to the MDM model and resolve duplicates; (3) enforce the MDM model as the system of entry for all new transactions, with legacy systems consuming MDM-governed data through a data services layer. The CIO recommends a 'big bang' cutover — all systems adopt the MDM model on a single go-live date. The board is concerned about operational risk: 'If the mapping is wrong, every system produces incorrect reports simultaneously.' The CFO counters: 'We cannot afford another quarter of 18-day closes.' Evaluate the competing priorities and recommend the MDM deployment strategy.",
@@ -23707,9 +23806,10 @@ const MCQ_BANK_D = [
         "ExplanationWrongB": "Choice B is incorrect because data mining searches large datasets to discover patterns, correlations, and anomalies using statistical and machine learning techniques. The stem describes creating and maintaining a single authoritative source of core reference data — a governance function, not a pattern-discovery activity. A candidate may confuse data exploration with data stewardship.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "",
-        "question_state": "Archived",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
     {
         "Part": 1,
@@ -25112,4 +25212,4 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     }
-];
+]
