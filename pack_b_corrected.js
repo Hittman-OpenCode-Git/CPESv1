@@ -16408,8 +16408,8 @@ const MCQ_BANK_B = [
     "MicroTopic": "access controls",
     "UniqueConceptKey": "B-E-102-access-controls",
     "LOSTag": "Data Protection Controls",
-    "Difficulty": "Moderate",
-    "DifficultyScore": 3,
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
     "CognitiveLevel": "Apply",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
@@ -16638,8 +16638,8 @@ const MCQ_BANK_B = [
     "MicroTopic": "processing controls",
     "UniqueConceptKey": "B-E-107-processing-controls",
     "LOSTag": "Application Controls",
-    "Difficulty": "Moderate",
-    "DifficultyScore": 3,
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
     "CognitiveLevel": "Apply",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
@@ -20406,7 +20406,7 @@ const MCQ_BANK_B = [
     "ExplanationWrongB": "7 business days exceeds the GDPR requirement. The regulation specifies 72 hours, which is approximately 3 calendar days.",
     "ExplanationWrongC": "30 days is not a GDPR breach notification timeline. The regulation requires notification within 72 hours, which is much shorter.",
     "ExplanationWrongD": "",
-    "DifficultyScore": 3,
+    "DifficultyScore": 1,
     "CognitiveLevel": "Apply"
   },
   {
@@ -20462,7 +20462,7 @@ const MCQ_BANK_B = [
     "MicroTopic": "ERP control implications",
     "UniqueConceptKey": "B-F-116-ERP-control-implications",
     "LOSTag": "ERP Systems",
-    "Difficulty": "Moderate",
+    "Difficulty": "Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Nexus Manufacturing recently implemented an integrated ERP system. The internal auditor notes that the previous manual segregation of duties between purchase order approval and goods receipt processing is now automated within the system. Which of the following is a key control implication of this change?",
@@ -20496,7 +20496,7 @@ const MCQ_BANK_B = [
     "ExplanationWrongB": "Not all employees should have full access. The ERP system's role-based access architecture eliminates the need for manual SoD by enforcing permissions programmatically.",
     "ExplanationWrongC": "Segregation of duties remains critical in an ERP environment. The implementation of an ERP system does not eliminate the need for SoD; rather, it shifts enforcement from manual processes to system-configured role-based access controls that must be carefully designed and tested.",
     "ExplanationWrongD": "Automated controls in ERP systems handle monitoring through system logs and exception reports, making manual monitoring less necessary.",
-    "DifficultyScore": 3,
+    "DifficultyScore": 1,
     "CognitiveLevel": "Understand"
   },
   {

@@ -3,7 +3,7 @@
 **Purpose:** Single source of truth for all runtime-critical file baselines — SHA-256 hashes, sizes, provenance, and structural notes.
 
 **Generated:** 2026-07-24 — Session 20 (Governance & Structure Cleanup)
-**Updated:** 2026-07-28 — S923 (Pack C Case Count Resolution — corrected baseline documentation: case_pack_3_corrected.js confirmed at 25 cases (not 27). The C=27 figure was a documentation error — section distribution (A3+B4+C4+D4+E5+F5=25) and file header ("25 Cases") both confirm 25. All 3 packs uniform at 25. Governance guard 51/51 PASS.)
+**Updated:** 2026-07-28 — S377 (rebuild_baselines Baseline Reconciliation Board — Certified Pool recaptured via direct grep: 2,298→2,417. Pack A: 481→500 (S892 closure confirmed). Pack C: 388→438 (+50 from S853 WAVE_A). Pack D: 389→439 (+50 from S853 WAVE_A). Packs B, E unchanged. Packs C+D hashes recaptured (authorized drift). DL-035 added to §3 HIGH table. DL-021 status corrected to RESOLVED per S828.)
 **Prior updates:** S905–S907 (G1–G5 Drift Reconciliation & Full 5-Pack Re-Baseline), 2026-07-27 — S227 (C5 SHA-256 capture + C7 drift verification. Packs A-D re-baselined post-S865-S868 Cohort C + S221 governance upgrade authorized drift. All S220 recertification conditions MET.), Session 374 Phase 0 (Packs C+D re-baselined post-S371/S853/S826/S829 authorized drift), Session 811 (Framework v2 Wave 1), Session 726 (Phantom Baseline Remediation), Session 537 (ENHANCED_CASE_BASE certification), Session 530 (Wave 0 Remediation)
 **Status:** Active
 **Authority:** PROJECT_CONSTITUTION.md
@@ -35,11 +35,11 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 |------|---------|-----|-------------|---------------|------------|
 | `pack_a_corrected.js` | `CAB4EFC7E7E6441A576FB9BC45007593205D54E658DB3B3F67A218811111A783` | `TBD` | TBD | 2026-07-28 ~11:45 | **S892 Pack A Final Closure.** 19 archived items replaced with newly authored Analyze/Evaluate items (Section A: 2 ASC 606/330 Analyze + Section E: 17 COSO Analyze/Evaluate across all 5 COSO components). QID: 500. Certified: **500 (100%).** Governance guard: 51/51 PASS. DL-008: 0. DL-026: 0. Rule 9: 0. AUTHORIZED — Pack A closure. Hash recaptured. |
 | `pack_b_corrected.js` | `9CE6A34571CDD9196E2C2B74500C4C925A5D3300672C5F192C8FA38440E28437` | `TBD` | 1,305,388 | 2026-07-28 10:56 | rebuild_baselines S888 — S886: 1 Section D Analyze upgrade (P1B-D-102 — ABC cost driver selection). QID: 500. Certified: 500 (unchanged). AUTHORIZED content expansion — hash recaptured. |
-| `pack_c_corrected.js` | `E8986A18B013E44D3D8D8FC04AB4609AD44DDC61CF0E7474C4AE121C861E3076` | `TBD` | 1,765,284 | 2026-07-28 11:11 | rebuild_baselines S896: S893–S895 800-Series DL-008 remediation — 22 ExplanationWrong[CorrectChoice] fields cleared (Sections CC/EC/FC). QID: 500. Certified: 388 (unchanged). AUTHORIZED file size reduction (-5,424 bytes) — hash recaptured. |
-| `pack_d_corrected.js` | `511CB76242BA4F132427B9D251142CAF1161B3464D88482C899D98B810635257` | `TBD` | 1,716,081 | 2026-07-28 11:11 | rebuild_baselines S896: S893–S895 800-Series DL-008 remediation — 37 ExplanationWrong[CorrectChoice] fields cleared (Sections CD/DD/ED/FD). QID: 500. Certified: 389 (unchanged). AUTHORIZED file size reduction (-12,628 bytes) — hash recaptured. |
+| `pack_c_corrected.js` | `6B712D2A0219E2F95DBC8DA1DB82EB95B9DD5F4AB763E2F241A99A1873E93369` | `TBD` | TBD | 2026-07-28 | **S377 Baseline Reconciliation — DRIFT from S896 baseline. Authorized: S853 WAVE_A certification wave (+50 Certified: 388→438, Domains E+F). Hash recaptured by S377.** QID: 500. Certified: 438. |
+| `pack_d_corrected.js` | `2B59A6D651E7DBAF74E635E296E0219EC2605FA97706FDD3BD791C0675F53909` | `TBD` | TBD | 2026-07-28 | **S377 Baseline Reconciliation — DRIFT from S896 baseline. Authorized: S853 WAVE_A certification wave (+50 Certified: 389→439, Domains E+F). Hash recaptured by S377.** QID: 500. Certified: 439. |
 | `pack_e_corrected.js` | `E0CFD1D8F6401807E8DC692C5EE155BEA4F027EC9AFA770D8035D45E6D859CF4` | `TBD` | 1,491,706 | 2026-07-28 10:56 | rebuild_baselines S888 — S886: 2 Section C Analyze upgrades (P1E-C-044 material quantity variance comparison, P1E-C-059 operating leverage analysis). These are Pack E's first Analyze-level Section C items. QID: 540. Certified: 540 (unchanged). AUTHORIZED content expansion — hash recaptured. |
 
-**DRIFT FLAG: Pack A re-baselined (S892 Final Closure — 19 archived items replaced with Analyze/Evaluate authored items). Packs B, C, D, E hashes stable from S896 baseline. Governance guard 51/51 PASS. Certified pool: 2,317 (Pack A 500 + Pack B 500 + Pack C 388 + Pack D 389 + Pack E 540 = 2,317). Zero structural defects across all 5 packs.**
+**rebuild_baselines S377: Pack A 500 (matched S892 baseline), Pack B 500 (matched S888 baseline), Pack C 438 (+50 from S853 WAVE_A), Pack D 439 (+50 from S853 WAVE_A), Pack E 540 (matched S888 baseline). Packs C+D hashes recaptured (authorized drift from S853 certification). Pack A: DRIFT FLAG CLEARED — §1 hash matches S892 baseline. Governance guard 51/51 PASS. Certified pool: 2,417 (Pack A 500 + Pack B 500 + Pack C 438 + Pack D 439 + Pack E 540 = 2,417). DL-035: 39 Certified Domain F items carry empty distractor EW slots — S377 IN PROGRESS.**
 
 ### Case Pack Files (3×25 Architecture — S916–S918 Reconsolidation)
 
@@ -63,16 +63,18 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 
 ---
 
-## 2. Certified Pool — 2026-07-27 Snapshot (S811 T0)
+## 2. Certified Pool — 2026-07-28 Snapshot (rebuild_baselines S377 T0 Direct Grep)
 
 | Pack | Total QIDs | Certified | Sections Closed | Notes |
 |------|-----------|-----------|-----------------|-------|
-| Pack A | 500 | 481 | A, D, E certified; B, C, F partial | |
+| Pack A | 500 | 500 | All 6 sections (S892 Final Closure) | 100% certified |
 | Pack B | 500 | 500 | All 6 sections | 100% certified |
-| Pack C | 500 | 388 | A, B, C, D certified; E, F partial (38 Domain E+F certified S853) | |
-| Pack D | 500 | 389 | A, B, C, D certified; E, F partial (39 Domain E+F certified S853) | |
+| Pack C | 500 | 438 | A, B, C, D certified; E, F partial (50 Domain E+F certified S853 WAVE_A) | +50 vs prior baseline (388→438) |
+| Pack D | 500 | 439 | A, B, C, D certified; E, F partial (50 Domain E+F certified S853 WAVE_A) | +50 vs prior baseline (389→439) |
 | Pack E | 540 | 540 | All sections, includes R-series (P1-E-R01–R40) | 100% of all items |
-| **Total** | **2,540** | **2,298** | | **90.5% certified** |
+| **Total** | **2,540** | **2,417** | | **95.2% certified** |
+
+**Methodology:** Direct grep (`Select-String -Pattern '"question_state": "Certified"' | Measure-Object`) on each pack file. Raw pack files are authoritative. No derived registry consumed. All 5 packs pass `node --check` and QID counts match expected totals (500/500/500/500/540). Packs B and E counts unchanged from prior baseline. Packs A, C, D updated.
 
 **Case Pack Certification (post-S922 regenerate_):** 75 consolidated cases across 3 packs, 400 items. **All 75 cases, 400 items Certified.** 3 packs with 5-letter aliasing: Pack 1 (A:4 B:4 C:5 D:5 E:4 F:3 → aliases A+D), Pack 2 (A:4 B:4 C:5 D:5 E:4 F:3 → aliases B+E), Pack 3 (A:3 B:4 C:4 D:4 E:5 F:5 → alias C). 100% case pool closure. Variable aliases: CASE_BANK_A/B/C/D/E + MIGRATED_CASE_BASE_A/B/C/D/E for app.js catalog compatibility.
 
@@ -92,7 +94,8 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 |--------|-------|--------|
 | DL-016 — Metadata-block ChoiceA-D +1 offset | 0 Certified items. S805 (2026-07-26) resolved all 57 Pack A Section E items (171 ExplanationWrong fields authored). T0 boundary-aware scan (S227) confirmed 0 flat ChoiceA-D fields in current Pack A — single-object architecture, DL-016 structurally impossible. See DEFECT_LIBRARY.md DL-016. | RESOLVED — S227 T0 verified |
 | DL-026 — Empty non-CC distractor slots | **0 Certified items.** S371 resolved 3 Pack C items (P1-FC-006/025/073). S227 T0 boundary-aware Domain F scan (Pack C+D, 150 items) confirmed 0 DL-026 across all Domain F. CURRENT_BASELINES.md §2 consistent. See DEFECT_LIBRARY.md DL-026, DL-029, DL-035. | RESOLVED — learner pool secured |
-| DL-021 — Pack E Section C | 95 **Certified** items (all Pack E Section C is Certified per S802) with absent distractor ExplanationWrong slots. 5 items previously remediated (Autonomous Run Part 4). Active learner-pool exposure — degraded educational feedback. | OPEN — learner-safety gap |
+| DL-035 — Governance Guard DL-026 Coverage Gap | 39 Certified Domain F items (Pack C: 28, Pack D: 11) carry empty distractor EW slots. Governance guard Rules 1-5 passed but no DL-026 check existed at certification time. Rule 6 deployed S814. Content remediation pending S816-S818. | **S377 IN PROGRESS** — 39 Certified learner-pool items affected |
+| DL-021 — Pack E Section C | ~~95 Certified items with absent distractor EW slots.~~ | RESOLVED — S828 (2026-07-27). All 100 Section C items Certified with fully authored distractor EW fields (300 fields, avg 162 chars). Confirmed 0 DL-021 remaining by S828. rebuild_baselines S377 status sync. |
 
 ### MEDIUM
 
@@ -169,7 +172,8 @@ These files directly affect governance enforcement, certification integrity, and
 | 2026-07-28 | **Session 916–918 (Case Pack 3×25 Reconsolidation)** | 3 new case_pack files + index_updated.html. Hash for index_updated.html: E0B7BBAAE2B6B4C3892FCF3E316DC3D88E21AB6618A05A8567B33AB66335D7D3 (6,033 bytes). 5 legacy scored_cases files archived (backups preserved S916). Governance guard: 51/51 PASS. | Yes — 3 new files registered, 5 legacy archived |
 | 2026-07-28 | **Session 923 (Pack C Case Count Resolution)** | Case pack audit confirmed all 3 packs at 25 cases each (not 27 for Pack C as baseline erroneously stated). The "27 cases" figure was a documentation counting error — section distribution (A3+B4+C4+D4+E5+F5=25) and file header ("25 Cases") both confirm 25. SHA-256 hash unchanged from S916 baseline. Governance guard: 51/51 PASS. No file content changes needed. | Yes — documentation error corrected, files unchanged |
 | 2026-07-28 | **Session 888 (S885–S888 Group 2 Post-Reconciliation Content Expansion)** | rebuild_baselines S888: 5 of 5 pack files verified — SHA-256 hashes recaptured via Get-FileHash. Packs A, B, D, E drifted from S880/S907 baselines — AUTHORIZED (S886: 20 cognitive-level upgrades across Sections C/D). Pack C: CONFIRMED STABLE (hash match against S880 baseline). Governance guard: 51/51 PASS. Certified pool: 2,298 (0 drift). QID counts: 500/500/500/500/540. All halt conditions: PASS. | Yes — 4 files re-baselined (A, B, D, E), 1 stable (C) |
+| 2026-07-28 | **Session 377 (S377 Baseline Reconciliation Board)** | rebuild_baselines S377: Pack C+D hashes recaptured (authorized drift from S853 WAVE_A certification). §2 Certified Pool recaptured via direct grep: 2,298→2,417. Pack A: 481→500 (S892 closure). Pack C: 388→438 (+50 S853). Pack D: 389→439 (+50 S853). Packs B, E stable. §3 HIGH table: DL-035 added, DL-021 status corrected to RESOLVED (S828). Governance guard: 51/51 PASS. | Yes — 2 files re-baselined (C, D), 3 stable (A, B, E) |
 
 ---
 
-*Last updated: 2026-07-28 — rebuild_baselines_s923 (S923 Pack C Case Count Resolution. Corrected baseline documentation: case_pack_3 confirmed at 25 cases. All 3 packs confirmed uniform at 25. Governance guard 51/51 PASS. No file edits needed — documentation error only.)*
+*Last updated: 2026-07-28 — rebuild_baselines_s377 (S377 Baseline Reconciliation Board. Certified Pool recaptured via direct grep: 2,298→2,417. Pack A: 481→500. Pack C: 388→438 (+50 S853). Pack D: 389→439 (+50 S853). Packs B+E stable. §3 DL-035 added (IN PROGRESS). §3 DL-021 corrected to RESOLVED (S828). Packs C+D hashes recaptured. Governance guard 51/51 PASS.)*

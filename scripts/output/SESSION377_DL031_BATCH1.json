@@ -1,0 +1,74 @@
+{
+  "session": "S377",
+  "program": "DL-031 Launch Board — Batch 1 (CAL-001)",
+  "timestamp": "2026-07-28T19:40:00Z",
+  "classifier_version": "v2",
+  "extraction_method": "Function constructor parse",
+  "items_scanned_total": 2540,
+  "items_flagged": 39,
+  "by_classification": {
+    "Simple Relabel": 17,
+    "Calibration": 18,
+    "Rewrite Required": 4
+  },
+  "by_pack": {
+    "A": { "total": 500, "flagged": 0, "simple": 0, "calibration": 0, "rewrite": 0 },
+    "B": { "total": 500, "flagged": 5, "simple": 3, "calibration": 2, "rewrite": 0 },
+    "C": { "total": 500, "flagged": 20, "simple": 9, "calibration": 8, "rewrite": 3 },
+    "D": { "total": 500, "flagged": 12, "simple": 5, "calibration": 6, "rewrite": 1 },
+    "E": { "total": 540, "flagged": 2, "simple": 0, "calibration": 2, "rewrite": 0 }
+  },
+  "simple_relabels_applied": 17,
+  "simple_relabels_list": [
+    { "qid": "P1B-E-102", "pack": "b", "section": "E", "topic": "E.102 role-based access control", "cognitiveLevel": "Apply", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1B-E-107", "pack": "b", "section": "E", "topic": "E.107 batch total control", "cognitiveLevel": "Apply", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1B-F-116", "pack": "b", "section": "F", "topic": "B-F.116 ERP control implications", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-DC-061", "pack": "c", "section": "D", "topic": "lean manufacturing – waste elimination", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-DC-062", "pack": "c", "section": "D", "topic": "lean manufacturing – waste elimination", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-DC-063", "pack": "c", "section": "D", "topic": "lean manufacturing – waste elimination", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-DC-064", "pack": "c", "section": "D", "topic": "lean manufacturing – waste elimination", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-DC-065", "pack": "c", "section": "D", "topic": "lean manufacturing – waste elimination", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-FC-001", "pack": "c", "section": "F", "topic": "data governance", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-FC-002", "pack": "c", "section": "F", "topic": "data governance", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-FC-003", "pack": "c", "section": "F", "topic": "data governance", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-FC-004", "pack": "c", "section": "F", "topic": "data governance", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-FD-061", "pack": "d", "section": "F", "topic": "cybersecurity risk assessment framework (NIST)", "cognitiveLevel": "Understand", "from": "Moderate-Easy/3", "to": "Easy/1" },
+    { "qid": "P1-FD-062", "pack": "d", "section": "F", "topic": "cybersecurity risk assessment framework (NIST)", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-FD-063", "pack": "d", "section": "F", "topic": "cybersecurity risk assessment framework (NIST)", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-FD-064", "pack": "d", "section": "F", "topic": "cybersecurity risk assessment framework (NIST)", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" },
+    { "qid": "P1-FD-065", "pack": "d", "section": "F", "topic": "cybersecurity risk assessment framework (NIST)", "cognitiveLevel": "Understand", "from": "Moderate/3", "to": "Easy/1" }
+  ],
+  "calibration_items": 18,
+  "calibration_by_pack": { "B": 2, "C": 8, "D": 6, "E": 2 },
+  "rewrite_required_items": 4,
+  "rewrite_required_list": [
+    { "qid": "P1-EC-019", "pack": "c", "section": "E", "cognitiveLevel": "Analyze", "difficulty": "Difficult" },
+    { "qid": "P1-FC-005", "pack": "c", "section": "F", "cognitiveLevel": "Analyze", "difficulty": "Moderate" },
+    { "qid": "P1-FC-045", "pack": "c", "section": "F", "cognitiveLevel": "Analyze", "difficulty": "Moderate" },
+    { "qid": "P1-CD-050", "pack": "d", "section": "C", "cognitiveLevel": "Analyze", "difficulty": "Moderate" }
+  ],
+  "packs_modified": ["pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js"],
+  "packs_not_modified": ["pack_a_corrected.js", "pack_e_corrected.js"],
+  "backup_paths": [
+    "backups/pack_b_corrected.js.bak-DL031-2026-07-28T1939",
+    "backups/pack_c_corrected.js.bak-DL031-2026-07-28T1939",
+    "backups/pack_d_corrected.js.bak-DL031-2026-07-28T1939"
+  ],
+  "fix_script": "scripts/fix_dl031_scores.js",
+  "classifier_script": "scripts/classify_dl031.js",
+  "methodology_issues_found": [
+    "Prior v1 (500-byte regex window): found 62 items, 0 Simple Relabels — extraction window too small for long explanation fields",
+    "v2 marker #5 (are(\\s+the\\s+)?[^.]*$): matched every 'What are the...?' calculation question — replaced with targeted definition markers",
+    "Difficulty field precedes QuestionID in Pack B and dual-block Pack D items — requires lastIndexOf search backward from QID (not forward window)",
+    "DifficultyScore field is after QuestionID in Pack B Section F and Pack D dual-block items — requires forward search past QID",
+    "window.replace() picks first match in window (neighbor item) — fixed by using lastIndexOf for closest-before-QID match + batch.reverse()"
+  ],
+  "methodology_improvements": [
+    "Extraction: Function constructor parse (replaces regex window — all 2,540 items correctly parsed)",
+    "Classification: 15 targeted definition markers + 10 calculation exclusion markers",
+    "Numeric-answer exclusion: items with purely numeric correct answers bypassed (they're calculations, not definitions)",
+    "Execution: lastIndexOf for field-relative-to-QID targeting (avoids rotation-group neighbor collisions)",
+    "Batch processing: reverse order prevents position drift from sequential replacements",
+    "Dual-block awareness: Difficulty in content block (before QID), DifficultyScore in metadata block (after QID)"
+  ]
+}

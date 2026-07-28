@@ -1,0 +1,57 @@
+{
+  "title": "S377 Automation Verification",
+  "file_verified": "scripts/post_change_qc.js",
+  "file_exists": true,
+  "file_lines": 154,
+  "script_runs": true,
+  "exit_code": 0,
+  "last_output_timestamp": "2026-07-28T19:30:52.171Z",
+  "overall_qc_result": "PASS",
+  "deployment_status": "AUTOMATION_PARTIALLY_DEPLOYED",
+  "integration_points": [],
+  "governance_references": [
+    "knowledge/REVISION_HISTORY.md:26065 — contradiction already marked resolved",
+    "reports/SESSION376_EXPANSION_DECISION.json — Condition 5 contradiction source document",
+    "reports/SESSION376_EXECUTIVE_SUMMARY.md:29 — automation status PARTIAL",
+    "reports/session369/SESSION369_IMPLEMENTATION_PLAN.md — planned as 'Every pack change triggers automated QC'",
+    "reports/session370/SESSION370_AUTOMATION_SCORECARD.json — scored as +2 points, S372 target",
+    "reports/session367/SESSION367_REMEDIATION_AUTOMATION.json — detailed automation design"
+  ],
+  "evidence": {
+    "file_hash": "FC9C9C456F5FA731C3FF33F358C9CCA67F9020D69C1A694ACE38609D0E3C6F81",
+    "run_output_summary": "Governance guard: 54 PASS, 0 FAIL. Parse validation: PASS (5/5 packs parse clean). QID counts: 500+500+500+500+540 = all match. Overall: PASS.",
+    "output_json_valid": true,
+    "all_qc_checks_pass": true,
+    "certified_counts": {
+      "pack_a": 500,
+      "pack_b": 500,
+      "pack_c": 438,
+      "pack_d": 439,
+      "pack_e": 540
+    },
+    "prior_output_certified_counts": {
+      "pack_a": 500,
+      "pack_b": 500,
+      "pack_c": 423,
+      "pack_d": 423,
+      "pack_e": 540
+    },
+    "qid_count_verification": {
+      "pack_a": { "expected": 500, "actual": 500, "pass": true },
+      "pack_b": { "expected": 500, "actual": 500, "pass": true },
+      "pack_c": { "expected": 500, "actual": 500, "pass": true },
+      "pack_d": { "expected": 500, "actual": 500, "pass": true },
+      "pack_e": { "expected": 540, "actual": 540, "pass": true }
+    }
+  },
+  "contradiction_resolved": true,
+  "resolution_narrative": "post_change_qc.js exists at scripts/post_change_qc.js (154 lines, SHA-256 FC9C9C45...), runs successfully (exit 0, all QC checks PASS), and produces valid JSON output to scripts/output/post_change_qc.json. The throughput-board's claim of non-existence was FALSE — the file was present and functional at the time of the dispute. However, the readiness-audit's implicit claim of full automation deployment is OVERSTATED — the script is NOT integrated into any pipeline: not in package.json scripts, not called by any other script, not triggered by CI/CD (no .github/workflows exist). The script must be invoked manually with 'node scripts/post_change_qc.js'. Classification: AUTOMATION PARTIALLY DEPLOYED — the script infrastructure exists and works, but pipeline integration is absent. The contradiction between readiness-audit (script exists) and throughput-board (script doesn't exist) is resolved in favor of readiness-audit on existence, but the automation score improvement claim requires tempering — the tool exists but requires manual invocation.",
+  "discrepancy_analysis": {
+    "throughput_board_claim": "ZERO components deployed. No post_change_qc.js present.",
+    "verdict": "FALSE — script exists at scripts/post_change_qc.js (154 lines)",
+    "readiness_audit_claim": "Automation score 48→62, post_change_qc.js exists and is functional",
+    "verdict": "PARTIAL — script exists and runs, but is not integrated into any pipeline, reducing effective automation impact",
+    "root_cause": "The throughput-board likely searched for post_change_qc.js via a tool with a different working directory or an incomplete file index. The readiness-audit correctly identified file existence but overstated integration. The script has existed since the S372 implementation session (~2026-07-25) based on documentation trail in SESSION369/370 planning docs."
+  },
+  "timestamp": "2026-07-28T19:31:00.000Z"
+}

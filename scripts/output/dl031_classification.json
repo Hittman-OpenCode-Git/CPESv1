@@ -1,11 +1,400 @@
 {
-  "timestamp": "2026-07-28T18:40:19.178Z",
-  "total_scanned": 62,
+  "timestamp": "2026-07-28T19:34:36.090Z",
+  "items_scanned_total": 2540,
+  "items_flagged": 39,
   "by_classification": {
-    "Calibration": 61,
-    "Rewrite Required": 1
+    "Simple Relabel": 17,
+    "Calibration": 18,
+    "Rewrite Required": 4
   },
-  "simple_relabels": [],
-  "calibation": 61,
-  "rewrite_required": 1
+  "by_pack": {
+    "a": {
+      "total": 500,
+      "found": 0,
+      "simple": 0,
+      "calibration": 0,
+      "rewrite": 0
+    },
+    "b": {
+      "total": 500,
+      "found": 5,
+      "simple": 3,
+      "calibration": 2,
+      "rewrite": 0
+    },
+    "c": {
+      "total": 500,
+      "found": 20,
+      "simple": 9,
+      "calibration": 8,
+      "rewrite": 3
+    },
+    "d": {
+      "total": 500,
+      "found": 12,
+      "simple": 5,
+      "calibration": 6,
+      "rewrite": 1
+    },
+    "e": {
+      "total": 540,
+      "found": 2,
+      "simple": 0,
+      "calibration": 2,
+      "rewrite": 0
+    }
+  },
+  "simple_relabels": [
+    {
+      "qid": "P1B-E-102",
+      "pack": "b",
+      "section": "E",
+      "topic": "B-E.102 data protection controls",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.600"
+    },
+    {
+      "qid": "P1B-E-107",
+      "pack": "b",
+      "section": "E",
+      "topic": "B-E.107 application controls",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "overlapRatio": "1.000"
+    },
+    {
+      "qid": "P1B-F-116",
+      "pack": "b",
+      "section": "F",
+      "topic": "B-F.116 ERP systems",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.286"
+    },
+    {
+      "qid": "P1-DC-061",
+      "pack": "c",
+      "section": "D",
+      "topic": "D.061 lean manufacturing waste reduction",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.444"
+    },
+    {
+      "qid": "P1-DC-062",
+      "pack": "c",
+      "section": "D",
+      "topic": "D.062 lean manufacturing waste reduction",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.444"
+    },
+    {
+      "qid": "P1-DC-063",
+      "pack": "c",
+      "section": "D",
+      "topic": "D.063 lean manufacturing waste reduction",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.444"
+    },
+    {
+      "qid": "P1-DC-064",
+      "pack": "c",
+      "section": "D",
+      "topic": "D.064 lean manufacturing waste reduction",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.444"
+    },
+    {
+      "qid": "P1-DC-065",
+      "pack": "c",
+      "section": "D",
+      "topic": "D.065 lean manufacturing waste reduction",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.444"
+    },
+    {
+      "qid": "P1-FC-001",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.001 data governance ownership",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.500"
+    },
+    {
+      "qid": "P1-FC-002",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.002 data governance ownership",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.500"
+    },
+    {
+      "qid": "P1-FC-003",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.003 data governance ownership",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.500"
+    },
+    {
+      "qid": "P1-FC-004",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.004 data governance ownership",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.500"
+    },
+    {
+      "qid": "P1-FD-061",
+      "pack": "d",
+      "section": "F",
+      "topic": "F.061 cybersecurity risk assessment framework",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate-Easy",
+      "overlapRatio": "0.667"
+    },
+    {
+      "qid": "P1-FD-062",
+      "pack": "d",
+      "section": "F",
+      "topic": "F.062 cybersecurity risk assessment framework",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.667"
+    },
+    {
+      "qid": "P1-FD-063",
+      "pack": "d",
+      "section": "F",
+      "topic": "F.063 cybersecurity risk assessment framework",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.667"
+    },
+    {
+      "qid": "P1-FD-064",
+      "pack": "d",
+      "section": "F",
+      "topic": "F.064 cybersecurity risk assessment framework",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.667"
+    },
+    {
+      "qid": "P1-FD-065",
+      "pack": "d",
+      "section": "F",
+      "topic": "F.065 cybersecurity risk assessment framework",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.667"
+    }
+  ],
+  "calibration_items": [
+    {
+      "qid": "P1B-F-134",
+      "pack": "b",
+      "section": "F",
+      "topic": "B-F.134 cybersecurity",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.000"
+    },
+    {
+      "qid": "P1B-F-146",
+      "pack": "b",
+      "section": "F",
+      "topic": "B-F.146 data governance",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.000"
+    },
+    {
+      "qid": "P1-BC-054",
+      "pack": "c",
+      "section": "B",
+      "topic": "B.054 top down budgeting characteristic",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Difficult",
+      "overlapRatio": "0.200"
+    },
+    {
+      "qid": "P1-FC-041",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.041 blockchain distributed ledger",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.000"
+    },
+    {
+      "qid": "P1-FC-042",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.042 blockchain distributed ledger",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.000"
+    },
+    {
+      "qid": "P1-FC-043",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.043 blockchain distributed ledger",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.000"
+    },
+    {
+      "qid": "P1-FC-044",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.044 blockchain distributed ledger",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.000"
+    },
+    {
+      "qid": "P1-FC-061",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.061 erp system integration benefits",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.111"
+    },
+    {
+      "qid": "P1-FC-063",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.063 erp system integration benefits",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.111"
+    },
+    {
+      "qid": "P1-FC-065",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.065 erp system integration benefits",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.111"
+    },
+    {
+      "qid": "P1-CD-053",
+      "pack": "d",
+      "section": "C",
+      "topic": "C.053 performance measurement goal congruence",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate-Easy",
+      "overlapRatio": "0.000"
+    },
+    {
+      "qid": "P1-CD-054",
+      "pack": "d",
+      "section": "C",
+      "topic": "C.054 performance measurement goal congruence",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.000"
+    },
+    {
+      "qid": "P1-FD-071",
+      "pack": "d",
+      "section": "F",
+      "topic": "F.071 data retention policy compliance",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.100"
+    },
+    {
+      "qid": "P1-FD-072",
+      "pack": "d",
+      "section": "F",
+      "topic": "F.072 data retention policy compliance",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.100"
+    },
+    {
+      "qid": "P1-FD-074",
+      "pack": "d",
+      "section": "F",
+      "topic": "F.074 data retention policy compliance",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.100"
+    },
+    {
+      "qid": "P1-FD-075",
+      "pack": "d",
+      "section": "F",
+      "topic": "F.075 data retention policy compliance",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.100"
+    },
+    {
+      "qid": "P1-E-R01",
+      "pack": "e",
+      "section": "E",
+      "topic": "E-R01 segregation of duties — incompatible functions",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.182"
+    },
+    {
+      "qid": "P1-E-R37",
+      "pack": "e",
+      "section": "E",
+      "topic": "E-R37 risk identification — qualitative techniques",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "overlapRatio": "0.231"
+    }
+  ],
+  "rewrite_required": [
+    {
+      "qid": "P1-EC-019",
+      "pack": "c",
+      "section": "E",
+      "topic": "E.019 COSO Principle 17 -- monitoring deficiency aggregation -- severity classification and reporting thresholds",
+      "cognitiveLevel": "Analyze",
+      "difficulty": "Difficult"
+    },
+    {
+      "qid": "P1-FC-005",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.005 data governance ownership",
+      "cognitiveLevel": "Analyze",
+      "difficulty": "Moderate"
+    },
+    {
+      "qid": "P1-FC-045",
+      "pack": "c",
+      "section": "F",
+      "topic": "F.045 blockchain distributed ledger",
+      "cognitiveLevel": "Analyze",
+      "difficulty": "Moderate"
+    },
+    {
+      "qid": "P1-CD-050",
+      "pack": "d",
+      "section": "C",
+      "topic": "C.050 performance measurement goal congruence",
+      "cognitiveLevel": "Analyze",
+      "difficulty": "Moderate"
+    }
+  ]
 }

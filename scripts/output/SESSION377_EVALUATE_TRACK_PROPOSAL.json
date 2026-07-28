@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "session": "S377",
+    "board": "Evaluate Track Design Board",
+    "mode": "READ ONLY — source audit only",
+    "timestamp": "2026-07-28T14:00:00Z",
+    "author": "Build-Time AI Verification",
+    "status": "PROPOSAL — NOT YET AUTHORIZED"
+  },
+
+  "current_state": {
+    "mcq_pool_total": 2540,
+    "case_pool_total": 550,
+    "combined_pool_total": 3090,
+
+    "mcq_evaluate_count": 84,
+    "case_evaluate_count": 115,
+    "combined_evaluate_count": 199,
+
+    "mcq_evaluate_pct": 3.3,
+    "case_evaluate_pct": 20.9,
+    "combined_evaluate_pct": 6.4,
+
+    "mcq_by_pack": {
+      "pack_a_corrected.js": { "total": 500, "evaluate": 11, "sections": { "A": 1, "B": 1, "D": 2, "E": 7 } },
+      "pack_b_corrected.js": { "total": 500, "evaluate": 5,  "sections": { "A": 3, "C": 1, "E": 1 } },
+      "pack_c_corrected.js": { "total": 500, "evaluate": 29, "sections": { "C": 1, "E": 24, "F": 4 } },
+      "pack_d_corrected.js": { "total": 500, "evaluate": 37, "sections": { "D": 6, "E": 22, "F": 9 } },
+      "pack_e_corrected.js": { "total": 540, "evaluate": 2,  "sections": { "A": 1, "E": 1 } }
+    },
+
+    "mcq_blooms_distribution": {
+      "Remember": 81,
+      "Understand": 1116,
+      "Apply": 1100,
+      "Analyze": 159,
+      "Evaluate": 84
+    },
+
+    "case_blooms_distribution": {
+      "Remember": 14,
+      "Understand": 122,
+      "Apply": 157,
+      "Analyze": 142,
+      "Evaluate": 115
+    },
+
+    "evaluate_concentration_risk": "48 of 84 MCQ Evaluate items (57.1%) are in Sections E of Packs C+D — likely DL-012 template clones. True unique Evaluate items may be as low as ~40 across all 6 domains.",
+    "pack_a_section_e_note": "S892 added 17 COSO Analyze/Evaluate items to Pack A Section E. Some may be Evaluate-quality but mislabeled as Analyze.",
+    "certified_evaluate_estimate": "~60-70 of 84 MCQ Evaluate items are Certified (based on Pack C/D certification rates)."
+  },
+
+  "gap_analysis": {
+    "caqs_target": {
+      "source": "CAQS_v1.0.md §6.2",
+      "evaluate_target_pct": 15,
+      "purpose": "Professional judgment, recommendation"
+    },
+    "mcq_target": 381,
+    "mcq_current": 84,
+    "mcq_gap": 297,
+    "combined_target": 464,
+    "combined_current": 199,
+    "combined_gap": 265,
+    "case_evaluate_surplus": "Case studies at 20.9% Evaluate — exceed target. The gap is almost entirely in MCQ.",
+    "section_deficit": {
+      "A_External_Financial_Reporting": { "target": 63, "current": 5, "gap": 58 },
+      "B_Planning_Budgeting_Forecasting": { "target": 63, "current": 1, "gap": 62 },
+      "C_Performance_Management": { "target": 63, "current": 2, "gap": 61 },
+      "D_Cost_Management": { "target": 63, "current": 8, "gap": 55 },
+      "E_Internal_Controls": { "target": 63, "current": 55, "gap": 8 },
+      "F_Technology_Analytics": { "target": 63, "current": 13, "gap": 50 }
+    }
+  },
+
+  "clone_reuse_analysis": {
+    "source": "DEFECT_LIBRARY.md DL-012",
+    "clone_group_count": 28,
+    "clone_item_count": 140,
+    "packs_affected": ["pack_c_corrected.js", "pack_d_corrected.js"],
+    "section": "E",
+    "current_archived_status": {
+      "pack_c_section_e_archived": 6,
+      "pack_d_section_e_archived": 16,
+      "total_archived": 22
+    },
+    "evaluate_upgrade_potential": {
+      "reusable_seeds": 28,
+      "authoring_effort_per_seed": "Significant — requires new stem, upgraded distractors, professional-judgment prompt, multi-concept integration, and Evaluate-aligned explanation. Not a simple relabel.",
+      "feasible_evaluate_from_clones": 28,
+      "note": "Clone seeds currently test Apply/Analyze level. Upgrading to Evaluate requires transforming the template stem from 'Which of the following is correct?' to 'Which recommendation should the controller present to the audit committee based on the analysis?'. This is a rewrite, not a relabel."
+    },
+    "fresh_authoring_required": 269,
+    "clone_contribution_pct": 9.4
+  },
+
+  "track_design": {
+    "cadence": {
+      "items_per_wave": 25,
+      "waves_per_week": 3,
+      "items_per_week": 75,
+      "rationale": "25 items per wave balances quality gate overhead with throughput. 3 waves/week is realistic given dual review requirements. Evaluate authoring is ~2× slower than Apply authoring due to scenario generation + judgment prompt design."
+    },
+    "governance": {
+      "standard_gates": ["G1_Technical_Review", "G2_Psychometric_Review", "G4_Instructional_Review", "G5_Metadata_Review", "G6_Final_Validation", "G7_Approval"],
+      "evaluate_specific_gates": [
+        {
+          "gate": "G8_Evaluate_Scenario_Authenticity",
+          "description": "Verify the question uses a realistic business scenario with named company, stakeholder, and decision context. The prompt must ask for professional judgment or a recommendation — not a definition or calculation.",
+          "checks": [
+            "Named company and stakeholder present",
+            "Decision trigger in stem",
+            "Prompt asks for judgment/recommendation (not 'which is correct')",
+            "Scenario uses business language per CAQS §3.8",
+            "Multiple concepts integrated (at least 2 distinct topics)"
+          ]
+        },
+        {
+          "gate": "G9_Evaluate_Distractor_Sophistication",
+          "description": "Evaluate distractors must represent genuine professional disagreements — plausible alternative recommendations that a competent management accountant might make — not definition-level opposites.",
+          "checks": [
+            "Every distractor is a reasonable alternative recommendation",
+            "No distractor is a definition-mismatch throwaway",
+            "Distractors discriminate between levels of professional understanding",
+            "Each distractor targets a specific judgment error (not a knowledge gap)"
+          ]
+        },
+        {
+          "gate": "G10_Evaluate_Explanation_Depth",
+          "description": "Evaluate explanations must be mini-lessons that trace the full reasoning chain from analysis → interpretation → judgment → recommendation.",
+          "checks": [
+            "Explanation maps the reasoning chain explicitly",
+            "Business interpretation contextualizes the recommendation",
+            "Distractor explanations address why each alternative recommendation is suboptimal in the specific scenario",
+            "Minimum 500 characters for ExplanationCorrect (vs. standard 50-char minimum)",
+            "Cross-references related concepts per CAQS §11.3 interleaving readiness"
+          ]
+        }
+      ],
+      "certification_requirements": [
+        "All 6 standard CAQS dimensions at HIGH confidence",
+        "G8-G10 evaluate-specific gates passed",
+        "Dual review: Accountant + Psychometrician, both at ≥90 confidence",
+        "Independent agreement on the recommended judgment (not just answer key match)",
+        "Per CAQS §9.2 certification: user approval documented in REVISION_HISTORY.md"
+      ]
+    },
+    "pipeline": {
+      "phase1_scenario_design": "Author business scenario (named company, stakeholder, decision trigger). Integrate 2+ concepts from the blueprint domain.",
+      "phase2_judgment_prompt": "Draft the judgment question asking for a professional recommendation. Avoid 'which is correct' framing.",
+      "phase3_distractor_engineering": "Design 3 plausible alternative recommendations representing real professional disagreements.",
+      "phase4_explanation_authoring": "Write the full reasoning chain: analysis → interpretation → judgment → recommendation. Each distractor explanation must describe why that alternative is suboptimal.",
+      "phase5_metadata_assignment": "Assign CognitiveLevel: Evaluate, Difficulty: Difficult (4) or Very Difficult (5), PrimaryCompetency: Judgment.",
+      "phase6_dual_review": "Accountant verifies accounting correctness and judgment validity. Psychometrician verifies scenario authenticity, distractor sophistication, and explanation depth.",
+      "differs_from_analyze_apply": [
+        "Analyze/Apply: question + answer key approach. Evaluate: scenario + recommendation approach.",
+        "Analyze/Apply: 'Calculate the variance' or 'Which of the following describes...'. Evaluate: 'Which recommendation should the CFO present...' or 'How should the controller respond...'",
+        "Analyze/Apply: single-concept test. Evaluate: multi-concept integration required.",
+        "Analyze/Apply: distractor = calculation error or definition mismatch. Evaluate: distractor = plausible alternative professional judgment."
+      ]
+    },
+    "review": {
+      "primary_reviewers": ["Accountant", "Psychometrician"],
+      "optional_reviewers": ["Editor (for business language authenticity)"],
+      "dual_review_minimum_confidence": 90,
+      "review_conflict_resolution": "Accountant wins on accounting correctness; Psychometrician wins on difficulty and distractor quality. If both disagree on a judgment's validity, escalate to Release Manager."
+    },
+    "tracking": {
+      "separate_from_general_certification": true,
+      "tracking_artifact": "scripts/output/EVALUATE_TRACK_PROGRESS.json",
+      "metrics": [
+        "Items authored (cumulative)",
+        "Items through G8-G10 gates",
+        "Items Certified",
+        "Items by domain (A-F)",
+        "Average authoring time per item",
+        "Dual-review pass rate (first-pass vs. revision)"
+      ],
+      "milestone_targets": {
+        "M1_50_items": "Week 1 — cadence validation",
+        "M2_150_items": "Week 3 — domain A+B coverage",
+        "M3_250_items": "Week 5 — cross-domain balance check",
+        "M4_297_items": "Week 6-7 — gap closed, CAQS §6.2 met"
+      }
+    },
+    "governance_guard_integration": {
+      "existing_rules_applicable": ["Rule 2 (DL-008 BLOCK)", "Rule 6 (DL-026 BLOCK)", "Rule 9 (DL-037 BLOCK)"],
+      "evaluate_specific_rule_recommendation": {
+        "proposed_rule": "Rule 10 — Evaluate Scenario Sufficiency BLOCK",
+        "description": "BLOCK certification of any Evaluate item that: (1) lacks a named company/stakeholder, (2) uses 'which of the following is correct' framing, or (3) tests only a single concept.",
+        "status": "Recommended — not yet deployed"
+      },
+      "batch_size": "≤30 items per wave per governance-guard Rule 5"
+    }
+  },
+
+  "timeline_estimate": {
+    "dedicated_track_velocity": {
+      "items_per_week": 75,
+      "weeks_to_297_gap_closure": 4,
+      "weeks_to_381_full_target": 5.1,
+      "end_date_estimate": "2026-09-01",
+      "assumptions": "3 waves/week × 25 items. Assumes dual-review pipeline keeps pace. No major defect discoveries."
+    },
+    "mixed_velocity": {
+      "items_per_week": 30,
+      "weeks_to_297_gap_closure": 10,
+      "weeks_to_381_full_target": 12.7,
+      "end_date_estimate": "2026-10-15",
+      "assumptions": "Evaluate sharing bandwidth with general certification waves, DL remediation, and case study work."
+    },
+    "critical_path": [
+      {
+        "blocker": "Domain B (Planning/Budgeting/Forecasting) Evaluate items",
+        "reason": "Current inventory: 1 Evaluate item across all 5 packs for Domain B. Section B has the largest absolute gap (62 items). No clone seeds exist in Section B.",
+        "impact": "All 62 Domain B Evaluate items must be authored from scratch — no clone reuse possible."
+      },
+      {
+        "blocker": "Domain C (Performance Management) Evaluate items",
+        "reason": "Current inventory: 2 Evaluate items. Variance analysis, transfer pricing, and performance evaluation are Evaluate-rich topics that need full authoring.",
+        "impact": "61 new items needed. Domain C has the second-largest gap."
+      },
+      {
+        "blocker": "Psychometrician review bandwidth",
+        "reason": "Evaluate items require deeper psychometric review than Apply items. Dual review (Accountant + Psychometrician) effectively doubles reviewer load per item.",
+        "impact": "If reviewer bandwidth is the bottleneck, cadence drops to 15-20 items/week."
+      },
+      {
+        "blocker": "Scenario authenticity at scale",
+        "reason": "Each Evaluate item needs a unique business scenario. Authoring 297 distinct, realistic scenarios is a creative bottleneck.",
+        "impact": "Risk of template reversion — authors falling back to 'Company XYZ is considering...' patterns."
+      }
+    ],
+    "risk_factors": [
+      {
+        "risk": "R1_Template_Regression",
+        "description": "Evaluate authoring under throughput pressure may regress to Apply-level patterns with Evaluate labels. DL-012 clone pipeline already demonstrated this failure mode.",
+        "mitigation": "G8-G10 gates catch this before certification. Sampling audit every 50 items.",
+        "severity": "HIGH"
+      },
+      {
+        "risk": "R2_Reviewer_Bottleneck",
+        "description": "Dual review (Accountant + Psychometrician) creates a sequential dependency. If either reviewer is unavailable, pipeline stalls.",
+        "mitigation": "Pre-author review guidelines to maximize first-pass acceptance rate. Batch reviews.",
+        "severity": "MEDIUM"
+      },
+      {
+        "risk": "R3_Difficulty_Drift",
+        "description": "Evaluate items should map to Difficult (4) or Very Difficult (5) per CAQS §6.1. If labeled Moderate, they're not true Evaluate items.",
+        "mitigation": "G2 psychometric review enforces difficulty-label alignment with cognitive level.",
+        "severity": "MEDIUM"
+      },
+      {
+        "risk": "R4_Domain_Imbalance",
+        "description": "Section E has 55 existing Evaluate items (clones). Section B has 1. Without deliberate domain-balancing, the Evaluate pool skews heavily toward Internal Controls.",
+        "mitigation": "Explicit per-domain allocations in wave planning. Domain B and C first.",
+        "severity": "HIGH"
+      },
+      {
+        "risk": "R5_Existing_Evaluate_Quality",
+        "description": "The 84 existing MCQ Evaluate items may not meet true Evaluate criteria. P1-E-047 (Evaluate/Easy difficulty) is suspect — Bloom's Evaluate at Easy difficulty is contradictory.",
+        "mitigation": "Audit existing Evaluate items in Wave 0 before new authoring begins. Relabel miscategorized items.",
+        "severity": "MEDIUM"
+      }
+    ]
+  },
+
+  "viability_assessment": {
+    "verdict": "VIABLE with governance conditions",
+    "dedicated_track_feasible": true,
+    "dedicated_track_weeks": 6,
+    "conditions": [
+      "G8-G10 Evaluate-specific gates must be deployed before Wave 1",
+      "Rule 10 (Evaluate Scenario Sufficiency BLOCK) recommended for governance guard",
+      "Wave 0: audit existing 84 Evaluate items for miscategorization (P1-E-047 at Easy/Evaluate is suspect)",
+      "Domain B and C prioritized first — they have the largest gaps and zero clone reuse potential",
+      "Clone reuse limited to 28 seeds — not a substitute for fresh authoring (269 items must be authored fresh)",
+      "Psychometrician review bandwidth committed — dual review doubles reviewer load",
+      "Weekly sampling audit (every 50 items) to catch template regression"
+    ],
+    "do_not_proceed_without": [
+      "Wave 0 audit of existing Evaluate items (count of TRUE Evaluate vs. mislabeled Apply/Analyze)",
+      "Psychometrician availability commitment for dual-review pipeline",
+      "G8-G10 gate deployment in governance infrastructure",
+      "Per-domain authoring allocation plan (not just 'author 297 items')"
+    ]
+  }
+}

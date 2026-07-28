@@ -1,0 +1,196 @@
+{
+  "title": "S377 Expansion Preparation Scorecard — RE-RUN (All 5 Agents Complete)",
+  "session": "S377",
+  "timestamp": "2026-07-28T19:50:00Z",
+  "board_role": "Expansion Preparation Board — READ ONLY Synthesis (Re-Run)",
+  "all_subagent_outputs_found": true,
+  "deliverables_verified": [
+    "scripts/output/SESSION377_DL031_BATCH1.json",
+    "scripts/output/SESSION377_CALIBRATION_BASELINE.md",
+    "scripts/output/SESSION377_DL035_CLOSEOUT.json",
+    "scripts/output/SESSION377_DL035_VERIFY.md",
+    "scripts/output/SESSION377_BASELINE_RECONCILIATION.json",
+    "scripts/output/SESSION377_AUTOMATION_VERIFICATION.json",
+    "scripts/output/SESSION377_EVALUATE_TRACK_PROPOSAL.json",
+    "scripts/output/SESSION377_EVALUATE_ROADMAP.md"
+  ],
+  "conditions": {
+    "1_DL031_CAL001_started": {
+      "status": "MET",
+      "s376_requirement": "scan_dl031.js built + batch 1 executed",
+      "evidence": {
+        "scan_tool_built": true,
+        "tool_names": ["classify_dl031.js", "fix_dl031_scores.js", "verify_dl031_changes.js"],
+        "extraction_method": "Function constructor parse (replaces broken v1 500-byte regex window)",
+        "items_scanned": 2540,
+        "items_flagged": 39,
+        "batch1_executed": true,
+        "simple_relabels_applied": 17,
+        "calibration_items_identified": 18,
+        "rewrite_required_items_identified": 4,
+        "packs_modified": ["pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js"],
+        "backups_made": 3,
+        "qid_counts_unchanged": "500/500/500/500/540",
+        "source": "SESSION377_DL031_BATCH1.json + SESSION377_CALIBRATION_BASELINE.md"
+      },
+      "remaining": "18 Calibration items + 4 Rewrite Required items deferred to batch 2+. Paired-constraint risk acknowledged (Easy inflation without parallel Difficult/Very Difficult recalibrations)."
+    },
+    "2_DL035_fully_remediated": {
+      "status": "MET",
+      "s376_requirement": "S373 plan executed, 0 empty non-CC EW on Certified",
+      "evidence": {
+        "pre_remediation_dl035_items": 32,
+        "pack_c_items_remediated": 14,
+        "pack_d_items_remediated": 18,
+        "slots_authored": 38,
+        "dl008_fixes": 21,
+        "post_remediation_dl008": 0,
+        "post_remediation_dl026": 0,
+        "certified_domain_f_items_verified": 59,
+        "correct_choice_changes": 0,
+        "question_state_changes": 0,
+        "qid_count_pack_c": 500,
+        "qid_count_pack_d": 500,
+        "certified_count_pack_c": 438,
+        "certified_count_pack_d": 439,
+        "governance_guard": "54 PASS, 0 FAIL",
+        "file_parse_both_packs": "OK",
+        "backups": ["backups/pack_c_corrected.js.bak-S377-20260728153507", "backups/pack_d_corrected.js.bak-S377-20260728153507"],
+        "source": "SESSION377_DL035_CLOSEOUT.json + SESSION377_DL035_VERIFY.md"
+      },
+      "scope_note": "Original DL-035 Defect Library entry listed 39 items. S377 found 32 items needing remediation: 3 already resolved by S371, some were clean pre-S377, 10 newly discovered (Pack D: FD-003, FD-007, FD-009, FD-013, FD-017, FD-022, FD-028, FD-035, FD-041, FD-047). All 32 remediated. 0 remaining.",
+      "remaining": "None. Learner pool fully secured for Domain F Certified items."
+    },
+    "3_CURRENT_BASELINES_accurate": {
+      "status": "MET",
+      "s376_requirement": "all counts verified, DL-035 added to §3, DL-021 corrected",
+      "evidence": {
+        "counts_recaptured": true,
+        "method": "direct grep on all 5 pack files",
+        "previous_total": 2298,
+        "actual_total": 2417,
+        "delta": "+119",
+        "pack_a": "481 → 500 (+19, S892 closure confirmed)",
+        "pack_b": "500 → 500 (stable)",
+        "pack_c": "388 → 438 (+50, S853 WAVE_A authorized)",
+        "pack_d": "389 → 439 (+50, S853 WAVE_A authorized)",
+        "pack_e": "540 → 540 (stable)",
+        "certified_percentage": "95.2%",
+        "dl035_added_to_s3": true,
+        "dl035_s3_status_text": "S377 IN PROGRESS (stale — DL-035 closeout completed AFTER baseline-remediation agent. Status should be RESOLVED.)",
+        "dl021_corrected_to_resolved": true,
+        "hashes_recaptured": "All 5 pack hashes recaptured via Get-FileHash SHA-256",
+        "governance_guard_at_baseline_time": "51/51 PASS",
+        "source": "SESSION377_BASELINE_RECONCILIATION.json + direct CURRENT_BASELINES.md inspection"
+      },
+      "staleness_note": "CURRENT_BASELINES.md §3 line 97 and §1 line 42 still show DL-035 as 'S377 IN PROGRESS' — a timing artifact from parallel agent execution (baseline-remediation ran first, DL-035 closeout completed second). The DL-035 status should be RESOLVED. All counts, hashes, and DL-021 correction are verified correct.",
+      "remaining": "DL-035 status text should be updated from IN PROGRESS to RESOLVED in CURRENT_BASELINES.md §3 line 97 and §1 line 42. Non-blocking — count data is correct."
+    },
+    "4_Evaluate_track_launched": {
+      "status": "NOT MET",
+      "s376_requirement": "1 proven wave (≥5 items, 0 defects)",
+      "evidence": {
+        "track_designed": true,
+        "proposal_complete": true,
+        "roadmap_complete": true,
+        "cadence_defined": "25 items/wave, 3 waves/week, 75 items/week",
+        "quality_gates_designed": "G8 (Scenario Authenticity), G9 (Distractor Sophistication), G10 (Explanation Depth)",
+        "pipeline_defined": "6-phase pipeline (Scenario Design → Judgment Prompt → Distractor Engineering → Explanation Authoring → Metadata Assignment → Dual Review)",
+        "gap_analysis_complete": "297 MCQ Evaluate gap, 84 current, 381 target (15% per CAQS §6.2)",
+        "domain_allocation_mapped": "A:58, B:62, C:61, D:55, E:8, F:50",
+        "current_inventory": "84 MCQ Evaluate items (3.3% of pool)",
+        "wave_executed": false,
+        "items_authored": 0,
+        "items_certified": 0,
+        "items_defects": "N/A — no content produced",
+        "meta_status": "PROPOSAL — NOT YET AUTHORIZED",
+        "source": "SESSION377_EVALUATE_TRACK_PROPOSAL.json + SESSION377_EVALUATE_ROADMAP.md"
+      },
+      "assessment": "The Evaluate Track Design Board was a DESIGN board — its scope was strategy, not execution. It produced a complete and thorough track design (proposal + roadmap, ~600 lines total). However, the S376 condition requires a launched track with 1 proven wave of ≥5 items with 0 defects. No wave was executed. The design board itself notes 'PROPOSAL — NOT YET AUTHORIZED.'",
+      "remaining": "Must execute Wave 0 (audit of existing 84 Evaluate items for miscategorization) + Wave 1 (≥5 fresh Evaluate items authored, reviewed, and certified with 0 defects). Domain B and C should be prioritized (largest gaps, zero clone reuse)."
+    },
+    "5_Automation_contradiction_resolved": {
+      "status": "MET",
+      "s376_requirement": "post_change_qc.js existence verified",
+      "evidence": {
+        "file_exists": true,
+        "file_path": "scripts/post_change_qc.js",
+        "file_lines": 154,
+        "file_hash_sha256": "FC9C9C456F5FA731C3FF33F358C9CCA67F9020D69C1A694ACE38609D0E3C6F81",
+        "script_runs": true,
+        "exit_code": 0,
+        "overall_qc_result": "PASS",
+        "all_qc_checks_pass": true,
+        "output_json_valid": true,
+        "contradiction_resolved": true,
+        "deployment_status": "AUTOMATION_PARTIALLY_DEPLOYED",
+        "throughput_board_claim": "ZERO components deployed. No post_change_qc.js present.",
+        "verdict_on_throughput_board": "FALSE — script exists at scripts/post_change_qc.js (154 lines)",
+        "readiness_audit_claim": "Automation score 48→62, post_change_qc.js exists and is functional",
+        "verdict_on_readiness_audit": "PARTIAL — script exists and runs, but is not integrated into any pipeline (not in package.json scripts, not called by other scripts, not CI/CD triggered)",
+        "source": "SESSION377_AUTOMATION_VERIFICATION.json"
+      },
+      "remaining": "Pipeline integration (package.json scripts, CI/CD, auto-trigger on pack changes) is deferred. Manual invocation with 'node scripts/post_change_qc.js' is required. Contradiction resolved — file exists and is functional."
+    }
+  },
+  "all_conditions_met": "NO",
+  "met_count": 4,
+  "not_met_count": 1,
+  "met_conditions": ["1_DL031_CAL001_started", "2_DL035_fully_remediated", "3_CURRENT_BASELINES_accurate", "5_Automation_contradiction_resolved"],
+  "not_met_conditions": ["4_Evaluate_track_launched"],
+  "governance_guard": {
+    "tests_pass": 54,
+    "tests_fail": 0,
+    "total_tests": 54,
+    "rules_active": 10,
+    "note": "Full pass — Rules 1-10 all verified active."
+  },
+  "certification_drift": {
+    "status": "DETECTED",
+    "direction": "POSITIVE +119 (authorized drift from S853/S892 certification waves)",
+    "s376_reported_total": 2298,
+    "s377_verified_total": 2417,
+    "delta": "+119",
+    "pack_level": {
+      "pack_a": { "s376_reported": 481, "s377_verified": 500, "delta": "+19", "source": "S892 closure confirmed" },
+      "pack_b": { "s376_reported": 500, "s377_verified": 500, "delta": 0, "source": "stable" },
+      "pack_c": { "s376_reported": 388, "s377_verified": 438, "delta": "+50", "source": "S853 WAVE_A authorized" },
+      "pack_d": { "s376_reported": 389, "s377_verified": 439, "delta": "+50", "source": "S853 WAVE_A authorized" },
+      "pack_e": { "s376_reported": 540, "s377_verified": 540, "delta": 0, "source": "stable" }
+    },
+    "interpretation": "S376 reported stale totals (2,298) based on pre-S853/S892 data. The true count was 2,417 all along. All drift is AUTHORIZED — no unauthorized pack modifications detected."
+  },
+  "blocked_for_authorization": [
+    "Condition 4 (Evaluate track launched): Track design is complete but no execution wave has been run. Requires Wave 0 audit + Wave 1 execution (≥5 items, 0 defects) before S378 authorization."
+  ],
+  "notable_risks": [
+    "Paired-constraint: 17 Easy relabels without parallel Difficult/Very Difficult recalibrations creates bottom-heavy pool risk (CAQS §6.1 targets)",
+    "CURRENT_BASELINES.md §1/§3 DL-035 status stale (IN PROGRESS → should be RESOLVED post-S377 DL-035 closeout)",
+    "Evaluate track designed but not launched — 297-item gap cannot begin closing until Wave 1 executes",
+    "Domain B has 1 Evaluate item across all 5 packs — the largest absolute gap (62 items) with zero clone reuse potential",
+    "DL-031 calibration batch 1 identified 22 unresolved items (18 Calibration + 4 Rewrite) — these need follow-up",
+    "post_change_qc.js exists and runs but is not integrated into any pipeline — manual invocation required",
+    "Evaluate track design identifies 48 of 84 existing Evaluate items (57.1%) as likely DL-012 template clones — true unique count may be ~40"
+  ],
+  "unresolved_items": [
+    "Evaluate Wave 0 audit (existing 84 items) — miscategorization risk (P1-E-047: Evaluate/Easy is contradictory)",
+    "Evaluate Wave 1 execution (≥5 items, Domain B or C prioritized)",
+    "CURRENT_BASELINES.md DL-035 status text update (IN PROGRESS → RESOLVED)",
+    "DL-031 batch 2: 18 Calibration items need per-item cognitive review",
+    "DL-031 batch 3: 4 Rewrite Required items need stem/distractor enhancement",
+    "post_change_qc.js pipeline integration (package.json, CI/CD)",
+    "CURRENT_BASELINES.md hash recapture needed post-DL-035 closeout (Pack C+D modified by DL-035 agent)"
+  ],
+  "recommended_next": "S377_CONTINUED_PREPARATION",
+  "next_actions": [
+    "1. Execute Evaluate Wave 0: audit all 84 existing Evaluate items for miscategorization",
+    "2. Execute Evaluate Wave 1: author ≥5 Evaluate items (Domain B or C), certify with 0 defects",
+    "3. Update CURRENT_BASELINES.md DL-035 status: IN PROGRESS → RESOLVED (reflects S377 DL-035 closeout)",
+    "4. Recapture Pack C+D hashes post-DL-035 closeout (both packs modified by DL-035 remediation agent)",
+    "5. Deploy Rule 10 (Evaluate Scenario Sufficiency BLOCK) to governance guard",
+    "6. S378 re-evaluation: all 5 conditions assessed, authorization decision"
+  ],
+  "s378_readiness": "NOT READY — 4 of 5 S376 conditions met. Condition 4 (Evaluate track wave execution) is the sole remaining blocker. Evaluate track design is complete and execution-ready. S378 authorization is achievable with 1-2 sessions of Evaluate wave execution.",
+  "s378_authorization_package_generated": false,
+  "s378_authorization_package_reason": "Condition 4 NOT MET — evaluate wave not executed (≥5 items, 0 defects required). Authorization package withheld."
+}

@@ -16956,7 +16956,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "This option reflects a misunderstanding of lean manufacturing waste reduction. The choice \"The reciprocal method\" is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
     {
@@ -16967,7 +16967,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "lean manufacturing waste reduction",
         "UniqueConceptKey": "D-C061-lean-manufacturing-waste-reduction",
         "LOSTag": "D Cost management",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Lanternwood implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels. What is a central goal of this approach?",
@@ -17006,7 +17006,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "This option reflects a misunderstanding of accounting. The choice \"Increasing batch sizes to reduce the number of setups\" is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
         "ExplanationWrongD": "Lean manufacturing systematically eliminates non-value-added activities (waste). The seven wastes: overproduction, waiting, transportation, overprocessing, inventory, motion, and defects. Core principles include continuous flow, pull systems, standardized work, and continuous improvement (kaizen).",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -17017,7 +17017,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "lean manufacturing waste reduction",
         "UniqueConceptKey": "D-C062-lean-manufacturing-waste-reduction",
         "LOSTag": "D Cost management",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Mossbrook implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels. What is a central goal of this approach?",
@@ -17056,7 +17056,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "Lean manufacturing advocates for REDUCING batch sizes to minimize work-in-process inventory, shorten lead times, and improve quality feedback. Larger batch sizes increase inventory and hide quality problems. This runs counter to lean principles of continuous flow and waste elimination.",
         "ExplanationWrongD": "Lean manufacturing views inventory as waste that ties up capital and hides process problems. The goal is to minimize inventory through pull systems, not maximize it — high inventory is the opposite of lean philosophy.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -17067,7 +17067,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "lean manufacturing waste reduction",
         "UniqueConceptKey": "D-C063-lean-manufacturing-waste-reduction",
         "LOSTag": "D Cost management",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Nettlefield implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels. What is a central goal of this approach?",
@@ -17106,7 +17106,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Lean manufacturing views excess inventory as waste (muda) that ties up working capital, hides production problems such as defects and bottlenecks, consumes storage space, and risks obsolescence. Lean systems minimize inventory through just-in-time delivery, pull production, and smaller batch sizes.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -17117,7 +17117,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "lean manufacturing waste reduction",
         "UniqueConceptKey": "D-C064-lean-manufacturing-waste-reduction",
         "LOSTag": "D Cost management",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Oakenshaw implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels. What is a central goal of this approach?",
@@ -17156,7 +17156,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "Increasing batch sizes runs counter to lean principles. Lean manufacturing aims to reduce batch sizes to improve flow, reduce WIP inventory, and expose process inefficiencies — larger batches hide problems and increase carrying costs.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -17167,7 +17167,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "lean manufacturing waste reduction",
         "UniqueConceptKey": "D-C065-lean-manufacturing-waste-reduction",
         "LOSTag": "D Cost management",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Poplarwood implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels. What is a central goal of this approach?",
@@ -17206,7 +17206,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "Lean manufacturing advocates for REDUCING batch sizes to minimize work-in-process inventory, shorten lead times, and improve quality feedback. Larger batch sizes increase inventory and hide quality problems. This runs counter to lean principles of continuous flow and waste elimination.",
         "ExplanationWrongD": "Lean manufacturing views inventory as waste that ties up capital and hides process problems. The goal is to minimize inventory through pull systems, not maximize it — high inventory is the opposite of lean philosophy.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -21487,7 +21487,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongB": "Option B (External audit sign-off, which requires no internal follow-up) represents a plausible misconception. Under Electronic data interchange (EDI), the correct analysis leads to the conclusion that remediation tracking, ensuring identified deficiencies are corrected and verified. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Option D (Control environment assessment, which is unrelated to specific deficiencies) represents a plausible misconception. Under Electronic data interchange (EDI), the correct analysis leads to the conclusion that remediation tracking, ensuring identified deficiencies are corrected and verified. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -21498,7 +21498,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "data governance ownership",
         "UniqueConceptKey": "F-C001-data-governance-ownership",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Ashford establishes clear ownership, definitions, and quality standards for its enterprise data. What concept does this describe?",
@@ -21532,12 +21532,12 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Choice A is incorrect because data visualization is the practice of presenting information through charts, dashboards, graphs, and other graphical formats to facilitate human interpretation and analysis. The stem describes enterprise-level ownership, standard definitions, and quality standards for data — these are governance activities, not visual presentation. While effective data visualization depends on well-governed data to produce trustworthy displays, visualization itself addresses how information is displayed, not who owns it or how quality standards are defined and enforced. A candidate may confuse the presentation layer of data management with the foundational governance framework that ensures data is accurate, consistent, and properly stewarded before it ever reaches a dashboard. Under the DAMA Data Management Body of Knowledge, data governance is the exercise of authority and control over the management of data assets, which directly aligns with the ownership, definitions, and quality standards described in the stem.",
-        "ExplanationWrongB": "",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "Data lineage tracks the origin, movement, and transformation of data across systems — it documents data flows, not the establishment of ownership, definitions, and quality standards. A candidate may confuse data lineage (which traces data) with data governance (which establishes authority and accountability for data). The stem describes governance activities — ownership, definitions, and quality standards — which are the domain of data governance, not the documentation of data flows.",
         "ExplanationWrongC": "Choice C is incorrect because data warehousing is the practice of aggregating structured data from multiple sources into a central repository for reporting and analysis. While warehousing is part of a data strategy, it does not address ownership, definitions, or quality standards — those are governance responsibilities. A candidate may confuse data storage architecture with data stewardship.",
         "ExplanationWrongD": "Choice D is incorrect because data lineage documents the origin, movement, and transformation path of data as it travels through systems and processes. While lineage provides traceability and supports audit requirements, it does not establish enterprise-wide ownership, standard definitions, or quality requirements for data — those are governance responsibilities described in the stem. A candidate may confuse tracking the journey of data with managing data as an enterprise asset.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -21548,7 +21548,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "data governance ownership",
         "UniqueConceptKey": "F-C002-data-governance-ownership",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Brightpoint establishes clear ownership, definitions, and quality standards for its enterprise data. What concept does this describe?",
@@ -21587,7 +21587,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Choice D is incorrect because data warehousing is the practice of aggregating structured data from multiple sources into a central repository for reporting and analysis. While a data warehouse supports enterprise reporting and business intelligence, it is a storage architecture — not a framework for establishing ownership, standard definitions, or quality standards for data. Those responsibilities fall under data governance. A candidate may confuse where data is stored with how data is managed as an asset.",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -21598,7 +21598,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "data governance ownership",
         "UniqueConceptKey": "F-C003-data-governance-ownership",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Cedarline establishes clear ownership, definitions, and quality standards for its enterprise data. What concept does this describe?",
@@ -21637,7 +21637,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "",
         "ExplanationWrongD": "",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -21648,7 +21648,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "data governance ownership",
         "UniqueConceptKey": "F-C004-data-governance-ownership",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Driftwood establishes clear ownership, definitions, and quality standards for its enterprise data. What concept does this describe?",
@@ -21687,7 +21687,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "Data lineage traces where data came from and how it changed; it is narrower than the enterprise ownership and standards described.",
         "ExplanationWrongD": "",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -21781,8 +21781,8 @@ const MCQ_BANK_C = [
         ],
         "ExplanationWrongA": "Choice A is incorrect because diagnostic analytics investigates why past events occurred through root-cause analysis and drill-down examination of historical data. The stem describes building a model to forecast future customer churn — a forward-looking prediction task, not a retrospective explanation of past outcomes. A candidate may confuse understanding why churn happened previously with forecasting which customers will likely churn in the future.",
         "ExplanationWrongB": "Choice B is incorrect because descriptive analytics summarizes and reports on what has already occurred — it answers the question 'What happened?' by organizing historical data into dashboards, reports, and trend summaries. Gladstone is building a model to forecast which customers are most likely to churn in the next quarter, which is inherently forward-looking rather than retrospective. Descriptive analytics would tell Gladstone how many customers churned last quarter or what the historical churn rate has been, but it cannot estimate which specific customers are at risk of churning in the future. A candidate may confuse reporting on past customer behavior with predicting future customer behavior. The distinction is fundamental: descriptive analytics looks backward at historical outcomes, while predictive analytics uses historical data as input to a model that estimates future probabilities — which is exactly what the churn forecast model does.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Choice D is incorrect because prescriptive analytics goes beyond prediction to recommend specific actions or optimal decisions based on data and constraints. The stem describes building a forecast model to identify which customers are likely to churn — a predictive task that estimates future probabilities. While the model's output may later inform prescriptive actions, the question asks about the forecast model itself. A candidate may conflate predicting churn risk with prescribing retention strategies.",
+        "ExplanationWrongC": "Prescriptive analytics recommends specific actions or decisions based on optimization algorithms — it answers \"what should we do?\" rather than \"what would have happened?\" The CFO's question asks what T&E spend would have been under a different policy (a counterfactual prediction), which requires predictive modeling. A candidate may confuse prescriptive analytics (recommending actions) with predictive analytics (forecasting outcomes under different conditions).",
+        "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
@@ -21831,8 +21831,8 @@ const MCQ_BANK_C = [
         ],
         "ExplanationWrongA": "Choice A is incorrect because descriptive analytics summarizes what has already happened — it reports historical data, delivery patterns, and past performance metrics. The Hearthstone tool recommends optimal shipping routes by analyzing cost, transit time, fuel consumption, and delivery windows — this goes beyond describing historical outcomes to recommending specific future actions. A candidate may confuse reporting on past shipping performance with optimizing future routing decisions.",
         "ExplanationWrongB": "Diagnostic analytics seeks to understand why something happened (e.g., root-cause analysis of past shipping delays). The tool described focuses on recommending optimal future routes, not explaining past outcomes.",
-        "ExplanationWrongC": "Choice C is incorrect because predictive analytics uses historical data and statistical models to forecast what is likely to happen in the future — it answers the question 'What will happen?' by estimating probabilities and projecting trends. The Hearthstone tool goes beyond forecasting future outcomes; it analyzes multiple variables (shipping cost, transit time, fuel consumption, and delivery windows) and recommends a specific optimal action for each order. Forecasting would tell Hearthstone what delivery times to expect or what fuel costs are projected to be, but it would not select the best route among alternatives. A candidate may confuse the capability to project forward-looking estimates with the capability to optimize and recommend decisions based on those projections. The software is performing prescriptive analytics because it synthesizes predictions with constraint-based optimization to advise on a specific course of action — choosing the ideal route — rather than merely forecasting what the outcome of a given route would be.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Prescriptive analytics recommends specific actions based on predictive models — it goes beyond forecasting to suggest what should be done. The stem describes building a model to forecast customer churn, which is predictive analytics. A candidate may overgeneralize the analytics progression and assume any model-based approach qualifies as prescriptive, but prediction without a recommendation component is predictive, not prescriptive.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
@@ -21980,8 +21980,8 @@ const MCQ_BANK_C = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Choice A is incorrect because data visualization presents information through charts, dashboards, and graphical displays for human interpretation and analysis. The Kestrel task involves automating repetitive, rules-based data entry between two systems — a transactional process that requires software execution, not visual presentation of data. A candidate may confuse the display of information with the automation of data processing workflows.",
-        "ExplanationWrongB": "Choice B is incorrect because blockchain is a decentralized, distributed ledger technology designed for recording transactions across multiple parties in a tamper-resistant, cryptographically secured manner. It provides an immutable audit trail and eliminates the need for a central authority in transaction validation. The Kestrel task — automating repetitive, rules-based data entry between two existing systems — does not require decentralized consensus, cryptographic transaction verification, or an immutable distributed ledger. The data entry task is deterministic (the same input always produces the same output), involves structured data movement between known systems, and follows predefined business rules — characteristics that make RPA the appropriate technology rather than blockchain. A candidate may select blockchain based on its prominence as an emerging technology without evaluating whether its core capabilities (distributed consensus, immutability) match the task requirements (rules-based automation, structured data transfer between two systems).",
-        "ExplanationWrongC": "",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Diagnostic analytics seeks to understand why something happened — it analyzes historical data to identify root causes and relationships after the fact. The stem describes forecasting future customer churn, which is a forward-looking prediction, not an investigation of past events. A candidate may group diagnostic and predictive analytics together as advanced analytics without recognizing the critical distinction between backward-looking diagnosis and forward-looking prediction.",
         "ExplanationWrongD": "Choice D is incorrect because predictive analytics uses historical data and statistical models to forecast future outcomes and estimate probabilities. The Kestrel task involves repetitive, rules-based data entry between two systems — a deterministic process governed by predefined business rules, not a forecasting activity. A candidate may confuse using data to predict future events with using software to execute routine, rule-driven transaction processing.",
         "question_state": "Certified",
         "DifficultyScore": 3,
@@ -22231,8 +22231,8 @@ const MCQ_BANK_C = [
         ],
         "ExplanationWrongA": "Choice A is incorrect because data visualization tools create charts, dashboards, and graphical representations of data for human interpretation. The stem describes a process automation need — moving data between systems — not an information display need. A candidate may confuse data presentation technology with data processing automation technology.",
         "ExplanationWrongB": "Choice B is incorrect because Data as a Service (DaaS) provides data on demand to users via a network, typically through APIs or data marketplaces. The Quillfeather scenario describes outsourcing IT infrastructure — servers and storage — which falls under Infrastructure as a Service (IaaS), not a data provisioning model. A candidate may confuse accessing data as a service with accessing computing infrastructure as a service.",
-        "ExplanationWrongC": "Choice C is incorrect because Software as a Service (SaaS) delivers complete, fully managed applications to end users over the internet — the provider manages everything from the application itself through the underlying infrastructure, middleware, and runtime environment. Prairiewood specifically retains control over its own applications while only outsourcing servers and storage infrastructure. Under the SaaS model, the cloud provider would also manage the applications, which contradicts the stem's statement that Prairiewood 'manages its own applications.' A candidate may confuse the level of abstraction each service model provides: SaaS abstracts away the most (applications + platform + infrastructure), PaaS abstracts the platform and infrastructure, and IaaS abstracts only the physical or virtual infrastructure. The scenario where a company outsources computing resources while retaining application control is the defining use case for IaaS, not SaaS. SaaS would be appropriate if Prairiewood were adopting a vendor-provided application like a cloud-based ERP system rather than managing its own custom applications on cloud infrastructure.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Blockchain is a distributed ledger technology used for secure, tamper-resistant record-keeping among multiple parties — it is not designed to automate repetitive data entry between systems. A candidate may assume any emerging technology is interchangeable for automation tasks, but RPA specifically targets rules-based, high-volume, manual processes like data entry, while blockchain addresses trust and verification between parties.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
@@ -22480,10 +22480,10 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Software as a Service (SaaS) delivers complete, vendor-hosted applications to end users via subscription — the customer does not manage servers, storage, or operating systems. The stem states the company manages its own applications while outsourcing only infrastructure, which describes IaaS, not SaaS. A candidate may not distinguish between a hosted application (SaaS) and hosted infrastructure on which the organization runs its own applications (IaaS).",
         "ExplanationWrongB": "Platform as a Service (PaaS) provides a runtime environment for building and deploying custom applications. The stem focuses on infrastructure (servers, storage), not a development platform.",
         "ExplanationWrongC": "Data as a Service (DaaS) offers data storage and management as a cloud service. The stem describes compute and storage infrastructure, not data-as-a-service specifically.",
-        "ExplanationWrongD": "Choice D is incorrect because effective dashboard design prioritizes clarity, relevance, and decision usefulness over maximizing the quantity of displayed elements. Including as many charts and metrics as technically possible creates visual clutter that obscures key signals, overwhelms the user with information, and increases the cognitive load required to extract actionable insights. The primary goal of good dashboard design — as described in the stem — is to communicate relevant information clearly and support timely decision-making, which requires the designer to exercise restraint and select only the most decision-critical KPIs. A candidate may equate comprehensiveness with quality, but dashboard design best practices emphasize that 'less is more': each element on the display should earn its place by directly supporting a specific decision need. Cluttered dashboards lead to analysis paralysis rather than informed action, undermining the very purpose of an executive dashboard as a decision-support tool.",
+        "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
@@ -22730,8 +22730,8 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Choice A is incorrect because integrity protects against unauthorized modification or destruction of data — it ensures that information remains accurate, complete, and trustworthy throughout its lifecycle. The Ashgrove scenario describes a terminated employee whose network credentials remained active, allowing unauthorized system access. The primary risk is that an unauthorized person can view, copy, or extract sensitive information — a breach of confidentiality, not integrity. While a threat actor with active credentials could potentially modify data, the scenario focuses on the access itself (entering the system without authorization), not on data alteration. File integrity monitoring detects unauthorized changes after they occur but does not prevent the initial unauthorized access. The correct control — automated de-provisioning upon termination — addresses the root cause by removing access rights when employment ends, preventing any unauthorized entry in the first place. A candidate may confuse the result of unauthorized access (potential data modification) with the nature of the breach itself (unauthorized disclosure).",
-        "ExplanationWrongB": "",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "Dashboards are designed to complement, not replace, narrative reporting — they provide visual, at-a-glance summaries that support but do not eliminate the need for deeper analysis and written explanation. A candidate may overestimate dashboard capabilities, assuming visualization tools make all other forms of reporting obsolete. Effective dashboards supplement decision-making; they do not replace the entire reporting ecosystem.",
         "ExplanationWrongC": "Including every possible chart clutters the display and obscures key signals. Effective dashboard design prioritizes clarity and relevance, not maximization of display elements. A candidate equating comprehensiveness with quality may select this option, but dashboards must filter to show what matters most.",
         "ExplanationWrongD": "Dashboards depend on governed, accurate, and well-defined data to produce meaningful visualizations; eliminating data governance would degrade, not improve, dashboard effectiveness. A candidate may confuse the presentation layer with the underlying data management disciplines that make visualization reliable.",
         "question_state": "Certified",
@@ -22781,8 +22781,8 @@ const MCQ_BANK_C = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Choice A is incorrect because integrity protects against unauthorized modification or destruction of data, ensuring information is accurate and trustworthy. While a terminated employee with active credentials could potentially modify data, the described risk of an unauthorized person gaining system access is primarily a confidentiality breach. File integrity monitoring would detect changes to data but would not prevent the unauthorized access.",
-        "ExplanationWrongB": "Choice B is incorrect because the fraud triangle is a framework developed by criminologist Donald Cressey that describes the three conditions typically present when occupational fraud occurs: pressure (or incentive), opportunity, and rationalization. The Birchwood scenario describes three objectives for protecting information — preventing unauthorized disclosure, preventing unauthorized modification, and ensuring system accessibility — which directly correspond to the confidentiality, integrity, and availability elements of the CIA triad. The fraud triangle does not address information security objectives; it explains why individuals commit fraud, not how organizations protect data. A candidate may select the fraud triangle because it is a well-known three-element framework commonly tested on the CMA exam, but recognizing which framework matches the described elements requires understanding the purpose of each framework. The fraud triangle serves fraud risk assessment, while the CIA triad serves information security program design — the stem clearly describes the latter.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Availability ensures that systems and data are accessible when needed by authorized users. While disaster recovery testing is an important availability control, the stem describes unauthorized access by a terminated employee — a confidentiality breach caused by failure to de-provision credentials. A candidate may default to thinking any system problem is an availability problem without isolating the specific CIA element violated, which is confidentiality based on the unauthorized access scenario.",
         "ExplanationWrongD": "checksums verify data integrity by detecting unauthorized changes. The terminated employee scenario involves unauthorized access, not data modification.",
         "question_state": "Certified",
         "DifficultyScore": 3,
@@ -23032,8 +23032,8 @@ const MCQ_BANK_C = [
         ],
         "ExplanationWrongA": "Choice A is incorrect because big data is defined by multiple characteristics working together, not volume alone. The stem describes massive amounts (volume), continuous arrival (velocity), and diverse structured and unstructured sources (variety) — all three Vs are present. Reducing the description to volume only would ignore the velocity and variety dimensions that distinguish big data from simply large datasets.",
         "ExplanationWrongB": "Storage cost can be relevant, but it is not the defining characteristic set described in the stem.",
-        "ExplanationWrongC": "Choice C is incorrect because accuracy is a data quality dimension, not a defining characteristic of big data. While data quality — including accuracy, completeness, consistency, and timeliness — is critically important for any analytics initiative, the defining framework for big data is captured by the three Vs: volume, velocity, and variety. The Graystone scenario describes massive amounts of data (volume), arriving continuously (velocity), from diverse structured and unstructured sources (variety) — all three dimensions are explicitly present. Reducing the description to 'only accuracy' ignores the scale, speed, and diversity dimensions that distinguish big data from simply a large, clean dataset. A candidate may select this option because data quality is frequently discussed in the context of data governance and analytics readiness, but accuracy is a qualitative attribute of data rather than a defining structural characteristic. The correct response recognizes that all three Vs are present in the scenario and no single dimension — volume, cost, or accuracy — captures the full description.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Accuracy is a data quality dimension concerning whether data values correctly represent reality — it is a measure of data correctness, not a defining characteristic of big data. The stem describes data arriving continuously from diverse sources in massive quantities, which maps to the three Vs of big data (volume, velocity, variety). A candidate may focus on data quality concerns and overlook that the stem asks about the defining characteristics of big data as a category.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
@@ -23280,10 +23280,10 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Variance analysis compares actual results to budgeted or standard amounts to identify and explain deviations — it is a financial performance analysis tool, not a technique for discovering unknown patterns in transaction data. A candidate may associate analyzing data with any analytical method, but variance analysis examines known cost categories against benchmarks, while data mining discovers previously unknown patterns and relationships in large datasets.",
         "ExplanationWrongB": "Standard costing sets predetermined cost benchmarks. It facilitates variance analysis but does not directly address the broader question of cost allocation or performance evaluation.",
         "ExplanationWrongC": "Zero-based budgeting requires all expenses to be justified each period from zero. It is intensive but can eliminate embedded waste.",
-        "ExplanationWrongD": "Choice D is incorrect because standard costing is a cost accounting methodology that establishes predetermined cost benchmarks for products and services to facilitate budgeting and variance analysis. It does not involve analyzing large transaction datasets to discover hidden patterns or relationships among customer segments. The stem describes uncovering previously unknown purchasing patterns — a pattern discovery and knowledge extraction task, which is the domain of data mining, not cost accounting. A candidate may confuse any analytical technique that involves data with the specific field of data mining, but standard costing is concerned with setting cost expectations and measuring deviations from them, not with exploratory pattern discovery in transaction data.",
+        "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
@@ -23632,8 +23632,8 @@ const MCQ_BANK_C = [
         ],
         "ExplanationWrongA": "Choice A is incorrect because robotic process automation (RPA) automates repetitive, rules-based tasks by mimicking human keystrokes and mouse clicks across software applications. The Sagebrook scenario involves creating a shared, tamper-resistant record across multiple parties — a distributed trust and immutability requirement that RPA does not address. A candidate may confuse any automation technology with the specific consensus and integrity capabilities of blockchain. — it is more vulnerable to unilateral alteration and lacks the distributed trust mechanism that makes blockchain suitable for shared records among parties who may not fully trust each other. A candidate may confuse the outcome (tamper-resistance) with the architectural means (decentralization across multiple nodes).",
         "ExplanationWrongB": "Choice B is incorrect because a tool used exclusively for data visualization presents information through charts, graphs, and dashboards for human interpretation. The scenario describes creating a shared, tamper-resistant record across multiple parties — a data integrity and distributed trust requirement that visualization tools do not address. A candidate may confuse the presentation layer of data with the cryptographic integrity layer provided by blockchain.",
-        "ExplanationWrongC": "Choice C is incorrect because a single centralized database controlled by one party is fundamentally the opposite of blockchain architecture. A centralized database places all trust and control in a single entity, which means that party can unilaterally alter, delete, or manipulate records without the knowledge or consent of other participants. The scenario describes creating a shared, tamper-resistant record across multiple parties — exactly the situation where a centralized database fails to provide the necessary distributed trust. Blockchain achieves tamper resistance through decentralization: the ledger is replicated across multiple independent nodes, and consensus mechanisms ensure that no single party can alter recorded transactions retrospectively. A candidate may assume that any database can provide tamper-resistant records, but centralized databases lack the distributed governance and cryptographic immutability that define blockchain technology.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Data visualization tools present data graphically through charts, dashboards, and interactive displays — they help communicate insights but do not create tamper-resistant transaction records. A candidate may conflate different technology categories under generic labels. The stem describes blockchain's distributed ledger characteristic, which is fundamentally about decentralized trust and immutability, not about graphical presentation of data.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
@@ -23881,10 +23881,10 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Network bandwidth measures data transmission speed and capacity — it is an IT infrastructure metric, not a data quality dimension. The stem describes measuring correctness, completeness, and consistency of data values, which are core data quality dimensions. A candidate may confuse technical infrastructure metrics with data quality assessment, but they serve entirely different measurement purposes.",
         "ExplanationWrongB": "Choice B is incorrect because file storage capacity measures the amount of data that can be stored, not the quality of that data. The stem describes measuring whether data values are correct, complete, and consistent — dimensions of data quality, which is independent of storage volume. A candidate may confuse how much data can be stored with how reliable and accurate that data is.",
         "ExplanationWrongC": "Choice C is incorrect because software licensing costs reflect the expense of acquiring rights to use software, not the quality of the data managed by that software. The stem describes measuring whether data values are correct, complete, and consistent — dimensions of data quality that are independent of software procurement costs. A candidate may confuse the cost of technology tools with the quality attributes of the data those tools process.",
-        "ExplanationWrongD": "Choice D is incorrect because network bandwidth measures data transmission speed and throughput capacity — attributes of the technology infrastructure that transports data, not attributes of the data itself. The stem describes a data quality initiative that assesses whether data values are correct (accuracy), complete (completeness), and consistent across systems (consistency). These are dimensions of data quality, which is independent of how fast data moves across a network. A candidate may confuse the infrastructure that supports data movement with the quality characteristics of the data being moved. In the DAMA Data Management Body of Knowledge framework, data quality and network infrastructure management are separate disciplines with distinct metrics and accountability structures.",
+        "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
@@ -24128,8 +24128,8 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Choice A is incorrect because blockchain is a distributed ledger technology designed to maintain an immutable, tamper-evident record of transactions through cryptographic consensus mechanisms. It provides data integrity and trust among parties who may not fully trust one another, but it does not learn from data, adapt its behavior, or improve performance over time. The stem describes a system that progressively improves its fraud detection accuracy as it processes more transaction data, without being explicitly reprogrammed — this is the defining characteristic of machine learning, where algorithms learn patterns from data and improve through experience. A candidate may confuse any emerging technology with another, but blockchain and machine learning address fundamentally different objectives: blockchain provides data immutability and distributed trust, while machine learning provides adaptive pattern recognition and predictive improvement from data.",
-        "ExplanationWrongB": "",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "Blockchain is a decentralized, distributed ledger technology that provides tamper-resistant record-keeping through consensus mechanisms — it does not learn from data or improve over time without reprogramming. The stem describes a system that improves fraud detection accuracy as it processes more data, which is the defining characteristic of machine learning. A candidate may group all emerging technologies together without distinguishing those that learn from data (ML) from those that provide immutable record-keeping (blockchain).",
         "ExplanationWrongC": "Data visualization displays existing results in graphical formats but does not learn from data or improve over time. The stem describes a system that adapts and improves fraud detection accuracy through experience, which requires machine learning that discovers patterns in data.",
         "ExplanationWrongD": "Choice D is incorrect because data visualization presents existing information graphically through charts and dashboards for human interpretation — it does not learn from data or improve over time. The stem describes a system that improves its fraud detection accuracy as it processes more transactions, which requires machine learning’s ability to learn from data patterns. A candidate may confuse displaying data with learning from data.",
         "question_state": "Certified",
@@ -24878,10 +24878,10 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "A dashboard is a visualization tool that presents aggregated data through charts and key performance indicators — it displays data rather than storing it in raw, native format. The stem describes storing raw, unstructured data from multiple sources in its native format for later analysis, which is the definition of a data lake. A candidate may confuse data presentation tools (dashboards) with data storage architectures (data lakes).",
         "ExplanationWrongB": "A data warehouse requires a predefined schema and ETL transformation before data is loaded. The stem describes storing raw, unstructured data in its native format, which is the defining characteristic of a data lake.",
         "ExplanationWrongC": "Choice C is incorrect because a data warehouse requires data to be structured and organized according to a predefined schema before storage, typically using ETL (extract, transform, load) processes. The stem describes storing raw, unstructured data in its native format without preprocessing — the defining characteristic of a data lake. A candidate may confuse schema-on-write architecture with schema-on-read architecture.",
-        "ExplanationWrongD": "Choice D is incorrect because a relational database optimized for transaction processing (OLTP) is designed for structured, operational data with predefined schemas, ACID compliance, and row-level operations. It requires data to be modeled into tables with defined relationships before loading — the opposite of what the stem describes. The scenario specifies storing raw, unstructured data from multiple sources in its native format without requiring upfront schema definition, which is the defining characteristic of a data lake using a schema-on-read approach. A relational database imposes structure at write time; a data lake defers structuring until read time. A candidate may confuse operational data storage systems with analytical data repositories, but OLTP databases serve real-time transaction processing needs, not the flexible, multi-source raw data storage described in the stem.",
+        "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
@@ -25236,4 +25236,4 @@ const MCQ_BANK_C = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     }
-]
+];

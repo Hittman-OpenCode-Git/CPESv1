@@ -21526,7 +21526,7 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "APIs do not eliminate the need for data security controls — in fact, API-based integrations introduce additional security considerations including authentication, authorization, and encryption of data in transit. A candidate may assume that automation reduces control requirements, but automated data exchange between systems creates new control dependencies. The primary benefit of APIs is automated, real-time data exchange, not security control elimination.",
         "ExplanationWrongC": "Choice C is incorrect because APIs transmit data as-is from the source system — they do not validate, verify, or guarantee the accuracy of the information they carry. Data quality assurance requires separate input controls, reconciliation procedures, and validation checks independent of the transport mechanism. A candidate selecting this option may overstate what data transfer technology alone can deliver without supporting data quality controls.",
         "ExplanationWrongD": "Choice D is incorrect because APIs facilitate data exchange between systems but cannot replace data security controls. Authentication, authorization, encryption, and monitoring mechanisms are still required to protect sensitive financial data transmitted through API connections. A candidate may select this option by assuming that integration technology eliminates the need for layered security defenses.",
         "question_state": "Certified",
@@ -21622,9 +21622,9 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "ETL-based integration involves batch extraction, transformation, and loading of data on a scheduled basis — it cannot meet the real-time requirement for inventory availability display on the website. A candidate may default to familiar data warehousing patterns without recognizing that batch ETL is fundamentally incompatible with sub-second real-time operations. ETL is suitable for the nightly order-to-ERP synchronization but not for instant inventory queries or order submission.",
         "ExplanationWrongB": "Choice B is incorrect because a chart of accounts is a foundational accounting classification system, not a data integration mechanism. APIs enable systems to communicate but do not replace the structural framework needed to organize financial transactions. A candidate may select this option by confusing system connectivity with accounting architecture.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongC": "API-based integration with event-driven architecture is a valid technical approach and overlaps in some respects with the correct REST API approach. However, event-driven architecture introduces unnecessary complexity for straightforward request-response patterns like inventory queries. A candidate may overengineer the solution by layering event-driven messaging on top of REST APIs. The simplest architecture that satisfies both requirements is REST APIs for real-time operations with scheduled ETL for batch reconciliation.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 4,
@@ -21823,10 +21823,10 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Robotic process automation (RPA) automates repetitive, rules-based manual tasks such as data entry between systems — it does not enable business users to independently build reports and analyses. A candidate may confuse automation of existing processes with empowering users to create new analytical content. RPA mimics human actions in existing workflows; self-service BI allows users to explore data and create insights independently.",
         "ExplanationWrongB": "Data lineage traces data origin and transformation history; it does not primarily mean users build their own reports.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Blockchain is a distributed ledger technology for secure, decentralized record-keeping — it is unrelated to business intelligence or report-building capabilities. A candidate may assume any technology term appearing on the exam is relevant to the question, but blockchain addresses trust and verification between parties, not user-driven analytics and reporting.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
@@ -21925,7 +21925,7 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Blockchain is a decentralized, distributed ledger technology used for tamper-resistant transaction recording — it has no relationship to business intelligence or self-service reporting capabilities. A candidate may overgeneralize technology solutions without distinguishing between transaction verification systems and business analytics platforms. Self-service BI gives business users direct access to governed data for independent analysis and reporting.",
         "ExplanationWrongC": "Robotic process automation (RPA) automates repetitive manual tasks. Creating reports requires user judgment and data exploration, which RPA is not designed for.",
         "ExplanationWrongD": "Data lineage tracing tracks data flow and transformations. It supports data governance but does not provide a reporting or analysis capability for business users.",
         "question_state": "Certified",
@@ -22028,8 +22028,8 @@ const MCQ_BANK_D = [
         ],
         "ExplanationWrongA": "Choice A is incorrect because segregation of duties is an internal control concept that divides transaction authorization, custody, and record-keeping responsibilities among different individuals to prevent fraud and errors. While essential for financial controls under the COSO framework, it does not directly address the confidentiality of data during storage or transmission. Encryption is the primary technical safeguard for this objective. A candidate may select this by conflating general internal controls with data security objectives.",
         "ExplanationWrongB": "Availability focuses on keeping systems accessible; encryption protects readability of data more directly than uptime.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Choice D is incorrect because data governance establishes policies, standards, and accountability for data management across the organization — it defines data ownership, quality standards, and stewardship responsibilities. While encryption may support governance objectives, the direct security objective served by encryption is confidentiality under the CIA triad framework. A candidate may select this by confusing the organizational framework for data management with the technical safeguard for data protection.",
+        "ExplanationWrongC": "AES-256-GCM is a widely accepted, cryptographically strong algorithm — the key length of 256 bits is more than sufficient for financial data. The attack vector described in the post-incident investigation identifies multiple key management failures (unencrypted key storage on the same server, a single hardcoded key shared across environments, no key rotation policy), not a cryptographic algorithm weakness. A candidate may assume any breach involving encryption indicates insufficient key strength, but the investigation evidence points to comprehensive key management architecture failure, not cryptographic algorithm inadequacy.",
+        "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
@@ -22127,7 +22127,7 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Availability ensures systems and data remain accessible when needed by authorized users — encryption protects data readability, not system uptime. A candidate may conflate availability (keeping systems running) with confidentiality (keeping data unreadable to unauthorized parties). The stem describes encrypting data at rest and in transit, which specifically protects confidentiality by ensuring that even if data is intercepted or accessed, it cannot be read without the decryption key.",
         "ExplanationWrongC": "Choice C is incorrect because data governance establishes policies, standards, and accountability for data management across the organization. While governance may require encryption, the direct security objective served by encryption is confidentiality — preventing unauthorized disclosure — not the definition of data ownership or stewardship responsibilities.",
         "ExplanationWrongD": "Choice D is incorrect because segregation of duties is an internal control principle that divides responsibilities to prevent fraud and error within business processes. Encryption is a technical safeguard operating at the data layer, addressing confidentiality rather than procedural controls over human activities.",
         "question_state": "Certified",
@@ -22328,7 +22328,7 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Infrastructure as a Service (IaaS) provides virtualized servers, storage, and networking — the customer manages operating systems, middleware, and applications. The stem describes a vendor-hosted, vendor-maintained complete application accessed by subscription, which is SaaS. A candidate may confuse cloud service tiers by focusing on a vendor hosting the solution without recognizing the scope of what the customer manages. IaaS requires customer management of the software stack; SaaS delivers the complete application.",
         "ExplanationWrongC": "Choice C is incorrect because Platform as a Service offers a development framework and deployment environment for building custom applications. The stem describes subscribing to a finished, ready-to-use accounting application — not a platform for developing one. A candidate may select this by confusing the cloud delivery tiers.",
         "ExplanationWrongD": "Choice D is incorrect because on-premises software requires the organization to install, host, and maintain the application on its own infrastructure. The stem explicitly states the vendor performs all hosting, maintenance, and updates — this is the defining feature of the SaaS delivery model.",
         "question_state": "Certified",
@@ -22525,10 +22525,10 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "The data scientist's dismissal of a 43-percentage-point accuracy gap is not plausible — such a massive gap between training and holdout performance is a textbook indicator of severe overfitting and cannot be attributed to sample size differences. A candidate may defer to a data scientist's judgment without critically evaluating the statistical evidence, but the 98.1%→55.3% gap is an extreme overfitting signal that management accountants should recognize as requiring investigation regardless of who presents the model.",
         "ExplanationWrongB": "Choice B is incorrect because underfitting occurs when a model is too simple to capture meaningful patterns in the data, resulting in consistently poor performance across both training and test datasets. The stem describes excellent training performance paired with poor new-data performance — the hallmark of overfitting, not underfitting. A candidate may reverse these two model evaluation concepts with opposite diagnostic signatures.",
         "ExplanationWrongC": "Choice C is incorrect because data governance concerns policies for data quality, access, and stewardship across the organization. The pattern described — strong training fit with poor generalization — is a model design issue, not a governance deficiency. A candidate may incorrectly attribute a statistical modeling problem to a broader data management framework.",
-        "ExplanationWrongD": "Choice D is incorrect because data visualization involves the graphical presentation of information to support human understanding. Model performance on training versus unseen data is a statistical validation question, not a visual design issue. A candidate may select this by confusing analysis output display with analysis model quality.",
+        "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
@@ -22575,9 +22575,9 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Data governance concerns policies, standards, and accountability for how data is managed across the organization — while data quality issues can impair model performance, the stem describes a model fitting noise in training data (overfitting), which is a model design issue, not a governance failure. A candidate may default to governance explanations for any data-related problem, but overfitting is a statistical modeling problem requiring model regularization or simplification, not governance policy changes.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "",
+        "ExplanationWrongC": "Underfitting occurs when a model is too simple to capture meaningful patterns in the data — it performs poorly on BOTH training and new data. The stem describes a model that performs extremely well on training data but poorly on new data, which is the hallmark of overfitting. A candidate may confuse underfitting with overfitting because both result in poor generalization, but overfitting is uniquely characterized by excellent training performance that fails to transfer to unseen data.",
         "ExplanationWrongD": "Choice D is incorrect because data visualization concerns how information is displayed to users through charts and dashboards. The model's inability to generalize from training data to new data is a fundamental statistical modeling issue, not a presentation-layer problem. A candidate may select this by conflating the output display with the underlying analytical model.",
         "question_state": "Certified",
         "DifficultyScore": 4,
@@ -22876,7 +22876,7 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "A traditional relational database stores and organizes structured data in tables with defined schemas — it is a data storage technology, not a category of internet-connected sensing devices. The stem describes internet-connected sensors monitoring equipment performance and predicting maintenance needs in real time, which is the definition of the Internet of Things (IoT). A candidate may confuse data storage with data generation, but IoT refers specifically to networks of physical devices that collect and transmit data.",
         "ExplanationWrongB": "Choice B is incorrect because robotic process automation focuses on software-based task automation within business applications. It does not interact with physical equipment or collect sensor data from machinery. A candidate may confuse general business process automation with the physical-world connectivity that defines IoT.",
         "ExplanationWrongC": "Choice C is incorrect because blockchain provides a tamper-resistant distributed ledger for recording transactions across multiple parties. While IoT data could theoretically be stored on a blockchain, the technology category for connected physical sensors monitoring equipment performance is IoT. A candidate may select this by confusing the data storage layer with the data collection technology.",
         "ExplanationWrongD": "",
@@ -23127,8 +23127,8 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Choice A is incorrect because implementing process changes before verifying whether the data is accurate represents a fundamental violation of the data-driven decision-making framework. Islewood's dashboard presents a contradictory signal: customer satisfaction dropped 14 points while all operational metrics (on-time delivery, return rate, quality scores) remained stable. When correlated metrics diverge, the management accountant must first rule out measurement error — a survey methodology change, a sample size anomaly, a dashboard calculation fault, or a data pipeline failure — before assuming the decline is real and initiating corrective action. A candidate selecting this option demonstrates an action bias that prioritizes visible responsiveness over analytical rigor. Implementing process changes based on faulty data risks wasting resources on a non-existent problem and, more critically, may degrade operational processes that were performing well. The correct approach, reflected in Choice B, is to investigate the data source and collection method for possible measurement error before reacting. This follows the data quality management principle that data integrity must be established before data is used to inform business decisions.",
-        "ExplanationWrongB": "",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "An incident response plan does not replace preventive security controls — a layered defense strategy requires both preventive controls (to reduce breach likelihood) and detective/responsive controls (to manage incidents when they occur). A candidate may overestimate the scope of any single control type, but preventive controls address likelihood while incident response plans address impact — they serve complementary, not substitutive, roles in a cybersecurity framework.",
         "ExplanationWrongC": "A candidate selecting Option C attributes an impossible guarantee to the IR plan, failing to evaluate what any response plan can realistically achieve. No control framework — NIST, COSO, or ISO — claims that response plans eliminate breach risk. The evaluation framework requires assessing what a control can and cannot do: incident response plans mitigate consequences (containment, recovery, notification); they cannot make an organization breach-proof because breaches exploit vulnerabilities that may be unknown (zero-days), inevitable (insider threats), or unpreventable (supply chain compromise). The candidate's evaluation error is conflating the plan's purpose (coordinated response) with an aspirational outcome (zero breaches) that no response plan can deliver. A management accountant who evaluates controls against impossible standards will systematically underinvest in response capabilities while overinvesting in prevention.",
         "ExplanationWrongD": "A candidate selecting Option D reduces the incident response plan to a compliance artifact, failing to evaluate its operational purpose. While internal audit may review the plan's adequacy, the plan's PRIMARY purpose is operational — directing real-time actions during a breach. The evaluation framework requires distinguishing between a control's primary purpose (enabling effective incident response) and its secondary beneficiaries (internal audit having documentation to review). The candidate's evaluation error is confusing documentation value with operational value: an IR plan that only satisfies audit requirements but fails to guide actual incident response is a deficient plan. In practice, a management accountant who evaluates the IR plan as a documentation exercise would be unprepared to execute it during a genuine incident — when containment, investigation, and notification decisions must be made under time pressure.",
         "question_state": "Certified",
@@ -23178,8 +23178,8 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "A candidate selecting Option A demonstrates a bias toward action over verification — a common evaluation error in management accounting. The judgment framework requires evaluating evidence quality before deciding on a course of action: implementing process changes assumes the data is accurate and the decline is real, but the stable operational metrics contradict this assumption. The candidate failed to evaluate the inconsistency between the satisfaction metric and the delivery/returns/quality data. In practice, a management accountant who acts on unverified anomalous data risks implementing costly changes that address a measurement artifact rather than a genuine business problem — potentially degrading processes that were performing well while leaving the actual root cause (if any exists) unaddressed.",
-        "ExplanationWrongB": "Choice B is incorrect because no incident response plan — or any control framework — can eliminate the possibility of a future breach. This expectation reflects a fundamental misunderstanding of the relationship between preventive controls and response capabilities. Cybersecurity breaches exploit vulnerabilities that may be unknown at the time of an attack (zero-day exploits), may result from inevitable human error such as phishing or misconfigured systems, or may originate from trusted third parties via supply chain compromise. No combination of controls can reduce breach probability to zero. An incident response plan is a detective and corrective control: it assumes a breach may occur and provides a structured framework for containment, investigation, recovery, and notification under NIST and COSO guidance. A candidate selecting this option attributes an impossible guarantee to the response plan and may confuse the plan's actual purpose — coordinated damage limitation — with an aspirational but unattainable goal of breach elimination. The correct answer, Choice C, recognizes that the plan's primary purpose is to enable a timely, coordinated response that limits damage and meets any legal notification obligations, reflecting the realistic function of incident response within a layered cybersecurity framework.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Assuming a sharp decline in one metric is a seasonal fluctuation without verification is a premature conclusion, especially when all other operational metrics are stable. A candidate may rely on pattern-based heuristics rather than applying the fundamental data quality principle: verify data accuracy before acting on it. The management accountant's first step when observing anomalous data should be to investigate the data source and collection method for possible measurement error.",
         "ExplanationWrongD": "A candidate selecting Option D compounds two evaluation errors: (1) assuming the data is accurate without verification, and (2) prematurely selecting a specific remediation (retraining) without understanding root cause. Even if the satisfaction decline were genuine, retraining all customer-facing staff is a costly, blanket response that may not address the actual issue — the decline could stem from product quality, pricing, a competitor's entry, or a single process failure rather than staff competence. The evaluation framework demands that remediation decisions follow root-cause analysis, not precede it. In practice, a management accountant who prescribes solutions before diagnosing problems wastes organizational resources and erodes credibility with operational stakeholders who must implement ill-targeted directives.",
         "question_state": "Certified",
         "DifficultyScore": 4,
@@ -23227,10 +23227,10 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "An incident response plan does not replace preventive security controls — both are essential components of a comprehensive cybersecurity framework. A candidate may view controls as mutually exclusive rather than complementary layers. Preventive controls reduce the likelihood of breaches; incident response plans prepare the organization to respond effectively when prevention fails.",
         "ExplanationWrongB": "Choice B is incorrect because no incident response plan can guarantee the elimination of all future breaches. Per the NIST CSF, incident response is a mitigation and recovery function, not an eradication function. Security incidents are managed through defense-in-depth combining preventive, detective, and responsive controls. A candidate may confuse risk mitigation with risk elimination.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "While an incident response plan does support audit documentation requirements, its primary purpose extends far beyond audit compliance — it serves to enable a timely, coordinated response that limits damage and meets legal notification obligations. A candidate may reduce the plan to its compliance function, but its operational purpose is to minimize harm during an active security incident, not merely to satisfy auditors.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
@@ -23529,8 +23529,8 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongA": "The bank's authentication IS multi-factor in type (password: something you know; digital certificate: something you have), but the critical weakness is that both factors share a common dependency on the workstation password. A candidate may conflate \"is not multi-factor\" with \"has a common vulnerability across factors.\" The audit finding correctly identifies that the factors are not truly independent because a single compromise threatens both.",
+        "ExplanationWrongB": "The digital certificate does provide additional security benefit — requiring a second form of authentication beyond a password. However, the certificate's security value is compromised when it is protected by the same password as the primary factor. A candidate may dismiss the certificate entirely because of the shared vulnerability, but the correct assessment is that the architecture's failure comes from both factors sharing a common dependency on one password, not from the certificate having zero value in principle.",
         "ExplanationWrongC": "Choice C is incorrect because digital signatures verify that a document has not been tampered with since signing and that it originated from the claimed signer. They do not validate the arithmetic or accounting accuracy of the document's contents. A candidate may conflate integrity of transmission with correctness of content.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
@@ -23632,8 +23632,8 @@ const MCQ_BANK_D = [
         ],
         "ExplanationWrongA": "Choice A is incorrect because a digital signature authenticates the identity of the signer and verifies that the document content has not been altered since signing — it does not verify whether the signer had the organizational authority to commit financial resources. Budget authority is governed by an entity's internal control policies, delegation of authority framework, and approval hierarchies, not by cryptographic technology. A candidate may confuse authentication of who signed with authorization of what they are permitted to approve.",
         "ExplanationWrongB": "Choice B is incorrect because a digital signature does not determine whether accounting content complies with GAAP. Digital signatures verify data integrity and sender authenticity through cryptographic hashing methods. GAAP compliance is evaluated by accounting professionals applying the appropriate standards to the document's content. A candidate may mistakenly assume that cryptographic verification extends to accounting standards compliance.",
-        "ExplanationWrongC": "Choice C is incorrect because a digital signature cannot determine whether the accounting content of a document complies with GAAP. Under NIST SP 800-57 and the Federal Information Processing Standards (FIPS 186), digital signatures serve two specific cryptographic functions: data integrity verification, confirming the document has not been altered since signing, and sender authentication, confirming the document originated from the claimed signer. These are cryptographic assurances, not accounting judgments. GAAP compliance requires a qualified accounting professional to evaluate the document's content against the appropriate FASB Accounting Standards Codification sections — for example, determining whether revenue is recognized in accordance with ASC 606 or whether a lease is classified correctly under ASC 842. No cryptographic technology can substitute for this professional evaluation. A candidate selecting this option may incorrectly extend the concept of digital verification from data integrity, meaning has the document changed, to accounting correctness, meaning does the document follow GAAP, which are fundamentally different domains requiring different verification approaches. The correct answer, Choice D, correctly limits the digital signature's role to its actual cryptographic capabilities: verifying that the document has not been altered and that it originated from the claimed sender.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "A digital signature uses cryptographic techniques to verify the authenticity and integrity of a document — it confirms who signed the document and that it has not been altered after signing. It does not verify the correctness of calculations or accounting treatments within the document. A candidate may conflate data integrity (detecting unauthorized changes) with computational accuracy (confirming arithmetic correctness), but these are distinct concepts. A digitally signed document could contain calculation errors while remaining cryptographically intact.",
         "question_state": "Certified",
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
@@ -23802,9 +23802,9 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Preserving both legacy taxonomies avoids data migration risk but perpetuates the 18-day reporting delay — the board's operational risk concern does not outweigh the CFO's legitimate financial reporting urgency. A candidate may treat risk avoidance as always paramount, but in this scenario, the operational risk of maintaining incompatible taxonomies is already materializing as a financial reporting timeliness problem. The merged entity needs a balanced approach that addresses both stakeholder priorities.",
         "ExplanationWrongB": "Choice B is incorrect because data mining searches large datasets to discover patterns, correlations, and anomalies using statistical and machine learning techniques. The stem describes creating and maintaining a single authoritative source of core reference data — a governance function, not a pattern-discovery activity. A candidate may confuse data exploration with data stewardship.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongC": "Prioritizing only the CFO's urgency would force an immediate taxonomy consolidation that could introduce operational errors and customer disruption, validating the board's concerns about integration risk. A candidate may favor financial reporting speed at any cost, but ignoring operational risks can create larger problems than delayed reporting. The phased approach or balanced simultaneous approach better addresses both stakeholder priorities than unilateral prioritization.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 4,
@@ -23903,8 +23903,8 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Choice A is incorrect because predictive analytics is a forward-looking analytical discipline that uses historical data, statistical algorithms, and machine learning techniques to forecast future outcomes — it is not a practice for maintaining consistent, authoritative reference data. Predictive analytics might forecast customer churn, product demand, or payment defaults, but it does not establish or govern the single source of truth for core business entities such as customer names, product codes, or supplier identifiers. Ambervale's scenario describes an organization maintaining a single, authoritative source of core customer and product information used consistently across multiple systems, which is the definition of master data management — a data governance discipline focused on ensuring that key reference data entities are accurate, consistent, and uniformly defined across the enterprise. A candidate selecting this option may confuse any data-related term that sounds sophisticated with the specific discipline being described. The correct answer, Choice B (Master data management), is the practice that provides consistent definitions and governance for shared master data entities across systems. Effective master data management is a prerequisite for reliable predictive analytics, which depends on clean, consistent reference data to produce meaningful forecasts.",
-        "ExplanationWrongB": "",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "Robotic process automation (RPA) automates repetitive, rules-based manual tasks such as data entry between systems — it does not establish a single, authoritative source of core business data. A candidate may assume any technology that involves data qualifies, but RPA moves data, while master data management governs what data is authoritative. The stem describes maintaining consistent customer and product information across systems, which is the defining purpose of master data management.",
         "ExplanationWrongC": "Choice C is incorrect because predictive analytics uses historical data to forecast future outcomes. The stem describes maintaining consistent, authoritative records of core business entities — a foundational data governance function, not a forward-looking analytical activity. A candidate may confuse any data-related term with the specific discipline described.",
         "ExplanationWrongD": "Choice D is incorrect because data mining discovers hidden patterns and relationships in large datasets. Master data management focuses on the quality, consistency, and governance of reference data, which is a prerequisite for effective data mining but serves a distinct purpose. A candidate may conflate data discovery with data stewardship.",
         "question_state": "Certified",
@@ -24155,8 +24155,8 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Choice A is incorrect because missing a sales forecast target is a business planning and performance concern, not a risk arising from the deployment of software bots. A center of excellence for automation governance addresses the risk that bots operate without adequate monitoring and controls — introducing errors, bypassing segregation of duties, or scaling inappropriately. A candidate may not distinguish between a general business risk and one specific to the governance mechanism described.",
-        "ExplanationWrongB": "Choice B is incorrect because while revoking the excessive create-vendor privilege is a necessary immediate corrective action, it does not represent the highest-priority structural remediation. The access control failure is a symptom of the deeper segregation of duties failure: the fundamental question Internal Audit Director Sarah Lindstrom must answer is not simply whether to revoke this specific privilege, but which remediation most durably prevents recurrence. Revoking the privilege fixes this instance; however, without segregation of duties as a design principle, future privilege assignments may drift back into the same dangerous configuration through human error, credential sprawl, or a malicious insider. Expanding quarterly access reviews to include bot service accounts is a detective control improvement that relies on periodic human verification — and the scenario already demonstrates that such reviews can fail, as the prior quarterly review had missed bot accounts entirely. Under COSO Principle 11 and COBIT 2019 governance objectives for automation, structural preventive controls take priority over procedural detective controls in the remediation hierarchy. The correct answer, Choice C, permanently addresses the SoD failure by separating vendor creation and payment processing into distinct bots with purpose-scoped service accounts, making the abuse vector structurally impossible regardless of future access changes or review gaps.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Foreign currency translation errors are a financial accounting risk related to exchange rate application and consolidation procedures — they are unrelated to the governance of automated software bots. A candidate may associate financial risk with any accounting-related error without recognizing that the stem specifically describes governance over automation (RPA bots), which targets control gaps and errors introduced by unmonitored or poorly controlled automated processes.",
         "ExplanationWrongD": "Choice D is incorrect because office space is an administrative facilities concern unrelated to software automation governance. The center of excellence structure addresses risks of uncontrolled bots introducing errors, bypassing controls, or operating without proper oversight. A candidate may select this obvious distractor without understanding the specific purpose of the governance structure.",
         "question_state": "Certified",
         "DifficultyScore": 3,
@@ -24309,7 +24309,7 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "Choice C is incorrect because the balanced scorecard measures organizational performance across financial, customer, internal process, and learning perspectives. It is a strategic management system, not a document processing technology. A candidate may confuse any business framework with the data extraction technology described.",
         "ExplanationWrongD": "Choice D is incorrect because blockchain provides decentralized transaction recording with cryptographic integrity. While it can store extracted data, it does not itself scan, read, or extract structured fields from unstructured documents. A candidate may conflate data storage technology with data capture technology.",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -24470,7 +24470,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "cybersecurity risk assessment framework",
         "UniqueConceptKey": "F-D061-cybersecurity-risk-assessment-framework",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Longmeadow conducts a formal assessment to identify, categorize, and prioritize its cybersecurity risks using a recognized framework. What is a commonly referenced framework for this purpose?",
@@ -24509,7 +24509,7 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "The balanced scorecard translates strategy into performance measures; it is not a cybersecurity risk framework.",
         "ExplanationWrongD": "The DuPont model decomposes return on equity; it is unrelated to cybersecurity risk assessment.",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -24520,7 +24520,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "cybersecurity risk assessment framework",
         "UniqueConceptKey": "F-D062-cybersecurity-risk-assessment-framework",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Marlowe conducts a formal assessment to identify, categorize, and prioritize its cybersecurity risks using a recognized framework. What is a commonly referenced framework for this purpose?",
@@ -24559,7 +24559,7 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Choice D is incorrect because the balanced scorecard is a strategic performance management tool that links organizational strategy to measurable objectives. It has no cybersecurity-specific risk assessment methodology. A candidate may confuse any business framework with the specialized cybersecurity framework the stem requires.",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -24570,7 +24570,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "cybersecurity risk assessment framework",
         "UniqueConceptKey": "F-D063-cybersecurity-risk-assessment-framework",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Netherfield conducts a formal assessment to identify, categorize, and prioritize its cybersecurity risks using a recognized framework. What is a commonly referenced framework for this purpose?",
@@ -24609,7 +24609,7 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "",
         "ExplanationWrongD": "",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -24620,7 +24620,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "cybersecurity risk assessment framework",
         "UniqueConceptKey": "F-D064-cybersecurity-risk-assessment-framework",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Oakvale conducts a formal assessment to identify, categorize, and prioritize its cybersecurity risks using a recognized framework. What is a commonly referenced framework for this purpose?",
@@ -24659,7 +24659,7 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "Choice C is incorrect because the balanced scorecard is a strategy execution and performance measurement framework. It does not provide the Identify, Protect, Detect, Respond, Recover functions that define the NIST Cybersecurity Framework's approach to cyber risk. A candidate may confuse frameworks designed for entirely different organizational purposes.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -24670,7 +24670,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "cybersecurity risk assessment framework",
         "UniqueConceptKey": "F-D065-cybersecurity-risk-assessment-framework",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Prescott conducts a formal assessment to identify, categorize, and prioritize its cybersecurity risks using a recognized framework. What is a commonly referenced framework for this purpose?",
@@ -24709,7 +24709,7 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "Choice C is incorrect because the DuPont model is a financial ratio analysis tool that breaks down return on equity. It is used for profitability analysis, not for cybersecurity risk identification or assessment. A candidate may select this by recognizing any familiar framework name without evaluating its domain applicability.",
         "ExplanationWrongD": "Choice D is incorrect because while COSO ERM provides enterprise risk management principles, it is not cybersecurity-specific. The NIST Cybersecurity Framework is the recognized standard for cybersecurity risk assessment. Additionally, exclusively makes this option too limiting — ERM complements rather than replaces specialized frameworks.",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -25212,4 +25212,4 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     }
-]
+];

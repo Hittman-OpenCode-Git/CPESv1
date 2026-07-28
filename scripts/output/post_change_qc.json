@@ -2,7 +2,7 @@
   "post_change_qc": {
     "governance_guard": {
       "pass": true,
-      "test_count": 51,
+      "test_count": 54,
       "fail_count": 0
     },
     "parse_validation": {
@@ -52,18 +52,18 @@
       },
       {
         "pack": "pack_c",
-        "count": 423
+        "count": 438
       },
       {
         "pack": "pack_d",
-        "count": 423
+        "count": 439
       },
       {
         "pack": "pack_e",
         "count": 540
       }
     ],
-    "timestamp": "2026-07-28T18:34:50.612Z",
+    "timestamp": "2026-07-28T19:30:52.171Z",
     "overall": "PASS"
   }
 }

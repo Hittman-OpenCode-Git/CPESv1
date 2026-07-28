@@ -1,0 +1,69 @@
+{
+  "session": "S377",
+  "board": "Baseline Remediation Board",
+  "timestamp": "2026-07-28T15:31:03",
+  "backup_path": "backups/CURRENT_BASELINES.md.bak-20260728153103",
+  "previous_counts": {
+    "pack_a": 481,
+    "pack_b": 500,
+    "pack_c": 388,
+    "pack_d": 389,
+    "pack_e": 540,
+    "total": 2298,
+    "percentage": "90.5%"
+  },
+  "actual_counts": {
+    "pack_a": 500,
+    "pack_b": 500,
+    "pack_c": 438,
+    "pack_d": 439,
+    "pack_e": 540,
+    "total": 2417,
+    "percentage": "95.2%"
+  },
+  "delta": {
+    "pack_a": 19,
+    "pack_b": 0,
+    "pack_c": 50,
+    "pack_d": 50,
+    "pack_e": 0,
+    "total": 119
+  },
+  "sections_updated": {
+    "s1_hash_table": {
+      "pack_c": "DRIFT — hash recaptured (E8986A18 → 6B712D2A). AUTHORIZED: S853 WAVE_A certification",
+      "pack_d": "DRIFT — hash recaptured (511CB762 → 2B59A6D6). AUTHORIZED: S853 WAVE_A certification",
+      "pack_a": "Stable — matches S892 baseline (CAB4EFC7)",
+      "pack_b": "Stable — matches S888 baseline (9CE6A345)",
+      "pack_e": "Stable — matches S888 baseline (E0CFD1D8)"
+    },
+    "s2_certified_pool": "Full rebuild — all counts recaptured via direct grep. Total: 2,298 → 2,417 (+119)",
+    "s3_defect_risk": {
+      "additions": ["DL-035 added to HIGH table — 39 Certified Domain F items, S377 IN PROGRESS"],
+      "corrections": ["DL-021 status changed from OPEN to RESOLVED (S828, 2026-07-27)"],
+      "verified_stable": ["DL-016 RESOLVED", "DL-026 RESOLVED", "DL-008 RESOLVED"]
+    },
+    "s6_log": "S377 entry added to verification log",
+    "header_metadata": "Updated timestamp and prior-updates line",
+    "footer": "Last-updated line regenerated"
+  },
+  "hashes_recaptured": {
+    "method": "Get-FileHash -Algorithm SHA256",
+    "pack_a_corrected.js": "CAB4EFC7E7E6441A576FB9BC45007593205D54E658DB3B3F67A218811111A783",
+    "pack_b_corrected.js": "9CE6A34571CDD9196E2C2B74500C4C925A5D3300672C5F192C8FA38440E28437",
+    "pack_c_corrected.js": "6B712D2A0219E2F95DBC8DA1DB82EB95B9DD5F4AB763E2F241A99A1873E93369",
+    "pack_d_corrected.js": "2B59A6D651E7DBAF74E635E296E0219EC2605FA97706FDD3BD791C0675F53909",
+    "pack_e_corrected.js": "E0CFD1D8F6401807E8DC692C5EE155BEA4F027EC9AFA770D8035D45E6D859CF4"
+  },
+  "structural_verification": {
+    "node_check": "All 5 packs parse clean via node --check",
+    "qid_counts": {
+      "pack_a": 500,
+      "pack_b": 500,
+      "pack_c": 500,
+      "pack_d": 500,
+      "pack_e": 540
+    },
+    "governance_guard": "51/51 PASS"
+  }
+}
