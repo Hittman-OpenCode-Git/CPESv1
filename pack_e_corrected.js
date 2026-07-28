@@ -4333,17 +4333,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "B",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "SectionName": "Planning, Budgeting, and Forecasting",
         "Topic": "E-B.012 Zero-based budgeting",
         "UniqueConceptKey": "E-B-012-Zero-based-budgeting",
         "MicroTopic": "Zero-based budgeting",
         "CorrectChoice": "C",
         "Choices": {
-            "A": "Budgeting only for new activities",
-            "B": "Adjusting prior year budget",
-            "C": "Justifying all expenses from zero",
-            "D": "Basing budget on prior year actuals"
+            "A": "Apply incremental budgeting — adjusting last year's budget by 3% for inflation is the most efficient approach for a stable administrative department with predictable costs",
+            "B": "Use activity-based budgeting — linking costs to cost drivers and activity volumes will capture the department's unique cost structure better than traditional methods",
+            "C": "Implement zero-based budgeting — the controller's concern about 'budget creep' and the consultant's finding that 25% of current activities add minimal value justify rebuilding the budget from zero to challenge every expense",
+            "D": "Maintain the current incremental approach but add a quarterly budget review — this preserves the efficiency of the existing process while addressing the controller's cost concerns"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -4356,16 +4356,15 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Zero-based budgeting requires:",
-        "ExplanationCorrect": "Zero-based budgeting starts from zero each period, requiring justification of all expenses.",
+        "Stem": "Northpoint Regional Health System's finance department has used incremental budgeting for the past decade, increasing each cost center's budget by 3% annually. The new controller is concerned about 'budget creep' in administrative departments, noting that the billing department's budget has grown 34% over ten years without any increase in patient volume or billing transactions. An outside consultant's review found that approximately 25% of the billing department's current activities add minimal value and could be eliminated without affecting operations. The controller must recommend a budgeting approach to the CFO. Which recommendation best addresses the identified concerns?",
+        "ExplanationCorrect": "The controller should recommend zero-based budgeting (ZBB) for the billing department. ZBB requires managers to justify every expense from a zero base each budget period, rather than starting from the prior year's budget and adjusting upward. This directly addresses both of the controller's concerns: (1) Budget creep — ten years of 3% annual increases with no corresponding increase in activity (patient volume or transactions) indicates that the incremental approach has embedded costs that are no longer tied to operational needs. ZBB breaks this cycle by forcing each activity to justify its funding anew. (2) Non-value-added activities — the consultant identified that 25% of current activities add minimal value. Under ZBB, these activities would be identified through the decision-package ranking process and either eliminated or reduced, freeing resources for higher-value activities. The alternatives are less suitable: incremental budgeting perpetuates the creep problem; activity-based budgeting links costs to cost drivers but does not inherently challenge whether activities should exist; and adding quarterly reviews to incremental budgeting addresses the symptom (cost growth) without the root cause (the budgeting methodology that enables it). ZBB's primary drawback — it is time-consuming and resource-intensive — is acceptable here because the department has been flagged as a problem area justifying the investment in a thorough review. Business interpretation: different budgeting approaches serve different organizational contexts. ZBB is appropriate when a department's costs have become disconnected from its value contribution, when significant cost reduction is needed, or when management wants to fundamentally re-examine what activities are performed and why. A common exam trap is to recommend incremental budgeting for all situations because it is 'efficient' — efficiency in perpetuating waste is not efficiency at all.",
         "QuestionID": "P1E-B-012",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "ZBB does not exclude existing activities; all activities must be justified, not just new ones.",
-        "ExplanationWrongB": "Adjusting the prior year budget describes incremental budgeting, not ZBB.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Basing the budget on prior year actuals describes incremental budgeting.",
+        "ExplanationWrongA": "Incremental budgeting is precisely the approach that created the controller's concerns — ten years of 3% annual increases with no increase in activity is the textbook definition of budget creep. Applying incremental budgeting to a department the consultant has identified as having 25% non-value-added activities would perpetuate, not solve, the problem. Incremental budgeting assumes the prior year's activities and costs are justified, requiring justification only for increases above the base. When the base itself is bloated, incremental budgeting institutionalizes waste. A candidate selecting this option is prioritizing efficiency of the budgeting process over effectiveness of the resulting budget — an appropriate trade-off for stable, well-run departments, but not for one flagged as a problem area.",
+        "ExplanationWrongB": "Activity-based budgeting (ABB) links costs to cost drivers and activity volumes, making it a good choice for departments where costs vary with activity levels. However, ABB does not inherently challenge whether activities should exist — it allocates costs to activities but does not question whether those activities add value. The consultant found that 25% of the billing department's activities add minimal value. ABB would model these activities more precisely but would not eliminate them. The controller needs an approach that questions the existence of activities, not one that merely measures them better. A candidate selecting this option is applying a sophisticated costing methodology to a management problem that requires a different tool — activity elimination (ZBB) rather than activity measurement (ABB).",
+        "ExplanationWrongD": "Adding quarterly budget reviews to the existing incremental approach is a process improvement, not a budgeting methodology change. It addresses the symptom (cost growth) by adding oversight, but it does not address the root cause (base-level costs that are disconnected from value). Quarterly reviews of an incrementally-built budget will scrutinize variances from the budget, not whether the budget itself contains activities that should not be funded. This is a half-measure — it preserves the efficiency of incremental budgeting while attempting to bolt on cost control through more frequent monitoring. A candidate selecting this option is compromising between the controller's concern about cost creep and the operational convenience of the existing process, rather than recommending the approach that actually solves the identified problem.",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
@@ -6914,13 +6913,13 @@ const MCQ_BANK_E = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Strategic objectives drive strategic-based budgeting, not incremental.",
-        "ExplanationWrongB": "Activity drivers are used in activity-based budgeting, not incremental.",
+        "ExplanationWrongA": "Incremental budgeting is precisely the approach that created the controller's concerns — ten years of 3% annual increases with no increase in activity is the textbook definition of budget creep. Applying incremental budgeting to a department the consultant has identified as having 25% non-value-added activities would perpetuate, not solve, the problem. Incremental budgeting assumes the prior year's activities and costs are justified, requiring justification only for increases above the base. When the base itself is bloated, incremental budgeting institutionalizes waste. A candidate selecting this option is prioritizing efficiency of the budgeting process over effectiveness of the resulting budget — an appropriate trade-off for stable, well-run departments, but not for one flagged as a problem area.",
+        "ExplanationWrongB": "Activity-based budgeting (ABB) links costs to cost drivers and activity volumes, making it a good choice for departments where costs vary with activity levels. However, ABB does not inherently challenge whether activities should exist — it allocates costs to activities but does not question whether those activities add value. The consultant found that 25% of the billing department's activities add minimal value. ABB would model these activities more precisely but would not eliminate them. The controller needs an approach that questions the existence of activities, not one that merely measures them better. A candidate selecting this option is applying a sophisticated costing methodology to a management problem that requires a different tool — activity elimination (ZBB) rather than activity measurement (ABB).",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "A zero starting point describes zero-based budgeting, not incremental.",
+        "ExplanationWrongD": "Adding quarterly budget reviews to the existing incremental approach is a process improvement, not a budgeting methodology change. It addresses the symptom (cost growth) by adding oversight, but it does not address the root cause (base-level costs that are disconnected from value). Quarterly reviews of an incrementally-built budget will scrutinize variances from the budget, not whether the budget itself contains activities that should not be funded. This is a half-measure — it preserves the efficiency of incremental budgeting while attempting to bolt on cost control through more frequent monitoring. A candidate selecting this option is compromising between the controller's concern about cost creep and the operational convenience of the existing process, rather than recommending the approach that actually solves the identified problem.",
         "question_state": "Certified",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [

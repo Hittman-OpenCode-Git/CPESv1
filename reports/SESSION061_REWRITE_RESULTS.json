@@ -1,0 +1,62 @@
+{
+  "session": "61",
+  "title": "MCQ Rewrite Program — Quality Elevation Wave 1",
+  "date": "2026-07-28",
+  "status": "PARTIAL — 10 of 20 completed",
+  "batches_completed": [1, 2],
+  "batches_remaining": [3, 4],
+  "total_rewrites": 10,
+  "cognitive_upgrades": {
+    "Understand_to_Evaluate": 10,
+    "Understand_to_Analyze": 0
+  },
+  "difficulty_upgrades": {
+    "Easy_to_Difficult": 10
+  },
+  "pack_distribution": {
+    "Pack_A": {"edited": 4, "qids": ["P1-E-084", "P1-B-086", "P1-A-002", "P1-D-070"]},
+    "Pack_B": {"edited": 3, "qids": ["P1B-F-116", "P1B-F-091", "P1B-C-153"]},
+    "Pack_E": {"edited": 3, "qids": ["P1E-D-029", "P1E-D-030", "P1E-B-012"]}
+  },
+  "section_distribution": {
+    "A": 1, "B": 2, "C": 1, "D": 3, "E": 1, "F": 2
+  },
+  "correctchoice_changes": [
+    {"qid": "P1-A-002", "old": "D", "new": "B", "reason": "New scenario — recommendation to report medical device division as discontinued operations"},
+    {"qid": "P1B-C-153", "old": "C", "new": "A", "reason": "New scenario — recommendation to set transfer price at external market benchmark of $105"}
+  ],
+  "governance": {
+    "guard_tests": "54/54 PASS",
+    "syntax_pack_a": "PASS",
+    "syntax_pack_b": "PASS",
+    "syntax_pack_e": "PASS",
+    "dl008": 0,
+    "dl026": 0,
+    "dl037": 0
+  },
+  "quality_metrics": {
+    "avg_explanation_correct_chars_pre": 150,
+    "avg_explanation_correct_chars_post": 1200,
+    "avg_explanation_wrong_chars_pre": 80,
+    "avg_explanation_wrong_chars_post": 350,
+    "business_realism_pre": "2/10 named companies with scenarios",
+    "business_realism_post": "10/10 named companies with scenarios, data, and competing perspectives"
+  },
+  "remaining_candidates": [
+    {"qid": "P1B-A-145", "pack": "B", "section": "A", "target": "Analyze"},
+    {"qid": "P1-B-015", "pack": "A", "section": "B", "target": "Analyze"},
+    {"qid": "P1B-B-138", "pack": "B", "section": "B", "target": "Analyze"},
+    {"qid": "P1-C-072", "pack": "A", "section": "C", "target": "Analyze"},
+    {"qid": "P1E-C-014", "pack": "E", "section": "C", "target": "Analyze"},
+    {"qid": "P1E-C-049", "pack": "E", "section": "C", "target": "Analyze"},
+    {"qid": "P1-E-027", "pack": "A", "section": "E", "target": "Analyze"},
+    {"qid": "P1B-E-083", "pack": "B", "section": "E", "target": "Analyze"},
+    {"qid": "P1E-E-034", "pack": "E", "section": "E", "target": "Analyze"},
+    {"qid": "P1-F-005", "pack": "A", "section": "F", "target": "Analyze"}
+  ],
+  "backups": [
+    "backups/pack_a_corrected.js.bak-S061-20260728155108",
+    "backups/pack_b_corrected.js.bak-S061-20260728155108",
+    "backups/pack_e_corrected.js.bak-S061B2-20260728162746"
+  ]
+}

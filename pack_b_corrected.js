@@ -9587,37 +9587,37 @@ const MCQ_BANK_B = [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "Dual-rate pricing aims to improve divisional incentives, not necessarily to maximize total profit directly. It addresses behavioral issues in transfer pricing.",
-        "ExplanationWrongC": "Dual-rate pricing does not eliminate the need for variance analysis. Variance analysis is a separate tool for performance evaluation and cost control.",
-        "ExplanationWrongD": "Tax regulations typically require a single arm's-length transfer price. Dual-rate pricing is an internal management tool and may not satisfy tax compliance requirements.",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Apply"
+    "ExplanationWrongB": "Setting the transfer price at $120 (the Motor Division's external selling price) would cause the Appliance Division to reject the internal transfer and purchase externally at $105 instead. This outcome is not goal-congruent: the company as a whole would lose the contribution margin from internal production. The Motor Division has idle capacity (80% utilization), meaning no external sales are displaced by internal transfers — the opportunity cost is zero. Forcing a $120 price when $105 is available externally destroys value rather than creating it. A candidate selecting this option is applying the market-price rule without considering the buying division's available alternatives and the selling division's idle capacity.",
+    "ExplanationWrongC": "Setting the transfer price at variable cost ($70) transfers the entire contribution margin ($35 per unit, $280,000 total) to the Appliance Division. While this maximizes total company profit on paper (lowest internal cost), it destroys the Motor Division manager's incentive to supply internally — the division earns zero contribution on these 8,000 units, and the manager's performance evaluation (based on divisional profit) is harmed. Goal congruence requires that both divisions benefit from internal transfers. A variable-cost transfer price is appropriate only in limited circumstances (e.g., the selling division is a cost center, not a profit center). A candidate selecting this option is maximizing corporate profit at the expense of divisional autonomy and performance measurement — the behavioral dimension of transfer pricing is as important as the quantitative dimension.",
+    "ExplanationWrongD": "Full absorption cost ($95) is within the $70-$105 negotiable range, so it is not an unreasonable transfer price on its face. However, it understates the economic value of the transfer. The Motor Division would earn only $95 - $70 = $25 contribution per unit, compared to $35 at the market-based price of $105. While $95 satisfies the minimum condition (>$70 variable cost), it does not reflect the market reality that the Appliance Division would pay $105 externally — leaving $10 of value on the table for the Motor Division. Full-cost transfer pricing has known limitations: it transfers the selling division's fixed costs and inefficiencies to the buying division, and it does not provide the correct signal for make-or-buy decisions. A candidate selecting this option is defaulting to a common but suboptimal transfer pricing method that satisfies neither division's interests fully.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate"
     },
     {
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
-        "Topic": "B-C.153 transfer pricing",
-        "MicroTopic": "transfer pricing conflicts",
-        "UniqueConceptKey": "B-C-153-transfer-pricing",
-        "LOSTag": "LOS: Part 1, Section C.5.7 - Identify conflicts in transfer pricing",
-        "Difficulty": "Easy",
+    "Topic": "B-C.153 transfer pricing",
+    "MicroTopic": "transfer pricing conflicts",
+    "UniqueConceptKey": "B-C-153-transfer-pricing",
+    "LOSTag": "LOS: Part 1, Section C.5.7 - Identify conflicts in transfer pricing",
+    "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "When a manager of a profit center is evaluated based on divisional profit, which transfer pricing conflict is most likely to arise?",
-        "CorrectChoice": "C",
-        "ExplanationCorrect": "In a profit center, managers are evaluated on divisional profit. A high transfer price benefits the selling division's profit but hurts the buying division's profit. This creates conflict because each manager's performance measure is affected by the transfer price in opposite ways.",
+    "Stem": "Apex Components has two divisions: the Motor Division produces electric motors sold externally at $120 per unit (variable cost $70, fixed cost $25, full cost $95) and has capacity of 50,000 units currently operating at 80% utilization. The Appliance Division needs 8,000 motors annually for a new product line and can purchase equivalent motors from an external supplier for $105 per unit. The Motor Division's manager argues the transfer price should be the external market price of $120, while the Appliance Division manager insists on variable cost of $70. The corporate controller must recommend a transfer price that promotes goal congruence. Which recommendation best serves the company's overall interest?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The corporate controller should recommend a transfer price of $105, the external market price available to the buying division. This promotes goal congruence — both divisions acting in the company's best interest — because: (1) The Motor Division has idle capacity (80% of 50,000 = 40,000 units produced, 10,000 units idle). The variable cost of $70 represents the minimum acceptable transfer price from the selling division's perspective — any price above $70 contributes to covering fixed costs and profit. (2) The Appliance Division can purchase externally for $105, so $105 is the maximum the buying division should pay — paying more than $105 would make the division worse off. (3) The negotiable range is therefore $70 to $105. (4) At $105, the Motor Division earns a contribution of $35 per unit ($105 - $70 = $35 × 8,000 = $280,000), and the Appliance Division pays no more than the external price. (5) The external market price of $120 is too high — it exceeds what the Appliance Division can pay externally, and at 80% capacity the Motor Division has idle capacity, so the opportunity cost of internal transfer is zero (no lost external sales). (6) Variable cost of $70 is too low — it transfers all the profit to the Appliance Division and gives the Motor Division no incentive to supply internally. The $105 market-based price within the negotiable range aligns divisional incentives with corporate interest: the company saves the external purchase, the Motor Division earns contribution on idle capacity, and goal congruence is achieved. Business interpretation: transfer pricing is a tool for performance evaluation and decision-making. The correct price is one that both divisions can accept while maximizing total company profit — in this case, any price between $70 and $105 works, but $105 (the external market benchmark) is the most defensible and transparent. A common exam trap is to use full cost ($95) as the transfer price — while within the range, it understates the profit opportunity for the selling division compared to market-based pricing.",
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "QuestionID": "P1B-C-153",
         "question_state": "Certified",
         "ReviewNote": "If missed or marked, review transfer pricing conflicts in profit centers",
         "CalculationItem": false,
-        "Choices": {
-            "A": "Both division managers will prefer the same transfer price",
-            "B": "Transfer pricing only affects cost centers, not profit centers",
-            "C": "The manager of the selling division will want a high transfer price, while the buying division manager will want a low transfer price",
-            "D": "Transfer pricing conflicts are resolved by using variable costing"
-        },
+    "Choices": {
+      "A": "Set the transfer price at $105 — the external market price available to the buying division falls within the $70-$105 negotiable range and both divisions benefit relative to their external alternatives",
+      "B": "Set the transfer price at $120 — the external selling price ensures the Motor Division is not disadvantaged by selling internally rather than to external customers",
+      "C": "Set the transfer price at $70 — variable cost represents the true economic cost of production and maximizes total company profit by giving the Appliance Division the lowest possible input cost",
+      "D": "Set the transfer price at $95 — full absorption cost fairly allocates all manufacturing costs between the two divisions and prevents either division from subsidizing the other"
+    },
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",

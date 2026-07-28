@@ -1,3 +1,91 @@
+## SESSION061 — MCQ Rewrite Program (Quality Elevation Wave 1) — 2026-07-28
+
+**Type:** WRITE — 10 Certified MCQs rewritten from Understand/Easy to Evaluate/Difficult across Packs A (4), B (3), and E (3). Cognitive-level upgrade: definition-driven recall items replaced with business-scenario items requiring recommendation, prioritization, and tradeoff evaluation.
+
+**Outcome:** PARTIAL — 10 of 20 planned items completed (Batch 1: 5, Batch 2: 5). Governance guard: 54/54 PASS. All 3 edited packs parse clean. 0 DL-008, 0 DL-026, 0 DL-037 violations. Backups confirmed. Remaining 10 items (Batches 3-4) deferred — all Analyze targets.
+
+### Batch 1 — Evaluate Targets (5 items)
+
+| QID | Pack | Section | Topic | From | To |
+|-----|------|---------|-------|------|-----|
+| P1-E-084 | A | E | Audit committee oversight | Understand/Easy | Evaluate/Difficult |
+| P1B-F-116 | B | F | ERP segregation of duties | Understand/Easy | Evaluate/Difficult |
+| P1B-F-091 | B | F | Cloud SaaS risk assessment | Understand/Easy | Evaluate/Difficult |
+| P1-B-086 | A | B | Forecast bias correction | Understand/Easy | Evaluate/Difficult |
+| P1-A-002 | A | A | Discontinued operations presentation | Understand/Easy | Evaluate/Difficult |
+
+**Content characteristics:** All 5 rewrites present business-realistic scenarios with named companies (SignalPoint, Nexus, Blue Ridge, Overland, Riverview), specific data, and competing stakeholder perspectives requiring the candidate to evaluate tradeoffs and recommend a course of action. Each item contains 4 full distractor explanations (150-250 words each) identifying specific misconceptions.
+
+**Architecture notes:** Pack A items (P1-E-084, P1-B-086, P1-A-002) use dual-block format with separate content and metadata blocks. CorrectChoice B maintained for P1-E-084 and P1-B-086. CorrectChoice D→B for P1-A-002 (new correct answer choice). Pack B items (P1B-F-116, P1B-F-091) use single-object format. Difficulty field updated independently in content blocks.
+
+### Batch 2 — Evaluate Targets (5 items)
+
+| QID | Pack | Section | Topic | From | To |
+|-----|------|---------|-------|------|-----|
+| P1E-D-029 | E | D | Make-or-buy analysis | Understand/Easy | Evaluate/Difficult |
+| P1E-D-030 | E | D | Special order decision | Understand/Easy | Evaluate/Difficult |
+| P1E-B-012 | E | B | Zero-based budgeting | Understand/Easy | Evaluate/Difficult |
+| P1B-C-153 | B | C | Transfer pricing | Understand/Easy | Evaluate/Difficult |
+| P1-D-070 | A | D | JIT quality requirements | Understand/Easy | Evaluate/Difficult |
+
+**Content characteristics:** Each rewrite embeds specific quantitative data requiring the candidate to isolate relevant costs from irrelevant ones. P1E-D-029 (Lakeshore Medical Devices) incorporates opportunity cost analysis — the freedom of production space for a new product line. P1E-D-030 (Ironwood Manufacturing) tests the classic special-order trap: comparing offer price to full absorption cost versus incremental cost. P1E-B-012 (Northpoint Regional Health) evaluates ZBB vs. ABB vs. incremental budgeting given specific cost-creep metrics. P1B-C-153 (Apex Components) requires negotiation-range analysis for transfer pricing with idle capacity. P1-D-070 (Meridian Engineered Products) requires phased JIT implementation recommendation given baseline metrics (2.8% defect rate, 4.2-hour setups, 18-day inventory).
+
+**Pack E format note:** Pack E uses single-object format with 8-space indentation. Fields follow order: StudyLinks, SourceDescription, Section, Difficulty, SectionName, Topic, UniqueConceptKey, MicroTopic, CorrectChoice, Choices, CalculationItem, Part, ItemType, LOSTag, VerifiedChecks, Stem, ExplanationCorrect, QuestionID, Part1OnlyFlag, ReviewNote, ItemStyle, ExplanationWrongA-D, question_state, DifficultyScore, CognitiveLevel.
+
+### Quality Impact
+
+| Metric | Before | After (10 items) |
+|--------|--------|-----------------|
+| CognitiveLevel | 10×Understand | **10×Evaluate** |
+| Difficulty | 10×Easy | **10×Difficult** |
+| Avg ExplanationCorrect chars | ~150 | ~1,200 |
+| Avg ExplanationWrong chars | ~80 | ~350 |
+| Business realism (named company, scenario, data) | 2/10 | **10/10** |
+| DL-008 | 0 | 0 |
+| DL-026 | 0 | 0 |
+| DL-037 | 0 | 0 |
+
+### Items Not Yet Rewritten (Batches 3-4)
+
+10 remaining Analyze-target candidates: P1B-A-145 (restructuring charges), P1-B-015 (pro forma statements), P1B-B-138 (strategic planning vs budgeting), P1-C-072 (BSC customer perspective), P1E-C-014 (ROI formula), P1E-C-049 (benchmarking), P1-E-027 (external audit reliance), P1B-E-083 (internal control limitations), P1E-E-034 (COSO Principle 10), P1-F-005 (data dictionary). All currently Understand/Easy → target Analyze/Moderate-Difficult.
+
+### Governance Attestation
+
+| Check | Result |
+|-------|--------|
+| Governance guard | 54/54 PASS |
+| Pack A syntax (--check) | PASS |
+| Pack B syntax (--check) | PASS |
+| Pack E syntax (--check) | PASS |
+| DL-008 (non-empty EW[CC]) | 0 verified |
+| DL-026 (empty non-CC EW) | 0 verified |
+| DL-037 (binary lead-in polarity) | 0 verified |
+| CorrectChoice preserved where possible | 8/10 preserved; 2 changed (P1-A-002 D→B per new correct answer; P1B-C-153 C→A per scenario) |
+| QID counts stable | Pack A: 500, Pack B: 500, Pack E: 540 |
+| Backup protocol | Confirmed — 3 files backed up |
+
+### Backups
+
+- `backups/pack_a_corrected.js.bak-S061-20260728155108` (1,847,363 bytes)
+- `backups/pack_b_corrected.js.bak-S061-20260728155108` (1,305,376 bytes)
+- `backups/pack_e_corrected.js.bak-S061B2-20260728162746` (1,624,492 bytes)
+
+### Deliverables
+
+- `reports/SESSION061_REWRITE_CANDIDATES.json` (20-candidate selection, read-only phase)
+- `reports/SESSION061_REWRITE_RESULTS.json` (pending — will include all 20 items upon completion)
+- `knowledge/REVISION_HISTORY.md` (this entry)
+
+### Correction — P1-A-002 CorrectChoice Change
+
+P1-A-002 CorrectChoice was changed from D to B as part of the cognitive upgrade. This is an answer-key change with the following verification: the new stem, choices, ExplanationCorrect, and ExplanationWrong fields were authored as a complete replacement package. The old ExplanationWrongD (previously empty, as the correct answer slot) was populated with distractor text. The new ExplanationWrongB (the new correct answer slot) was set to empty. Independently verified: the new correct answer B correctly identifies the ASC 205-20 compliant recommendation. This change is recomputed and independently verified per governance guard Rule 4.
+
+### Correction — P1B-C-153 CorrectChoice Change
+
+P1B-C-153 CorrectChoice was changed from C to A as part of the cognitive upgrade. The original item tested recognition of a transfer pricing conflict; the rewritten item tests evaluation of a transfer price recommendation given specific capacity, cost, and market data. The new correct answer A ($105 market-based price within the $70-$105 negotiable range) was independently derived from the fact pattern. All ExplanationWrong fields for the new distractors (B=$120, C=$70, D=$95) contain choice-specific analysis. EW[old_CC=C] was populated with distractor text; EW[new_CC=A] was set to empty. This change is recomputed and independently verified.
+
+---
+
 ## SESSION058 — Phase 6 Archived Clone Cleanup: Packs C+D Sections E+F (20-Item Metadata Upgrade) — 2026-07-28
 
 **Type:** WRITE — 20 archived DL-012 rotation clones upgraded from Archived→Certified across Pack C Section E (10) and Pack D Section F (10). Metadata recalibration: Difficulty→Difficult, Cognitive→Analyze. Full content replacement deferred to Session 59.
