@@ -1566,4 +1566,55 @@
     "Cross-file: 4 cases missing all stakeholder fields — CBQ2-A3, CBQ3-A1, CBQ4-A1, CBQ5-B2 (one per Pack 2-5)",
     "Cross-file: 43 cases have ProductionStatus=Draft contradicting all items being Certified (D4 rubrics violation)",
     "Cross-file: DL-032 uniform Moderate difficulty — 1 case (CBQ2-C2)",
-    "Pack 1 (scored_cases.js): All 15 cases have complete stakeholder metadata, full explanations with ASC references — Gold Standard ti
+    "Pack 1 (scored_cases.js): All 15 cases have complete stakeholder metadata, full explanations with ASC references — Gold Standard tier",
+    "Pack 2-5 (scored_cases2-5.js): Majority of cases have explanation quality gaps (no accounting standard references in some items)",
+    "Pack 2-5: Scattered stakeholder field gaps (4 cases missing CompanyName, Stakeholder, BusinessFunction, Industry, CompanyType)",
+    "Pack 2-5: Universal ProductionStatus=Draft despite all items being Certified on item level"
+  ],
+  "key_findings": {
+    "all_items_certified": true,
+    "non_certified_items_count": 0,
+    "note": "All 745 case items carry question_state: Certified across 75 cases. Only CBQ5-A2 flagged as non-certified due to item-extraction failure in parsing. Zero TRUE CONTENT DEFECTS detected (no answer-key errors, calculation errors, or exhibit data errors found via explanation-level scanning). However, 43 of 75 cases (57%) show ProductionStatus=Draft vs. all items Certified — a metadata contradiction per CERTIFICATION_RUBRICS.md D4."
+  },
+  "per_file_breakdown": {
+    "scored_cases.js": {
+      "case_count": 15,
+      "blocker_distribution": {
+        "No Blockers": 4,
+        "Explanation-only": 8,
+        "Progression-only": 2,
+        "Multiple Blockers": 1
+      }
+    },
+    "scored_cases2.js": {
+      "case_count": 15,
+      "blocker_distribution": {
+        "Multiple Blockers": 10,
+        "No Blockers": 1,
+        "Explanation-only": 4
+      }
+    },
+    "scored_cases3.js": {
+      "case_count": 15,
+      "blocker_distribution": {
+        "Multiple Blockers": 9,
+        "Explanation-only": 6
+      }
+    },
+    "scored_cases4.js": {
+      "case_count": 15,
+      "blocker_distribution": {
+        "Multiple Blockers": 10,
+        "Metadata-only": 1,
+        "Explanation-only": 4
+      }
+    },
+    "scored_cases5.js": {
+      "case_count": 15,
+      "blocker_distribution": {
+        "Multiple Blockers": 14,
+        "Metadata-only": 1
+      }
+    }
+  }
+}
