@@ -26012,3 +26012,69 @@ All 4 blocked cases have the **Stakeholder field entirely absent** (D2=2). These
 - `reports/session55/SESSION055_CERTIFICATION_RECALCULATION.json`
 - `knowledge/REVISION_HISTORY.md` (this entry)
 
+
+---
+
+# S376 — Expansion Readiness Closure Board (Read-Only)
+
+**Date:** 2026-07-28
+**Type:** Governance Gate — Read-Only 5-Board Synthesis
+**Predecessors:** S370 (Sustainability Board), S374 (Expansion Capacity Scorecard), S899 (Phase 1 Authoring)
+**Status:** Complete — 5 boards executed, 2 deliverables produced
+
+## Decision: CONDITIONAL (78% confidence)
+
+Expansion authorization cannot occur now. The program has proven massive peak throughput (32 sessions, 119 items, 0 defects in 1 day) — the S899 model is validated. But three blockers prevent authorization: (1) DL-031 CAL-001 unstarted, (2) DL-035 unremediated, (3) CURRENT_BASELINES.md stale.
+
+## 5 Boards Executed
+
+| Board | Scope | Key Finding |
+|-------|-------|-------------|
+| readiness-audit | S374 A-F conditions | 1 MET (E), 4 PARTIAL (A/C/D/F), 1 NOT MET (B). DL-031 is the #1 blocker. |
+| dl035-board | DL-035/008/026/021 status | DL-008=0 (S896). DL-035=OPEN (39 Certified items, ~117 slots). DL-021=RESOLVED per DEFECT_LIBRARY but stale in CURRENT_BASELINES §3. Certified pool ~2,417 (baselines stale). |
+| throughput-board | Authoring capacity | 32 sessions today, 6 authoring waves, 119 items (51 Evaluate, 68 Analyze). S899 model proven at 6 sustained sessions. 2 waves/week recommended. ~320h remaining authoring. |
+| evaluate-workstream-board | Evaluate strategy | Current: ~12 Evaluate (0.47% pool). Target: 381 (15%). Gap: 369 items, 62 sessions. Dedicated track saves ~35% calendar time. |
+| expansion-board | Synthesis & Decision | CONDITIONAL. 5 conditions for YES: DL-031 started, DL-035 remediated, baselines accurate, Evaluate track launched, automation contradiction resolved. |
+
+## A-F Condition Status (Reassessed from S370/S374)
+
+| Condition | S374 | S376 | Blocking? |
+|-----------|------|------|-----------|
+| A — DL-035 | START | PARTIAL | No (6.2h, 1 wave) |
+| B — DL-031 | START | **NOT MET** | **YES** (CAL-001 unstarted) |
+| C — Automation | START | PARTIAL | No (scripts exist, guard 9 rules) |
+| D — Throughput | START | PARTIAL | No (5× peak proven) |
+| E — Cognitive Gap | START | **MET** | No (120 vs 50 threshold) |
+| F — Evaluate Track | START | PARTIAL | No (~51 items at 9/session) |
+
+## Key Deltas Since S370
+
+- Peak throughput: 0 → 32 sessions/day, 119 items at 5× S374 target
+- Evaluate items: 0 at scale → 51 authored at ~9/session
+- Governance guard: Rules 1-5 → Rules 1-9 (51 tests)
+- DL-008: several hundred → 0 (S896)
+- Authoring methodology: unproven → S899 model validated (6 sessions, 0 defects)
+- CURRENT_BASELINES.md: accurate → stale (-100 on C/D counts, DL-035 missing)
+
+## 5 Conditions Required for Expansion Authorization
+
+1. DL-031 CAL-001 STARTED: scan_dl031.js built + batch 1 executed (≤28 items)
+2. DL-035 FULLY REMEDIATED: S373 plan executed, 0 empty non-CC EW on Certified
+3. CURRENT_BASELINES.md ACCURATE: all counts verified, DL-035 added to §3
+4. EVALUATE DEDICATED TRACK LAUNCHED: 1 proven wave (≥5 items, 0 defects)
+5. AUTOMATION CONTRADICTION RESOLVED: post_change_qc.js existence verified
+
+## Unresolved Questions (Deferred to S377)
+
+- Actual DL-035 count after DL-029 scan-artifact filtering
+- post_change_qc.js existence (readiness-audit vs throughput-board contradiction)
+- S58/S57 completion status and impact on program state
+- Multi-week throughput sustainability at >1 wave/week
+
+## Deliverables
+
+- `reports/SESSION376_EXPANSION_DECISION.json`
+- `reports/SESSION376_EXECUTIVE_SUMMARY.md`
+- `scripts/output/SESSION376_EXPANSION_AUTHORIZATION_INPUT.json`
+- `knowledge/REVISION_HISTORY.md` (this entry)
+
