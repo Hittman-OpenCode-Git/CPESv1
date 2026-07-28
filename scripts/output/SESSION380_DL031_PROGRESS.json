@@ -1,0 +1,77 @@
+{
+  "session": "S380",
+  "board": "dl031-board",
+  "status": "complete",
+  "timestamp": "2026-07-28T22:30:00Z",
+  "prior_batch": "S377 Batch 1 — 17 Simple Relabels complete",
+  "this_batch": {
+    "calibration_processed": 18,
+    "rewrite_processed": 4,
+    "total_items": 22
+  },
+  "calibration_results": [
+    { "qid": "P1B-F-134", "pack": "B", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Pure definition match — stem describes vulnerability management process, asks 'this process is known as'" },
+    { "qid": "P1B-F-146", "pack": "B", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Pure definition match — stem describes data lineage, asks 'this tracking capability is known as'" },
+    { "qid": "P1-BC-054", "pack": "C", "difficulty_before": "Difficult(4)", "difficulty_after": "Moderate-Easy(2)", "rationale": "Scenario-based top-down budgeting drawback — requires concept recognition but labeled Difficult(4) is inflated" },
+    { "qid": "P1-FC-041", "pack": "C", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Definition match — blockchain characteristic identification; thin scenario wrapper, rotation clone" },
+    { "qid": "P1-FC-042", "pack": "C", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Same as FC-041 (rotation clone)" },
+    { "qid": "P1-FC-043", "pack": "C", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Same as FC-041 (rotation clone)" },
+    { "qid": "P1-FC-044", "pack": "C", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Same as FC-041 (rotation clone)" },
+    { "qid": "P1-FC-061", "pack": "C", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Definition match — ERP primary benefit; reads like textbook definition" },
+    { "qid": "P1-FC-063", "pack": "C", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Same as FC-061 (rotation clone)" },
+    { "qid": "P1-FC-065", "pack": "C", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Same as FC-061 (rotation clone)" },
+    { "qid": "P1-CD-053", "pack": "D", "difficulty_before": "Moderate-Easy(3)", "difficulty_after": "Easy(1)", "rationale": "Definition match — goal congruence; label/score inconsistent (Moderate-Easy label but DifficultyScore=3)" },
+    { "qid": "P1-CD-054", "pack": "D", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Same as CD-053 (rotation clone)" },
+    { "qid": "P1-FD-071", "pack": "D", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Definition match — data retention policy purpose" },
+    { "qid": "P1-FD-072", "pack": "D", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Same as FD-071 (rotation clone)" },
+    { "qid": "P1-FD-074", "pack": "D", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Same as FD-071 (rotation clone)" },
+    { "qid": "P1-FD-075", "pack": "D", "difficulty_before": "Moderate(3)", "difficulty_after": "Easy(1)", "rationale": "Same as FD-071 (rotation clone)" },
+    { "qid": "P1-E-R01", "pack": "E", "difficulty_before": "Moderate(3)", "difficulty_after": "Moderate-Easy(2)", "rationale": "Scenario-based segregation of duties identification — requires applying concept to situation; stem explicitly describes incompatible duties" },
+    { "qid": "P1-E-R37", "pack": "E", "difficulty_before": "Moderate(3)", "difficulty_after": "Moderate-Easy(2)", "rationale": "Scenario-based risk identification — stem explicitly describes Delphi method characteristics; requires recognition but not deep analysis" }
+  ],
+  "rewrite_results": [
+    { "qid": "P1-EC-019", "pack": "C", "cl_before": "Analyze", "cl_after": "Apply", "diff_before": "Difficult(4)", "diff_after": "Moderate(3)", "rationale": "COSO Principle 17 aggregation evaluation — stem describes scenario requiring application of specific principle, not novel analytical reasoning. Option A applied: downgrade cognitive label + difficulty." },
+    { "qid": "P1-FC-005", "pack": "C", "cl_before": "Analyze", "cl_after": "Understand", "diff_before": "Moderate(4)", "diff_after": "Easy(1)", "rationale": "Stem IS a textbook definition of data governance — 'establishes ownership, definitions, quality standards' asks 'what concept describes this.' Option A applied: downgrade CL + difficulty." },
+    { "qid": "P1-FC-045", "pack": "C", "cl_before": "Analyze", "cl_after": "Understand", "diff_before": "Moderate(4)", "diff_after": "Easy(1)", "rationale": "Same definition match as FC-041-044 rotation group, mislabeled Analyze. Option A applied: downgrade CL + difficulty." },
+    { "qid": "P1-CD-050", "pack": "D", "cl_before": "Analyze", "cl_after": "Understand", "diff_before": "Moderate(4)", "diff_after": "Easy(1)", "rationale": "Same definition match as CD-053-054 rotation group, mislabeled Analyze. Option A applied: downgrade CL + difficulty." }
+  ],
+  "packs_modified": ["pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"],
+  "backups_created": [
+    "backups/pack_b_corrected.js.bak-DL031-S380-20260728164634",
+    "backups/pack_c_corrected.js.bak-DL031-S380-20260728164634",
+    "backups/pack_d_corrected.js.bak-DL031-S380-20260728164634",
+    "backups/pack_e_corrected.js.bak-DL031-S380-20260728164634"
+  ],
+  "governance_checks": {
+    "dl008_introduced": 0,
+    "dl008_pre_existing": 2,
+    "dl008_pre_existing_items": [
+      {"qid": "P1-FC-005", "correct_choice": "A", "note": "ExplanationWrongA is non-empty. Pre-existing — S380 only changed DifficultyScore/CognitiveLevel/Difficulty. Item state is Active (not in learner pool)."},
+      {"qid": "P1-FC-045", "correct_choice": "A", "note": "ExplanationWrongA is non-empty. Pre-existing — S380 only changed DifficultyScore/CognitiveLevel/Difficulty. Item state is Active (not in learner pool)."}
+    ],
+    "qid_counts_stable": true,
+    "certified_counts_unchanged": true,
+    "rule4": "All changes are Difficulty/DifficultyScore/CognitiveLevel only — no CorrectChoice changes",
+    "syntax_check": "All 4 packs pass node --check",
+    "item_verification": "22/22 items match expected values via Function constructor boundary-aware parse"
+  },
+  "independent_verification": {
+    "verified_by": "S380 dl031-board re-verification",
+    "timestamp": "2026-07-28T22:30:00Z",
+    "method": "Function constructor boundary-aware parse (authoritative per AGENTS.md §5)",
+    "result": "PASS — all 22 items confirmed correct. 18 Calibration items have correct Difficulty/DifficultyScore. 4 Rewrite Option-A items have correct CognitiveLevel/Difficulty/DifficultyScore. 0 label/score mismatches. 0 items introduced DL-008. 2 pre-existing DL-008 discovered on Active-state items (P1-FC-005, P1-FC-045) — not in learner pool, not introduced by S380.",
+    "backups_verified": [
+      "backups/pack_b_corrected.js.bak-DL031-S380-20260728164634 — exists",
+      "backups/pack_c_corrected.js.bak-DL031-S380-20260728164634 — exists",
+      "backups/pack_d_corrected.js.bak-DL031-S380-20260728164634 — exists",
+      "backups/pack_e_corrected.js.bak-DL031-S380-20260728164634 — exists"
+    ]
+  },
+  "remaining_dl031": {
+    "calibration": 0,
+    "rewrite": 0,
+    "total_remaining": 0,
+    "cumulative_resolved": 39,
+    "program_status": "CAL-001 COMPLETE"
+  }
+}

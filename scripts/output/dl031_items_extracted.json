@@ -1,0 +1,342 @@
+{
+  "P1B-F-134": {
+    "pack": "B",
+    "QuestionID": "P1B-F-134",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "Stem": "Quantum Corp regularly scans its systems for known security weaknesses, prioritizes them based on risk, and applies patches in a timely manner. This process is known as:",
+    "CorrectChoice": "B",
+    "Choices": {
+      "A": "Penetration testing",
+      "B": "Vulnerability management",
+      "C": "Incident response",
+      "D": "Business continuity planning"
+    },
+    "ExplanationCorrect": "Vulnerability management is the ongoing process of identifying, classifying, prioritizing, and remediating security vulnerabilities in systems and software. It includes regular scanning, risk assessment, patch management, and verification. Penetration testing is a specific type of security assessmen",
+    "question_state": "Certified"
+  },
+  "P1B-F-146": {
+    "pack": "B",
+    "QuestionID": "P1B-F-146",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "Stem": "During a financial audit, the auditor needs to trace a specific amount in the financial statements back to its source transactions, through all intermediate calculations and transformations. This trac",
+    "CorrectChoice": "B",
+    "Choices": {
+      "A": "Data mining",
+      "B": "Data lineage",
+      "C": "Data profiling",
+      "D": "Data encryption"
+    },
+    "ExplanationCorrect": "Data lineage provides a visual map of data flow from source to destination, documenting every transformation, calculation, and movement along the way. This is critical for audit trails, impact analysis, and ensuring the accuracy and integrity of financial data.",
+    "question_state": "Certified"
+  },
+  "P1-BC-054": {
+    "pack": "C",
+    "QuestionID": "P1-BC-054",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "Stem": "Everfern's senior executives set budget targets and impose them on department managers with minimal input. What is a key drawback of this approach?",
+    "CorrectChoice": "B",
+    "Choices": {
+      "A": "Elimination of the need for a sales forecast",
+      "B": "Lower manager buy-in and potentially unrealistic targets due to limited operational input",
+      "C": "Guaranteed accuracy because executives have complete information",
+      "D": "Faster achievement of all financial targets"
+    },
+    "ExplanationCorrect": "Top-down budgeting can be faster to prepare but often results in less realistic targets and lower buy-in from the managers responsible for achieving them.",
+    "question_state": "Certified"
+  },
+  "P1-EC-019": {
+    "pack": "C",
+    "QuestionID": "P1-EC-019",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "Stem": "Novara Financial Services operates three business lines — retail banking, wealth management, and commercial lending — each independently rated as low-risk by the internal control monitoring function. ",
+    "CorrectChoice": "C",
+    "Choices": {
+      "A": "The monitoring framework is functioning as designed because each finding was correctly classified as low severity at the business-line level under the organization's established criteria.",
+      "B": "Novara's monitoring frequency is inadequate and should be increased from quarterly to monthly to detect the access control weakness earlier in the contractor lifecycle.",
+      "C": "The organization's monitoring process fails to evaluate the aggregated significance of related deficiencies identified across the entity, which may collectively represent a material weakness despite being individually classified as low severity.",
+      "D": "The internal audit function should be replaced by an external firm because the monitoring evaluations produced inconsistent severity ratings across the three business lines."
+    },
+    "ExplanationCorrect": "COSO Principle 17 requires the organization to evaluate and communicate internal control deficiencies in a timely manner to parties responsible for taking corrective action, including senior management and the board of directors as appropriate. A critical sub-element of this principle is that the or",
+    "question_state": "Certified"
+  },
+  "P1-FC-005": {
+    "pack": "C",
+    "QuestionID": "P1-FC-005",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "Stem": "Emberton establishes clear ownership, definitions, and quality standards for its enterprise data. What concept does this describe?",
+    "CorrectChoice": "A",
+    "Choices": {
+      "A": "Data governance",
+      "B": "Data visualization",
+      "C": "Data lineage",
+      "D": "Data warehousing"
+    },
+    "ExplanationCorrect": "Data governance establishes ownership, standard definitions, quality requirements, and accountability for how data is managed across an organization.",
+    "question_state": "Active"
+  },
+  "P1-FC-041": {
+    "pack": "C",
+    "QuestionID": "P1-FC-041",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "Stem": "Pinehollow evaluates blockchain technology to create a shared, tamper-resistant record of transactions among multiple parties. What is a key characteristic of blockchain that supports this goal?",
+    "CorrectChoice": "A",
+    "Choices": {
+      "A": "A decentralized, distributed ledger that is difficult to alter once a transaction is recorded",
+      "B": "A single centralized database controlled by one party",
+      "C": "A method for automating repetitive manual keystrokes only",
+      "D": "A tool used exclusively for data visualization"
+    },
+    "ExplanationCorrect": "Blockchain uses a decentralized, distributed ledger maintained across multiple nodes, making recorded transactions difficult to alter without consensus, which supports trust among parties.",
+    "question_state": "Archived"
+  },
+  "P1-FC-042": {
+    "pack": "C",
+    "QuestionID": "P1-FC-042",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "Stem": "Quarrystone evaluates blockchain technology to create a shared, tamper-resistant record of transactions among multiple parties. What is a key characteristic of blockchain that supports this goal?",
+    "CorrectChoice": "B",
+    "Choices": {
+      "A": "A single centralized database controlled by one party",
+      "B": "A decentralized, distributed ledger that is difficult to alter once a transaction is recorded",
+      "C": "A tool used exclusively for data visualization",
+      "D": "A method for automating repetitive manual keystrokes only"
+    },
+    "ExplanationCorrect": "Blockchain uses a decentralized, distributed ledger maintained across multiple nodes, making recorded transactions difficult to alter without consensus, which supports trust among parties.",
+    "question_state": "Archived"
+  },
+  "P1-FC-043": {
+    "pack": "C",
+    "QuestionID": "P1-FC-043",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "Stem": "Ridgeline evaluates blockchain technology to create a shared, tamper-resistant record of transactions among multiple parties. What is a key characteristic of blockchain that supports this goal?",
+    "CorrectChoice": "C",
+    "Choices": {
+      "A": "A single centralized database controlled by one party",
+      "B": "A method for automating repetitive manual keystrokes only",
+      "C": "A decentralized, distributed ledger that is difficult to alter once a transaction is recorded",
+      "D": "A tool used exclusively for data visualization"
+    },
+    "ExplanationCorrect": "Blockchain uses a decentralized, distributed ledger maintained by multiple nodes, with consensus mechanisms that make recorded transactions difficult to alter. That supports a shared, tamper-resistant record among parties that may not fully trust one another.",
+    "question_state": "Certified"
+  },
+  "P1-FC-044": {
+    "pack": "C",
+    "QuestionID": "P1-FC-044",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "Stem": "Sagebrook evaluates blockchain technology to create a shared, tamper-resistant record of transactions among multiple parties. What is a key characteristic of blockchain that supports this goal?",
+    "CorrectChoice": "D",
+    "Choices": {
+      "A": "A method for automating repetitive manual keystrokes only",
+      "B": "A tool used exclusively for data visualization",
+      "C": "A single centralized database controlled by one party",
+      "D": "A decentralized, distributed ledger that is difficult to alter once a transaction is recorded"
+    },
+    "ExplanationCorrect": "Blockchain is a decentralized, distributed ledger technology where transactions are recorded across multiple nodes, making them extremely difficult to alter retroactively without network consensus. This tamper-resistant characteristic is what makes blockchain suitable for creating shared, trustworth",
+    "question_state": "Archived"
+  },
+  "P1-FC-045": {
+    "pack": "C",
+    "QuestionID": "P1-FC-045",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "Stem": "Timberlake evaluates blockchain technology to create a shared, tamper-resistant record of transactions among multiple parties. What is a key characteristic of blockchain that supports this goal?",
+    "CorrectChoice": "A",
+    "Choices": {
+      "A": "A decentralized, distributed ledger that is difficult to alter once a transaction is recorded",
+      "B": "A single centralized database controlled by one party",
+      "C": "A method for automating repetitive manual keystrokes only",
+      "D": "A tool used exclusively for data visualization"
+    },
+    "ExplanationCorrect": "Blockchain uses a decentralized, distributed ledger maintained across multiple nodes, making recorded transactions difficult to alter without consensus, which supports trust among parties.",
+    "question_state": "Active"
+  },
+  "P1-FC-061": {
+    "pack": "C",
+    "QuestionID": "P1-FC-061",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "Stem": "Lanternwood implements an enterprise resource planning (ERP) system to integrate finance, operations, and supply chain data into a single platform. What is a primary benefit of this integration?",
+    "CorrectChoice": "A",
+    "Choices": {
+      "A": "Improved data consistency and real-time visibility across business functions",
+      "B": "Elimination of the need for any internal controls",
+      "C": "Guaranteed reduction in all operating costs",
+      "D": "Automatic compliance with all external regulations"
+    },
+    "ExplanationCorrect": "An ERP system integrates finance, operations, and supply-chain data into a shared platform. The primary benefit is improved data consistency, reduced duplicate entry, and more timely cross-functional visibility, although controls and governance are still required.",
+    "question_state": "Archived"
+  },
+  "P1-FC-063": {
+    "pack": "C",
+    "QuestionID": "P1-FC-063",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "Stem": "Nettlefield implements an enterprise resource planning (ERP) system to integrate finance, operations, and supply chain data into a single platform. What is a primary benefit of this integration?",
+    "CorrectChoice": "C",
+    "Choices": {
+      "A": "Automatic compliance with all external regulations",
+      "B": "Guaranteed reduction in all operating costs",
+      "C": "Improved data consistency and real-time visibility across business functions",
+      "D": "Elimination of the need for any internal controls"
+    },
+    "ExplanationCorrect": "ERP systems integrate data across business functions into a shared platform, improving consistency, reducing duplicate data entry, and enabling more timely, organization-wide visibility.",
+    "question_state": "Certified"
+  },
+  "P1-FC-065": {
+    "pack": "C",
+    "QuestionID": "P1-FC-065",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "Stem": "Poplarwood implements an enterprise resource planning (ERP) system to integrate finance, operations, and supply chain data into a single platform. What is a primary benefit of this integration?",
+    "CorrectChoice": "A",
+    "Choices": {
+      "A": "Improved data consistency and real-time visibility across business functions",
+      "B": "Elimination of the need for any internal controls",
+      "C": "Automatic compliance with all external regulations",
+      "D": "Guaranteed reduction in all operating costs"
+    },
+    "ExplanationCorrect": "ERP systems integrate data across business functions into a shared platform, improving consistency, reducing duplicate data entry, and enabling more timely, organization-wide visibility.",
+    "question_state": "Archived"
+  },
+  "P1-CD-050": {
+    "pack": "D",
+    "QuestionID": "P1-CD-050",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "Stem": "Ambervale wants a performance measure that motivates division managers to make decisions that are also in the best interest of the company as a whole. What concept describes this alignment?",
+    "CorrectChoice": "B",
+    "Choices": {
+      "A": "Budgetary slack",
+      "B": "Goal congruence",
+      "C": "Management by exception",
+      "D": "The controllability principle applied in isolation"
+    },
+    "ExplanationCorrect": "Goal congruence exists when performance measures motivate managers to act in ways that benefit both their own division and the overall organization.",
+    "question_state": "Certified"
+  },
+  "P1-CD-053": {
+    "pack": "D",
+    "QuestionID": "P1-CD-053",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "Stem": "Duskgrove wants a performance measure that motivates division managers to make decisions that are also in the best interest of the company as a whole. What concept describes this alignment?",
+    "CorrectChoice": "A",
+    "Choices": {
+      "A": "Goal congruence",
+      "B": "Management by exception",
+      "C": "The controllability principle applied in isolation",
+      "D": "Budgetary slack"
+    },
+    "ExplanationCorrect": "Goal congruence exists when performance measures motivate managers to act in ways that benefit both their own division and the overall organization.",
+    "question_state": "Certified"
+  },
+  "P1-CD-054": {
+    "pack": "D",
+    "QuestionID": "P1-CD-054",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "Stem": "Elmbrook wants a performance measure that motivates division managers to make decisions that are also in the best interest of the company as a whole. What concept describes this alignment?",
+    "CorrectChoice": "B",
+    "Choices": {
+      "A": "Management by exception",
+      "B": "Goal congruence",
+      "C": "Budgetary slack",
+      "D": "The controllability principle applied in isolation"
+    },
+    "ExplanationCorrect": "Goal congruence exists when performance measures motivate managers to act in ways that benefit both their own division and the overall organization.",
+    "question_state": "Certified"
+  },
+  "P1-FD-071": {
+    "pack": "D",
+    "QuestionID": "P1-FD-071",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "Stem": "Vantage Ridge establishes a policy defining how long different categories of financial and customer data must be retained before secure disposal. What is a primary purpose of this policy?",
+    "CorrectChoice": "C",
+    "Choices": {
+      "A": "To eliminate the need for data governance entirely",
+      "B": "To ensure all data is kept permanently regardless of type",
+      "C": "To comply with legal and regulatory requirements while managing data storage risk and cost",
+      "D": "To replace the need for cybersecurity controls"
+    },
+    "ExplanationCorrect": "A data retention policy defines how long data should be kept and when it should be securely disposed of. It supports legal and regulatory compliance while limiting storage cost, privacy exposure, and security risk from keeping data longer than necessary.",
+    "question_state": "Archived"
+  },
+  "P1-FD-072": {
+    "pack": "D",
+    "QuestionID": "P1-FD-072",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "Stem": "Whitfield establishes a policy defining how long different categories of financial and customer data must be retained before secure disposal. What is a primary purpose of this policy?",
+    "CorrectChoice": "D",
+    "Choices": {
+      "A": "To eliminate the need for data governance entirely",
+      "B": "To ensure all data is kept permanently regardless of type",
+      "C": "To replace the need for cybersecurity controls",
+      "D": "To comply with legal and regulatory requirements while managing data storage risk and cost"
+    },
+    "ExplanationCorrect": "Data retention policies balance legal and regulatory compliance requirements with the practical costs and risks of storing data indefinitely.",
+    "question_state": "Archived"
+  },
+  "P1-FD-073": {
+    "pack": "D",
+    "QuestionID": "P1-FD-073",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand",
+    "Stem": "Ashvale establishes a policy defining how long different categories of financial and customer data must be retained before secure disposal. What is a primary purpose of this policy?",
+    "CorrectChoice": "A",
+    "Choices": {
+      "A": "To comply with legal and regulatory requirements while managing data storage risk and cost",
+      "B": "To eliminate the need for data governance entirely",
+      "C": "To replace the need for cybersecurity controls",
+      "D": "To ensure all data is kept permanently regardless of type"
+    },
+    "ExplanationCorrect": "Data retention policies balance legal and regulatory compliance requirements with the practical costs and risks of storing data indefinitely.",
+    "question_state": "Certified"
+  },
+  "P1-FD-074": {
+    "pack": "D",
+    "QuestionID": "P1-FD-074",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand",
+    "Stem": "Brookline establishes a policy defining how long different categories of financial and customer data must be retained before secure disposal. What is a primary purpose of this policy?",
+    "CorrectChoice": "B",
+    "Choices": {
+      "A": "To eliminate the need for data governance entirely",
+      "B": "To comply with legal and regulatory requirements while managing data storage risk and cost",
+      "C": "To replace the need for cybersecurity controls",
+      "D": "To ensure all data is kept permanently regardless of type"
+    },
+    "ExplanationCorrect": "Data retention policies balance legal and regulatory compliance requirements with the practical costs and risks of storing data indefinitely.",
+    "question_state": "Certified"
+  }
+}

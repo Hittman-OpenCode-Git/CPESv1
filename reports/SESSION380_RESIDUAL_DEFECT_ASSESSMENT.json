@@ -1,0 +1,801 @@
+{
+  "session": "S380",
+  "workstream": "residual-defect-board",
+  "timestamp": "2026-07-28T21:10:01.255Z",
+  "total_certified_items_across_all_packs": 2427,
+  "DL008_findings": {
+    "total_flagged": 5,
+    "confirmed_true_defects": 5,
+    "false_positives": 0,
+    "false_positive_reasons": {
+      "DL016_artifact": 0,
+      "CC_offset_error": 0,
+      "other": 0
+    },
+    "items": [
+      {
+        "qid": "P1B-C-153",
+        "pack": "b",
+        "correct_choice": "A",
+        "offending_slot": "ExplanationWrongA",
+        "offending_text_preview": "Division managers have opposing interests. The selling division benefits from a higher transfer pric",
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "MEDIUM (editorial review needed)"
+      },
+      {
+        "qid": "P1-CC-015",
+        "pack": "c",
+        "correct_choice": "B",
+        "offending_slot": "ExplanationWrongB",
+        "offending_text_preview": "$300,000 is only the capital charge (10% x $3,000,000), not the residual income. RI = operating inco",
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "MEDIUM (editorial review needed)"
+      },
+      {
+        "qid": "P1-EC-031",
+        "pack": "c",
+        "correct_choice": "D",
+        "offending_slot": "ExplanationWrongD",
+        "offending_text_preview": "Control risk is the risk that a misstatement will not be prevented or detected by internal controls.",
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "MEDIUM (editorial review needed)"
+      },
+      {
+        "qid": "P1-ED-016",
+        "pack": "d",
+        "correct_choice": "B",
+        "offending_slot": "ExplanationWrongB",
+        "offending_text_preview": "Risk avoidance eliminates the risk entirely by discontinuing the activity that creates the exposure.",
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "MEDIUM (editorial review needed)"
+      },
+      {
+        "qid": "P1-ED-051",
+        "pack": "d",
+        "correct_choice": "D",
+        "offending_slot": "ExplanationWrongD",
+        "offending_text_preview": "No single control eliminates the need for all others. Multi-factor authentication strengthens access",
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "MEDIUM (editorial review needed)"
+      }
+    ]
+  },
+  "DL026_findings": {
+    "total_flagged": 65,
+    "confirmed_true_defects": 65,
+    "false_positives": 0,
+    "items": [
+      {
+        "qid": "P1B-C-153",
+        "pack": "b",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongC"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-011",
+        "pack": "c",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-012",
+        "pack": "c",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-014",
+        "pack": "c",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-030",
+        "pack": "c",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongC"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-031",
+        "pack": "c",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-032",
+        "pack": "c",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-034",
+        "pack": "c",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-040",
+        "pack": "c",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-042",
+        "pack": "c",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-043",
+        "pack": "c",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-044",
+        "pack": "c",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-050",
+        "pack": "c",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-051",
+        "pack": "c",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-052",
+        "pack": "c",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CC-071",
+        "pack": "c",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-EC-022",
+        "pack": "c",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-EC-023",
+        "pack": "c",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-EC-024",
+        "pack": "c",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-EC-031",
+        "pack": "c",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongC"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-EC-050",
+        "pack": "c",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongA",
+          "ExplanationWrongC"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "2 distractor sentence(s) to author (MEDIUM)"
+      },
+      {
+        "qid": "P1-EC-051",
+        "pack": "c",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongA",
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "2 distractor sentence(s) to author (MEDIUM)"
+      },
+      {
+        "qid": "P1-EC-053",
+        "pack": "c",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-EC-056",
+        "pack": "c",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-EC-057",
+        "pack": "c",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-EC-059",
+        "pack": "c",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongA",
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "2 distractor sentence(s) to author (MEDIUM)"
+      },
+      {
+        "qid": "P1-EC-062",
+        "pack": "c",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongA",
+          "ExplanationWrongC"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "2 distractor sentence(s) to author (MEDIUM)"
+      },
+      {
+        "qid": "P1-EC-063",
+        "pack": "c",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongA",
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "2 distractor sentence(s) to author (MEDIUM)"
+      },
+      {
+        "qid": "P1-EC-064",
+        "pack": "c",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-EC-065",
+        "pack": "c",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-015",
+        "pack": "d",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-017",
+        "pack": "d",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-018",
+        "pack": "d",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-043",
+        "pack": "d",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-044",
+        "pack": "d",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-048",
+        "pack": "d",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-051",
+        "pack": "d",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongC"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-057",
+        "pack": "d",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-058",
+        "pack": "d",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-061",
+        "pack": "d",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-064",
+        "pack": "d",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-067",
+        "pack": "d",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-068",
+        "pack": "d",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-071",
+        "pack": "d",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-074",
+        "pack": "d",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongC"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-090",
+        "pack": "d",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-092",
+        "pack": "d",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongC"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-CD-093",
+        "pack": "d",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-002",
+        "pack": "d",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-003",
+        "pack": "d",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-021",
+        "pack": "d",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-037",
+        "pack": "d",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-040",
+        "pack": "d",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-042",
+        "pack": "d",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-043",
+        "pack": "d",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-044",
+        "pack": "d",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-046",
+        "pack": "d",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongC"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-049",
+        "pack": "d",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-050",
+        "pack": "d",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongA"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-051",
+        "pack": "d",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-052",
+        "pack": "d",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-062",
+        "pack": "d",
+        "correct_choice": "A",
+        "empty_slots": [
+          "ExplanationWrongB"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-DD-063",
+        "pack": "d",
+        "correct_choice": "C",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-ED-016",
+        "pack": "d",
+        "correct_choice": "B",
+        "empty_slots": [
+          "ExplanationWrongD"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      },
+      {
+        "qid": "P1-ED-051",
+        "pack": "d",
+        "correct_choice": "D",
+        "empty_slots": [
+          "ExplanationWrongC"
+        ],
+        "is_true_defect": true,
+        "false_positive_reason": null,
+        "remediation_effort": "1 distractor sentence(s) to author (LOW)"
+      }
+    ]
+  },
+  "summary": {
+    "true_dl008_in_learner_pool": 5,
+    "true_dl026_in_learner_pool": 65,
+    "total_remediation_effort_estimate": "5 DL-008 fields to clear + 65 items with 70 DL-026 fields to author",
+    "recommended_priority": "IMMEDIATE"
+  }
+}

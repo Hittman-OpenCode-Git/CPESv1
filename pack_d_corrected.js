@@ -11415,7 +11415,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "performance measurement goal congruence",
         "UniqueConceptKey": "C-D050-performance-measurement-goal-congruence",
         "LOSTag": "C Performance management",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Ambervale wants a performance measure that motivates division managers to make decisions that are also in the best interest of the company as a whole. What concept describes this alignment?",
@@ -11454,9 +11454,10 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "This option miscomputes the project ROI. The correct project ROI is $54,000 / $300,000 = 18%, not 24.6%. The manager evaluates the project's ROI against the division's current ROI of 22%. Since 18% < 22%, accepting would dilute the division ROI and reduce the manager's bonus. The manager will likely reject a value-creating project due to the ROI-based bonus structure.",
         "ExplanationWrongD": "Confuses the relevant decision criterion. From the company's perspective, the division's post-acceptance ROI (21.48%) exceeding WACC (14%) is favorable, suggesting acceptance. However, the manager's bonus is tied to ROI change, not to the absolute ROI level. The manager compares the project ROI (18%) to pre-project ROI (22%), sees dilution, and rejects. The WACC comparison is irrelevant to the manager's personal decision calculus.",
         "question_state": "Certified",
-        "DifficultyScore": 4,
-        "CognitiveLevel": "Analyze"
-    },
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Understand"
+    ,
+        "dl031_review_note": "Downgraded from Analyze->Understand — stem is identical definition-match to CD-053-054 rotation group; \"What concept describes this alignment?\" (DL-031)"},
     {
         "Part": 1,
         "Section": "C",
@@ -11565,7 +11566,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "performance measurement goal congruence",
         "UniqueConceptKey": "C-D053-performance-measurement-goal-congruence",
         "LOSTag": "C Performance management",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Duskgrove wants a performance measure that motivates division managers to make decisions that are also in the best interest of the company as a whole. What concept describes this alignment?",
@@ -11604,7 +11605,7 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "The controllability principle should guide evaluation, not be rejected. Cost center managers should be held accountable only for costs within their span of control. Applying the principle is the correct approach.",
         "ExplanationWrongD": "Budgetary slack is the practice of understating revenues or overstating expenses to make targets easier to achieve. It is a behavioral problem, not a performance measurement framework.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -11615,7 +11616,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "performance measurement goal congruence",
         "UniqueConceptKey": "C-D054-performance-measurement-goal-congruence",
         "LOSTag": "C Performance management",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Elmbrook wants a performance measure that motivates division managers to make decisions that are also in the best interest of the company as a whole. What concept describes this alignment?",
@@ -11654,7 +11655,7 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "Budgetary slack is the practice of understating revenues or overstating expenses to make targets easier to achieve. It is a behavioral problem that undermines alignment between managers and the organization, not a concept that describes it.",
         "ExplanationWrongD": "The controllability principle should guide evaluation, not be rejected. Cost center managers should be held accountable only for costs within their span of control. Applying the principle is the correct approach.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -19881,37 +19882,36 @@ const MCQ_BANK_D = [
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.044 risk assessment likelihood impact",
-        "MicroTopic": "risk assessment likelihood impact",
-        "UniqueConceptKey": "E-D044-risk-assessment-likelihood-impact",
-        "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Topic": "E.044 COSO ERM — risk response portfolio — accept, mitigate, transfer",
+        "MicroTopic": "COSO ERM risk response strategy evaluation",
+        "UniqueConceptKey": "E-D044-risk-response-portfolio-evaluation",
+        "LOSTag": "E.3 COSO Enterprise Risk Management Framework",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Sandpiper's risk management team scores identified risks based on their likelihood of occurring and the potential impact if they do. What process is this?",
+        "Stem": "Kestrel Aerospace manufactures precision engine components, with annual revenues of $480 million. The board has established a risk appetite that no single event should cause more than $3.0 million in EBITDA impact and an aggregate annual risk tolerance of $7.0 million. The ERM team has identified four priority risks: Risk 1 — Cybersecurity breach of the production control system: estimated impact $4.5M, likelihood 12%, mitigation cost $520,000 (reduces likelihood to 4%). Risk 2 — Sole qualified supplier of a proprietary nickel alloy declaring bankruptcy: estimated impact $2.6M, likelihood 30%, mitigation cost $950,000 for dual-sourcing qualification (reduces likelihood to 10%). Risk 3 — New FAA airworthiness directive requiring $2.1M in mandatory testing equipment upgrades: impact $2.1M, likelihood 80%, mitigation unavailable (regulatory compliance, non-deferrable). Risk 4 — Departure of the two senior metallurgists who collectively understand 35% of Kestrel's proprietary alloy formulations: estimated impact $1.6M, likelihood 15%, mitigation cost $210,000 for a formal knowledge transfer and documentation program (reduces likelihood to 5%). The ERM team has a risk response budget of $1.4 million. Under COSO ERM, which risk response portfolio best aligns with the board's risk appetite while optimizing the use of limited resources?",
         "Choices": {
-            "A": "Risk transfer, which shifts risk to third parties",
-            "B": "Control activities, which are the specific policies implemented",
-            "C": "Monitoring, which evaluates control effectiveness over time",
-            "D": "Risk assessment, prioritizing risks based on likelihood and impact"
+            "A": "Mitigate Risks 1 and 2 ($1,470,000 total) and request a $70,000 budget increase from the board — this addresses the two risks with the largest potential financial impact, consistent with the principle that resources should be directed to the highest-consequence events.",
+            "B": "Mitigate Risks 1 and 4 ($730,000 total), transfer Risk 2 through supply chain business interruption insurance at an estimated $180,000 annual premium, and treat Risk 3 as a forecasted compliance expenditure incorporated into the capital budget rather than the risk response budget.",
+            "C": "Mitigate only Risk 4 ($210,000) given its superior risk-reduction return on investment, accept Risks 1 and 2 given their relatively low likelihood profiles, and classify Risk 3 as an unavoidable capital expenditure outside the ERM scope.",
+            "D": "Accept Risks 1, 2, and 4 without mitigation, transferring the aggregate exposure through a portfolio insurance policy at $400,000 annual premium, and treat Risk 3 as an unavoidable regulatory mandate."
         },
-        "CorrectChoice": "D",
-        "ExplanationCorrect": "Risk assessment involves identifying and analyzing risks based on their likelihood and potential impact, helping prioritize which risks require the most attention.",
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Under COSO ERM — Integrating with Strategy and Performance (2017), the risk response framework identifies four strategies: accept, avoid, pursue, reduce (mitigate), and share (transfer). An effective risk response portfolio does not apply a single strategy uniformly — it evaluates each risk against the organization's risk appetite and selects the most cost-effective response for each exposure. Risk 1 ($4.5M potential impact) exceeds the board's single-event appetite of $3.0M and cannot be accepted — it must be reduced or transferred. The mitigation reduces expected impact from $540,000 (12% × $4.5M) to $180,000 (4% × $4.5M), a net benefit of $360,000 on a $520,000 investment. Risk 2 ($2.6M, within the single-event appetite) carries an expected loss of $780,000 at 30% likelihood. However, mitigation at $950,000 for a net benefit of $520,000 yields a cost-to-benefit ratio of 1.83 — substantially less efficient. Transferring this risk through supply chain insurance at $180,000 shifts the financial consequence while preserving budget for higher-ROI activities. Risk 3 is a regulatory compliance requirement with 80% likelihood — it is not a risk to be mitigated but a forecasted operational expenditure to be incorporated into the capital budget. Risk 4 has the most favorable mitigation economics: a $210,000 investment yields a net expected benefit of $160,000 — a 76% return on mitigation expenditure. The recommended portfolio — mitigate Risks 1 and 4, transfer Risk 2, treat Risk 3 as compliance expenditure — deploys $910,000 of the $1.4 million budget, addresses the binding single-event appetite constraint, maximizes risk-reduction efficiency, and preserves $490,000 for emerging risks during the year.",
         "StudyLinks": [
+            {
+                "label": "COSO Enterprise Risk Management — Integrating with Strategy and Performance (2017)",
+                "url": "https://www.coso.org/guidance-erm"
+            },
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
                 "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "COSO Internal Control Framework overview",
-                "url": "https://www.coso.org/guidance-on-ic"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-044",
-        "question_state": "Archived",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -19920,48 +19920,53 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (Control activities, which are the specific policies implemented) represents a plausible misconception. Under COSO risk assessment component, the correct analysis leads to the conclusion that risk assessment, prioritizing risks based on likelihood and impact. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongC": "Option C (Monitoring, which evaluates control effectiveness over time) represents a plausible misconception. Under COSO risk assessment component, the correct analysis leads to the conclusion that risk assessment, prioritizing risks based on likelihood and impact. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongD": "",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongA": "Option A addresses the two largest-impact risks but exceeds the allocated $1.4 million budget and applies mitigation uniformly without evaluating whether transfer or acceptance would be more cost-effective for Risk 2. Mitigating Risk 2 at $950,000 costs 1.83 times the expected benefit — a poor risk-reduction investment compared to transferring at $180,000. A candidate selecting this option may be prioritizing consequence magnitude over response efficiency. COSO ERM requires evaluating alternative response strategies for each risk, not defaulting to mitigation for every above-threshold event.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C misapplies return-on-investment logic by treating the risk response portfolio as a capital budgeting exercise where only the highest-ROI project receives funding. Risk 1's $4.5M potential impact exceeds the board's stated single-event appetite of $3.0M — under COSO ERM, risks exceeding the risk appetite boundary cannot simply be accepted regardless of their likelihood. The board's risk appetite is a governance constraint, not a suggestion. Additionally, accepting Risk 2 at 30% likelihood with $2.6M impact (expected loss $780,000) leaves significant residual exposure when a cost-effective transfer option exists. A candidate selecting this option may be applying investment prioritization principles from Section B (capital budgeting) to a risk governance question where risk appetite thresholds create mandatory response obligations independent of ROI ranking.",
+        "ExplanationWrongD": "Option D proposes transferring all insurable risks through a portfolio insurance policy, which addresses the financial consequence of risk events but ignores critical limitations of pure risk transfer. First, insurance does not cover all consequences — reputational damage from a cybersecurity breach, the permanent loss of proprietary metallurgical knowledge, and production disruptions from supplier failure all carry non-insurable operational and strategic impacts. Second, Risk 1's $4.5M potential impact exceeds the single-event appetite of $3.0M even after insurance — insurance compensates financially after the fact but does not prevent the event or its operational disruption. COSO ERM encourages a balanced mix of response strategies where risk reduction and risk sharing complement each other. A candidate selecting this option may be treating risk transfer as a universal solution without recognizing that certain exposures — particularly those exceeding stated risk appetite — require reduction to bring the residual risk within acceptable boundaries.",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S380 Evaluate Wave 1 — Evaluate replacement for archived P1-ED-044 (DL-012 rotation clone)"
     },
     {
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.045 risk assessment likelihood impact",
-        "MicroTopic": "risk assessment likelihood impact",
-        "UniqueConceptKey": "E-D045-risk-assessment-likelihood-impact",
-        "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Topic": "E.045 COSO Principle 10/17 — control deficiency severity — material weakness vs. significant deficiency",
+        "MicroTopic": "Control deficiency classification — material weakness vs significant deficiency",
+        "UniqueConceptKey": "E-D045-control-deficiency-severity-classification",
+        "LOSTag": "E.2 COSO Internal Control Framework",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Turnstone's risk management team scores identified risks based on their likelihood of occurring and the potential impact if they do. What process is this?",
+        "Stem": "Calvert Regional Health is a publicly traded hospital operator with $2.1 billion in annual revenue. During the integrated audit, the external auditor identified the following control deficiency in the revenue cycle: patient service revenue is recognized based on charges recorded in the billing system, but the billing system lacks an automated interface with the patient scheduling system. Approximately 3% of patient encounters (estimated $8.4 million annually) are billed one to two months late because the manual reconciliation between the scheduling and billing systems is performed only quarterly. Management determined that billing staff catches approximately 85% of delayed billings within the following quarter, leaving an estimated $1.26 million in revenue permanently unbilled each year. Planning materiality is $4.5 million. Additional facts: (1) the deficiency has existed for three years and was noted in the prior year's management letter but was not remediated; (2) the CFO's monthly revenue reviews did not identify the $1.26 million annual leakage; (3) the deficiency affects both the existence and completeness assertions for accounts receivable; (4) during a prior-year system upgrade, the manual reconciliation cycle extended to six months and the uncorrected revenue leakage reached $2.8 million. Management contends this is a significant deficiency because the $1.26 million is below planning materiality. Under PCAOB AS 2201 and COSO, how should this deficiency be classified?",
         "Choices": {
-            "A": "Risk assessment, prioritizing risks based on likelihood and impact",
-            "B": "Monitoring, which evaluates control effectiveness over time",
-            "C": "Risk transfer, which shifts risk to third parties",
-            "D": "Control activities, which are the specific policies implemented"
+            "A": "Significant deficiency — the $1.26 million permanent revenue leakage is below the $4.5 million planning materiality threshold, and management's CFO-level review of monthly revenue reports represents a compensating detective control that limits the severity of the deficiency.",
+            "B": "Material weakness — the deficiency affects multiple financial statement assertions, has persisted for three years without remediation despite prior identification, the compensating management review control failed to detect the leakage, and there is a reasonable possibility that a material misstatement could occur under foreseeable stress conditions, as evidenced by the $2.8 million exposure during the prior system upgrade.",
+            "C": "Significant deficiency — the 85% catch rate demonstrates that the manual reconciliation is functioning as an effective compensating control at a sufficient level of precision, and the permanent leakage of $1.26 million (0.06% of revenue) is quantitatively immaterial to the financial statements taken as a whole.",
+            "D": "Material weakness — any control deficiency that results in permanently lost revenue, regardless of dollar amount, automatically constitutes a material weakness because it demonstrates that the control environment does not prevent the loss of company assets as required by COSO Principle 10."
         },
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "Risk assessment involves identifying and analyzing risks based on their likelihood and potential impact, helping prioritize which risks require the most attention.",
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Under PCAOB AS 2201, a material weakness exists when there is a reasonable possibility that a material misstatement will not be prevented or detected on a timely basis. The classification does not depend solely on whether the currently identified misstatement exceeds planning materiality — it depends on whether a material misstatement could occur. Four factors collectively support material weakness classification. First, the deficiency affects two financial statement assertions (existence and completeness of accounts receivable), indicating the control gap is not isolated. Second, the deficiency has been known for three years without remediation — under COSO Principle 17, management should evaluate and communicate deficiencies in a timely manner; a persistent unremediated deficiency signals a broader governance weakness. Third, the CFO's monthly review did not detect the $1.26 million annual leakage, demonstrating that the compensating detective control is not operating at a sufficient level of precision. Fourth and most critically, the prior-year system upgrade scenario demonstrated that when the reconciliation cycle extended, exposure reached $2.8 million — exceeding 60% of planning materiality. A reasonable possibility exists that future operational events could extend the detection gap again, making a material misstatement reasonably possible. Management's materiality argument confuses the quantitative evaluation of a specific misstatement with the qualitative evaluation of whether a material misstatement could occur. Under COSO Principle 10, a control that permits permanent revenue leakage, has demonstrably failed under foreseeable stress, and has evaded management detection for three years does not reduce risk to an acceptable level.",
         "StudyLinks": [
+            {
+                "label": "PCAOB AS 2201 — An Audit of Internal Control Over Financial Reporting",
+                "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/AS2201"
+            },
+            {
+                "label": "COSO Internal Control — Integrated Framework (2013), Principles 10 and 17",
+                "url": "https://www.coso.org/guidance-on-ic"
+            },
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
                 "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "COSO Internal Control Framework overview",
-                "url": "https://www.coso.org/guidance-on-ic"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-045",
-        "question_state": "Archived",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -19970,12 +19975,14 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Option A incorrectly concludes that the $1.26 million quantitative leakage, standing alone and below planning materiality, limits the deficiency to 'significant deficiency' status. Under PCAOB AS 2201, the reasonable possibility standard is forward-looking — it evaluates whether a material misstatement could occur under foreseeable conditions, not just whether the currently measured misstatement is material. The $2.8 million exposure during the prior system upgrade is direct evidence that a material misstatement (62% of planning materiality) is reasonably possible. Additionally, the CFO's review of monthly revenue reports failed to detect the $1.26 million leakage over three years, demonstrating that this compensating control lacks sufficient precision to serve as an effective mitigating factor. A candidate selecting this option may be applying the quantitative materiality assessment used for evaluating identified misstatements (the 'iron curtain' approach) rather than evaluating whether a material misstatement could occur in the future.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Option C (Risk transfer, which shifts risk to third parties) represents a plausible misconception. Under COSO risk assessment component, the correct analysis leads to the conclusion that risk assessment, prioritizing risks based on likelihood and impact. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongD": "Option D (Control activities, which are the specific policies implemented) represents a plausible misconception. Under COSO risk assessment component, the correct analysis leads to the conclusion that risk assessment, prioritizing risks based on likelihood and impact. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongC": "Option C overstates the effectiveness of the 85% catch rate by treating it as evidence of adequate control rather than evidence of incomplete control. An 85% catch rate means 15% of errors pass through undetected, and when applied to $8.4 million in delayed billings, this produces $1.26 million in permanent annual leakage. A compensating control that permits known leakage at this level is not functioning at sufficient precision to reduce the risk of material misstatement to an acceptable level. Furthermore, the 85% rate was measured under normal operating conditions — the prior system upgrade demonstrated that under stress the catch rate effectively disappeared as the reconciliation cycle extended to six months. A candidate selecting this option may be misapplying statistical sampling logic (e.g., '85% is a passing score') to a control evaluation where total leakage, not percentage caught, determines effectiveness.",
+        "ExplanationWrongD": "Option D states that any control deficiency resulting in permanently lost revenue is automatically a material weakness regardless of amount. This is an overstatement of the standard. Under PCAOB AS 2201, the classification depends on magnitude and likelihood in combination. A control deficiency resulting in permanently lost revenue of a clearly immaterial amount (e.g., $5,000 at a $2.1 billion entity) with no reasonable possibility of escalation would not necessarily be a material weakness. The classification requires evaluating whether a material misstatement is reasonably possible — not applying an automatic trigger based on the nature of the deficiency alone. A candidate selecting this option may be applying a bright-line rule to a standard that requires qualitative and quantitative judgment.",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S380 Evaluate Wave 1 — Evaluate replacement for archived P1-ED-045 (DL-012 rotation clone)"
     },
     {
         "Part": 1,
@@ -21635,30 +21642,30 @@ const MCQ_BANK_D = [
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "F.004 api integration systems",
-        "MicroTopic": "api integration systems",
-        "UniqueConceptKey": "F-D004-api-integration-systems",
-        "LOSTag": "F Technology and analytics",
-        "Difficulty": "Easy",
+        "Topic": "F.004 ERP system selection — cloud vs. on-premise — strategic, operational, and control tradeoffs",
+        "MicroTopic": "ERP implementation decision — cloud SaaS vs on-premise — TCO and strategic alignment",
+        "UniqueConceptKey": "F-D004-erp-cloud-vs-onpremise-decision",
+        "LOSTag": "F.1 Information Systems",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Deepwater uses application programming interfaces (APIs) to allow its accounting system to automatically exchange data with a third-party payment platform. What is the primary benefit of this integration?",
+        "Stem": "Thorndale Industries is a $180 million manufacturer of industrial valves with 340 employees across three locations. The current on-premise ERP system (installed 2008) approaches end-of-support and requires replacement. The IT steering committee has narrowed options to two proposals. Proposal A — Cloud ERP (SaaS): $42,000/month subscription ($504,000 annually), bundled with infrastructure, security patches, automatic upgrades, and 99.9% uptime SLA. Implementation cost $280,000 over 8 months. The vendor manages all server infrastructure, database administration, backup, and disaster recovery. Customization is limited to configuration options within the standard application. Pre-built connectors integrate with Thorndale's existing CRM and payroll. Proposal B — On-Premise ERP: $420,000 license (one-time, five-year useful life). Annual maintenance $72,000. Implementation $390,000 over 14 months. Requires two new servers ($85,000, five-year life), one additional database administrator ($78,000 salary + 25% benefits), and a $55,000 HVAC/power upgrade for the aging server room. Full customization is available, including modifications to manufacturing modules. Additional context: (1) Thorndale experienced two significant production disruptions totaling 11 days of downtime from server hardware failures in the past five years; (2) the VP of Manufacturing insists the proprietary production scheduling logic is a competitive differentiator and requires ERP customization; (3) the strategic plan calls for potential acquisition of a competitor in 18-24 months, adding a fourth location; (4) Thorndale's IT staff consists of 5 people who manage the existing ERP, network, help desk, and all other systems. CFO Elena Vasquez must recommend a path forward. Under COSO Principle 11, which recommendation best serves Thorndale's strategic and operational requirements?",
         "Choices": {
-            "A": "It eliminates the need for any data security controls",
-            "B": "It replaces the need for a chart of accounts",
-            "C": "It guarantees the data will always be completely accurate",
-            "D": "It enables automated, real-time data exchange between systems without manual re-entry"
+            "A": "Implement the cloud ERP (Proposal A) — the faster 8-month implementation, elimination of server infrastructure risk (proven by two prior hardware-induced production disruptions), reduced burden on the 5-person IT staff, and scalability to accommodate the planned acquisition outweigh the customization limitation. The proprietary production scheduling logic can be addressed through standard configuration options and revised business processes rather than requiring custom code.",
+            "B": "Implement the on-premise ERP (Proposal B) — full customization capability protects the proprietary production scheduling logic that the VP of Manufacturing identifies as a competitive differentiator. The higher total cost of ownership, longer timeline, and additional IT headcount are acceptable tradeoffs to preserve a manufacturing capability that directly contributes to Thorndale's market position.",
+            "C": "Defer the ERP decision for 12 months while implementing a short-term extended support contract for the existing ERP — this conserves capital for the anticipated acquisition, evaluates the post-acquisition combined entity's ERP needs as a single requirement, and avoids committing to an architecture that may not serve the merged company.",
+            "D": "Implement the cloud ERP for financial modules (general ledger, AP, AR) and the on-premise ERP for manufacturing modules — this hybrid captures cloud cost advantages for standardized finance functions while preserving full customization for the proprietary production scheduling system that the VP of Manufacturing requires."
         },
-        "CorrectChoice": "D",
-        "ExplanationCorrect": "APIs enable different software systems to communicate and exchange data automatically, reducing manual data entry and enabling more real-time information flow.",
+        "CorrectChoice": "A",
+        "ExplanationCorrect": "Under COSO Principle 11, the organization selects and develops technology general controls over technology to support the achievement of objectives. Technology selection should be evaluated against the organization's operational requirements, strategic trajectory, risk profile, and resource constraints — not just a single stakeholder's preferences. Cloud ERP is the superior recommendation for four reasons. First, infrastructure risk: Thorndale has experienced two hardware-induced production disruptions in five years (11 days of downtime), demonstrating that its server room is a single point of failure. Cloud ERP eliminates this risk by shifting infrastructure management to the vendor with a 99.9% uptime SLA. Second, IT staffing constraint: the existing 5-person IT team is already overextended managing the current ERP plus network, help desk, and other systems. Adding an on-premise ERP would require hiring a DBA and place additional load on an under-resourced team. Cloud ERP reduces rather than increases the IT operations burden. Third, strategic alignment: the planned acquisition in 18-24 months requires an ERP that can scale to additional locations quickly. Cloud ERP can be deployed at a new location through configuration, while on-premise ERP would require additional server purchases, licenses, and implementation for each acquired site. Fourth, customization as a process problem: the VP of Manufacturing's insistence on proprietary scheduling logic may reflect a business process that could be adapted to standard ERP functionality. The experience of thousands of manufacturers demonstrates that most 'must-have' customizations can be replaced by configuration and process redesign at lower long-term cost. The business interpretation is that ERP selection is a strategic governance decision, not a functional department preference — and the organization's aggregate risk profile, resource constraints, and growth trajectory should govern the decision.",
         "StudyLinks": [
             {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+                "label": "COSO Internal Control — Integrated Framework (2013), Principle 11: Technology General Controls",
+                "url": "https://www.coso.org/guidance-on-ic"
             },
             {
-                "label": "NIST Cybersecurity Framework",
-                "url": "https://www.nist.gov/cyberframework"
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F — Information Systems",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
@@ -21674,12 +21681,13 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "Choice B is incorrect because a chart of accounts is an accounting classification structure, not an integration tool. APIs are designed for system-to-system data exchange, not for organizing an entity's general ledger accounts. A candidate may select this option by confusing separate layers of the accounting technology stack.",
-        "ExplanationWrongC": "Choice C is incorrect because no data transport mechanism can guarantee perfect accuracy. APIs transmit data as-is from the source system; any errors in the source data propagate through the integration. Data validation, reconciliation, and input controls remain essential regardless of how data is moved.",
-        "ExplanationWrongD": "",
-        "question_state": "Archived",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongB": "Option B prioritizes a single functional requirement (manufacturing customization) over the organization's aggregate operational risk profile, resource constraints, and strategic trajectory. The VP of Manufacturing's preference for proprietary scheduling logic — however strongly held — does not constitute a strategic imperative when the alternative requires exposing the organization to the same hardware infrastructure that caused 11 days of production downtime, adding headcount to an already-stretched IT team, and committing to a 14-month implementation that may be obsolete if an acquisition changes the entity's structure before go-live. Under COSO Principle 11, technology selection should be governed by the organization's objectives, not a single department's functional preferences. A candidate selecting this option may be treating functional stakeholder requirements as non-negotiable design constraints rather than as factors to be evaluated against the broader set of governance criteria.",
+        "ExplanationWrongC": "Option C proposes deferral, which superficially addresses the acquisition timing concern but ignores the immediate risk of operating an end-of-support ERP system. End-of-support means the vendor no longer issues security patches or bug fixes — exposing the organization to cybersecurity vulnerabilities and system failures with no vendor remediation. The COSO control environment requires that systems supporting financial reporting and operations be maintained at a supportable level. Deferring for 12 months exposes Thorndale to a full year of unsupported operations — an unacceptable risk period, particularly for a manufacturer that has already experienced production disruptions from IT failures. A candidate selecting this option may be treating the ERP decision as a capital budgeting deferral rather than recognizing end-of-support as an active control deficiency.",
+        "ExplanationWrongD": "Option D's hybrid approach appears to satisfy both cost and customization objectives but introduces a critical control integration risk: running two separate ERP instances for different functional areas creates a reconciliation burden between the financial modules and the manufacturing modules. Inventory movements, work-in-process valuation, and cost of goods manufactured must flow from manufacturing to the general ledger — splitting this data flow across two ERP systems introduces manual interfaces, data entry duplication, and timing differences that create exactly the kind of control gaps COSO Principle 11 seeks to prevent. A candidate selecting this option may be applying 'best of both worlds' logic without recognizing that ERP integration — the seamless flow of transactional data across modules — is the core value proposition of an ERP system, and splitting modules across platforms destroys this integration.",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S380 Evaluate Wave 1 — Evaluate replacement for archived P1-FD-004 (DL-012 rotation clone)"
     },
     {
         "Part": 1,
@@ -24970,7 +24978,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "data retention policy compliance",
         "UniqueConceptKey": "F-D071-data-retention-policy-compliance",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Vantage Ridge establishes a policy defining how long different categories of financial and customer data must be retained before secure disposal. What is a primary purpose of this policy?",
@@ -25009,7 +25017,7 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "",
         "ExplanationWrongD": "",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -25020,7 +25028,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "data retention policy compliance",
         "UniqueConceptKey": "F-D072-data-retention-policy-compliance",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Whitfield establishes a policy defining how long different categories of financial and customer data must be retained before secure disposal. What is a primary purpose of this policy?",
@@ -25059,7 +25067,7 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "Choice C is incorrect because data retention is a data lifecycle policy governing how long information is kept. Cybersecurity controls such as access management, encryption, and monitoring address data protection during its retention period. A candidate may confuse distinct data governance functions: retention (how long) versus protection (how data is safeguarded).",
         "ExplanationWrongD": "",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -25120,7 +25128,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "data retention policy compliance",
         "UniqueConceptKey": "F-D074-data-retention-policy-compliance",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Brookline establishes a policy defining how long different categories of financial and customer data must be retained before secure disposal. What is a primary purpose of this policy?",
@@ -25159,7 +25167,7 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "Choice C is incorrect because cybersecurity controls protect data from unauthorized access, modification, or destruction while it is retained. A data retention policy defines how long data is kept — it does not replace the encryption, access management, and monitoring controls that safeguard data during its retention period. A candidate may confuse the distinct data governance functions of retention policy (how long) and cybersecurity (how it is protected).",
         "ExplanationWrongD": "Choice D is incorrect because a data retention policy is one element within a comprehensive data governance framework, not a substitute for it. Data governance encompasses the full range of policies, standards, and controls governing data quality, access, security, stewardship, and lifecycle management. A retention policy addresses one dimension — how long data is retained and when it is disposed — while governance addresses the entire data management ecosystem. A candidate may not understand that retention policy is a component of governance, not a replacement for it.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -25170,7 +25178,7 @@ const MCQ_BANK_D = [
         "MicroTopic": "data retention policy compliance",
         "UniqueConceptKey": "F-D075-data-retention-policy-compliance",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Alderway establishes a policy defining how long different categories of financial and customer data must be retained before secure disposal. What is a primary purpose of this policy?",
@@ -25209,7 +25217,7 @@ const MCQ_BANK_D = [
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Choice D is incorrect because cybersecurity controls address the protection of data during its lifecycle, while retention policies address the duration of that lifecycle. The two functions operate in different domains: data protection versus data lifecycle management. A candidate may conflate related but distinct data governance functions.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     }
 ];

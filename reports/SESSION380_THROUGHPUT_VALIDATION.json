@@ -1,0 +1,161 @@
+{
+  "session": "S380",
+  "workstream": "throughput-board",
+  "timestamp": "2026-07-28T15:00:00Z",
+  "sessions_analyzed": ["S899", "S50", "S51", "S52", "S56", "S58"],
+  "sessions_with_data": ["S899", "S50", "S51", "S52", "S56", "S58"],
+  "sessions_no_data": [],
+  "note": "S50-S58 are the 50-series archived clone replacement program (Phases 2-6). S899 is the preceding pilot (Phase 1). All sessions processed exactly 20 items each — this appears to be the standardized batch ceiling for net-new item authoring at Analyze/Evaluate difficulty.",
+  "data_sources": [
+    "reports/S899_PHASE1_COMPLETION.json",
+    "reports/SESSION050_PHASE2_COMPLETION.json",
+    "reports/SESSION051_PHASE3_COMPLETION.json",
+    "reports/SESSION052_PHASE4_COMPLETION.json",
+    "reports/SESSION056_PHASE5_COMPLETION.json",
+    "reports/SESSION058_PHASE6_COMPLETION.json",
+    "reports/session371/SESSION371_CAPACITY_ANALYSIS.md",
+    "reports/session374/SESSION374_EXPANSION_CAPACITY_SCORECARD.json",
+    "reports/session374/SESSION374_EXECUTIVE_DECISION.md",
+    "knowledge/REVISION_HISTORY.md (S50-S58 entries)"
+  ],
+  "metrics": {
+    "total_sessions_measured": 6,
+    "total_items_processed": 120,
+    "avg_items_per_session": 20,
+    "stddev_items_per_session": 0,
+    "peak_items_per_session": 20,
+    "min_items_per_session": 20,
+    "avg_items_per_hour_net_new_authoring": 2.5,
+    "avg_items_per_hour_metadata_upgrade": 8.0,
+    "note_items_per_hour": "Net-new authoring rate from S371 Pathway B (S899 method): 20 items / ~8 hours = 2.5/hr blended (Analyze ~3.3/hr, Evaluate ~1/hr). Metadata-only upgrades (S58 pattern) are ~8/hr (20 items / ~2.5h). Estimates from S371 capacity model.",
+    "avg_review_overhead_pct": 25,
+    "review_overhead_breakdown": {
+      "governance_guard_execution": "5% (Rule 2/5/6/9 checks per batch)",
+      "backup_protocol": "5% (timestamped backups before every batch write)",
+      "parse_validation": "3% (node --check after each batch)",
+      "defect_scans_dl008_dl026": "5% (per-batch EW slot verification)",
+      "quality_review_stems_explanations": "7% (stem uniqueness, choice-specificity, COSO citations)"
+    },
+    "avg_governance_overhead_pct": 30,
+    "governance_overhead_breakdown": {
+      "baseline_hash_verification_t0": "5% (read CURRENT_BASELINES.md, verify 13 hashes)",
+      "certified_pool_reconciliation": "3% (direct grep + cross-registry check)",
+      "multi_agent_orchestration_setup": "10% (spawn parallel agents, reconcile outputs)",
+      "cross_check_verification_tmid_tend": "8% (T0→Tmid→Tend checkpoint sequence per AGENTS.md §13.1)",
+      "revision_history_entry_writing": "4% (per-session REVISION_HISTORY.md append)"
+    },
+    "rework_rate_pct": 7.5,
+    "rework_evidence": [
+      { "session": "S899", "defects": 2, "items": 20, "rate_pct": 10, "detail": "P1-EC-010 (DL-008: CC=B EW non-empty), P1-ED-015 (DL-008: EWB/D swapped)" },
+      { "session": "S58", "defects": 1, "items": 20, "rate_pct": 5, "detail": "P1-FD-041 (DL-008: EW-D non-empty, cleared)" },
+      { "session": "S56", "defects": 0, "items": 20, "rate_pct": 0, "detail": "Zero DL-008/DL-026/DL-030/DL-037" },
+      { "session": "S52", "defects": 0, "items": 20, "rate_pct": 0, "detail": "Zero structural defects" },
+      { "session": "S51", "defects": 0, "items": 20, "rate_pct": 0, "detail": "Zero structural defects" },
+      { "session": "S50", "defects": 0, "items": 20, "rate_pct": 0, "detail": "One cosmetic: P1-FC-067 EC missing ASC citation (non-blocking)" }
+    ],
+    "rework_note": "Rework rate 7.5% accounts for structural defects (DL-008) discovered during or after authoring. Excludes content deferral risk (S58: 20 items got metadata upgrades only, full content replacement deferred to S59 — this is a throughput reduction factor, not rework per se). Concurrent-write collision (S56-S58: 15 slots consumed by parallel session) is an additional ~5% throughput loss not captured in the defect rework rate."
+  },
+  "session_overhead_decomposition": {
+    "productive_content_work_pct": 45,
+    "governance_checks_pct": 30,
+    "backup_and_parse_validation_pct": 8,
+    "defect_scanning_pct": 5,
+    "quality_review_pct": 7,
+    "revision_history_and_documentation_pct": 5,
+    "note": "These percentages are estimated from the S371 capacity model (30% automation-reducible overhead) and observed session patterns. A session of 20 items at ~8 hours total allocates approximately 3.6h to content creation, 2.4h to governance, 0.6h to backups, 0.4h to defect scans, 0.6h to quality review, and 0.4h to documentation."
+  },
+  "wave_sustainability": {
+    "demonstrated_baseline": {
+      "items_per_wave": 20,
+      "hours_per_wave_total": 8,
+      "hours_productive": 3.6,
+      "hours_overhead": 4.4,
+      "bloom_distribution": "11-13 Analyze + 7-9 Evaluate",
+      "difficulty_distribution": "15-17 Difficult + 3-5 Very Difficult"
+    },
+    "capacity_model_ceiling": {
+      "items_per_wave_max_single_agent": 25,
+      "source": "S861 demonstrated 25 Analyze via stem rewrite (Pathway A, 5.0 items/hr net). Net-new authoring (Pathway B) is capped at 20 due to Evaluate complexity.",
+      "evaluate_bottleneck": "Evaluate items are 1/hr each. A 20-item wave with 8 Evaluate items takes 8h for Evaluate alone. This is the binding constraint for 3-wave/week sustainability."
+    },
+    "two_waves_per_week": {
+      "feasible": true,
+      "items_per_week": 40,
+      "hours_per_week": 16,
+      "hours_productive_per_week": 7.2,
+      "hours_overhead_per_week": 8.8,
+      "calendar_weeks_to_close_103_items": 2.6,
+      "calendar_weeks_to_close_966_cognitive_gap": 21,
+      "sustainability_risk": "MEDIUM",
+      "risk_factors": [
+        "Session-overlap collision risk: 2 waves/week → 2 independent write sessions, each reading file state. S56-S58 precedent shows parallel sessions consume each other's target slots without coordination.",
+        "Governance overhead doubles: T0 hash verification, registry reconciliation, and Tmid/Tend checkpoint sequences run twice per week. At 30% overhead per session, 2 waves = 4.8h of governance per week.",
+        "Evaluate bottleneck persists: At 8 Evaluate items/wave, 381 needed = 47.6 waves @ 2/week = ~24 weeks. Evaluate items cannot be accelerated through automation.",
+        "Reviewer fatigue: 2 review sessions/week with governance checkpointing at T0/Tmid/Tend per session (AGENTS.md §13.1) — sustained over 20+ weeks this strains single-reviewer capacity.",
+        "File-size impact: Pack C (1.9MB) and Pack D (2.0MB) require Function constructor parse for each session. Parse time scales with file size — 2 sessions/week doubles this cost."
+      ],
+      "mitigation_strategies": [
+        "File-lock protocol mandatory (DL-019 lesson learned)",
+        "Stagger wave timing to avoid same-day parallel sessions",
+        "Pre-allocate QID slots to prevent slot collision (S56-S58 fix)",
+        "Two-tier certification reduces review burden ~12% for Analyze-only items"
+      ]
+    },
+    "three_waves_per_week": {
+      "feasible": false,
+      "items_per_week": 60,
+      "hours_per_week": 24,
+      "hours_productive_per_week": 10.8,
+      "hours_overhead_per_week": 13.2,
+      "calendar_weeks_to_close_103_items": 1.7,
+      "calendar_weeks_to_close_966_cognitive_gap": 14,
+      "sustainability_risk": "HIGH",
+      "risk_factors": [
+        "Slot collision becomes near-certain: 3 concurrent write windows per week reading from the same 2 pack files. S56-S58 collision was at 2 sessions in one day — 3 sessions/week amplifies this risk by 3x.",
+        "Governance overhead accumulates non-linearly: T0 hash verification of 13 files at each session startup, Tmid at ~30 min, Tend with full reconciliation. At 3 sessions/week, this consumes ~7.2h in governance alone — more than the productive content work.",
+        "Context loss between sessions: Each wave requires full pack file re-read + Function constructor parse + state verification. Pack files are ~1.8-2.0MB each. Parsing 1.9MB of JavaScript objects 3x/week adds non-trivial compute overhead.",
+        "Evaluate bottleneck becomes binding: At 8 Evaluate/wave × 3 waves = 24 Evaluate/week theoretical, but actual yields ~18/week due to rework and slot contention. 381 needed = 21 weeks of pure Evaluate work. Impossible to sustain at the demonstrated ~1 Evaluate/hr design rate.",
+        "Backup protocol overhead: 3 sessions × 2 pack files × timestamped backups = 6 backup operations/week. Each backup copies ~2MB × 2 = ~4MB of data. With verification (hash check post-backup), this is ~15 min/week just for backup operations.",
+        "Multi-agent orchestration decay: Each session using 3+ parallel agents requires reconciliation of agent outputs. At 3 sessions/week, agent-output conflict rate increases because agents read stale file states.",
+        "Reviewer fatigue at 3x: 41-week program at 1 wave/week is already HIGH fatigue risk (S374). At 3 waves/week compressed to 14 weeks, the per-session review intensity triples — more defects per session, less time for each review.",
+        "REVISION_HISTORY.md write contention: One file, written at the end of every session. At 3 writes/week, append-order integrity requires serialization that defeats parallel-wave execution."
+      ],
+      "mitigation_strategies": [
+        "Dedicated Evaluate workstream (Condition F from S374) — decouple Analyze and Evaluate into separate parallel tracks",
+        "Automation package (Condition C from S374): Reduce clerical overhead by 30%, freeing 4h/week for productive work",
+        "Strict slot pre-allocation: Assign QID ranges to waves before any writes, preventing slot collision entirely",
+        "Domain rotation: Assign different pack sections to different waves to reduce file contention (e.g., W1=Pack C EC, W2=Pack D FD, W3=Pack C FC)",
+        "Two-tier certification: Production tier for Analyze items cuts review time ~20%",
+        "Pipeline artifact reuse (C2 from S374/DL-036): Pass pre-computed state between pipeline stages instead of re-parsing files"
+      ]
+    }
+  },
+  "recommendation": {
+    "sustainable_target": "2_waves_per_week",
+    "rationale": "2 waves/week (40 items/week) is the maximum sustainable rate given current governance architecture. At 3 waves/week, governance overhead (~7.2h/week) exceeds productive content work (~10.8h/week), creating a net-negative efficiency ratio. The S56-S58 parallel-session collision (15 slots consumed, requiring adaptive slot selection) proves that 2 independent write sessions on the same pack files already produce contention. Three waves would compound this risk exponentially. Additionally, the Evaluate bottleneck (1 item/hr design rate, 381 needed) cannot be accelerated by increasing wave frequency — it requires a dedicated parallel workstream (S374 Condition F), not more waves.",
+    "conditions_for_2_waves_sustainability": [
+      "1. File-lock protocol implemented: No two sessions may write to the same pack file within the same calendar day (DL-019 prevention).",
+      "2. Slot pre-allocation: Assign specific QID ranges to each wave AB initio. Wave 1 gets EC slots, Wave 2 gets ED slots — no overlap.",
+      "3. Automation package deployed: Reduce governance overhead from 30% → 21% (S374 Condition C).",
+      "4. Two-tier certification adopted: Analyze items (80%) get Production-tier review (12% time savings), Evaluate items (20%) retain Gold-tier (no savings).",
+      "5. Dedicated Evaluate workstream: Launch as parallel non-wave-gated track per S374 Condition F. Evaluate throughput increases independently of wave frequency.",
+      "6. Domain rotation: Waves operate on different pack/section combinations to minimize file-lock contention."
+    ],
+    "conditions_for_3_waves_if_mandated": [
+      "A. Full pipeline artifact reuse: Upstream stages produce pre-computed parse results. Downstream stages consume artifacts, not raw files (DL-036 fix). Eliminates 2 of 3 T0 hash verification sessions per week.",
+      "B. Evaluate workstream fully decoupled and running 2x/week independently — not gated by wave frequency.",
+      "C. Automation deployed and verified for 3 consecutive weeks before ramp to 3 waves.",
+      "D. File write windows scheduled non-overlapping: e.g., Monday AM, Wednesday AM, Friday AM — each separated by ≥24 hours.",
+      "E. Governance guard upgraded to enforce slot-lock: Rules 2/5/6/9 expanded to check for QID ownership across sessions.",
+      "F. REVISION_HISTORY.md batched: Append entries once per week (3-session batch) rather than per-session — reduces serialization bottleneck."
+    ],
+    "s374_alignment": "S374 concluded 'Expansion AUTHORIZATION reachable at 1 wave/week in ~6-8 weeks. Expansion EXECUTION NOT viable at 1 wave/week.' This throughput analysis confirms: 2 waves/week is the minimum viable execution rate, and 3 waves/week is required for the 14-week cognitive gap closure target but carries HIGH sustainability risk that can only be mitigated by the 6 conditions above.",
+    "next_steps": [
+      "S381: Implement file-lock protocol and slot pre-allocation registry",
+      "S382: Deploy S370 automation package (5 components per S374 Condition C)",
+      "S383: Launch parallel Evaluate workstream (dedicated agent, not wave-gated)",
+      "S384: First 2-wave/week trial: 2 × 20 items on different sections, with 24h separation",
+      "S385: Governance guard upgrade (slot-lock enforcement, batched REVISION_HISTORY)"
+    ]
+  }
+}

@@ -1,0 +1,985 @@
+{
+  "session": "S380",
+  "workstream": "evaluate-wave0",
+  "timestamp": "2026-07-28T20:40:27.675Z",
+  "total_evaluate_labeled": 94,
+  "classification_counts": {
+    "true_evaluate": 47,
+    "analyze_misclassified": 10,
+    "apply_misclassified": 37
+  },
+  "items": [
+    {
+      "qid": "P1-A-002",
+      "pack": "A",
+      "section": "A",
+      "topic": "A.003 cash flow from operations indirect method",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Straightforward indirect-method cash flow from operations calculation using given net income and adjustments — pure formula application."
+    },
+    {
+      "qid": "P1-A-022",
+      "pack": "A",
+      "section": "A",
+      "topic": "A.023 fair value hierarchy observable inputs",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Simple application of fair value hierarchy Level 1: quoted prices for identical assets in active markets — one-step rule application."
+    },
+    {
+      "qid": "P1-B-024",
+      "pack": "A",
+      "section": "B",
+      "topic": "B.025 budgetary slack incentive design",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Requires diagnosing root cause of budget slack (misaligned incentives) and recommending corrective action to the compensation structure."
+    },
+    {
+      "qid": "P1-B-086",
+      "pack": "A",
+      "section": "B",
+      "topic": "B.087 budget committee composition role",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Analyze",
+      "classification": "Analyze Misclassified",
+      "rationale": "Identifying why budget committees include cross-functional representatives — organizational purpose analysis, not judgment among competing options."
+    },
+    {
+      "qid": "P1-D-011",
+      "pack": "A",
+      "section": "D",
+      "topic": "D.012 target costing market price",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Target costing application: set allowable cost = market price minus desired profit margin. Standard procedure execution."
+    },
+    {
+      "qid": "P1-D-029",
+      "pack": "A",
+      "section": "D",
+      "topic": "D.030 JIT inventory risk control",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Applying JIT purchasing concept to inventory reduction strategy — one-step concept-to-scenario mapping."
+    },
+    {
+      "qid": "P1-E-047",
+      "pack": "A",
+      "section": "E",
+      "topic": "E.048 perpetual vs periodic inventory control",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Analyze",
+      "classification": "Analyze Misclassified",
+      "rationale": "Identifying the primary control benefit of switching from periodic to perpetual inventory — requires understanding the difference, not weighing alternatives."
+    },
+    {
+      "qid": "P1-E-051",
+      "pack": "A",
+      "section": "E",
+      "topic": "E.052 lockbox system control benefit",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Analyze",
+      "classification": "Analyze Misclassified",
+      "rationale": "Identifying the primary control benefit of a bank lockbox — concept identification from described scenario."
+    },
+    {
+      "qid": "P1-E-055",
+      "pack": "A",
+      "section": "E",
+      "topic": "E.056 independent physical count control",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Analyze",
+      "classification": "Analyze Misclassified",
+      "rationale": "Identifying the control weakness when same person has custody and performs count — classification of segregation failure."
+    },
+    {
+      "qid": "P1-E-063",
+      "pack": "A",
+      "section": "E",
+      "topic": "E.065 management reporting exception report design",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating whether an exception report's detection rules ($10K threshold, duplicate check, vendor change) are appropriately designed — control design judgment."
+    },
+    {
+      "qid": "P1-E-070",
+      "pack": "A",
+      "section": "E",
+      "topic": "E.071 ongoing separate evaluations monitoring frequency",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating proposal to shift monitoring strategy from continuous for high-risk + separate evaluations for moderate-risk — requires weighing tradeoffs."
+    },
+    {
+      "qid": "P1-E-071",
+      "pack": "A",
+      "section": "E",
+      "topic": "E.073 control deficiency classification material weakness",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Judging whether identified control deficiencies (unreconciled intercompany + SoD failure) constitute a material weakness — professional SOX classification judgment."
+    },
+    {
+      "qid": "P1-E-073",
+      "pack": "A",
+      "section": "E",
+      "topic": "E.074 remediation monitoring tracking verification",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Assessing adequacy of remediation tracking when actual findings contradict reported status — judgment about monitoring and control integrity."
+    },
+    {
+      "qid": "P1-E-084",
+      "pack": "A",
+      "section": "F",
+      "topic": "F.001 ERP transaction integration",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating ERP transaction integration strategy in a finance transformation — requires weighing system design and process integration options."
+    },
+    {
+      "qid": "P1B-A-082",
+      "pack": "B",
+      "section": "A",
+      "topic": "B-A.083 point-in-time vs over-time",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Applying ASC 606 criteria (no alternative use + enforceable right to payment) to determine over-time recognition — rule application."
+    },
+    {
+      "qid": "P1B-A-085",
+      "pack": "B",
+      "section": "A",
+      "topic": "B-A.086 equity components calculation",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Computing total stockholders equity from given components (common stock + APIC + RE - treasury stock) — arithmetic calculation."
+    },
+    {
+      "qid": "P1B-A-120",
+      "pack": "B",
+      "section": "A",
+      "topic": "B-A.121 contingencies",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Applying ASC 450 loss contingency rules: 40% probability means reasonably possible (not probable), requiring disclosure not accrual."
+    },
+    {
+      "qid": "P1B-C-143",
+      "pack": "B",
+      "section": "C",
+      "topic": "B-C.144 ROI and residual income",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Selecting the performance measure (ROI vs. RI) that creates goal congruence when division manager may reject a value-adding project — requires weighing behavioral incentives."
+    },
+    {
+      "qid": "P1B-E-115",
+      "pack": "B",
+      "section": "E",
+      "topic": "B-E.117 ICFR",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Analyze",
+      "classification": "Analyze Misclassified",
+      "rationale": "Classifying a control deficiency as a material weakness based on described facts and reasonable-possibility-of-material-misstatement threshold — classification under SOX criteria."
+    },
+    {
+      "qid": "P1B-F-091",
+      "pack": "B",
+      "section": "F",
+      "topic": "B-F.092 cloud computing",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Analyze",
+      "classification": "Analyze Misclassified",
+      "rationale": "Identifying cloud service model (PaaS) from described IT architecture — pattern recognition from technical description."
+    },
+    {
+      "qid": "P1B-F-116",
+      "pack": "B",
+      "section": "F",
+      "topic": "B-F.117 data governance",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying data governance role with ultimate accountability for data assets in a business domain — concept recall."
+    },
+    {
+      "qid": "P1-CC-015",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.016 residual income calculation",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Calculating residual income = Operating income - (Required rate x Average operating assets) — formula substitution with given numbers."
+    },
+    {
+      "qid": "P1-CC-071",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.072 gross margin variance analysis",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Analyze",
+      "classification": "Analyze Misclassified",
+      "rationale": "Selecting gross margin variance analysis as the method to separate price/volume/cost effects — identifying the appropriate analytical approach."
+    },
+    {
+      "qid": "P1-EC-005",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.006 COSO Principle 4 audit committee composition",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating whether a three-member audit committee (including CEO's brother-in-law) satisfies COSO Principle 4 independence — professional governance judgment."
+    },
+    {
+      "qid": "P1-EC-007",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.008 coso internal control framework",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying COSO as the framework with five integrated components — definition recall, not professional judgment."
+    },
+    {
+      "qid": "P1-EC-009",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.010 coso internal control framework",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying COSO as the framework with five integrated components — definition recall (rotation-group variant of EC-007)."
+    },
+    {
+      "qid": "P1-EC-011",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.012 COSO Principle 3 organizational structure",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating structural control deficiency in decentralized model where country GMs colluded — requires judging organizational design against COSO Principle 3."
+    },
+    {
+      "qid": "P1-EC-015",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.016 COSO Principle 13 information quality data integrity",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Diagnosing root cause of data integrity failure (22% inventory discrepancies) after system integration — COSO Principle 13 information quality evaluation."
+    },
+    {
+      "qid": "P1-EC-017",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.018 COSO Principle 9 fraud risk override of controls",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating management override of controls where CEO directs improper consignment revenue recognition — COSO Principle 9 fraud risk assessment."
+    },
+    {
+      "qid": "P1-EC-020",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.021 segregation of duties vendor setup and payment",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Selecting most effective control improvement to reduce fraud risk without adding staff in resource-constrained small AP department — design tradeoff judgment."
+    },
+    {
+      "qid": "P1-EC-021",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.022 preventive vs detective duplicate payment control",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying which AP control is preventive vs. detective — classification based on control type definitions."
+    },
+    {
+      "qid": "P1-EC-022",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.023 IT access control terminated employee deprovisioning",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Selecting most appropriate remediation for terminated-employee access that remained active — requires recommending specific IT control design."
+    },
+    {
+      "qid": "P1-EC-023",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.024 application input control sales order validation",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Selecting best application control to address invalid sales order data (invalid codes, negative quantities, missing addresses) — control design evaluation."
+    },
+    {
+      "qid": "P1-EC-024",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.025 preventive vs detective controls",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Analyze",
+      "classification": "Analyze Misclassified",
+      "rationale": "Classifying dual-signature control as preventive or detective and explaining why — categorization with justification."
+    },
+    {
+      "qid": "P1-EC-026",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.027 COSO Principle 4 board commitment to competence",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating whether audit committee chaired by retired petroleum engineer satisfies COSO Principle 4 commitment to competence — professional governance judgment."
+    },
+    {
+      "qid": "P1-EC-030",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.031 COSO ERM risk appetite vs risk tolerance",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating Latin American market entry decision ($12M investment) against board's risk appetite — strategic risk response under COSO ERM."
+    },
+    {
+      "qid": "P1-EC-032",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.033 COSO Principle 8 fraud risk assessment fraud triangle",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating fraud triangle factors (pressure, opportunity, rationalization) in procurement fraud scenario with shell companies — professional fraud risk assessment."
+    },
+    {
+      "qid": "P1-EC-033",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.034 COSO Principle 9 fraud risk assessment anti-fraud control",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating internal audit resource allocation across financial reporting, operational, and compliance risks — requires prioritizing audit coverage strategically."
+    },
+    {
+      "qid": "P1-EC-034",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.035 COSO ERM risk appetite strategic alignment",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating whether three-year-old corporate risk appetite statement remains appropriate given changed business conditions — strategic risk governance judgment."
+    },
+    {
+      "qid": "P1-EC-035",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.036 COSO Principle 13 information quality data governance acquisition",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Diagnosing data governance failures after acquisition integration where legacy schemas created financial reporting errors — COSO Principle 13 root cause analysis."
+    },
+    {
+      "qid": "P1-EC-039",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.040 it general controls access",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying periodic user access review as an IT general control category — concept classification."
+    },
+    {
+      "qid": "P1-EC-042",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.043 COSO Principle 3 authority and responsibility matrix reporting",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating matrix reporting structure where division controllers report jointly to division president and corporate controller — COSO Principle 3 authority/responsibility assessment."
+    },
+    {
+      "qid": "P1-EC-043",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.044 COSO Principle 13 information quality third-party data reliability",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating data reliability from outsourced third-party revenue cycle provider — requires judging SOC report reliance for financial reporting."
+    },
+    {
+      "qid": "P1-EC-045",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.046 COSO Principle 16 monitoring continuous monitoring design",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating continuous monitoring design (annual 2-week sample) vs. need for more frequent reviews after discovering processing integrity errors — monitoring strategy tradeoff."
+    },
+    {
+      "qid": "P1-EC-048",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.049 whistleblower hotline purpose",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying the purpose of a whistleblower hotline (fraud detection/ethical violation reporting) — concept identification."
+    },
+    {
+      "qid": "P1-EC-058",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.059 control environment tone at top",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying control environment as the COSO component reflected by board/senior executive tone at top — concept matching."
+    },
+    {
+      "qid": "P1-EC-067",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.068 segregation cash custody recording",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying segregation of duties weakness when same person handles cash receipts and recording — control concept identification."
+    },
+    {
+      "qid": "P1-FC-016",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.017 cloud computing IaaS PaaS SaaS model selection",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating IaaS/PaaS/SaaS tradeoffs for patient database migration with HIPAA compliance constraints — requires weighing control, cost, and regulatory compliance."
+    },
+    {
+      "qid": "P1-FC-029",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.030 cybersecurity confidentiality integrity availability",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying CIA triad from description of confidentiality, integrity, and availability objectives — definition matching, not analysis."
+    },
+    {
+      "qid": "P1-FC-050",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.051 artificial intelligence supervised unsupervised reinforcement learning",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Selecting appropriate ML approach (supervised vs. unsupervised vs. hybrid) for credit card fraud detection given labeled data constraints — technical strategy judgment."
+    },
+    {
+      "qid": "P1-FC-055",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.056 cybersecurity phishing social engineering",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying phishing/social engineering from description of fraudulent emails requesting credentials — concept matching."
+    },
+    {
+      "qid": "P1-BD-090",
+      "pack": "D",
+      "section": "B",
+      "topic": "B.091 cash collection pattern budgeting",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Calculating cash collections using collection percentages (60% current month + 40% prior month) — straightforward formula application."
+    },
+    {
+      "qid": "P1-DD-021",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.022 ABC cost driver selection correlation analysis",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Selecting the best ABC cost driver based on R-squared correlation with resource consumption — requires judging cause-and-effect relationship strength."
+    },
+    {
+      "qid": "P1-DD-048",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.049 service department method comparison reciprocal vs direct",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Selecting between direct and reciprocal methods for service department cost allocation — requires weighing $6,723 accuracy gain against practicality and materiality."
+    },
+    {
+      "qid": "P1-DD-050",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.051 step method service department allocation hierarchy",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Analyze",
+      "classification": "Analyze Misclassified",
+      "rationale": "Interpreting why the step-down allocation cascade favors Production A over B — requires analyzing how sequential allocation creates multiplier effects."
+    },
+    {
+      "qid": "P1-DD-051",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.052 contribution margin income statement CVP projection",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Projecting operating income using contribution margin ratio with 12% sales growth and unchanged fixed costs — multi-step but still formula-based CVP application."
+    },
+    {
+      "qid": "P1-DD-061",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.062 multi-product break-even weighted average CM",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Recommending a break-even methodology (weighted-average CM vs. single-product approaches) for multi-product CVP to present to the board — methodology selection judgment."
+    },
+    {
+      "qid": "P1-DD-069",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.070 variable overhead spending variance calculation",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Calculating variable overhead spending variance = Actual VOH - (Actual hours x Standard rate) — straightforward variance formula."
+    },
+    {
+      "qid": "P1-ED-003",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.004 COSO Principle 5 accountability performance measure",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating whether an aggressive sales incentive plan without clawback/quality review violates COSO Principle 5 accountability — control design assessment."
+    },
+    {
+      "qid": "P1-ED-006",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.007 COSO ERM strategy and objective-setting M&A integration",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating M&A due diligence adequacy when non-standard inventory costing was dismissed as minor technicality — COSO ERM strategy and objective-setting judgment."
+    },
+    {
+      "qid": "P1-ED-011",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.012 COSO Principle 15 external communication SOC 2 Type II",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Judging SOC 2 Type II report scope adequacy when Processing Integrity and Confidentiality criteria are excluded for payment processor — professional assurance scope judgment."
+    },
+    {
+      "qid": "P1-ED-015",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.016 COSO ERM risk response strategies",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating risk response recommendation (currency hedging only) against full ERM portfolio of avoid/reduce/share/accept — strategy completeness assessment."
+    },
+    {
+      "qid": "P1-ED-017",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.018 COSO Principle 2 board independence audit committee financial expert",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Assessing whether audit committee chair with expired CPA license qualifies as SEC financial expert — professional governance qualification judgment."
+    },
+    {
+      "qid": "P1-ED-019",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.020 erm risk response strategies",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying risk transfer/sharing from insurance purchase scenario — one-step concept-to-scenario classification."
+    },
+    {
+      "qid": "P1-ED-021",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.022 COSO Principle 7 risk severity assessing risk bias",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Diagnosing availability bias in risk register where recent loss events disproportionately inflate risk ratings — cognitive bias identification in risk assessment."
+    },
+    {
+      "qid": "P1-ED-023",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.024 COSO Principle 12 control activities IT general control deficiencies",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating whether post-migration IT control gaps (847 zombie accounts, no test environment) are transition issues or COSO Principle 12 control failures — professional classification."
+    },
+    {
+      "qid": "P1-ED-024",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.025 control activities authorization",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying authorization control from purchase order manager-approval scenario — control type classification by definition."
+    },
+    {
+      "qid": "P1-ED-026",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.027 COSO Principle 15 external communication SOC report reliance",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating SOC report reliance when report scope excludes the physical facility hosting transaction systems — third-party assurance adequacy under COSO Principle 15."
+    },
+    {
+      "qid": "P1-ED-029",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.030 COSO Principle 2 board independence related-party governance",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Assessing board independence when $120M related-party advisory agreement was approved without competitive bidding — COSO Principle 2 oversight exercise judgment."
+    },
+    {
+      "qid": "P1-ED-030",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.031 COSO Principle 12 compensating manual controls ERP migration",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating adequacy of compensating manual controls during ERP migration when automated three-way matching is disabled — control design tradeoff assessment."
+    },
+    {
+      "qid": "P1-ED-034",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.035 data backup disaster recovery",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying availability as the control objective addressed by offsite backups and disaster recovery plan — concept-to-scenario matching."
+    },
+    {
+      "qid": "P1-ED-037",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.038 COSO Principle 5 accountability cross-functional agile teams",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Diagnosing structural accountability diffusion in Scrum agile team where MFA was never enforced despite being in backlog — COSO Principle 5 control environment assessment."
+    },
+    {
+      "qid": "P1-ED-038",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.039 COSO Principle 10 control activities segregation of duties small entities",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Proposing compensating controls for SoD limitations in 22-employee credit union — requires designing controls proportionate to assessed risk under COSO Principle 10."
+    },
+    {
+      "qid": "P1-ED-039",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.040 change management control it systems",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying change management as an IT general control from description of tested/approved/documented software changes — concept classification."
+    },
+    {
+      "qid": "P1-ED-043",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.044 risk assessment likelihood impact",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying risk assessment as the process of scoring risks by likelihood and impact — concept identification."
+    },
+    {
+      "qid": "P1-ED-049",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.050 code of conduct ethics program",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying control environment as the COSO component supported by ethics training and code of conduct acknowledgment — concept matching."
+    },
+    {
+      "qid": "P1-ED-060",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.061 vendor master file controls",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Analyze",
+      "classification": "Analyze Misclassified",
+      "rationale": "Identifying fictitious vendor fraud risk addressed by segregating vendor master file maintenance from payment approval — risk-to-control mapping analysis."
+    },
+    {
+      "qid": "P1-ED-069",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.070 COSO Principle 2 board committee risk oversight structure",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating whether a three-committee board structure without operational/cybersecurity risk committee satisfies COSO Principle 2 — governance design assessment."
+    },
+    {
+      "qid": "P1-ED-070",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.071 change management control direct production change",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying missing change management control from direct production database change scenario without testing/review — control gap identification."
+    },
+    {
+      "qid": "P1-ED-071",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.072 fraud risk purchasing conflict of interest",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Recommending best control to address purchasing conflict-of-interest when manager both adds vendors and selects winners — SoD design recommendation."
+    },
+    {
+      "qid": "P1-FD-010",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.011 cybersecurity data encryption strategy evaluation breach",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Diagnosing encryption strategy failure after data breach: AES-256-GCM was sound but key management (keys in config file) was the root cause — technical security assessment."
+    },
+    {
+      "qid": "P1-FD-015",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.016 cloud saas subscription model",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying SaaS from description of vendor-hosted, vendor-maintained cloud accounting application — service model classification."
+    },
+    {
+      "qid": "P1-FD-018",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.019 cloud saas subscription model",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying SaaS from vendor-hosted application description — rotation-group variant of FD-015."
+    },
+    {
+      "qid": "P1-FD-031",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.032 data breach incident response plan",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying the primary purpose of an incident response plan — concept recall, not professional judgment."
+    },
+    {
+      "qid": "P1-FD-033",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.034 data quality investigation applied",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Determining the most appropriate first step when customer satisfaction score drops sharply but all operational metrics are stable — requires professional judgment to verify data integrity before acting."
+    },
+    {
+      "qid": "P1-FD-034",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.035 data breach incident response plan",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying the primary purpose of an incident response plan — concept recall (rotation-group variant of FD-031)."
+    },
+    {
+      "qid": "P1-FD-046",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.047 data governance master data management merged entity",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating master data management strategy for merged entity with incompatible chart of accounts and product hierarchies — requires balancing data consistency with operational risk."
+    },
+    {
+      "qid": "P1-FD-050",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.051 automation governance RPA bot lifecycle control framework",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Evaluating RPA governance failures across bot lifecycle, credential management, and process documentation — holistic IT governance assessment."
+    },
+    {
+      "qid": "P1-FD-055",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.056 natural language processing use case",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Identifying NLP/intelligent document processing from invoice data extraction scenario — technology classification by description."
+    },
+    {
+      "qid": "P1-E-R09",
+      "pack": "E",
+      "section": "E",
+      "topic": "E-R11 preventive control examples application to scenarios",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Evaluate",
+      "classification": "True Evaluate",
+      "rationale": "Recommending most effective incremental control (mandatory vacation + job rotation) for small business with SoD limitations — compensating control design judgment."
+    },
+    {
+      "qid": "P1E-A-010",
+      "pack": "E",
+      "section": "D",
+      "topic": "E-A.011 R&D cost treatment",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Definition recall: R&D costs are expensed as incurred under U.S. GAAP — pure knowledge retrieval."
+    },
+    {
+      "qid": "P1E-A-032",
+      "pack": "E",
+      "section": "A",
+      "topic": "E-A.033 Accrual expense recognition",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Definition recall: expenses recognized when incurred and matched with revenues under accrual basis — concept identification."
+    },
+    {
+      "qid": "P1E-B-063",
+      "pack": "E",
+      "section": "B",
+      "topic": "E-B.064 Participative advantage",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Definition recall: participative budgeting advantage is greater goal congruence and motivation — concept identification."
+    },
+    {
+      "qid": "P1E-D-030",
+      "pack": "E",
+      "section": "D",
+      "topic": "E-D.031 Keep-or-drop",
+      "current_cognitive_level": "Evaluate",
+      "true_cognitive_level": "Apply",
+      "classification": "Apply Misclassified",
+      "rationale": "Definition recall: keep-or-drop decisions evaluate avoidable costs vs. contribution margin — decision rule identification."
+    }
+  ],
+  "per_pack_counts": {
+    "A": {
+      "total": 14,
+      "true_evaluate": 6,
+      "analyze_misclassified": 4,
+      "apply_misclassified": 4
+    },
+    "B": {
+      "total": 7,
+      "true_evaluate": 1,
+      "analyze_misclassified": 2,
+      "apply_misclassified": 4
+    },
+    "C": {
+      "total": 30,
+      "true_evaluate": 18,
+      "analyze_misclassified": 2,
+      "apply_misclassified": 10
+    },
+    "D": {
+      "total": 38,
+      "true_evaluate": 21,
+      "analyze_misclassified": 2,
+      "apply_misclassified": 15
+    },
+    "E": {
+      "total": 5,
+      "true_evaluate": 1,
+      "analyze_misclassified": 0,
+      "apply_misclassified": 4
+    }
+  }
+}

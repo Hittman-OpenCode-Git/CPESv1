@@ -1,0 +1,71 @@
+{
+  "session": "S380",
+  "workstream": "evaluate-wave1",
+  "timestamp": "2026-07-28T16:45:47Z",
+  "items_created": 5,
+  "qids": [
+    "P1E-EVAL-001",
+    "P1E-EVAL-002",
+    "P1E-EVAL-003",
+    "P1E-EVAL-004",
+    "P1E-EVAL-005"
+  ],
+  "domains_covered": ["D", "E", "F", "C", "B"],
+  "backup_file": "backups\\pack_e_corrected.js.bak-S380-evalwave1-20260728164547",
+  "pre_write_item_count": 540,
+  "post_write_item_count": 545,
+  "governance_guard_checks": {
+    "DL-008": "clean — all 5 items have empty ExplanationWrong[CorrectChoice]",
+    "question_state": "Unprocessed — all 5 items carry question_state: \"Unprocessed\"",
+    "ExplanationWrong_nonempty_for_non_CC": true,
+    "DL-026": "clean — all 15 non-CorrectChoice ExplanationWrong fields contain substantive text"
+  },
+  "correct_answer_distribution": {
+    "A": 2,
+    "B": 1,
+    "C": 1,
+    "D": 1
+  },
+  "items": [
+    {
+      "qid": "P1E-EVAL-001",
+      "topic": "Make-or-buy strategic sourcing recommendation with qualitative risk factors",
+      "domain": "D — Cost Management",
+      "difficulty": 5,
+      "cognitive_level": "Evaluate",
+      "scenario_summary": "Apex Manufacturing controller must recommend whether to outsource a critical component considering $630K annual savings vs. supplier quality risks and lead time."
+    },
+    {
+      "qid": "P1E-EVAL-002",
+      "topic": "Internal control deficiency severity prioritization and remediation sequencing",
+      "domain": "E — Internal Controls",
+      "difficulty": 4,
+      "cognitive_level": "Evaluate",
+      "scenario_summary": "Bank CAE must prioritize 2 of 4 control deficiencies for remediation under a $500K budget constraint using COSO severity assessment."
+    },
+    {
+      "qid": "P1E-EVAL-003",
+      "topic": "ERP vendor selection using weighted-criteria evaluation and strategic recommendation",
+      "domain": "F — Technology and Analytics",
+      "difficulty": 4,
+      "cognitive_level": "Evaluate",
+      "scenario_summary": "CIO must recommend one of three ERP vendors to the board, reconciling weighted scores with qualitative factors like re-platforming risk."
+    },
+    {
+      "qid": "P1E-EVAL-004",
+      "topic": "Transfer pricing dispute resolution with capacity constraints and external market alternatives",
+      "domain": "C — Performance Management",
+      "difficulty": 5,
+      "cognitive_level": "Evaluate",
+      "scenario_summary": "Corporate controller must resolve a transfer pricing standoff between two divisions, balancing corporate profit maximization with divisional motivation."
+    },
+    {
+      "qid": "P1E-EVAL-005",
+      "topic": "Capital budget resource allocation under competing priorities with financial and non-financial criteria",
+      "domain": "B — Planning, Budgeting, and Forecasting",
+      "difficulty": 4,
+      "cognitive_level": "Evaluate",
+      "scenario_summary": "Medical center controller must recommend 2 of 3 capital projects within a $4.2M budget, weighing NPV against patient safety and HIPAA compliance."
+    }
+  ]
+}

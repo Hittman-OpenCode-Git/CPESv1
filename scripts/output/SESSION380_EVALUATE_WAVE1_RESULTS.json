@@ -1,0 +1,90 @@
+{
+  "session": "S380",
+  "board": "evaluate-wave1",
+  "mode": "write",
+  "timestamp": "2026-07-28T16:39:11Z",
+  "items_authored": 5,
+  "items": [
+    {
+      "qid": "P1-ED-044",
+      "pack": "D",
+      "section": "E",
+      "topic": "COSO ERM — risk response portfolio — accept, mitigate, transfer",
+      "difficulty": 4,
+      "bloom": "Evaluate",
+      "scenario": "Kestrel Aerospace — risk response budget allocation across 4 risks under board risk appetite constraints"
+    },
+    {
+      "qid": "P1-ED-045",
+      "pack": "D",
+      "section": "E",
+      "topic": "COSO Principle 10/17 — control deficiency severity — material weakness vs. significant deficiency",
+      "difficulty": 4,
+      "bloom": "Evaluate",
+      "scenario": "Calvert Regional Health — PCAOB AS 2201 classification of a revenue cycle control deficiency"
+    },
+    {
+      "qid": "P1-FD-004",
+      "pack": "D",
+      "section": "F",
+      "topic": "ERP system selection — cloud vs. on-premise — strategic, operational, and control tradeoffs",
+      "difficulty": 4,
+      "bloom": "Evaluate",
+      "scenario": "Thorndale Industries — Cloud SaaS vs on-premise ERP decision under COSO Principle 11"
+    },
+    {
+      "qid": "P1-EC-068",
+      "pack": "C",
+      "section": "E",
+      "topic": "COSO Principle 2 — board oversight — control environment — independence of compliance and audit functions",
+      "difficulty": 4,
+      "bloom": "Evaluate",
+      "scenario": "Brightwater Capital — CIO/CCO dual role enabling front-running fraud for 2 years"
+    },
+    {
+      "qid": "P1-FC-002",
+      "pack": "C",
+      "section": "F",
+      "topic": "IT project portfolio prioritization — strategic alignment — risk, budget, and COSO Principle 11",
+      "difficulty": 4,
+      "bloom": "Evaluate",
+      "scenario": "Orchard Bancorp — selecting 2 of 3 IT projects under $2.8M capital constraint"
+    }
+  ],
+  "slots_used": ["P1-ED-044", "P1-ED-045", "P1-FD-004", "P1-EC-068", "P1-FC-002"],
+  "all_replaced_from": "Archived DL-012 rotation clones",
+  "backups_created": [
+    "backups/pack_d_corrected.js.bak-S380-20260728163911",
+    "backups/pack_c_corrected.js.bak-S380-20260728163911"
+  ],
+  "governance_checks": {
+    "dl008_check": "0 violations — all 5 items have ExplanationWrong[CC] = \"\"",
+    "dl026_check": "0 empty non-CC slots — all 15 distractor EW fields populated with choice-specific text (avg 450+ chars)",
+    "rule9_check": "0 logic inversions — no 'No/Yes' binary lead-in mismatches in any choice",
+    "qid_count_stable": "pack_c: 500, pack_d: 500",
+    "node_check": "pack_c: PASS, pack_d: PASS",
+    "governance_guard": "54 PASS, 0 FAIL"
+  },
+  "certified_pool": {
+    "before": 2417,
+    "after": 2422,
+    "delta": "+5",
+    "pack_c": 440,
+    "pack_d": 442,
+    "pack_a": 500,
+    "pack_b": 500,
+    "pack_e": 540
+  },
+  "cognitive_verification": {
+    "all_evaluate": true,
+    "criteria": "All 5 items require judgment, tradeoff assessment, recommendation under ambiguity, or business decision-making with no single formulaic answer",
+    "verify_methods": [
+      "Item 1 (ED-044): Requires selecting optimal risk response portfolio from 4 strategies across 4 risks under budget and appetite constraints",
+      "Item 2 (ED-045): Requires classifying control deficiency severity under PCAOB AS 2201 when quantitative and qualitative factors conflict",
+      "Item 3 (FD-004): Requires recommending cloud vs on-premise ERP when cost, control, staffing, and strategic factors pull in different directions",
+      "Item 4 (EC-068): Requires identifying the most proximate cause of a 2-year fraud from 5 competing control environment deficiencies",
+      "Item 5 (FC-002): Requires selecting 2 of 3 IT projects when risk, compliance, budget, and customer experience criteria must be balanced"
+    ]
+  },
+  "status": "complete"
+}

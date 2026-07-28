@@ -1,0 +1,2843 @@
+{
+  "dl008": [
+    {
+      "qid": "P1B-C-153",
+      "pack": "B",
+      "section": "C",
+      "topic": "B-C.153 transfer pricing",
+      "stem": "Apex Components has two divisions: the Motor Division produces electric motors s",
+      "cc": "A",
+      "ew_cc_length": 198,
+      "ew_cc_preview": "Division managers have opposing interests. The selling division benefits from a higher transfer price (higher profit), while the buying division benef",
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-015",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.015 return on investment dupont",
+      "stem": "Meridian Corporation evaluates its two divisions using ROI and residual income. ",
+      "cc": "B",
+      "ew_cc_length": 128,
+      "ew_cc_preview": "$300,000 is only the capital charge (10% x $3,000,000), not the residual income. RI = operating income minus the capital charge.",
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-001",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.001 segregation of duties design",
+      "stem": "Ashford assigns one employee to authorize purchases, another to record them, and",
+      "cc": "A",
+      "ew_cc_length": 632,
+      "ew_cc_preview": "Option A places trust in the system configuration without the compensating control of independent review. Access rights matrices define what users can",
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-EC-005",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.005 segregation of duties design",
+      "stem": "Emberton assigns one employee to authorize purchases, another to record them, an",
+      "cc": "A",
+      "ew_cc_length": 779,
+      "ew_cc_preview": "Option A describes a procedure that conflates monitoring with supervision. The plant controller presenting variance analysis to the GM is a management",
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-EC-030",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.030 bank reconciliation control",
+      "stem": "Elderberry has a designated employee, independent of cash handling and recording",
+      "cc": "B",
+      "ew_cc_length": 865,
+      "ew_cc_preview": "Option B conflates risk capacity (the maximum risk the organization can absorb) with risk appetite (the maximum risk it is willing to accept). The cre",
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-EC-031",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.031 COSO ERM — risk appetite vs. risk tolerance in strategic decision-making",
+      "stem": "Rothwell International, a mid-cap manufacturer, is evaluating whether to enter t",
+      "cc": "D",
+      "ew_cc_length": 228,
+      "ew_cc_preview": "Control risk is the risk that a misstatement will not be prevented or detected by internal controls. Risk appetite is a broader strategic governance c",
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-055",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.055 compensating control small business",
+      "stem": "Falconridge is too small to fully segregate duties among its few accounting empl",
+      "cc": "C",
+      "ew_cc_length": 779,
+      "ew_cc_preview": "Option C misdiagnoses the VP's override of the bad debt allowance as a risk assessment failure. The VP did not misidentify a risk — the VP received a ",
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-FC-005",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.005 data governance ownership",
+      "stem": "Emberton establishes clear ownership, definitions, and quality standards for its",
+      "cc": "A",
+      "ew_cc_length": 828,
+      "ew_cc_preview": "Option A correctly identifies the descriptive analytics performed (dashboards, transaction search) but fails to recognize that descriptive analytics a",
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-FC-017",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.017 cloud computing — IaaS, PaaS, SaaS model selection with control implications",
+      "stem": "Aldenbury Medical Group plans to migrate its patient scheduling database to the ",
+      "cc": "D",
+      "ew_cc_length": 363,
+      "ew_cc_preview": "Platform as a Service provides a development and deployment environment including operating systems and middleware, going beyond raw infrastructure. T",
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-045",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.045 blockchain distributed ledger",
+      "stem": "Timberlake evaluates blockchain technology to create a shared, tamper-resistant ",
+      "cc": "A",
+      "ew_cc_length": 822,
+      "ew_cc_preview": "Option A blames the users for a system design problem. The 'Customer Region' drop-down is inconsistent with other regional hierarchy references becaus",
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-FC-046",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.046 data governance — data quality dimensions and root cause analysis",
+      "stem": "Oakmere Industries' quarterly sales dashboard shows that the Northeast region's ",
+      "cc": "D",
+      "ew_cc_length": 383,
+      "ew_cc_preview": "Choice D is incorrect because file storage capacity measures the amount of data that can be stored, not the quality of that data. The stem describes m",
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-050",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.050 data quality dimensions accuracy completeness",
+      "stem": "Amberfield's data quality initiative measures whether data values are correct, c",
+      "cc": "B",
+      "ew_cc_length": 898,
+      "ew_cc_preview": "Option B correctly identifies that unsupervised learning can detect novel patterns (clustering unidentified transactions into anomalous groups). Howev",
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-ED-002",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.002 three lines of defense model",
+      "stem": "Bramblewood structures its risk and control functions using operational manageme",
+      "cc": "B",
+      "ew_cc_length": 866,
+      "ew_cc_preview": "Option B misidentifies the first line of defense. Under the three lines model, the first line is operational management — the credit department, speci",
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-ED-015",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.015 independent verification control activity",
+      "stem": "Overbrook has a supervisor recount inventory counted by warehouse staff before f",
+      "cc": "C",
+      "ew_cc_length": 812,
+      "ew_cc_preview": "Option C correctly identifies residual risk but applies the risk tolerance concept incorrectly. Risk tolerance sets acceptable boundaries for variatio",
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-ED-016",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.016 COSO ERM — risk response strategies (avoid, reduce, share, accept)",
+      "stem": "Norbrook Electronics sources 40% of its components from a single supplier in a c",
+      "cc": "B",
+      "ew_cc_length": 217,
+      "ew_cc_preview": "Risk avoidance eliminates the risk entirely by discontinuing the activity that creates the exposure. Here, the organization keeps the underlying activ",
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-ED-041",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.041 COSO Principle 7 — risk assessment — likelihood and impact",
+      "stem": "Ainsley Manufacturing's risk manager assesses the risk of a major ERP system fai",
+      "cc": "D",
+      "ew_cc_length": 346,
+      "ew_cc_preview": "Option D (Monitoring, which evaluates control effectiveness over time) represents a plausible misconception. Under COSO risk assessment component, the",
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-050",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.050 code of conduct ethics program",
+      "stem": "Ambervale requires all employees to complete annual ethics training and sign an ",
+      "cc": "B",
+      "ew_cc_length": 782,
+      "ew_cc_preview": "Option B correctly identifies access review as the remediation but misdiagnoses the review frequency as the root cause. Semi-annual access certificati",
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-ED-051",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.051 COSO Principle 11 — IT general controls — logical access and authentication",
+      "stem": "During a routine IT audit of Ellsworth Manufacturing, the auditor discovers: (1)",
+      "cc": "D",
+      "ew_cc_length": 241,
+      "ew_cc_preview": "No single control eliminates the need for all others. Multi-factor authentication strengthens access security but must be part of a broader system of ",
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-FD-002",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.002 api integration systems",
+      "stem": "Bramblewood uses application programming interfaces (APIs) to allow its accounti",
+      "cc": "B",
+      "ew_cc_length": 805,
+      "ew_cc_preview": "Option B recommends middleware (ESB/enterprise service bus) for what is essentially a point-to-point integration between two systems. Middleware is mo",
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-FD-010",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.010 business intelligence self service reporting",
+      "stem": "Juniperfield enables business users to build their own reports and analyses from",
+      "cc": "B",
+      "ew_cc_length": 797,
+      "ew_cc_preview": "Option B correctly identifies a real risk (hardcoded keys in source code) but incorrectly applies the remediation to the described breach. The scenari",
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-FD-050",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.050 master data management concept",
+      "stem": "Ambervale maintains a single, authoritative source of core customer and product ",
+      "cc": "B",
+      "ew_cc_length": 911,
+      "ew_cc_preview": "Option B recommends manual review of bot output as the primary control, which fundamentally misunderstands automation governance. RPA is deployed prec",
+      "certified": false,
+      "state": "Active"
+    }
+  ],
+  "dl026": [
+    {
+      "qid": "P1B-C-153",
+      "pack": "B",
+      "section": "C",
+      "topic": "B-C.153 transfer pricing",
+      "stem": "Apex Components has two divisions: the Motor Division produces electric motors s",
+      "cc": "A",
+      "empty_slots": [
+        "C"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-011",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.011 return on investment dupont",
+      "stem": "Kestrel wants to analyze ROI by breaking it into profit margin and asset turnove",
+      "cc": "C",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-012",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.012 return on investment dupont",
+      "stem": "Larkspur wants to analyze ROI by breaking it into profit margin and asset turnov",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-014",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.014 return on investment dupont",
+      "stem": "Nightingale wants to analyze ROI by breaking it into profit margin and asset tur",
+      "cc": "B",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-030",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.030 responsibility center cost center",
+      "stem": "Elderberry's production supervisor is evaluated only on the costs incurred in th",
+      "cc": "B",
+      "empty_slots": [
+        "C"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-031",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.031 responsibility center cost center",
+      "stem": "Foxglove's production supervisor is evaluated only on the costs incurred in the ",
+      "cc": "C",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-032",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.031 cost center",
+      "stem": "Graystone's production supervisor is evaluated only on the costs incurred in the",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-034",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.034 responsibility center cost center",
+      "stem": "Ivywood's production supervisor is evaluated only on the costs incurred in the d",
+      "cc": "B",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-040",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.040 investment center evaluation",
+      "stem": "Oleander's division manager controls revenue, costs, and the level of assets inv",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-042",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.041 return on investment",
+      "stem": "Quarrystone calculates economic value added (EVA) by subtracting a capital charg",
+      "cc": "B",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-043",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.042 residual income calculation",
+      "stem": "Ridgeline calculates economic value added (EVA) by subtracting a capital charge ",
+      "cc": "C",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-044",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.044 economic value added concept",
+      "stem": "Sagebrook calculates economic value added (EVA) by subtracting a capital charge ",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-050",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.049 benchmarking",
+      "stem": "Amberfield compares its processes and performance metrics against those of best-",
+      "cc": "B",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-051",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.051 benchmarking best practices",
+      "stem": "Bellwood compares its processes and performance metrics against those of best-in",
+      "cc": "C",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-052",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.052 benchmarking best practices",
+      "stem": "Cliffside compares its processes and performance metrics against those of best-i",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CC-071",
+      "pack": "C",
+      "section": "C",
+      "topic": "C.071 gross margin variance analysis",
+      "stem": "Vinehollow's gross margin declined even though sales volume increased. Managemen",
+      "cc": "C",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-001",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.001 segregation of duties design",
+      "stem": "Ashford assigns one employee to authorize purchases, another to record them, and",
+      "cc": "A",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-EC-005",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.005 segregation of duties design",
+      "stem": "Emberton assigns one employee to authorize purchases, another to record them, an",
+      "cc": "A",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-EC-022",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.022 preventive vs detective duplicate payment control",
+      "stem": "Crestview Manufacturing frequently discovers duplicate vendor payments when revi",
+      "cc": "B",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-023",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.023 IT access control terminated employee deprovisioning",
+      "stem": "During an internal audit, Drake Distribution discovered that a former employee's",
+      "cc": "C",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-024",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.024 application input control sales order validation",
+      "stem": "Parkview Company's sales order system accepts orders with invalid customer codes",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-030",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.030 bank reconciliation control",
+      "stem": "Elderberry has a designated employee, independent of cash handling and recording",
+      "cc": "B",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-EC-031",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.031 COSO ERM — risk appetite vs. risk tolerance in strategic decision-making",
+      "stem": "Rothwell International, a mid-cap manufacturer, is evaluating whether to enter t",
+      "cc": "D",
+      "empty_slots": [
+        "C"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-050",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.050 whistleblower hotline purpose",
+      "stem": "Amberfield establishes an anonymous reporting channel for employees to report su",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-051",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.051 compensating control small business",
+      "stem": "Bellwood is too small to fully segregate duties among its few accounting employe",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-053",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.053 compensating control small business",
+      "stem": "Duskwood is too small to fully segregate duties among its few accounting employe",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-055",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.055 compensating control small business",
+      "stem": "Falconridge is too small to fully segregate duties among its few accounting empl",
+      "cc": "C",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-EC-056",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.056 COSO Principle 1 — integrity and ethical values — tone at the top failure analysis",
+      "stem": "Meridian Supply's controller presents the following findings to the audit commit",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-057",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.057 control environment tone at top",
+      "stem": "Hartwell's board and senior executives consistently emphasize integrity and ethi",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-059",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.059 control environment tone at top",
+      "stem": "Juniper Hollow's board and senior executives consistently emphasize integrity an",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-062",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.062 inherent risk vs control risk",
+      "stem": "Mossbrook's auditor assesses the susceptibility of an account to material missta",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-063",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.063 inherent risk vs control risk",
+      "stem": "Nettlefield's auditor assesses the susceptibility of an account to material miss",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-064",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.064 inherent risk vs control risk",
+      "stem": "Oakenshaw's auditor assesses the susceptibility of an account to material missta",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-065",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.065 inherent risk vs control risk",
+      "stem": "Poplarwood's auditor assesses the susceptibility of an account to material misst",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-EC-068",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.068 segregation cash custody recording",
+      "stem": "Stonebrook has the same employee both handling incoming cash receipts and record",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-EC-070",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.070 segregation cash custody recording",
+      "stem": "Umbercrest has the same employee both handling incoming cash receipts and record",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-EC-071",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.071 remediation of control deficiency",
+      "stem": "Vinehollow identifies a control deficiency during its internal control assessmen",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-EC-073",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.073 remediation of control deficiency",
+      "stem": "Ashenford identifies a control deficiency during its internal control assessment",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-EC-074",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.074 remediation of control deficiency",
+      "stem": "Brookmoor identifies a control deficiency during its internal control assessment",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-EC-075",
+      "pack": "C",
+      "section": "E",
+      "topic": "E.075 remediation of control deficiency",
+      "stem": "Coalgate identifies a control deficiency during its internal control assessment ",
+      "cc": "C",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-002",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.002 data governance ownership",
+      "stem": "Brightpoint establishes clear ownership, definitions, and quality standards for ",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-003",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.003 data governance ownership",
+      "stem": "Cedarline establishes clear ownership, definitions, and quality standards for it",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-004",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.004 data governance ownership",
+      "stem": "Driftwood establishes clear ownership, definitions, and quality standards for it",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-005",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.005 data governance ownership",
+      "stem": "Emberton establishes clear ownership, definitions, and quality standards for its",
+      "cc": "A",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-FC-008",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.008 prescriptive analytics applied scenario",
+      "stem": "Hearthstone's logistics team uses a software tool that analyzes shipping cost, t",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-009",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.009 descriptive vs predictive analytics",
+      "stem": "Ironvale builds a model to forecast which customers are most likely to churn in ",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-011",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.011 robotic process automation use case",
+      "stem": "Kestrel automates a repetitive, rules-based data entry task that previously requ",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-013",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.013 robotic process automation use case",
+      "stem": "Meridian Peak automates a repetitive, rules-based data entry task that previousl",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-014",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.014 robotic process automation use case",
+      "stem": "Nightingale automates a repetitive, rules-based data entry task that previously ",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-017",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.017 cloud computing — IaaS, PaaS, SaaS model selection with control implications",
+      "stem": "Aldenbury Medical Group plans to migrate its patient scheduling database to the ",
+      "cc": "D",
+      "empty_slots": [
+        "A",
+        "B"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-018",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.018 cloud computing service models",
+      "stem": "Rosewood outsources its entire IT infrastructure, including servers and storage,",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-019",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.019 cloud computing service models",
+      "stem": "Silverton outsources its entire IT infrastructure, including servers and storage",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-021",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.021 data visualization dashboard design",
+      "stem": "Underwood designs an executive dashboard showing key performance indicators with",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-022",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.022 data visualization dashboard design",
+      "stem": "Vesper designs an executive dashboard showing key performance indicators with dr",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-023",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.023 data visualization dashboard design",
+      "stem": "Westbrook designs an executive dashboard showing key performance indicators with",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-024",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.024 data visualization dashboard design",
+      "stem": "Yarrow designs an executive dashboard showing key performance indicators with dr",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-027",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.027 cybersecurity confidentiality integrity availability",
+      "stem": "Birchwood's IT security policy addresses protecting information from unauthorize",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-028",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.028 cybersecurity confidentiality integrity availability",
+      "stem": "Copperline's IT security policy addresses protecting information from unauthoriz",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-030",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.030 cybersecurity confidentiality integrity availability",
+      "stem": "Elderberry's IT security policy addresses protecting information from unauthoriz",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-032",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.032 big data characteristics volume velocity variety",
+      "stem": "Graystone manages massive amounts of transaction data arriving continuously from",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-033",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.033 big data characteristics volume velocity variety",
+      "stem": "Hollowell manages massive amounts of transaction data arriving continuously from",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-035",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.035 big data characteristics volume velocity variety",
+      "stem": "Jasperfield manages massive amounts of transaction data arriving continuously fr",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-037",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.037 data mining pattern discovery",
+      "stem": "Larkwood analyzes large transaction datasets to uncover previously unknown purch",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-038",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.038 data mining pattern discovery",
+      "stem": "Millbrook analyzes large transaction datasets to uncover previously unknown purc",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-039",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.039 data mining pattern discovery",
+      "stem": "Northgate analyzes large transaction datasets to uncover previously unknown purc",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-040",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.040 data mining pattern discovery",
+      "stem": "Oleander analyzes large transaction datasets to uncover previously unknown purch",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-041",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.041 blockchain distributed ledger",
+      "stem": "Pinehollow evaluates blockchain technology to create a shared, tamper-resistant ",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-042",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.042 blockchain distributed ledger",
+      "stem": "Quarrystone evaluates blockchain technology to create a shared, tamper-resistant",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-044",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.044 blockchain distributed ledger",
+      "stem": "Sagebrook evaluates blockchain technology to create a shared, tamper-resistant r",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-045",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.045 blockchain distributed ledger",
+      "stem": "Timberlake evaluates blockchain technology to create a shared, tamper-resistant ",
+      "cc": "A",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-FC-046",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.046 data governance — data quality dimensions and root cause analysis",
+      "stem": "Oakmere Industries' quarterly sales dashboard shows that the Northeast region's ",
+      "cc": "D",
+      "empty_slots": [
+        "A",
+        "B",
+        "C"
+      ],
+      "empty_count": 3,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-047",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.047 data quality dimensions accuracy completeness",
+      "stem": "Violethill's data quality initiative measures whether data values are correct, c",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-049",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.049 data quality dimensions accuracy completeness",
+      "stem": "Yorkshire's data quality initiative measures whether data values are correct, co",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-050",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.050 data quality dimensions accuracy completeness",
+      "stem": "Amberfield's data quality initiative measures whether data values are correct, c",
+      "cc": "B",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-FC-051",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.051 artificial intelligence — supervised vs. unsupervised vs. reinforcement learning — method selection",
+      "stem": "A regional bank's fraud analytics team is designing a machine learning system to",
+      "cc": "D",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-052",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.052 artificial intelligence machine learning",
+      "stem": "Cliffside deploys a system that improves its fraud detection accuracy over time ",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-054",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.054 artificial intelligence machine learning",
+      "stem": "Everfern deploys a system that improves its fraud detection accuracy over time a",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-056",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.056 cybersecurity phishing social engineering",
+      "stem": "Glenmoor employees receive fraudulent emails designed to trick them into reveali",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-057",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.057 cybersecurity phishing social engineering",
+      "stem": "Hartwell employees receive fraudulent emails designed to trick them into reveali",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-059",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.059 cybersecurity phishing social engineering",
+      "stem": "Juniper Hollow employees receive fraudulent emails designed to trick them into r",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-060",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.060 cybersecurity phishing social engineering",
+      "stem": "Knollwood employees receive fraudulent emails designed to trick them into reveal",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-061",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.061 erp system integration benefits",
+      "stem": "Lanternwood implements an enterprise resource planning (ERP) system to integrate",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-062",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.062 erp system integration benefits",
+      "stem": "Mossbrook implements an enterprise resource planning (ERP) system to integrate f",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-064",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.064 erp system integration benefits",
+      "stem": "Oakenshaw implements an enterprise resource planning (ERP) system to integrate f",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-065",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.065 erp system integration benefits",
+      "stem": "Poplarwood implements an enterprise resource planning (ERP) system to integrate ",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-066",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.066 data lake vs data warehouse",
+      "stem": "Quailrun stores raw, unstructured data from multiple sources in its native forma",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-069",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.069 data lake vs data warehouse",
+      "stem": "Thistledown stores raw, unstructured data from multiple sources in its native fo",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-070",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.070 data lake vs data warehouse",
+      "stem": "Umbercrest stores raw, unstructured data from multiple sources in its native for",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-071",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.071 technology enabled continuous auditing",
+      "stem": "Vinehollow's internal audit function uses automated tools to continuously monito",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FC-072",
+      "pack": "C",
+      "section": "F",
+      "topic": "F.072 technology enabled continuous auditing",
+      "stem": "Willowmere's internal audit function uses automated tools to continuously monito",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-CD-015",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.015 sales mix variance concept",
+      "stem": "Overbrook sold the same total number of units as planned, but customers bought m",
+      "cc": "C",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-017",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.017 sales mix variance concept",
+      "stem": "Quintwood wants to explain why contribution margin changed even though total uni",
+      "cc": "A",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-018",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.018 sales mix variance three-product analysis",
+      "stem": "Aspen Components budgets the following quarterly product mix: Product X — 4,000 ",
+      "cc": "D",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-043",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.043 customer profitability analysis",
+      "stem": "Ridgewell analyzes profitability by individual customer account rather than by p",
+      "cc": "C",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-044",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.044 customer profitability analysis multi-customer",
+      "stem": "Hightower Distribution is conducting a customer profitability analysis. The cont",
+      "cc": "A",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-048",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.048 customer profitability ratio ranking",
+      "stem": "TriStone Industries is evaluating the profitability of three major customers usi",
+      "cc": "C",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-051",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.051 performance measurement goal congruence ROI conflict",
+      "stem": "Division A of Ashford Corporation reports invested capital of $2,000,000, operat",
+      "cc": "B",
+      "empty_slots": [
+        "C"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-057",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.057 common size financial statement analysis",
+      "stem": "Harrowgate expresses each income statement line item as a percentage of total re",
+      "cc": "A",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-058",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.058 common-size analysis margin compression",
+      "stem": "Meridian Products' controller prepared the following comparative income statemen",
+      "cc": "D",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-061",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.061 common size financial statement analysis",
+      "stem": "Longmeadow expresses each income statement line item as a percentage of total re",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-064",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.064 variance investigation cost benefit",
+      "stem": "Oakvale's controller decides not to investigate a small unfavorable variance bec",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-067",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.067 variance investigation cost benefit",
+      "stem": "Ravenscroft's controller decides not to investigate a small unfavorable variance",
+      "cc": "C",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-068",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.068 variance investigation multi-variance dual-threshold",
+      "stem": "Stratford Industries' controller applies a cost-benefit framework to the monthly",
+      "cc": "B",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-071",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.071 total quality management philosophy",
+      "stem": "Vantage Ridge adopts a company-wide philosophy emphasizing continuous improvemen",
+      "cc": "C",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-074",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.074 total quality management philosophy",
+      "stem": "Brookline adopts a company-wide philosophy emphasizing continuous improvement an",
+      "cc": "B",
+      "empty_slots": [
+        "C"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-090",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.090 value based management EVA calculation",
+      "stem": "Westgate Division reports net operating profit after tax (NOPAT) of $448,000, in",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-092",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.092 value based management EVA linkage",
+      "stem": "Redcliff ties executive compensation to economic value added to encourage long-t",
+      "cc": "D",
+      "empty_slots": [
+        "C"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-CD-093",
+      "pack": "D",
+      "section": "C",
+      "topic": "C.093 EVA NOPAT components and adjustments",
+      "stem": "Northfield Division reports GAAP operating income of $620,000 for the year. The ",
+      "cc": "C",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-002",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.002 normal costing predetermined overhead rate calculation",
+      "stem": "At the start of the year, Ashworth Manufacturing prepared the following overhead",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-003",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.003 normal costing overhead application",
+      "stem": "Castlebrook applies manufacturing overhead using a predetermined rate based on b",
+      "cc": "C",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-021",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.021 cost driver selection abc pool",
+      "stem": "Underhill sets up an activity-based costing pool for order processing costs. Wha",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-037",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.037 kaizen costing periodic compound reduction",
+      "stem": "Marlin Industries applies kaizen costing to its primary product line. The curren",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-040",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.040 kaizen costing multi-component reduction",
+      "stem": "Windsor Products applies kaizen costing with component-specific reduction target",
+      "cc": "C",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-042",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.042 cost estimation high-low method variable rate",
+      "stem": "Elmdale Maintenance tracked machine hours and maintenance costs for the first si",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-043",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.043 cost behavior mixed cost analysis",
+      "stem": "Ridgewell incurs a utility cost that includes both a fixed monthly base charge a",
+      "cc": "C",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-044",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.044 cost estimation high-low prediction",
+      "stem": "Elmdale Maintenance has determined that its monthly maintenance costs follow the",
+      "cc": "B",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-046",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.046 service department reciprocal method",
+      "stem": "Umberglen allocates service department costs using simultaneous equations that f",
+      "cc": "B",
+      "empty_slots": [
+        "C"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-049",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.049 service department method comparison reciprocal vs direct",
+      "stem": "Briarwood's controller is deciding between the direct method and the reciprocal ",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-050",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.050 service department reciprocal method",
+      "stem": "Ambervale allocates service department costs using simultaneous equations that f",
+      "cc": "B",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-051",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.051 step method service department allocation hierarchy",
+      "stem": "Northfield Manufacturing allocates three service departments using the step-down",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-052",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.052 contribution margin income statement CVP projection",
+      "stem": "Fairmont Company's controller prepared a contribution margin income statement: S",
+      "cc": "B",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-062",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.062 multi-product break-even weighted average CM",
+      "stem": "Westbrook Company sells two products with a constant mix. Product X: $120/unit, ",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-DD-063",
+      "pack": "D",
+      "section": "D",
+      "topic": "D.063 cvp analysis multiple products",
+      "stem": "Netherfield sells two products with different contribution margins and wants to ",
+      "cc": "C",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-ED-002",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.002 three lines of defense model",
+      "stem": "Bramblewood structures its risk and control functions using operational manageme",
+      "cc": "B",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-ED-015",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.015 independent verification control activity",
+      "stem": "Overbrook has a supervisor recount inventory counted by warehouse staff before f",
+      "cc": "C",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-ED-016",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.016 COSO ERM — risk response strategies (avoid, reduce, share, accept)",
+      "stem": "Norbrook Electronics sources 40% of its components from a single supplier in a c",
+      "cc": "B",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-ED-041",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.041 COSO Principle 7 — risk assessment — likelihood and impact",
+      "stem": "Ainsley Manufacturing's risk manager assesses the risk of a major ERP system fai",
+      "cc": "D",
+      "empty_slots": [
+        "A",
+        "B"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-044",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.044 risk assessment likelihood impact",
+      "stem": "Sandpiper's risk management team scores identified risks based on their likeliho",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-045",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.045 risk assessment likelihood impact",
+      "stem": "Turnstone's risk management team scores identified risks based on their likeliho",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-047",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.047 code of conduct ethics program",
+      "stem": "Vaultbrook requires all employees to complete annual ethics training and sign an",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-048",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.048 code of conduct ethics program",
+      "stem": "Westhollow requires all employees to complete annual ethics training and sign an",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-050",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.050 code of conduct ethics program",
+      "stem": "Ambervale requires all employees to complete annual ethics training and sign an ",
+      "cc": "B",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-ED-051",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.051 COSO Principle 11 — IT general controls — logical access and authentication",
+      "stem": "During a routine IT audit of Ellsworth Manufacturing, the auditor discovers: (1)",
+      "cc": "D",
+      "empty_slots": [
+        "C"
+      ],
+      "empty_count": 1,
+      "certified": true,
+      "state": "Certified"
+    },
+    {
+      "qid": "P1-ED-052",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.052 password access authentication control",
+      "stem": "Coventry Hill requires multi-factor authentication for all employees accessing f",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-053",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.053 password access authentication control",
+      "stem": "Duskgrove requires multi-factor authentication for all employees accessing finan",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-055",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.055 password access authentication control",
+      "stem": "Falconwood requires multi-factor authentication for all employees accessing fina",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-056",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.056 internal control cost benefit limitation",
+      "stem": "Glenmore's management decides not to implement an extremely costly control becau",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-057",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.057 internal control cost benefit limitation",
+      "stem": "Harrowgate's management decides not to implement an extremely costly control bec",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-059",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.059 internal control cost benefit limitation",
+      "stem": "Jubilee's management decides not to implement an extremely costly control becaus",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-061",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.061 vendor master file controls",
+      "stem": "Longmeadow restricts the ability to add or modify vendor records to a small grou",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-062",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.062 vendor master file controls",
+      "stem": "Marlowe restricts the ability to add or modify vendor records to a small group o",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-063",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.063 vendor master file controls",
+      "stem": "Netherfield restricts the ability to add or modify vendor records to a small gro",
+      "cc": "C",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-065",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.065 vendor master file controls",
+      "stem": "Prescott restricts the ability to add or modify vendor records to a small group ",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-ED-068",
+      "pack": "D",
+      "section": "E",
+      "topic": "E.068 audit committee oversight role",
+      "stem": "Somerdale's board audit committee oversees the financial reporting process, the ",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-002",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.002 api integration systems",
+      "stem": "Bramblewood uses application programming interfaces (APIs) to allow its accounti",
+      "cc": "B",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-FD-004",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.004 api integration systems",
+      "stem": "Deepwater uses application programming interfaces (APIs) to allow its accounting",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-008",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.008 business intelligence self service reporting",
+      "stem": "Hawkridge enables business users to build their own reports and analyses from a ",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-010",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.010 business intelligence self service reporting",
+      "stem": "Juniperfield enables business users to build their own reports and analyses from",
+      "cc": "B",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-FD-012",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.012 data encryption at rest and in transit",
+      "stem": "Lockhaven encrypts sensitive financial data both when stored on servers and when",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-014",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.014 data encryption at rest and in transit",
+      "stem": "Northfell encrypts sensitive financial data both when stored on servers and when",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-019",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.019 cloud saas subscription model",
+      "stem": "Stonewell subscribes to a cloud-based accounting application that the vendor hos",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-023",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.023 predictive model overfitting risk",
+      "stem": "Whitmore's forecasting model performs extremely well on historical training data",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-024",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.024 predictive model overfitting risk",
+      "stem": "Yewbrook's forecasting model performs extremely well on historical training data",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-029",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.029 internet of things iot sensors",
+      "stem": "Dellwood installs internet-connected sensors on manufacturing equipment to monit",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-032",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.032 data breach incident response plan",
+      "stem": "Greybridge maintains a documented plan outlining steps to take if a cybersecurit",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-036",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.036 structured vs unstructured data",
+      "stem": "Kirkwood manages both data stored in traditional relational database tables and ",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-037",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.037 structured vs unstructured data",
+      "stem": "Ledgemont manages both data stored in traditional relational database tables and",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-038",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.038 structured vs unstructured data",
+      "stem": "Millhaven manages both data stored in traditional relational database tables and",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-039",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.039 structured vs unstructured data",
+      "stem": "Norwood Peak manages both data stored in traditional relational database tables ",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-042",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.042 digital signature authentication",
+      "stem": "Quarrycrest uses digital signatures to verify the authenticity and integrity of ",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-044",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.044 digital signature authentication",
+      "stem": "Sandpiper uses digital signatures to verify the authenticity and integrity of el",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-046",
+      "pack": "D",
+      "section": "?",
+      "topic": "?",
+      "stem": "?",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-FD-048",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.048 master data management concept",
+      "stem": "Westhollow maintains a single, authoritative source of core customer and product",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-050",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.050 master data management concept",
+      "stem": "Ambervale maintains a single, authoritative source of core customer and product ",
+      "cc": "B",
+      "empty_slots": [
+        "D"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Active"
+    },
+    {
+      "qid": "P1-FD-051",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.051 automation governance — RPA bot lifecycle and control framework",
+      "stem": "Merton Financial Services deployed robotic process automation (RPA) three years ",
+      "cc": "D",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-052",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.052 automation bot governance oversight",
+      "stem": "Coventry Hill establishes a center of excellence to govern, monitor, and audit t",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-053",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.053 automation bot governance oversight",
+      "stem": "Duskgrove establishes a center of excellence to govern, monitor, and audit the s",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-056",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.056 natural language processing use case",
+      "stem": "Glenmore uses a technology that automatically extracts key data fields from scan",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-057",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.057 natural language processing use case",
+      "stem": "Harrowgate uses a technology that automatically extracts key data fields from sc",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-058",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.058 natural language processing use case",
+      "stem": "Ivorycrest uses a technology that automatically extracts key data fields from sc",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-060",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.060 natural language processing use case",
+      "stem": "Kingswell uses a technology that automatically extracts key data fields from sca",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-061",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.061 cybersecurity risk assessment framework",
+      "stem": "Longmeadow conducts a formal assessment to identify, categorize, and prioritize ",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-062",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.062 cybersecurity risk assessment framework",
+      "stem": "Marlowe conducts a formal assessment to identify, categorize, and prioritize its",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-063",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.063 cybersecurity risk assessment framework",
+      "stem": "Netherfield conducts a formal assessment to identify, categorize, and prioritize",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-065",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.065 cybersecurity risk assessment framework",
+      "stem": "Prescott conducts a formal assessment to identify, categorize, and prioritize it",
+      "cc": "A",
+      "empty_slots": [
+        "B"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-066",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.066 technology cost benefit evaluation",
+      "stem": "Quillwood evaluates whether to invest in a new automation tool by comparing expe",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-067",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.067 technology cost benefit evaluation",
+      "stem": "Ravenscroft evaluates whether to invest in a new automation tool by comparing ex",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-068",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.068 technology cost benefit evaluation",
+      "stem": "Somerdale evaluates whether to invest in a new automation tool by comparing expe",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-070",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.070 technology cost benefit evaluation",
+      "stem": "Uplandview evaluates whether to invest in a new automation tool by comparing exp",
+      "cc": "B",
+      "empty_slots": [
+        "A",
+        "C"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-071",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.071 data retention policy compliance",
+      "stem": "Vantage Ridge establishes a policy defining how long different categories of fin",
+      "cc": "C",
+      "empty_slots": [
+        "A",
+        "D"
+      ],
+      "empty_count": 2,
+      "certified": false,
+      "state": "Archived"
+    },
+    {
+      "qid": "P1-FD-072",
+      "pack": "D",
+      "section": "F",
+      "topic": "F.072 data retention policy compliance",
+      "stem": "Whitfield establishes a policy defining how long different categories of financi",
+      "cc": "D",
+      "empty_slots": [
+        "A"
+      ],
+      "empty_count": 1,
+      "certified": false,
+      "state": "Archived"
+    }
+  ]
+}

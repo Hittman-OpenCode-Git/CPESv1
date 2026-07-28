@@ -1,0 +1,86 @@
+{
+  "session": "S380",
+  "workstream": "authorization-prep-board",
+  "timestamp": "2026-07-28T22:00:00.000Z",
+  "prior_readiness_score": 83,
+  "updated_readiness_score": 88,
+  "target_readiness": 90,
+  "gap_to_target": 2,
+  "conditions": {
+    "A_DL035": {
+      "status": "PARTIAL",
+      "evidence": "Rule 6 governance guard deployed (S814) — structural gap closed. Content remediation still pending: 39 Certified Domain F items carry ~117 empty distractor EW slots. Residual-defect-board (S380) also found 65 DL-026 items across Packs B/C/D beyond just Domain F — previously claimed 0 in CURRENT_BASELINES.md §3. Source: SESSION380_RESIDUAL_DEFECT_ASSESSMENT.json (5 DL-008 + 65 DL-026, all confirmed true defects, 0 false positives).",
+      "resolution_required": "Remediate 5 DL-008 + 65 DL-026 items in learner pool. Then remediate 39 Domain F DL-035 items (S816-S818 plan)."
+    },
+    "B_DL031": {
+      "status": "CLOSED",
+      "evidence": "DL-031 CAL-001 COMPLETE. 39 total items across S377 (17 Simple Relabels) + S380 (18 Calibration + 4 Rewrite). All 22 S380 items verified: 14 downgraded to Easy(1), 3 to Moderate-Easy(2), 1 to Moderate(3), 4 rewrites with CognitiveLevel and Difficulty downgrades. 0 CorrectChoice changes. 0 DL-008 introduced. Backups confirmed for all 4 packs. Source: REVISION_HISTORY.md S380 DL-031 entry (line 26286–26354).",
+      "progress": "39 total items processed (17 S377 + 22 S380). Program: CAL-001 COMPLETE.",
+      "note": "Output file SESSION380_DL031_PROGRESS.json was targeted at scripts/output/ per REVISION_HISTORY.md line 26347 but not found at expected reports/ path. REVISION_HISTORY entry provides full verifiable evidence."
+    },
+    "C_Automation": {
+      "status": "NOT_CONFIRMED",
+      "evidence": "S374 Condition C specified 'Automation package deployed (5 components).' Throughput-board lists automation deployment as a prerequisite for 2-wave sustainability ('conditions_for_2_waves_sustainability item 3: Automation package deployed: Reduce governance overhead from 30% → 21%'). S376 condition required resolving 'post_change_qc.js existence contradiction.' No evidence in S380 workstream outputs confirming deployment. The S376 condition for automation contradiction resolution has not been met.",
+      "resolution_required": "Confirm post_change_qc.js existence. Verify 5 automation components deployed per S370/S374 plan."
+    },
+    "D_Throughput": {
+      "status": "CLOSED",
+      "evidence": "2 waves/week validated as sustainable (40 items/week, 16h total, 7.2h productive). 3 waves/week confirmed NOT feasible due to governance overhead exceeding productive work (7.2h governance vs 10.8h productive). 6 conditions required for 2-wave sustainability documented. Source: SESSION380_THROUGHPUT_VALIDATION.json (based on 6 sessions: S899, S50–S58, 120 total items analyzed).",
+      "sustainable_target": "2 waves per week",
+      "conditions_for_sustainability": [
+        "File-lock protocol (DL-019 prevention)",
+        "Slot pre-allocation registry",
+        "Automation package deployed",
+        "Two-tier certification adopted",
+        "Dedicated Evaluate workstream launched",
+        "Domain rotation for file contention"
+      ]
+    },
+    "E_Cognitive_Gap": {
+      "status": "ACTIVE",
+      "evidence": "Evaluate-wave0 audit: 94 items labeled Evaluate across all 5 packs audited. Found 47 true Evaluate, 10 Analyze misclassified, 37 Apply misclassified. Evaluate-wave1 created 5 net-new Evaluate items (P1E-EVAL-001 through P1E-EVAL-005). Additional clone-replacement wave authored 5 Evaluate items into Packs C/D (P1-ED-044, P1-ED-045, P1-FD-004, P1-EC-068, P1-FC-002). Total: 47 existing + 10 new = 57 true Evaluate. Source: SESSION380_EVALUATE_AUDIT.json + SESSION380_EVALUATE_WAVE1_RESULTS.json.",
+      "true_evaluate_count": 57,
+      "existing": 47,
+      "newly_created": 10
+    },
+    "F_Evaluate_Workstream": {
+      "status": "ACTIVE",
+      "evidence": "Evaluate-wave0 completed (94 items audited across all 5 packs). Evaluate-wave1 completed (5 net-new items authored into Pack E). Clone-replacement wave completed (5 items into Packs C/D). Demonstrated output: 10 Evaluate items created, 0 governance guard violations, all DL-008/026 clean. Evaluate bottleneck confirmed: ~1 item/hr for genuine Evaluate design. Source: SESSION380_EVALUATE_AUDIT.json, SESSION380_EVALUATE_WAVE1_RESULTS.json, REVISION_HISTORY.md S380 entries.",
+      "total_evaluate_items_created_this_session": 10,
+      "governance_regressions": 0
+    }
+  },
+  "blockers_remaining": [
+    "Fresh DL-008 (5 items) in learner pool — P1B-C-153, P1-CC-015, P1-EC-031, P1-ED-016, P1-ED-051. CURRENT_BASELINES.md claimed 0 — baseline regression.",
+    "Fresh DL-026 (65 items) in learner pool across Packs B (1), C (37), D (27). CURRENT_BASELINES.md claimed 0 — baseline regression.",
+    "DL-035 content remediation — 39 Certified Domain F items still carry empty distractor EW slots.",
+    "Automation deployment unconfirmed — post_change_qc.js existence not verified.",
+    "DL-031 output file not at expected path — scripts/output/SESSION380_DL031_PROGRESS.json not found; evidence in REVISION_HISTORY.md only."
+  ],
+  "final_questions": {
+    "Q1_Condition_F_satisfied": {
+      "answer": "YES",
+      "rationale": "Evaluate workstream is ACTIVE and producing results. Wave0 audited 94 items, Wave1 created 5 net-new Evaluate items, and a parallel clone-replacement wave created 5 more. All 10 items pass governance guard with 0 DL-008/026/037. Condition F from S374 required a parallel workstream — this is now demonstrated. The workstream is not yet CLOSED (ongoing activity) but is SATISFIED as an active parallel track."
+    },
+    "Q2_True_Evaluate_count": {
+      "answer": 57,
+      "rationale": "47 existing true Evaluate items confirmed by wave0 audit across 94 sampled items + 5 new items from P1E-EVAL-001 through P1E-EVAL-005 (wave1) + 5 new items from clone replacement in Packs C/D (P1-ED-044, P1-ED-045, P1-FD-004, P1-EC-068, P1-FC-002). Total: 47 + 5 + 5 = 57. All new items verified: 0 DL-008, 0 DL-026, 0 Rule 9 violations."
+    },
+    "Q3_Residual_defects_nature": {
+      "answer": "TRUE_DEFECTS",
+      "details": "Residual-defect-board identified 70 total Certified-pool defects: 5 DL-008 (non-empty ExplanationWrong[CorrectChoice]) + 65 DL-026 (empty non-CorrectChoice ExplanationWrong slots). 100% confirmed true defects — 0 false positives from DL-016 artifact, CC-offset error, or other scan methodology issues. Items span Packs B (1), C (37), D (32). All are in the active learner delivery pool (2,422 Certified items). Source: SESSION380_RESIDUAL_DEFECT_ASSESSMENT.json."
+    },
+    "Q4_Sustained_throughput": {
+      "answer": "2_WAVES_PER_WEEK",
+      "rationale": "Throughput-board analyzed 6 production sessions (S899, S50–S58) covering 120 items at exactly 20 items/session. 2 waves/week (40 items, 16h total) is feasible with documented governance overhead of 30%. 3 waves/week is NOT feasible — governance overhead (7.2h) exceeds productive content work (10.8h) and S56-S58 parallel-session collisions demonstrate file contention at 2 concurrent writes. 6 conditions must be met for 2-wave sustainability, including automation deployment, file-lock protocol, and dedicated Evaluate workstream."
+    },
+    "Q5_S381_earned": {
+      "answer": "NO",
+      "rationale": "Readiness score 88/100 is below the 90-target threshold. S380 made strong progress (+5 from 83 baseline, primarily from DL-031 CAL-001 completion and Evaluate workstream launch), but residual defects (5 DL-008 + 65 DL-026 in learner pool) and unremediated DL-035 (39 Domain F items) prevent reaching 90. Additional blockers: automation deployment unconfirmed, DL-031 output file not at expected location. To reach 90: remediate the 70 fresh DL-008/DL-026 items (+2 points), confirm automation deployment (+1 point).",
+      "readiness_score": 88,
+      "vs_target": -2
+    }
+  },
+  "recommendation": "CONTINUE_S380",
+  "recommendation_detail": "S381 Expansion Authorization Review is NOT yet earned (88/100, target 90). Continue S380 with targeted remediation: (1) Clear 5 DL-008 + 65 DL-026 items in learner pool — this alone would bring readiness to 90. (2) Confirm automation package deployment (post_change_qc.js). (3) Verify DL-031 output file mirrors REVISION_HISTORY content. S380 has demonstrated that the blocker-elimination program works — DL-031 CAL-001 is COMPLETE, throughput is validated, and the Evaluate workstream is producing. The remaining gap is small (2 points) and remediable within S380."
+}

@@ -6617,7 +6617,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "top down budgeting characteristic",
         "UniqueConceptKey": "B-C054-top-down-budgeting-characteristic",
         "LOSTag": "B Planning and budgeting",
-        "Difficulty": "Difficult",
+        "Difficulty": "Moderate-Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Everfern's senior executives set budget targets and impose them on department managers with minimal input. What is a key drawback of this approach?",
@@ -6656,7 +6656,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "Top-down budgeting does not guarantee accuracy. Senior executives may lack detailed operational knowledge about departmental constraints, market conditions, and resource requirements. Without input from lower-level managers, budget targets are more likely to be unrealistic.",
         "ExplanationWrongD": "Imposing targets from above does not guarantee faster achievement of financial goals. When managers have no ownership of the budget, they may lack commitment to achieving targets they view as unrealistic. The resulting lack of engagement can impede rather than accelerate progress.",
         "question_state": "Certified",
-        "DifficultyScore": 4,
+        "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
     {
@@ -18620,7 +18620,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "Monitoring deficiency aggregation and reporting thresholds",
         "UniqueConceptKey": "E-C019-monitoring-deficiency-aggregation",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Difficult",
+        "Difficulty": "Moderate",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Novara Financial Services operates three business lines — retail banking, wealth management, and commercial lending — each independently rated as low-risk by the internal control monitoring function. Over the past six quarters, the internal audit team has identified the same IT access control weakness in all three divisions: temporary contractor accounts that remain active an average of 42 days after contract termination. Each division's quarterly monitoring report classifies the finding as \"low severity\" because the exposure per account is below $5,000 and no actual loss has been recorded. However, when aggregated across the three divisions, 127 dormant accounts with cumulative transaction exposure of $1.8 million remain active. Novara COSO monitoring framework requires escalation only for \"high\" or \"critical\" severity findings. Under COSO Principle 17, which of the following best describes the monitoring deficiency at Novara?",
@@ -18659,10 +18659,11 @@ const MCQ_BANK_C = [
         "ExplanationWrongB": "This choice identifies a symptom (detection timing) rather than the root cause. While more frequent monitoring might detect contractor access issues sooner, the fundamental failure is not about timing — it is about the monitoring framework's inability to recognize that 127 instances of the same control failure constitute a systemic breakdown. Even monthly monitoring would still classify each finding as low severity under Novara's existing criteria, because the aggregation step is missing at every monitoring frequency. Increasing monitoring cadence without fixing the aggregation methodology would simply generate more low-severity findings that never trigger escalation.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "This choice proposes changing who conducts monitoring rather than addressing how monitoring conclusions are reached. The problem is not that internal audit produced inconsistent ratings — the ratings were consistent across all three divisions (all classified as low severity). The problem is that the severity classification methodology itself is defective because it cannot detect the aggregated significance of related deficiencies. Replacing internal audit with an external firm would produce the same outcome if the external firm applies the same entity-level severity criteria that lack an aggregation mechanism. COSO Principle 17 focuses on the quality and completeness of the monitoring evaluation process, not on who performs it.",
-        "DifficultyScore": 4,
-        "CognitiveLevel": "Analyze",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
         "upgrade_note": "S52 Phase 4 — Analyze replacement for archived P1-EC-019 (DL-012 rotation clone)"
-    },
+    ,
+        "dl031_review_note": "Downgraded from Analyze->Apply — stem describes COSO Principle 17 deficiency aggregation scenario (DL-031)"},
     {
         "Part": 1,
         "Section": "E",
@@ -21094,37 +21095,36 @@ const MCQ_BANK_C = [
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.068 segregation cash custody recording",
-        "MicroTopic": "segregation cash custody recording",
-        "UniqueConceptKey": "E-C068-segregation-cash-custody-recording",
-        "LOSTag": "E Internal controls",
-        "Difficulty": "Easy",
+        "Topic": "E.068 COSO Principle 2 — board oversight — control environment — independence of compliance and audit functions",
+        "MicroTopic": "Control environment evaluation — structural conflicts and fraud governance failure",
+        "UniqueConceptKey": "E-C068-control-environment-independence-evaluation",
+        "LOSTag": "E.2 COSO Internal Control Framework",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Stonebrook has the same employee both handling incoming cash receipts and recording them in the accounting records. What control weakness does this create?",
+        "Stem": "Brightwater Capital is a publicly traded asset management firm with $12 billion under management. Following the discovery that a senior portfolio manager had been front-running client trades for two years (generating $3.7 million in personal profits through 140 unauthorized trades), the board commissioned an independent investigation. The investigation revealed: (1) the portfolio manager reported to the Chief Investment Officer, who also served as Chief Compliance Officer — a dual role the board approved three years ago as a cost-saving measure; (2) the compliance department's trade surveillance system flagged 17 of the 140 front-running trades with 'high confidence' alerts, but the compliance analyst who reviewed them reported to the CIO/CCO and was instructed that these were 'false positives from the new algorithm' and to close the alerts without escalation; (3) the board's audit committee met four times per year, and the CIO/CCO presented a compliance summary at each meeting reporting 'no material compliance exceptions'; (4) the internal audit function consisted of one director-level position reporting administratively to the CFO and functionally to the audit committee, but the audit committee chair had not held a private session with the internal audit director in 18 months; (5) the firm's code of ethics was distributed annually and required acknowledgment, but no training on identifying or reporting suspicious trading activity had been conducted. Under the COSO Internal Control Framework, which control environment deficiency most directly enabled the fraud to remain undetected for two years?",
         "Choices": {
-            "A": "A physical access control weakness only",
-            "B": "An IT general control deficiency only",
-            "C": "An overly strong control environment with too many checks",
-            "D": "A lack of segregation of duties between asset custody and recordkeeping, increasing the risk of concealed theft or errors"
+            "A": "The dual role of the CIO serving simultaneously as Chief Compliance Officer — this structural conflict of interest eliminated independent compliance oversight, as the person responsible for investment performance was also responsible for policing investment activities and was positioned to override compliance alerts implicating his own department.",
+            "B": "The compliance surveillance system generating 17 high-confidence false-positive alerts — a properly calibrated surveillance system should not produce false positives, and the high false-positive rate desensitized compliance staff to legitimate alerts, allowing the front-running trades to continue undetected.",
+            "C": "The board's audit committee meeting only four times per year — quarterly meetings are insufficient for effective governance oversight under COSO Principle 2, which requires the board of directors to convene at least monthly to exercise meaningful oversight of internal control over financial reporting and compliance.",
+            "D": "The internal audit function consisting of only one director-level position — COSO Principle 3 requires internal audit departments to maintain a minimum of three full-time equivalent positions to provide adequate and independent coverage for entities with assets exceeding $10 billion."
         },
-        "CorrectChoice": "D",
-        "ExplanationCorrect": "Combining custody of cash with the recordkeeping function allows an employee to both misappropriate cash and conceal the theft in the records, violating segregation of duties.",
+        "CorrectChoice": "A",
+        "ExplanationCorrect": "Under COSO Principle 2, the board of directors should demonstrate independence from management and exercise oversight of the development and performance of internal control. A foundational aspect of board oversight is ensuring that the organizational structure supports independent compliance and risk management functions. The board's approval of the CIO simultaneously serving as CCO created a structural control environment deficiency because it combined two inherently conflicting roles: the CIO is responsible for generating investment returns (a performance objective measured by portfolio growth), while the CCO is responsible for ensuring that investment activities comply with regulatory requirements and ethical standards (a control objective). This dual role eliminated the independence of the compliance function at its highest level. The compliance analyst who correctly flagged 17 trades was overruled by the person whose department generated the suspicious activity — the compliance function had no independent authority to escalate concerns above the person being monitored. The board compounded this deficiency by relying on the CIO/CCO's self-reported compliance summaries without independent verification from internal audit (whom the audit committee chair had not met privately in 18 months). Under COSO, the control environment is the foundation for all other components — when the tone at the top permits a structural conflict between performance objectives and control responsibilities, the entire internal control system is compromised regardless of how well-designed the other components may be. This structural deficiency was the enabling condition: without independent compliance oversight, the surveillance alerts were neutralized, the audit committee received sanitized information, and the fraud continued undetected for two years. The business lesson is that separation of performance and compliance oversight is not a cost to be optimized — it is a governance requirement that protects the organization's integrity.",
         "StudyLinks": [
+            {
+                "label": "COSO Internal Control — Integrated Framework (2013), Principle 2: Board Oversight",
+                "url": "https://www.coso.org/guidance-on-ic"
+            },
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
                 "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "COSO Internal Control Framework overview",
-                "url": "https://www.coso.org/guidance-on-ic"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-068",
-        "question_state": "Archived",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -21134,11 +21134,13 @@ const MCQ_BANK_C = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (An IT general control deficiency only) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that a lack of segregation of duties between asset custody and recordkeeping, increasing the risk of concealed theft or errors. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongC": "Option C (An overly strong control environment with too many checks) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that a lack of segregation of duties between asset custody and recordkeeping, increasing the risk of concealed theft or errors. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongD": "",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongB": "Option B blames the surveillance system for the fraud when the investigation's own evidence shows the system worked as designed — it correctly flagged 17 of 140 suspicious trades with high confidence. The failure was not in the detection technology but in the organizational response to the detections. The compliance analyst identified the alerts as warranting investigation and was overruled by the CIO/CCO. A properly functioning surveillance system coupled with an absent escalation path produces the same result as no surveillance system at all — the alerts existed but were suppressed. A candidate selecting this option may be attributing the fraud to a technology failure (easier to fix) rather than the governance failure (harder to acknowledge) that allowed a structural conflict of interest to disable the compliance function.",
+        "ExplanationWrongC": "Option C asserts that quarterly audit committee meetings are per se insufficient under COSO. COSO does not prescribe a specific meeting frequency — it requires that the board exercise oversight commensurate with the organization's size, complexity, and risk profile. For a $12 billion asset manager, quarterly meetings with substantive agendas may be sufficient if supported by effective ongoing communication between meetings. The more relevant deficiency is the content of those meetings: the audit committee received compliance summaries prepared and presented by the person whose own department was the subject of compliance monitoring — a self-reported, unverified information source. A candidate selecting this option may be applying a bright-line frequency rule to a governance standard that evaluates oversight effectiveness qualitatively rather than by meeting count.",
+        "ExplanationWrongD": "Option D fabricates a minimum headcount requirement that does not exist in COSO, PCAOB standards, or the IIA Standards. COSO Principle 3 requires that management establish an organizational structure that supports the achievement of objectives — it does not prescribe a minimum internal audit staff size. For many organizations, a single internal audit director with appropriate authority, independence, and access to the board can provide effective assurance, particularly when supplemented by co-sourcing arrangements with external firms. The deficiency identified in the investigation was not the size of internal audit but the audit committee chair's failure to maintain an open, private communication channel with the internal audit director — a governance practice failure, not a staffing failure. A candidate selecting this option may be misapplying arbitrary structural benchmarks to a principles-based framework.",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S380 Evaluate Wave 1 — Evaluate replacement for archived P1-EC-068 (DL-012 rotation clone)"
     },
     {
         "Part": 1,
@@ -21194,22 +21196,22 @@ const MCQ_BANK_C = [
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.070 segregation cash custody recording",
-        "MicroTopic": "segregation cash custody recording",
-        "UniqueConceptKey": "E-C070-segregation-cash-custody-recording",
+        "Topic": "E.070 COSO Principle 12 -- authorization scope conflict from combined vendor addition and purchase order approval rights",
+        "MicroTopic": "Authorization scope conflict self-authorizing loop",
+        "UniqueConceptKey": "E-C070-authorization-scope-conflict",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Umbercrest has the same employee both handling incoming cash receipts and recording them in the accounting records. What control weakness does this create?",
+        "Stem": "Atherton Industries, a mid-market industrial equipment manufacturer with $340 million in annual purchases, grants its purchasing manager, David Okonkwo, two separate authorization rights: the ability to add new vendors to the approved vendor master file for any vendor with projected annual spend under $500,000, and the ability to approve individual purchase orders up to $75,000 against any approved vendor. Over a 14-month period, Okonkwo added 8 new vendors to the master file — 4 of which were later determined to be entities owned by his brother-in-law — and subsequently approved 47 purchase orders totaling $3.1 million to those 8 vendors. Internal audit, led by Controller Margaret Strauss, found that 31 of the 47 purchase orders lacked verifiable goods-receipt documentation. Okonkwo maintains that all transactions were within his delegated authority limits because each individual purchase order was under $75,000 and each vendor addition was within the $500,000 annual spend threshold. Under COSO Principle 12, which statement best evaluates the control deficiency at Atherton?",
         "Choices": {
-            "A": "A physical access control weakness only",
-            "B": "A lack of segregation of duties between asset custody and recordkeeping, increasing the risk of concealed theft or errors",
-            "C": "An overly strong control environment with too many checks",
-            "D": "An IT general control deficiency only"
+            "A": "Okonkwo's actions were within his delegated authority limits, so no control deficiency exists — each purchase order was under $75,000 and each vendor addition was within the $500,000 annual spend threshold, satisfying the organization's stated authorization framework.",
+            "B": "The primary deficiency is the absence of timely post-transaction review by the controller — a robust detective monitoring program would have identified the related-party vendor pattern and the unverifiable receipts before aggregate losses reached $3.1 million.",
+            "C": "The control deficiency arises from a conflict within the authorization dimension of control activities — Okonkwo held two authorization rights that, when combined, created a self-authorizing loop enabling him to unilaterally direct $3.1 million to related-party vendors without any independent second-level approval.",
+            "D": "The deficiency is that the purchase order approval threshold was set too high — reducing the per-PO limit from $75,000 to $25,000 would have required secondary approval, disrupting the self-authorizing pattern by mandating independent review on the transactions that enabled the scheme."
         },
-        "CorrectChoice": "B",
-        "ExplanationCorrect": "Combining custody of cash with the recordkeeping function allows an employee to both misappropriate cash and conceal the theft in the records, violating segregation of duties.",
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "COSO Principle 12 requires the organization to deploy control activities through policies and procedures that help ensure management's directives to mitigate risks are carried out. A critical point of focus under this principle is that authorization controls must be designed so that no single individual holds conflicting authorization rights that, when exercised together, eliminate the need for independent approval — effectively creating an unbounded authorization pathway. At Atherton Industries, Okonkwo held two authorization rights: vendor master file additions (up to $500,000 annual spend per vendor) and purchase order approval (up to $75,000 per PO). Individually, each right appeared limited. Together, they formed a self-authorizing loop: he could add a vendor — including four entities controlled by his brother-in-law — to the approved master file, and then approve purchase orders to that same vendor, without any second person reviewing either action. The result was 47 purchase orders totaling $3.1 million over 14 months, with 31 of 47 lacking verifiable goods-receipt documentation. Multi-factor analysis confirms this conclusion. First, the 8-vendor addition pattern with 4 related-party entities demonstrates systematic exploitation rather than isolated oversight. Second, the 14-month duration indicates the deficiency persisted because no independent control intercepted the loop. Third, while each individual purchase order was under $75,000, the aggregation of 47 POs totaling $3.1 million demonstrates that per-transaction limits serve no meaningful constraint when the same individual controls both vendor eligibility and payment authorization. Fourth, the 31 unverifiable receipts provide objective evidence that value was lost, not merely that a theoretical segregation gap existed. This is an authorization scope conflict, not a segregation-of-duties issue involving custody vs. recording — the deficiency is entirely within the authorization dimension because both rights are approval authorities, and granting both to one person creates a self-contained authorization chain. In practice, a controller should map all authorization rights held by each individual and assess whether any combination creates a self-authorizing pathway. Vendor master file maintenance and purchase order approval must be held by different individuals, or at minimum, purchase orders to vendors added by the same individual within a defined lookback period should require secondary independent approval. A common exam trap is to evaluate authorization limits in isolation — checking whether each transaction fell within its stated threshold — rather than analyzing whether the combination of authorization rights creates an effectively unlimited authorization pathway.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -21224,7 +21226,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-070",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -21233,33 +21235,34 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongA": "Option A correctly identifies that Okonkwo's individual transactions were within his delegated authority limits — each purchase order was under $75,000 and each vendor addition was within the $500,000 annual spend threshold. However, this analysis commits the error of evaluating authorization limits in isolation rather than in combination. The control deficiency is not that Okonkwo exceeded any single limit; it is that he held two authorization rights that, when exercised together, eliminated the requirement for independent approval. He could add a related-party vendor to the master file and then approve purchase orders to that vendor, creating a fully self-contained authorization chain. The 31 unverifiable receipts, 4 related-party vendors, and $3.1 million in aggregate purchases demonstrate that the self-authorizing pathway was exploited. Under COSO Principle 12, control activities must be designed so that authorization rights do not conflict — holding the right to both define the approved vendor population and direct payments to that population is a structural authorization conflict regardless of whether individual per-transaction limits are formally observed. A candidate selecting this option may be evaluating authorization compliance at the individual transaction level rather than assessing whether the combination of rights creates an effectively unlimited authorization pathway that renders per-transaction limits meaningless as a control.",
+        "ExplanationWrongB": "Option B correctly identifies that detective monitoring could have surfaced the related-party vendor pattern and the unverifiable receipts before aggregate losses reached $3.1 million. However, this characterization misidentifies the nature and timing of the control deficiency. COSO Principle 12 addresses control activities, which are preventive by design and deployed at the point in the process where the risk originates. The deficiency here is that the preventive authorization structure was flawed from the outset — one individual could complete the entire purchase authorization chain without independent review. To characterize the primary deficiency as a failure of detective monitoring, which falls under COSO Principle 16, is to accept that $3.1 million in questionable purchases would occur and only be detected after the fact. COSO's integrated framework expects control activities to prevent or detect errors and irregularities at the source; monitoring is a separate component that assesses whether controls are operating as designed. Moreover, the scenario indicates that Controller Margaret Strauss did eventually discover the issue — the monitoring function ultimately worked. The question asks what the control deficiency is that enabled the scheme, not what monitoring could have caught it sooner. A candidate selecting this option may be conflating the control activities component (Principle 12) with the monitoring activities component (Principle 16) and treating detective monitoring as a surrogate for preventive authorization design.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "Option D (An IT general control deficiency only) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that a lack of segregation of duties between asset custody and recordkeeping, increasing the risk of concealed theft or errors. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongD": "Option D correctly identifies that the $75,000 purchase order threshold was a contributing factor — lowering it to $25,000 would have required secondary approval on many of the 47 transactions totaling $3.1 million, potentially disrupting or preventing the scheme. However, this approach addresses a symptom rather than the root cause and mischaracterizes the nature of the control deficiency. The structural flaw is not that the threshold was calibrated at the wrong dollar amount; it is that the same individual held both vendor addition authority and purchase order approval authority. If the threshold were lowered to $25,000 but Okonkwo still controlled vendor additions, he could adapt by issuing purchase orders at $24,900 each — the aggregation risk would persist because he could still direct payments to vendors he himself approved. COSO Principle 12 addresses authorization design holistically, emphasizing that conflicting authorization rights must be separated, not merely that per-transaction limits must be calibrated. The dollar amount of any individual threshold is secondary to the question of whether the combination of authorization rights creates a self-authorizing pathway that no threshold adjustment can remedy. A candidate selecting this option may be focusing on a numerical parameter adjustment as a control fix rather than analyzing the authorization architecture that made any threshold level vulnerable to exploitation by a single individual holding multiple conflicting authorization rights.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B — DL-012 clone replacement"
     },
     {
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.071 remediation of control deficiency",
-        "MicroTopic": "remediation of control deficiency",
-        "UniqueConceptKey": "E-C071-remediation-of-control-deficiency",
+        "Topic": "E.071 COSO Principle 16 — ongoing vs separate evaluation — self-assessment objectivity",
+        "MicroTopic": "COSO Principle 16 ongoing vs separate evaluation self-assessment objectivity",
+        "UniqueConceptKey": "E-C071-coso-principle-16-ongoing-vs-separate-evaluation",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Vinehollow identifies a control deficiency during its internal control assessment and assigns an owner, a corrective action plan, and a target completion date. What internal control process is being followed?",
+        "Stem": "Strathmore Industrial Supply, a distributor of specialized manufacturing components with annual revenues of $340 million, has relied on quarterly control self-assessment questionnaires completed by 47 process owners across its procurement, treasury, and financial reporting functions to monitor internal control effectiveness. For three consecutive fiscal years, every self-assessment returned a rating of 'Effective' across all control objectives. During a routine external audit in Q1 of the fourth year, the engagement team independently identified a pattern of unauthorized purchase order approvals that had been occurring at an average rate of $51,000 per month since the self-assessment program began. The aggregate undetected loss totaled $1.84 million, exceeding the company's materiality threshold of $750,000. Internal Audit Director Maria Voss proposes replacing the self-assessment program with separate evaluations that would include independent transaction testing, surprise inventory counts, and process walkthroughs conducted by internal audit staff who do not have operational responsibility for the controls being tested. The separate evaluation program would cost approximately $195,000 annually. CFO Robert Haldane opposes the switch, arguing that the self-assessment program's administrative cost is near zero and that the questionnaire format provides adequate coverage. Which recommendation best evaluates the monitoring approach under COSO Principle 16?",
         "Choices": {
-            "A": "Control environment assessment, which is unrelated to specific deficiencies",
-            "B": "External audit sign-off, which requires no internal follow-up",
-            "C": "Remediation tracking, ensuring identified deficiencies are corrected and verified",
-            "D": "Risk acceptance, which tolerates the deficiency permanently"
+            "A": "Retain the self-assessment questionnaire program but require process owners to sign a formal attestation of accuracy, because COSO Principle 16 permits ongoing monitoring as a sufficient evaluation method and the $195,000 annual cost of a separate evaluation program is disproportionate to a loss that represents only 0.54% of annual revenue.",
+            "B": "Adopt the separate evaluation program with independent testing because COSO Principle 16 requires that monitoring evaluations be performed by personnel who possess sufficient objectivity — process owners who design and operate controls cannot objectively assess their own effectiveness, and the $1.84 million loss over three years demonstrates that self-assessment alone failed to detect a material control deficiency.",
+            "C": "Supplement the self-assessment questionnaires with annual external audit procedures only, because COSO Principle 16 assigns monitoring responsibility to the external auditor when internal resources are limited and the $195,000 cost of a separate internal evaluation program duplicates assurance already provided by the external audit engagement.",
+            "D": "Maintain the self-assessment program but rotate process owners so that each control is reviewed by a peer from a different functional area, because COSO Principle 16's objectivity requirement can be satisfied through cross-functional peer review without incurring the $195,000 cost of a formal internal audit separate evaluation program."
         },
-        "CorrectChoice": "C",
-        "ExplanationCorrect": "Remediation tracking assigns ownership, corrective action steps, and deadlines to ensure identified control deficiencies are actually fixed and verified.",
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "COSO Principle 16 requires that the organization select, develop, and perform ongoing and/or separate evaluations to ascertain whether the components of internal control are present and functioning. A fundamental requirement embedded in Principle 16 is that monitoring evaluators must possess sufficient objectivity to provide a reliable assessment of control effectiveness. When process owners evaluate the controls they themselves design and operate, an inherent conflict of interest exists — reporting a deficiency may reflect negatively on their performance, trigger additional remediation work, or invite scrutiny of their function. In this scenario, Strathmore's 47 process owners reported 'Effective' ratings across three consecutive fiscal years while a $1.84 million unauthorized purchase order scheme operated undetected throughout that entire period. This is not a coincidence — it is evidence that self-assessment without independent verification systematically fails to detect control deficiencies because the evaluator has a personal stake in the outcome. COSO Principle 16 explicitly contemplates that separate evaluations — periodic assessments performed by objective personnel who are independent of the control activities being evaluated — may be necessary when ongoing monitoring mechanisms lack sufficient objectivity. Internal Audit Director Maria Voss's proposal to deploy internal audit staff who have no operational responsibility for the tested controls directly addresses this objectivity gap. The cost-benefit analysis strongly supports the separate evaluation program: $195,000 annually against a demonstrated loss rate of $51,000 per month yields a payback period of less than four months. CFO Haldane's framing of the questionnaire program as 'near zero' cost ignores the $1.84 million cost of undetected control failure. A common exam trap is treating monitoring as a binary question (monitoring exists vs. monitoring does not exist) rather than evaluating monitoring quality. COSO Principle 16 evaluates monitoring design — the frequency, objectivity, and competence of evaluations — not merely monitoring presence. Candidates should also distinguish between ongoing monitoring (embedded in operations, performed by process owners during normal activities) and separate evaluations (periodic, performed by independent evaluators). Both are permitted under Principle 16, but only the latter satisfies the objectivity requirement when process owners have an inherent conflict of interest in reporting on their own controls.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -21274,7 +21277,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-071",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -21283,12 +21286,13 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (External audit sign-off, which requires no internal follow-up) represents a plausible misconception. Under Electronic data interchange (EDI), the correct analysis leads to the conclusion that remediation tracking, ensuring identified deficiencies are corrected and verified. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongA": "Option A correctly recognizes that COSO Principle 16 permits ongoing monitoring as a legitimate evaluation mechanism and that cost considerations are relevant to monitoring design. However, requiring a formal attestation does not resolve the fundamental objectivity defect. A process owner signing an attestation that their own controls are effective is still self-certifying — the attestation adds a procedural formality but does not introduce independent verification of the underlying control performance. COSO Principle 16's objectivity requirement is substantive, not procedural: the evaluator must be positioned to provide an unbiased assessment, and a signature line does not change the evaluator's incentives or access to information. The $1.84 million loss accumulated over three years precisely because 47 process owners repeatedly certified controls that were not functioning — the same questionnaire with an added attestation would have produced the same misleading results. The candidate also errs in characterizing the $195,000 program cost as disproportionate to a 0.54%-of-revenue loss. The relevant cost-benefit comparison is the $195,000 annual program cost versus the $612,000 annual loss rate, which yields a payback period of under four months. A candidate selecting this option may correctly understand that ongoing monitoring has a legitimate role in the COSO framework but incorrectly conclude that an incremental procedural enhancement — rather than independent evaluation — can address the objectivity deficiency that caused the monitoring failure.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C mischaracterizes the COSO monitoring framework by assigning primary monitoring responsibility to the external auditor. Under COSO, monitoring is fundamentally a management responsibility — management is accountable for designing, implementing, and evaluating the system of internal control. The external audit provides independent assurance on financial statement presentation and may report on internal control matters identified during the engagement, but the external auditor is not a substitute for management's own monitoring function. COSO Principle 16 addresses the organization's monitoring activities, not the external auditor's procedures. Relying solely on an annual external audit cycle would leave approximately 11 to 12 months between external review procedures — precisely the type of detection gap that allowed Strathmore's $1.84 million scheme to persist through three years of self-assessments. The candidate also errs in characterizing the $195,000 internal separate evaluation cost as duplicative of the external audit. Management monitoring (Principle 16) assesses control effectiveness for operational, compliance, and reporting purposes continuously throughout the year; the external audit provides point-in-time assurance on financial reporting. These are complementary governance mechanisms with distinct objectives, scopes, and frequencies, not duplicative functions. A candidate selecting this option may be conflating the external auditor's reporting on internal controls under auditing standards with management's ongoing responsibility under COSO to monitor the internal control system's effectiveness across all objectives.",
+        "ExplanationWrongD": "Option D proposes a creative middle-ground solution that correctly identifies the core problem — process owners assessing their own controls — and attempts to address it without the cost of a full internal audit separate evaluation program. The logic is appealing: a peer from a different function should be more objective than the process owner themself. However, COSO Principle 16's objectivity requirement is not satisfied by substituting one operational insider for another. While a procurement manager reviewing a treasury control may be less directly conflicted than the treasury manager self-assessing, both reviewers are operational personnel whose career interests, departmental relationships, and organizational incentives are aligned with reporting favorable control assessments. Neither possesses the structural independence that COSO Principle 16 contemplates for separate evaluations. A peer from another department remains subject to the same organizational pressures that caused 47 process owners to report 'Effective' ratings for three years — the self-assessment culture that suppressed deficiency reporting is an organizational phenomenon, not merely an individual one. The $195,000 cost of a formal internal audit separate evaluation program is the price of genuine independence: evaluators who report through a different chain of command, whose performance is not measured by the control objectives they assess, and whose professional standards require objective evidence rather than self-reported assertions. A candidate selecting this option may correctly diagnose that the self-assessment format is the fundamental problem, but incorrectly conclude that any evaluator other than the process owner satisfies the COSO objectivity standard.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60B — DL-012 clone replacement"
     },
     {
         "Part": 1,
@@ -21344,22 +21348,22 @@ const MCQ_BANK_C = [
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.073 remediation of control deficiency",
-        "MicroTopic": "remediation of control deficiency",
-        "UniqueConceptKey": "E-C073-remediation-of-control-deficiency",
+        "Topic": "E.073 COSO Principle 11 -- ITGC Change Management",
+        "MicroTopic": "COSO Principle 11 ITGC change management emergency bypass",
+        "UniqueConceptKey": "E-C073-coso-principle-11-itgc-change-management",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Ashenford identifies a control deficiency during its internal control assessment and assigns an owner, a corrective action plan, and a target completion date. What internal control process is being followed?",
+        "Stem": "Pinnacle Assurance Group's IT Director, Robert Kwan, identified a critical payroll system defect at 11:15 PM on March 14: the biweekly payroll run scheduled for midnight would skip 340 employees. Kwan authorized an emergency patch deployment, bypassing the company's formal change management process -- no testing, no CAB approval, no rollback plan, no peer code review. The patch was deployed to production within 90 minutes. The payroll run completed successfully for all 3,800 employees. However, the patch contained a logic error: it reprocessed the prior period's pay file for the affected 340 employees, resulting in duplicate paychecks totaling $1,100,000. Recovery efforts identified that 195 employees (57%) had already spent the overpaid funds, requiring individual repayment negotiations stretching over eight weeks at an administrative recovery cost of $85,000. Internal Audit Director Catherine Okonkwo's report found that the incident was a direct consequence of bypassing change management controls. Pinnacle's existing change management policy included an emergency exception provision requiring (i) documented manager approval, (ii) peer review by a second developer, and (iii) a mandatory post-implementation review within 24 hours. None of these three requirements were met. Kwan argued that 340 employees missing payroll justified immediate action. Which statement best supports Okonkwo's finding that the root cause was a change management control failure under COSO Principle 11?",
         "Choices": {
-            "A": "Remediation tracking, ensuring identified deficiencies are corrected and verified",
-            "B": "Risk acceptance, which tolerates the deficiency permanently",
-            "C": "External audit sign-off, which requires no internal follow-up",
-            "D": "Control environment assessment, which is unrelated to specific deficiencies"
+            "A": "Emergency patches are inherently incompatible with formal change management; the IT Director acted reasonably because 340 employees would have missed payroll, and the $1,100,000 loss was unforeseeable collateral damage from a necessary intervention.",
+            "B": "The patch was deployed without testing, CAB approval, a rollback plan, or peer code review -- all required by Pinnacle's change management policy, including its emergency exception provision requiring documented manager approval, peer review, and a post-implementation review within 24 hours; none of the three minimum emergency requirements were satisfied.",
+            "C": "The root cause was inadequate segregation of duties in IT, because a single developer wrote and deployed the patch without an independent reviewer; formal change management documentation would not have prevented the logic error embedded in the code.",
+            "D": "Management's failure to maintain a contingency reserve for payroll system errors, rather than the absence of change controls, is the appropriate root cause because all IT systems experience occasional failures and the $1,100,000 loss reflects a financial planning deficiency, not a control deficiency."
         },
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "Remediation tracking assigns ownership, corrective action steps, and deadlines to ensure identified control deficiencies are actually fixed and verified.",
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "COSO Principle 11 requires that the organization select and develop general control activities over technology to support the achievement of objectives. Change management is a foundational IT General Control (ITGC) that ensures all modifications to production systems are authorized, tested, approved, and documented before deployment -- regardless of urgency. Pinnacle's existing change management policy contained an emergency exception provision with three minimum requirements: (i) documented manager approval, (ii) peer review by a second developer, and (iii) a mandatory post-implementation review within 24 hours. During the March 14 incident, the IT Director authorized a patch deployment within 90 minutes but satisfied none of these three requirements. The standard change controls -- testing, CAB review, rollback planning, and peer review -- were all bypassed. The logic error that triggered $1,100,000 in duplicate payments to 340 employees would likely have been detected by peer review (a second developer examining the code logic) or by testing (running the patch against a payroll simulation before production deployment). The absence of a rollback plan meant the organization had no pre-established mechanism to reverse the duplicate payments before funds reached employee accounts. The missing post-implementation review -- required within 24 hours -- would have identified the duplicate payment anomaly before 195 employees (57%) spent the overpaid funds and before recovery costs escalated to $85,000. COSO Principle 11 does not prohibit emergency changes; it explicitly requires that emergency change procedures exist, are documented, and are followed. Kwan's argument that the emergency justified bypassing controls conflates the legitimate need for timely action with the unjustified failure to follow the emergency procedures that were already embedded in Pinnacle's control framework. A well-designed ITGC framework treats emergency procedures as an integral component of the control environment, not an alternative to it. In practice, a controller or internal auditor should verify that emergency change procedures are not merely documented but actually followed under time pressure, because the emergency scenario is precisely when the control is most needed. A common exam trap is assuming that an 'emergency' label automatically exempts an organization from all internal controls; COSO Principle 11 explicitly requires that emergency procedures are embedded within and subject to the same control framework, not external to it.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -21374,7 +21378,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-073",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -21383,33 +21387,34 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Option A incorrectly claims that emergency patches are inherently incompatible with formal change management, reflecting a fundamental misunderstanding of COSO Principle 11. The principle does not treat controls and emergencies as mutually exclusive; rather, it requires that general controls over technology address both routine and exceptional circumstances through documented procedures. Pinnacle's existing policy already included emergency change provisions -- a fact that directly contradicts the premise that the IT Director was forced to choose between 340 employees missing payroll and bypassing controls. He could have obtained telephonic manager approval and arranged a peer code review within the 90-minute window between defect detection and the scheduled payroll run. The argument that the $1,100,000 loss was 'unforeseeable collateral damage' misunderstands the purpose of ITGCs: testing and peer review exist precisely to foresee and prevent the logic errors that cause such losses. A candidate selecting this option likely assumes that time pressure automatically overrides internal controls -- a common misconception reinforced by high-stakes operational crises. In practice, COSO Principle 11 requires organizations to design emergency response capabilities that preserve control integrity under time constraints, not to treat controls as optional when circumstances become urgent.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Option C (External audit sign-off, which requires no internal follow-up) represents a plausible misconception. Under Electronic data interchange (EDI), the correct analysis leads to the conclusion that remediation tracking, ensuring identified deficiencies are corrected and verified. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongD": "Option D (Control environment assessment, which is unrelated to specific deficiencies) represents a plausible misconception. Under Electronic data interchange (EDI), the correct analysis leads to the conclusion that remediation tracking, ensuring identified deficiencies are corrected and verified. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongC": "Option C identifies segregation of duties as the root cause, which accurately names a genuine ITGC concept but mischaracterizes its scope relative to the actual control failure. It is correct that a single developer wrote and deployed the patch without independent review -- a segregation of duties weakness. However, this represents only one element of the change management framework that was bypassed. COSO Principle 11 encompasses multiple, overlapping IT general controls, including change management, segregation of duties, access controls, and computer operations. The audit finding specifically identified the systematic bypass of the entire change management control suite: no testing, no CAB approval, no rollback plan, no peer review, and failure to satisfy any of the three emergency exception requirements. Segregation of duties is a contributing control weakness, not the root cause; the root cause was the wholesale failure to execute the documented change management process. The claim that 'change management documentation would not have prevented the logic error' is speculative and inconsistent with the purpose of peer review and testing -- both are core change management components specifically designed to detect logic errors in code before production deployment. A candidate selecting this option may correctly identify an ITGC concept but fails to distinguish between a contributing control weakness and the root-cause control failure that encompasses it.",
+        "ExplanationWrongD": "Option D mischaracterizes the root cause as a financial planning deficiency rather than an internal control failure, conflating enterprise risk management (maintaining financial reserves) with the internal control framework's objective of preventing errors through control activities at the transaction level. COSO Principle 11 addresses the prevention and detection of errors through technology controls, not the financial absorption of errors after they occur. The $1,100,000 loss was not an unforeseeable 'occasional failure' but the direct and foreseeable consequence of bypassing four standard change controls and three emergency exception requirements that the organization had already designed and formally adopted. Contingency reserves are compensating financial controls that operate after a failure has occurred; change management controls are preventive controls designed to stop the failure from occurring in the first place. A candidate selecting this option may mistakenly believe that financial risk retention can substitute for control execution. The principle-based approach of the COSO framework is to design and operate controls that prevent errors, not to accumulate financial buffers that absorb the cost of non-compliance with existing controls.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
     {
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.074 remediation of control deficiency",
-        "MicroTopic": "remediation of control deficiency",
-        "UniqueConceptKey": "E-C074-remediation-of-control-deficiency",
+        "Topic": "E.074 COSO Principle 14 -- Internal Communication -- Reporting Channel Integrity",
+        "MicroTopic": "COSO Principle 14 internal communication reporting channel conflict of interest",
+        "UniqueConceptKey": "E-C074-coso-principle-14-internal-communication-channel-integrity",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Brookmoor identifies a control deficiency during its internal control assessment and assigns an owner, a corrective action plan, and a target completion date. What internal control process is being followed?",
+        "Stem": "Cresthaven Health Partners, a nine-hospital network serving the Pacific Northwest, employs Sandra Okonkwo as Chief Compliance Officer and Dr. Robert Hargrove as Chief Medical Officer. Dr. Hargrove's responsibilities include oversight of all clinical department budgets, including cardiology, and a portion of his annual incentive compensation is tied to departmental revenue performance. During a routine coding compliance audit, Okonkwo identifies a systematic pattern of upcoding of evaluation and management (E&M) services within the cardiology department -- physician office visits are consistently billed at complexity levels (CPT 99214 and 99215) that medical record documentation does not support. Okonkwo estimates potential overbilling to Medicare and commercial insurers at $2.8 million over the 18-month audit window. Okonkwo presents her findings, including supporting audit workpapers, directly to Dr. Hargrove. Hargrove reviews the findings and characterizes the billing pattern as 'coding interpretation differences among reasonable professionals,' instructing Okonkwo not to escalate the matter to the audit committee or board. Okonkwo complies. Eighteen months later, a whistleblower complaint filed by a cardiology billing specialist triggers an investigation by the Office of Inspector General, confirming $2.8 million in overbilling and resulting in civil monetary penalties. Which best characterizes the internal communication failure that allowed this material control weakness to persist?",
         "Choices": {
-            "A": "Control environment assessment, which is unrelated to specific deficiencies",
-            "B": "Remediation tracking, ensuring identified deficiencies are corrected and verified",
-            "C": "External audit sign-off, which requires no internal follow-up",
-            "D": "Risk acceptance, which tolerates the deficiency permanently"
+            "A": "The compliance officer's communication was deficient because she delivered findings informally rather than through a formal written compliance report submitted through established governance channels, and COSO Principle 14 requires that all internal communication of control deficiencies be documented in writing before escalation.",
+            "B": "The internal communication failure was that material information about a significant control deficiency was directed to an individual -- the Chief Medical Officer -- whose dual role of supervising the implicated department's budget and receiving incentive compensation tied to that department's revenue created a structural conflict of interest that prevented the information from reaching parties with independent authority to act.",
+            "C": "The primary failure was the organization's lack of an anonymous whistleblower reporting mechanism, which would have allowed the cardiology billing specialist to bypass the compliance officer and report concerns directly to the audit committee without fear of retaliation, consistent with COSO Principle 14's requirement for alternative communication channels.",
+            "D": "The compliance officer failed to simultaneously notify the organization's external legal counsel and CMS Medicare Administrative Contractor when the overbilling was discovered, because external regulatory reporting obligations under the False Claims Act supersede internal reporting hierarchies and represent the critical communication breakdown."
         },
         "CorrectChoice": "B",
-        "ExplanationCorrect": "Remediation tracking assigns ownership, corrective action steps, and deadlines to ensure identified control deficiencies are actually fixed and verified.",
+        "ExplanationCorrect": "COSO Principle 14 requires that the organization internally communicates information -- including objectives and responsibilities for internal control -- necessary to support the functioning of internal control. Critically, this principle demands that information flows to the appropriate parties who have the authority and independence to act on it, and that reporting lines are structured to preserve the integrity of control-related communications. In the Cresthaven scenario, the internal communication failure is threefold. First, channel routing failure: the compliance officer directed findings about cardiology overbilling to the Chief Medical Officer, who simultaneously supervised cardiology department budgets and whose incentive compensation was partially tied to departmental revenue. This created a structural conflict of interest -- the recipient had a personal financial incentive to suppress or dismiss the compliance finding, which is precisely what occurred when Dr. Hargrove characterized the upcoding as 'coding interpretation differences.' Second, gatekeeping failure: Dr. Hargrove was positioned as the sole decision-maker for whether the compliance finding would be escalated. No parallel communication channel existed to the audit committee, board of directors, or an independent compliance committee, effectively making Hargrove the gatekeeper of compliance information that he had a personal interest in containing. Third, independence failure: under COSO Principle 14, internal communication about control deficiencies must reach parties with independent oversight authority -- individuals whose organizational role, compensation, and reporting relationships are structurally separate from the activity being investigated. The 18-month delay between the compliance officer's discovery and the external investigation confirms that the information never reached the right decision-makers. In practice, effective internal control communication requires that reporting lines for compliance findings maintain independence from operational hierarchies, particularly when the operational leader has financial incentives linked to the activity under investigation. A common exam trap is to confuse communication format requirements (written versus oral, formal versus informal) with the more fundamental requirement of channel integrity -- the medium of communication matters less than whether the information reaches parties who can and will act independently on it.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -21424,7 +21429,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-074",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -21433,33 +21438,34 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Option A focuses on the format of communication -- whether findings were delivered informally rather than through a formal written compliance report. COSO Principle 14 does emphasize that communication should be clear, timely, and appropriate to the audience, but the principle's core requirement is that information reaches the right parties with the independence to act, not the specific medium or format through which it is conveyed. The compliance officer's audit workpapers existed and were presented to Dr. Hargrove with supporting documentation -- the communication was substantively complete. The defect was not that the information was undocumented, but that it was routed to a recipient who had a structural conflict of interest (supervisory authority over the implicated department plus incentive compensation tied to departmental revenue) and the unilateral power to suppress it. A candidate selecting this option may be over-weighting the documentation dimension of internal control communication while under-weighting the channel integrity and independence requirements that are central to COSO Principle 14. The correct approach recognizes that communication format is instrumental; channel routing to independent oversight is fundamental.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Option D (Risk acceptance, which tolerates the deficiency permanently) represents a plausible misconception. Under Electronic data interchange (EDI), the correct analysis leads to the conclusion that remediation tracking, ensuring identified deficiencies are corrected and verified. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongC": "Option C focuses on the absence of an anonymous whistleblower reporting mechanism, suggesting that the cardiology billing specialist -- who ultimately filed the whistleblower complaint -- would have reported the irregularities earlier if an anonymous channel existed. COSO Principle 14 does address the need for separate communication channels, including anonymous or confidential reporting mechanisms that allow employees to bypass normal reporting lines when those lines are compromised. An anonymous hotline is a relevant and recommended control under this principle. However, this choice misidentifies the primary failure in the scenario. The compliance officer -- the person formally designated to identify and escalate control deficiencies -- already discovered the overbilling issue through routine audit procedures, not because a whistleblower was needed. The failure occurred not because employees lacked an alternative channel to report concerns, but because the primary reporting channel was structurally compromised: compliance findings were directed to an individual whose incentives and supervisory role created a conflict of interest, and that individual served as the sole gatekeeper for further escalation. A candidate selecting this option may be conflating the whistleblower's eventual complaint (which triggered the external investigation) with the compliance officer's earlier internal reporting failure, which was the proximate cause of the organization's failure to detect and correct the overbilling promptly.",
+        "ExplanationWrongD": "Option D argues that the compliance officer should have simultaneously notified external parties -- specifically legal counsel and the Medicare Administrative Contractor -- treating external notification as the critical communication obligation that was breached. While the False Claims Act and CMS reporting requirements do impose external disclosure obligations when an organization discovers overpayments from federal healthcare programs, COSO Principle 14 is specifically concerned with internal communication -- the flow of information within the organization to support internal control functioning. The compliance officer's first obligation under the internal control framework is to ensure the finding reaches parties with independent internal oversight authority, namely the audit committee or the board of directors. External notification is a separate legal and regulatory obligation that operates in parallel with, not as a substitute for, internal communication to oversight bodies. Moreover, directing findings to external parties before completing internal escalation to the audit committee could itself represent a governance failure. A candidate selecting this option may be confusing internal control communication requirements under COSO Principle 14 with external whistleblower or mandatory reporting obligations, which are governed by separate legal and regulatory frameworks.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
     {
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.075 remediation of control deficiency",
-        "MicroTopic": "remediation of control deficiency",
-        "UniqueConceptKey": "E-C075-remediation-of-control-deficiency",
+        "Topic": "E.075 COSO Principle 8 -- Fraud Risk Assessment -- Compensation-Driven Revenue Manipulation",
+        "MicroTopic": "COSO Principle 8 fraud risk assessment compensation cliff bonus",
+        "UniqueConceptKey": "E-C075-coso-principle-8-fraud-risk-assessment-compensation",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Coalgate identifies a control deficiency during its internal control assessment and assigns an owner, a corrective action plan, and a target completion date. What internal control process is being followed?",
+        "Stem": "Meridian Infrastructure Group, a mid-sized construction firm, operates through five regional offices. Project managers receive an annual bonus equal to 8% of reported project margin -- but only if their portfolio-wide margin reaches a 15% threshold. Below 15%, the bonus is zero. During a routine contract review, Internal Audit Director Patricia Okonkwo discovered that Project Manager Derek Vance (Southeast region, four projects totaling $14.2 million) and Project Manager Angela Cortez (Northwest region, three projects totaling $11.8 million) had both recognized revenue on projects that were only 60-70% complete, citing bill-and-hold arrangements that lacked substantive customer acceptance documentation. Both managers' portfolio margins were tracking at 13-14% before the disputed revenue recognition entries and at 16-17% after. The company's most recent enterprise risk assessment identified 'revenue recognition pressure' as a medium inherent risk but did not separately assess how the binary cliff bonus structure -- specifically the jump from zero to approximately $125,000 in compensation at the 15% threshold -- creates a concentrated incentive to manipulate project completion estimates in the final weeks before year-end. Evaluate whether the company's fraud risk assessment was adequate under COSO Principle 8.",
         "Choices": {
-            "A": "Risk acceptance, which tolerates the deficiency permanently",
-            "B": "External audit sign-off, which requires no internal follow-up",
-            "C": "Remediation tracking, ensuring identified deficiencies are corrected and verified",
-            "D": "Control environment assessment, which is unrelated to specific deficiencies"
+            "A": "The fraud risk assessment was adequate because it identified revenue recognition as a risk area at the enterprise level, and COSO Principle 8 requires entity-wide risk identification rather than disaggregation by individual compensation design features.",
+            "B": "The fraud risk assessment was inadequate because COSO Principle 8 requires organizations to assess fraud risks arising from incentive structures and performance pressures. The binary cliff bonus at the 15% margin threshold creates a concentrated year-end incentive to manipulate revenue recognition -- a material fraud triangle 'pressure' that went unassessed when the enterprise risk framework treated 'revenue recognition pressure' as a generic medium risk without analyzing the compensation structure's specific effect.",
+            "C": "The fraud risk assessment was inadequate because COSO Principle 8 requires that all fraud-related risks be classified no lower than high, and classifying revenue recognition pressure as medium inherently understates the risk regardless of how the compensation structure is designed.",
+            "D": "The fraud risk assessment was adequate because the company maintains revenue recognition controls, including customer acceptance documentation requirements for bill-and-hold transactions. COSO Principle 8 focuses on control design adequacy rather than incentive or compensation structure analysis."
         },
-        "CorrectChoice": "C",
-        "ExplanationCorrect": "Remediation tracking assigns ownership, corrective action steps, and deadlines to ensure identified control deficiencies are actually fixed and verified.",
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Under COSO Principle 8, the organization considers the potential for fraud in assessing risks to the achievement of objectives. This requires management to evaluate (1) the types of fraud that could occur -- including fraudulent financial reporting, misappropriation of assets, and corruption; (2) fraud risk factors including pressures, opportunities, and rationalizations -- the classic fraud triangle; and (3) how incentive structures and performance targets create specific fraud risks within business processes. Meridian's fraud risk assessment was inadequate because it stopped at entity-level risk categorization without disaggregating how the binary cliff bonus structure creates a concentrated, nonlinear pressure point. The fraud triangle analysis is critical: pressure arises from the compensation design where the 15% margin threshold represents a cliff -- below it, the bonus is zero; at or above it, compensation jumps by approximately $125,000. Both Vance and Cortez had portfolios tracking at 13-14% before the disputed entries, meaning the marginal value of each additional percentage point of reported margin was enormous -- not a smooth incentive gradient but a binary outcome. Opportunity existed because project completion estimates for long-term construction contracts inherently require management judgment, and bill-and-hold arrangements provide a mechanism to accelerate revenue recognition before substantive completion. Rationalization is present when managers perceive the threshold as arbitrary and believe the project will ultimately be completed profitably. Principle 8 requires that fraud risk assessment be performed at a granularity sufficient to identify these interactive effects -- the combination of compensation design with judgment-intensive revenue recognition creates a specific, assessable fraud risk that the enterprise-level classification as 'medium' entirely failed to capture. A common exam trap is confusing entity-level risk identification with fraud-specific risk assessment; Principle 8 demands the latter. In practice, internal auditors and controllers should map compensation structures against financial reporting judgments to identify threshold effects that create disproportionate incentives -- exactly the analysis Meridian failed to perform.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -21474,7 +21480,7 @@ const MCQ_BANK_C = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-EC-075",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -21483,12 +21489,13 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (External audit sign-off, which requires no internal follow-up) represents a plausible misconception. Under Electronic data interchange (EDI), the correct analysis leads to the conclusion that remediation tracking, ensuring identified deficiencies are corrected and verified. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Option D (Control environment assessment, which is unrelated to specific deficiencies) represents a plausible misconception. Under Electronic data interchange (EDI), the correct analysis leads to the conclusion that remediation tracking, ensuring identified deficiencies are corrected and verified. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongA": "Option A incorrectly treats COSO Principle 8 as satisfied by entity-wide risk identification alone. The principle requires that fraud risk assessment delve into the specific pressures, opportunities, and rationalizations that exist within the organization's business processes. Identifying 'revenue recognition pressure' as a medium enterprise risk is an appropriate starting point but does not satisfy the principle's requirement to assess how specific incentive structures -- such as the binary cliff bonus -- create concentrated fraud risks within particular processes. The distinction is critical: a general risk of revenue recognition pressure exists in any organization with performance-based compensation, but the 15% cliff threshold transforms that general pressure into a specific, quantifiable incentive to manipulate completion estimates in the final reporting period. The approximately $125,000 differential at a single percentage-point threshold creates a fundamentally different risk profile than a graduated bonus structure. COSO Principle 8 expects organizations to disaggregate generic risk categories into process-level, incentive-specific assessments precisely because the fraud triangle's 'pressure' component varies dramatically with compensation design. A candidate selecting this option may mistakenly believe that enterprise risk assessment and fraud risk assessment are the same exercise.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C misstates COSO Principle 8's requirements regarding risk classification levels. The principle requires that fraud risks be assessed based on their nature, likelihood, and potential magnitude, but it does not mandate any minimum classification level. A well-designed fraud risk assessment could legitimately identify certain fraud risks as low or medium while still being COSO-compliant -- provided all material fraud risk factors have been identified and appropriately evaluated. The defect in Meridian's assessment is not the risk rating assigned to the factors it did identify, but rather the omission of a specific fraud risk factor entirely: the interactive effect of the binary cliff bonus with project-completion-based revenue recognition. Classifying 'revenue recognition pressure' as high rather than medium would not cure the fundamental deficiency because the assessment still would not have analyzed the compensation structure's specific incentive effects. Two project managers at separate regional offices independently engaged in the same manipulation pattern -- this is a strong signal that the incentive structure, not individual malfeasance, is the root fraud risk factor. A candidate selecting this option may misunderstand the distinction between risk assessment completeness and risk rating calibration.",
+        "ExplanationWrongD": "Option D conflates the risk assessment and control activities components of the COSO framework. COSO Principle 8 addresses the fraud risk assessment phase -- the identification and analysis of fraud risk factors including pressures, opportunities, and rationalizations -- while control design, such as customer acceptance documentation for bill-and-hold transactions, is addressed under COSO Principle 10 and Principle 12. An organization cannot design effective controls for a fraud risk it has not identified. Meridian's controls proved insufficient in practice: both managers' bill-and-hold arrangements with inadequate customer acceptance documentation were only detected during a routine contract review by Internal Audit, not through the preventive or detective controls allegedly in place. Furthermore, COSO Principle 8 explicitly requires consideration of the fraud triangle, which includes pressure (compensation incentives), opportunity (judgment-intensive revenue recognition), and rationalization. Incentive structure analysis is thus an integral part of fraud risk assessment, not a separate exercise. The fact that two different regional project managers independently exploited the same control gap using the same mechanism indicates a systemic fraud risk -- not merely an isolated control failure. A candidate selecting this option may believe that the existence of controls satisfies fraud risk assessment obligations, when in fact the two COSO components serve distinct and complementary purposes.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
     {
         "Part": 1,
@@ -21544,30 +21551,30 @@ const MCQ_BANK_C = [
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "F.002 data governance ownership",
-        "MicroTopic": "data governance ownership",
-        "UniqueConceptKey": "F-C002-data-governance-ownership",
-        "LOSTag": "F Technology and analytics",
-        "Difficulty": "Easy",
+        "Topic": "F.002 IT project portfolio prioritization — strategic alignment — risk, budget, and COSO Principle 11",
+        "MicroTopic": "IT investment governance — project selection under capital and strategic constraints",
+        "UniqueConceptKey": "F-C002-it-project-portfolio-prioritization",
+        "LOSTag": "F.1 Information Systems",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Brightpoint establishes clear ownership, definitions, and quality standards for its enterprise data. What concept does this describe?",
+        "Stem": "Orchard Bancorp is a regional bank with $4.2 billion in assets operating 42 branches across three states. The IT steering committee evaluated three competing projects, but the IT capital budget of $2.8 million can fund at most two. CFO David Okonkwo must recommend which to fund. Project Alpha — Core Banking System Upgrade ($1.6 million): Replace the 15-year-old core banking platform running on an operating system reaching end-of-support in 8 months. The upgrade eliminates a known cybersecurity vulnerability, improves transaction processing speed by 40%, and enables mobile banking features that competitors already offer. Not upgrading means continuing on an unsupported OS. Project Beta — Enterprise Data Warehouse ($1.4 million): Build a centralized data warehouse consolidating data from the core banking system, loan origination platform, and CRM. This enables portfolio-level credit risk analysis (currently done in spreadsheets), supports Dodd-Frank regulatory stress testing, and provides branch managers with daily profitability dashboards. Implementation timeline: 14 months. Project Gamma — Branch Technology Refresh ($1.0 million): Upgrade teller systems, customer-facing kiosks, and network infrastructure across all 42 branches. Current systems average 8 years old with a 4.2% annual hardware failure rate causing an average of 3.5 hours of branch downtime per month per location. The refresh would reduce failure rates to under 1% and improve customer wait times by an estimated 25%. Under COSO Principle 11, which recommendation best balances risk mitigation, strategic alignment, and budget constraints?",
         "Choices": {
-            "A": "Data visualization",
-            "B": "Data governance",
-            "C": "Data warehousing",
-            "D": "Data lineage"
+            "A": "Fund Projects Alpha and Beta ($3.0 million total) — the core banking upgrade is non-deferrable due to the end-of-support deadline and cybersecurity risk, and the data warehouse directly supports regulatory compliance with Dodd-Frank stress testing requirements. The $200,000 budget overage is acceptable given the regulatory mandate and can be funded through a minor capital budget amendment.",
+            "B": "Fund Projects Alpha and Gamma ($2.6 million total) — the core banking upgrade addresses the most critical technology risk (operating an unsupported OS on the transaction processing system), while the branch refresh directly reduces operational disruptions that degrade customer experience across all 42 locations, and both projects fit within the $2.8 million budget.",
+            "C": "Fund only Project Alpha ($1.6 million) — the core banking system end-of-support and known cybersecurity vulnerability create an unacceptable control risk that must be addressed immediately. Defer Projects Beta and Gamma to next fiscal year when the risk profile permits broader discretionary investment.",
+            "D": "Fund Projects Beta and Gamma ($2.4 million total) and purchase a one-year extended support contract for the existing core banking system from the vendor for $180,000 — this bridges the core system while investing in data analytics and customer-facing technology."
         },
         "CorrectChoice": "B",
-        "ExplanationCorrect": "Data governance establishes ownership, standard definitions, quality requirements, and accountability for how data is managed across an organization.",
+        "ExplanationCorrect": "Under COSO Principle 11, the organization selects and develops technology general controls over technology to support the achievement of objectives. Technology investment decisions should be governed by a risk-based assessment of which projects are necessary to maintain control, which directly support strategic objectives, and how to allocate constrained capital. Project Alpha (core banking upgrade) is non-deferrable: operating on an unsupported OS is a control deficiency because the bank cannot apply security patches to its core transaction processing system. Any single day of operation on end-of-support software exposes the bank to unpatched vulnerabilities that could result in a material data breach. Between Project Beta and Project Gamma, the branch refresh is the higher-priority investment for the current fiscal year. The 3.5 hours of monthly branch downtime per location represents approximately 1,764 hours of annual customer-facing disruption across the 42-branch network. This is active service degradation experienced by customers daily, not a theoretical future benefit. While the data warehouse supports regulatory compliance, Dodd-Frank stress testing can continue using spreadsheet-based analysis — suboptimal but compliant. No regulatory finding has identified the spreadsheet approach as deficient. The branch downtime directly impacts customer experience and operational reliability today. CFO Okonkwo should recommend Alpha and Gamma: this combination addresses the most critical control risk (end-of-support), allocates the remaining capital to the project with the most immediate operational impact, stays within the $2.8 million budget, and defers the data warehouse to next year's budget with a requirement that the risk management team quantify the specific credit losses attributable to spreadsheet-based analysis limitations.",
         "StudyLinks": [
             {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+                "label": "COSO Internal Control — Integrated Framework (2013), Principle 11: Technology General Controls",
+                "url": "https://www.coso.org/guidance-on-ic"
             },
             {
-                "label": "NIST Cybersecurity Framework",
-                "url": "https://www.nist.gov/cyberframework"
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F — Information Systems",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
@@ -21582,13 +21589,14 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Option A selects the two largest projects, which collectively exceed the $2.8 million capital budget by $200,000. While the budget overage is modest, the recommendation treats the data warehouse as if it has the same urgency as the core banking upgrade. Dodd-Frank stress testing can be performed using spreadsheet-based analysis — the bank has done so for years without regulatory issue. Treating the data warehouse as a regulatory compliance mandate rather than an analytical enhancement overstates its priority relative to the branch refresh, where customers experience 3.5 hours of downtime per month per branch. A candidate selecting this option may be prioritizing projects by total cost (largest first) rather than by risk-adjusted return — the hallmark of an Evaluate-level decision.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Choice D is incorrect because data warehousing is the practice of aggregating structured data from multiple sources into a central repository for reporting and analysis. While a data warehouse supports enterprise reporting and business intelligence, it is a storage architecture — not a framework for establishing ownership, standard definitions, or quality standards for data. Those responsibilities fall under data governance. A candidate may confuse where data is stored with how data is managed as an asset.",
-        "question_state": "Archived",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongC": "Option C correctly identifies the core banking upgrade as the highest-priority investment but leaves $1.2 million of the IT capital budget unallocated. Under COSO Principle 11, technology investment should be evaluated holistically — declining to fund any additional projects while 42 branches experience 1,764 hours of annual cumulative downtime is not a responsible allocation of approved capital. The branch refresh is not a discretionary enhancement; it is an operational reliability investment that prevents customer-facing service failures. A candidate selecting this option may be applying an excessively conservative capital allocation approach that treats all non-mandatory projects as equally deferrable, ignoring the distinction between projects that prevent active service degradation and projects that add new capabilities.",
+        "ExplanationWrongD": "Option D defers the core banking upgrade by purchasing extended support — a tactic that appears to 'solve' the end-of-support deadline but introduces two problems. First, extended support contracts from vendors of end-of-life software are typically expensive, limited in duration (one to two years maximum), and provide only critical security patches — not full support. Second, this approach converts a one-time capital investment into a recurring operational expense while still requiring the eventual upgrade. More critically, it delays the mobile banking features that competitors already offer, extending the period of competitive disadvantage in digital banking. The branch refresh and data warehouse are both worthwhile investments, but deferring the core system upgrade to fund them misprioritizes enhancement over foundational control. A candidate selecting this option may be treating the end-of-support deadline as a negotiation point rather than a hard control boundary.",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S380 Evaluate Wave 1 — Evaluate replacement for archived P1-FC-002 (DL-012 rotation clone)"
     },
     {
         "Part": 1,
@@ -21698,7 +21706,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "data governance ownership",
         "UniqueConceptKey": "F-C005-data-governance-ownership",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Emberton establishes clear ownership, definitions, and quality standards for its enterprise data. What concept does this describe?",
@@ -21737,10 +21745,11 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "Option C correctly diagnoses the limitation of descriptive analytics but misclassifies the analytics type required. Prescriptive analytics recommends actions based on predictive model outputs — it would answer 'what should we do to reduce travel spend?' after the predictive analysis is complete. The CFO's question is one step upstream: 'what would spend have been?' — a predictive question that must be answered before any prescriptive recommendation can be made. Furthermore, prescriptive analytics typically requires optimization or simulation models that build on predictive outputs. Jumping to prescriptive analytics skips the necessary predictive step. The sequence is descriptive → diagnostic → predictive → prescriptive, and the CFO's question sits squarely at the predictive stage.",
         "ExplanationWrongD": "",
         "question_state": "Active",
-        "DifficultyScore": 4,
-        "CognitiveLevel": "Analyze",
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Understand",
         "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-FC-005 (DL-012 rotation clone)"
-    },
+    ,
+        "dl031_review_note": "Downgraded from Analyze->Understand — stem is definitional per DL-031 classification (establishes ownership, definitions, quality standards, asks what concept)"},
     {
         "Part": 1,
         "Section": "F",
@@ -23485,7 +23494,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "Zero-based budgeting requires all expenses to be justified each period from zero. It is intensive but can eliminate embedded waste.",
         "ExplanationWrongD": "",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -23496,7 +23505,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "blockchain distributed ledger",
         "UniqueConceptKey": "F-C041-blockchain-distributed-ledger",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Pinehollow evaluates blockchain technology to create a shared, tamper-resistant record of transactions among multiple parties. What is a key characteristic of blockchain that supports this goal?",
@@ -23535,7 +23544,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "Choice C is incorrect because data visualization tools present information through charts, graphs, and dashboards for human interpretation. The scenario describes creating a shared, tamper-resistant record across multiple parties — a data integrity and distributed trust requirement that visualization tools do not address. A candidate may confuse the presentation layer of data with the cryptographic integrity layer provided by blockchain.",
         "ExplanationWrongD": "Choice D is incorrect because robotic process automation (RPA) automates repetitive, rules-based tasks by mimicking human keystrokes and mouse clicks. The scenario involves creating a shared, tamper-resistant record across multiple parties — a distributed trust and immutability requirement that RPA does not address. A candidate may confuse any automation technology with the specific consensus and integrity capabilities of blockchain.",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
     {
@@ -23546,7 +23555,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "blockchain distributed ledger",
         "UniqueConceptKey": "F-C042-blockchain-distributed-ledger",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Quarrystone evaluates blockchain technology to create a shared, tamper-resistant record of transactions among multiple parties. What is a key characteristic of blockchain that supports this goal?",
@@ -23585,7 +23594,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Choice D is incorrect because data visualization tools present information through charts, graphs, and dashboards for human interpretation. The scenario describes creating a shared, tamper-resistant record across multiple parties — a data integrity and distributed trust requirement that visualization tools do not address. A candidate may confuse the presentation layer of data with the cryptographic integrity layer provided by blockchain.",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
     {
@@ -23596,7 +23605,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "blockchain distributed ledger",
         "UniqueConceptKey": "F-C043-blockchain-distributed-ledger",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Ridgeline evaluates blockchain technology to create a shared, tamper-resistant record of transactions among multiple parties. What is a key characteristic of blockchain that supports this goal?",
@@ -23635,7 +23644,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Data visualization tools present data graphically through charts, dashboards, and interactive displays — they help communicate insights but do not create tamper-resistant transaction records. A candidate may conflate different technology categories under generic labels. The stem describes blockchain's distributed ledger characteristic, which is fundamentally about decentralized trust and immutability, not about graphical presentation of data.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
     {
@@ -23646,7 +23655,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "blockchain distributed ledger",
         "UniqueConceptKey": "F-C044-blockchain-distributed-ledger",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Sagebrook evaluates blockchain technology to create a shared, tamper-resistant record of transactions among multiple parties. What is a key characteristic of blockchain that supports this goal?",
@@ -23685,7 +23694,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "Choice C is incorrect because robotic process automation (RPA) automates repetitive, rules-based tasks by mimicking human keystrokes and mouse clicks. The scenario involves creating a shared, tamper-resistant record across multiple parties — a distributed trust and immutability requirement that RPA does not address. A candidate may confuse any automation technology with the specific consensus and integrity capabilities of blockchain.",
         "ExplanationWrongD": "",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
     {
@@ -23696,7 +23705,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "blockchain distributed ledger",
         "UniqueConceptKey": "F-C045-blockchain-distributed-ledger",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Timberlake evaluates blockchain technology to create a shared, tamper-resistant record of transactions among multiple parties. What is a key characteristic of blockchain that supports this goal?",
@@ -23735,10 +23744,11 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "Option C correctly identifies the taxonomy problem but incorrectly attributes it to timeliness. Data timeliness refers to whether data is current and available when needed — this is not the issue. The regional hierarchy in the ERP (the authoritative source) is updated quarterly; the problem is that the CRM system uses a different regional structure entirely, not that the ERP data is out of date. Establishing a quarterly data steward review may catch inconsistencies after they occur but does not prevent them — the root cause is that two systems were configured with incompatible regional taxonomies at implementation. The solution is to align the taxonomies through master data management, not to increase the review frequency of data that will continue to be inconsistently entered because the underlying taxonomies differ.",
         "ExplanationWrongD": "",
         "question_state": "Active",
-        "DifficultyScore": 4,
-        "CognitiveLevel": "Analyze",
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Understand",
         "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-FC-045 (DL-012 rotation clone)"
-    },
+    ,
+        "dl031_review_note": "Downgraded from Analyze->Understand — stem is identical definition-match to FC-041-044 rotation group (DL-031)"},
     {
         "Part": 1,
         "Section": "F",
@@ -24494,7 +24504,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "erp system integration benefits",
         "UniqueConceptKey": "F-C061-erp-system-integration-benefits",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Lanternwood implements an enterprise resource planning (ERP) system to integrate finance, operations, and supply chain data into a single platform. What is a primary benefit of this integration?",
@@ -24533,7 +24543,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "Choice C is incorrect because ERP systems do not automatically guarantee compliance with all external regulations. Regulatory compliance depends on how the system is configured, the business processes it enforces, and the controls implemented around it. The stem describes integrating functions for data consistency and visibility — operational benefits that support, but do not automatically achieve, regulatory compliance. A candidate may overstate the capabilities of technology to replace governance and regulatory oversight.",
         "ExplanationWrongD": "Choice D is incorrect because ERP systems do not eliminate the need for internal controls; in fact, effective ERP implementations require robust internal controls to ensure data integrity, access management, and segregation of duties. The stem describes integrating functions for real-time visibility and data consistency — benefits that complement, not replace, internal controls. A candidate may assume automation eliminates the need for governance.",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -24594,7 +24604,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "erp system integration benefits",
         "UniqueConceptKey": "F-C063-erp-system-integration-benefits",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Nettlefield implements an enterprise resource planning (ERP) system to integrate finance, operations, and supply chain data into a single platform. What is a primary benefit of this integration?",
@@ -24633,7 +24643,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Choice D is incorrect because ERP systems enhance, rather than eliminate, the need for internal controls. ERP implementations often require strengthened IT general controls, access controls, segregation of duties configuration, and change management procedures. The primary benefit of ERP integration is data consistency and real-time cross-functional visibility, not the removal of the control framework.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -24694,7 +24704,7 @@ const MCQ_BANK_C = [
         "MicroTopic": "erp system integration benefits",
         "UniqueConceptKey": "F-C065-erp-system-integration-benefits",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Poplarwood implements an enterprise resource planning (ERP) system to integrate finance, operations, and supply chain data into a single platform. What is a primary benefit of this integration?",
@@ -24733,7 +24743,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongC": "Choice C is incorrect because a relational database optimized for transaction processing is designed for structured, operational data with predefined schemas and ACID compliance. The stem describes storing raw, unstructured data from multiple sources in its native format — the hallmark of a data lake, which accepts diverse data types without requiring upfront structuring. A candidate may confuse operational data storage with analytical data storage.",
         "ExplanationWrongD": "An ERP system may enable cost efficiencies but does not guarantee a reduction in all operating costs. The primary benefit of ERP is improved data consistency and real-time visibility across business functions.",
         "question_state": "Archived",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {

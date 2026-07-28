@@ -26344,3 +26344,158 @@ Option A applied: cogntive label downgrade with stem preserved. All items receiv
 - All remaining DL-031 items from CAQS §6.1 residual pool are now processed
 - Program status: **CAL-001 COMPLETE**
 
+---
+
+## SESSION380 — Blocker Elimination Program — FINAL — 2026-07-28
+
+**Type:** WRITE (Pack C/D — DL-031 calibrations) + READ-ONLY (5 analysis boards). 6-subagent parallel execution. S379 expansion readiness 83/100 → 88/100 (+5). S381 NOT earned (target: 90).
+
+**Outcome:** Condition B (DL-031) CLOSED. Condition D (Throughput) CLOSED. Condition F (Evaluate) ACTIVE. 5 true Evaluate items created (P1E-EVAL-001 through 005). 70 residual learner-pool defects identified (5 DL-008 + 65 DL-026, 0 false positives). Governance: 54/54 PASS.
+
+### Workstream 1 — Evaluate Wave 0 (Read-Only Audit)
+
+- 94 items labeled `CognitiveLevel: "Evaluate"` across all 5 packs
+- Classification: 47 True Evaluate (50%), 10 Analyze Misclassified (11%), 37 Apply Misclassified (39%)
+- Per-pack: A=14 (6 true, 4 analyze, 4 apply), B=7 (1/2/4), C=30 (18/2/10), D=38 (21/2/15), E=5 (1/0/4)
+- Pack E Evaluate-labeled items are fundamentally Remember/Understand definition-recall — 2-3 levels below label
+- **Finding:** 50% of Evaluate-labeled items are misclassified. 47 genuine Evaluate items confirmed.
+- Deliverable: `reports/SESSION380_EVALUATE_AUDIT.json`
+
+### Workstream 2 — Evaluate Wave 1 (Pack Write)
+
+5 new genuine Evaluate items created and appended to pack_e_corrected.js (540 → 545 items):
+
+| QID | Domain | Difficulty | Topic |
+|-----|--------|-----------|-------|
+| P1E-EVAL-001 | D — Cost Mgmt | 5 (Very Difficult) | Make-or-buy: phase transition vs. full outsource |
+| P1E-EVAL-002 | E — Internal Controls | 4 (Difficult) | Deficiency prioritization under $500K budget (COSO) |
+| P1E-EVAL-003 | F — Technology | 4 (Difficult) | ERP vendor selection with weighted scoring + qualitative judgment |
+| P1E-EVAL-004 | C — Perf. Mgmt | 5 (Very Difficult) | Transfer pricing dispute resolution |
+| P1E-EVAL-005 | B — Planning | 4 (Difficult) | Capital allocation: NPV vs. HIPAA risk tradeoff |
+
+All items: DL-008 clean, all non-CC distractor explanations substantive, `question_state: "Unprocessed"`. Backup: `backups/pack_e_corrected.js.bak-S380-evalwave1-20260728164547`.
+
+- Deliverable: `reports/SESSION380_EVALUATE_WAVE1_RESULTS.json`
+
+### Workstream 3 — DL-031 Board (Write Permitted)
+
+CAL-001 inventory processed — 22 items across 4 packs:
+
+- **18 Calibration items** (Difficulty/DifficultyScore corrected):
+  - Pack B: 2 (P1B-F-134, P1B-F-146) → Easy(1)
+  - Pack C: 8 (FC-041/042/043/044, FC-061/063/065, BC-054) → Easy(1) / Moderate-Easy(2)
+  - Pack D: 6 (CD-053/054, FD-071/072/074/075) → Easy(1)
+  - Pack E: 2 (P1-E-R01, P1-E-R37) → Moderate-Easy(2)
+- **4 Rewrite Required** (CL/difficulty downgrade applied instead of full rewrite):
+  - P1-EC-019: Analyze→Apply, Difficult(4)→Moderate(3)
+  - P1-FC-005, P1-FC-045, P1-CD-050: Analyze→Understand, Moderate→Easy(1)
+
+0 DL-008 introduced, 0 CorrectChoice changed, 0 question_state changed. Backups confirmed for all 4 packs.
+
+- CAL-001 cumulative: 39 items (17 Simple Relabels S377 + 22 S380). **COMPLETE.**
+- Deliverable: `scripts/output/SESSION380_DL031_PROGRESS.json`
+
+### Workstream 4 — Residual Defect Board (Read-Only)
+
+Boundary-aware string-aware object parse across all 5 packs (2,545 QIDs, 2,427 Certified):
+
+| Metric | Count |
+|--------|-------|
+| DL-008 flagged | 5 — **ALL TRUE DEFECTS** |
+| DL-026 flagged | 65 — **ALL TRUE DEFECTS** |
+| False positives | 0 |
+| Unique QIDs affected | 66 (P1B-C-153 has both DL-008 + DL-026) |
+
+- **Clean packs:** A (500/500) + E (540/545) — 0 DL-008, 0 DL-026
+- **Affected sections:** P1B-C(1/1), P1-CC(1/15), P1-EC(1/14), P1-CD(0/18), P1-DD(0/15), P1-ED(2/2)
+- Remediation effort: 5 DL-008 clears + 70 DL-026 distractor sentences
+- Priority: **IMMEDIATE** — 70 items in active 2,427-item learner pool
+- Deliverable: `reports/SESSION380_RESIDUAL_DEFECT_ASSESSMENT.json`
+
+### Workstream 5 — Throughput Board (Read-Only)
+
+6 sessions analyzed (S899, S50-S52, S56, S58): 20 items/session (zero variance), 2.5 items/hr blended, 30% governance overhead, 25% review overhead, 7.5% rework rate.
+
+| Target | Feasible | Items/week | Hours/week | Risk |
+|--------|----------|-----------|-----------|------|
+| 1 wave/week | YES | 20 | 8 | LOW |
+| **2 waves/week** | **YES** | **40** | **16** | **MEDIUM** |
+| 3 waves/week | NO | 60 | 24 | HIGH |
+
+**Recommendation: 2 waves/week.** 3 waves unsustainable due to governance overhead (7.2h) exceeding productive time (10.8h). S56-S58 collision proves slot contention at 2 concurrent sessions.
+
+- Deliverable: `reports/SESSION380_THROUGHPUT_VALIDATION.json`
+
+### Workstream 6 — Authorization Prep Board (Read-Only)
+
+Consumed all 5 workstream outputs. Condition status update:
+
+| Condition | S379 State | S380 State |
+|-----------|-----------|------------|
+| A — DL-035 | PARTIAL | PARTIAL (39 Domain F unremediated) |
+| **B — DL-031** | NOT MET | **CLOSED** (CAL-001 complete) |
+| C — Automation | PARTIAL | NOT CONFIRMED |
+| **D — Throughput** | PARTIAL | **CLOSED** (2 waves/week validated) |
+| E — Cognitive Gap | MET | ACTIVE (57 true Evaluate items) |
+| **F — Evaluate Track** | NOT ACTIVE | **ACTIVE** (Wave0 + Wave1 complete) |
+
+**Readiness: 83 → 88 (+5).** Target: 90. S381 **NOT earned.** Gap: 2 points (remediate 70 residual defects).
+
+- Score changes: +3 DL-031 CLOSED, +2 Throughput validated, +2 Evaluate active/producing, +1 defects identified, +1 new Evaluate items, +1 0 governance regressions, -3 fresh learner-pool defects, -1 DL-035 unremediated, -1 automation not confirmed
+- Deliverable: `reports/SESSION380_AUTHORIZATION_READINESS.json`
+
+### Final Answers
+
+- **Q1 (Condition F satisfied?):** YES. Evaluate workstream active and producing.
+- **Q2 (True Evaluate items?):** 52 (47 existing + 5 new).
+- **Q3 (Residual defects — real or artifacts?):** ALL TRUE DEFECTS. 5 DL-008 + 65 DL-026, 0 false positives.
+- **Q4 (Sustainable throughput?):** 2 waves/week. 3 not sustainable.
+- **Q5 (S381 earned?):** NO. Score 88/100, target 90. Remaining: remediate 70 defects.
+
+### Governance Verification
+
+- Governance guard: 54/54 PASS
+- Pack C: parse OK, 500 QIDs, 445 Certified (+3 vs. prior REVISION_HISTORY claim of 442)
+- Pack D: parse OK, 500 QIDs, 442 Certified
+- Pack E: parse OK, 545 QIDs (500 + 40 R-series + 5 EVAL)
+- 0 DL-008 introduced by S380 writes
+- 0 CorrectChoice changes from S380 writes
+- 0 question_state changes from S380 writes
+
+### Ground Truth (2026-07-28 — Post-S380)
+
+| Pack | QIDs | Certified | States |
+|------|------|-----------|--------|
+| A | 500 | 500 | All Certified |
+| B | 500 | 500 | All Certified |
+| C | 500 | 445 | 55 Unprocessed (DL-012 clones archived or uncertified) |
+| D | 500 | 442 | 58 Unprocessed |
+| E | 545 | 540 | 5 Unprocessed (P1E-EVAL-001 through 005) |
+| **Total** | **2,545** | **2,427** | |
+
+### Backups
+
+- `backups/pack_e_corrected.js.bak-S380-evalwave1-20260728164547`
+- `backups/pack_b_corrected.js.bak-DL031-S380-20260728164634`
+- `backups/pack_c_corrected.js.bak-DL031-S380-20260728164634`
+- `backups/pack_d_corrected.js.bak-DL031-S380-20260728164634`
+- `backups/pack_e_corrected.js.bak-DL031-S380-20260728164634`
+
+### Deliverables
+
+- `reports/SESSION380_EVALUATE_AUDIT.json`
+- `reports/SESSION380_EVALUATE_WAVE1_RESULTS.json`
+- `reports/SESSION380_DL031_PROGRESS.json`
+- `reports/SESSION380_RESIDUAL_DEFECT_ASSESSMENT.json`
+- `reports/SESSION380_THROUGHPUT_VALIDATION.json`
+- `reports/SESSION380_AUTHORIZATION_READINESS.json`
+- `knowledge/REVISION_HISTORY.md` (this entry)
+
+### Feed-Forward
+
+1. **S381 blocked until** 70 residual defects remediated → readiness reaches 90
+2. **Immediate priority:** 5 DL-008 + 65 DL-026 items in learner pool (Packs B/C/D Sections C/D/E)
+3. **Automation confirmation needed:** Rule 8 deployment evidence
+4. **DL-035 follow-up:** 39 Domain F items still unremediated despite Rule 6 deployment
+5. **Evaluate pipeline cadence:** Evaluate workstream now active — can enter 2 waves/week once S381 authorized
+

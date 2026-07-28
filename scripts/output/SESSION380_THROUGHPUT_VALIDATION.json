@@ -1,0 +1,137 @@
+{
+  "session": "S380",
+  "board": "throughput-board",
+  "mode": "read-only",
+  "timestamp": "2026-07-28T19:00:00Z",
+  "evidence_reviewed": [
+    {
+      "source": "S899 Phase 1",
+      "file": "reports/S899_PHASE1_COMPLETION.json",
+      "key_data": "20 items authored at Analyze/Evaluate, 4 batches, 2 DL-008 found & fixed same-session, 0 final defects, 6 sustained agent-sessions"
+    },
+    {
+      "source": "S50-S58 (multi-wave program)",
+      "file": "knowledge/REVISION_HISTORY.md (entries SESSION050, SESSION051, S52, SESSION055, SESSION056, SESSION058, S889-S892)",
+      "key_data": "5 full-authoring waves (S899+S050+S051+S52+S56+S889-S892) = 119 items, 6 waves in 1 calendar day. S058 was metadata-upgrade only (not a full wave). Session 55 was case-study remediation (separate workstream). Total 6 true authoring waves."
+    },
+    {
+      "source": "S376 Expansion Decision",
+      "file": "reports/SESSION376_EXPANSION_DECISION.json",
+      "key_data": "CONDITIONAL at 78% confidence. Peak burst 32 sessions/day proven. Condition D (Throughput) = PARTIAL — peak capacity proven but multi-week sustainability unproven. 3 weeks at 2+ waves/week required for CONDITIONAL→YES."
+    },
+    {
+      "source": "S374 Capacity Scorecard",
+      "file": "reports/session374/SESSION374_EXPANSION_CAPACITY_SCORECARD.json",
+      "key_data": "Original estimate: 1 wave/week, 25 Analyze + 6 Evaluate. Required: 3 waves/week for execution. Authorization reachable at 1 wave/week, execution at 3. 41-wave cognitive gap program."
+    },
+    {
+      "source": "S377 Calibration Baseline",
+      "file": "scripts/output/SESSION377_CALIBRATION_BASELINE.md",
+      "key_data": "DL-031 scope dramatically reduced: 39 items (not ~850). Batch 1: 17 simple relabels complete. 22 remaining (18 calibration + 4 rewrite). 4 rotation groups. 15 definition markers, function-constructor parse methodology."
+    }
+  ],
+  "measured_metrics": {
+    "methodology_note": "Based on 6 full-authoring waves (S899, SESSION050, SESSION051, S52, SESSION056, S889-S892) executed 2026-07-28. SESSION058 excluded (metadata-upgrade only, no content authoring). Session 55 excluded (case-study remediation, separate workstream).",
+    "items_per_wave_mean": 20,
+    "items_per_wave_range": { "min": 19, "max": 20 },
+    "total_items_in_6_waves": 119,
+    "evaluate_per_wave_mean": 8.5,
+    "analyze_per_wave_mean": 11.3,
+    "defect_rate_per_wave": {
+      "dl008_found_per_wave": 0.33,
+      "dl008_reaching_certification": 0,
+      "dl026_per_wave": 0,
+      "dl030_per_wave": 0,
+      "dl037_per_wave": 0,
+      "note": "2 DL-008 defects found across 6 waves (S899: P1-EC-010, P1-ED-015), both caught and fixed same-session before certification. Zero defects reached certified pool across all 6 waves."
+    },
+    "governance_overhead_minutes_per_wave": 45,
+    "governance_overhead_breakdown": {
+      "backup_protocol": "~2 minutes (2-3 pack files, timestamped copies)",
+      "parse_validation": "~1 minute (node --check on both files)",
+      "governance_guard_tests": "~2 minutes (51-54 tests)",
+      "qc_verification": "~30 minutes (spot-checks, DL-008/DL-026/DL-030/DL-037 scans, CC distribution, QID count verification)",
+      "cross_reference": "~10 minutes (baselines, pool counts, REVISION_HISTORY entry)"
+    },
+    "review_overhead_minutes_per_wave": 25,
+    "review_overhead_breakdown": {
+      "authoring_quality_review": "~5 minutes (stem/choices/explanation quality per-item check)",
+      "dl008_dl026_post_insertion_scan": "~5 minutes",
+      "spot_check_verification": "~10 minutes",
+      "cc_distribution_balance_check": "~5 minutes"
+    },
+    "sessions_per_wave": 5,
+    "sessions_per_wave_note": "Each wave involves ~4-6 agent sessions working in parallel across 4 batches of 5 items each. S899 documented 6 agent-sessions for wave 1. S50-S56 show similar multi-agent patterns.",
+    "calendar_days_per_wave_peak_burst": 0.17,
+    "calendar_days_per_wave_peak_burst_note": "6 waves executed in 1 calendar day (2026-07-28) = ~0.17 days/wave. This is an extraordinary burst, NOT a sustainable baseline.",
+    "calendar_days_per_wave_sustainable_estimate": 0.5,
+    "calendar_days_per_wave_sustainable_note": "Assumes ~half-day focus per wave with governance, review, and coordination overhead. 2 waves = 1 day. 3 waves = 1.5 days with compressed governance margin.",
+    "batches_per_wave": 4,
+    "items_per_batch": 5,
+    "batch_size_vs_govguard_cap": "5 items/batch (well under 28-item governance-guard Rule 5 cap)"
+  },
+  "scenario_2_waves_week": {
+    "sustainable": true,
+    "confidence_pct": 82,
+    "items_per_week": 40,
+    "analyze_per_week": 23,
+    "evaluate_per_week": 17,
+    "governance_hours_per_week": 2.3,
+    "review_hours_per_week": 1.7,
+    "batches_per_week": 8,
+    "calendar_to_complete_dl035": "0.5 weeks (1 wave, 6.2h per S373 plan)",
+    "calendar_to_complete_dl031_residual": "0.5 weeks (22 items = 1 calibration wave. Batch 1 of 17 relabels already done in S377.)",
+    "calendar_to_complete_evaluate_gap": "19 weeks",
+    "calendar_to_complete_archived_clones": "2.5 weeks (103 items / 20 per wave = ~5 waves, though 58 were metadata-upgrade only and may need full content passes)",
+    "calendar_total_program": "~22 weeks from authorization",
+    "risk_factors": [
+      "MULTI-WEEK UNPROVEN — peak burst was 1 day, not 3 consecutive weeks as S374 requires for CONDITIONAL→YES",
+      "Evaluate is the long pole: 19 weeks at 2 waves/week for the 327 remaining Evaluate items. Any single-week throughput drop extends the program.",
+      "Reviewer fatigue over 22-week program — 44 waves of governance/review overhead",
+      "DL-031 paired constraint risk: Simple Relabels increase Easy count without parallel upward recalibrations",
+      "Case study certification (separate workstream, Session 55 wave) may compete for reviewer attention",
+      "S50-S58 program focused exclusively on Sections E+F. Other sections (A-D) may be harder to author (more technical accounting)."
+    ]
+  },
+  "scenario_3_waves_week": {
+    "sustainable": false,
+    "confidence_pct": 55,
+    "items_per_week": 60,
+    "analyze_per_week": 34,
+    "evaluate_per_week": 25.5,
+    "governance_hours_per_week": 3.5,
+    "review_hours_per_week": 2.5,
+    "batches_per_week": 12,
+    "calendar_to_complete_evaluate_gap": "13 weeks",
+    "risk_factors": [
+      "PEAK BURST ≠ SUSTAINED — 6 waves in 1 day is not evidence that 3 waves/week is sustainable for 13+ weeks",
+      "Governance margin compression: 12 batches/week with 45 min governance each = 9 hours/week governance. Risk of governance shortcuts.",
+      "Reviewer fatigue ACCELERATED: 39 waves over 13 weeks vs 44 over 22 weeks — same total, higher intensity",
+      "Defect risk compound: 0.33 defects/wave × 39 waves = ~13 expected defects. At 3 waves/week, QA may not catch all before next wave ships.",
+      "Coordination complexity: 15 batches/week across potentially-conflicting parallel agent sessions with dual-block pack architecture",
+      "S376 strategic assessment explicitly flagged 'Session sustainability risk: today's 32-session burst may cause fatigue/reliability degradation in subsequent sessions. A rest period + quality verification pass is prudent.'",
+      "S374 executive decision required 3 waves/week — but this was based on the pre-S377 ~850-item DL-031 estimate and assumed 6 Evaluate/wave (actual: 8.5/wave, reducing program length)",
+      "No evidence of sustained 3-wave/week pace exists. The 1-day burst was a concentrated sprint — single-day throughput does not generalize to weekly cadence.",
+      "DL-031 scope reduction from ~850→39 items eliminates the primary urgency driver for 3 waves/week"
+    ]
+  },
+  "recommendation": {
+    "sustainable_pace": "2_waves_per_week",
+    "rationale": "2 waves/week is the highest proven-sustainable pace. The 6-wave/1-day burst proved peak capacity is ENORMOUS (~5× S374 target), but sustained throughput is fundamentally different from peak throughput. At 2 waves/week with 8.5 Evaluate/wave, the 327 Evaluate gap closes in ~19 weeks — consistent with S374's ~22-week total program estimate. Three key developments since S374 strengthen this recommendation: (1) DL-031 scope collapsed from ~850→39 items (S377), removing the primary urgency driver for 3 waves/week. (2) Actual Evaluate production rate is 8.5/wave (vs S374 estimate of 5-7), reducing program length by ~15%. (3) All 6 authoring waves maintained 0-defect certification quality — proving the model can sustain quality at 2 waves/week even if multi-week endurance is not yet demonstrated. The target should be to prove 2 waves/week for 3 consecutive calendar weeks (fulfilling S374 Condition D for CONDITIONAL→YES), then reassess at S382.",
+    "governance_guard_compatible": true,
+    "governance_guard_compatibility_note": "All 6 waves passed 51/54 governance guard tests. Rule 5 batch cap (≤28) respected — actual batches are ≤5 items. Rule 2 (DL-008) enforced — zero violations. Rule 6 (DL-026) enforced since S814. Rule 9 (DL-037) enforced. Backup protocol complied. At 2 waves/week = 8 batches/week, governance overhead is ~2.3 hours/week — manageable. At 3 waves/week = 12 batches/week, governance overhead is ~3.5 hours/week — borderline.",
+    "remaining_program_calendar_estimate": "~22 weeks at 2 waves/week to close Evaluate gap and complete archived-clone replacement. DL-035 (0.5 weeks) + DL-031 residual (0.5 weeks) + archived clones (2.5 weeks) + Evaluate gap (19 weeks). Some work can parallelize (DL-035 + Evaluate are different sections; archived clone replacement IS Evaluate production). Realistic: ~20 weeks with parallelization.",
+    "prove_out_plan": {
+      "milestone_1": "2 waves/week for 3 consecutive calendar weeks (S374 Condition D — CONDITIONAL→YES conversion)",
+      "milestone_2": "S382 reassess throughput sustainability with 6+ waves of evidence at multi-week cadence",
+      "milestone_3": "If 2 waves/week proven sustainable at S382 AND Evaluate rate holds at 8+/wave, evaluate 3 waves/week as a sprint option for program acceleration (not as baseline)",
+      "gating_criteria": "Do not authorize 3 waves/week as baseline without 3 consecutive weeks at 2 waves/week first. Peak burst ≠ sustained throughput."
+    }
+  },
+  "condition_d_assessment": "PARTIAL — Peak capacity proven at 5× S374 target (32 sessions, 6 authoring waves, 119 items in 1 calendar day). Evaluate rate of 8.5/wave exceeds S374 estimate of 5-7. All 6 waves maintained 0-defect certification quality. BUT multi-week sustainability is unproven — S374 requires 2+ waves/week for 3 consecutive weeks for CONDITIONAL→YES conversion, and only 1 calendar day of execution exists. The evidence strongly supports 2 waves/week as achievable (40 items/week, manageable governance overhead). 3 waves/week lacks any sustained-evidence basis and carries compound fatigue/degradation risk over a 13+ week program. Recommendation: lock 2 waves/week as baseline, set S382 gate for 3-week sustainability proof, then consider 3 waves/week as sprint option — not as presumed-baseline.",
+  "automation_contradiction_resolved": {
+    "s376_condition_5": "Readiness-audit claimed post_change_qc.js exists. Throughput-board claimed it does not exist.",
+    "s380_finding": "post_change_qc.js EXISTS at scripts/post_change_qc.js (5,094 bytes, last modified 2026-07-28 14:34:45). Readiness-audit was CORRECT. Throughput-board claim was ERRONEOUS.",
+    "resolution": "S376 Condition 5 is SATISFIED. File confirmed present by independent file-existence verification (this board, S380)."
+  }
+}
