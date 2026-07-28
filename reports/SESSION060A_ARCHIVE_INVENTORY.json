@@ -1,0 +1,974 @@
+{
+  "session": "SESSION060A",
+  "date": "2026-07-28",
+  "pack_c": {
+    "total": 500,
+    "sections": {
+      "A": {
+        "total": 75,
+        "Certified": 75,
+        "Archived": 0,
+        "MISSING": 0,
+        "Unprocessed": 0,
+        "In Audit": 0,
+        "Editorial Queue": 0
+      },
+      "B": {
+        "total": 100,
+        "Certified": 100,
+        "Archived": 0,
+        "MISSING": 0,
+        "Unprocessed": 0,
+        "In Audit": 0,
+        "Editorial Queue": 0
+      },
+      "C": {
+        "total": 100,
+        "Certified": 100,
+        "Archived": 0,
+        "MISSING": 0,
+        "Unprocessed": 0,
+        "In Audit": 0,
+        "Editorial Queue": 0
+      },
+      "D": {
+        "total": 75,
+        "Certified": 75,
+        "Archived": 0,
+        "MISSING": 0,
+        "Unprocessed": 0,
+        "In Audit": 0,
+        "Editorial Queue": 0
+      },
+      "E": {
+        "total": 75,
+        "Certified": 64,
+        "Archived": 6,
+        "MISSING": 0,
+        "Unprocessed": 0,
+        "In Audit": 0,
+        "Editorial Queue": 0,
+        "Active": 5
+      },
+      "F": {
+        "total": 75,
+        "Certified": 24,
+        "Archived": 47,
+        "MISSING": 0,
+        "Unprocessed": 0,
+        "In Audit": 0,
+        "Editorial Queue": 0,
+        "Active": 4
+      }
+    },
+    "archived_items": [
+      {
+        "qid": "P1-EC-068",
+        "section": "E",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "E.068 segregation cash custody recording"
+      },
+      {
+        "qid": "P1-EC-070",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "E.070 segregation cash custody recording"
+      },
+      {
+        "qid": "P1-EC-071",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "E.071 remediation of control deficiency"
+      },
+      {
+        "qid": "P1-EC-073",
+        "section": "E",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "E.073 remediation of control deficiency"
+      },
+      {
+        "qid": "P1-EC-074",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "E.074 remediation of control deficiency"
+      },
+      {
+        "qid": "P1-EC-075",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "E.075 remediation of control deficiency"
+      },
+      {
+        "qid": "P1-FC-002",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.002 data governance ownership"
+      },
+      {
+        "qid": "P1-FC-003",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.003 data governance ownership"
+      },
+      {
+        "qid": "P1-FC-004",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.004 data governance ownership"
+      },
+      {
+        "qid": "P1-FC-008",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.008 prescriptive analytics applied scenario"
+      },
+      {
+        "qid": "P1-FC-009",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Apply",
+        "topic": "F.009 descriptive vs predictive analytics"
+      },
+      {
+        "qid": "P1-FC-011",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.011 robotic process automation use case"
+      },
+      {
+        "qid": "P1-FC-013",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Apply",
+        "topic": "F.013 robotic process automation use case"
+      },
+      {
+        "qid": "P1-FC-014",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.014 robotic process automation use case"
+      },
+      {
+        "qid": "P1-FC-017",
+        "section": "F",
+        "difficulty": "Difficult",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.017 cloud computing — IaaS, PaaS, SaaS model selection with control implications"
+      },
+      {
+        "qid": "P1-FC-018",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.018 cloud computing service models"
+      },
+      {
+        "qid": "P1-FC-019",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.019 cloud computing service models"
+      },
+      {
+        "qid": "P1-FC-021",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Apply",
+        "topic": "F.021 data visualization dashboard design"
+      },
+      {
+        "qid": "P1-FC-022",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Apply",
+        "topic": "F.022 data visualization dashboard design"
+      },
+      {
+        "qid": "P1-FC-023",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Apply",
+        "topic": "F.023 data visualization dashboard design"
+      },
+      {
+        "qid": "P1-FC-024",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Apply",
+        "topic": "F.024 data visualization dashboard design"
+      },
+      {
+        "qid": "P1-FC-027",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.027 cybersecurity confidentiality integrity availability"
+      },
+      {
+        "qid": "P1-FC-028",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.028 cybersecurity confidentiality integrity availability"
+      },
+      {
+        "qid": "P1-FC-030",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.030 cybersecurity confidentiality integrity availability"
+      },
+      {
+        "qid": "P1-FC-032",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.032 big data characteristics volume velocity variety"
+      },
+      {
+        "qid": "P1-FC-033",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.033 big data characteristics volume velocity variety"
+      },
+      {
+        "qid": "P1-FC-035",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.035 big data characteristics volume velocity variety"
+      },
+      {
+        "qid": "P1-FC-037",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.037 data mining pattern discovery"
+      },
+      {
+        "qid": "P1-FC-038",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.038 data mining pattern discovery"
+      },
+      {
+        "qid": "P1-FC-039",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.039 data mining pattern discovery"
+      },
+      {
+        "qid": "P1-FC-040",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.040 data mining pattern discovery"
+      },
+      {
+        "qid": "P1-FC-041",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Apply",
+        "topic": "F.041 blockchain distributed ledger"
+      },
+      {
+        "qid": "P1-FC-042",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Apply",
+        "topic": "F.042 blockchain distributed ledger"
+      },
+      {
+        "qid": "P1-FC-044",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Apply",
+        "topic": "F.044 blockchain distributed ledger"
+      },
+      {
+        "qid": "P1-FC-046",
+        "section": "F",
+        "difficulty": "Difficult",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.046 data governance — data quality dimensions and root cause analysis"
+      },
+      {
+        "qid": "P1-FC-047",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.047 data quality dimensions accuracy completeness"
+      },
+      {
+        "qid": "P1-FC-049",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.049 data quality dimensions accuracy completeness"
+      },
+      {
+        "qid": "P1-FC-051",
+        "section": "F",
+        "difficulty": "Very Difficult",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.051 artificial intelligence — supervised vs. unsupervised vs. reinforcement learning — method selection"
+      },
+      {
+        "qid": "P1-FC-052",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.052 artificial intelligence machine learning"
+      },
+      {
+        "qid": "P1-FC-054",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.054 artificial intelligence machine learning"
+      },
+      {
+        "qid": "P1-FC-056",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.056 cybersecurity phishing social engineering"
+      },
+      {
+        "qid": "P1-FC-057",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.057 cybersecurity phishing social engineering"
+      },
+      {
+        "qid": "P1-FC-059",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.059 cybersecurity phishing social engineering"
+      },
+      {
+        "qid": "P1-FC-060",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.060 cybersecurity phishing social engineering"
+      },
+      {
+        "qid": "P1-FC-061",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.061 erp system integration benefits"
+      },
+      {
+        "qid": "P1-FC-062",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.062 erp system integration benefits"
+      },
+      {
+        "qid": "P1-FC-064",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.064 erp system integration benefits"
+      },
+      {
+        "qid": "P1-FC-065",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.065 erp system integration benefits"
+      },
+      {
+        "qid": "P1-FC-066",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.066 data lake vs data warehouse"
+      },
+      {
+        "qid": "P1-FC-069",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.069 data lake vs data warehouse"
+      },
+      {
+        "qid": "P1-FC-070",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.070 data lake vs data warehouse"
+      },
+      {
+        "qid": "P1-FC-071",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.071 technology enabled continuous auditing"
+      },
+      {
+        "qid": "P1-FC-072",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.072 technology enabled continuous auditing"
+      }
+    ]
+  },
+  "pack_d": {
+    "total": 500,
+    "sections": {
+      "A": {
+        "total": 75,
+        "Certified": 75,
+        "Archived": 0,
+        "MISSING": 0,
+        "Unprocessed": 0,
+        "In Audit": 0,
+        "Editorial Queue": 0
+      },
+      "B": {
+        "total": 100,
+        "Certified": 100,
+        "Archived": 0,
+        "MISSING": 0,
+        "Unprocessed": 0,
+        "In Audit": 0,
+        "Editorial Queue": 0
+      },
+      "C": {
+        "total": 100,
+        "Certified": 100,
+        "Archived": 0,
+        "MISSING": 0,
+        "Unprocessed": 0,
+        "In Audit": 0,
+        "Editorial Queue": 0
+      },
+      "D": {
+        "total": 75,
+        "Certified": 75,
+        "Archived": 0,
+        "MISSING": 0,
+        "Unprocessed": 0,
+        "In Audit": 0,
+        "Editorial Queue": 0
+      },
+      "E": {
+        "total": 75,
+        "Certified": 54,
+        "Archived": 16,
+        "MISSING": 0,
+        "Unprocessed": 0,
+        "In Audit": 0,
+        "Editorial Queue": 0,
+        "Active": 5
+      },
+      "F": {
+        "total": 75,
+        "Certified": 35,
+        "Archived": 34,
+        "MISSING": 0,
+        "Unprocessed": 0,
+        "In Audit": 0,
+        "Editorial Queue": 0,
+        "Active": 6
+      }
+    },
+    "archived_items": [
+      {
+        "qid": "P1-ED-041",
+        "section": "E",
+        "difficulty": "Difficult",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "E.041 COSO Principle 7 — risk assessment — likelihood and impact"
+      },
+      {
+        "qid": "P1-ED-044",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "E.044 risk assessment likelihood impact"
+      },
+      {
+        "qid": "P1-ED-045",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "E.045 risk assessment likelihood impact"
+      },
+      {
+        "qid": "P1-ED-047",
+        "section": "E",
+        "difficulty": "Moderate-Easy",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "E.047 code of conduct ethics program"
+      },
+      {
+        "qid": "P1-ED-048",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "E.048 code of conduct ethics program"
+      },
+      {
+        "qid": "P1-ED-052",
+        "section": "E",
+        "difficulty": "Moderate-Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Apply",
+        "topic": "E.052 password access authentication control"
+      },
+      {
+        "qid": "P1-ED-053",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Apply",
+        "topic": "E.053 password access authentication control"
+      },
+      {
+        "qid": "P1-ED-055",
+        "section": "E",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Apply",
+        "topic": "E.055 password access authentication control"
+      },
+      {
+        "qid": "P1-ED-056",
+        "section": "E",
+        "difficulty": "Easy",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "E.056 internal control cost benefit limitation"
+      },
+      {
+        "qid": "P1-ED-057",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "E.057 internal control cost benefit limitation"
+      },
+      {
+        "qid": "P1-ED-059",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "E.059 internal control cost benefit limitation"
+      },
+      {
+        "qid": "P1-ED-061",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Apply",
+        "topic": "E.061 vendor master file controls"
+      },
+      {
+        "qid": "P1-ED-062",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Apply",
+        "topic": "E.062 vendor master file controls"
+      },
+      {
+        "qid": "P1-ED-063",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "E.063 vendor master file controls"
+      },
+      {
+        "qid": "P1-ED-065",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "E.065 vendor master file controls"
+      },
+      {
+        "qid": "P1-ED-068",
+        "section": "E",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Apply",
+        "topic": "E.068 audit committee oversight role"
+      },
+      {
+        "qid": "P1-FD-004",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.004 api integration systems"
+      },
+      {
+        "qid": "P1-FD-008",
+        "section": "F",
+        "difficulty": "Difficult",
+        "difficulty_score": 4,
+        "cognitive_level": "Apply",
+        "topic": "F.008 business intelligence self service reporting"
+      },
+      {
+        "qid": "P1-FD-012",
+        "section": "F",
+        "difficulty": "Moderate-Easy",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.012 data encryption at rest and in transit"
+      },
+      {
+        "qid": "P1-FD-014",
+        "section": "F",
+        "difficulty": "Difficult",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.014 data encryption at rest and in transit"
+      },
+      {
+        "qid": "P1-FD-019",
+        "section": "F",
+        "difficulty": "Moderate-Easy",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.019 cloud saas subscription model"
+      },
+      {
+        "qid": "P1-FD-023",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.023 predictive model overfitting risk"
+      },
+      {
+        "qid": "P1-FD-024",
+        "section": "F",
+        "difficulty": "Difficult",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.024 predictive model overfitting risk"
+      },
+      {
+        "qid": "P1-FD-029",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.029 internet of things iot sensors"
+      },
+      {
+        "qid": "P1-FD-032",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.032 data breach incident response plan"
+      },
+      {
+        "qid": "P1-FD-036",
+        "section": "F",
+        "difficulty": "Difficult",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.036 structured vs unstructured data"
+      },
+      {
+        "qid": "P1-FD-037",
+        "section": "F",
+        "difficulty": "Moderate-Easy",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.037 structured vs unstructured data"
+      },
+      {
+        "qid": "P1-FD-038",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.038 structured vs unstructured data"
+      },
+      {
+        "qid": "P1-FD-039",
+        "section": "F",
+        "difficulty": "Difficult",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.039 structured vs unstructured data"
+      },
+      {
+        "qid": "P1-FD-042",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.042 digital signature authentication"
+      },
+      {
+        "qid": "P1-FD-044",
+        "section": "F",
+        "difficulty": "Moderate-Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.044 digital signature authentication"
+      },
+      {
+        "qid": "P1-FD-045",
+        "section": "F",
+        "difficulty": "Moderate-Easy",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.046 master data management concept"
+      },
+      {
+        "qid": "P1-FD-048",
+        "section": "F",
+        "difficulty": "Difficult",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.048 master data management concept"
+      },
+      {
+        "qid": "P1-FD-051",
+        "section": "F",
+        "difficulty": "Very Difficult",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.051 automation governance — RPA bot lifecycle and control framework"
+      },
+      {
+        "qid": "P1-FD-052",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.052 automation bot governance oversight"
+      },
+      {
+        "qid": "P1-FD-053",
+        "section": "F",
+        "difficulty": "Difficult",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.053 automation bot governance oversight"
+      },
+      {
+        "qid": "P1-FD-056",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.056 natural language processing use case"
+      },
+      {
+        "qid": "P1-FD-057",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.057 natural language processing use case"
+      },
+      {
+        "qid": "P1-FD-058",
+        "section": "F",
+        "difficulty": "Difficult",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.058 natural language processing use case"
+      },
+      {
+        "qid": "P1-FD-060",
+        "section": "F",
+        "difficulty": "Difficult",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.060 natural language processing use case"
+      },
+      {
+        "qid": "P1-FD-061",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.061 cybersecurity risk assessment framework"
+      },
+      {
+        "qid": "P1-FD-062",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.062 cybersecurity risk assessment framework"
+      },
+      {
+        "qid": "P1-FD-063",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.063 cybersecurity risk assessment framework"
+      },
+      {
+        "qid": "P1-FD-065",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "topic": "F.065 cybersecurity risk assessment framework"
+      },
+      {
+        "qid": "P1-FD-066",
+        "section": "F",
+        "difficulty": "Easy",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.066 technology cost benefit evaluation"
+      },
+      {
+        "qid": "P1-FD-067",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.067 technology cost benefit evaluation"
+      },
+      {
+        "qid": "P1-FD-068",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.068 technology cost benefit evaluation"
+      },
+      {
+        "qid": "P1-FD-070",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "topic": "F.070 technology cost benefit evaluation"
+      },
+      {
+        "qid": "P1-FD-071",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.071 data retention policy compliance"
+      },
+      {
+        "qid": "P1-FD-072",
+        "section": "F",
+        "difficulty": "Moderate",
+        "difficulty_score": 3,
+        "cognitive_level": "Understand",
+        "topic": "F.072 data retention policy compliance"
+      }
+    ]
+  },
+  "summary": {
+    "total_archived": 103,
+    "pack_c_archived": 53,
+    "pack_d_archived": 50,
+    "sections_with_archived": [
+      "EC",
+      "ED",
+      "FC",
+      "FD"
+    ],
+    "other_states_total": {
+      "Active": 20,
+      "Archived": 103,
+      "Certified": 877,
+      "Editorial Queue": 0,
+      "In Audit": 0,
+      "MISSING": 0,
+      "Unprocessed": 0
+    }
+  }
+}

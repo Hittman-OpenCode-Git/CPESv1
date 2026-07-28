@@ -19333,27 +19333,27 @@ const MCQ_BANK_B = [
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "B-F.091 cloud computing",
-        "MicroTopic": "cloud risks and controls",
-        "UniqueConceptKey": "B-F-091-cloud-risks-controls",
-        "LOSTag": "Cloud Computing Risks and Controls",
-        "Difficulty": "Easy",
+    "Topic": "B-F.091 cloud computing",
+    "MicroTopic": "cloud risks and controls",
+    "UniqueConceptKey": "B-F-091-cloud-risks-controls",
+    "LOSTag": "Cloud Computing Risks and Controls",
+    "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Blue Ridge Partners is moving its accounting systems to a software-as-a-service (SaaS) cloud platform. Which of the following is a key risk that management should consider?",
+        "Stem": "Blue Ridge Partners is evaluating whether to migrate its accounting systems to a SaaS cloud platform. The CFO has received competing analyses: IT recommends migration citing 40% cost reduction and automatic updates, while the compliance officer warns that the company processes health insurance claims subject to HIPAA and customer data from EU operations subject to GDPR. The cloud vendor's SOC 2 report shows no exceptions, but the vendor's data centers are located exclusively in the United States, and the standard contract limits liability to three months of fees. Which recommendation should the controller present to the audit committee?",
         "CorrectChoice": "C",
-        "ExplanationCorrect": "Cloud computing introduces risks including data residency (where data is physically stored), multi-tenancy security, vendor lock-in, service availability, and privacy compliance. Organizations remain responsible for their data and must assess cloud provider controls through SOC reports and contractual agreements.",
+        "ExplanationCorrect": "The controller should recommend negotiating contractual safeguards before proceeding with migration. While the SOC 2 report is clean and cost savings are significant, two critical compliance gaps exist: (1) Data residency — EU customer data processed in US-only data centers creates GDPR compliance risk. Under GDPR, personal data transfers from the EU to the US require adequate safeguards such as EU Standard Contractual Clauses (SCCs) or an adequacy decision. Without these mechanisms, the organization faces regulatory penalties of up to 4% of global annual revenue. (2) Liability cap — a three-month fee limitation means if the vendor suffers a breach exposing HIPAA-protected health data, the organization bears the remediation costs (notification, credit monitoring, regulatory fines) that vastly exceed three months of service fees. The contract must be renegotiated to include data residency commitments, SCCs, and liability provisions commensurate with the sensitivity and value of the data entrusted to the vendor. A privacy impact assessment should precede migration to document the data flows, identify all regulated data, and confirm the vendor's controls are sufficient. A common exam trap is to treat a clean SOC 2 report as sufficient assurance for all compliance requirements — SOC 2 attests to controls design and operating effectiveness but does not address specific regulatory requirements like HIPAA or GDPR.",
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "QuestionID": "P1B-F-091",
         "question_state": "Certified",
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "CalculationItem": false,
-        "Choices": {
-            "A": "Cloud systems never experience downtime or security incidents",
-            "B": "The organization no longer needs any internal controls over its data",
-            "C": "Data may be stored in multiple jurisdictions, potentially affecting data privacy compliance and sovereignty",
-            "D": "The cloud provider automatically ensures full compliance with all accounting standards"
-        },
+    "Choices": {
+      "A": "Proceed with the migration immediately — the SOC 2 clean report and 40% cost savings outweigh the compliance concerns raised by the compliance officer",
+      "B": "Reject the migration entirely — cloud computing is inherently incompatible with regulated data such as HIPAA and GDPR-protected information",
+      "C": "Negotiate contractual safeguards for data residency, EU Standard Contractual Clauses, and liability provisions that reflect the value of the data entrusted to the vendor, and conduct a privacy impact assessment before proceeding",
+      "D": "Migrate only non-regulated data to the cloud and maintain HIPAA and GDPR data on-premise indefinitely — this hybrid approach eliminates all cloud compliance risk"
+    },
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
@@ -19367,19 +19367,18 @@ const MCQ_BANK_B = [
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
         ],
-        "ExplanationWrongA": "Cloud systems can experience downtime and security incidents like on-premise systems.",
-        "ExplanationWrongB": "Organizations remain responsible for their data and internal controls in the cloud.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "The cloud provider does not automatically ensure compliance with accounting standards; that remains the organization's responsibility.",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
-    },
-    {
-        "Part": 1,
-        "Section": "F",
-        "SectionName": "Technology and Analytics",
-        "Topic": "B-F.092 cloud computing",
-        "MicroTopic": "SaaS PaaS IaaS",
+    "ExplanationWrongA": "A clean SOC 2 report attests to the design and operating effectiveness of the vendor's controls, but it does not address specific regulatory compliance requirements. SOC 2 is a general controls framework; it does not certify HIPAA compliance or GDPR adequacy. The 40% cost savings must be weighed against the potential regulatory penalties — under GDPR, fines can reach 4% of global annual revenue, and HIPAA violations can result in penalties of $50,000 to $1.5 million per violation category per year. A controller presenting an immediate-proceed recommendation without addressing the compliance officer's documented concerns would be failing to exercise due professional care. The correct approach is to close the compliance gaps through contractual negotiation before migration, not to dismiss them as outweighed by cost savings.",
+    "ExplanationWrongB": "Cloud computing is not inherently incompatible with regulated data. Major cloud providers offer HIPAA-eligible services with Business Associate Agreements (BAAs), GDPR-compliant data processing agreements with EU Standard Contractual Clauses, and region-specific data centers. The issue is not whether cloud computing can support regulated data — it can — but whether the specific vendor, contract, and configuration meet the organization's compliance obligations. Rejecting migration entirely is an overreaction that foregoes legitimate operational benefits without a factual basis. The controller should identify the specific gaps (jurisdiction, liability cap) and negotiate remediation, not issue a blanket rejection.",
+    "ExplanationWrongD": "A hybrid approach that permanently separates regulated and non-regulated data creates operational complexity — maintaining two parallel environments (on-premise for HIPAA/GDPR, cloud for everything else) increases integration costs, data synchronization challenges, and training requirements. More importantly, this option assumes the cloud cannot be made compliant, which is incorrect. The vendor's data center location and contractual terms are negotiable. The correct approach is to negotiate the necessary safeguards (data residency in approved jurisdictions, EU SCCs, adequate liability provisions) and then migrate all appropriate workloads to the cloud, eliminating the permanent cost and complexity of dual environments.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate"
+  },
+  {
+    "Part": 1,
+    "Section": "F",
+    "SectionName": "Technology and Analytics",
+    "Topic": "B-F.092 cloud computing",
+    "MicroTopic": "SaaS PaaS IaaS",
         "UniqueConceptKey": "B-F-092-SaaS-PaaS-IaaS",
         "LOSTag": "Cloud Computing Risks and Controls",
         "Difficulty": "Easy",

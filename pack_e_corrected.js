@@ -505,14 +505,14 @@ const MCQ_BANK_E = [
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Prepaid insurance is an asset, not a liability. The company has paid for coverage it will receive.",
         "question_state": "Certified",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
             {
                 "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section D"
             },
             {
                 "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
@@ -520,7 +520,7 @@ const MCQ_BANK_E = [
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Section": "A",
+        "Section": "D",
         "Difficulty": "Easy",
         "SectionName": "External Financial Reporting Decisions",
         "Topic": "E-A.011 R&D cost treatment",
@@ -10772,17 +10772,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "D",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "SectionName": "Cost Management",
         "Topic": "E-D.029 Make-or-buy analysis",
         "UniqueConceptKey": "E-D-029-Make-or-buy-analysis",
         "MicroTopic": "Make-or-buy analysis",
         "CorrectChoice": "C",
         "Choices": {
-            "A": "Full cost of making vs price of buying",
-            "B": "Total cost vs revenue",
-            "C": "Relevant costs of making vs buying",
-            "D": "Variable cost vs fixed cost"
+            "A": "Continue manufacturing in-house — the full absorption cost of $47 per unit is already established and the supplier's price of $41 only appears cheaper because it excludes unavoidable fixed overhead",
+            "B": "Accept the supplier's offer unconditionally — the $41 price is $6 per unit less than the current full cost of $47, generating an annual saving of $120,000 regardless of other considerations",
+            "C": "Accept the supplier's offer — the relevant cost of making is $38 per unit ($760,000 annually) while buying costs $820,000, but repurposing the production space for a new product line generating $55,000 in annual contribution margin makes outsourcing the net-value-maximizing decision",
+            "D": "Split production equally between in-house manufacturing and the supplier at 10,000 units each — this hybrid approach captures cost savings while preserving internal manufacturing capability"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -10795,16 +10795,16 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Make-or-buy decisions compare:",
-        "ExplanationCorrect": "Make-or-buy compares relevant (incremental) costs of internal vs external.",
+        "Stem": "Lakeshore Medical Devices currently manufactures a specialized surgical component in-house at a cost of $47 per unit (direct materials $18, direct labor $12, variable overhead $8, fixed overhead allocation $9). An overseas supplier has offered to produce the identical component for $41 per unit delivered, with a three-year contract. If Lakeshore outsources, the production space could be repurposed to manufacture a new product line generating an estimated $55,000 annual contribution margin. The fixed overhead allocation represents facility-level costs that would continue regardless of the outsourcing decision. Annual demand is 20,000 units. Which recommendation should the controller present to the VP of Operations?",
+        "ExplanationCorrect": "The controller should recommend accepting the supplier's offer. Make-or-buy analysis compares relevant costs — those that differ between alternatives and are incurred in the future because of the decision. The $9 fixed overhead allocation is an unavoidable facility-level cost that continues whether Lakeshore makes or buys; it is therefore irrelevant to the decision. The relevant cost of making is direct materials ($18) + direct labor ($12) + variable overhead ($8) = $38 per unit, or $760,000 for 20,000 units annually. The cost of buying is $41 × 20,000 = $820,000. On quantitative grounds alone, making is $60,000 cheaper. However, outsourcing frees the production space for a new product line generating $55,000 in contribution margin — an opportunity cost of continuing to make the component internally. The net relevant cost of making is therefore $760,000 + $55,000 = $815,000, while buying costs $820,000. Buying is $5,000 more expensive, but this difference represents only 0.6% of the total annual cost ($5,000 ÷ $815,000). When the quantitative difference is immaterial, qualitative factors tip the decision: (1) Strategic opportunity — entering a new product line diversifies revenue and may have growth potential beyond year one. (2) Supplier dependency — a three-year contract at a known price provides cost certainty, while internal costs may rise. (3) Focus — Lakeshore can concentrate management attention on core competencies rather than component manufacturing. The controller should present a recommendation with both the quantitative analysis showing virtual break-even and the qualitative strategic case for outsourcing, proposing acceptance of the supplier's offer with appropriate quality assurance and contract protections. A common exam trap is to compare the full absorption cost ($47) directly to the buy price ($41) and conclude a $6 savings — this includes the irrelevant fixed overhead allocation. Another trap is to ignore opportunity cost entirely and conclude that making is $60,000 cheaper, missing the strategic value of the freed capacity.",
         "QuestionID": "P1E-D-029",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Full cost includes allocated fixed costs that may not be relevant; only incremental costs should be compared.",
-        "ExplanationWrongB": "Total cost versus revenue is a profitability analysis, not a make-or-buy decision framework.",
+        "ExplanationWrongA": "Full absorption cost ($47) includes the $9 fixed overhead allocation, which represents facility-level costs that continue regardless of whether Lakeshore makes or buys. Including unavoidable fixed costs in the comparison overstates the true cost of making and biases the analysis toward outsourcing. Relevant costing requires isolating only those costs that differ between alternatives — the $9 allocation is a sunk cost from the decision perspective and should be excluded. The $41 supplier price compared to the $38 relevant cost of making reveals that buying is $3 more expensive per unit before considering the opportunity cost. A candidate selecting this option is using full cost rather than relevant cost, a fundamental error in differential analysis.",
+        "ExplanationWrongB": "Comparing $47 full absorption cost to $41 purchase price to claim a $120,000 annual saving makes two errors. First, it includes the irrelevant $9 fixed overhead in the make cost. Second, it ignores the $55,000 opportunity cost of the foregone new product line. The correct comparison is relevant cost of making ($38 × 20,000 = $760,000 + $55,000 opportunity = $815,000) versus cost of buying ($41 × 20,000 = $820,000). The unconditional acceptance recommendation is premature — the quantitative difference is only $5,000 (0.6% of total cost), which means qualitative factors (supplier reliability, quality risk, strategic fit) must also be evaluated. A candidate selecting this option is making a simplistic price comparison without adjusting for relevant costs or considering opportunity cost.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "Variable cost versus fixed cost is not the comparison; the decision compares total relevant costs of each option.",
+        "ExplanationWrongD": "Splitting production 50/50 between in-house and supplier at 10,000 units each creates operational complexity without a sound financial rationale. Each unit made internally costs $38 in relevant costs; each unit bought costs $41. The hybrid approach therefore costs more than either pure strategy for the 10,000 units purchased: the company pays $41 instead of $38 for those units. More importantly, 10,000 units of in-house production may not free enough capacity for the new product line — if the entire production space is needed, partial outsourcing captures neither the full cost savings nor the full strategic opportunity. A candidate selecting this option is attempting to hedge rather than making a decisive recommendation based on the relevant cost analysis.",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
@@ -10822,17 +10822,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "D",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "SectionName": "Cost Management",
         "Topic": "E-D.030 Special order decision",
         "UniqueConceptKey": "E-D-030-Special-order-decision",
         "MicroTopic": "Special order decision",
         "CorrectChoice": "D",
         "Choices": {
-            "A": "Full cost is covered",
-            "B": "Gross margin is positive",
-            "C": "Order is below market",
-            "D": "Incremental revenue exceeds incremental cost"
+            "A": "Accept the order — the offered price of $68 exceeds the full absorption cost of $70 by $2 per unit, generating a $10,000 total contribution to profit",
+            "B": "Reject the order — the offered price of $68 is below the regular selling price of $95 and accepting it would establish an unsustainable precedent with this customer",
+            "C": "Accept the order but require the customer to pay the regular $95 price on all future orders — this maximizes profit on the special order while preventing customer expectations of future discounts",
+            "D": "Accept the order — the $68 price exceeds the $54 incremental cost per unit, generating a positive contribution margin of $70,000 that would not otherwise be earned"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -10845,19 +10845,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "A special order should be accepted if:",
-        "ExplanationCorrect": "Accept if incremental revenue > incremental costs and capacity exists.",
+        "Stem": "Ironwood Manufacturing produces industrial fittings at a regular selling price of $95 per unit. A one-time special order has been received for 5,000 units at $68 per unit. Ironwood's production cost per unit is: direct materials $28, direct labor $16, variable overhead $10, variable selling commission $5 (waived for this order since no sales effort is required), and fixed overhead allocation $11. Ironwood is operating at 70% capacity and has sufficient idle capacity to fulfill the order without displacing regular sales. Which recommendation should the production manager present?",
+        "ExplanationCorrect": "The production manager should recommend accepting the special order because incremental revenue exceeds incremental cost, generating a $70,000 contribution margin that would not otherwise be earned. Special order analysis considers only relevant costs — those that differ between accepting and rejecting the order. The incremental cost per unit includes only costs incurred because of the order: direct materials ($28) + direct labor ($16) + variable overhead ($10) = $54. The $5 variable selling commission is avoided (no sales effort required), so it is not an incremental cost of this order. The $11 fixed overhead allocation is irrelevant — it represents facility-level costs incurred regardless of whether the order is accepted. At a $68 price with $54 incremental cost, the contribution is $14 per unit × 5,000 units = $70,000. Since Ironwood has idle capacity (operating at 70%, well below 100%), accepting this order does not displace regular sales at the $95 price, incur no opportunity cost, and requires no additional fixed cost investment. Full absorption cost ($28 + $16 + $10 + $5 + $11 = $70) exceeds the $68 offer price, which may cause managers evaluated on full-cost metrics to reject a profitable order — this is a classic special-order exam trap. A common error is to compare the offer price to full cost rather than incremental cost, leading to the incorrect conclusion that the order loses money ($68 vs. $70 full cost). Another trap is to reject below-market-price orders categorically, ignoring that idle capacity means the alternative is zero revenue.",
         "QuestionID": "P1E-D-030",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Full cost includes allocated fixed costs; only incremental costs are relevant for the special order decision.",
-        "ExplanationWrongB": "Gross margin being positive does not guarantee all incremental costs are covered.",
-        "ExplanationWrongC": "An order below market may still be profitable if incremental revenue exceeds incremental costs.",
+        "ExplanationWrongA": "Full absorption cost is $70 per unit ($28 + $16 + $10 + $5 + $11), and $68 is less than $70, so full cost is not actually covered — Choice A's premise is factually wrong. More importantly, full absorption cost is the wrong metric for special order decisions. It includes $11 of fixed overhead incurred regardless of whether the order is accepted and $5 of selling commission waived for this order. The relevant (incremental) cost is only $54 per unit ($28 + $16 + $10). At $68 price versus $54 relevant cost, the contribution is $14/unit or $70,000 total — a profitable order that full-cost accounting would incorrectly reject. A candidate selecting this option is applying absorption costing logic to a differential decision, a classic CMA exam trap.",
+        "ExplanationWrongB": "The regular selling price of $95 is irrelevant to the special order decision. Ironwood is at 70% capacity — the alternative to accepting this order is zero revenue from these 5,000 units. Comparing the special order price to the regular price confuses pricing strategy with capacity utilization. As long as the order does not displace regular sales and incremental revenue exceeds incremental cost, accepting increases total profit. The qualitative concern about precedent-setting is valid but does not override $70,000 in contribution margin from a one-time order with idle capacity.",
+        "ExplanationWrongC": "Demanding $95 on future orders undermines the special order analysis — if the customer won't pay $95, Ironwood loses $70,000 now and gains nothing. The special order is a one-time transaction; converting it to regular-price business is a separate strategic decision evaluated on different criteria. The special order decision stands on its own incremental economics: $70,000 profit that would not otherwise exist. The 'best of both worlds' framing is flawed — there is no scenario where Ironwood captures both the special order revenue and a commitment to regular pricing.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [

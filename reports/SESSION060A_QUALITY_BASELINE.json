@@ -1,0 +1,239 @@
+{
+  "session": "SESSION060A",
+  "sample_size": 15,
+  "metrics": {
+    "explanation_correct": {
+      "mean": 243,
+      "median": 163,
+      "min": 0,
+      "max": 1296
+    },
+    "explanation_wrong": {
+      "mean": 604,
+      "median": 619,
+      "min": 118,
+      "max": 889
+    },
+    "stem_length": {
+      "mean": 199,
+      "median": 168,
+      "min": 0,
+      "max": 854
+    },
+    "pct_named_company": 13,
+    "pct_standard_reference": 13,
+    "pct_choice_specific_distractors": 100
+  },
+  "tier_distribution": {
+    "GOLD": 0,
+    "SILVER": 1,
+    "BRONZE": 3,
+    "BELOW": 11
+  },
+  "quality_baseline": {
+    "min_acceptable_ec_length": 500,
+    "min_acceptable_ew_length": 100,
+    "min_stem_complexity_markers": [
+      "named company",
+      "decision trigger"
+    ],
+    "required_standard_reference": true
+  },
+  "per_item": [
+    {
+      "qid": "P1-EC-030",
+      "tier": "BELOW",
+      "ec_length": 155,
+      "ew_mean_length": 506,
+      "stem_length": 158,
+      "has_company": false,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Evaluate",
+      "difficulty_score": 5,
+      "topic": "E.030 bank reconciliation control"
+    },
+    {
+      "qid": "P1-FC-050",
+      "tier": "BELOW",
+      "ec_length": 124,
+      "ew_mean_length": 617,
+      "stem_length": 168,
+      "has_company": false,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Evaluate",
+      "difficulty_score": 5,
+      "topic": "F.050 data quality dimensions accuracy completeness"
+    },
+    {
+      "qid": "P1-FD-050",
+      "tier": "BELOW",
+      "ec_length": 163,
+      "ew_mean_length": 619,
+      "stem_length": 168,
+      "has_company": false,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Evaluate",
+      "difficulty_score": 5,
+      "topic": "F.050 master data management concept"
+    },
+    {
+      "qid": "P1-FD-046",
+      "tier": "BELOW",
+      "ec_length": 0,
+      "ew_mean_length": 729,
+      "stem_length": 0,
+      "has_company": false,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Evaluate",
+      "difficulty_score": 5,
+      "topic": ""
+    },
+    {
+      "qid": "P1-EC-005",
+      "tier": "BELOW",
+      "ec_length": 175,
+      "ew_mean_length": 557,
+      "stem_length": 172,
+      "has_company": false,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Evaluate",
+      "difficulty_score": 4,
+      "topic": "E.005 segregation of duties design"
+    },
+    {
+      "qid": "P1-ED-015",
+      "tier": "BRONZE",
+      "ec_length": 389,
+      "ew_mean_length": 625,
+      "stem_length": 139,
+      "has_company": false,
+      "has_standard": true,
+      "has_choice_specific": true,
+      "cognitive_level": "Evaluate",
+      "difficulty_score": 4,
+      "topic": "E.015 independent verification control activity"
+    },
+    {
+      "qid": "P1-FC-016",
+      "tier": "BELOW",
+      "ec_length": 173,
+      "ew_mean_length": 877,
+      "stem_length": 174,
+      "has_company": false,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Evaluate",
+      "difficulty_score": 4,
+      "topic": "F.016 cloud computing service models"
+    },
+    {
+      "qid": "P1-FD-010",
+      "tier": "BELOW",
+      "ec_length": 179,
+      "ew_mean_length": 502,
+      "stem_length": 165,
+      "has_company": false,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Evaluate",
+      "difficulty_score": 4,
+      "topic": "F.010 business intelligence self service reporting"
+    },
+    {
+      "qid": "P1-EC-010",
+      "tier": "BRONZE",
+      "ec_length": 184,
+      "ew_mean_length": 889,
+      "stem_length": 148,
+      "has_company": false,
+      "has_standard": true,
+      "has_choice_specific": true,
+      "cognitive_level": "Analyze",
+      "difficulty_score": 4,
+      "topic": "E.010 coso internal control framework"
+    },
+    {
+      "qid": "P1-ED-020",
+      "tier": "BELOW",
+      "ec_length": 152,
+      "ew_mean_length": 725,
+      "stem_length": 177,
+      "has_company": false,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Analyze",
+      "difficulty_score": 4,
+      "topic": "E.020 erm risk response strategies"
+    },
+    {
+      "qid": "P1-FD-020",
+      "tier": "BELOW",
+      "ec_length": 189,
+      "ew_mean_length": 814,
+      "stem_length": 141,
+      "has_company": false,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Analyze",
+      "difficulty_score": 4,
+      "topic": "F.020 cloud saas subscription model"
+    },
+    {
+      "qid": "P1-EC-055",
+      "tier": "BELOW",
+      "ec_length": 148,
+      "ew_mean_length": 658,
+      "stem_length": 132,
+      "has_company": false,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Analyze",
+      "difficulty_score": 4,
+      "topic": "E.055 compensating control small business"
+    },
+    {
+      "qid": "P1-FD-041",
+      "tier": "SILVER",
+      "ec_length": 1296,
+      "ew_mean_length": 432,
+      "stem_length": 854,
+      "has_company": true,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Analyze",
+      "difficulty_score": 4,
+      "topic": "F.041 cybersecurity — authentication — multi-factor and digital certificate weaknesses"
+    },
+    {
+      "qid": "P1-EC-059",
+      "tier": "BRONZE",
+      "ec_length": 156,
+      "ew_mean_length": 118,
+      "stem_length": 190,
+      "has_company": true,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Analyze",
+      "difficulty_score": 4,
+      "topic": "E.059 control environment tone at top"
+    },
+    {
+      "qid": "P1-FD-035",
+      "tier": "BELOW",
+      "ec_length": 163,
+      "ew_mean_length": 399,
+      "stem_length": 197,
+      "has_company": false,
+      "has_standard": false,
+      "has_choice_specific": true,
+      "cognitive_level": "Analyze",
+      "difficulty_score": 4,
+      "topic": "F.035 data breach incident response plan"
+    }
+  ]
+}
