@@ -27123,4 +27123,55 @@ S380 baseline: 85. S381 improvements: +3 (DL-026→0, classifier deployed) + 5 D
 - `reports/SESSION063_FINANCIAL_REPORTING_JUDGMENT_REPORT.md`
 
 
+## S66B — Critical Case Pool Deduplication Fix — 2026-07-29
+
+**Type:** Application Repair — WRITE (app.js only)
+**Status:** COMPLETE
+
+### Issue
+
+S66A Application Sync Audit discovered that `CASE_BANK_A` and `CASE_BANK_D` both alias to `CASE_PACK_1`, and `CASE_BANK_B` and `CASE_BANK_E` both alias to `CASE_PACK_2`. The `getCasePool()` method concatenates without deduplication, so when both A+D or B+E are selected, duplicate CaseIDs enter the session pool — causing answer-key collisions and broken scoring.
+
+### Fix Applied
+
+Added CaseID-based deduplication in `getCasePool()` at line 1368 (app.js). After all packs are concatenated into `result`, a `Set` filters out duplicate CaseIDs:
+
+```javascript
+let seenCaseIDs = new Set();
+result = result.filter(c => {
+    if (seenCaseIDs.has(c.CaseID)) return false;
+    seenCaseIDs.add(c.CaseID);
+    return true;
+});
+```
+
+**Rationale:** This approach preserves the 5-bank alias architecture (CASE_BANK_A–E) while preventing duplicate CaseIDs at the pool level. Lowest-risk fix — no bank mapping changes, no case loss.
+
+### Verification
+
+- `node --check app.js`: PASS
+- Governance guard test suite: 54/54 PASS, 0 FAIL
+- Backup: `backups/app.js.bak-20260729132456` (210,417 bytes)
+- app.js SHA-256 (post-fix): `17EB188B14B7FDE1F9EA44B6C2DE754EADB67A5E4A03151835C26C553F14FB05`
+
+### S66A Findings — Status Post-Fix
+
+| # | Finding | Severity | Status |
+|---|---------|----------|--------|
+| 1 | Case duplication in getCasePool | CRITICAL | **FIXED (S66B)** |
+| 2 | Hero text: "75" vs actual 77 cases | HIGH | Deferred |
+| 3 | Pack E label: "(500 MCQs)" vs 545 | HIGH | Deferred |
+| 4 | CASE_BANK_F undefined | MEDIUM | Deferred |
+| 5 | Legacy scored_cases in root | MEDIUM | Deferred |
+| 6 | 69 Archived reduces deliverable | LOW | Deferred |
+
+### Backups
+
+- `backups/app.js.bak-20260729132456` (210,417 bytes — pre-fix)
+
+### Files Modified
+
+- `app.js`: 4-line deduplication block inserted after line 1366
+
+---
 

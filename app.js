@@ -1365,6 +1365,13 @@ const ExamSessionManager = {
             active.sort((a, b) => (a._tier || 3) - (b._tier || 3));
             result = result.concat(active);
         }
+        // Deduplicate by CaseID — CASE_BANK_A/D alias same pack, CASE_BANK_B/E alias same pack
+        let seenCaseIDs = new Set();
+        result = result.filter(c => {
+            if (seenCaseIDs.has(c.CaseID)) return false;
+            seenCaseIDs.add(c.CaseID);
+            return true;
+        });
 
         _casePoolCache = result;
         _casePacksKey = packsKey;
