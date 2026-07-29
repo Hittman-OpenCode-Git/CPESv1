@@ -1,0 +1,67 @@
+{
+  "session": "S66",
+  "type": "release-decision",
+  "timestamp": "2026-07-28T00:00:00Z",
+  "decision": "READY_WITH_WARNINGS",
+  "checks": {
+    "all_mcq_packs_parse": {
+      "status": "PASS",
+      "detail": "All 5 MCQ packs (A-E) pass node --check clean"
+    },
+    "all_case_packs_parse": {
+      "status": "PASS",
+      "detail": "All 3 reconsolidated case packs (case_pack_1/2/3_corrected.js) pass node --check clean"
+    },
+    "app_js_parse": {
+      "status": "PASS",
+      "detail": "app.js passes node --check clean"
+    },
+    "pack_a_loaded_in_html": {
+      "status": "PASS",
+      "detail": "pack_a_corrected.js present at index_updated.html line 2"
+    },
+    "hero_text_accurate": {
+      "status": "PASS",
+      "detail": "Hero shows 2,545 MCQs / 75 cases — matches repository counts"
+    },
+    "learner_pool_safe": {
+      "status": "PASS",
+      "detail": "0 DL-008, 0 DL-026 (Certified), 0 DL-030, 0 DL-035, 0 DL-037"
+    },
+    "governance_guard": {
+      "status": "PASS",
+      "detail": "54/54 tests PASS, Rules 1-10 active"
+    },
+    "case_inventory_verified": {
+      "status": "PASS",
+      "detail": "75 cases, 400 items, all Certified. 475 Certified refs = 75 case-level + 400 item-level"
+    },
+    "application_synchronized": {
+      "status": "PASS",
+      "detail": "Pack A restored. All support files (may-learner-state.js, governance/delivery_blocklist.js, may-core.js) present"
+    },
+    "exam_blueprint_generated": {
+      "status": "PASS",
+      "detail": "All 6 domains represented in MCQ pool. 5 of 6 domains in case pool"
+    }
+  },
+  "metrics": {
+    "total_mcqs": 2545,
+    "certified_mcqs": 2451,
+    "total_cases": 75,
+    "certified_case_items": 400,
+    "dl_008_remaining": 0,
+    "dl_026_certified_remaining": 0,
+    "dl_030_remaining": 0,
+    "dl_035_remaining": 0,
+    "dl_037_remaining": 0,
+    "governance_guard_tests_passed": 54,
+    "governance_guard_tests_failed": 0
+  },
+  "warnings": [
+    "DOMAIN_F_CASE_GAP: CASE_BANK_F is not defined in any reconsolidated case pack. Domain F case-based practice returns empty pool. Domain F MCQ content is fully available (in packs A-E). Domain F cases exist in original scored_cases files but were not reconsolidated.",
+    "DEAD_CODE_PARSE_ERRORS: scored_cases.js (line 675: missing comma) and scored_cases5.js (line 486: misplaced properties) fail node --check. These files are NOT loaded by index_updated.html — zero runtime impact. Violates PROJECT_CONSTITUTION.md §11 root-directory cleanliness."
+  ],
+  "blockers": [],
+  "night_rule": "CONTINUE_WITH_CAVEATS"
+}

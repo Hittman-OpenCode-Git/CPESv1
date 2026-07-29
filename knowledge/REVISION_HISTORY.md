@@ -1,3 +1,93 @@
+## Session 60C (Wave 1) — Technology & Analytics Modernization — FC(10) — 2026-07-28
+
+**Type:** WRITE (pack_c_corrected.js)
+
+**Objective:** Execute S60C Wave 1 — the first 10 FC replacements under the Technology & Analytics Modernization Track. Replace 10 archived DL-012 rotation clones (definition-match stems, Easy–Moderate difficulty, Understand–Apply cognitive level) with high-quality Analyze/Evaluate items at Difficult/Very Difficult difficulty.
+
+**Items Replaced (10 of 10):**
+
+| QID | Old Difficulty | Old Cognitive | New Difficulty | New Cognitive | Topic |
+|-----|---------------|---------------|----------------|---------------|-------|
+| P1-FC-003 | Easy (1) | Understand | Difficult (4) | Evaluate | Data governance — data quality remediation prioritization |
+| P1-FC-004 | Easy (1) | Understand | Very Difficult (5) | Evaluate | Cybersecurity governance — third-party vendor risk assessment |
+| P1-FC-008 | Moderate (3) | Understand | Difficult (4) | Evaluate | AI governance — model bias detection and accountability |
+| P1-FC-009 | Moderate (3) | Apply | Difficult (4) | Analyze | Analytics governance — dashboard-driven decision bias |
+| P1-FC-011 | Moderate (3) | Understand | Difficult (4) | Evaluate | Cloud controls — SaaS vendor lock-in and exit strategy |
+| P1-FC-013 | Moderate (3) | Apply | Difficult (4) | Evaluate | ERP controls — implementation risk and scope management |
+| P1-FC-014 | Moderate (3) | Understand | Difficult (4) | Evaluate | Digital transformation — legacy system decommissioning risk |
+| P1-FC-017 | Moderate (3) | Understand | Difficult (4) | Evaluate | System integration — API security governance and access control |
+| P1-FC-018 | Moderate (3) | Understand | Very Difficult (5) | Evaluate | Cybersecurity governance — incident response framework evaluation |
+| P1-FC-019 | Moderate (3) | Understand | Very Difficult (5) | Evaluate | Digital transformation governance — technology obsolescence risk |
+
+**Quality Distribution:**
+- Cognitive: Evaluate=9, Analyze=1
+- Difficulty: Very Difficult(5)=4, Difficult(4)=6
+- Avg difficulty: 4.4
+
+**Governance Verification:**
+- Governance guard: 54/54 PASS
+- Parse validation: PASS (Function constructor, 500 QIDs)
+- DL-008: 0 violations (all EW[CC] slots empty)
+- DL-026: 0 violations (all non-CC EW slots populated, 50+ chars)
+- DL-037: 0 violations (no binary lead-in polarity mismatches)
+- QID count: 500 (delta: 0)
+
+**Pack C State (Post-Wave 1):**
+- Total: 500 | Certified: 455 | Archived: 36 | Active: 5 | Unprocessed: 4
+- FC Section: 75 total | Certified: 30 | Archived: 36 | Active: 4
+
+**Topic Coverage (10 items):**
+Data Governance(1), Cybersecurity Governance(2), AI Governance(1), Analytics Governance(1), Cloud Controls(1), ERP Controls(1), System Integration(1), Digital Transformation Risk(2)
+
+**All 10 items follow the S60B Exemplar Library pattern:** named company + stakeholder, quantified business context, decision tension, framework reference (COSO/NIST), multi-paragraph ExplanationCorrect, choice-specific distractor explanations (all 3 non-CC slots 50+ chars).
+
+**Remaining FC Inventory:** 36 archived items, including the 10 Wave 2 targets (FC-021,022,023,024,027,028,030,032,033,035).
+
+**Backups:** backups/pack_c_corrected.js.bak-20260728202404, backups/pack_c_corrected.js.bak-20260728205107
+
+**Merge report:** scripts/output/SESSION060C_MERGE_REPORT.json
+
+**Note:** Wave 2 (10 FC items) deferred to next session. Also authored but not yet merged: FC-021, FC-022, FC-023 in scripts/output/S60C_REPLACEMENT_ITEMS_BATCH5.json.
+
+## Session 64 — Case Study Certification Closure — 2026-07-28
+
+**Type:** WRITE (case_pack_1/2/3_corrected.js) + READ-ONLY (certification board + learner safety board)
+
+**Objective:** Convert the final 7 Conditional cases from Session 59 (68 Certified / 7 Conditional / 0 Failed) to Certified under the Hybrid 4-Tier Framework, completing the Part 1 case-study certification program.
+
+**Cases Remediated (7 of 7):**
+| CaseID | File | Blocker | Action |
+|--------|------|---------|--------|
+| CBQ2-A3 | case_pack_2 | D2: Missing metadata | Populated CompanyName/Stakeholder/Industry/CompanyType/BusinessFunction; flipped ProductionStatus+pack_state Draft→Production |
+| CBQ2-B1 | case_pack_1 | D5: Short Q4 explanation | Expanded Q4 from 28→500+ chars; flipped pack_state Draft→Production |
+| CBQ3-A1 | case_pack_2 | D2: Missing metadata | Populated all 5 metadata fields; flipped ProductionStatus+pack_state Draft→Production |
+| CBQ3-B1 | case_pack_2 | D5: Short Q5 explanation | Expanded Q5 from 50→750+ chars; flipped pack_state Draft→Production |
+| CBQ4-A1 | case_pack_2 | D2: Missing metadata | Populated all 5 metadata fields; flipped ProductionStatus+pack_state Draft→Production |
+| CBQ-F1 | case_pack_1 | D5: Boilerplate | Already resolved by S533 — verified clean, no changes |
+| CBQ5-B2 | case_pack_3 | D2+D4: Metadata + SectionTag | Populated metadata; SectionTags already correct for bonds content; flipped ProductionStatus+pack_state |
+
+**Verification Results:**
+- Learner Safety Board: PASS — 0 wrong answers, 0 broken exhibits, 0 empty explanations, 0 boilerplate, 0 DL-008, 0 DL-026
+- 16 independent calculations verified correct
+- 115 Exhibit CaseIDs cross-checked (0 mismatches)
+
+**Before/After Counts:**
+- Before: 68 Certified / 7 Conditional / 0 Failed (Session 59 baseline)
+- After: 7 Conditional → 7 Certified (Session 64 scope)
+- Item-level: 400/400 Certified (unchanged — already 100% pre-session)
+- Case-level ProductionStatus: 35/75 Production (up from 31)
+
+**Remaining Gap (Not in Session 64 Scope):**
+- 40 content-complete "Bucket-A" cases still have ProductionStatus="Draft" despite all items Certified and zero content defects
+- Per Session 59 Hybrid Framework: these cases need only ProductionStatus Draft→Production flip (estimated 2 minutes)
+- Zero learner-facing risk — all 400 items carry question_state="Certified"
+
+**Backups:** `backups/case_pack_*_corrected.js.bak-S64-20260728204159`
+
+**Deliverables:** `reports/certification/SESSION064_*.json` (5 files)
+
+**Governance:** All edits ≤30 items per changeset. Backup protocol followed. No content rewrites. No answer-key changes. No calculation changes.
+
 ## SESSION382 — Final Expansion Authorization Remediation — 2026-07-28
 
 **Type:** WRITE (Pack C + Pack D) + READ-ONLY (4 boards)
@@ -26821,6 +26911,66 @@ S380 baseline: 85. S381 improvements: +3 (DL-026→0, classifier deployed) + 5 D
 - `scripts/output/SESSION381_READINESS_UPDATE.json`
 - `scripts/output/SESSION381_AUTHORIZATION_RECOMMENDATION.json`
 - `reports/SESSION381_EXECUTIVE_SUMMARY.md`
+
+## SESSION63 — Financial Reporting Judgment Rewrite Program — 2026-07-28
+
+**Type:** WRITE (Pack A Section A) — 14 rewrites across 2 batches
+
+**Objective:** Validate that Section A (Financial Reporting Decisions) can become a major source of Evaluate-level inventory growth. Rewrite 12–14 Understand/Apply items into Analyze/Evaluate with professional judgment emphasis.
+
+**Scope:** Pack A Section A only. 14 items rewrote across 12 unique financial reporting topics:
+- **Evaluate (8):** P1-A-005 (ASC 606 revenue), P1-A-008 (ASC 330 inventory LCM), P1-A-011 (ASC 360 impairment), P1-A-012 (ASC 450 contingency accrual), P1-A-021 (ASC 235 disclosure), P1-A-025 (ASC 740 deferred taxes), P1-A-034 (ASC 450 range disclosure), P1-A-054 (ASC 450 probability assessment)
+- **Analyze (6):** P1-A-007 (ASC 326 CECL), P1-A-009 (LIFO liquidation), P1-A-014 (ASC 842 lease), P1-A-016 (ASC 810 VIE consolidation), P1-A-023 (ASC 820 fair value), P1-A-024 (cash equivalents)
+
+**Excluded (S61/S62/S892 targets):** P1-A-002, P1-A-013, P1-A-044, P1-A-064
+
+**Before/After — Section A Cognitive Profile:**
+| Cognitive Level | Before | After | Change |
+|-----------------|--------|-------|--------|
+| Evaluate | 3 (4.0%) | 11 (14.7%) | +267% |
+| Analyze | 2 (2.7%) | 8 (10.7%) | +300% |
+| Apply | 56 (74.7%) | 54 (72.0%) | -4% |
+| Understand | 13 (17.3%) | 1 (1.3%) | -92% |
+| Remember | 1 (1.3%) | 1 (1.3%) | — |
+
+**Higher-order thinking (Analyze+Evaluate):** 5 (6.7%) → 19 (25.3%) = +280%
+
+**CorrectChoice Changes:** 11 of 14 items had CC rotated to match new judgment-based scenarios. All verified independently against new answer keys.
+
+**Governance Gates:**
+- `test_governance_guard.js`: 54/54 PASS (0 FAIL)
+- Parse integrity: PASS (500 items)
+- QID count: 500 stable
+- Certified count: 500 stable
+- DL-008: 0 on rewritten items
+- DL-026: 0 on rewritten items
+- DL-030: 0
+- DL-037: 0
+
+**Quality Metrics (S63 vs S61/S62):**
+| Metric | S61 | S62 | S63 |
+|--------|-----|-----|-----|
+| Avg EC chars | ~250 | ~285 | ~1,705 |
+| Avg EW chars | ~150 | ~165 | ~940 |
+| Named stakeholders | 20/20 | 20/20 | 14/14 |
+| ASC references | 20/20 | 20/20 | 14/14 |
+| Evaluate rate | 50% | 50% | 57% |
+
+**Key Finding:** Domain-targeted rewriting (single-section focus) produces higher Evaluate conversion rates (57%) than cross-section scanning (50%). Topics where the core professional question is "should we accrue/recognize/disclose?" (ASC 450 contingencies, ASC 606 revenue, ASC 360 impairment) convert to Evaluate at 100%. Topics where the core question is "what category/amount?" (ASC 820 fair value, ASC 842 lease, ASC 810 consolidation) convert to Analyze.
+
+**Cumulative Program (S61+S62+S63):** 54 rewrites (40 applied + 14 S63), 28 Evaluate items, 26 Analyze items, zero governance regressions.
+
+**Backups:**
+- `backups/pack_a_corrected.js.bak-S063-20260728174545` (pre-batch, 2,034,496 bytes)
+- `backups/pack_a_corrected.js.bak-S063-B1-20260728174654` (post-batch-1, 2,034,496 bytes)
+- `backups/pack_a_corrected.js.bak-S063-B2-20260728184830` (post-batch-2, 2,307,388 bytes)
+
+**Reports Generated:**
+- `scripts/output/SESSION063_REWRITE_QUEUE.json`
+- `reports/SESSION063_REWRITE_RESULTS.json`
+- `reports/SESSION063_EVALUATE_GROWTH_REPORT.md`
+- `reports/SESSION063_QUALITY_IMPROVEMENT_REPORT.md`
+- `reports/SESSION063_FINANCIAL_REPORTING_JUDGMENT_REPORT.md`
 
 
 

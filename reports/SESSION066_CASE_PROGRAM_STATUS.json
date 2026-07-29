@@ -1,0 +1,82 @@
+{
+  "session": "S66",
+  "type": "case-program-board",
+  "timestamp": "2026-07-28T16:45:00.000Z",
+  "case_packs": {
+    "case_pack_1": {
+      "file": "case_pack_1_corrected.js",
+      "var_name": "CASE_PACK_1",
+      "cases": 25,
+      "items": 141,
+      "sections": { "A": 4, "B": 4, "C": 5, "D": 5, "E": 3, "F": 4 },
+      "certified": 25,
+      "draft_production_status": 7,
+      "aliases": ["CASE_BANK_A", "MIGRATED_CASE_BASE_A", "CASE_BANK_D", "MIGRATED_CASE_BASE_D"],
+      "case_ids": ["CBQ-A1","CBQ-A2","CBQ-A3","CBQ2-A2","CBQ-B1","CBQ-B2","CBQ-B3","CBQ2-B1","CBQ-C1","CBQ-C2","CBQ-C3","CBQ2-C1","CBQ2-C2","CBQ-D1","CBQ-D2","CBQ2-D1","CBQ2-D2","CBQ2-D3","CBQ-E1","CBQ-E2","CBQ2-E1","CBQ-F1","CBQ-F2","CBQ2-F1","CBQ2-F2"]
+    },
+    "case_pack_2": {
+      "file": "case_pack_2_corrected.js",
+      "var_name": "CASE_PACK_2",
+      "cases": 25,
+      "items": 132,
+      "sections": { "A": 4, "B": 4, "C": 5, "D": 5, "E": 4, "F": 3 },
+      "certified": 25,
+      "draft_production_status": 13,
+      "aliases": ["CASE_BANK_B", "MIGRATED_CASE_BASE_B", "CASE_BANK_E", "MIGRATED_CASE_BASE_E"],
+      "case_ids": ["CBQ2-A3","CBQ3-A1","CBQ3-A2","CBQ4-A1","CBQ2-B2","CBQ2-B3","CBQ3-B1","CBQ3-B2","CBQ2-C3","CBQ3-C1","CBQ3-C2","CBQ3-C3","CBQ4-C1","CBQ3-D1","CBQ3-D2","CBQ3-D3","CBQ4-D1","CBQ4-D2","CBQ2-E2","CBQ3-E1","CBQ3-E2","CBQ4-E1","CBQ3-F1","CBQ3-F2","CBQ4-F1"]
+    },
+    "case_pack_3": {
+      "file": "case_pack_3_corrected.js",
+      "var_name": "CASE_PACK_3",
+      "cases": 25,
+      "items": 127,
+      "sections": { "A": 3, "B": 4, "C": 4, "D": 4, "E": 5, "F": 5 },
+      "certified": 25,
+      "draft_production_status": 20,
+      "aliases": ["CASE_BANK_C", "MIGRATED_CASE_BASE_C"],
+      "case_ids": ["CBQ4-A2","CBQ5-A2","CBQ5-B2","CBQ3-B3","CBQ4-B1","CBQ4-B2","CBQ5-B1","CBQ4-C2","CBQ5-C1","CBQ5-C2","CBQ5-C3","CBQ4-D3","CBQ5-D1","CBQ5-D2","CBQ5-D3","CBQ4-E2","CBQ4-E3","CBQ5-E1","CBQ5-E2","CBQ5-E3","CBQ4-F2","CBQ4-F3","CBQ5-F1","CBQ5-F2","CBQ5-F3"]
+    }
+  },
+  "totals": {
+    "cases": 75,
+    "items": 400,
+    "certified": 75,
+    "by_section": { "A": 11, "B": 12, "C": 14, "D": 14, "E": 12, "F": 12 }
+  },
+  "baseline_match": true,
+  "baseline_notes": {
+    "pack_1_sections_baseline": "A4 B4 C5 D5 E4 F3 (per CURRENT_BASELINES.md S916-S918)",
+    "pack_1_sections_actual": "A4 B4 C5 D5 E3 F4",
+    "pack_1_discrepancy": "Baseline documents E4/F3 but file has E3/F4 — documentation error. Total cases (25) and total items (141) match. CBQ2-E1 case is Section E (IT General Controls), not F. Both Section E and F counts are within acceptable 3-5 range.",
+    "pack_2_sections": "A4 B4 C5 D5 E4 F3 — matches baseline",
+    "pack_3_sections": "A3 B4 C4 D4 E5 F5 — matches baseline"
+  },
+  "app_js_integration": {
+    "html_scripts": ["case_pack_1_corrected.js", "case_pack_2_corrected.js", "case_pack_3_corrected.js"],
+    "primary_aliases": {
+      "A": "CASE_BANK_A / MIGRATED_CASE_BASE_A → CASE_PACK_1",
+      "B": "CASE_BANK_B / MIGRATED_CASE_BASE_B → CASE_PACK_2",
+      "C": "CASE_BANK_C / MIGRATED_CASE_BASE_C → CASE_PACK_3",
+      "D": "CASE_BANK_D / MIGRATED_CASE_BASE_D → CASE_PACK_1",
+      "E": "CASE_BANK_E / MIGRATED_CASE_BASE_E → CASE_PACK_2"
+    },
+    "fallback": "ENHANCED_CASE_BANK_A-E series (5 legacy files, all empty/nil since S916 consolidation)",
+    "case_pool_build": "app.js:1313-1325 (_buildCasePoolFromPacks) — resolves CASE_BANK_A-E with MIGRATED_CASE_BASE_A-E fallback, tagged by Section field"
+  },
+  "structural_audit": {
+    "node_check": "All 3 files pass node --check",
+    "function_constructor_parse": "All 3 files parse cleanly",
+    "required_fields": "All 75 cases have CaseID, Items[], question_state, Section",
+    "missing_explanations": 0,
+    "missing_correct": 0,
+    "non_certified": 0
+  },
+  "notes": {
+    "production_status_draft": "40 of 75 cases have ProductionStatus: 'Draft' (Pack1:7, Pack2:13, Pack3:20) but all 75 carry question_state: 'Certified'. The question_state field is authoritative for learner-pool eligibility. Draft ProductionStatus is a cosmetic metadata artifact from the original source files predating S916 consolidation.",
+    "cbq5_b2_section": "CBQ5-B2 has CaseID suggesting Section B but Section field = 'A' and SectionTags = ['A']. Title is 'Bonds Payable and Effective Interest Amortization' — this is Domain A material (External Financial Reporting). The CaseID naming is a source-file artifact, not a section misassignment.",
+    "pack_aliasing": "Pack 1 serves both Domain A and Domain D via aliases. Pack 2 serves both Domain B and Domain E via aliases. Pack 3 serves Domain C only. This 3-pack × 5-domain aliasing is the post-S916 architecture per CURRENT_BASELINES.md."
+  },
+  "conditional_cases": 0,
+  "failed_cases": 0,
+  "overall": "ALL_CLEAN"
+}

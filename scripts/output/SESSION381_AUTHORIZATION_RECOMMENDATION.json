@@ -1,0 +1,88 @@
+{
+  "session": "S381",
+  "timestamp": "2026-07-28T22:30:00.000Z",
+  "recommendation": "DENIED",
+  "gates": {
+    "G1_LearnerPoolSafety": {
+      "status": "FAIL",
+      "details": "10 Certified DL-008 items remain in learner pool (6 Pack C: P1-CC-013, P1-CC-033, P1-CC-041, P1-CC-049, P1-EC-049, P1-EC-061; 4 Pack D: P1-CD-016, P1-CD-056, P1-CD-066, P1-CD-091). S381 successfully remediated all 5 targeted DL-008 items (P1B-C-153, P1-CC-015, P1-EC-031, P1-ED-016, P1-ED-051), but 10 additional Certified DL-008 items were discovered during post-remediation verification that were NOT in S380's residual-defect-board scope. Pre-delivery safety check confirms: 2,441 Certified, 2,431 safe, 10 unsafe. DL-026 count on Certified: 0 (all 65 S381 targets remediated). DL-021 count on Certified: 0. Rule 9 violations: 0."
+    },
+    "G2_AutomationInfrastructure": {
+      "status": "CONDITIONAL",
+      "details": "3 of 4 scripts fully deployed and operational. post_change_qc.js: DEPLOYED (5,094 bytes, exit code 0, all QC checks PASS). pre_delivery_safety_check.js: DEPLOYED (found 10 unsafe items). classify_dl031.js: DEPLOYED (scanned 2,545 items, 1 flagged, Function constructor parse). rebuild_baselines.js: PARTIALLY DEPLOYED (dry-run works, but case pack naming convention mismatch — script expects 'case_pack_1_corrected.js' naming vs. actual files). No CI/CD pipeline integration for any script."
+    },
+    "G3_GovernanceStability": {
+      "status": "PASS",
+      "details": "Governance guard: 54/54 PASS (Rules 1-9 active). No certification drift detected — all certified pool changes authorized (Evaluate Wave 1: +5, DL-031 calibrations). Pack QID counts stable: 500/500/500/500/540. CURRENT_BASELINES.md stale (claims 0 DL-008/DL-026 on Certified, but §3 lines 96/112 contradicted by S380/S381 findings). Governance-critical hashes unchanged since S913."
+    },
+    "G4_ReadinessScore": {
+      "status": "FAIL",
+      "score": 87,
+      "target": 90,
+      "details": "Estimated readiness: 87. No formal SESSION381_READINESS_UPDATE.json was generated. S380 readiness was 85. S381 improvements: +3 (DL-026: 0 on Certified, 65 items/70 fields remediated), +1 (5 targeted DL-008 cleared), -2 (10 new DL-008 discovered — S380 residual-defect-board undercount). Net: 89 before countervailing. Countervailing: -1 (10 residual DL-008 items unresolved), -1 (CURRENT_BASELINES.md still stale). Estimated final: 87. Below both 90 (READY) and 88 (CONDITIONAL) thresholds. The 60-item reduction in unsafe items (70→10) is substantial but insufficient to clear G4 alone."
+    },
+    "G5_NoBlockers": {
+      "status": "FAIL",
+      "details": "10 Certified DL-008 items remain in learner pool — HIGH severity (learners see wrong/confusing text in correct-answer slot). These 10 items were NOT in S381's remediation scope; they are a new S381 discovery from the post-remediation verification scan. Remaining blockers also include: CURRENT_BASELINES.md stale (§3 DL-008/DL-026 claims false), DEFECT_LIBRARY.md DL-008/DL-026 entries outdated, S853 WAVE_A pipeline audit not conducted, rebuild_baselines.js case pack naming gap, post_change_qc.js not pipeline-integrated, P1-FD-046 structural corruption, 306-item Evaluate gap, 3-week throughput unproven (S374 Condition D)."
+    }
+  },
+  "conditions_for_authorization": [
+    "Clear 10 residual DL-008 items: P1-CC-013, P1-CC-033, P1-CC-041, P1-CC-049, P1-EC-049, P1-EC-061 (Pack C) + P1-CD-016, P1-CD-056, P1-CD-066, P1-CD-091 (Pack D). All CC=A (6 Pack C items) or CC=D (3 Pack D items) or CC=B/C — template rotation artifact. 1 batch sufficient.",
+    "Update CURRENT_BASELINES.md §3: correct DL-008 '0 verified' claim (line 112) and DL-026 '0 Certified items' claim (line 96) to reflect S380/S381 findings.",
+    "Update DEFECT_LIBRARY.md DL-008 and DL-026 entries to reflect residual items found by S380/S381.",
+    "Rebuild certified pool counts via direct grep: 2,441 current (vs. 2,417 in CURRENT_BASELINES.md §2). Pack C: 445 (vs. 438), Pack D: 456 (vs. 439).",
+    "Formal readiness recalculation (S381_READINESS_UPDATE) with all gains/losses documented.",
+    "Pre-delivery safety re-run: target 0 unsafe items.",
+    "Re-submit for S382 authorization review."
+  ],
+  "s382_package_ready": false,
+  "evidence_basis": {
+    "s377": {
+      "conditions_met": 4,
+      "conditions_total": 5,
+      "blocked": "Evaluate track not launched (Condition 4)",
+      "readiness_s377": "NOT YET (4 of 5 S376 conditions, 83 at S379)"
+    },
+    "s378": {
+      "status": "NO FILES PRODUCED — Evaluate Workstream never activated",
+      "impact": "Zero Evaluate items authored. S376 Condition F (Dedicated Evaluate Workstream) deferred to S379-S380."
+    },
+    "s379": {
+      "expansion_authorization": "CONDITIONAL",
+      "conditions_met": 3,
+      "conditions_partial": 2,
+      "conditions_not_met": 1,
+      "readiness_score": 83,
+      "blocking_condition": "F — Evaluate Workstream NOT ACTIVE"
+    },
+    "s380": {
+      "evaluate_wave1": "5 items authored (P1-ED-044, P1-ED-045, P1-FD-004, P1-EC-068, P1-FC-002), all Bloom's Evaluate, 0 defects",
+      "dl031_batch2": "18 calibration + 4 rewrite items. CAL-001 complete: 39/39 resolved.",
+      "residual_defect_board": "70 Certified items found (5 DL-008 + 65 DL-026). S380 undercounted DL-008 (found 5 of actual 15 Certified).",
+      "readiness_score": 85,
+      "recommendation": "GRANT CONDITIONAL — 5 of 6 A-F conditions MET, only D (Throughput) partial."
+    },
+    "s381": {
+      "dl008_remediated": "5/5 S381 targets cleared. All confirmed by line-level inspection.",
+      "dl026_remediated": "65/65 S381 targets. 70 fields authored across choice-specific distractor explanations. 0 DL-026 on Certified items.",
+      "new_dl008_findings": "10 Certified DL-008 items discovered post-remediation (NOT in S380 scope). CC-A pattern dominant (6 of 6 Pack C items).",
+      "pre_delivery_result": "2,441 Certified | 2,431 safe | 10 unsafe",
+      "governance_guard": "54/54 PASS",
+      "pack_qid_counts": "500/500/500/500/540 (Pack E has 545 QuestionID matches but 540 unique — 5 dual-block artifacts)"
+    }
+  },
+  "score_progression": {
+    "s370_sustainability": 60,
+    "s376_expansion_readiness": 78,
+    "s379_readiness": 83,
+    "s380_readiness": 85,
+    "s381_estimated": 87,
+    "s382_target": 90
+  },
+  "remaining_gap_analysis": {
+    "dl008_remaining": 10,
+    "dl026_remaining": 0,
+    "batches_to_clear_dl008": 1,
+    "estimated_sessions_to_authorization": "1 session (S382: clear 10 DL-008 + update baselines + readiness recalc → 90+)"
+  }
+}

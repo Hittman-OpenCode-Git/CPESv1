@@ -1,0 +1,65 @@
+{
+  "session": "63",
+  "title": "Financial Reporting Judgment Rewrite Program",
+  "date": "2026-07-28",
+  "phase": "candidate-selection",
+  "total_candidates": 14,
+  "target_evaluate": 8,
+  "target_analyze": 6,
+  "selection_criteria": {
+    "include": [
+      "Section A only",
+      "Understand or Apply cognitive level",
+      "Unique concept items (A-001 through A-025) + select loss contingency items",
+      "Topics naturally supporting professional judgment"
+    ],
+    "exclude": [
+      "S61 rewrites: P1-A-002",
+      "S62 rewrites: P1-A-013",
+      "S892 replacements: P1-A-044, P1-A-064",
+      "Rotation-group calculation variants (A-026 through A-075, except A-034, A-054)",
+      "Already Evaluate items: P1-A-002, P1-A-022",
+      "Already Analyze items: P1-A-044, P1-A-064"
+    ]
+  },
+  "section_a_baseline": {
+    "total_items": 75,
+    "remember": 1,
+    "understand": 13,
+    "apply": 56,
+    "analyze": 2,
+    "evaluate": 3
+  },
+  "candidates_evaluate": [
+    {"qid": "P1-A-005", "topic": "Revenue recognition — multiple performance obligations (ASC 606)", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-008", "topic": "Inventory valuation — lower of cost and NRV", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-011", "topic": "Asset impairment trigger assessment (ASC 360)", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-012", "topic": "Contingent liability accrual (ASC 450)", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-021", "topic": "Disclosure notes — accounting policies judgment", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-025", "topic": "Deferred tax liability — temporary differences", "current_cognitive": "Apply", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-034", "topic": "Loss contingency — range disclosure with best estimate", "current_cognitive": "Apply", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-054", "topic": "Loss contingency — reasonably possible disclosure", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"}
+  ],
+  "candidates_analyze": [
+    {"qid": "P1-A-007", "topic": "Allowance method — doubtful accounts estimation", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-009", "topic": "LIFO liquidation effect on earnings", "current_cognitive": "Understand", "current_difficulty": "Easy", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-014", "topic": "Operating lease lessee recognition (ASC 842)", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-016", "topic": "Consolidation — control assessment", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-023", "topic": "Fair value hierarchy — observable inputs (ASC 820)", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-024", "topic": "Cash equivalents — maturity classification", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Analyze", "target_difficulty": "Difficult"}
+  ],
+  "topics_covered": [
+    "Revenue recognition",
+    "Inventory valuation",
+    "Asset impairment",
+    "Contingencies",
+    "Disclosure judgment",
+    "Deferred taxes",
+    "Fair value",
+    "Allowance method",
+    "LIFO liquidation",
+    "Lease accounting",
+    "Consolidation",
+    "Cash equivalents"
+  ]
+}

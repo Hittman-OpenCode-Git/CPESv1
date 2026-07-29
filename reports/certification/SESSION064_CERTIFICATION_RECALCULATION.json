@@ -1,0 +1,45 @@
+{
+  "session": "064",
+  "timestamp": "2026-07-28",
+  "framework": "Hybrid — Session 59 4-Tier Framework",
+  "pre_session_baseline": {
+    "certified": 68,
+    "conditional": 7,
+    "failed": 0,
+    "source": "Session 59 Certification Baseline"
+  },
+  "post_session_results": {
+    "certified_at_item_level": 400,
+    "total_items": 400,
+    "items_certified_pct": "100%",
+    "remediated_cases": {
+      "total_targeted": 7,
+      "fully_remediated": 7,
+      "still_conditional": 0,
+      "still_failed": 0
+    },
+    "remediated_details": [
+      {"caseID": "CBQ2-A3", "status": "Certified", "changes": "Metadata populated + ProductionStatus/pack_state flipped"},
+      {"caseID": "CBQ2-B1", "status": "Certified", "changes": "Q4 explanation expanded + pack_state flipped"},
+      {"caseID": "CBQ3-A1", "status": "Certified", "changes": "Metadata populated + ProductionStatus/pack_state flipped"},
+      {"caseID": "CBQ3-B1", "status": "Certified", "changes": "Q5 explanation expanded + pack_state flipped"},
+      {"caseID": "CBQ4-A1", "status": "Certified", "changes": "Metadata populated + ProductionStatus/pack_state flipped"},
+      {"caseID": "CBQ-F1", "status": "Certified", "changes": "Already Certified (S533) — verified clean, no changes needed"},
+      {"caseID": "CBQ5-B2", "status": "Certified", "changes": "Metadata populated + ProductionStatus/pack_state flipped"}
+    ],
+    "broader_pool_status": {
+      "total_cases": 75,
+      "cases_with_all_items_certified": 75,
+      "cases_with_production_status_production": 35,
+      "cases_with_production_status_draft": 40,
+      "note": "40 cases remain with ProductionStatus='Draft' despite all items being Certified and content being complete. These are Bucket-A cases per Session 59 framework — need only ProductionStatus flip. Not part of Session 64 scope."
+    }
+  },
+  "per_pack_production_status": {
+    "case_pack_1": {"cases": 25, "production": 18, "draft": 7},
+    "case_pack_2": {"cases": 25, "production": 14, "draft": 11},
+    "case_pack_3": {"cases": 25, "production": 5, "draft": 20}
+  },
+  "verdict": "7_OF_7_CONDITIONAL_RESOLVED",
+  "program_completion": "The 7 Conditional cases from Session 59 are now Certified. All 400 items across 75 cases are Certified at the item level. Remaining gap: 40 cases still have ProductionStatus='Draft' at case-level — content-complete but awaiting the ProductionStatus field flip recommended by Session 59 Bucket-A plan."
+}

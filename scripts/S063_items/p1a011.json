@@ -1,0 +1,46 @@
+{
+  "Part": 1,
+  "Section": "A",
+  "SectionName": "External Financial Reporting Decisions",
+  "Topic": "A.011 asset impairment trigger",
+  "MicroTopic": "asset impairment trigger",
+  "UniqueConceptKey": "A-011-asset-impairment-trigger",
+  "LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
+  "Difficulty": "Difficult",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "INTERNAL MEMORANDUM — Keystone Industries\n\nTO: Controller David Chen\nFROM: Plant Manager Sarah Okonkwo\nRE: Production Line 4 — Performance Review\n\nProduction Line 4 is a dedicated automated stamping line (carrying amount: $6,200,000; remaining useful life: 9 years) producing automotive body panels. Output has declined from 92,000 to 51,000 units/month due to mechanical wear and obsolescence. The primary customer (83% of Line 4 output) is transitioning to aluminum panels in 14 months, which Line 4 cannot produce without $1.9 million retooling. Undiscounted future cash flows are projected at $5,400,000; fair value appraised at $3,800,000. Mr. Chen asks: 'Under ASC 360, is an impairment test triggered, and which indicator carries the most weight?'",
+  "Choices": {
+    "A": "Yes, an impairment test is triggered. The most significant indicator is the adverse change in the extent or manner in which the asset is used — the customer's transition to aluminum panels means 83% of output will be eliminated unless retooled. This is a textbook ASC 360-10-35-21(b) indicator. The output decline and fair value drop provide secondary corroboration.",
+    "B": "No impairment test is triggered. The undiscounted future cash flows of $5,400,000 are close to the carrying amount of $6,200,000, and indicators alone without a confirmed recoverability test failure do not trigger recognition. The controller should wait until the cash flow shortfall is more clearly established.",
+    "C": "Yes, an impairment test is triggered, but the primary indicator is the mechanical output decline from 92,000 to 51,000 units/month — a 44.6% reduction. The customer transition is a separate business risk that does not affect the asset's carrying value under ASC 360.",
+    "D": "No impairment test is required because the asset still has 9 years of remaining useful life. An impairment test is triggered only when the carrying amount exceeds undiscounted future cash flows. Keystone should continue with the current depreciation schedule until the customer transition actually occurs in 14 months."
+  },
+  "CorrectChoice": "A",
+  "ExplanationCorrect": "Under ASC 360-10-35-21, a long-lived asset must be tested for recoverability whenever events or changes in circumstances indicate that its carrying amount may not be recoverable. The question presents several indicators that collectively establish a clear triggering event. The most significant indicator is the adverse change in the extent or manner in which Line 4 is used [ASC 360-10-35-21(b)]: the primary customer (83% of output) is transitioning to aluminum panels that Line 4 cannot produce without $1.9 million retooling. This is a fundamental change in what the asset must produce. The mechanical output decline (92,000 to 51,000 units/month) provides secondary corroboration under ASC 360-10-35-21(c). The fair value appraisal of $3,800,000 (well below carrying amount of $6,200,000) further confirms the need for testing. Once indicators are present, Step 1 compares carrying amount to undiscounted future cash flows: $5,400,000 < $6,200,000 — the recoverability test IS failed, requiring Step 2 impairment recognition. A critical exam trap is confusing indicators (which trigger testing) with the recoverability test (which determines impairment). Indicators trigger the test; the test determines whether impairment is recognized. ASC 360 requires testing when indicators arise, not when the adverse event fully materializes.",
+  "StudyLinks": [
+    {"label": "IMA CMA Learning Outcome Statements, Part 1 Section A", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
+    {"label": "OpenStax Financial Accounting", "url": "https://openstax.org/books/principles-financial-accounting/pages/1-why-it-matters"}
+  ],
+  "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+  "QuestionID": "P1-A-011",
+  "question_state": "Certified",
+  "certification_date": "2026-07-22",
+  "certification_batch": "Section A Block 1",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+    "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+    "Original practice item with unique micro-topic and stem",
+    "Answer key distribution balanced across A/B/C/D",
+    "Distractors written as plausible CMA-style traps"
+  ],
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "This recommendation conflates two distinct steps: (1) determining whether indicators require a recoverability test, and (2) performing the test itself. The standard requires testing whenever indicators suggest the carrying amount may not be recoverable — it does NOT require knowing the cash flows are below carrying amount before testing. Multiple indicators exist: the customer transition changes how the asset will be used, the output decline is substantial, and the fair value ($3,800,000) is well below carrying amount. The controller must perform the test. The fact that undiscounted cash flows ($5,400,000) fall below carrying amount confirms testing was required — and that impairment recognition follows. If cash flows had exceeded carrying amount, impairment would not be recognized, but the indicators still required performing the test. Waiting until cash flows clearly fail is circular reasoning.",
+  "ExplanationWrongC": "This recommendation correctly identifies that impairment testing is triggered but misidentifies the primary indicator. While the output decline is genuine, it is secondary to the customer-driven change in asset use. Under ASC 360-10-35-21(b), a significant adverse change in the extent or manner of use is an explicit indicator. The customer's aluminum transition renders Line 4's current configuration obsolete — precisely the type of change ASC 360 contemplates. The output decline corroborates but is more properly classified under 21(c) (market value decrease). Characterizing the customer transition as 'a separate business risk' misunderstands impairment accounting — a change in customer demand rendering an asset obsolete is a textbook ASC 360 triggering event.",
+  "ExplanationWrongD": "This recommendation makes two critical errors. First, it reverses the ASC 360 framework: testing is required when indicators exist, not only when carrying amount is known to exceed undiscounted cash flows. The controller cannot skip the indicator evaluation step. Second, it suggests waiting until the customer actually transitions in 14 months. ASC 360-10-35-21 evaluates indicators at each reporting date based on current circumstances. The announced transition, known incompatibility of Line 4 with aluminum, and required $1.9 million retooling are current indicators existing at the balance sheet date. They do not become indicators only when production stops. The controller should test now and, based on undiscounted cash flows of $5,400,000 vs. carrying amount of $6,200,000, recognize an impairment loss.",
+  "DifficultyScore": 4,
+  "CognitiveLevel": "Evaluate"
+}

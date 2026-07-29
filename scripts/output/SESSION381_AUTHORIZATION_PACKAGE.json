@@ -1,0 +1,93 @@
+{
+  "session": "S381",
+  "type": "EXPANSION_AUTHORIZATION_PACKAGE",
+  "status": "PENDING_REVIEW",
+  "generated_by": "S380 authorization-prep-board",
+  "timestamp": "2026-07-28T21:30:00Z",
+  "prerequisites_completed": [
+    "DL-031 CAL-001: 39/39 items resolved (S377 Batch 1 + S380 Batch 2)",
+    "DL-035 Domain F: 0 DL-026 confirmed by object-boundary scan",
+    "Evaluate dedicated track launched: Wave 1 completed (5 items, 0 defects, Bloom's Evaluate verified)",
+    "Automation contradiction resolved: post_change_qc.js confirmed present (5,094 bytes)",
+    "Governance guard: 54/54 PASS (Rules 1-9)",
+    "Certified pool baseline recaptured: 2,417 items (95.2% of 2,540)",
+    "6 authoring waves executed at 0-defect certification quality",
+    "Throughput model proven: 20 items/wave mean, 8.5 Evaluate/wave, 2 waves/week sustainable at 82% confidence",
+    "Residual-defect-board methodology validated: Function constructor object-boundary scan, DL-029 immune, 0 false positives",
+    "Cognitive gap Phase 1: 120 items authored vs 50 threshold — substantially exceeded"
+  ],
+  "qualified_expansion_scope": "Conditional expansion authorization for the CMA Part 1 Exam Simulator content expansion program. Scope includes: (1) Close 70-item residual DL-008/DL-026 defect gap (~4 waves). (2) Execute ~306-item Evaluate gap closure program (~19 weeks at 2 waves/week). (3) Relabel 26 misclassified cognitive-level items. (4) Repair 1 structurally corrupted item (P1-FD-046). (5) Achieve 3-week sustained throughput proof (S382 gate) for CONDITIONAL→YES conversion per S374 Condition D.",
+  "remaining_blockers": [
+    "CURRENT_BASELINES.md stale — §3 claims 0 DL-008/DL-026 but 70 Certified items found. Must be updated first S381 action.",
+    "5 Certified DL-008 items in learner pool — HIGH severity, clear EW[CC] immediately (1 batch)",
+    "65 Certified DL-026 items in learner pool — MEDIUM-HIGH severity, author ~85 distractor EW fields (3 batches)",
+    "DEFECT_LIBRARY.md DL-008 entry ('0 remaining') and DL-026 entry ('0 Certified') must be updated",
+    "S853 WAVE_A certification pipeline audit — determine why DL-008/DL-026 detection failed",
+    "P1-FD-046 structural repair — missing Stem, Choices, CorrectChoice, ExplanationCorrect",
+    "3-week sustained throughput unproven — S382 gate at week 3",
+    "Evaluate gap: 306 items remaining — longest-running workstream at ~19 weeks"
+  ],
+  "readiness": 85,
+  "requires_human_authorization": true,
+  "condition_summary": {
+    "a_f_conditions_met": 5,
+    "a_f_conditions_total": 6,
+    "met": ["A (DL-035)", "B (DL-031)", "C (Automation)", "E (Cognitive Gap)", "F (Evaluate Track)"],
+    "partial": ["D (Throughput — post-authorization sustainability milestone)"],
+    "s376_conditions_complete": 4,
+    "s376_conditions_total": 5,
+    "s376_not_met": ["3 (CURRENT_BASELINES.md accuracy — documentation staleness, not defect failure)"]
+  },
+  "first_s381_priorities": [
+    {
+      "priority": 1,
+      "action": "Update CURRENT_BASELINES.md — true up §3 DL-008/DL-026 status to reflect 70 Certified items found by S380 residual-defect-board",
+      "effort": "1 session",
+      "blocker": "Governance integrity — all planning operates on stale data until fixed"
+    },
+    {
+      "priority": 2,
+      "action": "Update DEFECT_LIBRARY.md — DL-008 entry (correct '0 remaining' claim) and DL-026 entry (correct '0 Certified' claim)",
+      "effort": "1 session",
+      "blocker": "Defect library is the authoritative defect record — must reflect ground truth"
+    },
+    {
+      "priority": 3,
+      "action": "Execute 5-item DL-008 remediation wave — clear EW[CC] on P1B-C-153, P1-CC-015, P1-EC-031, P1-ED-016, P1-ED-051",
+      "effort": "1 batch, ~45 min",
+      "blocker": "HIGH severity — learner safety risk. Wrong/confusing text in correct-answer slot on Certified items"
+    },
+    {
+      "priority": 4,
+      "action": "Execute 65-item DL-026 remediation program — author ~85 choice-specific distractor explanations for empty non-CC EW slots across Sections C/D/E in Packs B, C, D",
+      "effort": "3 batches, ~3 waves",
+      "blocker": "MEDIUM-HIGH severity — learners see no distractor feedback on affected items"
+    },
+    {
+      "priority": 5,
+      "action": "Establish throughput monitoring dashboard with S382 gate at week 3 — prove 2 waves/week sustained for 3 consecutive weeks",
+      "effort": "Ongoing monitoring",
+      "blocker": "S374 Condition D for CONDITIONAL→YES conversion"
+    },
+    {
+      "priority": 6,
+      "action": "Launch Evaluate Wave 2 — continue closing 306-item gap at 8.5 Evaluate/wave cadence",
+      "effort": "Ongoing (~19 weeks)",
+      "blocker": "Longest-running workstream — evaluate gap is the pacing item for full program completion"
+    }
+  ],
+  "governance_baseline": {
+    "certified_pool": 2417,
+    "certified_after_wave1": 2422,
+    "total_items": 2540,
+    "packs": {"A": 500, "B": 500, "C": 438, "D": 439, "E": 540},
+    "governance_guard": "54/54 PASS",
+    "active_rules": ["Rule 1-9 BLOCK"],
+    "known_defects_certified_pool": {
+      "dl008": 5,
+      "dl026": 65,
+      "unique_qids": 66,
+      "pct_of_pool": 2.7
+    }
+  }
+}

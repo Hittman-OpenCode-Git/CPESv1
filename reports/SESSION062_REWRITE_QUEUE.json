@@ -1,0 +1,68 @@
+{
+  "session": "62",
+  "title": "MCQ Quality Elevation Program — Wave 2",
+  "date": "2026-07-28",
+  "phase": "candidate-selection",
+  "total_candidates": 20,
+  "selection_criteria": {
+    "avoid": [
+      "S061 rewritten items (20 QIDs across Packs A/B/E)",
+      "S899-S60 recently authored items (Packs C+D Sections E+F)",
+      "Already Analyze or Evaluate cognitive level",
+      "Difficult or Very Difficult difficulty"
+    ],
+    "prioritize": [
+      "Understand-level definition-driven items (DL-031 pattern)",
+      "Easy/Moderate-Easy/Moderate difficulty",
+      "Items where topic naturally supports judgment/recommendation/prioritization",
+      "Items with existing business context for natural scenario extension"
+    ],
+    "evaluate_target": 10,
+    "actual_evaluate_count": 10,
+    "evaluate_qids": [
+      "P1-E-081", "P1-E-082", "P1-E-083",
+      "P1-C-015", "P1-A-013",
+      "P1B-A-136", "P1B-E-084",
+      "P1E-E-026", "P1E-C-017", "P1E-E-051"
+    ],
+    "analyze_qids": [
+      "P1-E-042", "P1-B-002", "P1-D-020",
+      "P1B-B-158", "P1B-B-165",
+      "P1B-F-120", "P1B-F-138",
+      "P1E-D-032", "P1E-D-031", "P1E-B-038"
+    ]
+  },
+  "pack_distribution": {
+    "Pack_A": 8,
+    "Pack_B": 6,
+    "Pack_E": 6
+  },
+  "section_distribution": {
+    "A": 2, "B": 4, "C": 2, "D": 3, "E": 7, "F": 2
+  },
+  "cognitive_source_counts": {
+    "Understand": 20
+  },
+  "candidates": [
+    {"qid": "P1-E-081", "pack": "A", "section": "E", "topic": "Remediation prioritization", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1-E-082", "pack": "A", "section": "E", "topic": "IT change management bypass", "current_cognitive": "Understand", "current_difficulty": "Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1-E-083", "pack": "A", "section": "E", "topic": "Vendor master file SoD", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1-C-015", "pack": "A", "section": "C", "topic": "Variance responsibility nuance", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1-A-013", "pack": "A", "section": "A", "topic": "Subsequent event condition", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1B-A-136", "pack": "B", "section": "A", "topic": "Debt covenant disclosure", "current_cognitive": "Understand", "current_difficulty": "Moderate", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1B-E-084", "pack": "B", "section": "E", "topic": "ERM framework selection", "current_cognitive": "Understand", "current_difficulty": "Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1E-E-026", "pack": "E", "section": "E", "topic": "Management override", "current_cognitive": "Understand", "current_difficulty": "Moderate", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1E-C-017", "pack": "E", "section": "C", "topic": "ROI vs RI decision", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1E-E-051", "pack": "E", "section": "E", "topic": "Compensating control", "current_cognitive": "Understand", "current_difficulty": "Moderate", "target_cognitive": "Evaluate", "target_difficulty": "Difficult"},
+    {"qid": "P1-E-042", "pack": "A", "section": "E", "topic": "Control exception root cause", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1-B-002", "pack": "A", "section": "B", "topic": "Top-down budgeting limitation", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1-D-020", "pack": "A", "section": "D", "topic": "TOC bottleneck", "current_cognitive": "Understand", "current_difficulty": "Moderate-Easy", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1B-B-158", "pack": "B", "section": "B", "topic": "Participative vs imposed budgeting", "current_cognitive": "Understand", "current_difficulty": "Moderate", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1B-B-165", "pack": "B", "section": "B", "topic": "Responsibility accounting", "current_cognitive": "Understand", "current_difficulty": "Moderate", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1B-F-120", "pack": "B", "section": "F", "topic": "AI/ML risk in accounting", "current_cognitive": "Understand", "current_difficulty": "Easy", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1B-F-138", "pack": "B", "section": "F", "topic": "ERP workflow bypass", "current_cognitive": "Understand", "current_difficulty": "Moderate", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1E-D-032", "pack": "E", "section": "D", "topic": "Constraint optimization", "current_cognitive": "Understand", "current_difficulty": "Moderate", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1E-D-031", "pack": "E", "section": "D", "topic": "Keep-or-drop", "current_cognitive": "Understand", "current_difficulty": "Moderate", "target_cognitive": "Analyze", "target_difficulty": "Difficult"},
+    {"qid": "P1E-B-038", "pack": "E", "section": "B", "topic": "Transfer price full capacity", "current_cognitive": "Understand", "current_difficulty": "Moderate", "target_cognitive": "Analyze", "target_difficulty": "Difficult"}
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "session": "S60C",
+  "wave": 1,
+  "timestamp": "2026-07-28T20:54:00Z",
+  "status": "COMPLETE",
+  "pack": "pack_c_corrected.js",
+  "section": "F",
+  "itemsReplaced": 10,
+  "replacements": [
+    {"QID": "P1-FC-003", "old_state": "Archived", "new_state": "Certified", "cognitive": "Evaluate", "difficulty": 4, "topic": "Data governance — data quality remediation"},
+    {"QID": "P1-FC-004", "old_state": "Archived", "new_state": "Certified", "cognitive": "Evaluate", "difficulty": 5, "topic": "Cybersecurity governance — third-party vendor risk assessment"},
+    {"QID": "P1-FC-008", "old_state": "Archived", "new_state": "Certified", "cognitive": "Evaluate", "difficulty": 4, "topic": "AI governance — model bias detection"},
+    {"QID": "P1-FC-009", "old_state": "Archived", "new_state": "Certified", "cognitive": "Analyze", "difficulty": 4, "topic": "Analytics governance — dashboard-driven decision bias"},
+    {"QID": "P1-FC-011", "old_state": "Archived", "new_state": "Certified", "cognitive": "Evaluate", "difficulty": 4, "topic": "Cloud controls — SaaS vendor lock-in"},
+    {"QID": "P1-FC-013", "old_state": "Archived", "new_state": "Certified", "cognitive": "Evaluate", "difficulty": 4, "topic": "ERP controls — implementation risk and scope management"},
+    {"QID": "P1-FC-014", "old_state": "Archived", "new_state": "Certified", "cognitive": "Evaluate", "difficulty": 4, "topic": "Digital transformation — legacy system decommissioning risk"},
+    {"QID": "P1-FC-017", "old_state": "Archived", "new_state": "Certified", "cognitive": "Evaluate", "difficulty": 4, "topic": "System integration — API security governance"},
+    {"QID": "P1-FC-018", "old_state": "Archived", "new_state": "Certified", "cognitive": "Evaluate", "difficulty": 5, "topic": "Cybersecurity governance — incident response framework evaluation"},
+    {"QID": "P1-FC-019", "old_state": "Archived", "new_state": "Certified", "cognitive": "Evaluate", "difficulty": 5, "topic": "Digital transformation governance — technology obsolescence risk"}
+  ],
+  "qualityMetrics": {
+    "cognitiveDistribution": {"Evaluate": 9, "Analyze": 1},
+    "difficultyDistribution": {"4": 6, "5": 4},
+    "avgDifficulty": 4.4,
+    "dl008Violations": 0,
+    "dl026Violations": 0,
+    "dl037Violations": 0
+  },
+  "governance": {
+    "guardTests": "54/54 PASS",
+    "parseValidation": "PASS",
+    "qidCount": 500,
+    "qidDelta": 0
+  },
+  "packState": {
+    "totalItems": 500,
+    "certified": 455,
+    "archived": 36,
+    "active": 5,
+    "unprocessed": 4
+  },
+  "fcSectionState": {
+    "totalFC": 75,
+    "certified": 30,
+    "archived": 36,
+    "active": 4
+  },
+  "remainingInventory": {
+    "fcArchived": 36,
+    "fdArchived": 33,
+    "nextWaveTargets": ["P1-FC-021","P1-FC-022","P1-FC-023","P1-FC-024","P1-FC-027","P1-FC-028","P1-FC-030","P1-FC-032","P1-FC-033","P1-FC-035"],
+    "projectedRemainingWaves": 4
+  },
+  "backups": [
+    "backups/pack_c_corrected.js.bak-20260728202404",
+    "backups/pack_c_corrected.js.bak-20260728205107"
+  ],
+  "mergeScript": "scripts/S60C_merge_wave1.js",
+  "replacementDataFiles": [
+    "scripts/output/S60C_REPLACEMENT_ITEMS_BATCH1.json",
+    "scripts/output/S60C_REPLACEMENT_ITEMS_BATCH2.json",
+    "scripts/output/S60C_REPLACEMENT_ITEMS_BATCH3.json",
+    "scripts/output/S60C_REPLACEMENT_ITEMS_BATCH4.json"
+  ]
+}

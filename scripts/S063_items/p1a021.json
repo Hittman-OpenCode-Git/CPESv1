@@ -1,0 +1,46 @@
+{
+  "Part": 1,
+  "Section": "A",
+  "SectionName": "External Financial Reporting Decisions",
+  "Topic": "A.021 disclosure notes accounting policies",
+  "MicroTopic": "disclosure notes accounting policies",
+  "UniqueConceptKey": "A-021-disclosure-notes-accounting-policies",
+  "LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
+  "Difficulty": "Difficult",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "AUDIT COMMITTEE BRIEFING — Northstar Medical Devices, Inc.\n\nTO: Audit Committee Chair Margaret Okonkwo\nFROM: Thomas Reyes, CPA, Newly Appointed Controller\nRE: Gap in Financial Statement Disclosures — Revenue Recognition Policy\n\nDuring my transition review, I discovered that Northstar's audited financial statements for the past three years omitted a Summary of Significant Accounting Policies note disclosing revenue recognition policies. Northstar generates revenue from three streams: (1) direct sales of surgical instruments ($42.6M), recognized upon delivery and customer acceptance; (2) consignment sales to distributors ($8.3M), where Northstar retains title until distributor sells to end customer; and (3) service contracts ($5.1M), recognized ratably over the contract term. The prior controller treated the policy disclosure as optional. The auditors issued unmodified opinions each year. Ms. Okonkwo asks: 'What must Northstar disclose under ASC 235, and what action should the controller take regarding prior years?'",
+  "Choices": {
+    "A": "Include a comprehensive Summary of Significant Accounting Policies note in the current year disclosing all three revenue recognition policies with specific timing descriptions. For prior years, assess materiality — if the omission is material, correct via retrospective restatement under ASC 250; if immaterial, correct in the current period. The auditor's acceptance of the omission does not relieve Northstar of its disclosure obligations.",
+    "B": "No corrective action required because the auditors issued unmodified opinions, implicitly accepting the omission as immaterial. Add the policy disclosure prospectively to current year only — restating prior years would undermine confidence in the audit process.",
+    "C": "Include a Summary of Significant Accounting Policies note in the current year only, prospectively. Since the revenue streams existed for three years and the auditors did not qualify, the omission cannot be material. Focus on current-year compliance and note that prior-year financial statements lacked this disclosure.",
+    "D": "Report the omission as a material weakness in internal control and restate all three years under ASC 250. ASC 235-10-50-1 mandates disclosure of significant accounting policies, and any noncompliance requires full retrospective restatement regardless of materiality. Investigate why the prior controller omitted the disclosure."
+  },
+  "CorrectChoice": "A",
+  "ExplanationCorrect": "Under ASC 235-10-50-1, an entity must disclose all significant accounting policies as an integral part of its financial statements. The Summary of Significant Accounting Policies note is not optional — it is a required disclosure informing users about measurement bases and recognition criteria. For Northstar, this means describing that surgical instrument revenue is recognized at a point in time upon delivery and acceptance, consignment revenue when the distributor sells to the end customer (not upon shipment), and service revenue ratably over the contract term. Each policy materially affects the timing and amount of revenue recognized. For prior years, ASC 250-10-45-22 through 45-28 governs error corrections. If the omission is material, retrospective restatement is required; if immaterial, correction in the current period is sufficient. The auditor's prior unmodified opinion does not cure the omission — audit opinions address fair presentation, but an undiscovered omission does not become GAAP-compliant through oversight. A critical trap is assuming auditor acceptance validates a GAAP departure.",
+  "StudyLinks": [
+    {"label": "IMA CMA Learning Outcome Statements, Part 1 Section A", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
+    {"label": "OpenStax Financial Accounting", "url": "https://openstax.org/books/principles-financial-accounting/pages/1-why-it-matters"}
+  ],
+  "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+  "QuestionID": "P1-A-021",
+  "question_state": "Certified",
+  "certification_date": "2026-07-22",
+  "certification_batch": "Section A Block 1",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+    "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+    "Original practice item with unique micro-topic and stem",
+    "Answer key distribution balanced across A/B/C/D",
+    "Distractors written as plausible CMA-style traps"
+  ],
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "This recommendation incorrectly treats the auditor's unmodified opinion as conclusive evidence that the omission was immaterial and permitted. Under AU-C 200, an unmodified opinion means the auditor concluded the financial statements are presented fairly in all material respects — it does not certify every disclosure requirement was satisfied. Auditors can and do miss required disclosures. Auditor oversight does not retroactively make the omission GAAP-compliant. ASC 250 does not permit ignoring a GAAP error because it was previously audited. The controller must independently assess materiality and determine whether retrospective restatement is required (if material) or current-period correction is sufficient (if immaterial). 'Auditor acceptance' is not a valid GAAP defense.",
+  "ExplanationWrongC": "This recommendation makes an invalid logical leap: the omission 'cannot be material' because otherwise the auditors would have qualified. This assumes perfect auditor detection, which is not a premise of auditing or accounting standards. Material omissions can and do go undetected. Additionally, requiring only prospective disclosure ignores ASC 250-10-45-23: errors in previously issued financial statements must be corrected. The correction may be prospective if immaterial, but the controller must make this determination through a materiality assessment, not assume it based on the auditor's opinion.",
+  "ExplanationWrongD": "This recommendation overcorrects in two respects. First, it mandates full retrospective restatement regardless of materiality — ASC 250-10-45-23 provides for correction of immaterial errors in the current period without restatement. If the omission was not material, restatement is not required. Second, it automatically classifies the omission as a material weakness in internal control. While a missing required disclosure may indicate a control deficiency, a material weakness determination requires evaluating the likelihood and magnitude of potential misstatement — it is not automatic. The controller should first correct the disclosure, assess materiality, and separately evaluate internal control implications.",
+  "DifficultyScore": 4,
+  "CognitiveLevel": "Evaluate"
+}

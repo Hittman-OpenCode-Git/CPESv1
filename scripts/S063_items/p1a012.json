@@ -1,0 +1,46 @@
+{
+  "Part": 1,
+  "Section": "A",
+  "SectionName": "External Financial Reporting Decisions",
+  "Topic": "A.012 contingent liability accrual",
+  "MicroTopic": "contingent liability accrual",
+  "UniqueConceptKey": "A-012-contingent-liability-accrual",
+  "LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
+  "Difficulty": "Difficult",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "LEGAL UPDATE MEMORANDUM — Meridian Industries\n\nTO: Controller Rachel Torres\nFROM: General Counsel's Office\nRE: Year-End Legal Claim Assessment\n\nMeridian faces three pending legal matters at December 31:\n\nClaim 1 (Product Liability): Outside counsel assesses 75% probability of liability. Most likely settlement: $520,000 (range: $350,000–$780,000).\n\nClaim 2 (Patent Infringement): 35% probability of adverse judgment. If Meridian loses, damages estimated at $1,200,000.\n\nClaim 3 (Employment Dispute): 55% probability of adverse ruling. If claimant prevails, most likely award: $95,000.\n\nMs. Torres asks: 'What amount should be accrued and which claims require footnote disclosure under ASC 450?'",
+  "Choices": {
+    "A": "Accrue $520,000 for Claim 1 only. Disclosure required for Claims 1, 2, and 3. Claim 1 is probable (75%) and reasonably estimable ($520,000 best estimate). Claim 2 is not probable (35%) — disclosure only. Claim 3 at 55% is borderline — 'probable' under ASC 450 means likely to occur, and litigation at 55% does not clearly meet the threshold; disclosure of the reasonably possible loss is appropriate.",
+    "B": "Accrue $615,000 total: $520,000 (Claim 1) + $95,000 (Claim 3). Both have greater-than-50% probability, meeting the 'probable' threshold. Claim 2 requires disclosure only. Properly reflects Meridian's legal exposure.",
+    "C": "Accrue $1,900,000 total: $520,000 + $1,200,000 + $180,000. All three claims should be accrued because outside counsel has provided specific dollar estimates. ASC 450 requires accrual whenever a dollar amount can be estimated, regardless of probability.",
+    "D": "Accrue $350,000 for Claim 1 (minimum in range per ASC 450-20-25-2 when no amount is more likely). Accrue $180,000 for Claim 3 (full claimed amount). No accrual for Claim 2. Disclose the full range of all three claims. Total accrual: $530,000."
+  },
+  "CorrectChoice": "A",
+  "ExplanationCorrect": "Under ASC 450-20-25-2, a loss contingency must be accrued when both: (1) it is probable that a liability has been incurred, and (2) the amount can be reasonably estimated. Claim 1 meets both criteria: 75% probability clearly exceeds the probable threshold, and $520,000 is the best estimate. When a specific amount within a range is the better estimate, that amount is accrued. The additional exposure up to $780,000 must be disclosed. Claim 2 at 35% is 'reasonably possible' — disclosure required, no accrual. Claim 3 presents the most challenging judgment at 55%. ASC 450 does not specify a numerical threshold, but professional guidance indicates 'probable' means likely to occur — generally above 70-80% in practice, not simply >50%. Litigation outcomes are inherently uncertain, and a 55% assessment would not typically support accrual. A critical exam trap is treating any probability above 50% as automatically probable — ASC 450 uses a higher threshold. Another trap is accruing the maximum in the range when a best estimate exists.",
+  "StudyLinks": [
+    {"label": "IMA CMA Learning Outcome Statements, Part 1 Section A", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
+    {"label": "OpenStax Financial Accounting", "url": "https://openstax.org/books/principles-financial-accounting/pages/1-why-it-matters"}
+  ],
+  "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+  "QuestionID": "P1-A-012",
+  "question_state": "Certified",
+  "certification_date": "2026-07-22",
+  "certification_batch": "Section A Block 1",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+    "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+    "Original practice item with unique micro-topic and stem",
+    "Answer key distribution balanced across A/B/C/D",
+    "Distractors written as plausible CMA-style traps"
+  ],
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "This recommendation incorrectly applies a simple majority-probability rule (greater than 50% = probable) to trigger accrual. Under ASC 450-20-20, 'probable' means the future event is likely to occur — a higher threshold than 'more likely than not' (the ASC 740 tax position standard). A 55% probability on litigation does not clearly meet 'likely to occur,' given the inherent uncertainty of employment litigation. In practice, firms generally require 70-80% probability before accrual. Additionally, the $95,000 is the most likely award IF the claimant prevails — a conditional estimate introducing a second layer of uncertainty. The controller should disclose Claim 3 as reasonably possible. The correct total accrual is $520,000 for Claim 1 only.",
+  "ExplanationWrongC": "This recommendation fundamentally misunderstands ASC 450's two-condition framework. The standard requires BOTH probability AND estimability — not estimability alone. Claim 2 has a specific dollar estimate ($1,200,000) but only 35% probability — far below the 'probable' threshold. Accruing $1,200,000 for an unlikely event dramatically overstates liabilities. Claim 3's $180,000 is the plaintiff's demand, not an estimate of probable loss (counsel estimates a $95,000 award IF the claimant prevails). ASC 450 does not permit accrual based solely on the existence of a dollar estimate — the probability criterion is essential.",
+  "ExplanationWrongD": "This recommendation contains two critical errors. First, it misapplies ASC 450-20-25-2's range guidance. When no amount within a range is a better estimate, accrue the MINIMUM. But when a specific amount IS a better estimate (Claim 1: $520,000 is the most likely), that best estimate is accrued, not the minimum. Accruing only $350,000 understates the liability. Second, it accrues the full $180,000 claimed amount for Claim 3, which is the plaintiff's demand, not an estimate of probable loss. The most likely outcome from counsel is $95,000 conditional on an adverse ruling at only 55% probability. The controller should accrue $520,000 for Claim 1 and disclose Claims 1, 2, and 3.",
+  "DifficultyScore": 4,
+  "CognitiveLevel": "Evaluate"
+}

@@ -1,0 +1,31 @@
+{
+  "session": "S66",
+  "type": "parse-certification",
+  "timestamp": "2026-07-28T18:15:00Z",
+  "mcq_packs": {
+    "pack_a": {"parse": "OK", "qid_count": 500, "certified_count": 500},
+    "pack_b": {"parse": "OK", "qid_count": 500, "certified_count": 500},
+    "pack_c": {"parse": "OK", "qid_count": 500, "certified_count": 455},
+    "pack_d": {"parse": "OK", "qid_count": 500, "certified_count": 456},
+    "pack_e": {"parse": "OK", "qid_count": 545, "certified_count": 540}
+  },
+  "case_packs": {
+    "case_pack_1": {"parse": "OK", "case_count": 25, "item_count": 141, "all_certified": true},
+    "case_pack_2": {"parse": "OK", "case_count": 25, "item_count": 132, "all_certified": true},
+    "case_pack_3": {"parse": "OK", "case_count": 25, "item_count": 127, "all_certified": true}
+  },
+  "app_js": {"parse": "OK"},
+  "total_mcq_qids": 2545,
+  "total_mcq_certified": 2451,
+  "total_case_items": 400,
+  "total_cases": 75,
+  "overall": "ALL_PASS",
+  "notes": [
+    "Pack C: 455/500 Certified, 9 Active, 36 Archived — 45 items non-Certified",
+    "Pack D: 456/500 Certified, 11 Active, 33 Archived — 44 items non-Certified",
+    "Pack E: 540/545 Certified, 5 Unprocessed — includes 40 supplemental R-series items (P1-E-R01 through P1-E-R40)",
+    "All 3 case packs (case_pack_1/2/3_corrected.js): 400 items across 75 cases; all 400 items + 75 case-level objects carry question_state='Certified'",
+    "app.js: node --check PASS",
+    "0 parse failures across all 9 files; structural integrity confirmed"
+  ]
+}

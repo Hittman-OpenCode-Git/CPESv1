@@ -1,0 +1,137 @@
+[
+  {
+    "Part": 1,
+    "Section": "F",
+    "SectionName": "Technology and Analytics",
+    "Topic": "F.004 cybersecurity governance — third-party vendor risk assessment",
+    "MicroTopic": "Cybersecurity governance — third-party risk assessment and due diligence under NIST framework",
+    "UniqueConceptKey": "F-C004-third-party-cyber-risk-assessment",
+    "LOSTag": "F.4 Cybersecurity",
+    "Difficulty": "Very Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Apex Global Logistics, a freight forwarding company with $920 million in annual revenue, relies on a third-party SaaS platform for shipment tracking, customs documentation, and customer notifications. The platform processes approximately 47,000 shipments monthly and stores client manifests containing commercial invoice data, including Harmonized System codes, declared values, and consignee identities across 14 countries. During a routine vendor risk review, IT Audit Director Marcus Chen discovered that the SaaS provider: (1) has not completed a SOC 2 Type II audit in 18 months, (2) stores Apex's data in a shared-tenancy environment without documented logical segregation controls, and (3) has a 72-hour breach notification clause in the service agreement when the industry standard is 24 to 48 hours. The provider's contract auto-renews in 90 days. Chen must recommend a course of action to the board's risk committee. Under the NIST Cybersecurity Framework and COSO Principle 11, which recommendation best evaluates the control deficiencies and proposes a risk-appropriate response?",
+    "Choices": {
+      "A": "Immediately terminate the SaaS contract and migrate to an on-premises shipment tracking system — the absence of a current SOC 2 report and shared-tenancy environment represent unacceptable control deficiencies for a logistics provider handling customs-sensitive data. The 90-day renewal window provides sufficient time to implement an alternative solution.",
+      "B": "Issue a formal notice of non-compliance requiring the vendor to complete SOC 2 Type II within 120 days, implement logical segregation controls within 90 days, and negotiate the breach notification window to 48 hours as a condition of contract renewal. Continue operations under enhanced monitoring in the interim.",
+      "C": "Accept the vendor's current control posture and include a risk acceptance memorandum in the board package — the SaaS platform has operated without a reported security incident for three years, and the 72-hour notification window exceeds regulatory requirements in 11 of 14 operating countries.",
+      "D": "Engage a third-party auditor to perform a bridge assessment of the vendor's controls within 60 days, implement compensating controls (encrypted data at rest, real-time access logging) on Apex's side of the integration, and make contract renewal conditional on the bridge assessment results and SOC 2 completion within 180 days."
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Under the NIST Cybersecurity Framework (Identify, Protect, Detect, Respond, Recover) and COSO Principle 11, third-party cyber risk management requires a risk-based evaluation that balances the severity of control deficiencies against the operational disruption of immediate termination. IT Audit Director Chen's analysis must weigh three control deficiencies against Apex's operational dependency on the platform (47,000 shipments/month). Option D represents the most risk-appropriate response because it: (1) deploys compensating controls that Apex controls unilaterally — encryption at rest and access logging reduce data exposure risk immediately while the vendor addresses systemic deficiencies; (2) commissions an independent bridge assessment that provides objective evidence of the vendor's current control posture rather than waiting 120+ days for a full SOC 2 Type II; (3) makes contract renewal conditional on demonstrated improvement (bridge assessment results plus SOC 2 commitment), creating enforceable leverage at the renewal decision point; and (4) avoids the operational catastrophe of migrating 47,000 monthly shipments off a SaaS platform in 90 days. Immediate termination (Option A) is disproportionate to the control deficiencies identified. Formal notice with a 120-day deadline (Option B) lacks the interim compensating controls and independent verification that make the risk tolerable during the remediation period. Risk acceptance (Option C) is inappropriate given that a shared-tenancy environment without logical segregation controls is a material security deficiency that should not be accepted without mitigating actions. Third-party cyber risk management is not binary (accept or terminate) — it is a continuum of compensating controls, independent verification, and contractually enforceable remediation timelines.",
+    "StudyLinks": [
+      {"label": "NIST Cybersecurity Framework (CSF) — Identify and Protect functions", "url": "https://www.nist.gov/cyberframework"},
+      {"label": "COSO Internal Control — Integrated Framework (2013), Principle 11", "url": "https://www.coso.org/guidance-on-ic"}
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-FC-004",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A applies an all-or-nothing response to a graded risk situation. Immediate termination of the SaaS contract would disrupt 47,000 monthly shipments across 14 countries to address control deficiencies that, while significant, have not resulted in a confirmed security incident. Under NIST CSF, the Respond function requires proportional actions calibrated to impact. Building and deploying an on-premises alternative within 90 days is operationally infeasible for a customs documentation workflow integrated with 14 national customs authorities. A candidate selecting this option may be applying a zero-tolerance heuristic to cybersecurity risk, ignoring the proportionality principle embedded in both NIST and COSO frameworks.",
+    "ExplanationWrongB": "Option B correctly identifies that the vendor's control deficiencies require formal remediation demands, but the proposed plan has a critical gap: the 120-day SOC 2 deadline and 90-day segregation control deadline leave a window during which Apex continues to process 47,000 monthly shipments through a shared-tenancy environment without logical segregation — and without any compensating controls on Apex's side. The NIST CSF Protect function emphasizes defense-in-depth: when a vendor control is deficient, the customer should deploy compensating controls that it controls unilaterally (such as encryption at rest and access logging) during the remediation period. Option B relies entirely on the vendor's commitment to remediate, with no interim controls protecting Apex's data during the gap. A candidate selecting this option may understand that formal remediation demands are necessary but overlook the equally important governance principle that compensating controls must bridge the period between deficiency identification and remediation completion.",
+    "ExplanationWrongC": "Option C inappropriately accepts control deficiencies without any mitigating action. A three-year history without reported incidents is weak evidence of control effectiveness — particularly when the current SOC 2 gap (18 months without audit) means there is no independent verification of the vendor's control posture during that period. The shared-tenancy environment without logical segregation controls is a material security deficiency regardless of notification timelines. Under COSO Principle 9, the organization identifies and assesses changes that could significantly impact the system of internal control — a vendor control degradation from SOC 2 Type II compliance to an 18-month gap is precisely such a change. Accepting this without any compensating controls or independent verification would fail the risk assessment requirement. A candidate selecting this option may incorrectly equate absence of known incidents with absence of risk.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "upgrade_note": "S60C Wave 1 — Evaluate replacement for archived P1-FC-004 (DL-012 rotation clone, data governance definition-match)"
+  },
+  {
+    "Part": 1,
+    "Section": "F",
+    "SectionName": "Technology and Analytics",
+    "Topic": "F.008 AI governance — model bias detection and accountability",
+    "MicroTopic": "AI governance — algorithmic bias detection in automated decision systems",
+    "UniqueConceptKey": "F-C008-ai-model-bias-detection",
+    "LOSTag": "F.6 Artificial Intelligence",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Hartfield Insurance Group deployed a machine learning model to automate claims triage, classifying each auto insurance claim as standard processing or elevated review. After 14 months and 62,000 processed claims, the actuarial analytics team led by Director Yuki Tanaka identified a pattern: claims from two specific ZIP codes representing 8.2% of the policyholder base were flagged for elevated review at 3.4 times the rate of claims from demographically comparable ZIP codes, despite having statistically indistinguishable claim severity on ultimate resolution. The model's training data included adjuster notes containing subjective language descriptors. Tanaka's team confirmed the model's overall accuracy is 91.4% but the disparate flagging rate is statistically significant at p < 0.001. Under responsible AI governance frameworks, which action should Tanaka recommend to the Chief Risk Officer?",
+    "Choices": {
+      "A": "Decommission the model and return to manual claims triage — any algorithmic bias, regardless of magnitude, is unacceptable in an insurance context and exposes Hartfield to regulatory action under unfair claims practice statutes. Manual triage, while slower, eliminates algorithmic bias by relying on human judgment.",
+      "B": "Retrain the model using only structured data fields (claim amount, vehicle age, accident type) and exclude all adjuster notes and policyholder demographic data — this eliminates the source of potential bias and produces a more objective classification model.",
+      "C": "Conduct a bias audit including feature importance analysis to identify which input variables drive the disparate flagging rate, retrain the model with debiased training data including fairness constraints, and implement ongoing monitoring with periodic fairness metrics reporting to the risk committee.",
+      "D": "Apply a post-processing adjustment that reduces the elevated-review flagging rate for the two affected ZIP codes by a fixed percentage — this is the fastest remediation and can be deployed within days, addressing the statistical disparity while the model continues operating."
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Under emerging AI governance frameworks (NIST AI Risk Management Framework, OECD AI Principles) and COSO Principle 11, algorithmic bias remediation follows a structured four-step process: detect, diagnose, debias, and monitor. Director Tanaka's analysis has completed detection (statistically significant disparate flagging rate at p < 0.001 confirmed independently) and confirmed the effect is not explained by differences in claim severity. Option C is the governance-appropriate response because it completes the remaining three steps: (1) diagnosis — feature importance analysis identifies which input variables (likely the adjuster notes with subjective language descriptors) are driving the bias, addressing root cause rather than symptoms; (2) debiasing — retraining with fairness constraints is a principled correction that preserves the model's accuracy on legitimate predictors while mitigating bias on spurious correlates; and (3) monitoring — ongoing fairness metrics reporting embeds accountability into the model's operational lifecycle, preventing recurrence. Decommissioning the model (Option A) is disproportionate: the model is 91.4% accurate and has been operating for 14 months; manual triage is not bias-free. Removing all subjective data fields (Option B) throws out potentially legitimate predictors. Post-processing adjustments without diagnosis (Option D) mask the bias without understanding its source. Responsible AI governance requires understanding why the model is biased before deciding how to fix it.",
+    "StudyLinks": [
+      {"label": "NIST AI Risk Management Framework (AI RMF 1.0)", "url": "https://www.nist.gov/itl/ai-risk-management-framework"},
+      {"label": "IMA CMA Learning Outcome Statements, Part 1 Section F — Artificial Intelligence", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"}
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-FC-008",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A correctly recognizes that algorithmic bias is a governance concern requiring action, but recommends a disproportionate response. Decommissioning a model that is 91.4% accurate and has processed 62,000 claims would disrupt the entire claims operation — a solution that is more costly than the problem it addresses. Furthermore, the premise that manual triage 'eliminates algorithmic bias' is incorrect: human claims adjusters have documented biases related to applicant demographics that are harder to detect, measure, and remediate than algorithmic bias. The appropriate governance response to a model with a remediable bias is to fix the model, not abandon the automation. A candidate selecting this option may believe any algorithmic bias, regardless of severity and remediability, requires immediate system shutdown — a position that conflicts with the NIST AI RMF's principle of proportional risk management.",
+    "ExplanationWrongB": "Option B identifies a plausible source of bias (the adjuster notes) but applies a blunt instrument — removing all unstructured and demographic data — that eliminates both the biased signals and legitimate predictive information. Some adjuster observations such as inconsistent accident accounts across claimant statements may be objective, predictive, and unbiased proxies for legitimate claim complexity. The governance principle is targeted debiasing: identify the specific features or feature values driving disparate outcomes and remove or reweight those, not all variables that could theoretically encode demographic information. A candidate selecting this option may conflate removing all potentially correlated variables with removing bias, sacrificing model performance for an oversimplified definition of fairness.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D offers a superficially attractive short-term fix — adjust the flagging rate for the two affected ZIP codes by a fixed percentage — but this is bias masking, not bias remediation. Post-processing adjustments without understanding the source of bias create three governance problems: (1) the model continues to learn from biased training signals, so the bias re-emerges as new claims data accumulates; (2) the fixed-percentage adjustment is arbitrary — it may overcorrect or undercorrect relative to the true bias magnitude; and (3) the adjustment creates a governance transparency problem because the model's outputs are now modified by an opaque correction factor not documented in the model's design. Under responsible AI governance, post-hoc adjustments are acceptable only as an interim measure while root-cause remediation is in progress, not as a permanent solution. A candidate selecting this option may prioritize speed of remediation over quality of remediation.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "upgrade_note": "S60C Wave 1 — Evaluate replacement for archived P1-FC-008 (DL-012 rotation clone, analytics type identification)"
+  },
+  {
+    "Part": 1,
+    "Section": "F",
+    "SectionName": "Technology and Analytics",
+    "Topic": "F.009 analytics governance — dashboard-driven decision bias",
+    "MicroTopic": "Analytics governance — misleading KPI selection and confirmation bias in dashboard-driven decisions",
+    "UniqueConceptKey": "F-C009-dashboard-driven-decision-bias",
+    "LOSTag": "F.5 Data Analytics",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Stratford Consumer Goods, a manufacturer with $340 million in revenue, uses an executive dashboard that displays seven KPIs updated weekly. VP of Operations James Okafor has used the dashboard for two years to make production scheduling decisions. Recently, the internal audit analytics team reviewed the dashboard's underlying logic and discovered: (1) the On-Time Delivery KPI (reported at 96.2%) excludes orders modified within 48 hours of the original ship date which represent 14% of all orders; (2) the Production Efficiency KPI counts all units produced, including 2,300 units later scrapped for quality defects in Q3 alone; (3) three of the seven KPIs are directionally correlated (on-time delivery, production efficiency, and capacity utilization all rise and fall together with production volume, creating a halo effect where all metrics appear favorable simultaneously). Okafor has made $4.7 million in capacity expansion decisions based on these metrics over the past 18 months. Under analytics governance principles, which finding represents the most significant control deficiency?",
+    "Choices": {
+      "A": "The exclusion of modified orders from the On-Time Delivery KPI — this definitional choice inflates the reported performance metric and masks real delivery performance on 14% of orders, directly undermining the reliability of the metric Okafor uses for production scheduling decisions.",
+      "B": "The inclusion of scrapped units in the Production Efficiency KPI — counting defective output as production inflates the efficiency metric and creates an incentive to maximize throughput at the expense of quality, contradicting total quality management principles.",
+      "C": "The directional correlation of three KPIs creating a halo effect — when related metrics move together, they provide redundant information rather than independent signals, making the dashboard an echo chamber that reinforces the appearance of strong performance across all dimensions.",
+      "D": "The absence of a data lineage and definitional metadata layer documenting how each KPI is calculated, what data sources feed it, and what exclusions or transformations are applied before display — this represents the root governance deficiency from which the other three findings derive."
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Under analytics governance frameworks and COSO Principle 13 (use of relevant information), the root governance deficiency is the absence of a documented data lineage and metadata layer. This deficiency is more significant than any individual KPI definition flaw because it is the enabling condition that allowed all three other deficiencies to persist undetected for two years while $4.7 million in capacity expansion decisions were made based on flawed metrics. Without documented data lineage: (1) the exclusion of modified orders from the On-Time Delivery KPI went unnoticed because no one — including VP Okafor — could trace the KPI back to its source data and see what was excluded; (2) the inclusion of scrapped units in Production Efficiency went uncorrected because no definitional metadata specified that net good output is the appropriate numerator for an efficiency metric; (3) the KPI halo effect persisted because no analytics governance review questioned whether the dashboard's seven metrics provide independent coverage of the operational dimensions that matter. Data lineage and definitional metadata are not technical documentation — they are control mechanisms. Under COSO, information must be relevant, reliable, and timely. Without a lineage layer, the reliability of every KPI is unverifiable by construction. The $4.7 million in capacity decisions represents the consequence of a governance gap, not a dashboard design flaw.",
+    "StudyLinks": [
+      {"label": "COSO Internal Control — Integrated Framework (2013), Principle 13: Uses Relevant Information", "url": "https://www.coso.org/guidance-on-ic"},
+      {"label": "IMA CMA Learning Outcome Statements, Part 1 Section F — Data Analytics", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"}
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-FC-009",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A identifies a genuine and significant KPI definition flaw — the 14% exclusion of modified orders is a material understatement that directly affects the reliability of the on-time delivery metric informing production scheduling. However, this finding is a symptom of the root governance deficiency (no data lineage layer), not the root cause itself. If the analytics governance framework had required documented KPI definitions with source-to-display lineage, the 48-hour modification exclusion would have been visible to anyone reviewing the KPI specification before VP Okafor made a single capacity decision. A candidate selecting this option correctly identifies a material control weakness but stops at the symptom rather than tracing it to the root governance gap — a common error in control deficiency analysis where the most visible problem is mistaken for the most significant one.",
+    "ExplanationWrongB": "Option B identifies a legitimate quality management concern — counting scrapped units as production output inflates the efficiency metric and contradicts total quality management principles. However, this KPI definition flaw is one of at least three specific issues the audit team identified. Addressing only the Production Efficiency definition leaves the On-Time Delivery exclusion and KPI correlation problems unresolved. More fundamentally, without a data lineage and metadata governance layer, there is no mechanism to prevent future KPI definition errors from being introduced when the dashboard is modified or new metrics are added. A candidate selecting this option may be applying a domain-specific lens (quality management) to a governance problem that spans all seven dashboard KPIs.",
+    "ExplanationWrongC": "Option C correctly identifies the halo effect as a genuine analytics governance concern — correlated KPIs reduce the information content of a dashboard and can create false confidence in performance across all dimensions. However, the halo effect is a design flaw in how KPIs were selected and structured, not a root governance deficiency. The absence of a data lineage and metadata layer is more significant because it represents a systemic governance failure: without lineage, no KPI on the dashboard can be independently verified, regardless of how well the metrics are designed. A well-designed dashboard with uncorrelated KPIs is still unreliable if individual KPI definitions are incorrect and unverifiable. A candidate selecting this option may prioritize dashboard design aesthetics over the underlying governance infrastructure that ensures metric reliability.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "upgrade_note": "S60C Wave 1 — Analyze replacement for archived P1-FC-009 (DL-012 rotation clone, analytics type identification)"
+  }
+]

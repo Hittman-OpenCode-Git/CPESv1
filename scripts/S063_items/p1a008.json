@@ -1,0 +1,46 @@
+{
+  "Part": 1,
+  "Section": "A",
+  "SectionName": "External Financial Reporting Decisions",
+  "Topic": "A.008 inventory lower of cost and NRV",
+  "MicroTopic": "inventory lower of cost and NRV",
+  "UniqueConceptKey": "A-008-inventory-lower-of-cost-and-nrv",
+  "LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
+  "Difficulty": "Difficult",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "CFO BRIEFING NOTE — Ridgeview Manufacturing\n\nTO: CFO Alan Kettering\nFROM: Controller's Office\nRE: Year-End Inventory Valuation — Three Product Lines\n\nRidgeview manufactures industrial fasteners across three product lines. At year-end, the inventory balances and market conditions are: Line 1 (Standard Steel Bolts): Cost $420,000, NRV $485,000; Line 2 (Alloy Fasteners): Cost $310,000, NRV $275,000 — a customer canceled a major contract in November, leaving excess specialty inventory; Line 3 (Engineered Components): Cost $185,000, NRV $168,000 — a new competitor entered in Q4, though Ridgeview expects partial price recovery within six months. All inventory is FIFO. The external auditors have questioned whether inventory should be written down on a product-line basis or assessed at an aggregated level. Mr. Kettering asks: 'What is the appropriate write-down approach and total inventory value under ASC 330?'",
+  "Choices": {
+    "A": "Apply lower of cost and NRV on an item-by-item basis: Line 1 at cost ($420,000), Line 2 at NRV ($275,000), Line 3 at NRV ($168,000). Total inventory: $863,000. Write-down: $52,000. Item-by-item application prevents offsetting declines against unrealized gains.",
+    "B": "Apply lower of cost and NRV at the total inventory level: aggregate cost $915,000, aggregate NRV $928,000 — no write-down needed. Total inventory: $915,000. Portfolio-level assessment is appropriate because Ridgeview manages inventory as a combined industrial fasteners business.",
+    "C": "Write down only Line 2 by $35,000 because the contract cancellation is permanent, but carry Line 3 at cost because Ridgeview expects price recovery within six months. Under ASC 330, temporary market declines do not require write-downs. Total inventory: $880,000. Write-down: $35,000.",
+    "D": "Write down all three lines to NRV even if NRV exceeds cost for Line 1, because conservatism demands that all inventory be stated at the lower valuation basis. Line 1 is recorded at NRV of $485,000 which exceeds its cost basis. Total inventory: $928,000."
+  },
+  "CorrectChoice": "A",
+  "ExplanationCorrect": "Under ASC 330-10-35-1B, inventory measured using FIFO or average cost must be stated at the lower of cost and net realizable value (NRV). ASC 330-10-35-1B requires this assessment on an item-by-item basis — not at the aggregate inventory level or product-category level. Each product line represents a separate item because the fasteners have different cost structures, markets, and demand profiles. Line 1 (Standard Steel Bolts): NRV of $485,000 exceeds cost of $420,000 — no write-down, inventory remains at $420,000 cost. Line 2 (Alloy Fasteners): NRV of $275,000 below cost of $310,000 — $35,000 write-down to $275,000. Line 3 (Engineered Components): NRV of $168,000 below cost of $185,000 — $17,000 write-down to $168,000. Total inventory: $863,000. Total write-down: $52,000. The item-by-item approach prevents offsetting unrealized losses on one product line against unrealized gains on another — a core LCM principle. A critical exam trap is aggregating across product lines when one line's NRV gain exceeds others' losses — this is prohibited. Also, expected future price recovery does not excuse a write-down at the balance sheet date if NRV is below cost at that date.",
+  "StudyLinks": [
+    {"label": "IMA CMA Learning Outcome Statements, Part 1 Section A", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
+    {"label": "OpenStax Financial Accounting", "url": "https://openstax.org/books/principles-financial-accounting/pages/1-why-it-matters"}
+  ],
+  "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+  "QuestionID": "P1-A-008",
+  "question_state": "Certified",
+  "certification_date": "2026-07-22",
+  "certification_batch": "Sub-batch 2B Wave 1",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+    "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+    "Original practice item with unique micro-topic and stem",
+    "Answer key distribution balanced across A/B/C/D",
+    "Distractors written as plausible CMA-style traps"
+  ],
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "This recommendation incorrectly applies LCM at the aggregate portfolio level. ASC 330-10-35-1B requires item-by-item application. While aggregate cost ($915,000) is below aggregate NRV ($928,000), this masks that Line 2 and Line 3 individually have NRV below cost. A portfolio approach would allow the $65,000 unrealized gain on Line 1 to offset $52,000 in required write-downs on Lines 2 and 3 — violating the LCM principle that losses must be recognized when they occur. The controller should apply LCM separately to each product line. The fact that Ridgeview manages inventory as a combined business does not determine the accounting unit of account — ASC 330 specifies item-by-item application.",
+  "ExplanationWrongC": "This recommendation incorrectly distinguishes between a 'permanent' contract cancellation and an expected price recovery. ASC 330-10-35-2 applies LCM at each reporting date based on conditions existing at that date, without regard to expected future recoveries. There is no 'temporary decline' exception for FIFO inventory — the standard requires write-down whenever NRV at the reporting date is below cost. Both Line 2 ($35,000) and Line 3 ($17,000) require adjustment. No 'temporary decline' exception exists. If prices recover, Ridgeview reverses the write-down up to the original write-down amount (not above cost), but in the future period, not at the current balance sheet date.",
+  "ExplanationWrongD": "This recommendation contains two fundamental errors. First, it proposes writing up Line 1 inventory above cost to NRV — not permitted under U.S. GAAP. LCM rules state inventory at the lower of cost or NRV; when cost is below NRV, inventory remains at cost. Writing up to NRV would recognize an unrealized holding gain, which ASC 330 does not permit. Second, the recommendation frames a write-up as 'conservatism,' but conservatism means not overstating assets or income — writing inventory above cost does the opposite. The controller should apply LCM item-by-item: Line 1 at cost ($420,000), Line 2 at NRV ($275,000), Line 3 at NRV ($168,000). Total: $863,000. Write-down: $52,000.",
+  "DifficultyScore": 4,
+  "CognitiveLevel": "Evaluate"
+}

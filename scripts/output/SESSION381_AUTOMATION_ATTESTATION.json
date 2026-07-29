@@ -1,0 +1,42 @@
+{
+  "session": "S381",
+  "timestamp": "2026-07-28T21:26:20.000Z",
+  "scripts": {
+    "post_change_qc.js": {
+      "status": "DEPLOYED",
+      "executable": true,
+      "output_file_exists": true,
+      "exit_code": 0,
+      "notes": "Lists all 5 packs (500/500/500/500/545 QIDs), governance guard 54/54 PASS, parse validation PASS, certified counts for all packs. Pack E reports 545 actual vs 540 expected (5 R-series supplementary items). Overall status: FAIL due to pack_e QID count mismatch."
+    },
+    "pre_delivery_safety_check.js": {
+      "status": "DEPLOYED",
+      "executable": true,
+      "output_file_exists": true,
+      "exit_code": 0,
+      "dl008_count": 5,
+      "dl026_count": 70,
+      "notes": "Detects DL-008 (5 items) and DL-026 (70 fields across 66 items). DL-021: 0 instances (Pack E Section C remediated per S71/S828). Rule 9 (DL-037 logic inversion): 0 instances (sole instance P1-B-040 fixed S911, pool scan clean S912). Learner pool: 2427 certified, 2361 safe, 66 unsafe (Pack B: 1, Pack C: 30, Pack D: 35). All UNSAFE items are DL-008 and/or DL-026 in Packs B/C/D."
+    },
+    "rebuild_baselines.js": {
+      "status": "PARTIALLY DEPLOYED",
+      "executable": true,
+      "dry_run_works": true,
+      "output_file_exists": false,
+      "notes": "Dry-run mode executes without errors and produces hashes for all 5 pack files (plus app.js, index_updated.html, styles.css, 3 case packs, and governance files) to stdout. However, --dry-run mode intentionally writes no files ('DRY RUN — no files written.'), so scripts/output/baseline_delta.json is not created. Case packs (scored_cases.js etc.) report -1 items — the script appears to look for 'case_pack_1_corrected.js' naming convention which does not match the actual 'scored_cases.js' files."
+    },
+    "classify_dl031.js": {
+      "status": "DEPLOYED",
+      "executable": true,
+      "read_only_works": true,
+      "output_file_exists": true,
+      "notes": "Default mode (no --execute flag) runs in CLASSIFY ONLY read-only mode. Scanned 2,545 items across all 5 packs via Function constructor parse. Found 1 flagged item (P1-EC-019, Pack C Section E, Simple Relabel: Moderate→Easy). Zero calibration or rewrite items. Classification breakdown: 1 Simple Relabel, 0 Calibration, 0 Rewrite Required. Output file contains timestamp, items_scanned_total, items_flagged, by_classification, by_pack, simple_relabels arrays."
+    }
+  },
+  "overall_assessment": {
+    "all_four_deployed": false,
+    "partial_deployment_count": 1,
+    "not_deployed_count": 0,
+    "verdict": "PARTIALLY DEPLOYED"
+  }
+}

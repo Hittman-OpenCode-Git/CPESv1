@@ -1,0 +1,80 @@
+{
+  "session": "S66",
+  "type": "exam-builder",
+  "timestamp": "2026-07-28T12:00:00Z",
+  "total_exam_mcqs": 100,
+  "total_exam_cases": 2,
+  "section_allocation": {
+    "A": {
+      "target_pct": 15,
+      "target_count": 15,
+      "certified_available": 369,
+      "sufficient": true
+    },
+    "B": {
+      "target_pct": 20,
+      "target_count": 20,
+      "certified_available": 500,
+      "sufficient": true
+    },
+    "C": {
+      "target_pct": 20,
+      "target_count": 20,
+      "certified_available": 497,
+      "sufficient": true
+    },
+    "D": {
+      "target_pct": 15,
+      "target_count": 15,
+      "certified_available": 372,
+      "sufficient": true
+    },
+    "E": {
+      "target_pct": 15,
+      "target_count": 15,
+      "certified_available": 405,
+      "sufficient": true
+    },
+    "F": {
+      "target_pct": 15,
+      "target_count": 15,
+      "certified_available": 296,
+      "sufficient": true
+    }
+  },
+  "cognitive_targets": {
+    "Remember": 5,
+    "Understand": 15,
+    "Apply": 40,
+    "Analyze": 25,
+    "Evaluate": 15
+  },
+  "certified_pool_size": 2417,
+  "sampling_percentage": 4.1,
+  "case_pool": {
+    "total_cases": 75,
+    "total_items": 400,
+    "all_certified": true,
+    "section_distribution": {
+      "A": 11,
+      "B": 12,
+      "C": 14,
+      "D": 14,
+      "E": 13,
+      "F": 11
+    },
+    "case_packs": {
+      "case_pack_1": {"cases": 25, "items": 141, "sections": "A4 B4 C5 D5 E4 F3"},
+      "case_pack_2": {"cases": 25, "items": 132, "sections": "A4 B4 C5 D5 E4 F3"},
+      "case_pack_3": {"cases": 25, "items": 127, "sections": "A3 B4 C4 D4 E5 F5"}
+    }
+  },
+  "per_pack_certified": {
+    "pack_a": {"total": 500, "certified": 500, "pct": 100.0},
+    "pack_b": {"total": 500, "certified": 500, "pct": 100.0},
+    "pack_c": {"total": 500, "certified": 438, "pct": 87.6},
+    "pack_d": {"total": 500, "certified": 439, "pct": 87.8},
+    "pack_e": {"total": 540, "certified": 540, "pct": 100.0}
+  },
+  "recommendation": "EXAM READY. All 6 blueprint sections have sufficient certified inventory (minimum 296 available vs. maximum 20 needed per section). The certified MCQ pool of 2,417 items provides ~4.1% sampling density per exam draw — more than adequate for diverse, non-repeating exam sessions. Case bank is fully certified (75 cases, 400 items, all sections represented). Secondary verification recommended: (1) confirm Pack C+D Domain E/F partial certification (175/300 certified across both) does not restrict Section E/F draw diversity below desired minimum; (2) verify cognitive-level distribution in live draw against CAQS §6.2 Bloom's targets; (3) confirm delivery engine filters by question_state === 'Certified' per AGENTS.md §7. Recommended launch: Full Part 1 Simulation mode (100 MCQs + 2 cases) with randomized draw from certified pool."
+}

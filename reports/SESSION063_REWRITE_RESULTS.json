@@ -1,0 +1,117 @@
+{
+  "session": "63",
+  "title": "Financial Reporting Judgment Rewrite Program",
+  "date": "2026-07-28",
+  "status": "COMPLETE — 14 of 14 completed",
+  "batches": [1, 2],
+  "total_rewrites": 14,
+  "cognitive_upgrades": {
+    "Understand_to_Evaluate": 8,
+    "Understand_to_Analyze": 5,
+    "Apply_to_Evaluate": 1
+  },
+  "difficulty_upgrades": {
+    "Easy/Moderate-Easy_to_Difficult": 14
+  },
+  "pack_distribution": {
+    "Pack_A": 14
+  },
+  "section_distribution": {
+    "A": 14
+  },
+  "evaluate_qids": [
+    "P1-A-005", "P1-A-008", "P1-A-011", "P1-A-012",
+    "P1-A-021", "P1-A-025", "P1-A-034", "P1-A-054"
+  ],
+  "analyze_qids": [
+    "P1-A-007", "P1-A-009", "P1-A-014",
+    "P1-A-016", "P1-A-023", "P1-A-024"
+  ],
+  "correctchoice_changes": [
+    {"qid": "P1-A-008", "old": "C", "new": "A", "reason": "Updated to item-by-item LCM approach with three product lines"},
+    {"qid": "P1-A-009", "old": "C", "new": "A", "reason": "LIFO liquidation: CC identifies correct disclosure-embedded-in-COGS treatment vs separate line item presentation"},
+    {"qid": "P1-A-011", "old": "D", "new": "A", "reason": "Updated to customer-transition trigger as primary impairment indicator"},
+    {"qid": "P1-A-012", "old": "B", "new": "A", "reason": "Updated to accrue Claim 1 only with disclosure for others"},
+    {"qid": "P1-A-014", "old": "D", "new": "B", "reason": "Bargain purchase option triggers finance lease classification under ASC 842 criterion (b)"},
+    {"qid": "P1-A-016", "old": "A", "new": "B", "reason": "VIE model: consolidation as primary beneficiary, not voting interest model"},
+    {"qid": "P1-A-021", "old": "D", "new": "A", "reason": "Include revenue recognition note + materiality assessment"},
+    {"qid": "P1-A-023", "old": "C", "new": "A", "reason": "Three instruments at different hierarchy levels: Level 1 CBOE options"},
+    {"qid": "P1-A-024", "old": "C", "new": "B", "reason": "Original maturity governs; 120-day CP and gated MMF excluded"},
+    {"qid": "P1-A-025", "old": "A", "new": "B", "reason": "Net DTL of $80,000 across three temporary differences"},
+    {"qid": "P1-A-034", "old": "D", "new": "A", "reason": "Accrue minimum of range when no best estimate identifiable"}
+  ],
+  "section_a_cognitive_before": {
+    "Remember": 1,
+    "Understand": 13,
+    "Apply": 56,
+    "Analyze": 2,
+    "Evaluate": 3
+  },
+  "section_a_cognitive_after": {
+    "Remember": 1,
+    "Understand": 1,
+    "Apply": 54,
+    "Analyze": 8,
+    "Evaluate": 11
+  },
+  "evaluate_share_before": "4.0%",
+  "evaluate_share_after": "14.7%",
+  "higher_order_share_before": "6.7%",
+  "higher_order_share_after": "25.3%",
+  "governance": {
+    "guard_tests": "54/54 PASS",
+    "parse_integrity": "PASS (500 items)",
+    "qid_count": 500,
+    "certified_count": 500,
+    "dl008_on_targets": 0,
+    "dl026_on_targets": 0,
+    "dl037_on_targets": 0,
+    "correctchoice_rotation": "11 of 14 items had CC changed to match new scenarios"
+  },
+  "rewrite_quality": {
+    "avg_stem_chars": 1126,
+    "avg_explanation_correct_chars": 1705,
+    "avg_explanation_wrong_chars": 940,
+    "business_scenarios_with_named_stakeholders": 14,
+    "quantified_business_situations": 14,
+    "decision_oriented_framing": 14,
+    "asc_references": 14,
+    "coso_references": 0,
+    "competing_alternatives_per_item": "3-4",
+    "exam_traps_identified": 14
+  },
+  "topics_rewritten": [
+    {"topic": "Revenue recognition — performance obligations", "qid": "P1-A-005", "converted_to": "Evaluate"},
+    {"topic": "Allowance method — CECL expected credit losses", "qid": "P1-A-007", "converted_to": "Analyze"},
+    {"topic": "Inventory — lower of cost and NRV", "qid": "P1-A-008", "converted_to": "Evaluate"},
+    {"topic": "LIFO liquidation disclosure", "qid": "P1-A-009", "converted_to": "Analyze"},
+    {"topic": "Asset impairment trigger — ASC 360", "qid": "P1-A-011", "converted_to": "Evaluate"},
+    {"topic": "Contingent liability — ASC 450 accrual", "qid": "P1-A-012", "converted_to": "Evaluate"},
+    {"topic": "Lease classification — ASC 842", "qid": "P1-A-014", "converted_to": "Analyze"},
+    {"topic": "Consolidation — VIE model", "qid": "P1-A-016", "converted_to": "Analyze"},
+    {"topic": "Disclosure notes — accounting policies", "qid": "P1-A-021", "converted_to": "Evaluate"},
+    {"topic": "Fair value hierarchy — ASC 820", "qid": "P1-A-023", "converted_to": "Analyze"},
+    {"topic": "Cash equivalents — classification", "qid": "P1-A-024", "converted_to": "Analyze"},
+    {"topic": "Deferred tax liability — temporary differences", "qid": "P1-A-025", "converted_to": "Evaluate"},
+    {"topic": "Loss contingency — range disclosure", "qid": "P1-A-034", "converted_to": "Evaluate"},
+    {"topic": "Loss contingency — probability assessment", "qid": "P1-A-054", "converted_to": "Evaluate"}
+  ],
+  "evaluate_conversion_by_topic": {
+    "Contingencies": "2/2 = 100%",
+    "Revenue Recognition": "1/1 = 100%",
+    "Inventory Valuation": "1/1 = 100%",
+    "Asset Impairment": "1/1 = 100%",
+    "Deferred Taxes": "1/1 = 100%",
+    "Disclosure Judgment": "1/1 = 100%",
+    "Fair Value": "0/1 = 0% — Analyze",
+    "Allowance Method": "0/1 = 0% — Analyze",
+    "LIFO Liquidation": "0/1 = 0% — Analyze",
+    "Lease Accounting": "0/1 = 0% — Analyze",
+    "Consolidation": "0/1 = 0% — Analyze",
+    "Cash Equivalents": "0/1 = 0% — Analyze"
+  },
+  "backups": [
+    "backups/pack_a_corrected.js.bak-S063-B1-20260728174654",
+    "backups/pack_a_corrected.js.bak-S063-B2-20260728180635"
+  ]
+}

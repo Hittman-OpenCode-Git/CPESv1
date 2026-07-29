@@ -1,0 +1,288 @@
+{
+  "session": "S383",
+  "board": "readiness-board (INDEPENDENT VERIFICATION)",
+  "timestamp": "2026-07-28T23:30:00.000Z",
+  "status": "BLOCKED — Pack A parse failure",
+  "readiness_score": 71,
+  "target": 90,
+  "meets_target": false,
+  "prior_s382_claim": 93,
+  "score_downgrade": -22,
+  "score_downgrade_reasons": [
+    "Pack A fails node --check (line 1247: Unexpected token '{') — S382 falsely claimed 'All 5 packs pass'",
+    "Pre-delivery safety silently excluded 500 Pack A Certified items (coverage dropped from 2,441 to 1,941)",
+    "CURRENT_BASELINES.md §2 Certified pool is stale (2,417 vs actual 2,441); §3 DL-035 still shows IN PROGRESS contrary to scan evidence",
+    "Pack A hash (8BC57922...) matches no recorded baseline (not S377, not S382 audit, not any G1-G5 post-drift baseline)"
+  ],
+  "score_breakdown": {
+    "dl008_zero": {
+      "score": 12,
+      "max": 15,
+      "detail": "Packs B-E verified 0 DL-008 via pre_delivery_safety (1,941 items). Pack A EXCLUDED — cannot verify 500 Certified items due to parse failure. Governance guard DL-008 detection confirmed working (Rule 2 object-boundary v2, 10 tests PASS). Prior S896 baseline claimed 0 verified — cannot confirm for current Pack A state.",
+      "evidence": [
+        "pre_delivery_safety fresh run: B=500 safe, C=445 safe, D=456 safe, E=540 safe",
+        "governance_guard test suite: 10/10 DL-008 detection tests PASS",
+        "Pack A: node --check FAIL, Function constructor FAIL, pre_delivery aborted"
+      ]
+    },
+    "dl026_zero": {
+      "score": 12,
+      "max": 15,
+      "detail": "Packs B-E verified 0 DL-026 via pre_delivery_safety (Rule 6 active). Pack A EXCLUDED. scan_dl035.js independently confirms 0 DL-035 items (Pack C+D Domain F). Rule 6 (BLOCK empty non-CC EW slots) active and tested. Pack A unverified.",
+      "evidence": [
+        "scan_dl035.js: 0 items (Pack C=0, Pack D=0)",
+        "governance_guard Rule 6: 5/5 tests PASS",
+        "Pack A: excluded from all structural scans"
+      ]
+    },
+    "dl037_zero": {
+      "score": 10,
+      "max": 10,
+      "detail": "Rule 9 (Choice Binary Lead-In Polarity Mismatch) active and passing. 6/6 Rule 9 tests PASS. S912 full-pool scan confirmed sole instance (P1-B-040) fixed S911. Governance guard 54/54 overall.",
+      "evidence": [
+        "Rule 9 test block: 6/6 PASS (Pattern 1, Pattern 2, no-false-positive ×2, multi-mismatch, skip-no-choice)",
+        "S912 logic_inversion_scan.json: 0 additional inversions found",
+        "P1-B-040 Choice B verified: 'Yes' aligned with conclusion"
+      ]
+    },
+    "dl035_zero": {
+      "score": 8,
+      "max": 10,
+      "detail": "scan_dl035.js confirms 0 DL-035 items across Pack C+D (Domain F). The 39 previously IN PROGRESS items are resolved. However, CURRENT_BASELINES.md §3 still shows 'S377 IN PROGRESS (39 items)' — documentation is stale and contradicts fresh scan evidence. Deduction for governance documentation gap.",
+      "evidence": [
+        "scan_dl035.js output: TOTAL DL-035: 0 items (Pack C=0, Pack D=0)",
+        "Domain F Certified: Pack C=25, Pack D=36, Combined=61 (all clean)",
+        "CURRENT_BASELINES.md §3: 'S377 IN PROGRESS — 39 Certified learner-pool items affected' (STALE)"
+      ]
+    },
+    "governance_guard": {
+      "score": 10,
+      "max": 10,
+      "detail": "54/54 PASS confirmed. 10 rules active (Rules 1-10). All rule blocks verified: Rule 2 (DL-008), Rule 5 (30-item cap), Rule 6 (DL-026), Rule 7 (derived registry), Rule 8 (untracked artifact), Rule 9 (DL-037), Rule 10 (DL-021). Test suite: 54 tests, 0 failures.",
+      "evidence": [
+        "Fresh run: 54 PASS, 0 FAIL",
+        "Rules 1-10 all active (confirmed by test coverage)",
+        "Hash: 7E5185E3... (drifted from S377 baseline F5CFBF61...)"
+      ]
+    },
+    "pre_delivery_safety": {
+      "score": 5,
+      "max": 10,
+      "detail": "Fresh run exits 0, reports 'All Certified items PASS', but silently excluded Pack A (500 Certified items) due to parse error. Effective coverage: 1,941/2,441 = 79.5%. The existing pre_delivery_safety.json (generated at 22:20:42) showed 2,441/0 — that file was generated when Pack A was still parseable. Current Pack A is NOT parseable. The 500-item coverage gap is critical.",
+      "evidence": [
+        "Fresh run output: 'ERROR [Pack A]: Parse error: Unexpected token \"{\"'",
+        "Summary: 1941 Certified | 1941 safe | 0 unsafe",
+        "Per-pack: A=MISSING, B=500, C=445, D=456, E=540",
+        "Existing JSON (S382 timestamp): 2441 Certified, 2441 safe, 0 unsafe (STALE)",
+        "Pack A coverage loss: 500 items (20.5% of learner pool) unverified"
+      ]
+    },
+    "parse_clean": {
+      "score": 0,
+      "max": 5,
+      "detail": "Pack A FAILS node --check at line 1247. Packs B, C, D, E all PASS. This is a BLOCKING failure. The S382 claim 'All 5 packs pass node --check' is FALSE. Function constructor parse also fails (same error). The JSON structure at lines 1244-1247 appears visually valid — the error at line 1247 likely manifests from an earlier unmatched bracket or structural issue elsewhere in the file.",
+      "evidence": [
+        "node --check pack_a_corrected.js: SyntaxError: Unexpected token '{' at line 1247",
+        "node --check pack_b: PASS",
+        "node --check pack_c: PASS",
+        "node --check pack_d: PASS",
+        "node --check pack_e: PASS",
+        "new Function(pack_a): FAIL — same error",
+        "Pack A QID count: 500 (confirmed)",
+        "Pack A Certified count: 500 (confirmed via Select-String)",
+        "Pack A file structure: var MCQ_BANK_A = [...]; — brackets close at line 25336"
+      ]
+    },
+    "certified_pool": {
+      "score": 8,
+      "max": 10,
+      "detail": "Direct grep confirms 2,441 Certified (target: ≥2,400). Exceeds target by 41. Packs A (500), B (500), E (540) fully certified. Packs C (445/500, 89%) and D (456/500, 91.2%) partially certified. CURRENT_BASELINES.md §2 is stale (reports 2,417 with C=438, D=439). Deducted for Pool A integrity uncertainty (parse failure means 500 items at risk) and baselines documentation staleness.",
+      "evidence": [
+        "Select-String '\"question_state\": \"Certified\"' on pack_*: 2,441",
+        "Pack A=500, Pack B=500, Pack C=445, Pack D=456, Pack E=540",
+        "CURRENT_BASELINES.md §2: 2,417 (STALE — C=438 not 445, D=439 not 456)",
+        "4 independent scripts converge on 2,441 (pre_delivery, readiness_scorer, governance_guard_engine, rebuild_baselines)",
+        "Case pool: 400 items across 3 case_pack files — not included in this count"
+      ]
+    },
+    "automation_operational": {
+      "score": 3,
+      "max": 5,
+      "detail": "4 scripts Fully Operational (pre_delivery_safety, classify_dl031, readiness_scorer, governance_guard_engine). 2 Partially Operational (post_change_qc: stale Pack E count; rebuild_baselines: case-count bug). 0 Not Operational. 0 zero-byte. All 4 certified-count scripts converge on 2,441. Package size range: 5,094–17,924 bytes.",
+      "evidence": [
+        "Fully Operational: pre_delivery_safety (exit 0), classify_dl031 (exit 0), readiness_scorer (exit 0), governance_guard_engine (exit 0)",
+        "Partially Operational: post_change_qc (exit 1 — stale Pack E constant 500 vs 545), rebuild_baselines (exit 0 — case-item counting broken)",
+        "Zero-byte scripts: none",
+        "Count consensus: all 4 scripts agree on 2,441 Certified",
+        "SESSION382_AUTOMATION_CERTIFICATION.json: consistent with fresh verification"
+      ]
+    },
+    "baselines_trusted": {
+      "score": 3,
+      "max": 10,
+      "detail": "CURRENT_BASELINES.md is unreliable. §2 Certified pool (2,417) is stale by 24 items. §3 DL-035 still shows IN PROGRESS (39 items) when scan confirms 0. All 5 pack files have drifted from S377 baseline hashes — authorized development drift, but CURRENT_BASELINES.md was never recaptured. Pack A hash (8BC57922...) matches NO recorded baseline — not S377, not S382 audit's 'actual' (0D926F99...), suggesting the file changed AFTER the S382 audit. governance-guard.js hash also drifted (7E5185E3... vs baseline F5CFBF61...). Data is cross-verified by 4 independent scripts but the formal baselines document is a governance liability.",
+      "evidence": [
+        "CURRENT_BASELINES.md §2 stale: 2,417 vs actual 2,441",
+        "CURRENT_BASELINES.md §3 DL-035: IN PROGRESS vs actual RESOLVED",
+        "Pack A hash timeline: S377 baseline=CAB4EFC7... → S382 audit=0D926F99... → CURRENT=8BC57922... (3 different hashes!)",
+        "Pack B hash: baseline=9CE6A345... → current=E2E70CC8... (drifted)",
+        "Pack C hash: baseline=6B712D2A... → current=359B7124... (drifted)",
+        "Pack D hash: baseline=2B59A6D6... → current=EF439CD6... (drifted)",
+        "Pack E hash: baseline=E0CFD1D8... → current=A2F17EE0... (drifted)",
+        "governance-guard.js: baseline=F5CFBF61... → current=7E5185E3... (drifted — S913 Rule 9 added)",
+        "test_governance_guard.js: baseline=F0FD4198... → current=213829DD... (drifted — 51→54 tests)",
+        "None of these drifts are reflected in CURRENT_BASELINES.md §1 or §5",
+        "AGENTS.md §9.5 mandates hash verification at T0 — current baselines would need to be recaptured first"
+      ]
+    }
+  },
+  "expansion_conditions": {
+    "readiness_gte_90": {
+      "met": false,
+      "score": 71,
+      "detail": "Independent score 71/100 — 19 points below 90 threshold. S382 claimed 93 but that was based on a false claim that all 5 packs pass node --check."
+    },
+    "governance_stable": {
+      "met": true,
+      "detail": "54/54 PASS. 10 rules active (1-10). All BLOCK rules enforced. Test suite covers object-boundary parsing, DL-008, DL-026, DL-035, DL-037, DL-029, Rules 1-10."
+    },
+    "dl008_zero": {
+      "met": "CONDITIONAL",
+      "detail": "Packs B-E verified 0. Pack A (500 Certified items, 20.5% of pool) CANNOT BE VERIFIED due to parse failure. This is not a DL-008 finding — it's a parse-integrity finding. Until Pack A is parseable, DL-008 status is unknown."
+    },
+    "dl026_zero": {
+      "met": "CONDITIONAL",
+      "detail": "Same as DL-008 — Packs B-E clean, Pack A unverified."
+    },
+    "evaluate_workstream_active": {
+      "met": true,
+      "detail": "S380 throughput validation documents active work across S899, S50-S58 (120 items, 6 sessions). S374 Condition F (dedicated Evaluate workstream) documented. 2 waves/week sustainability model confirmed. Evaluate bottleneck identified (1 item/hr, 381 needed)."
+    },
+    "execution_capacity_proven": {
+      "met": true,
+      "detail": "120 items processed across 6 measured sessions. 20 items/session demonstrated baseline. 2.5 items/hr net-new authoring (Analyze ~3.3/hr, Evaluate ~1/hr). Rework rate 7.5%. Governance overhead 30%. Two-wave/week model proven sustainable."
+    },
+    "learner_pool_safe": {
+      "met": "CONDITIONAL",
+      "detail": "1,941 items (79.5%) verified safe via pre_delivery_safety. 500 Pack A items (20.5%) excluded due to parse failure. If Pack A has zero DL-008/DL-026 (as claimed at S896), the remaining 500 items are safe — but this cannot be verified until Pack A is parseable again. The pre-existing pre_delivery_safety.json (S382 generation) showed all 2,441 safe — that file was generated before Pack A became unparseable."
+    }
+  },
+  "all_conditions_met": false,
+  "blocking_conditions": [
+    "CRITICAL: Pack A fails node --check (line 1247: Unexpected token '{'). Function constructor also fails. This is a parse-integrity failure that blocks all structural verification for 500 Certified items (20.5% of learner pool).",
+    "CRITICAL: Readiness score 71/100 is 19 points below the 90-point threshold.",
+    "HIGH: Pre-delivery safety coverage dropped from 2,441 to 1,941 — 500 items silently excluded.",
+    "HIGH: CURRENT_BASELINES.md is stale across §1 (hashes), §2 (certified counts), §3 (DL-035 status). No baseline captures any current file state.",
+    "HIGH: Pack A has 3 different SHA-256 hashes across S377 baseline, S382 audit, and current state — file integrity timeline is unverifiable.",
+    "MEDIUM: DL-008 and DL-026 status for Pack A is UNKNOWN — cannot be verified until parse is restored."
+  ],
+  "pack_a_parse_failure": {
+    "error": "SyntaxError: Unexpected token '{'",
+    "line": 1247,
+    "context": "Object boundary between P1-A-024 (lines up to 1246: '},') and P1-A-025 (line 1247: '{')",
+    "qid_at_boundary": "P1-A-024 (ends) → P1-A-025 (starts)",
+    "observation": "JSON structure at lines 1244-1247 appears visually valid. The closing brace at 1246 (},) and opening brace at 1247 ({) follow correct array-element syntax. The error at line 1247 likely manifests from an earlier unmatched bracket or structural issue elsewhere in the 25,336-line file.",
+    "node_check": "FAIL",
+    "function_constructor": "FAIL (same error)",
+    "pre_delivery_safety": "Skips Pack A, continues processing B-E",
+    "qid_count": "500 (confirmed)",
+    "certified_count": "500 (confirmed)",
+    "hash": "8BC579922498BF95414CA3E2D9ED4107C2B3ED1413EF636E775A9712427D7C13",
+    "hash_matches_baseline": false,
+    "baseline_reference": "S377 baseline=CAB4EFC7..., S382 audit actual=0D926F99..., Current=8BC57922..."
+  },
+  "certified_pool_total": 2441,
+  "certified_pool_breakdown": {
+    "pack_a": 500,
+    "pack_b": 500,
+    "pack_c": 445,
+    "pack_d": 456,
+    "pack_e": 540
+  },
+  "parse_clean_status": {
+    "pack_a": "FAIL — SyntaxError line 1247",
+    "pack_b": "PASS",
+    "pack_c": "PASS",
+    "pack_d": "PASS",
+    "pack_e": "PASS"
+  },
+  "pre_delivery_status": {
+    "total_verified": 1941,
+    "total_excluded": 500,
+    "excluded_pack": "pack_a",
+    "safe_count": 1941,
+    "unsafe_count": 0,
+    "coverage_pct": 79.5,
+    "note": "Existing pre_delivery_safety.json (S382) showed 2441/0. Current run shows 1941/0 because Pack A was dropped."
+  },
+  "governance_guard_status": {
+    "test_count": 54,
+    "pass": 54,
+    "fail": 0,
+    "rules_active": 10,
+    "hash_current": "7E5185E3F1FB73FA81A1E2F20116620FA39ABED2D90962A090DCFD60C3F13066",
+    "hash_baseline": "F5CFBF616CF5527B24692D5EADDECB3B4806D42A5A309A7A15C504E348144CC5",
+    "hash_drifted": true,
+    "drift_authorized": true,
+    "drift_cause": "S913 Rule 9 (DL-037) + Rule 10 (DL-021) deployment — 51→54 tests"
+  },
+  "dl035_scan": {
+    "status": "RESOLVED — 0 items",
+    "pack_c": 0,
+    "pack_d": 0,
+    "domain_f_certified": 61,
+    "scan_tool": "scan_dl035.js",
+    "baselines_doc_discrepancy": "CURRENT_BASELINES.md §3 still shows 'S377 IN PROGRESS (39 items)'"
+  },
+  "current_baselines_staleness": {
+    "certified_pool_discrepancy": "+24 (baselines: 2,417, actual: 2,441)",
+    "pack_c_discrepancy": "+7 (baselines: 438, actual: 445)",
+    "pack_d_discrepancy": "+17 (baselines: 439, actual: 456)",
+    "dl035_status_discrepancy": "Baselines: IN PROGRESS (39 items), Actual: RESOLVED (0 items)",
+    "hash_discrepancies": 7,
+    "last_recaptured": "S377 (2026-07-28) — now stale by 24 Certified items + all 5 pack hashes + governance guard hash",
+    "recommendation": "CURRENT_BASELINES.md requires immediate recapture before any further certification or expansion operations."
+  },
+  "readiness_scorer_portfolio": "0.9591 — READY",
+  "readiness_scorer_states": {
+    "CERTIFY": 2441,
+    "BLOCKED": 99,
+    "REMEDIATE": 5,
+    "READY": 0
+  },
+  "ready_for_expansion": false,
+  "verdict": "NOT READY FOR EXPANSION",
+  "verdict_detail": "S383 expansion authorization is BLOCKED. The independent readiness score of 71/100 falls 19 points below the 90-point threshold. The primary blocker is Pack A's parse failure (node --check fails at line 1247), which prevents structural verification of 500 Certified items (20.5% of the learner pool). Pre-delivery safety coverage dropped from 2,441 to 1,941 as a result. CURRENT_BASELINES.md is stale across all dimensions — certified counts, hashes, and defect statuses. The S382 board's score of 93/100 relied on a false claim that all 5 packs pass node --check. Before S383 expansion can proceed: (1) Pack A must be restored to parse-clean state, (2) all pre-delivery safety checks must confirm 2,441/2,441 safe, (3) CURRENT_BASELINES.md must be recaptured with accurate hashes and defect statuses.",
+  "remediation_actions_required": [
+    "R1: Investigate and fix Pack A parse error at line 1247. Trace bracket/brace matching from file start to locate the structural defect. Restore parse-clean status.",
+    "R2: Re-run pre_delivery_safety_check.js after Pack A parse fix — must confirm 2,441/2,441 safe.",
+    "R3: Recapture CURRENT_BASELINES.md: all 5 pack SHA-256 hashes, governance guard hash, test_governance_guard hash, §2 Certified Pool counts, §3 DL-035 status → RESOLVED.",
+    "R4: Re-run readiness certification after R1-R3 complete. Target score: ≥90.",
+    "R5: Verify Pack A hash does not change further before baselines recapture (to prevent a 4th hash in the drift chain)."
+  ],
+  "methodology": "Independent verification per AGENTS.md §5. All self-reported claims cross-checked against raw file/line evidence. Fresh commands executed: node --check on all packs, governance guard test suite, pre_delivery_safety_check.js, scan_dl035.js, Select-String Certified grep, Get-FileHash SHA-256. No derived registries consumed. Raw pack files are authoritative. Counts verified via direct measurement, not summary reports.",
+  "tools_executed": [
+    "node --check pack_a → FAIL (line 1247)",
+    "node --check pack_b → PASS",
+    "node --check pack_c → PASS",
+    "node --check pack_d → PASS",
+    "node --check pack_e → PASS",
+    "node scripts/test_governance_guard.js → 54/54 PASS",
+    "node scripts/pre_delivery_safety_check.js → 1941 safe/0 unsafe (Pack A excluded)",
+    "node scripts/scan_dl035.js → 0 DL-035 items",
+    "Select-String 'question_state: Certified' on pack_* → 2,441",
+    "Get-FileHash SHA-256 on all pack files → all hashes recorded",
+    "Get-FileHash SHA-256 on governance guard + test → both recorded"
+  ],
+  "evidence_sources_verified": [
+    "reports/SESSION382_READINESS_REVIEW.json — SCORE REFUTED (93→71). Parse-clean claim FALSE.",
+    "reports/SESSION382_AUTOMATION_CERTIFICATION.json — VERIFIED. Automation status confirmed (4 fully op, 2 partial, 0 broken).",
+    "reports/SESSION382_BASELINE_AUDIT.json — PARTIALLY STALE. S382 audit hashes already stale for Pack A.",
+    "scripts/readiness_scorer.js — VERIFIED. Code reviewed, logic confirmed. Produces correct CERTIFY/BLOCKED/REMEDIATE states.",
+    "scripts/output/readiness_scoring.json — VERIFIED. 2441 CERTIFY, 99 BLOCKED, 5 REMEDIATE, 0 READY. Matches ground truth.",
+    "scripts/output/pre_delivery_safety.json — STALE. Generated at 22:20:42 when Pack A was parseable. Current run shows different result.",
+    "reports/SESSION380_THROUGHPUT_VALIDATION.json — VERIFIED. Throughput data consistent, sustainability model sound.",
+    "knowledge/CURRENT_BASELINES.md — STALE. §2 Certified pool (2,417 vs 2,441), §3 DL-035 (IN PROGRESS vs RESOLVED), §1 all hashes outdated."
+  ],
+  "notes": "The S382 board report was generated at 22:56:00 — approximately 35 minutes after the pre_delivery_safety.json timestamp (22:20:42). Between 22:20:42 and 22:56:00, Pack A was parseable (pre_delivery confirmed 500/500 safe). Between 22:56:00 and now (23:30+), Pack A transitioned to a non-parseable state. The hash changed from 0D926F99... (S382 audit actual) to 8BC57922... (current). This means a write operation occurred to Pack A AFTER the S382 board completed. Per AGENTS.md §5: this is a textbook case of why self-reported claims must be re-validated against raw evidence at time of consumption. The S382 board's report was accurate at its time of writing but became stale within ~30 minutes. This S383 board caught the drift."
+}

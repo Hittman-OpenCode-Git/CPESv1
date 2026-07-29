@@ -1,0 +1,129 @@
+{
+  "session": "S66",
+  "type": "application-sync",
+  "timestamp": "2026-07-28T21:20:00.000Z",
+  "app_js": {
+    "mcq_packs_loaded": ["pack_b", "pack_c", "pack_d", "pack_e"],
+    "mcq_packs_missing": ["pack_a"],
+    "mcq_global_variables_expected": {
+      "pack_a": "MCQ_BANK_A (var)",
+      "pack_b": "MCQ_BANK_B (const)",
+      "pack_c": "MCQ_BANK_C (const)",
+      "pack_d": "MCQ_BANK_D (const)",
+      "pack_e": "MCQ_BANK_E (const)"
+    },
+    "mcq_question_counts": {
+      "pack_a": 500,
+      "pack_b": 500,
+      "pack_c": 500,
+      "pack_d": 500,
+      "pack_e": 545,
+      "total_raw": 2545
+    },
+    "mcq_certified_counts": {
+      "pack_a": 500,
+      "pack_b": 500,
+      "pack_c": 455,
+      "pack_d": 456,
+      "pack_e": 540,
+      "total_certified": 2451
+    },
+    "case_packs_loaded": ["case_pack_1", "case_pack_2", "case_pack_3"],
+    "case_bank_mapping": {
+      "case_pack_1": "CASE_BANK_A (Section A), CASE_BANK_D (Section D), MIGRATED_CASE_BASE_A, MIGRATED_CASE_BASE_D",
+      "case_pack_2": "CASE_BANK_B (Section B), CASE_BANK_E (Section E), MIGRATED_CASE_BASE_B, MIGRATED_CASE_BASE_E",
+      "case_pack_3": "CASE_BANK_C (Section C), MIGRATED_CASE_BASE_C"
+    },
+    "case_bank_section_f": "No CASE_BANK_F defined in any loaded file — Section F (Technology and Analytics) has no case bank",
+    "stale_references": [
+      "ENHANCED_CASE_BANK_A through ENHANCED_CASE_BANK5_F (lines 1320-1325) — referenced as primary case bank source in getCasePool(), but these variables are defined only in the old scored_cases.js files which are NOT loaded by index_updated.html",
+      "ENHANCED_CASE_BANK references also appear in renderCatalog() at lines 3931-3935",
+      "scored_cases.js, scored_cases2.js, scored_cases3.js, scored_cases4.js, scored_cases5.js — exist on disk in root directory but NOT loaded by HTML — stale files violating repository organization rules (PROJECT_CONSTITUTION.md §11.4)"
+    ],
+    "exam_builder": {
+      "mcqs_per_exam_full": 100,
+      "cases_per_exam_full": 2,
+      "exam_duration_seconds": 14400,
+      "filters_by_certified": true,
+      "tier_system": {
+        "tier_1": "Certified (question_state === 'Certified')",
+        "tier_2": "Best Unprocessed (quality score >= 2)",
+        "tier_3": "Remaining Unprocessed",
+        "hard_excluded": "Archived, In Audit, Editorial Queue, delivery blocklist"
+      },
+      "difficulty_distribution_full_exam": {
+        "Easy": 0.25,
+        "Moderate-Easy": 0.15,
+        "Moderate": 0.30,
+        "Difficult": 0.20,
+        "Very Difficult": 0.10
+      },
+      "notes": "Selects MCQs by section + difficulty distribution + tier priority (Certified first). Deduplicates by concept key. Falls back gracefully: if MCQ_BANK_A is undefined (not loaded), it becomes [] and Pack A is silently excluded."
+    },
+    "dashboard_counters": {
+      "dynamic_or_hardcoded": "dynamic",
+      "notes": "All counters computed dynamically at app load from the loaded global bank variables. renderValidation() reads MCQ_BANK_A-E lengths. renderCatalog() computes totalMCQs from bank lengths. tieredPool.counts shows certified/bestUnprocessed/unprocessed. Defect diagnostics reads from _DefectManifest stats. The HTML hero text hardcodes '2,500 Part 1 MCQs' and '135 integrated case studies' but actual rendering is dynamic."
+    }
+  },
+  "index_html": {
+    "script_tags_valid": false,
+    "script_tags": [
+      "pack_b_corrected.js",
+      "pack_c_corrected.js",
+      "pack_d_corrected.js",
+      "pack_e_corrected.js",
+      "case_pack_1_corrected.js",
+      "case_pack_2_corrected.js",
+      "case_pack_3_corrected.js",
+      "may-learner-state.js",
+      "governance/delivery_blocklist.js",
+      "may-core.js",
+      "app.js"
+    ],
+    "missing_scripts": [
+      "pack_a_corrected.js — NOT LOADED. Pack A has 500 MCQs, ALL 500 Certified. Without this script tag, MCQ_BANK_A is undefined and all 500 Pack A items are silently excluded from the delivery pool."
+    ],
+    "stale_references": [
+      "No stale script tags in HTML itself. However, the old scored_cases.js files exist on disk in root but are NOT loaded — any user loading index_updated.html gets the correct case_pack files only."
+    ]
+  },
+  "pre_delivery_check_script": {
+    "exists": true,
+    "path": "scripts/pre_delivery_safety_check.js",
+    "checks_performed": ["DL-008", "DL-026", "DL-021", "Rule 9 (DL-037)"],
+    "output_file": "scripts/output/pre_delivery_safety.json"
+  },
+  "issues_found": [
+    {
+      "severity": "CRITICAL",
+      "id": "S66-APP-SYNC-001",
+      "description": "pack_a_corrected.js is NOT loaded in index_updated.html. Pack A contains 500 MCQs, ALL 500 are question_state: 'Certified'. Without the script tag, variable MCQ_BANK_A is undefined in the browser. The getMCQPool() function safely defaults to [] (line 1253: typeof MCQ_BANK_A !== 'undefined' ? MCQ_BANK_A : []), so the app won't crash — but all 500 Certified Pack A MCQs are silently excluded from the delivery pool. Learners only have access to packs B-E (2,045 questions, ~1,951 Certified)."
+    },
+    {
+      "severity": "HIGH",
+      "id": "S66-APP-SYNC-002",
+      "description": "ENHANCED_CASE_BANK_A through ENHANCED_CASE_BANK5_F are referenced in getCasePool() and renderCatalog() as the primary case bank source (lines 1320-1325, 3931-3935), but these variables are NOT defined by any loaded file. They came from the old scored_cases.js through scored_cases5.js files, which exist on disk but are NOT loaded in index_updated.html. The code safely falls back to CASE_BANK_A-E and MIGRATED_CASE_BASE_A-E (defined by case_pack files), so no runtime failure — but the enhanced case bank always resolves to []."
+    },
+    {
+      "severity": "MEDIUM",
+      "id": "S66-APP-SYNC-003",
+      "description": "No CASE_BANK_F defined for Section F (Technology and Analytics). The case_pack files define CASE_BANK_A through CASE_BANK_E only. Section F has no case study bank in the current delivery configuration. This may be intentional (F section consists solely of MCQs) but is unverified."
+    },
+    {
+      "severity": "LOW",
+      "id": "S66-APP-SYNC-004",
+      "description": "Stale scored_cases files (scored_cases.js through scored_cases5.js and scored_cases2.js.bak/scored_cases5.js.bak) exist in repository root but are not loaded by HTML. These violate PROJECT_CONSTITUTION.md §11.3 (backup files must be in backups/) and §11.4 (prohibited root-level files)."
+    },
+    {
+      "severity": "LOW",
+      "id": "S66-APP-SYNC-005",
+      "description": "Variable declaration style inconsistency: pack_a uses 'var MCQ_BANK_A' while packs B-E use 'const MCQ_BANK_B/C/D/E'. Pack D also has a non-standard format: 'const MCQ_BANK_D = [{' (inline object) vs other packs' 'const MCQ_BANK_X = [' format."
+    },
+    {
+      "severity": "INFORMATIONAL",
+      "id": "S66-APP-SYNC-006",
+      "description": "Pack E has 545 QuestionIDs (vs 500 in packs A-D) and 540 Certified (vs 455-500 in other packs). The hero text in index_updated.html hardcodes '2,500 Part 1 MCQs' which undercounts: the actual pool is 2,545 MCQs across the 5 packs (excluding the missing Pack A, the effective loaded pool is 2,045)."
+    }
+  ],
+  "overall": "MISMATCHES_FOUND — CRITICAL: pack_a_corrected.js missing from HTML load order; 500 Certified MCQs excluded from delivery pool"
+}

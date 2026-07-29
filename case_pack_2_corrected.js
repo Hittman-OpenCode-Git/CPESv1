@@ -28,11 +28,16 @@ const CASE_PACK_2 = [
   "EstimatedMinutes": 30,
   "ExhibitCount": 1,
   "LastValidated": "2026-07-20",
+  "CompanyName": "Vertex Solutions",
+  "CompanyType": "Service provider",
+  "Industry": "Technology services",
+  "Stakeholder": "Vertex Solutions (Controller)",
+  "BusinessFunction": "Revenue accounting",
   "LearningObjectives": [
     "Analyze revenue recognition under ASC 606",
     "Analyze inventory valuation methods (FIFO, LIFO, weighted average)"
   ],
-  "ProductionStatus": "Draft",
+  "ProductionStatus": "Production",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,
   "QuestionCount": 5,
@@ -239,7 +244,7 @@ const CASE_PACK_2 = [
     }
   ],
   "question_state": "Certified",
-  "pack_state": "Draft",
+  "pack_state": "Production",
   "pedagogical_cluster": "",
   "question_tier": "Ungraded",
   "question_status": "Active"
@@ -267,10 +272,15 @@ const CASE_PACK_2 = [
   "EstimatedMinutes": 25,
   "ExhibitCount": 1,
   "LastValidated": "2026-07-20",
+  "CompanyName": "Meridian Logistics",
+  "CompanyType": "Service provider",
+  "Industry": "Logistics",
+  "Stakeholder": "Meridian Logistics (Controller)",
+  "BusinessFunction": "Financial reporting",
   "LearningObjectives": [
     "Analyze lease accounting under ASC 842"
   ],
-  "ProductionStatus": "Draft",
+  "ProductionStatus": "Production",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,
   "QuestionCount": 5,
@@ -474,7 +484,7 @@ const CASE_PACK_2 = [
     }
   ],
   "question_state": "Certified",
-  "pack_state": "Draft",
+  "pack_state": "Production",
   "pedagogical_cluster": "",
   "question_tier": "Ungraded",
   "question_status": "Active"
@@ -746,11 +756,16 @@ const CASE_PACK_2 = [
   "EstimatedMinutes": 30,
   "ExhibitCount": 1,
   "LastValidated": "2026-07-20",
+  "CompanyName": "Orion Corp",
+  "CompanyType": "Manufacturer",
+  "Industry": "Technology",
+  "Stakeholder": "Orion Corp (CFO)",
+  "BusinessFunction": "Financial reporting",
   "LearningObjectives": [
     "Analyze long-lived asset accounting including impairment",
     "Analyze intangible asset recognition and amortization"
   ],
-  "ProductionStatus": "Draft",
+  "ProductionStatus": "Production",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,
   "QuestionCount": 5,
@@ -954,7 +969,7 @@ const CASE_PACK_2 = [
     }
   ],
   "question_state": "Certified",
-  "pack_state": "Draft",
+  "pack_state": "Production",
   "pedagogical_cluster": "",
   "question_tier": "Ungraded",
   "question_status": "Active"
@@ -1917,7 +1932,7 @@ const CASE_PACK_2 = [
       "Type": "fill",
       "Prompt": "A budget that is continuously updated by adding a new month/quarter as the current one drops is called a __________ budget.",
       "Correct": "rolling",
-      "Explanation": "Also known as a continuous or rolling budget.",
+      "Explanation": "A rolling budget (also known as a continuous budget or perpetual budget) is a budget that is continuously updated by adding a new period (month or quarter) as the current period is completed, maintaining a constant planning horizon. Under this approach, Highland Retail would drop January and add April once January closes, always maintaining a forward-looking window of the same length. Rolling budgets are a fundamental planning tool in CMA Part 1 Section B (Planning, Budgeting, and Forecasting) and offer a key advantage over static annual budgets: they prevent the organization from operating in the final months of a fiscal year with a nearly expired plan. For Highland Retail's cash collections scenario, a rolling budget would ensure Q2 collection assumptions are continually refreshed with the most recent actual data from February and March, improving forecast accuracy for April and May credit sales collections. A common CMA exam trap is to confuse a rolling budget with a flexible budget — the flexible budget adjusts costs for different activity levels, while the rolling budget extends the time horizon.",
       "Topic": "Budget Types",
       "ItemID": "CBQ3-B1-Q5",
       "CognitiveLevel": "Understand",
@@ -1943,7 +1958,7 @@ const CASE_PACK_2 = [
     }
   ],
   "question_state": "Certified",
-  "pack_state": "Draft",
+  "pack_state": "Production",
   "pedagogical_cluster": "",
   "question_tier": "Ungraded",
   "question_status": "Active"

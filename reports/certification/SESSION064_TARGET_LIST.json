@@ -1,0 +1,75 @@
+{
+  "session": "064",
+  "timestamp": "2026-07-28",
+  "framework": "Hybrid (OPTION C) — per Session 59",
+  "baseline": "Session 59: 68 Certified, 7 Conditional, 0 Failed",
+  "target_cases": [
+    {
+      "caseID": "CBQ2-A3",
+      "file": "case_pack_2_corrected.js",
+      "title": "Revenue Recognition and Receivables Valuation",
+      "status_before": "Conditional",
+      "blockers": ["D2: NO_COMPANY_OR_STAKEHOLDER"],
+      "action": "Populate CompanyName, Stakeholder, Industry, CompanyType, BusinessFunction from scenario text (Vertex Solutions). Flip ProductionStatus Draft→Production, pack_state Draft→Production."
+    },
+    {
+      "caseID": "CBQ2-B1",
+      "file": "case_pack_1_corrected.js",
+      "title": "Production and Direct Materials Budgeting",
+      "status_before": "Conditional",
+      "blockers": ["D5: SHORT_EXPLANATIONS on 1 item (Q4)"],
+      "action": "Expand Q4 explanation from 28 chars to 500+ chars with formula trace, business interpretation, exam trap. Flip pack_state Draft→Production."
+    },
+    {
+      "caseID": "CBQ3-A1",
+      "file": "case_pack_2_corrected.js",
+      "title": "Lease Accounting and Classification",
+      "status_before": "Conditional",
+      "blockers": ["D2: NO_COMPANY_OR_STAKEHOLDER"],
+      "action": "Populate CompanyName (Meridian Logistics), Stakeholder, Industry, CompanyType, BusinessFunction from scenario text. Flip ProductionStatus Draft→Production, pack_state Draft→Production."
+    },
+    {
+      "caseID": "CBQ3-B1",
+      "file": "case_pack_2_corrected.js",
+      "title": "Cash Collections Budgeting",
+      "status_before": "Conditional",
+      "blockers": ["D5: SHORT_EXPLANATIONS on 1 item (Q5)"],
+      "action": "Expand Q5 explanation from 50 chars to 750+ chars with rolling budget definition, Highland Retail scenario application, CMA exam trap. Flip pack_state Draft→Production."
+    },
+    {
+      "caseID": "CBQ4-A1",
+      "file": "case_pack_2_corrected.js",
+      "title": "Intangible Assets and Goodwill Impairment",
+      "status_before": "Conditional",
+      "blockers": ["D2: NO_COMPANY_OR_STAKEHOLDER"],
+      "action": "Populate CompanyName (Orion Corp), Stakeholder, Industry, CompanyType, BusinessFunction from scenario text. Flip ProductionStatus Draft→Production, pack_state Draft→Production."
+    },
+    {
+      "caseID": "CBQ-F1",
+      "file": "case_pack_1_corrected.js",
+      "title": "Data Governance and Warranty Analytics Dashboard",
+      "status_before": "Conditional",
+      "blockers": ["D5: BOILERPLATE detected"],
+      "action": "Verified S533 certification agent already expanded all 6 explanations. No boilerplate remaining. ProductionStatus and pack_state already Production. No changes needed."
+    },
+    {
+      "caseID": "CBQ5-B2",
+      "file": "case_pack_3_corrected.js",
+      "title": "Bonds Payable and Effective Interest Amortization",
+      "status_before": "Conditional",
+      "blockers": ["D2: NO_COMPANY_OR_STAKEHOLDER", "D4: SectionTag(A) != CaseID section(B)"],
+      "action": "Populate CompanyName (Granite Corp), Stakeholder, Industry, CompanyType, BusinessFunction from scenario text. SectionTags already 'A' (correct for bond content — legacy CaseID naming discrepancy is cosmetic). Flip ProductionStatus Draft→Production, pack_state Draft→Production."
+    }
+  ],
+  "files_modified": [
+    "case_pack_1_corrected.js",
+    "case_pack_2_corrected.js",
+    "case_pack_3_corrected.js"
+  ],
+  "backups": [
+    "backups/case_pack_1_corrected.js.bak-S64-20260728204159",
+    "backups/case_pack_2_corrected.js.bak-S64-20260728204159",
+    "backups/case_pack_3_corrected.js.bak-S64-20260728204159"
+  ],
+  "status": "ALL_7_REMEDIATED"
+}

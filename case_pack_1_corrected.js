@@ -2617,7 +2617,7 @@ const CASE_PACK_1 = [
       "Type": "numeric",
       "Prompt": "What is the budgeted cost of raw material purchases for January?",
       "Correct": 127440,
-      "Explanation": "31,860 lbs * $4 = $127,440.",
+      "Explanation": "The budgeted cost of raw material purchases for January is calculated by multiplying the required pounds of raw material purchases by the cost per pound: 31,860 lbs x $4.00 per lb = $127,440. This figure flows directly into Apex Manufacturing's cash budget as a cash disbursement. Under the master budget sequence, the direct materials purchases budget follows the production budget and feeds into both the cash budget (for the dollar amount of disbursements) and the budgeted cost of goods sold. A common CMA exam trap is to multiply the production need (31,200 lbs) by the cost instead of the purchase quantity (31,860 lbs) — the purchase quantity must account for the desired ending inventory of raw materials in addition to current production requirements, per the standard materials purchase formula: Purchases = Materials Needed for Production + Desired Ending Materials - Beginning Materials.",
       "Topic": "Materials Budget",
       "ItemID": "CBQ2-B1-Q4",
       "CognitiveLevel": "Apply",
@@ -2683,7 +2683,7 @@ const CASE_PACK_1 = [
     }
   ],
   "question_state": "Certified",
-  "pack_state": "Draft",
+  "pack_state": "Production",
   "pedagogical_cluster": "",
   "question_tier": "Ungraded",
   "question_status": "Active"

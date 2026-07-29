@@ -1,0 +1,332 @@
+{
+  "session": "SESSION065",
+  "target_pack": "pack_a_corrected.js",
+  "target_section": "A",
+  "total_section_a_items": 75,
+  "apply_level_items_found": 14,
+  "recommended_batch_size": 14,
+  "candidates": [
+    {
+      "qid": "P1-A-007",
+      "topic": "A.007 allowance method CECL forward-looking",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 7,
+      "has_calculation": true,
+      "num_steps": 1,
+      "rotation_group": 2,
+      "asc_standard": "ASC 326",
+      "current_stem_summary": "CONTROLLER MEMORANDUM \\u2014 Harbor Medical Supplies\n\nTO: Controller Jia Patel\nFROM: Internal Audit\nRE: Year-End Allowance for Doubtful Accounts \\u2014 Forward-Looking Analysis\n\nHarbor carries $4,200,",
+      "current_choices_summary": {
+        "A": "Apply the historical loss rates mechanically without adjustment to each aging bucket. The aging analysis is the primary measurement tool, and subjecti",
+        "B": "Adjust historical loss rates upward by incorporating forward-looking information (Fed rate increases, industry DSO trends, Chapter 11 filing) and appl",
+        "C": "Recognize the Chapter 11 client as fully impaired with a specific $180,000 write-off, but apply historical loss rates to all other receivables. Rate e",
+        "D": "Maintain historical loss rates for the <90-day buckets but double the >90-day rate from 38.7% to 77.4% because the bucket doubled in size. The control"
+      },
+      "correct_choice": "B",
+      "conversion_notes": "Rich existing scenario can be elevated from decision to recommendation; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Difficult"
+    },
+    {
+      "qid": "P1-A-011",
+      "topic": "A.011 asset impairment trigger",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 8,
+      "has_calculation": true,
+      "num_steps": 1,
+      "rotation_group": 3,
+      "asc_standard": "ASC 360",
+      "current_stem_summary": "INTERNAL MEMORANDUM — Keystone Industries\n\nTO: Controller David Chen\nFROM: Plant Manager Sarah Okonkwo\nRE: Production Line 4 — Performance Review\n\nProduction Line 4 is a dedicated automated stamping l",
+      "current_choices_summary": {
+        "A": "Yes, an impairment test is triggered. The most significant indicator is the adverse change in the extent or manner in which the asset is used — the cu",
+        "B": "No impairment test is triggered. The undiscounted future cash flows of $5,400,000 are close to the carrying amount of $6,200,000, and indicators alone",
+        "C": "Yes, an impairment test is triggered, but the primary indicator is the mechanical output decline from 92,000 to 51,000 units/month — a 44.6% reduction",
+        "D": "No impairment test is required because the asset still has 9 years of remaining useful life. An impairment test is triggered only when the carrying am"
+      },
+      "correct_choice": "A",
+      "conversion_notes": "Rich existing scenario can be elevated from decision to recommendation; Priority exam topic — high learner value for Analyze/Evaluate upgrade; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Difficult"
+    },
+    {
+      "qid": "P1-A-021",
+      "topic": "A.021 disclosure notes accounting policies",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 6,
+      "has_calculation": false,
+      "num_steps": 1,
+      "rotation_group": 5,
+      "asc_standard": "ASC 235",
+      "current_stem_summary": "AUDIT COMMITTEE BRIEFING — Northstar Medical Devices, Inc.\n\nTO: Audit Committee Chair Margaret Okonkwo\nFROM: Thomas Reyes, CPA, Newly Appointed Controller\nRE: Gap in Financial Statement Disclosures — ",
+      "current_choices_summary": {
+        "A": "Include a comprehensive Summary of Significant Accounting Policies note in the current year disclosing all three revenue recognition policies with spe",
+        "B": "No corrective action required because the auditors issued unmodified opinions, implicitly accepting the omission as immaterial. Add the policy disclos",
+        "C": "Include a Summary of Significant Accounting Policies note in the current year only, prospectively. Since the revenue streams existed for three years a",
+        "D": "Report the omission as a material weakness in internal control and restate all three years under ASC 250. ASC 235-10-50-1 mandates disclosure of signi"
+      },
+      "correct_choice": "A",
+      "conversion_notes": "Rich existing scenario can be elevated from decision to recommendation; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Difficult"
+    },
+    {
+      "qid": "P1-A-034",
+      "topic": "A.034 loss contingency range disclosure",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 8,
+      "has_calculation": true,
+      "num_steps": 1,
+      "rotation_group": 7,
+      "asc_standard": "ASC 450",
+      "current_stem_summary": "CONTROLLER'S ASSESSMENT — Phoenix Chemical Corporation\n\nTO: Controller's File\nFROM: Janet Reyes, Controller\nRE: Environmental Remediation Liability — Wheeler River Superfund Site\n\nPhoenix has been nam",
+      "current_choices_summary": {
+        "A": "Accrue $1,260,000 (minimum of the most-likely-scenario range). Under ASC 450-20-25-2, when a range of probable loss exists and no amount within the ra",
+        "B": "Accrue the probability-weighted expected value: approximately $2,992,500 using midpoints of each scenario. Disclose the full range ($0-$8.37M) and the",
+        "C": "No accrual is required because the loss is not probable — only a 45% likelihood of the most likely allocation, and the specific percentage is uncertai",
+        "D": "Accrue $5,580,000 (maximum of most-likely range) because ASC 450 requires conservative treatment of environmental liabilities. The EPA's Superfund des"
+      },
+      "correct_choice": "A",
+      "conversion_notes": "Rich existing scenario can be elevated from decision to recommendation; Priority exam topic — high learner value for Analyze/Evaluate upgrade; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Difficult"
+    },
+    {
+      "qid": "P1-A-054",
+      "topic": "A.054 loss contingency accrual disclosure evaluate",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 8,
+      "has_calculation": true,
+      "num_steps": 1,
+      "rotation_group": 11,
+      "asc_standard": "ASC 450",
+      "current_stem_summary": "CFO BRIEFING \\u2014 Beacon Pharmaceuticals\n\nTO: CFO James Park\nFROM: General Counsel\nRE: Year-End Contingency Assessment \\u2014 Three Matters\n\nBeacon's year-end financial statements require evaluation",
+      "current_choices_summary": {
+        "A": "Matter 1: Accrue $4,200,000 (minimum of the range) because the loss is probable, and disclose the nature of the contingency and the range. The insuran",
+        "B": "Matter 1: Accrue $4,200,000 (minimum of the loss range) and disclose the range; ASC 450-20-30-1 requires accrual at the low end of the range when no a",
+        "C": "Matter 1: Accrue $9,800,000 (maximum of the range) because conservatism requires accruing the high end when the range is wide. Net the $12,000,000 ins",
+        "D": "Matter 1: Accrue $7,000,000 (midpoint of the range) as the most representative estimate, with disclosure of the full range. Matter 2: Accrue $3,500,00"
+      },
+      "correct_choice": "B",
+      "conversion_notes": "Rich existing scenario can be elevated from decision to recommendation; Priority exam topic — high learner value for Analyze/Evaluate upgrade; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Difficult"
+    },
+    {
+      "qid": "P1-A-029",
+      "topic": "A.029 straight-line depreciation expense 4",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 6,
+      "has_calculation": true,
+      "num_steps": 3,
+      "rotation_group": 6,
+      "asc_standard": "ASC 360",
+      "current_stem_summary": "Evergreen bought equipment for $92,800, estimates salvage value of $12,000, and a 5-year useful life. What is annual straight-line depreciation?",
+      "current_choices_summary": {
+        "A": "$80,800",
+        "B": "$16,160",
+        "C": "$18,560",
+        "D": "$18,160"
+      },
+      "correct_choice": "B",
+      "conversion_notes": "Multi-step calculation supports adding \"which line item is most affected\" or \"what is the financial statement impact\" layer; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Moderate-Easy"
+    },
+    {
+      "qid": "P1-A-030",
+      "topic": "A.030 indirect operating cash flow adjustment 5",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 7,
+      "has_calculation": true,
+      "num_steps": 1,
+      "rotation_group": 6,
+      "asc_standard": "ASC 230",
+      "current_stem_summary": "Frontier reports net income of $103,500, depreciation of $23,000, an increase in accounts receivable of $7,000, and an increase in accounts payable of $5,300. What is operating cash flow under the ind",
+      "current_choices_summary": {
+        "A": "$78,800",
+        "B": "$124,800",
+        "C": "$138,800",
+        "D": "$114,200"
+      },
+      "correct_choice": "B",
+      "conversion_notes": "Multi-step calculation supports adding \"which line item is most affected\" or \"what is the financial statement impact\" layer; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Moderate"
+    },
+    {
+      "qid": "P1-A-039",
+      "topic": "A.039 straight-line depreciation expense 14",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 6,
+      "has_calculation": true,
+      "num_steps": 2,
+      "rotation_group": 8,
+      "asc_standard": "ASC 360",
+      "current_stem_summary": "Orion bought equipment for $124,800, estimates salvage value of $12,000, and a 7-year useful life. What is annual straight-line depreciation?",
+      "current_choices_summary": {
+        "A": "$16,114",
+        "B": "$112,800",
+        "C": "$18,114",
+        "D": "$17,828"
+      },
+      "correct_choice": "A",
+      "conversion_notes": "Multi-step calculation supports adding \"which line item is most affected\" or \"what is the financial statement impact\" layer; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Moderate-Easy"
+    },
+    {
+"qid": "P1-A-043",
+      "topic": "A.043 net sales after returns and allowances 18",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 6,
+      "has_calculation": true,
+      "num_steps": 3,
+      "rotation_group": 9,
+      "asc_standard": "ASC 606",
+      "current_stem_summary": "Summit recorded gross sales of $299,000, sales returns of $12,600, and sales allowances of $5,300. What net sales should be reported?",
+      "current_choices_summary": {
+        "A": "$286,400",
+        "B": "$281,100",
+        "C": "$299,000",
+        "D": "$306,300"
+      },
+      "correct_choice": "B",
+      "conversion_notes": "Multi-step calculation supports adding \"which line item is most affected\" or \"what is the financial statement impact\" layer; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Moderate-Easy"
+    },
+    {
+      "qid": "P1-A-047",
+      "topic": "A.047 revenue recognized on shipped units 22",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 7,
+      "has_calculation": true,
+      "num_steps": 1,
+      "rotation_group": 10,
+      "asc_standard": "ASC 606",
+      "current_stem_summary": "Willow accepted an order for 554 units at $65 each. 536 units shipped before year-end and control transfers on shipment. What revenue is recognized?",
+      "current_choices_summary": {
+        "A": "$36,010",
+        "B": "$1,170",
+        "C": "$35,490",
+        "D": "$34,840"
+      },
+      "correct_choice": "D",
+      "conversion_notes": "Multi-step calculation supports adding \"which line item is most affected\" or \"what is the financial statement impact\" layer; Priority exam topic — high learner value for Analyze/Evaluate upgrade; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Moderate-Easy"
+    },
+    {
+      "qid": "P1-A-050",
+      "topic": "A.050 indirect operating cash flow adjustment 25",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 6,
+      "has_calculation": true,
+      "num_steps": 1,
+      "rotation_group": 10,
+      "asc_standard": "ASC 230",
+      "current_stem_summary": "Apex reports net income of $137,500, depreciation of $31,000, an increase in accounts receivable of $9,000, and an increase in accounts payable of $6,900. What is operating cash flow under the indirec",
+      "current_choices_summary": {
+        "A": "$152,600",
+        "B": "$166,400",
+        "C": "$184,400",
+        "D": "$104,400"
+      },
+      "correct_choice": "B",
+      "conversion_notes": "Multi-step calculation supports adding \"which line item is most affected\" or \"what is the financial statement impact\" layer; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Moderate"
+    },
+    {
+      "qid": "P1-A-060",
+      "topic": "A.060 indirect operating cash flow adjustment 35",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 6,
+      "has_calculation": true,
+      "num_steps": 1,
+      "rotation_group": 12,
+      "asc_standard": "ASC 230",
+      "current_stem_summary": "Keystone reports net income of $154,500, depreciation of $35,000, an increase in accounts receivable of $10,000, and an increase in accounts payable of $7,700. What is operating cash flow under the in",
+      "current_choices_summary": {
+        "A": "$187,200",
+        "B": "$207,200",
+        "C": "$171,800",
+        "D": "$117,200"
+      },
+      "correct_choice": "A",
+      "conversion_notes": "Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Moderate"
+    },
+    {
+      "qid": "P1-A-069",
+      "topic": "A.069 straight-line depreciation expense 44",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 6,
+      "has_calculation": true,
+      "num_steps": 3,
+      "rotation_group": 14,
+      "asc_standard": "ASC 360",
+      "current_stem_summary": "Titan bought equipment for $220,800, estimates salvage value of $12,000, and a 5-year useful life. What is annual straight-line depreciation?",
+      "current_choices_summary": {
+        "A": "$208,800",
+        "B": "$44,160",
+        "C": "$41,760",
+        "D": "$43,760"
+      },
+      "correct_choice": "C",
+      "conversion_notes": "Multi-step calculation supports adding \"which line item is most affected\" or \"what is the financial statement impact\" layer; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Moderate-Easy"
+    },
+    {
+      "qid": "P1-A-075",
+      "topic": "A.075 basic EPS weighted-average shares 50",
+      "cognitive_level_current": "Apply",
+      "cognitive_level_target": "Analyze",
+      "suitability_score": 5,
+      "has_calculation": true,
+      "num_steps": 3,
+      "rotation_group": 15,
+      "asc_standard": "ASC 260",
+      "current_stem_summary": "Apex had 100,000 common shares outstanding all year and issued 22,000 additional shares on July 1. Net income was $330,000, and preferred dividends were $30,000. What is basic EPS?",
+      "current_choices_summary": {
+        "A": "$3.00",
+        "B": "$2.97",
+        "C": "$2.46",
+        "D": "$2.70"
+      },
+      "correct_choice": "D",
+      "conversion_notes": "Multi-step calculation supports adding \"which line item is most affected\" or \"what is the financial statement impact\" layer; Strong distractor set provides raw material for judgment-based conversion",
+      "difficulty": "Moderate-Easy"
+    }
+  ],
+  "metadata": {
+    "generated_by": "candidate-selector",
+    "timestamp": "2026-07-28",
+    "selection_method": "priority-topic + distractor-richness + scenario-potential",
+    "scoring_rubric": {
+      "topic_priority": "Revenue/Inventory/Leases/DeferredTax/Impairment/Contingencies=3, other ASC topics=2, non-ASC=1",
+      "distractor_richness": "3 non-empty distractor EW slots=3, 2=2, 1=1",
+      "scenario_potential": "Memo/briefing/assessment format=2, company-name=1, generic=0",
+      "calculation_steps": "Multi-step=2, single-step=1, none=0"
+    },
+    "excluded_items": [
+      {
+        "qid": "P1-A-044",
+        "reason": "Already upgraded to Analyze via S892"
+      },
+      {
+        "qid": "P1-A-064",
+        "reason": "Already upgraded to Analyze via S892"
+      }
+    ],
+    "notes": [
+      "P1-A-001 is Remember-level (not a conversion candidate)",
+      "P1-A-004 is Understand-level (not a conversion candidate)",
+      "P1-A-002 through P1-A-026 include 8 Analyze and 5 Evaluate items already at higher cognitive levels",
+      "54 items currently at Apply level in Section A",
+      "14 candidates selected from rotation groups 2-15 representing 8 distinct template types"
+    ]
+  }
+}

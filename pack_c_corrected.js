@@ -18661,9 +18661,9 @@ const MCQ_BANK_C = [
         "ExplanationWrongD": "This choice proposes changing who conducts monitoring rather than addressing how monitoring conclusions are reached. The problem is not that internal audit produced inconsistent ratings — the ratings were consistent across all three divisions (all classified as low severity). The problem is that the severity classification methodology itself is defective because it cannot detect the aggregated significance of related deficiencies. Replacing internal audit with an external firm would produce the same outcome if the external firm applies the same entity-level severity criteria that lack an aggregation mechanism. COSO Principle 17 focuses on the quality and completeness of the monitoring evaluation process, not on who performs it.",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply",
-        "upgrade_note": "S52 Phase 4 — Analyze replacement for archived P1-EC-019 (DL-012 rotation clone)"
-    ,
-        "dl031_review_note": "Downgraded from Analyze->Apply — stem describes COSO Principle 17 deficiency aggregation scenario (DL-031)"},
+        "upgrade_note": "S52 Phase 4 — Analyze replacement for archived P1-EC-019 (DL-012 rotation clone)",
+        "dl031_review_note": "Downgraded from Analyze->Apply — stem describes COSO Principle 17 deficiency aggregation scenario (DL-031)"
+    },
     {
         "Part": 1,
         "Section": "E",
@@ -21602,30 +21602,30 @@ const MCQ_BANK_C = [
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "F.003 data governance ownership",
-        "MicroTopic": "data governance ownership",
-        "UniqueConceptKey": "F-C003-data-governance-ownership",
-        "LOSTag": "F Technology and analytics",
-        "Difficulty": "Easy",
+        "Topic": "F.003 data governance — data quality remediation — cost of poor data quality",
+        "MicroTopic": "Data governance — data quality remediation prioritization under budget constraints",
+        "UniqueConceptKey": "F-C003-data-quality-remediation-prioritization",
+        "LOSTag": "F.3 Data Governance",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Cedarline establishes clear ownership, definitions, and quality standards for its enterprise data. What concept does this describe?",
+        "Stem": "Westbrook Manufacturing operates 14 production facilities and maintains a supplier master file with 8,200 vendor records in its ERP system. An internal audit revealed that 31% of supplier payment terms in the master file are inconsistent with signed contracts, causing an estimated $1.8 million in missed early payment discounts and $420,000 in late payment penalties annually. The data governance committee, chaired by Controller Priya Nair, has approved a $350,000 budget for master data remediation. The committee must choose between: (1) a full manual audit of all 8,200 supplier records estimated at $480,000 and 16 weeks, (2) an automated rules-based cleanup script targeting the 2,542 records with the highest transaction volume (85% of spend) at $290,000 and 6 weeks, or (3) a phased approach starting with the top 500 suppliers by spend ($210,000, 4 weeks) followed by a machine-learning duplicate detection project ($180,000, 10 weeks). Considering the principle of cost-benefit under data governance frameworks, which recommendation should Controller Nair present to the committee?",
         "Choices": {
-            "A": "Data visualization",
-            "B": "Data lineage",
-            "C": "Data governance",
-            "D": "Data warehousing"
+            "A": "Full manual audit of all 8,200 supplier records — data quality is a foundational control and partial remediation leaves residual risk that compounds over time. The $480,000 cost is justified because every data error in the supplier master file represents a potential financial control weakness.",
+            "B": "Automated rules-based cleanup of the 2,542 highest-transaction-volume records — this approach targets 85% of the financial exposure ($1.89 million of the $2.22 million total) at 60% of the budget, with the fastest time-to-value. Remaining lower-volume records can be remediated in subsequent budget cycles.",
+            "C": "Phased approach beginning with the top 500 suppliers — this is the lowest-cost option ($210,000) and leaves $140,000 in contingency. However, the ML project for duplicate detection does not address payment term inconsistencies, making the second phase ($180,000) a misallocation.",
+            "D": "Defer all remediation and renegotiate supplier contracts to include automatic electronic payment term validation — this addresses the root cause structurally and eliminates manual data entry errors at the source rather than cleaning historical data."
         },
-        "CorrectChoice": "C",
-        "ExplanationCorrect": "Data governance establishes ownership, standard definitions, quality requirements, and accountability for how data is managed across an organization.",
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Under data governance frameworks such as DAMA-DMBOK and COSO Principle 11, data quality remediation should follow a risk-based prioritization methodology: identify the data errors that drive the largest financial and operational impact, remediate those first, and iterate. Controller Nair's committee faces a classic data governance resource allocation decision with three dimensions: financial exposure ($2.22M total), remediation cost, and time-to-value. The automated rules-based approach (Option B) is the optimal recommendation because: (1) it targets 85% of the financial exposure ($1.89M of $2.22M) at only 60% of the budget ($290K of $350K), achieving a 6.5:1 benefit-to-cost ratio in the first year; (2) the 6-week timeline recovers most early-payment discounts before the current fiscal year closes; (3) the remaining 2,558 low-volume supplier records represent only 15% of exposure and can be addressed in the next budget cycle with learnings from the initial cleanup. The full manual audit (Option A) exceeds the approved budget by 37% and requires 16 weeks — by which time another quarter of discount leakage has already occurred. The phased approach (Option C) correctly sequences remediation but misallocates $180,000 to duplicate detection when payment term inconsistency is the primary defect. Deferring remediation for contract renegotiation (Option D) ignores that contract terms must still be entered into the ERP system — automated validation reduces future errors but does not clean the 2,542 incorrect records already in the master file. Data quality remediation is never a one-time project; it is a continuous governance cycle of detect, prioritize, remediate, and monitor. Controller Nair's recommendation should maximize recoverable discounts within the approved budget while establishing the monitoring controls that prevent recurrence.",
         "StudyLinks": [
             {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+                "label": "DAMA-DMBOK Data Management Body of Knowledge",
+                "url": "https://www.dama.org/cpages/dama-international-home"
             },
             {
-                "label": "NIST Cybersecurity Framework",
-                "url": "https://www.nist.gov/cyberframework"
+                "label": "COSO Internal Control — Integrated Framework (2013), Principle 11",
+                "url": "https://www.coso.org/guidance-on-ic"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
@@ -21640,42 +21640,43 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Choice B is incorrect because data warehousing consolidates structured data from multiple operational systems into a central repository designed for reporting and analytics. However, the stem describes establishing enterprise-wide ownership, definitions, and quality standards — core functions of data governance rather than storage architecture. A candidate may confuse a centralized data storage solution with the management framework that governs data as an organizational asset.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
-        "question_state": "Archived",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongA": "Option A correctly identifies that data quality is a foundational control, but its recommendation treats all data errors as equally material — a common governance fallacy. The 8,200 supplier records are not homogenous: the top 2,542 records (by transaction volume) drive 85% of the $2.22 million annual exposure. Remediating a low-volume supplier with $1,200 in annual spend carries the same per-record audit cost as a high-volume supplier with $2.8 million in annual spend, but the financial return is three orders of magnitude different. Additionally, the $480,000 cost exceeds the approved $350,000 budget by 37%, requiring either a scope reduction or a supplemental budget request that delays remediation. Under COSO Principle 11, technology investments should be risk-based — treating all records as equally critical is not risk-based governance. A candidate selecting this option may believe that data quality requires 100% completeness before any incremental benefit can be realized, which is neither operationally feasible nor cost-justified.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C correctly sequences remediation into phases but contains a critical scope mismatch: the first phase (top 500 suppliers, $210K) is well-targeted, but the second phase ($180K for ML duplicate detection) does not address the primary defect — payment term inconsistency between the master file and signed contracts. Duplicate supplier records are a different data quality problem from incorrect payment terms. Spending 51% of the total budget on a project that targets a defect the audit did not identify is a governance misallocation. The automated rules-based approach (Option B) directly targets the payment term inconsistency defect on the highest-impact records within a single budget cycle. A candidate selecting this option may conflate two distinct data quality defects (duplicates vs. inaccuracies) into one remediation plan.",
+        "ExplanationWrongD": "Option D correctly identifies that structural prevention is the long-term solution — automated electronic validation of payment terms at contract entry would prevent future errors. However, this recommendation ignores the 2,542 records already in the master file with incorrect payment terms. Renegotiating contracts to add electronic validation is a 6–12 month project involving legal review, supplier communications, and ERP configuration changes. Meanwhile, the existing data errors continue to cost $185,000 per month ($2.22M / 12) in missed discounts and late penalties. Effective data governance addresses both remediation (cleaning existing errors) and prevention (structural controls against future errors) — prioritizing prevention without remediation allows known control weaknesses to persist. A candidate selecting this option may believe that fixing the root cause eliminates the need to address existing damage, which is incorrect when the existing damage is both quantifiable and ongoing.",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60C Wave 1 — Evaluate replacement for archived P1-FC-003 (DL-012 rotation clone, data governance definition-match)"
     },
     {
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "F.004 data governance ownership",
-        "MicroTopic": "data governance ownership",
-        "UniqueConceptKey": "F-C004-data-governance-ownership",
-        "LOSTag": "F Technology and analytics",
-        "Difficulty": "Easy",
+        "Topic": "F.004 cybersecurity governance — third-party vendor risk assessment",
+        "MicroTopic": "Cybersecurity governance — third-party risk assessment and due diligence under NIST framework",
+        "UniqueConceptKey": "F-C004-third-party-cyber-risk-assessment",
+        "LOSTag": "F.4 Cybersecurity",
+        "Difficulty": "Very Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Driftwood establishes clear ownership, definitions, and quality standards for its enterprise data. What concept does this describe?",
+        "Stem": "Apex Global Logistics, a freight forwarding company with $920 million in annual revenue, relies on a third-party SaaS platform for shipment tracking, customs documentation, and customer notifications. The platform processes approximately 47,000 shipments monthly and stores client manifests containing commercial invoice data, including Harmonized System codes, declared values, and consignee identities across 14 countries. During a routine vendor risk review, IT Audit Director Marcus Chen discovered that the SaaS provider: (1) has not completed a SOC 2 Type II audit in 18 months, (2) stores Apex's data in a shared-tenancy environment without documented logical segregation controls, and (3) has a 72-hour breach notification clause in the service agreement when the industry standard is 24 to 48 hours. The provider's contract auto-renews in 90 days. Chen must recommend a course of action to the board's risk committee. Under the NIST Cybersecurity Framework and COSO Principle 11, which recommendation best evaluates the control deficiencies and proposes a risk-appropriate response?",
         "Choices": {
-            "A": "Data visualization",
-            "B": "Data warehousing",
-            "C": "Data lineage",
-            "D": "Data governance"
+            "A": "Immediately terminate the SaaS contract and migrate to an on-premises shipment tracking system — the absence of a current SOC 2 report and shared-tenancy environment represent unacceptable control deficiencies for a logistics provider handling customs-sensitive data. The 90-day renewal window provides sufficient time to implement an alternative solution.",
+            "B": "Issue a formal notice of non-compliance requiring the vendor to complete SOC 2 Type II within 120 days, implement logical segregation controls within 90 days, and negotiate the breach notification window to 48 hours as a condition of contract renewal. Continue operations under enhanced monitoring in the interim.",
+            "C": "Accept the vendor's current control posture and include a risk acceptance memorandum in the board package — the SaaS platform has operated without a reported security incident for three years, and the 72-hour notification window exceeds regulatory requirements in 11 of 14 operating countries.",
+            "D": "Engage a third-party auditor to perform a bridge assessment of the vendor's controls within 60 days, implement compensating controls (encrypted data at rest, real-time access logging) on Apex's side of the integration, and make contract renewal conditional on the bridge assessment results and SOC 2 completion within 180 days."
         },
         "CorrectChoice": "D",
-        "ExplanationCorrect": "Data governance establishes ownership, standard definitions, data-quality requirements, and accountability for enterprise data. The stem describes the governance layer that makes data reliable, consistent, and traceable across functions.",
+        "ExplanationCorrect": "Under the NIST Cybersecurity Framework (Identify, Protect, Detect, Respond, Recover) and COSO Principle 11, third-party cyber risk management requires a risk-based evaluation that balances the severity of control deficiencies against the operational disruption of immediate termination. IT Audit Director Chen's analysis must weigh three control deficiencies against Apex's operational dependency on the platform (47,000 shipments/month). Option D represents the most risk-appropriate response because it: (1) deploys compensating controls that Apex controls unilaterally — encryption at rest and access logging reduce data exposure risk immediately while the vendor addresses systemic deficiencies; (2) commissions an independent bridge assessment that provides objective evidence of the vendor's current control posture rather than waiting 120+ days for a full SOC 2 Type II; (3) makes contract renewal conditional on demonstrated improvement (bridge assessment results plus SOC 2 commitment), creating enforceable leverage at the renewal decision point; and (4) avoids the operational catastrophe of migrating 47,000 monthly shipments off a SaaS platform in 90 days. Immediate termination (Option A) is disproportionate to the control deficiencies identified. Formal notice with a 120-day deadline (Option B) lacks the interim compensating controls and independent verification that make the risk tolerable during the remediation period. Risk acceptance (Option C) is inappropriate given that a shared-tenancy environment without logical segregation controls is a material security deficiency that should not be accepted without mitigating actions. Third-party cyber risk management is not binary (accept or terminate) — it is a continuum of compensating controls, independent verification, and contractually enforceable remediation timelines.",
         "StudyLinks": [
             {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+                "label": "NIST Cybersecurity Framework (CSF) — Identify and Protect functions",
+                "url": "https://www.nist.gov/cyberframework"
             },
             {
-                "label": "NIST Cybersecurity Framework",
-                "url": "https://www.nist.gov/cyberframework"
+                "label": "COSO Internal Control — Integrated Framework (2013), Principle 11",
+                "url": "https://www.coso.org/guidance-on-ic"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
@@ -21690,13 +21691,14 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Choice B is incorrect because data visualization presents information graphically through charts, dashboards, and visual displays. While visualization helps stakeholders interpret data, it does not establish ownership, definitions, or quality standards — those are data governance functions described in the stem. A candidate may confuse the presentation layer of data with the management framework that governs it.",
-        "ExplanationWrongC": "Data lineage traces where data came from and how it changed; it is narrower than the enterprise ownership and standards described.",
+        "ExplanationWrongA": "Option A applies an all-or-nothing response to a graded risk situation. Immediate termination of the SaaS contract would disrupt 47,000 monthly shipments across 14 countries to address control deficiencies that, while significant, have not resulted in a confirmed security incident. Under NIST CSF, the Respond function requires proportional actions calibrated to impact. Building and deploying an on-premises alternative within 90 days is operationally infeasible for a customs documentation workflow integrated with 14 national customs authorities. A candidate selecting this option may be applying a zero-tolerance heuristic to cybersecurity risk, ignoring the proportionality principle embedded in both NIST and COSO frameworks.",
+        "ExplanationWrongB": "Option B correctly identifies that the vendor's control deficiencies require formal remediation demands, but the proposed plan has a critical gap: the 120-day SOC 2 deadline and 90-day segregation control deadline leave a window during which Apex continues to process 47,000 monthly shipments through a shared-tenancy environment without logical segregation — and without any compensating controls on Apex's side. The NIST CSF Protect function emphasizes defense-in-depth: when a vendor control is deficient, the customer should deploy compensating controls that it controls unilaterally (such as encryption at rest and access logging) during the remediation period. Option B relies entirely on the vendor's commitment to remediate, with no interim controls protecting Apex's data during the gap. A candidate selecting this option may understand that formal remediation demands are necessary but overlook the equally important governance principle that compensating controls must bridge the period between deficiency identification and remediation completion.",
+        "ExplanationWrongC": "Option C inappropriately accepts control deficiencies without any mitigating action. A three-year history without reported incidents is weak evidence of control effectiveness — particularly when the current SOC 2 gap (18 months without audit) means there is no independent verification of the vendor's control posture during that period. The shared-tenancy environment without logical segregation controls is a material security deficiency regardless of notification timelines. Under COSO Principle 9, the organization identifies and assesses changes that could significantly impact the system of internal control — a vendor control degradation from SOC 2 Type II compliance to an 18-month gap is precisely such a change. Accepting this without any compensating controls or independent verification would fail the risk assessment requirement. A candidate selecting this option may incorrectly equate absence of known incidents with absence of risk.",
         "ExplanationWrongD": "",
-        "question_state": "Archived",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "question_state": "Certified",
+        "DifficultyScore": 5,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60C Wave 1 — Evaluate replacement for archived P1-FC-004 (DL-012 rotation clone, data governance definition-match)"
     },
     {
         "Part": 1,
@@ -21747,9 +21749,9 @@ const MCQ_BANK_C = [
         "question_state": "Active",
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand",
-        "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-FC-005 (DL-012 rotation clone)"
-    ,
-        "dl031_review_note": "Downgraded from Analyze->Understand — stem is definitional per DL-031 classification (establishes ownership, definitions, quality standards, asks what concept)"},
+        "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-FC-005 (DL-012 rotation clone)",
+        "dl031_review_note": "Downgraded from Analyze->Understand — stem is definitional per DL-031 classification (establishes ownership, definitions, quality standards, asks what concept)"
+    },
     {
         "Part": 1,
         "Section": "F",
@@ -21850,30 +21852,30 @@ const MCQ_BANK_C = [
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "F.008 prescriptive analytics applied scenario",
-        "MicroTopic": "prescriptive analytics applied scenario",
-        "UniqueConceptKey": "F-C008-prescriptive-analytics-applied-scenario",
-        "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Topic": "F.008 AI governance — model bias detection and accountability",
+        "MicroTopic": "AI governance — algorithmic bias detection in automated decision systems",
+        "UniqueConceptKey": "F-C008-ai-model-bias-detection",
+        "LOSTag": "F.6 Artificial Intelligence",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Hearthstone's logistics team uses a software tool that analyzes shipping cost, transit time, fuel consumption, and delivery windows to suggest ideal routes for each order. What type of analytics does this represent?",
+        "Stem": "Hartfield Insurance Group deployed a machine learning model to automate claims triage, classifying each auto insurance claim as standard processing or elevated review. After 14 months and 62,000 processed claims, the actuarial analytics team led by Director Yuki Tanaka identified a pattern: claims from two specific ZIP codes representing 8.2% of the policyholder base were flagged for elevated review at 3.4 times the rate of claims from demographically comparable ZIP codes, despite having statistically indistinguishable claim severity on ultimate resolution. The model's training data included adjuster notes containing subjective language descriptors. Tanaka's team confirmed the model's overall accuracy is 91.4% but the disparate flagging rate is statistically significant at p < 0.001. Under responsible AI governance frameworks, which action should Tanaka recommend to the Chief Risk Officer?",
         "Choices": {
-            "A": "Descriptive analytics, which summarizes what already happened",
-            "B": "Diagnostic analytics, which explains why something happened",
-            "C": "Predictive analytics, which forecasts future outcomes",
-            "D": "Prescriptive analytics, which recommends optimal actions based on data and constraints"
+            "A": "Decommission the model and return to manual claims triage — any algorithmic bias, regardless of magnitude, is unacceptable in an insurance context and exposes Hartfield to regulatory action under unfair claims practice statutes. Manual triage, while slower, eliminates algorithmic bias by relying on human judgment.",
+            "B": "Retrain the model using only structured data fields (claim amount, vehicle age, accident type) and exclude all adjuster notes and policyholder demographic data — this eliminates the source of potential bias and produces a more objective classification model.",
+            "C": "Conduct a bias audit including feature importance analysis to identify which input variables drive the disparate flagging rate, retrain the model with debiased training data including fairness constraints, and implement ongoing monitoring with periodic fairness metrics reporting to the risk committee.",
+            "D": "Apply a post-processing adjustment that reduces the elevated-review flagging rate for the two affected ZIP codes by a fixed percentage — this is the fastest remediation and can be deployed within days, addressing the statistical disparity while the model continues operating."
         },
-        "CorrectChoice": "D",
-        "ExplanationCorrect": "Prescriptive analytics uses data and optimization algorithms to recommend specific actions or decisions, such as optimal shipping routes, given defined constraints and objectives.",
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "Under emerging AI governance frameworks (NIST AI Risk Management Framework, OECD AI Principles) and COSO Principle 11, algorithmic bias remediation follows a structured four-step process: detect, diagnose, debias, and monitor. Director Tanaka's analysis has completed detection (statistically significant disparate flagging rate at p < 0.001 confirmed independently) and confirmed the effect is not explained by differences in claim severity. Option C is the governance-appropriate response because it completes the remaining three steps: (1) diagnosis — feature importance analysis identifies which input variables (likely the adjuster notes with subjective language descriptors) are driving the bias, addressing root cause rather than symptoms; (2) debiasing — retraining with fairness constraints is a principled correction that preserves the model's accuracy on legitimate predictors while mitigating bias on spurious correlates; and (3) monitoring — ongoing fairness metrics reporting embeds accountability into the model's operational lifecycle, preventing recurrence. Decommissioning the model (Option A) is disproportionate: the model is 91.4% accurate and has been operating for 14 months; manual triage is not bias-free. Removing all subjective data fields (Option B) throws out potentially legitimate predictors. Post-processing adjustments without diagnosis (Option D) mask the bias without understanding its source. Responsible AI governance requires understanding why the model is biased before deciding how to fix it.",
         "StudyLinks": [
             {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+                "label": "NIST AI Risk Management Framework (AI RMF 1.0)",
+                "url": "https://www.nist.gov/itl/ai-risk-management-framework"
             },
             {
-                "label": "NIST Cybersecurity Framework",
-                "url": "https://www.nist.gov/cyberframework"
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F — Artificial Intelligence",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
@@ -21888,42 +21890,43 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "diagnostic analytics investigates root causes of past events. The shipping tool recommends future actions rather than explaining past outcomes.",
-        "ExplanationWrongC": "Choice C is incorrect because descriptive analytics summarizes what has already happened — it reports historical churn rates and past customer behaviors through dashboards and trend reports. The stem describes a churn forecast model that projects future customer behavior, which goes beyond summarizing past outcomes. A candidate may confuse interpreting historical churn data with predicting future churn probability.",
-        "ExplanationWrongD": "",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongA": "Option A correctly recognizes that algorithmic bias is a governance concern requiring action, but recommends a disproportionate response. Decommissioning a model that is 91.4% accurate and has processed 62,000 claims would disrupt the entire claims operation — a solution that is more costly than the problem it addresses. Furthermore, the premise that manual triage 'eliminates algorithmic bias' is incorrect: human claims adjusters have documented biases related to applicant demographics that are harder to detect, measure, and remediate than algorithmic bias. The appropriate governance response to a model with a remediable bias is to fix the model, not abandon the automation. A candidate selecting this option may believe any algorithmic bias, regardless of severity and remediability, requires immediate system shutdown — a position that conflicts with the NIST AI RMF's principle of proportional risk management.",
+        "ExplanationWrongB": "Option B identifies a plausible source of bias (the adjuster notes) but applies a blunt instrument — removing all unstructured and demographic data — that eliminates both the biased signals and legitimate predictive information. Some adjuster observations such as inconsistent accident accounts across claimant statements may be objective, predictive, and unbiased proxies for legitimate claim complexity. The governance principle is targeted debiasing: identify the specific features or feature values driving disparate outcomes and remove or reweight those, not all variables that could theoretically encode demographic information. A candidate selecting this option may conflate removing all potentially correlated variables with removing bias, sacrificing model performance for an oversimplified definition of fairness.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Option D offers a superficially attractive short-term fix — adjust the flagging rate for the two affected ZIP codes by a fixed percentage — but this is bias masking, not bias remediation. Post-processing adjustments without understanding the source of bias create three governance problems: (1) the model continues to learn from biased training signals, so the bias re-emerges as new claims data accumulates; (2) the fixed-percentage adjustment is arbitrary — it may overcorrect or undercorrect relative to the true bias magnitude; and (3) the adjustment creates a governance transparency problem because the model's outputs are now modified by an opaque correction factor not documented in the model's design. Under responsible AI governance, post-hoc adjustments are acceptable only as an interim measure while root-cause remediation is in progress, not as a permanent solution. A candidate selecting this option may prioritize speed of remediation over quality of remediation.",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60C Wave 1 — Evaluate replacement for archived P1-FC-008 (DL-012 rotation clone, analytics type identification)"
     },
     {
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "F.009 descriptive vs predictive analytics",
-        "MicroTopic": "descriptive vs predictive analytics",
-        "UniqueConceptKey": "F-C009-descriptive-vs-predictive-analytics",
-        "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Topic": "F.009 analytics governance — dashboard-driven decision bias",
+        "MicroTopic": "Analytics governance — misleading KPI selection and confirmation bias in dashboard-driven decisions",
+        "UniqueConceptKey": "F-C009-dashboard-driven-decision-bias",
+        "LOSTag": "F.5 Data Analytics",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Ironvale builds a model to forecast which customers are most likely to churn in the next quarter. What type of analytics is this?",
+        "Stem": "Stratford Consumer Goods, a manufacturer with $340 million in revenue, uses an executive dashboard that displays seven KPIs updated weekly. VP of Operations James Okafor has used the dashboard for two years to make production scheduling decisions. Recently, the internal audit analytics team reviewed the dashboard's underlying logic and discovered: (1) the On-Time Delivery KPI (reported at 96.2%) excludes orders modified within 48 hours of the original ship date which represent 14% of all orders; (2) the Production Efficiency KPI counts all units produced, including 2,300 units later scrapped for quality defects in Q3 alone; (3) three of the seven KPIs are directionally correlated (on-time delivery, production efficiency, and capacity utilization all rise and fall together with production volume, creating a halo effect where all metrics appear favorable simultaneously). Okafor has made $4.7 million in capacity expansion decisions based on these metrics over the past 18 months. Under analytics governance principles, which finding represents the most significant control deficiency?",
         "Choices": {
-            "A": "Predictive analytics, using historical data to forecast future outcomes",
-            "B": "Diagnostic analytics, which explains why something happened",
-            "C": "Descriptive analytics, which summarizes what already happened",
-            "D": "Prescriptive analytics, which recommends a specific action only"
+            "A": "The exclusion of modified orders from the On-Time Delivery KPI — this definitional choice inflates the reported performance metric and masks real delivery performance on 14% of orders, directly undermining the reliability of the metric Okafor uses for production scheduling decisions.",
+            "B": "The inclusion of scrapped units in the Production Efficiency KPI — counting defective output as production inflates the efficiency metric and creates an incentive to maximize throughput at the expense of quality, contradicting total quality management principles.",
+            "C": "The directional correlation of three KPIs creating a halo effect — when related metrics move together, they provide redundant information rather than independent signals, making the dashboard an echo chamber that reinforces the appearance of strong performance across all dimensions.",
+            "D": "The absence of a data lineage and definitional metadata layer documenting how each KPI is calculated, what data sources feed it, and what exclusions or transformations are applied before display — this represents the root governance deficiency from which the other three findings derive."
         },
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "Predictive analytics uses historical data and statistical or machine-learning models to estimate future outcomes. Building a model to forecast customer churn is predictive because it projects what is likely to happen next, based on patterns in past data. This distinguishes it from descriptive analytics (what happened) and prescriptive analytics (what to do about it).",
+        "CorrectChoice": "D",
+        "ExplanationCorrect": "Under analytics governance frameworks and COSO Principle 13 (use of relevant information), the root governance deficiency is the absence of a documented data lineage and metadata layer. This deficiency is more significant than any individual KPI definition flaw because it is the enabling condition that allowed all three other deficiencies to persist undetected for two years while $4.7 million in capacity expansion decisions were made based on flawed metrics. Without documented data lineage: (1) the exclusion of modified orders from the On-Time Delivery KPI went unnoticed because no one — including VP Okafor — could trace the KPI back to its source data and see what was excluded; (2) the inclusion of scrapped units in Production Efficiency went uncorrected because no definitional metadata specified that net good output is the appropriate numerator for an efficiency metric; (3) the KPI halo effect persisted because no analytics governance review questioned whether the dashboard's seven metrics provide independent coverage of the operational dimensions that matter. Data lineage and definitional metadata are not technical documentation — they are control mechanisms. Under COSO, information must be relevant, reliable, and timely. Without a lineage layer, the reliability of every KPI is unverifiable by construction. The $4.7 million in capacity decisions represents the consequence of a governance gap, not a dashboard design flaw.",
         "StudyLinks": [
             {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+                "label": "COSO Internal Control — Integrated Framework (2013), Principle 13: Uses Relevant Information",
+                "url": "https://www.coso.org/guidance-on-ic"
             },
             {
-                "label": "NIST Cybersecurity Framework",
-                "url": "https://www.nist.gov/cyberframework"
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F — Data Analytics",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
@@ -21938,13 +21941,14 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "Choice C is incorrect because diagnostic analytics investigates why past events occurred — it seeks causal explanations through root-cause analysis and drill-down techniques. The stem describes building a model to forecast future customer churn, which is inherently forward-looking rather than retrospective. A candidate may confuse explaining why churn happened in the past with predicting which customers are likely to churn in the future.",
-        "ExplanationWrongD": "Prescriptive analytics recommends specific actions to achieve desired outcomes (e.g., which retention offer to send). The stem only describes building a forecast model, which is a predictive task, not a prescriptive one.",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
+        "ExplanationWrongA": "Option A identifies a genuine and significant KPI definition flaw — the 14% exclusion of modified orders is a material understatement that directly affects the reliability of the on-time delivery metric informing production scheduling. However, this finding is a symptom of the root governance deficiency (no data lineage layer), not the root cause itself. If the analytics governance framework had required documented KPI definitions with source-to-display lineage, the 48-hour modification exclusion would have been visible to anyone reviewing the KPI specification before VP Okafor made a single capacity decision. A candidate selecting this option correctly identifies a material control weakness but stops at the symptom rather than tracing it to the root governance gap — a common error in control deficiency analysis where the most visible problem is mistaken for the most significant one.",
+        "ExplanationWrongB": "Option B identifies a legitimate quality management concern — counting scrapped units as production output inflates the efficiency metric and contradicts total quality management principles. However, this KPI definition flaw is one of at least three specific issues the audit team identified. Addressing only the Production Efficiency definition leaves the On-Time Delivery exclusion and KPI correlation problems unresolved. More fundamentally, without a data lineage and metadata governance layer, there is no mechanism to prevent future KPI definition errors from being introduced when the dashboard is modified or new metrics are added. A candidate selecting this option may be applying a domain-specific lens (quality management) to a governance problem that spans all seven dashboard KPIs.",
+        "ExplanationWrongC": "Option C correctly identifies the halo effect as a genuine analytics governance concern — correlated KPIs reduce the information content of a dashboard and can create false confidence in performance across all dimensions. However, the halo effect is a design flaw in how KPIs were selected and structured, not a root governance deficiency. The absence of a data lineage and metadata layer is more significant because it represents a systemic governance failure: without lineage, no KPI on the dashboard can be independently verified, regardless of how well the metrics are designed. A well-designed dashboard with uncorrelated KPIs is still unreliable if individual KPI definitions are incorrect and unverifiable. A candidate selecting this option may prioritize dashboard design aesthetics over the underlying governance infrastructure that ensures metric reliability.",
+        "ExplanationWrongD": "",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60C Wave 1 — Analyze replacement for archived P1-FC-009 (DL-012 rotation clone, analytics type identification)"
     },
     {
         "Part": 1,
@@ -22000,30 +22004,30 @@ const MCQ_BANK_C = [
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "F.011 robotic process automation use case",
-        "MicroTopic": "robotic process automation use case",
-        "UniqueConceptKey": "F-C011-robotic-process-automation-use-case",
-        "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Topic": "F.011 cloud controls — SaaS vendor lock-in and exit strategy",
+        "MicroTopic": "Cloud governance — SaaS vendor lock-in risk assessment and exit planning",
+        "UniqueConceptKey": "F-C011-cloud-saas-exit-strategy",
+        "LOSTag": "F.2 Cloud Computing",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Kestrel automates a repetitive, rules-based data entry task that previously required manual keying between two systems. What technology is best suited to this task?",
+        "Stem": "Northland Health Systems, a hospital network with 8 facilities and 14,000 employees, migrated its electronic health records (EHR) system to a cloud SaaS platform four years ago. The current contract, valued at $4.1 million annually, expires in 8 months. During contract renewal preparation, CIO Dr. Amara Osei's team identified that the vendor: (1) uses proprietary data formats for patient records with no documented export API supporting industry-standard HL7 FHIR format, (2) charges $1.2 million for data extraction services should Northland choose to migrate, and (3) has increased annual fees by 18%, 22%, and 19% in successive renewal cycles while the healthcare SaaS market's average increase is 7%. Northland's board is concerned about escalating costs and loss of data portability. Under COSO Principle 11 and cloud governance frameworks, which strategy should Dr. Osei recommend for the upcoming contract renewal?",
         "Choices": {
-            "A": "Data visualization, used for dashboard design",
-            "B": "Blockchain, used for distributed ledger validation",
-            "C": "Robotic process automation (RPA)",
-            "D": "Predictive analytics, used for forecasting outcomes"
+            "A": "Accept the renewal at the vendor's proposed rate and negotiate a cap on future annual increases at 10% — the hospital cannot risk EHR system disruption, and the $1.2 million extraction fee makes migration economically prohibitive. A negotiated rate cap provides cost predictability without operational risk.",
+            "B": "Issue an RFP for a new EHR platform with industry-standard data portability requirements and begin a parallel migration project immediately — the proprietary data format and escalating costs indicate a vendor lock-in situation that will only worsen with each renewal cycle.",
+            "C": "Negotiate a final one-year renewal with three non-negotiable conditions: (1) the vendor must provide a documented HL7 FHIR export API at no additional charge, (2) a data extraction fee cap of $400,000, and (3) simultaneous commencement of a data migration proof-of-concept to validate extractability. Use the 8-month window to run a competitive RFP and select an alternative platform if the vendor refuses the conditions.",
+            "D": "Form a consortium with three other regional hospital networks using the same EHR vendor to collectively negotiate pricing and data portability terms — the vendor cannot afford to lose four major clients simultaneously, giving the consortium leverage to demand industry-standard data formats and reasonable price increases."
         },
         "CorrectChoice": "C",
-        "ExplanationCorrect": "Robotic process automation is best for repetitive, rules-based, high-volume tasks such as moving or keying data between systems. The task does not require complex judgment, making RPA a better fit than predictive modeling or visualization.",
+        "ExplanationCorrect": "Under COSO Principle 11 (technology general controls) and cloud governance frameworks, SaaS vendor lock-in is a recognized technology risk that must be managed proactively — not accepted as an operational constraint. Dr. Osei faces a classic cloud exit strategy problem: the vendor has created structural barriers to switching (proprietary data formats, punitive extraction fees, escalating costs) that increase with every renewal cycle. Option C is the governance-appropriate strategy because it: (1) uses the one-year renewal as leverage to secure data portability rights — the HL7 FHIR API requirement directly addresses the proprietary format lock-in and is an industry standard the vendor should already support; (2) caps the extraction fee at $400,000 (from $1.2M), making future migration economically viable; (3) builds a migration proof-of-concept during the renewal year rather than waiting to discover data extractability issues after committing to a new platform; and (4) runs a competitive RFP to establish market pricing benchmarks that inform the renewal negotiation. Accepting the renewal with a rate cap (Option A) ignores that the last three increases averaged 20%. Immediate migration (Option B) is premature: Northland has no verified path to extract its EHR data from the proprietary format. The consortium approach (Option D) is a long-term strategy — 8 months is insufficient. Cloud exit strategy is not an end-of-contract activity; it must be embedded in every renewal cycle as a proactive risk management discipline.",
         "StudyLinks": [
             {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+                "label": "COSO Internal Control — Integrated Framework (2013), Principle 11",
+                "url": "https://www.coso.org/guidance-on-ic"
             },
             {
-                "label": "NIST Cybersecurity Framework",
-                "url": "https://www.nist.gov/cyberframework"
+                "label": "NIST Cloud Computing Standards Roadmap",
+                "url": "https://www.nist.gov/programs-projects/nist-cloud-computing-program"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
@@ -22038,13 +22042,14 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Blockchain supports distributed, tamper-resistant records; it is not the tool for routine keystroke-style automation.",
+        "ExplanationWrongA": "Option A treats vendor lock-in as a permanent operating condition rather than a governance risk to be managed. A 10% rate cap on a contract already inflated by 59% cumulative increases over three renewal cycles means Northland accepts the inflated base as permanent, locking in compounding above-market costs indefinitely. More critically, accepting renewal without addressing the proprietary data format means the $1.2 million extraction fee — and the data portability problem — will be larger at the next renewal. Under COSO Principle 9, the organization must identify and assess changes that could significantly impact internal control — escalating vendor costs and deteriorating data portability are precisely such changes. A candidate selecting this option may view SaaS contracts as unavoidable cost centers rather than governance relationships that require active management of switching costs and data rights.",
+        "ExplanationWrongB": "Option B correctly identifies vendor lock-in as a governance risk requiring action, but the recommendation to issue an RFP and begin parallel migration immediately is premature and operationally dangerous. Northland has no verified method to extract its EHR data from the vendor's proprietary format — the $1.2 million extraction fee is a quote for the vendor's service, but the data's extractability in a usable format (HL7 FHIR or equivalent) has not been demonstrated. Beginning a migration project without first validating that data can be extracted from the source system is the equivalent of planning a move without confirming you have keys to the old building. Additionally, an 8-month parallel migration of a 14,000-employee, 4-year-old EHR system spanning 8 facilities is operationally infeasible — healthcare EHR migrations typically require 18-24 months of planning, testing, training, and phased cutover. A candidate selecting this option may recognize the urgency of vendor lock-in but underestimate the operational complexity of healthcare system migration, particularly the prerequisite of verified data extractability.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongD": "Option D proposes a consortium negotiation strategy that is theoretically sound but practically infeasible within the 8-month contract window. Forming a multi-hospital consortium requires: legal agreements governing shared negotiation authority, antitrust review (four competing hospital networks coordinating purchasing), governance structures for decision-making, and alignment of each hospital's specific EHR requirements and contract timelines. Even if all parties agreed immediately, the legal and governance setup alone would consume 4-6 months, leaving insufficient time for the actual vendor negotiation. Additionally, consortium leverage assumes the vendor cannot afford to lose four clients — but the vendor's annual fee escalation pattern (18-22% per renewal) suggests a strategy of extracting maximum value from locked-in clients rather than competing on service quality. A candidate selecting this option may overestimate the speed at which multi-party governance structures can be established relative to contract deadlines.",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60C Wave 1 — Evaluate replacement for archived P1-FC-011 (DL-012 rotation clone, RPA use case definition)"
     },
     {
         "Part": 1,
@@ -22100,30 +22105,30 @@ const MCQ_BANK_C = [
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "F.013 robotic process automation use case",
-        "MicroTopic": "robotic process automation use case",
-        "UniqueConceptKey": "F-C013-robotic-process-automation-use-case",
-        "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Topic": "F.013 ERP controls — implementation risk and scope management",
+        "MicroTopic": "ERP governance — scope creep and implementation risk assessment",
+        "UniqueConceptKey": "F-C013-erp-implementation-scope-risk",
+        "LOSTag": "F.1 Information Systems",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Meridian Peak automates a repetitive, rules-based data entry task that previously required manual keying between two systems. What technology is best suited to this task?",
+        "Stem": "Trident Industrial Supply, a $780 million distributor with 32 warehouses, is 16 months into an ERP implementation originally budgeted at $14.2 million with a 22-month timeline. The project steering committee, chaired by CFO Rebecca Torres, received the following status report: actual spending is $16.8 million (118% of budget), 11 of 18 planned modules are live, and the remaining 7 modules are 40% complete. The implementation partner has submitted a change order for $3.1 million citing 187 scope change requests approved by department heads without steering committee review. The partner estimates the project will require an additional 10 months beyond the original timeline. The original business case projected $4.8 million in annual operational savings from process standardization — but only 3 of 11 live modules have demonstrated measurable savings, totaling $1.1 million annualized. Under IT project governance and COSO Principle 11, which action should CFO Torres recommend to the steering committee?",
         "Choices": {
-            "A": "Robotic process automation (RPA)",
-            "B": "Predictive analytics, used for forecasting outcomes",
-            "C": "Blockchain, used for distributed ledger validation",
-            "D": "Data visualization, used for dashboard design"
+            "A": "Approve the $3.1 million change order and extended timeline — the project is 61% complete and abandoning partially-implemented modules would strand $16.8 million in sunk costs. The additional investment of $3.1 million represents 22% of the original budget and is reasonable for scope that department heads have already validated as necessary.",
+            "B": "Halt all new module development immediately, stabilize the 11 live modules, and commission an independent project audit to assess: (1) whether the $1.1 million in demonstrated savings can be scaled to the remaining warehouses, (2) whether the 187 scope changes represent necessary functionality or gold-plating, and (3) whether the original $4.8 million savings projection remains achievable. Resume development only after the audit validates a revised business case.",
+            "C": "Terminate the implementation partner contract, bring the remaining 7 modules in-house using Trident's internal IT team, and reduce scope to only the financial modules (AR, AP, GL) — this eliminates the $3.1 million change order, capitalizes on the expertise Trident's team has developed over 16 months, and focuses resources on the modules with the clearest financial return.",
+            "D": "Complete the implementation as scoped but renegotiate the partner contract to a fixed-price arrangement for the remaining 7 modules at $1.8 million — this transfers completion risk to the vendor and caps Trident's financial exposure while still delivering the full ERP functionality that justified the original business case."
         },
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "RPA is well suited to automating repetitive, rules-based, high-volume tasks such as data entry between systems, without requiring complex judgment.",
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Under IT project governance frameworks and COSO Principle 11, a project that is 118% over budget with only 23% of projected savings realized ($1.1M of $4.8M) and no steering committee control over scope changes requires immediate stabilization — not continued investment based on the original assumptions. CFO Torres's steering committee has lost governance control: 187 scope change requests were approved by department heads without steering committee review, meaning the project's scope is no longer aligned with the business case that justified the $14.2 million investment. Option B is the governance-appropriate response because it: (1) stabilizes the 11 live modules to prevent regression and protect the $1.1 million in demonstrated savings; (2) commissions an independent audit — the most critical action — because the steering committee cannot evaluate whether continued investment is justified without independent verification of the revised scope, savings projections, and root causes of the budget overrun; (3) distinguishes between necessary scope (functionality required to achieve savings) and gold-plating (nice-to-have features that department heads requested but that do not contribute to the business case); and (4) makes continued investment contingent on a validated revised business case rather than the original projections that are no longer credible. The sunk cost fallacy (Option A) — continuing to invest because $16.8 million has already been spent — is the most common ERP governance failure. Terminating the partner and bringing development in-house (Option C) introduces new risks that compound rather than resolve the governance failure. A fixed-price renegotiation (Option D) transfers financial risk but does not address the fundamental governance gap: neither the steering committee nor the partner can credibly estimate the remaining effort when 187 unvetted scope changes have been incorporated. ERP steering committees must retain scope control authority; delegating change approval to department heads without aggregate impact assessment is a governance design failure that no contract restructuring can remedy.",
         "StudyLinks": [
             {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+                "label": "COSO Internal Control — Integrated Framework (2013), Principle 11: Technology General Controls",
+                "url": "https://www.coso.org/guidance-on-ic"
             },
             {
-                "label": "NIST Cybersecurity Framework",
-                "url": "https://www.nist.gov/cyberframework"
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F — Information Systems",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
@@ -22138,42 +22143,43 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Option A is a textbook example of the sunk cost fallacy in IT governance. The $16.8 million already spent is irrelevant to the decision of whether to invest an additional $3.1 million — the only relevant question is whether the incremental $3.1 million will generate incremental benefits that exceed its cost. The evidence suggests it will not: only $1.1 million in annual savings has been demonstrated against a $4.8 million projection, and the 187 unvetted scope changes mean the original business case assumptions no longer describe the project being built. Additionally, approving the change order without an independent audit would validate the governance failure — department heads would have effectively determined project scope without steering committee review. A candidate selecting this option may be reasoning that 'we've come too far to stop now,' which is the exact cognitive bias that causes ERP implementation cost overruns to compound.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Choice C is incorrect because data visualization presents information through charts, dashboards, and graphical displays for human interpretation and analysis. The Nightingale task involves automating repetitive manual data entry between systems — an operational process requiring software execution, not visual data presentation. A candidate may confuse displaying data with automating data processing.",
-        "ExplanationWrongD": "Choice D is incorrect because blockchain is a decentralized, distributed ledger technology designed for tamper-resistant transaction recording across multiple parties through cryptographic consensus. Automating repetitive, rules-based data entry between existing systems does not require a distributed ledger or consensus mechanism. A candidate may select an emerging technology based on name recognition rather than functional fit to the described task.",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
+        "ExplanationWrongC": "Option C compounds the project's governance problems by introducing additional risks: (1) terminating the implementation partner means Trident must hire or reassign IT staff with ERP module development expertise — a specialized skill set that takes months to recruit; (2) the internal team has 16 months of experience with the live modules but zero experience with the 7 partially-complete modules, whose design and architecture the implementation partner controls; (3) reducing scope to financial modules only strands the operational modules that may be necessary to achieve the original $4.8 million savings projection such as warehouse management and procurement. The governance failure is not that the partner is underperforming — it is that the steering committee lost scope control. Changing the implementation team does not restore scope control; it replaces one set of unknowns with another. A candidate selecting this option may attribute project failure to the vendor rather than the governance process, which is the more common and more fundamental root cause.",
+        "ExplanationWrongD": "Option D addresses the financial symptom (cost overrun) but not the governance root cause (loss of scope control). A fixed-price arrangement for the remaining 7 modules at $1.8 million transfers completion risk to the vendor, but the vendor's price will reflect the uncertainty of 187 unvetted scope changes — either through a higher fixed price, aggressive assumptions about what is in scope, or quality compromises to meet the fixed price. More critically, completing 'the implementation as scoped' is impossible because there is no authoritative scope baseline — the 187 department-head-approved changes created a de facto scope that the steering committee has never reviewed or validated. A candidate selecting this option may believe contract restructuring can substitute for governance, when in fact the governance failure makes any contract — fixed-price or otherwise — unenforceable against a meaningful scope definition.",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60C Wave 1 — Evaluate replacement for archived P1-FC-013 (DL-012 rotation clone, RPA use case definition)"
     },
     {
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "F.014 robotic process automation use case",
-        "MicroTopic": "robotic process automation use case",
-        "UniqueConceptKey": "F-C014-robotic-process-automation-use-case",
-        "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Topic": "F.014 digital transformation — legacy system decommissioning risk",
+        "MicroTopic": "Digital transformation governance — legacy system retirement and data migration controls",
+        "UniqueConceptKey": "F-C014-legacy-system-decommissioning",
+        "LOSTag": "F.1 Information Systems",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Nightingale automates a repetitive, rules-based data entry task that previously required manual keying between two systems. What technology is best suited to this task?",
+        "Stem": "Coventry Mutual Insurance, a property and casualty insurer with $1.4 billion in written premiums, operates a policy administration system that has been in production for 23 years. The system runs on a mainframe that the vendor discontinued supporting in 2020, and Coventry has been paying $380,000 annually for third-party maintenance. The system contains 2.1 million policy records spanning the entire history of policies currently in force, plus 8.4 million historical policy records required for claims reserving, regulatory reporting (20 states require 7-year minimum retention), and litigation support. VP of Technology Elena Vasquez is leading a digital transformation initiative to replace the mainframe system with a modern cloud-based platform. The migration project is budgeted at $6.2 million over 18 months. During the data migration proof-of-concept, the team discovered that 4.7% of policy records contain data validation errors (missing required fields, date inconsistencies, out-of-range values) that the legacy system tolerated but that the cloud platform's data integrity rules reject. Under system migration governance, which action should Vasquez recommend before proceeding with full-scale migration?",
         "Choices": {
-            "A": "Predictive analytics, used for forecasting outcomes",
-            "B": "Robotic process automation (RPA)",
-            "C": "Data visualization, used for dashboard design",
-            "D": "Blockchain, used for distributed ledger validation"
+            "A": "Proceed with full migration and write exception-handling logic to accept the non-compliant 4.7% of records with a flag for manual review after migration — delaying the project to remediate legacy data quality issues extends the period during which Coventry operates an unsupported mainframe at $380,000 annually in maintenance costs plus escalating security risk.",
+            "B": "Conduct a data quality assessment of the 4.7% of records with validation errors to categorize them by severity: (1) records correctable through automated data cleansing rules, (2) records requiring manual review and correction, and (3) records that are permanently unresolvable and must be archived with documented rationale. Remediate categories 1 and 2 before loading to the cloud platform, archive category 3, and validate that the remaining 95.3% of records migrate cleanly.",
+            "C": "Archive all 10.5 million legacy policy records in a read-only data warehouse and start the cloud platform with only new and renewed policies issued after the cutover date — this eliminates the data migration risk entirely and satisfies regulatory retention requirements through the archive, while the new platform operates on clean data from day one.",
+            "D": "Migrate the 95.3% of clean records to the cloud platform immediately and defer the 4.7% with validation errors to a second-phase migration project — this parallel approach allows the new platform to go live sooner, reducing the $380,000 annual maintenance cost and security risk while the remaining records are remediated."
         },
         "CorrectChoice": "B",
-        "ExplanationCorrect": "Robotic process automation (RPA) uses software robots to automate repetitive, rules-based tasks that humans previously performed. Automating data entry between two systems based on fixed rules is a textbook RPA use case. RPA does not involve forecasting (analytics), dashboards (visualization), or distributed ledgers (blockchain).",
+        "ExplanationCorrect": "Under system migration governance and COSO Principle 11, data migration is not a technical lift-and-shift exercise — it is a control activity that must ensure data integrity is maintained (or improved) during the transition from legacy to target platforms. VP Vasquez's team has correctly identified a data quality problem during the proof-of-concept, which is precisely when it should be discovered. Option B is the governance-appropriate response because it: (1) categorizes the 4.7% of non-compliant records by severity and correctability, rather than treating all data quality issues as equivalent; (2) applies automated cleansing where possible (category 1), focusing manual review resources on records where correction requires judgment (category 2); (3) creates a documented rationale for permanently unresolvable records (category 3), satisfying regulatory and audit requirements; and (4) validates that the 95.3% of records believed to be clean actually migrate without errors. Option A (migrate with exception flags) treats data quality as a post-migration cleanup task — but once non-compliant records are loaded to the cloud platform with exception-handling logic, they become the new platform's problem, potentially corrupting downstream processes. Option C (start fresh, archive everything) abandons 10.5 million records that the business needs daily. Option D (two-phase migration) creates a split operating model that multiplies operational complexity. The data migration proof-of-concept that discovers data quality issues has succeeded, not failed — it prevented those issues from becoming production defects on the target platform.",
         "StudyLinks": [
+            {
+                "label": "COSO Internal Control — Integrated Framework (2013), Principle 11",
+                "url": "https://www.coso.org/guidance-on-ic"
+            },
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
                 "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "NIST Cybersecurity Framework",
-                "url": "https://www.nist.gov/cyberframework"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
@@ -22188,13 +22194,14 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Option A prioritizes project schedule over data integrity — a common tension in system migration projects that governance frameworks resolve in favor of data integrity. Exception-handling logic that accepts non-compliant records with a flag for 'manual review after migration' creates three governance problems: (1) the flag-and-defer pattern has a documented failure rate in ERP and insurance system migrations — once the system is live, the flagged records become low-priority backlog items that may never be reviewed; (2) non-compliant records loaded to the cloud platform may fail silently in downstream processes such as claims reserving calculations; and (3) the $380,000 annual maintenance cost and security risk of the unsupported mainframe are legitimate concerns, but accepting data integrity defects to accelerate migration trades a known, managed risk for an unknown, unmanaged risk. A candidate selecting this option may treat the migration deadline as the primary constraint rather than the data integrity of the migrated records.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Blockchain is a decentralized, distributed ledger technology used for tamper-resistant transaction records. Automating data entry between systems is not a blockchain use case.",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongC": "Option C solves the data migration problem by avoiding it entirely — archive everything and start fresh. While intellectually clean, this approach is operationally unworkable for an insurance company: (1) a claims adjuster handling a workers' compensation claim needs to review the policy's full history to determine coverage, limits, and prior claims — all of which reside in the 10.5 million archived records; (2) insurance regulators in 20 states require that specific records be accessible, not merely retained — an archived data warehouse that requires separate login and query tools to access policy history for every claim would slow claims processing unacceptably; (3) underwriters pricing renewal policies need loss history from the legacy system to calculate loss ratios and set premiums. Creating a two-system operating model doubles the number of systems claims and underwriting staff must navigate daily. A candidate selecting this option may underestimate the operational dependency of insurance business processes on historical policy data.",
+        "ExplanationWrongD": "Option D creates a split-state migration where 95.3% of records are on the new platform and 4.7% remain in a remediation queue on the legacy system. This creates operational fragmentation: a policyholder may have one policy migrated to the cloud platform and another (with data quality issues) still on the mainframe. Claims that span both policies require staff to reconcile data from two systems. More critically, there is no guarantee that the second-phase migration will receive funding or priority once the new platform is live — the organizational incentive shifts from 'complete the migration' to 'operate the new platform,' and the 4.7% of records become a permanent anomaly. A candidate selecting this option may underestimate the organizational momentum problem that causes phase-two migrations to be indefinitely deferred.",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60C Wave 1 — Evaluate replacement for archived P1-FC-014 (DL-012 rotation clone, RPA use case definition)"
     },
     {
         "Part": 1,
@@ -22301,30 +22308,30 @@ const MCQ_BANK_C = [
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "F.017 cloud computing — IaaS, PaaS, SaaS model selection with control implications",
-        "MicroTopic": "Cloud computing service models — selection criteria",
-        "UniqueConceptKey": "F-C017-cloud-model-selection",
-        "LOSTag": "F Technology and analytics",
+        "Topic": "F.017 system integration — API security governance and access control",
+        "MicroTopic": "System integration governance — API authentication and data exposure risk",
+        "UniqueConceptKey": "F-C017-api-security-governance",
+        "LOSTag": "F.1 Information Systems",
         "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Aldenbury Medical Group plans to migrate its patient scheduling database to the cloud. The IT director recommends Platform as a Service (PaaS), arguing that 'the database is standard SQL Server, so managing operating system patches and database engine updates doesn't add value — we should offload that to the provider.' The compliance officer objects, noting that 'the database contains protected health information (PHI), and HIPAA requires that we maintain control over the computing environment that processes PHI.' The database supports an internally developed application that the in-house development team will continue to maintain. Evaluate the compliance officer's objection against the shared responsibility model.",
+        "Stem": "Bridgeway Financial Services, a payment processor handling $12 billion in annual transaction volume, connects its core processing platform to 47 institutional clients via REST APIs. Each client integration uses a unique API key with role-based access to specific transaction types. During a security architecture review, CISO Daniel Park's team discovered that: (1) 12 of the 47 API integrations use API keys that have not been rotated in over 24 months, (2) the API gateway logs show that 8 clients are accessing transaction types outside their documented scope — the excess access was granted by a developer who broadened permissions to resolve a production issue 14 months ago and never reverted them, and (3) two decommissioned client integrations still have active API keys that have not been revoked. The API gateway processes an average of 3.2 million requests daily. Under COSO Principle 11 and API governance best practices, which remediation should CISO Park prioritize first?",
         "Choices": {
-            "A": "The compliance officer's objection supports selecting IaaS — with IaaS, Aldenbury retains full control over the operating system and database engine, satisfying the HIPAA requirement to control the PHI processing environment while the cloud provider only manages physical infrastructure",
-            "B": "The compliance officer's objection is valid for PaaS but supports a hybrid approach — Aldenbury should use PaaS for the development and test environments but retain the production PHI database on-premises, creating a hybrid architecture that satisfies both IT efficiency and compliance requirements",
-            "C": "The compliance officer's objection is valid but misapplied — PaaS databases in healthcare cloud environments may not meet HIPAA security requirements; Aldenbury should select Software as a Service (SaaS) because SaaS vendors accept full HIPAA compliance responsibility through Business Associate Agreements",
-            "D": "The compliance officer's objection misunderstands the shared responsibility model — under PaaS, the provider manages the OS and database engine, but Aldenbury retains responsibility for data security, access controls, encryption, and audit logging, satisfying HIPAA requirements through configuration rather than infrastructure ownership"
+            "A": "Immediately revoke the API keys for the two decommissioned client integrations — inactive credentials that remain valid are the highest-risk exposure because there is no legitimate business activity to detect anomalous usage against, and any access using these keys would be inherently unauthorized.",
+            "B": "Implement a 90-day mandatory API key rotation policy for all 47 client integrations and revoke keys that exceed the rotation window — stale credentials are the most pervasive finding (12 of 47 integrations) and automated rotation prevents credential aging across the entire integration landscape.",
+            "C": "Immediately rescope the 8 client integrations whose access exceeds their documented authorization — excessive permissions represent active, ongoing exposure where authorized clients can access transaction types outside their business relationship with Bridgeway, creating both data exposure risk and regulatory compliance exposure under payment processing standards.",
+            "D": "Deploy an API threat detection system that monitors all 3.2 million daily requests for anomalous access patterns, then use the monitoring data to prioritize remediation of the specific integration risks identified by the audit — this provides continuous visibility and risk-based prioritization rather than ad-hoc remediation."
         },
-        "CorrectChoice": "D",
-        "ExplanationCorrect": "Under the cloud shared responsibility model, security and compliance are shared between the cloud provider and the customer. The division of responsibility depends on the service model: in IaaS, the customer manages more (OS, middleware, applications, data); in PaaS, the provider manages the infrastructure, OS, and database engine while the customer retains responsibility for data, access management, and application-level security; in SaaS, the provider manages nearly everything. The compliance officer's objection conflates 'control' with 'ownership.' HIPAA does not require that the covered entity own the servers — it requires that PHI be protected through administrative, physical, and technical safeguards. Under PaaS: (1) Aldenbury controls who can access the database (identity and access management), (2) Aldenbury configures encryption (at rest and in transit), (3) Aldenbury manages audit logging and monitoring, and (4) the cloud provider's HIPAA-eligible PaaS services are covered by a Business Associate Agreement (BAA). The provider managing OS patches does not diminish Aldenbury's compliance — it strengthens it by ensuring the underlying platform is maintained to security standards. The correct model for a standard database workload with a custom application is PaaS: the organization retains application and data control while offloading infrastructure management that provides no competitive advantage.",
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "Under COSO Principle 11 and API security governance frameworks (OWASP API Security Top 10, NIST SP 800-53 access control family), remediation prioritization must follow a risk-based hierarchy: active exposure first, dormant exposure second, systemic improvements third. CISO Park faces three distinct findings with different risk profiles. The 8 clients with excessive permissions (Option C) represent the highest priority because: (1) the exposure is active and ongoing — each of the 3.2 million daily API requests from these 8 clients could potentially access transaction types beyond their authorized scope, and this has been occurring for 14 months; (2) under the principle of least privilege (a core tenet of both COSO access controls and PCI DSS for payment processors), any permission not strictly required for the client's business relationship represents an unnecessary control weakness; (3) the excess access creates regulatory exposure under payment processing standards (PCI DSS Requirement 7: restrict access by business need-to-know) and potentially under Gramm-Leach-Bliley if client transaction data crosses institutional boundaries. The two decommissioned client API keys (Option A) are a serious finding but a lower immediate priority than active excessive access — dormant keys can be exploited, but active excessive access is being exploited by definition (the permissions are being used). The 12 stale API keys (Option B) represent a credential hygiene problem that increases risk over time but does not create immediate exposure. A threat detection system (Option D) addresses detection capability but does not remediate the known active exposure — monitoring excessive access for another month while remediation is deferred is governance delay, not risk management. The governance principle: when multiple control deficiencies are identified simultaneously, remediate active exposure before dormant exposure, and remediate before you monitor.",
         "StudyLinks": [
             {
-                "label": "NIST SP 800-145 — The NIST Definition of Cloud Computing",
-                "url": "https://www.nist.gov"
+                "label": "COSO Internal Control — Integrated Framework (2013), Principle 11",
+                "url": "https://www.coso.org/guidance-on-ic"
             },
             {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+                "label": "OWASP API Security Top 10",
+                "url": "https://owasp.org/www-project-api-security/"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
@@ -22339,42 +22346,43 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "Software as a Service delivers complete, vendor-managed applications to end users over the internet. The stem states the company manages its own applications and only outsources servers and storage, which is IaaS, not SaaS. A candidate may overestimate the degree of abstraction, confusing application-level outsourcing with infrastructure-level outsourcing.",
-        "ExplanationWrongD": "",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongA": "Option A correctly identifies that decommissioned client API keys are a significant security finding — inactive credentials represent a dormant threat vector that could be exploited without detection. However, decommissioned credentials are a dormant exposure (no ongoing business use, no daily traffic), while the 8 clients with excessive permissions represent active, ongoing exposure that is being exercised through legitimate business traffic 3.2 million times per day. Under risk-based remediation prioritization, active exposure always takes precedence over dormant exposure. Revoking the two decommissioned keys takes minutes and should be done concurrently with — not instead of — rescoping the 8 excessive-access integrations. A candidate selecting this option may prioritize the finding that is easiest to remediate (two key revocations) over the finding that poses the greatest active risk (8 excessive-permission integrations), which is a common but incorrect prioritization heuristic in security governance.",
+        "ExplanationWrongB": "Option B addresses the most numerically prevalent finding (12 of 47 integrations) but misidentifies its risk priority. Stale API keys that have not been rotated in 24 months represent a credential hygiene deficiency — the keys are still associated with active, legitimate client integrations and there is no evidence they have been compromised. The risk from stale credentials is probabilistic (increased likelihood of compromise over time), while the risk from excessive permissions is deterministic (clients currently have and are exercising access beyond their authorized scope). Implementing a 90-day rotation policy is an appropriate systemic remediation, but it should follow — not precede — the immediate rescoping of known excessive permissions. Additionally, automated key rotation without first validating that all integrations will support the rotation process could disrupt 47 client connections processing $12 billion in annual transactions. A candidate selecting this option may confuse prevalence (number of findings) with severity (risk impact of findings).",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Option D defers remediation in favor of monitoring — a governance inversion that prioritizes detection capability over control remediation. Deploying an API threat detection system is a detective control that would identify anomalous access patterns going forward, but it does not remediate the known excessive permissions that have been in place for 14 months. Every day that the 8 clients retain access beyond their authorized scope while a threat detection system is being procured, deployed, and tuned is a day of continued exposure. The appropriate sequence is: remediate known active exposures (rescape the 8 integrations), address dormant exposures (revoke decommissioned keys), then deploy systemic improvements (key rotation policy, threat detection). Monitoring before remediation is appropriate when the nature and scope of the exposure is unknown; when the audit has already identified specific excessive-permission integrations, the governance priority is to fix them. A candidate selecting this option may believe that detection capability must precede remediation, which is correct for unknown threats but incorrect for known control deficiencies.",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60C Wave 1 — Evaluate replacement for archived P1-FC-017 (DL-012 rotation clone, cloud computing definition)"
     },
     {
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "F.018 cloud computing service models",
-        "MicroTopic": "cloud computing service models",
-        "UniqueConceptKey": "F-C018-cloud-computing-service-models",
-        "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Topic": "F.018 cybersecurity governance — incident response framework evaluation",
+        "MicroTopic": "Cybersecurity governance — incident response plan testing and lessons learned integration",
+        "UniqueConceptKey": "F-C018-incident-response-governance",
+        "LOSTag": "F.4 Cybersecurity",
+        "Difficulty": "Very Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Rosewood outsources its entire IT infrastructure, including servers and storage, to a cloud provider while managing its own applications. What cloud service model is this?",
+        "Stem": "Valmont Industries, a defense contractor with $2.8 billion in government contracts, experienced a security incident eight months ago when a phishing attack compromised the credentials of a senior engineer, resulting in the exfiltration of 2,400 documents including technical specifications governed by ITAR (International Traffic in Arms Regulations). The incident response (IR) team contained the breach within 6 hours of detection, but a post-incident review revealed that: (1) the IR plan had not been tabletop-tested in 31 months, (2) the containment action inadvertently cut off access for 140 engineers working on a classified project with a delivery deadline 5 days later — delaying the project by 11 days and triggering a $640,000 contract penalty, and (3) the root cause analysis identified that the compromised engineer had local administrator privileges on their workstation, a configuration that deviated from the security baseline but had been approved by a now-departed IT director 4 years ago as a one-time exception. The board's risk committee, chaired by independent director Sarah Okonkwo, has asked the CISO to present a remediation plan that addresses the root causes of both the breach and the post-incident operational disruption. Under NIST CSF and COSO Principle 11, which remediation plan best evaluates the interconnected failures?",
         "Choices": {
-            "A": "Data as a Service (DaaS)",
-            "B": "Infrastructure as a Service (IaaS)",
-            "C": "Software as a Service (SaaS)",
-            "D": "Platform as a Service (PaaS)"
+            "A": "Conduct quarterly tabletop exercises for the IR plan, revoke all local administrator privileges and enforce least-privilege access through group policy, and implement a formal exception management process requiring quarterly review and re-approval of all security baseline deviations — each control deficiency is addressed individually with a specific remediation action.",
+            "B": "Redesign the incident response plan to include a business-impact assessment checkpoint before containment actions are executed — the $640,000 contract penalty was caused by a containment decision that did not consider operational impact, and this single process change prevents recurrence of the most costly consequence of the incident. The 31-month testing gap and privilege exception are secondary findings.",
+            "C": "Implement an integrated governance program that addresses the three failures as interconnected control deficiencies: (1) mandatory semi-annual IR plan testing with tabletop exercises that include scenarios involving privileged user compromise and operational trade-off decisions, (2) a privileged access management system that enforces just-in-time elevation with automatic revocation rather than permanent local admin rights, and (3) an exception governance process requiring documented business justification, compensating controls, quarterly review, and automatic expiration — with the CISO accountable to the risk committee for all active exceptions.",
+            "D": "Engage an external cybersecurity firm to design and implement a new security architecture including zero-trust network access, endpoint detection and response, and Security Information and Event Management (SIEM) integration — the root cause of all three failures is an insufficiently mature security architecture, and a comprehensive redesign addresses the systemic weakness rather than individual symptoms."
         },
-        "CorrectChoice": "B",
-        "ExplanationCorrect": "Infrastructure as a Service provides cloud-hosted computing infrastructure such as servers, storage, and networking while the customer manages its applications and often operating environments. The stem says infrastructure is outsourced but applications remain customer-managed, which is the IaaS model.",
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "Under the NIST Cybersecurity Framework (Respond and Recover functions) and COSO Principle 11, a post-incident remediation plan must address control deficiencies as an interconnected system, not as a list of independent findings. The Valmont incident reveals three failures that reinforce each other: (1) the untested IR plan meant the team had not rehearsed containment decision-making under time pressure, which contributed to (2) the containment action that disrupted a classified project without business impact assessment, and (3) the root cause — a privilege exception that persisted for 4 years — was enabled by an exception governance process that had no expiration, no periodic review, and no compensating controls. Option C is the governance-appropriate response because it addresses the systemic connections between these failures: the tabletop exercises specifically include scenarios involving privileged user compromise (connecting the IR plan testing to the root cause), the just-in-time privilege management eliminates permanent local admin exceptions that outlive their original approvers, and the exception governance process with automatic expiration and CISO accountability prevents the 4-year orphaned exception from recurring. Option A (independent remediation of each finding) treats three systemically connected failures as if they occurred in isolation — but the untested IR plan, the unassessed containment action, and the orphaned privilege exception are connected through a shared governance gap: no process existed to periodically review, test, and revalidate security decisions. Option B (business impact checkpoint only) addresses the most visible consequence ($640K penalty) but ignores the root cause that allowed the breach (unreviewed privilege exception) and the systemic weakness (untested IR plan). Option D (outsource security architecture redesign) defers governance accountability to an external firm — the CISO and risk committee, not a consultant, must own the remediation of control deficiencies identified in their own environment. The governance lesson: after a significant incident, the remediation plan must demonstrate that the organization understands how its control deficiencies interacted to produce the incident's full impact — not just the initial breach but the cascading consequences of an untested response.",
         "StudyLinks": [
             {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+                "label": "NIST Cybersecurity Framework (CSF) — Respond and Recover functions",
+                "url": "https://www.nist.gov/cyberframework"
             },
             {
-                "label": "NIST Cybersecurity Framework",
-                "url": "https://www.nist.gov/cyberframework"
+                "label": "COSO Internal Control — Integrated Framework (2013), Principle 11",
+                "url": "https://www.coso.org/guidance-on-ic"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
@@ -22389,42 +22397,43 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongA": "Option A correctly identifies all three control deficiencies and proposes specific remediations for each, which is a competent response. However, it treats each deficiency as an independent problem requiring an independent solution — the tabletop exercises are separate from the privilege remediation, which is separate from the exception management process. This siloed approach misses that the three failures reinforced each other: the untested IR plan meant the team had never rehearsed the trade-off between containment speed and operational impact, the orphaned privilege exception created the initial attack vector, and the absence of exception governance allowed the privilege to persist. An effective remediation plan would integrate these — for example, by having the tabletop exercise scenarios specifically include compromised privileged users, so that the team rehearses both the technical containment and the business impact assessment simultaneously. A candidate selecting this option may demonstrate competent control deficiency identification but miss the governance principle that post-incident remediation should address systemic interactions between failures, not just individual failures.",
+        "ExplanationWrongB": "Option B correctly identifies that the $640,000 contract penalty — the most costly and visible consequence — resulted from a containment action that was not preceded by a business impact assessment. Adding this checkpoint to the IR plan is necessary but insufficient. This recommendation: (1) ignores the root cause that enabled the initial breach — the orphaned 4-year privilege exception that granted the compromised engineer local admin rights; (2) treats the 31-month IR plan testing gap as secondary, when in fact it is the enabling condition for the containment error — an untested team made a rushed decision under pressure that a rehearsed team might have handled differently; and (3) addresses the symptom (operational disruption) without preventing the disease (privilege escalation vulnerability). A candidate selecting this option may anchor on the largest financial impact of the incident ($640K) and design remediation around that single metric, ignoring that the initial breach could recur through the same privilege exception path regardless of IR plan improvements.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "Platform as a Service provides a development/runtime platform; the stem emphasizes raw infrastructure such as servers and storage.",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongD": "Option D proposes outsourcing the remediation to an external cybersecurity firm — a response that abdicates rather than exercises governance responsibility. While zero-trust architecture, EDR, and SIEM are valuable security capabilities, they do not address the specific governance failures identified: the IR plan went untested because no process required periodic testing, the privilege exception persisted because no process required re-approval or expiration, and the containment action disrupted operations because no process required business impact assessment. Deploying new technology without fixing the underlying governance processes would add detection and response capabilities to an environment that has demonstrated it cannot govern security exceptions or coordinate incident response decisions with business operations. The CISO and risk committee must own the governance remediation; technology procurement is a complement to, not a substitute for, governance process improvement. A candidate selecting this option may believe that a comprehensive technology investment addresses a governance problem, which is the architectural equivalent of treating a management control deficiency with a technical control.",
+        "question_state": "Certified",
+        "DifficultyScore": 5,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60C Wave 1 — Evaluate replacement for archived P1-FC-018 (DL-012 rotation clone, cloud computing definition)"
     },
     {
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
-        "Topic": "F.019 cloud computing service models",
-        "MicroTopic": "cloud computing service models",
-        "UniqueConceptKey": "F-C019-cloud-computing-service-models",
-        "LOSTag": "F Technology and analytics",
-        "Difficulty": "Moderate",
+        "Topic": "F.019 digital transformation governance — technology obsolescence risk",
+        "MicroTopic": "Digital transformation governance — aging technology portfolio risk assessment and investment prioritization",
+        "UniqueConceptKey": "F-C019-technology-obsolescence-risk",
+        "LOSTag": "F.1 Information Systems",
+        "Difficulty": "Very Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Silverton outsources its entire IT infrastructure, including servers and storage, to a cloud provider while managing its own applications. What cloud service model is this?",
+        "Stem": "Paragon Manufacturing operates 19 factories across 6 countries producing industrial valves and fittings with $3.1 billion in annual revenue. The CIO's technology portfolio review identified that: (1) 8 of 19 factories run manufacturing execution systems (MES) on an operating system that reached end-of-life 14 months ago, with no security patches available; (2) the enterprise resource planning system (ERP) is 3 versions behind current release, with the vendor announcing end-of-support for the current version in 19 months; (3) the product lifecycle management (PLM) system is a custom-built application whose only remaining developer retired 8 months ago, with no documentation and no source code escrow; and (4) the IT capital budget for the next 24 months is $18.4 million. The MES upgrade across 8 factories is estimated at $8.2 million, the ERP upgrade at $5.6 million, and the PLM replacement at $4.8 million. CFO Javier Reyes notes that all three projects cannot be funded within the current capital plan and asks CIO Dr. Linh Nguyen to recommend a single project for immediate funding. Under COSO Principle 11 and technology portfolio governance, which recommendation should Dr. Nguyen make?",
         "Choices": {
-            "A": "Software as a Service (SaaS)",
-            "B": "Data as a Service (DaaS)",
-            "C": "Infrastructure as a Service (IaaS)",
-            "D": "Platform as a Service (PaaS)"
+            "A": "Fund the MES upgrade ($8.2 million) — the 8 factories running on an end-of-life operating system with no security patches represent an active control failure that exposes the manufacturing operations to unpatched vulnerabilities every day. The ERP and PLM systems, while aging, are still supported and can be addressed in subsequent budget cycles.",
+            "B": "Fund the ERP upgrade ($5.6 million) — the ERP system is the financial backbone of all 19 factories, and the 19-month support window is shorter than the typical ERP implementation timeline of 24-30 months. Delaying the ERP upgrade past the current budget cycle risks beginning the upgrade after end-of-support, which would mean operating an unsupported ERP system during the transition — an unacceptable financial reporting control risk.",
+            "C": "Fund the PLM replacement ($4.8 million) — the custom-built system with no documentation and no developer is a single point of failure with zero recoverability. If the PLM system fails, Paragon loses the engineering specifications for every product it manufactures across all 19 factories — this is an existential operational risk that transcends the timeline-driven upgrade concerns of the MES and ERP systems.",
+            "D": "Fund a risk assessment and architectural review ($1.2 million) to determine: (1) whether the MES, ERP, and PLM systems can be consolidated onto a common platform, reducing total program cost below the $18.4 million capital ceiling, (2) the minimum viable upgrade path for each system, and (3) interim compensating controls that reduce risk on the deferred systems. Use the remaining $17.2 million budget to fund the highest-priority project identified by the assessment."
         },
         "CorrectChoice": "C",
-        "ExplanationCorrect": "Infrastructure as a Service (IaaS) provides virtualized computing resources such as servers, storage, and networking over the cloud. The customer manages its own applications and operating systems while the provider handles the underlying infrastructure. This distinguishes IaaS from PaaS (platform for app development) and SaaS (fully managed applications).",
+        "ExplanationCorrect": "Under COSO Principle 11 and technology portfolio governance, when capital constraints force prioritization among multiple technology risks, the governance framework requires ranking by: (1) existential vs. operational impact, (2) recoverability, and (3) time-sensitivity. Dr. Nguyen's analysis must distinguish between systems that can fail in ways the business can recover from (operational risk) and systems whose failure is not recoverable (existential risk). The PLM system is the highest priority because: (1) it is a single point of failure with zero recoverability — no documentation means no engineer can understand the code, no source code escrow means no legal right to access the code, and no remaining developer means no institutional knowledge to reconstruct the system's logic; (2) if the PLM system fails, Paragon loses the engineering specifications for every product — without those specifications, no factory can manufacture products to design tolerances, creating an existential threat to operations that is not timeline-dependent (it could fail tomorrow); (3) the PLM risk carries the highest severity — MES failure on 8 of 19 factories is survivable (11 factories continue operating), ERP failure is survivable for weeks with manual workarounds, but PLM failure means the company cannot produce any product to specification. The MES upgrade (Option A) and ERP upgrade (Option B) address timeline-driven risks that can be managed with compensating controls during the upgrade period — the MES systems can be isolated on a segmented network with enhanced monitoring, and the ERP vendor typically offers extended support for a premium during the transition window. Option D (risk assessment first) defers action on all three risks while spending $1.2 million on analysis — every day of delay on the PLM system is a day during which the single point of failure could materialize. The governance lesson: technology portfolio prioritization must distinguish between risks that have recovery paths and risks that do not. No system should enter a state of zero recoverability; when one has, it becomes the highest-priority investment regardless of the urgency of other aging systems.",
         "StudyLinks": [
             {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+                "label": "COSO Internal Control — Integrated Framework (2013), Principle 11",
+                "url": "https://www.coso.org/guidance-on-ic"
             },
             {
-                "label": "NIST Cybersecurity Framework",
-                "url": "https://www.nist.gov/cyberframework"
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section F — Information Systems",
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
@@ -22439,13 +22448,14 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Data as a Service (DaaS) provides data storage and management as a service. The stem focuses on compute infrastructure (servers, storage) rather than data as the primary service.",
+        "ExplanationWrongA": "Option A correctly identifies that the MES systems running on end-of-life operating systems represent an active control failure — unpatched vulnerabilities on manufacturing execution systems are a serious cybersecurity risk. However, this recommendation treats the three technology risks as equivalent in severity when they are categorically different in recoverability. The MES risk is survivable in multiple dimensions: (1) only 8 of 19 factories are affected — 11 factories continue operating normally; (2) the MES systems can be isolated on a segmented network with enhanced monitoring as a compensating control while funding is secured; (3) worst case — a security incident on the MES systems disrupts manufacturing operations on 8 factories, which is costly (roughly $1.3 billion in annual revenue from those factories) but recoverable. By contrast, PLM failure is not recoverable — there is no path to resume engineering operations without reconstructing the system from scratch. A candidate selecting this option may correctly prioritize the most numerous or most visible risk (8 factories, no security patches) over the risk with the most severe consequence (zero recoverability).",
+        "ExplanationWrongB": "Option B correctly identifies that the ERP system's 19-month support window is shorter than the typical 24-30 month implementation timeline, creating a risk of operating an unsupported ERP during transition. However, this timeline risk is manageable: (1) the vendor will typically offer an extended support contract for a premium during the transition window — expensive but available; (2) the ERP system supports manual workarounds (spreadsheet-based financial reporting) for short periods if necessary; (3) the ERP risk is timeline-driven, not event-driven — the organization has 19 months of visibility to plan and execute the upgrade. The PLM risk has zero visibility — the system could fail tomorrow with no warning, and when it fails, there is no manual workaround for recovering engineering specifications. A candidate selecting this option may prioritize the risk with the clearest deadline (ERP end-of-support) over the risk with the most severe consequence (PLM single point of failure), a common prioritization error where timeline clarity is mistaken for risk severity.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
-        "question_state": "Archived",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongD": "Option D proposes spending $1.2 million on risk assessment before committing the remaining $17.2 million to the highest-priority project. While risk assessment is generally a governance best practice, in this scenario it introduces an unnecessary delay that is not justified by the information already available. The three risks have been clearly profiled: the MES risk is active but survivable (8 of 19 factories), the ERP risk is timeline-driven with 19 months of visibility, and the PLM risk is existential with zero recoverability. An additional risk assessment would spend $1.2 million and several months to confirm what is already known — that the PLM system's single point of failure is the highest priority. More critically, every month spent on risk assessment is a month during which the PLM system could fail with no recovery path. Risk assessment is appropriate when the relative priority of risks is unclear; when the priority is clear (existential > timeline-driven > active-but-survivable), the governance obligation is to act, not to study. A candidate selecting this option may apply the 'always assess before acting' governance principle without recognizing its boundary condition: when the assessment delays action on a risk with zero recoverability, the governance cost of delay exceeds the governance benefit of additional analysis.",
+        "question_state": "Certified",
+        "DifficultyScore": 5,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60C Wave 1 — Evaluate replacement for archived P1-FC-019 (DL-012 rotation clone, cloud computing definition)"
     },
     {
         "Part": 1,
@@ -23746,9 +23756,9 @@ const MCQ_BANK_C = [
         "question_state": "Active",
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand",
-        "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-FC-045 (DL-012 rotation clone)"
-    ,
-        "dl031_review_note": "Downgraded from Analyze->Understand — stem is identical definition-match to FC-041-044 rotation group (DL-031)"},
+        "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-FC-045 (DL-012 rotation clone)",
+        "dl031_review_note": "Downgraded from Analyze->Understand — stem is identical definition-match to FC-041-044 rotation group (DL-031)"
+    },
     {
         "Part": 1,
         "Section": "F",

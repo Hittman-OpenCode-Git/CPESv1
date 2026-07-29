@@ -1,0 +1,119 @@
+{
+  "session": "S60B",
+  "title": "Original DL-012 Clone Program Closure (EC + ED)",
+  "date": "2026-07-28",
+  "status": "ACTIVE",
+  "parent_finding": "S60A",
+  "scope": {
+    "description": "Replace all remaining archived DL-012 clone items in Pack C Section E and Pack D Section E",
+    "packs": ["pack_c_corrected.js", "pack_d_corrected.js"],
+    "sections": ["EC (Pack C Section E)", "ED (Pack D Section E)"],
+    "total_items": 19,
+    "correction_note": "S60B line-level verification corrected the inventory-agent count. EC-068, ED-044, and ED-045 were false positives — they are already Certified with S380 Evaluate Wave 1 high-quality replacements. Excluded from scope.",
+    "breakdown": {
+      "EC": {
+        "count": 5,
+        "pack": "pack_c_corrected.js",
+        "qids": [
+          "P1-EC-070",
+          "P1-EC-071",
+          "P1-EC-073",
+          "P1-EC-074",
+          "P1-EC-075"
+        ]
+      },
+      "ED": {
+        "count": 14,
+        "pack": "pack_d_corrected.js",
+        "qids": [
+          "P1-ED-041",
+          "P1-ED-047",
+          "P1-ED-048",
+          "P1-ED-052",
+          "P1-ED-053",
+          "P1-ED-055",
+          "P1-ED-056",
+          "P1-ED-057",
+          "P1-ED-059",
+          "P1-ED-061",
+          "P1-ED-062",
+          "P1-ED-063",
+          "P1-ED-065",
+          "P1-ED-068"
+        ]
+      },
+      "false_positives": {
+        "count": 3,
+        "reason": "Already Certified S380 Evaluate Wave 1 replacements. Inventory agent read dual-block architecture incorrectly.",
+        "qids": ["P1-EC-068", "P1-ED-044", "P1-ED-045"]
+      }
+    }
+  },
+  "state_snapshot": {
+    "timestamp": "2026-07-28",
+    "pack_c_total_qids": 500,
+    "pack_c_certified": 438,
+    "pack_d_total_qids": 500,
+    "pack_d_certified": 439,
+    "total_certified_pool": 2417,
+    "ec_archived_pre": 5,
+    "ed_archived_pre": 14,
+    "ec_certified": 64,
+    "ed_certified": 54,
+    "ec_active": 5,
+    "ed_active": 5
+  },
+  "quality_requirements": {
+    "cognitive_targets": {
+      "Analyze": {"min": 12, "max": 14},
+      "Evaluate": {"min": 8, "max": 10}
+    },
+    "difficulty_targets": {
+      "Difficult": {"min": 16, "max": 18},
+      "Very_Difficult": {"min": 4, "max": 6}
+    },
+    "explanation_min_chars": 500,
+    "explanation_must_contain": [
+      "Standard Reference",
+      "Scenario Application",
+      "Business Interpretation",
+      "Exam Trap Analysis"
+    ],
+    "stem_pattern": {
+      "required": [
+        "Named Company",
+        "Named Stakeholder",
+        "Quantified Problem",
+        "Competing Alternatives",
+        "Decision Requirement"
+      ],
+      "avoid": [
+        "Definition matching",
+        "Vocabulary testing",
+        "Pure recall"
+      ]
+    },
+    "blocklist": [
+      "DL-008",
+      "DL-026",
+      "DL-030",
+      "DL-037",
+      "DL-013 boilerplate reuse",
+      "Metadata-only upgrades"
+    ]
+  },
+  "predecessor_sessions": {
+    "exemplar_sources": ["S899", "S50", "S51", "S52", "S56"],
+    "prior_replacement_waves": {
+      "S52": "20 items (10 Pack C, 10 Pack D, Section E)"
+    }
+  },
+  "deliverables_required": [
+    "SESSION060B_SCOPE_LOCK.json",
+    "SESSION060B_EXEMPLAR_LIBRARY.md",
+    "SESSION060B_ANTI_PATTERN_AUDIT.json",
+    "SESSION060B_COMPLETION.json",
+    "SESSION060B_QUALITY_REPORT.md",
+    "SESSION060B_SCOPE_CLOSEOUT.md"
+  ]
+}

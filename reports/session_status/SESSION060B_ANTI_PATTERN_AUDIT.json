@@ -1,0 +1,42 @@
+{
+  "session": "S60B",
+  "title": "Anti-Pattern Audit",
+  "date": "2026-07-28",
+  "method": "Direct grep + governance guard cross-validation",
+  "results": {
+    "DL-013_boilerplate": {
+      "pack_c": 15,
+      "pack_d": 0,
+      "new_items_affected": 0,
+      "notes": "15 hits in pack_c are pre-existing, not from S60B replacements. All 19 new items (5 EC + 14 ED) are DL-013 clean."
+    },
+    "DL-008_EW_CC_non_empty": {
+      "pack_c_new_items": 0,
+      "pack_d_new_items": 0,
+      "notes": "All 19 new items verified DL-008 clean. Every CorrectChoice ExplanationWrong slot is empty."
+    },
+    "DL-026_empty_non_CC": {
+      "pack_c_new_items": 0,
+      "pack_d_new_items": 0,
+      "notes": "All non-CorrectChoice ExplanationWrong slots across all 19 new items contain substantive, choice-specific text (300+ chars each)."
+    },
+    "DL-037_logic_inversion": {
+      "new_items_affected": 0,
+      "notes": "Zero logic inversion patterns in new items. One match in pack_d was a false positive (correctly aligned 'No, ... should NOT')."
+    },
+    "DL-030_answer_key_error": {
+      "new_items_affected": 0,
+      "notes": "All CorrectChoice values independently aligned with COSO principle application in each scenario."
+    },
+    "metadata_only_upgrades": {
+      "detected": false,
+      "notes": "All 19 items feature entirely new stems, choices, explanations, and metadata. No item received only metadata field changes."
+    },
+    "fake_Analyze_Evaluate": {
+      "detected": false,
+      "notes": "EC items use 'Which best characterizes/supports/evaluates' framing requiring multi-factor analysis. ED items use similar Analyze/Evaluate-level prompts. Cognitive level matches actual cognitive demand."
+    }
+  },
+  "governance_guard": "54/54 PASS",
+  "verdict": "PASS — All 19 new items pass anti-pattern audit"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "Part": 1,
+    "Section": "F",
+    "SectionName": "Technology and Analytics",
+    "Topic": "F.003 data governance — data quality remediation — cost of poor data quality",
+    "MicroTopic": "Data governance — data quality remediation prioritization under budget constraints",
+    "UniqueConceptKey": "F-C003-data-quality-remediation-prioritization",
+    "LOSTag": "F.3 Data Governance",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Westbrook Manufacturing operates 14 production facilities and maintains a supplier master file with 8,200 vendor records in its ERP system. An internal audit revealed that 31% of supplier payment terms in the master file are inconsistent with signed contracts, causing an estimated $1.8 million in missed early payment discounts and $420,000 in late payment penalties annually. The data governance committee, chaired by Controller Priya Nair, has approved a $350,000 budget for master data remediation. The committee must choose between: (1) a full manual audit of all 8,200 supplier records estimated at $480,000 and 16 weeks, (2) an automated rules-based cleanup script targeting the 2,542 records with the highest transaction volume (85% of spend) at $290,000 and 6 weeks, or (3) a phased approach starting with the top 500 suppliers by spend ($210,000, 4 weeks) followed by a machine-learning duplicate detection project ($180,000, 10 weeks). Considering the principle of cost-benefit under data governance frameworks, which recommendation should Controller Nair present to the committee?",
+    "Choices": {
+      "A": "Full manual audit of all 8,200 supplier records — data quality is a foundational control and partial remediation leaves residual risk that compounds over time. The $480,000 cost is justified because every data error in the supplier master file represents a potential financial control weakness.",
+      "B": "Automated rules-based cleanup of the 2,542 highest-transaction-volume records — this approach targets 85% of the financial exposure ($1.89 million of the $2.22 million total) at 60% of the budget, with the fastest time-to-value. Remaining lower-volume records can be remediated in subsequent budget cycles.",
+      "C": "Phased approach beginning with the top 500 suppliers — this is the lowest-cost option ($210,000) and leaves $140,000 in contingency. However, the ML project for duplicate detection does not address payment term inconsistencies, making the second phase ($180,000) a misallocation.",
+      "D": "Defer all remediation and renegotiate supplier contracts to include automatic electronic payment term validation — this addresses the root cause structurally and eliminates manual data entry errors at the source rather than cleaning historical data."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under data governance frameworks such as DAMA-DMBOK and COSO Principle 11, data quality remediation should follow a risk-based prioritization methodology: identify the data errors that drive the largest financial and operational impact, remediate those first, and iterate. Controller Nair's committee faces a classic data governance resource allocation decision with three dimensions: financial exposure ($2.22M total), remediation cost, and time-to-value. The automated rules-based approach (Option B) is the optimal recommendation because: (1) it targets 85% of the financial exposure ($1.89M of $2.22M) at only 60% of the budget ($290K of $350K), achieving a 6.5:1 benefit-to-cost ratio in the first year; (2) the 6-week timeline recovers most early-payment discounts before the current fiscal year closes; (3) the remaining 2,558 low-volume supplier records represent only 15% of exposure and can be addressed in the next budget cycle with learnings from the initial cleanup. The full manual audit (Option A) exceeds the approved budget by 37% and requires 16 weeks — by which time another quarter of discount leakage has already occurred. The phased approach (Option C) correctly sequences remediation but misallocates $180,000 to duplicate detection when payment term inconsistency is the primary defect. Deferring remediation for contract renegotiation (Option D) ignores that contract terms must still be entered into the ERP system — automated validation reduces future errors but does not clean the 2,542 incorrect records already in the master file. Data quality remediation is never a one-time project; it is a continuous governance cycle of detect, prioritize, remediate, and monitor. Controller Nair's recommendation should maximize recoverable discounts within the approved budget while establishing the monitoring controls that prevent recurrence.",
+    "StudyLinks": [
+      {"label": "DAMA-DMBOK Data Management Body of Knowledge", "url": "https://www.dama.org/cpages/dama-international-home"},
+      {"label": "COSO Internal Control — Integrated Framework (2013), Principle 11", "url": "https://www.coso.org/guidance-on-ic"}
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-FC-003",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A correctly identifies that data quality is a foundational control, but its recommendation treats all data errors as equally material — a common governance fallacy. The 8,200 supplier records are not homogenous: the top 2,542 records (by transaction volume) drive 85% of the $2.22 million annual exposure. Remediating a low-volume supplier with $1,200 in annual spend carries the same per-record audit cost as a high-volume supplier with $2.8 million in annual spend, but the financial return is three orders of magnitude different. Additionally, the $480,000 cost exceeds the approved $350,000 budget by 37%, requiring either a scope reduction or a supplemental budget request that delays remediation. Under COSO Principle 11, technology investments should be risk-based — treating all records as equally critical is not risk-based governance. A candidate selecting this option may believe that data quality requires 100% completeness before any incremental benefit can be realized, which is neither operationally feasible nor cost-justified.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C correctly sequences remediation into phases but contains a critical scope mismatch: the first phase (top 500 suppliers, $210K) is well-targeted, but the second phase ($180K for ML duplicate detection) does not address the primary defect — payment term inconsistency between the master file and signed contracts. Duplicate supplier records are a different data quality problem from incorrect payment terms. Spending 51% of the total budget on a project that targets a defect the audit did not identify is a governance misallocation. The automated rules-based approach (Option B) directly targets the payment term inconsistency defect on the highest-impact records within a single budget cycle. A candidate selecting this option may conflate two distinct data quality defects (duplicates vs. inaccuracies) into one remediation plan.",
+    "ExplanationWrongD": "Option D correctly identifies that structural prevention is the long-term solution — automated electronic validation of payment terms at contract entry would prevent future errors. However, this recommendation ignores the 2,542 records already in the master file with incorrect payment terms. Renegotiating contracts to add electronic validation is a 6–12 month project involving legal review, supplier communications, and ERP configuration changes. Meanwhile, the existing data errors continue to cost $185,000 per month ($2.22M / 12) in missed discounts and late penalties. Effective data governance addresses both remediation (cleaning existing errors) and prevention (structural controls against future errors) — prioritizing prevention without remediation allows known control weaknesses to persist. A candidate selecting this option may believe that fixing the root cause eliminates the need to address existing damage, which is incorrect when the existing damage is both quantifiable and ongoing.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "upgrade_note": "S60C Wave 1 — Evaluate replacement for archived P1-FC-003 (DL-012 rotation clone, data governance definition-match)"
+  }
+]

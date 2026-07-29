@@ -1,0 +1,46 @@
+{
+  "Part": 1,
+  "Section": "A",
+  "SectionName": "External Financial Reporting Decisions",
+  "Topic": "A.025 deferred tax liability calculation",
+  "MicroTopic": "deferred tax liability calculation",
+  "UniqueConceptKey": "A-025-deferred-tax-liability-calculation",
+  "LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
+  "Difficulty": "Difficult",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "TAX PROVISION MEMORANDUM — Cascade Manufacturing\n\nTO: CFO Diana Okonkwo\nFROM: Michael Chen, Tax Director\nRE: Year-End Deferred Tax Analysis\n\nCascade reports the following temporary differences at December 31, Year 1 (enacted tax rate: 25%):\n\n1. Accelerated tax depreciation: Tax depreciation exceeded book by $380,000 (equipment basis: $1,900,000; 10-year book straight-line, 7-year MACRS tax). Reversal begins Year 4.\n\n2. Warranty accrual: Book accrual $120,000. Tax deductible only when claims are paid (projected: $45,000 Year 2; $50,000 Year 3; $25,000 Year 4).\n\n3. Installment sale: $90,000 book gain on surplus land. Tax: installment method defers $60,000 to Years 2-4.\n\nCascade projects sustained profitability with no valuation allowance concerns. Mr. Chen asks: 'What is Cascade's net deferred tax position, and which item produces a deferred tax asset?'",
+  "Choices": {
+    "A": "Net deferred tax liability of $50,000. Depreciation DTL: $95,000. Warranty DTA: $30,000. Installment sale: $15,000 DTL. Net: $95,000 + $15,000 - $30,000 = $80,000 liability. Only the warranty produces a DTA because book expense exceeds tax deduction, creating a future deductible amount. The installment sale produces a DTL because book income recognized faster than tax income.",
+    "B": "Net deferred tax liability of $80,000. Depreciation DTL: $380,000 × 25% = $95,000. Installment sale DTL: $60,000 × 25% = $15,000. Warranty DTA: $120,000 × 25% = $30,000. Net: $95,000 + $15,000 - $30,000 = $80,000. Only the warranty accrual produces a deferred tax asset because book expense recognized before tax deduction.",
+    "C": "Net deferred tax liability of $147,500. All three items produce deferred tax liabilities because Cascade is deferring tax payments relative to book recognition. Total taxable temporary differences: $590,000 × 25% = $147,500. None produce DTA because Cascade projects sustained profitability.",
+    "D": "Net deferred tax liability of $42,500. Depreciation DTL: $95,000. Warranty DTA: $30,000. Installment sale DTA: $22,500. Net: $95,000 - $30,000 - $22,500 = $42,500. The installment sale produces a DTA because Cascade recognized the gain for book purposes but will receive cash in future periods."
+  },
+  "CorrectChoice": "B",
+  "ExplanationCorrect": "Under ASC 740-10-10-1, deferred tax liabilities and assets are recognized for estimated future tax effects of temporary differences. A DTL arises from taxable temporary differences (book income > taxable income now, pay more tax later). A DTA arises from deductible temporary differences (book expense > tax deduction now, reduce tax later). Depreciation: Tax depreciation exceeded book by $380,000 — taxable income lower than book income now, future reversal creates a DTL of $95,000 ($380,000 × 25%). Installment sale: Book gain $90,000 but only $30,000 recognized for tax — $60,000 deferred creates a DTL of $15,000 ($60,000 × 25%). Warranty: Book expense $120,000 but zero tax deduction until claims paid — creates a DTA of $30,000 ($120,000 × 25%). Net: $95,000 + $15,000 - $30,000 = $80,000 DTL. Only the warranty accrual produces a DTA. Under ASC 740-10-45-4, DTA/DTL are noncurrent. A critical trap is confusing cash flow timing with book-tax differences: the installment sale creates a DTL (not DTA) because book income recognized faster than tax income, even though cash is collected later. The direction of the book-tax difference determines DTA vs. DTL, not cash flow.",
+  "StudyLinks": [
+    {"label": "IMA CMA Learning Outcome Statements, Part 1 Section A", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
+    {"label": "OpenStax Financial Accounting", "url": "https://openstax.org/books/principles-financial-accounting/pages/1-why-it-matters"}
+  ],
+  "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+  "QuestionID": "P1-A-025",
+  "question_state": "Certified",
+  "certification_date": "2026-07-22",
+  "certification_batch": "Section A Block 1",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+    "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+    "Original practice item with unique micro-topic and stem",
+    "Answer key distribution balanced across A/B/C/D",
+    "Distractors written as plausible CMA-style traps"
+  ],
+  "ExplanationWrongA": "This recommendation states a net deferred tax liability of $50,000, but the component arithmetic ($95,000 + $15,000 - $30,000) produces $80,000 — an internal inconsistency. The installment sale creates a $15,000 DTL because Cascade recognized $90,000 book gain but only $30,000 for tax, deferring $60,000 — a taxable temporary difference. A candidate reaching this conclusion likely mis-added the components or confused the installment sale treatment. The correct net position is an $80,000 deferred tax liability. The controller should verify that each choice's stated result matches its underlying arithmetic before selecting.",
+  "ExplanationWrongB": "",
+  "ExplanationWrongC": "This recommendation incorrectly classifies all three items as deferred tax liabilities without distinguishing between taxable and deductible temporary differences. Under ASC 740-10-20, a DTA is recognized for deductible temporary differences — where the book basis of a liability exceeds its tax basis. The warranty accrual is a textbook deductible temporary difference: Cascade has a $120,000 accrued warranty liability on its books but zero tax basis, creating a $30,000 DTA ($120,000 × 25%). Additionally, using the total book gain ($90,000) rather than the deferred portion ($60,000) overstates the installment sale temporary difference. Only the timing difference creates a deferred tax effect — the $30,000 already recognized for tax has no deferred tax impact. The controller must analyze each temporary difference individually for direction.",
+  "ExplanationWrongD": "This recommendation correctly identifies the depreciation DTL ($95,000) and warranty DTA ($30,000) but incorrectly classifies the installment sale gain as producing a deferred tax asset. The installment sale is a taxable temporary difference, not a deductible one. Cascade recognized $90,000 of book gain but only $30,000 of tax gain — meaning book income exceeds taxable income by $60,000. This creates a DTL of $15,000, not a DTA. The common error is confusing cash flow timing (Cascade will collect cash later) with book-tax timing (Cascade already recognized the book income). Deferred tax classification follows book-tax differences, not cash flow patterns. The correct net deferred tax liability is $80,000 ($95,000 + $15,000 - $30,000).",
+  "DifficultyScore": 4,
+  "CognitiveLevel": "Evaluate"
+}

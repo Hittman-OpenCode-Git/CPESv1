@@ -1,0 +1,113 @@
+{
+  "session": "62",
+  "title": "MCQ Rewrite Backlog Analysis",
+  "date": "2026-07-28",
+  "methodology": "Based on cognitive level distribution across all 5 packs, excluding S061/S062 already-rewritten items and recent S899-S60 authoring (Packs C+D Sections E+F)",
+
+  "current_cognitive_distribution": {
+    "Pack_A": {"Remember": 3, "Understand": 172, "Apply": 270, "Analyze": 32, "Evaluate": 23},
+    "Pack_B": {"Remember": 41, "Understand": 121, "Apply": 315, "Analyze": 10, "Evaluate": 15},
+    "Pack_C": {"Remember": 27, "Understand": 186, "Apply": 197, "Analyze": 56, "Evaluate": 34},
+    "Pack_D": {"Remember": 0, "Understand": 188, "Apply": 205, "Analyze": 66, "Evaluate": 41},
+    "Pack_E": {"Remember": 10, "Understand": 409, "Apply": 110, "Analyze": 6, "Evaluate": 10}
+  },
+
+  "rewrite_candidate_inventory": {
+    "total_understand_apply": 2184,
+    "understand_only": 1076,
+    "apply_only": 1097,
+    "already_rewritten_s061_s062": 34,
+    "recent_authoring_excluded": "~100 items (Packs C+D Sections E+F, S899-S60)",
+    "pack_e_dl016_blocked": "~525 items (entire Pack E pending DL-016 resolution)",
+    "available_rewrite_pool": "~1,525 items"
+  },
+
+  "priority_sections_by_roi": [
+    {
+      "section": "E — Internal Controls",
+      "understand_items": "~200 across Packs A+B",
+      "roi_rationale": "COSO-based scenarios naturally support Evaluate-level judgment. Many items already have rich multi-paragraph scenarios that only need cognitive elevation.",
+      "estimated_rewrite_candidates": "~150 (Packs A+B+C+D)",
+      "estimated_waves": "~8-10 waves"
+    },
+    {
+      "section": "B — Planning, Budgeting, and Forecasting",
+      "understand_items": "~150 across all packs",
+      "roi_rationale": "Budgeting tradeoffs, transfer pricing, and responsibility accounting are inherently decision-oriented. Definition-driven items convert well to scenario-based Evaluate items.",
+      "estimated_rewrite_candidates": "~120",
+      "estimated_waves": "~6-8 waves"
+    },
+    {
+      "section": "A — External Financial Reporting",
+      "understand_items": "~120 across all packs",
+      "roi_rationale": "ASC classification judgments (subsequent events, debt classification, revenue recognition) support genuine professional judgment scenarios.",
+      "estimated_rewrite_candidates": "~80",
+      "estimated_waves": "~4-6 waves"
+    },
+    {
+      "section": "D — Cost Management",
+      "understand_items": "~180 across all packs",
+      "roi_rationale": "TOC, relevant costing, keep-or-drop, make-or-buy naturally support analysis with specific financial data.",
+      "estimated_rewrite_candidates": "~120",
+      "estimated_waves": "~6-8 waves"
+    },
+    {
+      "section": "F — Technology and Analytics",
+      "understand_items": "~100 across Packs A+B",
+      "roi_rationale": "AI/ML risk, ERP controls, data governance — emerging topics benefit from scenario-based testing.",
+      "estimated_rewrite_candidates": "~60",
+      "estimated_waves": "~3-4 waves"
+    },
+    {
+      "section": "C — Performance Management",
+      "understand_items": "~80 across all packs",
+      "roi_rationale": "ROI/RI, variance analysis, balanced scorecard — smaller pool but high per-item quality impact.",
+      "estimated_rewrite_candidates": "~50",
+      "estimated_waves": "~3 waves"
+    }
+  ],
+
+  "evaluate_gap_analysis": {
+    "current_evaluate_pool": 126,
+    "cqs_target_15_percent": 381,
+    "evaluate_shortfall": 255,
+    "rewrite_only_path": "~25 waves at 10 Evaluate/wave",
+    "alternative_paths": [
+      "Fresh-authored Evaluate items replacing DL-012 clones",
+      "Pack E DL-016 repair unlocking ~409 Understand items for rewrite",
+      "Case bank item difficulty recalibration (currently 100% Moderate)"
+    ]
+  },
+
+  "maximum_rewrite_capacity": {
+    "per_wave_applied": "~14 items (Packs A+B only; Pack E blocked, C+D E+F recent authoring)",
+    "per_wave_with_pack_e": "~20 items (after DL-016 resolution)",
+    "per_wave_with_all_packs": "~20 items (after C+D E+F authoring stabilizes)",
+    "estimated_remaining_waves_for_full_coverage": "~50-75 waves at current capacity"
+  },
+
+  "blockers": [
+    {
+      "blocker": "DL-016 — Pack E dual-block architecture",
+      "impact": "Blocks ~525 Pack E items from safe individual rewriting",
+      "resolution": "Full Pack E rotation-group repair before content rewrites"
+    },
+    {
+      "blocker": "S899-S60 recent authoring — Packs C+D Sections E+F",
+      "impact": "~100 items recently authored, should not be rewritten until stabilized",
+      "resolution": "Allow 2-3 waves of stabilization before targeting these sections"
+    },
+    {
+      "blocker": "DL-012 clone archival — Pack C+D Section E",
+      "impact": "140 clone items taking up QID slots that could hold fresh Evaluate content",
+      "resolution": "Archive clones, replace with fresh-authored Evaluate items (S380 model)"
+    }
+  ],
+
+  "recommendation": {
+    "permanent_track": true,
+    "rationale": "The Session 61+62 pilot has demonstrated that substantive rewrites produce higher-value improvements than metadata reclassification, difficulty relabeling, or explanation expansion alone. The methodology is repeatable, produces consistent quality, and directly attacks the cognitive-gap and Evaluate-track objectives.",
+    "recommended_frequency": "One wave per session cycle, targeting 10-14 items per wave",
+    "next_wave_target": "Session 63 — Pack A Section A and Pack B Section A (financial reporting judgment items)"
+  }
+}

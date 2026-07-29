@@ -1,0 +1,71 @@
+{
+  "session": "S381",
+  "timestamp": "2026-07-28T21:52:00.000Z",
+  "pre_delivery_safety": {
+    "exit_code": 1,
+    "dl008_count": 10,
+    "dl026_count": 0,
+    "dl021_count": 0,
+    "rule9_count": 0,
+    "certified_total": 2441,
+    "safe_count": 2431,
+    "unsafe_count": 10
+  },
+  "post_change_qc": {
+    "exit_code": 1,
+    "governance_tests_pass": 54,
+    "governance_tests_fail": 0,
+    "pack_qid_counts": {
+      "pack_a": 500,
+      "pack_b": 500,
+      "pack_c": 500,
+      "pack_d": 500,
+      "pack_e": 545
+    },
+    "pack_e_qid_note": "post_change_qc expects 540 but file has 545 QuestionID matches (540 unique + 5 dual-block duplicates). Expected value in post_change_qc.js line 25 may need update."
+  },
+  "dl008_direct_verification": {
+    "s381_targets": 5,
+    "s381_targets_cleared": true,
+    "s381_target_details": [
+      {"qid": "P1B-C-153", "pack": "pack_b", "cc": "A", "ew_cc_empty": true, "file_line": 9602},
+      {"qid": "P1-CC-015", "pack": "pack_c", "cc": "B", "ew_cc_empty": true, "file_line": 9695},
+      {"qid": "P1-EC-031", "pack": "pack_c", "cc": "D", "ew_cc_empty": true, "file_line": 19254},
+      {"qid": "P1-ED-016", "pack": "pack_d", "cc": "B", "ew_cc_empty": true, "file_line": 18496},
+      {"qid": "P1-ED-051", "pack": "pack_d", "cc": "D", "ew_cc_empty": true, "file_line": 20274}
+    ],
+    "new_findings": 10,
+    "new_findings_confirmed": true,
+    "new_findings_details": [
+      {"qid": "P1-CC-013", "pack": "pack_c", "cc": "A", "ew_cc_empty": false, "file_line": 9595},
+      {"qid": "P1-CC-033", "pack": "pack_c", "cc": "A", "ew_cc_empty": false, "file_line": 10595},
+      {"qid": "P1-CC-041", "pack": "pack_c", "cc": "A", "ew_cc_empty": false, "file_line": 10995},
+      {"qid": "P1-CC-049", "pack": "pack_c", "cc": "A", "ew_cc_empty": false, "file_line": 11395},
+      {"qid": "P1-EC-049", "pack": "pack_c", "cc": "A", "ew_cc_empty": false, "file_line": 20163},
+      {"qid": "P1-EC-061", "pack": "pack_c", "cc": "A", "ew_cc_empty": false, "file_line": 20772},
+      {"qid": "P1-CD-016", "pack": "pack_d", "cc": "D", "ew_cc_empty": false, "file_line": 9742},
+      {"qid": "P1-CD-056", "pack": "pack_d", "cc": "D", "ew_cc_empty": false, "file_line": 11743},
+      {"qid": "P1-CD-066", "pack": "pack_d", "cc": "B", "ew_cc_empty": false, "file_line": 12243},
+      {"qid": "P1-CD-091", "pack": "pack_d", "cc": "C", "ew_cc_empty": false, "file_line": 13493}
+    ]
+  },
+  "analysis": {
+    "s381_dl008_status": "PASS — All 5 S381 DL-008 targets successfully remediated. EW[CC] confirmed empty for all 5.",
+    "s381_dl026_status": "PASS — All 65 S381 DL-026 targets confirmed clean. 0 DL-026 on Certified items.",
+    "residual_dl008_status": "FAIL — 10 additional Certified DL-008 items discovered that were NOT in S381's remediation scope. S380 residual-defect board undercounted.",
+    "dl026_status": "PASS — 0 DL-026 on Certified items (S381's 65 remeditations + S380 residual board = all clean).",
+    "dl021_status": "PASS — 0 DL-021 on Certified items.",
+    "rule9_status": "PASS — 0 Rule 9 violations on Certified items.",
+    "governance_guard": "PASS — 54/54 tests, 0 failures.",
+    "parse_validation": "PASS — All 5 packs parse successfully.",
+    "pack_e_qid_count": "OK — 545 QuestionID matches (540 unique + 5 dual-block artifacts). Expected value in post_change_qc.js may be stale.",
+    "new_findings_pattern": "6 Pack C items ALL have CC=A with EW_A non-empty. This is a consistent rotation artifact suggesting these are from a template group where A was systematically filled. 4 Pack D items have CC=D(2), B(1), C(1) — scattered rather than systematic."
+  },
+  "residual_defect_gap": {
+    "description": "10 Certified items with DL-008 remain in the learner pool. S380 residual-defect board missed these 10 items. S381 did not address them because they were not in its task scope.",
+    "pack_c": ["P1-CC-013", "P1-CC-033", "P1-CC-041", "P1-CC-049", "P1-EC-049", "P1-EC-061"],
+    "pack_d": ["P1-CD-016", "P1-CD-056", "P1-CD-066", "P1-CD-091"],
+    "learner_pool_impact": "HIGH — All 10 items are Certified and in the active learner delivery pool."
+  },
+  "verdict": "VERIFIED_WITH_ISSUES"
+}

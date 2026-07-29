@@ -1,0 +1,72 @@
+{
+  "session": "62",
+  "title": "MCQ Quality Elevation Program — Wave 2",
+  "date": "2026-07-28",
+  "status": "COMPLETE — 14 of 20 applied (6 Pack E authored, not applied due to DL-016 dual-block architecture)",
+  "applied_rewrites": 14,
+  "authored_not_applied": 6,
+  "total_authored": 20,
+  "cognitive_upgrades": {
+    "Understand_to_Evaluate": 10,
+    "Understand_to_Analyze": 10
+  },
+  "difficulty_upgrades": {
+    "Easy/Moderate_to_Difficult": 20
+  },
+  "applied_pack_distribution": {
+    "Pack_A": 8,
+    "Pack_B": 6,
+    "Pack_E": 0
+  },
+  "authored_pack_distribution": {
+    "Pack_A": 8,
+    "Pack_B": 6,
+    "Pack_E": 6
+  },
+  "applied_section_distribution": {
+    "A": 2, "B": 2, "C": 1, "D": 1, "E": 7, "F": 1
+  },
+  "correctchoice_changes": [
+    {"qid": "P1-A-013", "old": "C", "new": "B", "reason": "New scenario — ASC 855 Type I vs Type II judgment with controller memo"},
+    {"qid": "P1-D-020", "old": "A", "new": "C", "reason": "New scenario — TOC product mix optimization with specific CM/minute calculation"},
+    {"qid": "P1-E-081", "old": "B", "new": "A", "reason": "New scenario — Prioritize vendor master file SoD over material weakness classification"},
+    {"qid": "P1-E-082", "old": "B", "new": "A", "reason": "New scenario — Recommend documented emergency change procedure over discipline"},
+    {"qid": "P1-E-083", "old": "B", "new": "A", "reason": "New scenario — Recommend ERP-enforced SoD + address cross-check over controller consolidation"},
+    {"qid": "P1B-A-136", "old": "B", "new": "A", "reason": "New scenario — ASC 470 classification: entire $180M current per acceleration clause"},
+    {"qid": "P1B-B-158", "old": "A", "new": "B", "reason": "New scenario — Budgetary slack as the most defensible disadvantage"},
+    {"qid": "P1B-B-165", "old": "D", "new": "C", "reason": "New scenario — Exclude depreciation and allocations from controllable costs"},
+    {"qid": "P1B-F-120", "old": "C", "new": "A", "reason": "New scenario — Training-data contamination as primary ML risk over explainability"},
+    {"qid": "P1B-F-138", "old": "A", "new": "B", "reason": "New scenario — Access control failure as root cause, not workflow design deficiency"}
+  ],
+  "governance": {
+    "guard_tests": "54/54 PASS",
+    "syntax_pack_a": "PASS (500 items)",
+    "syntax_pack_b": "PASS (500 items)",
+    "syntax_pack_e": "UNCHANGED (545 items)",
+    "dl008_on_targets": 0,
+    "dl026_on_targets": 0,
+    "dl037_on_targets": 0,
+    "pack_a_dl008_total": 0,
+    "pack_b_dl008_total": 0
+  },
+  "pack_e_situation": {
+    "status": "AUTHORED_NOT_APPLIED",
+    "reason": "Pack E uses DL-016 dual-block architecture where metadata ExplanationWrong fields and content blocks are offset by +1 in the rotation group. Safe rewriting requires full DL-016 pack repair before content updates. All 6 rewrites are fully authored and ready for application once the Pack E dual-block architecture is resolved.",
+    "authored_qids": ["P1E-B-038", "P1E-C-017", "P1E-D-031", "P1E-D-032", "P1E-E-026", "P1E-E-051"],
+    "target_cognitive": {"Evaluate": ["P1E-E-051"], "Analyze": ["P1E-B-038", "P1E-C-017", "P1E-D-031", "P1E-D-032", "P1E-E-026"]}
+  },
+  "rewrite_quality": {
+    "business_realistic_scenarios": 20,
+    "named_companies_and_stakeholders": 20,
+    "quantified_business_situations": 20,
+    "decision_oriented_framing": 20,
+    "explanation_correct_avg_words": 285,
+    "explanation_wrong_avg_words": 165,
+    "asc_coso_references": 20
+  },
+  "backups": [
+    "backups/pack_a_corrected.js.bak-S062-20260728210000",
+    "backups/pack_b_corrected.js.bak-S062-20260728210000",
+    "backups/pack_e_corrected.js.bak-S062-20260728210000"
+  ]
+}

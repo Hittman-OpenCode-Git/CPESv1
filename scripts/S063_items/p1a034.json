@@ -1,0 +1,47 @@
+{
+  "Part": 1,
+  "Section": "A",
+  "SectionName": "External Financial Reporting Decisions",
+  "Topic": "A.034 loss contingency range disclosure",
+  "MicroTopic": "loss contingency range disclosure",
+  "UniqueConceptKey": "A-034-loss-contingency-range-disclosure",
+  "LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
+  "Difficulty": "Difficult",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "CONTROLLER'S ASSESSMENT — Phoenix Chemical Corporation\n\nTO: Controller's File\nFROM: Janet Reyes, Controller\nRE: Environmental Remediation Liability — Wheeler River Superfund Site\n\nPhoenix has been named a potentially responsible party (PRP) for contamination at the Wheeler River site, where it operated a solvent recovery facility (1993-2007). The EPA estimates total cleanup costs between $4.2M and $18.6M, allocated among eight PRPs. Outside counsel's probability assessment of Phoenix's share:\n\n- 25%: 15% of total costs (share: $630K-$2.79M)\n- 45%: 30% of total costs (share: $1.26M-$5.58M) — most likely outcome per counsel\n- 20%: 45% of total costs (share: $1.89M-$8.37M)\n- 10%: Zero liability\n\nNo single amount within the $1.26M-$5.58M range is a better estimate than any other. The EPA's final Record of Decision is 18-24 months away. Financial statements must be issued in 45 days. Ms. Reyes asks: 'What amount should we accrue under ASC 450, and what requires disclosure?'",
+  "Choices": {
+    "A": "Accrue $1,260,000 (minimum of the most-likely-scenario range). Under ASC 450-20-25-2, when a range of probable loss exists and no amount within the range is a better estimate, the minimum is accrued. The 90% combined probability (25%+45%+20%) establishes that liability is probable. Disclose the additional exposure of up to $4,320,000 plus the reasonably possible outcomes from other scenarios.",
+    "B": "Accrue the probability-weighted expected value: approximately $2,992,500 using midpoints of each scenario. Disclose the full range ($0-$8.37M) and the methodology. The expected value approach provides the most decision-useful estimate for a single environmental remediation liability under ASC 450.",
+    "C": "No accrual is required because the loss is not probable — only a 45% likelihood of the most likely allocation, and the specific percentage is uncertain. Accrual requires a specific measurable obligation that does not exist until the EPA issues the Record of Decision. Disclose the full range of outcomes and probability assessment.",
+    "D": "Accrue $5,580,000 (maximum of most-likely range) because ASC 450 requires conservative treatment of environmental liabilities. The EPA's Superfund designation indicates a high probability of significant liability. Accrue the maximum and disclose the possibility of outcomes above this amount."
+  },
+  "CorrectChoice": "A",
+  "ExplanationCorrect": "Under ASC 450-20-25-2, a loss contingency is accrued when: (1) it is probable a liability has been incurred, and (2) the amount can be reasonably estimated. The obligating event is Phoenix's historical operation of the facility (1993-2007). The liability existed at the balance sheet date even though the EPA's cost determination is pending. The 90% combined probability of some liability clearly meets the 'probable' threshold. Regarding measurement, counsel identifies the 30% allocation scenario as most likely (45% probability), giving a range of $1.26M-$5.58M. Per ASC 450-20-25-2(b), when no amount within the range is a better estimate, the minimum is accrued: $1,260,000. The additional $4,320,000 exposure must be disclosed, along with the nature of the contingency and the range of reasonably possible outcomes. A critical exam trap is confusing 'probable' with 'certain' — ASC 450's threshold is 'likely to occur,' not 'confirmed by a regulator.' EPA Superfund liability is accrued before final regulatory action. Another trap is using expected value for a single obligation — ASC 450 applies range guidance, not probability-weighted modeling, for single obligations.",
+  "StudyLinks": [
+    {"label": "IMA CMA Learning Outcome Statements, Part 1 Section A", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
+    {"label": "OpenStax Financial Accounting", "url": "https://openstax.org/books/principles-financial-accounting/pages/1-why-it-matters"}
+  ],
+  "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+  "QuestionID": "P1-A-034",
+  "question_state": "Certified",
+  "certification_date": "2026-07-22",
+  "certification_batch": "Section A Block 1",
+  "CalculationItem": false,
+  "pedagogical_cluster": "ASC_450_axis_cluster",
+  "VerifiedChecks": [
+    "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+    "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+    "Original practice item with unique micro-topic and stem",
+    "Answer key distribution balanced across A/B/C/D",
+    "Distractors written as plausible CMA-style traps"
+  ],
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "This recommendation incorrectly applies expected value methodology to a single litigation contingency. Under ASC 450-20-25-2, for a single obligation with a range of possible outcomes, the guidance directs accrual of the minimum in the range when no single amount is a better estimate. The expected value approach (approximately $2,992,500) is appropriate for large portfolios of homogeneous obligations (warranty claims, customer rebates), where the law of large numbers operates. A single environmental remediation liability is an n-of-1 event — Phoenix will pay one specific amount, not the probability-weighted average. The FASB explicitly rejected expected-value measurement for single-obligation contingencies in the ASC 450 framework. The controller should accrue $1,260,000 (minimum of most-likely range) and disclose the full range of exposure.",
+  "ExplanationWrongC": "This recommendation incorrectly concludes the loss is not probable. Under ASC 450-20-20, 'probable' means the future event is likely to occur. Outside counsel's assessment shows a 90% combined probability of some liability (25%+45%+20%), clearly meeting the probable threshold. The uncertainty about the exact allocation percentage (15%, 30%, or 45%) does not negate probability — the controller can estimate using the most likely scenario and apply range guidance. The EPA's pending Record of Decision does not excuse accrual: ASC 410-30 (Environmental Obligations) and ASC 450 both require recognition when the liability is probable and estimable, regardless of pending regulatory action. Many environmental liabilities are accrued years before final regulatory determination.",
+  "ExplanationWrongD": "This recommendation incorrectly invokes 'conservatism' to accrue the maximum rather than the minimum. Under ASC 450-20-25-2, when a range of probable loss exists and no amount is a better estimate, accrue the MINIMUM — not the maximum. The conceptual framework no longer includes conservatism as a desirable qualitative characteristic; neutrality (freedom from bias) is preferred over conservative bias. Accruing $5,580,000 when the best estimate ranges from $1,260,000 to $5,580,000 would overstate Phoenix's liability and understate income, creating a reserve that could be reversed in a future period. The controller should accrue the minimum ($1,260,000) and disclose the $4,320,000 additional exposure — users receive complete information about the range without bias toward overstatement. The EPA Superfund designation informs probability, but the measurement framework operates independently of the enforcement agency's identity.",
+  "DifficultyScore": 4,
+  "CognitiveLevel": "Evaluate"
+}

@@ -1,0 +1,83 @@
+{
+  "session": "S60B",
+  "date": "2026-07-28T21:28:32.324Z",
+  "pack": "pack_d_corrected.js",
+  "targets": [
+    "P1-ED-041",
+    "P1-ED-047",
+    "P1-ED-048",
+    "P1-ED-052",
+    "P1-ED-053",
+    "P1-ED-055",
+    "P1-ED-056",
+    "P1-ED-057",
+    "P1-ED-059",
+    "P1-ED-061",
+    "P1-ED-062",
+    "P1-ED-063",
+    "P1-ED-065",
+    "P1-ED-068"
+  ],
+  "replaced": 14,
+  "skipped": 0,
+  "beforeArchived": 14,
+  "objectsTotal": 500,
+  "ledger": [
+    {
+      "qid": "P1-ED-041",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-047",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-048",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-052",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-053",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-055",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-056",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-057",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-059",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-061",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-062",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-063",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-065",
+      "status": "REPLACED"
+    },
+    {
+      "qid": "P1-ED-068",
+      "status": "REPLACED"
+    }
+  ]
+}

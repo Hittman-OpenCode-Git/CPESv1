@@ -1,0 +1,100 @@
+{
+  "session": "S381",
+  "timestamp": "2026-07-28T22:15:00.000Z",
+  "prior_readiness": 85,
+  "conditions": {
+    "A_DL035_LearnerPool": {
+      "prior": 10,
+      "current": 5,
+      "delta": -5,
+      "status": "DOWNGRADED — 5 DL-008 S381 targets cleared, but 10 newly discovered DL-008 Certified items remain. DL-026 now 0 (65 remediated). Net: 10 DL-008 × −1 = −10 from max 15."
+    },
+    "B_DL031_Difficulty": {
+      "prior": 10,
+      "current": 10,
+      "delta": 0,
+      "status": "CLOSED"
+    },
+    "C_Automation": {
+      "prior": 10,
+      "current": 12,
+      "delta": 2,
+      "status": "UPGRADED — post_change_qc DEPLOYED, pre_delivery_safety DEPLOYED, classify_dl031 DEPLOYED, rebuild_baselines PARTIALLY DEPLOYED (dry-run works, output file not produced). 3.5/4 effective scripts."
+    },
+    "D_Throughput": {
+      "prior": 5,
+      "current": 5,
+      "delta": 0,
+      "status": "PARTIAL — 2 waves/week sustainable, 3-week proof pending (S382 gate)"
+    },
+    "E_CognitiveGap": {
+      "prior": 15,
+      "current": 15,
+      "delta": 0,
+      "status": "ACTIVE — Evaluate track active, producing results"
+    },
+    "F_EvaluateWorkstream": {
+      "prior": 15,
+      "current": 15,
+      "delta": 0,
+      "status": "ACTIVE — Dedicated workstream launched, Wave 1 complete (5 items, 0 defects)"
+    },
+    "G_GovernanceGuard": {
+      "prior": 10,
+      "current": 10,
+      "delta": 0,
+      "status": "STABLE — 54/54 tests PASS"
+    },
+    "H_IterationStability": {
+      "prior": 10,
+      "current": 10,
+      "delta": 0,
+      "status": "STABLE — QID counts stable (500/500/500/500/545), no certification drift"
+    }
+  },
+  "updated_readiness": 82,
+  "target": 90,
+  "gap": 8,
+  "remaining_blockers": [
+    "10 Certified DL-008 items (S380 residual-defect board undercounted) — Packs C (6) + D (4). 6 have CC=A (systematic rotation artifact), 4 scattered. Costs 10 points from Condition A — the single largest remaining blocker.",
+    "rebuild_baselines.js PARTIALLY DEPLOYED — dry-run works but output file not produced. Costs 3 points from Condition C. Also blocks CURRENT_BASELINES.md accuracy update — one of the S376 5 specific conditions still NOT_MET.",
+    "Throughput sustainability unproven (Condition D at 5/10) — 3-week consecutive monitoring required at 2+ waves/week (S374 Condition D). S382 gate at week 3.",
+    "CURRENT_BASELINES.md still stale from S380 — S376 Condition 3 NOT_MET. S381 did not update it.",
+    "P1-FD-046 structurally corrupted — missing Stem, Choices, CorrectChoice, ExplanationCorrect. Requires content authoring or archival.",
+    "S853 WAVE_A certification pipeline audit — why DL-008/DL-026 checks failed on Domain E+F items. Root cause investigation pending.",
+    "DEFECT_LIBRARY.md entries (DL-008, DL-026) still claim '0 remaining'/'0 Certified' — both false. Documentation debt.",
+    "Evaluate gap: 306 items remaining (target 381, current 75). ~19 weeks at 8.5 Evaluate/wave."
+  ],
+  "expansion_earned": false,
+  "s381_delta_analysis": {
+    "gains": [
+      {"component": "C_Automation", "points": 2, "reason": "classify_dl031.js confirmed DEPLOYED and producing output. Rebuild_baselines advanced to PARTIALLY (was previously NOT DEPLOYED in S380)."},
+      {"component": "DL-026 remediation", "points": "structural", "reason": "65 DL-026 items (S381 targets) all cleared — 0 DL-026 on Certified items. Eliminates the largest residual defect category. Enables Condition A floor recalculation."}
+    ],
+    "losses": [
+      {"component": "A_LearnerPool", "points": -5, "reason": "10 newly discovered DL-008 items (S380 undercounted by 5 — found 5 DL-008 + 65 DL-026, actual was 15 DL-008 + 65 DL-026). S381 remediated 5 targets, leaving 10 residual. Formula: 15 − 10×1 = 5."}
+    ],
+    "net": -3,
+    "detail": "S380 score was 85, partially sustained by treating the 70 residual as countervailing deductions rather than applying the strict per-QID Condition A formula. S381 applies the strict formula: A drops from 10→5 because 10 DL-008 items remain (most discovered only during S381 verification). The DL-026 side improved (65→0), and automation improved (C: 10→12), but these gains were outweighed by the DL-008 discovery impact on Condition A."
+  },
+  "new_dl008_discovery": {
+    "count": 10,
+    "items": [
+      {"qid": "P1-CC-013", "pack": "pack_c", "cc": "A"},
+      {"qid": "P1-CC-033", "pack": "pack_c", "cc": "A"},
+      {"qid": "P1-CC-041", "pack": "pack_c", "cc": "A"},
+      {"qid": "P1-CC-049", "pack": "pack_c", "cc": "A"},
+      {"qid": "P1-EC-049", "pack": "pack_c", "cc": "A"},
+      {"qid": "P1-EC-061", "pack": "pack_c", "cc": "A"},
+      {"qid": "P1-CD-016", "pack": "pack_d", "cc": "D"},
+      {"qid": "P1-CD-056", "pack": "pack_d", "cc": "D"},
+      {"qid": "P1-CD-066", "pack": "pack_d", "cc": "B"},
+      {"qid": "P1-CD-091", "pack": "pack_d", "cc": "C"}
+    ],
+    "pattern": "6 Pack C items ALL have CorrectChoice=A with non-empty ExplanationWrongA — consistent systematic rotation artifact from template group. 4 Pack D items scattered (CC=D×2, B, C).",
+    "learner_pool_impact": "HIGH — all 10 items are Certified and in the active learner pool. When learners review the correct answer on these items, they see fragmentary/distractor text in the correct-answer explanation slot.",
+    "s380_undercount_analysis": "S380 residual-defect board reported 5 DL-008 items. S381 pre_delivery_safety now reports 10. S381 remediated the 5 known targets. The additional 10 were never in scope — they were present pre-S381 but escaped S380 detection (undercount = 10 items, not 5). Total actual DL-008 in pool was 15 pre-S381, not 5. Post-S381: 10 remaining.",
+    "estimated_remediation": "~1 wave (10 items, ≤30 batch cap, ~2.5h). All 10 are mechanical clears (zero content loss — ExplanationCorrect independently contains the full explanation). Pattern: clear EW[CC] to empty string."
+  },
+  "recommendation": "EXPANSION NOT YET EARNED. Score dropped from 85→82 (Δ−3). The primary blocker is Condition A (5/15) — 10 Certified DL-008 items discovered during S381 verification that S380's residual-defect board undercounted. These are well-understood and mechanically remediable (~1 wave). Condition C (12/15) improved — rebuild_baselines.js is the last automation gap. Condition D (5/15) requires 3 weeks of sustained throughput (S382 gate). Path to 90: remediate 10 DL-008 items (+5, A→10), complete rebuild_baselines deployment (+3, C→15). That alone reaches 90. The 10 DL-008 items are the single highest-priority S382 task."
+}

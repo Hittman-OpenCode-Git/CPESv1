@@ -524,10 +524,15 @@ const CASE_PACK_3 = [
   "EstimatedMinutes": 30,
   "ExhibitCount": 2,
   "LastValidated": "2026-07-20",
+  "CompanyName": "Granite Corp",
+  "CompanyType": "Manufacturer",
+  "Industry": "Manufacturing",
+  "Stakeholder": "Granite Corp (CFO)",
+  "BusinessFunction": "Financial reporting",
   "LearningObjectives": [
     "Analyze bond payable accounting and amortization"
   ],
-  "ProductionStatus": "Draft",
+  "ProductionStatus": "Production",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,
   "QuestionCount": 5,
@@ -725,7 +730,7 @@ const CASE_PACK_3 = [
     }
   ],
   "question_state": "Certified",
-  "pack_state": "Draft",
+  "pack_state": "Production",
   "pedagogical_cluster": "",
   "question_tier": "Ungraded",
   "question_status": "Active"

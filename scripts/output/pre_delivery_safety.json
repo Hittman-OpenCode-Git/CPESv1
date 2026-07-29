@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-07-28T22:20:42.297Z",
-  "total_certified": 2441,
-  "safe_certified": 2441,
+  "timestamp": "2026-07-29T01:08:42.582Z",
+  "total_certified": 2451,
+  "safe_certified": 2451,
   "unsafe_certified": 0,
   "per_pack": {
     "Pack A": {
@@ -18,8 +18,8 @@
     },
     "Pack C": {
       "file": "pack_c_corrected.js",
-      "certified": 445,
-      "safe": 445,
+      "certified": 455,
+      "safe": 455,
       "unsafe": 0
     },
     "Pack D": {
