@@ -27539,3 +27539,83 @@ result = result.filter(c => {
 
 ---
 
+## SESSION074 — 2026-07-29 — Pack D Section B Cognitive Upgrade Wave 4
+
+### Summary
+Wave 4 of the Pack D Section B cognitive upgrade campaign. 15 items upgraded from Apply/Understand to Evaluate/Analyze. Section B higher-order percentage advanced from 54.0% (post-S73) to 69.0% (post-S74).
+
+### Content Changes — 15 items
+
+| QID | From | To | Topic | Company | Stakeholder |
+|-----|------|-----|-------|---------|-------------|
+| P1-BD-013 | Apply | Evaluate | Incremental → ABB methodology | Ashford Mfg | CFO James Okonkwo |
+| P1-BD-020 | Apply | Evaluate | Capital expenditure project selection | Harrowgate Industries | CFO Patricia Owens |
+| P1-BD-027 | Apply | Analyze | Labor budget blended rate timing | Crownridge Mfg | Analyst Priya Anand |
+| P1-BD-038 | Apply | Evaluate | Operating vs cash budget divergence | Norwood Peak | Controller Sarah Kessler |
+| P1-BD-042 | Apply | Analyze | Time series trend decomposition | Manufacturer | Analyst (implicit) |
+| P1-BD-034 | Understand | Evaluate | Standard cost supplier quality tradeoff | Northstar Fabrication | Controller Rebecca Walsh |
+| P1-BD-056 | Apply | Evaluate | Budget committee governance structure | Harrowgate Industries | CEO Patricia Owens |
+| P1-BD-063 | Apply | Evaluate | S&A step-cost capacity staffing | Meridian Equipment | Controller Diana Park |
+| P1-BD-070 | Apply | Evaluate | Forecast model cost-benefit framework | Apex Distributors | CFO Derek Hoffman |
+| P1-BD-100 | Apply | Analyze | Labor rate & efficiency variance isolation | Meridian Steel | Supv. James Okonkwo |
+| P1-BD-008 | Apply | Evaluate | ZBB pilot scalability evaluation | Stonewell Industries | CFO Diana Park |
+| P1-BD-051 | Apply | Analyze | DM volume discount net savings analysis | Redcliff Industries | Purch. Mgr. James Wu |
+| P1-BD-066 | Apply | Evaluate | S&A cost reduction recommendation | Elmsworth Mfg | Controller Lisa Tran |
+| P1-BD-074 | Understand | Analyze | MAPE purpose and application | Alderway | Analyst (implicit) |
+| P1-BD-076 | Understand | Analyze | ABB variance decomposition by activity | Bayside Mfg | Analyst (implicit) |
+
+### Governance Validation
+
+| Check | Result |
+|-------|--------|
+| Governance guard | 54/54 PASS |
+| Pack D QID count | 500 (stable) |
+| Pack D parse | PASS |
+| Pack D Certified | 456 (stable) |
+| DL-008 | 0 — all CorrectChoice EW slots empty |
+| DL-026 | 0 — all non-CC EW slots non-empty with choice-specific text |
+| DL-030 | 0 — all CorrectChoice independently verified |
+| DL-037 | 0 — no binary lead-in polarity inversions |
+| Preflight | 2 pre-existing divergences (Pack E count, Certified count) — unchanged |
+
+### Section B Cognitive Distribution
+
+| Level | Pre-S74 | Post-S74 | Change |
+|-------|---------|----------|--------|
+| Apply | 34 | 22 | −12 |
+| Understand | 12 | 9 | −3 |
+| Analyze | 23 | 29 | +6 |
+| Evaluate | 31 | 40 | +9 |
+| Higher-order | 54.0% | 69.0% | +15.0pp |
+
+### Key Observations
+
+1. **DL-016 metadata-content divergence is pervasive in Pack D.** Many Section B content blocks had already been upgraded to high-quality Evaluate/Analyze scenarios in S70-S73, but metadata blocks carried stale cognitive levels and wrong-topic EW text from the original template pipeline. S74 primarily authored matching, choice-specific EW text.
+2. **Full content rewrites: 5 items** (BD-013, BD-020, BD-008, BD-051, BD-066) required new stems, choices, and explanations.
+3. **Metadata syncs: 10 items** already had rich content blocks but needed EW text rewritten to match their content choices.
+4. **Distractor EW quality target:** All non-CorrectChoice EW slots now contain choice-specific text targeting documented misconceptions, replacing DL-013 boilerplate and wrong-topic residue.
+
+### Backups
+- `backups/pack_d_corrected.js.bak-20260729181435` (2,321,615 bytes)
+
+### Files Changed
+- `pack_d_corrected.js`: 15 items upgraded (content + metadata blocks)
+- `knowledge/REVISION_HISTORY.md`: This entry appended
+- `reports/SESSION074_REWRITE_QUEUE.json`: Rewrite candidate selection
+- `reports/SESSION074_REWRITE_RESULTS.json`: Rewrite results
+- `reports/SESSION074_QUALITY_IMPROVEMENT_REPORT.md`: Quality classification (15/15 Improvement)
+- `reports/SESSION074_EVALUATE_GROWTH_REPORT.md`: Evaluate classification validation (9/9 PASS)
+- `reports/SESSION074_GOVERNANCE_REPORT.json`: Governance checks
+- `reports/SESSION074_CAMPAIGN_STATUS.json`: Campaign trajectory
+- `reports/SESSION074_THROUGHPUT_REPORT.json`: Throughput comparison
+
+### Commands Run
+- `npm run preflight` (T0)
+- `node scripts/test_governance_guard.js` (mid-session + Tend)
+- `npm run pipeline` (Tend)
+
+### Advice for S75
+Continue Pack D Section B. 31 low-order items remain (22 Apply + 9 Understand). Two more 15-item waves (S75, S76) would complete the section at ~99% higher-order. Pack D Section B has proven the highest-ROI rewrite pool in the repository across 5 consecutive waves.
+
+---
+

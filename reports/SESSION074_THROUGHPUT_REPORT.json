@@ -1,0 +1,31 @@
+{
+  "session": "SESSION074",
+  "title": "Throughput Report — S74 vs S71-S73",
+  "date": "2026-07-29",
+  "comparison": {
+    "s71": { "items": 5, "description": "Benchmark batch" },
+    "s72": { "items": 15, "description": "Wave 2" },
+    "s73": { "items": 15, "description": "Wave 3" },
+    "s74": { "items": 15, "description": "Wave 4" }
+  },
+  "s74_throughput": {
+    "total_items": 15,
+    "full_content_rewrites": 5,
+    "metadata_sync_with_ew_authoring": 10,
+    "total_ew_fields_authored": "~30 (3 per item × 10 items with EW rewrites)",
+    "selection_time": "Completed by explore agent in parallel",
+    "authoring_time": "Single session, approximately 15 rewrites in one continuous pass",
+    "qc_time": "Integrated — governance guard ran mid-session",
+    "total_estimated_time": "~2 hours continuous"
+  },
+  "efficiency_metrics": {
+    "items_per_hour": "~7.5",
+    "evaluate_items_per_hour": "~4.5",
+    "ew_fields_per_hour": "~15"
+  },
+  "notes": {
+    "batch_pattern": "All 15 items processed in one continuous session with mid-point QC. Three logical batches (5+5+5) with embedded governance checks.",
+    "key_observation": "Many Section B items had already been upgraded to high-quality content blocks in S70-S73 but metadata blocks carried stale cognitive levels and wrong-topic EW text. S74 primarily authored matching EW text and synced cognitive levels.",
+    "dl016_impact": "Pack D dual-block architecture means metadata block EW fields describe different items' choices than the content block. Every metadata sync required verifying CorrectChoice from the paired content block."
+  }
+}

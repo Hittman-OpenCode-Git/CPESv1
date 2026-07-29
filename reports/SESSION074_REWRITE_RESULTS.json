@@ -1,0 +1,63 @@
+{
+  "session": "SESSION074",
+  "title": "Section B Cognitive Upgrade Campaign — Wave 4",
+  "status": "COMPLETE",
+  "date": "2026-07-29",
+  "pack": "pack_d_corrected.js",
+  "backup": "backups/pack_d_corrected.js.bak-20260729181435",
+  "governance": {
+    "preflight": "2 pre-existing divergences (Pack E QID 545 vs 540, Certified delta 35) — unchanged from T0",
+    "governance_guard": "54/54 PASS",
+    "syntax": "PASS",
+    "qid_count": 500,
+    "parse": "PASS",
+    "certified_count": 456,
+    "dl008": "0 — all 15 items ExplanationWrong[CorrectChoice] = ''",
+    "dl026": "0 — all non-CC ExplanationWrong fields non-empty with choice-specific text",
+    "dl037": "0",
+    "dl030": "0 — all CorrectChoice values independently verified against content",
+    "pipeline": "PASS — 0 new errors on Pack D. All errors/warnings pre-existing in other packs (Pack A: 33E/271W, Pack B: 24E, Pack C: 318W, Pack E: 35W, Cases: 25W)"
+  },
+  "rewrite_summary": {
+    "total_rewritten": 15,
+    "evaluate_count": 9,
+    "analyze_count": 6,
+    "source_apply": 12,
+    "source_understand": 3,
+    "full_content_rewrites": 5,
+    "metadata_sync_with_ew_authoring": 10
+  },
+  "rewritten_items": [
+    {"qid":"P1-BD-013","from":"Apply","to":"Evaluate","topic":"Incremental budgeting — ABB methodology recommendation","company":"Ashford Manufacturing","stakeholder":"CFO James Okonkwo","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-020","from":"Apply","to":"Evaluate","topic":"Capital expenditure — competing project evaluation","company":"Harrowgate Industries","stakeholder":"CFO Patricia Owens","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-027","from":"Apply","to":"Analyze","topic":"Direct labor budget — blended rate timing analysis","company":"Crownridge Manufacturing","stakeholder":"Budget Analyst Priya Anand","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-038","from":"Apply","to":"Evaluate","topic":"Operating budget vs cash budget — divergence diagnostic","company":"Norwood Peak","stakeholder":"Controller Sarah Kessler","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-042","from":"Apply","to":"Analyze","topic":"Time series — deseasonalized trend vs seasonality decomposition","company":"Manufacturer","stakeholder":"Analyst (implicit)","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-034","from":"Understand","to":"Evaluate","topic":"Standard cost — supplier quality tradeoff bonus evaluation","company":"Northstar Fabrication","stakeholder":"Controller Rebecca Walsh","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-056","from":"Apply","to":"Evaluate","topic":"Budget committee — governance structure evaluation","company":"Harrowgate Industries","stakeholder":"CEO Patricia Owens","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-063","from":"Apply","to":"Evaluate","topic":"S&A expense — step-cost capacity staffing evaluation","company":"Meridian Equipment Distributors","stakeholder":"Controller Diana Park","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-070","from":"Apply","to":"Evaluate","topic":"Forecast accuracy — model selection cost-benefit framework","company":"Apex Distributors","stakeholder":"CFO Derek Hoffman","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-100","from":"Apply","to":"Analyze","topic":"Labor rate & efficiency variance — isolation and interpretation","company":"Meridian Steel","stakeholder":"Supervisor James Okonkwo","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-008","from":"Apply","to":"Evaluate","topic":"Incremental budgeting — ZBB pilot scalability evaluation","company":"Stonewell Industries","stakeholder":"CFO Diana Park","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-051","from":"Apply","to":"Analyze","topic":"Direct materials — volume discount net savings analysis","company":"Redcliff Industries","stakeholder":"Purchasing Mgr. James Wu","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-066","from":"Apply","to":"Evaluate","topic":"S&A expense — cost behavior analysis and reduction recommendation","company":"Elmsworth Manufacturing","stakeholder":"Controller Lisa Tran","difficulty":"Difficult (4)"},
+    {"qid":"P1-BD-074","from":"Understand","to":"Analyze","topic":"Forecast accuracy — MAPE purpose and application","company":"Alderway","stakeholder":"Analyst (implicit)","difficulty":"Moderate (3)"},
+    {"qid":"P1-BD-076","from":"Understand","to":"Analyze","topic":"Activity-based budgeting — variance decomposition by activity driver","company":"Bayside Manufacturing","stakeholder":"Analyst (implicit)","difficulty":"Difficult (4)"}
+  ],
+  "section_b_before_after": {
+    "before": { "apply": 34, "understand": 12, "analyze": 23, "evaluate": 31, "higher_order_pct": "54.0%" },
+    "after": { "apply": 22, "understand": 9, "analyze": 29, "evaluate": 40, "higher_order_pct": "69.0%" },
+    "improvement": "+15.0 percentage points"
+  },
+  "pack_d_before_after": {
+    "before": { "analyze": 101, "evaluate": 73, "higher_order_pct": "34.8%" },
+    "after": { "analyze": 107, "evaluate": 82, "higher_order_pct": "37.8%" }
+  },
+  "questions_answered": {
+    "Q1_analyze_count": 6,
+    "Q2_evaluate_count": 9,
+    "Q3_section_b_higher_order": "69.0% (was 54.0% post-S73, 4.0% pre-S70)",
+    "Q4_low_order_remaining": "31 items (22 Apply + 9 Understand)",
+    "Q5_next_session": "Continue Pack D Section B — 31 remaining low-order items suggests 2 more waves at 15 items each would complete the section. Pack D Section B at 69.0% higher-order is approaching the 75%+ threshold."
+  }
+}

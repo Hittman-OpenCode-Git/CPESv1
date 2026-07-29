@@ -1,0 +1,46 @@
+{
+  "session": "SESSION074",
+  "date": "2026-07-29T22:11:00Z",
+  "governance_lane": "Full Governance Lane",
+  "checks": {
+    "preflight_t0": {
+      "status": "PASS",
+      "divergences": 2,
+      "divergence_detail": [
+        "Pack E QID count 545 vs 540 baseline — pre-existing, not remediated",
+        "Certified count delta +35 vs stale baseline — pre-existing, not remediated"
+      ],
+      "pack_d_qid": 500,
+      "pack_d_parse": "OK",
+      "pack_d_certified": 456,
+      "governance_guard": "54/54 PASS"
+    },
+    "mid_session_checks": {
+      "qid_count_after_batch1": 500,
+      "governance_guard_after_batch1": "54/54 PASS"
+    },
+    "post_session_checks": {
+      "qid_count": 500,
+      "governance_guard": "54/54 PASS",
+      "pack_d_parse": "OK",
+      "pack_d_certified": 456,
+      "pipeline": "166 errors / 2225 warnings — 0 new on Pack D. All pre-existing across Pack A (33E/271W), Pack B (24E), Pack C (318W), Pack E (35W), Cases (various)"
+    },
+    "defect_scans": {
+      "dl008": "0 — all 15 items ExplanationWrong[CorrectChoice] verified empty",
+      "dl026": "0 — all non-CC ExplanationWrong fields verified non-empty with choice-specific text",
+      "dl030": "0 — all CorrectChoice values independently verified",
+      "dl037": "0 — no binary lead-in polarity inversions"
+    }
+  },
+  "files_changed": ["pack_d_corrected.js"],
+  "backup": "backups/pack_d_corrected.js.bak-20260729181435 (2,321,615 bytes)",
+  "section_b_cognitive_distribution": {
+    "apply": 22,
+    "understand": 9,
+    "analyze": 29,
+    "evaluate": 40
+  },
+  "governance_guard_tests": "54/54 PASS",
+  "pipeline_result": "PASS (Pack D — 0 new errors)"
+}

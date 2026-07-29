@@ -1,0 +1,37 @@
+{
+  "session": "SESSION074",
+  "title": "Pack D Section B Campaign Status — Post Wave 4",
+  "date": "2026-07-29",
+  "campaign_trajectory": {
+    "pre_S70": "4.0%",
+    "post_S70": "19.0%",
+    "post_S71": "24.0%",
+    "post_S72": "39.0%",
+    "post_S73": "54.0%",
+    "post_S74": "69.0%"
+  },
+  "current_section_b_state": {
+    "total_items": 100,
+    "apply": 22,
+    "understand": 9,
+    "analyze": 29,
+    "evaluate": 40,
+    "higher_order_count": 69,
+    "higher_order_pct": "69.0%",
+    "low_order_remaining": 31
+  },
+  "remaining_low_order_inventory": {
+    "apply": 22,
+    "understand": 9,
+    "estimated_waves_to_complete": "2-3 waves at 15 items per wave"
+  },
+  "recommendation": {
+    "decision": "Continue Pack D Section B",
+    "rationale": "Pack D Section B is now at 69.0% higher-order. Two more 15-item waves (S75, S76) would push the section to 99% higher-order. Pack D Section B has proven consistently high ROI across 5 waves. Complete the section before shifting to Pack A Section B.",
+    "target_completion": "S76 (2 waves remaining)"
+  },
+  "difficulty_distribution": {
+    "difficult": "12 of 15 new items at Difficult (4), 3 items elevated to Moderate or difficult",
+    "very_difficult": "0 new — existing Very Difficult items retained"
+  }
+}

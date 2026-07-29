@@ -1,0 +1,51 @@
+{
+  "session": "SESSION074",
+  "title": "Section B Cognitive Upgrade Campaign — Wave 4",
+  "date": "2026-07-29",
+  "pack": "pack_d_corrected.js",
+  "preflight": {
+    "pack_d_qid_count": 500,
+    "pack_d_parse": "PASS",
+    "pack_d_certified": 456,
+    "governance_guard": "54/54 PASS",
+    "pre_existing_divergences": [
+      "Pack E QID count 545 vs 540 baseline",
+      "Certified count delta +35 vs stale baseline"
+    ]
+  },
+  "source_section_state": {
+    "apply": 34,
+    "understand": 12,
+    "analyze": 23,
+    "evaluate": 31,
+    "higher_order_pct": "54.0%"
+  },
+  "candidates": [
+    {"qid":"P1-BD-013","from":"Apply","to":"Evaluate","topic":"Incremental budgeting — methodology recommendation","line_content":4524,"line_meta":4557},
+    {"qid":"P1-BD-020","from":"Apply","to":"Evaluate","topic":"Capital expenditure — equipment replacement","line_content":4940,"line_meta":4921},
+    {"qid":"P1-BD-027","from":"Apply","to":"Analyze","topic":"Direct labor budget — blended rate analysis","line_content":5304,"line_meta":5285},
+    {"qid":"P1-BD-038","from":"Apply","to":"Evaluate","topic":"Operating budget vs financial budget — cash divergence","line_content":5862,"line_meta":5845},
+    {"qid":"P1-BD-042","from":"Apply","to":"Analyze","topic":"Time series — deseasonalized trend analysis","line_content":6063,"line_meta":6046},
+    {"qid":"P1-BD-056","from":"Apply","to":"Evaluate","topic":"Budget committee — structure effectiveness","line_content":null,"line_meta":null},
+    {"qid":"P1-BD-063","from":"Apply","to":"Evaluate","topic":"S&A expense — step-cost staffing decision","line_content":null,"line_meta":null},
+    {"qid":"P1-BD-070","from":"Apply","to":"Evaluate","topic":"Forecast accuracy — cost-benefit model selection","line_content":null,"line_meta":null},
+    {"qid":"P1-BD-100","from":"Apply","to":"Analyze","topic":"Labor rate & efficiency variance — interpretation","line_content":null,"line_meta":null},
+    {"qid":"P1-BD-034","from":"Understand","to":"Evaluate","topic":"Standard cost — supplier quality tradeoff","line_content":null,"line_meta":null},
+    {"qid":"P1-BD-076","from":"Understand","to":"Analyze","topic":"Activity-based budgeting — variance decomposition","line_content":null,"line_meta":null},
+    {"qid":"P1-BD-008","from":"Apply","to":"Evaluate","topic":"Incremental budgeting — methodology recommendation","line_content":null,"line_meta":null},
+    {"qid":"P1-BD-051","from":"Apply","to":"Analyze","topic":"Direct materials purchases — discount analysis","line_content":null,"line_meta":null},
+    {"qid":"P1-BD-066","from":"Apply","to":"Evaluate","topic":"S&A variable cost — classification and reduction","line_content":null,"line_meta":null},
+    {"qid":"P1-BD-074","from":"Understand","to":"Analyze","topic":"MAPE — threshold assessment","line_content":null,"line_meta":null}
+  ],
+  "targets": {
+    "evaluate": 9,
+    "analyze": 6,
+    "difficult": 12,
+    "very_difficult": 3
+  },
+  "batch_plan": {
+    "batch_1": ["P1-BD-013","P1-BD-020","P1-BD-027","P1-BD-038","P1-BD-042"],
+    "batch_2": ["P1-BD-056","P1-BD-063","P1-BD-070","P1-BD-100","P1-BD-034"],
+    "batch_3": ["P1-BD-076","P1-BD-008","P1-BD-051","P1-BD-066","P1-BD-074"]
+  }
+}
