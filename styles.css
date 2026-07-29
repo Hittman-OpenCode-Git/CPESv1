@@ -778,6 +778,30 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   margin-bottom: 18px;
   line-height: 1.6;
 }
+.item-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+.item-card th,
+.item-card td {
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.item-card th {
+  background: var(--surface-alt);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--text-secondary);
+}
+.item-card tr:nth-child(even) td {
+  background: var(--surface-alt);
+}
 .meta-row {
   display: flex;
   flex-wrap: wrap;

@@ -3914,7 +3914,8 @@ function renderValidation() {
         'D': (typeof CASE_BANK_D !== 'undefined' ? CASE_BANK_D : (typeof MIGRATED_CASE_BASE_D !== 'undefined' ? MIGRATED_CASE_BASE_D : [])),
         'E': (typeof CASE_BANK_E !== 'undefined' ? CASE_BANK_E : (typeof MIGRATED_CASE_BASE_E !== 'undefined' ? MIGRATED_CASE_BASE_E : []))
     };
-    for (let [label, cb] of Object.entries(caseBanks)) html += `Pack ${label}: ${cb.length} cases<br>`;
+    let seenPacks = {}; for (let [label, cb] of Object.entries(caseBanks)) { if (cb && cb.length) { let key = cb.length + '|' + (cb[0].CaseID || ''); if (!seenPacks[key]) { seenPacks[key] = { labels: [label], count: cb.length, sections: cb.reduce((acc, c) => { c.SectionTags.forEach(s => acc[s] = (acc[s] || 0) + 1); return acc; }, {}) }; } else { seenPacks[key].labels.push(label); } } }
+    for (let k of Object.keys(seenPacks)) { let p = seenPacks[k]; html += `Case Pack ${p.labels.join('/')}: ${p.count} cases | ${Object.entries(p.sections).map(([s, n]) => s + ': ' + n).join(', ')}<br>`; }
     html += `<b>${allOk ? 'All packs validated' : 'Some packs have issues'}</b>`;
     $('validationStatus').innerHTML = html;
 }
@@ -3934,7 +3935,7 @@ function renderCatalog() {
         'D': (typeof CASE_BANK_D !== 'undefined' ? CASE_BANK_D : (typeof MIGRATED_CASE_BASE_D !== 'undefined' ? MIGRATED_CASE_BASE_D : [])),
         'E': (typeof CASE_BANK_E !== 'undefined' ? CASE_BANK_E : (typeof MIGRATED_CASE_BASE_E !== 'undefined' ? MIGRATED_CASE_BASE_E : []))
     };
-    let packLabels = { 'A': 'Pack A (Original)', 'B': 'Pack B', 'C': 'Pack C', 'D': 'Pack D', 'E': 'Pack E' };
+    let packLabels = { 'A': 'Pack A', 'B': 'Pack B', 'C': 'Pack C', 'D': 'Pack D', 'E': 'Pack E' };
     let cards = Object.entries(SECTION_INFO).map(([sec, info]) => {
         let parts = Object.entries(banks).map(([pk, bank]) => { let qs = bank.filter(q => q.Section === sec); return `${packLabels[pk]}: ${qs.length}`; }).join(' | ');
         let allTopics = [...new Set(Object.values(banks).flatMap(bank => bank.filter(q => q.Section === sec).map(q => q.Topic)))].join(', ');
