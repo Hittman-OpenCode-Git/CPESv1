@@ -1,0 +1,50 @@
+{
+  "session": "S382",
+  "board": "baseline-board",
+  "timestamp": "2026-07-28T22:09:30Z",
+  "verdict": "Needs Revision",
+  "certified_pool": {
+    "pack_a": { "total": 500, "certified": 500, "baseline_certified": 500, "match": true },
+    "pack_b": { "total": 500, "certified": 500, "baseline_certified": 500, "match": true },
+    "pack_c": { "total": 500, "certified": 445, "baseline_certified": 438, "match": false, "drift": "+7" },
+    "pack_d": { "total": 500, "certified": 456, "baseline_certified": 439, "match": false, "drift": "+17" },
+    "pack_e": { "total": 545, "certified": 540, "baseline_certified": 540, "match": true, "note": "Total QID count drifted: baseline 540, actual 545 (+5 extra items)" },
+    "total_certified": 2441,
+    "baseline_total": 2417,
+    "certified_drift": "+24",
+    "total_qids": 2545,
+    "baseline_total_qids": 2540,
+    "total_qid_drift": "+5 (all in pack_e)"
+  },
+  "drifts_detected": [
+    "Pack C Certified count: baseline 438 vs actual 445 (+7) — suggests 7 additional items certified since S377 baseline capture",
+    "Pack D Certified count: baseline 439 vs actual 456 (+17) — suggests 17 additional items certified since S377 baseline capture",
+    "Pack E total QID count: baseline 540 vs actual 545 (+5) — 5 non-Certified items added. post_change_qc reports expected 540, actual 545 (FAIL)",
+    "Pack A SHA-256 hash drift: baseline CAB4EFC7E7E6441A576FB9BC45007593205D54E658DB3B3F67A218811111A783 vs actual 0D926F99FB2A5EC6220375229AB4286F8CECD71CFAE8224A81B81640990EEDD4",
+    "Pack B SHA-256 hash drift: baseline 9CE6A34571CDD9196E2C2B74500C4C925A5D3300672C5F192C8FA38440E28437 vs actual E2E70CC82780520751DEBE5ADA1A533BCD771A092772F4C28EA3F2FE4C9829A8",
+    "Pack C SHA-256 hash drift: baseline 6B712D2A0219E2F95DBC8DA1DB82EB95B9DD5F4AB763E2F241A99A1873E93369 vs actual 359B7124DF884F5F9D3F6EB42122DF446F989B2F9272F903DB370B9A420307B9",
+    "Pack D SHA-256 hash drift: baseline 2B59A6D651E7DBAF74E635E296E0219EC2605FA97706FDD3BD791C0675F53909 vs actual EF439CD63565FFAFD0CB8C3CAAAFE86A880D4DA708B890DF5C43F4FD131FC485",
+    "Pack E SHA-256 hash drift: baseline E0CFD1D8F6401807E8DC692C5EE155BEA4F027EC9AFA770D8035D45E6D859CF4 vs actual A2F17EE0A83AB01811CB73EA93B8528545A51AFD4AA83E67A99211DBE3606486",
+    "governance-guard.js SHA-256 hash drift: baseline F5CFBF616CF5527B24692D5EADDECB3B4806D42A5A309A7A15C504E348144CC5 vs actual 7E5185E3F1FB73FA81A1E2F20116620FA39ABED2D90962A090DCFD60C3F13066",
+    "test_governance_guard.js SHA-256 hash drift: baseline F0FD4198C719CAA909CDCDF237F54BC8D58D8CC826342B478278C3B2BDDC9FC8 vs actual 213829DDB7BE3AB6250DB6C7DB46696AF24BD2787BE822563AC4FF279DF0AB69",
+    "index_updated.html SHA-256 hash drift: baseline 586396F940099B007D07276A1D159E964F298E2126D890A50449CA3378418755 vs actual E0B7BBAAE2B6B4C3892FCF3E316DC3D88E21AB6618A05A8567B33AB66335D7D3",
+    "Governance guard test count: baseline 51/51 vs actual 54/54 (+3 tests added)"
+  ],
+  "governance_guard": "54/54 PASS",
+  "parse_checks": "ALL PASS (node --check clean for pack_a through pack_e)",
+  "post_change_qc": {
+    "overall": "FAIL",
+    "governance_guard": "54/54 PASS",
+    "parse_validation": "ALL PASS",
+    "qid_counts": "pack_a:500, pack_b:500, pack_c:500, pack_d:500, pack_e:545 (expected 540 — FAIL)",
+    "certified_counts": "pack_a:500, pack_b:500, pack_c:445, pack_d:456, pack_e:540"
+  },
+  "defect_status_assessment": {
+    "DL_008": "Baseline claims 0 verified (RESOLVED S896). Current scan not performed in this pass — structural integrity confirmed via node --check only.",
+    "DL_026": "Baseline claims 0 Certified items (RESOLVED — learner pool secured). Certified pool grew by +24 since S377 baseline; cross-check needed to verify new certifications are DL-026 clean.",
+    "DL_035": "Baseline claims 39 Certified Domain F items, status 'S377 IN PROGRESS'. Certified pool grew +7 Pack C, +17 Pack D since S377 baseline. DL-035 scope may have changed — independent Domain F certification scan recommended.",
+    "DL_021": "Baseline claims RESOLVED (S828). Pack E certified count still 540 — consistent."
+  },
+  "baselines_accuracy": "Needs Revision",
+  "recommendation": "Sessions S888 through S91x changed all 5 pack files, governance guard (51→54 tests), and index_updated.html (S916-S918 case pack wiring) since the S377 baseline was captured. All hash drifts and certified pool growth (+24) need authorization documentation via G1-G5 reconciliation before baselines can be recaptured. Pack E's 5 extra QIDs (540→545) need investigation — they may be post-S808 edits or unregistered items."
+}

@@ -1,5 +1,4 @@
-const MCQ_BANK_D = [
-    {
+const MCQ_BANK_D = [{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -51,7 +50,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -103,7 +102,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -155,7 +154,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -207,7 +206,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -259,7 +258,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -311,7 +310,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -363,7 +362,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -415,7 +414,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -467,7 +466,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -519,7 +518,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -571,7 +570,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -623,7 +622,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -675,7 +674,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -727,7 +726,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -779,7 +778,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -831,7 +830,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -883,7 +882,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -935,7 +934,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -987,7 +986,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1039,7 +1038,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1091,7 +1090,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1143,7 +1142,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1195,7 +1194,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1247,7 +1246,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1299,7 +1298,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1351,7 +1350,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1403,7 +1402,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1455,7 +1454,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1507,7 +1506,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1559,7 +1558,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1611,7 +1610,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1663,7 +1662,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1715,7 +1714,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1767,7 +1766,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1819,7 +1818,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1871,7 +1870,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1923,7 +1922,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -1975,7 +1974,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2027,7 +2026,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2079,7 +2078,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2131,7 +2130,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2183,7 +2182,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2235,7 +2234,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2287,7 +2286,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2339,7 +2338,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2391,7 +2390,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2442,7 +2441,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2493,7 +2492,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2545,7 +2544,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2597,7 +2596,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2649,7 +2648,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2701,7 +2700,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2753,7 +2752,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2805,7 +2804,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2857,7 +2856,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2909,7 +2908,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -2961,7 +2960,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3013,7 +3012,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3065,7 +3064,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3117,7 +3116,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3169,7 +3168,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3221,7 +3220,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3273,7 +3272,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3325,7 +3324,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3377,7 +3376,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3429,7 +3428,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3481,7 +3480,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3533,7 +3532,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3585,7 +3584,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3637,7 +3636,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3689,7 +3688,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3741,7 +3740,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3793,7 +3792,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3845,7 +3844,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "A",
         "SectionName": "External Financial Reporting Decisions",
@@ -3897,7 +3896,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -3949,7 +3948,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4001,7 +4000,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4053,7 +4052,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4105,7 +4104,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4157,7 +4156,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4209,7 +4208,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4261,7 +4260,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4313,7 +4312,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4365,7 +4364,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4417,7 +4416,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4469,7 +4468,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4521,7 +4520,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4573,7 +4572,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4625,7 +4624,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4677,7 +4676,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4729,7 +4728,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4781,7 +4780,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4833,7 +4832,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4885,7 +4884,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4937,7 +4936,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -4989,7 +4988,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5041,7 +5040,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5093,7 +5092,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5145,7 +5144,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5197,7 +5196,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5249,7 +5248,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5301,7 +5300,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5353,7 +5352,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5405,7 +5404,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5457,7 +5456,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5507,7 +5506,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5557,7 +5556,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5607,7 +5606,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5657,7 +5656,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5707,7 +5706,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5757,7 +5756,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5807,7 +5806,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5857,7 +5856,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5907,7 +5906,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -5957,7 +5956,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6007,7 +6006,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6057,7 +6056,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6107,7 +6106,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6157,7 +6156,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6207,7 +6206,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6257,7 +6256,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6307,7 +6306,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6357,7 +6356,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6407,7 +6406,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6457,7 +6456,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6507,7 +6506,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6557,7 +6556,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6607,7 +6606,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6657,7 +6656,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6707,7 +6706,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6757,7 +6756,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6807,7 +6806,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6857,7 +6856,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6907,7 +6906,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -6957,7 +6956,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7007,7 +7006,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7057,7 +7056,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7107,7 +7106,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7157,7 +7156,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7207,7 +7206,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7257,7 +7256,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7307,7 +7306,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7357,7 +7356,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7407,7 +7406,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7457,7 +7456,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7507,7 +7506,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7557,7 +7556,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7607,7 +7606,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7657,7 +7656,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7707,7 +7706,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7757,7 +7756,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7807,7 +7806,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7857,7 +7856,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7907,7 +7906,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -7957,7 +7956,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8007,7 +8006,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8057,7 +8056,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8107,7 +8106,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8157,7 +8156,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8207,7 +8206,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8257,7 +8256,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8307,7 +8306,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8357,7 +8356,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8407,7 +8406,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8457,7 +8456,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8507,7 +8506,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8557,7 +8556,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8607,7 +8606,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8657,7 +8656,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8707,7 +8706,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8757,7 +8756,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8807,7 +8806,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8857,7 +8856,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8907,7 +8906,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
@@ -8957,7 +8956,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9007,7 +9006,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9057,7 +9056,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9107,7 +9106,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9157,7 +9156,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9207,7 +9206,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9257,7 +9256,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9307,7 +9306,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9357,7 +9356,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9407,7 +9406,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9457,7 +9456,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9507,7 +9506,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9557,7 +9556,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9607,7 +9606,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9652,12 +9651,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "Describes the fixed overhead volume variance, which measures the production volume effect. The variable overhead spending variance isolates the rate difference between actual and standard variable overhead costs applied to actual hours.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Describes a revenue/sales variance, not a variable overhead variance. The variable overhead spending variance compares actual variable overhead costs to what the standard rate predicts for the actual hours worked.",
-        "ExplanationWrongD": "Describes the variable overhead efficiency variance, which isolates the cost impact of using more or fewer hours. The spending variance isolates the rate difference: (Actual rate minus Standard rate) multiplied by actual hours.",
+        "ExplanationWrongD": "The direct materials price variance measures the difference between actual and standard price for raw materials. It is unrelated to sales mix analysis. The sales mix variance isolates the contribution margin effect of selling products in proportions different from the budgeted mix, holding total volume constant.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9702,12 +9701,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "$44,000 favorable considers only the Deluxe mix gain (800 extra units of Deluxe at $55 CM) while ignoring the contribution margin lost from selling 800 fewer units of Basic. A correct sales mix variance captures both the gain from the higher-CM product and the loss from the lower-CM product.",
         "ExplanationWrongB": "$24,000 unfavorable reverses the sign of the favorable variance. Shifting the sales mix from Basic (CM $30) toward Deluxe (CM $55) increases total contribution margin because more high-margin units were sold, producing a favorable mix variance of $20,000, not unfavorable.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "The direct materials price variance measures the difference between actual and standard price for raw materials. It is unrelated to sales mix analysis. The sales mix variance isolates the contribution margin effect of selling products in proportions different from the budgeted mix, holding total volume constant.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9757,7 +9756,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9802,12 +9801,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Product Z's shift of +200 units contributed a favorable $12,000 to the mix variance. Although favorable, Product Z's contribution of $12,000 is only half the favorable impact of Product Y ($24,000), because Z's mix shift was smaller (+200 units vs. +600 units) despite having the highest unit CM. The question asks for the most significant contributor to the favorable outcome.",
         "ExplanationWrongC": "The three products did not contribute equally. Product X produced an unfavorable variance of $20,000 (selling 800 fewer units than the budgeted-mix allocation), Product Y produced a favorable variance of $24,000 (selling 600 more units), and Product Z produced a favorable variance of $12,000 (selling 200 more units). The magnitudes differ significantly.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "The direct materials price variance measures the difference between actual and standard input prices. It relates to purchasing and manufacturing inputs, not to the composition of sales. The sales mix variance specifically captures the profit effect of shifts in the relative proportions of different products sold.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9850,14 +9849,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Reverses the sign of the $8,000 favorable mix variance. Shifting sales from Product A ($12 CM) to higher-margin Product B ($20 CM) produces a favorable mix variance of $8,000, not unfavorable.",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Product Z contributed a favorable $12,000 from selling 600 extra units, but Product Y produced a larger favorable variance of $24,000 from selling 600 extra high-CM units. When ranking contribution to the mix variance, the absolute dollar impact determines magnitude—Product Y's $24,000 favorable exceeds Product Z's $12,000.",
         "ExplanationWrongC": "Considers only the extra 1,000 units of Product B at its $20 contribution margin and ignores the lost 1,000 units of Product A at $12. A complete mix variance captures both the gain from B and the loss from A: (1,000 x $20) + (-1,000 x $12) = $8,000 favorable.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9907,7 +9906,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -9957,7 +9956,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10007,7 +10006,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10057,7 +10056,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10107,7 +10106,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10157,7 +10156,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10207,7 +10206,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10257,7 +10256,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10307,7 +10306,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10357,7 +10356,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10407,7 +10406,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10457,7 +10456,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10507,7 +10506,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10557,7 +10556,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10607,7 +10606,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10657,7 +10656,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10707,7 +10706,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10757,7 +10756,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10807,7 +10806,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10857,7 +10856,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10907,7 +10906,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -10957,7 +10956,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11007,7 +11006,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11049,7 +11048,7 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "The purchasing manager is responsible for material price variances, not quantity variances. The quantity variance measures whether more or less material was used than the standard allows, which is controlled by the production department.",
+        "ExplanationWrongA": "Sales mix variance analysis compares the actual product mix to the budgeted mix and isolates the effect on contribution margin. It does not analyze individual customer profitability. Customer profitability analysis specifically attributes revenues and service costs to individual customers to determine which accounts are truly profitable.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "The sales manager controls sales volume and revenue, not production efficiency or material usage. A material quantity variance reflects how efficiently materials are used in the production process, which is the production manager's responsibility.",
         "ExplanationWrongD": "The controller role encompasses more than statement preparation. The question tests responsibility center evaluation, not the duties of a specific corporate officer.",
@@ -11057,7 +11056,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11099,7 +11098,7 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Sales mix variance analysis compares the actual product mix to the budgeted mix and isolates the effect on contribution margin. It does not analyze individual customer profitability. Customer profitability analysis specifically attributes revenues and service costs to individual customers to determine which accounts are truly profitable.",
         "ExplanationWrongB": "Alpha is not the least profitable. Alpha generated a customer-level profit of $164,475. Although Alpha has substantial service costs ($25,525), its gross profit of $200,000 easily absorbs them. The least profitable customer is Beta, which is actually unprofitable: its gross profit of $60,000 is consumed by $86,300 in service costs (including $35,000 in returns and allowances), yielding a customer-level loss of $26,300.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Not all three customers are unprofitable. Alpha generated $164,475 and Gamma generated $110,730 in customer-level profit. Only Beta is unprofitable ($26,300 loss). The recommendation to terminate all three would destroy $275,205 in combined profitable contribution, which is contrary to a customer profitability analysis that seeks to identify and manage the unprofitable customer while retaining and growing profitable relationships.",
@@ -11107,7 +11106,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11152,12 +11151,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Standard costing sets benchmarks for input costs. It does not measure customer profitability, which compares net contribution per customer after customer-specific costs.",
         "ExplanationWrongC": "Zero-based budgeting requires all expenses to be justified each period from zero. It is a budgeting philosophy, not directly related to segment profitability reporting.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "The calculation shows that two of the three customers are profitable while one generates a loss. Concluding that all three customers are unprofitable would be an overgeneralization. Customer profitability analysis evaluates accounts individually, and the appropriate response depends on whether the unprofitable customer can be turned around through repricing or cost reduction.",
         "question_state": "Certified",
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11207,7 +11206,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11257,7 +11256,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11307,7 +11306,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11352,12 +11351,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "Zero-based budgeting requires managers to justify every expense from zero each budget period. It governs how budgets are built, not how to evaluate whether specific customer accounts contribute net profit after deducting all customer-specific costs from customer revenue.",
         "ExplanationWrongB": "Standard costing sets benchmarks for input costs. It does not measure customer profitability, which compares net contribution per customer after customer-specific costs.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "This ranking would be correct only if Apex had the lowest profitability ratio, but the calculations show Apex ranks second. When computing customer profitability ratios, delivery and order processing costs assigned via activity-based costing must be subtracted from each customer's revenue to determine true profitability ranking.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11407,7 +11406,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11458,7 +11457,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Understand"
     ,
         "dl031_review_note": "Downgraded from Analyze->Understand — stem is identical definition-match to CD-053-054 rotation group; \"What concept describes this alignment?\" (DL-031)"},
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11502,13 +11501,13 @@ const MCQ_BANK_D = [
         ],
         "ExplanationWrongA": "Budgetary slack is the practice of understating revenues or overstating expenses to make targets easier to achieve. It is a behavioral problem that undermines alignment between managers and the organization, not a concept that describes it.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "",
+        "ExplanationWrongC": "The project ROI of 18% is indeed below the division's current ROI of 22%, which would cause the division's average ROI to decline. However, the project's ROI of 18% still exceeds the company's 14% cost of capital. A manager evaluated on ROI may irrationally reject this value-creating project, which is the classic underinvestment bias under ROI-based performance evaluation.",
         "ExplanationWrongD": "The controllability principle should not be applied in isolation; it is one component of a comprehensive performance measurement system. Goal congruence requires designing measures that align divisional decisions with overall corporate objectives.",
         "question_state": "Certified",
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11558,7 +11557,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11608,7 +11607,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11658,7 +11657,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11708,7 +11707,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11758,7 +11757,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11803,12 +11802,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Revenue grew by $120,000, a 12.0% increase from 2023. The issue is not revenue growth — it is that total costs (COGS + SG&A) grew by 16.3% ($139,200 / $851,600 prior-year base), outpacing the 12% revenue growth. Specifically, COGS consumed 95.3% of the incremental revenue ($114,400 / $120,000), leaving only $5,600 to cover SG&A growth and produce incremental operating income.",
         "ExplanationWrongC": "No other income or expense items besides COGS and SG&A are presented in the comparative statements. The margin compression from 12.0% in 2023 to 9.0% in 2024 is fully explained by the change in COGS and SG&A as a percentage of revenue. The analysis should focus on the line items actually reported in the common-size presentation.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Break-even analysis determines the sales volume at which total revenue equals total costs, resulting in zero profit. It does not express income statement items as percentages of revenue. Common-size (vertical) analysis converts each line item to a percentage of a base figure—typically revenue—enabling meaningful comparisons across periods or companies.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11851,14 +11850,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Regression analysis is a statistical technique used to estimate the relationship between variables, such as cost and activity level. It does not express financial statement line items as percentages of a base amount.",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Revenue grew by $120,000 (12.0%) from 2023 to 2024, which is strong revenue growth. The profit margin decline is driven by COGS increasing from 58.0% to 62.0% of revenue—a 400 basis point deterioration in gross margin. Attributing the decline to insufficient revenue growth misidentifies the root cause; the issue is cost growth outpacing revenue growth.",
         "ExplanationWrongC": "Horizontal analysis tracks changes across periods in absolute dollar amounts. It does not express each line item as a percentage of total revenue, which is the defining characteristic of common-size (vertical) analysis.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11908,7 +11907,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -11951,14 +11950,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Horizontal analysis tracks dollar and percentage changes in line items across periods, providing trend information in absolute terms. It does not express each line item as a percentage of a base such as total revenue within a single period, which is the defining characteristic of common-size vertical analysis.",
-        "ExplanationWrongB": "Break-even analysis determines the sales volume where total revenue equals total cost. It does not measure individual customer profitability, which matches revenues to customer-specific costs.",
+        "ExplanationWrongB": "Break-even analysis calculates the sales volume needed to cover total costs. It does not express financial statement items as percentages. Common-size (vertical) analysis converts each income statement line item to a percentage of total revenue, enabling comparison of cost structures and profitability across time periods and between companies.",
         "ExplanationWrongC": "Regression analysis estimates cost behavior through statistical modeling. It is an analytical technique, not a framework for goal-congruent performance measurement.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12001,14 +12000,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Break-even analysis calculates the sales volume needed to cover total costs. It does not express financial statement items as percentages. Common-size (vertical) analysis converts each income statement line item to a percentage of total revenue, enabling comparison of cost structures and profitability across time periods and between companies.",
         "ExplanationWrongC": "R&D spending has been stable at approximately 5% of revenue across all three years (5.1% in 2022, 5.0% in 2023, 5.2% in 2024). A stable R&D ratio does not drive trend changes in operating margin. In common-size analysis, a line item that maintains a constant percentage of revenue has no directional impact on margin trends.",
         "ExplanationWrongD": "Revenue is the base of the common-size analysis (set to 100% for each year), so revenue trends cannot be evaluated from the common-size percentages alone. Common-size analysis intentionally neutralizes scale effects to focus on structural changes in the cost and expense relationships. Separate horizontal analysis would be needed to assess revenue growth trends.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12058,7 +12057,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12100,7 +12099,7 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Regression analysis is a statistical technique used to estimate the relationship between variables, such as cost and activity level. It does not express financial statement line items as percentages of a base amount.",
+        "ExplanationWrongA": "The controllability principle holds managers accountable only for items they can influence. While a valid evaluation principle, it does not describe the decision not to investigate a variance. Cost-benefit analysis weighs the expected benefit of investigation against its cost—here, the controller determined investigation costs exceed expected benefits.",
         "ExplanationWrongB": "Horizontal analysis tracks changes across periods but does not reveal proportional composition within a period. Common-size analysis expresses items as percentages of a base, revealing structural relationships trend analysis misses.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Break-even analysis determines the sales volume where total revenue equals total cost. It does not express income statement items as percentages of revenue for comparison purposes.",
@@ -12108,7 +12107,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12150,7 +12149,7 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "The controllability principle holds managers accountable only for items they can influence. While a valid evaluation principle, it does not describe the decision not to investigate a variance. Cost-benefit analysis weighs the expected benefit of investigation against its cost—here, the controller determined investigation costs exceed expected benefits.",
         "ExplanationWrongB": "This choice incorrectly includes all five variances for investigation. The DM quantity variance ($2,800F) fails the dollar threshold (>$4,000 required; $2,800 is below it) even though 3.3% exceeds the 3% threshold. The VOH spending variance ($1,200F) fails the dollar threshold (1.8% also fails the percentage test). Under a dual-threshold cost-benefit framework, both thresholds must be met. Including variances that fail either threshold unnecessarily increases investigation costs by $1,750 ($950 + $800) without corresponding expected benefit.",
         "ExplanationWrongC": "This choice includes DM Price ($6,200U, 7.1%) and DL Rate ($9,100U, 9.4%) but excludes DL Efficiency ($4,500U, 5.2%). DL Efficiency exceeds both thresholds ($4,500 > $4,000 AND 5.2% > 3%) and should be investigated. A mechanical error here would be to exclude favorable variances only: DM Quantity and VOH Spending are favorable but the exclusion is correct because they fail the dollar threshold (>$4,000), not because they are favorable. An unfavorable variance of $3,000 at 4.5% would also be excluded even though it is unfavorable, because the dollar threshold is not met.",
         "ExplanationWrongD": "",
@@ -12158,7 +12157,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12208,7 +12207,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12258,7 +12257,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12301,14 +12300,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "This choice incorrectly includes the FOH budget variance ($5,800U, 4.7%) and DL efficiency ($4,500U, 5.2%). The FOH budget variance passes the dollar threshold ($5,800 > $5,000) but fails the percentage threshold (4.7% < 5%). The DL efficiency variance passes the percentage test (5.2% > 5%) but fails the dollar threshold ($4,500 < $5,000). Under a dual-threshold cost-benefit framework, both tests must be satisfied. Including these variances wastes investigation resources on items where the expected benefit of investigation is unlikely to justify the cost.",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Zero-based budgeting requires all expenses to be justified from a zero base each period. It is a budgeting methodology, not a variance investigation decision principle. Cost-benefit analysis weighs the expected benefit of investigating a variance against the cost of investigation.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "This choice fails to apply either threshold. All six variances would be investigated at a cost far exceeding the expected benefit of resolving the three smallest variances. DM quantity ($2,800F, 3.3%) and VOH spending ($1,200F, 1.8%) fail BOTH thresholds. DL efficiency fails the dollar threshold ($4,500 < $5,000), and FOH budget fails the percentage threshold (4.7% < 5%). Investigating all variances without filtering is not cost-benefit analysis — it is indiscriminate investigation that wastes resources on variances unlikely to yield actionable insights.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12353,12 +12352,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "The controllability principle addresses who should be held accountable for which variances based on their authority. The scenario describes comparing the cost of investigation to the expected benefit of uncovering and correcting the variance’s cause — a cost-benefit trade-off applied to the variance investigation decision.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Zero-based budgeting requires all expenses to be justified each period from zero. It is a budgeting philosophy, not directly related to segment profitability reporting.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "A comprehensive investigation of all six variances regardless of threshold would be inefficient and costly. The company's policy applies a dual-threshold framework—only variances exceeding both $5,000 AND 5% warrant investigation. This cost-benefit approach focuses management attention on the most significant variances.",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12408,7 +12407,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12453,12 +12452,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "Zero-based budgeting requires all expenses to be justified each period from zero. It is a budgeting philosophy, not a principle governing variance investigation decisions.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Goal congruence is the alignment of divisional managers' interests with overall corporate objectives. The controller's decision to skip a small variance investigation is an application of cost-benefit analysis, not goal congruence.",
-        "ExplanationWrongD": "The controllability principle states that managers should be evaluated only on costs they can influence. While this is an important management accounting principle, it does not explain why a variance investigation is skipped. The controller's decision to forgo investigation because the cost would exceed the expected benefit is a pure cost-benefit analysis, not an application of the controllability principle.",
+        "ExplanationWrongD": "Zero-based budgeting requires all expenses to be justified from a zero base each period. It is a budgeting methodology, not a management philosophy. Total quality management (TQM) is a company-wide philosophy emphasizing continuous improvement and customer satisfaction as the responsibility of every employee.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12503,12 +12502,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "A TQM organization would show high prevention costs relative to failure costs, typically with prevention and appraisal costs at 40-50% of total quality costs and failure costs substantially below 50%. This company's profile shows conformance costs of only 19.1% ($130,000 / $680,000) and failure costs of 80.9% ($550,000 / $680,000) — the inverse of a mature TQM profile. TQM shifts resources upstream into prevention and design quality, which reduces downstream internal and external failure costs.",
         "ExplanationWrongB": "A Six Sigma organization would show heavy investment in measurement and analysis (appraisal-type activities), statistically controlled processes, and very low failure costs (targeting 3.4 defects per million opportunities). This company's external failure costs alone ($340,000) represent 50% of total quality costs, indicating numerous defects reaching customers — incompatible with Six Sigma performance levels. Six Sigma would also show higher prevention investment than the 7.6% ($52,000 / $680,000) seen here.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Zero-based budgeting requires all expenses to be justified from a zero base each period. It is a budgeting methodology, not a management philosophy. Total quality management (TQM) is a company-wide philosophy emphasizing continuous improvement and customer satisfaction as the responsibility of every employee.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12558,7 +12557,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12602,13 +12601,13 @@ const MCQ_BANK_D = [
         ],
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Activity-based costing assigns overhead costs to products and services based on the activities and cost drivers that consume resources. It is a cost allocation methodology, not a company-wide philosophy that makes quality and continuous improvement the shared responsibility of every employee, which defines total quality management.",
-        "ExplanationWrongC": "Zero-based budgeting requires all expenses to be justified each period from zero. It is a budgeting philosophy, not directly related to segment profitability reporting.",
+        "ExplanationWrongC": "Activity-based costing assigns overhead costs to products based on activities and cost drivers. It is a cost accounting methodology, not a management philosophy. TQM is a comprehensive approach emphasizing continuous improvement and customer focus at every level of the organization.",
         "ExplanationWrongD": "Standard costing sets benchmarks for input costs. It does not measure customer profitability, which compares net contribution per customer after customer-specific costs.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12652,13 +12651,13 @@ const MCQ_BANK_D = [
         ],
         "ExplanationWrongA": "An early-stage quality control operation would show high appraisal costs (inspection) relative to prevention and high failure costs. This profile shows the opposite: prevention costs ($380,000) are more than triple appraisal costs ($120,000), and failure costs are minimal at only 11.8% of total COQ. An inspector-dependent quality system at an early maturity stage cannot produce this COQ structure — it requires a prevention-oriented infrastructure with robust design quality, supplier qualification programs, and process capability studies.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "",
+        "ExplanationWrongC": "Activity-based costing assigns overhead costs to products based on activities and cost drivers. It is a cost accounting methodology, not a management philosophy. TQM is a comprehensive approach emphasizing continuous improvement and customer focus at every level of the organization.",
         "ExplanationWrongD": "Lean manufacturing is defined by waste elimination, flow improvement, and pull systems, not by a specific COQ profile. However, this COQ profile is more precisely described by TQM maturity — the prevention-dominant cost structure (67.0% of total in prevention) with very low failure costs is the hallmark of a mature TQM organization that has internalized the principle that quality must be designed in, not inspected in. Lean organizations can have this profile, but the COQ distribution is a direct indicator of TQM implementation maturity rather than Lean methodology adoption.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12708,7 +12707,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12758,7 +12757,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12808,7 +12807,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12858,7 +12857,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12908,7 +12907,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -12958,7 +12957,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13008,7 +13007,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13058,7 +13057,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13108,7 +13107,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13158,7 +13157,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13208,7 +13207,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13258,7 +13257,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13308,7 +13307,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13358,7 +13357,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13408,7 +13407,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13451,14 +13450,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Adjusting WACC to an after-tax equivalent is incorrect because WACC is already an after-tax measure—the cost of debt component is computed net of the tax shield. The capital charge is correctly computed as the pre-adjusted WACC multiplied by invested capital. EVA equals NOPAT minus the dollar capital charge, yielding $96,000 positive.",
         "ExplanationWrongC": "Standard costing sets benchmarks for input costs and measures variances from standards. It does not link executive compensation to economic value added or focus on long-term value creation.",
         "ExplanationWrongD": "Activity-based costing assigns overhead based on activities and cost drivers. It is a cost allocation method, not a management approach that ties compensation to EVA for long-term value creation.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13508,7 +13507,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13552,13 +13551,13 @@ const MCQ_BANK_D = [
         ],
         "ExplanationWrongA": "This computation uses unadjusted operating income after tax ($620,000 x 0.75 = $465,000) as NOPAT without incorporating the EVA accounting adjustments. GAAP operating income of $465,000 after tax excludes $35,000 of goodwill amortization and $28,000 of LIFO reserve increase that are added back for EVA purposes. The resulting EVA of $15,000 understates value creation by $47,250 because it ignores $63,000 of pre-tax adjustments that increase after-tax NOPAT by $47,250 ($63,000 x 0.75).",
         "ExplanationWrongB": "This computation correctly identifies the $63,000 in pre-tax adjustments but fails to apply the tax rate to the adjustments. EVA adjustments must be computed on an after-tax basis: $35,000 goodwill amortization x (1 - 0.25) = $26,250 and $28,000 LIFO reserve x (1 - 0.25) = $21,000. Adding these to base NOPAT of $465,000 yields adjusted NOPAT of $512,250. Applying pre-tax adjustments directly overstates NOPAT by $15,750 and EVA by the same amount.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongC": "Activity-based costing assigns costs to products and services based on resource-consuming activities. It is a cost measurement methodology. Value-based management is a broader framework that ties strategy, performance measurement, and compensation to the objective of maximizing shareholder value, often using EVA as the key metric.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13600,7 +13599,7 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Computing NOPAT from GAAP operating income at a 25% tax rate without adjusting for non-operating items excludes adjustments the controller specifically identified. Goodwill amortization and the R&D charge must be added back to operating income before applying the tax rate, because EVA treats these as investments in the capital base rather than period expenses.",
         "ExplanationWrongB": "Zero-based budgeting requires managers to justify each expense from zero every budget period. It is a cost management methodology within the annual budgeting cycle, not a strategic performance framework that ties executive compensation to long-term value creation measures like economic value added.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "ABC assigns overhead based on activities and cost drivers. It is a cost allocation method, not a framework for aligning performance measures with organizational goals.",
@@ -13608,7 +13607,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13658,7 +13657,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13708,7 +13707,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13758,7 +13757,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13808,7 +13807,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13858,7 +13857,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13908,7 +13907,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "C",
         "SectionName": "Performance Management",
@@ -13958,7 +13957,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14008,7 +14007,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14051,14 +14050,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Normal costing uses a predetermined overhead rate multiplied by ACTUAL activity to apply overhead. Using a machine-hour-based rate when the company budgets on direct labor hours would apply overhead based on an incorrect activity measure. The predetermined rate of $15.00 per DLH multiplied by 26,500 actual DLH yields $397,500 applied overhead, not the rate based on machine hours.",
         "ExplanationWrongC": "Actual costing waits until period-end when actual overhead costs are known and applies them based on actual activity. Normal costing applies overhead during the period using a predetermined rate based on budgeted amounts, as the question describes.",
-        "ExplanationWrongD": "Variable costing concerns whether fixed manufacturing overhead is inventoried or expensed, not the use of a predetermined overhead rate.",
+        "ExplanationWrongD": "Variable costing treats fixed manufacturing overhead as a period cost expensed when incurred, not as a product cost. The stem describes applying overhead using a predetermined rate based on budgeted costs and comparing applied to actual at year-end. This defines normal costing—actual costing uses actual rates, and standard costing uses predetermined standard costs.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14103,12 +14102,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "This proration uses ending inventory account balances ($86,000 + $215,000 + $559,000 = $860,000) as the allocation basis rather than the applied overhead in each account. Under GAAP, underapplied or overapplied overhead is prorated based on the overhead applied to each account, not the total account balance. Using total balances overstates the COGS allocation because COGS ($559,000/$860,000 = 65.0%) receives a smaller share than it would using applied OH ($89,000/$140,000 = 63.6%), giving COGS only $8,060 vs. the correct $7,883.",
         "ExplanationWrongB": "This amount represents the full $12,400 added to COGS. Closing the entire underapplied balance to COGS is appropriate only when the amount is immaterial. The question states the underapplied amount is material, requiring proration among WIP, FG, and COGS based on the overhead applied in each account. Adding the full $12,400 to COGS would overstate COGS and understate inventory values relative to the correct proration approach.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Variable costing treats fixed manufacturing overhead as a period cost expensed when incurred, not as a product cost. The stem describes applying overhead using a predetermined rate based on budgeted costs and comparing applied to actual at year-end. This defines normal costing—actual costing uses actual rates.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14158,7 +14157,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14208,7 +14207,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14258,7 +14257,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14308,7 +14307,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14358,7 +14357,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14408,7 +14407,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14458,7 +14457,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14508,7 +14507,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14558,7 +14557,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14608,7 +14607,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14658,7 +14657,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14708,7 +14707,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14758,7 +14757,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14808,7 +14807,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14858,7 +14857,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14908,7 +14907,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -14951,14 +14950,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Service department costs must ultimately be traced to the production departments that consume those services. No service department allocation method—direct, step-down, or reciprocal—allocates exclusively to other service departments.",
-        "ExplanationWrongB": "Allocating all service department costs simultaneously with equations is the reciprocal method.",
+        "ExplanationWrongB": "Total machine hours relate to production volume, not order processing activity. Under ABC, cost drivers should reflect what causes the cost to be incurred. Order processing costs are driven by the number of orders placed, not by how many machine hours are used. Selecting the wrong driver would distort product costs.",
         "ExplanationWrongC": "Ignoring all interservice-department services is the direct method, not the step-down method.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15001,14 +15000,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Total machine hours relate to production volume, not order processing activity. Under ABC, cost drivers should reflect what causes the cost to be incurred. Order processing costs are driven by the number of orders placed, not by how many machine hours are used. Selecting the wrong driver would distort product costs.",
         "ExplanationWrongC": "Using dollar value of purchases as the driver conflates economic significance with transaction-processing effort. While monetary magnitude matters for value-based allocation in financial reporting contexts, ABC is a cost management tool that assigns resource costs based on what activities consume, not what those activities purchase. A $100,000 single-line-item order and a $100,000 50-line-item order impose dramatically different workloads on the purchasing department, yet would receive identical cost assignments under this criterion. Under the IMA's ABC framework, the cost driver must reflect the activity's consumption pattern, not the economic value of the transaction. This approach would systematically over-cost high-value, low-effort purchases and under-cost low-value, high-effort purchases.",
         "ExplanationWrongD": "Justifying line-item selection because a lower activity rate indicates greater cost efficiency reverses the logic of ABC design. The activity rate is an output of driver selection, not a criterion for it. Selecting a driver because it produces a lower rate is equivalent to choosing a measurement tool because it produces more favorable numbers. The R-squared of 0.47 for line items means that more than half the variation in purchasing costs is unexplained by this driver, creating systematic cost distortions. ABC's conceptual foundation, as established by CAM-I (Consortium for Advanced Manufacturing-International) and Kaplan, requires that the driver faithfully represents the consumption of activity resources. Cost efficiency analysis is a separate management exercise that follows from, not precedes, accurate cost measurement.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15058,7 +15057,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15108,7 +15107,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15158,7 +15157,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15208,7 +15207,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15258,7 +15257,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15308,7 +15307,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15358,7 +15357,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15408,7 +15407,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15458,7 +15457,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15508,7 +15507,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15558,7 +15557,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15608,7 +15607,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15658,7 +15657,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15708,7 +15707,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15758,7 +15757,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15800,7 +15799,7 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Applying a cumulative 12% reduction (4 quarters x 3%) fails to account for compounding. Each quarter's reduction applies to the already-reduced cost from the prior quarter. The correct calculation compounds the 3% reduction over four periods: $85.00 x (0.97)^4 = $75.25. The difference between simple and compound reduction is $0.45 in this case.",
         "ExplanationWrongB": "Standard costing establishes a predetermined benchmark for variance analysis, not ongoing cost reduction targets for products already in production. Kaizen costing specifically targets continuous, incremental cost improvements during the production phase.",
         "ExplanationWrongC": "Target costing is applied during the design stage before production begins, setting a target cost based on market price minus desired profit. Kaizen costing operates after production has started, driving continuous, incremental cost improvements.",
         "ExplanationWrongD": "",
@@ -15808,7 +15807,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15858,7 +15857,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15908,7 +15907,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -15953,12 +15952,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "Job order costing is a cost accumulation method for tracking costs by individual jobs or batches, not a philosophy for achieving continuous cost reductions. Kaizen costing is the approach that targets ongoing, incremental efficiency gains during production.",
         "ExplanationWrongB": "Target costing is a market-driven approach applied during the design phase, before production begins. Kaizen costing applies after production has started, pursuing continuous, incremental cost reductions through ongoing process improvements.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Applying only one quarter's reduction ($81.76) is incorrect because the kaizen target requires cost reduction over four consecutive quarters. The correct calculation compounds each component's reduction rate over four periods: Materials 42 x (0.95)^4, Labor 28 x (0.97)^4, Overhead 15 x (0.98)^4. Kaizen costing applies compounding because each quarter's target applies to the prior quarter's reduced cost.",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16008,7 +16007,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16051,14 +16050,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Pure step costs remain constant within a limited activity range and then jump to a new level. The utility cost described includes both a fixed base charge AND a variable per-kWh component. This dual-component structure defines a mixed (semivariable) cost, not a step cost.",
         "ExplanationWrongC": "A step cost remains constant over a narrow activity range then jumps to a new level. This utility cost changes continuously with usage (variable) and has a fixed base that does not step up with usage thresholds, so it is a mixed cost, not a step cost.",
         "ExplanationWrongD": "A pure fixed cost does not change with activity level. The utility bill includes a per-kilowatt-hour variable charge that increases with consumption, so total cost varies with usage. It is a mixed cost with both fixed and variable components.",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16101,14 +16100,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "$13,650 multiplies only the variable rate ($7.80) by 1,750 hours, omitting the fixed cost of $4,920. The high-low method yields a total cost equation of Y = $4,920 + $7.80X. Omitting the fixed component ignores the cost that exists even at zero activity, understating the total predicted cost by $4,920.",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Pure step costs remain constant within a limited activity range and then jump to a new level. The utility cost described includes both a fixed base charge AND a variable per-kWh component. This dual-component structure defines a mixed (semivariable) cost, not a step cost.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "$21,000 uses a flat rate of $12.00 per hour (derived from $17,400/1,600 = $10.88 or similar) without separating fixed and variable costs. The high-low method must isolate the variable rate ($7.80/hr) and fixed component ($4,920) before predicting cost at any activity level.",
+        "ExplanationWrongD": "Using the high-low prediction formula Y = $4,920 + $7.80X with 1,750 machine hours: Y = $4,920 + $7.80(1,750) = $4,920 + $13,650 = $18,570. The $21,000 amount does not correspond to any correct calculation using the high-low cost equation provided.",
         "question_state": "Certified",
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16153,12 +16152,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "A pure variable cost varies entirely with activity level and has no fixed component. The utility described includes a fixed monthly base charge that does not vary with usage, meaning the total cost has both fixed and variable elements, not purely variable behavior.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "A pure fixed cost would not change with kilowatt-hour usage.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Using the high-low prediction formula Y = $4,920 + $7.80X with 1,750 machine hours: Y = $4,920 + $7.80(1,750) = $4,920 + $13,650 = $18,570. The $21,000 amount does not correspond to any correct calculation using the high-low cost equation provided.",
         "question_state": "Certified",
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16202,13 +16201,13 @@ const MCQ_BANK_D = [
         ],
         "ExplanationWrongA": "",
         "ExplanationWrongB": "A pure variable cost changes in total proportionally with activity and has no fixed component. The utility cost includes a fixed monthly base charge, which means it cannot be classified as purely variable; it has both fixed and variable elements.",
-        "ExplanationWrongC": "A step cost remains constant within a limited activity range and jumps when a threshold is exceeded. A utility bill with a fixed base charge plus a per-kWh variable charge changes continuously with usage, making it a mixed cost, not a step cost.",
+        "ExplanationWrongC": "The direct method completely ignores all services exchanged between service departments, allocating service costs only to production departments. The reciprocal method, in contrast, uses simultaneous equations to fully recognize services provided between service departments in both directions, producing the most accurate cost allocations.",
         "ExplanationWrongD": "A pure fixed cost remains unchanged regardless of activity. The utility cost described includes a usage-based variable component that increases with consumption, so the total cost is mixed (semivariable), not purely fixed.",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16252,13 +16251,13 @@ const MCQ_BANK_D = [
         ],
         "ExplanationWrongA": "The direct method ignores all services exchanged between service departments, allocating IT and HR costs only to production departments based on their relative usage proportions. Production A would receive approximately $200,000 under the direct method, which understates the true cost because it ignores the $36,000 of IT services consumed by HR and the $40,000 of HR services consumed by IT. The reciprocal method captures these mutual services, increasing Production A's allocation to $228,572.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "",
+        "ExplanationWrongC": "The direct method completely ignores all services exchanged between service departments, allocating service costs only to production departments. The reciprocal method, in contrast, uses simultaneous equations to fully recognize services provided between service departments in both directions, producing the most accurate cost allocations.",
         "ExplanationWrongD": "This amount results from applying incorrect percentages under the direct method or from miscomputing the production department shares. The reciprocal method correctly uses simultaneous equations to determine each service department's fully loaded cost, yielding $274,286 for IT and $228,572 for HR, with Production A receiving 50% of IT and 40% of HR.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16308,7 +16307,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16358,7 +16357,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16400,7 +16399,7 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "The dual-rate method separates service department costs into fixed and variable components and applies different allocation rates to each. The stem describes simultaneous equations recognizing mutual services in both directions—the defining characteristic of the reciprocal method, the most theoretically precise allocation approach.",
         "ExplanationWrongB": "The step-down method allocates service costs sequentially in one direction only and does not use simultaneous equations. The reciprocal method fully captures mutual interdepartmental services by solving a system of simultaneous equations.",
         "ExplanationWrongC": "The direct method ignores all interservice-department services entirely, allocating costs only to production departments. The reciprocal method captures these mutual services fully through simultaneous equations, unlike the direct method.",
         "ExplanationWrongD": "",
@@ -16408,7 +16407,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16450,7 +16449,7 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "The dual-rate method separates service department costs into fixed and variable components and applies different allocation rates to each. The stem describes simultaneous equations recognizing mutual services in both directions—the defining characteristic of the reciprocal method, the most theoretically precise allocation approach.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "This option reverses the stated step-down order. The specification clearly states that Cafeteria is allocated first, then Maintenance, then IT. The controller must explain to the production manager why, under this specific ordering, Production A receives more total allocation despite B's higher share of Maintenance. While changing the step-down sequence would alter the outcome — and firms sometimes test different sequences to assess sensitivity — the controller's task is to explain the result of the stated order, not to propose changing it. The step-down method's sensitivity to ordering sequence is itself a methodological limitation that the controller should acknowledge: the allocation to each production department depends on where each service department falls in the sequence, meaning different ordering assumptions produce different department cost totals.",
         "ExplanationWrongD": "Under the direct method, Production B would receive a DIFFERENT allocation from both the step-down method and from Production A. The direct method ignores inter-service flows entirely: Cafeteria would allocate only to A (45/85 = 52.94%) and B (40/85 = 47.06%); Maintenance only to A (35/80 = 43.75%) and B (45/80 = 56.25%); IT only to A (55%) and B (45%). The direct method produces its own biases — it does not simply reverse the step-down outcome. Claiming that B would receive more under the direct method may or may not be true; what IS true is that both the step-down and direct methods are imperfect approximations. The reciprocal method is the only method that fully captures inter-service department cost flows and produces theoretically correct allocations regardless of ordering.",
@@ -16458,7 +16457,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16501,14 +16500,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Under the step-down method, early-department allocations cascade through the sequence. Cafeteria costs allocated first flow to Maintenance and IT, increasing their cost pools. When Maintenance and IT are subsequently allocated, these inflated pools distribute more cost to production departments. The $240 difference reflects this cascading effect of the allocation sequence.",
         "ExplanationWrongC": "The gross margin approach treats only production costs as variable, classifying COGS ($380,000) as variable while treating variable SG&A ($92,000) as fixed. This methodological error inflates the ratio to 59.6% ($560,000/$940,000) and produces a forecast of $272,309 — substantially higher than the contribution margin projection. The flaw is conceptual: variable SG&A costs like sales commissions and shipping do vary with sales volume and must be included in the variable cost pool for CVP forecasting. Using gross margin instead of contribution margin for forecasting systematically overstates projected profitability because it understates the variable cost base. The contribution margin income statement format exists precisely because GAAP income statements (which report gross margin) do not separate costs by behavior.",
         "ExplanationWrongD": "Treating all costs as variable and applying the 12% growth to CM ($468,000 x 1.12) while reclassifying fixed costs ($355,000) as variable produces a fundamentally distorted forecast. This approach assumes that cost behavior is irrelevant to forecasting — that every dollar of cost scales with every dollar of sales. In reality, fixed costs (depreciation, rent, salaried personnel) do not change with sales volume in the short run. The contribution margin methodology is the standard precisely because it respects cost behavior: variable costs scale proportionally with sales, while fixed costs remain constant in the relevant range. Ignoring this distinction produces forecasts that are neither reliable nor useful for management decision-making.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16553,12 +16552,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "A statement of cash flows categorizes cash flows by operating, investing, and financing activities, not by cost behavior. The format that separates costs by behavior (variable vs. fixed) is the contribution margin income statement, designed for CVP analysis and short-term decision making.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "A traditional absorption income statement classifies costs by function and includes product-cost absorption; it is not the behavior-based internal format described.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Treating all costs as variable overstates the projected increase in profit because fixed costs do not change proportionally with sales volume. The contribution margin approach applies the CM ratio of 49.8% to the estimated revenue increase, correctly separating variable from fixed cost behavior. Fixed costs remain unchanged within the relevant range.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16608,7 +16607,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16658,7 +16657,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16708,7 +16707,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16758,7 +16757,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16808,7 +16807,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16858,7 +16857,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16908,7 +16907,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -16958,7 +16957,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17008,7 +17007,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17051,14 +17050,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Computing break-even using only the highest-CM product (X at $42/unit) ignores the constant sales mix assumption. For multi-product CVP analysis, the weighted-average contribution margin—$38.40—must capture the contribution of all products in proportion to their expected sales mix. Computing break-even for just one product violates the mix-constant assumption.",
         "ExplanationWrongC": "Option C is incorrect. Products in a multi-product CVP analysis can have different selling prices; the analysis uses a weighted-average contribution margin that accounts for varying prices and costs. Only the assumption of a constant sales mix is essential to compute a single, meaningful break-even point.",
-        "ExplanationWrongD": "Assuming zero variable costs for either product is both unrealistic and unnecessary for multi-product CVP. The analysis uses the actual contribution margins of each product in a weighted-average. Only the sales mix needs to remain constant.",
+        "ExplanationWrongD": "Equal selling prices are not required for multi-product CVP analysis. The critical assumption is a constant sales mix—that the relative proportions of each product sold remain stable. Without a constant mix, the weighted-average contribution margin changes with each unit sold, making a single break-even point in total units meaningless.",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17103,12 +17102,12 @@ const MCQ_BANK_D = [
         "ExplanationWrongA": "12,188 is the break-even point (zero profit), not the volume needed to achieve $185,000 in target profit. At 12,188 units, operating income is $0 because contribution margin exactly covers fixed costs. The target profit calculation requires the numerator to include both fixed costs and the desired profit: ($468,000 + $185,000) / $38.40, not $468,000 / $38.40.",
         "ExplanationWrongB": "$185,000 / $38.40 = 4,818 units treats the target profit as if it were the only amount that must be covered, ignoring the $468,000 in fixed costs. The contribution margin from each unit must cover both a proportionate share of fixed costs AND contribute to the target profit. The correct numerator is Fixed Costs + Target Profit = $653,000.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Equal selling prices are not required for multi-product CVP analysis. The critical assumption is a constant sales mix—that the relative proportions of each product sold remain stable. Without a constant mix, the weighted-average contribution margin changes with each unit sold, making a single break-even point meaningless.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17158,7 +17157,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17208,7 +17207,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17258,7 +17257,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17308,7 +17307,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17358,7 +17357,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17409,7 +17408,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S886 Analyze/Evaluate upgrade - 2026-07-28"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17459,7 +17458,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17509,7 +17508,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17559,7 +17558,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17609,7 +17608,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17659,7 +17658,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
@@ -17709,7 +17708,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -17759,7 +17758,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -17802,7 +17801,7 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Option A confuses a proximate cause with the structural failure. The credit manager's override of a single blocked order is an individual control failure — a symptom, not the root governance defect. The three lines model is designed to catch precisely this type of event: the first line (operations) identifies risk, the second line (risk management) monitors and challenges, and the third line (internal audit) provides independent assurance. The scenario describes all three lines failing simultaneously — operations (credit department) overrode controls, risk management (second line) signed off without challenge, and internal audit (third line) was not consulted. Individual accountability for the credit manager's override does not repair the governance structure. Disciplining one employee while leaving the reporting relationships unchanged means the same failure mode will recur with the next override.",
-        "ExplanationWrongB": "Option B misidentifies the first line of defense. Under the three lines model, the first line is operational management — the credit department, specifically the credit manager who approved the override. The second line is risk and compliance oversight — the risk management department that reviewed the override and approved it without challenge. The error in the scenario is that the person who approved the override (credit manager) also validated the appropriateness of their own decision when risk management merely rubber-stamped it. This is not a 'review by a more senior person' issue — it is a structural failure where the second line failed to provide independent challenge. Moving approval authority to the divisional controller simply shifts the rubber stamp to a different desk without addressing the structural gap in independent second-line oversight.",
+        "ExplanationWrongB": "",
         "ExplanationWrongC": "Option C correctly identifies the second line's failure as the primary defect but proposes the wrong remediation. The second line (risk management) failed because it approved the $950,000 override after a cursory review — not because it lacked a formal policy framework. A new policy would be a document on a shelf unless accompanied by a change in reporting structure that enables the second line to exercise genuine independent challenge. The root cause is that the credit manager's manager (the divisional controller) directed the override, and risk management reports to the same divisional controller — creating a conflict where the second line reports to the person whose decisions it is supposed to challenge. The structural fix requires the second line to have a reporting line independent of the operational chain it monitors.",
         "ExplanationWrongD": "",
         "question_state": "Active",
@@ -17810,7 +17809,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-ED-002 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -17860,7 +17859,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -17910,7 +17909,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -17960,7 +17959,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18010,7 +18009,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18060,7 +18059,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18110,7 +18109,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18160,7 +18159,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18210,7 +18209,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18260,7 +18259,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18310,7 +18309,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18360,7 +18359,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18410,7 +18409,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18454,14 +18453,14 @@ const MCQ_BANK_D = [
         ],
         "ExplanationWrongA": "Option A proposes a single response to a multi-dimensional risk. Foreign exchange hedging addresses currency risk — one component — but the scenario describes broader risks beyond FX: potential nationalization, sourcing disruption, and political instability in a country with deteriorating rule of law. Hedging the currency exposure does nothing to mitigate expropriation risk or supply chain interruption. A single-risk-mitigation strategy that ignores the other two risk dimensions is incomplete. Furthermore, hedging costs reduce margins on the $3.5 million annual savings, and the scenario does not provide enough information to assess whether the residual savings after hedging costs justify the strategic and operational risks. The CEO's instinct to reduce one risk while ignoring others represents a failure to apply the ERM portfolio view.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Option C correctly identifies residual risk but applies the risk tolerance concept incorrectly. Risk tolerance sets acceptable boundaries for variation around specific objectives — but the board has not set tolerances for the sourcing initiative. The $3.5 million projected savings is an expected outcome, not a tolerance boundary. COSO ERM requires that risk responses reduce residual risk to within the organization's risk tolerance. But without board-established tolerances for this initiative, the CEO cannot determine whether the residual risk after hedging is within tolerance. Furthermore, evaluating hedging costs against expected savings is a cost-benefit analysis of one risk response tool, not a comprehensive risk response strategy that addresses all three risk dimensions identified in the scenario.",
+        "ExplanationWrongC": "",
         "ExplanationWrongD": "Option D recommends risk avoidance — exiting the market entirely — which may be premature without evaluating intermediate options. Risk avoidance eliminates the downside but also eliminates the $3.5 million annual cost savings. Under COSO ERM, risk response selection should consider the portfolio effect: does this risk, in combination with other risks in the portfolio, exceed the organization's risk appetite? The scenario describes a $72 million enterprise with an 8% risk appetite — the board needs to evaluate whether the combined FX, political, and supply chain risks of this single-source country exceed 8% of equity, not simply exit because each risk dimension is significant. The analysis should also consider risk sharing (joint venture, political risk insurance) and risk reduction (partial diversification) as alternatives between the extremes of full acceptance and full avoidance. Choosing the most extreme risk response without evaluating intermediate options violates the ERM principle of proportional response.",
         "question_state": "Active",
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S899 Phase 1 — Evaluate replacement for archived P1-ED-015 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18505,13 +18504,13 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Risk appetite defines the amount of risk an organization is willing to accept in pursuit of its objectives — it is a strategic governance concept, not a specific risk response. The stem describes purchasing insurance, which is an active risk-transfer action.",
-        "ExplanationWrongB": "Risk avoidance eliminates the risk entirely by discontinuing the activity that creates the exposure. Here, the organization keeps the underlying activity but shifts the financial impact — a transfer, not an avoidance.",
+        "ExplanationWrongB": "",
         "ExplanationWrongC": "Risk acceptance means taking no action beyond monitoring. Purchasing insurance is an affirmative step to shift the financial consequences to an insurer, making it a risk transfer (sharing) response, not passive acceptance.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Risk acceptance means taking no action beyond monitoring the risk. The organization is actively purchasing insurance to shift financial consequences to an insurer. Under COSO ERM, this is a risk transfer (sharing) response—the organization retains the operational activity but transfers the financial impact of the risk to a third party.",
         "DifficultyScore": 1,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18561,7 +18560,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18611,7 +18610,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18662,7 +18661,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S56 Phase 5 — Evaluate replacement for archived P1-ED-019 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18713,7 +18712,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-ED-020 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18764,7 +18763,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S52 Phase 4 — Evaluate replacement for archived P1-ED-021 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18815,7 +18814,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S56 Phase 5 — Analyze replacement for archived P1-ED-022 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18865,7 +18864,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18916,7 +18915,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S56 Phase 5 — Evaluate replacement for archived P1-ED-024 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -18966,7 +18965,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19017,7 +19016,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S52 Phase 4 — Evaluate replacement for archived P1-ED-026 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19068,7 +19067,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S56 Phase 5 — Analyze replacement for archived P1-ED-027 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19118,7 +19117,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19169,7 +19168,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S56 Phase 5 — Evaluate replacement for archived P1-ED-029 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19220,7 +19219,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S56 Phase 5 — Evaluate replacement for archived P1-ED-030 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19271,7 +19270,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S52 Phase 4 — Analyze replacement for archived P1-ED-031 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19322,7 +19321,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S56 Phase 5 — Analyze replacement for archived P1-ED-032 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19372,7 +19371,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19423,7 +19422,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S56 Phase 5 — Evaluate replacement for archived P1-ED-034 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19473,7 +19472,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19523,7 +19522,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19574,7 +19573,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S56 Phase 5 — Evaluate replacement for archived P1-ED-037 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19625,7 +19624,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S52 Phase 4 — Evaluate replacement for archived P1-ED-038 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19676,7 +19675,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S56 Phase 5 — Evaluate replacement for archived P1-ED-039 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19727,41 +19726,41 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-ED-040 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.041 COSO Principle 7 — risk assessment — likelihood and impact",
-        "MicroTopic": "COSO Principle 7 — risk identification and assessment",
-        "UniqueConceptKey": "E-D041-risk-assessment-likelihood-impact",
-        "LOSTag": "E.1 COSO Internal Control Framework",
+        "Topic": "E.041 COSO Principle 7 risk identification bias single-source concentration",
+        "MicroTopic": "Risk identification bias in concentration risk assessment",
+        "UniqueConceptKey": "E-D041-risk-identification-bias",
+        "LOSTag": "E Internal controls",
         "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Ainsley Manufacturing's risk manager assesses the risk of a major ERP system failure using the following methodology: likelihood is rated on a 5-point scale from 'rare' (<5%) to 'almost certain' (>90%); impact is rated from 'negligible' to 'catastrophic' based on estimated financial loss. The risk manager rates the ERP failure as 'possible' likelihood (30-50%) and 'moderate' impact ($1-5 million loss range). The risk manager's notes state: 'We have experienced one 4-hour ERP outage in five years. Estimated financial impact of a multi-day outage is $4.2 million based on lost production and order processing delays.' An independent actuary estimates the likelihood of a multi-day ERP failure at 8% based on industry data for manufacturers of Ainsley's size. The board's risk appetite is that no single risk event should threaten more than 6% of equity ($70 million base). Which finding best evaluates the quality of this risk assessment?",
+        "Stem": "Dunfield Manufacturing, a $240 million industrial components manufacturer headquartered in Cleveland, sources 65% of its specialty steel inputs from a single supplier—ForgeTek Alloys—under an arrangement championed by VP of Operations Martin Calloway. Calloway has maintained a 12-year personal relationship with ForgeTek's owner and has never experienced a supply interruption during that period. Dunfield's risk assessment process is conducted annually by a risk committee that Calloway chairs; the committee includes the CFO, the production director, and the procurement manager—all of whom report directly or indirectly to Calloway. Internal audit, led by Director Sarah Kimura, is not invited to participate. Over five consecutive annual cycles from 2021 through 2025, the committee rated supply chain concentration risk as 'low,' citing ForgeTek's 'consistent delivery performance' and 'strategic partnership value.' No external data on industry supply disruption rates, no scenario analysis of single-source failure, and no quantitative modeling of financial impact were incorporated into the assessment. In March 2026, ForgeTek's unionized workforce struck over a contract dispute, halting all shipments for 22 days. Dunfield incurred $4.2 million in lost production, $890,000 in emergency spot-market procurement at 40% price premiums, and lost two major customer contracts collectively worth $3.1 million in annual revenue. Under COSO Principle 7, which statement best characterizes the defect in Dunfield's risk assessment process?",
         "Choices": {
-            "A": "The risk manager materially overstated the likelihood of ERP failure — the actuary's industry-based estimate of 8% falls within the 'rare' category, not 'possible'; the risk manager should recalibrate the likelihood rating to 'rare' and adjust the risk response priority downward accordingly",
-            "B": "The risk assessment is fundamentally flawed because the risk manager appears to have assessed residual risk (after considering existing backup systems and disaster recovery) without first assessing inherent risk; the assessment should be redone starting with the gross exposure before existing controls",
-            "C": "The risk assessment is incomplete because the risk manager only evaluated one technology risk — COSO Principle 7 requires identification of risks across all categories (strategic, operational, reporting, compliance) before rating individual risks",
-            "D": "The risk assessment contains a likelihood calibration error, but the more significant deficiency is that the impact analysis was performed in isolation — the risk manager should have evaluated the $4.2 million estimated loss against the board's 6% risk appetite threshold ($4.2 million) and flagged that the risk consumes the entire single-event risk budget"
+            "A": "The risk committee's composition violated COSO Principle 7 because it lacked representation from internal audit, an independent function whose participation is explicitly required for risk identification to be considered valid under the COSO framework.",
+            "B": "The risk assessment process was compromised by inherent bias, as Calloway's personal interest in maintaining the ForgeTek relationship and his control over committee membership and agenda prevented the objective identification of supply chain concentration as a significant risk, violating Principle 7's core requirement that risks be identified and analyzed without undue influence from parties with vested interests in preserving the status quo.",
+            "C": "The risk committee violated COSO Principle 7 by failing to mandate quantitative risk modeling—such as Monte Carlo simulation or value-at-risk analysis—to measure supply chain disruption exposure, relying instead on qualitative assessments that COSO explicitly prohibits for significant risk categories involving financial exposure above $1 million.",
+            "D": "Dunfield properly identified supply chain concentration as a risk but the committee's error was one of risk response rather than risk assessment, because Principle 7 only requires organizations to catalog risks—the decision to accept concentration risk by not diversifying suppliers falls under COSO Principle 9, which addresses how management identifies and responds to changes in the business environment."
         },
-        "CorrectChoice": "D",
-        "ExplanationCorrect": "The risk assessment has two related deficiencies. First, there is a likelihood calibration error: the risk manager rated ERP failure as 'possible' (30-50%) based on one 4-hour outage in five years, while the actuary estimates 8% probability using industry data. A single non-material outage does not support a 30-50% probability estimate for a multi-day failure. However, the more significant deficiency is the impact analysis. COSO Principle 7 requires that risks be assessed against the organization's risk appetite and tolerance. Nettleton's board has set a single-event risk appetite of 6% of equity — $4.2 million. The estimated financial loss of $4.2 million from an ERP failure exactly equals this threshold, yet the risk manager did not flag this boundary condition. A risk that consumes the entire single-event risk budget should trigger explicit board-level discussion regardless of its likelihood rating. The impact analysis failed to connect the quantitative loss estimate to the board's stated risk appetite — a basic requirement of a risk assessment that informs governance decisions.",
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Under COSO Internal Control — Integrated Framework Principle 7, the organization identifies risks to the achievement of its objectives across the entity and analyzes risks as a basis for determining how they should be managed. Principle 7 requires that risk identification be comprehensive, objective, and free from bias. The Dunfield case illustrates a multi-layered risk identification failure rooted in both cognitive and structural bias. First, Calloway's 12-year personal relationship with ForgeTek's owner created an availability heuristic bias: the committee treated an uninterrupted 12-year track record as dispositive evidence of low future risk, despite the statistical principle that past performance—particularly for single-point-of-failure dependencies—does not guarantee future results. Second, the committee's composition was structurally compromised: all members reported directly or indirectly to Calloway, creating a groupthink dynamic where no participant possessed both the independence and the incentive to challenge the prevailing 'low risk' assessment. Third, the risk identification process itself lacked methodological rigor: no external benchmarking data on industry supply disruption rates was consulted, no scenario analysis of what a ForgeTek interruption would cost was conducted, and no quantitative impact modeling was performed—all of which would have surfaced the concentration exposure that the qualitative, relationship-based assessment systematically obscured. The $4.2 million production loss, $890,000 in premium procurement, and $3.1 million in lost customer revenue—totaling $8.19 million—represent the direct consequence of a risk the committee rated 'low' for five consecutive years. The defect was not merely that the risk materialized; it was that the risk assessment process itself was structurally incapable of surfacing the risk because the person who controlled the process had a vested interest in not seeing it. COSO Principle 7 requires that risk identification processes be designed to overcome, rather than reinforce, organizational biases. An effective assessment would have separated the supplier relationship management function from the risk assessment function, required independent challenge of concentration assumptions, and mandated evidence-based analysis rather than relationship-based reassurance. A common CMA exam trap is to confuse a risk identification failure with a risk response failure—the committee did not decide to accept a known risk; it never properly identified the risk in the first place because the process was designed by and for the person whose interests were served by maintaining the single-source arrangement.",
         "StudyLinks": [
-            {
-                "label": "COSO Internal Control — Integrated Framework (2013), Principle 7: Risk Assessment",
-                "url": "https://www.coso.org"
-            },
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
                 "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+            },
+            {
+                "label": "COSO Internal Control Framework overview",
+                "url": "https://www.coso.org/guidance-on-ic"
             }
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-041",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -19770,14 +19769,15 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Option A incorrectly asserts that COSO Principle 7 explicitly requires internal audit representation on the risk committee. While internal audit can provide valuable independent assurance and COSO generally supports separating oversight from operations, Principle 7 does not mandate a specific organizational structure or require internal audit participation as a condition for valid risk identification. The defect in Dunfield's process is more fundamental: the person who controlled the supplier relationship also controlled the risk assessment of that relationship, creating an inherent conflict of interest that would have compromised the assessment regardless of who else sat on the committee. A candidate selecting this option correctly identifies that committee composition is relevant to risk assessment quality but overstates a procedural requirement rather than identifying the underlying structural bias—Calloway's dual role as both relationship owner and risk assessor—that prevented objective evaluation.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Option C (Risk transfer, which shifts risk to third parties) represents a plausible misconception. Under COSO risk assessment component, the correct analysis leads to the conclusion that risk assessment, prioritizing risks based on likelihood and impact. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongD": "Option D (Monitoring, which evaluates control effectiveness over time) represents a plausible misconception. Under COSO risk assessment component, the correct analysis leads to the conclusion that risk assessment, prioritizing risks based on likelihood and impact. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongC": "Option C mischaracterizes COSO guidance on risk analysis methodology. COSO Principle 7 does not prohibit qualitative risk assessments or mandate quantitative modeling such as Monte Carlo simulation for significant risk categories. The COSO framework is deliberately flexible regarding measurement methodology, recognizing that quantitative models are not always feasible or appropriate and that qualitative assessments, when performed objectively, can provide valuable insight. The issue in Dunfield's case is not the choice between qualitative and quantitative methods but the fundamental inability of the risk identification process to surface the supply chain concentration risk at all—the committee did not apply qualitative methods poorly; it applied its judgment from a position of structural bias that prevented any meaningful assessment, whether qualitative or quantitative. A candidate reaching this answer likely confuses risk assessment methodology best practices with the threshold question of whether risk identification was objective in the first place.",
+        "ExplanationWrongD": "Option D draws an incorrect distinction between risk identification and risk response that misallocates the relevant COSO principle. While COSO Principle 9 addresses how management identifies and responds to changes affecting the system of internal control, Principle 7's scope encompasses the entire risk identification and analysis process—not merely cataloging risks. The defect in Dunfield's process occurred at the identification stage: the committee failed to recognize supply chain concentration as a significant risk, assigning it a 'low' rating based on biased criteria rather than objective evidence. This is not a case where a properly identified risk was accepted through a conscious risk response decision; it is a case where the identification process itself was structurally incapable of producing an accurate risk rating. A candidate selecting this option correctly recognizes that risk response is a separate COSO component but fails to see that the root cause was an identification-stage failure, not a response-stage decision.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19827,7 +19827,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19878,7 +19878,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S52 Phase 4 — Evaluate replacement for archived P1-ED-043 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19929,7 +19929,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S380 Evaluate Wave 1 — Evaluate replacement for archived P1-ED-044 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -19984,7 +19984,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S380 Evaluate Wave 1 — Evaluate replacement for archived P1-ED-045 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -20034,26 +20034,26 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.047 code of conduct ethics program",
-        "MicroTopic": "code of conduct ethics program",
-        "UniqueConceptKey": "E-D047-code-of-conduct-ethics-program",
+        "Topic": "E.047 COSO Principle 1 tone at the top integrity ethical values management override",
+        "MicroTopic": "Tone at the top failure and management override of ethical standards",
+        "UniqueConceptKey": "E-D047-tone-at-the-top-failure",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Vaultbrook requires all employees to complete annual ethics training and sign an acknowledgment of the company's code of conduct. What internal control component does this primarily support?",
+        "Stem": "Sandstone Regional Bank, a $4.8 billion community banking institution serving the Pacific Northwest, publicly positions itself as an ethical lender. CEO Victoria Ashford appears regularly in the bank's marketing materials stating that 'integrity is the foundation of every loan decision' and has published op-eds in regional business journals advocating for transparent lending practices. Internally, however, Ashford has directed Chief Risk Officer Raj Patel on eight separate occasions over a 14-month period to approve commercial loans totaling $12 million to borrowers who do not meet the bank's standard creditworthiness criteria—including three loans to municipal officials whose agencies maintain $47 million in deposits with Sandstone and two loans to a real estate developer who contributed $85,000 to Ashford's industry association leadership campaign. Each loan was flagged by the bank's automated underwriting system, which rated the applications as 'below standard' on debt-service coverage, collateral adequacy, and borrower credit history. Patel documented his concerns in memoranda to Ashford and, in November 2025, raised the pattern directly with the board's audit committee chair. Within 45 days, Ashford terminated Patel's employment, citing 'philosophical differences on risk appetite,' and appointed a new CRO who has approved all subsequent politically connected loan applications without objection. Under COSO Principle 1, which statement best characterizes the control environment failure at Sandstone Regional Bank?",
         "Choices": {
-            "A": "Monitoring activities, since it evaluates control effectiveness",
-            "B": "Information and communication, limited to external reporting only",
-            "C": "The control environment, by reinforcing the organization's commitment to ethical values",
-            "D": "Risk assessment, since it identifies specific financial risks"
+            "A": "The board of directors failed to fulfill its oversight responsibilities under COSO Principle 2 by not independently investigating Patel's concerns about politically connected lending, with the audit committee chair's inaction after receiving Patel's report constituting a governance-level failure to exercise independent oversight of senior management.",
+            "B": "The Chief Risk Officer failed to exercise competent professional judgment under COSO Principle 4, as Patel should have escalated his concerns through the bank's whistleblower hotline or external regulatory channels rather than continuing to approve loans he knew violated the bank's underwriting standards.",
+            "C": "The CEO's conduct represents a fundamental failure of tone at the top under COSO Principle 1, as Ashford publicly espoused ethical values while privately directing loan approvals that violated the bank's credit standards, and eliminated dissent by terminating the CRO who raised concerns—demonstrating that the organization's commitment to integrity and ethical values existed only in external communications, not in management's actual behavior.",
+            "D": "The primary control failure was in the risk assessment function under COSO Principle 7, as the bank's automated underwriting system failed to incorporate political exposure as a risk factor, and the credit risk rating methodology did not adequately capture the correlation risk created by lending to borrowers whose influence over bank deposits created concentration exposure."
         },
         "CorrectChoice": "C",
-        "ExplanationCorrect": "Under the COSO Internal Control—Integrated Framework, the Control Environment (Principles 1–5) is the foundation of internal control. An ethics program and code of conduct demonstrate the organization's commitment to integrity and ethical values, which sets the tone at the top and influences the control consciousness of all employees.",
+        "ExplanationCorrect": "Under COSO Internal Control — Integrated Framework Principle 1, the organization demonstrates a commitment to integrity and ethical values. This principle is the foundation of the entire control environment component: without a genuine—not merely stated—commitment from senior management, all other internal control components are compromised. The Sandstone Regional Bank case illustrates the most severe form of control environment failure: a CEO who uses ethical messaging instrumentally for external stakeholder consumption while systematically violating those same standards in operational decision-making. Four elements of the COSO Principle 1 framework are violated here. First, the 'tone at the top' is deliberately deceptive: Ashford's public statements create an expectation of ethical lending that her private directives directly contradict. When public statements and private behavior diverge, the private behavior—not the stated policy—defines the actual control environment, because employees observe and respond to what leadership does, not what leadership says. Second, Ashford eliminated internal accountability by terminating the CRO who raised concerns, demonstrating that the organization punishes rather than rewards ethical conduct—a direct violation of COSO's emphasis on enforcement of standards of conduct. Third, the $12 million in non-conforming loans provided tangible evidence that ethical standards could be circumvented when politically or personally advantageous, teaching the organization that stated values are aspirational rather than operational. Fourth, the replacement of Patel with a compliant successor institutionalized the control environment failure, ensuring that future deviations would go unchallenged. The governance implication is that a compromised tone at the top cascades through every other control component: risk assessments become performative because the CEO will override uncomfortable findings, control activities become avoidable because the CEO will direct exceptions, and information and communication become unreliable because those who speak up are terminated. The $85,000 campaign contribution and the $47 million in municipal deposits created precisely the kind of conflict of interest that a genuine commitment to integrity under Principle 1 would have identified and prohibited. A common CMA exam trap is to attribute the failure to board oversight (Principle 2) or risk assessment (Principle 7) without recognizing that Principle 1—integrity and ethical values—is the precipitating failure from which all other control weaknesses flow. When the CEO does not genuinely demonstrate commitment to integrity, no amount of board oversight or risk assessment sophistication can compensate for the control environment deficit at the top.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20068,7 +20068,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-047",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20077,33 +20077,34 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (Information and communication, limited to external reporting only) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that the control environment, by reinforcing the organization's commitment to ethical values. A candidate may select this option by misapplying a related but distinct concept.",
+        "ExplanationWrongA": "Option A attributes the primary failure to the board under COSO Principle 2 (board independence and oversight). While it is true that the audit committee chair should have acted upon Patel's report—and board oversight was demonstrably weak—this analysis misses the precipitating cause. COSO Principle 2 addresses the board's responsibility to oversee the development and performance of internal control, but the board's failure here was consequential, not causal. The root cause of the control environment breakdown was Ashford's deliberate subversion of ethical standards, which created the conditions that the board then failed to detect. Moreover, a CEO willing to terminate a CRO for raising concerns will also manage the information flow to the board, making detection inherently difficult even for a well-functioning board. The candidate selecting this option correctly identifies a governance weakness but misidentifies the sequence of causation—attributing primary responsibility to the board when the board's failure was downstream of the ethical breach at the CEO level.",
+        "ExplanationWrongB": "Option B places responsibility on the CRO under COSO Principle 4 (commitment to competence). This analysis fundamentally misreads Patel's conduct: he documented his concerns in writing, raised the pattern of questionable loans directly with the CEO, and escalated to the board's audit committee chair when internal channels proved ineffective—precisely the escalation path that COSO and professional standards recommend. Patel did not 'continue approving loans' independently; he was directed to approve them by the CEO, who held authority over his continued employment. Characterizing this as a competence failure on Patel's part blames the individual who exercised professional courage at great personal cost rather than the CEO who created the ethical breach. The candidate selecting this option may be applying a narrow definition of 'competence' that equates it with successful intervention, failing to recognize that competence under COSO includes the exercise of professional judgment in raising concerns through appropriate channels—which Patel demonstrably did.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongD": "Option D attributes the failure to risk assessment under COSO Principle 7, arguing that the automated underwriting system should have incorporated political exposure as a risk factor. While enhancing credit risk models is a valid operational improvement, this analysis fundamentally misunderstands the nature of the control failure. The underwriting system functioned correctly—it identified each of the eight loans as 'below standard' using objective credit criteria. The system was not deficient; management overrode it. No risk assessment model, however sophisticated, can detect or prevent a CEO who deliberately directs subordinates to violate established criteria. The candidate selecting this option may be over-indexing on technical control mechanisms and under-appreciating that internal controls are only as effective as the ethical commitment of the people who operate them. A COSO Principle 1 violation—compromised integrity at the top—renders risk assessment outputs irrelevant because management can and will ignore them.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.048 code of conduct ethics program",
-        "MicroTopic": "code of conduct ethics program",
-        "UniqueConceptKey": "E-D048-code-of-conduct-ethics-program",
+        "Topic": "E.048 COSO Principle 3 delegation of authority formal documentation management override",
+        "MicroTopic": "Delegation of authority and formal control boundaries",
+        "UniqueConceptKey": "E-D048-delegation-of-authority",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Westhollow requires all employees to complete annual ethics training and sign an acknowledgment of the company's code of conduct. What internal control component does this primarily support?",
+        "Stem": "BrightRow Retail Group operates 87 home improvement stores across the Midwest, generating $1.4 billion in annual revenue. The company's organizational philosophy emphasizes 'empowered store management,' granting each store manager broad discretion over pricing decisions within a ±15% range of list prices, hiring of up to 40 full-time-equivalent staff per location, and inventory purchasing of high-turnover stock-keeping units up to $50,000 per order without regional approval. However, BrightRow has never issued formal delegation-of-authority documentation specifying the exact scope and limits of store manager purchasing authority. Store Manager Daniel Okonkwo, who runs BrightRow's highest-volume location in Indianapolis, has used this ambiguity to approve $340,000 in inventory purchases over an eight-month period from TimberCrest Wholesale, a building materials distributor owned by his brother-in-law. TimberCrest's prices averaged 22% above the prices BrightRow's approved national suppliers charged for identical products, costing the company approximately $61,000 in excess procurement expense. When internal audit questioned the purchases, Okonkwo defended them as being within his 'general store management authority' and pointed to the absence of any written document restricting his purchasing decisions or requiring competitive vendor selection. The company's employee handbook states only that managers 'should exercise prudent judgment in vendor selection.' Under COSO Principle 3, which statement best characterizes the control environment failure?",
         "Choices": {
-            "A": "Information and communication, limited to external reporting only",
-            "B": "Monitoring activities, since it evaluates control effectiveness",
-            "C": "Risk assessment, since it identifies specific financial risks",
-            "D": "The control environment, by reinforcing the organization's commitment to ethical values"
+            "A": "BrightRow failed to establish formal delegation of authority as required by COSO Principle 3, because without documented boundaries specifying the scope, limits, and approval requirements for store manager purchasing authority, the organization could not hold Okonkwo accountable for exceeding his intended authority—the 'general store management authority' defense succeeds precisely because no written standard exists against which to measure the appropriateness of his actions.",
+            "B": "The primary failure is in monitoring activities under COSO Principle 16, as BrightRow's internal audit function should have detected the related-party purchasing pattern earlier than eight months, and the $340,000 in above-market purchases represents a material control deficiency that ongoing monitoring evaluations should have identified within the first quarter.",
+            "C": "The failure is primarily a segregation-of-duties issue under COSO Principle 10, because Okonkwo simultaneously held the authority to select vendors, place purchase orders, and receive inventory without independent verification that prices were competitive—a concentration of incompatible functions that enabled the related-party transactions.",
+            "D": "BrightRow's control environment failure is rooted in COSO Principle 4, as the company did not demonstrate a commitment to attracting, developing, and retaining competent individuals—Okonkwo should have been trained to recognize that purchasing from a relative at above-market prices violated his fiduciary duty to the company regardless of whether formal authority limits were documented."
         },
-        "CorrectChoice": "D",
-        "ExplanationCorrect": "An ethics program and code of conduct reinforce the control environment, which reflects the organization's overall commitment to integrity and ethical values.",
+        "CorrectChoice": "A",
+        "ExplanationCorrect": "Under COSO Internal Control — Integrated Framework Principle 3, management establishes, with board oversight, structures, reporting lines, and appropriate authorities and responsibilities in the pursuit of objectives. Principle 3 requires that delegation of authority be formal, documented, and communicated—not merely implied by organizational culture or inferred from job titles. The BrightRow case illustrates a fundamental breakdown in the structural foundation of the control environment. The company delegated substantial purchasing authority to store managers—up to $50,000 per order across 87 locations representing approximately $4.35 million in aggregate delegated purchasing capacity per order cycle—but never reduced that delegation to a written standard specifying what activities fall within and outside authorized boundaries. The employee handbook's vague instruction to 'exercise prudent judgment in vendor selection' does not constitute delegation of authority under COSO; it is an aspirational statement with no measurable criteria, no defined limits, no conflict-of-interest prohibitions, and no enforcement mechanism. COSO Principle 3 specifically requires that management establish clear delegations of authority that specify what decisions each level of management may make, what monetary and scope limits apply, what competitive procurement requirements must be satisfied, and what approvals are required for exceptions or related-party transactions. Without such documentation, the organization cannot hold individuals accountable because there is no objective standard against which to measure their conduct. Okonkwo's defense—that the $340,000 in related-party purchases fell within his 'general store management authority'—is facially correct precisely because BrightRow never defined what 'general' authority excluded. The $61,000 in excess procurement cost is the direct result of this ambiguity, not merely the consequence of an individual's poor judgment. The absence of formal delegation creates what COSO describes as a control environment where individuals may not understand what is expected of them or may push beyond their intended authority because boundaries are unclear. A common CMA exam trap is to attribute failures of authority and responsibility (Principle 3) to monitoring (Principle 16), segregation of duties (Principle 10), or competence (Principle 4) without recognizing that clear delegations of authority are the foundational control environment element—without them, neither monitoring nor competence standards can operate effectively because there is no baseline to monitor against or train to.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20118,7 +20119,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-048",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20128,13 +20129,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (Monitoring activities, since it evaluates control effectiveness) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that the control environment, by reinforcing the organization's commitment to ethical values. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongC": "Option C (Risk assessment, since it identifies specific financial risks) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that the control environment, by reinforcing the organization's commitment to ethical values. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongD": "",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongB": "Option B attributes the failure to monitoring under COSO Principle 16. While it is true that earlier detection would have reduced the loss, this analysis focuses on the symptom rather than the structural cause. COSO Principle 16 requires ongoing evaluations to determine whether controls are present and functioning, but monitoring presupposes that controls exist to be evaluated. In BrightRow's case, the control that was missing was the delegation-of-authority documentation itself—internal audit cannot monitor compliance with a standard that does not exist. Even if audit had detected the related-party purchases in the first month, without a written delegation specifying that related-party transactions require independent approval and competitive bidding, the company would have struggled to classify the purchases as violations of a defined standard. The candidate selecting this option correctly identifies that detection was slow but incorrectly assumes that the relevant control framework existed for monitoring to test against, when in fact the deficiency was the absence of the control itself.",
+        "ExplanationWrongC": "Option C characterizes the failure as one of segregation of duties under COSO Principle 10, arguing that Okonkwo's ability to select vendors, place orders, and receive inventory constituted incompatible functions that should have been separated. While separating purchasing and receiving duties is a best practice in a well-designed control system, this analysis misses the more fundamental control environment deficiency. In a retail environment with 87 geographically dispersed locations, perfect segregation of purchasing, receiving, and vendor selection duties at each store may be economically infeasible—which is precisely why formal delegation of authority is essential as a compensating control. If BrightRow had documented that store managers may only purchase from approved national suppliers, that competitive bids are required for orders above $10,000, and that any related-party transaction requires regional approval, Okonkwo's purchases from TimberCrest would have been a clear violation regardless of whether duties were segregated. The candidate selecting this option applies a control-activities lens to a problem that is fundamentally about the absence of authority boundaries—a control environment deficiency that no degree of operational duty segregation can compensate for if the scope of individual authority remains undefined.",
+        "ExplanationWrongD": "Option D attributes the failure to COSO Principle 4, arguing that the company failed to demonstrate commitment to competence by not training Okonkwo on his fiduciary duty. This analysis conflates ethical awareness with structural control. Okonkwo almost certainly understood that purchasing from his brother-in-law at prices 22% above market was inappropriate—he constructed a legalistic defense based on the absence of written restrictions, not a claim that he believed his actions were proper or consistent with company policy. The competence to recognize a conflict of interest is distinct from the organizational failure to establish clear boundaries that make such conflicts identifiable and sanctionable under a defined authority framework. The candidate selecting this option may be overestimating the role of training as a control mechanism—training can communicate standards, but it cannot create them. COSO Principle 3 requires that the standards themselves exist in documented, measurable form before they can be communicated through training or enforced through monitoring.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -20185,7 +20187,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S52 Phase 4 — Evaluate replacement for archived P1-ED-049 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -20228,7 +20230,7 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Option A recommends a technology fix for what is fundamentally a governance and process problem. Mandatory 90-day password rotation addresses one aspect of authentication (credential hygiene) but does not address the structural root causes identified in the scenario: (1) 34 terminated employees retained active accounts because the offboarding procedure had no IT notification trigger, not because passwords were weak. (2) Three shared generic accounts ('warehouse,' 'ap_clerk,' 'plant_manager') violate the principle that every account must be uniquely attributable to an individual — password rotation on a shared account is meaningless because the password is shared. (3) Password complexity requirements do not prevent unauthorized access when terminated employees still have valid credentials. The IT consultant's recommendation applies a single technical control to a multi-dimensional governance failure.",
-        "ExplanationWrongB": "Option B correctly identifies access review as the remediation but misdiagnoses the review frequency as the root cause. Semi-annual access certification is a common cadence — the problem is not the review frequency but the absence of a trigger-based process that removes access upon termination. Even monthly access reviews would leave a window of up to 30 days where terminated employees retain system access. The scenario explicitly describes 34 terminated employees with active accounts — this is a failure of the joiner/mover/leaver (JML) process, not the periodic review schedule. Trigger-based deprovisioning (immediate access removal upon HR termination notification) closes the window entirely. Increasing review frequency reduces but does not eliminate the exposure period.",
+        "ExplanationWrongB": "",
         "ExplanationWrongC": "Option C focuses on a subset of the access control deficiencies (role design) while ignoring the more fundamental JML process failure. Role-based access with least privilege is a design principle for future-state access management, but the immediate remediation must address the 34 active terminated-employee accounts and the shared generic accounts. Redesigning roles is a medium-term project that does not close the existing access gap. The scenario asks for the most critical deficiency — the presence of 34 active accounts for terminated employees is an immediate security exposure that must be closed before embarking on a role-redesign initiative. Furthermore, least-privilege role design does not solve the shared-account problem; shared accounts violate the principle of individual accountability regardless of how tightly scoped their permissions are.",
         "ExplanationWrongD": "",
         "question_state": "Active",
@@ -20236,7 +20238,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-ED-050 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -20281,31 +20283,31 @@ const MCQ_BANK_D = [
         ],
         "ExplanationWrongA": "Multi-factor authentication does not replace segregation of duties — it addresses a different control objective. Segregation of duties prevents one person from controlling an entire transaction; MFA verifies that the person attempting access is who they claim to be.",
         "ExplanationWrongB": "Multi-factor authentication is an IT access control, not a performance measurement tool. Balanced scorecard metrics track strategic objectives across financial, customer, internal process, and learning perspectives — unrelated to system authentication.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "No single control eliminates the need for all others. Multi-factor authentication strengthens access security but must be part of a broader system of IT general controls including access reviews, change management, and segregation of duties.",
+        "ExplanationWrongC": "Access reviews, while important, are detective controls that identify problems after they occur. The fundamental failure is the broken joiner-mover-leaver process—the organization failed to deprovision access for 34 terminated employees. Under COSO Principle 11, technology general controls must include procedures for timely removal of access upon termination.",
+        "ExplanationWrongD": "",
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.052 password access authentication control",
-        "MicroTopic": "password access authentication control",
-        "UniqueConceptKey": "E-D052-password-access-authentication-control",
+        "Topic": "E.052 COSO Principle 10 segregation of duties IT access provisioning audit log management",
+        "MicroTopic": "IT segregation of duties and incompatible access functions",
+        "UniqueConceptKey": "E-D052-it-segregation-of-duties",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Coventry Hill requires multi-factor authentication for all employees accessing financial systems remotely. What is the primary purpose of this control?",
+        "Stem": "Griffin Memorial Hospital, a 340-bed acute care facility in Nashville, implemented an electronic health records (EHR) system three years ago at a cost of $22 million. The hospital's IT department has 14 staff members, but due to budget constraints, the EHR system administrator role was assigned to a single individual—Thomas Lerner. Lerner's system credentials grant him the ability both to create and modify user accounts, including setting access permission levels to clinical, financial, and administrative modules, and to review and delete the EHR system's access audit logs. Hospital policy requires quarterly access reviews conducted by the Chief Medical Informatics Officer, who receives access reports generated by Lerner. Over an 11-month period spanning August 2025 through June 2026, Lerner created 14 unauthorized user accounts—including one for a former Griffin nurse now employed by a competing hospital system—and used these accounts to access more than 2,100 patient records, including those of local public figures, hospital board members, and patients with sensitive diagnoses. He also deleted the corresponding audit trail entries before each quarterly access review, ensuring that the reports provided to the CMIO showed no anomalous access patterns during any quarter. The scheme was discovered only when a patient noticed an unauthorized insurance claim filed using her medical record number and alerted the hospital's compliance department. Under COSO Principle 10, which statement best characterizes the control failure?",
         "Choices": {
-            "A": "To ensure compliance with balanced scorecard metrics",
-            "B": "To replace the need for segregation of duties",
-            "C": "To eliminate the need for any other IT general controls",
-            "D": "To reduce the risk of unauthorized access to financial systems and data"
+            "A": "The primary failure is in monitoring under COSO Principle 16, as the Chief Medical Informatics Officer should have independently generated access reports directly from the EHR system rather than relying on reports provided by Lerner, which would have detected the deleted audit entries and anomalous access patterns within the first quarter.",
+            "B": "The hospital's control environment failed under COSO Principle 4, as budget constraints that assigned the EHR system administrator role to a single person demonstrated a lack of commitment to competence by failing to invest in adequate IT staffing commensurate with the sensitivity and regulatory requirements governing patient health information.",
+            "C": "The failure is primarily in risk assessment under COSO Principle 8, as the hospital failed to specifically assess fraud risk related to IT system administrators who hold elevated access privileges, focusing its risk assessment efforts instead on clinical quality and financial reporting risks at the expense of information security risks.",
+            "D": "The hospital violated COSO Principle 10 by failing to segregate incompatible duties—specifically, the ability to provision user access and the ability to review and delete access audit logs—which created a single-individual control loop where Lerner could create unauthorized accounts, use them to access protected data, and destroy the evidence of his actions, all without independent detection by any other person or system."
         },
         "CorrectChoice": "D",
-        "ExplanationCorrect": "Under the COSO Control Activities component, authentication controls like multi-factor authentication support the principle that access to information systems should be restricted to authorized users. Multi-factor authentication strengthens access security by requiring more than one form of verification, reducing the risk of unauthorized access to financial systems.",
+        "ExplanationCorrect": "Under COSO Internal Control — Integrated Framework Principle 10, the organization selects and develops control activities that contribute to the mitigation of risks to the achievement of objectives to acceptable levels. Segregation of duties is one of the most fundamental control activities within Principle 10, designed to prevent any single individual from controlling all aspects of a transaction or process from authorization through recording and custody. The Griffin Memorial Hospital case demonstrates a textbook violation of this principle in the critical domain of IT access management. Lerner's system credentials constituted an incompatible combination of functions: access provisioning (creating and modifying user accounts and permission levels) and access monitoring (reviewing and deleting audit logs that record account usage). In a properly segregated environment, the person who creates accounts cannot also review or modify the records of account usage, because the monitoring function exists specifically to detect the kind of unauthorized account creation that Lerner performed. The 14 unauthorized accounts, 2,100+ improperly accessed patient records, and systematically deleted audit trail entries were all enabled by this single-point-of-control architecture. The quarterly access review process created the appearance of oversight—a documented control on paper—but was substantively worthless because the reviewer, the Chief Medical Informatics Officer, received reports generated by the same individual whose activity the review was meant to detect. This is the defining characteristic of a segregation-of-duties failure under Principle 10: the control appears to exist in policy documentation (hospital policy requires quarterly access reviews) but is operationally nullified because the person being monitored controls the monitoring inputs. COSO Principle 10 requires not merely that control activities be selected and documented but that they be designed and implemented at a level of specificity sufficient to actually mitigate risk. A segregation-of-duties control that places incompatible functions under a single individual provides no genuine mitigation regardless of how thoroughly policies are documented. The $22 million EHR investment delivered no protection against internal access abuse because the control architecture treated system administration as a purely technical function rather than a control function requiring structural separation of incompatible responsibilities. A common CMA exam trap is to attribute IT control failures to inadequate monitoring (Principle 16 — 'they should have checked the reports independently'), insufficient staffing (Principle 4 — 'they should have hired more IT staff'), or inadequate risk assessment (Principle 8 — 'they should have assessed fraud risk better') when the root cause is the failure to separate incompatible duties at the control design stage under Principle 10.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20320,7 +20322,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-052",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20329,33 +20331,34 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (To replace the need for segregation of duties) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that to reduce the risk of unauthorized access to financial systems and data. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongC": "Option C (To eliminate the need for any other IT general controls) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that to reduce the risk of unauthorized access to financial systems and data. A candidate may select this option by misapplying a related but distinct concept.",
+        "ExplanationWrongA": "Option A attributes the failure primarily to monitoring under COSO Principle 16, arguing that the CMIO should have independently generated access reports. While independent report generation would have detected the deleted audit entries, this analysis treats the monitoring failure as the root cause rather than a consequence of the underlying control design defect. The reason independent report generation was necessary in the first place is precisely because duties were not segregated—if access provisioning and audit log management had been assigned to different individuals, Lerner would not have been able to delete audit entries, and the CMIO's reliance on system-generated reports would not have been a vulnerability at all. Monitoring under Principle 16 is designed to verify that controls are operating effectively, but it presupposes that controls exist to be monitored. The candidate selecting this option correctly identifies a procedural weakness but misidentifies the structural deficiency—inadequate segregation of duties under Principle 10—that made the procedural weakness consequential.",
+        "ExplanationWrongB": "Option B attributes the failure to COSO Principle 4, suggesting that budget-constrained staffing demonstrated insufficient commitment to competence. While adequate IT staffing is undoubtedly important, this analysis mistakes resource allocation for control design. Even with a larger IT department, if management assigns both access provisioning and audit log management to the same team without internal segregation between those functions, the same vulnerability exists—merely spread across more people who could potentially collude. The relevant question under COSO is not whether 14 IT staff is sufficient for a 340-bed hospital; it is whether incompatible functions are assigned to different individuals regardless of department size. A hospital with 50 IT staff that fails to segregate access provisioning from access monitoring would face the same control deficiency. The candidate selecting this option may be conflating staffing adequacy with control design effectiveness—they are related but distinct concepts under COSO, and Principle 10 addresses the latter.",
+        "ExplanationWrongC": "Option C attributes the failure to fraud risk assessment under COSO Principle 8. While COSO Principle 8 specifically requires organizations to consider the potential for fraud in assessing risks to the achievement of objectives, and a fraud risk assessment focusing on IT administrator access privileges would have been valuable, this analysis inverts the causal relationship between risk identification and control design. The hospital could have performed a comprehensive fraud risk assessment that correctly identified system administrator access as a high-risk area, but without corresponding control activities—specifically, segregation of incompatible duties—the risk assessment output alone would not have changed outcomes. COSO Principle 8 identifies what risks exist; COSO Principle 10 ensures that control activities are designed and implemented to address them. The failure here is not that the hospital was unaware of the risk but that it designed a control architecture structurally incapable of addressing that risk. The candidate selecting this option correctly identifies that fraud risk was under-appreciated but fails to recognize that the primary deficiency is in control activity design, not risk identification.",
         "ExplanationWrongD": "",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Apply"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.053 password access authentication control",
-        "MicroTopic": "password access authentication control",
-        "UniqueConceptKey": "E-D053-password-access-authentication-control",
+        "Topic": "E.053 COSO Principle 13 information quality dashboard aggregation data consistency decision-making",
+        "MicroTopic": "Information quality and data aggregation consistency",
+        "UniqueConceptKey": "E-D053-information-quality",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Duskgrove requires multi-factor authentication for all employees accessing financial systems remotely. What is the primary purpose of this control?",
+        "Stem": "HarborLink Transportation operates a fleet of 340 trucks providing freight services across the southeastern United States, with annual revenue of $180 million. The company's operations dashboard aggregates on-time delivery data from five regional dispatch systems—Southeast, Mid-Atlantic, Gulf Coast, Carolinas, and Florida—into a single corporate metric displayed on a real-time screen in the executive conference room. For 18 consecutive months, the dashboard has reported an on-time delivery rate of 94%, and management has used this metric for quarterly bonus determinations affecting 42 operations managers and for pricing negotiations in 11 major customer contracts that include on-time delivery guarantees with financial penalties for underperformance. An internal audit review discovered that the Gulf Coast region's dispatch system defines 'on-time' as delivery within 60 minutes of the scheduled window, while the other four regions all use a 15-minute tolerance. The Gulf Coast region accounts for 28% of HarborLink's total deliveries. When the audit team recalculated on-time performance applying a uniform 15-minute standard consistently across all five regions, the corporate on-time delivery rate dropped to 82%—meaning HarborLink had been overstating its delivery performance by 12 percentage points for a year and a half, during which $2.3 million in performance bonuses were paid based on inflated metrics. Under COSO Principle 13, which statement best characterizes the information quality failure?",
         "Choices": {
-            "A": "To reduce the risk of unauthorized access to financial systems and data",
-            "B": "To replace the need for segregation of duties",
-            "C": "To eliminate the need for any other IT general controls",
-            "D": "To ensure compliance with balanced scorecard metrics"
+            "A": "HarborLink violated COSO Principle 13 by failing to ensure that the aggregated on-time delivery data was produced from consistent and comparable inputs, as the 60-minute versus 15-minute tolerance discrepancy across regional dispatch systems meant the corporate dashboard metric was not—as COSO requires—relevant, reliable, and of sufficient quality to support the high-stakes decisions for which it was being used, including compensation determinations and contractual commitments.",
+            "B": "The primary failure is in the monitoring function under COSO Principle 16, as management should have performed periodic validation of the dashboard data against source system configurations, which would have detected the 60-minute tolerance discrepancy within the first quarter rather than allowing 18 months of inflated performance reporting to accumulate without detection.",
+            "C": "HarborLink's failure is rooted in COSO Principle 14, as the Gulf Coast region failed to communicate its deviation from the standard on-time definition to corporate management, and the absence of internal reporting protocols requiring regional dispatch centers to disclose their measurement methodologies allowed the inconsistent tolerance to persist without detection across 18 months of reporting.",
+            "D": "The control failure is attributable to COSO Principle 12, as HarborLink did not establish policies and procedures requiring standardized data definitions and measurement methodologies across regional dispatch systems before aggregating performance metrics for enterprise-level decision-making purposes."
         },
         "CorrectChoice": "A",
-        "ExplanationCorrect": "Multi-factor authentication strengthens access security by requiring more than one form of verification, reducing the risk of unauthorized access to financial systems.",
+        "ExplanationCorrect": "Under COSO Internal Control — Integrated Framework Principle 13, the organization obtains or generates and uses relevant, quality information to support the functioning of internal control. Principle 13 establishes that information used for decision-making must possess specific quality attributes: it must be timely, current, accurate, complete, accessible, protected, verifiable, retained, and—critically—relevant to the decisions it supports. The HarborLink case demonstrates a multi-dimensional failure of information quality centered on the loss of comparability during data aggregation. The corporate dashboard metric—94% on-time delivery—was not accurate because the underlying data was not produced from consistent measurement criteria across the five contributing dispatch systems. When one region applies a 60-minute tolerance and four regions apply a 15-minute tolerance, the aggregated metric does not represent any single, coherent definition of on-time delivery performance. This violates the 'accurate' and 'complete' dimensions of COSO's information quality criteria: accurate because the resulting number does not faithfully represent what it purports to measure, and complete because the aggregation methodology obscured a critical data-inconsistency that rendered the metric unsuitable for the decisions it supported. The consequence severity is amplified because the defective information was used for two high-stakes organizational purposes. First, performance-based compensation: $2.3 million in bonuses were paid over 18 months based on a metric that overstated actual performance by 12 percentage points—meaning compensation decisions affecting 42 managers were based on information that was not quality information as COSO defines it. Second, contractual commitments: 11 customer contracts with on-time-delivery guarantees and financial penalty clauses were negotiated using a metric that systematically misrepresented HarborLink's actual performance, exposing the company to potential breach-of-contract claims and reputational damage. COSO Principle 13 places the affirmative responsibility on the organization as a whole—not on individual data-producing units—to ensure that information used for decision-making is of sufficient quality. HarborLink's management used the dashboard metric without verifying that the aggregation methodology preserved data integrity and consistency across disparate source systems with different measurement parameters. A common CMA exam trap is to attribute information quality failures to monitoring (Principle 16—'management should have checked the data'), internal communication (Principle 14—'the region should have reported the difference'), or policies and procedures (Principle 12—'they should have documented data standards') without recognizing that Principle 13 is the specific COSO element that governs whether the information itself is appropriate for the decisions it supports, regardless of where in the data pipeline quality degradation occurs.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20370,7 +20373,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-053",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20380,13 +20383,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "Option C (To eliminate the need for any other IT general controls) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that to reduce the risk of unauthorized access to financial systems and data. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongD": "Option D (To ensure compliance with balanced scorecard metrics) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that to reduce the risk of unauthorized access to financial systems and data. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
+        "ExplanationWrongB": "Option B attributes the failure to monitoring under COSO Principle 16, arguing that periodic validation of dashboard data against source system configurations would have detected the tolerance discrepancy. While data validation is an important detective control, this analysis confuses after-the-fact verification with the substantive requirement that information be quality information before it is used for decision-making. COSO Principle 13 requires that information quality be designed into the generation and aggregation process, not merely verified after the fact. The 18 months of inflated reporting suggest that even if validation existed on paper, it was not functioning effectively—but the deeper issue is that the data aggregation architecture itself was not designed to produce comparable results across regions with different measurement parameters. A candidate selecting this option correctly identifies that detection mechanisms failed but fails to recognize that COSO distinguishes between information generation and quality (Principle 13) and monitoring of controls (Principle 16)—the former addresses whether the information itself is reliable, while the latter addresses whether the system that produces it continues to function as designed.",
+        "ExplanationWrongC": "Option C attributes the failure to internal communication under COSO Principle 14, arguing that the Gulf Coast region should have communicated its 60-minute tolerance definition to corporate management. While clearer communication of regional measurement methodologies would have been helpful, this analysis places responsibility on the data provider rather than the data consumer. COSO Principle 13 places the obligation for information quality on the organization that uses the information for decision-making. It is HarborLink's corporate management—not the Gulf Coast dispatch center—that bears the responsibility for ensuring that the aggregated metric used for executive compensation and contract negotiation decisions is based on consistent, comparable inputs. Additionally, Principle 14 addresses communication of information necessary to support the functioning of other internal control components, while the on-time delivery metric definition is fundamentally a data governance and information quality issue under Principle 13. The candidate selecting this option may be confusing data quality governance with organizational communication requirements—related but distinct COSO principles.",
+        "ExplanationWrongD": "Option D attributes the failure to COSO Principle 12, which addresses the establishment of policies and procedures to support deployment of management's directives. While standardizing data definitions through formal policies would reduce the risk of inconsistent measurement, this analysis overstates the role of documentation relative to substantive information quality. The defect in HarborLink's dashboard is not primarily that the company lacked a written policy on data standards—it is that the aggregated information being used for compensation and contracting decisions was objectively unreliable regardless of whether policies existed. Even if HarborLink had a comprehensive policy requiring standardized measurement definitions across all regions, if the actual dashboard aggregation methodology continued to combine data with different tolerance levels, the information would remain non-quality information under Principle 13. Principle 12 controls are procedural complements to substantive information quality; they do not substitute for it. The candidate selecting this option correctly identifies that better policies would contribute to the solution but incorrectly attributes the primary COSO principle deficiency to policy documentation rather than to the substantive quality of the information itself.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -20437,26 +20441,26 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S52 Phase 4 — Analyze replacement for archived P1-ED-054 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.055 password access authentication control",
-        "MicroTopic": "password access authentication control",
-        "UniqueConceptKey": "E-D055-password-access-authentication-control",
+        "Topic": "E.055 COSO Principle 15 external communication regulatory disclosure stakeholder obligations",
+        "MicroTopic": "External communication and regulatory disclosure obligations",
+        "UniqueConceptKey": "E-D055-external-communication",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Falconwood requires multi-factor authentication for all employees accessing financial systems remotely. What is the primary purpose of this control?",
+        "Stem": "Valoris Pharmaceuticals manufactures and distributes generic prescription medications from its FDA-registered facility in Raleigh, North Carolina. In August 2025, a quality control technician reviewing warehouse environmental monitoring data discovered that one batch of a widely prescribed cardiovascular drug—340,000 units with a wholesale market value of $8.5 million—had been exposed to temperature fluctuations exceeding the product's validated storage range of 20°C to 25°C during an 11-day period when the warehouse HVAC system malfunctioned, with recorded temperatures reaching 31°C on four consecutive days. The temperature excursions raised concerns that the product's efficacy could be compromised, though definitive stability testing would require four to six weeks. VP of Quality Assurance Dr. Anne Chen recommended immediately issuing a voluntary recall and notifying the FDA within the required regulatory reporting window, citing the company's obligation under 21 CFR Part 211 and the potential patient safety risk if the drug's potency had degraded. CEO Marcus Thornton and General Counsel Julia Hartley opposed notification, arguing that the temperature data was 'statistically inconclusive,' that a recall would trigger an estimated 12 to 15 percent stock price decline representing approximately $210 million in market capitalization, and that the company could face shareholder class-action litigation if the recall proved unnecessary in hindsight. The batch was shipped to three regional distributors and dispensed to approximately 41,000 patients. In February 2026, FDA inspectors conducting a routine biennial inspection discovered the withheld temperature excursion data in warehouse records that had not been disclosed to the agency. Under COSO Principle 15, which statement best characterizes the control failure?",
         "Choices": {
-            "A": "To ensure compliance with balanced scorecard metrics",
-            "B": "To eliminate the need for any other IT general controls",
-            "C": "To reduce the risk of unauthorized access to financial systems and data",
-            "D": "To replace the need for segregation of duties"
+            "A": "Valoris failed under COSO Principle 7 by inadequately assessing the risk that withheld temperature data would be discovered during a future FDA inspection, as management's decision not to disclose was based on a risk assessment that underestimated the probability of regulatory detection and overestimated the legal protection afforded by characterizing the temperature data as inconclusive.",
+            "B": "Valoris failed under COSO Principle 15 by not communicating relevant and quality information to external parties—including the FDA, distributors, and ultimately patients—when management suppressed temperature excursion data that indicated a potential product quality issue, privileging financial and litigation concerns over the obligation to provide external stakeholders with information material to their regulatory, commercial, and health-related decisions.",
+            "C": "The primary failure is in the control environment under COSO Principle 1, as CEO Thornton's decision to override the Quality Assurance VP's recommendation based on financial and legal considerations rather than patient safety demonstrated a tone at the top that prioritized shareholder interests over the organization's ethical obligations to patients and regulators.",
+            "D": "Valoris failed under COSO Principle 16 by not maintaining an effective monitoring system that would have detected the warehouse HVAC malfunction before it caused an 11-day temperature excursion, as the root cause of the regulatory exposure was the environmental control failure that created the temperature data the company later chose to withhold."
         },
-        "CorrectChoice": "C",
-        "ExplanationCorrect": "Multi-factor authentication strengthens access security by requiring more than one form of verification, reducing the risk of unauthorized access to financial systems.",
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Under COSO Internal Control — Integrated Framework Principle 15, the organization communicates with external parties regarding matters affecting the functioning of internal control. Principle 15 requires that organizations identify and communicate relevant, timely, and quality information to external stakeholders—including regulators, customers, suppliers, and shareholders—when that information is material to their decisions or to the organization's compliance obligations. The Valoris Pharmaceuticals case illustrates a deliberate Principle 15 failure at the most consequential level. Management suppressed quality and safety data that federal regulations required to be communicated to the FDA, and by extension to distributors, healthcare providers, and approximately 41,000 patients who received the affected medication. Four dimensions of Principle 15 are violated. First, the relevance dimension: the temperature excursion data was directly relevant to the FDA's regulatory oversight of drug manufacturing quality under 21 CFR Part 211 and to patient safety, as temperature-induced degradation can render medications sub-potent or, in certain formulations, produce harmful degradation products. Second, the timeliness dimension: the FDA's regulatory reporting framework requires notification of quality issues that may affect product safety within specified timeframes precisely because delayed communication extends the period during which patients may be exposed to compromised product. Third, the quality dimension: management's characterization of the data as 'statistically inconclusive' was a framing decision, not a scientific assessment—the data was of sufficient quality to warrant investigation and disclosure, and the 'inconclusive' label was applied to justify non-disclosure rather than reflecting a genuine scientific judgment about data adequacy. Fourth, the external parties scope: COSO Principle 15 covers communication not only with regulators but with all external parties whose decisions could be affected—here, distributors making inventory and recall decisions, pharmacists making dispensing decisions, and patients who could not make informed choices about their medication. The CEO and General Counsel's financial calculus—an estimated $210 million market capitalization impact and potential shareholder litigation—represented a deliberate decision to prioritize internal stakeholder financial interests over external communication obligations. The FDA's subsequent discovery of the withheld data during a routine biennial inspection demonstrates a critical Principle 15 dynamic: when an organization owes communication obligations to an external party, and that external party has independent access to the underlying information through its own regulatory processes, the communication failure is not self-concealing—it is eventually exposed through the very regulatory mechanism to which communication was owed. A common CMA exam trap is to attribute regulatory disclosure failures to the control environment (Principle 1—'tone at the top') or risk assessment (Principle 7—'they underestimated detection risk') when Principle 15 is the specific COSO framework element that governs external stakeholder communication obligations, including the affirmative duty to disclose material information regardless of the probability of detection.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20471,7 +20475,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-055",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20480,33 +20484,34 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (To eliminate the need for any other IT general controls) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that to reduce the risk of unauthorized access to financial systems and data. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Apply"
+        "ExplanationWrongA": "Option A attributes the failure to risk assessment under COSO Principle 7, arguing that management underestimated the probability of FDA detection when deciding not to disclose. This analysis fundamentally misstates the nature of the COSO obligation under Principle 15. COSO Principle 15 does not require organizations to communicate with external parties only when the risk of non-disclosure being detected is high—it requires communication of relevant information to external stakeholders as an affirmative obligation, entirely independent of the probability of detection. Treating regulatory disclosure as a risk-based decision rather than a compliance obligation represents a category error in applying the COSO framework. The candidate selecting this option may be conflating enterprise risk management—where risk appetite and risk assessment inform strategic decisions—with internal control, where certain obligations, such as statutorily required regulatory reporting, are not subject to risk-based optionality. When a regulation requires disclosure within a specified timeframe, the risk of detection is analytically irrelevant to the disclosure obligation.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C attributes the failure to COSO Principle 1, arguing that CEO Thornton's override of the quality recommendation represents a tone-at-the-top failure in the control environment. While the CEO's conduct undeniably reflects poor ethical leadership, and Principle 1 is engaged whenever senior management prioritizes financial outcomes over compliance obligations, the more precisely applicable COSO characterization is a Principle 15 failure. Principle 1 addresses whether the organization broadly demonstrates commitment to integrity and ethical values; Principle 15 addresses the specific obligation to communicate with external parties regarding matters affecting internal control. Both principles are violated in this scenario, but when the COSO framework provides a dedicated principle governing external stakeholder communication obligations, that principle provides the more specific and analytically precise characterization of the control failure. The candidate selecting this option correctly identifies the ethical dimension but should recognize that COSO addresses external communication through a distinct, dedicated principle rather than treating it as an implied subset of tone at the top.",
+        "ExplanationWrongD": "Option D attributes the failure to monitoring under COSO Principle 16, tracing the root cause to the warehouse HVAC malfunction that created the temperature excursion in the first place. This analysis conflates two separate and sequential control issues: the environmental monitoring control that should have prevented or detected the HVAC malfunction (a Principle 10 and Principle 16 concern regarding preventive and detective physical controls) and the external communication obligation that arose once the temperature excursion data existed (a Principle 15 concern regarding communication with regulators and other external parties). Even if the HVAC system had functioned perfectly and temperature excursions had been prevented entirely, this specific case would not exist—but that does not make the HVAC failure the controlling COSO deficiency for purposes of analyzing the external communication decision. The candidate selecting this option correctly identifies the HVAC malfunction as a root cause of the quality event but fails to recognize that COSO assigns different categories of control failures to different principles, and that external communication obligations under Principle 15 are governed independently of the operational events that created the information that must be communicated.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.056 internal control cost benefit limitation",
-        "MicroTopic": "internal control cost benefit limitation",
-        "UniqueConceptKey": "E-D056-internal-control-cost-benefit-limitation",
+        "Topic": "E.056 COSO Principle 5 accountability performance measures incentive alignment internal control responsibilities",
+        "MicroTopic": "Accountability enforcement and incentive structure alignment",
+        "UniqueConceptKey": "E-D056-accountability-enforcement",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Easy",
+        "Difficulty": "Very Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Glenmore's management decides not to implement an extremely costly control because the risk it addresses is low and infrequent. What limitation of internal control does this illustrate?",
+        "Stem": "Ridgewood Defense Systems, a $920 million government contractor specializing in communications equipment for the Department of Defense, is organized into four operating divisions. Division VP Robert Sinclair has led the Tactical Communications division for six years. Under his leadership, the division has reported compound annual revenue growth of 18%, consistently exceeded annual revenue targets by 8 to 12 percentage points, and been designated the company's top-performing division in each of the last three years. However, internal audit reports from 2023, 2024, and 2025 have each documented a recurring pattern: the division ships products that have not completed final quality assurance testing, recognizes revenue upon shipment rather than upon documented customer acceptance as required by the terms of the government contracts, and subsequently records between $4.7 million and $6.2 million annually in post-delivery rework costs to bring the shipped products into compliance with contractual specifications. Despite these findings being documented in three consecutive annual audit reports spanning 2023 through 2025, Sinclair has received the maximum annual performance bonus each year—$340,000 in 2023, $375,000 in 2024, and $390,000 in 2025—and was promoted to Executive Vice President in January 2026. The board's compensation committee, which approves all executive bonuses, never received any of the three internal audit reports. CEO Eleanor Grayson, who controls the flow of information to the board, reviewed the reports but excluded them from the compensation committee's pre-meeting materials, characterizing the findings in her summary as 'quality assurance process improvements' and 'supply chain optimization initiatives' rather than revenue recognition issues. Under COSO Principle 5, which statement best characterizes the control environment failure?",
         "Choices": {
-            "A": "Management override of existing controls",
-            "B": "A segregation of duties failure",
-            "C": "A control environment weakness",
-            "D": "The inherent cost-benefit limitation of internal control design"
+            "A": "The internal audit function failed to discharge its responsibilities under COSO Principle 16 by not escalating its findings directly to the board of directors or the audit committee when management—specifically CEO Grayson—failed to act on documented internal control deficiencies over a two-year period spanning three consecutive audit cycles.",
+            "B": "The board of directors failed in its oversight obligations under COSO Principle 2, because a properly functioning board would have established protocols requiring that all internal audit reports be transmitted to the audit committee unfiltered by management, which would have prevented CEO Grayson from excluding the division's audit findings from the compensation committee's decision-making materials.",
+            "C": "Ridgewood Defense Systems violated COSO Principle 5 by failing to enforce accountability for internal control responsibilities, as Sinclair continued to receive maximum performance bonuses totaling $1,105,000 across three years and earned a promotion to EVP despite three years of documented revenue recognition violations, demonstrating that the organization's performance measures and incentive structures actively rewarded behavior that undermined internal control objectives.",
+            "D": "The primary failure is in information and communication under COSO Principle 13, as the board's compensation committee did not receive quality information about the division's revenue recognition practices, and CEO Grayson's recharacterization of audit findings as 'quality assurance process improvements' materially distorted the information available to those charged with governance."
         },
-        "CorrectChoice": "D",
-        "ExplanationCorrect": "Internal control systems are inherently limited by cost-benefit considerations; management may reasonably decide not to implement excessively costly controls for low, infrequent risks.",
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "Under COSO Internal Control — Integrated Framework Principle 5, the organization holds individuals accountable for their internal control responsibilities in the pursuit of objectives. Principle 5 establishes that accountability mechanisms—including performance measures, incentives, and rewards—must be aligned with the organization's internal control objectives. When performance measures systematically reward behavior that undermines controls, the organization is not merely failing to enforce accountability; it is affirmatively incentivizing control failures through its formal reward structures. The Ridgewood Defense Systems case illustrates this dynamic in its most institutionally damaging form. Three sequential internal audit reports spanning 2023 through 2025 documented the identical pattern of control violations: shipping incomplete products, recognizing revenue prematurely before customer acceptance in violation of government contract terms, and incurring $4.7 million to $6.2 million annually in post-delivery rework costs to remediate the consequences. Yet Sinclair received maximum performance bonuses of $340,000, $375,000, and $390,000 for those same years—totaling $1,105,000—and was promoted to EVP. The performance measurement system evaluated Sinclair solely on revenue growth and target achievement, with zero weight assigned to compliance with revenue recognition requirements or internal control objectives. Under COSO Principle 5, this represents a structural accountability failure of the highest order: the organization's formal reward system—its bonuses and promotions—communicated unambiguously to every division executive that revenue attainment was valued and rewarded while control compliance carried no weight in compensation or career advancement. The bonus figures and the promotion are not merely data points in the case narrative; they are the organization's most powerful signal about what behavior is actually expected, regardless of what internal control policies or codes of conduct state on paper. CEO Grayson's filtering of the audit reports from the compensation committee compounded the failure but did not cause it: even if the board had received the reports, the underlying Principle 5 defect is that the performance measurement system itself was designed without incorporating internal control responsibilities as an accountability dimension. COSO Principle 5 requires that accountability be enforced 'in the pursuit of objectives,' meaning that performance evaluation must encompass both the achievement of financial and operational objectives and the discharge of internal control responsibilities necessary to achieve those objectives with integrity. The $1,105,000 in bonuses paid to Sinclair over three years were not merely wasteful compensation—they were affirmatively harmful to the control environment because they demonstrated to the entire organization that systematic control violations carried no adverse consequences and indeed were strongly correlated with maximum financial rewards and career advancement. A common CMA exam trap is to attribute accountability failures to board oversight (Principle 2—'the board should have received the reports'), internal audit (Principle 16—'audit should have escalated'), or information quality (Principle 13—'the board did not receive quality information') without recognizing that Principle 5 addresses the specific control mechanism—the alignment of accountability, incentives, and rewards—that directly governs whether individuals are held responsible for their internal control duties regardless of what information flows to those charged with governance.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20521,7 +20526,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-056",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20530,33 +20535,34 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (A segregation of duties failure) represents a plausible misconception. Under ASC 715 (Retirement Benefits), the correct analysis leads to the conclusion that the inherent cost-benefit limitation of internal control design. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongC": "Option C (A control environment weakness) represents a plausible misconception. Under ASC 715 (Retirement Benefits), the correct analysis leads to the conclusion that the inherent cost-benefit limitation of internal control design. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongD": "",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongA": "Option A attributes the failure to internal audit under COSO Principle 16, arguing that audit should have escalated its findings directly to the board when management failed to act. While professional internal audit standards support direct board reporting when management is unresponsive to significant findings, this analysis misplaces primary responsibility for the control failure. Internal audit's role under COSO is to identify and report on deficiencies in internal control—it does not hold operating management accountable for correcting those deficiencies. That accountability enforcement function belongs to the organization's governance and management structure under Principle 5. The internal audit function performed its designated role by documenting the revenue recognition violations, the premature shipment practices, and the $4.7 million to $6.2 million in annual rework costs in three consecutive annual reports. The failure was not that audit failed to detect or report the issues, but that the organization's accountability mechanisms—bonus determinations, promotion decisions, and performance evaluation criteria—were entirely disconnected from the audit findings. A candidate selecting this option may be over-assigning responsibility to internal audit and under-appreciating that audit's function is to inform, while management and the board hold the accountability enforcement authority that Principle 5 directly governs.",
+        "ExplanationWrongB": "Option B attributes the failure to board oversight under COSO Principle 2, arguing that the board should have established protocols ensuring unfiltered receipt of internal audit reports. While stronger board protocols would have improved the information flow to the compensation committee, this analysis addresses a contributing factor rather than the fundamental control environment deficiency. Even if the board had received unfiltered audit reports documenting all three years of revenue recognition violations, if the compensation committee then continued to determine Sinclair's bonus based solely on revenue performance with no weight assigned to control compliance, the accountability failure under Principle 5 would remain. The issue is not merely whether the board had adequate information about Sinclair's conduct but whether the organization's incentive structures were designed to enforce accountability for internal control responsibilities. The candidate selecting this option correctly identifies a governance process weakness but fails to recognize that Principle 5 specifically addresses whether the organization's performance measures and incentive structures enforce internal control responsibilities—a question that is analytically distinct from whether the board had access to quality information for its oversight function.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Option D attributes the failure to information and communication under COSO Principle 13, characterizing CEO Grayson's filtering of audit reports and her recharacterization of revenue recognition issues as 'quality assurance process improvements' as a failure to provide the board with quality information for decision-making. While Grayson's deliberate distortion of information certainly impaired the board's ability to exercise informed oversight, this analysis misidentifies the COSO principle at the center of the control failure. Principle 13 addresses whether information is relevant, timely, and of sufficient quality for decision-making; Principle 5 addresses whether the organization holds individuals accountable for their internal control responsibilities through its formal performance measurement, incentive, and reward structures. The board's lack of accurate information about Sinclair's revenue recognition practices is unquestionably problematic, but the deeper and more specific failure is that the company's accountability systems—the criteria by which Sinclair was evaluated, compensated, and promoted over three consecutive years—did not incorporate internal control compliance as a performance dimension. A candidate selecting this option correctly observes that information was withheld from governance but should recognize that Principle 5, not Principle 13, specifically governs the mechanism by which organizations enforce internal control responsibilities through accountability and incentive alignment.",
+        "DifficultyScore": 5,
+        "CognitiveLevel": "Evaluate",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.057 internal control cost benefit limitation",
-        "MicroTopic": "internal control cost benefit limitation",
-        "UniqueConceptKey": "E-D057-internal-control-cost-benefit-limitation",
+        "Topic": "E.057 COSO Principle 17 — monitoring separate evaluations audit scope and frequency",
+        "MicroTopic": "Separate evaluations audit scope risk alignment",
+        "UniqueConceptKey": "E-D057-separate-evaluations-audit-scope-frequency",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Harrowgate's management decides not to implement an extremely costly control because the risk it addresses is low and infrequent. What limitation of internal control does this illustrate?",
+        "Stem": "Broadwater Credit Union, a $2.1 billion institution serving 180,000 members across 24 branches in three states, maintains an internal audit function directed by Maria Delgado. The audit program operates on a fixed rotation schedule: two branch audits per month, completing the full 24-branch cycle annually. However, the audit work program template was last revised in January 2022. Since then, Broadwater launched mobile deposit capture, peer-to-peer instant transfers, and remote check deposit, which now collectively process $18 million in monthly transaction volume across 94,000 digital transactions. The current audit program contains no testing procedures for mobile deposit daily limit enforcement, P2P transfer authorization workflows, or remote deposit duplicate detection logic. Delgado defends this approach, arguing that the fixed rotation schedule guarantees universal branch coverage and that digital banking platforms are protected by the vendor's standard security certifications. Between March 2024 and May 2025, a fraud scheme exploited mobile deposit daily limits — an individual deposited the same check image across six different branches — generating 340 fraudulent deposits totaling $840,000 before detection. Branch auditors had tested teller cash counts and vault reconciliations at all 24 branches during this period but never examined any mobile deposit controls. Which evaluation of Broadwater's monitoring activities under COSO Principle 17 is most accurate?",
         "Choices": {
-            "A": "The inherent cost-benefit limitation of internal control design",
-            "B": "A control environment weakness",
-            "C": "A segregation of duties failure",
-            "D": "Management override of existing controls"
+            "A": "Broadwater's monitoring is adequate because the fixed rotation schedule ensures complete branch coverage annually, and the $840,000 loss is below the materiality threshold for a $2.1 billion institution, making it a cost of doing business rather than a control deficiency requiring remediation.",
+            "B": "The monitoring deficiency is attributable to the vendor's failure to design adequate security features into the digital banking platform — Broadwater's internal audit function cannot reasonably be expected to test controls that the software vendor was contractually obligated to design and maintain.",
+            "C": "Broadwater's monitoring is deficient under COSO Principle 17 because separate evaluations must be updated to reflect changes in the organization's risk profile, operating environment, and control structure. An audit program that has not been revised in four years despite the introduction of $216 million in annual digital transaction volume fails to evaluate whether controls over new, material business channels are designed appropriately and operating effectively.",
+            "D": "The audit function performed adequately because the fraud scheme involved check image manipulation — a type of external fraud that internal controls cannot reasonably prevent regardless of audit scope, and for which internal audit bears no responsibility under COSO's monitoring principle."
         },
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "Internal control systems are inherently limited by cost-benefit considerations; management may reasonably decide not to implement excessively costly controls for low, infrequent risks.",
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "Under COSO Principle 17, the organization selects, develops, and performs ongoing and/or separate evaluations to ascertain whether the components of internal control are present and functioning. Separate evaluations — including internal audits — must be scoped and conducted at a frequency sufficient to provide reasonable assurance about control effectiveness as risks evolve. Broadwater's audit program is deficient in two dimensions under this principle. First, the scope is outdated: the audit work program has not been revised in four years despite the introduction of digital banking channels that now process $18 million monthly ($216 million annually), representing a material and fundamentally different transaction channel from the teller-and-vault environment the program was designed to test. COSO explicitly requires that the scope of separate evaluations be adjusted as the organization's risk profile, operating environment, and control structure change. An audit program that tests only physical-cash controls at a time when digital transactions dominate the risk landscape is evaluating controls that are no longer the primary risk exposure. Second, the monitoring frequency is misaligned with risk velocity: branch-level vault reconciliations tested annually provided zero visibility into the mobile deposit channel where $840,000 in fraud accumulated over 14 months. The audit director's argument that vendor certifications protect digital channels reflects a misunderstanding of the auditor's responsibility — internal audit must independently test whether controls are designed and operating effectively, not rely on vendor representations that address the vendor's development process rather than the organization's specific control configuration. A common exam trap is to equate complete branch coverage with complete control coverage: visiting every branch annually does not mean testing every control that matters to the organization's current risk profile.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20571,7 +20577,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-057",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20580,14 +20586,15 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "Management override occurs when someone with authority intentionally bypasses established controls. Here, management is not overriding a control — they are making a deliberate decision not to implement one because its cost outweighs its risk-reduction benefit.",
-        "ExplanationWrongD": "A segregation-of-duties failure combines incompatible duties; the issue is not task assignment but cost versus benefit.",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongA": "Option A incorrectly invokes materiality and a cost-of-doing-business rationale. Under COSO, the threshold for identifying a control deficiency is not whether a single loss exceeds a financial materiality benchmark — it is whether the organization's controls are designed to prevent or detect errors or fraud on a timely basis. An $840,000 fraud that went undetected for 14 months while the audit function visited every branch during that period is direct evidence that the controls being tested (vault cash counts, teller reconciliations) were not the controls at risk (mobile deposit limits, duplicate image detection). Furthermore, COSO does not recognize a cost-of-doing-business exemption for control deficiencies — a gap in control design or evaluation scope remains a gap regardless of whether the first discovered loss crossed an arbitrary dollar threshold. A candidate selecting this option may be conflating external audit's financial statement materiality framework with internal audit's separate obligation under COSO Principle 17 to evaluate control design and operating effectiveness across all material business processes, not just those whose failure would produce a material financial statement misstatement.",
+        "ExplanationWrongB": "Option B incorrectly shifts responsibility to an external vendor. Under COSO Principle 17 and professional internal auditing standards, management and the board retain ultimate responsibility for internal control, even when business processes rely on third-party technology. The internal audit function is expected to include within its scope the controls governing outsourced or vendor-provided systems that process material transaction volumes. Relying on a vendor's security certifications without independent verification is not a defense — it is a scope deficiency. The auditor must test whether the controls actually operate as intended in the organization's specific environment, configured with its particular parameters and limits. Additionally, the fraud did not exploit a software vulnerability that the vendor failed to patch; it exploited a feature (mobile deposit) whose operational controls — daily limits per account, duplicate image detection — Broadwater itself was responsible for configuring, enforcing, and auditing. A candidate selecting this option may misunderstand the boundary between vendor responsibility for software architecture and organizational responsibility for internal control over financial transactions processed through that software.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Option D mischaracterizes the fraud as an inherently unpreventable external scheme that falls outside the scope of internal control. Check image manipulation via mobile deposit is a well-documented fraud vector in the banking industry, and internal controls specifically exist to mitigate it — including mobile deposit daily limits (which the fraudster circumvented by splitting deposits across six different branches), duplicate check image detection algorithms (which the audit program should have been updated to test), and transaction monitoring analytics (which would have flagged the same check image deposited at multiple branches within a short window). COSO does not exempt fraud categories from internal control scope based on whether the perpetrator is external or internal. The audit function's responsibility under Principle 17 extends to evaluating whether controls over all material transaction channels — including digital channels introduced since the last program update — are designed adequately and operating effectively. Dismissing the $840,000 loss as an unpreventable external event is precisely the type of inadequate risk assessment that a robust monitoring function is designed to challenge.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -20637,26 +20644,26 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.059 internal control cost benefit limitation",
-        "MicroTopic": "internal control cost benefit limitation",
-        "UniqueConceptKey": "E-D059-internal-control-cost-benefit-limitation",
+        "Topic": "E.059 COSO Principle 4 — board independence and oversight of related party transactions",
+        "MicroTopic": "Board independence audit committee composition",
+        "UniqueConceptKey": "E-D059-board-independence-related-party-oversight",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Jubilee's management decides not to implement an extremely costly control because the risk it addresses is low and infrequent. What limitation of internal control does this illustrate?",
+        "Stem": "Thorne Industrial Manufacturing, a publicly traded producer of industrial fasteners with $890 million in annual revenue, has a nine-member board of directors. The board includes the sitting CEO, the company's former CFO (who retired two years ago but was immediately invited to join the board), and the company's outside legal counsel from a firm that bills Thorne $1.2 million annually in legal fees. The three-member audit committee is chaired by the former CFO. Over a three-year period, the audit committee approved related-party transactions with a metal supply company owned by the CEO's brother-in-law totaling $4.7 million. An SEC investigation subsequently determined that the prices paid under these contracts were 22% above prevailing market rates for comparable industrial-grade steel and aluminum. The audit committee's review of each of these transactions consisted of a single 15-minute agenda item during the quarterly committee meeting, with no competitive bidding analysis, no independent price benchmarking, and no discussion of alternatives. The audit committee chair stated that the committee relied on management's representation that the pricing was competitive. Which evaluation of the board's compliance with COSO Principle 4 is most accurate?",
         "Choices": {
-            "A": "A segregation of duties failure",
-            "B": "A control environment weakness",
-            "C": "The inherent cost-benefit limitation of internal control design",
-            "D": "Management override of existing controls"
+            "A": "The board complies with COSO Principle 4 because the audit committee reviewed and approved each related-party transaction, which satisfies the oversight requirement — the pricing outcome, while unfavorable, does not invalidate the fact that independent review occurred.",
+            "B": "The board violates COSO Principle 4 solely because the former CFO chairs the audit committee. Under SEC and exchange listing standards, a former CFO must observe a five-year cooling-off period before serving on the audit committee, and the two-year gap is insufficient regardless of other safeguards.",
+            "C": "The related-party transactions are a management failure, not a board independence failure. The CEO's failure to disclose the family relationship to the supplier is the root cause — an independent board cannot detect related-party transactions that management does not properly disclose.",
+            "D": "The board violates COSO Principle 4 because the audit committee lacks genuine independence — the former CFO's dual role and the absence of competitive benchmarking, independent price verification, and meaningful deliberation time mean the committee provided the appearance of oversight without its substance, and the board's broader composition further undermines independent judgment."
         },
-        "CorrectChoice": "C",
-        "ExplanationCorrect": "Internal control systems are inherently limited by cost-benefit considerations; management may reasonably decide not to implement excessively costly controls for low, infrequent risks.",
+        "CorrectChoice": "D",
+        "ExplanationCorrect": "COSO Principle 4 — within the Control Environment component — states that the board of directors demonstrates independence from management and exercises oversight of the development and performance of internal control. Independence requires both structural conditions (composition, relationships, financial ties) and behavioral conditions (willingness to challenge, rigor of review, access to independent information). Thorne's board is deficient on both dimensions. Structurally: the presence of the sitting CEO as a board member creates a conflict for decisions that evaluate management's performance; the former CFO who retired only two years prior retains personal and professional relationships with the management team whose related-party transactions the audit committee reviews; and the outside legal counsel's firm receives $1.2 million annually, creating a financial dependence that compromises independent judgment. The audit committee chair — the former CFO — is the least independent person to evaluate related-party transactions that occurred during or shortly after their tenure as CFO. Behaviorally: a 15-minute agenda item for a $4.7 million related-party transaction series with no competitive benchmarking, no independent price verification, and no discussion of alternative suppliers is not oversight — it is ratification. Under COSO, the board's oversight role requires active inquiry, not passive acceptance of management representations. The absence of rigorous review procedures is itself a control deficiency in the control environment — the entity's highest-level governance body failed to exercise the skepticism and diligence that independence requires. An exam trap is to treat board composition requirements as a checklist (count independent directors) without evaluating whether the board's actual conduct satisfies the behavioral dimension of independence.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20671,7 +20678,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-059",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20680,14 +20687,15 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (A control environment weakness) represents a plausible misconception. Under ASC 715 (Retirement Benefits), the correct analysis leads to the conclusion that the inherent cost-benefit limitation of internal control design. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongA": "Option A confuses the form of oversight with its substance. Under COSO Principle 4, board independence and oversight are not satisfied by the mere existence of a review step — the review must be competent, rigorous, and independent. A 15-minute agenda item that relies solely on management's representation that pricing is competitive, without any independent benchmarking or competitive analysis, is not meaningful oversight. The fact that $4.7 million in payments were made at prices 22% above market is evidence that the review process was substantively inadequate. COSO requires the board to exercise oversight of internal control, not merely to document that a meeting occurred. A candidate selecting this option may be applying a checklist mentality to board oversight, treating the existence of review procedures as sufficient regardless of whether those procedures are designed to actually detect problems.",
+        "ExplanationWrongB": "Option B correctly identifies the former CFO as an independence concern but misstates the regulatory framework and oversimplifies the deficiency. While SEC rules and exchange listing standards impose cooling-off periods for audit committee members who served as officers of the company, the specific five-year period is not a bright-line COSO rule — it applies to the audit committee financial expert designation and Sarbanes-Oxley requirements. More critically, this option isolates the former CFO as the sole defect when the scenario describes a systemic independence failure: the sitting CEO on the board, the outside counsel receiving $1.2 million annually, and the audit committee's procedural deficiencies all independently violate Principle 4. Fixing the audit committee chair alone — without addressing the compromised board composition and the absence of rigorous review procedures — would not bring Thorne's governance into compliance with COSO Principle 4.",
+        "ExplanationWrongC": "Option C misattributes the failure to management non-disclosure when the scenario explicitly states that the audit committee reviewed and approved the related-party transactions — meaning the relationship was disclosed and the committee was aware of it. The failure is not a detection gap caused by concealment; it is a substantive review gap. The audit committee knew about the transactions (they appeared on the quarterly agenda), knew about the supplier relationship (related-party transactions are categorized as such precisely because the relationship is known), and still approved $4.7 million in above-market payments after only 15 minutes of discussion. This is an oversight failure, not a disclosure failure. Under COSO Principle 4, the board's duty is not merely to be informed of related-party transactions but to exercise independent judgment about their terms and business justification — which requires more than management's assertion that the pricing is competitive.",
         "ExplanationWrongD": "",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -20738,26 +20746,26 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S52 Phase 4 — Evaluate replacement for archived P1-ED-060 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.061 vendor master file controls",
-        "MicroTopic": "vendor master file controls",
-        "UniqueConceptKey": "E-D061-vendor-master-file-controls",
+        "Topic": "E.061 COSO Principle 12 — control activities dual approval threshold circumvention",
+        "MicroTopic": "Dual approval control design circumvention",
+        "UniqueConceptKey": "E-D061-dual-approval-threshold-circumvention",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Longmeadow restricts the ability to add or modify vendor records to a small group of employees separate from those who approve invoice payments. What risk does this control primarily address?",
+        "Stem": "Castleford Municipal Securities, a $340 million bond underwriting firm with 85 employees, requires dual signatures from two authorized officers on all wire transfers exceeding $50,000. All outgoing wires are logged in a daily wire activity report that the operations manager, Susan Okafur, reviews each morning. Over a 16-month period, a senior municipal bond trader, David Pressler, circumvented this control by executing 49 separate wire transfers — each for exactly $49,900, just under the dual-signature threshold — from the firm's operating account to a personal account he controlled at a different bank. The total funds transferred over the 16-month period was $2,445,100. Okafur reviewed the daily wire activity report every morning but focused exclusively on transfers above the $50,000 threshold, treating the sub-threshold transfers as independent, low-risk transactions. The fraud was discovered only when an external auditor, during the annual financial statement audit, performed a substantive analytical procedure comparing wire transfer frequency and volume to prior periods and identified an anomalous 49-transfer pattern to the same recipient account. The firm's external auditor had never previously tested wire activity below the dual-approval threshold. Which statement best evaluates the design of Castleford's dual-approval control under COSO Principle 12?",
         "Choices": {
-            "A": "The risk of fictitious vendor fraud or unauthorized changes to payment details",
-            "B": "The risk of incorrect revenue recognition timing",
-            "C": "The risk of inventory obsolescence",
-            "D": "The risk of foreign currency translation errors"
+            "A": "The dual-approval control is poorly designed because a bright-line dollar threshold, without complementary controls such as cumulative transfer monitoring or pattern-based analytics, is inherently vulnerable to structuring — the deliberate splitting of transactions into amounts just below the threshold to avoid triggering the control. COSO Principle 12 requires control activities to be designed at a level of precision sufficient to mitigate the assessed risk, and a threshold-based authorization control without aggregate monitoring fails this requirement when the risk is unauthorized cash disbursement.",
+            "B": "The dual-approval control was properly designed and the failure was purely human — the operations manager should have noticed that 49 transfers to the same personal account at $49,900 each was an obvious pattern. COSO Principle 12 does not require controls to be automated or to detect intentional circumvention by a determined insider.",
+            "C": "The dual-approval control is adequate because $50,000 is an industry-standard threshold for wire transfer authorization in the securities industry, and COSO Principle 12 does not prescribe specific dollar amounts or mandate analytical monitoring of transactions below the authorization threshold.",
+            "D": "The control failure should be attributed to the external auditor's sampling methodology, not to the internal control design. If the external auditor had included sub-threshold wires in its annual testing scope, the fraud would have been detected within 12 months rather than 16 months."
         },
         "CorrectChoice": "A",
-        "ExplanationCorrect": "Restricting and segregating vendor master file maintenance from payment approval reduces the risk of fictitious vendors or unauthorized changes used to divert payments.",
+        "ExplanationCorrect": "COSO Principle 12 states that the organization deploys control activities through policies that establish what is expected and procedures that put policies into action. A well-designed control activity must operate at a level of precision sufficient to address the assessed risk. Castleford's dual-approval control fails this standard in a fundamental way. The firm correctly identified the risk — unauthorized wire transfers that could lead to misappropriation of assets — and correctly selected a type of control (authorization/approval) appropriate to that risk. However, the control's design precision is insufficient because the mechanism (a single-attribute threshold) can be trivially subverted through structuring: the trader needed only to keep each transfer at $49,900 to bypass the control entirely. This is not a sophisticated exploitation of an obscure weakness — structuring transactions to avoid approval thresholds is one of the oldest and most well-documented control circumvention techniques. COSO Principle 12 implies that when a control relies on a quantitative trigger (a dollar threshold), management must consider whether the control is susceptible to structuring and, if so, whether complementary controls exist to detect aggregate patterns that individual transactions below the threshold do not reveal. In Castleford's case, the daily wire activity report existed but was not designed as a complementary detective control — it focused on the same $50,000 threshold it was meant to complement, merely duplicating the approval trigger rather than providing a different analytical lens. A properly designed control environment would pair the preventive dual-approval threshold with a detective control such as: cumulative wire transfer monitoring by recipient account, exception reporting for sub-threshold transfers that cluster around the threshold value, or periodic reconciliation of wire activity to authorized payees. An exam trap is to evaluate a control in isolation — asking only 'does the control exist?' — rather than evaluating whether the set of controls as a whole is sufficient to reduce the assessed risk to an acceptable level.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20772,7 +20780,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-061",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20782,32 +20790,33 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "Option C (The risk of inventory obsolescence) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that the risk of fictitious vendor fraud or unauthorized changes to payment details. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongD": "Option D (The risk of foreign currency translation errors) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that the risk of fictitious vendor fraud or unauthorized changes to payment details. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
+        "ExplanationWrongB": "Option B mischaracterizes both COSO's requirements and the nature of the control failure. COSO Principle 12 does not require automation specifically, but it does require that control activities be designed to achieve their objective. When a control's design makes circumvention possible through a predictable, well-documented technique (structuring) — and the organization has no complementary controls to detect that technique — the control is poorly designed, not merely poorly executed. The operations manager's failure to identify the pattern is a symptom of the design defect: the daily wire report was structured around the same $50,000 threshold and did not present recipient-level aggregation or pattern analysis that would make anomalous activity visible. Expecting a human reviewer to mentally aggregate 49 transactions across 16 months from a transaction-level report is not a reasonable control reliance — it is an invitation to failure. A candidate selecting this option may be over-attributing control failures to individual performance deficiencies when the root cause is a structural control design gap.",
+        "ExplanationWrongC": "Option C incorrectly appeals to industry practice as a substitute for control effectiveness analysis. Even if $50,000 is a common threshold in the securities industry, COSO Principle 12 requires that each organization evaluate whether its specific control activities are sufficient to address its specific assessed risks. Industry practice may inform that evaluation but does not replace it. An industry-standard threshold that can be circumvented through structuring is still a design weakness, regardless of how many other firms use the same threshold. Furthermore, the scenario's facts demonstrate the control's inadequacy: $2,445,100 was transferred undetected for 16 months. A candidate selecting this option may be applying a compliance mindset (the control matches industry practice) rather than a risk-based control design mindset (the control actually mitigates the assessed risk to an acceptable level).",
+        "ExplanationWrongD": "Option D incorrectly shifts internal control responsibility to the external auditor. Under COSO, external audit is not a component of the organization's internal control system — it is an independent assurance activity. The organization, not its external auditor, bears primary responsibility for designing and maintaining effective internal controls. Relying on external audit sampling to detect control circumvention is a monitoring deficiency, not a design justification. Moreover, the external auditor's standard procedures test controls to support the ICFR opinion, not to provide continuous fraud detection. The fact that the external auditor eventually discovered the fraud through analytical procedures does not retroactively validate the absence of internal detective controls — $2.4 million was stolen because the firm had no internal mechanism to detect a structured circumvention of its own approval controls.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.062 vendor master file controls",
-        "MicroTopic": "vendor master file controls",
-        "UniqueConceptKey": "E-D062-vendor-master-file-controls",
+        "Topic": "E.062 COSO Principle 9 — fraud risk management override of controls",
+        "MicroTopic": "Management override of controls fraud risk",
+        "UniqueConceptKey": "E-D062-management-override-fraud-risk",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Marlowe restricts the ability to add or modify vendor records to a small group of employees separate from those who approve invoice payments. What risk does this control primarily address?",
+        "Stem": "Ellsworth Foods, a family-owned food distribution company with $520 million in annual revenue and 1,200 employees, has operated under its founder and CEO, Harold Ellsworth, for 30 years. Harold is widely respected in the community, serves on the boards of two local charities, and personally signs every charitable contribution. The company maintains a formal code of conduct, an independent three-member audit committee, a whistleblower hotline managed by an external service provider, and annual fraud risk assessments conducted by the internal audit department. The controller, Rebecca Morse, recently discovered that Harold has been directing personal expenses through the company's accounts payable system for at least five years — including $340,000 for vacation property maintenance in four locations, $215,000 for his three children's private university tuition, $180,000 in country club dues and golf tournament sponsorships, and various other personal expenditures totaling approximately $1.8 million. The CFO and the accounts payable manager both approved each payment, citing Harold's explicit verbal or email instructions. The audit committee never received any reports about these transactions because Harold personally prepared the quarterly financial review package — including the schedule of significant disbursements and related-party transactions — that went to the committee, and he omitted all personal expenses from those schedules. Which facet of COSO Principle 9 did Ellsworth's governance structure fail to address?",
         "Choices": {
-            "A": "The risk of incorrect revenue recognition timing",
-            "B": "The risk of fictitious vendor fraud or unauthorized changes to payment details",
-            "C": "The risk of inventory obsolescence",
-            "D": "The risk of foreign currency translation errors"
+            "A": "The code of conduct was insufficiently detailed — it should have included a specific dollar threshold above which all CEO expense reimbursements require independent audit committee pre-approval, which would have prevented the disbursements regardless of the CEO's intent.",
+            "B": "Ellsworth's governance failed to address management override risk — COSO Principle 9 specifically requires organizations to assess the risk of management override of internal controls and design separate evaluations to address that risk. The combination of the CEO controlling both the disbursement initiation (via direct instructions to the CFO and AP manager) and the reporting to the audit committee (via personal preparation of the quarterly review package) created an unchecked override path that circumvented every existing control.",
+            "C": "The primary failure was in the accounts payable manager and CFO, who should have refused to process personal expenses regardless of the CEO's instructions. COSO Principle 9's fraud risk assessment is satisfied by the existence of the whistleblower hotline, which either employee could have used to report the improper payments.",
+            "D": "The primary failure was the audit committee's lack of diligence — a reasonably diligent audit committee member should have questioned why the quarterly review package was prepared personally by the CEO rather than by the CFO or internal audit, and this questioning would have revealed the omitted disbursements."
         },
         "CorrectChoice": "B",
-        "ExplanationCorrect": "Restricting and segregating vendor master file maintenance from payment approval reduces the risk of fictitious vendors or unauthorized changes used to divert payments.",
+        "ExplanationCorrect": "COSO Principle 9 — within the Risk Assessment component — requires the organization to identify, assess, and respond to risks, including the specific risk of management override of internal controls. Management override is a distinct fraud risk category because it operates differently from other fraud risks: it is perpetrated by individuals with the authority to direct transactions, suppress controls, and control the information flow to governance bodies. Ellsworth's governance structure addressed surface-level fraud risks (a code of conduct exists, an independent audit committee meets, a hotline is available, annual fraud risk assessments are conducted) but failed to address the specific risk that the CEO — the individual with the most authority — could both initiate improper payments and control their reporting. The two critical design gaps under COSO Principle 9 are: first, the CEO's ability to direct disbursements through the CFO and AP manager without any independent verification of business purpose, creating a single-point override path through verbal or email instruction; and second, the CEO's personal control over the quarterly financial review package provided to the audit committee, which allowed him to filter out transactions he did not want the committee to see. The second gap is particularly significant under COSO Principle 9 because it neutralized the audit committee's oversight — the committee's independence is meaningless if the information it receives is curated by the person whose activities it is supposed to oversee. A comprehensive fraud risk assessment under Principle 9 would have identified this concentration of disbursement authority and reporting control in a single individual as a high-risk condition requiring targeted antifraud controls, such as: audit committee review of all CEO-related disbursements, independent preparation of board materials by internal audit rather than management, and a control requiring dual authorization for payments exceeding a threshold regardless of the requestor's title. An exam trap is to equate the presence of antifraud program elements (code, hotline, committee) with an effective fraud risk assessment, when the assessment must specifically evaluate whether those elements can be overridden by the individuals who pose the greatest fraud risk — senior management.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20822,7 +20831,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-062",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20831,33 +20840,34 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Option A proposes a code-of-conduct remedy that would be ineffective against the specific override pattern in this scenario. Adding a dollar threshold for audit committee pre-approval to the code of conduct assumes that the CEO would comply with the code — but the scenario demonstrates that Harold directed $1.8 million in personal expenses while ignoring the existing code of conduct, which presumably already prohibits personal use of company funds. A CEO who suppresses information from the audit committee by personally preparing the quarterly review package will not be deterred by additional language in a code of conduct. Furthermore, a dollar threshold would likely be circumvented through the same structuring technique Harold already employed — spreading expenses across five years and multiple categories. A candidate selecting this option may overestimate the preventive power of policy documents in an environment where the most senior individual controls both the transaction initiation and the information flow to governance, and may underestimate the need for structural control design changes rather than incremental policy additions.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Option D (The risk of foreign currency translation errors) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that the risk of fictitious vendor fraud or unauthorized changes to payment details. A candidate may select this option by misapplying a related but distinct concept.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
+        "ExplanationWrongC": "Option C misassigns responsibility and misunderstands the power dynamics of management override. While the CFO and AP manager demonstrated poor ethical judgment in processing personal expenses, their failure is a symptom of the structural override condition, not the root cause. Employees who report to the CEO — particularly in a family-owned company where the founder has operated for 30 years — face genuine career risk when refusing a direct instruction. COSO Principle 9 does not place the primary burden of preventing management override on subordinate employees; it places the burden on the governance structure to design controls that detect or prevent override regardless of employee resistance. The whistleblower hotline is a reporting channel, not a preventive control — it requires an employee to initiate a report, which is precisely what the override environment suppresses. A candidate selecting this option may be applying an individual-accountability framework to what is fundamentally a governance design problem, expecting employees to serve as the primary defense against the most powerful person in the organization.",
+        "ExplanationWrongD": "Option D identifies a valid observation — the audit committee should have questioned the CEO's personal preparation of the quarterly review package — but mischaracterizes the root cause. An audit committee that receives a financial review package from the CEO and relies on its completeness without independent verification is exercising insufficient skepticism, which is a symptom of the same override condition: the CEO controls the information flow. However, the audit committee's failure is a consequence of the structural condition described in Option B (the CEO controlled both disbursement initiation and reporting), not an independent defect. Moreover, the committee likely had no reason to suspect that the CEO was personally preparing the package — in many organizations, the CEO signs or presents materials that were compiled by the finance team, and the committee may not have known the CEO was the sole preparer. A candidate selecting this option may be over-attributing responsibility to the oversight body without examining why the oversight body was structurally prevented from receiving complete information.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.063 vendor master file controls",
-        "MicroTopic": "vendor master file controls",
-        "UniqueConceptKey": "E-D063-vendor-master-file-controls",
+        "Topic": "E.063 COSO Principle 6 — risk identification external supply chain beyond tier one",
+        "MicroTopic": "Supply chain risk identification tier depth",
+        "UniqueConceptKey": "E-D063-supply-chain-risk-tier-depth",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Netherfield restricts the ability to add or modify vendor records to a small group of employees separate from those who approve invoice payments. What risk does this control primarily address?",
+        "Stem": "Solstis Photovoltaic, a $1.4 billion solar panel manufacturer headquartered in Phoenix, Arizona, operates two production facilities that consume rare-earth minerals — tellurium, indium, and gallium — in the manufacture of high-efficiency photovoltaic cells. Solstis's risk assessment team, led by VP of Supply Chain Raj Mehta, rated supplier concentration risk as low because the company's three critical mineral suppliers — TerraMin GmbH (Germany), Andes Resources SA (Chile), and Pacific Elements Ltd. (Vietnam) — are based in three different countries on three different continents. The risk assessment was based exclusively on annual financial health reviews of each tier-1 supplier, covering liquidity ratios, debt covenants, and audit opinions. However, the assessment did not trace the supply chain beyond tier-1: TerraMin GmbH sources 85% of its raw tellurium from mines in the Atacama region of South America, and Andes Resources SA sources 90% of its indium from the same Atacama mining district. When the Atacama regional government imposed an export ban on unprocessed rare-earth minerals following a mining safety disaster, both TerraMin and Andes were unable to fulfill their supply contracts simultaneously. Solstis lost $6.8 million in production over seven weeks before securing alternative supply at a 40% price premium. Which evaluation of Solstis's risk identification under COSO Principle 6 is most accurate?",
         "Choices": {
-            "A": "The risk of inventory obsolescence",
-            "B": "The risk of foreign currency translation errors",
-            "C": "The risk of fictitious vendor fraud or unauthorized changes to payment details",
-            "D": "The risk of incorrect revenue recognition timing"
+            "A": "Solstis's risk identification was adequate because the company correctly diversified its supplier base across three countries and three continents — the simultaneous failure of two suppliers from a single regional event was a low-probability event that no reasonably diligent risk identification process would have been expected to anticipate.",
+            "B": "Solstis's risk identification was incomplete because it failed to assess risk beyond tier-1 suppliers. COSO Principle 6 requires the organization to identify risks to the achievement of its objectives across the entity and to consider the full range of internal and external factors that could affect performance. A risk identification process that stops at tier-1 financial health reviews, without tracing the underlying physical supply chain to shared dependencies, fails to identify concentration risk that is hidden by geographic diversity at the tier-1 level.",
+            "C": "Solstis's risk identification process met the COSO standard because financial health reviews of tier-1 suppliers are the recognized industry practice for supply chain risk assessment in the solar manufacturing sector, and COSO does not require organizations to audit their suppliers' suppliers.",
+            "D": "The root cause was operational rather than a risk identification failure — Solstis should have maintained larger safety stock inventories of rare-earth minerals to buffer against supply disruptions, which is a supply chain management decision rather than a COSO governance deficiency."
         },
-        "CorrectChoice": "C",
-        "ExplanationCorrect": "Restricting and segregating vendor master file maintenance from payment approval reduces the risk of fictitious vendors or unauthorized changes used to divert payments.",
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "COSO Principle 6 — within the Risk Assessment component — requires the organization to identify risks that could affect the achievement of objectives and to analyze risks as a basis for determining how they should be managed. The principle explicitly states that risk identification must consider both internal and external factors and must be comprehensive — capturing risks at the entity, division, operating unit, and functional levels. Solstis's risk identification process is deficient in two critical respects. First, it assessed only tier-1 supplier financial health, treating each supplier as an independent risk source. However, supply chain risk is not additive — it is networked: two supposedly independent tier-1 suppliers can share a common dependency at tier-2 or tier-3, creating hidden concentration risk. By analyzing only the corporate headquarters location of each tier-1 supplier (Germany, Chile, Vietnam), Solstis's assessment created the illusion of geographic diversification while the underlying physical supply chain was concentrated in a single mining region — the Atacama. This is the supply chain equivalent of diversifying a portfolio by buying three stocks that all depend on the same underlying commodity. Second, the assessment's risk categories were too narrow: financial health (liquidity, debt, audit opinions) captures only counterparty credit risk, omitting geopolitical risk, regulatory risk, natural-resource concentration risk, and logistics disruption risk — all of which are standard supply chain risk categories that COSO Principle 6 expects a reasonably thorough risk identification process to consider. The $6.8 million production loss was not a black-swan event but the predictable consequence of a risk identification process that confused corporate geographic diversity with physical supply chain diversity. An exam trap is to evaluate risk identification by counting activities (three supplier reviews performed) rather than evaluating whether the activities actually achieved their objective (identifying the true concentration risk).",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20872,7 +20882,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-063",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20881,14 +20891,15 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Foreign currency translation errors arise from exchange rate fluctuations affecting foreign-currency-denominated transactions. Restricting vendor-master-file changes is an accounts-payable control addressing the risk of unauthorized or fraudulent vendor payments, not currency translation.",
-        "ExplanationWrongB": "Revenue recognition timing is a revenue-cycle issue; the stem concerns vendor records and cash disbursements.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongA": "Option A incorrectly dismisses a foreseeable supply chain risk as a low-probability event. The simultaneous failure of two suppliers from a single regional event is not low-probability when those two suppliers depend on the same underlying resource — it is a correlated risk. The entire purpose of supply chain risk identification is to detect hidden correlations that make apparent diversification illusory. Solstis's assessment was designed in a way that was systematically incapable of detecting the concentration risk: by categorizing suppliers by corporate headquarters location rather than by the physical source of their raw materials, the assessment actively masked the shared dependency. COSO Principle 6 does not require organizations to predict specific events (a mining safety disaster in the Atacama) but does require them to identify risk categories that could affect objectives. Concentration of critical mineral supply in a single mining region is a risk category that should have been identified regardless of the specific triggering event.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C incorrectly appeals to industry practice as a defense against incomplete risk identification. COSO Principle 6 requires a comprehensive assessment of risks to the achievement of objectives — industry practice may inform the standard of care but does not define it. If industry practice (tier-1 financial reviews only) systematically fails to detect a material risk category (sub-tier geographic concentration), then industry practice is insufficient, not vindicated. Furthermore, the scenario demonstrates that the practice was incomplete: two suppliers failed simultaneously from the same cause, yet the risk assessment rated concentration risk as low. An assessment that produces a low risk rating for a condition that caused a $6.8 million loss is definitionally deficient. A candidate selecting this option may be applying a compliance-based risk mindset, where adherence to common practice substitutes for evaluation of whether the practice actually achieves the risk identification objective.",
+        "ExplanationWrongD": "Option D attempts to reframe a risk identification failure as an inventory management issue. Safety stock is a risk response (mitigation) — it is one of several possible responses to an identified supply disruption risk. But risk response can only be selected after risk identification: Solstis could not decide how much safety stock to hold for rare-earth mineral disruptions if it never identified that its minerals were concentrated in a single geographic region. The risk identification failure (not knowing the true concentration risk) preceded and caused the absence of an appropriate risk response. Under COSO, risk identification, risk assessment, and risk response are sequential — an organization cannot design appropriate responses to risks it has not identified. A candidate selecting this option may be skipping ahead to the solution without recognizing that the prerequisite step (risk identification) was never properly performed.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -20938,26 +20949,26 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.065 vendor master file controls",
-        "MicroTopic": "vendor master file controls",
-        "UniqueConceptKey": "E-D065-vendor-master-file-controls",
+        "Topic": "E.065 COSO Principle 2 — board independence exercise of oversight whistleblower investigation",
+        "MicroTopic": "Audit committee oversight independence whistleblower",
+        "UniqueConceptKey": "E-D065-board-oversight-whistleblower-independence",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Prescott restricts the ability to add or modify vendor records to a small group of employees separate from those who approve invoice payments. What risk does this control primarily address?",
+        "Stem": "VantagePoint Software, a NASDAQ-listed enterprise SaaS company with $780 million in annual recurring revenue, has a seven-member board of directors with four members classified as independent under exchange listing standards. The three-member audit committee — composed entirely of directors classified as independent — receives a detailed whistleblower report through the company's externally managed reporting hotline. The report alleges that the CFO, Thomas Keller, manipulated quarterly revenue recognition in four of the last seven quarters by backdating software license agreements: 23 contracts totaling $14.7 million in revenue were signed after quarter-end but dated as if executed before the quarter closed, enabling VantagePoint to meet consensus analyst revenue estimates in each of those quarters. The whistleblower, a senior revenue accountant with eight years of tenure, provided specific contract numbers, dates, and email correspondence. The audit committee chair, Ellen Chou, schedules a special meeting within five business days to review the allegation. However, CEO Marcus Webb insists on attending and being present for the entire discussion, arguing that as CEO he should hear any allegation against his CFO directly. The committee allows Webb to remain in the room. During the meeting, Webb characterizes the report as retaliation from a disgruntled employee who was passed over for promotion, and the committee accepts this characterization without interviewing the whistleblower, reviewing the cited contracts, or engaging independent counsel. Six months later, the SEC issues a Wells Notice to VantagePoint. Which best evaluates the audit committee's conduct under COSO Principle 2?",
         "Choices": {
-            "A": "The risk of fictitious vendor fraud or unauthorized changes to payment details",
-            "B": "The risk of foreign currency translation errors",
-            "C": "The risk of incorrect revenue recognition timing",
-            "D": "The risk of inventory obsolescence"
+            "A": "The audit committee violated COSO Principle 2 because the exercise of board oversight requires independence not only in composition but also in conduct. Allowing the CEO — who has a direct interest in the outcome — to attend the entire discussion of a whistleblower allegation against his direct report, accepting his characterization of the report without independent investigation, and failing to interview the whistleblower or review the cited evidence collectively demonstrate that the committee deferred its oversight responsibility to the very management it was charged with overseeing.",
+            "B": "The audit committee complied with COSO Principle 2 because all three members are classified as independent directors under NASDAQ listing standards, which satisfies the independence requirement. The CEO's attendance, while not ideal, does not violate any specific regulatory provision governing audit committee meetings.",
+            "C": "The primary failure was the CEO's conduct, not the audit committee's. Marcus Webb's insistence on attending the meeting and his characterization of the whistleblower report as retaliation constitute an improper management override of the governance process, which the audit committee could not reasonably have prevented.",
+            "D": "The audit committee's decision not to investigate further was reasonable because whistleblower reports from employees who were recently passed over for promotion have a high false-positive rate, and the committee appropriately relied on the CEO's superior knowledge of the employee's performance history and motivations."
         },
         "CorrectChoice": "A",
-        "ExplanationCorrect": "Restricting and segregating vendor master file maintenance from payment approval reduces the risk of fictitious vendors or unauthorized changes used to divert payments.",
+        "ExplanationCorrect": "COSO Principle 2 — within the Control Environment component — states that the board of directors demonstrates independence from management and exercises oversight of the development and performance of internal control. Independence under COSO is not a static attribute determined by director classification at a point in time; it is demonstrated through conduct — specifically, through the willingness and ability to exercise objective judgment independent of management influence, particularly when management's interests conflict with the board's oversight duty. The VantagePoint audit committee failed this standard at four distinct decision points. First, allowing the CEO to attend the entire whistleblower discussion: the allegation targeted the CFO, the CEO's direct report, and potentially implicated the CEO if he was aware of or directed the backdating. The CEO's presence predictably influenced the committee's deliberation because no committee member would openly question the CEO's characterization while he sat in the room. Second, accepting the CEO's characterization without independent verification: the committee had specific contract numbers, dates, and email correspondence in the whistleblower report — verifiable facts — yet relied solely on the CEO's verbal characterization that the employee was disgruntled. Third, failing to interview the whistleblower: a credible report with detailed, verifiable allegations warrants direct inquiry with the reporter, not dismissal based on the accused party's manager's characterization of the reporter's motives. Fourth, failing to engage independent counsel: when the allegation involves potential securities law violations (revenue recognition manipulation to meet analyst estimates), the committee should have engaged outside counsel with no prior relationship to management, rather than relying on its own judgment or the CEO's characterization. Collectively, these four failures demonstrate that the committee did not exercise independent oversight — it deferred to management on a matter where management's interests were directly adverse to the oversight function. An exam trap is to equate structural independence (director classification) with behavioral independence (conduct during oversight activities), when COSO requires both.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -20972,7 +20983,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-065",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -20982,13 +20993,14 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "Setting employee compensation is a management responsibility, not an audit committee function. The audit committee's role is governance-level oversight of financial reporting, internal controls, and the audit functions — not operational compensation decisions.",
-        "ExplanationWrongD": "Management prepares the financial statements; the audit committee oversees integrity and control effectiveness.",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongB": "Option B adopts a narrow, compliance-based interpretation of independence that COSO Principle 2 explicitly rejects. While director classification under exchange listing standards is a minimum structural requirement, COSO's control environment principle demands more: the board must exercise oversight, not merely possess the structural attributes of independence. The scenario describes a committee that received a specific, evidence-supported whistleblower report, allowed the subject's manager to attend and control the discussion, conducted no independent verification, and closed the matter based solely on management's characterization. This is not oversight — it is abdication. The fact that no specific SEC rule prohibits the CEO from attending an audit committee meeting does not mean the committee's conduct satisfied COSO's behavioral standard. COSO Principle 2 evaluates whether the board actually exercises independent judgment, not whether it complies with a checklist of structural requirements. A candidate selecting this option may be confusing regulatory compliance (NASDAQ rules) with governance effectiveness (COSO principles), treating independence as a status that is achieved once and retained regardless of conduct.",
+        "ExplanationWrongC": "Option C incorrectly assigns primary responsibility for the oversight failure to the CEO rather than the committee. While the CEO's conduct was improper, the CEO is management — management's interests are expected to conflict with oversight in precisely these situations. The entire purpose of an independent audit committee is to serve as the governance body that can resist management pressure and conduct objective inquiry when management's interests diverge from the board's oversight duty. If the committee's independence can be neutralized simply by a CEO insisting on attending a meeting and offering an alternative characterization of the facts, then independence is illusory. COSO Principle 2 places the burden on the board to maintain independence in the face of management pressure — not on management to avoid applying pressure. The committee had multiple options: it could have asked the CEO to leave, convened in executive session without management present, engaged independent counsel, or interviewed the whistleblower directly. Its failure to exercise any of these options is an independent oversight failure, not a failure caused by the CEO.",
+        "ExplanationWrongD": "Option D relies on an unsubstantiated generalization about whistleblower report reliability that is directly contradicted by the specific facts of the scenario. The whistleblower report was not a vague, unsupported allegation: it provided 23 specific contract numbers, transaction dates, amounts totaling $14.7 million, and supporting email correspondence. The report's specificity is the hallmark of a credible allegation, regardless of the reporter's employment circumstances. An employee being passed over for promotion is not evidence that a detailed, document-supported allegation of securities law violations is false — it is an ad hominem response that addresses the messenger rather than the message. The audit committee's duty under COSO Principle 2 is to evaluate the substance of the allegation (by reviewing contracts, dates, and emails), not to evaluate the reporter's motives. Accepting management's characterization of the reporter's motives as a substitute for investigating the reported facts is precisely the type of deferential behavior that COSO's independence requirement is designed to prevent.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -21038,7 +21050,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -21089,26 +21101,26 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S52 Phase 4 — Analyze replacement for archived P1-ED-067 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "E.068 audit committee oversight role",
-        "MicroTopic": "audit committee oversight role",
-        "UniqueConceptKey": "E-D068-audit-committee-oversight-role",
+        "Topic": "E.068 COSO Principle 16 — monitoring ongoing evaluations KPI definition manipulation",
+        "MicroTopic": "KPI definition manipulation monitoring integrity",
+        "UniqueConceptKey": "E-D068-kpi-definition-monitoring-integrity",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Somerdale's board audit committee oversees the financial reporting process, the external auditor relationship, and the internal audit function. What is the primary purpose of this oversight?",
+        "Stem": "Orion Auto Parts, a $920 million manufacturer of steering and suspension components with four plants in the Midwest, has reported a first-pass quality yield (FPQY) of 97% for three consecutive years. This KPI is one of five metrics management uses to certify the effectiveness of production quality controls to the board's audit committee each quarter. The FPQY is defined as the percentage of units that pass all quality inspections on the first attempt without requiring any rework. During a comprehensive internal audit investigation, auditors discover that the plant-level data collection system excludes all rework completed within the same production shift from the FPQY calculation. Specifically, a suspension component that fails initial inspection at 9:00 AM but is reworked, re-inspected, and passes at 2:30 PM — within the same shift — is recorded as a first-pass success in the KPI data feed. When the auditors recalculate FPQY including same-shift rework, the true first-pass yield drops to 74% — meaning that 26% of all units require at least one rework cycle before passing, rather than the 3% the reported KPI suggests. The Production VP, Mark Tanimoto, defends the current calculation method, arguing that same-shift rework is standard industry practice and that the KPI accurately reflects final quality delivered to customers. The auditors note that the policy and procedure manual explicitly defines FPQY as including all rework, regardless of when it occurs. Which best evaluates the integrity of Orion's KPI-based monitoring under COSO Principle 16?",
         "Choices": {
-            "A": "To replace the need for external audits entirely",
-            "B": "To set employee compensation for all departments",
-            "C": "To prepare the company's financial statements directly",
-            "D": "To provide independent oversight of financial reporting integrity and the effectiveness of internal controls"
+            "A": "The KPI-based monitoring is adequate because same-shift rework exclusion is a widely accepted industry convention in automotive manufacturing, and COSO Principle 16 explicitly permits organizations to adapt monitoring metrics to reflect industry practices and operational realities.",
+            "B": "The monitoring failure was in the internal audit function, which should have detected the data collection discrepancy earlier than three years. COSO Principle 16's ongoing evaluation requirement places primary responsibility on internal audit to continuously validate the accuracy of management's reported KPIs.",
+            "C": "The Production VP is correct that the KPI's purpose is to measure final quality delivered to customers, and since all reworked units eventually passed inspection, the 97% figure accurately reflects the quality of products shipped. The auditors' recalculation answers a different question than the one the KPI was designed to measure.",
+            "D": "The KPI-based monitoring is deficient under COSO Principle 16 because ongoing evaluations are only as reliable as the data definitions that produce them. When the operational definition of a KPI diverges from its stated definition — systematically excluding a material category of rework from a metric whose purpose is to measure rework frequency — management is monitoring a fabricated signal rather than actual control performance, and certifying control effectiveness based on that fabricated signal undermines the monitoring component entirely."
         },
         "CorrectChoice": "D",
-        "ExplanationCorrect": "The audit committee provides independent board-level oversight of financial reporting quality, the external audit, and internal control effectiveness.",
+        "ExplanationCorrect": "COSO Principle 16 — within the Monitoring Activities component — states that the organization selects, develops, and performs ongoing and/or separate evaluations to ascertain whether the components of internal control are present and functioning. Ongoing evaluations are built into the organization's routine operations and provide real-time information about control effectiveness. However, the integrity of ongoing evaluation depends entirely on the integrity of the data that feeds it: if the KPI definition used in practice diverges from the KPI definition stated in policy — and management relies on the practiced definition to certify control effectiveness — then the monitoring component is generating false assurance. Orion's FPQY has two definitions that conflict: the policy definition (all rework, regardless of timing) and the operational definition (rework that crosses shift boundaries only). The divergence is not trivial — 74% versus 97% represents a fundamental difference in what the organization believes about its production quality controls. At 74%, the organization knows that more than one in four units requires rework and should investigate root causes, evaluate control design, and potentially redesign processes. At 97%, management certifies to the board that quality controls are highly effective and no investigation is needed. The Production VP's defense — that same-shift rework is industry practice — is irrelevant to COSO Principle 16 because monitoring is organization-specific: the monitor must evaluate whether this organization's controls are functioning, not whether this organization's KPI methodology matches an industry convention. Furthermore, the VP's characterization of the KPI as measuring final quality rather than process quality contradicts the KPI's stated definition and purpose. If the organization's stated definition says the KPI measures first-pass quality and the KPI in practice measures something different, then the monitoring activity is not evaluating what it purports to evaluate — it is providing false assurance to the board and management. An exam trap is to evaluate a KPI at face value (the number looks good) without verifying whether the operational definition that produces the number matches the stated definition, and whether the resulting signal accurately represents the underlying control performance.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -21123,7 +21135,7 @@ const MCQ_BANK_D = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "QuestionID": "P1-ED-068",
-        "question_state": "Archived",
+        "question_state": "Certified",
         "CalculationItem": false,
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
@@ -21132,14 +21144,15 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (To set employee compensation for all departments) represents a plausible misconception. Under Audit committee responsibilities, the correct analysis leads to the conclusion that to provide independent oversight of financial reporting integrity and the effectiveness of internal controls. A candidate may select this option by misapplying a related but distinct concept.",
-        "ExplanationWrongC": "Option C (To prepare the company's financial statements directly) represents a plausible misconception. Under Audit committee responsibilities, the correct analysis leads to the conclusion that to provide independent oversight of financial reporting integrity and the effectiveness of internal controls. A candidate may select this option by misapplying a related but distinct concept.",
+        "ExplanationWrongA": "Option A conflates industry convention with monitoring integrity. COSO Principle 16 does not defer to industry practice when industry practice produces a monitoring signal that contradicts the organization's own stated control objectives and policy definitions. The organization's FPQY policy explicitly defines the metric to include all rework regardless of timing — the operational practice of excluding same-shift rework is not an adaptation of the standard; it is a violation of it. Industry conventions are relevant to the design of monitoring metrics, not to the integrity of data definitions after those metrics have been designed and adopted. Moreover, the claim that same-shift rework exclusion is standard industry practice is a factual assertion by the Production VP that should itself be subject to verification. A candidate selecting this option may be treating external benchmarks as overriding internal control definitions, when COSO requires the organization to evaluate its own controls against its own stated standards.",
+        "ExplanationWrongB": "Option B misstates the allocation of monitoring responsibility under COSO. Ongoing evaluations are performed by management as part of routine operations — they are a management responsibility, not an internal audit responsibility. Internal audit is a separate evaluation function (Principle 17), not an ongoing monitor. Management — specifically, the production and quality functions — owns the design, implementation, and operation of ongoing monitoring activities, including the definition and validation of the KPIs they use to monitor control effectiveness. Internal audit's role is to independently evaluate whether those ongoing monitoring activities are functioning properly, which is exactly what the internal audit investigation did when it discovered the definitional divergence. The failure was not a slow detection by internal audit; it was a three-year management failure to reconcile the operational KPI definition with the stated policy definition. A candidate selecting this option may be misassigning the responsibility for data integrity from the process owner (management) to the evaluator (internal audit).",
+        "ExplanationWrongC": "Option C accepts management's redefinition of the KPI's purpose as a defense. The Production VP's claim that the KPI measures final quality to customers contradicts the written policy, which explicitly defines FPQY as measuring first-pass quality. More fundamentally, even if the KPI were redesigned to measure final quality, the monitoring question remains: what metric monitors the process quality that produces 26% rework? Eliminating the rework metric does not eliminate the rework — it eliminates management's visibility into it. Under COSO Principle 16, if management wants to report a final-quality metric to the board, it may do so, but it must also have a monitoring mechanism that captures process inefficiencies (such as a 26% rework rate) that consume resources, introduce variability, and indicate that the underlying production controls are not functioning as designed. Shifting the definition to produce a more favorable number without retaining visibility into the unfavorable reality is the antithesis of effective monitoring.",
         "ExplanationWrongD": "",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "upgrade_note": "S60B -- DL-012 clone replacement"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -21189,7 +21202,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -21240,7 +21253,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S52 Phase 4 — Evaluate replacement for archived P1-ED-070 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -21290,7 +21303,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -21340,7 +21353,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -21390,7 +21403,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -21440,7 +21453,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
@@ -21490,7 +21503,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -21540,7 +21553,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -21583,7 +21596,7 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Option A recommends ETL for a use case that is fundamentally real-time. The scenario specifies that inventory availability must reflect orders within seconds — ETL's batch processing model (typically hourly or daily) would create inventory discrepancies where two sales channels show different stock levels for the same product. An ETL process that runs every 30 minutes means customers could order products that have already sold out on the website, generating cancellations and customer dissatisfaction. ETL is the right tool for the historical reporting use case (Option D acknowledges this), but it is the wrong tool for real-time inventory synchronization. Both requirements (real-time sync + historical reporting) need different integration approaches for different data flows, not a single pattern applied universally.",
-        "ExplanationWrongB": "Option B recommends middleware (ESB/enterprise service bus) for what is essentially a point-to-point integration between two systems. Middleware is most valuable when many systems need to communicate in a hub-and-spoke pattern with message transformation, routing, and orchestration. The scenario describes two systems (ERP and e-commerce) — a classic point-to-point integration. Introducing an ESB adds infrastructure complexity, a new single point of failure, and ongoing maintenance costs that are disproportionate to the integration's scope. The integration requirement is straightforward: the e-commerce platform needs real-time inventory availability and must send orders to the ERP. Two API endpoints (GET inventory, POST order) satisfy both requirements without the overhead of a middleware layer.",
+        "ExplanationWrongB": "",
         "ExplanationWrongC": "Option C correctly recommends API-based integration but overcomplicates the architecture by proposing an event-driven pattern for a synchronous request-response use case. Event-driven architecture is appropriate when changes in one system should be consumed asynchronously by multiple downstream systems. Here, the e-commerce platform needs to check inventory at the moment a customer views a product page — a synchronous request-response pattern. Publishing inventory changes as events would require the e-commerce platform to maintain its own inventory cache and process events to keep it current, adding complexity and the risk of cache staleness. The APM's 12-month data requirement is satisfied by the ERP's standard reporting module, not by an event-driven integration. For two-system, request-response integration, REST APIs are the appropriate choice.",
         "ExplanationWrongD": "",
         "question_state": "Active",
@@ -21591,7 +21604,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-FD-002 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -21638,7 +21651,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -21689,7 +21702,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S380 Evaluate Wave 1 — Evaluate replacement for archived P1-FD-004 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -21739,7 +21752,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -21789,7 +21802,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -21840,7 +21853,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -21890,7 +21903,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -21941,7 +21954,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -21984,7 +21997,7 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Option A is technically incorrect. Hashing is a one-way function — it cannot be reversed to recover the original data. The scenario describes encrypted (not hashed) credit card data where the attacker obtained both the encrypted data and a backup of the encryption keys. This strongly suggests the attacker decrypted the data using the stolen keys, not reversed a hash. More importantly, the treatment of hashed vs. encrypted data is fundamentally different from a security standpoint: hashed data requires salting and key stretching (bcrypt, Argon2) which are not relevant to AES-256-GCM encrypted data. The root cause analysis must be accurate about the cryptographic primitive involved before recommending remediation.",
-        "ExplanationWrongB": "Option B correctly identifies a real risk (hardcoded keys in source code) but incorrectly applies the remediation to the described breach. The scenario states the attacker obtained a 'backup of the encryption keys' — this implies the keys were stored somewhere accessible (a file server, a backup system, a configuration management tool). Recommending environment variables addresses hardcoded keys in application code, which is a different attack vector. If the keys were extracted from a backup system, environmental variables in application code would not have prevented the breach because the attacker accessed the keys through the backup, not through the application. The correct remediation addresses where the keys were actually stored (the backup system) and how they were protected there.",
+        "ExplanationWrongB": "",
         "ExplanationWrongC": "Option C changes the encryption algorithm (AES-256 → AES-512) without addressing how keys are managed. The scenario provides no evidence that AES-256 was cryptographically broken — the attacker obtained the keys, not a mathematical weakness in AES. Moving to a longer key and adding an HSM addresses future key protection but would not have prevented the current breach because the attacker already has the AES-256 keys and the encrypted data. Rotating keys after a breach is necessary regardless of algorithm, but the priority remediation should address the key management failure that allowed the attacker to obtain the keys in the first place — namely, that production encryption keys were stored in a backup system without access controls equivalent to the production environment.",
         "ExplanationWrongD": "",
         "question_state": "Active",
@@ -21992,7 +22005,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S899 Phase 1 — Evaluate replacement for archived P1-FD-010 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22042,7 +22055,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22092,7 +22105,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22143,7 +22156,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22193,7 +22206,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22243,7 +22256,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22293,7 +22306,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22344,7 +22357,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22394,7 +22407,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22444,7 +22457,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22495,7 +22508,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-FD-020 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22541,7 +22554,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22592,7 +22605,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22642,7 +22655,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22692,7 +22705,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22742,7 +22755,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22792,7 +22805,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22842,7 +22855,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22893,7 +22906,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22943,7 +22956,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -22993,7 +23006,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23043,7 +23056,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23093,7 +23106,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23143,7 +23156,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23193,7 +23206,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23244,7 +23257,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23294,7 +23307,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23344,7 +23357,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23394,7 +23407,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23444,7 +23457,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23495,7 +23508,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-FD-040 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23546,7 +23559,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23596,7 +23609,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23646,7 +23659,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23696,7 +23709,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23746,7 +23759,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
@@ -23768,7 +23781,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S899 Phase 1 — SCRATCH AUTHOR: Evaluate/Very Difficult replacement for archived P1-FD-046. Original FD-046 was a Remember/Easy definition-match clone (DL-012 rotation)."
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23819,7 +23832,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated for Technology & Analytics domain)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23869,7 +23882,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23919,7 +23932,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -23962,7 +23975,7 @@ const MCQ_BANK_D = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Option A identifies bot proliferation as the primary issue and recommends limiting bot count. However, the scenario's control deficiencies are not caused by too many bots — they are caused by a complete absence of governance over bot lifecycle, access management, change control, and segregation of duties. Limiting bot count to 20 does not address any of the identified control failures: (1) it does not fix the bot with domain admin access, (2) it does not ensure bots are deactivated when employees leave, (3) it does not prevent bot owners from making production changes without testing, and (4) it does not address the segregation of duties gap where bots process vendor payments and also modify vendor master data. A cap on bot count is a governance theater response — it creates the appearance of control while leaving all the substantial control failures unaddressed.",
-        "ExplanationWrongB": "Option B recommends manual review of bot output as the primary control, which fundamentally misunderstands automation governance. RPA is deployed precisely because manual processing is slow, expensive, and error-prone. Adding manual review of every bot transaction negates the efficiency rationale for automation and introduces a new control failure: the human reviewer becomes a single point of failure and a bottleneck. More importantly, manual review does not prevent control failures — it detects them after the fact. The bot with domain admin access could make changes that a manual reviewer would never see (e.g., modifying system configurations, deleting audit logs). The control failures described — unauthorized access, lack of change management, segregation of duties conflicts — require preventive controls embedded in the bot governance framework, not detective controls applied after bot execution.",
+        "ExplanationWrongB": "",
         "ExplanationWrongC": "Option C correctly identifies process documentation as important but misprioritizes it. Documenting bot processes is a foundational governance activity, but it is not the triggering event that would have prevented or detected the control failures described. Documenting what the AP bot does does not prevent it from having domain admin access — access control requires an authorization framework and periodic access reviews, not documentation. Documenting that the vendor-master bot can also change bank account details does not address the segregation of duties conflict — the conflict exists regardless of whether it is documented. Process documentation is necessary but insufficient; it must be paired with controls that enforce the documented processes. Furthermore, implementing documentation across 34 undocumented bots would take months, while deactivating bots belonging to departed employees and revoking unnecessary privileged access are immediate risk-reduction actions.",
         "ExplanationWrongD": "",
         "question_state": "Active",
@@ -23970,7 +23983,7 @@ const MCQ_BANK_D = [
         "CognitiveLevel": "Evaluate",
         "upgrade_note": "S899 Phase 1 — Evaluate/Very Difficult replacement for archived P1-FD-050 (DL-012 rotation clone)"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24020,7 +24033,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24070,7 +24083,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24120,7 +24133,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24170,7 +24183,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24220,7 +24233,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 5,
         "CognitiveLevel": "Evaluate"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24270,7 +24283,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24320,7 +24333,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24370,7 +24383,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24420,7 +24433,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24470,7 +24483,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24520,7 +24533,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24570,7 +24583,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24620,7 +24633,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24670,7 +24683,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24720,7 +24733,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24770,7 +24783,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24820,7 +24833,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24870,7 +24883,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24920,7 +24933,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -24970,7 +24983,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 2,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -25020,7 +25033,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -25070,7 +25083,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -25120,7 +25133,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",
@@ -25170,7 +25183,7 @@ const MCQ_BANK_D = [
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "Part": 1,
         "Section": "F",
         "SectionName": "Technology and Analytics",

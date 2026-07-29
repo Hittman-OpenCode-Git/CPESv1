@@ -1,0 +1,63 @@
+{
+  "session": "S382",
+  "board": "dl008-remediation",
+  "timestamp": "2026-07-28T22:55:00.000Z",
+  "verdict": "REMEDIATED — 0 remaining",
+  "tool": "scripts/remediate_dl008.js",
+  "backup": {
+    "pack_c": "backups/pack_c_corrected.js.bak-S382-20260728175705",
+    "pack_d": "backups/pack_d_corrected.js.bak-S382-20260728175705"
+  },
+  "pre_remediation": {
+    "pack_c": { "dl008_total": 15, "dl008_certified": 6 },
+    "pack_d": { "dl008_total": 10, "dl008_certified": 4 },
+    "total_dl008": 25,
+    "total_dl008_certified": 10
+  },
+  "remediated_items": [
+    { "qid": "P1-CC-013", "pack": "C", "section": "C", "cc": "A", "ew_cleared": "ExplanationWrongA", "state": "Certified" },
+    { "qid": "P1-CC-033", "pack": "C", "section": "C", "cc": "A", "ew_cleared": "ExplanationWrongA", "state": "Certified" },
+    { "qid": "P1-CC-041", "pack": "C", "section": "C", "cc": "A", "ew_cleared": "ExplanationWrongA", "state": "Certified" },
+    { "qid": "P1-CC-049", "pack": "C", "section": "C", "cc": "A", "ew_cleared": "ExplanationWrongA", "state": "Certified" },
+    { "qid": "P1-EC-049", "pack": "C", "section": "E", "cc": "A", "ew_cleared": "ExplanationWrongA", "state": "Certified" },
+    { "qid": "P1-EC-061", "pack": "C", "section": "E", "cc": "A", "ew_cleared": "ExplanationWrongA", "state": "Certified" },
+    { "qid": "P1-CD-016", "pack": "D", "section": "D", "cc": "D", "ew_cleared": "ExplanationWrongD", "state": "Certified" },
+    { "qid": "P1-CD-056", "pack": "D", "section": "D", "cc": "D", "ew_cleared": "ExplanationWrongD", "state": "Certified" },
+    { "qid": "P1-CD-066", "pack": "D", "section": "D", "cc": "B", "ew_cleared": "ExplanationWrongB", "state": "Certified" },
+    { "qid": "P1-CD-091", "pack": "D", "section": "D", "cc": "C", "ew_cleared": "ExplanationWrongC", "state": "Certified" },
+    { "qid": "P1-EC-001", "pack": "C", "section": "E", "cc": "A", "ew_cleared": "ExplanationWrongA", "state": "non-Certified" },
+    { "qid": "P1-EC-005", "pack": "C", "section": "E", "cc": "A", "ew_cleared": "ExplanationWrongA", "state": "non-Certified" },
+    { "qid": "P1-EC-030", "pack": "C", "section": "E", "cc": "B", "ew_cleared": "ExplanationWrongB", "state": "non-Certified" },
+    { "qid": "P1-EC-055", "pack": "C", "section": "E", "cc": "C", "ew_cleared": "ExplanationWrongC", "state": "non-Certified" },
+    { "qid": "P1-FC-005", "pack": "C", "section": "F", "cc": "A", "ew_cleared": "ExplanationWrongA", "state": "non-Certified" },
+    { "qid": "P1-FC-017", "pack": "C", "section": "F", "cc": "D", "ew_cleared": "ExplanationWrongD", "state": "non-Certified" },
+    { "qid": "P1-FC-045", "pack": "C", "section": "F", "cc": "A", "ew_cleared": "ExplanationWrongA", "state": "non-Certified" },
+    { "qid": "P1-FC-046", "pack": "C", "section": "F", "cc": "D", "ew_cleared": "ExplanationWrongD", "state": "non-Certified" },
+    { "qid": "P1-FC-050", "pack": "C", "section": "F", "cc": "B", "ew_cleared": "ExplanationWrongB", "state": "non-Certified" },
+    { "qid": "P1-ED-002", "pack": "D", "section": "E", "cc": "B", "ew_cleared": "ExplanationWrongB", "state": "non-Certified" },
+    { "qid": "P1-ED-015", "pack": "D", "section": "E", "cc": "C", "ew_cleared": "ExplanationWrongC", "state": "non-Certified" },
+    { "qid": "P1-ED-050", "pack": "D", "section": "E", "cc": "B", "ew_cleared": "ExplanationWrongB", "state": "non-Certified" },
+    { "qid": "P1-FD-002", "pack": "D", "section": "F", "cc": "B", "ew_cleared": "ExplanationWrongB", "state": "non-Certified" },
+    { "qid": "P1-FD-010", "pack": "D", "section": "F", "cc": "B", "ew_cleared": "ExplanationWrongB", "state": "non-Certified" },
+    { "qid": "P1-FD-050", "pack": "D", "section": "F", "cc": "B", "ew_cleared": "ExplanationWrongB", "state": "non-Certified" }
+  ],
+  "post_remediation": {
+    "pack_c": { "dl008_total": 0, "dl008_certified": 0 },
+    "pack_d": { "dl008_total": 0, "dl008_certified": 0 },
+    "total_dl008": 0,
+    "total_dl008_certified": 0
+  },
+  "verification": {
+    "method": "Function constructor re-parse post-fix",
+    "pack_c_result": "0 DL-008 remaining (500 objects)",
+    "pack_d_result": "0 DL-008 remaining (500 objects)",
+    "scan_dl008_fn_verified": "0 in both packs"
+  },
+  "integrity_preserved": {
+    "answer_keys_preserved": true,
+    "explanations_preserved": true,
+    "certification_state_preserved": true,
+    "qid_count_stable": true,
+    "parse_syntax_stable": true
+  }
+}

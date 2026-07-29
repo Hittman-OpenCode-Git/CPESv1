@@ -9454,7 +9454,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongA": "The high-low method estimates variable and fixed cost components using only two data points from the highest and lowest activity levels. It is a cost estimation technique, not a method for decomposing ROI into margin and turnover.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Zero-based budgeting requires managers to justify all expenses from zero each period, focusing on cost control rather than decomposing ROI into its underlying drivers of profitability and efficiency.",
-        "ExplanationWrongD": "Variance analysis compares actual to standard or budgeted amounts. It identifies where performance deviated but is a diagnostic tool, not the specific answer to the question posed.",
+        "ExplanationWrongD": "Zero-based budgeting requires all expenses to be justified from a zero base each period rather than using prior-year spending as a starting point. It is a budgeting methodology unrelated to ROI decomposition. The DuPont method specifically decomposes return on investment into profit margin—income divided by sales—multiplied by asset turnover—sales divided by assets.",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "CognitiveLevel": "Remember"
@@ -9501,10 +9501,10 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "The high-low method is a cost estimation technique that separates mixed costs into fixed and variable components using activity extremes. It is unrelated to ROI decomposition. The DuPont method decomposes ROI into profit margin multiplied by asset turnover.",
+        "ExplanationWrongA": "The high-low method is a cost estimation technique that separates mixed costs into fixed and variable components using the highest and lowest activity levels. It is unrelated to ROI analysis. The DuPont method decomposes ROI into profit margin multiplied by asset turnover to reveal whether returns are driven by profitability or asset efficiency.",
         "ExplanationWrongB": "The formula income/operating assets × sales/operating assets is incorrect because it multiplies two ratios that individually measure different aspects of performance. The DuPont decomposition is income/sales × sales/operating assets, reconciling to income/operating assets.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Zero-based budgeting requires all expenses to be justified from a zero base each period rather than using prior-year spending as a starting point. It is a budgeting methodology unrelated to ROI decomposition. The DuPont method specifically decomposes return on investment into profit margin—income divided by sales—multiplied by asset turnover—sales divided by assets.",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "CognitiveLevel": "Remember"
@@ -9551,7 +9551,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "The high-low method is a cost estimation technique that separates mixed costs into fixed and variable components using the highest and lowest activity levels. It is unrelated to ROI analysis. The DuPont method decomposes ROI into profit margin multiplied by asset turnover to reveal whether returns are driven by profitability or asset efficiency.",
         "ExplanationWrongB": "Sales divided by average total assets is the asset turnover ratio — one component of DuPont but not the full decomposition which is margin × turnover.",
         "ExplanationWrongC": "The original DuPont formula does not include a tax factor explicitly. It multiplies margin (income after taxes/sales) by turnover (sales/assets). The tax effect is embedded in the numerator of margin, not shown as a separate multiplier.",
         "ExplanationWrongD": "",
@@ -9651,7 +9651,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Variance analysis compares actual results to budgeted or standard amounts to identify and explain differences. It does not decompose ROI into its components. The DuPont method specifically breaks ROI into profit margin multiplied by asset turnover, providing insight into whether returns are driven by profitability or asset efficiency.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "The current ratio measures short-term liquidity, not operating efficiency. It focuses on whether short-term assets cover short-term obligations, not how effectively total assets generate revenue.",
         "ExplanationWrongD": "The gross margin percentage is a profitability metric measuring the percentage of revenue retained after covering cost of goods sold, not the efficiency with which total assets generate sales.",
@@ -9702,7 +9702,7 @@ const MCQ_BANK_C = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "South Division's higher ROI (20.0%) reflects its smaller asset base, not necessarily superior capital allocation. ROI is subject to the underinvestment bias: a division manager may reject value-creating investments that exceed the cost of capital if they lower the division's average ROI. The project earning 12% exceeds the 10% required return, so it creates value regardless of which division hosts it. The critical consideration is absolute economic value, where North Division contributes $50,000 more in residual income. The assertion that the project harms either division's ROI less at South ignores that declining ROI from a value-creating investment is not a genuine harm to shareholders.",
-        "ExplanationWrongB": "$300,000 is only the capital charge (10% x $3,000,000), not the residual income. RI = operating income minus the capital charge.",
+        "ExplanationWrongB": "",
         "ExplanationWrongC": "A 12% return exceeds the company's 10% required rate of return, making this a positive net present value project. Rejecting it because it is below existing division ROIs is the classic underinvestment bias — it confuses average historical returns with marginal returns. As long as the marginal return (12%) exceeds the cost of capital (10%), the project adds shareholder value. Companies that reject all projects below their average ROI eventually shrink, as they accept no new investment. The correct framework is to accept all projects with returns above the cost of capital.",
         "ExplanationWrongD": "While it is true that South's manager, evaluated on residual income, would accept the project (it adds $10,000 to RI), and North's ROI-evaluated manager might reject it (ROI declines from 15.0% to 14.6%), this choice confuses near-term incentive alignment with the best shareholder outcome. The CFO should not simply let the evaluation metric determine the investment location. North Division creates more absolute value and the company should move toward residual income-based evaluation for all divisions. Placing the investment in North and fixing the incentive metric is superior to routing investment decisions around a broken incentive design.",
         "question_state": "Certified",
@@ -10403,7 +10403,7 @@ const MCQ_BANK_C = [
         ],
         "ExplanationWrongA": "",
         "ExplanationWrongB": "A revenue center manager is evaluated solely on revenue generation, such as sales volume or pricing. The production supervisor controls costs only and has no involvement in selling activities or pricing decisions.",
-        "ExplanationWrongC": "A profit center evaluates on operating income. However, if the manager also controls asset investment decisions, an investment center with ROI or residual income measurement is more appropriate.",
+        "ExplanationWrongC": "A profit center manager controls both revenues and costs. The production supervisor described controls only costs, not revenue or investment decisions. Under responsibility accounting, this narrower scope defines a cost center—the most basic responsibility center type where managers are evaluated solely on cost control.",
         "ExplanationWrongD": "An investment center requires authority over asset investment levels. Without control over invested capital, using ROI evaluation would measure factors outside the manager's span of control.",
         "question_state": "Certified",
         "DifficultyScore": 2,
@@ -10453,8 +10453,8 @@ const MCQ_BANK_C = [
         ],
         "ExplanationWrongA": "A revenue center is evaluated on generating revenue, not controlling costs. The production supervisor has no sales responsibility and is measured only on costs incurred, making this a cost center rather than a revenue center.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "An investment center is evaluated on return on investment, considering revenue, costs, and invested capital. The definition given in the stem matches the narrower scope of a cost center.",
+        "ExplanationWrongC": "A profit center manager controls both revenues and costs. The production supervisor described controls only costs, not revenue or investment decisions. Under responsibility accounting, this narrower scope defines a cost center—the most basic responsibility center type where managers are evaluated solely on cost control.",
+        "ExplanationWrongD": "A profit center manager controls both revenues and costs. The stem specifically states the production supervisor has no control over revenue or investment decisions, only costs. Under responsibility accounting principles, this is the definition of a cost center rather than a profit center.",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "CognitiveLevel": "Remember"
@@ -10501,10 +10501,10 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "A profit center is evaluated on the difference between its revenues and its costs (profit). The manager in the stem is evaluated only on costs, which defines a cost center, not a profit center.",
+        "ExplanationWrongA": "A profit center requires control over both revenues and costs. The production supervisor controls only costs, with no authority over revenue or investment decisions. Under responsibility accounting, this narrower scope of authority defines a cost center, not a profit center.",
         "ExplanationWrongB": "A revenue center is responsible for generating revenue. A cost center typically does not generate revenue and is evaluated on cost control, not sales or revenue.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "A profit center manager controls both revenues and costs. The stem specifically states the production supervisor has no control over revenue or investment decisions, only costs. Under responsibility accounting principles, this is the definition of a cost center rather than a profit center.",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "CognitiveLevel": "Remember"
@@ -10551,7 +10551,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "A profit center requires control over both revenues and costs. The production supervisor controls only costs, with no authority over revenue or investment decisions. Under responsibility accounting, this narrower scope of authority defines a cost center, not a profit center.",
         "ExplanationWrongB": "A profit center is evaluated on revenue minus costs (profit). A cost center only has control over costs.",
         "ExplanationWrongC": "An investment center is evaluated using return on investment, which requires tracking invested capital. The example describes a department manager responsible only for costs.",
         "ExplanationWrongD": "",
@@ -10651,7 +10651,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "A profit center manager is held accountable for both revenues and costs. The stem describes a position evaluated only on costs incurred. Under responsibility accounting, this defines a cost center rather than a profit center—the scope of authority is narrower than profit center classification requires.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Economic value added (EVA) requires data on net operating profit after tax and invested capital. EVA is used for investment centers, not cost centers.",
         "ExplanationWrongD": "The residual income formula uses operating income minus a required return on invested capital, making it a metric for investment centers, not cost centers.",
@@ -10901,7 +10901,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "A discretionary expense center applies to support functions such as R&D or legal where output is not easily measured. The division manager has clear, measurable outputs from revenue, costs, and assets, making discretionary expense treatment inappropriate.",
+        "ExplanationWrongA": "A discretionary expense center is evaluated on budget compliance, not investment returns. The division manager described controls revenue, costs, AND invested assets—the three dimensions defining an investment center. Investment centers are evaluated using ROI or residual income, which consider both profit and the capital employed.",
         "ExplanationWrongB": "A cost center ignores revenue control. The manager controls both pricing and costs, so a profit center is needed to capture both dimensions of performance.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "A revenue center evaluation captures only sales performance and ignores the manager's control over costs and asset investment. When a manager influences revenue, costs, and invested capital, an investment center framework is required.",
@@ -10951,7 +10951,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "A discretionary expense center is evaluated on budget compliance, not investment returns. The division manager described controls revenue, costs, AND invested assets—the three dimensions defining an investment center. Investment centers are evaluated using ROI or residual income, which consider both profit and the capital employed.",
         "ExplanationWrongB": "The debt-to-equity ratio is a solvency and leverage measure, not a measure of how much value a company creates above its cost of capital. EVA specifically captures economic profit after accounting for the cost of all capital employed.",
         "ExplanationWrongC": "Net operating profit after tax is the numerator of EVA, not a complete EVA measure. It measures operating profitability but does not account for the cost of capital employed.",
         "ExplanationWrongD": "",
@@ -11051,7 +11051,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Revenue exceeding budget is a favorable sales variance, not evidence of economic value creation. EVA measures whether after-tax operating profit exceeds the dollar cost of capital employed. A division could beat budgeted revenue while still destroying shareholder value if returns fall below the cost of capital.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Residual income = $500,000 − ($3,275,000 × 0.10) = $172,500, not $105,000. This answer may use an incorrect investment base such as total assets or poorly estimate the required return.",
         "ExplanationWrongD": "Residual income = $500,000 − ($3,275,000 × 0.10) = $172,500, not $130,000. This answer may subtract a fixed dollar amount rather than applying the 10% required rate to operating assets.",
@@ -11101,7 +11101,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Revenue exceeding budget indicates a favorable sales variance, not economic value creation. EVA specifically measures whether after-tax operating profit exceeds the dollar cost of capital employed. A positive EVA means the division generated returns above its cost of capital, creating shareholder value independent of budget comparisons.",
         "ExplanationWrongB": "The minimum required rate of return is used to calculate the capital charge in the residual income formula (invested capital × required return), not as a stand-alone performance metric. Residual income is the result of operating income minus that capital charge.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "The DuPont method decomposes ROI into margin and turnover. It does not use a required return to calculate a dollar surplus. The question specifically describes the residual income formula.",
@@ -11151,7 +11151,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Revenue exceeding budget indicates a favorable sales variance, not economic value creation. EVA specifically measures whether after-tax operating profit exceeds the dollar cost of capital employed. A positive EVA means the division generated returns above its cost of capital, creating shareholder value independent of budget comparisons.",
         "ExplanationWrongB": "Return on investment is a ratio, not a dollar amount. RI is a dollar amount that measures profit after deducting a capital charge, with the key advantage that investments with returns above the required rate increase RI and managers accept them.",
         "ExplanationWrongC": "Residual income uses accounting-based operating income, not discounted cash flows. DCF is a capital budgeting technique for evaluating long-term investments, not a periodic performance measurement tool.",
         "ExplanationWrongD": "",
@@ -11451,7 +11451,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Standard costing sets predetermined cost benchmarks for internal measurement. It establishes targets for what costs should be under efficient conditions. Benchmarking differs fundamentally—it compares processes and metrics against best-in-class EXTERNAL organizations to identify performance gaps and improvement opportunities.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Internal benchmarking would compare performance between different departments or units within the same organization, not study external competitors in the same market space.",
         "ExplanationWrongD": "Generic benchmarking compares processes across unrelated industries (e.g., a hospital studying a hotel's check-in process). The question specifically describes comparing against direct competitors, which is competitive benchmarking.",
@@ -11501,7 +11501,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Standard costing establishes cost targets and compares actual costs internally against those standards. Benchmarking specifically looks outward—comparing organizational processes and performance metrics against best-in-class organizations to identify improvement opportunities that internal comparison cannot reveal.",
         "ExplanationWrongB": "Internal benchmarking compares performance across different departments or units within the same organization. The question describes comparing processes or functions with a direct competitor — this is the definition of competitive benchmarking.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Strategic benchmarking focuses on high-level competitive strategies of successful organizations, not the operational comparison of similar processes or functions with a direct competitor.",
@@ -11551,7 +11551,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Standard costing establishes cost targets and compares actual costs internally against those standards. Benchmarking specifically looks outward—comparing organizational processes and performance metrics against best-in-class organizations to identify improvement opportunities that internal comparison cannot reveal.",
         "ExplanationWrongB": "Internal benchmarking evaluates performance across departments within the same organization. The question specifically describes a cross-industry comparison, which is generic benchmarking — looking outside one's own industry for best practices.",
         "ExplanationWrongC": "Strategic benchmarking focuses on high-level competitive strategies of successful organizations in the same or different industries, not operational process comparisons like studying a hotel's check-in process.",
         "ExplanationWrongD": "",
@@ -12501,7 +12501,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "A cash flow statement review shows cash inflows and outflows but does not decompose gross margin changes into underlying drivers. Gross margin—or profit—variance analysis isolates the effects of sales price changes, sales volume changes, and cost changes on gross margin, providing actionable insight into why margin changed.",
         "ExplanationWrongB": "The master budget is the comprehensive financial plan for the organization, not a tool for evaluating investment center profitability relative to invested capital. An investment center would use ROI or RI, not the master budget.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "The high-low method is a cost estimation technique for separating fixed and variable costs, not a performance metric. The investment center's primary metric is ROI since the manager controls invested capital.",
@@ -17751,7 +17751,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Option A places trust in the system configuration without the compensating control of independent review. Access rights matrices define what users can do in the ERP — they do not verify that users actually performed only authorized actions. In Ashford's environment, configuration mistakes (warehouse staff receiving AP access) demonstrate that access matrices can be misconfigured. Relying solely on the matrix means no one catches a $47,000 duplicate payment made possible by that misconfiguration. The monitoring component of COSO requires ongoing evaluations and separate evaluations — the configuration alone is not monitoring.",
+        "ExplanationWrongA": "",
         "ExplanationWrongB": "Option B describes detective controls operating after the fact, but Ashford's root problem is preventive. Monthly transaction reviews would eventually catch a $47,000 duplicate payment, but COSO Principle 12 emphasizes that control activities should be deployed at the right point in the process. Segregation of duties is specifically designed to prevent the incompatible combination of custody (creating purchase orders) and recording (entering invoices) from being held by one person. Post-transaction review is a monitoring activity (COSO Principle 16), not a control activity substitute — and monitoring five ERP modules manually is operationally infeasible.",
         "ExplanationWrongC": "Option C correctly identifies segregation of duties as the violated control principle but misprescribes the remediation. Segregation within the warehouse function (verifier vs. picker) addresses inventory control — not the incompatible duties between procurement and accounts payable. Ashford's loss arose because one warehouse employee could both create purchase orders and enter related invoices, enabling a self-approved duplicate payment scheme. The segregation must separate authorization (PO creation) from recording (invoice entry), not merely split duties within the receiving function. The ERP access rights matrix confirms the incompatible combination, so splitting warehouse verifier/picker roles does not address it.",
         "ExplanationWrongD": "",
@@ -17952,7 +17952,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Option A describes a procedure that conflates monitoring with supervision. The plant controller presenting variance analysis to the GM is a management review control — it operates at the transaction and operations level, not the entity-level monitoring that COSO Principle 16 envisions. The scenario explicitly states that the corporate controller has no process for evaluating whether plant-level controls continue to operate effectively. The plant controller's variance review covers budget-to-actual, not control operating effectiveness. Furthermore, variance analysis at the plant level would not detect the accounts payable separation-of-duties breakdown described in the scenario — that failure occurred in a corporate function, invisible to plant-level variance reporting.",
+        "ExplanationWrongA": "",
         "ExplanationWrongB": "Option B mischaracterizes the external audit as monitoring. Under COSO, external auditors provide an independent opinion on financial statements — they do not evaluate or report on the ongoing effectiveness of internal controls as part of a standard financial statement audit (unless engaged for an integrated audit under PCAOB standards, which is not typical for private companies). COSO Principle 16 explicitly distinguishes between ongoing evaluations (built into operations) and separate evaluations (conducted periodically by internal audit or management). The external auditor's attestation on financial statements is neither. Relying on the external audit as the primary monitoring mechanism, at the exclusion of internal monitoring activities, is a direct violation of COSO Principle 16.",
         "ExplanationWrongC": "Option C identifies a genuine deficiency — the lack of a formal internal audit function — but overstates its significance relative to other monitoring deficiencies. A formal internal audit function is one mechanism for separate evaluations (COSO Principle 16), but it is not the only one. Management can conduct separate evaluations, and many mid-sized companies use a combination of management self-assessment and external consultants. The more fundamental problem in the scenario is that NO monitoring mechanism exists — neither ongoing evaluations (embedded in operations) nor separate evaluations (conducted periodically). An internal audit charter without corresponding evaluation activity is form without substance. More critically, Option C does not address the operations-level monitoring gap that allowed the duplicate payment scheme to go undetected for six months.",
         "ExplanationWrongD": "",
@@ -18807,7 +18807,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Requiring controller review of a check register weekly is a detective control—it identifies duplicate payments after they occur. Under COSO Principle 10, preventive controls are preferred when feasible. Configuring the AP system to reject invoices with duplicate invoice numbers prevents the error at entry, which is more effective and efficient.",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Pre-numbered lockbox receipts are designed for physical mail-in payment handling; they are not the primary control for ACH transactions initiated by customers through their banking platforms.",
         "ExplanationWrongD": "POS receipt matching is designed for card-present retail transactions, not for B2B ACH payments where no physical card is swiped at a point-of-sale terminal.",
@@ -18857,7 +18857,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Accepting the risk because no actual loss occurred during the 18-day gap is inadequate under COSO Principle 8. The absence of detected fraud does not mean controls are adequate—it means the organization was fortunate. An active account for a terminated employee represents a known control deficiency that must be remediated, not accepted.",
         "ExplanationWrongB": "Preventive maintenance is an operational control that keeps equipment in working order, not a specific control for ensuring a complete and accurate recording of purchase transactions.",
         "ExplanationWrongC": "",
         "ExplanationWrongD": "Physical inventory counts verify that quantities on hand match the records (detective, asset safeguarding). They do not check whether all purchase transactions have been recorded.",
@@ -18907,7 +18907,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Generating weekly exception reports for review is a detective control that discovers errors after they occur. Under COSO Principle 11, application controls should include input validation that prevents errors at the point of data entry. Real-time field validation catches invalid data before orders are accepted.",
         "ExplanationWrongB": "Deposit-in-transit adjustments are a standard reconciling item on a bank reconciliation, not a technique for preparing fraudulent financial statements through intentional misstatement.",
         "ExplanationWrongC": "A review engagement provides limited assurance, which is appropriate for private companies. However, the threat described is a financial statement fraud scheme — a specific type of fraud risk, not the general financial reporting expectation gap.",
         "ExplanationWrongD": "",
@@ -19210,7 +19210,7 @@ const MCQ_BANK_C = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Option A confuses the authorization threshold with risk tolerance. The board's resolution to enter the Latin American market with 'maximum annual operating loss of $3 million' is a risk tolerance statement — it sets the acceptable variation around the strategic objective of geographic expansion. Risk appetite is not a per-initiative cap but the aggregate amount of risk the organization is willing to accept in pursuit of its strategy. The board gave management a single-metric tolerance for one market entry — it did not articulate the overall level of risk the enterprise is willing to bear across all strategic initiatives. Furthermore, the CFO's hedging analysis is a risk response evaluation (reduce/share), not a risk appetite articulation.",
-        "ExplanationWrongB": "Option B conflates risk capacity (the maximum risk the organization can absorb) with risk appetite (the maximum risk it is willing to accept). The credit agreement covenant at 3.5x leverage is an externally imposed constraint — a risk capacity limit. Risk appetite is an internally determined boundary reflecting strategic choice and stakeholder expectations. Framing risk appetite as 'anything within the debt covenant' means the organization takes no affirmative position on what level of risk it actively seeks or avoids — it merely operates up to the lender's limit. The scenario shows the CFO explicitly considering the 3.5x as a ceiling, not as a strategic boundary the board has chosen to operate within. An organization may have risk capacity well above its risk appetite, and conflating the two exposes the organization to more risk than the board intends.",
+        "ExplanationWrongB": "",
         "ExplanationWrongC": "Option C correctly identifies a strategic board action but mislabels it. The April board meeting discussion of 'acceptable worst-case outcomes' across all major initiatives represents the board articulating risk appetite — the aggregate level of risk the organization is willing to accept. Expanding the credit facility to accommodate the Latin American entry is a financing decision that enables the strategy, not a risk tolerance threshold. Risk tolerance is the acceptable variation around specific objectives (e.g., 'we accept that any single market entry may lose up to $3 million'), not the financing authorization that enables the entry. The $5 million credit facility increase is a resource allocation — it creates capacity but does not bound acceptable losses.",
         "ExplanationWrongD": "",
         "question_state": "Active",
@@ -19263,8 +19263,8 @@ const MCQ_BANK_C = [
         ],
         "ExplanationWrongA": "Risk transfer shifts the financial consequences of risk to a third party, typically through insurance or contractual arrangements. The stem defines the board's willingness to accept risk — which is risk appetite, a governance-level concept, not a risk response strategy.",
         "ExplanationWrongB": "Inherent risk is the susceptibility of an assertion to material misstatement before considering controls. Risk appetite is the amount of risk an organization is willing to accept in pursuit of its objectives — a strategic governance concept.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Control risk is the risk that a misstatement will not be prevented or detected by internal controls. Risk appetite is a broader strategic governance concept defining how much risk the organization is willing to pursue or retain.",
+        "ExplanationWrongC": "Choice C correctly identifies that the April board discussion represents risk tolerance but incorrectly claims the CFO recommendation is consistent with the framework. The CFO recommended accepting the $12 million investment despite the board having set a maximum acceptable worst-case loss of $8 million for any single market entry. The $12 million investment exceeds the board's risk tolerance by $4 million, making it inconsistent with the governance framework—regardless of whether it falls within the broader risk appetite statement",
+        "ExplanationWrongD": "",
         "DifficultyScore": 1,
         "CognitiveLevel": "Analyze"
     },
@@ -20172,7 +20172,7 @@ const MCQ_BANK_C = [
         ],
         "ExplanationWrongA": "",
         "ExplanationWrongB": "No control can guarantee that fraud will never occur. A whistleblower hotline improves the likelihood of detection and reporting, but it does not eliminate the possibility of fraud entirely. Reasonable assurance, not absolute assurance, is the objective.",
-        "ExplanationWrongC": "A hotline complements a code of conduct; it does not replace the need for standards of ethical behavior.",
+        "ExplanationWrongC": "No single control, including a whistleblower hotline, can guarantee fraud prevention. The hotline encourages detection and reporting—it creates a channel for employees to report suspected misconduct without fear of retaliation. This increases the probability that fraud will be detected when it occurs, per COSO Principle 14.",
         "ExplanationWrongD": "External audits may still be required or useful; an internal reporting channel does not eliminate independent audit work.",
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
@@ -20220,10 +20220,10 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Outsourcing all accounting without management oversight merely transfers the activity—it does not satisfy COSO Principle 10. Management retains responsibility for internal control regardless of whether functions are outsourced. For small businesses with limited staffing, increased owner review serves as a compensating control.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Option D (Replacing the need for a code of conduct) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that encouraging detection and reporting of fraud or misconduct that might otherwise go unreported. A candidate may select this option by misapplying a related but distinct concept.",
+        "ExplanationWrongC": "No single control, including a whistleblower hotline, can guarantee fraud prevention. The hotline encourages detection and reporting—it creates a channel for employees to report suspected misconduct without fear of retaliation. This increases the probability that fraud will be detected when it occurs, per COSO Principle 14.",
+        "ExplanationWrongD": "Ignoring fraud risk because the company is small is never appropriate under COSO. Small businesses are actually MORE vulnerable to fraud due to limited segregation of duties. COSO Principle 8 requires that organizations consider the potential for fraud in assessing risks to the achievement of objectives.",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
@@ -20271,10 +20271,10 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Outsourcing all accounting without management oversight merely transfers the activity—it does not satisfy COSO Principle 10. Management retains responsibility for internal control regardless of whether functions are outsourced. For small businesses with limited staffing, increased owner review serves as a compensating control.",
         "ExplanationWrongB": "Option B (Eliminating internal controls entirely since the company is small) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that increased owner or management review and oversight as a compensating control. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Ignoring fraud risk because the company is small is never appropriate under COSO. Small businesses are actually MORE vulnerable to fraud due to limited segregation of duties. COSO Principle 8 requires that organizations consider the potential for fraud in assessing risks to the achievement of objectives.",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
@@ -20323,7 +20323,7 @@ const MCQ_BANK_C = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Ignoring the risk is never an appropriate control response. While small companies face practical resource constraints, management still has a fiduciary responsibility to implement reasonable controls proportionate to the organization's size and risk profile.",
-        "ExplanationWrongB": "Outsourcing without oversight does not remove management responsibility or ensure controls are operating.",
+        "ExplanationWrongB": "Outsourcing all accounting without management oversight does not solve the control weakness. Under COSO Principle 10, management cannot outsource its internal control responsibility. Even with outsourced accounting, the owner must maintain active oversight—reviewing bank reconciliations, approving disbursements, and monitoring financial reports.",
         "ExplanationWrongC": "Small companies still need internal controls; the issue is designing practical compensating controls.",
         "ExplanationWrongD": "",
         "DifficultyScore": 3,
@@ -20373,7 +20373,7 @@ const MCQ_BANK_C = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Outsourcing all accounting without management oversight does not solve the control weakness. Under COSO Principle 10, management cannot outsource its internal control responsibility. Even with outsourced accounting, the owner must maintain active oversight—reviewing bank reconciliations, approving disbursements, and monitoring financial reports.",
         "ExplanationWrongC": "Option C (Eliminating internal controls entirely since the company is small) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that increased owner or management review and oversight as a compensating control. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongD": "Option D (Ignoring the risk since fraud is unlikely in small companies) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that increased owner or management review and oversight as a compensating control. A candidate may select this option by misapplying a related but distinct concept.",
         "DifficultyScore": 4,
@@ -20475,7 +20475,7 @@ const MCQ_BANK_C = [
         ],
         "ExplanationWrongA": "Option A elevates a secondary concern above a fundamental control environment failure. The board is not independent: two directors have material consulting relationships ($180,000 each), and the CEO chairs the audit committee — a direct violation of the principle that the audit committee must be wholly independent of management. COSO Principle 2 (board independence and oversight) is violated because management (the CEO) oversees the body responsible for monitoring management. Compensation committee size is a governance best practice, not a COSO Principle 1 violation. The internal control system's foundation is compromised when the CEO sits on the committee charged with overseeing internal controls over financial reporting. This is a more severe and immediate threat to internal control than compensation committee composition.",
         "ExplanationWrongB": "Option B correctly identifies two control environment failures but draws the wrong conclusion about their primacy, and mischaracterizes the external auditor findings. The COSO control environment contains five principles: Principle 1 (integrity and ethical values), Principle 2 (board independence), Principle 3 (authority and responsibility), Principle 4 (commitment to competence), and Principle 5 (accountability). Both the CEO-audit-committee chair conflict and the VP override of the receivables allowance are control environment failures, but they operate at different levels. The board independence failure (Principle 2) is an entity-level control environment deficiency affecting the entire internal control system. The receivables override is a process-level ethical failure under Principle 1. Under COSO's top-down approach, the entity-level deficiency is more pervasive and should be remediated first because it undermines the oversight mechanism that should catch process-level failures like the receivables override. External auditor materiality classifications do not determine the ranking of internal control deficiencies.",
-        "ExplanationWrongC": "Option C misdiagnoses the VP's override of the bad debt allowance as a risk assessment failure. The VP did not misidentify a risk — the VP received a proper allowance recommendation ($420,000), recognized it would cause the division to miss targets, and directed the controller to record $250,000 instead. This is intentional management override — a control environment deficiency under COSO Principle 1 (integrity and ethical values), not a risk assessment failure under COSO Principle 6. Furthermore, 'updating the risk assessment with revised collection probabilities' would not address the problem because the VP already had the correct risk assessment — the VP willfully ignored it. The remediation must address the ethical behavior, not the risk identification methodology.",
+        "ExplanationWrongC": "",
         "ExplanationWrongD": "",
         "question_state": "Active",
         "DifficultyScore": 4,
@@ -20525,8 +20525,8 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (Monitoring activities, which evaluate control effectiveness over time) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
+        "ExplanationWrongA": "The compensation committee structure is a governance concern, but it is not the most severe deficiency described. Under COSO Principle 1, management override of financial reporting controls—the VP unilaterally changing the bad debt allowance by $170,000—is the most frequently cited internal control weakness in fraud cases. A weak compensation committee does not cause financial misstatement directly; management override does.",
+        "ExplanationWrongB": "Risk assessment identifies and analyzes specific threats to achieving objectives. While risk assessment is important, the stem explicitly describes board and executive emphasis on integrity and ethical behavior. Under COSO, this is the defining characteristic of the control environment—the foundation for all other components—often referred to as \"tone at the top.\"",
         "ExplanationWrongC": "Option C (Risk assessment, which identifies specific threats) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongD": "",
         "DifficultyScore": 4,
@@ -20577,7 +20577,7 @@ const MCQ_BANK_C = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Risk assessment identifies and analyzes specific threats to achieving objectives. While risk assessment is important, the stem explicitly describes board and executive emphasis on integrity and ethical behavior. Under COSO, this is the defining characteristic of the control environment—the foundation for all other components.",
         "ExplanationWrongC": "Option C (Information and communication, which relays data throughout the entity) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongD": "Option D (Monitoring activities, which evaluate control effectiveness over time) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
         "DifficultyScore": 4,
@@ -20678,10 +20678,10 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Risk assessment identifies and analyzes specific threats. The stem describes board and executive emphasis on integrity and ethical values, which is the defining characteristic of the control environment. COSO Principle 1—the first and foundational principle—establishes that the organization demonstrates a commitment to integrity and ethical values.",
         "ExplanationWrongB": "Option B (Information and communication, which relays data throughout the entity) represents a plausible misconception. Under COSO control environment component, the correct analysis leads to the conclusion that the control environment, often summarized as tone at the top. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Monitoring activities evaluate whether controls operate effectively over time. The stem specifically describes the board and senior executives emphasizing integrity and ethical behavior. Under COSO, the control environment sets the tone of the organization and is the foundation for all other components—not monitoring.",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
@@ -20781,7 +20781,7 @@ const MCQ_BANK_C = [
         ],
         "ExplanationWrongA": "",
         "ExplanationWrongB": "Detection risk relates to the auditor's procedures failing to detect a material misstatement. The stem describes the susceptibility of an account to misstatement before considering controls, which is the definition of inherent risk.",
-        "ExplanationWrongC": "Control risk considers whether controls fail to prevent or detect misstatement; the stem excludes controls from the assessment.",
+        "ExplanationWrongC": "Detection risk relates to the auditor's procedures failing to detect a material misstatement. The stem asks about susceptibility before considering controls—inherent risk. Under the audit risk model, inherent risk is assessed first, then control risk, then detection risk is set based on the desired level of audit risk.",
         "ExplanationWrongD": "Business risk is broader operating or strategic risk, not the audit-risk component tied to assertion susceptibility.",
         "DifficultyScore": 1,
         "CognitiveLevel": "Remember"
@@ -20829,10 +20829,10 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Business risk encompasses the broader risk that an entity will fail to achieve its strategic objectives. The stem specifically asks about susceptibility of an ACCOUNT to material misstatement before considering controls. This is the definition of inherent risk under the audit risk model.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Option D (Business risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
+        "ExplanationWrongC": "Detection risk relates to the auditor's procedures failing to detect a material misstatement. The stem asks about susceptibility before considering controls—inherent risk. Under the audit risk model, inherent risk is assessed first, then control risk, then detection risk is set based on the desired level of audit risk.",
+        "ExplanationWrongD": "Detection risk relates to the auditor's procedures failing to detect a misstatement. The stem describes susceptibility of an account to misstatement before considering any controls. Under the audit risk model, inherent risk is assessed independently of both control and detection risk.",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
@@ -20880,10 +20880,10 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Control risk is the risk that a misstatement will not be prevented or detected by internal controls. The stem asks about susceptibility BEFORE considering controls. Inherent risk assesses the nature of the account itself—complexity, subjectivity, volume—regardless of whether controls are in place.",
         "ExplanationWrongB": "Option B (Control risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "",
+        "ExplanationWrongD": "Detection risk relates to the auditor's procedures failing to detect a misstatement. The stem describes susceptibility of an account to misstatement before considering any controls. Under the audit risk model, inherent risk is assessed independently of both control and detection risk.",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze",
         "upgrade_note": "S58 Phase 6 — upgraded from DL-012 rotation clone (content preserved, difficulty/cognitive recalibrated)"
@@ -20931,8 +20931,8 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Option B (Business risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
+        "ExplanationWrongA": "Control risk is the risk that a misstatement will not be prevented or detected by internal controls. The stem asks about susceptibility BEFORE considering controls. Inherent risk assesses the nature of the account itself—complexity, subjectivity, volume—regardless of whether controls are in place.",
+        "ExplanationWrongB": "Detection risk relates specifically to the auditor's procedures. The stem asks about susceptibility of an account to misstatement before considering any controls. Inherent risk is assessed independently of both control and detection risk under the audit risk model—it is the first assessment in the sequence.",
         "ExplanationWrongC": "Option C (Detection risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongD": "",
         "DifficultyScore": 4,
@@ -20983,7 +20983,7 @@ const MCQ_BANK_C = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Detection risk relates specifically to the auditor's procedures. The stem asks about susceptibility of an account to misstatement before considering any controls. Inherent risk is assessed independently of both control and detection risk under the audit risk model.",
         "ExplanationWrongC": "Option C (Business risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
         "ExplanationWrongD": "Option D (Control risk) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that inherent risk. A candidate may select this option by misapplying a related but distinct concept.",
         "DifficultyScore": 4,
@@ -21740,7 +21740,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Option A correctly identifies the descriptive analytics performed (dashboards, transaction search) but fails to recognize that descriptive analytics alone cannot answer the CFO's forward-looking question. Descriptive analytics answers 'what happened' — it can show that total travel spend is $4.7 million but cannot predict what it would have been under different policy conditions. Detecting five employees with $200K+ spend is anomaly detection within descriptive analytics (identifying outliers in historical data). The core question is predictive: what would spend have been if the policy were enforced? Answering this requires a different analytical method that models a counterfactual scenario, not merely describing the observed one. Confusing descriptive outlier detection with predictive modeling is a common exam trap.",
+        "ExplanationWrongA": "",
         "ExplanationWrongB": "Option B correctly identifies the need for a predictive method but selects the wrong one. Time-series forecasting projects historical patterns into the future — it would answer 'what will travel spend be next year if current trends continue?' But the CFO's question is counterfactual: 'what would spend have been under different policy conditions?' This requires a method that can model the relationship between policy enforcement (an input variable) and travel spend (the output variable). Regression analysis estimates this relationship using historical data where the policy was and was not enforced, then predicts the counterfactual outcome. Time-series forecasting extrapolates patterns but cannot isolate the policy effect from other factors that influence travel spend over time.",
         "ExplanationWrongC": "Option C correctly diagnoses the limitation of descriptive analytics but misclassifies the analytics type required. Prescriptive analytics recommends actions based on predictive model outputs — it would answer 'what should we do to reduce travel spend?' after the predictive analysis is complete. The CFO's question is one step upstream: 'what would spend have been?' — a predictive question that must be answered before any prescriptive recommendation can be made. Furthermore, prescriptive analytics typically requires optimization or simulation models that build on predictive outputs. Jumping to prescriptive analytics skips the necessary predictive step. The sequence is descriptive → diagnostic → predictive → prescriptive, and the CFO's question sits squarely at the predictive stage.",
         "ExplanationWrongD": "",
@@ -22342,7 +22342,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Software as a Service delivers complete, vendor-managed applications to end users over the internet. The stem states the company manages its own applications and only outsources servers and storage, which is IaaS, not SaaS. A candidate may overestimate the degree of abstraction, confusing application-level outsourcing with infrastructure-level outsourcing.",
-        "ExplanationWrongD": "Platform as a Service provides a development and deployment environment including operating systems and middleware, going beyond raw infrastructure. The stem describes outsourcing only servers and storage while retaining application control, which matches IaaS. PaaS is one abstraction level higher and includes the runtime environment that IaaS does not provide.",
+        "ExplanationWrongD": "",
         "question_state": "Archived",
         "DifficultyScore": 3,
         "CognitiveLevel": "Understand"
@@ -23739,7 +23739,7 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Option A blames the users for a system design problem. The 'Customer Region' drop-down is inconsistent with other regional hierarchy references because the CRM system was configured with a different regional taxonomy than the ERP and data warehouse. Asking users to 'check the existing taxonomy' requires them to manually cross-reference three systems before entering data — a process that is both inefficient and error-prone. Data quality management addresses issues at the system level (standardization, master data) before pushing responsibility to data entry. The root cause is not user behavior — it is the absence of a master data management framework that enforces a single regional taxonomy across all systems. Retraining users on a broken process increases frustration without fixing the underlying inconsistency.",
+        "ExplanationWrongA": "",
         "ExplanationWrongB": "Option B correctly identifies the data integration failure but proposes the wrong data quality dimension as the root cause. Completeness means all required data is present — the scenario does not describe missing data. All 2,300 customers have a region assigned; the problem is that different systems assign different region values to the same customer. This is a consistency problem (same entity, different values) and an accuracy problem (some values are wrong relative to the authoritative source). The variance report already identifies the inconsistency — what is needed is not another consistency check but a root-cause analysis of why the inconsistency exists and a master data management solution to prevent recurrence. Adding a data profiling tool for completeness checks would not detect the 340-customer mismatch because all records are complete — they just contain inconsistent values.",
         "ExplanationWrongC": "Option C correctly identifies the taxonomy problem but incorrectly attributes it to timeliness. Data timeliness refers to whether data is current and available when needed — this is not the issue. The regional hierarchy in the ERP (the authoritative source) is updated quarterly; the problem is that the CRM system uses a different regional structure entirely, not that the ERP data is out of date. Establishing a quarterly data steward review may catch inconsistencies after they occur but does not prevent them — the root cause is that two systems were configured with incompatible regional taxonomies at implementation. The solution is to align the taxonomies through master data management, not to increase the review frequency of data that will continue to be inconsistently entered because the underlying taxonomies differ.",
         "ExplanationWrongD": "",
@@ -23794,7 +23794,7 @@ const MCQ_BANK_C = [
         "ExplanationWrongA": "",
         "ExplanationWrongB": "",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "Choice D is incorrect because file storage capacity measures the amount of data that can be stored, not the quality of that data. The stem describes measuring whether data values are correct, complete, and consistent — dimensions of data quality, which is independent of storage volume. A candidate may confuse how much data can be stored with how reliable and accurate that data is.",
+        "ExplanationWrongD": "",
         "question_state": "Archived",
         "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
@@ -23992,7 +23992,7 @@ const MCQ_BANK_C = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "Option A correctly identifies that the problem has labeled data (known fraudulent transactions from confirmed investigations), making supervised classification viable. However, the analysis fails to consider that fraud patterns evolve. A supervised model trained on historical confirmed fraud cases learns to detect patterns that were fraudulent in the past — it will not detect novel fraud techniques that differ from historical patterns because those patterns do not appear in the training data. Fraud detection is one of the canonical use cases where a hybrid approach is recommended: supervised learning for known patterns plus unsupervised anomaly detection for new, previously unseen patterns. Recommending supervised classification alone ignores the specific fraud-domain requirement for detecting unknown fraud types.",
-        "ExplanationWrongB": "Option B correctly identifies that unsupervised learning can detect novel patterns (clustering unidentified transactions into anomalous groups). However, it incorrectly recommends unsupervised learning alone. The scenario explicitly states that the bank has labeled data — 14 months of transactions with confirmed fraud outcomes. Discarding this labeled data would waste the most valuable resource in fraud detection: known fraud cases. Unsupervised learning alone would cluster transactions but would not be able to distinguish between fraudulent anomalies and merely unusual-but-legitimate transactions. The clusters would need to be manually reviewed and labeled, which is the very process the bank already performed for 14 months. The labeled data should be used to train a supervised classifier for known fraud patterns, with unsupervised anomaly detection layered on top for unknown patterns.",
+        "ExplanationWrongB": "",
         "ExplanationWrongC": "Option C correctly identifies reinforcement learning's suitability for sequential decision-making where feedback occurs after actions. However, fraud detection is not a sequential decision problem in the reinforcement learning paradigm. In RL, an agent takes actions in an environment and receives rewards/penalties that guide future actions. Fraud detection is a classification/pattern-recognition problem: given a transaction's attributes, classify it as fraudulent or legitimate. The 'reward signal' described (confirmed fraud → penalty for false negative) is simply the labeled outcome that supervised learning already uses. Reinforcement learning adds complexity (state-space modeling, exploration-exploitation trade-offs, policy optimization) without adding capability beyond what supervised + unsupervised learning already provides for this use case. The problem structure (classify transactions → receive confirmed outcomes → update model) maps naturally to supervised classification with periodic retraining, not RL.",
         "ExplanationWrongD": "",
         "question_state": "Active",

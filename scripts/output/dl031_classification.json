@@ -1,9 +1,10 @@
 {
-  "timestamp": "2026-07-28T21:26:21.250Z",
+  "timestamp": "2026-07-28T22:20:42.498Z",
   "items_scanned_total": 2545,
-  "items_flagged": 1,
+  "items_flagged": 2,
   "by_classification": {
-    "Simple Relabel": 1
+    "Simple Relabel": 1,
+    "Rewrite Required": 1
   },
   "by_pack": {
     "a": {
@@ -29,10 +30,10 @@
     },
     "d": {
       "total": 500,
-      "found": 0,
+      "found": 1,
       "simple": 0,
       "calibration": 0,
-      "rewrite": 0
+      "rewrite": 1
     },
     "e": {
       "total": 545,
@@ -54,5 +55,14 @@
     }
   ],
   "calibration_items": [],
-  "rewrite_required": []
+  "rewrite_required": [
+    {
+      "qid": "P1-ED-068",
+      "pack": "d",
+      "section": "E",
+      "topic": "E.068 COSO Principle 16 — monitoring ongoing evaluations KPI definition manipulation",
+      "cognitiveLevel": "Analyze",
+      "difficulty": "Difficult"
+    }
+  ]
 }

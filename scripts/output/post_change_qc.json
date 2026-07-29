@@ -37,8 +37,8 @@
       {
         "pack": "pack_e",
         "expected": 540,
-        "actual": 540,
-        "pass": true
+        "actual": 545,
+        "pass": false
       }
     ],
     "certified_counts": [
@@ -52,18 +52,18 @@
       },
       {
         "pack": "pack_c",
-        "count": 438
+        "count": 445
       },
       {
         "pack": "pack_d",
-        "count": 439
+        "count": 456
       },
       {
         "pack": "pack_e",
         "count": 540
       }
     ],
-    "timestamp": "2026-07-28T19:30:52.171Z",
-    "overall": "PASS"
+    "timestamp": "2026-07-28T22:20:42.341Z",
+    "overall": "FAIL"
   }
 }

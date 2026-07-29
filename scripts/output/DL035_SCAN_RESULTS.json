@@ -1,9 +1,9 @@
 {
-  "scan_timestamp": "2026-07-28T19:41:12.889Z",
+  "scan_timestamp": "2026-07-28T23:00:08.990Z",
   "pack_c_items": 500,
   "pack_d_items": 500,
-  "domain_f_certified_packC": 24,
-  "domain_f_certified_packD": 35,
+  "domain_f_certified_packC": 25,
+  "domain_f_certified_packD": 36,
   "dl035_items": [],
   "dl008_items": [],
   "total_dl035": 0,

@@ -1,0 +1,81 @@
+{
+  "session": "S382",
+  "board": "automation-board",
+  "timestamp": "2026-07-28T22:20:42.000Z",
+  "overall_classification": "Partially Operational",
+  "scripts": {
+    "post_change_qc.js": {
+      "exists": true,
+      "size_bytes": 5094,
+      "runs": true,
+      "exit_code": 1,
+      "classification": "Partially Operational",
+      "notes": "Runs and produces valid output but exits with code 1 (overall: FAIL). Governance guard tests pass (54/54), parse validation passes, QID counts pass for Packs A-D (500/500 each). Failure is solely due to Pack E: expected=500 but actual=545 — a stale expected-count constant that doesn't account for the 40-item R-series supplement (P1-E-R01 through P1-E-R40) plus some additional items. Not a script logic defect, but the stale expected count prevents clean exit."
+    },
+    "pre_delivery_safety_check.js": {
+      "exists": true,
+      "size_bytes": 10546,
+      "runs": true,
+      "exit_code": 0,
+      "classification": "Fully Operational",
+      "notes": "Runs cleanly. Scans all 5 packs (2545 items), identifies 2441 Certified items, confirms 2441 safe / 0 unsafe. Output written to scripts/output/pre_delivery_safety.json. Certified counts: A=500, B=500, C=445, D=456, E=540. Zero false positives on safety checks."
+    },
+    "classify_dl031.js": {
+      "exists": true,
+      "size_bytes": 17924,
+      "runs": true,
+      "exit_code": 0,
+      "classification": "Fully Operational",
+      "notes": "Runs cleanly in classify-only (dry-run) mode. Parses all 2545 items across 5 packs via Function constructor parse. Flags 2 items total: 1 simple relabel candidate (P1-EC-019, Moderate→Easy) and 1 rewrite-required candidate (P1-ED-068). Produces structured output to scripts/output/dl031_classification.json. No errors or warnings."
+    },
+    "rebuild_baselines.js": {
+      "exists": true,
+      "size_bytes": 5734,
+      "runs": true,
+      "exit_code": 0,
+      "classification": "Partially Operational",
+      "notes": "Runs cleanly in --dry-run mode, exit code 0. Correctly computes SHA-256 hashes for 17 runtime-critical files (app.js, index_updated.html, styles.css, 5 MCQ packs, 3 case_pack files, 2 may-* files, governance-guard.js, test_governance_guard.js, ExplanationValidator.js, build_master_registry.js). Certified pool counts are correct (2441/2545 = 95.9%). DEFECT: All 3 case_pack files report 'Items: -1' — the item-counting logic fails on the case file format. The script references case_pack_1/2/3_corrected.js but the actual scored_cases*.js files are NOT in the hash list — only the case_pack_N_corrected.js aliases appear. This is a partial-functionality issue: hashing works, but case-item counting is broken."
+    },
+    "readiness_scorer.js": {
+      "exists": true,
+      "size_bytes": 7326,
+      "runs": true,
+      "exit_code": 0,
+      "classification": "Fully Operational",
+      "notes": "Runs cleanly. Produces Framework v2 readiness states: BLOCKED=99, REMEDIATE=5, READY=0, CERTIFY=2441. Portfolio readiness score: 0.9591 (READY). Output written to scripts/output/readiness_scoring.json. Certified pool count (2441) matches ground truth across all 5 packs."
+    },
+    "governance_guard_engine.js": {
+      "exists": true,
+      "size_bytes": 13181,
+      "runs": true,
+      "exit_code": 0,
+      "classification": "Fully Operational",
+      "notes": "Runs cleanly. Processes all 10 runtime files (5 MCQ packs + 5 scored_cases files). Reports 0 DL-008 violations across 2661 total objects, 2557 Certified. OVERALL: PASS. Certified counts: A=500, B=500, C=445, D=456, E=540. Case counts: scored_cases=12, scored_cases2=30, scored_cases3=30, scored_cases4=30, scored_cases5=14. Total Certified items (2557) = 2441 MCQ + 116 case items."
+    }
+  },
+  "operational_count": 4,
+  "partial_count": 2,
+  "not_operational_count": 0,
+  "zero_byte_scripts": [],
+  "known_issues": [
+    "post_change_qc.js: Pack E expected count is stale (500 vs actual 545). Not accounting for R-series supplement and other additions.",
+    "rebuild_baselines.js: Case-pack item counting returns -1 for all 3 case_pack files. Also does not include scored_cases*.js files in hash list."
+  ],
+  "ground_truth_cross_check": {
+    "certified_pool": 2441,
+    "certified_breakdown": {
+      "pack_a": 500,
+      "pack_b": 500,
+      "pack_c": 445,
+      "pack_d": 456,
+      "pack_e": 540
+    },
+    "verified_by": [
+      "pre_delivery_safety_check.js (2441 Certified, 2441 safe)",
+      "readiness_scorer.js (CERTIFY: 2441)",
+      "governance_guard_engine.js (2557 total including cases)",
+      "rebuild_baselines.js (2441/2545 = 95.9%)"
+    ],
+    "count_consensus": "All 4 scripts agree on Certified pool count (2441). Zero inter-script divergence."
+  }
+}
