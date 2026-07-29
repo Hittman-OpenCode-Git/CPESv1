@@ -1,0 +1,951 @@
+{
+  "meta": {
+    "session": "P2-002",
+    "source": "foundation/P2001_PART2_BLUEPRINT_FOUNDATION.md",
+    "date": "2026-07-29",
+    "source_lines": 531,
+    "description": "Structured extraction of the CMA Part 2 Exam Simulator foundational blueprint covering all 6 domains, MCQ/case architecture, certification standards, governance rules, technical architecture, roadmap, and Part 1 vs Part 2 differences."
+  },
+  "domains": {
+    "A": {
+      "letter": "A",
+      "name": "Financial Statement Analysis",
+      "exam_weight_percent": 20,
+      "approx_exam_questions": 100,
+      "los_count": 9,
+      "los_statements": [
+        { "code": "A.1", "topic": "Calculate and interpret financial ratios (5 categories)" },
+        { "code": "A.2", "topic": "Analyze profitability and limitations of ratio analysis" },
+        { "code": "A.3", "topic": "Evaluate ROA, ROE, and earnings quality" },
+        { "code": "A.4", "topic": "Perform comparative financial statement analysis" },
+        { "code": "A.5", "topic": "Evaluate the impact of foreign operations" },
+        { "code": "A.6", "topic": "Assess changing prices and inflation on ratios" },
+        { "code": "A.7", "topic": "Analyze off-balance-sheet financing" },
+        { "code": "A.8", "topic": "Define and analyze operating and financial leverage" },
+        { "code": "A.9", "topic": "Evaluate sustainable growth rate and dividend policy" }
+      ],
+      "key_topics": [
+        "Financial ratio computation and interpretation (liquidity, leverage, activity, profitability, market)",
+        "Comparative analysis (horizontal, vertical, trend)",
+        "Profitability analysis (ROA, ROE, DuPont decomposition)",
+        "Earnings quality and sustainability assessment",
+        "Leverage analysis (operating, financial, total)"
+      ],
+      "key_formulas": [
+        "Current Ratio",
+        "Quick Ratio",
+        "Cash Ratio",
+        "Inventory Turnover",
+        "Days Sales Outstanding",
+        "Days Payable Outstanding",
+        "Debt-to-Equity",
+        "Times Interest Earned",
+        "Gross Margin %",
+        "Operating Margin %",
+        "Net Margin %",
+        "ROA",
+        "ROE",
+        "DuPont Identity (ROE = NPM × TAT × EM)",
+        "EPS",
+        "P/E Ratio",
+        "Dividend Yield",
+        "Book Value per Share",
+        "Degree of Operating Leverage (DOL)",
+        "Degree of Financial Leverage (DFL)",
+        "Sustainable Growth Rate = ROE × (1 − Dividend Payout)"
+      ],
+      "formula_count": 21,
+      "blooms_distribution": {
+        "Remember": 10,
+        "Understand": 20,
+        "Apply": 45,
+        "Analyze": 20,
+        "Evaluate": 5
+      },
+      "primary_exhibit_types": [
+        "financial-statement",
+        "table (ratio summary)"
+      ],
+      "case_count": 15,
+      "case_items_range": "75-90",
+      "part2_authorities": [
+        "FASB ASC (GAAP ratios)",
+        "IFRS",
+        "SEC reporting"
+      ]
+    },
+    "B": {
+      "letter": "B",
+      "name": "Corporate Finance",
+      "exam_weight_percent": 20,
+      "approx_exam_questions": 100,
+      "los_count": 9,
+      "los_statements": [
+        { "code": "B.1", "topic": "Calculate risk and return measures (std dev, beta, CAPM)" },
+        { "code": "B.2", "topic": "Calculate cost of capital (WACC, component costs)" },
+        { "code": "B.3", "topic": "Evaluate capital structure and optimal leverage" },
+        { "code": "B.4", "topic": "Manage working capital (cash, receivables, inventory, payables)" },
+        { "code": "B.5", "topic": "Analyze short-term financing and cash management" },
+        { "code": "B.6", "topic": "Evaluate long-term financing (bonds, stocks, leases)" },
+        { "code": "B.7", "topic": "Analyze dividend policy and share repurchases" },
+        { "code": "B.8", "topic": "Assess corporate restructuring (M&A, divestitures, LBOs)" },
+        { "code": "B.9", "topic": "Evaluate international finance (FX, transfer pricing, political risk)" }
+      ],
+      "key_topics": [
+        "Risk and return (std dev, beta, CAPM)",
+        "Cost of capital (WACC, component costs)",
+        "Working capital management",
+        "Capital structure decisions",
+        "International finance"
+      ],
+      "key_formulas": [
+        "Expected Return = Σ(Pᵢ × Rᵢ)",
+        "CAPM: Rₑ = Rf + β(Rm − Rf)",
+        "WACC = (E/V × Rₑ) + (P/V × Rp) + (D/V × R𝒹 × (1 − t))",
+        "Cost of Preferred = Dp / Pp",
+        "Cash Conversion Cycle = DIO + DSO − DPO",
+        "EOQ = √(2DS/H)",
+        "Effective Annual Rate",
+        "NPV of financing",
+        "Forward/FX premium or discount"
+      ],
+      "formula_count": 9,
+      "blooms_distribution": {
+        "Remember": 10,
+        "Understand": 20,
+        "Apply": 50,
+        "Analyze": 15,
+        "Evaluate": 5
+      },
+      "primary_exhibit_types": [
+        "financial-statement",
+        "table (bond amortization, WACC)",
+        "erp-report"
+      ],
+      "case_count": 15,
+      "case_items_range": "75-90",
+      "part2_authorities": [
+        "CAPM (Sharpe-Lintner)",
+        "Modigliani-Miller",
+        "Basel III"
+      ]
+    },
+    "C": {
+      "letter": "C",
+      "name": "Decision Analysis",
+      "exam_weight_percent": 25,
+      "approx_exam_questions": 125,
+      "los_count": 7,
+      "los_statements": [
+        { "code": "C.1", "topic": "Apply CVP analysis (breakeven, target profit, margin of safety)" },
+        { "code": "C.2", "topic": "Perform marginal analysis (special orders, make-or-buy, sell-or-process)" },
+        { "code": "C.3", "topic": "Evaluate pricing decisions (cost-based, market-based, target costing)" },
+        { "code": "C.4", "topic": "Apply relevant costing to short-term decisions" },
+        { "code": "C.5", "topic": "Analyze capacity constraints and product mix" },
+        { "code": "C.6", "topic": "Evaluate business decision models under uncertainty" },
+        { "code": "C.7", "topic": "Assess make-vs-buy and outsourcing decisions" }
+      ],
+      "key_topics": [
+        "CVP analysis (breakeven, target profit, multi-product)",
+        "Marginal analysis (special orders, make-or-buy, sell-or-process)",
+        "Pricing decisions",
+        "Relevant costing",
+        "Decision modeling under uncertainty"
+      ],
+      "key_formulas": [
+        "Breakeven (units) = Fixed Costs / CM per Unit",
+        "Breakeven (dollars) = Fixed Costs / CM Ratio",
+        "Target Profit (units) = (FC + Target Profit) / CM per Unit",
+        "Margin of Safety = (Actual Sales − BE Sales) / Actual Sales",
+        "Degree of Operating Leverage = CM / Operating Income",
+        "Multi-product weighted average CM",
+        "Shut-down point: Price ≥ Minimum AVC",
+        "Sell-or-process-further: Incremental Revenue > Incremental Cost",
+        "Transfer pricing: Minimum = VC + Opportunity Cost",
+        "Expected Value = Σ(Pᵢ × Outcomeᵢ)",
+        "Perfect Information: EV with PI − EV without PI"
+      ],
+      "formula_count": 11,
+      "blooms_distribution": {
+        "Remember": 5,
+        "Understand": 15,
+        "Apply": 50,
+        "Analyze": 20,
+        "Evaluate": 10
+      },
+      "primary_exhibit_types": [
+        "table (cost data)",
+        "dashboard (product mix)",
+        "erp-report"
+      ],
+      "case_count": 18,
+      "case_items_range": "90-108",
+      "notes": "Largest domain by weight (25%)",
+      "part2_authorities": [
+        "IMA SMA on relevant costing",
+        "pricing models"
+      ]
+    },
+    "D": {
+      "letter": "D",
+      "name": "Risk Management",
+      "exam_weight_percent": 10,
+      "approx_exam_questions": 50,
+      "los_count": 5,
+      "los_statements": [
+        { "code": "D.1", "topic": "Apply COSO ERM framework (governance, strategy, performance, review)" },
+        { "code": "D.2", "topic": "Identify and assess types of risk" },
+        { "code": "D.3", "topic": "Evaluate risk appetite, tolerance, and capacity" },
+        { "code": "D.4", "topic": "Analyze risk response strategies (avoid, reduce, share, accept)" },
+        { "code": "D.5", "topic": "Implement ERM integration with strategy" }
+      ],
+      "key_topics": [
+        "COSO ERM framework (2017)",
+        "Risk identification and assessment",
+        "Risk response strategies",
+        "ERM integration with strategy and performance",
+        "Types of risk (strategic, operational, financial, hazard)"
+      ],
+      "key_formulas": [
+        "Expected Loss = Probability × Impact",
+        "Risk Score = Likelihood × Severity",
+        "Residual Risk = Inherent Risk − Controls"
+      ],
+      "formula_count": 3,
+      "blooms_distribution": {
+        "Remember": 20,
+        "Understand": 35,
+        "Apply": 25,
+        "Analyze": 15,
+        "Evaluate": 5
+      },
+      "primary_exhibit_types": [
+        "policy (ERM framework)",
+        "dashboard (risk register)",
+        "text"
+      ],
+      "case_count": 8,
+      "case_items_range": "40-48",
+      "part2_authorities": [
+        "COSO ERM (2017) — 5 components, 20 principles"
+      ]
+    },
+    "E": {
+      "letter": "E",
+      "name": "Investment Decisions",
+      "exam_weight_percent": 10,
+      "approx_exam_questions": 50,
+      "los_count": 6,
+      "los_statements": [
+        { "code": "E.1", "topic": "Calculate capital budgeting methods (NPV, IRR, payback, PI, ARR)" },
+        { "code": "E.2", "topic": "Perform DCF analysis for project evaluation" },
+        { "code": "E.3", "topic": "Analyze risk in capital investments (sensitivity, scenario, Monte Carlo)" },
+        { "code": "E.4", "topic": "Evaluate mutually exclusive projects with unequal lives" },
+        { "code": "E.5", "topic": "Define and value real options" },
+        { "code": "E.6", "topic": "Assess post-audit and capital rationing" }
+      ],
+      "key_topics": [
+        "Capital budgeting methods (NPV, IRR, payback, PI, ARR)",
+        "Discounted cash flow analysis",
+        "Risk analysis in capital investments",
+        "Real options",
+        "Capital rationing"
+      ],
+      "key_formulas": [
+        "NPV = Σ(CFₜ / (1+r)ᵗ) − Initial Investment",
+        "IRR: rate where NPV = 0",
+        "Payback = Initial Investment / Annual CF (uniform) or cumulative",
+        "Discounted Payback",
+        "Profitability Index = PV of Future CFs / Initial Investment",
+        "Equivalent Annual Annuity (EAA) = NPV / PVIFA(r,n)",
+        "MACRS depreciation tables",
+        "After-tax cash flow = (Revenue − Expenses) × (1 − t) + (Depreciation × t)"
+      ],
+      "formula_count": 8,
+      "blooms_distribution": {
+        "Remember": 10,
+        "Understand": 15,
+        "Apply": 55,
+        "Analyze": 15,
+        "Evaluate": 5
+      },
+      "primary_exhibit_types": [
+        "table (cash flow projections, MACRS)",
+        "contract",
+        "dashboard"
+      ],
+      "case_count": 7,
+      "case_items_range": "35-42",
+      "part2_authorities": [
+        "NPV/IRR theory",
+        "MACRS (IRS Pub 946)",
+        "real options"
+      ]
+    },
+    "F": {
+      "letter": "F",
+      "name": "Professional Ethics",
+      "exam_weight_percent": 15,
+      "approx_exam_questions": 75,
+      "los_count": 7,
+      "los_statements": [
+        { "code": "F.1", "topic": "Apply IMA Statement of Ethical Professional Practice" },
+        { "code": "F.2", "topic": "Identify ethical issues facing management accountants" },
+        { "code": "F.3", "topic": "Apply IMA ethical decision-making model" },
+        { "code": "F.4", "topic": "Evaluate fraud and fraudulent financial reporting" },
+        { "code": "F.5", "topic": "Assess corporate governance and ethics (SOX, audit committees)" },
+        { "code": "F.6", "topic": "Apply Foreign Corrupt Practices Act (FCPA)" },
+        { "code": "F.7", "topic": "Evaluate sustainability and social responsibility reporting" }
+      ],
+      "key_topics": [
+        "IMA Statement of Ethical Professional Practice (4 standards)",
+        "Ethical decision-making model",
+        "Fraud and the Fraud Triangle",
+        "Corporate governance (SOX, audit committees)",
+        "FCPA and international ethics"
+      ],
+      "key_formulas": [],
+      "formula_count": 0,
+      "blooms_distribution": {
+        "Remember": 25,
+        "Understand": 30,
+        "Apply": 25,
+        "Analyze": 15,
+        "Evaluate": 5
+      },
+      "primary_exhibit_types": [
+        "policy (code of ethics)",
+        "email",
+        "text (fraud scenarios)"
+      ],
+      "case_count": 12,
+      "case_items_range": "60-72",
+      "part2_authorities": [
+        "IMA Statement of Ethical Professional Practice",
+        "SOX 2002",
+        "FCPA",
+        "Dodd-Frank"
+      ]
+    }
+  },
+  "mcq_packs": [
+    {
+      "filename": "pack_p2_a.js",
+      "primary_domains": ["A"],
+      "domain_names": ["Financial Statement Analysis"],
+      "item_count": 500,
+      "section_breakdown": [
+        { "domain": "A", "section": "A", "items": 500 }
+      ],
+      "qid_format_pattern": "P2-{Section}-{NNN}",
+      "qid_example": "P2-A-001"
+    },
+    {
+      "filename": "pack_p2_b.js",
+      "primary_domains": ["B"],
+      "domain_names": ["Corporate Finance"],
+      "item_count": 500,
+      "section_breakdown": [
+        { "domain": "B", "section": "B", "items": 500 }
+      ],
+      "qid_format_pattern": "P2-{Section}-{NNN}",
+      "qid_example": "P2-B-001"
+    },
+    {
+      "filename": "pack_p2_c.js",
+      "primary_domains": ["C"],
+      "domain_names": ["Decision Analysis"],
+      "item_count": 500,
+      "section_breakdown": [
+        { "domain": "C", "section": "C", "items": 500 }
+      ],
+      "qid_format_pattern": "P2-{Section}-{NNN}",
+      "qid_example": "P2-C-001",
+      "notes": "Largest domain (25% weight). Single pack plus additional batch in Pack D."
+    },
+    {
+      "filename": "pack_p2_d.js",
+      "primary_domains": ["D", "E"],
+      "domain_names": ["Risk Management", "Investment Decisions"],
+      "item_count": 500,
+      "section_breakdown": [
+        { "domain": "D", "section": "D", "items": 250 },
+        { "domain": "E", "section": "E", "items": 250 }
+      ],
+      "qid_format_pattern": "P2-{Section}-{NNN}",
+      "qid_example": "P2-D-001"
+    },
+    {
+      "filename": "pack_p2_e.js",
+      "primary_domains": ["F", "Cross-domain"],
+      "domain_names": ["Professional Ethics", "Cross-domain"],
+      "item_count": 500,
+      "section_breakdown": [
+        { "domain": "F", "section": "F", "items": 375 },
+        { "domain": "Cross-domain", "section": "Cross", "items": 125 }
+      ],
+      "qid_format_pattern": "P2-{Section}-{NNN}",
+      "qid_example": "P2-F-001"
+    }
+  ],
+  "mcq_totals": {
+    "total_packs": 5,
+    "total_mcqs": 2500,
+    "difficulty_distribution": {
+      "Easy_1": { "target_pct": 15, "per_pack": 75 },
+      "ModerateEasy_2": { "target_pct": 20, "per_pack": 100 },
+      "Moderate_3": { "target_pct": 30, "per_pack": 150 },
+      "Difficult_4": { "target_pct": 25, "per_pack": 125 },
+      "VeryDifficult_5": { "target_pct": 10, "per_pack": 50 }
+    },
+    "cognitive_level_distribution": {
+      "Remember": { "target_pct": 12, "per_pack": 60 },
+      "Understand": { "target_pct": 22, "per_pack": 110 },
+      "Apply": { "target_pct": 42, "per_pack": 210 },
+      "Analyze": { "target_pct": 18, "per_pack": 90 },
+      "Evaluate": { "target_pct": 6, "per_pack": 30 }
+    },
+    "question_type_mix": {
+      "select": { "target_pct": 85, "per_pack": 425 },
+      "numeric": { "target_pct": 8, "per_pack": 40 },
+      "multi": { "target_pct": 4, "per_pack": 20 },
+      "fill": { "target_pct": 2, "per_pack": 10 },
+      "match": { "target_pct": 1, "per_pack": 5 }
+    },
+    "qid_prefix": "P2-",
+    "object_architecture": "Single-object (one JSON object per item — eliminates DL-016 dual-block problem)"
+  },
+  "case_packs": [
+    {
+      "filename": "case_pack_p2_1.js",
+      "total_cases": 25,
+      "total_items": 133,
+      "section_distribution": {
+        "A": 6,
+        "B": 5,
+        "C": 6,
+        "D": 3,
+        "E": 3,
+        "F": 2
+      }
+    },
+    {
+      "filename": "case_pack_p2_2.js",
+      "total_cases": 25,
+      "total_items": 133,
+      "section_distribution": {
+        "A": 4,
+        "B": 5,
+        "C": 6,
+        "D": 3,
+        "E": 2,
+        "F": 5
+      }
+    },
+    {
+      "filename": "case_pack_p2_3.js",
+      "total_cases": 25,
+      "total_items": 134,
+      "section_distribution": {
+        "A": 5,
+        "B": 5,
+        "C": 6,
+        "D": 2,
+        "E": 2,
+        "F": 5
+      }
+    }
+  ],
+  "case_totals": {
+    "total_case_packs": 3,
+    "total_cases": 75,
+    "total_items_range": "375-450",
+    "caseid_format": "CBQ2{Pack}-{Section}{Seq}",
+    "caseid_example": "CBQ2-A1",
+    "caseid_example_2": "CBQ2-B15",
+    "caseid_prefix": "CBQ2",
+    "items_per_case": "5-6",
+    "case_distribution_by_domain": {
+      "A": { "cases": 15, "pct": 20, "items": "75-90" },
+      "B": { "cases": 15, "pct": 20, "items": "75-90" },
+      "C": { "cases": 18, "pct": 25, "items": "90-108" },
+      "D": { "cases": 8, "pct": 10, "items": "40-48" },
+      "E": { "cases": 7, "pct": 10, "items": "35-42" },
+      "F": { "cases": 12, "pct": 15, "items": "60-72" }
+    },
+    "exhibit_types_by_domain": {
+      "A": ["financial-statement", "table (ratio summary)"],
+      "B": ["financial-statement", "table (bond amortization, WACC)", "erp-report"],
+      "C": ["table (cost data)", "dashboard (product mix)", "erp-report"],
+      "D": ["policy (ERM framework)", "dashboard (risk register)", "text"],
+      "E": ["table (cash flow projections, MACRS)", "contract", "dashboard"],
+      "F": ["policy (code of ethics)", "email", "text (fraud scenarios)"]
+    },
+    "cognitive_progression_rules": [
+      { "positions": "1-2", "level": "Apply", "type": "calculation", "description": "Foundational computation" },
+      { "positions": "3-4", "level": "Analyze", "type": "interpretation", "description": "Interpret results" },
+      { "positions": "5", "level": "Evaluate", "type": "judgment", "description": "Recommendation or decision" },
+      { "positions": "6", "level": "Evaluate/Synthesize", "type": "integration", "description": "Cross-concept integration (optional)" }
+    ]
+  },
+  "governance_rules": {
+    "caqs_transfer": [
+      { "caqs_section": "1.6", "rule_name": "Six-dimension AI verification", "transfer": "Transfer (rename Dimension 6: 'Part 2 Relevance')", "notes": "Build-time AI verification across correctness, precision, difficulty calibration, distractor engineering, blueprint alignment, Part 2 relevance" },
+      { "caqs_section": "1.7", "rule_name": "Certification state governance", "transfer": "Direct transfer", "notes": "States: Unprocessed, In Audit, Editorial Queue, Certified, Archived. Only Certified items eligible for learner pool." },
+      { "caqs_section": "2", "rule_name": "10-dimension quality rubric (100 points)", "transfer": "Direct transfer", "notes": "Weighted scoring across blueprint alignment, cognitive level, technical accuracy, distractor quality, business realism, numerical integrity, explanation quality, writing clarity, accessibility, metadata completeness" },
+      { "caqs_section": "2.3", "rule_name": "Auto-fail: Dimension 3 or 6 = 0", "transfer": "Direct transfer", "notes": "Zero on Technical Accuracy or Numerical Integrity = overall score 0/100, item rejected" },
+      { "caqs_section": "3", "rule_name": "Case study standards", "transfer": "Direct transfer", "notes": "Scenario requirements, language standards, exhibit standards, cognitive progression, anti-AI writing standards" },
+      { "caqs_section": "4", "rule_name": "Explanation standards (EV1-EV8)", "transfer": "Direct transfer", "notes": "Required elements for correct/distorctor explanations, language rules, validation rules including EV8 (ExplanationWrong[CorrectChoice] must be empty)" },
+      { "caqs_section": "5", "rule_name": "Numerical validation standard", "transfer": "Direct transfer", "notes": "Independent recalculation, rounding policy, accepted tolerance, formula verification checklist" },
+      { "caqs_section": "6", "rule_name": "Psychometric standards", "transfer": "Transfer with adjusted targets", "notes": "Difficulty distribution, Bloom's distribution, distractor performance, cueing/bias checks, guessability criteria" },
+      { "caqs_section": "7", "rule_name": "Metadata standard", "transfer": "Transfer with domain-specific enums", "notes": "Case-level, item-level, exhibit-level metadata schema, validation rules" },
+      { "caqs_section": "9", "rule_name": "Audit workflow (7-step pipeline)", "transfer": "Direct transfer", "notes": "Technical Review → Psychometric → Numerical → Instructional → Metadata → Final Validation → Approval" },
+      { "caqs_section": "14", "rule_name": "Gold Standard Checklist", "transfer": "Transfer with updated authorities", "notes": "MCQ checklist (20 items), case study checklist (additional 12 items)" }
+    ],
+    "part2_authorities": {
+      "A": ["FASB ASC (GAAP ratios)", "IFRS", "SEC reporting"],
+      "B": ["CAPM (Sharpe-Lintner)", "Modigliani-Miller", "Basel III"],
+      "C": ["IMA SMA on relevant costing", "pricing models"],
+      "D": ["COSO ERM (2017) — 5 components, 20 principles"],
+      "E": ["NPV/IRR theory", "MACRS (IRS Pub 946)", "real options"],
+      "F": ["IMA Statement of Ethical Professional Practice", "SOX 2002", "FCPA", "Dodd-Frank"]
+    },
+    "known_defects": [
+      {
+        "defect_id": "DL-008",
+        "name": "Non-empty ExplanationWrong[CorrectChoice]",
+        "recurrence_risk": "High",
+        "mitigation": "Governance guard Rule 2 active from first write. QA gate: ExplanationWrong[CorrectChoice] must be empty string before certification.",
+        "notes": "The highest-frequency structural defect in Part 1. Prevention is critical from Day 1."
+      },
+      {
+        "defect_id": "DL-013",
+        "name": "Template boilerplate distractor explanations",
+        "recurrence_risk": "High",
+        "mitigation": "Quality gate: no 'represents a plausible misconception' in any ExplanationWrong field. Distractor explanations must be choice-specific. Pattern match in validator from first batch.",
+        "notes": "Segment 1 boilerplate (exact duplicate generic) is the highest priority. Must not enter the content authoring pipeline."
+      },
+      {
+        "defect_id": "DL-026",
+        "name": "Empty non-CorrectChoice ExplanationWrong slots",
+        "recurrence_risk": "Medium",
+        "mitigation": "Rule 6 (empty distractor BLOCK). All three non-CC ExplanationWrong slots must be non-empty before certification.",
+        "notes": "1,005 items affected in Part 1. Prevent with automated validator from first item authored."
+      },
+      {
+        "defect_id": "DL-030",
+        "name": "Answer-key errors (CorrectChoice disagrees with derived answer)",
+        "recurrence_risk": "Critical",
+        "mitigation": "Independent recalculation mandatory before certification. Every numerical item must be independently solved by a reviewer who has not seen the stored answer.",
+        "notes": "Five Certified Part 1 items had wrong CorrectChoice. Part 2 must prevent this with mandatory independent recalculation."
+      },
+      {
+        "defect_id": "DL-031",
+        "name": "Difficulty inflation (systematic over-labeling)",
+        "recurrence_risk": "High",
+        "mitigation": "Per-item cognitive-level justification required. No template-based difficulty labeling. Each item's difficulty must be justified by its cognitive demand.",
+        "notes": "~500 Part 1 items labeled Moderate that test Bloom's Remember/Understand. Template-based labeling is the root cause."
+      },
+      {
+        "defect_id": "DL-016",
+        "name": "Metadata-content mismatch (dual-block architecture)",
+        "recurrence_risk": "Avoidable",
+        "mitigation": "Single-object architecture eliminates this defect class entirely. No separate metadata block and content block per QID.",
+        "notes": "This defect class is architecturally prevented in Part 2. Single-object design means metadata and content are always co-located."
+      }
+    ]
+  },
+  "certification_rules": {
+    "verification_dimensions": [
+      {
+        "dimension": 1,
+        "name": "Correctness",
+        "description": "Against GAAP / IFRS / ICMA CSO / standard managerial accounting",
+        "requirement": "The answer key, explanation, and distractors are consistent with authoritative accounting standards",
+        "confidence_gate": "HIGH"
+      },
+      {
+        "dimension": 2,
+        "name": "Precision",
+        "description": "Internal consistency, unambiguous fact pattern",
+        "requirement": "The fact pattern yields exactly one defensible answer; no missing assumptions or contradictory data",
+        "confidence_gate": "HIGH"
+      },
+      {
+        "dimension": 3,
+        "name": "Difficulty Calibration",
+        "description": "Matches stated tier and LOS depth verb",
+        "requirement": "The cognitive demand implied by the LOS is consistent with the question's stated difficulty and Bloom's level",
+        "confidence_gate": "HIGH"
+      },
+      {
+        "dimension": 4,
+        "name": "Distractor Engineering",
+        "description": "Each distractor maps to a real misconception or plausible calculation path",
+        "requirement": "Every distractor represents a documented exam trap or known student error, not a guessable throwaway",
+        "confidence_gate": "HIGH"
+      },
+      {
+        "dimension": 5,
+        "name": "Blueprint Alignment",
+        "description": "Maps to a specific Part 2 CSO LOS",
+        "requirement": "The LOSTag, Topic, and cognitive level align with a specific Content Specification Outline learning outcome",
+        "confidence_gate": "HIGH"
+      },
+      {
+        "dimension": 6,
+        "name": "Part 2 Relevance",
+        "description": "In scope, not accidentally Part 1",
+        "requirement": "The question tests Part 2 material; no concept, standard, or calculation belongs exclusively to Part 1",
+        "confidence_gate": "HIGH",
+        "notes": "Renamed from CAQS §1.6 Dimension 6 ('CMA Part 1 Relevance'). Explicitly gates against Part 1 content contamination."
+      }
+    ],
+    "auto_fail_conditions": [
+      "Dimension 3 (Technical Accuracy) score of 0 — item contains a factual error",
+      "Dimension 6 (Numerical Integrity) score of 0 — item has wrong numerical answer",
+      "Accounting error — correct answer is wrong or explanation contradicts GAAP/COSO/authoritative standards",
+      "Numerical error — stored answer does not match correct calculation",
+      "Metadata failure — missing required fields that would break the application",
+      "Plagiarism — content copied from copyrighted sources",
+      "Bias — content that would unfairly disadvantage any candidate group"
+    ],
+    "gold_standard_items": [
+      { "id": "MCQ-01", "item": "Blueprint alignment — Question maps to a specific IMA Learning Outcome Statement" },
+      { "id": "MCQ-02", "item": "Technical accuracy — Accounting treatment is correct under current GAAP/COSO" },
+      { "id": "MCQ-03", "item": "Numerical accuracy — All calculations independently verified" },
+      { "id": "MCQ-04", "item": "Correct answer — The stored CorrectChoice matches expert judgment" },
+      { "id": "MCQ-05", "item": "Distractor plausibility — Every distractor represents a realistic candidate misconception" },
+      { "id": "MCQ-06", "item": "Distractor discrimination — No distractor is obviously wrong" },
+      { "id": "MCQ-07", "item": "No cueing — No grammatical, length, or position cues point to correct answer" },
+      { "id": "MCQ-08", "item": "Answer balance — Question does not create a pattern if combined with adjacent questions" },
+      { "id": "MCQ-09", "item": "Explanation principle — Correct answer explanation names the governing standard" },
+      { "id": "MCQ-10", "item": "Explanation solution — Shows formula with substituted values (calculations) or reasoning chain (conceptual)" },
+      { "id": "MCQ-11", "item": "Explanation business context — Interprets the result in the scenario" },
+      { "id": "MCQ-12", "item": "Explanation distractors — Each wrong-choice explanation is specific and teaches why it is wrong" },
+      { "id": "MCQ-13", "item": "Explanation exam trap — Identifies at least one common candidate error" },
+      { "id": "MCQ-14", "item": "Business realism — Scenario uses realistic business language, not textbook phrasing" },
+      { "id": "MCQ-15", "item": "Writing clarity — No grammatical errors; professional tone" },
+      { "id": "MCQ-16", "item": "Accessibility — No biased language; fair to all candidate populations" },
+      { "id": "MCQ-17", "item": "Metadata complete — All required fields present and valid" },
+      { "id": "MCQ-18", "item": "Metadata cross-references — Formula references, trap references, and decision tree references resolve correctly" },
+      { "id": "MCQ-19", "item": "Validation pass — Automated validation suite passes with zero errors" },
+      { "id": "MCQ-20", "item": "Review documentation — Audit record exists with scores and findings" },
+      { "id": "CASE-01", "item": "Scenario realism — Named company, stakeholder, business trigger, and clear task" },
+      { "id": "CASE-02", "item": "Exhibit quality — Professional format, no decorative data" },
+      { "id": "CASE-03", "item": "Data consistency — Numbers in exhibits are internally consistent" },
+      { "id": "CASE-04", "item": "Question interconnection — Items follow logical progression (calculate → analyze → decide)" },
+      { "id": "CASE-05", "item": "Cognitive progression — Items progress from lower to higher Bloom's levels" },
+      { "id": "CASE-06", "item": "Independent answerability — Each item can be answered without relying on correct answers to prior items" },
+      { "id": "CASE-07", "item": "Exhibit referencing — Every exhibit is referenced by at least one item" },
+      { "id": "CASE-08", "item": "Data consumption — Every exhibit row/column is consumed by at least one item" },
+      { "id": "CASE-09", "item": "Case-level metadata — All required case-level fields present and valid" },
+      { "id": "CASE-10", "item": "Item-level metadata — All required item-level fields present and valid" },
+      { "id": "CASE-11", "item": "Exhibit-level metadata — ExhibitID, Purpose, and ReferencedBy fields present" },
+      { "id": "CASE-12", "item": "Difficulty calibration — Case-level difficulty is within ±1 of mean item difficulty" }
+    ],
+    "state_transitions": {
+      "description": "Question lifecycle state machine per CAQS §1.7 and QUESTION_METADATA_STANDARD.md §9.2",
+      "states": [
+        { "state": "Unprocessed", "description": "Not yet audited" },
+        { "state": "In Audit", "description": "Currently under review in a sub-batch" },
+        { "state": "Editorial Queue", "description": "Requires structural or content revision" },
+        { "state": "Certified", "description": "Passed HIGH-confidence verification; eligible for learner sessions" },
+        { "state": "Archived", "description": "Removed from active pool (content preserved)" }
+      ],
+      "transitions": [
+        { "from": "Unprocessed", "to": "In Audit", "trigger": "Entry into a sub-batch (pool selection)" },
+        { "from": "In Audit", "to": "Editorial Queue", "trigger": "Structural or content revision required" },
+        { "from": "In Audit", "to": "Certified", "trigger": "HIGH-confidence AI verification + user approval" },
+        { "from": "Any State", "to": "Archived", "trigger": "Consolidation or removal from active pool" },
+        { "from": "Certified", "to": "In Audit", "trigger": "Explicit re-verification request only — cannot be downgraded without documented request" }
+      ],
+      "certification_requirements": [
+        "HIGH-confidence AI verification across all 6 dimensions",
+        "User approval documented in REVISION_HISTORY.md",
+        "Distractor tier map (A/B/C/D) recorded in certification entry",
+        "Any low-confidence claim resolved and documented before certification"
+      ],
+      "certification_blocking_conditions": [
+        { "rule": "G-NEW-1", "description": "Metadata-block and content-block Choice values diverge — BLOCK certification" },
+        { "rule": "G-NEW-2", "description": "ExplanationWrong field contains topically unrelated text (cross-item contamination) — BLOCK certification" },
+        { "rule": "G-NEW-3", "description": "CC extraction methodology not using same enclosing object as EW fields — verification invalid" },
+        { "rule": "G-NEW-4", "description": "Case item at Apply/Analyze/Evaluate has one-sentence explanation — BLOCK certification" },
+        { "rule": "Rule 2 (governance guard)", "description": "Non-empty ExplanationWrong[CorrectChoice] — BLOCK certification" },
+        { "rule": "Rule 6 (governance guard)", "description": "Empty non-CC ExplanationWrong slots — BLOCK certification" }
+      ],
+      "learner_pool_eligibility": "Only items with question_state === 'Certified' are eligible for learner practice sessions."
+    }
+  },
+  "technical_architecture": {
+    "decisions": [
+      {
+        "decision": "Repository",
+        "verdict": "New repo (CMA_Part_2_2026)",
+        "rationale": "Prevents cross-contamination, enables parallel development with Part 1"
+      },
+      {
+        "decision": "Object architecture",
+        "verdict": "Single-object (not dual-block)",
+        "rationale": "Eliminates DL-016, DL-029, CC-offset scan artifacts. Metadata and content always co-located in one JSON object."
+      },
+      {
+        "decision": "QID prefix",
+        "verdict": "P2- for MCQs, CBQ2 for cases",
+        "rationale": "No collision with Part 1 (P1- / CBQ)"
+      },
+      {
+        "decision": "Pack naming",
+        "verdict": "pack_p2_a.js through pack_p2_e.js",
+        "rationale": "Explicit Part 2 labeling"
+      },
+      {
+        "decision": "Case pack naming",
+        "verdict": "case_pack_p2_1.js through case_pack_p2_3.js",
+        "rationale": "Matches Part 1 pattern with Part 2 prefix"
+      },
+      {
+        "decision": "Governance guard",
+        "verdict": "Reuse all 9 rules",
+        "rationale": "All governance guard rules generalize across exam parts (DL-008, batch caps, state transitions, answer-key changes, explanation purity, etc.)"
+      },
+      {
+        "decision": "app.js",
+        "verdict": "Fork and extend",
+        "rationale": "~70% reusable (renderer, session management, timer, calculator), 30% Part 2-specific config (pack references, domain labels, scoring)"
+      },
+      {
+        "decision": "CAQS",
+        "verdict": "Adapt from v1.0",
+        "rationale": "Same quality framework, Part 2-specific domains/authorities/references"
+      },
+      {
+        "decision": "Validation scripts",
+        "verdict": "Fork + extend",
+        "rationale": "String-aware brace-matcher reuses (DL-020 fix carries forward); domain validators are new"
+      },
+      {
+        "decision": "Metadata schema",
+        "verdict": "Single-object JSON with Part2OnlyFlag",
+        "rationale": "Each item carries 'Part2OnlyFlag: true' to prevent accidental Part 1 rendering. Single object eliminates all dual-block defect classes."
+      }
+    ],
+    "shared_assets": [
+      {
+        "asset": ".opencode/plugins/governance-guard.js",
+        "description": "9-rule enforcement plugin",
+        "action": "Copy then independently maintain"
+      },
+      {
+        "asset": "scripts/validators/ExplanationValidator.js",
+        "description": "String-aware brace-matcher (DL-020 fix)",
+        "action": "Copy then independently maintain"
+      },
+      {
+        "asset": "scripts/test_governance_guard.js",
+        "description": "Governance guard test suite",
+        "action": "Copy then independently maintain"
+      },
+      {
+        "asset": "knowledge/BACKUP_PROTOCOL.md",
+        "description": "Hard backup rules",
+        "action": "Copy then independently maintain"
+      },
+      {
+        "asset": "AGENTS.md structure",
+        "description": "Standing instructions for all AI/Computer sessions",
+        "action": "Copy then adapt for Part 2"
+      },
+      {
+        "asset": "00_PROJECT_CONSTITUTION.md structure",
+        "description": "Project constitution",
+        "action": "Copy then adapt for Part 2"
+      },
+      {
+        "asset": "styles.css",
+        "description": "UI stylesheet",
+        "action": "Identical to Part 1 — direct copy"
+      }
+    ],
+    "root_layout": [
+      { "path": "/", "description": "Repository root" },
+      { "path": "index_updated.html", "description": "Main application entry point" },
+      { "path": "app.js", "description": "Forked from Part 1, Part 2 adapted (~70% reusable)" },
+      { "path": "styles.css", "description": "Identical to Part 1" },
+      { "path": "pack_p2_a.js", "description": "Domain A: Financial Statement Analysis (500 items)" },
+      { "path": "pack_p2_b.js", "description": "Domain B: Corporate Finance (500 items)" },
+      { "path": "pack_p2_c.js", "description": "Domain C: Decision Analysis (500 items)" },
+      { "path": "pack_p2_d.js", "description": "Domain D+E: Risk Management + Investment Decisions (500 items)" },
+      { "path": "pack_p2_e.js", "description": "Domain F + Cross-domain: Professional Ethics + Cross (500 items)" },
+      { "path": "case_pack_p2_1.js", "description": "25 cases (~133 items)" },
+      { "path": "case_pack_p2_2.js", "description": "25 cases (~133 items)" },
+      { "path": "case_pack_p2_3.js", "description": "25 cases (~134 items)" },
+      { "path": "package.json", "description": "Node.js project manifest" },
+      { "path": "package-lock.json", "description": "Dependency lock file" },
+      { "path": "opencode.json", "description": "OpenCode tooling configuration" },
+      { "path": "VERSION", "description": "Version file" },
+      { "path": "AGENTS.md", "description": "Standing instructions (adapted from Part 1)" },
+      { "path": "backups/", "description": "Backup copies of application files" },
+      { "path": "scripts/", "description": "Validation, enrichment, and utility scripts" },
+      { "path": "reports/", "description": "Audit reports, change reports, review findings" },
+      { "path": "knowledge/", "description": "AI governance: constitution, standards, defect library, taxonomy" },
+      { "path": "ai/", "description": "AI collaboration matrix, workflows, session definitions" },
+      { "path": "foundation/", "description": "Formula master, glossary, exam blueprint" },
+      { "path": "review/", "description": "Decision trees, exam traps, review protocols" },
+      { "path": ".opencode/", "description": "OpenCode tooling configuration (internal)" }
+    ]
+  },
+  "roadmap": {
+    "total_timeline": "~18 weeks for complete Part 2 simulator",
+    "phases": [
+      {
+        "phase": 0,
+        "name": "Pre-Flight",
+        "week": "Week 1",
+        "tasks": [
+          "Establish Part 2 repository (new repo: CMA_Part_2_2026)",
+          "Adopt Part 1 constitution, governance guard, and AGENTS.md (adapted)",
+          "Create foundation/EXAM_BLUEPRINT_P2.md",
+          "Create foundation/FORMULA_MASTER_P2.md (40+ formulas)",
+          "Create knowledge/CAQS_P2_v1.0.md",
+          "Create knowledge/TAXONOMY_REGISTRY_P2.md",
+          "Create knowledge/DEFECT_LIBRARY_P2.md (empty)",
+          "Create knowledge/CURRENT_BASELINES_P2.md (empty)",
+          "Set up governance guard with Part 2 domain validators"
+        ]
+      },
+      {
+        "phase": 1,
+        "name": "Foundation Content",
+        "weeks": "Weeks 2-4",
+        "content_count": 1000,
+        "tasks": [
+          "Pack A (Domain A: Financial Statement Analysis) — 500 items",
+          "Pack C (Domain C: Decision Analysis, batch 1) — 500 items"
+        ]
+      },
+      {
+        "phase": 2,
+        "name": "Core Content",
+        "weeks": "Weeks 5-8",
+        "content_count": 1000,
+        "tasks": [
+          "Pack B (Domain B: Corporate Finance) — 500 items",
+          "Pack C Part 2 (Domain C batch 2 + Domain D) — 500 items"
+        ]
+      },
+      {
+        "phase": 3,
+        "name": "Specialized Content",
+        "weeks": "Weeks 9-10",
+        "content_count": 1000,
+        "tasks": [
+          "Pack D (Domain E + Domain F batch 1) — 500 items",
+          "Pack E (Domain F batch 2 + Cross-domain) — 500 items"
+        ]
+      },
+      {
+        "phase": 4,
+        "name": "Certification Pipeline",
+        "weeks": "Weeks 11-13",
+        "content_count": 2500,
+        "tasks": [
+          "Six-dimension verification for all 2,500 items",
+          "Target: 95%+ certified (2,375 / 2,500 minimum)"
+        ]
+      },
+      {
+        "phase": 5,
+        "name": "Case Studies",
+        "weeks": "Weeks 14-17",
+        "content_count": 75,
+        "tasks": [
+          "Author 75 cases across 3 case packs",
+          "Certification of all case items (375-450 items)"
+        ]
+      },
+      {
+        "phase": 6,
+        "name": "Integration & Polish",
+        "weeks": "Week 18+",
+        "content_count": 0,
+        "tasks": [
+          "End-to-end simulation test",
+          "Blueprint coverage gap analysis",
+          "Difficulty distribution audit",
+          "Pre-delivery safety check"
+        ]
+      }
+    ]
+  },
+  "part1_vs_part2": {
+    "comparison_table": {
+      "knowledge_domain": {
+        "part1": "Financial accounting, cost management, internal controls, technology",
+        "part2": "Financial analysis, corporate finance, decisions, ERM, investments, ethics"
+      },
+      "calculation_intensity": {
+        "part1": "Moderate (variances, cost allocation)",
+        "part2": "High (NPV, IRR, WACC, CAPM, ratios, CVP)"
+      },
+      "object_architecture": {
+        "part1": "Dual-block (metadata + content)",
+        "part2": "Single-object (one block per item)"
+      },
+      "primary_authorities": {
+        "part1": "FASB ASC, COSO IC (2013)",
+        "part2": "FASB ASC, COSO ERM (2017), IMA Ethics, CAPM"
+      },
+      "mcq_packs": {
+        "part1": "5 packs, 2,545 items total",
+        "part2": "5 packs, 2,500 items total"
+      },
+      "case_packs": {
+        "part1": "3 packs, 77 cases",
+        "part2": "3 packs, 75 cases"
+      },
+      "qid_prefix": {
+        "part1": "P1-",
+        "part2": "P2-"
+      },
+      "caseid_prefix": {
+        "part1": "CBQ",
+        "part2": "CBQ2"
+      },
+      "certified_target": {
+        "part1": "2,451 / 2,545 (96.3%)",
+        "part2": "2,375 / 2,500 (95%) minimum"
+      },
+      "blooms_apply_target": {
+        "part1": "40%",
+        "part2": "42% (higher calculation load)"
+      },
+      "repository": {
+        "part1": "CMA_Part_1_2026",
+        "part2": "CMA_Part_2_2026 (proposed)"
+      }
+    }
+  },
+  "summary": {
+    "domains_extracted": 6,
+    "total_los_statements": 43,
+    "packs_defined": {
+      "mcq_packs": 5,
+      "case_packs": 3,
+      "total_packs": 8
+    },
+    "total_mcqs": 2500,
+    "total_cases": 75,
+    "total_case_items": "375-450",
+    "roadmap_phases": 7,
+    "total_formulas_extracted": 52,
+    "formulas_by_domain": {
+      "A": 21,
+      "B": 9,
+      "C": 11,
+      "D": 3,
+      "E": 8,
+      "F": 0
+    }
+  }
+}

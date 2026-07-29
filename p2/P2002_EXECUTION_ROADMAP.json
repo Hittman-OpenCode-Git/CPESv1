@@ -1,0 +1,987 @@
+{
+  "meta": {
+    "session": "P2-002",
+    "date": "2026-07-29",
+    "total_duration": "18 weeks",
+    "total_phases": 4,
+    "total_milestones": 32,
+    "source_document": "P2001_PART2_BLUEPRINT_FOUNDATION.md §5",
+    "blueprint_section": "§5 Development Roadmap (6 phases collapsed to 4)",
+    "mcq_target": 2500,
+    "case_target": 75,
+    "certified_target": 2375,
+    "certified_target_pct": 95
+  },
+  "phases": [
+    {
+      "phase": 1,
+      "name": "Foundation & Governance",
+      "weeks": "1-2",
+      "duration_weeks": 2,
+      "description": "Repository initialization, governance framework deployment, toolchain setup, and skeleton file creation. Establishes the guardrails that all subsequent phases depend on.",
+      "blueprint_phases_absorbed": ["Phase 0: Pre-Flight (Week 1)"],
+      "entry_criteria": [
+        "P2-001 blueprint document approved",
+        "CMA Part 2 CSO (September 2024) confirmed as authoritative external reference",
+        "Part 1 repository governance documents identified for fork/adoption",
+        "New repository name 'CMA_Part_2_2026' confirmed",
+        "Development environment ready (Node.js, PowerShell, git)"
+      ],
+      "exit_criteria": [
+        "All governance documents created and versioned at v1.0",
+        "All 8 skeleton pack/case files parse correctly (empty arrays with 0 parse errors)",
+        "Governance guard test suite passes 100% (all 10 rules active)",
+        "app.js fork loads all 5 MCQ packs and 3 case packs without crashes (0 items rendered — skeleton state)",
+        "Validation scripts run across all skeletons and report 0 errors (empty-pool baseline)",
+        "CURRENT_BASELINES_P2.md populated with 13+ file hashes",
+        "Formula master contains 40+ formulas with Part 2 authorities cited"
+      ],
+      "milestones": [
+        {
+          "name": "M1.1 — Repository Initialization",
+          "week": 1,
+          "day": "1-3",
+          "description": "Create CMA_Part_2_2026 repository. Initialize git, .gitignore, package.json, VERSION file. Establish root directory structure per blueprint §6.",
+          "verification": "All root directories exist (backups/, scripts/, reports/, knowledge/, ai/, foundation/, review/, .opencode/). git status shows clean initial commit with directory structure.",
+          "deliverables": ["package.json", "VERSION", ".gitignore", "Root directory tree"]
+        },
+        {
+          "name": "M1.2 — Governance Foundation",
+          "week": 1,
+          "day": "3-5",
+          "description": "Adapt Part 1's 00_PROJECT_CONSTITUTION.md for Part 2 scope. Create AGENTS.md with Part 2 standing instructions. Adopt BACKUP_PROTOCOL.md, CAQS_P2_v1.0.md, TAXONOMY_REGISTRY_P2.md. Initialize empty DEFECT_LIBRARY_P2.md and CURRENT_BASELINES_P2.md.",
+          "verification": "All 7 governance documents exist and contain Part 2-specific content (not Part 1 copy-paste residue). AGENTS.md references Part 2 pack/case files and P2 QID/CaseID formats.",
+          "deliverables": [
+            "00_PROJECT_CONSTITUTION.md (v1.0, Part 2 adapted)",
+            "AGENTS.md (Part 2 standing instructions)",
+            "knowledge/BACKUP_PROTOCOL.md",
+            "knowledge/CAQS_P2_v1.0.md",
+            "knowledge/TAXONOMY_REGISTRY_P2.md",
+            "knowledge/DEFECT_LIBRARY_P2.md (empty initialized)",
+            "knowledge/CURRENT_BASELINES_P2.md (empty initialized)"
+          ]
+        },
+        {
+          "name": "M1.3 — Technical Foundation",
+          "week": 1,
+          "day": "5-7",
+          "description": "Create foundation/EXAM_BLUEPRINT_P2.md (6 domains, 44 LOS statements). Create foundation/FORMULA_MASTER_P2.md (40+ formulas with Part 2 authority references — FASB ASC, CAPM, COSO ERM 2017, IMA Ethics, MACRS). Create foundation/P2001_PART2_BLUEPRINT_FOUNDATION.md reference copy.",
+          "verification": "EXAM_BLUEPRINT_P2.md contains all 44 LOS from Appendix A. FORMULA_MASTER_P2.md has 40+ discrete formulas, each with named authority citation. Cross-reference: no Part 1 formulas accidentally included.",
+          "deliverables": [
+            "foundation/EXAM_BLUEPRINT_P2.md",
+            "foundation/FORMULA_MASTER_P2.md (40+ formulas)"
+          ]
+        },
+        {
+          "name": "M1.4 — Governance Guard Deployment",
+          "week": 2,
+          "day": "1-3",
+          "description": "Fork Part 1 governance-guard.js (9 existing rules). Add Rule 10: Cross-Part Domain Boundary (BLOCK — prevents Part 1 topics/QIDs from entering Part 2 packs). Adapt domain validators for Part 2 enums. Create test suite with 50+ tests covering all 10 rules.",
+          "verification": "All 10 rules active and tested. Rule 2 (DL-008) active from first write. Rule 6 (DL-026 empty distractor BLOCK) active. Rule 10 (cross-part boundary) catches P1- prefix references. Test suite: 50+/50+ PASS.",
+          "deliverables": [
+            ".opencode/plugins/governance-guard.js (10 rules)",
+            "scripts/test_governance_guard.js (50+ tests)"
+          ]
+        },
+        {
+          "name": "M1.5 — Skeleton Files & Application Foundation",
+          "week": 2,
+          "day": "3-5",
+          "description": "Create 8 skeleton files: 5 MCQ packs (pack_p2_a.js through pack_p2_e.js) as empty arrays, 3 case packs (case_pack_p2_1.js through case_pack_p2_3.js) as empty arrays. Fork app.js from Part 1; adapt Part 2 config (pack names, QID prefix 'P2-', CaseID prefix 'CBQ2', domain labels). Copy and adapt styles.css and index_updated.html.",
+          "verification": "All 8 skeleton files parse as valid JSON arrays (JSON.parse succeeds, returns []). app.js loads without errors — renders empty exam with 0 items. styles.css renders correctly. index_updated.html loads in browser with score of 0/0.",
+          "deliverables": [
+            "pack_p2_a.js (skeleton — empty array)",
+            "pack_p2_b.js (skeleton — empty array)",
+            "pack_p2_c.js (skeleton — empty array)",
+            "pack_p2_d.js (skeleton — empty array)",
+            "pack_p2_e.js (skeleton — empty array)",
+            "case_pack_p2_1.js (skeleton — empty array)",
+            "case_pack_p2_2.js (skeleton — empty array)",
+            "case_pack_p2_3.js (skeleton — empty array)",
+            "app.js (forked, Part 2 adapted)",
+            "styles.css (adapt from Part 1)",
+            "index_updated.html (adapt from Part 1)"
+          ]
+        },
+        {
+          "name": "M1.6 — Validation & Test Suite Migration",
+          "week": 2,
+          "day": "5-7",
+          "description": "Fork string-aware brace-matcher from Part 1 ExplanationValidator.js. Create Part 2 domain-specific validators (formula authority cross-check, cross-part boundary scan, Part 2-only content verification). Create validate_p2.js orchestrator script. Run baseline scan on skeletons (expect 0 errors). Populate CURRENT_BASELINES_P2.md with SHA-256 hashes for all 13 runtime-critical files.",
+          "verification": "validate_p2.js runs on all 8 skeletons and reports 0 errors, 0 warnings. CURRENT_BASELINES_P2.md has 13 hash entries with SHA-256 values. Governance guard test suite passes. Hash verification script (compare_hash_p2.js) confirms all baselines match.",
+          "deliverables": [
+            "scripts/validators/ExplanationValidator_P2.js",
+            "scripts/validators/DomainValidator_P2.js",
+            "scripts/validators/FormulaAuthorityValidator_P2.js",
+            "scripts/validate_p2.js (orchestrator)",
+            "scripts/compare_hash_p2.js"
+          ]
+        },
+        {
+          "name": "M1.7 — Phase 1 Gate Review",
+          "week": 2,
+          "day": "7",
+          "description": "Formal sign-off on Phase 1 completion. Review all exit criteria. Confirm 0 open risks before proceeding to content authoring. Tag repository as v0.1.0-foundation.",
+          "verification": "All 13 CURRENT_BASELINES_P2.md hashes match current files. Governance guard: all 10 rules active, 50+ tests PASS. validate_p2.js: 0 errors on skeleton files. REVISION_HISTORY_P2.md: Phase 1 closeout entry written. Git tag: v0.1.0-foundation.",
+          "deliverables": [
+            "knowledge/REVISION_HISTORY_P2.md (Phase 1 closeout entry)",
+            "Git tag: v0.1.0-foundation"
+          ]
+        }
+      ],
+      "deliverables": [
+        { "file": "package.json", "type": "code", "description": "Node.js package manifest with dev dependencies (validator, test runner)" },
+        { "file": "VERSION", "type": "data", "description": "Semantic version file (0.1.0)" },
+        { "file": ".gitignore", "type": "data", "description": "Git ignore rules (node_modules, backups, temp files)" },
+        { "file": "00_PROJECT_CONSTITUTION.md", "type": "document", "description": "Part 2 project constitution adapting Part 1's principles" },
+        { "file": "AGENTS.md", "type": "document", "description": "Part 2 standing instructions for all AI sessions" },
+        { "file": "knowledge/BACKUP_PROTOCOL.md", "type": "document", "description": "Hard backup rules (identical to Part 1)" },
+        { "file": "knowledge/CAQS_P2_v1.0.md", "type": "document", "description": "Content quality standard with Part 2-specific authorities and domains" },
+        { "file": "knowledge/TAXONOMY_REGISTRY_P2.md", "type": "document", "description": "All permitted enumeration values for Part 2 metadata" },
+        { "file": "knowledge/DEFECT_LIBRARY_P2.md", "type": "document", "description": "Empty defect library — initialized for Part 2 discoveries" },
+        { "file": "knowledge/CURRENT_BASELINES_P2.md", "type": "document", "description": "SHA-256 hashes for all 13 runtime-critical files (populated post-M1.6)" },
+        { "file": "knowledge/REVISION_HISTORY_P2.md", "type": "document", "description": "Phase 1 closeout entry (created at M1.7)" },
+        { "file": "foundation/EXAM_BLUEPRINT_P2.md", "type": "document", "description": "Full Part 2 exam blueprint: 6 domains, 44 LOS statements" },
+        { "file": "foundation/FORMULA_MASTER_P2.md", "type": "document", "description": "40+ Part 2 formulas with authority citations (CAPM, WACC, NPV, DuPont, EOQ, COSO ERM, etc.)" },
+        { "file": ".opencode/plugins/governance-guard.js", "type": "code", "description": "10-rule governance guard (9 reused Part 1 rules + Rule 10 cross-part boundary)" },
+        { "file": "scripts/test_governance_guard.js", "type": "code", "description": "50+ test governance guard test suite" },
+        { "file": "scripts/validators/ExplanationValidator_P2.js", "type": "code", "description": "String-aware brace-matcher validator (forked from Part 1)" },
+        { "file": "scripts/validators/DomainValidator_P2.js", "type": "code", "description": "Part 2 domain-specific validation (Domain A-F enums)" },
+        { "file": "scripts/validators/FormulaAuthorityValidator_P2.js", "type": "code", "description": "Cross-checks formula citations against Part 2 authority references" },
+        { "file": "scripts/validate_p2.js", "type": "code", "description": "Validation orchestrator — chains all Part 2 validators" },
+        { "file": "scripts/compare_hash_p2.js", "type": "code", "description": "Compares runtime hashes against CURRENT_BASELINES_P2.md" },
+        { "file": "pack_p2_a.js", "type": "data", "description": "Skeleton — Domain A (Financial Statement Analysis), 500 items target" },
+        { "file": "pack_p2_b.js", "type": "data", "description": "Skeleton — Domain B (Corporate Finance), 500 items target" },
+        { "file": "pack_p2_c.js", "type": "data", "description": "Skeleton — Domain C (Decision Analysis), 500 items target" },
+        { "file": "pack_p2_d.js", "type": "data", "description": "Skeleton — Domain D (Risk Management) + E (Investment Decisions), 500 items target" },
+        { "file": "pack_p2_e.js", "type": "data", "description": "Skeleton — Domain F (Professional Ethics) + Cross-domain, 500 items target" },
+        { "file": "case_pack_p2_1.js", "type": "data", "description": "Skeleton — 25 cases (A:6, B:5, C:6, D:3, E:3, F:2)" },
+        { "file": "case_pack_p2_2.js", "type": "data", "description": "Skeleton — 25 cases (A:4, B:5, C:6, D:3, E:2, F:5)" },
+        { "file": "case_pack_p2_3.js", "type": "data", "description": "Skeleton — 25 cases (A:5, B:5, C:6, D:2, E:2, F:5)" },
+        { "file": "app.js", "type": "code", "description": "Exam engine — forked from Part 1, adapted for Part 2 pack/case config" },
+        { "file": "styles.css", "type": "code", "description": "Application stylesheets (adapted from Part 1)" },
+        { "file": "index_updated.html", "type": "code", "description": "Application entry point (adapted from Part 1)" }
+      ],
+      "dependencies": [
+        "P2-001 blueprint approved (upstream)",
+        "Part 1 repository accessible for fork/adoption of governance docs, validators, and app.js",
+        "Node.js runtime environment available",
+        "Git remote set up for CMA_Part_2_2026 repository"
+      ],
+      "risk_factors": [
+        {
+          "risk": "Governance guard Rule 10 (cross-part boundary) design complexity",
+          "severity": "Medium",
+          "mitigation": "Use regex-based detection (P1- prefix, Part 1 domain topics). Accept 5% false-positive tolerance for edge cases. Refine during Phase 2 as edge cases emerge."
+        },
+        {
+          "risk": "app.js fork introduces regression bugs",
+          "severity": "High",
+          "mitigation": "Diff app.js against Part 1 baseline (SHA-256). Confirm all changes are config-only (pack name array, QID/CaseID regex patterns, domain label maps). No logic changes to scoring, rendering, or session management. Run Part 1 test suite on forked app.js before accepting."
+        },
+        {
+          "risk": "FORMULA_MASTER_P2.md misses critical Part 2 formulas",
+          "severity": "Medium",
+          "mitigation": "Cross-reference against IMA CSO Appendix A (all 44 LOS statements). Peer review by domain expert before Phase 2 starts. Accept patches during content authoring (formulas discovered during question writing)."
+        },
+        {
+          "risk": "CURRENT_BASELINES_P2.md hash instability during Phase 1",
+          "severity": "Low",
+          "mitigation": "Defer hash population to M1.6 (end of Phase 1 after all files stabilized). No certification ops depend on baselines until Phase 3."
+        }
+      ],
+      "verification_method": "Independent Phase 1 audit by governance-validator agent: verify all 7 exit criteria, run validate_p2.js on all skeletons (expect 0 errors), confirm governance guard test suite 50+/50+ PASS, verify all 13 CURRENT_BASELINES_P2.md hashes match live files. Tag repository v0.1.0-foundation."
+    },
+    {
+      "phase": 2,
+      "name": "Content Authoring — MCQs",
+      "weeks": "3-10",
+      "duration_weeks": 8,
+      "description": "Sequential authoring of all 2,500 MCQs across 5 packs. Each pack undergoes quality gate review before the next pack begins. Authoring order optimized for domain dependencies and difficulty progression.",
+      "blueprint_phases_absorbed": ["Phase 1: Foundation Content (Weeks 2-4)", "Phase 2: Core Content (Weeks 5-8)", "Phase 3: Specialized Content (Weeks 9-10)"],
+      "entry_criteria": [
+        "Phase 1 gate review passed (v0.1.0-foundation tagged)",
+        "All governance documents complete and versioned",
+        "Governance guard (all 10 rules) active and tested",
+        "FORMULA_MASTER_P2.md contains 40+ formulas required for Pack A (Domain A) authoring",
+        "app.js skeleton loads all 5 empty packs without errors",
+        "Validation scripts pass on empty skeletons (0 errors baseline)",
+        "Authoring guidelines documented: single-object JSON format, EW[CC] always empty, no DL-013 boilerplate, per-item difficulty justification"
+      ],
+      "exit_criteria": [
+        "All 5 packs contain exactly 500 items each (2,500 total verified by grep count)",
+        "All 2,500 items parse as valid single-object JSON items (no dual-block architecture)",
+        "All items carry P2-{Section}-{NNN} QID format with no duplicates across all 5 packs",
+        "Each pack passes its quality gate: DL-008 violations 0, DL-013 boilerplate 0, DL-026 empty distractor slots 0",
+        "Difficulty distribution per pack meets blueprint targets (±3% tolerance per tier)",
+        "Cognitive level distribution per pack meets blueprint targets (±3% tolerance per tier)",
+        "All 2,500 items have question_state 'Unprocessed' (not yet certified — Phase 3 handles certification)",
+        "Cross-pack QID uniqueness verified (no P2-A-001 in both Pack A and Pack D)",
+        "app.js renders all 2,500 items without JavaScript errors (full MCQ simulation passes)",
+        "validate_p2.js: 0 structural errors, warnings tracked but non-blocking for Phase 2 exit"
+      ],
+      "milestones": [
+        {
+          "name": "M2.1 — Pack A Complete (Domain A: Financial Statement Analysis)",
+          "week": 4,
+          "day": "7",
+          "description": "500 items authored for Domain A covering all 9 LOS (A.1–A.9): ratio computation, DuPont analysis, leverage, sustainable growth rate, earnings quality, comparative analysis. Item distribution: 425 select, 40 numeric, 20 multi, 10 fill, 5 match. Difficulty: 75 Easy, 100 Mod-Easy, 150 Mod, 125 Diff, 50 Very Diff.",
+          "verification": "grep -c '\"QuestionID\"' pack_p2_a.js returns 500. JSON.parse validates clean. validate_p2.js on Pack A: 0 structural errors. Governance guard: 0 DL-008, 0 DL-013, 0 DL-026. Difficulty distribution within ±3% of targets. All 9 LOS have ≥40 items each.",
+          "deliverables": ["pack_p2_a.js (500 items)"]
+        },
+        {
+          "name": "M2.2 — Quality Gate A",
+          "week": 4,
+          "day": "7",
+          "description": "Formal quality gate review for Pack A. Independent auditor verifies all 500 items for: single-object architecture compliance, DL-008 absence, DL-013 absence, DL-026 absence, correct QID format, no Part 1 topic contamination. Any finding blocks Pack C start until resolved.",
+          "verification": "Independent audit report confirms 0 critical findings. Formula cross-check: all calculation items trace formulas to FORMULA_MASTER_P2.md entries. Authority cross-check: all explanation references cite appropriate Part 2 authorities (FASB ASC, SEC, IFRS). Gate signed off before any Pack C items authored.",
+          "deliverables": ["reports/quality_gates/PACK_A_QUALITY_GATE_REPORT.md"]
+        },
+        {
+          "name": "M2.3 — Pack C Complete (Domain C: Decision Analysis)",
+          "week": 6,
+          "day": "7",
+          "description": "500 items authored for Domain C covering all 7 LOS (C.1–C.7): CVP analysis, marginal analysis, pricing, relevant costing, product mix, decision under uncertainty, make-vs-buy. Highest calculation intensity — 55% numeric/calculation items. Cognitive target: 50% Apply level.",
+          "verification": "grep count 500. JSON parse clean. validate_p2.js: 0 errors. Difficulty: C.1 items predominantly Easy-Moderate (foundational), C.5-C.7 items predominantly Difficult (multi-step). All calculation items independently recalculated (answer-key dry run).",
+          "deliverables": ["pack_p2_c.js (500 items)"]
+        },
+        {
+          "name": "M2.4 — Quality Gate C",
+          "week": 6,
+          "day": "7",
+          "description": "Formal quality gate for Pack C. Emphasis on numerical integrity — every calculation item must have independently verified answer key. Cross-check formulas against FORMULA_MASTER_P2.md for Domain C section (breakeven, CM, margin of safety, DOL, expected value).",
+          "verification": "100% of calculation-item answers independently recomputed and confirmed. 0 arithmetic errors. All CVP items pass: breakeven = FC/CM_unit, target profit = (FC+TP)/CM_unit. No Part 1 variance analysis contamination. Gate signed off.",
+          "deliverables": ["reports/quality_gates/PACK_C_QUALITY_GATE_REPORT.md"]
+        },
+        {
+          "name": "M2.5 — Pack B Complete (Domain B: Corporate Finance)",
+          "week": 8,
+          "day": "7",
+          "description": "500 items authored for Domain B covering all 9 LOS (B.1–B.9): risk/return, CAPM, WACC, working capital, capital structure, financing, dividends, M&A, international finance. High formula density — WACC, CAPM, EOQ, CCC, FX calculations.",
+          "verification": "grep count 500. JSON parse clean. validate_p2.js: 0 errors. All WACC items: component costs correctly computed (after-tax cost of debt, CAPM for equity, dividend discount for preferred). All CAPM items: beta interpretation correct. Cash conversion cycle: DIO+DSO−DPO arithmetic verified.",
+          "deliverables": ["pack_p2_b.js (500 items)"]
+        },
+        {
+          "name": "M2.6 — Quality Gate B",
+          "week": 8,
+          "day": "7",
+          "description": "Formal quality gate for Pack B. Authority cross-check: CAPM (Sharpe-Lintner), WACC formula, Modigliani-Miller propositions, Basel III references. Cross-part boundary check: no Part 1 cost-of-capital concepts (Part 2 WACC is corporate-level, not divisional).",
+          "verification": "All 9 LOS have ≥40 items. Authority references verified: no Part 1 COSO IC (2013) citations in Domain B items. EOQ formula: √(2DS/H) — all variables correctly sourced from stems. Gate signed off.",
+          "deliverables": ["reports/quality_gates/PACK_B_QUALITY_GATE_REPORT.md"]
+        },
+        {
+          "name": "M2.7 — Pack D Complete (Domains D+E: Risk Management + Investment Decisions)",
+          "week": 9,
+          "day": "7",
+          "description": "500 items authored: 250 Domain D (D.1–D.5 — COSO ERM 2017, risk identification, response strategies, ERM integration) + 250 Domain E (E.1–E.6 — NPV, IRR, payback, PI, DCF, sensitivity, real options). Two-domain split requires careful domain boundary enforcement.",
+          "verification": "grep count 500 (250 Section D + 250 Section E). JSON parse clean. validate_p2.js: 0 errors. Domain D items: COSO ERM 2017 references (5 components, 20 principles). Domain E items: NPV formula correct (Σ CF_t/(1+r)^t − I₀), MACRS tables from IRS Pub 946, after-tax cash flow formula verified.",
+          "deliverables": ["pack_p2_d.js (500 items, 250 D + 250 E)"]
+        },
+        {
+          "name": "M2.8 — Quality Gate D",
+          "week": 9,
+          "day": "7",
+          "description": "Formal quality gate for Pack D. Dual-domain pack requires verification that no Domain D item references Domain E concepts (and vice versa) unless intentionally cross-domain. COSO ERM 2017 references verified against actual framework component names.",
+          "verification": "Domain D: all risk-formula items (Expected Loss = P × I, Risk Score = L × S) independently recomputed. Domain E: all NPV items verified (positive NPV = accept, negative = reject). MACRS schedules match IRS Pub 946. EAA formula for unequal-life projects verified. Gate signed off.",
+          "deliverables": ["reports/quality_gates/PACK_D_QUALITY_GATE_REPORT.md"]
+        },
+        {
+          "name": "M2.9 — Pack E Complete (Domain F + Cross-Domain: Professional Ethics + Integration)",
+          "week": 10,
+          "day": "7",
+          "description": "500 items authored: 375 Domain F (F.1–F.7 — IMA Ethics, fraud triangle, SOX, audit committees, FCPA, sustainability) + 125 Cross-domain items (multi-domain integration: e.g., ethics + investment decision, ratio analysis + risk assessment). Cross-domain items test Part 2's integrative reasoning demand.",
+          "verification": "grep count 500 (375 Section F + 125 Section X cross-domain). JSON parse clean. validate_p2.js: 0 errors. Domain F items: IMA Statement of Ethical Professional Practice (4 standards) cited correctly. Fraud Triangle elements (pressure, opportunity, rationalization) correctly attributed. Cross-domain items: tagged with array SectionTags ['F','B'] etc.",
+          "deliverables": ["pack_p2_e.js (500 items, 375 F + 125 cross-domain)"]
+        },
+        {
+          "name": "M2.10 — Quality Gate E + Phase 2 Gate Review",
+          "week": 10,
+          "day": "7",
+          "description": "Final pack quality gate plus full Phase 2 closeout. Cross-pack audit: verify 2,500 unique QIDs (no duplicates), verify pack-level difficulty and cognitive distributions sum to blueprint targets pool-wide, run full validate_p2.js on all 5 packs simultaneously.",
+          "verification": "Pool-wide: 2,500 QIDs confirmed unique. Difficulty: Easy 375 (15%), Mod-Easy 500 (20%), Mod 750 (30%), Diff 625 (25%), V.Diff 250 (10%) — all ±3%. Cognitive: Remember 300 (12%), Understand 550 (22%), Apply 1050 (42%), Analyze 450 (18%), Evaluate 150 (6%). 0 structural errors. app.js renders full 2,500-item MCQ pool. Git tag: v0.2.0-content-authored.",
+          "deliverables": [
+            "reports/quality_gates/PACK_E_QUALITY_GATE_REPORT.md",
+            "reports/quality_gates/PHASE2_CROSS_PACK_GATE_REPORT.md",
+            "Git tag: v0.2.0-content-authored"
+          ]
+        }
+      ],
+      "deliverables": [
+        { "file": "pack_p2_a.js", "type": "data", "description": "Domain A: 500 items, Financial Statement Analysis" },
+        { "file": "pack_p2_c.js", "type": "data", "description": "Domain C: 500 items, Decision Analysis" },
+        { "file": "pack_p2_b.js", "type": "data", "description": "Domain B: 500 items, Corporate Finance" },
+        { "file": "pack_p2_d.js", "type": "data", "description": "Domain D+E: 500 items (250 Risk + 250 Investment)" },
+        { "file": "pack_p2_e.js", "type": "data", "description": "Domain F + Cross: 500 items (375 Ethics + 125 Cross-domain)" },
+        { "file": "reports/quality_gates/PACK_A_QUALITY_GATE_REPORT.md", "type": "document", "description": "Pack A quality gate audit report" },
+        { "file": "reports/quality_gates/PACK_C_QUALITY_GATE_REPORT.md", "type": "document", "description": "Pack C quality gate audit report" },
+        { "file": "reports/quality_gates/PACK_B_QUALITY_GATE_REPORT.md", "type": "document", "description": "Pack B quality gate audit report" },
+        { "file": "reports/quality_gates/PACK_D_QUALITY_GATE_REPORT.md", "type": "document", "description": "Pack D quality gate audit report" },
+        { "file": "reports/quality_gates/PACK_E_QUALITY_GATE_REPORT.md", "type": "document", "description": "Pack E quality gate audit report" },
+        { "file": "reports/quality_gates/PHASE2_CROSS_PACK_GATE_REPORT.md", "type": "document", "description": "Phase 2 cross-pack pool-wide audit report" }
+      ],
+      "dependencies": [
+        "Phase 1 complete — governance guard active, FORMULA_MASTER_P2.md complete, app.js functional, validation scripts ready",
+        "Pack A must complete and pass Quality Gate A before Pack C authoring begins (sequential dependency)",
+        "Pack C must complete and pass Quality Gate C before Pack B authoring begins",
+        "Pack B must complete and pass Quality Gate B before Pack D authoring begins",
+        "Pack D must complete and pass Quality Gate D before Pack E authoring begins",
+        "Each quality gate is blocking — no pack authoring starts with an unresolved finding from prior pack"
+      ],
+      "risk_factors": [
+        {
+          "risk": "Authoring pipeline produces DL-013 boilerplate despite quality gate rules",
+          "severity": "High",
+          "mitigation": "Governance guard Rule 2 and Rule 6 active from first write. Pre-commit hook: scan for 'represents a plausible misconception' and 'A candidate may select this option by misapplying' — block commit if detected. Per-item authoring checklist includes boilerplate scan."
+        },
+        {
+          "risk": "Difficulty labels inflated (DL-031 pattern) — definition-match items labeled Moderate when Easy",
+          "severity": "High",
+          "mitigation": "Per-item justification required for any item labeled Moderate or above. Rule: if stem-CorrectChoice lexical overlap > 50%, default difficulty is Easy unless distractors require genuine Application-level discernment. Quality gate audit includes random-sample difficulty calibration check."
+        },
+        {
+          "risk": "Dual-block architecture accidentally introduced in late packs",
+          "severity": "Medium",
+          "mitigation": "Pre-commit validation: every item must be a single JSON object (no paired-object pattern). scan_dualblock_p2.js runs on each pack before quality gate. Single-object is enforced by template — authoring tools emit single objects only."
+        },
+        {
+          "risk": "Pack E cross-domain items accidentally test Part 1 concepts (e.g., cost allocation instead of corporate finance + ethics)",
+          "severity": "Medium",
+          "mitigation": "Cross-domain items tagged with explicit SectionTags array ['F','B'] etc. Cross-part boundary validator (Rule 10) flags P1- terminology. Domain validator rejects Section A/C/D/E/F from Part 1's topic registry."
+        },
+        {
+          "risk": "Authoring throughput falls below target (500 items per 2 weeks = 36 items/day)",
+          "severity": "Medium",
+          "mitigation": "Monitor item count daily during each pack window. If behind by >15% at midpoint (e.g., <250 items by end of Week 3 for Pack A), escalate for additional authoring resources. Accept <500 items if quality is maintained (minimum 475 per pack, deficit addressed in Phase 3)."
+        },
+        {
+          "risk": "Numeric answer-key errors (DL-030) in calculation-heavy packs (C, B, E)",
+          "severity": "Critical",
+          "mitigation": "Every numeric item must be independently recalculated by a second agent before quality gate. Pack C (highest calculation density) requires 100% double-verification. Pack B WACC/CAPM items require formula-substitution trace in explanation."
+        }
+      ],
+      "verification_method": "Phase 2 closeout audit: run validate_p2.js on all 5 packs simultaneously — expect 0 structural errors. grep -c '\"QuestionID\"' across all 5 packs must sum to exactly 2,500. Cross-pack QID uniqueness scan returns 0 duplicates. Difficulty and cognitive distributions verified pool-wide against blueprint targets (±3%). app.js renders all 2,500 items without JavaScript console errors. CURRENT_BASELINES_P2.md updated with pack hash baselines. Tag v0.2.0-content-authored."
+    },
+    {
+      "phase": 3,
+      "name": "Certification & Cases",
+      "weeks": "11-15",
+      "duration_weeks": 5,
+      "description": "Six-dimension AI verification of all 2,500 MCQs. Authoring, certification, and quality assurance of 75 case studies across 3 case packs. Blueprint coverage analysis and difficulty distribution audit. Target: 95%+ items certified (minimum 2,375/2,500).",
+      "blueprint_phases_absorbed": ["Phase 4: Certification Pipeline (Weeks 11-13)", "Phase 5: Case Studies (Weeks 14-17)"],
+      "entry_criteria": [
+        "Phase 2 completed — all 2,500 items authored, all 5 quality gates passed",
+        "All 2,500 items carry question_state 'Unprocessed'",
+        "All 5 pack baselines recorded in CURRENT_BASELINES_P2.md",
+        "Governance guard all 10 rules active and verified post-authoring (no rules disabled during Phase 2)",
+        "Case study architecture documented (CaseID format, exhibit types, cognitive progression rules)",
+        "Case pack skeletons exist and parse correctly"
+      ],
+      "exit_criteria": [
+        "Minimum 2,375 items (95%) certified — question_state 'Certified' with six-dimension AI verification at HIGH confidence",
+        "All Certified items pass governance guard Rule 2 (0 DL-008), Rule 6 (0 DL-026), and Rule 10 (0 cross-part contamination)",
+        "All 75 case studies authored with complete exhibits, items, and explanations",
+        "Case cognitive progression enforced: Apply (items 1-2) → Analyze (3-4) → Evaluate (5) → Synthesize (6, optional)",
+        "Blueprint coverage: every LOS (all 44) has ≥15 Certified items and ≥2 case items",
+        "Difficulty distribution audit passed: pool-wide distribution within ±2% of blueprint targets",
+        "All case exhibits have Headers + Rows (no Body-only DL-023 pattern)",
+        "Case certification: all case items pass six-dimension verification at HIGH confidence",
+        "validate_p2.js: 0 errors on all MCQ packs AND all case packs combined",
+        "Pre-certification safety check: 0 known-defective QIDs in learner pool"
+      ],
+      "milestones": [
+        {
+          "name": "M3.1 — Certification Pipeline Launch",
+          "week": 11,
+          "day": "1-3",
+          "description": "Launch six-dimension AI verification pipeline for all 2,500 items. Process in certification batches (≤30 items per batch per governance guard Rule 5). Prioritize Pack A (Domain A) and Pack C (Domain C) first — highest exam weight (20% + 25% = 45%).",
+          "verification": "Certification pipeline operational. Batch 1 (Pack A, items P2-A-001 through P2-A-030) completes all 6 verification dimensions. Any LOW or MODERATE confidence dimensions flagged for editorial queue. Pipeline throughput confirmed: ~60 items/hour.",
+          "deliverables": ["scripts/certify_p2.js (certification pipeline orchestrator)"]
+        },
+        {
+          "name": "M3.2 — 50% Certified Threshold",
+          "week": 12,
+          "day": "3-4",
+          "description": "Cross the 1,250 certified mark (50% of pool). Packs A and C fully certified (1,000 items). Pack B certification in progress. Review defect patterns found during certification — classify into DEFECT_LIBRARY_P2.md if any new defect classes discovered.",
+          "verification": "grep -c '\"question_state\": \"Certified\"' across all 5 packs returns ≥1,250. Pack A: 500 Certified. Pack C: 500 Certified. Pack B: ≥250 Certified. DEFECT_LIBRARY_P2.md: any new defect patterns documented with DL-P2-NNN IDs. 0 Certified items carry DL-008.",
+          "deliverables": [
+            "reports/certification/CERTIFICATION_50PCT_REPORT.md",
+            "knowledge/DEFECT_LIBRARY_P2.md (updated with Phase 3 findings)"
+          ]
+        },
+        {
+          "name": "M3.3 — Case Pack 1 Complete",
+          "week": 12,
+          "day": "5-7",
+          "description": "Author 25 cases for case_pack_p2_1.js: 6 Domain A (ratio analysis, DuPont, comparative statements), 5 Domain B (WACC scenario, working capital management), 6 Domain C (CVP decision, make-or-buy, pricing), 3 Domain D (ERM implementation), 3 Domain E (capital budgeting), 2 Domain F (ethics dilemma).",
+          "verification": "25 cases parse correctly. Each case has 5-6 items (total ~133). All exhibits use Headers + Rows (no Body-only). Cognitive progression enforced per case. CaseID format: CBQ2-{Section}{Seq}. All items carry CaseID + ItemID metadata.",
+          "deliverables": ["case_pack_p2_1.js (25 cases, ~133 items)"]
+        },
+        {
+          "name": "M3.4 — Case Pack 2 Complete",
+          "week": 13,
+          "day": "5-7",
+          "description": "Author 25 cases for case_pack_p2_2.js: 4 Domain A, 5 Domain B, 6 Domain C, 3 Domain D, 2 Domain E, 5 Domain F. Higher Domain F allocation reflects ethics integration demand.",
+          "verification": "25 cases parse correctly. ~133 items. Exhibit data consumption rule enforced: every exhibit row/column consumed by ≥1 item. Financial statement exhibits internally consistent (A = L + E, subtotals sum). Case-level metadata: CompanyName, Stakeholder, BusinessFunction all populated.",
+          "deliverables": ["case_pack_p2_2.js (25 cases, ~133 items)"]
+        },
+        {
+          "name": "M3.5 — Case Pack 3 Complete",
+          "week": 14,
+          "day": "5-7",
+          "description": "Author final 25 cases for case_pack_p2_3.js: 5 Domain A, 5 Domain B, 6 Domain C, 2 Domain D, 2 Domain E, 5 Domain F. Include cross-domain cases (e.g., ethics + capital budgeting, risk assessment + financial analysis).",
+          "verification": "All 75 cases authored across 3 packs. Total items ~400. All cross-domain cases tagged with dual SectionTags. Exhibit types match domain-specific blueprint (§3). No decorative data — every exhibit element consumed.",
+          "deliverables": ["case_pack_p2_3.js (25 cases, ~134 items)"]
+        },
+        {
+          "name": "M3.6 — 95% Certified Threshold",
+          "week": 14,
+          "day": "7",
+          "description": "Cross the 2,375 certified mark. Packs A, B, C, D, E all at ≥95% certified. Remaining ≤125 items in Editorial Queue (low-confidence findings, structural fixes needed, or flagged for re-authoring). No item in learner pool carries DL-008, DL-013, DL-026, or cross-part contamination.",
+          "verification": "grep count 'Certified' across all packs ≥2,375 (95%). Editorial Queue items documented with specific remediation plans and target dates. 0 Certified items in DEFECT_LIBRARY_P2.md with Critical severity.",
+          "deliverables": [
+            "reports/certification/CERTIFICATION_95PCT_REPORT.md",
+            "reports/certification/EDITORIAL_QUEUE_P2.md (≤125 items)"
+          ]
+        },
+        {
+          "name": "M3.7 — Blueprint Coverage Analysis",
+          "week": 15,
+          "day": "1-3",
+          "description": "Map every Certified item and case item to specific LOS statements. Identify coverage gaps — any LOS with <15 Certified items or <2 case items flagged for supplemental authoring. Generate coverage heatmap.",
+          "verification": "All 44 LOS have ≥15 Certified items and ≥2 case items. Coverage heatmap generated. Gap report: any LOS below threshold has a remediation plan with specific QID targets. No LOS at 0 coverage (critical failure).",
+          "deliverables": [
+            "reports/coverage/BLUEPRINT_COVERAGE_HEATMAP_P2.md",
+            "reports/coverage/BLUEPRINT_COVERAGE_GAP_REPORT_P2.md"
+          ]
+        },
+        {
+          "name": "M3.8 — Difficulty Distribution Audit",
+          "week": 15,
+          "day": "3-5",
+          "description": "Pool-wide difficulty calibration audit across all 2,500 + ~400 case items. Check for DL-031 pattern (definition-match items labeled Moderate). Verify per-domain difficulty matches domain Bloom's targets. Recalibrate any systematic mislabeling.",
+          "verification": "Pool-wide distribution: Easy 12-18%, Mod-Easy 18-22%, Moderate 27-33%, Difficult 22-28%, Very Difficult 8-12%. Per-domain distributions match blueprint targets (±3%). DL-031 scan: <5% of items flagged for recalibration. Case items: no uniform 'Moderate' labeling (DL-032 prevented).",
+          "deliverables": [
+            "reports/calibration/DIFFICULTY_DISTRIBUTION_AUDIT_P2.md",
+            "reports/calibration/DIFFICULTY_PER_DOMAIN_P2.md"
+          ]
+        },
+        {
+          "name": "M3.9 — Phase 3 Gate Review",
+          "week": 15,
+          "day": "5-7",
+          "description": "Formal Phase 3 closeout. Verify all exit criteria. Certification completeness audit. Case study quality audit. Blueprint coverage sign-off. Tag repository v0.3.0-certified.",
+          "verification": "All 9 exit criteria met. Minimum 2,375 Certified items confirmed. All 75 cases authored and certified. Blueprint coverage: all 44 LOS above minimum thresholds. Difficulty distribution within ±2% pool-wide. validate_p2.js: 0 errors. Git tag: v0.3.0-certified.",
+          "deliverables": [
+            "reports/phase_gates/PHASE3_GATE_REVIEW_REPORT.md",
+            "Git tag: v0.3.0-certified"
+          ]
+        }
+      ],
+      "deliverables": [
+        { "file": "scripts/certify_p2.js", "type": "code", "description": "Six-dimension AI verification pipeline orchestrator" },
+        { "file": "case_pack_p2_1.js", "type": "data", "description": "25 cases (~133 items): A:6, B:5, C:6, D:3, E:3, F:2" },
+        { "file": "case_pack_p2_2.js", "type": "data", "description": "25 cases (~133 items): A:4, B:5, C:6, D:3, E:2, F:5" },
+        { "file": "case_pack_p2_3.js", "type": "data", "description": "25 cases (~134 items): A:5, B:5, C:6, D:2, E:2, F:5" },
+        { "file": "reports/certification/CERTIFICATION_50PCT_REPORT.md", "type": "document", "description": "Midpoint certification progress report at 1,250 items" },
+        { "file": "reports/certification/CERTIFICATION_95PCT_REPORT.md", "type": "document", "description": "Final certification report at 2,375+ items" },
+        { "file": "reports/certification/EDITORIAL_QUEUE_P2.md", "type": "document", "description": "Track ≤125 non-certified items with remediation plans" },
+        { "file": "reports/coverage/BLUEPRINT_COVERAGE_HEATMAP_P2.md", "type": "document", "description": "LOS coverage heatmap across all 44 learning outcomes" },
+        { "file": "reports/coverage/BLUEPRINT_COVERAGE_GAP_REPORT_P2.md", "type": "document", "description": "Coverage gaps with remediation targets" },
+        { "file": "reports/calibration/DIFFICULTY_DISTRIBUTION_AUDIT_P2.md", "type": "document", "description": "Pool-wide difficulty calibration audit results" },
+        { "file": "reports/calibration/DIFFICULTY_PER_DOMAIN_P2.md", "type": "document", "description": "Per-domain difficulty vs. Bloom's target comparison" },
+        { "file": "reports/phase_gates/PHASE3_GATE_REVIEW_REPORT.md", "type": "document", "description": "Phase 3 closeout audit with all exit criteria verification" },
+        { "file": "knowledge/DEFECT_LIBRARY_P2.md", "type": "document", "description": "Updated with any new defect classes discovered during certification" }
+      ],
+      "dependencies": [
+        "Phase 2 complete — all 2,500 items authored with quality gates passed",
+        "All 5 MCQ packs parse correctly and pass structural validation",
+        "Case pack skeleton files exist (created in Phase 1)",
+        "FORMULA_MASTER_P2.md complete (required for formula authority cross-check during certification)",
+        "CAQS_P2_v1.0.md defines six-dimension verification criteria",
+        "Certification pipeline cannot certify items with governance guard violations (Rule 2, 6, 10 are BLOCK)"
+      ],
+      "risk_factors": [
+        {
+          "risk": "Certification throughput insufficient — 2,500 items at 60/hr = 42 hours of processing",
+          "severity": "Medium",
+          "mitigation": "Batch-process via multiple parallel certification agents. Pack A and Pack C can certify in parallel (different files). Governance guard Rule 5 (≤30 items/batch) governs batch size but not parallelism. Target: 3 parallel certification streams × 60 items/hr = 180 items/hr → 14 hours total."
+        },
+        {
+          "risk": "High number of items fail certification (LOW confidence on ≥2 dimensions)",
+          "severity": "High",
+          "mitigation": "If >10% of items (250) fail certification, escalate to architecture review. Root cause likely in authoring pipeline or formula errors. Stop certification and re-audit affected packs before resuming. Editorial Queue items tracked with remediation plans."
+        },
+        {
+          "risk": "Case authoring introduces DL-023 pattern (Body instead of Headers+Rows on table exhibits)",
+          "severity": "Medium",
+          "mitigation": "Case exhibit validator checks for Headers + Rows presence on all Type: 'table' exhibits. Pre-commit hook blocks Body-only exhibits. Template enforcement: case authoring tool emits Headers + Rows, never Body."
+        },
+        {
+          "risk": "Case cognitive progression not enforced — items at wrong Bloom's levels for their position",
+          "severity": "Medium",
+          "mitigation": "Progression validator checks each case: items 1-2 must be Apply (calculation), items 3-4 must be Analyze (interpretation), item 5 must be Evaluate (judgment). Flag any case that deviates for human review."
+        },
+        {
+          "risk": "Blueprint coverage gaps discovered late — some LOS underserved",
+          "severity": "High",
+          "mitigation": "Run preliminary coverage scan at M3.2 (50% certified — 1,250 items). By midpoint, coverage pattern should be visible. Adjust remaining certification/authoring to fill gaps. Late discovery (Week 15) may require extension into Phase 4."
+        },
+        {
+          "risk": "Difficulty audit reveals systematic DL-031 inflation across multiple packs",
+          "severity": "Medium",
+          "mitigation": "Run difficulty calibration sample audit during Phase 2 quality gates (not deferred to Phase 3). Catch inflation early. Per-item justification requirement during authoring prevents most DL-031 occurrences. Audit at M3.8 is confirmatory, not corrective."
+        }
+      ],
+      "verification_method": "Phase 3 closeout audit: independent governance agent verifies all 9 exit criteria. grep count 'Certified' across all packs ≥2,375. Random sample of 50 Certified items spot-checked for six-dimension verification accuracy. All 75 cases independently audited for cognitive progression. Blueprint coverage: every LOS verified against raw item-to-LOS mapping (not self-reported). Difficulty audit: sample of 100 items independently difficulty-rated by domain expert. Tag v0.3.0-certified."
+    },
+    {
+      "phase": 4,
+      "name": "Integration & Delivery",
+      "weeks": "16-18",
+      "duration_weeks": 3,
+      "description": "End-to-end simulation testing, cross-part collision detection, governance guard final sweep, performance testing, repository freeze, and release. Transforms the certified content pool into a deliverable examination platform.",
+      "blueprint_phases_absorbed": ["Phase 6: Integration & Polish (Week 18+)"],
+      "entry_criteria": [
+        "Phase 3 completed — ≥2,375 items Certified, 75 cases authored and certified",
+        "Blueprint coverage analysis passed — all 44 LOS above minimum thresholds",
+        "Difficulty distribution audit passed",
+        "Editorial Queue items documented with remediation plans (≤125 items, not blocking)",
+        "All pack and case baselines recorded in CURRENT_BASELINES_P2.md"
+      ],
+      "exit_criteria": [
+        "End-to-end simulation test passed: full 100-question exam (80 MCQ + 2 cases) runs without errors",
+        "Pre-delivery safety check: 0 known-defective QIDs in learner pool",
+        "Cross-part collision detection audit: 0 Part 2 items testing Part 1-exclusive concepts",
+        "Governance guard final compliance sweep: 0 Rule 2, 0 Rule 6, 0 Rule 10 violations on any Certified item",
+        "app.js integration test: all features functional (navigation, timer, calculator, review mode, scoring, session persistence, checkpoint recovery)",
+        "Performance benchmarks met: exam load <3s, question render <200ms, session save <500ms",
+        "Repository freeze: all pack/case files committed with final hashes, no further writes permitted",
+        "Release tagged: v1.0.0-release with complete changelog",
+        "Documentation finalized: AGENTS.md, REVISION_HISTORY_P2.md, README_P2.md all current",
+        "All governance guard tests pass (50+ tests, 0 failures)"
+      ],
+      "milestones": [
+        {
+          "name": "M4.1 — End-to-End Simulation Testing",
+          "week": 16,
+          "day": "1-4",
+          "description": "Execute full exam simulation: 100 questions (80 MCQs randomly drawn from Certified pool + 2 cases randomly selected from 75). Verify rendering, navigation, timer, calculator, answer submission, review mode, scoring accuracy, and session persistence. Test edge cases: session interrupted mid-exam, browser refresh, corrupted localStorage, timer expiry.",
+          "verification": "10 full simulations run (different random seeds). 0 JavaScript console errors. All 10 simulations score consistently (no malformed items encountered). Session restore works after simulated browser crash. Timer triggers auto-submit at expiry. Review mode shows correct/incorrect with explanations for all 100 items.",
+          "deliverables": [
+            "reports/integration/END_TO_END_SIMULATION_REPORT.md",
+            "reports/integration/SIMULATION_SCORES_10_RUNS.json"
+          ]
+        },
+        {
+          "name": "M4.2 — Cross-Part Collision Detection Audit",
+          "week": 16,
+          "day": "4-7",
+          "description": "Systematic scan of all 2,500 Part 2 items for Part 1 concept contamination. Verify: no Part 2 item tests standard costing, variance analysis, job-order costing, process costing, or any Part 1-exclusive LOS. Cross-reference Part 1 blueprint against Part 2 content using keyword + semantic analysis.",
+          "verification": "Automated scan: keyword match against Part 1-exclusive terms (standard cost, job order, process costing, equivalent units, FIFO inventory layer, LCM, internal control components aligned to COSO IC 2013). Manual spot-check: 50 items from high-risk domains (C, D, E). 0 confirmed cross-part contamination. Any false positives documented and explained.",
+          "deliverables": [
+            "reports/integration/CROSS_PART_COLLISION_AUDIT.md",
+            "reports/integration/CROSS_PART_KEYWORD_SCAN.json"
+          ]
+        },
+        {
+          "name": "M4.3 — Governance Guard Final Compliance Sweep",
+          "week": 17,
+          "day": "1-4",
+          "description": "Full compliance sweep on all Certified items (2,375+) against all 10 governance guard rules. Verify: Rule 2 (0 DL-008), Rule 3 (MASTER_QUESTION_REGISTRY_P2.md auto-generated, not hand-edited), Rule 5 (no batch-size violations), Rule 6 (0 DL-026 empty distractor slots), Rule 10 (0 cross-part contamination). Any violation blocks release.",
+          "verification": "All 10 rules verified against all 2,375+ Certified items. 0 BLOCK-level violations. WARN-level violations (Rules 1, 4) documented with remediation plans. Governance guard test suite: 50+ tests, 0 failures. CURRENT_BASELINES_P2.md hashes re-verified against all runtime files.",
+          "deliverables": [
+            "reports/governance/GOVERNANCE_GUARD_FINAL_SWEEP_REPORT.md",
+            "reports/governance/GOVERNANCE_GUARD_PER_RULE_BREAKDOWN.json"
+          ]
+        },
+        {
+          "name": "M4.4 — Performance & Load Testing",
+          "week": 17,
+          "day": "4-7",
+          "description": "Benchmark application performance against targets. Measure: initial load time (must be <3s), question render time (<200ms per question), session save latency (<500ms), memory usage during 100-question exam (<200MB), session restore from full checkpoint (<1s). Test with 2,500+ items loaded in memory.",
+          "verification": "All 5 performance metrics within targets across 5 consecutive runs. Memory profiling: no leaks during full exam cycle. Large-file parsing: pack_p2_c.js (Domain C — heaviest) parses in <500ms. Backup file verification: all pack/case file sizes <3MB each (reasonable for browser-based delivery).",
+          "deliverables": [
+            "reports/performance/PERFORMANCE_BENCHMARK_REPORT.md",
+            "reports/performance/PERFORMANCE_PROFILES_5_RUNS.json"
+          ]
+        },
+        {
+          "name": "M4.5 — Repository Freeze & Release Tagging",
+          "week": 18,
+          "day": "1-4",
+          "description": "Execute repository freeze protocol: final hash capture for all runtime files, backup all pack/case files to timestamped archives, verify no uncommitted changes, confirm root directory hygiene (no temp files, scripts, or reports in root). Tag v1.0.0-release with full changelog. Generate release artifacts.",
+          "verification": "git status shows clean working tree. Root directory contains only permitted files (index_updated.html, app.js, styles.css, 5 pack files, 3 case files, package.json, package-lock.json, opencode.json, VERSION, AGENTS.md). All hashes match CURRENT_BASELINES_P2.md. Backups created for all 8 pack/case files. Git tag v1.0.0-release pushed.",
+          "deliverables": [
+            "Git tag: v1.0.0-release",
+            "CHANGELOG_P2.md",
+            "backups/release-v1.0.0/ (all 8 pack/case file backups)"
+          ]
+        },
+        {
+          "name": "M4.6 — Documentation Finalization",
+          "week": 18,
+          "day": "4-7",
+          "description": "Finalize all project documentation. Write README_P2.md (setup instructions, architecture overview, contribution guide). Finalize REVISION_HISTORY_P2.md with Phase 4 closeout entry and full release summary. Update AGENTS.md with delivery-phase standing instructions. Archive all session reports and close all open items.",
+          "verification": "README_P2.md: complete with setup, architecture, pack/case overview, certification stats, and contribution guidelines. REVISION_HISTORY_P2.md: final entry documents all 4 phases with before/after counts. DEFECT_LIBRARY_P2.md: all Open entries either Resolved or have Phase 4 disposition. No open items remain.",
+          "deliverables": [
+            "README_P2.md",
+            "knowledge/REVISION_HISTORY_P2.md (final entry)",
+            "knowledge/DEFECT_LIBRARY_P2.md (final disposition)"
+          ]
+        }
+      ],
+      "deliverables": [
+        { "file": "reports/integration/END_TO_END_SIMULATION_REPORT.md", "type": "document", "description": "Results of 10 full exam simulations with edge-case testing" },
+        { "file": "reports/integration/SIMULATION_SCORES_10_RUNS.json", "type": "data", "description": "Quantitative scores from 10 simulation runs" },
+        { "file": "reports/integration/CROSS_PART_COLLISION_AUDIT.md", "type": "document", "description": "Part 2 vs Part 1 concept boundary audit with findings" },
+        { "file": "reports/integration/CROSS_PART_KEYWORD_SCAN.json", "type": "data", "description": "Automated keyword scan results for Part 1 concept contamination" },
+        { "file": "reports/governance/GOVERNANCE_GUARD_FINAL_SWEEP_REPORT.md", "type": "document", "description": "Final 10-rule compliance sweep against all Certified items" },
+        { "file": "reports/governance/GOVERNANCE_GUARD_PER_RULE_BREAKDOWN.json", "type": "data", "description": "Per-rule violation counts and dispositions" },
+        { "file": "reports/performance/PERFORMANCE_BENCHMARK_REPORT.md", "type": "document", "description": "Performance benchmarking results against 5 target metrics" },
+        { "file": "reports/performance/PERFORMANCE_PROFILES_5_RUNS.json", "type": "data", "description": "Raw performance profiling data from 5 consecutive runs" },
+        { "file": "CHANGELOG_P2.md", "type": "document", "description": "Full release changelog from v0.1.0 through v1.0.0" },
+        { "file": "README_P2.md", "type": "document", "description": "Project README: setup, architecture, and contribution guide" },
+        { "file": "backups/release-v1.0.0/", "type": "data", "description": "Timestamped backups of all 8 pack/case files at release time" }
+      ],
+      "dependencies": [
+        "Phase 3 complete — ≥2,375 Certified items, 75 cases authored and certified",
+        "All pack/case files have stable baselines (no writes pending)",
+        "Governance guard active on all rules (Phase 1 M1.4)",
+        "app.js fully adapted for Part 2 simulation (Phase 1 M1.5)",
+        "Blueprint coverage analysis complete (Phase 3 M3.7)",
+        "Difficulty distribution audit complete (Phase 3 M3.8)"
+      ],
+      "risk_factors": [
+        {
+          "risk": "End-to-end simulation reveals rendering bugs in app.js for Part 2 content",
+          "severity": "High",
+          "mitigation": "app.js has been tested incrementally: skeleton (Phase 1), 2,500 MCQs (Phase 2), cases (Phase 3). By Phase 4, most rendering paths are exercised. Focus simulation on edge cases: cross-domain items with dual SectionTags, match-type questions, multi-select scoring. Any bug found at this stage is isolated — fix does not require re-certification."
+        },
+        {
+          "risk": "Cross-part collision audit discovers Part 1 concepts in Part 2 items — requires content fixes",
+          "severity": "High",
+          "mitigation": "Part 2 uses single-object architecture — fixes are mechanical (edit offending item, no dual-block coordination). Affected items move from Certified → Editorial Queue. Fixes must be re-verified before release. Budget 1 week buffer for this scenario."
+        },
+        {
+          "risk": "Performance benchmarks fail — pack parsing or rendering exceeds targets",
+          "severity": "Medium",
+          "mitigation": "Part 2 packs are same size as Part 1 (500 items each). Part 1 app.js already handles 500-item packs. Performance should be comparable. If parsing is slow, investigate string-aware brace-matcher efficiency. Defer non-critical optimizations to post-release."
+        },
+        {
+          "risk": "Governance guard final sweep finds violations that were missed in Phase 3 certification",
+          "severity": "Medium",
+          "mitigation": "Governance guard has been active since Phase 1 — violations should be near-zero by Phase 4. Any discovery indicates a guard rule gap or scan methodology error. Treat as governance incident: investigate root cause, fix guard if needed, remediate items, re-certify."
+        },
+        {
+          "risk": "Repository freeze finds root directory hygiene violations (temp files, reports, scripts in root)",
+          "severity": "Low",
+          "mitigation": "Root hygiene has been enforced since Phase 1. Automated check runs at each milestone. If violations found at freeze, they are likely new files written during Phase 4 testing. Cleanup is mechanical and non-destructive."
+        },
+        {
+          "risk": "Schedule slip — Phase 3 takes longer than 5 weeks, compressing Phase 4",
+          "severity": "Medium",
+          "mitigation": "Phase 4's minimum viable scope: end-to-end simulation (M4.1), governance sweep (M4.3), release (M4.5). M4.2 (collision audit) and M4.4 (performance) can be parallelized. M4.6 (documentation) can extend past Week 18 if needed — does not block release."
+        }
+      ],
+      "verification_method": "Phase 4 closeout audit by Release Manager agent: execute full release validation workflow (WORKFLOWS.md Workflow 7). Verify all 10 exit criteria. Run the pre-delivery-safety-check skill against Part 2 pool. Confirm 0 BLOCK-level governance violations. Confirm all performance metrics within targets. Execute 1 final end-to-end simulation and verify score. Sign off and tag v1.0.0-release. Publish release artifacts."
+    }
+  ],
+  "cross_cutting": {
+    "parallel_work_streams": [
+      {
+        "stream": "Part 1 Modernization (S60C Rewrite)",
+        "description": "Part 1's dual-block architecture rewrite to single-object format can proceed independently in the CMA_Part_1_2026 repository. No blocking dependency — separate repos, separate development teams.",
+        "dependency": "None — fully independent",
+        "sync_point": "If Part 1 discovers a new defect class during modernization that generalizes to Part 2, the Part 2 governance guard must absorb it within 1 week (see governance_synchronization)."
+      },
+      {
+        "stream": "Part 1 Ongoing Certification",
+        "description": "Part 1's remaining Unprocessed/In Audit items continue through the certification pipeline in the CMA_Part_1_2026 repository. No blocking dependency.",
+        "dependency": "None — fully independent",
+        "sync_point": "Part 2 certification pipeline design (Phase 3) should incorporate lessons learned from Part 1 certification cycles (e.g., batch-size tuning, parallelization strategies, DL-031/DL-032 prevention)."
+      },
+      {
+        "stream": "Formula Master P2 vs. Formula Master P1 Cross-Verification",
+        "description": "Periodic cross-reference to ensure Part 2 formulas don't accidentally include Part 1-exclusive formulas (standard costing, variance analysis). Run automated scan monthly.",
+        "dependency": "None — informational only",
+        "sync_point": "Run cross-reference scan at each Phase gate (M1.7, M2.10, M3.9, M4.5). Log any overlaps discovered."
+      }
+    ],
+    "governance_synchronization": {
+      "rule": "Any new Part 1 governance guard rule, defect class, or AGENTS.md policy amendment must be evaluated for Part 2 applicability within 1 week of Part 1 deployment.",
+      "frequency": "Weekly governance sync review (every Friday during active development)",
+      "process": "1. Monitor Part 1 REVISION_HISTORY.md and DEFECT_LIBRARY.md for new entries. 2. Evaluate each new rule/defect for Part 2 applicability. 3. If applicable: port to Part 2 governance guard, add to Part 2 DEFECT_LIBRARY_P2.md, update Part 2 AGENTS.md. 4. Document sync in Part 2 REVISION_HISTORY_P2.md.",
+      "known_transfer_rules": [
+        "Rule 2 (DL-008 BLOCK) — already deployed in Part 2 Phase 1",
+        "Rule 5 (30-item batch cap) — already deployed in Part 2 Phase 1",
+        "Rule 6 (DL-026 BLOCK) — already deployed in Part 2 Phase 1",
+        "Rule 9 (DL-037 binary lead-in polarity) — deployed in Part 1 (S913, 2026-07-28); evaluate for Part 2 deployment during Phase 1 M1.4",
+        "DL-029 (CC-offset scan false positives) — Part 2 single-object architecture eliminates this defect class at root; no transfer needed",
+        "DL-031 (difficulty inflation) — prevention mechanisms built into Part 2 authoring (per-item justification requirement); no separate guard rule needed"
+      ]
+    },
+    "quality_metrics": [
+      {
+        "metric": "Pack parse success rate",
+        "phase_boundary": 1,
+        "target": "100% — all 8 skeleton files parse as valid JSON arrays",
+        "measurement": "JSON.parse() on each skeleton file; count parse errors (target 0)"
+      },
+      {
+        "metric": "Governance guard test pass rate",
+        "phase_boundary": 1,
+        "target": "100% — all 50+ tests pass",
+        "measurement": "Run test_governance_guard.js; count failures (target 0)"
+      },
+      {
+        "metric": "QID count accuracy",
+        "phase_boundary": 2,
+        "target": "Exactly 500 items per pack, 2,500 total (0 deviation from target)",
+        "measurement": "grep -c '\"QuestionID\"' on each pack; cross-check against registry"
+      },
+      {
+        "metric": "DL-008 violation count (all packs)",
+        "phase_boundary": 2,
+        "target": "0 occurrences across all 2,500 items (non-negotiable)",
+        "measurement": "Scan all ExplanationWrong[CorrectChoice] slots; count non-empty (target 0)"
+      },
+      {
+        "metric": "DL-013 boilerplate occurrence count",
+        "phase_boundary": 2,
+        "target": "0 occurrences across all 2,500 items",
+        "measurement": "Grep for 'represents a plausible misconception' or 'A candidate may select this option by misapplying' (target 0)" 
+      },
+      {
+        "metric": "DL-026 empty distractor slot count",
+        "phase_boundary": 2,
+        "target": "0 empty non-CorrectChoice ExplanationWrong slots across all 2,500 items",
+        "measurement": "For each item, verify all 3 non-CC EW slots are non-empty (target 0)"
+      },
+      {
+        "metric": "Difficulty distribution adherence",
+        "phase_boundary": 2,
+        "target": "Pool-wide distribution within ±3% of blueprint targets per tier",
+        "measurement": "Count items per difficulty tier; compare to target percentages"
+      },
+      {
+        "metric": "Cognitive level distribution adherence",
+        "phase_boundary": 2,
+        "target": "Pool-wide distribution within ±3% of blueprint targets per Bloom's level",
+        "measurement": "Count items per cognitive level; compare to target percentages"
+      },
+      {
+        "metric": "Certification rate",
+        "phase_boundary": 3,
+        "target": "≥95% (2,375/2,500 items certified with HIGH confidence on all 6 dimensions)",
+        "measurement": "grep -c '\"question_state\": \"Certified\"' across all packs"
+      },
+      {
+        "metric": "Case exhibit structural compliance",
+        "phase_boundary": 3,
+        "target": "100% of table exhibits use Headers + Rows (0 Body-only exhibits)",
+        "measurement": "Scan all case exhibits with Type: 'table'; verify Headers and Rows present"
+      },
+      {
+        "metric": "Blueprint LOS coverage",
+        "phase_boundary": 3,
+        "target": "All 44 LOS have ≥15 Certified items and ≥2 case items",
+        "measurement": "Map every item to its LOS; count per LOS; flag any below minimum"
+      },
+      {
+        "metric": "Case cognitive progression compliance",
+        "phase_boundary": 3,
+        "target": "100% of cases follow Apply → Analyze → Evaluate progression",
+        "measurement": "For each case, verify item positions 1-2=Apply, 3-4=Analyze, 5=Evaluate"
+      },
+      {
+        "metric": "End-to-end simulation success rate",
+        "phase_boundary": 4,
+        "target": "10/10 simulations complete without errors or crashes",
+        "measurement": "Run 10 full 100-question simulations; count failures (target 0)"
+      },
+      {
+        "metric": "Cross-part collision findings",
+        "phase_boundary": 4,
+        "target": "0 confirmed Part 1 concept contaminations in Part 2 items",
+        "measurement": "Automated keyword scan + 50-item manual spot-check (target 0 confirmed)"
+      },
+      {
+        "metric": "Performance — initial load time",
+        "phase_boundary": 4,
+        "target": "<3 seconds to load all 5 packs and 3 case packs into memory",
+        "measurement": "window.performance.now() from page load to render-ready; 5 consecutive runs"
+      },
+      {
+        "metric": "Performance — question render time",
+        "phase_boundary": 4,
+        "target": "<200ms per question render (p95)",
+        "measurement": "Measure renderMCQ() call duration for 100 questions; take p95"
+      },
+      {
+        "metric": "Governance guard final compliance",
+        "phase_boundary": 4,
+        "target": "0 BLOCK-level violations across all Certified items",
+        "measurement": "Run full governance guard sweep; count BLOCK violations (target 0)"
+      }
+    ]
+  },
+  "pack_authoring_schedule": [
+    {
+      "pack": "pack_p2_a.js",
+      "domain": "A",
+      "domain_name": "Financial Statement Analysis",
+      "items": 500,
+      "week_start": 3,
+      "week_end": 4,
+      "quality_gate_week": 4,
+      "los": ["A.1", "A.2", "A.3", "A.4", "A.5", "A.6", "A.7", "A.8", "A.9"],
+      "item_distribution": {
+        "select": 425,
+        "numeric": 40,
+        "multi": 20,
+        "fill": 10,
+        "match": 5
+      },
+      "difficulty_targets": { "Easy": 75, "Moderate-Easy": 100, "Moderate": 150, "Difficult": 125, "Very Difficult": 50 },
+      "cognitive_targets": { "Remember": 50, "Understand": 100, "Apply": 225, "Analyze": 100, "Evaluate": 25 }
+    },
+    {
+      "pack": "pack_p2_c.js",
+      "domain": "C",
+      "domain_name": "Decision Analysis",
+      "items": 500,
+      "week_start": 5,
+      "week_end": 6,
+      "quality_gate_week": 6,
+      "los": ["C.1", "C.2", "C.3", "C.4", "C.5", "C.6", "C.7"],
+      "item_distribution": {
+        "select": 425,
+        "numeric": 40,
+        "multi": 20,
+        "fill": 10,
+        "match": 5
+      },
+      "difficulty_targets": { "Easy": 75, "Moderate-Easy": 100, "Moderate": 150, "Difficult": 125, "Very Difficult": 50 },
+      "cognitive_targets": { "Remember": 25, "Understand": 75, "Apply": 250, "Analyze": 100, "Evaluate": 50 }
+    },
+    {
+      "pack": "pack_p2_b.js",
+      "domain": "B",
+      "domain_name": "Corporate Finance",
+      "items": 500,
+      "week_start": 7,
+      "week_end": 8,
+      "quality_gate_week": 8,
+      "los": ["B.1", "B.2", "B.3", "B.4", "B.5", "B.6", "B.7", "B.8", "B.9"],
+      "item_distribution": {
+        "select": 425,
+        "numeric": 40,
+        "multi": 20,
+        "fill": 10,
+        "match": 5
+      },
+      "difficulty_targets": { "Easy": 75, "Moderate-Easy": 100, "Moderate": 150, "Difficult": 125, "Very Difficult": 50 },
+      "cognitive_targets": { "Remember": 50, "Understand": 100, "Apply": 250, "Analyze": 75, "Evaluate": 25 }
+    },
+    {
+      "pack": "pack_p2_d.js",
+      "domain": "D+E",
+      "domain_name": "Risk Management + Investment Decisions",
+      "items": 500,
+      "items_breakdown": { "D": 250, "E": 250 },
+      "week_start": 9,
+      "week_end": 9,
+      "quality_gate_week": 9,
+      "los_d": ["D.1", "D.2", "D.3", "D.4", "D.5"],
+      "los_e": ["E.1", "E.2", "E.3", "E.4", "E.5", "E.6"],
+      "item_distribution": {
+        "select": 425,
+        "numeric": 40,
+        "multi": 20,
+        "fill": 10,
+        "match": 5
+      },
+      "difficulty_targets": { "Easy": 75, "Moderate-Easy": 100, "Moderate": 150, "Difficult": 125, "Very Difficult": 50 },
+      "cognitive_targets": { "Remember": 60, "Understand": 125, "Apply": 175, "Analyze": 75, "Evaluate": 25 }
+    },
+    {
+      "pack": "pack_p2_e.js",
+      "domain": "F+Cross",
+      "domain_name": "Professional Ethics + Cross-Domain Integration",
+      "items": 500,
+      "items_breakdown": { "F": 375, "Cross": 125 },
+      "week_start": 10,
+      "week_end": 10,
+      "quality_gate_week": 10,
+      "los_f": ["F.1", "F.2", "F.3", "F.4", "F.5", "F.6", "F.7"],
+      "item_distribution": {
+        "select": 425,
+        "numeric": 40,
+        "multi": 20,
+        "fill": 10,
+        "match": 5
+      },
+      "difficulty_targets": { "Easy": 75, "Moderate-Easy": 100, "Moderate": 150, "Difficult": 125, "Very Difficult": 50 },
+      "cognitive_targets": { "Remember": 115, "Understand": 150, "Apply": 150, "Analyze": 100, "Evaluate": 25 }
+    }
+  ],
+  "case_authoring_schedule": [
+    {
+      "pack": "case_pack_p2_1.js",
+      "cases": 25,
+      "items_estimate": 133,
+      "week": 12,
+      "domain_distribution": {
+        "A_Financial_Statement_Analysis": 6,
+        "B_Corporate_Finance": 5,
+        "C_Decision_Analysis": 6,
+        "D_Risk_Management": 3,
+        "E_Investment_Decisions": 3,
+        "F_Professional_Ethics": 2
+      },
+      "certification_week": 14,
+      "description": "First batch — covers all 6 domains. Emphasis on A (ratio analysis cases) and C (CVP/marginal analysis cases) as highest-weight domains."
+    },
+    {
+      "pack": "case_pack_p2_2.js",
+      "cases": 25,
+      "items_estimate": 133,
+      "week": 13,
+      "domain_distribution": {
+        "A_Financial_Statement_Analysis": 4,
+        "B_Corporate_Finance": 5,
+        "C_Decision_Analysis": 6,
+        "D_Risk_Management": 3,
+        "E_Investment_Decisions": 2,
+        "F_Professional_Ethics": 5
+      },
+      "certification_week": 14,
+      "description": "Second batch — higher Domain F allocation for ethics scenario cases. Continues Domain C heavy loading."
+    },
+    {
+      "pack": "case_pack_p2_3.js",
+      "cases": 25,
+      "items_estimate": 134,
+      "week": 14,
+      "domain_distribution": {
+        "A_Financial_Statement_Analysis": 5,
+        "B_Corporate_Finance": 5,
+        "C_Decision_Analysis": 6,
+        "D_Risk_Management": 2,
+        "E_Investment_Decisions": 2,
+        "F_Professional_Ethics": 5
+      },
+      "certification_week": 15,
+      "description": "Final batch — includes cross-domain cases (e.g., ethics + capital budgeting, risk assessment + financial analysis). Completes all 75 cases."
+    }
+  ],
+  "critical_path": [
+    "Phase 1 must complete before Phase 2 starts because: governance guard must be active to enforce single-object architecture and prevent DL-008/DL-013/DL-026 from first write; FORMULA_MASTER_P2.md must exist for formula reference during question authoring; app.js must load skeleton files to validate authoring format; validation scripts must pass on empty skeletons to establish error baseline.",
+    "Pack A must complete and pass Quality Gate A before Pack C starts because: sequential authoring prevents defect patterns from propagating across packs; quality gate findings inform improvements to authoring process for subsequent packs; Pack A establishes the single-object template that all subsequent packs follow.",
+    "Pack C must complete and pass Quality Gate C before Pack B starts because: Pack C has highest calculation intensity (55% numeric/calculation items) — any arithmetic error patterns discovered must be corrected before authoring Pack B's WACC/CAPM items; Pack C's quality gate findings inform formula-verification process for remaining packs.",
+    "Pack B must complete and pass Quality Gate B before Pack D starts because: Pack B introduces corporate finance formulas (CAPM, WACC, EOQ, CCC) that share risk-return concepts with Pack D's Domain E (NPV, IRR); Pack B's formula-verification lessons apply to Pack D.",
+    "Pack D must complete and pass Quality Gate D before Pack E starts because: Pack D is the only dual-domain pack — experience managing domain boundaries informs Pack E's cross-domain items (375 Domain F + 125 Cross-domain); Pack E's cross-domain items require mature domain-boundary enforcement.",
+    "Phase 2 must complete before Phase 3 starts because: all 2,500 items must be authored and structurally validated before certification begins; certification pipeline processes items in batches across all packs — incomplete packs would require pipeline restart; answer-key verification requires complete pack for cross-reference.",
+    "Phase 3 must complete before Phase 4 starts because: end-to-end simulation requires certified items (non-certified items excluded from learner pool per governance rules); cross-part collision audit requires complete content pool; blueprint coverage analysis must inform final delivery validation."
+  ]
+}
