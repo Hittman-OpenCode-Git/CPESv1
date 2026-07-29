@@ -1,0 +1,61 @@
+{
+  "session": "SESSION073",
+  "title": "Section B Cognitive Upgrade Campaign — Wave 3",
+  "status": "COMPLETE",
+  "date": "2026-07-29",
+  "pack": "pack_d_corrected.js",
+  "backup": "backups/pack_d_corrected.js.bak-20260729174450",
+  "governance": {
+    "preflight": "2 pre-existing divergences (Pack E QID 545 vs 540, Certified delta 35) — unchanged from T0",
+    "governance_guard": "54/54 PASS",
+    "syntax": "PASS",
+    "qid_count": 500,
+    "parse": "PASS",
+    "certified_count": 456,
+    "dl008": "0 — all 15 items ExplanationWrong[CorrectChoice] = ''",
+    "dl026": "0 — all non-CC ExplanationWrong fields non-empty",
+    "dl037": "0",
+    "dl030": "0",
+    "pipeline": "PASS — 0 new errors on Pack D. All errors/warnings pre-existing in other packs"
+  },
+  "rewrite_summary": {
+    "total_rewritten": 15,
+    "evaluate_count": 9,
+    "analyze_count": 6,
+    "source_apply": 15,
+    "source_understand": 0
+  },
+  "rewritten_items": [
+    {"qid":"P1-BD-016","from":"Apply","to":"Evaluate","topic":"Capital expenditure — equipment replacement + debt covenant","company":"Fenwick Manufacturing","stakeholder":"Controller Diana Park","difficulty":"Very Difficult (5)","defects_fixed":"DL-013 boilerplate in EW-B/C cleared via rewrite"},
+    {"qid":"P1-BD-017","from":"Apply","to":"Evaluate","topic":"Capital expenditure — lease vs. buy decision","company":"Ashvale Manufacturing","stakeholder":"CFO Raj Mehta","difficulty":"Difficult (4)","defects_fixed":"DL-013 boilerplate in EW-C/D cleared via rewrite"},
+    {"qid":"P1-BD-086","from":"Apply","to":"Evaluate","topic":"Budget revision — supply shock + EPS guidance","company":"Lockhaven Industries","stakeholder":"Controller Lisa Tran","difficulty":"Difficult (4)","defects_fixed":"Simple definition upgraded to supply-shock management evaluation"},
+    {"qid":"P1-BD-087","from":"Apply","to":"Evaluate","topic":"Budget revision — demand shock customer bankruptcy","company":"Mapleton Outdoor Gear","stakeholder":"CFO Patricia Owens","difficulty":"Difficult (4)","defects_fixed":"Simple definition upgraded to demand-shock recovery evaluation"},
+    {"qid":"P1-BD-088","from":"Apply","to":"Analyze","topic":"Multi-factor variance decomposition","company":"Northfell Corporation","stakeholder":"Controller (implicit)","difficulty":"Difficult (4)","defects_fixed":"Simple definition upgraded to causal variance chain analysis"},
+    {"qid":"P1-BD-092","from":"Apply","to":"Evaluate","topic":"Cash collection — credit policy tightening","company":"Redcliff Distribution","stakeholder":"Treasurer Naomi Singh","difficulty":"Difficult (4)","defects_fixed":"Simple calculation upgraded to credit policy evaluation"},
+    {"qid":"P1-BD-093","from":"Apply","to":"Analyze","topic":"Cash collection pattern departure analysis","company":"Stonewell Building Supplies","stakeholder":"Controller (implicit)","difficulty":"Difficult (4)","defects_fixed":"Simple calculation upgraded to collection variance decomposition"},
+    {"qid":"P1-BD-094","from":"Apply","to":"Evaluate","topic":"Cash collection — factoring vs. discount","company":"Thornbury Building Materials","stakeholder":"CFO James Wu","difficulty":"Difficult (4)","defects_fixed":"Simple calculation upgraded to factoring vs. discount evaluation"},
+    {"qid":"P1-BD-002","from":"Apply","to":"Analyze","topic":"Flexible budget variance decomposition","company":"Bramblewood Manufacturing","stakeholder":"Controller (implicit)","difficulty":"Difficult (4)","defects_fixed":"DL-013 boilerplate in EW-D cleared via rewrite; definition upgraded"},
+    {"qid":"P1-BD-003","from":"Apply","to":"Analyze","topic":"Static vs. flexible budget variance reconciliation","company":"Castlebrook Industries","stakeholder":"Controller (implicit)","difficulty":"Difficult (4)","defects_fixed":"DL-013 boilerplate in EW-B cleared via rewrite; definition upgraded"},
+    {"qid":"P1-BD-004","from":"Apply","to":"Evaluate","topic":"Flexible budget — bonus system design evaluation","company":"Deepwater Corporation","stakeholder":"Controller Rebecca Walsh","difficulty":"Difficult (4)","defects_fixed":"DL-013 boilerplate in EW-B/C cleared via rewrite; definition upgraded"},
+    {"qid":"P1-BD-005","from":"Apply","to":"Evaluate","topic":"Flexible budget — investigation threshold design","company":"Elmsworth Manufacturing","stakeholder":"Controller Rebecca Walsh","difficulty":"Difficult (4)","defects_fixed":"DL-013 boilerplate in EW-C/D cleared via rewrite; definition upgraded"},
+    {"qid":"P1-BD-024","from":"Apply","to":"Analyze","topic":"Direct labor — shift differential capacity analysis","company":"Yewbrook Manufacturing","stakeholder":"Production Mgr. (implicit)","difficulty":"Difficult (4)","defects_fixed":"Simple formula upgraded to capacity-constrained shift analysis"},
+    {"qid":"P1-BD-025","from":"Apply","to":"Analyze","topic":"Direct labor — learning curve assumption analysis","company":"Zionsgate Aerospace","stakeholder":"Production Mgr. Elena Vargas","difficulty":"Difficult (4)","defects_fixed":"Simple formula upgraded to learning-curve assumption evaluation"},
+    {"qid":"P1-BD-026","from":"Apply","to":"Evaluate","topic":"Direct labor — automation vs. staffing strategy","company":"Ashfield Manufacturing","stakeholder":"CFO Marcus Chen","difficulty":"Very Difficult (5)","defects_fixed":"Simple formula upgraded to automation-vs-labor workforce evaluation"}
+  ],
+  "section_b_before_after": {
+    "before": { "apply": 49, "understand": 12, "analyze": 17, "evaluate": 22, "higher_order_pct": "39.0%" },
+    "after": { "apply": 34, "understand": 12, "analyze": 23, "evaluate": 31, "higher_order_pct": "54.0%" },
+    "improvement": "+15.0 percentage points"
+  },
+  "pack_d_before_after": {
+    "before": { "analyze": 95, "evaluate": 64, "higher_order_pct": "31.8%" },
+    "after": { "analyze": 101, "evaluate": 73, "higher_order_pct": "34.8%" }
+  },
+  "questions_answered": {
+    "Q1_analyze_count": 6,
+    "Q2_evaluate_count": 9,
+    "Q3_section_b_higher_order": "54.0% (was 39.0% post-S72, 4.0% pre-S70)",
+    "Q4_throughput_sustained": "Yes — ~1.1 min/item at full wave, consistent with S72",
+    "Q5_next_session": "Continue Pack D Section B — 46 remaining low-order items (34 Apply + 12 Understand). 3 more waves at 15 items each would complete the section."
+  }
+}

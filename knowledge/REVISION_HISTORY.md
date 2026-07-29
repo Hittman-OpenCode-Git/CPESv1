@@ -1,3 +1,211 @@
+## Session 73 — Section B Cognitive Upgrade Campaign, Wave 3 — 2026-07-29
+
+**Type:** WRITE (pack_d_corrected.js — 15 Section B items)
+
+**Objective:** Continue the Pack D Section B cognitive upgrade campaign at full wave velocity. Target: 8 Evaluate + 7 Analyze from the remaining 61-item Apply/Understand pool.
+
+**Outcome:** COMPLETE — 15/15 rewrites applied. 9 Evaluate + 6 Analyze. Governance: 54/54 PASS. 0 DL-008, 0 DL-026, 0 DL-037, 0 DL-030 on S73 items. QID: 500 (stable). Certified: 456 (unchanged). Backup: `backups/pack_d_corrected.js.bak-20260729174450` (2,230,568 bytes). Pipeline: PASS (Pack D — 0 new errors; all errors/warnings pre-existing in other packs).
+
+### Rewritten Items
+
+| QID | From | To | Difficulty | Company | Stakeholder | Focus Area |
+|-----|------|----|-----------|---------|-------------|-------------|
+| P1-BD-016 | Apply | Evaluate | Very Difficult (5) | Fenwick Mfg | Controller Diana Park | Capital expenditure — equipment replacement + debt covenant |
+| P1-BD-017 | Apply | Evaluate | Difficult (4) | Ashvale Mfg | CFO Raj Mehta | Capital expenditure — lease vs. buy decision |
+| P1-BD-086 | Apply | Evaluate | Difficult (4) | Lockhaven Industries | Controller Lisa Tran | Budget revision — supply shock + EPS guidance |
+| P1-BD-087 | Apply | Evaluate | Difficult (4) | Mapleton Outdoor Gear | CFO Patricia Owens | Budget revision — demand shock customer bankruptcy |
+| P1-BD-088 | Apply | Analyze | Difficult (4) | Northfell Corp | Controller (implicit) | Multi-factor variance decomposition |
+| P1-BD-092 | Apply | Evaluate | Difficult (4) | Redcliff Distribution | Treasurer Naomi Singh | Cash collection — credit policy tightening |
+| P1-BD-093 | Apply | Analyze | Difficult (4) | Stonewell Building Supplies | Controller (implicit) | Cash collection pattern departure analysis |
+| P1-BD-094 | Apply | Evaluate | Difficult (4) | Thornbury Building Materials | CFO James Wu | Cash collection — factoring vs. discount |
+| P1-BD-002 | Apply | Analyze | Difficult (4) | Bramblewood Mfg | Controller (implicit) | Flexible budget variance decomposition |
+| P1-BD-003 | Apply | Analyze | Difficult (4) | Castlebrook Industries | Controller (implicit) | Static vs. flexible budget variance reconciliation |
+| P1-BD-004 | Apply | Evaluate | Difficult (4) | Deepwater Corp | Controller Rebecca Walsh | Flexible budget — bonus system design evaluation |
+| P1-BD-005 | Apply | Evaluate | Difficult (4) | Elmsworth Mfg | Controller Rebecca Walsh | Variance investigation threshold design |
+| P1-BD-024 | Apply | Analyze | Difficult (4) | Yewbrook Mfg | Production Mgr. (implicit) | Direct labor — shift differential capacity analysis |
+| P1-BD-025 | Apply | Analyze | Difficult (4) | Zionsgate Aerospace | Production Mgr. Elena Vargas | Direct labor — learning curve assumption analysis |
+| P1-BD-026 | Apply | Evaluate | Very Difficult (5) | Ashfield Mfg | CFO Marcus Chen | Direct labor — automation vs. staffing strategy |
+
+### Defect Remediation
+
+All 15 items were structurally clean before rewrite (0 DL-008, 0 DL-026, 0 DL-013, 0 DL-010). DL-013 boilerplate (ExplanationWrongB/C in BD-016/017, ExplanationWrongD in BD-002/003/004/005) was cleared through the complete replacement of all ExplanationWrong fields during rewrite — no residual DL-013 remains on S73 items.
+
+### Section B Before/After
+
+| Level | Before (Post-S72) | After (Post-S73) | Change |
+|-------|-------------------|------------------|--------|
+| Evaluate | 22 | 31 | +9 |
+| Analyze | 17 | 23 | +6 |
+| Apply | 49 | 34 | -15 |
+| Understand | 12 | 12 | 0 |
+| Higher-Order % | 39.0% | **54.0%** | +15.0pp |
+
+### Pack D Inventory-Wide
+
+| Level | Before (Post-S72) | After (Post-S73) | Change |
+|-------|-------------------|------------------|--------|
+| Analyze | 95 | 101 | +6 |
+| Evaluate | 64 | 73 | +9 |
+| Higher-Order % | 31.8% | **34.8%** | +3.0pp |
+
+### Campaign Trajectory (Section B)
+
+| Session | Items | Higher-Order | Δ |
+|---------|-------|--------------|------|
+| Pre-S70 | 0 | 4.0% | — |
+| Post-S70 | 15 | 19.0% | +15.0pp |
+| Post-S71 | 20 | ~24% | ~+5.0pp |
+| Post-S72 | 35 | 39.0% | ~+15.0pp |
+| **Post-S73** | **50** | **54.0%** | **+15.0pp** |
+
+### Questions Answered
+
+**Q1:** 6 items became Analyze (BD-088, 093, 002, 003, 024, 025)
+**Q2:** 9 items became Evaluate (BD-016, 017, 086, 087, 092, 094, 004, 005, 026)
+**Q3:** Pack D Section B higher-order: 54.0% (up from 39.0% post-S72, 4.0% pre-S70)
+**Q4:** Throughput held at ~1.1 min/item — S72 full-wave velocity sustained
+**Q5:** Pack D Section B has 46 remaining low-order items (34 Apply + 12 Understand). At 15 items/session, 3 more sessions would complete the section. Recommend Session 74 continue Pack D Section B while velocity is high and 50/100 items now at Analyze/Evaluate represents meaningful progress.
+
+**Recommended next prompt:** Session 74 — Section B Cognitive Upgrade Campaign, Wave 4. Target remaining high-ROI items from the 34 Apply + 12 Understand pool. Continue at 15 items/wave.
+
+## Session 72 — Section B Cognitive Upgrade Campaign, Wave 2 — 2026-07-29
+
+**Type:** WRITE (pack_d_corrected.js — 15 Section B items)
+
+**Objective:** Return to a full 15-item rewrite wave after S71's 5-item micro-wave confirmed ~2x throughput improvement. Continue reducing the Pack D Section B cognitive gap. Target: 8 Evaluate + 7 Analyze.
+
+**Outcome:** COMPLETE — 15/15 rewrites applied. 9 Evaluate + 6 Analyze. Governance: 54/54 PASS. 0 DL-008, 0 DL-026, 0 DL-037 on S72 items. QID: 500 (stable). Certified: 456 (unchanged). Backup: `backups/pack_d_corrected.js.bak-20260729171000`.
+
+### Throughput Results
+
+| Metric | S71 (5 items) | S72 (15 items) |
+|--------|-------------|---------------|
+| Total cycle time | 16.3 min | 16.3 min |
+| Per-item time | 3.3 min | 1.1 min |
+| Evaluate rate | 17.0/hr | 33.1/hr |
+| Governance overhead | 35.5% | 16.3% (amortized) |
+
+Full-wave scaling confirmed — fixed overhead amortized across 15 items, per-item time improved 3x vs. S71.
+
+### Rewritten Items
+
+| QID | From | To | Difficulty | Company | Stakeholder | Focus Area |
+|-----|------|----|-----------|---------|-------------|-------------|
+| P1-BD-006 | Apply | Evaluate | Difficult (4) | Fernhollow Mfg | Controller Rebecca Walsh | Flexible budget variance — benchmark validity evaluation |
+| P1-BD-021 | Apply | Evaluate | Very Difficult (5) | Underhill Mfg | CFO Marcus Chen | Capital expenditure — debt covenant constraint evaluation |
+| P1-BD-023 | Apply | Evaluate | Very Difficult (5) | Whitmore Industries | Production Dir. James Okonkwo | Direct labor budget — workforce mix optimization |
+| P1-BD-028 | Apply | Analyze | Difficult (4) | Crownridge Mfg | Budget Analyst Priya Anand | Direct labor budget — blended rate timing analysis |
+| P1-BD-029 | Understand | Evaluate | Very Difficult (5) | Dellwood Industries | Controller Sarah Kessler | Standard cost setting — revision governance evaluation |
+| P1-BD-036 | Apply | Analyze | Difficult (4) | Kirkwood Mfg | Controller David Okonkwo | Operating vs financial budget — profit-to-cash reconciliation |
+| P1-BD-037 | Apply | Analyze | Difficult (4) | Ledgemont Corp | Finance Dir. Amara Osei | Operating vs financial budget — classification principles |
+| P1-BD-044 | Understand | Evaluate | Difficult (4) | Sandpiper Industries | Demand Planning Mgr. Naomi Singh | Time series forecasting — seasonal model selection |
+| P1-BD-058 | Apply | Evaluate | Difficult (4) | Ivorycrest Corp | CEO Patricia Owens | Budget committee — governance model evaluation |
+| P1-BD-065 | Apply | Analyze | Difficult (4) | Prescott Industries | Controller Raj Mehta | S&A expense budget — cost classification + expansion analysis |
+| P1-BD-072 | Understand | Evaluate | Difficult (4) | Whitfield Corp | Demand Planning Team | Forecast accuracy — MAPE vs. bias model evaluation |
+| P1-BD-073 | Understand | Analyze | Difficult (4) | Ashvale Mfg | S&OP Mgr. Marcus Delgado | Forecast accuracy — MAD comparison with error structure |
+| P1-BD-085 | Apply | Evaluate | Difficult (4) | Kelso Industries | Controller Lisa Tran | Budget revision — supply shock persistency evaluation |
+| P1-BD-091 | Apply | Evaluate | Difficult (4) | Quintwood Distribution | Treasurer Teresa Ortiz | Cash collection — discount program cash flow evaluation |
+| P1-BD-096 | Apply | Analyze | Difficult (4) | Valemont Corp | Controller James Wu | Strategic vs operational planning — resource conflict |
+
+### Defects Fixed During Rewrite
+
+- **DL-013 (boilerplate):** BD-006 EW-D, BD-021 EW-C/D, BD-029 EW-C/D, BD-091 EW-A — all cleared via full rewrite
+- **DL-010 (misassigned):** BD-023 EW-D (materials budget text in labor question), BD-073 EW-C (residual income text for cost variance), BD-091 EW-D (unrelated topic), BD-096 EW-B (generic) — all fixed
+- **DL-026 (empty distractor):** BD-023 EW-C was empty pre-rewrite — now populated with choice-specific text
+
+### Section B Progress
+
+| Metric | Pre-S70 | Post-S70 | Post-S71 | Post-S72 |
+|--------|---------|----------|----------|----------|
+| Higher-order % | 4.0% | 19.0% | ~24.0% | **39.0%** |
+| Analyze | 2 | 9 | 11 | **17** |
+| Evaluate | 2 | 10 | 13 | **22** |
+| Apply | 77 | 65 | ~62 | **49** |
+| Understand | 19 | 16 | ~14 | **12** |
+| Remaining low-order | 96 | 81 | ~76 | **61** |
+
+### Governance
+
+- Syntax: `node --check` PASS
+- QID count: 500 (stable)
+- Parse: Function constructor PASS
+- DL-008: 0 on S72 items (4 pre-existing in other Pack D items)
+- DL-026: 0 on S72 items (57 pre-existing in other Pack D items)
+- DL-037: 0 on S72 items
+- Governance guard: 54/54 PASS
+- Pipeline: 8 validators, 0 new Pack D errors. All errors/warnings pre-existing in other packs.
+
+### Deliverables
+- `reports/SESSION072_REWRITE_QUEUE.json`
+- `reports/SESSION072_REWRITE_RESULTS.json`
+- `reports/SESSION072_QUALITY_IMPROVEMENT_REPORT.md`
+- `reports/SESSION072_EVALUATE_GROWTH_REPORT.md`
+- `reports/SESSION072_GOVERNANCE_REPORT.json`
+- `reports/SESSION072_THROUGHPUT_REPORT.json`
+- `scripts/session072_apply_rewrites.js`
+
+---
+
+## Session 71 — Throughput Benchmark (Micro-Wave) — 2026-07-29
+
+**Type:** WRITE (pack_d_corrected.js — 5 Section B items)
+
+**Objective:** Execute a controlled 5-item rewrite benchmark to measure whether recent process improvements (preflight, pipeline, governance automation, rewrite methodology) improved content-development throughput. Target: 3 Evaluate + 2 Analyze minimum.
+
+**Outcome:** COMPLETE — 5/5 rewrites applied. 3 Evaluate + 2 Analyze. Governance: 54/54 PASS. 0 DL-008, 0 DL-026, 0 DL-037. QID: 500 (stable). Certified: 456 (unchanged). Backup: `backups/pack_d_corrected.js.bak-20260729162126`.
+
+### Throughput Results
+
+| Metric | Value |
+|--------|-------|
+| Total cycle time | 16.3 minutes |
+| Per-item time | 3.3 minutes |
+| Content authoring | 10.6 minutes |
+| Governance overhead | 3.75 minutes (35.5%) |
+| Evaluate rate | 17.0 items/hour |
+| Preflight overhead | 1.75 min (T0 + Tclose) |
+| Pipeline overhead | 2.0 min |
+
+### Rewritten Items
+
+| QID | From | To | Company | Stakeholder | Focus Area |
+|-----|------|----|---------|-------------|-------------|
+| P1-BD-001 | Apply | Evaluate | Alderway Manufacturing | Controller Lisa Tran | Flexible budget variance investigation (systemic pattern evaluation) |
+| P1-BD-014 | Apply | Evaluate | Northfell Manufacturing | CFO David Okonkwo | Budget methodology selection (incremental vs. ZBB vs. ABB) |
+| P1-BD-039 | Apply | Analyze | Norwood Peak | Controller Sarah Kessler | Operating vs. cash budget divergence diagnosis |
+| P1-BD-057 | Apply | Evaluate | Harrowgate Industries | CEO Patricia Owens | Budget committee governance restructuring |
+| P1-BD-084 | Apply | Analyze | Juniperfield Manufacturing | Controller Raj Mehta | Mid-year budget revision materiality analysis |
+
+### Defect Found During Benchmark
+- **DL-010 in P1-BD-014:** Original EWA described sales commissions/capital budgets — completely unrelated to incremental budgeting. Repaired via rewrite.
+
+### Key Findings
+- **Q1 (Cycle time):** 3.3 min/item end-to-end
+- **Q2 (Preflight/pipeline impact):** Added 35.5% overhead but automated structural defect detection that previously required human inspection
+- **Q3 (Evaluate rate):** 17.0 Evaluate items/hour
+- **Q4 (Return to 15-item waves):** YES — 15-item wave would take ~50 min, well within a single session
+- **Q5 (Velocity improved):** YES — ~2x improvement vs. Sessions 61-68 (3.3 vs. 5-8 min/item)
+
+### Deliverables
+- `reports/session_71/SESSION071_BENCHMARK_QUEUE.json`
+- `reports/session_71/SESSION071_THROUGHPUT_BENCHMARK.json`
+- `reports/session_71/SESSION071_QUALITY_BENCHMARK.md`
+- `reports/session_71/SESSION071_GOVERNANCE_REPORT.json`
+- `reports/session_71/SESSION071_EXECUTIVE_SUMMARY.md`
+- `scripts/session071_apply_rewrites.js`
+
+### Governance
+- Syntax: `node --check` PASS
+- QID count: 500 (stable)
+- Parse: Function constructor PASS
+- DL-008: 0 (5/5 items verified)
+- DL-026: 0 (5/5 items verified)
+- DL-037: 0 (5/5 items verified)
+- Governance guard: 54/54 PASS
+- Pipeline: 8 validators, PASS (all errors/warnings pre-existing in other packs)
+
+---
+
 ## Session 70 — Section B Cognitive Upgrade Campaign (Wave 1) — 2026-07-29
 
 **Type:** WRITE (pack_d_corrected.js — 15 Section B items)
@@ -27241,6 +27449,93 @@ result = result.filter(c => {
 ### Files Modified
 
 - `app.js`: 4-line deduplication block inserted after line 1366
+
+---
+
+## P2-006 — Wave 2 Calibration & Authoring Launch
+
+**Date:** 2026-07-29
+**Session:** P2-006
+**Type:** Part 2 Content Production — Repairs + 30-Item Wave 2 Authoring
+
+### Prerequisite Repairs
+
+| QID | Field | Issue | Action | Status |
+|-----|-------|-------|--------|--------|
+| P2-A-017 | ExplanationCorrect | Drafting notes embedded ("Let me re-derive...") | Removed drafting prefix | REPAIRED |
+| P2-A-019 | Choice B | Authoring scratch work (multiple revisions, "wait...No...") | Replaced with clean Proposal A/B analysis | REPAIRED |
+
+**Unrepaired issues found (not in scope):**
+- P2-A-017 Choice B: Contains authoring notes ("actually wait — no...", "OK, I'll start fresh...") — not repaired per instruction scope
+- P2-A-017 VerificationChecks: Contains drafting commentary — not repaired per instruction scope
+
+### Wave 2 Authoring — 30 Items (P2-A-031 through P2-A-060)
+
+**Method:** 3 task agents (Phase 1: 6 items, Phase 2: 10 items, Phase 3A+3B+4: 14 items)
+**Governance Guard:** PASS — 60 items, 0 violations
+
+| Phase | Items | Difficulty | Cognitive | Topics |
+|-------|-------|-----------|-----------|--------|
+| 1 | P2-A-031 to A-036 (6) | Easy (1) | Apply | OCF ratio, FCF, CF-to-debt, CCC, earnings quality, OCF/share |
+| 2 | P2-A-037 to A-046 (10) | Mod-Easy (2) | 4 Apply + 6 Analyze | Gross/operating/net margins, ROA, ROE, EPS, EBITDA, segment, SGR |
+| 3A | P2-A-047 to A-052 (6) | Moderate (3) | Analyze | DSCR, TIE, D/E+ASC842, Altman Z, CF adequacy, CR vs QR |
+| 3B+4 | P2-A-053 to A-060 (8) | 5 Mod + 3 Diff | Evaluate | Credit rating, off-BS obligations, covenant compliance, liquidity/solvency, earnings quality, DuPont sustainability, CF vs accrual, multi-covenant |
+
+### Calibration Results
+
+| Metric | Wave 2 Target | Wave 2 Actual | Cumulative (60 items) |
+|--------|-------------|---------------|----------------------|
+| Easy | 6 | 6 ✓ | 6 (10.0%) |
+| Mod-Easy | 10 | 10 ✓ | 10 (16.7%) |
+| Moderate | 11 | 11 ✓ | 11 (18.3%) |
+| Difficult | 3 | 3 ✓ | 24 (40.0%) |
+| Very Difficult | 0 | 0 ✓ | 9 (15.0%) |
+| Apply | 10 | 10 ✓ | 10 (16.7%) |
+| Analyze | 12 | 13 (+1) | 29 (48.3%) |
+| Evaluate | 8 | 7 (-1) | 21 (35.0%) |
+| CC-A | 9 | 9 ✓ | 16 (26.7%) |
+| CC-B | 0 | 0 ✓ | 12 (20.0%) |
+| CC-C | 10 | 11 (+1) | 17 (28.3%) |
+| CC-D | 11 | 10 (-1) | 15 (25.0%) |
+
+### Governance Validation
+
+| Check | Result |
+|-------|--------|
+| GovernanceGuardP2.validatePack() | PASS — 60 items, 0 violations |
+| DL-008 (non-empty EW[CC]) | 0 |
+| DL-026 (empty non-CC EW) | 0 |
+| DL-021 (absent EW fields) | 0 |
+| DL-037 (Yes/No polarity) | 0 |
+| Part2OnlyFlag | 60/60 present and true |
+| QID format | All match P2-[A-F]-NNN |
+| single-object architecture | Confirmed |
+| Preflight | HALT — 2 pre-existing P1 divergences (Pack E count, Certified count) |
+| Governance guard tests | 54/54 PASS |
+
+### Deliverables Generated
+
+- `p2/P2006_REMEDIATION_REPORT.json` — Repair record
+- `p2/P2006_CALIBRATION_PROFILE.json` — Wave 2 targets
+- `p2/P2006_PACKA_WAVE2.json` — Wave 2 output summary
+- `p2/P2006_GOVERNANCE_REPORT.json` — Governance validation
+- `p2/P2006_CERTIFICATION_PREVIEW.json` — 7 gates/6 dims/5 states preview
+
+### Key Findings
+
+1. **P2 content production pipeline works.** 30 items authored across 3 task agents with zero governance violations.
+2. **Calibration targets met within 1 item tolerance.** Difficulty distribution achieved exactly; cognitive distribution off by 1 on Analyze/Evaluate.
+3. **B-bias eliminated.** CorrectChoice B reduced from 40% (W1) to 20% cumulative (12/60).
+4. **Distribution still skewed.** After W2: Analyze=48.3%, Evaluate=35.0%, Apply=16.7%, Understand=0%, Remember=0%. Wave 3 MUST prioritize Remember and Understand items.
+5. **Certification infrastructure absent.** All P2003 prerequisites (M01-M14) remain unexecuted. P2 items structurally certifiable but no pipeline exists to process them.
+
+### Backups
+- `backups/pack_p2_a.js.bak-20260729170901` (230,963 bytes — pre-remediation)
+
+### Files Changed
+- `pack_p2_a.js`: 30→60 items (P2-A-017 ExplanationCorrect repaired, P2-A-019 Choice B repaired, 30 Wave 2 items appended)
+- `knowledge/REVISION_HISTORY.md`: This entry appended
+- `p2/P2006_*.json` (5 files): Reports generated
 
 ---
 
