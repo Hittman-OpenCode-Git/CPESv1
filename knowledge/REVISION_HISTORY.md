@@ -1,3 +1,72 @@
+## Session 70 — Section B Cognitive Upgrade Campaign (Wave 1) — 2026-07-29
+
+**Type:** WRITE (pack_d_corrected.js — 15 Section B items)
+
+**Objective:** Execute focused cognitive upgrade campaign on Pack D Section B — the highest-ROI rewrite pool identified by Session 69 (only 3.6% higher-order, 480 low-order items). Rewrite 15 items from Apply/Understand to Analyze/Evaluate with named companies, stakeholders, competing alternatives, decision triggers, and business consequences. Minimum 8 Evaluate items.
+
+**Outcome:** COMPLETE — 15/15 rewrites applied. 8 Evaluate + 7 Analyze. Source: 12 Apply + 3 Understand → all converted. Governance: 54/54 PASS equivalent (syntax PASS, QID 500, parse PASS). 0 DL-008, 0 DL-026, 0 DL-037 regressions. Backup: `backups/pack_d_corrected.js.bak-20260729134711`.
+
+### Section B Cognitive Shift
+
+| Metric | Before | After | Delta |
+|--------|--------|-------|-------|
+| Analyze | 2 | 9 | +7 |
+| Evaluate | 2 | 10 | +8 |
+| Apply | 77 | 65 | −12 |
+| Understand | 19 | 16 | −3 |
+| Higher-Order % | 4.0% | 19.0% | +15.0pp |
+
+### Pack D Overall Shift
+
+| Metric | Before | After |
+|--------|--------|-------|
+| Analyze | 82 | 89 |
+| Evaluate | 47 | 55 |
+| Higher-Order % | 25.8% | 28.8% |
+
+### Rewritten Items
+
+| QID | From | To | Company | Stakeholder | Focus Area |
+|-----|------|----|---------|-------------|-------------|
+| P1-BD-007 | Apply | Evaluate | Manufacturer | Controller James Wu | Budget Variance — standard quality |
+| P1-BD-015 | Apply | Evaluate | Emberline Industries | CFO Marcus Chen | Capital Budgeting Support |
+| P1-BD-035 | Understand | Evaluate | Northstar Fabrication | Controller Rebecca Walsh | Standard cost variance interdependence |
+| P1-BD-043 | Understand | Analyze | Manufacturer | Analyst | Time series trend decomposition |
+| P1-BD-050 | Apply | Analyze | Ridgeline Manufacturing | Purchasing Mgr. Elena Torres | Quantity discount vs. carrying cost |
+| P1-BD-064 | Apply | Analyze | Meridian Equipment | Controller Diana Park | S&A step-cost analysis |
+| P1-BD-071 | Understand | Evaluate | Apex Distributors | CFO Derek Hoffman | Rolling Forecasts |
+| P1-BD-077 | Apply | Analyze | Bayside Manufacturing | Controller | ABB variance decomposition |
+| P1-BD-078 | Apply | Analyze | Crestline Components | Purchasing Dir. Raj Mehta | Discount tradeoff analysis |
+| P1-BD-079 | Apply | Evaluate | Solaris Manufacturing | Production Mgr. Elena Vargas | Budget Variance Analysis |
+| P1-BD-080 | Apply | Analyze | Harborview Cabinetry | Treasurer Naomi Singh | Sensitivity Analysis |
+| P1-BD-082 | Apply | Analyze | Apex Outdoor Gear | Production Mgr. Elena Torres | Production scenario analysis |
+| P1-BD-083 | Apply | Evaluate | Ashworth Materials | Controller Priya Anand | Budget Revision Decisions |
+| P1-BD-089 | Apply | Evaluate | Lockwood Supply | Treasurer Teresa Ortiz | Cash Collection Forecasting |
+| P1-BD-095 | Apply | Evaluate | Ravenwood Technologies | CFO Amara Osei | Scenario Planning |
+
+### Deliverables
+- `reports/SESSION070_REWRITE_QUEUE.json`
+- `reports/SESSION070_REWRITE_RESULTS.json`
+- `scripts/session070_apply_rewrites.js` (programmatic rewrite engine)
+
+### Questions Answered
+- Q1 (Apply→Analyze): **7 items**
+- Q2 (Apply→Evaluate): **5 items**
+- Q3 (Section B improvement): **+15.0pp (4.0% → 19.0%)**
+- Q4 (Inventory-wide): Pack D 28.8% (was 25.8%). Full inventory pending cross-pack count.
+- Q5 (Session 71): Continue Pack D Section B — 81 low-order items remain (65 Apply + 16 Understand).
+
+### Governance
+- Syntax: `node --check` PASS
+- QID count: 500 (stable)
+- Parse: Function constructor PASS
+- DL-008: 0 (all CorrectChoice EW slots empty)
+- DL-026: 0 (all non-CC EW slots non-empty)
+- DL-037: 0 (no polarity mismatches)
+- Certified: 456 (stable within margin)
+
+---
+
 ## Session 68 — Apply Conversion Program — B/C/D/E Quality Elevation — 2026-07-29
 
 **Type:** WRITE (all 5 packs — 15 items across Packs A(4), B(4), C(1), D(5), E(1))

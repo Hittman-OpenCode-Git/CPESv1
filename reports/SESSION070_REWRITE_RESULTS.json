@@ -1,0 +1,76 @@
+{
+  "session": "SESSION070",
+  "title": "Section B Cognitive Upgrade Campaign — Wave 1",
+  "status": "COMPLETE",
+  "date": "2026-07-29",
+  "pack": "pack_d_corrected.js",
+  "backup": "backups/pack_d_corrected.js.bak-20260729134711",
+  "governance": {
+    "syntax": "PASS",
+    "qid_count": 500,
+    "certified_count": 456,
+    "dl008": "0 — all 15 items ExplanationWrong[CorrectChoice] = ''",
+    "dl026": "0 — all non-CC ExplanationWrong fields non-empty",
+    "dl037": "0 — no Yes/No polarity mismatches in new content"
+  },
+  "rewrite_summary": {
+    "total_rewritten": 15,
+    "evaluate_count": 8,
+    "analyze_count": 7,
+    "source_apply": 12,
+    "source_understand": 3
+  },
+  "rewritten_items": [
+    {"qid": "P1-BD-095", "from": "Apply", "to": "Evaluate", "topic": "Strategic vs operational planning", "company": "Ravenwood Technologies", "stakeholder": "CFO Amara Osei"},
+    {"qid": "P1-BD-089", "from": "Apply", "to": "Evaluate", "topic": "Cash collection with early-payment discount", "company": "Lockwood Supply", "stakeholder": "Treasurer Teresa Ortiz"},
+    {"qid": "P1-BD-083", "from": "Apply", "to": "Evaluate", "topic": "Budget revision mid year", "company": "Ashworth Materials", "stakeholder": "Controller Priya Anand"},
+    {"qid": "P1-BD-082", "from": "Apply", "to": "Analyze", "topic": "Production budget scenario analysis", "company": "Apex Outdoor Gear", "stakeholder": "Production Mgr. Elena Torres"},
+    {"qid": "P1-BD-080", "from": "Apply", "to": "Analyze", "topic": "Expected value sensitivity analysis", "company": "Harborview Cabinetry", "stakeholder": "Treasurer Naomi Singh"},
+    {"qid": "P1-BD-079", "from": "Apply", "to": "Evaluate", "topic": "Flexible budget variance evaluation", "company": "Solaris Manufacturing", "stakeholder": "Production Mgr. Elena Vargas"},
+    {"qid": "P1-BD-078", "from": "Apply", "to": "Analyze", "topic": "Materials purchases discount analysis", "company": "Crestline Engineered Components", "stakeholder": "Purchasing Dir. Raj Mehta"},
+    {"qid": "P1-BD-077", "from": "Apply", "to": "Analyze", "topic": "ABB variance decomposition", "company": "Bayside Manufacturing", "stakeholder": "Controller (implicit)"},
+    {"qid": "P1-BD-071", "from": "Understand", "to": "Evaluate", "topic": "Forecast accuracy model selection", "company": "Apex Distributors", "stakeholder": "CFO Derek Hoffman"},
+    {"qid": "P1-BD-064", "from": "Apply", "to": "Analyze", "topic": "S&A expense step-cost analysis", "company": "Meridian Equipment Distributors", "stakeholder": "Controller Diana Park"},
+    {"qid": "P1-BD-050", "from": "Apply", "to": "Analyze", "topic": "Materials discount vs. carrying cost", "company": "Ridgeline Manufacturing", "stakeholder": "Purchasing Mgr. Elena Torres"},
+    {"qid": "P1-BD-043", "from": "Understand", "to": "Analyze", "topic": "Time series trend decomposition", "company": "Manufacturer (implicit)", "stakeholder": "Analyst (implicit)"},
+    {"qid": "P1-BD-035", "from": "Understand", "to": "Evaluate", "topic": "Standard cost variance interdependence", "company": "Northstar Fabrication", "stakeholder": "Controller Rebecca Walsh"},
+    {"qid": "P1-BD-015", "from": "Apply", "to": "Evaluate", "topic": "Capital expenditure strategic alignment", "company": "Emberline Industries", "stakeholder": "CFO Marcus Chen"},
+    {"qid": "P1-BD-007", "from": "Apply", "to": "Evaluate", "topic": "Flexible budget standard quality", "company": "Manufacturer (implicit)", "stakeholder": "Controller James Wu"}
+  ],
+  "section_b_before_after": {
+    "before": {
+      "apply": 77,
+      "understand": 19,
+      "analyze": 2,
+      "evaluate": 2,
+      "higher_order_pct": "4.0%"
+    },
+    "after": {
+      "apply": 65,
+      "understand": 16,
+      "analyze": 9,
+      "evaluate": 10,
+      "higher_order_pct": "19.0%"
+    },
+    "improvement": "+15.0 percentage points"
+  },
+  "pack_d_before_after": {
+    "before": {
+      "analyze": 82,
+      "evaluate": 47,
+      "higher_order_pct": "25.8%"
+    },
+    "after": {
+      "analyze": 89,
+      "evaluate": 55,
+      "higher_order_pct": "28.8%"
+    }
+  },
+  "questions_answered": {
+    "Q1_apply_to_analyze": 7,
+    "Q2_apply_to_evaluate": 5,
+    "Q3_section_b_improvement": "+15.0pp (4.0% → 19.0%)",
+    "Q4_inventory_wide_analyze_evaluate_pct": "Pack D: 28.8% (was 25.8%) — full inventory pending cross-pack count",
+    "Q5_session71_recommendation": "Continue Pack D Section B — 81 low-order items remaining (65 Apply + 16 Understand). Pack A Section B estimated ~80 low-order items. Both are viable; Pack D has fresh Session 70 momentum."
+  }
+}

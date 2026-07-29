@@ -1,0 +1,200 @@
+{
+  "session": "SESSION070",
+  "title": "Section B Cognitive Upgrade Campaign — Wave 1",
+  "target_pack": "pack_d_corrected.js",
+  "target_section": "B",
+  "total_candidates": 15,
+  "min_evaluate": 8,
+  "backup": "backups/pack_d_corrected.js.bak-20260729134711",
+  "baseline_cognitive": {
+    "pack_d_section_b_low_order": 96,
+    "pack_d_section_b_higher_order": 4,
+    "pack_d_section_b_higher_order_pct": "4.0%"
+  },
+  "candidates": [
+    {
+      "qid": "P1-BD-095",
+      "line": 8692,
+      "topic": "Strategic vs operational planning horizon",
+      "current_cl": "Apply",
+      "target_cl": "Evaluate",
+      "current_diff": "Moderate",
+      "target_diff": "Difficult",
+      "focus_area": "Scenario Planning",
+      "current_stem": "Valemont's board sets a five-year strategic plan, while department managers prepare detailed annual operating budgets. How do these two planning levels differ?",
+      "upgrade_rationale": "Transform definition question into a scenario-evaluation task with strategic pivot requiring budget reconciliation."
+    },
+    {
+      "qid": "P1-BD-089",
+      "line": 8392,
+      "topic": "Cash collection pattern budgeting",
+      "current_cl": "Apply",
+      "target_cl": "Evaluate",
+      "current_diff": "Moderate",
+      "target_diff": "Difficult",
+      "focus_area": "Cash Collection Forecasting",
+      "current_stem": "Overbrook historically collects 60% of credit sales in the month of sale and 40% in the following month. June credit sales $200,000, May $150,000. Budgeted June cash collections?",
+      "upgrade_rationale": "Expand simple calculation into multi-month cash budget requiring evaluation of borrowing vs. discounting alternatives."
+    },
+    {
+      "qid": "P1-BD-083",
+      "line": 8092,
+      "topic": "Budget revision mid year",
+      "current_cl": "Apply",
+      "target_cl": "Evaluate",
+      "current_diff": "Moderate",
+      "target_diff": "Difficult",
+      "focus_area": "Budget Revision Decisions",
+      "current_stem": "Inglewood experiences a significant unexpected change in raw material prices mid-year and revises its budget accordingly. What is an appropriate response?",
+      "upgrade_rationale": "Expand into competing stakeholder interests requiring evaluation of tradeoffs between budget relief and performance accountability."
+    },
+    {
+      "qid": "P1-BD-082",
+      "line": 8042,
+      "topic": "Production budget units to produce",
+      "current_cl": "Apply",
+      "target_cl": "Analyze",
+      "current_diff": "Moderate",
+      "target_diff": "Difficult",
+      "current_stem": "Summit Corporation expects to sell 12,000 units in Q1. Desired ending inventory 3,000 units, beginning inventory 1,800 units. How many units must be produced?",
+      "upgrade_rationale": "Add sales forecast uncertainty and ask candidate to analyze the production plan under competing inventory-carrying-cost vs. stockout-risk scenarios."
+    },
+    {
+      "qid": "P1-BD-080",
+      "line": 7942,
+      "topic": "Expected value forecast",
+      "current_cl": "Apply",
+      "target_cl": "Analyze",
+      "current_diff": "Moderate",
+      "target_diff": "Difficult",
+      "focus_area": "Sensitivity Analysis",
+      "current_stem": "A demand forecast has three scenarios: 8,000 units with 25% probability, 10,000 units with 50% probability, and 13,000 units with 25% probability. What is the expected-value demand forecast?",
+      "upgrade_rationale": "Transform EV calculation into sensitivity analysis: candidate must analyze which scenario most affects production planning and evaluate the forecast's reliability."
+    },
+    {
+      "qid": "P1-BD-079",
+      "line": 7892,
+      "topic": "Flexible budget at actual activity",
+      "current_cl": "Apply",
+      "target_cl": "Evaluate",
+      "current_diff": "Moderate",
+      "target_diff": "Difficult",
+      "focus_area": "Budget Variance Analysis",
+      "current_stem": "A department's flexible budget formula is $42,000 of fixed cost plus $6 per direct labor hour. If actual activity is 8,500 direct labor hours, what flexible budget cost should be used for performance evaluation?",
+      "upgrade_rationale": "Add actual costs incurred and ask candidate to compute variance AND evaluate whether it reflects spending inefficiency or volume miscalibration."
+    },
+    {
+      "qid": "P1-BD-078",
+      "line": 7842,
+      "topic": "Direct materials purchases budget",
+      "current_cl": "Apply",
+      "target_cl": "Analyze",
+      "current_diff": "Moderate",
+      "target_diff": "Difficult",
+      "current_stem": "A manufacturer plans to produce 12,000 units next month. Each unit requires 3 pounds. Desired ending inventory 4,500 lbs, beginning inventory 3,200 lbs. How many pounds should be purchased?",
+      "upgrade_rationale": "Add price uncertainty and supplier quantity discounts to ask candidate to analyze purchase-timing tradeoffs."
+    },
+    {
+      "qid": "P1-BD-077",
+      "line": 7792,
+      "topic": "Activity-based budgeting",
+      "current_cl": "Apply",
+      "target_cl": "Analyze",
+      "current_diff": "Moderate",
+      "target_diff": "Difficult",
+      "current_stem": "An activity-based budget includes three expected activities: 1,200 receiving orders at $18 per order, 90 setups at $240 per setup, and 600 inspections at $35 per inspection. What total activity cost should be budgeted?",
+      "upgrade_rationale": "Add actual activity levels and ask candidate to analyze budget-to-actual variance by rate vs. volume decomposition across three cost drivers."
+    },
+    {
+      "qid": "P1-BD-071",
+      "line": 7492,
+      "topic": "Forecast accuracy measurement",
+      "current_cl": "Understand",
+      "target_cl": "Evaluate",
+      "current_diff": "Moderate-Easy",
+      "target_diff": "Difficult",
+      "focus_area": "Rolling Forecasts",
+      "current_stem": "Whitfield evaluates its sales forecasting model by comparing forecasted values to actual results using mean absolute percentage error. What is the purpose of this measurement?",
+      "upgrade_rationale": "Provide MAPE values for two competing models; ask candidate to evaluate which to adopt considering accuracy, cost, and implementation complexity."
+    },
+    {
+      "qid": "P1-BD-064",
+      "line": 7142,
+      "topic": "Selling and administrative expense budget",
+      "current_cl": "Apply",
+      "target_cl": "Analyze",
+      "current_diff": "Moderate",
+      "target_diff": "Difficult",
+      "current_stem": "Prescott prepares a budget for fixed and variable selling and administrative expenses based on projected sales volume. What costs would typically appear as variable?",
+      "upgrade_rationale": "Provide cost data at two activity levels; ask candidate to separate fixed from variable using high-low method and analyze cost behavior."
+    },
+    {
+      "qid": "P1-BD-050",
+      "line": 6442,
+      "topic": "Direct materials purchases budget",
+      "current_cl": "Apply",
+      "target_cl": "Analyze",
+      "current_diff": "Moderate-Easy",
+      "target_diff": "Moderate",
+      "current_stem": "Briarcliff needs 25,000 pounds of material for production, wants ending inventory of 4,000 pounds, and has beginning inventory of 3,000 pounds. How many pounds should be purchased?",
+      "upgrade_rationale": "Add supplier discount threshold and price uncertainty; ask candidate to analyze the tradeoff between bulk purchasing savings and carrying costs."
+    },
+    {
+      "qid": "P1-BD-043",
+      "line": 6092,
+      "topic": "Time series forecasting components",
+      "current_cl": "Understand",
+      "target_cl": "Analyze",
+      "current_diff": "Easy",
+      "target_diff": "Moderate",
+      "current_stem": "Sandpiper analyzes historical sales data and identifies a recurring pattern that repeats every four quarters. What time series component does this represent?",
+      "upgrade_rationale": "Instead of identifying seasonality, provide deseasonalized data and ask candidate to analyze trend vs. seasonal drivers of the forecast."
+    },
+    {
+      "qid": "P1-BD-035",
+      "line": 5692,
+      "topic": "Standard cost setting basis",
+      "current_cl": "Understand",
+      "target_cl": "Evaluate",
+      "current_diff": "Moderate",
+      "target_diff": "Difficult",
+      "current_stem": "Jettison sets standard costs for direct materials based on expected efficient usage and negotiated purchase prices. What is the primary purpose of standard costs?",
+      "upgrade_rationale": "Provide actual vs. standard data; ask candidate to evaluate whether a favorable price variance masks an unfavorable usage variance and recommend corrective action."
+    },
+    {
+      "qid": "P1-BD-015",
+      "line": 4660,
+      "topic": "Capital expenditure budget planning",
+      "current_cl": "Apply",
+      "target_cl": "Evaluate",
+      "current_diff": "Easy",
+      "target_diff": "Difficult",
+      "focus_area": "Capital Budgeting Support",
+      "current_stem": "Palisade prepares a capital expenditure budget covering planned equipment purchases for the next three years. What is the primary purpose of this budget?",
+      "upgrade_rationale": "Present competing capex proposals with strategic alignment data; candidate must evaluate which project best aligns with strategic plan and budget constraints."
+    },
+    {
+      "qid": "P1-BD-007",
+      "line": 4244,
+      "topic": "Flexible budget variance analysis",
+      "current_cl": "Apply",
+      "target_cl": "Evaluate",
+      "current_diff": "Moderate",
+      "target_diff": "Difficult",
+      "focus_area": "Budget Variance Analysis",
+      "current_stem": "Granville compares its flexible budget for actual output to actual costs incurred. What does a favorable flexible budget variance indicate?",
+      "upgrade_rationale": "Provide actual vs. flexible budget data; ask candidate to evaluate whether a favorable variance reflects genuine efficiency or an unrealistic budget standard."
+    }
+  ],
+  "target_distribution": {
+    "evaluate": 8,
+    "analyze": 7,
+    "apply": 0,
+    "understand": 0
+  },
+  "post_rewrite_projection": {
+    "pack_d_section_b_higher_order": 19,
+    "pack_d_section_b_higher_order_pct": "19.0%",
+    "improvement_pct": "15.0%"
+  }
+}
