@@ -3930,46 +3930,43 @@ const MCQ_BANK_B = [
         "CognitiveLevel": "Apply"
     },
     {
-        "Part": 1,
-        "Section": "B",
-        "SectionName": "Planning, Budgeting, and Forecasting",
-        "Topic": "B-B.120 time series components",
-        "MicroTopic": "time series components",
-        "UniqueConceptKey": "B-B-120-time-series-components",
-        "LOSTag": "B.4 Forecasting techniques",
-        "Difficulty": "Moderate-Easy",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Which time series component represents long-term direction in data?",
-        "CorrectChoice": "B",
-        "ExplanationCorrect": "The trend component represents the long-term direction or pattern in the data over many periods.",
-        "SourceDescription": "Original CMA Part 1 exam-style practice.",
-        "QuestionID": "P1B-B-120",
-        "question_state": "Certified",
-        "ReviewNote": "If missed or marked, review the linked study materials.",
-        "CalculationItem": false,
-        "Choices": {
-            "A": "Cyclical variation",
-            "B": "Trend component",
-            "C": "Seasonal variation",
-            "D": "Irregular variation"
-        },
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            }
-        ],
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
-        ],
-        "ExplanationWrongA": "Cyclical variation refers to medium-term business cycle fluctuations (typically 2-10 years), not the long-term underlying direction. Trend represents the persistent long-term movement in the data over many periods.",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "Seasonal variation refers to regular, repeating patterns within a year (e.g., quarterly or monthly patterns). Trend captures the long-term direction over many years, distinct from seasonal effects.",
-        "ExplanationWrongD": "The random (irregular) component represents unpredictable variations. Trend is the systematic long-term movement in the data, not random noise.",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
-    },
+	"Part": 1,
+	"Section": "B",
+	"SectionName": "Planning, Budgeting, and Forecasting",
+	"Topic": "B-B.120 time series components",
+	"MicroTopic": "time series components",
+	"UniqueConceptKey": "B-B-120-time-series-components",
+	"LOSTag": "B.4 Forecasting techniques",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Veridian Analytics' CFO Elena Torres is reviewing five years of quarterly subscription revenue to prepare the board's strategic forecast. Year 1 averaged $2.1M per quarter, Year 3 $2.8M, Year 5 $3.6M. Each year, Q4 spikes 35-40% above the yearly trend due to annual client renewals, while Q1 dips approximately 15% below trend. Year 3's Q2 and Q3 showed an 8% combined decline during an industrywide downturn that fully reversed by Year 4. Torres must isolate the component that best represents the structural $2.1M-to-$3.6M growth trajectory to anchor the five-year strategic plan. Which component captures this persistent underlying movement?",
+	"CorrectChoice": "B",
+	"ExplanationCorrect": "The trend component captures the long-term underlying direction of a time series after removing seasonal, cyclical, and irregular effects. Veridian's revenue grew from approximately $2.1M to $3.6M per quarter over five years — a persistent directional movement reflecting market expansion and customer acquisition. This structural growth is distinct from the quarterly Q4 renewal spikes (seasonal), the Year 3 industry downturn and recovery (cyclical), or any one-time shocks (irregular). In forecasting, isolating the trend allows the CFO to project baseline growth before layering in seasonal adjustments and cyclical expectations, forming the foundation of the five-year strategic revenue plan.",
+	"SourceDescription": "Original CMA Part 1 exam-style practice.",
+	"QuestionID": "P1B-B-120",
+	"question_state": "Certified",
+	"ReviewNote": "If missed or marked, review the linked study materials.",
+	"CalculationItem": false,
+	"Choices": {
+		"A": "Cyclical variation — because the Year 3 industry downturn created multi-quarter deviations from the baseline, and long-wave economic patterns are the primary driver of the revenue trajectory Veridian has experienced.",
+		"B": "Trend component — because the persistent quarter-over-quarter increase from $2.1M to $3.6M over five years reflects the long-term direction of the data series, independent of quarterly renewal patterns, the Year 3 downturn, or random events.",
+		"C": "Seasonal variation — because the Q4 renewal spikes repeat predictably every year and represent the largest and most consistent pattern in Veridian's revenue data, dominating the multi-year trajectory.",
+		"D": "Irregular variation — because the Year 3 industry downturn was an unpredictable external shock, and the overall growth pattern reflects the compounding impact of multiple random events rather than a systematic component."
+	},
+	"StudyLinks": [
+		{"label": "IMA CMA Learning Outcome Statements, Part 1 Section B", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"}
+	],
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
+	],
+	"ExplanationWrongA": "Cyclical variation describes medium-term wave-like fluctuations tied to business cycles, typically lasting 2 to 10 years. While Veridian experienced an industry downturn in Year 3, that is a single cycle superimposed on the trend. The sustained $2.1M-to-$3.6M growth across all five years represents the trend, not the cycle itself. Confusing the two would lead Torres to treat structural market growth as a temporary economic condition and underinvest in capacity.",
+	"ExplanationWrongB": "",
+	"ExplanationWrongC": "Seasonal variation refers to calendar-driven patterns that repeat within a fixed period, such as Veridian's Q4 renewal spikes and Q1 dips. While these quarterly patterns are real and measurable, they oscillate around the trend — they do not create sustained directional movement across years. Attributing the five-year $2.1M-to-$3.6M increase to seasonality confuses within-year patterns with multi-year structural change.",
+	"ExplanationWrongD": "Irregular variation represents one-time, unpredictable events such as natural disasters, strikes, or data anomalies. The revenue increase from $2.1M to $3.6M over five years is far too systematic and sustained to be random noise. While the Year 3 industry downturn introduced short-term irregularity, the overarching growth trajectory is a trend. Treating systematic growth as random would lead Torres to forgo the very capacity and staffing investments the trend analysis is meant to support.",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze"
+},
     {
         "Part": 1,
         "Section": "B",
@@ -7245,50 +7242,44 @@ const MCQ_BANK_B = [
         "CognitiveLevel": "Apply"
     },
     {
-        "Part": 1,
-        "Section": "C",
-        "SectionName": "Performance Management",
-        "Topic": "B-C.101 variance analysis",
-        "MicroTopic": "direct materials price variance",
-        "UniqueConceptKey": "B-C-101-variance-analysis",
-        "LOSTag": "LOS: Part 1, Section C.1.1 - Compute and interpret direct materials variances",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Horizon Manufacturing has a direct materials standard of 4 pounds per unit at $5.00 per pound. During the period, 12,000 units were produced using 50,000 pounds of materials that cost $4.80 per pound. What is the direct materials price variance?",
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "The direct materials price variance = (Actual Price - Standard Price) x Actual Quantity = ($4.80 - $5.00) x 50,000 = (-$0.20) x 50,000 = -$10,000. A negative variance is favorable because the actual price paid was less than the standard price.",
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "QuestionID": "P1B-C-101",
-        "question_state": "Certified",
-        "ReviewNote": "If missed or marked, review the direct materials price variance formula: MPV = (AP - SP) x AQ",
-        "CalculationItem": true,
-        "Choices": {
-            "A": "$10,000 favorable",
-            "B": "$10,000 unfavorable",
-            "C": "$12,000 favorable",
-            "D": "$12,000 unfavorable"
-        },
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax: Principles of Managerial Accounting",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
-            }
-        ],
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
-        ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "The variance is favorable (actual price $4.80 < standard $5.00), not unfavorable. The sign is determined by comparing actual to standard: paying less than standard produces a favorable variance.",
-        "ExplanationWrongC": "$12,000 favorable would result if the quantity were 60,000 lbs instead of 50,000 lbs. The price variance uses the actual quantity purchased (50,000 lbs), not the standard quantity allowed.",
-        "ExplanationWrongD": "$12,000 unfavorable has both the wrong amount and the wrong sign. The variance = ($4.80 - $5.00) x 50,000 = -$10,000 (favorable), not $12,000 (unfavorable).",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "C",
+	"SectionName": "Performance Management",
+	"Topic": "B-C.101 variance analysis",
+	"MicroTopic": "direct materials price variance",
+	"UniqueConceptKey": "B-C-101-variance-analysis",
+	"LOSTag": "LOS: Part 1, Section C.1.1 - Compute and interpret direct materials variances",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Apex Foundry's controller Marcus Chen must evaluate whether Purchasing Manager Sophia Tran's decision to switch aluminum suppliers was financially sound. Apex's standard cost card allows 5 pounds of aluminum at $4.00 per pound per casting. Sophia secured a new supplier at $3.50 per pound. During October, Apex produced 8,000 castings and used 44,000 pounds of the lower-cost aluminum. Production Manager Leo Wright reports that the cheaper aluminum had lower purity, requiring approximately 10% more material per casting due to higher scrap and rework rates. Chen needs to compute both the materials price variance and the materials quantity variance and determine whether the net effect supports retaining the new supplier. Which conclusion best reflects the combined variance analysis?",
+	"CorrectChoice": "A",
+	"ExplanationCorrect": "Materials price variance = (AP - SP) x AQ = ($3.50 - $4.00) x 44,000 = $22,000 favorable. Materials quantity variance = (AQ - SQ) x SP = (44,000 - 40,000) x $4.00 = $16,000 unfavorable, where SQ = 8,000 units x 5 lbs = 40,000 lbs. The net variance is $22,000 F + (-$16,000 U) = $6,000 favorable. While the lower-grade material increased usage by 4,000 pounds, Sophia's $0.50 per pound discount on 44,000 pounds generated enough savings to more than offset the extra material consumed. The controller should conclude the supplier change was a net positive financial decision despite the production complication.",
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"QuestionID": "P1B-C-101",
+	"question_state": "Certified",
+	"ReviewNote": "If missed or marked, review the direct materials price variance formula: MPV = (AP - SP) x AQ",
+	"CalculationItem": false,
+	"Choices": {
+		"A": "Net $6,000 favorable — the $22,000 favorable price variance exceeds the $16,000 unfavorable quantity variance. Sophia's supplier change was financially beneficial despite the higher material usage because the $0.50 per pound discount on 44,000 pounds more than offsets the cost of 4,000 extra pounds consumed.",
+		"B": "Net $16,000 unfavorable — the quantity variance represents a permanent degradation in production efficiency that will persist as long as the lower-grade material is used. The $22,000 favorable price variance is a one-time gain that cannot be relied upon, making the supplier change a net negative for Apex.",
+		"C": "Net $22,000 favorable — purchasing and production variances should be evaluated as separate responsibility centers. The price variance belongs to Sophia Tran's purchasing performance and the quantity variance belongs to Leo Wright's production performance. The net impact on company profitability is measured by the price variance alone.",
+		"D": "Net effect is approximately zero — the $22,000 favorable price variance and $16,000 unfavorable quantity variance largely offset, producing a de minimis net impact of only $6,000 on a materials spend exceeding $150,000. This negligible net result does not clearly support either retaining or dropping the new supplier."
+	},
+	"StudyLinks": [
+		{"label": "IMA CMA Learning Outcome Statements, Part 1 Section C", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
+		{"label": "OpenStax: Principles of Managerial Accounting", "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"}
+	],
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
+	],
+	"ExplanationWrongA": "",
+	"ExplanationWrongB": "The quantity variance of $16,000 unfavorable does not negate the $22,000 favorable price variance. Netting the two yields $6,000 favorable — meaning the price savings exceed the efficiency loss. There is no basis to treat price savings as 'one-time' while treating quantity losses as 'permanent.' Both variances measure the same October production run, and the combined analysis must net them. Ignoring confirmed price savings when evaluating a supplier change would systematically bias sourcing decisions toward higher-cost suppliers.",
+	"ExplanationWrongC": "While separating responsibility centers is a valid performance evaluation technique, Marcus Chen's question is about Apex Foundry's net financial outcome — not individual manager evaluation. The price variance alone does not answer whether the supplier change benefited the company. The $16,000 unfavorable quantity variance is a direct and foreseeable consequence of the lower-grade material choice and must be netted against the price savings to assess the total company impact.",
+	"ExplanationWrongD": "A $6,000 favorable net variance on a standard material cost of $160,000 (40,000 lbs x $4.00) represents a 3.75% cost reduction — a meaningful savings in manufacturing, where materials typically account for 50-60% of product cost. Characterizing this as 'de minimis' or 'a wash' is quantitatively incorrect. The analysis confirms a clear net benefit that supports retaining the new supplier while working with production to mitigate the scrap rate.",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze"
+},
     {
         "Part": 1,
         "Section": "C",
@@ -12070,27 +12061,27 @@ const MCQ_BANK_B = [
         "Part": 1,
         "Section": "D",
         "SectionName": "Cost Management",
-        "Topic": "B-D.083 contribution margin",
-        "MicroTopic": "contribution margin calculation",
-        "UniqueConceptKey": "B-D-083-contribution-margin",
+        "Topic": "B-D.083 contribution margin special order capacity constraints",
+        "MicroTopic": "contribution margin special order capacity constraints",
+        "UniqueConceptKey": "B-D-083-contribution-margin-special-order-capacity-constraints",
         "LOSTag": "LOS: Part 1, Section D.2.1 - Calculate contribution margin and contribution margin ratio",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Glen Haven Company sells a product for $80 per unit. Variable costs are $50 per unit and fixed costs are $120,000. What is the contribution margin per unit?",
+        "Stem": "Meridian Precision Parts manufactures industrial bearings at a selling price of $120 per unit with variable costs of $72 per unit (contribution margin of $48 per unit, 40% CM ratio). Annual production capacity is 80,000 units; current regular-customer volume is 60,000 units. Fixed costs total $2,400,000 annually. A major national retailer, Apex Industrial Supply, has offered a one-time order for 25,000 units at $90 per unit and has signaled interest in annual follow-on orders of 15,000\u201330,000 units if the initial order performs well. However, Apex requires a three-year exclusivity clause for its market segment. The Sales Director warns that if regular customers learn of the $90 price (a 25% discount), there is an estimated 20% probability they will demand price concessions averaging $15 per unit on approximately 40% of regular volume. Operations Manager Tom\u00e1s Rivera must recommend whether and on what terms to accept the order.",
         "CorrectChoice": "C",
-        "ExplanationCorrect": "Contribution margin per unit = Selling price - Variable cost per unit = $80 - $50 = $30. Contribution margin represents the amount from each sale that is available to cover fixed costs and contribute to profit.",
+        "ExplanationCorrect": "Tom\u00e1s should recommend a capacity-disciplined partial acceptance because it simultaneously captures the special-order value while respecting all binding constraints. The key calculation: Meridian has 20,000 units of available capacity (80,000 capacity - 60,000 regular). The special order's 25,000 units would exceed capacity by 5,000 units, forcing difficult choices: displace regular sales (forgoing $48/unit CM for $18/unit CM \u2014 a net loss of $30/unit), invest in capacity expansion (adding fixed costs), or run overtime (increasing variable costs). By accepting 15,000 units, Meridian captures $270,000 in clean incremental contribution with zero displacement and zero capacity investment \u2014 an economically pure decision. The price-step proposal addresses the long-term concern: $90 is acceptable as a trial price, but Meridian should not lock in a 25% permanent discount for what could become a 30,000-unit annual relationship. Proposing escalating prices conditions Apex to expect normalization toward market pricing while rewarding Meridian for building the relationship. The exclusivity clause remains a concern, but the price-step framework limits its impact to the trial period. This recommendation reflects the core principle of relevant-cost decision-making: consider only incremental revenues and costs within capacity constraints, and negotiate terms that preserve long-term pricing power.",
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "QuestionID": "P1B-D-083",
         "question_state": "Certified",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review contribution margin: SP - VC per unit",
-        "CalculationItem": true,
+        "CalculationItem": false,
         "Choices": {
-            "A": "$80",
-            "B": "$130",
-            "C": "$30",
-            "D": "$50"
+            "A": "Accept the full 25,000-unit special order at $90 per unit \u2014 the contribution margin is $18 per unit ($90 - $72), generating $450,000 in incremental profit. The follow-on relationship with Apex represents a strategic growth opportunity worth the short-term margin dilution, and the exclusivity clause locks in a multi-year revenue stream.",
+            "B": "Reject the special order entirely \u2014 the $90 price represents a 25% discount below the standard $120 price, the exclusivity clause constrains Meridian's pricing flexibility for three years, and the 20% probability of regular-customer price concessions creates a contingent liability of approximately $72,000 in expected margin loss. Protecting the existing customer base and price integrity is more important than a one-time volume opportunity.",
+            "C": "Accept 15,000 units of the special order at $90 per unit \u2014 this fits within Meridian's 20,000 units of available capacity without displacing any regular-customer volume or requiring capital expansion. The order generates $270,000 in incremental contribution (15,000 units \u00d7 $18/unit) with zero capacity risk. Propose to Apex a price-step framework for future orders: $90 for the trial order, with scheduled increases to $98 in year two and $105 in year three as the relationship matures, contingent on volume commitments.",
+            "D": "Accept the full 25,000-unit special order at $90 but simultaneously notify regular customers of a price increase to $135 per unit \u2014 the $15 increase on 60,000 units generates $900,000 in additional regular-customer contribution, more than offsetting the margin dilution from the special order and the potential concessions. This approach uses the special order as a catalyst to correct underpricing in the regular business."
         },
         "StudyLinks": [
             {
@@ -12105,12 +12096,12 @@ const MCQ_BANK_B = [
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
         ],
-        "ExplanationWrongA": "$80 is the selling price, not the contribution margin. CM = Selling price - Variable costs = $80 - $50 = $30.",
-        "ExplanationWrongB": "$130 incorrectly adds the selling price and variable costs. Contribution margin is the difference between selling price and variable costs.",
+        "ExplanationWrongA": "This recommendation ignores the capacity constraint \u2014 25,000 units exceeds available capacity by 5,000 units, requiring either displacement of regular sales or capacity expansion. Displacing 5,000 regular units at $48 CM with $18 CM special-order units destroys $150,000 in contribution (5,000 \u00d7 ($48 - $18)), partially offsetting the $450,000 special-order gain. More critically, the exclusivity clause at a permanent $90 price locks Meridian into a 25% discount on what could grow to 30,000 annual units \u2014 a $900,000 annual CM reduction vs. standard pricing. Accepting the full order today without negotiating price-step terms mortgages future pricing power for a one-time volume win.",
+        "ExplanationWrongB": "Rejecting the order entirely forfeits $270,000 in clean incremental contribution from the 15,000 units that fit within capacity \u2014 contribution that requires zero additional fixed-cost investment and zero displacement of regular sales. The $72,000 expected value of customer-concession risk is modest relative to the opportunity; even accounting for this, the net expected value of accepting 15,000 units is approximately $198,000 positive. Moreover, Apex represents a new distribution channel that diversifies Meridian's customer base beyond its current concentration \u2014 rejecting the trial order forecloses a strategic growth path that could reach $2.7 million in annual revenue at standard pricing in year three.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "$50 is the variable cost per unit, not the contribution margin. CM = Selling price - Variable costs.",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Apply"
+        "ExplanationWrongD": "This recommendation creates two simultaneous pricing disruptions \u2014 a deep discount to a new channel and a steep increase to existing customers \u2014 with high execution risk in both directions. Regular customers receiving a 12.5% price increase ($120 to $135) while learning that a new customer pays 33% less ($90 vs. $135) face the strongest possible incentive to switch suppliers. The $900,000 theoretical revenue gain from the regular-customer increase is unlikely to materialize if volume drops in response. The recommendation treats pricing as a mechanical lever that can be adjusted independently on each customer segment, ignoring the reality that industrial customers share information and price discrimination of this magnitude is unsustainable. The special order should not be used as a justification for correcting regular pricing \u2014 those are separate strategic decisions with separate analyses.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "Part": 1,

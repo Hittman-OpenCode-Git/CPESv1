@@ -4989,57 +4989,57 @@ const MCQ_BANK_D = [{
         "CognitiveLevel": "Apply"
     },
 {
-        "Part": 1,
-        "Section": "B",
-        "SectionName": "Planning, Budgeting, and Forecasting",
-        "Topic": "B.022 direct labor budget calculation",
-        "MicroTopic": "direct labor budget calculation",
-        "UniqueConceptKey": "B-D022-direct-labor-budget-calculation",
-        "LOSTag": "B Planning and budgeting",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Valemont plans to produce 8,000 units, each requiring 2 direct labor hours at a rate of 18 per hour. What is the total budgeted direct labor cost?",
-        "Choices": {
-            "A": "576,000",
-            "B": "288,000",
-            "C": "16,000",
-            "D": "144,000"
-        },
-        "CorrectChoice": "B",
-        "ExplanationCorrect": "Budgeted direct labor cost is calculated by multiplying the number of units to be produced by the standard labor hours per unit and then by the hourly labor rate. Here: 8,000 units × 2 hours per unit × $18 per hour = $288,000. Each step converts production volume into labor hours (16,000 hours) and then into labor cost.",
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax Managerial Accounting: Budgeting",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "QuestionID": "P1-BD-022",
-        "question_state": "Certified",
-        "certification_date": "2026-07-23",
-        "certification_batch": "Pack D Section B Block 1",
-        "CalculationItem": true,
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "ExplanationWrongA": "This amount equals multiplying 8,000 units by $18 per hour ($144,000) and omitting the 2 direct labor hours each unit requires. The complete formula is: 8,000 units × 2 hours per unit × $18 = $288,000. A candidate selecting this answer likely stopped after the first multiplication step.",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "This figure likely omits desired ending inventory or fails to add it to budgeted production needs. The direct materials purchases budget requires: (units to be produced x materials per unit) + desired ending inventory - beginning inventory. Carefully recheck which component was missed to arrive at this number.",
-        "ExplanationWrongD": "This choice multiplies 8,000 units by $18 per hour ($144,000) but omits the 2 direct labor hours required per unit. The formula is: Units × Hours per unit × Rate per hour = 8,000 × 2 × $18.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "B",
+	"SectionName": "Planning, Budgeting, and Forecasting",
+	"Topic": "B.022 direct labor budget permanent vs temporary staffing seasonal demand",
+	"MicroTopic": "direct labor budget permanent vs temporary staffing seasonal demand",
+	"UniqueConceptKey": "B-D022-direct-labor-budget-permanent-vs-temporary-staffing-seasonal-demand",
+	"LOSTag": "B Planning and budgeting",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Fenwick Manufacturing's Operations Director, Marcus Delgado, is finalizing the annual direct labor budget. Production demand follows a seasonal pattern: Q1 (Jan–Mar) 40,000 units, Q2 (Apr–Jun) 95,000 units, Q3 (Jul–Sep) 60,000 units, and Q4 (Oct–Dec) 50,000 units. Each unit requires 0.5 direct labor hours. Permanent employees work 500 hours per quarter at a fully loaded cost of $32.00 per hour (wages plus benefits, training, and payroll taxes). Temporary workers cost $38.00 per hour with no benefits obligation, but each temporary hire requires $1,500 in onboarding and reaches full productivity only in their third week. Overtime for permanent employees is paid at time-and-a-half ($48.00/hour) and is capped at 80 hours per employee per quarter to comply with labor regulations. Marcus must recommend a workforce strategy that balances cost efficiency, production reliability, and workforce stability for the upcoming fiscal year.",
+	"Choices": {
+		"A": "Staff 95 permanent workers year-round to cover peak Q2 demand without overtime or temporary labor — permanent workers provide the lowest hourly cost ($32.00 vs. $38.00 temp), institutional knowledge retention is maximized, and idle labor during Q1, Q3, and Q4 (averaging 30 workers idle per quarter) is an acceptable cost of workforce stability and surge-readiness.",
+		"B": "Staff only the Q4 base demand of 50 permanent workers and fill all seasonal volume above 50,000 units with temporary labor each quarter — this eliminates idle-time costs entirely, matches labor cost directly to production needs, and preserves maximum flexibility if demand forecasts shift.",
+		"C": "Maintain a core of 50 permanent workers covering the 50,000-unit quarterly base load, supplement Q2's 45,000-unit surge with a combination of 20 temporary workers and capped overtime for the 50 permanent employees (4,000 overtime hours), and cover Q3's additional 10,000 units with limited temporary staffing — this balances the lower per-hour cost of permanent labor with the flexibility of temporary workers while limiting overtime to the regulatory cap.",
+		"D": "Staff 65 permanent workers — the average of Q2 peak (95) and Q4 trough (50) — using mandatory overtime during Q2 (95,000 units requires 47,500 hours; 65 workers provide 32,500 base hours; gap of 15,000 hours at $48.00/hour) and accepting idle labor during Q1 and Q4. This reduces temporary-worker onboarding costs and quality variability."
+	},
+	"CorrectChoice": "C",
+	"ExplanationCorrect": "Marcus should structure a core-permanent-plus-seasonal-temporary workforce because it balances the three competing objectives: cost efficiency, production reliability, and workforce stability. Permanent workers at $32.00/hour provide the lowest unit labor cost for the 50,000-unit quarterly base — 25,000 hours per quarter × 4 quarters × $32.00 = $3,200,000 annually. For Q2's surge (22,500 additional hours): 20 temporary workers provide 10,000 hours at $38.00/hour ($380,000) with $30,000 in onboarding costs, and 50 permanent workers contribute 4,000 overtime hours at $48.00/hour ($192,000) — remaining within the 80-hour regulatory cap. Q3's incremental 5,000 hours are covered by 10 temporary workers. This approach keeps idle-time costs near zero (permanent workers are fully utilized at base load), avoids the quality and reliability risks of a fully temporary workforce, and limits overtime premium to only $192,000 during the peak quarter. The $1,500-per-hire onboarding cost for temporary workers is manageable because seasonal peak hiring is concentrated in a single quarter. The alternative of 95 permanent workers (Option A) would incur approximately $960,000 in idle labor costs during off-peak quarters — far exceeding the temporary labor premium.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax Managerial Accounting: Budgeting",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-BD-022",
+	"question_state": "Certified",
+	"certification_date": "2026-07-23",
+	"certification_batch": "Pack D Section B Block 1",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "Staffing to peak demand creates substantial idle-time costs during the three off-peak quarters. In Q1 (40,000 units), only 40 workers are needed; in Q3 (60,000), only 60; in Q4 (50,000), only 50. The 95-worker roster leaves approximately 55, 35, and 45 workers idle in Q1, Q3, and Q4 respectively — roughly 67,500 idle hours at $32.00/hour, costing over $2.1 million annually in unproductive labor. While workforce stability has value, paying for idle capacity at this scale is not cost-efficient when temporary labor alternatives exist at only a $6.00/hour premium.",
+	"ExplanationWrongB": "A fully temporary workforce eliminates idle-time costs but introduces three risks that outweigh the flexibility benefit. First, each temporary worker incurs $1,500 in onboarding and requires three weeks to reach full productivity — with 45 temporary workers needed for Q2 peak alone, onboarding costs total $67,500 and productivity losses during ramp-up erode the apparent labor-cost savings. Second, training a new temporary workforce each quarter (45 in Q2, 10 in Q3, 0 in Q4) creates significant quality variability risk — a manufacturing defect discovered in Q2 would be difficult to attribute and correct when the workforce has already turned over. Third, zero permanent workforce means zero institutional memory for process improvements or equipment maintenance routines.",
+	"ExplanationWrongC": "",
+	"ExplanationWrongD": "The midpoint-staffing approach creates a worst-of-both-worlds outcome: Q2 still requires 15,000 overtime hours at $48.00/hour ($720,000 overtime premium — more than triple the overtime cost in the recommended approach), while Q1 and Q4 still carry idle workers (15 and 15 respectively, costing approximately $480,000 annually). The mandatory overtime during Q2 at 231 hours per employee substantially exceeds the 80-hour regulatory cap, creating labor-law compliance risk. This recommendation fails on both cost and compliance dimensions — it neither minimizes idle time nor respects overtime constraints.",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
 {
         "Part": 1,
         "Section": "B",
@@ -8957,55 +8957,49 @@ const MCQ_BANK_D = [{
         "CognitiveLevel": "Apply"
     },
 {
-        "Part": 1,
-        "Section": "C",
-        "SectionName": "Performance Management",
-        "Topic": "C.001 labor rate and efficiency variance",
-        "MicroTopic": "labor rate and efficiency variance",
-        "UniqueConceptKey": "C-D001-labor-rate-and-efficiency-variance",
-        "LOSTag": "C Performance management",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Alderway paid direct labor at 19 per hour instead of the 18 standard rate, and used 2,100 actual hours versus a 2,000 hour standard. What is the labor rate variance?",
-        "Choices": {
-            "A": "2,100 Unfavorable",
-            "B": "1,800 Favorable",
-            "C": "100 Unfavorable",
-            "D": "2,000 Unfavorable"
-        },
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "Labor rate variance = Actual hours × (Actual rate - Standard rate) = 2,100 × ($19 - $18) = 2,100 × $1 = $2,100 Unfavorable. The variance is unfavorable because the actual hourly rate ($19) exceeded the standard rate ($18), meaning the company paid more per hour than expected.",
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "QuestionID": "P1-CD-001",
-        "CalculationItem": true,
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "This choice applies the labor efficiency variance formula (Standard rate × Hours difference) and reverses the sign to favorable. Efficiency variance: $18 × (2,100 − 2,000) = $1,800 unfavorable, not favorable. The question asks for the rate variance using actual hours × (actual rate − standard rate) = 2,100 × $1 = $2,100.",
-        "ExplanationWrongC": "$2,100 Favorable confuses the sign. Since actual rate ($19) > standard rate ($18), the variance is unfavorable. A favorable variance occurs when actual is less than standard.",
-        "ExplanationWrongD": "$2,000 Favorable incorrectly uses standard hours and reverses the sign. The rate variance formula requires actual hours and (actual rate - standard rate).",
-        "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "C",
+	"SectionName": "Performance Management",
+	"Topic": "C.001 labor rate and efficiency variance",
+	"MicroTopic": "labor rate and efficiency variance",
+	"UniqueConceptKey": "C-D001-labor-rate-and-efficiency-variance",
+	"LOSTag": "C Performance management",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Meridian Steel's production supervisor James Okonkwo is analyzing February's labor performance for the fabrication department ahead of the monthly cost review. The standard cost card allows 0.5 labor hours per unit at $22.00 per hour. February production reached 18,000 units, consuming 9,900 actual labor hours at an average wage of $24.20 per hour. Okonkwo knows that three senior fabricators retired in January and were replaced by less experienced workers earning the standard entry rate. Separately, the entire workforce received a scheduled 10% across-the-board wage increase effective February 1, raising the average rate from $22.00 to $24.20. The plant manager wants to understand whether the labor cost overrun stems primarily from the wage increase, from the productivity gap caused by inexperienced new hires, or from both equally. Which analysis correctly isolates and interprets the two labor variances?",
+	"Choices": {
+		"A": "Labor rate variance = 9,900 x ($24.20 - $22.00) = $21,780 unfavorable, attributable to the 10% scheduled wage increase. Labor efficiency variance = $22.00 x (9,900 - 9,000) = $19,800 unfavorable, attributable to the 900 excess hours from less experienced workers. Total unfavorable = $41,580, with rate and efficiency contributing in roughly equal measure.",
+		"B": "Labor rate variance = 9,000 x ($24.20 - $22.00) = $19,800 unfavorable, computed at standard hours allowed. Labor efficiency variance = $24.20 x (9,900 - 9,000) = $21,780 unfavorable, computed at the actual rate. The efficiency variance is the larger component, indicating the new hires are the dominant problem.",
+		"C": "Only the labor efficiency variance of $19,800 unfavorable is relevant to Okonkwo's performance evaluation. The $21,780 rate variance stems from a contractual wage increase that was beyond his control. Management attention should focus exclusively on the 900 excess hours, which represent a 10% productivity decline.",
+		"D": "Total labor cost overrun = (18,000 x 0.5 x $22.00) - (9,900 x $24.20) = $198,000 - $239,580 = $41,580 unfavorable. Since both variances ultimately derive from the same root cause — the January retirements that triggered both new hires and the wage structure change — they should be analyzed and reported as a single combined turnover impact."
+	},
+	"CorrectChoice": "A",
+	"ExplanationCorrect": "Labor rate variance = AH x (AR - SR) = 9,900 x ($24.20 - $22.00) = $21,780 unfavorable. The $2.20 per hour increase reflects the 10% scheduled wage increase applied across all hours worked. Labor efficiency variance = SR x (AH - SH) = $22.00 x (9,900 - 9,000) = $19,800 unfavorable, where SH = 18,000 units x 0.5 hours = 9,000 standard hours. The 900 excess hours represent the productivity gap from replacing experienced senior fabricators with new hires still on the learning curve. At $41,580 total unfavorable, the two causes contribute comparably — approximately 52% from the wage increase and 48% from productivity. Okonkwo can present a balanced narrative: roughly half the overrun is structural and recurring (wage increase), while half is transitional and should narrow as new hires gain experience.",
+	"StudyLinks": [
+		{"label": "IMA CMA Learning Outcome Statements, Part 1 Section C", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
+		{"label": "OpenStax Managerial Accounting: Standard Costs and Variances", "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-CD-001",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "",
+	"ExplanationWrongB": "The labor rate variance formula uses actual hours worked, not standard hours allowed. Meridian paid the higher $24.20 rate on all 9,900 hours actually worked: 9,900 x $2.20 = $21,780 unfavorable, not 9,000 x $2.20 = $19,800. Similarly, the efficiency variance uses the standard rate to isolate the quantity effect: $22.00 x (9,900 - 9,000) = $19,800 unfavorable, not $24.20 x 900 = $21,780. Swapping the multipliers between formulas produces variances with the wrong dollar amounts and reverses which component appears larger.",
+	"ExplanationWrongC": "While separating controllable from uncontrollable variances is a valid management reporting technique for individual performance evaluation, the plant manager's question is about understanding the total $41,580 labor cost overrun. The rate variance accounts for $21,780 — more than half the total. Excluding it from the analysis would understate the cost impact by 52% and leave management with an incomplete picture for budgeting future periods. Both components should be reported, with the rate variance clearly noted as externally driven by the contractual wage schedule.",
+	"ExplanationWrongD": "Analyzing labor variances as a single combined amount obscures the distinct operational drivers that require different management responses. The $21,780 rate variance calls for updating the standard cost card and adjusting product pricing to reflect the permanently higher wage structure. The $19,800 efficiency variance calls for targeted training investment and mentoring programs for new hires. Combining both into a single 'turnover cost' figure prevents Meridian from taking targeted corrective action and violates the fundamental purpose of variance analysis: decomposing total deviations into individually actionable components.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze"
+},
 {
         "Part": 1,
         "Section": "C",
@@ -15208,55 +15202,49 @@ const MCQ_BANK_D = [{
         "CognitiveLevel": "Understand"
     },
 {
-        "Part": 1,
-        "Section": "D",
-        "SectionName": "Cost Management",
-        "Topic": "D.026 margin of safety calculation",
-        "MicroTopic": "margin of safety calculation",
-        "UniqueConceptKey": "D-D026-margin-of-safety-calculation",
-        "LOSTag": "D Cost management",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Ashfield expects sales of $920,000 next year. Its CVP analysis shows break-even sales of $690,000. What is Ashfield's margin of safety in sales dollars?",
-        "Choices": {
-            "A": "$690,000",
-            "B": "$230,000",
-            "C": "25.0%",
-            "D": "$1,610,000"
-        },
-        "CorrectChoice": "B",
-        "ExplanationCorrect": "Margin of safety in sales dollars equals expected sales minus break-even sales. Ashfield's margin of safety is $920,000 - $690,000 = $230,000.",
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax Managerial Accounting: Activity-Based Costing",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/6-introduction"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "QuestionID": "P1-DD-026",
-        "CalculationItem": true,
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "ExplanationWrongA": "$690,000 is the break-even sales amount, not the margin of safety. Margin of safety is the excess of expected sales over break-even sales: $920,000 - $690,000 = $230,000.",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "25.0% is the margin of safety ratio ($230,000 margin of safety / $920,000 expected sales). The question asks for margin of safety in sales dollars, which is $230,000.",
-        "ExplanationWrongD": "This adds expected sales and break-even sales instead of subtracting.",
-        "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "D",
+	"SectionName": "Cost Management",
+	"Topic": "D.026 margin of safety calculation",
+	"MicroTopic": "margin of safety calculation",
+	"UniqueConceptKey": "D-D026-margin-of-safety-calculation",
+	"LOSTag": "D Cost management",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Orion Medical Devices' CFO Priya Nair is reviewing the risk profiles of two product lines ahead of the board's strategic planning session. The surgical instruments line has budgeted annual sales of $4,800,000 with a break-even point of $3,360,000. The implantable devices line has budgeted sales of $3,200,000 with a break-even point of $2,720,000. The board is considering reallocating $400,000 of marketing spend from instruments to implantables, which is projected to increase implantable sales by 15% while decreasing instrument sales by 8%, with no change to either line's fixed cost structure. Nair must assess which product line currently carries greater downside risk and whether the proposed reallocation improves or worsens the company's aggregate margin of safety. Which analysis is correct?",
+	"Choices": {
+		"A": "Instruments' margin of safety is $1,440,000 (30.0%) versus implantables' $480,000 (15.0%). After reallocation, instruments' margin of safety falls to $1,056,000 (23.9%) while implantables' rises to $960,000 (26.1%). The combined margin of safety increases from $1,920,000 to $2,016,000 — the reallocation improves Orion's aggregate risk position by $96,000.",
+		"B": "Instruments carries a $1,440,000 margin of safety — triple the $480,000 cushion of implantables. Instruments can absorb a 30% sales decline before incurring losses. The proposed reallocation is too risky because it shrinks the safer product line's sales by $384,000, more than the $480,000 gain in the riskier line, and instruments' margin of safety ratio deteriorates from 30.0% to 23.9%.",
+		"C": "Both product lines exceed a 10% margin of safety ratio, which is the widely accepted threshold for adequate downside protection in medical device manufacturing. Since neither line approaches the danger zone, the $400,000 reallocation is approximately risk-neutral. Nair should recommend against the reallocation on strategic rather than risk grounds.",
+		"D": "Implantables has a stronger risk profile because its break-even point of $2,720,000 is lower in absolute dollars than instruments' $3,360,000, meaning it requires less total revenue to cover its fixed costs. The reallocation should proceed because it directs marketing resources to the product line with the lower break-even threshold."
+	},
+	"CorrectChoice": "A",
+	"ExplanationCorrect": "Margin of safety = Budgeted sales - Break-even sales. Instruments: $4,800,000 - $3,360,000 = $1,440,000 (30.0% ratio). Implantables: $3,200,000 - $2,720,000 = $480,000 (15.0%). After reallocation: Instruments sales = $4,800,000 x 0.92 = $4,416,000, new MoS = $4,416,000 - $3,360,000 = $1,056,000 (23.9%). Implantables sales = $3,200,000 x 1.15 = $3,680,000, new MoS = $3,680,000 - $2,720,000 = $960,000 (26.1%). Combined pre: $1,440,000 + $480,000 = $1,920,000. Combined post: $1,056,000 + $960,000 = $2,016,000. The $96,000 increase in total dollar margin of safety, plus the improved balance between the two lines' ratios (23.9% and 26.1% vs. the prior 30.0% and 15.0%), confirms the reallocation improves Orion's aggregate risk position while reducing overconcentration in a single product line.",
+	"StudyLinks": [
+		{"label": "IMA CMA Learning Outcome Statements, Part 1 Section D", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
+		{"label": "OpenStax Managerial Accounting: Activity-Based Costing", "url": "https://openstax.org/books/principles-managerial-accounting/pages/6-introduction"}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-DD-026",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "",
+	"ExplanationWrongB": "While instruments currently has a larger margin of safety buffer, the analysis must evaluate the combined effect of the reallocation, not just the deterioration in the safer line. The post-reallocation total margin of safety increases from $1,920,000 to $2,016,000, and implantables' ratio improves substantially from 15.0% to 26.1%. The $384,000 instruments sales decline is more than offset by the $480,000 implantables gain, producing a net $96,000 higher company-wide sales level. Assessing only the downside to one product line without measuring the upside to the other produces an incomplete and misleading risk assessment.",
+	"ExplanationWrongC": "A 15.0% margin of safety ratio means implantables can absorb only a 15% sales decline before reaching break-even — a narrow cushion in medical device markets subject to sudden regulatory changes, reimbursement rate adjustments, and competitor product launches. There is no universal '10% adequacy threshold' in management accounting; the appropriate target depends on industry volatility, fixed cost intensity, and the company's risk tolerance. Furthermore, the reallocation is not risk-neutral: total dollar margin of safety increases by $96,000 and the two lines' risk profiles become better balanced.",
+	"ExplanationWrongD": "Comparing absolute break-even points across product lines of different sizes is fundamentally misleading. Implantables' $2,720,000 break-even represents 85% of its budgeted sales, leaving only a 15% margin of safety. Instruments' $3,360,000 break-even is only 70% of its budgeted sales, providing a 30% cushion — twice as strong on a relative basis. The margin of safety ratio, not the absolute break-even dollar amount, is the correct measure of downside risk. A product line with a $50M break-even on $100M in sales (50% MoS) is far safer than one with a $2M break-even on $2.1M in sales (4.8% MoS), despite the latter having the lower absolute break-even.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze"
+},
 {
         "Part": 1,
         "Section": "D",

@@ -5849,55 +5849,55 @@ var MCQ_BANK_A = [
                 "CognitiveLevel": "Apply"
         },
         {
-                "Part": 1,
-                "Section": "B",
-                "SectionName": "Planning, Budgeting, and Forecasting",
-                "Topic": "B.040 standard costing variance investigation threshold",
-                "MicroTopic": "standard costing variance investigation threshold",
-                "UniqueConceptKey": "B-040-standard-costing-variance-investigation-threshold",
-                "LOSTag": "B.4 Annual profit plan and supporting schedules",
-                "Difficulty": "Moderate",
-                "ItemType": "MCQ",
-                "ItemStyle": "single-select",
-                "Stem": "Eastwood investigates any budget variance exceeding 5% of budgeted cost or $10,000, whichever is smaller. A department shows a $9,000 unfavorable variance on a $150,000 budget. Should this be investigated?",
-                "Choices": {
-                        "A": "Yes, because $9,000 exceeds the $10,000 threshold",
-                        "B": "Yes, because 5% of $150,000 is $7,500, and $9,000 exceeds it, so it should be investigated",
-                        "C": "No, because the variance is favorable",
-                        "D": "Yes, but only if it recurs for two consecutive periods"
-                },
-                "CorrectChoice": "B",
-                "ExplanationCorrect": "5% of $150,000 = $7,500, which is smaller than the $10,000 cap, so $7,500 is the threshold. Since $9,000 exceeds $7,500, the variance should be investigated.",
-                "StudyLinks": [
-                        {
-                                "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
-                                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-                        },
-                        {
-                                "label": "OpenStax Managerial Accounting: Budgeting",
-                                "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
-                        }
-                ],
-                "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-                "Part1OnlyFlag": true,
-                "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-                "QuestionID": "P1-B-040",
-                "CalculationItem": true,
-                "VerifiedChecks": [
-                        "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-                        "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-                        "Original practice item with unique micro-topic and stem",
-                        "Answer key distribution balanced across A/B/C/D",
-                        "Distractors written as plausible CMA-style traps"
-                ],
-                "ExplanationWrongA": "The $10,000 threshold is not the applicable limit here because it is larger than the 5% alternative. Under the stated policy of 'whichever is smaller,' the binding threshold is 5% of $150,000 = $7,500, not $10,000. The $9,000 variance exceeds $7,500, so investigation is triggered — but through the percentage threshold, not the dollar cap.",
-                "ExplanationWrongB": "",
-                "ExplanationWrongC": "The stem explicitly states the variance is unfavorable, not favorable. Additionally, a significant favorable variance can also merit investigation — it may indicate overly conservative budgeting, missed revenue opportunities, or estimation errors. The direction of the variance does not eliminate the investigation requirement when the threshold is exceeded.",
-                "ExplanationWrongD": "The stated policy triggers investigation based on a single-period threshold computation, not a recurrence criterion. Nothing in the policy requires the variance to persist for two consecutive periods. Once the $9,000 unfavorable variance exceeds the $7,500 applicable threshold, investigation is warranted immediately under the policy as described.",
-                "question_state": "Certified",
-                "DifficultyScore": 3,
-                "CognitiveLevel": "Apply"
-        },
+	"Part": 1,
+	"Section": "B",
+	"SectionName": "Planning, Budgeting, and Forecasting",
+	"Topic": "B.040 variance investigation threshold multi-factor judgment",
+	"MicroTopic": "variance investigation threshold multi-factor judgment",
+	"UniqueConceptKey": "B-040-variance-investigation-threshold-multi-factor-judgment",
+	"LOSTag": "B.4 Annual profit plan and supporting schedules",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Ridgeline Manufacturing's Controller, Sarah Okonkwo, is reviewing the Q3 financial close. The machining department exceeded its flexible budget by $9,000 — a 6.0% unfavorable variance on its $150,000 quarterly budget. Ridgeline's written variance investigation policy requires a formal investigation whenever a department variance exceeds either 5% of budget or $10,000, whichever is smaller. The plant manager has already identified the root cause: an unanticipated tooling-supplier price increase of $9,200, partially offset by $200 in favorable yield adjustments. The supplier has since reverted to contract pricing effective Q4. The department's trailing four-quarter average variance is 1.2% unfavorable, and the controller estimates a full investigation would require two senior accountants for one week at a combined cost of approximately $6,400. Sarah must decide whether to authorize the formal investigation or document an exception.",
+	"Choices": {
+		"A": "Authorize the formal investigation — the 6.0% variance exceeds the 5% policy threshold, and bypassing the policy even once sets a precedent that undermines the control environment. The policy exists precisely to prevent managers from rationalizing away unfavorable variances.",
+		"B": "Authorize the formal investigation — the plant manager's root-cause explanation has not been independently verified, and accepting a self-reported cause without corroboration introduces moral hazard. Other departments will expect similar treatment if this variance escapes scrutiny.",
+		"C": "Defer the formal investigation but document the exception in writing — the root cause is specific, isolated, and already remedied (supplier reverted to contract pricing). The four-quarter trend of 1.2% demonstrates strong control. At $6,400, the investigation cost approaches 71% of the $9,000 variance, and the expected recoverable insight is low given the known cause. Escalate to full investigation only if Q4 shows a repeat variance.",
+		"D": "Waive investigation entirely — a $9,000 variance on a $150,000 department budget represents less than 0.2% of Ridgeline's total quarterly manufacturing spending of approximately $4.8 million, and the materiality threshold for the consolidated financial statements is $50,000. The variance does not warrant management attention."
+	},
+	"CorrectChoice": "C",
+	"ExplanationCorrect": "Professional judgment in variance investigation requires weighing four factors: materiality (6% is a marginal breach of the 5% threshold), trend (1.2% trailing average indicates sustained control), controllability (isolated supplier event, already resolved), and cost-benefit ($6,400 investigation cost vs. $9,000 variance — recovering meaningful additional insight is unlikely when the root cause is identified and remedied). Under management-by-exception principles, the controller exercises judgment to avoid investigations whose cost exceeds their probable benefit, provided the decision is documented and monitored. Deferring with a documented rationale and a Q4 escalation trigger respects the policy's intent while applying cost-benefit discipline — a hallmark of effective controllership. The policy provides a starting point for investigation decisions, not an absolute mandate that overrides professional judgment.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax Managerial Accounting: Budgeting",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-B-040",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "This recommendation mechanically applies the policy without exercising the professional judgment that management-by-exception requires. A 6.0% breach of a 5.0% threshold is marginal, and the policy provides a trigger, not a mandate. Investigations consume resources — $6,400 in this case — and when the root cause is already identified and resolved (supplier reverted to contract pricing), the incremental benefit of a formal investigation is near zero. Rigid policy application without cost-benefit analysis is not effective controllership.",
+	"ExplanationWrongB": "While independent verification is a legitimate internal control concern, this recommendation overweights one risk (moral hazard from self-reporting) while ignoring the cost-benefit equation. The plant manager's explanation is specific, quantified ($9,200 supplier charge, $200 offset), and verifiable against supplier invoices without a full investigation. The four-quarter trend of 1.2% provides substantial evidence against systematic misreporting. A controller can independently confirm the supplier price change with a single phone call rather than a $6,400 investigation.",
+	"ExplanationWrongC": "",
+	"ExplanationWrongD": "This recommendation applies a consolidated materiality threshold ($50,000) that is irrelevant to departmental variance analysis. Materiality for variance investigation is assessed at the responsibility-center level, not the consolidated entity level — a department's $9,000 variance may be immaterial to the company but highly material to the department manager's performance evaluation. Ignoring all variances below a corporate materiality floor would systematically fail to detect emerging control weaknesses. The 5%/$10,000 policy exists specifically because consolidated materiality is too coarse for operational control.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
         {
                 "Part": 1,
                 "Section": "B",
@@ -10704,55 +10704,55 @@ var MCQ_BANK_A = [
                 "CognitiveLevel": "Remember"
         },
         {
-                "Part": 1,
-                "Section": "C",
-                "SectionName": "Performance Management",
-                "Topic": "C.037 transfer price at market price with excess capacity",
-                "MicroTopic": "transfer price at market price with excess capacity",
-                "UniqueConceptKey": "C-037-transfer-price-at-market-price-with-excess-capacity",
-                "LOSTag": "C.3 Responsibility centers and transfer pricing",
-                "Difficulty": "Moderate",
-                "ItemType": "MCQ",
-                "ItemStyle": "single-select",
-                "Stem": "The selling division has excess capacity and the market price for the intermediate product is $40/unit with variable cost of $25/unit. Under general transfer pricing guidance, what is the minimum transfer price the selling division should accept?",
-                "Choices": {
-                        "A": "$40 (market price)",
-                        "B": "$25 (variable cost), since idle capacity means no opportunity cost",
-                        "C": "$32.50 (midpoint of market and cost)",
-                        "D": "$0, since the division has excess capacity"
-                },
-                "CorrectChoice": "B",
-                "ExplanationCorrect": "Transfer pricing minimum = variable cost plus opportunity cost. Because the selling division has excess capacity, an internal transfer does not displace an external sale, so opportunity cost is $0 and the minimum acceptable transfer price is the $25 variable cost.",
-                "StudyLinks": [
-                        {
-                                "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
-                                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-                        },
-                        {
-                                "label": "OpenStax: Principles of Managerial Accounting",
-                                "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
-                        }
-                ],
-                "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-                "Part1OnlyFlag": true,
-                "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-                "QuestionID": "P1-C-037",
-                "CalculationItem": true,
-                "VerifiedChecks": [
-                        "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-                        "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-                        "Original practice item with unique micro-topic and stem",
-                        "Answer key distribution balanced across A/B/C/D",
-                        "Distractors written as plausible CMA-style traps"
-                ],
-                "ExplanationWrongA": "Market price would be relevant if capacity were constrained or if an outside sale were displaced. With idle capacity, the minimum floor is variable cost, not $40.",
-                "ExplanationWrongB": "",
-                "ExplanationWrongC": "A midpoint may be negotiated, but it is not the minimum transfer price. The minimum is based on relevant cost: variable cost plus opportunity cost.",
-                "ExplanationWrongD": "Excess capacity removes opportunity cost, but it does not make the relevant variable cost disappear. The selling division still needs at least $25 per unit.",
-                "question_state": "Certified",
-                "DifficultyScore": 3,
-                "CognitiveLevel": "Apply"
-        },
+	"Part": 1,
+	"Section": "C",
+	"SectionName": "Performance Management",
+	"Topic": "C.037 transfer price excess capacity divisional stakeholder conflict",
+	"MicroTopic": "transfer price excess capacity divisional stakeholder conflict",
+	"UniqueConceptKey": "C-037-transfer-price-excess-capacity-divisional-stakeholder-conflict",
+	"LOSTag": "C.3 Responsibility centers and transfer pricing",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Orion Industries operates two divisions evaluated as profit centers. The Components Division manufactures Product X12 at a variable cost of $25 per unit and a full cost of $34 per unit. The external market price for X12 is $40 per unit. Components is currently operating at 75% of its 100,000-unit annual capacity. The Assembly Division has developed a new product line requiring 15,000 units of X12 annually and has requested an internal transfer. The Components Division manager insists on a transfer price of $38 to preserve division profitability. The Assembly Division manager argues for $25, noting that Components has ample excess capacity and no external sales would be displaced. The CFO, Aisha Patel, must resolve the impasse while preserving both division managers' motivation and maximizing Orion's consolidated profitability.",
+	"Choices": {
+		"A": "Set the transfer price at $40 per unit — the external market price is the only objective benchmark that treats both divisions as autonomous profit centers and avoids favoritism. If Assembly cannot compete at the market price, the product line should not be launched.",
+		"B": "Mandate a transfer price of $25 per unit — under excess capacity, the company's incremental cost of producing X12 is only variable cost, and internal transfers at variable cost maximize consolidated profitability. Components Division's profitability concerns are irrelevant to the company-wide optimization decision.",
+		"C": "Facilitate a negotiated transfer in the range of $28 to $32 per unit — variable cost of $25 establishes the floor, and the external market price of $40 establishes the ceiling. A price within this range gives Components a contribution margin of $3 to $7 per unit, preserving divisional motivation, while still keeping Assembly's cost $8 to $12 below the external market alternative. The CFO should guide both managers to view the internal transfer as a shared value-creation opportunity rather than a zero-sum negotiation.",
+		"D": "Allow Assembly Division to source X12 from an external supplier if Components will not meet the $25 price — the external market of multiple suppliers at $40 creates competitive pressure, and if Components cannot match the $25 incremental cost standard, Assembly should be free to explore alternative sourcing that may be more cost-effective over time."
+	},
+	"CorrectChoice": "C",
+	"ExplanationCorrect": "The CFO's role in a transfer-pricing impasse is to optimize the company-wide outcome while preserving the profit-center accountability framework that drives managerial performance. With 25,000 units of excess capacity, the economic floor is indeed $25 (variable cost with zero opportunity cost). However, mandating variable-cost transfer pricing destroys Components Division management's incentive to control variable costs — if every dollar of cost reduction is captured by Assembly, Components has no motivation to improve. Conversely, market price ($40) ignores the excess-capacity reality and would lead Assembly to source externally or abandon a value-creating product line (the company's incremental cost is $25, while external sourcing costs $40). A negotiated price of $28–$32 splits the $15 gap between market price and variable cost: Components earns a contribution margin of $3–$7/unit, and Assembly saves $8–$12/unit vs. external sourcing. This approach preserves divisional autonomy, aligns incentives, and delivers $525,000–$600,000 in annual company-wide savings vs. external sourcing (15,000 units × $35 average internal transfer vs. $40 external = $75,000–$180,000 depending on final negotiated price). The CFO's facilitation — rather than imposition — reinforces the profit-center governance model.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax: Principles of Managerial Accounting",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-C-037",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "Market price is the appropriate transfer price when the selling division is at full capacity — an internal transfer then displaces an external sale, creating an opportunity cost equal to the forgone contribution margin. Here, Components has 25% excess capacity (25,000 units), so no external sale is displaced. Imposing market price when internal costs are lower causes the company as a whole to forgo value: Assembly would pay $40 internally vs. a company-wide incremental cost of $25 — a $15 per-unit deadweight loss to Orion on 15,000 units, or $225,000 annually. The profit-center framework serves shareholder value; rigidly enforcing market prices when they destroy value contradicts that purpose.",
+	"ExplanationWrongB": "Mandating variable-cost transfers undermines the profit-center evaluation system. If Components Division managers know they will be forced to transfer at variable cost, they have no incentive to control or reduce variable costs — every dollar of cost savings is immediately captured by the buying division. Over time, this destroys the accountability framework that profit-center evaluation is designed to create. Additionally, variable-cost transfer pricing ignores the selling division's fixed-cost recovery needs; Components Division's full-cost ($34) exceeds variable cost by $9, and perpetual transfers at variable cost would cause the division to report persistent losses, demotivating management and distorting performance comparisons.",
+	"ExplanationWrongC": "",
+	"ExplanationWrongD": "Allowing Assembly to source externally when the company has internal excess capacity transfers the entire $15 per-unit margin to an external supplier. On 15,000 units, Orion would forgo $225,000 in annual contribution margin (the difference between Components' variable cost of $25 and the external price of $40, less any internal transfer premium). This recommendation treats divisional autonomy as absolute — but divisional autonomy exists to serve consolidated shareholder value, not to override it. The CFO's obligation is to resolve the impasse internally before ceding value to an external party.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
         {
                 "Part": 1,
                 "Section": "C",
@@ -15120,55 +15120,55 @@ var MCQ_BANK_A = [
                 "CognitiveLevel": "Apply"
         },
         {
-                "Part": 1,
-                "Section": "D",
-                "SectionName": "Cost Management",
-                "Topic": "D.025 ABC setup cost assignment 5",
-                "MicroTopic": "ABC setup cost assignment 5",
-                "UniqueConceptKey": "D-025-abc-setup-cost-assignment-5",
-                "LOSTag": "D.2 Costing systems",
-                "Difficulty": "Moderate",
-                "ItemType": "MCQ",
-                "ItemStyle": "single-select",
-                "Stem": "Apex has a setup cost pool of $197,500 and 625 setup events. Product A required 23 setups. How much setup cost is assigned to Product A?",
-                "Choices": {
-                        "A": "$197,500",
-                        "B": "$9,568",
-                        "C": "$316",
-                        "D": "$7,268"
-                },
-                "CorrectChoice": "D",
-                "ExplanationCorrect": "ABC assignment uses an activity rate times the product's activity consumption. Apex's setup rate is $197,500 / 625 setups = $316 per setup; Product A used 23 setups, so assigned setup cost is 23 x $316 = $7,268.",
-                "StudyLinks": [
-                        {
-                                "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
-                                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-                        },
-                        {
-                                "label": "OpenStax Managerial Accounting: Costing Systems",
-                                "url": "https://openstax.org/books/principles-managerial-accounting/pages/4-introduction"
-                        }
-                ],
-                "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-                "Part1OnlyFlag": true,
-                "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-                "QuestionID": "P1-D-025",
-                "CalculationItem": true,
-                "VerifiedChecks": [
-                        "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-                        "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-                        "Original practice item with unique micro-topic and stem",
-                        "Answer key distribution balanced across A/B/C/D",
-                        "Distractors written as plausible CMA-style traps"
-                ],
-                "ExplanationWrongA": "This is the entire setup cost pool, not the portion assigned to Product A.",
-                "ExplanationWrongB": "$9,568 does not match the activity-based assignment. Apex's setup rate is $316 per setup ($197,500 ÷ 625), and Product A uses 23 setups: 23 × $316 = $7,268. This result likely comes from using an incorrect activity rate or number of setups.",
-                "ExplanationWrongC": "This is the activity rate per setup, not the total cost assigned to Product A.",
-                "ExplanationWrongD": "",
-                "question_state": "Certified",
-                "DifficultyScore": 3,
-                "CognitiveLevel": "Apply"
-        },
+	"Part": 1,
+	"Section": "D",
+	"SectionName": "Cost Management",
+	"Topic": "D.025 ABC vs plant-wide costing pricing recommendation stakeholder",
+	"MicroTopic": "ABC vs plant-wide costing pricing recommendation stakeholder",
+	"UniqueConceptKey": "D-025-abc-vs-plant-wide-costing-pricing-recommendation-stakeholder",
+	"LOSTag": "D.2 Costing systems",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Crestline Industries manufactures two product lines: Standard (high-volume, 85,000 units/year, simple design, single production run per quarter) and Custom (low-volume, 8,500 units/year, complex design, 45 unique production setups per quarter). Under Crestline's plant-wide overhead rate of $48 per direct labor hour, Standard carries $36.00 in overhead per unit and Custom carries $72.00. A recent ABC pilot revealed significant cost distortion: Standard actually consumes $28.50 in overhead per unit (overcosted by $7.50), while Custom consumes $114.00 (undercosted by $42.00) — driven by setup activity, quality inspections, and engineering change orders concentrated in the Custom line. Crestline currently prices both products at full cost plus 25% margin, yielding Standard at $95 and Custom at $160. Competitors price comparable standard products at $78–$85, and Crestline's Standard market share has declined from 22% to 16% over two years. Controller Priya Nair must present a pricing and costing recommendation to the CFO.",
+	"Choices": {
+		"A": "Retain the plant-wide costing system and current pricing — switching to ABC requires system changes, retraining, and may disrupt existing customer relationships. The declining market share in Standard is a marketing problem, not a costing problem. Focus sales efforts on Custom, where plant-wide costing shows a healthy 25% margin.",
+		"B": "Implement ABC immediately and reprice both products to cost-plus-25% under the new cost structure — Standard drops to $65 (cost $28.50 + overhead $23.50 direct = $52, plus 25% margin), and Custom rises to $212 (cost $114 + $56 direct = $170, plus 25%). This captures the full profit opportunity from accurate costing and stops cross-subsidization.",
+		"C": "Adopt ABC for internal decision-making and implement a phased pricing strategy — immediately raise Custom's price to $198 to begin recovering the true cost (an 8% increase vs. the full $212 adjustment), while reducing Standard's price to $82 over two quarters to match the competitive range ($78–$85). Monitor Custom volume closely for customer attrition at the higher price, and use the freed Standard capacity to pursue volume growth in the segment where Crestline is now cost-competitive.",
+		"D": "Discontinue the Custom product line — under ABC, Custom's full cost of $170 per unit requires a $212 selling price at 25% margin, which may be unsustainable in a market accustomed to $160. The 8,500 units of Custom volume can be replaced with additional Standard production, where ABC confirms Crestline has a genuine cost advantage."
+	},
+	"CorrectChoice": "C",
+	"ExplanationCorrect": "Priya should recommend a phased transition because accurate cost information must be paired with commercial judgment. ABC reveals that Standard has been subsidizing Custom by approximately $637,500 annually (85,000 units × $7.50 overcosting), explaining the market-share loss — competitors pricing at $78–$85 are likely using more accurate costing, while Crestline's $95 price reflects inflated allocated costs. The recommendation has three components: (1) Raise Custom's price to $198 immediately — this is an 8% increase that recovers most of the undercosting while staying below the full $212 adjustment, which could trigger customer loss. (2) Lower Standard's price to $82 over two quarters — entering the competitive range while maintaining a contribution margin, with the expectation that volume recovers toward prior share levels. (3) Monitor Custom attrition — if volume falls more than 15% at $198, consider whether some Custom customers are unprofitable at any price and should be exited. This phased approach reflects the management accounting principle that cost accuracy informs pricing strategy, but pricing strategy also accounts for competitive dynamics, customer price sensitivity, and the speed at which markets absorb changes.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax Managerial Accounting: Costing Systems",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/4-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-D-025",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "This recommendation treats the costing system as immutable when evidence shows it is systematically distorting pricing decisions. The 6-percentage-point market-share decline in Standard (22% to 16%) over two years is a $2.55 million annual revenue loss (85,000 units × 6% share loss × approximately $500 in forgone revenue at Standard volumes — the lost contribution margin is costing Crestline far more than the one-time cost of an ABC implementation. Blaming marketing for a costing-driven pricing problem misdiagnoses the root cause. ABC implementation costs are typically a one-time investment that pays back through improved pricing and product-mix decisions within 12–18 months.",
+	"ExplanationWrongB": "Immediately repricing both products to full ABC cost-plus-25% is analytically correct but commercially reckless. Raising Custom's price 32.5% (from $160 to $212) in a single step risks catastrophic volume loss — customers facing a sudden one-third price increase will source alternatives, potentially destroying the product line's contribution entirely before the company can assess whether the higher price is sustainable. Pricing strategy must incorporate demand elasticity and competitive response, not just cost accuracy. The purpose of ABC is to inform decisions, not to dictate them without commercial context.",
+	"ExplanationWrongC": "",
+	"ExplanationWrongD": "Discontinuing Custom based solely on a cost recalculation ignores three critical considerations. First, ABC reveals Custom was undercosted, not unprofitable — at the current $160 price, Custom generates a negative margin under ABC, but at $198 it becomes profitable. Discontinuing before attempting a price increase forecloses the value-recovery option. Second, Custom customers may purchase other Crestline products — discontinuing one product line can trigger broader customer-relationship losses. Third, the 8,500 units of freed capacity from discontinuing Custom may not be readily absorbed by Standard — the markets are different, and sales cannibalization or capacity underutilization could result. Exit decisions should follow, not precede, attempted price adjustments.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
         {
                 "Part": 1,
                 "Section": "D",

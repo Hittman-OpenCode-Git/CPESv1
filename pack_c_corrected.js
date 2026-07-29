@@ -3900,57 +3900,51 @@ const MCQ_BANK_C = [
         "CognitiveLevel": "Apply"
     },
     {
-        "Part": 1,
-        "Section": "B",
-        "SectionName": "Planning, Budgeting, and Forecasting",
-        "Topic": "B.001 static vs flexible budget",
-        "MicroTopic": "static vs flexible budget",
-        "UniqueConceptKey": "B-C001-static-vs-flexible-budget",
-        "LOSTag": "B Planning and budgeting",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Ashford prepared a static budget for 10,000 units but actual production was 11,500 units. Which budget should be used to evaluate cost control performance?",
-        "Choices": {
-            "A": "A flexible budget adjusted to the actual level of activity",
-            "B": "The original static budget regardless of volume change",
-            "C": "A budget based on the highest historical volume achieved",
-            "D": "A budget based on the prior year's actual results"
-        },
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "A flexible budget restates expected costs at the actual activity level. Ashford planned for 10,000 units but actually produced 11,500 units, so evaluating cost control against a flexible budget separates spending performance from the volume effect caused by producing more units.",
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax Managerial Accounting: Budgeting",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "QuestionID": "P1-BC-001",
-        "question_state": "Certified",
-        "certification_date": "2026-07-23",
-        "certification_batch": "Pack C Section B Block 1",
-        "CalculationItem": true,
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Using prior-year actual results as a budget does not adjust for the current period's actual activity level of 11,500 units. Prior-year data reflects last year's cost structure and volume, not the current operating conditions that a flexible budget would capture.",
-        "ExplanationWrongC": "Using the highest historical volume does not match the current actual activity level and would not isolate current cost control.",
-        "ExplanationWrongD": "Prior-year actual results may be useful for context, but they are not a budget adjusted to Ashford's actual 11,500-unit output.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "B",
+	"SectionName": "Planning, Budgeting, and Forecasting",
+	"Topic": "B.001 static vs flexible budget",
+	"MicroTopic": "static vs flexible budget",
+	"UniqueConceptKey": "B-C001-static-vs-flexible-budget",
+	"LOSTag": "B Planning and budgeting",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Trillium Packaging's plant controller David Okonkwo is reviewing November performance for the quarterly operations review. The static master budget, prepared for 50,000 units, projected direct materials of $375,000, direct labor of $250,000, and variable overhead of $125,000. Actual November production reached 58,000 units driven by an unexpected holiday order. Actual costs totaled $420,000 for materials, $295,000 for labor, and $148,000 for overhead. Okonkwo's static budget variance report shows total unfavorable variances of $113,000. Before presenting to the operations VP, Okonkwo must determine whether the plant exercised effective cost control after adjusting for the 16% volume increase or whether the $113,000 unfavorable variance signals genuine spending problems requiring management attention.",
+	"Choices": {
+		"A": "Prepare a flexible budget at 58,000 units: materials $435,000, labor $290,000, variable overhead $145,000 — totaling $870,000. Actual costs of $863,000 produce a $7,000 favorable total variance, demonstrating that the plant controlled costs effectively and the static budget's $113,000 unfavorable variance was entirely a volume effect.",
+		"B": "Evaluate the plant against the original static budget of $750,000 total variable cost. The $113,000 unfavorable variance shows costs exceeded the plan by 15.1%, indicating that management failed to contain spending as production volumes unexpectedly increased beyond the approved budget.",
+		"C": "Compare actual November costs of $863,000 against the prior November's actual costs, since year-over-year comparison provides the most stable baseline for assessing whether the current period's spending was reasonable relative to historical performance.",
+		"D": "Compute the actual cost per unit of $14.88 ($863,000 / 58,000) against the static budget cost per unit of $15.00 ($750,000 / 50,000), showing a $0.12 per-unit savings that confirms the plant achieved improved efficiency at the higher production volume."
+	},
+	"CorrectChoice": "A",
+	"ExplanationCorrect": "A flexible budget adjusts variable costs to the actual activity level, isolating spending efficiency from volume-driven differences. At 58,000 units, variable costs should scale proportionally: materials ($375,000 x 58/50 = $435,000), labor ($250,000 x 58/50 = $290,000), variable overhead ($125,000 x 58/50 = $145,000), totaling $870,000. Actual costs were $863,000, yielding a $7,000 favorable flexible budget variance. This tells Okonkwo the plant managed costs effectively — the alarming $113,000 static budget variance is entirely explained by producing 8,000 more units, not by overspending. The operations VP can be assured that cost control was sound and the volume-driven increase was economically justified.",
+	"StudyLinks": [
+		{"label": "IMA CMA Learning Outcome Statements, Part 1 Section B", "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"},
+		{"label": "OpenStax Managerial Accounting: Budgeting", "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-BC-001",
+	"question_state": "Certified",
+	"certification_date": "2026-07-23",
+	"certification_batch": "Pack C Section B Block 1",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "",
+	"ExplanationWrongB": "Using the static budget when actual volume differs from planned volume conflates two distinct effects: the cost of producing more units (a volume-driven increase that was economically justified by the holiday order) and the efficiency of spending per unit. The $113,000 unfavorable static budget variance is overwhelmingly driven by the 16% volume increase, not by waste or overspending. The flexible budget analysis reveals that on a per-unit basis, the plant actually spent $7,000 less than expected — exactly the opposite conclusion from the static budget comparison.",
+	"ExplanationWrongC": "Prior-year actual costs reflect last year's cost structure, input prices, and production volume — not the current period's operating standards. A year-over-year comparison cannot distinguish whether cost changes resulted from volume differences, input price inflation, efficiency gains, or a combination of all three. The flexible budget, built from current cost standards and applied to current actual volume, provides a contemporaneous benchmark that isolates spending performance from external factors.",
+	"ExplanationWrongD": "Comparing actual cost per unit ($14.88) to the static budget cost per unit ($15.00) is deceptive because the $15.00 figure assumes fixed costs spread over only 50,000 units. At 58,000 units, fixed costs per unit would naturally be lower due to volume leverage — the apparent $0.12 savings could reflect fixed-cost absorption rather than genuine variable-cost efficiency. The flexible budget recalculates variable costs at actual volume to provide a like-for-like comparison, revealing the true $7,000 favorable performance.",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze"
+},
     {
         "Part": 1,
         "Section": "B",
@@ -9710,55 +9704,55 @@ const MCQ_BANK_C = [
         "CognitiveLevel": "Evaluate"
     },
     {
-        "Part": 1,
-        "Section": "C",
-        "SectionName": "Performance Management",
-        "Topic": "C.016 residual income calculation",
-        "MicroTopic": "residual income calculation",
-        "UniqueConceptKey": "C-C016-residual-income-calculation",
-        "LOSTag": "C Performance management",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Prairiewood has operating income of 450,000, average operating assets of 3,000,000, and a required rate of return of 10%. What is residual income?",
-        "Choices": {
-            "A": "450,000",
-            "B": "300,000",
-            "C": "135,000",
-            "D": "150,000"
-        },
-        "CorrectChoice": "D",
-        "ExplanationCorrect": "Residual income (RI) measures investment center performance in dollar terms. RI = Operating income - (Required rate of return x Average operating assets). Here: $450,000 - (10% x $3,000,000) = $450,000 - $300,000 = $150,000. Unlike ROI (a percentage), RI is an absolute dollar measure that increases whenever a project earns more than the required return.",
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "QuestionID": "P1-CC-016",
-        "CalculationItem": true,
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "ExplanationWrongA": "$450,000 is the full operating income without subtracting the required return charge. Residual income measures the earnings remaining after deducting the minimum required return on invested assets. Subtract $300,000 (10% x $3,000,000) from operating income: $450,000 - $300,000 = $150,000.",
-        "ExplanationWrongB": "This choice equals the required return charge ($300,000 = 10% x $3,000,000), not the residual income. Residual income is the amount of operating income remaining after deducting this required return: $450,000 - $300,000 = $150,000.",
-        "ExplanationWrongC": "This choice does not match the correct residual income calculation. Residual income = Operating income - (Required rate x Average operating assets) = $450,000 - (0.10 x $3,000,000) = $450,000 - $300,000 = $150,000. Common errors include applying an incorrect percentage or using the wrong asset base.",
-        "ExplanationWrongD": "",
-        "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "C",
+	"SectionName": "Performance Management",
+	"Topic": "C.016 residual income vs roi investment decision manager incentive analysis",
+	"MicroTopic": "residual income vs roi investment decision manager incentive analysis",
+	"UniqueConceptKey": "C-C016-residual-income-vs-roi-investment-decision-manager-incentive-analysis",
+	"LOSTag": "C Performance management",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Northfield Corporation evaluates its two divisions using return on investment (ROI). The North Division reports operating income of $3,000,000 on average operating assets of $20,000,000 (ROI = 15%). The South Division reports operating income of $1,350,000 on average operating assets of $15,000,000 (ROI = 9%). Northfield's weighted average cost of capital is 10%. A capital investment of $5,000,000 is available for a project expected to generate $600,000 in annual operating income (12% ROI). The project fits either division's existing operations equally well from a strategic standpoint. The CFO, David Chen, must recommend which division should execute the project and whether the evaluation framework itself should be reconsidered.",
+	"Choices": {
+		"A": "Assign the project to the South Division — South's current ROI of 9% is below the company's 10% cost of capital, indicating underperformance. The project's 12% ROI will improve South to 9.75%, moving it closer to the hurdle rate. North Division already performs well above 10% and does not need additional capital.",
+		"B": "Assign the project to the North Division — North has demonstrated superior managerial capability with a 15% ROI, which is six percentage points above South's 9%. Allocating capital to the stronger management team yields the highest probability of successful execution, and North's post-project ROI of 14.4% remains strong.",
+		"C": "Assign the project based on strategic fit rather than divisional ROI, and transition both divisions to residual income (RI) evaluation — the project generates $100,000 of RI ($600,000 - 10% × $5,000,000) regardless of placement, confirming it creates shareholder value. Under ROI evaluation, the North Division manager has an incentive to reject the project (ROI declines from 15.0% to 14.4%), while the South Division manager would accept it (ROI rises from 9.0% to 9.75%). The CFO should recognize that ROI creates an underinvestment bias and adopt RI to align managerial incentives with shareholder value creation.",
+		"D": "Do not assign the project to either division — while the 12% ROI exceeds the 10% cost of capital, the margin of safety is only 2 percentage points. Given execution risk, competitive dynamics, and estimation uncertainty in the $600,000 income projection, a 12% expected return does not justify committing $5,000,000 of scarce capital that could be deployed to higher-return alternatives in future periods."
+	},
+	"CorrectChoice": "C",
+	"ExplanationCorrect": "David Chen should recognize that ROI-based evaluation creates a structural incentive misalignment. The project's 12% return exceeds Northfield's 10% cost of capital — it creates $100,000 of annual shareholder value (RI = $600,000 - 10% × $5,000,000). Yet under ROI evaluation, the North Division manager has a strong incentive to reject it: North's ROI would decline from 15.0% to 14.4% ($3,600,000 / $25,000,000), potentially reducing the manager's bonus even though the project adds absolute value. This is the classic ROI underinvestment problem — managers evaluated on ROI reject projects that exceed the cost of capital but fall below their division's current ROI. The South Division manager faces the opposite incentive: accepting the project raises ROI from 9.0% to 9.75%, so South would accept. However, making investment decisions based on which manager's bonus structure favors acceptance is a governance failure, not a capital allocation strategy. The correct response is two-fold: (1) place capital where strategic fit is best, and (2) fix the incentive metric by adopting residual income, under which both division managers would accept any project with a return above 10% — perfectly aligning managerial decisions with shareholder interests.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-CC-016",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "This recommendation conflates two concepts that should be kept separate: (1) which division offers the best strategic home for the investment, and (2) whether the investment itself creates shareholder value. The fact that South Division's current ROI is below the cost of capital is a separate problem — one that requires operational improvement, not capital allocation games. Route capital to the best strategic use; address South's underperformance through cost reduction, revenue growth, or asset rationalization. Using capital allocation to 'fix' a division's ROI numbers masks the underlying operational problem.",
+	"ExplanationWrongB": "This recommendation confuses average historical performance (North's 15% ROI on existing assets) with marginal decision-making (should the company accept a project earning 12%?). The relevant question is whether the incremental project's return exceeds the cost of capital — which it does. North's 15% ROI reflects its existing asset base and business model, not a guarantee that new projects will also earn 15%. Rejecting projects that earn above the cost of capital but below a division's average ROI is a well-documented behavioral bias that leads companies to systematically underinvest and eventually shrink. Additionally, North's post-project ROI (14.4%) remains strong — a 0.6 percentage-point decline that still far exceeds the 10% threshold.",
+	"ExplanationWrongC": "",
+	"ExplanationWrongD": "A 2-percentage-point spread between expected return (12%) and the cost of capital (10%) is substantial — it represents a 20% premium over the required return. If Northfield required a minimum 5-percentage-point spread for all projects, it would reject investments earning 13% on a 10% cost of capital — a 30% premium — and systematically underinvest. The appropriate response to estimation uncertainty is not to raise the hurdle rate but to improve the estimation process (sensitivity analysis, scenario planning) and apply a higher discount rate to riskier projects (risk-adjusted cost of capital). An across-the-board margin-of-safety requirement that rejects positive-NPV projects is value-destroying.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
     {
         "Part": 1,
         "Section": "C",
@@ -17210,55 +17204,55 @@ const MCQ_BANK_C = [
         "CognitiveLevel": "Understand"
     },
     {
-        "Part": 1,
-        "Section": "D",
-        "SectionName": "Cost Management",
-        "Topic": "D.066 contribution margin break even",
-        "MicroTopic": "contribution margin break even",
-        "UniqueConceptKey": "D-C066-contribution-margin-break-even",
-        "LOSTag": "D Cost management",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Quailrun is launching a replacement part that sells for $84 per unit. Variable manufacturing and selling costs are $56 per unit, and dedicated fixed costs for the product line are $252,000 per year. How many units must Quailrun sell to break even?",
-        "Choices": {
-            "A": "3,000 units",
-            "B": "9,000 units",
-            "C": "4,500 units",
-            "D": "12,000 units"
-        },
-        "CorrectChoice": "B",
-        "ExplanationCorrect": "Contribution margin per unit is $84 - $56 = $28. Break-even units equal fixed costs divided by contribution margin per unit: $252,000 / $28 = 9,000 units.",
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax Managerial Accounting: Activity-Based Costing",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/6-introduction"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "QuestionID": "P1-DC-066",
-        "CalculationItem": true,
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "ExplanationWrongA": "CVP analysis examines relationships among sales volume, selling price, variable costs, fixed costs, and operating income. Contribution margin (selling price minus variable cost per unit) is the fundamental concept. At break-even: Total Contribution Margin = Total Fixed Costs.",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "CVP analysis examines relationships among sales volume, selling price, variable costs, fixed costs, and operating income. Contribution margin (selling price minus variable cost per unit) is the fundamental concept. At break-even: Total Contribution Margin = Total Fixed Costs.",
-        "ExplanationWrongD": "This overstates the required volume; break-even uses fixed costs divided by the $28 unit contribution margin.",
-        "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "D",
+	"SectionName": "Cost Management",
+	"Topic": "D.066 break even product launch go no go demand sensitivity",
+	"MicroTopic": "break even product launch go no go demand sensitivity",
+	"UniqueConceptKey": "D-C066-break-even-product-launch-go-no-go-demand-sensitivity",
+	"LOSTag": "D Cost management",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Alderbrook Consumer Products is evaluating the launch of 'ClearCycle,' an eco-friendly cleaning solution. The product would sell for $12 per unit with variable costs of $7 per unit (contribution margin of $5 per unit, 41.7% CM ratio). Dedicated fixed costs — including product development completion, regulatory certification, initial marketing, and a dedicated production line — total $360,000 in the first year. Market research projects a demand distribution: 30% probability of high demand (120,000 units/year), 45% probability of moderate demand (70,000 units/year), and 25% probability of low demand (35,000 units/year). The expected annual demand is 76,250 units (weighted average). Separately, the $360,000 could alternatively be invested in expanding Alderbrook's existing household-cleaner line with a projected 13% annual return ($46,800). The capital budget permits only one initiative this year. CEO Elena Vasquez must decide whether to launch ClearCycle.",
+	"Choices": {
+		"A": "Launch ClearCycle at full scale — the expected demand of 76,250 units exceeds the break-even volume of 72,000 units ($360,000 / $5 CM), generating an expected annual profit of $21,250 (76,250 × $5 - $360,000). The product line diversifies Alderbrook into the growing eco-friendly segment and creates a platform for future sustainability-branded products.",
+		"B": "Do not launch ClearCycle — the 25% probability of the low-demand scenario (35,000 units) would produce a $185,000 loss ($35,000 × $5 - $360,000), and the expected profit of $21,250 is too thin relative to the alternative investment's guaranteed $46,800 return. New product launches carry execution risk beyond demand uncertainty, and Alderbrook cannot afford a loss of this magnitude in a single-product bet.",
+		"C": "Launch ClearCycle with a staged investment approach — commit $200,000 to a pilot production run of 50,000 units and a regional launch in two test markets over six months. If sell-through exceeds 70% in the test markets, exercise the option to invest the remaining $160,000 for full-scale production. If sell-through falls below 70%, cap the total loss at the $200,000 pilot investment. The staged approach preserves the upside of the 75% probability of moderate-to-high demand while limiting downside exposure. The forgone alternative investment ($46,800) can still be partially funded from remaining capital budget.",
+		"D": "Defer the launch decision for 12 months and commission additional market research at a cost of $45,000 — the demand projections show wide variance (35,000 to 120,000 units), and a more precise forecast could eliminate the low-demand tail risk. The $360,000 capital can be placed in short-term instruments earning 4% while research is conducted."
+	},
+	"CorrectChoice": "C",
+	"ExplanationCorrect": "Elena should adopt a staged-investment (real options) approach because the demand distribution creates asymmetric risk: a 75% probability of break-even or better outcomes (70,000+ units at $5 CM exceeds the $360,000 fixed-cost hurdle) paired with a 25% probability of a $185,000 loss. The full-scale launch (Option A) commits irreversibly to the $360,000 fixed-cost base before demand is validated, exposing Alderbrook to the full downside. The staged approach converts the decision from a binary go/no-go into a learn-then-commit sequence: invest $200,000 for a pilot that produces 50,000 units and real market data. The pilot generates $250,000 in contribution (50,000 × $5), partially offsetting the $200,000 investment — a net pilot cost of effectively zero if sell-through is strong, and a contained loss if not. This is the managerial accounting application of real-options theory: when investments are partially reversible or can be staged, the value of waiting to resolve uncertainty is captured without forgoing the entire opportunity. The break-even analysis ($360,000 / $5 = 72,000 units) correctly identifies the full-scale commitment threshold but does not capture the value of staging — a limitation of static CVP that Elena's recommendation should address. The staged approach also preserves approximately $160,000 in capital budget that could fund a partial investment in the existing product-line expansion, partially recovering the forgone alternative return.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax Managerial Accounting: Activity-Based Costing",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/6-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-DC-066",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "Expected-value analysis (76,250 units, $21,250 expected profit) masks the binary nature of this decision. Unlike a portfolio of small independent bets where expected value is the correct decision criterion, ClearCycle is a single, large, irreversible commitment. Alderbrook experiences the actual outcome — not the expected outcome — and the 25% probability of a $185,000 loss is not diversified away. The $21,250 expected profit is only 5.9% of the $360,000 investment — an extremely thin expected return that does not compensate for the downside risk. Additionally, the $360,000 is fully committed on day one; even if early sales data is discouraging, the fixed costs (dedicated production line, regulatory certification, marketing contracts) cannot be recovered. A full-scale launch effectively bets the entire capital budget on an untested demand forecast.",
+	"ExplanationWrongB": "Rejecting the launch entirely because of the 25% downside scenario ignores that this probability can be managed through staging rather than eliminated. The core question is not 'does ClearCycle have demand risk?' but 'can Alderbrook learn about demand before committing the full $360,000?' A staged approach resolves this: if the pilot reveals weak demand, the loss is capped at a fraction of the full investment. If demand is strong, the pilot generates contribution that partially funds the scale-up. Rejecting the launch without attempting to structure a lower-risk entry path leaves the eco-friendly segment opportunity to competitors and forgoes a potential $240,000 annual profit in the high-demand scenario (120,000 units × $5 - $360,000).",
+	"ExplanationWrongC": "",
+	"ExplanationWrongD": "Deferring the decision for 12 months has three costs that likely exceed the benefit of additional research. First, the direct cost of $45,000 for market research plus $14,400 in forgone short-term investment returns (4% on $360,000) totals $59,400 — over 15% of the full investment, incurred before any product revenue. Second, a 12-month delay cedes first-mover advantage in the eco-friendly cleaning segment, where brand loyalty and retail shelf placement are established early. Third, additional market research may not materially narrow the demand distribution — consumer preferences for new product categories are inherently uncertain until real purchase behavior is observed, which only a pilot launch provides. The staged pilot (Option C) generates actual market data at a lower net cost than passive research while also producing saleable product.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
     {
         "Part": 1,
         "Section": "D",

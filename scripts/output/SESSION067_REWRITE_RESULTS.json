@@ -1,0 +1,51 @@
+{
+  "session": "67",
+  "title": "Question Improvement Program Restart — Sections B/C/D Quality Elevation",
+  "date": "2026-07-29",
+  "status": "COMPLETE — 15 of 15 rewrites applied",
+  "rewrite_count": 15,
+  "evaluate_count": 7,
+  "analyze_count": 8,
+  "cognitive_upgrades": {
+    "Understand_to_Analyze": 1,
+    "Apply_to_Analyze": 7,
+    "Apply_to_Evaluate": 7
+  },
+  "difficulty_upgrades": {
+    "Easy/Moderate-Easy/Moderate_to_Difficult": 14,
+    "Difficult_to_Difficult": 1
+  },
+  "section_distribution": { "B": 5, "C": 5, "D": 5 },
+  "pack_distribution": { "A": 3, "B": 3, "C": 3, "D": 3, "E": 3 },
+  "items": [
+    {"qid": "P1-B-040", "pack": "A", "section": "B", "topic": "Variance investigation threshold — multi-factor judgment", "from_cognitive": "Apply", "to_cognitive": "Evaluate", "from_difficulty": "Moderate", "to_difficulty": "Difficult", "cc_change": "B→C", "classification": "formula-only"},
+    {"qid": "P1-BD-022", "pack": "D", "section": "B", "topic": "Direct labor budget — permanent vs temporary staffing", "from_cognitive": "Apply", "to_cognitive": "Evaluate", "from_difficulty": "Moderate", "to_difficulty": "Difficult", "cc_change": "B→C", "classification": "formula-only"},
+    {"qid": "P1-C-037", "pack": "A", "section": "C", "topic": "Transfer pricing — excess capacity stakeholder conflict", "from_cognitive": "Apply", "to_cognitive": "Evaluate", "from_difficulty": "Moderate", "to_difficulty": "Difficult", "cc_change": "B→C", "classification": "formula-only"},
+    {"qid": "P1-CC-016", "pack": "C", "section": "C", "topic": "Residual income — ROI vs RI investment decision", "from_cognitive": "Apply", "to_cognitive": "Evaluate", "from_difficulty": "Moderate", "to_difficulty": "Difficult", "cc_change": "D→C", "classification": "formula-only"},
+    {"qid": "P1-D-025", "pack": "A", "section": "D", "topic": "ABC vs plant-wide costing — pricing recommendation", "from_cognitive": "Apply", "to_cognitive": "Evaluate", "from_difficulty": "Moderate", "to_difficulty": "Difficult", "cc_change": "D→C", "classification": "formula-only"},
+    {"qid": "P1B-D-083", "pack": "B", "section": "D", "topic": "Contribution margin — special order capacity constraints", "from_cognitive": "Apply", "to_cognitive": "Evaluate", "from_difficulty": "Moderate-Easy", "to_difficulty": "Difficult", "cc_change": "C→C", "classification": "formula-only"},
+    {"qid": "P1-DC-066", "pack": "C", "section": "D", "topic": "Break-even — product launch go/no-go sensitivity", "from_cognitive": "Apply", "to_cognitive": "Evaluate", "from_difficulty": "Moderate", "to_difficulty": "Difficult", "cc_change": "B→C", "classification": "formula-only"},
+    {"qid": "P1B-B-120", "pack": "B", "section": "B", "topic": "Time series components — trend identification in data", "from_cognitive": "Understand", "to_cognitive": "Analyze", "from_difficulty": "Moderate-Easy", "to_difficulty": "Difficult", "cc_change": "B→B", "classification": "definition-driven"},
+    {"qid": "P1-BC-001", "pack": "C", "section": "B", "topic": "Static vs flexible budget — variance decomposition", "from_cognitive": "Apply", "to_cognitive": "Analyze", "from_difficulty": "Moderate", "to_difficulty": "Difficult", "cc_change": "A→A", "classification": "formula-only"},
+    {"qid": "P1E-B-044", "pack": "E", "section": "B", "topic": "Moving average — forecast method selection with trend", "from_cognitive": "Apply", "to_cognitive": "Analyze", "from_difficulty": "Difficult", "to_difficulty": "Difficult", "cc_change": "A→C", "classification": "formula-only"},
+    {"qid": "P1B-C-101", "pack": "B", "section": "C", "topic": "DM variance analysis — price-quantity tradeoff", "from_cognitive": "Apply", "to_cognitive": "Analyze", "from_difficulty": "Moderate", "to_difficulty": "Difficult", "cc_change": "A→A", "classification": "formula-only"},
+    {"qid": "P1-CD-001", "pack": "D", "section": "C", "topic": "Labor rate/efficiency variance — wage-productivity tradeoff", "from_cognitive": "Apply", "to_cognitive": "Analyze", "from_difficulty": "Moderate", "to_difficulty": "Difficult", "cc_change": "A→A", "classification": "formula-only"},
+    {"qid": "P1E-C-011", "pack": "E", "section": "C", "topic": "Material price variance — supplier change impact analysis", "from_cognitive": "Apply", "to_cognitive": "Analyze", "from_difficulty": "Moderate", "to_difficulty": "Difficult", "cc_change": "B→A", "classification": "formula-only"},
+    {"qid": "P1-DD-026", "pack": "D", "section": "D", "topic": "Margin of safety — product line risk comparison", "from_cognitive": "Apply", "to_cognitive": "Analyze", "from_difficulty": "Moderate", "to_difficulty": "Difficult", "cc_change": "B→A", "classification": "formula-only"},
+    {"qid": "P1E-D-034", "pack": "E", "section": "D", "topic": "POHR — allocation base selection (DLH vs MH vs departmental)", "from_cognitive": "Apply", "to_cognitive": "Analyze", "from_difficulty": "Difficult", "to_difficulty": "Difficult", "cc_change": "D→C", "classification": "formula-only"}
+  ],
+  "correctchoice_changes": 10,
+  "governance": {
+    "guard_tests": "54/54 PASS",
+    "parse_pack_a": "PASS (500 items)",
+    "parse_pack_b": "PASS (500 items)",
+    "parse_pack_c": "PASS (500 items)",
+    "parse_pack_d": "PASS (500 items)",
+    "parse_pack_e": "PASS (545 items)",
+    "qid_total": 2545,
+    "certified_total": 2451,
+    "dl008": 0,
+    "dl026": 0,
+    "dl037": 0
+  }
+}

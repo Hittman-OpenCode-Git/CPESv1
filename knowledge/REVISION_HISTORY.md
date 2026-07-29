@@ -1,3 +1,79 @@
+## Session 67 — Question Improvement Program Restart — B/C/D Quality Elevation — 2026-07-29
+
+**Type:** WRITE (all 5 packs — 15 items across Packs A(3), B(3), C(3), D(3), E(3))
+
+**Objective:** Restart the quality-elevation program targeting Sections B, C, and D. Rewrite 15 formula-only and definition-driven MCQs as business-scenario Analyze/Evaluate items with named companies, stakeholders, decision triggers, and tradeoff analysis.
+
+**Outcome:** COMPLETE — 15/15 rewrites applied. 7 Evaluate + 8 Analyze. Governance guard: 54/54 PASS. All 5 packs parse clean. 0 DL-008, 0 DL-026, 0 DL-037. QID: 2,545 (stable). Certified: 2,451 (stable). 10 CorrectChoice changes (recomputed + independently verified).
+
+### Cognitive Upgrades
+
+| From | To | Count |
+|------|----|-------|
+| Apply | Evaluate | 7 |
+| Apply | Analyze | 7 |
+| Understand | Analyze | 1 |
+
+### Section Distribution
+- Section B: 5 (P1-B-040, P1-BD-022, P1B-B-120, P1-BC-001, P1E-B-044)
+- Section C: 5 (P1-C-037, P1-CC-016, P1B-C-101, P1-CD-001, P1E-C-011)
+- Section D: 5 (P1-D-025, P1B-D-083, P1-DC-066, P1-DD-026, P1E-D-034)
+
+### Quality Impact
+
+| Metric | Before (15 items) | After (15 items) |
+|--------|-------------------|-----------------|
+| CognitiveLevel | 14×Apply + 1×Understand | 7×Evaluate + 8×Analyze |
+| Difficulty | 12×Moderate + 1×Easy + 2×Difficult | 15×Difficult |
+| Avg ExplanationCorrect chars | ~80 | ~1,200 |
+| Avg ExplanationWrong chars | ~60 | ~350 |
+| Business realism (named company, stakeholder, scenario) | 0/15 | 15/15 |
+| Multi-factor reasoning required | 0/15 | 15/15 |
+| CC changes (recomputed) | — | 10 of 15 |
+
+### CorrectChoice Changes (Recomputed + Independently Verified)
+
+| QID | Old CC | New CC | Rationale |
+|-----|--------|--------|-----------|
+| P1-B-040 | B | C | Defer + document exception (cost-benefit > rigid policy) |
+| P1-BD-022 | B | C | Core-permanent + seasonal-temporary workforce strategy |
+| P1-C-037 | B | C | Facilitated negotiated transfer at $28-$32 |
+| P1-CC-016 | D | C | Adopt RI + place capital on strategic fit |
+| P1-D-025 | D | C | Phased ABC pricing (raise Custom, lower Standard) |
+| P1-DC-066 | B | C | Staged investment (pilot, then scale) |
+| P1E-B-044 | A | C | 2-month MA using May+June ($189.5K) |
+| P1E-C-011 | B | A | Net $9,900 favorable (price savings > quantity loss) |
+| P1-DD-026 | B | A | Reallocation improves aggregate MoS by $96K |
+| P1E-D-034 | D | C | Departmental rates (MH for Machining, DLH for Assembly) |
+
+### Governance Verification
+- Governance guard: 54/54 PASS
+- Parse: All 5 packs PASS (Function constructor)
+- DL-008: 0 violations (all EW[CC] slots empty)
+- DL-026: 0 violations (all non-CC EW slots populated, 50+ chars)
+- DL-037: 0 violations (no binary lead-in polarity mismatches)
+- QID count: 2,545 (stable — no change)
+- Certified pool: 2,451 (stable — no change)
+
+### Backups
+- `backups/pack_a_corrected.js.bak-S067-20260729111713`
+- `backups/pack_b_corrected.js.bak-S067-20260729111713`
+- `backups/pack_c_corrected.js.bak-S067-20260729111713`
+- `backups/pack_d_corrected.js.bak-S067-20260729111713`
+- `backups/pack_e_corrected.js.bak-S067-20260729111713`
+
+### Deliverables
+- `scripts/output/SESSION067_REWRITE_QUEUE.json` — Candidate selection
+- `scripts/output/SESSION067_REWRITE_RESULTS.json` — Complete results ledger
+
+### Answers to Final Questions
+- **Q1 — How many rewrites became genuine Evaluate items?** 7 (target: min 7)
+- **Q2 — How many rewrites materially improved reasoning depth?** 15/15 (all items now require multi-factor analysis, business context, and professional judgment vs. original single-step formula application)
+- **Q3 — Which domains produce the highest Evaluate conversion rate?** Section D (Cost Management) — 3 of 5 items became Evaluate. Sections B and C each produced 2 Evaluate.
+- **Q4 — Q5 deferred to cognitive-gap-board**
+
+---
+
 ## Session 60C (Wave 1) — Technology & Analytics Modernization — FC(10) — 2026-07-28
 
 **Type:** WRITE (pack_c_corrected.js)

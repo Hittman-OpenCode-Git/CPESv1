@@ -5919,7 +5919,7 @@ const MCQ_BANK_E = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-    {
+{
         "StudyLinks": [
             {
                 "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
@@ -5937,14 +5937,14 @@ const MCQ_BANK_E = [
         "Topic": "E-B.044 Moving average calculation",
         "UniqueConceptKey": "E-B-044-Moving-average-calculation",
         "MicroTopic": "Moving average calculation",
-        "CorrectChoice": "A",
+        "CorrectChoice": "C",
         "Choices": {
-            "A": "$55,000",
-            "B": "$50,000",
-            "C": "$60,000",
-            "D": "$45,000"
+            "A": "Recommend $159,500 — computed as a two-month moving average of February and March — because using fewer periods makes the forecast more responsive to the upward trend, even though it relies on the two oldest data points.",
+            "B": "Recommend $182,333 — computed as a three-month moving average of April, May, and June — because including more observations reduces distortion from any single month's fluctuation and provides a more stable production target.",
+            "C": "Recommend $189,500 — computed as a two-month moving average of May and June ($182,000 + $197,000) / 2 — because the shorter-period average using the most recent data responds more quickly to NovaTek's persistent upward sales trend.",
+            "D": "Recommend $174,000 — computed as a three-month moving average of March, April, and May — because this balances recency against stability by using the three middle months of the five-month series."
         },
-        "CalculationItem": true,
+        "CalculationItem": false,
         "Part": 1,
         "ItemType": "MCQ",
         "LOSTag": "Part 1 Section B.3",
@@ -5955,19 +5955,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Three months of sales data: Jan $40,000, Feb $50,000, Mar $60,000. Two-month moving average for April:",
-        "ExplanationCorrect": "Concept: A moving average forecast uses the most recent data points to predict the next period, smoothing short-term fluctuations. Formula: Two-month moving average = (Month 1 value + Month 2 value) / 2. For April forecast, use the two most recent months: February ($50,000) and March ($60,000). Plug in: ($50,000 + $60,000) / 2 = $55,000. January ($40,000) is excluded from the two-period calculation.",
+        "Stem": "NovaTek Components' demand planner Raj Mehta must submit the July sales forecast for the flagship connector line before the monthly production scheduling meeting. Actual sales for the last five months show a clear growth pattern: February $142,000, March $155,000, April $168,000, May $182,000, and June $197,000. NovaTek is gaining market share and the production team has warned that underforecasting leads to costly expedited production runs while overforecasting ties up working capital in excess inventory. Mehta is debating between a two-month moving average and a three-month moving average. The CFO has cautioned that forecasts should not systematically lag in an environment with an established trend. Which forecast should Mehta recommend for July and why?",
+        "ExplanationCorrect": "When sales exhibit a persistent upward trend as NovaTek's five consecutive monthly increases demonstrate, a shorter-period moving average responds more quickly to the trend direction than a longer-period average, which lags behind by incorporating older, lower data points. The two-month moving average uses the two most recent observations: ($182,000 + $197,000) / 2 = $189,500. By contrast, a three-month moving average of April-June yields ($168,000 + $182,000 + $197,000) / 3 = $182,333, which lags approximately $7,200 behind the two-month forecast. In a trending environment where stockout risk carries meaningful financial consequences, the shorter-period forecast provides superior responsiveness and better aligns with the CFO's directive to avoid systematic lag.",
         "QuestionID": "P1E-B-044",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "$50,000 would be the average of Jan and Feb, not Feb and Mar.",
-        "ExplanationWrongC": "$60,000 is the most recent single month, not the two-month average.",
-        "ExplanationWrongD": "$45,000 would result from averaging Jan $40,000 and Feb $50,000.",
+        "ExplanationWrongA": "$159,500 uses February and March data — months that are four and five periods behind the July forecast target. A two-month moving average for July must use the two most recent months (May and June), not the oldest available data. Selecting stale data points defeats the purpose of a moving average, which is designed to track recent conditions. Even the correct two-period method applied to outdated inputs produces a forecast that lags the trend by approximately $30,000.",
+        "ExplanationWrongB": "A three-month moving average of April-June correctly yields $182,333, and the logic about smoothing is directionally valid. However, in NovaTek's specific case with five consecutive months of growth averaging $13,750 per month, the smoothing benefit of three periods works against forecast accuracy by averaging in the lower April figure of $168,000 that no longer reflects current demand conditions. The three-month forecast of $182,333 systematically understates likely July demand by roughly $7,200, increasing stockout risk.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "$174,000 does not correspond to any standard moving average calculation using these data. A three-month average of the middle three months (March, April, May) yields ($155,000 + $168,000 + $182,000) / 3 = $168,333, not $174,000. Even if it were correct, deliberately excluding the most recent data point (June at $197,000) while including older data would produce a forecast that lags the accelerating trend even more severely than a standard three-month trailing average.",
         "question_state": "Certified",
         "DifficultyScore": 4,
-        "CognitiveLevel": "Apply"
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -7543,7 +7543,7 @@ const MCQ_BANK_E = [
         "certification_batch": "S71",
         "CognitiveLevel": "Understand"
     },
-    {
+{
         "StudyLinks": [
             {
                 "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
@@ -7556,19 +7556,19 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "C",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "SectionName": "Performance Management",
         "Topic": "E-C.011 Material price variance calculation",
         "UniqueConceptKey": "E-C-011-Material-price-variance-calculation",
         "MicroTopic": "Material price variance calculation",
-        "CorrectChoice": "B",
+        "CorrectChoice": "A",
         "Choices": {
-            "A": "$400 favorable",
-            "B": "$400 unfavorable",
-            "C": "$440 unfavorable",
-            "D": "$360 favorable"
+            "A": "Net $9,900 favorable — the $31,500 price savings outweigh the $21,600 unfavorable quantity variance from the higher rejection rate. Vasquez's supplier change was financially beneficial despite the production complication because the $0.60 per pound discount on all 52,500 pounds more than compensates for the extra 4,500 pounds consumed.",
+            "B": "Net $31,500 favorable — only the price variance should be considered when evaluating a purchasing decision. The $21,600 unfavorable quantity variance reflects a production issue within David Chen's stamping department and is not attributable to the supplier selection. The price variance alone confirms the purchasing decision was sound.",
+            "C": "Net $7,200 favorable — the price variance should be computed on the standard quantity allowed of 48,000 pounds rather than the actual 52,500 pounds purchased, yielding 48,000 x ($4.20 - $4.80) = $28,800 F. Netting this against the $21,600 U quantity variance produces a smaller benefit that may not justify the operational disruption.",
+            "D": "Net $9,900 favorable is technically correct but amounts to only 4.5% of the $220,500 total material cost for March. At this magnitude, the savings do not justify the operational disruption of changing suppliers, retooling the stamping line, and managing higher rejection rates. The CFO should recommend reverting to the original supplier."
         },
-        "CalculationItem": true,
+        "CalculationItem": false,
         "Part": 1,
         "ItemType": "MCQ",
         "LOSTag": "Part 1 Section C.1",
@@ -7579,19 +7579,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Standard price $5.00/lb, actual $5.50/lb, actual quantity 800 lbs. Material price variance:",
-        "ExplanationCorrect": "Concept: The material price variance measures the financial impact of paying a different price for materials than the standard price. Formula: Material price variance = (Actual Price - Standard Price) x Actual Quantity Purchased. Plug in numbers: ($5.50 - $5.00) x 800 lbs = $0.50 x 800 = $400. Since the actual price ($5.50) exceeds the standard price ($5.00), the variance is unfavorable, meaning the company paid more per pound than the standard allowed.",
+        "Stem": "Northrup Kitchenware's purchasing director Elena Vasquez sourced a new stainless steel supplier offering Grade 304 coil at $4.20 per pound, well below Northrup's standard cost of $4.80 per pound. During March, the stamping department produced 15,000 cookware sets, using 52,500 pounds of the new supplier's steel. The production standard allows 3.2 pounds per set. Production manager David Chen reports that the thinner-gauge steel caused a higher rejection rate at the stamping press — consuming roughly 0.3 additional pounds per set beyond the standard. Vasquez argues the $0.60 per pound discount more than compensates for the extra usage. The CFO must independently determine the net materials cost impact before deciding whether to renew the supplier contract. Which conclusion is best supported?",
+        "ExplanationCorrect": "Materials price variance = (AP - SP) x AQ = ($4.20 - $4.80) x 52,500 = $31,500 favorable. Materials quantity variance = (AQ - SQ) x SP = (52,500 - 48,000) x $4.80 = $21,600 unfavorable, where SQ = 15,000 units x 3.2 lbs = 48,000 lbs. Net variance = $31,500 F + (-$21,600 U) = $9,900 favorable. The $0.60 per pound discount applied to all 52,500 pounds generates sufficient savings to cover the cost of the extra 4,500 pounds consumed at the standard rate. Vasquez's purchasing decision was financially sound — the lower unit price more than compensates for the higher usage rate. The CFO should renew the contract while tasking production engineering with reducing the rejection rate to capture even greater savings.",
         "QuestionID": "P1E-C-011",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "$400 favorable reverses the sign — while the dollar amount is correct, the variance is unfavorable because the actual price ($5.50) exceeded the standard ($5.00). In variance analysis, paying more than standard always produces an unfavorable price variance. Selecting this choice suggests confusion about the directional convention used in standard costing.",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "$440 unfavorable uses actual quantity at standard price subtracted from actual quantity at actual price, which is not the material price variance formula. The correct formula uses (AP − SP) × AQ purchased, giving ($5.50 − $5.00) × 800 = $400. The $440 figure may arise from incorrectly using $5.50 × 800 = $4,400 and subtracting $5.00 × 800 = $4,000 but then adding a phantom $40.",
-        "ExplanationWrongD": "$360 favorable is both the wrong sign (favorable vs. unfavorable) and wrong amount. This distractor may result from reversing the price difference to ($5.00 − $5.50) = −$0.50 and then using a quantity of 720 lbs instead of 800 lbs. The material price variance must be computed with the actual quantity purchased.",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "While responsibility accounting appropriately separates purchasing from production performance for individual manager evaluation, the CFO's question is about Northrup's total financial outcome — not individual accountability. The $21,600 unfavorable quantity variance is a direct and foreseeable consequence of selecting a thinner-gauge material. Ignoring this cost when evaluating the supplier change would systematically favor cheaper, lower-quality inputs and overstate the net benefit. Both variances must be netted to determine whether the company as a whole benefited.",
+        "ExplanationWrongC": "The materials price variance formula uses actual quantity purchased, not standard quantity allowed. Purchasing decisions affect the price paid on every pound actually bought — all 52,500 pounds, not just the 48,000 that met the original specification. Using standard quantity would understate the price savings by 4,500 lbs x $0.60 = $2,700 and produce an incorrect assessment that undervalues the purchasing discount by nearly 10%. The correct computation is ($4.20 - $4.80) x 52,500 = $31,500 F.",
+        "ExplanationWrongD": "A $9,900 favorable net variance on standard material costs of $230,400 (48,000 lbs x $4.80) represents a 4.3% cost reduction — a meaningful improvement in a manufacturing environment where materials typically represent the single largest cost category. A 4.3% materials cost reduction would be considered significant in virtually any industrial operation. Dismissing it as insufficient to justify the supplier change would cause Northrup to forgo genuine cost savings that directly improve gross margin.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -11027,17 +11027,17 @@ const MCQ_BANK_E = [
         "Section": "D",
         "Difficulty": "Difficult",
         "SectionName": "Cost Management",
-        "Topic": "E-D.034 POHR calculation",
-        "UniqueConceptKey": "E-D-034-POHR-calculation",
-        "MicroTopic": "POHR calculation",
-        "CorrectChoice": "D",
+        "Topic": "E-D.034 POHR allocation base selection labor vs automation",
+        "UniqueConceptKey": "E-D-034-POHR-allocation-base-selection-labor-vs-automation",
+        "MicroTopic": "POHR allocation base selection labor vs automation",
+        "CorrectChoice": "C",
         "Choices": {
-            "A": "$4 per DLH",
-            "B": "$4.50 per DLH",
-            "C": "$5.50 per DLH",
-            "D": "$5 per DLH"
+            "A": "Retain direct labor hours as the allocation base \u2014 DLH is the simplest and most widely understood method, consistent with the existing cost system design. Allocating the $2,600,000 of overhead across 130,000 total DLH yields a plant-wide rate of $20 per DLH. This approach preserves comparability with prior periods and avoids the implementation complexity and employee retraining costs associated with changing allocation bases.",
+            "B": "Adopt machine hours as the allocation base \u2014 machine hours are more relevant for the Machining department where most overhead costs relate to equipment (depreciation, maintenance, utilities), and less distortion-prone for Assembly where overhead ties to labor activity. The plant-wide rate of $173.33 per machine hour ($2,600,000 / 15,000 MH) correctly reflects the capital-intensive nature of modern manufacturing.",
+            "C": "Adopt departmental rates with separate allocation bases \u2014 Machining overhead of $1,600,000 driven by machine usage at $266.67 per machine hour, and Assembly overhead of $1,000,000 driven by direct labor at $12.50 per DLH. Departmental rates capture the fundamentally different cost structures of each department: Machining is capital-intensive (overhead driven by equipment hours), while Assembly is labor-intensive (overhead driven by direct labor activity). A single plant-wide rate would distort product costs by averaging together two departments with materially different cost drivers.",
+            "D": "Implement a full activity-based costing system with four cost pools (machining, setup, quality inspection, and material handling) rather than using any single-volume allocation base \u2014 even departmental rates oversimplify the cost structure because multiple activities drive overhead within each department, and only ABC can properly assign costs based on actual resource consumption."
         },
-        "CalculationItem": true,
+        "CalculationItem": false,
         "Part": 1,
         "ItemType": "MCQ",
         "LOSTag": "Part 1 Section D.2",
@@ -11048,19 +11048,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Estimated overhead $500,000, estimated DLH 100K. POHR =:",
-        "ExplanationCorrect": "$500,000 / 100,000 = $5 per DLH",
+        "Stem": "Harbor Tool & Die's cost accountant Lena Park is reviewing the plant's overhead allocation method ahead of a major capital investment in CNC automation. The plant currently applies a single plant-wide overhead rate based on direct labor hours (estimated $2,600,000 total overhead / 130,000 DLH = $20 per DLH). The plant has two departments with fundamentally different cost structures: Machining (estimated overhead $1,600,000, estimated 6,000 machine hours, 50,000 DLH) is capital-intensive with most overhead tied to machine depreciation, power, and maintenance. Assembly (estimated overhead $1,000,000, estimated 9,000 machine hours, 80,000 DLH) is labor-intensive with overhead driven by supervision, material handling, and indirect labor. After the automation investment, Machining's machine-hour intensity will increase 40% while DLH will decline 25%. Park must recommend whether the allocation basis should be updated before the new equipment goes live to avoid systematic product-cost distortion.",
+        "ExplanationCorrect": "Park should recommend departmental rates because the two departments have meaningfully different cost structures that a single plant-wide rate obscures. Under a single plant-wide DLH rate, every labor hour carries $20 of overhead regardless of whether it occurs in the capital-intensive Machining department (where the true overhead cost per DLH is $1,600,000 / 50,000 = $32.00) or the labor-intensive Assembly department ($1,000,000 / 80,000 = $12.50). Products consuming Machining hours are systematically undercosted by $12.00 per DLH, while products consuming Assembly hours are overcosted by $7.50 per DLH. After automation, the distortion worsens: Machining DLH drops to ~37,500, pushing its departmental rate to ~$42.67 per DLH if DLH remains the base. Using machine hours for Machining ($1,600,000 / 6,000 = $266.67 per MH) and DLH for Assembly ($12.50 per DLH) captures the actual cost drivers of each department. Departmental rates represent the right balance between accuracy and implementation complexity \u2014 they address the primary distortion without requiring the extensive data collection and system redesign of full ABC.",
         "QuestionID": "P1E-D-034",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "$4 per DLH would result from dividing $400,000 by 100,000 hours.",
-        "ExplanationWrongB": "$4.50 per DLH does not match $500,000 / 100,000 = $5.",
-        "ExplanationWrongC": "$5.50 per DLH does not match $500,000 / 100,000 = $5.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongA": "Retaining a single plant-wide DLH rate when departments have fundamentally different cost structures \u2014 one capital-intensive, one labor-intensive \u2014 systematically undercosts products consuming Machining resources and overcosts Assembly-intensive products. The $20 plant-wide rate averages together Machining's true $32.00 per DLH and Assembly's $12.50 per DLH, and the distortion compounds after the automation investment reduces Machining DLH by 25% while increasing its overhead intensity. Comparability with prior periods is not a sufficient justification when the cost structure has materially changed.",
+        "ExplanationWrongB": "A single plant-wide machine-hour rate merely substitutes one distortion for another. While machine hours better reflect Machining's cost drivers, they poorly represent Assembly, where overhead is driven by direct labor activity (supervision, material handling) rather than machine time. Products using Assembly labor but few machine hours would be severely undercosted. The solution to one-dimensional cost distortion is not a different one-dimensional metric but rather a two-dimensional approach that matches the allocation base to each department's actual cost driver.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Full ABC would produce the most accurate product costs but introduces implementation complexity, data collection costs, and system redesign that may not be justified at this stage. The primary distortion in Harbor's current system arises from a single plant-wide rate applied across departments with materially different cost structures \u2014 a problem that departmental rates solve directly. Full ABC is the ideal long-term target, but departmental rates represent the appropriate and cost-effective next step. Implementing ABC prematurely, before departmental rates have been adopted, would overengineer the solution at a cost that may exceed the benefit of the additional accuracy.",
         "question_state": "Certified",
         "DifficultyScore": 4,
-        "CognitiveLevel": "Apply"
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
