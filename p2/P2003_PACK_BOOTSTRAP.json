@@ -1,0 +1,945 @@
+﻿{
+  "meta": {
+    "session": "P2-003",
+    "subagent": "pack-bootstrap",
+    "date": "2026-07-29",
+    "description": "Complete pack bootstrap specification for CMA Part 2 â€” 5 MCQ packs + 3 case packs. All targets derived from P2001 blueprint, P2002 certification standard, and P2002 execution roadmap.",
+    "sources": [
+      "P2002_BLUEPRINT_EXTRACTION.json",
+      "P2002_EXECUTION_ROADMAP.json",
+      "P2002_CERTIFICATION_STANDARD.md",
+      "P2002_REPOSITORY_LAYOUT.md"
+    ],
+    "total_mcqs": 2500,
+    "total_cases": 75,
+    "total_case_items_estimate": "375-450",
+    "qid_prefix": "P2-",
+    "caseid_prefix": "CBQ2",
+    "architecture": "Single-object (one JSON object per MCQ item â€” eliminates DL-016 dual-block defect class)",
+    "part2onlyflag_requirement": "Mandatory boolean true on every item"
+  },
+
+  "mcq_packs": [
+    {
+      "pack_letter": "A",
+      "filename": "pack_p2_a.js",
+      "variable_name": "pack_p2_a_questions",
+      "domains": ["A"],
+      "domain_names": ["Financial Statement Analysis"],
+      "exam_weight": "20%",
+      "item_count": 500,
+      "qid_range": "P2-A-001 to P2-A-500",
+      "qid_pattern": "^P2-A-\\d{3}$",
+      "los_coverage": [
+        { "code": "A.1", "topic": "Calculate and interpret financial ratios (5 categories)", "target_items": 75 },
+        { "code": "A.2", "topic": "Analyze profitability and limitations of ratio analysis", "target_items": 65 },
+        { "code": "A.3", "topic": "Evaluate ROA, ROE, and earnings quality", "target_items": 65 },
+        { "code": "A.4", "topic": "Perform comparative financial statement analysis", "target_items": 55 },
+        { "code": "A.5", "topic": "Evaluate the impact of foreign operations", "target_items": 50 },
+        { "code": "A.6", "topic": "Assess changing prices and inflation on ratios", "target_items": 45 },
+        { "code": "A.7", "topic": "Analyze off-balance-sheet financing", "target_items": 45 },
+        { "code": "A.8", "topic": "Define and analyze operating and financial leverage", "target_items": 55 },
+        { "code": "A.9", "topic": "Evaluate sustainable growth rate and dividend policy", "target_items": 45 }
+      ],
+      "difficulty_targets": {
+        "Easy": { "score": 1, "pct": 10, "items": 50 },
+        "Moderate-Easy": { "score": 2, "pct": 20, "items": 100 },
+        "Moderate": { "score": 3, "pct": 30, "items": 150 },
+        "Difficult": { "score": 4, "pct": 30, "items": 150 },
+        "Very Difficult": { "score": 5, "pct": 10, "items": 50 }
+      },
+      "cognitive_targets": {
+        "Remember": { "pct": 10, "items": 50 },
+        "Understand": { "pct": 20, "items": 100 },
+        "Apply": { "pct": 45, "items": 225 },
+        "Analyze": { "pct": 20, "items": 100 },
+        "Evaluate": { "pct": 5, "items": 25 }
+      },
+      "question_type_mix": {
+        "select": { "pct": 85, "items": 425 },
+        "numeric": { "pct": 8, "items": 40 },
+        "multi": { "pct": 4, "items": 20 },
+        "fill": { "pct": 2, "items": 10 },
+        "match": { "pct": 1, "items": 5 }
+      },
+      "calculation_item_pct": 30,
+      "key_formulas": [
+        "Current Ratio = Current Assets / Current Liabilities",
+        "Quick Ratio = (Cash + Marketable Securities + Receivables) / Current Liabilities",
+        "Cash Ratio = (Cash + Cash Equivalents) / Current Liabilities",
+        "Inventory Turnover = COGS / Average Inventory",
+        "Days Sales Outstanding = Average AR / (Credit Sales / 365)",
+        "Days Payable Outstanding = Average AP / (Purchases / 365)",
+        "Debt-to-Equity = Total Liabilities / Total Equity",
+        "Times Interest Earned = EBIT / Interest Expense",
+        "Gross Margin % = (Sales âˆ’ COGS) / Sales",
+        "Operating Margin % = Operating Income / Sales",
+        "Net Margin % = Net Income / Sales",
+        "ROA = Net Income / Average Total Assets",
+        "ROE = Net Income / Average Total Equity",
+        "DuPont Identity: ROE = NPM Ã— TAT Ã— EM",
+        "EPS = (Net Income âˆ’ Preferred Dividends) / Weighted Avg Shares Outstanding",
+        "P/E Ratio = Market Price per Share / EPS",
+        "Dividend Yield = Annual Dividends per Share / Market Price per Share",
+        "Book Value per Share = Total Equity / Shares Outstanding",
+        "Degree of Operating Leverage (DOL) = CM / Operating Income",
+        "Degree of Financial Leverage (DFL) = EBIT / (EBIT âˆ’ Interest)",
+        "Sustainable Growth Rate = ROE Ã— (1 âˆ’ Dividend Payout Ratio)"
+      ],
+      "formula_count": 21,
+      "primary_exhibit_types": ["financial-statement", "table (ratio summary)"],
+      "part2_authorities": ["FASB ASC (GAAP ratios)", "IFRS", "SEC reporting"],
+      "skeleton_header": "// CMA Part 2 Exam Simulator â€” Pack A\n// Domain(s): A â€” Financial Statement Analysis\n// Generated: 2026-07-29\n// Governance State: Unprocessed (all items)\n// Architecture: Single-object (one JSON object per MCQ item)\n// QID Format: P2-A-001 to P2-A-500\n// Item Count: 500\n// Required Field: Part2OnlyFlag: true\nvar pack_p2_a_questions = [];",
+      "authoring_order": 1,
+      "authoring_window": "Phase 2 Weeks 3-4",
+      "quality_gate": "M2.2 â€” Quality Gate A",
+      "phase2_milestone": "M2.1",
+      "min_los_items": 40
+    },
+    {
+      "pack_letter": "C",
+      "filename": "pack_p2_c.js",
+      "variable_name": "pack_p2_c_questions",
+      "domains": ["C"],
+      "domain_names": ["Decision Analysis"],
+      "exam_weight": "25%",
+      "item_count": 500,
+      "qid_range": "P2-C-001 to P2-C-500",
+      "qid_pattern": "^P2-C-\\d{3}$",
+      "los_coverage": [
+        { "code": "C.1", "topic": "Apply CVP analysis (breakeven, target profit, margin of safety)", "target_items": 100 },
+        { "code": "C.2", "topic": "Perform marginal analysis (special orders, make-or-buy, sell-or-process)", "target_items": 85 },
+        { "code": "C.3", "topic": "Evaluate pricing decisions (cost-based, market-based, target costing)", "target_items": 75 },
+        { "code": "C.4", "topic": "Apply relevant costing to short-term decisions", "target_items": 75 },
+        { "code": "C.5", "topic": "Analyze capacity constraints and product mix", "target_items": 60 },
+        { "code": "C.6", "topic": "Evaluate business decision models under uncertainty", "target_items": 55 },
+        { "code": "C.7", "topic": "Assess make-vs-buy and outsourcing decisions", "target_items": 50 }
+      ],
+      "difficulty_targets": {
+        "Easy": { "score": 1, "pct": 10, "items": 50 },
+        "Moderate-Easy": { "score": 2, "pct": 20, "items": 100 },
+        "Moderate": { "score": 3, "pct": 30, "items": 150 },
+        "Difficult": { "score": 4, "pct": 28, "items": 140 },
+        "Very Difficult": { "score": 5, "pct": 12, "items": 60 }
+      },
+      "cognitive_targets": {
+        "Remember": { "pct": 5, "items": 25 },
+        "Understand": { "pct": 15, "items": 75 },
+        "Apply": { "pct": 50, "items": 250 },
+        "Analyze": { "pct": 20, "items": 100 },
+        "Evaluate": { "pct": 10, "items": 50 }
+      },
+      "question_type_mix": {
+        "select": { "pct": 75, "items": 375 },
+        "numeric": { "pct": 15, "items": 75 },
+        "multi": { "pct": 6, "items": 30 },
+        "fill": { "pct": 3, "items": 15 },
+        "match": { "pct": 1, "items": 5 }
+      },
+      "calculation_item_pct": 55,
+      "key_formulas": [
+        "Breakeven (units) = Fixed Costs / CM per Unit",
+        "Breakeven (dollars) = Fixed Costs / CM Ratio",
+        "Target Profit (units) = (FC + Target Profit) / CM per Unit",
+        "Margin of Safety = (Actual Sales âˆ’ BE Sales) / Actual Sales",
+        "Degree of Operating Leverage = CM / Operating Income",
+        "Multi-product weighted average CM",
+        "Shut-down point: Price â‰¥ Minimum AVC",
+        "Sell-or-process-further: Incremental Revenue > Incremental Cost",
+        "Transfer pricing: Minimum = VC + Opportunity Cost",
+        "Expected Value = Î£(Páµ¢ Ã— Outcomeáµ¢)",
+        "Value of Perfect Information = EV with PI âˆ’ EV without PI"
+      ],
+      "formula_count": 11,
+      "primary_exhibit_types": ["table (cost data)", "dashboard (product mix)", "erp-report"],
+      "part2_authorities": ["IMA SMA on relevant costing", "pricing models"],
+      "skeleton_header": "// CMA Part 2 Exam Simulator â€” Pack C\n// Domain(s): C â€” Decision Analysis\n// Generated: 2026-07-29\n// Governance State: Unprocessed (all items)\n// Architecture: Single-object (one JSON object per MCQ item)\n// QID Format: P2-C-001 to P2-C-500\n// Item Count: 500\n// Required Field: Part2OnlyFlag: true\n// Notes: Largest domain by weight (25%). Highest calculation intensity (55%).\nvar pack_p2_c_questions = [];",
+      "authoring_order": 2,
+      "authoring_window": "Phase 2 Weeks 5-6",
+      "quality_gate": "M2.4 â€” Quality Gate C",
+      "phase2_milestone": "M2.3",
+      "min_los_items": 40
+    },
+    {
+      "pack_letter": "B",
+      "filename": "pack_p2_b.js",
+      "variable_name": "pack_p2_b_questions",
+      "domains": ["B"],
+      "domain_names": ["Corporate Finance"],
+      "exam_weight": "20%",
+      "item_count": 500,
+      "qid_range": "P2-B-001 to P2-B-500",
+      "qid_pattern": "^P2-B-\\d{3}$",
+      "los_coverage": [
+        { "code": "B.1", "topic": "Calculate risk and return measures (std dev, beta, CAPM)", "target_items": 70 },
+        { "code": "B.2", "topic": "Calculate cost of capital (WACC, component costs)", "target_items": 75 },
+        { "code": "B.3", "topic": "Evaluate capital structure and optimal leverage", "target_items": 55 },
+        { "code": "B.4", "topic": "Manage working capital (cash, receivables, inventory, payables)", "target_items": 65 },
+        { "code": "B.5", "topic": "Analyze short-term financing and cash management", "target_items": 50 },
+        { "code": "B.6", "topic": "Evaluate long-term financing (bonds, stocks, leases)", "target_items": 60 },
+        { "code": "B.7", "topic": "Analyze dividend policy and share repurchases", "target_items": 45 },
+        { "code": "B.8", "topic": "Assess corporate restructuring (M&A, divestitures, LBOs)", "target_items": 40 },
+        { "code": "B.9", "topic": "Evaluate international finance (FX, transfer pricing, political risk)", "target_items": 40 }
+      ],
+      "difficulty_targets": {
+        "Easy": { "score": 1, "pct": 10, "items": 50 },
+        "Moderate-Easy": { "score": 2, "pct": 20, "items": 100 },
+        "Moderate": { "score": 3, "pct": 30, "items": 150 },
+        "Difficult": { "score": 4, "pct": 30, "items": 150 },
+        "Very Difficult": { "score": 5, "pct": 10, "items": 50 }
+      },
+      "cognitive_targets": {
+        "Remember": { "pct": 10, "items": 50 },
+        "Understand": { "pct": 20, "items": 100 },
+        "Apply": { "pct": 50, "items": 250 },
+        "Analyze": { "pct": 15, "items": 75 },
+        "Evaluate": { "pct": 5, "items": 25 }
+      },
+      "question_type_mix": {
+        "select": { "pct": 85, "items": 425 },
+        "numeric": { "pct": 8, "items": 40 },
+        "multi": { "pct": 4, "items": 20 },
+        "fill": { "pct": 2, "items": 10 },
+        "match": { "pct": 1, "items": 5 }
+      },
+      "calculation_item_pct": 40,
+      "key_formulas": [
+        "Expected Return = Î£(Páµ¢ Ã— Ráµ¢)",
+        "CAPM: Râ‚‘ = Rf + Î²(Rm âˆ’ Rf)",
+        "WACC = (E/V Ã— Râ‚‘) + (P/V Ã— Rp) + (D/V Ã— Rð’¹ Ã— (1 âˆ’ t))",
+        "Cost of Preferred = Dp / Pp",
+        "Cost of Debt (after-tax) = Pre-tax Kð’¹ Ã— (1 âˆ’ t)",
+        "Cash Conversion Cycle = DIO + DSO âˆ’ DPO",
+        "EOQ = âˆš(2DS/H)",
+        "Effective Annual Rate = (1 + r/m)áµ âˆ’ 1",
+        "Forward/FX Premium = (Forward âˆ’ Spot) / Spot Ã— (360/days)"
+      ],
+      "formula_count": 9,
+      "primary_exhibit_types": ["financial-statement", "table (bond amortization, WACC)", "erp-report"],
+      "part2_authorities": ["CAPM (Sharpe-Lintner)", "Modigliani-Miller", "Basel III"],
+      "skeleton_header": "// CMA Part 2 Exam Simulator â€” Pack B\n// Domain(s): B â€” Corporate Finance\n// Generated: 2026-07-29\n// Governance State: Unprocessed (all items)\n// Architecture: Single-object (one JSON object per MCQ item)\n// QID Format: P2-B-001 to P2-B-500\n// Item Count: 500\n// Required Field: Part2OnlyFlag: true\nvar pack_p2_b_questions = [];",
+      "authoring_order": 3,
+      "authoring_window": "Phase 2 Weeks 7-8",
+      "quality_gate": "M2.6 â€” Quality Gate B",
+      "phase2_milestone": "M2.5",
+      "min_los_items": 40
+    },
+    {
+      "pack_letter": "D",
+      "filename": "pack_p2_d.js",
+      "variable_name": "pack_p2_d_questions",
+      "domains": ["D", "E"],
+      "domain_names": ["Risk Management", "Investment Decisions"],
+      "exam_weight": "20% (D: 10% + E: 10%)",
+      "item_count": 500,
+      "section_breakdown": [
+        { "section": "D", "domain": "Risk Management", "qid_range": "P2-D-001 to P2-D-250", "items": 250 },
+        { "section": "E", "domain": "Investment Decisions", "qid_range": "P2-E-001 to P2-E-250", "items": 250 }
+      ],
+      "los_coverage_d": [
+        { "code": "D.1", "topic": "Apply COSO ERM framework (governance, strategy, performance, review)", "target_items": 65 },
+        { "code": "D.2", "topic": "Identify and assess types of risk", "target_items": 55 },
+        { "code": "D.3", "topic": "Evaluate risk appetite, tolerance, and capacity", "target_items": 50 },
+        { "code": "D.4", "topic": "Analyze risk response strategies (avoid, reduce, share, accept)", "target_items": 50 },
+        { "code": "D.5", "topic": "Implement ERM integration with strategy", "target_items": 30 }
+      ],
+      "los_coverage_e": [
+        { "code": "E.1", "topic": "Calculate capital budgeting methods (NPV, IRR, payback, PI, ARR)", "target_items": 70 },
+        { "code": "E.2", "topic": "Perform DCF analysis for project evaluation", "target_items": 50 },
+        { "code": "E.3", "topic": "Analyze risk in capital investments (sensitivity, scenario, Monte Carlo)", "target_items": 50 },
+        { "code": "E.4", "topic": "Evaluate mutually exclusive projects with unequal lives", "target_items": 35 },
+        { "code": "E.5", "topic": "Define and value real options", "target_items": 25 },
+        { "code": "E.6", "topic": "Assess post-audit and capital rationing", "target_items": 20 }
+      ],
+      "difficulty_targets": {
+        "section_d": {
+          "Easy": { "score": 1, "pct": 20, "items": 50 },
+          "Moderate-Easy": { "score": 2, "pct": 25, "items": 63 },
+          "Moderate": { "score": 3, "pct": 30, "items": 75 },
+          "Difficult": { "score": 4, "pct": 17, "items": 42 },
+          "Very Difficult": { "score": 5, "pct": 8, "items": 20 }
+        },
+        "section_e": {
+          "Easy": { "score": 1, "pct": 10, "items": 25 },
+          "Moderate-Easy": { "score": 2, "pct": 20, "items": 50 },
+          "Moderate": { "score": 3, "pct": 30, "items": 75 },
+          "Difficult": { "score": 4, "pct": 28, "items": 70 },
+          "Very Difficult": { "score": 5, "pct": 12, "items": 30 }
+        }
+      },
+      "cognitive_targets": {
+        "section_d": {
+          "Remember": { "pct": 20, "items": 50 },
+          "Understand": { "pct": 35, "items": 88 },
+          "Apply": { "pct": 25, "items": 62 },
+          "Analyze": { "pct": 15, "items": 38 },
+          "Evaluate": { "pct": 5, "items": 12 }
+        },
+        "section_e": {
+          "Remember": { "pct": 10, "items": 25 },
+          "Understand": { "pct": 15, "items": 38 },
+          "Apply": { "pct": 55, "items": 137 },
+          "Analyze": { "pct": 15, "items": 38 },
+          "Evaluate": { "pct": 5, "items": 12 }
+        }
+      },
+      "question_type_mix": {
+        "select": { "pct": 85, "items": 425 },
+        "numeric": { "pct": 8, "items": 40 },
+        "multi": { "pct": 4, "items": 20 },
+        "fill": { "pct": 2, "items": 10 },
+        "match": { "pct": 1, "items": 5 }
+      },
+      "calculation_item_pct": 30,
+      "key_formulas_section_d": [
+        "Expected Loss = Probability Ã— Impact",
+        "Risk Score = Likelihood Ã— Severity",
+        "Residual Risk = Inherent Risk âˆ’ Controls"
+      ],
+      "key_formulas_section_e": [
+        "NPV = Î£(CFâ‚œ / (1+r)áµ—) âˆ’ Initial Investment",
+        "IRR: rate where NPV = 0",
+        "Payback = Initial Investment / Annual CF",
+        "Discounted Payback",
+        "Profitability Index = PV of Future CFs / Initial Investment",
+        "Equivalent Annual Annuity (EAA) = NPV / PVIFA(r,n)",
+        "MACRS depreciation tables (IRS Pub 946)",
+        "After-tax cash flow = (Rev âˆ’ Exp) Ã— (1 âˆ’ t) + (Dep Ã— t)"
+      ],
+      "formula_count": 11,
+      "primary_exhibit_types_section_d": ["policy (ERM framework)", "dashboard (risk register)", "text"],
+      "primary_exhibit_types_section_e": ["table (cash flow projections, MACRS)", "contract", "dashboard"],
+      "part2_authorities_section_d": ["COSO ERM (2017) â€” 5 components, 20 principles"],
+      "part2_authorities_section_e": ["NPV/IRR theory", "MACRS (IRS Pub 946)", "real options"],
+      "skeleton_header": "// CMA Part 2 Exam Simulator â€” Pack D\n// Domain(s): D â€” Risk Management (250 items) + E â€” Investment Decisions (250 items)\n// Generated: 2026-07-29\n// Governance State: Unprocessed (all items)\n// Architecture: Single-object (one JSON object per MCQ item)\n// QID Range: P2-D-001 to P2-D-250 | P2-E-001 to P2-E-250\n// Item Count: 500 (250 D + 250 E)\n// Required Field: Part2OnlyFlag: true\n// Notes: Dual-domain pack â€” strict domain boundary enforcement required\nvar pack_p2_d_questions = [];",
+      "authoring_order": 4,
+      "authoring_window": "Phase 2 Week 9",
+      "quality_gate": "M2.8 â€” Quality Gate D",
+      "phase2_milestone": "M2.7",
+      "min_los_items": 30
+    },
+    {
+      "pack_letter": "E",
+      "filename": "pack_p2_e.js",
+      "variable_name": "pack_p2_e_questions",
+      "domains": ["F", "Cross-domain"],
+      "domain_names": ["Professional Ethics", "Cross-Domain Integration"],
+      "exam_weight": "15% (F) + cross-domain integration",
+      "item_count": 500,
+      "section_breakdown": [
+        { "section": "F", "domain": "Professional Ethics", "qid_range": "P2-F-001 to P2-F-375", "items": 375 },
+        { "section": "F", "domain": "Cross-domain", "qid_range": "P2-F-376 to P2-F-500", "items": 125, "tagged_with_sectiontags_array": true }
+      ],
+      "los_coverage_f": [
+        { "code": "F.1", "topic": "Apply IMA Statement of Ethical Professional Practice", "target_items": 75 },
+        { "code": "F.2", "topic": "Identify ethical issues facing management accountants", "target_items": 60 },
+        { "code": "F.3", "topic": "Apply IMA ethical decision-making model", "target_items": 55 },
+        { "code": "F.4", "topic": "Evaluate fraud and fraudulent financial reporting", "target_items": 55 },
+        { "code": "F.5", "topic": "Assess corporate governance and ethics (SOX, audit committees)", "target_items": 50 },
+        { "code": "F.6", "topic": "Apply Foreign Corrupt Practices Act (FCPA)", "target_items": 45 },
+        { "code": "F.7", "topic": "Evaluate sustainability and social responsibility reporting", "target_items": 35 }
+      ],
+      "cross_domain_tagging": "Items P2-F-376 to P2-F-500 carry SectionTags array (e.g., ['F','B'] for ethics + corporate finance, ['F','A'] for ethics + ratio analysis). Cross-domain items test Part 2's integrative reasoning demand across multiple blueprint sections.",
+      "cross_domain_los_pairs": [
+        { "pair": "F+B", "description": "Ethics in corporate financing, capital structure, and M&A" },
+        { "pair": "F+A", "description": "Ethical implications of financial reporting, earnings management" },
+        { "pair": "F+C", "description": "Ethics in pricing, relevant costing, and capacity decisions" },
+        { "pair": "F+E", "description": "Ethical dimensions of investment decisions and capital budgeting" },
+        { "pair": "F+D", "description": "Ethics in risk management â€” ERM implementation and risk appetite" }
+      ],
+      "difficulty_targets": {
+        "section_f": {
+          "Easy": { "score": 1, "pct": 25, "items": 94 },
+          "Moderate-Easy": { "score": 2, "pct": 25, "items": 94 },
+          "Moderate": { "score": 3, "pct": 30, "items": 112 },
+          "Difficult": { "score": 4, "pct": 15, "items": 56 },
+          "Very Difficult": { "score": 5, "pct": 5, "items": 19 }
+        },
+        "cross_domain": {
+          "Easy": { "score": 1, "pct": 15, "items": 19 },
+          "Moderate-Easy": { "score": 2, "pct": 20, "items": 25 },
+          "Moderate": { "score": 3, "pct": 30, "items": 37 },
+          "Difficult": { "score": 4, "pct": 25, "items": 31 },
+          "Very Difficult": { "score": 5, "pct": 10, "items": 13 }
+        }
+      },
+      "cognitive_targets": {
+        "section_f": {
+          "Remember": { "pct": 25, "items": 94 },
+          "Understand": { "pct": 30, "items": 112 },
+          "Apply": { "pct": 25, "items": 94 },
+          "Analyze": { "pct": 15, "items": 56 },
+          "Evaluate": { "pct": 5, "items": 19 }
+        },
+        "cross_domain": {
+          "Remember": { "pct": 5, "items": 6 },
+          "Understand": { "pct": 15, "items": 19 },
+          "Apply": { "pct": 45, "items": 56 },
+          "Analyze": { "pct": 25, "items": 31 },
+          "Evaluate": { "pct": 10, "items": 13 }
+        }
+      },
+      "question_type_mix": {
+        "select": { "pct": 85, "items": 425 },
+        "numeric": { "pct": 8, "items": 40 },
+        "multi": { "pct": 4, "items": 20 },
+        "fill": { "pct": 2, "items": 10 },
+        "match": { "pct": 1, "items": 5 }
+      },
+      "calculation_item_pct": 5,
+      "key_formulas": [],
+      "formula_count": 0,
+      "primary_exhibit_types_section_f": ["policy (code of ethics)", "email", "text (fraud scenarios)"],
+      "primary_exhibit_types_cross_domain": ["financial-statement", "table", "dashboard", "email"],
+      "part2_authorities_section_f": ["IMA Statement of Ethical Professional Practice", "SOX 2002", "FCPA", "Dodd-Frank"],
+      "skeleton_header": "// CMA Part 2 Exam Simulator â€” Pack E\n// Domain(s): F â€” Professional Ethics (375 items) + Cross-Domain Integration (125 items)\n// Generated: 2026-07-29\n// Governance State: Unprocessed (all items)\n// Architecture: Single-object (one JSON object per MCQ item)\n// QID Range: P2-F-001 to P2-F-500\n// Item Count: 500 (375 F + 125 Cross-domain)\n// Required Field: Part2OnlyFlag: true\n// Notes: Cross-domain items (P2-F-376+) carry SectionTags array for multi-domain tagging\nvar pack_p2_e_questions = [];",
+      "authoring_order": 5,
+      "authoring_window": "Phase 2 Week 10",
+      "quality_gate": "M2.10 â€” Quality Gate E",
+      "phase2_milestone": "M2.9",
+      "min_los_items": 40
+    }
+  ],
+
+  "case_packs": [
+    {
+      "pack_number": 1,
+      "filename": "case_pack_p2_1.js",
+      "variable_name": "casePackP2_1",
+      "case_count": 25,
+      "estimated_items": 133,
+      "items_per_case": "5-6",
+      "section_distribution": {
+        "A_Financial_Statement_Analysis": 6,
+        "B_Corporate_Finance": 5,
+        "C_Decision_Analysis": 6,
+        "D_Risk_Management": 3,
+        "E_Investment_Decisions": 3,
+        "F_Professional_Ethics": 2
+      },
+      "caseid_format": "CBQ2-{Section}{Seq}",
+      "caseid_examples": ["CBQ2-A1", "CBQ2-C6", "CBQ2-F2"],
+      "itemid_format": "{CaseID}-Q{N}",
+      "exhibitid_format": "{CaseID}-E{N}",
+      "authoring_week": 12,
+      "certification_week": 14,
+      "skeleton_header": "// CMA Part 2 Exam Simulator â€” Case Pack 1\n// Cases: 25 (~133 items) â€” A:6, B:5, C:6, D:3, E:3, F:2\n// Generated: 2026-07-29\n// Governance State: Draft (all cases)\n// CaseID Format: CBQ2-{Section}{Seq}\n// Required Field: Part2OnlyFlag: true\nvar casePackP2_1 = [];",
+      "exhibit_types_by_domain": {
+        "A": ["financial-statement", "table (ratio summary)"],
+        "B": ["financial-statement", "table (bond amortization, WACC)", "erp-report"],
+        "C": ["table (cost data)", "dashboard (product mix)", "erp-report"],
+        "D": ["policy (ERM framework)", "dashboard (risk register)", "text"],
+        "E": ["table (cash flow projections, MACRS)", "contract", "dashboard"],
+        "F": ["policy (code of ethics)", "email", "text (fraud scenarios)"]
+      },
+      "cognitive_progression": [
+        { "position": "1-2", "cognitive_level": "Apply", "type": "calculation", "description": "Foundational computation" },
+        { "position": "3-4", "cognitive_level": "Analyze", "type": "interpretation", "description": "Interpret results" },
+        { "position": "5", "cognitive_level": "Evaluate", "type": "judgment", "description": "Recommendation or decision" },
+        { "position": "6", "cognitive_level": "Evaluate/Synthesize", "type": "integration", "description": "Cross-concept integration (optional)" }
+      ]
+    },
+    {
+      "pack_number": 2,
+      "filename": "case_pack_p2_2.js",
+      "variable_name": "casePackP2_2",
+      "case_count": 25,
+      "estimated_items": 133,
+      "items_per_case": "5-6",
+      "section_distribution": {
+        "A_Financial_Statement_Analysis": 4,
+        "B_Corporate_Finance": 5,
+        "C_Decision_Analysis": 6,
+        "D_Risk_Management": 3,
+        "E_Investment_Decisions": 2,
+        "F_Professional_Ethics": 5
+      },
+      "caseid_format": "CBQ22-{Section}{Seq}",
+      "caseid_examples": ["CBQ22-B5", "CBQ22-F4", "CBQ22-A3"],
+      "itemid_format": "{CaseID}-Q{N}",
+      "exhibitid_format": "{CaseID}-E{N}",
+      "authoring_week": 13,
+      "certification_week": 14,
+      "skeleton_header": "// CMA Part 2 Exam Simulator â€” Case Pack 2\n// Cases: 25 (~133 items) â€” A:4, B:5, C:6, D:3, E:2, F:5\n// Generated: 2026-07-29\n// Governance State: Draft (all cases)\n// CaseID Format: CBQ22-{Section}{Seq}\n// Required Field: Part2OnlyFlag: true\nvar casePackP2_2 = [];",
+      "exhibit_types_by_domain": {
+        "A": ["financial-statement", "table (ratio summary)"],
+        "B": ["financial-statement", "table (bond amortization, WACC)", "erp-report"],
+        "C": ["table (cost data)", "dashboard (product mix)", "erp-report"],
+        "D": ["policy (ERM framework)", "dashboard (risk register)", "text"],
+        "E": ["table (cash flow projections, MACRS)", "contract", "dashboard"],
+        "F": ["policy (code of ethics)", "email", "text (fraud scenarios)"]
+      },
+      "cognitive_progression": [
+        { "position": "1-2", "cognitive_level": "Apply", "type": "calculation", "description": "Foundational computation" },
+        { "position": "3-4", "cognitive_level": "Analyze", "type": "interpretation", "description": "Interpret results" },
+        { "position": "5", "cognitive_level": "Evaluate", "type": "judgment", "description": "Recommendation or decision" },
+        { "position": "6", "cognitive_level": "Evaluate/Synthesize", "type": "integration", "description": "Cross-concept integration (optional)" }
+      ]
+    },
+    {
+      "pack_number": 3,
+      "filename": "case_pack_p2_3.js",
+      "variable_name": "casePackP2_3",
+      "case_count": 25,
+      "estimated_items": 134,
+      "items_per_case": "5-6",
+      "section_distribution": {
+        "A_Financial_Statement_Analysis": 5,
+        "B_Corporate_Finance": 5,
+        "C_Decision_Analysis": 6,
+        "D_Risk_Management": 2,
+        "E_Investment_Decisions": 2,
+        "F_Professional_Ethics": 5
+      },
+      "caseid_format": "CBQ23-{Section}{Seq}",
+      "caseid_examples": ["CBQ23-F2", "CBQ23-C5", "CBQ23-A4"],
+      "itemid_format": "{CaseID}-Q{N}",
+      "exhibitid_format": "{CaseID}-E{N}",
+      "authoring_week": 14,
+      "certification_week": 15,
+      "skeleton_header": "// CMA Part 2 Exam Simulator â€” Case Pack 3\n// Cases: 25 (~134 items) â€” A:5, B:5, C:6, D:2, E:2, F:5\n// Generated: 2026-07-29\n// Governance State: Draft (all cases)\n// CaseID Format: CBQ23-{Section}{Seq}\n// Required Field: Part2OnlyFlag: true\n// Notes: Includes cross-domain cases (e.g., ethics + capital budgeting). Dual SectionTags where applicable.\nvar casePackP2_3 = [];",
+      "exhibit_types_by_domain": {
+        "A": ["financial-statement", "table (ratio summary)"],
+        "B": ["financial-statement", "table (bond amortization, WACC)", "erp-report"],
+        "C": ["table (cost data)", "dashboard (product mix)", "erp-report"],
+        "D": ["policy (ERM framework)", "dashboard (risk register)", "text"],
+        "E": ["table (cash flow projections, MACRS)", "contract", "dashboard"],
+        "F": ["policy (code of ethics)", "email", "text (fraud scenarios)"]
+      },
+      "cognitive_progression": [
+        { "position": "1-2", "cognitive_level": "Apply", "type": "calculation", "description": "Foundational computation" },
+        { "position": "3-4", "cognitive_level": "Analyze", "type": "interpretation", "description": "Interpret results" },
+        { "position": "5", "cognitive_level": "Evaluate", "type": "judgment", "description": "Recommendation or decision" },
+        { "position": "6", "cognitive_level": "Evaluate/Synthesize", "type": "integration", "description": "Cross-concept integration (optional)" }
+      ]
+    }
+  ],
+
+  "pool_wide_targets": {
+    "total_mcqs": 2500,
+    "total_cases": 75,
+    "total_case_items": "375-450",
+    "difficulty_distribution": {
+      "Easy": { "score": 1, "target_pct": 15, "pool_items": 375 },
+      "Moderate-Easy": { "score": 2, "target_pct": 20, "pool_items": 500 },
+      "Moderate": { "score": 3, "target_pct": 30, "pool_items": 750 },
+      "Difficult": { "score": 4, "target_pct": 25, "pool_items": 625 },
+      "Very Difficult": { "score": 5, "target_pct": 10, "pool_items": 250 }
+    },
+    "cognitive_level_distribution": {
+      "Remember": { "target_pct": 12, "pool_items": 300 },
+      "Understand": { "target_pct": 22, "pool_items": 550 },
+      "Apply": { "target_pct": 42, "pool_items": 1050 },
+      "Analyze": { "target_pct": 18, "pool_items": 450 },
+      "Evaluate": { "target_pct": 6, "pool_items": 150 }
+    },
+    "question_type_mix": {
+      "select": { "target_pct": 85, "pool_items": 2125 },
+      "numeric": { "target_pct": 8, "pool_items": 200 },
+      "multi": { "target_pct": 4, "pool_items": 100 },
+      "fill": { "target_pct": 2, "pool_items": 50 },
+      "match": { "target_pct": 1, "pool_items": 25 }
+    },
+    "certification_target": "95% (2,375/2,500 minimum certified at HIGH confidence on all 6 dimensions)",
+    "certification_dimensions": [
+      { "num": 1, "name": "Correctness", "gate": "HIGH" },
+      { "num": 2, "name": "Precision", "gate": "HIGH" },
+      { "num": 3, "name": "Difficulty Calibration", "gate": "HIGH" },
+      { "num": 4, "name": "Distractor Engineering", "gate": "HIGH" },
+      { "num": 5, "name": "Blueprint Alignment", "gate": "HIGH" },
+      { "num": 6, "name": "Part 2 Relevance", "gate": "HIGH" }
+    ],
+    "quality_gate_tolerance": "Â±3% per difficulty and cognitive tier"
+  },
+
+  "per_domain_difficulty": {
+    "A_Financial_Statement_Analysis": {
+      "Easy": { "pct": 10, "items": 50 },
+      "Moderate-Easy": { "pct": 20, "items": 100 },
+      "Moderate": { "pct": 30, "items": 150 },
+      "Difficult": { "pct": 30, "items": 150 },
+      "Very Difficult": { "pct": 10, "items": 50 }
+    },
+    "B_Corporate_Finance": {
+      "Easy": { "pct": 10, "items": 50 },
+      "Moderate-Easy": { "pct": 20, "items": 100 },
+      "Moderate": { "pct": 30, "items": 150 },
+      "Difficult": { "pct": 30, "items": 150 },
+      "Very Difficult": { "pct": 10, "items": 50 }
+    },
+    "C_Decision_Analysis": {
+      "Easy": { "pct": 10, "items": 50 },
+      "Moderate-Easy": { "pct": 20, "items": 100 },
+      "Moderate": { "pct": 30, "items": 150 },
+      "Difficult": { "pct": 28, "items": 140 },
+      "Very Difficult": { "pct": 12, "items": 60 }
+    },
+    "D_Risk_Management": {
+      "Easy": { "pct": 20, "items": 50 },
+      "Moderate-Easy": { "pct": 25, "items": 63 },
+      "Moderate": { "pct": 30, "items": 75 },
+      "Difficult": { "pct": 17, "items": 42 },
+      "Very Difficult": { "pct": 8, "items": 20 }
+    },
+    "E_Investment_Decisions": {
+      "Easy": { "pct": 10, "items": 25 },
+      "Moderate-Easy": { "pct": 20, "items": 50 },
+      "Moderate": { "pct": 30, "items": 75 },
+      "Difficult": { "pct": 28, "items": 70 },
+      "Very Difficult": { "pct": 12, "items": 30 }
+    },
+    "F_Professional_Ethics": {
+      "Easy": { "pct": 25, "items": 94 },
+      "Moderate-Easy": { "pct": 25, "items": 94 },
+      "Moderate": { "pct": 30, "items": 112 },
+      "Difficult": { "pct": 15, "items": 56 },
+      "Very Difficult": { "pct": 5, "items": 19 }
+    }
+  },
+
+  "per_domain_blooms": {
+    "A_Financial_Statement_Analysis": {
+      "Remember": { "pct": 10, "items": 50 },
+      "Understand": { "pct": 20, "items": 100 },
+      "Apply": { "pct": 45, "items": 225 },
+      "Analyze": { "pct": 20, "items": 100 },
+      "Evaluate": { "pct": 5, "items": 25 }
+    },
+    "B_Corporate_Finance": {
+      "Remember": { "pct": 10, "items": 50 },
+      "Understand": { "pct": 20, "items": 100 },
+      "Apply": { "pct": 50, "items": 250 },
+      "Analyze": { "pct": 15, "items": 75 },
+      "Evaluate": { "pct": 5, "items": 25 }
+    },
+    "C_Decision_Analysis": {
+      "Remember": { "pct": 5, "items": 25 },
+      "Understand": { "pct": 15, "items": 75 },
+      "Apply": { "pct": 50, "items": 250 },
+      "Analyze": { "pct": 20, "items": 100 },
+      "Evaluate": { "pct": 10, "items": 50 }
+    },
+    "D_Risk_Management": {
+      "Remember": { "pct": 20, "items": 50 },
+      "Understand": { "pct": 35, "items": 88 },
+      "Apply": { "pct": 25, "items": 62 },
+      "Analyze": { "pct": 15, "items": 38 },
+      "Evaluate": { "pct": 5, "items": 12 }
+    },
+    "E_Investment_Decisions": {
+      "Remember": { "pct": 10, "items": 25 },
+      "Understand": { "pct": 15, "items": 38 },
+      "Apply": { "pct": 55, "items": 137 },
+      "Analyze": { "pct": 15, "items": 38 },
+      "Evaluate": { "pct": 5, "items": 12 }
+    },
+    "F_Professional_Ethics": {
+      "Remember": { "pct": 25, "items": 94 },
+      "Understand": { "pct": 30, "items": 112 },
+      "Apply": { "pct": 25, "items": 94 },
+      "Analyze": { "pct": 15, "items": 56 },
+      "Evaluate": { "pct": 5, "items": 19 }
+    }
+  },
+
+  "pack_skeleton_template": {
+    "description": "Every MCQ pack file shall conform to this skeleton structure before any items are authored.",
+    "header_comment": "// CMA Part 2 Exam Simulator â€” Pack {Letter}\n// Domain(s): {Domain Label(s)}\n// Generated: 2026-07-29\n// Governance State: Unprocessed (all items)\n// Architecture: Single-object (one JSON object per MCQ item)\n// QID Format: P2-{Section}-NNN\n// Item Count: 500\n// Required Field: Part2OnlyFlag: true",
+    "variable_declaration": "var pack_p2_{letter}_questions = [];",
+    "file_end": "// END OF PACK {Letter}",
+    "single_item_skeleton": {
+      "Part": 2,
+      "Section": "{A|B|C|D|E|F}",
+      "Topic": "{topic_string}",
+      "QuestionID": "P2-{Section}-NNN",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "{question_text}",
+      "Choices": { "A": "{choice_a}", "B": "{choice_b}", "C": "{choice_c}", "D": "{choice_d}" },
+      "CorrectChoice": "{A|B|C|D}",
+      "ExplanationCorrect": "{explanation â‰¥50 chars, must reference Part 2 authority}",
+      "ExplanationWrongA": "{explanation â‰¥50 chars if Aâ‰ CC, else \"\"}",
+      "ExplanationWrongB": "{explanation â‰¥50 chars if Bâ‰ CC, else \"\"}",
+      "ExplanationWrongC": "{explanation â‰¥50 chars if Câ‰ CC, else \"\"}",
+      "ExplanationWrongD": "{explanation â‰¥50 chars if Dâ‰ CC, else \"\"}",
+      "Difficulty": "{Easy|Moderate-Easy|Moderate|Difficult|Very Difficult}",
+      "DifficultyScore": "{1|2|3|4|5}",
+      "CognitiveLevel": "{Remember|Understand|Apply|Analyze|Evaluate}",
+      "CalculationItem": "{true|false}",
+      "Type": "{select|numeric|multi|fill|match}",
+      "LOSTag": "{A.1 through F.7}",
+      "BlueprintDomain": "{domain_name}",
+      "FormulaReference": "{reference to FORMULA_MASTER_P2.md | null}",
+      "CommonTrapReference": "{reference | null}",
+      "Authorities": ["{Part 2 authority citations}"],
+      "VerificationChecks": [
+        "Part2OnlyFlag verified true",
+        "EW[CC] empty (DL-008 compliant)",
+        "Non-CC EW slots â‰¥50 chars (DL-026 compliant)",
+        "No boilerplate text (DL-013 prevention)",
+        "Difficulty justified by cognitive demand (DL-031 prevention)",
+        "Formula verified against FORMULA_MASTER_P2.md",
+        "Authority citation matches tested concept (DL-009 prevention)",
+        "Independent answer derived matches stored CorrectChoice (DL-030 prevention)"
+      ]
+    },
+    "governance_requirements": [
+      "DL-008: ExplanationWrong[CorrectChoice] must be empty string",
+      "DL-026: All three non-CorrectChoice ExplanationWrong slots must each contain â‰¥50 characters of choice-specific text",
+      "DL-013: No 'represents a plausible misconception' or 'A candidate may select this option by misapplying' anywhere in any field",
+      "DL-031: Every item labeled Moderate or above must carry per-item justification that the cognitive demand matches the difficulty label",
+      "DL-030: Every numerical answer must be independently recalculated against the stored CorrectChoice",
+      "Part2OnlyFlag: true on every item â€” mandatory boolean"
+    ]
+  },
+
+  "case_skeleton_template": {
+    "description": "Every case pack file shall conform to this skeleton structure before any cases are authored.",
+    "header_comment": "// CMA Part 2 Exam Simulator â€” Case Pack {N}\n// Cases: 25 (~{133|134} items)\n// Generated: 2026-07-29\n// Governance State: Draft (all cases)\n// CaseID Format: CBQ2{N?}-{Section}{Seq}\n// Required Field: Part2OnlyFlag: true",
+    "variable_declaration": "var casePackP2_{N} = [];",
+    "file_end": "// END OF CASE PACK {N}",
+    "single_case_skeleton": {
+      "CaseID": "CBQ2{PackNum?}-{Section}{Seq}",
+      "Title": "{2-8 word descriptive title}",
+      "SectionTags": ["{Section}"],
+      "BlueprintDomain": "{domain_name}",
+      "BlueprintObjectives": ["{LOS references}"],
+      "PrimaryCompetency": "{Calculation|Conceptual|Analysis|Judgment}",
+      "EstimatedMinutes": "{20-40}",
+      "Difficulty": "{Easy|Moderate|Difficult|Very Difficult}",
+      "DifficultyScore": "{1-5}",
+      "Part2OnlyFlag": true,
+      "ProductionStatus": "Draft",
+      "Version": "1.0",
+      "Industry": "{industry}",
+      "CompanyType": "{Manufacturer|Distributor|Retailer|Service provider}",
+      "CompanyName": "{fictional company name}",
+      "Stakeholder": "{decision-maker role + name}",
+      "BusinessFunction": "{Treasury|Financial reporting|Cost accounting|Internal audit}",
+      "QuestionCount": "{5 or 6}",
+      "ExhibitCount": "{2-4}",
+      "ScenarioText": "{2-4 sentence business scenario}",
+      "LearningObjectives": ["{educational objectives}"],
+      "Exhibits": [
+        {
+          "ExhibitID": "{CaseID}-E{N}",
+          "CaseID": "{CaseID}",
+          "Type": "{financial-statement|table|chart|dashboard|policy|email|erp-report|contract|text}",
+          "Title": "Exhibit {N} â€” {name}",
+          "Purpose": "{why this exhibit exists}",
+          "ReferencedBy": ["{ItemIDs}"],
+          "Headers": ["{col1}", "{col2}"],
+          "Rows": [["{val1}", "{val2}"]]
+        }
+      ],
+      "Items": [
+        {
+          "ItemID": "{CaseID}-Q{N}",
+          "Type": "{numeric|select|multi|fill|match}",
+          "Prompt": "{question text}",
+          "Correct": "{correct answer}",
+          "Explanation": "{educational explanation}",
+          "Topic": "{specific concept tag}",
+          "Difficulty": "{Easy|Moderate|Difficult|Very Difficult}",
+          "DifficultyScore": "{1-5}",
+          "CognitiveLevel": "{Remember|Understand|Apply|Analyze|Evaluate}",
+          "CalculationRequired": "{true|false}",
+          "Part2OnlyFlag": true
+        }
+      ]
+    },
+    "case_governance_requirements": [
+      "DL-023: All table exhibits must use Headers + Rows â€” no Body-only pattern",
+      "Cognitive progression: Items 1-2=Apply, 3-4=Analyze, 5=Evaluate (non-decreasing CognitiveLevel)",
+      "Independent answerability: No item requires correct answer to prior item",
+      "Exhibit data consumption: Every exhibit row/column must be consumed by â‰¥1 item",
+      "No decorative data: Every exhibit element must serve at least one item",
+      "Cross-exhibit consistency: Financial statements must balance; ratios must reconcile",
+      "Part2OnlyFlag: true on case object and all item objects",
+      "Scenario realism: Named company + stakeholder + business trigger + task"
+    ]
+  },
+
+  "first_authoring_batch": {
+    "target_pack": "A",
+    "filename": "pack_p2_a.js",
+    "batch_size": 30,
+    "qid_range": "P2-A-001 to P2-A-030",
+    "domain": "Financial Statement Analysis",
+    "section": "A",
+    "los_focus": [
+      {
+        "code": "A.1",
+        "topic": "Calculate and interpret financial ratios (5 categories)",
+        "items_in_batch": 18,
+        "rationale": "A.1 is the foundational LOS for Domain A. All subsequent LOS build on ratio computation fluency. Prioritizing A.1 establishes the core computational skills that A.2 through A.9 extend into analysis and evaluation."
+      },
+      {
+        "code": "A.2",
+        "topic": "Analyze profitability and limitations of ratio analysis",
+        "items_in_batch": 12,
+        "rationale": "A.2 transitions from computation (A.1) to interpretation â€” profitability analysis, ratio limitations. Pairing A.1 and A.2 in the first batch ensures both calculation accuracy and interpretive reasoning are established from the start."
+      }
+    ],
+    "question_type_distribution": {
+      "select": { "count": 20, "pct": 66.7, "rationale": "Primary CMA exam format â€” the majority of candidates encounter 4-option select questions. Establishes the core pattern for distractor engineering." },
+      "numeric": { "count": 5, "pct": 16.7, "rationale": "Higher than pack-wide 8% to front-load calculation skill items. Early numeric items surface formula/arithmetic bugs before they propagate into later batches. Items: current ratio, quick ratio, inventory turnover, DSO, and DPO calculations." },
+      "multi": { "count": 3, "pct": 10.0, "rationale": "Multi-select tests ratio classification â€” candidates identify which ratios are liquidity vs. profitability vs. leverage. Front-loading multi items exercises the full breadth of ratio categories." },
+      "fill": { "count": 1, "pct": 3.3, "rationale": "One fill-in-the-blank item testing ratio terminology definitions (e.g., 'The ratio that measures a company's ability to meet short-term obligations is the ___ ratio'). Establishes fill pattern early." },
+      "match": { "count": 1, "pct": 3.3, "rationale": "One matching item pairing ratio names with their formulas. Establishes match-type rendering and scoring early." }
+    },
+    "item_details": {
+      "total_items": 30,
+      "select_items": {
+        "count": 20,
+        "topics": [
+          "Current ratio interpretation (high vs. low) â€” 2 items",
+          "Quick ratio vs. current ratio distinction â€” 2 items",
+          "Inventory turnover interpretation â€” 2 items",
+          "DSO and credit policy analysis â€” 2 items",
+          "Debt-to-equity interpretation â€” 2 items",
+          "Times interest earned assessment â€” 1 item",
+          "Gross margin percentage comparison â€” 2 items",
+          "ROA vs. ROE comparison â€” 2 items",
+          "Ratio limitations (industry comparison, firm size) â€” 2 items",
+          "Profitability analysis â€” trend interpretation â€” 2 items",
+          "Liquidity ratio comprehensive application â€” 1 item"
+        ]
+      },
+      "numeric_items": {
+        "count": 5,
+        "topics": [
+          "Current Ratio calculation â€” given CA and CL, compute",
+          "Quick Ratio calculation â€” given CA, Inventory, Prepaids, CL, compute",
+          "Inventory Turnover â€” given COGS and Average Inventory, compute",
+          "Days Sales Outstanding â€” given AR and Credit Sales, compute",
+          "Days Payable Outstanding â€” given AP and Purchases, compute"
+        ]
+      },
+      "multi_items": {
+        "count": 3,
+        "topics": [
+          "Identify which ratios are liquidity ratios (select all that apply from a list of 5)",
+          "Identify which ratios are profitability ratios (select all that apply)",
+          "Identify which factors limit ratio analysis usefulness (select 2 of 4)"
+        ]
+      },
+      "fill_items": {
+        "count": 1,
+        "topic": "Complete the definition: 'The ___ ratio measures a company's ability to pay short-term obligations with its most liquid assets.' (Answer: quick)"
+      },
+      "match_items": {
+        "count": 1,
+        "topic": "Match 5 ratio names (Current, Quick, D/E, TIE, ROE) to their formulas"
+      }
+    },
+    "difficulty_profile_first_batch": {
+      "Easy": 6,
+      "Moderate-Easy": 7,
+      "Moderate": 10,
+      "Difficult": 5,
+      "Very Difficult": 2,
+      "rationale": "First batch skews toward Moderate and below because A.1 (ratio computation) is foundational Apply-level work. Higher-difficulty items (Difficult/V.Diff) target LO A.2's interpretive analysis. V.Diff items test ratio limitations and cross-ratio integration."
+    },
+    "cognitive_profile_first_batch": {
+      "Remember": 2,
+      "Understand": 5,
+      "Apply": 17,
+      "Analyze": 5,
+      "Evaluate": 1,
+      "rationale": "Heaviest Apply allocation reflects the calculation-intensive A.1 foundation. Understand covers ratio definitions/limitations. Analyze covers profitability interpretation. Single Evaluate item tests judgment about ratio usefulness."
+    },
+    "quality_checks": [
+      {
+        "check": "DL-008 compliance",
+        "description": "Verify ExplanationWrong[CorrectChoice] is empty string for all 30 items",
+        "method": "For each item, extract CorrectChoice â†’ verify EW[CC] === ''"
+      },
+      {
+        "check": "DL-026 compliance",
+        "description": "Verify all 3 non-CorrectChoice ExplanationWrong slots are non-empty (â‰¥50 chars) with choice-specific text",
+        "method": "For each item, enumerate EW[A,B,C,D]; exclude CC slot; verify each remaining slot.length â‰¥ 50"
+      },
+      {
+        "check": "DL-013 prevention",
+        "description": "Zero occurrences of boilerplate phrases in any ExplanationWrong field",
+        "method": "Grep for 'represents a plausible misconception' AND 'A candidate may select this option by misapplying' â€” expect 0"
+      },
+      {
+        "check": "Part2OnlyFlag verification",
+        "description": "All 30 items have Part2OnlyFlag: true (boolean, not string 'true' or number 1)",
+        "method": "For each item, check typeof item.Part2OnlyFlag === 'boolean' && item.Part2OnlyFlag === true"
+      },
+      {
+        "check": "Single-object architecture",
+        "description": "Each item is exactly one JSON object â€” no dual-block metadata+content separation",
+        "method": "For each item, verify it is a single top-level object with all fields co-located"
+      },
+      {
+        "check": "QID uniqueness",
+        "description": "All 30 QIDs are unique within P2-A-001 to P2-A-030 range",
+        "method": "Collect all QuestionID values â†’ verify Set size === 30"
+      },
+      {
+        "check": "QID format",
+        "description": "All 30 QIDs match ^P2-A-\\d{3}$ with zero-padded 3-digit sequence",
+        "method": "Regex match each QuestionID against /^P2-A-\\d{3}$/"
+      },
+      {
+        "check": "Formula accuracy (numerical items)",
+        "description": "All 5 numeric items have independently recalculated answers matching stored CorrectChoice",
+        "method": "For each numeric item: read stem, solve independently, compare to stored CC. Any mismatch â†’ BLOCK batch close."
+      },
+      {
+        "check": "Authority citations",
+        "description": "Every ExplanationCorrect references appropriate Part 2 authority (ASC section, IFRS, SEC)",
+        "method": "Scan all 30 ExplanationCorrect fields for mention of ASC/IFRS/SEC/FASB. Items without authority citation â†’ flag."
+      },
+      {
+        "check": "Difficulty justification",
+        "description": "Every item labeled Moderate or above carries a verifiable justification for the difficulty label",
+        "method": "For each item with DifficultyScore â‰¥ 3: verify that the cognitive demand (calculation steps, distractor sophistication, interpretive depth) justifies the label"
+      },
+      {
+        "check": "Distractor uniqueness",
+        "description": "All 3 distractor ExplanationWrong texts are choice-specific and not identical across slots",
+        "method": "For each item, pairwise compare EW[A], EW[B], EW[C], EW[D] for text overlap. No pair should have >70% similarity."
+      },
+      {
+        "check": "No Part 1 contamination",
+        "description": "Zero Part 1 exclusive concepts (standard costing, process costing, job costing, COSO IC 2013) in any stem or explanation",
+        "method": "Grep for Part 1-exclusive terms: standard cost, equivalent units, job order, process costing, COSO Internal Control 2013 â€” expect 0"
+      },
+      {
+        "check": "JSON parse integrity",
+        "description": "pack_p2_a.js parses cleanly â€” array of 30 valid JSON objects",
+        "method": "JSON.parse or Function constructor returns 30-element array with no parse errors"
+      },
+      {
+        "check": "Governance guard Rule 5",
+        "description": "Batch size is 30 items â€” exactly at the governance guard Rule 5 cap",
+        "method": "Verify array length === 30"
+      },
+      {
+        "check": "Backup before batch close",
+        "description": "Timestamped backup created before any write that extends the batch",
+        "method": "Confirm backup file exists with format pack_p2_a.js.bak-YYYYMMDDHHMMSS and non-zero size"
+      }
+    ],
+    "batch_close_criteria": [
+      "All 14 quality checks pass with 0 failures",
+      "Governance guard Rule 2 (DL-008): 0 violations",
+      "Governance guard Rule 6 (DL-026): 0 violations",
+      "Independent recalculation: 5/5 numeric items match",
+      "All 30 items carry Part2OnlyFlag: true",
+      "All 30 items have question_state: 'Unprocessed' (batch delivery state â€” certification is Phase 3)",
+      "Timestamped backup file exists with non-zero size",
+      "REVISION_HISTORY_P2.md batch entry written",
+      "Batch QID list recorded for cross-reference"
+    ],
+    "post_batch_milestones": [
+      "M2.1: Pack A 30/500 complete after batch 1",
+      "Subsequent batches follow same 30-item pattern through P2-A-500"
+    ]
+  }
+}

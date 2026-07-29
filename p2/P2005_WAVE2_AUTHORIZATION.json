@@ -1,0 +1,357 @@
+{
+  "meta": {
+    "session": "P2-005",
+    "subagent": "readiness-board",
+    "date": "2026-07-29",
+    "description": "P2-A Wave 2 authorization determination — 30 more items (P2-A-031 through P2-A-060)",
+    "methodology": "Cross-referenced 6 governance documents against live file state and governance guard validation output",
+    "sourcesRead": [
+      "pack_p2_a.js (full 30 items, ~1300 lines)",
+      "p2/P2002_CERTIFICATION_STANDARD.md (854 lines — 7 gates, 6 dimensions, 5 states)",
+      "p2/P2005_CERTIFICATION_BOOTSTRAP.json (702 lines — Wave 1 audit)",
+      "scripts/governance_guard_p2.js (710 lines — 11 rules, string-aware parser)",
+      "p2/P2002_GOVERNANCE_MAPPING.json (101 elements — defect prevention)",
+      "p2/P2003_GOVERNANCE_BOOTSTRAP.json (914 lines — 14 mandatory items)"
+    ],
+    "liveVerification": {
+      "governanceGuardLoaded": true,
+      "governanceGuardPackValidation": "PASS — 30 items, 0 violations",
+      "governanceGuardPluginStatus": "NOT REGISTERED in opencode.json — standalone module only",
+      "testSuiteExists": false,
+      "formulaMasterExists": true,
+      "formulaMasterPath": "p2/P2005_FORMULA_MASTER.json"
+    }
+  },
+  "verdict": "CONDITIONAL_AUTHORIZE",
+  "score": {
+    "total": 3.05,
+    "max": 5.0,
+    "threshold_authorize": 3.5,
+    "threshold_conditional": 3.0,
+    "note": "Score falls in CONDITIONAL AUTHORIZE band (3.0 ≤ 3.05 < 3.5). Wave 2 may proceed only after all conditions are satisfied and with the specified constraints."
+  },
+  "criteria_scores": [
+    {
+      "criterion": "Governance guard active",
+      "weight": 0.20,
+      "score": 3.5,
+      "weighted": 0.70,
+      "rationale": "GovernanceGuardP2 exists as a standalone Node.js module (710 lines, 11 rules) and validates correctly (30/30 PASS, 0 violations). All 11 rules implemented including P2-specific Rule 11 (Part2OnlyFlag). String-aware brace-matcher included (DL-020 prevention). However, it is NOT registered in opencode.json as an OpenCode plugin — the active plugin chain only includes 'governance-guard' (P1). Write-time automatic enforcement is NOT active. The guard can be invoked programmatically before saves, but this requires manual discipline.",
+      "evidence": "node -e 'new require(\"./scripts/governance_guard_p2.js\").GovernanceGuardP2().validatePack(\"pack_p2_a.js\")' → PASS, 30 items, 0 violations. opencode.json 'plugin' array → governance-guard (P1 only)."
+    },
+    {
+      "criterion": "Structural defect prevention",
+      "weight": 0.20,
+      "score": 4.0,
+      "weighted": 0.80,
+      "rationale": "All 4 critical structural defect classes have detection rules in the governance guard: DL-008 (Rule 2 — EW[CC] non-empty), DL-026 (Rule 6 — empty non-CC EW slots), DL-021 (Rule 10 — absent EW fields), DL-037 (Rule 9 — Yes/No polarity mismatch). Single-object architecture eliminates DL-016 (metadata-content mismatch) and DL-029 (CC-offset false positives) entirely. Wave 1 produced 30/30 structurally clean items — zero violations across all rules. Authoring quality demonstrates defect-aware construction even without formal templates.",
+      "evidence": "GovernanceGuardP2.validatePack('pack_p2_a.js') → 0 violations. P2005 bootstrap audit: 0 DL-008, 0 DL-026, 0 DL-013. All 30 items structurally verified."
+    },
+    {
+      "criterion": "Existing item quality",
+      "weight": 0.15,
+      "score": 4.0,
+      "weighted": 0.60,
+      "rationale": "Wave 1 items are professionally authored with realistic business scenarios, named stakeholders, proper Part 2 authority citations (ASC, COSO ERM, CAPM), choice-specific distractor explanations, and CommonTrapReference on every item. Part2OnlyFlag: true on all 30 items. Zero structural defects. However, P2-A-017 has embedded authoring notes and incomplete calculations in the ExplanationCorrect field — a critical learner-safety issue. The underlying math is correct but the presentation is not production-ready.",
+      "evidence": "P2005 bootstrap: 'HIGH QUALITY for a first authoring wave.' 29 of 30 items would pass gates if infrastructure existed. P2-A-017 blocked by drafting notes. CC B-bias: 40% B (target 22-28%)."
+    },
+    {
+      "criterion": "Difficulty/Cognitive balance",
+      "weight": 0.15,
+      "score": 1.0,
+      "weighted": 0.15,
+      "rationale": "CRITICAL CONCERN: All 30 Wave 1 items are Difficult (70%, 21/30) or Very Difficult (30%, 9/30). All 30 items are Analyze (53%, 16/30) or Evaluate (47%, 14/30). Zero Easy, Moderate-Easy, Moderate difficulty. Zero Remember, Understand, Apply cognitive levels. P2002 §G targets for Domain A: Easy 10%, Mod-Easy 20%, Moderate 30%. Current cumulative: 0%/0%/0%. Domain A Bloom's targets: Remember 10%, Understand 20%, Apply 45%. Current cumulative: 0%/0%/0%. This is a severe distribution skew that Wave 2 MUST correct.",
+      "evidence": "P2005 bootstrap structuralMetrics. Difficulty: 0 Easy, 0 Mod-Easy, 0 Moderate, 21 Difficult, 9 Very Difficult. Cognitive: 0 Remember, 0 Understand, 0 Apply, 16 Analyze, 14 Evaluate."
+    },
+    {
+      "criterion": "Authoring template readiness",
+      "weight": 0.10,
+      "score": 2.5,
+      "weighted": 0.25,
+      "rationale": "No formal authoring template document exists, but Wave 1's output demonstrates effective informal templates: all 30 items follow consistent JSON structure with VerificationChecks field, Part2OnlyFlag: true, proper EW slot population, authority citations, and CommonTrapReference. The authoring process already incorporates DL-008/DL-026/DL-021/DL-037 prevention WITHOUT formal templates. However, difficulty/cognitive calibration is clearly absent from the authoring process — all items skew Difficult+/Analyze+. A formal template is needed to produce items at lower difficulty/cognitive levels.",
+      "evidence": "30/30 items structurally clean without formal template. 0/30 items at Easy/Moderate/Apply levels — template lacks difficulty calibration guidance."
+    },
+    {
+      "criterion": "Certification pipeline readiness",
+      "weight": 0.10,
+      "score": 2.5,
+      "weighted": 0.25,
+      "rationale": "The certification standard (P2002_CERTIFICATION_STANDARD.md, 854 lines) is complete and authoritative. The governance mapping (P2002_GOVERNANCE_MAPPING.json) classifies all 101 elements. The governance bootstrap (P2003_GOVERNANCE_BOOTSTRAP.json) defines all 14 mandatory items. The Formula Master (P2005_FORMULA_MASTER.json) exists. However, 0 of the 14 mandatory-before-P2-004 items have been executed: no validators, no registry builder, no REVISION_HISTORY_P2.md, no DEFECT_LIBRARY_P2.md, no CURRENT_BASELINES_P2.md, no test suite.",
+      "evidence": "14 mandatory items defined in P2003. 0 executed. No test_governance_guard_p2.js. ExplanationValidator_P2 not created. build_master_registry_p2.js not created."
+    },
+    {
+      "criterion": "Risk of governance debt",
+      "weight": 0.10,
+      "score": 3.0,
+      "weighted": 0.30,
+      "rationale": "Moderate. The governance guard exists and detects structural defects, preventing the worst P1 failure mode (539 DL-008 occurrences). Single-object architecture prevents DL-016/DL-029. However, without write-time enforcement (plugin registration), items could be saved with defects and only caught later. Without a test suite, governance guard changes could silently break. Without REVISION_HISTORY_P2.md/DEFECT_LIBRARY_P2.md, defect discoveries may not be logged (DL-019 pattern). The risk is manageable with disciplined programmatic guard invocation.",
+      "evidence": "P1 accumulated 539 DL-008, 2,587 DL-013, 1,005 DL-026, 175+ remaining DL-008. P2 has 0 of these across 30 items — prevention is working but enforcement is manual."
+    }
+  ],
+  "prerequisites": [
+    {
+      "id": "PR01",
+      "priority": "BLOCKING — must complete before Wave 2",
+      "description": "Fix P2-A-017 — embedded authoring notes in ExplanationCorrect and VerificationChecks. The ExplanationCorrect contains 'Let me re-derive...', 'Ugh, I made an error...', 'I need to fix...' — exposing internal authoring process to learners. The Choice B text also has contradictory numbers (claims 7.84% margin, then recalculates to 6.73% mid-text).",
+      "remediation": "Rewrite Choice B and ExplanationCorrect with clean, internally consistent text. Correct margin calculation → 6.73% is the correct normalized NPM. The item's argument (that normalized NPM is BELOW 7.0%) is correct; clean the presentation. Clean VerificationChecks to remove drafting commentary.",
+      "estimatedEffort": "0.5 session",
+      "qidsAffected": ["P2-A-017"]
+    },
+    {
+      "id": "PR02",
+      "priority": "BLOCKING — must complete before Wave 2",
+      "description": "Define Wave 2 difficulty/cognitive distribution targets. The current 30-item pool is 100% Difficult+ and 100% Analyze+. Wave 2 MUST produce lower-tier items to begin rebalancing.",
+      "detailedTargets": {
+        "difficulty": {
+          "Easy_1": { "wave2_target": 6, "cumulative_after_wave2": 6, "cumulative_percent": "10.0%", "domainA_target": "10%" },
+          "ModerateEasy_2": { "wave2_target": 10, "cumulative_after_wave2": 10, "cumulative_percent": "16.7%", "domainA_target": "20%" },
+          "Moderate_3": { "wave2_target": 11, "cumulative_after_wave2": 11, "cumulative_percent": "18.3%", "domainA_target": "30%" },
+          "Difficult_4": { "wave2_target": 3, "cumulative_after_wave2": 24, "cumulative_percent": "40.0%", "domainA_target": "30%" },
+          "VeryDifficult_5": { "wave2_target": 0, "cumulative_after_wave2": 9, "cumulative_percent": "15.0%", "domainA_target": "10%" }
+        },
+        "cognitive": {
+          "Remember": { "wave2_target": 6, "cumulative_after_wave2": 6, "cumulative_percent": "10.0%", "domainA_target": "10%" },
+          "Understand": { "wave2_target": 10, "cumulative_after_wave2": 10, "cumulative_percent": "16.7%", "domainA_target": "20%" },
+          "Apply": { "wave2_target": 11, "cumulative_after_wave2": 11, "cumulative_percent": "18.3%", "domainA_target": "45%" },
+          "Analyze": { "wave2_target": 3, "cumulative_after_wave2": 19, "cumulative_percent": "31.7%", "domainA_target": "20%" },
+          "Evaluate": { "wave2_target": 0, "cumulative_after_wave2": 14, "cumulative_percent": "23.3%", "domainA_target": "5%" }
+        },
+        "correctChoiceDistribution": {
+          "A": { "wave2_target_min": 8, "wave2_target_max": 10, "current_count": 7, "target_range": "22-28%" },
+          "B": { "wave2_target_min": 0, "wave2_target_max": 3, "current_count": 12, "note": "Must reduce B-bias (currently 40%). Do NOT add more B-correct items in Wave 2." },
+          "C": { "wave2_target_min": 8, "wave2_target_max": 10, "current_count": 6, "target_range": "22-28%" },
+          "D": { "wave2_target_min": 8, "wave2_target_max": 10, "current_count": 5, "target_range": "22-28%" }
+        }
+      }
+    },
+    {
+      "id": "PR03",
+      "priority": "BLOCKING — must establish before Wave 2 authoring",
+      "description": "Define formal Wave 2 authoring protocol. Every item must: (a) pass GovernanceGuardP2.validateItem() before inclusion in the pack file, (b) carry Part2OnlyFlag: true, (c) have ALL 4 ExplanationWrong fields present with CC slot empty and 3 distractor slots ≥50 chars, (d) have a VerificationChecks field listing structural validation results, (e) not exceed the difficulty/cognitive distribution targets defined in PR02.",
+      "governanceCheckCommand": "node -e \"const {GovernanceGuardP2} = require('./scripts/governance_guard_p2.js'); const g = new GovernanceGuardP2(); const item = /* new item object */; const r = g.validateItem(item); if (!r.pass) { console.log('BLOCKED:', JSON.stringify(r.violations)); process.exit(1); }\""
+    },
+    {
+      "id": "PR04",
+      "priority": "STRONGLY RECOMMENDED — should complete before or during Wave 2",
+      "description": "Create test_governance_guard_p2.js. Without a test suite, governance guard changes could silently break structural enforcement. Target: 55+ tests covering all 11 rules per P2003_GOVERNANCE_BOOTSTRAP.json governance_guard_test_plan.",
+      "estimatedEffort": "0.5-1 session"
+    },
+    {
+      "id": "PR05",
+      "priority": "STRONGLY RECOMMENDED — should complete before or during Wave 2",
+      "description": "Create REVISION_HISTORY_P2.md with header and Wave 1 bootstrap entry. Governance guard Rule 1 will flag question_state changes without paired REVISION_HISTORY_P2.md updates once items transition from Unprocessed → In Audit.",
+      "estimatedEffort": "0.25 session"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "C01",
+      "condition": "Wave 2 MUST produce ≤3 items labeled Difficult (4) and 0 items labeled Very Difficult (5). The cumulative difficulty distribution after Wave 2 must show measurable improvement toward Domain A targets.",
+      "rationale": "Wave 1 skewed 100% Difficult+. Wave 2 is the only immediate opportunity to inject lower-tier items. Adding more Difficult items at this stage would compound the distribution problem and make later rebalancing harder.",
+      "verification": "After Wave 2: grep '\"Difficulty\"' on pack_p2_a.js and confirm Easy ≥6, Mod-Easy ≥10, Moderate ≥11, Difficult ≤24, VeryDifficult ≤9."
+    },
+    {
+      "id": "C02",
+      "condition": "Wave 2 MUST produce ≥6 Remember, ≥10 Understand, and ≥11 Apply cognitive-level items. The cumulative cognitive distribution must include all 5 Bloom's levels after Wave 2.",
+      "rationale": "Wave 1 skews 100% Analyze/Evaluate. Domain A's Apply target is 45% — the largest single category. Wave 2 must begin populating it. Without Remember/Understand items, the pool lacks foundational knowledge questions.",
+      "verification": "After Wave 2: grep '\"CognitiveLevel\"' on pack_p2_a.js and confirm Remember ≥6, Understand ≥10, Apply ≥11."
+    },
+    {
+      "id": "C03",
+      "condition": "Wave 2 MUST reduce the CorrectChoice B-bias. No more than 3 of the 30 Wave 2 items may have CorrectChoice=B. Target positions A/C/D should each receive 8-10 items to bring all four positions toward 22-28%.",
+      "rationale": "Current distribution: A=23%, B=40%, C=20%, D=17%. B occupies 40% while D is at 17% — a 23-point spread. Candidates who notice pattern bias lose confidence in the exam's psychometric validity.",
+      "verification": "After Wave 2: all four CorrectChoice positions between 18-32% of 60 items (acceptable interim range; tighten to 22-28% at 500 items)."
+    },
+    {
+      "id": "C04",
+      "condition": "Wave 2 items MUST be validated through GovernanceGuardP2.validateItem() BEFORE inclusion in pack_p2_a.js. BLOCKED violations (Rules 2,5,6,9,10,11) → item rejected. WARN violations → documented and acknowledged.",
+      "rationale": "Governance guard is not registered as an OpenCode plugin, so write-time enforcement is not automatic. Programmatic validation before saving is the only available enforcement mechanism.",
+      "verification": "GovernanceGuardP2.validatePack('pack_p2_a.js') after Wave 2 → 0 BLOCK violations. WARN violations documented in REVISION_HISTORY_P2.md."
+    },
+    {
+      "id": "C05",
+      "condition": "Wave 2 items MUST follow the established Wave 1 item schema: single JSON object per item with Part, Section, Topic, QuestionID, question_state, Part2OnlyFlag, Stem, Choices.{A,B,C,D}, CorrectChoice, ExplanationCorrect, ExplanationWrong{A,B,C,D}, Difficulty, DifficultyScore, CognitiveLevel, CalculationItem, Type, LOSTag, BlueprintDomain, FormulaReference, CommonTrapReference, Authorities, VerificationChecks. No dual-block architecture.",
+      "rationale": "Single-object architecture is the primary structural defense against DL-016 (metadata-content mismatch) and DL-029 (CC-offset false positives). Breaking this pattern would reintroduce P1 governance debt.",
+      "verification": "Each Wave 2 item is one JSON object containing all fields. No paired metadata+content blocks. CorrectChoice and ExplanationWrong fields extracted from same object boundary."
+    },
+    {
+      "id": "C06",
+      "condition": "Wave 2 item topics SHOULD include foundational ratio definitions and straightforward calculations suitable for Remember/Understand/Apply cognitive levels. Defer complex multi-signal analysis and evaluative tradeoff items to Wave 3+.",
+      "rationale": "Wave 1 items are sophisticated multi-layer business cases requiring Analyze/Evaluate judgment. Wave 2 needs items that test basic ratio computation (P/E, dividend yield, basic EPS, ROE), term matching (marketable securities classification, operating vs. finance lease identification), and single-step ratio interpretation without multi-signal integration.",
+      "suggestedTopics": [
+        "Basic liquidity ratio computation (current ratio, quick ratio, cash ratio — single company, no industry comparison)",
+        "Activity ratio definitions (inventory turnover, DSO, DPO, total asset turnover — identify the correct formula)",
+        "Profitability ratio recall (gross margin, operating margin, net margin — definition match)",
+        "Basic DuPont identification (which ratios compose ROE/ROA decomposition)",
+        "EPS basics (basic vs. diluted, what goes in numerator/denominator)",
+        "Market value ratios (P/E, dividend yield, book value per share — straightforward computation)",
+        "Common-size financial statements (vertical analysis — identify the appropriate base)",
+        "Comparative analysis basics (horizontal analysis — year-over-year change computation)",
+        "Cash flow ratio basics (operating cash flow ratio definition, not multi-signal divergence)",
+        "Credit analysis fundamentals (single covenant evaluation, not multi-covenant tradeoffs)"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R01",
+      "severity": "HIGH",
+      "description": "Wave 2 could compound difficulty/cognitive skew. If authoring behavior defaults to complex multi-layer scenarios (the Wave 1 pattern), Wave 2 will produce 30 more Difficult+/Analyze+ items, making the cumulative 60-item pool 100% Difficult+/Analyze+. This would require 90+ lower-tier items in Wave 3 just to begin approaching distribution targets. The 500-item pool target of 75 Easy items would become mathematically unreachable without massive corrective authoring.",
+      "mitigation": "Condition C01, C02, C06. Wave 2 must be explicitly focused on lower-tier items. Authoring should begin from the topic list in C06, not from complex business scenarios."
+    },
+    {
+      "id": "R02",
+      "severity": "MEDIUM",
+      "description": "Governance guard not registered as OpenCode plugin. Without write-time enforcement, a Wave 2 item could be saved with DL-008, DL-026, DL-021, or DL-037 defects. These would not be detected until the next programmatic validation run. The guard is functional (30/30 PASS) but requires manual invocation.",
+      "mitigation": "Condition C04. Every item validated through GovernanceGuardP2.validateItem() before save. Batch validation after all 30 items via validatePack()."
+    },
+    {
+      "id": "R03",
+      "severity": "MEDIUM",
+      "description": "No governance guard test suite. If the guard module is modified or extended, there is no automated verification that all 11 rules still function correctly. A regression in Rule 2 (DL-008) or Rule 11 (Part2OnlyFlag) could go undetected across multiple authoring waves.",
+      "mitigation": "Prerequisite PR04. Test suite should be created before or early in Wave 2 authoring."
+    },
+    {
+      "id": "R04",
+      "severity": "MEDIUM",
+      "description": "Difficulty inflation (DL-031 pattern). Wave 1's authoring process produced items at Difficult+ and Analyze+ by default. The same authoring behavior, even when intentionally targeting lower levels, may produce items that are still too complex for their assigned labels. Definition-match items labeled Moderate when they test only Remember/Understand.",
+      "mitigation": "Condition C06 (explicit topic list). Each Wave 2 item's difficulty must be justified by cognitive demand, not by defaulting to the Wave 1 pattern. Apply-items should require exactly one computational step with formula substitution. Remember-items should be straightforward term-definition matches."
+    },
+    {
+      "id": "R05",
+      "severity": "LOW",
+      "description": "P2-A-017 not fixed before Wave 2. If Wave 2 begins authoring while a known-broken item exists in the pack file, the unremediated defect could be forgotten or the item accidentally certified.",
+      "mitigation": "Prerequisite PR01 is BLOCKING. P2-A-017 must be fixed before Wave 2. The item should not remain in a broken state across authoring sessions."
+    },
+    {
+      "id": "R06",
+      "severity": "LOW",
+      "description": "Batch size violation (Rule 5). If Wave 2's 30 items are written in a single change-set without BLOCK-AUTHORIZED marker, the governance guard will BLOCK the write.",
+      "mitigation": "Ensure the change-set includes BLOCK-AUTHORIZED marker or split into batches of ≤30 items. Since Wave 2 is exactly 30 items, a single batch with BLOCK-AUTHORIZED is compliant."
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "REC01",
+      "description": "Execute P2003_GOVERNANCE_BOOTSTRAP prerequisites M01-M14. The 14 mandatory items include: governance guard forking, test suite creation, pack file skeletons, REVISION_HISTORY_P2.md, DEFECT_LIBRARY_P2.md, CURRENT_BASELINES_P2.md, CAQS_P2_v1.0.md, FORMULA_MASTER_P2.md, ExplanationValidator_P2, build_master_registry_p2.js, AGENTS.md, CONSTITUTION, TAXONOMY_REGISTRY_P2.md, EXAM_BLUEPRINT_P2.md. P2 has taken a 'content first, infrastructure later' approach — Wave 1 produced 30 items before any of these existed. The technical debt from this sequencing is manageable for now but will compound with each wave.",
+      "priority": "Before Wave 3 authoring (can be deferred during Wave 2 if PR04-PR05 are completed)"
+    },
+    {
+      "id": "REC02",
+      "description": "Register governance-guard-p2.js in opencode.json. Currently the plugin array lists only 'governance-guard' (P1). Adding a P2 guard entry would enable write-time enforcement and eliminate the manual validation requirement (Condition C04). The guard is designed as a standalone module — it needs an OpenCode plugin wrapper that calls it on file writes matching pack_p2_*.js.",
+      "priority": "Before Wave 3 authoring"
+    },
+    {
+      "id": "REC03",
+      "description": "Create an authoring template document (AUTHORING_TEMPLATE_P2.md) that codifies the Wave 1 structural pattern. The informal template is proven effective (30/30 clean items) but is not documented. A formal template would: (a) ensure consistency across future authors, (b) include difficulty/cognitive calibration guidance, (c) include the governance guard validation command, (d) list the required metadata field schema.",
+      "priority": "During Wave 2 authoring"
+    },
+    {
+      "id": "REC04",
+      "description": "Establish baseline hashes for CURRENT_BASELINES_P2.md §5. Before Wave 2 begins (or immediately after P2-A-017 is fixed), compute SHA-256 hashes for pack_p2_a.js, governance-guard-p2.js, and all knowledge/foundation files. This enables T0 hash verification per the session startup protocol and drift detection during long sessions.",
+      "priority": "Before Wave 2 authoring"
+    },
+    {
+      "id": "REC05",
+      "description": "Run GovernanceGuardP2.validatePack('pack_p2_a.js') both before and after Wave 2 authoring. Pre-authoring run confirms baseline (expected: 30 items, 0 violations). Post-authoring run confirms Wave 2 items are structurally clean (expected: 60 items, 0 violations). This provides a verifiable governance gate that Wave 2 did not introduce structural defects.",
+      "priority": "Before and after Wave 2"
+    }
+  ],
+  "wave_2_spec": {
+    "target_items": "P2-A-031 through P2-A-060",
+    "target_count": 30,
+    "recommended_difficulty_distribution": {
+      "Easy_1": { "count": 6, "percent_of_wave2": "20.0%", "cumulative_percent": "10.0%", "domainA_target": "10%", "note": "Definition-match items: basic ratio definitions, term matching, formula identification. These are the easiest items to author and the most needed." },
+      "ModerateEasy_2": { "count": 10, "percent_of_wave2": "33.3%", "cumulative_percent": "16.7%", "domainA_target": "20%", "note": "Single-step computations with clear inputs. Apply-level calculations that require substituting given numbers into a stated formula." },
+      "Moderate_3": { "count": 11, "percent_of_wave2": "36.7%", "cumulative_percent": "18.3%", "domainA_target": "30%", "note": "Two-step computations or single-concept interpretation. May require selecting the appropriate formula from 2-3 candidates." },
+      "Difficult_4": { "count": 3, "percent_of_wave2": "10.0%", "cumulative_percent": "40.0%", "domainA_target": "30%", "note": "Only if essential. Must not exceed 3 items. These should be the upper bound of Wave 2 complexity." },
+      "VeryDifficult_5": { "count": 0, "percent_of_wave2": "0.0%", "cumulative_percent": "15.0%", "domainA_target": "10%", "note": "NONE. Wave 1 already has 9. Adding more would increase the cumulative Very-Difficult share beyond target." }
+    },
+    "recommended_cognitive_distribution": {
+      "Remember": { "count": 6, "percent_of_wave2": "20.0%", "cumulative_percent": "10.0%", "domainA_target": "10%", "note": "Term-definition matching, ratio formula identification, authority citation recall. Straightforward single-choice items." },
+      "Understand": { "count": 10, "percent_of_wave2": "33.3%", "cumulative_percent": "16.7%", "domainA_target": "20%", "note": "Explain what a ratio measures, interpret a computed ratio against a benchmark, classify a ratio as liquidity/solvency/profitability." },
+      "Apply": { "count": 11, "percent_of_wave2": "36.7%", "cumulative_percent": "18.3%", "domainA_target": "45%", "note": "Compute a single ratio from given data, perform one DuPont decomposition step, calculate common-size percentages. Apply → single calculation path using a stated formula." },
+      "Analyze": { "count": 3, "percent_of_wave2": "10.0%", "cumulative_percent": "31.7%", "domainA_target": "20%", "note": "Only the highest-quality items. Pattern should be: compute ratio + interpret against ONE benchmark (industry, prior year, or covenant). NOT multi-signal integration." },
+      "Evaluate": { "count": 0, "percent_of_wave2": "0.0%", "cumulative_percent": "23.3%", "domainA_target": "5%", "note": "NONE. Wave 1 already has 14 Evaluate items (46.7% of the pool). The Domain A target is only 5% (25 items out of 500). Cumulative 14/500 (2.8%) is actually below target — but Wave 3+ should fill the remaining 11 Evaluate slots, not Wave 2." }
+    },
+    "recommended_topics": [
+      "P/E ratio computation (EPS given, market price given)",
+      "Dividend yield and dividend payout ratio",
+      "Book value per share (basic, no preferred stock complications)",
+      "Basic vs. diluted EPS — identify which securities are dilutive",
+      "Gross margin percentage — compute from revenue and COGS",
+      "Operating margin — identify operating vs. non-operating items",
+      "Common-size balance sheet (express each line as % of total assets)",
+      "Common-size income statement (express each line as % of revenue)",
+      "Horizontal/trend analysis (year-over-year % change for a single line item)",
+      "Current ratio — what does a ratio of X mean for liquidity?",
+      "Quick ratio — why does it exclude inventory? (conceptual understanding)",
+      "Inventory turnover — identify from given COGS and inventory balances",
+      "Days sales outstanding — compute from given AR and sales",
+      "Cash conversion cycle — identify the three components",
+      "Debt-to-equity — what does a ratio >1.0 signal about capital structure?",
+      "Times interest earned — interpret a ratio <1.0",
+      "ROA basic decomposition — identify which two ratios multiply to ROA",
+      "ROE DuPont — identify the three components (NPM, TAT, EM)",
+      "Sustainable growth rate — identify the formula (no calculation required for Remember)",
+      "Operating cash flow ratio — what does it measure that current ratio cannot?",
+      "Free cash flow — identify from operating CF minus capex (conceptual)",
+      "Limitations of ratio analysis — which statements describe valid concerns? (Understand)",
+      "Segment reporting — why is disaggregated data important for ratio analysis? (Understand)",
+      "ASC 205 vs. ASC 842 — which standard governs which ratio analysis context? (Remember)",
+      "Classification of ratios — liquidity vs. solvency vs. profitability vs. activity (Remember/Understand)"
+    ],
+    "prohibited_patterns": [
+      "NO multi-signal integration (e.g., comparing current ratio, quick ratio, debt-to-equity, and operating cash flow simultaneously — Wave 1 pattern)",
+      "NO multi-year trend projection requiring compound growth rate calculation",
+      "NO strategic recommendation items (e.g., 'which capital structure should the company adopt?')",
+      "NO items requiring the candidate to reconcile conflicting ratio signals",
+      "NO items with >3 numerical calculations required to reach the answer",
+      "NO items where the correct answer depends on professional judgment rather than a single correct computational or definitional answer"
+    ],
+    "correct_choice_targets": {
+      "A": { "target": 9, "note": "Bring from 7 (23.3%) closer to 25%. Cumulative: 16/60 = 26.7%." },
+      "B": { "target": 0, "note": "Do NOT add more B-correct items. Current 12 (40%) already above ceiling. Cumulative: 12/60 = 20.0%. Let A/C/D catch up." },
+      "C": { "target": 10, "note": "Bring from 6 (20.0%) closer to 25%. Cumulative: 16/60 = 26.7%." },
+      "D": { "target": 11, "note": "Bring from 5 (16.7%) closer to 25%. Cumulative: 16/60 = 26.7%." }
+    },
+    "authoring_sequence": [
+      { "phase": 1, "items": "P2-A-031 to P2-A-036", "count": 6, "difficulty": "Easy (1)", "cognitive": "Remember", "description": "Term-definition matches and formula identification. Establish the Remember tier." },
+      { "phase": 2, "items": "P2-A-037 to P2-A-046", "count": 10, "difficulty": "Moderate-Easy (2)", "cognitive": "Understand", "description": "Conceptual understanding items. What does a ratio mean? Why exclude inventory from quick ratio? Classify ratios by type." },
+      { "phase": 3, "items": "P2-A-047 to P2-A-057", "count": 11, "difficulty": "Moderate (3)", "cognitive": "Apply", "description": "Single-step ratio computation with formula substitution. The Apply tier — the 45% target for Domain A." },
+      { "phase": 4, "items": "P2-A-058 to P2-A-060", "count": 3, "difficulty": "Difficult (4)", "cognitive": "Analyze", "description": "Reserved for high-quality two-signal analysis. Only 3 slots — use judiciously. Compute + interpret against one benchmark." }
+    ]
+  },
+  "summary": {
+    "verdict": "CONDITIONAL AUTHORIZE",
+    "totalScore": 3.05,
+    "keyConditions": [
+      "P2-A-017 MUST be fixed before Wave 2 (PR01 — BLOCKING)",
+      "Wave 2 MUST produce ≤3 Difficult items, 0 Very Difficult items (C01)",
+      "Wave 2 MUST produce ≥6 Remember, ≥10 Understand, ≥11 Apply items (C02)",
+      "Wave 2 MUST reduce CorrectChoice B-bias: B ≥3 only, A/C/D ≥8 each (C03)",
+      "Every Wave 2 item MUST pass GovernanceGuardP2.validateItem() before save (C04)",
+      "Wave 2 items MUST follow Wave 1 single-object schema — no dual-block architecture (C05)"
+    ],
+    "keyRisks": [
+      "Difficulty/cognitive skew could worsen if Wave 2 defaults to complex scenarios (R01 — HIGH)",
+      "Governance guard lacks write-time enforcement — manual validation required (R02 — MEDIUM)",
+      "No governance guard test suite — rule regressions undetectable (R03 — MEDIUM)",
+      "Difficulty inflation risk — items may be mislabeled (R04 — MEDIUM)"
+    ],
+    "nextSteps": [
+      "1. Fix P2-A-017 (PR01)",
+      "2. Define formal Wave 2 authoring protocol (PR03)",
+      "3. Begin Wave 2 authoring in phases 1-4 per recommended sequence",
+      "4. Validate each item through governance guard before inclusion",
+      "5. Run full pack validation after Wave 2 → 60 items, 0 violations",
+      "6. Create REVISION_HISTORY_P2.md and test suite (PR04, PR05)"
+    ],
+    "notAuthorizedFor": [
+      "Certification of any Wave 1 or Wave 2 items (no certification pipeline infrastructure)",
+      "Authoring beyond 30 items in Wave 2 (Rule 5 batch cap — use BLOCK-AUTHORIZED marker)",
+      "Authoring items at Difficult/Very Difficult or Analyze/Evaluate cognitive levels beyond Wave 2 targets",
+      "Transitioning any items from Unprocessed to In Audit (no REVISION_HISTORY_P2.md)"
+    ]
+  }
+}

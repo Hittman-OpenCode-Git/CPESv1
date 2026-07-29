@@ -1,0 +1,702 @@
+{
+  "meta": {
+    "session": "P2-005",
+    "subagent": "certification-bootstrap",
+    "date": "2026-07-29",
+    "description": "Part 2 certification pipeline bootstrap — 7 Gates, 6 Dimensions, 5 States, 33-item Gold Standard Checklist",
+    "authority": "P2002_CERTIFICATION_STANDARD.md",
+    "sourceFiles": [
+      "p2/P2002_CERTIFICATION_STANDARD.md (854 lines)",
+      "pack_p2_a.js (1,288 lines, 30 items)"
+    ]
+  },
+  "pipeline": {
+    "six_dimensions": {
+      "description": "Build-time AI verification across 6 dimensions from P2002 §A.1; non-binding recommendations; final revision authority remains human",
+      "confidenceLevels": {
+        "HIGH": {
+          "definition": "All dimensions consistent with authoritative sources, no ambiguity",
+          "action": "Proceed to certification (with user approval)"
+        },
+        "MEDIUM": {
+          "definition": "One or more dimensions have minor unresolved concerns",
+          "action": "Flag for editorial review; do not certify"
+        },
+        "LOW": {
+          "definition": "Material uncertainty or contradiction with authoritative source",
+          "action": "Escalate to Editorial Queue; block certification"
+        },
+        "ZERO": {
+          "definition": "Confirmed error (wrong answer, wrong formula, wrong authority)",
+          "action": "Auto-fail; route to defect library (DEFECT_LIBRARY_P2.md)"
+        }
+      },
+      "escalationRules": {
+        "LOW_confidence_dimension": "Question enters Editorial Queue immediately",
+        "ZERO_confidence_finding": "Logged to DEFECT_LIBRARY_P2.md with new DL-P2 ID",
+        "two_or_more_MEDIUM": "Routed to secondary human review before any certification decision"
+      },
+      "dimensions": [
+        {
+          "id": 1,
+          "name": "Correctness",
+          "definition": "The answer key, explanation, and distractors are consistent with the authoritative standard governing the tested concept",
+          "part2Authorities": [
+            "FASB ASC (ratio definitions, financial statement presentation)",
+            "CAPM (Sharpe-Lintner 1964)",
+            "COSO ERM 2017 (5 components, 20 principles)",
+            "IMA Statement of Ethical Professional Practice (4 standards)",
+            "SOX 2002 (Titles I-IV, VIII)",
+            "FCPA (1977 — anti-bribery provisions)",
+            "IFRS (comparative analysis)",
+            "Modigliani-Miller propositions",
+            "ISO 31000 (supporting risk management)",
+            "IRS Publication 946 (MACRS)"
+          ],
+          "blockingConditions": [
+            "Answer key contradicts authoritative standard",
+            "Formula selected is incorrect for the concept",
+            "Formula inputs not traceable to stem/exhibit data",
+            "Authority citation mismatches concept (e.g., ASC 450 cited for CAPM)"
+          ],
+          "verificationMethod": "Independent derivation of correct answer from stem + choices; cross-reference authority against P2002 §E.2 authority-verification table"
+        },
+        {
+          "id": 2,
+          "name": "Precision",
+          "definition": "The fact pattern yields exactly one defensible answer; no missing assumptions, no contradictory data",
+          "part2SpecificConcerns": [
+            "Missing tax rate in WACC calculation",
+            "Missing risk-free rate in CAPM",
+            "Missing market risk premium",
+            "Ambiguous treatment of operating vs. finance leases under ASC 842",
+            "Unstated assumption about market values vs. book values for WACC weights"
+          ],
+          "blockingConditions": [
+            "Fact pattern yields more than one defensible answer",
+            "Missing critical input data not derivable from context",
+            "Stem data contradicts exhibit data",
+            "Question is unanswerable without external knowledge not stated"
+          ],
+          "verificationMethod": "Solve independently from stem + exhibits only; verify single answer emerges; check all inputs are stated or derivable"
+        },
+        {
+          "id": 3,
+          "name": "DifficultyCalibration",
+          "definition": "The cognitive demand implied by the LOS is consistent with the question's stated difficulty and Bloom's level per domain targets (P2002 §G)",
+          "domainTargetsReference": "P2002_CERTIFICATION_STANDARD.md §G.1-G.2",
+          "poolWideTargets": {
+            "difficulty": {
+              "Easy_1": "13.4%",
+              "ModerateEasy_2": "21.3%",
+              "Moderate_3": "30.0%",
+              "Difficult_4": "25.3%",
+              "VeryDifficult_5": "10.0%"
+            },
+            "blooms": {
+              "Remember": "12.0%",
+              "Understand": "22.0%",
+              "Apply": "42.0%",
+              "Analyze": "17.2%",
+              "Evaluate": "6.8%"
+            }
+          },
+          "blockingConditions": [
+            "Apply at Easy difficulty — flag",
+            "Evaluate at Easy difficulty — auto-reject",
+            "Definition-match inflation (Moderate label on Remember/Understand item) — DL-031 pattern",
+            "Difficulty label does not match cognitive demand of the stem"
+          ],
+          "verificationMethod": "Cross-check Difficulty/DifficultyScore against CognitiveLevel and stem complexity; verify Bloom's level alignment per domain targets"
+        },
+        {
+          "id": 4,
+          "name": "DistractorEngineering",
+          "definition": "Each distractor maps to a real misconception or plausible calculation path; every distractor represents a documented exam trap or known student error",
+          "part2ExampleTraps": [
+            "Using after-tax cost of debt twice in WACC",
+            "Omitting preferred stock component in WACC",
+            "Using historical market return instead of expected in CAPM",
+            "Using book values instead of market values for WACC weights",
+            "Omitting working capital recovery in terminal year NPV",
+            "Mixing variable cost per unit with total fixed costs in CVP",
+            "Not adjusting for multi-product sales mix in breakeven",
+            "Forgetting opportunity cost in transfer price when capacity is full"
+          ],
+          "blockingConditions": [
+            "Any distractor is obviously wrong (no plausible path to that answer)",
+            "Two distractors test the same misconception (redundant)",
+            "All distractors are implausible or guessable"
+          ],
+          "verificationMethod": "Map each distractor to a specific candidate error path; verify distinctness across all pairs; verify each distractor text addresses its specific error"
+        },
+        {
+          "id": 5,
+          "name": "BlueprintAlignment",
+          "definition": "The LOSTag, Topic, and cognitive level align with a specific Part 2 Content Specification Outline learning outcome",
+          "csoReference": "P2001_PART2_BLUEPRINT_FOUNDATION.md Appendix A",
+          "part2Domains": [
+            "A — Financial Statement Analysis (20%)",
+            "B — Corporate Finance (20%)",
+            "C — Decision Analysis (25%)",
+            "D — Risk Management (10%)",
+            "E — Investment Decisions (10%)",
+            "F — Professional Ethics (15%)"
+          ],
+          "blockingConditions": [
+            "No LOSTag present or LOSTag maps to Part 1 CSO",
+            "Topic does not align with claimed domain",
+            "Cognitive level inconsistent with LOS depth verb",
+            "Part field is not 2"
+          ],
+          "verificationMethod": "Verify LOSTag against P2001 Appendix A; verify Topic, Section, and BlueprintDomain are consistent; verify Part field = 2"
+        },
+        {
+          "id": 6,
+          "name": "Part2Relevance",
+          "definition": "The question tests Part 2 material; no concept, standard, or calculation belongs exclusively to Part 1",
+          "part1Exclusives": [
+            "Standard costing variances (DM, DL, VOH, FOH)",
+            "Process costing (FIFO, weighted average EUP)",
+            "Job order costing (under/overapplied overhead)",
+            "Joint product cost allocation (NRV, physical measures)",
+            "Service department allocation (direct, step, reciprocal)",
+            "Activity-based costing (ABC — full implementation)",
+            "Internal control detailed procedures (COSO IC 2013)",
+            "Technology operational details (SDLC, DRP, BCP)"
+          ],
+          "permittedOverlap": [
+            "CVP analysis / breakeven (tests at higher Bloom's levels: Analyze/Evaluate in Part 2 vs. Apply in Part 1)",
+            "Relevant costing / differential analysis",
+            "Ethical principles (deeper application in Part 2: FCPA, SOX, IMA decision model)"
+          ],
+          "blockingConditions": [
+            "Item tests a Part 1 exclusive as its primary concept",
+            "No clear Part 2 domain association",
+            "Domain boundary violation (Part 2 item mislabeled as Part 1 domain)"
+          ],
+          "verificationMethod": "Check topic against Part 1 Exclusives list; verify Part2OnlyFlag is true (structural gate); verify Domain A-F is a Part 2 domain"
+        }
+      ]
+    },
+    "seven_gates": {
+      "description": "7-step certification pipeline from P2002 §D; every question must pass all gates before reaching Production",
+      "gates": [
+        {
+          "gate": "G1",
+          "name": "Technical Review",
+          "gatekeeper": "Accountant",
+          "minimumScore": "90/100 rubric",
+          "criticalChecks": [
+            "Correct answer verified against governing Part 2 authority",
+            "Formula selection correct for concept tested",
+            "All formula inputs traceable to question stem data",
+            "Authority citation matches the concept (no ASC 450 cited for CAPM)",
+            "No Part 1-only concept tested as primary",
+            "Domain boundary respected",
+            "Part2OnlyFlag: true confirmed as appropriate"
+          ],
+          "part2AuthorityReference": "P2002 §D.2 — authority table by domain (A-F)",
+          "part2Specific": [
+            "Domain A authorities: FASB ASC, IFRS, SEC reporting standards",
+            "Domain B authorities: CAPM, Modigliani-Miller, Basel III, FX/IFRS",
+            "Domain C authorities: IMA SMA on relevant costing, managerial economics",
+            "Domain D authorities: COSO ERM 2017, ISO 31000",
+            "Domain E authorities: NPV/IRR theory, MACRS (IRS Pub 946), real options",
+            "Domain F authorities: IMA Ethics, SOX 2002, FCPA, Dodd-Frank"
+          ]
+        },
+        {
+          "gate": "G2",
+          "name": "Psychometric Review",
+          "gatekeeper": "Psychometrician",
+          "minimumScore": "90/100 rubric",
+          "criticalChecks": [
+            "Difficulty score matches item's actual cognitive demand",
+            "Bloom's level aligned with difficulty (Evaluate at Easy = auto-reject)",
+            "Distractor plausibility: each wrong option represents a specific misconception",
+            "No cueing: no grammatical, length, or position cues to correct answer",
+            "Answer balance: per-section correct-answer distribution within 22-28% per position",
+            "No running pattern: no streak of same CC position longer than 4 consecutive items",
+            "Definition-match inflation checked (Moderate items that are Easy → DL-031)"
+          ],
+          "poolWideTargetsReference": "P2002 §G.3",
+          "perPackTargets": {
+            "difficulty": {
+              "Easy_1": 75,
+              "ModerateEasy_2": 100,
+              "Moderate_3": 150,
+              "Difficult_4": 125,
+              "VeryDifficult_5": 50
+            },
+            "blooms": {
+              "Remember": 60,
+              "Understand": 110,
+              "Apply": 210,
+              "Analyze": 90,
+              "Evaluate": 30
+            }
+          }
+        },
+        {
+          "gate": "G3",
+          "name": "Numerical Validation",
+          "gatekeeper": "Validator",
+          "minimumScore": "100% accuracy",
+          "criticalChecks": [
+            "Independent recalculation matches stored Correct value",
+            "Formula selection correct (P2002 §E.1 formula inventory — 40+ formulas)",
+            "Input traceability: every numerical input traces to stem/exhibit",
+            "Unit consistency verified",
+            "Rounding policy followed (P2002 §D.4 — rounding table)",
+            "Within accepted tolerance (P2002 §D.4 — tolerance table)",
+            "Part 2-specific common errors checked (WACC: pre-tax vs after-tax, DuPont: avg vs end-of-period equity, NPV: working capital recovery)"
+          ],
+          "recalculationProtocol": [
+            "Read stem and exhibits (not stored Correct value)",
+            "Solve independently",
+            "Document: formula → substituted values → result",
+            "Compare to stored Correct",
+            "Reconcile differences; document resolution"
+          ],
+          "part2FormulaInventoryReference": "P2002 §D.4 (40+ formulas across 5 domains)"
+        },
+        {
+          "gate": "G4",
+          "name": "Instructional Review",
+          "gatekeeper": "Editor",
+          "minimumScore": "90/100 rubric",
+          "criticalChecks": [
+            "EV1: Minimum 50 characters per explanation field",
+            "EV2: No placeholder phrases",
+            "EV3: Correct answer references Part 2 governing authority by name",
+            "EV4: Distractor explanations are choice-specific (not identical across slots)",
+            "EV5: Formula numbers in explanation match exhibit/stem values",
+            "EV6: Arithmetic result matches Correct value",
+            "EV7: No uncertain language",
+            "EV8: ExplanationWrong[CorrectChoice] === \"\" (DL-008 compliant)"
+          ],
+          "part2ExplanationTemplates": {
+            "calculationCorrect": "The correct answer is [letter/number]. [Formula with substituted values] = [result]. Under [Part 2 authority], the rule is [key requirement]. In context, [business interpretation]. A common error is to [specific trap].",
+            "calculationDistractor": "Option [letter] incorrectly [specific error]. A candidate reaching this answer likely [likely mistake]. The correct approach is [contrast with correct method].",
+            "conceptualCorrect": "The correct answer is [letter] because [reasoning]. Under [Part 2 framework], [key rule]. In practice, this means [business interpretation].",
+            "conceptualDistractor": "Option [letter] [restate choice]. This is incorrect because [specific error]. The misconception is that [what candidate thinks], but [correct concept]."
+          }
+        },
+        {
+          "gate": "G5",
+          "name": "Metadata Review",
+          "gatekeeper": "Validator",
+          "minimumScore": "Pass all checks",
+          "criticalChecks": [
+            "All required fields present (P2002 §D.6 — field table)",
+            "Part field === 2",
+            "Section in {A, B, C, D, E, F}",
+            "QuestionID matches format P2-{Section}-{NNN}",
+            "question_state in {Unprocessed, In Audit, Editorial Queue, Certified, Archived}",
+            "Difficulty in {Easy, Moderate-Easy, Moderate, Difficult, Very Difficult}",
+            "DifficultyScore: integer 1-5",
+            "CognitiveLevel in {Remember, Understand, Apply, Analyze, Evaluate}",
+            "CalculationItem: boolean",
+            "Part2OnlyFlag: MUST be true (strict boolean check — rejects absent, false, \"true\" string, 1 number)",
+            "Part2OnlyFlag survives JSON.parse(JSON.stringify(item)) round-trip"
+          ],
+          "part2OnlyFlagProtocol": [
+            "1. Verify Part2OnlyFlag field exists in JSON object",
+            "2. Verify typeof Part2OnlyFlag === \"boolean\"",
+            "3. Verify Part2OnlyFlag === true",
+            "4. Verify field survives JSON.parse(JSON.stringify(item))",
+            "Any check fails → BLOCK certification for this item"
+          ]
+        },
+        {
+          "gate": "G6",
+          "name": "Final Validation",
+          "gatekeeper": "Validator",
+          "minimumScore": "Zero errors",
+          "criticalChecks": [
+            "All G1-G5 gates passed",
+            "Automated validation suite runs with zero errors",
+            "Zero new warnings from baseline",
+            "Governance guard all rules PASS",
+            "grep -c '\"QuestionID\"' count matches registry for target pack",
+            "Pack file parses cleanly via JSON.parse() or Function constructor",
+            "No detectable DL-008, DL-026, or DL-013 pattern in certification batch",
+            "Part2OnlyFlag verified on every certified item"
+          ]
+        },
+        {
+          "gate": "G7",
+          "name": "Approval",
+          "gatekeeper": "Release Manager",
+          "minimumScore": "All gates passed",
+          "criticalChecks": [
+            "G1-G6 all passed with documented evidence",
+            "All gate reports filed in reports/",
+            "REVISION_HISTORY.md entry written with before/after counts",
+            "DEFECT_LIBRARY_P2.md updated if any defects found",
+            "CURRENT_BASELINES_P2.md updated with new hashes",
+            "Pre-delivery safety check confirms 0 known-defective QIDs in delivery pool",
+            "All items in batch carry Part2OnlyFlag: true"
+          ]
+        }
+      ]
+    },
+    "five_states": {
+      "description": "Governance states for every Part 2 item from P2002 §B.1-B.5",
+      "states": [
+        {
+          "state": "Unprocessed",
+          "description": "Not yet audited; initial authoring state. Item exists in pack file with full content but has not entered certification pipeline.",
+          "learnerPoolEligible": false,
+          "entryRule": "Default state at item creation",
+          "exitRule": "Transitions to In Audit upon entry into a sub-batch (auditor selection)",
+          "blockingConditions": "None — this is the initial state"
+        },
+        {
+          "state": "In Audit",
+          "description": "Currently under review in a sub-batch. Item is undergoing six-dimension AI verification and gate-level review.",
+          "learnerPoolEligible": false,
+          "entryRule": "Explicit selection into a certification sub-batch from Unprocessed or Editorial Queue",
+          "exitTransitions": [
+            "In Audit → Certified: HIGH-confidence six-dimension AI verification + user approval (all 7 conditions met per §B.3)",
+            "In Audit → Editorial Queue: structural or content revision required",
+            "In Audit → Unprocessed: (not a valid transition — use Editorial Queue)"
+          ],
+          "blockingConditions": "Cannot transition to Certified if any certification-blocking condition exists (§B.4)"
+        },
+        {
+          "state": "Editorial Queue",
+          "description": "Requires structural or content revision before re-audit. Item has been reviewed and found to need changes that the auditor cannot apply directly.",
+          "learnerPoolEligible": false,
+          "entryRule": "From In Audit when structural/content revision is required",
+          "exitRule": "Transitions back to In Audit after revisions are applied and the item is re-entered into a sub-batch",
+          "blockingConditions": "Cannot transition directly to Certified — must pass through In Audit first"
+        },
+        {
+          "state": "Certified",
+          "description": "Passed HIGH-confidence six-dimension verification + user approval. Eligible for learner practice sessions.",
+          "learnerPoolEligible": true,
+          "entryRequirements": [
+            "Six-dimension AI verification produces HIGH confidence across all 6 dimensions",
+            "User approval documented in REVISION_HISTORY.md",
+            "Distractor tier map (A/B/C/D) recorded in certification entry",
+            "All low-confidence claims resolved and documented",
+            "Part2OnlyFlag verified as true",
+            "ExplanationWrong[CorrectChoice] confirmed empty (DL-008 compliance)",
+            "All three non-CC ExplanationWrong slots confirmed non-empty (≥50 chars each, DL-026 compliance)"
+          ],
+          "exitRule": "Certified → In Audit only via explicit re-verification request (requires: specific defect finding logged to DEFECT_LIBRARY_P2.md, user authorization for status change, REVISION_HISTORY.md entry documenting reversion)",
+          "blockingConditions": "Cannot be downgraded without documented re-verification request (§B.5)"
+        },
+        {
+          "state": "Archived",
+          "description": "Removed from active pool (content preserved). Item is excluded from learner delivery but retained in pack file.",
+          "learnerPoolEligible": false,
+          "entryRule": "From any state; consolidation or removal from active pool",
+          "exitRule": "Can be restored to Unprocessed if re-activated (content preserved — only state field changes)",
+          "blockingConditions": "Archived items must retain full content; only question_state field changes. Rollback logs maintained in reports/."
+        }
+      ],
+      "transitionDiagram": "Unprocessed → In Audit → Certified ✓; In Audit → Editorial Queue → In Audit → Certified ✓; Any State → Archived"
+    },
+    "gold_standard_checklist": {
+      "description": "33 distinct checklist items from P2002 §F; 21 MCQ + 12 Case-Study-Specific",
+      "totalDistinctItems": 33,
+      "mcqChecklist": [
+        { "id": 1, "item": "Blueprint alignment — Question maps to a specific Part 2 IMA Learning Outcome Statement (P2001 Appendix A)" },
+        { "id": 2, "item": "Technical accuracy — Accounting/finance treatment is correct under current Part 2 authorities (ASC, CAPM, COSO ERM 2017, IMA Ethics, SOX, FCPA)" },
+        { "id": 3, "item": "Numerical accuracy — All calculations independently verified via Formula Verification Protocol (§E.1)" },
+        { "id": 4, "item": "Correct answer — The stored CorrectChoice matches independent expert judgment" },
+        { "id": 5, "item": "Distractor plausibility — Every distractor represents a realistic candidate misconception" },
+        { "id": 6, "item": "Distractor discrimination — No distractor is obviously wrong; each targets a distinct error" },
+        { "id": 7, "item": "No cueing — No grammatical, length, or position cues point to the correct answer" },
+        { "id": 8, "item": "Answer balance — The question does not create a pattern if combined with adjacent questions" },
+        { "id": 9, "item": "Explanation — authority — Correct answer explanation names the governing Part 2 standard/authority" },
+        { "id": 10, "item": "Explanation — solution — Shows formula with substituted values (calculations) or reasoning chain (conceptual)" },
+        { "id": 11, "item": "Explanation — business context — Interprets the result in the scenario" },
+        { "id": 12, "item": "Explanation — distractors — Each wrong-choice explanation is specific and teaches why it is wrong" },
+        { "id": 13, "item": "Explanation — exam trap — Identifies at least one common candidate error" },
+        { "id": 14, "item": "Business realism — Scenario uses realistic business language, not textbook phrasing" },
+        { "id": 15, "item": "Writing clarity — No grammatical errors; professional tone" },
+        { "id": 16, "item": "Accessibility — No biased language; fair to all candidate populations" },
+        { "id": 17, "item": "Metadata complete — All required fields present and valid (§D.6)" },
+        { "id": 18, "item": "Metadata cross-references — Formula references and authority references resolve correctly" },
+        { "id": 19, "item": "Part2OnlyFlag — Field present and true (§E.4)" },
+        { "id": 20, "item": "Domain boundary — Question does not test Part 1-exclusive concepts as primary material (§E.3)" },
+        { "id": 21, "item": "Validation pass — Automated validation suite passes with zero errors (§D.7)" }
+      ],
+      "caseStudySpecificChecklist": [
+        { "id": 22, "item": "Scenario realism — Named company, stakeholder, business trigger, and clear task present" },
+        { "id": 23, "item": "Exhibit quality — Professional format, no decorative data (§C.3)" },
+        { "id": 24, "item": "Data consistency — Numbers in exhibits are internally consistent (§C.6)" },
+        { "id": 25, "item": "Question interconnection — Items follow logical progression (calculate → analyze → decide)" },
+        { "id": 26, "item": "Cognitive progression — Items progress from lower to higher Bloom's levels (§C.4)" },
+        { "id": 27, "item": "Independent answerability — Each item can be answered without relying on correct answers to prior items (§C.5)" },
+        { "id": 28, "item": "Exhibit referencing — Every exhibit is referenced by at least one item" },
+        { "id": 29, "item": "Data consumption — Every exhibit row/column is consumed by at least one item" },
+        { "id": 30, "item": "Case-level metadata — All required case-level fields present and valid (§D.6)" },
+        { "id": 31, "item": "Item-level metadata — All required item-level fields present and valid (§D.6)" },
+        { "id": 32, "item": "Exhibit-level metadata — ExhibitID, Purpose, and ReferencedBy fields present" },
+        { "id": 33, "item": "Difficulty calibration — Case-level difficulty is within ±1 of mean item difficulty" }
+      ],
+      "goldStandardDefinition": "100/100 on rubric + every checklist item satisfied + reviewed by 2 independent reviewers (1 accounting, 1 editorial) + all numerical content verified by 2 separate calculations + complete metadata with no warnings + Part2OnlyFlag: true verified by all 7 gates"
+    }
+  },
+  "current_items_assessment": {
+    "sourceFile": "pack_p2_a.js",
+    "totalItems": 30,
+    "qidRange": "P2-A-001 through P2-A-030",
+    "section": "A — Financial Statement Analysis",
+    "architecture": "Single-object (one JSON object per MCQ item)",
+    "governanceCheck": {
+      "itemCount": 30,
+      "question_state": {
+        "Unprocessed": 30,
+        "In_Audit": 0,
+        "Editorial_Queue": 0,
+        "Certified": 0,
+        "Archived": 0,
+        "note": "All 30 items are in Unprocessed state — none have entered the certification pipeline"
+      },
+      "part2OnlyFlag": {
+        "present": 30,
+        "absent": 0,
+        "allTrue": true,
+        "allBoolean": true,
+        "status": "PASS — All 30 items carry Part2OnlyFlag: true (boolean type)"
+      },
+      "dl008_status": {
+        "totalItems": 30,
+        "violations": 0,
+        "clean": true,
+        "methodology": "Cross-referenced each item's CorrectChoice letter against its corresponding ExplanationWrong slot. All 30 CC-matched EW slots are empty (\"\").",
+        "status": "PASS — 0 DL-008 violations; all 30 items structurally clean"
+      },
+      "dl026_status": {
+        "totalItems": 30,
+        "emptyNonCCSlots": 0,
+        "clean": true,
+        "methodology": "For each item, verified all 3 non-CorrectChoice ExplanationWrong slots contain ≥50 characters of choice-specific text. All slots populated with substantive distractor explanations.",
+        "status": "PASS — 0 DL-026 violations; all 90 non-CC EW slots populated"
+      },
+      "dl013_status": {
+        "boilerplateDetected": 0,
+        "clean": true,
+        "status": "PASS — No DL-013 template boilerplate detected in any ExplanationWrong field"
+      }
+    },
+    "structuralMetrics": {
+      "correctChoiceDistribution": {
+        "A": { "count": 7, "percentage": "23.3%", "targetRange": "22-28%", "status": "PASS" },
+        "B": { "count": 12, "percentage": "40.0%", "targetRange": "22-28%", "status": "FAIL — B-bias, 40.0% exceeds 28% ceiling" },
+        "C": { "count": 6, "percentage": "20.0%", "targetRange": "22-28%", "status": "FAIL — under target range" },
+        "D": { "count": 5, "percentage": "16.7%", "targetRange": "22-28%", "status": "FAIL — under target range" },
+        "note": "Strong B-bias (40.0%). CorrectChoice B is significantly overrepresented. This is a systematic issue — items CC=A/D are underrepresented. For a 500-item pool, this distribution may need strategic rebalancing."
+      },
+      "difficultyDistribution": {
+        "Easy_1": { "count": 0, "percentOfSample": "0.0%", "perPackTarget": 75, "domainATarget": "10%", "status": "FAIL — zero Easy items" },
+        "ModerateEasy_2": { "count": 0, "percentOfSample": "0.0%", "perPackTarget": 100, "domainATarget": "20%", "status": "FAIL — zero Moderate-Easy items" },
+        "Moderate_3": { "count": 0, "percentOfSample": "0.0%", "perPackTarget": 150, "domainATarget": "30%", "status": "FAIL — zero Moderate items" },
+        "Difficult_4": { "count": 21, "percentOfSample": "70.0%", "perPackTarget": 125, "domainATarget": "30%", "status": "FAIL — 70% Difficult vs 30% target for Domain A" },
+        "VeryDifficult_5": { "count": 9, "percentOfSample": "30.0%", "perPackTarget": 50, "domainATarget": "10%", "status": "FAIL — 30% Very Difficult vs 10% target" },
+        "note": "CRITICAL CONCERN: All 30 items are Difficult or Very Difficult. Zero items at Easy, Moderate-Easy, or Moderate. This is a severe difficulty distribution mismatch. The first 30 items skew extremely hard and do not represent the target distribution for a 500-item pool. Subsequent authoring waves must prioritize Easy (1), Moderate-Easy (2), and Moderate (3) items to restore balance."
+      },
+      "cognitiveLevelDistribution": {
+        "Remember": { "count": 0, "percentOfSample": "0.0%", "perPackTarget": 60, "domainATarget": "10%", "status": "FAIL — zero Remember items" },
+        "Understand": { "count": 0, "percentOfSample": "0.0%", "perPackTarget": 110, "domainATarget": "20%", "status": "FAIL — zero Understand items" },
+        "Apply": { "count": 0, "percentOfSample": "0.0%", "perPackTarget": 210, "domainATarget": "45%", "status": "FAIL — zero Apply items" },
+        "Analyze": { "count": 16, "percentOfSample": "53.3%", "perPackTarget": 90, "domainATarget": "20%", "status": "FAIL — 53.3% Analyze vs 20% target" },
+        "Evaluate": { "count": 14, "percentOfSample": "46.7%", "perPackTarget": 30, "domainATarget": "5%", "status": "FAIL — 46.7% Evaluate vs 5% target" },
+        "note": "CRITICAL CONCERN: All 30 items are Analyze or Evaluate — the two highest cognitive levels. Zero items at Remember, Understand, or Apply. This is a severe Bloom's distribution mismatch. For Domain A, the targets are Remember 10%, Understand 20%, Apply 45%, Analyze 20%, Evaluate 5%. Current sample: Analyze 53.3%, Evaluate 46.7%. Subsequent authoring waves must prioritize Apply-level calculation items (45% per-domain target) and lower-level items."
+      },
+      "calculationItemDistribution": {
+        "true": 26,
+        "false": 4,
+        "note": "4 items (P2-A-010, P2-A-021, P2-A-024, P2-A-028) are purely conceptual/judgment. The remaining 26 require computation. This is consistent with Domain A (Financial Statement Analysis) which is calculation-intensive."
+      }
+    },
+    "itemsRequiringRemediation": {
+      "count": 1,
+      "criticalItems": [
+        {
+          "qid": "P2-A-017",
+          "issue": "Drafting notes embedded in ExplanationCorrect and VerificationChecks fields",
+          "details": "The ExplanationCorrect text contains authoring work-in-progress notes including 'Let me re-derive...', 'Ugh, I made an error...', 'I need to fix...', 'I'll start fresh...'. The VerificationChecks field similarly contains drafting commentary. These are not learner-safe — they expose the item's internal construction process and contain self-critical language ('I made an error').",
+          "severity": "Critical — blocking certification",
+          "correctChoice": "B",
+          "correctChoiceCorrect": true,
+          "remediationRequired": "Rewrite ExplanationCorrect as a clean, professional explanation. Clean VerificationChecks. The underlying math (normalized NPM = 6.73%) is correct — only the presentation needs fixing.",
+          "dl008Clean": true,
+          "dl026Clean": true
+        }
+      ],
+      "cosmeticIssues": [
+        {
+          "qid": "P2-A-013",
+          "issue": "Dollar amounts use $27.6M vs $27,600,000 notation — consistent within item but differs from some peer items",
+          "severity": "Low — stylistic only"
+        }
+      ]
+    },
+    "contentQualityAssessment": {
+      "overallAssessment": "HIGH QUALITY for a first authoring wave. Items demonstrate deep domain knowledge, sophisticated multi-layer reasoning, professional business scenarios, and proper Part 2 authority citations.",
+      "strengths": [
+        "All items feature realistic business scenarios with named stakeholders, companies, and decision contexts",
+        "Every distractor represents a specific, identifiable candidate misconception",
+        "Distractor explanations are choice-specific and teach why each wrong choice is wrong",
+        "All correct-answer explanations name the governing Part 2 authority (ASC section, COSO ERM component, CAPM parameter)",
+        "Every item carries a CommonTrapReference describing a documented exam trap",
+        "All items carry FormulaReference where applicable",
+        "Professional business tone throughout — no textbook phrasing",
+        "Part2OnlyFlag: true on all 30 items",
+        "Zero DL-008 violations (all ExplanationWrong[CC] slots empty)",
+        "Zero DL-026 violations (all non-CC ExplanationWrong slots populated)",
+        "Zero DL-013 boilerplate detected",
+        "All items have proper ASC/corporate finance authority citations"
+      ],
+      "weaknesses": [
+        "Severe difficulty distribution mismatch — all items are Difficult (70%) or Very Difficult (30%); zero items at Easy, Moderate-Easy, or Moderate",
+        "Severe Bloom's distribution mismatch — all items are Analyze (53.3%) or Evaluate (46.7%); zero at Remember, Understand, Apply",
+        "CorrectChoice B-bias (40.0%) — exceeds the 22-28% per-position target",
+        "P2-A-017 has embedded drafting notes — must be cleaned before certification",
+        "No Remember or Understand items — foundational knowledge items are entirely absent from this sample",
+        "No Apply-level items — the computation items all require analysis/evaluation in addition to calculation, missing straightforward application items"
+      ]
+    }
+  },
+  "certification_readiness": {
+    "verdict": "NOT YET READY — 1 Critical Item Requires Remediation + Structural Distribution Gaps Must Be Addressed",
+    "summary": "The 30 existing items are structurally sound (zero DL-008/DL-026/DL-013) with high content quality, but (1) P2-A-017 requires cleanup of embedded drafting notes, (2) the difficulty and cognitive distribution is severely skewed toward the top end — subsequent authoring waves must fill the lower tiers before any certification wave makes sense, and (3) pipeline infrastructure must be built before certification can begin.",
+    "immediatelyCertifiable": {
+      "count": 0,
+      "reason": "No items can be certified immediately because:"
+    },
+    "blockingConditions": [
+      {
+        "item": "P2-A-017",
+        "issue": "Embedded drafting notes in ExplanationCorrect — not learner-safe",
+        "action": "Rewrite ExplanationCorrect as clean professional explanation; clean VerificationChecks"
+      },
+      {
+        "item": "ALL",
+        "issue": "No certification infrastructure exists: no validator scripts, no governance guard, no CURRENT_BASELINES_P2.md, no DEFECT_LIBRARY_P2.md, no REVISION_HISTORY.md entry",
+        "action": "Build pipeline infrastructure before any certification operation"
+      },
+      {
+        "item": "ALL",
+        "issue": "Severe difficulty/cognitive distribution skew — certifying items at only Difficult/Very-Difficult and Analyze/Evaluate would create a distorted delivery pool",
+        "action": "Author lower-tier items (Easy, Moderate-Easy, Moderate; Remember, Understand, Apply) across subsequent waves to establish a balanced pool before certifying any items"
+      }
+    ],
+    "certificationCandidateItems": {
+      "count": 29,
+      "qids": "P2-A-001 through P2-A-016, P2-A-018 through P2-A-030",
+      "reason": "These 29 items (all except P2-A-017) are structurally clean and content-complete. They would pass DL-008/DL-026/DL-013 checks and carry Part2OnlyFlag: true. However, certification is deferred pending:",
+      "deferredReasons": [
+        "Pipeline infrastructure not yet built (validators, governance guard, baselines, defect library)",
+        "Distribution imbalance — certifying these 29 items first would create a pool with 100% Difficult+ and Analyze+, violating P2002 §G targets",
+        "Domain A Domain-Section target is 500 items at balanced distribution — certifying 29 extreme-difficulty items first would create a permanent skew requiring counterbalancing"
+      ],
+      "recommendedCertificationOrder": "First wave should certify a balanced batch: 15 Easy/Moderate-Easy items + 10 Moderate items + 5 Difficult items (from future authoring waves), with Bloom's distribution across all 5 levels. Then backfill with existing high-quality Difficult/Very-Difficult items."
+    },
+    "infrastructureRequirements": {
+      "description": "The following pipeline artifacts must be created (or this bootstrap must serve as their foundation) before any certification operation:",
+      "critical": [
+        {
+          "artifact": "scripts/validators/p2/",
+          "status": "NOT CREATED",
+          "description": "Validators adapted for Part 2: ExplanationValidator (DL-008, DL-026), MetadataValidator (Part2OnlyFlag, required fields), P2-specific validators"
+        },
+        {
+          "artifact": ".opencode/plugins/governance-guard-p2.js",
+          "status": "NOT CREATED",
+          "description": "Governance guard adapted from Part 1 Rules 1-9 with Part 2-specific rule: P2Rule1 BLOCK (Part2OnlyFlag absent/false)"
+        },
+        {
+          "artifact": "knowledge/DEFECT_LIBRARY_P2.md",
+          "status": "NOT CREATED",
+          "description": "Part 2 defect library for DL-P2 entries"
+        },
+        {
+          "artifact": "knowledge/CURRENT_BASELINES_P2.md",
+          "status": "NOT CREATED",
+          "description": "Part 2 governance-critical file hashes"
+        },
+        {
+          "artifact": "knowledge/REVISION_HISTORY.md",
+          "status": "EXISTS (Part 1)",
+          "description": "Must add Part 2 certification entries to existing REVISION_HISTORY.md (or create separate P2 revision history)"
+        },
+        {
+          "artifact": "knowledge/TAXONOMY_REGISTRY_P2.md",
+          "status": "NOT CREATED",
+          "description": "Referenced as dependency in P2002. Part 2 taxonomy registry for controlled vocabulary."
+        },
+        {
+          "artifact": "foundation/FORMULA_MASTER_P2.md",
+          "status": "NOT CREATED",
+          "description": "Referenced as dependency in P2002. 40+ Part 2 formulas across 5 domains (A-E)."
+        },
+        {
+          "artifact": "foundation/EXAM_BLUEPRINT_P2.md",
+          "status": "NOT CREATED",
+          "description": "Referenced as dependency in P2002. Full Part 2 CSO blueprint with all learning outcome statements."
+        }
+      ],
+      "estimatedTimeToInfrastructure": "3-5 sessions (parallel: formula master + taxonomy registry + validators + governance guard)"
+    },
+    "processRequirements": {
+      "description": "Additional process steps needed before first certification:",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Clean P2-A-017",
+          "estimatedTime": "0.5 session",
+          "priority": "Critical — blocks certification of all items"
+        },
+        {
+          "step": 2,
+          "action": "Build all pipeline infrastructure artifacts listed above",
+          "estimatedTime": "3-5 sessions",
+          "priority": "Critical — certification cannot proceed without validators and governance guard"
+        },
+        {
+          "step": 3,
+          "action": "Create REVISION_HISTORY.md Part 2 section with bootstrap entry",
+          "estimatedTime": "0.25 session",
+          "priority": "High — governance trail required from first certification"
+        },
+        {
+          "step": 4,
+          "action": "Build MASTER_QUESTION_REGISTRY_P2.md (generated, never hand-edited — per Part 1 governance precedent)",
+          "estimatedTime": "0.5 session",
+          "priority": "High — needed for cross-registry reconciliation"
+        },
+        {
+          "step": 5,
+          "action": "Author additional items (Wave 2-N) to establish balanced difficulty/cognitive distribution before certifying",
+          "estimatedTime": "5-10 sessions for adequate counterbalancing (target: at minimum 30 Easy + 60 Moderate-Easy + 90 Moderate items before certifying any Difficult items)",
+          "priority": "High — certifying from a skewed pool creates permanent delivery-pool distortion"
+        },
+        {
+          "step": 6,
+          "action": "Run pre-delivery safety check on certification candidates",
+          "estimatedTime": "0.25 session",
+          "priority": "Required — P2002 §D.8"
+        }
+      ]
+    },
+    "estimatedTimeToFirstCertification": {
+      "total": "8-14 sessions (2-4 weeks at 2-3 sessions/day)",
+      "breakdown": [
+        "P2-A-017 cleanup: 0.5 session",
+        "Infrastructure build: 3-5 sessions",
+        "Additional item authoring for distribution balance: 5-10 sessions",
+        "First certification batch (G1-G7): 1-2 sessions",
+        "Approval and documentation: 0.5 session"
+      ],
+      "note": "The primary bottleneck is the difficulty/cognitive distribution gap. All 30 existing items are at the Difficult+ / Analyze+ end. A certification wave that only certifies these items would create a learner pool with an 100% hard-skew — violating P2002 §G targets. The fastest path to first certification is to (1) fix P2-A-017, (2) build infrastructure, (3) author a balanced 30-50 item wave with proper difficulty/Bloom's distribution, (4) certify that balanced wave as the first batch."
+    }
+  }
+}

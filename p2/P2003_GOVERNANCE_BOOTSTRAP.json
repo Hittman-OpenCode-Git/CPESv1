@@ -1,0 +1,914 @@
+{
+  "meta": {
+    "session": "P2-003",
+    "subagent": "governance-bootstrap",
+    "date": "2026-07-29",
+    "description": "P2-004 pre-flight governance implementation checklist. Converts P2002_GOVERNANCE_MAPPING.json (101 elements) into an actionable, ordered implementation plan. Every governance control that must exist before the first P2- question is authored is specified with exact implementation steps, test cases, and file paths.",
+    "sources": [
+      "p2/P2002_GOVERNANCE_MAPPING.json (101 elements: 37 Carry Forward, 47 Modify, 8 Retire, 9 Add)",
+      "p2/P2002_CERTIFICATION_STANDARD.md (7-gate pipeline, 40+ formulas, Part2OnlyFlag)",
+      "p2/P2002_BLUEPRINT_EXTRACTION.json (6 domains, 5 MCQ packs, 3 case packs, known defects)",
+      ".opencode/plugins/governance-guard.js (current P1 implementation, 10 rules, 393 lines)",
+      "knowledge/DEFECT_LIBRARY.md (DL-001 through DL-037, defect prevention patterns)"
+    ]
+  },
+  "mandatory_before_p2_004": {
+    "summary": "14 structural items must be in place before P2-004 writes the first question. These establish the governance framework, defect prevention, cross-part collision protection, and file infrastructure. P2-004 cannot begin until all 14 items are verified complete.",
+    "items": [
+      {
+        "id": "M01",
+        "name": "Fork governance-guard.js → governance-guard-p2.js",
+        "rationale": "All 10 BLOCK rules must be active from the first write. The governance guard is a monolithic plugin — all hooks fire from a single exported object. Forking the P1 guard with P2-adapted file patterns is the fastest path to full coverage.",
+        "implementation": [
+          "Copy .opencode/plugins/governance-guard.js → .opencode/plugins/governance-guard-p2.js",
+          "Update SOURCE_FILE_RE: /^(pack_[a-e]_corrected\\.js|scored_cases\\d*\\.js)$/i → /^(pack_p2_[a-e]\\.js|case_pack_p2_[1-3]\\.js)$/i",
+          "Update DERIVED_REGISTRY_RE: add P2-specific registries (MASTER_QUESTION_REGISTRY_P2.md, CURRENT_BASELINES_P2.md, SESSION_STATUS_P2_*.md, DEFECT_MANIFEST_DL008_DL026_P2.json)",
+          "Update Rule 3 basename check: MASTER_QUESTION_REGISTRY.md → MASTER_QUESTION_REGISTRY_P2.md",
+          "Update Rule 3 regeneration script: scripts/build_master_registry.js → scripts/build_master_registry_p2.js",
+          "Update Rule 1 REVISION_HISTORY path: knowledge/REVISION_HISTORY.md → knowledge/REVISION_HISTORY_P2.md",
+          "Update Rule 7 file-pattern references from P1 to P2 equivalents",
+          "Update Rule 8 SESSION_PACKAGES_RE: add p2-specific subdirectory",
+          "Rules 2, 4, 5, 6, 9, 10: carry forward unchanged (structural logic is content-independent)",
+          "Add Part2OnlyFlag enforcement: NEW Rule 11 — every item in pack_p2_*.js must carry Part2OnlyFlag: true. BLOCK certification if absent, false, or non-boolean. Add to tool.execute.before hook."
+        ],
+        "verification": "All 11 rules (1-10 adapted + new Rule 11) load without error. test_governance_guard_p2.js passes all tests."
+      },
+      {
+        "id": "M02",
+        "name": "Create test_governance_guard_p2.js test suite",
+        "rationale": "P1 governance guard has 51 tests. P2 needs an equivalent test suite with P2-specific test cases (P2- QIDs, pack_p2_*.js files, Part2OnlyFlag). This is the primary evidence that governance enforcement is functional before any content exists.",
+        "implementation": [
+          "Copy scripts/test_governance_guard.js → scripts/test_governance_guard_p2.js",
+          "Update all source-file references from pack_*_corrected.js to pack_p2_*.js",
+          "Add Rule 11 test block: Part2OnlyFlag enforcement (6 test cases — see below)",
+          "Add Rule 2 test block with P2- QID objects",
+          "Add Rule 6 test block with P2- QID objects",
+          "Add Rule 9 test block with P2 choice text patterns",
+          "Add Rule 10 test block with P2- QID objects",
+          "Add cross-repo QID collision test: item with P1- prefix in pack_p2_ file → BLOCKED",
+          "Add Part2OnlyFlag serialization test: JSON.parse(JSON.stringify(item)).Part2OnlyFlag === true",
+          "Target: minimum 55 tests (51 P1-equivalent + 4 P2-specific)"
+        ],
+        "verification": "node scripts/test_governance_guard_p2.js → 55+/55 PASS, 0 FAIL"
+      },
+      {
+        "id": "M03",
+        "name": "Create pack file skeleton for all 5 MCQ packs",
+        "rationale": "P2-004 needs a valid pack file structure to write the first question into. Each pack file must have the correct array wrapper, QID prefix enforcement, and Part2OnlyFlag default.",
+        "implementation": [
+          "Create pack_p2_a.js, pack_p2_b.js, pack_p2_c.js, pack_p2_d.js, pack_p2_e.js",
+          "Each file: const P2_PACK_A = [ ... ]; — validated JavaScript array, initially empty or with 1 placeholder",
+          "Each file exports the array via the application's pack-loading mechanism",
+          "Verify pack file names match SOURCE_FILE_RE pattern in governance guard",
+          "Verify QID format: items use P2-{Section}-{NNN}",
+          "Verify Part2OnlyFlag: every item schema includes Part2OnlyFlag (boolean, default true)"
+        ],
+        "verification": "All 5 pack files parse cleanly. SOURCE_FILE_RE matches each filename. Empty pack count = 0 QuestionIDs."
+      },
+      {
+        "id": "M04",
+        "name": "Create case pack file skeletons for all 3 case packs",
+        "rationale": "P2 will have 75 cases across 3 case packs. Skeleton files are needed before any case can be authored. CaseID prefix CBQ2 and cross-part routing must be structurally enforced.",
+        "implementation": [
+          "Create case_pack_p2_1.js, case_pack_p2_2.js, case_pack_p2_3.js",
+          "Each file: validated JavaScript array, initially empty",
+          "Verify case pack file names match governance guard source-file pattern",
+          "Verify CaseID format: CBQ2{Pack}-{Section}{Seq} (e.g., CBQ2-A1, CBQ2-B15)",
+          "Verify ItemID format: CBQ2{Pack}-{Section}{Seq}-Q{N}",
+          "Each case schema includes Part2OnlyFlag: true"
+        ],
+        "verification": "All 3 case pack files parse cleanly. CaseID regex matches all defined case IDs."
+      },
+      {
+        "id": "M05",
+        "name": "Create knowledge/REVISION_HISTORY_P2.md (empty, with header)",
+        "rationale": "Governance guard Rule 1 validates that question_state changes pair with REVISION_HISTORY_P2.md updates. The file must exist before the first state change (even though initial authoring writes 'Unprocessed' state, the file needs to exist for session-idle verification to match the basename check).",
+        "implementation": [
+          "Create knowledge/REVISION_HISTORY_P2.md with header: version, status, authority, template for entries",
+          "Initial state: empty (no entries). Template includes QuestionID list, before/after counts, verification results."
+        ],
+        "verification": "File exists at knowledge/REVISION_HISTORY_P2.md, basename check in governance guard Rule 1 matches."
+      },
+      {
+        "id": "M06",
+        "name": "Create knowledge/DEFECT_LIBRARY_P2.md (empty, with header and DL-ID template)",
+        "rationale": "AGENTS.md §12 requires all defect findings logged before session close. P2 starts with zero defects but the library must exist for P2-004 to log any findings during authoring.",
+        "implementation": [
+          "Create knowledge/DEFECT_LIBRARY_P2.md with header, purpose, classification scales (same as P1)",
+          "Include the DL-ID template from P1 DEFECT_LIBRARY.md",
+          "Add pre-populated awareness entries for the 12 known-high-recurrence defects (DL-008, DL-013, DL-021, DL-026, DL-030, DL-031, DL-032, DL-037, DL-005, DL-009, DL-012, DL-034) — each marked as 'PREVENTED — structurally impossible' or 'MONITORED — recurrence risk'",
+          "Add P2-specific entries: DL-P2-FLAG (Part2OnlyFlag absent), DL-P2-AUTH (wrong authority), DL-P2-ETHICS (false ethics violation), DL-P2-ERM (COSO IC/ERM confusion)"
+        ],
+        "verification": "File exists. Template valid. Awareness entries complete."
+      },
+      {
+        "id": "M07",
+        "name": "Create knowledge/CURRENT_BASELINES_P2.md (empty, with §5 hash table)",
+        "rationale": "AGENTS §9 startup protocol and §13 runtime governance require hash verification against CURRENT_BASELINES. P2 starts with empty content pools but the file must exist for T0 verification.",
+        "implementation": [
+          "Create knowledge/CURRENT_BASELINES_P2.md with: §1 Purpose, §2 Certified Pool (0 items), §3 Defect Status (all PREVENTED/MONITORED), §4 Inventory (0 items), §5 Governance-Critical File Hashes (SHA-256 for governance-guard-p2.js, test_governance_guard_p2.js, ExplanationValidator, build_master_registry_p2.js)"
+        ],
+        "verification": "File exists. All §5 entries have valid SHA-256 hashes for the current file state."
+      },
+      {
+        "id": "M08",
+        "name": "Create knowledge/CAQS_P2_v1.0.md certification standard document",
+        "rationale": "P2002_CERTIFICATION_STANDARD.md is the authoritative draft. CAQS_P2_v1.0.md formalizes it into the P2-equivalent of CAQS_v1.0.md — the single quality standard reference for all content validation.",
+        "implementation": [
+          "Adapt P2002_CERTIFICATION_STANDARD.md into knowledge/CAQS_P2_v1.0.md",
+          "Include: §A six-dimension verification, §B MCQ lifecycle, §C case lifecycle, §D certification gates, §E quality requirements, §F Gold Standard Checklist, §G difficulty/Bloom's targets",
+          "Add Part2OnlyFlag section (§E.4) as a standalone requirement",
+          "Add authority citation verification table (§E.2)",
+          "Add domain boundary enforcement with P1-exclusives list (§E.3)",
+          "Mark as Version 1.0, Status Active"
+        ],
+        "verification": "File exists. All sections populated. P1-exclusives list complete. Rounding policy matches P2 requirements."
+      },
+      {
+        "id": "M09",
+        "name": "Create foundation/FORMULA_MASTER_P2.md with all 40+ P2 formulas",
+        "rationale": "P2 has 52 extracted formulas (from P2002_BLUEPRINT_EXTRACTION.json). This is the canonical formula reference for numerical validation at G3 and for AI verification at CAQS §1.6 Dimension 1 (Correctness).",
+        "implementation": [
+          "Extract all 52 formulas from P2002_BLUEPRINT_EXTRACTION.json domains.A-F.key_formulas arrays",
+          "For each formula: canonical notation, variable definitions, P2 domain, acceptable tolerance, common calculation errors (from P2002_CERTIFICATION_STANDARD.md §E.1)",
+          "Organize by domain (A-F)",
+          "Add calculation examples with substituted values for the 10 most error-prone formulas (WACC, CAPM, NPV, DuPont, DOL, DFL, EOQ, breakeven multi-product, transfer price, after-tax cash flow)",
+          "Include rounding rules per P2002_CERTIFICATION_STANDARD.md §D.4",
+          "Section: common P2 exam traps for each formula"
+        ],
+        "verification": "All 52 formulas present. Cross-reference against P2002_BLUEPRINT_EXTRACTION.json domains key_formulas counts (A:21, B:9, C:11, D:3, E:8, F:0). No P1-only formulas present."
+      },
+      {
+        "id": "M10",
+        "name": "Fork and adapt ExplanationValidator for P2 (string-aware brace-matcher)",
+        "rationale": "P1's ExplanationValidator was patched for string-awareness (DL-020 fix). P2 MUST start with the fixed version. The validator is the primary structural defect detector for Rules 2, 6, and 10.",
+        "implementation": [
+          "Copy scripts/validators/ExplanationValidator.js → scripts/validators/ExplanationValidator_P2.js",
+          "Verify string-aware brace-matcher is present (P1 fix at lines 114-150 — DL-020 resolution)",
+          "Update SOURCE_FILE_RE paths to match P2 pack files",
+          "Add Part2OnlyFlag presence check to the structural validation pass",
+          "Add domain-enum validation: Section must be A-F (P2 domains, not P1)",
+          "Add QID format validation: must match /^P2-[A-F]-\\d{3}$/",
+          "Add field-presence checks for all required metadata fields per P2002_CERTIFICATION_STANDARD.md §D.6"
+        ],
+        "verification": "Validator parses all 5 pack_p2_*.js files without errors. DL-008, DL-026, DL-021 detection functions return expected results on test data."
+      },
+      {
+        "id": "M11",
+        "name": "Create scripts/build_master_registry_p2.js (registry regeneration script)",
+        "rationale": "Governance guard Rule 3 BLOCKs hand-editing MASTER_QUESTION_REGISTRY_P2.md. The regeneration script must exist before the registry can exist.",
+        "implementation": [
+          "Copy scripts/build_master_registry.js → scripts/build_master_registry_p2.js",
+          "Update source file paths: pack_*_corrected.js → pack_p2_*.js",
+          "Update scored_cases*.js → case_pack_p2_*.js",
+          "Update output path: MASTER_QUESTION_REGISTRY.md → MASTER_QUESTION_REGISTRY_P2.md",
+          "Update QID pattern matching: P1- → P2-",
+          "Add Part2OnlyFlag column to registry output",
+          "Add domain column with P2 domain names",
+          "Update all section-to-domain mappings for P2"
+        ],
+        "verification": "Script runs and produces MASTER_QUESTION_REGISTRY_P2.md with 0 items (empty packs). Error message on empty packs is graceful, not crash."
+      },
+      {
+        "id": "M12",
+        "name": "Establish P2 AGENTS.md standing instructions",
+        "rationale": "Every session in the P2 repository needs the same governance framework that P1's AGENTS.md provides, adapted for P2-specific files, paths, and defect references.",
+        "implementation": [
+          "Copy knowledge/AGENTS.md template (from P2002_GOVERNANCE_MAPPING.json classification of all 13 AGENTS.md sections)",
+          "Updated table: §1 — governance guard references P2 guard (10 rules → 11 rules with Part2OnlyFlag)",
+          "Updated table: §3 — backup protocol files updated to pack_p2_*.js, case_pack_p2_*.js",
+          "Updated table: §4 — REVISION_HISTORY_P2.md path",
+          "Updated table: §5 — claim cross-check table updated with P2- QIDs",
+          "Updated table: §7 — delivery pool references pack_p2_*.js, P2 defect lists, P2- QIDs",
+          "Updated table: §8 — key file locations table completely replaced with P2 equivalents",
+          "Updated table: §9 — session startup protocol updated with P2-specific files",
+          "Updated table: §10 — skills references reconciliation-audit-p2, pre-delivery-safety-check-p2",
+          "Updated table: §11 — external references updated to Part 2 authorities",
+          "Updated table: §13 — baseline hashes updated to P2 files"
+        ],
+        "verification": "AGENTS.md has all 13 sections. All file paths reference P2 equivalents. No stale P1 references remain."
+      },
+      {
+        "id": "M13",
+        "name": "Establish P2 00_PROJECT_CONSTITUTION.md",
+        "rationale": "The constitution is the highest authority document. P2's version adapts P1's immutable rules and decision hierarchy for Part 2 domains and authorities.",
+        "implementation": [
+          "Copy knowledge/00_PROJECT_CONSTITUTION.md → knowledge/00_PROJECT_CONSTITUTION_P2.md",
+          "Update §1: Purpose → 'CMA Part 2 examination simulator'",
+          "Update §3: Mission → 'CMA Part 2 examination'",
+          "Update §7: Add P2-specific immutable rules — AI SHALL NOT: test Part 1 exclusives, cite COSO IC where ERM required, omit Part2OnlyFlag",
+          "Update §9: Source hierarchy updated with P2 authorities per P2002_GOVERNANCE_MAPPING.json §G_new_part2_only and appendix.p2_authorities",
+          "Update §11: Root directory permitted files updated to P2 pack/case filenames"
+        ],
+        "verification": "Constitution file exists. All 12 sections adapted. Source hierarchy contains P2 authorities."
+      },
+      {
+        "id": "M14",
+        "name": "Knowledge foundation: TAXONOMY_REGISTRY_P2.md and EXAM_BLUEPRINT_P2.md",
+        "rationale": "These two files define the controlled vocabulary (enums) and authoritative blueprint that all validators, CI scripts, and AI prompts depend on. Without them, validation can't check domain enums or blueprint alignment.",
+        "implementation": [
+          "Create knowledge/TAXONOMY_REGISTRY_P2.md: domain enums (A-F = Financial Statement Analysis through Professional Ethics), cognitive levels, difficulty labels, question types, exhibit types, P2 authority list, P2 formula references, decision tree references",
+          "Verify all enum values match P2002_BLUEPRINT_EXTRACTION.json domains",
+          "Create foundation/EXAM_BLUEPRINT_P2.md from P2002_BLUEPRINT_EXTRACTION.json domains array: all 6 domains, 43 LOS statements, formula counts, Bloom's distributions, difficulty distributions, case distributions",
+          "Include Part 1 exclusives list from P2002_CERTIFICATION_STANDARD.md §E.3 (8 exclusive concepts)"
+        ],
+        "verification": "TAXONOMY_REGISTRY_P2.md has all required enum tables. EXAM_BLUEPRINT_P2.md covers all 6 domains with 43 LOS statements. Part 1 exclusives list matches P2002_CERTIFICATION_STANDARD.md §E.3."
+      }
+    ]
+  },
+  "deferred_until_p2_004_authoring": {
+    "summary": "7 items can be deferred because they are only meaningful once content exists. P2-004 should reference these but not block on them. Each has a gate condition (e.g., 'first question authored → implement') to ensure they're not forgotten.",
+    "items": [
+      {
+        "id": "D01",
+        "name": "Pre-delivery safety check skill (pre-delivery-safety-check-p2.md)",
+        "gate": "First Certified item enters pool",
+        "rationale": "Only relevant once the learner pool has items. Initial authoring writes 'Unprocessed' items that never reach the delivery pool."
+      },
+      {
+        "id": "D02",
+        "name": "Reconciliation audit skill (reconciliation-audit-p2.md)",
+        "gate": "First certification wave",
+        "rationale": "Only relevant once there are self-reported certification claims to cross-check."
+      },
+      {
+        "id": "D03",
+        "name": "Session registry and session packages directory (scripts/output/session_packages_p2/)",
+        "gate": "First multi-batch certification wave",
+        "rationale": "Governance guard Rule 8 blocks session package writes without registry entry. P2-004 single-batch authoring doesn't produce session packages."
+      },
+      {
+        "id": "D04",
+        "name": "DifficultyCalibrationValidator (DL-031 prevention)",
+        "gate": "First 100+ items authored",
+        "rationale": "Pattern detection requires a population. Individual items can be manually reviewed for difficulty inflation."
+      },
+      {
+        "id": "D05",
+        "name": "CaseDifficultyVarianceValidator (DL-032 prevention)",
+        "gate": "First 10+ cases authored",
+        "rationale": "Variance detection requires multiple cases to measure distribution."
+      },
+      {
+        "id": "D06",
+        "name": "CapitalBudgetingMethodValidator (P2-GOV-08)",
+        "gate": "First Domain E items authored",
+        "rationale": "Domain-specific. No Domain E items until Phase 3 (Weeks 9-10 per roadmap)."
+      },
+      {
+        "id": "D07",
+        "name": "EthicsDistractorValidator (P2-GOV-06)",
+        "gate": "First Domain F items authored",
+        "rationale": "Domain-specific. No Domain F items until Phase 3."
+      }
+    ]
+  },
+  "governance_guard_rules": {
+    "total": 11,
+    "active_at_bootstrap": 11,
+    "note": "All 11 rules must be implemented in the forked governance-guard-p2.js before P2-004 begins. While Rules 1 and 4 won't fire until content exists and states change, the plugin architecture requires all rules present from Day 1. The test suite must also verify Rule 11 (Part2OnlyFlag) — a new P2-only rule.",
+    "rules_detail": [
+      {
+        "rule_number": 1,
+        "name": "question_state → REVISION_HISTORY_P2.md pairing",
+        "classification": "Modify",
+        "enforcement_level": "BLOCK",
+        "part2_adaptation": "Update REVISION_HISTORY path to knowledge/REVISION_HISTORY_P2.md. Update SOURCE_FILE_RE to match P2 pack filenames. Core enforcement logic (track qsChanges, check revHistTouched at session.idle) unchanged.",
+        "implementation_steps": [
+          "In governance-guard-p2.js: update basename check from 'revision_history.md' to 'revision_history_p2.md' (case-insensitive match)",
+          "Update error message to reference knowledge/REVISION_HISTORY_P2.md",
+          "No change to tracking logic — question_state pattern detection and session.idle enforcement are content-independent"
+        ],
+        "test_cases": [
+          "Write question_state change without REVISION_HISTORY_P2.md update → BLOCK at session.idle",
+          "Write question_state change WITH REVISION_HISTORY_P2.md update → no violation",
+          "Write to pack_p2_*.js without question_state changes → no tracking triggers"
+        ],
+        "active_before_p2_004": true,
+        "triggers_immediately": false,
+        "triggers_when": "First question_state change during or after P2-004"
+      },
+      {
+        "rule_number": 2,
+        "name": "ExplanationWrong[CorrectChoice] must be empty (DL-008 enforcement)",
+        "classification": "Carry Forward",
+        "enforcement_level": "BLOCK",
+        "part2_adaptation": "No content change. The structural rule — EW slot matching CC must be empty string — is universal. Single-object architecture in P2 eliminates CC-offset false positives (DL-029), making detection more reliable than in P1.",
+        "implementation_steps": [
+          "Copy findDL008Violations() function verbatim from P1 guard",
+          "Copy extractObjectsFromText() verbatim (string-aware brace-matcher already patched for DL-020)",
+          "No adaptation needed — function operates on JSON objects regardless of QID prefix",
+          "Verify: the check scans newContent only (added text), not oldContent (removed text)"
+        ],
+        "test_cases": [
+          "Write item with CorrectChoice='B' and ExplanationWrongB='non-empty text' → BLOCKED",
+          "Write item with CorrectChoice='B' and ExplanationWrongB='' → no violation",
+          "Write item where CC is in same object as EW fields (single-object) → detection works",
+          "Write item where ExplanationWrong fields are absent (undefined) → not flagged by Rule 2 (caught by Rule 10)"
+        ],
+        "active_before_p2_004": true,
+        "triggers_immediately": true
+      },
+      {
+        "rule_number": 3,
+        "name": "MASTER_QUESTION_REGISTRY_P2.md is generated, never hand-edited",
+        "classification": "Modify",
+        "enforcement_level": "BLOCK",
+        "part2_adaptation": "Update basename check from MASTER_QUESTION_REGISTRY.md to MASTER_QUESTION_REGISTRY_P2.md. Update regeneration script reference to scripts/build_master_registry_p2.js. Core BLOCK logic unchanged.",
+        "implementation_steps": [
+          "Update basename check in tool.execute.before: 'MASTER_QUESTION_REGISTRY.md' → 'MASTER_QUESTION_REGISTRY_P2.md'",
+          "Update error message to reference build_master_registry_p2.js and pack_p2_*.js",
+          "No other changes — the BLOCK fires on any edit/write to a file with that exact basename"
+        ],
+        "test_cases": [
+          "Attempt hand-edit of MASTER_QUESTION_REGISTRY_P2.md → BLOCKED with RULE 3 message",
+          "Run build_master_registry_p2.js → writes to MASTER_QUESTION_REGISTRY_P2.md → not blocked (script is whitelisted regeneration tool)"
+        ],
+        "active_before_p2_004": true,
+        "triggers_immediately": true
+      },
+      {
+        "rule_number": 4,
+        "name": "Answer-key changes must include recomputed/independently verified note",
+        "classification": "Carry Forward",
+        "enforcement_level": "BLOCK",
+        "part2_adaptation": "No content change. Detection logic (SOURCE_FILE_RE match + CorrectChoice/Correct pattern + recomputed regex) is universal. Only SOURCE_FILE_RE itself is updated for P2 filenames (done once, shared across all rules).",
+        "implementation_steps": [
+          "No code change needed beyond SOURCE_FILE_RE adaptation (shared across rules)",
+          "RECOMPUTED_RE unchanged: /recomputed|independently verified|independently recalculated|re-verified|recomputation verified/i",
+          "Tracking logic unchanged: answerKeyFiles Set, recomputedSeen flag, session.idle enforcement"
+        ],
+        "test_cases": [
+          "Write CorrectChoice change without 'recomputed' note → BLOCK at session.idle",
+          "Write CorrectChoice change WITH 'recomputed' note in same content → no violation",
+          "Non-source-file write with CorrectChoice pattern → not tracked (isSourceFile check)"
+        ],
+        "active_before_p2_004": true,
+        "triggers_immediately": false,
+        "triggers_when": "First answer-key change (CorrectChoice modification)"
+      },
+      {
+        "rule_number": 5,
+        "name": "≤30 question objects per change-set without BLOCK-AUTHORIZED marker",
+        "classification": "Carry Forward",
+        "enforcement_level": "BLOCK",
+        "part2_adaptation": "No content change. The 30-item batch cap is universal. The BLOCK-AUTHORIZED marker mechanism is unchanged.",
+        "implementation_steps": [
+          "No code change needed — countQuestions(), MAX_QUESTIONS=30, BLOCK_AUTH_RE are all content-independent",
+          "Verification: countQuestions() regex counts both QuestionID and ItemID markers (covers both MCQ and case items)"
+        ],
+        "test_cases": [
+          "Write 31 question objects without BLOCK-AUTHORIZED → BLOCKED",
+          "Write 30 question objects without BLOCK-AUTHORIZED → no violation",
+          "Write 50 question objects WITH BLOCK-AUTHORIZED marker → no violation"
+        ],
+        "active_before_p2_004": true,
+        "triggers_immediately": true
+      },
+      {
+        "rule_number": 6,
+        "name": "Non-CorrectChoice ExplanationWrong slots must be non-empty (DL-026 enforcement)",
+        "classification": "Carry Forward",
+        "enforcement_level": "BLOCK",
+        "part2_adaptation": "No content change. The structural check — all 3 non-CC EW slots must be non-empty — is universal. Single-object architecture eliminates dual-block metadata-content mismatch (DL-016) that caused false positives in P1.",
+        "implementation_steps": [
+          "Copy findDL026Violations() verbatim from P1 guard",
+          "Function checks: for each L in {A,B,C,D} where L ≠ CC, EW slot must exist and be non-empty",
+          "Note: length === 0 check catches empty strings; !(ewKey in obj) catches absent fields — this is DL-026 enforcement",
+          "Distinction from Rule 10: Rule 6 = length check; Rule 10 = presence check. Both must pass."
+        ],
+        "test_cases": [
+          "Write item with CorrectChoice='A', ExplanationWrongB='' → BLOCKED for slot B empty",
+          "Write item with CorrectChoice='A', all EWB/EWC/EWD non-empty → no violation",
+          "Write item where EW field is absent (not in object) → caught by both Rule 6 and Rule 10",
+          "Write item with 2 empty non-CC slots → 2 violations reported, both block"
+        ],
+        "active_before_p2_004": true,
+        "triggers_immediately": true
+      },
+      {
+        "rule_number": 7,
+        "name": "DERIVED_REGISTRY_NOT_AUTHORITATIVE — no hand-editing derived registries",
+        "classification": "Modify",
+        "enforcement_level": "BLOCK",
+        "part2_adaptation": "Update DERIVED_REGISTRY_RE to match P2 filenames: CURRENT_BASELINES_P2.md, MASTER_QUESTION_REGISTRY_P2.md, SESSION_STATUS_P2_*.md, DEFECT_MANIFEST_DL008_DL026_P2.json. REGENERATION_SCRIPT_RE unchanged.",
+        "implementation_steps": [
+          "Update DERIVED_REGISTRY_RE regex to include P2-specific derived files",
+          "Update error message to list P2-derived registry filenames",
+          "No other changes — the BLOCK fires on any file path matching the regex, with the whitelist exception for regeneration scripts"
+        ],
+        "test_cases": [
+          "Attempt hand-edit of CURRENT_BASELINES_P2.md → BLOCKED with RULE 7 message",
+          "Regeneration script writes to CURRENT_BASELINES_P2.md → not blocked (whitelist exception)",
+          "Attempt hand-edit of SESSION_STATUS_P2_2026-07-29.md → BLOCKED"
+        ],
+        "active_before_p2_004": true,
+        "triggers_immediately": true
+      },
+      {
+        "rule_number": 8,
+        "name": "UNTRACKED_ARTIFACT — session packages must be registered",
+        "classification": "Carry Forward",
+        "enforcement_level": "BLOCK",
+        "part2_adaptation": "SESSION_PACKAGES_RE may need a P2-specific subdirectory path. If P2 uses same registry structure, no change. If P2 has its own repo, path is structurally identical.",
+        "implementation_steps": [
+          "Update SESSION_PACKAGES_RE if P2 uses a different output directory (e.g., scripts/output/session_packages_p2/)",
+          "Update error message to reference the correct session_registry path and registration script",
+          "Core logic unchanged"
+        ],
+        "test_cases": [
+          "Write to scripts/output/session_packages_p2/ without registry entry → BLOCKED",
+          "Write to scripts/output/session_packages_p2/ WITH registry entry → no violation"
+        ],
+        "active_before_p2_004": true,
+        "triggers_immediately": false,
+        "triggers_when": "First session package write during certification waves"
+      },
+      {
+        "rule_number": 9,
+        "name": "Choice binary lead-in polarity mismatch (DL-037 enforcement)",
+        "classification": "Carry Forward",
+        "enforcement_level": "BLOCK",
+        "part2_adaptation": "No content change. The 'No + affirmative conclusion' and 'Yes + negative conclusion' patterns are language-level defects, universal across exam parts.",
+        "implementation_steps": [
+          "Copy findLogicInversionViolations() verbatim from P1 guard",
+          "PATTERN_NO_AFFIRMATIVE and PATTERN_YES_NEGATIVE regexes are language-pattern-based, not domain-specific",
+          "No adaptation needed"
+        ],
+        "test_cases": [
+          "Write choice 'No, because 5% of $150,000 is $7,500, so it should be investigated' → BLOCKED (No+affirmative)",
+          "Write choice 'Yes, because the variance should not be investigated' → BLOCKED (Yes+negative)",
+          "Write choice 'No, because the variance is favorable' → not flagged (correctly aligned negative)",
+          "Write choice 'Yes, because the variance exceeds the threshold' → not flagged (correctly aligned affirmative)"
+        ],
+        "active_before_p2_004": true,
+        "triggers_immediately": true
+      },
+      {
+        "rule_number": 10,
+        "name": "Non-CorrectChoice ExplanationWrong fields must be present and non-empty (DL-021 enforcement)",
+        "classification": "Carry Forward",
+        "enforcement_level": "BLOCK",
+        "part2_adaptation": "No content change. The check — all 4 EW fields must exist in the object, distractor slots must be non-empty — is universal.",
+        "implementation_steps": [
+          "Copy findDL021Violations() verbatim from P1 guard",
+          "Function checks: for each L in {A,B,C,D} where L ≠ CC, EW field must be present (hasOwnProperty) AND non-empty",
+          "Distinction from Rule 6: Rule 10 = field-absence check; Rule 6 = empty-string check. Both must pass."
+        ],
+        "test_cases": [
+          "Write item with CorrectChoice='B', ExplanationWrongC entirely absent from object → BLOCKED (reason: 'absent')",
+          "Write item with CorrectChoice='B', ExplanationWrongC='' → BLOCKED (reason: 'empty')",
+          "Write item with all 4 EW fields present, 3 non-CC slots non-empty, CC slot empty → no violation",
+          "Distinction test: same violation flagged by both Rule 6 and Rule 10 for empty string (both fire)"
+        ],
+        "active_before_p2_004": true,
+        "triggers_immediately": true
+      },
+      {
+        "rule_number": 11,
+        "name": "Part2OnlyFlag mandatory enforcement — must be true on every item [NEW P2-ONLY RULE]",
+        "classification": "Add",
+        "enforcement_level": "BLOCK",
+        "part2_adaptation": "Entirely new rule. No P1 equivalent. Every P2 item must carry Part2OnlyFlag: true to prevent cross-contamination with Part 1 content pools.",
+        "implementation_steps": [
+          "Add findPart2OnlyFlagViolations() function to governance-guard-p2.js",
+          "Function: extract JSON objects from newContent, for each object check if Part2OnlyFlag is present AND === true",
+          "Flag violations: field absent → BLOCK, field === false → BLOCK, typeof !== 'boolean' → BLOCK, survives JSON.parse(JSON.stringify()) → verify",
+          "Add to tool.execute.before hook (same level as Rules 2/6/9/10 — structural enforcement at write time)",
+          "Error message must cite DL-P2-FLAG and P2002_CERTIFICATION_STANDARD.md §B.4.2",
+          "Add to P2 extension of governance guard: only check files matching SOURCE_FILE_RE_P2 (pack_p2_*.js and case_pack_p2_*.js)"
+        ],
+        "test_cases": [
+          "Write item with Part2OnlyFlag: true → no violation",
+          "Write item without Part2OnlyFlag field → BLOCKED",
+          "Write item with Part2OnlyFlag: false → BLOCKED",
+          "Write item with Part2OnlyFlag: 1 (integer) → BLOCKED (not strictly boolean)",
+          "Write item with Part2OnlyFlag: 'true' (string) → BLOCKED (not strictly boolean)",
+          "Serialization test: item with Part2OnlyFlag: true survives JSON.parse(JSON.stringify(item)) → Part2OnlyFlag === true"
+        ],
+        "active_before_p2_004": true,
+        "triggers_immediately": true
+      }
+    ]
+  },
+  "cross_part_collision_protection": {
+    "mechanisms": [
+      {
+        "mechanism": "QID prefix routing",
+        "technique": "Regex enforcement at pack-creation time + governance guard structural check",
+        "detail": "P2 items use P2-{Section}-{NNN} (e.g., P2-A-001). Part 1 items use P1-{Section}-{NNN}. P2- prefix is structurally enforced: any item in a pack_p2_*.js file with a P1- QID → governance guard BLOCK. Any item with a QID not matching /^P2-[A-F]-\\d{3}$/ → ExplanationValidator_P2 error.",
+        "enforcement": "Governance guard structural check + validator regex"
+      },
+      {
+        "mechanism": "CaseID routing",
+        "technique": "CBQ vs CBQ2 prefix",
+        "detail": "P2 cases use CBQ2{Pack}-{Section}{Seq} (e.g., CBQ2-A1). P1 cases use CBQ{Pack}-{Section}{Seq} (e.g., CBQ-B2). P2 items within cases use CBQ2{Pack}-{Section}{Seq}-Q{N}. In a separate repo, collision is structurally impossible. In a co-located repo, the prefix provides unambiguous routing.",
+        "enforcement": "CaseID format validator + governance guard file-context check"
+      },
+      {
+        "mechanism": "Part2OnlyFlag",
+        "technique": "Mandatory boolean field on every item",
+        "detail": "Every P2 item must carry Part2OnlyFlag: true. This is the single field that prevents cross-contamination. The flag is verified at every certification gate (§E.4), at G5 metadata review, and by the governance guard Rule 11 at write time. Items without this flag are blocked from both P1 and P2 pools. Items with Part2OnlyFlag: false or absent → BLOCK certification.",
+        "enforcement": "Governance guard Rule 11 BLOCK + G5 metadata validator + Certification pipeline gate"
+      },
+      {
+        "mechanism": "Separate repository (recommended by P2001 §6)",
+        "technique": "CMA_Part_2_2026 repository",
+        "detail": "If P2 is in its own repo, cross-contamination is architecturally prevented — no P1 file can accidentally be loaded as P2 content. The QID prefix and Part2OnlyFlag provide defense-in-depth even in a separate repo. If co-located, the prefix + flag provide circuit-breaker protection.",
+        "enforcement": "Repository boundary (if separate) + QID prefix + Part2OnlyFlag"
+      },
+      {
+        "mechanism": "File-level naming convention",
+        "technique": "_p2_ infix in all pack/case filenames",
+        "detail": "pack_p2_a.js through pack_p2_e.js, case_pack_p2_1.js through case_pack_p2_3.js. The _p2_ infix ensures no collision with P1 files (pack_a_corrected.js, scored_cases.js). Even in co-located deployment, the application's pack-loading logic can unambiguously distinguish P1 and P2 content sources.",
+        "enforcement": "Governance guard SOURCE_FILE_RE + application pack-loading configuration"
+      }
+    ],
+    "qid_routing_rules": {
+      "P2_MCQ_regex": "^P2-[A-F]-\\d{3}$",
+      "P2_CaseID_regex": "^CBQ2\\d*-[A-F]\\d*$",
+      "P2_ItemID_regex": "^CBQ2\\d*-[A-F]\\d*-Q\\d+$",
+      "P1_MCQ_regex_excluded_in_P2": "^P1-[A-F]-\\d{3}$",
+      "P1_CaseID_regex_excluded_in_P2": "^CBQ\\d*-[A-F]\\d*$",
+      "collision_check": "validator must reject any item in pack_p2_*.js with a P1- QID, and any item with a P2- QID in a pack_*_corrected.js file. Cross-check at pack-load time."
+    },
+    "part2onlyflag_enforcement": {
+      "field_name": "Part2OnlyFlag",
+      "required_type": "boolean",
+      "required_value": true,
+      "allowed_on": "Every item in pack_p2_*.js and case_pack_p2_*.js",
+      "prohibited_on": "No P1 item should carry this field — if present on P1 item, flag as cross-contamination",
+      "verification_gates": ["G5 metadata review", "G6 final validation", "Governance guard Rule 11 write-time BLOCK"],
+      "serialization_check": "JSON.parse(JSON.stringify(item)).Part2OnlyFlag === true — survives round-trip",
+      "error_handling": "Absent → BLOCK, false → BLOCK, non-boolean → BLOCK, falsy → BLOCK"
+    },
+    "domain_boundary_rules": {
+      "description": "P1-exclusive concepts must not appear as primary tested material in P2. These are Part 1-only topics that, if found in a P2 item, indicate cross-contamination.",
+      "part1_exclusives": [
+        "Standard costing variances (DM, DL, VOH, FOH)",
+        "Process costing (FIFO, weighted average EUP)",
+        "Job order costing (under/overapplied overhead)",
+        "Joint product cost allocation (NRV, physical measures)",
+        "Service department allocation (direct, step, reciprocal)",
+        "Activity-based costing full implementation",
+        "COSO IC 2013 detailed control procedures (at procedure level — framework awareness is permitted)",
+        "Technology operational details (SDLC phases, DRP, BCP procedures)"
+      ],
+      "part2_permitted_overlap": [
+        "CVP analysis (breakeven) — appears in both parts, P2 tests at higher Bloom's levels",
+        "Relevant costing / differential analysis — appears in both parts",
+        "Ethical principles — both parts, P2 tests deeper application (FCPA, SOX, IMA decision model)",
+        "COSO framework awareness — P2 references COSO ERM (2017), not COSO IC (2013)"
+      ],
+      "enforcement": "During G1 Technical Review, the Accountant must verify every item's topic against the P1 Exclusives list. Any item testing a Part 1 exclusive as its primary concept → BLOCK certification. CAQS_P2 §E.3 enforcement. Governance guard checks for COSO IC component names (Control Environment, Control Activities, Monitoring Activities) in Domain D items → WARN."
+    }
+  },
+  "defect_prevention_checklist": {
+    "dl_008_prevention": {
+      "defect": "ExplanationWrong[CorrectChoice] non-empty",
+      "recurrence_risk": "High (highest-frequency structural defect in P1: 539 occurrences)",
+      "p2_prevention_type": "STRUCTURAL + PROCEDURAL",
+      "governance_rule": "Rule 2 — BLOCK at write time",
+      "validator_check": "ExplanationValidator_P2 — EW[CC] must be empty string",
+      "certification_gate": "G6 Final Validation — verify zero DL-008 in certification batch",
+      "structural_prevention": "Single-object architecture — CorrectChoice and ExplanationWrong fields are co-located in one JSON object. No CC-offset scanning false positives (DL-029 eliminated). The findDL008Violations() function extracts CC from same object as EW fields.",
+      "procedural_prevention": "Governance guard Rule 2 scans newContent at every write/edit. Authoring template must be configured to set EW[CC]='' for the correct answer slot. Post-generation hook verifies before save.",
+      "verified_by": "Governance guard test suite Rule 2 test block. Full-pool scan after every certification wave."
+    },
+    "dl_021_prevention": {
+      "defect": "Missing distractor ExplanationWrong fields (absent non-CC slots)",
+      "recurrence_risk": "High (Pack E Section C: 100 items with zero distractor EW fields)",
+      "p2_prevention_type": "STRUCTURAL + PROCEDURAL",
+      "governance_rule": "Rule 10 — BLOCK absent/empty non-CC EW fields at write time",
+      "validator_check": "ExplanationValidator_P2 — all 4 EW fields must be structurally present (hasOwnProperty check), distractor slots must be non-empty (≥50 characters)",
+      "certification_gate": "G6 Final Validation — verify 0 DL-021 violations in certification batch",
+      "structural_prevention": "Single-object architecture — all 4 EW fields in one object eliminates template-rotation omission risk (P1 Pack E Section C root cause). Authoring template must emit all 4 EW fields per item regardless of CC.",
+      "procedural_prevention": "Governance guard Rule 10 checks at write time: field must be present AND non-empty for distractor slots. Authoring template post-generation hook: verify 4 EW fields exist, CC slot empty, distractor slots ≥50 chars. Section-level sweep after initial batch authoring."
+    },
+    "dl_026_prevention": {
+      "defect": "Empty non-CorrectChoice ExplanationWrong slots",
+      "recurrence_risk": "Medium (1,005 items affected in P1 across 3 packs)",
+      "p2_prevention_type": "STRUCTURAL + PROCEDURAL",
+      "governance_rule": "Rule 6 — BLOCK empty non-CC EW slots at write time",
+      "validator_check": "ExplanationValidator_P2 — all 3 non-CC EW slots must have ≥50 characters of choice-specific text",
+      "certification_gate": "G6 Final Validation — verify 0 DL-026 violations in certification batch",
+      "structural_prevention": "Single-object architecture eliminates the P1 rotation-artifact root cause (5-item template leaving one slot empty in lockstep with CC rotation). All 4 EW fields in one object → all or nothing.",
+      "procedural_prevention": "Governance guard Rule 6 BLOCK at write time. Authoring template post-generation hook: verify all 3 non-CC EW slots have choice-specific text ≥50 characters. No template-generated empty slots. Per-item diff check during certification: all 3 distractor slots non-empty before state transition.",
+      "minimum_text_requirement": "50 characters per non-CC EW slot. Enforcement: structural (Rule 6 blocks short strings at write time) and procedural (G5 metadata review verifies length)."
+    },
+    "dl_037_prevention": {
+      "defect": "Choice binary lead-in polarity mismatch ('No' / 'Yes' contradicted by conclusion)",
+      "recurrence_risk": "Medium (1 instance in P1: P1-B-040)",
+      "p2_prevention_type": "PROCEDURAL",
+      "governance_rule": "Rule 9 — BLOCK at write time",
+      "validator_check": "Full-pool semantic scan after each certification wave (scripts/scan_logic_inversions_p2.js)",
+      "certification_gate": "G2 Psychometric Review (catch during manual review) + G6 Final Validation (automated scan)",
+      "structural_prevention": "Language-level defect — no structural prevention possible. Must be procedural.",
+      "procedural_prevention": "Governance guard Rule 9 BLOCK at write time: PATTERN_NO_AFFIRMATIVE and PATTERN_YES_NEGATIVE regexes scan all choice text. Authoring standards: choices beginning with Yes/No must align the binary lead-in with the logical conclusion. Full-pool scan after each certification wave.",
+      "p2_pattern_expansion_notes": "P2 may introduce new Yes/No patterns specific to decision analysis (accept/reject, make/buy, invest/do-not-invest). Extend regex patterns if needed based on P2 authoring patterns."
+    },
+    "dl_013_prevention": {
+      "defect": "Template boilerplate distractor explanations (generic text reused across slots)",
+      "recurrence_risk": "High (single-highest-volume defect class: 2,587 occurrences in P1)",
+      "p2_prevention_type": "PROCEDURAL",
+      "governance_rule": "Rule 6 (empty slots) + CAQS §4.4 EV2 (no placeholder phrases) — no dedicated boilerplate rule",
+      "validator_check": "CAQS_P2 §4 extension: ExplanationValidator_P2 checks for template boilerplate patterns. Initial authorized patterns: 'represents a plausible misconception', 'does not align with', 'Option X... is incorrect', 'A candidate selecting this option may misunderstand'. Add P2-specific boilerplate patterns as they emerge from P2 template authoring.",
+      "certification_gate": "G4 Instructional Review — editor must verify each distractor explanation is choice-specific and free of boilerplate.",
+      "structural_prevention": "NONE — template boilerplate is a content-quality defect, not structural. Cannot be architecturally prevented.",
+      "procedural_prevention": "Authoring template design: DISTRACTOR EXPLANATIONS MUST BE AUTHORED INDIVIDUALLY — NO TEMPLATE TEXT. Each distractor slot requires unique text written for its specific choice. Post-generation Jaccard similarity check: if any two distractor EW fields within the same item have >50% word overlap, flag for review. CAQS §4.4 EV2: no placeholder phrases. CAQS §4.4 EV4: distractor explanations must be choice-specific (not identical across slots)."
+    },
+    "dl_031_prevention": {
+      "defect": "Difficulty inflation — definition-match items labeled Moderate (should be Easy)",
+      "recurrence_risk": "High (~500 items in P1, systematic)",
+      "p2_prevention_type": "PROCEDURAL",
+      "governance_rule": "No dedicated guard rule — enforced via G2 Psychometric Review and certification blocking conditions",
+      "validator_check": "DifficultyCalibrationValidator (deferred until D04 — first 100+ items). Checks: stem-CorrectChoice lexical overlap >50% + distractors are definition-level opposites → flag for recalibration. If all distractors require genuine application-level discernment → may retain Moderate label.",
+      "certification_gate": "G2 Psychometric Review — psychometrician must verify difficulty label matches cognitive demand. Definition-match items default to Easy (1) unless distractors justify higher difficulty.",
+      "structural_prevention": "NONE — difficulty calibration is a pedagogical judgment, not a structural property.",
+      "procedural_prevention": "Per-item cognitive justification required before certification. No template-based difficulty labeling (P1 root cause: fixed difficulty assignment pattern per rotation-group position). Each item's DifficultyScore must be justified by: (a) Bloom's level, (b) calculation complexity, (c) distractor deceptiveness, (d) number of reasoning steps required. Definition-match checklist: stem-defines-concept → correct-answer-is-term → default to Easy unless distractors require Application-level discernment."
+    },
+    "dl_030_prevention": {
+      "defect": "CorrectChoice answer-key errors (stored CC disagrees with independently derived answer)",
+      "recurrence_risk": "Critical (5 Certified P1 items had wrong answers. P2 has more complex calculations → higher risk)",
+      "p2_prevention_type": "PROCEDURAL (mandatory independent recalculation)",
+      "governance_rule": "Rule 4 — answer-key changes require recomputed note. Rule 11 — Part2OnlyFlag prevents P1 answer-key migration.",
+      "validator_check": "G3 Numerical Validation — mandatory independent recalculation for ALL P2 calculation items (not spot-check — full population)",
+      "certification_gate": "G3 Numerical Validation + G1 Technical Review. BLOCK: any item where independent recalculation result disagrees with stored Correct value. Must be resolved before certification.",
+      "structural_prevention": "NONE — answer-key correctness is a content-quality requirement. No structural enforcement can verify accounting correctness.",
+      "procedural_prevention": "Mandatory blind recalculation protocol per P2002_CERTIFICATION_STANDARD.md §D.4: (1) Read stem and exhibits. (2) Do NOT read stored Correct value. (3) Solve independently showing formula + substituted values + result. (4) Compare to stored answer. (5) Reconcile differences. Document recalculation in certification entry. Cover all 52 P2 formulas. Highest-priority formulas for independent verification: WACC, CAPM, NPV, DuPont ROE, breakeven multi-product, after-tax cash flow, transfer price, EOQ. Note: P1's DL-030 escaped detection because certification waves did NOT perform mandatory independent recalculation on all items — spot-check sampling missed 5 wrong answers. P2 must NOT repeat this: 100% population independent recalculation is non-negotiable."
+    }
+  },
+  "implementation_order": [
+    {
+      "step": 1,
+      "name": "Create P2 repository and directory structure",
+      "items": ["M13", "partial M05 (directory structure)"],
+      "rationale": "Repository must exist before any files can be created. Create root with all subdirectories (knowledge/, scripts/, foundation/, reports/, ai/, review/, backups/, .opencode/plugins/).",
+      "estimated_minutes": 10,
+      "dependencies": "None"
+    },
+    {
+      "step": 2,
+      "name": "Create empty knowledge and foundation files",
+      "items": ["M05", "M06", "M07", "M08", "M09", "M14"],
+      "rationale": "All reference documents must exist before the governance guard (which references them in error messages and file-pattern checks). P2-004 needs these to validate the first question against.",
+      "estimated_minutes": 60,
+      "dependencies": "Step 1 (directories exist)"
+    },
+    {
+      "step": 3,
+      "name": "Create empty pack and case pack files",
+      "items": ["M03", "M04"],
+      "rationale": "Pack file skeletons must exist before governance guard can verify them (SOURCE_FILE_RE pattern match). P2-004 writes directly into these files.",
+      "estimated_minutes": 15,
+      "dependencies": "Step 1 (directories exist)"
+    },
+    {
+      "step": 4,
+      "name": "Fork and adapt governance-guard.js",
+      "items": ["M01"],
+      "rationale": "The governance guard is the single most critical artifact — it enforces Rules 1-11 at write time. Must be deployed before any content write. This is the hard gate: if the governance guard isn't functioning, P2-004 cannot start.",
+      "estimated_minutes": 45,
+      "dependencies": "Steps 1-3 (files and directories exist for pattern matching)"
+    },
+    {
+      "step": 5,
+      "name": "Create governance guard test suite and verify all 11 rules",
+      "items": ["M02"],
+      "rationale": "The test suite proves the governance guard works before any content is authored. Must achieve 55+/55 PASS before P2-004 begins. This is the evidence that governance enforcement is live.",
+      "estimated_minutes": 45,
+      "dependencies": "Step 4 (governance guard exists)"
+    },
+    {
+      "step": 6,
+      "name": "Fork and adapt validator infrastructure",
+      "items": ["M10", "M11"],
+      "rationale": "Validators and registry builder are the second line of defense (governance guard is first). Must be deployed and tested on empty packs before content exists.",
+      "estimated_minutes": 30,
+      "dependencies": "Steps 2-3 (reference files and pack files exist for validation targets)"
+    },
+    {
+      "step": 7,
+      "name": "Create AGENTS.md and CONSTITUTION for P2",
+      "items": ["M12", "M13"],
+      "rationale": "These are the session-level governance documents. P2-004 needs them to understand its operational constraints. Can be created in parallel with step 6.",
+      "estimated_minutes": 45,
+      "dependencies": "Step 1 (directories exist)"
+    },
+    {
+      "step": 8,
+      "name": "Run full governance verification — T0 pre-flight",
+      "items": ["All M01-M14"],
+      "rationale": "Before declaring the bootstrap complete, run the complete governance verification: (a) governance guard test suite 55+ PASS, (b) ExplanationValidator parses all 5 empty packs without error, (c) build_master_registry_p2.js produces valid empty registry, (d) all knowledge/foundation files present with correct headers, (e) pack files parse cleanly, (f) SHA-256 hashes written to CURRENT_BASELINES_P2.md §5, (g) opencode.json references governance-guard-p2.js as the active plugin.",
+      "estimated_minutes": 15,
+      "dependencies": "Steps 1-7 complete"
+    }
+  ],
+  "governance_guard_test_plan": {
+    "total_tests_target": 55,
+    "test_categories": [
+      {
+        "category": "Rule 2 — DL-008 enforcement",
+        "test_count": 6,
+        "description": "verify EW[CC] non-empty BLOCK, EW[CC] empty PASS, multi-object batch, absent-field edge case, single-object architecture detection, false-positive avoidance",
+        "carried_forward_from_p1": 5,
+        "p2_specific_new": 1
+      },
+      {
+        "category": "Rule 5 — Batch cap enforcement",
+        "test_count": 4,
+        "description": "31 without auth BLOCK, 30 without auth PASS, 50 with BLOCK-AUTHORIZED PASS, BLOCK-AUTHORIZED variant recognition",
+        "carried_forward_from_p1": 4,
+        "p2_specific_new": 0
+      },
+      {
+        "category": "Rule 6 — DL-026 enforcement",
+        "test_count": 5,
+        "description": "empty non-CC slot BLOCK, all non-CC populated PASS, absent field (Rule 10 overlap), correct CC-slot empty, multiple empty slots in one item",
+        "carried_forward_from_p1": 4,
+        "p2_specific_new": 1
+      },
+      {
+        "category": "Rule 9 — DL-037 enforcement",
+        "test_count": 5,
+        "description": "No+affirmative BLOCK, Yes+negative BLOCK, No+negative PASS, Yes+affirmative PASS, empty choice skip",
+        "carried_forward_from_p1": 5,
+        "p2_specific_new": 0
+      },
+      {
+        "category": "Rule 10 — DL-021 enforcement",
+        "test_count": 5,
+        "description": "absent EW field BLOCK, empty EW field BLOCK, all present and non-empty PASS, CC-slot empty PASS (not distractor), absent + empty combo",
+        "carried_forward_from_p1": 4,
+        "p2_specific_new": 1
+      },
+      {
+        "category": "Rule 11 — Part2OnlyFlag enforcement [NEW P2-ONLY]",
+        "test_count": 6,
+        "description": "flag absent BLOCK, flag===false BLOCK, flag===true PASS, non-boolean type BLOCK, serialization round-trip verification, flag on non-P2-file skip",
+        "carried_forward_from_p1": 0,
+        "p2_specific_new": 6
+      },
+      {
+        "category": "Rule 3 — Registry hand-edit BLOCK",
+        "test_count": 3,
+        "description": "hand-edit MASTER_QUESTION_REGISTRY_P2.md BLOCK, regeneration script write PASS, non-registry file write PASS",
+        "carried_forward_from_p1": 2,
+        "p2_specific_new": 1
+      },
+      {
+        "category": "Rule 7 — Derived registry protection",
+        "test_count": 4,
+        "description": "hand-edit CURRENT_BASELINES_P2.md BLOCK, hand-edit SESSION_STATUS_P2 BLOCK, regeneration script escape, non-derived file write PASS",
+        "carried_forward_from_p1": 2,
+        "p2_specific_new": 2
+      },
+      {
+        "category": "Cross-repo collision detection",
+        "test_count": 4,
+        "description": "P1- QID in pack_p2_ file BLOCK, P2- QID in P1 pack file BLOCK (if co-located), CBQ CaseID in P2 case file BLOCK, CBQ2 CaseID correctly recognized",
+        "carried_forward_from_p1": 0,
+        "p2_specific_new": 4
+      },
+      {
+        "category": "Rule 1 — REVISION_HISTORY_P2.md tracking",
+        "test_count": 5,
+        "description": "question_state change tracked, REVISION_HISTORY_P2.md touched → no violation, question_state change without REVISION_HISTORY → BLOCK at session.idle, no question_state changes → no tracking, multi-file qsChanges accumulation",
+        "carried_forward_from_p1": 3,
+        "p2_specific_new": 2
+      },
+      {
+        "category": "Rule 4 — Answer-key verification note",
+        "test_count": 4,
+        "description": "CorrectChoice change without recomputed note → BLOCK, with recomputed note → PASS, non-source-file CorrectChoice change → not tracked, Correct field change for numeric items → tracked",
+        "carried_forward_from_p1": 4,
+        "p2_specific_new": 0
+      },
+      {
+        "category": "Rule 8 — Session package registration",
+        "test_count": 3,
+        "description": "write to session_packages without registry → BLOCK, with registry → PASS, non-session-package file → not checked",
+        "carried_forward_from_p1": 2,
+        "p2_specific_new": 1
+      },
+      {
+        "category": "Infrastructure — string-aware brace-matcher",
+        "test_count": 2,
+        "description": "brackets inside string values don't break extraction, nested objects with brace-containing stems parse correctly",
+        "carried_forward_from_p1": 2,
+        "p2_specific_new": 0
+      }
+    ],
+    "expected_pass_rate": "100% (55/55)",
+    "minimum_pass_rate": "100% (55/55) — no test may fail before P2-004 begins",
+    "test_file": "scripts/test_governance_guard_p2.js",
+    "governance_guard_file": ".opencode/plugins/governance-guard-p2.js",
+    "execution_command": "node scripts/test_governance_guard_p2.js"
+  },
+  "risk_register": {
+    "critical_risks": [
+      {
+        "risk": "Governance guard not deployed before first P2 content write",
+        "probability": "Low (P2-003 bootstrap document gates on it)",
+        "impact": "HIGH — all structural defects that plagued P1 (DL-008, DL-021, DL-026, DL-037) could be introduced into P2 from Day 1. Remediation effort would be 100-1000x the prevention effort.",
+        "mitigation": "M01 and M02 are mandatory-before-P2-004 items. P2-004 pre-flight check verifies governance guard test suite 55/55 PASS."
+      },
+      {
+        "risk": "Single-object architecture not enforced — dual-block creeps in via template authoring",
+        "probability": "Medium (template engines may emit dual-block by default)",
+        "impact": "HIGH — reintroduces DL-016, DL-029, CC-offset scanning false positives. The single biggest architectural win of P2 over P1 would be lost.",
+        "mitigation": "Governance guard Rule 2 extractObjectsFromText() verifies single-object per-item. Authoring template must be validated to emit single-object format. Post-generation structural verification."
+      },
+      {
+        "risk": "Part2OnlyFlag absent on early items — sets precedent",
+        "probability": "Low (Rule 11 enforces from first write)",
+        "impact": "HIGH — items without Part2OnlyFlag cannot be distinguished from P1 items. Cross-contamination risk. Retroactive flag addition is error-prone (DL-024 lesson: 150 P1 items missed question_state).",
+        "mitigation": "Governance guard Rule 11 BLOCK write-time. G5 metadata review. Certification pipeline gate. Post-generation hook."
+      },
+      {
+        "risk": "DL-030 answer-key errors — P2's complex formulas increase error rate",
+        "probability": "Medium-High (more complex formulas: WACC, CAPM, NPV vs P1's simpler calculations)",
+        "impact": "Critical — wrong answer in learner pool. P1 had 5 Certified items with wrong answers despite spot-check verification.",
+        "mitigation": "Mandatory 100% population independent recalculation (not spot-check). G3 Numerical Validation gate. FORMULA_MASTER_P2.md with common errors documented per formula. See P2002_CERTIFICATION_STANDARD.md §E.1."
+      }
+    ],
+    "medium_risks": [
+      {
+        "risk": "P2 authorities confused with P1 authorities (COSO IC cited instead of COSO ERM)",
+        "probability": "High (authoring familiarity bias — authors who worked on P1 may default to P1 authorities)",
+        "impact": "Medium — incorrect authority citation is a DL-009-pattern defect. Not a wrong answer, but wrong reference.",
+        "mitigation": "AUTHORITY_TO_TOPIC_MAP_P2.md created before Domain D/E authoring. CAQS §E.2 authority verification table. Governance guard Rule 11 dimension: cross-reference COSO framework names."
+      },
+      {
+        "risk": "Domain boundary violation — P1 concepts accidentally tested in P2 items",
+        "probability": "Medium (authors may not know P1-exclusives list)",
+        "impact": "Medium — tests wrong exam content. Would be caught at G1 Technical Review but could slip through if reviewer lacks P1 knowledge.",
+        "mitigation": "CAQS_P2 §E.3 with explicit P1-exclusives list. G1 Technical Review checklist item: 'No P1-only concept tested as primary.' Governance guard can WARN on P1-exclusive keywords in P2 files."
+      },
+      {
+        "risk": "Difficulty inflation via template-based labeling (DL-031 pattern)",
+        "probability": "High (same root cause as P1 — template rotation assignment of difficulty)",
+        "impact": "Medium — systematic miscalibration requiring bulk recalibration later.",
+        "mitigation": "No template-based difficulty labeling. Per-item cognitive justification required. DifficultyCalibrationValidator deployed after 100+ items (D04)."
+      }
+    ]
+  },
+  "p2_004_preflight_checklist": {
+    "description": "This checklist must be completed and verified before P2-004 writes its first question. Each item maps to a mandatory-before-P2-004 item (M01-M14) or governance guard test.",
+    "items": [
+      { "check": ".opencode/plugins/governance-guard-p2.js exists and loads without error", "maps_to": "M01" },
+      { "check": "governance guard SOURCE_FILE_RE matches P2 pack and case files", "maps_to": "M01" },
+      { "check": "governance guard DERIVED_REGISTRY_RE includes all P2 registries", "maps_to": "M01" },
+      { "check": "Rule 11 (Part2OnlyFlag) is implemented in governance guard", "maps_to": "M01" },
+      { "check": "scripts/test_governance_guard_p2.js has 55+ test cases", "maps_to": "M02" },
+      { "check": "All 55 governance guard tests PASS (0 FAIL)", "maps_to": "M02" },
+      { "check": "pack_p2_a.js through pack_p2_e.js exist and parse cleanly", "maps_to": "M03" },
+      { "check": "case_pack_p2_1.js through case_pack_p2_3.js exist and parse cleanly", "maps_to": "M04" },
+      { "check": "knowledge/REVISION_HISTORY_P2.md exists with header", "maps_to": "M05" },
+      { "check": "knowledge/DEFECT_LIBRARY_P2.md exists with awareness entries", "maps_to": "M06" },
+      { "check": "knowledge/CURRENT_BASELINES_P2.md exists with §5 hash table filled", "maps_to": "M07" },
+      { "check": "knowledge/CAQS_P2_v1.0.md exists with all sections", "maps_to": "M08" },
+      { "check": "foundation/FORMULA_MASTER_P2.md has all 52 formulas", "maps_to": "M09" },
+      { "check": "ExplanationValidator_P2 parses all empty packs without error", "maps_to": "M10" },
+      { "check": "build_master_registry_p2.js runs and produces valid empty registry", "maps_to": "M11" },
+      { "check": "AGENTS.md for P2 exists with all 13 sections adapted", "maps_to": "M12" },
+      { "check": "00_PROJECT_CONSTITUTION_P2.md exists with P2 authorities", "maps_to": "M13" },
+      { "check": "TAXONOMY_REGISTRY_P2.md and EXAM_BLUEPRINT_P2.md exist", "maps_to": "M14" },
+      { "check": "opencode.json references governance-guard-p2.js as active plugin", "maps_to": "Step 8" },
+      { "check": "SHA-256 hashes for all governance-critical files in CURRENT_BASELINES_P2.md §5", "maps_to": "Step 8" }
+    ]
+  },
+  "appendix": {
+    "governance_guard_p2_soURCE_FILE_RE": "^(pack_p2_[a-e]\\.js|case_pack_p2_[1-3]\\.js)$",
+    "governance_guard_p2_derived_registry_re_additions": [
+      "MASTER_QUESTION_REGISTRY_P2\\.md$",
+      "CURRENT_BASELINES_P2\\.md$",
+      "SESSION_STATUS_P2_\\d{4}-\\d{2}-\\d{2}\\.md$",
+      "DEFECT_MANIFEST_DL008_DL026_P2\\.json$"
+    ],
+    "governance_guard_p2_rule11_function_signature": "findPart2OnlyFlagViolations(text, SOURCE_FILE_RE_P2) → [{ qid, reason: 'absent'|'false'|'non_boolean'|'serialization_fail' }]",
+    "governance_guard_p2_rule11_new_content_scan": "In tool.execute.before hook: if filePath matches SOURCE_FILE_RE_P2, scan newContent for extracted objects, check Part2OnlyFlag. BLOCK if any violation.",
+    "key_differences_p1_vs_p2_governance": {
+      "p1_rule_count": 10,
+      "p2_rule_count": 11,
+      "p2_only_rule": "Rule 11 — Part2OnlyFlag mandatory enforcement",
+      "p1_dual_block": "Metadata block + content block (DL-016 vulnerability)",
+      "p2_single_object": "One JSON object per item (DL-016 eliminated, DL-029 eliminated)",
+      "p1_cc_offset": "CorrectChoice may precede QuestionID in JSON (DL-029 false positives)",
+      "p2_cc_offset": "No CC-offset problem — all fields in same object, extraction is object-boundary-based",
+      "p1_registry_count": "1 (MASTER_QUESTION_REGISTRY.md)",
+      "p2_registry_count": "1 (MASTER_QUESTION_REGISTRY_P2.md)",
+      "p1_pack_count": "5 packs (pack_a_corrected.js through pack_e_corrected.js)",
+      "p2_pack_count": "5 packs (pack_p2_a.js through pack_p2_e.js)",
+      "p1_case_pack_count": "5 packs (scored_cases.js through scored_cases5.js)",
+      "p2_case_pack_count": "3 packs (case_pack_p2_1.js through case_pack_p2_3.js)"
+    },
+    "cross_reference_table": {
+      "P2002_GOVERNANCE_MAPPING.json": "Source of all 101 governance element classifications. Authoritative for Carry Forward / Modify / Retire / Add decisions.",
+      "P2002_CERTIFICATION_STANDARD.md": "Authoritative for all P2 certification lifecycle, gates, formulas, difficulty targets, Part2OnlyFlag, and domain boundaries.",
+      "P2002_BLUEPRINT_EXTRACTION.json": "Authoritative for all 6 P2 domains, 43 LOS statements, 5 pack architectures, 3 case pack architectures, and known defect awareness entries.",
+      "P1_governance-guard.js": "Reference implementation. Source of all 10 existing rules, string-aware brace-matcher, and hook infrastructure.",
+      "P1_DEFECT_LIBRARY.md": "Reference for all 37 DL-IDs. Defect awareness entries in DEFECT_LIBRARY_P2.md reference specific P1 DL-IDs for recurrence-risk tracking."
+    }
+  }
+}

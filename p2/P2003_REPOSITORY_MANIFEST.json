@@ -1,0 +1,816 @@
+{
+  "meta": {
+    "session": "P2-003",
+    "subagent": "repository-builder",
+    "date": "2026-07-29",
+    "description": "Authoritative repository manifest for CMA_Part_2_2026 — complete file and directory inventory for repository initialization"
+  },
+  "p2_002_verification": {
+    "files_found": [
+      { "name": "P2002_BLUEPRINT_EXTRACTION.json", "lines": 951, "size_kb": "~42", "status": "PRESENT" },
+      { "name": "P2002_CERTIFICATION_STANDARD.md", "lines": 854, "size_kb": "~35", "status": "PRESENT" },
+      { "name": "P2002_EXECUTION_ROADMAP.json", "lines": 987, "size_kb": "~48", "status": "PRESENT" },
+      { "name": "P2002_GOVERNANCE_MAPPING.json", "lines": 962, "size_kb": "~50", "status": "PRESENT" },
+      { "name": "P2002_REPOSITORY_LAYOUT.md", "lines": 680, "size_kb": "~28", "status": "PRESENT" }
+    ],
+    "cross_reference_consistency": {
+      "pack_naming": {
+        "description": "MCQ pack filenames in BLUEPRINT_EXTRACTION.json §mcq_packs match REPOSITORY_LAYOUT.md §b.1",
+        "blueprint_packs": ["pack_p2_a.js", "pack_p2_b.js", "pack_p2_c.js", "pack_p2_d.js", "pack_p2_e.js"],
+        "layout_packs": ["pack_p2_a.js", "pack_p2_b.js", "pack_p2_c.js", "pack_p2_d.js", "pack_p2_e.js"],
+        "consistent": true
+      },
+      "case_pack_naming": {
+        "description": "Case pack filenames in BLUEPRINT_EXTRACTION.json §case_packs match REPOSITORY_LAYOUT.md §b.2",
+        "blueprint_case_packs": ["case_pack_p2_1.js", "case_pack_p2_2.js", "case_pack_p2_3.js"],
+        "layout_case_packs": ["case_pack_p2_1.js", "case_pack_p2_2.js", "case_pack_p2_3.js"],
+        "consistent": true
+      },
+      "domain_labels": {
+        "description": "6-domain naming from BLUEPRINT_EXTRACTION.json §domains matches CERTIFICATION_STANDARD.md and REPOSITORY_LAYOUT.md",
+        "blueprint_domains": {
+          "A": "Financial Statement Analysis",
+          "B": "Corporate Finance",
+          "C": "Decision Analysis",
+          "D": "Risk Management",
+          "E": "Investment Decisions",
+          "F": "Professional Ethics"
+        },
+        "certification_domains": {
+          "A": "Financial Statement Analysis",
+          "B": "Corporate Finance",
+          "C": "Decision Analysis",
+          "D": "Risk Management",
+          "E": "Investment Decisions",
+          "F": "Professional Ethics"
+        },
+        "layout_domains": {
+          "A": "Financial Statement Analysis",
+          "B": "Corporate Finance",
+          "C": "Decision Analysis",
+          "D": "Risk Management",
+          "E": "Investment Decisions",
+          "F": "Professional Ethics"
+        },
+        "consistent": true
+      },
+      "phase1_initialization_alignment": {
+        "description": "Phase 1 milestones (EXECUTION_ROADMAP.json) map to initialization checklists (REPOSITORY_LAYOUT.md §g)",
+        "mappings": [
+          { "milestone": "M1.1 — Repository Initialization", "checklist_sections": ["g.1 Repository Scaffold", "g.2 Root-Level Files"] },
+          { "milestone": "M1.2 — Governance Foundation", "checklist_sections": ["g.5 Knowledge Directory", "g.3 Root AGENTS.md"] },
+          { "milestone": "M1.3 — Technical Foundation", "checklist_sections": ["g.6 Foundation Directory"] },
+          { "milestone": "M1.4 — Governance Guard Deployment", "checklist_sections": ["g.9 .opencode Directory", "g.10 Scripts Directory"] },
+          { "milestone": "M1.5 — Skeleton Files & Application Foundation", "checklist_sections": ["g.3 MCQ Pack Files", "g.4 Case Pack Files", "g.2 app.js/styles.css/html"] },
+          { "milestone": "M1.6 — Validation & Test Suite Migration", "checklist_sections": ["g.10 Scripts Directory", "g.11 Subfolder Creation"] },
+          { "milestone": "M1.7 — Phase 1 Gate Review", "checklist_sections": ["g.12 Governance Verification"] }
+        ],
+        "consistent": true
+      },
+      "governance_guard_rule_count": {
+        "description": "GOVERNANCE_MAPPING.json enumerates 10 rules (Rule 1 through Rule 10) but REPOSITORY_LAYOUT.md §g.9 states '9 rules' — stale reference; GOVERNANCE_MAPPING is authoritative",
+        "governance_mapping_rules": ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 5", "Rule 6", "Rule 7", "Rule 8", "Rule 9", "Rule 10"],
+        "layout_reported": "9 rules",
+        "discrepancy": "MINOR — REPOSITORY_LAYOUT.md was drafted before Part 1 S913/S914 deployed Rule 9 (DL-037) and Rule 10 (DL-021). GOVERNANCE_MAPPING.json (101-element classification) is the authoritative source. P2 guard deploys all 10 rules.",
+        "consistent": false
+      },
+      "agens_md_duplication": {
+        "description": "REPOSITORY_LAYOUT.md line 34 lists AGENTS.md under knowledge/ AND line 114 at root level. Per P1 architecture and task instructions, AGENTS.md is a root-level file. The knowledge/ entry is likely a tree-drafting error.",
+        "resolution": "AGENTS.md placed at root level only. The knowledge/ listing is treated as a drafting artifact and excluded from the knowledge directory inventory."
+      },
+      "qid_format": {
+        "description": "QID format P2-{Section}-{NNN} is consistent across BLUEPRINT_EXTRACTION.json §mcq_packs and REPOSITORY_LAYOUT.md §d.1",
+        "blueprint_pattern": "P2-{Section}-{NNN}",
+        "layout_pattern": "P2-{Section}-{NNN}",
+        "consistent": true
+      },
+      "caseid_format": {
+        "description": "CaseID format CBQ2{Pack}-{Section}{Seq} is consistent across BLUEPRINT_EXTRACTION.json §case_totals and REPOSITORY_LAYOUT.md §c.1",
+        "blueprint_pattern": "CBQ2{Pack}-{Section}{Seq}",
+        "layout_pattern": "CBQ2{PackNum}-{Section}{Seq}",
+        "consistent": true
+      },
+      "total_item_counts": {
+        "description": "2,500 MCQs + 75 cases consistent across all documents",
+        "blueprint_mcqs": 2500,
+        "blueprint_cases": 75,
+        "layout_mcqs": 2500,
+        "layout_cases": 75,
+        "execution_mcqs": 2500,
+        "execution_cases": 75,
+        "certified_target": 2375,
+        "consistent": true
+      }
+    },
+    "all_consistent": false,
+    "notes": "One minor inconsistency: REPOSITORY_LAYOUT.md says governance guard has '9 rules' but GOVERNANCE_MAPPING.json enumerates 10 rules (Rule 1 through Rule 10). The REPOSITORY_LAYOUT count is stale — Part 1 guard was expanded to 10 rules by S913/S914 (Rule 9: DL-037 polarity mismatch; Rule 10: DL-021 absent EW fields). P2 deploys all 10 rules. Additionally, AGENTS.md appears under both knowledge/ and root in the REPOSITORY_LAYOUT tree — resolved in favor of root-only placement per P1 architecture."
+  },
+  "repository_name": "CMA_Part_2_2026",
+  "directory_tree": {
+    "root_directories": [
+      { "name": ".opencode", "description": "OpenCode IDE tooling configuration", "source": "REPOSITORY_LAYOUT.md §a line 17" },
+      { "name": "knowledge", "description": "AI governance: constitution, standards, defect library, taxonomy", "source": "REPOSITORY_LAYOUT.md §a line 33" },
+      { "name": "foundation", "description": "Authoritative reference documents: exam blueprint, formula master", "source": "REPOSITORY_LAYOUT.md §a line 46" },
+      { "name": "ai", "description": "AI collaboration matrix, persona definitions, workflows", "source": "REPOSITORY_LAYOUT.md §a line 50" },
+      { "name": "review", "description": "Decision trees, exam traps, audit protocols", "source": "REPOSITORY_LAYOUT.md §a line 64" },
+      { "name": "scripts", "description": "Validation, enrichment, and utility scripts", "source": "REPOSITORY_LAYOUT.md §a line 69" },
+      { "name": "reports", "description": "Audit, session, certification, and integration reports", "source": "REPOSITORY_LAYOUT.md §a line 80" },
+      { "name": "backups", "description": "Timestamped file backups", "source": "REPOSITORY_LAYOUT.md §a line 88" }
+    ],
+    "root_files": [
+      { "name": "index_updated.html", "type": "application", "description": "Application HTML shell — forked from Part 1, Part 2 adapted", "source": "REPOSITORY_LAYOUT.md §a line 96" },
+      { "name": "app.js", "type": "application", "description": "Exam engine — forked from Part 1 (~70% reusable, ~30% Part 2 config)", "source": "REPOSITORY_LAYOUT.md §a line 97" },
+      { "name": "styles.css", "type": "application", "description": "Application stylesheet — identical to Part 1", "source": "REPOSITORY_LAYOUT.md §a line 98" },
+      { "name": "pack_p2_a.js", "type": "mcq_pack", "description": "Domain A — Financial Statement Analysis (500 items target)", "source": "REPOSITORY_LAYOUT.md §a line 100" },
+      { "name": "pack_p2_b.js", "type": "mcq_pack", "description": "Domain B — Corporate Finance (500 items target)", "source": "REPOSITORY_LAYOUT.md §a line 101" },
+      { "name": "pack_p2_c.js", "type": "mcq_pack", "description": "Domain C — Decision Analysis (500 items target)", "source": "REPOSITORY_LAYOUT.md §a line 102" },
+      { "name": "pack_p2_d.js", "type": "mcq_pack", "description": "Domain D — Risk Management (250 items) + E — Investment Decisions (250 items)", "source": "REPOSITORY_LAYOUT.md §a line 103" },
+      { "name": "pack_p2_e.js", "type": "mcq_pack", "description": "Domain F — Professional Ethics (375 items) + Cross-domain (125 items)", "source": "REPOSITORY_LAYOUT.md §a line 104" },
+      { "name": "case_pack_p2_1.js", "type": "case_pack", "description": "25 cases (~133 items): A:6, B:5, C:6, D:3, E:3, F:2", "source": "REPOSITORY_LAYOUT.md §a line 106" },
+      { "name": "case_pack_p2_2.js", "type": "case_pack", "description": "25 cases (~133 items): A:4, B:5, C:6, D:3, E:2, F:5", "source": "REPOSITORY_LAYOUT.md §a line 107" },
+      { "name": "case_pack_p2_3.js", "type": "case_pack", "description": "25 cases (~134 items): A:5, B:5, C:6, D:2, E:2, F:5", "source": "REPOSITORY_LAYOUT.md §a line 108" },
+      { "name": "package.json", "type": "config", "description": "Node.js project manifest", "source": "REPOSITORY_LAYOUT.md §a line 110" },
+      { "name": "package-lock.json", "type": "config", "description": "Dependency lock file", "source": "REPOSITORY_LAYOUT.md §a line 111" },
+      { "name": "opencode.json", "type": "config", "description": "OpenCode IDE configuration — adapted from Part 1", "source": "REPOSITORY_LAYOUT.md §a line 112" },
+      { "name": "VERSION", "type": "config", "description": "Semantic version marker (initial: 0.1.0-alpha)", "source": "REPOSITORY_LAYOUT.md §a line 113" },
+      { "name": "AGENTS.md", "type": "config", "description": "AI/Computer session standing instructions — adapted from Part 1", "source": "REPOSITORY_LAYOUT.md §a line 114" }
+    ],
+    "subdirectories_with_contents": {
+      ".opencode": {
+        "subdirs": ["agent", "Commands", "goals", "plugins", "skills", "session"],
+        "files": {
+          ".gitignore": { "type": "config", "description": "Ignore IDE internal state" },
+          "plugins/governance-guard.js": {
+            "type": "code",
+            "description": "10-rule governance guard plugin (forked from Part 1). Rules: 1 (REVISION_HISTORY pairing), 2 (DL-008 BLOCK), 3 (registry is generated), 4 (answer-key verification note), 5 (≤30-item batch cap), 6 (DL-026 BLOCK), 7 (no hand-editing derived registries), 8 (session packages must be registered), 9 (DL-037 binary lead-in polarity BLOCK), 10 (DL-021 absent EW field BLOCK). Plus P2-specific: cross-part boundary detection (rejects P1- prefix QIDs).",
+            "source": "GOVERNANCE_MAPPING.json §A_governance_guard_rules",
+            "line_count_estimate": "~300"
+          },
+          "skills/pre-delivery-safety-check.md": {
+            "type": "skill",
+            "description": "Confirms delivery pool only pulls Certified items; flags known-defective P2 QIDs",
+            "source": "REPOSITORY_LAYOUT.md §a line 28"
+          },
+          "skills/reconciliation-audit.md": {
+            "type": "skill",
+            "description": "Cross-checks self-reported certification claims against raw P2 file/line evidence",
+            "source": "REPOSITORY_LAYOUT.md §a line 29"
+          },
+          "agent/governance-validator.md": {
+            "type": "agent_prompt",
+            "description": "Subagent prompt for governance rule validation",
+            "source": "REPOSITORY_LAYOUT.md §a line 22"
+          }
+        }
+      },
+      "knowledge": {
+        "subdirs": [],
+        "files": {
+          "00_PROJECT_CONSTITUTION.md": {
+            "type": "document",
+            "description": "Part 2 project constitution — adapted from Part 1 with P2 scope, authorities (COSO ERM 2017, CAPM, IMA Ethics, SOX, FCPA), and modified immutable rules",
+            "source": "REPOSITORY_LAYOUT.md §g.5"
+          },
+          "CAQS_P2_v1.0.md": {
+            "type": "document",
+            "description": "Content & Assessment Quality Standard — Part 2: 6-dimension verification (Dimension 6 renamed to 'Part 2 Relevance'), 7-gate certification pipeline, per-domain difficulty/Bloom's targets, Part2OnlyFlag enforcement, 33-item Gold Standard Checklist",
+            "source": "P2002_CERTIFICATION_STANDARD.md",
+            "line_count_estimate": "854"
+          },
+          "QUESTION_METADATA_STANDARD.md": {
+            "type": "document",
+            "description": "Metadata schema forked from Part 1 — single-object architecture, P2 QID/CaseID/ExhibitID formats, Part2OnlyFlag field, P2 domain enums",
+            "source": "REPOSITORY_LAYOUT.md §g.5"
+          },
+          "TAXONOMY_REGISTRY_P2.md": {
+            "type": "document",
+            "description": "All permitted enumeration values for Part 2: 6 domains (A-F with P2 names), CognitiveLevel, Difficulty, QuestionType, ProductionStatus, ExhibitType, FormulaReference (40+ P2 formulas), GoverningAuthorities (ASC, COSO ERM 2017, CAPM, IMA Ethics, SOX, FCPA, Basel III)",
+            "source": "REPOSITORY_LAYOUT.md §g.5"
+          },
+          "DEFECT_LIBRARY_P2.md": {
+            "type": "document",
+            "description": "Empty defect library — seeded with header and template for Part 2 defect tracking. 33 P1 defect classes classified for P2 applicability: 3 Carry Forward, 22 Modify, 8 Retire. New P2-specific defects will use DL-P2-NNN format.",
+            "source": "REPOSITORY_LAYOUT.md §g.5"
+          },
+          "CURRENT_BASELINES_P2.md": {
+            "type": "document",
+            "description": "Empty — seeded with header and 13 runtime-critical file sections for SHA-256 hash baselines. Populated at M1.6 after all skeleton files and validators created.",
+            "source": "REPOSITORY_LAYOUT.md §g.5"
+          },
+          "BACKUP_PROTOCOL.md": {
+            "type": "document",
+            "description": "Hard backup rules — identical to Part 1. Copy-timestamp-confirm-edit protocol. Protected file patterns: pack_p2_[a-e].js, case_pack_p2_[1-3].js.",
+            "source": "REPOSITORY_LAYOUT.md §g.5"
+          },
+          "BUILD_TIME_VERIFICATION_STANDARD.md": {
+            "type": "document",
+            "description": "Six-dimension AI verification standard (forked from Part 1). Dimension 6 renamed to 'CMA Part 2 Relevance.' CONFIDENCE flagging rules and escalation protocol.",
+            "source": "REPOSITORY_LAYOUT.md §g.5"
+          },
+          "REVISION_HISTORY.md": {
+            "type": "document",
+            "description": "Empty — seeded with Phase 0 header entry. Every question_state change and content change must pair with an entry (per Rule 1).",
+            "source": "REPOSITORY_LAYOUT.md §g.5"
+          },
+          "PROMPT_GOVERNANCE_TEMPLATES.md": {
+            "type": "document",
+            "description": "Prompt templates for AI agents (forked from Part 1). Certification batch prompts, verification prompts, audit prompts adapted for P2.",
+            "source": "REPOSITORY_LAYOUT.md §g.5"
+          }
+        }
+      },
+      "foundation": {
+        "subdirs": [],
+        "files": {
+          "EXAM_BLUEPRINT_P2.md": {
+            "type": "document",
+            "description": "Full IMA CMA Part 2 Content Specification Outline: 6 domains (A-F), 43 LOS statements, exam weight distribution (A:20%, B:20%, C:25%, D:10%, E:10%, F:15%). Approved question types, exhibit conventions, and exam structure.",
+            "source": "REPOSITORY_LAYOUT.md §g.6"
+          },
+          "FORMULA_MASTER_P2.md": {
+            "type": "document",
+            "description": "40+ Part 2 formulas with canonical names, variable definitions, domain tags, authority citations, acceptable tolerances, and common errors. Breakdown: Domain A (21 ratios), Domain B (9: CAPM, WACC, EOQ, CCC), Domain C (11: CVP, breakeven, transfer price), Domain D (3: expected loss, risk score), Domain E (8: NPV, IRR, PI, payback, EAA, after-tax CF, MACRS), Domain F (0 — conceptual only).",
+            "source": "REPOSITORY_LAYOUT.md §g.6"
+          }
+        }
+      },
+      "ai": {
+        "subdirs": [],
+        "files": {
+          "COLLABORATION_MATRIX.md": {
+            "type": "document",
+            "description": "AI persona authority boundaries — forked from Part 1. 9 personas with Part 2 domain-aligned authorities.",
+            "source": "REPOSITORY_LAYOUT.md §g.7"
+          },
+          "WORKFLOWS.md": {
+            "type": "document",
+            "description": "8 standard workflows — forked from Part 1. Question Audit, Case Study Review, New Question Authoring, New Case Authoring, JavaScript Development, Bug Investigation, Release Validation, Blueprint Coverage Review.",
+            "source": "REPOSITORY_LAYOUT.md §g.7"
+          },
+          "TASK_TEMPLATES.md": {
+            "type": "document",
+            "description": "Session task templates — forked from Part 1.",
+            "source": "REPOSITORY_LAYOUT.md §g.7"
+          },
+          "accountant.md": {
+            "type": "persona",
+            "description": "Senior Management Accountant persona — Part 2 focus: financial analysis, corporate finance, decision analysis, ERM, ethics",
+            "source": "REPOSITORY_LAYOUT.md §a line 54"
+          },
+          "case_author.md": {
+            "type": "persona",
+            "description": "Case study author persona — P2 case authoring with domain-appropriate exhibits",
+            "source": "REPOSITORY_LAYOUT.md §a line 55"
+          },
+          "editor.md": {
+            "type": "persona",
+            "description": "Editor persona — language and readability",
+            "source": "REPOSITORY_LAYOUT.md §a line 56"
+          },
+          "javascript_architect.md": {
+            "type": "persona",
+            "description": "JavaScript Architect — app.js forking and validation scripts",
+            "source": "REPOSITORY_LAYOUT.md §a line 57"
+          },
+          "psychometrician.md": {
+            "type": "persona",
+            "description": "Psychometrician — exam quality, difficulty calibration, distractor engineering",
+            "source": "REPOSITORY_LAYOUT.md §a line 58"
+          },
+          "release_manager.md": {
+            "type": "persona",
+            "description": "Release Manager — final approval, gate reviews",
+            "source": "REPOSITORY_LAYOUT.md §a line 59"
+          },
+          "reviewer.md": {
+            "type": "persona",
+            "description": "Reviewer — review workflows",
+            "source": "REPOSITORY_LAYOUT.md §a line 60"
+          },
+          "student.md": {
+            "type": "persona",
+            "description": "Student — candidate experience",
+            "source": "REPOSITORY_LAYOUT.md §a line 61"
+          },
+          "validator.md": {
+            "type": "persona",
+            "description": "Validator — validation and bug detection",
+            "source": "REPOSITORY_LAYOUT.md §a line 62"
+          }
+        }
+      },
+      "review": {
+        "subdirs": [],
+        "files": {
+          "ACCOUNTING_DECISION_TREES.md": {
+            "type": "document",
+            "description": "Part 2 decision trees: NPV/IRR accept-reject, CAPM cost of equity, WACC component weights, ratio analysis decision tree, ERM component mapping, ethics decision model, breakeven multi-product, transfer pricing method selection",
+            "source": "REPOSITORY_LAYOUT.md §g.8"
+          },
+          "COMMON_EXAM_TRAPS.md": {
+            "type": "document",
+            "description": "Part 2 exam traps: using pre-tax cost of debt in WACC, omitting preferred stock in WACC, mixing real vs. nominal rates in NPV, using book values for WACC weights, confusing COSO IC 2013 with ERM 2017, IRR/NPV ranking conflicts, MACRS convention errors, EOQ unit inconsistency, after-tax CF omission of depreciation tax shield",
+            "source": "REPOSITORY_LAYOUT.md §g.8"
+          },
+          "SECTION_AUDIT_PROTOCOL.md": {
+            "type": "document",
+            "description": "Audit workflow protocol — forked from Part 1, adapted for P2 domain audit procedures",
+            "source": "REPOSITORY_LAYOUT.md §g.8"
+          }
+        }
+      },
+      "scripts": {
+        "subdirs": ["validators", "output", "reports"],
+        "files": {
+          "validate.js": {
+            "type": "code",
+            "description": "Part 2 validation orchestrator — chains all P2 validators (Explanation, Domain, Formula Authority, Math). Runs on skeleton baseline (expect 0 errors) and on full content pools.",
+            "source": "REPOSITORY_LAYOUT.md §g.10"
+          },
+          "test_governance_guard.js": {
+            "type": "code",
+            "description": "Governance guard test suite (50+ tests covering all 10 rules). Forked from Part 1.",
+            "source": "REPOSITORY_LAYOUT.md §g.10"
+          },
+          "test_session_recovery.js": {
+            "type": "code",
+            "description": "Session recovery test suite — forked from Part 1. Includes DL-014 and DL-022 null-guard regression tests.",
+            "source": "REPOSITORY_LAYOUT.md §g.10"
+          },
+          "config.js": {
+            "type": "code",
+            "description": "Part 2 configuration: examPart=2, 6 domains (A-F with P2 names), 5 MCQ pack names, 3 case pack names, QID regex /^P2-[A-F]-\\d{3}$/, CaseID regex /^CBQ2\\d?-[A-F]\\d+$/, total targets (2500 MCQs, 75 cases)",
+            "source": "REPOSITORY_LAYOUT.md §g.10"
+          },
+          "validators/ExplanationValidator.js": {
+            "type": "code",
+            "description": "String-aware brace-matcher validator — forked from Part 1 (post-DL-020 fix). Extracts question objects with inString/stringChar/escape tracking. Checks DL-008, DL-026, DL-021, DL-013 patterns.",
+            "source": "REPOSITORY_LAYOUT.md §g.10"
+          },
+          "validators/MathematicalValidator.js": {
+            "type": "code",
+            "description": "Part 2 mathematical validator — formula cross-checks for 40+ P2 formulas: NPV, IRR, WACC, CAPM, DuPont, EOQ, breakeven, DOL, DFL, CCC, MACRS, expected value. Verifies formula selection, input traceability, unit consistency, arithmetic reconciliation within domain-specific tolerances.",
+            "source": "REPOSITORY_LAYOUT.md §a line 75"
+          }
+        }
+      },
+      "reports": {
+        "subdirs": ["session_status", "defect_sweeps", "remediation", "certification", "systematic_testing"],
+        "files": {}
+      },
+      "backups": {
+        "subdirs": [],
+        "files": {}
+      }
+    }
+  },
+  "total_counts": {
+    "root_directories": 8,
+    "knowledge_files": 10,
+    "foundation_files": 2,
+    "ai_files": 12,
+    "review_files": 3,
+    "scripts_files": 6,
+    "opencode_files": 5,
+    "mcq_pack_files": 5,
+    "case_pack_files": 3,
+    "application_files": 3,
+    "config_files": 5,
+    "total_files": 62
+  },
+  "initialization_sequence": [
+    {
+      "step": 1,
+      "action": "Create repository root directory",
+      "details": "mkdir CMA_Part_2_2026. Location: sibling to CMA_Part_1_2026 (separate repository per P2001 §6 technical decision).",
+      "milestone": "M1.1"
+    },
+    {
+      "step": 2,
+      "action": "Initialize git repository",
+      "details": "git init in CMA_Part_2_2026 root. Set up remote if applicable. Create initial commit with empty directory structure.",
+      "milestone": "M1.1"
+    },
+    {
+      "step": 3,
+      "action": "Create .gitignore",
+      "details": "Ignore node_modules/, backups/* (except structure), temp_*, *.bak*. Block Part 1 pack/case files from accidental import. See Part 1 .gitignore for pattern reference.",
+      "milestone": "M1.1"
+    },
+    {
+      "step": 4,
+      "action": "Create VERSION file",
+      "details": "Content: 0.1.0-alpha / build: 2026.07.29.001 / track: Alpha / phase: Pre-Flight. Format matches Part 1 convention per REPOSITORY_LAYOUT.md §e.3.",
+      "milestone": "M1.1"
+    },
+    {
+      "step": 5,
+      "action": "Create package.json",
+      "details": "Minimal npm config. Name: 'cma-part2-simulator', version: '0.1.0-alpha', private: true. Include dev dependencies for testing (none initially — add as needed during Phase 1).",
+      "milestone": "M1.1"
+    },
+    {
+      "step": 6,
+      "action": "Create package-lock.json",
+      "details": "Empty lock file. Populated on first npm install (if dependencies added).",
+      "milestone": "M1.1"
+    },
+    {
+      "step": 7,
+      "action": "Create opencode.json",
+      "details": "OpenCode IDE configuration. Register governance-guard.js plugin. Define agent, skill, and session paths. Adapted from Part 1's opencode.json with P2-specific paths.",
+      "milestone": "M1.1"
+    },
+    {
+      "step": 8,
+      "action": "Create all empty subdirectories",
+      "details": "mkdir -p: .opencode/agent, .opencode/Commands, .opencode/goals, .opencode/plugins, .opencode/skills, .opencode/session, knowledge/, foundation/, ai/, review/, scripts/validators, scripts/output, scripts/reports, reports/session_status, reports/defect_sweeps, reports/remediation, reports/certification, reports/systematic_testing, backups/. All directories created with .gitkeep to ensure git tracking of empty directories.",
+      "milestone": "M1.1"
+    },
+    {
+      "step": 9,
+      "action": "Create 5 empty MCQ pack skeletons",
+      "details": "Each file (pack_p2_a.js through pack_p2_e.js) initialized as: '// CMA Part 2 Exam Simulator — Pack {Letter}\n// Domain(s): {Domain Label(s)}\n// Generated: 2026-07-29\n// Governance State: Unprocessed (all items)\n// Architecture: Single-object (one JSON object per MCQ item)\nvar pack_p2_{letter}_questions = [];' Skeleton for Pack D: dual-domain (D+E). Skeleton for Pack E: F + Cross-domain.",
+      "milestone": "M1.5"
+    },
+    {
+      "step": 10,
+      "action": "Create 3 empty case pack skeletons",
+      "details": "Each file (case_pack_p2_1.js through case_pack_p2_3.js) initialized as: '// CMA Part 2 Case Pack {N} — 25 cases target\n// Section distribution: {distribution}\n// Generated: 2026-07-29\n// Architecture: Single-object (one JSON object per case)\nvar casePackP2_{n} = [];'",
+      "milestone": "M1.5"
+    },
+    {
+      "step": 11,
+      "action": "Create knowledge/00_PROJECT_CONSTITUTION.md",
+      "details": "Adapt from Part 1's 00_PROJECT_CONSTITUTION.md. Update: Part 2 scope, P2 authorities (COSO ERM 2017, CAPM, IMA Ethics, SOX, FCPA), P2 immutable rules, P2 root directory permitted files (pack_p2_*.js, case_pack_p2_*.js), P2 source hierarchy (Tier 1: IMA Part 2 CSO, COSO ERM 2017, IMA Ethics).",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 12,
+      "action": "Create knowledge/CAQS_P2_v1.0.md",
+      "details": "Content & Assessment Quality Standard for Part 2. Based on P2002_CERTIFICATION_STANDARD.md (854 lines). 6-dimension verification (Dimension 6 = 'CMA Part 2 Relevance'), 7-gate pipeline, 33-item Gold Standard Checklist, per-domain difficulty/Bloom's distributions, Part2OnlyFlag enforcement.",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 13,
+      "action": "Create knowledge/QUESTION_METADATA_STANDARD.md",
+      "details": "Forked from Part 1. Single-object architecture schema. P2 QID format (P2-{Section}-{NNN}), P2 CaseID format (CBQ2{Pack}-{Section}{Seq}). Required fields include Part2OnlyFlag, Part (must be 2), P2 domain enums. Item-level, case-level, and exhibit-level metadata.",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 14,
+      "action": "Create knowledge/TAXONOMY_REGISTRY_P2.md",
+      "details": "Permitted P2 enumeration values: 6 domains (A-F with new names), CognitiveLevel, Difficulty, QuestionType, ProductionStatus, ExhibitType, FormulaReference (40+ P2 formulas linked to FORMULA_MASTER_P2.md), GoverningAuthorities (FASB ASC, COSO ERM 2017, CAPM, IMA Ethics, SOX, FCPA, Basel III, MACRS/IRS Pub 946).",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 15,
+      "action": "Create knowledge/DEFECT_LIBRARY_P2.md",
+      "details": "Empty — seeded with header, classification schema (Structural/Content/Pedagogical, Critical/High/Medium/Low/Info), and entry template. 33 P1 defect classes pre-classified for P2 applicability (3 Carry Forward, 22 Modify, 8 Retire). New P2-specific defects use DL-P2-NNN format.",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 16,
+      "action": "Create knowledge/CURRENT_BASELINES_P2.md",
+      "details": "Empty — seeded with sections for 13 runtime-critical file hashes: 5 MCQ packs, 3 case packs, app.js, index_updated.html, styles.css, governance-guard.js (plugins), ExplanationValidator.js. Populated with SHA-256 values at M1.6 after all files stabilized.",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 17,
+      "action": "Create knowledge/BACKUP_PROTOCOL.md",
+      "details": "Copy from Part 1 (identical rules). Protected files: pack_p2_[a-e].js, case_pack_p2_[1-3].js. Backup naming: {file}.bak-YYYYMMDDHHMMSS.",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 18,
+      "action": "Create knowledge/BUILD_TIME_VERIFICATION_STANDARD.md",
+      "details": "Forked from Part 1. Six-dimension verification with Dimension 6 renamed to 'CMA Part 2 Relevance.' CONFIDENCE flagging rules (HIGH/MEDIUM/LOW/ZERO). Verification output JSON format with QuestionID, dimensions, overall confidence, certification eligibility.",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 19,
+      "action": "Create knowledge/REVISION_HISTORY.md",
+      "details": "Empty — seeded with Phase 0 header entry documenting repository creation date and P2-002/P2-003 sessions. All future question_state changes and content changes must append entries (per Rule 1).",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 20,
+      "action": "Create knowledge/PROMPT_GOVERNANCE_TEMPLATES.md",
+      "details": "Forked from Part 1. Certification batch prompts, six-dimension verification prompts, audit prompts — all adapted for P2 domain labels, authorities, and QID/CaseID formats.",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 21,
+      "action": "Create foundation/EXAM_BLUEPRINT_P2.md",
+      "details": "Full IMA CMA Part 2 CSO: 6 domains, 43 LOS statements, exam weights (A:20%, B:20%, C:25%, D:10%, E:10%, F:15%), approved question types, exhibit conventions, exam structure. Source: P2002_BLUEPRINT_EXTRACTION.json §domains.",
+      "milestone": "M1.3"
+    },
+    {
+      "step": 22,
+      "action": "Create foundation/FORMULA_MASTER_P2.md",
+      "details": "40+ Part 2 formulas with canonical notation, variable definitions, domain tags, authority citations, acceptable tolerances, and common errors. Breakdown: Domain A (21 ratios: current, quick, cash, inventory turnover, DSO, DPO, debt-to-equity, TIE, margins, ROA, ROE, DuPont, EPS, P/E, dividend yield, BV/share, DOL, DFL, DTL, sustainable growth), Domain B (9: CAPM, WACC, cost of preferred, cost of debt after-tax, EOQ, CCC, effective annual rate, FX premium/discount), Domain C (11: breakeven units/dollars, target profit, margin of safety, DOL, weighted average CM, transfer price minimum, expected value, value of perfect information, sell-or-process, shut-down point), Domain D (3: expected loss, risk score, residual risk), Domain E (8: NPV, PI, payback, discounted payback, EAA, after-tax CF, MACRS, ARR), Domain F (0 — conceptual only).",
+      "milestone": "M1.3"
+    },
+    {
+      "step": 23,
+      "action": "Copy ai/COLLABORATION_MATRIX.md from Part 1",
+      "details": "AI persona authority boundaries. Update domain labels to P2 names. Update authority matrix for P2 (e.g., Accountant = P2 authorities: COSO ERM 2017, CAPM, IMA Ethics).",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 24,
+      "action": "Copy ai/WORKFLOWS.md from Part 1",
+      "details": "8 standard workflows unchanged. Domain references updated for P2.",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 25,
+      "action": "Copy ai/TASK_TEMPLATES.md and all 9 persona files from Part 1",
+      "details": "Copy TASK_TEMPLATES.md, accountant.md, case_author.md, editor.md, javascript_architect.md, psychometrician.md, release_manager.md, reviewer.md, student.md, validator.md. Adapt domain references, authority references, and pack file names for P2.",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 26,
+      "action": "Create review/ACCOUNTING_DECISION_TREES.md",
+      "details": "Part 2 decision trees: NPV/IRR accept-reject, CAPM cost of equity, WACC component weights, ratio analysis (liquidity → profitability → leverage decision flow), COSO ERM 2017 component mapping, IMA ethics decision model, breakeven multi-product, transfer pricing method selection, capital budgeting ranking (NPV vs. IRR vs. PI).",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 27,
+      "action": "Create review/COMMON_EXAM_TRAPS.md",
+      "details": "Part 2 exam traps: using pre-tax cost of debt in WACC, omitting preferred stock in WACC, mixing real vs. nominal rates in NPV, using book values for WACC weights, confusing COSO IC 2013 with ERM 2017 components, IRR/NPV ranking conflicts for mutually exclusive projects, MACRS half-year convention errors, EOQ unit inconsistency (units vs. dollars), after-tax CF omission of depreciation tax shield, DOL vs. DFL vs. DTL conflation, DuPont component misinterpretation.",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 28,
+      "action": "Copy review/SECTION_AUDIT_PROTOCOL.md from Part 1",
+      "details": "Audit workflow protocol. Adapt for P2 domain-specific audit procedures. Add P2 authority cross-checks.",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 29,
+      "action": "Copy .opencode/plugins/governance-guard.js from Part 1",
+      "details": "Deploy all 10 rules (Rules 1-10). Update SOURCE_FILE_RE to match pack_p2_[a-e].js and case_pack_p2_[1-3].js. Update QID regex to /^P2-[A-F]-\\d{3}$/. Update REVISION_HISTORY path to knowledge/REVISION_HISTORY.md. Add Rule 11 placeholder: Part2OnlyFlag enforcement. Keep all BLOCK-level rules active from first write (Rule 2, 6, 10, 9). ~300 lines forked.",
+      "milestone": "M1.4"
+    },
+    {
+      "step": 30,
+      "action": "Copy .opencode/skills/pre-delivery-safety-check.md from Part 1",
+      "details": "Adapt for P2: check pack_p2_*.js for Certified items, flag known-defective P2 QIDs, verify Part2OnlyFlag on all delivery-pool items.",
+      "milestone": "M1.4"
+    },
+    {
+      "step": 31,
+      "action": "Copy .opencode/skills/reconciliation-audit.md from Part 1",
+      "details": "Adapt for P2: cross-check P2 certification claims against raw pack_p2_*.js files, verify Part2OnlyFlag presence, P2-specific boundary-aware parsing.",
+      "milestone": "M1.4"
+    },
+    {
+      "step": 32,
+      "action": "Copy .opencode/agent/ from Part 1",
+      "details": "Copy all subagent prompt definitions (governance-validator.md, etc.). Adapt domain references and pack file paths for P2.",
+      "milestone": "M1.4"
+    },
+    {
+      "step": 33,
+      "action": "Copy .opencode/Commands/ from Part 1",
+      "details": "Copy custom IDE slash command definitions. Adapt for P2 context.",
+      "milestone": "M1.4"
+    },
+    {
+      "step": 34,
+      "action": "Copy scripts/validators/ExplanationValidator.js from Part 1",
+      "details": "String-aware brace-matcher (post-DL-020 fix). Uses inString/stringChar/escape tracking for bracket extraction. Add P2-specific EW field validation (Part2OnlyFlag check).",
+      "milestone": "M1.6"
+    },
+    {
+      "step": 35,
+      "action": "Copy scripts/test_governance_guard.js from Part 1",
+      "details": "Test suite expanded from 51 tests (Part 1 post-S913) to 50+ tests covering all 10 P2 rules + Part2OnlyFlag enforcement. Add P2-specific test cases: P2- QID patterns, CBQ2 case ID patterns, cross-part boundary detection (P1- prefix in P2 packs).",
+      "milestone": "M1.6"
+    },
+    {
+      "step": 36,
+      "action": "Copy scripts/test_session_recovery.js from Part 1",
+      "details": "Session recovery tests (DL-014, DL-022 regression). Generic — no P2-specific changes needed. Verify P2 app.js fork includes both null-guard insertions.",
+      "milestone": "M1.6"
+    },
+    {
+      "step": 37,
+      "action": "Create scripts/config.js",
+      "details": "Part 2 configuration: examPart=2, domains A-F with P2 names, 5 MCQ pack filenames, 3 case pack filenames, QID/CaseID regex patterns, total targets (2500 MCQs, 75 cases). Per REPOSITORY_LAYOUT.md §g.10 template.",
+      "milestone": "M1.6"
+    },
+    {
+      "step": 38,
+      "action": "Create scripts/validate.js",
+      "details": "Part 2 validation orchestrator. Chains: ExplanationValidator (DL-008, DL-026, DL-021, DL-013), DomainValidator (P2 domain enums), FormulaAuthorityValidator (cross-checks P2 authority citations), MathematicalValidator (formula reconciliation for 40+ P2 formulas). Baseline run on skeleton files expects 0 errors.",
+      "milestone": "M1.6"
+    },
+    {
+      "step": 39,
+      "action": "Fork app.js from Part 1",
+      "details": "~70% reusable (renderer, session management, timer, calculator, review mode, scoring). ~30% Part 2-specific: pack name array ([pack_p2_a_questions, ..., pack_p2_e_questions]), case pack array ([casePackP2_1, casePackP2_2, casePackP2_3]), QID regex /^P2-[A-F]-\\d{3}$/, CaseID regex /^CBQ2\\d?-[A-F]\\d+$/, domain label map (A=Financial Statement Analysis, etc.), Part2OnlyFlag validation on load. Verify DL-014 and DL-022 null-guard fixes present (Insertions 1 and 2). Confirm no logic changes to scoring, rendering, or session management.",
+      "milestone": "M1.5"
+    },
+    {
+      "step": 40,
+      "action": "Fork index_updated.html from Part 1",
+      "details": "Adapt for Part 2: updated domain labels in UI, case count reference (3 case packs), exam part indicator ('CMA Part 2'), script references updated to P2 pack/case files. All other structure identical.",
+      "milestone": "M1.5"
+    },
+    {
+      "step": 41,
+      "action": "Copy styles.css from Part 1",
+      "details": "Identical to Part 1 — shared UI framework. Direct copy, no modification.",
+      "milestone": "M1.5"
+    },
+    {
+      "step": 42,
+      "action": "Create AGENTS.md at root",
+      "details": "Standing instructions adapted from Part 1's AGENTS.md. All 13 sections + §3.1 updated for P2: governance-guard.js reference (10 rules from Day 1), read-only default, backup protocol (pack_p2_*.js, case_pack_p2_*.js), REVISION_HISTORY.md (P2 path), dual verification (P2 claim-to-check mapping), delivery pool (P2- QIDs, DEFECT_LIBRARY_P2.md), key file locations (all P2 paths), session startup protocol (P2 T0-T6 checks), skills (P2 reconciliation-audit, pre-delivery-safety-check), external references (P2 CSO, COSO ERM 2017, CAPM, IMA Ethics), no staged findings, runtime governance.",
+      "milestone": "M1.2"
+    },
+    {
+      "step": 43,
+      "action": "Run governance guard self-test",
+      "details": "node .opencode/plugins/governance-guard.js --self-test. Verify: all 10 rules load without errors, domain validators initialized for P2 enums, regex patterns match expected P2 formats. Expected: 10/10 rules active, 0 configuration errors.",
+      "milestone": "M1.7"
+    },
+    {
+      "step": 44,
+      "action": "Run governance guard test suite",
+      "details": "node scripts/test_governance_guard.js. Verify: 50+ tests, 50+ PASS, 0 FAIL. All 10 rules tested with P2-specific test cases. Expected output: 'ALL 50+ TESTS PASSED'.",
+      "milestone": "M1.7"
+    },
+    {
+      "step": 45,
+      "action": "Verify empty packs parse correctly",
+      "details": "For each of the 8 skeleton files: (a) node --check passes (no syntax errors), (b) JSON.parse() or Function constructor evaluates to empty array [], (c) grep count of objects = 0. Expected: 8/8 parse clean, 0 items in pool.",
+      "milestone": "M1.7"
+    },
+    {
+      "step": 46,
+      "action": "Verify app.js loads skeleton packs without errors",
+      "details": "Open index_updated.html in browser, check console. Expected: 0 JavaScript errors, app renders empty exam (score 0/0), all 5 MCQ pack references resolve, all 3 case pack references resolve, no 'undefined' or 'null' errors on pack arrays.",
+      "milestone": "M1.7"
+    },
+    {
+      "step": 47,
+      "action": "Populate CURRENT_BASELINES_P2.md with SHA-256 hashes",
+      "details": "Compute SHA-256 for all 13 runtime-critical files: app.js, index_updated.html, styles.css, pack_p2_a.js-e.js (5), case_pack_p2_1-3.js (3), .opencode/plugins/governance-guard.js, scripts/validators/ExplanationValidator.js. Record in knowledge/CURRENT_BASELINES_P2.md §5.",
+      "milestone": "M1.6"
+    },
+    {
+      "step": 48,
+      "action": "Run validate.js on skeleton baseline",
+      "details": "node scripts/validate.js --target all. Expected: 0 structural errors, 0 warnings on empty skeletons. Establishes Phase 1 error baseline for all future validation runs.",
+      "milestone": "M1.7"
+    },
+    {
+      "step": 49,
+      "action": "Write Phase 1 closeout to REVISION_HISTORY.md",
+      "details": "Document: Phase 1 completion date, all 7 milestones verified, 0 errors on skeleton baseline, all 10 governance guard rules active and tested, all 13 hashes recorded in CURRENT_BASELINES_P2.md. Git tag: v0.1.0-foundation.",
+      "milestone": "M1.7"
+    }
+  ],
+  "governance_guard_checks": [
+    {
+      "check": "Rule 2 — DL-008 BLOCK",
+      "description": "All skeleton items must have ExplanationWrong[CorrectChoice] empty (empty string '', not absent). Single-object architecture ensures CorrectChoice and EW fields co-located — no CC-offset false positives. Verified via governance guard self-test and validator scan.",
+      "enforcement": "BLOCK",
+      "active_from": "First content write (Phase 2)",
+      "test_assertion": "Guard rejects item with non-empty EW[CC]"
+    },
+    {
+      "check": "Rule 6 — DL-026 BLOCK",
+      "description": "All skeleton items must have non-empty non-CorrectChoice ExplanationWrong slots. All three distractor EW slots must contain ≥50 characters of choice-specific text. Verified via governance guard self-test and validator scan.",
+      "enforcement": "BLOCK",
+      "active_from": "First content write (Phase 2)",
+      "test_assertion": "Guard rejects item with empty non-CC EW slot"
+    },
+    {
+      "check": "Rule 10 — DL-021 BLOCK",
+      "description": "All 4 ExplanationWrong fields (A, B, C, D) must be present in every item object. The CorrectChoice slot may be empty; the three distractor slots must be non-empty (Rule 6). Verified via governance guard self-test and validator field-presence check.",
+      "enforcement": "BLOCK",
+      "active_from": "First content write (Phase 2)",
+      "test_assertion": "Guard rejects item with absent EW field"
+    },
+    {
+      "check": "Rule 5 — Batch Size BLOCK",
+      "description": "Initial content authoring batches must not exceed 30 items per change-set without BLOCK-AUTHORIZED marker. Phase 2 authoring produces 500 items per pack — must be committed in ≤30-item batches. Verified via governance guard self-test.",
+      "enforcement": "BLOCK",
+      "active_from": "Phase 2 authoring",
+      "test_assertion": "Guard blocks writes with >30 question objects and no BLOCK-AUTHORIZED marker"
+    },
+    {
+      "check": "Rule 1 — REVISION_HISTORY.md Pairing WARN",
+      "description": "Every question_state change (Unprocessed → In Audit, In Audit → Certified, etc.) must pair with a knowledge/REVISION_HISTORY.md entry. WARN-level (not BLOCK) — flagged at session idle.",
+      "enforcement": "WARN",
+      "active_from": "Phase 3 certification",
+      "test_assertion": "Guard warns when state changed without revision entry"
+    },
+    {
+      "check": "Rule 4 — Answer-Key Verification Note WARN",
+      "description": "Any CorrectChoice or Correct value change must include a 'recomputed' or 'independently verified' note. WARN-level — flagged at session idle.",
+      "enforcement": "WARN",
+      "active_from": "Phase 2 authoring",
+      "test_assertion": "Guard warns when CC changes without verification note"
+    },
+    {
+      "check": "Rule 9 — DL-037 Binary Lead-In Polarity BLOCK",
+      "description": "Choice text starting with 'Yes,' or 'No,' must align semantically with the conclusion clause. Pattern: 'No, ... should be investigated' is a polarity mismatch (should be 'Yes, ... should be investigated').",
+      "enforcement": "BLOCK",
+      "active_from": "Phase 2 authoring",
+      "test_assertion": "Guard blocks 'No, ... should be investigated'; passes 'No, ... should not be investigated'"
+    },
+    {
+      "check": "Part2OnlyFlag Enforcement (P2-GOV-01)",
+      "description": "Every P2 item must carry Part2OnlyFlag: true. Field must exist (typeof boolean), be strictly true (not 'true' string, not 1), and survive JSON round-trip. Absent or false → BLOCK certification. Part 1's governance guard has no equivalent rule — this is P2-specific.",
+      "enforcement": "BLOCK",
+      "active_from": "First content write (Phase 2)",
+      "test_assertion": "Guard rejects item without Part2OnlyFlag or with Part2OnlyFlag: false"
+    },
+    {
+      "check": "Cross-Part QID Boundary (P2-GOV-02)",
+      "description": "QID format must match /^P2-[A-F]-\\d{3}$/. Any P1- prefix QID in a P2 pack → BLOCK. CaseID must match /^CBQ2\\d?-[A-F]\\d+$/. Any CBQ (without '2') CaseID → BLOCK. Verified via QID prefix check in validator and governance guard.",
+      "enforcement": "BLOCK",
+      "active_from": "First content write (Phase 2)",
+      "test_assertion": "Guard rejects P1-A-001 in pack_p2_a.js; rejects CBQ-A1 in case_pack_p2_1.js"
+    },
+    {
+      "check": "Rule 7 — No Hand-Editing Derived Registries BLOCK",
+      "description": "MASTER_QUESTION_REGISTRY_P2.md, CURRENT_BASELINES_P2.md, and all SESSION_STATUS_P2_*.md files are generated output — never hand-edited. BLOCK enforcement on any write to these files.",
+      "enforcement": "BLOCK",
+      "active_from": "Phase 1 M1.6 (when registries first generated)",
+      "test_assertion": "Guard blocks write to derived registry file"
+    }
+  ],
+  "success_criteria": {
+    "repository_finalized": {
+      "status": true,
+      "description": "CMA_Part_2_2026 repository structure fully defined. 8 root directories, 62 total files specified. Initialization sequence (49 steps) documented. All file paths, naming conventions, and counts verified against P2-002 specifications."
+    },
+    "governance_implementation_defined": {
+      "status": true,
+      "description": "All 10 governance guard rules classified and mapped from Part 1 to Part 2. 9 P2-specific governance additions (P2-GOV-01 through P2-GOV-08 + Dimension 7 Authority Verification) documented. 10 governance guard checks listed for P2-004 pre-flight verification. 33 P1 defect classes classified for P2 applicability (3 Carry Forward, 22 Modify, 8 Retire)."
+    },
+    "qid_standards_finalized": {
+      "status": true,
+      "description": "P2 QID format: P2-{Section}-{NNN} (regex: /^P2-[A-F]-\\d{3}$/). P2 CaseID format: CBQ2{Pack}-{Section}{Seq} (regex: /^CBQ2\\d?-[A-F]\\d+$/). ItemID: {CaseID}-Q{N}. ExhibitID: {CaseID}-E{N}. Zero collision with Part 1 identifier spaces (P1 vs. P2 prefix digit). Single-object architecture eliminates all dual-block/CC-offset defect classes (DL-016, DL-029)."
+    },
+    "pack_structure_finalized": {
+      "status": true,
+      "description": "5 MCQ packs (pack_p2_a.js through pack_p2_e.js, 500 items each = 2,500 total). 3 case packs (case_pack_p2_1.js through case_pack_p2_3.js, 25 cases each = 75 total, ~400 items). All initialized as empty arrays (var declarations). Single-object architecture mandated from first item. No '_corrected' suffix — all packs authored clean under governance guard from Day 1."
+    },
+    "p2_004_authoring_plan_completed": {
+      "status": true,
+      "description": "P2-003 repository manifest provides complete file inventory for P2-004 repository-builder. All directories, files, skeleton contents, and initialization sequence steps are specified. P2-004 can begin creating the CMA_Part_2_2026 repository with 49-step initialization sequence."
+    },
+    "no_part1_modifications": {
+      "status": true,
+      "description": "P2-003 is READ-ONLY + PLANNING. No files in CMA_Part_1_2026 were modified, created, or deleted. The P2003_REPOSITORY_MANIFEST.json is written to the p2/ subdirectory within the Part 1 repository (planning space), not to any Part 2 repository. No Part 1 pack files, application files, or governance documents were altered."
+    },
+    "no_content_creation": {
+      "status": true,
+      "description": "P2-003 produced only planning artifacts. No MCQ items, case studies, formulas, or application code were created. The manifest defines what P2-004 needs to create but does not create it itself. All content creation is deferred to Phase 2 (P2-005+)."
+    }
+  },
+  "p2_004_handoff": {
+    "description": "Instructions for P2-004 (repository-builder — write phase). P2-004 reads this manifest and creates the complete CMA_Part_2_2026 repository.",
+    "key_references": [
+      { "document": "P2002_REPOSITORY_LAYOUT.md", "path": "p2/P2002_REPOSITORY_LAYOUT.md", "purpose": "Complete directory tree, naming standards, initialization checklist" },
+      { "document": "P2002_EXECUTION_ROADMAP.json", "path": "p2/P2002_EXECUTION_ROADMAP.json", "purpose": "Phase 1 milestones, deliverables, risk factors, verification methods" },
+      { "document": "P2002_GOVERNANCE_MAPPING.json", "path": "p2/P2002_GOVERNANCE_MAPPING.json", "purpose": "Rule-by-rule governance guard configuration, P2 regex patterns, authority lists" },
+      { "document": "P2002_CERTIFICATION_STANDARD.md", "path": "p2/P2002_CERTIFICATION_STANDARD.md", "purpose": "CAQS_P2_v1.0.md content — certification gates, required metadata fields, Part2OnlyFlag spec" },
+      { "document": "P2002_BLUEPRINT_EXTRACTION.json", "path": "p2/P2002_BLUEPRINT_EXTRACTION.json", "purpose": "6 domains, 43 LOS, 52 formulas, pack/case breakdowns, known defects, governance rules" }
+    ],
+    "source_files_to_copy": [
+      { "from": "CMA_Part_1_2026/app.js", "to": "CMA_Part_2_2026/app.js", "action": "FORK — adapt pack references and domain config" },
+      { "from": "CMA_Part_1_2026/index_updated.html", "to": "CMA_Part_2_2026/index_updated.html", "action": "FORK — adapt Part 2 labels" },
+      { "from": "CMA_Part_1_2026/styles.css", "to": "CMA_Part_2_2026/styles.css", "action": "COPY — identical" },
+      { "from": "CMA_Part_1_2026/.opencode/plugins/governance-guard.js", "to": "CMA_Part_2_2026/.opencode/plugins/governance-guard.js", "action": "COPY — adapt SOURCE_FILE_RE, QID regex, REVISION_HISTORY path" },
+      { "from": "CMA_Part_1_2026/scripts/validators/ExplanationValidator.js", "to": "CMA_Part_2_2026/scripts/validators/ExplanationValidator.js", "action": "COPY — string-aware brace-matcher (post-DL-020 fix)" },
+      { "from": "CMA_Part_1_2026/scripts/test_governance_guard.js", "to": "CMA_Part_2_2026/scripts/test_governance_guard.js", "action": "COPY — adapt for P2 rules and QID patterns" },
+      { "from": "CMA_Part_1_2026/scripts/test_session_recovery.js", "to": "CMA_Part_2_2026/scripts/test_session_recovery.js", "action": "COPY — no P2-specific change needed" },
+      { "from": "CMA_Part_1_2026/knowledge/BACKUP_PROTOCOL.md", "to": "CMA_Part_2_2026/knowledge/BACKUP_PROTOCOL.md", "action": "COPY — identical" },
+      { "from": "CMA_Part_1_2026/.opencode/skills/", "to": "CMA_Part_2_2026/.opencode/skills/", "action": "COPY — adapt pack names and pool references" },
+      { "from": "CMA_Part_1_2026/.opencode/agent/", "to": "CMA_Part_2_2026/.opencode/agent/", "action": "COPY — adapt domain references" },
+      { "from": "CMA_Part_1_2026/ai/", "to": "CMA_Part_2_2026/ai/", "action": "COPY — adapt domain/authority references, pack names" },
+      { "from": "CMA_Part_1_2026/review/SECTION_AUDIT_PROTOCOL.md", "to": "CMA_Part_2_2026/review/SECTION_AUDIT_PROTOCOL.md", "action": "COPY — adapt P2 audit procedures" }
+    ],
+    "pattern_specs": {
+      "qid": { "pattern": "P2-{Section}-{NNN}", "regex": "^P2-[A-F]-\\d{3}$", "example": "P2-A-001" },
+      "caseid": { "pattern": "CBQ2{PackNum}-{Section}{Seq}", "regex": "^CBQ2\\d?-[A-F]\\d+$", "example": "CBQ2-A1" },
+      "itemid": { "pattern": "{CaseID}-Q{N}", "regex": "^CBQ2\\d?-[A-F]\\d+-Q\\d+$", "example": "CBQ2-A1-Q3" },
+      "exhibitid": { "pattern": "{CaseID}-E{N}", "regex": "^CBQ2\\d?-[A-F]\\d+-E\\d+$", "example": "CBQ2-A1-E1" },
+      "mcq_pack_file": { "pattern": "pack_p2_{letter}.js", "regex": "^pack_p2_[a-e]\\.js$" },
+      "case_pack_file": { "pattern": "case_pack_p2_{n}.js", "regex": "^case_pack_p2_[1-3]\\.js$" },
+      "backup": { "pattern": "{file}.bak-YYYYMMDDHHMMSS", "regex": "\\.bak-\\d{14}$" }
+    },
+    "skeleton_file_templates": {
+      "mcq_pack": "// CMA Part 2 Exam Simulator — Pack {Letter}\n// Domain(s): {Domain Label(s)}\n// Generated: 2026-07-29\n// Governance State: Unprocessed (all items)\n// Architecture: Single-object (one JSON object per MCQ item)\nvar pack_p2_{letter}_questions = [];",
+      "case_pack": "// CMA Part 2 Case Pack {N} — 25 cases target\n// Section distribution: {distribution}\n// Generated: 2026-07-29\n// Architecture: Single-object (one JSON object per case)\nvar casePackP2_{n} = [];"
+    }
+  }
+}

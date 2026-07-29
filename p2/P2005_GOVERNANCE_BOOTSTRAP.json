@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "session": "P2-005",
+    "subagent": "governance-bootstrap",
+    "date": "2026-07-29",
+    "description": "Part 2 governance guard bootstrap — 11 rules, Part2OnlyFlag enforcement, cross-part collision detection, all active from first content write"
+  },
+  "artifact": {
+    "file": "scripts/governance_guard_p2.js",
+    "lines": 649,
+    "size_bytes": 23882,
+    "syntax_check": "PASS",
+    "exports": ["GovernanceGuardP2", "extractObjectsFromText", "extractItemsFromPackFile", "countQuestions", "isP2SourceFile"]
+  },
+  "rules": {
+    "total": 11,
+    "active": 11,
+    "details": [
+      {
+        "rule": 1,
+        "name": "question_state → REVISION_HISTORY_P2.md pairing",
+        "severity": "WARN",
+        "classification": "Modify from P1 Rule 1",
+        "description": "Every question_state change must pair with a knowledge/REVISION_HISTORY_P2.md entry. Flagged at session idle."
+      },
+      {
+        "rule": 2,
+        "name": "ExplanationWrong[CorrectChoice] must be empty (DL-008)",
+        "severity": "BLOCK",
+        "classification": "Carry Forward from P1 Rule 2",
+        "code": "DL-008",
+        "description": "ExplanationWrong slot matching CorrectChoice must be empty string. Single-object architecture eliminates CC-offset false positives."
+      },
+      {
+        "rule": 3,
+        "name": "MASTER_QUESTION_REGISTRY_P2.md is generated, never hand-edited",
+        "severity": "BLOCK",
+        "classification": "Modify from P1 Rule 3",
+        "code": "REGISTRY-HAND-EDIT",
+        "description": "Registry is derived output from build_master_registry_p2.js. Any hand-edit is blocked."
+      },
+      {
+        "rule": 4,
+        "name": "answer-key changes must include recomputed verification note",
+        "severity": "WARN",
+        "classification": "Carry Forward from P1 Rule 4",
+        "description": "Any CorrectChoice or Correct value change must include 'recomputed' or 'independently verified' note."
+      },
+      {
+        "rule": 5,
+        "name": "≤30 question objects per change-set",
+        "severity": "BLOCK",
+        "classification": "Carry Forward from P1 Rule 5",
+        "code": "BATCH-CAP",
+        "description": "No more than 30 question objects per change-set without BLOCK-AUTHORIZED marker."
+      },
+      {
+        "rule": 6,
+        "name": "non-CorrectChoice ExplanationWrong slots must be non-empty (DL-026)",
+        "severity": "BLOCK",
+        "classification": "Carry Forward from P1 Rule 6",
+        "code": "DL-026",
+        "description": "All three distractor ExplanationWrong slots must contain choice-specific text (minimum 1 character checked structurally)."
+      },
+      {
+        "rule": 7,
+        "name": "DERIVED_REGISTRY_NOT_AUTHORITATIVE",
+        "severity": "BLOCK",
+        "classification": "Modify from P1 Rule 7",
+        "code": "DERIVED-REGISTRY",
+        "description": "Derived registries (CURRENT_BASELINES_P2.md, MASTER_QUESTION_REGISTRY_P2.md, etc.) must not be hand-edited."
+      },
+      {
+        "rule": 8,
+        "name": "UNTRACKED_ARTIFACT — session packages must be registered",
+        "severity": "BLOCK",
+        "classification": "Carry Forward from P1 Rule 8",
+        "code": "UNTRACKED-ARTIFACT",
+        "description": "Session packages written to scripts/output/session_packages_p2/ must have registry entries."
+      },
+      {
+        "rule": 9,
+        "name": "Choice binary lead-in polarity mismatch (DL-037)",
+        "severity": "BLOCK",
+        "classification": "Carry Forward from P1 Rule 9",
+        "code": "DL-037",
+        "description": "No + affirmative conclusion or Yes + negative conclusion patterns in choice text."
+      },
+      {
+        "rule": 10,
+        "name": "non-CC ExplanationWrong slots must be present and non-empty (DL-021)",
+        "severity": "BLOCK",
+        "classification": "Carry Forward from P1 Rule 10",
+        "code": "DL-021",
+        "description": "All 4 ExplanationWrong fields must exist in the object; distractor slots must be non-empty."
+      },
+      {
+        "rule": 11,
+        "name": "Part2OnlyFlag must be true on every item",
+        "severity": "BLOCK",
+        "classification": "Add — new P2-only rule",
+        "code": "P2-FLAG-ABSENT / P2-FLAG-FALSE / P2-FLAG-TYPE",
+        "description": "Every P2 item must carry Part2OnlyFlag: true (strict boolean). Absent, false, or non-boolean → BLOCK."
+      }
+    ]
+  },
+  "cross_part_protection": {
+    "mechanisms": [
+      {
+        "mechanism": "QID prefix routing",
+        "rule": "P2 QID format: /^P2-[A-F]-\\d{3}$/",
+        "detail": "Rejects any P1- QID prefix in P2 packs. Rejects any QID not matching P2 format."
+      },
+      {
+        "mechanism": "Part2OnlyFlag",
+        "rule": "Rule 11",
+        "detail": "Mandatory boolean true on every item. Serves as programmatic cross-contamination prevention."
+      },
+      {
+        "mechanism": "P1-exclusive concept detection",
+        "rule": "Warning check",
+        "detail": "Flags items mentioning P1-exclusive concepts: standard costing variances, process costing, job order costing, joint product cost allocation, COSO IC 2013 detailed procedures."
+      }
+    ]
+  },
+  "defect_prevention": {
+    "dl_008": { "status": "PREVENTED — Rule 2 BLOCK", "recurrence_risk": "Structurally prevented by single-object architecture" },
+    "dl_021": { "status": "PREVENTED — Rule 10 BLOCK", "recurrence_risk": "Structurally prevented" },
+    "dl_026": { "status": "PREVENTED — Rule 6 BLOCK", "recurrence_risk": "Structurally prevented" },
+    "dl_037": { "status": "PREVENTED — Rule 9 BLOCK", "recurrence_risk": "Medium (language-level, procedural only)" },
+    "dl_013": { "status": "MONITORED — no dedicated boilerplate rule, caught by Rule 6 + CAQS §4.4 EV2", "recurrence_risk": "High (content-quality, not structural)" },
+    "dl_030": { "status": "MONITORED — Rule 4 WARN + G3 mandatory recalculation", "recurrence_risk": "Critical (complex P2 calculations)" },
+    "dl_031": { "status": "MONITORED — G2 Psychometric Review", "recurrence_risk": "High (systematic)" }
+  },
+  "validation_results": {
+    "target": "pack_p2_a.js",
+    "items": 30,
+    "pass": true,
+    "violations": 0,
+    "timestamp": "2026-07-29",
+    "findings": {
+      "dl_008": { "violations": 0, "status": "PASS" },
+      "dl_026": { "violations": 0, "status": "PASS" },
+      "dl_021": { "violations": 0, "status": "PASS" },
+      "dl_037": { "violations": 0, "status": "PASS" },
+      "part2onlyflag": { "violations": 0, "status": "PASS" },
+      "qid_format": { "violations": 0, "status": "PASS" }
+    }
+  },
+  "source_file_patterns": {
+    "mcq_packs": ["pack_p2_a.js", "pack_p2_b.js", "pack_p2_c.js", "pack_p2_d.js", "pack_p2_e.js"],
+    "case_packs": ["case_pack_p2_1.js", "case_pack_p2_2.js", "case_pack_p2_3.js"],
+    "qid_regex": "^P2-[A-F]-\\d{3}$",
+    "caseid_regex": "^CBQ2\\d?-[A-F]\\d+$",
+    "itemid_regex": "^CBQ2\\d?-[A-F]\\d*-Q\\d+$"
+  }
+}

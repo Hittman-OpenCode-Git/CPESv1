@@ -1,0 +1,1142 @@
+{
+  "meta": {
+    "session": "P2-005",
+    "subagent": "formula-master",
+    "date": "2026-07-29",
+    "description": "Machine-readable registry of all 52 CMA Part 2 formulas. Cross-referenced against P2002_BLUEPRINT_EXTRACTION.json and P2002_CERTIFICATION_STANDARD.md §D.4/§E.1."
+  },
+  "domains": {
+    "A": {
+      "letter": "A",
+      "name": "Financial Statement Analysis",
+      "formula_count": 21,
+      "formulas": [
+        {
+          "id": "FA-01",
+          "name": "Current Ratio",
+          "domain": "A",
+          "section": "Liquidity Ratios",
+          "notation": "Current Ratio = Current Assets / Current Liabilities",
+          "variables": [
+            { "symbol": "CA", "name": "Current Assets", "description": "Cash + receivables + inventory + prepaids + marketable securities, expected to convert within 1 year" },
+            { "symbol": "CL", "name": "Current Liabilities", "description": "Obligations due within 1 year (A/P, accrued expenses, short-term debt, current portion of LTD)" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Including restricted cash in current assets without verifying liquidity",
+            "Misclassifying the current portion of long-term debt as non-current"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "Candidates often include prepaid expenses as cash equivalents or exclude the current portion of long-term debt from current liabilities."
+        },
+        {
+          "id": "FA-02",
+          "name": "Quick Ratio (Acid-Test Ratio)",
+          "domain": "A",
+          "section": "Liquidity Ratios",
+          "notation": "Quick Ratio = (Cash + Marketable Securities + Accounts Receivable) / Current Liabilities",
+          "variables": [
+            { "symbol": "C", "name": "Cash", "description": "Cash and cash equivalents" },
+            { "symbol": "MS", "name": "Marketable Securities", "description": "Short-term investments readily convertible to cash" },
+            { "symbol": "AR", "name": "Accounts Receivable", "description": "Net realizable value of trade receivables" },
+            { "symbol": "CL", "name": "Current Liabilities", "description": "Obligations due within 1 year" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Including inventory in the numerator (excluded in quick ratio)",
+            "Including prepaid expenses"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "The quick ratio excludes inventory because it is the least liquid current asset. Candidates frequently include it, confusing the quick ratio with the current ratio."
+        },
+        {
+          "id": "FA-03",
+          "name": "Cash Ratio",
+          "domain": "A",
+          "section": "Liquidity Ratios",
+          "notation": "Cash Ratio = (Cash + Marketable Securities) / Current Liabilities",
+          "variables": [
+            { "symbol": "C", "name": "Cash", "description": "Cash and cash equivalents" },
+            { "symbol": "MS", "name": "Marketable Securities", "description": "Short-term investments readily convertible to cash" },
+            { "symbol": "CL", "name": "Current Liabilities", "description": "Obligations due within 1 year" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Including accounts receivable (AR is excluded from the cash ratio)",
+            "Treating restricted cash as unrestricted"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "The cash ratio is the most conservative liquidity measure. Candidates may apply it where inventory or receivables turn over quickly, making the ratio misleadingly low."
+        },
+        {
+          "id": "FA-04",
+          "name": "Inventory Turnover",
+          "domain": "A",
+          "section": "Activity Ratios",
+          "notation": "Inventory Turnover = COGS / Average Inventory",
+          "variables": [
+            { "symbol": "COGS", "name": "Cost of Goods Sold", "description": "Cost of inventory sold during the period" },
+            { "symbol": "AvgInv", "name": "Average Inventory", "description": "(Beginning Inventory + Ending Inventory) / 2" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using ending inventory instead of average inventory",
+            "Using sales instead of COGS"
+          ],
+          "authority": "ASC 330 (Inventory)",
+          "examTrap": "Using sales in the numerator when COGS is required inflates the turnover figure and misrepresents inventory management efficiency."
+        },
+        {
+          "id": "FA-05",
+          "name": "Days Sales Outstanding (DSO)",
+          "domain": "A",
+          "section": "Activity Ratios",
+          "notation": "DSO = (Average Accounts Receivable / Net Credit Sales) × 365",
+          "variables": [
+            { "symbol": "AvgAR", "name": "Average Accounts Receivable", "description": "(Beginning AR + Ending AR) / 2" },
+            { "symbol": "NCS", "name": "Net Credit Sales", "description": "Total credit sales less returns and allowances" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "days",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using 360 days instead of 365",
+            "Using total sales instead of credit sales"
+          ],
+          "authority": "ASC 310 (Receivables)",
+          "examTrap": "The CMA exam uses 365 days (not 360). A low DSO is generally favorable but may indicate overly restrictive credit policies."
+        },
+        {
+          "id": "FA-06",
+          "name": "Days Payable Outstanding (DPO)",
+          "domain": "A",
+          "section": "Activity Ratios",
+          "notation": "DPO = (Average Accounts Payable / Total Purchases) × 365",
+          "variables": [
+            { "symbol": "AvgAP", "name": "Average Accounts Payable", "description": "(Beginning AP + Ending AP) / 2" },
+            { "symbol": "TP", "name": "Total Purchases", "description": "COGS + Ending Inventory − Beginning Inventory" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "days",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using 360 days",
+            "Using COGS directly without adjusting for inventory change"
+          ],
+          "authority": "ASC 405 (Liabilities)",
+          "examTrap": "Purchases must be computed indirectly if not given: Purchases = COGS + ΔInventory. A high DPO may signal liquidity problems rather than favorable credit terms."
+        },
+        {
+          "id": "FA-07",
+          "name": "Debt-to-Equity Ratio",
+          "domain": "A",
+          "section": "Leverage Ratios",
+          "notation": "D/E = Total Liabilities / Total Shareholders' Equity",
+          "variables": [
+            { "symbol": "TL", "name": "Total Liabilities", "description": "All current and non-current obligations" },
+            { "symbol": "TSE", "name": "Total Shareholders' Equity", "description": "Common stock + APIC + retained earnings + AOCI − treasury stock" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using only long-term debt instead of total liabilities",
+            "Omitting operating lease liabilities (ASC 842)"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "Know which variant the question asks for—Debt-to-Equity (total liabilities) vs. Long-Term Debt-to-Equity (LT debt only)."
+        },
+        {
+          "id": "FA-08",
+          "name": "Times Interest Earned (Interest Coverage)",
+          "domain": "A",
+          "section": "Leverage Ratios",
+          "notation": "TIE = EBIT / Interest Expense",
+          "variables": [
+            { "symbol": "EBIT", "name": "Earnings Before Interest and Taxes", "description": "Operating income" },
+            { "symbol": "IE", "name": "Interest Expense", "description": "Total interest incurred (including amortization of bond discount/premium)" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using net income instead of EBIT",
+            "Using only cash interest paid rather than total interest expense"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "EBIT is before interest and taxes. Using EBT or net income in the numerator understates the coverage ratio."
+        },
+        {
+          "id": "FA-09",
+          "name": "Gross Margin Percentage",
+          "domain": "A",
+          "section": "Profitability Ratios",
+          "notation": "Gross Margin % = (Gross Profit / Net Sales) × 100",
+          "variables": [
+            { "symbol": "GP", "name": "Gross Profit", "description": "Net Sales − COGS" },
+            { "symbol": "NS", "name": "Net Sales", "description": "Total sales less returns, allowances, and discounts" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using total sales before returns and allowances",
+            "Confusing gross margin with markup (markup = GP / COGS)"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "Gross Margin % = GP / Sales. Markup % = GP / COGS. These are different metrics—candidates frequently confuse them."
+        },
+        {
+          "id": "FA-10",
+          "name": "Operating Margin Percentage",
+          "domain": "A",
+          "section": "Profitability Ratios",
+          "notation": "Operating Margin % = (Operating Income / Net Sales) × 100",
+          "variables": [
+            { "symbol": "OI", "name": "Operating Income", "description": "Gross Profit − Operating Expenses (SG&A, R&D, depreciation)" },
+            { "symbol": "NS", "name": "Net Sales", "description": "Total sales less returns, allowances, and discounts" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Including non-operating items (interest, gains/losses) in operating income"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "Operating income excludes interest and taxes. Including them converts the metric to net margin, not operating margin."
+        },
+        {
+          "id": "FA-11",
+          "name": "Net Margin Percentage",
+          "domain": "A",
+          "section": "Profitability Ratios",
+          "notation": "Net Margin % = (Net Income / Net Sales) × 100",
+          "variables": [
+            { "symbol": "NI", "name": "Net Income", "description": "Revenue − all expenses + gains − losses − taxes" },
+            { "symbol": "NS", "name": "Net Sales", "description": "Total sales less returns, allowances, and discounts" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Including discontinued operations that distort the sustainable margin",
+            "Using net income attributable to non-controlling interests inconsistently"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "Net margin includes financing and tax strategy effects. Comparing net margins across companies with different capital structures is misleading."
+        },
+        {
+          "id": "FA-12",
+          "name": "Return on Assets (ROA)",
+          "domain": "A",
+          "section": "Profitability Ratios",
+          "notation": "ROA = Net Income / Average Total Assets",
+          "variables": [
+            { "symbol": "NI", "name": "Net Income", "description": "Bottom-line earnings after all expenses and taxes" },
+            { "symbol": "AvgTA", "name": "Average Total Assets", "description": "(Beginning Total Assets + Ending Total Assets) / 2" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using ending total assets instead of average",
+            "Using operating income instead of net income without specification"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "ROA uses average assets, not end-of-period assets, unless the question explicitly states otherwise."
+        },
+        {
+          "id": "FA-13",
+          "name": "Return on Equity (ROE)",
+          "domain": "A",
+          "section": "Profitability Ratios",
+          "notation": "ROE = (Net Income − Preferred Dividends) / Average Common Shareholders' Equity",
+          "variables": [
+            { "symbol": "NI", "name": "Net Income", "description": "Net income for the period" },
+            { "symbol": "PD", "name": "Preferred Dividends", "description": "Dividends on preferred stock" },
+            { "symbol": "AvgCSE", "name": "Average Common Equity", "description": "(Beginning Common Equity + Ending Common Equity) / 2" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using ending equity vs. average",
+            "Not subtracting preferred dividends for common ROE"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "If preferred stock exists, net income must be reduced by preferred dividends for common ROE. Using total net income overstates returns to common shareholders."
+        },
+        {
+          "id": "FA-14",
+          "name": "DuPont Identity (ROE Decomposition)",
+          "domain": "A",
+          "section": "Profitability Ratios",
+          "notation": "ROE = NPM × TAT × EM = (Net Income / Sales) × (Sales / Average Total Assets) × (Average Total Assets / Average Equity)",
+          "variables": [
+            { "symbol": "NPM", "name": "Net Profit Margin", "description": "Net Income / Sales" },
+            { "symbol": "TAT", "name": "Total Asset Turnover", "description": "Sales / Average Total Assets" },
+            { "symbol": "EM", "name": "Equity Multiplier", "description": "Average Total Assets / Average Equity" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places (ROE); four decimal places (components)",
+          "commonErrors": [
+            "Using ending values instead of averages for TAT and EM",
+            "Computing components with inconsistent base periods"
+          ],
+          "authority": "DuPont Corporation (1914); financial ratio analysis theory",
+          "examTrap": "The three-way DuPont reveals whether ROE is driven by profitability (NPM), efficiency (TAT), or leverage (EM). High ROE from high EM signals financial risk, not operational excellence."
+        },
+        {
+          "id": "FA-15",
+          "name": "Earnings Per Share (EPS)",
+          "domain": "A",
+          "section": "Market Ratios",
+          "notation": "Basic EPS = (Net Income − Preferred Dividends) / Weighted Average Common Shares Outstanding",
+          "variables": [
+            { "symbol": "NI", "name": "Net Income", "description": "Net income for the period" },
+            { "symbol": "PD", "name": "Preferred Dividends", "description": "Dividends on cumulative preferred stock (declared or not)" },
+            { "symbol": "WASO", "name": "Weighted Average Shares", "description": "Shares weighted by time outstanding during the period" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "dollars per share",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using ending shares instead of weighted average",
+            "Not subtracting undeclared cumulative preferred dividends",
+            "Not retroactively adjusting for stock splits/dividends"
+          ],
+          "authority": "ASC 260 (Earnings Per Share)",
+          "examTrap": "Stock splits and stock dividends are applied retroactively to WASO for all periods presented. Failing to adjust understates prior-period EPS."
+        },
+        {
+          "id": "FA-16",
+          "name": "Price-to-Earnings (P/E) Ratio",
+          "domain": "A",
+          "section": "Market Ratios",
+          "notation": "P/E = Market Price per Share / Earnings per Share",
+          "variables": [
+            { "symbol": "MPS", "name": "Market Price per Share", "description": "Current trading price of one common share" },
+            { "symbol": "EPS", "name": "Earnings per Share", "description": "Trailing 12-month or forward EPS" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using basic EPS when diluted EPS is more conservative",
+            "Comparing trailing P/E to forward P/E of another company"
+          ],
+          "authority": "Market-based ratio; SEC Regulation G (non-GAAP)",
+          "examTrap": "P/E ratios are not comparable across industries. A 'low' P/E in a cyclical industry may signal peak earnings about to decline, not a bargain."
+        },
+        {
+          "id": "FA-17",
+          "name": "Dividend Yield",
+          "domain": "A",
+          "section": "Market Ratios",
+          "notation": "Dividend Yield = (Annual Dividends per Share / Market Price per Share) × 100",
+          "variables": [
+            { "symbol": "DPS", "name": "Dividends per Share", "description": "Total annual dividends declared per common share" },
+            { "symbol": "MPS", "name": "Market Price per Share", "description": "Current trading price of one common share" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using one quarter's dividend × 4 without confirming representativeness",
+            "Using wrong share price date"
+          ],
+          "authority": "Market-based ratio; SEC Regulation G",
+          "examTrap": "A high dividend yield may result from a declining stock price (denominator falling), not from generous dividends."
+        },
+        {
+          "id": "FA-18",
+          "name": "Book Value per Share",
+          "domain": "A",
+          "section": "Market Ratios",
+          "notation": "BVPS = (Total Shareholders' Equity − Preferred Equity) / Common Shares Outstanding",
+          "variables": [
+            { "symbol": "TSE", "name": "Total Shareholders' Equity", "description": "Total equity including preferred stock" },
+            { "symbol": "PE", "name": "Preferred Equity", "description": "Liquidation value or par value of preferred stock" },
+            { "symbol": "CSO", "name": "Common Shares Outstanding", "description": "Shares issued − treasury shares, at period end" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "dollars per share",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using average shares instead of period-end shares",
+            "Not subtracting preferred equity"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "Book value reflects historical cost, not market value. A stock trading below BVPS does not necessarily mean undervaluation—assets may be impaired."
+        },
+        {
+          "id": "FA-19",
+          "name": "Degree of Operating Leverage (DOL)",
+          "domain": "A",
+          "section": "Leverage Ratios",
+          "notation": "DOL = Contribution Margin / Operating Income",
+          "variables": [
+            { "symbol": "CM", "name": "Contribution Margin", "description": "Sales − Total Variable Costs" },
+            { "symbol": "OI", "name": "Operating Income", "description": "CM − Fixed Costs" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using gross margin instead of contribution margin",
+            "Computing at the wrong sales level"
+          ],
+          "authority": "Managerial accounting theory",
+          "examTrap": "DOL is a point elasticity—it changes at different sales levels. DOL of 3 means a 1% sales increase produces a 3% operating income increase at that specific sales level."
+        },
+        {
+          "id": "FA-20",
+          "name": "Degree of Financial Leverage (DFL)",
+          "domain": "A",
+          "section": "Leverage Ratios",
+          "notation": "DFL = EBIT / EBT = Operating Income / (Operating Income − Interest Expense)",
+          "variables": [
+            { "symbol": "EBIT", "name": "Earnings Before Interest and Taxes", "description": "Operating income" },
+            { "symbol": "EBT", "name": "Earnings Before Taxes", "description": "EBIT − Interest Expense" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Not adjusting denominator for preferred dividends grossed up for taxes"
+          ],
+          "authority": "Corporate finance theory",
+          "examTrap": "If preferred stock exists, denominator must also subtract Preferred Dividends / (1 − t), reflecting the after-tax nature of preferred dividends."
+        },
+        {
+          "id": "FA-21",
+          "name": "Sustainable Growth Rate",
+          "domain": "A",
+          "section": "Profitability Ratios",
+          "notation": "SGR = ROE × (1 − Dividend Payout Ratio)",
+          "variables": [
+            { "symbol": "ROE", "name": "Return on Equity", "description": "Net Income / Average Common Equity" },
+            { "symbol": "b", "name": "Retention Ratio", "description": "1 − (Dividends / Net Income)" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using dividend yield instead of payout ratio",
+            "Assuming constant SGR when ROE fluctuates"
+          ],
+          "authority": "Corporate finance theory (Higgins, 1977)",
+          "examTrap": "SGR assumes constant capital structure, dividend policy, and asset turnover. It is a theoretical maximum, not a forecast."
+        }
+      ]
+    },
+    "B": {
+      "letter": "B",
+      "name": "Corporate Finance",
+      "formula_count": 9,
+      "formulas": [
+        {
+          "id": "CB-01",
+          "name": "Expected Return (Probability-Weighted)",
+          "domain": "B",
+          "section": "Risk and Return",
+          "notation": "E(R) = Σ(P_i × R_i)",
+          "variables": [
+            { "symbol": "P_i", "name": "Probability of State i", "description": "Likelihood of economic state i occurring (must sum to 1.0)" },
+            { "symbol": "R_i", "name": "Return in State i", "description": "Expected return if state i occurs" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Probabilities not summing to 1.0",
+            "Using simple arithmetic mean instead of probability-weighted average"
+          ],
+          "authority": "Portfolio theory (Markowitz, 1952)",
+          "examTrap": "Expected return is a probability-weighted average, not a simple arithmetic mean. Candidates frequently compute the simple mean of returns without applying probabilities."
+        },
+        {
+          "id": "CB-02",
+          "name": "Standard Deviation of Returns",
+          "domain": "B",
+          "section": "Risk and Return",
+          "notation": "σ = sqrt(Σ(P_i × (R_i − E(R))²))",
+          "variables": [
+            { "symbol": "σ", "name": "Standard Deviation", "description": "Measure of total risk (dispersion around expected return)" },
+            { "symbol": "P_i", "name": "Probability of State i", "description": "Likelihood of state i" },
+            { "symbol": "R_i", "name": "Return in State i", "description": "Return if state i occurs" },
+            { "symbol": "E(R)", "name": "Expected Return", "description": "Probability-weighted average return" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Computing population standard deviation instead of applying probability weights",
+            "Forgetting the square root"
+          ],
+          "authority": "Portfolio theory (Markowitz, 1952)",
+          "examTrap": "Standard deviation measures total risk (systematic + unsystematic). In a diversified portfolio, only systematic risk (beta) matters."
+        },
+        {
+          "id": "CB-03",
+          "name": "Coefficient of Variation",
+          "domain": "B",
+          "section": "Risk and Return",
+          "notation": "CV = σ / E(R)",
+          "variables": [
+            { "symbol": "σ", "name": "Standard Deviation", "description": "Absolute measure of dispersion" },
+            { "symbol": "E(R)", "name": "Expected Return", "description": "Mean expected return" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Reversing numerator and denominator",
+            "Using variance instead of standard deviation"
+          ],
+          "authority": "Portfolio theory",
+          "examTrap": "CV measures risk per unit of return—the correct metric for comparing investments with different expected returns."
+        },
+        {
+          "id": "CB-04",
+          "name": "Capital Asset Pricing Model (CAPM)",
+          "domain": "B",
+          "section": "Risk and Return",
+          "notation": "R_e = R_f + β(R_m − R_f)",
+          "variables": [
+            { "symbol": "R_e", "name": "Required Return on Equity", "description": "Cost of equity capital" },
+            { "symbol": "R_f", "name": "Risk-Free Rate", "description": "Return on a risk-free asset (typically 10-year U.S. Treasury)" },
+            { "symbol": "β", "name": "Beta", "description": "Measure of systematic risk relative to the market (β_market = 1)" },
+            { "symbol": "R_m", "name": "Market Return", "description": "Expected return on the market portfolio" },
+            { "symbol": "R_m − R_f", "name": "Market Risk Premium", "description": "Excess return demanded for bearing market risk" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using historical market return instead of expected",
+            "Using wrong risk-free rate maturity",
+            "Computing beta from non-comparable index"
+          ],
+          "authority": "CAPM (Sharpe, 1964; Lintner, 1965)",
+          "examTrap": "CAPM gives the required return (cost of equity), not the expected return of the stock. Using historical beta without adjustment for mean reversion is a known limitation."
+        },
+        {
+          "id": "CB-05",
+          "name": "Weighted Average Cost of Capital (WACC)",
+          "domain": "B",
+          "section": "Cost of Capital",
+          "notation": "WACC = (E/V × R_e) + (P/V × R_p) + (D/V × R_d × (1 − t))",
+          "variables": [
+            { "symbol": "E", "name": "Market Value of Equity", "description": "Shares outstanding × share price" },
+            { "symbol": "P", "name": "Market Value of Preferred Stock", "description": "Preferred shares × price per share" },
+            { "symbol": "D", "name": "Market Value of Debt", "description": "Market value of interest-bearing debt" },
+            { "symbol": "V", "name": "Total Value", "description": "E + P + D" },
+            { "symbol": "R_e", "name": "Cost of Equity", "description": "Required return (CAPM or DDM)" },
+            { "symbol": "R_p", "name": "Cost of Preferred Stock", "description": "D_p / P_p" },
+            { "symbol": "R_d", "name": "Cost of Debt (pre-tax)", "description": "Yield to maturity on debt" },
+            { "symbol": "t", "name": "Marginal Tax Rate", "description": "Corporate income tax rate" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using pre-tax cost of debt instead of after-tax",
+            "Omitting preferred stock component",
+            "Using book values instead of market values for weights"
+          ],
+          "authority": "Corporate finance theory (Brealey-Myers); Modigliani-Miller",
+          "examTrap": "Three classic WACC errors: (1) Pre-tax cost of debt—must multiply by (1 − t). (2) Omitting preferred stock entirely. (3) Book value weights instead of market value weights."
+        },
+        {
+          "id": "CB-06",
+          "name": "Cost of Preferred Stock",
+          "domain": "B",
+          "section": "Cost of Capital",
+          "notation": "R_p = D_p / P_p",
+          "variables": [
+            { "symbol": "D_p", "name": "Annual Preferred Dividend", "description": "Stated dollar dividend per preferred share" },
+            { "symbol": "P_p", "name": "Net Proceeds per Preferred Share", "description": "Market price less flotation costs" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Subtracting flotation costs from dividend instead of from price",
+            "Using par value instead of market price"
+          ],
+          "authority": "Corporate finance theory",
+          "examTrap": "Preferred dividends are not tax-deductible. Unlike debt, there is no (1 − t) adjustment for preferred stock in WACC."
+        },
+        {
+          "id": "CB-07",
+          "name": "Cost of Debt (After-Tax)",
+          "domain": "B",
+          "section": "Cost of Capital",
+          "notation": "After-Tax Cost of Debt = R_d × (1 − t)",
+          "variables": [
+            { "symbol": "R_d", "name": "Pre-Tax Cost of Debt", "description": "Yield to maturity on the firm's debt" },
+            { "symbol": "t", "name": "Marginal Tax Rate", "description": "Corporate income tax rate" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using coupon rate instead of YTM",
+            "Using average tax rate instead of marginal rate",
+            "Forgetting (1 − t)"
+          ],
+          "authority": "Corporate finance theory; IRC §163 (interest deductibility)",
+          "examTrap": "The pre-tax cost of debt for WACC is YTM, not the coupon rate. Using the coupon rate ignores whether the bond trades at a premium or discount."
+        },
+        {
+          "id": "CB-08",
+          "name": "Economic Order Quantity (EOQ)",
+          "domain": "B",
+          "section": "Working Capital Management",
+          "notation": "EOQ = sqrt(2DS / H)",
+          "variables": [
+            { "symbol": "D", "name": "Annual Demand", "description": "Total units required per year" },
+            { "symbol": "S", "name": "Ordering Cost", "description": "Fixed cost per order placed" },
+            { "symbol": "H", "name": "Holding Cost", "description": "Annual carrying cost per unit (storage, insurance, obsolescence, opportunity cost)" }
+          ],
+          "tolerance": 1,
+          "tolerance_unit": "units",
+          "rounding": "Nearest whole unit",
+          "commonErrors": [
+            "Using demand in dollars vs. units inconsistently",
+            "Double-counting or omitting opportunity cost in H"
+          ],
+          "authority": "Inventory management theory (Harris, 1913; Wilson, 1934)",
+          "examTrap": "D and H must be in the same time units (both annual). If monthly demand is given, multiply by 12 first. If holding cost is a percentage, multiply by unit cost to get H in dollars."
+        },
+        {
+          "id": "CB-09",
+          "name": "Forward/FX Premium or Discount",
+          "domain": "B",
+          "section": "International Finance",
+          "notation": "Forward Premium/Discount (%) = ((Forward Rate − Spot Rate) / Spot Rate) × (360 / Days) × 100",
+          "variables": [
+            { "symbol": "F", "name": "Forward Rate", "description": "Agreed-upon exchange rate for future settlement" },
+            { "symbol": "S", "name": "Spot Rate", "description": "Current exchange rate for immediate delivery" },
+            { "symbol": "Days", "name": "Forward Period", "description": "Number of days to forward contract maturity" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Reversing numerator (S − F) flipping the sign",
+            "Using 365 days instead of 360 (FX convention)"
+          ],
+          "authority": "International finance theory; interest rate parity",
+          "examTrap": "FX markets use a 360-day year. A positive result means the foreign currency trades at a forward premium (strengthening). Direction matters for interpretation."
+        }
+      ]
+    },
+    "C": {
+      "letter": "C",
+      "name": "Decision Analysis",
+      "formula_count": 11,
+      "formulas": [
+        {
+          "id": "DA-01",
+          "name": "Breakeven Point (Units)",
+          "domain": "C",
+          "section": "Cost-Volume-Profit Analysis",
+          "notation": "BE_units = Fixed Costs / CM per Unit",
+          "variables": [
+            { "symbol": "FC", "name": "Fixed Costs", "description": "Total fixed costs (do not vary with output)" },
+            { "symbol": "CM/unit", "name": "Contribution Margin per Unit", "description": "Selling Price − Variable Cost per Unit" }
+          ],
+          "tolerance": 1,
+          "tolerance_unit": "units",
+          "rounding": "Nearest whole unit",
+          "commonErrors": [
+            "Using selling price instead of contribution margin",
+            "Including variable costs in the numerator",
+            "Not separating semi-variable (mixed) costs"
+          ],
+          "authority": "Managerial accounting theory; CVP analysis",
+          "examTrap": "Semi-variable (mixed) costs must be separated into fixed and variable components before computing breakeven."
+        },
+        {
+          "id": "DA-02",
+          "name": "Breakeven Point (Dollars)",
+          "domain": "C",
+          "section": "Cost-Volume-Profit Analysis",
+          "notation": "BE_$ = Fixed Costs / CM Ratio",
+          "variables": [
+            { "symbol": "FC", "name": "Fixed Costs", "description": "Total fixed costs" },
+            { "symbol": "CM Ratio", "name": "Contribution Margin Ratio", "description": "CM per Unit / Selling Price, or Total CM / Total Sales" }
+          ],
+          "tolerance": 1,
+          "tolerance_unit": "dollars",
+          "rounding": "Nearest whole dollar",
+          "commonErrors": [
+            "Using markup percentage instead of CM ratio",
+            "Using gross margin ratio instead of CM ratio"
+          ],
+          "authority": "Managerial accounting theory; CVP analysis",
+          "examTrap": "CM Ratio = CM / Sales. Gross Margin Ratio = Gross Profit / Sales. These are different—CM excludes all variable costs, not just COGS."
+        },
+        {
+          "id": "DA-03",
+          "name": "Target Profit (Units)",
+          "domain": "C",
+          "section": "Cost-Volume-Profit Analysis",
+          "notation": "Units_target = (Fixed Costs + Target Operating Profit) / CM per Unit",
+          "variables": [
+            { "symbol": "FC", "name": "Fixed Costs", "description": "Total fixed costs" },
+            { "symbol": "TP", "name": "Target Operating Profit", "description": "Desired operating income (before tax)" },
+            { "symbol": "CM/unit", "name": "Contribution Margin per Unit", "description": "Price − Variable Cost per Unit" }
+          ],
+          "tolerance": 1,
+          "tolerance_unit": "units",
+          "rounding": "Nearest whole unit",
+          "commonErrors": [
+            "Using after-tax target profit without grossing up for taxes",
+            "Forgetting to add fixed costs in numerator"
+          ],
+          "authority": "Managerial accounting theory; CVP analysis",
+          "examTrap": "If the question gives target net income (after-tax), convert: Target Pre-Tax = After-Tax Profit / (1 − t). Then add to fixed costs."
+        },
+        {
+          "id": "DA-04",
+          "name": "Margin of Safety",
+          "domain": "C",
+          "section": "Cost-Volume-Profit Analysis",
+          "notation": "MOS (%) = ((Actual Sales − Breakeven Sales) / Actual Sales) × 100",
+          "variables": [
+            { "symbol": "AS", "name": "Actual Sales", "description": "Current or budgeted sales" },
+            { "symbol": "BES", "name": "Breakeven Sales", "description": "Sales at breakeven point" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Reversing numerator (BE − Actual) giving negative MOS",
+            "Mixing dollar and unit measures"
+          ],
+          "authority": "Managerial accounting theory; CVP analysis",
+          "examTrap": "Margin of safety answers 'How much can sales decline before the company incurs a loss?' Always expressed as a percentage of actual sales."
+        },
+        {
+          "id": "DA-05",
+          "name": "Degree of Operating Leverage (CVP Form)",
+          "domain": "C",
+          "section": "Cost-Volume-Profit Analysis",
+          "notation": "DOL = Contribution Margin / Operating Income",
+          "variables": [
+            { "symbol": "CM", "name": "Contribution Margin", "description": "Sales − Total Variable Costs" },
+            { "symbol": "OI", "name": "Operating Income", "description": "CM − Fixed Costs" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using gross margin instead of CM",
+            "Computing at the wrong activity level"
+          ],
+          "authority": "Managerial accounting theory",
+          "examTrap": "DOL is highest near the breakeven point (operating income → 0 in denominator). Very high DOL signals both high upside and high downside risk."
+        },
+        {
+          "id": "DA-06",
+          "name": "Weighted Average Contribution Margin",
+          "domain": "C",
+          "section": "Cost-Volume-Profit Analysis (Multi-Product)",
+          "notation": "WACM = Σ(Sales Mix_i × CM_i)",
+          "variables": [
+            { "symbol": "Sales Mix_i", "name": "Sales Mix Percentage of Product i", "description": "Proportion of total units from product i (must sum to 1.0)" },
+            { "symbol": "CM_i", "name": "CM per Unit of Product i", "description": "Price_i − Variable Cost_i" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "dollars per unit",
+          "rounding": "Two decimal places (WACM); four decimal places (mix %)",
+          "commonErrors": [
+            "Using revenue mix instead of unit mix",
+            "Mix percentages not summing to 1.0"
+          ],
+          "authority": "Managerial accounting theory; multi-product CVP analysis",
+          "examTrap": "Multi-product breakeven yields total units, not per-product units. After computing total breakeven units, multiply by sales mix % to get per-product units."
+        },
+        {
+          "id": "DA-07",
+          "name": "Shut-Down Point",
+          "domain": "C",
+          "section": "Marginal Analysis",
+          "notation": "Shut Down if: Price < Minimum AVC",
+          "variables": [
+            { "symbol": "P", "name": "Price", "description": "Selling price per unit" },
+            { "symbol": "AVC_min", "name": "Minimum Average Variable Cost", "description": "Lowest point on the AVC curve" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "dollars per unit",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Comparing price to average total cost (ATC) instead of AVC",
+            "Shutting down when P between AVC and ATC (should continue short-run)"
+          ],
+          "authority": "Managerial economics; short-run production theory",
+          "examTrap": "In the short run, continue if P ≥ AVC, even if P < ATC. Continuing covers variable costs and contributes to fixed costs. Shutting down when P ≥ AVC increases losses."
+        },
+        {
+          "id": "DA-08",
+          "name": "Sell-or-Process-Further Decision",
+          "domain": "C",
+          "section": "Marginal Analysis",
+          "notation": "Process Further if: Incremental Revenue − Incremental Cost > 0",
+          "variables": [
+            { "symbol": "IR", "name": "Incremental Revenue", "description": "Revenue after processing − Revenue at split-off" },
+            { "symbol": "IC", "name": "Incremental Cost", "description": "Additional processing costs beyond split-off" }
+          ],
+          "tolerance": 1,
+          "tolerance_unit": "dollars",
+          "rounding": "Nearest whole dollar",
+          "commonErrors": [
+            "Including allocated joint costs (sunk at split-off—irrelevant)",
+            "Comparing total profitability instead of incremental"
+          ],
+          "authority": "IMA SMA on relevant costing; joint product decision theory",
+          "examTrap": "Joint costs allocated to products are irrelevant—they are sunk at the split-off point. Only incremental revenues and costs beyond split-off matter."
+        },
+        {
+          "id": "DA-09",
+          "name": "Transfer Price (Minimum)",
+          "domain": "C",
+          "section": "Transfer Pricing",
+          "notation": "Transfer Price_min = Variable Cost per Unit + Opportunity Cost per Unit",
+          "variables": [
+            { "symbol": "VC", "name": "Variable Cost", "description": "Incremental cost of producing one unit" },
+            { "symbol": "OC", "name": "Opportunity Cost", "description": "CM foregone on external sales sacrificed (only when at full capacity)" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "dollars per unit",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Forgetting opportunity cost when at full capacity",
+            "Using full absorption cost instead of variable cost"
+          ],
+          "authority": "IMA SMA on relevant costing; transfer pricing theory",
+          "examTrap": "Idle capacity → OC = $0 → minimum TP = VC. Full capacity → OC = CM lost from displaced external sales. The distinction is critical on the CMA exam."
+        },
+        {
+          "id": "DA-10",
+          "name": "Expected Value",
+          "domain": "C",
+          "section": "Decision Modeling Under Uncertainty",
+          "notation": "EV = Σ(P_i × Outcome_i)",
+          "variables": [
+            { "symbol": "P_i", "name": "Probability of Outcome i", "description": "Likelihood of outcome i (must sum to 1.0)" },
+            { "symbol": "Outcome_i", "name": "Payoff in Outcome i", "description": "Monetary or non-monetary result" }
+          ],
+          "tolerance": 1,
+          "tolerance_unit": "dollars",
+          "rounding": "Nearest whole dollar",
+          "commonErrors": [
+            "Probabilities not summing to 1.0",
+            "Confusing expected value with most likely outcome"
+          ],
+          "authority": "Decision theory (Raiffa, 1968)",
+          "examTrap": "EV is a long-run average, not a prediction of a single outcome. Higher EV does not guarantee a better result in any given instance."
+        },
+        {
+          "id": "DA-11",
+          "name": "Value of Perfect Information",
+          "domain": "C",
+          "section": "Decision Modeling Under Uncertainty",
+          "notation": "EVPI = EV_with perfect information − EV_without perfect information",
+          "variables": [
+            { "symbol": "EV_w_PI", "name": "EV with Perfect Information", "description": "Weighted average of best outcomes under each state" },
+            { "symbol": "EV_wo_PI", "name": "EV without Perfect Information", "description": "EV of the optimal decision under uncertainty" }
+          ],
+          "tolerance": 1,
+          "tolerance_unit": "dollars",
+          "rounding": "Nearest whole dollar",
+          "commonErrors": [
+            "Computing EV with PI by taking the simple best outcome instead of probability-weighting",
+            "Confusing EVPI with maximum possible payoff"
+          ],
+          "authority": "Decision theory (Raiffa, 1968)",
+          "examTrap": "EVPI is the maximum a decision-maker should pay for perfect information. If market research costs more than EVPI, don't buy it—regardless of accuracy."
+        }
+      ]
+    },
+    "D": {
+      "letter": "D",
+      "name": "Risk Management",
+      "formula_count": 3,
+      "formulas": [
+        {
+          "id": "RM-01",
+          "name": "Expected Loss",
+          "domain": "D",
+          "section": "Risk Assessment",
+          "notation": "Expected Loss = Probability × Impact",
+          "variables": [
+            { "symbol": "P", "name": "Probability of Loss", "description": "Likelihood the risk event occurs" },
+            { "symbol": "I", "name": "Impact", "description": "Financial magnitude if the loss occurs" }
+          ],
+          "tolerance": 1,
+          "tolerance_unit": "dollars",
+          "rounding": "Nearest whole dollar",
+          "commonErrors": [
+            "Using ordinal labels ('likely') without converting to numeric",
+            "Using worst-case impact instead of expected impact"
+          ],
+          "authority": "COSO ERM (2017) — Component 3: Performance, Principle 10 (Identifies Risk)",
+          "examTrap": "Expected loss is a probability-weighted average, not the worst-case scenario. Risk response should consider both expected loss and tail risk."
+        },
+        {
+          "id": "RM-02",
+          "name": "Risk Score",
+          "domain": "D",
+          "section": "Risk Assessment",
+          "notation": "Risk Score = Likelihood × Severity",
+          "variables": [
+            { "symbol": "L", "name": "Likelihood", "description": "Probability or frequency of occurrence on an ordinal scale (e.g., 1–5)" },
+            { "symbol": "S", "name": "Severity", "description": "Magnitude of impact on an ordinal scale (e.g., 1–5)" }
+          ],
+          "tolerance": 0,
+          "tolerance_unit": "ordinal",
+          "rounding": "Nearest integer",
+          "commonErrors": [
+            "Using different scales for L and S (e.g., 1–3 for L, 1–5 for S)",
+            "Adding instead of multiplying"
+          ],
+          "authority": "COSO ERM (2017) — Component 3: Performance, Principle 10 (Identifies Risk)",
+          "examTrap": "Risk heat maps multiply likelihood × severity, not add them. A risk that is almost certain (5) with moderate impact (3) = 15, not 8. Adding understates high-likelihood, high-severity risks."
+        },
+        {
+          "id": "RM-03",
+          "name": "Residual Risk",
+          "domain": "D",
+          "section": "Risk Response",
+          "notation": "Residual Risk = Inherent Risk − Controls Mitigation",
+          "variables": [
+            { "symbol": "IR", "name": "Inherent Risk", "description": "Risk level before any controls or mitigation" },
+            { "symbol": "CM", "name": "Controls Mitigation", "description": "Risk reduction attributable to internal controls" }
+          ],
+          "tolerance": 1,
+          "tolerance_unit": "ordinal",
+          "rounding": "Nearest integer",
+          "commonErrors": [
+            "Reversing direction (Controls − Inherent)",
+            "Assuming residual risk reaches zero"
+          ],
+          "authority": "COSO ERM (2017) — Component 4: Review & Revision, Principle 15 (Assesses Substantial Change)",
+          "examTrap": "Residual risk can never be zero—no control system is perfect. The CMA exam expects candidates to recognize that some residual risk always remains."
+        }
+      ]
+    },
+    "E": {
+      "letter": "E",
+      "name": "Investment Decisions",
+      "formula_count": 8,
+      "formulas": [
+        {
+          "id": "ID-01",
+          "name": "Net Present Value (NPV)",
+          "domain": "E",
+          "section": "Capital Budgeting",
+          "notation": "NPV = Σ(CF_t / (1 + r)^t) − I_0",
+          "variables": [
+            { "symbol": "CF_t", "name": "Cash Flow in Period t", "description": "Expected net after-tax cash inflow in period t" },
+            { "symbol": "r", "name": "Discount Rate", "description": "Required rate of return or cost of capital" },
+            { "symbol": "t", "name": "Time Period", "description": "Year index (1, 2, ..., n)" },
+            { "symbol": "n", "name": "Project Life", "description": "Number of periods" },
+            { "symbol": "I_0", "name": "Initial Investment", "description": "Cash outlay at t = 0" }
+          ],
+          "tolerance": 5,
+          "tolerance_unit": "dollars",
+          "rounding": "Nearest whole dollar; carry 4 decimal places for discount factors",
+          "commonErrors": [
+            "Wrong discount rate (real vs. nominal, pre-tax vs. after-tax)",
+            "Omitting working capital recovery in terminal year",
+            "Including sunk costs in cash flows",
+            "Double-counting inflation"
+          ],
+          "authority": "Capital budgeting theory (Fisher, 1930); NPV decision rule",
+          "examTrap": "NPV uses cash flows, not accounting income. Depreciation is added back via the tax shield. Discount rate must match cash flow type—nominal cash flows need nominal rates."
+        },
+        {
+          "id": "ID-02",
+          "name": "Profitability Index (PI)",
+          "domain": "E",
+          "section": "Capital Budgeting",
+          "notation": "PI = PV of Future Cash Flows / Initial Investment",
+          "variables": [
+            { "symbol": "PV_CF", "name": "PV of Future Cash Flows", "description": "Sum of discounted cash inflows (excluding I_0)" },
+            { "symbol": "I_0", "name": "Initial Investment", "description": "Cash outlay at t = 0" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Including I_0 in numerator (gives NPV/I_0 + 1, not PI)",
+            "Using undiscounted cash flows"
+          ],
+          "authority": "Capital budgeting theory",
+          "examTrap": "PI is NPV-based (uses discounted cash flows), not simple benefit-cost ratio. PI > 1 means NPV > 0. Correct ranking metric under capital rationing."
+        },
+        {
+          "id": "ID-03",
+          "name": "Payback Period",
+          "domain": "E",
+          "section": "Capital Budgeting",
+          "notation": "Payback = Initial Investment / Annual Cash Flow (uniform CF); cumulative otherwise",
+          "variables": [
+            { "symbol": "I_0", "name": "Initial Investment", "description": "Cash outlay at t = 0" },
+            { "symbol": "ACF", "name": "Annual Cash Flow", "description": "Uniform annual after-tax cash inflow" }
+          ],
+          "tolerance": 0.1,
+          "tolerance_unit": "years",
+          "rounding": "One decimal place",
+          "commonErrors": [
+            "Using accounting income instead of cash flows",
+            "Not using cumulative method for non-uniform CFs"
+          ],
+          "authority": "Capital budgeting theory",
+          "examTrap": "Payback ignores the time value of money and cash flows beyond the payback period. It is a liquidity/screening tool, not a profitability measure."
+        },
+        {
+          "id": "ID-04",
+          "name": "Discounted Payback Period",
+          "domain": "E",
+          "section": "Capital Budgeting",
+          "notation": "DPP = time until cumulative discounted cash flows ≥ I_0",
+          "variables": [
+            { "symbol": "I_0", "name": "Initial Investment", "description": "Cash outlay at t = 0" },
+            { "symbol": "DCF_t", "name": "Discounted Cash Flow in t", "description": "CF_t / (1 + r)^t" }
+          ],
+          "tolerance": 0.1,
+          "tolerance_unit": "years",
+          "rounding": "One decimal place",
+          "commonErrors": [
+            "Using undiscounted cash flows (defeats the purpose)",
+            "Stopping at the wrong year"
+          ],
+          "authority": "Capital budgeting theory",
+          "examTrap": "Discounted payback corrects for time value of money but still ignores post-cutoff cash flows. It is always longer than simple payback."
+        },
+        {
+          "id": "ID-05",
+          "name": "Equivalent Annual Annuity (EAA)",
+          "domain": "E",
+          "section": "Capital Budgeting (Unequal Lives)",
+          "notation": "EAA = NPV / PVIFA(r, n) = NPV / ((1 − (1 + r)^(−n)) / r)",
+          "variables": [
+            { "symbol": "NPV", "name": "Net Present Value", "description": "Sum of discounted net cash flows" },
+            { "symbol": "PVIFA", "name": "PV Interest Factor of Annuity", "description": "(1 − (1 + r)^(−n)) / r" },
+            { "symbol": "r", "name": "Discount Rate", "description": "Required rate of return" },
+            { "symbol": "n", "name": "Project Life", "description": "Number of periods" }
+          ],
+          "tolerance": 5,
+          "tolerance_unit": "dollars",
+          "rounding": "Nearest whole dollar",
+          "commonErrors": [
+            "Comparing NPVs directly for unequal-life projects",
+            "Using wrong annuity factor"
+          ],
+          "authority": "Capital budgeting theory",
+          "examTrap": "When comparing mutually exclusive projects with unequal lives, NPV alone is insufficient. EAA converts lump-sum NPV to an annualized equivalent for apples-to-apples comparison."
+        },
+        {
+          "id": "ID-06",
+          "name": "After-Tax Cash Flow",
+          "domain": "E",
+          "section": "Capital Budgeting",
+          "notation": "ATCF = (Revenue − Cash Operating Expenses) × (1 − t) + (Depreciation × t)",
+          "variables": [
+            { "symbol": "Rev", "name": "Revenue", "description": "Incremental revenue from the project" },
+            { "symbol": "COE", "name": "Cash Operating Expenses", "description": "Variable and fixed cash costs (excludes depreciation)" },
+            { "symbol": "t", "name": "Marginal Tax Rate", "description": "Corporate income tax rate" },
+            { "symbol": "Depr", "name": "Depreciation", "description": "Annual depreciation expense (non-cash)" }
+          ],
+          "tolerance": 1,
+          "tolerance_unit": "dollars",
+          "rounding": "Nearest whole dollar",
+          "commonErrors": [
+            "Omitting the depreciation tax shield (Depr × t)",
+            "Treating depreciation as a cash outflow",
+            "Using average tax rate instead of marginal"
+          ],
+          "authority": "Capital budgeting theory; IRC §167 (depreciation); IRC §168 (MACRS)",
+          "examTrap": "Depreciation is non-cash—it does NOT directly reduce cash flow. It reduces taxable income, creating a tax shield. Only the tax shield (Depreciation × t) is added back."
+        },
+        {
+          "id": "ID-07",
+          "name": "MACRS Depreciation",
+          "domain": "E",
+          "section": "Capital Budgeting",
+          "notation": "MACRS Depreciation_t = Cost × MACRS Rate_t (from IRS Pub 946 tables)",
+          "variables": [
+            { "symbol": "Cost", "name": "Asset Cost", "description": "Purchase price (MACRS ignores salvage value)" },
+            { "symbol": "Rate_t", "name": "MACRS Rate for Year t", "description": "Statutory percentage from IRS tables (3-, 5-, 7-year property classes)" }
+          ],
+          "tolerance": 1,
+          "tolerance_unit": "dollars",
+          "rounding": "Nearest whole dollar",
+          "commonErrors": [
+            "Subtracting salvage value before applying MACRS rate (MACRS ignores salvage)",
+            "Using wrong recovery period",
+            "Wrong half-year convention application in disposal year"
+          ],
+          "authority": "MACRS — IRS Publication 946; IRC §168",
+          "examTrap": "MACRS ignores salvage value entirely—depreciable basis = full cost. Half-year convention: only 50% of Year 1 rate in Year 1, remainder in Year n+1. A 3-year property is depreciated over 4 tax years."
+        },
+        {
+          "id": "ID-08",
+          "name": "Accounting Rate of Return (ARR)",
+          "domain": "E",
+          "section": "Capital Budgeting",
+          "notation": "ARR = Average Annual Net Income / Average Investment",
+          "variables": [
+            { "symbol": "AANI", "name": "Average Annual Net Income", "description": "Average accrual-basis income over project life (after depreciation and tax)" },
+            { "symbol": "AI", "name": "Average Investment", "description": "(Initial Investment + Salvage Value) / 2" }
+          ],
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "rounding": "Two decimal places",
+          "commonErrors": [
+            "Using cash flows instead of accounting net income",
+            "Using initial investment instead of average investment"
+          ],
+          "authority": "Capital budgeting theory",
+          "examTrap": "ARR is the only capital budgeting method using accounting income rather than cash flows. It ignores the time value of money entirely."
+        }
+      ]
+    },
+    "F": {
+      "letter": "F",
+      "name": "Professional Ethics",
+      "formula_count": 0,
+      "formulas": [],
+      "note": "Domain F tests the IMA Statement of Ethical Professional Practice, SOX 2002, FCPA, and corporate governance. All items are conceptual—no quantitative formulas are tested."
+    }
+  },
+  "total_formulas": 52,
+  "verified_against_blueprint": true,
+  "cross_reference": {
+    "blueprint_extraction": "p2/P2002_BLUEPRINT_EXTRACTION.json",
+    "certification_standard_sections": ["§D.4 (Numerical Validation)", "§E.1 (Formula Verification Protocol)"],
+    "counts_match": true,
+    "domain_counts": {
+      "A": { "expected": 21, "actual": 21, "match": true },
+      "B": { "expected": 9, "actual": 9, "match": true },
+      "C": { "expected": 11, "actual": 11, "match": true },
+      "D": { "expected": 3, "actual": 3, "match": true },
+      "E": { "expected": 8, "actual": 8, "match": true },
+      "F": { "expected": 0, "actual": 0, "match": true }
+    }
+  }
+}

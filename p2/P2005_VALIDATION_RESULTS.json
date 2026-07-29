@@ -1,0 +1,676 @@
+{
+  "meta": {
+    "session": "P2-005",
+    "subagent": "validator-board",
+    "date": "2026-07-29",
+    "pack_file": "pack_p2_a.js",
+    "item_count": 30,
+    "qid_range": "P2-A-001 to P2-A-030",
+    "tooling": "GovernanceGuardP2 (governance_guard_p2.js) + manual deep inspection"
+  },
+  "governance_guard_result": {
+    "pass": true,
+    "totalItems": 30,
+    "violations": [],
+    "notes": "GovernanceGuardP2.validatePack() returned 0 structural violations: DL-008 (0), DL-026 (0), DL-021 (0), DL-037 (0), Part2OnlyFlag (0), Cross-Part QID (0), P1-Exclusive (0). All 30 items pass all 11 governance rules."
+  },
+  "structural_audit": {
+    "total_items": 30,
+    "pass": true,
+    "required_fields_present": {
+      "pass": true,
+      "fields_checked": [
+        "Part", "Section", "Topic", "QuestionID", "question_state", "Part2OnlyFlag",
+        "Stem", "Choices.A", "Choices.B", "Choices.C", "Choices.D",
+        "CorrectChoice", "ExplanationCorrect",
+        "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD",
+        "Difficulty", "DifficultyScore", "CognitiveLevel", "CalculationItem",
+        "Type", "LOSTag", "BlueprintDomain", "FormulaReference",
+        "CommonTrapReference", "Authorities", "VerificationChecks"
+      ],
+      "all_present": true
+    },
+    "dl_008": {
+      "description": "ExplanationWrong[CorrectChoice] must be '' (empty)",
+      "violations": 0,
+      "items": []
+    },
+    "dl_026": {
+      "description": "All 3 non-CorrectChoice ExplanationWrong slots must be non-empty",
+      "violations": 0,
+      "items": []
+    },
+    "dl_021": {
+      "description": "All 4 ExplanationWrong fields must be structurally present",
+      "violations": 0,
+      "items": []
+    },
+    "dl_037": {
+      "description": "Choice binary lead-in polarity mismatch",
+      "violations": 0,
+      "items": []
+    },
+    "part2onlyflag": {
+      "description": "Part2OnlyFlag must be strictly boolean true",
+      "violations": 0,
+      "items": [],
+      "all_true": true
+    },
+    "qid_format": {
+      "description": "QID must match /^P2-[A-F]-\\d{3}$/",
+      "violations": 0,
+      "items": [],
+      "all_valid": true
+    }
+  },
+  "content_audit": {
+    "explanation_length": {
+      "description": "ExplanationCorrect >= 50 chars; each non-CC EW slot >= 50 chars",
+      "pass": true,
+      "ec_min": 683,
+      "ec_max": 1495,
+      "ec_avg": 1097,
+      "ew_non_cc_min": 487,
+      "ew_non_cc_max": 970,
+      "ew_non_cc_avg": 701
+    },
+    "boilerplate_free": {
+      "pass": false,
+      "reason": "P2-A-017 and P2-A-019 contain unedited authoring artifacts in Choice text. P2-A-017 ExplanationCorrect also contains authoring notes. These are not template boilerplate (DL-013 pattern) but raw authoring drafts left in production fields.",
+      "affected_items": [
+        "P2-A-017",
+        "P2-A-019"
+      ],
+      "details": {
+        "P2-A-017": {
+          "issue": "CRITICAL — Authoring monologue embedded in Choice B text",
+          "snippet_start": "Normalized net profit margin is approximately 7.84%, exceeding the 7.0% hurdle. All four items are non-recurring in nature and should be adjusted... actually wait — no. Let me re-derive this carefully...",
+          "description": "Choice B contains the author's internal reasoning process including redrafts and abandoned arithmetic. The text 'Let me redesign Choice B with different numbers. Let gain = $2.0M instead...' is raw authoring content. The numeric conclusion in the choice text (7.84%) contradicts the ExplanationCorrect (6.73%), meaning the learner sees a wrong number in the choice text.",
+          "also_affected": "ExplanationCorrect starts with 'Let me re-derive with internally consistent numbers' — authoring notes. VerificationChecks[7] (line 732-733) acknowledges the choice-text mismatch: 'Choice B correctly identifies that all four items should be normalized symmetrically, yielding 6.73% — below the 7.0% hurdle.' BUT Choice B text says 7.84% ABOVE hurdle. Self-contradicting.",
+          "severity": "Critical — learner-facing content contains authoring artifacts; choice text contradicts the correct answer"
+        },
+        "P2-A-019": {
+          "issue": "CRITICAL — Authoring monologue embedded in Choice B text",
+          "snippet_start": "Proposal A generates ROE of approximately 8.67%: net income = ($28.5M - $7.5M interest) x (1 - 0.28) = $15.12M; ROE = $15.12M / $192M = 7.88%... wait 8.67%? No — $11.448M / $132M = 8.67%. Hmm, 10.06% or 8.67%? Let me recalculate...",
+          "description": "Choice B contains internal authoring monologue including arithmetic self-correction and strategy redesign notes: 'Let me redesign Choice B to advocate for Proposal A...' The text is internally contradictory (compares and rejects its own numbers in mid-sentence) and reads as draft scratch work, not an exam distractor.",
+          "severity": "Critical — learner-facing choice text contains raw authoring rough work"
+        }
+      }
+    }
+  },
+  "metadata_audit": {
+    "difficulty_distribution": {
+      "Easy (1)": 0,
+      "Moderate-Easy (2)": 0,
+      "Moderate (3)": 0,
+      "Difficult (4)": 21,
+      "Very Difficult (5)": 9,
+      "total": 30,
+      "warning": "SKEWED — Zero Easy/Moderate-Easy/Moderate items. Per P2002_CERTIFICATION_STANDARD.md §G.1 Domain A targets: 10% Easy, 20% Moderate-Easy, 30% Moderate, 30% Difficult, 10% Very Difficult. Current distribution (70% Difficult, 30% Very Difficult) is a 3-tier upward shift from targets. All 30 items are at the highest two tiers. This is appropriate for Wave 1 authoring (analytical depth is deliberate) but must be balanced in future waves."
+    },
+    "cognitive_level_distribution": {
+      "Remember": 0,
+      "Understand": 0,
+      "Apply": 0,
+      "Analyze": 17,
+      "Evaluate": 13,
+      "total": 30,
+      "warning": "SKEWED — Zero Remember/Understand/Apply items. Per §G.2 Domain A targets: 10% Remember, 20% Understand, 45% Apply, 20% Analyze, 5% Evaluate. Current (57% Analyze, 43% Evaluate) is inverted. Future waves must add Remember/Understand/Apply items to meet pool-wide targets."
+    },
+    "correct_choice_distribution": {
+      "A": { "count": 7, "pct": 23.3 },
+      "B": { "count": 12, "pct": 40.0 },
+      "C": { "count": 6, "pct": 20.0 },
+      "D": { "count": 5, "pct": 16.7 },
+      "total": 30,
+      "warning": "B-heavy (40.0%). Per psychometric standards, each position should be 22-28%. B at 40% exceeds this range. D at 16.7% is below. For a 30-item sample this is not statistically conclusive but warrants tracking in future waves."
+    },
+    "question_state_distribution": {
+      "Unprocessed": 30,
+      "In Audit": 0,
+      "Editorial Queue": 0,
+      "Certified": 0,
+      "Archived": 0,
+      "note": "All 30 items are in initial Unprocessed state. None yet certified. Learner pool not affected."
+    },
+    "lostag_coverage": {
+      "A.1": 20,
+      "A.2": 10,
+      "A.3": 0,
+      "A.4": 0,
+      "A.5": 0,
+      "A.6": 0,
+      "note": "Domain A sub-topic coverage is limited to A.1 (liquidity/solvency/ratio analysis) and A.2 (DuPont/earnings quality/comparative analysis). Future waves should cover A.3 (profitability analysis), A.4 (special issues - foreign operations, effects of changing prices), A.5 (impact of accounting changes), and A.6 (integrated ratio/statement analysis)."
+    },
+    "formula_reference_coverage": {
+      "has_formula": 22,
+      "null_formula": 8,
+      "null_items": ["P2-A-010", "P2-A-021", "P2-A-024", "P2-A-025", "P2-A-026", "P2-A-027", "P2-A-028", "P2-A-029"],
+      "cross_reference_check": "All non-null FormulaReference values were checked against FORMULA_MASTER_P2.md. All match known Part 2 formulas.",
+      "note": "8 items have FormulaReference: null — these are conceptual/evaluative items where numerical formulas are not the primary tested skill."
+    },
+    "authority_citation_check": {
+      "pass": true,
+      "note": "All Authority citations reference appropriate Part 2 authorities (ASC sections, COSO ERM where applicable). No Part 1-exclusive authorities cited. Citations match question domain (e.g., ASC 470 for debt questions, ASC 330 for inventory, ASC 260 for EPS, ASC 280 for segment reporting)."
+    },
+    "blueprint_domain_check": {
+      "pass": true,
+      "all_domains": ["Financial Statement Analysis"],
+      "note": "All 30 items have BlueprintDomain: 'Financial Statement Analysis' which is a valid Part 2 domain."
+    }
+  },
+  "item_by_item": [
+    {
+      "QuestionID": "P2-A-001",
+      "CorrectChoice": "B",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1495,
+      "EW_A_chars": 609,
+      "EW_B_chars": 0,
+      "EW_C_chars": 710,
+      "EW_D_chars": 610,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-002",
+      "CorrectChoice": "D",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1148,
+      "EW_A_chars": 705,
+      "EW_B_chars": 710,
+      "EW_C_chars": 611,
+      "EW_D_chars": 0,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-003",
+      "CorrectChoice": "A",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1136,
+      "EW_A_chars": 0,
+      "EW_B_chars": 711,
+      "EW_C_chars": 613,
+      "EW_D_chars": 710,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-004",
+      "CorrectChoice": "C",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1138,
+      "EW_A_chars": 706,
+      "EW_B_chars": 639,
+      "EW_C_chars": 0,
+      "EW_D_chars": 707,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-005",
+      "CorrectChoice": "B",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1104,
+      "EW_A_chars": 611,
+      "EW_B_chars": 0,
+      "EW_C_chars": 613,
+      "EW_D_chars": 608,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-006",
+      "CorrectChoice": "C",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1302,
+      "EW_A_chars": 636,
+      "EW_B_chars": 639,
+      "EW_C_chars": 0,
+      "EW_D_chars": 612,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-007",
+      "CorrectChoice": "C",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1139,
+      "EW_A_chars": 607,
+      "EW_B_chars": 609,
+      "EW_C_chars": 0,
+      "EW_D_chars": 612,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-008",
+      "CorrectChoice": "B",
+      "Difficulty": "Very Difficult (5)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1383,
+      "EW_A_chars": 613,
+      "EW_B_chars": 0,
+      "EW_C_chars": 711,
+      "EW_D_chars": 706,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-009",
+      "CorrectChoice": "C",
+      "Difficulty": "Very Difficult (5)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1202,
+      "EW_A_chars": 706,
+      "EW_B_chars": 612,
+      "EW_C_chars": 0,
+      "EW_D_chars": 613,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-010",
+      "CorrectChoice": "A",
+      "Difficulty": "Very Difficult (5)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.1",
+      "CalculationItem": false,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1003,
+      "EW_A_chars": 0,
+      "EW_B_chars": 708,
+      "EW_C_chars": 709,
+      "EW_D_chars": 707,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-011",
+      "CorrectChoice": "D",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1385,
+      "EW_A_chars": 903,
+      "EW_B_chars": 897,
+      "EW_C_chars": 712,
+      "EW_D_chars": 0,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-012",
+      "CorrectChoice": "B",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1145,
+      "EW_A_chars": 710,
+      "EW_B_chars": 0,
+      "EW_C_chars": 613,
+      "EW_D_chars": 706,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-013",
+      "CorrectChoice": "A",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1385,
+      "EW_A_chars": 0,
+      "EW_B_chars": 706,
+      "EW_C_chars": 706,
+      "EW_D_chars": 898,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-014",
+      "CorrectChoice": "D",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1191,
+      "EW_A_chars": 706,
+      "EW_B_chars": 708,
+      "EW_C_chars": 900,
+      "EW_D_chars": 0,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-015",
+      "CorrectChoice": "B",
+      "Difficulty": "Very Difficult (5)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1385,
+      "EW_A_chars": 710,
+      "EW_B_chars": 0,
+      "EW_C_chars": 707,
+      "EW_D_chars": 711,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-016",
+      "CorrectChoice": "A",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1200,
+      "EW_A_chars": 0,
+      "EW_B_chars": 708,
+      "EW_C_chars": 711,
+      "EW_D_chars": 707,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-017",
+      "CorrectChoice": "B",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1111,
+      "EW_A_chars": 711,
+      "EW_B_chars": 0,
+      "EW_C_chars": 707,
+      "EW_D_chars": 711,
+      "issues": [
+        "CRITICAL: Choice B text contains unedited authoring monologue ('actually wait — no. Let me re-derive this carefully... Let me redesign Choice B with different numbers. Let gain = $2.0M instead...')",
+        "CRITICAL: Choice B text says normalized margin is 7.84% (exceeding 7.0% hurdle), but ExplanationCorrect says 6.73% (below 7.0% hurdle). Self-contradicting.",
+        "CRITICAL: ExplanationCorrect starts with 'Let me re-derive with internally consistent numbers' — authoring notes left in explanation.",
+        "CRITICAL: VerificationChecks[7] acknowledges the mismatch: 'Choice B correctly identifies that all four items should be normalized symmetrically, yielding 6.73% — below the 7.0% hurdle' — but Choice B text says 7.84% ABOVE hurdle.",
+        "Learner impact: The learner sees Choice B text that is internally confused and contradicts the stored correct answer."
+      ]
+    },
+    {
+      "QuestionID": "P2-A-018",
+      "CorrectChoice": "B",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 895,
+      "EW_A_chars": 708,
+      "EW_B_chars": 0,
+      "EW_C_chars": 706,
+      "EW_D_chars": 707,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-019",
+      "CorrectChoice": "B",
+      "Difficulty": "Very Difficult (5)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1141,
+      "EW_A_chars": 711,
+      "EW_B_chars": 0,
+      "EW_C_chars": 708,
+      "EW_D_chars": 711,
+      "issues": [
+        "CRITICAL: Choice B text contains unedited authoring monologue ('wait 8.67%? No — $11.448M / $132M = 8.67%. Hmm, 10.06% or 8.67%? Let me recalculate... Let me redesign Choice B to advocate for Proposal A...'). The full choice text alternates between competing answers and appears to be raw scratch work.",
+        "Learner impact: The learner sees Choice B text that oscillates between arithmetic corrections and strategy redesigns — not a coherent exam distractor."
+      ]
+    },
+    {
+      "QuestionID": "P2-A-020",
+      "CorrectChoice": "B",
+      "Difficulty": "Very Difficult (5)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.1",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1143,
+      "EW_A_chars": 709,
+      "EW_B_chars": 0,
+      "EW_C_chars": 709,
+      "EW_D_chars": 903,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-021",
+      "CorrectChoice": "B",
+      "Difficulty": "Very Difficult (5)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.2",
+      "CalculationItem": false,
+      "Part2OnlyFlag": true,
+      "EC_chars": 905,
+      "EW_A_chars": 707,
+      "EW_B_chars": 0,
+      "EW_C_chars": 707,
+      "EW_D_chars": 710,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-022",
+      "CorrectChoice": "C",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.2",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1151,
+      "EW_A_chars": 710,
+      "EW_B_chars": 707,
+      "EW_C_chars": 0,
+      "EW_D_chars": 707,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-023",
+      "CorrectChoice": "A",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.2",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 909,
+      "EW_A_chars": 0,
+      "EW_B_chars": 706,
+      "EW_C_chars": 706,
+      "EW_D_chars": 707,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-024",
+      "CorrectChoice": "D",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.2",
+      "CalculationItem": false,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1151,
+      "EW_A_chars": 706,
+      "EW_B_chars": 707,
+      "EW_C_chars": 709,
+      "EW_D_chars": 0,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-025",
+      "CorrectChoice": "B",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.2",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1145,
+      "EW_A_chars": 710,
+      "EW_B_chars": 0,
+      "EW_C_chars": 709,
+      "EW_D_chars": 710,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-026",
+      "CorrectChoice": "C",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.2",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 904,
+      "EW_A_chars": 708,
+      "EW_B_chars": 706,
+      "EW_C_chars": 0,
+      "EW_D_chars": 708,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-027",
+      "CorrectChoice": "A",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Analyze",
+      "LOSTag": "A.2",
+      "CalculationItem": false,
+      "Part2OnlyFlag": true,
+      "EC_chars": 903,
+      "EW_A_chars": 0,
+      "EW_B_chars": 707,
+      "EW_C_chars": 708,
+      "EW_D_chars": 708,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-028",
+      "CorrectChoice": "B",
+      "Difficulty": "Difficult (4)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.2",
+      "CalculationItem": true,
+      "Part2OnlyFlag": true,
+      "EC_chars": 907,
+      "EW_A_chars": 709,
+      "EW_B_chars": 0,
+      "EW_C_chars": 705,
+      "EW_D_chars": 709,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-029",
+      "CorrectChoice": "D",
+      "Difficulty": "Very Difficult (5)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.2",
+      "CalculationItem": false,
+      "Part2OnlyFlag": true,
+      "EC_chars": 958,
+      "EW_A_chars": 707,
+      "EW_B_chars": 707,
+      "EW_C_chars": 710,
+      "EW_D_chars": 0,
+      "issues": []
+    },
+    {
+      "QuestionID": "P2-A-030",
+      "CorrectChoice": "A",
+      "Difficulty": "Very Difficult (5)",
+      "CognitiveLevel": "Evaluate",
+      "LOSTag": "A.2",
+      "CalculationItem": false,
+      "Part2OnlyFlag": true,
+      "EC_chars": 1185,
+      "EW_A_chars": 0,
+      "EW_B_chars": 710,
+      "EW_C_chars": 706,
+      "EW_D_chars": 705,
+      "issues": []
+    }
+  ],
+  "overall_verdict": "PASS — with 2 Critical Defects requiring immediate remediation before certification",
+  "certification_blockers": [
+    {
+      "item": "P2-A-017",
+      "reason": "Choice B text contains unedited authoring monologue. Choice B asserts margin is 7.84% (exceeding 7.0% hurdle) while ExplanationCorrect states 6.73% (below hurdle). Self-contradicting. ExplanationCorrect itself starts with authoring notes ('Let me re-derive...'). Choice text is not renderable to learners.",
+      "remediation": "Rewrite Choice B with the finished calculation: normalized margin 6.73%, below 7.0% hurdle. Rewrite ExplanationCorrect to remove authoring notes and present the analysis cleanly. Update VerificationChecks[7] to remove the 'Corrected verification' note."
+    },
+    {
+      "item": "P2-A-019",
+      "reason": "Choice B text contains unedited authoring monologue with arithmetic self-correction and strategy redesign notes. The text alternates between competing calculations and reads as draft scratch work.",
+      "remediation": "Rewrite Choice B with the finished analysis: Proposal A yields ROE 7.88% with interest coverage 3.80x; Proposal B yields ROE 8.67% but coverage drops to 2.26x; recommend Proposal A for superior risk-adjusted return."
+    },
+    {
+      "item": "P2-A-021",
+      "reason": "WARNING: ExplanationWrongB field (CorrectChoice slot) is not at the standard position in the JSON object — it appears at line 905, after ExplanationWrongD and VerificationChecks, rather than between ExplanationWrongB and ExplanationWrongC. This is a structurally non-standard field ordering that may confuse parsers that expect EW fields to appear in A/B/C/D sequence. The field IS correctly empty (''), so no DL-008 violation. Low severity but worth noting for schema conformance.",
+      "remediation": "Move ExplanationWrongB field to its standard position between ExplanationWrongA and ExplanationWrongC for consistent JSON field ordering."
+    }
+  ],
+  "certification_warnings": [
+    {
+      "type": "difficulty_skew",
+      "detail": "All 30 items are Difficult (21) or Very Difficult (9). Per P2002_CERTIFICATION_STANDARD.md §G.1 Domain A targets: 10% Easy, 20% Moderate-Easy, 30% Moderate, 30% Difficult, 10% Very Difficult. Future waves (P2-005 onward) must include Easy, Moderate-Easy, and Moderate items to meet pool-wide targets. Current Wave 1 skew is deliberate (analytical depth prioritized) but must not persist."
+    },
+    {
+      "type": "cognitive_level_skew",
+      "detail": "All 30 items are Analyze (17) or Evaluate (13). Per §G.2 Domain A targets: 10% Remember, 20% Understand, 45% Apply, 20% Analyze, 5% Evaluate. Future waves must add Remember and Understand items (definitional/conceptual) and Apply items (calculation-focused)."
+    },
+    {
+      "type": "correct_choice_b_heavy",
+      "detail": "Choice B is correct on 12/30 items (40.0%), exceeding the 22-28% psychometric target. Choice D (16.7%) is below. For 30 items this is not statistically definitive but warrants monitoring as the pool grows."
+    },
+    {
+      "type": "lostag_coverage_limited",
+      "detail": "Only A.1 (20 items) and A.2 (10 items) are covered. A.3 through A.6 have zero coverage. Future waves should expand to profitability analysis (A.3), special issues (A.4), accounting changes impact (A.5), and integrated ratio/statement analysis (A.6)."
+    },
+    {
+      "type": "p2_a_017_verification_checks_contains_notes",
+      "detail": "VerificationChecks[7] (line 732-733) contains authoring resolution notes: 'Corrected verification: Choice B correctly identifies...' This is metadata pollution. VerificationChecks should contain pass/fail assertions, not editor notes about drafting errors."
+    }
+  ],
+  "summary": {
+    "governance_guard_rules": "11/11 PASS (0 violations)",
+    "dl_008_ew_cc_empty": "30/30 PASS",
+    "dl_026_non_cc_ew_nonempty": "30/30 PASS",
+    "dl_021_ew_fields_present": "30/30 PASS",
+    "dl_037_polarity_mismatch": "30/30 PASS",
+    "part2onlyflag": "30/30 true",
+    "qid_format": "30/30 valid",
+    "choice_text_artifacts": "2 CRITICAL (P2-A-017, P2-A-019)",
+    "explanation_artifacts": "1 CRITICAL (P2-A-017)",
+    "items_ready_for_certification": 28,
+    "items_blocking_certification": 2
+  }
+}
