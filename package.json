@@ -9,7 +9,10 @@
     "audit": "node scripts/section_a_validation_batch.js",
     "dashboard": "node scripts/build_dashboard.js",
     "build-registry": "node scripts/build_master_registry.js && node scripts/generate_registry.js",
-    "generate-registry": "node scripts/generate_registry.js"
+    "generate-registry": "node scripts/generate_registry.js",
+    "pipeline": "npm run validate && npm run build-registry && npm run dashboard",
+    "preflight": "node scripts/preflight.js",
+    "smoke": "node scripts/smoke_test.js"
   },
   "devDependencies": {
     "playwright": "^1.61.1"
