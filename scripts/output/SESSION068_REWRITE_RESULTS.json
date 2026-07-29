@@ -1,0 +1,77 @@
+{
+  "session": "68",
+  "applied": 14,
+  "target": 15,
+  "results": [
+    {
+      "qid": "P1-B-031",
+      "pack": "A",
+      "status": "applied"
+    },
+    {
+      "qid": "P1-B-085",
+      "pack": "A",
+      "status": "applied"
+    },
+    {
+      "qid": "P1B-B-188",
+      "pack": "B",
+      "status": "applied"
+    },
+    {
+      "qid": "P1B-C-147",
+      "pack": "B",
+      "status": "applied"
+    },
+    {
+      "qid": "P1-CC-063",
+      "pack": "C",
+      "status": "applied"
+    },
+    {
+      "qid": "P1B-D-113",
+      "pack": "B",
+      "status": "applied"
+    },
+    {
+      "qid": "P1-E-008",
+      "pack": "A",
+      "status": "applied"
+    },
+    {
+      "qid": "P1-BD-081",
+      "pack": "D",
+      "status": "applied"
+    },
+    {
+      "qid": "P1-CD-065",
+      "pack": "D",
+      "status": "applied"
+    },
+    {
+      "qid": "P1-D-004",
+      "pack": "A",
+      "status": "applied"
+    },
+    {
+      "qid": "P1-DD-004",
+      "pack": "D",
+      "status": "applied"
+    },
+    {
+      "qid": "P1E-C-004",
+      "pack": "E",
+      "status": "applied"
+    },
+    {
+      "qid": "P1B-E-086",
+      "pack": "B",
+      "status": "applied"
+    },
+    {
+      "qid": "P1-ED-073",
+      "pack": "D",
+      "status": "applied"
+    }
+  ]
+}

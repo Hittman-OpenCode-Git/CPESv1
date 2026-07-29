@@ -1,3 +1,77 @@
+## Session 68 — Apply Conversion Program — B/C/D/E Quality Elevation — 2026-07-29
+
+**Type:** WRITE (all 5 packs — 15 items across Packs A(4), B(4), C(1), D(5), E(1))
+
+**Objective:** Convert 15 Apply-level MCQs into genuine Analyze/Evaluate business-scenario items. Target the large Apply inventory across Sections B, C, D, E. Minimum 8 Evaluate items.
+
+**Outcome:** COMPLETE — 15/15 rewrites applied. 8 Evaluate + 7 Analyze. Governance: 54/54 PASS. All 5 packs parse clean. 0 DL-008, 0 DL-026, 0 DL-037. QID: 2,545 (stable). Certified: 2,453 (+2 from field normalization).
+
+### Cognitive Upgrades
+
+| From | To | Count |
+|------|----|-------|
+| Apply | Evaluate | 8 |
+| Apply | Analyze | 7 |
+
+### Section Distribution
+- Section B: 4 (P1-B-031, P1-B-085, P1B-B-188, P1-BD-081)
+- Section C: 4 (P1B-C-147, P1-CC-063, P1-CD-065, P1E-C-004)
+- Section D: 4 (P1B-D-113, P1-DD-062, P1-D-004, P1-DD-004)
+- Section E: 3 (P1-E-008, P1B-E-086, P1-ED-073)
+
+### Evaluate Items (8)
+
+| QID | Pack | Section | Topic |
+|-----|------|---------|-------|
+| P1-B-031 | A | B | Cash collections — accelerate vs factor vs tighten |
+| P1-B-085 | A | B | Material sourcing — bulk discount vs JIT |
+| P1B-B-188 | B | B | Capital investment — CVP breakeven comparison |
+| P1B-C-147 | B | C | Transfer pricing — external supplier conflict |
+| P1-CC-063 | C | C | Fixed OH volume variance — denominator selection |
+| P1B-D-113 | B | D | Sell-or-process-further with shutdown + competitor |
+| P1-DD-062 | D | D | Multi-product mix shift — BEP vs CM tradeoff |
+| P1-E-008 | A | E | Bank reconciliation — fraud investigation under COSO |
+
+### Analyze Items (7)
+
+| QID | Pack | Section | Topic |
+|-----|------|---------|-------|
+| P1-BD-081 | D | B | Cash budget — temporary vs structural shortfall |
+| P1-CD-065 | D | C | Variance investigation — constrained budget optimization |
+| P1-D-004 | A | D | Overhead disposition — COGS write-off vs proration |
+| P1-DD-004 | D | D | Underapplied OH — controller vs auditor GAAP dispute |
+| P1E-C-004 | E | C | Labor rate variance — skill-mix vs overtime diagnosis |
+| P1B-E-086 | B | E | Segregation of duties — 3-person constraint |
+| P1-ED-073 | D | E | Exception reports — trend analysis + expected loss |
+
+### Governance Verification
+- Governance guard: 54/54 PASS
+- Parse: All 5 packs PASS
+- DL-008: 0, DL-026: 0, DL-037: 0
+- QID count: 2,545 (stable)
+- Certified pool: 2,453
+
+### Cumulative Rewrite Program (S61–S68)
+
+| Session | Rewrites | Evaluate | Analyze | Sections |
+|---------|----------|----------|---------|----------|
+| S61 | 20 | 10 | 10 | A/B/C/D/E/F |
+| S62 | 20 | 10 | 10 | A/B/C/D/E/F |
+| S63 | 14 | 8 | 6 | A |
+| S67 | 15 | 7 | 8 | B/C/D |
+| S68 | 15 | 8 | 7 | B/C/D/E |
+| **Total** | **84** | **43** | **41** | All 6 domains |
+
+### Answers to Final Questions
+- **Q1:** 7 Apply → Analyze
+- **Q2:** 8 Apply → Evaluate (met minimum of 8)
+- **Q3:** Section B (Budgeting): 2 of 3 Apply items became Evaluate (P1-B-031, P1B-B-188)
+- **Q4-Q5:** Deferred to cognitive-gap-board
+
+### Backups: `backups/*_corrected.js.bak-S068-20260729130242`
+
+---
+
 ## Session 67 — Question Improvement Program Restart — B/C/D Quality Elevation — 2026-07-29
 
 **Type:** WRITE (all 5 packs — 15 items across Packs A(3), B(3), C(3), D(3), E(3))

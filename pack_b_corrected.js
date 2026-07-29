@@ -6709,46 +6709,52 @@ const MCQ_BANK_B = [
         "CognitiveLevel": "Apply"
     },
     {
-        "Part": 1,
-        "Section": "B",
-        "SectionName": "Planning, Budgeting, and Forecasting",
-        "Topic": "B-B.188 cost-volume-profit in budgeting",
-        "MicroTopic": "cost-volume-profit in budgeting",
-        "UniqueConceptKey": "B-B-188-cost-volume-profit-in-budgeting",
-        "LOSTag": "B.1 Budgeting concepts and strategic planning",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Budgeted fixed costs: $400,000. Budgeted CM per unit: $50. What is the budgeted breakeven point in units?",
-        "CorrectChoice": "C",
-        "ExplanationCorrect": "Breakeven = Fixed costs / CM per unit = $400,000 / $50 = 8,000 units.",
-        "SourceDescription": "Original CMA Part 1 exam-style practice.",
-        "QuestionID": "P1B-B-188",
-        "question_state": "Certified",
-        "ReviewNote": "If missed or marked, review the linked study materials.",
-        "CalculationItem": true,
-        "Choices": {
-            "A": "12,000",
-            "B": "10,000",
-            "C": "8,000",
-            "D": "6,000"
-        },
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            }
-        ],
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
-        ],
-        "ExplanationWrongA": "12,000 units incorrectly adds fixed costs to the numerator without proper calculation. Breakeven = Fixed costs / CM per unit = $400,000 / $50 = 8,000 units.",
-        "ExplanationWrongB": "10,000 units does not correspond to the correct CVP calculation. The breakeven point in units is found by dividing total fixed costs by the contribution margin per unit.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "6,000 units would result if the fixed costs were $300,000 instead of $400,000, or if the CM per unit were approximately $66.67. The correct formula is fixed costs divided by CM per unit.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "B",
+	"SectionName": "Planning, Budgeting, and Forecasting",
+	"Topic": "B-B.188 evaluate competing capital investment proposals CVP breakeven",
+	"MicroTopic": "evaluate competing capital investment proposals CVP breakeven",
+	"UniqueConceptKey": "B-B-188-evaluate-competing-capital-investment-proposals-cvp-breakeven",
+	"LOSTag": "B.1 Budgeting concepts and strategic planning",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Greenway Manufacturing's board has approved a capital expenditure ceiling of $1,800,000 for the upcoming budget year. Controller Rebecca Tran must evaluate two competing proposals from the production engineering team. Proposal Alpha: Invest $1,500,000 in automation equipment, increasing annual fixed costs from $400,000 to $620,000 but raising the contribution margin per unit from $50 to $68 through labor savings and reduced waste. The equipment's capacity is 22,000 units annually. Proposal Beta: Invest $1,200,000 in flexible work cells, increasing annual fixed costs from $400,000 to $510,000 and raising the contribution margin per unit from $50 to $58 through improved throughput. Capacity is 25,000 units annually. The sales forecast calls for 16,000 units next year with a standard deviation of 3,200 units based on five years of historical demand variability. The board's investment criteria prioritize downside protection in weak-demand years (sales at one standard deviation below forecast = 12,800 units). Evaluate which proposal achieves the lower breakeven point and higher margin of safety under both expected and weak-demand scenarios, and recommend which proposal the controller should advance to the board.",
+	"Choices": {
+		"A": "Proposal Alpha: Breakeven = 9,118 units at $68 CM; margin of safety at 16,000 units = 43.0%. Under weak demand (12,800 units), operating income = $250,400. Despite higher fixed costs, the substantially greater CM per unit provides stronger downside protection and higher operating leverage when demand exceeds breakeven",
+		"B": "Proposal Beta: Breakeven = 8,793 units at $58 CM; margin of safety at 16,000 units = 45.0%. Under weak demand (12,800 units), operating income = $232,400. The lower breakeven point provides superior downside protection, which aligns with the board's stated investment criteria, despite Alpha's higher CM",
+		"C": "Proposal Alpha: Breakeven = 11,824 units; margin of safety = 26.1%. Alpha's higher automation costs create unacceptable risk because the breakeven nearly doubles from the current 8,000 units, threatening profitability in any year demand falls below 11,824 units",
+		"D": "Neither proposal — maintain the current cost structure. Both proposals increase fixed costs and operating leverage, which amplifies losses in weak-demand years. The board should defer capital investment until demand variability decreases"
+	},
+	"CorrectChoice": "B",
+	"ExplanationCorrect": "The controller should recommend Proposal Beta because it better satisfies the board's stated investment criteria prioritizing downside protection. Quantitative analysis: Proposal Beta breakeven = $510,000 / $58 = 8,793 units — only 793 units above the current 8,000-unit breakeven and the lowest among all alternatives. Margin of safety at expected demand (16,000 units) = (16,000 - 8,793) / 16,000 = 45.0%. Under weak demand (12,800 units), operating income = (12,800 x $58) - $510,000 = $742,400 - $510,000 = $232,400. Proposal Alpha breakeven = $620,000 / $68 = 9,118 units. Margin of safety = (16,000 - 9,118) / 16,000 = 43.0%. Under weak demand: (12,800 x $68) - $620,000 = $870,400 - $620,000 = $250,400. While Alpha produces $18,000 more operating income in weak-demand years, Beta's lower breakeven (8,793 vs. 9,118) provides superior margin of safety and a lower probability of operating losses. The board's explicit prioritization of downside protection means Beta aligns with governance criteria even though Alpha offers higher CM and marginally higher income at most demand levels. Business interpretation: capital budgeting within the annual profit plan requires matching investment proposals to the organization's risk appetite, not simply maximizing expected return. A common exam trap is selecting the highest-CM alternative without considering the board's stated risk criteria — breakeven analysis exists to inform risk judgment, and when the governance body prioritizes downside protection, the proposal with the lower breakeven should prevail.",
+	"SourceDescription": "Original CMA Part 1 exam-style practice.",
+	"QuestionID": "P1B-B-188",
+	"question_state": "Certified",
+	"ReviewNote": "If missed or marked, review the linked study materials.",
+	"CalculationItem": false,
+	"Choices": {
+		"A": "Proposal Alpha: Breakeven = 9,118 units at $68 CM; margin of safety at 16,000 units = 43.0%. Under weak demand (12,800 units), operating income = $250,400. Despite higher fixed costs, the substantially greater CM per unit provides stronger downside protection and higher operating leverage when demand exceeds breakeven",
+		"B": "Proposal Beta: Breakeven = 8,793 units at $58 CM; margin of safety at 16,000 units = 45.0%. Under weak demand (12,800 units), operating income = $232,400. The lower breakeven point provides superior downside protection, which aligns with the board's stated investment criteria, despite Alpha's higher CM",
+		"C": "Proposal Alpha: Breakeven = 11,824 units; margin of safety = 26.1%. Alpha's higher automation costs create unacceptable risk because the breakeven nearly doubles from the current 8,000 units, threatening profitability in any year demand falls below 11,824 units",
+		"D": "Neither proposal — maintain the current cost structure. Both proposals increase fixed costs and operating leverage, which amplifies losses in weak-demand years. The board should defer capital investment until demand variability decreases"
+	},
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		}
+	],
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
+	],
+	"ExplanationWrongA": "Proposal Alpha produces $250,400 under weak demand versus Beta's $232,400 — an $18,000 advantage. However, this marginal income advantage does not override the board's stated criterion prioritizing downside protection. Beta's lower breakeven (8,793 vs. 9,118) means the company reaches profitability 325 units sooner. The board's governance criteria explicitly prioritize breakeven protection over marginal income in adverse scenarios. A candidate selecting this option may be maximizing expected operating income while ignoring the board's stated decision criteria.",
+	"ExplanationWrongB": "",
+	"ExplanationWrongC": "This option contains a computational error — 11,824 units would be approximately the breakeven if CM were only $52.40 per unit, not Alpha's actual $68. Alpha's correct breakeven is $620,000 / $68 = 9,118 units. The claim that Alpha's breakeven 'nearly doubles' from 8,000 is exaggerated; the actual increase is 1,118 units, or 14%. A candidate selecting this option may have incorrectly calculated the breakeven by using old fixed costs or the wrong CM figure.",
+	"ExplanationWrongD": "Rejecting both proposals preserves the current 8,000-unit breakeven but ignores the strategic rationale for investment. The current contribution margin of $50 is $8–$18 lower than either proposal, meaning the company forgoes $64–$144 in additional CM per incremental unit above breakeven. Under expected demand of 16,000 units, the current structure yields $400,000 in operating income versus $418,000 (Beta) or $468,000 (Alpha). A candidate selecting this option may be exhibiting loss-aversion bias — overestimating the probability of weak demand relative to the expected case.",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
     {
         "Part": 1,
         "Section": "B",
@@ -9306,50 +9312,56 @@ const MCQ_BANK_B = [
         "CognitiveLevel": "Apply"
     },
     {
-        "Part": 1,
-        "Section": "C",
-        "SectionName": "Performance Management",
-        "Topic": "B-C.147 transfer pricing",
-        "MicroTopic": "cost-based transfer price",
-        "UniqueConceptKey": "B-C-147-transfer-pricing",
-        "LOSTag": "LOS: Part 1, Section C.5.2 - Determine transfer prices using cost-based approach",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Westfield Manufacturing's Component Division has variable cost of $30 per unit and full manufacturing cost of $45 per unit. The division can sell externally for $60. If the company uses cost-based transfer pricing with a 10% markup on full cost, what is the transfer price?",
-        "CorrectChoice": "D",
-        "ExplanationCorrect": "Under cost-based transfer pricing with a markup on full cost: Transfer price = Full manufacturing cost + (Full cost x Markup%) = $45 + ($45 x 10%) = $45 + $4.50 = $49.50.",
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "QuestionID": "P1B-C-147",
-        "question_state": "Certified",
-        "ReviewNote": "If missed or marked, review cost-based transfer pricing with markup",
-        "CalculationItem": true,
-        "Choices": {
-            "A": "$54.00",
-            "B": "$33.00",
-            "C": "$56.00",
-            "D": "$49.50"
-        },
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax: Principles of Managerial Accounting",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
-            }
-        ],
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
-        ],
-        "ExplanationWrongA": "$54.00 would be a 20% markup on full cost. The correct markup is 10%: $45 + ($45 x 10%) = $45 + $4.50 = $49.50.",
-        "ExplanationWrongB": "$33.00 would be a markup on variable cost, not full cost. The question specifies a markup on full manufacturing cost.",
-        "ExplanationWrongC": "$56.00 does not correspond to any correct markup percentage applied to full cost. $45 x (1 + 0.10) = $49.50.",
-        "ExplanationWrongD": "",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "C",
+	"SectionName": "Performance Management",
+	"Topic": "B-C.147 evaluate transfer pricing external supplier conflict",
+	"MicroTopic": "evaluate transfer pricing external supplier conflict",
+	"UniqueConceptKey": "B-C-147-evaluate-transfer-pricing-external-supplier-conflict",
+	"LOSTag": "LOS: Part 1, Section C.5.2 - Determine transfer prices using cost-based approach",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Northfield Industries' Components Division (CD) manufactures Part TR-9 at a variable cost of $30 per unit and full manufacturing cost of $48 per unit. CD currently transfers 40,000 units annually to the Assembly Division (AD) at a cost-plus transfer price of $52.80 (full cost plus 10% markup). CD operates at 85% capacity and sells identical parts to external customers at $62 per unit. The AD's purchasing manager, Laura Kim, has identified an external supplier — Meridian Components — offering TR-9 at $49 per unit with equivalent quality and 98.5% on-time delivery. Kim argues the company should source externally, saving $3.80 per unit ($152,000 annually based on 40,000 units). CD's divisional VP, Mark Torres, counters that CD would lose the $912,000 in contribution margin from internal transfers (40,000 units x ($52.80 - $30) = $912,000), and the plant would need to absorb $280,000 in fixed costs currently covered by internal transfers — fixed costs that cannot be eliminated in the short term because CD shares facilities across multiple product lines. From the corporation's perspective, the external price of $49 is below CD's full cost of $48 plus a reasonable return. Which recommendation should the controller present to the CFO?",
+	"Choices": {
+		"A": "Mandate continued internal transfer at $52.80 — CD's capacity utilization would drop from 85% to 72% without internal volume, increasing per-unit fixed-cost absorption and worsening CD's reported results. The external savings of $3.80 per unit do not offset the unavoidable fixed-cost burden that would be shifted to remaining products",
+		"B": "Allow AD to source externally from Meridian at $49 per unit — the corporation saves $152,000 annually in variable costs ($49 vs. $52.80 internal price), and CD's $280,000 in fixed costs are sunk for decision-making purposes. The corporate goal is to minimize total cost, and divisional profitability should not override enterprise-level optimization",
+		"C": "Negotiate a revised internal transfer price of $49 — matching the external offer maintains internal sourcing while eliminating the pricing disadvantage. CD should absorb the margin reduction, as the corporation benefits from quality control, shorter lead times, and retained production know-how that external sourcing cannot replicate",
+		"D": "Split sourcing — direct 60% of AD's volume to Meridian at $49 to capture external savings and retain 40% internally to keep CD above a critical volume threshold, balancing cost reduction with capacity utilization and strategic sourcing diversification"
+	},
+	"CorrectChoice": "C",
+	"ExplanationCorrect": "Under transfer pricing governance, the controller must evaluate the decision from the corporation's perspective, not either division's standpoint. The corporate analysis: AD pays $52.80 internally vs. $49 externally — a $3.80 per unit ($152,000 annual) disadvantage for internal sourcing. However, CD's variable cost to produce TR-9 is $30 per unit. If AD sources externally, CD loses contribution margin of $22.80 per unit ($52.80 - $30) on 40,000 units = $912,000. CD's $280,000 in fixed costs, while unavoidable in the short term, could potentially be reassigned to other products or reduced over time. The optimal resolution is to negotiate a transfer price of $49 — matching the external market. At $49, CD still earns a contribution margin of $19 per unit ($49 - $30 = $19 x 40,000 = $760,000), which covers most of the $280,000 in allocated fixed costs plus provides a return. The corporation retains the strategic benefits of internal supply: quality control, shorter lead times, elimination of supplier dependency risk, and retention of production expertise. Option B (full external sourcing) saves only $152,000 in price while destroying $912,000 in CD contribution — a net corporate loss of $760,000. Option A (mandate internal $52.80) forces AD to overpay by $152,000 relative to the market. The negotiated $49 price is the economically efficient solution: it satisfies the general transfer pricing rule that the transfer price should not exceed the market price the buying division would pay externally ($49), while remaining above the selling division's variable cost ($30), ensuring both divisions benefit relative to their next-best alternatives. This is consistent with the principle that transfer prices should guide divisions toward decisions that maximize corporate, not divisional, profit.",
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"QuestionID": "P1B-C-147",
+	"question_state": "Certified",
+	"ReviewNote": "If missed or marked, review cost-based transfer pricing with markup",
+	"CalculationItem": false,
+	"Choices": {
+		"A": "Mandate continued internal transfer at $52.80 — CD's capacity utilization would drop from 85% to 72% without internal volume, increasing per-unit fixed-cost absorption and worsening CD's reported results. The external savings of $3.80 per unit do not offset the unavoidable fixed-cost burden that would be shifted to remaining products",
+		"B": "Allow AD to source externally from Meridian at $49 per unit — the corporation saves $152,000 annually in variable costs ($49 vs. $52.80 internal price), and CD's $280,000 in fixed costs are sunk for decision-making purposes. The corporate goal is to minimize total cost, and divisional profitability should not override enterprise-level optimization",
+		"C": "Negotiate a revised internal transfer price of $49 — matching the external offer maintains internal sourcing while eliminating the pricing disadvantage. CD should absorb the margin reduction, as the corporation benefits from quality control, shorter lead times, and retained production know-how that external sourcing cannot replicate",
+		"D": "Split sourcing — direct 60% of AD's volume to Meridian at $49 to capture external savings and retain 40% internally to keep CD above a critical volume threshold, balancing cost reduction with capacity utilization and strategic sourcing diversification"
+	},
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax: Principles of Managerial Accounting",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
+		}
+	],
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
+	],
+	"ExplanationWrongA": "Mandating the $52.80 internal transfer protects CD's capacity utilization but imposes a $152,000 annual cost penalty on the corporation relative to the external market price. Capacity utilization is not a corporate objective — minimizing total cost while maintaining quality and supply reliability is. The fixed costs are unavoidable in the short term, but this strengthens the case for reducing the transfer price, not maintaining it. A candidate selecting this option is evaluating the decision from CD's divisional perspective rather than the corporation's consolidated position.",
+	"ExplanationWrongB": "Full external sourcing at $49 saves $152,000 on AD's purchases but destroys CD's contribution margin of $22.80 per unit on 40,000 units — $912,000 annually. Even treating CD's $280,000 in fixed costs as unavoidable sunk costs, the net corporate impact is: $152,000 saved by AD - $912,000 CM lost by CD = -$760,000. The general transfer pricing rule states that external sourcing is optimal only when the external price is below the selling division's variable cost ($30) or when the selling division can redeploy capacity to more profitable external sales. Here, the external price of $49 exceeds CD's variable cost of $30, and CD does not have external customers to absorb the freed capacity. A candidate selecting this option may be applying a purchasing-department perspective rather than computing the full corporate contribution-margin impact.",
+	"ExplanationWrongC": "",
+	"ExplanationWrongD": "Split sourcing introduces complexity and transaction costs without a corresponding benefit. At the negotiated $49 price, keeping all 40,000 units internal preserves the full strategic benefits of internal supply. The 60/40 split would have CD earning contribution margin on only 16,000 units ($19 x 16,000 = $304,000) instead of 40,000 units ($760,000), reducing corporate contribution by $456,000. Split sourcing is rarely optimal when a single transfer price can achieve the same outcome without the administrative burden of managing dual supply relationships. A candidate selecting this option may be applying a general risk-diversification heuristic without testing whether diversification is economically justified.",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
     {
         "Part": 1,
         "Section": "C",
@@ -13439,51 +13451,57 @@ const MCQ_BANK_B = [
         "CognitiveLevel": "Apply"
     },
     {
-        "Part": 1,
-        "Section": "D",
-        "SectionName": "Cost Management",
-        "Topic": "B-D.113 joint product costing",
-        "MicroTopic": "sell or process further",
-        "UniqueConceptKey": "B-D-113-joint-product-costing",
-        "LOSTag": "LOS: Part 1, Section D.6.5 - Apply sell-or-process-further decisions",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Harbor Chemical produces Product P at split-off, which can be sold for $60,000 or processed further into Product Q at a cost of $25,000 and sold for $100,000. Should Harbor process further and what is the net benefit?",
-        "CorrectChoice": "B",
-        "ExplanationCorrect": "Incremental revenue from further processing = $100,000 - $60,000 = $40,000. Incremental cost = $25,000. Net benefit = $40,000 - $25,000 = $15,000. Since the incremental revenue exceeds the incremental cost, processing further is profitable. The joint costs incurred before split-off are irrelevant (sunk costs) to this decision.",
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "QuestionID": "P1B-D-113",
-        "question_state": "Certified",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review sell or process further decisions: ignore joint costs, use incremental analysis",
-        "CalculationItem": true,
-        "Choices": {
-            "A": "Sell at split-off; net benefit of $40,000",
-            "B": "Process further; net benefit of $15,000",
-            "C": "Process further; net benefit of $75,000",
-            "D": "Process further; net benefit of $40,000"
-        },
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax: Principles of Managerial Accounting",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
-            }
-        ],
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
-        ],
-        "ExplanationWrongA": "Selling at split-off gives only $60,000. Processing further adds $40,000 incremental revenue at $25,000 cost, yielding a $15,000 net benefit.",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "$75,000 would be total profit after further processing, not the net benefit of processing further. The incremental approach compares only the change in revenue and cost.",
-        "ExplanationWrongD": "$40,000 is the incremental revenue, not the net benefit. The net benefit subtracts the $25,000 incremental cost from the $40,000 incremental revenue.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "D",
+	"SectionName": "Cost Management",
+	"Topic": "B-D.113 evaluate sell-or-process-further with product line shutdown and competitor entry",
+	"MicroTopic": "evaluate sell-or-process-further with product line shutdown and competitor entry",
+	"UniqueConceptKey": "B-D-113-evaluate-sell-or-process-further-with-shutdown-competitor",
+	"LOSTag": "LOS: Part 1, Section D.6.5 - Apply sell-or-process-further decisions",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Harbor Chemical's joint process yields Product P (20,000 gallons), Product R (15,000 gallons), and Product S (10,000 gallons). Joint costs total $380,000. Product P currently sells at split-off for $3.25 per gallon ($65,000 total). Harbor can process Product P into Product P-X at an additional cost of $42,000, yielding a specialty solvent selling for $8.00 per gallon. A competitor, ChemStar, recently entered the P-X market at $7.50 per gallon, and Harbor's sales director projects this would limit Harbor to 70% of its current P volume at the P-X stage (14,000 gallons of P-X). The remaining 6,000 gallons of P would still need to be sold at split-off. Additionally, processing P into P-X requires shutting down Harbor's legacy cleaning-solvent line, which currently generates a segment margin of $4,200 per year on sales of $72,000 — this line uses shared equipment that would be repurposed for P-X processing. Traceable fixed costs of $16,000 for the solvent line would be eliminated, but the line also absorbs $31,000 in allocated common fixed costs that would continue regardless. The controller must evaluate whether Harbor should sell Product P at split-off or process it further into P-X. Which recommendation is correct?",
+	"Choices": {
+		"A": "Process Product P further into P-X. Incremental analysis: sell 14,000 gallons as P-X at $8.00 = $112,000 plus 6,000 gallons at split-off = $19,500, for total revenue of $131,500. Incremental costs: $42,000 processing + $4,200 lost solvent segment margin = $46,200. Net from P-X strategy = $131,500 - $46,200 = $85,300. Split-off baseline = $65,000 + $4,200 solvent margin = $69,200. Net benefit of processing further = $16,100",
+		"B": "Sell Product P entirely at split-off. The $16,100 net benefit from processing further is positive but thin relative to the $65,000 baseline, and it depends on achieving 70% volume at the $8.00 price point against a competitor already at $7.50. The strategic risk of abandoning the established solvent business for an unproven market entry, combined with the competitor's pricing advantage, makes the split-off decision the more prudent choice",
+		"C": "Process Product P further into P-X using the full 20,000-gallon volume. Incremental revenue = (20,000 x $8.00) - $65,000 = $95,000. Less $42,000 processing and $4,200 lost margin = $48,800 net benefit. The competitor's market entry is a temporary factor — Harbor's established customer relationships should allow it to achieve full volume within two quarters",
+		"D": "Process Product P further but match ChemStar's price at $7.50 per gallon on 14,000 gallons. P-X revenue = $105,000 plus split-off 6,000 gallons = $19,500, total = $124,500. Less $42,000 processing and $4,200 lost margin = $78,300. Compared to split-off baseline of $69,200, the net benefit is $9,100. Matching the competitor's price is essential for market credibility even if it reduces the margin versus the $8.00 target price"
+	},
+	"CorrectChoice": "A",
+	"ExplanationCorrect": "The controller should apply incremental analysis under the sell-or-process-further framework. Joint costs of $380,000 are sunk and irrelevant — they do not differ between the alternatives. The relevant comparison is the total contribution under each course of action. Under the split-off option: Product P revenue = 20,000 x $3.25 = $65,000 + solvent line segment margin of $4,200 = $69,200 (the $31,000 in allocated common fixed costs continue regardless and are irrelevant). Under the P-X option: 14,000 gallons sold as P-X at $8.00 = $112,000 + 6,000 gallons at split-off ($3.25) = $19,500 = $131,500 total revenue. Incremental costs: $42,000 processing cost + $4,200 lost segment margin = $46,200. The traceable fixed costs of $16,000 that would be eliminated are already netted out of the solvent line's segment margin. Net contribution from P-X strategy = $131,500 - $46,200 = $85,300. Incremental benefit over split-off = $85,300 - $69,200 = $16,100. Since the net benefit is positive, processing further is economically preferable. Business interpretation: the sell-or-process-further decision is a specific application of relevant costing — only revenues and costs that differ between the two alternatives matter. The competitor's market entry reduces but does not eliminate the benefit, and the controller should present the quantified analysis even when the margin is thin. A common exam trap is including joint costs in the analysis (they are sunk) or treating allocated common fixed costs as avoidable (they continue under both alternatives).",
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"QuestionID": "P1B-D-113",
+	"question_state": "Certified",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review sell or process further decisions: ignore joint costs, use incremental analysis",
+	"CalculationItem": false,
+	"Choices": {
+		"A": "Process Product P further into P-X. Incremental analysis: sell 14,000 gallons as P-X at $8.00 = $112,000 plus 6,000 gallons at split-off = $19,500, for total revenue of $131,500. Incremental costs: $42,000 processing + $4,200 lost solvent segment margin = $46,200. Net from P-X strategy = $131,500 - $46,200 = $85,300. Split-off baseline = $65,000 + $4,200 solvent margin = $69,200. Net benefit of processing further = $16,100",
+		"B": "Sell Product P entirely at split-off. The $16,100 net benefit from processing further is positive but thin relative to the $65,000 baseline, and it depends on achieving 70% volume at the $8.00 price point against a competitor already at $7.50. The strategic risk of abandoning the established solvent business for an unproven market entry, combined with the competitor's pricing advantage, makes the split-off decision the more prudent choice",
+		"C": "Process Product P further into P-X using the full 20,000-gallon volume. Incremental revenue = (20,000 x $8.00) - $65,000 = $95,000. Less $42,000 processing and $4,200 lost margin = $48,800 net benefit. The competitor's market entry is a temporary factor — Harbor's established customer relationships should allow it to achieve full volume within two quarters",
+		"D": "Process Product P further but match ChemStar's price at $7.50 per gallon on 14,000 gallons. P-X revenue = $105,000 plus split-off 6,000 gallons = $19,500, total = $124,500. Less $42,000 processing and $4,200 lost margin = $78,300. Compared to split-off baseline of $69,200, the net benefit is $9,100. Matching the competitor's price is essential for market credibility even if it reduces the margin versus the $8.00 target price"
+	},
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax: Principles of Managerial Accounting",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
+		}
+	],
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
+	],
+	"ExplanationWrongA": "",
+	"ExplanationWrongB": "Selling at split-off preserves the solvent line's $4,200 segment margin and avoids the processing cost, but it forgoes $16,100 in net incremental benefit. While the competitor's $7.50 price and the volume uncertainty are legitimate strategic concerns, the analysis already accounts for them by assuming only 70% of volume at $8.00 — a conservative projection. The qualitative risk of 'unproven market entry' is already priced into the analysis through the volume haircut. A candidate selecting this option may be overweighting strategic uncertainty relative to quantitative evidence, which is not the controller's role — the controller should present the analysis showing a positive net benefit and flag the assumptions for management judgment.",
+	"ExplanationWrongC": "Using the full 20,000-gallon volume ignores the competitor impact that the sales director explicitly identified. While Harbor may eventually recapture market share, the decision must be evaluated using the best available projections, not aspirational full-capacity assumptions. The $48,800 claimed benefit is nearly triple the correct incremental benefit of $16,100 and would overstate the case for P-X. A candidate selecting this option may be ignoring information that contradicts the preferred conclusion — a confirmation bias that the controller must guard against by faithfully incorporating all available evidence, including competitor intelligence.",
+	"ExplanationWrongD": "Matching ChemStar's $7.50 price reduces P-X revenue from $112,000 to $105,000 and the net benefit from $16,100 to $9,100. While $9,100 is still positive, there is no evidence that Harbor needs to match the competitor's price — Harbor may command a $0.50 premium based on quality, relationships, or switching costs. The controller should base the analysis on Harbor's achievable price, not the competitor's, unless evidence demonstrates price sensitivity. A candidate selecting this option may be defaulting to price-matching as a competitive strategy without evaluating whether the $0.50 premium is defensible.",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
     {
         "Part": 1,
         "Section": "D",
@@ -15643,51 +15661,54 @@ const MCQ_BANK_B = [
         "ExplanationWrongD": "Information, Communication, and Reporting concerns ERM data flow. The stem addresses strategy and objectives, not information flows."
     },
     {
-        "Part": 1,
-        "Section": "E",
-        "SectionName": "Internal Controls",
-        "Topic": "B-E.086 control activities",
-        "MicroTopic": "segregation of duties",
-        "UniqueConceptKey": "B-E-086-segregation-of-duties",
-        "LOSTag": "Control Activities â€” Segregation of Duties",
-        "Difficulty": "Moderate",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Quantum Enterprises has an employee who is responsible for authorizing sales transactions, recording them in the accounting system, and maintaining custody of the related accounts receivable records. This situation represents a weakness in:",
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "Proper segregation of duties requires that no single employee has responsibility for more than one of the four key functions: authorization, custody, record keeping, and reconciliation. Combining authorization, record keeping, and custody in one role violates this principle and increases the risk of errors or fraud.",
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "QuestionID": "P1B-E-086",
-        "question_state": "Certified",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "CalculationItem": false,
-        "Choices": {
-            "A": "Segregation of duties",
-            "B": "Physical controls",
-            "C": "Information processing controls",
-            "D": "Independent verification"
-        },
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax: Principles of Accounting, Internal Controls",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
-            }
-        ],
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
-        ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Physical controls involve locks and security measures, not separation of duties among employees.",
-        "ExplanationWrongC": "Information processing controls ensure transaction accuracy. The concern is incompatible duties.",
-        "ExplanationWrongD": "Independent verification involves review by a separate party. The issue is combining multiple functions."
-    },
+	"Part": 1,
+	"Section": "E",
+	"SectionName": "Internal Controls",
+	"Topic": "B-E.086 control activities",
+	"MicroTopic": "segregation of duties",
+	"UniqueConceptKey": "B-E-086-segregation-of-duties",
+	"LOSTag": "Control Activities — Segregation of Duties",
+	"Difficulty": "Difficult",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Quantum Enterprises is a $12M wholesale distributor with only three accounting staff: one senior accountant (Maria), one staff accountant (James), and one accounts payable clerk (Tanya). The controller, who reports directly to the CFO, is designing the segregation of duties for the revenue cycle. The functions to be assigned are: (1) authorizing credit limits for new customers, (2) recording sales invoices in the AR subledger, (3) opening mail and preparing the daily cash receipts listing, (4) preparing the monthly bank reconciliation, and (5) approving write-offs of uncollectible accounts. With only three staff available, the controller must maximize segregation of incompatible duties while accepting that some residual risk will require compensating controls. Which assignment plan best achieves this under COSO's Control Activities principles?",
+	"CorrectChoice": "C",
+	"ExplanationCorrect": "Under COSO Control Activities (Principles 10–12), the four key functions are authorization, custody, record keeping, and reconciliation. With three staff, perfect segregation is mathematically impossible — the analysis must identify the assignment that isolates the highest-risk incompatible combinations and design compensating controls for residual gaps. The optimal plan: James (record keeping — sales invoices/AR subledger) avoids custody of cash and authorization of credit/write-offs. Tanya (custody — cash receipts listing, opening mail) avoids record keeping and reconciliation, creating a physical separation between cash handling and accounting records. Maria (authorization + reconciliation — credit limits, write-off approvals, bank reconciliation) takes on the two functions where independent oversight by the controller is most practical as a compensating control. The highest-risk combination — custody of cash receipts combined with AR record keeping (which would allow an employee to steal cash and conceal it by adjusting customer accounts) — is avoided because James and Tanya are separated. The residual risk is Maria's combination of credit authorization and write-off approval: a compensating control of controller review of all write-offs over $500 and quarterly independent credit-limit audits addresses this gap. This assignment follows the COSO principle that when ideal segregation is impracticable due to resource constraints, management must design alternative controls that achieve equivalent risk mitigation.",
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"QuestionID": "P1B-E-086",
+	"question_state": "Certified",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"CalculationItem": false,
+	"Choices": {
+		"A": "Assign Maria to all five functions and have the controller review her work weekly. Since Maria is the most senior and trusted employee, concentrating duties under one experienced person with supervisory review is more effective than spreading incompatible functions across three less-experienced staff who may not detect each other's errors.",
+		"B": "Assign James to recording sales invoices and opening mail (functions 2 and 3), Tanya to credit authorization and bank reconciliations (functions 1 and 4), and Maria to write-off approvals (function 5). This distributes the workload evenly and avoids overloading any single employee.",
+		"C": "Assign James to recording sales invoices and the AR subledger (function 2), Tanya to opening mail and the cash receipts listing (function 3), and Maria to credit authorization, bank reconciliation, and write-off approvals (functions 1, 4, and 5). The controller will perform quarterly independent reviews of credit-limit changes and all write-offs exceeding $500 as compensating controls.",
+		"D": "Assign James to credit authorization and recording sales invoices (functions 1 and 2), Tanya to opening mail and bank reconciliation (functions 3 and 4), and Maria to write-off approvals (function 5). This separation ensures custody of cash is segregated from all other functions."
+	},
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax: Principles of Accounting, Internal Controls",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
+		}
+	],
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
+	],
+	"ExplanationWrongC": "",
+	"ExplanationWrongA": "Concentrating all five functions under one employee, regardless of seniority, violates the foundational COSO principle that no single individual should control more than one of the four key functions (authorization, custody, record keeping, reconciliation). Weekly supervisory review is not a substitute for segregation — it is a detective compensating control layered on top of structural segregation. An employee with unfettered access to all five functions could perpetrate and conceal fraud between review cycles. The controller's review would need to reconstruct transactions after the fact — by which time cash could already be misappropriated and records altered. Seniority and trust are personnel attributes, not control attributes; COSO's Control Activities component requires structural separation regardless of the individuals involved.",
+	"ExplanationWrongB": "Assigning James to both recording sales invoices (record keeping) and opening mail/cash receipts (custody) is the highest-risk incompatible combination in the revenue cycle. An employee who records customer accounts AND handles incoming cash can perpetrate lapping: steal a customer's check, apply the next customer's payment to the first customer's account to conceal the theft, and continue the cycle indefinitely. This is one of the most common revenue-cycle fraud schemes and is precisely the combination COSO's segregation principle is designed to prevent. Even workload distribution is a secondary concern — control design must prioritize isolating incompatible duties.",
+	"ExplanationWrongD": "Assigning James to both credit authorization and sales invoice recording combines authorization with record keeping. An employee who can approve credit limits AND record the resulting sales could extend credit to fictitious customers or related parties and record sham sales to meet revenue targets. Tanya's combination of cash custody (opening mail) and bank reconciliation places custody and reconciliation in the same hands — she could misappropriate cash receipts and conceal the shortage during reconciliation, defeating the purpose of the bank reconciliation as an independent check. This plan isolates custody from two other functions but creates two separate incompatible-duty concentrations.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze"
+},
     {
         "Part": 1,
         "Section": "E",

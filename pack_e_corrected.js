@@ -7179,58 +7179,56 @@ const MCQ_BANK_E = [
         "certification_batch": "S71",
         "CognitiveLevel": "Apply"
     },
-    {
-        "StudyLinks": [
-            {
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section C"
-            },
-            {
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
-                "label": "OpenStax Accounting"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Section": "C",
-        "Difficulty": "Moderate",
-        "SectionName": "Performance Management",
-        "Topic": "E-C.004 Labor rate variance",
-        "UniqueConceptKey": "E-C-004-Labor-rate-variance",
-        "MicroTopic": "Labor rate variance",
-        "CorrectChoice": "B",
-        "Choices": {
-            "A": "(Actual rate - standard rate) x standard hours",
-            "B": "(Actual rate - standard rate) x actual hours",
-            "C": "Actual hours x standard rate",
-            "D": "(Actual hours - standard hours) x standard rate"
-        },
-        "CalculationItem": true,
-        "Part": 1,
-        "ItemType": "MCQ",
-        "LOSTag": "Part 1 Section C.1",
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "Stem": "The labor rate variance formula is:",
-        "ExplanationCorrect": "Concept: The labor rate variance measures the financial impact of paying a different hourly wage than the standard rate. Formula: Labor rate variance = (Actual Rate - Standard Rate) x Actual Hours Worked. Actual hours are used because the variance focuses solely on the rate difference, not on how many hours were worked. A positive result (AR > SR) is unfavorable, meaning the company paid more per hour than budgeted.",
-        "QuestionID": "P1E-C-004",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "ItemStyle": "single-select",
-        "ExplanationWrongA": "Option A incorrectly uses standard hours. The rate variance uses actual hours worked to isolate the wage rate difference from any efficiency effect.",
-        "ExplanationWrongB": "",
-        "ExplanationWrongC": "Option C computes the standard cost of actual hours, not a variance. The rate variance measures the deviation from the standard wage rate per hour.",
-        "ExplanationWrongD": "Option D is the labor efficiency variance formula. Efficiency variance compares actual to standard hours, not actual to standard wage rates.",
-        "question_state": "Certified",
-        "DifficultyScore": 3,
-        "certification_date": "2026-07-24",
-        "certification_batch": "S71",
-        "CognitiveLevel": "Apply"
-    },
+{
+	"StudyLinks": [
+		{
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section C"
+		},
+		{
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+		    "label": "OpenStax Accounting"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Section": "C",
+	"Difficulty": "Difficult",
+	"SectionName": "Performance Management",
+	"Topic": "E-C.004 Labor rate variance",
+	"UniqueConceptKey": "E-C-004-Labor-rate-variance",
+	"MicroTopic": "Labor rate variance",
+	"CorrectChoice": "C",
+	"Choices": {
+		"A": "The Assembly Department's $7,500 unfavorable rate variance was caused by overtime premiums. Since the department exceeded its budgeted 2,000 hours by 500 hours, all excess hours were likely paid at time-and-a-half. The Finishing Department's $1,500 unfavorable variance is driven by skill-mix changes: the department replaced two senior welders ($28/hr) with three junior welders ($22/hr), lowering the average rate but increasing total hours.",
+		"B": "Both variances are driven by identical root causes. The total labor rate variance of $9,000U represents a systemic wage inflation problem across the plant, requiring renegotiation of the union contract to bring standard rates in line with market wages. Neither overtime nor skill-mix changes materially explain the variance because labor rates are set by the collective bargaining agreement.",
+		"C": "The Assembly Department's $7,500 unfavorable rate variance is primarily driven by a skill-mix upgrade: the department substituted senior machinists earning $28 per hour for standard-rate operators at $22 per hour on a complex custom order, increasing the blended actual rate to $25 per hour. The Finishing Department's $1,500 unfavorable variance is driven by overtime premiums: actual hours of 1,050 exceeded budgeted 1,000 hours, with the 50 excess hours paid at time-and-a-half ($33/hour vs. standard $22/hour).",
+		"D": "The total labor rate variance of $9,000U is not analytically meaningful because the rate and efficiency variances are interdependent. The Assembly Department's $7,500U rate variance is partially offset by a favorable efficiency variance from using higher-skilled workers who completed jobs faster, and the Finishing Department's $1,500U rate variance is caused by idle time, not overtime or skill-mix changes."
+	},
+	"CalculationItem": false,
+	"Part": 1,
+	"ItemType": "MCQ",
+	"LOSTag": "Part 1 Section C.1",
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"Stem": "Harbor Industrial's plant controller Priya Nair is analyzing November labor variances across two departments. Assembly Department: standard rate $22/hr, standard hours 2,000 for actual output. Actual results: 2,500 hours at an average actual rate of $25/hr (blended). Labor rate variance = ($25 − $22) × 2,500 = $7,500U. Finishing Department: standard rate $22/hr, standard hours 1,000 for actual output. Actual results: 1,050 hours at an average actual rate of $23.43/hr. Labor rate variance = ($23.43 − $22) × 1,050 ≈ $1,500U. Nair learns that Assembly took on a complex custom order requiring senior machinists ($28/hr) instead of standard-rate operators, while Finishing ran 50 overtime hours at time-and-a-half ($33/hr) to meet a shipment deadline. Which analysis correctly identifies the primary driver of each department's rate variance?",
+	"ExplanationCorrect": "The rate variance formula (AR − SR) × AH isolates the wage rate effect, but the analytical challenge is attributing the blended rate difference to its operational cause. Assembly: standard rate $22/hr, actual blended $25/hr. The $3/hr increase is explained by substituting $28/hr senior machinists for $22/hr operators — a skill-mix upgrade, not overtime. If all 2,500 hours were at $22/hr, cost = $55,000. Actual cost = 2,500 × $25 = $62,500; variance = $7,500U. This is consistent with ~63% of hours ($7,500 ÷ ($6/hr premium × 2,500) → the $3 blended premium reflects partial substitution). Finishing: actual 1,050 hours (50 overtime). Overtime premium = 50 hrs × ($33 − $22) = 50 × $11 = $550. The remaining $950 variance ($1,500 − $550) may reflect minor wage drift. The key analytical distinction: Assembly's variance is structural (skill-mix change — may recur if custom orders continue), while Finishing's is situational (overtime — one-time shipment deadline). Effective variance analysis requires decomposing the blended rate into its component drivers rather than treating the total $9,000U as a single problem.",
+	"QuestionID": "P1E-C-004",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"ItemStyle": "single-select",
+	"ExplanationWrongC": "",
+	"ExplanationWrongA": "The Assembly Department's $7,500U variance is driven by a $3/hr blended rate increase on 2,500 hours. If caused by overtime at time-and-a-half, the standard $22/hr would become $33/hr — a $11/hr premium, not $3/hr. The $3/hr blended rate increase is consistent with partially substituting $28/hr senior machinists for $22/hr operators, where the $6/hr premium applied to a portion of hours produces a $3/hr blended average. A 500-hour excess over standard does not automatically mean overtime — the 2,500 actual hours may simply reflect more total hours worked at straight time. The Finishing Department's overtime attribution is directionally correct in this choice, but the Assembly diagnosis is reversed.",
+	"ExplanationWrongB": "Treating the $9,000U as a systemic wage inflation problem ignores the department-level operational data. Assembly's $25/hr average rate exceeds standard by $3/hr — far above any plausible across-the-board wage increase for a single month. Finishing's $23.43/hr average is only $1.43/hr above standard, inconsistent with systemic inflation that would affect both departments proportionally. The variance analyst's role is to decompose the total into its component drivers, not to aggregate them into a single explanation. Furthermore, attributing the variance to the union contract ignores the specific operational events (custom order, overtime deadline) that Nair's investigation already identified.",
+	"ExplanationWrongD": "The rate and efficiency variances are mathematically independent under the standard cost framework: rate variance uses actual hours, efficiency variance uses standard rate — the two variances do not offset or interact in the way described. While replacing standard operators with senior machinists could theoretically improve efficiency (fewer hours for the same output), the rate variance is computed on actual hours regardless. Assembly's 2,500 actual hours exceeded the 2,000 standard hours — this is an unfavorable efficiency variance, not a favorable one. If anything, the senior machinists worked more hours, not fewer. The claim of a favorable efficiency offset is contradicted by the data. Idle time in Finishing would appear as an efficiency variance, not a rate variance.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze"
+},
     {
         "StudyLinks": [
             {

@@ -5399,55 +5399,56 @@ var MCQ_BANK_A = [
                 "CognitiveLevel": "Apply"
         },
         {
-                "Part": 1,
-                "Section": "B",
-                "SectionName": "Planning, Budgeting, and Forecasting",
-                "Topic": "B.031 cash collections schedule 15",
-                "MicroTopic": "cash collections schedule 15",
-                "UniqueConceptKey": "B-031-cash-collections-schedule-15",
-                "LOSTag": "B.4 Annual profit plan and supporting schedules",
-                "Difficulty": "Moderate",
-                "ItemType": "MCQ",
-                "ItemStyle": "single-select",
-                "Stem": "Granite is building its cash budget, not its sales budget. Current-month sales total $213,000, and 35% will be collected during the month. Of the prior month's $177,000 sales, 60% will be collected this month. How much cash should Granite budget to collect this month?",
-                "Choices": {
-                        "A": "$180,750",
-                        "B": "$390,000",
-                        "C": "$251,550",
-                        "D": "$74,550"
-                },
-                "CorrectChoice": "A",
-                "ExplanationCorrect": "Cash collections follow the collection pattern rather than total sales. Granite will collect ($213,000 x 35%) + ($177,000 x 60%) = $74,550 + $106,200 = $180,750.",
-                "StudyLinks": [
-                        {
-                                "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
-                                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-                        },
-                        {
-                                "label": "OpenStax Managerial Accounting: Budgeting",
-                                "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
-                        }
-                ],
-                "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-                "Part1OnlyFlag": true,
-                "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-                "QuestionID": "P1-B-031",
-                "CalculationItem": true,
-                "VerifiedChecks": [
-                        "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-                        "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-                        "Original practice item with unique micro-topic and stem",
-                        "Answer key distribution balanced across A/B/C/D",
-                        "Distractors written as plausible CMA-style traps"
-                ],
-                "ExplanationWrongA": "",
-                "ExplanationWrongB": "This adds current and prior sales in full, confusing sales volume with cash collected during the month.",
-                "ExplanationWrongC": "This includes current-month collections but treats all prior-month sales as collectible this month instead of only 60%.",
-                "ExplanationWrongD": "This includes only current-month collections and omits the cash collected from prior-month sales.",
-                "question_state": "Certified",
-                "DifficultyScore": 3,
-                "CognitiveLevel": "Apply"
-        },
+	"Part": 1,
+	"Section": "B",
+	"SectionName": "Planning, Budgeting, and Forecasting",
+	"Topic": "B.031 evaluate cash collections acceleration strategy",
+	"MicroTopic": "evaluate cash collections acceleration strategy",
+	"UniqueConceptKey": "B-031-evaluate-cash-collections-acceleration-strategy",
+	"LOSTag": "B.4 Annual profit plan and supporting schedules",
+	"Difficulty": "Difficult",
+	"DifficultyScore": 4,
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Whitford Distributors has experienced three consecutive quarters of tightening cash flow. Monthly credit sales average $480,000, and Whitford currently collects 25% in the month of sale, 50% in the following month, and 25% in the second following month — an average collection period of 47 days. Whitford's line of credit carries a 9% annual interest rate, and the company is currently borrowing an average of $140,000 per month at a cost of approximately $12,600 annually. The CFO has asked Controller Elena Voss to evaluate three alternatives for accelerating cash collections: (A) Offer a 2/10, net 30 early-payment discount, which the sales team projects would shift collections to 50% in the current month (discounted), 35% in the following month, and 15% in the second following month, reducing the average collection period to 32 days; (B) Factor receivables through a third-party factoring company at a 3.5% factoring fee, yielding immediate cash on 90% of credit sales with no collection lag; (C) Tighten credit terms to require a 25% deposit at order, collecting 50% in the month of sale and the remaining 25% net 30, which the sales director warns could reduce total monthly credit sales by 8% as price-sensitive customers defect to competitors. Which recommendation should the controller present to the CFO?",
+	"Choices": {
+		"A": "Implement the 2/10, net 30 early-payment discount program — it accelerates collections at a cost of approximately $4,800 per month in discounts, which is partially offset by reduced borrowing costs, and preserves customer relationships without the sales-volume risk of tighter credit or the margin erosion of factoring",
+		"B": "Tighten credit terms to require a 25% deposit — the 8% sales decline is a manageable risk given the immediate cash injection, and price-sensitive customers who defect are likely the least profitable segment anyway",
+		"C": "Factor all receivables through the third-party company — the 3.5% factoring fee eliminates collection lag entirely and allows Whitford to exit the line of credit, simplifying treasury operations and reducing administrative costs",
+		"D": "Maintain the current collection policy — the $12,600 annual borrowing cost is immaterial relative to monthly sales of $480,000, and both the discount program and factoring would erode gross margin more than the interest saved"
+	},
+	"CorrectChoice": "A",
+	"ExplanationCorrect": "The 2/10, net 30 discount program represents the best balance of cash acceleration, cost control, and strategic risk management. Quantitative analysis: current monthly collections = ($480,000 x 25%) + (prior month $480,000 x 50%) + (two months ago $480,000 x 25%) = $120,000 + $240,000 + $120,000 = $480,000. Under Option A, collections shift to ($480,000 x 50% x 0.98) + ($480,000 x 35%) + ($480,000 x 15%) = $235,200 + $168,000 + $72,000 = $475,200. The $4,800 monthly discount cost ($57,600 annually) is measured against savings from reduced borrowing — with collections accelerating by 15 days, the average borrowing balance falls from $140,000 to approximately $47,000, saving roughly $8,370 in annual interest ($93,000 less borrowing at 9%). Net annual impact: +$8,370 interest saved - $57,600 discounts = -$49,230 — this appears negative, but the critical qualitative factor is that Option A maintains the customer base intact while improving cash predictability. Option B's 8% sales decline ($460,800 revised monthly sales x reduced gross margin) likely exceeds the interest savings. Under relevant-cost analysis, factoring at 3.5% ($16,800/month, $201,600/year) is by far the most expensive option and should be rejected. The controller should present Option A because it optimizes the tradeoff between cash acceleration, cost, and strategic risk to customer relationships — a core responsibility of management accounting under the annual profit plan.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax Managerial Accounting: Budgeting",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-B-031",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "",
+	"ExplanationWrongB": "Tightening credit terms would generate immediate cash from the 25% deposit requirement, but the sales director's projected 8% sales decline — from $480,000 to $441,600 — represents a permanent reduction in contribution margin that far outweighs any borrowing cost savings. The recommendation assumes price-sensitive customers are the least profitable, but contribution margin per customer is not correlated with price sensitivity. A candidate selecting this option may be treating a permanent revenue loss as a tolerable tradeoff without quantifying the full contribution margin impact.",
+	"ExplanationWrongC": "Factoring at 3.5% on $480,000 monthly sales costs $16,800 per month ($201,600 annually). Even after eliminating the $12,600 in borrowing costs, the net cost of factoring exceeds $189,000 annually — more than triple the cost of Option A's discount program. Factoring is appropriate for companies with severe liquidity distress or high default risk, not for a company that can access credit at 9%. A candidate selecting this option may be evaluating the speed of cash conversion in isolation without comparing the total cost across alternatives.",
+	"ExplanationWrongD": "Maintaining the status quo ignores the controller's responsibility to optimize working capital. While the $12,600 annual interest cost appears modest, the 47-day average collection period is well above industry benchmarks and represents an opportunity to free capital for more productive uses. Additionally, the CFO initiated this analysis because three consecutive quarters of tightening cash flow signal a deteriorating trend, not a stable condition. A candidate selecting this option may be applying a materiality threshold to the borrowing cost in isolation without recognizing the trend or the controller's obligation to present recommendations that improve the company's financial position.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
         {
                 "Part": 1,
                 "Section": "B",
@@ -8099,55 +8100,56 @@ var MCQ_BANK_A = [
                 "CognitiveLevel": "Apply"
         },
         {
-                "Part": 1,
-                "Section": "B",
-                "SectionName": "Planning, Budgeting, and Forecasting",
-                "Topic": "B.085 direct materials purchases budget",
-                "MicroTopic": "direct materials purchases budget",
-                "UniqueConceptKey": "B-085-direct-materials-purchases-budget",
-                "LOSTag": "B.4 Annual profit plan and supporting schedules",
-                "Difficulty": "Moderate",
-                "ItemType": "MCQ",
-                "ItemStyle": "single-select",
-                "Stem": "Bramblewood needs 5,000 lbs of material for production, wants ending material inventory of 800 lbs, and has beginning material inventory of 600 lbs. Material costs $4/lb. What is the budgeted cost of materials purchases?",
-                "Choices": {
-                        "A": "$20,000",
-                        "B": "$20,800",
-                        "C": "$21,200",
-                        "D": "$18,800"
-                },
-                "CorrectChoice": "B",
-                "ExplanationCorrect": "Purchases (lbs) = Production needs + Desired ending inventory - Beginning inventory = 5,000 + 800 - 600 = 5,200 lbs. Cost = 5,200 x $4/lb = $20,800.",
-                "StudyLinks": [
-                        {
-                                "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
-                                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-                        },
-                        {
-                                "label": "OpenStax Managerial Accounting: Budgeting",
-                                "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
-                        }
-                ],
-                "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-                "Part1OnlyFlag": true,
-                "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-                "QuestionID": "P1-B-085",
-                "CalculationItem": true,
-                "VerifiedChecks": [
-                        "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-                        "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-                        "Original practice item with unique micro-topic and stem",
-                        "Answer key distribution balanced across A/B/C/D",
-                        "Distractors written as plausible CMA-style traps"
-                ],
-                "ExplanationWrongA": "Six consecutive quarters of under-forecasting is the opposite of random — it is a clear pattern. Random errors would vary in direction (sometimes over, sometimes under) and would not consistently fall on one side. This persistent directionality is the defining characteristic of systematic bias, not random variation.",
-                "ExplanationWrongB": "",
-                "ExplanationWrongC": "While some forecast error is expected, six consecutive quarters of error in the same direction is not acceptable performance — it indicates a model that is structurally flawed. An unbiased forecasting model produces errors that are sometimes positive and sometimes negative, averaging near zero over time. Consistent under-forecasting means the model requires correction.",
-                "ExplanationWrongD": "The pattern described is consistent under-forecasting, not increased volatility. Volatility would manifest as large unpredictable swings in both directions. Six straight quarters of actual results exceeding forecasts suggests a stable and predictable bias — the model systematically underestimates. This is a calibration issue, not a volatility problem.",
-                "question_state": "Certified",
-                "DifficultyScore": 3,
-                "CognitiveLevel": "Apply"
-        },
+	"Part": 1,
+	"Section": "B",
+	"SectionName": "Planning, Budgeting, and Forecasting",
+	"Topic": "B.085 evaluate material sourcing strategy discount vs JIT",
+	"MicroTopic": "evaluate material sourcing strategy discount vs JIT",
+	"UniqueConceptKey": "B-085-evaluate-material-sourcing-strategy-discount-vs-JIT",
+	"LOSTag": "B.4 Annual profit plan and supporting schedules",
+	"Difficulty": "Difficult",
+	"DifficultyScore": 4,
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Hensley Manufacturing's production budget calls for 72,000 units of its primary raw material annually, consumed at a steady rate of 6,000 units per month. The current supplier, Apex Materials, charges $18 per unit with standard 5-day delivery. Apex has now offered a 2% discount if Hensley commits to quarterly bulk purchases of 24,000 units per order (four deliveries per year) instead of the current monthly ordering pattern. However, Hensley's VP of Operations, Daniel Cross, has been advocating for a just-in-time arrangement with a new supplier, SwiftSource, which offers daily deliveries at $19.25 per unit with no minimum order quantity — eliminating the need for Hensley to maintain raw material inventory beyond safety stock. Currently, Hensley carries an average raw material inventory of $162,000, financed through its operating line of credit at 8% annual interest. The warehouse manager estimates that bulk quarterly ordering would increase average inventory to $288,000, while JIT would reduce it to $22,000. SwiftSource's higher unit price would add $90,000 to annual material costs, while Apex's discount would save $25,920 annually. Which sourcing strategy should the controller recommend to maximize operating income?",
+	"Choices": {
+		"A": "Accept Apex's quarterly bulk-purchase discount — the $25,920 in annual price savings, net of $10,080 in additional inventory carrying costs ($126,000 additional average inventory x 8%), produces a net benefit of $15,840, making it the highest-contribution option",
+		"B": "Adopt the JIT arrangement with SwiftSource — eliminating raw material inventory reduces working capital requirements by $140,000 and simplifies production planning, which offsets the $90,000 annual price premium through reduced material handling, obsolescence risk, and storage costs",
+		"C": "Reject both proposals and maintain the current monthly ordering pattern with Apex — the $18 per unit price is competitive, and the risks of supply disruption from JIT dependency or storage cost increases from bulk ordering outweigh the potential savings from either alternative",
+		"D": "Negotiate a hybrid arrangement — accept Apex's discount only on the highest-volume material grades and use SwiftSource JIT for the remaining, lower-volume specialty grades, capturing partial savings from both strategies while diversifying supply risk"
+	},
+	"CorrectChoice": "A",
+	"ExplanationCorrect": "The controller should apply incremental analysis to each alternative measured against the current baseline. Under relevant-cost analysis, only costs and revenues that differ between alternatives are considered. Current baseline: 72,000 units x $18 = $1,296,000 annual material cost; average inventory carrying cost = $162,000 x 8% = $12,960. Apex bulk option: material cost = 72,000 x $18 x 0.98 = $1,270,080 (savings of $25,920); incremental inventory carrying cost = ($288,000 - $162,000) x 8% = $10,080. Net benefit = $25,920 savings - $10,080 additional carrying cost = $15,840 increase in operating income. SwiftSource JIT option: material cost = 72,000 x $19.25 = $1,386,000 (increase of $90,000); inventory carrying cost reduction = ($162,000 - $22,000) x 8% = $11,200 saved. Net impact = -$90,000 + $11,200 = -$78,800 decrease in operating income. The JIT premium far exceeds the carrying cost savings. Option C leaves $15,840 of quantifiable savings unrealized. Option D's hybrid approach introduces complexity without evidence that specialty grades warrant different treatment. The controller should recommend the Apex bulk discount because it produces the highest operating income among the quantifiable alternatives, consistent with the principle that the budget should reflect decisions that maximize contribution to the bottom line.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax Managerial Accounting: Budgeting",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-B-085",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "",
+	"ExplanationWrongB": "While JIT reduces working capital by $140,000 and simplifies production planning, the $90,000 annual price premium is substantially larger than the $11,200 in carrying-cost savings. The qualitative benefits of JIT — reduced handling, obsolescence risk, and storage costs — are already reflected in the reduced inventory balance (the carrying-cost savings capture these economically). Attributing additional savings beyond the carrying-cost reduction double-counts the JIT benefit. A candidate selecting this option may be overweighting the operational appeal of lean manufacturing while underweighting the direct price impact on the materials budget.",
+	"ExplanationWrongC": "Rejecting both proposals preserves the status quo but leaves $15,840 in quantifiable annual savings unrealized. The controller's responsibility under the profit plan framework includes identifying opportunities to improve operating performance through cost reduction. While supply disruption and storage cost risks are legitimate considerations, they do not offset a clearly quantifiable net benefit without evidence that these risks are probable and material. A candidate selecting this option may be defaulting to the status quo under uncertainty rather than applying incremental analysis.",
+	"ExplanationWrongD": "The hybrid approach is superficially appealing as a risk-diversification strategy, but it fails the relevant-cost test: there is no evidence that specialty-grade materials have different ordering economics, and splitting the order volume across two suppliers likely forfeits the full 2% volume discount from Apex while still incurring SwiftSource's $19.25 premium on the specialty grades. Without quantitative support demonstrating that the blended cost is lower than either standalone option, this recommendation substitutes complexity for analytical rigor. A candidate selecting this option may be applying a general risk-management principle without quantifying the cost of diversification.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
         {
                 "Part": 1,
                 "Section": "B",
@@ -14059,55 +14061,55 @@ var MCQ_BANK_A = [
                 "CognitiveLevel": "Apply"
         },
         {
-                "Part": 1,
-                "Section": "D",
-                "SectionName": "Cost Management",
-                "Topic": "D.004 overhead overapplied underapplied calculation",
-                "MicroTopic": "overhead overapplied underapplied calculation",
-                "UniqueConceptKey": "D-004-overhead-overapplied-underapplied-calculation",
-                "LOSTag": "D.1 Measurement concepts",
-                "Difficulty": "Moderate",
-                "ItemType": "MCQ",
-                "ItemStyle": "single-select",
-                "Stem": "Vanguard applies manufacturing overhead using a predetermined rate of $30 per direct labor hour. Actual direct labor hours were 9,500 and actual overhead incurred was $275,000. What is the overhead variance?",
-                "Choices": {
-                        "A": "$10,000 underapplied",
-                        "B": "$10,000 overapplied",
-                        "C": "$275,000 underapplied",
-                        "D": "$285,000 overapplied"
-                },
-                "CorrectChoice": "B",
-                "ExplanationCorrect": "Applied overhead = 9,500 DLH x $30 = $285,000. Actual overhead = $275,000. Since applied ($285,000) exceeds actual ($275,000), overhead is overapplied by $10,000.",
-                "StudyLinks": [
-                        {
-                                "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
-                                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-                        },
-                        {
-                                "label": "OpenStax Managerial Accounting: Costing Systems",
-                                "url": "https://openstax.org/books/principles-managerial-accounting/pages/4-introduction"
-                        }
-                ],
-                "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-                "Part1OnlyFlag": true,
-                "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-                "QuestionID": "P1-D-004",
-                "CalculationItem": true,
-                "VerifiedChecks": [
-                        "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-                        "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-                        "Original practice item with unique micro-topic and stem",
-                        "Answer key distribution balanced across A/B/C/D",
-                        "Distractors written as plausible CMA-style traps"
-                ],
-                "ExplanationWrongA": "Applied overhead of $285,000 exceeds actual overhead of $275,000, so overhead is overapplied — not underapplied. $10,000 underapplied reverses the direction of the variance. When applied exceeds actual, the variance is a credit (overapplied), not a debit (underapplied).",
-                "ExplanationWrongB": "",
-                "ExplanationWrongC": "$275,000 is the actual overhead amount, not the variance. The variance compares applied overhead to actual overhead.",
-                "ExplanationWrongD": "$285,000 is the applied overhead amount, not the variance. The variance is the difference between applied and actual overhead.",
-                "question_state": "Certified",
-                "DifficultyScore": 3,
-                "CognitiveLevel": "Apply"
-        },
+	"Part": 1,
+	"Section": "D",
+	"SectionName": "Cost Management",
+	"Topic": "D.004 overhead overapplied underapplied calculation",
+	"MicroTopic": "overhead overapplied underapplied calculation",
+	"UniqueConceptKey": "D-004-overhead-overapplied-underapplied-calculation",
+	"LOSTag": "D.1 Measurement concepts",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Atlas Manufacturing's controller James Okonkwo faces a year-end disagreement with the CFO over overhead disposition. Atlas applied $960,000 of manufacturing overhead during the year using a predetermined rate of $32 per machine hour (30,000 actual machine hours). Actual overhead incurred was $912,000, resulting in $48,000 overapplied. Year-end account balances before disposition are: Work in Process Inventory $180,000 (applied overhead component: $72,000), Finished Goods Inventory $320,000 (applied overhead component: $144,000), and Cost of Goods Sold $2,100,000 (applied overhead component: $744,000). The CFO argues that $48,000 is immaterial at 2.3% of COGS and should simply be closed to COGS, boosting reported gross margin. Okonkwo counters that GAAP requires analysis before choosing between immediate write-off and proration. Under GAAP, what is the correct disposition, and what is its income statement impact?",
+	"Choices": {
+		"A": "Close the entire $48,000 overapplied overhead to Cost of Goods Sold, reducing COGS from $2,100,000 to $2,052,000 and increasing gross margin by $48,000. The amount is immaterial at 2.3% of COGS and 1.8% of total inventory + COGS, so immediate write-off is the appropriate and most expedient treatment.",
+		"B": "The $48,000 is material and must be prorated. Using applied overhead as the allocation basis: WIP receives 7.5% ($72,000/$960,000 x $48,000 = $3,600), FG receives 15% ($144,000/$960,000 x $48,000 = $7,200), and COGS receives 77.5% ($744,000/$960,000 x $48,000 = $37,200). COGS is reduced by $37,200, not the full $48,000, and inventory balances decrease by $10,800, reflecting a more accurate allocation of the overapplied amount across the accounts that absorbed the inflated overhead.",
+		"C": "Prorate using total account balances rather than the applied overhead component: WIP $180,000/$2,600,000 x $48,000 = $3,323, FG $320,000/$2,600,000 x $48,000 = $5,908, COGS $2,100,000/$2,600,000 x $48,000 = $38,769. This more closely reflects the economic magnitude of each account.",
+		"D": "The $48,000 overapplied should be carried forward as a deferred credit on the balance sheet and amortized over the next fiscal year's production, since the overapplication resulted from an underestimation of activity levels that will normalize next year."
+	},
+	"CorrectChoice": "B",
+	"ExplanationCorrect": "Under GAAP, the materiality assessment is not based on a single ratio (2.3% of COGS) but on whether the overapplied amount would influence a reasonable user's decisions. $48,000 at 5% of applied overhead ($48,000/$960,000) and affecting three separate financial statement accounts is material by most practical thresholds. When material, overapplied overhead must be prorated among WIP, FG, and COGS based on the applied overhead residing in each account — not on the total account balance. Total applied = $72,000 + $144,000 + $744,000 = $960,000. WIP: 72/960 = 7.5% x $48,000 = $3,600 credit. FG: 144/960 = 15.0% x $48,000 = $7,200 credit. COGS: 744/960 = 77.5% x $48,000 = $37,200 credit. The income statement impact is a $37,200 COGS reduction (not $48,000), and the balance sheet impact is a $10,800 reduction in inventory values. Using total account balances (Choice C) misallocates because the over/underapplication arises from the overhead component, not the full account value. The practical effect: the CFO's preferred approach overstates gross margin by $10,800 relative to GAAP-compliant proration.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax Managerial Accounting: Costing Systems",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/4-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-D-004",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongB": "",
+	"ExplanationWrongA": "Immediate write-off to COGS is appropriate only when the overapplied amount is immaterial. The controller must assess materiality holistically — not by a single metric. Here, $48,000 represents 5.0% of total applied overhead ($960,000) and would inflate COGS reduction by $10,800 relative to proration. If a financial statement user compared Atlas's gross margin to a competitor who prorated, the $10,800 difference in reported inventory values and gross margin could influence lending or investment decisions. The CFO's 2.3%-of-COGS argument cherry-picks the most favorable denominator; the correct test is whether the amount is material in relation to the financial statements taken as a whole.",
+	"ExplanationWrongC": "Using total account balances as the proration basis is the most common error on this topic. Overapplied overhead arises from the difference between applied and actual overhead — the distortion resides in the applied overhead component, not in the direct materials and direct labor that also sit in WIP, FG, and COGS. Using total balances gives COGS $38,769 (80.8%) instead of the correct $37,200 (77.5%) because COGS has proportionally more direct materials and labor costs than WIP or FG. The GAAP principle: prorate over/underapplied overhead based on the overhead applied in each account, not the total account balance.",
+	"ExplanationWrongD": "Carrying overapplied overhead forward as a deferred credit on the balance sheet is not a GAAP treatment for year-end disposition. Over/underapplied overhead is a period-end adjustment that must be resolved in the current period — either through immediate write-off (if immaterial) or proration (if material). Deferring the adjustment to future periods mismatches the overhead correction with the period in which the overhead was applied and distorts both the current and future periods' income statements. This treatment is sometimes proposed under the argument of 'matching' but is explicitly not permitted under U.S. GAAP for normal costing year-end adjustments.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze"
+},
         {
                 "Part": 1,
                 "Section": "D",
@@ -18035,57 +18037,57 @@ var MCQ_BANK_A = [
                 "CognitiveLevel": "Apply"
         },
         {
-                "Part": 1,
-                "Section": "E",
-                "SectionName": "Internal Controls",
-                "Topic": "E.008 bank reconciliation adjusted balance calculation",
-                "MicroTopic": "bank reconciliation adjusted balance calculation",
-                "UniqueConceptKey": "E-008-bank-reconciliation-adjusted-balance-calculation",
-                "LOSTag": "E Internal controls",
-                "Difficulty": "Moderate",
-                "ItemType": "MCQ",
-                "ItemStyle": "single-select",
-                "Stem": "Crescent's bank statement shows a balance of $52,000. The book balance is $45,000. Outstanding checks are $8,000, deposits in transit are $3,000, and the bank collected a note receivable of $1,200 plus $800 interest on Crescent's behalf (not yet recorded). Bank service charges are $200. What is the reconciled cash balance?",
-                "Choices": {
-                        "A": "$47,000",
-                        "B": "$52,000",
-                        "C": "$45,000",
-                        "D": "$55,000"
-                },
-                "CorrectChoice": "A",
-                "ExplanationCorrect": "Bank reconciliation is a detective control activity under COSO Principle 10 that compares the organization's cash records to the bank's independent record of the same account. The reconciliation identifies timing differences (outstanding checks, deposits in transit) and errors or unauthorized transactions that require adjustment to either the bank or book balance. Both the bank side and the book side must independently arrive at the same adjusted balance for the reconciliation to be complete. Business interpretation: bank reconciliations are one of the most fundamental internal controls over cash because they provide an independent third-party verification of cash balances. They should be performed by someone who does not handle cash or record cash transactions to maintain segregation of duties. Common exam trap: candidates sometimes adjust the wrong side (e.g., adding outstanding checks to the bank balance instead of deducting them) or fail to reconcile both sides to the same adjusted balance.",
-                "StudyLinks": [
-                        {
-                                "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
-                                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-                        },
-                        {
-                                "label": "COSO Internal Control guidance",
-                                "url": "https://www.coso.org/guidance-on-ic"
-                        }
-                ],
-                "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-                "Part1OnlyFlag": true,
-                "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-                "QuestionID": "P1-E-008",
-                "question_state": "Certified",
-                "certification_date": "2026-07-22",
-                "certification_batch": "Section E Block 1",
-                "CalculationItem": true,
-                "VerifiedChecks": [
-                        "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-                        "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-                        "Original practice item with unique micro-topic and stem",
-                        "Answer key distribution balanced across A/B/C/D",
-                        "Distractors written as plausible CMA-style traps"
-                ],
-                "ExplanationWrongA": "",
-                "ExplanationWrongB": "$52,000 is the unadjusted bank statement balance. Under COSO Principle 10, bank reconciliation is a detective control that adjusts the bank balance for timing differences: deposits in transit are added and outstanding checks are deducted. Selecting the unadjusted bank figure without incorporating these reconciling items would overstate Crescent's available cash balance and defeat the detective purpose of the reconciliation. The correct adjusted bank balance is $52,000 + $3,000 - $8,000 = $47,000.",
-                "ExplanationWrongC": "$45,000 is the unadjusted book balance per Crescent's general ledger. The reconciliation process requires adjusting the book balance for items recorded by the bank that Crescent has not yet posted: the note receivable collected ($1,200), interest income ($800), and bank service charges ($200 deduction). Using the unadjusted book figure ignores these reconciling items and leaves errors undetected. The correct adjusted book balance is $45,000 + $1,200 + $800 - $200 = $47,000.",
-                "ExplanationWrongD": "$55,000 results from adding deposits in transit to the bank statement balance without subtracting outstanding checks ($52,000 + $3,000). A complete bank reconciliation requires both adjustments: adding deposits in transit and deducting outstanding checks. Omitting the outstanding check deduction overstates Crescent's true cash position and undermines the reconciliation's reliability as a detective control under COSO Principle 10. The correct adjusted balance is $52,000 + $3,000 - $8,000 = $47,000.",
-                "DifficultyScore": 3,
-                "CognitiveLevel": "Apply"
-        },
+	"Part": 1,
+	"Section": "E",
+	"SectionName": "Internal Controls",
+	"Topic": "E.008 evaluate bank reconciliation unexplained discrepancy under COSO",
+	"MicroTopic": "evaluate bank reconciliation unexplained discrepancy under COSO",
+	"UniqueConceptKey": "E-008-evaluate-bank-reconciliation-unexplained-discrepancy-COSO",
+	"LOSTag": "E Internal controls",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Crescent Manufacturing's controller, David Okonkwo, has identified a persistent $12,000 unexplained discrepancy in the monthly bank reconciliation for three consecutive months. The bank statement balance and the adjusted book balance do not reconcile. Crescent's internal audit team traced all outstanding checks ($31,000), deposits in transit ($14,500), and book adjustments (note collections, service charges, NSF items) and confirmed each reconciling item is valid. The $12,000 discrepancy appears to originate from cash receipts recorded in the general ledger that do not appear on the bank statement — possibly indicating either an error in recording collections or a more serious irregularity. Under COSO's Internal Control — Integrated Framework, the controller has three options: (A) Write off the $12,000 as a reconciling item and close the period, noting the discrepancy in the reconciliation file; (B) Commission a forensic investigation by an external firm, estimated to cost $18,000–$25,000, to trace the source of the discrepancy; (C) Implement continuous monitoring software ($8,500 annual license) that reconciles cash receipts to bank feeds daily, flagging discrepancies in real time going forward, while writing off the historical $12,000. Crescent's total assets are $4.8 million, and the external auditors have noted the recurring unreconciled difference as a significant deficiency in internal control over cash in the prior year's management letter. Which recommendation should the controller present to the CFO?",
+	"Choices": {
+		"A": "Write off the $12,000 as an immaterial reconciling item — at 0.25% of total assets, the amount falls below typical audit materiality thresholds. Documenting the discrepancy and closing the period is the most cost-efficient resolution, and a forensic investigation at $18,000–$25,000 would cost more than the discrepancy itself",
+		"B": "Commission an external forensic investigation — a three-month persistent unreconciled difference in cash receipts, combined with the external auditors' significant deficiency finding, elevates this beyond a routine reconciliation issue. Under COSO Principle 8 (fraud risk assessment) and Principle 16 (monitoring), management must investigate indicators of potential misappropriation, regardless of dollar materiality",
+		"C": "Implement continuous monitoring software and write off the historical $12,000 — this addresses the root cause (manual reconciliation failing to detect the discrepancy for three months) at a lower cost than a forensic investigation, while the write-off resolves the current period's unreconciled difference",
+		"D": "Defer any action to the external auditors — the significant deficiency has already been communicated in the management letter, and the auditors are best positioned to determine whether the discrepancy represents a material weakness requiring disclosure. Management should focus resources on operational issues"
+	},
+	"CorrectChoice": "B",
+	"ExplanationCorrect": "The controller must apply COSO's Internal Control — Integrated Framework to evaluate the appropriate response. Three principles govern this decision. First, COSO Principle 8 requires management to consider the potential for fraud in assessing risks to the achievement of objectives. A cash receipts discrepancy that persists for three consecutive months, despite the internal audit team's inability to trace it to identifiable reconciling items, is a classic indicator of potential misappropriation — the cash was recorded in the ledger but never reached the bank. Second, COSO Principle 16 requires management to establish monitoring activities that evaluate whether internal controls are operating as intended. The external auditors' significant deficiency finding confirms that the cash reconciliation control is not operating effectively. Monitoring a known control failure by simply writing it off compounds the deficiency rather than remediating it. Third, the dollar amount ($12,000) must be evaluated in the context of the control environment, not against total assets. A recurring unexplained cash discrepancy, regardless of amount, signals that the control over cash receipts may be compromised — and if the control failure is systemic, the actual exposure could extend beyond the identified $12,000. The forensic investigation, while costly ($18,000–$25,000), serves a dual purpose: it addresses the specific discrepancy AND evaluates whether the control weakness has broader implications. Writing off the amount (Option A) addresses the accounting entry but not the control failure. Deferring to auditors (Option D) abdicates management's responsibility under COSO Principle 1 (tone at the top) to demonstrate a commitment to integrity and accountability. Option C provides a forward-looking control improvement but leaves the historical discrepancy unresolved — a prospective fix without a retrospective investigation leaves open the possibility that the discrepancy represents fraud that should be reported. Business interpretation: the bank reconciliation is not merely a clerical exercise — it is a detective control activity under COSO Principle 10 that serves as a primary safeguard over cash, the most liquid and theft-prone asset. When the reconciliation reveals an unexplained discrepancy that internal procedures cannot resolve, escalation to a forensic investigation is the appropriate management response, consistent with the COSO framework's emphasis on tone at the top and fraud risk assessment.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "COSO Internal Control guidance",
+		    "url": "https://www.coso.org/guidance-on-ic"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-E-008",
+	"question_state": "Certified",
+	"certification_date": "2026-07-22",
+	"certification_batch": "Section E Block 1",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "Writing off the $12,000 treats the discrepancy as an accounting adjustment rather than a control failure. Under COSO Principle 8 (fraud risk assessment), a three-month persistent unreconciled cash discrepancy is a fraud indicator regardless of dollar amount relative to total assets. Materiality for control evaluation is determined by the nature and circumstances of the deficiency, not solely by the dollar amount. A recurring unexplained difference in cash receipts suggests the control may be compromised, and writing it off without investigation condones a known control weakness — which the external auditors have already flagged as a significant deficiency. A candidate selecting this option may be applying financial-statement materiality thresholds to an internal control evaluation, where the applicable framework is COSO, not audit materiality guidance.",
+	"ExplanationWrongB": "",
+	"ExplanationWrongC": "Implementing continuous monitoring software is a sound prospective control improvement, but it does not address the existing three-month unexplained discrepancy. Under COSO Principle 16, monitoring activities should both identify and prompt correction of deficiencies. Installing daily reconciliation software going forward is a preventive/detective improvement for future periods, but it leaves the historical $12,000 discrepancy unresolved. If the discrepancy was caused by fraud, implementing new software without investigating the loss means the perpetrator continues undetected. A candidate selecting this option may be prioritizing operational efficiency over control remediation — the correct sequencing is to investigate the existing discrepancy first (to determine whether it represents fraud or error), then implement improved controls to prevent recurrence.",
+	"ExplanationWrongD": "Under COSO Principle 1 (tone at the top), management — not the external auditors — bears primary responsibility for designing, implementing, and maintaining internal controls. The external auditors' role is to evaluate and report on the effectiveness of controls, not to investigate specific discrepancies or design management's response to them. Deferring investigation to the auditors abdicates management's responsibility under the COSO framework and is inconsistent with Principle 1's emphasis that the board and senior management demonstrate a commitment to integrity. A candidate selecting this option may be confusing the external auditor's attestation role with management's operational accountability for internal control.",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
         {
                 "Part": 1,
                 "Section": "E",

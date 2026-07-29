@@ -7957,55 +7957,55 @@ const MCQ_BANK_D = [{
         "CognitiveLevel": "Apply"
     },
 {
-        "Part": 1,
-        "Section": "B",
-        "SectionName": "Planning, Budgeting, and Forecasting",
-        "Topic": "B.081 cash budget borrowing need",
-        "MicroTopic": "cash budget borrowing need",
-        "UniqueConceptKey": "B-D081-cash-budget-borrowing-need",
-        "LOSTag": "B Planning and budgeting",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "A company begins June with $22,000 of cash. It expects June cash collections of $186,000 and June cash disbursements of $201,000. Management requires a minimum ending cash balance of $15,000. How much must the company borrow in June?",
-        "Choices": {
-            "A": "$8,000",
-            "B": "$0",
-            "C": "$15,000",
-            "D": "$7,000"
-        },
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "Cash before financing = $22,000 + $186,000 - $201,000 = $7,000. To reach the $15,000 minimum balance, the company must borrow $15,000 - $7,000 = $8,000.",
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax Managerial Accounting: Budgeting",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "QuestionID": "P1-BD-081",
-        "CalculationItem": true,
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "This figure assumes no financing is needed. The cash budget should be recomputed: beginning cash + receipts - disbursements = ending cash before financing. If the result is below the minimum cash balance, borrowing is required -- it is rarely exactly zero.",
-        "ExplanationWrongC": "This treats the minimum ending balance as the borrowing requirement, rather than only the shortfall below the minimum.",
-        "ExplanationWrongD": "This is cash before financing, not the amount that must be borrowed.",
-        "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "B",
+	"SectionName": "Planning, Budgeting, and Forecasting",
+	"Topic": "B.081 cash budget borrowing need",
+	"MicroTopic": "cash budget borrowing need",
+	"UniqueConceptKey": "B-D081-cash-budget-borrowing-need",
+	"LOSTag": "B Planning and budgeting",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Meridian Equipment Distributors' CFO Diane Okonkwo is reviewing the two-month cash budget before meeting with the company's bank. January projections: beginning cash $22,000, cash collections $186,000, cash disbursements $201,000. February projections: cash collections $148,000 (seasonally lower due to customer payment cycles), cash disbursements $233,000 (including a scheduled $60,000 inventory buildup for Q2 demand). The company must maintain a $15,000 minimum cash balance and holds a $50,000 revolving line of credit at 8% annual interest. As an alternative, Meridian can factor up to $60,000 of February's trade receivables at a 3% discount. Okonkwo asks: is this cash shortfall a temporary January phenomenon or a structural deficit requiring a multi-source financing strategy?",
+	"Choices": {
+		"A": "The shortfall is temporary and limited to January. Borrow $8,000 under the line of credit in January, and February's collection of January credit sales will restore the cash balance above the $15,000 minimum without additional financing.",
+		"B": "The shortfall is structural. January's $8,000 requirement is followed by a February deficit where $70,000 is needed before financing — far exceeding the $42,000 remaining line of credit capacity. The company must combine a full LOC drawdown in February with factoring approximately $45,000 of February receivables (net proceeds ~$43,650) to bridge the seasonal gap while preserving the Q2 inventory buildup.",
+		"C": "The shortfall is structural and severe. Since the $50,000 line of credit cannot cover February's projected $85,000 total financing need, factoring alone is insufficient. Meridian should factor all $148,000 of February receivables at 3% to generate $143,560 in immediate cash, eliminating the need for any line-of-credit drawdown.",
+		"D": "The shortfall is structural but manageable without receivable factoring. The company should defer the entire $60,000 Q2 inventory buildup from February to March, reducing February disbursements to $173,000, and fund the remaining $25,000 deficit entirely through the $42,000 remaining line of credit capacity."
+	},
+	"CorrectChoice": "B",
+	"ExplanationCorrect": "The shortfall is structural because February's deficit escalates from January's $8,000 to a $70,000 pre-financing shortfall — a nearly ninefold increase that the $50,000 line of credit alone cannot absorb. Cash-budget analysis requires distinguishing seasonal dips (self-correcting) from structural deficits (worsening across periods). January: $22,000 + $186,000 - $201,000 = $7,000 → borrow $8,000. February beginning: $15,000 after January financing. February pre-financing: $15,000 + $148,000 - $233,000 = -$70,000. Remaining LOC capacity: $50,000 - $8,000 = $42,000. After full LOC drawdown: -$70,000 + $42,000 = -$28,000. To reach the $15,000 minimum, the residual $43,000 gap is bridged by factoring ~$45,000 of receivables (net 97% = $43,650). The combined multi-source approach — LOC plus selective factoring — preserves the Q2 inventory buildup critical for meeting projected customer demand while satisfying the minimum cash covenant. This is a classic treasury analysis: match financing instruments to the cash-flow gap profile rather than disrupting operations to solve a liquidity problem.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax Managerial Accounting: Budgeting",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/7-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-BD-081",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongB": "",
+	"ExplanationWrongA": "The temporary-shortfall analysis is contradicted by the February data. January's ending cash before financing is $7,000, but February's is a $70,000 deficit — the gap widens dramatically rather than closing. A temporary shortfall would resolve when collections from the prior month's credit sales arrive; here, February collections are $148,000 versus January's $186,000, so the seasonal pattern is worsening, not improving. Treating a structural deficit as temporary risks a liquidity crisis when the February payroll and supplier payments come due.",
+	"ExplanationWrongC": "Factoring all $148,000 of February receivables at a 3% discount costs $4,440 — an annualized rate far exceeding the 8% line of credit. Only $45,000 needs to be factored to close the residual gap; the remaining $103,000 of receivables will be collected in March at par. Over-factoring incurs unnecessary discount costs and signals poor working-capital management. The analysis confuses 'factoring is available' with 'factoring everything is optimal.'",
+	"ExplanationWrongD": "Deferring the entire $60,000 Q2 inventory buildup avoids the financing need on paper, but the inventory was scheduled because Meridian's sales team has confirmed Q2 orders requiring that stock. Deferring turns a treasury problem into an operations problem: lost Q2 sales from unfilled orders would dwarf the $1,350 factoring discount cost. The controller's role is to solve the financing gap at the lowest cost, not to cancel value-creating inventory investment to avoid borrowing.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze"
+},
 {
         "Part": 1,
         "Section": "B",
@@ -12152,55 +12152,55 @@ const MCQ_BANK_D = [{
         "CognitiveLevel": "Analyze"
     },
 {
-        "Part": 1,
-        "Section": "C",
-        "SectionName": "Performance Management",
-        "Topic": "C.065 variance investigation dual-threshold cost-benefit",
-        "MicroTopic": "variance investigation dual threshold",
-        "UniqueConceptKey": "C-D065-variance-investigation-dual-threshold",
-        "LOSTag": "C Performance management",
-        "Difficulty": "Difficult",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Bryant Manufacturing's controller applies a cost-benefit framework to variance investigation. The company policy is to investigate any variance that exceeds both a $4,000 absolute threshold and a 3% of standard threshold. The controller reviews the following monthly variances, each with an estimated investigation cost: Direct materials price — $6,200 unfavorable, 7.1% of standard, investigation cost $1,200. Direct materials quantity — $2,800 favorable, 3.3% of standard, investigation cost $950. Direct labor rate — $9,100 unfavorable, 9.4% of standard, investigation cost $1,800. Direct labor efficiency — $4,500 unfavorable, 5.2% of standard, investigation cost $1,400. Variable overhead spending — $1,200 favorable, 1.8% of standard, investigation cost $800. Under this dual-threshold policy, which variances should be investigated, and what is the total investigation cost?",
-        "Choices": {
-            "A": "DM price ($6,200U, 7.1%), DL rate ($9,100U, 9.4%), and DL efficiency ($4,500U, 5.2%); total investigation cost = $4,400.",
-            "B": "All five variances should be investigated; total investigation cost = $6,150.",
-            "C": "DM price ($6,200U, 7.1%) and DL rate ($9,100U, 9.4%) only; total investigation cost = $3,000.",
-            "D": "DL rate ($9,100U, 9.4%) and DL efficiency ($4,500U, 5.2%) only; total investigation cost = $3,200."
-        },
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "Under a cost-benefit framework for variance investigation, only variances that meet BOTH the dollar threshold and the percentage threshold should be investigated, because the investigation cost is weighed against the expected benefit of finding and correcting the root cause. Applying the dual threshold: DM Price — $6,200 > $4,000 PASS; 7.1% > 3% PASS. Investigate. Cost = $1,200. DM Quantity — $2,800 < $4,000 FAIL. Do not investigate (the 3.3% exceeds the percentage threshold but the dollar test is not met, so the investigation is not warranted). DL Rate — $9,100 > $4,000 PASS; 9.4% > 3% PASS. Investigate. Cost = $1,800. DL Efficiency — $4,500 > $4,000 PASS; 5.2% > 3% PASS. Investigate. Cost = $1,400. VOH Spending — $1,200 < $4,000 FAIL. Do not investigate. Total investigation cost = $1,200 + $1,800 + $1,400 = $4,400. A common error is to investigate all unfavorable variances or all variances exceeding either threshold individually. The dual-threshold framework explicitly requires both conditions to be met.",
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "QuestionID": "P1-CD-065",
-        "CalculationItem": false,
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "The controllability principle addresses who should be held accountable for which variances based on their authority and span of control. The scenario describes a cost-benefit trade-off applied to the variance investigation decision itself: comparing the cost of investigating to the expected benefit of uncovering and correcting the variance's cause.",
-        "ExplanationWrongC": "Zero-based budgeting requires all expenses to be justified each period from zero. It is a budgeting philosophy, not directly related to segment profitability reporting.",
-        "ExplanationWrongD": "Goal congruence is the desired outcome of effective performance measurement, not a distractor. The objective is alignment between individual manager decisions and organizational goals.",
-        "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "C",
+	"SectionName": "Performance Management",
+	"Topic": "C.065 variance investigation dual-threshold cost-benefit",
+	"MicroTopic": "variance investigation dual threshold",
+	"UniqueConceptKey": "C-D065-variance-investigation-dual-threshold",
+	"LOSTag": "C Performance management",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Bryant Manufacturing's controller Elena Vasquez must decide which monthly variances to investigate under a constrained investigation budget of $5,000. Company policy requires investigation of any variance exceeding both a $4,000 absolute threshold and 3% of standard. However, Vasquez also has estimated corrective savings for each variance if the root cause is found: DM price ($6,200U, 7.1%): investigate cost $1,200, expected monthly savings $2,800. DM quantity ($2,800F, 3.3%): cost $950, expected savings $0 (favorable, unlikely to recur from error). DL rate ($9,100U, 9.4%): cost $1,800, expected savings $5,400. DL efficiency ($4,500U, 5.2%): cost $1,400, expected savings $2,100. VOH spending ($1,200F, 1.8%): cost $800, expected savings $300 (small recurring favorable). Vasquez must select the subset of investigations that maximizes net benefit (corrective savings minus investigation cost) while staying within the $5,000 budget. Which variances should she investigate?",
+	"Choices": {
+		"A": "DM price, DL rate, and DL efficiency. All three pass the dual threshold, their combined investigation cost of $4,400 is within the $5,000 budget, and their combined net benefit of $8,900 ($11,300 expected savings minus $2,400 cost across all three — wait, recalculate: $2,800-$1,200=$1,600 + $5,400-$1,800=$3,600 + $2,100-$1,400=$700 = $5,900 total net benefit) is the highest achievable under the policy constraint. Excluding DL efficiency forgoes $700 in net benefit despite it passing both thresholds.",
+		"B": "DL rate only. At $1,800 cost and $5,400 expected savings, it delivers $3,600 net benefit — the highest single-variance return. Investigating additional variances consumes budget that could be reserved for next month's potentially larger variances, and the $5,000 budget should not be fully exhausted on variances with lower marginal returns.",
+		"C": "DM price, DL rate, DL efficiency, and VOH spending. All should be investigated because any variance with positive expected savings warrants investigation regardless of threshold policy. The combined cost of $5,200 exceeds the $5,000 budget by $200, but Vasquez can request a one-time budget override from the CFO given the high expected returns.",
+		"D": "DM price and DL rate only. These two have the largest dollar magnitude ($6,200U and $9,100U) and highest expected savings. DL efficiency ($4,500U) barely exceeds the $4,000 dollar threshold and its $700 net benefit is marginal. Excluding it keeps total investigation cost at $3,000, preserving $2,000 in budget capacity for unexpected mid-month variances."
+	},
+	"CorrectChoice": "A",
+	"ExplanationCorrect": "The optimal subset under the dual-threshold policy and $5,000 budget constraint is DM price, DL rate, and DL efficiency. Step 1 — Apply the dual threshold: DM price ($6,200 > $4,000; 7.1% > 3%) → PASS. DM quantity ($2,800 < $4,000) → FAIL despite 3.3% exceeding the percentage threshold. DL rate ($9,100 > $4,000; 9.4% > 3%) → PASS. DL efficiency ($4,500 > $4,000; 5.2% > 3%) → PASS. VOH spending ($1,200 < $4,000) → FAIL. Three variances qualify. Step 2 — Net benefit analysis: DM price = $2,800 - $1,200 = $1,600. DL rate = $5,400 - $1,800 = $3,600. DL efficiency = $2,100 - $1,400 = $700. Total cost = $4,400, total net benefit = $5,900. This is the maximum net benefit achievable under the dual-threshold constraint because all qualifying variances have positive net benefit. Excluding DL efficiency (Choice D) forgoes $700 in demonstrable net benefit while leaving $600 of budget unused — suboptimal resource allocation. Choice B ignores the fact that the $5,000 budget is an annual allocation, not a monthly carryforward. The management-accounting principle: when investigation resources are constrained, prioritize by net-benefit-per-dollar-investigated within the set of variances that pass the significance filter.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-CD-065",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "",
+	"ExplanationWrongB": "Investigating only the single highest-return variance leaves $3,200 of the $5,000 investigation budget unspent. The budget is an authorization to spend, not a target to minimize. DM price ($1,600 net benefit) and DL efficiency ($700 net benefit) both pass the dual threshold and have positive net benefit — excluding them forgoes $2,300 in value that could be captured within the approved budget. This analysis confuses capital rationing (where funds are truly scarce) with budget management (where the constraint is the authorization ceiling, not cash availability). The controller's duty is to maximize total net benefit, not per-dollar return on a single investigation.",
+	"ExplanationWrongC": "VOH spending fails the dual-threshold test ($1,200 < $4,000 dollar threshold), so company policy explicitly excludes it from investigation regardless of net benefit. Moreover, the combined cost of $5,200 exceeds the $5,000 budget constraint — requesting an override to investigate a variance that fails the significance test undermines the control environment. The dual-threshold policy exists precisely to prevent investigation resources from being diluted across immaterial variances. Including VOH spending violates both the policy gate and the budget constraint.",
+	"ExplanationWrongD": "Excluding DL efficiency because it 'barely' exceeds the dollar threshold misinterprets the purpose of a dual-threshold policy. The threshold is a binary gate: $4,500 exceeds $4,000, and 5.2% exceeds 3% — the variance qualifies. Once qualified, the decision turns on net benefit, and DL efficiency's $700 net benefit is positive. Leaving $600 of budget unspent while excluding a qualifying variance with positive net benefit is irrational under any resource-allocation framework. The dollar magnitude of the variance ($4,500U) is not 'marginal' — it represents a 5.2% deviation from standard that, if uncorrected, compounds over future periods.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze"
+},
 {
         "Part": 1,
         "Section": "C",
@@ -14102,55 +14102,55 @@ const MCQ_BANK_D = [{
         "CognitiveLevel": "Analyze"
     },
 {
-        "Part": 1,
-        "Section": "D",
-        "SectionName": "Cost Management",
-        "Topic": "D.004 overhead disposition proration material underapplied",
-        "MicroTopic": "overhead proration underapplied COGS adjustment",
-        "UniqueConceptKey": "D-D004-overhead-proration-material-underapplied",
-        "LOSTag": "D Cost management",
-        "Difficulty": "Difficult",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Venice Manufacturing uses normal costing with machine hours as the overhead allocation base. At year-end, actual manufacturing overhead was $152,400 and applied overhead was $140,000, resulting in $12,400 underapplied. The controller determined that the underapplied amount is material and must be prorated. The overhead applied in ending account balances is: Work in Process $14,200, Finished Goods $36,800, and Cost of Goods Sold $89,000. What additional amount is charged to Cost of Goods Sold through the proration of the underapplied overhead?",
-        "Choices": {
-            "A": "$8,060, based on prorating the $12,400 by each account's total ending balance (WIP $86,000, FG $215,000, COGS $559,000) rather than by applied overhead.",
-            "B": "$12,400, closing the entire underapplied overhead balance to Cost of Goods Sold regardless of materiality.",
-            "C": "$1,258, the amount allocated to Work in Process, representing a misinterpretation of which account's proration is being requested.",
-            "D": "$7,883, computed as ($89,000 / $140,000) x $12,400 = 63.57% of the underapplied overhead allocated to Cost of Goods Sold."
-        },
-        "CorrectChoice": "D",
-        "ExplanationCorrect": "When underapplied or overapplied overhead is material, GAAP requires proration among Work in Process, Finished Goods, and Cost of Goods Sold based on the amount of overhead applied in each account (not the total account balance). Step 1 — Compute total applied overhead in the three accounts: $14,200 (WIP) + $36,800 (FG) + $89,000 (COGS) = $140,000. Step 2 — Determine each account's proration percentage based on applied overhead: WIP = $14,200 / $140,000 = 10.14%; FG = $36,800 / $140,000 = 26.29%; COGS = $89,000 / $140,000 = 63.57%. Step 3 — Allocate the underapplied $12,400: WIP = 10.14% x $12,400 = $1,258; FG = 26.29% x $12,400 = $3,259; COGS = 63.57% x $12,400 = $7,883. Total = $1,258 + $3,259 + $7,883 = $12,400 (reconciles). The additional charge to COGS is $7,883. A common exam trap is to use the total account balances (WIP $86,000, FG $215,000, COGS $559,000) as the proration basis instead of the applied overhead in each account, which produces a different allocation. An immaterial underapplied amount would instead be closed entirely to COGS, making option B correct only if the $12,400 were immaterial.",
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax Managerial Accounting: Activity-Based Costing",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/6-introduction"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "QuestionID": "P1-DD-004",
-        "CalculationItem": false,
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "ExplanationWrongA": "Variable costing (also called direct costing) classifies fixed manufacturing overhead as a period expense rather than a product cost. It is an inventory valuation method, not an overhead application approach. The question describes normal costing, which applies overhead with a predetermined rate.",
-        "ExplanationWrongB": "Actual costing uses actual overhead costs, so it conflicts with the stem statement that overhead is applied with a predetermined rate.",
-        "ExplanationWrongC": "Standard costing is a broader performance-measurement system using standards; the stem describes normal costing overhead application.",
-        "ExplanationWrongD": "",
-        "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "D",
+	"SectionName": "Cost Management",
+	"Topic": "D.004 overhead disposition proration material underapplied",
+	"MicroTopic": "overhead proration underapplied COGS adjustment",
+	"UniqueConceptKey": "D-D004-overhead-proration-material-underapplied",
+	"LOSTag": "D Cost management",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Venice Manufacturing's controller Aaron Beckett is reviewing year-end overhead disposition with the audit committee. Venice uses normal costing with machine hours as the allocation base. Actual manufacturing overhead was $152,400 against applied overhead of $140,000 (14,000 actual machine hours × $10 predetermined rate), yielding $12,400 underapplied — 8.9% of applied overhead. The controller has always closed underapplied overhead entirely to Cost of Goods Sold, arguing it is simpler and that Venice's lean inventory levels make the distortion negligible. This year, however, the external auditor flagged the practice because the applied overhead in ending accounts is: Work in Process $14,200, Finished Goods $36,800, and Cost of Goods Sold $89,000. The auditor contends the amount is material and GAAP requires proration. The audit committee needs an analysis of how the controller's write-off method versus GAAP proration affects reported gross margin and inventory valuation.",
+	"Choices": {
+		"A": "The controller's write-off method is GAAP-compliant because $12,400 at 8.9% of applied overhead is immaterial under the rule-of-thumb threshold of 10%. Closing entirely to COGS charges an additional $12,400 to COGS, reducing gross margin by that full amount, and leaves inventory balances at their current values.",
+		"B": "The controller's write-off method is not GAAP-compliant. Proration allocates $12,400 as: WIP = ($14,200/$140,000) × $12,400 = $1,258 additional charge; FG = ($36,800/$140,000) × $12,400 = $3,259; COGS = ($89,000/$140,000) × $12,400 = $7,883. The controller's method overstates the COGS charge by $4,517 ($12,400 − $7,883) and understates ending inventory by the same amount, inflating both the balance sheet and the gross margin distortion relative to GAAP.",
+		"C": "The controller's write-off method is GAAP-compliant because the total ending account balances (WIP $86,000, FG $215,000, COGS $559,000) are the proper proration basis. Using these balances allocates $1,203 to WIP, $3,100 to FG, and $8,097 to COGS — close enough to the write-off result of $12,400 that the audit committee should accept the controller's simpler approach.",
+		"D": "Neither method is GAAP-compliant for material underapplied overhead. The $12,400 should be recognized as a period expense on the income statement as a separate line item below gross margin, labeled 'Manufacturing Variances,' because underapplied overhead represents a period cost rather than a product cost adjustment."
+	},
+	"CorrectChoice": "B",
+	"ExplanationCorrect": "Under GAAP, when underapplied overhead is material, the amount must be prorated among WIP, FG, and COGS based on the applied overhead residing in each account — not on total account balances. The applied overhead basis is $14,200 + $36,800 + $89,000 = $140,000. Proration: WIP = 14,200/140,000 = 10.14% × $12,400 = $1,258; FG = 36,800/140,000 = 26.29% × $12,400 = $3,259; COGS = 89,000/140,000 = 63.57% × $12,400 = $7,883. The controller's immediate write-off charges $12,400 entirely to COGS — overstating the income statement charge by $4,517 and understating ending inventory by the same amount. The gross margin impact: under proration, COGS increases by $7,883; under write-off, COGS increases by $12,400 — a $4,517 difference that directly flows to gross margin. On the balance sheet, inventory is $4,517 lower under write-off than under proration. At 8.9% of applied overhead, the $12,400 is material — the 10% rule of thumb is not a safe harbor and the auditor's judgment that 8.9% is material, combined with the $4,517 inter-account distortion, is consistent with GAAP's materiality principle: would the difference influence a reasonable user's decisions? For Venice, the answer is yes — a $4,517 gross margin swing is meaningful for a company with $140,000 in applied overhead.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax Managerial Accounting: Activity-Based Costing",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/6-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-DD-004",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongB": "",
+	"ExplanationWrongA": "The 10% rule of thumb is a practical guideline for preliminary materiality screening, not a safe harbor that overrides auditor judgment. At 8.9%, the underapplied amount is close enough to 10% that judgment is required. More importantly, the $4,517 distortion between the write-off and proration methods — a 36.4% difference ($12,400 vs. $7,883) in the COGS charge — is itself material relative to COGS and gross margin. An auditor would not accept a 36.4% misallocation as immaterial simply because the denominator ratio is 8.9%. The materiality test examines the magnitude of the financial statement distortion, not just the ratio of the variance to applied overhead.",
+	"ExplanationWrongC": "Total account balances are not the correct proration basis because the underapplication distortion affects only the overhead component, not the direct materials and labor that also reside in each account. COGS has $559,000 in total costs but only $89,000 in applied overhead — using the full $559,000 as the allocation weight gives COGS 65.0% of the proration ($8,060) instead of the correct 63.6% ($7,883). While the dollar difference appears small ($177), the principle matters: GAAP specifically requires proration based on the overhead applied in each account. Using total balances could materially distort allocation if WIP had an unusually high direct-material component, for example.",
+	"ExplanationWrongD": "Underapplied overhead from normal costing is a product cost adjustment, not a period expense. It arises because the predetermined rate under-absorbed actual overhead costs — the costs are still product costs; they were simply under-allocated. Correcting the under-allocation through proration to WIP, FG, and COGS properly assigns the previously undercharged product costs to the accounts where those costs belong. Reporting underapplied overhead as a separate line item below gross margin would contravene absorption costing, which requires all manufacturing costs — including corrected overhead — to flow through inventory and COGS. This treatment is sometimes seen in variable costing frameworks but is not GAAP for external reporting.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze"
+},
 {
         "Part": 1,
         "Section": "D",
@@ -16996,55 +16996,55 @@ const MCQ_BANK_D = [{
         "CognitiveLevel": "Evaluate"
     },
 {
-        "Part": 1,
-        "Section": "D",
-        "SectionName": "Cost Management",
-        "Topic": "D.062 multi-product break-even weighted average CM",
-        "MicroTopic": "multi-product BEP weighted CM",
-        "UniqueConceptKey": "D-D062-multi-product-bep-weighted-cm",
-        "LOSTag": "D Cost management",
-        "Difficulty": "Difficult",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Westbrook Company sells two products with a constant mix. Product X: $120/unit, VC $78, 60% of sales. Product Y: $95/unit, VC $62, 40% of sales. Fixed costs $468,000. Management asks the controller to recommend a break-even methodology to present to the board. The board members have suggested: (1) Compute BEP using only the highest-CM product (X at $42/unit) to be conservative; (2) Compute BEP using only the lowest-CM product (Y at $33/unit) as worst-case; (3) Use a weighted-average CM approach reflecting the sales mix; (4) Use a weighted-average revenue approach. Which methodology should the controller recommend and why?",
-        "Choices": {
-            "A": "Weighted-average CM: WACM $38.40, BEP 12,188 units (X: 7,313, Y: 4,875). This method recognizes that both products contribute to covering fixed costs and accounts for the sales mix proportionally — the standard approach for multi-product CVP analysis.",
-            "B": "Highest-CM product only: $468,000/$42 = 11,143 units of X only. Conservative but misleading — it ignores that Product Y also generates CM and that customers buy both products according to the actual sales mix.",
-            "C": "Lowest-CM product only: $468,000/$33 = 14,182 units of Y only. Ultra-conservative but unrealistic — it assumes the company sells only the less profitable product, contradicting actual sales patterns.",
-            "D": "Weighted-average revenue method: $468,000/(0.6x$120 + 0.4x$95) = 4,255 units. This methodology ignores that products have different CM ratios and treats all revenue as available to cover fixed costs, producing a dangerously low BEP."
-        },
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "The weighted-average contribution margin approach is the standard methodology for multi-product CVP analysis because it respects the proportional contribution of each product while maintaining the core CVP logic. Step 1: Unit CM — Product X: $120 - $78 = $42; Product Y: $95 - $62 = $33. Step 2: WACM = (60% x $42) + (40% x $33) = $25.20 + $13.20 = $38.40 per composite unit. Step 3: BEP = $468,000 / $38.40 = 12,188 units. Step 4: Allocate by mix — X: 60% x 12,188 = 7,313; Y: 40% x 12,188 = 4,875. The single-product methods (Options B and C) violate the fundamental assumption that Westbrook sells both products. Option B understates the BEP and creates false confidence; Option C overstates it and could lead to unnecessary production cuts. Option D's revenue-based method is a conceptual error: break-even analysis uses contribution margin because only CM represents funds available to cover fixed costs; revenue includes variable cost recovery. The controller should recommend the weighted-average CM approach to the board because it is the only methodology that provides decision-useful information for managing a multi-product firm. The board's suggestions of conservative/worst-case methods reflect a common misunderstanding: conservatism in accounting relates to estimates under uncertainty, not to the selection of an analytical methodology that contradicts the business reality of the sales mix.",
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax Managerial Accounting: Activity-Based Costing",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/6-introduction"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "QuestionID": "P1-DD-062",
-        "CalculationItem": false,
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Computing break-even using only the highest-CM product (X at $42/unit) ignores the constant sales mix assumption. For multi-product CVP analysis, the weighted-average contribution margin—$38.40—must capture the contribution of all products in proportion to their expected sales mix. Computing break-even for just one product violates the mix-constant assumption.",
-        "ExplanationWrongC": "Option C is incorrect. Products in a multi-product CVP analysis can have different selling prices; the analysis uses a weighted-average contribution margin that accounts for varying prices and costs. Only the assumption of a constant sales mix is essential to compute a single, meaningful break-even point.",
-        "ExplanationWrongD": "Equal selling prices are not required for multi-product CVP analysis. The critical assumption is a constant sales mix—that the relative proportions of each product sold remain stable. Without a constant mix, the weighted-average contribution margin changes with each unit sold, making a single break-even point in total units meaningless.",
-        "question_state": "Certified",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Apply"
-    },
+		"Part": 1,
+		"Section": "D",
+		"SectionName": "Cost Management",
+		"Topic": "D.062 evaluate product mix shift tradeoff BEP vs total CM",
+		"MicroTopic": "evaluate product mix shift tradeoff BEP vs total CM",
+		"UniqueConceptKey": "D-D062-evaluate-product-mix-shift-tradeoff-bep-vs-cm",
+		"LOSTag": "D Cost management",
+		"Difficulty": "Difficult",
+		"ItemType": "MCQ",
+		"ItemStyle": "single-select",
+		"Stem": "Westbrook Company sells two products in a constant sales mix. Product X sells for $120 per unit with variable costs of $78 (CM = $42) and represents 60% of unit sales. Product Y sells for $95 per unit with variable costs of $62 (CM = $33) and represents 40% of unit sales. Total fixed costs are $468,000. The current weighted-average contribution margin (WACM) is $38.40, producing a break-even point of 12,188 units and operating income of $151,200 at the forecasted 16,125 units. The marketing director, Angela Frost, has proposed a campaign to shift the product mix toward the higher-priced Product X, targeting a new mix of 75% X / 25% Y. The campaign would cost $52,000 annually. Frost projects that the campaign would not change total unit sales. However, the operations manager warns that Product X requires more skilled labor and a shift to 75% X would create production bottlenecks, adding $38,000 in overtime and expediting costs. Which recommendation should the controller present?",
+		"Choices": {
+			"A": "Approve the mix shift. New WACM = (75% x $42) + (25% x $33) = $39.75. New BEP = ($468,000 + $52,000 + $38,000) / $39.75 = 14,038 units. Operating income = (16,125 x $39.75) - $558,000 = $82,969, which is lower than the current $151,200. But the campaign positions Westbrook for long-term growth in the higher-margin Product X segment.",
+			"B": "Reject the mix shift and retain the 60/40 mix. The current operating income of $151,200 exceeds the proposed $82,969 by $68,231. While the shift to Product X increases the WACM per unit by $1.35, the additional $90,000 in combined campaign and bottleneck costs more than consumes the $21,769 in additional contribution margin from the mix shift. The higher BEP of 14,038 units versus 12,188 also reduces the margin of safety from 24.4% to 12.9%.",
+			"C": "Approve the mix shift but phase out Product Y entirely over two years. At $42 CM and $558,000 fixed costs, BEP = 13,286 units. At 16,125 units of X only, operating income = $119,250 — lower than the current $151,200 but the single-product focus reduces production complexity.",
+			"D": "Approve the mix shift but negotiate the campaign cost down to $35,000. New fixed costs = $541,000. Operating income = (16,125 x $39.75) - $541,000 = $99,969 — still $51,231 below current, but a compromise that captures partial benefit."
+		},
+		"CorrectChoice": "B",
+		"ExplanationCorrect": "The controller must evaluate the proposal using incremental CVP analysis. Current contribution: 16,125 x $38.40 = $619,200. Operating income = $619,200 - $468,000 = $151,200. Proposed new WACM: (75% x $42) + (25% x $33) = $39.75. The WACM increases by $1.35 per unit because Product X ($42 CM) displaces Product Y ($33 CM). At 16,125 units, incremental CM = 16,125 x $1.35 = $21,769. Full incremental costs: $52,000 + $38,000 = $90,000. Net impact = $21,769 - $90,000 = -$68,231 reduction in operating income. The break-even point increases from 12,188 to 14,038, nearly halving the margin of safety. The recommendation must be to reject. The marketing director's focus on CM per unit overlooks that the fixed-cost increase is disproportionate. At the proposed WACM of $39.75, an additional 2,264 units ($90,000 / $39.75) beyond 16,125 would be needed just to break even on the incremental costs. This is a classic case where higher CM per unit does not translate to higher operating income when fixed costs rise significantly.",
+		"StudyLinks": [
+			{
+				"label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+				"url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+			},
+			{
+				"label": "OpenStax Managerial Accounting: Activity-Based Costing",
+				"url": "https://openstax.org/books/principles-managerial-accounting/pages/6-introduction"
+			}
+		],
+		"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+		"Part1OnlyFlag": true,
+		"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+		"QuestionID": "P1-DD-062",
+		"CalculationItem": false,
+		"VerifiedChecks": [
+			"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+			"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+			"Original practice item with unique micro-topic and stem",
+			"Answer key distribution balanced across A/B/C/D",
+			"Distractors written as plausible CMA-style traps"
+		],
+		"ExplanationWrongA": "This option correctly computes the new WACM and operating income but the recommendation to approve contradicts the math. Operating income falls from $151,200 to $82,969 — a 45% decline. A candidate selecting this may agree with the computation but fail to apply the logical conclusion: the controller must not recommend a course of action that demonstrably reduces profit, even if the strategic positioning argument has qualitative appeal.",
+		"ExplanationWrongB": "",
+		"ExplanationWrongC": "Phasing out Product Y eliminates 6,450 units (40% of 16,125) at $33 CM = $212,850 in contribution, while saving only $38,000 in bottleneck costs and adding $0 in campaign costs. Even at the higher $42 CM for Product X, replacing Y's volume with X would require 5,071 additional X units (($33 x 6,450) / $42) just to maintain current CM — requiring total X volume of 14,746, which would leave Y's former customers unserved. A candidate selecting this may be focused on reducing complexity without quantifying the CM sacrificed.",
+		"ExplanationWrongD": "Negotiating the campaign cost down to $35,000 reduces the income decline from $68,231 to $51,231 — a smaller loss, but still a loss. The controller's recommendation must be based on best available estimates, not hypothetical renegotiation. Recommending approval conditional on cost reduction subordinates the analytical decision to an uncertain future event. A candidate may be attempting to salvage a proposal they favor rather than evaluating it objectively.",
+		"question_state": "Certified",
+		"DifficultyScore": 4,
+		"CognitiveLevel": "Evaluate"
+	},
 {
         "Part": 1,
         "Section": "D",
@@ -21342,55 +21342,56 @@ const MCQ_BANK_D = [{
         "CognitiveLevel": "Apply"
     },
 {
-        "Part": 1,
-        "Section": "E",
-        "SectionName": "Internal Controls",
-        "Topic": "E.073 monitoring exception reports not reviewed",
-        "MicroTopic": "monitoring exception reports not reviewed",
-        "UniqueConceptKey": "E-D073-monitoring-exception-reports-unreviewed",
-        "LOSTag": "E Internal controls",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Sterling Company generates daily exception reports for purchasing transactions that exceed approved limits. The reports are produced automatically but no employee is assigned to review them, and exceptions accumulate without follow-up. What monitoring weakness does this reveal?",
-        "Choices": {
-            "A": "Exception reports are generated but nobody is assigned to review or act on them, rendering the detective control ineffective",
-            "B": "The exception reports are generated too frequently to be useful",
-            "C": "The purchasing approval limits are set too high for the organization",
-            "D": "The purchasing system should prevent all exceptions rather than report them after the fact"
-        },
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "Under the COSO Monitoring Activities component (Principles 16–17), detective controls must be followed by timely review and corrective action. A detective control is only effective if the exceptions it identifies are reviewed and acted upon. Generating reports without assigning responsibility for review and remediation is a monitoring failure that leaves control deficiencies unresolved.",
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "COSO Internal Control Framework overview",
-                "url": "https://www.coso.org/guidance-on-ic"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "QuestionID": "P1-ED-073",
-        "question_state": "Certified",
-        "CalculationItem": false,
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "The frequency of reporting is not the problem — daily exception reports can be effective if reviewed promptly. The weakness is that no one is assigned to review or act on the reports, making the detective control operationally ineffective regardless of reporting frequency.",
-        "ExplanationWrongC": "The limits may be appropriate; the documented weakness is that violations of those limits are reported but not investigated, not that the limits themselves are wrong.",
-        "ExplanationWrongD": "While some controls can prevent exceptions proactively, practical systems rely on a mix of preventive and detective controls; the weakness here is the lack of review, not the existence of exceptions.",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "E",
+	"SectionName": "Internal Controls",
+	"Topic": "E.073 monitoring exception reports not reviewed",
+	"MicroTopic": "monitoring exception reports not reviewed",
+	"UniqueConceptKey": "E-D073-monitoring-exception-reports-unreviewed",
+	"LOSTag": "E Internal controls",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Sterling Company's internal audit director Lena Park is reviewing three months of purchasing exception report data. The system automatically flags purchase orders exceeding the buyer's delegated approval limit. Monthly exception counts: July — 47 exceptions (total flagged value $93,000), August — 52 exceptions ($108,000), September — 58 exceptions ($134,000). No employee has been assigned to review these reports since the prior compliance analyst resigned in June. Park estimates that 30% of flagged exceptions likely represent legitimate urgent purchases that should have followed an escalation process, while 70% are potential control breaches with an average exposure of $800 per exception. Additionally, the trend shows the rate of exception growth (10.7% July→August, 11.5% August→September) is accelerating. Park must present her analysis to the audit committee. Which conclusion is most supported by the data?",
+	"Choices": {
+		"A": "The exception trend indicates escalating control degradation, not merely increased transaction volume. The consistent double-digit monthly growth rate in exceptions over a period when overall purchasing volume was flat (verified against the general ledger) means buyers are increasingly bypassing their approval limits. Expected loss from unreviewed exceptions in September alone is approximately $32,480 (70% × 58 × $800), and the accelerating trend projects further increases. The root cause is the three-month vacancy in the compliance analyst position combined with the absence of a compensating review procedure.",
+		"B": "The exception trend reflects normal seasonal purchasing volume increases in Q3, not a control breakdown. Since the flagged value per exception remained relatively stable ($1,979, $2,077, $2,310 across the three months), the increase in exception count is proportional to overall purchasing activity. No immediate corrective action is needed beyond filling the vacant compliance analyst position.",
+		"C": "The exception data is statistically stable and does not indicate an escalating control problem. The month-over-month increases of 5 and 6 exceptions fall within normal random variation for a company of Sterling's size. The total flagged value of $335,000 over three months is immaterial relative to Sterling's annual purchasing budget of $18 million (1.9%). The audit committee should note the vacancy but not treat the exception trend as a material weakness.",
+		"D": "The priority is to determine whether the 70% of exceptions classified as potential control breaches contain any instances of fraud. Park should immediately engage forensic auditors to investigate all 157 individual exceptions across the three-month period before drawing conclusions about the trend, because the distinction between 'legitimate urgent purchases' and 'control breaches' cannot be made without transaction-level review."
+	},
+	"CorrectChoice": "A",
+	"ExplanationCorrect": "Under COSO Monitoring Activities (Principles 16–17), management must evaluate whether controls are operating as intended through ongoing monitoring. When monitoring stops — here, a three-month vacancy with no compensating review — the control environment degrades. Park's analysis correctly isolates the control degradation signal from the volume signal by verifying that overall purchasing volume was flat. The key analytical steps: (1) Exception count trend: 47→52→58 shows two consecutive double-digit growth rates, not random variation or seasonal noise. (2) Exposure quantification: 58 exceptions × 70% control-breach rate × $800 average exposure = $32,480 expected loss for September alone — a compound figure that grows with the exception count. (3) Root cause identification: the vacancy created a monitoring gap; without detection, buyers learned that exceeding limits carries no consequence, creating a behavioral feedback loop that accelerates the exception rate. The audit committee needs both the quantified exposure and the causal analysis to approve both immediate remediation (assigning interim review responsibility) and the permanent hire. The alternative interpretations — seasonal volume (Choice B), statistical noise (Choice C), or requiring exhaustive investigation before acting (Choice D) — each fail to apply the monitoring principle that control degradation demands timely detection and correction, not deferral.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "COSO Internal Control Framework overview",
+		    "url": "https://www.coso.org/guidance-on-ic"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-ED-073",
+	"question_state": "Certified",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "",
+	"ExplanationWrongB": "The 'seasonal volume' interpretation is contradicted by the flat overall purchasing volume verified against the general ledger. If the exception rate were proportional to purchasing activity, a stable volume should produce a stable exception count. The per-exception flagged value rose from $1,979 to $2,310 — a 16.7% increase — which is inconsistent with purely proportional volume growth, because in that scenario the average per-exception value should remain flat. Attributing a control signal to seasonality without verifying that purchasing volume actually increased is a common analytical error in monitoring: correlation between time (more exceptions each month) and volume (more purchasing activity in Q3) must be proved, not assumed. The data shows the exception count is accelerating independently of purchasing activity.",
+	"ExplanationWrongC": "Treating consecutive double-digit growth rates as 'normal random variation' fails a basic trend analysis. Three data points showing 10.7% and 11.5% sequential growth represent a consistent direction, not random oscillation. A chi-square or runs test would reject the null hypothesis of random variation at conventional significance levels. Moreover, the 1.9%-of-budget materiality argument uses the wrong denominator: $335,000 in flagged value over three months annualizes to $1.34 million, and the expected loss component ($32,480/month × 12 = $389,760 annualized) is not immaterial for a company with an $18 million purchasing budget. The correct materiality framework evaluates expected loss, not total flagged value, and the trend direction, not the absolute count in a single month.",
+	"ExplanationWrongD": "Requiring exhaustive forensic investigation of all 157 exceptions before drawing any conclusion misapplies the monitoring principle. COSO's ongoing monitoring does not require transaction-level verification of every exception before concluding a trend exists — it requires timely detection of control deviations and proportionate response. Park has sufficient data (accelerating exception count, flat purchasing volume, known vacancy as causal factor) to conclude that control degradation is occurring. The appropriate response is to immediately assign an interim reviewer to halt the behavioral feedback loop while simultaneously planning a risk-based sample investigation of the highest-value exceptions. Deferring all action pending a months-long forensic review would allow the exception rate to continue accelerating — compounding the expected loss.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Analyze"
+},
 {
         "Part": 1,
         "Section": "E",

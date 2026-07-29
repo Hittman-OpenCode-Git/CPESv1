@@ -12054,55 +12054,55 @@ const MCQ_BANK_C = [
         "CognitiveLevel": "Apply"
     },
     {
-        "Part": 1,
-        "Section": "C",
-        "SectionName": "Performance Management",
-        "Topic": "C.063 fixed overhead volume variance calculation",
-        "MicroTopic": "fixed overhead volume variance calculation",
-        "UniqueConceptKey": "C-C063-fixed-overhead-volume-variance-calculation",
-        "LOSTag": "C Performance management",
-        "Difficulty": "Moderate",
-        "ItemType": "MCQ",
-        "ItemStyle": "single-select",
-        "Stem": "Elmhurst's fixed manufacturing overhead budget is $120,000. The denominator volume is 10,000 direct labor hours, and each unit requires 1 DLH. Actual production was 9,200 units, and actual DLHs worked were 9,500. What is the fixed overhead volume variance?",
-        "Choices": {
-            "A": "$12,000 favorable",
-            "B": "$6,000 unfavorable",
-            "C": "$9,600 unfavorable",
-            "D": "$9,600 favorable"
-        },
-        "CorrectChoice": "C",
-        "ExplanationCorrect": "Fixed OH volume variance = (Actual output in DLH - Denominator DLH) × Standard fixed OH rate = (9,200 - 10,000) × ($120,000 / 10,000 DLH = $12/DLH) = -800 × $12 = $9,600 unfavorable.",
-        "StudyLinks": [
-            {
-                "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
-                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
-            },
-            {
-                "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
-                "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
-            }
-        ],
-        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-        "Part1OnlyFlag": true,
-        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-        "QuestionID": "P1-CC-063",
-        "CalculationItem": true,
-        "VerifiedChecks": [
-            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-            "Original practice item with unique micro-topic and stem",
-            "Answer key distribution balanced across A/B/C/D",
-            "Distractors written as plausible CMA-style traps"
-        ],
-        "ExplanationWrongA": "$12,000 favorable uses the actual DLHs worked (9,500) instead of the standard hours allowed for actual output (9,200). The volume variance is based on standard hours allowed, not actual hours worked.",
-        "ExplanationWrongB": "this uses actual DLHs (9,500) instead of standard hours allowed for actual output (9,200). Volume variance is based on standard hours allowed for actual output, not actual hours worked.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "$9,600 favorable reverses the direction of the variance. Actual output of 9,200 units is below the denominator volume of 10,000 hours, so overhead is underapplied and the variance is unfavorable.",
-        "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
-    },
+	"Part": 1,
+	"Section": "C",
+	"SectionName": "Performance Management",
+	"Topic": "C.063 evaluate denominator volume selection for fixed overhead application",
+	"MicroTopic": "evaluate denominator volume selection for fixed overhead application",
+	"UniqueConceptKey": "C-C063-evaluate-denominator-volume-selection-for-fixed-OH",
+	"LOSTag": "C Performance management",
+	"Difficulty": "Difficult",
+	"ItemType": "MCQ",
+	"ItemStyle": "single-select",
+	"Stem": "Crestline Manufacturing applies fixed manufacturing overhead using a predetermined rate based on a denominator volume of 10,000 direct labor hours (DLH), set four years ago when the plant was designed for single-shift operations producing 10,000 units annually. Crestline's actual production has averaged 8,400 units over the past three years following the loss of two major customers, generating a persistent unfavorable fixed overhead volume variance averaging $19,200 per year ($12 per DLH x 1,600-hour shortfall). The production manager, James Adair, argues the denominator volume is outdated and should be revised to 8,500 DLH to reflect current capacity utilization, which would reduce the volume variance to near zero and present a more accurate picture of plant performance. The controller, Susan Cho, recognizes that changing the denominator would reduce the fixed overhead rate from $12.00 to $14.12 per DLH ($120,000 / 8,500 DLH), increasing the per-unit product cost and potentially inflating ending inventory values on the balance sheet. Under GAAP, fixed overhead applied to inventory must use a denominator that reflects normal capacity, not actual utilization. The external auditors have noted the persistent unfavorable volume variance as an indicator for potential inventory impairment review. Which recommendation should the controller present to the CFO?",
+	"Choices": {
+		"A": "Retain the 10,000 DLH denominator — the volume variance is an informational signal that the plant has unused capacity, not an accounting error requiring correction. Revising the denominator would inflate per-unit costs and may overstate inventory values, creating audit risk under GAAP's normal-capacity requirement",
+		"B": "Revise the denominator to 8,500 DLH — the current denominator based on four-year-old capacity assumptions no longer reflects the plant's operating reality. Reducing the volume variance to near zero provides a truer representation of performance for internal decision-making, and the auditor's inventory impairment concern is a separate issue addressed through lower-of-cost-or-market analysis, not the overhead rate",
+		"C": "Compute two separate overhead rates — retain the 10,000 DLH denominator for external financial reporting to satisfy GAAP normal-capacity requirements, and use the 8,500 DLH denominator for internal management reporting to provide the production team with a more meaningful performance baseline",
+		"D": "Reduce the denominator to 9,000 DLH as a compromise — this splits the difference between historical design capacity and recent production levels, partially reduces the volume variance, and avoids the full per-unit cost inflation that an 8,500 DLH denominator would create"
+	},
+	"CorrectChoice": "A",
+	"ExplanationCorrect": "Under GAAP (ASC 330-10-30), fixed overhead should be applied to inventory using a denominator that reflects normal capacity — the production level expected to be achieved over a number of periods under normal circumstances, not actual utilization in a depressed period. The 10,000 DLH denominator, set based on the plant's design capacity and historical performance before the customer losses, likely represents normal capacity more accurately than a denominator derived from three years of below-normal production. The persistent unfavorable volume variance is precisely the information that financial statement users need to assess whether capacity underutilization signals asset impairment or declining demand. Eliminating the volume variance by changing the denominator would obscure this signal and potentially inflate inventory values — a direct violation of the GAAP requirement that unallocated overhead (the volume variance) be expensed in the period rather than capitalized through an artificially low denominator. The controller should present this analysis to the CFO framed as a financial reporting integrity issue: the volume variance exists because it should exist. The production manager's concern about performance evaluation can be addressed through a separate internal report that distinguishes idle capacity from controllable production inefficiencies, without changing the GAAP-compliant overhead rate. Business interpretation: the denominator volume serves two purposes — inventory costing for external reporting (which requires normal capacity per GAAP) and performance evaluation (which may benefit from a different baseline). The controller's obligation is to maintain the integrity of the external reporting measure while supporting operational decision-making through separate internal analysis.",
+	"StudyLinks": [
+		{
+		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+		},
+		{
+		    "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+		}
+	],
+	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+	"Part1OnlyFlag": true,
+	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+	"QuestionID": "P1-CC-063",
+	"CalculationItem": false,
+	"VerifiedChecks": [
+		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+		"Original practice item with unique micro-topic and stem",
+		"Answer key distribution balanced across A/B/C/D",
+		"Distractors written as plausible CMA-style traps"
+	],
+	"ExplanationWrongA": "",
+	"ExplanationWrongB": "Revising the denominator to 8,500 DLH would indeed reduce the volume variance to near zero, but it would increase the fixed overhead rate from $12.00 to $14.12 per DLH — adding $2.12 to the cost of every unit produced. For the 8,400 units being produced, this would capitalize an additional $17,808 of fixed overhead into inventory rather than expensing it through the volume variance. Under GAAP, this is impermissible if the 8,500 DLH denominator represents actual utilization rather than normal capacity. The auditor's observation about persistent unfavorable volume variances indicating potential inventory impairment is precisely why the denominator should remain at normal capacity — the variance signals the impairment risk; eliminating it would mask it. A candidate selecting this option may be prioritizing internal performance measurement over GAAP compliance.",
+	"ExplanationWrongC": "Operating dual overhead rates — one for external reporting and one for internal management — introduces reconciliation complexity and audit risk. Every period, management would need to reconcile the two rates and explain the difference to external auditors, who would scrutinize whether the internal rate influenced inventory valuation decisions. While conceptually appealing as a compromise, dual rates create a governance burden: if the internal report becomes the basis for performance bonuses or pricing decisions, the external rate's volume variance becomes disconnected from the operational decisions it is supposed to inform. A candidate selecting this option may be treating the external and internal purposes as separable when in practice they interact.",
+	"ExplanationWrongD": "Splitting the difference at 9,000 DLH has no conceptual basis under either GAAP or management accounting principles. Under GAAP, the denominator should represent normal capacity, not a negotiated midpoint between design capacity and recent actuals. Under management accounting, the denominator should serve a defined decision purpose, not be set by compromise. A 9,000 DLH denominator would still produce a volume variance ($120,000 - 9,000 x ($120,000/9,000) = $0 at exactly 9,000 units, but unfavorable at 8,400), while increasing per-unit cost to $13.33 — partially inflating inventory without eliminating the variance. A candidate selecting this option may be applying a negotiating heuristic rather than an accounting-standard-based rationale.",
+	"question_state": "Certified",
+	"DifficultyScore": 4,
+	"CognitiveLevel": "Evaluate"
+},
     {
         "Part": 1,
         "Section": "C",
