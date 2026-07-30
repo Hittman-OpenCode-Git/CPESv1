@@ -204,7 +204,7 @@ const May = {
         try { localStorage.setItem('cmaMaySelectedLearnerId', savedData.learnerId); } catch (e) {}
         this.context.greetingState = 'READY_TO_TUTOR';
         this._logSessionTelemetry('new_student_created', { learnerId: savedData.learnerId, displayName: trimmed });
-        this._speak(`Nice to meet you, **${trimmed}**! Let me show you around.\n\nI'm your study companion — I track your progress by topic, explain questions from the bank, give you graduated hints, and build targeted review sets.\n\n> ⚠ This is a pre-production pilot environment. Your data is synthetic and stored locally only.\n\nWhat would you like to do first?`);
+        this._speak(`Nice to meet you, **${trimmed}**!\n\nI can explain questions from your practice sessions, give you hints, and help you figure out what to work on next. What would you like to do?`);
         return true;
     },
 
@@ -222,7 +222,7 @@ const May = {
     // Enter the returning-student handshake flow.
     _enterGreetingFlow() {
         this.context.greetingState = 'ASK_RETURNING';
-        this._speak("Welcome back — have we met before?");
+        this._speak("Hi! Have you studied with me before, or is this your first time?");
         this.renderView();
         this._logSessionTelemetry('greeting_flow_started', { state: 'ASK_RETURNING' });
     },
@@ -6434,7 +6434,7 @@ const May = {
             // New student
             heading = 'Hi, I\'m May — your CMA Part 1 study companion';
             text = 'I\'ll help you track progress, understand missed questions, and turn each practice session into a focused review plan.';
-            btnLabel = 'Set up May';
+            btnLabel = 'Meet May';
             btnAction = 'May.openMayFromLauncher()';
         }
 

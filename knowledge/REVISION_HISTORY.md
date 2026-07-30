@@ -18,6 +18,23 @@
 
 **Report:** `reports/SESSION076_QUESTION_RENDERING_FIX.md`
 
+## Session 79 — Wife Testing Readiness + Nightly Handoff — 2026-07-29
+
+**Type:** WRITE (may-core.js, styles.css — Governance Light Lane, polish and stop)
+
+**Objective:** Final pre-testing polish — make the build calm, warm, and ready for a real study session tonight. No new features, no new systems.
+
+**Fixes applied (5, highest-value only):**
+1. Dark mode choice button borders (`#1e293b` → `#374151`) — invisible to visible
+2. May's new-student greeting shortened from 15+ lines to 3-line warm welcome
+3. "Welcome back — have we met before?" → "Hi! Have you studied with me before?"
+4. Defect diagnostics panel collapsed to one-line mini-banner (hover to expand)
+5. "Set up May" → "Meet May" companion card label
+
+**Verification:** `npm run smoke` PASS (10/10), `node --check` PASS (both files)
+
+**Reports:** `reports/SESSION079_LEARNER_READINESS_AUDIT.md`, `reports/SESSION079_FINAL_UI_POLISH.md`, `reports/SESSION079_NIGHTLY_HANDOFF.md`
+
 ## Session 78 — Unify May with Structured Review UX — 2026-07-29
 
 **Type:** WRITE (app.js, may-core.js, styles.css — Governance Light Lane)

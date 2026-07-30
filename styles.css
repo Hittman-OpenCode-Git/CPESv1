@@ -157,6 +157,26 @@ a { color: var(--accent); }
   color: var(--info);
 }
 
+/* S79 — Diagnostics panel: collapsed for learners */
+.diag-panel {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  padding: 4px 12px;
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--border-light);
+  max-height: 22px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: default;
+  transition: max-height 0.3s ease;
+}
+.diag-panel:hover {
+  max-height: 200px;
+  white-space: normal;
+  overflow-y: auto;
+}
+
 /* ===== Header (Exam Bar) ===== */
 .exam-header {
   background: var(--header-bg);
@@ -844,6 +864,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   font-size: 14px;
   white-space: pre-line;
 }
+[data-theme="dark"] .choice { border-color: #374151; }
 .choice:hover {
   background: var(--choice-hover);
   border-color: var(--accent);
