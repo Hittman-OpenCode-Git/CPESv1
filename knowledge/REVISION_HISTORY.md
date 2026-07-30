@@ -1,3 +1,111 @@
+**No pack/case/answer-key/registry/baseline files were modified. Governance boundaries respected.**
+
+## Session 76 — Question Rendering Fix (newline collapse) — 2026-07-29
+
+**Type:** WRITE (app.js, styles.css — Governance Light Lane, sub-task of S76)
+
+**Issue:** Question stems, explanations, and case scenarios authored with embedded `\n` paragraph breaks were being inserted directly into `innerHTML` with zero processing. The browser collapsed all `\n` into spaces (standard HTML whitespace normalization), turning structured multi-paragraph text into jumbled run-on blocks.
+
+**Fix Applied:**
+
+| Layer | Change | Scope |
+|-------|--------|-------|
+| CSS | `white-space: pre-line;` added to `.item-card .stem`, `.explanation`, `.case-passage`, `.feedback p`, `.choice`, `.may-msg-content` | 6 selectors |
+| JS | `nl2br()` helper added at `app.js:52` — converts `\n\n` → `</p><p>`, `\n` → `<br>`; skips already-HTML text | 1 function |
+| JS | Applied `nl2br()` to 8 rendering sites: MCQ stems, scenario text (2 sites), case item prompts (4 types), review explanations | 8 call sites |
+
+**Verification:** `node --check app.js` PASS, `npm run smoke` PASS (10/10).
+
+**Report:** `reports/SESSION076_QUESTION_RENDERING_FIX.md`
+
+## Session 78 — Unify May with Structured Review UX — 2026-07-29
+
+**Type:** WRITE (app.js, may-core.js, styles.css — Governance Light Lane)
+
+**Objective:** Make May and the review experience feel like one premium tutoring product by bridging the two systems and using shared section vocabulary.
+
+**Outcome:** COMPLETE — review cards now have May bridge buttons; May uses the review's structured explanation model conversationally.
+
+### Changes
+
+| File | Key Additions |
+|------|--------------|
+| `app.js` | "Discuss with May" / "What went wrong?" / "Try a similar one" bridge buttons in every review card; collapsible distractor section; each button calls `May.setReviewContext()` before opening May tab |
+| `may-core.js` | `setReviewContext(qid, studentLetter, correctLetter, isCorrect)` — finds question and stores answer context; `_discussFromReview()` — conversational coaching using shared section vocabulary |
+| `styles.css` | `.review-may-bridge` flex row; `.may-bridge-btn` styled bridge buttons; `.may-bridge-hint` secondary variant; `.review-section-collapsible` toggle behavior; dark theme variants |
+
+### Verification
+- `node --check app.js` + `node --check may-core.js` — PASS
+- `npm run smoke` — PASS (10/10)
+
+**Report:** `reports/SESSION078_MAY_REVIEW_UNIFICATION.md`
+
+## Session 77 — Review Mode Explanation UX Polish — 2026-07-29
+
+**Type:** WRITE (app.js, styles.css — Governance Light Lane)
+
+**Objective:** Upgrade the post-question review experience from dense explanation blocks into structured, scannable review cards with visual separation between what was tested, why the correct answer wins, why the student's answer was wrong, distractor analysis, and exam takeaways.
+
+**Outcome:** COMPLETE — all review cards now render structured breakdowns.
+
+### Changes
+
+| File | Lines Changed | Key Additions |
+|------|-------------|---------------|
+| `app.js` | ~80 lines | `extractExplanationSections()` heuristic parser; restructured `AdaptiveReviewQueue.render()` with 5-section breakdown; ExplanationWrong field rendering (first time distractor explanations appear in review); student-specific wrong-answer explanation |
+| `styles.css` | ~100 lines | `.review-stem`, `.review-answers`, `.review-answer-row` (colored), `.review-breakdown`, `.review-section` (card), `.review-section-label` (header bar), `.review-section-body`, `.review-distractors`, `.review-distractor-item`, color-coded labels, dark theme variants |
+
+### New Review Card Structure
+1. **What was tested** — extracted first sentence naming ASC/IFRS/COSO/GAAP
+2. **Why the correct answer wins** — core explanation
+3. **Why your answer was wrong** — ExplanationWrong for the student's selected choice
+4. **All wrong choices explained** — all non-correct ExplanationWrong fields
+5. **Exam takeaway** — extracted last sentence with "common error"/"exam tip"/"key takeaway"
+
+### Verification
+- `node --check app.js` — PASS
+- `npm run smoke` — PASS (10/10)
+- Governance guard: not in scope (Light Lane, no content/certification changes)
+
+**Report:** `reports/SESSION077_REVIEW_EXPLANATION_UX.md`
+
+## Session 76 — May Coaching UX Review & Conversational Polish & Question Rendering Fix — 2026-07-29
+
+**Type:** WRITE (may-core.js, styles.css — Governance Light Lane)
+
+**Objective:** Improve the May coaching tab from a static response bot into a student-facing CMA study coach, fix layout so the input is always visible, add dynamic prompt suggestions, and polish the visual experience to feel premium and commercial-grade.
+
+**Outcome:** COMPLETE — all objectives met.
+
+### Files Modified
+| File | Changes |
+|------|---------|
+| `may-core.js` | ~160 lines added/modified: Socratic follow-up (`_socraticFollowUp`), next-step coaching (`_appendNextStep`), dynamic chips (`_buildSuggestionChips`), intelligent scroll (`_updateScrollButton`), input preservation, context-aware fallback, quiz-me pattern, direct-answer redirection, misconception diagnosis, improved empty state with capability prompts, class-name typo fix (`may-blocked-goodluck` → `may-preexam-goodluck`) |
+| `styles.css` | ~60 lines added/modified: sticky input area, scroll-to-bottom button, sidebar collapse, `:focus-visible` on all interactive elements, word-break on messages, touch-target padding increase, `.may-action-primary` highlighted chip, `.may-capability-prompts` empty-state styling, container height `100%` |
+
+### Key New Methods
+| Method | Purpose |
+|--------|---------|
+| `_socraticFollowUp(q)` | Generates randomized Socratic follow-up after explanations |
+| `_appendNextStep(q)` | Suggests next study action after major responses |
+| `_buildSuggestionChips(hasQ, hasHist, q)` | Builds context-aware dynamic prompt chips |
+| `_updateScrollButton(chat)` | Shows/hides scroll-to-bottom floating button |
+
+### Verification
+- `node --check may-core.js` — PASS (no syntax errors)
+- `npm run smoke` — PASS (all 10 checks, May coaching panel active, zero errors)
+- Governance guard: not in scope (Light Lane, no pack/case/answer-key changes)
+- Preflight: 2 known divergences (Pack E +35 QIDs, Certified +35 vs baseline) — unchanged
+
+### Reports Delivered
+| Report | Path |
+|--------|------|
+| UI Audit | `reports/SESSION076_MAY_UI_AUDIT.json` |
+| Conversation Design Audit | `reports/SESSION076_CONVERSATION_DESIGN_AUDIT.md` |
+| Layout Changelog | `reports/SESSION076_MAY_LAYOUT_CHANGELOG.md` |
+| Prompt Suggestions | `reports/SESSION076_MAY_PROMPT_SUGGESTIONS.md` |
+| Accessibility/Mobile | `reports/SESSION076_ACCESSIBILITY_MOBILE_CHECK.md` |
+
 ## Session 73 — Section B Cognitive Upgrade Campaign, Wave 3 — 2026-07-29
 
 **Type:** WRITE (pack_d_corrected.js — 15 Section B items)
@@ -27616,6 +27724,110 @@ Wave 4 of the Pack D Section B cognitive upgrade campaign. 15 items upgraded fro
 
 ### Advice for S75
 Continue Pack D Section B. 31 low-order items remain (22 Apply + 9 Understand). Two more 15-item waves (S75, S76) would complete the section at ~99% higher-order. Pack D Section B has proven the highest-ROI rewrite pool in the repository across 5 consecutive waves.
+
+---
+
+## Session 75 — 2026-07-29 — Pack D Section B Cognitive Upgrade Wave 5
+
+### T0 State
+- Preflight: Pack D QID count 500, parse OK, Certified 456
+- Governance guard: 54/54 PASS
+- Pre-existing divergences classified (Pack E QID 545 vs 540, Certified delta +35)
+- Section B pre-S75: 69.0% higher-order (40 Evaluate + 29 Analyze)
+- Low-order: 31 items (22 Apply + 9 Understand)
+
+### Rewrite Batch Summary
+15 Pack D Section B items rewritten across 3 batches of 5:
+
+| Batch | QIDs | Cognitive Targets |
+|-------|------|-------------------|
+| 1 | BD-009(E), BD-075(E), BD-097(E), BD-010(A), BD-011(A) | 3E + 2A |
+| 2 | BD-018(E), BD-067(E), BD-098(E), BD-040(A), BD-068(A) | 3E + 2A |
+| 3 | BD-019(E), BD-099(E), BD-012(A), BD-052(A), BD-053(A) | 2E + 3A |
+
+### Evaluate Items (8)
+P1-BD-009: ZBB transition scalability assessment (Recommend) — Stonewell/CFO Diana Park
+P1-BD-075: Forecast method selection using error metrics (Recommend) — Alderway/Demand Planning Manager Thomas Reid
+P1-BD-097: Strategic vs operational budget conflict resolution (Justify) — Whitmore/CEO Marianne Holt
+P1-BD-018: Capital budget make-vs-buy recommendation (Recommend) — Redcliff/CFO Michael Torres
+P1-BD-067: S&A expense reduction recommendation (Recommend) — Elmsworth/Controller Lisa Tran
+P1-BD-098: Strategic resource allocation conflict (Assess) — Yewbrook/VP Carla Mendez
+P1-BD-019: Capital budget competing proposal prioritization (Prioritize) — Stonewell/CFO Diana Park
+P1-BD-099: Investment sequencing under uncertainty (Prioritize) — Zionsgate/CFO Anita Desai
+
+### Analyze Items (7)
+P1-BD-010: Incremental budgeting cost persistence analysis — Juniperfield/Controller Nathan Cole
+P1-BD-011: Incremental budgeting use-it-or-lose-it behavioral analysis — Kelso/Budget Director Priya Sharma
+P1-BD-040: Operating vs financial budget interconnected analysis — Orchardgate/CFO David Chen
+P1-BD-068: S&A cost behavior classification from quarterly data — Somerdale/Budget Analyst Priya Mehta
+P1-BD-012: Incremental budgeting structural gap diagnosis — Lockhaven/Controller Anna Vasquez
+P1-BD-052: Direct materials purchase quantity with volume discount — Redcliff/Purchasing Manager James Wu
+P1-BD-053: Direct materials constrained supplier allocation — Duskgrove/Production Manager Elena Rossi
+
+### Difficulty Distribution
+- Difficult (4): 11 items
+- Very Difficult (5): 4 items (BD-097, BD-018, BD-098, BD-099)
+- Target: Difficult >= 12, Very Difficult >= 3 — MET
+
+### Governance Checks (Per Batch + Final)
+- Governance guard: 54/54 PASS (all 3 batches)
+- DL-008: 0 (all CorrectChoice slots verified empty)
+- DL-026: 0 (all distractor slots verified populated)
+- DL-030: 0 (no answer-key changes; CorrectChoice values independently verified)
+- DL-037: 0 (no binary lead-in polarity mismatches)
+- Pack D parse: PASS (500 items)
+- QID count: 500 stable
+- Certified: 456 stable
+
+### Pipeline
+- npm run pipeline executed at Tend
+- 163 errors / 2229 warnings — all pre-existing across all packs, none introduced by S75 changes
+
+### Post-Session State
+- Evaluate: 48 (+8)
+- Analyze: 36 (+7)
+- Understand: 8 (-1)
+- Apply: 8 (-14)
+- Higher-order: 84.0% (was 69.0%, +15.0pp)
+
+### Campaign Trajectory
+```
+Pre-S70:    4.0%
+Post-S70:  19.0%
+Post-S71:  24.0%
+Post-S72:  39.0%
+Post-S73:  54.0%
+Post-S74:  69.0%
+Post-S75:  84.0%
+```
+
+### Methodological Notes
+- Batch 1 had 4 DL-008 violations on first write — Object.assign preserved old EW[CC] values when CC changed. Fixed by delete-then-clear pattern in applyRewrite function.
+- BD-099 ExplanationWrongA was mis-specified as distractor text with CC=A. Fixed before Batch 3 execution.
+- Round-trip JSON serialization proved reliable (500 items parse clean after each write cycle).
+- All 15 items carry question_state: "Certified" (unchanged from pre-rewrite state).
+
+### Backups
+- `backups/pack_d_corrected.js.bak-20260729185039` (2,361,796 bytes)
+
+### Files Changed
+- `pack_d_corrected.js`: 15 items rewritten (stems, choices, explanations, cognitive levels, difficulty)
+- `knowledge/REVISION_HISTORY.md`: This entry appended
+- `reports/SESSION075_REWRITE_QUEUE.json`: Candidate selection
+- `reports/SESSION075_REWRITE_RESULTS.json`: Rewrite results
+- `reports/SESSION075_QUALITY_IMPROVEMENT_REPORT.md`: 15/15 Improvement
+- `reports/SESSION075_EVALUATE_GROWTH_REPORT.md`: 8/8 Evaluate validated
+- `reports/SESSION075_GOVERNANCE_REPORT.json`: Governance checks
+- `reports/SESSION075_CAMPAIGN_STATUS.json`: Campaign trajectory
+- `reports/SESSION075_THROUGHPUT_REPORT.json`: Throughput metrics
+
+### Commands Run
+- `npm run preflight` (T0)
+- `node scripts/test_governance_guard.js` (each batch + final)
+- `npm run pipeline` (Tend)
+
+### Advice for S76
+Complete Pack D Section B with final 16 low-order items (8 Apply + 8 Understand). One 15-item session would bring Section B to ~99% higher-order. After S76, move campaign to Pack A Section B (next highest-ROI pool). Pack D Section B is the blueprint for the cognitive upgrade methodology — six consecutive waves with zero regressions.
 
 ---
 

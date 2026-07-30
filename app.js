@@ -48,6 +48,75 @@ const STUDY_LINKS = {
 const DECIMAL_PRECISION = 10000000000;
 const round10 = v => Math.round(v * DECIMAL_PRECISION) / DECIMAL_PRECISION;
 const CHOICES = ['A', 'B', 'C', 'D'];
+
+function nl2br(text) {
+    if (!text || typeof text !== 'string') return text || '';
+    if (/<[a-z][\s\S]*>/i.test(text)) return text;
+    let html = text.replace(/\n\n+/g, '</p><p>');
+    html = html.replace(/\n/g, '<br>');
+    return '<p>' + html + '</p>';
+}
+
+// S77 — Extract structured sections from a single ExplanationCorrect block
+function extractExplanationSections(rawText, topic) {
+    if (!rawText) return { tested: '', correct: '', takeaway: '' };
+    let text = rawText.trim();
+    let result = { tested: '', correct: '', takeaway: '' };
+
+    // Heuristic 1: "What was tested" — first sentence that names a standard/framework
+    let testedMatch = text.match(/^(.+?(?:under\s+(?:ASC|IFRS|COSO|GAAP|IAS|IIA|IMA)|tests\s+(?:the|a)\s|covers\s+(?:the|a)\s|assesses\s+(?:the|a)\s).+?[.!?])\s/i);
+    if (testedMatch) {
+        result.tested = testedMatch[1];
+        text = text.substring(testedMatch[0].length).trim();
+    } else {
+        // Fallback: first sentence
+        let firstDot = text.indexOf('.');
+        if (firstDot > 20 && firstDot < 250) {
+            result.tested = text.substring(0, firstDot + 1);
+            text = text.substring(firstDot + 1).trim();
+        }
+    }
+
+    // Heuristic 2: "Takeaway" — last section mentioning "common error", "trap", "remember", "key", "exam"
+    let takeawayPatterns = [
+        /(?:A common error|common trap|key takeaway|remember that|on the exam|exam tip|watch (?:out )?for)[^.]*\.[^.]*\.?/gi,
+        /(?:The key|In summary|Bottom line)[^.]*\.[^.]*\.?/gi
+    ];
+    for (let pat of takeawayPatterns) {
+        let m = text.match(pat);
+        if (m) {
+            let takeawayText = m[m.length - 1];
+            let idx = text.lastIndexOf(takeawayText);
+            if (idx > text.length * 0.5) {
+                result.takeaway = takeawayText.trim();
+                text = text.substring(0, idx).trim();
+                break;
+            }
+        }
+    }
+
+    // If no takeaway found, use the last sentence if it's short and "punchy"
+    if (!result.takeaway && text.length > 100) {
+        let sentences = text.match(/[^.!?]+[.!?]+/g);
+        if (sentences && sentences.length > 1) {
+            let last = sentences[sentences.length - 1].trim();
+            if (last.length < 200 && last.length > 20) {
+                result.takeaway = last;
+                text = text.substring(0, text.lastIndexOf(last)).trim();
+            }
+        }
+    }
+
+    // Heuristic 3: "Why correct" — the remaining core explanation
+    result.correct = text || '';
+
+    // If nothing was extracted, put the whole thing in correct
+    if (!result.tested && !result.takeaway) {
+        result.correct = rawText.trim();
+    }
+
+    return result;
+}
 const EXAM_MODES = ['full', 'practice', 'custom', 'blueprint', 'random'];
 const TIMER_WARNINGS = [1800, 600, 300]; // 30min, 10min, 5min in seconds
 const AUTO_SAVE_INTERVAL = 5000; // 5 seconds
@@ -1631,7 +1700,7 @@ const ExamSessionManager = {
                 <span class="pill">${q.Difficulty || ''}</span>
                 <span class="pill">Original CMA practice</span>
               </div>
-              <h2>${q.Stem}</h2>
+              <h2>${nl2br(q.Stem)}</h2>
               <div class="choices" role="radiogroup" aria-label="Answer choices">${CHOICES.map(c =>
                     `<button class="choice ${sel === c ? 'selected' : ''}" data-choice="${c}" role="radio" aria-checked="${sel === c}" tabindex="0"><span class="letter">${c}</span><span>${q.Choices[c]}</span></button>`
                 ).join('')}</div>
@@ -1772,7 +1841,7 @@ const ExamSessionManager = {
             ${s.mode !== 'full' && $('realConditions')?.checked ? '<div class="exam-notice">Simulate Real Exam Conditions is active. Pause is disabled. Timer runs continuously.</div>' : ''}
             <h2>${c.Title}</h2>
             <div class="meta-row">${c.SectionTags.map(x => `<span class="pill">Section ${x}</span>`).join('')}<span class="pill">Exhibit-based case simulation</span></div>
-            <p>${c.ScenarioText}</p>
+            <p>${nl2br(c.ScenarioText)}</p>
             ${this.caseExhibitsHtml(c)}
             <p class="small">Case-based practice uses original integrated item sets.</p>
           </section>
@@ -1831,7 +1900,7 @@ const ExamSessionManager = {
               </div>
             </div>
             <h2>${c.Title}</h2>
-            <p>${c.ScenarioText}</p>
+            <p>${nl2br(c.ScenarioText)}</p>
             <div class="exhibit-tabs">${(c.Exhibits || []).map((ex, i) => `<button class="exhibit-tab ${i === exhibitIndex ? 'active' : ''}" data-exhibit="${i}">${ex.Title}</button>`).join('')}</div>
             ${exhibitHtml}
           </section>
@@ -1865,10 +1934,10 @@ const ExamSessionManager = {
         let isFlagged = state.session.caseFlags[key];
         let flagHtml = `<label class="flag"><input type="checkbox" data-caseflag="${key}" ${isFlagged ? 'checked' : ''}> Mark for review</label>`;
         if (it.Type === 'numeric' || it.Type === 'fill') {
-            return `<div class="case-question"><b>${idx + 1}. ${it.Prompt}</b><input class="case-input" data-casekey="${key}" value="${saved || ''}" inputmode="${it.Type === 'numeric' ? 'decimal' : 'text'}">${flagHtml}</div>`;
+            return `<div class="case-question"><b>${idx + 1}. ${nl2br(it.Prompt)}</b><input class="case-input" data-casekey="${key}" value="${saved || ''}" inputmode="${it.Type === 'numeric' ? 'decimal' : 'text'}">${flagHtml}</div>`;
         }
         if (it.Type === 'multi') {
-            return `<div class="case-question"><b>${idx + 1}. ${it.Prompt}</b>${it.Choices.map(ch =>
+            return `<div class="case-question"><b>${idx + 1}. ${nl2br(it.Prompt)}</b>${it.Choices.map(ch =>
                 `<label class="case-option"><input type="checkbox" data-casekey="${key}" value="${ch}" ${(saved || []).includes(ch) ? 'checked' : ''}> ${ch}</label>`
             ).join('')}${flagHtml}</div>`;
         }
@@ -1880,9 +1949,9 @@ const ExamSessionManager = {
                 let options = ['<option value="">-- select --</option>'].concat(rightPool.map(r => `<option value="${r}" ${sel === r ? 'selected' : ''}>${r}</option>`));
                 return `<div class="match-row"><span class="match-left">${left}</span><select class="match-select" data-casekey="${key}" data-matchleft="${left}">${options.join('')}</select></div>`;
             });
-            return `<div class="case-question match-question"><b>${idx + 1}. ${it.Prompt}</b><div class="match-grid">${rows.join('')}</div>${flagHtml}</div>`;
+            return `<div class="case-question match-question"><b>${idx + 1}. ${nl2br(it.Prompt)}</b><div class="match-grid">${rows.join('')}</div>${flagHtml}</div>`;
         }
-        return `<div class="case-question"><b>${idx + 1}. ${it.Prompt}</b>${it.Choices.map(ch =>
+        return `<div class="case-question"><b>${idx + 1}. ${nl2br(it.Prompt)}</b>${it.Choices.map(ch =>
             `<label class="case-option"><input type="radio" name="${key}" data-casekey="${key}" value="${ch}" ${saved === ch ? 'checked' : ''}> ${ch}</label>`
         ).join('')}${flagHtml}</div>`;
     },
@@ -2315,8 +2384,12 @@ const AdaptiveReviewQueue = {
             let isCorrect = item.correct;
             let ansDisplay = '';
             let correctDisplay = '';
+            let studentChoiceLetter = '';
+            let correctLetter = '';
 
             if (item.type === 'mcq') {
+                studentChoiceLetter = item.ans || '';
+                correctLetter = q.CorrectChoice || '';
                 ansDisplay = item.ans ? item.ans + '. ' + (q.Choices ? q.Choices[item.ans] : '') : 'No answer';
                 correctDisplay = q.CorrectChoice + '. ' + (q.Choices ? q.Choices[q.CorrectChoice] : '');
             } else {
@@ -2328,12 +2401,40 @@ const AdaptiveReviewQueue = {
                     correctDisplay = Array.isArray(q.Correct) ? q.Correct.join('; ') : q.Correct;
                 } else {
                     ansDisplay = item.ans || 'No response';
-                    correctDisplay = q.Correct;
+                    correctDisplay = q.Correct || '';
                 }
             }
 
             let priorityLabel = item.score >= 5 ? 'High' : item.score >= 3 ? 'Medium' : 'Low';
             let studyLinks = q.StudyLinks || STUDY_LINKS[q.Topic] || STUDY_LINKS['Case-based practice'] || [];
+
+            // S77 — Build structured review breakdown from explanation + wrong-choice data
+            let explRaw = q.Explanation || q.ExplanationCorrect || '';
+            let sections = extractExplanationSections(explRaw, item.topic);
+
+            // Build distractor analysis (why each wrong answer is wrong)
+            let distractorHtml = '';
+            if (item.type === 'mcq' && q.Choices) {
+                let wrongLetters = ['A','B','C','D'].filter(l => l !== correctLetter);
+                let distractorParts = wrongLetters.map(l => {
+                    let ewKey = 'ExplanationWrong' + l;
+                    let ewText = q[ewKey] || '';
+                    if (ewText && ewText.trim()) {
+                        return `<div class="review-distractor-item"><strong>${l}.</strong> ${nl2br(ewText)}</div>`;
+                    }
+                    return '';
+                }).filter(Boolean);
+                if (distractorParts.length) {
+                    distractorHtml = `<div class="review-distractors">${distractorParts.join('')}</div>`;
+                }
+            }
+
+            // Get the ExplanationWrong text for the student's wrong answer specifically
+            let yourWrongExplanation = '';
+            if (!isCorrect && item.type === 'mcq' && studentChoiceLetter) {
+                let ewKey = 'ExplanationWrong' + studentChoiceLetter;
+                yourWrongExplanation = q[ewKey] || '';
+            }
 
             return `<div class="feedback ${isCorrect ? 'good' : 'bad'} ${item.flagged ? 'marked' : ''}" data-priority="${item.score}">
           <div class="feedback-header">
@@ -2341,12 +2442,55 @@ const AdaptiveReviewQueue = {
             <span class="feedback-id">${item.questionID}</span>
             <span>${item.section} | ${item.topic}</span>
           </div>
-          <p>${q.Prompt || q.Stem || ''}</p>
-          <p><b>Your answer:</b> ${ansDisplay}</p>
-          <p><b>Correct answer:</b> ${correctDisplay}</p>
-          ${q.Explanation || q.ExplanationCorrect ? `<div class="explanation"><b>Explanation:</b> ${q.Explanation || q.ExplanationCorrect}</div>` : ''}
-          ${item.confidence ? `<p><b>Confidence:</b> ${item.confidence}/5 ${item.guessed ? '(Guessed)' : ''}</p>` : ''}
+
+          <div class="review-stem">${nl2br(q.Prompt || q.Stem || '')}</div>
+
+          <div class="review-answers">
+            <div class="review-answer-row ${isCorrect ? 'was-correct' : 'was-wrong'}">
+              <span class="review-answer-label">Your answer</span>
+              <span>${ansDisplay}</span>
+            </div>
+            ${!isCorrect ? `<div class="review-answer-row was-correct">
+              <span class="review-answer-label">Correct answer</span>
+              <span>${correctDisplay}</span>
+            </div>` : ''}
+          </div>
+
+          <div class="review-breakdown">
+            ${sections.tested ? `<div class="review-section review-tested">
+              <div class="review-section-label">What was tested</div>
+              <div class="review-section-body">${sections.tested}</div>
+            </div>` : ''}
+
+            ${sections.correct ? `<div class="review-section review-why-correct">
+              <div class="review-section-label">${isCorrect ? 'Why this is correct' : 'Why the correct answer wins'}</div>
+              <div class="review-section-body">${sections.correct}</div>
+            </div>` : ''}
+
+            ${!isCorrect && yourWrongExplanation ? `<div class="review-section review-why-wrong">
+              <div class="review-section-label">Why your answer was wrong</div>
+              <div class="review-section-body">${nl2br(yourWrongExplanation)}</div>
+            </div>` : ''}
+
+            ${distractorHtml ? `<div class="review-section review-section-collapsible collapsed">
+              <div class="review-section-label" onclick="this.parentElement.classList.toggle('collapsed')">All wrong choices explained</div>
+              <div class="review-section-body">${distractorHtml}</div>
+            </div>` : ''}
+
+            ${sections.takeaway ? `<div class="review-section review-takeaway">
+              <div class="review-section-label">Exam takeaway</div>
+              <div class="review-section-body">${sections.takeaway}</div>
+            </div>` : ''}
+          </div>
+
+          ${item.confidence ? `<p style="font-size:0.78rem;color:var(--text-muted);margin-top:4px;"><b>Confidence:</b> ${item.confidence}/5 ${item.guessed ? '(Guessed)' : ''}</p>` : ''}
           ${studyLinks.length ? `<div class="remediate"><b>Study:</b> ${studyLinks.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('')}</div>` : ''}
+
+          <div class="review-may-bridge">
+            <button class="may-bridge-btn" onclick="document.querySelector('[data-view=\\'coachView\\']').click();May.setReviewContext(${JSON.stringify(item.questionID)},'${studentChoiceLetter}','${correctLetter}',${isCorrect});May._discussFromReview();" title="Open May coaching for this question">Discuss with May</button>
+            ${!isCorrect ? `<button class="may-bridge-btn may-bridge-hint" onclick="document.querySelector('[data-view=\\'coachView\\']').click();May.setReviewContext(${JSON.stringify(item.questionID)},'${studentChoiceLetter}','${correctLetter}',${isCorrect});May.handleAction('mymistake');" title="Ask May what went wrong">What went wrong?</button>` : ''}
+            <button class="may-bridge-btn may-bridge-hint" onclick="document.querySelector('[data-view=\\'coachView\\']').click();May.setReviewContext(${JSON.stringify(item.questionID)},'${studentChoiceLetter}','${correctLetter}',${isCorrect});May.handleAction('similar');" title="Ask May for a similar question">Try a similar one</button>
+          </div>
         </div>`;
         }).join('');
 

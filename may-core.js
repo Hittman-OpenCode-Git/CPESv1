@@ -1067,7 +1067,26 @@ const May = {
                 }
                 break;
             default:
-                this._speak("I'm not sure about that one. Try one of the quick actions below, or ask me something specific about this question.");
+                // S76 — Context-aware fallback
+                let hasQ = !!this.context.currentQuestion;
+                let qForFallback = this.context.currentQuestion;
+                let hasHistory = this.context.chatHistory && this.context.chatHistory.length > 0;
+                let hints = [];
+                if (hasQ && qForFallback) {
+                    hints.push('"explain the answer"');
+                    hints.push('"give me a hint"');
+                    hints.push('"why is my answer wrong?"');
+                }
+                if (hasHistory) {
+                    hints.push('"what should I study next?"');
+                    hints.push('"summarize my progress"');
+                }
+                if (hints.length > 0) {
+                    let suggestionList = hints.slice(0, 4).map(h => '• ' + h).join('\n');
+                    this._speak('I want to help — here are some things I can do right now:\n\n' + suggestionList + '\n\nTry one of those, or ask me something specific about this question.');
+                } else {
+                    this._speak('I\'m not sure I understood. Try asking me to "explain the answer," "give me a hint," or "summarize my progress."');
+                }
         }
 
         this.renderView();
@@ -1803,12 +1822,69 @@ const May = {
         // S125 — Append suggested focus areas
         lines = this._appendFocusAreas(lines, q, { selectedChoice: selectedChoice });
 
+        // S76 — Add Socratic follow-up on first explanation of this QID
+        let socraticAdded = false;
+        if (q && q.QuestionID) {
+            this._explainedQIDs = this._explainedQIDs || new Set();
+            if (!this._explainedQIDs.has(q.QuestionID)) {
+                this._explainedQIDs.add(q.QuestionID);
+                let followUp = this._socraticFollowUp(q);
+                if (followUp) { lines.push('\n---\n*' + followUp + '*'); socraticAdded = true; }
+            }
+        }
+
         // S111 — Pilot path: guarded speak for safety checking
         if (this.isPilotEnvironment()) {
             this._guardedSpeak(lines, 'explain');
         } else {
             this._speak(lines.join('\n'));
         }
+
+        // S76 — If not first explanation, suggest next step
+        if (!socraticAdded) {
+            this._appendNextStep(q);
+        }
+    },
+
+    // S76 — Generate a Socratic follow-up question after explanations
+    _socraticFollowUp(q) {
+        if (!q) return null;
+        let topic = MayLearnerState._normalizeTopic(q.Topic || '');
+        let section = q.Section || '';
+
+        let prompts = [
+            'What if the question asked for the opposite — how would your approach change?',
+            'Can you explain in your own words why the correct answer works but the most tempting wrong answer doesn\'t?',
+            'If you saw a similar question on the exam, what\'s the first thing you\'d check?',
+            'What concept from Section ' + section + ' does this question rely on most heavily?'
+        ];
+
+        if (topic.toLowerCase().includes('variance')) {
+            prompts.push('Which variance formula would you use if the actual quantity was higher instead of lower?');
+        } else if (topic.toLowerCase().includes('cash') || topic.toLowerCase().includes('budget')) {
+            prompts.push('What would happen to the cash position if collections slowed by one week?');
+        } else if (topic.toLowerCase().includes('control') || topic.toLowerCase().includes('coso')) {
+            prompts.push('Which COSO component would be most impacted if this control failed?');
+        } else if (topic.toLowerCase().includes('cost') || topic.toLowerCase().includes('overhead')) {
+            prompts.push('Would your answer change if the company used activity-based costing instead?');
+        }
+
+        return prompts[Math.floor(Math.random() * prompts.length)];
+    },
+
+    // S76 — Suggest what to do after a major response
+    _appendNextStep(q) {
+        if (!q) return;
+        let suggestions = [];
+        if (q.Choices && q.CorrectChoice) {
+            suggestions.push('Ask me to **explain the wrong choices**');
+        }
+        suggestions.push('Try a **similar question** on this topic');
+        let topic = MayLearnerState._normalizeTopic(q.Topic || 'this topic');
+        suggestions.push('Ask me to **quiz you** on ' + topic);
+
+        let pick = suggestions[Math.floor(Math.random() * 2)];
+        this._speak('\n**What\'s next?** ' + pick + '.');
     },
 
     // ============================================================
@@ -2092,6 +2168,20 @@ const May = {
             parts.push('**Pulling it together:** Each wrong option teaches you something about the boundary of the correct concept. Understanding *why each option is wrong* is often deeper reinforcement than reviewing the right answer alone. If you want me to walk through the correct answer, just ask me to **Explain**.');
         }
 
+        // S76 — Misconception summary
+        if (coaching && coaching.topic) {
+            let cc = q.CorrectChoice;
+            let correctText = (q.Choices && q.Choices[cc]) ? q.Choices[cc] : '';
+            let wrongChoices = coaching.choices || [];
+            let mostTempting = null;
+            if (wrongChoices.length > 0) {
+                mostTempting = wrongChoices[0].choiceText;
+            }
+            if (mostTempting && correctText) {
+                parts.push('\n**The most common trap here:** Candidates often confuse ' + coaching.topic + ' concepts — specifically ' + mostTempting.substring(0, 60) + '. The key distinction is whether you\'re looking at the core definition or a related-but-separate rule.');
+            }
+        }
+
         // S123 — Append next best step action plan
         parts = this._appendNextBestStep(parts, q, { selectedChoice: selectedChoice });
 
@@ -2106,6 +2196,9 @@ const May = {
         } else {
             this._speak(parts.join('\n'));
         }
+
+        // S76 — Suggest next step
+        this._appendNextStep(q);
     },
 
     // ============================================================
@@ -2175,6 +2268,18 @@ const May = {
                 hint = "Let me walk you through the full reasoning.";
         }
 
+        // S76 — For the FIRST hint on a question, prepend a Socratic question
+        if (level === 0 && q.QuestionID) {
+            this._hintCountPerQID = this._hintCountPerQID || {};
+            this._hintCountPerQID[q.QuestionID] = (this._hintCountPerQID[q.QuestionID] || 0) + 1;
+            if (this._hintCountPerQID[q.QuestionID] === 1) {
+                let socraticQ = this._socraticFollowUp(q);
+                if (socraticQ) {
+                    hint = '**Think about this first:** ' + socraticQ + '\n\n' + hint;
+                }
+            }
+        }
+
         this.context.hintLevel++;
         this.context._liveHintCount = (this.context._liveHintCount || 0) + 1;
         if (q.QuestionID) {
@@ -2188,6 +2293,9 @@ const May = {
         } else {
             this._speak(mcqHintText);
         }
+
+        // S76 — Suggest next step after hint
+        this._appendNextStep(q);
     },
 
     _metacognitiveHint(q, topic, diff) {
@@ -3991,6 +4099,35 @@ const May = {
             return;
         }
 
+        // S76 — Direct "give me the answer" requests — redirect to Socratic mode
+        let qForAnswer = this.context.currentQuestion;
+        if (/^(what('s| is) the answer|tell me the answer|just give me the answer|which (one |)is (right|correct))/i.test(lower)) {
+            if (qForAnswer) {
+                this._speak("I can help you figure it out! First — what's your instinct? Which answer looks right to you, and why?");
+                this._addMessage('may', "Once you share your thinking, I'll walk you through the reasoning step by step.");
+                return;
+            } else {
+                this._speak("I don't have a question loaded yet. Start a review from a practice session, and I'll help you work through it.");
+                return;
+            }
+        }
+
+        // S76 — Quiz me
+        if (/\bquiz\b/i.test(lower)) {
+            let qForQuiz = this.context.currentQuestion;
+            if (!qForQuiz) { this._speak("I need a question loaded first. Start a review from a practice session."); return; }
+            let topic = MayLearnerState._normalizeTopic(qForQuiz.Topic || '');
+            let questions = [
+                'What\'s the key accounting principle this question tests?',
+                'If the numbers in the question doubled, would the answer double too? Why or why not?',
+                'What\'s the most common mistake candidates make on ' + topic + ' questions?',
+                'How would you explain this concept to someone who\'s never studied accounting?'
+            ];
+            let quizQ = questions[Math.floor(Math.random() * questions.length)];
+            this._speak('Let\'s test your understanding!\n\n**' + quizQ + '**\n\nTake your time — I\'ll follow up after you answer.');
+            return;
+        }
+
         // Pattern-match common requests
         if (lower.includes('explain') && (lower.includes('answer') || lower.includes('correct') || lower.includes('why'))) {
             this._explainAnswer();
@@ -4260,6 +4397,10 @@ const May = {
         let el = document.getElementById('coachView');
         if (!el) return;
 
+        let pendingInput = '';
+        let inpEl = document.getElementById('mayChatInput');
+        if (inpEl) pendingInput = inpEl.value;
+
         // ── G6: Block full May tab during active CMA Exam mode ──
         if (this.isFullTabBlocked()) {
             let profile = MayLearnerState.getUserProfile();
@@ -4284,7 +4425,7 @@ const May = {
                         <p class="may-preexam-actions">
                             <button class="may-action-btn" onclick="May.preExamBriefing()">Exam format & briefing</button>
                         </p>
-                        <p class="may-blocked-goodluck">Good luck${name ? ', ' + name : ''} — you've prepared for this.</p>
+                        <p class="may-preexam-goodluck">Good luck${name ? ', ' + name : ''} — you've prepared for this.</p>
                     </div>
                 </div>
             </div>`;
@@ -4354,7 +4495,14 @@ const May = {
                         <div class="may-onboarding-avatar">M</div>
                         <h2>Hi, I'm May</h2>
                         <p class="may-onboarding-subtitle">Your CMA Part 1 study companion</p>
-                        <p>I'll help you track your progress, understand missed questions, and turn each practice session into a focused review plan.</p>
+                        <p>I can explain questions from your practice sessions, give you graduated hints, and help you figure out what to work on next.</p>
+                        <div class="may-capability-prompts">
+                            <span>Try asking:</span>
+                            <span class="may-capability-chip">Explain the answer</span>
+                            <span class="may-capability-chip">Give me a hint</span>
+                            <span class="may-capability-chip">What should I study next?</span>
+                            <span class="may-capability-chip">Quiz me</span>
+                        </div>
                         <p><strong>What's your name?</strong> I'll track your progress across sessions.</p>
                     </div>
                 </div>`;
@@ -4527,25 +4675,15 @@ const May = {
             <div class="may-main">
                 ${contextHtml}
 
-                <div class="may-chat" id="mayChatScroll">
+                <div class="may-chat" id="mayChatScroll" onscroll="May._updateScrollButton(this)">
                     ${chatHtml}
                 </div>
+                <button class="may-scroll-bottom-btn" id="mayScrollBottomBtn" onclick="let c=document.getElementById('mayChatScroll');c.scrollTop=c.scrollHeight;this.classList.remove('may-scroll-bottom-visible');" title="Scroll to latest">↓</button>
 
                 <div class="may-input-area">
-                    <div class="may-quick-actions">
-                        <button class="may-action-btn" onclick="May.handleAction('explain')" ${hasQuestion ? '' : 'disabled'}>Explain answer</button>
-                        <button class="may-action-btn" onclick="May.handleAction('wrong-choices')" ${hasQuestion ? '' : 'disabled'}>Wrong choices</button>
-                        <button class="may-action-btn may-action-hint" onclick="May.handleAction('hint')" ${hasQuestion ? '' : 'disabled'}>Hint</button>
-                        <button class="may-action-btn" onclick="May.handleAction('simplify')" ${hasQuestion ? '' : 'disabled'}>Simplify</button>
-                        <button class="may-action-btn" onclick="May.handleAction('mymistake')" ${hasQuestion ? '' : 'disabled'}>My mistake</button>
-                        <button class="may-action-btn" onclick="May.handleAction('similar')" ${hasQuestion ? '' : 'disabled'}>Similar question</button>
-                        <button class="may-action-btn may-action-recovery" onclick="May.handleAction('recovery')" ${hasHistory ? '' : 'disabled'}>Recovery set</button>
-                        <button class="may-action-btn may-action-insight" onclick="May.handleAction('progress')" ${hasHistory ? '' : 'disabled'}>My progress</button>
-                        <button class="may-action-btn may-action-insight" onclick="May.handleAction('weakness')" ${hasHistory ? '' : 'disabled'}>Weak areas</button>
-                        <button class="may-action-btn may-action-summary" onclick="May.handleAction('summary')">Session summary</button>
-                    </div>
+                    <div class="may-quick-actions">${this._buildSuggestionChips(hasQuestion, hasHistory, q)}</div>
                     <div class="may-chat-input-row">
-                        <input type="text" class="may-chat-input" id="mayChatInput" placeholder="Ask May anything about this question..."
+                        <input type="text" class="may-chat-input" id="mayChatInput" placeholder="${hasQuestion ? 'Ask May about this question...' : 'Try a suggestion below, or ask May anything'}"
                             onkeydown="if(event.key==='Enter'){May.handleAction('chat',this.value);this.value='';}">
                         <button class="may-send-btn" onclick="let inp=document.getElementById('mayChatInput');May.handleAction('chat',inp.value);inp.value='';">Send</button>
                     </div>
@@ -4553,11 +4691,66 @@ const May = {
             </div>
         </div>`;
 
-        // Scroll chat to bottom
+        // Restore pending input value
+        if (pendingInput) {
+            let inp = document.getElementById('mayChatInput');
+            if (inp) { inp.value = pendingInput; inp.focus(); }
+        }
+
+        // Intelligent scroll: only auto-scroll if user is near bottom
         setTimeout(() => {
             let chat = document.getElementById('mayChatScroll');
-            if (chat) chat.scrollTop = chat.scrollHeight;
+            if (!chat) return;
+            let isNearBottom = chat.scrollHeight - chat.scrollTop - chat.clientHeight < 50;
+            if (isNearBottom || this.context.chatHistory.length <= 2) {
+                chat.scrollTop = chat.scrollHeight;
+            }
+            this._updateScrollButton(chat);
         }, 50);
+    },
+
+    _updateScrollButton(chat) {
+        let btn = document.getElementById('mayScrollBottomBtn');
+        if (!btn) return;
+        let isNearBottom = chat.scrollHeight - chat.scrollTop - chat.clientHeight < 50;
+        if (isNearBottom) {
+            btn.classList.remove('may-scroll-bottom-visible');
+        } else {
+            btn.classList.add('may-scroll-bottom-visible');
+        }
+    },
+
+    // S76 — Dynamic context-aware suggestion chips
+    _buildSuggestionChips(hasQuestion, hasHistory, q) {
+        let chips = [];
+        if (hasQuestion && q) {
+            chips.push({ label: 'Explain this', action: 'explain', primary: true });
+            chips.push({ label: 'Give me a hint', action: 'hint', hint: true });
+            chips.push({ label: 'Why is my answer wrong?', action: 'mymistake' });
+            if (q.Choices || q.ExplanationWrongA) {
+                chips.push({ label: 'Break down wrong choices', action: 'wrong-choices' });
+            }
+        }
+        if (hasHistory) {
+            chips.push({ label: 'My progress', action: 'progress' });
+            chips.push({ label: 'What should I study next?', action: 'next' });
+        }
+        if (chips.length === 0) {
+            chips = [
+                { label: 'Start a practice session', action: 'start' },
+                { label: 'What can you help with?', action: 'chat', payload: 'What can you help with?' }
+            ];
+        }
+        chips = chips.slice(0, 6);
+        return chips.map(c => {
+            let cls = 'may-action-btn';
+            if (c.primary) cls += ' may-action-primary';
+            if (c.hint) cls += ' may-action-hint';
+            let onclick = c.payload
+                ? `May.handleAction('${c.action}','${c.payload.replace(/'/g, "\\'")}')`
+                : `May.handleAction('${c.action}')`;
+            return `<button class="${cls}" onclick="${onclick}">${c.label}</button>`;
+        }).join('');
     },
 
     _formatMessage(text) {
@@ -5269,6 +5462,116 @@ const May = {
         this.context.hintLevel = 0;
         this.context.chatHistory = [];
         this._speak("I'm here when you're ready. Open a question from your session or ask me about your progress.");
+        this.renderView();
+    },
+
+    // S78 — Set review context from the structured review card bridge
+    setReviewContext(qid, studentChoiceLetter, correctLetter, isCorrect) {
+        // Find the question in the MCQ banks
+        let found = null;
+        try {
+            if (typeof QUESTION_BANK !== 'undefined') {
+                for (let pack of ['packA','packB','packC','packD','packE']) {
+                    let bank = QUESTION_BANK[pack];
+                    if (!bank) continue;
+                    found = bank.find(q => q.QuestionID === qid);
+                    if (found) break;
+                }
+            }
+        } catch (e) {}
+
+        if (!found && typeof QUESTION_BANK !== 'undefined') {
+            // Try flat search across all banks
+            try {
+                for (let pack of ['packA','packB','packC','packD','packE']) {
+                    let bank = QUESTION_BANK[pack];
+                    if (!bank || !Array.isArray(bank)) continue;
+                    for (let q of bank) {
+                        if (q.QuestionID === qid) { found = q; break; }
+                    }
+                    if (found) break;
+                }
+            } catch (e) {}
+        }
+
+        if (found) {
+            this.context.currentQuestion = found;
+            this.context.reviewStudentAnswer = studentChoiceLetter;
+            this.context.reviewCorrectAnswer = correctLetter;
+            this.context.reviewIsCorrect = isCorrect;
+        }
+    },
+
+    // S78 — Discuss from review: present the structured breakdown conversationally
+    _discussFromReview() {
+        let q = this.context.currentQuestion;
+        if (!q) {
+            this._speak("I couldn't find that question. Start a review from a practice session first.");
+            this.renderView();
+            return;
+        }
+
+        let isCorrect = this.context.reviewIsCorrect;
+        let studentLetter = this.context.reviewStudentAnswer;
+        let correctLetter = this.context.reviewCorrectAnswer;
+        let topic = MayLearnerState._normalizeTopic(q.Topic || 'this concept');
+
+        // Use extractExplanationSections if available (shared from app.js)
+        let sections = { tested: '', correct: '', takeaway: '' };
+        let explRaw = q.Explanation || q.ExplanationCorrect || '';
+        if (typeof extractExplanationSections !== 'undefined') {
+            sections = extractExplanationSections(explRaw, q.Topic);
+        } else {
+            sections.correct = explRaw;
+        }
+
+        let lines = [];
+
+        if (isCorrect) {
+            lines.push('You got this one right. Let\'s make sure the reasoning is solid.');
+            lines.push('');
+        } else {
+            lines.push('Let\'s work through this together. Here\'s what happened.');
+            lines.push('');
+        }
+
+        // What was tested
+        if (sections.tested) {
+            lines.push('**What this question was testing:**');
+            lines.push(sections.tested);
+            lines.push('');
+        }
+
+        // Why correct wins
+        if (sections.correct) {
+            lines.push(isCorrect ? '**Why that answer is correct:**' : '**Why the correct answer wins:**');
+            lines.push(sections.correct.length > 400 ? sections.correct.substring(0, 380) + '...' : sections.correct);
+            lines.push('');
+        }
+
+        // Why student's answer was wrong (personalized)
+        if (!isCorrect && studentLetter && q['ExplanationWrong' + studentLetter]) {
+            lines.push('**Why your answer (' + studentLetter + ') was wrong:**');
+            lines.push(q['ExplanationWrong' + studentLetter]);
+            lines.push('');
+        }
+
+        // Takeaway
+        if (sections.takeaway) {
+            lines.push('**Key takeaway for exam day:**');
+            lines.push(sections.takeaway);
+            lines.push('');
+        }
+
+        // Next step coaching
+        lines.push('What would help most right now?');
+        lines.push('• Ask me to **give you a hint** on a similar question');
+        lines.push('• Ask me to **quiz you** on ' + topic);
+        if (!isCorrect) {
+            lines.push('• Say **"what should I study next?"** for a personalized recommendation');
+        }
+
+        this._speak(lines.join('\n'));
         this.renderView();
     },
 

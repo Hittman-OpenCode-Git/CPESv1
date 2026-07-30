@@ -280,6 +280,7 @@ a { color: var(--accent); }
   padding: 16px;
   max-width: 1400px;
   margin: 0 auto;
+  height: 100%;
 }
 @media (max-width: 950px) {
   .layout { grid-template-columns: 1fr; }
@@ -336,6 +337,8 @@ a { color: var(--accent); }
 }
 .view.active {
   display: block;
+  height: 100%;
+  overflow: hidden;
 }
 .empty-state {
   min-height: 520px;
@@ -705,7 +708,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   background: var(--warning-bg);
   border-color: var(--warning);
 }
-.feedback p { margin: 6px 0; }
+.feedback p { margin: 6px 0; white-space: pre-line; }
 
 /* ===== Exam Shell ===== */
 .exam-shell {
@@ -777,6 +780,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   font-weight: 500;
   margin-bottom: 18px;
   line-height: 1.6;
+  white-space: pre-line;
 }
 .item-card table {
   width: 100%;
@@ -838,6 +842,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   cursor: pointer;
   transition: all var(--transition);
   font-size: 14px;
+  white-space: pre-line;
 }
 .choice:hover {
   background: var(--choice-hover);
@@ -1046,6 +1051,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   box-shadow: var(--shadow);
   line-height: 1.7;
   font-size: 14px;
+  white-space: pre-line;
 }
 .case-exhibits {
   display: grid;
@@ -1355,10 +1361,167 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .explanation {
   background: var(--primary-light);
   border-radius: var(--radius);
-  padding: 10px;
+  padding: 12px 14px;
   margin-top: 8px;
-  font-size: 13px;
+  font-size: 0.85rem;
   line-height: 1.6;
+  white-space: pre-line;
+  color: var(--text);
+}
+
+/* S77 — Structured review breakdown */
+.review-stem {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 8px 0 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.review-answers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.review-answer-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+.review-answer-row.was-correct {
+  background: var(--success-bg);
+  border: 1px solid var(--success);
+}
+.review-answer-row.was-wrong {
+  background: var(--danger-bg);
+  border: 1px solid var(--danger);
+}
+.review-answer-label {
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  min-width: 100px;
+  flex-shrink: 0;
+  color: var(--text-secondary);
+}
+.review-answer-row.was-correct .review-answer-label { color: var(--success); }
+.review-answer-row.was-wrong .review-answer-label { color: var(--danger); }
+
+.review-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.review-section {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.review-section-label {
+  background: var(--surface-alt);
+  padding: 8px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-light);
+}
+.review-section-body {
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  white-space: pre-line;
+  color: var(--text);
+}
+.review-section.review-why-correct .review-section-label {
+  color: var(--success);
+}
+.review-section.review-why-wrong .review-section-label {
+  color: var(--danger);
+}
+.review-section.review-tested .review-section-label {
+  color: var(--primary);
+}
+.review-section.review-takeaway .review-section-label {
+  color: var(--accent);
+}
+
+/* S77 — Distractor breakdown inside review */
+.review-distractors {
+  margin-top: 6px;
+}
+.review-distractor-item {
+  padding: 6px 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.review-distractor-item + .review-distractor-item {
+  border-top: 1px dotted var(--border-light);
+}
+
+/* S78 — May bridge in review cards */
+.review-may-bridge {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-light);
+}
+.may-bridge-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.may-bridge-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.may-bridge-btn.may-bridge-hint {
+  border-color: var(--border);
+  color: var(--text-secondary);
+}
+.may-bridge-btn.may-bridge-hint:hover {
+  background: var(--surface-alt);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* S78 — Collapsible distractor sections */
+.review-section-collapsible .review-section-label {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-section-collapsible .review-section-label::after {
+  content: '\25BC';
+  font-size: 0.65rem;
+  transition: transform 0.2s ease;
+  margin-left: 8px;
+}
+.review-section-collapsible.collapsed .review-section-label::after {
+  transform: rotate(-90deg);
+}
+.review-section-collapsible.collapsed .review-section-body {
+  display: none;
 }
 
 /* ===== Navigator Header / Stats ===== */
@@ -1848,7 +2011,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 0;
-  height: calc(100vh - 220px);
+  height: 100%;
   min-height: 500px;
   max-width: 1100px;
   margin: 0 auto;
@@ -1872,6 +2035,49 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   flex-direction: column;
   gap: 20px;
   overflow-y: auto;
+  transition: width 0.25s ease, padding 0.25s ease;
+}
+
+.may-sidebar-toggle {
+  position: absolute;
+  top: 12px;
+  right: -20px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: background 0.2s, border-color 0.2s;
+}
+.may-sidebar-toggle:hover {
+  background: var(--surface-alt);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.may-sidebar-collapsed {
+  width: 48px !important;
+  padding: 20px 8px !important;
+  overflow: hidden;
+}
+.may-sidebar-collapsed .may-brand > div,
+.may-sidebar-collapsed .may-stats,
+.may-sidebar-collapsed .may-insights-sidebar,
+.may-sidebar-collapsed .may-export-row,
+.may-sidebar-collapsed .may-section-readiness,
+.may-sidebar-collapsed .may-side-panel {
+  display: none;
+}
+.may-sidebar-collapsed .may-avatar {
+  margin: 0 auto;
 }
 
 .may-brand {
@@ -2025,6 +2231,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
 }
 
 /* ── Context bar ── */
@@ -2609,6 +2816,9 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   font-size: 0.88rem;
   line-height: 1.55;
   color: var(--text);
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-line;
 }
 
 .learner-msg .may-msg-content {
@@ -2623,6 +2833,9 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   border-top: 1px solid var(--border-light);
   padding: 12px 14px;
   background: var(--surface);
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
 }
 
 .may-quick-actions {
@@ -2630,10 +2843,12 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   flex-wrap: wrap;
   gap: 5px;
   margin-bottom: 10px;
+  max-height: 70px;
+  overflow-y: auto;
 }
 
 .may-action-btn {
-  padding: 5px 10px;
+  padding: 6px 12px;
   border: 1px solid var(--border);
   border-radius: 14px;
   background: var(--surface);
@@ -2647,6 +2862,10 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   background: var(--primary-light);
   border-color: var(--primary);
   color: var(--primary);
+}
+.may-action-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
 .may-action-btn:disabled {
   opacity: 0.4;
@@ -2707,7 +2926,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 }
 
 .may-send-btn {
-  padding: 8px 16px;
+  padding: 10px 18px;
   background: var(--accent);
   color: #fff;
   border: none;
@@ -2718,6 +2937,46 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   transition: background var(--transition);
 }
 .may-send-btn:hover { background: #1d4ed8; }
+.may-send-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Scroll-to-bottom button ── */
+.may-scroll-bottom-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.may-scroll-bottom-btn:hover {
+  background: var(--surface-alt);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.may-scroll-bottom-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.may-scroll-bottom-visible {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
 
 .may-preexam {
   text-align: center;
@@ -3174,6 +3433,42 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   color: var(--text);
 }
 
+/* S76 — Capability prompts in empty state */
+.may-capability-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 14px 0;
+  align-items: center;
+}
+.may-capability-prompts > span:first-child {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-right: 2px;
+}
+.may-capability-chip {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font-size: 0.73rem;
+  color: var(--text-secondary);
+  background: var(--surface);
+  white-space: nowrap;
+}
+
+/* S76 — Primary action chip variant */
+.may-action-primary {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+}
+.may-action-primary:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
 /* ===== Updated setup greeting (inside .setup-panel, top-positioned) ===== */
 .may-setup-greeting {
   display: flex;
@@ -3366,3 +3661,22 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 [data-theme="dark"] .may-student-row:hover {
   background: #1e3a5f;
 }
+
+/* S77 — Dark theme review breakdown */
+[data-theme="dark"] .review-section { border-color: #2d3548; }
+[data-theme="dark"] .review-section-label {
+  background: #1a1f2e;
+  border-color: #2d3548;
+  color: #94a3b8;
+}
+[data-theme="dark"] .review-section-body { color: #e2e8f0; }
+[data-theme="dark"] .review-stem {
+  color: #e2e8f0;
+  border-color: #2d3548;
+}
+[data-theme="dark"] .review-answer-row.was-correct { background: #0f2d1a; border-color: #166534; }
+[data-theme="dark"] .review-answer-row.was-wrong { background: #2d1414; border-color: #991b1b; }
+[data-theme="dark"] .review-distractor-item { border-color: #2d3548; }
+[data-theme="dark"] .review-may-bridge { border-color: #2d3548; }
+[data-theme="dark"] .may-bridge-btn.may-bridge-hint { border-color: #374151; color: #9ca3af; }
+[data-theme="dark"] .may-bridge-btn.may-bridge-hint:hover { background: #1e2433; }

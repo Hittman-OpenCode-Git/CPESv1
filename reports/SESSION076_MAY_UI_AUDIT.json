@@ -1,0 +1,124 @@
+﻿{
+  "session": "76",
+  "governance_lane": "Light",
+  "audit_type": "May UI Audit — Read-Only Code Inspection",
+  "timestamp": "2026-07-29",
+  "findings": {
+    "layout_structure": {
+      "description": "The May coaching tab renders into `#coachView` (a `.view` div inside `.work-panel`). Inside it, May.renderView() builds a `.may-container` CSS Grid with two columns: a 280px left `.may-sidebar` and a `1fr` right `.may-main` (flex column). The sidebar unconditionally renders 8+ panels: brand header, stats, insight cards, readiness snapshot, section readiness grid, case-pattern insights, practice-guidance card, adaptive-practice-mix card, readiness-provenance toggle, and an export/import row. The main area renders: an optional context bar, a `.may-chat` flex area (flex: 1, overflow-y: auto), and a `.may-input-area` (normal flow at bottom).",
+      "issues": [
+        "Sidebar unconditionally renders ALL panels for every renderView() call, producing ~620-700px of sidebar content regardless of whether the learner has session data. A first-time user sees empty 'Complete a session to see insights' placeholders for multiple panels.",
+        "The 280px sidebar consumes ~25% of the 1100px max-width container but provides no progressive disclosure — every panel is always visible and scrollable, creating cognitive overload.",
+        "The 2-column grid layout means the sidebar's height drives the overall panel height. Since the sidebar content exceeds the container height on most screens, the sidebar scrolls independently — but the main column is the same height, so the chat area gets squeezed into whatever vertical space remains after the context bar and input area.",
+        "On mobile (≤768px), the sidebar is hidden entirely (display: none), leaving only the chat area and input — but the sidebar panels contain the only navigation to insights, readiness, and export functionality."
+      ]
+    },
+    "input_accessibility": {
+      "description": "The input area is structurally at the bottom of the `.may-main` flex column. Since `.may-main` uses `display: flex; flex-direction: column; overflow: hidden` and `.may-chat` has `flex: 1; overflow-y: auto`, the input IS pinned to the bottom of the visually-available main area without requiring scroll within the chat panel. However, the overall page may need scrolling to bring the entire May panel into view on short viewports because `.layout` (the page grid) has no height constraint — it grows to fit content.",
+      "scroll_required": false,
+      "reason": "Scroll is NOT required to reach the input within the May panel itself — the input area is at the bottom of the flex column and the chat area fills the remaining space. However, page-level scroll may be needed on shorter viewports (e.g., 768px height) because the header (~180px) + layout gap/padding (~32px) + may-container (min 500px or calc(100vh - 220px)) can exceed the viewport. More importantly, the sidebar's excessive height forces internal sidebar scrolling to access panels below the stats section."
+    },
+    "scroll_behavior": {
+      "current": "Three independent scrolling contexts exist: (1) the page body scrolls the entire document; (2) `.may-sidebar` has `overflow-y: auto` for its tall panel list; (3) `.may-chat` has `overflow-y: auto` for chat messages. When renderView() is called after handleAction(), a setTimeout (50ms) calls `chat.scrollTop = chat.scrollHeight` to scroll the chat to the bottom.",
+      "issues": [
+        "The `scrollTop = scrollHeight` approach is a brute-force scroll that fires on EVERY renderView() call, including when the user has scrolled up to read earlier messages. After any action (hint, explain, chat message), the chat forcibly scrolls to the bottom, making it impossible to read earlier messages during an active interaction.",
+        "The 50ms setTimeout is fragile — DOM may not have completed layout by then, especially with the large sidebar re-rendering. On slower devices or with large chat histories, the scroll position can be incorrect (too high or too low).",
+        "There is no 'scroll to bottom' button or visual indicator when the user manually scrolls up in chat — they must manually scroll back down.",
+        "The sidebar scrolls independently from the main area scroll, creating disorienting dual-scroll behavior. A user scrolling the main chat area may not realize the sidebar is also independently scrollable.",
+        "On the page level, there is no `scrollIntoView` or automatic scrolling to bring the May input into view when the tab is first opened."
+      ]
+    },
+    "message_rendering": {
+      "current_approach": "Every renderView() call performs a FULL innerHTML replacement of `#coachView` (`el.innerHTML = ...` at line 4486). The entire DOM subtree is destroyed and rebuilt from scratch on every interaction. Chat messages are rendered by mapping `this.context.chatHistory.slice(-20)` to HTML strings and joining them. Message formatting is basic regex-based: `**bold**`, `*italic*`, and `\\n` → `<br>`. May responses use `_addMessage('may', text)` which pushes to the chatHistory array, then renderView() is called to rebuild everything.",
+      "issues": [
+        "Full innerHTML replacement on every interaction is expensive and causes: (a) loss of scroll position in both sidebar and chat, (b) loss of input focus (keyboard disappears on mobile), (c) loss of any partially-typed text in the input field (the input value is NOT preserved across renders), (d) CSS transition/animation restarts on all elements.",
+        "The chat history is limited to the last 20 messages in rendering (`.slice(-20)`) but the full history is preserved in `chatHistory` (capped at 40 by config). Older messages silently disappear from the UI.",
+        "The input value is NOT read before re-rendering — line 4550 uses `inp.value` AFTER renderView() has already destroyed and recreated the input element. This works because the `onclick` handler captures the value before the DOM is replaced (the click handler runs synchronously, then handleAction calls renderView which replaces the DOM). But any partially-typed text is lost because it's never saved.",
+        "Message content uses dangerouslySetInnerHTML equivalent (raw HTML injection via template literals). While the source is the codebase's own _speak() output, any future integration with external or user-generated content would be an XSS vector.",
+        "The 'empty-chat' vs 'message-list' rendering is binary — there is no smooth transition or partial rendering. When the first message is sent, the entire greeting UI is destroyed and replaced with message bubbles."
+      ]
+    },
+    "prompt_suggestions": {
+      "exist": true,
+      "description": "Yes — 10 static quick-action pill buttons sit above the chat input in the `.may-quick-actions` row. These are: Explain answer, Wrong choices, Hint, Simplify, My mistake, Similar question, Recovery set, My progress, Weak areas, Session summary. Buttons are contextually disabled: the first 6 require a current question (`hasQuestion`), 'Recovery set'/progress/weak areas require session history (`hasHistory`). However, there are NO dynamic floating prompt suggestions near the input field itself, and NO suggested freeform questions. The only freeform guidance is the input placeholder text: 'Ask May anything about this question...'",
+      "issues": [
+        "All 10 buttons are always rendered even when disabled, creating visual noise. A new user sees 6 disabled buttons with no explanation of what they do.",
+        "Buttons are static pill-style (border-radius: 14px) with generic labels. There is no progressive disclosure — all 10 are shown regardless of context.",
+        "No dynamic prompt chips appear near the input field based on the current question or chat context. The user must know what to ask or scan 10 buttons.",
+        "The placeholder text 'Ask May anything about this question...' is misleading when no question is loaded (e.g., when user opens May without selecting a question first).",
+        "The quick-actions use fixed labels rather than context-aware ones (e.g., 'My mistake' could be 'What did I get wrong on Q1?' with the actual QID)."
+      ]
+    },
+    "panel_height": {
+      "current_approach": "The `.may-container` has `height: calc(100vh - 220px); min-height: 500px; max-width: 1100px`. The 220px offset accounts for the header/hero section. On a 768px-tall viewport, this leaves 548px for the entire May panel — split between the 280px sidebar and the chat area. The sidebar content (~620-700px) exceeds the container height, so it scrolls internally. The chat area gets roughly 548px minus context bar (~40px) and input area (~90px) = ~418px for messages.",
+      "issue": "The fixed `calc(100vh - 220px)` approach ties the panel height to viewport height with a hardcoded offset. Problems: (a) The 220px offset may not match the actual header height across devices/themes. (b) On 768px screens, the usable chat area is only ~418px tall, and the sidebar overflows significantly. (c) The min-height of 500px means the panel can exceed the available viewport space, causing page-level scroll. (d) The sidebar doesn't collapse or minimize, wasting 280px of horizontal space even when the learner has no session data. (e) On ultrawide monitors, the max-width 1100px leaves large empty margins while the sidebar still requires scrolling."
+    }
+  },
+  "recommendations": {
+    "layout_fix": "Replace the 2-column grid with a collapsible sidebar pattern. The sidebar should default to collapsed (icon-only, ~48px wide) and expand on click. Alternatively, use a top-tab bar within the May panel to switch between 'Chat', 'Insights', 'Readiness' views instead of rendering all panels simultaneously. This eliminates the sidebar scroll problem and gives the chat area more horizontal space.",
+    "input_fix": "Make the `.may-input-area` position: sticky; bottom: 0 within `.may-main`. While it's currently at the bottom of the flex column, adding explicit sticky positioning makes the intent clear and provides a visual anchor. For shorter viewports, reduce the `.may-container` height from `calc(100vh - 220px)` to `calc(100vh - 180px)` or use `height: 100%` on the `.view.active` container instead of a hardcoded viewport calculation.",
+    "scroll_fix": "Replace the brute-force `scrollTop = scrollHeight` in setTimeout with an intelligent scroll: only auto-scroll when the user is already near the bottom (within 50px of scrollHeight). Add a 'scroll to bottom' floating button that appears when the user scrolls up. Use `requestAnimationFrame` instead of setTimeout for scroll timing. Consider using a virtual-scroll approach if chat history grows large.",
+    "additional": [
+      "Implement incremental DOM updates instead of full innerHTML replacement. Use a renderChat() function that only updates `.may-chat` and preserves sidebar state. Preserve input focus and partial text across renders.",
+      "Collapse the quick-action buttons into a 'What can I ask?' dropdown or show only 3-4 contextually relevant suggestions as floating chips near the input.",
+      "Conditionally render sidebar panels: show only the 'At a glance' insights for first-time users, and progressively reveal Readiness, Section Readiness, Case Patterns, etc. as the learner accumulates session data.",
+      "Add a 'scroll to top of chat' button for long conversations.",
+      "Replace the hardcoded `calc(100vh - 220px)` with a dynamic measurement using `ResizeObserver` on the `.work-panel` to compute available height.",
+      "Consider a chat-only mode that hides the sidebar entirely via toggle, giving May a more focused 'messaging app' feel when the learner just wants to ask questions.",
+      "Add keyboard shortcut (e.g., `/` or `Ctrl+Enter`) to focus the May input from anywhere in the app.",
+      "Add typing indicator ('. . .') when May is 'thinking' to provide visual feedback during the synchronous render cycle."
+    ]
+  },
+  "code_references": {
+    "app_js_functions": [
+      "showView:415 — Switches between .view tabs (sets active class)",
+      "ReviewCoach.renderCoachView:3536 — Legacy coach view rendering (pre-May)",
+      "ReviewCoach.renderFullCoach:3712 — Renders legacy coach into #coachView",
+      "ReviewCoach.renderPostSessionCard:3701 — Post-session card with 'Review with May' link",
+      "app.js:3781-3782 — Tab click handler: calls May.renderView() for coachView tab",
+      "app.js:1650 — renderMCQ: calls May.renderMiniPanel(q) for in-session mini panel",
+      "app.js:1653-1655 — renderMCQ: calls May.resetLiveHints() and May._updateMayLauncherState()",
+      "app.js:1537 — submitSession: calls May.handoffCompletedSession()",
+      "app.js:1552-1555 — resetToLanding: re-injects May companion card"
+    ],
+    "html_elements": [
+      "#coachView (view container): index_updated.html:5352 — Empty div populated by May.renderView()",
+      "#sessionView (landing view): index_updated.html:5179 — Where companion card is injected",
+      ".tab[data-view='coachView']: index_updated.html:5127 — The 'May' tab button in the nav",
+      ".work-panel > .tabs: index_updated.html:4840 — Tab navigation bar",
+      "script may-learner-state.js: index_updated.html:10",
+      "script may-core.js: index_updated.html:12"
+    ],
+    "css_rules": [
+      ".may-container:1847-1859 — Grid layout with height: calc(100vh - 220px), min-height: 500px, overflow: hidden",
+      ".may-sidebar:1867-1875 — 280px sidebar, overflow-y: auto, flex-direction: column",
+      ".may-main:2024-2028 — Flex column, overflow: hidden",
+      ".may-chat:2566-2573 — flex: 1, overflow-y: auto, padding: 16px",
+      ".may-input-area:2622-2626 — border-top, padding: 12px 14px, NOT sticky",
+      ".may-quick-actions:2628-2633 — flex-wrap, gap: 5px, margin-bottom: 10px",
+      ".may-action-btn:2635-2645 — Pill buttons, padding: 5px 10px, border-radius: 14px",
+      ".may-chat-input-row:2688-2691 — flex row for input + send button",
+      ".may-chat-input:2693-2703 — flex: 1 text input",
+      ".may-send-btn:2709-2720 — Send button",
+      ".may-message:2586-2589 — max-width: 85%, fadeIn animation",
+      ".may-msg-content:2604-2612 — Chat bubble styling for May messages",
+      ".learner-msg .may-msg-content:2614-2619 — Chat bubble for learner messages",
+      ".may-empty-chat:2575-2584 — Centered empty state, padding: 40px",
+      ".may-empty-chat (duplicate):3295-3301 — Updated empty chat state, align-items: flex-start",
+      ".may-context-bar:2031-2041 — Context bar with flex-wrap, borders",
+      ".may-companion-card:2943-2954 — Landing page companion card",
+      ".may-launcher:3026-3035 — Fixed floating launcher button (bottom-right)",
+      ".view:333-335 — display: none, padding: 18px — NO height or overflow constraint",
+      ".view.active:337-339 — display: block",
+      ".work-panel:302-305 — min-height: 760px, overflow: hidden",
+      ".layout:276-283 — display: grid, grid-template-columns: 340px 1fr, NO height constraint"
+    ]
+  },
+  "additional_observations": {
+    "sidebar_bloat": "The sidebar unconditionally renders 8+ panels totaling ~620-700px of content. A first-time learner sees 5+ panels with empty-state placeholders. At minimum, the following panels should be conditionally rendered: case-pattern insights (requires case data), practice guidance (requires >= 1 session), adaptive practice mix (requires >= 2 sessions), section readiness (requires >= 3 sessions per section), readiness provenance (debug-only).",
+    "class_name_typo": "Line 4287 in may-core.js uses class 'may-blocked-goodluck' but the CSS defines 'may-preexam-goodluck' (line 2740). The pre-exam blocked state's goodluck message has no styling applied.",
+    "renderView_call_frequency": "renderView() is called from 24 distinct code paths in may-core.js. Every user action (hint, explain, chat, setQuestionContext, clearContext, export, import, session handoff, etc.) triggers a full DOM rebuild. This is the single largest contributor to the 'awkward' feel — the entire panel flickers on each interaction.",
+    "no_loading_states": "When May is computing a response (e.g., _explainAnswer, _simplifyExplanation), there is no loading indicator. The synchronous render cycle means the UI freezes briefly during computation, then the entire panel is replaced.",
+    "mini_panel_overlap": "During an active MCQ session, May.renderMiniPanel() injects a fixed-position panel at bottom-right (320px wide). The May launcher is repositioned to `bottom: 370px` to avoid overlap. This creates a tight cluster of floating elements in the bottom-right corner that may feel cluttered."
+  }
+}
