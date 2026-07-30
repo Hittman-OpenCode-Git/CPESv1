@@ -1,0 +1,206 @@
+{
+  "session": "SESSION078P",
+  "target_session": "SESSION079",
+  "campaign": "Pack E Section F Cognitive Upgrade — Wave 1",
+  "predecessor": "SESSION078P (Discovery & Queue Generation)",
+  "rationale": "Pack E Section F has 0.0% higher-order across 75 items — the worst in the non-excluded portfolio. All 75 items are at Bloom's Understand (definition-match). Zero Analyze, zero Evaluate, zero Apply. Clean single-object architecture with no DL-016 risk. 100% Certified. Domain F (Technology & Analytics) is a growing CMA Part 1 focus area. This is an untouched greenfield campaign with maximum upgrade headroom.",
+  "target_section": {
+    "pack": "E",
+    "section": "F",
+    "domain": "Technology and Analytics",
+    "total_items": 75,
+    "certified": 75,
+    "evaluate": 0,
+    "analyze": 0,
+    "apply": 0,
+    "understand": 75,
+    "remember": 0,
+    "ho_pct": "0.0%",
+    "architecture": "Single-object — clean, no DL-016",
+    "structural_defects": {
+      "DL-008": 0,
+      "DL-026": 0,
+      "Rule 9": 0
+    }
+  },
+  "target_mix": {
+    "evaluate": 8,
+    "analyze": 7,
+    "total": 15
+  },
+  "queue": {
+    "evaluate_targets": [
+      {
+        "qid": "P1E-F-004",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate",
+        "current_ds": 3,
+        "topic": "Big data — four Vs",
+        "target_cl": "Evaluate",
+        "rationale": "Controller evaluating big data platform investment by comparing on-premise vs. cloud solutions across Volume-Velocity-Variety-Veracity dimensions with cost-benefit analysis"
+      },
+      {
+        "qid": "P1E-F-012",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate",
+        "current_ds": 3,
+        "topic": "ERP systems",
+        "rationale": "CFO evaluating two ERP vendor proposals with implementation cost, module coverage, and integration complexity data — select the best-fit proposal"
+      },
+      {
+        "qid": "P1E-F-015",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate",
+        "current_ds": 3,
+        "topic": "Cloud computing",
+        "rationale": "CIO recommending cloud migration strategy (IaaS/PaaS/SaaS) for financial systems with TCO, security, and compliance trade-off analysis"
+      },
+      {
+        "qid": "P1E-F-016",
+        "current_cl": "Understand",
+        "current_difficulty": "Easy",
+        "current_ds": 1,
+        "topic": "Cybersecurity management",
+        "rationale": "CISO presenting cybersecurity investment recommendation to the board with risk-based prioritization across 5 threat vectors"
+      },
+      {
+        "qid": "P1E-F-023",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate-Easy",
+        "current_ds": 2,
+        "topic": "NIST framework",
+        "rationale": "Internal audit director evaluating NIST CSF implementation maturity across Identify-Protect-Detect-Respond-Recover with gap analysis"
+      },
+      {
+        "qid": "P1E-F-025",
+        "current_cl": "Understand",
+        "current_difficulty": "Easy",
+        "current_ds": 1,
+        "topic": "Data governance",
+        "rationale": "Data governance committee evaluating policy options for a multinational company adopting GDPR, CCPA, and emerging AI regulations"
+      },
+      {
+        "qid": "P1E-F-036",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate",
+        "current_ds": 3,
+        "topic": "Cloud risks",
+        "rationale": "Risk manager evaluating cloud migration risks with likelihood-impact matrix across security, availability, vendor lock-in, and compliance"
+      },
+      {
+        "qid": "P1E-F-065",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate",
+        "current_ds": 3,
+        "topic": "Maximum tolerable downtime",
+        "rationale": "Business continuity team evaluating MTD/RTO/RPO thresholds for 5 critical financial systems with cost-of-downtime analysis to prioritize recovery investments"
+      }
+    ],
+    "analyze_targets": [
+      {
+        "qid": "P1E-F-001",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate-Easy",
+        "current_ds": 2,
+        "topic": "Descriptive analytics",
+        "target_cl": "Analyze",
+        "rationale": "FP&A analyst analyzing a multi-metric operations dashboard to decompose performance trends across 4 business units"
+      },
+      {
+        "qid": "P1E-F-002",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate",
+        "current_ds": 3,
+        "topic": "Predictive analytics",
+        "target_cl": "Analyze",
+        "rationale": "Analyst comparing predictive model accuracy between regression and machine learning approaches using RMSE, MAE, and actual-vs-forecast data"
+      },
+      {
+        "qid": "P1E-F-003",
+        "current_cl": "Understand",
+        "current_difficulty": "Easy",
+        "current_ds": 1,
+        "topic": "Prescriptive analytics",
+        "target_cl": "Analyze",
+        "rationale": "Operations manager analyzing prescriptive analytics output recommending production schedule changes with cost, capacity, and constraint data"
+      },
+      {
+        "qid": "P1E-F-022",
+        "current_cl": "Understand",
+        "current_difficulty": "Easy",
+        "current_ds": 1,
+        "topic": "Data visualization",
+        "target_cl": "Analyze",
+        "rationale": "Controller analyzing a CFO dashboard identifying 3 effective and 2 misleading visualization choices with justification"
+      },
+      {
+        "qid": "P1E-F-033",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate",
+        "current_ds": 3,
+        "topic": "Big data auditing",
+        "target_cl": "Analyze",
+        "rationale": "Auditor analyzing 100% transaction population test results vs. traditional sample to assess audit effectiveness differences"
+      },
+      {
+        "qid": "P1E-F-044",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate",
+        "current_ds": 3,
+        "topic": "Analytics maturity model",
+        "target_cl": "Analyze",
+        "rationale": "Chief data officer analyzing current analytics maturity across 5 capability dimensions to identify highest-priority capability gaps"
+      },
+      {
+        "qid": "P1E-F-049",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate",
+        "current_ds": 3,
+        "topic": "Data warehouse vs data lake",
+        "target_cl": "Analyze",
+        "rationale": "Data architect analyzing trade-offs between data warehouse and data lake architectures for a company consolidating ERP, CRM, and IoT data sources"
+      }
+    ]
+  },
+  "queue_integrity": {
+    "all_qids_distinct": true,
+    "all_from_same_section": true,
+    "all_certified": true,
+    "total_items": 15,
+    "evaluate_count": 8,
+    "analyze_count": 7,
+    "evaluate_qids": ["P1E-F-004","P1E-F-012","P1E-F-015","P1E-F-016","P1E-F-023","P1E-F-025","P1E-F-036","P1E-F-065"],
+    "analyze_qids": ["P1E-F-001","P1E-F-002","P1E-F-003","P1E-F-022","P1E-F-033","P1E-F-044","P1E-F-049"]
+  },
+  "duplicate_verification": {
+    "s77_queue_overlap": "0 items — S77 targets Pack A Section F",
+    "s81_s82_overlap": "0 items — S81-S82 targeted Pack D Section B",
+    "s886_upgrades_overlap": "0 items — S886 targeted Sections C/D across Packs A/B/D/E",
+    "s61_s75_overlap": "0 items — prior campaigns targeted Pack B/D Sections A/B/D/E",
+    "verdict": "CLEAN — zero duplicate targeting across all prior campaigns"
+  },
+  "execution_prerequisites": [
+    "1. Run fresh Function-constructor census of Pack E Section F at T0 to validate queue freshness (avoid S77 stale-queue recurrence)",
+    "2. Confirm 0 DL-008 on all 15 target items (ExplanationWrong[CorrectChoice] empty)",
+    "3. Confirm 0 DL-026 on all 15 target items (all non-CC EW slots non-empty)",
+    "4. Confirm 0 Rule 9 violations on all 15 target items (no lead-in polarity mismatches)",
+    "5. Backup pack_e_corrected.js before any write",
+    "6. Batch size ≤30 items per governance guard Rule 5",
+    "7. Post-rewrite: run npm run preflight, verify governance guard 54/54 PASS"
+  ],
+  "risk_assessment": {
+    "overall": "LOW",
+    "architecture_risk": "NONE — Pack E uses single-object format, no DL-016 metadata-content divergence",
+    "certification_risk": "LOW — All 75 items already Certified. Cognitive-level changes on single-object items are deterministic.",
+    "structural_risk": "NONE — Pre-flight scan shows 0 DL-008, 0 DL-026, 0 Rule 9 across all Pack E Section F items",
+    "explanation_quality": "MEDIUM — Understand-level items likely have generic/template explanations. Rewriting to Analyze/Evaluate requires full explanation authoring including distractor-specific wrong-choice explanations.",
+    "content_authoring_load": "MEDIUM — Each item needs: new scenario-based stem, 4 choice-specific distractors, correct answer with business interpretation, and 3 wrong-choice explanations. ~15-20 minutes per item for quality authoring."
+  },
+  "domain_value": {
+    "domain": "F — Technology and Analytics",
+    "cma_part_1_weight": "15%",
+    "current_ho_in_domain": "13.6% across all packs",
+    "post_wave1_projection": "Pack E Section F: 0.0% → 20.0% HO (15 items upgraded). Remaining: 60 items",
+    "portfolio_gap_closing": "Addresses the single most concentrated low-order pocket in the entire Part 1 simulator"
+  }
+}

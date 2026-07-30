@@ -1,0 +1,160 @@
+{
+  "session": "SESSION078P",
+  "stage": "Stage 1 (Planner) + Stage 2 (Auditor) Combined",
+  "date": "2026-07-30T13:36:02.956Z",
+  "governance_lane": "Light / Read-Only Analysis",
+  "methodology": "Function constructor parse (authoritative) — all 5 packs",
+  "preflight": {
+    "t0_result": "2 pre-existing divergences (Pack E 545/540, Cert +35), 54/54 governance PASS",
+    "pre_existing_only": true,
+    "no_new_divergences": true
+  },
+  "exclusions": {
+    "explicit": [
+      {"pack": "A", "section": "B", "reason": "Already at 27.0% HO, S76-S77 campaign target"},
+      {"pack": "D", "section": "B", "reason": "Already at 89.9% HO, S70-S75 + S81-S82 campaign target"}
+    ],
+    "prior_sessions_targeted": [
+      {"pack": "A", "section": "F", "reason": "S77 queue targets Pack A Section F (2.7% HO)"},
+      {"pack": "D", "section": "B", "reason": "S70-S75 + S81-S82 resolved (83.8% HO)"}
+    ],
+    "s886_expansion": [
+      {"pack": "A", "sections": "C", "items": 8, "target": "Analyze"},
+      {"pack": "A", "sections": "D", "items": 8, "target": "Analyze/Evaluate"},
+      {"pack": "B", "sections": "D", "items": 1, "target": "Analyze"},
+      {"pack": "D", "sections": "D", "items": 1, "target": "Evaluate"},
+      {"pack": "E", "sections": "C", "items": 2, "target": "Analyze"}
+    ]
+  },
+  "campaign_candidates_ranked": [
+    {
+      "rank": 1,
+      "pack": "E",
+      "section": "F",
+      "domain": "Technology and Analytics",
+      "total_items": 75,
+      "certified": 75,
+      "cert_pct": "100%",
+      "evaluate": 0,
+      "analyze": 0,
+      "apply": 0,
+      "understand": 75,
+      "remember": 0,
+      "ho_pct": "0.0%",
+      "low_order_count": 75,
+      "low_order_pct": "100.0%",
+      "architecture": "Single-object — clean (no DL-016)",
+      "prior_targeting": "None — completely untouched by any campaign",
+      "upgrade_headroom": "Maximum — all 75 items at Understand",
+      "evaluate_potential": "High — Domain F has rich decision-making scenarios (cybersecurity investment, technology selection, data governance, analytics maturity)",
+      "risk_assessment": "LOW. Clean single-object architecture. 100% Certified. No structural defects.",
+      "recommendation": "STRONG BUY — Highest value next campaign. Pack A Section F is already queued (S77). Pack E Section F is the only remaining 0.0% HO section with clean architecture."
+    },
+    {
+      "rank": 2,
+      "pack": "D",
+      "section": "A",
+      "domain": "External Financial Reporting",
+      "total_items": 75,
+      "certified": 75,
+      "cert_pct": "100%",
+      "evaluate": 0,
+      "analyze": 0,
+      "apply": 18,
+      "understand": 57,
+      "remember": 0,
+      "ho_pct": "0.0%",
+      "low_order_count": 75,
+      "low_order_pct": "100.0%",
+      "architecture": "Dual-block — DL-016 risk",
+      "prior_targeting": "None",
+      "upgrade_headroom": "High — 18 Apply + 57 Understand",
+      "evaluate_potential": "Very High — Domain A is foundational CMA Part 1. Revenue recognition, inventory, financial statements all rich for Evaluate",
+      "risk_assessment": "MEDIUM. DL-016 dual-block architecture. Must verify metadata-content alignment before rewrite. Pack D has ongoing certification waves.",
+      "recommendation": "HOLD — Defer until DL-016 resolution. High domain priority but architectural risk."
+    },
+    {
+      "rank": 3,
+      "pack": "E",
+      "section": "B",
+      "domain": "Planning, Budgeting, and Forecasting",
+      "total_items": 100,
+      "certified": 100,
+      "cert_pct": "100%",
+      "evaluate": 1,
+      "analyze": 1,
+      "apply": 36,
+      "understand": 59,
+      "remember": 3,
+      "ho_pct": "2.0%",
+      "low_order_count": 98,
+      "low_order_pct": "98.0%",
+      "architecture": "Single-object — clean",
+      "prior_targeting": "None",
+      "upgrade_headroom": "High — 98 low-order items, largest single-section population",
+      "evaluate_potential": "High — Budgetary control, variance investigation, forecasting decisions",
+      "risk_assessment": "LOW. Clean architecture. Largest section (100 items). Good second campaign target.",
+      "recommendation": "SECOND CAMPAIGN — After Pack E Section F completion"
+    },
+    {
+      "rank": 4,
+      "pack": "E",
+      "section": "A",
+      "domain": "External Financial Reporting",
+      "total_items": 75,
+      "certified": 75,
+      "cert_pct": "100%",
+      "evaluate": 2,
+      "analyze": 0,
+      "apply": 10,
+      "understand": 62,
+      "remember": 1,
+      "ho_pct": "2.7%",
+      "low_order_count": 73,
+      "low_order_pct": "97.3%",
+      "architecture": "Single-object — clean",
+      "prior_targeting": "None",
+      "recommendation": "THIRD CAMPAIGN — Clean architecture, Domain A priority"
+    },
+    {
+      "rank": 5,
+      "pack": "E",
+      "section": "D",
+      "domain": "Cost Management",
+      "total_items": 75,
+      "certified": 75,
+      "cert_pct": "100%",
+      "evaluate": 1,
+      "analyze": 1,
+      "apply": 13,
+      "understand": 60,
+      "remember": 0,
+      "ho_pct": "2.7%",
+      "low_order_count": 73,
+      "low_order_pct": "97.3%",
+      "architecture": "Single-object — clean",
+      "recommendation": "FOURTH CAMPAIGN — Cost management is rich for Analyze/Evaluate"
+    }
+  ],
+  "selected_campaign": {
+    "pack": "E",
+    "section": "F",
+    "domain": "Technology and Analytics",
+    "rationale": "Pack E Section F has the most extreme low-order concentration of any non-excluded section: 75/75 items (100%) at Understand level with ZERO Analyze and ZERO Evaluate items. This is the ONLY remaining section with 0.0% higher-order across all non-excluded packs. Unlike Pack C/D Section A (also 0.0% HO), Pack E Section F has clean single-object architecture with zero DL-016 risk. Domain F (Technology and Analytics) is a growing CMA Part 1 focus area. The section has NOT been targeted by any prior campaign (S61-S82, S886). All 75 items are Certified with no structural defects — rewrite surface is pristine.",
+    "competitive_advantage": "Pack E Section F has 0 Apply items vs Pack A Section F (13 Apply). Every single item is a textbook definition-match at Bloom's Understand — maximum upgrade headroom with maximum rewrite efficiency."
+  },
+  "duplicate_check": {
+    "s77_queue_overlap": "NONE — S77 queue targets Pack A Section F, not Pack E",
+    "s81_s82_overlap": "NONE — S81-S82 targeted Pack D Section B only",
+    "s886_overlap": "NONE — S886 targeted Packs A/B/D Sections C/D, and Pack E Section C (2 items). Pack E Section F was untouched.",
+    "s61_s75_overlap": "NONE — Prior cognitive campaigns targeted Pack B and Pack D Sections A/B/D/E. Pack E Section F was never touched.",
+    "verdict": "CLEAN — No duplicate targeting. Pack E Section F is a greenfield campaign."
+  },
+  "queue_composition": {
+    "total": 15,
+    "evaluate": 8,
+    "analyze": 7,
+    "source_section": "Pack E Section F",
+    "constraint": "≤15 items, all from single section, all Certified"
+  }
+}
