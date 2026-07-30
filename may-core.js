@@ -1018,6 +1018,28 @@ const May = {
 
         this._addMessage('learner', this._actionLabel(action));
 
+        // ── MAY-001: Context Builder + Coaching Router integration ──
+        // Gated behind feature flags (default: false — zero behavior change)
+        var _mayContext = null;
+        var _routingResult = null;
+        try {
+            if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_CONTEXT_BUILDER')) {
+                if (typeof MayContextBuilder !== 'undefined' && this.context.currentQuestion) {
+                    _mayContext = MayContextBuilder.buildFullContext(this.context.currentQuestion.QuestionID);
+                    if (_mayContext && typeof MayCoachingRouter !== 'undefined') {
+                        _routingResult = MayCoachingRouter.enrichContext(_mayContext, action);
+                    }
+                }
+            }
+        } catch (e) {
+            // Silent fallback — context builder failure must not break existing coaching
+            _mayContext = null;
+            _routingResult = null;
+        }
+        // Store for handler access (read-only, non-invasive)
+        this.context._mayContext = _mayContext;
+        this.context._routingResult = _routingResult;
+
         switch (action) {
             case 'explain':
                 this._explainAnswer();
@@ -4518,7 +4540,14 @@ const May = {
                         <div class="may-onboarding-avatar">M</div>
                         <h2>Welcome back, ${profile.name}</h2>
                         <p class="may-onboarding-subtitle">Your CMA Part 1 study companion</p>
-                        <p>${welcomeMsg}</p>
+                        ${sc > 0 ? `<p>I've tracked <strong>${sc} session${sc !== 1 ? 's' : ''}</strong> and <strong>${totalAttempts} attempts</strong> for you.</p>` : `<p>${welcomeMsg}</p>`}
+                        <div class="may-capability-prompts">
+                            <span>What would you like to do?</span>
+                            <span class="may-capability-chip">Explain a question</span>
+                            <span class="may-capability-chip">My progress</span>
+                            <span class="may-capability-chip">What to study next?</span>
+                            <span class="may-capability-chip">Quiz me</span>
+                        </div>
                     </div>
                 </div>`;
             }
@@ -4677,8 +4706,8 @@ const May = {
 
                 <div class="may-chat" id="mayChatScroll" onscroll="May._updateScrollButton(this)">
                     ${chatHtml}
+                    <button class="may-scroll-bottom-btn" id="mayScrollBottomBtn" onclick="let c=document.getElementById('mayChatScroll');c.scrollTop=c.scrollHeight;this.classList.remove('may-scroll-bottom-visible');" title="Scroll to latest">↓</button>
                 </div>
-                <button class="may-scroll-bottom-btn" id="mayScrollBottomBtn" onclick="let c=document.getElementById('mayChatScroll');c.scrollTop=c.scrollHeight;this.classList.remove('may-scroll-bottom-visible');" title="Scroll to latest">↓</button>
 
                 <div class="may-input-area">
                     <div class="may-quick-actions">${this._buildSuggestionChips(hasQuestion, hasHistory, q)}</div>
@@ -4697,12 +4726,14 @@ const May = {
             if (inp) { inp.value = pendingInput; inp.focus(); }
         }
 
-        // Intelligent scroll: only auto-scroll if user is near bottom
+        // Auto-scroll: scroll to bottom if user is near bottom, or May just responded
         setTimeout(() => {
             let chat = document.getElementById('mayChatScroll');
             if (!chat) return;
-            let isNearBottom = chat.scrollHeight - chat.scrollTop - chat.clientHeight < 50;
-            if (isNearBottom || this.context.chatHistory.length <= 2) {
+            let history = this.context.chatHistory;
+            let lastMsgIsMay = history.length > 0 && history[history.length - 1].role === 'may';
+            let isNearBottom = chat.scrollHeight - chat.scrollTop - chat.clientHeight < 80;
+            if (isNearBottom || history.length <= 2 || lastMsgIsMay) {
                 chat.scrollTop = chat.scrollHeight;
             }
             this._updateScrollButton(chat);
