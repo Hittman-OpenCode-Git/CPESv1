@@ -1,6 +1,6 @@
 # AGENTS.md — CMA Part 1 Exam Simulator Standing Instructions
 
-**Version:** 1.0
+**Version:** 2.0 (Session 73 — Governance Lanes)
 **Status:** Active
 **Authority:** PROJECT_CONSTITUTION.md
 **Applies to:** All Computer/AI sessions in this repository
@@ -9,17 +9,22 @@
 
 ## 1. Governance Guard Plugin — Registered, Do Not Re-Litigate
 
-The `governance-guard` plugin is registered at `.opencode/plugins/governance-guard.js` (217 lines) and listed in `opencode.json` under `"plugin"`. It enforces 5 rules:
+The `governance-guard` plugin is registered at `.opencode/plugins/governance-guard.js` (393 lines) and listed in `opencode.json` under `"plugin"`. It enforces 10 rules, all at BLOCK level (upgraded S221):
 
 | Rule | Level | Behavior |
 |------|-------|----------|
+| RULE 1 | **BLOCK** | question_state changes must pair with REVISION_HISTORY.md updates |
 | RULE 2 | **BLOCK** | ExplanationWrong[CorrectChoice] must be `""` (DL-008 enforcement, per EV8 / CAQS_v1.0.md §4.4) |
 | RULE 3 | **BLOCK** | MASTER_QUESTION_REGISTRY.md is generated — never hand-edit |
+| RULE 4 | **BLOCK** | answer-key changes must include a "recomputed" / "independently verified" note |
 | RULE 5 | **BLOCK** | Max 30 question objects per change-set without `BLOCK-AUTHORIZED` marker |
-| RULE 1 | **WARN** | question_state changes must pair with knowledge/REVISION_HISTORY.md updates — flagged at session idle |
-| RULE 4 | **WARN** | answer-key changes must include a "recomputed" / "independently verified" note — flagged at session idle |
+| RULE 6 | **BLOCK** | non-CorrectChoice ExplanationWrong slots must be non-empty (DL-026 enforcement) |
+| RULE 7 | **BLOCK** | DERIVED_REGISTRY_NOT_AUTHORITATIVE — no hand-editing derived registries |
+| RULE 8 | **BLOCK** | UNTRACKED_ARTIFACT — session packages must be registered |
+| RULE 9 | **BLOCK** | Choice binary lead-in polarity mismatch (DL-037 enforcement) |
+| RULE 10 | **BLOCK** | non-CorrectChoice ExplanationWrong slots must be present and non-empty (DL-021 enforcement) |
 
-**Rules 1 and 4 are warnings, not hard blocks.** Computer does not need to ask permission or re-confirm plugin registration each session. The plugin is already active. The test suite is at `scripts/test_governance_guard.js` (245 lines, 12 tests).
+**The plugin is already active.** Do not ask permission or re-confirm registration each session. The test suite is at `scripts/test_governance_guard.js` (54 tests, all BLOCK-validated).
 
 ---
 
@@ -88,6 +93,8 @@ Per `governance-guard.js` Rule 1 and `knowledge/REVISION_HISTORY.md`:
 
 **Do not batch entries.** Write the entry contemporaneously with the change, not after a long session. Past entries must not be duplicated or overwritten — always append, never edit prior entries.
 
+**Lane note:** These requirements apply to Full Governance Lane sessions. Governance Light Lane sessions only need REVISION_HISTORY.md entries if they discover and fix a content-level defect.
+
 ---
 
 ## 5. Dual Verification — Cross-Check All Self-Reported Claims
@@ -139,40 +146,78 @@ Before any live simulation test:
 
 | File | Location | Purpose |
 |------|----------|---------|
-| governance-guard.js | `.opencode/plugins/governance-guard.js` | 5-rule enforcement plugin |
-| governance guard tests | `scripts/test_governance_guard.js` | 12-test matrix |
+| governance-guard.js | `.opencode/plugins/governance-guard.js` | 10-rule enforcement plugin |
+| governance guard tests | `scripts/test_governance_guard.js` | 54-test matrix |
 | REVISION_HISTORY.md | `knowledge/REVISION_HISTORY.md` | All certification and content change records |
 | BACKUP_PROTOCOL.md | `knowledge/BACKUP_PROTOCOL.md` | Hard backup rules |
 | CAQS_v1.0.md | `knowledge/CAQS_v1.0.md` | Content quality standard |
-| DEFECT_LIBRARY.md | `knowledge/DEFECT_LIBRARY.md` | All DL-001 through DL-023 entries |
-| SESSION_STATUS | `reports/session_status/SESSION_STATUS_2026-07-24.md` | **Current** end-of-cycle handoff log (2026-07-23 version is stale — 1,080 vs. 2,031 certified) |
+| DEFECT_LIBRARY.md | `knowledge/DEFECT_LIBRARY.md` | All DL-001 through DL-037 entries |
+| CURRENT_BASELINES.md | `knowledge/CURRENT_BASELINES.md` | **Authoritative** certified pool + file hashes |
+| preflight.js | `scripts/preflight.js` | T0 integrity check (QID counts, parse, certified counts, cross-check baselines) |
+| smoke_test.js | `scripts/smoke_test.js` | Playwright smoke test (UI surfaces, MCQ banks, May layer) |
+| pipeline (package.json) | `npm run pipeline` | validate → build-registry → dashboard (Tend for content waves) |
 | DL-012 proposal | `reports/remediation/DL012_REMEDIATION_PROPOSAL.md` | Corrected remediation plan (not executed) |
-| DL-012 finding | `reports/defect_sweeps/DL012_SECTIONE_CLONE_FINDING.md` | Original finding (contains counting errors) |
-| DL-008 re-contamination | `reports/defect_sweeps/DL008_RECONTAMINATION_SCAN.md` | 14-item Wave 1 defect (FIXED) |
 | DL-008 sweep closeout | `reports/defect_sweeps/DL-008_SWEEP_CLOSEOUT.md` | 539-occurrence closeout |
+| DL-008 re-contamination | `reports/defect_sweeps/DL008_RECONTAMINATION_SCAN.md` | 14-item Wave 1 defect (FIXED) |
 | DL-010 scan | `reports/defect_sweeps/DL010_SCAN_REPORT.md` | Misassigned explanation scan |
 
 ---
 
-## 9. Session Startup Protocol
+## 9. Governance Lanes
 
-Every new session must:
+**Effective:** Session 72. This project uses two governance lanes. The lane is determined by what a session touches — not by its duration or agent count.
 
-1. Read `reports/session_status/SESSION_STATUS_2026-07-24.md` for open risks and blocked files (**NOTE S221: this file is marked SUPERSEDED — certified count is 267 behind raw-file grep. Use CURRENT_BASELINES.md §2 for authoritative certified pool data.**)
-2. Read `knowledge/REVISION_HISTORY.md` for most recent certification state.
-3. **Do NOT rely on count from old reports** — every session must verify `question_state: "Certified"` count via direct raw-file grep:
-   ```
-   Select-String -Path pack_*_corrected.js -Pattern '"question_state": "Certified"' | Measure-Object | Select-Object -ExpandProperty Count
-   ```
-4. **Cross-registry reconciliation (T0):** Compare the raw-file grep Certified count against:
-   - `knowledge/CURRENT_BASELINES.md` §2 (Certified Pool)
-   - `knowledge/MASTER_QUESTION_REGISTRY.md` (Certified column)
-   - Any divergence >0 → halt and reconcile from raw source files. Raw pack files are the authoritative source.
-5. **Governance-critical hash verification (T0):** Verify SHA-256 hashes for all files in `knowledge/CURRENT_BASELINES.md` §5 against baseline. Any unexpected change → halt all certification operations.
-6. **Registry staleness check (T0):** Flag any derived registry >24 hours behind raw-file Certified count as STALE. Do not consume stale registries.
-7. Cross-check any open remediation proposals against their current state in source files.
-8. Do not skip ahead past documented stop conditions.
-9. **Prefer `task` agents over `delegate` for all work** — `delegate` has been observed to fail silently (completes in <1s with empty output) on this project's file sizes.
+### 9.1 Lane Selection
+
+Determine the lane at session start. If the session touches ANY Full Governance trigger, the entire session operates under Full Governance Lane.
+
+| Lane | Applies When |
+|------|-------------|
+| **Full Governance Lane** | Session edits any pack file, scored case file, `case_pack_*_corrected.js`, answer keys, `question_state`, certification status, learner-delivery safety logic, `CURRENT_BASELINES.md`, `DEFECT_LIBRARY.md`, `REVISION_HISTORY.md`, generated registries, or governance-critical validation/guard logic |
+| **Governance Light Lane** | Session works on app.js UI/UX (without altering content integrity), May coaching UX, `index_updated.html`, `styles.css`, dashboards, reports, smoke tests, helper scripts, read-only audits, planning, analysis, or prompt design — and does NOT modify pack/case content, answer keys, or certification state |
+
+### 9.2 Full Governance Lane Requirements
+
+| Requirement | When |
+|-------------|------|
+| `npm run preflight` | **Mandatory at T0** — before any write operation |
+| Backup-before-write | **Mandatory** per §3 for all pack/case file edits |
+| Raw evidence verification | **Mandatory** per §5 (Dual Verification) for all self-reported claims |
+| `npm run pipeline` | **Required at Tend** after content/regeneration work |
+| `knowledge/REVISION_HISTORY.md` entry | **Required** for content, certification, or governance changes per §4 |
+| `knowledge/DEFECT_LIBRARY.md` entry | **Required** for any newly discovered defect |
+| Destructive script authorization | **Required** per §3.1 — staged authorization, no exceptions |
+| Runtime governance checkpoints (Tmid) | **Required** per §13 for sessions >30 min or >3 agents |
+| Drift-detection response | **Required** per §13.1 for any CRITICAL or HIGH signal |
+
+### 9.3 Governance Light Lane Requirements
+
+| Requirement | When |
+|-------------|------|
+| `npm run preflight` | **Recommended** at T0 — catches stale state before UI/script work |
+| `npm run smoke` | **Mandatory at Tend** if app.js, HTML, CSS, or May coaching files were changed |
+| Backup-before-write | **Recommended** for app.js; not required for non-pack files |
+| REVISION_HISTORY entry | **Not required** unless a content-level defect is discovered |
+| DEFECT_LIBRARY entry | **Required only** if a new content defect is discovered |
+| Learner-pool protections | **Never weakened** — even in Light Lane, do not bypass delivery-pool safety checks |
+| Destructive scripts | **§3.1 still applies** — no deletion scripts without authorization |
+
+### 9.4 Session Startup Protocol
+
+1. **Determine lane** — check task scope against §9.1 triggers.
+2. **Read `knowledge/CURRENT_BASELINES.md` §2** for the authoritative certified pool snapshot.
+3. **Full Governance Lane:** Run `npm run preflight`. Verify 0 divergences before any write.
+4. **Governance Light Lane:** Optionally run `npm run preflight`. If any divergence is found, report it and ask the user before proceeding.
+5. **Both lanes:** Do NOT rely on count from old reports. Raw pack files are the authoritative source. Do not consume stale registries.
+6. **Both lanes:** Cross-check any open remediation proposals against their current state in source files.
+7. **Both lanes:** Prefer `task` agents over `delegate` — `delegate` fails silently on this project's file sizes.
+
+### 9.5 Session Closeout Protocol
+
+| Lane | Required Closing Actions |
+|------|--------------------------|
+| Full Governance | REVISION_HISTORY.md entry + DEFECT_LIBRARY.md if new defects found + `npm run pipeline` if content/regeneration work occurred |
+| Governance Light | `npm run smoke` if app/UI files changed; DEFECT_LIBRARY.md entry only if a content defect was discovered |
 
 ---
 
@@ -194,73 +239,82 @@ Two project-level skills are available in `.opencode/skills/`:
 
 ---
 
-## 12. No Staged Findings — Log Before Session Close
+## 12. Session Closeout
 
-**Any defect finding, audit result, or governance note that was discovered during a session must be logged to `DEFECT_LIBRARY.md` and/or `REVISION_HISTORY.md` before the discovering session closes.** No "staged for next session" deferrals are permitted.
+### 12.1 Full Governance Lane Closeout
 
-This rule exists because:
-- DL-019 (concurrent-write data loss) was discovered but the finding was stored in a session report only — the defect library had no entry until a later session wrote it
-- DL-020 (validator brace-matcher undercount) likewise sat in a session report without a defect library entry
-- The OPEN_ITEMS.md file was referenced but never created — the REVISION_HISTORY.md entry was self-contained by design but the intent to have a separate tracking file was lost
+Every Full Governance Lane session must produce at minimum a `knowledge/REVISION_HISTORY.md` entry as its closing action. Additionally:
 
-**Implementation:** Every session must produce at minimum a REVISION_HISTORY.md entry as its closing action. If a new defect was discovered (even if not remediated), it must be logged to DEFECT_LIBRARY.md with the next available DL-ID and Status: "Open." If a remediation action changed question content, it must be logged with before/after counts. If a new finding requires tracking across sessions (e.g., "Pack B Sections A/D are certification-ready once metadata is fixed"), it must be logged as a tracked note in DEFECT_LIBRARY.md — not left as chat output or a session-internal report alone.
+- New defects discovered must be logged to `knowledge/DEFECT_LIBRARY.md` with the next available DL-ID and Status: "Open."
+- Content changes (answer, explanation, distractor) must be logged with before/after counts.
+- Certification batches must list QuestionIDs, verification results, and counts.
+- Cross-session findings (e.g., "Pack B Sections A/D are certification-ready") must be logged as tracked notes in DEFECT_LIBRARY.md — not left as chat output alone.
+
+**No "staged for next session" deferrals are permitted.** Precedent: DL-019 (concurrent-write data loss) and DL-020 (validator undercount) were discovered but sat in session reports only — the defect library had no entry until later sessions wrote them.
+
+### 12.2 Governance Light Lane Closeout
+
+Governance Light Lane sessions do not require REVISION_HISTORY.md or DEFECT_LIBRARY.md entries unless they discover a content-level defect or certification-relevant finding. For pure app/UI, script, or read-only work: no logging ceremony is required. If a defect is found (e.g., a DL-037 logic inversion discovered during UI work), log it to DEFECT_LIBRARY.md.
 
 ---
 
-## 13. Runtime Governance — Multi-Agent and Long-Lived Sessions
+## 13. Runtime Governance — Full Governance Lane Only
 
-**Longer-lived sessions (>30 minutes or >3 agents) need runtime governance:** repeated checks along the execution path (not just at start/end) to ensure agents don't drift from policy.
+**The detailed runtime governance procedures below apply only to Full Governance Lane sessions.** Governance Light Lane sessions do not need Tmid checkpoints, G1–G5 reconciliation, or per-agent CAPA audits.
 
-### 13.1 T0 → Tmid → Tend Checkpoint Sequence
+For the complete runtime governance reference (drift-detection signals, checkpoint sequences, response paths), see `reports/SESSION53_LONGRUN_GOVERNANCE_EXECUTION.md`. The canonical G1–G5 gate definitions and decision logic are at `reports/SESSION31_RECONCILIATION_EXECUTION.md`.
 
-The standard pattern for any session exceeding 30 minutes or 3 agents. See `reports/SESSION53_LONGRUN_GOVERNANCE_EXECUTION.md` §C.2 for the full checklist.
+### 13.1 Drift-Detection Signals (Both Lanes)
 
-| Checkpoint | Timing | Minimum Checks |
-|-----------|--------|----------------|
-| **T0** | Session start | All 13 runtime hashes vs `knowledge/CURRENT_BASELINES.md` |
-| **Tmid** | ~30 min mark or after 2+ agents complete | Pack D CAPA (hash, parse-count, FD-045/FD-046, AD-075) + app.js hash |
-| **Tend** | Session close, before REVISION_HISTORY.md write | All 13 runtime hashes vs T0; G1–G5 reconciliation if any drift detected |
+These signals trigger intervention in either lane, but the response differs by severity. Full response paths are at `reports/SESSION53_LONGRUN_GOVERNANCE_EXECUTION.md` §D.2.
 
-If any checkpoint fails, halt all write agents and execute G1–G5 reconciliation before proceeding.
+| Signal | Severity | Full Lane Response | Light Lane Response |
+|--------|----------|--------------------|---------------------|
+| Unexpected hash change in any governance-critical file | CRITICAL | Halt all agents; spawn governance agent; run G1–G5 | Halt; report to user; do not proceed |
+| Pack parse-count change (not equal to 500/540) | CRITICAL | Halt all pack-write agents; re-parse via Function constructor | Halt; report — this should not happen in Light Lane |
+| Certified denominator mismatch | HIGH | Spawn ledger-reconciliation agent; verify via direct grep | Halt; report to user |
+| app.js hash mismatch | MEDIUM | Run Sync Anomaly Playbook | Report; user decides |
+| Agent self-report conflict (two agents report different counts) | MEDIUM | Independent third-agent verification; require QID-list evidence | Same — independent verification
 
-### 13.2 FD-045 in Long Sessions
+---
 
-- Any agent proposing Pack D changes must first call a "Baseline & CAPA Auditor" agent to run full CAPA checks (hash, parse-count, FD-045/FD-046 presence, AD-075 Certified) at T0 and Tend.
-- **No-op if CLOSED rule:** If FD-045 is CLOSED (hash `49C465E3...`, parse-count >= 500) and all checks PASS, the Pack D agent must skip repairs and return immediately.
-- If any CAPA check fails at any checkpoint, halt and escalate — do not autonomously repair.
+## 14. Authoring Priority
 
-### 13.3 app.js in Long Sessions
+The project's current authoring priority, in order:
 
-- For any long-running modification, spawn three separate agents (scoring, analytics, readiness) — each must confirm its layer matches the documented baseline before and after changes.
-- A governance agent must run the pre-write / post-write gate checklist at Tmid and Tend.
-- The Sync Anomaly Playbook (Session 52) is the standard response for any app.js hash mismatch: attribute → baseline-diff → classify → adopt-or-quarantine.
+1. **Content production** — Produce original, high-quality CMA Part 1 study content (MCQs and case studies) aligned to the IMA exam blueprint.
+2. **Quality protection** — Maintain exam alignment, explanation quality, accounting accuracy, and learner safety.
+3. **Efficiency** — Use governance to protect the first two goals, not to create generic bureaucracy or drag on low-risk work.
 
-### 13.4 Reconciliation in Long Sessions
+Governance exists to serve content integrity and learner safety. Every governance requirement should be traceable to one of these goals. If a governance step does not demonstrably protect content quality or learner safety, it belongs in the lighter lane.
 
-- Long-running reconciliation sessions must execute the Session 31 G1–G5 runbook at least twice (T0 and Tend), and partial gates (G1–G2) at Tmid.
-- Run gates in parallel agents where possible: G1/G2 in one agent, G3/G4/G5 in another.
-- Do not relax the continue/stop/escalate conditions from Session 31 — only adapt pack lists or document lists as needed.
+---
 
-### 13.5 Drift-Detection Signals
+## 15. Workflow Helpers
 
-The following signals trigger immediate governance intervention. Full response paths are documented at `reports/SESSION53_LONGRUN_GOVERNANCE_EXECUTION.md` §D.2.
+Three npm scripts are available for session workflow:
 
-| Signal | Severity | Immediate Action |
-|--------|----------|-----------------|
-| Unexpected hash change in any baseline file | CRITICAL | Halt all agents; spawn governance agent; run G1–G5 |
-| Pack parse-count change (not equal to 500) | CRITICAL | Halt all pack-write agents; re-parse via Function constructor |
-| Certified denominator mismatch | HIGH | Spawn ledger-reconciliation agent; verify via direct grep |
-| FD-045 or other critical QID missing | HIGH | Escalate to TIER 1 structural repair |
-| app.js hash mismatch | HIGH | Run Sync Anomaly Playbook |
-| Agent self-report conflict (two agents report different counts) | MEDIUM | Independent third-agent verification; require QID-list evidence |
+| Command | What It Does | When To Use |
+|---------|-------------|-------------|
+| `npm run preflight` | QID counts, parse check, certified counts, cross-check against CURRENT_BASELINES.md, governance guard test suite | **Full Lane: T0 mandatory.** Light Lane: recommended. |
+| `npm run smoke` | Playwright UI smoke test — verifies app loads, MCQ banks present, May coaching layer active | **Light Lane: Tend mandatory** after app/UI changes. Full Lane: optional. |
+| `npm run pipeline` | validate → build-registry → dashboard (full content validation + registry rebuild + dashboard) | **Full Lane: Tend required** after content/regeneration work. |
 
-### 13.6 Key Reference Documents for Runtime Governance
+All three scripts exit 0 on pass, non-zero on failure. They are READ-ONLY and safe to run at any time.
 
-| Document | Location | Purpose |
-|----------|----------|---------|
-| Session 53 Execution Report | `reports/SESSION53_LONGRUN_GOVERNANCE_EXECUTION.md` | Full runtime governance procedures, drift signals, response paths, checklists |
-| Session 31 Reconciliation Runbook | `reports/SESSION31_RECONCILIATION_EXECUTION.md` | Canonical G1–G5 gate definitions and decision logic |
-| Governance & Risk Register | `reports/GOVERNANCE_AND_RISK_REGISTER_CONSOLIDATED.md` | §6 Long-Run CAPA Verification, §8 Reconciliation Schedule |
-| Current Baselines | `knowledge/CURRENT_BASELINES.md` | All 13 runtime-critical file hashes |
-| FD-045 Cross-Session Reference | `reports/FD045_CROSS_SESSION_REFERENCE.md` | FD-045 gate wording and CAPA control definitions |
-| Session 52 Governance Follow-Up | `reports/SESSION52_GOVERNANCE_FOLLOWUP_EXECUTION.md` | FD-045/app.js/runbook prompt-reuse rules, Sync Anomaly Playbook |
+---
+
+## 16. Session Scaffold (Nested Prompt Chains)
+
+For structured, repeatable sessions (UI polish, audit-implement-verify, governance closeouts), use the 4-stage nested prompt chain defined in `knowledge/SESSION_SCAFFOLD.md`:
+
+1. **Planner** — defines scope, lane, files, success criteria
+2. **Auditor** — inspects current state, identifies safe changes, reports risks
+3. **Implementer** — applies only approved changes, smallest effective edits
+4. **Verifier** — runs smoke/syntax/checks, confirms no boundary violations
+
+**Operating rule:** The chain may pass work forward, but it may not expand its own authority. No downstream agent may widen file scope or convert Light Lane to Full Lane.
+
+The scaffold is best for Light Lane UI/May work and Full Lane content-audit sessions. It is not appropriate for novel architecture or open-ended autonomous coding.
+
+All three scripts exit 0 on pass, non-zero on failure. They are READ-ONLY and safe to run at any time.
