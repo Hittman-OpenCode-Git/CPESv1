@@ -6207,7 +6207,7 @@ const May = {
 
     // ── Developer-facing export: download all pilot data as JSON ──
     exportMayPilotData() {
-        let payload = {
+        var payload = {
             generatedAt: new Date().toISOString(),
             environment: 'pre-production',
             syntheticData: true,
@@ -6224,6 +6224,10 @@ const May = {
         };
         try { payload.selectedLearnerId = localStorage.getItem('cmaMaySelectedLearnerId'); } catch (e) {}
         try { payload.studentRoll = JSON.parse(localStorage.getItem('cmaMayStudentRoll') || '[]'); } catch (e) {}
+        try { payload.telemetrySnapshot = JSON.parse(localStorage.getItem('cmaMayPilotTelemetry') || '{}'); } catch (e) {}
+        try { payload.telemetryArchive = JSON.parse(localStorage.getItem('cmaMayPilotTelemetryArchive') || '[]'); } catch (e) {}
+        try { payload.effectivenessScorecard = typeof MayEffectivenessScorer !== 'undefined' ? MayEffectivenessScorer.compute() : null; } catch (e) {}
+        try { payload.adoptionFunnel = typeof MayEffectivenessScorer !== 'undefined' ? MayEffectivenessScorer.adoptionFunnel() : null; } catch (e) {}
 
         this._logSessionTelemetry('export_performed', { generatedAt: payload.generatedAt });
 
@@ -6243,7 +6247,8 @@ const May = {
     // ── Developer-facing reset: clear all S115 localStorage keys and in-memory logs ──
     clearPilotData() {
         let keys = ['cmaMayStudentRoll', 'cmaMaySelectedLearnerId', 'cmaMayPilotUsageLog',
-                    'cmaMaySafetyLog', 'cmaMayGateLog', 'cmaMaySessionTelemetry'];
+                    'cmaMaySafetyLog', 'cmaMayGateLog', 'cmaMaySessionTelemetry',
+                    'cmaMayPilotTelemetry', 'cmaMayPilotTelemetrySnapshot', 'cmaMayPilotTelemetryArchive'];
         keys.forEach(k => { try { localStorage.removeItem(k); } catch (e) {} });
         this.context._pilotUsageLog = [];
         this.context._safetyLog = [];

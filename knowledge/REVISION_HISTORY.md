@@ -29166,4 +29166,68 @@ P1-EC-017, EC-033, EC-034, EC-035, EC-048, EC-056.
 - Pack D FD discovered but deferred — requires separate audit and authorization path.
 - P2/P3 sections (Pack D BD, ED, etc.) remain queued for a future recovery wave.
 
+## SESSION 102P — Pack D FD DL-016 Forensic Reconstruction & Repair — 2026-07-31
+
+**Type:** WRITE (pack_d_corrected.js — Full Governance Lane)
+**Backup:** `backups/pack_d_corrected.js.bak-20260731S102P` (2,418,158 bytes)
+**Preflight:** PASS (0 divergences, 2451 Certified, Pack D 500/500 parse OK)
+
+### Summary
+
+Phase 0 forensic reconstruction of three Pack D Section F items (P1-FD-040, P1-FD-046, P1-FD-050) identified as DL-016 rotation artifacts from the S899 Phase 1 replacement wave. All three had ExplanationWrong fields describing a different item's topic rather than their own learner-facing content.
+
+Forensic report: `reports/S102P_PHASE0_RECONSTRUCTION.md`
+
+### P1-FD-040 — HIGH Confidence — Repaired (3 EW fields)
+
+**Topic:** Structured vs. unstructured data (Orchardgate)
+**Content:** Internally consistent — Stem, Choices (CC=D), ExplanationCorrect all match data categorization topic.
+**Defect:** EW_A/EW_B/EW_C described FD-041's cybersecurity authentication topic (DL-016 +1 shift).
+**Evidence:** Reference EW texts from FD-036 EW_B (structured data), FD-037 EW_C (metadata), FD-037 EW_D (master data) — all in the same rotation group.
+**Repair:**
+- EW_A: Replaced auth/SMS text → structured data distractor (why A is wrong)
+- EW_B: Replaced auth/biometric text → metadata distractor (why B is wrong)
+- EW_C: Replaced auth/FIDO2 text → master data distractor (why C is wrong)
+- EW_D: "" (CC slot, unchanged, DL-008 clean)
+- All non-CC slots now non-empty (DL-026 clean)
+- DifficultyScore: 4, CognitiveLevel: "Analyze" — unchanged
+
+### P1-FD-046 — LOW Confidence — Isolated (3 EW fields cleared)
+
+**Topic:** SCRATCH AUTHOR — no content block exists. Original DL-012 clone (MDM concept) was targeted for S899 Evaluate/Very Difficult replacement but content was never authored.
+**Defect:** EW_A/EW_B/EW_C described FD-047's MDM merger strategy topic (DL-016 +1 shift).
+**Action:** Cleared EW_A/EW_B/EW_C to "" (stale text removal only — no content invention per governance decision).
+**Outcome:** Item remains structurally incomplete. Requires full content authoring (SCRATCH AUTHOR) in a future session.
+
+### P1-FD-050 — MEDIUM Confidence — Repaired (3 EW fields + DifficultyScore/CognitiveLevel recalibration)
+
+**Topic:** Master data management concept (Ambervale)
+**Content:** Internally consistent — Stem, Choices (CC=B), ExplanationCorrect all match MDM concept.
+**Defect 1:** EW_A and EW_C described FD-051's RPA bot governance topic (DL-016 +1 shift). EW_D was empty (missing distractor text).
+**Defect 2 (DL-031):** DifficultyScore=5 ("Very Difficult") and CognitiveLevel="Evaluate" were from the intended S899 RPA governance replacement — wildly mismatched to the actual MDM definition-match content.
+**Evidence:** Reference EW texts from P1-FD-049 (Certified, same rotation group) — EW_C (predictive analytics), EW_D (data mining), EW_B (RPA).
+**Repair:**
+- EW_A: Replaced RPA bot text → predictive analytics distractor (adapted from FD-049 EW_C)
+- EW_C: Replaced process documentation text → data mining distractor (adapted from FD-049 EW_D)
+- EW_D: Replaced empty → RPA distractor (adapted from FD-049 EW_B)
+- EW_B: "" (CC slot, unchanged, DL-008 clean)
+- DifficultyScore: 5 → 2 (DL-031 correction)
+- CognitiveLevel: "Evaluate" → "Understand" (DL-031 correction)
+- All non-CC slots now non-empty (DL-026 clean)
+
+### Verification
+
+- Preflight: PASS (0 divergences, Pack D 500/500 parse OK)
+- QID count unchanged: 500
+- DL-008: All 3 items clean (CC slots empty)
+- DL-026: FD-040 clean (3/3 non-CC EW populated), FD-050 clean (3/3 non-CC EW populated), FD-046 exempt (no content block)
+- Governance guard: 54/54 PASS
+- Certified total unchanged: 2451 (question_state unchanged on all 3 items — all "Active")
+
+### Notes
+
+- FD-046 remains the only unresolved item — no content block, no CC, marked SCRATCH AUTHOR. Needs future content authoring session.
+- FD-050's upgrade_note field still references the original S899 intent ("Evaluate/Very Difficult replacement") which no longer matches the recalibrated metadata. This is cosmetic — the note preserves provenance.
+- All FD-040 EW reconstructions sourced from within ±300 lines (same rotation group siblings FD-036, FD-037).
+- All FD-050 EW reconstructions sourced from FD-049 (Certified) with choice-position mapping verified.
 
