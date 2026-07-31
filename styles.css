@@ -4191,3 +4191,70 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   border-color: #6366f1;
   color: #e5e7eb;
 }
+
+/* ── MAY-027 — Effectiveness Scorecard ── */
+.may-effect-panel {
+  margin: 12px 0;
+  padding: 0 12px;
+}
+.may-effect-composite {
+  float: right;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.may-effect-verdict {
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin: 4px 0 8px 0;
+}
+.may-effect-pending { color: var(--text-secondary); font-size: 0.72rem; margin: 4px 0 8px 0; }
+.may-effect-meta { color: var(--text-secondary); font-size: 0.65rem; margin: 8px 0 0 0; }
+
+.may-effect-funnel { margin: 8px 0; }
+.may-effect-funnel-title { font-size: 0.72rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.may-effect-funnel-row { display: flex; align-items: center; gap: 6px; padding: 2px 0; }
+.may-effect-funnel-label { font-size: 0.68rem; color: var(--text-secondary); min-width: 60px; flex-shrink: 0; }
+.may-effect-funnel-bar { flex: 1; height: 5px; background: var(--bg-secondary); border-radius: 3px; overflow: hidden; }
+.may-effect-funnel-bar i { display: block; height: 100%; background: var(--accent); border-radius: 3px; min-width: 3px; }
+.may-effect-funnel-val { font-size: 0.7rem; color: var(--text-primary); font-weight: 600; min-width: 24px; text-align: right; }
+
+.may-effect-dim {
+  border-radius: 6px;
+  padding: 6px 8px;
+  margin: 4px 0;
+  font-size: 0.7rem;
+}
+.may-effect-dim-header { display: flex; justify-content: space-between; align-items: center; }
+.may-effect-dim-name { color: var(--text-primary); font-weight: 600; }
+.may-effect-dim-score { font-weight: 700; font-size: 0.8rem; }
+.may-effect-dim-label { color: var(--text-secondary); font-size: 0.65rem; margin-top: 2px; }
+
+.may-effect-strong { background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); }
+.may-effect-strong .may-effect-dim-score { color: #10b981; }
+.may-effect-strong.may-effect-composite,
+.may-effect-strong.may-effect-verdict { color: #10b981; background: rgba(16, 185, 129, 0.12); }
+
+.may-effect-adequate { background: rgba(59, 130, 246, 0.06); border: 1px solid rgba(59, 130, 246, 0.15); }
+.may-effect-adequate .may-effect-dim-score { color: #3b82f6; }
+.may-effect-adequate.may-effect-composite,
+.may-effect-adequate.may-effect-verdict { color: #3b82f6; background: rgba(59, 130, 246, 0.1); }
+
+.may-effect-weak { background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); }
+.may-effect-weak .may-effect-dim-score { color: #f59e0b; }
+.may-effect-weak.may-effect-composite,
+.may-effect-weak.may-effect-verdict { color: #f59e0b; background: rgba(245, 158, 11, 0.12); }
+
+.may-effect-failing { background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.2); }
+.may-effect-failing .may-effect-dim-score { color: #ef4444; }
+.may-effect-failing.may-effect-composite,
+.may-effect-failing.may-effect-verdict { color: #ef4444; background: rgba(239, 68, 68, 0.12); }
+
+.may-effect-muted { background: var(--bg-secondary); border: 1px solid var(--border-color); }
+.may-effect-muted .may-effect-dim-score { color: var(--text-secondary); }
+.may-effect-muted.may-effect-composite,
+.may-effect-muted.may-effect-verdict { color: var(--text-secondary); background: var(--bg-secondary); }
