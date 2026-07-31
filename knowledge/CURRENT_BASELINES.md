@@ -3,7 +3,7 @@
 **Purpose:** Single source of truth for all runtime-critical file baselines — SHA-256 hashes, sizes, provenance, and structural notes.
 
 **Generated:** 2026-07-24 — Session 20 (Governance & Structure Cleanup)
-**Updated:** 2026-07-28 — S377 (rebuild_baselines Baseline Reconciliation Board — Certified Pool recaptured via direct grep: 2,298→2,417. Pack A: 481→500 (S892 closure confirmed). Pack C: 388→438 (+50 from S853 WAVE_A). Pack D: 389→439 (+50 from S853 WAVE_A). Packs B, E unchanged. Packs C+D hashes recaptured (authorized drift). DL-035 added to §3 HIGH table. DL-021 status corrected to RESOLVED per S828.)
+**Updated:** 2026-07-31 — S120 (May Persistence Consolidation — 4 governance-critical files re-baselined. S120 SSOT architecture: all May write paths converge on cmaProfile2026 via patchMayField(). save() pulls fresh May data before persist. init() gated with skipExisting. clearPilotData() now clears profile May fields. Governance guard 66/66 PASS. Preflight 0 divergences. Certified pool 2,451.)
 **Prior updates:** S905–S907 (G1–G5 Drift Reconciliation & Full 5-Pack Re-Baseline), 2026-07-27 — S227 (C5 SHA-256 capture + C7 drift verification. Packs A-D re-baselined post-S865-S868 Cohort C + S221 governance upgrade authorized drift. All S220 recertification conditions MET.), Session 374 Phase 0 (Packs C+D re-baselined post-S371/S853/S826/S829 authorized drift), Session 811 (Framework v2 Wave 1), Session 726 (Phantom Baseline Remediation), Session 537 (ENHANCED_CASE_BASE certification), Session 530 (Wave 0 Remediation)
 **Status:** Active
 **Authority:** PROJECT_CONSTITUTION.md
@@ -18,7 +18,7 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 
 | File | SHA-256 | Size (bytes) | Last Modified | Provenance |
 |------|---------|-------------|---------------|------------|
-| `app.js` | `5A4338C6251171F29AE7124663B8F72C38E0D5987C65F1884FD87AF206BFFF9A` | 209,937 | 2026-07-25 22:17 | S64–S530 runtime governance development. DL-022 null-guard fix (Insertions 1+2). G4 hint-count integration. |
+| `app.js` | `D390F6E66A86789E57434516673F99792AE0CC14B9B8715AF1B99B6D562E58A0` | 309,932 | 2026-07-31 21:05 | rebuild_ **S120 — May Persistence Consolidation (SSOT).** Removed stale syncToMayStorage() push-back on save/init. Added patchMayField() SSOT helper. save() now calls syncFromMayStorage() before persisting. May writes converge on cmaProfile2026. |
 | `index_updated.html` | `586396F940099B007D07276A1D159E964F298E2126D890A50449CA3378418755` | 6,090 | 2026-07-25 16:44 | May coaching layer script tags added (may-learner-state.js, may-core.js). |
 | `styles.css` | `F0C4DFCED01065417E56AA7F1057911A2271C6A697927A0A757D5EC9D88AC2D6` | 68,696 | 2026-07-25 22:14 | S64+ style updates for May coaching UI. |
 
@@ -26,8 +26,8 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 
 | File | SHA-256 | Size (bytes) | Last Modified | Provenance |
 |------|---------|-------------|---------------|------------|
-| `may-core.js` | `183D2E6BECBEF3103DA42FB7B1B0B7E0610DE94E4E36FDE80B77122B89B0DD13` | 344,883 | 2026-07-26 16:04 | **S120–S131 May Coaching Layer — core engine.** Authorized runtime exception (Constitution §11.4). Referenced by `index_updated.html` line 13. |
-| `may-learner-state.js` | `BEE72B86A97D88CC5C98805EC41D37DCC89795044817ECEADC29A95328841EBC` | 110,240 | 2026-07-26 16:17 | **S120–S131 May Coaching Layer — learner state.** Authorized runtime exception (Constitution §11.4). Referenced by `index_updated.html` line 11. |
+| `may-core.js` | `11F3A2AB027E67FCD5782BD6B6C44801923E477CF5AB193263423AA33B8F1AAB` | 377,728 | 2026-07-31 21:05 | rebuild_ **S120–S131 May Coaching Layer — core engine.** Authorized runtime exception (Constitution §11.4). Referenced by `index_updated.html` line 13. S120: SSOT persistence — all _persist*() functions now write to cmaProfile2026 via patchMayField(). |
+| `may-learner-state.js` | `18F3C753B6F986C0E5ABF3B0B025FB705D4415A49C975D49D84C027BB32E3CBB` | 137,429 | 2026-07-31 21:05 | rebuild_ **S120–S131 May Coaching Layer — learner state.** Authorized runtime exception (Constitution §11.4). Referenced by `index_updated.html` line 11. S120: save() and saveStudentRoll() now write to cmaProfile2026 via patchMayField(). |
 
 ### MCQ Pack Files
 
@@ -172,8 +172,9 @@ These files directly affect governance enforcement, certification integrity, and
 | 2026-07-28 | **Session 916–918 (Case Pack 3×25 Reconsolidation)** | 3 new case_pack files + index_updated.html. Hash for index_updated.html: E0B7BBAAE2B6B4C3892FCF3E316DC3D88E21AB6618A05A8567B33AB66335D7D3 (6,033 bytes). 5 legacy scored_cases files archived (backups preserved S916). Governance guard: 51/51 PASS. | Yes — 3 new files registered, 5 legacy archived |
 | 2026-07-28 | **Session 923 (Pack C Case Count Resolution)** | Case pack audit confirmed all 3 packs at 25 cases each (not 27 for Pack C as baseline erroneously stated). The "27 cases" figure was a documentation counting error — section distribution (A3+B4+C4+D4+E5+F5=25) and file header ("25 Cases") both confirm 25. SHA-256 hash unchanged from S916 baseline. Governance guard: 51/51 PASS. No file content changes needed. | Yes — documentation error corrected, files unchanged |
 | 2026-07-28 | **Session 888 (S885–S888 Group 2 Post-Reconciliation Content Expansion)** | rebuild_baselines S888: 5 of 5 pack files verified — SHA-256 hashes recaptured via Get-FileHash. Packs A, B, D, E drifted from S880/S907 baselines — AUTHORIZED (S886: 20 cognitive-level upgrades across Sections C/D). Pack C: CONFIRMED STABLE (hash match against S880 baseline). Governance guard: 51/51 PASS. Certified pool: 2,298 (0 drift). QID counts: 500/500/500/500/540. All halt conditions: PASS. | Yes — 4 files re-baselined (A, B, D, E), 1 stable (C) |
+| 2026-07-31 | **Session 120 (S120 May Persistence Consolidation)** | 4 governance-critical files re-baselined — AUTHORIZED. app.js (D390F6E6), may-core.js (11F3A2AB), may-learner-state.js (18F3C753), may-coaching-orchestrator.js (E0C38E4C). S120: SSOT architecture — all May write paths converge on cmaProfile2026 via patchMayField(). save() pulls fresh May data before persist. init() gated (skipExisting). clearPilotData() now clears profile May fields. Governance guard: 66/66 PASS. Preflight: 0 divergences. Certified pool: 2,451 (unchanged). | Yes — 4 files re-baselined |
 | 2026-07-28 | **Session 377 (S377 Baseline Reconciliation Board)** | rebuild_baselines S377: Pack C+D hashes recaptured (authorized drift from S853 WAVE_A certification). §2 Certified Pool recaptured via direct grep: 2,298→2,417. Pack A: 481→500 (S892 closure). Pack C: 388→438 (+50 S853). Pack D: 389→439 (+50 S853). Packs B, E stable. §3 HIGH table: DL-035 added, DL-021 status corrected to RESOLVED (S828). Governance guard: 51/51 PASS. | Yes — 2 files re-baselined (C, D), 3 stable (A, B, E) |
 
 ---
 
-*Last updated: 2026-07-28 — rebuild_baselines_s377 (S377 Baseline Reconciliation Board. Certified Pool recaptured via direct grep: 2,298→2,417. Pack A: 481→500. Pack C: 388→438 (+50 S853). Pack D: 389→439 (+50 S853). Packs B+E stable. §3 DL-035 added (IN PROGRESS). §3 DL-021 corrected to RESOLVED (S828). Packs C+D hashes recaptured. Governance guard 51/51 PASS.)*
+*Last updated: 2026-07-31 — rebuild_ S120 (May Persistence Consolidation. 4 governance-critical files re-baselined. SSOT architecture: all May writes converge on cmaProfile2026. save() pulls fresh May data. init() gated with skipExisting. clearPilotData() clears profile May fields. Governance guard 66/66 PASS. Preflight 0 divergences. Certified pool 2,451.)*

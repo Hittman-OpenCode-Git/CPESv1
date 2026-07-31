@@ -17,13 +17,14 @@
  * RULE 9  (BLOCK) — Choice binary lead-in polarity mismatch (DL-037 enforcement)
  * RULE 10 (BLOCK) — non-CorrectChoice ExplanationWrong slots must be present and non-empty (DL-021 enforcement)
  * RULE 11 (BLOCK) — Cognitive classification gates (AF-3/4/5) — S109P
+ * RULE 12 (BLOCK) — Cognitive-First Assignment (cognitive relabeling without content change) — S121
  */
 
 const BLOCK_AUTH_RE = /BLOCK-AUTHORIZED|batch-authorized|AUTHORIZED-BLOCK/i;
 const RECOMPUTED_RE = /recomputed|independently verified|independently recalculated|re-verified|recomputation verified/i;
 const MAX_QUESTIONS = 30;
 
-const SOURCE_FILE_RE = /^(pack_[a-e]_corrected\.js|scored_cases\d*\.js)$/i;
+const SOURCE_FILE_RE = /^(pack_[a-e]_corrected\.js|scored_cases\d*\.js|case_pack_\d+_corrected\.js)$/i;
 
 // RULE 7: Derived registry paths — must NOT be hand-edited
 const DERIVED_REGISTRY_RE = /(registry[\\\/](packs|domains|cases)[\\\/]|MasterQuestionRegistry\.csv$|MASTER_QUESTION_REGISTRY\.md$|SESSION_STATUS_\d{4}-\d{2}-\d{2}\.md$|CURRENT_BASELINES\.md$|DEFECT_MANIFEST_DL008_DL026\.json$)/i;
@@ -367,6 +368,47 @@ export const GovernanceGuard = async ({ client }) => {
           "  AF-5: DifficultyScore too low for claimed CognitiveLevel\n" +
           "Override: include BLOCK-AUTHORIZED marker with certification evidence."
         );
+      }
+
+      // ── RULE 12: BLOCK cognitive relabeling without content change ──
+      // Cognitive-First Assignment (S121). If a pack-file edit changes CognitiveLevel
+      // but does NOT also change Stem, Choices, ExplanationCorrect, or any
+      // ExplanationWrong field, BLOCK the edit. Cognitive gaps must be filled by
+      // authoring new content at the target level, not by relabeling existing items.
+      if (tool === "edit" && SOURCE_FILE_RE.test(basename(filePath))) {
+        const oldCL = (oldContent.match(/"CognitiveLevel"\s*:\s*"([^"]+)"/) || [])[1];
+        const newCL = (newContent.match(/"CognitiveLevel"\s*:\s*"([^"]+)"/) || [])[1];
+        if (oldCL && newCL && oldCL !== newCL) {
+          const contentFields = ["Stem", "Choices", "ExplanationCorrect",
+            "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD"];
+          const contentChanged = contentFields.some(f => {
+            const r = new RegExp('"' + f.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '"');
+            const hadOld = r.test(oldContent);
+            const hadNew = r.test(newContent);
+            if (!hadOld || !hadNew) return false;
+            const valRe = new RegExp('"' + f.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '"\\s*:\\s*');
+            const oldIdx = oldContent.search(valRe);
+            const newIdx = newContent.search(valRe);
+            if (oldIdx === -1 || newIdx === -1) return false;
+            const oldSlice = oldContent.substring(oldIdx, oldIdx + 200);
+            const newSlice = newContent.substring(newIdx, newIdx + 200);
+            return oldSlice !== newSlice;
+          });
+          if (!contentChanged) {
+            throw new Error(
+              `GOVERNANCE RULE 12 — BLOCKED (Cognitive-First Assignment)\n` +
+              `CognitiveLevel changed from "${oldCL}" to "${newCL}" but no content fields changed.\n\n` +
+              "Per S121 S121_PORTFOLIO_TARGETS.md §5 (Rule 12):\n" +
+              "  Cognitive level must be determined by question demand, not portfolio gaps.\n" +
+              "  Prohibited: changing CognitiveLevel without changing question content.\n" +
+              "  Required: author new content at the target level, or change the content\n" +
+              "  (Stem, Choices, ExplanationCorrect, or ExplanationWrong) to justify\n" +
+              "  a higher cognitive classification.\n" +
+              "Override: include BLOCK-AUTHORIZED marker with documented independent\n" +
+              "cognitive review confirming the reclassification is a correction, not inflation."
+            );
+          }
+        }
       }
 
       // ── RULE 5: BLOCK >30 question objects without auth ───────

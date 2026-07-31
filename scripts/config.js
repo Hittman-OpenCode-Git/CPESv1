@@ -393,6 +393,8 @@ module.exports = {
 
         "BlueprintValidator",
 
+        "Part2BlueprintValidator",
+
         "DifficultyValidator",
 
         "ReferenceValidator",

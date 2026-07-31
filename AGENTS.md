@@ -160,6 +160,14 @@ Before any live simulation test:
 | DL-008 sweep closeout | `reports/defect_sweeps/DL-008_SWEEP_CLOSEOUT.md` | 539-occurrence closeout |
 | DL-008 re-contamination | `reports/defect_sweeps/DL008_RECONTAMINATION_SCAN.md` | 14-item Wave 1 defect (FIXED) |
 | DL-010 scan | `reports/defect_sweeps/DL010_SCAN_REPORT.md` | Misassigned explanation scan |
+| S121 Portfolio Targets | `knowledge/S121_PORTFOLIO_TARGETS.md` | Immutable difficulty, cognitive, and answer-position targets; Rule 12 governance policy |
+| S122 Gold Standard Library | `reports/S122_GOLD_STANDARD_LIBRARY.md` | 100 top Part 1 items (Analyze + Evaluate + Difficulty-5 + Technology) |
+| S122 False Positive Library | `reports/S122_FALSE_POSITIVE_LIBRARY.md` | 28 cognitive-label overstatement exemplars across 5 categories |
+| S122 Analyze Patterns | `reports/S122_ANALYZE_PATTERNS.md` | 8 reusable Analyze pattern templates for Part 2 authoring |
+| S122 Evaluate Patterns | `reports/S122_EVALUATE_PATTERNS.md` | 8 reusable Evaluate pattern templates for Part 2 authoring |
+| S122 Executive Summary | `reports/S122_EXECUTIVE_SUMMARY.md` | Part 1 Excellence & Benchmarking Program overview |
+| S122 Section Scorecard | `reports/S122_SECTION_SCORECARD.md` | 30-section quality scorecard across 6 dimensions |
+| G02 Governance Hardening | `knowledge/G02_GOVERNANCE_HARDENING.md` | Permanent institutional controls from Quality Recovery program lessons |
 
 ---
 
@@ -223,19 +231,40 @@ Determine the lane at session start. If the session touches ANY Full Governance 
 
 ## 10. Skills
 
-Two project-level skills are available in `.opencode/skills/`:
+Three project-level skills are available in `.opencode/skills/`:
 
 | Skill | File | Purpose |
 |-------|------|---------|
 | `reconciliation-audit` | `.opencode/skills/reconciliation-audit.md` | Cross-checks self-reported certification claims against raw file/line evidence |
 | `pre-delivery-safety-check` | `.opencode/skills/pre-delivery-safety-check.md` | Confirms delivery pool only pulls "Certified" items; flags known-defective QIDs |
+| `content-authoring` | `.opencode/skills/content-authoring.md` | Part 2 content creation: blueprint taxonomy, CAQS workflow, distractor design, cognitive calibration, formula integration, governance compliance |
 
 ---
 
-## 11. External References
+## 11. References
+
+### 11.1 External References
 
 - IMA CMA Exam Content Specification Outline: official IMA blueprint (the authoritative external standard — not an internal document)
 - OpenCode plugin documentation: `https://opencode.ai` (for plugin behavior clarification)
+
+### 11.2 Approved Internal Reference Libraries
+
+The following S122 deliverables are institutionalized as approved reference materials for all future Part 2 authoring. Part 2 authors should consult these before labeling any item Analyze or Evaluate, and should use the pattern catalogs as structural templates for new higher-order items.
+
+| Reference | File | Purpose |
+|-----------|------|---------|
+| Gold Standard Library | `reports/S122_GOLD_STANDARD_LIBRARY.md` | 100 exemplar items demonstrating genuine Analyze, Evaluate, Difficulty-5, and Technology content. Reference for "what good looks like." |
+| False Positive Library | `reports/S122_FALSE_POSITIVE_LIBRARY.md` | 28 concrete examples of cognitive-label overstatement. Used to train authors to recognize the 5 most common inflation patterns before assigning labels. |
+| Analyze Pattern Catalog | `reports/S122_ANALYZE_PATTERNS.md` | 8 reusable structural templates for Analyze items — variance decomposition, trend diagnosis, cause-effect attribution, etc. Each pattern includes structure, distractor strategy, and exemplar QIDs. |
+| Evaluate Pattern Catalog | `reports/S122_EVALUATE_PATTERNS.md` | 8 reusable structural templates for Evaluate items — trade-off analysis, constraint optimization, capital allocation, technology governance, etc. Each pattern includes structure, distractor strategy, and exemplar QIDs. |
+
+**Authoring rule:** Before labeling any item Analyze or Evaluate, authors must verify:
+1. **Definition-match check** — Stem-to-correct-choice lexical overlap < 40% (AF-A1, AF-E1)
+2. **Stakeholder check (Evaluate)** — Named decision-maker with a judgment call
+3. **Alternative quality (Evaluate)** — At least 2 defensible choices
+4. **Decomposition check (Analyze)** — Item requires breaking down into constituent parts
+5. **Difficulty floor** — DifficultyScore ≥ 3 for Analyze, ≥ 4 for Evaluate
 
 ---
 
@@ -318,3 +347,52 @@ For structured, repeatable sessions (UI polish, audit-implement-verify, governan
 The scaffold is best for Light Lane UI/May work and Full Lane content-audit sessions. It is not appropriate for novel architecture or open-ended autonomous coding.
 
 All three scripts exit 0 on pass, non-zero on failure. They are READ-ONLY and safe to run at any time.
+
+---
+
+## 17. Portfolio Governance
+
+**Effective:** Post-S122 (2026-07-31). Applies to Part 1 and Part 2 content production.
+
+### 17.1 Operating Principle
+
+**Cognitive level is determined by question demand, not portfolio gaps.** This principle was formalized as Rule 12 in `governance-guard.js` and is fully aligned with S121_PORTFOLIO_TARGETS.md.
+
+Portfolio distribution targets (difficulty, cognitive level, domain coverage, LOS coverage, correct-choice position) are set before authoring. The current portfolio is measured against them. Where gaps exist, the only authorized remediation is:
+
+- **Authoring new content** at the required level
+- **Do NOT relabel** existing items to fill a distribution gap
+
+### 17.2 Continuous Monitoring
+
+The following distributions must be monitored at the cadences specified in S121_PORTFOLIO_TARGETS.md §6:
+
+| Distribution | Tool | Cadence |
+|--------------|------|---------|
+| Difficulty (per-pack) | `scripts/s121_portfolio_dashboard.js` | Every content wave |
+| Cognitive level (per-domain) | `scripts/s121_portfolio_dashboard.js` | Every content wave |
+| Answer position (per-section) | `scripts/s121_portfolio_dashboard.js` | Pre-certification |
+| Domain coverage | Registry cross-check | Quarterly |
+| LOS coverage | Blueprint traceability matrix | Quarterly |
+
+### 17.3 Gap Resolution Rule
+
+When monitoring reveals a gap against S121 targets:
+
+1. **Measure** the gap against the immutable targets at `knowledge/S121_PORTFOLIO_TARGETS.md`
+2. **Identify** the specific sections and cognitive levels where coverage is below target
+3. **Author** new items targeting the underweight categories
+4. **Verify** the item's cognitive classification against S122 reference patterns BEFORE assigning a label
+5. **Log** the gap and the authored QIDs in the next authoring wave plan
+
+**Precedent:** Part 1 accumulated a 58.7% cognitive misclassification rate (309 of 528 labeled HO items) because the original template pipeline assigned cognitive labels by rotation position rather than by actual question demand. The recovery program (S92P–S109P) required 6+ Full Governance Lane sessions to correct — far more expensive than prevention would have been. This rule exists to prevent recurrence in Part 2.
+
+### 17.4 S122 Institutionalization
+
+The S122 Part 1 Excellence & Benchmarking Program deliverables are permanent institutional references. Before labeling any item Analyze or Evaluate, consult:
+
+1. **Gold Standard Library** — "What does a genuine Analyze/Evaluate item look like?"
+2. **False Positive Library** — "What are the 5 most common inflation patterns?"
+3. **Analyze/Evaluate Pattern Catalogs** — "How should I structure this item?"
+
+Full details at AGENTS.md §11.2 (Approved Internal Reference Libraries).

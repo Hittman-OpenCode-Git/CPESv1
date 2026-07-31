@@ -4546,7 +4546,7 @@ var MCQ_BANK_A = [
 		"ExplanationWrongD": "Variable overhead produces the smallest profit impact ($44,400) of the four assumptions. The argument that overhead rates are difficult to forecast is a general forecasting observation, not a conclusion from the sensitivity analysis. Sensitivity analysis measures what happens when an assumption is wrong — not how likely it is to be wrong. Even if VOH is more difficult to forecast, its relatively small profit sensitivity means that being wrong about VOH has less budget impact than being wrong about volume, lumber, or labor. Profit sensitivity, not forecast difficulty, determines which assumption is most critical to the budget's reliability.",
 		"question_state": "Certified",
 		"DifficultyScore": 4,
-		"CognitiveLevel": "Analyze"
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -14317,7 +14317,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "service department direct method",
 		"UniqueConceptKey": "D-009-service-department-direct-method",
 		"LOSTag": "D.2 Costing systems",
-		"Difficulty": "Moderate",
+		"Difficulty": "Difficult",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "Crescent Manufacturing has two service departments (IT: $120,000; HR: $80,000) and two production departments (Assembly and Finishing). IT provides 20% of its services to HR, while HR provides 10% of its services to IT. Assembly uses 45% of IT services and 60% of HR services. Finishing uses 35% of IT services and 30% of HR services. The controller computes the direct-method allocations and compares them against the reciprocal method. Which statement about the direct-method result is correct?",
@@ -14356,8 +14356,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongC": "The direct method can be applied to any allocation scenario, including those with interservice flows — it simply chooses to ignore those flows. While this reduces accuracy, it does not render the method unusable. Many organizations accept the direct method's imprecision in exchange for its computational simplicity, especially when interservice flows are small relative to total service costs.",
 		"ExplanationWrongD": "The direct method allocates costs proportionally across all production departments based on their relative consumption, not as a lump sum to the largest department. Assembly receives $67,500 + $53,333 = $120,833, not $200,000. Finishing receives the remaining $79,167. A candidate selecting this option may be confusing the direct method with a single-rate allocation that ignores proportional distribution.",
 		"question_state": "Certified",
-		"DifficultyScore": 3,
-		"CognitiveLevel": "Analyze",
+		"DifficultyScore": 4,
+		"CognitiveLevel": "Apply",
 		"upgrade_note": "S886 Analyze/Evaluate upgrade — 2026-07-28"
 	},
 	{
@@ -19852,7 +19852,7 @@ var MCQ_BANK_A = [
 		"ExplanationWrongC": "Eliminating a preventive control (invoice approval) and replacing it with a detective control (post-payment sampling) fundamentally changes the control structure in response to control breakdown without first understanding why the preventive control failed. Preventive controls are generally more effective and less costly than detective controls because they stop errors and irregularities before they occur, rather than detecting them after disbursement when recovery is difficult and costly. The Southwest region's high exception rate may indicate that the approval workflow is poorly designed or implemented — not that the concept of invoice approval is unsound. Under COSO, the response to control deficiencies is to remediate the control, not to abandon it for a weaker control type unless analysis demonstrates the preventive control cannot function effectively in the specific environment. Post-payment sampling would only detect problems after Keystone has already disbursed funds, when recovery is uncertain and the cost of investigation often exceeds the amount recovered. Eliminating approval without understanding root cause is a disproportionate response that increases, rather than reduces, disbursement risk.",
 		"ExplanationWrongD": "",
 		"DifficultyScore": 4,
-		"CognitiveLevel": "Evaluate"
+		"CognitiveLevel": "Analyze"
 	},
 	{
 		"Part": 1,
@@ -20050,7 +20050,7 @@ var MCQ_BANK_A = [
 		"ExplanationWrongD": "Option D identifies a less critical issue. The compensation committee of three independent directors (assuming the consulting directors are not on this committee) is adequate under standard governance practices. The primary control environment deficiency is the audit committee's independence, not the compensation committee's size. The audit committee oversees financial reporting integrity and internal controls — the most directly relevant oversight body for the internal control system. Misidentifying the compensation committee as the primary deficiency would lead the candidate to focus remediation efforts on the wrong committee, leaving the more significant audit committee independence violation unaddressed.",
 		"question_state": "Certified",
 		"DifficultyScore": 4,
-		"CognitiveLevel": "Analyze",
+		"CognitiveLevel": "Apply",
 		"certification_date": "2026-07-28",
 		"certification_batch": "Pack A Final Closure — S892",
 		"upgrade_note": "Pack A Final Closure - S892 Analyze replacement for archived P1-E-046"
@@ -20164,7 +20164,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "COSO Principle 3 — authority and responsibility",
 		"UniqueConceptKey": "E-049-authority-responsibility-analysis",
 		"LOSTag": "E.1 COSO Internal Control Framework",
-		"Difficulty": "Moderate",
+		"Difficulty": "Difficult",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "Westbrook Insurance recently reorganized from a functional structure to a matrix structure. Under the new structure, claims adjusters report to both a regional claims director and a product-line vice president. The controller's team now provides financial reports to both reporting lines, but no one has been designated as the owner of the monthly claims reserve reconciliation control. Based on COSO Principle 3, what control environment risk does this create, and what is the most direct remediation?",
@@ -20203,8 +20203,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongC": "",
 		"ExplanationWrongD": "Option D focuses exclusively on financial reporting — issuing two reports — without addressing the fundamental control environment issue of unassigned accountability. COSO Principle 3 is about clarity of authority and responsibility for internal controls, not merely about information flow. The controller issuing two reports provides information to both reporting lines but does not answer the question 'Who is responsible for performing and reviewing the reserves reconciliation?' Information distribution and control accountability are distinct concepts within the COSO framework. The controller's reports address communication (COSO Principle 14) but do not resolve the core Principle 3 violation of undefined control ownership.",
 		"question_state": "Certified",
-		"DifficultyScore": 3,
-		"CognitiveLevel": "Analyze",
+		"DifficultyScore": 4,
+		"CognitiveLevel": "Apply",
 		"certification_date": "2026-07-28",
 		"certification_batch": "Pack A Final Closure — S892",
 		"upgrade_note": "Pack A Final Closure - S892 Analyze replacement for archived P1-E-049"
@@ -20260,7 +20260,7 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "The elimination of oversight positions and the consolidation of approval authority under the plant manager do represent a significant breakdown in segregation of duties, which is a control deficiency under COSO Principle 11. However, under Principle 8's fraud risk assessment framework, opportunity alone does not cause fraud — it enables fraud when combined with pressure and rationalization. The question asks which component is most prominent, and the evidence points to pressure as the initiating force. The controller did not resign because segregation of duties was weak; the controller resigned because 'the pressure to keep costs down made honest reporting impossible.' Furthermore, the related-party transaction with the brother-in-law's supplier existed before the oversight reductions — suggesting the plant manager actively sought opportunity to facilitate a scheme that pressure had already motivated. The elimination of oversight roles may have been a consequence of the same cost-cutting pressure, further demonstrating that pressure is the root cause driving the entire fact pattern.",
 		"ExplanationWrongC": "",
 		"ExplanationWrongD": "Capability refers to the individual's position, intelligence, and technical skills that permit them to commit and conceal fraud. While the plant manager's authority level provides capability — the organizational power to direct purchasing toward a related-party supplier and override inventory adjustments — COSO's fraud risk assessment framework treats capability as an extension of opportunity rather than a separate, standalone fraud triangle component in the traditional model. More importantly, the scenario's strongest signals all point to the pressure/incentive component: the bonus incentive structure, the three-year pattern of meeting targets, and the controller's explicit statement about pressure making honest reporting impossible. The controller — who presumably had equal capability to participate — chose to resign rather than compromise professional standards, demonstrating that capability describes 'how fraud could occur' while pressure explains 'why fraud does occur' in this specific fact pattern. The fraud risk assessment under Principle 8 should prioritize the motivational component that the evidence most directly supports.",
-		"CognitiveLevel": "Analyze"
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -20313,7 +20313,7 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "",
 		"ExplanationWrongC": "While POS systems and e-commerce platforms both involve information technology, the risk responses for system outage and data breach are fundamentally distinct control domains. POS outage risk (Risk 1) requires infrastructure resilience and business continuity — backup servers, redundant network connections, offline transaction processing capability, and disaster recovery testing. Data breach risk (Risk 4) requires cybersecurity controls — data encryption at rest and in transit, penetration testing, access management protocols, security incident and event monitoring, and a formal incident response plan. No single 'coordinated IT investment' simultaneously addresses both risks; this is a conflation of two distinct control objectives under a vague technology umbrella. Furthermore, this choice ignores Risk 3 entirely — the sole-source supplier bankruptcy risk receives zero mitigation, leaving 40% of private-label inventory supply unprotected. Under COSO Principle 9, risk assessment requires evaluating each risk individually against organizational objectives before considering whether common controls exist. Prioritizing infrastructure resilience over supplier continuity and data security — when the latter two represent potentially existential threats — is precisely the error that the likelihood-impact matrix is designed to prevent.",
 		"ExplanationWrongD": "This choice demonstrates a precise but conceptually flawed application of expected value to risk prioritization. The expected monetary values of Risk 1 ($245,000) and Risk 3 ($240,000) are indeed nearly identical when calculated mechanically. However, this mathematical coincidence masks a fundamental difference: Risk 1 is a high-probability event with limited downside — a POS outage during one holiday season that costs $350,000 is a recoverable operational disruption from which the business resumes normal operations. Risk 3 is a low-probability event with catastrophic downside — the loss of 40% of inventory supply could trigger stockouts, customer defection to competitors, emergency sourcing at premium prices, and potentially breach of supply agreements with major retail partners. Under COSO Principle 9, risk severity assessment considers both the magnitude and the nature of impact — a $350,000 operational loss and a $2,400,000 strategic disruption are not interchangeable simply because they share a similar expected value. The recommendation also leaves Risk 4 (the $4.8 million data breach) entirely unmitigated, which is difficult to defend when the committee has sufficient resources to address it. Symmetrical allocation of resources is an administrative convenience, not a risk management principle.",
-		"CognitiveLevel": "Evaluate"
+		"CognitiveLevel": "Analyze"
 	},
 	{
 		"Part": 1,
@@ -20462,7 +20462,7 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "This assessment misattributes the zero-rejection rate to loan officer competence rather than control ineffectiveness, requiring assumptions that contradict the audit evidence. While it is theoretically possible that every loan presented to the committee over 18 months was flawless, this strains credulity for a $340 million commercial portfolio involving 450 borrowers, including credits up to $2.5 million. In any loan portfolio of this size and complexity, legitimate differences in credit judgment should occasionally produce committee-level concerns, modifications, conditions, or rejections — even when underwriting quality is generally high. The committee members' own statements ('trust the officers' analysis, rarely have time to review the underlying financial statements') are not descriptions of an efficient review process — they are admissions of abrogated responsibility. COSO's Principle 9 does not permit an assumption of control effectiveness in the presence of direct, documented evidence of ineffectiveness. Trusting loan officers is not a control; it is the absence of one. Rating residual risk as Moderate with audit findings of this severity understates the control deficiency and would provide the board and regulators with an inaccurate representation of the risk environment.",
 		"ExplanationWrongC": "This assessment mischaracterizes the control structure as 'defense-in-depth' when Controls A and B address different loan populations rather than providing layered protection over the same transactions. Control A (single officer approval for loans up to $500,000) and Control B (committee review for loans above $500,000) operate on mutually exclusive loan sizes — a $750,000 loan receives only Control B, not both A and B. They are arranged in parallel by loan size, not in series for the same risk. More critically, the premise that Control B provides any risk reduction is directly contradicted by the audit evidence: 5.5-minute reviews, zero rejections over 18 months, and committee admissions of relying on officer analysis without independent verification. Under COSO, a control that does not operate effectively provides no residual risk reduction — the control's existence on paper does not improve the risk profile. For loans exceeding $500,000, which represent the bank's largest credit exposures, the sole control is not functioning. Rating the residual risk as Medium-Low for these credits would overstate the control environment and understate the exposure to unauthorized or poorly underwritten lending, creating both a safety-and-soundness risk and a potential regulatory concern.",
 		"ExplanationWrongD": "",
-		"CognitiveLevel": "Analyze"
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -20515,7 +20515,7 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "IT infrastructure obsolescence is a significant operational risk, and the loss of vendor support for five ERP systems creates genuine vulnerabilities in transaction-level control processing. However, under COSO Principle 11 (technology general controls), system obsolescence risk is manageable through several avenues: a phased migration plan with interim compensating manual controls, extended vendor support contracts (often available at premium pricing during transition), or third-party maintenance providers. Transaction-level controls can be maintained during an ERP migration — albeit with additional resources, manual reconciliations, and extended testing. Critically, the risk is addressable through investment and project management, both of which are available to TransGlobal as a multinational with $2.4 billion in annual procurement spend. In contrast, management override of controls (Risk 2) is not addressable through any transaction-level control redesign because the issue is behavioral, not technical. The distinction is fundamental: IT risk is mitigated by deploying different or additional technology; management override is mitigated by changing organizational culture and leadership accountability, which is a qualitatively different and more difficult challenge. The question asks which entity-level risk poses the greatest challenge to traditional transaction-level control design — not which risk has the largest potential financial impact or the most urgent deadline.",
 		"ExplanationWrongC": "Regulatory changes that create market access risk are properly categorized as strategic or external risks under COSO's Enterprise Risk Management framework. While mandatory ESG reporting requirements could theoretically affect TransGlobal's ability to operate in three countries, the connection between this regulatory risk and internal control over financial reporting is indirect. ESG compliance can be addressed through entity-level controls: board-level sustainability oversight, enterprise-wide ESG data collection and reporting processes, third-party assurance engagements, and regulatory monitoring by the legal and compliance functions. These are controls — just at the entity level rather than the transaction level. Furthermore, market access restrictions for non-compliance typically follow a notice-and-cure period during which the company can remediate. The question asks which risk poses the greatest challenge to transaction-level internal control design specifically — not which risk is most severe or most difficult to manage in general. Regulatory risk, while potentially severe in business impact, does not undermine the functioning of purchase order approvals, payroll processing, or inventory counts. The management override risk (Risk 2) directly, immediately, and fundamentally compromises every transaction-level control that depends on the honesty and diligence of the people executing it.",
 		"ExplanationWrongD": "Key person dependency in the treasury function is a legitimate and serious entity-level risk. Concentration of $800 million in foreign exchange hedging with a single individual who has no successor and no forced leave rotation creates exposure to error, fraud, incapacity, or departure. The mandatory vacation or job rotation control — a standard detective anti-fraud measure — is demonstrably absent. However, this risk is relatively addressable through entity-level control responses that are conceptually straightforward: succession planning with identified internal candidates, documentation of hedging strategies and authority limits, cross-training of treasury staff, implementation of multi-person approval for trades above a specified threshold, and mandatory leave policies. The financial impact of a failed hedge, while potentially large, depends on currency movements during the exposure period and may be partially mitigated by existing hedge positions. In contrast, management override of controls (Risk 2) addresses a behavioral and cultural condition that existing COSO guidance identifies as an inherent limitation of internal control — meaning it cannot be fully eliminated by any control design. Key person risk is manageable through proper human capital management and governance policies. Management override is not fully manageable through any transaction-level control, which is precisely why it represents the greater challenge to traditional internal control design.",
-		"CognitiveLevel": "Evaluate"
+		"CognitiveLevel": "Analyze"
 	},
 	{
 		"Part": 1,
@@ -20673,7 +20673,7 @@ var MCQ_BANK_A = [
 		"certification_date": "2026-07-28",
 		"certification_batch": "Pack A Final Closure — S892",
 		"upgrade_note": "Pack A Final Closure - S892 Analyze replacement for archived P1-E-058",
-		"CognitiveLevel": "Analyze"
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -20726,7 +20726,7 @@ var MCQ_BANK_A = [
 		"certification_date": "2026-07-28",
 		"certification_batch": "Pack A Final Closure — S892",
 		"upgrade_note": "Pack A Final Closure - S892 Analyze replacement for archived P1-E-062",
-		"CognitiveLevel": "Analyze"
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -20779,7 +20779,7 @@ var MCQ_BANK_A = [
 		"certification_date": "2026-07-28",
 		"certification_batch": "Pack A Final Closure — S892",
 		"upgrade_note": "Pack A Final Closure - S892 Evaluate replacement for archived P1-E-063",
-		"CognitiveLevel": "Evaluate"
+		"CognitiveLevel": "Analyze"
 	},
 	{
 		"Part": 1,
@@ -20789,8 +20789,8 @@ var MCQ_BANK_A = [
 		"MicroTopic": "COSO Principle 13 — quality information",
 		"UniqueConceptKey": "E-065-exception-reporting-design",
 		"LOSTag": "E.2 Information and communication",
-		"Difficulty": "Moderate",
-		"DifficultyScore": 3,
+		"Difficulty": "Difficult",
+		"DifficultyScore": 4,
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "Ascent Corp's accounts payable department processes approximately 8,000 vendor invoices monthly. The department's exception report applies three detection rules: (1) flag any invoice exceeding $10,000 for manager approval, (2) flag duplicate invoice numbers, and (3) flag any change to the vendor master file. Monthly, the exception report generates 900 to 1,200 flags. The AP manager estimates that approximately 850 of these flags are false positives — nearly all from the $10,000 threshold rule, which triggers on recurring monthly payments for rent, utilities, equipment leases, and raw material purchases from long-established vendors. The AP team spends roughly 40 staff-hours per month reviewing flagged items. In the most recent quarter, three duplicate payments totaling $47,000 went undetected because the genuine duplicate-invoice flags were buried among the high volume of threshold-based false positives and overlooked during review. Analyze the exception report design: what is the primary deficiency, and what parameter adjustment would most effectively reduce false positives while preserving detection of genuine exceptions?",
@@ -20832,7 +20832,7 @@ var MCQ_BANK_A = [
 		"certification_date": "2026-07-28",
 		"certification_batch": "Pack A Final Closure — S892",
 		"upgrade_note": "Pack A Final Closure - S892 Analyze replacement for archived P1-E-065",
-		"CognitiveLevel": "Analyze"
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -20938,7 +20938,7 @@ var MCQ_BANK_A = [
 		"certification_date": "2026-07-28",
 		"certification_batch": "Pack A Final Closure — S892",
 		"upgrade_note": "Pack A Final Closure - S892 Evaluate replacement for archived P1-E-070",
-		"CognitiveLevel": "Evaluate"
+		"CognitiveLevel": "Analyze"
 	},
 	{
 		"Part": 1,
@@ -21044,7 +21044,7 @@ var MCQ_BANK_A = [
 		"certification_date": "2026-07-28",
 		"certification_batch": "Pack A Final Closure — S892",
 		"upgrade_note": "Pack A Final Closure - S892 Evaluate replacement for archived P1-E-073",
-		"CognitiveLevel": "Evaluate"
+		"CognitiveLevel": "Analyze"
 	},
 	{
 		"Part": 1,
@@ -21054,8 +21054,8 @@ var MCQ_BANK_A = [
 		"MicroTopic": "COSO Principle 17 — deficiency remediation",
 		"UniqueConceptKey": "E-074-remediation-monitoring",
 		"LOSTag": "E.3 Monitoring activities",
-		"Difficulty": "Moderate",
-		"DifficultyScore": 3,
+		"Difficulty": "Difficult",
+		"DifficultyScore": 4,
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "Ridgeway Corp's prior year audit identified 14 control deficiencies, of which management reported 11 as remediated and 3 as in progress. The current year's internal audit found that: (1) 5 of the 11 reported as remediated still have the same control weakness, (2) the 3 in progress have had no status updates in 8 months, and (3) management self-certified all remediations without independent verification. The CEO states that management's self-assessment is sufficient because management knows the operations best. Which COSO monitoring principle and sub-principle is most clearly violated, and what specific remediation tracking process should be implemented to prevent recurrence?",
@@ -21097,7 +21097,7 @@ var MCQ_BANK_A = [
 		"certification_date": "2026-07-28",
 		"certification_batch": "Pack A Final Closure — S892",
 		"upgrade_note": "Pack A Final Closure - S892 Analyze replacement for archived P1-E-074",
-		"CognitiveLevel": "Analyze"
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,

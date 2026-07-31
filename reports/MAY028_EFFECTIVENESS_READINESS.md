@@ -30,15 +30,27 @@
 | Per-card start rate | ✅ **NEW — MAY-028** | `sessionStarted` ÷ `clicked` |
 | Per-card completion rate | ✅ **NEW — MAY-028** | `completed` ÷ `started` |
 
-### 1.3 Measurement Maturity Timeline
+### 1.3 Measurement Maturity Model (Single-Learner, Behavioral)
 
-| Phase | Duration | Data Available |
-|-------|----------|----------------|
-| **T+0 (now)** | MA-028 deployed | Click tracking live, attribution wiring active |
-| **T+1-3 days** | Initial sample | First click rates, preliminary funnel |
-| **T+1-2 weeks** | Meaningful sample | Reliable per-card click/start/complete rates |
-| **T+2-4 weeks** | Statistical maturity | Trends, segmentation, temporal patterns |
-| **T+4+ weeks** | Optimization-ready | Enough data for A/B tests (MAY-030) and personalization (MAY-031) |
+The original timeline assumed multi-user population analysis requiring weeks of aggregated data. For a single-learner longitudinal deployment, maturity is gated by **behavioral evidence**, not calendar time.
+
+| Gate | Threshold | What It Enables |
+|------|-----------|-----------------|
+| **G-B1: Session Accumulation** | ≥5 completed sessions | Reliable per-card click/start/complete rates for this learner |
+| **G-B2: Recovery Activity** | ≥1 Recovery Sprint | Recovery effectiveness measurement (baseline → sprint → follow-up) |
+
+MAY-029A proceeds when either gate is satisfied.
+
+### 1.4 What Is Measurable Immediately (MAY-028 Complete)
+
+| Metric | Data Source | Status |
+|--------|------------|--------|
+| Recommendation Conversion | Presented → Clicked → Started → Completed | **Live** — attribution wiring active |
+| Recovery Effectiveness | Recovery Sprint baseline vs. follow-up | **Live** — Recovery Sprint outcomes tracked |
+| Confidence Calibration | Wrong+High vs. Correct+Low trending | **Live** — per-session calibration data |
+| Readiness Movement | Domain readiness score deltas | **Live** — readiness dashboard + telemetry |
+| Ignored Recommendations | Cards presented but never clicked | **Live** — per-card click rates |
+| Adoption Rate | Sessions with attribution vs. without | **Live** — per-card adoption metrics |
 
 ## 2. Data Collection
 
@@ -88,4 +100,4 @@ The effectiveness measurement framework is **instrumentation-complete**. All UA5
 
 > "Which specific recommendation types change study behavior?"
 
-Once usage data matures (2-4 weeks), MAY-029 can proceed as a true optimization session rather than another instrumentation session.
+MAY-029A is gated by behavioral maturity (≥5 sessions OR ≥1 Recovery Sprint), not calendar time. All measurement infrastructure is in place; the remaining dependency is accumulated usage evidence, not further instrumentation.

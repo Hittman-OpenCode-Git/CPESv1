@@ -80,14 +80,35 @@ Before MAY-028, the project could answer:
 After MAY-028, the project can answer:
 > "Which specific recommendation types change study behavior?"
 
-Once usage data matures (2-4 weeks), MAY-029 can proceed as a true optimization session.
+The original MAY-029 gate (≥25 sessions OR ≥14 days OR ≥3 learners) assumed a multi-user, population-analysis deployment. The actual environment is a single primary learner with longitudinal usage. The gate has been recalibrated to behavioral maturity thresholds.
 
 ## 7. Next Session
 
-**MAY-029 — Recommendation Optimization**
+**MAY-029A — Single-Learner Effectiveness Review**
 
-Blocked until sufficient attribution data exists (estimated 2+ weeks post-deployment). Will use per-card click/start/complete rates to:
-- Tune card content and ordering
-- A/B test card formats
-- Identify and remove low-value cards
-- Optimize topic matching for engagement
+Evaluates whether May influenced behavior for this learner. Gated by:
+
+- ≥5 completed sessions, OR
+- ≥1 Recovery Sprint
+
+### Core Questions
+
+1. **Recommendation Conversion:** Presented → Clicked → Session Started → Session Completed
+2. **Recovery Effectiveness:** Baseline → Recovery Sprint → Follow-up Session performance
+3. **Confidence Calibration:** Wrong + High Confidence vs. Correct + Low Confidence trending
+4. **Readiness Movement:** Domain readiness score deltas across sessions
+5. **Which recommendation types were ignored?**
+
+### Measurement Model
+
+| Funnel Stage | Data Source |
+|-------------|-------------|
+| Card presented | `may-telemetry.js` `presented` events |
+| Card clicked | `may-telemetry.js` `clicked` events (MAY-028) |
+| Session started | `session-start` with `attributionCardId` (MAY-028) |
+| Session completed | `session-complete` with `attributionCardId` (MAY-028) |
+| Recovery outcome | Recovery Sprint baseline → post-sprint score |
+| Confidence calibration | Per-session calibration data |
+| Readiness movement | Domain readiness dashboard deltas |
+
+This replaces the original multi-learner population-analysis framing with a single-learner behavioral model. The metrics infrastructure is complete as of MAY-028; the gate is behavioral maturity, not calendar time or learner count.

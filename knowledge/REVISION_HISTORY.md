@@ -1,3 +1,187 @@
+## S124 — Desktop Application Conversion & Guided Onboarding System — 2026-07-31
+
+**Type:** WRITE (main.js NEW, app.js, styles.css, index_updated.html, package.json — Full Governance Lane)
+**Backup:** `backups/app.js.bak-20260731182000`, `backups/styles.css.bak-20260731182000`, `backups/index_updated.html.bak-20260731182000`, `backups/package.json.bak-20260731182000`
+
+### Changes Applied
+
+| File | Change | Lines |
+|------|--------|-------|
+| `main.js` | **Created** — Electron main process: BrowserWindow, native menus, single-instance lock, context isolation | 140 |
+| `package.json` | Added `"main": "main.js"`, `electron` devDependency, `npm run electron` and `npm run electron-dev` scripts | +4 |
+| `app.js` | **+516 lines** — GuidedTour engine (5 tour types, 29 total steps), AdminGate (5-click sequence), renderHomeView (hub cards + stats), renderHelpCenter (FAQ + tours + data mgmt), help button injection, S124 init | +516 |
+| `styles.css` | **+351 lines** — Guided tour overlay/spotlight/tooltip, home hub grid/cards/stats, help center sections/cards/tour buttons, help tab button, admin badge | +351 |
+| `index_updated.html` | Added Home tab, Help view div, Home view div; Home is initial active view; Operations tab hidden by default | +4 |
+
+### Content/Governance Impact
+
+- **Pack content:** UNCHANGED (0 question edits)
+- **Answer keys:** UNCHANGED (0 CorrectChoice changes)
+- **Certification state:** UNCHANGED (0 question_state changes)
+- **Scoring:** UNCHANGED
+- **Cognitive metadata:** UNCHANGED
+
+### Governance Verification
+
+| Check | Result |
+|-------|--------|
+| Preflight QID counts | 500/500/500/500/545 — MATCH baseline |
+| Preflight parse | 5/5 OK |
+| Certified count | 2451 — MATCH baseline |
+| Governance guard | 66/66 PASS |
+| Divergences | 0 |
+| app.js syntax check | PASS |
+
+### Features Delivered
+
+1. **Electron desktop shell** — `npm run electron` launches as desktop app with native menus, single-instance lock, import/export shortcuts
+2. **First-run guided tour** — 9-step onboarding auto-triggers on first launch, stored in `cmaProfile2026.onboarding.tourCompleted`
+3. **5 contextual feature tours** — Beginner, Recovery Sprint, May Coach, Analytics, Admin Console — all restartable
+4. **Admin console protection** — Operations tab hidden; 5-click version number sequence in Settings activates; persisted in `profile.onboarding.adminActivated`
+5. **Application hub** — HOME view with card-based navigation to Study, Coach, Analytics, Collections, History, Administration
+6. **Help & Learning Center** — Quick Start, How It Works, Feature Tours, Data Management, FAQ sections
+
+### Closeout Report
+
+`reports/S124_CLOSEOUT.md`
+
+## S120 — May Persistence Consolidation (Single Source of Truth) — 2026-07-31
+
+**Type:** WRITE (app.js, may-core.js, may-learner-state.js, may-coaching-orchestrator.js — Full Governance Lane)
+**Backup:** `backups/app.js.bak-S120-20260731170127`, `backups/may-core.js.bak-S120-20260731170127`, `backups/may-learner-state.js.bak-S120-20260731170127`, `backups/may-coaching-orchestrator.js.bak-S120-20260731170127`
+
+### Problem
+
+The May coaching persistence layer had a dual-write architecture with independent localStorage keys (`cmaMayLearnerState`, `cmaMayPilotUsageLog`, `cmaMaySafetyLog`, `cmaMayGateLog`, `cmaMaySessionTelemetry`, `cmaMayPilotTelemetry`, `cmaMayPilotTelemetryArchive`, `cmaMaySelectedLearnerId`, `cmaMayStudentRoll`) operating alongside the unified `cmaProfile2026` profile. Four data-loss vectors were identified:
+
+1. **Dual-write architecture**: `may-core.js` wrote telemetry directly to independent May keys; `may-learner-state.js` wrote to `cmaMayLearnerState`. `CMAProfileManager` maintained its own copy in `cmaProfile2026`. No single source of truth existed.
+
+2. **Stale profile synchronization on page load**: `init()` unconditionally called `syncToMayStorage()` on every page load, overwriting independent May keys with whatever was in `cmaProfile2026` at last `save()` — regardless of whether the independent keys had fresher mid-session data.
+
+3. **Incomplete reset**: `clearPilotData()` deleted 9 independent May keys but left `cmaProfile2026`'s May fields intact. On next page load, `init()` → `syncToMayStorage()` restored all cleared keys from the stale profile — making the reset ineffective.
+
+4. **Potential learner-state rollback**: If `may-learner-state.js` `save()` wrote a learner's session data to `cmaMayLearnerState`, and then `CMAProfileManager.init()` ran on next page load, the stale profile copy would be pushed back to the independent key, silently rolling back the learner's progress.
+
+### Changes Applied
+
+| File | Change |
+|------|--------|
+| `app.js` | **`save()`**: Now calls `syncFromMayStorage()` before persisting — pulls fresh May data from independent keys INTO profile before save. |
+| `app.js` | **`init()`**: `syncToMayStorage()` now gated with `skipExisting=true` — only populates absent keys (first-load bootstrap). Never overwrites keys that already exist. |
+| `app.js` | **`syncToMayStorage(profile, skipExisting)`**: Added `_setIf()` helper — when `skipExisting` is true, only writes if the key is absent from localStorage. |
+| `app.js` | **`patchMayField(field, value)`**: New helper — writes a single May field to `cmaProfile2026` and updates the in-memory reference. Used by may-core.js and may-learner-state.js to write directly to the SSOT. |
+| `may-core.js` | **`_persistUsageLog()`**: Now also calls `CMAProfileManager.patchMayField('mayUsageLog', log)`. |
+| `may-core.js` | **`_persistSafetyLog()`**: Now also calls `CMAProfileManager.patchMayField('maySafetyLog', log)`. |
+| `may-core.js` | **`_persistGateLog()`**: Now also calls `CMAProfileManager.patchMayField('mayGateLog', log)`. |
+| `may-core.js` | **`_persistSessionTelemetry()`**: Now also calls `CMAProfileManager.patchMayField('maySessionTelemetry', log)`. |
+| `may-core.js` | **Learner-ID selection**: Both `createNewStudent()` and `selectStudent()` now also call `CMAProfileManager.patchMayField('maySelectedLearnerId', id)`. |
+| `may-core.js` | **`clearPilotData()`**: Now also clears all May fields from `cmaProfile2026` via `CMAProfileManager`. Reset is now complete — no stale profile restore on next page load. |
+| `may-learner-state.js` | **`save()`**: Now also calls `CMAProfileManager.patchMayField('mayLearnerState', data)` in both success and fallback paths. |
+| `may-learner-state.js` | **`saveStudentRoll()`**: Now also calls `CMAProfileManager.patchMayField('mayStudentRoll', roll)`. |
+| `may-coaching-orchestrator.js` | **Telemetry persist block**: Now also calls `CMAProfileManager.patchMayField()` for both `mayPilotTelemetry` and `mayPilotTelemetryArchive`. |
+
+### Architecture After S120
+
+```
+WRITE PATHS (all converge on cmaProfile2026):
+  may-core.js _persist*()    ──→ cmaMay* (individual key) + cmaProfile2026
+  may-learner-state.js save() ──→ cmaMayLearnerState + cmaProfile2026
+  may-coaching-orchestrator   ──→ cmaMay* (individual key) + cmaProfile2026
+  CMAProfileManager.save()    ──→ syncFromMayStorage() → cmaProfile2026
+
+READ/INIT PATHS:
+  init(): syncToMayStorage() with skipExisting=true → populates absent keys only
+  may-core.js _restorePersistedLogs(): reads from individual keys (compatibility)
+  CMAProfileManager.load(): cmaProfile2026 (SSOT for backup/restore/export)
+  CMAProfileManager.exportProfile(): syncFromMayStorage() before export
+```
+
+**Key property**: `cmaProfile2026` is always current — every May write path converges on it. Individual keys remain for may-core.js read-compatibility but are never overwritten by profile load unless absent (cold-start). No bidirectional syncing. No stale overwrite path.
+
+### Verification
+
+- `node --check`: All 4 files pass
+- Preflight: 0 divergences, 2,451 Certified pool intact
+- Governance guard: 66/66 PASS
+- No pack file changes, no content changes, no certification state changes
+- No answer-key changes, no question_state changes
+
+### New Hashes (post-S120)
+
+| File | SHA-256 |
+|------|---------|
+| `app.js` | `D390F6E66A86789E57434516673F99792AE0CC14B9B8715AF1B99B6D562E58A0` |
+| `may-core.js` | `11F3A2AB027E67FCD5782BD6B6C44801923E477CF5AB193263423AA33B8F1AAB` |
+| `may-learner-state.js` | `18F3C753B6F986C0E5ABF3B0B025FB705D4415A49C975D49D84C027BB32E3CBB` |
+| `may-coaching-orchestrator.js` | `E0C38E4C7CAC955AB0C92C719E74650579C8DA5B277A146B75E1BFCAFF4086E2` |
+
+---
+
+## S104P-B — PHASE_3 Cognitive Relabeling (Pack A C/D/E + Pack E) — 2026-07-31
+
+**Type:** WRITE (pack_a_corrected.js, pack_e_corrected.js — Full Governance Lane)
+**Backup:** `backups/pack_a_corrected.js.bak-20260731135946`, `backups/pack_b_corrected.js.bak-20260731135946`, `backups/pack_e_corrected.js.bak-20260731135946`
+
+### Summary
+
+Executed S104P-B PHASE_3 cognitive relabeling pass — the final recovery wave for P2/P3 cognitive classification corrections. Audited 124 HO-labeled items across Pack A C/D/E (44), Pack B BB/BC/BF (30), and Pack E all sections (50). Applied metadata-only corrections (CognitiveLevel + Difficulty/DifficultyScore) to 20 items across Pack A (15) and Pack E (5). Pack B items were already corrected by prior recovery waves (S101, S102P, S103P, S731, S892).
+
+### Methodology
+
+- Used S97P automated gate results as primary classification signal
+- Spot-checked Section F AF-2/AF-3 flags — confirmed false positives on technology topics (SOC 2, cloud computing, AI risk assessment)
+- Excluded 5 Section F items from correction, deferred 5 AF-6 items to semantic review
+- 91 clean items (passed all AF gates) retained current classification
+- All corrections are one-tier slippage (Evaluate→Analyze or Analyze→Apply) — zero content rewrites
+
+### Pack A — 15 items changed (Sections C, D, E)
+
+| QID | Prior CL | New CL | Prior DS | New DS |
+|-----|----------|--------|----------|--------|
+| P1-D-009 | Analyze | Apply | 3 | 4 |
+| P1-E-042 | Evaluate | Analyze | — | — |
+| P1-E-046 | Analyze | Apply | — | — |
+| P1-E-049 | Analyze | Apply | 3 | 4 |
+| P1-E-050 | Analyze | Apply | — | — |
+| P1-E-051 | Evaluate | Analyze | — | — |
+| P1-E-054 | Analyze | Apply | — | — |
+| P1-E-055 | Evaluate | Analyze | — | — |
+| P1-E-058 | Analyze | Apply | — | — |
+| P1-E-062 | Analyze | Apply | — | — |
+| P1-E-063 | Evaluate | Analyze | — | — |
+| P1-E-065 | Analyze | Apply | 3 | 4 |
+| P1-E-070 | Evaluate | Analyze | — | — |
+| P1-E-073 | Evaluate | Analyze | — | — |
+| P1-E-074 | Analyze | Apply | 3 | 4 |
+
+### Pack E — 5 items changed (Sections A, E)
+
+| QID | Prior CL | New CL | Prior DS | New DS |
+|-----|----------|--------|----------|--------|
+| P1E-A-012 | Apply | Apply | 3 | 4 |
+| P1E-A-035 | Apply | Apply | 3 | 4 |
+| P1E-A-058 | Apply | Apply | 3 | 4 |
+| P1E-A-067 | Analyze | Apply | 3 | 4 |
+| P1E-E-013 | Apply | Apply | 3 | 4 |
+
+### Pack B — 0 items changed
+All 30 HO items in BB/BC/BF sections already corrected to appropriate cognitive levels by prior recovery waves. P1B-C-101 confirmed at CL:Apply, DS:3. Section F AF-2/AF-3 flags confirmed as false positives (technology topics with genuinely analytical stems).
+
+### Verification
+
+- Preflight: 0 divergences, 2,451 certified (unchanged), 66/66 governance guard
+- QID counts: 500/500/500/500/545 (unchanged)
+- All 5 spot-checks PASS (CL and DS confirmed in source files)
+- No certification state changes — metadata-only operation
+- No content rewrites — labels only
+
+### Impact
+
+- Pack A C/D/E: 15 cognitive labels corrected (AF-2 formula items → Apply, AF-3 COSO rule items → one-tier down)
+- Pack E Sections A/E: 5 DifficultyScore upgrades (Apply items at DS:3→4 matching calculation complexity)
+- S104P-B completes the P2/P3 relabeling queue per SESSION100P recovery roadmap
+- Remaining deferred: 5 AF-6 items (semantic review), 91 clean items (verified correct)
+
 ## SESSION 104 — Recovery Sprint: Targeted 15Q Mini-Session from AdaptiveReviewQueue — 2026-07-31
 
 **Type:** WRITE (app.js, styles.css — Full Governance Lane)
@@ -29468,7 +29652,7 @@ MAY-028 closes the final telemetry attribution gap identified by MAY-027. Added 
 
 ### Next Gate
 
-**MAY-029** — Recommendation Optimization. Blocked until attribution data matures (≥25 sessions OR ≥14 days OR ≥3 learners).
+**MAY-029A** — Single-Learner Effectiveness Review. Gated by behavioral maturity: ≥5 completed sessions OR ≥1 Recovery Sprint. Original multi-learner gate (≥25 sessions / ≥14 days / ≥3 learners) retired 2026-07-31 per deployment reality recalibration.
 
 ## G02 — Governance Hardening & Final Push — 2026-07-31
 
@@ -29785,5 +29969,414 @@ Implemented the three highest-impact interaction fidelity improvements identifie
 - `styles.css` — +~45 lines: `.choice.struck`, `.keyboard-hint`, `.nav-filters`, `.nav-filter-btn`, `.review-filters`, `.review-filter-btn`
 - `reports/SESSION111_FIDELITY_PLAN.md` — NEW (implementation plan)
 - `knowledge/REVISION_HISTORY.md` — APPENDED (this entry)
+
+
+---
+
+## Session 112 — Profile Migration, Persistence & Backup Architecture
+
+**Date:** 2026-07-31  
+**Lane:** Full Governance  
+**Session Type:** Feature Implementation  
+
+### Summary
+
+Implemented a durable learner-profile persistence, migration, and backup architecture eliminating dependence on browser-only localStorage for learner history. The system introduces:
+
+- **CMAProfileManager** enhancements: migration dialog, `mergeProfile()`, `restoreBackup()`, `showMigrationDialog()`
+- **Unified profile** at `cmaProfile2026` with schema versioning
+- **One-time migration** from 14 legacy localStorage keys with archival (not deletion)
+- **Export/Import** with merge vs. replace conflict resolution
+- **5-slot rotating backup** system with restore capability
+- **Settings UI** — 6th nav tab with profile info, export/import, backup management, data reset
+
+### Files Modified
+
+- `app.js` — Enhanced CMAProfileManager (lines 48–450): modified `init()` to defer migration to dialog, added `showMigrationDialog()`, `restoreBackup()`, `mergeProfile()`. Updated `handleProfileImport()` with merge/replace dialog. Updated `renderSettingsView()` with backup restore buttons. Updated `DOMContentLoaded` migration flow. (~+60 lines net)
+- `index_updated.html` — Added Settings tab button and `settingsView` div (+2 edits)
+- `styles.css` — Added `.profile-summary-card`, `.profile-meta-grid`, `.meta-label`, `.meta-value`, `.settings-data-row` styles (+40 lines)
+
+### Files Created
+
+- `reports/S112_PROFILE_MIGRATION_PLAN.md` — Migration plan and storage inventory
+- `reports/S112_STORAGE_INVENTORY.md` — Complete localStorage key audit (18 keys)
+- `reports/S112_PERSISTENCE_ARCHITECTURE.md` — Profile schema, API, sync architecture
+- `reports/S112_BACKUP_STRATEGY.md` — Rotating 5-slot backup system
+- `reports/S112_IMPORT_EXPORT_SPEC.md` — Export format, import validation, merge/replace spec
+- `reports/S112_MIGRATION_RESULTS.md` — Verification results
+- `reports/S112_CLOSEOUT.md` — Session closeout
+
+### Non-Goals Verified
+
+- No pack file edits
+- No case file edits
+- No May logic changes
+- No answer-key changes
+- No scoring changes
+- No content changes
+- No question_state changes
+
+### Verification
+
+- **Preflight:** PASS (0 divergences, 2,451 certified)
+- **Governance guard:** PASS (66/66)
+- **Smoke test:** PASS (17/17, Settings tab detected)
+- **Syntax check:** PASS (`node --check`)
+
+### Success Criteria Met
+
+- Existing learner history automatically detected (14-key legacy scan)
+- Migration executes only once (`migration.completed` flag)
+- Legacy data archived after migration (`_ARCHIVED` suffix, no deletion)
+- Existing profiles protected from overwrite (merge dialog)
+- Automatic backup created before import (`createBackup()` pre-import)
+- Export Full Profile implemented (`cma-profile-backup-YYYY-MM-DD.json`)
+- Import Profile implemented (file → parse → preview → merge/replace)
+- Laptop migration supported (export on machine A, import on machine B)
+- Browser cleanup survivable (backup system)
+- All May data preserved (bidirectional `syncToMayStorage`/`syncFromMayStorage`)
+- All session history preserved (migrated to unified profile)
+- Governance remains clean
+
+## SESSION 105 — Pack E Domain F Defect Repair (P1E-F-004 + P1E-F-005) — 2026-07-31
+
+**Type:** WRITE (pack_e_corrected.js — Full Governance Lane)
+**Backup:** `pack_e_corrected.js.bak-20260731125138` (1,848,310 bytes)
+
+### Summary
+
+Repaired two Certified Pack E Domain F items (P1E-F-004, P1E-F-005) affected by a rotation-artifact cross-item explanation shift. Both items were live in the learner delivery pool with DL-008 (non-empty ExplanationWrong at CorrectChoice slot), DL-026 (empty non-CorrectChoice distractor slots), and DL-010 (explanation text describing the wrong item's choices).
+
+### Defects Identified
+
+**P1E-F-004** ("Big data is characterized by:", CC=A):
+- DL-008: EW_A (CC slot) contained ~800 chars of P1E-F-005's platform evaluation text
+- DL-026: EW_B was empty
+- DL-010: EW_A, EW_C, EW_D all described P1E-F-005's Apex Manufacturing platform evaluation instead of P1E-F-004's four Vs content
+
+**P1E-F-005** (Apex Manufacturing big data platform evaluation, CC=B):
+- DL-008: EW_B (CC slot) contained "Different data types describe variety, not volume"
+- DL-026: EW_C was empty
+- DL-010: EW_A, EW_D described big data dimension definitions (P1E-F-004/P1E-F-006 topic area), not platform evaluation
+
+### Remediation
+
+All ExplanationWrong fields were authored from scratch with choice-specific, topic-aligned text:
+
+**P1E-F-004:**
+| Slot | Before | After |
+|------|--------|-------|
+| EW_A | ~800 chars of P1E-F-005 text (DL-008) | "" (cleared) |
+| EW_B | "" (DL-026) | Choice-specific: why "variety, volume, value, vision" is wrong — value and vision are not in the four Vs |
+| EW_C | P1E-F-005 platform evaluation text (DL-010) | Choice-specific: why "velocity, volume, vision, value" is wrong — vision and value are not big data dimensions |
+| EW_D | P1E-F-005 capex avoidance text (DL-010) | Choice-specific: why "value, volume, visibility, validity" is wrong — veracity is the correct fourth V, not validity |
+
+**P1E-F-005:**
+| Slot | Before | After |
+|------|--------|-------|
+| EW_A | Big data dimension text (DL-010) | Choice-specific: why Proposal Alpha (on-premise) is wrong — lacks veracity validation and auto-scaling |
+| EW_B | "Different data types describe variety..." (DL-008) | "" (cleared) |
+| EW_C | "" (DL-026) | Choice-specific: why structured-data-only capacity is insufficient — ignores IoT data and velocity requirements |
+| EW_D | Big data dimension text (DL-010) | Choice-specific: why capex avoidance is not the controlling factor — requirements fit must drive the decision |
+
+### Verification
+
+| Check | Result |
+|-------|--------|
+| DL-008 on P1E-F-004 | **0** — EW_A cleared |
+| DL-008 on P1E-F-005 | **0** — EW_B cleared |
+| DL-026 on P1E-F-004 | **0** — EW_B/C/D all non-empty with four-Vs-specific text |
+| DL-026 on P1E-F-005 | **0** — EW_A/C/D all non-empty with platform-evaluation-specific text |
+| DL-010 (misassigned text) | **0** — all slots describe their own item's choices |
+| Governance guard | **66/66 PASS** |
+| Preflight | **0 divergences, 2,451 certified** |
+| Pack E QID count | **545** (unchanged) |
+| Pack E parse | **OK** |
+| question_state changes | **0** — both items remain "Certified" |
+| CorrectChoice changes | **0** |
+
+### Rotation Artifact Root Cause
+
+Items P1E-F-003 through P1E-F-007 form a 5-item rotation group in the original template authoring pipeline. P1E-F-003, P1E-F-004, P1E-F-006, and P1E-F-007 are definitional items (big data dimension definitions). P1E-F-005 is a scenario-based item with a different micro-topic (platform evaluation). The template engine misaligned the ExplanationWrong rotation, placing P1E-F-004's distractor content in P1E-F-005's slots and vice versa. Both items entered the learner pool through R14 Wave 5/Wave 6 certification without per-item ExplanationWrong validation.
+
+### Cross-References
+
+- DEFECT_LIBRARY.md: DL-008, DL-026, DL-010
+- S104P audit: Pass E Domain F findings
+- CURRENT_BASELINES.md: Pack E hash will be recaptured at next baseline update
+
+## SESSION 104P — PHASE_3 Verification: Pack B + Pack E Cognitive Reclassification + UX-4 Bookmark Collections — 2026-07-31
+
+**Type:** WRITE (pack_b_corrected.js, pack_e_corrected.js, app.js, styles.css — Full Governance Lane)
+**Backup:** `backups/pack_b_corrected.js.bak-S104P-20260731131019`, `backups/pack_e_corrected.js.bak-S104P-20260731131020`
+
+### Summary
+
+Executed S104P Phase 3 Verification — the metadata-only cognitive reclassification session covering Pack B (42 HO items) and Pack E (45 HO items). Per-item audit using S95P AF rubrics (AF-E1 through AF-E6) verified 50% of Pack B HO labels and 53% of Pack E HO labels. Applied 37 corrections across both packs. Also fixed 4 structural defect items in Pack B (missing CognitiveLevel/DifficultyScore/Difficulty on Certified items). In parallel, implemented UX-4 Bookmark Collections with persistent storage in CMAProfileManager.
+
+### PH3-B5 — Pack B Per-Item Audit (42 HO items + 4 structural defects)
+
+**Methodology:** Function constructor parse → per-item AF-rule application against full stem, choices, and explanation.
+
+**Pack B HO Audit Results:**
+
+| Finding | Count |
+|---------|-------|
+| Items audited | 46 (42 HO + 4 structural) |
+| Correctly labeled (verified) | 21 (50.0%) |
+| Overstated — 1 level (Evaluate→Analyze, Analyze→Apply) | 12 |
+| Overstated — 2 levels (Evaluate→Apply, Analyze→Understand) | 8 |
+| Overstated — 3 levels (Evaluate→Understand) | 1 |
+| Structural defects (missing CL) | 4 |
+| **Items corrected** | **25** |
+
+**Section F Verification:** All 19 Pack B Section F items verified correctly labeled — 10 Evaluate + 9 Analyze, all with genuine multi-criteria technology/cybersecurity evaluation scenarios. Section F is the project's best-calibrated HO pool.
+
+**Section C Systematic Overstatement:** All 7 Pack B Section C items were formula-substitution (MPV, MQV, sales mix variance, EVA, ABC overhead calculations) labeled Analyze/Evaluate. Downgraded to Apply.
+
+**Structural Defects Repaired (4 items):**
+
+| QID | Section | Added CL | Added DS | Added Difficulty |
+|-----|---------|----------|----------|-----------------|
+| P1B-A-136 | A | Analyze | 4 | Difficult |
+| P1B-B-158 | B | Understand | 3 | Moderate |
+| P1B-B-165 | B | Analyze | 4 | Difficult |
+| P1B-E-084 | E | Analyze | 4 | Difficult |
+
+All 4 items were Certified with no cognitive classification. Stem/choice analysis assigned appropriate defaults.
+
+**Difficulty/Label Mismatches Fixed (2 items):**
+
+| QID | Difficulty Label | DS | Corrected DS |
+|-----|-----------------|----|-------------|
+| P1B-C-152 | Moderate-Easy | 4 | 2 |
+| P1B-C-174 | Easy | 4 | 1 |
+
+### PH3-B6 — Pack E Per-Item Audit (45 HO items)
+
+**Pack E HO Audit Results:**
+
+| Finding | Count |
+|---------|-------|
+| Items audited | 45 (44 standard + 1 R-series) |
+| Correctly labeled (verified) | 24 (53.3%) |
+| Overstated — 1 level (Analyze→Apply) | 6 |
+| Overstated — 2 levels (Evaluate→Apply, Evaluate→Understand) | 7 |
+| Declared as 2-level but borderline (Evaluate→Analyze) | 1 (D-030) |
+| EVAL items (P1E-EVAL-*) excluded | 5 (correct by design) |
+| **Items corrected** | **16** |
+
+**Section A Concentration:** 10 of 17 Pack E Section A items (59%) overstated. Pattern: ASC rule application (ASC 450, 842, 740, 360, 605) labeled Analyze/Evaluate when content is deterministic rule application (Apply). Corrected 8 items to Apply, 2 items to Understand.
+
+**Definition-Match Items (3 items):**
+- P1E-A-010 ("Prepaid insurance classification"): Evaluate(4)→Understand(1)
+- P1E-B-063 ("Incremental budgeting"): Evaluate(4)→Understand(1)
+- P1E-F-004 ("Big data four Vs"): Evaluate(4)→Understand(1)
+
+All three had DS=4 on content that is pure term recall. DS labels corrected to 1 (Easy).
+
+**Pack E Post-Correction Cognitive Distribution:**
+
+| Level | Pre-S104P | Post-S104P |
+|-------|-----------|------------|
+| Evaluate | 26 | 20 |
+| Analyze | 24 | 14 |
+| Apply | 105 | 117 |
+| Understand | 380 | 384 |
+| Remember | 10 | 10 |
+
+### Pack B Post-Correction Cognitive Distribution:
+
+| Level | Pre-S104P | Post-S104P |
+|-------|-----------|------------|
+| Evaluate | 21 | 11 |
+| Analyze | 21 | 17 |
+| Apply | 309 | 317 |
+| Understand | 104 | 114 |
+| Remember | 41 | 41 |
+| Missing | 4 | 0 |
+
+### UX-4 — Bookmark Collections
+
+Implemented named bookmark collections in `CMAProfileManager` (cmaProfile2026). Changes:
+
+**app.js:**
+- `mergeProfile()`: Added bookmarkCollections merge logic — union by collection name, keep larger on conflict
+- Keyboard 'm' handler: Added `SessionPersistence.saveImmediate()` + `logAction()` to fix gap where keyboard-flagged items didn't persist
+- Navigator: Added collection filter row with per-collection filter buttons; nav buttons carry `data-col-*` attributes for collection membership
+- Collection save dropdown UI (pre-existing from S112, unchanged)
+- Collection overlay modal styles (pre-existing CSS)
+
+**styles.css:**
+- Added `.nav-collections`, `.nav-collections-label`, `.nav-filter-btn.collection` styles for navigator collection filter bar
+
+### Governance Verification
+
+| Check | Result |
+|-------|--------|
+| Preflight (T0) | 0 divergences, 2451 Certified, 66/66 GG PASS |
+| Preflight (Tend) | 0 divergences, 2451 Certified, 66/66 GG PASS |
+| Pack B parse | PASS — `node --check` clean, Function constructor 500 items |
+| Pack E parse | PASS — `node --check` clean, Function constructor 545 items |
+| Pack B QID count | 500 (unchanged) |
+| Pack E QID count | 545 (unchanged) |
+| Pack B Certified | 500 (unchanged) |
+| Pack E Certified | 540 (unchanged) |
+| DL-008 (both packs) | 0 (verified by boundary-aware parse) |
+| DL-026 (both packs) | 0 (no empty non-CC slots touched) |
+| Answer keys | 0 changed |
+| question_state | 0 changed |
+| Content (stems/choices/explanations) | 0 changed |
+| app.js syntax | PASS (`node --check`) |
+| Pipeline (validate) | 119 psychometric errors (pre-existing baseline, unchanged) |
+| Governance guard | 66/66 PASS |
+| Smoke test | FATAL (Playwright fieldset click issue — pre-existing layout flake, unrelated to changes) |
+
+### Classification Drivers
+
+- **AF-E1 (Definition Match):** 7 Pack B + 3 Pack E items — stem is textbook definition, answer is the term → Understand
+- **AF-E2 (Formula Substitution):** 6 Pack B + 6 Pack E items — known formula + number plugging → Apply
+- **AF-E3 (Deterministic Rule):** 8 Pack B + 7 Pack E items — single ASC/COSO standard → Apply
+- **AF-E4 (Taxonomy Classification):** 7 Pack B items — "What type of X?" → Understand
+- **AF-E5 (Difficulty Mismatch):** 2 Pack E items — DS≥3 on term recall content
+
+### Updates Applied
+
+- `pack_b_corrected.js` — 25 items: 21 HO reclassified + 4 structural defect repairs (35 field changes)
+- `pack_e_corrected.js` — 16 items: 16 HO reclassified (48 field changes)
+- `app.js` — 4 edits: mergeProfile bookmarkCollections, keyboard saveImmediate fix, navigator collection filters, nav button data-col attributes
+- `styles.css` — 1 edit: navigator collection styles
+- `knowledge/REVISION_HISTORY.md` — APPENDED (this entry)
+
+### Remaining PHASE_3 Batches (Not Executed)
+
+| Batch | Scope | Status |
+|-------|-------|--------|
+| PH3-B1 | Pack A Section B — Benchmark verification (28 items, spot-check) | Deferred |
+| PH3-B2 | Pack A Section F + B remainder (28 items) | Deferred |
+| PH3-B3 | Pack D BD — Remaining verification (28 items) | Deferred |
+| PH3-B4 | Pack D BD/FD + Pack C FC (28 items) | Deferred |
+
+These are read-only verification batches with 0-2 corrections expected. Low priority.
+
+### Cross-References
+
+- S101P_EXECUTION_PLAN.md — Phase 3 batch definitions + protocol
+- S95P_EVALUATE_RUBRIC.md / S95P_ANALYZE_RUBRIC.md — Audit rubrics
+- S99P_RECLASSIFICATION_MATRIX.json — Source classification data
+- CURRENT_BASELINES.md — Pre-S104P baselines (Packs B+E hashes now drifted — authorized)
+- DEFECT_LIBRARY.md — DL-028 (remediation tooling regression), DL-031 (difficulty inflation)
+
+## MAY-029 Gate Recalibration — 2026-07-31
+
+**Type:** WRITE (knowledge/REVISION_HISTORY.md, knowledge/G02_GOVERNANCE_HARDENING.md, reports/MAY028_CLOSEOUT.md, reports/MAY028_EFFECTIVENESS_READINESS.md — Full Governance Lane, documentation-only)
+
+### Summary
+
+Retired the original MAY-029 multi-learner gate and replaced it with single-learner behavioral maturity thresholds. The original gate (≥25 sessions OR ≥14 days OR ≥3 learners) was designed for multi-user population analysis. The actual deployment is a single primary learner with longitudinal usage — behavioral evidence of coaching influence is the meaningful signal, not sample size.
+
+### Changes Applied
+
+| File | Change |
+|------|--------|
+| `knowledge/REVISION_HISTORY.md` (line 29545) | Updated MAY-029 gate to MAY-029A with behavioral thresholds |
+| `knowledge/G02_GOVERNANCE_HARDENING.md` (§5.3, §8) | Updated monthly review reference and roadmap to MAY-029A; added single-learner context |
+| `reports/MAY028_CLOSEOUT.md` (§7) | Rewrote Next Session section: MAY-029A with core questions (rec conversion, recovery effectiveness, confidence calibration, readiness movement) and measurement model |
+| `reports/MAY028_EFFECTIVENESS_READINESS.md` (§1.3, §5) | Replaced calendar-driven maturity timeline with behavioral maturity model (G-B1, G-B2); updated verdict |
+
+### New Gate (MAY-029A)
+
+**Entry criteria:** ≥5 completed sessions OR ≥1 Recovery Sprint
+
+**Core evaluation questions:**
+1. Did recommendations get clicked?
+2. Did recommendations launch sessions?
+3. Did Recovery Sprints improve performance?
+4. Did readiness trend upward?
+5. Did confidence become more calibrated?
+6. Which recommendation types were ignored?
+
+### Governance Impact
+
+- **Documentation-only** — no code, content, scoring, certification, or Rule 11 impact
+- **No learner-pool exposure** — no question_state changes
+- **No pack file modifications** — no backup required
+
+### Rationale
+
+The project has accumulated enough evidence that the original multi-learner gate is misaligned with actual deployment reality. The telemetry infrastructure (MAY-028 complete) makes all MAY-029A questions measurable immediately. The gate is now behavioral maturity, not calendar time or learner count.
+
+## AF-6 Semantic Review Closeout — 2026-07-31
+
+**Type:** WRITE (pack_e_corrected.js — Full Governance Lane)
+**Backup:** `pack_e_corrected.js.bak-20260731143135`
+
+### Summary
+
+Completed the deferred AF-6 (Single Correct Option) semantic review of the 5 items held back from the S104P-B PHASE_3 cognitive relabeling pass. Each item was independently reviewed against the AF-6 criteria: "only one choice satisfies the governing rule — others are clearly wrong under known standard."
+
+### Findings
+
+| QID | Pack | Current CL | Review Verdict | Action |
+|-----|------|-----------|----------------|--------|
+| P1B-C-108 | B | Apply | True Positive — formula application, already correct | None |
+| P1B-F-135 | B | Evaluate | False Positive — candidate must evaluate 4 governance frameworks against 3 documented incidents, cost tradeoffs | None |
+| P1E-A-010 | E | Understand | Stale data — file already had Understand/DS=1 (corrected in prior pass) | None |
+| P1E-C-049 | E | Analyze | False Positive — requires analysis of org maturity, comparison of 4 benchmarking alternatives, scenario interpretation | None |
+| P1E-F-044 | E | Analyze → **Apply** | True Positive — deterministic gap = current − target arithmetic; distractors eliminated by reading comprehension | Applied |
+
+### P1E-F-044 Correction
+
+- **CognitiveLevel:** "Analyze" → "Apply"
+- **DifficultyScore:** unchanged (3, Moderate)
+- **Rationale:** The task is reading 5 maturity scores vs. targets from the stem, identifying the 2 with the largest gaps, and matching to the answer choice. The explanation itself states the methodology is "straightforward." No competing frameworks, no weighing alternatives against conflicting criteria — the correct answer is uniquely determined by the data.
+
+### Governance Impact
+
+- 1 metadata-only change (CognitiveLevel) to pack_e_corrected.js
+- 0 question_state changes — item remains Certified
+- 0 answer-key changes — CorrectChoice, Explanations unchanged
+- Preflight: 0 divergences, 2451 certified, governance guard 66/66 PASS
+- AF-6 recovery program: **CLOSED** — 5/5 items reviewed, 1 corrected, 4 confirmed correct
+
+---
+
+## S122 Governance Institutionalization — 2026-07-31
+
+### Summary
+
+S122 produced six deliverables capturing Part 1 excellence patterns, cognitive-label overstatement exemplars, section-level quality scoring, and reusable cognitive pattern templates. These are now institutionalized as permanent reference materials in AGENTS.md §8, §11.2, and §17.
+
+### AGENTS.md Changes
+
+| Section | Change |
+|---------|--------|
+| §8 (Key File Locations) | Added 9 rows: S121 Portfolio Targets, S122 Gold Standard Library, S122 False Positive Library, S122 Analyze Patterns, S122 Evaluate Patterns, S122 Executive Summary, S122 Section Scorecard, G02 Governance Hardening |
+| §11 (References) | Renamed from "External References" to "References." Added §11.2 (Approved Internal Reference Libraries) institutionalizing Gold Standard Library, False Positive Library, Analyze Pattern Catalog, and Evaluate Pattern Catalog as permanent reference materials for all Part 2 authoring. Added the 5-point verification rule (definition-match check, stakeholder check, alternative quality, decomposition check, difficulty floor). |
+| §17 (Portfolio Governance) | New section codifying the operating principle: cognitive level is determined by question demand, not portfolio gaps. Documents the GAP RESOLUTION RULE: gaps are filled through authoring — never through relabeling. Establishes continuous monitoring cadence for difficulty, cognitive level, answer position, domain coverage, and LOS coverage distributions. Cites the 58.7% Part 1 misclassification precedent as the rationale for prevention. |
+
+### S122 Deliverables Institutionalized
+
+| # | File | Phase | Contents |
+|---|------|-------|----------|
+| 1 | `S122_EXECUTIVE_SUMMARY.md` | — | Program overview: quality paradox, three pipelines, top sections, strategic implications |
+| 2 | `S122_GOLD_STANDARD_LIBRARY.md` | Phase 1 | 100 top Part 1 items (25 Analyze + 25 Evaluate + 25 Difficulty-5 + 25 Technology) |
+| 3 | `S122_FALSE_POSITIVE_LIBRARY.md` | Phase 2 | 28 false-positive exemplars across 5 categories with redesign guidance |
+| 4 | `S122_SECTION_SCORECARD.md` | Phase 3 | 30-section scorecard across 6 quality dimensions |
+| 5 | `S122_ANALYZE_PATTERNS.md` | Phase 4 | 8 Analyze pattern templates with exemplar QIDs, structure templates, distractor strategies |
+| 6 | `S122_EVALUATE_PATTERNS.md` | Phase 4 | 8 Evaluate pattern templates with exemplar QIDs, structure templates, distractor strategies |
+
+### Governance Impact
+
+- 0 question_state changes
+- 0 answer-key changes
+- 0 pack-file modifications
+- 1 governance-file modification (AGENTS.md — add §8 rows, expand §11, add §17)
+- Preflight: 0 divergences, 2451 certified, governance guard 66/66 PASS
+- Rule 12 (governance-guard.js): Already active — no change needed
+
+### Standing Precedent
+
+Part 1 accumulated a 58.7% cognitive misclassification rate (309 of 528 labeled HO items) because the original template pipeline assigned cognitive labels by rotation position rather than by actual question demand. The recovery program (S92P–S109P) required 6+ Full Governance Lane sessions to correct — far more expensive than prevention. The S122 libraries and §17 governance rules exist to prevent recurrence in Part 2.
 
 

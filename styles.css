@@ -1595,6 +1595,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   margin-top: 12px;
   padding-top: 12px;
   border-top: 1px solid var(--border-light);
+  position: relative;
 }
 .guess {
   font-size: 13px;
@@ -3095,7 +3096,150 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .may-readiness-info { color: var(--info); background: var(--info-bg); }
 .may-readiness-success { color: var(--success); background: var(--success-bg); }
 
-/* Session 103 — Section readiness grid */
+/* S113P — Archetype & Plateau Engine card */
+.may-archetype-panel {
+  margin: 12px 0;
+  padding: 0 12px;
+}
+
+.may-archetype-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-left: 3px solid var(--info);
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.may-archetype-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.may-archetype-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.may-archetype-confidence {
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.may-conf-high {
+  color: var(--success, #27ae60);
+  background: var(--success-bg, rgba(39,174,96,0.12));
+}
+
+.may-conf-low {
+  color: var(--text-muted, #888);
+  background: var(--bg-tertiary, rgba(255,255,255,0.04));
+}
+
+.may-archetype-factors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 4px;
+  padding: 0 10px;
+}
+
+.may-archetype-factor {
+  font-size: 0.62rem;
+  padding: 2px 6px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+.may-archetype-trend {
+  font-size: 0.7rem;
+  padding: 0 10px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.may-archetype-trend-detail {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+}
+
+.may-archetype-spacing {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  padding: 0 10px;
+  margin-bottom: 4px;
+}
+
+.may-plateau-alert {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: rgba(243,156,18,0.1);
+  border: 1px solid rgba(243,156,18,0.25);
+  border-radius: 4px;
+  margin: 6px 10px 0 10px;
+  font-size: 0.7rem;
+  color: var(--text-primary);
+}
+
+.may-plateau-icon {
+  color: #f39c12;
+  font-size: 0.85rem;
+}
+
+.may-plateau-confidence {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+/* S114P — Archetype coaching actions in the Learner Profile card */
+.may-archetype-actions {
+  margin: 8px 10px 6px 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-light, #e5e7eb);
+}
+.may-archetype-actions-title {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted, #6b7280);
+  font-weight: 600;
+  margin: 0 0 6px 0;
+}
+.may-archetype-action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  font-size: 0.72rem;
+  color: var(--text, #111827);
+}
+.may-archetype-action-icon {
+  color: var(--accent, #2563eb);
+  font-size: 0.6rem;
+  flex-shrink: 0;
+}
+.may-archetype-action-label {
+  line-height: 1.3;
+}
+[data-theme="dark"] .may-archetype-actions {
+  border-top-color: #374151;
+}
+
+/* Section 103 — Section readiness grid */
 .may-section-panel {
   border-left: 3px solid var(--info);
 }
@@ -4478,6 +4622,34 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 [data-theme="dark"] .may-rec-info { background: #141e2d; color: #93c5fd; }
 [data-theme="dark"] .may-rec-muted { background: #1e2433; color: #9ca3af; }
 
+/* S114P — Coaching action cards in the recommendation dashboard grid */
+.may-rec-action-card {
+  grid-column: 1 / -1;
+  background: var(--bg, #ffffff);
+  border: 1px solid var(--accent-light, #dbeafe);
+  border-left: 3px solid var(--accent, #2563eb);
+}
+.may-rec-action-card:hover {
+  border-color: var(--accent, #2563eb);
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.12);
+  background: var(--accent-bg, #eff6ff);
+}
+[data-theme="dark"] .may-rec-action-card {
+  background: #1e2433;
+  border-color: #2d4158;
+  border-left-color: var(--accent, #60a5fa);
+}
+[data-theme="dark"] .may-rec-action-card:hover {
+  border-color: var(--accent, #60a5fa);
+  background: #1a2740;
+}
+.may-rec-detail {
+  font-size: 0.73rem;
+  color: var(--text-muted, #6b7280);
+  line-height: 1.45;
+  margin-top: 2px;
+}
+
 /* ===== MAY-022 — Contextual entry point labels ===== */
 .may-launcher-ctx-btn {
   display: inline-block;
@@ -4676,4 +4848,995 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 
 .settings-data-row:last-child {
     border-bottom: none;
+}
+
+/* ===== UX-4: Bookmark Collections ===== */
+
+/* -- Exam toolbar: Save to Collection button -- */
+.collection-save-btn {
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    background: transparent;
+    color: var(--text);
+    transition: all var(--transition);
+    user-select: none;
+    margin-top: 0;
+}
+.collection-save-btn:hover {
+    border-color: var(--accent);
+    background: var(--accent-bg);
+    color: var(--accent);
+}
+
+/* -- Collection dropdown -- */
+.collection-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    min-width: 240px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    z-index: 100;
+    overflow: hidden;
+}
+.collection-dropdown-header {
+    padding: 8px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border-light);
+    background: var(--surface-alt);
+}
+.collection-dropdown-item {
+    padding: 8px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-light);
+    transition: background var(--transition);
+}
+.collection-dropdown-item:hover { background: var(--surface-alt); }
+.collection-dropdown-item.saved {
+    color: var(--accent);
+    font-weight: 500;
+}
+.collection-dropdown-item.disabled {
+    color: var(--text-muted);
+    cursor: default;
+    font-style: italic;
+}
+.collection-count {
+    font-size: 11px;
+    color: var(--text-muted);
+    background: var(--surface-alt);
+    padding: 1px 6px;
+    border-radius: 10px;
+}
+.collection-dropdown-footer {
+    padding: 6px 8px;
+    border-top: 1px solid var(--border-light);
+    background: var(--surface-alt);
+}
+.collection-new-btn {
+    width: 100%;
+    font-size: 12px;
+    padding: 6px 10px;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+.collection-new-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-bg);
+}
+
+/* -- Dashboard: Collections panel -- */
+.collections-panel {
+    margin-top: 20px;
+}
+.collections-panel h2 {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+}
+.collection-total {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+.collection-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+.collection-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 14px;
+    background: var(--surface-alt);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    transition: border-color var(--transition);
+}
+.collection-row:hover { border-color: var(--border); }
+.collection-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 10px;
+    min-width: 0;
+}
+.collection-name {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text);
+}
+.collection-meta {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.collection-badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 8px;
+    letter-spacing: 0.3px;
+}
+.collection-badge.system {
+    background: var(--accent-bg);
+    color: var(--accent);
+}
+.collection-actions {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    flex-shrink: 0;
+}
+.collection-action-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition);
+    white-space: nowrap;
+}
+.collection-action-btn:hover {
+    border-color: var(--border);
+    color: var(--text);
+    background: var(--surface-alt);
+}
+.collection-action-btn.review {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+.collection-action-btn.review:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+.collection-action-btn.delete:hover {
+    border-color: var(--danger);
+    color: var(--danger);
+    background: var(--danger-bg);
+}
+.collection-new-row {
+    display: flex;
+    gap: 8px;
+}
+.collection-new-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    background: var(--surface);
+    color: var(--text);
+}
+.collection-new-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-bg);
+}
+.collection-create-btn {
+    padding: 8px 16px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity var(--transition);
+}
+.collection-create-btn:hover { opacity: 0.9; }
+
+.collection-backup-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+.collection-backup-btn {
+    padding: 6px 12px;
+    background: var(--surface-alt);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+.collection-backup-btn:hover { background: var(--accent-bg); border-color: var(--accent); }
+
+/* -- Navigator collection filters -- */
+.nav-collections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-top: 4px;
+    padding-top: 4px;
+    border-top: 1px solid var(--border-light);
+}
+.nav-collections-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    width: 100%;
+    margin-bottom: 1px;
+}
+.nav-filter-btn.collection {
+    flex: none;
+    padding: 2px 5px;
+    font-size: 9px;
+}
+
+/* -- Collection overlay (modal for manage collections) -- */
+.collection-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.collection-overlay-backdrop {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+.collection-overlay-dialog {
+    position: relative;
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.collection-overlay-dialog h3 {
+    margin: 0 0 16px 0;
+    font-size: 1.15rem;
+}
+.collection-overlay-dialog .collection-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-light);
+    gap: 10px;
+}
+.collection-overlay-dialog .collection-list-item:last-child {
+    border-bottom: none;
+}
+.collection-overlay-dialog .collection-list-name {
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+.collection-overlay-dialog .collection-list-count {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+.collection-overlay-dialog .collection-list-actions {
+    display: flex;
+    gap: 4px;
+}
+.collection-overlay-dialog .collection-list-actions button {
+    font-size: 12px;
+    padding: 3px 8px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+.collection-overlay-dialog .collection-list-actions button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+.collection-overlay-dialog .collection-list-actions button.delete:hover {
+    border-color: var(--danger);
+    color: var(--danger);
+    background: var(--danger-bg);
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] .collection-save-btn:hover {
+    background: rgba(59,130,246,0.12);
+}
+[data-theme="dark"] .collection-dropdown {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+[data-theme="dark"] .collection-dropdown-item:hover { background: var(--surface); }
+[data-theme="dark"] .collection-new-btn:hover {
+    background: rgba(59,130,246,0.1);
+}
+
+/* ============================================================
+   S124 — Program Operations Console
+   ============================================================ */
+
+/* ── Operations Console Layout ── */
+.ops-console {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* ── Operations Sub-Tabs ── */
+.ops-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 4px;
+    flex-shrink: 0;
+}
+.ops-tab {
+    border: 0;
+    background: transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--text-secondary);
+    font-size: 13px;
+    border-bottom: 3px solid transparent;
+    transition: all var(--transition);
+    margin-bottom: -2px;
+}
+.ops-tab:hover { color: var(--text); }
+.ops-tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+.ops-panel {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+}
+.ops-panel.active {
+    display: flex;
+}
+
+/* ── Stat Cards Row ── */
+.ops-stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+.ops-stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 16px 18px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.ops-stat-card h4 {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+.ops-stat-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--primary);
+}
+.ops-stat-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+.ops-stat-card.warn .ops-stat-value { color: var(--warning); }
+.ops-stat-card.ok .ops-stat-value { color: var(--success); }
+.ops-stat-card.alert .ops-stat-value { color: var(--danger); }
+
+/* ── Progress Bar ── */
+.ops-progress {
+    height: 10px;
+    background: var(--border-light);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 6px 0;
+}
+.ops-progress-fill {
+    height: 100%;
+    border-radius: 5px;
+    background: var(--accent);
+    transition: width .4s ease;
+}
+.ops-progress-fill.good { background: var(--success); }
+.ops-progress-fill.warn { background: var(--warning); }
+.ops-progress-fill.bad { background: var(--danger); }
+
+/* ── Operations Table ── */
+.ops-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+.ops-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.ops-table th {
+    background: var(--surface-alt);
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--text-secondary);
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.ops-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border-light);
+    white-space: nowrap;
+}
+.ops-table tr:hover td {
+    background: var(--surface-alt);
+}
+
+/* ── Section Cards ── */
+.ops-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    box-shadow: var(--shadow);
+}
+.ops-section h3 {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+}
+.ops-section h3 .ops-section-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+.ops-section-badge.good { background: var(--success-bg); color: var(--success); }
+.ops-section-badge.warn { background: var(--warning-bg); color: var(--warning); }
+.ops-section-badge.bad { background: var(--danger-bg); color: var(--danger); }
+
+/* ── Bar Chart (horizontal) ── */
+.ops-bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.ops-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+.ops-bar-label {
+    width: 100px;
+    text-align: right;
+    font-weight: 600;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+.ops-bar-track {
+    flex: 1;
+    height: 18px;
+    background: var(--border-light);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+.ops-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: var(--accent);
+    transition: width .4s ease;
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    min-width: 30px;
+}
+.ops-bar-fill.over { background: var(--danger); }
+.ops-bar-fill.under { background: var(--warning); }
+.ops-bar-fill.target { background: var(--accent); opacity: 0.6; }
+
+/* ── Divergence Flag List ── */
+.ops-diff-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.ops-diff-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--surface-alt);
+    border-radius: var(--radius);
+    font-size: 12px;
+}
+.ops-diff-tag {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.ops-diff-tag.over { background: var(--danger-bg); color: var(--danger); }
+.ops-diff-tag.under { background: var(--warning-bg); color: var(--warning); }
+
+/* ── Compact Domain Grid ── */
+.ops-domain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+}
+.ops-domain-card {
+    background: var(--surface-alt);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.ops-domain-card .domain {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--text);
+}
+.ops-domain-card .coverage {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* ── Topic/Defect Tags ── */
+.ops-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+}
+.ops-tag.certified { background: var(--success-bg); color: var(--success); }
+.ops-tag.unprocessed { background: var(--warning-bg); color: var(--warning); }
+.ops-tag.archived { background: var(--danger-bg); color: var(--danger); }
+.ops-tag.blocked { background: var(--danger-bg); color: var(--danger); }
+.ops-tag.in-audit { background: var(--info-bg); color: var(--info); }
+
+/* ── No-Data Empty State ── */
+.ops-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+.ops-empty b { display: block; margin-bottom: 6px; color: var(--text-secondary); }
+
+/* ============================================================
+   S124 — Guided Onboarding Tour System
+   ============================================================ */
+
+.guided-tour-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.guided-tour-overlay::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    pointer-events: none;
+}
+
+.guided-tour-spotlight {
+    position: fixed;
+    z-index: 10001;
+    pointer-events: none;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.55);
+    transition: all 0.35s ease;
+}
+
+.guided-tour-tooltip {
+    position: fixed;
+    z-index: 10002;
+    background: var(--surface, #fff);
+    color: var(--text, #111827);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    pointer-events: auto;
+    transition: all 0.35s ease;
+    max-width: 420px;
+}
+
+.guided-tour-tooltip h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary, #1a3a6b);
+}
+
+.guided-tour-tooltip p {
+    margin: 0 0 16px 0;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--text-secondary, #4b5563);
+}
+
+.tour-step-indicator {
+    font-size: 0.75rem;
+    color: var(--text-muted, #9ca3af);
+    margin-bottom: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tour-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.tour-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.tour-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-family: var(--font, 'Segoe UI', system-ui, sans-serif);
+}
+
+.tour-next {
+    background: var(--primary, #1a3a6b);
+    color: #fff;
+}
+
+.tour-next:hover { background: var(--primary-hover, #0f2557); }
+
+.tour-prev {
+    background: var(--surface-alt, #f7f8fa);
+    color: var(--text-secondary, #4b5563);
+}
+
+.tour-prev:hover { background: var(--border-light, #e5e7eb); }
+
+.tour-skip {
+    background: transparent;
+    color: var(--text-muted, #9ca3af);
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.tour-skip:hover { color: var(--text-secondary, #4b5563); }
+
+/* ============================================================
+   S124 — Home Hub
+   ============================================================ */
+
+.home-hub { padding: 24px 0; }
+
+.home-welcome {
+    text-align: center;
+    padding: 32px 20px 24px;
+}
+
+.home-welcome h2 {
+    margin: 0 0 4px 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary, #1a3a6b);
+}
+
+.home-subtitle {
+    margin: 0 0 20px 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary, #4b5563);
+}
+
+.home-tour-btn {
+    padding: 10px 24px;
+    background: var(--accent, #2563eb);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-family: var(--font, 'Segoe UI', system-ui, sans-serif);
+}
+
+.home-tour-btn:hover { background: var(--accent-hover, #1d4ed8); }
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 0 4px;
+}
+
+.home-card {
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border, #d1d5db);
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s;
+}
+
+.home-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg, 0 4px 6px rgba(0,0,0,.07));
+    border-color: var(--accent, #2563eb);
+}
+
+.home-card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.home-card h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text, #111827);
+}
+
+.home-card p {
+    margin: 0 0 10px 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary, #4b5563);
+    line-height: 1.45;
+}
+
+.home-card-cta {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--accent, #2563eb);
+}
+
+.home-card-study { border-left: 4px solid #2563eb; }
+.home-card-coach { border-left: 4px solid #7c3aed; }
+.home-card-analytics { border-left: 4px solid #059669; }
+.home-card-collections { border-left: 4px solid #d97706; }
+.home-card-history { border-left: 4px solid #0ea5e9; }
+.home-card-admin { border-left: 4px solid #b91c1c; }
+
+.home-card-admin .home-card-icon { color: var(--danger, #b91c1c); }
+
+.home-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 28px;
+    padding: 20px;
+    background: var(--surface-alt, #f7f8fa);
+    border-radius: 10px;
+    border: 1px solid var(--border-light, #e5e7eb);
+}
+
+.home-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.home-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary, #1a3a6b);
+}
+
+.home-stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted, #9ca3af);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   S124 — Help & Learning Center
+   ============================================================ */
+
+.help-center { padding: 24px 8px; }
+
+.help-center h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary, #1a3a6b);
+}
+
+.help-section {
+    margin-bottom: 24px;
+}
+
+.help-section h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text, #111827);
+    border-bottom: 1px solid var(--border-light, #e5e7eb);
+    padding-bottom: 8px;
+}
+
+.help-card {
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border-light, #e5e7eb);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--text-secondary, #4b5563);
+}
+
+.help-card b {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--text, #111827);
+}
+
+.help-link {
+    color: var(--accent, #2563eb);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.help-tour-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.help-tour-btn {
+    padding: 8px 18px;
+    background: var(--surface-alt, #f7f8fa);
+    border: 1px solid var(--border, #d1d5db);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    color: var(--text, #111827);
+    font-family: var(--font, 'Segoe UI', system-ui, sans-serif);
+}
+
+.help-tour-btn:hover {
+    background: var(--primary-light, #e8f0fe);
+    border-color: var(--accent, #2563eb);
+}
+
+/* ============================================================
+   S124 — Help Tab Button
+   ============================================================ */
+
+.help-tab {
+    font-weight: 700;
+    font-size: 1.1rem;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: auto;
+    background: var(--surface-alt, #f7f8fa);
+    color: var(--text-secondary, #4b5563);
+    border: 1px solid var(--border, #d1d5db);
+}
+
+.help-tab:hover {
+    background: var(--accent, #2563eb);
+    color: #fff;
+    border-color: var(--accent, #2563eb);
+}
+
+/* ============================================================
+   S124 — Admin Badge
+   ============================================================ */
+
+.admin-badge {
+    background: var(--danger, #b91c1c);
+    color: #fff;
+    font-size: 0.6rem;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 4px;
+    vertical-align: middle;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }

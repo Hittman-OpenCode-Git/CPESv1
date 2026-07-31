@@ -324,6 +324,8 @@ const MayCoachingOrchestrator = (function() {
             var sessId = 'sess_' + new Date().toISOString().replace(/[:.]/g, '-');
             localStorage.setItem('cmaMayPilotTelemetry', JSON.stringify({ events: fullBuffer, snapshot: snap }));
             localStorage.setItem('cmaMayPilotTelemetrySnapshot', JSON.stringify(snap));
+            // S120 — Also write to cmaProfile2026 (SSOT)
+            try { if (typeof CMAProfileManager !== 'undefined') CMAProfileManager.patchMayField('mayPilotTelemetry', { events: fullBuffer, snapshot: snap }); } catch (e) {}
             var archive = [];
             try {
               var existing = JSON.parse(localStorage.getItem('cmaMayPilotTelemetryArchive') || '[]');
@@ -332,6 +334,8 @@ const MayCoachingOrchestrator = (function() {
             archive.push({ sessionId: sessId, timestamp: new Date().toISOString(), eventCount: fullBuffer.length, events: fullBuffer, snapshot: snap });
             if (archive.length > 50) archive = archive.slice(-50);
             localStorage.setItem('cmaMayPilotTelemetryArchive', JSON.stringify(archive));
+            // S120 — Also write archive to cmaProfile2026 (SSOT)
+            try { if (typeof CMAProfileManager !== 'undefined') CMAProfileManager.patchMayField('mayPilotTelemetryArchive', archive); } catch (e) {}
           }
         } catch (ePersist) { /* persistence non-blocking */ }
       }

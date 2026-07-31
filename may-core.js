@@ -201,7 +201,9 @@ const May = {
         savedData.synthetic = true;
         MayLearnerState.save(savedData);
         // S115 — Persist selected learner ID
+        // S120 — Also write to cmaProfile2026 (SSOT)
         try { localStorage.setItem('cmaMaySelectedLearnerId', savedData.learnerId); } catch (e) {}
+        try { if (typeof CMAProfileManager !== 'undefined') CMAProfileManager.patchMayField('maySelectedLearnerId', savedData.learnerId); } catch (e) {}
         this.context.greetingState = 'READY_TO_TUTOR';
         this._logSessionTelemetry('new_student_created', { learnerId: savedData.learnerId, displayName: trimmed });
         this._speak(`Nice to meet you, **${trimmed}**!\n\nI can explain questions from your practice sessions, give you hints, and help you figure out what to work on next. What would you like to do?`);
@@ -270,7 +272,9 @@ const May = {
             if (!data.firstVisit) data.firstVisit = student.lastActiveAt || new Date().toISOString();
             MayLearnerState.save(data);
         }
+        // S120 — Also write to cmaProfile2026 (SSOT)
         try { localStorage.setItem('cmaMaySelectedLearnerId', learnerId); } catch (e) {}
+        try { if (typeof CMAProfileManager !== 'undefined') CMAProfileManager.patchMayField('maySelectedLearnerId', learnerId); } catch (e) {}
         this.context.greetingState = 'READY_TO_TUTOR';
         this._logSessionTelemetry('student_selected', { learnerId, displayName: student.displayName });
 
@@ -4694,6 +4698,7 @@ const May = {
                     ${insightHtml || '<p class="may-insight-empty">Complete a session to see insights.</p>'}
                 </div>
                 ${readinessHtml}
+                ${this._renderArchetypeCard()}
                 ${sectionReadinessHtml}
                 ${this._renderDomainReadinessDashboard()}
                 ${casePatternHtml}
@@ -4993,6 +4998,125 @@ const May = {
             + '</div>'
             + '<p class="may-readiness-rationale">' + summary.overall.rationale + '</p>'
             + topicItems
+            + '</div>';
+    },
+
+    // S113P — Archetype & Plateau Engine card
+    _renderArchetypeCard() {
+        let bp;
+        try {
+            bp = MayLearnerState.getBehavioralProfile();
+        } catch (e) { return ''; }
+        if (!bp || !bp.hasProfileData) return '';
+
+        let archetypeCls = 'may-archetype-' + bp.archetype;
+        let archetypeColors = {
+            'ready': '#27ae60',
+            'plateaued': '#f39c12',
+            'developing': '#3498db',
+            'new': '#9b59b6'
+        };
+        let archetypeIcon = {
+            'ready': '\u2605',
+            'plateaued': '\u26a0',
+            'developing': '\u2191',
+            'new': '\u25cf'
+        };
+        let color = archetypeColors[bp.archetype] || '#888';
+        let icon = archetypeIcon[bp.archetype] || '?';
+
+        let factorLabels = [];
+        bp.archetypeFactors.forEach(function(f) {
+            let lbl = f.replace(/_/g, ' ');
+            if (f === 'high_performance') lbl = 'high performance';
+            if (f === 'insufficient_data') lbl = 'insufficient data';
+            if (f === 'flat_trajectory') lbl = 'flat trajectory';
+            if (f === 'moderate_scores') lbl = 'moderate scores';
+            if (f === 'no_improvement') lbl = 'no improvement';
+            if (f === 'improving_trend') lbl = 'improving trend';
+            if (f === 'positive_direction') lbl = 'positive direction';
+            if (f === 'declining_trend') lbl = 'declining trend';
+            if (f === 'needs_intervention') lbl = 'needs intervention';
+            if (f === 'mixed_signals') lbl = 'mixed signals';
+            if (f === 'broad_coverage') lbl = 'broad coverage';
+            if (f === 'consistent') lbl = 'consistent';
+            factorLabels.push('<span class="may-archetype-factor">' + lbl + '</span>');
+        });
+
+        let factorsHtml = factorLabels.length > 0
+            ? '<div class="may-archetype-factors">' + factorLabels.join('') + '</div>'
+            : '';
+
+        let trendHtml = '';
+        if (bp.sessionTrend && bp.sessionCount >= 3) {
+            let dirIcon = bp.sessionTrend.direction === 'improving' ? '\u2191' :
+                          bp.sessionTrend.direction === 'declining' ? '\u2193' : '\u2192';
+            let dirColor = bp.sessionTrend.direction === 'improving' ? '#27ae60' :
+                           bp.sessionTrend.direction === 'declining' ? '#e74c3c' : '#888';
+            trendHtml = '<div class="may-archetype-trend">'
+                + '<span style="color:' + dirColor + ';">' + dirIcon + ' '
+                + bp.sessionTrend.direction + '</span>'
+                + '<span class="may-archetype-trend-detail">'
+                + (bp.sessionTrend.recentAvg !== null ? ' recent avg ' + bp.sessionTrend.recentAvg : '')
+                + (bp.sessionTrend.delta !== 0 ? ' (' + (bp.sessionTrend.delta > 0 ? '+' : '') + bp.sessionTrend.delta + ')' : '')
+                + '</span>'
+                + '</div>';
+        }
+
+        let plateauHtml = '';
+        if (bp.plateau && bp.plateau.isPlateaued) {
+            plateauHtml = '<div class="may-plateau-alert">'
+                + '<span class="may-plateau-icon">\u26a0</span> '
+                + '<span>Plateau detected</span>'
+                + '<span class="may-plateau-confidence">' + Math.round(bp.plateau.plateauConfidence * 100) + '% conf</span>'
+                + '</div>';
+        }
+
+        // S114P — Coaching action recommendations
+        var actionHtml = '';
+        try {
+            if (typeof MayArchetypeCoach !== 'undefined') {
+                var actions = MayArchetypeCoach.getCoachingActions(bp);
+                if (actions && actions.length > 0) {
+                    var topActions = actions.slice(0, 2);
+                    var actionItems = topActions.map(function(a) {
+                        var aIcon = a.priority === 1 ? '\u25b6' : '\u25b7';
+                        return '<div class="may-archetype-action">'
+                            + '<span class="may-archetype-action-icon">' + aIcon + '</span>'
+                            + '<span class="may-archetype-action-label">' + (a.label || '') + '</span>'
+                            + '</div>';
+                    });
+                    actionHtml = '<div class="may-archetype-actions">'
+                        + '<h4 class="may-archetype-actions-title">Recommended Actions</h4>'
+                        + actionItems.join('')
+                        + '</div>';
+                }
+            }
+        } catch (e) { actionHtml = ''; }
+
+        let confidenceHtml = bp.archetypeConfidence >= 0.7
+            ? '<span class="may-archetype-confidence may-conf-high">' + Math.round(bp.archetypeConfidence * 100) + '% confidence</span>'
+            : '<span class="may-archetype-confidence may-conf-low">' + Math.round(bp.archetypeConfidence * 100) + '% confidence</span>';
+
+        let spacingHtml = '';
+        if (bp.sessionSpacing && bp.sessionSpacing.avgDays > 0) {
+            spacingHtml = '<div class="may-archetype-spacing">'
+                + bp.sessionSpacing.avgDays + ' day avg between sessions'
+                + '</div>';
+        }
+
+        return '<div class="may-case-pattern-panel may-archetype-panel">'
+            + '<h3 class="may-insights-title">Learner Profile</h3>'
+            + '<div class="may-archetype-header ' + archetypeCls + '" style="border-left-color:' + color + ';">'
+            + '<span class="may-archetype-icon">' + icon + '</span>'
+            + '<span class="may-archetype-label">' + bp.archetypeLabel + '</span>'
+            + confidenceHtml
+            + '</div>'
+            + factorsHtml
+            + trendHtml
+            + spacingHtml
+            + plateauHtml
+            + actionHtml
             + '</div>';
     },
 
@@ -6215,34 +6339,42 @@ const May = {
     },
 
     // Persist pilot usage log to localStorage (capped at 200).
+    // S120 — Also write to cmaProfile2026 (SSOT) so profile save/backup stays current.
     _persistUsageLog() {
         try {
-            let log = (this.context._pilotUsageLog || []).slice(-200);
+            var log = (this.context._pilotUsageLog || []).slice(-200);
             localStorage.setItem('cmaMayPilotUsageLog', JSON.stringify(log));
+            if (typeof CMAProfileManager !== 'undefined') CMAProfileManager.patchMayField('mayUsageLog', log);
         } catch (e) { /* quota exceeded */ }
     },
 
     // Persist safety log to localStorage (capped at 50).
+    // S120 — Also write to cmaProfile2026 (SSOT).
     _persistSafetyLog() {
         try {
-            let log = (this.context._safetyLog || []).slice(-50);
+            var log = (this.context._safetyLog || []).slice(-50);
             localStorage.setItem('cmaMaySafetyLog', JSON.stringify(log));
+            if (typeof CMAProfileManager !== 'undefined') CMAProfileManager.patchMayField('maySafetyLog', log);
         } catch (e) {}
     },
 
     // Persist gate log to localStorage (capped at 50).
+    // S120 — Also write to cmaProfile2026 (SSOT).
     _persistGateLog() {
         try {
-            let log = (this.context._gateLog || []).slice(-50);
+            var log = (this.context._gateLog || []).slice(-50);
             localStorage.setItem('cmaMayGateLog', JSON.stringify(log));
+            if (typeof CMAProfileManager !== 'undefined') CMAProfileManager.patchMayField('mayGateLog', log);
         } catch (e) {}
     },
 
     // Persist session telemetry to localStorage (capped at 100).
+    // S120 — Also write to cmaProfile2026 (SSOT).
     _persistSessionTelemetry() {
         try {
-            let log = (this.context._sessionTelemetry || []).slice(-100);
+            var log = (this.context._sessionTelemetry || []).slice(-100);
             localStorage.setItem('cmaMaySessionTelemetry', JSON.stringify(log));
+            if (typeof CMAProfileManager !== 'undefined') CMAProfileManager.patchMayField('maySessionTelemetry', log);
         } catch (e) {}
     },
 
@@ -6303,11 +6435,28 @@ const May = {
     },
 
     // ── Developer-facing reset: clear all S115 localStorage keys and in-memory logs ──
+    // S120 — Also clears May fields from cmaProfile2026 (SSOT) so reset is complete.
     clearPilotData() {
         let keys = ['cmaMayStudentRoll', 'cmaMaySelectedLearnerId', 'cmaMayPilotUsageLog',
                     'cmaMaySafetyLog', 'cmaMayGateLog', 'cmaMaySessionTelemetry',
                     'cmaMayPilotTelemetry', 'cmaMayPilotTelemetrySnapshot', 'cmaMayPilotTelemetryArchive'];
         keys.forEach(k => { try { localStorage.removeItem(k); } catch (e) {} });
+        // S120 — Clear May fields from the unified profile to prevent stale restore
+        try {
+            if (typeof CMAProfileManager !== 'undefined') {
+                var profile = CMAProfileManager.load();
+                profile.mayLearnerState = {};
+                profile.mayStudentRoll = [];
+                profile.mayUsageLog = [];
+                profile.maySafetyLog = [];
+                profile.mayGateLog = [];
+                profile.maySessionTelemetry = [];
+                profile.mayPilotTelemetry = {};
+                profile.mayPilotTelemetryArchive = [];
+                profile.maySelectedLearnerId = null;
+                CMAProfileManager.save(profile);
+            }
+        } catch (e) {}
         this.context._pilotUsageLog = [];
         this.context._safetyLog = [];
         this.context._gateLog = [];

@@ -1,79 +1,79 @@
 {
-  "timestamp": "2026-07-30 15:53:19",
+  "timestamp": "2026-07-31 21:07:34",
   "runtime_hashes": {
     "app.js": {
-      "hash": "790D23274651EA8CA4F033E5CEFDF83C196FB93CD5A329AC74F908F49A004EA9",
-      "size": 218013,
+      "hash": "D390F6E66A86789E57434516673F99792AE0CC14B9B8715AF1B99B6D562E58A0",
+      "size": 309932,
       "label": "app.js"
     },
     "index_updated.html": {
-      "hash": "7020DAB13A80FC59A7E954B405F6BE7CB48406B1EA86B0C8E7B1EB73A14D812E",
-      "size": 7298,
+      "hash": "54DE5947B3ED5BD6EC64BE45D0C11241FE9EDF792BA2E865C5F523A36C713509",
+      "size": 9319,
       "label": "index_updated.html"
     },
     "styles.css": {
-      "hash": "5A1ECE1B53A8875F61A65D885AA28DC957E5BC0F5E07D609225AC4409183A0A5",
-      "size": 77362,
+      "hash": "B0C1350D116EB7AB6893BB5FF108E5CBEAC07BFC3D05CF3F59583DA63A9E35E6",
+      "size": 112170,
       "label": "styles.css"
     },
     "pack_a_corrected.js": {
-      "hash": "A1E6859783F243EFB331A0EA31CCE1E6494B1A470BF2FD87A3873D4F251D79F4",
-      "size": 2548127,
+      "hash": "860FD5898712D164F96C890FC686974F3DB6A999FB14AA76C40CD70A47988304",
+      "size": 2285082,
       "label": "pack_a_corrected.js"
     },
     "pack_b_corrected.js": {
-      "hash": "04D68A74CA59D4B8A39CC5D13FC2E1A16B12CFE18050F39D6A404BEB511956BF",
-      "size": 1508181,
+      "hash": "42EA8FBA9794BA1731B60644D944F276D81CAEB14FCDEEAEC65BDE33011CE93D",
+      "size": 1488520,
       "label": "pack_b_corrected.js"
     },
     "pack_c_corrected.js": {
-      "hash": "D25126847632152E6A8D582E58F7139FCE4ED31BC7BACA53F39ECDB28BD2BE87",
-      "size": 2144204,
+      "hash": "447DFA97ECD2A0665EDE20E748CFD447888DB610FE16A7E15C703C8CEEB4FCB4",
+      "size": 2025682,
       "label": "pack_c_corrected.js"
     },
     "pack_d_corrected.js": {
-      "hash": "6952F8E9E2196C45C712B2694EF4F99AA0C4BB1928C514011D4DBA50ED06B3D3",
-      "size": 2418080,
+      "hash": "5A901038CF8E54BE9B8426F6767CD2BE14F00F287381DB1E1A5BDAFDCB79D55B",
+      "size": 2413404,
       "label": "pack_d_corrected.js"
     },
     "pack_e_corrected.js": {
-      "hash": "D15DBC12B25DE66403C1D17824D6DD3110C986E2A6297106575E17B4B65D4360",
-      "size": 1788809,
+      "hash": "9020C95CC71075EEBE66618918AB29E928DE1D50894FB8503710C8548FA7F807",
+      "size": 1719942,
       "label": "pack_e_corrected.js"
     },
     "case_pack_1_corrected.js": {
-      "hash": "D197DD1F826EFF20F5EDEC13028B9FE28A902F3251F86A11D60141E2F3E850FC",
-      "size": 548601,
+      "hash": "46D83ED42B2D1C830808180418B63012143C2144EF97D49F8E53BD1D3953DA7D",
+      "size": 568583,
       "label": "case_pack_1_corrected.js"
     },
     "case_pack_2_corrected.js": {
-      "hash": "3D72C92716B3082462ED8BEFD0B89CBB7E65CBF11E7AA6BF2F0F8A62E4C78417",
-      "size": 391038,
+      "hash": "3BEB23F69C209A155F42CDB740E8076D927CD98E4ADDBE8DCED5BD750C5FED97",
+      "size": 409816,
       "label": "case_pack_2_corrected.js"
     },
     "case_pack_3_corrected.js": {
-      "hash": "1EC48E15F7F2B85CBB200220D153BE3598C9C934837761AC2004D0F685EB1B76",
-      "size": 458635,
+      "hash": "6F53C0D34B0CAFD5F3B60F581E2DCDDCD664FE616AA7A8D2B6C5FA9AE3AA7365",
+      "size": 460664,
       "label": "case_pack_3_corrected.js"
     },
     "may-core.js": {
-      "hash": "622DA95B62FE042AAB2021BFD9878D3046DCF2BBDAC1BF43A842441409FD892C",
-      "size": 359850,
+      "hash": "11F3A2AB027E67FCD5782BD6B6C44801923E477CF5AB193263423AA33B8F1AAB",
+      "size": 377728,
       "label": "may-core.js"
     },
     "may-learner-state.js": {
-      "hash": "BEE72B86A97D88CC5C98805EC41D37DCC89795044817ECEADC29A95328841EBC",
-      "size": 110240,
+      "hash": "18F3C753B6F986C0E5ABF3B0B025FB705D4415A49C975D49D84C027BB32E3CBB",
+      "size": 137429,
       "label": "may-learner-state.js"
     },
     ".opencode/plugins/governance-guard.js": {
-      "hash": "7E5185E3F1FB73FA81A1E2F20116620FA39ABED2D90962A090DCFD60C3F13066",
-      "size": 17985,
+      "hash": "9DB595EF778B2F8FA6FDB12C1CEE7D31AE113739576CAD94E750FA25AD0008ED",
+      "size": 20841,
       "label": "governance-guard.js"
     },
     "scripts/test_governance_guard.js": {
-      "hash": "213829DDB7BE3AB6250DB6C7DB46696AF24BD2787BE822563AC4FF279DF0AB69",
-      "size": 30853,
+      "hash": "E0F9BC2155A271B955B79638912AF07E3F197819784EA6703AD1A2054046347C",
+      "size": 42018,
       "label": "test_governance_guard.js"
     },
     "scripts/validators/ExplanationValidator.js": {

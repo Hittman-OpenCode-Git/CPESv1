@@ -1,3 +1,8 @@
+---
+name: pre-delivery-safety-check
+description: Confirms delivery pool only pulls Certified items and flags known-defective QIDs
+---
+
 # Pre-Delivery Safety Check Skill
 
 **Purpose:** Confirm the learner delivery pool only pulls strictly `"Certified"` items and that all known-defective QIDs are excluded — as a standing safety check, not a one-off ask.
@@ -74,7 +79,7 @@ Select 5 random QIDs from the certified list. For each:
 
 ### Step 7: Section Coverage Check
 
-Verify the certified pool has coverage across all six blueprint sections (A–F):
+Verify the certified pool has coverage across all six blueprint sections (A-F):
 
 ```bash
 # For each section A-F, count certified items by QuestionID prefix

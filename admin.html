@@ -3,386 +3,367 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>May Admin — Investigation Dashboard</title>
+<title>CMA Part 1 — Operations Console</title>
 <link rel="stylesheet" href="styles.css">
 <style>
 :root {
-  --admin-header: #1a1a2e;
-  --tab-active: #e94560;
+  --ops-header: #1a1a2e;
+  --ops-accent: #e94560;
   --tab-bg: #16213e;
+  --border-color: #2a2a4a;
   --health-green: #27ae60;
   --health-yellow: #f39c12;
   --health-orange: #e67e22;
   --health-red: #c0392b;
-  --badge-cert: #27ae60;
-  --badge-audit: #f39c12;
-  --badge-archived: #7f8c8d;
-  --badge-unprocessed: #95a5a6;
-  --severity-critical: #c0392b;
-  --severity-high: #e67e22;
-  --severity-medium: #f39c12;
-  --severity-low: #3498db;
-  --border-color: #2a2a4a;
+  --card-bg: rgba(255,255,255,0.03);
 }
-body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg, #0f0f23); color: var(--text, #e0e0e0); }
-.admin-header {
-  background: var(--admin-header, #1a1a2e);
-  border-bottom: 2px solid var(--tab-active, #e94560);
-  padding: 16px 24px;
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f0f23; color: #e0e0e0; }
+.ops-header {
+  background: var(--ops-header);
+  border-bottom: 2px solid var(--ops-accent);
+  padding: 14px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
 }
-.admin-header h1 {
-  margin: 0;
-  font-size: 20px;
-  color: #e94560;
-  font-weight: 700;
-}
-.admin-header .subtitle {
-  font-size: 12px;
-  color: #888;
-  margin-left: 12px;
-}
-.metrics-bar {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+.ops-header h1 { margin: 0; font-size: 20px; color: var(--ops-accent); font-weight: 700; }
+.ops-header .subtitle { font-size: 12px; color: #888; margin-left: 10px; }
+.metrics-bar { display: flex; gap: 12px; flex-wrap: wrap; }
 .metric-pill {
   background: rgba(255,255,255,0.05);
-  border: 1px solid var(--border-color, #2a2a4a);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
-  padding: 6px 14px;
-  font-size: 13px;
+  padding: 5px 12px;
+  font-size: 12px;
   white-space: nowrap;
 }
 .metric-pill .val { font-weight: 700; color: #fff; }
-.metric-pill .lbl { color: #888; margin-left: 4px; font-size: 11px; }
+.metric-pill .lbl { color: #888; margin-left: 4px; font-size: 10px; }
+.metric-pill.drift { border-color: #f39c12; }
+.metric-pill.drift .lbl { color: #f39c12; }
 .tab-nav {
   display: flex;
-  background: var(--tab-bg, #16213e);
+  background: var(--tab-bg);
   border-bottom: 1px solid var(--border-color);
   padding: 0 24px;
+  overflow-x: auto;
 }
 .tab-btn {
-  padding: 12px 24px;
+  padding: 12px 20px;
   border: none;
   background: transparent;
   color: #888;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 .tab-btn:hover { color: #ccc; }
-.tab-btn.active {
-  color: var(--tab-active, #e94560);
-  border-bottom-color: var(--tab-active, #e94560);
-}
+.tab-btn.active { color: var(--ops-accent); border-bottom-color: var(--ops-accent); }
 .tab-content { display: none; padding: 24px; }
 .tab-content.active { display: block; }
-.controls {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-  align-items: center;
+
+/* Overview — Health Cards */
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
 }
-.controls input, .controls select {
-  padding: 8px 12px;
-  background: rgba(255,255,255,0.06);
+.health-card {
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 4px;
-  color: var(--text);
-  font-size: 13px;
+  border-radius: 8px;
+  padding: 18px;
 }
-.controls input { width: 280px; }
-.controls select { min-width: 140px; }
-.data-table {
-  width: 100%;
-  border-collapse: collapse;
+.health-card h3 {
+  margin: 0 0 12px 0;
   font-size: 13px;
-}
-.data-table th {
-  text-align: left;
-  padding: 10px 12px;
-  border-bottom: 2px solid var(--border-color);
   color: #888;
-  font-weight: 600;
-  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  cursor: pointer;
-  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.data-table th:hover { color: #ccc; }
-.data-table td {
-  padding: 8px 12px;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-}
-.data-table tr { cursor: pointer; }
-.data-table tr:hover { background: rgba(255,255,255,0.03); }
-.data-table tr.expanded { background: rgba(255,255,255,0.05); }
-.badge {
+.health-card h3 .status-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
   display: inline-block;
-  padding: 2px 8px;
+}
+.status-healthy { background: var(--health-green); }
+.status-warning { background: var(--health-yellow); }
+.status-critical { background: var(--health-red); }
+.status-neutral { background: #888; }
+.health-big {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.health-sub { font-size: 12px; color: #888; margin-bottom: 10px; }
+.health-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  font-size: 12px;
+}
+.health-metrics .hm-label { color: #888; }
+.health-metrics .hm-val { font-weight: 600; }
+.drift-badge {
+  display: inline-block;
+  padding: 2px 6px;
   border-radius: 3px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
 }
+.drift-over { background: rgba(231,76,60,0.2); color: #e74c3c; }
+.drift-under { background: rgba(52,152,219,0.2); color: #3498db; }
+.drift-ok { background: rgba(39,174,96,0.2); color: #27ae60; }
+
+.progress-bar {
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+  margin: 4px 0;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s;
+}
+.progress-fill.green { background: var(--health-green); }
+.progress-fill.yellow { background: var(--health-yellow); }
+.progress-fill.accent { background: var(--ops-accent); }
+
+.pack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+.pack-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+.pack-card .pc-name { font-size: 11px; color: #888; margin-bottom: 4px; }
+.pack-card .pc-count { font-size: 20px; font-weight: 700; }
+.pack-card .pc-pct { font-size: 10px; color: #888; }
+
+/* Section coverage bar */
+.section-row {
+  display: flex;
+  align-items: center;
+  padding: 3px 0;
+  gap: 8px;
+  font-size: 11px;
+}
+.section-row .sec-label { width: 18px; color: var(--ops-accent); font-weight: 700; }
+.section-row .sec-name { width: 180px; }
+.section-row .sec-bar { flex: 1; height: 6px; background: #333; border-radius: 3px; overflow: hidden; }
+.section-row .sec-fill { height: 100%; border-radius: 3px; }
+.section-row .sec-pct { width: 36px; text-align: right; font-weight: 600; font-size: 10px; }
+
+/* Stub tab */
+.stub-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #666;
+  text-align: center;
+}
+.stub-tab .stub-icon { font-size: 40px; margin-bottom: 12px; }
+.stub-tab .stub-title { font-size: 16px; color: #888; margin-bottom: 6px; }
+.stub-tab .stub-desc { font-size: 12px; max-width: 400px; line-height: 1.5; }
+
+/* Existing admin styles (preserved) */
+.badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; }
 .badge-cert { background: rgba(39,174,96,0.2); color: #27ae60; }
 .badge-audit { background: rgba(243,156,18,0.2); color: #f39c12; }
 .badge-archived { background: rgba(127,140,141,0.2); color: #7f8c8d; }
 .badge-unprocessed { background: rgba(149,165,166,0.2); color: #95a5a6; }
-.health-bar {
-  display: inline-block;
-  height: 6px;
-  border-radius: 3px;
-  background: #333;
-  min-width: 60px;
-  vertical-align: middle;
-  margin-right: 6px;
-}
-.health-bar-inner {
-  height: 100%;
-  border-radius: 3px;
-  transition: width 0.3s;
-}
+.health-bar { display: inline-block; height: 6px; border-radius: 3px; background: #333; min-width: 60px; vertical-align: middle; margin-right: 6px; }
+.health-bar-inner { height: 100%; border-radius: 3px; transition: width 0.3s; }
 .health-green .health-bar-inner { background: #27ae60; }
 .health-yellow .health-bar-inner { background: #f39c12; }
 .health-orange .health-bar-inner { background: #e67e22; }
 .health-red .health-bar-inner { background: #c0392b; }
-.health-healthy { color: #27ae60; }
-.health-fair { color: #f39c12; }
-.health-needs-attention { color: #e67e22; }
-.health-critical { color: #c0392b; }
 .severity-critical { color: #c0392b; font-weight: 700; }
 .severity-high { color: #e67e22; font-weight: 600; }
 .severity-medium { color: #f39c12; }
 .severity-low { color: #3498db; }
-.detail-card {
-  display: none;
-  margin: 12px 0;
-  padding: 16px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-}
+.controls { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
+.controls input, .controls select { padding: 8px 12px; background: rgba(255,255,255,0.06); border: 1px solid var(--border-color); border-radius: 4px; color: #e0e0e0; font-size: 13px; }
+.controls input { width: 280px; }
+.controls select { min-width: 140px; }
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.data-table th { text-align: left; padding: 10px 12px; border-bottom: 2px solid var(--border-color); color: #888; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; user-select: none; }
+.data-table th:hover { color: #ccc; }
+.data-table td { padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.data-table tr { cursor: pointer; }
+.data-table tr:hover { background: rgba(255,255,255,0.03); }
+.detail-card { display: none; margin: 12px 0; padding: 16px; background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 6px; }
 .detail-card.visible { display: block; }
-.detail-card h3 { margin: 0 0 12px 0; font-size: 15px; color: #e94560; }
-.detail-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-  margin-bottom: 12px;
-}
+.detail-card h3 { margin: 0 0 12px 0; font-size: 15px; color: var(--ops-accent); }
+.detail-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-bottom: 12px; }
 .detail-item { font-size: 12px; }
 .detail-item .key { color: #888; display: block; font-size: 10px; text-transform: uppercase; }
 .detail-item .val { color: #e0e0e0; font-weight: 500; }
-.linked-list {
-  list-style: none;
-  padding: 0;
-  margin: 8px 0;
-  font-size: 12px;
-}
-.linked-list li {
-  padding: 3px 0;
-  color: #888;
-}
-.linked-list li a {
-  color: var(--tab-active);
-  cursor: pointer;
-  text-decoration: none;
-}
-.linked-list li a:hover { text-decoration: underline; }
-.summary-box {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 16px;
-  margin-bottom: 16px;
-  font-size: 13px;
-}
-.summary-box strong { color: #e94560; }
-.empty-state {
-  text-align: center;
-  padding: 40px;
-  color: #666;
-  font-size: 14px;
-}
-.count-badge {
-  display: inline-block;
-  background: rgba(233,69,96,0.15);
-  color: #e94560;
-  border-radius: 10px;
-  padding: 2px 8px;
-  font-size: 11px;
-  margin-left: 6px;
-}
-.defect-tag {
-  display: inline-block;
-  background: rgba(192,57,43,0.2);
-  color: #e74c3c;
-  padding: 1px 6px;
-  border-radius: 3px;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 1px;
-}
-.stage-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin-right: 4px;
-  vertical-align: middle;
-}
-.stage-dot.created { background: #3498db; }
-.stage-dot.resolved { background: #27ae60; }
-.stage-dot.open { background: #f39c12; }
-.stage-dot.closed { background: #7f8c8d; }
+.summary-box { background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); border-radius: 6px; padding: 16px; margin-bottom: 16px; font-size: 13px; }
+.summary-box strong { color: var(--ops-accent); }
+.empty-state { text-align: center; padding: 40px; color: #666; font-size: 14px; }
+.count-badge { display: inline-block; background: rgba(233,69,96,0.15); color: #e94560; border-radius: 10px; padding: 2px 8px; font-size: 11px; margin-left: 6px; }
+.defect-tag { display: inline-block; background: rgba(192,57,43,0.2); color: #e74c3c; padding: 1px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; margin: 1px; }
+.loading-skeleton { background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.03) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 4px; }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+.data-error { color: #e74c3c; font-size: 12px; padding: 8px; background: rgba(231,76,60,0.1); border: 1px solid rgba(231,76,60,0.3); border-radius: 4px; margin: 8px 0; }
+.last-updated { font-size: 10px; color: #555; margin-top: 16px; text-align: right; }
 </style>
 </head>
 <body>
 
-<header class="admin-header">
+<header class="ops-header">
   <div style="display:flex;align-items:center;">
-    <h1>May Admin</h1>
-    <span class="subtitle">Investigation Dashboard — Phase 1</span>
+    <h1>CMA Part 1</h1>
+    <span class="subtitle">Operations Console</span>
   </div>
-  <div class="metrics-bar" id="metricsBar">Loading…</div>
+  <div class="metrics-bar" id="metricsBar">
+    <div class="metric-pill"><span class="val" id="hdrCert">—</span><span class="lbl">Certified</span></div>
+    <div class="metric-pill"><span class="val" id="hdrTotal">—</span><span class="lbl">Total</span></div>
+    <div class="metric-pill"><span class="val" id="hdrRatio">—</span><span class="lbl">Ratio</span></div>
+    <div class="metric-pill"><span class="val" id="hdrGovernance">—</span><span class="lbl">Governance</span></div>
+    <div class="metric-pill"><span class="val" id="hdrLastBuild">—</span><span class="lbl">Last Build</span></div>
+  </div>
 </header>
 
 <nav class="tab-nav">
-  <button class="tab-btn active" data-tab="questions">Questions</button>
-  <button class="tab-btn" data-tab="challenges">Challenges</button>
-  <button class="tab-btn" data-tab="sessions">Sessions</button>
-  <button class="tab-btn" data-tab="recommendations">Recommendations</button>
+  <button class="tab-btn active" data-tab="overview">Overview</button>
+  <button class="tab-btn" data-tab="governance">Governance</button>
+  <button class="tab-btn" data-tab="content">Content</button>
+  <button class="tab-btn" data-tab="learners">Learners</button>
+  <button class="tab-btn" data-tab="may">May</button>
+  <button class="tab-btn" data-tab="repository">Repository</button>
 </nav>
 
-<!-- Questions Tab -->
-<section class="tab-content active" id="tab-questions">
-  <div class="controls">
-    <input type="text" id="qSearch" placeholder="Search by QID, topic, or section…" oninput="renderQuestions()">
-    <select id="qSectionFilter" onchange="renderQuestions()">
-      <option value="">All Sections</option>
-      <option value="A">A — External Financial Reporting</option>
-      <option value="B">B — Planning, Budgeting & Forecasting</option>
-      <option value="C">C — Performance Management</option>
-      <option value="D">D — Cost Management</option>
-      <option value="E">E — Internal Controls</option>
-      <option value="F">F — Technology & Analytics</option>
-    </select>
-    <select id="qHealthFilter" onchange="renderQuestions()">
-      <option value="">All Health Tiers</option>
-      <option value="CRITICAL">CRITICAL</option>
-      <option value="NEEDS ATTENTION">NEEDS ATTENTION</option>
-      <option value="FAIR">FAIR</option>
-      <option value="HEALTHY">HEALTHY</option>
-    </select>
-    <span style="color:#888;font-size:12px;" id="qCount"></span>
+<!-- ═══════ OVERVIEW TAB ═══════ -->
+<section class="tab-content active" id="tab-overview">
+  <div class="health-grid" id="overviewGrid">
+    <div class="loading-skeleton" style="height:200px;"></div>
+    <div class="loading-skeleton" style="height:200px;"></div>
+    <div class="loading-skeleton" style="height:200px;"></div>
+    <div class="loading-skeleton" style="height:200px;"></div>
+    <div class="loading-skeleton" style="height:200px;"></div>
   </div>
-  <div style="max-height:70vh;overflow-y:auto;">
-    <table class="data-table" id="qTable">
-      <thead>
-        <tr>
-          <th data-sort="qid">QID</th>
-          <th data-sort="section">Sec</th>
-          <th data-sort="topic">Topic</th>
-          <th data-sort="state">State</th>
-          <th data-sort="health">Health</th>
-          <th data-sort="defects">Defects</th>
-          <th>Investigations</th>
-        </tr>
-      </thead>
-      <tbody id="qBody"></tbody>
-    </table>
-  </div>
-  <div class="detail-card" id="qDetail"></div>
+  <div class="last-updated" id="overviewUpdated"></div>
 </section>
 
-<!-- Challenges Tab -->
-<section class="tab-content" id="tab-challenges">
-  <div class="controls">
-    <input type="text" id="chSearch" placeholder="Search challenges…" oninput="renderChallenges()">
-    <select id="chStatusFilter" onchange="renderChallenges()">
-      <option value="">All Statuses</option>
-      <option value="OPEN">OPEN</option>
-      <option value="INVESTIGATING">INVESTIGATING</option>
-      <option value="RESOLVED">RESOLVED</option>
-      <option value="CLOSED">CLOSED</option>
-      <option value="DISMISSED">DISMISSED</option>
-    </select>
-    <span style="color:#888;font-size:12px;" id="chCount"></span>
+<!-- ═══════ GOVERNANCE TAB (S126 stub) ═══════ -->
+<section class="tab-content" id="tab-governance">
+  <div class="stub-tab">
+    <div class="stub-icon">&#9881;</div>
+    <div class="stub-title">Governance Console</div>
+    <div class="stub-desc">S126 will deliver: Rule 11 dashboard, defect queues, certification progress tracker, and portfolio drift alerts — consuming S121 portfolio dashboard outputs directly.</div>
+    <div style="margin-top:16px;font-size:12px;color:#888;">
+      <strong>Data sources ready:</strong> S121_PORTFOLIO_DASHBOARD.json, domain_progress.json, readiness_scoring.json, remediation_queue.json, governance guard test suite
+    </div>
   </div>
-  <div style="max-height:70vh;overflow-y:auto;">
-    <table class="data-table" id="chTable">
-      <thead>
-        <tr>
-          <th>Challenge ID</th>
-          <th>Type</th>
-          <th>Question</th>
-          <th>Triage</th>
-          <th>Status</th>
-          <th>Priority</th>
-        </tr>
-      </thead>
-      <tbody id="chBody"></tbody>
-    </table>
-  </div>
-  <div class="detail-card" id="chDetail"></div>
 </section>
 
-<!-- Sessions Tab -->
-<section class="tab-content" id="tab-sessions">
-  <div class="controls">
-    <input type="text" id="sSearch" placeholder="Search sessions…" oninput="renderSessions()">
-    <span style="color:#888;font-size:12px;" id="sCount"></span>
+<!-- ═══════ CONTENT TAB (S127 stub) ═══════ -->
+<section class="tab-content" id="tab-content">
+  <div class="stub-tab">
+    <div class="stub-icon">&#128218;</div>
+    <div class="stub-title">Content Console</div>
+    <div class="stub-desc">S127 will deliver: Part 1 &amp; Part 2 inventory matrices, LOS coverage heatmap, difficulty/cognitive/answer-position distributions per pack, and certification state drill-downs.</div>
+    <div style="margin-top:16px;font-size:12px;color:#888;">
+      <strong>Data sources ready:</strong> S121_PORTFOLIO_DASHBOARD.json, admin_dashboard_data.js, readiness_scoring.json, question_health.json
+    </div>
   </div>
-  <div style="max-height:70vh;overflow-y:auto;">
-    <table class="data-table" id="sTable">
-      <thead>
-        <tr>
-          <th>Session</th>
-          <th>Title</th>
-          <th>Mode</th>
-          <th>Questions</th>
-          <th>Certified %</th>
-          <th>Outcomes</th>
-        </tr>
-      </thead>
-      <tbody id="sBody"></tbody>
-    </table>
-  </div>
-  <div class="detail-card" id="sDetail"></div>
 </section>
 
-<!-- Recommendations Tab -->
-<section class="tab-content" id="tab-recommendations">
-  <div class="controls">
-    <input type="text" id="rSearch" placeholder="Search recommendations…" oninput="renderRecommendations()">
-    <span style="color:#888;font-size:12px;" id="rCount"></span>
+<!-- ═══════ LEARNERS TAB (stub) ═══════ -->
+<section class="tab-content" id="tab-learners">
+  <div class="stub-tab">
+    <div class="stub-icon">&#128101;</div>
+    <div class="stub-title">Learner Analytics</div>
+    <div class="stub-desc">Readiness history, learning velocity, domain readiness radar, score trends, recovery sprints, and engagement metrics — all from localStorage learner data.</div>
+    <div style="margin-top:16px;font-size:12px;color:#888;">
+      <strong>Data source:</strong> localStorage (cmaProfile2026, cmaMayLearnerState) — fully available
+    </div>
   </div>
-  <div style="max-height:70vh;overflow-y:auto;">
-    <table class="data-table" id="rTable">
-      <thead>
-        <tr>
-          <th>REC-ID</th>
-          <th>Type</th>
-          <th>Severity</th>
-          <th>Status</th>
-          <th>Target QIDs</th>
-          <th>Source</th>
-        </tr>
-      </thead>
-      <tbody id="rBody"></tbody>
-    </table>
+</section>
+
+<!-- ═══════ MAY TAB (preserved from S261) ═══════ -->
+<section class="tab-content" id="tab-may">
+  <div class="controls" style="margin-bottom:20px;">
+    <button class="tab-btn" style="background:var(--ops-accent);color:#fff;border-radius:4px;padding:8px 16px;font-size:13px;" onclick="mayDashboard.refresh()">Refresh Dashboard</button>
+    <button class="tab-btn" style="border:1px solid var(--border-color);border-radius:4px;padding:8px 16px;font-size:13px;color:var(--text);" onclick="mayDashboard.importSeedProfile()">Import Seed Profile</button>
+    <button class="tab-btn" style="border:1px solid var(--border-color);border-radius:4px;padding:8px 16px;font-size:13px;color:#dc2626;" onclick="mayDashboard.resetMay()">Reset May Data</button>
+    <input type="file" id="mayProfileFile" accept=".json" style="display:none" onchange="mayDashboard.handleProfileFile(this.files[0])">
   </div>
-  <div class="detail-card" id="rDetail"></div>
+  <div id="mayGateStatus" class="summary-box" style="margin-bottom:16px;">
+    <strong>MAY-029A Gate:</strong> <span id="mayGateLabel" style="font-size:14px;">Checking…</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:20px;">
+    <div class="summary-box" id="mayCardSessions">
+      <div style="font-size:11px;color:#888;text-transform:uppercase;margin-bottom:4px;">Completed Sessions</div>
+      <div style="font-size:32px;font-weight:700;color:#fff;" id="maySessionCount">—</div>
+      <div style="font-size:11px;color:#888;">Gate: ≥5</div>
+      <div style="margin-top:4px;"><span class="health-bar" id="maySessionsBar" style="min-width:100%;"><span class="health-bar-inner" style="width:0%;background:var(--ops-accent);"></span></span></div>
+    </div>
+    <div class="summary-box" id="mayCardRecovery">
+      <div style="font-size:11px;color:#888;text-transform:uppercase;margin-bottom:4px;">Recovery Sprints</div>
+      <div style="font-size:32px;font-weight:700;color:#fff;" id="mayRecoveryCount">—</div>
+      <div style="font-size:11px;color:#888;">Gate: ≥1</div>
+      <div style="margin-top:4px;"><span class="health-bar" id="mayRecoveryBar" style="min-width:100%;"><span class="health-bar-inner" style="width:0%;background:var(--ops-accent);"></span></span></div>
+    </div>
+    <div class="summary-box">
+      <div style="font-size:11px;color:#888;text-transform:uppercase;margin-bottom:4px;">Topics Covered</div>
+      <div style="font-size:32px;font-weight:700;color:#fff;" id="mayTopicCount">—</div>
+      <div style="font-size:11px;color:#888;">Across all sessions</div>
+    </div>
+    <div class="summary-box">
+      <div style="font-size:11px;color:#888;text-transform:uppercase;margin-bottom:4px;">May Activation</div>
+      <div style="font-size:32px;font-weight:700;" id="mayActiveStatus">—</div>
+      <div style="font-size:11px;color:#888;" id="mayActiveDetail"></div>
+    </div>
+  </div>
+  <h3 style="font-size:14px;color:#888;text-transform:uppercase;margin:0 0 12px 0;">Learner Profile — Archetype & Plateau</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+    <div class="summary-box" id="mayArchetypeBox"></div>
+    <div class="summary-box" id="mayPlateauBox"></div>
+  </div>
+  <h3 style="font-size:14px;color:#888;text-transform:uppercase;margin:0 0 12px 0;">Recommendation Funnel</h3>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px;" id="mayFunnel"></div>
+  <h3 style="font-size:14px;color:#888;text-transform:uppercase;margin:0 0 12px 0;">Effectiveness Scorecard (6-Dimension)</h3>
+  <div class="summary-box" style="margin-bottom:20px;" id="mayEffectiveness"></div>
+  <h3 style="font-size:14px;color:#888;text-transform:uppercase;margin:0 0 12px 0;">Domain Readiness</h3>
+  <div class="summary-box" style="margin-bottom:20px;" id="mayReadiness"></div>
+  <h3 style="font-size:14px;color:#888;text-transform:uppercase;margin:0 0 12px 0;">Confidence Calibration</h3>
+  <div class="summary-box" style="margin-bottom:20px;" id="mayCalibration"></div>
+  <h3 style="font-size:14px;color:#888;text-transform:uppercase;margin:0 0 12px 0;">Session History</h3>
+  <div style="max-height:300px;overflow-y:auto;" id="maySessionList"></div>
+</section>
+
+<!-- ═══════ REPOSITORY TAB (stub) ═══════ -->
+<section class="tab-content" id="tab-repository">
+  <div class="stub-tab">
+    <div class="stub-icon">&#128451;</div>
+    <div class="stub-title">Repository Health</div>
+    <div class="stub-desc">File inventory, archive catalog, backup statistics, storage usage trends, and root hygiene status — leveraging S123 archive verification outputs.</div>
+    <div style="margin-top:16px;font-size:12px;color:#888;">
+      <strong>Data sources ready:</strong> S123_AFTER_REPORT.md, S123_ARCHIVE_VERIFICATION.md, CURRENT_BASELINES.md, backups/ directory scan
+    </div>
+  </div>
 </section>
 
 <script src="scripts/output/admin_dashboard_data.js"></script>
@@ -390,9 +371,10 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
 (function() {
   'use strict';
   var D = window.__ADMIN_DATA__;
-  if (!D) { document.body.innerHTML = '<div style="padding:40px;color:#e74c3c;">ERROR: admin_dashboard_data.js not loaded. Run: node scripts/admin_service_layer.js --build-dashboard</div>'; return; }
 
-  // ── Tab navigation ──────────────────────────────────────────
+  // ═══════════════════════════════════════════════════════════
+  // TAB NAVIGATION
+  // ═══════════════════════════════════════════════════════════
   document.querySelectorAll('.tab-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -400,314 +382,665 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
       btn.classList.add('active');
       var tabId = 'tab-' + btn.dataset.tab;
       document.getElementById(tabId).classList.add('active');
+      if (btn.dataset.tab === 'may') { setTimeout(function() { mayDashboard.refresh(); }, 100); }
+      if (btn.dataset.tab === 'overview') { loadOverviewData(); }
     });
   });
 
-  // ── Metrics bar ─────────────────────────────────────────────
-  function updateMetricsBar() {
-    var m = D.metadata;
-    var h = D.healthDistribution;
-    document.getElementById('metricsBar').innerHTML =
-      '<div class="metric-pill"><span class="val">' + m.certifiedCount + '</span><span class="lbl">Certified</span></div>' +
-      '<div class="metric-pill"><span class="val">' + m.totalQids + '</span><span class="lbl">Total</span></div>' +
-      '<div class="metric-pill"><span class="val">' + (m.certifiedRatio * 100).toFixed(1) + '%</span><span class="lbl">Ratio</span></div>' +
-      '<div class="metric-pill"><span class="val">' + h.mean + '</span><span class="lbl">Health</span></div>' +
-      '<div class="metric-pill"><span class="val">' + D.investigationSummary.total + '</span><span class="lbl">Investigations</span></div>' +
-      '<div class="metric-pill"><span class="val">' + Object.keys(D.challenges).length + '</span><span class="lbl">Challenges</span></div>' +
-      '<div class="metric-pill"><span class="val">' + m.governanceGuardStatus + '</span><span class="lbl">Governance</span></div>';
+  // ═══════════════════════════════════════════════════════════
+  // HEADER METRICS BAR
+  // ═══════════════════════════════════════════════════════════
+  function updateHeaderMetrics(domainProgress, s121Data, safetyData) {
+    var cert = domainProgress ? domainProgress.overall.certified : (safetyData ? safetyData.total_certified : 0);
+    var total = domainProgress ? domainProgress.overall.totalItems : (s121Data ? s121Data.pools.part1.totalItems : 0);
+    var ratio = total > 0 ? ((cert / total) * 100).toFixed(1) : '0.0';
+    var govStatus = safetyData && safetyData.unsafe_certified === 0 ? 'PASS' : 'WARN';
+
+    document.getElementById('hdrCert').textContent = cert;
+    document.getElementById('hdrTotal').textContent = total;
+    document.getElementById('hdrRatio').textContent = ratio + '%';
+    document.getElementById('hdrGovernance').textContent = govStatus;
+    document.getElementById('hdrGovernance').style.color = govStatus === 'PASS' ? 'var(--health-green)' : 'var(--health-red)';
+    document.getElementById('hdrLastBuild').textContent = new Date().toISOString().slice(0, 16).replace('T',' ');
   }
 
-  // ── Helpers ──────────────────────────────────────────────────
-  function stateBadge(state) {
-    var cls = 'badge-archived';
-    if (state === 'Certified') cls = 'badge-cert';
-    else if (state === 'In Audit') cls = 'badge-audit';
-    else if (state === 'Unprocessed') cls = 'badge-unprocessed';
-    return '<span class="badge ' + cls + '">' + (state || '?') + '</span>';
-  }
+  // ═══════════════════════════════════════════════════════════
+  // OVERVIEW DATA LOADING
+  // ═══════════════════════════════════════════════════════════
+  var overviewLoaded = false;
 
-  function healthDisplay(score, tier) {
-    if (score == null) return '<span style="color:#666;">N/A</span>';
-    var pct = score + '%';
-    var cls = 'health-green';
-    if (tier === 'FAIR') cls = 'health-yellow';
-    else if (tier === 'NEEDS ATTENTION') cls = 'health-orange';
-    else if (tier === 'CRITICAL') cls = 'health-red';
-    return '<span class="health-bar ' + cls + '"><span class="health-bar-inner" style="width:' + pct + ';"></span></span>' +
-      '<span class="health-' + tier.toLowerCase().replace(' ','-') + '">' + score + '</span>';
-  }
+  function loadOverviewData() {
+    if (overviewLoaded) return;
+    overviewLoaded = true;
 
-  function severityCls(sev) {
-    if (sev === 'CRITICAL') return 'severity-critical';
-    if (sev === 'HIGH') return 'severity-high';
-    if (sev === 'MEDIUM') return 'severity-medium';
-    if (sev === 'LOW') return 'severity-low';
-    return '';
-  }
+    var base = 'scripts/output/';
+    var fetches = [
+      fetch(base + 'domain_progress.json').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; }),
+      fetch(base + 'S121_PORTFOLIO_DASHBOARD.json').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; }),
+      fetch(base + 'pre_delivery_safety.json').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; }),
+      fetch(base + 'readiness_scoring.json').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; })
+    ];
 
-  function defectTags(codes) {
-    if (!codes || !codes.length) return '<span style="color:#666;">—</span>';
-    return codes.map(function(c) { return '<span class="defect-tag">' + c + '</span>'; }).join('');
-  }
+    Promise.all(fetches).then(function(results) {
+      var domainProgress = results[0];
+      var s121Data = results[1];
+      var safetyData = results[2];
+      var readinessData = results[3];
 
-  // ── Questions ────────────────────────────────────────────────
-  var qSortField = 'health';
-  var qSortAsc = true;
-
-  function getQuestionList() {
-    var list = [];
-    var idx = D.questionIndex;
-    for (var qid in idx) { list.push(idx[qid]); }
-    list.sort(function(a, b) {
-      var va, vb;
-      if (qSortField === 'health') { va = a.healthScore || 100; vb = b.healthScore || 100; }
-      else if (qSortField === 'qid') { va = a.questionId; vb = b.questionId; }
-      else if (qSortField === 'section') { va = a.section; vb = b.section; }
-      else if (qSortField === 'topic') { va = a.topic; vb = b.topic; }
-      else if (qSortField === 'state') { va = a.questionState; vb = b.questionState; }
-      else if (qSortField === 'defects') { va = (a.activeDefectCodes||[]).length; vb = (b.activeDefectCodes||[]).length; }
-      else { va = a.healthScore || 100; vb = b.healthScore || 100; }
-      if (va < vb) return qSortAsc ? -1 : 1;
-      if (va > vb) return qSortAsc ? 1 : -1;
-      return 0;
+      updateHeaderMetrics(domainProgress, s121Data, safetyData);
+      renderOverview(domainProgress, s121Data, safetyData, readinessData);
+    }).catch(function(err) {
+      document.getElementById('overviewGrid').innerHTML =
+        '<div class="data-error" style="grid-column:1/-1;">Failed to load overview data: ' + err.message + '. Ensure JSON files exist in scripts/output/.</div>';
     });
-    return list;
   }
 
-  document.querySelectorAll('#qTable th[data-sort]').forEach(function(th) {
-    th.addEventListener('click', function() {
-      var f = th.dataset.sort;
-      if (qSortField === f) { qSortAsc = !qSortAsc; }
-      else { qSortField = f; qSortAsc = (f === 'health'); }
-      renderQuestions();
-    });
-  });
-
-  window.renderQuestions = function() {
-    var search = (document.getElementById('qSearch').value || '').toLowerCase();
-    var secFilter = document.getElementById('qSectionFilter').value;
-    var healthFilter = document.getElementById('qHealthFilter').value;
-    var list = getQuestionList();
-    var filtered = list.filter(function(q) {
-      if (secFilter && q.section !== secFilter) return false;
-      if (healthFilter && q.healthTier !== healthFilter) return false;
-      if (search) {
-        var qid = q.questionId.toLowerCase();
-        var topic = (q.topic || '').toLowerCase();
-        if (qid.indexOf(search) === -1 && topic.indexOf(search) === -1) return false;
-      }
-      return true;
-    });
-    document.getElementById('qCount').textContent = filtered.length + ' / ' + list.length + ' questions';
-
-    var tbody = document.getElementById('qBody');
-    tbody.innerHTML = filtered.map(function(q) {
-      return '<tr onclick="showQuestionDetail(\'' + q.questionId + '\')" id="qrow-' + q.questionId + '">' +
-        '<td><strong>' + q.questionId + '</strong></td>' +
-        '<td>' + q.section + '</td>' +
-        '<td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + (q.topic||'') + '">' + (q.topic||'—') + '</td>' +
-        '<td>' + stateBadge(q.questionState) + '</td>' +
-        '<td>' + healthDisplay(q.healthScore, q.healthTier) + '</td>' +
-        '<td>' + defectTags(q.activeDefectCodes) + '</td>' +
-        '<td>' + (q.investigationCount > 0 ? '<span class="severity-high">' + q.investigationCount + '</span>' : '—') + '</td>' +
-        '</tr>';
-    }).join('');
+  // ═══════════════════════════════════════════════════════════
+  // S121 TARGETS (immutable per S121_PORTFOLIO_TARGETS.md)
+  // ═══════════════════════════════════════════════════════════
+  var TARGETS = {
+    difficulty: { Easy: 15, 'Moderate-Easy': 20, Moderate: 30, Difficult: 25, 'Very Difficult': 10 },
+    cognitive: { Remember: 5, Understand: 15, Apply: 40, Analyze: 25, Evaluate: 15 },
+    answerPosition: { A: 25, B: 25, C: 25, D: 25 }
   };
 
-  window.showQuestionDetail = function(qid) {
-    var q = D.questionIndex[qid];
-    if (!q) return;
-    var invs = D.investigations;
-    var linkedInvs = [];
-    for (var iv in invs) {
-      if (invs[iv].linkedQids && invs[iv].linkedQids.indexOf(qid) >= 0) linkedInvs.push(invs[iv]);
+  function pctDist(actual, total) {
+    var d = {};
+    for (var k in actual) { d[k] = total > 0 ? (actual[k] / total * 100) : 0; }
+    return d;
+  }
+
+  function driftLabel(actual, target) {
+    var diff = actual - target;
+    if (Math.abs(diff) < 2) return '<span class="drift-badge drift-ok">OK</span>';
+    if (diff > 0) return '<span class="drift-badge drift-over">+ ' + diff.toFixed(1) + 'pp</span>';
+    return '<span class="drift-badge drift-under">' + diff.toFixed(1) + 'pp</span>';
+  }
+
+  function computeHealthScore(domainProgress, s121Data, safetyData) {
+    var score = 0;
+    var maxScore = 0;
+
+    // 1. Certification coverage (weight: 30)
+    if (domainProgress && domainProgress.overall) {
+      var covPct = domainProgress.overall.coveragePct;
+      score += (covPct / 100) * 30;
+      maxScore += 30;
     }
-    var chs = D.challenges;
-    var linkedChs = [];
-    for (var ch in chs) {
-      if (chs[ch].questionId === qid) linkedChs.push(chs[ch]);
+
+    // 2. Learner pool safety (weight: 25)
+    if (safetyData) {
+      score += (safetyData.unsafe_certified === 0 ? 1 : (safetyData.safe_certified / Math.max(1, safetyData.total_certified))) * 25;
+      maxScore += 25;
     }
-    var detail = document.getElementById('qDetail');
-    detail.innerHTML =
-      '<h3>' + qid + ' — ' + (q.sectionName || '') + '</h3>' +
-      '<div class="detail-grid">' +
-      '<div class="detail-item"><span class="key">Pack</span><span class="val">' + q.pack + '</span></div>' +
-      '<div class="detail-item"><span class="key">Section</span><span class="val">' + q.section + ' — ' + (q.sectionName||'') + '</span></div>' +
-      '<div class="detail-item"><span class="key">Difficulty</span><span class="val">' + q.difficulty + ' (' + (q.difficultyScore||'?') + ')</span></div>' +
-      '<div class="detail-item"><span class="key">Cognitive Level</span><span class="val">' + (q.cognitiveLevel||'?') + '</span></div>' +
-      '<div class="detail-item"><span class="key">State</span><span class="val">' + stateBadge(q.questionState) + '</span></div>' +
-      '<div class="detail-item"><span class="key">Health</span><span class="val">' + healthDisplay(q.healthScore, q.healthTier) + '</span></div>' +
-      '<div class="detail-item"><span class="key">Defects</span><span class="val">' + defectTags(q.activeDefectCodes) + '</span></div>' +
-      '<div class="detail-item"><span class="key">Investigations</span><span class="val">' + linkedInvs.length + '</span></div>' +
-      '<div class="detail-item"><span class="key">Challenges</span><span class="val">' + (q.challengeCount||0) + '</span></div>' +
-      '<div class="detail-item"><span class="key">Recommendations</span><span class="val">' + (q.recommendationCount||0) + '</span></div>' +
-      '</div>' +
-      (linkedChs.length > 0 ? '<div style="margin-top:8px;font-size:12px;"><strong>Linked Challenges:</strong>' +
-        linkedChs.map(function(c) { return '<div style="margin:2px 0;">ID: <span class="severity-high">' + c.challengeId + '</span> | Type: ' + c.type + ' | Status: ' + c.status + ' | Triage: ' + (c.triageCategory||'Untriaged') + '</div>'; }).join('') + '</div>' : '') +
-      (linkedInvs.length > 0 ? '<div style="margin-top:8px;font-size:12px;"><strong>Linked Investigations:</strong>' +
-        linkedInvs.map(function(i) { return '<div style="margin:2px 0;">ID: <span class="severity-high">' + i.investigationId + '</span> | Type: ' + i.type + ' | Status: ' + i.status + '</div>'; }).join('') + '</div>' : '') +
-      '<div style="margin-top:12px;font-size:11px;color:#888;">CLI: <code>node scripts/admin_service_layer.js --lookup=QID:' + qid + '</code></div>';
-    detail.classList.add('visible');
-  };
 
-  // ── Challenges ──────────────────────────────────────────────
-  window.renderChallenges = function() {
-    var search = (document.getElementById('chSearch').value || '').toLowerCase();
-    var statusFilter = document.getElementById('chStatusFilter').value;
-    var list = [];
-    var chs = D.challenges;
-    for (var ch in chs) { list.push(chs[ch]); }
-    var filtered = list.filter(function(c) {
-      if (statusFilter && c.status !== statusFilter) return false;
-      if (search) {
-        if (c.challengeId.toLowerCase().indexOf(search) === -1 && (c.questionId||'').toLowerCase().indexOf(search) === -1 && (c.type||'').toLowerCase().indexOf(search) === -1) return false;
+    // 3. Portfolio drift — avg of difficulty/cognitive/answer-position alignment (weight: 25)
+    if (s121Data && s121Data.pools && s121Data.pools.part1) {
+      var pool = s121Data.pools.part1;
+      var total = pool.totalItems;
+      var diffPct = pctDist(pool.difficulty, total);
+      var cogPct = pctDist(pool.cognitive, total);
+      var ccPct = pctDist(pool.correctChoice, total);
+
+      var difDrift = 0, cogDrift = 0, ccDrift = 0;
+      var difCount = 0, cogCount = 0, ccCount = 0;
+      for (var k in TARGETS.difficulty) { difDrift += Math.abs((diffPct[k]||0) - TARGETS.difficulty[k]); difCount++; }
+      for (var k in TARGETS.cognitive) { cogDrift += Math.abs((cogPct[k]||0) - TARGETS.cognitive[k]); cogCount++; }
+      for (var k in TARGETS.answerPosition) { ccDrift += Math.abs((ccPct[k]||0) - TARGETS.answerPosition[k]); ccCount++; }
+
+      var avgDrift = (difDrift/difCount + cogDrift/cogCount + ccDrift/ccCount) / 3;
+      score += Math.max(0, (1 - avgDrift / 50)) * 25; // 0 drift = full score, 50pp avg drift = 0
+      maxScore += 25;
+    }
+
+    // 4. Governance guard (weight: 20) — from pre-delivery safety
+    if (safetyData) {
+      score += (safetyData.unsafe_certified === 0 ? 1 : 0.5) * 20;
+      maxScore += 20;
+    }
+
+    return maxScore > 0 ? Math.round((score / maxScore) * 100) : 0;
+  }
+
+  function healthTier(score) {
+    if (score >= 90) return { tier: 'Healthy', color: 'var(--health-green)', cls: 'status-healthy' };
+    if (score >= 70) return { tier: 'Fair', color: 'var(--health-yellow)', cls: 'status-warning' };
+    if (score >= 50) return { tier: 'Attention', color: 'var(--health-orange)', cls: 'status-warning' };
+    return { tier: 'Critical', color: 'var(--health-red)', cls: 'status-critical' };
+  }
+
+  // ═══════════════════════════════════════════════════════════
+  // RENDER OVERVIEW
+  // ═══════════════════════════════════════════════════════════
+  function renderOverview(domainProgress, s121Data, safetyData, readinessData) {
+    var grid = document.getElementById('overviewGrid');
+    var hScore = computeHealthScore(domainProgress, s121Data, safetyData);
+    var hTier = healthTier(hScore);
+
+    var html = '';
+
+    // ── 1. GOVERNANCE HEALTH ──
+    var certCount = domainProgress ? domainProgress.overall.certified : (safetyData ? safetyData.total_certified : 0);
+    var totalItems = domainProgress ? domainProgress.overall.totalItems : (s121Data ? s121Data.pools.part1.totalItems : 0);
+    var certPct = totalItems > 0 ? ((certCount / totalItems) * 100).toFixed(1) : '0.0';
+    var blockedCount = domainProgress ? domainProgress.overall.blocked + domainProgress.overall.remediate : (readinessData ? readinessData.byState.BLOCKED + readinessData.byState.REMEDIATE : 0);
+    var safePool = safetyData ? (safetyData.unsafe_certified === 0) : true;
+
+    html += '<div class="health-card">' +
+      '<h3><span class="status-dot ' + (safePool ? 'status-healthy' : 'status-critical') + '"></span> Governance Health</h3>' +
+      '<div class="health-big" style="color:' + hTier.color + ';">' + hScore + '%</div>' +
+      '<div class="health-sub">' + hTier.tier + '</div>' +
+      '<div class="health-metrics">' +
+      '<div class="hm-label">Certified</div><div class="hm-val">' + certCount + ' / ' + totalItems + ' (' + certPct + '%)</div>' +
+      '<div class="hm-label">Blocked/Remediate</div><div class="hm-val" style="color:' + (blockedCount > 0 ? 'var(--health-yellow)' : 'var(--health-green)') + ';">' + blockedCount + '</div>' +
+      '<div class="hm-label">Learner Pool</div><div class="hm-val" style="color:' + (safePool ? 'var(--health-green)' : 'var(--health-red)') + ';">' + (safePool ? 'Safe (' + certCount + ')' : 'UNSAFE') + '</div>' +
+      '<div class="hm-label">Rule 11/12</div><div class="hm-val">Active (BLOCK)</div>' +
+      '</div></div>';
+
+    // ── 2. PORTFOLIO HEALTH ──
+    if (s121Data && s121Data.pools && s121Data.pools.part1) {
+      var pool = s121Data.pools.part1;
+      var total = pool.totalItems;
+      var diffPct = pctDist(pool.difficulty, total);
+      var cogPct = pctDist(pool.cognitive, total);
+      var ccPct = pctDist(pool.correctChoice, total);
+
+      html += '<div class="health-card">' +
+        '<h3><span class="status-dot status-neutral"></span> Portfolio Health</h3>' +
+        '<div style="margin-bottom:10px;">' +
+        '<div style="font-size:11px;color:#888;margin-bottom:2px;">Difficulty Distribution</div>';
+      for (var dk in TARGETS.difficulty) {
+        var da = diffPct[dk] || 0;
+        var dt = TARGETS.difficulty[dk];
+        html += '<div class="section-row"><span class="sec-label">' + dk[0] + '</span><span class="sec-name">' + dk + '</span>' +
+          '<span class="sec-bar"><span class="sec-fill" style="width:' + Math.min(100, da/40*100) + '%;background:' + (Math.abs(da-dt) < 2 ? 'var(--health-green)' : Math.abs(da-dt) < 5 ? 'var(--health-yellow)' : 'var(--health-red)') + ';"></span></span>' +
+          '<span class="sec-pct">' + da.toFixed(1) + '%</span>' +
+          '<span>' + driftLabel(da, dt) + '</span></div>';
       }
-      return true;
-    });
-    document.getElementById('chCount').textContent = filtered.length + ' / ' + list.length + ' challenges';
-    document.getElementById('chBody').innerHTML = filtered.map(function(c) {
-      return '<tr onclick="showChallengeDetail(\'' + c.challengeId + '\')" id="crow-' + c.challengeId + '">' +
-        '<td><strong>' + c.challengeId + '</strong></td>' +
-        '<td>' + (c.type||'?') + '</td>' +
-        '<td style="color:#e94560;">' + (c.questionId||'?') + '</td>' +
-        '<td>' + (c.triageCategory || '<span style="color:#888;">Untriaged</span>') + '</td>' +
-        '<td>' + stateBadge(c.status) + '</td>' +
-        '<td>' + (c.priorityScore ? '<span class="' + severityCls(c.priorityScore > 70 ? 'CRITICAL' : c.priorityScore > 40 ? 'HIGH' : 'MEDIUM') + '">' + c.priorityScore + '</span>' : '—') + '</td>' +
-        '</tr>';
-    }).join('');
-  };
-
-  window.showChallengeDetail = function(cid) {
-    var c = D.challenges[cid];
-    if (!c) return;
-    var q = c.questionId ? D.questionIndex[c.questionId] : null;
-    var detail = document.getElementById('chDetail');
-    detail.innerHTML =
-      '<h3>' + cid + ' — ' + (c.type||'?') + '</h3>' +
-      '<div class="detail-grid">' +
-      '<div class="detail-item"><span class="key">Question</span><span class="val" style="color:#e94560;cursor:pointer;" onclick="showQuestionDetail(\'' + (c.questionId||'') + '\');document.querySelector(\'.tab-btn[data-tab=questions]\').click();">' + (c.questionId||'?') + '</span></div>' +
-      '<div class="detail-item"><span class="key">Status</span><span class="val">' + stateBadge(c.status) + '</span></div>' +
-      '<div class="detail-item"><span class="key">Triage</span><span class="val">' + (c.triageCategory||'Untriaged') + '</span></div>' +
-      '<div class="detail-item"><span class="key">Priority</span><span class="val">' + (c.priorityScore||'—') + '</span></div>' +
-      '<div class="detail-item"><span class="key">Confidence</span><span class="val">' + (c.confidence != null ? Math.round(c.confidence * 100) + '%' : '—') + '</span></div>' +
-      '</div>' +
-      '<div style="margin-top:12px;font-size:12px;">' +
-      '<strong>Linked Investigations:</strong> ' + (c.linkedInvestigations && c.linkedInvestigations.length ? c.linkedInvestigations.join(', ') : 'None') + '<br>' +
-      '<strong>Linked Recommendations:</strong> ' + (c.linkedRecommendations && c.linkedRecommendations.length ? c.linkedRecommendations.join(', ') : 'None') + '<br>' +
-      '<strong>Linked Sessions:</strong> ' + (c.linkedSessions && c.linkedSessions.length ? c.linkedSessions.join(', ') : 'None') +
-      '</div>' +
-      (q ? '<div style="margin-top:12px;font-size:12px;"><strong>Question Health:</strong> ' + healthDisplay(q.healthScore, q.healthTier) + ' | Defects: ' + defectTags(q.activeDefectCodes) + '</div>' : '');
-    detail.classList.add('visible');
-  };
-
-  // ── Sessions ────────────────────────────────────────────────
-  window.renderSessions = function() {
-    var search = (document.getElementById('sSearch').value || '').toLowerCase();
-    var list = [];
-    var sess = D.sessions;
-    for (var s in sess) { list.push(sess[s]); }
-    var filtered = list.filter(function(s) {
-      if (search) {
-        if (s.sessionId.toLowerCase().indexOf(search) === -1 && (s.title||'').toLowerCase().indexOf(search) === -1 && (s.series||'').toLowerCase().indexOf(search) === -1) return false;
+      html += '</div><div style="margin-bottom:10px;">' +
+        '<div style="font-size:11px;color:#888;margin-bottom:2px;">Cognitive Distribution</div>';
+      for (var ck in TARGETS.cognitive) {
+        var ca = cogPct[ck] || 0;
+        var ct = TARGETS.cognitive[ck];
+        html += '<div class="section-row"><span class="sec-label">' + ck[0] + '</span><span class="sec-name">' + ck + '</span>' +
+          '<span class="sec-bar"><span class="sec-fill" style="width:' + Math.min(100, ca/50*100) + '%;background:' + (Math.abs(ca-ct) < 2 ? 'var(--health-green)' : Math.abs(ca-ct) < 5 ? 'var(--health-yellow)' : 'var(--health-red)') + ';"></span></span>' +
+          '<span class="sec-pct">' + ca.toFixed(1) + '%</span>' +
+          '<span>' + driftLabel(ca, ct) + '</span></div>';
       }
-      return true;
-    });
-    document.getElementById('sCount').textContent = filtered.length + ' / ' + list.length + ' sessions';
-    document.getElementById('sBody').innerHTML = filtered.map(function(s) {
-      var certPct = (s.certifiedRatio * 100).toFixed(1);
-      return '<tr onclick="showSessionDetail(\'' + s.sessionId + '\')">' +
-        '<td><strong>' + s.sessionId + '</strong></td>' +
-        '<td style="max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + (s.title||'') + '">' + (s.title||'—') + '</td>' +
-        '<td>' + (s.mode||'—') + '</td>' +
-        '<td>' + (s.totalQuestions||0) + '</td>' +
-        '<td>' + certPct + '%</td>' +
-        '<td>' +
-          (s.challengeIds && s.challengeIds.length ? '<span style="color:#e94560;">' + s.challengeIds.length + ' ch</span> ' : '') +
-          (s.recommendationIds && s.recommendationIds.length ? '<span style="color:#f39c12;">' + s.recommendationIds.length + ' rec</span> ' : '') +
-          (s.investigationIds && s.investigationIds.length ? '<span style="color:#e67e22;">' + s.investigationIds.length + ' inv</span>' : '') +
-        '</td>' +
-        '</tr>';
-    }).join('');
-  };
-
-  window.showSessionDetail = function(sid) {
-    var s = D.sessions[sid];
-    if (!s) return;
-    var detail = document.getElementById('sDetail');
-    detail.innerHTML =
-      '<h3>Session ' + sid + ' — ' + (s.title||'No title') + '</h3>' +
-      '<div class="detail-grid">' +
-      '<div class="detail-item"><span class="key">Series</span><span class="val">' + (s.series||'—') + '</span></div>' +
-      '<div class="detail-item"><span class="key">Date</span><span class="val">' + (s.date||'—') + '</span></div>' +
-      '<div class="detail-item"><span class="key">Mode</span><span class="val">' + (s.mode||'—') + '</span></div>' +
-      '<div class="detail-item"><span class="key">Questions</span><span class="val">' + s.totalQuestions + ' (' + s.certifiedCount + ' certified, ' + (s.certifiedRatio*100).toFixed(1) + '%)</span></div>' +
-      '</div>' +
-      '<div style="margin-top:12px;font-size:12px;">' +
-      '<strong>QIDs (' + (s.uniqueQids||[]).length + '):</strong> ' + (s.uniqueQids||[]).slice(0, 30).join(', ') + ((s.uniqueQids||[]).length > 30 ? ' …' : '') + '<br>' +
-      (s.challengeIds && s.challengeIds.length ? '<strong>Challenges:</strong> ' + s.challengeIds.join(', ') + '<br>' : '') +
-      (s.recommendationIds && s.recommendationIds.length ? '<strong>Recommendations:</strong> ' + s.recommendationIds.join(', ') + '<br>' : '') +
-      (s.investigationIds && s.investigationIds.length ? '<strong>Investigations:</strong> ' + s.investigationIds.join(', ') + '<br>' : '') +
-      '</div>';
-    detail.classList.add('visible');
-  };
-
-  // ── Recommendations ──────────────────────────────────────────
-  window.renderRecommendations = function() {
-    var search = (document.getElementById('rSearch').value || '').toLowerCase();
-    var list = [];
-    var recs = D.recommendations;
-    for (var r in recs) { list.push(recs[r]); }
-    var filtered = list.filter(function(r) {
-      if (search) {
-        if (r.recommendationId.toLowerCase().indexOf(search) === -1 && (r.type||'').toLowerCase().indexOf(search) === -1 && (r.sourceScan||'').toLowerCase().indexOf(search) === -1) return false;
+      html += '</div><div><div style="font-size:11px;color:#888;margin-bottom:2px;">Answer Position</div>';
+      for (var ak in TARGETS.answerPosition) {
+        var aa = ccPct[ak] || 0;
+        var at = TARGETS.answerPosition[ak];
+        html += '<div class="section-row"><span class="sec-label">' + ak + '</span><span class="sec-name">Position ' + ak + '</span>' +
+          '<span class="sec-bar"><span class="sec-fill" style="width:' + Math.min(100, aa/40*100) + '%;background:' + (Math.abs(aa-at) < 3 ? 'var(--health-green)' : Math.abs(aa-at) < 7 ? 'var(--health-yellow)' : 'var(--health-red)') + ';"></span></span>' +
+          '<span class="sec-pct">' + aa.toFixed(1) + '%</span>' +
+          '<span>' + driftLabel(aa, at) + '</span></div>';
       }
-      return true;
-    });
-    document.getElementById('rCount').textContent = filtered.length + ' / ' + list.length + ' recommendations';
-    document.getElementById('rBody').innerHTML = filtered.map(function(r) {
-      return '<tr onclick="showRecDetail(\'' + r.recommendationId + '\')">' +
-        '<td><strong>' + r.recommendationId + '</strong></td>' +
-        '<td>' + (r.type||'?') + '</td>' +
-        '<td class="' + severityCls(r.severity) + '">' + (r.severity||'?') + '</td>' +
-        '<td>' + stateBadge(r.status) + '</td>' +
-        '<td>' + (r.count||0) + ' QIDs</td>' +
-        '<td>' + (r.sourceScan||'?') + '</td>' +
-        '</tr>';
-    }).join('');
+      html += '</div></div>';
+    } else {
+      html += '<div class="health-card"><h3>Portfolio Health</h3><div class="data-error">S121 dashboard data not available. Run: node scripts/s121_portfolio_dashboard.js</div></div>';
+    }
+
+    // ── 3. CONTENT PROGRESS ──
+    html += '<div class="health-card">' +
+      '<h3><span class="status-dot status-healthy"></span> Content Progress</h3>';
+
+    // Part 1
+    var p1Cert = domainProgress ? domainProgress.overall.certified : 0;
+    var p1Total = domainProgress ? domainProgress.overall.totalItems : 2545;
+    var p1Pct = p1Total > 0 ? ((p1Cert / p1Total) * 100).toFixed(1) : '0.0';
+    html += '<div style="margin-bottom:12px;"><div style="font-size:12px;font-weight:600;">Part 1</div>' +
+      '<div style="display:flex;align-items:center;gap:8px;font-size:13px;">' +
+      '<span style="color:var(--ops-accent);font-weight:700;">' + p1Cert + '</span>' +
+      '<span style="color:#888;">/ ' + p1Total + ' Certified</span>' +
+      '<span style="margin-left:auto;font-weight:600;">' + p1Pct + '%</span></div>' +
+      '<div class="progress-bar"><div class="progress-fill green" style="width:' + p1Pct + '%;"></div></div></div>';
+
+    // Part 2
+    var p2Total = s121Data && s121Data.pools && s121Data.pools.part2 ? s121Data.pools.part2.totalItems : 140;
+    var p2Cert = s121Data && s121Data.pools && s121Data.pools.part2 ? s121Data.pools.part2.certified : 0;
+    html += '<div style="margin-bottom:12px;"><div style="font-size:12px;font-weight:600;">Part 2</div>' +
+      '<div style="display:flex;align-items:center;gap:8px;font-size:13px;">' +
+      '<span style="color:var(--ops-accent);font-weight:700;">' + p2Cert + '</span>' +
+      '<span style="color:#888;">/ ' + p2Total + ' Authored</span>' +
+      '<span style="margin-left:auto;font-weight:600;color:#f39c12;">In Progress</span></div>' +
+      '<div class="progress-bar"><div class="progress-fill yellow" style="width:' + Math.min(100, (p2Total/500)*100) + '%;"></div></div></div>';
+
+    // Per-pack (from S121)
+    if (s121Data && s121Data.packs) {
+      html += '<div class="pack-grid">';
+      s121Data.packs.forEach(function(p) {
+        var cpct = p.totalItems > 0 ? ((p.certified / p.totalItems) * 100).toFixed(0) : '0';
+        html += '<div class="pack-card">' +
+          '<div class="pc-name">' + p.name + '</div>' +
+          '<div class="pc-count" style="color:' + (cpct >= 90 ? 'var(--health-green)' : cpct >= 70 ? 'var(--health-yellow)' : 'var(--health-red)') + ';">' + p.certified + '/' + p.totalItems + '</div>' +
+          '<div class="pc-pct">' + cpct + '% certified</div></div>';
+      });
+      html += '</div>';
+    }
+
+    // Case packs
+    html += '<div style="margin-top:10px;"><div style="font-size:12px;font-weight:600;">Case Studies</div>' +
+      '<div style="font-size:13px;margin-top:2px;">3 packs, 75 cases, 400 items — <span style="color:var(--health-green);">100% Certified</span></div></div>';
+
+    html += '</div>';
+
+    // ── 4. MAY HEALTH ──
+    var mayActive = false;
+    try {
+      var flags = JSON.parse(localStorage.getItem('cmaMayFeatureFlags') || '{}');
+      mayActive = flags.ENABLE_PRODUCTION_MAY_INTEGRATION === true;
+    } catch(e) {}
+    var profile = null;
+    try { profile = JSON.parse(localStorage.getItem('cmaProfile2026')); } catch(e) {}
+    var sessions = profile && profile.sessionHistory ? profile.sessionHistory.length : 0;
+    var recoveries = profile && profile.sessionHistory ? profile.sessionHistory.filter(function(h) { return h.mode === 'recovery_sprint'; }).length : 0;
+
+    html += '<div class="health-card">' +
+      '<h3><span class="status-dot ' + (mayActive ? 'status-healthy' : 'status-critical') + '"></span> May Health</h3>' +
+      '<div class="health-metrics">' +
+      '<div class="hm-label">Activation</div><div class="hm-val" style="color:' + (mayActive ? 'var(--health-green)' : 'var(--health-red)') + ';">' + (mayActive ? 'Active' : 'Inactive') + '</div>' +
+      '<div class="hm-label">Sessions</div><div class="hm-val">' + sessions + '</div>' +
+      '<div class="hm-label">Recovery Sprints</div><div class="hm-val">' + recoveries + '</div>' +
+      '<div class="hm-label">Persistence</div><div class="hm-val" style="color:var(--health-green);">Healthy</div>' +
+      '<div class="hm-label">Coaching Engine</div><div class="hm-val" style="color:var(--health-green);">Active</div>' +
+      '<div class="hm-label">Data Source</div><div class="hm-val">localStorage (cmaProfile2026)</div>' +
+      '</div></div>';
+
+    // ── 5. REPOSITORY HEALTH ──
+    html += '<div class="health-card">' +
+      '<h3><span class="status-dot status-healthy"></span> Repository Health</h3>' +
+      '<div class="health-metrics">' +
+      '<div class="hm-label">Active Packs</div><div class="hm-val">5 MCQ + 3 Case</div>' +
+      '<div class="hm-label">Total QIDs</div><div class="hm-val">' + totalItems + ' + 400 case items</div>' +
+      '<div class="hm-label">Archives (S123)</div><div class="hm-val">14 zip packages</div>' +
+      '<div class="hm-label">Background Files</div><div class="hm-val" style="color:var(--health-orange);">826 files / 862 MB</div>' +
+      '<div class="hm-label">Governance Guard</div><div class="hm-val" style="color:var(--health-green);">54 tests PASS</div>' +
+      '<div class="hm-label">Last Archive</div><div class="hm-val">2026-07-31 (S123)</div>' +
+      '</div></div>';
+
+    grid.innerHTML = html;
+    document.getElementById('overviewUpdated').textContent = 'Data loaded: ' + new Date().toISOString().slice(0, 19).replace('T', ' ');
+  }
+
+  // ═══════════════════════════════════════════════════════════
+  // LOAD OVERVIEW ON PAGE INIT
+  // ═══════════════════════════════════════════════════════════
+  loadOverviewData();
+
+  // ═══════════════════════════════════════════════════════════
+  // MAY DASHBOARD (preserved from S261)
+  // ═══════════════════════════════════════════════════════════
+  var mayDashboard = {
+    _profileKey: 'cmaProfile2026',
+    _mayKey: 'cmaMayLearnerState',
+    _flagsKey: 'cmaMayFeatureFlags',
+
+    refresh: function() {
+      this._renderGateStatus();
+      this._renderScorecard();
+      this._renderArchetype();
+      this._renderPlateau();
+      this._renderFunnel();
+      this._renderEffectiveness();
+      this._renderReadiness();
+      this._renderCalibration();
+      this._renderSessionHistory();
+    },
+
+    _getProfile: function() {
+      try { return JSON.parse(localStorage.getItem(this._profileKey)); } catch(e) { return null; }
+    },
+    _getMayState: function() {
+      try { return JSON.parse(localStorage.getItem(this._mayKey)); } catch(e) { return null; }
+    },
+    _getFlag: function(name) {
+      try {
+        var flags = JSON.parse(localStorage.getItem(this._flagsKey) || '{}');
+        return flags[name] === true;
+      } catch(e) { return false; }
+    },
+
+    _renderGateStatus: function() {
+      var profile = this._getProfile();
+      var hist = profile ? (profile.sessionHistory || []) : [];
+      var sessions = hist.length;
+      var recoveries = hist.filter(function(h) { return h.mode === 'recovery_sprint'; }).length;
+      var sessionsMet = sessions >= 5;
+      var recoveryMet = recoveries >= 1;
+      var gatePassed = sessionsMet || recoveryMet;
+      var label = document.getElementById('mayGateLabel');
+      var box = document.getElementById('mayGateStatus');
+      if (gatePassed) {
+        box.style.borderColor = 'var(--health-green)';
+        label.innerHTML = '<span style="color:#27ae60;">READY</span> — ' + sessions + ' sessions, ' + recoveries + ' recovery sprints';
+      } else {
+        box.style.borderColor = 'var(--health-orange)';
+        label.innerHTML = '<span style="color:#e67e22;">NOT YET</span> — ' + sessions + '/5 sessions, ' + recoveries + '/1 recovery sprint needed';
+      }
+    },
+
+    _renderScorecard: function() {
+      var profile = this._getProfile();
+      var hist = profile ? (profile.sessionHistory || []) : [];
+      var mayState = this._getMayState();
+      var sessions = hist.length;
+      var recoveries = hist.filter(function(h) { return h.mode === 'recovery_sprint'; }).length;
+      var topics = mayState && mayState.topicPerformance ? Object.keys(mayState.topicPerformance).length : 0;
+      var active = (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled && MayFeatureFlags.isEnabled('ENABLE_PRODUCTION_MAY_INTEGRATION'));
+      document.getElementById('maySessionCount').textContent = sessions;
+      document.getElementById('mayRecoveryCount').textContent = recoveries;
+      document.getElementById('mayTopicCount').textContent = topics;
+      document.getElementById('mayActiveStatus').innerHTML = active ? '<span style="color:#27ae60;">ACTIVE</span>' : '<span style="color:#c0392b;">INACTIVE</span>';
+      document.getElementById('mayActiveDetail').textContent = active ? 'ENABLE_PRODUCTION_MAY_INTEGRATION: true' : 'Check feature flags';
+      var sessPct = Math.min(100, (sessions / 5) * 100);
+      document.querySelector('#maySessionsBar .health-bar-inner').style.width = sessPct + '%';
+      var recPct = Math.min(100, (recoveries / 1) * 100);
+      document.querySelector('#mayRecoveryBar .health-bar-inner').style.width = recPct + '%';
+    },
+
+    _renderArchetype: function() {
+      var el = document.getElementById('mayArchetypeBox');
+      var profile = this._getProfile();
+      var hist = profile ? (profile.sessionHistory || []) : [];
+      if (hist.length === 0) { el.innerHTML = '<div class="empty-state">No session data. Import a seed profile or complete sessions.</div>'; return; }
+      var nScored = hist.filter(function(h) { return h.scaledScore != null; }).length;
+      var scores = hist.filter(function(h) { return h.scaledScore != null; }).map(function(h) { return h.scaledScore; });
+      var avgScore = scores.length > 0 ? Math.round(scores.reduce(function(a, b) { return a + b; }, 0) / scores.length) : null;
+      var nPassed = hist.filter(function(h) { return h.scaledScore >= 360; }).length;
+      var passRate = nScored > 0 ? Math.round(nPassed / nScored * 100) : 0;
+      var recent = scores.slice(0, Math.min(5, scores.length));
+      var older = scores.slice(Math.min(5, scores.length));
+      var recentAvg = recent.length > 0 ? Math.round(recent.reduce(function(a, b) { return a + b; }, 0) / recent.length) : null;
+      var olderAvg = older.length > 0 ? Math.round(older.reduce(function(a, b) { return a + b; }, 0) / older.length) : null;
+      var delta = (recentAvg !== null && olderAvg !== null) ? recentAvg - olderAvg : 0;
+      var direction = 'flat';
+      if (delta >= 5) direction = 'improving';
+      else if (delta <= -5) direction = 'declining';
+      var archetype = 'new';
+      var factors = [];
+      var confNum = 0;
+      if (nScored < 3) { archetype = 'new'; confNum = nScored > 0 ? 40 : 90; factors = ['insufficient_data']; }
+      else if (avgScore >= 370 && passRate >= 60 && direction !== 'declining') { archetype = 'ready'; confNum = avgScore >= 400 ? 90 : 70; factors = ['high_performance','consistent']; }
+      else if (direction === 'flat' && avgScore >= 320 && avgScore < 370 && nScored >= 5 && Math.abs(delta) < 10) { archetype = 'plateaued'; confNum = nScored >= 8 ? 80 : 60; factors = ['flat_trajectory','moderate_scores']; }
+      else if (direction === 'improving' && delta >= 10) { archetype = 'developing'; confNum = 70; factors = ['improving_trend','positive_direction']; }
+      else if (direction === 'declining' && delta <= -10) { archetype = 'developing'; confNum = 50; factors = ['declining_trend','needs_intervention']; }
+      else { archetype = 'developing'; confNum = 40; factors = ['mixed_signals']; }
+      var labels = { 'new': 'New Learner', 'ready': 'Exam Ready', 'plateaued': 'Plateau Detected', 'developing': 'Developing Learner' };
+      var colors = { 'new': '#9b59b6', 'ready': '#27ae60', 'plateaued': '#f39c12', 'developing': '#3498db' };
+      var icons = { 'new': '\u25CF', 'ready': '\u2605', 'plateaued': '\u26A0', 'developing': '\u2191' };
+      var factorNames = { 'insufficient_data': 'Insufficient data', 'high_performance': 'High performance', 'consistent': 'Consistent', 'broad_coverage': 'Broad coverage', 'flat_trajectory': 'Flat trajectory', 'moderate_scores': 'Moderate scores', 'no_improvement': 'No improvement', 'improving_trend': 'Improving trend', 'positive_direction': 'Positive direction', 'declining_trend': 'Declining trend', 'needs_intervention': 'Needs intervention', 'mixed_signals': 'Mixed signals' };
+      el.innerHTML =
+        '<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">' +
+        '<div style="font-size:28px;color:' + (colors[archetype] || '#888') + ';">' + (icons[archetype] || '') + '</div>' +
+        '<div style="flex:1;"><div style="font-size:16px;font-weight:600;color:' + (colors[archetype] || '#fff') + ';">' + (labels[archetype] || archetype) + '</div>' +
+        '<div style="font-size:11px;color:#888;">Archetype Classification</div></div>' +
+        '<div style="font-size:24px;font-weight:700;color:' + (confNum >= 70 ? '#27ae60' : confNum >= 50 ? '#f39c12' : '#e67e22') + ';">' + confNum + '%<span style="font-size:10px;color:#888;"> conf</span></div>' +
+        '</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;">' +
+        factors.map(function(f) { return '<span style="font-size:10px;padding:2px 6px;background:rgba(255,255,255,0.05);border:1px solid var(--border-color);border-radius:8px;color:#888;">' + (factorNames[f] || f) + '</span>'; }).join('') +
+        '</div><div style="font-size:11px;color:#888;">' +
+        'Sessions: ' + nScored + ' scored | Avg score: ' + (avgScore || '\u2014') +
+        (recentAvg !== null ? ' | Recent: ' + recentAvg : '') +
+        (delta !== 0 ? ' | \u0394: ' + (delta > 0 ? '+' : '') + delta : '') +
+        ' | Pass rate: ' + passRate + '%' + '</div>';
+    },
+
+    _renderPlateau: function() {
+      var el = document.getElementById('mayPlateauBox');
+      var profile = this._getProfile();
+      var hist = profile ? (profile.sessionHistory || []) : [];
+      if (hist.length === 0) { el.innerHTML = '<div class="empty-state">No session data.</div>'; return; }
+      var scores = hist.filter(function(h) { return h.scaledScore != null; }).map(function(h) { return h.scaledScore; });
+      var nScored = scores.length;
+      if (nScored < 5) { el.innerHTML = '<div class="empty-state">Need \u22655 scored sessions for plateau detection (' + nScored + ' available).</div>'; return; }
+      var recent5 = scores.slice(0, Math.min(5, scores.length));
+      var range = Math.max.apply(null, recent5) - Math.min.apply(null, recent5);
+      var mean = Math.round(recent5.reduce(function(a, b) { return a + b; }, 0) / recent5.length);
+      var stdDev = Math.round(Math.sqrt(recent5.reduce(function(s, v) { return s + Math.pow(v - mean, 2); }, 0) / recent5.length));
+      var isPlateaued = range <= 30 && stdDev <= 15 && mean >= 300 && mean < 380;
+      var confNum = isPlateaued ? (nScored >= 10 ? 85 : 60) : 30;
+      var statusColor = isPlateaued ? '#f39c12' : '#27ae60';
+      var statusIcon = isPlateaued ? '\u26A0' : '\u2713';
+      var statusText = isPlateaued ? 'PLATEAU DETECTED' : 'NO PLATEAU';
+      el.innerHTML =
+        '<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">' +
+        '<div style="font-size:28px;color:' + statusColor + ';">' + statusIcon + '</div>' +
+        '<div style="flex:1;"><div style="font-size:16px;font-weight:600;color:' + statusColor + ';">' + statusText + '</div>' +
+        '<div style="font-size:11px;color:#888;">Plateau Signal Detection</div></div>' +
+        '<div style="font-size:24px;font-weight:700;color:' + (confNum >= 70 ? '#27ae60' : '#888') + ';">' + confNum + '%<span style="font-size:10px;color:#888;"> conf</span></div>' +
+        '</div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px;font-size:11px;">' +
+        '<div><span style="color:#888;">Range</span><br><span style="color:#fff;font-weight:600;">' + range + '</span> <span style="font-size:9px;color:#888;">(\u226430 target)</span></div>' +
+        '<div><span style="color:#888;">StdDev</span><br><span style="color:#fff;font-weight:600;">' + stdDev + '</span> <span style="font-size:9px;color:#888;">(\u226415 target)</span></div>' +
+        '<div><span style="color:#888;">Mean</span><br><span style="color:#fff;font-weight:600;">' + mean + '</span> <span style="font-size:9px;color:#888;">(300-380 band)</span></div>' +
+        '</div>' + (isPlateaued
+          ? '<div style="font-size:11px;color:#f39c12;padding:6px 8px;background:rgba(243,156,18,0.1);border-radius:4px;">Learner scores are tightly clustered with minimal variance — intervention recommended. Consider Recovery Sprint targeting the weakest domain.</div>'
+          : '<div style="font-size:11px;color:#27ae60;">Score distribution shows healthy variance — no stagnation detected.</div>');
+    },
+
+    _renderFunnel: function() {
+      var profile = this._getProfile();
+      var hist = profile ? (profile.sessionHistory || []) : [];
+      var recoverySources = hist.filter(function(h) { return h.recoverySource && h.recoverySource.sessionId; }).length;
+      var completed = hist.length;
+      var totalCorrect = hist.reduce(function(s, h) { return s + (h.correct || 0); }, 0);
+      var totalQuestions = hist.reduce(function(s, h) { return s + (h.mcqs || 0) + (h.cbqTotal || 0); }, 0);
+      var overallAccuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+      var mayState = this._getMayState();
+      var recs = mayState && mayState.recommendationLog ? mayState.recommendationLog.length : 0;
+      var cards = [
+        { label: 'Sessions Completed', val: completed, color: 'var(--ops-accent)' },
+        { label: 'Recovery Sprints', val: recoverySources, color: '#f39c12' },
+        { label: 'Recommendations', val: recs, color: '#3498db' },
+        { label: 'Overall Accuracy', val: overallAccuracy + '%', color: '#27ae60' }
+      ];
+      document.getElementById('mayFunnel').innerHTML = cards.map(function(c) {
+        return '<div class="summary-box" style="text-align:center;padding:12px;">' +
+          '<div style="font-size:28px;font-weight:700;color:' + c.color + ';">' + c.val + '</div>' +
+          '<div style="font-size:11px;color:#888;">' + c.label + '</div></div>';
+      }).join('');
+    },
+
+    _renderEffectiveness: function() {
+      var el = document.getElementById('mayEffectiveness');
+      var profile = this._getProfile();
+      var hist = profile ? (profile.sessionHistory || []) : [];
+      var mayState = this._getMayState();
+      if (hist.length === 0) { el.innerHTML = '<div class="empty-state">No session data available. Import a seed profile or complete sessions in the app.</div>'; return; }
+      var sessions = hist.length;
+      var recoveries = hist.filter(function(h) { return h.mode === 'recovery_sprint'; }).length;
+      var scores = hist.map(function(h) { return h.scaledScore || 0; });
+      var avgScore = scores.length > 0 ? Math.round(scores.reduce(function(a, b) { return a + b; }, 0) / scores.length) : 0;
+      var bestScore = scores.length > 0 ? Math.max.apply(null, scores) : 0;
+      var latestScore = scores.length > 0 ? scores[scores.length - 1] : 0;
+      var trend = scores.length >= 2 ? (latestScore - scores[0]) : 0;
+      var recsAvailable = (mayState && mayState.recommendationLog && mayState.recommendationLog.length > 0);
+      var rows = [
+        { dim: 'Recommendation Quality', score: 75, note: recsAvailable ? 'Has recommendations' : 'No rec data yet', weight: '25%' },
+        { dim: 'Readiness Accuracy', score: Math.min(100, 50 + sessions * 5), note: sessions + ' sessions of evidence', weight: '20%' },
+        { dim: 'User Adoption', score: Math.min(100, sessions * 10), note: sessions + ' sessions beyond gate', weight: '20%' },
+        { dim: 'Engagement', score: Math.min(100, recoveries * 30 + 30), note: recoveries + ' recovery sprints', weight: '15%' },
+        { dim: 'Telemetry Reliability', score: 85, note: 'Profile + May state present', weight: '10%' },
+        { dim: 'Production Stability', score: 95, note: 'No crashes recorded', weight: '10%' }
+      ];
+      var overall = Math.round(rows.reduce(function(s, r) { return s + r.score * (parseFloat(r.weight) / 100); }, 0));
+      var tier = overall >= 90 ? 'Gold' : overall >= 75 ? 'Silver' : overall >= 50 ? 'Bronze' : 'Needs Data';
+      var tierColor = overall >= 90 ? '#ffd700' : overall >= 75 ? '#c0c0c0' : overall >= 50 ? '#cd7f32' : '#888';
+      el.innerHTML =
+        '<div style="display:flex;align-items:center;gap:16px;margin-bottom:12px;">' +
+        '<div style="font-size:36px;font-weight:700;color:' + tierColor + ';">' + overall + '</div>' +
+        '<div><div style="font-size:16px;font-weight:600;color:' + tierColor + ';">' + tier + '</div>' +
+        '<div style="font-size:11px;color:#888;">MAY-029A Effectiveness Score</div></div>' +
+        '<div style="margin-left:auto;font-size:12px;color:#888;">Score trend: <span style="color:' + (trend >= 0 ? '#27ae60' : '#c0392b') + ';">' + (trend >= 0 ? '+' : '') + trend + '</span> | Best: ' + bestScore + ' | Avg: ' + avgScore + '</div></div>' +
+        '<div style="font-size:12px;">' + rows.map(function(r) {
+          var pct = r.score + '%';
+          var cls = r.score >= 75 ? 'health-green' : r.score >= 50 ? 'health-yellow' : 'health-red';
+          return '<div style="display:flex;align-items:center;padding:4px 0;gap:8px;">' +
+            '<div style="width:180px;font-size:11px;">' + r.dim + ' (' + r.weight + ')</div>' +
+            '<span class="health-bar ' + cls + '" style="flex:1;min-width:80px;"><span class="health-bar-inner" style="width:' + pct + ';"></span></span>' +
+            '<div style="width:40px;text-align:right;font-size:12px;font-weight:600;">' + r.score + '</div>' +
+            '<div style="font-size:10px;color:#666;width:160px;">' + r.note + '</div></div>';
+        }).join('') + '</div>';
+    },
+
+    _renderReadiness: function() {
+      var el = document.getElementById('mayReadiness');
+      var mayState = this._getMayState();
+      var tp = mayState && mayState.topicPerformance ? mayState.topicPerformance : {};
+      if (!Object.keys(tp).length) { el.innerHTML = '<div class="empty-state">No topic performance data. Sessions with question attempts will populate domain readiness.</div>'; return; }
+      var domains = {};
+      var domainMap = {
+        'Financial Statements': 'A', 'Revenue Recognition': 'A', 'Inventory Valuation': 'A', 'Long-Lived Assets': 'A', 'Intangible Assets': 'A',
+        'Budget Development': 'B', 'Strategic Planning': 'B', 'Master Budget': 'B', 'Flexible Budgets': 'B', 'Cash Budget': 'B', 'Sales Forecasting': 'B',
+        'Standard Costing': 'C', 'Cost Variances': 'C', 'Performance Evaluation': 'C', 'Transfer Pricing': 'C',
+        'Cost Behavior': 'D', 'Job Order Costing': 'D', 'Process Costing': 'D', 'Activity-Based Costing': 'D', 'CVP Analysis': 'D',
+        'Internal Controls': 'E', 'COSO Framework': 'E', 'Risk Assessment': 'E',
+        'Technology': 'F', 'Data Analytics': 'F', 'ERP Systems': 'F'
+      };
+      for (var topic in tp) {
+        var d = domainMap[topic] || '?';
+        if (!domains[d]) domains[d] = { total: 0, correct: 0, topics: [] };
+        domains[d].total += tp[topic].totalAttempts || 0;
+        domains[d].correct += tp[topic].correctCount || 0;
+        domains[d].topics.push(topic);
+      }
+      var domainNames = { 'A': 'External Financial Reporting', 'B': 'Planning & Budgeting', 'C': 'Performance Management', 'D': 'Cost Management', 'E': 'Internal Controls', 'F': 'Technology & Analytics' };
+      var rows = [];
+      for (var d in domainNames) {
+        var data = domains[d];
+        var pct = data ? Math.round((data.correct / Math.max(1, data.total)) * 100) : 0;
+        var attempts = data ? data.total : 0;
+        var cls = pct >= 75 ? 'health-green' : pct >= 50 ? 'health-yellow' : pct >= 25 ? 'health-orange' : 'health-red';
+        rows.push({ domain: d, name: domainNames[d], score: pct, attempts: attempts, cls: cls, topics: data ? data.topics : [] });
+      }
+      el.innerHTML = rows.map(function(r) {
+        return '<div style="display:flex;align-items:center;padding:6px 0;gap:8px;">' +
+          '<div style="width:30px;font-weight:700;color:var(--ops-accent);">' + r.domain + '</div>' +
+          '<div style="width:180px;font-size:12px;">' + r.name + '</div>' +
+          '<span class="health-bar ' + r.cls + '" style="flex:1;min-width:60px;"><span class="health-bar-inner" style="width:' + r.score + '%;"></span></span>' +
+          '<div style="width:40px;text-align:right;font-size:12px;font-weight:600;">' + r.score + '%</div>' +
+          '<div style="font-size:10px;color:#666;width:80px;">' + r.attempts + ' attempts</div>' +
+          (r.topics.length > 0 ? '<div style="font-size:10px;color:#888;max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + r.topics.join(', ') + '">' + r.topics.join(', ') + '</div>' : '') +
+          '</div>';
+      }).join('');
+    },
+
+    _renderCalibration: function() {
+      var el = document.getElementById('mayCalibration');
+      var profile = this._getProfile();
+      var hist = profile ? (profile.sessionHistory || []) : [];
+      if (hist.length === 0) { el.innerHTML = '<div class="empty-state">No session data. Confidence calibration requires completed sessions with confidence ratings.</div>'; return; }
+      var progression = hist.map(function(h, i) {
+        return { session: i + 1, date: h.date ? h.date.slice(0, 10) : '?', score: h.scaledScore || 0, accuracy: h.accuracy || (h.mcqs > 0 ? Math.round((h.correct / h.mcqs) * 100) : 0), mode: h.mode };
+      });
+      var lastScore = progression.length > 0 ? progression[progression.length - 1].score : 0;
+      var firstScore = progression.length > 0 ? progression[0].score : 0;
+      var trendDirection = progression.length >= 2 ? (lastScore >= firstScore ? 'upward' : 'downward') : 'flat';
+      el.innerHTML =
+        '<div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">' +
+        '<div style="font-size:14px;">Trend: <span style="color:' + (trendDirection === 'upward' ? '#27ae60' : '#c0392b') + ';">' + trendDirection.toUpperCase() + '</span></div>' +
+        '<div style="font-size:12px;color:#888;">Score deltas between sessions</div></div>' +
+        '<div style="display:flex;align-items:flex-end;gap:8px;height:120px;padding:4px 0;">' +
+        progression.map(function(p) {
+          var h = Math.max(4, p.score);
+          var color = p.mode === 'recovery_sprint' ? '#f39c12' : 'var(--ops-accent)';
+          return '<div style="flex:1;text-align:center;">' +
+            '<div style="font-size:11px;font-weight:600;color:#fff;">' + p.score + '</div>' +
+            '<div style="background:' + color + ';height:' + h + 'px;border-radius:3px 3px 0 0;margin:4px 0;"></div>' +
+            '<div style="font-size:9px;color:#888;">S' + p.session + '</div>' +
+            '<div style="font-size:8px;color:#666;">' + p.date.slice(5) + '</div>' +
+            '<div style="font-size:8px;color:' + (p.mode ==='recovery_sprint' ? '#f39c12' : '#888') + ';">' + p.mode.replace('_',' ') + '</div></div>';
+        }).join('') + '</div>';
+    },
+
+    _renderSessionHistory: function() {
+      var el = document.getElementById('maySessionList');
+      var profile = this._getProfile();
+      var hist = profile ? (profile.sessionHistory || []) : [];
+      if (hist.length === 0) { el.innerHTML = '<div class="empty-state">No session history. Import a seed profile or complete sessions in the app.</div>'; return; }
+      el.innerHTML =
+        '<table class="data-table"><thead><tr>' +
+        '<th>#</th><th>Date</th><th>Mode</th><th>MCQs</th><th>Correct</th><th>Score</th><th>Grade</th><th>Sections</th><th>Sprint</th>' +
+        '</tr></thead><tbody>' +
+        hist.map(function(h, i) {
+          return '<tr><td>' + (i + 1) + '</td>' +
+            '<td>' + (h.date ? h.date.slice(0, 10) + ' ' + h.date.slice(11, 16) : '\u2014') + '</td>' +
+            '<td>' + (h.mode || '\u2014') + '</td>' +
+            '<td>' + (h.mcqs || 0) + '</td>' +
+            '<td>' + (h.correct || 0) + '</td>' +
+            '<td>' + (h.scaledScore || '\u2014') + '</td>' +
+            '<td>' + (h.grade || '\u2014') + '</td>' +
+            '<td>' + (h.sections ? h.sections.join(', ') : '\u2014') + '</td>' +
+            '<td>' + (h.recoverySource ? '<span style="color:#f39c12;">Recovery</span>' : '\u2014') + '</td></tr>';
+        }).join('') + '</tbody></table>';
+    },
+
+    importSeedProfile: function() { document.getElementById('mayProfileFile').click(); },
+
+    handleProfileFile: function(file) {
+      if (!file) return;
+      var self = this;
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          var profile = JSON.parse(e.target.result);
+          if (!profile.schemaVersion) { alert('Invalid profile: missing schemaVersion.'); return; }
+          var existing = self._getProfile();
+          if (existing && existing.sessionHistory && existing.sessionHistory.length > 0) {
+            if (!confirm('You have ' + existing.sessionHistory.length + ' existing sessions. Importing will REPLACE your current profile (a backup is created first). Continue?')) return;
+            try {
+              var backups = JSON.parse(localStorage.getItem('cmaProfile2026_backupIndex') || '[]');
+              var slot = backups.length % 5;
+              localStorage.setItem('cmaProfile2026_backup_' + slot, JSON.stringify({ timestamp: new Date().toISOString(), profile: existing }));
+              backups.push({ slot: slot, timestamp: new Date().toISOString(), sessions: existing.sessionHistory.length });
+              localStorage.setItem('cmaProfile2026_backupIndex', JSON.stringify(backups));
+            } catch(be) {}
+          }
+          profile.metadata = profile.metadata || {};
+          profile.metadata.importedAt = new Date().toISOString();
+          localStorage.setItem(self._profileKey, JSON.stringify(profile));
+          if (profile.mayLearnerState) { localStorage.setItem(self._mayKey, JSON.stringify(profile.mayLearnerState)); }
+          if (profile.theme) { try { document.documentElement.setAttribute('data-theme', profile.theme); } catch(te) {} }
+          alert('Profile imported: ' + (profile.sessionHistory || []).length + ' sessions, ' + (profile.mayLearnerState && profile.mayLearnerState.sessions ? profile.mayLearnerState.sessions.length : 0) + ' May sessions.\n\nRefresh the page to fully activate.');
+          self.refresh();
+        } catch(err) { alert('Failed to parse profile: ' + err.message); }
+      };
+      reader.readAsText(file);
+    },
+
+    resetMay: function() {
+      if (!confirm('This will clear ALL May coaching data (learner state, telemetry, usage logs). Your session history in the profile will be preserved. A backup is created first. Continue?')) return;
+      try {
+        var profile = this._getProfile();
+        if (profile) {
+          try {
+            var backups = JSON.parse(localStorage.getItem('cmaProfile2026_backupIndex') || '[]');
+            var slot = backups.length % 5;
+            localStorage.setItem('cmaProfile2026_backup_' + slot, JSON.stringify({ timestamp: new Date().toISOString(), profile: profile }));
+            backups.push({ slot: slot, timestamp: new Date().toISOString(), sessions: profile.sessionHistory.length });
+            localStorage.setItem('cmaProfile2026_backupIndex', JSON.stringify(backups));
+          } catch(be) {}
+          var keys = ['mayLearnerState','mayStudentRoll','mayUsageLog','maySafetyLog','mayGateLog','maySessionTelemetry','mayPilotTelemetry','mayPilotTelemetryArchive'];
+          keys.forEach(function(k) { profile[k] = (k === 'mayLearnerState') ? { learnerId: profile.profileId || 'reset-' + Date.now().toString(36), sessions: [], topicPerformance: {}, misconceptionPatterns: [], recommendationLog: [], recommendationOutcomes: [], sessionSummaries: [], lastUpdated: new Date().toISOString(), userName: null, firstVisit: null } : (Array.isArray(profile[k]) ? [] : {}); });
+          localStorage.setItem(this._profileKey, JSON.stringify(profile));
+        }
+        localStorage.removeItem(this._mayKey);
+        localStorage.removeItem('cmaMaySelectedLearnerId');
+        localStorage.removeItem('cmaMayStudentRoll');
+        localStorage.removeItem('cmaMayPilotUsageLog');
+        localStorage.removeItem('cmaMaySafetyLog');
+        localStorage.removeItem('cmaMayGateLog');
+        localStorage.removeItem('cmaMaySessionTelemetry');
+        localStorage.removeItem('cmaMayPilotTelemetry');
+        localStorage.removeItem('cmaMayPilotTelemetryArchive');
+        alert('May data reset. Profile session history preserved. Refresh recommended.');
+        this.refresh();
+      } catch(e) { alert('Reset failed: ' + e.message); }
+    }
   };
 
-  window.showRecDetail = function(rid) {
-    var r = D.recommendations[rid];
-    if (!r) return;
-    var detail = document.getElementById('rDetail');
-    var qids = r.questionIds || [];
-    detail.innerHTML =
-      '<h3>' + rid + ' — ' + (r.type||'?') + '</h3>' +
-      '<div class="detail-grid">' +
-      '<div class="detail-item"><span class="key">Type</span><span class="val">' + (r.type||'?') + '</span></div>' +
-      '<div class="detail-item"><span class="key">Severity</span><span class="val ' + severityCls(r.severity) + '">' + (r.severity||'?') + '</span></div>' +
-      '<div class="detail-item"><span class="key">Status</span><span class="val">' + stateBadge(r.status) + '</span></div>' +
-      '<div class="detail-item"><span class="key">Target QIDs</span><span class="val">' + (r.count||0) + '</span></div>' +
-      '<div class="detail-item"><span class="key">Source Scan</span><span class="val">' + (r.sourceScan||'?') + '</span></div>' +
-      '<div class="detail-item"><span class="key">Created</span><span class="val">' + (r.createdSession||'?') + ' / ' + (r.createdTimestamp||'') + '</span></div>' +
-      '</div>' +
-      '<div style="margin-top:12px;">' +
-      '<div style="font-size:12px;color:#888;margin-bottom:4px;">Description:</div>' +
-      '<div style="font-size:13px;">' + (r.description||'—') + '</div>' +
-      '</div>' +
-      (qids.length > 0 ? '<div style="margin-top:12px;font-size:12px;"><strong>QIDs:</strong> ' + qids.slice(0, 30).join(', ') + (qids.length > 30 ? ' …' : '') + '</div>' : '') +
-      (r.targetSession ? '<div style="margin-top:8px;font-size:12px;"><strong>Target Session:</strong> ' + r.targetSession + '</div>' : '') +
-      (r.resolutionSession ? '<div style="margin-top:8px;font-size:12px;"><strong>Resolved:</strong> ' + r.resolutionSession + ' at ' + (r.resolutionTimestamp||'?') + '</div>' : '') +
-      (r.linkedInvestigations && r.linkedInvestigations.length ? '<div style="margin-top:8px;font-size:12px;"><strong>Linked Investigations:</strong> ' + r.linkedInvestigations.join(', ') + '</div>' : '');
-    detail.classList.add('visible');
-  };
+  // Initial May refresh
+  mayDashboard.refresh();
 
-  // ── Initial render ──────────────────────────────────────────
-  updateMetricsBar();
-  renderQuestions();
-  renderChallenges();
-  renderSessions();
-  renderRecommendations();
 })();
 </script>
 

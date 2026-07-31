@@ -1,3 +1,8 @@
+---
+name: reconciliation-audit
+description: Cross-checks self-reported certification claims against raw file/line evidence
+---
+
 # Reconciliation Audit Skill
 
 **Purpose:** Cross-check self-reported certification claims, count claims, and audit-status claims against raw file/line evidence — the single most common source of undetected defects across prior sessions.
@@ -221,21 +226,21 @@ Before any audit methodology is used on pack files:
 
 The pack files (`pack_*_corrected.js`) use a paired-object structure per QuestionID:
 
-1. **Metadata block** (first object): `QuestionID`, `question_state`, `ChoiceA`–`D`, `ExplanationWrongA`–`D`, `VerifiedChecks`, certification fields
+1. **Metadata block** (first object): `QuestionID`, `question_state`, `ChoiceA`-`D`, `ExplanationWrongA`-`D`, `VerifiedChecks`, certification fields
 2. **Content block** (second object): `Part`, `Section`, `Topic`, `Stem`, `Choices` (as `{A, B, C, D}` object), `CorrectChoice`, `ExplanationCorrect`, `StudyLinks`
 
-The content block is the authoritative source for the rendered question (what the learner sees). The metadata block is authoritative for governance state and machine-readable choice text. These two objects may carry **different** `ChoiceA`–`D` text — this is a template-backplane residue defect when present.
+The content block is the authoritative source for the rendered question (what the learner sees). The metadata block is authoritative for governance state and machine-readable choice text. These two objects may carry **different** `ChoiceA`-`D` text — this is a template-backplane residue defect when present.
 
 ### 8a. Detection
 
-For any item flagged in a cross-check, extract both the metadata-block `ChoiceA`–`D` and the content-block `Choices.A`–`D`. Compare:
+For any item flagged in a cross-check, extract both the metadata-block `ChoiceA`-`D` and the content-block `Choices.A`-`D`. Compare:
 
 - **If identical** → the item is structurally consistent. Proceed with normal governance checks.
 - **If different** → the metadata block carries template residue from a prior bulk-authoring pass. Report as "metadata-content inconsistency." The content block is the ground truth for pedagogical content.
 
 ### 8b. Cross-Group Comparison
 
-When a Certified item and an Archived/Unprocessed item share identical metadata-block `ChoiceA`–`D` arrays but the content-block `Stem` and `Choices` differ, report as:
+When a Certified item and an Archived/Unprocessed item share identical metadata-block `ChoiceA`-`D` arrays but the content-block `Stem` and `Choices` differ, report as:
 
 > `[QID-A] (Certified) and [QID-B] (Archived) share metadata-block choice template but have distinct content blocks. Verify the archive was based on content (correct) rather than metadata alone (potentially incorrect).`
 
@@ -246,6 +251,4 @@ This pattern was first documented in the Pack A Section E clone groups (2026-07-
 When verifying a "seed/clone" archival (where one Certified item anchors a clone group and N others are Archived), compare each archived item's **content block** against the certified seed's **content block**:
 
 - **True clone:** Same stem skeleton (company-name substitution only), same `Choices` set (positionally rotated), `CorrectChoice` rotates with the choice set. Archive is valid.
-- **Genuinely distinct:** Different stem scenario, different `Choices` text, different `Topic`. The metadata-block `ChoiceA`–`D` match is template residue only — the archive was metadata-driven and potentially incorrect. Flag for reversal review.
-
----
+- **Genuinely distinct:** Different stem scenario, different `Choices` text, different `Topic`. The metadata-block `ChoiceA`-`D` match is template residue only — the archive was metadata-driven and potentially incorrect. Flag for reversal review.

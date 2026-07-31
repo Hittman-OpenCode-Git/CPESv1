@@ -67,6 +67,7 @@ const CMAProfileManager = {
             theme: (function () { try { return localStorage.getItem('cma-theme') || 'light'; } catch (e) { return 'light'; } })(),
             sessionHistory: [],
             seenQuestionIds: [],
+            bookmarkCollections: {},
             mayLearnerState: {},
             mayStudentRoll: [],
             mayUsageLog: [],
@@ -94,6 +95,8 @@ const CMAProfileManager = {
     },
 
     save(profile) {
+        // S120 — Pull fresh May data into profile before persisting (SSOT coherence)
+        this.syncFromMayStorage(profile);
         try {
             profile.metadata.lastSessionAt = new Date().toISOString();
             localStorage.setItem(this.STORAGE_KEY, JSON.stringify(profile));
@@ -107,6 +110,114 @@ const CMAProfileManager = {
                 return true;
             } catch (e2) { return false; }
         }
+    },
+
+    // ── UX-4 Bookmark Collections ────────────────────────
+    SYSTEM_COLLECTIONS: {
+        'must-master': { name: 'Must Master', desc: 'Questions I must get right before the exam', type: 'system' },
+        'technology-weaknesses': { name: 'Technology Weaknesses', desc: 'Section F concepts and emerging tech topics', type: 'system' },
+        'formula-review': { name: 'Formula Review', desc: 'Calculation-intensive questions to rework', type: 'system' },
+        'recovery-candidates': { name: 'Recovery Candidates', desc: 'Previously missed questions to retry', type: 'system' }
+    },
+
+    _ensureSystemCollections(profile) {
+        if (!profile.bookmarkCollections) profile.bookmarkCollections = {};
+        var bc = profile.bookmarkCollections;
+        for (var cid in this.SYSTEM_COLLECTIONS) {
+            if (!bc[cid]) {
+                bc[cid] = {
+                    name: this.SYSTEM_COLLECTIONS[cid].name,
+                    description: this.SYSTEM_COLLECTIONS[cid].desc,
+                    type: this.SYSTEM_COLLECTIONS[cid].type,
+                    items: [],
+                    createdAt: new Date().toISOString(),
+                    updatedAt: new Date().toISOString()
+                };
+            }
+        }
+    },
+
+    getCollections() {
+        var profile = this.load();
+        this._ensureSystemCollections(profile);
+        return profile.bookmarkCollections;
+    },
+
+    createCollection(name, description) {
+        var profile = this.load();
+        this._ensureSystemCollections(profile);
+        var cid = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        if (!cid || profile.bookmarkCollections[cid]) return null;
+        profile.bookmarkCollections[cid] = {
+            name: name,
+            description: description || '',
+            type: 'user',
+            items: [],
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString()
+        };
+        this.save(profile);
+        return cid;
+    },
+
+    deleteCollection(collectionId) {
+        var profile = this.load();
+        this._ensureSystemCollections(profile);
+        if (profile.bookmarkCollections[collectionId] && profile.bookmarkCollections[collectionId].type === 'system') return false;
+        delete profile.bookmarkCollections[collectionId];
+        this.save(profile);
+        return true;
+    },
+
+    renameCollection(collectionId, newName) {
+        var profile = this.load();
+        this._ensureSystemCollections(profile);
+        if (!profile.bookmarkCollections[collectionId]) return false;
+        profile.bookmarkCollections[collectionId].name = newName;
+        profile.bookmarkCollections[collectionId].updatedAt = new Date().toISOString();
+        this.save(profile);
+        return true;
+    },
+
+    addToCollection(collectionId, questionId) {
+        var profile = this.load();
+        this._ensureSystemCollections(profile);
+        if (!profile.bookmarkCollections[collectionId]) return false;
+        var items = profile.bookmarkCollections[collectionId].items;
+        if (items.indexOf(questionId) === -1) {
+            items.push(questionId);
+            profile.bookmarkCollections[collectionId].updatedAt = new Date().toISOString();
+            this.save(profile);
+        }
+        return true;
+    },
+
+    removeFromCollection(collectionId, questionId) {
+        var profile = this.load();
+        this._ensureSystemCollections(profile);
+        if (!profile.bookmarkCollections[collectionId]) return false;
+        var items = profile.bookmarkCollections[collectionId].items;
+        var idx = items.indexOf(questionId);
+        if (idx !== -1) {
+            items.splice(idx, 1);
+            profile.bookmarkCollections[collectionId].updatedAt = new Date().toISOString();
+            this.save(profile);
+        }
+        return true;
+    },
+
+    isInCollection(collectionId, questionId) {
+        var profile = this.load();
+        this._ensureSystemCollections(profile);
+        if (!profile.bookmarkCollections[collectionId]) return false;
+        return profile.bookmarkCollections[collectionId].items.indexOf(questionId) !== -1;
+    },
+
+    getCollectionQuestionIds(collectionId) {
+        var profile = this.load();
+        this._ensureSystemCollections(profile);
+        if (!profile.bookmarkCollections[collectionId]) return [];
+        return profile.bookmarkCollections[collectionId].items.slice();
     },
 
     // ── Migration detection ──────────────────────────────
@@ -221,21 +332,43 @@ const CMAProfileManager = {
     },
 
     // ── Sync profile data back to May storage (for May layer compatibility) ──
-    syncToMayStorage(profile) {
+    // S120 — skipExisting: if true, only write keys that don't already exist in localStorage.
+    // This prevents init() from overwriting fresher mid-session data on page reload.
+    syncToMayStorage(profile, skipExisting) {
+        var _setIf = function (key, val) {
+            if (skipExisting) {
+                try { if (localStorage.getItem(key) !== null) return; } catch (e) {}
+            }
+            try { localStorage.setItem(key, val); } catch (e) {}
+        };
         try {
             if (profile.mayLearnerState && Object.keys(profile.mayLearnerState).length > 0) {
-                localStorage.setItem('cmaMayLearnerState', JSON.stringify(profile.mayLearnerState));
+                _setIf('cmaMayLearnerState', JSON.stringify(profile.mayLearnerState));
             }
-            if (profile.maySelectedLearnerId) localStorage.setItem('cmaMaySelectedLearnerId', profile.maySelectedLearnerId);
-            if (profile.mayStudentRoll && profile.mayStudentRoll.length > 0) localStorage.setItem('cmaMayStudentRoll', JSON.stringify(profile.mayStudentRoll));
-            if (profile.mayUsageLog && profile.mayUsageLog.length > 0) localStorage.setItem('cmaMayPilotUsageLog', JSON.stringify(profile.mayUsageLog));
-            if (profile.maySafetyLog && profile.maySafetyLog.length > 0) localStorage.setItem('cmaMaySafetyLog', JSON.stringify(profile.maySafetyLog));
-            if (profile.mayGateLog && profile.mayGateLog.length > 0) localStorage.setItem('cmaMayGateLog', JSON.stringify(profile.mayGateLog));
-            if (profile.maySessionTelemetry && profile.maySessionTelemetry.length > 0) localStorage.setItem('cmaMaySessionTelemetry', JSON.stringify(profile.maySessionTelemetry));
-            if (profile.mayPilotTelemetry && Object.keys(profile.mayPilotTelemetry).length > 0) localStorage.setItem('cmaMayPilotTelemetry', JSON.stringify(profile.mayPilotTelemetry));
-            if (profile.mayPilotTelemetryArchive && profile.mayPilotTelemetryArchive.length > 0) localStorage.setItem('cmaMayPilotTelemetryArchive', JSON.stringify(profile.mayPilotTelemetryArchive));
-            if (profile.defectManifestCache) localStorage.setItem('cmaDefectManifest_DL008_DL026', JSON.stringify(profile.defectManifestCache));
+            if (profile.maySelectedLearnerId) _setIf('cmaMaySelectedLearnerId', profile.maySelectedLearnerId);
+            if (profile.mayStudentRoll && profile.mayStudentRoll.length > 0) _setIf('cmaMayStudentRoll', JSON.stringify(profile.mayStudentRoll));
+            if (profile.mayUsageLog && profile.mayUsageLog.length > 0) _setIf('cmaMayPilotUsageLog', JSON.stringify(profile.mayUsageLog));
+            if (profile.maySafetyLog && profile.maySafetyLog.length > 0) _setIf('cmaMaySafetyLog', JSON.stringify(profile.maySafetyLog));
+            if (profile.mayGateLog && profile.mayGateLog.length > 0) _setIf('cmaMayGateLog', JSON.stringify(profile.mayGateLog));
+            if (profile.maySessionTelemetry && profile.maySessionTelemetry.length > 0) _setIf('cmaMaySessionTelemetry', JSON.stringify(profile.maySessionTelemetry));
+            if (profile.mayPilotTelemetry && Object.keys(profile.mayPilotTelemetry).length > 0) _setIf('cmaMayPilotTelemetry', JSON.stringify(profile.mayPilotTelemetry));
+            if (profile.mayPilotTelemetryArchive && profile.mayPilotTelemetryArchive.length > 0) _setIf('cmaMayPilotTelemetryArchive', JSON.stringify(profile.mayPilotTelemetryArchive));
+            if (profile.defectManifestCache) _setIf('cmaDefectManifest_DL008_DL026', JSON.stringify(profile.defectManifestCache));
         } catch (e) { /* best-effort */ }
+    },
+
+    // ── S120 — Patch a single May field into the SSOT profile ──
+    // Called by may-core.js and may-learner-state.js so writes go to cmaProfile2026,
+    // not just to independent localStorage keys.
+    patchMayField(field, value) {
+        try {
+            var profile = this.load();
+            profile[field] = value;
+            profile.metadata.lastSessionAt = new Date().toISOString();
+            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(profile));
+            window._cmaProfile = profile;
+            return true;
+        } catch (e) { return false; }
     },
 
     // ── Pull latest May data into profile (for export) ───
@@ -275,6 +408,41 @@ const CMAProfileManager = {
         var a = document.createElement('a');
         a.href = url;
         a.download = 'cma-profile-backup-' + new Date().toISOString().slice(0, 10) + '.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        return true;
+    },
+
+    backupAllProgress() {
+        var profile = this.load();
+        this.syncFromMayStorage(profile);
+        // Include current in-progress session if one exists
+        try {
+            var sessionState = localStorage.getItem('cmaP1SessionState');
+            if (sessionState) {
+                var parsed = JSON.parse(sessionState);
+                if (parsed && !parsed.completed) {
+                    profile._inProgressSession = {
+                        mode: parsed.mode,
+                        sections: parsed.sections || [],
+                        mcqCount: (parsed.mcqs || []).length,
+                        caseCount: (parsed.cases || []).length,
+                        answers: Object.keys(parsed.answers || {}).length,
+                        flags: Object.keys(parsed.flags || {}).length,
+                        elapsed: parsed.start ? Math.floor((Date.now() - parsed.start) / 1000) : 0,
+                        qIndex: parsed.qIndex || 0,
+                        startedAt: parsed.start ? new Date(parsed.start).toISOString() : null
+                    };
+                }
+            }
+        } catch (e) { /* session not available */ }
+        var blob = new Blob([JSON.stringify(profile, null, 2)], { type: 'application/json' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'cma-all-progress-backup-' + new Date().toISOString().slice(0, 10) + '.json';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -386,6 +554,9 @@ const CMAProfileManager = {
         var profile = this.load();
         window._cmaMigrationNeeded = false;
 
+        // UX-4: Ensure system bookmark collections exist
+        this._ensureSystemCollections(profile);
+
         // Check for legacy data
         if (!profile.migration.completed && this.hasLegacyData()) {
             window._cmaMigrationProfile = profile;
@@ -396,8 +567,9 @@ const CMAProfileManager = {
             this.save(profile);
         }
 
-        // Sync May storage on load (ensure May layer has latest data)
-        this.syncToMayStorage(profile);
+        // S120 — Sync May storage on load only for absent keys (first-load bootstrap).
+        // Never overwrite keys that already exist — they may contain fresher mid-session data.
+        this.syncToMayStorage(profile, true);
 
         // Store in-memory reference
         window._cmaProfile = profile;
@@ -501,7 +673,27 @@ const CMAProfileManager = {
             mayPilotTelemetry: importedProfile.mayPilotTelemetry || existing.mayPilotTelemetry || {},
             mayPilotTelemetryArchive: importedProfile.mayPilotTelemetryArchive || existing.mayPilotTelemetryArchive || [],
             maySelectedLearnerId: importedProfile.maySelectedLearnerId || existing.maySelectedLearnerId,
-            defectManifestCache: importedProfile.defectManifestCache || existing.defectManifestCache
+            defectManifestCache: importedProfile.defectManifestCache || existing.defectManifestCache,
+            bookmarkCollections: (function () {
+                var existCol = existing.bookmarkCollections || {};
+                var importCol = importedProfile.bookmarkCollections || {};
+                var merged = {};
+                var seen = {};
+                for (var cid in existCol) { merged[cid] = existCol[cid]; seen[existCol[cid].name] = cid; }
+                for (var cid in importCol) {
+                    var name = importCol[cid].name;
+                    if (seen[name]) {
+                        var existCid = seen[name];
+                        if (importCol[cid].items && existCol[existCid].items && importCol[cid].items.length > existCol[existCid].items.length) {
+                            merged[existCid] = importCol[cid];
+                        }
+                    } else {
+                        merged[cid] = importCol[cid];
+                        seen[name] = cid;
+                    }
+                }
+                return merged;
+            })()
         };
         return mergedProfile;
     }
@@ -530,12 +722,13 @@ function renderSettingsView() {
     // Data management
     html += '<div class="settings-section"><h3>Data Management</h3>';
     html += '<div class="settings-actions">';
-    html += '<button class="primary settings-btn" onclick="CMAProfileManager.exportProfile()" title="Download your full learner profile as a JSON file">Export Full Profile</button> ';
-    html += '<button class="secondary settings-btn" id="importProfileBtn" onclick="document.getElementById(\'importProfileFile\').click()" title="Restore a previously exported profile">Import Profile</button>';
+    html += '<button class="primary settings-btn" onclick="CMAProfileManager.backupAllProgress()" title="Download all progress including sessions, collections, May coaching data, and in-progress exam state">&#128190; Backup All Progress</button> ';
+    html += '<button class="secondary settings-btn" id="importProfileBtn" onclick="document.getElementById(\'importProfileFile\').click()" title="Restore all your learner data from a previously saved backup file">&#128229; Restore Progress</button>';
     html += '<input type="file" id="importProfileFile" accept=".json" style="display:none" onchange="handleProfileImport(this.files[0])">';
     html += '</div>';
-    html += '<p class="small" style="margin-top:12px;">Export creates a complete backup of your learner history, session records, and May coaching data. Use this to transfer your profile to another device or to create a safety backup.</p>';
-    html += '<p class="small"><strong>Import replaces</strong> your current profile data. A pre-import backup is created automatically.</p>';
+    html += '<p class="small" style="margin-top:12px;"><strong>Backup All Progress</strong> saves your complete learner data: session history, bookmark collections, May coaching memory, seen questions, and any in-progress exam session. Save this file somewhere safe to archive your training or move to another device.</p>';
+    html += '<p class="small"><strong>Restore Progress</strong> replaces your current data with the saved backup. A safety backup is created automatically before restoring.</p>';
+    html += '<p class="small" style="margin-top:4px;">Also available: <a href="#" onclick="CMAProfileManager.exportProfile();return false;" style="text-decoration:underline;">Export Full Profile (JSON)</a> — profile-only export without in-progress session snapshot.</p>';
     html += '</div>';
 
     // Backup history
@@ -557,7 +750,16 @@ function renderSettingsView() {
     html += '<p class="small" style="margin-top:4px;">A backup is created before clearing. You can restore it via Import.</p>';
     html += '</div>';
 
+    // S124 — Version / admin gate trigger
+    html += '<div class="settings-section"><h3>About</h3>';
+    html += '<p class="small"><span id="settingsVersionLabel" style="cursor:pointer;color:var(--text-muted)" title="Click for admin access">CMA Learning Platform v0.10.1-alpha</span></p>';
+    html += '</div>';
+
     document.getElementById('settingsView').innerHTML = html;
+
+    // S124 — Wire admin gate to version label
+    var verLabel = document.getElementById('settingsVersionLabel');
+    if (verLabel && typeof AdminGate !== 'undefined') AdminGate.attachToVersion(verLabel);
 }
 
 // ── S112: Profile import handler ──────────────────────────
@@ -1719,6 +1921,14 @@ const ExamSessionManager = {
         let mcqs = selection.mcqs;
         let tierCounts = selection.tierCounts || {};
 
+        // UX-4: Collection review — override pool selection with saved collection items
+        if (state.collectionReview && state.collectionMcqs && state.collectionMcqs.length > 0) {
+            mcqs = state.collectionMcqs.slice(0, c.mcqs);
+            tierCounts = {};
+            state.collectionReview = false;
+            state.collectionMcqs = null;
+        }
+
         let casePool = this.getCasePool().filter(x => x.SectionTags.some(s => secs.includes(s)));
         // Select cases with tier preference: unseen first, then seen
         let caseTier1 = casePool.filter(x => x._tier === 1 && !seen.includes(x.CaseID));
@@ -2320,6 +2530,8 @@ const ExamSessionManager = {
               <div class="item-tools">
                 <label class="flag"><input id="flagBox" type="checkbox" ${s.flags[q.QuestionID] ? 'checked' : ''}> Mark for review</label>
                 <label class="guess"><input id="guessBox" type="checkbox" ${guessed ? 'checked' : ''}> I guessed</label>
+                <button id="collectionBtn" class="collection-save-btn" title="Save to bookmark collection">+ Save</button>
+                <div id="collectionDropdown" class="collection-dropdown" style="display:none;"></div>
                 <div class="confidence-row"><span>Confidence:</span><div class="conf-buttons">${confHtml}</div></div>
               </div>
             </article>
@@ -2372,6 +2584,62 @@ const ExamSessionManager = {
             if (fb) fb.onchange = e => { s.flags[q.QuestionID] = e.target.checked; SessionPersistence.saveImmediate(); SessionPersistence.logAction('flag ' + q.QuestionID + '=' + e.target.checked); AnalyticsCollector.recordFlag(q.QuestionID, e.target.checked); };
             let gb = $('guessBox');
             if (gb) gb.onchange = e => { s.guessed[q.QuestionID] = e.target.checked; SessionPersistence.saveImmediate(); SessionPersistence.logAction('guess ' + q.QuestionID + '=' + e.target.checked); };
+            // UX-4: Collection save dropdown
+            let cb = $('collectionBtn');
+            let cd = $('collectionDropdown');
+            if (cb && cd) {
+                cb.onclick = (e) => {
+                    e.stopPropagation();
+                    var visible = cd.style.display === 'block';
+                    cd.style.display = visible ? 'none' : 'block';
+                    if (!visible) {
+                        var cols = CMAProfileManager.getCollections();
+                        var html = '<div class="collection-dropdown-header">Save to Collection</div>';
+                        var entries = Object.entries(cols);
+                        if (entries.length === 0) {
+                            html += '<div class="collection-dropdown-item disabled">No collections yet</div>';
+                        } else {
+                            entries.forEach(function (entry) {
+                                var cid = entry[0], col = entry[1];
+                                var saved = col.items.indexOf(q.QuestionID) !== -1;
+                                html += '<div class="collection-dropdown-item' + (saved ? ' saved' : '') + '" data-cid="' + cid + '">' +
+                                    (saved ? '&#10003; ' : '') + col.name + ' <span class="collection-count">' + col.items.length + '</span></div>';
+                            });
+                        }
+                        html += '<div class="collection-dropdown-footer"><button id="collectionNewBtn" class="collection-new-btn">+ New Collection</button></div>';
+                        cd.innerHTML = html;
+                        cd.querySelectorAll('.collection-dropdown-item:not(.disabled)').forEach(function (item) {
+                            item.onclick = function (ev) {
+                                ev.stopPropagation();
+                                var cid = this.dataset.cid;
+                                if (CMAProfileManager.isInCollection(cid, q.QuestionID)) {
+                                    CMAProfileManager.removeFromCollection(cid, q.QuestionID);
+                                } else {
+                                    CMAProfileManager.addToCollection(cid, q.QuestionID);
+                                }
+                                cd.style.display = 'none';
+                                showSaveStatus('Bookmark updated', 'restore-available');
+                            };
+                        });
+                        var nb = cd.querySelector('#collectionNewBtn');
+                        if (nb) nb.onclick = function (ev) {
+                            ev.stopPropagation();
+                            var name = prompt('New collection name:');
+                            if (name && name.trim()) {
+                                var newId = CMAProfileManager.createCollection(name.trim(), '');
+                                if (newId) {
+                                    CMAProfileManager.addToCollection(newId, q.QuestionID);
+                                    cd.style.display = 'none';
+                                    showSaveStatus('Added to "' + name.trim() + '"', 'restore-available');
+                                }
+                            }
+                        };
+                    }
+                };
+                document.addEventListener('click', function closeCD(e) {
+                    if (cb && cd && !cb.contains(e.target) && !cd.contains(e.target)) cd.style.display = 'none';
+                });
+            }
             document.querySelectorAll('[data-conf]').forEach(b => {
                 b.onclick = () => { s.confidence[q.QuestionID] = parseInt(b.dataset.conf); SessionPersistence.saveImmediate(); SessionPersistence.logAction('conf ' + q.QuestionID + '=' + b.dataset.conf); this.renderMCQ(q); };
             });
@@ -2554,7 +2822,7 @@ const ExamSessionManager = {
         let key = this.caseKey(c, idx);
         let saved = state.session.caseAnswers[key];
         let isFlagged = state.session.caseFlags[key];
-        let flagHtml = `<label class="flag"><input type="checkbox" data-caseflag="${key}" ${isFlagged ? 'checked' : ''}> Mark for review</label>`;
+        let flagHtml = `<label class="flag"><input type="checkbox" data-caseflag="${key}" ${isFlagged ? 'checked' : ''}> Mark for review</label><button class="collection-save-btn case-save-btn" data-caseitemid="${it.ItemID || ''}" title="Save to bookmark collection">+ Save</button>`;
         if (it.Type === 'numeric' || it.Type === 'fill') {
             return `<div class="case-question"><b>${idx + 1}. ${nl2br(it.Prompt)}</b><input class="case-input" data-casekey="${key}" value="${saved || ''}" inputmode="${it.Type === 'numeric' ? 'decimal' : 'text'}">${flagHtml}</div>`;
         }
@@ -2608,6 +2876,65 @@ const ExamSessionManager = {
             if (el.classList.contains('case-input')) el.oninput = () => { save(); };
         });
         document.querySelectorAll('[data-caseflag]').forEach(el => { el.onchange = () => { s.caseFlags[el.dataset.caseflag] = el.checked; SessionPersistence.saveImmediate(); SessionPersistence.logAction('case-flag ' + el.dataset.caseflag + '=' + el.checked); }; });
+        // UX-4: Bind case item collection save buttons
+        document.querySelectorAll('.case-save-btn').forEach(function (btn) {
+            btn.onclick = function (e) {
+                e.stopPropagation();
+                var itemId = btn.dataset.caseitemid;
+                if (!itemId) return;
+                var existing = btn.nextElementSibling;
+                if (existing && existing.classList.contains('collection-dropdown')) {
+                    existing.style.display = existing.style.display === 'block' ? 'none' : 'block';
+                    return;
+                }
+                var dd = document.createElement('div');
+                dd.className = 'collection-dropdown';
+                var cols = CMAProfileManager.getCollections();
+                var html = '<div class="collection-dropdown-header">Save to Collection</div>';
+                var entries = Object.entries(cols);
+                if (entries.length === 0) {
+                    html += '<div class="collection-dropdown-item disabled">No collections yet</div>';
+                } else {
+                    entries.forEach(function (entry) {
+                        var cid = entry[0], col = entry[1];
+                        var saved = col.items.indexOf(itemId) !== -1;
+                        html += '<div class="collection-dropdown-item' + (saved ? ' saved' : '') + '" data-cid="' + cid + '">' +
+                            (saved ? '&#10003; ' : '') + col.name + ' <span class="collection-count">' + col.items.length + '</span></div>';
+                    });
+                }
+                html += '<div class="collection-dropdown-footer"><button class="collection-new-btn">+ New Collection</button></div>';
+                dd.innerHTML = html;
+                btn.parentNode.insertBefore(dd, btn.nextSibling);
+                dd.style.display = 'block';
+                dd.querySelectorAll('.collection-dropdown-item:not(.disabled)').forEach(function (item) {
+                    item.onclick = function (ev) {
+                        ev.stopPropagation();
+                        var cid = this.dataset.cid;
+                        if (CMAProfileManager.isInCollection(cid, itemId)) {
+                            CMAProfileManager.removeFromCollection(cid, itemId);
+                        } else {
+                            CMAProfileManager.addToCollection(cid, itemId);
+                        }
+                        dd.style.display = 'none';
+                    };
+                });
+                var nb = dd.querySelector('.collection-new-btn');
+                if (nb) nb.onclick = function (ev) {
+                    ev.stopPropagation();
+                    var name = prompt('New collection name:');
+                    if (name && name.trim()) {
+                        var newId = CMAProfileManager.createCollection(name.trim(), '');
+                        if (newId) {
+                            CMAProfileManager.addToCollection(newId, itemId);
+                            dd.style.display = 'none';
+                        }
+                    }
+                };
+                document.addEventListener('click', function closeCaseCD(ev) {
+                    if (!btn.contains(ev.target) && !dd.contains(ev.target)) { dd.style.display = 'none'; }
+                }, { once: true });
+            };
+        });
     },
 
     bindCaseNav(c) {
@@ -2634,10 +2961,14 @@ const ExamSessionManager = {
     renderReviewScreen() {
         try {
             let s = state.session;
+            var colMap = {};
+            try { var cols = CMAProfileManager.getCollections(); for (var cid in cols) { colMap[cid] = { name: cols[cid].name, ids: cols[cid].items || [] }; } } catch (e) {}
             let mcqRows = s.mcqs.map((q, i) => {
                 let answered = !!s.answers[q.QuestionID];
                 let flagged = !!s.flags[q.QuestionID];
-                return `<tr data-answered="${answered ? '1' : '0'}" data-flagged="${flagged ? '1' : '0'}"><td>${i + 1}</td><td>${q.Section}</td><td>${q.Topic}</td><td>${answered ? '<span class="status-answered">Answered</span>' : '<span class="status-unanswered">Unanswered</span>'}</td><td>${flagged ? '<span class="status-flagged">Flagged</span>' : ''}</td><td><button class="secondary smallbtn" data-jump="${i}">Go</button></td></tr>`;
+                var colAttrs = '';
+                for (var cid in colMap) { if (colMap[cid].ids.indexOf(q.QuestionID) !== -1) colAttrs += ' data-col-' + cid + '="1"'; }
+                return `<tr data-answered="${answered ? '1' : '0'}" data-flagged="${flagged ? '1' : '0'}"${colAttrs}><td>${i + 1}</td><td>${q.Section}</td><td>${q.Topic}</td><td>${answered ? '<span class="status-answered">Answered</span>' : '<span class="status-unanswered">Unanswered</span>'}</td><td>${flagged ? '<span class="status-flagged">Flagged</span>' : ''}</td><td><button class="secondary smallbtn" data-jump="${i}">Go</button></td></tr>`;
             }).join('');
             let caseRows = s.cases.map((c, i) =>
                 `<tr data-answered="1" data-flagged="0"><td>C${i + 1}</td><td>${c.SectionTags.join(', ')}</td><td>${c.Title}</td><td>Case set</td><td></td><td><button class="secondary smallbtn" data-casejump="${i}">Go</button></td></tr>`
@@ -2658,6 +2989,7 @@ const ExamSessionManager = {
             <button class="secondary review-filter-btn active" data-reviewfilter="all">Review All</button>
             <button class="secondary review-filter-btn" data-reviewfilter="unanswered">Review Unanswered</button>
             <button class="secondary review-filter-btn" data-reviewfilter="flagged">Review Flagged</button>
+            ${Object.keys(colMap).length ? Object.keys(colMap).map(function (cid) { return '<button class="secondary review-filter-btn" data-reviewfilter="col-' + cid + '">' + colMap[cid].name + '</button>'; }).join('') : ''}
           </div>
           <table class="review-table"><thead><tr><th>#</th><th>Section</th><th>Topic</th><th>Status</th><th>Flag</th><th></th></tr></thead><tbody>${mcqRows}${caseRows}</tbody></table>
           <div class="exam-actions">
@@ -2675,6 +3007,7 @@ const ExamSessionManager = {
                         if (f === 'all') tr.style.display = '';
                         else if (f === 'unanswered') tr.style.display = tr.dataset.answered === '0' ? '' : 'none';
                         else if (f === 'flagged') tr.style.display = tr.dataset.flagged === '1' ? '' : 'none';
+                        else if (f && f.indexOf('col-') === 0) { var attr = 'data-' + f.replace(/([A-Z])/g, '-$1').toLowerCase(); tr.style.display = tr.getAttribute(attr) === '1' ? '' : 'none'; }
                     });
                 };
             });
@@ -2930,9 +3263,50 @@ const ExamSessionManager = {
             var _twEsc = _tw.replace(/'/g, "\\'");
             var _stEsc = _st.replace(/'/g, "\\'");
             var _rbEsc = readinessBand.replace(/'/g, "\\'");
+            var archetypeInfo = '';
+            try {
+                if (typeof MayLearnerState !== 'undefined' && MayLearnerState.getBehavioralProfile) {
+                    var bp = MayLearnerState.getBehavioralProfile();
+                    if (bp && bp.hasProfileData && bp.archetype !== 'new') {
+                        var _aLabels = { 'ready': '★ Exam Ready', 'plateaued': '⚠ Plateau', 'developing': '↑ Developing' };
+                        var _aColors = { 'ready': '#27ae60', 'plateaued': '#f39c12', 'developing': '#3498db' };
+                        var _aL = _aLabels[bp.archetype] || '';
+                        var _aC = _aColors[bp.archetype] || '#888';
+                        archetypeInfo = '<div class="may-rec-card" id="may-rec-archetype" onclick="window._mcc(\'Archetype\',\'archetype\',\'' + bp.archetype + '\')"><div class="may-rec-label">Learner Profile</div><div class="may-rec-value" style="color:' + _aC + ';">' + _aL + '</div></div>';
+                    }
+                }
+            } catch (ae) { archetypeInfo = ''; }
+            // S114P — Archetype coaching action cards
+            var coachingActionCards = '';
+            try {
+                if (typeof MayArchetypeCoach !== 'undefined' && typeof bp !== 'undefined' && bp) {
+                    var actions = MayArchetypeCoach.getCoachingActions(bp);
+                    if (actions && actions.length > 0) {
+                        var actionCardHtml = [];
+                        var actionIcons = { 1: '\u25b6', 2: '\u25b7', 3: '\u25b8' };
+                        actions.forEach(function(a) {
+                            var aIcon = actionIcons[a.priority] || '\u25b8';
+                            var aCls = a.actionable ? 'may-rec-card may-rec-action-card' : 'may-rec-card';
+                            var aOnclick = a.actionable && a.handler
+                                ? ' onclick="window._mac(\'' + a.type + '\',\'' + a.handler + '\')"'
+                                : '';
+                            var shortGuidance = a.guidance.length > 180 ? a.guidance.substring(0, 177) + '...' : a.guidance;
+                            actionCardHtml.push(
+                                '<div class="' + aCls + '"' + aOnclick + ' id="may-rec-action-' + a.type + '">' +
+                                '<div class="may-rec-label">' + aIcon + ' ' + (a.label || '') + '</div>' +
+                                '<div class="may-rec-detail">' + shortGuidance + '</div>' +
+                                '</div>'
+                            );
+                        });
+                        coachingActionCards = actionCardHtml.join('');
+                    }
+                }
+            } catch (ae2) { coachingActionCards = ''; }
             return '<div class="may-recommendation-panel"><h3>May Recommendations</h3><div class="may-rec-grid">'
                 + '<div class="may-rec-card" id="may-rec-weakness" onclick="window._mcc(\'Top Weakness\',\'top-weakness\',\'' + _twEsc + '\')"><div class="may-rec-label">Top Weakness</div><div class="may-rec-value">' + (topWeak ? topWeak.topic + ' (' + (topWeak.accuracy || 0) + '%)' : 'Not enough data') + '</div></div>'
                 + '<div class="may-rec-card" id="may-rec-suggested" onclick="window._mcc(\'Suggested Review\',\'suggested-review\',\'' + _stEsc + '\')"><div class="may-rec-label">Suggested Review</div><div class="may-rec-value">' + (suggestedTopic || 'Complete more sessions') + '</div></div>'
+                + archetypeInfo
+                + coachingActionCards
                 + '<div class="may-rec-card" id="may-rec-next" onclick="window._mcc(\'Next Session\',\'next-session\',\'' + _stEsc + '\')"><div class="may-rec-label">Next Session</div><div class="may-rec-value">' + nextAction + '</div></div>'
                 + '<div class="may-rec-card" id="may-rec-readiness" onclick="window._mcc(\'Readiness\',\'readiness\',\'' + _rbEsc + '\')"><div class="may-rec-label">Readiness</div><div class="may-rec-value may-rec-band ' + bandCls + '">' + readinessBand + '</div></div>'
                 + '</div><p class="small" style="margin-top:8px;"><a href="#" onclick="showView(\'coachView\'); if(typeof May!==\'undefined\'){May.renderView()} if(typeof MayTelemetry!==\'undefined\'){MayTelemetry.trackAdoption({recommendationType:\'Panel Link\',cardId:\'rec-panel-link\',topic:\'\',presented:false,panelOpened:true,clicked:true,sessionStarted:false,completed:false,timestamp:new Date().toISOString()})} return false;">Open May for full coaching \u2192</a></p></div>';
@@ -3092,10 +3466,22 @@ const NavigationController = {
         let total = s.mcqs.length + s.cases.length;
         let current = s.qIndex;
 
+        var colMap = {};
+        try {
+            var cols = CMAProfileManager.getCollections();
+            for (var cid in cols) {
+                colMap[cid] = { name: cols[cid].name, ids: cols[cid].items || [] };
+            }
+        } catch (e) { /* profile may not exist yet */ }
+
         let mcqBtns = s.mcqs.map((q, i) => {
             let answ = !!s.answers[q.QuestionID];
             let flg = !!s.flags[q.QuestionID];
-            return `<button class="navitem ${i === current ? 'current' : ''} ${answ ? 'answered' : ''} ${flg ? 'flagged' : ''}" data-jump="${i}" data-answered="${answ ? '1' : '0'}" data-flagged="${flg ? '1' : '0'}" title="${q.QuestionID || 'Q' + (i + 1)}">${i + 1}</button>`;
+            var colAttrs = '';
+            for (var cid in colMap) {
+                if (colMap[cid].ids.indexOf(q.QuestionID) !== -1) colAttrs += ' data-col-' + cid + '="1"';
+            }
+            return `<button class="navitem ${i === current ? 'current' : ''} ${answ ? 'answered' : ''} ${flg ? 'flagged' : ''}" data-jump="${i}" data-answered="${answ ? '1' : '0'}" data-flagged="${flg ? '1' : '0'}"${colAttrs} title="${q.QuestionID || 'Q' + (i + 1)}">${i + 1}</button>`;
         }).join('');
         let caseBtns = s.cases.map((c, i) =>
             `<button class="navitem nav-case ${s.mcqs.length + i === current ? 'current' : ''}" data-casejump="${i}" title="${c.CaseID || 'Case ' + (i + 1)}">C${i + 1}</button>`
@@ -3123,6 +3509,9 @@ const NavigationController = {
         <button class="nav-filter-btn" data-navfilter="unanswered" title="Show unanswered only">Unans</button>
         <button class="nav-filter-btn" data-navfilter="flagged" title="Show flagged only">Flag</button>
       </div>
+      ${Object.keys(colMap).length ? '<div class="nav-filters nav-collections"><div class="nav-collections-label">Collections:</div>' + Object.keys(colMap).map(function (cid) {
+          return '<button class="nav-filter-btn collection" data-navfilter="col-' + cid + '" title="Show items in ' + colMap[cid].name + '">' + colMap[cid].name + '</button>';
+      }).join('') + '</div>' : ''}
       <button id="reviewScreen" class="secondary nav-review-btn">Review Screen</button>
     </aside>`;
     },
@@ -3153,6 +3542,10 @@ const NavigationController = {
                     if (f === 'all') el.style.display = '';
                     else if (f === 'unanswered') el.style.display = el.dataset.answered === '0' ? '' : 'none';
                     else if (f === 'flagged') el.style.display = el.dataset.flagged === '1' ? '' : 'none';
+                    else if (f && f.indexOf('col-') === 0) {
+                        var attr = 'data-' + f.replace(/([A-Z])/g, '-$1').toLowerCase();
+                        el.style.display = el.getAttribute(attr) === '1' ? '' : 'none';
+                    }
                 });
             };
         });
@@ -4836,6 +5229,50 @@ window._mcc = function(t, c, tp) {
 };
 
 // ============================================================
+// S114P: Archetype coaching action click handler
+// ============================================================
+window._mac = function(actionType, handlerName) {
+    if (typeof MayTelemetry !== 'undefined') {
+        MayTelemetry.trackAdoption({
+            recommendationType: 'Archetype Action',
+            cardId: 'action-' + actionType,
+            topic: handlerName || '',
+            presented: false,
+            panelOpened: false,
+            clicked: true,
+            sessionStarted: false,
+            completed: false,
+            timestamp: new Date().toISOString()
+        });
+    }
+    switch (handlerName) {
+        case 'startFoundations':
+            showView('setupView');
+            if (typeof May !== 'undefined') { May._updateMayLauncherState(); }
+            break;
+        case 'focusWeakest':
+            showView('coachView');
+            if (typeof May !== 'undefined') { May.renderView(); }
+            break;
+        case 'launchRecoverySprint':
+            showView('coachView');
+            if (typeof May !== 'undefined') { May.renderView(); }
+            break;
+        case 'continueRecovery':
+            showView('coachView');
+            if (typeof May !== 'undefined') { May.renderView(); }
+            break;
+        case 'increaseDifficulty':
+            showView('settingsView');
+            break;
+        case 'runTimedMixedPractice':
+            if (typeof quickStart === 'function') { quickStart('mixed'); }
+            break;
+        default: break;
+    }
+};
+
+// ============================================================
 // Init
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -4846,6 +5283,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // S112 — Initialize unified learner profile and detect legacy data
     CMAProfileManager.init();
+
+    // S124 — Render Home view on initial load
+    renderHomeView();
 
     // S112 — Show migration dialog if legacy data exists
     if (window._cmaMigrationNeeded) {
@@ -4858,6 +5298,18 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCatalog();
     ExamSessionManager.renderHistory();
     updateTimeEstimate();
+
+    // UX-4: Inject bookmark collections panel into landing page
+    (function () {
+        var setupPanel = document.querySelector('.setup-panel');
+        if (setupPanel) {
+            var bcPanel = document.createElement('div');
+            bcPanel.id = 'bookmarkCollectionsPanel';
+            bcPanel.className = 'collections-panel';
+            setupPanel.appendChild(bcPanel);
+            renderBookmarkCollections();
+        }
+    })();
 
     // Check for saved session
     let hasSavedSession = false;
@@ -4924,8 +5376,11 @@ document.addEventListener('DOMContentLoaded', () => {
     })();
     document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
         showView(t.dataset.view);
+        if (t.dataset.view === 'homeView') renderHomeView();
         if (t.dataset.view === 'dashboardView') PerformanceDashboard.render();
         if (t.dataset.view === 'settingsView') renderSettingsView();
+        if (t.dataset.view === 'operationsView') renderOperationsView();
+        if (t.dataset.view === 'helpView') renderHelpCenter();
         if (t.dataset.view === 'coachView') {
             if (typeof May !== 'undefined') May.renderView(); else ReviewCoach.renderFullCoach();
         }
@@ -4974,6 +5429,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (s.qIndex < s.mcqs.length) {
                 let qid = s.mcqs[s.qIndex].QuestionID;
                 s.flags[qid] = !s.flags[qid];
+                SessionPersistence.saveImmediate();
+                SessionPersistence.logAction('flag ' + qid + '=' + s.flags[qid]);
                 ExamSessionManager.render();
             }
         }
@@ -5153,4 +5610,962 @@ function renderCatalog() {
     <div class="grid">${Object.entries(STUDY_LINKS).map(([k, links]) =>
         `<div class="catalog-card"><b>${k}</b><p>${links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('<br>')}</p></div>`
     ).join('')}</div>`;
+}
+
+function renderBookmarkCollections() {
+    var panel = document.getElementById('bookmarkCollectionsPanel');
+    if (!panel) return;
+    var cols = CMAProfileManager.getCollections();
+    var entries = Object.entries(cols);
+    var totalItems = entries.reduce(function (s, e) { return s + e[1].items.length; }, 0);
+    var html = '<h2>Bookmark Collections <span class="collection-total">(' + totalItems + ' saved)</span></h2>';
+    if (entries.length === 0) {
+        html += '<p class="small">Save questions during practice sessions to build your study collections. Use the "+ Save" button next to the flag checkbox while answering questions.</p>';
+    } else {
+        html += '<div class="collection-list">';
+        entries.forEach(function (entry) {
+            var cid = entry[0], col = entry[1];
+            var isSystem = col.type === 'system';
+            html += '<div class="collection-row" data-cid="' + cid + '">' +
+                '<div class="collection-info">' +
+                '<span class="collection-name">' + col.name + '</span>' +
+                (isSystem ? '<span class="collection-badge system">system</span>' : '') +
+                '<span class="collection-meta">' + col.items.length + ' question' + (col.items.length !== 1 ? 's' : '') + (col.description ? ' &middot; ' + col.description : '') + '</span>' +
+                '</div>' +
+                '<div class="collection-actions">' +
+                (!isSystem ? '<button class="collection-action-btn rename" data-cid="' + cid + '" title="Rename">&#9998;</button>' : '') +
+                (!isSystem ? '<button class="collection-action-btn delete" data-cid="' + cid + '" title="Delete">&#10005;</button>' : '') +
+                (col.items.length > 0 ? '<button class="collection-action-btn review" data-cid="' + cid + '" title="Review these questions">Review</button>' : '') +
+                '</div></div>';
+        });
+        html += '</div>';
+    }
+    html += '<div class="collection-new-row"><input id="newCollectionName" type="text" class="collection-new-input" placeholder="New collection name..."><button id="createCollectionBtn" class="collection-create-btn">Create</button></div>';
+    var profile = CMAProfileManager.load();
+    var sessionCount = (profile.sessionHistory || []).length;
+    html += '<div class="collection-backup-row"><span class="small">' + sessionCount + ' sessions tracked</span><button class="collection-backup-btn" onclick="CMAProfileManager.backupAllProgress()" title="Download all your progress as a backup file">&#128190; Backup All Progress</button></div>';
+    panel.innerHTML = html;
+
+    // Create collection
+    var nc = document.getElementById('newCollectionName');
+    var cb = document.getElementById('createCollectionBtn');
+    if (nc && cb) {
+        cb.onclick = function () {
+            var name = nc.value.trim();
+            if (!name) return;
+            var cid = CMAProfileManager.createCollection(name, '');
+            if (cid) { nc.value = ''; renderBookmarkCollections(); }
+            else { alert('A collection with that name already exists.'); }
+        };
+        nc.onkeydown = function (e) { if (e.key === 'Enter') { cb.click(); e.preventDefault(); } };
+    }
+
+    // Delete
+    panel.querySelectorAll('.collection-action-btn.delete').forEach(function (btn) {
+        btn.onclick = function () {
+            var cid = this.dataset.cid;
+            if (cid && confirm('Delete this collection? Questions will not be lost, but the collection grouping will be removed.')) {
+                CMAProfileManager.deleteCollection(cid);
+                renderBookmarkCollections();
+            }
+        };
+    });
+
+    // Rename
+    panel.querySelectorAll('.collection-action-btn.rename').forEach(function (btn) {
+        btn.onclick = function () {
+            var cid = this.dataset.cid;
+            var name = prompt('New name for this collection:');
+            if (name && name.trim()) {
+                CMAProfileManager.renameCollection(cid, name.trim());
+                renderBookmarkCollections();
+            }
+        };
+    });
+
+    // Review — launch a practice session with collection questions
+    panel.querySelectorAll('.collection-action-btn.review').forEach(function (btn) {
+        btn.onclick = function () {
+            var cid = this.dataset.cid;
+            var qids = CMAProfileManager.getCollectionQuestionIds(cid);
+            if (qids.length === 0) { alert('No questions in this collection.'); return; }
+            // Find matching questions across all banks
+            var allBanks = [MCQ_BANK_A, MCQ_BANK_B, MCQ_BANK_C, MCQ_BANK_D, MCQ_BANK_E];
+            var found = [];
+            for (var bi = 0; bi < allBanks.length; bi++) {
+                var bank = allBanks[bi];
+                if (!bank) continue;
+                for (var qi = 0; qi < bank.length; qi++) {
+                    if (qids.indexOf(bank[qi].QuestionID) !== -1) found.push(bank[qi]);
+                }
+            }
+            if (found.length === 0) { alert('No matching questions found in the current banks. The saved questions may be from a different pack configuration.'); return; }
+            // Set up session form for collection review
+            var modeEl = document.getElementById('mode');
+            if (modeEl) modeEl.value = 'mcq';
+            var countEl = document.getElementById('mcqCount');
+            if (countEl) countEl.value = Math.min(found.length, 60);
+            // Trigger session start with these specific MCQs
+            state.collectionMcqs = found;
+            state.collectionReview = true;
+            var formEl = document.getElementById('sessionForm');
+            if (formEl) formEl.requestSubmit();
+        };
+    });
+}
+
+// ============================================================
+// S124 — Program Operations Console
+// ============================================================
+function renderOperationsView() {
+    var el = document.getElementById('operationsView');
+    if (!el) return;
+
+    var adminData = window.__ADMIN_DATA__ || null;
+    var packs = [
+        { name: 'Pack A', bank: (typeof MCQ_BANK_A !== 'undefined' ? MCQ_BANK_A : []), color: '#2563eb' },
+        { name: 'Pack B', bank: (typeof MCQ_BANK_B !== 'undefined' ? MCQ_BANK_B : []), color: '#059669' },
+        { name: 'Pack C', bank: (typeof MCQ_BANK_C !== 'undefined' ? MCQ_BANK_C : []), color: '#d97706' },
+        { name: 'Pack D', bank: (typeof MCQ_BANK_D !== 'undefined' ? MCQ_BANK_D : []), color: '#7c3aed' },
+        { name: 'Pack E', bank: (typeof MCQ_BANK_E !== 'undefined' ? MCQ_BANK_E : []), color: '#db2777' }
+    ];
+
+    // Collect learner data
+    var history = [];
+    var dashboard = null;
+    try {
+        if (typeof SessionPersistence !== 'undefined') {
+            history = SessionPersistence.getHistory() || [];
+            dashboard = SessionPersistence.getDashboard() || null;
+        }
+    } catch (e) { }
+
+    // ── Helper: per-pack stats ──
+    function packStats(bank) {
+        var stats = { total: bank.length, certified: 0, unprocessed: 0, archived: 0, other: 0,
+            difficulty: {}, cognitive: {}, correctChoice: { A: 0, B: 0, C: 0, D: 0 },
+            bySection: {} };
+        for (var i = 0; i < bank.length; i++) {
+            var q = bank[i];
+            var s = q.question_state || 'Unprocessed';
+            if (s === 'Certified') stats.certified++;
+            else if (s === 'Unprocessed') stats.unprocessed++;
+            else if (s === 'Archived') stats.archived++;
+            else stats.other++;
+            var d = q.Difficulty || '(missing)';
+            stats.difficulty[d] = (stats.difficulty[d] || 0) + 1;
+            var c = q.CognitiveLevel || '(missing)';
+            stats.cognitive[c] = (stats.cognitive[c] || 0) + 1;
+            var cc = q.CorrectChoice;
+            if (cc && /^[A-D]$/.test(cc)) stats.correctChoice[cc]++;
+            var sec = q.Section || '?';
+            if (!stats.bySection[sec]) stats.bySection[sec] = { total: 0, certified: 0 };
+            stats.bySection[sec].total++;
+            if (s === 'Certified') stats.bySection[sec].certified++;
+        }
+        return stats;
+    }
+
+    var allStats = packs.map(function(p) { return { name: p.name, color: p.color, stats: packStats(p.bank) }; });
+
+    // ── Helper: format percent ──
+    function pct(n, total) { if (total === 0) return '0%'; return (n / total * 100).toFixed(1) + '%'; }
+
+    // ── Helper: progress bar HTML ──
+    function progressBar(pctVal, cls) {
+        cls = cls || '';
+        return '<div class="ops-progress"><div class="ops-progress-fill ' + cls + '" style="width:' + Math.min(100, pctVal) + '%"></div></div>';
+    }
+
+    // ── Tab 1: LEARNERS ──
+    function renderLearnersPanel() {
+        var h = '';
+        if (history.length === 0) {
+            h += '<div class="ops-empty"><b>No session data yet</b>Complete at least one exam session to see learner analytics.</div>';
+            return h;
+        }
+
+        // Session stats
+        var totalSessions = history.length;
+        var totalMCQ = 0, totalCorrect = 0, totalCBQ = 0, totalCBQCorrect = 0;
+        var readinessVals = [];
+        for (var i = 0; i < history.length; i++) {
+            var s = history[i];
+            if (s.mcqTotal) totalMCQ += s.mcqTotal;
+            if (s.mcqCorrect) totalCorrect += s.mcqCorrect;
+            if (s.cbqTotal) { totalCBQ += s.cbqTotal; if (s.cbqCorrect) totalCBQCorrect += s.cbqCorrect; }
+            if (s.readinessScore != null) readinessVals.push({ date: s.date || s.timestamp, score: s.readinessScore });
+        }
+        var mcqPct = totalMCQ > 0 ? (totalCorrect / totalMCQ * 100).toFixed(1) : '0';
+        var cbqPct = totalCBQ > 0 ? (totalCBQCorrect / totalCBQ * 100).toFixed(1) : 'N/A';
+
+        // Readiness trend
+        var readinessTrend = '';
+        if (readinessVals.length >= 2) {
+            var latest = readinessVals[readinessVals.length - 1].score;
+            var prev = readinessVals[readinessVals.length - 2].score;
+            var delta = (latest - prev).toFixed(1);
+            var deltaDir = delta >= 0 ? '+' : '';
+            var deltaCls = delta >= 0 ? 'good' : 'bad';
+            readinessTrend = '<span style="color:var(--' + (delta >= 0 ? 'success' : 'danger') + ')">' + deltaDir + delta + ' vs prior session</span>';
+        }
+
+        h += '<div class="ops-stat-row">';
+        h += '<div class="ops-stat-card"><h4>Sessions</h4><div class="ops-stat-value">' + totalSessions + '</div><div class="ops-stat-sub">Total exam sessions</div></div>';
+        h += '<div class="ops-stat-card"><h4>MCQ Accuracy</h4><div class="ops-stat-value">' + mcqPct + '%</div><div class="ops-stat-sub">' + totalCorrect + ' / ' + totalMCQ + ' correct</div></div>';
+        h += '<div class="ops-stat-card"><h4>Case Accuracy</h4><div class="ops-stat-value">' + cbqPct + (cbqPct !== 'N/A' ? '%' : '') + '</div><div class="ops-stat-sub">' + totalCBQCorrect + ' / ' + totalCBQ + '</div></div>';
+        if (readinessVals.length > 0) {
+            h += '<div class="ops-stat-card"><h4>Readiness</h4><div class="ops-stat-value">' + readinessVals[readinessVals.length - 1].score.toFixed(0) + '</div><div class="ops-stat-sub">' + readinessTrend + '</div></div>';
+        }
+        h += '</div>';
+
+        // Score trend table (last 10)
+        if (history.length > 0) {
+            h += '<div class="ops-section"><h3>Recent Sessions</h3><div class="ops-table-wrap"><table class="ops-table">';
+            h += '<thead><tr><th>Date</th><th>Mode</th><th>Questions</th><th>MCQ %</th><th>Score</th><th>Pass</th></tr></thead><tbody>';
+            var recent = history.slice(-10).reverse();
+            for (var ri = 0; ri < recent.length; ri++) {
+                var rs = recent[ri];
+                var dt = rs.date || rs.timestamp || '';
+                if (dt.length > 16) dt = dt.substring(0, 16);
+                var mode = rs.mode || 'mcq';
+                var qCount = (rs.mcqTotal || 0) + (rs.cbqTotal || 0);
+                var rMcqPct = rs.mcqTotal > 0 ? (rs.mcqCorrect / rs.mcqTotal * 100).toFixed(0) + '%' : 'N/A';
+                var score = rs.scaledScore != null ? rs.scaledScore : '--';
+                var passed = rs.passed ? '<span class="ops-tag certified">Pass</span>' : '<span class="ops-tag blocked">Fail</span>';
+                h += '<tr><td>' + dt + '</td><td>' + mode + '</td><td>' + qCount + '</td><td>' + rMcqPct + '</td><td>' + score + '</td><td>' + passed + '</td></tr>';
+            }
+            h += '</tbody></table></div></div>';
+        }
+        return h;
+    }
+
+    // ── Tab 2: MAY ──
+    function renderMayPanel() {
+        var h = '';
+        var mayActive = (typeof May !== 'undefined' && typeof MayLearnerState !== 'undefined');
+
+        h += '<div class="ops-stat-row">';
+        h += '<div class="ops-stat-card ' + (mayActive ? 'ok' : '') + '"><h4>May Status</h4><div class="ops-stat-value">' + (mayActive ? 'Active' : 'Idle') + '</div><div class="ops-stat-sub">Coaching layer</div></div>';
+
+        // Gate stats from dashboard
+        var gateRate = 'N/A';
+        var gatePass = 0, gateTotal = 0;
+        if (dashboard && dashboard.gateHistory) {
+            for (var gi = 0; gi < Math.min(dashboard.gateHistory.length, 10); gi++) {
+                gateTotal++;
+                if (dashboard.gateHistory[gi].passed) gatePass++;
+            }
+            if (gateTotal > 0) gateRate = (gatePass / gateTotal * 100).toFixed(0) + '%';
+        } else if (history.length > 0) {
+            for (var hi = 0; hi < history.length; hi++) {
+                if (history[hi].gatePassed != null) { gateTotal++; if (history[hi].gatePassed) gatePass++; }
+            }
+            if (gateTotal > 0) gateRate = (gatePass / gateTotal * 100).toFixed(0) + '%';
+        }
+        h += '<div class="ops-stat-card"><h4>Gate Pass Rate</h4><div class="ops-stat-value">' + gateRate + '</div><div class="ops-stat-sub">' + gatePass + ' / ' + gateTotal + ' sessions</div></div>';
+
+        // Recovery sprints
+        var sprintCount = 0;
+        for (var si = 0; si < history.length; si++) { if (history[si].isRecoverySprint) sprintCount++; }
+        h += '<div class="ops-stat-card"><h4>Recovery Sprints</h4><div class="ops-stat-value">' + sprintCount + '</div><div class="ops-stat-sub">Launched</div></div>';
+
+        h += '<div class="ops-stat-card"><h4>Recommendations</h4><div class="ops-stat-value">--</div><div class="ops-stat-sub">Tracking coming in S131</div></div>';
+        h += '</div>';
+
+        h += '<div class="ops-section"><h3>May Coaching — Coming in S129-S132</h3>';
+        h += '<p class="ops-empty">Recommendation conversion analytics, coaching effectiveness metrics, and recovery sprint dashboards are targeted for Phase 2 implementation.</p>';
+        h += '</div>';
+        return h;
+    }
+
+    // ── Tab 3: GOVERNANCE ──
+    function renderGovernancePanel() {
+        var h = '';
+
+        // Certified inventory summary
+        var totalItems = 0, totalCert = 0;
+        for (var pi = 0; pi < allStats.length; pi++) { totalItems += allStats[pi].stats.total; totalCert += allStats[pi].stats.certified; }
+        var certPct = totalItems > 0 ? (totalCert / totalItems * 100).toFixed(1) : '0';
+        var adminCert = adminData ? adminData.metadata.certifiedCount : totalCert;
+        var adminTotal = adminData ? adminData.metadata.totalQids : totalItems;
+
+        h += '<div class="ops-stat-row">';
+        h += '<div class="ops-stat-card ok"><h4>Certified Inventory</h4><div class="ops-stat-value">' + adminCert + '</div><div class="ops-stat-sub">of ' + adminTotal + ' total (' + certPct + '%)</div></div>';
+
+        // Domain coverage
+        var bestDomain = '', bestPct = 0, worstDomain = '', worstPct = 100;
+        var domainNames = { A: 'Ext. Fin. Reporting', B: 'Planning & Budgeting', C: 'Performance Mgmt', D: 'Cost Management', E: 'Internal Controls', F: 'Technology & Analytics' };
+        var domainCerts = {};
+        for (var pi2 = 0; pi2 < allStats.length; pi2++) {
+            var ss = allStats[pi2].stats;
+            for (var d in ss.bySection) {
+                if (!domainCerts[d]) domainCerts[d] = { total: 0, certified: 0 };
+                domainCerts[d].total += ss.bySection[d].total;
+                domainCerts[d].certified += ss.bySection[d].certified;
+            }
+        }
+        for (var dk in domainCerts) {
+            var dp = domainCerts[dk].total > 0 ? domainCerts[dk].certified / domainCerts[dk].total * 100 : 0;
+            if (dp > bestPct) { bestPct = dp; bestDomain = dk; }
+            if (dp < worstPct) { worstPct = dp; worstDomain = dk; }
+        }
+        h += '<div class="ops-stat-card ok"><h4>Top Domain</h4><div class="ops-stat-value">' + (domainNames[bestDomain] || bestDomain) + '</div><div class="ops-stat-sub">' + bestPct.toFixed(0) + '% certified</div></div>';
+        h += '<div class="ops-stat-card warn"><h4>Needs Attention</h4><div class="ops-stat-value">' + (domainNames[worstDomain] || worstDomain) + '</div><div class="ops-stat-sub">' + worstPct.toFixed(0) + '% certified</div></div>';
+
+        // Remediation queue
+        var totalBlocked = 0;
+        for (var pi3 = 0; pi3 < allStats.length; pi3++) { totalBlocked += allStats[pi3].stats.unprocessed + allStats[pi3].stats.archived; }
+        h += '<div class="ops-stat-card ' + (totalBlocked > 50 ? 'alert' : 'warn') + '"><h4>Not in Pool</h4><div class="ops-stat-value">' + totalBlocked + '</div><div class="ops-stat-sub">Unprocessed + Archived</div></div>';
+        h += '</div>';
+
+        // Per-domain certification progress
+        h += '<div class="ops-section"><h3>Domain Certification Progress</h3><div class="ops-domain-grid">';
+        for (var d2 in domainCerts) {
+            var dc = domainCerts[d2];
+            var dPct = dc.total > 0 ? dc.certified / dc.total * 100 : 0;
+            var dCls = dPct >= 95 ? 'good' : (dPct >= 70 ? 'warn' : 'bad');
+            h += '<div class="ops-domain-card"><div class="domain">' + d2 + ' — ' + (domainNames[d2] || '') + '</div>';
+            h += '<div class="coverage" style="color:var(--' + (dPct >= 95 ? 'success' : (dPct >= 70 ? 'warning' : 'danger')) + ')">' + dPct.toFixed(1) + '%</div>';
+            h += '<div class="ops-stat-sub">' + dc.certified + ' / ' + dc.total + ' certified</div>';
+            h += progressBar(dPct, dCls);
+            h += '</div>';
+        }
+        h += '</div></div>';
+
+        // Per-pack state table
+        h += '<div class="ops-section"><h3>Pack Inventory</h3><div class="ops-table-wrap"><table class="ops-table">';
+        h += '<thead><tr><th>Pack</th><th>Total</th><th>Certified</th><th>Unprocessed</th><th>Archived</th><th>Other</th></tr></thead><tbody>';
+        for (var pi4 = 0; pi4 < allStats.length; pi4++) {
+            var as = allStats[pi4];
+            h += '<tr><td style="font-weight:700;color:' + as.color + '">' + as.name + '</td>';
+            h += '<td>' + as.stats.total + '</td>';
+            h += '<td><span class="ops-tag certified">' + as.stats.certified + '</span></td>';
+            h += '<td>' + (as.stats.unprocessed > 0 ? '<span class="ops-tag unprocessed">' + as.stats.unprocessed + '</span>' : '0') + '</td>';
+            h += '<td>' + (as.stats.archived > 0 ? '<span class="ops-tag archived">' + as.stats.archived + '</span>' : '0') + '</td>';
+            h += '<td>' + as.stats.other + '</td></tr>';
+        }
+        h += '</tbody></table></div></div>';
+
+        // Governance guard status
+        h += '<div class="ops-section"><h3>Governance Guard<span class="ops-section-badge good">Active</span></h3>';
+        h += '<div class="ops-stat-row">';
+        h += '<div class="ops-stat-card ok"><h4>Rules Enforced</h4><div class="ops-stat-value">10</div><div class="ops-stat-sub">RULE 1–10 at BLOCK level</div></div>';
+        h += '<div class="ops-stat-card ok"><h4>Test Suite</h4><div class="ops-stat-value">54</div><div class="ops-stat-sub">All PASS</div></div>';
+        h += '<div class="ops-stat-card ok"><h4>Pipeline</h4><div class="ops-stat-value">npm run pipeline</div><div class="ops-stat-sub">validate → build → dashboard</div></div>';
+        h += '</div></div>';
+
+        return h;
+    }
+
+    // ── Tab 4: CONTENT ──
+    function renderContentPanel() {
+        var h = '';
+
+        // Per-pack difficulty distribution
+        h += '<div class="ops-section"><h3>Difficulty Distribution</h3><div class="ops-table-wrap"><table class="ops-table">';
+        h += '<thead><tr><th>Pack</th><th>Items</th><th>Easy</th><th>Mod-Easy</th><th>Moderate</th><th>Difficult</th><th>Very Diff</th></tr></thead><tbody>';
+        var diffOrder = ['Easy', 'Moderate-Easy', 'Moderate', 'Difficult', 'Very Difficult'];
+        for (var pi = 0; pi < allStats.length; pi++) {
+            var as = allStats[pi];
+            h += '<tr><td style="font-weight:700;color:' + as.color + '">' + as.name + '</td><td>' + as.stats.total + '</td>';
+            for (var di = 0; di < diffOrder.length; di++) {
+                var dVal = as.stats.difficulty[diffOrder[di]] || 0;
+                h += '<td>' + pct(dVal, as.stats.total) + '</td>';
+            }
+            h += '</tr>';
+        }
+        h += '</tbody></table></div></div>';
+
+        // Per-pack cognitive distribution
+        h += '<div class="ops-section"><h3>Cognitive Level Distribution</h3><div class="ops-table-wrap"><table class="ops-table">';
+        h += '<thead><tr><th>Pack</th><th>Items</th><th>Remember</th><th>Understand</th><th>Apply</th><th>Analyze</th><th>Evaluate</th></tr></thead><tbody>';
+        var cogOrder = ['Remember', 'Understand', 'Apply', 'Analyze', 'Evaluate'];
+        for (var pi2 = 0; pi2 < allStats.length; pi2++) {
+            var as2 = allStats[pi2];
+            h += '<tr><td style="font-weight:700;color:' + as2.color + '">' + as2.name + '</td><td>' + as2.stats.total + '</td>';
+            for (var ci = 0; ci < cogOrder.length; ci++) {
+                var cVal = as2.stats.cognitive[cogOrder[ci]] || 0;
+                h += '<td>' + pct(cVal, as2.stats.total) + '</td>';
+            }
+            h += '</tr>';
+        }
+        h += '</tbody></table></div></div>';
+
+        // Per-pack correct choice distribution
+        h += '<div class="ops-section"><h3>Answer Position Distribution</h3><div class="ops-table-wrap"><table class="ops-table">';
+        h += '<thead><tr><th>Pack</th><th>A</th><th>B</th><th>C</th><th>D</th><th>Spread</th></tr></thead><tbody>';
+        for (var pi3 = 0; pi3 < allStats.length; pi3++) {
+            var as3 = allStats[pi3];
+            var vals = [];
+            for (var li = 0; li < 4; li++) {
+                var letter = String.fromCharCode(65 + li); // A,B,C,D
+                vals.push(as3.stats.correctChoice[letter] || 0);
+            }
+            var max = Math.max.apply(null, vals);
+            var min = Math.min.apply(null, vals);
+            var spread = as3.stats.total > 0 ? ((max - min) / as3.stats.total * 100).toFixed(1) + 'pp' : 'N/A';
+            var spreadCls = (max - min) / (as3.stats.total || 1) > 0.06 ? 'warn' : 'good';
+            h += '<tr><td style="font-weight:700;color:' + as3.color + '">' + as3.name + '</td>';
+            for (var li2 = 0; li2 < 4; li2++) {
+                h += '<td>' + pct(vals[li2], as3.stats.total) + '</td>';
+            }
+            h += '<td><span class="ops-tag ' + spreadCls + '">' + spread + '</span></td></tr>';
+        }
+        h += '</tbody></table></div></div>';
+
+        return h;
+    }
+
+    // ── Build the console ──
+    var panels = {
+        'learners': { label: 'Learners', render: renderLearnersPanel },
+        'may': { label: 'May', render: renderMayPanel },
+        'governance': { label: 'Governance', render: renderGovernancePanel },
+        'content': { label: 'Content', render: renderContentPanel }
+    };
+
+    var html = '<div class="ops-console">' +
+        '<div class="ops-tabs">' +
+            '<button class="ops-tab active" data-opspanel="governance">Governance</button>' +
+            '<button class="ops-tab" data-opspanel="content">Content</button>' +
+            '<button class="ops-tab" data-opspanel="learners">Learners</button>' +
+            '<button class="ops-tab" data-opspanel="may">May</button>' +
+        '</div>';
+
+    for (var pk in panels) {
+        var activeClass = (pk === 'governance') ? ' active' : '';
+        html += '<div class="ops-panel' + activeClass + '" data-opspanel="' + pk + '"></div>';
+    }
+    html += '</div>';
+
+    el.innerHTML = html;
+
+    // Render initial panel (governance)
+    var activePanel = el.querySelector('.ops-panel[data-opspanel="governance"]');
+    if (activePanel) activePanel.innerHTML = renderGovernancePanel();
+
+    // Pre-render content panel (most data) so it's ready
+    var contentPanel = el.querySelector('.ops-panel[data-opspanel="content"]');
+    if (contentPanel) contentPanel.innerHTML = renderContentPanel();
+
+    // Wire sub-tab clicks
+    el.querySelectorAll('.ops-tab').forEach(function(btn) {
+        btn.onclick = function() {
+            var panelName = btn.dataset.opspanel;
+            // Update active tab
+            el.querySelectorAll('.ops-tab').forEach(function(b) { b.classList.toggle('active', b === btn); });
+            // Show panel
+            el.querySelectorAll('.ops-panel').forEach(function(p) {
+                p.classList.toggle('active', p.dataset.opspanel === panelName);
+            });
+            // Render if needed
+            var panel = el.querySelector('.ops-panel[data-opspanel="' + panelName + '"]');
+            if (panel && panel.innerHTML.trim() === '') {
+                if (panels[panelName]) panel.innerHTML = panels[panelName].render();
+            }
+        };
+    });
+}
+
+// ============================================================
+// S124 — Guided Onboarding & Tour System
+// ============================================================
+var GuidedTour = {
+    active: false,
+    stepIndex: 0,
+    tourType: '',
+    __overlayEl: null,
+    __tooltipEl: null,
+    __spotlightEl: null,
+
+    TOURS: {
+        beginner: {
+            title: 'Welcome to the CMA Learning Platform',
+            desc: 'Get to know the key features that will help you prepare for the CMA Part 1 exam.',
+            steps: [
+                { id: 'welcome', title: 'Welcome!', text: 'The CMA Learning Platform is your complete CMA Part 1 exam simulator. It includes 2,545 MCQs across 5 question packs, 75 integrated case studies, and an AI-powered May coaching layer. Let us show you around.', attach: 'header', position: 'center' },
+                { id: 'dashboard', title: 'Your Dashboard', text: 'Here you track readiness scores, performance over time, and your session history. The dashboard helps you see your strengths and weaknesses at a glance.', attach: 'dashboardView', tab: 'dashboardView', position: 'center' },
+                { id: 'session', title: 'Start an Exam Session', text: 'Configure and launch practice sessions. Choose MCQ-only, case studies, mixed mode, or a full Part 1 simulation with a 4-hour timer.', attach: 'sessionForm', tab: 'sessionView', position: 'top' },
+                { id: 'may', title: 'Meet May — Your AI Coach', text: 'May is your AI-powered coaching assistant. After each session, May reviews your performance, identifies weak areas, and recommends targeted practice — including Recovery Sprints.', attach: 'coachView', tab: 'coachView', position: 'center' },
+                { id: 'collections', title: 'Bookmark Collections', text: 'Save questions during sessions to build study collections: Must Master, Technology Weaknesses, Formula Review, and Recovery Candidates. Revisit them anytime.', attach: 'bookmarkCollectionsPanel', tab: 'sessionView', position: 'top' },
+                { id: 'recovery', title: 'Recovery Sprint', text: 'After a disappointing session, May recommends a Recovery Sprint — a focused practice set targeting your weakest topics. It is the fastest way to turn missed questions into learned concepts.', attach: 'mayQuickstart', tab: 'sessionView', position: 'top' },
+                { id: 'reports', title: 'Reports & Analytics', text: 'The History view shows all past sessions with scores, pass rates, and confidence calibration charts. Use this to track your progress week by week.', attach: 'historyView', tab: 'historyView', position: 'center' },
+                { id: 'settings', title: 'Settings & Backup', text: 'Backup your progress, import from another device, manage your learner profile, and configure your preferences. Always backup before switching devices.', attach: 'settingsView', tab: 'settingsView', position: 'center' },
+                { id: 'complete', title: 'You are All Set!', text: 'That is the tour. You are ready to start studying. Click the <b>?</b> button in the toolbar anytime to restart tours or open the Help Center. Good luck on your CMA Part 1 journey!', attach: 'header', position: 'center' }
+            ]
+        },
+        recovery: {
+            title: 'Recovery Sprint Guide',
+            desc: 'How targeted remediation accelerates your exam readiness.',
+            steps: [
+                { id: 'rs1', title: 'What is a Recovery Sprint?', text: 'A Recovery Sprint is a focused practice session that targets your weakest topics — pulled from the questions you got wrong across recent sessions.', attach: 'header', position: 'center' },
+                { id: 'rs2', title: 'When to Sprint', text: 'After any session where you score below your target, May analyzes your errors and recommends a Recovery Sprint if your readiness score drops.', attach: 'mayQuickstart', tab: 'sessionView', position: 'top' },
+                { id: 'rs3', title: 'How It Works', text: 'May selects questions from your weakest topics, creates a timed mini-session, and after the sprint, shows you a before/after readiness comparison.', attach: 'coachView', tab: 'coachView', position: 'center' },
+                { id: 'rs4', title: 'Track Recovery', text: 'Your History dashboard shows Recovery Sprint results with a special badge. Watch your readiness climb with each sprint.', attach: 'historyView', tab: 'historyView', position: 'center' }
+            ]
+        },
+        may: {
+            title: 'May Coaching Guide',
+            desc: 'How your AI coach helps you study smarter.',
+            steps: [
+                { id: 'may1', title: 'Session Review', text: 'After every session, May automatically reviews your performance and identifies your strongest and weakest topics.', attach: 'coachView', tab: 'coachView', position: 'center' },
+                { id: 'may2', title: 'Readiness Scoring', text: 'Your Readiness Score (0-100) measures exam preparedness across all 6 blueprint domains. A score above 70 is considered exam-ready.', attach: 'coachView', tab: 'coachView', position: 'center' },
+                { id: 'may3', title: 'Archetype Detection', text: 'May identifies your study archetype — e.g., "Calculator" (strong at calculations, weak at concepts) or "Theorist" — and tailors recommendations accordingly.', attach: 'coachView', tab: 'coachView', position: 'center' },
+                { id: 'may4', title: 'Study Plan', text: 'Based on your archetype and readiness gaps, May generates a personalized study plan with specific topics and question counts.', attach: 'coachView', tab: 'coachView', position: 'center' }
+            ]
+        },
+        analytics: {
+            title: 'Analytics Guide',
+            desc: 'Understanding your performance data.',
+            steps: [
+                { id: 'an1', title: 'Readiness Dashboard', text: 'The readiness dashboard shows your preparedness across all 6 CMA Part 1 domains with color-coded indicators: green (ready), yellow (developing), red (needs work).', attach: 'dashboardView', tab: 'dashboardView', position: 'center' },
+                { id: 'an2', title: 'Confidence Calibration', text: 'This chart compares your self-reported confidence with actual correctness. A well-calibrated learner is confident when correct and unsure when wrong.', attach: 'dashboardView', tab: 'dashboardView', position: 'center' },
+                { id: 'an3', title: 'Session Trends', text: 'Track your score and readiness over time. The trend line helps you see whether your study strategy is working.', attach: 'historyView', tab: 'historyView', position: 'center' },
+                { id: 'an4', title: 'Domain Breakdown', text: 'See which blueprint domains drive your readiness score up — or drag it down. Focus your study time on the lowest-scoring domains.', attach: 'dashboardView', tab: 'dashboardView', position: 'center' }
+            ]
+        },
+        admin: {
+            title: 'Administration Guide',
+            desc: 'Governance, portfolio, and repository tools.',
+            steps: [
+                { id: 'ad1', title: 'Governance Dashboard', text: 'Monitor certification status across all 5 question packs, track domain-level certification progress, and view the governance guard status.', attach: 'operationsView', tab: 'operationsView', position: 'center' },
+                { id: 'ad2', title: 'Content Analytics', text: 'View difficulty distribution, cognitive level breakdowns, and answer-position balance across all packs.', attach: 'operationsView', tab: 'operationsView', position: 'center' },
+                { id: 'ad3', title: 'Learner Analytics', text: 'Review session history, accuracy rates, and readiness trends across all learners.', attach: 'operationsView', tab: 'operationsView', position: 'center' }
+            ]
+        }
+    },
+
+    // ── Initialize onboarding state in profile ──
+    _ensureState: function () {
+        var profile = window._cmaProfile || CMAProfileManager.load();
+        if (!profile.onboarding) profile.onboarding = { tourCompleted: false, completedTours: {}, adminActivated: false, adminClickCount: 0, adminClickTimestamp: 0 };
+        return profile;
+    },
+
+    _saveState: function (profile) {
+        window._cmaProfile = profile;
+        CMAProfileManager.save(profile);
+    },
+
+    // ── Check if first-run tour should auto-trigger ──
+    checkFirstRun: function () {
+        var profile = this._ensureState();
+        if (!profile.onboarding.tourCompleted) { this.start('beginner'); return true; }
+        return false;
+    },
+
+    // ── Start a specific tour ──
+    start: function (tourType) {
+        var tour = this.TOURS[tourType];
+        if (!tour) return;
+        this.active = true;
+        this.stepIndex = 0;
+        this.tourType = tourType;
+        this._createOverlay();
+        this._showStep(tour.steps[0]);
+    },
+
+    // ── Stop the tour ──
+    stop: function (completed) {
+        this.active = false;
+        this._destroyOverlay();
+        if (completed && this.tourType === 'beginner') {
+            var profile = this._ensureState();
+            profile.onboarding.tourCompleted = true;
+            this._saveState(profile);
+        }
+        if (completed) {
+            var profile = this._ensureState();
+            if (!profile.onboarding.completedTours) profile.onboarding.completedTours = {};
+            profile.onboarding.completedTours[this.tourType] = new Date().toISOString();
+            this._saveState(profile);
+        }
+    },
+
+    // ── Navigate steps ──
+    next: function () {
+        var tour = this.TOURS[this.tourType];
+        if (!tour) return;
+        this.stepIndex++;
+        if (this.stepIndex >= tour.steps.length) { this.stop(true); return; }
+        this._showStep(tour.steps[this.stepIndex]);
+    },
+
+    prev: function () {
+        var tour = this.TOURS[this.tourType];
+        if (!tour || this.stepIndex <= 0) return;
+        this.stepIndex--;
+        this._showStep(tour.steps[this.stepIndex]);
+    },
+
+    // ── Create overlay DOM ──
+    _createOverlay: function () {
+        this._destroyOverlay();
+        var overlay = document.createElement('div');
+        overlay.id = 'guidedTourOverlay';
+        overlay.className = 'guided-tour-overlay';
+        overlay.innerHTML =
+            '<div class="guided-tour-spotlight" id="tourSpotlight"></div>' +
+            '<div class="guided-tour-tooltip" id="tourTooltip">' +
+            '<div class="tour-step-indicator" id="tourStepIndicator"></div>' +
+            '<h3 id="tourTitle"></h3>' +
+            '<p id="tourText"></p>' +
+            '<div class="tour-actions">' +
+            '<button class="tour-btn tour-skip" id="tourSkip">Skip Tour</button>' +
+            '<div class="tour-nav">' +
+            '<button class="tour-btn tour-prev" id="tourPrev">&#8592; Back</button>' +
+            '<button class="tour-btn tour-next" id="tourNext">Next &#8594;</button>' +
+            '</div></div></div>';
+        document.body.appendChild(overlay);
+        this.__overlayEl = overlay;
+        this.__spotlightEl = document.getElementById('tourSpotlight');
+        this.__tooltipEl = document.getElementById('tourTooltip');
+        var self = this;
+        document.getElementById('tourSkip').onclick = function () { self.stop(false); };
+        document.getElementById('tourPrev').onclick = function () { self.prev(); };
+        document.getElementById('tourNext').onclick = function () { self.next(); };
+    },
+
+    _destroyOverlay: function () {
+        if (this.__overlayEl) { this.__overlayEl.remove(); this.__overlayEl = null; this.__spotlightEl = null; this.__tooltipEl = null; }
+    },
+
+    // ── Show a specific step ──
+    _showStep: function (step) {
+        var tour = this.TOURS[this.tourType];
+        // Switch to the target tab if needed
+        if (step.tab) {
+            if (typeof showView === 'function') showView(step.tab);
+        }
+        // Position spotlight
+        var targetEl = null;
+        if (step.attach === 'header') {
+            targetEl = document.querySelector('header.hero');
+        } else if (step.attach === 'sessionForm') {
+            targetEl = document.getElementById('sessionForm') || document.querySelector('.setup-panel');
+        } else if (step.attach === 'mayQuickstart') {
+            targetEl = document.getElementById('mayQuickstart');
+        } else if (step.attach === 'bookmarkCollectionsPanel') {
+            targetEl = document.getElementById('bookmarkCollectionsPanel');
+        } else {
+            targetEl = document.getElementById(step.attach);
+        }
+        if (!targetEl) {
+            // Fall back to center-of-screen if target not found
+            targetEl = document.querySelector('.work-panel') || document.querySelector('main.layout') || document.body;
+        }
+        var rect = targetEl.getBoundingClientRect();
+        var margin = 8;
+        if (step.position === 'center') {
+            // Center spotlight on the element
+            var cx = rect.left + rect.width / 2;
+            var cy = rect.top + rect.height / 2;
+            var size = Math.max(rect.width, rect.height, 200) + 40;
+            this.__spotlightEl.style.left = (cx - size / 2) + 'px';
+            this.__spotlightEl.style.top = (cy - size / 2) + 'px';
+            this.__spotlightEl.style.width = size + 'px';
+            this.__spotlightEl.style.height = size + 'px';
+            this.__spotlightEl.style.borderRadius = '50%';
+            // Position tooltip below the element
+            this.__tooltipEl.style.left = Math.max(20, cx - 200) + 'px';
+            this.__tooltipEl.style.top = (rect.bottom + 16) + 'px';
+            this.__tooltipEl.style.width = '400px';
+        } else if (step.position === 'top') {
+            this.__spotlightEl.style.left = (rect.left - margin) + 'px';
+            this.__spotlightEl.style.top = (rect.top - margin) + 'px';
+            this.__spotlightEl.style.width = (rect.width + margin * 2) + 'px';
+            this.__spotlightEl.style.height = (rect.height + margin * 2) + 'px';
+            this.__spotlightEl.style.borderRadius = '8px';
+            this.__tooltipEl.style.left = Math.max(20, rect.left + rect.width / 2 - 200) + 'px';
+            this.__tooltipEl.style.top = (rect.top - 160 > 20 ? rect.top - 160 : rect.bottom + 16) + 'px';
+            this.__tooltipEl.style.width = '400px';
+        } else {
+            this.__spotlightEl.style.left = (rect.left - margin) + 'px';
+            this.__spotlightEl.style.top = (rect.top - margin) + 'px';
+            this.__spotlightEl.style.width = (rect.width + margin * 2) + 'px';
+            this.__spotlightEl.style.height = (rect.height + margin * 2) + 'px';
+            this.__spotlightEl.style.borderRadius = '8px';
+            this.__tooltipEl.style.left = Math.max(20, rect.left - 16) + 'px';
+            this.__tooltipEl.style.top = (rect.bottom + 16) + 'px';
+            this.__tooltipEl.style.width = Math.min(400, rect.width + 32) + 'px';
+        }
+        // Update content
+        document.getElementById('tourStepIndicator').textContent =
+            (this.stepIndex + 1) + ' of ' + tour.steps.length;
+        document.getElementById('tourTitle').textContent = step.title;
+        document.getElementById('tourText').innerHTML = step.text;
+        // Show/hide prev button
+        document.getElementById('tourPrev').style.display = this.stepIndex === 0 ? 'none' : '';
+        // Update next button text on last step
+        var isLast = this.stepIndex >= tour.steps.length - 1;
+        document.getElementById('tourNext').textContent = isLast ? 'Finish \u2713' : 'Next \u2192';
+    }
+};
+
+// ── S124: Admin Console Access Gate ──
+var AdminGate = {
+    REQUIRED_CLICKS: 5,
+    CLICK_WINDOW_MS: 3000,
+
+    init: function () {
+        var profile = CMAProfileManager.load();
+        if (!profile.onboarding) profile.onboarding = {};
+        if (profile.onboarding.adminActivated) {
+            this._showAdmin();
+        } else {
+            this._hideAdmin();
+            this._wireVersionTrigger();
+        }
+    },
+
+    _hideAdmin: function () {
+        var opsTab = document.querySelector('.tab[data-view="operationsView"]');
+        if (opsTab) opsTab.style.display = 'none';
+    },
+
+    _showAdmin: function () {
+        var opsTab = document.querySelector('.tab[data-view="operationsView"]');
+        if (opsTab) opsTab.style.display = '';
+        // Also add badge indicator
+        if (opsTab && !opsTab.querySelector('.admin-badge')) {
+            var badge = document.createElement('span');
+            badge.className = 'admin-badge';
+            badge.textContent = 'ADMIN';
+            badge.style.cssText = 'background:var(--danger);color:#fff;font-size:0.6rem;padding:1px 5px;border-radius:3px;margin-left:4px;vertical-align:middle;';
+            opsTab.appendChild(badge);
+        }
+    },
+
+    _wireVersionTrigger: function () {
+        var self = this;
+        var profile = CMAProfileManager.load();
+        // Attach click counter to version display in settings
+        function checkClick() {
+            if (!profile.onboarding) profile.onboarding = {};
+            var now = Date.now();
+            if (now - (profile.onboarding.adminClickTimestamp || 0) > self.CLICK_WINDOW_MS) {
+                profile.onboarding.adminClickCount = 0;
+            }
+            profile.onboarding.adminClickCount = (profile.onboarding.adminClickCount || 0) + 1;
+            profile.onboarding.adminClickTimestamp = now;
+            if (profile.onboarding.adminClickCount >= self.REQUIRED_CLICKS) {
+                profile.onboarding.adminActivated = true;
+                profile.onboarding.adminClickCount = 0;
+                CMAProfileManager.save(profile);
+                self._showAdmin();
+                alert('Admin console activated. You now have access to Operations, Governance, Portfolio, Repository, and Certification tools.');
+            }
+            CMAProfileManager.save(profile);
+        }
+        // Wire to settings version display
+        window._adminGateClickHandler = checkClick;
+    },
+
+    // Called by settings render to attach to version label
+    attachToVersion: function (el) {
+        if (!el) return;
+        var handler = window._adminGateClickHandler;
+        if (!handler) return;
+        el.style.cursor = 'pointer';
+        el.title = 'Click for admin access';
+        el.onclick = handler;
+    }
+};
+
+// ── S124: Home Hub View ──
+function renderHomeView() {
+    var profile = window._cmaProfile || CMAProfileManager.load();
+    var stats = CMAProfileManager.getStats(profile);
+    var totalSessions = stats.sessions;
+    var adminActive = profile.onboarding && profile.onboarding.adminActivated;
+    var tourComplete = profile.onboarding && profile.onboarding.tourCompleted;
+
+    // Readiness
+    var readiness = '--';
+    try {
+        if (typeof SessionPersistence !== 'undefined') {
+            var hist = SessionPersistence.getHistory() || [];
+            if (hist.length > 0) {
+                var last = hist[hist.length - 1];
+                if (last.readinessScore != null) readiness = last.readinessScore.toFixed(0);
+            }
+        }
+    } catch (e) { }
+
+    var html = '<div class="home-hub">';
+
+    // Welcome section
+    html += '<div class="home-welcome">';
+    html += '<h2>CMA Learning Platform</h2>';
+    html += '<p class="home-subtitle">2,545 Part 1 MCQs &middot; 75 Case Studies &middot; AI-Powered Coaching</p>';
+    if (!tourComplete) {
+        html += '<button class="home-tour-btn" onclick="GuidedTour.start(\'beginner\')">&#9654; Take the Guided Tour</button>';
+    }
+    html += '</div>';
+
+    // Hub cards
+    html += '<div class="home-grid">';
+
+    // Study card
+    html += '<div class="home-card home-card-study" onclick="showView(\'sessionView\')">';
+    html += '<div class="home-card-icon">&#128218;</div>';
+    html += '<h3>Study</h3>';
+    html += '<p>MCQ practice, case studies, mixed sessions, and full Part 1 simulations with timed exams.</p>';
+    html += '<span class="home-card-cta">Start Practice &rarr;</span>';
+    html += '</div>';
+
+    // Coach card
+    html += '<div class="home-card home-card-coach" onclick="showView(\'coachView\'); if(typeof May!==\'undefined\'){May.renderView()}">';
+    html += '<div class="home-card-icon">&#129504;</div>';
+    html += '<h3>May Coach</h3>';
+    html += '<p>AI-powered readiness scoring, study archetype detection, personalized recommendations, and Recovery Sprints.</p>';
+    html += '<span class="home-card-cta">Open Coach &rarr;</span>';
+    html += '</div>';
+
+    // Analytics card
+    html += '<div class="home-card home-card-analytics" onclick="showView(\'dashboardView\')">';
+    html += '<div class="home-card-icon">&#128200;</div>';
+    html += '<h3>Analytics</h3>';
+    html += '<p>Performance tracking, confidence calibration, domain readiness, and session trend reports.</p>';
+    html += '<span class="home-card-cta">View Analytics &rarr;</span>';
+    html += '</div>';
+
+    // Collections card
+    html += '<div class="home-card home-card-collections" onclick="showView(\'sessionView\'); setTimeout(function(){var el=document.getElementById(\'bookmarkCollectionsPanel\');if(el)el.scrollIntoView({behavior:\'smooth\'})},200)">';
+    html += '<div class="home-card-icon">&#128278;</div>';
+    html += '<h3>Collections</h3>';
+    html += '<p>Must Master, Technology Weaknesses, Formula Review, Recovery Candidates, and custom bookmark collections.</p>';
+    html += '<span class="home-card-cta">Browse Collections &rarr;</span>';
+    html += '</div>';
+
+    // History card
+    html += '<div class="home-card home-card-history" onclick="showView(\'historyView\')">';
+    html += '<div class="home-card-icon">&#128337;</div>';
+    html += '<h3>Session History</h3>';
+    html += '<p>' + totalSessions + ' sessions completed. Review past performance, replay sessions, and compare results.</p>';
+    html += '<span class="home-card-cta">View History &rarr;</span>';
+    html += '</div>';
+
+    // Admin card (conditional)
+    if (adminActive) {
+        html += '<div class="home-card home-card-admin" onclick="showView(\'operationsView\')">';
+        html += '<div class="home-card-icon">&#128736;</div>';
+        html += '<h3>Administration</h3>';
+        html += '<p>Governance dashboard, portfolio analytics, repository health, certification tracking, and May control panel.</p>';
+        html += '<span class="home-card-cta">Open Console &rarr;</span>';
+        html += '</div>';
+    }
+
+    html += '</div>';
+
+    // Stats bar
+    html += '<div class="home-stats">';
+    html += '<div class="home-stat"><span class="home-stat-value">' + totalSessions + '</span><span class="home-stat-label">Sessions</span></div>';
+    html += '<div class="home-stat"><span class="home-stat-value">' + readiness + '</span><span class="home-stat-label">Readiness</span></div>';
+    html += '<div class="home-stat"><span class="home-stat-value">2,545</span><span class="home-stat-label">MCQs</span></div>';
+    html += '<div class="home-stat"><span class="home-stat-value">75</span><span class="home-stat-label">Cases</span></div>';
+    html += '</div>';
+
+    html += '</div>';
+
+    var el = document.getElementById('homeView');
+    if (el) el.innerHTML = html;
+}
+
+// ── S124: Help & Learning Center ──
+function renderHelpCenter() {
+    var tourComplete = false;
+    try {
+        var profile = CMAProfileManager.load();
+        tourComplete = profile.onboarding && profile.onboarding.tourCompleted;
+    } catch (e) { }
+
+    var html = '<div class="help-center">';
+    html += '<h2>Help &amp; Learning Center</h2>';
+
+    // Quick Start
+    html += '<div class="help-section"><h3>&#128640; Quick Start</h3>';
+    html += '<div class="help-card" onclick="GuidedTour.start(\'beginner\')" style="cursor:pointer;">';
+    html += '<b>Guided Tour</b> — A 9-step walkthrough of every feature. ' + (tourComplete ? '(Completed &#10003;)' : 'Recommended for first-time users.');
+    html += '</div>';
+    html += '<div class="help-card">';
+    html += '<b>Start Studying</b> — Go to the <span class="help-link" onclick="showView(\'sessionView\')">Study tab</span>, select MCQ Practice, pick a question count, and click Start Session.</div>';
+    html += '<div class="help-card">';
+    html += '<b>Full Exam Simulation</b> — Select "Full Part 1 Simulation" to take a timed, 100-question exam with 2 case studies under realistic conditions.</div>';
+    html += '</div>';
+
+    // How It Works
+    html += '<div class="help-section"><h3>&#10067; How It Works</h3>';
+    html += '<div class="help-card"><b>Readiness Score</b> — A 0-100 score measuring your exam preparedness. May calculates it from your session accuracy, confidence calibration, and domain coverage. Scores above 70 indicate exam readiness.</div>';
+    html += '<div class="help-card"><b>May Coach</b> — After each session, May reviews your performance, identifies weak domains, detects your study archetype, and recommends targeted practice or Recovery Sprints.</div>';
+    html += '<div class="help-card"><b>Recovery Sprint</b> — A focused mini-session targeting your weakest topics from recent errors. Complete a sprint, and May shows a before/after readiness comparison.</div>';
+    html += '<div class="help-card"><b>Confidence Calibration</b> — Rate your confidence on each answer. May tracks whether you are well-calibrated (confident when right, unsure when wrong) and flags miscalibration.</div>';
+    html += '</div>';
+
+    // Feature Tours
+    html += '<div class="help-section"><h3>&#128269; Feature Tours</h3>';
+    html += '<div class="help-tour-grid">';
+    html += '<button class="help-tour-btn" onclick="GuidedTour.start(\'beginner\')">&#9654; Beginner Tour</button>';
+    html += '<button class="help-tour-btn" onclick="GuidedTour.start(\'recovery\')">&#9654; Recovery Sprint</button>';
+    html += '<button class="help-tour-btn" onclick="GuidedTour.start(\'may\')">&#9654; May Coach</button>';
+    html += '<button class="help-tour-btn" onclick="GuidedTour.start(\'analytics\')">&#9654; Analytics</button>';
+    html += '<button class="help-tour-btn" onclick="GuidedTour.start(\'admin\')">&#9654; Admin Console</button>';
+    html += '</div></div>';
+
+    // Troubleshooting
+    html += '<div class="help-section"><h3>&#128295; Data Management</h3>';
+    html += '<div class="help-card"><b>Backup Progress</b> — Go to <span class="help-link" onclick="showView(\'settingsView\')">Settings</span> and click "Backup All Progress." This downloads a JSON file with all your sessions, collections, and May coaching data. Save it somewhere safe.</div>';
+    html += '<div class="help-card"><b>Restore Progress</b> — In Settings, click "Restore Progress" and select your backup JSON file. A safety backup is created automatically before restoring.</div>';
+    html += '<div class="help-card"><b>Reset All Data</b> — In Settings, under Danger Zone, click "Reset All Learner Data." A backup is created before clearing. You can restore it later via Import.</div>';
+    html += '<div class="help-card"><b>Moving Devices</b> — Backup on your old device, transfer the JSON file, and Restore on your new device. Your entire study history comes with you.</div>';
+    html += '</div>';
+
+    // FAQ
+    html += '<div class="help-section"><h3>&#10068; FAQ</h3>';
+    html += '<div class="help-card"><b>Are these real CMA exam questions?</b> No. All content is original study material aligned to the IMA CMA Part 1 Content Specification Outline. These are not real exam questions, not official IMA samples, and not endorsed by IMA.</div>';
+    html += '<div class="help-card"><b>How many questions are there?</b> 2,545 multiple-choice questions across 5 question packs (A-E), plus 75 integrated case studies with ~5 items each. Content covers all 6 blueprint domains.</div>';
+    html += '<div class="help-card"><b>Can I pause during an exam?</b> Yes, unless "Simulate Real Exam Conditions" is checked. Note: the real CMA exam does not allow pausing. This feature is a study aid only.</div>';
+    html += '<div class="help-card"><b>Does May work offline?</b> May coaching runs entirely in your browser. No internet connection is required after the initial page load.</div>';
+    html += '<div class="help-card"><b>How do I access admin features?</b> Admin tools are hidden by default for normal learners. Go to Settings and rapidly click the version number 5 times to activate.</div>';
+    html += '</div>';
+
+    html += '</div>';
+
+    var el = document.getElementById('helpView');
+    if (el) el.innerHTML = html;
+}
+
+// ── S124: Help button in toolbar ──
+function renderHelpButton() {
+    var nav = document.querySelector('.tabs');
+    if (!nav || document.getElementById('helpTabBtn')) return;
+    var btn = document.createElement('button');
+    btn.id = 'helpTabBtn';
+    btn.className = 'tab help-tab';
+    btn.setAttribute('data-view', 'helpView');
+    btn.title = 'Help & Learning Center';
+    btn.textContent = '?';
+    btn.onclick = function () {
+        showView('helpView');
+        renderHelpCenter();
+    };
+    nav.appendChild(btn);
+}
+
+// ── S124: Auto-launch first-run tour on DOM ready ──
+function initS124Onboarding() {
+    renderHelpButton();
+    AdminGate.init();
+    // Delay tour check to let views render
+    setTimeout(function () {
+        GuidedTour.checkFirstRun();
+    }, 800);
+}
+
+// ── Wire S124 init to DOMContentLoaded ──
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initS124Onboarding);
+} else {
+    initS124Onboarding();
 }

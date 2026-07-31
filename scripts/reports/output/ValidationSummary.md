@@ -1,37 +1,38 @@
 # Validation Report Summary
 
-**Generated:** 2026-07-31T16:12:05.668Z
+**Generated:** 2026-07-31T18:55:29.162Z
 **Project:** CMA Part 1 Exam Simulator v2.0
 
 ## Results
 
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
-| Repository Validator | PASS | 0 | 0 | 4ms |
-| Metadata Validator | FAIL | 18 | 5 | 495ms |
-| Blueprint Validator | WARN | 0 | 232 | 280ms |
-| Difficulty Validator | FAIL | 18 | 42 | 271ms |
-| Reference Validator | WARN | 0 | 95 | 214ms |
-| Explanation Validator | FAIL | 11 | 35 | 553ms |
-| Case Integrity Validator | FAIL | 2 | 8 | 113ms |
-| PsychometricValidator | FAIL | 119 | 1809 | 2945ms |
+| Repository Validator | PASS | 0 | 0 | 1ms |
+| Metadata Validator | FAIL | 18 | 5 | 185ms |
+| Blueprint Validator | WARN | 0 | 232 | 134ms |
+| Part 2 Blueprint Validator | WARN | 0 | 1 | 1ms |
+| Difficulty Validator | FAIL | 18 | 42 | 171ms |
+| Reference Validator | WARN | 0 | 95 | 142ms |
+| Explanation Validator | FAIL | 9 | 35 | 231ms |
+| Case Integrity Validator | FAIL | 2 | 8 | 29ms |
+| PsychometricValidator | FAIL | 119 | 1809 | 1573ms |
 
-**Total Errors:** 168
-**Total Warnings:** 2226
+**Total Errors:** 166
+**Total Warnings:** 2227
 **Overall Status:** FAIL
 
 ## Details
 
 ### Repository Validator
 **Status:** PASS
-**Duration:** 4ms
+**Duration:** 1ms
 **Statistics:**
 - Question Packs: 5
 - Case Banks: 5
 
 ### Metadata Validator
 **Status:** FAIL
-**Duration:** 495ms
+**Duration:** 185ms
 **Statistics:**
 - Cases Checked: 45
 **Errors:**
@@ -62,7 +63,7 @@
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 280ms
+**Duration:** 134ms
 **Statistics:**
 - Cases Checked: 45
 - Cross-Domain Cases: 0
@@ -306,9 +307,20 @@
 - scored_cases4.js[14] (CBQ4-B2) item[4] (CBQ4-B2-Q5): Topic "Financial budget relationships" not in domain topic list for "Planning, Budgeting, and Forecasting"
 - scored_cases4.js[14] (CBQ4-B2) item[5] (CBQ4-B2-Q6): Topic "Financial budget preparation" not in domain topic list for "Planning, Budgeting, and Forecasting"
 
+### Part 2 Blueprint Validator
+**Status:** WARN
+**Duration:** 1ms
+**Statistics:**
+- P2 MCQ Packs Found: 0
+- P2 Case Packs Found: 0
+- P2 Items Checked: 0
+- P2 Cases Checked: 0
+**Warnings:**
+- No Part 2 MCQ pack files (pack_p2_*.js) found. Validator passes clean for pre-authoring state.
+
 ### Difficulty Validator
 **Status:** FAIL
-**Duration:** 271ms
+**Duration:** 171ms
 **Statistics:**
 - Cases Checked: 45
 - Items Checked: 235
@@ -385,7 +397,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 214ms
+**Duration:** 142ms
 **Statistics:**
 - Cases Checked: 45
 - Total References: 0
@@ -490,7 +502,7 @@
 
 ### Explanation Validator
 **Status:** FAIL
-**Duration:** 553ms
+**Duration:** 231ms
 **Statistics:**
 - MCQ Questions Checked: 2545
 - Case Items Checked: 235
@@ -510,8 +522,6 @@
 - pack_d_corrected.js [151] (P1-BD-077): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
 - pack_d_corrected.js [153] (P1-BD-079): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
 - pack_d_corrected.js [174] (P1-BD-100): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
-- pack_e_corrected.js [255] (P1E-F-004): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
-- pack_e_corrected.js [256] (P1E-F-005): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
 **Warnings:**
 - pack_a_corrected.js [35] (P1-A-036): ExplanationWrongC is short (44 chars)
 - pack_a_corrected.js [45] (P1-A-046): ExplanationWrongB is short (38 chars)
@@ -551,7 +561,7 @@
 
 ### Case Integrity Validator
 **Status:** FAIL
-**Duration:** 113ms
+**Duration:** 29ms
 **Statistics:**
 - Total Cases Checked: 45
 - Total Items Checked: 235
@@ -579,7 +589,7 @@
 
 ### PsychometricValidator
 **Status:** FAIL
-**Duration:** 2945ms
+**Duration:** 1573ms
 **Statistics:**
 - AbsoluteLanguageValidator.questionsScanned: 2545
 - AbsoluteLanguageValidator.findings: 1044

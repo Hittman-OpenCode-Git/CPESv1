@@ -19,28 +19,29 @@ th { background: #f0f0f0; }
 </head>
 <body>
 <h1>CMA Part 1 Validation Report</h1>
-<p>Generated: 2026-07-31T16:12:05.683Z</p>
+<p>Generated: 2026-07-31T18:55:29.166Z</p>
 <p>Project: CMA Part 1 Exam Simulator v2.0</p>
 <h2>Results</h2>
 <table><tr><th>Validator</th><th>Status</th><th>Errors</th><th>Warnings</th><th>Duration</th></tr>
-<tr><td>Repository Validator</td><td class="pass">PASS</td><td>0</td><td>0</td><td>4ms</td></tr>
-<tr><td>Metadata Validator</td><td class="fail">FAIL</td><td>18</td><td>5</td><td>495ms</td></tr>
-<tr><td>Blueprint Validator</td><td class="warn">WARN</td><td>0</td><td>232</td><td>280ms</td></tr>
-<tr><td>Difficulty Validator</td><td class="fail">FAIL</td><td>18</td><td>42</td><td>271ms</td></tr>
-<tr><td>Reference Validator</td><td class="warn">WARN</td><td>0</td><td>95</td><td>214ms</td></tr>
-<tr><td>Explanation Validator</td><td class="fail">FAIL</td><td>11</td><td>35</td><td>553ms</td></tr>
-<tr><td>Case Integrity Validator</td><td class="fail">FAIL</td><td>2</td><td>8</td><td>113ms</td></tr>
-<tr><td>PsychometricValidator</td><td class="fail">FAIL</td><td>119</td><td>1809</td><td>2945ms</td></tr>
+<tr><td>Repository Validator</td><td class="pass">PASS</td><td>0</td><td>0</td><td>1ms</td></tr>
+<tr><td>Metadata Validator</td><td class="fail">FAIL</td><td>18</td><td>5</td><td>185ms</td></tr>
+<tr><td>Blueprint Validator</td><td class="warn">WARN</td><td>0</td><td>232</td><td>134ms</td></tr>
+<tr><td>Part 2 Blueprint Validator</td><td class="warn">WARN</td><td>0</td><td>1</td><td>1ms</td></tr>
+<tr><td>Difficulty Validator</td><td class="fail">FAIL</td><td>18</td><td>42</td><td>171ms</td></tr>
+<tr><td>Reference Validator</td><td class="warn">WARN</td><td>0</td><td>95</td><td>142ms</td></tr>
+<tr><td>Explanation Validator</td><td class="fail">FAIL</td><td>9</td><td>35</td><td>231ms</td></tr>
+<tr><td>Case Integrity Validator</td><td class="fail">FAIL</td><td>2</td><td>8</td><td>29ms</td></tr>
+<tr><td>PsychometricValidator</td><td class="fail">FAIL</td><td>119</td><td>1809</td><td>1573ms</td></tr>
 </table>
-<p><strong>Total Errors:</strong> 168 | <strong>Total Warnings:</strong> 2226 | <strong>Overall:</strong> <span class="badge fail">FAIL</span></p>
+<p><strong>Total Errors:</strong> 166 | <strong>Total Warnings:</strong> 2227 | <strong>Overall:</strong> <span class="badge fail">FAIL</span></p>
 <h2 id="Repository Validator">Repository Validator</h2>
-<p>Status: <span class="badge pass">PASS</span> | Duration: 4ms</p>
+<p>Status: <span class="badge pass">PASS</span> | Duration: 1ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Question Packs</td><td>5</td></tr>
 <tr><td>Case Banks</td><td>5</td></tr>
 </table>
 <h2 id="Metadata Validator">Metadata Validator</h2>
-<p>Status: <span class="badge fail">FAIL</span> | Duration: 495ms</p>
+<p>Status: <span class="badge fail">FAIL</span> | Duration: 185ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Cases Checked</td><td>45</td></tr>
 </table>
@@ -72,7 +73,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>No cases found in scored_cases5.js</td></tr>
 </table>
 <h2 id="Blueprint Validator">Blueprint Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 280ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 134ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Cases Checked</td><td>45</td></tr>
 <tr><td>Cross-Domain Cases</td><td>0</td></tr>
@@ -317,8 +318,19 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>scored_cases4.js[14] (CBQ4-B2) item[4] (CBQ4-B2-Q5): Topic "Financial budget relationships" not in domain topic list for "Planning, Budgeting, and Forecasting"</td></tr>
 <tr class="warning"><td>scored_cases4.js[14] (CBQ4-B2) item[5] (CBQ4-B2-Q6): Topic "Financial budget preparation" not in domain topic list for "Planning, Budgeting, and Forecasting"</td></tr>
 </table>
+<h2 id="Part 2 Blueprint Validator">Part 2 Blueprint Validator</h2>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 1ms</p>
+<h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
+<tr><td>P2 MCQ Packs Found</td><td>0</td></tr>
+<tr><td>P2 Case Packs Found</td><td>0</td></tr>
+<tr><td>P2 Items Checked</td><td>0</td></tr>
+<tr><td>P2 Cases Checked</td><td>0</td></tr>
+</table>
+<h3>Warnings</h3><table>
+<tr class="warning"><td>No Part 2 MCQ pack files (pack_p2_*.js) found. Validator passes clean for pre-authoring state.</td></tr>
+</table>
 <h2 id="Difficulty Validator">Difficulty Validator</h2>
-<p>Status: <span class="badge fail">FAIL</span> | Duration: 271ms</p>
+<p>Status: <span class="badge fail">FAIL</span> | Duration: 171ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Cases Checked</td><td>45</td></tr>
 <tr><td>Items Checked</td><td>235</td></tr>
@@ -396,7 +408,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>Difficulty "Moderate": 32/45 (71.1%) deviates from target 45.0% by more than 10%</td></tr>
 </table>
 <h2 id="Reference Validator">Reference Validator</h2>
-<p>Status: <span class="badge warn">WARN</span> | Duration: 214ms</p>
+<p>Status: <span class="badge warn">WARN</span> | Duration: 142ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Cases Checked</td><td>45</td></tr>
 <tr><td>Total References</td><td>0</td></tr>
@@ -501,7 +513,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>scored_cases4.js[14] (CBQ4-B2) exhibit "CBQ4-B2-E2": Exhibit is never referenced by any item</td></tr>
 </table>
 <h2 id="Explanation Validator">Explanation Validator</h2>
-<p>Status: <span class="badge fail">FAIL</span> | Duration: 553ms</p>
+<p>Status: <span class="badge fail">FAIL</span> | Duration: 231ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>MCQ Questions Checked</td><td>2545</td></tr>
 <tr><td>Case Items Checked</td><td>235</td></tr>
@@ -522,8 +534,6 @@ th { background: #f0f0f0; }
 <tr class="error"><td>pack_d_corrected.js [151] (P1-BD-077): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").</td></tr>
 <tr class="error"><td>pack_d_corrected.js [153] (P1-BD-079): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").</td></tr>
 <tr class="error"><td>pack_d_corrected.js [174] (P1-BD-100): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").</td></tr>
-<tr class="error"><td>pack_e_corrected.js [255] (P1E-F-004): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").</td></tr>
-<tr class="error"><td>pack_e_corrected.js [256] (P1E-F-005): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").</td></tr>
 </table>
 <h3>Warnings</h3><table>
 <tr class="warning"><td>pack_a_corrected.js [35] (P1-A-036): ExplanationWrongC is short (44 chars)</td></tr>
@@ -563,7 +573,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>32 explanations are shorter than the recommended 50-character minimum.</td></tr>
 </table>
 <h2 id="Case Integrity Validator">Case Integrity Validator</h2>
-<p>Status: <span class="badge fail">FAIL</span> | Duration: 113ms</p>
+<p>Status: <span class="badge fail">FAIL</span> | Duration: 29ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>Total Cases Checked</td><td>45</td></tr>
 <tr><td>Total Items Checked</td><td>235</td></tr>
@@ -592,7 +602,7 @@ th { background: #f0f0f0; }
 <tr class="warning"><td>No cases found in scored_cases5.js</td></tr>
 </table>
 <h2 id="PsychometricValidator">PsychometricValidator</h2>
-<p>Status: <span class="badge fail">FAIL</span> | Duration: 2945ms</p>
+<p>Status: <span class="badge fail">FAIL</span> | Duration: 1573ms</p>
 <h3>Statistics</h3><table><tr><th>Metric</th><th>Value</th></tr>
 <tr><td>AbsoluteLanguageValidator.questionsScanned</td><td>2545</td></tr>
 <tr><td>AbsoluteLanguageValidator.findings</td><td>1044</td></tr>

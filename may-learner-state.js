@@ -83,12 +83,15 @@ const MayLearnerState = {
         try {
             data.lastUpdated = new Date().toISOString();
             localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
+            // S120 — Also write to cmaProfile2026 (SSOT) so profile save/backup stays current
+            try { if (typeof CMAProfileManager !== 'undefined') CMAProfileManager.patchMayField('mayLearnerState', data); } catch (e) {}
         } catch (e) {
             try {
                 if (data.sessions && data.sessions.length > 20) {
                     data.sessions = data.sessions.slice(-20);
                     data.lastUpdated = new Date().toISOString();
                     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
+                    try { if (typeof CMAProfileManager !== 'undefined') CMAProfileManager.patchMayField('mayLearnerState', data); } catch (e2) {}
                 }
             } catch (e2) { /* silent fail */ }
         }
@@ -2181,9 +2184,11 @@ const MayLearnerState = {
     },
 
     // Save the synthetic student roll to localStorage.
+    // S120 — Also write to cmaProfile2026 (SSOT).
     saveStudentRoll(roll) {
         try { localStorage.setItem('cmaMayStudentRoll', JSON.stringify(roll)); }
         catch (e) { /* quota exceeded — handled silently */ }
+        try { if (typeof CMAProfileManager !== 'undefined') CMAProfileManager.patchMayField('mayStudentRoll', roll); } catch (e) {}
     },
 
     // Update a specific student's data in the roll.
@@ -2321,6 +2326,62 @@ const MayLearnerState = {
                 correlatedSessions: correlated.length,
                 bridgeVersion: 'S112-1.0'
             }
+        };
+    },
+
+    // ═══════════════════════════════════════════════════════════
+    // S113P — getBehavioralProfile()
+    // Public surface for archetype classification + plateau signal.
+    // Auto-loads profile sessionHistory from cmaProfile2026.
+    // Falls back gracefully when no profile data is available.
+    // ═══════════════════════════════════════════════════════════
+    getBehavioralProfile() {
+        let history = [];
+        try {
+            let raw = localStorage.getItem('cmaProfile2026');
+            if (raw) {
+                let profile = JSON.parse(raw);
+                if (profile && profile.sessionHistory) {
+                    history = profile.sessionHistory;
+                }
+            }
+        } catch (e) { /* fall through to empty history */ }
+
+        let mayData = this.load();
+        let intelligence = this.getLearnerIntelligence();
+        let archetype = this._bridge_computeArchetype(history, mayData, intelligence);
+        let plateau = this._bridge_computePlateauSignal(history, mayData, intelligence);
+        let readiness = this.getReadinessSummary();
+
+        let band = archetype.archetype === 'ready' ? 'At Target' :
+                   archetype.archetype === 'plateaued' ? 'Approaching Target' :
+                   archetype.archetype === 'developing' ? 'Approaching Target' : 'Below Target';
+
+        let label = archetype.archetype === 'ready' ? 'Exam Ready' :
+                    archetype.archetype === 'plateaued' ? 'Plateau Detected' :
+                    archetype.archetype === 'developing' ? 'Developing Learner' :
+                    archetype.archetype === 'new' ? 'New Learner' : 'Unclassified';
+
+        return {
+            archetype: archetype.archetype,
+            archetypeConfidence: archetype.confidence,
+            archetypeLabel: label,
+            archetypeFactors: archetype.factors,
+            sessionTrend: archetype.sessionTrend,
+            sessionSpacing: archetype.sessionSpacing,
+            behavioralPatterns: archetype.patterns,
+            plateau: {
+                isPlateaued: plateau.isPlateaued,
+                plateauConfidence: plateau.confidence,
+                plateauEvidence: plateau.evidence,
+                plateauMetrics: plateau.metrics
+            },
+            band: band,
+            mayBand: readiness && readiness.overall ? readiness.overall.band : null,
+            hasProfileData: history.length > 0,
+            sessionCount: history.length,
+            computedAt: new Date().toISOString(),
+            engineVersion: 'S113P-1.0'
         };
     },
 

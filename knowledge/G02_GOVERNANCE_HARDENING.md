@@ -249,7 +249,7 @@ Every calendar month in which May is active, a production effectiveness review s
 
 ### 5.3 Threshold Publication Requirement
 
-**All effectiveness, reliability, and adoption thresholds must be published before the review period begins.** This prevents retroactive standard-setting — a governance practice where thresholds are adjusted post-hoc to match observed performance. The first monthly review (MAY-029) is the initial baseline-establishment review and does not require pre-published thresholds.
+**All effectiveness, reliability, and adoption thresholds must be published before the review period begins.** This prevents retroactive standard-setting — a governance practice where thresholds are adjusted post-hoc to match observed performance. The first effectiveness review (MAY-029A — Single-Learner Effectiveness Review) is the initial baseline-establishment review and does not require pre-published thresholds. MAY-029A is gated by behavioral maturity (≥5 completed sessions OR ≥1 Recovery Sprint), not calendar time or learner count — reflecting the single-learner longitudinal deployment model.
 
 Subsequent reviews (from the second review onward) must:
 
@@ -378,7 +378,7 @@ G01 GOVERNANCE REBASELINE  ← COMPLETE
      │
      ├── S816–S818  DL-035 Content Remediation (39 Certified items)
      │
-     ├── MAY-029  First Production Effectiveness Review
+      ├── MAY-029A  Single-Learner Effectiveness Review (behavioral maturity gate: ≥5 sessions OR ≥1 Recovery Sprint)
      │
      ├── S103P Residual  Remaining PH2-B3, PH2-B4 reclassification batches
      │

@@ -18,6 +18,7 @@
  * RULE 9  (BLOCK) — Choice binary lead-in polarity mismatch (DL-037 enforcement)
  * RULE 10 (BLOCK) — non-CorrectChoice EW slots must be present and non-empty (DL-021 enforcement)
  * RULE 11 (BLOCK) — Part2OnlyFlag must be strictly boolean true on every item [P2-only]
+ * RULE 12 (BLOCK) — Cognitive-First Assignment (cognitive-gate validation + relabeling prohibition) — S121
  *
  * Cross-part collision: reject P1- QIDs in P2 packs, reject CBQ (non-"2") CaseIDs in P2 case packs
  */
@@ -360,6 +361,96 @@ function checkPart2OnlyFlag(item) {
 }
 
 /**
+ * RULE 12 (Cognitive-First Assignment): Validate cognitive level consistency.
+ * BLOCK: missing CognitiveLevel field. BLOCK: invalid value. WARN: apparent misclassification.
+ * @param {object} item
+ * @returns {Array<{rule: number, code: string, severity: string, message: string}>}
+ */
+function checkCognitiveConsistency(item) {
+  const violations = [];
+  const qid = item.QuestionID || item.ItemID || "(unknown)";
+  const cog = item.CognitiveLevel;
+
+  // BLOCK: missing CognitiveLevel entirely
+  if (!cog) {
+    violations.push({
+      rule: 12,
+      code: "COG-MISSING",
+      severity: "BLOCK",
+      message: qid + ": CognitiveLevel field is missing (required for portfolio measurement per S121)"
+    });
+    return violations;
+  }
+
+  // BLOCK: invalid CognitiveLevel value
+  const validCL = ["Remember", "Understand", "Apply", "Analyze", "Evaluate"];
+  if (!validCL.includes(cog)) {
+    violations.push({
+      rule: 12,
+      code: "COG-INVALID",
+      severity: "BLOCK",
+      message: qid + ": CognitiveLevel \"" + cog + "\" is not a valid value (must be one of: " + validCL.join(", ") + ")"
+    });
+    return violations;
+  }
+
+  // WARN: cognitive-difficulty mismatch (difficulty too low for claimed level)
+  const diffScore = item.DifficultyScore;
+  if (cog === "Evaluate" && diffScore !== undefined && diffScore <= 2) {
+    violations.push({
+      rule: 12,
+      code: "COG-DIFF-MISMATCH",
+      severity: "WARN",
+      message: qid + ": CognitiveLevel is \"" + cog + "\" but DifficultyScore is " + diffScore + " (Evaluate requires >= 3)"
+    });
+  }
+  if (cog === "Analyze" && diffScore !== undefined && diffScore === 1) {
+    violations.push({
+      rule: 12,
+      code: "COG-DIFF-MISMATCH",
+      severity: "WARN",
+      message: qid + ": CognitiveLevel is \"" + cog + "\" but DifficultyScore is " + diffScore + " (Analyze requires >= 2)"
+    });
+  }
+
+  // WARN: deterministic rule application labeled as Analyze/Evaluate
+  const stem = item.Stem || "";
+  const ec = item.ExplanationCorrect || "";
+  if (cog === "Analyze" || cog === "Evaluate") {
+    const hasRuleRef = /Under (ASC|IFRS|COSO|GAAP|IAS|IRC|FASB)/i.test(stem);
+    const hasTradeOff = /competing|best option|weigh|trade.off|balance|recommend|evaluate|which.*should/i.test(ec);
+    if (hasRuleRef && !hasTradeOff) {
+      violations.push({
+        rule: 12,
+        code: "COG-INFLATION-RULE",
+        severity: "WARN",
+        message: qid + ": CognitiveLevel is \"" + cog + "\" but stem invokes a deterministic rule without trade-off language — may be Apply"
+      });
+    }
+  }
+
+  // WARN: pure definition/recall labeled above Understand
+  if ((cog === "Apply" || cog === "Analyze" || cog === "Evaluate") && stem.length < 150) {
+    const defPatterns = [
+      /^(Which|What) (of the following )?(term|concept|definition|formula|ratio|measure)/i,
+      /^(The|A) .{0,40}(is|are|measures|calculates|refers to|represents) /i,
+      /is (also )?(known as|called|referred to as)/i,
+    ];
+    const looksLikeDefinition = defPatterns.some(p => p.test(stem));
+    if (looksLikeDefinition && !/(Compute|Calculate|Determine|Analyze|Evaluate|Recommend|Compare|Interpret)/i.test(stem)) {
+      violations.push({
+        rule: 12,
+        code: "COG-INFLATION-DEF",
+        severity: "WARN",
+        message: qid + ": CognitiveLevel is \"" + cog + "\" but stem appears to be a definition/recall question — may be Remember/Understand"
+      });
+    }
+  }
+
+  return violations;
+}
+
+/**
  * Cross-part collision: detect P1- QIDs in P2 packs.
  * @param {object} item
  * @returns {Array<{rule: number, code: string, message: string}>}
@@ -471,7 +562,7 @@ class GovernanceGuardP2 {
 
     // BLOCK-level violations cause pass=false (structural rules 2,5,6,9,10,11 are BLOCK)
     const blockViolations = allViolations.filter(
-      v => v.rule === 2 || v.rule === 5 || v.rule === 6 || v.rule === 9 || v.rule === 10 || v.rule === 11 || v.rule === 0
+      v => v.rule === 2 || v.rule === 5 || v.rule === 6 || v.rule === 9 || v.rule === 10 || v.rule === 11 || v.rule === 12 || v.rule === 0
     );
 
     return {
@@ -570,7 +661,8 @@ class GovernanceGuardP2 {
       allViolations.push(...checkDL021(item));
       // RULE 11 (Part2OnlyFlag) — only for P2 source files
       if (isP2Source) {
-        allViolations.push(...checkPart2OnlyFlag(item));
+    allViolations.push(...checkPart2OnlyFlag(item));
+    allViolations.push(...checkCognitiveConsistency(item));
       }
       // Cross-part collision
       allViolations.push(...checkCrossPartCollision(item));

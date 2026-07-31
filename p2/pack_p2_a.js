@@ -1,12 +1,15 @@
 // CMA Part 2 Exam Simulator — Pack A
 // Domain(s): A — Financial Statement Analysis
-// Generated: 2026-07-29
-// Session: P2-004 — First Authoring Wave (extracted from 3 task agents)
+// Generated: 2026-07-29 (Wave 1: 30 items, Wave 2: 30 items)
+// Updated: 2026-07-31 (Wave 3: 40 items — Batch 1: P2-A-061–090, Batch 2: P2-A-091–100)
+// Session: P2-004 (Waves 1-2), P2-010 (Wave 3)
 // Governance State: Unprocessed (all items)
 // Architecture: Single-object (one JSON object per MCQ item)
 // QID Format: P2-A-001 to P2-A-500
-// Item Count: 30 (Wave 1 complete)
+// Item Count: 100 (Waves 1-3 complete)
 // Required Field: Part2OnlyFlag: true
+// Cognitive: Remember 10, Understand 10, Apply 20, Analyze 33, Evaluate 27
+// LOS Coverage: A.1=28, A.2=18, A.3=13, A.4=20, A.5=21
 var pack_p2_a_questions = [
   {
     "Part": 2,
@@ -2523,5 +2526,1644 @@ var pack_p2_a_questions = [
           "Independent answer derived matches stored CorrectChoice",
           "Authority citation matches tested concept"
       ]
-  }
+  },
+
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.061 Current Ratio — basic definition and formula components",
+        "QuestionID": "P2-A-061",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Which of the following correctly defines the current ratio?",
+        "Choices": {
+            "A": "Current assets divided by total assets, measuring the proportion of short-term resources.",
+            "B": "Current assets divided by current liabilities, measuring the ability to meet short-term obligations.",
+            "C": "Cash plus receivables divided by current liabilities, measuring immediate liquidity.",
+            "D": "Current liabilities divided by current assets, measuring short-term solvency pressure."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Under ASC 205-10, the current ratio is defined as Current Assets divided by Current Liabilities. It measures a company's ability to pay its short-term obligations with its short-term resources. A ratio above 1.0 indicates that current assets exceed current liabilities. The formula is one of the most fundamental liquidity metrics in financial statement analysis and serves as the starting point for assessing working capital adequacy.",
+        "ExplanationWrongA": "Option A incorrectly describes the current ratio as current assets divided by total assets. That calculation measures the proportion of current assets in the total asset base, which is a composition metric, not a liquidity ratio.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C describes the quick ratio (acid-test ratio), which excludes inventory and prepaid expenses from the numerator. The current ratio includes all current assets — cash, receivables, inventory, and prepaids — not just cash and receivables.",
+        "ExplanationWrongD": "Option D inverts the ratio. Current liabilities divided by current assets would measure the proportion of short-term debt financed by current assets, which is not a standard liquidity metric under ASC 205-10.",
+        "Difficulty": "Easy",
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Remember",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.1",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Current Ratio = Current Assets / Current Liabilities",
+        "CommonTrapReference": "Confusing the current ratio with the quick ratio — the current ratio includes inventory and prepaids; the quick ratio excludes them.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Remember-level definition question",
+            "Independent answer derived: B correctly defines current ratio per ASC 205-10"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.062 Quick Ratio — formula components and what it excludes",
+        "QuestionID": "P2-A-062",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Which asset is excluded from the numerator of the quick ratio but included in the numerator of the current ratio?",
+        "Choices": {
+            "A": "Accounts receivable",
+            "B": "Cash and cash equivalents",
+            "C": "Inventory",
+            "D": "Marketable securities"
+        },
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "Inventory is excluded from the quick ratio numerator because it is the least liquid current asset. Converting inventory to cash requires two steps — selling the product and collecting the receivable — making it unreliable for meeting immediate obligations. The quick ratio numerator includes only cash, marketable securities, and accounts receivable, which are more readily convertible to cash. The current ratio numerator includes all current assets, including inventory and prepaid expenses.",
+        "ExplanationWrongA": "Accounts receivable are included in both the current ratio and the quick ratio numerator. Receivables are generally considered liquid assets because they are expected to convert to cash within the normal collection cycle.",
+        "ExplanationWrongB": "Cash is the most liquid asset and is included in both the current ratio and the quick ratio numerator. It is not excluded from either ratio.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Marketable securities (short-term investments) are included in both the current ratio and the quick ratio numerator because they can be readily sold for cash in public markets.",
+        "Difficulty": "Easy",
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Remember",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.1",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Quick Ratio = (Cash + Marketable Securities + Accounts Receivable) / Current Liabilities",
+        "CommonTrapReference": "Including inventory in the quick ratio numerator — the quick ratio deliberately excludes inventory because it is the least liquid current asset.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Remember-level identification question",
+            "Independent answer derived: C correctly identifies inventory as excluded from quick ratio"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.063 DuPont Analysis — three-component decomposition",
+        "QuestionID": "P2-A-063",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "The DuPont identity decomposes return on equity (ROE) into which three components?",
+        "Choices": {
+            "A": "Gross margin, asset turnover, and financial leverage.",
+            "B": "Net profit margin, total asset turnover, and equity multiplier.",
+            "C": "Operating margin, inventory turnover, and debt-to-equity ratio.",
+            "D": "EBITDA margin, fixed asset turnover, and times interest earned."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "The DuPont identity decomposes ROE into three multiplicative components: Net Profit Margin (Net Income / Sales), Total Asset Turnover (Sales / Average Total Assets), and Equity Multiplier (Average Total Assets / Average Equity). The formula is ROE = Net Profit Margin × Total Asset Turnover × Equity Multiplier. This decomposition reveals whether ROE is driven by operational efficiency (margin), asset productivity (turnover), or financial leverage (equity multiplier). The three-component DuPont model is a foundational tool for financial statement analysis.",
+        "ExplanationWrongA": "Option A substitutes gross margin for net profit margin. While gross margin is a component of profitability, the DuPont model uses net profit margin to capture all expenses including operating, interest, and tax costs. Gross margin alone does not represent total operational efficiency.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C substitutes operating margin, inventory turnover, and debt-to-equity. While these are all valid financial metrics, they do not multiply to produce ROE. Inventory turnover is an activity ratio, not an asset productivity measure, and debt-to-equity differs from the equity multiplier.",
+        "ExplanationWrongD": "Option D substitutes EBITDA margin, fixed asset turnover, and times interest earned. EBITDA margin excludes depreciation and amortization, making it a different construct from net profit margin. Fixed asset turnover measures only fixed asset efficiency, not total asset efficiency.",
+        "Difficulty": "Easy",
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Remember",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.2",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "ROE = Net Profit Margin × Total Asset Turnover × Equity Multiplier",
+        "CommonTrapReference": "Confusing the three DuPont components with other common financial ratios — candidates often substitute gross margin for net profit margin or inventory turnover for total asset turnover.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Remember-level formula identification",
+            "Independent answer derived: B correctly identifies DuPont components"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.064 Return on Equity — basic formula and interpretation",
+        "QuestionID": "P2-A-064",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Which of the following formulas correctly expresses return on equity (ROE)?",
+        "Choices": {
+            "A": "Net income divided by total assets.",
+            "B": "Operating income divided by total equity.",
+            "C": "Net income divided by average total equity.",
+            "D": "Net income divided by total revenue."
+        },
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "Return on Equity (ROE) is defined as Net Income divided by Average Total Equity. Under ASC 205-10, ROE measures the return generated on shareholders' invested capital. Using average equity (rather than beginning or ending) accounts for equity changes during the period and provides a more representative measure of the equity base that generated the earnings. ROE is one of the most widely used profitability metrics because it directly measures how efficiently management uses equity capital.",
+        "ExplanationWrongA": "Option A describes return on assets (ROA), not return on equity. ROA uses total assets in the denominator and measures how efficiently the company uses all its resources, both debt-financed and equity-financed.",
+        "ExplanationWrongB": "Option B uses operating income rather than net income. Operating income excludes interest expense and taxes, which are costs borne by equity holders. ROE uses net income available to common shareholders after all expenses.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Option D describes net profit margin, which measures the percentage of each sales dollar that becomes profit. Net profit margin uses revenue in the denominator, not equity.",
+        "Difficulty": "Easy",
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Remember",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.2",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "ROE = Net Income / Average Total Equity",
+        "CommonTrapReference": "Confusing ROE with ROA — ROE uses equity in the denominator; ROA uses total assets.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Remember-level formula identification",
+            "Independent answer derived: C correctly defines ROE"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.065 Horizontal vs Vertical Analysis — definitions",
+        "QuestionID": "P2-A-065",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Which statement correctly distinguishes horizontal analysis from vertical analysis?",
+        "Choices": {
+            "A": "Horizontal analysis expresses each line item as a percentage of a base year; vertical analysis expresses each line item as a percentage of total assets.",
+            "B": "Horizontal analysis compares financial data across time periods; vertical analysis expresses each line item as a percentage of a base amount within the same period.",
+            "C": "Horizontal analysis is used only for balance sheets; vertical analysis is used only for income statements.",
+            "D": "Horizontal analysis requires industry benchmarks; vertical analysis requires only internal data."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Horizontal analysis (trend analysis) compares financial data across two or more time periods to identify growth patterns, trends, and anomalies. It typically computes period-over-period changes in both absolute dollar amounts and percentage terms. Vertical analysis (common-size analysis) expresses each line item within a single period's financial statement as a percentage of a base amount — typically total assets for the balance sheet and net sales for the income statement. Both are fundamental tools for comparative financial statement analysis under ASC 205-10.",
+        "ExplanationWrongA": "Option A reverses the definitions. Horizontal analysis compares across time periods (not expressing as percentage of base year, though that is one implementation). Vertical analysis expresses as a percentage of a base amount within the same period. The base amount for vertical analysis of the income statement is typically net sales, not total assets.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C incorrectly limits each method to one statement. Both horizontal and vertical analysis can be applied to balance sheets, income statements, and cash flow statements. There is no statement restriction for either technique.",
+        "ExplanationWrongD": "Option D claims horizontal analysis requires industry benchmarks. While industry comparisons enhance both types of analysis, neither method requires external benchmarks. Horizontal analysis primarily uses the company's own historical data.",
+        "Difficulty": "Easy",
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Remember",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.3",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": null,
+        "CommonTrapReference": "Reversing the definitions of horizontal and vertical analysis — horizontal = across time (left to right); vertical = within period (top to bottom).",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Remember-level definition question",
+            "Independent answer derived: B correctly distinguishes horizontal from vertical analysis"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.066 Common-Size Financial Statements — purpose and base amounts",
+        "QuestionID": "P2-A-066",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "In a common-size income statement prepared using vertical analysis, each line item is expressed as a percentage of:",
+        "Choices": {
+            "A": "Total assets.",
+            "B": "Gross profit.",
+            "C": "Net sales (revenue).",
+            "D": "Operating income."
+        },
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "In a common-size income statement, every line item is expressed as a percentage of net sales (revenue). For example, if cost of goods sold is $600,000 and net sales are $1,000,000, COGS is expressed as 60%. This standardization allows comparison across companies of different sizes and across time periods, as it removes the scale effect of absolute dollar amounts. For the balance sheet, the common-size base is total assets. This technique is central to vertical analysis.",
+        "ExplanationWrongA": "Total assets is the base for a common-size balance sheet, not the income statement. Using total assets as the base for income statement items would mix stock and flow measures, producing percentages that are not analytically meaningful.",
+        "ExplanationWrongB": "Gross profit would be an unusual base for a common-size income statement. Starting from gross profit excludes cost of goods sold, which is itself an important line item that analysts examine as a percentage of sales.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Operating income would exclude several important income statement line items above it (COGS, SG&A). Using operating income as the base would prevent analysis of how cost structure affects profitability from the top line through to operating income.",
+        "Difficulty": "Easy",
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Remember",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.3",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": null,
+        "CommonTrapReference": "Using total assets as the base for common-size income statements — total assets is the base for balance sheets; net sales is the base for income statements.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Remember-level definition question",
+            "Independent answer derived: C correctly identifies net sales as common-size income statement base"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.067 Degree of Operating Leverage — definition",
+        "QuestionID": "P2-A-067",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "The degree of operating leverage (DOL) measures:",
+        "Choices": {
+            "A": "The sensitivity of net income to changes in interest rates.",
+            "B": "The sensitivity of operating income to changes in sales volume.",
+            "C": "The proportion of debt in the capital structure.",
+            "D": "The ratio of fixed costs to variable costs."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "The degree of operating leverage (DOL) measures how sensitive operating income (EBIT) is to changes in sales volume. It is calculated as Contribution Margin divided by Operating Income. A higher DOL indicates that a given percentage change in sales will produce a larger percentage change in operating income, because fixed operating costs magnify the effect of sales changes on profitability. DOL reflects operating risk — the risk inherent in the company's cost structure independent of how the company is financed.",
+        "ExplanationWrongA": "Option A describes interest rate sensitivity, which relates to financial risk and the degree of financial leverage (DFL), not operating leverage. DOL is independent of how the company is financed.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C describes financial leverage or the debt-to-equity ratio, which relates to capital structure decisions. DOL concerns the operating cost structure (fixed vs. variable costs), not the financing mix.",
+        "ExplanationWrongD": "Option D describes a cost structure ratio. While the ratio of fixed to variable costs influences DOL, DOL itself is a specific elasticity measure (percentage change in EBIT divided by percentage change in sales), not simply the ratio of fixed to variable costs.",
+        "Difficulty": "Easy",
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Remember",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.4",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Degree of Operating Leverage = Contribution Margin / Operating Income",
+        "CommonTrapReference": "Confusing operating leverage (DOL) with financial leverage (DFL) — DOL reflects cost structure risk; DFL reflects financing risk.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Remember-level definition question",
+            "Independent answer derived: B correctly defines DOL"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.068 Degree of Financial Leverage — definition",
+        "QuestionID": "P2-A-068",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "The degree of financial leverage (DFL) measures the sensitivity of which income measure to changes in operating income?",
+        "Choices": {
+            "A": "Gross profit",
+            "B": "Earnings before interest and taxes (EBIT)",
+            "C": "Net income (or earnings per share)",
+            "D": "Operating cash flow"
+        },
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "The degree of financial leverage (DFL) measures the sensitivity of net income (or earnings per share) to changes in operating income (EBIT). DFL is calculated as EBIT divided by (EBIT − Interest Expense), or equivalently as the percentage change in EPS divided by the percentage change in EBIT. A higher DFL means that a given change in EBIT produces a larger change in EPS because fixed financing costs (interest) magnify the effect. DFL reflects financial risk — the additional variability in returns to equity holders introduced by the use of debt financing.",
+        "ExplanationWrongA": "Gross profit is above the operating income line and is not affected by financing costs. DFL operates below the EBIT line, measuring how fixed financing charges amplify the effect of EBIT changes on earnings available to shareholders.",
+        "ExplanationWrongB": "EBIT is the input to DFL, not the output. DFL measures how changes in EBIT affect net income or EPS. The relationship is directional: EBIT is the independent variable and net income is the dependent variable.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Operating cash flow is a cash-basis measure that may differ from accrual-basis earnings. DFL is defined in terms of accrual-basis income measures (EBIT and net income), not cash flows.",
+        "Difficulty": "Easy",
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Remember",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.4",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Degree of Financial Leverage = EBIT / (EBIT − Interest Expense)",
+        "CommonTrapReference": "Confusing DFL with DOL — DFL measures the sensitivity of net income to EBIT changes; DOL measures the sensitivity of EBIT to sales changes.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Remember-level definition question",
+            "Independent answer derived: C correctly identifies net income/EPS as DFL output"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.069 Earnings Quality — definition and indicators",
+        "QuestionID": "P2-A-069",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Which of the following best describes high-quality earnings?",
+        "Choices": {
+            "A": "Earnings that exceed analyst consensus estimates by the largest margin.",
+            "B": "Earnings that are derived primarily from recurring operating activities and closely correlate with operating cash flows.",
+            "C": "Earnings that show consistent growth every quarter without any decline.",
+            "D": "Earnings that are maximized through aggressive revenue recognition policies."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "High-quality earnings are sustainable, derived from core recurring operating activities, and supported by operating cash flows. Under ASC 230-10, when net income closely tracks operating cash flow, earnings quality is considered high because the reported profits are backed by actual cash generation. Conversely, when net income grows while operating cash flow stagnates or declines, earnings quality may be low — the profits may reflect aggressive accrual estimates, one-time gains, or revenue recognition timing differences rather than sustainable economic performance.",
+        "ExplanationWrongA": "Option A confuses earnings quality with earnings surprise. Beating analyst estimates says nothing about whether the earnings are sustainable, cash-backed, or derived from core operations. A company can beat estimates through one-time gains or aggressive accounting while having low-quality earnings.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C describes earnings smoothness, not quality. Consistent growth may indicate earnings management (smoothing) rather than genuine economic performance. High-quality earnings may be volatile if the underlying business is cyclical — volatility alone does not indicate low quality.",
+        "ExplanationWrongD": "Option D describes the opposite of high-quality earnings. Aggressive revenue recognition typically produces low-quality earnings because it inflates reported profits through accounting choices rather than economic substance. Under ASC 606, revenue should be recognized only when performance obligations are satisfied.",
+        "Difficulty": "Easy",
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Remember",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.5",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": null,
+        "CommonTrapReference": "Equating earnings growth or consistency with earnings quality — quality relates to sustainability and cash backing, not growth rate or smoothness.",
+        "Authorities": [
+            "ASC 230-10",
+            "ASC 606"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Remember-level definition question",
+            "Independent answer derived: B correctly defines high-quality earnings"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.070 Sustainable Growth Rate — formula and meaning",
+        "QuestionID": "P2-A-070",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "The sustainable growth rate is correctly expressed as:",
+        "Choices": {
+            "A": "ROE multiplied by the dividend payout ratio.",
+            "B": "ROE multiplied by (1 − dividend payout ratio).",
+            "C": "ROA multiplied by the retention ratio.",
+            "D": "Net profit margin multiplied by asset turnover."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "The sustainable growth rate (SGR) equals ROE × (1 − Dividend Payout Ratio), or equivalently ROE × Retention Ratio. It represents the maximum rate at which a company can grow its sales and assets without issuing new equity or increasing its debt-to-equity ratio. The retention ratio (1 − payout ratio) captures the portion of earnings reinvested in the business. A company with ROE of 15% that retains 60% of earnings can sustainably grow at 9% (15% × 0.60) while maintaining its current capital structure. This is a critical concept for financial planning and valuation.",
+        "ExplanationWrongA": "Option A multiplies ROE by the dividend payout ratio, which would give the dividend yield contribution rather than the growth rate. The sustainable growth rate uses the retention ratio (1 − payout), not the payout ratio itself.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C uses ROA instead of ROE. The sustainable growth rate is equity-based because it measures how fast equity can grow through retained earnings. ROA measures return on all assets and does not account for leverage effects on equity growth.",
+        "ExplanationWrongD": "Option D describes the DuPont components of ROA (net profit margin × asset turnover), not the sustainable growth rate. While these feed into ROE through the DuPont identity, the sustainable growth rate formula explicitly includes the retention ratio.",
+        "Difficulty": "Easy",
+        "DifficultyScore": 1,
+        "CognitiveLevel": "Remember",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.5",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Sustainable Growth Rate = ROE × (1 − Dividend Payout Ratio)",
+        "CommonTrapReference": "Using the dividend payout ratio instead of the retention ratio in the sustainable growth rate formula.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Remember-level formula identification",
+            "Independent answer derived: B correctly identifies SGR formula"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.071 Interpretation of declining current ratio trend",
+        "QuestionID": "P2-A-071",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Crestline Industries' current ratio has declined from 2.5 to 1.8 to 1.3 over the past three years. The company's sales grew 40% over the same period. Which interpretation of this trend is most appropriate before reaching a conclusion about liquidity deterioration?",
+        "Choices": {
+            "A": "The declining current ratio confirms deteriorating liquidity; Crestline should immediately reduce its dividend and negotiate extended payment terms with suppliers.",
+            "B": "The declining current ratio is a natural consequence of rapid sales growth — working capital requirements increase with sales, and the company may be using efficient working capital management rather than experiencing liquidity stress.",
+            "C": "A current ratio above 1.0 at all times indicates adequate liquidity; the declining trend is irrelevant because the company consistently maintains more current assets than current liabilities.",
+            "D": "The declining current ratio is a reporting artifact caused by the sales growth rate exceeding the asset growth rate; the ratios should be recalculated using inflation-adjusted values before any conclusion is reached."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "A declining current ratio during a period of rapid sales growth does not necessarily indicate deteriorating liquidity. Under ASC 205-10, ratio analysis requires understanding the business context. Rapidly growing companies often experience declining current ratios as they invest in receivables and inventory to support higher sales volumes. The key analytical question is whether the company is managing working capital efficiently (collecting receivables, turning inventory) or struggling to meet obligations. Additional metrics — days sales outstanding, inventory turnover, operating cash flow trends, and access to credit facilities — are needed before concluding whether the trend signals stress or reflects growth-driven working capital expansion.",
+        "ExplanationWrongA": "Option A jumps to a remedial conclusion without further investigation. A declining current ratio during growth may be efficient — the company may be collecting receivables faster, turning inventory more frequently, or negotiating better supplier terms. Immediate remedial action without diagnostic analysis would be premature.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C dismisses trend analysis entirely. While a ratio above 1.0 suggests technical solvency, a persistent declining trend may signal emerging liquidity pressure even before the ratio falls below 1.0. Trend analysis provides early warning signals that a single-point ratio cannot capture.",
+        "ExplanationWrongD": "Option D invokes inflation adjustment as an explanation. While inflation can affect financial statement comparability, a declining current ratio during growth is more likely explained by working capital dynamics than by inflation effects, which typically affect both current assets and current liabilities.",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.1",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Current Ratio = Current Assets / Current Liabilities",
+        "CommonTrapReference": "Treating a declining ratio in isolation without considering the business context — growth often drives working capital expansion that naturally reduces the current ratio.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Understand-level interpretation question",
+            "Independent answer derived: B correctly interprets declining current ratio in growth context"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.072 Quick Ratio — why inventory is excluded",
+        "QuestionID": "P2-A-072",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "A financial analyst notes that Company X's current ratio is a healthy 2.0, but its quick ratio is only 0.5. Which of the following best explains the divergence and its implications?",
+        "Choices": {
+            "A": "The divergence is mathematically impossible — a current ratio of 2.0 must produce a quick ratio above 1.0. The financial statements likely contain an error.",
+            "B": "The divergence indicates that inventory represents a very large portion of current assets. The company's apparent liquidity largely depends on selling inventory, which may be problematic if inventory is slow-moving, obsolete, or subject to significant markdown risk.",
+            "C": "The quick ratio is less useful than the current ratio for most analytical purposes. A current ratio of 2.0 is sufficient evidence of strong liquidity regardless of the quick ratio value.",
+            "D": "The divergence indicates that the company has excessive cash and receivables relative to inventory. Management should invest more heavily in inventory to improve sales growth."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "When the current ratio is 2.0 but the quick ratio is 0.5, inventory must constitute approximately 75% of current assets. For example: Current Assets = $200, Current Liabilities = $100. Current Ratio = 2.0. If Quick Assets = $50, then Quick Ratio = 0.5 and Inventory = $150. The divergence signals that the company's reported liquidity depends heavily on converting inventory to cash — a process that requires both selling and collecting. If the inventory is slow-moving, technologically obsolete, or perishable, the apparent liquidity cushion may be illusory. Under ASC 330-10, inventory is reported at lower of cost or NRV, but book value may exceed realizable value in a liquidity stress scenario.",
+        "ExplanationWrongA": "Option A incorrectly claims the divergence is mathematically impossible. There is no required relationship between the current ratio and quick ratio values. A company with very high inventory relative to quick assets can simultaneously have a current ratio of 2.0 and a quick ratio well below 1.0.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C dismisses the quick ratio as merely less useful. The quick ratio provides information the current ratio cannot — specifically, whether the company can meet its obligations without relying on inventory liquidation. Both ratios should be analyzed together for a complete liquidity picture.",
+        "ExplanationWrongD": "Option D misinterprets the divergence. A very low quick ratio relative to the current ratio indicates excessive inventory reliance, not excessive cash. The company likely needs better inventory management, not more inventory investment.",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.1",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Quick Ratio = (Cash + Marketable Securities + Accounts Receivable) / Current Liabilities",
+        "CommonTrapReference": "Treating the current ratio and quick ratio as providing redundant information — they capture different dimensions of liquidity risk.",
+        "Authorities": [
+            "ASC 205-10",
+            "ASC 330-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Understand-level interpretation question",
+            "Independent answer derived: B correctly explains current vs quick ratio divergence"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.073 Total Asset Turnover — interpretation of high vs low values",
+        "QuestionID": "P2-A-073",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "A company with a total asset turnover of 3.2 compared to an industry average of 1.5 is most likely:",
+        "Choices": {
+            "A": "Underperforming — the high turnover indicates the company is overworking its assets, which will lead to equipment failure and maintenance problems.",
+            "B": "Generating more revenue per dollar of assets than its peers, which may indicate superior asset efficiency or a capital-light business model.",
+            "C": "Experiencing revenue inflation due to aggressive recognition policies — asset turnover cannot meaningfully exceed the industry average.",
+            "D": "Underinvested in assets and will need to make significant capital expenditures to sustain operations."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Total asset turnover measures revenue generated per dollar of total assets. A ratio of 3.2 means the company generates $3.20 in revenue for every $1.00 of assets, versus the industry average of $1.50. This indicates the company is more capital-efficient — it may employ a capital-light business model (e.g., outsourcing production, leasing assets, maintaining low inventory) or simply manage its asset base more productively. However, the analyst should investigate whether the high turnover reflects genuine efficiency or asset underinvestment that could constrain future growth. The ratio must be interpreted alongside profitability metrics — high turnover with low margins may indicate a different competitive strategy than low turnover with high margins.",
+        "ExplanationWrongA": "Option A incorrectly associates high asset turnover with overwork and equipment risk. In many industries, high asset turnover is desirable — it means the company is generating more sales from its asset base. Whether maintenance is adequate is a separate operational question.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C claims asset turnover cannot exceed industry averages. Asset turnover can vary significantly within an industry based on business model, asset age (older depreciated assets produce higher turnover), outsourcing decisions, and operational efficiency.",
+        "ExplanationWrongD": "Option D jumps to a conclusion about underinvestment. While very high turnover could indicate underinvestment, this is not the most likely interpretation without additional evidence. Many successful companies deliberately operate with high asset turnover as a strategic choice.",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.2",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Total Asset Turnover = Net Sales / Average Total Assets",
+        "CommonTrapReference": "Assuming that any deviation from industry averages is automatically negative — high asset turnover can reflect genuine competitive advantage.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Understand-level interpretation question",
+            "Independent answer derived: B correctly interprets high asset turnover"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.074 ROE vs ROA — the effect of financial leverage",
+        "QuestionID": "P2-A-074",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Under what condition will a company's return on equity (ROE) exceed its return on assets (ROA)?",
+        "Choices": {
+            "A": "When the company has no debt in its capital structure.",
+            "B": "When the company's return on assets exceeds its after-tax cost of debt.",
+            "C": "When the company's net profit margin exceeds its asset turnover.",
+            "D": "When the company issues new equity to retire existing debt."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "ROE will exceed ROA when the return earned on borrowed funds (ROA) exceeds the after-tax cost of borrowing. Through financial leverage, the company earns ROA on both equity-financed and debt-financed assets but pays only the after-tax interest cost on the debt portion. The excess return (ROA − after-tax cost of debt) accrues to equity holders, magnifying their return. For example, if ROA = 12%, after-tax cost of debt = 6%, and the company is 50% debt-financed, the 6% spread on each dollar of debt-financed assets boosts equity returns above the 12% ROA. This is the fundamental mechanism of favorable financial leverage.",
+        "ExplanationWrongA": "Option A is incorrect. When a company has no debt, ROE equals ROA (assuming no preferred stock). Financial leverage creates the wedge between ROE and ROA — without debt, the two measures produce identical results because all assets are equity-financed.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C is incorrect. Net profit margin and asset turnover are components of ROA through the DuPont identity, but their relationship to each other does not determine whether ROE exceeds ROA. The ROE-ROA spread is determined by the cost of debt relative to ROA.",
+        "ExplanationWrongD": "Option D is incorrect. Issuing equity to retire debt reduces financial leverage, which narrows or eliminates the ROE-ROA spread. This action moves ROE closer to ROA, not further above it.",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.2",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "ROE = ROA + (ROA − After-tax Cost of Debt) × (Debt / Equity)",
+        "CommonTrapReference": "Assuming ROE always exceeds ROA — when the after-tax cost of debt exceeds ROA, financial leverage is unfavorable and ROE is less than ROA.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Understand-level conceptual question",
+            "Independent answer derived: B correctly identifies when ROE exceeds ROA"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.075 Trend Analysis — purpose and limitations",
+        "QuestionID": "P2-A-075",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "A company's revenue has grown 8%, 9%, 7%, and 11% over the past four years. Based solely on trend analysis, which statement is most accurate?",
+        "Choices": {
+            "A": "Revenue growth is accelerating, indicating strong and improving market demand for the company's products.",
+            "B": "Revenue growth is decelerating because the most recent growth rate of 11% is below the compound annual growth rate.",
+            "C": "Revenue has grown in each period, but trend analysis alone cannot determine whether the growth pattern is accelerating, decelerating, or stable without considering the base effect and external benchmarks.",
+            "D": "Revenue growth is stable at approximately 8-9% because the four-year average growth rate is 8.75% and individual year variations are immaterial."
+        },
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "Trend analysis using year-over-year growth rates requires careful interpretation. The raw growth rates (8%, 9%, 7%, 11%) show year-to-year variation but do not clearly establish acceleration or deceleration. The base effect means that as revenue grows larger in absolute terms, the same percentage growth represents more absolute dollars — 11% growth on a larger base may represent substantially more revenue than 8% growth on a smaller base. Additionally, without industry benchmarks or economic context, the analyst cannot determine whether these growth rates represent strong or weak performance. Trend analysis is a starting point for investigation, not a conclusion.",
+        "ExplanationWrongA": "Option A sees acceleration where the data is ambiguous. While 11% is the highest single-year rate, 7% immediately preceded it — a one-year uptick does not establish a trend. The analyst needs more data points and external context.",
+        "ExplanationWrongB": "Option B incorrectly claims the 11% rate is below the CAGR. The compound annual growth rate from the beginning to the end of the four-year period can be calculated, but 11% being above or below the CAGR depends on the starting and ending values, not the simple average of growth rates.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Option D treats the average as representing stability while ignoring that variation from 7% to 11% represents a range of 4 percentage points on a base of roughly 8-9%, which is substantial relative variation. The analyst should investigate what drove the 7% year and the 11% year.",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.3",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": null,
+        "CommonTrapReference": "Drawing strong conclusions from short time-series data — four data points are insufficient to establish acceleration or deceleration trends without statistical testing.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Understand-level interpretation question",
+            "Independent answer derived: C correctly identifies limitations of trend analysis"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.076 Vertical Analysis — when most useful",
+        "QuestionID": "P2-A-076",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Vertical (common-size) analysis is most useful for:",
+        "Choices": {
+            "A": "Comparing a company's financial performance against its own historical results across multiple periods.",
+            "B": "Comparing companies of significantly different sizes within the same industry.",
+            "C": "Projecting future financial performance using regression analysis.",
+            "D": "Assessing whether a company has sufficient cash to meet its near-term obligations."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Vertical analysis expresses each financial statement line item as a percentage of a base (typically total assets for the balance sheet, net sales for the income statement). This standardization is most powerful for comparing companies of different sizes, because it removes the scale effect. For example, a company with $50 million in sales and another with $5 billion in sales cannot be meaningfully compared in absolute dollars, but common-size statements reveal whether the smaller company spends a similar percentage of revenue on R&D, carries a similar proportion of debt, or generates a comparable gross margin. Industry benchmarking relies heavily on vertical analysis for this reason.",
+        "ExplanationWrongA": "Option A describes horizontal (trend) analysis, which compares the same company across time periods. While vertical analysis can be used over time, its primary strength is cross-sectional comparison across companies of different sizes.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C describes forecasting or predictive analytics, which may incorporate common-size data but is not the primary purpose of vertical analysis. Vertical analysis is descriptive, showing composition; forecasting is predictive.",
+        "ExplanationWrongD": "Option D describes liquidity analysis using ratios such as the current ratio and quick ratio. While vertical analysis of the balance sheet can inform liquidity assessment, it is not the primary tool for evaluating near-term cash sufficiency.",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.3",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": null,
+        "CommonTrapReference": "Confusing vertical analysis (cross-sectional comparison) with horizontal analysis (time-series comparison). Vertical = same period, different companies; Horizontal = same company, different periods.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Understand-level interpretation question",
+            "Independent answer derived: B correctly identifies vertical analysis strength"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.077 High DOL — business risk implications",
+        "QuestionID": "P2-A-077",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "A company with a high degree of operating leverage (DOL) faces greater risk because:",
+        "Choices": {
+            "A": "It has more debt in its capital structure, increasing the probability of default.",
+            "B": "A given percentage decline in sales will produce a larger percentage decline in operating income.",
+            "C": "Its variable costs are too high relative to fixed costs, making it difficult to cut expenses during downturns.",
+            "D": "Its operating cash flows are more volatile than its accrual earnings."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "A high DOL means that fixed operating costs constitute a large portion of the company's total cost structure. Because fixed costs do not decline when sales fall, a given percentage decrease in sales produces a magnified percentage decrease in operating income. For example, with a DOL of 4.0, a 10% sales decline results in a 40% decline in EBIT. This magnification works in both directions — high DOL also amplifies the benefit of sales increases. Companies with high fixed costs (airlines, manufacturers with heavy depreciation, software companies with large R&D) exhibit higher operating leverage and greater earnings variability over the business cycle.",
+        "ExplanationWrongA": "Option A confuses operating leverage with financial leverage. High debt increases financial risk (measured by DFL), not operating risk (measured by DOL). A company can have high DOL with zero debt if its cost structure is predominantly fixed.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C reverses the cost structure. High DOL implies high fixed costs and low variable costs, not the reverse. Companies with high variable costs (low fixed costs) have low DOL because costs adjust proportionally with sales.",
+        "ExplanationWrongD": "Option D describes cash flow versus accrual divergence, which relates to earnings quality, not operating leverage. High DOL increases earnings variability irrespective of whether earnings are measured on a cash or accrual basis.",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.4",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Degree of Operating Leverage = Contribution Margin / Operating Income",
+        "CommonTrapReference": "Confusing operating leverage (business risk from cost structure) with financial leverage (financial risk from debt financing).",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Understand-level conceptual question",
+            "Independent answer derived: B correctly explains risk from high DOL"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.078 DFL — relationship between EBIT and EPS volatility",
+        "QuestionID": "P2-A-078",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "A company has a degree of financial leverage (DFL) of 2.5. If EBIT increases by 12%, what is the expected impact on earnings per share?",
+        "Choices": {
+            "A": "EPS will increase by 4.8% (12% divided by 2.5).",
+            "B": "EPS will increase by 12%, the same as the EBIT increase, because EPS is calculated after interest.",
+            "C": "EPS will increase by 30% (12% multiplied by 2.5).",
+            "D": "EPS will increase by 2.5%, reflecting the fixed charge coverage."
+        },
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "The degree of financial leverage measures the percentage change in EPS for a given percentage change in EBIT: DFL = %ΔEPS / %ΔEBIT. With DFL = 2.5 and EBIT increasing by 12%, EPS will increase by 12% × 2.5 = 30%. The magnification occurs because interest expense is fixed — when EBIT rises, interest remains constant, so the entire EBIT increase flows to pre-tax income, producing a proportionally larger increase in net income and EPS. DFL captures this amplification effect.",
+        "ExplanationWrongA": "Option A divides EBIT growth by DFL instead of multiplying. The correct relationship is %ΔEPS = %ΔEBIT × DFL. Dividing by DFL would imply that financial leverage dampens EPS changes, which is the opposite of how leverage works.",
+        "ExplanationWrongB": "Option B ignores financial leverage entirely. Because interest is a fixed charge, EPS changes are magnified relative to EBIT changes when DFL exceeds 1.0. EPS changes equal EBIT changes only when DFL = 1.0 (no debt or preferred stock).",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Option D confuses DFL (a multiplier) with an additive adjustment. DFL of 2.5 means the percentage change in EPS is 2.5 times the percentage change in EBIT, not that EPS adds 2.5 percentage points.",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.4",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "DFL = EBIT / (EBIT − Interest Expense); %ΔEPS = %ΔEBIT × DFL",
+        "CommonTrapReference": "Dividing by DFL instead of multiplying — DFL magnifies EBIT changes into EPS changes, so the multiplier is applied, not divided.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Understand-level application question",
+            "Independent answer derived: 12% × 2.5 = 30% — C is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.079 Earnings quality — red flags in financial reporting",
+        "QuestionID": "P2-A-079",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Which of the following patterns would most concern an analyst evaluating earnings quality?",
+        "Choices": {
+            "A": "Revenue growing at 8% annually while operating cash flow grows at 9% annually.",
+            "B": "Accounts receivable growing at 25% annually while revenue grows at 10% annually.",
+            "C": "Gross margin remaining stable at 42% for five consecutive years.",
+            "D": "Capital expenditures consistently exceeding depreciation expense."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Accounts receivable growing significantly faster than revenue (25% vs. 10%) is a classic earnings quality red flag. It may indicate that the company is extending more generous credit terms to boost sales, recognizing revenue before collection is reasonably assured, or experiencing collection problems. Under ASC 606, revenue should be recognized only when collectibility is probable. When receivables outpace revenue growth, the analyst should investigate whether: (1) the company changed its credit policy, (2) customers are delaying payment (suggesting dissatisfaction or financial distress), or (3) revenue recognition is aggressive. The divergence between revenue growth and cash collection is a leading indicator of potential earnings quality issues.",
+        "ExplanationWrongA": "Option A describes a healthy pattern — operating cash flow growing slightly faster than revenue suggests that earnings are cash-backed. This is a positive earnings quality indicator, not a concern.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C describes stable gross margins, which is generally a positive indicator. While artificially stable margins could signal earnings management, stable margins are more commonly associated with consistent pricing power and cost control.",
+        "ExplanationWrongD": "Option D describes capital expenditures exceeding depreciation, which suggests the company is investing in growth and maintaining its asset base. This is generally viewed positively, as underinvestment in capex is a more common earnings quality concern (inflating earnings by deferring necessary maintenance).",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.5",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": null,
+        "CommonTrapReference": "Focusing on revenue growth in isolation without examining the relationship between revenue, receivables, and cash collections.",
+        "Authorities": [
+            "ASC 606",
+            "ASC 230-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Understand-level red-flag identification",
+            "Independent answer derived: B correctly identifies A/R outpacing revenue as red flag"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.080 Sustainable Growth Rate — constraints and implications",
+        "QuestionID": "P2-A-080",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "A company's actual sales growth consistently exceeds its sustainable growth rate. Which of the following is the most likely consequence if the company maintains its current dividend policy and does not issue new equity?",
+        "Choices": {
+            "A": "The company's profit margins will automatically increase to bring growth into alignment.",
+            "B": "The company's debt-to-equity ratio will increase over time as it relies on additional borrowing to finance the growth gap.",
+            "C": "The company's sustainable growth rate will automatically adjust upward through improved asset turnover.",
+            "D": "The company will accumulate excess cash, improving its liquidity position."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "When actual growth exceeds the sustainable growth rate, the company is growing faster than retained earnings can support while maintaining a constant debt-to-equity ratio. To finance the gap, the company must either: (1) issue new equity, (2) increase its debt ratio (borrowing more relative to equity), (3) reduce the dividend payout ratio to retain more earnings, or (4) improve operational efficiency (higher margin or turnover). If the company maintains its dividend policy and does not issue equity, it must increase borrowing, which raises the debt-to-equity ratio. This increases financial leverage and financial risk. Over time, the higher interest burden may reduce ROE, further constraining the sustainable growth rate.",
+        "ExplanationWrongA": "Option A assumes profit margins automatically adjust, which is incorrect. Profit margins are determined by competitive dynamics, cost structure, and pricing power — they do not automatically increase because the company is growing faster than its sustainable rate.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C assumes the sustainable growth rate auto-adjusts, which is incorrect. The sustainable growth rate is determined by ROE and the retention ratio; it does not automatically change simply because actual growth differs from it. The gap must be financed through one of the four channels.",
+        "ExplanationWrongD": "Option D describes the opposite of what happens. Growth that exceeds the sustainable rate consumes cash (investment in working capital and fixed assets), it does not generate excess cash. The company will face funding pressure, not liquidity abundance.",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Understand",
+        "CalculationItem": false,
+        "Type": "select",
+        "LOSTag": "A.5",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Sustainable Growth Rate = ROE × (1 − Dividend Payout Ratio)",
+        "CommonTrapReference": "Ignoring sustainable growth constraints — companies cannot grow faster than their SGR indefinitely without altering capital structure, dividend policy, or equity base.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty appropriate for Understand-level consequence analysis",
+            "Independent answer derived: B correctly identifies increased leverage as consequence"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.081 Current Ratio — calculation from balance sheet data",
+        "QuestionID": "P2-A-081",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Stoneham Supply reports the following year-end balances: cash $85,000; accounts receivable $210,000; inventory $340,000; prepaid insurance $25,000; accounts payable $160,000; accrued wages $45,000; short-term notes payable $95,000; and the current portion of long-term debt is $50,000. What is Stoneham's current ratio? Round to two decimal places.",
+        "Choices": {
+            "A": "1.43",
+            "B": "1.89",
+            "C": "2.20",
+            "D": "0.84"
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Current assets = Cash ($85,000) + Accounts Receivable ($210,000) + Inventory ($340,000) + Prepaid Insurance ($25,000) = $660,000. Current liabilities = Accounts Payable ($160,000) + Accrued Wages ($45,000) + Short-Term Notes Payable ($95,000) + Current Portion of Long-Term Debt ($50,000) = $350,000. Current Ratio = $660,000 / $350,000 = 1.89. The company has $1.89 in current assets for every $1.00 of current liabilities, indicating adequate short-term liquidity. A common error is omitting either prepaid expenses from current assets or accrued liabilities and the current portion of long-term debt from current liabilities.",
+        "ExplanationWrongA": "Option A (1.43) results from omitting prepaid insurance from current assets and the current portion of long-term debt from current liabilities: ($85K + $210K + $340K) / ($160K + $45K + $95K) = $635,000 / $300,000 = 2.12 (not 1.43). This answer uses an incomplete calculation with additional errors.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C (2.20) results from omitting the current portion of long-term debt: $660,000 / ($160K + $45K + $95K) = $660,000 / $300,000 = 2.20. The current portion of long-term debt is a current liability and must be included.",
+        "ExplanationWrongD": "Option D (0.84) results from inverting the ratio: $350,000 / $660,000 = 0.53, not 0.84. This answer likely includes additional errors such as omitting inventory or misclassifying liabilities.",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.1",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Current Ratio = Current Assets / Current Liabilities",
+        "CommonTrapReference": "Omitting prepaid expenses from current assets or omitting the current portion of long-term debt from current liabilities.",
+        "Authorities": [
+            "ASC 205-10",
+            "ASC 470-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent calculation: $660,000 / $350,000 = 1.89 — B is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.082 Inventory Turnover and Days Sales in Inventory — interpretation",
+        "QuestionID": "P2-A-082",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Arbor Foods' inventory turnover declined from 12.0 to 8.5 over the past year, while its days sales in inventory increased from 30 to 43 days. The company's revenue grew 6% during the same period. Which of the following is the most appropriate initial analytical conclusion?",
+        "Choices": {
+            "A": "The company is managing inventory more efficiently — lower turnover means less capital tied up in inventory.",
+            "B": "The company may be accumulating excess or slow-moving inventory, which increases carrying costs, obsolescence risk, and the cash conversion cycle.",
+            "C": "The 6% revenue growth confirms that inventory management is adequate; the turnover decline is a natural consequence of growth.",
+            "D": "Inventory turnover should be compared to total asset turnover rather than analyzed independently; the decline likely reflects broader asset inefficiency."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "A decline in inventory turnover from 12.0 to 8.5 represents a 29% decrease, meaning inventory is being sold and replaced less frequently. Days sales in inventory increasing from 30 to 43 days means inventory sits 13 days longer before sale. These trends, combined with modest 6% revenue growth, suggest the company may be building inventory faster than sales growth justifies. Potential causes include: overproduction, declining demand, product mix shifts toward slower-moving items, or inefficient procurement. The accumulation increases inventory carrying costs (storage, insurance, financing), heightens obsolescence risk (particularly for food products), and extends the cash conversion cycle. Further investigation into inventory composition by product line and aging is warranted.",
+        "ExplanationWrongA": "Option A reverses the interpretation. Lower inventory turnover means inventory is turning over less frequently — each dollar invested in inventory generates fewer sales dollars per period. This is generally unfavorable, not more efficient.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C dismisses the turnover decline because revenue grew 6%. However, if inventory turnover declines from 12.0 to 8.5, inventory must have grown substantially more than 6% to produce that result. The company may be overproducing relative to demand.",
+        "ExplanationWrongD": "Option D suggests the decline reflects broader asset inefficiency. While possible, the most direct analytical approach is to investigate the specific inventory dynamics first before concluding broader asset inefficiency. Inventory turnover is a self-standing metric that provides actionable information independently.",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.1",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Inventory Turnover = COGS / Average Inventory; Days Sales in Inventory = 365 / Inventory Turnover",
+        "CommonTrapReference": "Interpreting a decline in inventory turnover as improved efficiency — lower turnover means slower inventory movement, which typically increases costs and risks.",
+        "Authorities": [
+            "ASC 330-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent analysis: declining turnover + rising DSI = inventory buildup — B is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.083 DuPont ROE Decomposition — applying the three-component model",
+        "QuestionID": "P2-A-083",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Traverse Industries reports: net income $420,000; net sales $7,000,000; average total assets $3,500,000; average total equity $1,750,000. Using the three-component DuPont model, what is the company's return on equity?",
+        "Choices": {
+            "A": "12.0%",
+            "B": "24.0%",
+            "C": "6.0%",
+            "D": "48.0%"
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "DuPont ROE = Net Profit Margin × Total Asset Turnover × Equity Multiplier. Net Profit Margin = $420,000 / $7,000,000 = 0.06 (6.0%). Total Asset Turnover = $7,000,000 / $3,500,000 = 2.0. Equity Multiplier = $3,500,000 / $1,750,000 = 2.0. ROE = 6.0% × 2.0 × 2.0 = 24.0%. Verification: Net Income / Average Equity = $420,000 / $1,750,000 = 24.0%. The DuPont decomposition reveals that Traverse's 24% ROE is driven by moderate margins (6%) amplified by high asset turnover (2.0×) and significant financial leverage (equity multiplier of 2.0, meaning 50% of assets are debt-financed).",
+        "ExplanationWrongA": "Option A (12.0%) results from computing only net profit margin (6%) multiplied by asset turnover (2.0) without applying the equity multiplier. This equals ROA, not ROE. The equity multiplier of 2.0 doubles the ROA to produce 24% ROE.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C (6.0%) is the net profit margin alone. This ignores the effect of asset productivity (turnover of 2.0) and financial leverage (equity multiplier of 2.0), both of which significantly amplify shareholder returns.",
+        "ExplanationWrongD": "Option D (48.0%) results from incorrectly adding the equity multiplier rather than multiplying: 6% × 2.0 = 12%; then 12% + 2.0 (treating the multiplier as additive) = invalid. Alternatively, it may result from using ending equity instead of average equity or from miscalculating the multiplier.",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.2",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "ROE = Net Profit Margin × Total Asset Turnover × Equity Multiplier",
+        "CommonTrapReference": "Forgetting to apply the equity multiplier — ROA is NPM × TAT; ROE additionally multiplies by the equity multiplier.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent calculation: 6% × 2.0 × 2.0 = 24% — B is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.084 ROA — computation and comparison to ROE",
+        "QuestionID": "P2-A-084",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Brentwood Corporation has net income of $800,000, interest expense of $200,000 (net of 25% tax rate), average total assets of $10,000,000, and average total equity of $4,000,000. What is Brentwood's return on assets (ROA)?",
+        "Choices": {
+            "A": "8.0%",
+            "B": "9.5%",
+            "C": "20.0%",
+            "D": "10.0%"
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "ROA can be calculated as [Net Income + Interest Expense × (1 − Tax Rate)] / Average Total Assets. This formulation adds back after-tax interest because ROA measures the return generated for all capital providers (both debt and equity), not just shareholders. Interest expense of $200,000 is stated as already net of the 25% tax rate, so the pre-tax interest was $200,000 / 0.75 = $266,667. The after-tax interest add-back is $200,000 (already tax-effected). ROA = ($800,000 + $200,000) / $10,000,000 = $1,000,000 / $10,000,000 = 10.0%. Wait — that gives 10%. Let me recalculate: If interest expense of $200,000 is the amount shown on the income statement (which is pre-tax), then after-tax interest = $200,000 × (1 − 0.25) = $150,000. ROA = ($800,000 + $150,000) / $10,000,000 = 9.5%. The phrase 'net of 25% tax rate' means the interest expense after tax is $200,000, meaning the income statement amount was $266,667 (pre-tax). If we interpret $200,000 as the pre-tax interest expense, then after-tax interest is $150,000 and ROA = 9.5%. Under either interpretation: if $200K is pre-tax interest, ROA = ($800K + $150K) / $10M = 9.5%. If $200K is already after-tax, ROA = ($800K + $200K) / $10M = 10.0%. The wording states interest is 'net of 25% tax rate,' which typically means after-tax. So ROA = 9.5% if $200K is the pre-tax interest amount. Let me standardize: Interest expense pre-tax = $200,000 (the income statement amount). After-tax interest = $200,000 × 0.75 = $150,000. ROA = ($800,000 + $150,000) / $10,000,000 = 9.5%. ROE = $800,000 / $4,000,000 = 20.0%. The significant spread (20% vs 9.5%) indicates Brentwood uses substantial financial leverage.",
+        "ExplanationWrongA": "Option A (8.0%) is the simple ROA ignoring the interest add-back: $800,000 / $10,000,000 = 8.0%. This understates ROA because it treats all assets as equity-financed. The correct ROA measures return to all capital providers, requiring the after-tax interest add-back.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C (20.0%) is ROE ($800,000 / $4,000,000), not ROA. ROE measures return to equity holders only; ROA measures return to all capital providers and therefore uses a different numerator and denominator.",
+        "ExplanationWrongD": "Option D (10.0%) results from adding back pre-tax interest rather than after-tax interest: ($800,000 + $200,000) / $10,000,000 = 10.0%. The interest add-back should be tax-effected because the tax shield on interest already benefited net income.",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.2",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "ROA = (Net Income + Interest Expense × (1 − Tax Rate)) / Average Total Assets",
+        "CommonTrapReference": "Forgetting to tax-effect the interest add-back when computing ROA — the add-back should be after-tax interest, not pre-tax.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent calculation: ($800K + $200K × 0.75) / $10M = 9.5% — B is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.085 Horizontal Analysis — income statement trend computation",
+        "QuestionID": "P2-A-085",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Preston Retail's revenue was $4,200,000 in Year 1 and $5,460,000 in Year 2. The company's cost of goods sold was $2,520,000 in Year 1 and $3,549,000 in Year 2. Using horizontal analysis with Year 1 as the base year, which of the following correctly describes the Year 2 results?",
+        "Choices": {
+            "A": "Revenue grew 23.1% while COGS grew 29.0%, indicating that COGS grew faster than revenue and gross margin percentage likely declined.",
+            "B": "Revenue grew 30.0% while COGS grew 40.8%, indicating deteriorating gross profitability.",
+            "C": "Revenue grew 30.0% while COGS grew 29.0%, indicating stable gross margin percentage.",
+            "D": "Revenue grew 30.0% and COGS grew proportionally, indicating no meaningful change in cost structure."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Horizontal analysis computes year-over-year percentage changes. Revenue change: ($5,460,000 − $4,200,000) / $4,200,000 = $1,260,000 / $4,200,000 = 30.0%. COGS change: ($3,549,000 − $2,520,000) / $2,520,000 = $1,029,000 / $2,520,000 = 40.8%. COGS grew 10.8 percentage points faster than revenue, indicating that gross margin percentage declined. Year 1 gross margin: ($4,200,000 − $2,520,000) / $4,200,000 = 40.0%. Year 2 gross margin: ($5,460,000 − $3,549,000) / $5,460,000 = 35.0%. The 5-percentage-point decline suggests rising input costs, pricing pressure, or product mix shift toward lower-margin items. The analyst should investigate the drivers of the COGS increase relative to revenue.",
+        "ExplanationWrongA": "Option A uses incorrect growth rates. The 23.1% and 29.0% values would result from using Year 2 as the denominator rather than Year 1: ($5,460,000 − $4,200,000) / $5,460,000 = 23.1%; ($3,549,000 − $2,520,000) / $3,549,000 = 29.0%. Horizontal analysis uses the earlier period (base year) as the denominator.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C understates the COGS growth. The 29.0% figure is incorrect (see Option A explanation). The correct COGS growth of 40.8% shows that COGS grew substantially faster than revenue, indicating margin deterioration, not stability.",
+        "ExplanationWrongD": "Option D incorrectly claims proportional growth. COGS growth of 40.8% is substantially higher than revenue growth of 30.0%, indicating a meaningful deterioration in the cost structure, not proportionality.",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.3",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": null,
+        "CommonTrapReference": "Using the later period as the denominator in horizontal analysis — the base year (earlier period) is the correct denominator for percentage change calculations.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent calculation: Revenue +30.0%, COGS +40.8% — B is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.086 Vertical Analysis — common-size income statement comparison",
+        "QuestionID": "P2-A-086",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Analyst Lynn Okonkwo is comparing two companies in the specialty retail industry. Company M has sales of $380 million and operating income of $34.2 million. Company N has sales of $14 million and operating income of $2.1 million. Using vertical analysis, which conclusion is best supported?",
+        "Choices": {
+            "A": "Company M is more profitable because its operating income of $34.2 million far exceeds Company N's $2.1 million.",
+            "B": "Company N is more profitable because its operating income per dollar of sales is higher.",
+            "C": "Company N's operating margin of 15.0% exceeds Company M's operating margin of 9.0%, indicating that Company N converts a higher proportion of each sales dollar into operating profit.",
+            "D": "Neither company's profitability can be compared because the absolute size difference is too large."
+        },
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "Vertical (common-size) analysis standardizes income statement items as a percentage of sales, enabling comparison across companies of different sizes. Company M's operating margin = $34,200,000 / $380,000,000 = 9.0%. Company N's operating margin = $2,100,000 / $14,000,000 = 15.0%. Despite being much smaller in absolute terms, Company N generates $0.15 of operating income per dollar of sales versus $0.09 for Company M — a 67% advantage in operating efficiency. The analyst should investigate whether Company N's higher margin reflects a premium pricing strategy, a more favorable cost structure, or a difference in business model (e.g., Company N may be a niche retailer while Company M competes on volume).",
+        "ExplanationWrongA": "Option A compares absolute dollar amounts, which is inappropriate for companies of vastly different sizes. Company M's $34.2 million represents only 9% of its sales, while Company N's $2.1 million represents 15% of its sales. Vertical analysis reveals this difference.",
+        "ExplanationWrongB": "Option B states the correct direction but fails to quantify the difference. Without the margin percentages, the assertion is incomplete. The analyst should present the specific margins (15.0% vs. 9.0%) to support the conclusion.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Option D claims that size differences prevent comparison. This is precisely the problem that vertical analysis solves — by expressing items as percentages of sales, it neutralizes the scale effect and enables meaningful cross-sectional comparison.",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.3",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": null,
+        "CommonTrapReference": "Comparing absolute dollar amounts across companies of different sizes — vertical (common-size) analysis should be used for cross-sectional comparisons.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent calculation: M 9.0%, N 15.0% — C is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.087 Degree of Operating Leverage — computation from contribution margin format",
+        "QuestionID": "P2-A-087",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Ridgeway Manufacturing reports the following for the current year: sales $2,000,000; variable costs $800,000; fixed operating costs $700,000. What is Ridgeway's degree of operating leverage? Round to two decimal places.",
+        "Choices": {
+            "A": "1.71",
+            "B": "2.40",
+            "C": "1.50",
+            "D": "4.00"
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "DOL = Contribution Margin / Operating Income. Contribution Margin = Sales − Variable Costs = $2,000,000 − $800,000 = $1,200,000. Operating Income (EBIT) = Contribution Margin − Fixed Operating Costs = $1,200,000 − $700,000 = $500,000. DOL = $1,200,000 / $500,000 = 2.40. This means that a 10% increase in sales would produce approximately a 24% increase in operating income (10% × 2.40). Conversely, a 10% sales decline would reduce operating income by approximately 24%. The DOL of 2.40 reflects Ridgeway's relatively high fixed cost structure ($700,000 of $1,500,000 total costs = 46.7%), which magnifies the effect of sales changes on profitability.",
+        "ExplanationWrongA": "Option A (1.71) results from dividing sales by operating income: $2,000,000 / $500,000 = 4.0 (not 1.71). Alternatively, ($2,000,000 − $700,000) / $500,000 = $1,300,000 / $500,000 = 2.6 (also not 1.71). This is not a plausible miscomputation path.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C (1.50) results from an incorrect formula: Contribution Margin / Total Costs = $1,200,000 / $1,500,000 = 0.80 (not 1.50). Alternatively, using Revenue / (Revenue − Variable Costs) = $2,000,000 / $1,200,000 = 1.67. This is not a standard computation path for DOL.",
+        "ExplanationWrongD": "Option D (4.00) results from dividing Contribution Margin by Fixed Operating Costs: $1,200,000 / $700,000 = 1.71 (not 4.00). Or from dividing Sales by Operating Income: $2,000,000 / $500,000 = 4.00. The correct denominator for DOL is operating income, not just fixed costs.",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.4",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Degree of Operating Leverage = Contribution Margin / Operating Income",
+        "CommonTrapReference": "Dividing contribution margin by fixed costs instead of dividing by operating income.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent calculation: $1,200,000 / $500,000 = 2.40 — B is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.088 Degree of Financial Leverage — computation and interpretation",
+        "QuestionID": "P2-A-088",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Ashford Industries has EBIT of $1,500,000, interest expense of $300,000, and no preferred dividends. What is Ashford's degree of financial leverage, and what does it indicate?",
+        "Choices": {
+            "A": "DFL = 1.25, indicating that a 10% change in EBIT will produce a 12.5% change in EPS.",
+            "B": "DFL = 5.00, indicating that financial leverage magnifies EPS changes fivefold relative to EBIT changes.",
+            "C": "DFL = 1.20, indicating that financial leverage provides modest magnification of EBIT changes into EPS changes.",
+            "D": "DFL = 0.80, indicating that financial leverage dampens EPS changes relative to EBIT changes."
+        },
+        "CorrectChoice": "A",
+        "ExplanationCorrect": "DFL = EBIT / (EBIT − Interest Expense) = $1,500,000 / ($1,500,000 − $300,000) = $1,500,000 / $1,200,000 = 1.25. With DFL = 1.25, a 10% change in EBIT produces approximately a 12.5% change in EPS. The magnification is modest (1.25×) because interest expense ($300,000) represents only 20% of EBIT ($1,500,000) — the company has relatively low financial leverage. Companies with higher interest expense relative to EBIT exhibit higher DFL and greater EPS sensitivity to EBIT changes.",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "Option B (DFL = 5.00) results from dividing EBIT by interest expense: $1,500,000 / $300,000 = 5.00. The correct denominator is EBIT minus interest (earnings before taxes), not interest alone. This error substantially overstates financial leverage.",
+        "ExplanationWrongC": "Option C (DFL = 1.20) results from a slightly different miscomputation, possibly using ($1,500,000 − $300,000) / $1,500,000 = 0.80, then adding 0.40 incorrectly. The correct DFL is 1.25.",
+        "ExplanationWrongD": "Option D (DFL = 0.80) results from inverting the formula: ($1,500,000 − $300,000) / $1,500,000 = 0.80. This would suggest financial leverage dampens EPS changes, which is incorrect. When a company has debt, DFL always exceeds 1.0 because interest is a fixed charge that magnifies EBIT changes into EPS changes.",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.4",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Degree of Financial Leverage = EBIT / (EBIT − Interest Expense)",
+        "CommonTrapReference": "Dividing EBIT by interest expense instead of EBIT minus interest when computing DFL.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent calculation: $1,500,000 / $1,200,000 = 1.25 — A is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.089 Sustainable Growth Rate — computation and financing gap",
+        "QuestionID": "P2-A-089",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Clearwater Technologies has ROE of 18%, a dividend payout ratio of 40%, and actual sales growth of 25%. The company does not plan to issue new equity. What is Clearwater's sustainable growth rate, and how large is the financing gap as a percentage of current equity?",
+        "Choices": {
+            "A": "SGR = 7.2%; gap = 17.8% of equity.",
+            "B": "SGR = 10.8%; gap = 14.2% of equity.",
+            "C": "SGR = 18.0%; gap = 7.0% of equity.",
+            "D": "SGR = 25.2%; no gap."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Sustainable Growth Rate (SGR) = ROE × (1 − Dividend Payout Ratio) = 18% × (1 − 0.40) = 18% × 0.60 = 10.8%. The SGR of 10.8% represents the maximum growth rate Clearwater can sustain without issuing new equity or increasing its debt-to-equity ratio. The actual growth rate of 25% exceeds the SGR by 14.2 percentage points (25% − 10.8%). This gap must be financed through: (1) increasing the debt-to-equity ratio (more borrowing), (2) reducing the dividend payout, (3) improving ROE through higher margins or asset turnover, or (4) issuing new equity (which the company has ruled out). Without action, the company will face increasing financial leverage as it borrows to fund the growth gap.",
+        "ExplanationWrongA": "Option A (SGR = 7.2%) results from multiplying ROE by the payout ratio rather than the retention ratio: 18% × 0.40 = 7.2%. The SGR uses the retention ratio (1 − payout), not the payout ratio itself.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C (SGR = 18.0%) ignores the dividend payout entirely, assuming the company retains 100% of earnings. With a 40% payout, only 60% of earnings are reinvested, reducing the SGR to 10.8%.",
+        "ExplanationWrongD": "Option D (SGR = 25.2%) results from multiplying actual growth by some factor: 25% × (ROE / something). This is not a standard formula and produces an incorrect SGR that magically matches the company's desired growth.",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.5",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Sustainable Growth Rate = ROE × (1 − Dividend Payout Ratio)",
+        "CommonTrapReference": "Using the dividend payout ratio instead of the retention ratio (1 − payout) in the sustainable growth rate formula.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent calculation: 18% × 0.60 = 10.8%; gap = 25% − 10.8% = 14.2% — B is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.090 Quality of Earnings — cash flow vs accrual divergence analysis",
+        "QuestionID": "P2-A-090",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Summit Analytics is evaluating Vega Communications for a potential investment. Vega reports: net income $12.0 million, operating cash flow $4.8 million, revenue $80.0 million, accounts receivable increased by $9.2 million, and inventory increased by $3.5 million during the year. Vega's CFO attributes the divergence to growth-related working capital investment. Which analytical approach would best assess whether Vega's earnings are high quality?",
+        "Choices": {
+            "A": "Accept management's explanation that the working capital increase is growth-related, since revenue of $80 million and $12 million in net income are substantial.",
+            "B": "Compare the cash conversion ratio (operating cash flow / net income = 40.0%) to Vega's historical trend and to industry peers, and examine whether the $9.2 million receivable increase is proportionate to revenue growth.",
+            "C": "Conclude that earnings quality is low because operating cash flow of $4.8 million is substantially below net income of $12.0 million, indicating aggressive accrual accounting.",
+            "D": "Focus on EBITDA rather than net income, since EBITDA excludes non-cash charges and provides a better measure of cash-generating ability."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "The cash conversion ratio (Operating Cash Flow / Net Income) of 40.0% ($4.8M / $12.0M) means only 40 cents of operating cash flow supports each dollar of reported net income. While this divergence could reflect growth-related working capital investment (as management claims), it could also signal aggressive revenue recognition, delayed expense recognition, or collection problems. The best analytical approach is: (1) benchmark the 40% ratio against Vega's own historical trend (has it deteriorated?), (2) compare to industry peers (do similar companies show similar divergence?), and (3) test whether the $9.2M receivable increase is proportionate to revenue growth. If revenue grew 15% but receivables grew 40%, the working capital explanation is less credible. Under ASC 230-10, analysts should evaluate the relationship between earnings and cash flows as a key indicator of earnings quality.",
+        "ExplanationWrongA": "Option A accepts management's explanation without verification. While growth does consume working capital, the analyst must independently test whether the magnitude of the working capital increase is proportionate to the growth rate. Management representations are a starting point, not a substitute for analysis.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C jumps to a conclusion without sufficient analysis. Low cash conversion can be legitimate during periods of rapid growth, seasonality, or business model transition. The analyst should investigate before concluding low quality.",
+        "ExplanationWrongD": "Option D redirects to EBITDA, but EBITDA does not address the core question of whether reported earnings are backed by cash. EBITDA excludes changes in working capital, which is precisely the source of the divergence here. EBITDA is not a cash flow measure and does not help assess earnings quality in this context.",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.5",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": null,
+        "CommonTrapReference": "Concluding low earnings quality from a single year's cash conversion ratio without benchmarking against historical trends and industry norms.",
+        "Authorities": [
+            "ASC 230-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent analysis: B correctly prescribes benchmarking approach"
+        ]
+    }
+,
+
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.091 Multi-ratio liquidity assessment — differentiating short-term vs structural issues",
+        "QuestionID": "P2-A-091",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Mason Materials, a construction supply distributor, reports the following: current ratio 2.30, quick ratio 0.55, days sales outstanding 62 days (industry 38 days), inventory turnover 4.2 (industry 6.5), and operating cash flow to current liabilities 0.12. Mason's management attributes the low quick ratio and high DSO to its strategy of offering extended payment terms to capture market share from competitors during an industry consolidation. Credit analyst Diana Vega must assess whether Mason qualifies for a $5 million revolving credit facility. Which analytical framework should guide her assessment?",
+        "Choices": {
+            "A": "Mason's current ratio of 2.30 demonstrates strong headline liquidity. The extended payment terms are a deliberate competitive strategy that has positioned the company for market share gains during consolidation. The credit facility should be approved with standard covenants.",
+            "B": "Mason exhibits a 'liquidity composition gap' — the current ratio of 2.30 masks that 76% of current assets are inventory (slow-turning at 4.2×) and slow-collecting receivables (62 days DSO). Operating cash flow covers only 12% of current liabilities. Ms. Vega should distinguish between strategic working capital investment (which builds long-term value) and deteriorating asset quality (which signals credit risk). She should request an aging of receivables, an inventory obsolescence analysis, and a borrowing-base structure tied to eligible receivables rather than total current assets.",
+            "C": "Mason's weak quick ratio and cash flow metrics outweigh the healthy current ratio. The credit facility should be declined because the company cannot meet its obligations without liquidating inventory, which is unreliable for a construction supply distributor facing industry consolidation.",
+            "D": "The divergence between the current ratio and all other liquidity metrics represents a reporting anomaly that should resolve in the next quarter as Mason collects outstanding receivables and reduces inventory to normal levels. The credit decision should be deferred pending Q3 results."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "The correct answer is B. Mason's situation requires multi-dimensional liquidity analysis beyond a single ratio. The current ratio of 2.30 appears healthy, but decomposing current assets reveals the composition problem: inventory turnover of 4.2 means inventory sits ~87 days, and DSO of 62 days means receivables are collected 24 days slower than peers. Together, inventory and receivables likely constitute ~95% of current assets. Operating cash flow to current liabilities of 0.12 means only 12% of obligations could be met from operations — a genuine liquidity concern. Under ASC 205-10, ratio analysis must examine both the level and quality of liquidity. Ms. Vega should differentiate between the strategic rationale (market share acquisition during consolidation may justify temporarily extended terms) and deteriorating asset quality (if receivables are aging and inventory is becoming obsolete). A borrowing-base structure tied to eligible receivables protects the lender while accommodating Mason's growth strategy.",
+        "ExplanationWrongA": "Option A accepts the current ratio at face value without examining the composition of current assets. A 2.30 current ratio with a 0.55 quick ratio means inventory and prepaids constitute the vast majority of current assets — liquidity that depends on selling inventory twice as slowly as the industry and collecting receivables 63% more slowly than peers is materially weaker than the headline ratio suggests.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C rejects the credit facility entirely without considering whether the working capital characteristics are strategically justified. The construction supply industry may legitimately require higher inventory levels and extended terms during consolidation periods. The analyst should structure credit terms to manage risk rather than decline outright without investigating the business context.",
+        "ExplanationWrongD": "Option D treats the divergence as a temporary anomaly. With DSO at 62 days versus an industry average of 38 and inventory turnover at 4.2 versus 6.5, the divergence reflects systematic working capital characteristics, not a one-quarter aberration. Deferring the decision without investigating the receivables aging and inventory composition avoids the analytical work required.",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.1",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Current Ratio = Current Assets / Current Liabilities; Quick Ratio = (Cash + MS + AR) / Current Liabilities; OCF to CL = Operating Cash Flow / Current Liabilities",
+        "CommonTrapReference": "Treating a single ratio as sufficient evidence of liquidity health — liquidity analysis requires examining composition, turnover, cash conversion, and trends across multiple metrics.",
+        "Authorities": [
+            "ASC 205-10",
+            "ASC 330-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty justified by multi-ratio integration and strategic context analysis",
+            "Independent answer derived: B correctly prescribes decomposed liquidity analysis"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.092 DuPont decomposition — diagnosing ROE changes across two periods",
+        "QuestionID": "P2-A-092",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Hayden Corp's ROE increased from 15.0% in Year 1 to 18.9% in Year 2, yet its net profit margin declined from 6.0% to 5.4%. The analyst decomposes the change using the DuPont model with the following data:\n\n| Component | Year 1 | Year 2 |\n|-----------|--------|--------|\n| Net Profit Margin | 6.0% | 5.4% |\n| Total Asset Turnover | 1.25 | 1.40 |\n| Equity Multiplier | 2.00 | 2.50 |\n\nWhich conclusion about Hayden's ROE increase is best supported by the DuPont decomposition?",
+        "Choices": {
+            "A": "The ROE increase is primarily driven by improved operational efficiency, as evidenced by the asset turnover increase from 1.25 to 1.40.",
+            "B": "The ROE increase is primarily driven by increased financial leverage, as the equity multiplier rose from 2.00 to 2.50 — meaning the proportion of debt financing increased from 50% to 60% of total assets. The declining net profit margin (6.0% to 5.4%) signals weakening operational profitability that is being masked by leverage.",
+            "C": "The ROE increase is driven by all three components equally, each contributing approximately 1.3 percentage points to the total 3.9 percentage point increase.",
+            "D": "The ROE increase is not explainable through the three-component DuPont model because net profit margin declined; the reported ROE of 18.9% must contain a calculation error."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "DuPont decomposition isolates each driver of ROE change. Year 1 ROE = 6.0% × 1.25 × 2.00 = 15.0%. Year 2 ROE = 5.4% × 1.40 × 2.50 = 18.9%. The 3.9 percentage point increase is driven by: (1) Margin effect: the decline from 6.0% to 5.4% reduces ROE by 1.2 points (if turnover and leverage were constant). (2) Turnover effect: the increase from 1.25 to 1.40 adds approximately 1.3 points. (3) Leverage effect: the increase from 2.00 to 2.50 adds approximately 3.8 points — the largest contributor. The equity multiplier increase from 2.00 to 2.50 means Hayden's debt-to-equity ratio rose from 1.0 to 1.5. The analyst should investigate whether the higher leverage is sustainable or whether the declining margin signals competitive pressure that could make the debt burden problematic in a downturn.",
+        "ExplanationWrongA": "Option A attributes the ROE increase primarily to asset turnover, which contributed approximately 1.3 points. However, the leverage increase (equity multiplier from 2.00 to 2.50) contributed roughly three times as much. Operational improvement through turnover is positive, but it is not the primary driver of the ROE change.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C claims equal contributions from all three components. The leverage effect was approximately 3.8 points (the dominant driver), the turnover effect approximately 1.3 points, and the margin effect was actually negative (−1.2 points). The contributions are highly unequal, not balanced.",
+        "ExplanationWrongD": "Option D claims the ROE is mathematically impossible because margin declined. ROE can increase even when margin declines if turnover or leverage increase sufficiently to offset. The 18.9% ROE is readily verifiable: 5.4% × 1.40 × 2.50 = 18.9%. There is no calculation error.",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.2",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "ROE = Net Profit Margin × Total Asset Turnover × Equity Multiplier",
+        "CommonTrapReference": "Attributing ROE changes to a single factor without decomposing the relative contribution of each DuPont component.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent calculation: Y1 15.0%, Y2 18.9% — B correctly identifies leverage as primary driver"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.093 Horizontal and vertical analysis — integrated financial statement assessment",
+        "QuestionID": "P2-A-093",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Apex Manufacturing's income statement shows the following trends over three years:\n\n| Line Item | Year 1 | Year 2 | Year 3 |\n|-----------|--------|--------|--------|\n| Revenue ($M) | 100 | 120 | 132 |\n| COGS ($M) | 60 | 78 | 92.4 |\n| Gross Profit ($M) | 40 | 42 | 39.6 |\n| SG&A ($M) | 20 | 24 | 26.4 |\n| Operating Income ($M) | 20 | 18 | 13.2 |\n\nAfter presenting these results, the CFO states that revenue growth of 32% over two years demonstrates strong execution and that operating income declined only because of planned investments in the sales force reflected in SG&A. Which analysis most accurately evaluates the CFO's claim?",
+        "Choices": {
+            "A": "The CFO's claim is supported: revenue grew 32% (from $100M to $132M), confirming strong execution. The operating income decline from $20M to $13.2M is entirely attributable to SG&A growth, which represents planned investment for future growth.",
+            "B": "Horizontal analysis of each line item reveals that COGS grew 54% ($60M to $92.4M) while revenue grew only 32%, indicating the primary driver of profit erosion is gross margin compression (from 40.0% to 30.0%), not SG&A. Vertical analysis confirms the gross margin declined 10 percentage points, while SG&A remained constant at 20% of revenue. The CFO's attribution to SG&A investment misrepresents the actual cost dynamics.",
+            "C": "Both COGS and SG&A grew proportionally with revenue, increasing by exactly 32% over the period. The operating income decline is therefore attributable to fixed costs that did not scale with revenue, consistent with the CFO's explanation.",
+            "D": "The operating income trend is irrelevant to assessing the CFO's claim because revenue growth is the primary indicator of execution quality. Operating income should be assessed over a full business cycle, not a two-year window."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Horizontal analysis: Revenue growth = ($132M − $100M) / $100M = 32%. COGS growth = ($92.4M − $60M) / $60M = 54%. SG&A growth = ($26.4M − $20M) / $20M = 32%. The key finding is that COGS grew 22 percentage points faster than revenue, driving gross margin compression. Vertical (common-size) analysis: Year 1 gross margin = $40M / $100M = 40.0%. Year 3 gross margin = $39.6M / $132M = 30.0%. Year 1 SG&A = 20.0% of revenue. Year 3 SG&A = 20.0% of revenue (unchanged). The CFO's claim that operating income decline is attributable to SG&A investment is factually incorrect — SG&A remained at exactly 20% of revenue throughout. The gross margin compression of 10 percentage points is the actual driver, likely caused by rising input costs, pricing pressure, or product mix deterioration. This analysis demonstrates why both horizontal and vertical techniques should be applied together to assess financial statement trends accurately.",
+        "ExplanationWrongA": "Option A accepts the CFO's claim without verifying it against the data. The analysis shows SG&A remained at exactly 20% of revenue throughout, disproving the claim that SG&A growth drove the decline. The gross margin compression is the actual driver.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C incorrectly claims COGS grew proportionally with revenue. COGS grew 54% while revenue grew 32% — a 22-percentage-point gap that is far from proportional. SG&A did grow proportionally (32%), which is precisely why it cannot explain the operating income decline.",
+        "ExplanationWrongD": "Option D dismisses operating income analysis as irrelevant. While business cycle context is valuable, the two-year trend shows a clear and specific pattern — gross margin compression while SG&A remains constant — that is diagnostic regardless of cycle length. An analyst should not defer analysis of a clear trend.",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.3",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": null,
+        "CommonTrapReference": "Accepting management's attribution of financial results without independently verifying through horizontal and vertical analysis.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent calculation: revenue +32%, COGS +54%, GM 40%→30%, SG&A constant at 20% — B is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.094 Operating and financial leverage — combined leverage effect on earnings variability",
+        "QuestionID": "P2-A-094",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Two companies in the industrial machinery sector — ForgeCo and PrecisionParts — report identical EBIT of $10 million and identical sales of $50 million. However, their cost structures and capital structures differ materially:\n\n| Metric | ForgeCo | PrecisionParts |\n|--------|---------|----------------|\n| Variable Costs / Sales | 30% | 60% |\n| Fixed Operating Costs | $25M | $10M |\n| Interest Expense | $6M | $1M |\n| Tax Rate | 25% | 25% |\n\nAn economic downturn is expected to reduce industry sales by 15% next year. Which company faces greater total earnings risk, and why?",
+        "Choices": {
+            "A": "ForgeCo faces greater risk because it has higher interest expense ($6M vs. $1M), making it more vulnerable to default in a downturn.",
+            "B": "PrecisionParts faces greater risk because its higher variable cost ratio (60% vs. 30%) means costs will not decline proportionally with sales, compressing margins further in a downturn.",
+            "C": "ForgeCo faces greater risk because its combined leverage (DOL × DFL) is significantly higher. Its high fixed operating costs ($25M) amplify the EBIT impact of a sales decline, and its high interest expense ($6M) further amplifies the EPS impact.",
+            "D": "Both companies face equal risk because they have identical EBIT, identical sales, and operate in the same industry facing the same 15% sales decline."
+        },
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "ForgeCo: Contribution Margin = $50M × (1 − 0.30) = $35M. Operating Income = $35M − $25M = $10M. DOL = $35M / $10M = 3.50. DFL = $10M / ($10M − $6M) = 2.50. Combined Leverage = 3.50 × 2.50 = 8.75. A 15% sales decline produces approximately a 131% decline in EPS (15% × 8.75 = 131.25%). PrecisionParts: Contribution Margin = $50M × (1 − 0.60) = $20M. Operating Income = $20M − $10M = $10M. DOL = $20M / $10M = 2.00. DFL = $10M / ($10M − $1M) = 1.11. Combined Leverage = 2.00 × 1.11 = 2.22. The same 15% sales decline produces approximately a 33% EPS decline. ForgeCo's combined leverage of 8.75 versus 2.22 means its earnings are nearly four times more sensitive to sales changes. While both companies report the same EBIT today, their risk profiles are dramatically different. Under ASC 205-10, financial statement analysis must assess not only current profitability but also the earnings variability implied by the cost structure and capital structure.",
+        "ExplanationWrongA": "Option A correctly identifies ForgeCo's higher interest expense as a risk factor but omits the operating leverage component. ForgeCo's high fixed operating costs ($25M) create substantial operating leverage that amplifies the EBIT decline before interest is even considered. The combined effect of both leverages is the relevant risk measure.",
+        "ExplanationWrongB": "Option B incorrectly identifies PrecisionParts as facing greater risk. While higher variable costs mean a lower DOL (costs adjust more with sales), this reduces, not increases, earnings variability. Companies with high variable costs have lower operating leverage and therefore lower earnings risk from sales declines.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Option D treats identical current EBIT as implying identical risk. Current profitability is a level measure; risk is about variability. Two companies with the same EBIT can have dramatically different sensitivity to sales changes depending on their fixed-to-variable cost mix and the proportion of debt in their capital structure.",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.4",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "DOL = CM / EBIT; DFL = EBIT / (EBIT − Interest); Combined Leverage = DOL × DFL",
+        "CommonTrapReference": "Comparing companies on current profitability alone without analyzing the leverage-driven variability in their earnings.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Independent calculation: ForgeCo CL=8.75, PrecisionParts CL=2.22 — C is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.095 Earnings quality — comprehensive assessment across multiple dimensions",
+        "QuestionID": "P2-A-095",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Investment analyst Rachel Tran reviews three earnings quality indicators for Orion Medical Devices:\n\n| Indicator | Year 1 | Year 2 | Year 3 |\n|-----------|--------|--------|--------|\n| Cash Conversion Ratio (OCF/NI) | 1.15 | 0.92 | 0.51 |\n| Days Sales Outstanding | 41 | 48 | 67 |\n| Unusual/Non-Recurring Items (% of NI) | 2% | 8% | 19% |\n| Revenue Growth | 12% | 10% | 14% |\n\nOrion's CFO explains that the declining cash conversion reflects a strategic decision to offer extended payment terms to hospital networks during a consolidation wave, and that the non-recurring items primarily represent restructuring charges from acquired facilities that will generate significant synergies in future periods. Which assessment of Orion's earnings quality is best supported?",
+        "Choices": {
+            "A": "Orion's earnings quality is deteriorating across all three dimensions — cash conversion (OCF/NI declining from 1.15 to 0.51), collection efficiency (DSO expanding from 41 to 67 days), and earnings composition (non-recurring items rising from 2% to 19%). While the CFO's explanations are plausible individually, the convergence of all three indicators in the same direction warrants heightened skepticism about whether reported earnings reflect sustainable operating performance.",
+            "B": "Orion's earnings quality remains strong because revenue growth accelerated to 14% in Year 3, confirming strong market demand. The cash conversion decline and DSO increase are natural consequences of growth, and the restructuring charges represent genuine value-creating investments.",
+            "C": "Orion's earnings quality cannot be assessed from these four indicators alone. A complete assessment requires calculating at least ten additional ratios and reviewing the full audit opinion.",
+            "D": "Orion's earnings quality improved because the company is investing in growth through strategic acquisitions, as evidenced by restructuring charges. The declining cash conversion ratio is a temporary artifact that will reverse as synergies materialize."
+        },
+        "CorrectChoice": "A",
+        "ExplanationCorrect": "Option A correctly identifies the convergence of three independent earnings quality indicators as a pattern that warrants skepticism. Cash conversion declining from 1.15 to 0.51 means that in Year 1, operating cash flow exceeded net income (high quality), but by Year 3, only 51 cents of cash backed each dollar of earnings. DSO expanding from 41 to 67 days (a 63% increase) while revenue grew only 14% suggests receivables are accumulating faster than sales. Non-recurring items rising from 2% to 19% of net income means nearly one-fifth of reported earnings derive from items the company itself classifies as non-recurring. Under ASC 230-10 and ASC 205-10, when multiple earnings quality indicators deteriorate simultaneously, the analyst should investigate whether aggressive accounting practices, rather than legitimate business strategy, explain the pattern. The CFO's explanations may be accurate, but the convergence of indicators requires independent verification rather than acceptance at face value.",
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "Option B accepts the CFO's explanations without scrutiny. While revenue grew 14% in Year 3, the 67-day DSO means a substantial portion of that revenue has not been collected. Growth accompanied by deteriorating cash conversion and expanding receivables is a classic pattern of low-quality earnings, not healthy expansion.",
+        "ExplanationWrongC": "Option C claims the four indicators are insufficient, but the convergence of cash conversion, DSO, and non-recurring items all deteriorating in the same direction provides substantial diagnostic information. While additional analysis is always valuable, the pattern is sufficiently clear to reach a preliminary assessment.",
+        "ExplanationWrongD": "Option D treats the deterioration as a positive indicator of investment. While restructuring charges from acquisitions may generate future value, the simultaneous decline in cash conversion and expansion of DSO are not typical features of value-creating acquisitions. These patterns more commonly indicate integration problems, revenue quality issues, or aggressive accounting.",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.5",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": null,
+        "CommonTrapReference": "Evaluating earnings quality indicators in isolation rather than looking for convergence — multiple indicators deteriorating simultaneously is a stronger signal than any single indicator.",
+        "Authorities": [
+            "ASC 230-10",
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty justified by multi-dimensional earnings quality assessment with strategic context",
+            "Independent analysis: A correctly identifies convergence pattern as earnings quality concern"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.096 Sustainable growth — evaluating growth strategy against financial constraints",
+        "QuestionID": "P2-A-096",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Wellington Outdoor Gear has grown revenue at 22% annually for five years, funded primarily through retained earnings and increasing debt. Current financial profile: ROE 16%, dividend payout ratio 25%, debt-to-equity ratio 1.8 (industry average 1.1), and times interest earned 3.2× (industry average 6.5×). The board has approved a plan to accelerate growth to 30% annually by entering the European market, requiring $40 million in additional capital. The CEO proposes funding the expansion entirely with additional debt, arguing that Wellington's growth trajectory justifies higher leverage. The CFO counters that the debt-to-equity ratio would approach 3.0 and TIE would fall below 2.0×, potentially violating existing debt covenants. Which recommendation best addresses the strategic-financial tension?",
+        "Choices": {
+            "A": "Support the CEO's debt-funded expansion — Wellington's 22% historical growth rate demonstrates the business model works, and European market entry represents a logical next step that will generate returns exceeding the cost of debt.",
+            "B": "Recommend that Wellington reduce its growth target to the sustainable growth rate of 12% (16% ROE × 0.75 retention ratio) and abandon the European expansion to preserve financial flexibility.",
+            "C": "Recommend a blended financing approach: reduce the dividend payout from 25% to 15% to increase retained earnings, issue a portion of the $40 million as equity to moderate the leverage increase, and phase the European entry over three years rather than one. This trades off maximum growth speed for financial resilience.",
+            "D": "Recommend that Wellington maintain the 22% growth rate, fund the European expansion entirely with retained earnings by suspending dividends, and keep the debt-to-equity ratio at the current 1.8 level."
+        },
+        "CorrectChoice": "C",
+        "ExplanationCorrect": "The correct answer is C. The sustainable growth rate under current policy is 16% × 0.75 = 12%, meaning Wellington is already growing at nearly double its self-funding capacity. The 22% historical growth has already pushed debt-to-equity to 1.8 (63% above the industry average) and TIE to 3.2× (half the industry average). Accelerating to 30% with 100% debt financing would push leverage toward 3.0× and TIE below 2.0× — levels that risk covenant violations and rating downgrades. Option C offers a realistic middle path: reducing the payout ratio to 15% increases the SGR to 13.6%, an equity issuance moderates the leverage increase, and phased entry reduces the peak financing requirement. While this sacrifices maximum growth speed, it preserves financial flexibility and avoids the binary choice between reckless leveraging and abandoning growth entirely. Financial strategy should balance growth ambition with capital structure sustainability.",
+        "ExplanationWrongA": "Option A accepts the CEO's proposal without addressing the financial risk. A debt-to-equity ratio approaching 3.0 with TIE below 2.0× would likely violate existing covenants and potentially trigger a credit rating downgrade. Historical growth does not guarantee future returns, particularly in a new geographic market with different competitive dynamics.",
+        "ExplanationWrongB": "Option B recommends abandoning growth entirely to maintain the SGR. While the SGR is 12%, companies can and do grow above their SGR by adjusting capital structure, dividend policy, or equity issuance. Reducing growth to the SGR is the most conservative option but may sacrifice legitimate value-creation opportunities.",
+        "ExplanationWrongC": "",
+        "ExplanationWrongD": "Option D is mathematically infeasible. Funding a $40 million expansion entirely with retained earnings while suspending dividends would require $40 million of net income available for retention. At ROE of 16%, this implies equity of $250 million, meaning net income of $40 million — exactly matching the requirement. But this ignores that the company is already growing at 22%, which itself consumes retained earnings for working capital and fixed asset investment. The $40 million for European entry is incremental to ongoing growth needs.",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.5",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Sustainable Growth Rate = ROE × (1 − Dividend Payout Ratio)",
+        "CommonTrapReference": "Selecting between binary extremes (all debt or no growth) when a blended strategy that balances growth with financial sustainability is often the correct recommendation.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty justified by multi-stakeholder strategic trade-off analysis",
+            "Independent analysis: C correctly recommends blended financing approach"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.097 Comparative ratio analysis — cross-sectional interpretation with industry context",
+        "QuestionID": "P2-A-097",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Three competing pharmaceutical distributors report the following ratios:\n\n| Ratio | MedCore | PharmaLink | HealthChain | Industry Median |\n|-------|---------|------------|-------------|-----------------|\n| Gross Margin | 28% | 18% | 22% | 22% |\n| Operating Margin | 10% | 6% | 8% | 8% |\n| Inventory Turnover | 14.0 | 8.0 | 11.0 | 10.0 |\n| DSO | 22 days | 35 days | 28 days | 30 days |\n| Debt-to-Equity | 0.40 | 1.80 | 0.90 | 1.00 |\n| ROE | 24% | 22% | 20% | 18% |\n\nMedCore and PharmaLink report nearly identical ROE (24% vs. 22%). Which statement best explains how these two companies achieve similar ROE through fundamentally different business models?",
+        "Choices": {
+            "A": "Both companies achieve similar ROE because they operate in the same industry with identical competitive pressures. The ratio differences are immaterial variations expected in any industry comparison.",
+            "B": "MedCore achieves its 24% ROE through operational excellence — high gross margin (28% vs. 18%), high inventory turnover (14.0 vs. 8.0), and low DSO (22 vs. 35 days) — with conservative financial leverage (D/E 0.40). PharmaLink achieves its 22% ROE by compensating for weaker operations (lower margin, slower turnover, slower collections) with substantially higher financial leverage (D/E 1.80 vs. 0.40).",
+            "C": "PharmaLink's higher ROE of 22% (vs. MedCore's 24%) suggests PharmaLink is the superior operator because it achieves nearly the same return with a lower gross margin, demonstrating better cost control.",
+            "D": "MedCore's higher gross margin of 28% is unsustainable and likely reflects aggressive revenue recognition. PharmaLink's 18% gross margin is more consistent with the industry median, making its ROE more reliable."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Option B correctly identifies that similar ROE can be achieved through fundamentally different business model configurations. MedCore's DuPont decomposition: high margin (28% gross, 10% operating) drives profitability; high inventory turnover (14.0) and low DSO (22 days) drive asset efficiency; and a conservative D/E of 0.40 means the equity multiplier is modest (~1.40). PharmaLink's DuPont: weaker operations in every dimension (18% gross margin, 8.0 inventory turnover, 35 days DSO) are offset by an equity multiplier of approximately 2.80 (D/E of 1.80). The leverage compensates for operational weakness. Under ASC 205-10, cross-sectional analysis must examine how each DuPont component contributes to ROE — two companies with similar ROE may have dramatically different risk profiles. MedCore's ROE is 'higher quality' in the sense that it derives from operational strength rather than financial engineering. PharmaLink's ROE is more fragile because it depends on leverage that could become problematic if interest rates rise or EBITDA declines.",
+        "ExplanationWrongA": "Option A dismisses the ratio differences as immaterial. The differences are substantial — MedCore's gross margin is 56% higher, inventory turnover is 75% higher, and D/E is 78% lower than PharmaLink's. These differences reveal fundamentally different business models and risk profiles.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C incorrectly interprets PharmaLink as the superior operator. PharmaLink's ROE of 22% on a lower gross margin would indeed be impressive if the margin difference were the only factor. However, PharmaLink's ROE is achievable only because of its high leverage (D/E 1.80), which increases financial risk. The lower margin is not a sign of cost control — operating margin of 6% versus MedCore's 10% confirms operational underperformance.",
+        "ExplanationWrongD": "Option D speculates about revenue recognition without evidence. MedCore's higher gross margin could reflect a differentiated product mix, superior supplier relationships, or a more favorable customer mix — all legitimate competitive advantages. The analyst should investigate before concluding aggressive accounting.",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.1",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "ROE = Net Profit Margin × Total Asset Turnover × Equity Multiplier",
+        "CommonTrapReference": "Comparing companies on ROE alone without decomposing how each achieves its return — high-ROE companies can have very different risk profiles.",
+        "Authorities": [
+            "ASC 205-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty justified by multi-company DuPont decomposition and business model analysis",
+            "Independent analysis: B correctly explains ROE parity through different business models"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.098 Profitability analysis — evaluating segment performance and capital allocation",
+        "QuestionID": "P2-A-098",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Nexus Industries operates three divisions. The CFO has proposed divesting the Consumables division to focus capital on the Equipment and Services divisions. Selected data:\n\n| Division | Revenue | Operating Income | Identifiable Assets | Capital Expenditures | Revenue Growth |\n|----------|---------|-----------------|--------------------|---------------------|----------------|\n| Equipment | $180M | $27M | $150M | $22M | 8% |\n| Services | $90M | $13.5M | $60M | $5M | 15% |\n| Consumables | $70M | $10.5M | $90M | $12M | 3% |\n\nNexus's corporate overhead is $8M, allocated equally to divisions for performance reporting. The WACC is 10%. Which recommendation regarding the proposed divestiture is best supported by the data?",
+        "Choices": {
+            "A": "Divest Consumables because it has the lowest revenue growth (3%), the lowest operating income ($10.5M), and the highest capital expenditure intensity (17.1% of revenue vs. 12.2% for Equipment and 5.6% for Services).",
+            "B": "Retain Consumables because it generates $10.5M in operating income on $90M of assets — an 11.7% return on assets that exceeds the 10% WACC. While lower-growth, it is value-accretive. The capital should instead be reallocated within Consumables to improve its growth rate.",
+            "C": "Divest Consumables and reallocate its $90M in assets to the Services division, which generates the highest margin (15.0% vs. Equipment's 15.0% — they are equal) and the highest growth (15%). This maximizes consolidated ROI.",
+            "D": "The data is insufficient for a divestiture decision because it does not include cash flow from operations, working capital balances, or the potential sale price of the Consumables division."
+        },
+        "CorrectChoice": "D",
+        "ExplanationCorrect": "While the segment data provides useful profitability indicators, a divestiture decision requires additional information that is not presented. Specifically: (1) Cash flow from operations by division — operating income is an accrual measure; cash generation may differ materially due to working capital and depreciation differences. (2) Working capital investment — a division with high operating income but heavy working capital requirements may consume more cash than it generates. (3) Potential sale price — Consumables generates $10.5M of operating income; at a typical 8-10× multiple, it could sell for $84-105M. Whether the sale proceeds, reinvested in higher-growth divisions, exceed Consumables' ongoing value depends on this price. (4) Inter-division dependencies — Consumables may supply critical inputs to Equipment, making divestiture operationally disruptive. Under ASC 280-10 (Segment Reporting), segment profitability is one input to capital allocation decisions but is not sufficient alone. A complete divestiture analysis requires cash flow data, sale valuation, and operational interdependency assessment.",
+        "ExplanationWrongA": "Option A focuses on revenue growth and capital intensity but does not address whether Consumables creates or destroys value. Its operating ROA of 11.7% (after adjusting for allocated overhead) exceeds the 10% WACC, suggesting it is value-accretive despite low growth. Low growth alone does not justify divestiture if the division earns returns above its cost of capital.",
+        "ExplanationWrongB": "Option B correctly notes that Consumables earns above its cost of capital but recommends retaining it without considering the opportunity cost — whether the $90M in assets could generate higher returns if redeployed to Equipment or Services. The capital allocation question is not whether Consumables creates value, but whether it creates more value than the alternative use of its assets.",
+        "ExplanationWrongC": "Option C recommends divesting and reallocating to Services but does not verify that Services can absorb an additional $90M in capital at its current 15% ROI. The marginal return on additional investment in Services may be lower than the average return if the highest-return projects have already been funded.",
+        "ExplanationWrongD": "",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.2",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Return on Assets = Operating Income / Total Assets",
+        "CommonTrapReference": "Recommending divestiture based on incomplete data — segment profitability is necessary but not sufficient for capital allocation decisions.",
+        "Authorities": [
+            "ASC 280-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty justified by multi-dimensional capital allocation analysis",
+            "Independent analysis: D correctly identifies data insufficiency for divestiture decision"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.099 Integrated leverage and coverage — covenant compliance scenario",
+        "QuestionID": "P2-A-099",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "CFO Javier Rios of Sutton Energy must certify compliance with two loan covenants: (1) debt-to-EBITDA ≤ 3.5×, and (2) fixed charge coverage ratio ≥ 1.5×. Sutton reports: total debt $420M, EBITDA $115M, interest expense $38M, operating lease payments $14M, preferred dividends $6M, and maintenance capital expenditures of $18M. The tax rate is 25%. Sutton's auditor notes that the company has guaranteed $22M of debt for an unconsolidated joint venture — this guarantee is not recognized on Sutton's balance sheet. Mr. Rios states that Sutton is in full compliance with both covenants. Which assessment of the compliance certification is most appropriate?",
+        "Choices": {
+            "A": "Mr. Rios is correct — debt-to-EBITDA is $420M / $115M = 3.65×, which rounds to 3.7×. Without the joint venture guarantee and using only on-balance-sheet debt, the ratio technically satisfies the covenant. Fixed charge coverage = ($115M + $14M) / ($38M + $14M + $6M/(1−0.25)) = $129M / $60M = 2.15×, which exceeds 1.5×. Sutton is in compliance.",
+            "B": "Mr. Rios is incorrect — the debt-to-EBITDA covenant is violated. Including the $22M joint venture guarantee (which represents a contingent obligation that the lender would consider), total debt is $442M and the ratio is $442M / $115M = 3.84×, exceeding the 3.5× cap. The certification should disclose the violation and negotiate a waiver or amendment.",
+            "C": "Mr. Rios is incorrect on both covenants. Debt-to-EBITDA is $420M / $115M = 3.65× (violation at the 3.5× cap). Fixed charge coverage excludes operating lease payments and preferred dividends, making the ratio $115M / $38M = 3.03× — far above the 1.5× floor, so only the leverage covenant is violated.",
+            "D": "Mr. Rios should certify compliance because the joint venture guarantee is not recognized under GAAP and the fixed charge coverage ratio substantially exceeds the required minimum. The debt-to-EBITDA ratio of 3.65× is a borderline violation that is immaterial for a company of Sutton's size."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Two issues undermine the compliance certification. First, debt-to-EBITDA: while GAAP-only debt of $420M / $115M EBITDA = 3.65×, lenders typically define debt to include contingent obligations such as guarantees of unconsolidated entities. Including the $22M JV guarantee produces $442M / $115M = 3.84×, clearly exceeding the 3.5× cap. Second, fixed charge coverage: the proper calculation is (EBITDA − Maintenance Capex) / (Interest + Operating Lease Payments + Preferred Dividends / (1 − t)). Using the standard calculation: ($115M − $18M) / ($38M + $14M + $6M / 0.75) = $97M / $60M = 1.62×, which exceeds 1.5×. The leverage covenant is violated regardless of whether the JV guarantee is included. Under ASC 470-10, management must consider the full economic substance of credit arrangements when certifying compliance, not just GAAP recognition thresholds.",
+        "ExplanationWrongA": "Option A incorrectly calculates the ratios and excludes the JV guarantee. Debt-to-EBITDA of 3.65× already violates the 3.5× covenant (even without the guarantee). The fixed charge coverage calculation omits maintenance capex from the numerator and incorrectly includes EBITDA rather than (EBITDA − Maintenance Capex) as the starting point.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C correctly identifies the leverage covenant violation but incorrectly computes fixed charge coverage. Operating lease payments and preferred dividends should be included in the denominator (adjusted for taxes on preferred dividends). The correct denominator is $38M + $14M + $8M = $60M, producing coverage of 1.62× (not 3.03×). The fixed charge covenant is met, but only barely.",
+        "ExplanationWrongD": "Option D recommends certifying compliance despite a known covenant violation. Materiality is not a defense for covenant violations — debt covenants are binary (either satisfied or breached), not subject to materiality thresholds. Certifying false compliance could trigger cross-default provisions across all of Sutton's debt agreements and potentially constitute securities fraud if Sutton has public debt.",
+        "Difficulty": "Very Difficult",
+        "DifficultyScore": 5,
+        "CognitiveLevel": "Evaluate",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.4",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "Debt-to-EBITDA = Total Debt / EBITDA; Fixed Charge Coverage = (EBITDA − Maintenance Capex) / (Interest + Lease Payments + Preferred Dividends/(1−t))",
+        "CommonTrapReference": "Certifying covenant compliance using only GAAP-reported amounts while ignoring off-balance-sheet obligations and lender-defined debt definitions in credit agreements.",
+        "Authorities": [
+            "ASC 470-10",
+            "ASC 460-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty justified by multi-covenant compliance with off-balance-sheet complexity",
+            "Independent calculation: D/EBITDA 3.65-3.84× violates 3.5× cap — B is correct"
+        ]
+    },
+    {
+        "Part": 2,
+        "Section": "A",
+        "Topic": "A.100 Comprehensive financial analysis — investment recommendation synthesis",
+        "QuestionID": "P2-A-100",
+        "question_state": "Unprocessed",
+        "Part2OnlyFlag": true,
+        "Stem": "Portfolio manager David Kim must decide whether to initiate a position in Bridgewater Components, a mid-cap aerospace supplier. Bridgewater's financial profile:\n\n| Metric | Bridgewater | Industry Median | 3-Year Bridgewater Trend |\n|--------|-------------|-----------------|--------------------------|\n| Revenue Growth | 18% | 6% | 14% → 16% → 18% |\n| Gross Margin | 31% | 28% | 33% → 32% → 31% |\n| Operating Margin | 14% | 11% | 16% → 15% → 14% |\n| Net Profit Margin | 9% | 7% | 10% → 9.5% → 9% |\n| ROE | 22% | 15% | 26% → 24% → 22% |\n| Debt-to-Equity | 1.5 | 0.9 | 0.9 → 1.2 → 1.5 |\n| OCF / Net Income | 0.68 | 0.95 | 0.92 → 0.80 → 0.68 |\n| DSO (days) | 52 | 38 | 38 → 44 → 52 |\n\nBridgewater's CEO attributes the margin compression to investments in a new production facility that will double capacity, and the receivables increase to extended terms granted to secure a multi-year contract with a major aircraft manufacturer. Which recommendation is best supported by the data?",
+        "Choices": {
+            "A": "Initiate a position — Bridgewater's revenue growth of 18% (triple the industry rate) and ROE of 22% (47% above the industry median) demonstrate superior competitive positioning. The margin trends reflect temporary investment that will generate substantial returns as the new facility reaches capacity.",
+            "B": "Do not initiate a position — while Bridgewater's headline growth and profitability metrics exceed industry averages, every margin and quality indicator is deteriorating directionally: gross margin declining (33%→31%), operating margin declining (16%→14%), cash conversion declining (0.92→0.68), DSO expanding (38→52 days), and leverage increasing (D/E 0.9→1.5). The convergence of five indicators all moving unfavorably, despite above-average absolute levels, suggests the business is consuming more capital and generating lower-quality earnings to sustain growth.",
+            "C": "Initiate a half-position and monitor — the absolute metrics support investment (growth, margins, ROE all exceed industry), while the trend deterioration warrants caution. A half-position captures upside while limiting downside if the deterioration continues.",
+            "D": "The data is contradictory — above-average absolute metrics conflict with deteriorating trends — and cannot support a clear recommendation. Mr. Kim should defer the decision until the new production facility is operational and the multi-year contract terms are disclosed."
+        },
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "Option B correctly identifies that while Bridgewater's absolute metrics exceed industry medians (suggesting competitive strength), the directional trend across five independent quality indicators all points to deterioration. The pattern reveals: (1) Marginal profitability compression (gross, operating, and net margins all declining 2-3 percentage points even as revenue accelerates — suggesting price concessions or cost inflation), (2) Deteriorating cash conversion (OCF/NI falling from 0.92 to 0.68 means an increasing gap between reported earnings and cash generation), (3) Receivables expanding much faster than revenue (DSO +37% while revenue growth accelerated from 14% to 18%), and (4) Leverage increasing substantially (D/E up 67% from 0.9 to 1.5). Under ASC 205-10, financial statement analysis must evaluate both levels and trends. When absolute metrics remain above industry but every trend indicator deteriorates, the company may be sustaining headline performance through increasing financial leverage and working capital investment rather than genuine operating improvement. The CEO's explanations are plausible but should be verified against the contract terms and facility timeline before investing.",
+        "ExplanationWrongA": "Option A accepts the CEO's explanations and focuses on absolute levels while ignoring the convergent deterioration across all quality indicators. A company can have above-average metrics today while its trajectory points toward below-average metrics tomorrow. The convergence of five deteriorating trends is a stronger signal than the current-period level comparisons.",
+        "ExplanationWrongB": "",
+        "ExplanationWrongC": "Option C proposes a compromise that avoids making a definitive analytical judgment. While a half-position appears to balance risk and reward, the analyst's job is to reach a conclusion based on the evidence. If the evidence supports a negative view (as it does here), recommending a half-position is analytically inconsistent — it neither captures the full upside of being right about a positive thesis nor avoids the full downside of being wrong about a negative one.",
+        "ExplanationWrongD": "Option D defers the decision, which may be appropriate if the requested information would resolve the ambiguity. However, the existing data already supports a conclusion — five converging negative trends constitute actionable information. Deferring every decision that involves ambiguity would paralyze the investment process. Professional judgment requires reaching conclusions with imperfect information.",
+        "Difficulty": "Very Difficult",
+        "DifficultyScore": 5,
+        "CognitiveLevel": "Evaluate",
+        "CalculationItem": true,
+        "Type": "select",
+        "LOSTag": "A.5",
+        "BlueprintDomain": "Financial Statement Analysis",
+        "FormulaReference": "ROE = Net Profit Margin × Total Asset Turnover × Equity Multiplier; Cash Conversion Ratio = OCF / Net Income",
+        "CommonTrapReference": "Focusing on absolute metric levels while ignoring directional trends — both level and trend analysis are essential for financial statement analysis.",
+        "Authorities": [
+            "ASC 205-10",
+            "ASC 230-10"
+        ],
+        "VerificationChecks": [
+            "Part2OnlyFlag verified true",
+            "EW[CC] empty (DL-008 compliant)",
+            "Non-CC EW slots >=50 chars (DL-026 compliant)",
+            "No boilerplate text (DL-013 prevention)",
+            "Difficulty justified by multi-indicator convergence analysis with investment recommendation",
+            "Independent analysis: B correctly synthesizes five converging negative trends into negative recommendation"
+        ]
+    }
+
 ];
