@@ -744,12 +744,6 @@ function renderSettingsView() {
         html += '</div></div>';
     }
 
-    // Danger zone
-    html += '<div class="settings-section settings-danger"><h3>Danger Zone</h3>';
-    html += '<button class="secondary settings-btn" style="color:var(--red,#dc2626);border-color:var(--red,#dc2626)" onclick="if(confirm(\'This will clear ALL your learner data including session history, May coaching state, and settings. This cannot be undone.\\n\\nA backup will be created before clearing.\\n\\nContinue?\')){CMAProfileManager.createBackup();localStorage.removeItem(CMAProfileManager.STORAGE_KEY);alert(\'Profile cleared. Backup created before clearing. Reloading page.\');location.reload()}">Reset All Learner Data</button>';
-    html += '<p class="small" style="margin-top:4px;">A backup is created before clearing. You can restore it via Import.</p>';
-    html += '</div>';
-
     // S124 — Version / admin gate trigger
     html += '<div class="settings-section"><h3>About</h3>';
     html += '<p class="small"><span id="settingsVersionLabel" style="cursor:pointer;color:var(--text-muted)" title="Click for admin access">CMA Learning Platform v0.10.1-alpha</span></p>';
@@ -1978,6 +1972,10 @@ const ExamSessionManager = {
         AnalyticsCollector.init(state.session);
         AnalyticsCollector.logEvent('session_start', { mode, mcqs: mcqs.length, cases: allCases.length });
         SessionPersistence.clear();
+        // S130 — Exam Integrity Mode: hide non-exam UI during Full Exam or real-conditions
+        if (mode === 'full' || ($('realConditions') && $('realConditions').checked)) {
+            document.body.classList.add('exam-integrity-mode');
+        }
         showView('sessionView');
         this.render();
         this.startTimer();
@@ -2392,6 +2390,8 @@ const ExamSessionManager = {
         state.session.submitted = true;
         clearInterval(timerInt);
         clearInterval(autoSaveInt);
+        // S130 — Remove exam integrity mode on session completion
+        document.body.classList.remove('exam-integrity-mode');
         AnalyticsCollector.logEvent('session_submit', {});
         SessionPersistence.saveHistory();
         SessionPersistence.clear();
@@ -5299,16 +5299,13 @@ document.addEventListener('DOMContentLoaded', () => {
     ExamSessionManager.renderHistory();
     updateTimeEstimate();
 
-    // UX-4: Inject bookmark collections panel into landing page
+    // S130 — Render Study view tab content
+    renderStudyView();
+
+    // UX-4: Inject bookmark collections panel — now in Study view
     (function () {
-        var setupPanel = document.querySelector('.setup-panel');
-        if (setupPanel) {
-            var bcPanel = document.createElement('div');
-            bcPanel.id = 'bookmarkCollectionsPanel';
-            bcPanel.className = 'collections-panel';
-            setupPanel.appendChild(bcPanel);
-            renderBookmarkCollections();
-        }
+        var bcPanel = document.getElementById('bookmarkCollectionsPanel');
+        if (bcPanel) renderBookmarkCollections();
     })();
 
     // Check for saved session
@@ -5377,15 +5374,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
         showView(t.dataset.view);
         if (t.dataset.view === 'homeView') renderHomeView();
+        if (t.dataset.view === 'studyView') renderStudyView();
         if (t.dataset.view === 'dashboardView') PerformanceDashboard.render();
         if (t.dataset.view === 'settingsView') renderSettingsView();
         if (t.dataset.view === 'operationsView') renderOperationsView();
         if (t.dataset.view === 'helpView') renderHelpCenter();
         if (t.dataset.view === 'coachView') {
-            if (typeof May !== 'undefined') May.renderView(); else ReviewCoach.renderFullCoach();
+            // S130 — Compact May: show collapsed initially
+            if (typeof May !== 'undefined') May._renderCompactCoach();
+            else ReviewCoach.renderFullCoach();
         }
-        if (t.dataset.view === 'sessionView') {
-            // Re-show May companion card when returning to landing view (no active session)
+        if (t.dataset.view === 'sessionView' || t.dataset.view === 'studyView') {
+            // Re-show May companion card when returning to landing/study view (no active session)
             if (typeof May !== 'undefined' && (!state.session || state.session.completed)) {
                 sessionStorage.removeItem('mayCompanionDismissed');
                 May._injectMayCompanionCard();
@@ -6018,11 +6018,28 @@ function renderOperationsView() {
     }
 
     // ── Build the console ──
+    function renderDataPanel() {
+        var h = '<div class="ops-section"><h3>Data Management</h3>';
+        h += '<div class="ops-card ops-card-danger">';
+        h += '<h4>Reset All Learner Data</h4>';
+        h += '<p>This clears ALL learner data including session history, May coaching state, bookmarks, and settings. A backup is automatically created before clearing.</p>';
+        h += '<button class="secondary settings-btn" style="color:#fff;background:var(--danger,#dc2626);border-color:var(--danger,#dc2626)" onclick="if(confirm(\'This will clear ALL your learner data including session history, May coaching state, and settings. This cannot be undone.\\n\\nA backup will be created before clearing.\\n\\nContinue?\')){CMAProfileManager.createBackup();localStorage.removeItem(CMAProfileManager.STORAGE_KEY);alert(\'Profile cleared. Backup created before clearing. Reloading page.\');location.reload()}">Reset All Learner Data</button>';
+        h += '</div>';
+        h += '<div class="ops-section"><h3>Profile Export</h3>';
+        h += '<div class="ops-card">';
+        h += '<p>Export the full learner profile for migration or backup. Includes session history, May coaching data, collections, and settings.</p>';
+        h += '<button class="secondary settings-btn" onclick="CMAProfileManager.backupAllProgress();alert(\'Backup downloaded.\')">Backup All Progress</button>';
+        h += '</div>';
+        h += '</div>';
+        return h;
+    }
+
     var panels = {
         'learners': { label: 'Learners', render: renderLearnersPanel },
         'may': { label: 'May', render: renderMayPanel },
         'governance': { label: 'Governance', render: renderGovernancePanel },
-        'content': { label: 'Content', render: renderContentPanel }
+        'content': { label: 'Content', render: renderContentPanel },
+        'data': { label: 'Data', render: renderDataPanel }
     };
 
     var html = '<div class="ops-console">' +
@@ -6031,6 +6048,7 @@ function renderOperationsView() {
             '<button class="ops-tab" data-opspanel="content">Content</button>' +
             '<button class="ops-tab" data-opspanel="learners">Learners</button>' +
             '<button class="ops-tab" data-opspanel="may">May</button>' +
+            '<button class="ops-tab" data-opspanel="data">Data</button>' +
         '</div>';
 
     for (var pk in panels) {
@@ -6086,10 +6104,10 @@ var GuidedTour = {
             steps: [
                 { id: 'welcome', title: 'Welcome!', text: 'The CMA Learning Platform is your complete CMA Part 1 exam simulator. It includes 2,545 MCQs across 5 question packs, 75 integrated case studies, and an AI-powered May coaching layer. Let us show you around.', attach: 'header', position: 'center' },
                 { id: 'dashboard', title: 'Your Dashboard', text: 'Here you track readiness scores, performance over time, and your session history. The dashboard helps you see your strengths and weaknesses at a glance.', attach: 'dashboardView', tab: 'dashboardView', position: 'center' },
-                { id: 'session', title: 'Start an Exam Session', text: 'Configure and launch practice sessions. Choose MCQ-only, case studies, mixed mode, or a full Part 1 simulation with a 4-hour timer.', attach: 'sessionForm', tab: 'sessionView', position: 'top' },
-                { id: 'may', title: 'Meet May — Your AI Coach', text: 'May is your AI-powered coaching assistant. After each session, May reviews your performance, identifies weak areas, and recommends targeted practice — including Recovery Sprints.', attach: 'coachView', tab: 'coachView', position: 'center' },
-                { id: 'collections', title: 'Bookmark Collections', text: 'Save questions during sessions to build study collections: Must Master, Technology Weaknesses, Formula Review, and Recovery Candidates. Revisit them anytime.', attach: 'bookmarkCollectionsPanel', tab: 'sessionView', position: 'top' },
-                { id: 'recovery', title: 'Recovery Sprint', text: 'After a disappointing session, May recommends a Recovery Sprint — a focused practice set targeting your weakest topics. It is the fastest way to turn missed questions into learned concepts.', attach: 'mayQuickstart', tab: 'sessionView', position: 'top' },
+                { id: 'session', title: 'Start an Exam Session', text: 'Configure and launch practice sessions in the Study tab. Choose MCQ-only, case studies, mixed mode, or a full Part 1 simulation with a 4-hour timer.', attach: 'sessionForm', tab: 'studyView', position: 'top' },
+                { id: 'may', title: 'Meet May — Your AI Coach', text: 'May is your AI-powered coaching assistant. After each session, May reviews your performance, identifies weak areas, and recommends targeted practice — including Recovery Sprints. Click the purple M button in the top-right to open May anytime.', attach: 'coachView', tab: 'coachView', position: 'center' },
+                { id: 'collections', title: 'Bookmark Collections', text: 'Save questions during sessions to build study collections: Must Master, Technology Weaknesses, Formula Review, and Recovery Candidates. Find them in the Study tab.', attach: 'bookmarkCollectionsPanel', tab: 'studyView', position: 'top' },
+                { id: 'recovery', title: 'Recovery Sprint', text: 'After a disappointing session, May recommends a Recovery Sprint — a focused practice set targeting your weakest topics. It is the fastest way to turn missed questions into learned concepts.', attach: 'studyRecovery', tab: 'studyView', position: 'top' },
                 { id: 'reports', title: 'Reports & Analytics', text: 'The History view shows all past sessions with scores, pass rates, and confidence calibration charts. Use this to track your progress week by week.', attach: 'historyView', tab: 'historyView', position: 'center' },
                 { id: 'settings', title: 'Settings & Backup', text: 'Backup your progress, import from another device, manage your learner profile, and configure your preferences. Always backup before switching devices.', attach: 'settingsView', tab: 'settingsView', position: 'center' },
                 { id: 'complete', title: 'You are All Set!', text: 'That is the tour. You are ready to start studying. Click the <b>?</b> button in the toolbar anytime to restart tours or open the Help Center. Good luck on your CMA Part 1 journey!', attach: 'header', position: 'center' }
@@ -6100,7 +6118,7 @@ var GuidedTour = {
             desc: 'How targeted remediation accelerates your exam readiness.',
             steps: [
                 { id: 'rs1', title: 'What is a Recovery Sprint?', text: 'A Recovery Sprint is a focused practice session that targets your weakest topics — pulled from the questions you got wrong across recent sessions.', attach: 'header', position: 'center' },
-                { id: 'rs2', title: 'When to Sprint', text: 'After any session where you score below your target, May analyzes your errors and recommends a Recovery Sprint if your readiness score drops.', attach: 'mayQuickstart', tab: 'sessionView', position: 'top' },
+                { id: 'rs2', title: 'When to Sprint', text: 'After any session where you score below your target, May analyzes your errors and recommends a Recovery Sprint if your readiness score drops.', attach: 'studyRecovery', tab: 'studyView', position: 'top' },
                 { id: 'rs3', title: 'How It Works', text: 'May selects questions from your weakest topics, creates a timed mini-session, and after the sprint, shows you a before/after readiness comparison.', attach: 'coachView', tab: 'coachView', position: 'center' },
                 { id: 'rs4', title: 'Track Recovery', text: 'Your History dashboard shows Recovery Sprint results with a special badge. Watch your readiness climb with each sprint.', attach: 'historyView', tab: 'historyView', position: 'center' }
             ]
@@ -6243,9 +6261,11 @@ var GuidedTour = {
         if (step.attach === 'header') {
             targetEl = document.querySelector('header.hero');
         } else if (step.attach === 'sessionForm') {
-            targetEl = document.getElementById('sessionForm') || document.querySelector('.setup-panel');
+            targetEl = document.getElementById('sessionForm') || document.getElementById('studyView');
         } else if (step.attach === 'mayQuickstart') {
             targetEl = document.getElementById('mayQuickstart');
+        } else if (step.attach === 'studyRecovery') {
+            targetEl = document.getElementById('studyRecovery');
         } else if (step.attach === 'bookmarkCollectionsPanel') {
             targetEl = document.getElementById('bookmarkCollectionsPanel');
         } else {
@@ -6408,7 +6428,7 @@ function renderHomeView() {
     html += '<div class="home-grid">';
 
     // Study card
-    html += '<div class="home-card home-card-study" onclick="showView(\'sessionView\')">';
+    html += '<div class="home-card home-card-study" onclick="showView(\'studyView\')">';
     html += '<div class="home-card-icon">&#128218;</div>';
     html += '<h3>Study</h3>';
     html += '<p>MCQ practice, case studies, mixed sessions, and full Part 1 simulations with timed exams.</p>';
@@ -6416,7 +6436,7 @@ function renderHomeView() {
     html += '</div>';
 
     // Coach card
-    html += '<div class="home-card home-card-coach" onclick="showView(\'coachView\'); if(typeof May!==\'undefined\'){May.renderView()}">';
+    html += '<div class="home-card home-card-coach" onclick="showView(\'coachView\'); if(typeof May!==\'undefined\'){May._renderCompactCoach()}else ReviewCoach.renderFullCoach()">';
     html += '<div class="home-card-icon">&#129504;</div>';
     html += '<h3>May Coach</h3>';
     html += '<p>AI-powered readiness scoring, study archetype detection, personalized recommendations, and Recovery Sprints.</p>';
@@ -6432,7 +6452,7 @@ function renderHomeView() {
     html += '</div>';
 
     // Collections card
-    html += '<div class="home-card home-card-collections" onclick="showView(\'sessionView\'); setTimeout(function(){var el=document.getElementById(\'bookmarkCollectionsPanel\');if(el)el.scrollIntoView({behavior:\'smooth\'})},200)">';
+    html += '<div class="home-card home-card-collections" onclick="showView(\'studyView\'); setTimeout(function(){var el=document.getElementById(\'bookmarkCollectionsPanel\');if(el)el.scrollIntoView({behavior:\'smooth\'})},200)">';
     html += '<div class="home-card-icon">&#128278;</div>';
     html += '<h3>Collections</h3>';
     html += '<p>Must Master, Technology Weaknesses, Formula Review, Recovery Candidates, and custom bookmark collections.</p>';
@@ -6471,6 +6491,114 @@ function renderHomeView() {
 
     var el = document.getElementById('homeView');
     if (el) el.innerHTML = html;
+}
+
+// ── S130: Study View ──
+function renderStudyView() {
+    var el = document.getElementById('studyView');
+    if (!el) return;
+
+    // What to Practice Next — May recommendations
+    var recsEl = document.getElementById('whatToPracticeNext');
+    if (recsEl) {
+        try {
+            var recs = '';
+            if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_PRODUCTION_MAY_INTEGRATION') && typeof MayLearnerState !== 'undefined') {
+                var clusters = MayLearnerState.getWeaknessClusters();
+                var readiness = MayLearnerState.getReadinessSummary();
+                var topWeak = clusters && clusters.persistentWeak && clusters.persistentWeak.length > 0 ? clusters.persistentWeak[0] : null;
+                var declining = clusters && clusters.declining && clusters.declining.length > 0 ? clusters.declining[0] : null;
+                var suggestedTopic = declining ? declining.topic : (topWeak ? topWeak.topic : null);
+                var readinessBand = readiness && readiness.overall ? readiness.overall.band : 'Not enough data';
+                var data = MayLearnerState.load();
+                var hasData = data && data.sessions && data.sessions.length >= 1;
+                if (hasData) {
+                    recs = '<div class="may-recommendation-panel"><div class="may-rec-grid">';
+                    recs += '<div class="may-rec-card" style="cursor:pointer" onclick="quickStart(\'mcq\'); var f=document.getElementById(\'sessionForm\'); if(f)f.requestSubmit()"><div class="may-rec-label">Top Weakness</div><div class="may-rec-value">' + (topWeak ? topWeak.topic + ' (' + (topWeak.accuracy || 0) + '%)' : 'Not enough data') + '</div></div>';
+                    recs += '<div class="may-rec-card" style="cursor:pointer" onclick="quickStart(\'mcq\'); var f=document.getElementById(\'sessionForm\'); if(f)f.requestSubmit()"><div class="may-rec-label">Suggested Review</div><div class="may-rec-value">' + (suggestedTopic || 'Complete more sessions') + '</div></div>';
+                    var bandCls = readinessBand === 'Recovery needed' ? 'may-rec-danger' : readinessBand === 'Developing' ? 'may-rec-warning' : 'may-rec-muted';
+                    recs += '<div class="may-rec-card"><div class="may-rec-label">Readiness</div><div class="may-rec-value may-rec-band ' + bandCls + '">' + readinessBand + '</div></div>';
+                    recs += '</div></div>';
+                }
+            }
+            recsEl.innerHTML = recs || '<p class="small">Complete a practice session for personalized recommendations.</p>';
+        } catch (e) { recsEl.innerHTML = '<p class="small">Recommendations will appear after your first session.</p>'; }
+    }
+
+    // Recovery Candidates
+    var recoveryEl = document.getElementById('recoveryCandidates');
+    if (recoveryEl) {
+        try {
+            var profile = window._cmaProfile || CMAProfileManager.load();
+            var recovery = profile.bookmarkCollections && profile.bookmarkCollections['recovery-candidates'];
+            if (recovery && recovery.items && recovery.items.length > 0) {
+                recoveryEl.innerHTML = '<p>' + recovery.items.length + ' questions saved for review. <a href="#" onclick="var cid=\'recovery-candidates\'; var qids=CMAProfileManager.getCollectionQuestionIds(cid); if(qids.length===0){alert(\'No questions.\');return} var allBanks=[MCQ_BANK_A,MCQ_BANK_B,MCQ_BANK_C,MCQ_BANK_D,MCQ_BANK_E]; var found=[]; for(var bi=0;bi<allBanks.length;bi++){var bank=allBanks[bi]; if(!bank)continue; for(var qi=0;qi<bank.length;qi++){if(qids.indexOf(bank[qi].QuestionID)!==-1)found.push(bank[qi])}} if(found.length===0){alert(\'No matching questions.\');return} state.collectionMcqs=found; state.collectionReview=true; document.getElementById(\'mode\').value=\'mcq\'; document.getElementById(\'sessionForm\').requestSubmit()" style="text-decoration:underline;">Review Recovery Candidates &rarr;</a></p>';
+            } else {
+                recoveryEl.innerHTML = '<p class="small">Questions you missed across sessions appear here for focused retry.</p>';
+            }
+        } catch (e) { recoveryEl.innerHTML = '<p class="small">Missed questions will appear here after your first session.</p>'; }
+    }
+
+    // Bookmark Collections
+    renderBookmarkCollections();
+}
+
+// ── S130: May Floating Bubble & Compact Coach ──
+if (typeof May !== 'undefined') {
+    May.Floating = {
+        _init: function () {
+            var btn = document.getElementById('mayFloatBtn');
+            if (btn) { btn.style.display = 'block'; }
+        },
+        _toggle: function () {
+            var coachView = document.getElementById('coachView');
+            if (coachView && coachView.classList.contains('active')) {
+                showView('homeView');
+                renderHomeView();
+            } else {
+                showView('coachView');
+                May._renderCompactCoach();
+            }
+        },
+        _hide: function () {
+            var btn = document.getElementById('mayFloatBtn');
+            if (btn) { btn.style.display = 'none'; }
+        },
+        _show: function () {
+            var btn = document.getElementById('mayFloatBtn');
+            if (btn) { btn.style.display = 'block'; }
+        }
+    };
+
+    May._renderCompactCoach = function () {
+        var el = document.getElementById('coachView');
+        if (!el) return;
+        el.innerHTML = '<div class="may-compact">' +
+            '<div class="may-compact-avatar">M</div>' +
+            '<h3>May AI Coach</h3>' +
+            '<p>Ready to help you analyze performance, identify weaknesses, and build your study plan.</p>' +
+            '<button class="may-compact-open" onclick="May.renderView()">Open Coach</button>' +
+            '</div>';
+    };
+
+    // Initialize floating bubble on load
+    setTimeout(function () { May.Floating._init(); }, 1000);
+} else {
+    // Fallback when May is not yet loaded
+    var __compactCoachFallback = function () {
+        var el = document.getElementById('coachView');
+        if (!el) return;
+        el.innerHTML = '<div class="may-compact"><div class="may-compact-avatar">M</div><h3>May AI Coach</h3><p>Complete a practice session to unlock May coaching features.</p></div>';
+    };
+    // Override floating button click for fallback
+    var fb = document.getElementById('mayFloatBtn');
+    if (fb) {
+        fb.onclick = function () {
+            if (typeof May !== 'undefined' && May.Floating) { May.Floating._toggle(); }
+            else { showView('coachView'); if (typeof ReviewCoach !== 'undefined') ReviewCoach.renderFullCoach(); }
+        };
+        fb.style.display = 'block';
+    }
 }
 
 // ── S124: Help & Learning Center ──
@@ -6517,7 +6645,7 @@ function renderHelpCenter() {
     html += '<div class="help-section"><h3>&#128295; Data Management</h3>';
     html += '<div class="help-card"><b>Backup Progress</b> — Go to <span class="help-link" onclick="showView(\'settingsView\')">Settings</span> and click "Backup All Progress." This downloads a JSON file with all your sessions, collections, and May coaching data. Save it somewhere safe.</div>';
     html += '<div class="help-card"><b>Restore Progress</b> — In Settings, click "Restore Progress" and select your backup JSON file. A safety backup is created automatically before restoring.</div>';
-    html += '<div class="help-card"><b>Reset All Data</b> — In Settings, under Danger Zone, click "Reset All Learner Data." A backup is created before clearing. You can restore it later via Import.</div>';
+    html += '<div class="help-card"><b>Reset All Data</b> — Admin-only: Open the Operations console (requires admin activation), go to the Data tab, and click "Reset All Learner Data." A backup is created before clearing.</div>';
     html += '<div class="help-card"><b>Moving Devices</b> — Backup on your old device, transfer the JSON file, and Restore on your new device. Your entire study history comes with you.</div>';
     html += '</div>';
 
