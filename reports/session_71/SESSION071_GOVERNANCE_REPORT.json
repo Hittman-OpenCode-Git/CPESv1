@@ -1,0 +1,78 @@
+{
+  "session": "S71",
+  "title": "Governance Compliance Report",
+  "timestamp": "2026-07-29T20:55:00.000Z",
+  "status": "PASS — 5/5 items compliant",
+  "checks": {
+    "preflight": {
+      "status": "WARN",
+      "detail": "2 pre-existing divergences unchanged from T0 (Pack E QID 545 vs 540, Certified delta 35). Neither caused by S71. Pack D: 500 QID, parse OK."
+    },
+    "governance_guard": {
+      "tests": 54,
+      "passed": 54,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "syntax": {
+      "command": "node --check pack_d_corrected.js",
+      "status": "PASS"
+    },
+    "qid_count": {
+      "expected": 500,
+      "actual": 500,
+      "status": "PASS"
+    },
+    "parse": {
+      "method": "Function constructor",
+      "items_parsed": 500,
+      "status": "PASS"
+    },
+    "dl_008": {
+      "description": "ExplanationWrong[CorrectChoice] must be empty",
+      "items_checked": 5,
+      "violations": 0,
+      "status": "PASS"
+    },
+    "dl_026": {
+      "description": "All non-CorrectChoice ExplanationWrong slots must be non-empty",
+      "items_checked": 5,
+      "violations": 0,
+      "status": "PASS"
+    },
+    "dl_037": {
+      "description": "No binary lead-in polarity mismatches",
+      "items_checked": 5,
+      "violations": 0,
+      "status": "PASS"
+    },
+    "pipeline": {
+      "validators": 8,
+      "pack_d_errors": "0 new (all pre-existing in other packs)",
+      "status": "PASS"
+    },
+    "certification": {
+      "pack_d_certified_before": 456,
+      "pack_d_certified_after": 456,
+      "delta": 0,
+      "note": "All 5 items remained Certified — rewrite upgraded cognitive level but preserved certification",
+      "status": "STABLE"
+    }
+  },
+  "files_changed": [
+    "pack_d_corrected.js (5 items rewritten: BD-001, BD-014, BD-039, BD-057, BD-084)"
+  ],
+  "backups": [
+    "backups/pack_d_corrected.js.bak-20260729162126 (2,162,399 bytes)"
+  ],
+  "commands_run": [
+    "npm run preflight (T0)",
+    "node --check pack_d_corrected.js",
+    "node scripts/session071_apply_rewrites.js",
+    "node scripts/session071_dl_audit.js",
+    "npm run pipeline",
+    "npm run preflight (Tclose)"
+  ],
+  "pass_fail": "PASS",
+  "divergences": "2 pre-existing (Pack E QID count, Certified delta) — neither caused by S71"
+}

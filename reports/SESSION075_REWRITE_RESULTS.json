@@ -1,0 +1,56 @@
+{
+  "session": "75",
+  "timestamp": "2026-07-29T22:48:00Z",
+  "governance_lane": "Full Governance",
+  "pack": "pack_d_corrected.js",
+  "section": "B",
+  "items_rewritten": 15,
+  "results": {
+    "evaluate_items": [
+      {"qid": "P1-BD-009", "topic": "incremental budgeting — zero-base transition evaluation", "difficulty": "Difficult", "difficulty_score": 4},
+      {"qid": "P1-BD-075", "topic": "forecast accuracy measurement — method selection", "difficulty": "Difficult", "difficulty_score": 4},
+      {"qid": "P1-BD-097", "topic": "strategic vs operational planning — budget conflict resolution", "difficulty": "Very Difficult", "difficulty_score": 5},
+      {"qid": "P1-BD-018", "topic": "capital expenditure budget — make-vs-buy investment recommendation", "difficulty": "Very Difficult", "difficulty_score": 5},
+      {"qid": "P1-BD-067", "topic": "S&A expense — cost behavior analysis and reduction recommendation", "difficulty": "Difficult", "difficulty_score": 4},
+      {"qid": "P1-BD-098", "topic": "strategic vs operational planning — resource allocation conflict", "difficulty": "Very Difficult", "difficulty_score": 5},
+      {"qid": "P1-BD-019", "topic": "capital expenditure budget — competing proposal prioritization", "difficulty": "Difficult", "difficulty_score": 4},
+      {"qid": "P1-BD-099", "topic": "strategic vs operational planning — investment sequencing under uncertainty", "difficulty": "Very Difficult", "difficulty_score": 5}
+    ],
+    "analyze_items": [
+      {"qid": "P1-BD-010", "topic": "incremental budgeting — cost persistence analysis", "difficulty": "Difficult", "difficulty_score": 4},
+      {"qid": "P1-BD-011", "topic": "incremental budgeting — use-it-or-lose-it spending behavior", "difficulty": "Difficult", "difficulty_score": 4},
+      {"qid": "P1-BD-040", "topic": "operating budget vs financial budget — interconnected analysis", "difficulty": "Difficult", "difficulty_score": 4},
+      {"qid": "P1-BD-068", "topic": "selling and administrative expense — cost behavior analysis from data", "difficulty": "Difficult", "difficulty_score": 4},
+      {"qid": "P1-BD-012", "topic": "incremental budgeting — structural gap diagnosis", "difficulty": "Difficult", "difficulty_score": 4},
+      {"qid": "P1-BD-052", "topic": "direct materials — purchase quantity optimization with volume discount", "difficulty": "Difficult", "difficulty_score": 4},
+      {"qid": "P1-BD-053", "topic": "direct materials purchases budget — constrained supplier allocation", "difficulty": "Difficult", "difficulty_score": 4}
+    ],
+    "difficulty_distribution": {
+      "Difficult": 11,
+      "Very Difficult": 4
+    }
+  },
+  "governance": {
+    "test_governance_guard": "54/54 PASS",
+    "dl008": 0,
+    "dl026": 0,
+    "dl030": 0,
+    "dl037": 0,
+    "pack_d_parse": "PASS",
+    "pack_d_qid_count": 500,
+    "pack_d_certified": 456
+  },
+  "cognition_targets": {
+    "evaluate_target": 8,
+    "evaluate_achieved": 8,
+    "analyze_target": 7,
+    "analyze_achieved": 7
+  },
+  "section_b_post_session": {
+    "evaluate": 48,
+    "analyze": 36,
+    "understand": 8,
+    "apply": 8,
+    "higher_order_pct": 84.0
+  }
+}

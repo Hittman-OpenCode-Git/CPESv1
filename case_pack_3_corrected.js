@@ -1037,12 +1037,12 @@ const CASE_PACK_3 = [
         "Operating leverage"
       ],
       "RightItems": [
-        "Selling price minus variable cost per unit",
         "Fixed costs divided by contribution margin per unit",
-        "Actual sales minus break-even sales",
         "Contribution margin divided by operating income",
+        "Selling price minus variable cost per unit",
+        "Actual sales minus break-even sales",
         "Total revenue minus total cost"
-      ],
+],
       "Correct": {
         "Contribution margin per unit": "Selling price minus variable cost per unit",
         "Break-even point (units)": "Fixed costs divided by contribution margin per unit",
@@ -1653,12 +1653,12 @@ const CASE_PACK_3 = [
         "Accounts payable"
       ],
       "RightItems": [
-        "Cash budget and collection/disbursement timing",
-        "Sales budget and credit collection policy",
         "Cost of goods sold budget and purchases budget",
+        "Cash budget and collection/disbursement timing",
         "Purchases budget and supplier payment terms",
-        "Production budget and labor efficiency"
-      ],
+        "Production budget and labor efficiency",
+        "Sales budget and credit collection policy"
+],
       "Correct": {
         "Cash": "Cash budget and collection/disbursement timing",
         "Accounts receivable": "Sales budget and credit collection policy",
@@ -1844,12 +1844,12 @@ const CASE_PACK_3 = [
         "Low capital requirements allow new competitors to enter easily"
       ],
       "RightItems": [
-        "Threat of substitutes",
-        "Bargaining power of suppliers",
         "Bargaining power of buyers",
+        "Threat of substitutes",
         "Threat of new entrants",
+        "Bargaining power of suppliers",
         "Intensity of competitive rivalry"
-      ],
+],
       "ItemID": "CBQ5-B1-Q2",
       "CognitiveLevel": "Analyze",
       "CalculationComplexity": "None",
@@ -2114,12 +2114,12 @@ const CASE_PACK_3 = [
         "Receiving and storing a pallet of goods from a supplier"
       ],
       "RightItems": [
+        "Facility-sustaining cost — corporate overhead not traceable to specific activities",
         "Batch-level cost — each order requires order processing regardless of order size",
-        "Customer-sustaining cost — sales visits support the customer relationship, not individual orders",
-        "Product-sustaining cost — sourcing activities maintain the product line's availability in the assortment",
         "Unit-level cost — receiving costs vary with each pallet of goods handled",
-        "Facility-sustaining cost — corporate overhead not traceable to specific activities"
-      ],
+        "Product-sustaining cost — sourcing activities maintain the product line's availability in the assortment",
+        "Customer-sustaining cost — sales visits support the customer relationship, not individual orders"
+],
       "Correct": {
         "Processing a customer's individual purchase order": "Batch-level cost — each order requires order processing regardless of order size",
         "Making a sales call to a retail customer": "Customer-sustaining cost — sales visits support the customer relationship, not individual orders",
@@ -2163,12 +2163,12 @@ const CASE_PACK_3 = [
         "Number of delivery stops per route"
       ],
       "RightItems": [
-        "Batch-level — order entry, picking, and shipping costs vary with order count",
         "Customer-sustaining — sales and account management costs vary with customer relationship intensity",
-        "Product-sustaining — category management and vendor compliance costs vary with product count",
         "Batch-level — delivery routing and stop costs vary with each delivery stop",
-        "Unit-level — cost of goods sold varies with each unit sold"
-      ],
+        "Unit-level — cost of goods sold varies with each unit sold",
+        "Product-sustaining — category management and vendor compliance costs vary with product count",
+        "Batch-level — order entry, picking, and shipping costs vary with order count"
+],
       "Correct": {
         "Number of purchase orders placed": "Batch-level — order entry, picking, and shipping costs vary with order count",
         "Number of sales calls made to each customer": "Customer-sustaining — sales and account management costs vary with customer relationship intensity",
@@ -2212,12 +2212,12 @@ const CASE_PACK_3 = [
         "Allocating product sourcing costs to customers"
       ],
       "RightItems": [
+        "Use number of delivery stops as the allocation base — each customer is charged proportionally to stop frequency",
+        "Use revenue as the allocation base — larger customers bear more cost regardless of service consumption",
         "Use number of orders as the allocation base — each customer is charged proportionally to order count",
         "Use number of sales visits as the allocation base — each customer is charged proportionally to visit frequency",
-        "Use number of delivery stops as the allocation base — each customer is charged proportionally to stop frequency",
-        "Use number of products purchased as the allocation base — customers buying from more product lines bear more sourcing cost",
-        "Use revenue as the allocation base — larger customers bear more cost regardless of service consumption"
-      ],
+        "Use number of products purchased as the allocation base — customers buying from more product lines bear more sourcing cost"
+],
       "Correct": {
         "Allocating order processing costs to customers": "Use number of orders as the allocation base — each customer is charged proportionally to order count",
         "Allocating sales visit costs to customers": "Use number of sales visits as the allocation base — each customer is charged proportionally to visit frequency",
@@ -2260,12 +2260,12 @@ const CASE_PACK_3 = [
         "Campus Dining — $1.18M revenue, 300 orders, 120 delivery stops"
       ],
       "RightItems": [
-        "High profit potential — high revenue, moderate service demands, 67% gross margin",
-        "Low profit potential — low revenue, very high service intensity relative to revenue",
         "Moderate profit potential — mid-size revenue, low service intensity, efficient operations",
         "Moderate profit potential — good revenue but higher delivery costs due to many delivery stops",
-        "Negative profit — costs exceed revenue"
-      ],
+        "High profit potential — high revenue, moderate service demands, 67% gross margin",
+        "Negative profit — costs exceed revenue",
+        "Low profit potential — low revenue, very high service intensity relative to revenue"
+],
       "Correct": {
         "Corner Grocers chain — $2.45M revenue, 360 orders, 12 sales visits": "High profit potential — high revenue, moderate service demands, 67% gross margin",
         "Lakeside Restaurant — $185K revenue, 240 orders, 24 sales visits, 25 special requests": "Low profit potential — low revenue, very high service intensity relative to revenue",
@@ -2308,12 +2308,12 @@ const CASE_PACK_3 = [
         "Campus Dining has good revenue but frequent small deliveries increase costs"
       ],
       "RightItems": [
-        "Reprice or restructure service — consider minimum order quantities or service fees for high-touch, low-revenue customers",
-        "Invest and grow — offer volume discounts or dedicated support to strengthen the relationship",
-        "Maintain — current service level is efficient and profitable; monitor for changes",
+        "Terminate relationship — costs exceed any possible revenue",
         "Negotiate delivery schedule — consolidate deliveries to reduce stop frequency while maintaining service quality",
-        "Terminate relationship — costs exceed any possible revenue"
-      ],
+        "Reprice or restructure service — consider minimum order quantities or service fees for high-touch, low-revenue customers",
+        "Maintain — current service level is efficient and profitable; monitor for changes",
+        "Invest and grow — offer volume discounts or dedicated support to strengthen the relationship"
+],
       "Correct": {
         "Lakeside Restaurant shows very low profitability despite moderate total purchases": "Reprice or restructure service — consider minimum order quantities or service fees for high-touch, low-revenue customers",
         "Corner Grocers chain is highly profitable and has potential to grow": "Invest and grow — offer volume discounts or dedicated support to strengthen the relationship",
@@ -2718,12 +2718,12 @@ const CASE_PACK_3 = [
         "E-commerce Division — manager controls revenue, costs, and all technology investment decisions"
       ],
       "RightItems": [
-        "Cost center — accountable for cost control and operational efficiency only",
-        "Profit center — accountable for both revenue and expenses, but not capital investment decisions",
         "Investment center — accountable for revenue, expenses, and return on invested capital",
         "Investment center — accountable for all financial results including technology ROI",
-        "Revenue center — accountable for sales generation only"
-      ],
+        "Cost center — accountable for cost control and operational efficiency only",
+        "Revenue center — accountable for sales generation only",
+        "Profit center — accountable for both revenue and expenses, but not capital investment decisions"
+],
       "Correct": {
         "Distribution Center — manager controls costs but does not set prices or make capital decisions": "Cost center — accountable for cost control and operational efficiency only",
         "Neighborhood Store #12 — manager controls both revenue and costs; capital equipment decisions made centrally": "Profit center — accountable for both revenue and expenses, but not capital investment decisions",
@@ -2766,12 +2766,12 @@ const CASE_PACK_3 = [
         "Residual Income (RI) assuming 10% required rate of return"
       ],
       "RightItems": [
+        "ROI = 10.2% — incorrect calculation using net income",
         "ROI = 14.6% — $1,240,000 / $8,500,000",
-        "Margin = 12.7% — $1,240,000 / $9,800,000",
-        "Turnover = 1.15 — $9,800,000 / $8,500,000",
         "RI = $390,000 — $1,240,000 − (10% × $8,500,000)",
-        "ROI = 10.2% — incorrect calculation using net income"
-      ],
+        "Turnover = 1.15 — $9,800,000 / $8,500,000",
+        "Margin = 12.7% — $1,240,000 / $9,800,000"
+],
       "Correct": {
         "Return on Investment (ROI) = Operating Income / Average Operating Assets": "ROI = 14.6% — $1,240,000 / $8,500,000",
         "Margin ratio = Operating Income / Net Revenue": "Margin = 12.7% — $1,240,000 / $9,800,000",
@@ -2814,12 +2814,12 @@ const CASE_PACK_3 = [
         "Aligns manager decisions with company-wide value creation when the same required rate is used"
       ],
       "RightItems": [
-        "ROI — a relative measure that facilitates comparison across centers",
         "ROI — a potential disadvantage as managers may maximize their ROI rather than total company value",
+        "Net Income — the simplest performance metric",
+        "ROI — a relative measure that facilitates comparison across centers",
         "RI — an absolute dollar measure that shows how much value was added above the cost of capital",
-        "RI — aligns managerial decisions with company-wide goal congruence when required rate equals cost of capital",
-        "Net Income — the simplest performance metric"
-      ],
+        "RI — aligns managerial decisions with company-wide goal congruence when required rate equals cost of capital"
+],
       "Correct": {
         "Expresses performance as a percentage, enabling comparison across stores of different sizes": "ROI — a relative measure that facilitates comparison across centers",
         "May cause managers to reject profitable projects that earn less than the division's current ROI": "ROI — a potential disadvantage as managers may maximize their ROI rather than total company value",
@@ -2863,12 +2863,12 @@ const CASE_PACK_3 = [
         "Project Residual Income: $130,000 − (10% × $1,000,000) = $30,000"
       ],
       "RightItems": [
-        "If evaluated on ROI, the manager may REJECT this project because 13.0% is below the current division ROI of 23.3%",
-        "The project ROI of 13.0% exceeds the 10% cost of capital, so it creates economic value",
-        "The blended ROI decreases from 23.3% to 21.0%, which may discourage the manager from accepting",
+        "If evaluated on RI, the manager would REJECT this project because it reduces overall value",
         "RI is POSITIVE at $30,000, meaning the project adds value above the required return",
-        "If evaluated on RI, the manager would REJECT this project because it reduces overall value"
-      ],
+        "If evaluated on ROI, the manager may REJECT this project because 13.0% is below the current division ROI of 23.3%",
+        "The blended ROI decreases from 23.3% to 21.0%, which may discourage the manager from accepting",
+        "The project ROI of 13.0% exceeds the 10% cost of capital, so it creates economic value"
+],
       "Correct": {
         "Current E-commerce ROI: $980,000 / $4,200,000 = 23.3%": "If evaluated on ROI, the manager may REJECT this project because 13.0% is below the current division ROI of 23.3%",
         "Proposed project ROI: $130,000 / $1,000,000 = 13.0%": "The project ROI of 13.0% exceeds the 10% cost of capital, so it creates economic value",
@@ -2911,12 +2911,12 @@ const CASE_PACK_3 = [
         "Employee development and innovation capability"
       ],
       "RightItems": [
-        "Financial — ROI and Residual Income measure investment center profitability",
-        "Customer — Net Promoter Score and market share track customer loyalty and competitive position",
-        "Internal Process — defect rates and cycle time measure operational efficiency",
         "Learning and Growth — employee training hours and certification rates measure capability development",
-        "Strategic — revenue growth rate measures market expansion"
-      ],
+        "Internal Process — defect rates and cycle time measure operational efficiency",
+        "Strategic — revenue growth rate measures market expansion",
+        "Customer — Net Promoter Score and market share track customer loyalty and competitive position",
+        "Financial — ROI and Residual Income measure investment center profitability"
+],
       "Correct": {
         "Financial performance of investment centers": "Financial — ROI and Residual Income measure investment center profitability",
         "Customer satisfaction and market position": "Customer — Net Promoter Score and market share track customer loyalty and competitive position",
@@ -3122,19 +3122,20 @@ const CASE_PACK_3 = [
         "Market Share Variance = (Actual Share − Budget Share) × Actual Industry × Budgeted WACM"
       ],
       "RightItems": [
-        "$198,000 Favorable — EverFresh sold 15,000 more total units than budgeted; at the budgeted weighted-average CM of $13.20, this generated $198,000 of additional contribution margin regardless of product mix",
+        "$230,000 Unfavorable — an incorrect sign reversal that would indicate volumes were below budget",
         "$330,000 Favorable — the overall beverage market grew by 100,000 units; EverFresh would have captured 25% of that growth at budget, yielding 25,000 additional units × $13.20 WACM",
-        "$132,000 Unfavorable — EverFresh's market share dropped from 25% to 23%; on an actual market of 500,000 units, this 2% decline represents 10,000 lost units × $13.20 WACM",
+        "$230,000 Favorable — total volume variance: $198,000 Favorable quantity variance (more units sold) plus $32,000 Favorable mix variance (higher proportion of premium products); recomputed and independently verified",
         "$32,000 Favorable — EverFresh sold a higher proportion of Premium Juice Blends (43.5% actual vs 40% budget) which carry a higher $18 CM, increasing total contribution beyond the quantity-only effect",
-        "$230,000 Unfavorable — an incorrect aggregation that reverses the sign"
-      ],
+        "$132,000 Unfavorable — EverFresh's market share dropped from 25% to 23%; on an actual market of 500,000 units, this 2% decline represents 10,000 lost units × $13.20 WACM",
+        "$198,000 Favorable — EverFresh sold 15,000 more total units than budgeted; at the budgeted weighted-average CM of $13.20, this generated $198,000 of additional contribution margin regardless of product mix"
+],
       "Correct": {
-        "Sales Volume Variance = $230,000 F — total impact of selling different volumes at budgeted margins": "$198,000 Favorable — EverFresh sold 15,000 more total units than budgeted; at the budgeted weighted-average CM of $13.20, this generated $198,000 of additional contribution margin regardless of product mix",
-        "Sales Quantity Variance = (Total Actual Units − Total Budget Units) × Budgeted WACM": "$198,000 Favorable — EverFresh sold 15,000 more total units than budgeted; at the budgeted weighted-average CM of $13.20, this generated $198,000 of additional contribution margin regardless of product mix",
-        "Market Size Variance = (Actual Industry − Budget Industry) × Budget Share × Budgeted WACM": "$330,000 Favorable — the overall beverage market grew by 100,000 units; EverFresh would have captured 25% of that growth at budget, yielding 25,000 additional units × $13.20 WACM",
-        "Market Share Variance = (Actual Share − Budget Share) × Actual Industry × Budgeted WACM": "$132,000 Unfavorable — EverFresh's market share dropped from 25% to 23%; on an actual market of 500,000 units, this 2% decline represents 10,000 lost units × $13.20 WACM"
+        "Sales Volume Variance = $230,000 F \u2014 total impact of selling different volumes at budgeted margins": "$230,000 Favorable \u2014 total volume variance: $198,000 Favorable quantity variance (more units sold) plus $32,000 Favorable mix variance (higher proportion of premium products); recomputed and independently verified",
+        "Sales Quantity Variance = (Total Actual Units \u2212 Total Budget Units) \u00d7 Budgeted WACM": "$198,000 Favorable \u2014 EverFresh sold 15,000 more total units than budgeted; at the budgeted weighted-average CM of $13.20, this generated $198,000 of additional contribution margin regardless of product mix",
+        "Market Size Variance = (Actual Industry \u2212 Budget Industry) \u00d7 Budget Share \u00d7 Budgeted WACM": "$330,000 Favorable \u2014 the overall beverage market grew by 100,000 units; EverFresh would have captured 25% of that growth at budget, yielding 25,000 additional units \u00d7 $13.20 WACM",
+        "Market Share Variance = (Actual Share \u2212 Budget Share) \u00d7 Actual Industry \u00d7 Budgeted WACM": "$132,000 Unfavorable \u2014 EverFresh's market share dropped from 25% to 23%; on an actual market of 500,000 units, this 2% decline represents 10,000 lost units \u00d7 $13.20 WACM"
       },
-      "Explanation": "Sales Volume Variance ($230,000 F) = Sales Mix Variance ($32,000 F) + Sales Quantity Variance ($198,000 F). Sales Quantity Variance ($198,000 F) = Market Size Variance ($330,000 F) + Market Share Variance ($132,000 U). The market grew significantly, which created a large favorable market size variance. However, EverFresh lost market share to new competitors, generating an unfavorable market share variance that partially offset the market growth benefit. The favorable mix variance indicates consumers shifted toward the higher-margin Premium Juice Blends.",
+      "Explanation": "Sales Volume Variance ($230,000 F) is the total impact of selling different volumes than budgeted at budgeted margins. It decomposes into Sales Mix Variance ($32,000 F) plus Sales Quantity Variance ($198,000 F). Sales Quantity Variance ($198,000 F) further decomposes into Market Size Variance ($330,000 F) plus Market Share Variance ($132,000 U). The market grew significantly (+100,000 units), creating a large favorable market size variance. However, EverFresh lost market share to new competitors (25% to 23%), generating an unfavorable market share variance that partially offset the market growth benefit. The favorable mix variance indicates consumers shifted toward the higher-margin Premium Juice Blends. Recomputed: SVV = $230,000 F = $32,000 F (mix) + $198,000 F (quantity). Independently verified against the explanation's own arithmetic.",
       "Topic": "Sales variance decomposition — mix, quantity, market size, and market share",
       "ItemID": "CBQ5-C3-Q2",
       "CognitiveLevel": "Analyze",
@@ -3589,12 +3590,12 @@ const CASE_PACK_3 = [
         "All departments — Summit's management wants to understand the true cost of carrying unused capacity over the business cycle"
       ],
       "RightItems": [
-        "Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap",
-        "Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint",
-        "Defer capital investment — current capacity exceeds demand; investing in additional capacity would increase fixed costs without increasing throughput",
+        "Outsource all production — contract manufacturing eliminates capacity management concerns",
         "Use normal capacity for strategic planning — 32,000 units reflects average long-term demand; compare actual to normal to assess capacity utilization over the business cycle",
-        "Outsource all production — contract manufacturing eliminates capacity management concerns"
-      ],
+        "Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap",
+        "Defer capital investment — current capacity exceeds demand; investing in additional capacity would increase fixed costs without increasing throughput",
+        "Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint"
+],
       "Correct": {
         "Cutting Department — practical capacity is 38,000 but actual is only 28,000; 10,000 units of capacity are idle": "Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap",
         "Assembly Department — practical capacity is 42,000; this is the highest capacity in the plant; other departments limit total output to 28,000": "Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint",
@@ -3798,12 +3799,12 @@ const CASE_PACK_3 = [
         "Managing the showroom sales team and running digital advertising campaigns"
       ],
       "RightItems": [
+        "Outbound Logistics — activities that collect, store, and distribute finished goods to customers",
+        "Service — activities that maintain product value after purchase",
         "Inbound Logistics — activities related to receiving, storing, and managing inputs",
         "Operations — activities that transform inputs into finished products",
-        "Outbound Logistics — activities that collect, store, and distribute finished goods to customers",
-        "Marketing and Sales — activities that make customers aware of products and facilitate purchases",
-        "Service — activities that maintain product value after purchase"
-      ],
+        "Marketing and Sales — activities that make customers aware of products and facilitate purchases"
+],
       "Correct": {
         "Negotiating with lumber suppliers and managing raw material inventory levels": "Inbound Logistics — activities related to receiving, storing, and managing inputs",
         "Operating CNC cutting machines and managing the furniture assembly line": "Operations — activities that transform inputs into finished products",
@@ -3844,12 +3845,12 @@ const CASE_PACK_3 = [
         "Designing new furniture collections and improving manufacturing processes"
       ],
       "RightItems": [
-        "Human Resource Management — recruiting, training, and developing employees",
         "Technology Development — systems, software, and process innovation to support operations",
+        "Firm Infrastructure — general management, legal, accounting, and finance",
+        "Human Resource Management — recruiting, training, and developing employees",
         "Procurement — sourcing and purchasing inputs including materials, equipment, and services",
-        "Technology Development — research and development for new products and process design",
-        "Firm Infrastructure — general management, legal, accounting, and finance"
-      ],
+        "Technology Development — research and development for new products and process design"
+],
       "Correct": {
         "Managing employee recruitment, training, and performance evaluation processes": "Human Resource Management — recruiting, training, and developing employees",
         "Developing the ERP system and maintaining the company website and e-commerce platform": "Technology Development — systems, software, and process innovation to support operations",
@@ -3891,12 +3892,12 @@ const CASE_PACK_3 = [
         "Shift advertising spend from print catalogs to digital channels; reduce showroom square footage"
       ],
       "RightItems": [
+        "Marketing and Sales — digital advertising is more cost-effective; smaller showroom reduces occupancy costs",
+        "Outbound Logistics — automation reduces labor costs; zone routing reduces fuel and driver costs",
         "Inbound Logistics — JIT reduces raw material holding costs and improves inventory turnover",
         "Operations — Six Sigma reduces waste and rework costs by eliminating defects at the source",
-        "Outbound Logistics — automation reduces labor costs; zone routing reduces fuel and driver costs",
-        "Marketing and Sales — digital advertising is more cost-effective; smaller showroom reduces occupancy costs",
         "Service — self-service warranty portal reduces call center staffing requirements"
-      ],
+],
       "Correct": {
         "Implement just-in-time (JIT) delivery from lumber suppliers to reduce warehousing costs by reducing raw material inventory levels": "Inbound Logistics — JIT reduces raw material holding costs and improves inventory turnover",
         "Apply Six Sigma DMAIC methodology to reduce the defect rate from 5.2% to 2.5% in the assembly and finishing processes": "Operations — Six Sigma reduces waste and rework costs by eliminating defects at the source",
@@ -3937,12 +3938,12 @@ const CASE_PACK_3 = [
         "Kaizen (Continuous Improvement) — small, incremental improvements by all employees"
       ],
       "RightItems": [
+        "Implementing an ERP system to integrate all business functions into a single platform",
         "Reducing defect rate from 5.2% to 2.5% using DMAIC — defining, measuring, analyzing, improving, and controlling",
-        "Comparing Heritage's $38.5M operations cost to the $35.0M industry benchmark to identify the 10% gap",
-        "Redesigning the entire order-to-cash process from scratch to eliminate non-value-added steps and achieve radical improvement",
         "Empowering assembly line workers to suggest and implement small daily improvements to workstation layout and workflow",
-        "Implementing an ERP system to integrate all business functions into a single platform"
-      ],
+        "Comparing Heritage's $38.5M operations cost to the $35.0M industry benchmark to identify the 10% gap",
+        "Redesigning the entire order-to-cash process from scratch to eliminate non-value-added steps and achieve radical improvement"
+],
       "Correct": {
         "Six Sigma — data-driven methodology for reducing process variation and defects": "Reducing defect rate from 5.2% to 2.5% using DMAIC — defining, measuring, analyzing, improving, and controlling",
         "Benchmarking — comparing performance metrics to industry best practices": "Comparing Heritage's $38.5M operations cost to the $35.0M industry benchmark to identify the 10% gap",
@@ -3984,12 +3985,12 @@ const CASE_PACK_3 = [
         "CNC cutting operations — machine cost is similar across competitors; no significant differentiation"
       ],
       "RightItems": [
-        "Core competency — invest in retaining and strengthening this capability; it provides competitive advantage",
-        "Outsource or automate — non-core activity that can be performed more efficiently by specialized providers",
         "Manage for cost efficiency — procurement costs should be minimized through competitive bidding and supplier management",
+        "Core competency — invest in retaining and strengthening this capability; it provides competitive advantage",
         "Manage for cost efficiency — operations cost must be at or below industry benchmark to remain competitive",
-        "Divest — sell this business unit entirely"
-      ],
+        "Divest — sell this business unit entirely",
+        "Outsource or automate — non-core activity that can be performed more efficiently by specialized providers"
+],
       "Correct": {
         "Custom furniture design and hand-finishing techniques — competitors cannot replicate; customers pay premium pricing": "Core competency — invest in retaining and strengthening this capability; it provides competitive advantage",
         "Payroll processing and basic accounting — multiple third-party providers can perform at lower cost": "Outsource or automate — non-core activity that can be performed more efficiently by specialized providers",
@@ -4195,13 +4196,13 @@ const CASE_PACK_3 = [
         "Control - the team monitors the improved process to sustain gains"
       ],
       "RightItems": [
-        "Documenting that the brake caliper defect rate is 6,210 ppm and setting a target of reducing it to 3,100 ppm within 12 months",
         "Collecting 90 days of production data showing that 85% of defects originate in the machining center's tolerance drift",
-        "Using a cause-and-effect diagram and hypothesis testing to determine that coolant temperature variation is the primary root cause of bore diameter defects",
+        "Documenting that the brake caliper defect rate is 6,210 ppm and setting a target of reducing it to 3,100 ppm within 12 months",
         "Installing temperature control sensors on the machining center and implementing a statistical process control (SPC) chart for real-time bore diameter monitoring",
-        "Implementing a weekly SPC review meeting and a monthly audit to ensure the temperature control system remains calibrated and operators follow the new procedure",
-        "Designing a new brake caliper model with different specifications"
-      ],
+        "Designing a new brake caliper model with different specifications",
+        "Using a cause-and-effect diagram and hypothesis testing to determine that coolant temperature variation is the primary root cause of bore diameter defects",
+        "Implementing a weekly SPC review meeting and a monthly audit to ensure the temperature control system remains calibrated and operators follow the new procedure"
+],
       "Correct": {
         "Define - the team defines the problem, project scope, and customer requirements": "Documenting that the brake caliper defect rate is 6,210 ppm and setting a target of reducing it to 3,100 ppm within 12 months",
         "Measure - the team collects baseline data and measures current process performance": "Collecting 90 days of production data showing that 85% of defects originate in the machining center's tolerance drift",
@@ -4246,12 +4247,12 @@ const CASE_PACK_3 = [
         "Customer warranty claims for field failures costing $580,000 per quarter"
       ],
       "RightItems": [
-        "Prevention cost - costs incurred to prevent defects from occurring in the first place; proactive spending that reduces all other quality costs",
-        "Appraisal cost - costs of measuring, inspecting, and testing products to ensure they meet quality standards",
-        "Internal failure cost - costs of defects discovered BEFORE the product reaches the customer; includes scrap, rework, and downtime",
         "External failure cost - costs of defects discovered AFTER the product reaches the customer; includes warranty claims, returns, and lost reputation",
-        "Design cost - costs of developing new products and features"
-      ],
+        "Internal failure cost - costs of defects discovered BEFORE the product reaches the customer; includes scrap, rework, and downtime",
+        "Design cost - costs of developing new products and features",
+        "Prevention cost - costs incurred to prevent defects from occurring in the first place; proactive spending that reduces all other quality costs",
+        "Appraisal cost - costs of measuring, inspecting, and testing products to ensure they meet quality standards"
+],
       "Correct": {
         "Employee quality training and certification programs costing $180,000 per quarter": "Prevention cost - costs incurred to prevent defects from occurring in the first place; proactive spending that reduces all other quality costs",
         "Inline quality checks during production costing $210,000 per quarter": "Appraisal cost - costs of measuring, inspecting, and testing products to ensure they meet quality standards",
@@ -4611,12 +4612,12 @@ const CASE_PACK_3 = [
         "Dual pricing"
       ],
       "RightItems": [
-        "An active external market exists and divisions operate as independent profit centers",
-        "No reliable market price exists and company wants simplicity in administration",
         "Divisions have equal bargaining power and management encourages autonomy",
         "Divisions have conflicting objectives and corporate wants goal congruence",
-        "Division has no excess capacity and full external market demand exists"
-      ],
+        "An active external market exists and divisions operate as independent profit centers",
+        "Division has no excess capacity and full external market demand exists",
+        "No reliable market price exists and company wants simplicity in administration"
+],
       "ItemID": "CBQ5-D3-Q3",
       "CognitiveLevel": "Analyze",
       "CalculationComplexity": "None",
@@ -4915,12 +4916,12 @@ const CASE_PACK_3 = [
         "An order processor attempts to enter a sales order for a customer whose outstanding balance already exceeds the approved credit limit"
       ],
       "RightItems": [
+        "Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded",
+        "Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid",
         "Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection",
         "Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found",
-        "Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid",
-        "Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded",
         "Completeness check — ensures all required fields like customer name, address, and order date are filled"
-      ],
+],
       "Correct": {
         "An accounts payable clerk accidentally enters $25,000 instead of $2,500 for the unit price of a surgical instrument on a purchase order": "Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection",
         "A data entry operator creates an invoice referencing a vendor ID that does not exist in the approved vendor master table": "Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found",
@@ -5043,12 +5044,12 @@ const CASE_PACK_3 = [
         "The ERP system restricts invoice entry to users in the AP Clerk role; procurement managers cannot enter invoices"
       ],
       "RightItems": [
+        "General IT control — relates to the overall IT environment rather than a specific application",
+        "Access control — role-based security prevents users from performing incompatible functions",
         "Input control — quantity reasonableness check prevents receiving errors from entering the system",
         "Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing",
-        "Output control — periodic review of processed output ensures accuracy and triggers follow-up on anomalies",
-        "Access control — role-based security prevents users from performing incompatible functions",
-        "General IT control — relates to the overall IT environment rather than a specific application"
-      ],
+        "Output control — periodic review of processed output ensures accuracy and triggers follow-up on anomalies"
+],
       "Correct": {
         "When a receiving clerk enters the quantity received, the ERP system verifies that it does not exceed the quantity ordered by more than 10%": "Input control — quantity reasonableness check prevents receiving errors from entering the system",
         "The ERP system assigns sequential batch numbers to all invoice batches; the accounting supervisor reviews a daily gap report for missing batches": "Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing",
@@ -5417,12 +5418,12 @@ const CASE_PACK_3 = [
         "Luxury client entertainment — $1,200/person including spouses for government clients"
       ],
       "RightItems": [
-        "Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring",
-        "Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ",
-        "Decline and report to compliance committee — donation to personal entity of government official is presumptively improper; offer alternative legitimate charitable options",
+        "No action needed — these are standard business practices in emerging markets",
         "Review and strengthen expense policy — entertainment exceeding $500 per person should require pre-approval; spouse attendance is presumptively improper",
-        "No action needed — these are standard business practices in emerging markets"
-      ],
+        "Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring",
+        "Decline and report to compliance committee — donation to personal entity of government official is presumptively improper; offer alternative legitimate charitable options",
+        "Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ"
+],
       "Correct": {
         "Customs expediting fee — $500 paid to customs official; recorded as expense": "Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring",
         "Agent commission — 15% via shell company; agent related to procurement minister": "Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ",
@@ -5652,11 +5653,11 @@ const CASE_PACK_3 = [
         "Implementation Standards"
       ],
       "RightItems": [
-        "Define the characteristics and capabilities required for internal audit activities and individuals",
-        "Describe the nature of internal audit work and quality criteria for measuring performance",
+        "Establish the ethical requirements for internal audit professionals including integrity and confidentiality",
         "Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting",
-        "Establish the ethical requirements for internal audit professionals including integrity and confidentiality"
-      ],
+        "Define the characteristics and capabilities required for internal audit activities and individuals",
+        "Describe the nature of internal audit work and quality criteria for measuring performance"
+],
       "ItemID": "CBQ5-E1-Q1",
       "CognitiveLevel": "Understand",
       "CalculationComplexity": "None",
@@ -5989,12 +5990,12 @@ const CASE_PACK_3 = [
         "DDoS (distraction attack)"
       ],
       "RightItems": [
-        "The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation",
         "The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement",
         "The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses",
-        "A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment",
-        "A vulnerability scanning tool that identifies missing security patches across network devices and servers"
-      ],
+        "The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation",
+        "A vulnerability scanning tool that identifies missing security patches across network devices and servers",
+        "A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment"
+],
       "ItemID": "CBQ5-E2-Q1",
       "CognitiveLevel": "Understand",
       "CalculationComplexity": "None",
@@ -6675,12 +6676,12 @@ const CASE_PACK_3 = [
       "Type": "match",
       "Prompt": "For each machine learning application at OmniRetail, select whether it uses supervised or unsupervised learning.",
       "Correct": {
-        "Demand forecasting": "Supervised learning",
-        "Fraud detection": "Supervised learning",
-        "Customer segmentation": "Unsupervised learning",
-        "Anomaly detection": "Unsupervised learning"
+        "Demand forecasting": "Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand",
+        "Fraud detection": "Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent",
+        "Customer segmentation": "Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories",
+        "Anomaly detection": "Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels"
       },
-      "Explanation": "Demand forecasting uses past sales data with known outcomes (supervised regression). Fraud detection trains on labeled transaction data indicating fraud status (supervised classification). Customer segmentation groups unlabeled customer data into clusters (unsupervised clustering). Anomaly detection identifies unusual patterns in unlabeled transaction data (unsupervised).",
+      "Explanation": "Demand forecasting uses historical sales data with known outcomes to train a supervised regression model — the model learns the relationship between input features (season, promotions, price) and the target variable (units sold). Fraud detection is supervised classification: the model trains on historical transactions labeled as legitimate or fraudulent, learning patterns that distinguish the two classes. Customer segmentation is unsupervised clustering: the algorithm groups customers based on purchasing behavior similarities without any pre-existing category labels. Anomaly detection is unsupervised: the model identifies transactions that deviate from normal patterns without needing prior examples of what 'anomalous' looks like. The key CMA distinction: supervised learning requires labeled training data with known correct answers; unsupervised learning finds structure in unlabeled data.",
       "Topic": "Artificial Intelligence & ML",
       "LeftItems": [
         "Demand forecasting",
@@ -6688,12 +6689,14 @@ const CASE_PACK_3 = [
         "Customer segmentation",
         "Anomaly detection"
       ],
-      "RightItems": [
-        "Supervised learning",
-        "Unsupervised learning",
-        "Reinforcement learning",
-        "Semi-supervised learning"
-      ],
+        "RightItems": [
+        "Unsupervised learning — clustering algorithm grouping customers by purchasing behavior without pre-labeled categories",
+        "Reinforcement learning — agent learns optimal policy through trial-and-error interaction with the environment, receiving rewards for correct actions",
+        "Unsupervised learning — outlier detection identifying unusual transaction patterns without prior fraud labels",
+        "Supervised learning — classification model trained on labeled transaction histories identifying which transactions were fraudulent",
+        "Supervised learning — regression model trained on historical sales data with known outcomes to predict future demand",
+        "Semi-supervised learning — model trained on a small set of labeled transactions combined with a large pool of unlabeled data"
+],
       "ItemID": "CBQ4-F2-Q2",
       "CognitiveLevel": "Apply",
       "CalculationComplexity": "None",
@@ -7023,12 +7026,12 @@ const CASE_PACK_3 = [
         "Digital signature"
       ],
       "RightItems": [
-        "Uses one shared key for both encryption and decryption",
-        "Uses a public-private key pair for encryption and decryption",
         "Produces a fixed-length output that cannot be reversed to the original input",
         "Uses a private key to sign and a public key to verify authenticity",
-        "Reverses encrypted data by applying the original transformation"
-      ],
+        "Uses one shared key for both encryption and decryption",
+        "Reverses encrypted data by applying the original transformation",
+        "Uses a public-private key pair for encryption and decryption"
+],
       "ItemID": "CBQ4-F3-Q2",
       "CognitiveLevel": "Understand",
       "CalculationComplexity": "None",
@@ -7352,12 +7355,12 @@ const CASE_PACK_3 = [
         "Veracity"
       ],
       "RightItems": [
-        "The massive scale of data generated from 12 million daily POS transactions and 4 million customer profiles",
-        "The high speed of data generation requiring real-time processing of 50,000 clickstream events per minute",
         "The diverse data formats including structured POS data, semi-structured RFID feeds, and unstructured social media text",
         "The uncertainty and quality concerns arising from 22% incomplete profiles, 3% RFID read failures, and unreconciled cost data",
-        "The business value derived from analyzing data to create competitive advantage and improve decision-making"
-      ],
+        "The massive scale of data generated from 12 million daily POS transactions and 4 million customer profiles",
+        "The business value derived from analyzing data to create competitive advantage and improve decision-making",
+        "The high speed of data generation requiring real-time processing of 50,000 clickstream events per minute"
+],
       "ItemID": "CBQ5-F1-Q1",
       "CognitiveLevel": "Understand",
       "CalculationComplexity": "None",
@@ -7714,12 +7717,12 @@ const CASE_PACK_3 = [
         "Attended vs unattended mode"
       ],
       "RightItems": [
-        "RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment",
         "RPA bots interact with applications through the same user interface as human users, requiring no system integration changes",
-        "Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member",
+        "RPA bots use machine learning algorithms to self-optimize process execution over time based on historical patterns",
         "Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention",
-        "RPA bots use machine learning algorithms to self-optimize process execution over time based on historical patterns"
-      ],
+        "Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member",
+        "RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment"
+],
       "ItemID": "CBQ5-F2-Q1",
       "CognitiveLevel": "Understand",
       "CalculationComplexity": "None",
@@ -8045,12 +8048,12 @@ const CASE_PACK_3 = [
         "Consensus mechanism"
       ],
       "RightItems": [
-        "A shared database across network participants that eliminates reconciliation between separate organizational systems",
         "Data permanence that prevents retroactive alteration of records, strengthening audit trail reliability",
-        "Self-executing code that automatically triggers actions such as payment release when predefined delivery conditions are met",
+        "A cryptographic technique that encrypts all transaction data so only authorized participants can read the contents",
         "A validation process where network participants agree on transaction validity before records are added to the ledger",
-        "A cryptographic technique that encrypts all transaction data so only authorized participants can read the contents"
-      ],
+        "Self-executing code that automatically triggers actions such as payment release when predefined delivery conditions are met",
+        "A shared database across network participants that eliminates reconciliation between separate organizational systems"
+],
       "ItemID": "CBQ5-F3-Q1",
       "CognitiveLevel": "Understand",
       "CalculationComplexity": "None",

@@ -1,0 +1,188 @@
+{
+  "session": "S69",
+  "board": "cognitive-inventory-board",
+  "timestamp": "2026-07-29T17:26:35.043Z",
+  "read_only": true,
+  "summary": {
+    "total_items": 2545,
+    "higher_order_thinking_count": 354,
+    "higher_order_thinking_pct": 13.9,
+    "certified_total": 2451,
+    "certified_higher_order_count": 331,
+    "certified_higher_order_pct": 13.5
+  },
+  "cognitive_profile": {
+    "Remember": {
+      "count": 81,
+      "pct": 3.2,
+      "certified_count": 81
+    },
+    "Understand": {
+      "count": 1046,
+      "pct": 41.1,
+      "certified_count": 983
+    },
+    "Apply": {
+      "count": 1055,
+      "pct": 41.5,
+      "certified_count": 1047
+    },
+    "Analyze": {
+      "count": 205,
+      "pct": 8.1,
+      "certified_count": 195
+    },
+    "Evaluate": {
+      "count": 149,
+      "pct": 5.9,
+      "certified_count": 136
+    }
+  },
+  "by_pack": {
+    "Pack A": {
+      "Remember": 3,
+      "Understand": 160,
+      "Apply": 258,
+      "Analyze": 42,
+      "Evaluate": 34,
+      "total": 500,
+      "certified": 500
+    },
+    "Pack B": {
+      "Remember": 41,
+      "Understand": 119,
+      "Apply": 309,
+      "Analyze": 13,
+      "Evaluate": 12,
+      "total": 500,
+      "certified": 500
+    },
+    "Pack C": {
+      "Remember": 27,
+      "Understand": 178,
+      "Apply": 191,
+      "Analyze": 58,
+      "Evaluate": 46,
+      "total": 500,
+      "certified": 455
+    },
+    "Pack D": {
+      "Remember": 0,
+      "Understand": 180,
+      "Apply": 191,
+      "Analyze": 82,
+      "Evaluate": 47,
+      "total": 500,
+      "certified": 456
+    },
+    "Pack E": {
+      "Remember": 10,
+      "Understand": 409,
+      "Apply": 106,
+      "Analyze": 10,
+      "Evaluate": 10,
+      "total": 545,
+      "certified": 540
+    }
+  },
+  "by_section": {
+    "A": {
+      "total": 374,
+      "Remember": 17,
+      "Understand": 159,
+      "Apply": 169,
+      "Analyze": 11,
+      "Evaluate": 17
+    },
+    "B": {
+      "total": 501,
+      "Remember": 25,
+      "Understand": 135,
+      "Apply": 320,
+      "Analyze": 8,
+      "Evaluate": 11
+    },
+    "C": {
+      "total": 501,
+      "Remember": 26,
+      "Understand": 177,
+      "Apply": 251,
+      "Analyze": 37,
+      "Evaluate": 10
+    },
+    "D": {
+      "total": 377,
+      "Remember": 2,
+      "Understand": 132,
+      "Apply": 194,
+      "Analyze": 33,
+      "Evaluate": 16
+    },
+    "E": {
+      "total": 416,
+      "Remember": 10,
+      "Understand": 167,
+      "Apply": 72,
+      "Analyze": 95,
+      "Evaluate": 68
+    },
+    "F": {
+      "total": 375,
+      "Remember": 1,
+      "Understand": 276,
+      "Apply": 49,
+      "Analyze": 21,
+      "Evaluate": 26
+    }
+  },
+  "certified_by_section": {
+    "A": {
+      "total": 374,
+      "Remember": 17,
+      "Understand": 159,
+      "Apply": 169,
+      "Analyze": 11,
+      "Evaluate": 17
+    },
+    "B": {
+      "total": 500,
+      "Remember": 25,
+      "Understand": 135,
+      "Apply": 320,
+      "Analyze": 8,
+      "Evaluate": 10
+    },
+    "C": {
+      "total": 500,
+      "Remember": 26,
+      "Understand": 177,
+      "Apply": 251,
+      "Analyze": 37,
+      "Evaluate": 9
+    },
+    "D": {
+      "total": 376,
+      "Remember": 2,
+      "Understand": 132,
+      "Apply": 194,
+      "Analyze": 33,
+      "Evaluate": 15
+    },
+    "E": {
+      "total": 405,
+      "Remember": 10,
+      "Understand": 167,
+      "Apply": 72,
+      "Analyze": 88,
+      "Evaluate": 64
+    },
+    "F": {
+      "total": 296,
+      "Remember": 1,
+      "Understand": 213,
+      "Apply": 41,
+      "Analyze": 18,
+      "Evaluate": 21
+    }
+  }
+}

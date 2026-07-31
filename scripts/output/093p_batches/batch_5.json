@@ -1,0 +1,406 @@
+{
+  "batchId": "B5",
+  "itemCount": 25,
+  "items": [
+    {
+      "qid": "P1-BC-001",
+      "pack": "Pack_C",
+      "section": "BC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.001 static vs flexible budget",
+      "difficulty": "Difficult",
+      "stem": "Trillium Packaging's plant controller David Okonkwo is reviewing November performance for the quarterly operations review. The static master budget, prepared for 50,000 units, projected direct materials of $375,000, direct labor of $250,000, and variable overhead of $125,000. Actual November product",
+      "choices": {
+        "A": "Prepare a flexible budget at 58,000 units: materials $435,000, labor $290,000, variable overhead $145,000 — totaling $870,000. Actual costs of $863,000 produce a $7,000 favorable total variance, demonstrating that the plant controlled costs effectively and the static budget's $113,000 unfavorable variance was entirely a volume effect.",
+        "B": "Evaluate the plant against the original static budget of $750,000 total variable cost. The $113,000 unfavorable variance shows costs exceeded the plan by 15.1%, indicating that management failed to contain spending as production volumes unexpectedly increased beyond the approved budget.",
+        "C": "Compare actual November costs of $863,000 against the prior November's actual costs, since year-over-year comparison provides the most stable baseline for assessing whether the current period's spending was reasonable relative to historical performance.",
+        "D": "Compute the actual cost per unit of $14.88 ($863,000 / 58,000) against the static budget cost per unit of $15.00 ($750,000 / 50,000), showing a $0.12 per-unit savings that confirms the plant achieved improved efficiency at the higher production volume."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-CC-061",
+      "pack": "Pack_C",
+      "section": "CC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "C.061 fixed overhead volume variance calculation",
+      "difficulty": "Moderate",
+      "stem": "Fixed manufacturing overhead is budgeted at $720,000 for 90,000 denominator direct labor hours. Standard direct labor hours allowed for actual output were 84,000 hours. What is the fixed overhead volume variance?",
+      "choices": {
+        "A": "$48,000 unfavorable",
+        "B": "$48,000 favorable",
+        "C": "$720,000 unfavorable",
+        "D": "$672,000 unfavorable"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-DC-035",
+      "pack": "Pack_C",
+      "section": "DC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "D.035 target costing approach",
+      "difficulty": "Moderate",
+      "stem": "Jasperfield determines the price customers are willing to pay for a new product, subtracts a desired profit margin, and designs the product to meet the resulting cost figure. What costing approach is this?",
+      "choices": {
+        "A": "Job order costing",
+        "B": "Absorption costing",
+        "C": "Target costing",
+        "D": "Standard costing"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-DC-025",
+      "pack": "Pack_C",
+      "section": "DC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "D.025 variable costing vs absorption costing",
+      "difficulty": "Moderate",
+      "stem": "Zenith Bay sold 22,000 units but produced only 19,000 units during the period, drawing down beginning inventory. Fixed manufacturing overhead in inventory is $5 per unit under absorption costing. Compared with absorption costing, what income effect should variable costing report?",
+      "choices": {
+        "A": "Variable costing income will be higher by $15,000",
+        "B": "Absorption costing income will be higher by $15,000",
+        "C": "There will be no difference because the production and sales volumes are close",
+        "D": "Variable costing income will be lower by $15,000"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-DC-015",
+      "pack": "Pack_C",
+      "section": "DC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "D.015 activity based costing cost driver",
+      "difficulty": "Moderate",
+      "stem": "A customer support activity pool costs $75,000 and is driven by 3,000 support tickets. Customer Group East generated 420 tickets. Under ABC, how much support cost should be assigned to Group East?",
+      "choices": {
+        "A": "$25",
+        "B": "$178,500",
+        "C": "$10,500",
+        "D": "$75,000"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-EC-002",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.002 COSO Principle 6 -- risk identification -- emergent risk from third-party vendor concentration",
+      "difficulty": "Difficult",
+      "stem": "Apex Machining, a precision parts manufacturer, sources 73% of its specialty alloy from TitanSource Ltd., a single supplier headquartered in a region now subject to expanded trade sanctions. Apex CFO, Daniel Morrow, rejected three consecutive diversification proposals over the past 18 months, citing",
+      "choices": {
+        "A": "The company failed to perform a quantitative Monte Carlo simulation, which is the only COSO-acceptable method for modeling geopolitical risk exposure.",
+        "B": "The risk identification process was adequate because geopolitical sanctions are external events that fall outside the scope of COSO Principle 6 risk identification requirements.",
+        "C": "The primary failure was that Apex did not maintain a dual-supplier contract with a backup vendor in the same region, which would have satisfied COSO risk identification standards.",
+        "D": "The organization failed to identify emergent risks arising from significant changes in the external business environment, including supplier concentration risk, because management dismissed risk signals that contradicted its cost-minimization preference."
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-EC-029",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.029 COSO Principle 8 -- fraud risk pressure/incentive -- sales commission structures and revenue recognition fraud",
+      "difficulty": "Difficult",
+      "stem": "Granite Solutions, a B2B software company, derives 85% of its revenue from multi-year licensing contracts. Sales representatives earn a base salary plus commission calculated at 12% of total contract value, paid in full upon contract signing regardless of whether the customer ultimately pays. In Q4,",
+      "choices": {
+        "A": "Granite's fraud risk assessment is adequate because sales compensation is a human resources matter and is explicitly excluded from the scope of COSO Principle 8, which focuses on financial reporting controls.",
+        "B": "The organization failed to evaluate the fraud risk arising from compensation structures that create powerful incentives for sales personnel to circumvent revenue recognition controls to achieve compensation thresholds.",
+        "C": "The fraud risk assessment deficiency is limited to the revenue recognition team's failure to detect the side letters, and fixing the revenue team's contract review process would fully address COSO Principle 8 requirements.",
+        "D": "Granite should eliminate all commission-based compensation because COSO Principle 8 prohibits any compensation structure that could potentially create incentive to commit fraud."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-EC-046",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.046 COSO Principle 16 -- monitoring -- evaluating continuous monitoring design vs. point-in-time evaluation trade-offs",
+      "difficulty": "Difficult",
+      "stem": "Columbia Health System, a 12-hospital network, relies on an automated third-party billing system that processes $2.8 billion in annual patient charges. The internal audit function performs an annual review of billing controls each December, covering a two-week sample period. During the current year,",
+      "choices": {
+        "A": "The annual audit cycle satisfies COSO Principle 16 because the error was detected within the same fiscal year, and COSO does not prescribe specific monitoring frequencies — annual evaluations are sufficient for billing controls.",
+        "B": "The monitoring design is inadequate because a point-in-time annual review cannot provide timely detection of systematic errors introduced mid-cycle — COSO Principle 16 expects monitoring to be ongoing and integrated into operations, with frequency calibrated to the velocity at which errors can accumulate material impact.",
+        "C": "The deficiency is that internal audit tested only a two-week sample period — if the sample period covered a full month, the monitoring design would be adequate regardless of evaluation frequency.",
+        "D": "Columbia should replace the annual internal audit review with a continuous automated monitoring tool that tests 100% of transactions — COSO Principle 16 requires continuous monitoring for all financially significant processes."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-EC-070",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.070 COSO Principle 12 -- authorization scope conflict from combined vendor addition and purchase order approval rights",
+      "difficulty": "Difficult",
+      "stem": "Atherton Industries, a mid-market industrial equipment manufacturer with $340 million in annual purchases, grants its purchasing manager, David Okonkwo, two separate authorization rights: the ability to add new vendors to the approved vendor master file for any vendor with projected annual spend und",
+      "choices": {
+        "A": "Okonkwo's actions were within his delegated authority limits, so no control deficiency exists — each purchase order was under $75,000 and each vendor addition was within the $500,000 annual spend threshold, satisfying the organization's stated authorization framework.",
+        "B": "The primary deficiency is the absence of timely post-transaction review by the controller — a robust detective monitoring program would have identified the related-party vendor pattern and the unverifiable receipts before aggregate losses reached $3.1 million.",
+        "C": "The control deficiency arises from a conflict within the authorization dimension of control activities — Okonkwo held two authorization rights that, when combined, created a self-authorizing loop enabling him to unilaterally direct $3.1 million to related-party vendors without any independent second-level approval.",
+        "D": "The deficiency is that the purchase order approval threshold was set too high — reducing the per-PO limit from $75,000 to $25,000 would have required secondary approval, disrupting the self-authorizing pattern by mandating independent review on the transactions that enabled the scheme."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-EC-050",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.050 whistleblower hotline purpose",
+      "difficulty": "Difficult",
+      "stem": "Amberfield establishes an anonymous reporting channel for employees to report suspected fraud or ethical violations without fear of retaliation. What internal control objective does this serve?",
+      "choices": {
+        "A": "Eliminating the need for an external audit",
+        "B": "Encouraging detection and reporting of fraud or misconduct that might otherwise go unreported",
+        "C": "Guaranteeing that no fraud will ever occur",
+        "D": "Replacing the need for a code of conduct"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-EC-025",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.025 preventive vs detective controls",
+      "difficulty": "Moderate-Easy",
+      "stem": "Zenith Bay requires dual signatures on checks above a threshold before payment is released. Is this a preventive or detective control, and why?",
+      "choices": {
+        "A": "A preventive control, because it stops an unauthorized payment before it occurs",
+        "B": "A compensating control used only when segregation is impossible",
+        "C": "A corrective control, because it fixes problems after they occur",
+        "D": "A detective control, because it identifies errors after the fact"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-EC-057",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.057 control environment tone at top",
+      "difficulty": "Difficult",
+      "stem": "Hartwell's board and senior executives consistently emphasize integrity and ethical behavior, which shapes employee attitudes toward compliance. What COSO component does this describe?",
+      "choices": {
+        "A": "The control environment, often summarized as tone at the top",
+        "B": "Risk assessment, which identifies specific threats",
+        "C": "Information and communication, which relays data throughout the entity",
+        "D": "Monitoring activities, which evaluate control effectiveness over time"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-EC-003",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.003 COSO Principle 10 -- preventive detective control design",
+      "difficulty": "Difficult",
+      "stem": "Crestline Distribution, a regional wholesale distributor of building materials with $180 million in annual revenue, experienced a 340% increase in inventory shrinkage over three consecutive quarters. Controller Elena Vasquez reviewed the control portfolio and noted that Crestline performs weekly cyc",
+      "choices": {
+        "A": "The weekly cycle counts identified shrinkage variances each quarter, but the variances were within the 2% investigation threshold and therefore were not escalated to management for further inquiry.",
+        "B": "The monthly general ledger reconciliation consistently identified the inventory-to-book discrepancies within the 72-hour window, confirming that the detective controls functioned as designed throughout the period.",
+        "C": "The warehouse entrance lacked physical access controls -- no badge reader, no biometric scanner, no turnstile -- meaning unauthorized removal could occur without any barrier, and the cycle counts could only identify the loss after inventory had already been removed from the premises.",
+        "D": "The warehouse supervisor had authorization to approve inventory adjustments up to $5,000 without secondary approval, which allowed small quantities of missing inventory to be written off incrementally without triggering management review."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-EC-014",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.014 fraud triangle elements",
+      "difficulty": "Easy",
+      "stem": "Nightingale's internal auditors assess opportunity, pressure, and rationalization when evaluating fraud risk in a department. What model are they applying?",
+      "choices": {
+        "A": "The five forces model",
+        "B": "The fraud triangle",
+        "C": "The balanced scorecard",
+        "D": "The COSO ERM cube"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-EC-055",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.055 compensating control small business",
+      "difficulty": "Easy",
+      "stem": "Falconridge is too small to fully segregate duties among its few accounting employees. What can help mitigate this control weakness?",
+      "choices": {
+        "A": "Ignoring the risk since fraud is unlikely in small companies",
+        "B": "Outsourcing all accounting with no oversight",
+        "C": "Increased owner or management review and oversight as a compensating control",
+        "D": "Eliminating internal controls entirely since the company is small"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-FC-067",
+      "pack": "Pack_C",
+      "section": "FC",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "F.067 Data architecture — lake vs warehouse selection",
+      "difficulty": "Difficult",
+      "stem": "Apex Manufacturing's CFO James Okonkwo requires consolidated financial reporting with strong schema enforcement, ACID-compliant transactions, and auditable data lineage from the ERP system. Simultaneously, COO Maria Santos needs real-time analytics on semi-structured JSON sensor data streaming from ",
+      "choices": {
+        "A": "Traditional data warehouse: Provides the structured query performance and ACID compliance necessary for financial reporting; IoT data can be transformed before loading",
+        "B": "Data lakehouse: Combines the ACID transaction support and schema enforcement needed for financial reporting with the schema-on-read flexibility required for semi-structured IoT data",
+        "C": "Data lake only: Stores all data in native format and provides sufficient SQL capabilities through modern query engines for both structured reporting and semi-structured analytics",
+        "D": "Separate warehouse and lake: Maintain the existing data warehouse for financial data and build a separate data lake for IoT data to optimize each workload independently"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-BD-037",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.037 operating budget vs financial budget",
+      "difficulty": "Difficult",
+      "stem": "Ledgemont Corporation's finance director, Amara Osei, is training new budget analysts on master budget construction. She presents a scenario: the company manufactures industrial valves and is preparing its annual master budget. The sales budget projects 50,000 units at $85 each. The production budge",
+      "choices": {
+        "A": "The operating budget includes all items that require cash disbursement within the budget year, while the financial budget includes only non-cash items such as depreciation and accruals",
+        "B": "The operating budget encompasses revenue-generating and cost-incurring activities reported on the income statement (sales, production, materials, labor, overhead, S&A), while the financial budget encompasses the balance sheet, cash flows, and capital expenditures that affect the company's financial position",
+        "C": "The operating budget covers only variable costs that change with production volume, while the financial budget covers all fixed costs and long-term commitments",
+        "D": "The operating budget is prepared by department managers, while the financial budget is prepared exclusively by the treasury department — the classification depends on who prepares the budget, not what it contains"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-BD-100",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.100 strategic vs operational planning horizon",
+      "difficulty": "Moderate",
+      "stem": "Ashfield's board sets a five-year strategic plan, while department managers prepare detailed annual operating budgets. How do these two planning levels differ?",
+      "choices": {
+        "A": "Operating budgets are prepared only once every five years",
+        "B": "Strategic plans are prepared by external auditors only",
+        "C": "They cover the exact same time horizon and level of detail",
+        "D": "Strategic plans set broad, long-term direction, while operating budgets translate strategy into detailed short-term financial targets"
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-BD-043",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.044 time series forecasting trend vs seasonal decomposition",
+      "difficulty": "Moderate",
+      "stem": "A manufacturer's quarterly sales data (in $000s) over two years: Q1: 230, Q2: 270, Q3: 310, Q4: 250, Q5: 250, Q6: 290, Q7: 330, Q8: 270. The analyst deseasonalizes the data using a centered moving average and finds the underlying trend values (in $000s): Q1: 212, Q2: 218, Q3: 224, Q4: 230, Q5: 240, ",
+      "choices": {
+        "A": "The random component drives the forecast because the quarterly fluctuations ($230→$270→$310) show high volatility that dominates both trend and seasonal patterns",
+        "B": "Trend is the primary driver — deseasonalized values rise from $212K to $296K (+39.6%), and growth is smooth ($6K−$16K/quarter) with no structural break",
+        "C": "Seasonality is the primary driver — the seasonal component adds approximately $43K per peak quarter (Q3), which exceeds the average quarterly trend growth of ~$12K",
+        "D": "A structural break occurred between Q4 and Q5 when deseasonalized trend jumped from $230K to $240K — a $10K/quarter increase that signals a permanent shift"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-BD-027",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.027 direct labor budget calculation",
+      "difficulty": "Moderate",
+      "stem": "Bellcourt plans to produce 8,000 units, each requiring 2 direct labor hours at a rate of 18 per hour. What is the total budgeted direct labor cost?",
+      "choices": {
+        "A": "144,000",
+        "B": "16,000",
+        "C": "288,000",
+        "D": "576,000"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-BD-030",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.030 standard cost setting basis",
+      "difficulty": "Difficult",
+      "stem": "Fenwick Manufacturing's production manager and controller disagree about the basis for setting direct materials standard costs for the upcoming year. The production manager wants to use ideal standards based on perfect efficiency (zero waste, no machine downtime, optimal purchase prices). The contro",
+      "choices": {
+        "A": "Ideal standards — because they set an aspirational target that motivates the production team to eliminate waste and downtime",
+        "B": "Attainable standards — because they provide a realistic benchmark for variance analysis, yield achievable cost targets for the master budget, and produce variances that reflect operational issues rather than standard-setting philosophy",
+        "C": "A weighted blend of ideal and attainable — using ideal standards for materials price and attainable standards for materials quantity",
+        "D": "Neither — the budget director should use last year's actual costs as the standard, because historical data is more reliable than projections"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-BD-068",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.068 selling and administrative expense — cost behavior analysis from data",
+      "difficulty": "Difficult",
+      "stem": "Somerdale Corporation's budget analyst, Priya Mehta, is classifying S&A costs for the upcoming fiscal year budget. She has compiled the following actual cost data from the past four quarters at different sales volumes: Q1 ($5.2M sales): sales commissions $130,000, credit card fees $36,400, shipping ",
+      "choices": {
+        "A": "Sales commissions, credit card fees, and shipping to customers only — these three costs vary proportionally with sales volume across all four quarters, while advertising, sales salaries, depreciation, warehouse rent, and customer service salaries do not show a consistent volume relationship.",
+        "B": "Sales commissions, credit card fees, shipping to customers, and advertising — advertising increased from $45,000 to $60,000 when sales jumped from $5.2M to $7.0M in Q4, indicating a volume-driven relationship that should be modeled as variable for budgeting purposes.",
+        "C": "Sales commissions, credit card fees, shipping to customers, and customer service salaries — customer service costs may appear fixed ($44,000 every quarter) but should be classified as variable because the number of customer inquiries likely correlates with sales volume, and the historical data may not capture the full range of volume extremes.",
+        "D": "All costs should be classified as variable except depreciation and warehouse rent — sales commissions, credit card fees, shipping, and advertising clearly vary with volume, while sales salaries and customer service salaries are step-variable costs that should be treated as variable within the relevant range for budget planning purposes."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-BD-076",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.076 forecast accuracy measurement",
+      "difficulty": "Moderate",
+      "stem": "Bramblewood evaluates its sales forecasting model by comparing forecasted values to actual results using mean absolute percentage error. What is the purpose of this measurement?",
+      "choices": {
+        "A": "To calculate the company's residual income",
+        "B": "To set the transfer price between two divisions",
+        "C": "To determine the exact cause of a specific cost variance",
+        "D": "To assess the accuracy and reliability of the forecasting method used"
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-BD-080",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.080 expected value sensitivity analysis cash budget impact",
+      "difficulty": "Difficult",
+      "stem": "Harborview Cabinetry is preparing its Q3 cash budget. Treasurer Naomi Singh modeled three demand scenarios: Bear (8,000 units, 25%), Base (10,000, 50%), Bull (13,000, 25%). Expected-value demand = 10,250 units. Each unit: $70 revenue, $40 variable cost. Fixed cash outflows: $280,000/quarter. Beginni",
+      "choices": {
+        "A": "The Bull scenario creates the greatest strain because working-capital buildup consumes cash despite stronger revenue. Expected-value forecast is adequate for planning.",
+        "B": "The Bear scenario (8,000 units) creates a $40,000 cash deficit. Expected value of 10,250 masks this tail risk — relying solely on expected value for credit-facility sizing would leave Harborview under-borrowed by $60,000.",
+        "C": "All three scenarios produce comparable cash positions because contribution margin is constant. Expected value is sufficiently robust.",
+        "D": "The Base scenario drives the borrowing decision because it carries the highest probability (50%). Banks only underwrite facilities based on the most probable outcome."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-BD-065",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.065 selling and administrative expense budget",
+      "difficulty": "Difficult",
+      "stem": "Prescott Industries' controller, Raj Mehta, is finalizing the annual selling and administrative expense budget. The sales forecast projects $4.8 million in revenue across three product lines. The S&A cost structure includes: sales commissions at 6% of revenue, shipping costs at 2% of revenue, five r",
+      "choices": {
+        "A": "Variable costs: commissions ($288,000 at 6% of $4.8M) and shipping ($96,000 at 2%). Fixed costs: sales manager salaries ($425,000), office lease ($114,000), and depreciation ($24,000). The VP's proposal adds $170,000 in fixed costs against $36,000 in incremental variable commissions (6% of $600K), plus $12,000 in shipping — requiring $218,000 in contribution margin from $600,000 revenue (36.3% CM ratio) just to cover the S&A cost increase, which is unlikely if COGS averages 60-65% of revenue",
+        "B": "All S&A costs are variable because they support selling activity — the sales managers could be reassigned if revenue declines, the lease has a 30-day cancellation clause, and depreciation continues regardless of volume but is allocated per unit",
+        "C": "Variable costs: commissions and shipping. Fixed costs: salaries, lease, depreciation. The VP's proposal adds $170,000 fixed against $600,000 incremental revenue — at a typical 35% contribution margin ($210,000), the incremental managers would contribute $40,000 after covering S&A costs, so the expansion should be approved",
+        "D": "Variable costs: commissions only. Shipping is a step-variable cost that changes in blocks, not continuously. Fixed costs: salaries, lease, depreciation. The VP's proposal should be evaluated on strategic grounds (market entry), not cost analysis alone — the $170,000 investment in a new territory is a long-term strategic decision"
+      },
+      "correctChoice": "A"
+    }
+  ]
+}

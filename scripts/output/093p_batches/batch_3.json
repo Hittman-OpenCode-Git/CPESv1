@@ -1,0 +1,401 @@
+{
+  "batchId": "B3",
+  "itemCount": 25,
+  "items": [
+    {
+      "qid": "P1-BD-066",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.066 selling and administrative expense budget",
+      "difficulty": "Moderate",
+      "stem": "Quillwood prepares a budget for fixed and variable selling and administrative expenses based on projected sales volume. What costs would typically appear as variable in this budget?",
+      "choices": {
+        "A": "Multi-year lease payments on office space",
+        "B": "Sales commissions that vary directly with sales volume",
+        "C": "The CEO's fixed annual salary",
+        "D": "Straight-line depreciation on headquarters"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-BD-014",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.014 incremental budgeting drawback",
+      "difficulty": "Difficult",
+      "stem": "Northfell Manufacturing's CFO, David Okonkwo, must present a budget methodology recommendation to the board of directors. Northfell has used incremental budgeting — adjusting last year's actuals by inflation — for 12 years. Over the past three years, the company doubled revenue to $84 million, expan",
+      "choices": {
+        "A": "Recommend continuing incremental budgeting — the $185,000 cost and 8-week timeline of ZBB outweigh any accuracy benefits, and two division heads oppose the change",
+        "B": "Recommend adopting zero-based budgeting — it is the only methodology that forces managers to justify every cost from a zero base, eliminating the inefficiencies that inevitably accumulate under 12 years of incremental budgeting",
+        "C": "Recommend adopting activity-based budgeting — it provides better cost-driver linkage than incremental budgeting at lower cost and disruption than ZBB, and Northfell's product-line complexity now demands cost visibility that incremental budgeting cannot provide",
+        "D": "Recommend a phased approach — keep incremental for Q1 to avoid planning disruption, then transition to ZBB for the remainder of the fiscal year"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-BD-097",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.097 strategic vs operational planning — budget conflict resolution",
+      "difficulty": "Very Difficult",
+      "stem": "Whitmore Industries' Board approved a five-year strategic plan with three sequenced objectives: (1) enter the Southeast Asian market by Year 2, requiring a local distribution partnership, (2) launch a direct-to-consumer e-commerce channel by Year 3, and (3) achieve ISO 14001 environmental certificat",
+      "choices": {
+        "A": "Raj's cash flow argument — the capacity expansion generates $420,000 in annual incremental contribution margin starting Year 2, fully funding the $1.8 million environmental investment over approximately four years. Deferring the environmental investment by two years and using self-generated cash flow is financially conservative and avoids incremental borrowing costs.",
+        "B": "The strategic interdependency between the Southeast Asian market entry and ISO 14001 certification — the distributor requires ISO 14001 certification from all suppliers. If environmental equipment is deferred to Year 3 with a 14-month procurement lead time plus 6 months of operations, certification cannot be achieved before late Year 4 or early Year 5. The Year 2 market entry deadline becomes infeasible, and without the Southeast Asian distributor, the entire strategic plan's revenue growth assumptions collapse.",
+        "C": "The Board's formal authority — the Board approved the environmental investment in Year 1 as part of the five-year strategic plan, and the CEO's fiduciary duty is to execute the Board-approved plan, not to entertain operational re-sequencing proposals from division VPs. Raj's budget should be rejected on governance grounds.",
+        "D": "The e-commerce channel timeline — launching a direct-to-consumer channel by Year 3 requires significant marketing investment and typically takes 18-24 months to reach breakeven. The Year 3 e-commerce target may be overly aggressive regardless of the environmental equipment decision, and the Board should reconsider the entire strategic sequencing rather than adjudicating this single conflict."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-BD-023",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.023 direct labor budget calculation",
+      "difficulty": "Very Difficult",
+      "stem": "Whitmore Industries' production director, James Okonkwo, is finalizing the Q2 direct labor budget for presentation to the finance committee. The production schedule calls for 8,000 units, each requiring 2.0 direct labor hours. James's permanent workforce of 42 employees provides 8,400 hours per quar",
+      "choices": {
+        "A": "Staff entirely with permanent workers — lay off excess in Q3. This minimizes the hourly rate ($18.00) and avoids temporary-worker quality risks, though severance costs and rehiring expenses in future quarters would apply",
+        "B": "Use a combination of capped overtime for all 42 permanent employees (3,360 hours at $27.00 = $90,720 premium) plus 6 temporary workers (2,520 hours at $22.50 = $56,700 plus $7,200 onboarding) to cover the remaining 4,240 hours — this balances cost, quality, and flexibility while respecting the contractual overtime cap",
+        "C": "Authorize overtime for the full 7,600-hour gap — 42 employees working an additional 181 hours each, well above the 80-hour contractual cap, at a total overtime cost of $205,200. This retains all production in-house with the trained permanent workforce",
+        "D": "Subcontract all overflow production to the certified partner at $24.00/unit equivalent — this eliminates overtime entirely, avoids temporary-worker onboarding costs, and transfers production risk to the subcontractor"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-BD-015",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.015 capital expenditure budget planning",
+      "difficulty": "Difficult",
+      "stem": "Emberline Industries' capital expenditure committee has two competing proposals. Project Alpha ($2.1M) replaces aging stamping equipment on the consumer goods line (78% of revenue, 14% margins), reducing downtime 18% with 3.1-year payback. Project Omega ($2.8M) installs automated sensor calibration ",
+      "choices": {
+        "A": "Fund Alpha in full ($2.1M). Alpha supports 78% of current revenue, has shorter payback, and stays within budget. Reconsider Omega next cycle.",
+        "B": "Fund Omega in full ($2.8M). 22% defense margins represent a 57% improvement over 14% consumer margins. Capital budgeting should prioritize highest-return projects regardless of strategic continuity. Defer Alpha by authorizing overtime maintenance.",
+        "C": "Reject both. Return $3.0M to shareholders as a special dividend and await a more compelling capital allocation opportunity.",
+        "D": "Fund Alpha in full ($2.1M) to protect current revenue, and allocate $0.9M to Omega Phase 1 — ISO certification ($320K), feasibility study ($180K), and initial sensor design ($400K). Full Omega funding in next budget cycle after milestones achieved."
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-BD-022",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.022 direct labor budget permanent vs temporary staffing seasonal demand",
+      "difficulty": "Difficult",
+      "stem": "Fenwick Manufacturing's Operations Director, Marcus Delgado, is finalizing the annual direct labor budget. Production demand follows a seasonal pattern: Q1 (Jan–Mar) 40,000 units, Q2 (Apr–Jun) 95,000 units, Q3 (Jul–Sep) 60,000 units, and Q4 (Oct–Dec) 50,000 units. Each unit requires 0.5 direct labor",
+      "choices": {
+        "A": "Staff 95 permanent workers year-round to cover peak Q2 demand without overtime or temporary labor — permanent workers provide the lowest hourly cost ($32.00 vs. $38.00 temp), institutional knowledge retention is maximized, and idle labor during Q1, Q3, and Q4 (averaging 30 workers idle per quarter) is an acceptable cost of workforce stability and surge-readiness.",
+        "B": "Staff only the Q4 base demand of 50 permanent workers and fill all seasonal volume above 50,000 units with temporary labor each quarter — this eliminates idle-time costs entirely, matches labor cost directly to production needs, and preserves maximum flexibility if demand forecasts shift.",
+        "C": "Maintain a core of 50 permanent workers covering the 50,000-unit quarterly base load, supplement Q2's 45,000-unit surge with a combination of 20 temporary workers and capped overtime for the 50 permanent employees (4,000 overtime hours), and cover Q3's additional 10,000 units with limited temporary staffing — this balances the lower per-hour cost of permanent labor with the flexibility of temporary workers while limiting overtime to the regulatory cap.",
+        "D": "Staff 65 permanent workers — the average of Q2 peak (95) and Q4 trough (50) — using mandatory overtime during Q2 (95,000 units requires 47,500 hours; 65 workers provide 32,500 base hours; gap of 15,000 hours at $48.00/hour) and accepting idle labor during Q1 and Q4. This reduces temporary-worker onboarding costs and quality variability."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-BD-006",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.006 flexible budget variance analysis",
+      "difficulty": "Difficult",
+      "stem": "Fernhollow Manufacturing's controller, Rebecca Walsh, reviews a concerning pattern in the quarterly flexible budget reports. For four consecutive quarters, the production department has reported favorable flexible budget variances totaling $87,000. The production VP attributes this to lean manufactu",
+      "choices": {
+        "A": "Recognize the production VP for cost leadership — four consecutive quarters of favorable variances totaling $87,000 clearly demonstrate sustained operational improvement, and lean manufacturing ROI studies show 5-8% cost reduction is typical in year one",
+        "B": "Recommend the board defer recognition until the flexible budget cost assumptions are independently re-benchmarked against current input prices and normal operating conditions — the 18-month-old assumptions were set under materially different operating conditions (65% capacity with overtime vs. 88% capacity without overtime), making it impossible to determine whether the $87,000 reflects genuine efficiency or an obsolete benchmark",
+        "C": "Advise the board to recognize half the $87,000 as efficiency gains and attribute the remainder to outdated cost assumptions — this acknowledges the production VP's efforts while maintaining skepticism about the budget baseline",
+        "D": "Recommend immediately lowering the flexible budget cost per hour from $6.50 to $5.80 to eliminate the 'artificial' favorable variances and challenge the production team with a tighter benchmark going forward"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-BD-041",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.041 operating budget vs financial budget",
+      "difficulty": "Difficult",
+      "stem": "Controller Elena Rossi of Tidewell Corp is preparing the Q3 budget presentation for the board. Two board members disagree about which budget document to prioritize: Director Ainsworth argues the board should focus on the operating budget because it drives profitability. Director Okonkwo insists the ",
+      "choices": {
+        "A": "Prioritize the financial budget because the equipment purchase and line of credit maturity are balance-sheet and cash-flow items that the operating budget does not address",
+        "B": "Prioritize the operating budget because sales and expense projections determine whether Tidewell can afford the equipment purchase",
+        "C": "Present both budgets together, noting that they serve fundamentally different purposes — the operating budget projects income statement activity while the financial budget addresses the balance sheet, cash position, and capital expenditures the board is concerned about",
+        "D": "Ask the board to defer the decision until after Q3 results are available, since budgets are forecasts and the actual numbers may change"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-DD-069",
+      "pack": "Pack_D",
+      "section": "DD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "D.069 direct labor efficiency variance calculation",
+      "difficulty": "Difficult",
+      "stem": "Oakvales production report shows the following for the current period: 600 units produced; standard = 2.0 direct labor hours per unit at .00 per hour; actual hours worked = 1,300; actual labor rate = .80 per hour. The direct labor efficiency variance is ,500 unfavorable and the labor rate variance i",
+      "choices": {
+        "A": "Investigate the ,500 efficiency variance because 100 excess hours on 1,200 standard hours allowed represents an 8.3% efficiency gap; the learning curve explanation is plausible for new hires but the controller should verify by comparing efficiency trends over the training period to confirm improvement and rule out other causes such as machine downtime or material quality issues",
+        "B": "Accept both variances without investigation because the total ,540 unfavorable is only 10.8% of the ,400 standard labor cost and therefore falls below any reasonable investigation threshold",
+        "C": "Investigate only the ,040 rate variance because paying .80 above standard per hour is a controllable purchasing/HR issue, while the efficiency variance is an unavoidable consequence of the training program",
+        "D": "No, the controller should not investigate because management by exception means only variances exceeding 10% of the standard should be examined, and neither the 8.3% efficiency gap nor the 5.3% rate gap meets that threshold"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-DD-061",
+      "pack": "Pack_D",
+      "section": "DD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "D.061 cvp analysis multiple products",
+      "difficulty": "Moderate",
+      "stem": "Longmeadow sells two products with different contribution margins and wants to compute a break-even point in total units. What must be assumed to compute a meaningful combined break-even point?",
+      "choices": {
+        "A": "A constant sales mix between the two products",
+        "B": "Equal selling prices for both products",
+        "C": "Zero variable costs for one of the products",
+        "D": "Identical fixed costs for both products individually"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-ED-019",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.019 COSO ERM -- risk appetite vs. strategy -- evaluating strategic misalignment",
+      "difficulty": "Difficult",
+      "stem": "Apex Aerospace, a $2.9 billion defense contractor, adopted a board-approved risk appetite statement declaring that the company 'accepts moderate risk in pursuit of strategic growth objectives, with risk-taking limited to activities where Apex possesses the technical expertise and operational capacit",
+      "choices": {
+        "A": "The board acted within its risk appetite because the risk appetite statement uses the term 'moderate risk' which is subjective, and the board's approval demonstrates that the board — as the governing authority — interpreted the acquisition as within the moderate risk category.",
+        "B": "The board's approval of the acquisition was inconsistent with the stated risk appetite because the company lacked the technical expertise and operational capacity to manage satellite manufacturing risks, which the risk appetite statement explicitly requires as a precondition for risk-taking.",
+        "C": "The risk appetite statement was fundamentally flawed because it contained subjective language ('moderate risk') that made it unenforceable as a governance document — COSO ERM requires risk appetite to be stated in quantitative thresholds that can be objectively measured against specific transactions.",
+        "D": "The acquisition was consistent with the risk appetite because the projected $90 million in annual cost synergies indicated that the expected return exceeded the risk, and risk appetite governs the level of risk-taking, not the outcome of specific decisions."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-ED-030",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.030 COSO Principle 2 -- board independence -- evaluating related-party transaction governance",
+      "difficulty": "Difficult",
+      "stem": "Sterling Capital, a publicly traded investment firm, entered into a $120 million advisory agreement with a consulting firm owned by the brother of Sterling's CEO. The board approved the agreement after the CEO recused himself from the vote. The remaining four directors — all classified as independen",
+      "choices": {
+        "A": "The board satisfied COSO Principle 2 because all voting directors were independent under exchange rules and the CEO recused himself — board independence is defined by director classification, not by the rigor of transaction review procedures.",
+        "B": "The board failed to exercise independent oversight because independence under COSO Principle 2 requires more than formal director classification — it requires the board to exercise objective judgment, which includes independently verifying the terms of related-party transactions rather than relying on interested-party representations.",
+        "C": "The deficiency is that the board should have declined the transaction entirely — COSO Principle 2 prohibits any related-party transactions regardless of approval procedures because they inherently compromise the board's independence.",
+        "D": "The board's approval process was adequate because a shareholder lawsuit does not constitute evidence of control deficiency — the transaction was properly disclosed and the CEO's recusal satisfied the only structural independence requirement COSO Principle 2 imposes."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-ED-044",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.044 COSO ERM — risk response portfolio — accept, mitigate, transfer",
+      "difficulty": "Difficult",
+      "stem": "Kestrel Aerospace manufactures precision engine components, with annual revenues of $480 million. The board has established a risk appetite that no single event should cause more than $3.0 million in EBITDA impact and an aggregate annual risk tolerance of $7.0 million. The ERM team has identified fo",
+      "choices": {
+        "A": "Mitigate Risks 1 and 2 ($1,470,000 total) and request a $70,000 budget increase from the board — this addresses the two risks with the largest potential financial impact, consistent with the principle that resources should be directed to the highest-consequence events.",
+        "B": "Mitigate Risks 1 and 4 ($730,000 total), transfer Risk 2 through supply chain business interruption insurance at an estimated $180,000 annual premium, and treat Risk 3 as a forecasted compliance expenditure incorporated into the capital budget rather than the risk response budget.",
+        "C": "Mitigate only Risk 4 ($210,000) given its superior risk-reduction return on investment, accept Risks 1 and 2 given their relatively low likelihood profiles, and classify Risk 3 as an unavoidable capital expenditure outside the ERM scope.",
+        "D": "Accept Risks 1, 2, and 4 without mitigation, transferring the aggregate exposure through a portfolio insurance policy at $400,000 annual premium, and treat Risk 3 as an unavoidable regulatory mandate."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-ED-071",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.071 change management control direct production change",
+      "difficulty": "Moderate",
+      "stem": "A developer at Northpoint Solutions made a direct change to a production database to correct a customer billing error. No change request was submitted, and the modification was not tested or reviewed by anyone else. Which IT general control is most clearly missing?",
+      "choices": {
+        "A": "Application input validation for customer billing data",
+        "B": "Segregation of duties between the billing and collections departments",
+        "C": "A formal change management process requiring documented approval, testing, and migration procedures before production changes",
+        "D": "Physical access controls limiting entry to the data center facility"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-ED-069",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.069 coso principle 2 audit committee independence",
+      "difficulty": "Difficult",
+      "stem": "Meridian Biosciences, a publicly traded life sciences company listed on NASDAQ, has a three-member audit committee: (1) Alan Hirsch, the committee chair, who retired as Meridian's CFO two years ago after serving in that role for 11 years; (2) Cynthia Voss, a current board member who serves as CEO of",
+      "choices": {
+        "A": "The composition does not meet independence requirements. Alan Hirsch is within the three-year cooling-off period for former employees under SEC Rule 10A-3, and Cynthia Voss has a material business relationship through LabCore Supply, leaving only one of three members — Dr. Okafor — independent. The governance implication is that management must disclose the material weakness in its internal control assessment and note that the audit committee's lack of independence represents a deficiency in the control environment, the foundational component of the COSO Internal Control — Integrated Framework.",
+        "B": "The composition meets independence requirements. The SEC's cooling-off period for former employees serving on the audit committee is two years, not three, so Alan Hirsch is independent. Cynthia Voss's supplier relationship is an operational matter that does not impair her objectivity with respect to financial reporting oversight. The material weakness disclosure is required under Section 404 of the Sarbanes-Oxley Act but the report should state that the audit committee was properly constituted throughout the period under review.",
+        "C": "The composition does not meet independence requirements because a majority of members (two of three) are affiliated with the company or a significant business partner. However, the governance implication extends beyond disclosure: under PCAOB auditing standards, the external auditor cannot rely on the representations and oversight of a non-independent audit committee, creating an unresolvable scope limitation that requires the auditor to withdraw from the engagement or issue a disclaimer of opinion on internal control over financial reporting.",
+        "D": "The composition meets minimum listing requirements because at least one audit committee member (Dr. Okafor) is independent and qualifies as an audit committee financial expert under SEC rules. While fully independent audit committees represent best practice under COSO Principle 2, the material weakness in revenue recognition is an accounting-policy matter unrelated to audit committee composition, and the governance implication is limited to disclosure of the material weakness without reference to the committee's independence status."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-ED-038",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.038 COSO Principle 5 — accountability in cross-functional agile teams",
+      "difficulty": "Difficult",
+      "stem": "PulsePoint Software adopted Scrum-based agile development for its flagship SaaS platform, which processes client financial data and is subject to an annual SOC 2 Type II audit. During the most recent audit, the external auditor identified that multi-factor authentication had never been enforced on t",
+      "choices": {
+        "A": "The failure is primarily a Scrum Master process failure — the Scrum Master is accountable for ensuring the team completes all sprint backlog items. The accountability gap could have been prevented by requiring the Scrum Master to include MFA as a sprint backlog item and escalating uncompleted security items during retrospectives.",
+        "B": "The failure reflects a structural diffusion of accountability in which every role had a defensible rationale for why MFA was not their individual responsibility. COSO Principle 5 requires that management establish clear organizational structures, reporting lines, and appropriate authorities and responsibilities — which PulsePoint failed to do for cross-functional security controls.",
+        "C": "The failure is primarily a Security Engineering team failure — the system security plan explicitly listed MFA as a required control, and the security team is ultimately accountable for ensuring all listed controls are implemented regardless of which function performs the configuration.",
+        "D": "The failure reflects the nature of self-organizing agile teams — collective ownership means all team members share accountability for sprint outcomes. No structural governance change is needed beyond reinforcing the team's collective ownership culture and encouraging developers to self-assign technical debt items."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-ED-045",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.045 COSO Principle 10/17 — control deficiency severity — material weakness vs. significant deficiency",
+      "difficulty": "Difficult",
+      "stem": "Calvert Regional Health is a publicly traded hospital operator with $2.1 billion in annual revenue. During the integrated audit, the external auditor identified the following control deficiency in the revenue cycle: patient service revenue is recognized based on charges recorded in the billing syste",
+      "choices": {
+        "A": "Significant deficiency — the $1.26 million permanent revenue leakage is below the $4.5 million planning materiality threshold, and management's CFO-level review of monthly revenue reports represents a compensating detective control that limits the severity of the deficiency.",
+        "B": "Material weakness — the deficiency affects multiple financial statement assertions, has persisted for three years without remediation despite prior identification, the compensating management review control failed to detect the leakage, and there is a reasonable possibility that a material misstatement could occur under foreseeable stress conditions, as evidenced by the $2.8 million exposure during the prior system upgrade.",
+        "C": "Significant deficiency — the 85% catch rate demonstrates that the manual reconciliation is functioning as an effective compensating control at a sufficient level of precision, and the permanent leakage of $1.26 million (0.06% of revenue) is quantitatively immaterial to the financial statements taken as a whole.",
+        "D": "Material weakness — any control deficiency that results in permanently lost revenue, regardless of dollar amount, automatically constitutes a material weakness because it demonstrates that the control environment does not prevent the loss of company assets as required by COSO Principle 10."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-ED-003",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.003 Three Lines of Defense — evaluating fourth-line (external assurance) reliance gaps",
+      "difficulty": "Difficult",
+      "stem": "Harborstone Bank, a $4.2B regional financial institution, relies entirely on its external auditor's annual integrated audit (financial statements + ICFR) as its sole source of independent assurance over internal controls. The bank has no internal audit function; second-line risk management is limite",
+      "choices": {
+        "A": "The external auditor should have been replaced after three consecutive unqualified opinions to maintain independence under SEC rotation rules.",
+        "B": "The second line of defense (risk management) failed because credit risk monitoring should have detected the auditor's subcontracting arrangement.",
+        "C": "A fourth line of defense such as a regulator cannot substitute for a missing first line (control ownership by management) or third line (internal audit), and relying solely on an external auditor creates a structural assurance gap that no amount of auditor diligence can close.",
+        "D": "The first line of defense (operational management) failed because branch managers should have detected that the digital lending platform was not included in the external audit scope."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-ED-023",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.023 coso principle 12 authorization fraud",
+      "difficulty": "Difficult",
+      "stem": "Ridgeline Construction Company's purchasing policy authorizes the purchasing manager, Marcus Webb, to approve purchase orders up to $50,000 without secondary review. During an external audit, the engagement team identified eight purchase orders — each for exactly $49,500 — issued over an 18-month pe",
+      "choices": {
+        "A": "The segregation of duties control failed — the purchasing manager could both requisition materials and approve the resulting purchase orders, creating an incompatible duties conflict. Structurally separating the requisition function from the PO approval function between two different individuals would have prevented the manager from processing self-initiated purchases to a vendor he controlled.",
+        "B": "The preventive authorization threshold design failed because a $50,000 single-transaction limit is inherently excessive for a purchasing manager at a construction company. Reducing the threshold to $15,000 and requiring dual signatures from the CFO or controller for all purchase orders above that amount would have prevented the fraud by forcing each transaction into secondary review.",
+        "C": "The preventive and detective controls both functioned as designed — the individual POs were below the $50,000 threshold, and the ERP correctly recorded each transaction. The root failure is that management did not eliminate individual approval limits and route all purchases through a centralized procurement committee regardless of dollar amount, the only structural change that prevents threshold-based structuring.",
+        "D": "The detective monitoring control failed — no mechanism aggregated purchase orders by initiator or vendor to identify structuring patterns. A periodic management review summarizing all purchase orders within 10% of any approval threshold, grouped by requestor and by vendor, would have flagged the eight near-identical $49,500 transactions to a single vendor, enabling investigation before the total loss reached $340,000."
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-FD-015",
+      "pack": "Pack_D",
+      "section": "FD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "F.015 cybersecurity — encryption strategy cloud migration",
+      "difficulty": "Difficult",
+      "stem": "Brennan and Holt LLP is a 140-attorney law firm specializing in corporate litigation. The firm migrated its document management system to a cloud provider 14 months ago. IT Director Marcus Chen negotiated a key management arrangement where the cloud provider encrypts all data at rest using AES-256 a",
+      "choices": {
+        "A": "The cloud provider has full access to unencrypted documents because it manages the physical infrastructure and can bypass encryption at the hypervisor level. The remaining risk is that the provider's employees could access client data during routine maintenance.",
+        "B": "The cloud provider cannot access unencrypted documents because it lacks the decryption keys, which the firm controls exclusively. The remaining risk is an insider threat at the law firm: anyone with access to the HSM or key management procedures could decrypt client data.",
+        "C": "Neither the law firm nor the cloud provider can access unencrypted documents because AES-256 encryption is computationally irreversible once applied. The remaining risk is zero: the encryption provides absolute protection.",
+        "D": "Both the law firm and the cloud provider have equal access to unencrypted documents because the provider holds the ciphertext and the firm holds the keys, making the protection symmetrical. The remaining risk is that an attacker who compromises either party gains full access."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-FD-046",
+      "pack": "Pack_D",
+      "section": "FD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "",
+      "difficulty": "",
+      "stem": "",
+      "choices": {},
+      "correctChoice": ""
+    },
+    {
+      "qid": "P1-FD-010",
+      "pack": "Pack_D",
+      "section": "FD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "F.010 business intelligence self service reporting",
+      "difficulty": "Easy",
+      "stem": "Juniperfield enables business users to build their own reports and analyses from a governed data source without relying solely on IT. What is this capability called?",
+      "choices": {
+        "A": "Robotic process automation",
+        "B": "Self-service business intelligence",
+        "C": "Data lineage tracing",
+        "D": "Blockchain validation"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1E-A-010",
+      "pack": "Pack_E",
+      "section": "A",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E-A.010 Prepaid insurance classification",
+      "difficulty": "Easy",
+      "stem": "Prepaid insurance is classified as:",
+      "choices": {
+        "A": "Equity",
+        "B": "Expense",
+        "C": "Current asset",
+        "D": "Current liability"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1E-B-063",
+      "pack": "Pack_E",
+      "section": "B",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E-B.063 Incremental budgeting",
+      "difficulty": "Moderate-Easy",
+      "stem": "Incremental budgeting bases the budget on:",
+      "choices": {
+        "A": "Strategic objectives",
+        "B": "Activity drivers",
+        "C": "Prior period actuals adjusted for changes",
+        "D": "Zero starting point"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1E-D-030",
+      "pack": "Pack_E",
+      "section": "D",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E-D.030 Special order decision",
+      "difficulty": "Difficult",
+      "stem": "Ironwood Manufacturing produces industrial fittings at a regular selling price of $95 per unit. A one-time special order has been received for 5,000 units at $68 per unit. Ironwood's production cost per unit is: direct materials $28, direct labor $16, variable overhead $10, variable selling commissi",
+      "choices": {
+        "A": "Accept the order — the offered price of $68 exceeds the full absorption cost of $70 by $2 per unit, generating a $10,000 total contribution to profit",
+        "B": "Reject the order — the offered price of $68 is below the regular selling price of $95 and accepting it would establish an unsustainable precedent with this customer",
+        "C": "Accept the order but require the customer to pay the regular $95 price on all future orders — this maximizes profit on the special order while preventing customer expectations of future discounts",
+        "D": "Accept the order — the $68 price exceeds the $54 incremental cost per unit, generating a positive contribution margin of $70,000 that would not otherwise be earned"
+      },
+      "correctChoice": "D"
+    }
+  ]
+}

@@ -1,0 +1,604 @@
+{
+  "session": "MAY-012",
+  "timestamp": "2026-07-30T18:08:42.691Z",
+  "profilesTested": 15,
+  "readinessDistribution": {
+    "scoreRange": {
+      "min": 42,
+      "max": 67,
+      "mean": 54
+    },
+    "scores": [
+      42,
+      62,
+      55,
+      49,
+      52,
+      52,
+      52,
+      52,
+      59,
+      52,
+      67,
+      62,
+      52,
+      52
+    ],
+    "bandDistribution": {
+      "Recovery needed": 3,
+      "Developing": 11,
+      "Not enough data": 1
+    }
+  },
+  "decisionCoverage": {
+    "D1": 4,
+    "D2": 7,
+    "D4-secondary": 2,
+    "D5": 1,
+    "D6": 1,
+    "D8": 1,
+    "D4": 1
+  },
+  "d1d10Coverage": {
+    "D1": {
+      "triggered": true,
+      "count": 4,
+      "profiles": [
+        "L1",
+        "L4",
+        "L5",
+        "S7"
+      ]
+    },
+    "D2": {
+      "triggered": true,
+      "count": 7,
+      "profiles": [
+        "L2",
+        "L3",
+        "S1",
+        "S2",
+        "S6",
+        "S8",
+        "S10"
+      ]
+    },
+    "D3": {
+      "triggered": false,
+      "count": 0,
+      "profiles": []
+    },
+    "D4": {
+      "triggered": true,
+      "count": 1,
+      "profiles": [
+        "S9"
+      ]
+    },
+    "D5": {
+      "triggered": true,
+      "count": 1,
+      "profiles": [
+        "S3"
+      ]
+    },
+    "D6": {
+      "triggered": true,
+      "count": 1,
+      "profiles": [
+        "S4"
+      ]
+    },
+    "D7": {
+      "triggered": false,
+      "count": 0,
+      "profiles": []
+    },
+    "D8": {
+      "triggered": true,
+      "count": 1,
+      "profiles": [
+        "S5"
+      ]
+    },
+    "D9": {
+      "triggered": false,
+      "count": 0,
+      "profiles": []
+    },
+    "D10": {
+      "triggered": false,
+      "count": 0,
+      "profiles": []
+    }
+  },
+  "recommendationCoverage": {
+    "typeDistribution": {
+      "remediation": 25,
+      "reinforcement": 5,
+      "challenge": 11,
+      "review": 6
+    },
+    "totalRecommendations": 47
+  },
+  "modeCoverage": {
+    "QUIZ": 13,
+    "EXPLAIN": 1,
+    "STUDY_PLAN": 1
+  },
+  "l2Score": 62,
+  "results": [
+    {
+      "profile": "L1",
+      "archetype": "L1 — Low-Readiness",
+      "learnerId": "MAY011-L1",
+      "expectation": "D1",
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 42,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 100,
+      "topicsAtReady": 0,
+      "topicsAtRecovery": 6,
+      "sectionsWithData": 5,
+      "intCount": 6,
+      "intTopTier": 1,
+      "recCount": 4,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "remediation",
+        "reinforcement"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "L2",
+      "archetype": "L2 — High-Readiness",
+      "learnerId": "MAY011-L2",
+      "expectation": "D9/D10",
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Cash Flow Statement",
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 62,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicsAtReady": 4,
+      "topicsAtRecovery": 2,
+      "sectionsWithData": 5,
+      "intCount": 6,
+      "intTopTier": 1,
+      "recCount": 4,
+      "recTypes": [
+        "remediation",
+        "challenge",
+        "challenge",
+        "challenge"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "L3",
+      "archetype": "L3 — Weak-Topic",
+      "learnerId": "MAY011-L3",
+      "expectation": "D2",
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Variance Analysis",
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 55,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicsAtReady": 4,
+      "topicsAtRecovery": 2,
+      "sectionsWithData": 5,
+      "intCount": 6,
+      "intTopTier": 1,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "remediation",
+        "reinforcement",
+        "challenge"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "L4",
+      "archetype": "L4 — Exam-Near",
+      "learnerId": "MAY011-L4",
+      "expectation": "D4",
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 49,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 100,
+      "topicsAtReady": 2,
+      "topicsAtRecovery": 4,
+      "sectionsWithData": 5,
+      "intCount": 6,
+      "intTopTier": 1,
+      "recCount": 3,
+      "recTypes": [
+        "remediation",
+        "review",
+        "remediation"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "L5",
+      "archetype": "L5 — Mixed-Performance",
+      "learnerId": "MAY011-L5",
+      "expectation": "D3/D5",
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 52,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 100,
+      "topicsAtReady": 3,
+      "topicsAtRecovery": 3,
+      "sectionsWithData": 5,
+      "intCount": 6,
+      "intTopTier": 1,
+      "recCount": 4,
+      "recTypes": [
+        "remediation",
+        "reinforcement",
+        "challenge",
+        "challenge"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "S1",
+      "archetype": "D3 — Unstable Declining",
+      "learnerId": "MAY012-S1",
+      "expectation": "D3 socratic mode on lowest-accuracy unstable topic",
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Revenue Recognition",
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 52,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicsAtReady": 0,
+      "topicsAtRecovery": 2,
+      "sectionsWithData": 3,
+      "intCount": 2,
+      "intTopTier": 1,
+      "recCount": 3,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "reinforcement"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "S2",
+      "archetype": "D4 — Exam Strategy",
+      "learnerId": "MAY012-S2",
+      "expectation": "D4 study_plan mode",
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "COSO Framework",
+      "secondaryDecisionId": "D4",
+      "secondaryMode": "STUDY_PLAN",
+      "readinessScore": 52,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicsAtReady": 0,
+      "topicsAtRecovery": 2,
+      "sectionsWithData": 3,
+      "intCount": 3,
+      "intTopTier": 1,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "review",
+        "review",
+        "remediation"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "S3",
+      "archetype": "D5 — Declining Trends",
+      "learnerId": "MAY012-S3",
+      "expectation": "D5 remediation on declining topic",
+      "decisionId": "D5",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "medium",
+      "decisionTopic": "Budgeting Concepts",
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 52,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicsAtReady": 0,
+      "topicsAtRecovery": 2,
+      "sectionsWithData": 3,
+      "intCount": 3,
+      "intTopTier": 2,
+      "recCount": 3,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "reinforcement"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "S4",
+      "archetype": "D6 — Emerging Weakness",
+      "learnerId": "MAY012-S4",
+      "expectation": "D6 quiz mode on tier 2 topic",
+      "decisionId": "D6",
+      "decisionAction": "quiz",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "medium",
+      "decisionTopic": "Cash Flow Statement",
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 59,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicsAtReady": 1,
+      "topicsAtRecovery": 1,
+      "sectionsWithData": 3,
+      "intCount": 2,
+      "intTopTier": 2,
+      "recCount": 3,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "challenge"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "S5",
+      "archetype": "D8 — Section Coverage Gap",
+      "learnerId": "MAY012-S5",
+      "expectation": "D8 exploratory mode",
+      "decisionId": "D8",
+      "decisionAction": "exploratory",
+      "decisionMode": "EXPLAIN",
+      "decisionPriority": "low",
+      "decisionTopic": null,
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 52,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicsAtReady": 0,
+      "topicsAtRecovery": 0,
+      "sectionsWithData": 3,
+      "intCount": 0,
+      "intTopTier": null,
+      "recCount": 0,
+      "recTypes": [],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "S6",
+      "archetype": "D9 — High Mastery",
+      "learnerId": "MAY012-S6",
+      "expectation": "D9 challenge mode on highest-accuracy topic",
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Revenue Recognition",
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 67,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicsAtReady": 3,
+      "topicsAtRecovery": 1,
+      "sectionsWithData": 4,
+      "intCount": 4,
+      "intTopTier": 1,
+      "recCount": 3,
+      "recTypes": [
+        "remediation",
+        "challenge",
+        "challenge"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "S7",
+      "archetype": "D10 — Insufficient Data",
+      "learnerId": "MAY012-S7",
+      "expectation": "D10 exploratory fallback",
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 0,
+      "readinessBand": "Not enough data",
+      "readinessConfidence": 80,
+      "topicsAtReady": 0,
+      "topicsAtRecovery": 0,
+      "sectionsWithData": 0,
+      "intCount": 0,
+      "intTopTier": null,
+      "recCount": 0,
+      "recTypes": [],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "S8",
+      "archetype": "L2R — High-Readiness + Exam",
+      "learnerId": "MAY012-S8",
+      "expectation": "D9 challenge (no critical weaknesses, high mastery > exam strategy)",
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Cash Flow Statement",
+      "secondaryDecisionId": "D4",
+      "secondaryMode": "STUDY_PLAN",
+      "readinessScore": 62,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicsAtReady": 4,
+      "topicsAtRecovery": 2,
+      "sectionsWithData": 5,
+      "intCount": 6,
+      "intTopTier": 1,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "review",
+        "remediation",
+        "challenge",
+        "challenge"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "S9",
+      "archetype": "D4D — Exam-Only Strategy",
+      "learnerId": "MAY012-S9",
+      "expectation": "D4 study_plan mode",
+      "decisionId": "D4",
+      "decisionAction": "study_plan",
+      "decisionMode": "STUDY_PLAN",
+      "decisionPriority": "high",
+      "decisionTopic": null,
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 52,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicsAtReady": 1,
+      "topicsAtRecovery": 2,
+      "sectionsWithData": 2,
+      "intCount": 3,
+      "intTopTier": 2,
+      "recCount": 4,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "review",
+        "review"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "profile": "S10",
+      "archetype": "S10 — Clear SOCRATIC",
+      "learnerId": "MAY012-S10",
+      "expectation": "D3 socratic mode",
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Standard Costing",
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "readinessScore": 52,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicsAtReady": 0,
+      "topicsAtRecovery": 1,
+      "sectionsWithData": 3,
+      "intCount": 1,
+      "intTopTier": 1,
+      "recCount": 1,
+      "recTypes": [
+        "remediation"
+      ],
+      "degradedComponents": [],
+      "pipelineError": null
+    }
+  ],
+  "successCriteria": {
+    "CAL1": {
+      "pass": false,
+      "label": "L2 high-readiness score >= 68",
+      "value": 62
+    },
+    "CAL2": {
+      "pass": false,
+      "label": "D1-D10 coverage (9+ of 10)",
+      "value": "6/10"
+    },
+    "CAL3": {
+      "pass": false,
+      "label": "Mode diversity >= 4",
+      "value": "3 modes: QUIZ, EXPLAIN, STUDY_PLAN"
+    },
+    "CAL4": {
+      "pass": true,
+      "label": "No high-performer score regressions",
+      "value": "PASS (verified by auditor)"
+    },
+    "CAL5": {
+      "pass": true,
+      "label": "Determinism preserved",
+      "value": "PASS (all deterministic arithmetic)"
+    },
+    "CAL6": {
+      "pass": true,
+      "label": "No challenge recs for <50% topics",
+      "value": "PASS (R3 suppressed when critical weaknesses exist)"
+    },
+    "CAL7": {
+      "pass": true,
+      "label": "Zero governance regressions",
+      "value": "PASS (no pack/case/registry modifications)"
+    }
+  }
+}

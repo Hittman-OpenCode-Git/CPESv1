@@ -1,0 +1,43 @@
+{
+  "session": "SESSION078_NEXT",
+  "campaign": "Pack A Section F Cognitive Upgrade — Wave 1",
+  "predecessor": "SESSION077 (Census & Recommendation)",
+  "rationale": "Pack A Section F has the lowest higher-order percentage (2.7%) of any Pack A section. Only 2 Analyze + 0 Evaluate across 75 items. All 75 items are Certified and in clean structural state. Domain F (Technology and Analytics) is a high-priority CMA Part 1 domain.",
+  "target_section": {
+    "pack": "A",
+    "section": "F",
+    "total_items": 75,
+    "evaluate": 0,
+    "analyze": 2,
+    "apply": 13,
+    "understand": 59,
+    "remember": 1,
+    "higher_order_pct": "2.7%"
+  },
+  "target_mix": {
+    "evaluate": 8,
+    "analyze": 7,
+    "total": 15
+  },
+  "proposed_queue_evaluate": [
+    {"qid":"P1-F-001","current_cl":"Understand","current_ds":1,"topic":"Data governance framework","rationale":"Rich Evaluate potential — evaluate governance policy options for a company adopting cloud analytics"},
+    {"qid":"P1-F-005","current_cl":"Understand","current_ds":2,"topic":"ERP system module integration","rationale":"Controller evaluating ERP module implementation sequence with cost/benefit data"},
+    {"qid":"P1-F-010","current_cl":"Understand","current_ds":1,"topic":"Cybersecurity risk assessment","rationale":"CISO recommending security investment priorities based on risk matrix"},
+    {"qid":"P1-F-020","current_cl":"Understand","current_ds":1,"topic":"Data quality dimensions","rationale":"Data steward evaluating data quality remediation priorities across 5 source systems"},
+    {"qid":"P1-F-030","current_cl":"Apply","current_ds":3,"topic":"Business intelligence tool selection","rationale":"Analytics director evaluating Tableau vs. Power BI vs. custom dashboard with TCO analysis"},
+    {"qid":"P1-F-040","current_cl":"Understand","current_ds":1,"topic":"IT general controls","rationale":"Audit committee evaluating control gaps after SOC 2 Type II report findings"},
+    {"qid":"P1-F-050","current_cl":"Understand","current_ds":2,"topic":"Data analytics methodology","rationale":"FP&A manager selecting between descriptive, diagnostic, predictive, and prescriptive analytics approaches"},
+    {"qid":"P1-F-060","current_cl":"Apply","current_ds":3,"topic":"Automation ROI assessment","rationale":"Operations director evaluating RPA implementation with 3-process cost-benefit analysis"}
+  ],
+  "proposed_queue_analyze": [
+    {"qid":"P1-F-015","current_cl":"Understand","current_ds":1,"topic":"Database management systems","rationale":"IT manager analyzing query performance degradation across 3 database architectures"},
+    {"qid":"P1-F-025","current_cl":"Understand","current_ds":2,"topic":"Blockchain in accounting","rationale":"Controller analyzing blockchain applicability for intercompany reconciliation vs. traditional methods"},
+    {"qid":"P1-F-035","current_cl":"Apply","current_ds":3,"topic":"Data visualization best practices","rationale":"Analyst decomposing a dashboard into effective vs. misleading visualization choices"},
+    {"qid":"P1-F-045","current_cl":"Understand","current_ds":1,"topic":"Cloud computing service models","rationale":"CFO analyzing IaaS vs. PaaS vs. SaaS TCO for financial systems migration"},
+    {"qid":"P1-F-055","current_cl":"Understand","current_ds":1,"topic":"Artificial intelligence in accounting","rationale":"Controller analyzing machine learning model accuracy vs. traditional statistical methods for fraud detection"},
+    {"qid":"P1-F-065","current_cl":"Apply","current_ds":3,"topic":"System development life cycle","rationale":"Project manager analyzing SDLC phase dependencies when a requirements change occurs mid-development"},
+    {"qid":"P1-F-070","current_cl":"Understand","current_ds":1,"topic":"Emerging technology adoption","rationale":"Strategy director analyzing technology adoption curve for a manufacturing company considering IoT sensors"}
+  ],
+  "prerequisite": "Run fresh Function-constructor census of Pack A Section F at T0 to validate queue freshness BEFORE any writes.",
+  "process_improvement": "SESSION077 discovered that S76P queue was stale (all 15 items already upgraded). For S78, run fresh census BEFORE building queue to prevent recurrence."
+}

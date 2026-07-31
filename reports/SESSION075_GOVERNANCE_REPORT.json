@@ -1,0 +1,25 @@
+{
+  "session": "75",
+  "checks": {
+    "npm_run_preflight": {
+      "status": "PASS",
+      "pack_d_qid_count": 500,
+      "pack_d_parse": "OK",
+      "pack_d_certified": 456,
+      "divergences": ["Pack E QID 545 vs 540 baseline (pre-existing)", "Certified delta +35 vs stale baseline (pre-existing)"]
+    },
+    "governance_guard": {
+      "status": "54/54 PASS",
+      "failures": 0
+    },
+    "dl008": 0,
+    "dl026": 0,
+    "dl030": 0,
+    "dl037": 0,
+    "npm_run_pipeline": {
+      "status": "COMPLETE",
+      "note": "163 errors / 2229 warnings are pre-existing across all packs, not introduced by S75"
+    }
+  },
+  "backup": "pack_d_corrected.js.bak-20260729185039 (2,361,796 bytes)"
+}

@@ -1,0 +1,206 @@
+{
+  "file": "SESSION076P_MAY_ARCHITECTURE_AUDIT.json",
+  "session": "S76P",
+  "date": "2026-07-29",
+  "governanceLane": "Light",
+  "currentArchitecture": {
+    "files": [
+      "may-core.js (6,570 lines — primary coaching engine)",
+      "may-learner-state.js (2,016 lines — cross-session learner tracking)",
+      "app.js (integration at ~12 locations)",
+      "index_updated.html (loads may-learner-state.js + may-core.js)",
+      "styles.css (100+ May-specific CSS rules)",
+      "docs/may_tutoring_behavior_spec_S106.md",
+      "docs/may_readiness_test_plan_S106.md",
+      "docs/may_readiness_calibration_spec_S106.md",
+      "scripts/test_may_regression_r2.js",
+      "scripts/test_load_may.js",
+      "scripts/test_may_stagec.js",
+      "scripts/test_may_renderer.js"
+    ],
+    "primaryEngine": {
+      "file": "may-core.js",
+      "lines": 6570,
+      "responseType": "rule-based / template-based / content-retrieval (no LLM or generative AI)",
+      "generatorCount": "150+ template fragments across 14 action handlers + 40 NLP pattern-match routes + 6 domain-specific pattern maps + 5 hint levels",
+      "actionHandlers": 14,
+      "nlpRoutes": 40,
+      "hintLevels": 5
+    },
+    "learnerState": {
+      "file": "may-learner-state.js",
+      "lines": 2016,
+      "storageKey": "cmaMayLearnerState",
+      "capabilities": [
+        "Session recording with per-QID attempt metadata",
+        "Topic-level progress tracking",
+        "Cross-session trend analysis",
+        "Weakness cluster detection (persistentWeak, declining, unstable, hintDependent, difficultySensitive)",
+        "Readiness bands (Ready/Approaching/Developing/Recovery)",
+        "Section-level readiness roll-up",
+        "Confidence calibration (over/underconfident rates)",
+        "Case miss pattern classification (5 patterns)",
+        "Adaptive practice mix recommendation",
+        "Recommendation outcome tracking (closed-loop)",
+        "Longitudinal analytics (1/2/4-week windows)",
+        "Evidence graph (S131 — unified compute)",
+        "Learner intelligence engine (S134 — single access point)",
+        "Threshold registry (S133 — single source of truth)"
+      ]
+    },
+    "coachingCapabilities": [
+      "Structured explanation (6-section tutor layer)",
+      "Wrong-choice coaching (per-distractor: whyTempting, whyWrong, misconception, avoidNextTime)",
+      "Graduated hints (5 levels: metacognitive → concept → strategy → elimination → full)",
+      "Session review queue (missed + flagged items)",
+      "Pre-exam briefing",
+      "Post-session summary with topic analysis",
+      "Weekly digest with longitudinal analytics",
+      "Study strategy recommendations",
+      "Recovery sets (targeted weak-topic practice)",
+      "Socratic follow-up questions",
+      "Question challenge handling (flag/exclude/resolve)",
+      "Progress insights (strengths, weaknesses, trends)",
+      "Adaptive practice mix (MCQ/Case/Mixed/Recovery)",
+      "Readiness snapshot (per-topic bands)",
+      "Case pattern analysis",
+      "Confidence calibration reports",
+      "Export/import learner state",
+      "Live mini-panel (in-exam collapsible coaching)",
+      "Post-answer micro-feedback",
+      "Student roll/profile management"
+    ],
+    "contextAvailable": [
+      "QuestionID", "Section", "Topic", "Difficulty", "CognitiveLevel",
+      "Stem/Prompt", "Choices", "CorrectChoice",
+      "ExplanationCorrect", "ExplanationWrong[A-D]", "question_state",
+      "Learner answer", "Learner accuracy per topic", "Learner trends",
+      "Learner clusters", "Hint level", "Chat history",
+      "Case context (case title, item index, exhibits)",
+      "Session count", "Topic performance data"
+    ],
+    "contextMissing": [
+      "Per-question elapsed time (only session-level timing)",
+      "Cursor/idle tracking during question solving",
+      "Real-time difficulty adjustment per question instance",
+      "Cross-learner comparative analytics",
+      "Live defect manifest sync (uses hardcoded list of 5 known-defective QIDs)",
+      "Question-bank content quality metrics (DL-008/DL-026 status for rendered items)",
+      "Real-time delivery pool certification status",
+      "Per-choice selection frequency (psychometric analytics)",
+      "Spaced repetition scheduling",
+      "Cross-topic dependency mapping"
+    ],
+    "uiComponents": [
+      "Full coaching tab (#coachView)",
+      "Landing-page companion card (#mayCompanionCard)",
+      "In-exam collapsible mini-panel (#mayMini)",
+      "Post-answer micro-feedback (#mayMiniFeedback)",
+      "Floating persistent launcher (.may-launcher)",
+      "Review-card bridge buttons (.may-bridge-btn)",
+      "Sidebar insight panels (readiness, case patterns, practice mix, stats)",
+      "Chat input with quick-action chips",
+      "Setup/onboarding/greeting flow overlays",
+      "Student roll selection UI",
+      "Export/import controls"
+    ],
+    "storageKeys": [
+      "cmaMayLearnerState (primary learner state)",
+      "cmaMaySelectedLearnerId (active student selection)",
+      "cmaMayStudentRoll (synthetic student roll)",
+      "cmaMayPilotUsageLog (pilot telemetry)",
+      "cmaMaySafetyLog (tutoring safety check log)",
+      "cmaMayGateLog (gate decision log)",
+      "cmaMaySessionTelemetry (session-level events)",
+      "mayCompanionDismissed (companion card dismiss state)"
+    ]
+  },
+  "gapsIdentified": [
+    {
+      "id": "GAP-001",
+      "gap": "No LLM/RAG integration",
+      "severity": "high",
+      "impact": "All responses are template-based with data interpolation; May cannot generate novel explanations or adapt to unexpected learner queries beyond the 50+ pattern-matched routes."
+    },
+    {
+      "id": "GAP-002",
+      "gap": "Hardcoded defective QIDs list",
+      "severity": "medium",
+      "impact": "May excludes 5 hardcoded known-defective QIDs from recovery sets but does not sync with DEFECT_MANIFEST_DL008_DL026.json. Static list will rot as defects are fixed or discovered."
+    },
+    {
+      "id": "GAP-003",
+      "gap": "Recovery sets don't filter by Certified state",
+      "severity": "medium",
+      "impact": "QID recommendations don't enforce question_state === 'Certified' — Unprocessed or In Audit items could appear in practice recommendations."
+    },
+    {
+      "id": "GAP-004",
+      "gap": "No spaced repetition engine",
+      "severity": "medium",
+      "impact": "Practice recommendations are accuracy-based only, not forgetting-curve-based. Missed opportunity for evidence-based learning science."
+    },
+    {
+      "id": "GAP-005",
+      "gap": "Per-question time tracking absent",
+      "severity": "medium",
+      "impact": "Cannot detect hesitation patterns, speed-accuracy tradeoffs, or provide time-management coaching per Blueprint domain."
+    },
+    {
+      "id": "GAP-006",
+      "gap": "Early hint levels generic, not distractor-aware",
+      "severity": "medium",
+      "impact": "Hint levels 1-3 use generic section-aligned templates rather than distractor-specific clues from the question's ExplanationWrong fields."
+    },
+    {
+      "id": "GAP-007",
+      "gap": "No mobile sidebar toggle",
+      "severity": "medium",
+      "impact": "On narrow screens, sidebar insight panels are hidden via CSS display:none, losing all readiness/case pattern/practice mix data."
+    },
+    {
+      "id": "GAP-008",
+      "gap": "No difficulty calibration from learner data",
+      "severity": "low",
+      "impact": "Difficulty labels are template-assigned; no empirical adjustment from learner success rates."
+    },
+    {
+      "id": "GAP-009",
+      "gap": "No cross-learner benchmarking",
+      "severity": "low",
+      "impact": "Learners cannot compare performance to peers. No platform-level difficulty calibration data."
+    },
+    {
+      "id": "GAP-010",
+      "gap": "No A/B testing infrastructure",
+      "severity": "low",
+      "impact": "Coaching quality improvements are made without empirical validation. No mechanism to compare template variants or measure satisfaction."
+    },
+    {
+      "id": "GAP-011",
+      "gap": "No multi-language support",
+      "severity": "low",
+      "impact": "All UI, coaching, and question content is English-only. No localization framework."
+    },
+    {
+      "id": "GAP-012",
+      "gap": "LocalStorage quota risk on pilot logs",
+      "severity": "low",
+      "impact": "cmaMayPilotUsageLog, cmaMaySafetyLog, cmaMayGateLog, cmaMaySessionTelemetry all grow unbounded (capped at 100 entries but no total-size monitoring)."
+    }
+  ],
+  "upgradeReadiness": {
+    "safeToAddContextBuilder": true,
+    "safeToAddDialogueScaffolding": true,
+    "safeToAddFeatureFlaggedLLM": true,
+    "requiresFeatureFlag": true,
+    "risks": [
+      "Any LLM integration must extend S107/S108 anti-leakage validation suite (currently validates against 5 patterns)",
+      "Action handlers tightly coupled to renderView() — async LLM calls require loading states and progressive rendering",
+      "Per-question time tracking requires modifying app.js exam flow — regression risk to core exam engine",
+      "Recovery set generation assumes global QUESTION_BANK variable exists — fragile dependency",
+      "Current architecture is entirely client-side — adding server-side component is a significant architecture change",
+      "May's tutoringPilotEnabled flag (default: false) and _guardedSpeak() infrastructure already exist — use these as the gate"
+    ]
+  }
+}

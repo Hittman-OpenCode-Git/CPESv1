@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "session": "P2-006",
+    "date": "2026-07-29",
+    "description": "Wave 2 authoring output summary — P2-A-031 through P2-A-060"
+  },
+  "wave_1_items": {
+    "count": 30,
+    "qid_range": "P2-A-001 through P2-A-030"
+  },
+  "wave_2_items": {
+    "count": 30,
+    "qid_range": "P2-A-031 through P2-A-060",
+    "phases": [
+      {
+        "phase": 1,
+        "qids": "P2-A-031 to P2-A-036",
+        "count": 6,
+        "difficulty": "Easy (1)",
+        "cognitive": "Apply",
+        "topics": "Cash flow ratios — OCF ratio, free cash flow, cash flow to debt, cash conversion cycle, quality of earnings, OCF per share"
+      },
+      {
+        "phase": 2,
+        "qids": "P2-A-037 to P2-A-046",
+        "count": 10,
+        "difficulty": "Moderate-Easy (2)",
+        "cognitive": "4 Apply + 6 Analyze",
+        "topics": "Gross margin, operating margin, net margin, ROA decomposition, ROE, EPS basic/diluted, EBITDA margin, segment profitability, benchmarking, sustainable growth rate"
+      },
+      {
+        "phase": 3,
+        "qids": "P2-A-047 to P2-A-052",
+        "count": 6,
+        "difficulty": "Moderate (3)",
+        "cognitive": "Analyze",
+        "topics": "DSCR, TIE covenant, D/E with ASC 842, Altman Z-score, cash flow adequacy, current vs quick ratio divergence"
+      },
+      {
+        "phase": 4,
+        "qids": "P2-A-053 to P2-A-060",
+        "count": 8,
+        "difficulty": "5 Moderate + 3 Difficult",
+        "cognitive": "Evaluate",
+        "topics": "Credit rating migration, off-BS obligations, covenant compliance, liquidity vs solvency, earnings quality, DuPont ROE sustainability, cash flow vs accrual, multi-covenant assessment"
+      }
+    ]
+  },
+  "calibration_results": {
+    "difficulty_targets": { "Easy": 6, "ModerateEasy": 10, "Moderate": 11, "Difficult": 3, "VeryDifficult": 0 },
+    "difficulty_actual": { "Easy": 6, "ModerateEasy": 10, "Moderate": 11, "Difficult": 3, "VeryDifficult": 0 },
+    "difficulty_match": "PERFECT",
+    "cognitive_targets": { "Apply": 10, "Analyze": 12, "Evaluate": 8 },
+    "cognitive_actual": { "Apply": 10, "Analyze": 13, "Evaluate": 7 },
+    "cognitive_match": "CLOSE — Analyze over by 1, Evaluate under by 1",
+    "correct_choice_targets": { "A": 9, "B": 0, "C": 10, "D": 11 },
+    "correct_choice_actual": { "A": 9, "B": 0, "C": 11, "D": 10 },
+    "correct_choice_match": "CLOSE — C over by 1, D under by 1"
+  },
+  "cumulative_60_item_pool": {
+    "difficulty": { "Easy": 6, "ModerateEasy": 10, "Moderate": 11, "Difficult": 24, "VeryDifficult": 9 },
+    "cognitive": { "Remember": 0, "Understand": 0, "Apply": 10, "Analyze": 29, "Evaluate": 21 },
+    "correct_choice": { "A": 16, "B": 12, "C": 17, "D": 15 },
+    "governance": "PASS — 0 violations across all 60 items",
+    "pack_file": "pack_p2_a.js"
+  },
+  "generated_by": "3 task agents (Phase 1: 6 items, Phase 2: 10 items, Phase 3A+3B+4: 14 items)"
+}

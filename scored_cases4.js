@@ -129,11 +129,11 @@ const ENHANCED_CASE_BASE4 = [
                     "Goodwill"
                 ],
                 "RightItems": [
-                    "Amortized over useful life, tested for impairment if triggering event",
-                    "Not amortized, tested for impairment at least annually",
-                    "Not amortized, tested for impairment at reporting unit level",
-                    "Amortized over 15 years straight-line"
-                ],
+    "Not amortized, tested for impairment at reporting unit level",
+    "Amortized over 15 years straight-line",
+    "Amortized over useful life, tested for impairment if triggering event",
+    "Not amortized, tested for impairment at least annually"
+],
                 "ItemID": "CBQ4-A1-Q3",
                 "CognitiveLevel": "Analyze",
                 "Difficulty": "Difficult",
@@ -1069,12 +1069,12 @@ const ENHANCED_CASE_BASE4 = [
                     "Receiving and storing a pallet of goods from a supplier"
                 ],
                 "RightItems": [
-                    "Batch-level cost — each order requires order processing regardless of order size",
-                    "Customer-sustaining cost — sales visits support the customer relationship, not individual orders",
-                    "Product-sustaining cost — sourcing activities maintain the product line's availability in the assortment",
-                    "Unit-level cost — receiving costs vary with each pallet of goods handled",
-                    "Facility-sustaining cost — corporate overhead not traceable to specific activities"
-                ],
+    "Product-sustaining cost — sourcing activities maintain the product line's availability in the assortment",
+    "Batch-level cost — each order requires order processing regardless of order size",
+    "Unit-level cost — receiving costs vary with each pallet of goods handled",
+    "Facility-sustaining cost — corporate overhead not traceable to specific activities",
+    "Customer-sustaining cost — sales visits support the customer relationship, not individual orders"
+],
                 "Correct": {
                     "Processing a customer's individual purchase order": "Batch-level cost — each order requires order processing regardless of order size",
                     "Making a sales call to a retail customer": "Customer-sustaining cost — sales visits support the customer relationship, not individual orders",
@@ -1118,12 +1118,12 @@ const ENHANCED_CASE_BASE4 = [
                     "Number of delivery stops per route"
                 ],
                 "RightItems": [
-                    "Batch-level — order entry, picking, and shipping costs vary with order count",
-                    "Customer-sustaining — sales and account management costs vary with customer relationship intensity",
-                    "Product-sustaining — category management and vendor compliance costs vary with product count",
-                    "Batch-level — delivery routing and stop costs vary with each delivery stop",
-                    "Unit-level — cost of goods sold varies with each unit sold"
-                ],
+    "Customer-sustaining — sales and account management costs vary with customer relationship intensity",
+    "Product-sustaining — category management and vendor compliance costs vary with product count",
+    "Batch-level — delivery routing and stop costs vary with each delivery stop",
+    "Batch-level — order entry, picking, and shipping costs vary with order count",
+    "Unit-level — cost of goods sold varies with each unit sold"
+],
                 "Correct": {
                     "Number of purchase orders placed": "Batch-level — order entry, picking, and shipping costs vary with order count",
                     "Number of sales calls made to each customer": "Customer-sustaining — sales and account management costs vary with customer relationship intensity",
@@ -1167,12 +1167,12 @@ const ENHANCED_CASE_BASE4 = [
                     "Allocating product sourcing costs to customers"
                 ],
                 "RightItems": [
-                    "Use number of orders as the allocation base — each customer is charged proportionally to order count",
-                    "Use number of sales visits as the allocation base — each customer is charged proportionally to visit frequency",
-                    "Use number of delivery stops as the allocation base — each customer is charged proportionally to stop frequency",
-                    "Use number of products purchased as the allocation base — customers buying from more product lines bear more sourcing cost",
-                    "Use revenue as the allocation base — larger customers bear more cost regardless of service consumption"
-                ],
+    "Use number of sales visits as the allocation base — each customer is charged proportionally to visit frequency",
+    "Use number of delivery stops as the allocation base — each customer is charged proportionally to stop frequency",
+    "Use number of orders as the allocation base — each customer is charged proportionally to order count",
+    "Use revenue as the allocation base — larger customers bear more cost regardless of service consumption",
+    "Use number of products purchased as the allocation base — customers buying from more product lines bear more sourcing cost"
+],
                 "Correct": {
                     "Allocating order processing costs to customers": "Use number of orders as the allocation base — each customer is charged proportionally to order count",
                     "Allocating sales visit costs to customers": "Use number of sales visits as the allocation base — each customer is charged proportionally to visit frequency",
@@ -1215,12 +1215,12 @@ const ENHANCED_CASE_BASE4 = [
                     "Campus Dining — $1.18M revenue, 300 orders, 120 delivery stops"
                 ],
                 "RightItems": [
-                    "High profit potential — high revenue, moderate service demands, 67% gross margin",
-                    "Low profit potential — low revenue, very high service intensity relative to revenue",
-                    "Moderate profit potential — mid-size revenue, low service intensity, efficient operations",
-                    "Moderate profit potential — good revenue but higher delivery costs due to many delivery stops",
-                    "Negative profit — costs exceed revenue"
-                ],
+    "Low profit potential — low revenue, very high service intensity relative to revenue",
+    "Moderate profit potential — good revenue but higher delivery costs due to many delivery stops",
+    "High profit potential — high revenue, moderate service demands, 67% gross margin",
+    "Negative profit — costs exceed revenue",
+    "Moderate profit potential — mid-size revenue, low service intensity, efficient operations"
+],
                 "Correct": {
                     "Corner Grocers chain — $2.45M revenue, 360 orders, 12 sales visits": "High profit potential — high revenue, moderate service demands, 67% gross margin",
                     "Lakeside Restaurant — $185K revenue, 240 orders, 24 sales visits, 25 special requests": "Low profit potential — low revenue, very high service intensity relative to revenue",
@@ -1263,12 +1263,12 @@ const ENHANCED_CASE_BASE4 = [
                     "Campus Dining has good revenue but frequent small deliveries increase costs"
                 ],
                 "RightItems": [
-                    "Reprice or restructure service — consider minimum order quantities or service fees for high-touch, low-revenue customers",
-                    "Invest and grow — offer volume discounts or dedicated support to strengthen the relationship",
-                    "Maintain — current service level is efficient and profitable; monitor for changes",
-                    "Negotiate delivery schedule — consolidate deliveries to reduce stop frequency while maintaining service quality",
-                    "Terminate relationship — costs exceed any possible revenue"
-                ],
+    "Maintain — current service level is efficient and profitable; monitor for changes",
+    "Reprice or restructure service — consider minimum order quantities or service fees for high-touch, low-revenue customers",
+    "Negotiate delivery schedule — consolidate deliveries to reduce stop frequency while maintaining service quality",
+    "Invest and grow — offer volume discounts or dedicated support to strengthen the relationship",
+    "Terminate relationship — costs exceed any possible revenue"
+],
                 "Correct": {
                     "Lakeside Restaurant shows very low profitability despite moderate total purchases": "Reprice or restructure service — consider minimum order quantities or service fees for high-touch, low-revenue customers",
                     "Corner Grocers chain is highly profitable and has potential to grow": "Invest and grow — offer volume discounts or dedicated support to strengthen the relationship",
@@ -1621,11 +1621,11 @@ const ENHANCED_CASE_BASE4 = [
                     "Constraint"
                 ],
                 "RightItems": [
-                    "Sales price minus direct materials",
-                    "All costs except direct materials",
-                    "Materials purchased but not yet sold",
-                    "Resource that limits overall output"
-                ],
+    "Resource that limits overall output",
+    "Sales price minus direct materials",
+    "All costs except direct materials",
+    "Materials purchased but not yet sold"
+],
                 "Correct": {
                     "Throughput": "Sales price minus direct materials",
                     "Operating expense": "All costs except direct materials",
@@ -1990,11 +1990,11 @@ const ENHANCED_CASE_BASE4 = [
                     "Takt time"
                 ],
                 "RightItems": [
-                    "Arranges machines in sequence to reduce movement and WIP",
-                    "Visual signal that authorizes production",
-                    "Continuous incremental improvement involving all employees",
-                    "Production pace that matches customer demand rate"
-                ],
+    "Production pace that matches customer demand rate",
+    "Arranges machines in sequence to reduce movement and WIP",
+    "Visual signal that authorizes production",
+    "Continuous incremental improvement involving all employees"
+],
                 "Correct": {
                     "Cellular manufacturing": "Arranges machines in sequence to reduce movement and WIP",
                     "Kanban": "Visual signal that authorizes production",
@@ -2344,12 +2344,12 @@ const ENHANCED_CASE_BASE4 = [
                     "All departments — Summit's management wants to understand the true cost of carrying unused capacity over the business cycle"
                 ],
                 "RightItems": [
-                    "Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap",
-                    "Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint",
-                    "Defer capital investment — current capacity exceeds demand; investing in additional capacity would increase fixed costs without increasing throughput",
-                    "Use normal capacity for strategic planning — 32,000 units reflects average long-term demand; compare actual to normal to assess capacity utilization over the business cycle",
-                    "Outsource all production — contract manufacturing eliminates capacity management concerns"
-                ],
+    "Outsource all production — contract manufacturing eliminates capacity management concerns",
+    "Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap",
+    "Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint",
+    "Defer capital investment — current capacity exceeds demand; investing in additional capacity would increase fixed costs without increasing throughput",
+    "Use normal capacity for strategic planning — 32,000 units reflects average long-term demand; compare actual to normal to assess capacity utilization over the business cycle"
+],
                 "Correct": {
                     "Cutting Department — practical capacity is 38,000 but actual is only 28,000; 10,000 units of capacity are idle": "Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap",
                     "Assembly Department — practical capacity is 42,000; this is the highest capacity in the plant; other departments limit total output to 28,000": "Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint",
@@ -2908,12 +2908,12 @@ const ENHANCED_CASE_BASE4 = [
                     "An order processor attempts to enter a sales order for a customer whose outstanding balance already exceeds the approved credit limit"
                 ],
                 "RightItems": [
-                    "Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection",
-                    "Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found",
-                    "Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid",
-                    "Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded",
-                    "Completeness check — ensures all required fields like customer name, address, and order date are filled"
-                ],
+    "Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid",
+    "Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded",
+    "Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found",
+    "Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection",
+    "Completeness check — ensures all required fields like customer name, address, and order date are filled"
+],
                 "Correct": {
                     "An accounts payable clerk accidentally enters $25,000 instead of $2,500 for the unit price of a surgical instrument on a purchase order": "Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection",
                     "A data entry operator creates an invoice referencing a vendor ID that does not exist in the approved vendor master table": "Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found",
@@ -3036,12 +3036,12 @@ const ENHANCED_CASE_BASE4 = [
                     "The ERP system restricts invoice entry to users in the AP Clerk role; procurement managers cannot enter invoices"
                 ],
                 "RightItems": [
-                    "Input control — quantity reasonableness check prevents receiving errors from entering the system",
-                    "Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing",
-                    "Output control — periodic review of processed output ensures accuracy and triggers follow-up on anomalies",
-                    "Access control — role-based security prevents users from performing incompatible functions",
-                    "General IT control — relates to the overall IT environment rather than a specific application"
-                ],
+    "Output control — periodic review of processed output ensures accuracy and triggers follow-up on anomalies",
+    "Access control — role-based security prevents users from performing incompatible functions",
+    "General IT control — relates to the overall IT environment rather than a specific application",
+    "Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing",
+    "Input control — quantity reasonableness check prevents receiving errors from entering the system"
+],
                 "Correct": {
                     "When a receiving clerk enters the quantity received, the ERP system verifies that it does not exceed the quantity ordered by more than 10%": "Input control — quantity reasonableness check prevents receiving errors from entering the system",
                     "The ERP system assigns sequential batch numbers to all invoice batches; the accounting supervisor reviews a daily gap report for missing batches": "Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing",
@@ -3410,12 +3410,12 @@ const ENHANCED_CASE_BASE4 = [
                     "Luxury client entertainment — $1,200/person including spouses for government clients"
                 ],
                 "RightItems": [
-                    "Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring",
-                    "Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ",
-                    "Decline and report to compliance committee — donation to personal entity of government official is presumptively improper; offer alternative legitimate charitable options",
-                    "Review and strengthen expense policy — entertainment exceeding $500 per person should require pre-approval; spouse attendance is presumptively improper",
-                    "No action needed — these are standard business practices in emerging markets"
-                ],
+    "No action needed — these are standard business practices in emerging markets",
+    "Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring",
+    "Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ",
+    "Decline and report to compliance committee — donation to personal entity of government official is presumptively improper; offer alternative legitimate charitable options",
+    "Review and strengthen expense policy — entertainment exceeding $500 per person should require pre-approval; spouse attendance is presumptively improper"
+],
                 "Correct": {
                     "Customs expediting fee — $500 paid to customs official; recorded as expense": "Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring",
                     "Agent commission — 15% via shell company; agent related to procurement minister": "Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ",
@@ -3728,12 +3728,12 @@ const ENHANCED_CASE_BASE4 = [
                     "The ERP system contains sensitive financial and patient data; MedTech needs maximum control and is considering keeping it on-premise"
                 ],
                 "RightItems": [
-                    "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access",
-                    "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data",
-                    "IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure",
-                    "On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data",
-                    "Community cloud — shared infrastructure among several organizations with common compliance concerns"
-                ],
+    "Community cloud — shared infrastructure among several organizations with common compliance concerns",
+    "IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure",
+    "On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data",
+    "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access",
+    "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data"
+],
                 "Correct": {
                     "The HR department needs a payroll and benefits administration system; they want to avoid any hardware or software management and access it through a web browser": "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access",
                     "The IT team wants to build a custom inventory management application; they need a platform with development tools, database, and middleware but want to avoid managing underlying infrastructure": "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data",
@@ -3894,12 +3894,12 @@ const ENHANCED_CASE_BASE4 = [
                     "MedTech acquired a small distributor and needs to quickly integrate their IT systems without a long capital approval process"
                 ],
                 "RightItems": [
-                    "Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs",
-                    "Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads",
-                    "Community cloud — shared infrastructure among several organizations with common compliance concerns (e.g., HIPAA, FDA); balances cost and compliance",
-                    "Public cloud (rapid deployment) — quick provisioning, pay-as-you-go pricing; ideal for acquisitions, temporary workloads, or rapid scaling without capital investment",
-                    "Hybrid cloud — combination of public and private; allows sensitive data to remain in private cloud while leveraging public cloud for elasticity"
-                ],
+    "Public cloud (rapid deployment) — quick provisioning, pay-as-you-go pricing; ideal for acquisitions, temporary workloads, or rapid scaling without capital investment",
+    "Community cloud — shared infrastructure among several organizations with common compliance concerns (e.g., HIPAA, FDA); balances cost and compliance",
+    "Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs",
+    "Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads",
+    "Hybrid cloud — combination of public and private; allows sensitive data to remain in private cloud while leveraging public cloud for elasticity"
+],
                 "Correct": {
                     "MedTech's ERP system must comply with strict FDA and HIPAA requirements; the company wants dedicated infrastructure but has no need for a massive capital investment in a new data center": "Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs",
                     "MedTech's R&D team needs a sandbox environment to test new analytics tools; they want low cost and do not need dedicated infrastructure": "Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads",
@@ -4449,12 +4449,12 @@ const ENHANCED_CASE_BASE4 = [
                     "Digital signature"
                 ],
                 "RightItems": [
-                    "Uses one shared key for both encryption and decryption",
-                    "Uses a public-private key pair for encryption and decryption",
-                    "Produces a fixed-length output that cannot be reversed to the original input",
-                    "Uses a private key to sign and a public key to verify authenticity",
-                    "Reverses encrypted data by applying the original transformation"
-                ],
+    "Produces a fixed-length output that cannot be reversed to the original input",
+    "Uses a private key to sign and a public key to verify authenticity",
+    "Reverses encrypted data by applying the original transformation",
+    "Uses one shared key for both encryption and decryption",
+    "Uses a public-private key pair for encryption and decryption"
+],
                 "ItemID": "CBQ4-F3-Q2",
                 "CognitiveLevel": "Understand",
                 "CalculationComplexity": "None",
@@ -4934,12 +4934,12 @@ const ENHANCED_CASE_BASE4 = [
                     "Accounts payable"
                 ],
                 "RightItems": [
-                    "Cash budget and collection/disbursement timing",
-                    "Sales budget and credit collection policy",
-                    "Cost of goods sold budget and purchases budget",
-                    "Purchases budget and supplier payment terms",
-                    "Production budget and labor efficiency"
-                ],
+    "Sales budget and credit collection policy",
+    "Production budget and labor efficiency",
+    "Cash budget and collection/disbursement timing",
+    "Cost of goods sold budget and purchases budget",
+    "Purchases budget and supplier payment terms"
+],
                 "Correct": {
                     "Cash": "Cash budget and collection/disbursement timing",
                     "Accounts receivable": "Sales budget and credit collection policy",

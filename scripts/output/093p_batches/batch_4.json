@@ -1,0 +1,406 @@
+{
+  "batchId": "B4",
+  "itemCount": 25,
+  "items": [
+    {
+      "qid": "P1-A-064",
+      "pack": "Pack_A",
+      "section": "A",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "A.064 inventory lower of cost and net realizable value",
+      "difficulty": "Difficult",
+      "stem": "CoreTech holds three inventory lines at year-end. Line X: cost $240,000, NRV $190,000. Line Y: cost $180,000, NRV $210,000. Line Z: cost $300,000, NRV $285,000. In the following year, Line X NRV recovers to $250,000. CoreTech applies U.S. GAAP and uses the item-by-item LCNRV approach. Which statemen",
+      "choices": {
+        "A": "Year 1: write down Line X by $50,000 and Line Z by $15,000. Year 2: no reversal permitted; inventory on Line X remains at $190,000",
+        "B": "Year 1: write down Line X by $50,000, Line Y no adjustment, Line Z by $15,000. Year 2: reverse $50,000 of the write-down on Line X, bringing it to $240,000",
+        "C": "Year 1: write down the total portfolio by $5,000 because the aggregate NRV exceeds aggregate cost. Year 2: no reversal needed",
+        "D": "Year 1: write down Line X by $50,000 and Line Z by $15,000. Year 2: reverse $50,000 on Line X because NRV now exceeds original cost"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-A-007",
+      "pack": "Pack_A",
+      "section": "A",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "A.007 allowance method CECL forward-looking",
+      "difficulty": "Difficult",
+      "stem": "CONTROLLER MEMORANDUM — Harbor Medical Supplies\n\nTO: Controller Jia Patel\nFROM: Internal Audit\nRE: Year-End Allowance for Doubtful Accounts — Forward-Looking Analysis\n\nHarbor carries $4,200,000 in gross trade receivables. The historical loss rate (5-year average) is 2.1% on current, 6.4% on 31-60 da",
+      "choices": {
+        "A": "Apply the historical loss rates mechanically without adjustment to each aging bucket. The aging analysis is the primary measurement tool, and subjective forward-looking adjustments undermine consistency and comparability. Total allowance: $324,600.",
+        "B": "Adjust historical loss rates upward by incorporating forward-looking information (Fed rate increases, industry DSO trends, Chapter 11 filing) and apply higher rates to the shifted aging categories. Under ASC 326, the controller must exercise judgment that a purely mechanical application no longer reflects the current expected credit loss given current conditions.",
+        "C": "Recognize the Chapter 11 client as fully impaired with a specific $180,000 write-off, but apply historical loss rates to all other receivables. Rate environment and industry trends are too uncertain and subjective to quantify, and ASC 326 does not require speculative adjustments. Total allowance: approximately $372,000.",
+        "D": "Maintain historical loss rates for the <90-day buckets but double the >90-day rate from 38.7% to 77.4% because the bucket doubled in size. The controller should adjust rates only when aging composition changes measurably, as portfolio shifts are the most objective signal of credit deterioration. Total allowance: approximately $387,000."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-A-039",
+      "pack": "Pack_A",
+      "section": "A",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "A.039 straight-line depreciation expense 14",
+      "difficulty": "Difficult",
+      "stem": "INTERNAL MEMO — Orion Precision Components\n\nTO: Controller Elena Vasquez\nFROM: Audit Partner James Okonkwo\nRE: Depreciation Analysis Required Before Sign-Off\n\nOrion acquired CNC machining equipment on March 1 for $124,800, with estimated salvage of $12,000 and a 7-year useful life. The audit partner",
+      "choices": {
+        "A": "Annual straight-line depreciation is $16,114 [($124,800 - $12,000) / 7]. The CFO's $18,000 projection cannot be justified under any standard GAAP method with these inputs — it is approximately $1,886 above the correct straight-line amount. The closest defensible alternative would allocate cost without salvage ($124,800 / 7 = $17,829), but this violates ASC 360-10-35-4 which requires salvage value to be excluded from the depreciable base. The controller should advise the CFO that the earnings release figure needs correction.",
+        "B": "Annual straight-line depreciation is $17,829 ($124,800 / 7). The controller should support the CFO's $18,000 projection because salvage estimates for CNC equipment are inherently unreliable given rapid technological obsolescence, and the difference between $17,829 and $18,000 ($171) is immaterial for a company of Orion's size. The controller should recommend maintaining the earnings release figure to avoid a stock price disruption over an immaterial rounding difference.",
+        "C": "Annual straight-line depreciation is $112,800 / 6 = $18,800, approximately matching the CFO's projection. The 7-year useful life is for book purposes only; economic depreciation should use a 6-year life to reflect actual technological obsolescence in the CNC machining industry. The controller can justify the $18,000 figure by arguing for a shorter useful life under ASC 360-10-35-4.",
+        "D": "Annual straight-line depreciation is ($124,800 - $12,000) / 6.5 = $17,354, reflecting a mid-year averaging adjustment. The CFO's projection of $18,000 is close and within acceptable rounding tolerance. The controller should recommend holding the earnings release figure and adjusting it prospectively in Year 2 when better utilization data is available."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-B-022",
+      "pack": "Pack_A",
+      "section": "B",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.022 learning curve average time",
+      "difficulty": "Difficult",
+      "stem": "PRODUCTION SUPERVISOR'S REPORT — Helion Defense Systems\n\nTO: Elena Vargas, Production Supervisor\nFROM: Cost Accounting\nRE: Learning Curve Assumption — Validation Through Batch 5\n\nHelion manufactures guidance system housings for a defense contractor under an 8-batch firm-fixed-price contract. Helion'",
+      "choices": {
+        "A": "The 85% learning curve assumption should be maintained because batches 1-4 tracked within 7% of the prediction, and a single batch (batch 5) at 11.4% deviation is within acceptable statistical variation for a learning curve model — the batch 5 result may reflect temporary factors such as a new operator or equipment calibration issue rather than a genuine curve flattening.",
+        "B": "The learning curve assumption should be revised upward from 85% to approximately 92% because batch 5's 11.4% deviation exceeds the progressive deterioration seen across all 5 batches (2.5% → 2.6% → 4.3% → 6.8% → 11.4%) — the trend shows the deviation from the 85% prediction is accelerating, not fluctuating randomly, which is the signature of a curve that is flattening at a higher learning rate.",
+        "C": "The learning curve should be abandoned entirely for the remaining batches because the cumulative-average model is inherently unreliable beyond batch 4 — beyond that point, the incremental-unit-time model provides more accurate predictions for government contract pricing.",
+        "D": "The 85% curve should be maintained for batch 6 but a 92% curve should be applied to batches 7-8, splitting the difference to hedge against both the risk that batch 5 was an anomaly and the risk that the curve is genuinely flattening."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-B-013",
+      "pack": "Pack_A",
+      "section": "B",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.013 sensitivity analysis budget",
+      "difficulty": "Difficult",
+      "stem": "CONTROLLER'S RISK ASSESSMENT — Stonegate Cabinetry\n\nTO: Lisa Tran, Controller\nFROM: Budget Risk Analysis\nRE: FY2027 Operating Budget — Sensitivity Analysis\n\nStonegate manufactures custom kitchen and bath cabinetry for luxury home builders. The FY2027 operating budget projects operating income of $2,",
+      "choices": {
+        "A": "The lumber cost assumption ($4.80/bf) is most critical because raw materials represent the largest single cost category in cabinet manufacturing, and a 10% lumber price increase would add $148,000 to cost of goods sold — the second-largest single-assumption profit impact.",
+        "B": "The unit sales volume assumption (4,200 kitchens) is most critical because a 10% volume decline produces the largest profit impact of $218,400 — more than lumber (+$148,000), labor (+$86,400), or variable overhead (+$44,400) — and because volume directly determines Stonegate's revenue base, which drives all downstream variable costs and production planning.",
+        "C": "The direct labor assumption ($32.00/hr) is most critical because skilled cabinetmakers are Stonegate's most constrained resource, and a labor rate increase would have a compounding effect — higher rates would increase not only direct labor cost but also the variable overhead allocated on a direct-labor-hour basis.",
+        "D": "The variable overhead assumption ($18.50/DLH) is most critical because overhead rates are the most difficult to forecast accurately, as they depend on both cost-level assumptions (utility rates, indirect materials pricing) and activity-level assumptions (DLH consumption per kitchen), creating a compounding forecast risk."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-B-007",
+      "pack": "Pack_A",
+      "section": "B",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.007 sales budget sequencing",
+      "difficulty": "Difficult",
+      "stem": "BUDGET ANALYST'S RECONCILIATION — Veridian Office Systems\n\nTO: Priya Anand, Budget Analyst\nFROM: Master Budget Review\nRE: Draft Master Budget Imbalance — Root Cause Analysis\n\nVeridian manufactures modular office furniture systems. The annual profit plan for FY2027 is in draft and does not balance — ",
+      "choices": {
+        "A": "Schedule 5 (Cash Budget) was prepared out of sequence because it used total sales revenue before the cash collections schedule was prepared. The correct dependency is: Sales Budget -> Cash Collections Schedule -> Cash Budget. The cash collections schedule translates accrual sales into expected cash inflows, and the cash budget must use that translated figure.",
+        "B": "Schedule 4 (S&A Expense Budget) was prepared out of sequence because variable S&A depends on the cash collections schedule being prepared first to determine the collectible portion of sales.",
+        "C": "Schedule 2 (Production Budget) was prepared out of sequence because the units-to-produce calculation requires input from the direct materials purchases budget to know whether sufficient materials are available.",
+        "D": "Schedule 1 (Sales Budget) was prepared out of sequence because the selling price should be determined after the production budget confirms the per-unit manufacturing cost."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-B-088",
+      "pack": "Pack_A",
+      "section": "B",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.088 budgeted balance sheet purpose",
+      "difficulty": "Moderate",
+      "stem": "Crestline Manufacturing's controller prepared the preliminary 2026 master budget. The budgeted income statement projects a 14% operating margin, and the cash budget confirms sufficient liquidity through year-end. However, Crestline plans a $2.4 million equipment purchase financed with long-term debt",
+      "choices": {
+        "A": "Budgeted income statement — it captures both the depreciation on the new equipment and the interest expense on the associated debt",
+        "B": "Budgeted balance sheet — it projects the period-end balances of total assets, total liabilities, and equity needed to compute the debt-to-equity ratio",
+        "C": "Cash budget — it shows the loan proceeds from the equipment financing and the periodic debt service payments",
+        "D": "Sales budget — it determines the revenue assumptions that drive the entire master budget, including whether the equipment purchase is justified"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-C-048",
+      "pack": "Pack_A",
+      "section": "C",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "C.048 lag vs lead indicator distinction",
+      "difficulty": "Moderate",
+      "stem": "A company reports Q2 metrics: customer satisfaction 92% (up from 88%), employee turnover 5% (down from 8%), on-time delivery 97% (up from 94%), and net income $3.2M (down from $3.8M). The controller argues that leading indicators are improving while lagging indicators are declining. Which conclusion",
+      "choices": {
+        "A": "The decline in net income proves the leading indicators are unreliable and should be discontinued",
+        "B": "The improving leading indicators suggest future performance may strengthen, but the current decline in net income (a lagging indicator) reflects past decisions, and both signals should be monitored together for a complete picture",
+        "C": "Net income is the only metric that matters because financial results define company success",
+        "D": "Since all non-financial indicators improved, the decline in net income must be a reporting error"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-C-073",
+      "pack": "Pack_A",
+      "section": "C",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "C.073 cost-based transfer pricing limitation",
+      "difficulty": "Moderate",
+      "stem": "Division M transfers components to Division N. Variable cost is $22, full absorption cost is $38, external market price is $55. Under a cost-based transfer price of $38, Division M has refused three internal orders this quarter, instead selling externally. Division N now sources from an outside supp",
+      "choices": {
+        "A": "Mandate that Division M must fulfill all internal orders regardless of profitability",
+        "B": "Shift to a market-based or negotiated transfer price so Division M captures its opportunity cost while Division N benefits from internal sourcing below $52",
+        "C": "Lower the cost-based transfer price to variable cost of $22 to encourage internal transfers",
+        "D": "Allow Division N to continue external sourcing since $52 is close to the market price of $55"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-D-015",
+      "pack": "Pack_A",
+      "section": "D",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "D.015 quality cost prevention",
+      "difficulty": "Moderate",
+      "stem": "Iris Manufacturing reports the following quality-related costs for the current year: employee quality training: $45,000; supplier certification: $32,000; incoming materials inspection: $28,000; in-process testing: $41,000; scrap and rework: $95,000; warranty claims: $67,000; product liability settle",
+      "choices": {
+        "A": "The current prevention-to-failure ratio of $77,000 to $184,000 (1:2.4) indicates underinvestment in prevention, and the proposed increase is consistent with the COQ framework's principle that higher prevention spending reduces total quality costs over time",
+        "B": "Quality costs are already balanced because appraisal costs ($69,000) equal prevention costs ($77,000), suggesting the current quality program is optimal and the proposed increase is unwarranted",
+        "C": "The $184,000 in total failure costs should be treated as period expenses unrelated to the prevention budget, since scrap, warranty, and liability are consequences of production volume rather than quality program design",
+        "D": "Yes, the proposed increase of $77,000 in prevention spending is justified because it is less than the total failure costs of $184,000 and will not increase total costs regardless of the actual failure reduction achieved"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-D-009",
+      "pack": "Pack_A",
+      "section": "D",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "D.009 service department direct method",
+      "difficulty": "Moderate",
+      "stem": "Crescent Manufacturing has two service departments (IT: $120,000; HR: $80,000) and two production departments (Assembly and Finishing). IT provides 20% of its services to HR, while HR provides 10% of its services to IT. Assembly uses 45% of IT services and 60% of HR services. Finishing uses 35% of I",
+      "choices": {
+        "A": "The direct method ignores the 20% IT→HR and 10% HR→IT interservice flows, allocating IT solely to Assembly ($67,500) and Finishing ($52,500), and HR solely to Assembly ($53,333) and Finishing ($26,667)",
+        "B": "The direct method recognizes all interservice flows by solving simultaneous equations, producing IT allocations to HR of $24,000 and HR allocations to IT of $8,000 before final distribution to production departments",
+        "C": "The direct method cannot be applied when service departments provide services to each other and Crescent must use the reciprocal method exclusively",
+        "D": "Under the direct method, Assembly receives the full $200,000 because it is the largest production department by service consumption"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-E-050",
+      "pack": "Pack_A",
+      "section": "E",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.050 fraud risk identification incentive pressure analysis",
+      "difficulty": "Difficult",
+      "stem": "Meridian Manufacturing's plant manager bonus is 30% of base salary if annual production cost per unit stays below $42.50. The plant manager has earned the maximum bonus for three consecutive years. During the most recent year, the following changes occurred: (1) the quality assurance supervisor posi",
+      "choices": {
+        "A": "Rationalization — the plant manager's belief that using a family member's supplier is justified because the materials meet quality specifications at below-market prices.",
+        "B": "Opportunity — the removal of segregation of duties through the elimination of the QA supervisor and AP reviewer positions, combined with the plant manager's unilateral approval authority over purchases and inventory adjustments.",
+        "C": "Pressure/Incentive — the bonus structure that pays 30% of base salary for meeting cost targets, combined with a three-year pattern of achieving maximum bonuses and the controller's exit interview statement explicitly identifying cost pressure as the reason for resignation.",
+        "D": "Capability — the plant manager's position and authority level, which provides the technical knowledge and organizational influence necessary to direct purchasing toward a related-party supplier without detection."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-E-027",
+      "pack": "Pack_A",
+      "section": "E",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.027 external audit reliance on controls",
+      "difficulty": "Difficult",
+      "stem": "Vantage Industries' internal audit department has completed its annual assessment of internal controls over financial reporting. The assessment identified that controls over the revenue cycle are well-designed and operating effectively, while controls over inventory valuation have a design deficienc",
+      "choices": {
+        "A": "The external auditor can rely on Vantage's effective revenue cycle controls to reduce the extent of substantive testing in that area, but must perform additional substantive procedures for inventory valuation due to the identified control deficiency",
+        "B": "The external auditor cannot rely on any of Vantage's internal controls because one deficiency was identified in inventory — all areas require maximum substantive testing regardless of effective controls elsewhere",
+        "C": "The external auditor must independently retest all controls before placing any reliance on them — the internal audit department's assessment is not sufficient evidence for the external auditor",
+        "D": "The external auditor should rely on controls for both areas since internal audit already identified and documented the inventory deficiency — the auditor's responsibility is limited to reviewing internal audit's workpapers"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-E-066",
+      "pack": "Pack_A",
+      "section": "E",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.066 internal communication control responsibilities",
+      "difficulty": "Moderate",
+      "stem": "Northfield Industries implemented a new entity-wide internal control framework 18 months ago. The internal audit function recently surveyed 200 employees across all departments and levels. Survey results: 78% of respondents could not identify a single internal control for which they are personally r",
+      "choices": {
+        "A": "The most clearly violated element is COSO Principle 6 (Specifies Suitable Objectives) because management failed to establish measurable objectives for control awareness before implementing the framework.",
+        "B": "The current approach — distributing a comprehensive manual to department heads with instructions to cascade the information — represents adequate communication. The survey results reflect insufficient time for the framework to be absorbed rather than a communication deficiency.",
+        "C": "COSO Principle 14 (Communicates Internally) requires that management communicate control responsibilities in a manner that ensures personnel understand their role in the internal control system. The passive distribution of a manual without training, acknowledgment, or verification of understanding clearly violates this principle. An effective strategy would include role-specific training sessions, documented acknowledgment of responsibilities, and periodic refresher communication.",
+        "D": "The most clearly violated element is COSO Principle 16 (Conducts Ongoing and/or Separate Evaluations) because management failed to monitor whether the control framework was being followed after implementation."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-F-015",
+      "pack": "Pack_A",
+      "section": "F",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "F.015 business intelligence dashboard",
+      "difficulty": "Moderate",
+      "stem": "Keystone Industries' FP&A team has distributed the monthly CFO dashboard showing a 4.2% consolidated gross margin decline (42.8% → 38.6%) across three product lines: Standard (60% of revenue, margin declined from 44% to 41%), Premium (25% of revenue, margin declined from 48% to 40%), and Custom (15%",
+      "choices": {
+        "A": "KPI-1 is the primary driver across all three product lines — rising raw material costs compress margins regardless of product mix, and addressing supplier contracts is the first priority",
+        "B": "KPI-2 (Premium delivery collapse) is the primary driver — the 14 percentage-point delivery decline caused $420K in concessions, and Premium contributes disproportionately to margin (40% margin on 25% of revenue = highest margin product), making its decline the largest single factor in the 4.2% consolidated drop",
+        "C": "KPI-3 (Standard line labor inefficiency) is the primary driver — Standard represents 60% of revenue, so its 12% unfavorable labor efficiency variance has the largest absolute dollar impact on margins",
+        "D": "All three KPIs contribute equally — the 4.2% margin decline is evenly distributed across raw materials, Premium delivery, and Standard labor efficiency, so no single KPI should be prioritized"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-F-051",
+      "pack": "Pack_A",
+      "section": "F",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "F.051 data visualization KPI selection",
+      "difficulty": "Moderate",
+      "stem": "Northfield Manufacturing's FP&A Manager, Diana Chen, must select eight KPIs for the quarterly board dashboard from a pool of fourteen metrics proposed by four department heads, each advocating for their own metrics: (VP Sales) wants gross margin by product line, customer acquisition cost, and win/lo",
+      "choices": {
+        "A": "Gross margin by product line, EBITDA margin (Financial); OEE, on-time delivery rate (Operational); revenue growth YoY, win/loss ratio by region (Customer); voluntary turnover rate, training hours per employee (People) — this set maps directly to all four strategic objectives, balances the four balanced scorecard perspectives with exactly two KPIs each, and excludes metrics (inventory turnover, defect rate) that are components of higher-level KPIs already selected",
+        "B": "EBITDA margin, free cash flow, working capital ratio, revenue growth YoY (Financial); OEE, defect rate (Operational); customer acquisition cost (Customer); voluntary turnover (People) — this set prioritizes financial metrics (4 of 8) aligning with the board's primary focus on margin improvement and cash flow generation",
+        "C": "Gross margin by product line, OEE, defect rate, on-time delivery, inventory turnover, revenue growth, voluntary turnover, training hours — this set maximizes the number of department heads whose KPIs are represented, ensuring organizational buy-in for the dashboard",
+        "D": "All 14 KPIs with a two-tier structure: four 'primary' KPIs displayed prominently (EBITDA margin, free cash flow, revenue growth, OEE) and ten 'secondary' KPIs available via drill-down — this avoids the trade-off of excluding any stakeholder's metrics"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-F-035",
+      "pack": "Pack_A",
+      "section": "F",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "F.035 encryption at rest and transit",
+      "difficulty": "Moderate",
+      "stem": "Frontier Financial's security architect is reviewing encryption coverage across five data flow paths in the customer-to-report pipeline: (Path-1) Customer Portal → Web Application Firewall: TLS 1.3, certificate valid; (Path-2) Web App → ERP System: internal network, no encryption, justified as 'inte",
+      "choices": {
+        "A": "Only Path-2 has a gap — internal network traffic should always be encrypted, and labeling traffic as 'internal' does not eliminate the risk of internal threats or network compromise",
+        "B": "Paths 2, 4, and 5 have gaps — Path-2 lacks any encryption on financial transaction data between web app and ERP, Path-4 uses unencrypted ODBC with basic auth exposing query results, and Path-5 embeds financial data in an unprotected PDF distributed via email",
+        "C": "Paths 2 and 4 have gaps — Path-5 is acceptable because the email transport layer uses TLS, which properly protects the PDF in transit",
+        "D": "None of the paths have material gaps — VPN protects Path-3 transit, internal networks are trusted zones by design (Paths 2 and 4), and email TLS protects Path-5, making the current architecture defensible"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-F-053",
+      "pack": "Pack_A",
+      "section": "F",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "F.053 self-service BI governance",
+      "difficulty": "Moderate",
+      "stem": "Orion Data Analytics deployed a self-service BI platform (Tableau/Power BI equivalent) to 420 users across six departments 18 months ago. The Data Governance Lead, Marcus Webb, extracted the following usage telemetry to prepare for the quarterly data governance committee meeting: (Department 1) Fina",
+      "choices": {
+        "A": "Marketing (Department 2) represents the highest governance risk — it has the highest report count (341), the lowest certified-source usage (18%), the most stale reports (140 at 41%), the most duplicates (28), and the widest data source diversity (14+ uncertified sources), creating the highest probability that board-level decisions are being made on uncertified, unrefreshed, or duplicated data",
+        "B": "Sales (Department 5) represents the highest governance risk — with 138 users (the largest user base), any governance failure in Sales propagates to the most decision-makers, and 56% of reports using uncertified sources means a majority of Sales decisions are based on ungoverned data",
+        "C": "R&D (Department 6) represents the highest governance risk — with only 27% certified-source usage and 8 different uncertified data sources, R&D is making product investment decisions on the least governed data in the organization",
+        "D": "All departments except HR (which has 92% certified-source usage) represent significant governance risk — the governance committee should mandate certified-source-only policies and stale-report archival across all five departments simultaneously"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1B-A-110",
+      "pack": "Pack_B",
+      "section": "A",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B-A.110 short-term lease exemption",
+      "difficulty": "Moderate",
+      "stem": "Stonefield Corporation leases three items for its distribution center: (1) a forklift with a 9-month lease and no purchase option, (2) a conveyor system with an 11-month lease that includes a bargain purchase option management is reasonably certain to exercise, and (3) a packaging machine with a 14-",
+      "choices": {
+        "A": "The forklift only (Lease 1)",
+        "B": "The forklift and the conveyor system (Leases 1 and 2)",
+        "C": "The packaging machine only (Lease 3)",
+        "D": "The forklift and the packaging machine (Leases 1 and 3)"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1B-B-138",
+      "pack": "Pack_B",
+      "section": "B",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B-B.138 strategic planning vs budgeting",
+      "difficulty": "Difficult",
+      "stem": "Westbrook Industries' three-year strategic plan targets 15% annual revenue growth through expansion into adjacent markets and new product development. The operations team prepares the annual budget and proposes a 4% revenue growth target, citing capacity constraints, hiring freezes, and supply chain",
+      "choices": {
+        "A": "The budget appropriately operationalizes the strategic plan — the 4% growth target reflects the operations team's realistic assessment of capacity constraints, and operational reality should take precedence over aspirational targets",
+        "B": "The strategic plan and budget serve independent purposes and should not be compared — the strategic plan is a marketing document for the board while the budget is an internal operational tool",
+        "C": "The budget is consistent with the strategic plan because both project growth — the difference between 4% and 15% is merely a matter of degree, not a fundamental misalignment",
+        "D": "The budget is fundamentally misaligned with the strategic plan — the systematic under-resourcing of strategic initiatives (R&D, market entry, product launches) means the budget is not operationalizing the strategy but defunding it"
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1B-C-108",
+      "pack": "Pack_B",
+      "section": "C",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B-C.108 variance analysis",
+      "difficulty": "Difficult",
+      "stem": "Northgate Inc. applies fixed overhead based on direct labor hours. Budgeted fixed overhead is $180,000, budgeted production is 12,000 units, and standard labor hours are 3 per unit. Actual production was 11,500 units, actual fixed overhead was $182,000, and actual labor hours were 34,000. What is th",
+      "choices": {
+        "A": "$7,500 favorable",
+        "B": "$7,500 unfavorable",
+        "C": "$9,000 favorable",
+        "D": "$9,000 unfavorable"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1B-D-144",
+      "pack": "Pack_B",
+      "section": "D",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B-D.144 relevant costing",
+      "difficulty": "Difficult",
+      "stem": "Lambda Corp produces three products with these data: Product A (CM $30, machine hours 2), Product B (CM $45, machine hours 3), Product C (CM $50, machine hours 4). Machine hours are limited to 1,200 per month. Which product should be prioritized?",
+      "choices": {
+        "A": "Product A or B, both have highest CM per hour",
+        "B": "Product B (CM per hour $15)",
+        "C": "Product A (CM per hour $15)",
+        "D": "Product C (CM per hour $12.50)"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1B-E-117",
+      "pack": "Pack_B",
+      "section": "E",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B-E.117 ICFR",
+      "difficulty": "Moderate",
+      "stem": "During the ICFR assessment at Nexus Manufacturing, management needs to determine whether a control is operating effectively. The control requires that all credit sales over ,000 be approved by the credit manager. The control is performed approximately 50 times per month. Which testing approach would",
+      "choices": {
+        "A": "Reviewing the credit policy documentation only",
+        "B": "A combination of inquiry, observation, and reperformance of a sample of 25 transactions",
+        "C": "Observation of the control being performed once",
+        "D": "Inquiry of the credit manager about the control process"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1B-F-108",
+      "pack": "Pack_B",
+      "section": "F",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B-F.108 cloud computing",
+      "difficulty": "Moderate",
+      "stem": "Grant & Chen LLP is the external auditor for Harbor Logistics, a publicly traded third-party logistics provider. Harbor uses a SaaS-based transportation management system (TMS) called RouteCloud to process all shipping transactions, calculate freight charges, and generate customer invoices. RouteClo",
+      "choices": {
+        "A": "The SOC 2 Type II report can be partially relied upon — the Availability finding (backup failure) is the only finding that directly affects the completeness of Harbor's transaction data during the affected period, and additional procedures should be focused on that 6-day window",
+        "B": "The SOC 2 Type II report can be relied upon because RouteCloud management has provided remediation responses for all three findings, demonstrating that the control environment is responsive to identified deficiencies",
+        "C": "The SOC 2 Type II report cannot be relied upon without additional procedures because all three findings affect trust services categories relevant to the audit: Availability (backup failure) affects whether transaction data was complete during the gap period, Security (access recertification) affects whether unauthorized changes to financial data could have occurred, and Processing Integrity (change management deviation) affects whether system processing was authorized and tested",
+        "D": "The SOC 2 Type II report cannot be relied upon for any period because the combination of a backup failure, access review gap, and change management deviation indicates systemic control weaknesses that undermine the entire report"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1B-F-121",
+      "pack": "Pack_B",
+      "section": "F",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B-F.121 blockchain",
+      "difficulty": "Moderate",
+      "stem": "Orion Supply Chain is deploying a blockchain-based smart contract system for its purchase-to-pay (P2P) process. Under the new system, when a goods receipt is confirmed in the warehouse management system (WMS), a smart contract on a permissioned blockchain automatically: (Step 1) validates the receip",
+      "choices": {
+        "A": "Risk 2 (Irreversible Payment Execution) — once a smart contract executes a payment, the funds cannot be recovered through the system, meaning any payment error (whether from a compromised oracle, a code bug, or a business dispute) becomes a permanent loss that affects the income statement",
+        "B": "Risk 1 (Oracle Data Manipulation) — the 'oracle problem' is the most severe risk because the smart contract's payment decision depends entirely on the integrity of the WMS data feed; a compromised WMS can trigger unauthorized payments at scale with no human review between the data input and the payment execution, and the fraudulent transactions would appear as legitimate, system-processed payments on the blockchain",
+        "C": "Risk 3 (Smart Contract Code Vulnerability) — a coding error in the validation logic is a systematic defect that would affect EVERY transaction processed by the contract, not just isolated transactions, making it the risk with the widest potential financial statement impact",
+        "D": "Risk 4 (Blockchain Fork) — if Orion's financial records and the supplier's records diverge due to a blockchain fork, the external auditors cannot rely on either party's records as the single source of truth, fundamentally undermining the audit trail for all P2P transactions"
+      },
+      "correctChoice": "B"
+    }
+  ]
+}

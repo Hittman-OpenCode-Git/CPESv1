@@ -1,0 +1,406 @@
+{
+  "batchId": "B1",
+  "itemCount": 25,
+  "items": [
+    {
+      "qid": "P1-A-022",
+      "pack": "Pack_A",
+      "section": "A",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "A.022 GAAP IFRS development costs",
+      "difficulty": "Moderate",
+      "stem": "Axion Technologies develops software for autonomous vehicle systems. Under U.S. GAAP, all R&D costs are expensed as incurred, resulting in reported losses of $8.4 million this year. Axion is considering a European stock exchange listing that would require IFRS reporting. Under IAS 38, $3.2 million o",
+      "choices": {
+        "A": "Recommend U.S. GAAP and continued expensing. The conservative treatment protects investors from overstated asset values and is consistent with the principle that R&D outcomes are inherently uncertain. Reported losses accurately reflect the cash invested in development activities, which is the most decision-useful information for investors.",
+        "B": "Recommend IFRS reporting because IAS 38 allows capitalization of qualifying development costs, which better reflects the economic value created by Axion's investments. Under IFRS, the $3.2 million would be recognized as an intangible asset and amortized over the software's useful life, providing a more faithful representation of the company's financial position and the future benefits expected from its development pipeline.",
+        "C": "Recommend a blended approach: maintain U.S. GAAP as the primary reporting framework but present non-GAAP supplemental disclosures that capitalize and amortize qualifying development costs. This gives investors both the conservative GAAP framework and additional information about the value of Axion's development investments.",
+        "D": "Recommend that neither framework is clearly superior. The choice between expensing and capitalizing development costs is ultimately a matter of accounting policy preference with no objective economic basis. The controller should advise investors to disregard reported earnings under both frameworks and focus exclusively on cash flows from operations."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-A-011",
+      "pack": "Pack_A",
+      "section": "A",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "A.011 asset impairment trigger",
+      "difficulty": "Difficult",
+      "stem": "INTERNAL MEMORANDUM — Keystone Industries\n\nTO: Controller David Chen\nFROM: Plant Manager Sarah Okonkwo\nRE: Production Line 4 — Performance Review\n\nProduction Line 4 is a dedicated automated stamping line (carrying amount: $6,200,000; remaining useful life: 9 years) producing automotive body panels. ",
+      "choices": {
+        "A": "Yes, an impairment test is triggered. The most significant indicator is the adverse change in the extent or manner in which the asset is used — the customer's transition to aluminum panels means 83% of output will be eliminated unless retooled. This is a textbook ASC 360-10-35-21(b) indicator. The output decline and fair value drop provide secondary corroboration.",
+        "B": "No impairment test is triggered. The undiscounted future cash flows of $5,400,000 are close to the carrying amount of $6,200,000, and indicators alone without a confirmed recoverability test failure do not trigger recognition. The controller should wait until the cash flow shortfall is more clearly established.",
+        "C": "Yes, an impairment test is triggered, but the primary indicator is the mechanical output decline from 92,000 to 51,000 units/month — a 44.6% reduction. The customer transition is a separate business risk that does not affect the asset's carrying value under ASC 360.",
+        "D": "No impairment test is required because the asset still has 9 years of remaining useful life. An impairment test is triggered only when the carrying amount exceeds undiscounted future cash flows. Keystone should continue with the current depreciation schedule until the customer transition actually occurs in 14 months."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-A-002",
+      "pack": "Pack_A",
+      "section": "A",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "A.002 income statement discontinued operation presentation",
+      "difficulty": "Difficult",
+      "stem": "Riverview Industries operates three business segments: consumer products, industrial equipment, and a medical device division. The medical device division was classified as held-for-sale six months ago after the board determined its disposal represents a strategic shift. The buyer's financing has en",
+      "choices": {
+        "A": "Reclassify the medical device division back to continuing operations and disclose the sale delay in the footnotes — held-for-sale classification expires if the sale is not completed within one year",
+        "B": "Report the medical device division as discontinued operations, net of tax, and report the consumer product line sale within continuing operations because it does not represent a strategic shift",
+        "C": "Report both the medical device division and the consumer product line as discontinued operations since both involve disposals of business components",
+        "D": "Consolidate both disposals into a single discontinued operations line item and label it as an extraordinary item to simplify income statement presentation"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-A-012",
+      "pack": "Pack_A",
+      "section": "A",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "A.012 contingent liability accrual",
+      "difficulty": "Difficult",
+      "stem": "LEGAL UPDATE MEMORANDUM — Meridian Industries\n\nTO: Controller Rachel Torres\nFROM: General Counsel's Office\nRE: Year-End Legal Claim Assessment\n\nMeridian faces three pending legal matters at December 31:\n\nClaim 1 (Product Liability): Outside counsel assesses 75% probability of liability. Most likely ",
+      "choices": {
+        "A": "Accrue $520,000 for Claim 1 only. Disclosure required for Claims 1, 2, and 3. Claim 1 is probable (75%) and reasonably estimable ($520,000 best estimate). Claim 2 is not probable (35%) — disclosure only. Claim 3 at 55% is borderline — 'probable' under ASC 450 means likely to occur, and litigation at 55% does not clearly meet the threshold; disclosure of the reasonably possible loss is appropriate.",
+        "B": "Accrue $615,000 total: $520,000 (Claim 1) + $95,000 (Claim 3). Both have greater-than-50% probability, meeting the 'probable' threshold. Claim 2 requires disclosure only. Properly reflects Meridian's legal exposure.",
+        "C": "Accrue $1,900,000 total: $520,000 + $1,200,000 + $180,000. All three claims should be accrued because outside counsel has provided specific dollar estimates. ASC 450 requires accrual whenever a dollar amount can be estimated, regardless of probability.",
+        "D": "Accrue $350,000 for Claim 1 (minimum in range per ASC 450-20-25-2 when no amount is more likely). Accrue $180,000 for Claim 3 (full claimed amount). No accrual for Claim 2. Disclose the full range of all three claims. Total accrual: $530,000."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-B-085",
+      "pack": "Pack_A",
+      "section": "B",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.085 evaluate material sourcing strategy discount vs JIT",
+      "difficulty": "Difficult",
+      "stem": "Hensley Manufacturing's production budget calls for 72,000 units of its primary raw material annually, consumed at a steady rate of 6,000 units per month. The current supplier, Apex Materials, charges $18 per unit with standard 5-day delivery. Apex has now offered a 2% discount if Hensley commits to",
+      "choices": {
+        "A": "Accept Apex's quarterly bulk-purchase discount — the $25,920 in annual price savings, net of $10,080 in additional inventory carrying costs ($126,000 additional average inventory x 8%), produces a net benefit of $15,840, making it the highest-contribution option",
+        "B": "Adopt the JIT arrangement with SwiftSource — eliminating raw material inventory reduces working capital requirements by $140,000 and simplifies production planning, which offsets the $90,000 annual price premium through reduced material handling, obsolescence risk, and storage costs",
+        "C": "Reject both proposals and maintain the current monthly ordering pattern with Apex — the $18 per unit price is competitive, and the risks of supply disruption from JIT dependency or storage cost increases from bulk ordering outweigh the potential savings from either alternative",
+        "D": "Negotiate a hybrid arrangement — accept Apex's discount only on the highest-volume material grades and use SwiftSource JIT for the remaining, lower-volume specialty grades, capturing partial savings from both strategies while diversifying supply risk"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-B-030",
+      "pack": "Pack_A",
+      "section": "B",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.030 materials supplier evaluation and purchasing strategy",
+      "difficulty": "Very Difficult",
+      "stem": "PURCHASING MANAGER'S SUPPLIER ANALYSIS MEMO — Meridian Industrial Supply\n\nTO: CFO Teresa Ortiz\nFROM: Marcus Delgado, Purchasing Manager\nRE: Titanium-Coated Cutting Inserts — FY2027 Supplier Decision\n\nMeridian Industrial Supply manufactures precision components using titanium-coated cutting inserts —",
+      "choices": {
+        "A": "AdvantEdge LLC (Alt B) — the $2.50 per-unit premium over Nova ($240,000 annually) is offset by superior quality (0.6% defect rate saving ~$20,500 in annual rework vs. Nova) and 99.2% on-time delivery versus Nova's 97.5%. The net 60 payment terms also provide a working capital benefit of approximately $73,000 in annual float value. The combined quality and reliability advantages justify the price premium for the most critical direct material in the production process.",
+        "B": "TitanSource Inc. (Alt A) — the $3.50 per-unit discount versus Nova ($336,000 annual savings) makes this the lowest purchase-cost option. Quality and delivery risks can be managed by increasing safety stock from 2 weeks to 4 weeks and adding incoming inspection, which would cost approximately $48,000 annually — still well below the purchase-cost savings.",
+        "C": "Nova Metals (current supplier) — the 8-year relationship provides proven reliability with moderate defect and delivery rates. Switching suppliers introduces transition risk (line stoppages, qualification testing, training) that could cost $125,000-$200,000 in the first year alone. The known supplier is preferable to the unknown, even if alternatives appear cheaper on paper.",
+        "D": "Nova Metals for 60% of volume and AdvantEdge for 40% — dual-sourcing reduces single-supplier dependency risk while capturing some of AdvantEdge's quality advantage. Nova's 97.5% delivery reliability combined with AdvantEdge's 99.2% provides a blended on-time rate of approximately 98.2%, superior to any single supplier."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-B-004",
+      "pack": "Pack_A",
+      "section": "B",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.004 zero-based budgeting review",
+      "difficulty": "Difficult",
+      "stem": "CONTROLLER'S MEMO — Northfield Consumer Products\n\nTO: Sarah Kessler, Controller\nFROM: Budget Office\nRE: ZBB Pilot Department Selection for FY2027\n\nNorthfield manufactures branded household cleaning products. The CEO has mandated that every support function reduce its controllable costs by a minimum ",
+      "choices": {
+        "A": "Marketing (A) and Facilities Management (D) — Marketing has the highest absolute budget ($3.84M) and Facilities has the highest FY2027 percentage increase request (13.5%), making them the highest-dollar-impact candidates.",
+        "B": "IT Services (B) and Facilities Management (D) — these two departments combine the highest 3-year cost growth rates (+21.8% and +18.4%) with the highest and third-highest discretionary spend percentages (74% and 45%), indicating that prior-year spending levels are least likely to reflect genuinely required future spending.",
+        "C": "IT Services (B) and Marketing (A) — these two departments have the largest absolute budgets ($5.22M and $3.84M respectively), and capturing ZBB savings on the largest cost bases will generate the greatest dollar savings for the 8% reduction mandate.",
+        "D": "Human Resources (C) and Legal (E) — these two departments have the lowest 3-year cost growth rates and the lowest discretionary spending percentages, meaning their budgets are already lean and ZBB review would confirm appropriate spending levels rather than disrupting essential operations."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-B-070",
+      "pack": "Pack_A",
+      "section": "B",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.070 zero-based budgeting rationale",
+      "difficulty": "Difficult",
+      "stem": "CFO BUSINESS CASE — Apex Optics\n\nTO: James Okonkwo, CFO\nFROM: Budget Transformation Office\nRE: ZBB Implementation Decision for FY2028\n\nApex manufactures precision optical lenses for medical imaging equipment. The company has used incremental budgeting for 15 years — each department's budget is last ",
+      "choices": {
+        "A": "No — the $200,480 implementation cost should be compared against the recurring annual savings of $340,000 rather than the first-year total of $380,000 (which includes $40,000 in one-time vendor renegotiation gains that will not recur). Under a proper financial evaluation, the annual benefit is $340,000, yielding a payback of 7.1 months — but the department readiness assessment shows that four of six departments have Medium or Low readiness for ZBB, and the implementation risk of forcing a zero-base methodology on departments with heavy compliance spending (Legal, 22% discretionary; Finance, 28% discretionary) outweighs the projected savings. The Board's alternative of 7% across-the-board cuts, while crude, at least avoids the $200,480 implementation cost and the organizational disruption of deploying ZBB to departments that are structurally unsuited for it.",
+        "B": "Yes — the $200,480 one-time investment yields $380,000 in first-year savings (net benefit of $179,520 in year one) and $340,000 in recurring annual savings thereafter, representing a payback period of under 7 months and a first-year ROI of 89%. More strategically, ZBB addresses the root cause — 15 years of incremental budgeting that has accumulated spending no longer tied to current business needs — while the Board's alternative of across-the-board 7% cuts would indiscriminately reduce essential and discretionary spending alike, potentially damaging functions like Legal (22% discretionary) where cuts would impair compliance capacity.",
+        "C": "No — the department readiness assessment shows that only two of six departments (Marketing and IT) have High readiness. Implementing ZBB when four departments are at Medium or Low readiness risks significant operational disruption and manager resistance. Apex should defer ZBB for two years and focus on targeted cost reductions within Marketing and IT only.",
+        "D": "Yes — but implement ZBB only in Marketing and IT Services initially (High readiness, high discretionary spend), apply the Board's 7% across-the-board cut to the remaining four departments, and expand ZBB to additional departments in FY2029 after the pilot demonstrates results. This phased approach achieves the cost-reduction target while minimizing organizational disruption."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-B-039",
+      "pack": "Pack_A",
+      "section": "B",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.039 credit terms and collections strategy evaluation",
+      "difficulty": "Very Difficult",
+      "stem": "CREDIT MANAGER'S POLICY REVIEW — Northfield Building Supply\n\nTO: CFO David Okonkwo\nFROM: Marcus Delgado, Credit Manager\nRE: Credit Terms Revision — FY2027 Recommendation\n\nNorthfield Building Supply distributes lumber, fasteners, and hardware to 1,200+ contractor accounts. Our current credit policy i",
+      "choices": {
+        "A": "Option A (2/10 Net 30) — the $198,720 annual discount cost is substantially offset by reduced borrowing and bad debt. The estimated borrowing reduction of ~$850,000 saves ~$80,750 in annual interest, and bad debt falls from $441,600 to approximately $176,640 (0.8% on improved collections). The $283,230 net benefit preserves the full customer base and is the least disruptive option.",
+        "B": "Option B (Net 15) — the 31-day average collection period dramatically improves cash flow. While 12% of contractors may defect, the $2,649,600 revenue loss represents contribution margin loss only — not full revenue. If contribution margin is 35%, the actual bottom-line impact is $927,360, which is exceeded by the borrowing and bad debt savings. The remaining contractor base, now composed of financially stronger customers, will generate more predictable cash flow.",
+        "C": "Option C (Factoring) — the $706,560 annual factoring cost is the most expensive option, but it eliminates all credit risk, all collection expense, and all bad debt. The certainty of immediate cash on every invoice — with zero borrowing costs, zero bad debt, and zero collection-department overhead — justifies the premium for a distributor whose contractor customers have inherently variable payment behavior.",
+        "D": "Maintain the current Net 30 policy with no changes — the 53-day average collection period is within industry norms for building supply distribution (typically 45-60 days), and the $441,600 annual bad debt on $22 million in sales (2.0%) is manageable. Any change risks disrupting contractor relationships that have been developed over years."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-B-031",
+      "pack": "Pack_A",
+      "section": "B",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.031 evaluate cash collections acceleration strategy",
+      "difficulty": "Difficult",
+      "stem": "Whitford Distributors has experienced three consecutive quarters of tightening cash flow. Monthly credit sales average $480,000, and Whitford currently collects 25% in the month of sale, 50% in the following month, and 25% in the second following month — an average collection period of 47 days. Whit",
+      "choices": {
+        "A": "Implement the 2/10, net 30 early-payment discount program — it accelerates collections at a cost of approximately $4,800 per month in discounts, which is partially offset by reduced borrowing costs, and preserves customer relationships without the sales-volume risk of tighter credit or the margin erosion of factoring",
+        "B": "Tighten credit terms to require a 25% deposit — the 8% sales decline is a manageable risk given the immediate cash injection, and price-sensitive customers who defect are likely the least profitable segment anyway",
+        "C": "Factor all receivables through the third-party company — the 3.5% factoring fee eliminates collection lag entirely and allows Whitford to exit the line of credit, simplifying treasury operations and reducing administrative costs",
+        "D": "Maintain the current collection policy — the $12,600 annual borrowing cost is immaterial relative to monthly sales of $480,000, and both the discount program and factoring would erode gross margin more than the interest saved"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-C-037",
+      "pack": "Pack_A",
+      "section": "C",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "C.037 transfer price excess capacity divisional stakeholder conflict",
+      "difficulty": "Difficult",
+      "stem": "Orion Industries operates two divisions evaluated as profit centers. The Components Division manufactures Product X12 at a variable cost of $25 per unit and a full cost of $34 per unit. The external market price for X12 is $40 per unit. Components is currently operating at 75% of its 100,000-unit an",
+      "choices": {
+        "A": "Set the transfer price at $40 per unit — the external market price is the only objective benchmark that treats both divisions as autonomous profit centers and avoids favoritism. If Assembly cannot compete at the market price, the product line should not be launched.",
+        "B": "Mandate a transfer price of $25 per unit — under excess capacity, the company's incremental cost of producing X12 is only variable cost, and internal transfers at variable cost maximize consolidated profitability. Components Division's profitability concerns are irrelevant to the company-wide optimization decision.",
+        "C": "Facilitate a negotiated transfer in the range of $28 to $32 per unit — variable cost of $25 establishes the floor, and the external market price of $40 establishes the ceiling. A price within this range gives Components a contribution margin of $3 to $7 per unit, preserving divisional motivation, while still keeping Assembly's cost $8 to $12 below the external market alternative. The CFO should guide both managers to view the internal transfer as a shared value-creation opportunity rather than a zero-sum negotiation.",
+        "D": "Allow Assembly Division to source X12 from an external supplier if Components will not meet the $25 price — the external market of multiple suppliers at $40 creates competitive pressure, and if Components cannot match the $25 incremental cost standard, Assembly should be free to explore alternative sourcing that may be more cost-effective over time."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-D-011",
+      "pack": "Pack_A",
+      "section": "D",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "D.011 reciprocal allocation method",
+      "difficulty": "Difficult",
+      "stem": "Evergreen's two service departments (Maintenance: $200,000; IT: $150,000) provide 30% mutual cross-services to each other. Three production departments consume the remainder. The controller is evaluating three approaches: (1) the direct method, which ignores all interservice flows; (2) the step-down",
+      "choices": {
+        "A": "Recommend the reciprocal method because the 30% mutual service level is material to pricing accuracy, even though it requires algebraic computation; the cost of distorted product costs from simpler methods likely exceeds the computational burden",
+        "B": "Recommend the direct method because it is always acceptable under GAAP for external reporting and management should prioritize simplicity over accuracy for all cost allocation decisions",
+        "C": "Recommend the step-down method because it is a compromise that always captures the most material interservice flow while being simpler than the reciprocal method",
+        "D": "Recommend that no allocation method be used and instead treat all service department costs as period expenses because interservice flows make allocation inherently arbitrary"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-E-055",
+      "pack": "Pack_A",
+      "section": "E",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.055 entity level transaction level risk assessment",
+      "difficulty": "Difficult",
+      "stem": "TransGlobal Industries operates 12 manufacturing subsidiaries across six countries, each maintaining its own ERP system, internal controls, and local management team. Historically, the corporate risk assessment process has focused on transaction-level risks: purchase order approvals ($2.4 billion in",
+      "choices": {
+        "A": "Culture and tone at subsidiaries (Risk 2). Transaction-level controls such as purchase order approvals and cycle counts cannot detect or prevent management override of controls, and a confirmed pattern of management instructing employees to bypass safety protocols signals that control consciousness at the local level may be fundamentally compromised.",
+        "B": "IT infrastructure obsolescence (Risk 3). Five unsupported ERP systems create the most immediate and quantifiable operational risk because every transaction-level control — purchase orders, payroll, inventory — depends on functioning IT systems; without vendor-supported platforms, the entire internal control infrastructure faces potential failure.",
+        "C": "Regulatory changes (Risk 1). Mandatory ESG reporting requirements in three key markets could block TransGlobal's market access entirely, creating an existential business risk that no internal control — no matter how well-designed at the transaction level — is capable of addressing or mitigating.",
+        "D": "Key person dependency (Risk 4). The corporate treasurer managing $800 million in FX hedging with no successor and no forced leave rotation represents a concentration of risk that, if realized, could produce an immediate, unhedged currency loss exceeding the potential financial impact of all other entity-level risks combined."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-E-073",
+      "pack": "Pack_A",
+      "section": "E",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.073 control deficiency classification material weakness",
+      "difficulty": "Difficult",
+      "stem": "An external auditor identified the following at Meridian Corp: (1) The company does not reconcile intercompany accounts across its six subsidiaries — unreconciled differences total $2.3M against total assets of $85M. (2) The accounting manager who records journal entries also reviews and approves th",
+      "choices": {
+        "A": "(1) Significant deficiency, (2) Deficiency, (3) Deficiency — and finding (2) is the most severe because it involves segregation of duties.",
+        "B": "(1) Material weakness, (2) Significant deficiency, (3) Deficiency — and finding (1) is the most severe because the unreconciled $2.3M represents a material potential misstatement.",
+        "C": "(1) Deficiency, (2) Material weakness, (3) Significant deficiency — and finding (2) is the most severe because any segregation-of-duties failure is automatically a material weakness.",
+        "D": "(1) Material weakness, (2) Material weakness, (3) Material weakness — all three are material weaknesses because any control failure must be classified at the highest severity level per PCAOB standards."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-E-084",
+      "pack": "Pack_A",
+      "section": "E",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.084 audit committee oversight independence",
+      "difficulty": "Difficult",
+      "stem": "SignalPoint Technologies' audit committee consists of three members: the CEO's brother (a marketing executive), a retired operations manager who left the company two years ago, and an independent director who is a CPA. The committee meets quarterly, but the CEO attends every meeting and the committe",
+      "choices": {
+        "A": "Reduce audit committee meetings to annually — quarterly meetings create excessive administrative burden without improving oversight effectiveness",
+        "B": "Replace the non-independent members with directors who meet independence and financial expertise requirements, require executive sessions without management present, and mandate a written remediation plan with board-level accountability for the revenue recognition deficiency",
+        "C": "Add two additional independent members to expand the committee to five members — the committee size, not its composition, is the root cause of ineffective oversight",
+        "D": "Remove the CEO from audit committee meetings — once management is excluded, the independence and financial expertise concerns are resolved"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-F-069",
+      "pack": "Pack_A",
+      "section": "F",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "F.069 real-time analytics use",
+      "difficulty": "Difficult",
+      "stem": "Pacific Coast Logistics experienced a $340,000 inventory write-off last month when a temperature-controlled pharmaceutical shipment spoiled in a warehouse because the batch analytics dashboard (refreshed every 4 hours) did not detect a cooling unit failure until the next refresh cycle — by which tim",
+      "choices": {
+        "A": "Real-time streaming for Cold Chain Monitoring and Inventory Replenishment (Domains 1 and 2); batch for Route Optimization (Domain 3) — inventory is the second most time-sensitive domain and deserves real-time investment alongside temperature monitoring",
+        "B": "Real-time streaming for Cold Chain Monitoring (Domain 1); maintain batch processing for Inventory Replenishment (Domain 2) and Route Optimization (Domain 3) — the temperature-control write-off directly justifies real-time investment in the domain where latency caused financial loss, while the other two domains have no demonstrated need for sub-daily processing",
+        "C": "Real-time streaming for all three domains — a single architecture is easier to manage, the total cost ($1,520,000) can be phased over three fiscal years, and the competitive advantage of real-time supply chain visibility justifies the premium",
+        "D": "Maintain batch processing for all three domains but reduce the Cold Chain Monitoring refresh interval from 4 hours to 15 minutes — this addresses the cooling unit detection gap without requiring a real-time architecture investment"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-F-048",
+      "pack": "Pack_A",
+      "section": "F",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "F.048 process mining use",
+      "difficulty": "Difficult",
+      "stem": "Summit Healthcare's COO, Maria Vega, is evaluating a process mining software investment to identify operational inefficiencies across three departments. The vendor has provided diagnostic data from a two-week pilot: Accounts Payable — 14,200 invoices processed, 22% touchless (straight-through), 31% ",
+      "choices": {
+        "A": "Deploy to Order-to-Cash — reducing DSO from 47 to 35 days would improve cash flow, and the 18% order entry error rate directly impacts revenue recognition timeliness",
+        "B": "Deploy to Procurement — the 28% exception rate and 41% non-preferred supplier rate indicate significant compliance and spend leakage risk that process mining is specifically designed to identify",
+        "C": "Deploy all three departments simultaneously — process mining software can analyze all event logs in parallel, and the $290K annual cost is a fixed investment regardless of scope",
+        "D": "Deploy to Accounts Payable — the $420K estimated savings produces a 1.45x first-year return on the $290K software investment ($130K net benefit), funding future O2C and Procurement deployments from year-one surplus"
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-F-034",
+      "pack": "Pack_A",
+      "section": "F",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "F.034 least privilege access",
+      "difficulty": "Difficult",
+      "stem": "Broadstreet Insurance Group's internal audit discovered a privilege escalation incident during the Q3 IT general controls review: a claims adjuster accessed the premium rating engine's configuration table (containing rate factors and underwriting rules for 240,000 policies) by exploiting a role inhe",
+      "choices": {
+        "A": "Model 1 (Refined RBAC) — it is the least expensive ($270,000), requires the least organizational change (staff already understand RBAC), and the quarterly recertification addresses the specific configuration drift issue that caused the incident",
+        "B": "Model 2 (ABAC) — it provides the highest prevention rate (99.5%) and offers the most granular access control, which is the surest way to prevent recurrence of privilege escalation",
+        "C": "A manual access control log reviewed by department managers weekly — formal access models add complexity and the incident was caused by human configuration errors, not model inadequacy",
+        "D": "Model 3 (PBAC) — it provides attribute-level context without requiring full decomposition of all 47 roles, integrates with the existing identity provider, achieves 98% prevention, and preserves auditability through policy-traceable access grants"
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-F-010",
+      "pack": "Pack_A",
+      "section": "F",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "F.010 data cleansing duplicate customers",
+      "difficulty": "Difficult",
+      "stem": "Frontier Distribution's data steward, Amara Osei, must select a customer de-duplication approach for the billing system, which contains 85,000 customer records with an estimated 12% duplicate rate. Three vendors have proposed different methodologies: (1) Rule-based matching — deterministic rules (ex",
+      "choices": {
+        "A": "Rule-based matching — it is the most cost-effective option and 92% accuracy is sufficient for customer master data",
+        "B": "Machine learning fuzzy matching — it achieves the optimal balance of high merge confidence (97%), low false-positive risk (3%), and timely completion (4 weeks + processing) within budget",
+        "C": "Manual review — it is the only approach that meets the controller's zero-false-positive constraint with 99.9% confidence",
+        "D": "Postpone de-duplication until after Q3 close and perform a full manual review during the annual audit cycle"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-F-040",
+      "pack": "Pack_A",
+      "section": "F",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "F.040 change control migration",
+      "difficulty": "Difficult",
+      "stem": "Keystone Manufacturing's audit committee is investigating a $340K revenue recognition error caused by an unauthorized ERP configuration change that bypassed the standard change control process. The VP of IT, James Okonkwo, has proposed three revised change control policy designs: (1) Preventive-only",
+      "choices": {
+        "A": "Preventive-only — it eliminates the risk of unauthorized changes at the source and is the most control-oriented design",
+        "B": "Detective-only — it preserves deployment agility and catches errors after they occur so they can be corrected quickly",
+        "C": "Hybrid — preventive controls block unauthorized changes that cause errors, while detective monitoring ensures any control bypass is detected within 15 minutes with automatic remediation",
+        "D": "No new policy — the $340K error will not recur; the individual responsible has been identified and retrained"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1B-A-082",
+      "pack": "Pack_B",
+      "section": "A",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B-A.082 principal vs agent ASC 606",
+      "difficulty": "Difficult",
+      "stem": "Swift Logistics arranges freight shipments for customers and bills them directly. Swift does not control the freight services before transfer, does not take inventory risk, and earns a 12% commission on each shipment. A major customer is negotiating to pay Swift a fixed monthly fee of $45,000 instea",
+      "choices": {
+        "A": "Swift is a principal because it bills the customer directly and sets service pricing. The proposed fixed fee confirms principal status by shifting economic risk to Swift regardless of control indicators.",
+        "B": "Swift is an agent under the commission model but becomes a principal under the fixed-fee model because the fee structure transforms the economic substance of the arrangement independently of whether Swift controls freight capacity.",
+        "C": "Swift is an agent under both arrangements. The principal-vs-agent determination depends on control of the specified service before transfer, not the billing method. Neither the commission nor the fixed-fee arrangement gives Swift control over freight services before they reach the customer.",
+        "D": "Swift is a principal under both arrangements because logistics coordination constitutes a distinct service that Swift performs as a primary obligor, regardless of whether Swift controls the underlying freight capacity."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1B-B-188",
+      "pack": "Pack_B",
+      "section": "B",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B-B.188 evaluate competing capital investment proposals CVP breakeven",
+      "difficulty": "Difficult",
+      "stem": "Greenway Manufacturing's board has approved a capital expenditure ceiling of $1,800,000 for the upcoming budget year. Controller Rebecca Tran must evaluate two competing proposals from the production engineering team. Proposal Alpha: Invest $1,500,000 in automation equipment, increasing annual fixed",
+      "choices": {
+        "A": "Proposal Alpha: Breakeven = 9,118 units at $68 CM; margin of safety at 16,000 units = 43.0%. Under weak demand (12,800 units), operating income = $250,400. Despite higher fixed costs, the substantially greater CM per unit provides stronger downside protection and higher operating leverage when demand exceeds breakeven",
+        "B": "Proposal Beta: Breakeven = 8,793 units at $58 CM; margin of safety at 16,000 units = 45.0%. Under weak demand (12,800 units), operating income = $232,400. The lower breakeven point provides superior downside protection, which aligns with the board's stated investment criteria, despite Alpha's higher CM",
+        "C": "Proposal Alpha: Breakeven = 11,824 units; margin of safety = 26.1%. Alpha's higher automation costs create unacceptable risk because the breakeven nearly doubles from the current 8,000 units, threatening profitability in any year demand falls below 11,824 units",
+        "D": "Neither proposal — maintain the current cost structure. Both proposals increase fixed costs and operating leverage, which amplifies losses in weak-demand years. The board should defer capital investment until demand variability decreases"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1B-C-143",
+      "pack": "Pack_B",
+      "section": "C",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B-C.143 ROI and residual income",
+      "difficulty": "Difficult",
+      "stem": "Lakeshore Division has operating income of $200,000. Total assets are $1,000,000, current liabilities are $100,000, and the weighted-average cost of capital is 12%. The tax rate is 30%. What is the economic value added (EVA)?",
+      "choices": {
+        "A": "$47,000",
+        "B": "$18,000",
+        "C": "$25,000",
+        "D": "$32,000"
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1B-D-083",
+      "pack": "Pack_B",
+      "section": "D",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B-D.083 contribution margin special order capacity constraints",
+      "difficulty": "Difficult",
+      "stem": "Meridian Precision Parts manufactures industrial bearings at a selling price of $120 per unit with variable costs of $72 per unit (contribution margin of $48 per unit, 40% CM ratio). Annual production capacity is 80,000 units; current regular-customer volume is 60,000 units. Fixed costs total $2,400",
+      "choices": {
+        "A": "Accept the full 25,000-unit special order at $90 per unit — the contribution margin is $18 per unit ($90 - $72), generating $450,000 in incremental profit. The follow-on relationship with Apex represents a strategic growth opportunity worth the short-term margin dilution, and the exclusivity clause locks in a multi-year revenue stream.",
+        "B": "Reject the special order entirely — the $90 price represents a 25% discount below the standard $120 price, the exclusivity clause constrains Meridian's pricing flexibility for three years, and the 20% probability of regular-customer price concessions creates a contingent liability of approximately $72,000 in expected margin loss. Protecting the existing customer base and price integrity is more important than a one-time volume opportunity.",
+        "C": "Accept 15,000 units of the special order at $90 per unit — this fits within Meridian's 20,000 units of available capacity without displacing any regular-customer volume or requiring capital expansion. The order generates $270,000 in incremental contribution (15,000 units × $18/unit) with zero capacity risk. Propose to Apex a price-step framework for future orders: $90 for the trial order, with scheduled increases to $98 in year two and $105 in year three as the relationship matures, contingent on volume commitments.",
+        "D": "Accept the full 25,000-unit special order at $90 but simultaneously notify regular customers of a price increase to $135 per unit — the $15 increase on 60,000 units generates $900,000 in additional regular-customer contribution, more than offsetting the margin dilution from the special order and the potential concessions. This approach uses the special order as a catalyst to correct underpricing in the regular business."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1B-E-116",
+      "pack": "Pack_B",
+      "section": "E",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B-E.116 ICFR",
+      "difficulty": "Moderate",
+      "stem": "Silverline Corp's management is conducting its annual assessment of internal control over financial reporting (ICFR) as required by SOX Section 404. During the assessment, management identified a control deficiency that has a reasonable possibility of resulting in a material misstatement in the fina",
+      "choices": {
+        "A": "A minor deficiency",
+        "B": "A significant deficiency",
+        "C": "A control deficiency",
+        "D": "A material weakness"
+      },
+      "correctChoice": "D"
+    }
+  ]
+}

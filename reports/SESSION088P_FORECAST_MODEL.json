@@ -1,0 +1,236 @@
+{
+  "session": "SESSION088P",
+  "title": "Modernization Forecast Model — Wave-by-Wave Projections",
+  "timestamp": "2026-07-30T19:15:00Z",
+  "governance_lane": "Light / Read-Only",
+  "methodology": "Derived from S86P COGNITIVE_BASELINE.json via Function-constructor parse of all 5 pack files. All counts cross-checked against CURRENT_BASELINES.md §2.",
+  "preflight": {
+    "status": "PASS",
+    "divergences": 0,
+    "certified_pool": 2451,
+    "governance_guard": "54/54 PASS"
+  },
+
+  "baseline": {
+    "total_certified_items": 2451,
+    "total_items": 2545,
+    "higher_order_cert": 458,
+    "analyze_cert": 250,
+    "evaluate_cert": 208,
+    "ho_pct": "18.7%",
+    "low_order_cert": 1984,
+    "low_order_remember": 81,
+    "low_order_understand": 939,
+    "low_order_apply": 964,
+    "caqs_target_ho_pct": "40.0%",
+    "caqs_target_ho_count": 980,
+    "gap_items": 522,
+    "gap_pp": 21.3
+  },
+
+  "constraints": {
+    "items_per_wave": 15,
+    "dual_block_sections": ["Pack C / A", "Pack C / B", "Pack D / A"],
+    "dual_block_blocked_low_order": 249,
+    "near_ceiling_sections": ["Pack C / E (88%)", "Pack D / B (89%)", "Pack D / E (90.7%)"],
+    "accessible_low_order": 1735
+  },
+
+  "milestone_projections": {
+    "25_percent": {
+      "target_ho": 613,
+      "gap_from_start": 155,
+      "waves_needed": 10.3,
+      "crosses_between": "Waves 10-11",
+      "projected_session": "S97",
+      "section_at_crossing": "Pack A Section C W1",
+      "cumulative_ho": 623,
+      "ho_pct": "25.4%"
+    },
+    "30_percent": {
+      "target_ho": 735,
+      "gap_from_start": 277,
+      "waves_needed": 18.5,
+      "crosses_between": "Waves 18-19",
+      "projected_session": "S105",
+      "section_at_crossing": "Pack D Section F W1",
+      "cumulative_ho": 743,
+      "ho_pct": "30.3%"
+    },
+    "40_percent": {
+      "target_ho": 980,
+      "gap_from_start": 522,
+      "waves_needed": 34.8,
+      "crosses_at": "Wave 35",
+      "projected_session": "S121",
+      "cumulative_ho": 983,
+      "ho_pct": "40.1%"
+    }
+  },
+
+  "wave_sequence": [
+    {
+      "wave": 1, "session": "S87", "phase": 1, "campaign": "Pack A Section F — Wave 1",
+      "pack": "A", "section": "F", "domain": "Technology and Analytics",
+      "section_ho_before": "2.7%", "section_ho_after": "22.7%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 473, "cumulative_ho_pct": "19.3%",
+      "status": "QUEUED (S77 output, refreshed S86P)"
+    },
+    {
+      "wave": 2, "session": "S88", "phase": 1, "campaign": "Pack B Section F — Wave 1",
+      "pack": "B", "section": "F", "domain": "Technology and Analytics",
+      "section_ho_before": "2.7%", "section_ho_after": "22.7%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 488, "cumulative_ho_pct": "19.9%",
+      "status": "NOT QUEUED"
+    },
+    {
+      "wave": 3, "session": "S89", "phase": 2, "campaign": "Pack E Section A — Wave 1",
+      "pack": "E", "section": "A", "domain": "External Financial Reporting",
+      "section_ho_before": "2.7%", "section_ho_after": "22.7%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 503, "cumulative_ho_pct": "20.5%",
+      "status": "NOT QUEUED",
+      "note": "Domain A is calculation-heavy — harder scenario authoring"
+    },
+    {
+      "wave": 4, "session": "S90", "phase": 2, "campaign": "Pack B Section B — Wave 1",
+      "pack": "B", "section": "B", "domain": "Planning, Budgeting, and Forecasting",
+      "section_ho_before": "3.0%", "section_ho_after": "18.0%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 518, "cumulative_ho_pct": "21.1%",
+      "status": "NOT QUEUED",
+      "note": "22 Remember items need dual upgrade (difficulty + cognitive). Lower per-wave gain due to Remember items needing separate difficulty passes."
+    },
+    {
+      "wave": 5, "session": "S91", "phase": 2, "campaign": "Pack E Section B — Wave 1",
+      "pack": "E", "section": "B", "domain": "Planning, Budgeting, and Forecasting",
+      "section_ho_before": "3.0%", "section_ho_after": "18.0%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 533, "cumulative_ho_pct": "21.7%",
+      "status": "NOT QUEUED"
+    },
+    {
+      "wave": 6, "session": "S92", "phase": 3, "campaign": "Pack E Section E — Wave 1",
+      "pack": "E", "section": "E", "domain": "Internal Controls",
+      "section_ho_before": "3.4%", "section_ho_after": "16.4%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 548, "cumulative_ho_pct": "22.4%",
+      "status": "NOT QUEUED",
+      "note": "Largest single-object low-order pool (112 items). Sustains 8 waves."
+    },
+    {
+      "wave": 7, "session": "S93", "phase": 3, "campaign": "Pack E Section D — Wave 1",
+      "pack": "E", "section": "D", "domain": "Cost Management",
+      "section_ho_before": "3.9%", "section_ho_after": "23.9%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 563, "cumulative_ho_pct": "23.0%",
+      "status": "NOT QUEUED"
+    },
+    {
+      "wave": 8, "session": "S94", "phase": 3, "campaign": "Pack B Section A — Wave 1",
+      "pack": "B", "section": "A", "domain": "External Financial Reporting",
+      "section_ho_before": "5.3%", "section_ho_after": "23.3%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 578, "cumulative_ho_pct": "23.6%",
+      "status": "NOT QUEUED",
+      "note": "10 Remember items — dual upgrade cost"
+    },
+    {
+      "wave": 9, "session": "S95", "phase": 3, "campaign": "Pack B Section D — Wave 1",
+      "pack": "B", "section": "D", "domain": "Cost Management",
+      "section_ho_before": "5.3%", "section_ho_after": "23.3%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 593, "cumulative_ho_pct": "24.2%",
+      "status": "NOT QUEUED"
+    },
+    {
+      "wave": 10, "session": "S96", "phase": 3, "campaign": "Pack B Section E — Wave 1",
+      "pack": "B", "section": "E", "domain": "Internal Controls",
+      "section_ho_before": "5.3%", "section_ho_after": "23.3%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 608, "cumulative_ho_pct": "24.8%",
+      "status": "NOT QUEUED"
+    },
+    {
+      "wave": 11, "session": "S97", "phase": 4, "campaign": "Pack A Section C — Wave 1",
+      "pack": "A", "section": "C", "domain": "Performance Management",
+      "section_ho_before": "11.0%", "section_ho_after": "26.0%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 623, "cumulative_ho_pct": "25.4%",
+      "status": "NOT QUEUED",
+      "milestone": "25% HO CROSSED"
+    },
+    {
+      "wave": 12, "session": "S98", "phase": 4, "campaign": "Pack E Section C — Wave 1",
+      "pack": "E", "section": "C", "domain": "Performance Management",
+      "section_ho_before": "6.9%", "section_ho_after": "22.0%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 638, "cumulative_ho_pct": "26.0%",
+      "status": "NOT QUEUED"
+    },
+    {
+      "wave": 13, "session": "S99", "phase": 4, "campaign": "Pack B Section C — Wave 1",
+      "pack": "B", "section": "C", "domain": "Performance Management",
+      "section_ho_before": "8.0%", "section_ho_after": "23.0%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 653, "cumulative_ho_pct": "26.6%",
+      "status": "NOT QUEUED"
+    },
+    {
+      "wave": 14, "session": "S100", "phase": 4, "campaign": "Pack A Section D — Wave 1",
+      "pack": "A", "section": "D", "domain": "Cost Management",
+      "section_ho_before": "16.0%", "section_ho_after": "32.0%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 668, "cumulative_ho_pct": "27.2%",
+      "status": "NOT QUEUED"
+    },
+    {
+      "wave": 15, "session": "S101", "phase": 5, "campaign": "Pack D Section C — Wave 1",
+      "pack": "D", "section": "C", "domain": "Performance Management",
+      "section_ho_before": "14.0%", "section_ho_after": "29.0%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 683, "cumulative_ho_pct": "27.9%",
+      "status": "NOT QUEUED"
+    },
+    {
+      "wave": 16, "session": "S102", "phase": 5, "campaign": "Pack C Section D — Wave 1",
+      "pack": "C", "section": "D", "domain": "Cost Management",
+      "section_ho_before": "16.0%", "section_ho_after": "32.0%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 698, "cumulative_ho_pct": "28.5%",
+      "status": "NOT QUEUED"
+    },
+    {
+      "wave": 17, "session": "S103", "phase": 5, "campaign": "Pack C Section C — Wave 1",
+      "pack": "C", "section": "C", "domain": "Performance Management",
+      "section_ho_before": "7.0%", "section_ho_after": "22.0%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 713, "cumulative_ho_pct": "29.1%",
+      "status": "NOT QUEUED",
+      "note": "19 Remember items — highest remember density in single-object pool"
+    },
+    {
+      "wave": 18, "session": "S104", "phase": 5, "campaign": "Pack D Section D — Wave 1",
+      "pack": "D", "section": "D", "domain": "Cost Management",
+      "section_ho_before": "24.0%", "section_ho_after": "39.0%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 728, "cumulative_ho_pct": "29.7%",
+      "status": "NOT QUEUED"
+    },
+    {
+      "wave": 19, "session": "S105", "phase": 5, "campaign": "Pack D Section F — Wave 1",
+      "pack": "D", "section": "F", "domain": "Technology and Analytics",
+      "section_ho_before": "32.4%", "section_ho_after": "47.4%",
+      "evaluate_added": 8, "analyze_added": 7,
+      "cumulative_ho": 743, "cumulative_ho_pct": "30.3%",
+      "status": "NOT QUEUED",
+      "milestone": "30% HO CROSSED",
+      "note": "Only 12 certified low-order remaining after this wave — final F-domain campaign hits pool constraint"
+    }
+  ],
+
+  "post_wave19_note": "After Wave 19, the sequence enters second-wave territory — revisiting sections that completed Wave 1 but still have low-order inventory. The 35-wave forecast extends to Wave 35 reaching 983 HO (40.1%). Specific section assignments for Waves 20-35 depend on post-Wave-19 pool census. Candidates include: Pack E/E W2-W8 (97 remaining), Pack E/B W2-W7 (83 remaining), Pack B/B W2-W7 (80 remaining), Pack A/C W2-W7 (74 remaining), Pack B/C W2-W7 (77 remaining). The dual-block sections (249 items) remain blocked throughout this forecast. If resolved, they accelerate the 40% milestone by ~7 waves."
+
+}

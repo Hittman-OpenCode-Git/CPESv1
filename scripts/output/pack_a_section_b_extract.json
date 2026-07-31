@@ -1,0 +1,1602 @@
+[
+  {
+    "QuestionID": "P1-B-001",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.001 mission to tactical planning linkage",
+    "Stem": "Riverview is translating a five-year strategy into next-quarter departmental plans. Which response is most appropriate?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 112,
+    "Choices": {
+      "A": "Eliminate nonfinancial goals from planning",
+      "B": "Use only last year actual spending as the strategic plan",
+      "C": "Prepare departmental budgets without reference to strategy",
+      "D": "Align tactical plans and budgets with strategic objectives and measurable performance targets"
+    }
+  },
+  {
+    "QuestionID": "P1-B-002",
+    "question_state": "Certified",
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Difficult",
+    "Topic": "B.002 top-down budgeting limitation",
+    "Stem": "CFO BRIEFING NOTE — Caldera Food Processing\n\nTO: Board of Directors, Finance Committee\nFROM: Elena Vasquez, CFO\nRE: FY2027 Budget Process Overhaul Recommendation\n\nCaldera operates 14 processing facili",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 1941,
+    "Choices": {
+      "A": "Continue pure top-down budgeting because the 14 facilities are geographically dispersed, and centralizing target-setting ensures consistent cost discipline across all locations regardless of local conditions.",
+      "B": "Implement participative budgeting where facility managers submit proposed budgets that corporate finance reviews for reasonableness, approves with modifications, and links to performance evaluations — capturing local operational knowledge while maintaining affordability and oversight.",
+      "C": "Implement participative budgeting and accept all facility manager budget submissions without modification, because any corporate adjustment would undermine the trust and buy-in that participative budgeting is designed to build.",
+      "D": "Replace annual budgeting entirely with a rolling 12-month forecast system driven by corporate-level trend analysis, eliminating the facility-level budget process and the tension between top-down targets and local input."
+    }
+  },
+  {
+    "QuestionID": "P1-B-003",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.003 participative budgeting slack risk",
+    "Stem": "Titan asks department managers to propose their own budget targets. Which response is most appropriate?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 125,
+    "Choices": {
+      "A": "Use only prior-year actuals as the budget",
+      "B": "Use review and incentives to reduce slack while preserving local knowledge",
+      "C": "Ban participation because it always creates fraud",
+      "D": "Accept all submitted budgets because managers are always unbiased"
+    }
+  },
+  {
+    "QuestionID": "P1-B-004",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.004 rolling budget horizon",
+    "Stem": "Umbra wants to maintain a constant 12-month planning horizon. Which response is most appropriate?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 87,
+    "Choices": {
+      "A": "Use rolling budgets only for capital projects",
+      "B": "Add a new future month or quarter as the current period is completed",
+      "C": "Replace the budget only after a recession",
+      "D": "Freeze the budget for the entire strategic plan period"
+    }
+  },
+  {
+    "QuestionID": "P1-B-005",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.005 zero-based budgeting review",
+    "Stem": "Vantage requires managers to justify activities from a zero base. Which response is most appropriate?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 97,
+    "Choices": {
+      "A": "Budget only variable costs and ignore fixed costs",
+      "B": "Increase every line item by inflation only",
+      "C": "Evaluate each activity and resource request rather than automatically carrying forward prior spending",
+      "D": "Use zero-based budgeting only when sales are zero"
+    }
+  },
+  {
+    "QuestionID": "P1-B-006",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.006 activity-based budgeting drivers",
+    "Stem": "Willow wants budgeted resource needs tied to expected activities. Which response is most appropriate?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 85,
+    "Choices": {
+      "A": "Use only direct labor hours for every cost pool",
+      "B": "Ignore cost drivers because they are used only in financial accounting",
+      "C": "Budget costs by estimating activity demand and the resources required to perform those activities",
+      "D": "Budget by multiplying last year total cost by the sales growth rate"
+    }
+  },
+  {
+    "QuestionID": "P1-B-007",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.007 flexible budget purpose",
+    "Stem": "Yukon wants to evaluate cost control when actual volume differs from planned volume. Which response is most appropriate?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 99,
+    "Choices": {
+      "A": "Eliminate all volume effects by ignoring output",
+      "B": "Compare actual results with a flexible budget based on actual activity levels",
+      "C": "Compare actual results only with the static budget",
+      "D": "Use the master budget unchanged for all variance analysis"
+    }
+  },
+  {
+    "QuestionID": "P1-B-008",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.008 sales budget sequencing",
+    "Stem": "Zephyr is building the annual profit plan. Which response is most appropriate?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 449,
+    "Choices": {
+      "A": "Prepare the sales budget early because it drives production, purchasing, labor, overhead, and cash schedules",
+      "B": "Prepare the production budget without considering expected sales",
+      "C": "Prepare the tax return first because it determines units sold",
+      "D": "Prepare the budgeted balance sheet before estimating sales"
+    }
+  },
+  {
+    "QuestionID": "P1-B-009",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.009 cash budget minimum balance",
+    "Stem": "Apex anticipates a temporary cash shortfall during a seasonal build. Which response is most appropriate?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 95,
+    "Choices": {
+      "A": "Record planned borrowing as sales revenue",
+      "B": "Ignore the shortfall if the income statement is profitable",
+      "C": "Use only accrual income to decide cash availability",
+      "D": "Use the cash budget to plan borrowing or investing while maintaining the minimum cash balance"
+    }
+  },
+  {
+    "QuestionID": "P1-B-010",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.010 forecasting causal model",
+    "Stem": "Beacon believes sales depend on advertising spend and housing starts. Which response is most appropriate?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 82,
+    "Choices": {
+      "A": "Use a causal forecasting model such as regression to estimate relationships among variables",
+      "B": "Treat the relation as a responsibility-center report",
+      "C": "Use reciprocal cost allocation",
+      "D": "Use simple exponential smoothing without any explanatory variables"
+    }
+  },
+  {
+    "QuestionID": "P1-B-011",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.011 time-series trend",
+    "Stem": "Crescent observes a consistent upward pattern in monthly demand. Which response is most appropriate?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 103,
+    "Choices": {
+      "A": "Use a time-series technique that incorporates trend rather than a simple average that lags the pattern",
+      "B": "Treat the trend as a capital lease",
+      "C": "Use only a static budget variance",
+      "D": "Use the direct method of service allocation"
+    }
+  },
+  {
+    "QuestionID": "P1-B-012",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.012 expected value decision planning",
+    "Stem": "Delta has several demand scenarios with probabilities. Which response is most appropriate?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 103,
+    "Choices": {
+      "A": "Select only the best-case outcome because it is possible",
+      "B": "Record the expected value as guaranteed revenue",
+      "C": "Ignore probabilities and use the most recent actual outcome",
+      "D": "Compute the probability-weighted average outcome to support planning under uncertainty"
+    }
+  },
+  {
+    "QuestionID": "P1-B-013",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.013 learning curve budgeting",
+    "Stem": "Evergreen expects labor time per unit to fall as cumulative production doubles. Which response is most appropriate?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 103,
+    "Choices": {
+      "A": "Assume each unit always takes the same time regardless of experience",
+      "B": "Incorporate learning effects into labor standards and production budgets when the pattern is reliable",
+      "C": "Classify the learning effect as a financing cost",
+      "D": "Use learning curves only for finished goods inventory valuation"
+    }
+  },
+  {
+    "QuestionID": "P1-B-014",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.014 sensitivity analysis budget",
+    "Stem": "Frontier asks how profit changes if material prices rise by 8%. Which response is most appropriate?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 81,
+    "Choices": {
+      "A": "Treat the price change as an internal control deficiency",
+      "B": "Use sensitivity analysis only after the fiscal year is closed",
+      "C": "Ignore the assumption because budgets cannot be revised",
+      "D": "Use sensitivity analysis to isolate the effect of changing one assumption while holding others constant"
+    }
+  },
+  {
+    "QuestionID": "P1-B-015",
+    "question_state": "Certified",
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "Topic": "B.015 pro forma financial statements",
+    "Stem": "Granite Industries' controller has prepared the operating budgets for the upcoming fiscal year: sales budget projects $18.2 million in revenue, production budget anticipates 120,000 units, direct mate",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 1892,
+    "Choices": {
+      "A": "Cost of goods sold is $13.5 million; the primary risk is the February cash deficit, which means the budgeted income statement's profitability does not guarantee sufficient liquidity",
+      "B": "Cost of goods sold is determined by adding all operating budget costs ($16.7 million) — the budgeted income statement simply aggregates all budget line items without adjusting for inventory changes",
+      "C": "Cost of goods sold cannot be determined from operating budgets alone — the controller must wait for the audited financial statements to calculate actual COGS for the budget period",
+      "D": "Cost of goods sold is $18.2 million, equal to sales revenue — the budgeted income statement should show breakeven as a conservative planning assumption"
+    }
+  },
+  {
+    "QuestionID": "P1-B-016",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.016 project budgeting distinction",
+    "Stem": "Harbor is budgeting a new automation installation with defined milestones and completion date. Which response is most appropriate?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 97,
+    "Choices": {
+      "A": "Use project budgeting to plan resources, timing, and accountability for the one-time initiative",
+      "B": "Exclude milestones because budgets contain only dollars",
+      "C": "Treat the project as a permanent responsibility center budget only",
+      "D": "Use a cash receipts schedule as the entire project budget"
+    }
+  },
+  {
+    "QuestionID": "P1-B-017",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.017 production budget units 1",
+    "Stem": "Riverview expects sales of 12,130 units next month and wants ending finished goods inventory equal to 20% of the following month sales of 14,620 units. Beginning inventory is 2,420 units. What product",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 279,
+    "Choices": {
+      "A": "9,710 units",
+      "B": "15,054 units",
+      "C": "12,634 units",
+      "D": "14,550 units"
+    }
+  },
+  {
+    "QuestionID": "P1-B-018",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.018 direct materials purchases budget 2",
+    "Stem": "Summit plans to produce 9,160 units. Each unit needs 5 pounds of material. Desired ending material inventory is 4,820 pounds and beginning inventory is 2,520 pounds. How many pounds should be purchase",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 164,
+    "Choices": {
+      "A": "48,100 pounds",
+      "B": "50,620 pounds",
+      "C": "45,800 pounds",
+      "D": "43,280 pounds"
+    }
+  },
+  {
+    "QuestionID": "P1-B-019",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.019 cash collections schedule 3",
+    "Stem": "Titan expects current-month credit and cash sales of $186,600; 35% is collected in the month of sale. Prior-month sales were $155,400, and 60% will be collected this month. What cash collections are b",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 288,
+    "Choices": {
+      "A": "$158,550",
+      "B": "$220,710",
+      "C": "$342,000",
+      "D": "$65,309"
+    }
+  },
+  {
+    "QuestionID": "P1-B-020",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.020 flexible budget cost 4",
+    "Stem": "Umbra has fixed manufacturing support cost of $47,600 and variable support cost of $12 per unit. At actual output of 11,360 units, what is the flexible budget for support cost?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 220,
+    "Choices": {
+      "A": "$136,320",
+      "B": "$47,600",
+      "C": "$193,920",
+      "D": "$183,920"
+    }
+  },
+  {
+    "QuestionID": "P1-B-021",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.021 expected value budget scenario 5",
+    "Stem": "Vantage is preparing a contribution forecast for a new product launch. Management believes low, base, and high demand would produce contribution of $45,000, $61,000, and $81,500, respectively, with pr",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 174,
+    "Choices": {
+      "A": "$81,500",
+      "B": "$45,000",
+      "C": "$62,125",
+      "D": "$61,000"
+    }
+  },
+  {
+    "QuestionID": "P1-B-022",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.022 regression forecast cost equation 6",
+    "Stem": "Willow estimated cost = $72,400 + $13 x machine-hours. If planned machine-hours are 3,300, what cost should be forecast?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 181,
+    "Choices": {
+      "A": "$115,300",
+      "B": "$42,900",
+      "C": "$116,600",
+      "D": "$72,400"
+    }
+  },
+  {
+    "QuestionID": "P1-B-023",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.023 learning curve average time after doubling 7",
+    "Stem": "Yukon has an 85% cumulative average-time learning curve. The first batch averaged 160 labor hours. What average hours are expected after cumulative production doubles once?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 262,
+    "Choices": {
+      "A": "188.2 hours",
+      "B": "24.0 hours",
+      "C": "160.0 hours",
+      "D": "136.0 hours"
+    }
+  },
+  {
+    "QuestionID": "P1-B-024",
+    "question_state": "Certified",
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Moderate",
+    "Topic": "B.024 cash budget borrowing need 8",
+    "Stem": "Zephyr begins the month with cash of $32,800, expects receipts of $94,200, and disbursements of $101,800. It requires a $25,000 minimum balance. How much must it borrow?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 219,
+    "Choices": {
+      "A": "$0",
+      "B": "$7,600",
+      "C": "$25,200",
+      "D": "$25,000"
+    }
+  },
+  {
+    "QuestionID": "P1-B-025",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.025 budgetary slack incentive design 9",
+    "Stem": "Quartz links bonuses to easily achieved budget targets and notices managers consistently understate capacity. Which response is most appropriate?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 108,
+    "Choices": {
+      "A": "Revise incentives and review assumptions to discourage slack while preserving accountability",
+      "B": "Eliminate all variance analysis from the budget process",
+      "C": "Classify slack as a cash equivalent",
+      "D": "Reward only managers who submit the lowest sales forecasts"
+    }
+  },
+  {
+    "QuestionID": "P1-B-026",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.026 forecast error analysis 10",
+    "Stem": "Riverview compares forecasted demand with actual demand over the past 12 months. Which response is most appropriate?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 68,
+    "Choices": {
+      "A": "Stop forecasting because actual demand differs from forecasts",
+      "B": "Treat every error as a fraud indicator",
+      "C": "Use only the month with the lowest error and ignore the rest",
+      "D": "Analyze forecast errors to assess bias and improve future model selection"
+    }
+  },
+  {
+    "QuestionID": "P1-B-027",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.027 budget committee coordination 11",
+    "Stem": "Summit has conflicting production, purchasing, and sales assumptions in the annual plan. Which response is most appropriate?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 92,
+    "Choices": {
+      "A": "Prepare the cash budget before resolving sales quantities",
+      "B": "Use a budget committee or cross-functional review to coordinate assumptions across schedules",
+      "C": "Use only external financial statements to set operating targets",
+      "D": "Let each department use unrelated assumptions"
+    }
+  },
+  {
+    "QuestionID": "P1-B-028",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.028 continuous planning update trigger 12",
+    "Stem": "Titan faces a sudden supplier capacity constraint after the master budget was approved. Which response is most appropriate?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 128,
+    "Choices": {
+      "A": "Record the supplier constraint as revenue",
+      "B": "Ignore operational constraints unless year-end financial statements are issued",
+      "C": "Update forecasts and consider budget revisions when assumptions materially change",
+      "D": "Keep all original assumptions because budgets can never change"
+    }
+  },
+  {
+    "QuestionID": "P1-B-029",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.029 production budget units 13",
+    "Stem": "Evergreen is finalizing next month's master budget. The sales budget calls for 13,690 units, and management wants ending finished goods inventory equal to 20% of the following month's expected sales o",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 209,
+    "Choices": {
+      "A": "14,242 units",
+      "B": "16,902 units",
+      "C": "11,030 units",
+      "D": "16,350 units"
+    }
+  },
+  {
+    "QuestionID": "P1-B-030",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.030 direct materials purchases budget 14",
+    "Stem": "Frontier plans to produce 10,120 units. Each unit needs 5 pounds of material. Desired ending material inventory is 5,240 pounds and beginning inventory is 2,640 pounds. How many pounds should be purch",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 164,
+    "Choices": {
+      "A": "55,840 pounds",
+      "B": "53,200 pounds",
+      "C": "47,960 pounds",
+      "D": "50,600 pounds"
+    }
+  },
+  {
+    "QuestionID": "P1-B-031",
+    "question_state": "Certified",
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Difficult",
+    "Topic": "B.031 evaluate cash collections acceleration strategy",
+    "Stem": "Whitford Distributors has experienced three consecutive quarters of tightening cash flow. Monthly credit sales average $480,000, and Whitford currently collects 25% in the month of sale, 50% in the fo",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 1460,
+    "Choices": {
+      "A": "Implement the 2/10, net 30 early-payment discount program — it accelerates collections at a cost of approximately $4,800 per month in discounts, which is partially offset by reduced borrowing costs, and preserves customer relationships without the sales-volume risk of tighter credit or the margin erosion of factoring",
+      "B": "Tighten credit terms to require a 25% deposit — the 8% sales decline is a manageable risk given the immediate cash injection, and price-sensitive customers who defect are likely the least profitable segment anyway",
+      "C": "Factor all receivables through the third-party company — the 3.5% factoring fee eliminates collection lag entirely and allows Whitford to exit the line of credit, simplifying treasury operations and reducing administrative costs",
+      "D": "Maintain the current collection policy — the $12,600 annual borrowing cost is immaterial relative to monthly sales of $480,000, and both the discount program and factoring would erode gross margin more than the interest saved"
+    }
+  },
+  {
+    "QuestionID": "P1-B-032",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.032 flexible budget cost 16",
+    "Stem": "Harbor's controller is preparing a flexible budget for manufacturing support after actual output reached 12,440 units. Total fixed support cost is $52,400, and variable support cost is $9 per unit. Wh",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 178,
+    "Choices": {
+      "A": "$52,400",
+      "B": "$164,360",
+      "C": "$174,360",
+      "D": "$111,960"
+    }
+  },
+  {
+    "QuestionID": "P1-B-033",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.033 expected value budget scenario 17",
+    "Stem": "Iris is evaluating a demand-sensitive promotion and wants one contribution amount for the operating budget. Low, base, and high demand scenarios are estimated at $57,000, $75,400, and $97,100, with pr",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 156,
+    "Choices": {
+      "A": "$57,000",
+      "B": "$97,100",
+      "C": "$75,400",
+      "D": "$76,225"
+    }
+  },
+  {
+    "QuestionID": "P1-B-034",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.034 regression forecast cost equation 18",
+    "Stem": "Juniper estimated cost = $77,200 + $15 x machine-hours. If planned machine-hours are 3,900, what cost should be forecast?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 186,
+    "Choices": {
+      "A": "$77,200",
+      "B": "$137,200",
+      "C": "$58,500",
+      "D": "$135,700"
+    }
+  },
+  {
+    "QuestionID": "P1-B-035",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.035 learning curve incremental unit time",
+    "Stem": "Solstice uses an 80% cumulative average-time learning curve. The first unit took 50 direct labor hours. What is the incremental time for the 2nd unit (total time for 2 units minus time for 1 unit)?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 218,
+    "Choices": {
+      "A": "40.0 hours",
+      "B": "30.0 hours",
+      "C": "50.0 hours",
+      "D": "20.0 hours"
+    }
+  },
+  {
+    "QuestionID": "P1-B-036",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.036 cash budget borrowing need 20",
+    "Stem": "Lumen begins the month with cash of $34,000, expects receipts of $105,000, and disbursements of $112,000. It requires a $25,000 minimum balance. How much must it borrow?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 220,
+    "Choices": {
+      "A": "$0",
+      "B": "$27,000",
+      "C": "$25,000",
+      "D": "$7,000"
+    }
+  },
+  {
+    "QuestionID": "P1-B-037",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.037 flexible budget variance interpretation",
+    "Stem": "Delta's flexible budget for 8,000 units shows budgeted variable costs of $64,000. Actual output was 8,000 units with actual variable costs of $70,000. What does this variance indicate?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 227,
+    "Choices": {
+      "A": "An unfavorable spending variance of $6,000 since output matched the flex budget",
+      "B": "A favorable volume variance of $6,000",
+      "C": "An unfavorable efficiency variance caused by higher production volume",
+      "D": "No variance exists because actual output equals budgeted output"
+    }
+  },
+  {
+    "QuestionID": "P1-B-038",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.038 moving average forecast calculation",
+    "Stem": "Redcliff uses a 3-month moving average to forecast demand. The last three months' actual sales were 400, 460, and 520 units. What is the forecast for next month?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 231,
+    "Choices": {
+      "A": "460 units",
+      "B": "480 units",
+      "C": "493 units",
+      "D": "520 units"
+    }
+  },
+  {
+    "QuestionID": "P1-B-039",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.039 cash collections schedule",
+    "Stem": "Oakmont budgets credit sales of $260,000 in April and $300,000 in May. The company collects 60% of credit sales in the month of sale, 35% in the following month, and writes off the remainder. What cas",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 134,
+    "Choices": {
+      "A": "$180,000",
+      "B": "$271,000",
+      "C": "$285,000",
+      "D": "$300,000"
+    }
+  },
+  {
+    "QuestionID": "P1-B-040",
+    "question_state": "Certified",
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Difficult",
+    "Topic": "B.040 variance investigation threshold multi-factor judgment",
+    "Stem": "Ridgeline Manufacturing's Controller, Sarah Okonkwo, is reviewing the Q3 financial close. The machining department exceeded its flexible budget by $9,000 — a 6.0% unfavorable variance on its $150,000 ",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 924,
+    "Choices": {
+      "A": "Authorize the formal investigation — the 6.0% variance exceeds the 5% policy threshold, and bypassing the policy even once sets a precedent that undermines the control environment. The policy exists precisely to prevent managers from rationalizing away unfavorable variances.",
+      "B": "Authorize the formal investigation — the plant manager's root-cause explanation has not been independently verified, and accepting a self-reported cause without corroboration introduces moral hazard. Other departments will expect similar treatment if this variance escapes scrutiny.",
+      "C": "Defer the formal investigation but document the exception in writing — the root cause is specific, isolated, and already remedied (supplier reverted to contract pricing). The four-quarter trend of 1.2% demonstrates strong control. At $6,400, the investigation cost approaches 71% of the $9,000 variance, and the expected recoverable insight is low given the known cause. Escalate to full investigation only if Q4 shows a repeat variance.",
+      "D": "Waive investigation entirely — a $9,000 variance on a $150,000 department budget represents less than 0.2% of Ridgeline's total quarterly manufacturing spending of approximately $4.8 million, and the materiality threshold for the consolidated financial statements is $50,000. The variance does not warrant management attention."
+    }
+  },
+  {
+    "QuestionID": "P1-B-041",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.041 production budget units 25",
+    "Stem": "Quartz's operations manager is checking whether the production schedule supports the sales and inventory plan. Next month's sales are budgeted at 15,250 units. Desired ending finished goods inventory ",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 202,
+    "Choices": {
+      "A": "18,750 units",
+      "B": "15,850 units",
+      "C": "18,150 units",
+      "D": "12,350 units"
+    }
+  },
+  {
+    "QuestionID": "P1-B-042",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.042 direct materials purchases budget 26",
+    "Stem": "Riverview is preparing the direct materials purchases budget for a product that requires 5 pounds of material per unit. Planned production is 11,080 units. The materials manager wants 5,660 pounds in ",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 222,
+    "Choices": {
+      "A": "61,060 pounds",
+      "B": "58,300 pounds",
+      "C": "55,400 pounds",
+      "D": "52,640 pounds"
+    }
+  },
+  {
+    "QuestionID": "P1-B-043",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.043 cash collections schedule 27",
+    "Stem": "Summit is preparing a monthly cash receipts schedule. Current-month sales are $239,400, and 35% are expected to be collected this month. Prior-month sales were $198,600, and 60% of those receivables w",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 157,
+    "Choices": {
+      "A": "$438,000",
+      "B": "$83,790",
+      "C": "$202,950",
+      "D": "$282,390"
+    }
+  },
+  {
+    "QuestionID": "P1-B-044",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.044 flexible budget cost 28",
+    "Stem": "Titan wants to evaluate support-cost control at actual output rather than at static-budget volume. Fixed manufacturing support cost is $57,200, variable support cost is $11 per unit, and actual output",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 180,
+    "Choices": {
+      "A": "$57,200",
+      "B": "$205,920",
+      "C": "$215,920",
+      "D": "$148,720"
+    }
+  },
+  {
+    "QuestionID": "P1-B-045",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.045 expected value budget scenario 29",
+    "Stem": "Umbra estimates contribution under low, base, and high demand at $69,000, $89,800, and $112,700, with probabilities 25%, 50%, and 25%. What is expected contribution?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 201,
+    "Choices": {
+      "A": "$90,325",
+      "B": "$89,800",
+      "C": "$112,700",
+      "D": "$69,000"
+    }
+  },
+  {
+    "QuestionID": "P1-B-046",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.046 regression forecast cost equation 30",
+    "Stem": "Vantage estimated cost = $82,000 + $12 x machine-hours. If planned machine-hours are 4,500, what cost should be forecast?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 152,
+    "Choices": {
+      "A": "$136,000",
+      "B": "$54,000",
+      "C": "$137,200",
+      "D": "$82,000"
+    }
+  },
+  {
+    "QuestionID": "P1-B-047",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.047 rolling forecast update frequency",
+    "Stem": "Willow updates its 12-month rolling forecast every month by dropping the oldest month and adding a new one. What is the primary benefit of this approach over a static annual budget?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 215,
+    "Choices": {
+      "A": "It eliminates the need for variance analysis",
+      "B": "It keeps the planning horizon current and responsive to changing conditions",
+      "C": "It guarantees more accurate revenue forecasts",
+      "D": "It reduces the total time spent on budgeting each year"
+    }
+  },
+  {
+    "QuestionID": "P1-B-048",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.048 cash budget borrowing need 32",
+    "Stem": "Yukon begins the month with cash of $35,200, expects receipts of $115,800, and disbursements of $122,200. It requires a $25,000 minimum balance. How much must it borrow?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 220,
+    "Choices": {
+      "A": "$25,000",
+      "B": "$6,400",
+      "C": "$28,800",
+      "D": "$0"
+    }
+  },
+  {
+    "QuestionID": "P1-B-049",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.049 sales budget seasonality adjustment",
+    "Stem": "Cascade's sales are highly seasonal, with 40% of annual volume occurring in Q4. When building the annual sales budget, what should Cascade do to avoid understating working capital needs earlier in the",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 208,
+    "Choices": {
+      "A": "Ignore seasonality and divide the annual total evenly across quarters",
+      "B": "Budget each quarter based on its historical share of annual sales",
+      "C": "Budget the entire year's sales in Q4 only",
+      "D": "Use only the prior year's Q4 actuals to set the full annual budget"
+    }
+  },
+  {
+    "QuestionID": "P1-B-050",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate",
+    "Topic": "B.050 exponential smoothing weighting concept",
+    "Stem": "Ashgrove's demand forecasting model uses exponential smoothing with a high alpha (smoothing constant) value close to 1.0. What effect does this have on the forecast compared to a low alpha value?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 213,
+    "Choices": {
+      "A": "The forecast weights recent actual data more heavily and reacts faster to changes",
+      "B": "The forecast becomes identical to a simple average of all historical data",
+      "C": "The forecast ignores recent data entirely",
+      "D": "The forecast requires more historical data points to calculate"
+    }
+  },
+  {
+    "QuestionID": "P1-B-051",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.051 selling and administrative expense budget components",
+    "Stem": "Which of the following would typically be included in the selling and administrative expense budget rather than the production-related budgets?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 214,
+    "Choices": {
+      "A": "Direct materials purchases",
+      "B": "Factory overhead depreciation",
+      "C": "Sales commissions and advertising costs",
+      "D": "Direct labor for production workers"
+    }
+  },
+  {
+    "QuestionID": "P1-B-052",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.052 budget slack ethical considerations",
+    "Stem": "A department manager deliberately overstates expected costs in the budget to make it easier to show favorable variances later. Under IMA ethical standards, this behavior most directly violates which p",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 193,
+    "Choices": {
+      "A": "Confidentiality",
+      "B": "Integrity",
+      "C": "Legal compliance",
+      "D": "Credentialing"
+    }
+  },
+  {
+    "QuestionID": "P1-B-053",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.053 production budget units 37",
+    "Stem": "Delta expects sales of 16,810 units next month and wants ending finished goods inventory equal to 20% of the following month sales of 18,940 units. Beginning inventory is 3,140 units. What production ",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 187,
+    "Choices": {
+      "A": "19,950 units",
+      "B": "17,458 units",
+      "C": "20,598 units",
+      "D": "13,670 units"
+    }
+  },
+  {
+    "QuestionID": "P1-B-054",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.054 direct materials purchases budget 38",
+    "Stem": "Evergreen's purchasing department is setting next month's material order for a product requiring 5 pounds per unit. The company plans to manufacture 12,040 units, wants 6,080 pounds in ending material",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 202,
+    "Choices": {
+      "A": "57,320 pounds",
+      "B": "63,400 pounds",
+      "C": "60,200 pounds",
+      "D": "66,280 pounds"
+    }
+  },
+  {
+    "QuestionID": "P1-B-055",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.055 cash collections schedule 39",
+    "Stem": "Frontier expects current-month credit and cash sales of $265,800; 35% is collected in the month of sale. Prior-month sales were $220,200, and 60% will be collected this month. What cash collections ar",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 218,
+    "Choices": {
+      "A": "$93,030",
+      "B": "$313,230",
+      "C": "$486,000",
+      "D": "$225,150"
+    }
+  },
+  {
+    "QuestionID": "P1-B-056",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.056 flexible budget cost 40",
+    "Stem": "Granite has fixed manufacturing support cost of $62,000 and variable support cost of $8 per unit. At actual output of 14,600 units, what is the flexible budget for support cost?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 209,
+    "Choices": {
+      "A": "$188,800",
+      "B": "$116,800",
+      "C": "$178,800",
+      "D": "$62,000"
+    }
+  },
+  {
+    "QuestionID": "P1-B-057",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.057 expected value budget scenario 41",
+    "Stem": "Harbor estimates contribution under low, base, and high demand at $81,000, $104,200, and $128,300, with probabilities 25%, 50%, and 25%. What is expected contribution?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 198,
+    "Choices": {
+      "A": "$104,200",
+      "B": "$128,300",
+      "C": "$81,000",
+      "D": "$104,425"
+    }
+  },
+  {
+    "QuestionID": "P1-B-058",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.058 regression forecast cost equation 42",
+    "Stem": "Iris estimated cost = $86,800 + $14 x machine-hours. If planned machine-hours are 5,100, what cost should be forecast?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 161,
+    "Choices": {
+      "A": "$71,400",
+      "B": "$86,800",
+      "C": "$158,200",
+      "D": "$159,600"
+    }
+  },
+  {
+    "QuestionID": "P1-B-059",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.059 regression forecast calculation",
+    "Stem": "A sales forecast model estimates monthly unit sales as 12,000 + 35 x number of sales calls. If the sales team plans 420 calls next month, what unit sales should be forecast?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 173,
+    "Choices": {
+      "A": "14,700 units",
+      "B": "26,280 units",
+      "C": "26,700 units",
+      "D": "31,200 units"
+    }
+  },
+  {
+    "QuestionID": "P1-B-060",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.060 cash budget borrowing need 44",
+    "Stem": "Keystone begins the month with cash of $36,400, expects receipts of $126,600, and disbursements of $132,400. It requires a $25,000 minimum balance. How much must it borrow?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 220,
+    "Choices": {
+      "A": "$30,600",
+      "B": "$25,000",
+      "C": "$5,800",
+      "D": "$0"
+    }
+  },
+  {
+    "QuestionID": "P1-B-061",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.061 production budget with target ending inventory",
+    "Stem": "Horizon budgets sales of 20,000 units, desires ending inventory of 3,000 units, and has beginning inventory of 2,000 units. How many units should be produced?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 108,
+    "Choices": {
+      "A": "20,000 units",
+      "B": "19,000 units",
+      "C": "21,000 units",
+      "D": "25,000 units"
+    }
+  },
+  {
+    "QuestionID": "P1-B-062",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Easy",
+    "Topic": "B.062 learning curve vs experience curve distinction",
+    "Stem": "Grayson's cost analyst distinguishes between a learning curve and an experience curve when discussing declining unit costs. What is the key difference between these two concepts?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 254,
+    "Choices": {
+      "A": "They are identical terms with no meaningful difference",
+      "B": "Learning curves apply only to direct labor while experience curves apply to all costs including overhead and materials as cumulative volume grows",
+      "C": "Experience curves apply only to service industries",
+      "D": "Learning curves increase over time while experience curves decrease"
+    }
+  },
+  {
+    "QuestionID": "P1-B-063",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.063 budgeted income statement sequencing",
+    "Stem": "In the master budget preparation sequence, which schedule is typically completed immediately before the budgeted income statement?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 221,
+    "Choices": {
+      "A": "Sales budget",
+      "B": "Cost of goods sold budget",
+      "C": "Cash budget",
+      "D": "Capital expenditures budget"
+    }
+  },
+  {
+    "QuestionID": "P1-B-064",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "B.064 capacity planning and budgeted volume",
+    "Stem": "Pinehollow has practical capacity of 50,000 machine hours but budgets production at 42,000 machine hours based on expected demand. What is the primary reason budgeted (normal) capacity is often set be",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 202,
+    "Choices": {
+      "A": "To intentionally understate fixed overhead application rates",
+      "B": "To reflect realistic expected demand and avoid overstating output plans",
+      "C": "Because practical capacity is illegal to use for budgeting",
+      "D": "To eliminate the need for a flexible budget"
+    }
+  },
+  {
+    "QuestionID": "P1-B-065",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.065 production budget units 49",
+    "Stem": "Pioneer expects sales of 18,370 units next month and wants ending finished goods inventory equal to 20% of the following month sales of 20,380 units. Beginning inventory is 3,380 units. What productio",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 187,
+    "Choices": {
+      "A": "22,446 units",
+      "B": "19,066 units",
+      "C": "14,990 units",
+      "D": "21,750 units"
+    }
+  },
+  {
+    "QuestionID": "P1-B-066",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.066 direct materials purchases budget 50",
+    "Stem": "Quartz plans to produce 13,000 units. Each unit needs 5 pounds of material. Desired ending material inventory is 6,500 pounds and beginning inventory is 3,000 pounds. How many pounds should be purchas",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 164,
+    "Choices": {
+      "A": "65,000 pounds",
+      "B": "71,500 pounds",
+      "C": "68,500 pounds",
+      "D": "62,000 pounds"
+    }
+  },
+  {
+    "QuestionID": "P1-B-067",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.067 cash collections schedule 51",
+    "Stem": "Riverview expects current-month credit and cash sales of $292,200; 35% is collected in the month of sale. Prior-month sales were $241,800, and 60% will be collected this month. What cash collections a",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 212,
+    "Choices": {
+      "A": "$247,350",
+      "B": "$102,270",
+      "C": "$344,070",
+      "D": "$534,000"
+    }
+  },
+  {
+    "QuestionID": "P1-B-068",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.068 flexible budget cost 52",
+    "Stem": "Summit has fixed manufacturing support cost of $66,800 and variable support cost of $10 per unit. At actual output of 15,680 units, what is the flexible budget for support cost?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 181,
+    "Choices": {
+      "A": "$233,600",
+      "B": "$156,800",
+      "C": "$223,600",
+      "D": "$66,800"
+    }
+  },
+  {
+    "QuestionID": "P1-B-069",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.069 expected value budget scenario 53",
+    "Stem": "Titan estimates contribution under low, base, and high demand at $93,000, $118,600, and $143,900, with probabilities 25%, 50%, and 25%. What is expected contribution?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 216,
+    "Choices": {
+      "A": "$118,525",
+      "B": "$118,600",
+      "C": "$93,000",
+      "D": "$143,900"
+    }
+  },
+  {
+    "QuestionID": "P1-B-070",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.070 regression forecast cost equation 54",
+    "Stem": "Umbra estimated cost = $91,600 + $16 x machine-hours. If planned machine-hours are 5,700, what cost should be forecast?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 144,
+    "Choices": {
+      "A": "$91,600",
+      "B": "$184,400",
+      "C": "$91,200",
+      "D": "$182,800"
+    }
+  },
+  {
+    "QuestionID": "P1-B-071",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.071 zero-based budgeting rationale",
+    "Stem": "Vantage requires every department to justify its entire budget from a base of zero each year rather than starting from the prior year's figures. What is the main advantage of this zero-based budgeting",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 238,
+    "Choices": {
+      "A": "It is faster to prepare than incremental budgeting",
+      "B": "It prevents any changes to historical spending patterns",
+      "C": "It forces justification of all costs and can eliminate outdated spending",
+      "D": "It automatically increases departmental accountability without added effort"
+    }
+  },
+  {
+    "QuestionID": "P1-B-072",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.072 cash budget borrowing need 56",
+    "Stem": "Willow begins the month with cash of $37,600, expects receipts of $137,400, and disbursements of $142,600. It requires a $25,000 minimum balance. How much must it borrow?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 220,
+    "Choices": {
+      "A": "$25,000",
+      "B": "$32,400",
+      "C": "$5,200",
+      "D": "$0"
+    }
+  },
+  {
+    "QuestionID": "P1-B-073",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.073 budget manual purpose",
+    "Stem": "Fernwood is developing a formal budget manual to distribute to all department heads before the next planning cycle. What is the primary purpose of a budget manual?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 171,
+    "Choices": {
+      "A": "To replace the need for a budget committee",
+      "B": "To document procedures, timelines, and responsibilities for the budgeting process",
+      "C": "To lock in budget figures so they cannot be revised",
+      "D": "To serve as the official financial statement filed with regulators"
+    }
+  },
+  {
+    "QuestionID": "P1-B-074",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.074 production budget units",
+    "Stem": "A company expects to sell 18,000 units in July and 20,000 units in August. Finished goods inventory at July 1 is 3,000 units, and management wants ending finished goods inventory each month equal to 2",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 216,
+    "Choices": {
+      "A": "18,000 units",
+      "B": "19,000 units",
+      "C": "22,000 units",
+      "D": "17,000 units"
+    }
+  },
+  {
+    "QuestionID": "P1-B-075",
+    "question_state": "Certified",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate",
+    "Topic": "B.075 participative budgeting drawback",
+    "Stem": "Oakhaven uses participative budgeting, allowing department managers to set their own targets. Beyond budgetary slack, what is another potential drawback of this approach?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 221,
+    "Choices": {
+      "A": "It always produces more accurate forecasts than top-down budgeting",
+      "B": "The budgeting process can take significantly longer due to negotiation across multiple levels",
+      "C": "It eliminates the need for a budget committee",
+      "D": "It guarantees higher employee morale in every case"
+    }
+  },
+  {
+    "QuestionID": "P1-B-076",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.076 contingency planning for supply disruption",
+    "Stem": "Stonebridge's single supplier for a critical component unexpectedly announces a 90-day shutdown. The annual budget assumed uninterrupted supply. What is the most appropriate planning response?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 195,
+    "Choices": {
+      "A": "Continue operating exactly per the original budget until the supplier resumes",
+      "B": "Develop a contingency plan and revise near-term budget assumptions to reflect the disruption",
+      "C": "Cancel the annual budget entirely and operate without one",
+      "D": "Wait until year-end results to assess the impact"
+    }
+  },
+  {
+    "QuestionID": "P1-B-077",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.077 production budget units 61",
+    "Stem": "Crescent expects sales of 19,930 units next month and wants ending finished goods inventory equal to 20% of the following month sales of 21,820 units. Beginning inventory is 3,620 units. What producti",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 187,
+    "Choices": {
+      "A": "23,550 units",
+      "B": "24,294 units",
+      "C": "20,674 units",
+      "D": "16,310 units"
+    }
+  },
+  {
+    "QuestionID": "P1-B-078",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.078 direct materials purchases budget 62",
+    "Stem": "Delta plans to produce 13,960 units. Each unit needs 5 pounds of material. Desired ending material inventory is 6,920 pounds and beginning inventory is 3,120 pounds. How many pounds should be purchase",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 164,
+    "Choices": {
+      "A": "69,800 pounds",
+      "B": "76,720 pounds",
+      "C": "66,680 pounds",
+      "D": "73,600 pounds"
+    }
+  },
+  {
+    "QuestionID": "P1-B-079",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.079 cash collections schedule 63",
+    "Stem": "Evergreen expects current-month credit and cash sales of $318,600; 35% is collected in the month of sale. Prior-month sales were $263,400, and 60% will be collected this month. What cash collections a",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 228,
+    "Choices": {
+      "A": "$111,510",
+      "B": "$374,910",
+      "C": "$269,550",
+      "D": "$582,000"
+    }
+  },
+  {
+    "QuestionID": "P1-B-080",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.080 flexible budget cost 64",
+    "Stem": "Frontier has fixed manufacturing support cost of $71,600 and variable support cost of $12 per unit. At actual output of 16,760 units, what is the flexible budget for support cost?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 192,
+    "Choices": {
+      "A": "$71,600",
+      "B": "$201,120",
+      "C": "$282,720",
+      "D": "$272,720"
+    }
+  },
+  {
+    "QuestionID": "P1-B-081",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.081 expected value budget scenario 65",
+    "Stem": "Granite estimates contribution under low, base, and high demand at $105,000, $133,000, and $159,500, with probabilities 25%, 50%, and 25%. What is expected contribution?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 187,
+    "Choices": {
+      "A": "$132,625",
+      "B": "$159,500",
+      "C": "$105,000",
+      "D": "$133,000"
+    }
+  },
+  {
+    "QuestionID": "P1-B-082",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.082 regression forecast cost equation 66",
+    "Stem": "Harbor estimated cost = $96,400 + $13 x machine-hours. If planned machine-hours are 6,300, what cost should be forecast?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 141,
+    "Choices": {
+      "A": "$179,600",
+      "B": "$81,900",
+      "C": "$96,400",
+      "D": "$178,300"
+    }
+  },
+  {
+    "QuestionID": "P1-B-083",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.083 learning curve cost estimate application",
+    "Stem": "Iris uses a 90% cumulative average-time learning curve for a new product. The first batch of 10 units averaged 50 hours per unit at $30/hour. What is the estimated total labor cost for the first 20 un",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 255,
+    "Choices": {
+      "A": "$15,000",
+      "B": "$22,500",
+      "C": "$27,000",
+      "D": "$30,000"
+    }
+  },
+  {
+    "QuestionID": "P1-B-084",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.084 cash budget borrowing need 68",
+    "Stem": "Juniper begins the month with cash of $38,800, expects receipts of $148,200, and disbursements of $152,800. It requires a $25,000 minimum balance. How much must it borrow?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 220,
+    "Choices": {
+      "A": "$25,000",
+      "B": "$4,600",
+      "C": "$0",
+      "D": "$34,200"
+    }
+  },
+  {
+    "QuestionID": "P1-B-085",
+    "question_state": "Certified",
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Difficult",
+    "Topic": "B.085 evaluate material sourcing strategy discount vs JIT",
+    "Stem": "Hensley Manufacturing's production budget calls for 72,000 units of its primary raw material annually, consumed at a steady rate of 6,000 units per month. The current supplier, Apex Materials, charges",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 1346,
+    "Choices": {
+      "A": "Accept Apex's quarterly bulk-purchase discount — the $25,920 in annual price savings, net of $10,080 in additional inventory carrying costs ($126,000 additional average inventory x 8%), produces a net benefit of $15,840, making it the highest-contribution option",
+      "B": "Adopt the JIT arrangement with SwiftSource — eliminating raw material inventory reduces working capital requirements by $140,000 and simplifies production planning, which offsets the $90,000 annual price premium through reduced material handling, obsolescence risk, and storage costs",
+      "C": "Reject both proposals and maintain the current monthly ordering pattern with Apex — the $18 per unit price is competitive, and the risks of supply disruption from JIT dependency or storage cost increases from bulk ordering outweigh the potential savings from either alternative",
+      "D": "Negotiate a hybrid arrangement — accept Apex's discount only on the highest-volume material grades and use SwiftSource JIT for the remaining, lower-volume specialty grades, capturing partial savings from both strategies while diversifying supply risk"
+    }
+  },
+  {
+    "QuestionID": "P1-B-086",
+    "question_state": "Certified",
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Difficult",
+    "Topic": "B.086 forecast bias detection",
+    "Stem": "Overland Industries' controller reviews the six-quarter sales forecasting track record and finds that actual sales have exceeded forecasts by 8%, 12%, 9%, 14%, 11%, and 10% respectively. The VP of Sal",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 1848,
+    "Choices": {
+      "A": "Maintain the current forecasting methodology — consistent over-performance validates the sales team's effort and should not be penalized with forecast adjustments",
+      "B": "Adjust the forecasting model upward by the average historical bias of 10.7% and implement quarterly forecast accuracy reviews with accountability for both under-forecasting and over-forecasting",
+      "C": "Switch entirely to a qualitative forecasting approach based on sales team judgment — the current quantitative model is demonstrably unreliable given six consecutive periods of error",
+      "D": "Reduce the forecast to 50% of expected sales so production can consistently exceed expectations — this eliminates overtime costs and expediting fees"
+    }
+  },
+  {
+    "QuestionID": "P1-B-087",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.087 budget committee composition role",
+    "Stem": "Millbrook's budget committee includes representatives from sales, production, finance, and human resources. What is the primary reason for this cross-functional composition?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 182,
+    "Choices": {
+      "A": "To ensure only the finance department has final approval authority",
+      "B": "To coordinate assumptions and resolve conflicts across functional budgets before finalization",
+      "C": "To reduce the total number of people involved in budgeting",
+      "D": "To eliminate the need for departmental input into the budget"
+    }
+  },
+  {
+    "QuestionID": "P1-B-088",
+    "question_state": "Certified",
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Moderate",
+    "Topic": "B.088 budgeted balance sheet purpose",
+    "Stem": "Crestline Manufacturing's controller prepared the preliminary 2026 master budget. The budgeted income statement projects a 14% operating margin, and the cash budget confirms sufficient liquidity throu",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 826,
+    "Choices": {
+      "A": "Budgeted income statement — it captures both the depreciation on the new equipment and the interest expense on the associated debt",
+      "B": "Budgeted balance sheet — it projects the period-end balances of total assets, total liabilities, and equity needed to compute the debt-to-equity ratio",
+      "C": "Cash budget — it shows the loan proceeds from the equipment financing and the periodic debt service payments",
+      "D": "Sales budget — it determines the revenue assumptions that drive the entire master budget, including whether the equipment purchase is justified"
+    }
+  },
+  {
+    "QuestionID": "P1-B-089",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.089 production budget units 73",
+    "Stem": "Orion expects sales of 21,490 units next month and wants ending finished goods inventory equal to 20% of the following month sales of 23,260 units. Beginning inventory is 3,860 units. What production ",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 187,
+    "Choices": {
+      "A": "25,350 units",
+      "B": "26,142 units",
+      "C": "22,282 units",
+      "D": "17,630 units"
+    }
+  },
+  {
+    "QuestionID": "P1-B-090",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.090 direct materials purchases budget 74",
+    "Stem": "Pioneer plans to produce 14,920 units. Each unit needs 5 pounds of material. Desired ending material inventory is 7,340 pounds and beginning inventory is 3,240 pounds. How many pounds should be purcha",
+    "CorrectChoice": "C",
+    "ExplanationCorrect_length": 164,
+    "Choices": {
+      "A": "81,940 pounds",
+      "B": "71,360 pounds",
+      "C": "78,700 pounds",
+      "D": "74,600 pounds"
+    }
+  },
+  {
+    "QuestionID": "P1-B-091",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.091 cash collections schedule 75",
+    "Stem": "Quartz expects current-month credit and cash sales of $345,000; 35% is collected in the month of sale. Prior-month sales were $285,000, and 60% will be collected this month. What cash collections are ",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 194,
+    "Choices": {
+      "A": "$630,000",
+      "B": "$120,749",
+      "C": "$405,750",
+      "D": "$291,750"
+    }
+  },
+  {
+    "QuestionID": "P1-B-092",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.092 flexible budget cost 76",
+    "Stem": "Riverview has fixed manufacturing support cost of $76,400 and variable support cost of $9 per unit. At actual output of 17,840 units, what is the flexible budget for support cost?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 171,
+    "Choices": {
+      "A": "$246,960",
+      "B": "$160,560",
+      "C": "$76,400",
+      "D": "$236,960"
+    }
+  },
+  {
+    "QuestionID": "P1-B-093",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.093 expected value budget scenario 77",
+    "Stem": "Summit estimates contribution under low, base, and high demand at $117,000, $147,400, and $175,100, with probabilities 25%, 50%, and 25%. What is expected contribution?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 180,
+    "Choices": {
+      "A": "$146,725",
+      "B": "$117,000",
+      "C": "$147,400",
+      "D": "$175,100"
+    }
+  },
+  {
+    "QuestionID": "P1-B-094",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.094 regression forecast cost equation 78",
+    "Stem": "Titan estimated cost = $101,200 + $15 x machine-hours. If planned machine-hours are 6,900, what cost should be forecast?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 163,
+    "Choices": {
+      "A": "$204,700",
+      "B": "$103,500",
+      "C": "$206,200",
+      "D": "$101,200"
+    }
+  },
+  {
+    "QuestionID": "P1-B-095",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.095 top-down vs bottom-up budgeting",
+    "Stem": "Umbra's corporate leadership sets budget targets and pushes them down to department managers without their input. What is the primary risk of this top-down budgeting approach compared to participative",
+    "CorrectChoice": "A",
+    "ExplanationCorrect_length": 217,
+    "Choices": {
+      "A": "Targets may be unrealistic and reduce manager buy-in and motivation",
+      "B": "The budget will always understate expected costs",
+      "C": "Department managers gain excessive control over corporate strategy",
+      "D": "The process becomes too slow to complete on schedule"
+    }
+  },
+  {
+    "QuestionID": "P1-B-096",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.096 cash budget borrowing need 80",
+    "Stem": "Vantage begins the month with cash of $40,000, expects receipts of $159,000, and disbursements of $163,000. It requires a $25,000 minimum balance. How much must it borrow?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect_length": 220,
+    "Choices": {
+      "A": "$4,000",
+      "B": "$36,000",
+      "C": "$25,000",
+      "D": "$0"
+    }
+  },
+  {
+    "QuestionID": "P1-B-097",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.097 budget review and revision timing",
+    "Stem": "Timberline's actual results have diverged significantly from budget for three consecutive months due to a major shift in raw material prices. What is the most appropriate response?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 182,
+    "Choices": {
+      "A": "Continue using the original budget without changes for consistency",
+      "B": "Formally revise the budget to reflect the new cost environment",
+      "C": "Wait until year-end to make any adjustments",
+      "D": "Replace the budget entirely with a strategic plan"
+    }
+  },
+  {
+    "QuestionID": "P1-B-098",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "Topic": "B.098 cash budget disbursement timing",
+    "Stem": "Silverlake pays 60% of purchases in the month of purchase and 40% in the following month. February purchases are $80,000 and March purchases are $95,000. What are budgeted cash disbursements for March",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 140,
+    "Choices": {
+      "A": "$95,000",
+      "B": "$89,000",
+      "C": "$85,000",
+      "D": "$91,000"
+    }
+  },
+  {
+    "QuestionID": "P1-B-099",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.099 kaizen budgeting concept",
+    "Stem": "Cliffside builds continuous, incremental cost reduction targets directly into its budget each period rather than assuming costs stay flat. This approach is best described as:",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 190,
+    "Choices": {
+      "A": "Zero-based budgeting",
+      "B": "Kaizen budgeting",
+      "C": "Static budgeting",
+      "D": "Life-cycle budgeting"
+    }
+  },
+  {
+    "QuestionID": "P1-B-100",
+    "question_state": "Certified",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "Topic": "B.100 standard cost variance types overview",
+    "Stem": "Which pairing correctly describes the two components typically used to break down a total cost variance into price/rate and quantity/efficiency effects?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect_length": 249,
+    "Choices": {
+      "A": "Price variance and volume variance",
+      "B": "Price (rate) variance and quantity (efficiency) variance",
+      "C": "Spending variance and capacity variance only",
+      "D": "Sales variance and mix variance"
+    }
+  }
+]

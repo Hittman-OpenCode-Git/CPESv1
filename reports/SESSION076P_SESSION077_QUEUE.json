@@ -1,0 +1,196 @@
+{
+  "file": "SESSION076P_SESSION077_QUEUE.json",
+  "session": "S76P",
+  "targetSession": "S77",
+  "date": "2026-07-29",
+  "governanceLane": "Full (will be Full Lane when S77 executes rewrites)",
+  "campaign": "Pack A Section B Cognitive Upgrade — Wave 1",
+  "queueSize": 15,
+  "targetMix": "8 Evaluate + 7 Analyze",
+  "section": "Pack A Section B — Planning, Budgeting, and Forecasting",
+  "prerequisites": [
+    "S76 Pack D Section B campaign MUST be closed out before S77 begins",
+    "npm run preflight at T0 (Full Lane mandatory)",
+    "Backup pack_a_corrected.js before any write",
+    "Confirm no S76 overlap on pack_a"
+  ],
+  "batchStructure": [
+    {
+      "batch": 1,
+      "size": 5,
+      "topicCluster": "Budget Concepts & Frameworks",
+      "items": [
+        {
+          "qid": "P1-B-001",
+          "currentLevel": "Understand",
+          "targetLevel": "Analyze",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Primary objective of budgeting",
+          "rewriteDirection": "Controller memo comparing master budget vs. rolling forecast for volatile market"
+        },
+        {
+          "qid": "P1-B-003",
+          "currentLevel": "Understand",
+          "targetLevel": "Analyze",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Budget preparation sequence",
+          "rewriteDirection": "Production capacity constraint breaks budget sequence — identify cascading re-forecasts needed"
+        },
+        {
+          "qid": "P1-B-004",
+          "currentLevel": "Understand",
+          "targetLevel": "Analyze",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Static vs. flexible budget",
+          "rewriteDirection": "Q3 actuals vs. static vs. flexible — analyze why flexible is more informative for performance evaluation"
+        },
+        {
+          "qid": "P1-B-005",
+          "currentLevel": "Understand",
+          "targetLevel": "Evaluate",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Top-down vs. participative budgeting",
+          "rewriteDirection": "New division manager evaluates budget approach for unfamiliar product line — weigh motivation vs. accuracy trade-offs"
+        },
+        {
+          "qid": "P1-B-006",
+          "currentLevel": "Understand",
+          "targetLevel": "Analyze",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Master budget components",
+          "rewriteDirection": "Sales forecast 12% overstated — trace cascade effect through all master budget components"
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "size": 5,
+      "topicCluster": "Cash & Resource Budgeting",
+      "items": [
+        {
+          "qid": "P1-B-007",
+          "currentLevel": "Understand",
+          "targetLevel": "Evaluate",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Cash budget purpose",
+          "rewriteDirection": "Cash deficit scenario — CFO evaluates: draw on credit line, accelerate collections, or delay payables, given covenant restrictions"
+        },
+        {
+          "qid": "P1-B-008",
+          "currentLevel": "Understand",
+          "targetLevel": "Analyze",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Sales budget primacy",
+          "rewriteDirection": "Mid-year competitor entry cuts projected sales — trace which budgets must be re-forecast and in what order"
+        },
+        {
+          "qid": "P1-B-009",
+          "currentLevel": "Understand",
+          "targetLevel": "Analyze",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Production budget formula",
+          "rewriteDirection": "Three-month production budget with JIT transition — ending inventory policy changing mid-quarter due to supply risk"
+        },
+        {
+          "qid": "P1-B-010",
+          "currentLevel": "Understand",
+          "targetLevel": "Evaluate",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Direct materials budget",
+          "rewriteDirection": "Supplier force majeure — evaluate three sourcing alternatives using relevant cost analysis (22% premium vs. idle time vs. partial shipment)"
+        },
+        {
+          "qid": "P1-B-011",
+          "currentLevel": "Understand",
+          "targetLevel": "Evaluate",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Direct labor budget",
+          "rewriteDirection": "Production demand exceeds capacity — evaluate overtime premium vs. temp workers vs. subcontracting under union contract constraints"
+        }
+      ]
+    },
+    {
+      "batch": 3,
+      "size": 5,
+      "topicCluster": "Overhead, Collections & Budget Management",
+      "items": [
+        {
+          "qid": "P1-B-012",
+          "currentLevel": "Understand",
+          "targetLevel": "Analyze",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Manufacturing overhead budget",
+          "rewriteDirection": "Two departments with different cost drivers — analyze whether plant-wide or departmental rate is more appropriate"
+        },
+        {
+          "qid": "P1-B-013",
+          "currentLevel": "Understand",
+          "targetLevel": "Analyze",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Cash collections pattern",
+          "rewriteDirection": "New credit policy changes collection percentages — analyze impact on Q1 cash budget"
+        },
+        {
+          "qid": "P1-B-020",
+          "currentLevel": "Understand",
+          "targetLevel": "Evaluate",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Budgetary slack",
+          "rewriteDirection": "Controller discovers systematic budget padding across all divisions — evaluate response against IMA ethics standards"
+        },
+        {
+          "qid": "P1-B-026",
+          "currentLevel": "Understand",
+          "targetLevel": "Analyze",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Budgeting process steps",
+          "rewriteDirection": "Budget cycle skipped stakeholder review — analyze how omission cascaded into $320K budget error"
+        },
+        {
+          "qid": "P1-B-045",
+          "currentLevel": "Understand",
+          "targetLevel": "Evaluate",
+          "currentDifficulty": "Moderate-Easy",
+          "topic": "Kaizen budgeting",
+          "rewriteDirection": "Manufacturing plant adopting kaizen — evaluate whether 2% monthly cost reduction target is feasible given production manager objections"
+        }
+      ]
+    }
+  ],
+  "waveOneSummary": {
+    "totalItems": 15,
+    "analyzeTarget": 7,
+    "evaluateTarget": 8,
+    "understandInputCount": 15,
+    "topicClusters": 3,
+    "batches": 3,
+    "itemsPerBatch": 5,
+    "coverage": "All 15 items are Understand-level — highest ROI tier. Covers budget concepts, cash/resource budgeting, and budget management topics.",
+    "remainingAfterWave1": {
+      "understand": 2,
+      "apply": 75,
+      "analyze": 2,
+      "evaluate": 6,
+      "higherOrderPct": "TBD after rewrite — expect ~23% from 15+8 = 23/100 = 23%"
+    }
+  },
+  "executionProtocol": {
+    "backupRequired": true,
+    "backupPath": "backups/pack_a_corrected.js.bak-S77-W1-YYYYMMDDHHMMSS",
+    "maxItemsPerBatch": 5,
+    "governanceGuardRule5": "≤30 items per change-set (S77 Wave 1 = 15 items = compliant)",
+    "preflightRequired": true,
+    "preflightTiming": "T0 before any write",
+    "revisionHistoryRequired": true,
+    "contentVerificationMode": "Independent recalculation + distractor engineering review + explanation quality check",
+    "postWaveVerification": [
+      "Verify pack_a QID count = 500",
+      "Verify 0 new DL-008 (non-empty EW[CC])",
+      "Verify 0 new DL-026 (empty non-CC EW slots)",
+      "Verify all 15 items Certified status maintained or explicitly regressed",
+      "Run npm run pipeline at Tend",
+      "Write REVISION_HISTORY.md entry"
+    ]
+  },
+  "nextWavePreview": "S77 Wave 2 targets remaining 2 Understand items (P1-B-050, P1-B-075) + 13 highest-ROI Apply items from candidate queue ranks 18-25."
+}

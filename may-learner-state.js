@@ -634,12 +634,27 @@ const MayLearnerState = {
                        (stability === null || stability >= 40)) {
                 band = 'Developing';
                 signals = ['moderate_accuracy'];
-            } else if ((accuracy !== null && accuracy < 60) || direction === 'declining' ||
-                       (stability !== null && stability < 50)) {
+            // MAY-013: Narrowed Recovery triggers — standalone accuracy<60 was too aggressive.
+            // Recovery now requires EITHER:
+            //   - accuracy < 50 (truly failing), OR
+            //   - accuracy 50-60 AND declining AND stability < 50 (triple-fail confirmation)
+            } else if (accuracy !== null && accuracy < 50) {
                 band = 'Recovery needed';
-                if (accuracy !== null && accuracy < 60) signals.push('low_accuracy');
+                signals.push('critical_low_accuracy');
                 if (direction === 'declining') signals.push('declining_trend');
                 if (stability !== null && stability < 50) signals.push('unstable');
+            } else if ((accuracy !== null && accuracy >= 50 && accuracy < 60) &&
+                       direction === 'declining' &&
+                       stability !== null && stability < 50) {
+                band = 'Recovery needed';
+                signals.push('low_accuracy', 'declining_trend', 'unstable', 'triple_fail');
+            // MAY-013: Fragile Developing — accuracy 50-60%, not declining+unstable (would be Recovery above)
+            } else if (accuracy !== null && accuracy >= 50 && accuracy < 60) {
+                band = 'Developing';
+                signals.push('fragile_developing', 'needs_consolidation');
+                // If declining or unstable but not both, still Developing
+                if (direction === 'declining') signals.push('declining_watch');
+                if (stability !== null && stability < 50) signals.push('unstable_watch');
             } else {
                 signals = ['mixed_signals'];
             }
@@ -904,6 +919,13 @@ const MayLearnerState = {
                 sectionRationale = recoveryTopics.length + ' topic(s) in recovery — focus here first.';
                 sectionSignals = ['section_recovery_topics'];
                 worstTopic = recoveryTopics[0].topic;
+            // MAY-013: Single recovery topic with strong peers → Approaching, not Developing
+            } else if (recoveryTopics.length === 1 && readyTopics.length >= 2) {
+                sectionBand = 'Approaching review-ready';
+                sectionRationale = readyTopics.length + ' topics ready, ' + recoveryTopics[0].topic + ' needs recovery — address this gap first.';
+                sectionSignals = ['approaching_with_recovery_gap', 'single_recovery_topic'];
+                worstTopic = recoveryTopics[0].topic;
+                confidence = 'low';
             } else if (recoveryTopics.length === 1) {
                 sectionBand = 'Developing';
                 sectionRationale = 'One topic (' + recoveryTopics[0].topic + ') needs recovery; rest are progressing.';

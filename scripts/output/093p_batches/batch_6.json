@@ -1,0 +1,406 @@
+{
+  "batchId": "B6",
+  "itemCount": 25,
+  "items": [
+    {
+      "qid": "P1-BD-024",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "B.024 direct labor budget calculation",
+      "difficulty": "Difficult",
+      "stem": "Yewbrook Manufacturing's production budget calls for 95,000 units in the upcoming fiscal year, each requiring 1.8 direct labor hours. The plant operates a single day shift at $22.00/hour with capacity for 140,000 labor hours annually (approximately 70 full-time-equivalent workers). The remaining 31,",
+      "choices": {
+        "A": "Overtime is the lower-cost option — 31,000 hours at $33.00/hour = $1,023,000, compared to second-shift cost of 33,480 hours at $29.33/hour ($982,000) + 22 × $1,800 training ($39,600) = $1,021,600, making the two options nearly cost-equivalent, but overtime avoids the productivity loss and training complexity of a second shift",
+        "B": "Overtime at 31,000 hours is not feasible — the 70 day-shift workers can only provide 14,000 overtime hours at the 200-hour contractual cap, covering less than half the capacity gap; the second shift is the only option that meets the production requirement, at a total cost of approximately $1,021,600",
+        "C": "The optimal solution is a combination: 14,000 overtime hours ($462,000) + 17,000 second-shift hours ($498,610 using 17,850 scheduled hours at 95.2% productivity) + 10 new second-shift workers ($18,000 training) = $978,610 total, which is $43,000 less than either pure overtime or pure second-shift",
+        "D": "The direct labor budget should be $3,762,000 — 171,000 hours at $22.00/hour — because the standard labor rate should not include shift differentials or overtime premiums, which are variances to be reported and investigated separately rather than built into the budgeted cost"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-CD-061",
+      "pack": "Pack_D",
+      "section": "CD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "C.061 common size financial statement analysis",
+      "difficulty": "Difficult",
+      "stem": "Longmeadow expresses each income statement line item as a percentage of total revenue to compare performance trends over multiple years. What analytical technique is being used?",
+      "choices": {
+        "A": "Common-size (vertical) analysis",
+        "B": "Break-even analysis",
+        "C": "Regression analysis",
+        "D": "Horizontal trend analysis only"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-CD-092",
+      "pack": "Pack_D",
+      "section": "CD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "C.092 value based management EVA linkage",
+      "difficulty": "Difficult",
+      "stem": "Redcliff ties executive compensation to economic value added to encourage long-term value creation rather than short-term earnings management. What is this approach broadly called?",
+      "choices": {
+        "A": "Zero-based budgeting",
+        "B": "Standard costing",
+        "C": "Activity-based costing",
+        "D": "Value-based management"
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-CD-071",
+      "pack": "Pack_D",
+      "section": "CD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "C.071 total quality management philosophy",
+      "difficulty": "Moderate",
+      "stem": "Vantage Ridge adopts a company-wide philosophy emphasizing continuous improvement and customer satisfaction as the responsibility of every employee. What management approach is this?",
+      "choices": {
+        "A": "Activity-based costing",
+        "B": "Standard costing",
+        "C": "Total quality management (TQM)",
+        "D": "Zero-based budgeting"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-CD-067",
+      "pack": "Pack_D",
+      "section": "CD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "C.067 variance investigation cost benefit",
+      "difficulty": "Difficult",
+      "stem": "Ravenscroft's controller decides not to investigate a small unfavorable variance because the cost of investigation would exceed the expected benefit. What principle is being applied?",
+      "choices": {
+        "A": "Goal congruence",
+        "B": "Zero-based budgeting",
+        "C": "Cost-benefit analysis in variance investigation decisions",
+        "D": "The controllability principle"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-DD-036",
+      "pack": "Pack_D",
+      "section": "DD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "D.036 kaizen costing continuous improvement",
+      "difficulty": "Moderate",
+      "stem": "Kirkwood sets ongoing cost reduction targets for an existing product already in production, expecting gradual efficiency improvements over time. What costing approach is this?",
+      "choices": {
+        "A": "Standard costing, which sets a single fixed benchmark",
+        "B": "Job order costing, which tracks costs by individual job",
+        "C": "Target costing, which applies before production begins",
+        "D": "Kaizen costing"
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-DD-046",
+      "pack": "Pack_D",
+      "section": "DD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "D.046 service department reciprocal method",
+      "difficulty": "Moderate-Easy",
+      "stem": "Umberglen allocates service department costs using simultaneous equations that fully recognize services provided between service departments in both directions. What method is this?",
+      "choices": {
+        "A": "The step-down method",
+        "B": "The reciprocal method",
+        "C": "The direct method",
+        "D": "The dual-rate method"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-DD-003",
+      "pack": "Pack_D",
+      "section": "DD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "D.003 normal costing overhead application",
+      "difficulty": "Moderate",
+      "stem": "Castlebrook applies manufacturing overhead using a predetermined rate based on budgeted overhead and budgeted activity, then compares to actual overhead at year end. What is this costing approach called?",
+      "choices": {
+        "A": "Standard costing applied only to overhead",
+        "B": "Actual costing",
+        "C": "Normal costing",
+        "D": "Variable costing"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-ED-025",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.025 control activities authorization",
+      "difficulty": "Moderate-Easy",
+      "stem": "Zionsgate requires that all purchase orders above a certain dollar amount be approved by a manager before the order is placed. What type of control activity is this?",
+      "choices": {
+        "A": "An authorization control",
+        "B": "A monitoring activity performed after the fact",
+        "C": "A segregation of duties control only",
+        "D": "A risk assessment activity"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-ED-046",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.046 code of conduct ethics program",
+      "difficulty": "Moderate-Easy",
+      "stem": "Umberglen requires all employees to complete annual ethics training and sign an acknowledgment of the company's code of conduct. What internal control component does this primarily support?",
+      "choices": {
+        "A": "Information and communication, limited to external reporting only",
+        "B": "The control environment, by reinforcing the organization's commitment to ethical values",
+        "C": "Risk assessment, since it identifies specific financial risks",
+        "D": "Monitoring activities, since it evaluates control effectiveness"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-ED-028",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.028 monitoring ongoing evaluations",
+      "difficulty": "Moderate-Easy",
+      "stem": "Crownridge's management periodically reviews exception reports and reconciliations as part of regular operations to assess whether controls are functioning as intended. What COSO component does this represent?",
+      "choices": {
+        "A": "Risk assessment",
+        "B": "Information and communication",
+        "C": "Control environment",
+        "D": "Monitoring activities"
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-ED-013",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.013 COSO Principle 12 — control activities — evaluating IT-dependent manual control reliability",
+      "difficulty": "Difficult",
+      "stem": "Bridgewater Credit Union's loan origination system automatically generates a daily exception report listing all loans approved above $500,000. The credit administration manager is responsible for manually reviewing this report each day and investigating any loans that appear to have bypassed the cre",
+      "choices": {
+        "A": "The control activity is well-designed because the manager performed her assigned review duties diligently and the system correctly generated exception reports according to its programmed parameters.",
+        "B": "The control activity should be improved by lowering the exception report threshold from $500,000 to $250,000, making circumvention substantially more logistically difficult.",
+        "C": "The control activity is poorly designed because it relies exclusively on a single transaction-level attribute — individual loan amount — that can be systematically circumvented through transaction splitting, and it lacks complementary detection mechanisms such as aggregate exposure monitoring by borrower or related-entity analysis.",
+        "D": "The control deficiency is attributable to the loan officer's fraudulent circumvention and does not reflect a weakness in the control activity's design, since no preventive or detective control can eliminate the risk of deliberate employee misconduct."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-ED-002",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.002 three lines of defense model",
+      "difficulty": "Easy",
+      "stem": "Bramblewood structures its risk and control functions using operational management, risk/compliance oversight, and internal audit as distinct layers. What model is this?",
+      "choices": {
+        "A": "The COSO ERM cube alone",
+        "B": "The three lines of defense (or three lines) model",
+        "C": "The fraud triangle",
+        "D": "The balanced scorecard"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-ED-018",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.018 COSO Principle 2 — board independence — assessing audit committee financial expert qualification",
+      "difficulty": "Difficult",
+      "stem": "Flagship Properties, a publicly traded REIT, appoints Dr. Harold Vance as chair of its audit committee. Dr. Vance holds a PhD in Real Estate Finance and an inactive CPA license that expired 18 years ago and was never renewed. He has spent his entire 32-year career in academia and real estate develop",
+      "choices": {
+        "A": "Dr. Vance qualifies as a financial expert because his PhD in Real Estate Finance and his former status as a licensed CPA demonstrate the necessary level of financial sophistication and deep understanding of the REIT's core business domain.",
+        "B": "Dr. Vance qualifies as a financial expert because SEC rules recognize multiple pathways to achieving financial expert status, and his doctoral-level academic training in real estate finance constitutes an acceptable alternative pathway to practical professional experience.",
+        "C": "Dr. Vance does not qualify as a financial expert because SEC rules specifically require an active, current CPA license, and a license that has been expired for 18 years does not satisfy the regulatory qualification criteria.",
+        "D": "Dr. Vance does not qualify as a financial expert because, regardless of his academic credentials, he lacks the practical experience in preparing, auditing, analyzing, or evaluating financial statements of comparable complexity that SEC rules require as a core element of financial expert qualification."
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-ED-048",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.048 COSO Principle 3 delegation of authority formal documentation management override",
+      "difficulty": "Difficult",
+      "stem": "BrightRow Retail Group operates 87 home improvement stores across the Midwest, generating $1.4 billion in annual revenue. The company's organizational philosophy emphasizes 'empowered store management,' granting each store manager broad discretion over pricing decisions within a ±15% range of list p",
+      "choices": {
+        "A": "BrightRow failed to establish formal delegation of authority as required by COSO Principle 3, because without documented boundaries specifying the scope, limits, and approval requirements for store manager purchasing authority, the organization could not hold Okonkwo accountable for exceeding his intended authority—the 'general store management authority' defense succeeds precisely because no written standard exists against which to measure the appropriateness of his actions.",
+        "B": "The primary failure is in monitoring activities under COSO Principle 16, as BrightRow's internal audit function should have detected the related-party purchasing pattern earlier than eight months, and the $340,000 in above-market purchases represents a material control deficiency that ongoing monitoring evaluations should have identified within the first quarter.",
+        "C": "The failure is primarily a segregation-of-duties issue under COSO Principle 10, because Okonkwo simultaneously held the authority to select vendors, place purchase orders, and receive inventory without independent verification that prices were competitive—a concentration of incompatible functions that enabled the related-party transactions.",
+        "D": "BrightRow's control environment failure is rooted in COSO Principle 4, as the company did not demonstrate a commitment to attracting, developing, and retaining competent individuals—Okonkwo should have been trained to recognize that purchasing from a relative at above-market prices violated his fiduciary duty to the company regardless of whether formal authority limits were documented."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-ED-010",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.010 access control least privilege",
+      "difficulty": "Easy",
+      "stem": "Juniperfield grants employees system access limited only to what is necessary to perform their specific job duties. What security principle is being applied?",
+      "choices": {
+        "A": "The principle of maximum access for efficiency",
+        "B": "The principle of least privilege",
+        "C": "Risk transfer",
+        "D": "Management override"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-ED-067",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.067 COSO Principle 6 — supply chain risk identification in JIT environment",
+      "difficulty": "Difficult",
+      "stem": "Velocity Manufacturing operates a just-in-time assembly system with 80% of raw materials arriving through a single container port. Velocity's risk identification process consists solely of an annual financial health review of each tier-1 supplier conducted by procurement. When a dockworker strike sh",
+      "choices": {
+        "A": "Velocity's risk identification was adequate because annual financial health reviews of tier-1 suppliers satisfy the due-care standard under COSO's risk identification principle.",
+        "B": "Velocity's risk identification was incomplete because it failed to capture supply chain concentration risk (single port dependency), geopolitical risk (labor disruption), and tier-2 interdependency risk — all reasonably foreseeable threats that COSO Principle 6 requires management to identify before they materialize.",
+        "C": "Velocity's risk identification process was adequate because bankruptcies and port strikes are idiosyncratic, low-probability events that no reasonably diligent risk assessment process would identify in advance.",
+        "D": "Velocity's failure was primarily operational rather than a COSO governance deficiency — the shutdown was caused by inventory management failures, not by gaps in risk identification."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-ED-068",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.068 COSO Principle 16 — monitoring ongoing evaluations KPI definition manipulation",
+      "difficulty": "Difficult",
+      "stem": "Orion Auto Parts, a $920 million manufacturer of steering and suspension components with four plants in the Midwest, has reported a first-pass quality yield (FPQY) of 97% for three consecutive years. This KPI is one of five metrics management uses to certify the effectiveness of production quality c",
+      "choices": {
+        "A": "The KPI-based monitoring is adequate because same-shift rework exclusion is a widely accepted industry convention in automotive manufacturing, and COSO Principle 16 explicitly permits organizations to adapt monitoring metrics to reflect industry practices and operational realities.",
+        "B": "The monitoring failure was in the internal audit function, which should have detected the data collection discrepancy earlier than three years. COSO Principle 16's ongoing evaluation requirement places primary responsibility on internal audit to continuously validate the accuracy of management's reported KPIs.",
+        "C": "The Production VP is correct that the KPI's purpose is to measure final quality delivered to customers, and since all reworked units eventually passed inspection, the 97% figure accurately reflects the quality of products shipped. The auditors' recalculation answers a different question than the one the KPI was designed to measure.",
+        "D": "The KPI-based monitoring is deficient under COSO Principle 16 because ongoing evaluations are only as reliable as the data definitions that produce them. When the operational definition of a KPI diverges from its stated definition — systematically excluding a material category of rework from a metric whose purpose is to measure rework frequency — management is monitoring a fabricated signal rather than actual control performance, and certifying control effectiveness based on that fabricated signal undermines the monitoring component entirely."
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-ED-050",
+      "pack": "Pack_D",
+      "section": "ED",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E.050 code of conduct ethics program",
+      "difficulty": "Moderate",
+      "stem": "Ambervale requires all employees to complete annual ethics training and sign an acknowledgment of the company's code of conduct. What internal control component does this primarily support?",
+      "choices": {
+        "A": "Risk assessment, since it identifies specific financial risks",
+        "B": "The control environment, by reinforcing the organization's commitment to ethical values",
+        "C": "Information and communication, limited to external reporting only",
+        "D": "Monitoring activities, since it evaluates control effectiveness"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-FD-007",
+      "pack": "Pack_D",
+      "section": "FD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "F.007 business intelligence self service reporting",
+      "difficulty": "Difficult",
+      "stem": "Granville enables business users to build their own reports and analyses from a governed data source without relying solely on IT. What is this capability called?",
+      "choices": {
+        "A": "Robotic process automation",
+        "B": "Data lineage tracing",
+        "C": "Self-service business intelligence",
+        "D": "Blockchain validation"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-FD-035",
+      "pack": "Pack_D",
+      "section": "FD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "F.035 data breach incident response plan",
+      "difficulty": "Difficult",
+      "stem": "Jettison maintains a documented plan outlining steps to take if a cybersecurity breach is detected, including containment, investigation, and notification. What is the primary purpose of this plan?",
+      "choices": {
+        "A": "To replace the need for preventive security controls",
+        "B": "To eliminate the possibility of any future breach",
+        "C": "To enable a timely, coordinated response that limits damage and meets any legal notification obligations",
+        "D": "To satisfy only internal audit documentation requirements"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-FD-005",
+      "pack": "Pack_D",
+      "section": "FD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "F.005 system integration — API vs ESB architecture evaluation",
+      "difficulty": "Difficult",
+      "stem": "Great Lakes Industrial Supply distributes industrial fasteners across the Midwest. The company operates 8 legacy systems — ERP, warehouse management, CRM, procurement, and four supplier portals — connected through custom point-to-point interfaces requiring 6 to 8 weeks of development per new connect",
+      "choices": {
+        "A": "Deploy the REST API gateway — it accommodates modern API-first connectivity, reduces infrastructure footprint, and can manage authentication and rate limiting for all acquired systems' APIs.",
+        "B": "Implement the ESB — it provides protocol mediation, message transformation, and loose coupling that allows each acquired company's systems to connect to the bus once without requiring point-to-point integration to every existing system.",
+        "C": "Maintain the current point-to-point architecture — it is the simplest to operate, requires no additional middleware investment, and the 6 to 8 week timeline per connection is manageable across three acquisitions.",
+        "D": "Deploy both the ESB and the API gateway simultaneously — this provides the broadest coverage, with the ESB handling legacy protocols and the API gateway exposing services to any modern applications."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-FD-022",
+      "pack": "Pack_D",
+      "section": "FD",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "F.022 predictive model overfitting risk",
+      "difficulty": "Difficult",
+      "stem": "Valemont's forecasting model performs extremely well on historical training data but poorly on new, unseen data. What problem does this illustrate?",
+      "choices": {
+        "A": "A data governance failure unrelated to model design",
+        "B": "Overfitting, where the model has learned noise specific to the training data rather than generalizable patterns",
+        "C": "Underfitting, where the model is too simple to capture any pattern",
+        "D": "A data visualization design flaw"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1E-B-044",
+      "pack": "Pack_E",
+      "section": "B",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E-B.044 Moving average calculation",
+      "difficulty": "Difficult",
+      "stem": "NovaTek Components' demand planner Raj Mehta must submit the July sales forecast for the flagship connector line before the monthly production scheduling meeting. Actual sales for the last five months show a clear growth pattern: February $142,000, March $155,000, April $168,000, May $182,000, and J",
+      "choices": {
+        "A": "Recommend $159,500 — computed as a two-month moving average of February and March — because using fewer periods makes the forecast more responsive to the upward trend, even though it relies on the two oldest data points.",
+        "B": "Recommend $182,333 — computed as a three-month moving average of April, May, and June — because including more observations reduces distortion from any single month's fluctuation and provides a more stable production target.",
+        "C": "Recommend $189,500 — computed as a two-month moving average of May and June ($182,000 + $197,000) / 2 — because the shorter-period average using the most recent data responds more quickly to NovaTek's persistent upward sales trend.",
+        "D": "Recommend $174,000 — computed as a three-month moving average of March, April, and May — because this balances recency against stability by using the three middle months of the five-month series."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1E-C-011",
+      "pack": "Pack_E",
+      "section": "C",
+      "labeledCognitiveLevel": "Analyze",
+      "topic": "E-C.011 Material price variance calculation",
+      "difficulty": "Difficult",
+      "stem": "Northrup Kitchenware's purchasing director Elena Vasquez sourced a new stainless steel supplier offering Grade 304 coil at $4.20 per pound, well below Northrup's standard cost of $4.80 per pound. During March, the stamping department produced 15,000 cookware sets, using 52,500 pounds of the new supp",
+      "choices": {
+        "A": "Net $9,900 favorable — the $31,500 price savings outweigh the $21,600 unfavorable quantity variance from the higher rejection rate. Vasquez's supplier change was financially beneficial despite the production complication because the $0.60 per pound discount on all 52,500 pounds more than compensates for the extra 4,500 pounds consumed.",
+        "B": "Net $31,500 favorable — only the price variance should be considered when evaluating a purchasing decision. The $21,600 unfavorable quantity variance reflects a production issue within David Chen's stamping department and is not attributable to the supplier selection. The price variance alone confirms the purchasing decision was sound.",
+        "C": "Net $7,200 favorable — the price variance should be computed on the standard quantity allowed of 48,000 pounds rather than the actual 52,500 pounds purchased, yielding 48,000 x ($4.20 - $4.80) = $28,800 F. Netting this against the $21,600 U quantity variance produces a smaller benefit that may not justify the operational disruption.",
+        "D": "Net $9,900 favorable is technically correct but amounts to only 4.5% of the $220,500 total material cost for March. At this magnitude, the savings do not justify the operational disruption of changing suppliers, retooling the stamping line, and managing higher rejection rates. The CFO should recommend reverting to the original supplier."
+      },
+      "correctChoice": "A"
+    }
+  ]
+}

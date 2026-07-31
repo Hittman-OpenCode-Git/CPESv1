@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "session": "P2-006",
+    "subagent": "remediation-board",
+    "date": "2026-07-29T21:09:00Z",
+    "description": "Prerequisite repairs for P2-A-017 and P2-A-019 before Wave 2 authoring"
+  },
+  "repairs": [
+    {
+      "qid": "P2-A-017",
+      "field": "ExplanationCorrect",
+      "issue": "Drafting notes embedded: opening sentence 'Let me re-derive with internally consistent numbers.' exposed internal authoring process",
+      "action": "Removed drafting prefix. ExplanationCorrect now opens with substantive analysis: 'The analysis starts by reconstructing the net pre-tax effect...'",
+      "status": "REPAIRED",
+      "verification": "GovernanceGuardP2.validatePack() → PASS, 0 violations"
+    },
+    {
+      "qid": "P2-A-019",
+      "field": "Choice B",
+      "issue": "Authoring scratch work embedded: multiple calculation revisions, self-correction ('wait... No... Let me recalculate'), scenario exploration mid-text",
+      "action": "Replaced with clean, internally consistent text presenting Proposal A analysis (ROE 7.88%, coverage 3.80x) and Proposal B analysis (ROE 8.67%, coverage 2.26x) with a clear recommendation for Proposal A on a risk-adjusted basis",
+      "status": "REPAIRED",
+      "verification": "GovernanceGuardP2.validatePack() → PASS, 0 violations"
+    }
+  ],
+  "unrepaired_issues_found": [
+    {
+      "qid": "P2-A-017",
+      "field": "Choice B",
+      "issue": "Also contains authoring scratch work ('actually wait — no. Let me re-derive...', 'OK, I'll start fresh with consistent numbers below') — not repaired per instruction scope limiting P2-A-017 to ExplanationCorrect only",
+      "severity": "HIGH — Choice B text is unreliable for learner delivery",
+      "recommendation": "Repair in next session: replace with clean text showing normalized net profit margin = 6.73% (below 7.0% hurdle)"
+    },
+    {
+      "qid": "P2-A-017",
+      "field": "VerificationChecks",
+      "issue": "Contains drafting commentary ('ACTUALLY — wait. I need to make the numbers...', 'Ugh, I made an error in my drafting')",
+      "severity": "LOW — internal metadata, not learner-facing",
+      "recommendation": "Clean during certification pass"
+    }
+  ],
+  "governance_validation": {
+    "guard": "GovernanceGuardP2",
+    "pack": "pack_p2_a.js",
+    "items": 30,
+    "pass": true,
+    "violations": 0,
+    "dl_008": 0,
+    "dl_026": 0,
+    "dl_021": 0,
+    "dl_037": 0,
+    "part2onlyflag": "30/30 present and true"
+  },
+  "backup": "backups/pack_p2_a.js.bak-20260729170901 (230,963 bytes)"
+}

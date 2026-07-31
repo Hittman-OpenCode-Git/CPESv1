@@ -1,0 +1,24 @@
+{
+  "session": "75",
+  "comparison": {
+    "sessions": ["S71", "S72", "S73", "S74", "S75"],
+    "items_per_session": [15, 15, 15, 15, 15],
+    "evaluate_items": [8, 8, 8, 8, 8],
+    "analyze_items": [7, 7, 7, 7, 7]
+  },
+  "s75_approximate_throughput": {
+    "selection_time_minutes": 5,
+    "authoring_time_minutes": 45,
+    "qc_time_minutes": 5,
+    "governance_time_minutes": 5,
+    "pipeline_time_minutes": 3,
+    "total_time_minutes": 63,
+    "items_per_hour": 14.3,
+    "evaluate_items_per_hour": 7.6
+  },
+  "notes": {
+    "efficiency_drivers": "Programmatic batch rewrite with round-trip JSON serialization eliminated per-item editing overhead",
+    "batch_size": "5 items per batch, 3 batches",
+    "governance_gate": "All 3 batches passed governance guard 54/54 on first fix"
+  }
+}

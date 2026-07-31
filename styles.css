@@ -237,7 +237,7 @@ a { color: var(--accent); }
 .hero {
   background: linear-gradient(135deg, #0f1f3d 0%, #1a3a6b 100%);
   color: #fff;
-  padding: 32px 36px;
+  padding: 20px 36px;
   border-bottom: 4px solid var(--primary);
 }
 [data-theme="dark"] .hero {
@@ -316,7 +316,7 @@ a { color: var(--accent); }
   transition: background var(--transition), border var(--transition);
 }
 .setup-panel {
-  padding: 18px;
+  padding: 16px;
   height: fit-content;
   position: sticky;
   top: 68px;
@@ -399,13 +399,13 @@ a { color: var(--accent); }
 /* ===== Form Elements ===== */
 .field {
   display: grid;
-  gap: 5px;
-  margin-bottom: 14px;
+  gap: 4px;
+  margin-bottom: 10px;
   font-weight: 600;
 }
 .field span {
   color: var(--text-secondary);
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: .04em;
 }
@@ -475,8 +475,8 @@ select:focus, .case-input:focus {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 14px;
-  margin-bottom: 14px;
+  padding: 8px 14px;
+  margin-bottom: 10px;
   background: var(--primary-light);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -572,30 +572,52 @@ fieldset {
   border: 1px solid var(--border-light);
   border-radius: var(--radius);
   display: grid;
-  gap: 8px;
-  margin: 0 0 14px;
-  padding: 12px 14px;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 8px;
+  margin: 0 0 10px;
+  padding: 8px 12px;
+}
+fieldset > label {
+  font-size: 12px;
+  padding: 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+fieldset > legend {
+  grid-column: 1 / -1;
+}
+/* Difficulty slider fieldset stays single-column */
+#difficultyField {
+  grid-template-columns: 1fr;
+}
+#difficultyField > legend {
+  grid-column: 1;
 }
 legend {
   font-weight: 700;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-secondary);
+}
+@media (max-width: 400px) {
+  fieldset { grid-template-columns: 1fr; }
+  fieldset > legend { grid-column: 1; }
 }
 .inline {
   display: flex;
   gap: 8px;
   color: var(--text-secondary);
-  font-size: 14px;
-  margin-bottom: 14px;
+  font-size: 13px;
+  margin-bottom: 8px;
 }
 .timebox {
   border: 1px solid var(--border);
   background: var(--surface-alt);
   border-radius: var(--radius);
-  padding: 12px;
-  margin-bottom: 14px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
   display: grid;
-  gap: 4px;
+  gap: 2px;
 }
 
 /* ===== Buttons ===== */
@@ -934,6 +956,11 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .timer.danger {
   color: var(--danger);
   animation: pulse .5s infinite;
+}
+.timer.expired {
+  color: var(--danger);
+  animation: pulse .3s infinite;
+  font-size: 26px;
 }
 @keyframes pulse {
   0%, 100% { opacity: 1; }
@@ -1434,6 +1461,16 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 }
 .timer-warning.show { transform: translateX(-50%) translateY(0); }
 
+/* Paused timer visual indicator */
+.timerblock.paused .timer {
+  animation: pulse-pause 2s infinite;
+  color: var(--text-muted);
+}
+@keyframes pulse-pause {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .6; }
+}
+
 /* ===== Pause Overlay ===== */
 .pause-overlay {
   position: absolute;
@@ -1932,7 +1969,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 
 /* ===== Difficulty Slider ===== */
 .slider-container {
-  padding: 8px 0 4px;
+  padding: 4px 0 2px;
 }
 .slider-container input[type="range"] {
   width: 100%;
@@ -1981,9 +2018,9 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   background: var(--info-bg);
   border: 1px solid var(--info);
   border-radius: var(--radius);
-  padding: 10px 14px;
-  margin-bottom: 14px;
-  font-size: 13px;
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  font-size: 12px;
   color: var(--text);
   line-height: 1.5;
 }
@@ -3922,3 +3959,144 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 [data-theme="dark"] .review-may-bridge { border-color: #2d3548; }
 [data-theme="dark"] .may-bridge-btn.may-bridge-hint { border-color: #374151; color: #9ca3af; }
 [data-theme="dark"] .may-bridge-btn.may-bridge-hint:hover { background: #1e2433; }
+
+/* ===== S107 — MAY-015: Compact session setup ===== */
+
+/* Collapsible catalog status in hero card */
+.catalog-toggle {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--header-accent);
+  cursor: pointer;
+  user-select: none;
+  margin-left: 6px;
+  font-weight: 400;
+}
+.catalog-toggle:hover { text-decoration: underline; }
+.catalog-detail {
+  display: none;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255,255,255,.12);
+  font-size: 11px;
+  line-height: 1.55;
+}
+.catalog-detail.open { display: block; }
+
+/* Sticky submit button at sidebar bottom */
+.setup-submit-sticky {
+  position: sticky;
+  bottom: 0;
+  background: var(--surface);
+  padding: 12px 0 0;
+  margin-top: 8px;
+  border-top: 1px solid var(--border-light);
+  z-index: 5;
+}
+.setup-submit-sticky button {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 15px;
+}
+[data-theme="dark"] .setup-submit-sticky {
+  background: var(--surface);
+}
+
+/* Compact checkbox grid inside fieldsets */
+.checkbox-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 6px;
+}
+.checkbox-grid-2 label {
+  font-size: 12px;
+  padding: 2px 0;
+  white-space: nowrap;
+}
+@media (max-width: 400px) {
+  .checkbox-grid-2 { grid-template-columns: 1fr; }
+}
+
+/* Compact timebox */
+.timebox-compact {
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.timebox-compact small { font-size: 11px; }
+
+/* Improved empty state with visual structure */
+.empty-state-visual {
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  gap: 14px;
+}
+.empty-state-visual h2 {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin: 0;
+}
+.empty-state-visual p {
+  max-width: 440px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+.empty-state-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 640px;
+  width: 100%;
+  margin-top: 8px;
+}
+@media (max-width: 600px) {
+  .empty-state-cards { grid-template-columns: 1fr; }
+}
+.empty-state-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: 18px 16px;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-align: center;
+}
+.empty-state-card:hover {
+  border-color: var(--accent);
+  background: var(--primary-light);
+}
+.empty-state-card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+.empty-state-card h3 {
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.empty-state-card p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Compact inline label for sidebar */
+.inline-compact {
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+/* Sidebar heading compact */
+.setup-panel h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+}

@@ -429,11 +429,11 @@ const ENHANCED_CASE_BASE2 = [
                     "Weighted Average"
                 ],
                 "RightItems": [
-                    "Matches recent costs to revenue",
-                    "Ending inventory reflects current costs",
-                    "Smooths out price fluctuations",
-                    "Always yields highest income"
-                ],
+    "Ending inventory reflects current costs",
+    "Smooths out price fluctuations",
+    "Matches recent costs to revenue",
+    "Always yields highest income"
+],
                 "ItemID": "CBQ2-A2-Q4",
                 "CognitiveLevel": "Analyze",
                 "CalculationComplexity": "None",
@@ -1093,11 +1093,11 @@ const ENHANCED_CASE_BASE2 = [
                     "Actual January sales exceed budget by 15%"
                 ],
                 "RightItems": [
-                    "Negotiate extended payment terms with suppliers",
-                    "Increase reliance on the line of credit in January",
-                    "Defer purchase to February, increasing January cash available",
-                    "Increase both collections and COGS projections in the forecast"
-                ],
+    "Increase reliance on the line of credit in January",
+    "Increase both collections and COGS projections in the forecast",
+    "Negotiate extended payment terms with suppliers",
+    "Defer purchase to February, increasing January cash available"
+],
                 "Correct": {
                     "Cash deficit exceeds $100,000 in January": "Negotiate extended payment terms with suppliers",
                     "December credit collections arrive slower than budgeted": "Increase reliance on the line of credit in January",
@@ -1438,12 +1438,12 @@ const ENHANCED_CASE_BASE2 = [
                     "Moving average"
                 ],
                 "RightItems": [
-                    "Projects future values based on historical growth rates",
-                    "Applies periodic multipliers to account for recurring patterns",
-                    "Relies on expert judgment when historical data is limited",
-                    "Smooths random fluctuations by averaging consecutive periods",
-                    "Splits costs into fixed and variable components using regression"
-                ],
+    "Splits costs into fixed and variable components using regression",
+    "Smooths random fluctuations by averaging consecutive periods",
+    "Projects future values based on historical growth rates",
+    "Applies periodic multipliers to account for recurring patterns",
+    "Relies on expert judgment when historical data is limited"
+],
                 "Correct": {
                     "Trend analysis": "Projects future values based on historical growth rates",
                     "Seasonal adjustment": "Applies periodic multipliers to account for recurring patterns",
@@ -1677,12 +1677,12 @@ const ENHANCED_CASE_BASE2 = [
                     "Sales volume 4.0% unfavorable"
                 ],
                 "RightItems": [
-                    "Possible material waste or higher input prices requiring purchasing and production review",
-                    "Small labor inefficiency within normal tolerance; monitor but no immediate action",
-                    "Lower variable overhead spending or usage than expected at actual production levels",
-                    "Fewer units sold than budgeted; investigate demand or market share changes",
-                    "Fixed overhead spending exceeded the budget; review fixed cost commitments"
-                ],
+    "Fewer units sold than budgeted; investigate demand or market share changes",
+    "Lower variable overhead spending or usage than expected at actual production levels",
+    "Possible material waste or higher input prices requiring purchasing and production review",
+    "Fixed overhead spending exceeded the budget; review fixed cost commitments",
+    "Small labor inefficiency within normal tolerance; monitor but no immediate action"
+],
                 "Correct": {
                     "Direct materials variance 15.2% unfavorable": "Possible material waste or higher input prices requiring purchasing and production review",
                     "Direct labor variance 2.4% unfavorable": "Small labor inefficiency within normal tolerance; monitor but no immediate action",
@@ -1726,12 +1726,12 @@ const ENHANCED_CASE_BASE2 = [
                     "Sales volume variance in dollars"
                 ],
                 "RightItems": [
-                    "Actual units sold x Budgeted selling price per unit",
-                    "Actual units produced x Standard material cost per unit",
-                    "Actual units produced x Standard variable overhead rate per unit",
-                    "(Actual units sold - Budgeted units sold) x Budgeted contribution margin per unit",
-                    "Actual units sold x Actual selling price per unit"
-                ],
+    "Actual units sold x Actual selling price per unit",
+    "Actual units sold x Budgeted selling price per unit",
+    "Actual units produced x Standard material cost per unit",
+    "Actual units produced x Standard variable overhead rate per unit",
+    "(Actual units sold - Budgeted units sold) x Budgeted contribution margin per unit"
+],
                 "Correct": {
                     "Flexible budget revenue": "Actual units sold x Budgeted selling price per unit",
                     "Flexible budget direct materials cost": "Actual units produced x Standard material cost per unit",
@@ -1774,12 +1774,12 @@ const ENHANCED_CASE_BASE2 = [
                     "Review fixed overhead commitments"
                 ],
                 "RightItems": [
-                    "Favorable sales volume variance with backlog",
-                    "Unfavorable direct materials price variance above threshold",
-                    "Unfavorable sales volume variance due to lost market share",
-                    "Unfavorable fixed overhead spending variance",
-                    "Favorable labor efficiency variance"
-                ],
+    "Unfavorable direct materials price variance above threshold",
+    "Unfavorable sales volume variance due to lost market share",
+    "Favorable labor efficiency variance",
+    "Favorable sales volume variance with backlog",
+    "Unfavorable fixed overhead spending variance"
+],
                 "Correct": {
                     "Authorize overtime production": "Favorable sales volume variance with backlog",
                     "Renegotiate supplier contracts": "Unfavorable direct materials price variance above threshold",
@@ -1823,12 +1823,12 @@ const ENHANCED_CASE_BASE2 = [
                     "Variable overhead spending variance"
                 ],
                 "RightItems": [
-                    "Production manager",
-                    "Human resources or union contract terms",
-                    "Sales and marketing department",
-                    "Department manager controlling indirect costs",
-                    "Corporate treasury"
-                ],
+    "Human resources or union contract terms",
+    "Department manager controlling indirect costs",
+    "Production manager",
+    "Sales and marketing department",
+    "Corporate treasury"
+],
                 "Correct": {
                     "Direct materials usage variance": "Production manager",
                     "Labor rate variance": "Human resources or union contract terms",
@@ -3128,11 +3128,11 @@ const ENHANCED_CASE_BASE2 = [
                     "Constant gross-margin NRV method"
                 ],
                 "RightItems": [
-                    "Final sales value minus further processing costs",
-                    "Volume of output",
-                    "Market value at split-off point",
-                    "Joint cost allocated so every product has the same gross margin percentage"
-                ],
+    "Volume of output",
+    "Final sales value minus further processing costs",
+    "Joint cost allocated so every product has the same gross margin percentage",
+    "Market value at split-off point"
+],
                 "Correct": {
                     "NRV method": "Final sales value minus further processing costs",
                     "Physical-units method": "Volume of output",
@@ -3586,12 +3586,12 @@ const ENHANCED_CASE_BASE2 = [
                     "Program development controls"
                 ],
                 "RightItems": [
-                    "Unauthorized users gaining system access",
-                    "Unauthorized or untested system modifications causing errors or security gaps",
-                    "Processing errors, data loss, or incomplete processing going undetected",
-                    "Flawed or malicious code introduced into production systems",
-                    "Hardware theft or environmental damage to data center"
-                ],
+    "Unauthorized or untested system modifications causing errors or security gaps",
+    "Unauthorized users gaining system access",
+    "Hardware theft or environmental damage to data center",
+    "Processing errors, data loss, or incomplete processing going undetected",
+    "Flawed or malicious code introduced into production systems"
+],
                 "Correct": {
                     "Logical access controls": "Unauthorized users gaining system access",
                     "Change management controls": "Unauthorized or untested system modifications causing errors or security gaps",
@@ -3635,12 +3635,12 @@ const ENHANCED_CASE_BASE2 = [
                     "No batch job completion review"
                 ],
                 "RightItems": [
-                    "Implement individual accounts with multi-factor authentication and periodic access reviews",
-                    "Establish a change advisory board with formal approval, testing, and rollback procedures",
-                    "Enforce environment segregation and restrict production access to operations team only",
-                    "Implement automated job monitoring with alerts for failures and independent review of logs",
-                    "Install video surveillance and biometric access controls in the server room"
-                ],
+    "Enforce environment segregation and restrict production access to operations team only",
+    "Install video surveillance and biometric access controls in the server room",
+    "Implement individual accounts with multi-factor authentication and periodic access reviews",
+    "Establish a change advisory board with formal approval, testing, and rollback procedures",
+    "Implement automated job monitoring with alerts for failures and independent review of logs"
+],
                 "Correct": {
                     "Shared admin accounts without MFA": "Implement individual accounts with multi-factor authentication and periodic access reviews",
                     "Changes approved only via email": "Establish a change advisory board with formal approval, testing, and rollback procedures",
@@ -3684,12 +3684,12 @@ const ENHANCED_CASE_BASE2 = [
                     "Compensating control"
                 ],
                 "RightItems": [
-                    "Stops errors or unauthorized actions before they occur",
-                    "Identifies errors or irregularities after they have occurred",
-                    "Resolves issues after detection to restore normal operations",
-                    "Provides alternative oversight when primary controls are not feasible",
-                    "Documents all system changes for audit trail purposes"
-                ],
+    "Provides alternative oversight when primary controls are not feasible",
+    "Resolves issues after detection to restore normal operations",
+    "Documents all system changes for audit trail purposes",
+    "Stops errors or unauthorized actions before they occur",
+    "Identifies errors or irregularities after they have occurred"
+],
                 "Correct": {
                     "Preventive control": "Stops errors or unauthorized actions before they occur",
                     "Detective control": "Identifies errors or irregularities after they have occurred",
@@ -3732,12 +3732,12 @@ const ENHANCED_CASE_BASE2 = [
                     "Access control"
                 ],
                 "RightItems": [
-                    "Range check ensuring dollar amounts fall within expected limits",
-                    "Run-to-run control totals verifying data processed completely",
-                    "Review of printed reports for reasonableness before distribution",
-                    "User authentication required to access the application",
-                    "Quarterly physical inventory count verification"
-                ],
+    "Run-to-run control totals verifying data processed completely",
+    "User authentication required to access the application",
+    "Range check ensuring dollar amounts fall within expected limits",
+    "Quarterly physical inventory count verification",
+    "Review of printed reports for reasonableness before distribution"
+],
                 "Correct": {
                     "Input validation": "Range check ensuring dollar amounts fall within expected limits",
                     "Processing control": "Run-to-run control totals verifying data processed completely",
@@ -3781,12 +3781,12 @@ const ENHANCED_CASE_BASE2 = [
                     "Database administrator also approves system access requests"
                 ],
                 "RightItems": [
-                    "The administrator could grant excessive privileges and conceal the action during review",
-                    "Code could be deployed without independent testing or approval",
-                    "Changes could be made without independent verification of completion",
-                    "Access could be granted without independent approval, bypassing access controls",
-                    "The CFO could override system controls and approve their own transactions"
-                ],
+    "The CFO could override system controls and approve their own transactions",
+    "Access could be granted without independent approval, bypassing access controls",
+    "Code could be deployed without independent testing or approval",
+    "The administrator could grant excessive privileges and conceal the action during review",
+    "Changes could be made without independent verification of completion"
+],
                 "Correct": {
                     "System administrator also performs user access reviews": "The administrator could grant excessive privileges and conceal the action during review",
                     "Developer also moves code to production": "Code could be deployed without independent testing or approval",

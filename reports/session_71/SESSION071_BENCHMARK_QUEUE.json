@@ -1,0 +1,84 @@
+{
+  "session": "S71",
+  "board": "benchmark-selector",
+  "timestamp": "2026-07-29T20:21:00.000Z",
+  "read_only": true,
+  "purpose": "Select 5 highest-value Pack D Section B rewrite candidates for throughput benchmarking",
+  "selection_methodology": "Filtered SESSION069_TOP100_REWRITE_CANDIDATES for Pack D Section B, excluded 15 items already rewritten in Session 70 (BD-007,015,035,043,050,064,071,077,078,079,080,082,083,089,095). Selected highest-ranking remaining candidates with diverse topics. Picked one seed from each rotation clone group to avoid topic redundancy.",
+  "source": "SESSION069_TOP100_REWRITE_CANDIDATES.json",
+  "queue": [
+    {
+      "position": 1,
+      "qid": "P1-BD-001",
+      "rank_in_top100": 18,
+      "current_level": "Apply",
+      "target_level": "Evaluate",
+      "topic": "flexible budget variance analysis",
+      "difficulty": "Easy",
+      "certified": true,
+      "original_stem_preview": "Alderway compares its flexible budget for actual output to actual costs incurred. What does a favorable flexible budget variance indicate?",
+      "rewrite_direction": "Controller evaluating systemic pattern across 3 months of favorable variances — must judge whether performance improvement or padding removal explains the trend, with distinct business consequences for each interpretation"
+    },
+    {
+      "position": 2,
+      "qid": "P1-BD-014",
+      "rank_in_top100": 88,
+      "current_level": "Apply",
+      "target_level": "Evaluate",
+      "topic": "incremental budgeting drawback",
+      "difficulty": "Moderate-Easy",
+      "certified": true,
+      "original_stem_preview": "Northfell builds its annual budget by adjusting last year's actual results by an inflation percentage. What is a key drawback of this approach?",
+      "rewrite_direction": "CFO presenting budget methodology recommendation to the board — must evaluate incremental vs. zero-based vs. activity-based budgeting for a growing manufacturer, weighing implementation cost, accuracy, and cultural resistance",
+      "defect_note": "DL-010 violation: EWA describes sales commissions/capital budgets — completely unrelated topic"
+    },
+    {
+      "position": 3,
+      "qid": "P1-BD-039",
+      "rank_in_top100": 89,
+      "current_level": "Apply",
+      "target_level": "Analyze",
+      "topic": "operating budget vs financial budget",
+      "difficulty": "Moderate",
+      "certified": true,
+      "original_stem_preview": "Norwood Peak prepares both an operating budget covering revenue and expenses and a financial budget covering the balance sheet and cash flows. What distinguishes these two budget types?",
+      "rewrite_direction": "Controller diagnosing a discrepancy — operating budget projects net income of $420K but cash budget shows a $85K deficit. Must analyze which items flow through operating budget but not cash budget (depreciation, credit sales timing, capital expenditures), identifying which misclassification would cause the discrepancy"
+    },
+    {
+      "position": 4,
+      "qid": "P1-BD-057",
+      "rank_in_top100": 91,
+      "current_level": "Apply",
+      "target_level": "Evaluate",
+      "topic": "budget committee role",
+      "difficulty": "Moderate",
+      "certified": true,
+      "original_stem_preview": "Harrowgate forms a budget committee composed of senior managers from each functional area to review and approve departmental budgets. What is the main benefit of this structure?",
+      "rewrite_direction": "CEO evaluating three competing proposals: (1) expand budget committee authority to include headcount approval, (2) dissolve committee in favor of finance-department-only review, (3) keep current committee with tighter variance thresholds. Must evaluate trade-offs: coordination quality vs. process speed vs. managerial buy-in, with specific consequences for each choice"
+    },
+    {
+      "position": 5,
+      "qid": "P1-BD-084",
+      "rank_in_top100": 99,
+      "current_level": "Apply",
+      "target_level": "Analyze",
+      "topic": "budget revision mid year",
+      "difficulty": "Moderate",
+      "certified": true,
+      "original_stem_preview": "Juniperfield experiences a significant unexpected change in raw material prices mid-year and revises its budget accordingly. What is an appropriate response to this situation?",
+      "rewrite_direction": "Controller preparing a variance analysis memo for the audit committee — must analyze 4 distinct mid-year events (raw material spike, volume shortfall, FX translation loss, labor contract settlement) and determine which warrant budget revision vs. variance explanation only, applying materiality and controllability criteria"
+    }
+  ],
+  "target_distribution": {
+    "evaluate": 3,
+    "analyze": 2,
+    "total": 5
+  },
+  "requirements_per_rewrite": [
+    "Named Company",
+    "Named Stakeholder",
+    "Decision Context",
+    "Business Consequence",
+    "Competing Alternatives"
+  ]
+}

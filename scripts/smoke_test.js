@@ -63,12 +63,13 @@ async function main() {
   const sessionForm = await page.$("#sessionForm");
   sessionForm ? pass("Start Session panel present") : fail("Start Session panel missing");
 
-  const modeOpts = await page.$$eval("#mode option", (opts) =>
-    opts.map((o) => o.value)
+  const modeInput = await page.$eval("#mode", (el) => el.value);
+  const modeCards = await page.$$eval(".content-card input[type='radio']", (radios) =>
+    radios.map((r) => r.value)
   );
-  modeOpts.length >= 4
-    ? pass("Mode options: " + modeOpts.join(", "))
-    : fail("Mode options missing (got " + modeOpts.length + ")");
+  modeInput && modeCards.length >= 4
+    ? pass("Mode cards: " + modeCards.join(", ") + " (active: " + modeInput + ")")
+    : fail("Mode cards missing (got " + modeCards.length + ")");
 
   // ── Nav Tabs ─────────────────────────────────────────────────
 
@@ -139,9 +140,32 @@ async function main() {
       }
     }
     results._hasMay =
+      typeof May !== "undefined";
+    results._hasMayFeatureFlags =
       typeof window !== "undefined" &&
-      (typeof window._cmaDefectManifest !== "undefined" ||
-        typeof window._cmaDeliveryBlocklist !== "undefined");
+      typeof window.MayFeatureFlags !== "undefined";
+    results._hasMayContextBuilder =
+      typeof window !== "undefined" &&
+      typeof window.MayContextBuilder !== "undefined";
+    results._hasMayCoachingRouter =
+      typeof window !== "undefined" &&
+      typeof window.MayCoachingRouter !== "undefined";
+    results._hasMayLearnerProfile =
+      typeof window !== "undefined" &&
+      typeof window.MayLearnerProfile !== "undefined";
+    results._hasMayReadinessEngine =
+      typeof window !== "undefined" &&
+      typeof window.MayReadinessEngine !== "undefined";
+    results._hasMayCoachingOrchestrator =
+      typeof window !== "undefined" &&
+      typeof window.MayCoachingOrchestrator !== "undefined";
+    results._orchestratorHealth = null;
+    try {
+      if (typeof window.MayCoachingOrchestrator !== 'undefined' &&
+          typeof window.MayCoachingOrchestrator.readinessCheck === 'function') {
+        results._orchestratorHealth = window.MayCoachingOrchestrator.readinessCheck();
+      }
+    } catch (e) { results._orchestratorHealth = { error: e.message }; }
     return results;
   });
 
@@ -156,6 +180,43 @@ async function main() {
   scriptsLoaded._hasMay
     ? pass("May coaching layer scripts loaded")
     : fail("May coaching layer scripts missing");
+
+  scriptsLoaded._hasMayFeatureFlags
+    ? pass("MayFeatureFlags loaded")
+    : fail("MayFeatureFlags missing");
+
+  scriptsLoaded._hasMayContextBuilder
+    ? pass("MayContextBuilder loaded")
+    : fail("MayContextBuilder missing");
+
+  scriptsLoaded._hasMayCoachingRouter
+    ? pass("MayCoachingRouter loaded")
+    : fail("MayCoachingRouter missing");
+
+  scriptsLoaded._hasMayLearnerProfile
+    ? pass("MayLearnerProfile loaded (MAY-004)")
+    : fail("MayLearnerProfile missing (MAY-004)");
+
+  scriptsLoaded._hasMayReadinessEngine
+    ? pass("MayReadinessEngine loaded (MAY-005)")
+    : fail("MayReadinessEngine missing (MAY-005)");
+
+  scriptsLoaded._hasMayCoachingOrchestrator
+    ? pass("MayCoachingOrchestrator loaded (MAY-006)")
+    : fail("MayCoachingOrchestrator missing (MAY-006)");
+
+  // ── Orchestrator Health Check ──────────────────────────────────
+
+  const orchHealth = scriptsLoaded._orchestratorHealth;
+  if (orchHealth && orchHealth.missingModules !== undefined) {
+    orchHealth.missingModules.length === 0
+      ? pass("Orchestrator readiness check: all 8 dependencies present")
+      : fail("Orchestrator missing dependencies: " + orchHealth.missingModules.join(", "));
+  } else if (orchHealth && orchHealth.error) {
+    fail("Orchestrator readiness check error: " + orchHealth.error);
+  } else {
+    fail("Orchestrator readiness check: no result");
+  }
 
   // ── Errors ───────────────────────────────────────────────────
 

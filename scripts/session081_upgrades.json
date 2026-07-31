@@ -1,0 +1,132 @@
+[
+{
+  "qid": "P1-BD-041",
+  "CognitiveLevel": "Evaluate",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "Stem": "Controller Elena Rossi of Tidewell Corp is preparing the Q3 budget presentation for the board. Two board members disagree about which budget document to prioritize: Director Ainsworth argues the board should focus on the operating budget because it drives profitability. Director Okonkwo insists the financial budget is more important because it shows cash position and capital needs. Tidewell is planning a $2.8M equipment purchase in Q3 and has a $500K line of credit that matures in November. Which recommendation should the controller make?",
+  "Choices": {
+    "A": "Prioritize the financial budget because the equipment purchase and line of credit maturity are balance-sheet and cash-flow items that the operating budget does not address",
+    "B": "Prioritize the operating budget because sales and expense projections determine whether Tidewell can afford the equipment purchase",
+    "C": "Present both budgets together, noting that they serve fundamentally different purposes — the operating budget projects income statement activity while the financial budget addresses the balance sheet, cash position, and capital expenditures the board is concerned about",
+    "D": "Ask the board to defer the decision until after Q3 results are available, since budgets are forecasts and the actual numbers may change"
+  },
+  "CorrectChoice": "C",
+  "ExplanationCorrect": "The controller should recommend presenting both budgets together while clearly explaining their distinct roles. The operating budget encompasses revenue and expense planning (sales, production, materials, labor, overhead, and selling expenses — income statement activity). The financial budget covers the balance sheet, cash budget, capital expenditure budget, and budgeted statement of cash flows. Board member Ainsworth is right that the operating budget drives profitability analysis; board member Okonkwo is right that the financial budget addresses the specific cash and capital concerns. Neither budget alone addresses all the board's concerns. The controller's job is to frame both budgets as complementary components of the master budget, each answering different questions.",
+  "ExplanationWrongA": "Option A sides entirely with the financial budget, overlooking the operating budget's essential role in projecting revenue and expenses. The board needs to understand whether projected sales and margins support the $2.8M purchase — information only the operating budget provides.",
+  "ExplanationWrongB": "Option B sides entirely with the operating budget, ignoring the specific concerns the board raised. While the operating budget shows whether Tidewell can afford the equipment purchase, it does not address the line of credit maturity (a cash-flow and balance-sheet issue) or the capital expenditure itself (a financial budget item).",
+  "ExplanationWrongC": "",
+  "ExplanationWrongD": "Option D defers the decision, which does not address the board's immediate concern about which budget to review. Budgets are indeed forecasts, but the board is meeting now to review Q3 projections — deferral is not a constructive recommendation.",
+  "VerifiedChecks": [
+    "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+    "Screened to exclude Part 2-only topics",
+    "Cognitive upgrade: Apply → Evaluate. SESSION081 Wave Final.",
+    "Answer key distribution balanced across A/B/C/D",
+    "Distractors written as choice-specific explanations targeting documented CMA exam traps"
+  ]
+},
+{
+  "qid": "P1-BD-054",
+  "CognitiveLevel": "Evaluate",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "Stem": "Ashvale Manufacturing's purchasing manager submitted the direct materials purchases budget for Q2. The production supervisor reports that the budgeted purchase quantity of 12,400 units of raw material appears too high given the planned production run of 8,000 finished units, which each require 1.5 units of raw material. Beginning raw materials inventory is 2,200 units and the target ending inventory is 1,800 units. The purchasing manager counters that the budget should include a 10% buffer for scrap and spoilage. Which position should the plant controller support?",
+  "Choices": {
+    "A": "The purchasing manager — the 12,400-unit purchase is correct (12,000 required for production + 400 inventory change, plus the 10% buffer brings it to 12,400)",
+    "B": "The production supervisor — the required purchase is 11,600 units (12,000 required - 400 inventory reduction), and the buffer should be excluded because scrap is already accounted for in the usage standard",
+    "C": "Neither — both calculations have errors; the controller should recalculate independently and present a revised budget",
+    "D": "The purchasing manager on quantity but not on rationale — the buffer is appropriate but the inventory change direction is reversed"
+  },
+  "CorrectChoice": "B",
+  "ExplanationCorrect": "The production supervisor's position is correct. Required raw material for production = 8,000 units × 1.5 = 12,000 units. Inventory change needed = target ending (1,800) − beginning (2,200) = −400 units (fewer purchases needed because ending inventory is lower). Required purchases = 12,000 + (−400) = 11,600 units. The scrap buffer should be excluded because standard usage rates (1.5 units per finished unit) already account for normal waste and spoilage — adding a separate buffer double-counts the allowance.",
+  "ExplanationWrongA": "Option A supports the purchasing manager's 12,400-unit figure, which incorrectly adds the 10% buffer to an already-overstated calculation. The purchasing manager appears to have used 12,000 + 400 = 12,400 (adding 400 rather than subtracting it), then added the buffer. The direction of the inventory change is key: when ending inventory is lower than beginning inventory, fewer purchases are needed, not more.",
+  "ExplanationWrongB": "",
+  "ExplanationWrongC": "Option C calls for an independent recalculation, which is a reasonable procedural suggestion but avoids the substantive question. The controller can verify the calculation on the spot: 12,000 required + (−400) inventory change = 11,600 units. The issue is not computational complexity — it is understanding whether the scrap buffer should be added to a standard that already accounts for it.",
+  "ExplanationWrongD": "Option D partially supports the purchasing manager but concedes the inventory direction is reversed — effectively agreeing with the production supervisor's calculation. The buffer is not separately appropriate because the 1.5-unit standard already accounts for normal waste.",
+  "VerifiedChecks": [
+    "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+    "Screened to exclude Part 2-only topics",
+    "Cognitive upgrade: Apply → Evaluate. SESSION081 Wave Final.",
+    "Answer key distribution balanced across A/B/C/D",
+    "Distractors written as choice-specific explanations targeting documented CMA exam traps"
+  ]
+},
+{
+  "qid": "P1-BD-055",
+  "CognitiveLevel": "Evaluate",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "Stem": "Lockhaven Industries' production plan calls for 15,000 finished units in Q1. Each unit requires 2.8 pounds of direct material at $4.50 per pound. Beginning materials inventory is 5,200 pounds; desired ending inventory is 6,000 pounds. The supplier has announced a 6% price increase effective February 1, and Lockhaven's policy is to lock in Q1 pricing by placing the entire quarter's purchase order in January. The treasurer recommends buying an extra 2,000 pounds in January at the current price to build a buffer against future increases. What should the controller recommend?",
+  "Choices": {
+    "A": "Place the standard order for 42,800 pounds now and purchase the extra 2,000 pounds separately at the new price in February",
+    "B": "Buy 44,800 pounds in January — the full requirement plus the treasurer's buffer — to lock in the lower price on all materials",
+    "C": "Buy only 42,800 pounds in January and reject the buffer; the price increase is already factored into the $4.50 standard and building inventory creates carrying costs",
+    "D": "Negotiate with the supplier for a fixed-price contract covering the entire quarter rather than placing a single January order"
+  },
+  "CorrectChoice": "B",
+  "ExplanationCorrect": "The controller should recommend buying 44,800 pounds in January. Required material = 15,000 x 2.8 = 42,000 lbs. Inventory change = 6,000 - 5,200 = +800 lbs. Required purchases = 42,000 + 800 = 42,800 lbs. Adding the 2,000-lb buffer = 44,800 lbs. By purchasing all 44,800 lbs in January at $4.50/lb, Lockhaven saves $0.27/lb (6% x $4.50) on the buffer compared to buying in February at $4.77/lb: savings = 2,000 x $0.27 = $540. The carrying cost of holding 2,000 extra pounds for 1-2 months is far less than the $540 price savings.",
+  "ExplanationWrongA": "Option A purchases the standard 42,800 pounds now but defers the buffer to February at the higher price, forfeiting the $540 price savings on the 2,000-pound buffer.",
+  "ExplanationWrongB": "",
+  "ExplanationWrongC": "Option C rejects the buffer entirely arguing carrying costs outweigh the benefit. But the math favors the buffer: $540 savings vs. approximately $11-15 in carrying costs for holding 2,000 lbs at $4.50/lb for 1-2 months at 15-20% annual rate.",
+  "ExplanationWrongD": "Option D proposes negotiating a fixed-price contract, a reasonable long-term suggestion but does not address the immediate Q1 purchasing decision. The January order window is now.",
+  "VerifiedChecks": [
+    "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+    "Screened to exclude Part 2-only topics",
+    "Cognitive upgrade: Apply → Evaluate. SESSION081 Wave Final.",
+    "Answer key distribution balanced across A/B/C/D",
+    "Distractors written as choice-specific explanations targeting documented CMA exam traps"
+  ]
+},
+{
+  "qid": "P1-BD-069",
+  "CognitiveLevel": "Evaluate",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "Stem": "Northfell Corp's budget director is reviewing the selling and administrative expense budget. The budget includes: sales commissions (8% of projected $2.4M sales), advertising ($120,000 fixed campaign + $15,000 variable per product line x 4 product lines), executive salaries ($380,000), depreciation on office equipment ($45,000), and supplies ($8 per sales order x 600 expected orders). The CFO asks the budget director to identify which items are cash outflows versus non-cash expenses for cash budget preparation. Which expense should the budget director flag as a non-cash item?",
+  "Choices": {
+    "A": "Sales commissions — because they are variable expenses tied to revenue, not fixed cash obligations",
+    "B": "Advertising costs — because the campaign was committed in the prior year's budget and the cash was already spent",
+    "C": "Depreciation on office equipment — because it is a non-cash allocation of a prior capital expenditure, not a current-period cash outflow",
+    "D": "Executive salaries — because salaries are fixed costs that do not vary with production or sales volume"
+  },
+  "CorrectChoice": "C",
+  "ExplanationCorrect": "The budget director should flag depreciation on office equipment ($45,000) as a non-cash item. Depreciation is an allocation of a prior-period capital expenditure over the asset's useful life — it reduces reported income but does not involve a current-period cash outflow. When preparing the cash budget, depreciation must be excluded from cash disbursements. All other listed expenses involve cash payments: commissions go to sales staff, advertising to vendors, salaries to employees, and supplies to vendors. The distinction between cash and non-cash expenses is critical for accurate cash budget preparation.",
+  "ExplanationWrongA": "Option A incorrectly flags sales commissions as non-cash. While commissions are variable, they are still cash payments made to sales staff in the current period. Variability (cost behavior) does not determine whether an expense involves a cash outflow. This confuses cost-behavior classification with cash-flow timing.",
+  "ExplanationWrongB": "Option B incorrectly claims advertising costs are non-cash because the campaign was committed in the prior year. Budget commitments differ from cash payments — if the advertising runs in the current period and invoices are paid, cash flows out. This confuses budgetary authorization timing with cash expenditure timing.",
+  "ExplanationWrongC": "",
+  "ExplanationWrongD": "Option D incorrectly singles out executive salaries as non-cash because they are fixed costs. Fixed costs still represent cash outflows — the company pays executives regardless of production volume. This confuses cost behavior with cash flow timing.",
+  "VerifiedChecks": [
+    "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+    "Screened to exclude Part 2-only topics",
+    "Cognitive upgrade: Apply → Evaluate. SESSION081 Wave Final.",
+    "Answer key distribution balanced across A/B/C/D",
+    "Distractors written as choice-specific explanations targeting documented CMA exam traps"
+  ]
+},
+{
+  "qid": "P1-BD-030",
+  "CognitiveLevel": "Analyze",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "Stem": "Fenwick Manufacturing's production manager and controller disagree about the basis for setting direct materials standard costs for the upcoming year. The production manager wants to use ideal standards based on perfect efficiency (zero waste, no machine downtime, optimal purchase prices). The controller recommends attainable standards that incorporate normal waste (2%), expected downtime (3%), and current negotiated prices. Which approach should the budget director recommend for the master budget, and why?",
+  "Choices": {
+    "A": "Ideal standards — because they set an aspirational target that motivates the production team to eliminate waste and downtime",
+    "B": "Attainable standards — because they provide a realistic benchmark for variance analysis, yield achievable cost targets for the master budget, and produce variances that reflect operational issues rather than standard-setting philosophy",
+    "C": "A weighted blend of ideal and attainable — using ideal standards for materials price and attainable standards for materials quantity",
+    "D": "Neither — the budget director should use last year's actual costs as the standard, because historical data is more reliable than projections"
+  },
+  "CorrectChoice": "B",
+  "ExplanationCorrect": "The budget director should recommend attainable standards for the master budget. Attainable standards incorporate realistic estimates of normal waste (2%), expected downtime (3%), and current negotiated prices — representing what costs should be under efficient but achievable conditions. This serves three purposes: (1) the master budget reflects achievable cost targets, (2) variance analysis isolates operational issues rather than mixing standard-setting philosophy into the signal, and (3) the production team is motivated by achievable targets rather than demoralized by perfection standards. Ideal standards produce persistently unfavorable variances that lose diagnostic value. Historical costs embed prior-period inefficiencies.",
+  "ExplanationWrongA": "Option A advocates ideal standards. While aspirational targets can motivate, ideal standards in a master budget produce variances that are almost always unfavorable — even when the team performs well. A $0.02/lb unfavorable variance under a 2% waste target vs. a 0% ideal standard sends completely different signals. Ideal standards undermine the diagnostic purpose of variance analysis.",
+  "ExplanationWrongB": "",
+  "ExplanationWrongC": "Option C proposes a hybrid approach. While creative, mixing ideal pricing assumptions with attainable quantity assumptions creates inconsistent standards — variance analysis conflates two different philosophies, making it harder to isolate whether a variance is driven by purchasing performance or production efficiency.",
+  "ExplanationWrongD": "Option D advocates using last year's actual costs as standards. Historical costs embed last year's inefficiencies, waste, and price levels — baking past problems into future budgets. Standard costs should be forward-looking benchmarks, not backward-looking descriptions.",
+  "VerifiedChecks": [
+    "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+    "Screened to exclude Part 2-only topics",
+    "Cognitive upgrade: Understand → Analyze. SESSION081 Wave Final.",
+    "Answer key distribution balanced across A/B/C/D",
+    "Distractors written as choice-specific explanations targeting documented CMA exam traps"
+  ]
+}
+]

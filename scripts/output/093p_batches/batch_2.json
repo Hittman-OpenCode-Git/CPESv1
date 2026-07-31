@@ -1,0 +1,406 @@
+{
+  "batchId": "B2",
+  "itemCount": 25,
+  "items": [
+    {
+      "qid": "P1B-F-140",
+      "pack": "Pack_B",
+      "section": "F",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B-F.140 data governance",
+      "difficulty": "Difficult",
+      "stem": "Crescent Analytics, a consumer insights firm, is developing a predictive model that analyzes customer transaction data from 14 retail partners to forecast individual purchasing behavior and creditworthiness. The model ingests: purchase history (SKU-level detail for 3 years), geolocation data (store ",
+      "choices": {
+        "A": "Framework 2 (IEEE 7000) — it is the most rigorous methodology for integrating ethical values into system design, the 5-month delay is a reasonable investment in ethical quality, and stakeholder engagement will strengthen relationships with both consumers and retail partners",
+        "B": "Framework 1 (FAT) — it addresses the three most pressing ethical dimensions (fairness, accountability, transparency) at the lowest cost ($320,000) and fastest timeline, provides defensible documentation for both consumer advocates and retail partners, and does not require renegotiating existing data-sharing agreements",
+        "C": "Framework 3 (EU Ethics Guidelines) — as the most comprehensive global standard for trustworthy AI, it provides maximum defensibility against any future regulatory challenge and positions Crescent as an ethics leader in the consumer insights industry",
+        "D": "Proceed with the model launch without a formal ethics framework, relying on Crescent's existing data privacy policy and internal ethical guidelines, and address ethical concerns reactively if they arise"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1B-F-089",
+      "pack": "Pack_B",
+      "section": "F",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B-F.089 blockchain",
+      "difficulty": "Difficult",
+      "stem": "Pacific Foods operates 12 subsidiaries across North America and Asia, each maintaining its own general ledger on separate ERP instances (8 on SAP, 3 on Oracle, 1 on Microsoft Dynamics). The month-end intercompany reconciliation process takes 9 business days, involves 14 full-time accountants, and pr",
+      "choices": {
+        "A": "Option 2 (Permissioned Blockchain) — it provides superior close reduction (1.5 days vs. 3 days), higher annual savings ($880K vs. $640K), lower ongoing operating costs ($180K vs. $420K annually), and represents a strategic investment in emerging technology that positions Pacific Foods for future distributed-ledger applications",
+        "B": "Option 1 (Centralized Shared Ledger) — it is $1.1M cheaper to implement, deploys 8 months faster, avoids the unresolved data residency and audit evidence concerns of blockchain, and achieves a 24.6-month payback ($1.8M / ($640K annual savings + $420K annual license avoided)), within the CFO's 30-month requirement",
+        "C": "Neither option — Pacific Foods should focus on standardizing intercompany accounting policies and improving the manual reconciliation process before investing in technology, saving the $1.8M–$2.9M capital outlay",
+        "D": "Pilot both options simultaneously — deploy the centralized ledger for North American subsidiaries and blockchain for Asian subsidiaries, then compare results after 18 months before committing to a single approach"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1B-F-131",
+      "pack": "Pack_B",
+      "section": "F",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B-F.131 RPA",
+      "difficulty": "Difficult",
+      "stem": "Northland Bank deployed 14 robotic process automation (RPA) bots over the past 18 months across retail banking operations — account opening verification, wire transfer reconciliation, dormant account fee assessment, and regulatory report data extraction. The bots were deployed by individual departme",
+      "choices": {
+        "A": "Category 1 (Access Management) — uncontrolled privileged access is the most severe control deficiency: domain-admin bots with no credential rotation and active terminated-employee bots create a direct risk of unauthorized financial transaction processing; at $215,000, it leaves $135,000 to begin addressing Category 2",
+        "B": "Category 2 (Change Control) — undocumented bot modifications have already caused a $47,000 financial loss through the currency conversion error; without change control, every bot execution is an untested, unapproved change to the financial reporting process",
+        "C": "Category 3 (Exception Handling) — bots silently failing or processing incorrect data directly affects the completeness and accuracy of financial records; 11 of 14 bots lack exception handling, making this the most widespread deficiency",
+        "D": "All three categories are equally critical; the Audit Director should present a supplemental funding request for $170,000 to remediate all three simultaneously"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-CC-015",
+      "pack": "Pack_C",
+      "section": "CC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "C.015 return on investment dupont",
+      "difficulty": "Difficult",
+      "stem": "Meridian Corporation evaluates its two divisions using ROI and residual income. The required rate of return is 10%. North Division reports operating income of $450,000 on average operating assets of $3,000,000. South Division reports operating income of $200,000 on average operating assets of $1,000",
+      "choices": {
+        "A": "Place the expansion in South Division — its 20% ROI exceeds North's 15%, proving it allocates capital more efficiently, and the project's 12% return would harm either division's ROI less at South",
+        "B": "Place the expansion in North Division because its higher residual income ($150,000 vs. $100,000) indicates it creates more absolute shareholder value, and the project earning 12% exceeds the required return regardless of which division hosts it",
+        "C": "Reject the project — a 12% return is below both divisions' current ROI, so investing would dilute the company's overall return on invested capital",
+        "D": "Let South Division host it because its manager, evaluated on residual income, will accept the project; North's manager would likely reject it since the expansion would lower North's ROI from 15.0% to 14.6%"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-DC-066",
+      "pack": "Pack_C",
+      "section": "DC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "D.066 break even product launch go no go demand sensitivity",
+      "difficulty": "Difficult",
+      "stem": "Alderbrook Consumer Products is evaluating the launch of 'ClearCycle,' an eco-friendly cleaning solution. The product would sell for $12 per unit with variable costs of $7 per unit (contribution margin of $5 per unit, 41.7% CM ratio). Dedicated fixed costs — including product development completion,",
+      "choices": {
+        "A": "Launch ClearCycle at full scale — the expected demand of 76,250 units exceeds the break-even volume of 72,000 units ($360,000 / $5 CM), generating an expected annual profit of $21,250 (76,250 × $5 - $360,000). The product line diversifies Alderbrook into the growing eco-friendly segment and creates a platform for future sustainability-branded products.",
+        "B": "Do not launch ClearCycle — the 25% probability of the low-demand scenario (35,000 units) would produce a $185,000 loss ($35,000 × $5 - $360,000), and the expected profit of $21,250 is too thin relative to the alternative investment's guaranteed $46,800 return. New product launches carry execution risk beyond demand uncertainty, and Alderbrook cannot afford a loss of this magnitude in a single-product bet.",
+        "C": "Launch ClearCycle with a staged investment approach — commit $200,000 to a pilot production run of 50,000 units and a regional launch in two test markets over six months. If sell-through exceeds 70% in the test markets, exercise the option to invest the remaining $160,000 for full-scale production. If sell-through falls below 70%, cap the total loss at the $200,000 pilot investment. The staged approach preserves the upside of the 75% probability of moderate-to-high demand while limiting downside exposure. The forgone alternative investment ($46,800) can still be partially funded from remaining capital budget.",
+        "D": "Defer the launch decision for 12 months and commission additional market research at a cost of $45,000 — the demand projections show wide variance (35,000 to 120,000 units), and a more precise forecast could eliminate the low-demand tail risk. The $360,000 capital can be placed in short-term instruments earning 4% while research is conducted."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-EC-035",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.035 COSO ERM -- risk appetite strategic alignment",
+      "difficulty": "Very Difficult",
+      "stem": "Apex Industrial Corporation, a publicly traded manufacturer of aerospace components with $4.2 billion in annual revenue, operates in 18 countries across North America, Europe, and Asia. The board of directors approved a corporate risk appetite statement three years ago that classifies operational ri",
+      "choices": {
+        "A": "The proposal is consistent with the stated risk appetite because the 18% projected return exceeds the company's cost of capital by a wide margin and exceeds historical new-plant ROI by 400 basis points, demonstrating that the expected returns are commensurate with the risks undertaken.",
+        "B": "The proposal is consistent with the stated risk appetite because operational risk appetite is measured at the plant-operations level, not the strategic-investment level, and the manufacturing processes -- once the facility is operational -- can be managed within standard manufacturing control frameworks such as quality management systems and safety protocols.",
+        "C": "The proposal is inconsistent with the stated risk appetite because the $780 million capital outlay exceeds the board's implied single-project concentration threshold, and concentration risk of this magnitude at the enterprise level requires explicit board revision of risk appetite before commitment.",
+        "D": "The proposal is inconsistent with the stated risk appetite because the country's geopolitical risk profile -- including government expropriation risk, unpredictable regulatory changes, and limited legal recourse -- represents risks that cannot be managed within Apex's existing control frameworks and therefore exceed the 'Moderate' operational risk tolerance established by the board."
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-EC-007",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.007 COSO ERM — risk culture — tone at the top and whistleblower retaliation patterns",
+      "difficulty": "Difficult",
+      "stem": "Meridian Regional Bank's CEO, Catherine Holt, regularly publishes internal videos emphasizing unwavering commitment to integrity. However, HR records show that over 24 months, three employees who reported suspected fraudulent loan origination practices via the ethics hotline were terminated for perf",
+      "choices": {
+        "A": "The control environment is fundamentally compromised because management's retaliatory termination patterns have established a de facto environment where employees perceive that reporting carries personal career risk, undermining COSO Principle 1.",
+        "B": "The control environment is acceptable because the CEO publicly communicates a commitment to ethics. Individual personnel decisions are operational matters outside internal control scope.",
+        "C": "The control environment issue is limited to HR termination procedures. The CEO's public ethics messaging demonstrates that tone at the top is properly established.",
+        "D": "The declining survey scores reflect a communication breakdown rather than a control environment failure."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-EC-005",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.005 segregation of duties design",
+      "difficulty": "Moderate",
+      "stem": "Emberton assigns one employee to authorize purchases, another to record them, and a third to reconcile the vendor accounts. What internal control concept does this reflect?",
+      "choices": {
+        "A": "Segregation of duties, reducing the risk of undetected errors or fraud",
+        "B": "Cost-benefit analysis, which weighs control costs against benefits",
+        "C": "Management override, which bypasses controls",
+        "D": "Risk acceptance, which tolerates a known exposure"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-EC-075",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.075 COSO Principle 8 -- Fraud Risk Assessment -- Compensation-Driven Revenue Manipulation",
+      "difficulty": "Difficult",
+      "stem": "Meridian Infrastructure Group, a mid-sized construction firm, operates through five regional offices. Project managers receive an annual bonus equal to 8% of reported project margin -- but only if their portfolio-wide margin reaches a 15% threshold. Below 15%, the bonus is zero. During a routine con",
+      "choices": {
+        "A": "The fraud risk assessment was adequate because it identified revenue recognition as a risk area at the enterprise level, and COSO Principle 8 requires entity-wide risk identification rather than disaggregation by individual compensation design features.",
+        "B": "The fraud risk assessment was inadequate because COSO Principle 8 requires organizations to assess fraud risks arising from incentive structures and performance pressures. The binary cliff bonus at the 15% margin threshold creates a concentrated year-end incentive to manipulate revenue recognition -- a material fraud triangle 'pressure' that went unassessed when the enterprise risk framework treated 'revenue recognition pressure' as a generic medium risk without analyzing the compensation structure's specific effect.",
+        "C": "The fraud risk assessment was inadequate because COSO Principle 8 requires that all fraud-related risks be classified no lower than high, and classifying revenue recognition pressure as medium inherently understates the risk regardless of how the compensation structure is designed.",
+        "D": "The fraud risk assessment was adequate because the company maintains revenue recognition controls, including customer acceptance documentation requirements for bill-and-hold transactions. COSO Principle 8 focuses on control design adequacy rather than incentive or compensation structure analysis."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-EC-042",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.042 COSO Principle 9 -- risk response -- evaluating control design adequacy after risk identification",
+      "difficulty": "Difficult",
+      "stem": "Paragon Manufacturing, a $740 million industrial equipment producer, identified through its annual risk assessment that supply chain disruption from single-source suppliers constituted its highest-rated operational risk (likelihood: high, impact: critical). The risk committee, chaired by CFO David C",
+      "choices": {
+        "A": "The risk response is adequate because the risk committee identified and approved specific actions, and COSO Principle 9 requires management to select and develop control activities — it does not prescribe the scale of the response.",
+        "B": "The risk response is inconsistent with the assessed risk severity because the selected controls and contingency measures are not proportionate to the high-likelihood, critical-impact risk identified — the controls operate at an administrative level while the risk demands substantive operational mitigation.",
+        "C": "The risk response should focus exclusively on financial contingency reserves — if the reserve were increased to $15 million (approximately 5 days of production), the risk would be adequately mitigated regardless of the design quality of the other controls.",
+        "D": "Paragon should immediately terminate all single-source supplier relationships and dual-source every component — COSO Principle 9 requires that the response eliminate the risk entirely when the assessed impact is critical."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-EC-021",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.021 segregation of duties vendor setup and payment",
+      "difficulty": "Moderate",
+      "stem": "Bryant Manufacturing has a small accounts payable department where one employee creates new vendor records, enters invoices from those vendors, and approves payments for processing. Management wants to reduce the risk of fraudulent payments without adding staff. Which control improvement is most eff",
+      "choices": {
+        "A": "Require a second employee to approve new vendor additions and review a monthly vendor-master change report",
+        "B": "Require the same employee to also perform the monthly bank reconciliation",
+        "C": "Have an internal auditor review all payments above a threshold quarterly",
+        "D": "Raise the dollar threshold for requiring supervisory approval of payments"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-EC-030",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.030 bank reconciliation control",
+      "difficulty": "Easy",
+      "stem": "Elderberry has a designated employee, independent of cash handling and recording, perform the monthly bank reconciliation. Why is independence important here?",
+      "choices": {
+        "A": "It guarantees no bank fees will ever be charged",
+        "B": "It ensures the reconciliation can objectively detect errors or irregularities without being influenced by the preparer's own transactions",
+        "C": "It eliminates the need to compare the bank statement to the general ledger",
+        "D": "It removes the need for management review of cash balances"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-EC-020",
+      "pack": "Pack_C",
+      "section": "EC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "E.020 physical controls over assets",
+      "difficulty": "Moderate",
+      "stem": "Thornfield stores inventory in a locked warehouse accessible only to authorized personnel with badge access. What type of control is this?",
+      "choices": {
+        "A": "An entity-level control unrelated to specific assets",
+        "B": "A detective control performed after the fact only",
+        "C": "A compensating control for a segregation of duties gap",
+        "D": "A physical control that restricts access to assets"
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-FC-018",
+      "pack": "Pack_C",
+      "section": "FC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "F.018 cybersecurity governance — incident response framework evaluation",
+      "difficulty": "Very Difficult",
+      "stem": "Valmont Industries, a defense contractor with $2.8 billion in government contracts, experienced a security incident eight months ago when a phishing attack compromised the credentials of a senior engineer, resulting in the exfiltration of 2,400 documents including technical specifications governed b",
+      "choices": {
+        "A": "Conduct quarterly tabletop exercises for the IR plan, revoke all local administrator privileges and enforce least-privilege access through group policy, and implement a formal exception management process requiring quarterly review and re-approval of all security baseline deviations — each control deficiency is addressed individually with a specific remediation action.",
+        "B": "Redesign the incident response plan to include a business-impact assessment checkpoint before containment actions are executed — the $640,000 contract penalty was caused by a containment decision that did not consider operational impact, and this single process change prevents recurrence of the most costly consequence of the incident. The 31-month testing gap and privilege exception are secondary findings.",
+        "C": "Implement an integrated governance program that addresses the three failures as interconnected control deficiencies: (1) mandatory semi-annual IR plan testing with tabletop exercises that include scenarios involving privileged user compromise and operational trade-off decisions, (2) a privileged access management system that enforces just-in-time elevation with automatic revocation rather than permanent local admin rights, and (3) an exception governance process requiring documented business justification, compensating controls, quarterly review, and automatic expiration — with the CISO accountable to the risk committee for all active exceptions.",
+        "D": "Engage an external cybersecurity firm to design and implement a new security architecture including zero-trust network access, endpoint detection and response, and Security Information and Event Management (SIEM) integration — the root cause of all three failures is an insufficiently mature security architecture, and a comprehensive redesign addresses the systemic weakness rather than individual symptoms."
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-FC-016",
+      "pack": "Pack_C",
+      "section": "FC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "F.016 cloud computing service models",
+      "difficulty": "Easy",
+      "stem": "Prairiewood outsources its entire IT infrastructure, including servers and storage, to a cloud provider while managing its own applications. What cloud service model is this?",
+      "choices": {
+        "A": "Data as a Service (DaaS)",
+        "B": "Platform as a Service (PaaS)",
+        "C": "Software as a Service (SaaS)",
+        "D": "Infrastructure as a Service (IaaS)"
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-FC-029",
+      "pack": "Pack_C",
+      "section": "FC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "F.029 Cybersecurity — CIA triad ransomware evaluation",
+      "difficulty": "Difficult",
+      "stem": "Northridge Regional Medical Center's electronic health record system was struck by ransomware. The attacker encrypted all patient records, rendering them inaccessible to clinical staff, and also exfiltrated 47,000 patient records containing protected health information before deploying the encryptio",
+      "choices": {
+        "A": "Availability: The inability to access patient records is the primary risk because it directly threatens patient safety and care continuity",
+        "B": "Integrity: The ransomware may have altered patient records before encryption, creating clinical decision errors",
+        "C": "Availability and integrity only: Confidentiality is preserved because the attacker encrypted, not viewed, the data",
+        "D": "Confidentiality: The exfiltration of protected health information triggers HIPAA breach notification requirements and poses the greatest regulatory exposure"
+      },
+      "correctChoice": "D"
+    },
+    {
+      "qid": "P1-FC-014",
+      "pack": "Pack_C",
+      "section": "FC",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "F.014 digital transformation — legacy system decommissioning risk",
+      "difficulty": "Difficult",
+      "stem": "Coventry Mutual Insurance, a property and casualty insurer with $1.4 billion in written premiums, operates a policy administration system that has been in production for 23 years. The system runs on a mainframe that the vendor discontinued supporting in 2020, and Coventry has been paying $380,000 an",
+      "choices": {
+        "A": "Proceed with full migration and write exception-handling logic to accept the non-compliant 4.7% of records with a flag for manual review after migration — delaying the project to remediate legacy data quality issues extends the period during which Coventry operates an unsupported mainframe at $380,000 annually in maintenance costs plus escalating security risk.",
+        "B": "Conduct a data quality assessment of the 4.7% of records with validation errors to categorize them by severity: (1) records correctable through automated data cleansing rules, (2) records requiring manual review and correction, and (3) records that are permanently unresolvable and must be archived with documented rationale. Remediate categories 1 and 2 before loading to the cloud platform, archive category 3, and validate that the remaining 95.3% of records migrate cleanly.",
+        "C": "Archive all 10.5 million legacy policy records in a read-only data warehouse and start the cloud platform with only new and renewed policies issued after the cutover date — this eliminates the data migration risk entirely and satisfies regulatory retention requirements through the archive, while the new platform operates on clean data from day one.",
+        "D": "Migrate the 95.3% of clean records to the cloud platform immediately and defer the 4.7% with validation errors to a second-phase migration project — this parallel approach allows the new platform to go live sooner, reducing the $380,000 annual maintenance cost and security risk while the remaining records are remediated."
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-BD-094",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.094 cash collection pattern budgeting",
+      "difficulty": "Difficult",
+      "stem": "Thornbury Building Materials has $1,200,000 in accounts receivable, with an average collection period of 52 days. The company's weighted average cost of capital is 8%, and its line of credit carries a 7.25% rate with a current balance of $340,000. CFO James Wu is evaluating two proposals to accelera",
+      "choices": {
+        "A": "Recommend the early-payment discount (Option 1) — the $9,600 annual cost is substantially less than the $42,000 factoring fee, the reduction in average receivables by $280,000 saves $22,400 in financing costs (8% × $280,000), producing a net annual benefit of $12,800 ($22,400 - $9,600), and the discount preserves the customer relationship without signaling financial distress",
+        "B": "Recommend factoring (Option 2) — the immediate receipt of $1,158,000 eliminates the $340,000 credit-line balance (saving $24,650 in annual interest), eliminates $35,000 in collections department costs and $26,400 in bad-debt risk, producing total annual savings of $86,050 against the $42,000 factoring fee for a net benefit of $44,050, and the sales director's concern about signaling distress is mitigated by the growing prevalence of receivables factoring as a mainstream treasury tool",
+        "C": "Recommend neither — the company's 52-day average collection period is within industry norms (45-60 days for building materials), the 7.25% credit line rate is relatively low, and both proposals introduce costs that exceed the time value of accelerating collections by approximately 24 days; the current arrangement is cost-effective",
+        "D": "Recommend the discount program with a contingent factoring backup — offer the 2/10 net 30 terms and monitor the take rate for six months; if fewer than 30% of customers adopt the discount, switch to factoring for the remaining portfolio, capturing the best of both options while testing customer response before committing to factoring"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-BD-055",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.055 direct materials purchases budget",
+      "difficulty": "Difficult",
+      "stem": "Lockhaven Industries' production plan calls for 15,000 finished units in Q1. Each unit requires 2.8 pounds of direct material at $4.50 per pound. Beginning materials inventory is 5,200 pounds; desired ending inventory is 6,000 pounds. The supplier has announced a 6% price increase effective February",
+      "choices": {
+        "A": "Place the standard order for 42,800 pounds now and purchase the extra 2,000 pounds separately at the new price in February",
+        "B": "Buy 44,800 pounds in January — the full requirement plus the treasurer's buffer — to lock in the lower price on all materials",
+        "C": "Buy only 42,800 pounds in January and reject the buffer; the price increase is already factored into the $4.50 standard and building inventory creates carrying costs",
+        "D": "Negotiate with the supplier for a fixed-price contract covering the entire quarter rather than placing a single January order"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-BD-005",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.005 flexible budget variance analysis",
+      "difficulty": "Difficult",
+      "stem": "Elmsworth Manufacturing's Controller, Rebecca Walsh, is designing the company's variance investigation policy. The current policy: investigate any variance exceeding $5,000 or 5% of the budgeted line item, whichever is smaller. After one year, the Controller's review reveals: (a) 42% of investigatio",
+      "choices": {
+        "A": "Replace the fixed-dollar threshold with a statistical control-chart approach — flag variances that exceed two standard deviations from the historical mean for each cost category, automatically adjusting thresholds based on each category's natural variability; this catches process shifts (like the production department's order-splitting) regardless of dollar magnitude and filters out normal random fluctuation more effectively than an arbitrary $5,000 cutoff",
+        "B": "Lower the investigation threshold to $3,000 or 3% and add a 'trend rule' — investigate any variance that recurs in the same direction for three consecutive months regardless of magnitude, catching the 8% of process problems that slipped below the old threshold while the trend rule addresses the order-splitting gaming by flagging patterns across months",
+        "C": "Maintain the $5,000/5% threshold but require managers to explain and document any split transactions that collectively exceed the threshold — this addresses the gaming behavior directly without overhauling a policy that successfully identified 92% of variance-driven investigations, and the $28,000 in investigation time on false positives is an acceptable cost of an effective control system",
+        "D": "Replace the uniform threshold with a risk-based tiered system — critical cost categories (materials, labor) get a $2,500/3% threshold, secondary categories (supplies, utilities) get the existing $5,000/5%, and non-critical categories get a $10,000/10% threshold, focusing investigation resources where process failures have the highest financial and operational impact"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-BD-057",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.057 budget committee role",
+      "difficulty": "Difficult",
+      "stem": "Harrowgate Industries' CEO, Patricia Owens, must decide the future of the company's budget committee before the next planning cycle. For five years, the committee — composed of senior managers from sales, production, finance, and HR — has reviewed and approved departmental budgets. The committee mee",
+      "choices": {
+        "A": "Adopt Proposal 1 — expanded committee authority aligns with COSO Principle 14 (communicates relevant information internally) by giving managers formal oversight of resource allocation decisions that affect their operations, outweighing the $32,000 and 4-week cost",
+        "B": "Adopt Proposal 2 — the $48,000 annual savings and 10-day timeline represent the most efficient use of organizational resources, and the finance department has the technical expertise to evaluate budget submissions without committee deliberation",
+        "C": "Retain the current structure under Proposal 3 — the budget committee already provides cross-functional coordination, and tightening variance thresholds improves accountability without the implementation cost or cultural disruption of restructuring the governance process",
+        "D": "Adopt Proposal 1 for capital spending pre-authorization only (not headcount), implement Proposal 3's tighter variance thresholds, and retain the committee for departmental budget review — a hybrid approach that captures specific improvements without full restructuring risk"
+      },
+      "correctChoice": "C"
+    },
+    {
+      "qid": "P1-BD-026",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.026 direct labor budget calculation",
+      "difficulty": "Very Difficult",
+      "stem": "Ashfield Manufacturing's COO has proposed investing $1,200,000 in robotic welding cells to replace 18 of the company's 42 welding positions. Each robotic cell costs $200,000 (six cells needed), has a seven-year useful life with $30,000 annual maintenance per cell, and can weld 12,000 units annually ",
+      "choices": {
+        "A": "Recommend the automation investment — annual labor savings of $1,365,804 (18 welders × $75,878) exceed the annual cost of ownership ($200,000 depreciation + $180,000 maintenance - $95,000 tax shield = $285,000) by $1,080,804, producing a payback period of approximately 1.1 years; the craft-welding concern is a marketing message that can be addressed through customer communication, and the 15% of complex welds can remain with the 24 retained welders",
+        "B": "Recommend against full automation and instead propose a hybrid approach: invest in 3 robotic cells ($600,000) to handle 36,000 units of standard welds annually, retain all 42 welders but redeploy 9 from standard to complex welding (improving complex-weld quality through specialization), and reduce overtime by 30% — this captures 50% of the automation savings ($682,902 annual labor saving on standard welds vs. $105,000 annual robotic cell cost + $90,000 maintenance - $48,750 tax shield = $146,250 net cost, yielding $536,652 net annual benefit) without triggering severance costs, union conflict, or customer concerns about craftsmanship abandonment",
+        "C": "Recommend the automation investment but phase it over four years — install 2 cells in Year 1 ($400,000, replace 6 welders through attrition rather than layoffs), 2 cells in Year 2, and the final 2 cells in Year 4 — avoiding the $236,772 in severance costs, giving the sales team time to transition customer perception, and aligning the investment with the natural workforce attrition rate of approximately 4 welders per year",
+        "D": "Recommend against the investment — the qualitative factors (union relationship damage, customer perception of hand-crafted quality, and the 15% of complex welds that automation cannot handle) outweigh the quantitative savings; the $1,365,804 in labor savings is significant but Ashfield's competitive advantage is its skilled workforce and reputation for quality, not cost minimization"
+      },
+      "correctChoice": "B"
+    },
+    {
+      "qid": "P1-BD-058",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.058 budget committee role",
+      "difficulty": "Difficult",
+      "stem": "Ivorycrest Corporation's CEO, Patricia Owens, must restructure the annual budget process after last year's cycle took 14 weeks and produced budgets that three department heads publicly disputed at the board presentation. The current structure: each department submits its budget to the CFO, who conso",
+      "choices": {
+        "A": "Adopt Model 1 (budget committee) — cross-functional review by senior managers from all major functions ensures departmental budgets align with overall company strategy, prevents individual departments from optimizing locally at the expense of corporate goals, and the 3 additional weeks are an acceptable investment in budget quality given last year's disputes",
+        "B": "Adopt Model 2 (finance-centralized) — the finance department has the technical expertise to build internally consistent budgets, the 8-week timeline represents a 43% process efficiency gain, and removing departmental negotiation eliminates the disputes that embarrassed the company at last year's board presentation",
+        "C": "Adopt Model 3 (bottom-up participative) — giving departments full budget ownership increases managerial buy-in and accountability, the 14-week timeline is the cost of participation, and last year's disputes indicate the departments care about their budgets, which is a positive engagement signal",
+        "D": "Adopt a hybrid: finance prepares the initial budget draft (Model 2 approach), the budget committee reviews and adjusts for cross-functional alignment (Model 1), and department heads have final sign-off authority on their sections — combining technical accuracy, coordination, and ownership"
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-BD-083",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.083 budget revision mid year",
+      "difficulty": "Difficult",
+      "stem": "Ashworth Materials' VP Sales David Okonkwo reports Q3 committed customer orders at fixed prices total $1.8 million. However, titanium — Ashworth's primary raw material — surged 35% in price after a supply disruption. VP Production Lena Hart insists efficiency standards remain valid and managers shou",
+      "choices": {
+        "A": "Pass the raw material price variance to cost of goods sold — adjusting the spending budget for the new input cost — but maintain the original efficiency and usage standards. This isolates the uncontrollable price component from controllable operational performance.",
+        "B": "Grant full budget relief to both sales and production. Revise the COGS budget upward by the full 35% price increase and relax all efficiency standards for Q3 to protect manager morale.",
+        "C": "Hold all managers to the original budget without any adjustment. Record the raw material price increase as a single corporate-level uncontrollable variance, separate from divisional performance reports.",
+        "D": "Freeze all non-essential operating expenditures for Q3 and redirect freed cash to purchase titanium on the spot market. Avoid any budget revision entirely."
+      },
+      "correctChoice": "A"
+    },
+    {
+      "qid": "P1-BD-079",
+      "pack": "Pack_D",
+      "section": "BD",
+      "labeledCognitiveLevel": "Evaluate",
+      "topic": "B.079 flexible budget at actual activity",
+      "difficulty": "Difficult",
+      "stem": "Solaris Manufacturing's Q1 flexible budget performance report shows a $15,000 favorable variance. The department's cost formula is $58,000 fixed plus $4.50 per machine hour. Actual activity: 11,200 machine hours, actual overhead: $103,400. Production Manager Elena Vargas argues the variance is misle",
+      "choices": {
+        "A": "Accept the $15,000 favorable variance as reported. A favorable variance indicates performance exceeded expectations, and investigating it wastes management time.",
+        "B": "Investigate only the overtime spending on the legacy product line. The production manager's volume miscalibration claim is self-serving.",
+        "C": "Defer investigation until Q2 results are available. A single quarter's variance could be random; trend analysis across multiple periods provides more reliable evidence.",
+        "D": "Recalibrate the flexible budget volume assumption for the new product line's actual setup hours, then decompose the remaining variance into spending and efficiency components to isolate the overtime impact."
+      },
+      "correctChoice": "D"
+    }
+  ]
+}

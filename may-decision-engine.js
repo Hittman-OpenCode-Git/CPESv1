@@ -23,6 +23,9 @@ const MayDecisionEngine = (function() {
     if (!readiness) return null;
     var score = readiness.readinessScore;
     var band = readiness.band;
+    // MAY-013: Exclude "Not enough data" — a learner with no data is unassessed, not critically low.
+    // D10 is the correct response for truly empty profiles.
+    if (band === 'Not enough data') return null;
     if ((score !== null && score < 50) || band === 'Recovery needed') {
       return {
         decisionId: 'D1',
@@ -42,13 +45,13 @@ const MayDecisionEngine = (function() {
     return null;
   }
 
-  // D2: High-Priority Weakness — Tier 1 intervention exists
-  function _ruleCriticalWeakness(interventions) {
+  // MAY-012: Enhanced D2 — check if D4 also applies and add as secondary action
+  function _ruleCriticalWeakness(interventions, profile, readiness) {
     if (!interventions || !interventions.queue || interventions.queue.length === 0) return null;
     var top = interventions.topAction;
     if (!top) return null;
     if (top.tier === 1) {
-      return {
+      var decision = {
         decisionId: 'D2',
         action: 'remediation',
         coachingMode: 'QUIZ',
@@ -64,21 +67,52 @@ const MayDecisionEngine = (function() {
           triggeringRule: 'D2'
         }
       };
+
+      // MAY-012: Surface D4 as secondary action when exam is approaching
+      if (profile && profile.examPlan) {
+        var ep = profile.examPlan;
+        if (ep.hasScheduledExam && ep.daysUntilExam !== null && ep.daysUntilExam <= 30) {
+          var band = readiness ? readiness.band : null;
+          if (band === 'Developing' || band === 'Recovery needed') {
+            decision.secondaryAction = {
+              decisionId: 'D4',
+              action: 'study_plan',
+              coachingMode: 'STUDY_PLAN',
+              priority: 'secondary',
+              topic: null,
+              rationale: 'After addressing critical weaknesses: exam is ' + ep.daysUntilExam + ' days away with ' + (band || 'developing') + ' readiness. Consider focused review.',
+              evidence: {
+                daysUntilExam: ep.daysUntilExam,
+                readinessBand: band,
+                triggeringRule: 'D4-secondary'
+              }
+            };
+          }
+        }
+      }
+
+      return decision;
     }
     return null;
   }
 
-  // D3: Repeated Weakness with Instability — weak + unstable + declining
+  // D3: Repeated Weakness with Instability — weak + declining + sufficient attempts
+  // MAY-014: Removed stability<50 check because the profile builder (MayLearnerProfile)
+  // computes stability from getLearnerIntelligence() — a different algorithm than the
+  // readiness engine. Accuracy<60 + declining direction + >=5 attempts is sufficient to
+  // identify the pattern SOCRATIC coaching targets: systematic misunderstanding, not
+  // random error. The topic's presence in profile.weaknesses already confirms low performance.
   function _ruleRepeatedUnstable(profile, interventions) {
     if (!profile) return null;
     var weaknesses = profile.weaknesses || [];
     if (weaknesses.length === 0) return null;
-    // Find weakest topic by accuracy that also has declining trend + low stability
+    // Find weakest topic by accuracy that also has declining trend + sufficient attempts
     var candidate = null;
     weaknesses.forEach(function(w) {
       var ml = profile.masteryLevels && profile.masteryLevels[w.topic];
       if (!ml) return;
-      if (ml.stability !== null && ml.stability < 50 &&
+      // MAY-014: Use accuracy<60 + declining + >=5 attempts (removed stability<50 check)
+      if ((ml.accuracy || 0) < 60 &&
           ml.attempts >= 5 && ml.direction === 'declining') {
         if (!candidate || (ml.accuracy || 0) < (candidate.mlAccuracy || 100)) {
           candidate = {
@@ -98,7 +132,7 @@ const MayDecisionEngine = (function() {
       coachingMode: 'SOCRATIC',
       priority: 'high',
       topic: candidate.topic,
-      rationale: 'Repeated errors on ' + candidate.topic + ' with unstable, declining performance (accuracy: ' + (candidate.mlAccuracy || '?') + '%, stability: ' + (candidate.mlStability || '?') + '). Socratic questioning targets process-level misunderstanding.',
+      rationale: 'Repeated errors on ' + candidate.topic + ' with declining performance (accuracy: ' + (candidate.mlAccuracy || '?') + '%, ' + candidate.mlAttempts + ' attempts). Socratic questioning targets systematic process-level misunderstanding.',
       evidence: {
         accuracy: candidate.mlAccuracy,
         stability: candidate.mlStability,
@@ -218,7 +252,8 @@ const MayDecisionEngine = (function() {
       var ps = readiness.perSection[sec];
       if (ps && ps.band !== 'Not enough data') dataSections++;
     });
-    if (dataSections < 4) {
+    // CAL-01 (MAY-019): Require at least 1 section with data so D10 handles zero-data profiles.
+    if (dataSections < 4 && dataSections > 0) {
       return {
         decisionId: 'D8',
         action: 'exploratory',
@@ -306,7 +341,7 @@ const MayDecisionEngine = (function() {
     result = _ruleReadinessCritical(readiness);
     if (result) return _attachMeta(result);
 
-    result = _ruleCriticalWeakness(interventions);
+    result = _ruleCriticalWeakness(interventions, profile, readiness);
     if (result) return _attachMeta(result);
 
     result = _ruleRepeatedUnstable(profile, interventions);
@@ -315,13 +350,15 @@ const MayDecisionEngine = (function() {
     result = _ruleExamApproaching(profile, readiness);
     if (result) return _attachMeta(result);
 
+    // CAL-02 (MAY-019): D7 before D5 — fragile knowledge (Tier 3) is more specific
+    // than general declining trend and should be checked first.
+    result = _ruleFragileKnowledge(interventions);
+    if (result) return _attachMeta(result);
+
     result = _ruleDecliningTrends(profile);
     if (result) return _attachMeta(result);
 
     result = _ruleEmergingWeakness(interventions);
-    if (result) return _attachMeta(result);
-
-    result = _ruleFragileKnowledge(interventions);
     if (result) return _attachMeta(result);
 
     result = _ruleSectionGap(readiness);
@@ -336,7 +373,7 @@ const MayDecisionEngine = (function() {
 
   function _attachMeta(decision) {
     decision._meta = {
-      decisionEngineVersion: 'MAY006-1.0',
+      decisionEngineVersion: 'MAY019-1.0',
       computedAt: new Date().toISOString()
     };
     return decision;

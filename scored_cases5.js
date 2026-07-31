@@ -635,12 +635,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Low capital requirements allow new competitors to enter easily"
                 ],
                 "RightItems": [
-                    "Threat of substitutes",
-                    "Bargaining power of suppliers",
-                    "Bargaining power of buyers",
-                    "Threat of new entrants",
-                    "Intensity of competitive rivalry"
-                ],
+    "Bargaining power of suppliers",
+    "Threat of new entrants",
+    "Threat of substitutes",
+    "Bargaining power of buyers",
+    "Intensity of competitive rivalry"
+],
                 "ItemID": "CBQ5-B1-Q2",
                 "CognitiveLevel": "Analyze",
                 "CalculationComplexity": "None",
@@ -1142,12 +1142,12 @@ const ENHANCED_CASE_BASE5 = [
                     "E-commerce Division — manager controls revenue, costs, and all technology investment decisions"
                 ],
                 "RightItems": [
-                    "Cost center — accountable for cost control and operational efficiency only",
-                    "Profit center — accountable for both revenue and expenses, but not capital investment decisions",
-                    "Investment center — accountable for revenue, expenses, and return on invested capital",
-                    "Investment center — accountable for all financial results including technology ROI",
-                    "Revenue center — accountable for sales generation only"
-                ],
+    "Profit center — accountable for both revenue and expenses, but not capital investment decisions",
+    "Investment center — accountable for all financial results including technology ROI",
+    "Revenue center — accountable for sales generation only",
+    "Investment center — accountable for revenue, expenses, and return on invested capital",
+    "Cost center — accountable for cost control and operational efficiency only"
+],
                 "Correct": {
                     "Distribution Center — manager controls costs but does not set prices or make capital decisions": "Cost center — accountable for cost control and operational efficiency only",
                     "Neighborhood Store #12 — manager controls both revenue and costs; capital equipment decisions made centrally": "Profit center — accountable for both revenue and expenses, but not capital investment decisions",
@@ -1190,12 +1190,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Residual Income (RI) assuming 10% required rate of return"
                 ],
                 "RightItems": [
-                    "ROI = 14.6% — $1,240,000 / $8,500,000",
-                    "Margin = 12.7% — $1,240,000 / $9,800,000",
-                    "Turnover = 1.15 — $9,800,000 / $8,500,000",
-                    "RI = $390,000 — $1,240,000 − (10% × $8,500,000)",
-                    "ROI = 10.2% — incorrect calculation using net income"
-                ],
+    "RI = $390,000 — $1,240,000 − (10% × $8,500,000)",
+    "ROI = 14.6% — $1,240,000 / $8,500,000",
+    "ROI = 10.2% — incorrect calculation using net income",
+    "Margin = 12.7% — $1,240,000 / $9,800,000",
+    "Turnover = 1.15 — $9,800,000 / $8,500,000"
+],
                 "Correct": {
                     "Return on Investment (ROI) = Operating Income / Average Operating Assets": "ROI = 14.6% — $1,240,000 / $8,500,000",
                     "Margin ratio = Operating Income / Net Revenue": "Margin = 12.7% — $1,240,000 / $9,800,000",
@@ -1238,12 +1238,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Aligns manager decisions with company-wide value creation when the same required rate is used"
                 ],
                 "RightItems": [
-                    "ROI — a relative measure that facilitates comparison across centers",
-                    "ROI — a potential disadvantage as managers may maximize their ROI rather than total company value",
-                    "RI — an absolute dollar measure that shows how much value was added above the cost of capital",
-                    "RI — aligns managerial decisions with company-wide goal congruence when required rate equals cost of capital",
-                    "Net Income — the simplest performance metric"
-                ],
+    "ROI — a potential disadvantage as managers may maximize their ROI rather than total company value",
+    "RI — an absolute dollar measure that shows how much value was added above the cost of capital",
+    "ROI — a relative measure that facilitates comparison across centers",
+    "Net Income — the simplest performance metric",
+    "RI — aligns managerial decisions with company-wide goal congruence when required rate equals cost of capital"
+],
                 "Correct": {
                     "Expresses performance as a percentage, enabling comparison across stores of different sizes": "ROI — a relative measure that facilitates comparison across centers",
                     "May cause managers to reject profitable projects that earn less than the division's current ROI": "ROI — a potential disadvantage as managers may maximize their ROI rather than total company value",
@@ -1287,12 +1287,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Project Residual Income: $130,000 − (10% × $1,000,000) = $30,000"
                 ],
                 "RightItems": [
-                    "If evaluated on ROI, the manager may REJECT this project because 13.0% is below the current division ROI of 23.3%",
-                    "The project ROI of 13.0% exceeds the 10% cost of capital, so it creates economic value",
-                    "The blended ROI decreases from 23.3% to 21.0%, which may discourage the manager from accepting",
-                    "RI is POSITIVE at $30,000, meaning the project adds value above the required return",
-                    "If evaluated on RI, the manager would REJECT this project because it reduces overall value"
-                ],
+    "RI is POSITIVE at $30,000, meaning the project adds value above the required return",
+    "The blended ROI decreases from 23.3% to 21.0%, which may discourage the manager from accepting",
+    "If evaluated on ROI, the manager may REJECT this project because 13.0% is below the current division ROI of 23.3%",
+    "If evaluated on RI, the manager would REJECT this project because it reduces overall value",
+    "The project ROI of 13.0% exceeds the 10% cost of capital, so it creates economic value"
+],
                 "Correct": {
                     "Current E-commerce ROI: $980,000 / $4,200,000 = 23.3%": "If evaluated on ROI, the manager may REJECT this project because 13.0% is below the current division ROI of 23.3%",
                     "Proposed project ROI: $130,000 / $1,000,000 = 13.0%": "The project ROI of 13.0% exceeds the 10% cost of capital, so it creates economic value",
@@ -1335,12 +1335,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Employee development and innovation capability"
                 ],
                 "RightItems": [
-                    "Financial — ROI and Residual Income measure investment center profitability",
-                    "Customer — Net Promoter Score and market share track customer loyalty and competitive position",
-                    "Internal Process — defect rates and cycle time measure operational efficiency",
-                    "Learning and Growth — employee training hours and certification rates measure capability development",
-                    "Strategic — revenue growth rate measures market expansion"
-                ],
+    "Strategic — revenue growth rate measures market expansion",
+    "Internal Process — defect rates and cycle time measure operational efficiency",
+    "Customer — Net Promoter Score and market share track customer loyalty and competitive position",
+    "Financial — ROI and Residual Income measure investment center profitability",
+    "Learning and Growth — employee training hours and certification rates measure capability development"
+],
                 "Correct": {
                     "Financial performance of investment centers": "Financial — ROI and Residual Income measure investment center profitability",
                     "Customer satisfaction and market position": "Customer — Net Promoter Score and market share track customer loyalty and competitive position",
@@ -1506,12 +1506,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Managing the showroom sales team and running digital advertising campaigns"
                 ],
                 "RightItems": [
-                    "Inbound Logistics — activities related to receiving, storing, and managing inputs",
-                    "Operations — activities that transform inputs into finished products",
-                    "Outbound Logistics — activities that collect, store, and distribute finished goods to customers",
-                    "Marketing and Sales — activities that make customers aware of products and facilitate purchases",
-                    "Service — activities that maintain product value after purchase"
-                ],
+    "Operations — activities that transform inputs into finished products",
+    "Inbound Logistics — activities related to receiving, storing, and managing inputs",
+    "Service — activities that maintain product value after purchase",
+    "Outbound Logistics — activities that collect, store, and distribute finished goods to customers",
+    "Marketing and Sales — activities that make customers aware of products and facilitate purchases"
+],
                 "Correct": {
                     "Negotiating with lumber suppliers and managing raw material inventory levels": "Inbound Logistics — activities related to receiving, storing, and managing inputs",
                     "Operating CNC cutting machines and managing the furniture assembly line": "Operations — activities that transform inputs into finished products",
@@ -1552,12 +1552,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Designing new furniture collections and improving manufacturing processes"
                 ],
                 "RightItems": [
-                    "Human Resource Management — recruiting, training, and developing employees",
-                    "Technology Development — systems, software, and process innovation to support operations",
-                    "Procurement — sourcing and purchasing inputs including materials, equipment, and services",
-                    "Technology Development — research and development for new products and process design",
-                    "Firm Infrastructure — general management, legal, accounting, and finance"
-                ],
+    "Procurement — sourcing and purchasing inputs including materials, equipment, and services",
+    "Firm Infrastructure — general management, legal, accounting, and finance",
+    "Technology Development — research and development for new products and process design",
+    "Human Resource Management — recruiting, training, and developing employees",
+    "Technology Development — systems, software, and process innovation to support operations"
+],
                 "Correct": {
                     "Managing employee recruitment, training, and performance evaluation processes": "Human Resource Management — recruiting, training, and developing employees",
                     "Developing the ERP system and maintaining the company website and e-commerce platform": "Technology Development — systems, software, and process innovation to support operations",
@@ -1599,12 +1599,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Shift advertising spend from print catalogs to digital channels; reduce showroom square footage"
                 ],
                 "RightItems": [
-                    "Inbound Logistics — JIT reduces raw material holding costs and improves inventory turnover",
-                    "Operations — Six Sigma reduces waste and rework costs by eliminating defects at the source",
-                    "Outbound Logistics — automation reduces labor costs; zone routing reduces fuel and driver costs",
-                    "Marketing and Sales — digital advertising is more cost-effective; smaller showroom reduces occupancy costs",
-                    "Service — self-service warranty portal reduces call center staffing requirements"
-                ],
+    "Marketing and Sales — digital advertising is more cost-effective; smaller showroom reduces occupancy costs",
+    "Service — self-service warranty portal reduces call center staffing requirements",
+    "Inbound Logistics — JIT reduces raw material holding costs and improves inventory turnover",
+    "Outbound Logistics — automation reduces labor costs; zone routing reduces fuel and driver costs",
+    "Operations — Six Sigma reduces waste and rework costs by eliminating defects at the source"
+],
                 "Correct": {
                     "Implement just-in-time (JIT) delivery from lumber suppliers to reduce warehousing costs by reducing raw material inventory levels": "Inbound Logistics — JIT reduces raw material holding costs and improves inventory turnover",
                     "Apply Six Sigma DMAIC methodology to reduce the defect rate from 5.2% to 2.5% in the assembly and finishing processes": "Operations — Six Sigma reduces waste and rework costs by eliminating defects at the source",
@@ -1645,12 +1645,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Kaizen (Continuous Improvement) — small, incremental improvements by all employees"
                 ],
                 "RightItems": [
-                    "Reducing defect rate from 5.2% to 2.5% using DMAIC — defining, measuring, analyzing, improving, and controlling",
-                    "Comparing Heritage's $38.5M operations cost to the $35.0M industry benchmark to identify the 10% gap",
-                    "Redesigning the entire order-to-cash process from scratch to eliminate non-value-added steps and achieve radical improvement",
-                    "Empowering assembly line workers to suggest and implement small daily improvements to workstation layout and workflow",
-                    "Implementing an ERP system to integrate all business functions into a single platform"
-                ],
+    "Empowering assembly line workers to suggest and implement small daily improvements to workstation layout and workflow",
+    "Reducing defect rate from 5.2% to 2.5% using DMAIC — defining, measuring, analyzing, improving, and controlling",
+    "Implementing an ERP system to integrate all business functions into a single platform",
+    "Comparing Heritage's $38.5M operations cost to the $35.0M industry benchmark to identify the 10% gap",
+    "Redesigning the entire order-to-cash process from scratch to eliminate non-value-added steps and achieve radical improvement"
+],
                 "Correct": {
                     "Six Sigma — data-driven methodology for reducing process variation and defects": "Reducing defect rate from 5.2% to 2.5% using DMAIC — defining, measuring, analyzing, improving, and controlling",
                     "Benchmarking — comparing performance metrics to industry best practices": "Comparing Heritage's $38.5M operations cost to the $35.0M industry benchmark to identify the 10% gap",
@@ -1692,12 +1692,12 @@ const ENHANCED_CASE_BASE5 = [
                     "CNC cutting operations — machine cost is similar across competitors; no significant differentiation"
                 ],
                 "RightItems": [
-                    "Core competency — invest in retaining and strengthening this capability; it provides competitive advantage",
-                    "Outsource or automate — non-core activity that can be performed more efficiently by specialized providers",
-                    "Manage for cost efficiency — procurement costs should be minimized through competitive bidding and supplier management",
-                    "Manage for cost efficiency — operations cost must be at or below industry benchmark to remain competitive",
-                    "Divest — sell this business unit entirely"
-                ],
+    "Divest — sell this business unit entirely",
+    "Manage for cost efficiency — operations cost must be at or below industry benchmark to remain competitive",
+    "Core competency — invest in retaining and strengthening this capability; it provides competitive advantage",
+    "Manage for cost efficiency — procurement costs should be minimized through competitive bidding and supplier management",
+    "Outsource or automate — non-core activity that can be performed more efficiently by specialized providers"
+],
                 "Correct": {
                     "Custom furniture design and hand-finishing techniques — competitors cannot replicate; customers pay premium pricing": "Core competency — invest in retaining and strengthening this capability; it provides competitive advantage",
                     "Payroll processing and basic accounting — multiple third-party providers can perform at lower cost": "Outsource or automate — non-core activity that can be performed more efficiently by specialized providers",
@@ -1903,13 +1903,13 @@ const ENHANCED_CASE_BASE5 = [
                     "Control - the team monitors the improved process to sustain gains"
                 ],
                 "RightItems": [
-                    "Documenting that the brake caliper defect rate is 6,210 ppm and setting a target of reducing it to 3,100 ppm within 12 months",
-                    "Collecting 90 days of production data showing that 85% of defects originate in the machining center's tolerance drift",
-                    "Using a cause-and-effect diagram and hypothesis testing to determine that coolant temperature variation is the primary root cause of bore diameter defects",
-                    "Installing temperature control sensors on the machining center and implementing a statistical process control (SPC) chart for real-time bore diameter monitoring",
-                    "Implementing a weekly SPC review meeting and a monthly audit to ensure the temperature control system remains calibrated and operators follow the new procedure",
-                    "Designing a new brake caliper model with different specifications"
-                ],
+    "Collecting 90 days of production data showing that 85% of defects originate in the machining center's tolerance drift",
+    "Designing a new brake caliper model with different specifications",
+    "Implementing a weekly SPC review meeting and a monthly audit to ensure the temperature control system remains calibrated and operators follow the new procedure",
+    "Documenting that the brake caliper defect rate is 6,210 ppm and setting a target of reducing it to 3,100 ppm within 12 months",
+    "Installing temperature control sensors on the machining center and implementing a statistical process control (SPC) chart for real-time bore diameter monitoring",
+    "Using a cause-and-effect diagram and hypothesis testing to determine that coolant temperature variation is the primary root cause of bore diameter defects"
+],
                 "Correct": {
                     "Define - the team defines the problem, project scope, and customer requirements": "Documenting that the brake caliper defect rate is 6,210 ppm and setting a target of reducing it to 3,100 ppm within 12 months",
                     "Measure - the team collects baseline data and measures current process performance": "Collecting 90 days of production data showing that 85% of defects originate in the machining center's tolerance drift",
@@ -1954,12 +1954,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Customer warranty claims for field failures costing $580,000 per quarter"
                 ],
                 "RightItems": [
-                    "Prevention cost - costs incurred to prevent defects from occurring in the first place; proactive spending that reduces all other quality costs",
-                    "Appraisal cost - costs of measuring, inspecting, and testing products to ensure they meet quality standards",
-                    "Internal failure cost - costs of defects discovered BEFORE the product reaches the customer; includes scrap, rework, and downtime",
-                    "External failure cost - costs of defects discovered AFTER the product reaches the customer; includes warranty claims, returns, and lost reputation",
-                    "Design cost - costs of developing new products and features"
-                ],
+    "Appraisal cost - costs of measuring, inspecting, and testing products to ensure they meet quality standards",
+    "Prevention cost - costs incurred to prevent defects from occurring in the first place; proactive spending that reduces all other quality costs",
+    "External failure cost - costs of defects discovered AFTER the product reaches the customer; includes warranty claims, returns, and lost reputation",
+    "Internal failure cost - costs of defects discovered BEFORE the product reaches the customer; includes scrap, rework, and downtime",
+    "Design cost - costs of developing new products and features"
+],
                 "Correct": {
                     "Employee quality training and certification programs costing $180,000 per quarter": "Prevention cost - costs incurred to prevent defects from occurring in the first place; proactive spending that reduces all other quality costs",
                     "Inline quality checks during production costing $210,000 per quarter": "Appraisal cost - costs of measuring, inspecting, and testing products to ensure they meet quality standards",
@@ -2319,12 +2319,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Dual pricing"
                 ],
                 "RightItems": [
-                    "An active external market exists and divisions operate as independent profit centers",
-                    "No reliable market price exists and company wants simplicity in administration",
-                    "Divisions have equal bargaining power and management encourages autonomy",
-                    "Divisions have conflicting objectives and corporate wants goal congruence",
-                    "Division has no excess capacity and full external market demand exists"
-                ],
+    "Divisions have equal bargaining power and management encourages autonomy",
+    "Division has no excess capacity and full external market demand exists",
+    "Divisions have conflicting objectives and corporate wants goal congruence",
+    "An active external market exists and divisions operate as independent profit centers",
+    "No reliable market price exists and company wants simplicity in administration"
+],
                 "ItemID": "CBQ5-D3-Q3",
                 "CognitiveLevel": "Analyze",
                 "CalculationComplexity": "None",
@@ -2591,11 +2591,11 @@ const ENHANCED_CASE_BASE5 = [
                     "Implementation Standards"
                 ],
                 "RightItems": [
-                    "Define the characteristics and capabilities required for internal audit activities and individuals",
-                    "Describe the nature of internal audit work and quality criteria for measuring performance",
-                    "Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting",
-                    "Establish the ethical requirements for internal audit professionals including integrity and confidentiality"
-                ],
+    "Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting",
+    "Define the characteristics and capabilities required for internal audit activities and individuals",
+    "Describe the nature of internal audit work and quality criteria for measuring performance",
+    "Establish the ethical requirements for internal audit professionals including integrity and confidentiality"
+],
                 "ItemID": "CBQ5-E1-Q1",
                 "CognitiveLevel": "Understand",
                 "CalculationComplexity": "None",
@@ -2928,12 +2928,12 @@ const ENHANCED_CASE_BASE5 = [
                     "DDoS (distraction attack)"
                 ],
                 "RightItems": [
-                    "The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation",
-                    "The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement",
-                    "The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses",
-                    "A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment",
-                    "A vulnerability scanning tool that identifies missing security patches across network devices and servers"
-                ],
+    "The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses",
+    "The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation",
+    "A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment",
+    "The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement",
+    "A vulnerability scanning tool that identifies missing security patches across network devices and servers"
+],
                 "ItemID": "CBQ5-E2-Q1",
                 "CognitiveLevel": "Understand",
                 "CalculationComplexity": "None",
@@ -3624,12 +3624,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Veracity"
                 ],
                 "RightItems": [
-                    "The massive scale of data generated from 12 million daily POS transactions and 4 million customer profiles",
-                    "The high speed of data generation requiring real-time processing of 50,000 clickstream events per minute",
-                    "The diverse data formats including structured POS data, semi-structured RFID feeds, and unstructured social media text",
-                    "The uncertainty and quality concerns arising from 22% incomplete profiles, 3% RFID read failures, and unreconciled cost data",
-                    "The business value derived from analyzing data to create competitive advantage and improve decision-making"
-                ],
+    "The uncertainty and quality concerns arising from 22% incomplete profiles, 3% RFID read failures, and unreconciled cost data",
+    "The diverse data formats including structured POS data, semi-structured RFID feeds, and unstructured social media text",
+    "The massive scale of data generated from 12 million daily POS transactions and 4 million customer profiles",
+    "The business value derived from analyzing data to create competitive advantage and improve decision-making",
+    "The high speed of data generation requiring real-time processing of 50,000 clickstream events per minute"
+],
                 "ItemID": "CBQ5-F1-Q1",
                 "CognitiveLevel": "Understand",
                 "CalculationComplexity": "None",
@@ -3986,12 +3986,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Attended vs unattended mode"
                 ],
                 "RightItems": [
-                    "RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment",
-                    "RPA bots interact with applications through the same user interface as human users, requiring no system integration changes",
-                    "Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member",
-                    "Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention",
-                    "RPA bots use machine learning algorithms to self-optimize process execution over time based on historical patterns"
-                ],
+    "RPA bots interact with applications through the same user interface as human users, requiring no system integration changes",
+    "RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment",
+    "Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention",
+    "Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member",
+    "RPA bots use machine learning algorithms to self-optimize process execution over time based on historical patterns"
+],
                 "ItemID": "CBQ5-F2-Q1",
                 "CognitiveLevel": "Understand",
                 "CalculationComplexity": "None",
@@ -4317,12 +4317,12 @@ const ENHANCED_CASE_BASE5 = [
                     "Consensus mechanism"
                 ],
                 "RightItems": [
-                    "A shared database across network participants that eliminates reconciliation between separate organizational systems",
-                    "Data permanence that prevents retroactive alteration of records, strengthening audit trail reliability",
-                    "Self-executing code that automatically triggers actions such as payment release when predefined delivery conditions are met",
-                    "A validation process where network participants agree on transaction validity before records are added to the ledger",
-                    "A cryptographic technique that encrypts all transaction data so only authorized participants can read the contents"
-                ],
+    "A validation process where network participants agree on transaction validity before records are added to the ledger",
+    "Self-executing code that automatically triggers actions such as payment release when predefined delivery conditions are met",
+    "A shared database across network participants that eliminates reconciliation between separate organizational systems",
+    "A cryptographic technique that encrypts all transaction data so only authorized participants can read the contents",
+    "Data permanence that prevents retroactive alteration of records, strengthening audit trail reliability"
+],
                 "ItemID": "CBQ5-F3-Q1",
                 "CognitiveLevel": "Understand",
                 "CalculationComplexity": "None",

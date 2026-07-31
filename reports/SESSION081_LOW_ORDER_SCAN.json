@@ -1,0 +1,238 @@
+{
+  "scan_date": "2026-07-30",
+  "session": "SESSION081 Stage 1 (Planner)",
+  "file_scanned": "pack_d_corrected.js",
+  "methodology": "Dual-block aware: Block 1 (metadata: QID, CognitiveLevel) paired with Block 2 (content: Section, Stem, Difficulty)",
+  "total_p1_bd_items": 100,
+  "total_section_b_items": 99,
+  "section_b_range": "P1-BD-001 through P1-BD-099 (BD-100 is Section C)",
+  "original_range_001_075": {
+    "total": 75,
+    "high_order_count": 59,
+    "low_order_count": 16,
+    "high_order_pct": "78.7%"
+  },
+  "expansion_range_076_099": {
+    "total": 24,
+    "high_order_count": 24,
+    "low_order_count": 0,
+    "note": "All 24 items added beyond the original 75 are already at Analyze/Evaluate level"
+  },
+  "user_claim_verification": {
+    "user_claimed_total": 75,
+    "actual_section_b_total": 99,
+    "user_claimed_upgraded": 63,
+    "actual_upgraded_count": 83,
+    "user_claimed_pct": "84.0%",
+    "actual_pct": "83.8%",
+    "original_75_upgraded": 59,
+    "original_75_pct": "78.7%",
+    "discrepancy_note": "User states 63/75 (84%) already upgraded. Actual Section B has 99 items (not 75). In the original 001-075 range: 59 are high-order (78.7%). The additional 24 items (BD-076 through BD-099) are ALL high-order (added during campaign)."
+  },
+  "low_order_remaining": [
+    {
+      "qid": "P1-BD-030",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Easy",
+      "difficultyScore": 1,
+      "questionState": "Certified",
+      "topic": "B.031 standard cost setting basis",
+      "stem_preview": "Frostvale sets standard costs for direct materials based on "
+    },
+    {
+      "qid": "P1-BD-031",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Easy",
+      "difficultyScore": 1,
+      "questionState": "Certified",
+      "topic": "B.032 standard cost setting basis",
+      "stem_preview": "Greybridge sets standard costs for direct materials based on"
+    },
+    {
+      "qid": "P1-BD-032",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Easy",
+      "difficultyScore": 1,
+      "questionState": "Certified",
+      "topic": "B.033 standard cost setting basis",
+      "stem_preview": "Hartland sets standard costs for direct materials based on e"
+    },
+    {
+      "qid": "P1-BD-033",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Easy",
+      "difficultyScore": 1,
+      "questionState": "Certified",
+      "topic": "B.034 standard cost setting basis",
+      "stem_preview": "Islewood sets standard costs for direct materials based on e"
+    },
+    {
+      "qid": "P1-BD-041",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Easy",
+      "difficultyScore": 3,
+      "questionState": "Certified",
+      "topic": "B.042 operating budget vs financial budget",
+      "stem_preview": "Quarrycrest prepares both an operating budget covering reven"
+    },
+    {
+      "qid": "P1-BD-045",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Easy",
+      "difficultyScore": 1,
+      "questionState": "Certified",
+      "topic": "B.046 time series forecasting components",
+      "stem_preview": "Umberglen analyzes historical sales data and identifies a re"
+    },
+    {
+      "qid": "P1-BD-046",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Easy",
+      "difficultyScore": 1,
+      "questionState": "Certified",
+      "topic": "B.047 time series forecasting components",
+      "stem_preview": "Vaultbrook analyzes historical sales data and identifies a r"
+    },
+    {
+      "qid": "P1-BD-047",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Easy",
+      "difficultyScore": 1,
+      "questionState": "Certified",
+      "topic": "B.048 time series forecasting components",
+      "stem_preview": "Westhollow analyzes historical sales data and identifies a r"
+    },
+    {
+      "qid": "P1-BD-048",
+      "cognitiveLevel": "Understand",
+      "difficulty": "Moderate",
+      "difficultyScore": 1,
+      "questionState": "Certified",
+      "topic": "B.049 time series forecasting components",
+      "stem_preview": "Yorkhaven analyzes historical sales data and identifies a re"
+    },
+    {
+      "qid": "P1-BD-054",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "difficultyScore": 3,
+      "questionState": "Certified",
+      "topic": "B.055 direct materials purchases budget",
+      "stem_preview": "Falconwood needs 25,000 pounds of material for production, w"
+    },
+    {
+      "qid": "P1-BD-055",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "difficultyScore": 3,
+      "questionState": "Certified",
+      "topic": "B.056 direct materials purchases budget",
+      "stem_preview": "Glenmore needs 25,000 pounds of material for production, wan"
+    },
+    {
+      "qid": "P1-BD-059",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "difficultyScore": 3,
+      "questionState": "Certified",
+      "topic": "B.060 budget committee role",
+      "stem_preview": "Kingswell forms a budget committee composed of senior manage"
+    },
+    {
+      "qid": "P1-BD-060",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "difficultyScore": 3,
+      "questionState": "Certified",
+      "topic": "B.061 budget committee role",
+      "stem_preview": "Longmeadow forms a budget committee composed of senior manag"
+    },
+    {
+      "qid": "P1-BD-061",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "difficultyScore": 3,
+      "questionState": "Certified",
+      "topic": "B.062 budget committee role",
+      "stem_preview": "Marlowe forms a budget committee composed of senior managers"
+    },
+    {
+      "qid": "P1-BD-062",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "difficultyScore": 3,
+      "questionState": "Certified",
+      "topic": "B.063 budget committee role",
+      "stem_preview": "Netherfield forms a budget committee composed of senior mana"
+    },
+    {
+      "qid": "P1-BD-069",
+      "cognitiveLevel": "Apply",
+      "difficulty": "Moderate",
+      "difficultyScore": 3,
+      "questionState": "Certified",
+      "topic": "B.070 selling and administrative expense budget",
+      "stem_preview": "Uplandview prepares a budget for fixed and variable selling "
+    }
+  ],
+  "low_order_count": 16,
+  "already_upgraded_count": 83,
+  "already_upgraded_sample": [
+    "P1-BD-001",
+    "P1-BD-002",
+    "P1-BD-003",
+    "P1-BD-004",
+    "P1-BD-005",
+    "P1-BD-006",
+    "P1-BD-007",
+    "P1-BD-008",
+    "P1-BD-009",
+    "P1-BD-010",
+    "P1-BD-011",
+    "P1-BD-012",
+    "P1-BD-013",
+    "P1-BD-014",
+    "P1-BD-015",
+    "P1-BD-016",
+    "P1-BD-017",
+    "P1-BD-018",
+    "P1-BD-019",
+    "P1-BD-020"
+  ],
+  "all_section_b_items_by_level": {
+    "Analyze": 35,
+    "Evaluate": 48,
+    "Apply": 8,
+    "Understand": 8
+  },
+  "low_order_by_topic_group": {
+    "Standard cost setting basis (rotation group)": [
+      "P1-BD-030",
+      "P1-BD-031",
+      "P1-BD-032",
+      "P1-BD-033"
+    ],
+    "Operating budget vs financial budget": [
+      "P1-BD-041"
+    ],
+    "Time series forecasting components (rotation group)": [
+      "P1-BD-045",
+      "P1-BD-046",
+      "P1-BD-047",
+      "P1-BD-048"
+    ],
+    "Direct materials purchases budget": [
+      "P1-BD-054",
+      "P1-BD-055"
+    ],
+    "Budget committee role (rotation group)": [
+      "P1-BD-059",
+      "P1-BD-060",
+      "P1-BD-061",
+      "P1-BD-062"
+    ],
+    "Selling and administrative expense budget": [
+      "P1-BD-069"
+    ]
+  }
+}

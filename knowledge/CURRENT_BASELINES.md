@@ -34,10 +34,10 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 | File | SHA-256 | MD5 | Size (bytes) | Last Modified | Provenance |
 |------|---------|-----|-------------|---------------|------------|
 | `pack_a_corrected.js` | `CAB4EFC7E7E6441A576FB9BC45007593205D54E658DB3B3F67A218811111A783` | `TBD` | TBD | 2026-07-28 ~11:45 | **S892 Pack A Final Closure.** 19 archived items replaced with newly authored Analyze/Evaluate items (Section A: 2 ASC 606/330 Analyze + Section E: 17 COSO Analyze/Evaluate across all 5 COSO components). QID: 500. Certified: **500 (100%).** Governance guard: 51/51 PASS. DL-008: 0. DL-026: 0. Rule 9: 0. AUTHORIZED — Pack A closure. Hash recaptured. |
-| `pack_b_corrected.js` | `9CE6A34571CDD9196E2C2B74500C4C925A5D3300672C5F192C8FA38440E28437` | `TBD` | 1,305,388 | 2026-07-28 10:56 | rebuild_baselines S888 — S886: 1 Section D Analyze upgrade (P1B-D-102 — ABC cost driver selection). QID: 500. Certified: 500 (unchanged). AUTHORIZED content expansion — hash recaptured. |
-| `pack_c_corrected.js` | `6B712D2A0219E2F95DBC8DA1DB82EB95B9DD5F4AB763E2F241A99A1873E93369` | `TBD` | TBD | 2026-07-28 | **S377 Baseline Reconciliation — DRIFT from S896 baseline. Authorized: S853 WAVE_A certification wave (+50 Certified: 388→438, Domains E+F). Hash recaptured by S377.** QID: 500. Certified: 438. |
-| `pack_d_corrected.js` | `2B59A6D651E7DBAF74E635E296E0219EC2605FA97706FDD3BD791C0675F53909` | `TBD` | TBD | 2026-07-28 | **S377 Baseline Reconciliation — DRIFT from S896 baseline. Authorized: S853 WAVE_A certification wave (+50 Certified: 389→439, Domains E+F). Hash recaptured by S377.** QID: 500. Certified: 439. |
-| `pack_e_corrected.js` | `E0CFD1D8F6401807E8DC692C5EE155BEA4F027EC9AFA770D8035D45E6D859CF4` | `TBD` | 1,491,706 | 2026-07-28 10:56 | rebuild_baselines S888 — S886: 2 Section C Analyze upgrades (P1E-C-044 material quantity variance comparison, P1E-C-059 operating leverage analysis). These are Pack E's first Analyze-level Section C items. QID: 540. Certified: 540 (unchanged). AUTHORIZED content expansion — hash recaptured. |
+| `pack_b_corrected.js` | `04D68A74CA59D4B8A39CC5D13FC2E1A16B12CFE18050F39D6A404BEB511956BF` | `TBD` | 1,508,181 | 2026-07-30 11:53 | **S81 rebuild_baselines.** Removed duplicate `question_state` field from P1B-E-086. QID: 500. Certified: 500. AUTHORIZED. |
+| `pack_c_corrected.js` | `D25126847632152E6A8D582E58F7139FCE4ED31BC7BACA53F39ECDB28BD2BE87` | `TBD` | 2,144,204 | 2026-07-30 | **S81 rebuild_baselines.** Authorized drift from post-S377 certification waves. QID: 500. Certified: 455 (+17). Hash recaptured. |
+| `pack_d_corrected.js` | `6952F8E9E2196C45C712B2694EF4F99AA0C4BB1928C514011D4DBA50ED06B3D3` | `TBD` | 2,418,080 | 2026-07-30 | **S81 rebuild_baselines.** Authorized drift from post-S377 certification waves. QID: 500. Certified: 456 (+17). Hash recaptured. |
+| `pack_e_corrected.js` | `D15DBC12B25DE66403C1D17824D6DD3110C986E2A6297106575E17B4B65D4360` | `TBD` | 1,788,809 | 2026-07-30 | **S81 rebuild_baselines.** QID: 545 (500 std + 40 R-series + 5 EVAL items, all Unprocessed). Certified: 540. Hash recaptured. |
 
 **rebuild_baselines S377: Pack A 500 (matched S892 baseline), Pack B 500 (matched S888 baseline), Pack C 438 (+50 from S853 WAVE_A), Pack D 439 (+50 from S853 WAVE_A), Pack E 540 (matched S888 baseline). Packs C+D hashes recaptured (authorized drift from S853 certification). Pack A: DRIFT FLAG CLEARED — §1 hash matches S892 baseline. Governance guard 51/51 PASS. Certified pool: 2,417 (Pack A 500 + Pack B 500 + Pack C 438 + Pack D 439 + Pack E 540 = 2,417). DL-035: 39 Certified Domain F items carry empty distractor EW slots — S377 IN PROGRESS.**
 
@@ -69,10 +69,10 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 |------|-----------|-----------|-----------------|-------|
 | Pack A | 500 | 500 | All 6 sections (S892 Final Closure) | 100% certified |
 | Pack B | 500 | 500 | All 6 sections | 100% certified |
-| Pack C | 500 | 438 | A, B, C, D certified; E, F partial (50 Domain E+F certified S853 WAVE_A) | +50 vs prior baseline (388→438) |
-| Pack D | 500 | 439 | A, B, C, D certified; E, F partial (50 Domain E+F certified S853 WAVE_A) | +50 vs prior baseline (389→439) |
-| Pack E | 540 | 540 | All sections, includes R-series (P1-E-R01–R40) | 100% of all items |
-| **Total** | **2,540** | **2,417** | | **95.2% certified** |
+| Pack C | 500 | 455 | A, B, C, D certified; E, F partial | rebuild_baselines — +17 from post-S377 cert waves |
+| Pack D | 500 | 456 | A, B, C, D certified; E, F partial | rebuild_baselines — +17 from post-S377 cert waves |
+| Pack E | 545 | 540 | All sections, R-series + 5 EVAL items (P1E-EVAL-001–005, Unprocessed) | rebuild_baselines — 99.1% certified |
+| **Total** | **2,545** | **2,451** | | rebuild_baselines — **96.3% certified** |
 
 **Methodology:** Direct grep (`Select-String -Pattern '"question_state": "Certified"' | Measure-Object`) on each pack file. Raw pack files are authoritative. No derived registry consumed. All 5 packs pass `node --check` and QID counts match expected totals (500/500/500/500/540). Packs B and E counts unchanged from prior baseline. Packs A, C, D updated.
 

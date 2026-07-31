@@ -1,0 +1,1256 @@
+{
+  "session": "MAY-011",
+  "timestamp": "2026-07-30T17:34:42.326Z",
+  "preflight": {},
+  "featureFlagAudit": {
+    "before": {
+      "flags": {
+        "ENABLE_CONTEXT_BUILDER": false,
+        "ENABLE_COACHING_ROUTER": false,
+        "ENABLE_EXPLAIN_MODE": false,
+        "ENABLE_QUIZ_MODE": false,
+        "ENABLE_SOCRATIC_MODE": false,
+        "ENABLE_STUDY_PLAN_MODE": false,
+        "ENABLE_LLM": false,
+        "ENABLE_LLM_COACHING": false,
+        "ENABLE_LLM_SUMMARIES": false,
+        "ENABLE_AZURE_OPENAI_PROVIDER": false,
+        "ENABLE_OPENAI_PROVIDER": false,
+        "ENABLE_ADAPTIVE_COACHING": false,
+        "ENABLE_READINESS_SCORING": false,
+        "ENABLE_ADAPTIVE_ORCHESTRATION": false,
+        "ENABLE_COACHING_MEMORY": false
+      },
+      "changeCount": 0,
+      "timestamp": "2026-07-30T17:34:42.326Z"
+    },
+    "after": {
+      "flags": {
+        "ENABLE_CONTEXT_BUILDER": false,
+        "ENABLE_COACHING_ROUTER": false,
+        "ENABLE_EXPLAIN_MODE": false,
+        "ENABLE_QUIZ_MODE": false,
+        "ENABLE_SOCRATIC_MODE": false,
+        "ENABLE_STUDY_PLAN_MODE": false,
+        "ENABLE_LLM": false,
+        "ENABLE_LLM_COACHING": false,
+        "ENABLE_LLM_SUMMARIES": false,
+        "ENABLE_AZURE_OPENAI_PROVIDER": false,
+        "ENABLE_OPENAI_PROVIDER": false,
+        "ENABLE_ADAPTIVE_COACHING": true,
+        "ENABLE_READINESS_SCORING": true,
+        "ENABLE_ADAPTIVE_ORCHESTRATION": true,
+        "ENABLE_COACHING_MEMORY": true
+      },
+      "changeCount": 12,
+      "timestamp": "2026-07-30T17:34:44.119Z"
+    },
+    "productionDefaults": {
+      "allAdaptiveFlagsOff": true,
+      "allLLMFlagsOff": true,
+      "pilotOnlyRoutesContextBuilderAndRouter": true,
+      "totalFlagsOff": 0
+    },
+    "rollbackVerified": true,
+    "safetyDefaultOrchestrateNull": true
+  },
+  "stagedActivation": {
+    "stage1": {
+      "description": "MayLearnerProfile, MayAdaptiveRecommender, MayRemediationEngine, MayReadinessScorer",
+      "flagsActive": {
+        "ENABLE_CONTEXT_BUILDER": false,
+        "ENABLE_COACHING_ROUTER": false,
+        "ENABLE_EXPLAIN_MODE": false,
+        "ENABLE_QUIZ_MODE": false,
+        "ENABLE_SOCRATIC_MODE": false,
+        "ENABLE_STUDY_PLAN_MODE": false,
+        "ENABLE_LLM": false,
+        "ENABLE_LLM_COACHING": false,
+        "ENABLE_LLM_SUMMARIES": false,
+        "ENABLE_AZURE_OPENAI_PROVIDER": false,
+        "ENABLE_OPENAI_PROVIDER": false,
+        "ENABLE_ADAPTIVE_COACHING": true,
+        "ENABLE_READINESS_SCORING": false,
+        "ENABLE_ADAPTIVE_ORCHESTRATION": false,
+        "ENABLE_COACHING_MEMORY": false
+      },
+      "results": [
+        {
+          "learnerId": "MAY011-L1",
+          "archetype": "Low-Readiness Learner",
+          "stage": 1,
+          "expectedDecision": "D1 critical remediation, QUIZ mode",
+          "profileBuilt": true,
+          "weaknessCount": 6,
+          "strengthCount": 0,
+          "recommendationsGenerated": 5,
+          "remediationPlanEntries": 3,
+          "readinessScorerAvailable": false,
+          "decisionId": null,
+          "decisionMode": "N/A",
+          "readinessBand": "N/A",
+          "readinessScore": null,
+          "degradedComponents": []
+        },
+        {
+          "learnerId": "MAY011-L2",
+          "archetype": "High-Readiness Learner",
+          "stage": 1,
+          "expectedDecision": "D9 high mastery challenge or D10 fallback",
+          "profileBuilt": true,
+          "weaknessCount": 0,
+          "strengthCount": 3,
+          "recommendationsGenerated": 3,
+          "remediationPlanEntries": 0,
+          "readinessScorerAvailable": false,
+          "decisionId": null,
+          "decisionMode": "N/A",
+          "readinessBand": "N/A",
+          "readinessScore": null,
+          "degradedComponents": []
+        },
+        {
+          "learnerId": "MAY011-L3",
+          "archetype": "Weak-Topic Learner",
+          "stage": 1,
+          "expectedDecision": "D2 critical weakness on Standard Costing/Variance Analysis",
+          "profileBuilt": true,
+          "weaknessCount": 2,
+          "strengthCount": 2,
+          "recommendationsGenerated": 5,
+          "remediationPlanEntries": 2,
+          "readinessScorerAvailable": false,
+          "decisionId": null,
+          "decisionMode": "N/A",
+          "readinessBand": "N/A",
+          "readinessScore": null,
+          "degradedComponents": []
+        },
+        {
+          "learnerId": "MAY011-L4",
+          "archetype": "Exam-Near Learner",
+          "stage": 1,
+          "expectedDecision": "D4 exam-approaching STUDY_PLAN mode",
+          "profileBuilt": true,
+          "weaknessCount": 1,
+          "strengthCount": 0,
+          "recommendationsGenerated": 3,
+          "remediationPlanEntries": 3,
+          "readinessScorerAvailable": false,
+          "decisionId": null,
+          "decisionMode": "N/A",
+          "readinessBand": "N/A",
+          "readinessScore": null,
+          "degradedComponents": []
+        },
+        {
+          "learnerId": "MAY011-L5",
+          "archetype": "Mixed-Performance Learner",
+          "stage": 1,
+          "expectedDecision": "D3 unstable declining or D5 declining trends",
+          "profileBuilt": true,
+          "weaknessCount": 2,
+          "strengthCount": 1,
+          "recommendationsGenerated": 4,
+          "remediationPlanEntries": 2,
+          "readinessScorerAvailable": false,
+          "decisionId": null,
+          "decisionMode": "N/A",
+          "readinessBand": "N/A",
+          "readinessScore": null,
+          "degradedComponents": []
+        }
+      ],
+      "profilesBuilt": 5,
+      "durationMs": 311
+    },
+    "stage2": {
+      "description": "MayReadinessEngine, MayInterventionPrioritizer, MayRecommendationExplainer, MayDashboardModel",
+      "flagsActive": {
+        "ENABLE_CONTEXT_BUILDER": false,
+        "ENABLE_COACHING_ROUTER": false,
+        "ENABLE_EXPLAIN_MODE": false,
+        "ENABLE_QUIZ_MODE": false,
+        "ENABLE_SOCRATIC_MODE": false,
+        "ENABLE_STUDY_PLAN_MODE": false,
+        "ENABLE_LLM": false,
+        "ENABLE_LLM_COACHING": false,
+        "ENABLE_LLM_SUMMARIES": false,
+        "ENABLE_AZURE_OPENAI_PROVIDER": false,
+        "ENABLE_OPENAI_PROVIDER": false,
+        "ENABLE_ADAPTIVE_COACHING": true,
+        "ENABLE_READINESS_SCORING": true,
+        "ENABLE_ADAPTIVE_ORCHESTRATION": false,
+        "ENABLE_COACHING_MEMORY": false
+      },
+      "results": [
+        {
+          "learnerId": "MAY011-L1",
+          "archetype": "Low-Readiness Learner",
+          "stage": 2,
+          "expectedDecision": "D1 critical remediation, QUIZ mode",
+          "readinessScore": 45,
+          "readinessBand": "Recovery needed",
+          "readinessConfidence": 100,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 0,
+          "topicCoverageTopicsAtRecovery": 6,
+          "sectionsWithData": 5,
+          "intCount": 6,
+          "intTopTier": 1,
+          "intTopTopic": "Budgeting Concepts",
+          "explainerAvailable": true,
+          "dashboardAvailable": true,
+          "decisionId": null,
+          "decisionMode": "N/A",
+          "degradedComponents": []
+        },
+        {
+          "learnerId": "MAY011-L2",
+          "archetype": "High-Readiness Learner",
+          "stage": 2,
+          "expectedDecision": "D9 high mastery challenge or D10 fallback",
+          "readinessScore": 68,
+          "readinessBand": "Approaching review-ready",
+          "readinessConfidence": 100,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 3,
+          "topicCoverageTopicsAtRecovery": 0,
+          "sectionsWithData": 5,
+          "intCount": 5,
+          "intTopTier": 3,
+          "intTopTopic": "Cash Flow Statement",
+          "explainerAvailable": true,
+          "dashboardAvailable": true,
+          "decisionId": null,
+          "decisionMode": "N/A",
+          "degradedComponents": []
+        },
+        {
+          "learnerId": "MAY011-L3",
+          "archetype": "Weak-Topic Learner",
+          "stage": 2,
+          "expectedDecision": "D2 critical weakness on Standard Costing/Variance Analysis",
+          "readinessScore": 48,
+          "readinessBand": "Developing",
+          "readinessConfidence": 100,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 1,
+          "topicCoverageTopicsAtRecovery": 2,
+          "sectionsWithData": 5,
+          "intCount": 4,
+          "intTopTier": 1,
+          "intTopTopic": "Variance Analysis",
+          "explainerAvailable": true,
+          "dashboardAvailable": true,
+          "decisionId": null,
+          "decisionMode": "N/A",
+          "degradedComponents": []
+        },
+        {
+          "learnerId": "MAY011-L4",
+          "archetype": "Exam-Near Learner",
+          "stage": 2,
+          "expectedDecision": "D4 exam-approaching STUDY_PLAN mode",
+          "readinessScore": 55,
+          "readinessBand": "Developing",
+          "readinessConfidence": 100,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 0,
+          "topicCoverageTopicsAtRecovery": 2,
+          "sectionsWithData": 5,
+          "intCount": 5,
+          "intTopTier": 1,
+          "intTopTopic": "Inventory Valuation",
+          "explainerAvailable": true,
+          "dashboardAvailable": true,
+          "decisionId": null,
+          "decisionMode": "N/A",
+          "degradedComponents": []
+        },
+        {
+          "learnerId": "MAY011-L5",
+          "archetype": "Mixed-Performance Learner",
+          "stage": 2,
+          "expectedDecision": "D3 unstable declining or D5 declining trends",
+          "readinessScore": 55,
+          "readinessBand": "Developing",
+          "readinessConfidence": 100,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 0,
+          "topicCoverageTopicsAtRecovery": 2,
+          "sectionsWithData": 5,
+          "intCount": 2,
+          "intTopTier": 1,
+          "intTopTopic": "Inventory Valuation",
+          "explainerAvailable": true,
+          "dashboardAvailable": true,
+          "decisionId": null,
+          "decisionMode": "N/A",
+          "degradedComponents": []
+        }
+      ],
+      "readinessScoresProduced": 5,
+      "durationMs": 251
+    },
+    "stage3": {
+      "description": "FULL PIPELINE — MayCoachingOrchestrator.orchestrate()",
+      "flagsActive": {
+        "ENABLE_CONTEXT_BUILDER": false,
+        "ENABLE_COACHING_ROUTER": false,
+        "ENABLE_EXPLAIN_MODE": false,
+        "ENABLE_QUIZ_MODE": false,
+        "ENABLE_SOCRATIC_MODE": false,
+        "ENABLE_STUDY_PLAN_MODE": false,
+        "ENABLE_LLM": false,
+        "ENABLE_LLM_COACHING": false,
+        "ENABLE_LLM_SUMMARIES": false,
+        "ENABLE_AZURE_OPENAI_PROVIDER": false,
+        "ENABLE_OPENAI_PROVIDER": false,
+        "ENABLE_ADAPTIVE_COACHING": true,
+        "ENABLE_READINESS_SCORING": true,
+        "ENABLE_ADAPTIVE_ORCHESTRATION": true,
+        "ENABLE_COACHING_MEMORY": false
+      },
+      "results": [
+        {
+          "decisionId": "D1",
+          "decisionAction": "remediation",
+          "decisionMode": "QUIZ",
+          "decisionPriority": "critical",
+          "decisionTopic": null,
+          "decisionRationale": "Overall readiness is critically low (45/100). Priority is rebuilding fundamentals across all sections.",
+          "readinessScore": 45,
+          "readinessBand": "Recovery needed",
+          "readinessConfidence": 100,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 0,
+          "topicCoverageTopicsAtRecovery": 6,
+          "sectionsWithData": 5,
+          "intCount": 6,
+          "intTiers": [
+            1,
+            2
+          ],
+          "intTopTier": 1,
+          "intTopTopic": "Standard Costing",
+          "recCount": 5,
+          "recTypes": [
+            "remediation",
+            "remediation",
+            "remediation",
+            "remediation",
+            "remediation"
+          ],
+          "recPriorities": [
+            "high",
+            "high",
+            "high",
+            "high",
+            "high"
+          ],
+          "recTopType": "remediation",
+          "recTopTopic": "COSO Framework",
+          "planCount": 3,
+          "planTopics": [
+            "Revenue Recognition",
+            "Inventory Valuation",
+            "Budgeting Concepts"
+          ],
+          "degradedComponents": [],
+          "error": null,
+          "pipelineMs": 0,
+          "learnerId": "MAY011-L1",
+          "archetype": "Low-Readiness Learner",
+          "stage": 3,
+          "expectedDecision": "D1 critical remediation, QUIZ mode"
+        },
+        {
+          "decisionId": "D7",
+          "decisionAction": "explain",
+          "decisionMode": "EXPLAIN",
+          "decisionPriority": "medium",
+          "decisionTopic": "Cash Flow Statement",
+          "decisionRationale": "Knowledge on Cash Flow Statement is usable but unreliable (stability: 64%). Consolidation with concept review is needed.",
+          "readinessScore": 55,
+          "readinessBand": "Approaching review-ready",
+          "readinessConfidence": 100,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 0,
+          "topicCoverageTopicsAtRecovery": 0,
+          "sectionsWithData": 5,
+          "intCount": 2,
+          "intTiers": [
+            3
+          ],
+          "intTopTier": 3,
+          "intTopTopic": "Cash Flow Statement",
+          "recCount": 3,
+          "recTypes": [
+            "challenge",
+            "challenge",
+            "challenge"
+          ],
+          "recPriorities": [
+            "medium",
+            "medium",
+            "medium"
+          ],
+          "recTopType": "challenge",
+          "recTopTopic": "Revenue Recognition",
+          "planCount": 0,
+          "planTopics": [],
+          "degradedComponents": [],
+          "error": null,
+          "pipelineMs": 0,
+          "learnerId": "MAY011-L2",
+          "archetype": "High-Readiness Learner",
+          "stage": 3,
+          "expectedDecision": "D9 high mastery challenge or D10 fallback"
+        },
+        {
+          "decisionId": "D2",
+          "decisionAction": "remediation",
+          "decisionMode": "QUIZ",
+          "decisionPriority": "critical",
+          "decisionTopic": "Standard Costing",
+          "decisionRationale": "Critical weakness: Standard Costing requires immediate remediation (accuracy: 32%, slightly_declining trend).",
+          "readinessScore": 52,
+          "readinessBand": "Developing",
+          "readinessConfidence": 100,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 2,
+          "topicCoverageTopicsAtRecovery": 2,
+          "sectionsWithData": 5,
+          "intCount": 5,
+          "intTiers": [
+            1,
+            3,
+            4
+          ],
+          "intTopTier": 1,
+          "intTopTopic": "Standard Costing",
+          "recCount": 5,
+          "recTypes": [
+            "remediation",
+            "remediation",
+            "reinforcement",
+            "challenge",
+            "challenge"
+          ],
+          "recPriorities": [
+            "high",
+            "high",
+            "medium",
+            "medium",
+            "medium"
+          ],
+          "recTopType": "challenge",
+          "recTopTopic": "Variance Analysis",
+          "planCount": 2,
+          "planTopics": [
+            "Standard Costing",
+            "Variance Analysis"
+          ],
+          "degradedComponents": [],
+          "error": null,
+          "pipelineMs": 0,
+          "learnerId": "MAY011-L3",
+          "archetype": "Weak-Topic Learner",
+          "stage": 3,
+          "expectedDecision": "D2 critical weakness on Standard Costing/Variance Analysis"
+        },
+        {
+          "decisionId": "D2",
+          "decisionAction": "remediation",
+          "decisionMode": "QUIZ",
+          "decisionPriority": "critical",
+          "decisionTopic": "Inventory Valuation",
+          "decisionRationale": "Critical weakness: Inventory Valuation requires immediate remediation (accuracy: 60%, declining trend).",
+          "readinessScore": 55,
+          "readinessBand": "Developing",
+          "readinessConfidence": 100,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 0,
+          "topicCoverageTopicsAtRecovery": 2,
+          "sectionsWithData": 5,
+          "intCount": 4,
+          "intTiers": [
+            1,
+            2,
+            3
+          ],
+          "intTopTier": 1,
+          "intTopTopic": "Inventory Valuation",
+          "recCount": 3,
+          "recTypes": [
+            "remediation",
+            "remediation",
+            "review"
+          ],
+          "recPriorities": [
+            "high",
+            "high",
+            "high"
+          ],
+          "recTopType": "remediation",
+          "recTopTopic": "Standard Costing",
+          "planCount": 2,
+          "planTopics": [
+            "Inventory Valuation",
+            "Standard Costing"
+          ],
+          "degradedComponents": [],
+          "error": null,
+          "pipelineMs": 0,
+          "learnerId": "MAY011-L4",
+          "archetype": "Exam-Near Learner",
+          "stage": 3,
+          "expectedDecision": "D4 exam-approaching STUDY_PLAN mode"
+        },
+        {
+          "decisionId": "D2",
+          "decisionAction": "remediation",
+          "decisionMode": "QUIZ",
+          "decisionPriority": "critical",
+          "decisionTopic": "Inventory Valuation",
+          "decisionRationale": "Critical weakness: Inventory Valuation requires immediate remediation (accuracy: 44%, declining trend).",
+          "readinessScore": 62,
+          "readinessBand": "Developing",
+          "readinessConfidence": 85,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 2,
+          "topicCoverageTopicsAtRecovery": 2,
+          "sectionsWithData": 5,
+          "intCount": 3,
+          "intTiers": [
+            1,
+            2,
+            4
+          ],
+          "intTopTier": 1,
+          "intTopTopic": "Inventory Valuation",
+          "recCount": 4,
+          "recTypes": [
+            "remediation",
+            "remediation",
+            "reinforcement",
+            "challenge"
+          ],
+          "recPriorities": [
+            "high",
+            "high",
+            "medium",
+            "medium"
+          ],
+          "recTopType": "challenge",
+          "recTopTopic": "Inventory Valuation",
+          "planCount": 2,
+          "planTopics": [
+            "Inventory Valuation",
+            "Standard Costing"
+          ],
+          "degradedComponents": [],
+          "error": null,
+          "pipelineMs": 0,
+          "learnerId": "MAY011-L5",
+          "archetype": "Mixed-Performance Learner",
+          "stage": 3,
+          "expectedDecision": "D3 unstable declining or D5 declining trends"
+        }
+      ],
+      "decisionsProduced": 5,
+      "durationMs": 376
+    },
+    "stage4": {
+      "description": "FULL PIPELINE + MayCoachingMemory (3-run dedup test)",
+      "flagsActive": {
+        "ENABLE_CONTEXT_BUILDER": false,
+        "ENABLE_COACHING_ROUTER": false,
+        "ENABLE_EXPLAIN_MODE": false,
+        "ENABLE_QUIZ_MODE": false,
+        "ENABLE_SOCRATIC_MODE": false,
+        "ENABLE_STUDY_PLAN_MODE": false,
+        "ENABLE_LLM": false,
+        "ENABLE_LLM_COACHING": false,
+        "ENABLE_LLM_SUMMARIES": false,
+        "ENABLE_AZURE_OPENAI_PROVIDER": false,
+        "ENABLE_OPENAI_PROVIDER": false,
+        "ENABLE_ADAPTIVE_COACHING": true,
+        "ENABLE_READINESS_SCORING": true,
+        "ENABLE_ADAPTIVE_ORCHESTRATION": true,
+        "ENABLE_COACHING_MEMORY": true
+      },
+      "results": [
+        {
+          "decisionId": "D1",
+          "decisionAction": "remediation",
+          "decisionMode": "QUIZ",
+          "decisionPriority": "critical",
+          "decisionTopic": null,
+          "decisionRationale": "Overall readiness is critically low (45/100). Priority is rebuilding fundamentals across all sections.",
+          "readinessScore": 45,
+          "readinessBand": "Recovery needed",
+          "readinessConfidence": 85,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 0,
+          "topicCoverageTopicsAtRecovery": 6,
+          "sectionsWithData": 5,
+          "intCount": 6,
+          "intTiers": [
+            1,
+            2
+          ],
+          "intTopTier": 1,
+          "intTopTopic": "COSO Framework",
+          "recCount": 5,
+          "recTypes": [
+            "remediation",
+            "remediation",
+            "remediation",
+            "remediation",
+            "remediation"
+          ],
+          "recPriorities": [
+            "high",
+            "high",
+            "high",
+            "high",
+            "high"
+          ],
+          "recTopType": "remediation",
+          "recTopTopic": "COSO Framework",
+          "planCount": 3,
+          "planTopics": [
+            "Revenue Recognition",
+            "Inventory Valuation",
+            "Budgeting Concepts"
+          ],
+          "degradedComponents": [],
+          "error": null,
+          "pipelineMs": 0,
+          "learnerId": "MAY011-L1",
+          "archetype": "Low-Readiness Learner",
+          "stage": 4,
+          "expectedDecision": "D1 critical remediation, QUIZ mode",
+          "memoryTests": {
+            "runs": 3,
+            "uniqueRecommendationSets": 1,
+            "duplicationRate": 0.67,
+            "memoryEnabled": true,
+            "run2SameAsRun1": true,
+            "run3SameAsRun1": true
+          }
+        },
+        {
+          "decisionId": "D7",
+          "decisionAction": "explain",
+          "decisionMode": "EXPLAIN",
+          "decisionPriority": "medium",
+          "decisionTopic": "Cash Flow Statement",
+          "decisionRationale": "Knowledge on Cash Flow Statement is usable but unreliable (stability: 71%). Consolidation with concept review is needed.",
+          "readinessScore": 72,
+          "readinessBand": "Approaching review-ready",
+          "readinessConfidence": 100,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 4,
+          "topicCoverageTopicsAtRecovery": 0,
+          "sectionsWithData": 5,
+          "intCount": 5,
+          "intTiers": [
+            3,
+            4
+          ],
+          "intTopTier": 3,
+          "intTopTopic": "Cash Flow Statement",
+          "recCount": 3,
+          "recTypes": [
+            "challenge",
+            "challenge",
+            "challenge"
+          ],
+          "recPriorities": [
+            "medium",
+            "medium",
+            "medium"
+          ],
+          "recTopType": "challenge",
+          "recTopTopic": "Revenue Recognition",
+          "planCount": 0,
+          "planTopics": [],
+          "degradedComponents": [],
+          "error": null,
+          "pipelineMs": 0,
+          "learnerId": "MAY011-L2",
+          "archetype": "High-Readiness Learner",
+          "stage": 4,
+          "expectedDecision": "D9 high mastery challenge or D10 fallback",
+          "memoryTests": {
+            "runs": 3,
+            "uniqueRecommendationSets": 1,
+            "duplicationRate": 0.67,
+            "memoryEnabled": true,
+            "run2SameAsRun1": true,
+            "run3SameAsRun1": true
+          }
+        },
+        {
+          "decisionId": "D1",
+          "decisionAction": "remediation",
+          "decisionMode": "QUIZ",
+          "decisionPriority": "critical",
+          "decisionTopic": null,
+          "decisionRationale": "Overall readiness is critically low (48/100). Priority is rebuilding fundamentals across all sections.",
+          "readinessScore": 48,
+          "readinessBand": "Developing",
+          "readinessConfidence": 100,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 1,
+          "topicCoverageTopicsAtRecovery": 2,
+          "sectionsWithData": 5,
+          "intCount": 3,
+          "intTiers": [
+            1,
+            3
+          ],
+          "intTopTier": 1,
+          "intTopTopic": "Variance Analysis",
+          "recCount": 5,
+          "recTypes": [
+            "remediation",
+            "remediation",
+            "remediation",
+            "reinforcement",
+            "challenge"
+          ],
+          "recPriorities": [
+            "high",
+            "high",
+            "medium",
+            "medium",
+            "medium"
+          ],
+          "recTopType": "challenge",
+          "recTopTopic": "Variance Analysis",
+          "planCount": 2,
+          "planTopics": [
+            "Standard Costing",
+            "Variance Analysis"
+          ],
+          "degradedComponents": [],
+          "error": null,
+          "pipelineMs": 0,
+          "learnerId": "MAY011-L3",
+          "archetype": "Weak-Topic Learner",
+          "stage": 4,
+          "expectedDecision": "D2 critical weakness on Standard Costing/Variance Analysis",
+          "memoryTests": {
+            "runs": 3,
+            "uniqueRecommendationSets": 1,
+            "duplicationRate": 0.67,
+            "memoryEnabled": true,
+            "run2SameAsRun1": true,
+            "run3SameAsRun1": true
+          }
+        },
+        {
+          "decisionId": "D1",
+          "decisionAction": "remediation",
+          "decisionMode": "QUIZ",
+          "decisionPriority": "critical",
+          "decisionTopic": null,
+          "decisionRationale": "Overall readiness is critically low (45/100). Priority is rebuilding fundamentals across all sections.",
+          "readinessScore": 45,
+          "readinessBand": "Recovery needed",
+          "readinessConfidence": 85,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 0,
+          "topicCoverageTopicsAtRecovery": 3,
+          "sectionsWithData": 5,
+          "intCount": 5,
+          "intTiers": [
+            2,
+            3,
+            1
+          ],
+          "intTopTier": 1,
+          "intTopTopic": "Standard Costing",
+          "recCount": 3,
+          "recTypes": [
+            "remediation",
+            "remediation",
+            "review"
+          ],
+          "recPriorities": [
+            "high",
+            "high",
+            "high"
+          ],
+          "recTopType": "remediation",
+          "recTopTopic": "Standard Costing",
+          "planCount": 3,
+          "planTopics": [
+            "Revenue Recognition",
+            "Inventory Valuation",
+            "Standard Costing"
+          ],
+          "degradedComponents": [],
+          "error": null,
+          "pipelineMs": 0,
+          "learnerId": "MAY011-L4",
+          "archetype": "Exam-Near Learner",
+          "stage": 4,
+          "expectedDecision": "D4 exam-approaching STUDY_PLAN mode",
+          "memoryTests": {
+            "runs": 3,
+            "uniqueRecommendationSets": 1,
+            "duplicationRate": 0.67,
+            "memoryEnabled": true,
+            "run2SameAsRun1": true,
+            "run3SameAsRun1": true
+          }
+        },
+        {
+          "decisionId": "D2",
+          "decisionAction": "remediation",
+          "decisionMode": "QUIZ",
+          "decisionPriority": "critical",
+          "decisionTopic": "Inventory Valuation",
+          "decisionRationale": "Critical weakness: Inventory Valuation requires immediate remediation (accuracy: 44%, declining trend).",
+          "readinessScore": 58,
+          "readinessBand": "Developing",
+          "readinessConfidence": 100,
+          "topicCoverageTopicsWithData": 6,
+          "topicCoverageTopicsAtReady": 1,
+          "topicCoverageTopicsAtRecovery": 2,
+          "sectionsWithData": 5,
+          "intCount": 2,
+          "intTiers": [
+            1,
+            2
+          ],
+          "intTopTier": 1,
+          "intTopTopic": "Inventory Valuation",
+          "recCount": 4,
+          "recTypes": [
+            "remediation",
+            "remediation",
+            "reinforcement",
+            "challenge"
+          ],
+          "recPriorities": [
+            "high",
+            "high",
+            "medium",
+            "medium"
+          ],
+          "recTopType": "challenge",
+          "recTopTopic": "Inventory Valuation",
+          "planCount": 2,
+          "planTopics": [
+            "Inventory Valuation",
+            "Standard Costing"
+          ],
+          "degradedComponents": [],
+          "error": null,
+          "pipelineMs": 0,
+          "learnerId": "MAY011-L5",
+          "archetype": "Mixed-Performance Learner",
+          "stage": 4,
+          "expectedDecision": "D3 unstable declining or D5 declining trends",
+          "memoryTests": {
+            "runs": 3,
+            "uniqueRecommendationSets": 1,
+            "duplicationRate": 0.67,
+            "memoryEnabled": true,
+            "run2SameAsRun1": true,
+            "run3SameAsRun1": true
+          }
+        }
+      ],
+      "decisionsProduced": 5,
+      "durationMs": 721,
+      "memoryEnabled": true
+    }
+  },
+  "archetypeResults": [
+    {
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (45/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 45,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 6,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 6,
+      "sectionsWithData": 5,
+      "intCount": 6,
+      "intTiers": [
+        1,
+        2
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Standard Costing",
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "high",
+        "high",
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "COSO Framework",
+      "planCount": 3,
+      "planTopics": [
+        "Revenue Recognition",
+        "Inventory Valuation",
+        "Budgeting Concepts"
+      ],
+      "degradedComponents": [],
+      "error": null,
+      "pipelineMs": 0,
+      "learnerId": "MAY011-L1",
+      "archetype": "Low-Readiness Learner",
+      "stage": 3,
+      "expectedDecision": "D1 critical remediation, QUIZ mode"
+    },
+    {
+      "decisionId": "D7",
+      "decisionAction": "explain",
+      "decisionMode": "EXPLAIN",
+      "decisionPriority": "medium",
+      "decisionTopic": "Cash Flow Statement",
+      "decisionRationale": "Knowledge on Cash Flow Statement is usable but unreliable (stability: 64%). Consolidation with concept review is needed.",
+      "readinessScore": 55,
+      "readinessBand": "Approaching review-ready",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 6,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 0,
+      "sectionsWithData": 5,
+      "intCount": 2,
+      "intTiers": [
+        3
+      ],
+      "intTopTier": 3,
+      "intTopTopic": "Cash Flow Statement",
+      "recCount": 3,
+      "recTypes": [
+        "challenge",
+        "challenge",
+        "challenge"
+      ],
+      "recPriorities": [
+        "medium",
+        "medium",
+        "medium"
+      ],
+      "recTopType": "challenge",
+      "recTopTopic": "Revenue Recognition",
+      "planCount": 0,
+      "planTopics": [],
+      "degradedComponents": [],
+      "error": null,
+      "pipelineMs": 0,
+      "learnerId": "MAY011-L2",
+      "archetype": "High-Readiness Learner",
+      "stage": 3,
+      "expectedDecision": "D9 high mastery challenge or D10 fallback"
+    },
+    {
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Standard Costing",
+      "decisionRationale": "Critical weakness: Standard Costing requires immediate remediation (accuracy: 32%, slightly_declining trend).",
+      "readinessScore": 52,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 6,
+      "topicCoverageTopicsAtReady": 2,
+      "topicCoverageTopicsAtRecovery": 2,
+      "sectionsWithData": 5,
+      "intCount": 5,
+      "intTiers": [
+        1,
+        3,
+        4
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Standard Costing",
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "reinforcement",
+        "challenge",
+        "challenge"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "medium",
+        "medium",
+        "medium"
+      ],
+      "recTopType": "challenge",
+      "recTopTopic": "Variance Analysis",
+      "planCount": 2,
+      "planTopics": [
+        "Standard Costing",
+        "Variance Analysis"
+      ],
+      "degradedComponents": [],
+      "error": null,
+      "pipelineMs": 0,
+      "learnerId": "MAY011-L3",
+      "archetype": "Weak-Topic Learner",
+      "stage": 3,
+      "expectedDecision": "D2 critical weakness on Standard Costing/Variance Analysis"
+    },
+    {
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Inventory Valuation",
+      "decisionRationale": "Critical weakness: Inventory Valuation requires immediate remediation (accuracy: 60%, declining trend).",
+      "readinessScore": 55,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 6,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 2,
+      "sectionsWithData": 5,
+      "intCount": 4,
+      "intTiers": [
+        1,
+        2,
+        3
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Inventory Valuation",
+      "recCount": 3,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "review"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Standard Costing",
+      "planCount": 2,
+      "planTopics": [
+        "Inventory Valuation",
+        "Standard Costing"
+      ],
+      "degradedComponents": [],
+      "error": null,
+      "pipelineMs": 0,
+      "learnerId": "MAY011-L4",
+      "archetype": "Exam-Near Learner",
+      "stage": 3,
+      "expectedDecision": "D4 exam-approaching STUDY_PLAN mode"
+    },
+    {
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Inventory Valuation",
+      "decisionRationale": "Critical weakness: Inventory Valuation requires immediate remediation (accuracy: 44%, declining trend).",
+      "readinessScore": 62,
+      "readinessBand": "Developing",
+      "readinessConfidence": 85,
+      "topicCoverageTopicsWithData": 6,
+      "topicCoverageTopicsAtReady": 2,
+      "topicCoverageTopicsAtRecovery": 2,
+      "sectionsWithData": 5,
+      "intCount": 3,
+      "intTiers": [
+        1,
+        2,
+        4
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Inventory Valuation",
+      "recCount": 4,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "reinforcement",
+        "challenge"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "medium",
+        "medium"
+      ],
+      "recTopType": "challenge",
+      "recTopTopic": "Inventory Valuation",
+      "planCount": 2,
+      "planTopics": [
+        "Inventory Valuation",
+        "Standard Costing"
+      ],
+      "degradedComponents": [],
+      "error": null,
+      "pipelineMs": 0,
+      "learnerId": "MAY011-L5",
+      "archetype": "Mixed-Performance Learner",
+      "stage": 3,
+      "expectedDecision": "D3 unstable declining or D5 declining trends"
+    }
+  ],
+  "summary": {
+    "decisionCoverage": {
+      "decisionsTotal": 5,
+      "nullDecisionRate": 0,
+      "abortRate": 0,
+      "distinctModes": 2,
+      "modeDistribution": {
+        "QUIZ": 4,
+        "EXPLAIN": 1
+      }
+    },
+    "recommendationQuality": {
+      "typeDistribution": {
+        "remediation": 11,
+        "challenge": 6,
+        "reinforcement": 2,
+        "review": 1
+      },
+      "uniqueTopTopics": 5,
+      "emptyRate": 0
+    },
+    "readinessConsistency": {
+      "determinedPass": true,
+      "scoreRange": {
+        "min": 45,
+        "max": 62,
+        "mean": 54
+      },
+      "bandDistribution": {
+        "Recovery needed": 1,
+        "Approaching review-ready": 1,
+        "Developing": 3
+      },
+      "confidenceMean": 97
+    },
+    "remediationAccuracy": {
+      "planSizeMean": 2,
+      "topicMatchRate": 0
+    },
+    "modeSelectionAccuracy": {
+      "modeDistribution": {
+        "QUIZ": 4,
+        "EXPLAIN": 1
+      },
+      "uniqueModes": 2,
+      "archetypeFit": {}
+    }
+  },
+  "successCriteria": {
+    "SC1": {
+      "pass": true,
+      "label": "Pipeline completeness (5/5 non-null decisions)",
+      "value": "5/5"
+    },
+    "SC2": {
+      "pass": false,
+      "label": "Decision diversity (>=3 distinct modes)",
+      "value": "2 modes: QUIZ, EXPLAIN"
+    },
+    "SC3": {
+      "pass": true,
+      "label": "Recommendation relevance (100% topic match)",
+      "value": "100%"
+    },
+    "SC4": {
+      "pass": true,
+      "label": "Readiness consistency (deterministic)",
+      "value": "PASS"
+    },
+    "SC5": {
+      "pass": true,
+      "label": "Intervention appropriateness (>=80% match)",
+      "value": "5/5 matches"
+    },
+    "SC6": {
+      "pass": true,
+      "label": "No degradation (0 degraded components)",
+      "value": "PASS"
+    },
+    "SC7": {
+      "pass": false,
+      "label": "Memory effectiveness (duplication <30%)",
+      "value": "67%, 67%, 67%, 67%, 67%"
+    },
+    "SC8": {
+      "pass": true,
+      "label": "Production safety (all defaults false)",
+      "value": "PASS"
+    },
+    "SC9": {
+      "pass": true,
+      "label": "Governance clean (0 pack/case/registry mods)",
+      "value": "PASS (T0 preflight)"
+    },
+    "SC10": {
+      "pass": true,
+      "label": "Regression pass (preflight 0 divergences)",
+      "value": "PASS (T0 preflight)"
+    }
+  },
+  "verification": {
+    "overallVerdict": "FAIL — One or more criteria not met",
+    "criteriaCount": 10,
+    "passCount": 8,
+    "failCount": 2,
+    "safetyCheck": {
+      "fetchCalled": false,
+      "productionExposure": true,
+      "noStateCorruption": true,
+      "noExternalCalls": true
+    },
+    "stageTimings": {
+      "stage1": 311,
+      "stage2": 251,
+      "stage3": 376,
+      "stage4": 721
+    },
+    "loadedModules": 28,
+    "skippedModules": 0
+  },
+  "determinism": {
+    "passed": true,
+    "runs": 3,
+    "result1Length": 856,
+    "result2Length": 856,
+    "result3Length": 856
+  },
+  "safetyAudit": {
+    "fetchCalled": false,
+    "productionExposure": true,
+    "noStateCorruption": true,
+    "noExternalCalls": true
+  }
+}

@@ -1,4 +1,4 @@
-const MCQ_BANK_D = [
+var MCQ_BANK_D = [
   {
     "Part": 1,
     "Section": "A",
@@ -4324,15 +4324,15 @@ const MCQ_BANK_D = [
     "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Stonewell Industries' CFO, Diana Park, is evaluating whether to transition from incremental budgeting to zero-based budgeting for the upcoming fiscal year. Stonewell (annual revenue: $47 million, 340 employees, 3 production facilities) has used incremental budgeting since inception 18 years ago. Diana's team compiled the following comparison: Incremental budgeting costs $9,200/year in staff time and takes 2 weeks. ZBB would cost an estimated $165,000 in the first year (consulting, training, software, and 620 additional staff hours) and require a 10-week implementation, with annual sustainment costs of $42,000 in subsequent years. A pilot ZBB exercise in the shipping department identified $28,000 in annual savings by eliminating redundant expedited-freight authorizations and renegotiating a carrier contract — costs that incremental budgeting had carried forward unchanged for at least 5 years. The board chair asks Diana whether the shipping department savings justify a company-wide ZBB rollout. Diana must consider that the shipping department is 4% of total operating expenses ($9.4M). Which factor is most critical to Diana's recommendation?",
+    "Stem": "Stonewell Industries' CFO, Diana Park, is evaluating whether to transition from incremental budgeting to zero-based budgeting. Stonewell (annual revenue: $47 million, 340 employees, 3 production facilities) has used incremental budgeting for 18 years. Diana's team reports the following: incremental budgeting costs $9,200/year in staff time; ZBB would cost $165,000 in the first year (consulting, training, software) plus $42,000/year ongoing — a net five-year cost of $339,000 vs. $46,000 for incremental. A pilot ZBB exercise in the shipping department (4% of total operating expenses of $9.4 million) identified $28,000 in annual savings by eliminating redundant freight authorizations and renegotiating a carrier contract — costs incremental budgeting had carried forward for at least five years. The board chair asks Diana for a recommendation. The VP of Operations warns that production departments have predominantly fixed costs (depreciation, facility leases, skilled labor under multi-year contracts) whereas the shipping department's costs are largely discretionary. Diana must present her recommendation at the board meeting in two weeks. What should Diana recommend?",
     "Choices": {
-      "A": "The shipping department pilot proves ZBB works — $28,000 in identified savings on 4% of expenses projects to approximately $700,000 if the same savings rate is achieved company-wide, which would justify the $165,000 first-year investment many times over",
-      "B": "ZBB is the most rigorous budgeting methodology and is endorsed in CMA Part 1 as the preferred approach for companies with entrenched cost structures — the 18-year history of incremental budgeting alone justifies the transition",
-      "C": "The scalability of the pilot's savings rate cannot be assumed — the shipping department may have had uniquely high waste because freight costs were never scrutinized, and other departments (production, quality, engineering) operate under different cost structures with less discretionary spending. Extrapolating a 4% sample to 100% of expenses is not analytically defensible",
-      "D": "The $42,000 annual sustainment cost makes ZBB more expensive on an ongoing basis than incremental budgeting ($9,200), so the transition should only proceed if the board is willing to accept permanently higher budgeting overhead regardless of savings"
+      "A": "Recommend company-wide ZBB implementation — the shipping department pilot identified $28,000 in savings on 4% of operating expenses, and if even half that savings rate materializes across the remaining 96% of operations, annual savings would reach approximately $336,000, far exceeding the $42,000 annual sustainment cost. The $165,000 first-year investment has a payback period of less than six months at this savings level.",
+      "B": "Recommend retaining incremental budgeting — the five-year cost comparison ($339,000 vs. $46,000) shows ZBB is more than seven times more expensive to operate than incremental budgeting. The $28,000 in shipping savings could likely be captured through a one-time cost review without changing the entire budgeting methodology. Stonewell's 18-year track record of profitable operations does not justify a methodology change.",
+      "C": "Recommend a phased rollout — apply ZBB to the three departments with the highest ratio of discretionary to non-discretionary spending in Year 1, using the shipping pilot methodology as a template. Extrapolating a 4% sample to 100% of expenses is not analytically defensible, and the VP of Operations' concern about fixed-cost-dominated production departments is valid. A phased approach tests scalability before committing to the $42,000 annual sustainment cost company-wide.",
+      "D": "Recommend deferring the decision — commission a formal study across five departments selected by the board over two budget cycles, with an independent consultant to validate the shipping pilot results. The single-pilot evidence is insufficient to support a transition affecting $47 million in annual spending and 340 employees, and the board should not act without more robust data."
     },
     "CorrectChoice": "C",
-    "ExplanationCorrect": "The scalability question — whether the 4% pilot savings rate can be extrapolated to 100% of expenses — is the most critical factor because it determines whether the business case for ZBB is analytically sound or based on an unrepresentative sample. The shipping department savings ($28,000 on ~$376,000 of expense = 7.4% savings rate) may not generalize: discretionary cost categories like freight, travel, and consulting typically show higher ZBB savings than structurally constrained categories like raw materials, depreciation, and union labor contracts. Extrapolating 7.4% to all $9.4M would forecast ~$700,000 in savings — but if only 40% of expenses are discretionary, the addressable savings pool shrinks to ~$280,000 (still exceeding the $165,000 first-year cost but requiring a more nuanced analysis). Under CMA Part 1, a pilot program provides directional evidence but is not statistically sufficient to justify a full-scale methodology change. The CFO must evaluate whether the pilot department is representative of the broader cost base before recommending a $165,000 organizational change. This is the evaluate-level skill of distinguishing between a promising pilot result and a defensible full-scale business case.",
+    "ExplanationCorrect": "The phased rollout recommendation is the most defensible because it directly addresses the core analytical challenge: the scalability of pilot savings cannot be assumed. The shipping department (4% of expenses) may have had uniquely high discretionary waste because freight costs had not been reviewed in five years. Production departments with predominantly fixed costs (depreciation, facility leases, multi-year labor contracts) have fundamentally different cost structures where ZBB may identify far less waste. A phased approach validates the savings hypothesis in diverse cost environments before committing the entire organization to $42,000/year in ongoing ZBB sustainment costs. This recommendation respects both the promising pilot results and the legitimate concern about scalability — it is evidence-based without being recklessly extrapolative. Under IMA's Statement of Ethical Professional Practice, management accountants must provide decision support that is accurate, clear, concise, and timely — recommending a phased rollout provides the board with actionable information that neither overstates nor dismisses the pilot evidence.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -4358,33 +4358,33 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "This is actually a correct description of zero-based budgeting -- it does require justification of every expense from a zero base each budget period, rather than relying on prior period spending as a baseline. If this appears in a question stem asking about a limitation of ZBB, the limitation is the time and cost required, not the justification requirement itself.",
-    "ExplanationWrongC": "Incorrect under Budgeting concepts and methodologies. it can perpetuate inefficiencies from prior periods without requiring justification of costs. This is a common exam trap.",
-    "ExplanationWrongD": "Incorrect under Budgeting concepts and methodologies. it can perpetuate inefficiencies from prior periods without requiring justification of costs. This is a common exam trap.",
-    "DifficultyScore": 2,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ExplanationWrongA": "Company-wide implementation based on a single pilot is analytically weak — it extrapolates a 4% sample to 100% of costs without considering that the shipping department's cost structure (discretionary freight authorizations, renegotiable contracts) may not be representative of production, engineering, and quality departments. A candidate selecting this option may be attracted by the large projected savings without critically evaluating whether the savings rate can be replicated across departments with different cost characteristics.",
+    "ExplanationWrongB": "The five-year cost comparison alone is insufficient to reject ZBB — it ignores the potential savings that ZBB could identify. If ZBB identifies even $50,000 in annual savings that incremental budgeting would miss, the net cost flips in ZBB's favor. This option treats budgeting as a cost center rather than a value-driving process. A candidate selecting this may be focused on the immediate cost of the methodology rather than the long-term benefit of cost discipline.",
+    "ExplanationWrongD": "Deferring for two years is effectively a decision to maintain the status quo — incremental budgeting continues uninterrupted while the study is conducted, and any inefficiencies that ZBB would have identified remain uncorrected. In a $47 million organization, a two-year delay in addressing potential structural waste may cost far more than the $165,000 first-year ZBB investment. A candidate selecting this may conflate analytical caution with decision paralysis — the available evidence from the pilot is actionable for a phased approach even if it is insufficient for a full rollout.",
+    "ExplanationWrongC": ""
   },
   {
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.010 incremental budgeting drawback",
+    "Topic": "B.010 incremental budgeting — cost persistence analysis",
     "MicroTopic": "incremental budgeting drawback",
     "UniqueConceptKey": "B-D010-incremental-budgeting-drawback",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate-Easy",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Juniperfield builds its annual budget by adjusting last year's actual results by an inflation percentage. What is a key drawback of this approach?",
+    "Stem": "Juniperfield Textiles' Controller, Nathan Cole, presents a cost-trend analysis to the CFO, Elena Vasquez. Over three years, COGS has risen from 58% to 64% of revenue, while revenue grew only 7%. Nathan traces $340,000 of the $1.2 million COGS increase to cost categories that were rolled forward at inflation-adjusted rates each year without departmental re-justification. His analysis identifies three specific findings: (1) $82,000 in annual equipment maintenance contracts that have not been competitively bid since 2018, (2) $56,000 in overtime staffing originally approved for a one-time ERP implementation completed in 2019 — yet the overtime line item persists, and (3) $47,000 in annual software license fees for two systems that were decommissioned in 2022 when Juniperfield migrated to a cloud-based ERP. Nathan argues that the root cause is incremental budgeting, which starts each year's budget at last year's actuals plus inflation, rather than requiring departments to justify every dollar from zero. Elena pushes back: 'These look like management oversight failures — someone should have cancelled those licenses and rebid those contracts regardless of the budgeting methodology.' Which finding from Nathan's analysis most directly isolates incremental budgeting as the structural cause, distinct from a general management oversight failure?",
     "Choices": {
-      "A": "It requires zero-based justification for every line item",
-      "B": "It can perpetuate inefficiencies from prior periods without requiring justification of costs",
-      "C": "It guarantees the most efficient allocation of resources",
-      "D": "It eliminates the need for a sales forecast"
+      "A": "The 58% to 64% COGS-to-revenue trend over three years — this directional shift cannot be explained by management oversight alone and requires a budgeting methodology explanation for its persistence across multiple budget cycles.",
+      "B": "The $47,000 in software license fees for decommissioned systems — incremental budgeting's core mechanism of carrying forward last year's actuals means that once a cost enters the baseline, no process exists to remove it when the underlying need disappears, unlike zero-based budgeting where every line item must be re-justified annually.",
+      "C": "The $82,000 in un-bid maintenance contracts — failure to competitively bid vendor contracts is a procurement management deficiency that exists independently of the budgeting methodology and would persist under ZBB unless procurement processes change.",
+      "D": "The $340,000 total traced to roll-forward categories — the absolute dollar magnitude proves that a structural cost problem exists, regardless of whether the root cause is incremental budgeting or management oversight, making it the strongest cross-cutting evidence."
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Incremental budgeting, by starting from prior actuals, can carry forward past inefficiencies since costs are not re-justified from a zero base.",
+    "ExplanationCorrect": "The decommissioned-software licenses provide the clearest evidence that incremental budgeting — not management oversight — is the structural cause. Under incremental budgeting, next year's budget starts from this year's actual spending. When a system is decommissioned mid-year, the license fee remains in the actuals and automatically carries forward into future budgets. No process step requires a department to affirmatively remove a cost; costs persist by default. Under zero-based budgeting, every line item must be re-justified annually — the department would have to explain why it still needs licenses for decommissioned software, and the cost would be identified and removed. The other findings are explainable by management oversight: un-bid contracts could survive under any budgeting methodology if procurement reviews are weak; ERP overtime could persist if managers are not diligent about adjusting headcount after projects end. The software licenses are uniquely diagnostic because their survival depends on a budgeting process that never asks 'do we still need this?'",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -4410,33 +4410,33 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Incremental budgeting is criticized specifically because it does NOT guarantee efficient allocation. By carrying forward prior-period spending levels, it can entrench outdated or wasteful spending patterns. Candidates confuse this with zero-based budgeting, which is the approach intended to drive efficiency by requiring fresh justification of all line items.",
-    "ExplanationWrongB": "",
-    "ExplanationWrongC": "Zero-based budgeting does not guarantee the most efficient allocation of resources. While ZBB promotes scrutiny of all expenditures, it is time-consuming and costly to implement. Moreover, the quality of decisions depends on the accuracy of justifications prepared by managers, who may still inflate their requests or fail to identify truly optimal allocations. Efficiency is a goal of ZBB, not a guaranteed outcome.",
-    "ExplanationWrongD": "Incorrect under Budgeting concepts and methodologies. it can perpetuate inefficiencies from prior periods without requiring justification of costs. This is a common exam trap.",
-    "DifficultyScore": 2,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ExplanationWrongA": "The COGS-to-revenue trend is a symptom, not a diagnostic finding — it shows that costs are rising faster than revenue but does not distinguish between causes. Cost increases could result from market conditions (commodity price inflation in textile inputs), capacity expansion, or management decisions unrelated to the budgeting methodology. A candidate selecting this may confuse correlation (cost trends coinciding with incremental budgeting) with causation.",
+    "ExplanationWrongC": "This is the CFO Elena's counter-argument, and it has some validity — vendor management is a procurement function, and contract renegotiation could occur under any budgeting methodology. However, a candidate selecting this misses the diagnostic value of the software license finding, which reveals a budgeting-specific structural gap (costs survive without re-justification) rather than a management-specific procedural gap (vendor review cycles).",
+    "ExplanationWrongD": "The $340,000 magnitude establishes that there IS a problem but does not identify which cause is responsible. Both incremental budgeting and management oversight could produce large cumulative cost waste over multiple years. A candidate selecting this may be looking for the largest number rather than the most diagnostic evidence — the question asks which finding most strongly isolates the budgeting methodology as the cause, not which finding is largest.",
+    "ExplanationWrongB": ""
   },
   {
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.011 incremental budgeting drawback",
+    "Topic": "B.011 incremental budgeting — use-it-or-lose-it spending behavior",
     "MicroTopic": "incremental budgeting drawback",
     "UniqueConceptKey": "B-D011-incremental-budgeting-drawback",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate-Easy",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Kelso builds its annual budget by adjusting last year's actual results by an inflation percentage. What is a key drawback of this approach?",
+    "Stem": "Kelso Manufacturing's Budget Director, Priya Sharma, notices a striking pattern in the quarterly spending data: department discretionary spending (travel, training, supplies, minor equipment) averages $187,000 per month during the first ten months of the fiscal year but surges to $266,000 per month — a 42% increase — during November and December. In January, spending drops back to the $187,000 baseline. Priya interviewed three department heads confidentially. The Operations Manager admitted: 'In October, I had $41,000 left in my training budget. If I don't spend it by December 31, next year's training budget baseline drops by $41,000 and I'll spend six months fighting to get it restored. So I booked training courses for my team — courses we need eventually, but not urgently right now.' The Sales Director described a similar dynamic with trade-show spending. The Engineering Manager pre-paid $22,000 in software maintenance renewals due in February just to 'use the budget before year-end.' Kelso's current process builds each year's budget from last year's actual spending, adjusted for a 3% inflation factor. Which behavioral pathology of incremental budgeting does the Q4 spending surge most directly illustrate?",
     "Choices": {
-      "A": "It guarantees the most efficient allocation of resources",
-      "B": "It requires zero-based justification for every line item",
-      "C": "It can perpetuate inefficiencies from prior periods without requiring justification of costs",
-      "D": "It eliminates the need for a sales forecast"
+      "A": "The use-it-or-lose-it spending mentality — managers accelerate discretionary spending at year-end to protect their budget baselines for the next budget cycle. Because incremental budgeting treats last year's actuals as next year's baseline, any unspent budget permanently reduces the department's future allocation, creating a powerful incentive to spend to the limit regardless of organizational need.",
+      "B": "Budgetary slack — managers intentionally overstate their budget requests at the beginning of the year, embedding excess padding that they intend to spend down. The Q4 surge reflects the consumption of deliberately inflated budgets rather than a defensive reaction to the baseline-setting mechanism.",
+      "C": "Goal incongruence — the pattern reflects a fundamental misalignment between department-level objectives (maximizing budget allocation) and company-level objectives (minimizing unnecessary costs). While present, this is a description of the external effect rather than the specific behavioral mechanism driving the Q4 spending surge.",
+      "D": "Short-termism — managers are sacrificing long-term organizational efficiency for short-term departmental benefit by spending money on non-urgent needs. This label describes the time-horizon problem but does not capture the specific budgetary incentive structure that triggers the behavior."
     },
-    "CorrectChoice": "C",
-    "ExplanationCorrect": "Incremental budgeting, by starting from prior actuals, can carry forward past inefficiencies since costs are not re-justified from a zero base.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The use-it-or-lose-it phenomenon is a well-documented behavioral consequence of incremental budgeting. Because next year's budget baseline is derived from this year's actual spending, any dollar not spent this year permanently reduces the department's future budget — there is no mechanism to bank unspent funds for future use. The Operations Manager's statement captures the mechanism precisely: spending $41,000 on non-urgent training now protects $41,000 in future training budget. The incentive structure is rational from the department manager's perspective but wasteful from the organization's perspective — training is purchased when the fiscal calendar demands it, not when operational needs require it. Under zero-based or activity-based budgeting, each year's training budget would be justified by projected needs, not by last year's spending level, eliminating the incentive to spend to the limit.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -4462,33 +4462,33 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Incremental budgeting does not eliminate the need for a sales forecast. Sales forecasting is a separate planning input used to project revenue and drive production volumes. Even when cost budgets are prepared by adjusting last year's actuals, a sales forecast remains essential and is not replaced by the budgeting method.",
-    "ExplanationWrongB": "Incorrect under Budgeting concepts and methodologies. it can perpetuate inefficiencies from prior periods without requiring justification of costs. This is a common exam trap.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Zero-based budgeting does not eliminate the need for a sales forecast. In fact, sales forecasting remains the foundational first step of the budget process regardless of the budgeting methodology used. ZBB requires each line item to be justified from scratch, but it still depends on accurate revenue projections to determine the overall budget framework. No budgeting method can function without a credible forecast of expected activity.",
-    "DifficultyScore": 2,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ExplanationWrongB": "Budgetary slack refers to managers overstating their budget requests up front — requesting $500,000 when they expect to spend $400,000. While slack and use-it-or-lose-it are related phenomena in incremental budgeting, the evidence in the scenario focuses on year-end spending behavior driven by the baseline-setting mechanism, not on initial budget inflation. The Operations Manager's $41,000 was in the approved budget; the issue is when and why it was spent, not whether the budget amount was inflated.",
+    "ExplanationWrongC": "Goal incongruence is a valid observation — department managers are maximizing their budget allocation while the company benefits from cost discipline — but it describes the outcome rather than the specific mechanism. Goal incongruence could arise from many incentive structures (bonus targets, headcount metrics, capital allocation rules) and is not specific to incremental budgeting. The question asks for the behavioral pathology most directly illustrated by the Q4 spending surge.",
+    "ExplanationWrongD": "Short-termism describes a general bias toward near-term results at the expense of long-term value. The Q4 spending surge does not reflect short-termism in this sense — the managers are not optimizing for a near-term performance metric; they are protecting future budget allocation. This is a temporal distortion in the opposite direction: managers incur costs now to secure resources in future periods. The label short-termism mischaracterizes the behavioral mechanism.",
+    "ExplanationWrongA": ""
   },
   {
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.012 incremental budgeting drawback",
+    "Topic": "B.012 incremental budgeting — structural gap diagnosis",
     "MicroTopic": "incremental budgeting drawback",
     "UniqueConceptKey": "B-D012-incremental-budgeting-drawback",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate-Easy",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Lockhaven builds its annual budget by adjusting last year's actual results by an inflation percentage. What is a key drawback of this approach?",
+    "Stem": "Lockhaven Industries' Controller, Anna Vasquez, is evaluating the company's budgeting methodology. Lockhaven has used incremental budgeting for 12 years. Anna's analysis of the most recent year's manufacturing overhead budget ($6.2 million) reveals three cost categories that consume 47% of the total but were never substantively reviewed: (1) Quality inspection budget — $890,000, originally set when Lockhaven had a 6.8% defect rate; the current defect rate after a three-year-old process-improvement initiative is 1.9%. (2) Machine maintenance budget — $1,120,000, based on scheduled maintenance every 800 operating hours; new CNC equipment installed in 2020 has manufacturer-recommended intervals of 1,200 hours. (3) Indirect materials budget — $640,000, based on the same allocation rate since 2017; reusable tooling introduced two years ago reduced actual indirect materials consumption by an estimated 40%. Anna presents her findings to the CFO, who asks: 'Does this mean incremental budgeting is the root cause, or could these gaps exist under any budgeting methodology?' Which interpretation of the three findings is best supported by the evidence?",
     "Choices": {
-      "A": "It eliminates the need for a sales forecast",
-      "B": "It requires zero-based justification for every line item",
-      "C": "It guarantees the most efficient allocation of resources",
-      "D": "It can perpetuate inefficiencies from prior periods without requiring justification of costs"
+      "A": "The gaps reflect three isolated departmental communication failures — if quality, maintenance, and materials managers had reported their process changes to the budget office, the allocations would have been adjusted within the existing incremental budgeting framework. The root cause is information asymmetry between operations and the budget office, and the solution is a mandatory annual cost-driver review, not a methodology change. One-time corrections can fix all three items.",
+      "B": "The three findings share a common structural cause — incremental budgeting's core mechanism of starting each year's budget from last year's actuals. When operating conditions improve (lower defect rate, longer maintenance intervals, reusable tooling), the budget baseline does not adjust downward because the methodology never requires re-baselining to current activity levels. The pattern across three departments with three different types of process improvements — all showing the same budget-inertia effect — is evidence that the methodology, not isolated communication failures, is the structural cause.",
+      "C": "The findings primarily indicate that Lockhaven's managers are exploiting the budgeting process to accumulate slack — the quality, maintenance, and materials departments benefit from inflated budgets because favorable variances make their performance look better. The root cause is behavioral (managerial self-interest), not structural (budgeting methodology), and any budgeting system can be gamed by managers who control the information flow.",
+      "D": "The findings indicate that Lockhaven should adopt zero-based budgeting, not merely activity-based budgeting — the cost misalignments are so deeply embedded that only a complete re-justification of every line item (ZBB) can correct them. Activity-based budgeting might still use historical cost-driver rates that become outdated if activity levels are not periodically validated from scratch."
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "Incremental budgeting, by starting from prior actuals, can carry forward past inefficiencies since costs are not re-justified from a zero base.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The three findings exhibit a shared structural pattern — each represents a cost category where the operating environment improved (lower defect rate, longer maintenance intervals, reusable tooling introduced) but the budget baseline did not adjust downward. This is exactly what incremental budgeting's mechanism predicts: next year's budget equals this year's actual spending plus an adjustment, with no process step that requires re-baselining to current activity levels. The pattern is diagnostic because it spans three departments with three different types of process improvements — quality (statistical process control), maintenance (equipment upgrade), and materials (tooling innovation). If the root cause were isolated communication failures, we would not expect the same budget-inertia effect across departments with different managers, different information systems, and different types of operating improvements. The consistency of the pattern across heterogeneous departments is strong evidence for a structural rather than behavioral or communication-based cause.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -4514,12 +4514,12 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Zero-based budgeting does not eliminate the need for a sales forecast. In fact, sales forecasting remains the foundational first step of the budget process regardless of the budgeting methodology used. ZBB requires each line item to be justified from scratch, but it still depends on accurate revenue projections to determine the overall budget framework. No budgeting method can function without a credible forecast of expected activity.",
-    "ExplanationWrongB": "Incorrect under Budgeting concepts and methodologies. it can perpetuate inefficiencies from prior periods without requiring justification of costs. This is a common exam trap.",
-    "ExplanationWrongC": "Incorrect under Budgeting concepts and methodologies. it can perpetuate inefficiencies from prior periods without requiring justification of costs. This is a common exam trap.",
-    "ExplanationWrongD": "",
-    "DifficultyScore": 2,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ExplanationWrongA": "Attributing the pattern to communication failures across three departments requires assuming that three different managers, in three different functional areas, with three different types of process improvements, all independently failed to communicate with the budget office. While possible, this explanation is less parsimonious than the structural explanation — it multiplies causes without necessity. Furthermore, even if the communication explanation were correct for this year, incremental budgeting's design does not prevent the problem from recurring: next year, any new process improvement would face the same communication dependency. A candidate selecting this may be treating the symptom rather than the structural vulnerability.",
+    "ExplanationWrongC": "The budgetary-slack explanation is a behavioral hypothesis that requires evidence of managerial intent — specifically, that managers are deliberately hiding cost reductions to preserve budget allocations. The evidence presented (lower defect rates, longer maintenance intervals, reusable tooling) is entirely consistent with good-faith operational improvements that simply were not captured by the budgeting process. Attributing these to managerial deception without evidence of intent is speculative. A candidate selecting this may be applying a cynical interpretation without considering the more straightforward structural explanation.",
+    "ExplanationWrongD": "This analysis leaps directly to a solution (ZBB) without establishing whether ZBB is necessary to solve the identified problem. Activity-based budgeting, which ties costs to activity drivers rather than historical spending, would identify the quality inspection budget as being driven by inspection hours (which have decreased with the lower defect rate), the maintenance budget as driven by machine operating hours (which dictate fewer maintenance events under the 1,200-hour interval), and the indirect materials budget as driven by tooling consumption (which has decreased with reusable tooling). ZBB's zero-base justification is more comprehensive but also more costly — recommending the most expensive solution without evaluating whether a less costly alternative would suffice is analytically premature.",
+    "ExplanationWrongB": ""
   },
   {
     "Part": 1,
@@ -4785,22 +4785,22 @@ const MCQ_BANK_D = [
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.018 capital expenditure budget planning",
+    "Topic": "B.018 capital expenditure budget — make-vs-buy investment recommendation",
     "MicroTopic": "capital expenditure budget planning",
     "UniqueConceptKey": "B-D018-capital-expenditure-budget-planning",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Very Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Redcliff prepares a capital expenditure budget covering planned equipment purchases for the next three years. What is the primary purpose of this budget?",
+    "Stem": "Redcliff Industries' CFO, Michael Torres, must present the capital expenditure budget recommendation to the Board's finance committee. A $950,000 CNC machine has been requested by the machining department to replace a 12-year-old manual machine used on Redcliff's highest-volume component (85,000 units/year). The department manager's analysis: the CNC machine reduces per-unit machining time from 18 to 7 minutes, saving $187,000 annually in direct labor at $22/hour, for a 5.1-year payback — within the company's 6-year threshold. An external machine shop has submitted a quote of $7.80 per unit for the same component. Redcliff's current fully-loaded in-house cost is $8.20 per unit. The committee chair asks: 'Before we approve $950,000, should we be making this component at all?' Michael notes that the department manager's analysis excludes: (a) estimated $28,000/year in additional CNC electricity, maintenance, and tooling costs; (b) the $950,000 capital could alternatively fund a warehouse-automation project with an estimated 18% IRR; and (c) if the component is outsourced, the skilled machinist (annual compensation: $68,000) would need to be reassigned — Redcliff has an opening in the tool-and-die department that would otherwise require a new hire at similar compensation. What should Michael recommend to the committee?",
     "Choices": {
-      "A": "To estimate short-term inventory purchase needs",
-      "B": "To plan and control long-term investments in fixed assets",
-      "C": "To set the annual sales commission structure",
-      "D": "To forecast daily cash receipts and disbursements"
+      "A": "Recommend the CNC machine — the 5.1-year payback satisfies the 6-year threshold, in-house production preserves quality control and scheduling flexibility, and the machinist's skills are retained in the organization. The outsourcing savings of $0.40/unit ($34,000/year) are too small to justify losing control of Redcliff's highest-volume component.",
+      "B": "Recommend outsourcing — the external quote of $7.80/unit generates $34,000 in annual savings with zero capital investment. The $950,000 in freed capital can be redeployed to the warehouse-automation project at 18% IRR. The machinist can fill the open tool-and-die position, eliminating the need for a new hire and preserving the employee's position.",
+      "C": "Recommend a comprehensive make-vs-buy analysis before any capital commitment — the department manager's analysis is incomplete because it omits incremental operating costs ($28,000/year), ignores the opportunity cost of the $950,000 capital (18% IRR alternative), and does not account for the avoidable labor cost if the component is outsourced and the machinist is reassigned. A proper differential analysis should compare the relevant costs of making vs. buying before committing nearly $1 million in capital.",
+      "D": "Recommend approving the CNC machine with a performance contingency — authorize the purchase only if the department manager commits to reducing per-unit cost below the external quote of $7.80 within 18 months of installation, with quarterly progress reports to the finance committee. This creates accountability while allowing Redcliff to retain the strategic option of in-house production."
     },
-    "CorrectChoice": "B",
-    "ExplanationCorrect": "The capital expenditure budget plans and controls the acquisition of long-term assets, distinct from operating budgets covering shorter-term activities.",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The most defensible recommendation is to complete a proper make-vs-buy analysis before committing capital. The department manager's analysis contains three critical omissions that management accountants are trained to identify: (1) incremental operating costs — the CNC machine's electricity, maintenance, and tooling ($28,000/year) reduce the net labor savings from $187,000 to $159,000; (2) opportunity cost of capital — the $950,000 could earn 18% IRR ($171,000/year) in the warehouse project, making the CNC machine's effective annual cost of capital approximately $171,000; (3) avoidable costs — the machinist's $68,000 salary is avoidable if the component is outsourced, improving the buy option's economics. A differential analysis reconciling all relevant costs and benefits for both alternatives is the foundation of sound capital budgeting. Under IMA's Statement of Ethical Professional Practice, management accountants have a responsibility to provide complete, objective analysis — recommending a $950,000 investment based on an incomplete analysis fails this standard.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -4826,33 +4826,33 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Inventory purchase planning belongs to the direct materials budget, a component of the operating budget. The capital expenditure budget is specifically designed for multi-year planning and control of fixed asset acquisitions such as machinery, equipment, and facilities — not short-term inventory.",
-    "ExplanationWrongB": "",
-    "ExplanationWrongC": "Sales commission structures are determined within the selling and administrative expense budget, part of the operating budget. The capital expenditure budget focuses on long-term fixed asset investments, not compensation expense planning for the sales force.",
-    "ExplanationWrongD": "Incorrect under Budgeting concepts and methodologies. to plan and control long-term investments in fixed assets. This is a common exam trap.",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "ExplanationWrongA": "Recommending the CNC machine based solely on the payback threshold ignores the more fundamental question of whether the component should be made at all. Payback period is a supplementary capital budgeting tool, not a substitute for a comprehensive make-vs-buy differential analysis. The argument about quality control and scheduling flexibility, while valid considerations, should be quantified and compared against the outsourcing alternative, not used to dismiss it without analysis.",
+    "ExplanationWrongB": "Jumping directly to outsourcing based on the $0.40 per-unit differential is premature — the analysis excludes the CNC machine's $28,000/year incremental operating costs and the reassignability of the machinist, both of which would change the differential. Furthermore, qualitative factors such as quality reliability of the external shop, supply chain risk, and intellectual property protection for proprietary machining techniques have not been evaluated. A candidate selecting this may be attracted to the 'zero capital investment' framing without recognizing that the analysis supporting it is incomplete.",
+    "ExplanationWrongD": "Attaching a performance contingency does not address the fundamental analytical gap — the finance committee still does not know whether making or buying is the economically superior choice. If comprehensive analysis reveals that outsourcing is clearly superior, approving a contingent $950,000 investment locks in a suboptimal decision. Performance contingencies are useful for managing execution risk but cannot substitute for the initial investment analysis that determines whether the project should proceed at all.",
+    "ExplanationWrongC": ""
   },
   {
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.019 capital expenditure budget planning",
+    "Topic": "B.019 capital expenditure budget — competing proposal prioritization",
     "MicroTopic": "capital expenditure budget planning",
     "UniqueConceptKey": "B-D019-capital-expenditure-budget-planning",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Stonewell prepares a capital expenditure budget covering planned equipment purchases for the next three years. What is the primary purpose of this budget?",
+    "Stem": "Stonewell Industries' CFO, Diana Park, must recommend the highest-priority capital investment for Year 1 from three competing proposals, given a $2.5 million capital budget. Proposal Alpha — Replace the main production facility's HVAC system ($1.1M). The current system is 22 years old and failed twice in the past year, causing 6 total days of production downtime at an estimated cost of $420,000 in lost contribution margin. A new system eliminates this reliability risk. Proposal Beta — Purchase the building currently leased for finished-goods warehousing ($1.4M). Stonewell pays $168,000/year in lease payments and $72,000 in internal forklift transfer costs between the leased building and the plant. Ownership would eliminate the lease and allow a physical connection to the production line, removing the forklift costs. The building's market value has appreciated approximately 4% annually for five years. Proposal Gamma — Upgrade the ERP system with demand-planning and production-scheduling modules ($0.9M). The upgrade is projected to reduce finished-goods inventory by 18% through better demand forecasting, freeing approximately $520,000 in working capital. The Board's capital allocation policy weights strategic alignment at 35%, financial return at 35%, and risk mitigation at 30%. Diana must recommend one proposal as the highest priority. Which should she recommend?",
     "Choices": {
-      "A": "To set the annual sales commission structure",
-      "B": "To forecast daily cash receipts and disbursements",
-      "C": "To plan and control long-term investments in fixed assets",
-      "D": "To estimate short-term inventory purchase needs"
+      "A": "Proposal Alpha — the HVAC replacement addresses a demonstrated operational risk that has already caused $420,000 in quantifiable losses within a single year. A 22-year-old system with multiple recent failures cannot be deferred without accepting known, recurring production shutdown risk. Risk mitigation is the most defensible priority when the failure has already materialized with documented financial impact, and this proposal scores highest on the Board's risk-mitigation criterion.",
+      "B": "Proposal Beta — the warehouse purchase converts an operating cost ($240,000/year in lease and forklift costs) into an owned asset with appreciation potential. The combined financial return (cost savings plus appreciation) makes this the highest-return proposal, and owning a strategically adjacent property eliminates a key supply-chain dependency. Financial return should dominate when the company faces no immediate operational crisis.",
+      "C": "Proposal Gamma — the ERP upgrade's $520,000 working-capital reduction represents a 58% cash-on-cash benefit in the first year alone ($520K benefit on $900K investment). Improved demand forecasting benefits all operational decisions — production scheduling, purchasing, and inventory management — making this the highest-leverage investment across the entire organization.",
+      "D": "Diana should recommend Proposals Alpha and Gamma together — the combined cost is $2.0M, within the $2.5M budget. The HVAC addresses the immediate operational risk, while the ERP upgrade's working-capital reduction ($520K) partially funds next year's warehouse purchase. This creates a self-funding sequence: fix reliability now, improve planning capability, and acquire the warehouse in Year 2 when the capital budget resets — maximizing value across all three proposals over two years."
     },
-    "CorrectChoice": "C",
-    "ExplanationCorrect": "The capital expenditure budget plans and controls the acquisition of long-term assets, distinct from operating budgets covering shorter-term activities.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Proposal Alpha is the highest priority because the HVAC system's demonstrated failure with quantifiable financial impact ($420,000 in lost contribution margin from just two failures in one year) creates a known, recurring risk that cannot be deferred. Capital budgeting prioritization must distinguish between investments that address existing operational failures and investments that create new opportunities. A 22-year-old HVAC system that has already caused production shutdowns represents a clear and present risk to current operations — the expected cost of NOT replacing it exceeds the $1.1M investment within approximately 2.6 years if the failure pattern continues. In management accounting, risk mitigation investments are prioritized when the risk has materialized with documented losses, because the expected value of continued deferral is negative. This is consistent with the IMA's framework for capital budgeting: investments are evaluated on incremental cash flows, and the incremental cash flow from avoiding $420,000/year in shutdown losses dominates the other proposals' expected benefits.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -4878,12 +4878,12 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Sales commission planning is part of the selling expense budget within the operating budget framework. The capital expenditure budget serves a distinct purpose: it plans and controls multi-year investments in long-term fixed assets, not variable compensation expense.",
-    "ExplanationWrongB": "Incorrect under Budgeting concepts and methodologies. to plan and control long-term investments in fixed assets. This is a common exam trap.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Estimating inventory needs is the function of the direct materials budget within the operating budget. The capital expenditure budget is focused on long-lived assets — equipment, facilities, and infrastructure — not short-term inventory purchases.",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ExplanationWrongB": "The warehouse purchase's financial return ($240,000/year in combined savings) is attractive, but it addresses an opportunity (cost reduction through ownership) rather than a demonstrated operational risk. A lease arrangement, while costly, does not threaten current operations — the HVAC failure does. Capital budgeting prioritization should distinguish between 'must-do' investments (risk mitigation, regulatory compliance) and 'nice-to-do' investments (cost optimization, growth). A candidate selecting this may be applying a pure financial-return framework without weighting risk-adjusted urgency.",
+    "ExplanationWrongC": "The ERP upgrade's working-capital reduction is promising but the benefits are projected, not demonstrated. The 18% inventory reduction and $520,000 working-capital release are based on the vendor's estimates and the implementation team's assumptions — actual results depend on user adoption, data quality, and integration success. The HVAC replacement, in contrast, addresses a documented failure with known, measured costs. Projected benefits carry implementation risk; demonstrated failures carry certainty. A candidate selecting this may be comparing projected returns against documented losses without adjusting for the uncertainty differential.",
+    "ExplanationWrongD": "Recommending two proposals together avoids the hard prioritization decision but violates the premise — Diana was asked to recommend the highest-priority single investment. Combining Alpha and Gamma is a compromise that postpones rather than resolves the prioritization question. Furthermore, recommending two investments in Year 1 commits $2.0M of the $2.5M budget, leaving only $500,000 in headroom for unexpected needs throughout the year — a thin cushion for a $47 million company. A candidate selecting this may be avoiding the analytical discomfort of ranking alternatives rather than making the required recommendation.",
+    "ExplanationWrongA": ""
   },
   {
     "Part": 1,
@@ -5413,18 +5413,18 @@ const MCQ_BANK_D = [
     "MicroTopic": "standard cost setting basis",
     "UniqueConceptKey": "B-D030-standard-cost-setting-basis",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Easy",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Everhart sets standard costs for direct materials based on expected efficient usage and negotiated purchase prices. What is the primary purpose of standard costs?",
+    "Stem": "Fenwick Manufacturing's production manager and controller disagree about the basis for setting direct materials standard costs for the upcoming year. The production manager wants to use ideal standards based on perfect efficiency (zero waste, no machine downtime, optimal purchase prices). The controller recommends attainable standards that incorporate normal waste (2%), expected downtime (3%), and current negotiated prices. Which approach should the budget director recommend for the master budget, and why?",
     "Choices": {
-      "A": "To eliminate all future price fluctuations",
-      "B": "To provide a benchmark for measuring and controlling actual performance",
-      "C": "To set the company's external financial reporting figures directly",
-      "D": "To replace the need for actual cost records entirely"
+      "A": "Ideal standards — because they set an aspirational target that motivates the production team to eliminate waste and downtime",
+      "B": "Attainable standards — because they provide a realistic benchmark for variance analysis, yield achievable cost targets for the master budget, and produce variances that reflect operational issues rather than standard-setting philosophy",
+      "C": "A weighted blend of ideal and attainable — using ideal standards for materials price and attainable standards for materials quantity",
+      "D": "Neither — the budget director should use last year's actual costs as the standard, because historical data is more reliable than projections"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Standard costs provide a predetermined benchmark used to measure and control actual performance through variance analysis.",
+    "ExplanationCorrect": "The budget director should recommend attainable standards for the master budget. Attainable standards incorporate realistic estimates of normal waste (2%), expected downtime (3%), and current negotiated prices — representing what costs should be under efficient but achievable conditions. This serves three purposes: (1) the master budget reflects achievable cost targets, (2) variance analysis isolates operational issues rather than mixing standard-setting philosophy into the signal, and (3) the production team is motivated by achievable targets rather than demoralized by perfection standards. Ideal standards produce persistently unfavorable variances that lose diagnostic value. Historical costs embed prior-period inefficiencies.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -5445,17 +5445,17 @@ const MCQ_BANK_D = [
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-      "Original practice item with unique micro-topic and stem",
+      "Screened to exclude Part 2-only topics",
+      "Cognitive upgrade: Understand → Analyze. SESSION081 Wave Final.",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as choice-specific explanations targeting documented CMA exam traps"
     ],
-    "ExplanationWrongA": "Standard costs cannot eliminate price fluctuations, which are driven by external market forces beyond the company's control. Standard costs serve as predetermined targets against which actual prices are compared via variance analysis, not as a mechanism to freeze or control market prices.",
+    "ExplanationWrongA": "Option A advocates ideal standards. While aspirational targets can motivate, ideal standards in a master budget produce variances that are almost always unfavorable — even when the team performs well. A $0.02/lb unfavorable variance under a 2% waste target vs. a 0% ideal standard sends completely different signals. Ideal standards undermine the diagnostic purpose of variance analysis.",
     "ExplanationWrongB": "",
-    "ExplanationWrongC": "Standard costs are internal management accounting tools used for budgeting, cost control, and variance analysis. External financial reporting under GAAP requires actual historical costs, not standard costs. Standard costs are reconciled to actual costs for external reporting purposes.",
-    "ExplanationWrongD": "Incorrect under Standard costing. to provide a benchmark for measuring and controlling actual performance. This is a common exam trap.",
-    "DifficultyScore": 1,
-    "CognitiveLevel": "Understand"
+    "ExplanationWrongC": "Option C proposes a hybrid approach. While creative, mixing ideal pricing assumptions with attainable quantity assumptions creates inconsistent standards — variance analysis conflates two different philosophies, making it harder to isolate whether a variance is driven by purchasing performance or production efficiency.",
+    "ExplanationWrongD": "Option D advocates using last year's actual costs as standards. Historical costs embed last year's inefficiencies, waste, and price levels — baking past problems into future budgets. Standard costs should be forward-looking benchmarks, not backward-looking descriptions.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -5914,22 +5914,22 @@ const MCQ_BANK_D = [
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.040 operating budget vs financial budget",
+    "Topic": "B.040 operating budget vs financial budget — interconnected analysis",
     "MicroTopic": "operating budget vs financial budget",
     "UniqueConceptKey": "B-D040-operating-budget-vs-financial-budget",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Orchardgate prepares both an operating budget covering revenue and expenses and a financial budget covering the balance sheet and cash flows. What distinguishes these two budget types?",
+    "Stem": "Orchardgate Home Products' CFO, David Chen, reviews the draft annual budget prepared by the Controller's team. The operating budget projects $14.2 million in revenue, $9.8 million in COGS, and $3.1 million in SG&A expenses, yielding $1.3 million in operating income. The financial budget projects year-end cash of $187,000 against a required minimum cash balance of $250,000 — a $63,000 shortfall — and a year-end debt-to-equity ratio of 1.72:1 against a loan covenant maximum of 1.50:1. The VP of Sales proposes accelerating a $400,000 customer order from January to late December by offering a 4% early-payment discount and absorbing the $2,500 in premium freight charges. The Controller points out that this order has a 35% gross margin, and the proposal would shift $400,000 in revenue and $140,000 in gross profit from next year's budget into the current year. David must explain to the VP of Sales why the operating budget and financial budget tell different stories about this proposal. Which analysis correctly describes how the proposal affects both budgets?",
     "Choices": {
-      "A": "They are identical and interchangeable terms",
-      "B": "The operating budget only covers capital expenditures",
-      "C": "The financial budget only covers payroll costs",
-      "D": "The operating budget focuses on planned income statement activity, while the financial budget focuses on balance sheet and cash position"
+      "A": "The proposal improves both budgets — the operating budget gains $140,000 in additional gross profit, while the financial budget gains $381,500 in net cash inflow ($400,000 - $16,000 discount - $2,500 freight), which resolves the $63,000 cash shortfall. Both budgets benefit, and the proposal should be accepted.",
+      "B": "The proposal improves the operating budget (additional $140,000 gross profit) but leaves the financial budget in breach — the $381,500 cash inflow does close the $63,000 shortfall, but the additional debt drawn to finance the accelerated production cycle causes the debt-to-equity ratio to worsen from 1.72:1 to 1.78:1, further violating the 1.50:1 loan covenant. The operating budget looks better; the financial budget gets worse.",
+      "C": "The proposal improves the financial budget (cash shortfall resolved) at the expense of the operating budget — accelerating the January order reduces next year's revenue by $400,000, and the 4% discount plus freight costs reduce the realized gross profit from $140,000 to $121,500. The operating budget shows a net deterioration when the Year 2 revenue loss is considered.",
+      "D": "The proposal affects the two budgets differently because they serve different purposes — the operating budget reflects accrual-basis profitability (the $140,000 gross profit contribution improves it), while the financial budget reflects cash flows and balance sheet constraints (the cash improvement is offset by a worsening debt-to-equity ratio from additional short-term borrowing needed to finance the accelerated production). One budget improves, the other deteriorates, and the decision requires evaluating which constraint — the minimum cash balance or the debt covenant — is more critical to the company's near-term financial health."
     },
     "CorrectChoice": "D",
-    "ExplanationCorrect": "The operating budget encompasses revenue and expense planning (income statement), while the financial budget covers the balance sheet, cash budget, and capital budget.",
+    "ExplanationCorrect": "The operating budget and financial budget serve fundamentally different purposes and can send conflicting signals about the same business decision. The operating budget captures the accrual-basis profitability of the accelerated order — $400,000 in revenue minus $260,000 in COGS and the $18,500 in discount/freight costs yields a net $121,500 contribution to operating income, which improves the operating budget. The financial budget captures the cash and balance sheet effects — the $381,500 net cash inflow helps close the minimum cash shortfall but the accelerated production requires short-term borrowing that worsens the debt-to-equity ratio against the loan covenant. This is the essential distinction between the two budget types: the operating budget answers 'will this be profitable?' while the financial budget answers 'can we afford the cash flows and maintain compliance with our financial covenants?' When the two budgets send conflicting signals, management must prioritize the more binding constraint.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -5952,13 +5952,13 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Operating budgets and financial budgets are distinct but complementary components of the master budget. The operating budget covers revenue-generating and expense-incurring activities (sales, production, cost of goods manufactured, selling and administrative). The financial budget covers capital investments, cash management, and projected financial statements. They serve different purposes and are not interchangeable.",
-    "ExplanationWrongB": "Capital expenditures are part of the financial budget, not the operating budget. The operating budget encompasses revenue-generating and expense-incurring activities: sales, production, direct materials, direct labor, manufacturing overhead, and selling and administrative expenses. Long-term asset acquisitions are addressed in the capital expenditure budget within the financial budget.",
-    "ExplanationWrongC": "The financial budget is far broader than payroll costs alone. It encompasses the capital expenditure budget, cash budget, budgeted balance sheet, budgeted income statement, and budgeted statement of cash flows. Payroll is addressed primarily in the direct labor budget, which is a component of the operating budget, not the financial budget.",
-    "ExplanationWrongD": "",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ExplanationWrongA": "This analysis incorrectly treats both budgets as uniformly improved. While the operating budget benefits from the gross profit contribution, the financial budget's improvement is partially offset by the additional borrowing needed to finance the accelerated production. Treating the financial budget as uniformly improved ignores the debt covenant violation. A candidate selecting this may be aggregating financial effects without considering how different components of the financial budget (cash vs. balance sheet ratios) react differently to the same transaction.",
+    "ExplanationWrongB": "This analysis correctly identifies that the operating budget improves and the financial budget worsens but incorrectly attributes the financial budget deterioration to 'additional debt drawn to finance the accelerated production cycle.' Under accrual accounting, accelerating revenue recognition and the associated production does not necessarily require incremental borrowing beyond what would have occurred at the normal production schedule. The debt-to-equity ratio concern is valid per the existing budget projections, but the causal mechanism described is tenuous. A candidate selecting this may be correctly observing the two-budget tension but attributing it to an incorrect mechanism.",
+    "ExplanationWrongC": "This analysis makes an inappropriate temporal comparison — evaluating the proposal's effect against next year's budget rather than this year's budget. Management accounting evaluates decisions based on incremental effects: the relevant comparison is the current-year budget with the proposal vs. without the proposal, not the current year vs. next year. The $400,000 shift from next year to this year is a timing difference, not an economic loss to the company over the two-year period. A candidate selecting this may be confusing timing effects with economic effects.",
+    "ExplanationWrongD": ""
   },
   {
     "Part": 1,
@@ -5968,18 +5968,18 @@ const MCQ_BANK_D = [
     "MicroTopic": "operating budget vs financial budget",
     "UniqueConceptKey": "B-D041-operating-budget-vs-financial-budget",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Pinemount prepares both an operating budget covering revenue and expenses and a financial budget covering the balance sheet and cash flows. What distinguishes these two budget types?",
+    "Stem": "Controller Elena Rossi of Tidewell Corp is preparing the Q3 budget presentation for the board. Two board members disagree about which budget document to prioritize: Director Ainsworth argues the board should focus on the operating budget because it drives profitability. Director Okonkwo insists the financial budget is more important because it shows cash position and capital needs. Tidewell is planning a $2.8M equipment purchase in Q3 and has a $500K line of credit that matures in November. Which recommendation should the controller make?",
     "Choices": {
-      "A": "The operating budget focuses on planned income statement activity, while the financial budget focuses on balance sheet and cash position",
-      "B": "The financial budget only covers payroll costs",
-      "C": "They are identical and interchangeable terms",
-      "D": "The operating budget only covers capital expenditures"
+      "A": "Prioritize the financial budget because the equipment purchase and line of credit maturity are balance-sheet and cash-flow items that the operating budget does not address",
+      "B": "Prioritize the operating budget because sales and expense projections determine whether Tidewell can afford the equipment purchase",
+      "C": "Present both budgets together, noting that they serve fundamentally different purposes — the operating budget projects income statement activity while the financial budget addresses the balance sheet, cash position, and capital expenditures the board is concerned about",
+      "D": "Ask the board to defer the decision until after Q3 results are available, since budgets are forecasts and the actual numbers may change"
     },
-    "CorrectChoice": "A",
-    "ExplanationCorrect": "The operating budget encompasses revenue and expense planning (income statement), while the financial budget covers the balance sheet, cash budget, and capital budget.",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The controller should recommend presenting both budgets together while clearly explaining their distinct roles. The operating budget encompasses revenue and expense planning (sales, production, materials, labor, overhead, and selling expenses — income statement activity). The financial budget covers the balance sheet, cash budget, capital expenditure budget, and budgeted statement of cash flows. Board member Ainsworth is right that the operating budget drives profitability analysis; board member Okonkwo is right that the financial budget addresses the specific cash and capital concerns. Neither budget alone addresses all the board's concerns. The controller's job is to frame both budgets as complementary components of the master budget, each answering different questions.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -5997,18 +5997,18 @@ const MCQ_BANK_D = [
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-      "Original practice item with unique micro-topic and stem",
+      "Screened to exclude Part 2-only topics",
+      "Cognitive upgrade: Apply → Evaluate. SESSION081 Wave Final.",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as choice-specific explanations targeting documented CMA exam traps"
     ],
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "The financial budget is much broader than payroll alone. It encompasses the capital expenditure budget, cash budget, budgeted balance sheet, budgeted income statement, and budgeted statement of cash flows. Payroll costs are addressed primarily in the direct labor budget and overhead budget, which are components of the operating budget, not the financial budget.",
-    "ExplanationWrongC": "The operating budget and financial budget are distinct components of the master budget with different purposes. The operating budget encompasses revenue and expense planning (sales, production, materials, labor, overhead, and selling expenses), while the financial budget addresses the balance sheet, cash flows, and capital expenditures. They are complementary, not interchangeable.",
-    "ExplanationWrongD": "Capital expenditures are part of the financial budget, not the operating budget. The operating budget deals with the ongoing income statement activity -- revenue, cost of goods sold, and operating expenses. The financial budget covers long-term asset acquisitions through the capital expenditure budget, as well as cash management and projected financial statements.",
+    "ExplanationWrongA": "Option A sides entirely with the financial budget, overlooking the operating budget's essential role in projecting revenue and expenses. The board needs to understand whether projected sales and margins support the $2.8M purchase — information only the operating budget provides.",
+    "ExplanationWrongB": "Option B sides entirely with the operating budget, ignoring the specific concerns the board raised. While the operating budget shows whether Tidewell can afford the equipment purchase, it does not address the line of credit maturity (a cash-flow and balance-sheet issue) or the capital expenditure itself (a financial budget item).",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D defers the decision, which does not address the board's immediate concern about which budget to review. Budgets are indeed forecasts, but the board is meeting now to review Q3 projections — deferral is not a constructive recommendation.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate"
   },
   {
     "Part": 1,
@@ -6515,22 +6515,22 @@ const MCQ_BANK_D = [
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.052 direct materials — purchase quantity under volume discount",
+    "Topic": "B.052 direct materials — purchase quantity optimization with volume discount",
     "MicroTopic": "direct materials purchase quantity volume discount analysis",
     "UniqueConceptKey": "B-D052-dm-purchase-discount-analysis",
     "LOSTag": "B Planning and budgeting",
     "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Redcliff Industries' purchasing manager, James Wu, is preparing the direct materials purchases budget for Q3. Production requires 32,000 lbs of polymer resin. Beginning inventory is 5,800 lbs; desired ending inventory is 6,500 lbs (a 10-day safety stock). The standard price is $4.20/lb. The supplier has announced a Q3-only volume discount: orders of 30,000+ lbs qualify for $3.85/lb. James must decide between the standard order (production + ending − beginning = 32,700 lbs at $4.20) or increasing to 35,000 lbs at $3.85/lb. The warehouse manager warns that storing extra resin requires temporary storage at $0.18/lb/month, and the resin has a 6-month shelf life. The controller notes that ordering 35,000 lbs would cost $134,750 vs. $137,340 for the standard order. Which analysis should James present to the CFO?",
+    "Stem": "Redcliff Industries' Purchasing Manager, James Wu, is preparing the Q3 direct materials purchase order for polymer resin. Production requires 32,000 lbs. Beginning inventory is 5,800 lbs; the desired ending inventory is 6,500 lbs (a 10-day safety stock). The standard purchase quantity — 32,700 lbs to cover production needs and the inventory target — would cost $3.27 per lb from the regular supplier (total: $106,929). An alternative supplier has offered a volume-discount schedule: orders of 40,000+ lbs qualify for $3.05/lb — a 6.7% discount. To qualify, James would need to order at least 40,000 lbs, purchasing 7,300 lbs more than the standard quantity. The additional 7,300 lbs would increase average inventory by approximately 3,650 lbs (assuming even drawdown), incurring additional carrying costs at Redcliff's estimated annual inventory holding cost rate of 18% of the purchase price. The resin is non-perishable and used consistently across Redcliff's product lines, so the excess inventory would be consumed within approximately 10 weeks at normal production rates. James must decide whether to order the standard quantity at $3.27/lb or the discount quantity of 40,000 lbs at $3.05/lb. Which analysis correctly evaluates the trade-off?",
     "Choices": {
-      "A": "Order 32,700 lbs at $4.20/lb — this meets production and inventory requirements exactly, avoids storage costs and obsolescence risk, and preserves the option to negotiate standard terms with the supplier next quarter",
-      "B": "Order 35,000 lbs at $3.85/lb — the $0.35/lb savings on 35,000 lbs yields $12,250 in price savings, and the extra 2,300 lbs can be drawn down in Q4, avoiding future purchases at $4.20",
-      "C": "Order 35,000 lbs at $3.85/lb — net savings of approximately $11,836 after one month of storage ($414 for 2,300 lbs × $0.18) with $134,750 cash outflow (less than the $137,340 standard order), plus Q4 purchase avoidance of ~$9,660 at standard price. Obsolescence risk on 2,300 lbs with a 6-month shelf life is negligible since the resin will be consumed within ~7 weeks at current production rates.",
-      "D": "Split the order: 32,700 lbs at $4.20/lb from the primary supplier and purchase the additional 2,300 lbs from a spot-market supplier at a negotiated rate — capturing some volume benefit without committing to excess inventory"
+      "A": "James should order the discount quantity — the direct purchase price savings are $8,800 (40,000 lbs × $0.22/lb savings). The additional carrying cost on 3,650 lbs of average excess inventory is approximately $200 (3,650 lbs × $3.05 × 18% × 10/52 weeks). The net savings of approximately $8,600 clearly favor the discount order.",
+      "B": "James should order the standard quantity — the $8,800 in purchase price savings is offset by the incremental carrying cost and the opportunity cost of deploying $11,140 in additional working capital (7,300 excess lbs × $3.05/lb × 18% annual cost). The net benefit is marginal and does not justify the increased inventory risk and working capital consumption.",
+      "C": "James should order the discount quantity but only if he can negotiate a consignment arrangement — take delivery of 40,000 lbs but only pay for the resin as it is consumed, with the supplier retaining ownership of the remaining balance. This captures the volume discount without incurring incremental carrying costs or working capital requirements.",
+      "D": "James should evaluate the trade-off using incremental analysis — the discount order saves $8,800 in purchase price but incurs incremental carrying costs. The 7,300 excess lbs represent 0.73 months of consumption at normal production rates. The incremental carrying cost is approximately $334 (3,650 lbs average excess × $3.05/lb × 18% / 12 months × 2.3 months until consumption). The net benefit of approximately $8,466 strongly favors the discount order, provided Redcliff has sufficient storage capacity and the resin's specifications will not change before the excess is consumed."
     },
-    "CorrectChoice": "C",
-    "ExplanationCorrect": "The net savings analysis: Price savings = 35,000 × ($4.20 − $3.85) = $12,250. One month of storage for 2,300 excess lbs = 2,300 × $0.18 = $414. Net Q3 savings = $12,250 − $414 = $11,836. Cash flow impact: 35,000 × $3.85 = $134,750 upfront vs. 32,700 × $4.20 = $137,340 — actually $2,590 LESS cash required in Q3. Q4 benefit: the 2,300 excess lbs will cover a portion of Q4 production, avoiding approximately $9,660 in Q4 purchases at the standard $4.20 rate (assuming similar production volumes). The obsolescence risk on 2,300 lbs (~7% of quarterly consumption) with a 6-month shelf life is negligible — the resin will be consumed within 7 weeks at current production rates and well within the 6-month window. Under CMA Part 1, purchasing decisions under volume discounts require evaluating the full cost equation: price savings − storage cost +/− cash flow timing effects − obsolescence risk. The analyze-level skill is quantifying each component and determining whether the net benefit exceeds the implementation cost and risk.",
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Incremental analysis is the correct framework for this decision. It isolates the costs and benefits that differ between the two alternatives. The benefits: $8,800 in purchase price savings (40,000 lbs × $0.22/lb discount). The costs: incremental inventory carrying cost on the excess quantity, calculated on the average excess inventory over the period until consumption. With 7,300 excess lbs drawn down evenly over approximately 10 weeks, the average excess inventory is 3,650 lbs. The carrying cost for approximately 2.3 months at 18% annual rate is about $334. The net savings of approximately $8,466 are substantial — more than double the standard order's total cost — and clearly favor the discount order. The incremental analysis also identifies the key non-financial condition: Redcliff must have storage capacity and the resin specifications must remain stable. Management accountants use incremental (differential) analysis precisely for this type of decision — comparing only the costs and benefits that change between alternatives.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -6553,34 +6553,34 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "This figure likely omits either the desired ending inventory or uses ending inventory instead of beginning inventory. The direct materials purchases calculation is: (budgeted production x materials per unit) + desired ending materials inventory - beginning materials inventory.",
-    "ExplanationWrongB": "This includes only material needed for production and ignores the inventory adjustment.",
-    "ExplanationWrongC": "This adds beginning inventory instead of subtracting it; beginning inventory is already available and reduces purchases needed.",
-    "ExplanationWrongD": "",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ExplanationWrongA": "This analysis contains a calculation error in the carrying cost. The 10-week consumption period should be expressed as 10/52 of a year, not 10/52 × 3,650. Using 10/52: 3,650 lbs × $3.05 × 18% × 10/52 = approximately $386. The error is in the direction of estimating a lower carrying cost than the correct figure, making the discount order appear even more attractive than it actually is. However, even with the corrected carrying cost (~$386), the net savings remain overwhelmingly positive. A candidate selecting this may have the right conclusion but arrived at it through an imprecise calculation.",
+    "ExplanationWrongB": "This analysis incorrectly conflates the incremental carrying cost with the opportunity cost of working capital. The $11,140 figure (7,300 lbs × $3.05 × 18%) appears to apply the annual holding cost rate to the total excess purchase rather than to the average excess inventory — it treats one-time purchase cost as if it were held for a full year, which double-counts the carrying cost. Furthermore, the working capital deployed is recovered within 10 weeks when the resin is consumed in production and converted to finished goods, not permanently tied up. A candidate selecting this may be overstating the costs of the discount option by applying the annual rate to a short-duration investment.",
+    "ExplanationWrongC": "A consignment arrangement would capture the volume discount without carrying cost, making it analytically attractive. However, consignment terms are a supplier-relationship negotiation, not an analysis of the two alternatives as presented. The question asks James to evaluate the trade-off between the standard order and the discount order, not to propose a third commercial arrangement. Furthermore, suppliers offering volume discounts typically do so precisely because they want to shift inventory holding costs to the buyer — requesting consignment on top of a volume discount would likely be rejected. A candidate selecting this may be avoiding the analytical question by changing the terms of the decision.",
+    "ExplanationWrongD": ""
   },
   {
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.053 direct materials purchases budget",
+    "Topic": "B.053 direct materials purchases budget — constrained supplier allocation",
     "MicroTopic": "direct materials purchases budget",
     "UniqueConceptKey": "B-D053-direct-materials-purchases-budget",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Duskgrove needs 25,000 pounds of material for production, wants ending inventory of 4,000 pounds, and has beginning inventory of 3,000 pounds. How many pounds should be purchased?",
+    "Stem": "Duskgrove Manufacturing's Production Manager, Elena Rossi, must prepare the Q4 direct materials purchase plan under unusual constraints. Production requires 42,000 lbs of specialty alloy for Q4 orders. Beginning inventory is 8,000 lbs; the desired ending inventory is 9,500 lbs (Q1 pre-build safety stock, required by the CFO). Two suppliers can provide the alloy: Supplier North (Duskgrove's incumbent supplier, $4.80/lb) has allocated a maximum of 30,000 lbs to Duskgrove for Q4 due to industry-wide capacity constraints. Supplier South (a new supplier, $5.15/lb with a $2,500 first-order setup fee) can supply any quantity but requires a minimum first order of 10,000 lbs. The required purchase quantity is 43,500 lbs (42,000 production + 9,500 ending - 8,000 beginning). Elena must allocate this requirement between the two suppliers. The Controller notes that Supplier South has a 7-day longer average lead time than Supplier North, which may require holding 2,000 lbs of additional safety stock, but this adjustment would only take effect in Q1 of the following year. Given these constraints, what is the cost-minimizing purchase allocation between the two suppliers?",
     "Choices": {
-      "A": "26,000 pounds",
-      "B": "28,000 pounds",
-      "C": "22,000 pounds",
-      "D": "25,000 pounds"
+      "A": "Order 30,000 lbs from Supplier North at $4.80/lb ($144,000) and 13,500 lbs from Supplier South at $5.15/lb plus the $2,500 setup fee ($72,025) — total cost: $216,025. This maximizes the allocation to the lower-cost incumbent supplier and takes the minimum economically feasible quantity from the new supplier.",
+      "B": "Order 33,500 lbs from Supplier North at $4.80/lb ($160,800) and 10,000 lbs from Supplier South at $5.15/lb plus the $2,500 setup fee ($54,000) — total cost: $214,800. However, Supplier North's 30,000-lb maximum makes this allocation infeasible; Duskgrove must respect the supplier's capacity constraint.",
+      "C": "Challenge the desired ending inventory — 9,500 lbs exceeds Duskgrove's normal 15-day safety stock by approximately 2,800 lbs (normal consumption of 85,000 lbs/year = ~7,100 lbs/month, so 15 days = ~3,550 lbs plus buffer). Reducing ending inventory to 6,700 lbs would allow purchasing 40,700 lbs — 30,000 from North and 10,700 from South — reducing total cost without meaningfully increasing stockout risk.",
+      "D": "Order 30,000 lbs from Supplier North and delay 3,500 lbs of the Q4 production requirement to Q1 — this allows the total purchase to drop to 40,000 lbs (30,000 from North + 10,000 from South), eliminating 3,500 lbs from the higher-cost supplier. However, this delays customer orders representing approximately $175,000 in Q4 revenue."
     },
     "CorrectChoice": "A",
-    "ExplanationCorrect": "Direct materials purchases equal production requirements plus desired ending inventory minus beginning inventory. Duskgrove needs 25,000 pounds for production, wants 4,000 pounds ending inventory, and has 3,000 pounds on hand, so purchases = 25,000 + 4,000 - 3,000 = 26,000 pounds.",
+    "ExplanationCorrect": "The cost-minimizing allocation is driven by the economic principle of filling the lower-cost supplier's capacity first: 30,000 lbs from Supplier North at $4.80/lb = $144,000. The remaining requirement of 13,500 lbs (43,500 - 30,000) must come from Supplier South at $5.15/lb plus the $2,500 setup fee = (13,500 × $5.15) + $2,500 = $69,525 + $2,500 = $72,025. Total cost: $216,025. This allocation respects both the supplier capacity constraint and the minimum-order constraint while minimizing total procurement cost. In management accounting, constrained optimization problems like this are solved by allocating to the lowest-cost option up to its constraint and then filling the remaining requirement from the next-lowest-cost option — the same logic as linear programming in contribution-margin analysis with constrained resources.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -6603,13 +6603,13 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "This figure likely overstates purchases by adding ending inventory instead of netting beginning inventory against it, or by using gross production requirements without the inventory adjustment. The purchases formula nets the inventory change: materials needed + desired ending - beginning.",
-    "ExplanationWrongC": "This subtracts desired ending inventory instead of adding it; ending inventory is an additional requirement.",
-    "ExplanationWrongD": "This is only the pounds needed for production and ignores the desired ending and beginning inventory adjustments.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ExplanationWrongB": "This allocation (33,500 lbs from Supplier North) exceeds the supplier's stated maximum capacity of 30,000 lbs. In management accounting, constraints are binding — the optimal solution must be feasible within all stated constraints. Selecting this option indicates the candidate may have correctly identified the least-cost approach (use as much of the $4.80/lb supplier as possible) but failed to verify whether the allocation respects the stated capacity limit. Always check constraint feasibility before recommending a cost-minimizing allocation.",
+    "ExplanationWrongC": "Challenging the desired ending inventory is a reasonable management response to procurement constraints, but it changes the terms of the problem. The CFO set the 9,500-lb target as a Q1 pre-build requirement, implying a business reason (such as an expected Q1 demand surge or supplier lead-time extension) that Elena was not authorized to override. While a management accountant should question assumptions, the given problem constraints must be respected when the authority to change them lies outside the decision-maker's scope. A candidate selecting this may be correctly identifying an optimization lever but overstepping the decision authority described in the scenario.",
+    "ExplanationWrongD": "Delaying customer orders to reduce current-period procurement costs trades off a cost saving against a revenue delay. The 3,500 lbs deferred represents approximately $175,000 in Q4 revenue — the contribution margin on those orders likely far exceeds the cost saving from avoiding the higher-cost supplier ($5.15 - $4.80 = $0.35/lb × 3,500 lbs = $1,225). This is a classic management accounting error: optimizing a cost line item at the expense of a much larger revenue line. The $1,225 procurement saving does not justify risking $175,000 in customer orders and the associated customer-relationship damage from delayed delivery.",
+    "ExplanationWrongA": ""
   },
   {
     "Part": 1,
@@ -6619,18 +6619,18 @@ const MCQ_BANK_D = [
     "MicroTopic": "direct materials purchases budget",
     "UniqueConceptKey": "B-D054-direct-materials-purchases-budget",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Elmbrook needs 25,000 pounds of material for production, wants ending inventory of 4,000 pounds, and has beginning inventory of 3,000 pounds. How many pounds should be purchased?",
+    "Stem": "Ashvale Manufacturing's purchasing manager submitted the direct materials purchases budget for Q2. The production supervisor reports that the budgeted purchase quantity of 12,400 units of raw material appears too high given the planned production run of 8,000 finished units, which each require 1.5 units of raw material. Beginning raw materials inventory is 2,200 units and the target ending inventory is 1,800 units. The purchasing manager counters that the budget should include a 10% buffer for scrap and spoilage. Which position should the plant controller support?",
     "Choices": {
-      "A": "25,000 pounds",
-      "B": "26,000 pounds",
-      "C": "28,000 pounds",
-      "D": "22,000 pounds"
+      "A": "The purchasing manager — the 12,400-unit purchase is correct (12,000 required for production + 400 inventory change, plus the 10% buffer brings it to 12,400)",
+      "B": "The production supervisor — the required purchase is 11,600 units (12,000 required - 400 inventory reduction), and the buffer should be excluded because scrap is already accounted for in the usage standard",
+      "C": "Neither — both calculations have errors; the controller should recalculate independently and present a revised budget",
+      "D": "The purchasing manager on quantity but not on rationale — the buffer is appropriate but the inventory change direction is reversed"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "A materials purchases budget adjusts production needs for inventory targets: purchases = materials needed for production + desired ending inventory - beginning inventory. Elmbrook should purchase 25,000 + 4,000 - 3,000 = 26,000 pounds.",
+    "ExplanationCorrect": "The production supervisor's position is correct. Required raw material for production = 8,000 units × 1.5 = 12,000 units. Inventory change needed = target ending (1,800) − beginning (2,200) = −400 units (fewer purchases needed because ending inventory is lower). Required purchases = 12,000 + (−400) = 11,600 units. The scrap buffer should be excluded because standard usage rates (1.5 units per finished unit) already account for normal waste and spoilage — adding a separate buffer double-counts the allowance.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -6648,18 +6648,18 @@ const MCQ_BANK_D = [
     "CalculationItem": true,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-      "Original practice item with unique micro-topic and stem",
+      "Screened to exclude Part 2-only topics",
+      "Cognitive upgrade: Apply → Evaluate. SESSION081 Wave Final.",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as choice-specific explanations targeting documented CMA exam traps"
     ],
-    "ExplanationWrongA": "This figure likely results from including both beginning and ending inventory without netting them. The formula is: materials needed for production + desired ending inventory - beginning inventory. Verify that you are adding ending inventory and subtracting beginning inventory correctly.",
+    "ExplanationWrongA": "Option A supports the purchasing manager's 12,400-unit figure, which incorrectly adds the 10% buffer to an already-overstated calculation. The purchasing manager appears to have used 12,000 + 400 = 12,400 (adding 400 rather than subtracting it), then added the buffer. The direction of the inventory change is key: when ending inventory is lower than beginning inventory, fewer purchases are needed, not more.",
     "ExplanationWrongB": "",
-    "ExplanationWrongC": "This figure likely overstates purchases by adding ending inventory instead of netting beginning inventory against it, or by using gross production requirements without the inventory adjustment. The purchases formula nets the inventory change: materials needed + desired ending - beginning.",
-    "ExplanationWrongD": "This subtracts desired ending inventory from production needs, but desired ending inventory must be added to ensure enough material remains on hand.",
+    "ExplanationWrongC": "Option C calls for an independent recalculation, which is a reasonable procedural suggestion but avoids the substantive question. The controller can verify the calculation on the spot: 12,000 required + (−400) inventory change = 11,600 units. The issue is not computational complexity — it is understanding whether the scrap buffer should be added to a standard that already accounts for it.",
+    "ExplanationWrongD": "Option D partially supports the purchasing manager but concedes the inventory direction is reversed — effectively agreeing with the production supervisor's calculation. The buffer is not separately appropriate because the 1.5-unit standard already accounts for normal waste.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate"
   },
   {
     "Part": 1,
@@ -6669,18 +6669,18 @@ const MCQ_BANK_D = [
     "MicroTopic": "direct materials purchases budget",
     "UniqueConceptKey": "B-D055-direct-materials-purchases-budget",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Falconwood needs 25,000 pounds of material for production, wants ending inventory of 4,000 pounds, and has beginning inventory of 3,000 pounds. How many pounds should be purchased?",
+    "Stem": "Lockhaven Industries' production plan calls for 15,000 finished units in Q1. Each unit requires 2.8 pounds of direct material at $4.50 per pound. Beginning materials inventory is 5,200 pounds; desired ending inventory is 6,000 pounds. The supplier has announced a 6% price increase effective February 1, and Lockhaven's policy is to lock in Q1 pricing by placing the entire quarter's purchase order in January. The treasurer recommends buying an extra 2,000 pounds in January at the current price to build a buffer against future increases. What should the controller recommend?",
     "Choices": {
-      "A": "28,000 pounds",
-      "B": "22,000 pounds",
-      "C": "26,000 pounds",
-      "D": "25,000 pounds"
+      "A": "Place the standard order for 42,800 pounds now and purchase the extra 2,000 pounds separately at the new price in February",
+      "B": "Buy 44,800 pounds in January — the full requirement plus the treasurer's buffer — to lock in the lower price on all materials",
+      "C": "Buy only 42,800 pounds in January and reject the buffer; the price increase is already factored into the $4.50 standard and building inventory creates carrying costs",
+      "D": "Negotiate with the supplier for a fixed-price contract covering the entire quarter rather than placing a single January order"
     },
-    "CorrectChoice": "C",
-    "ExplanationCorrect": "The direct materials purchases budget determines the quantity of materials to buy. Production needs are 25,000 lbs. The company desires 4,000 lbs of ending inventory to start the next period, but has 3,000 lbs already in beginning inventory. Purchases = Production needs (25,000) + Desired ending (4,000) - Beginning (3,000) = 26,000 pounds.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The controller should recommend buying 44,800 pounds in January. Required material = 15,000 x 2.8 = 42,000 lbs. Inventory change = 6,000 - 5,200 = +800 lbs. Required purchases = 42,000 + 800 = 42,800 lbs. Adding the 2,000-lb buffer = 44,800 lbs. By purchasing all 44,800 lbs in January at $4.50/lb, Lockhaven saves $0.27/lb (6% x $4.50) on the buffer compared to buying in February at $4.77/lb: savings = 2,000 x $0.27 = $540. The carrying cost of holding 2,000 extra pounds for 1-2 months is far less than the $540 price savings.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -6698,18 +6698,18 @@ const MCQ_BANK_D = [
     "CalculationItem": true,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-      "Original practice item with unique micro-topic and stem",
+      "Screened to exclude Part 2-only topics",
+      "Cognitive upgrade: Apply → Evaluate. SESSION081 Wave Final.",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as choice-specific explanations targeting documented CMA exam traps"
     ],
-    "ExplanationWrongA": "This figure likely overstates purchases by adding ending inventory instead of netting beginning inventory against it, or by using gross production requirements without the inventory adjustment. The purchases formula nets the inventory change: materials needed + desired ending - beginning.",
-    "ExplanationWrongB": "This choice subtracts beginning inventory (3,000 lbs) from production needs (25,000 lbs) but omits the desired ending inventory addition (4,000 lbs). Purchases = 25,000 + 4,000 - 3,000 = 26,000 lbs. Ending inventory targets increase the quantity needed.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "This figure likely results from including both beginning and ending inventory without netting them. The formula is: materials needed for production + desired ending inventory - beginning inventory. Verify that you are adding ending inventory and subtracting beginning inventory correctly.",
+    "ExplanationWrongA": "Option A purchases the standard 42,800 pounds now but defers the buffer to February at the higher price, forfeiting the $540 price savings on the 2,000-pound buffer.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C rejects the buffer entirely arguing carrying costs outweigh the benefit. But the math favors the buffer: $540 savings vs. approximately $11-15 in carrying costs for holding 2,000 lbs at $4.50/lb for 1-2 months at 15-20% annual rate.",
+    "ExplanationWrongD": "Option D proposes negotiating a fixed-price contract, a reasonable long-term suggestion but does not address the immediate Q1 purchasing decision. The January order window is now.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate"
   },
   {
     "Part": 1,
@@ -7275,15 +7275,15 @@ const MCQ_BANK_D = [
     "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Elmsworth Manufacturing's controller, Lisa Tran, is reviewing the selling and administrative expense budget before the annual planning meeting. The current S&A budget totals $1,840,000 on projected sales of $23,000,000. Lisa's team decomposed the budget into cost behavior categories: (1) Fixed S&A: $720,000 (executive salaries $380,000, office lease $145,000, insurance $85,000, depreciation $110,000); (2) Variable S&A: $920,000 (sales commissions $575,000 at 2.5% of sales, freight-out $230,000, credit card processing $115,000); (3) Mixed S&A: $200,000 (customer service — $120,000 fixed base salary + $80,000 variable incentive tied to call volume). The CEO has mandated a 5% reduction in total S&A spending for the upcoming year while maintaining sales at $24,150,000 (a 5% projected increase). Lisa evaluates four cost-reduction options. Which recommendation best balances cost reduction with operational risk?",
+    "Stem": "Elmsworth Manufacturing's Controller, Lisa Tran, presents the S&A expense analysis to the CFO before the annual planning meeting. The current S&A budget totals $1,840,000 on projected sales of $23,000,000. Lisa's team classified each line item by cost behavior: Committed fixed costs — $680,000 (executive salaries, facility leases, insurance, depreciation on administrative systems — cannot be adjusted within 12 months). Discretionary fixed costs — $420,000 (training programs, trade shows, corporate sponsorships, sustainability reporting — can be reduced or eliminated with one quarter's notice). Variable costs — $740,000 at projected sales volume (sales commissions at 2.5%, credit card processing fees at 0.7%, bad debt provision at 0.3% of credit sales representing 60% of revenue). Lisa has identified three potential reductions: (1) eliminate the annual industry trade show ($85,000) — the Sales VP argues this generated 12% of last year's new accounts; (2) reduce the corporate sponsorship program from $120,000 to $60,000 — the program currently sponsors five industry events; (3) outsource credit and collections to a third-party agency for 0.8% of credit sales, eliminating the $95,000 in-house credit department salaries but increasing the bad debt provision estimate. The CFO, James Okonkwo, has directed that total S&A must not exceed $1,700,000 — a $140,000 reduction. Which combination of reductions should Lisa recommend?",
     "Choices": {
-      "A": "Reduce the variable S&A rate proportionally — cut the commission rate from 2.5% to 2.375%, reduce freight-out by negotiating volume rates with carriers, and switch to a lower-fee credit card processor. This spreads the 5% reduction across all variable categories without targeting any single cost category for disproportionate cuts.",
-      "B": "Freeze all fixed S&A at current levels (no inflation adjustment), eliminate the customer service variable incentive ($80,000), and reduce credit card processing by switching to ACH for B2B customers ($40,000 savings). Total reduction = $120,000 = 6.5% of S&A without touching sales commissions.",
-      "C": "Target the largest variable cost: reduce sales commissions from 2.5% to 2.0% ($115,000 savings on $23M of current sales), freeze fixed executive salaries, and negotiate a 3% freight rate reduction ($6,900). Total savings = ~$122,000, exceeding the 5% target with minimal operational disruption.",
-      "D": "Cut $50,000 from fixed costs (reduce insurance coverage, defer office renovations), renegotiate freight contracts for $15,000 savings, reduce customer service variable incentive by $10,000, and accept the remaining reduction through lower commission expense as a percentage of the naturally higher $24.15M sales base — spread the cuts across all four cost categories."
+      "A": "Eliminate the trade show ($85,000) and halve the sponsorship program ($60,000) — total savings of $145,000, exceeding the $140,000 target. These are both discretionary fixed costs, so the reductions are fully realizable within one quarter. The trade-show elimination is justified because 12% of new accounts came from a single event — this concentration suggests dependence on one channel, which is a marketing risk in itself.",
+      "B": "Outsource credit and collections ($95,000 salary savings) and reduce the sponsorship program by $50,000 — total savings of $145,000. The outsourcing converts a fixed cost to a variable cost (0.8% of credit sales), making S&A more responsive to sales volume changes. This structural change improves future budget flexibility beyond the current year.",
+      "C": "Recommend a different approach — reduce the trade show to a smaller presence ($85,000 → $35,000, saving $50,000), cut two of five sponsorships ($120,000 → $72,000, saving $48,000), and implement a more selective credit policy that reduces the bad debt provision by $42,000. This spreads the reductions across three areas, minimizing the impact on any single revenue-generating activity.",
+      "D": "Recommend that the $140,000 reduction target is unrealistic without damaging revenue-generating capacity — the only truly discretionary costs are the trade show ($85,000) and sponsorship program ($120,000), totaling $205,000. Reducing these by $140,000 would cut deeply into programs that generated an estimated 12% of new accounts. Lisa should present this analysis to the CFO and recommend a smaller reduction or a phased approach over two budget cycles."
     },
-    "CorrectChoice": "B",
-    "ExplanationCorrect": "Option B achieves the 5%+ reduction target (~$120,000 = 6.5%) with the lowest operational risk because it protects the two most sensitive S&A cost categories: (1) Sales commissions remain at 2.5% — cutting commissions risks demotivating the sales force at precisely the moment the company needs 5% revenue growth, creating a self-defeating cost reduction. (2) Freight-out remains unchanged — compromising delivery quality or speed would affect customer satisfaction and potentially lose recurring revenue. The $80,000 variable incentive elimination from customer service is a lower-risk cut because the base salary ($120,000) preserves core staffing, and the ACH switch for B2B customers ($40,000) has no customer-facing impact. Under CMA Part 1 S&A budgeting, cost reduction must be evaluated against revenue risk: a $1.00 cut in sales commission that loses $40.00 in sales is a net loss. The evaluate-level skill is distinguishing between cost categories where reduction creates proportional revenue risk (commissions, freight) and categories where reduction has minimal revenue impact (payment processing, incentive compensation structures).",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Spreading the $140,000 reduction across three areas — trade show presence, sponsorships, and credit policy — minimizes the revenue impact while achieving the CFO's target. The trade show can continue with a smaller footprint (maintaining market visibility without full cost), sponsorships can be reduced from five to three events (preserving some industry presence), and tightening credit policy addresses a cost driver (bad debt) rather than a revenue driver. This approach recognizes that management accounting decisions involve trade-offs between cost reduction and revenue preservation. Lisa's analysis shows cost behavior is the starting point, but the recommendation must weigh both the quantifiable savings and the qualitative impact on revenue-generating activities.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -7306,34 +7306,34 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "A CEO's fixed annual salary is a committed fixed cost that does not vary with sales volume. Variable selling and administrative expenses fluctuate in direct proportion to activity, such as commissions on each sale or shipping costs per unit. Fixed salaries remain constant regardless of whether the company sells one unit or one million units.",
-    "ExplanationWrongB": "Multi-year lease payments on office space are committed fixed costs determined by contractual obligations, not by sales activity. Variable selling and administrative expenses, such as sales commissions, fluctuate in direct proportion to sales volume. Lease obligations remain unchanged regardless of how many units the company sells.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Straight-line depreciation on headquarters is a fixed cost based on the asset's original cost and estimated useful life. It does not change with sales activity. Variable selling and administrative expenses, such as commissions, vary in direct proportion to revenue. A candidate confusing fixed facility costs with variable selling costs would select this option.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ExplanationWrongA": "Eliminating the trade show entirely may achieve the $85,000 savings but risks a disproportionate revenue impact. If the Sales VP's claim that 12% of new accounts originated at this event is approximately correct, the lost new-account contribution margin could far exceed the $85,000 savings. Eliminating the single largest new-account source without an alternative customer-acquisition strategy is cost reduction without revenue consideration. A candidate selecting this option may be focused on the cost-side math without considering the revenue-side consequences of cutting a demand-generating activity.",
+    "ExplanationWrongB": "Outsourcing credit and collections converts a fixed cost to a variable cost, which sounds analytically attractive — variable costs flex with volume, reducing risk. However, the outsourcing cost (0.8% of credit sales on 60% of $23M = $110,400) plus the expected increase in bad debt provision may offset the $95,000 salary savings. More importantly, losing in-house control of credit decisions may harm customer relationships — in-house credit managers understand Elmsworth's customer base and can exercise judgment on borderline accounts in a way that a third-party agency applying standardized rules cannot. A candidate selecting this may be attracted to the 'fixed-to-variable cost conversion' framing without evaluating the full economic and customer-relationship consequences.",
+    "ExplanationWrongD": "Characterizing the $140,000 target as 'unrealistic' is premature when a diversified-reduction approach (Choice C) achieves the target while preserving some investment in each revenue-generating activity. This recommendation defaults to rejecting the constraint rather than finding a solution within it — the essence of management accounting is working within constraints, not rejecting them. A candidate selecting this may be avoiding the hard trade-off analysis that management accounting requires.",
+    "ExplanationWrongC": ""
   },
   {
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.068 selling and administrative expense budget",
+    "Topic": "B.068 selling and administrative expense — cost behavior analysis from data",
     "MicroTopic": "selling and administrative expense budget",
     "UniqueConceptKey": "B-D068-selling-and-administrative-expense-budget",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Somerdale prepares a budget for fixed and variable selling and administrative expenses based on projected sales volume. What costs would typically appear as variable in this budget?",
+    "Stem": "Somerdale Corporation's budget analyst, Priya Mehta, is classifying S&A costs for the upcoming fiscal year budget. She has compiled the following actual cost data from the past four quarters at different sales volumes: Q1 ($5.2M sales): sales commissions $130,000, credit card fees $36,400, shipping to customers $78,000, advertising $45,000, sales salaries $95,000, depreciation on delivery vehicles $18,000, warehouse rent $36,000, and customer service salaries $44,000. Q2 ($6.1M sales): sales commissions $152,500, credit card fees $42,700, shipping to customers $91,500, advertising $45,000, sales salaries $95,000, depreciation on delivery vehicles $18,000, warehouse rent $36,000, and customer service salaries $44,000. Q3 ($4.7M sales): sales commissions $117,500, credit card fees $32,900, shipping to customers $70,500, advertising $45,000, sales salaries $95,000, depreciation on delivery vehicles $18,000, warehouse rent $36,000, and customer service salaries $44,000. Q4 ($7.0M sales): sales commissions $175,000, credit card fees $49,000, shipping to customers $105,000, advertising $60,000, sales salaries $95,000, depreciation on delivery vehicles $18,000, warehouse rent $36,000, and customer service salaries $44,000. Based solely on the cost behavior observed across these four quarters, which costs should Priya classify as variable in the S&A budget?",
     "Choices": {
-      "A": "The CEO's fixed annual salary",
-      "B": "Straight-line depreciation on headquarters",
-      "C": "Multi-year lease payments on office space",
-      "D": "Sales commissions that vary directly with sales volume"
+      "A": "Sales commissions, credit card fees, and shipping to customers only — these three costs vary proportionally with sales volume across all four quarters, while advertising, sales salaries, depreciation, warehouse rent, and customer service salaries do not show a consistent volume relationship.",
+      "B": "Sales commissions, credit card fees, shipping to customers, and advertising — advertising increased from $45,000 to $60,000 when sales jumped from $5.2M to $7.0M in Q4, indicating a volume-driven relationship that should be modeled as variable for budgeting purposes.",
+      "C": "Sales commissions, credit card fees, shipping to customers, and customer service salaries — customer service costs may appear fixed ($44,000 every quarter) but should be classified as variable because the number of customer inquiries likely correlates with sales volume, and the historical data may not capture the full range of volume extremes.",
+      "D": "All costs should be classified as variable except depreciation and warehouse rent — sales commissions, credit card fees, shipping, and advertising clearly vary with volume, while sales salaries and customer service salaries are step-variable costs that should be treated as variable within the relevant range for budget planning purposes."
     },
-    "CorrectChoice": "D",
-    "ExplanationCorrect": "Sales commissions vary directly with sales volume, making them a variable component of the selling and administrative expense budget, unlike fixed salaries, depreciation, or lease payments.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Based strictly on the observed cost behavior across the four quarters, only sales commissions, credit card fees, and shipping to customers show a proportional relationship with sales volume. Sales commissions are 2.5% of sales in all quarters ($130K/$5.2M = 2.5%, $152.5K/$6.1M = 2.5%, etc.). Credit card fees are consistently 0.7% of sales. Shipping is consistently 1.5% of sales. In contrast, advertising is $45,000 in Q1-Q3 but jumps to $60,000 in Q4 — this pattern suggests a discretionary fixed cost with a Q4 seasonal increase (possibly holiday marketing), not a variable cost proportional to volume. Sales salaries ($95,000), depreciation ($18,000), warehouse rent ($36,000), and customer service salaries ($44,000) are constant across all four quarters and should be classified as fixed. Cost classification must be based on observed behavior, not assumptions about what should vary.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -7356,13 +7356,13 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "A CEO's fixed annual salary is a committed fixed cost that does not vary with sales volume. Variable selling and administrative expenses fluctuate in direct proportion to activity, such as commissions on each sale or shipping costs per unit. Fixed salaries remain constant regardless of whether the company sells one unit or one million units.",
-    "ExplanationWrongB": "Straight-line depreciation on headquarters is a fixed cost based on the asset's original cost and estimated useful life. It does not change with sales activity. Variable selling and administrative expenses, such as commissions, vary in direct proportion to revenue. A candidate confusing fixed facility costs with variable selling costs would select this option.",
-    "ExplanationWrongC": "Multi-year lease payments on office space are committed fixed costs determined by contractual obligations, not by sales activity. Variable selling and administrative expenses, such as sales commissions, fluctuate in direct proportion to sales volume. Lease obligations remain unchanged regardless of how many units the company sells.",
-    "ExplanationWrongD": "",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ExplanationWrongB": "Advertising shows an increase in Q4 but does not vary proportionally with sales volume — it is $45,000 at both $4.7M and $6.1M in sales, and $60,000 at $7.0M. A true variable cost would be $40,500 at $4.7M (0.87% rate) and $60,500 at $7.0M if the rate were constant, but the Q1-Q3 consistency at $45,000 suggests a fixed cost with a Q4 seasonal adjustment. Classifying advertising as variable based on one data point is a common error in cost behavior analysis — it overfits to a single observation rather than identifying the pattern across the full data set.",
+    "ExplanationWrongC": "This analysis ignores the actual data in favor of an assumption about what should theoretically vary. Customer service salaries were $44,000 at every sales volume from $4.7M to $7.0M — a range of nearly 50%. If customer inquiries correlated with sales volume, the cost should show some variation over this range. Budget classification must be evidence-based. A candidate selecting this may be applying a theoretical model ('customer service should vary with volume') rather than analyzing the actual cost behavior observed in the data.",
+    "ExplanationWrongD": "This analysis incorrectly treats step-variable costs as variable within the relevant range. Sales salaries at $95,000 show no variation across a 50% sales volume range ($4.7M to $7.0M) — this is clearly a fixed cost within the observed range. Step-variable costs would show changes at specific volume thresholds, but no thresholds are crossed in this data. Furthermore, classifying 'all costs except depreciation and rent' as variable is a gross oversimplification that ignores the specific behavior of each cost category. A candidate selecting this may be applying a generic rule rather than analyzing each cost line individually.",
+    "ExplanationWrongA": ""
   },
   {
     "Part": 1,
@@ -7372,18 +7372,18 @@ const MCQ_BANK_D = [
     "MicroTopic": "selling and administrative expense budget",
     "UniqueConceptKey": "B-D069-selling-and-administrative-expense-budget",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Thistlewood prepares a budget for fixed and variable selling and administrative expenses based on projected sales volume. What costs would typically appear as variable in this budget?",
+    "Stem": "Northfell Corp's budget director is reviewing the selling and administrative expense budget. The budget includes: sales commissions (8% of projected $2.4M sales), advertising ($120,000 fixed campaign + $15,000 variable per product line x 4 product lines), executive salaries ($380,000), depreciation on office equipment ($45,000), and supplies ($8 per sales order x 600 expected orders). The CFO asks the budget director to identify which items are cash outflows versus non-cash expenses for cash budget preparation. Which expense should the budget director flag as a non-cash item?",
     "Choices": {
-      "A": "Sales commissions that vary directly with sales volume",
-      "B": "Straight-line depreciation on headquarters",
-      "C": "Multi-year lease payments on office space",
-      "D": "The CEO's fixed annual salary"
+      "A": "Sales commissions — because they are variable expenses tied to revenue, not fixed cash obligations",
+      "B": "Advertising costs — because the campaign was committed in the prior year's budget and the cash was already spent",
+      "C": "Depreciation on office equipment — because it is a non-cash allocation of a prior capital expenditure, not a current-period cash outflow",
+      "D": "Executive salaries — because salaries are fixed costs that do not vary with production or sales volume"
     },
-    "CorrectChoice": "A",
-    "ExplanationCorrect": "Sales commissions vary directly with sales volume, making them a variable component of the selling and administrative expense budget, unlike fixed salaries, depreciation, or lease payments.",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The budget director should flag depreciation on office equipment ($45,000) as a non-cash item. Depreciation is an allocation of a prior-period capital expenditure over the asset's useful life — it reduces reported income but does not involve a current-period cash outflow. When preparing the cash budget, depreciation must be excluded from cash disbursements. All other listed expenses involve cash payments: commissions go to sales staff, advertising to vendors, salaries to employees, and supplies to vendors. The distinction between cash and non-cash expenses is critical for accurate cash budget preparation.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -7401,18 +7401,18 @@ const MCQ_BANK_D = [
     "CalculationItem": false,
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-      "Original practice item with unique micro-topic and stem",
+      "Screened to exclude Part 2-only topics",
+      "Cognitive upgrade: Apply → Evaluate. SESSION081 Wave Final.",
       "Answer key distribution balanced across A/B/C/D",
-      "Distractors written as plausible CMA-style traps"
+      "Distractors written as choice-specific explanations targeting documented CMA exam traps"
     ],
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "Straight-line depreciation on headquarters is a facility-level (organization-sustaining) cost, not a batch-level cost. It is incurred to support the entire organization and does not vary with the number of batches or production runs. Batch-level costs, such as setup labor and per-batch quality inspections, are driven by the number of batches processed, not by time-based allocation of facility assets.",
-    "ExplanationWrongC": "Multi-year lease payments on office space are committed fixed costs determined by contractual obligations, not by sales activity. Variable selling and administrative expenses, such as sales commissions, fluctuate in direct proportion to sales volume. Lease obligations remain unchanged regardless of how many units the company sells.",
-    "ExplanationWrongD": "A CEO's fixed annual salary is a committed fixed cost that remains constant regardless of sales volume. Variable selling and administrative expenses fluctuate in direct proportion to activity, such as commissions on each sale or shipping costs per unit. Fixed salaries do not change whether the company sells one unit or one million units.",
+    "ExplanationWrongA": "Option A incorrectly flags sales commissions as non-cash. While commissions are variable, they are still cash payments made to sales staff in the current period. Variability (cost behavior) does not determine whether an expense involves a cash outflow. This confuses cost-behavior classification with cash-flow timing.",
+    "ExplanationWrongB": "Option B incorrectly claims advertising costs are non-cash because the campaign was committed in the prior year. Budget commitments differ from cash payments — if the advertising runs in the current period and invoices are paid, cash flows out. This confuses budgetary authorization timing with cash expenditure timing.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D incorrectly singles out executive salaries as non-cash because they are fixed costs. Fixed costs still represent cash outflows — the company pays executives regardless of production volume. This confuses cost behavior with cash flow timing.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate"
   },
   {
     "Part": 1,
@@ -7670,22 +7670,22 @@ const MCQ_BANK_D = [
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.075 forecast accuracy measurement",
+    "Topic": "B.075 forecast accuracy measurement — method selection",
     "MicroTopic": "forecast accuracy measurement",
     "UniqueConceptKey": "B-D075-forecast-accuracy-measurement",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Alderway evaluates its sales forecasting model by comparing forecasted values to actual results using mean absolute percentage error. What is the purpose of this measurement?",
+    "Stem": "Alderway Industries' Demand Planning Manager, Thomas Reid, must recommend a forecasting method to the monthly S&OP committee. Thomas tested three forecasting methods on 24 months of historical sales data for Alderway's top product line (average monthly sales: $2.4 million). The results are: Method M (moving average, 3-month) — MAPE of 3.2% but includes one 28% error (forecast $2.82M vs. actual $2.01M) in the month a competitor launched a disruptive product; the remaining 23 months had errors between -4% and +5%. Method E (exponential smoothing, alpha = 0.3) — MAPE of 4.1% with all 24 monthly errors between -6% and +7%, no error larger than 7%. Method R (regression with seasonal adjustment) — MAPE of 2.9% but a systematic under-forecast bias of 1.5% on average, meaning it under-predicted demand in 20 of 24 months (cumulative bias: $864,000 over the period). The VP of Operations, who must schedule production lines and labor, cares most about avoiding large unpredictable forecast errors that cause overtime costs ($18,000 per occurrence) or idle capacity. The VP of Sales cares about avoiding systematic under-forecasting that leads to stockouts and lost sales. Thomas must recommend one method. Which method should Thomas recommend for the VP of Operations' primary concern?",
     "Choices": {
-      "A": "To calculate the company's residual income",
-      "B": "To determine the exact cause of a specific cost variance",
-      "C": "To assess the accuracy and reliability of the forecasting method used",
-      "D": "To set the transfer price between two divisions"
+      "A": "Method M — its 3.2% MAPE is competitive, and the single 28% error was caused by an unpredictable competitor action that no statistical forecasting model could have anticipated. Excluding that one observation, Method M performs best on the other 23 months. Thomas should select it and note the outlier as a one-time event.",
+      "B": "Method E — its error range of -6% to +7% provides the most predictable production planning environment. The VP of Operations can schedule capacity within a known band of approximately plus-or-minus 7%, avoiding the costly overtime triggered by large forecast misses. The slightly higher MAPE (4.1%) is a worthwhile trade-off for error predictability.",
+      "C": "Method R — its 2.9% MAPE is the lowest of the three methods, and the systematic 1.5% under-forecast bias can be corrected by applying a simple upward adjustment factor of 1.015 to the model output, after which Method R would likely outperform both alternatives on all error dimensions.",
+      "D": "Any of the three methods — MAPE differences of 2.9%, 3.2%, and 4.1% are within normal forecasting tolerance for a $2.4 million monthly product line. Thomas should select the simplest method (moving average) to minimize computational burden and modeling complexity, as the marginal accuracy improvement does not justify the additional complexity."
     },
-    "CorrectChoice": "C",
-    "ExplanationCorrect": "Forecast error measures such as mean absolute percentage error assess how accurate a forecasting method has been, guiding potential model improvements.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Method E is the best recommendation for the VP of Operations because the primary concern is avoiding large unpredictable errors that disrupt production scheduling. Each overtime event triggered by a large forecast miss costs $18,000. Method M's single 28% error on a $2.4 million product line represents a $600,000 forecast-to-actual gap that would likely trigger unplanned overtime, expedited material orders, or both — the cost of that single miss could exceed the cumulative benefit of Method M's slightly better performance on the other 23 months. Method R's systematic under-forecast bias compounds into inventory imbalances over time. Method E provides the narrowest and most predictable error band (-6% to +7%), allowing the operations team to build a modest safety buffer and plan production with confidence. In management accounting, forecast method selection should be driven by the decision context — different stakeholders value different error characteristics. Here, predictability of the error range is more valuable to operations than the lowest average error.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -7708,13 +7708,13 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Residual income is a performance evaluation metric that measures divisional profit above a required return on invested capital -- it is unrelated to forecast accuracy. MAPE (mean absolute percentage error) compares forecasted values against actual outcomes to quantify prediction error. A candidate confusing performance measurement tools with forecasting diagnostics would select this option.",
-    "ExplanationWrongB": "Transfer pricing determines the price at which goods or services are exchanged between divisions of the same company, typically for performance evaluation and tax planning. It has no connection to forecast accuracy measurement. MAPE evaluates how closely a forecasting model's predictions match actual outcomes, not how internal transactions are priced.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Transfer pricing establishes the price at which goods or services are exchanged between divisions of the same company, often for performance evaluation and tax purposes. To assess forecast accuracy, management uses error metrics such as MAPE, which compares projected values against actual outcomes to quantify prediction reliability. The two concepts serve entirely different business functions.",
     "question_state": "Certified",
-    "DifficultyScore": 2,
-    "CognitiveLevel": "Understand"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ExplanationWrongA": "Dismissing the 28% error as an unpredictable competitor action is analytically convenient but operationally dangerous. Competitor actions are unpredictable by definition — that is why forecasting models must be evaluated on their full error distribution, not on a cherry-picked subset of observations. If competitor disruptions occur every 12-18 months (as they often do in competitive markets), Method M would produce a large production disruption once or twice per year. A candidate selecting this may be rationalizing the outlier rather than incorporating it into the decision framework.",
+    "ExplanationWrongC": "Applying an adjustment factor to correct systematic bias is a reasonable approach in theory, but it introduces model risk: the 1.5% bias was measured on historical data and may not be stable going forward. If the bias changes, the adjustment factor becomes a new source of error. Furthermore, the VP of Operations' primary concern is avoiding large errors rather than achieving the lowest average error — Method R with an adjustment factor may still be vulnerable to occasional large misses. A candidate selecting this may be focused on the statistical metrics rather than the operational decision context.",
+    "ExplanationWrongD": "Selecting the simplest method by default ignores the decision-maker's stated preference for error predictability. The $18,000 per-occurrence cost of overtime triggered by large forecast misses creates an asymmetric loss function — large errors are disproportionately costly. A forecasting method that trades slightly higher average error for a narrower error distribution may be optimal when the cost of large errors is high, even if the MAPE comparison appears close. A candidate selecting this may be applying a generic simplicity heuristic without incorporating the cost structure of forecast errors.",
+    "ExplanationWrongB": ""
   },
   {
     "Part": 1,
@@ -8237,7 +8237,6 @@ const MCQ_BANK_D = [
       "D": "Recommend revising the budget to $4.60/lb (the analysts' projected floor) and issuing revised guidance of $2.70-$2.80 EPS — this balances conservatism with optimism, gives the production director a realistic standard, and signals to analysts that Lockhaven is responding proactively to the tariff environment"
     },
     "CorrectChoice": "A",
-    "ExplanationCorrect": "Lisa should recommend immediate budget revision at $4.80 per pound with transparent EPS guidance revision. The steel price increase is structural: a tariff is a policy change, not a commodity fluctuation, and analysts project prices will remain elevated through year-end. At 85,000 pounds per quarter, the annual impact is approximately $476,000 ($1.40 increase × 85,000 × 4 quarters). The $4.80 rate adds a $0.20 cushion above the $4.60 analyst-projected floor — prudent given continued volatility. Running three quarters at the original $3.40 rate would produce $357,000 in mechanical unfavorable variances that carry zero diagnostic value — they report the known tariff impact, not operational performance. Worse, these persistent variances condition managers to ignore budget variances, creating a 'cry wolf' effect where real operational issues are dismissed. Credibility with analysts is better preserved by proactive revision than by a surprise year-end miss — investors penalize unexpected bad news more than revised guidance. Under CMA Part 1, the budget's primary purposes are planning and performance evaluation; when a key planning assumption is structurally invalidated, the budget must be revised to serve either purpose. The EPS guidance revision to approximately $2.60 is unfortunate but unavoidable — delaying the disclosure does not change the underlying economics. A common exam trap is to conflate budget rigidity with fiscal discipline.",
     "ExplanationCorrect": "When a significant unplanned event occurs, companies commonly revise the budget or explicitly account for the variance to keep performance evaluation meaningful.",
     "StudyLinks": [
       {
@@ -8289,7 +8288,6 @@ const MCQ_BANK_D = [
       "D": "Recommend Scenario 3 for Q2-Q3 and Scenario 1 for Q4 if the volume recovery plan does not deliver at least 60% of the targeted replacement revenue by September 30 — this sequential approach buys time for the recovery strategy while establishing a clear decision trigger that prevents indefinite subsidization of excess capacity"
     },
     "CorrectChoice": "C",
-    "ExplanationCorrect": "Patricia should recommend Scenario 3 — the revised forecast with a credible volume recovery plan. This recommendation balances prudently acknowledging the revenue loss with maintaining organizational capability to capture replacement business. The 28% revenue concentration in a single customer was a structural risk that the original budget should have addressed — now that the risk has materialized, the response should be forward-looking and strategic, not purely defensive. Scenario 1 (full workforce reduction) is a permanent response to what may be a recoverable situation: customer bankruptcy eliminates one account but does not eliminate the market demand that the customer served. Mapleton's products still have end-consumer demand; the question is whether Mapleton can reach those consumers through alternative channels (e-commerce, new retail partners) rather than through the bankrupt retailer. Reducing the workforce by 15% permanently sacrifices production capability and institutional knowledge that will be expensive and slow to rebuild if replacement volume materializes. Scenario 2 (discontinued operation variance) is an accounting classification, not a business response — labeling the loss as 'discontinued' does nothing to address the 28% capacity gap. Under CMA Part 1, the budget is a planning and control document; when a key assumption changes, the appropriate response is to revise the plan forward, not to annotate the variance. Scenario 3 sets an ambitious but not unrealistic recovery target (replacing 30% of the 28% lost volume = 8.4% net revenue decline) while protecting the workforce that will be needed to manufacture the replacement volume. A common exam trap is to equate conservatism in revenue forecasting with conservatism in decision-making — the most conservative revenue number is not always the best basis for resource allocation decisions.",
     "ExplanationCorrect": "When a significant unplanned event occurs, companies commonly revise the budget or explicitly account for the variance to keep performance evaluation meaningful.",
     "StudyLinks": [
       {
@@ -8341,7 +8339,6 @@ const MCQ_BANK_D = [
       "D": "The $95,000 direct labor variance in total — because labor is typically the second-largest cost category after materials in manufacturing, and a 26% unfavorable rate on the labor budget signals that the standard labor rates and staffing model need recalibration independent of the Q2 purchasing decision"
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "The Controller should identify the purchasing manager's material substitution decision as the primary root cause because it triggered a cascade of negative operational variances that more than offset the apparent $48,000 savings. Variance analysis at the Analyze level requires tracing cause-and-effect relationships across variance categories, not just ranking variances by dollar magnitude. The causal chain: the purchasing manager substituted lower-grade material → the production floor experienced 3.2% additional scrap → the scrap required rework and additional production runs → which required $62,000 in overtime labor → which increased utility consumption by $38,000. The net economic effect of the purchasing decision = $48,000 favorable (price) - $62,000 overtime - $38,000 variable OH - [unmeasured cost of 3.2% additional raw material consumed as scrap] ≈ $52,000+ net unfavorable. This is a classic example of sub-optimization: a decision that improved one variance category (materials price) while worsening three others (materials quantity from scrap, labor efficiency, variable overhead). The sales volume variance ($172,000) is the largest single component, but it is market-driven and not directly controllable — the Controller's variance report should separate controllable operational variances from market-driven volume variances. The overtime ($62,000) is a symptom of the purchasing decision, not an independent root cause — treating the symptom without addressing the cause would mean continuing to use lower-grade material while trying to manage overtime, which is unsustainable. Under CMA Part 1, effective variance analysis identifies the root cause that, if corrected, will resolve multiple downstream variances. A common exam trap is to address the largest variance without analyzing the causal relationships that produced it.",
     "ExplanationCorrect": "When a significant unplanned event occurs, companies commonly revise the budget or explicitly account for the variance to keep performance evaluation meaningful.",
     "StudyLinks": [
       {
@@ -8783,22 +8780,22 @@ const MCQ_BANK_D = [
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.097 strategic vs operational planning horizon",
+    "Topic": "B.097 strategic vs operational planning — budget conflict resolution",
     "MicroTopic": "strategic vs operational planning horizon",
     "UniqueConceptKey": "B-D097-strategic-vs-operational-planning-horizon",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Very Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Whitmore's board sets a five-year strategic plan, while department managers prepare detailed annual operating budgets. How do these two planning levels differ?",
+    "Stem": "Whitmore Industries' Board approved a five-year strategic plan with three sequenced objectives: (1) enter the Southeast Asian market by Year 2, requiring a local distribution partnership, (2) launch a direct-to-consumer e-commerce channel by Year 3, and (3) achieve ISO 14001 environmental certification by Year 4 — a requirement imposed by the intended Southeast Asian distributor's supplier code of conduct. During the annual budget cycle, VP of Manufacturing Raj Patel submitted an operating budget that defers $1.8 million in environmental control equipment (required for ISO 14001 certification) from Year 1 to Year 3, reallocating those funds to expand production capacity for existing North American product lines. Raj argues: 'The capacity expansion generates $420,000 in incremental annual contribution margin starting Year 2 — that cash flow funds the environmental investment in Year 3 without additional borrowing. If we do the environmental work first, we have no incremental cash flow to fund it.' The CEO, Marianne Holt, must decide whether to approve Raj's budget or require the Board's strategic sequencing to be maintained. The environmental equipment requires 14 months from order to commissioning, and ISO 14001 certification requires 6 months of documented operations after equipment commissioning — a total lead time of 20 months. Which factor should weigh most heavily in the CEO's decision?",
     "Choices": {
-      "A": "Strategic plans set broad, long-term direction, while operating budgets translate strategy into detailed short-term financial targets",
-      "B": "They cover the exact same time horizon and level of detail",
-      "C": "Operating budgets are prepared only once every five years",
-      "D": "Strategic plans are prepared by external auditors only"
+      "A": "Raj's cash flow argument — the capacity expansion generates $420,000 in annual incremental contribution margin starting Year 2, fully funding the $1.8 million environmental investment over approximately four years. Deferring the environmental investment by two years and using self-generated cash flow is financially conservative and avoids incremental borrowing costs.",
+      "B": "The strategic interdependency between the Southeast Asian market entry and ISO 14001 certification — the distributor requires ISO 14001 certification from all suppliers. If environmental equipment is deferred to Year 3 with a 14-month procurement lead time plus 6 months of operations, certification cannot be achieved before late Year 4 or early Year 5. The Year 2 market entry deadline becomes infeasible, and without the Southeast Asian distributor, the entire strategic plan's revenue growth assumptions collapse.",
+      "C": "The Board's formal authority — the Board approved the environmental investment in Year 1 as part of the five-year strategic plan, and the CEO's fiduciary duty is to execute the Board-approved plan, not to entertain operational re-sequencing proposals from division VPs. Raj's budget should be rejected on governance grounds.",
+      "D": "The e-commerce channel timeline — launching a direct-to-consumer channel by Year 3 requires significant marketing investment and typically takes 18-24 months to reach breakeven. The Year 3 e-commerce target may be overly aggressive regardless of the environmental equipment decision, and the Board should reconsider the entire strategic sequencing rather than adjudicating this single conflict."
     },
-    "CorrectChoice": "A",
-    "ExplanationCorrect": "Strategic planning sets broad, long-term organizational direction, while the annual operating budget translates that strategy into specific, detailed short-term financial targets.",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The strategic interdependency is the decisive factor because it reveals that Raj's proposal is not merely a timing trade-off — it fundamentally breaks the strategic plan's architecture. The Southeast Asian distributor's ISO 14001 requirement creates a hard dependency: without environmental certification, there is no market entry. With environmental equipment deferred to Year 3 and a 20-month total lead time (14 months procurement + 6 months certification operations), the earliest achievable certification is late Year 4 or early Year 5 — missing the Year 2 market entry deadline by two to three years. Raj's cash flow argument is mathematically sound in isolation but ignores the cascading strategic consequences. This is a classic management accounting challenge: operational decisions that appear rational within a single department's financial analysis can undermine enterprise-level strategy when interdependencies are not recognized. The management accountant's role includes identifying these strategic cross-linkages and ensuring that budget decisions are evaluated against the full strategic context, not just the departmental P&L.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -8821,34 +8818,34 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "Strategic plans and operating budgets differ fundamentally in both time horizon and level of detail. Strategic plans typically span 3-5 years with broad, directional goals. Operating budgets cover a single fiscal year with detailed line-item projections for revenues, costs, and cash flows. The operating budget represents the first-year implementation of the long-range strategic plan, but the two documents differ markedly in scope and granularity.",
-    "ExplanationWrongC": "Operating budgets are prepared annually, not once every five years. Strategic plans cover a 3-5 year horizon and set broad organizational direction. Operating budgets translate the first year of the strategic plan into detailed financial targets for revenues, expenses, and cash flows for the upcoming fiscal year.",
-    "ExplanationWrongD": "Strategic plans and operating budgets differ fundamentally in both time horizon and level of detail. Strategic plans typically span 3-5 years with broad, directional goals. Operating budgets cover a single fiscal year with detailed line-item projections. The two planning levels are complementary but not identical.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "ExplanationWrongA": "Raj's cash flow analysis is internally consistent but suffers from a framing problem — it evaluates the environmental investment as if it were an independent capital budgeting decision rather than a strategic prerequisite. The $420,000 annual contribution margin from capacity expansion is real, but the analysis ignores the opportunity cost of delaying Southeast Asian market entry: if the market entry generates $2-3 million in annual revenue, a two-year delay costs far more than the interest savings from self-funding the environmental investment. A candidate selecting this may be applying capital budgeting logic without recognizing strategic constraints.",
+    "ExplanationWrongC": "While Board authority and fiduciary duty are important governance concepts, rejecting a VP's proposal solely on governance grounds without analyzing its strategic merit is poor leadership. The CEO's role is to evaluate operational proposals against the strategic plan — if Raj's proposal were strategically superior, the CEO should take it to the Board for reconsideration rather than rejecting it on procedural grounds. A candidate selecting this may be defaulting to hierarchical authority rather than engaging with the strategic substance of the conflict.",
+    "ExplanationWrongD": "Questioning the e-commerce timeline may be valid, but it is a deflection — the immediate decision is about the environmental equipment timing and its impact on the market entry. Raising a separate strategic concern to avoid adjudicating the issue at hand is a decision-avoidance tactic. Furthermore, the e-commerce channel does not have the same hard dependency on ISO 14001 as the market entry does; these are independent strategic objectives. A candidate selecting this may be conflating multiple strategic uncertainties rather than isolating the critical dependency.",
+    "ExplanationWrongB": ""
   },
   {
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.098 strategic vs operational planning horizon",
+    "Topic": "B.098 strategic vs operational planning — resource allocation conflict",
     "MicroTopic": "strategic vs operational planning horizon",
     "UniqueConceptKey": "B-D098-strategic-vs-operational-planning-horizon",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Very Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Yewbrook's board sets a five-year strategic plan, while department managers prepare detailed annual operating budgets. How do these two planning levels differ?",
+    "Stem": "Yewbrook Manufacturing's five-year strategic plan includes a commitment to 'automate 40% of manual assembly operations by Year 3 to reduce per-unit labor cost from $14.20 to $9.80.' The plan allocates $4.2 million in capital across Years 1-3 for robotic assembly cells. In Year 1, the VP of Operations, Carla Mendez, must choose between two initial investments: Option Alpha — Two robotic cells for the high-volume product line ($1.7 million, estimated labor savings of $380,000/year starting Year 2, reaching full automation of that line by Year 3). Option Beta — A company-wide IoT sensor network for all six production lines ($1.5 million, no direct labor savings, but provides real-time OEE data expected to identify $200,000-$400,000 in waste reduction opportunities across all lines within 18 months). Carla's engineering team strongly prefers Option Alpha — 'robots replace labor, exactly what the strategic plan targets, and the savings are quantifiable and guaranteed.' The Controller's analysis shows that if Option Beta is chosen first and identifies waste-reduction opportunities, the resulting operating savings could fund a larger percentage of the Year 2-3 automation budget from internal cash flow rather than debt. Which recommendation best serves Yewbrook's strategic objectives?",
     "Choices": {
-      "A": "Strategic plans are prepared by external auditors only",
-      "B": "Strategic plans set broad, long-term direction, while operating budgets translate strategy into detailed short-term financial targets",
-      "C": "Operating budgets are prepared only once every five years",
-      "D": "They cover the exact same time horizon and level of detail"
+      "A": "Select Option Alpha — it directly advances the strategic plan's automation target with quantifiable, guaranteed labor savings of $380,000/year. The IoT sensor network's savings range of $200,000-$400,000 is speculative, and 'waste reduction' is not a stated strategic objective. Strategic plans exist to focus resources, not to be diluted by attractive but off-strategy alternatives.",
+      "B": "Select Option Beta first, then Option Alpha in Year 2 — the IoT network costs less ($1.5M vs. $1.7M), preserves $200,000 in capital budget headroom, and its waste-reduction findings could increase the total automation budget available in Years 2-3 by generating self-funding operating savings. The engineering team's preference for 'guaranteed' savings is understandable but short-sighted.",
+      "C": "Recommend that neither option is optimal — propose a third option that combines elements of both: purchase one robotic cell for the high-volume line ($850,000) and deploy a scaled IoT network on the same line first ($400,000), using the combined results to inform the Year 2 automation strategy. This preserves $1.45 million in uncommitted capital for the Board to allocate after Year 1 results are available.",
+      "D": "Reject both options and escalate to the Board — the strategic plan committed to a specific automation target (40% by Year 3) through a specific path (robotic cells). If the Controller's analysis suggests the IoT network could change the funding strategy, the strategic plan itself should be re-evaluated by the Board before Carla commits Year 1 capital. Operational decisions should not preempt strategic decisions."
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Strategic planning sets broad, long-term organizational direction, while the annual operating budget translates that strategy into specific, detailed short-term financial targets.",
+    "ExplanationCorrect": "Option Beta is the superior first investment because it creates a virtuous cycle: the IoT sensor network's waste-reduction findings generate operating savings that increase the self-funding capacity for Years 2-3 automation investments. This is a systems-thinking approach to strategic execution — it treats the five-year plan as a pathway, not a rigid sequence. The engineering team correctly identifies Option Alpha as directly aligned with the strategic objective, but direct alignment does not guarantee optimal sequencing. By investing in diagnostic capability (IoT data) before prescriptive action (robots), Carla ensures that the $4.2 million total capital allocation is deployed with maximum intelligence about where automation will produce the highest return. In management accounting, strategic planning and operational budgeting must interact dynamically — the strategic plan sets the direction, but the annual operating budget is the mechanism for adapting the path based on new information.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -8871,34 +8868,34 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Strategic plans are developed by management and the board of directors, not by external auditors. External auditors provide independent assurance on financial statements. Strategic planning is a management function that sets the long-term direction, goals, and resource allocation priorities for the organization.",
-    "ExplanationWrongB": "",
-    "ExplanationWrongC": "Operating budgets are typically prepared annually, not once every five years. Strategic plans cover a longer time horizon (3-5 years) and set broad organizational goals and direction. Operating budgets translate the first year of the strategic plan into detailed financial plans for revenues, expenses, and cash flows for the upcoming fiscal year.",
-    "ExplanationWrongD": "Strategic plans and operating budgets differ fundamentally in both time horizon and level of detail. Strategic plans typically span 3-5 years with broad, directional goals. Operating budgets cover a single fiscal year with detailed line-item projections. The two planning levels are complementary but not identical.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "ExplanationWrongA": "This recommendation treats the strategic plan as a rigid contract rather than a directional framework. While Option Alpha directly advances the stated automation target, it ignores the Controller's analysis that Option Beta could increase the total budget available for automation in later years — potentially achieving more than 40% automation. Prioritizing a $380,000/year 'guaranteed' savings over a path that could unlock $200,000-$400,000 in additional annual funding is analytically myopic. Strategic plans should guide decisions, not eliminate judgment about sequencing.",
+    "ExplanationWrongC": "A 'split the difference' approach satisfies no one and achieves nothing — one robotic cell on one line provides limited data about automation feasibility, and a scaled IoT network on one line may not reveal the cross-line waste patterns that make the company-wide deployment valuable. This recommendation reflects decision-making by compromise rather than by analysis. A candidate selecting this may be looking for a middle path rather than the most analytically sound path.",
+    "ExplanationWrongD": "Escalating to the Board is appropriate when a decision fundamentally conflicts with the strategic plan, but Option Beta does not conflict with the strategic plan — it potentially enhances the strategic plan's achievability by generating self-funding capacity. Strategic plans are not immutable; they are reviewed annually precisely because new information emerges. The Controller's analysis is exactly the kind of new information that should inform operational sequencing without requiring a full Board-level strategic re-evaluation. A candidate selecting this may be defaulting to hierarchical governance rather than evaluating whether the proposed action is strategically consistent.",
+    "ExplanationWrongB": ""
   },
   {
     "Part": 1,
     "Section": "B",
     "SectionName": "Planning, Budgeting, and Forecasting",
-    "Topic": "B.099 strategic vs operational planning horizon",
+    "Topic": "B.099 strategic vs operational planning — investment sequencing under uncertainty",
     "MicroTopic": "strategic vs operational planning horizon",
     "UniqueConceptKey": "B-D099-strategic-vs-operational-planning-horizon",
     "LOSTag": "B Planning and budgeting",
-    "Difficulty": "Moderate",
+    "Difficulty": "Very Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
-    "Stem": "Zionsgate's board sets a five-year strategic plan, while department managers prepare detailed annual operating budgets. How do these two planning levels differ?",
+    "Stem": "Zionsgate Corporation's five-year strategic plan targets 25% revenue diversification away from its legacy industrial-products division (currently 78% of revenue) into two growth segments: medical-device components (target: 15% of revenue by Year 5) and renewable-energy components (target: 10%). The plan allocates $6.0 million in capital expenditure across Years 1-3 to build production capability in both segments. During the Year 1 operating budget cycle, two competing investment proposals emerge. The Medical Division proposes a $2.8 million clean-room manufacturing cell that would qualify Zionsgate for medical-device supplier certification, a 14-month regulatory process. Without this certification, Zionsgate cannot bid on medical-device contracts — a binary gate. The Energy Division proposes a $2.2 million composite-materials line that would enable Zionsgate to produce wind-turbine blade components, a market projected to grow 18% annually but subject to federal renewable-energy tax credits that expire in Year 3 unless renewed by Congress. The Controller's analysis: if Congress does not renew the tax credits, the composite-materials line's projected 22% IRR drops to approximately 9% — below Zionsgate's 12% hurdle rate. The VP of Strategy argues for the medical clean room because 'the certification gate is binary — without it, the medical strategy is dead.' The VP of Energy argues for the composite-materials line because 'the 18% market growth rate means early-mover advantage is critical.' The CFO, Anita Desai, must recommend which investment to prioritize in Year 1. The capital budget can only fund one of the two in the current year. Which recommendation best serves Zionsgate's strategic objectives?",
     "Choices": {
-      "A": "They cover the exact same time horizon and level of detail",
-      "B": "Operating budgets are prepared only once every five years",
-      "C": "Strategic plans set broad, long-term direction, while operating budgets translate strategy into detailed short-term financial targets",
-      "D": "Strategic plans are prepared by external auditors only"
+      "A": "Prioritize the medical clean room — the medical-device certification is a binary gate requiring 14 months, meaning a Year 1 start achieves certification by early Year 3, leaving two full years to build the 15% revenue target. The composite-materials line can be funded in Year 2 without losing strategic viability — the wind-turbine market will still exist, even if the tax-credit uncertainty creates a narrower margin.",
+      "B": "Prioritize the composite-materials line — the renewable-energy market's 18% growth rate means every year of delay costs market share. Early-mover advantage in a high-growth market compounds over time, and the tax-credit uncertainty should be treated as a risk to be managed (hedged) rather than an investment to be deferred. The medical-device market is stable and will be available in Year 2.",
+      "C": "Recommend a modified approach — invest in the medical clean room but negotiate with the Energy Division to begin the composite-materials line's engineering design and permitting phase ($400,000) in Year 1, funded from the operating budget as R&D expense rather than capital expenditure. This preserves the medical-strategy timeline while maintaining forward momentum on the energy strategy.",
+      "D": "Recommend that the Board re-evaluate the energy strategy — if the composite-materials line's viability depends on federal tax-credit renewal, the strategy itself is contingent on political risk that Zionsgate cannot control. The Board should either accept the political risk explicitly or replace the energy target with a different growth segment before committing Year 1 capital."
     },
-    "CorrectChoice": "C",
-    "ExplanationCorrect": "Strategic planning sets broad, long-term organizational direction, while the annual operating budget translates that strategy into specific, detailed short-term financial targets.",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The medical clean room should be prioritized because the certification gate is binary and time-bound — without the 14-month regulatory process starting in Year 1, the entire medical-device revenue target becomes unachievable, and 60% of the diversification strategy (15% of the 25% target) fails before it starts. The composite-materials line, while attractive, does not have a binary time gate; the turbine-component market will continue to grow regardless of when Zionsgate enters. The tax-credit uncertainty creates a narrower margin but does not eliminate the market opportunity. In strategic planning, investments with binding time constraints (regulatory, certification, contractual deadlines) must be sequenced before investments with flexible timing, even when the flexible-timing investment has higher projected returns. This is the strategic equivalent of the management accounting principle of identifying binding constraints in a production process — time-critical strategic dependencies should be resolved before deploying capital to non-time-critical opportunities.",
     "StudyLinks": [
       {
         "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -8921,13 +8918,13 @@ const MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Strategic plans and operating budgets differ fundamentally in both time horizon and level of detail. Strategic plans typically span 3-5 years with broad, directional goals. Operating budgets cover a single fiscal year with detailed line-item projections for revenues, costs, and cash flows. The operating budget represents the first-year implementation of the long-range strategic plan, but the two documents differ markedly in scope and granularity.",
-    "ExplanationWrongB": "Operating budgets are prepared annually, not once every five years. Strategic plans cover a 3-5 year horizon and set broad organizational direction. Operating budgets translate the first year of the strategic plan into detailed financial targets for revenues, expenses, and cash flows for the upcoming fiscal year.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Strategic plans are developed by management and the board of directors, not by external auditors. External auditors provide independent assurance on financial statements. Strategic planning is a management function that sets the long-term direction, goals, and resource allocation priorities for the organization.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Apply"
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "ExplanationWrongB": "Prioritizing the composite-materials line based on market growth and early-mover advantage ignores the binary nature of the medical certification gate. 'Early-mover advantage' is a qualitative strategic concept, not a binding constraint — the medical certification deadline is a hard regulatory requirement. Furthermore, the tax-credit uncertainty creates a binary risk of its own: if the credits expire and the IRR drops to 9%, Zionsgate has committed $2.2 million to a below-hurdle investment. Strategic investment sequencing should prioritize time-binding gates over time-flexible opportunities, even when the latter are in higher-growth markets.",
+    "ExplanationWrongC": "Funding the composite-materials design phase from the operating budget is creative but risky — classifying what is fundamentally a capital investment as R&D expense for the energy division may not withstand audit scrutiny and could distort the operating budget's expense ratios. More importantly, this 'split the difference' solution satisfies both divisions but addresses neither strategic priority decisively — the energy division has partial funding for design work but no capital commitment for the production line, creating political momentum for the capital expenditure without strategic clarity about whether the investment should proceed. Partial commitments create expectations without decisions.",
+    "ExplanationWrongD": "Recommending a full strategy re-evaluation is disproportionate to the Year 1 sequencing decision. The energy strategy's contingency on tax-credit renewal is a known risk, not a newly discovered flaw — the Board approved the strategy with this risk acknowledged. The Year 1 decision is about sequencing, not about reopening the strategic plan. If the tax credits are not renewed, the energy strategy can be re-evaluated at that time with specific information about the post-expiration market conditions. Recommending strategic re-evaluation now, before the tax-credit decision is made, is premature and disrupts the planning cycle without adding information.",
+    "ExplanationWrongA": ""
   },
   {
     "Part": 1,
@@ -25257,7 +25254,3 @@ const MCQ_BANK_D = [
     "CognitiveLevel": "Understand"
   }
 ];
-
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = MCQ_BANK_D;
-}

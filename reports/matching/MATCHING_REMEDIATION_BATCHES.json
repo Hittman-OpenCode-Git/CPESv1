@@ -1,0 +1,244 @@
+{
+  "title": "Session 81P — Matching Item Remediation Batches",
+  "generated": "2026-07-30",
+  "governanceLane": "Light — Read-Only Planning",
+  "totalItems": 83,
+  "totalBatches": 8,
+  "batches": [
+    {
+      "batchId": "W1-B1",
+      "wave": 1,
+      "label": "Critical Measurement-Validity Defects — Group 1 (Content Redesign)",
+      "priority": "CRITICAL",
+      "itemCount": 3,
+      "defectClasses": ["A", "B", "C", "D"],
+      "remediationType": "Content redesign — distinct RightItems + shuffle + extra distractors",
+      "estimatedMinutes": 90,
+      "items": [
+        {
+          "itemId": "CBQ-E1-Q5",
+          "caseId": "CBQ-E1",
+          "casePack": 1,
+          "section": "E",
+          "priorityScore": 41,
+          "defects": {
+            "SAME_ANSWER_REUSE": 2,
+            "DUPLICATE_DISTRACTOR": 2,
+            "ORDERED_ANSWER_PATTERN": true,
+            "NO_EXTRA_DISTRACTORS": true
+          },
+          "remediationStrategy": "Replace Preventive/Detective duplicates with distinct descriptions per control activity. Expand RightItems from 4 to 6+."
+        },
+        {
+          "itemId": "CBQ3-D1-Q6",
+          "caseId": "CBQ3-D1",
+          "casePack": 3,
+          "section": "D",
+          "priorityScore": 31,
+          "defects": {
+            "SAME_ANSWER_REUSE": 1,
+            "DUPLICATE_DISTRACTOR": 1,
+            "ORDERED_ANSWER_PATTERN": true,
+            "NO_EXTRA_DISTRACTORS": true
+          },
+          "remediationStrategy": "Replace 'Product cost' (3x reuse) with distinct labels: 'Product cost — direct materials', 'Product cost — direct labor', 'Product cost — variable manufacturing overhead'. Add 1-2 extra distractors."
+        },
+        {
+          "itemId": "CBQ2-C1-Q1",
+          "caseId": "CBQ2-C1",
+          "casePack": 2,
+          "section": "C",
+          "priorityScore": 30,
+          "defects": {
+            "SAME_ANSWER_REUSE": 1,
+            "DUPLICATE_DISTRACTOR": 1,
+            "ORDERED_ANSWER_PATTERN": true,
+            "UNUSED_DISTRACTOR": 1
+          },
+          "remediationStrategy": "Split 'Requires separate price and quantity data...' (3x) into distinct descriptions per variance type. Replace or remove unused distractor."
+        }
+      ]
+    },
+    {
+      "batchId": "W1-B2",
+      "wave": 1,
+      "label": "Critical Measurement-Validity Defects — Group 2 (Content Redesign)",
+      "priority": "HIGH",
+      "itemCount": 3,
+      "defectClasses": ["A", "C", "D"],
+      "remediationType": "Content redesign — distinct RightItems + optional shuffle",
+      "estimatedMinutes": 60,
+      "items": [
+        {
+          "itemId": "CBQ4-F2-Q2",
+          "caseId": "CBQ4-F2",
+          "casePack": 4,
+          "section": "F",
+          "priorityScore": 21,
+          "defects": {
+            "SAME_ANSWER_REUSE": 2,
+            "ORDERED_ANSWER_PATTERN": true,
+            "NO_EXTRA_DISTRACTORS": true,
+            "UNUSED_DISTRACTOR": 2
+          },
+          "remediationStrategy": "Replace Supervised/Unsupervised binary with distinct ML descriptions. Assign unused distractors (Reinforcement, Semi-supervised) as correct answers for new/redesigned LeftItems."
+        },
+        {
+          "itemId": "CBQ3-A2-Q5",
+          "caseId": "CBQ3-A2",
+          "casePack": 3,
+          "section": "A",
+          "priorityScore": 12,
+          "defects": {
+            "SAME_ANSWER_REUSE": 1,
+            "ORDERED_ANSWER_PATTERN": true,
+            "NO_EXTRA_DISTRACTORS": true,
+            "UNUSED_DISTRACTOR": 1
+          },
+          "remediationStrategy": "Split 'Deduct from Net Income (Operating)' into distinct reasons: gain vs. working-capital decrease. Assign unused 'Report in Investing Activities' to a new/redesigned prompt."
+        },
+        {
+          "itemId": "CBQ5-C3-Q2",
+          "caseId": "CBQ5-C3",
+          "casePack": 5,
+          "section": "C",
+          "priorityScore": 10,
+          "defects": {
+            "SAME_ANSWER_REUSE": 1,
+            "UNUSED_DISTRACTOR": 2
+          },
+          "remediationStrategy": "Distinguish Sales Volume Variance from Sales Quantity Variance answers. Sales Volume = mix + quantity; Sales Quantity = quantity only. Make RightItems reflect this distinction."
+        }
+      ]
+    },
+    {
+      "batchId": "W4-B1",
+      "wave": 4,
+      "label": "Ordered-Pattern Shuffle — Sections A–B",
+      "priority": "HIGH",
+      "itemCount": 28,
+      "defectClasses": ["C"],
+      "remediationType": "Mechanical shuffle only — no content authoring",
+      "estimatedMinutes": 45,
+      "items": [
+        "CBQ-A2-Q6", "CBQ-A3-Q6", "CBQ2-A2-Q4", "CBQ4-A1-Q3",
+        "CBQ-B2-Q6", "CBQ2-B2-Q6", "CBQ2-B3-Q6", "CBQ3-B2-Q6",
+        "CBQ3-B3-Q6", "CBQ4-B2-Q6", "CBQ5-B1-Q2",
+        "CBQ-C1-Q6", "CBQ-C2-Q6", "CBQ-C3-Q5",
+        "CBQ2-C1-Q2", "CBQ2-C1-Q3", "CBQ2-C1-Q4", "CBQ2-C1-Q5",
+        "CBQ3-C1-Q1", "CBQ3-C1-Q2", "CBQ3-C1-Q3", "CBQ3-C1-Q4",
+        "CBQ3-C1-Q5", "CBQ3-C2-Q4", "CBQ3-C3-Q4",
+        "CBQ4-C2-Q1", "CBQ4-C2-Q2", "CBQ4-C2-Q3"
+      ]
+    },
+    {
+      "batchId": "W4-B2",
+      "wave": 4,
+      "label": "Ordered-Pattern Shuffle — Sections C–D",
+      "priority": "HIGH",
+      "itemCount": 28,
+      "defectClasses": ["C"],
+      "remediationType": "Mechanical shuffle only — no content authoring",
+      "estimatedMinutes": 45,
+      "items": [
+        "CBQ4-C2-Q4", "CBQ4-C2-Q5",
+        "CBQ5-C2-Q1", "CBQ5-C2-Q2", "CBQ5-C2-Q3", "CBQ5-C2-Q4", "CBQ5-C2-Q5",
+        "CBQ-D1-Q6", "CBQ-D2-Q6", "CBQ2-D2-Q6",
+        "CBQ3-D2-Q6", "CBQ4-D1-Q6", "CBQ4-D2-Q6", "CBQ4-D3-Q4",
+        "CBQ5-D1-Q1", "CBQ5-D1-Q2", "CBQ5-D1-Q3", "CBQ5-D1-Q4", "CBQ5-D1-Q5",
+        "CBQ5-D2-Q1", "CBQ5-D2-Q2", "CBQ5-D3-Q3",
+        "CBQ-E2-Q5",
+        "CBQ-F1-Q4", "CBQ-F2-Q6",
+        "CBQ2-E1-Q1", "CBQ2-E1-Q2", "CBQ2-E1-Q3"
+      ]
+    },
+    {
+      "batchId": "W4-B3",
+      "wave": 4,
+      "label": "Ordered-Pattern Shuffle — Sections E–F (remaining)",
+      "priority": "HIGH",
+      "itemCount": 25,
+      "defectClasses": ["C"],
+      "remediationType": "Mechanical shuffle only — no content authoring",
+      "estimatedMinutes": 40,
+      "items": [
+        "CBQ2-E1-Q4", "CBQ2-E1-Q5",
+        "CBQ3-E1-Q1", "CBQ3-E1-Q2", "CBQ3-E1-Q3", "CBQ3-E1-Q4", "CBQ3-E1-Q5",
+        "CBQ3-E2-Q4",
+        "CBQ4-E2-Q1", "CBQ4-E2-Q4", "CBQ4-E3-Q4",
+        "CBQ5-E1-Q1", "CBQ5-E2-Q1",
+        "CBQ3-F2-Q1", "CBQ3-F2-Q5",
+        "CBQ4-F1-Q1", "CBQ4-F1-Q5",
+        "CBQ-A2-Q6", "CBQ-A3-Q6", "CBQ-B2-Q6",
+        "CBQ-C1-Q6", "CBQ-C2-Q6", "CBQ-C3-Q5",
+        "CBQ-D1-Q6", "CBQ-D2-Q6"
+      ]
+    },
+    {
+      "batchId": "W5-B1",
+      "wave": 5,
+      "label": "No-Extra Distractor Expansion — Pack 1",
+      "priority": "MEDIUM",
+      "itemCount": 14,
+      "defectClasses": ["D"],
+      "remediationType": "Author 1-2 plausible distractors per item",
+      "estimatedMinutes": 70,
+      "items": [
+        "CBQ-A2-Q6", "CBQ-A3-Q6",
+        "CBQ-B2-Q6",
+        "CBQ-C1-Q6", "CBQ-C2-Q6", "CBQ-C3-Q5",
+        "CBQ-D1-Q6", "CBQ-D2-Q6",
+        "CBQ-E2-Q5",
+        "CBQ-F1-Q4", "CBQ-F2-Q6",
+        "CBQ2-A2-Q4",
+        "CBQ2-B2-Q6",
+        "CBQ3-D2-Q6"
+      ]
+    },
+    {
+      "batchId": "W5-B2",
+      "wave": 5,
+      "label": "No-Extra Distractor Expansion — Packs 2–4",
+      "priority": "MEDIUM",
+      "itemCount": 6,
+      "defectClasses": ["D"],
+      "remediationType": "Author 1-2 plausible distractors per item",
+      "estimatedMinutes": 30,
+      "items": [
+        "CBQ2-D2-Q6",
+        "CBQ4-D1-Q6", "CBQ4-D2-Q6",
+        "CBQ3-A2-Q5",
+        "CBQ-E1-Q5",
+        "CBQ3-D1-Q6"
+      ]
+    },
+    {
+      "batchId": "W6-FYI",
+      "wave": 6,
+      "label": "Unused Distractor Cleanup — DEFERRED (LOW severity)",
+      "priority": "LOW",
+      "itemCount": 65,
+      "defectClasses": ["UNUSED_DISTRACTOR"],
+      "remediationType": "Deferred — no action in current campaign",
+      "estimatedMinutes": 0,
+      "items": [],
+      "note": "65 items have unused RightItems. These are LOW severity. Decision D3: defer to future content-enhancement wave. They do not block certification or learner delivery."
+    }
+  ],
+  "crossReference": {
+    "campaignPlan": "reports/matching/MATCHING_REMEDIATION_CAMPAIGN_PLAN.md",
+    "estimatesReport": "reports/matching/MATCHING_REMEDIATION_ESTIMATES.md",
+    "auditReport": "reports/matching/MATCHING_ITEM_AUDIT.json",
+    "defectReport": "reports/matching/MATCHING_ITEM_DEFECT_REPORT.md",
+    "remediationQueue": "reports/matching/MATCHING_ITEM_REMEDIATION_QUEUE.json"
+  },
+  "governanceProtocol": {
+    "lane": "Full Governance Lane (case pack file edits)",
+    "t0": "npm run preflight",
+    "backupBeforeWrite": true,
+    "batchCap": 28,
+    "independentVerification": true,
+    "revisionHistory": true,
+    "tend": "npm run pipeline"
+  }
+}

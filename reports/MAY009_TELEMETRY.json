@@ -1,0 +1,2093 @@
+{
+  "session": "MAY-009",
+  "timestamp": "2026-07-30T16:52:13.254Z",
+  "preflight": {},
+  "results": [
+    {
+      "learnerId": "MAY009-L01",
+      "pipelineMs": 35,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (43/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 43,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 5,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 5,
+      "sectionsWithData": 4,
+      "intCount": 5,
+      "intTiers": [
+        1
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Standard Costing",
+      "intTopScore": 112,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "high",
+        "high",
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Revenue Recognition",
+      "planCount": 3,
+      "planTopics": [
+        "Revenue Recognition",
+        "Inventory Valuation",
+        "Budgeting Concepts"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 5,
+      "riskAreaCount": 6,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 43,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 5,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Recovery needed",
+      "expectedDecision": "D1"
+    },
+    {
+      "learnerId": "MAY009-L02",
+      "pipelineMs": 32,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (45/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 45,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 6,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 6,
+      "sectionsWithData": 5,
+      "intCount": 6,
+      "intTiers": [
+        1
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Cash Budget",
+      "intTopScore": 113,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "high",
+        "high",
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Cash Budget",
+      "planCount": 3,
+      "planTopics": [
+        "Revenue Recognition",
+        "Statement of Cash Flows",
+        "Cash Budget"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 5,
+      "riskAreaCount": 6,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 45,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 6,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Recovery needed",
+      "expectedDecision": "D1"
+    },
+    {
+      "learnerId": "MAY009-L03",
+      "pipelineMs": 30,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (48/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 48,
+      "readinessBand": "Developing",
+      "readinessConfidence": 85,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 2,
+      "sectionsWithData": 6,
+      "intCount": 3,
+      "intTiers": [
+        1,
+        3
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Budgeting Concepts",
+      "intTopScore": 117,
+      "recCount": 2,
+      "recTypes": [
+        "remediation",
+        "reinforcement"
+      ],
+      "recPriorities": [
+        "high",
+        "medium"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Budgeting Concepts",
+      "planCount": 3,
+      "planTopics": [
+        "Revenue Recognition",
+        "Budgeting Concepts",
+        "Cash Budget"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 1,
+      "riskAreaCount": 4,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 48,
+        "band": "Developing",
+        "topicsAtRecovery": 2,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D2"
+    },
+    {
+      "learnerId": "MAY009-L04",
+      "pipelineMs": 32,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (44/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 44,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 85,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 4,
+      "sectionsWithData": 6,
+      "intCount": 6,
+      "intTiers": [
+        1,
+        2,
+        3
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Revenue Recognition",
+      "intTopScore": 112,
+      "recCount": 4,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "remediation",
+        "reinforcement"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "high",
+        "medium"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Revenue Recognition",
+      "planCount": 3,
+      "planTopics": [
+        "Revenue Recognition",
+        "Inventory Valuation",
+        "Budgeting Concepts"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 3,
+      "riskAreaCount": 7,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 44,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 4,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D2"
+    },
+    {
+      "learnerId": "MAY009-L05",
+      "pipelineMs": 23,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (43/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 43,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 85,
+      "topicCoverageTopicsWithData": 5,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 5,
+      "sectionsWithData": 4,
+      "intCount": 5,
+      "intTiers": [
+        1
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Revenue Recognition",
+      "intTopScore": 130,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "high",
+        "high",
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Standard Costing",
+      "planCount": 3,
+      "planTopics": [
+        "Revenue Recognition",
+        "Inventory Valuation",
+        "Cash Budget"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 5,
+      "riskAreaCount": 8,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 43,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 5,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Recovery needed",
+      "expectedDecision": "D1"
+    },
+    {
+      "learnerId": "MAY009-L06",
+      "pipelineMs": 41,
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Cash Budget",
+      "decisionRationale": "Critical weakness: Cash Budget requires immediate remediation (accuracy: 43%, declining trend).",
+      "readinessScore": 55,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 1,
+      "sectionsWithData": 6,
+      "intCount": 3,
+      "intTiers": [
+        1,
+        3
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Cash Budget",
+      "intTopScore": 101,
+      "recCount": 2,
+      "recTypes": [
+        "remediation",
+        "reinforcement"
+      ],
+      "recPriorities": [
+        "high",
+        "medium"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Cash Budget",
+      "planCount": 1,
+      "planTopics": [
+        "Cash Budget"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": true,
+      "strengthsCount": 0,
+      "weaknessesCount": 1,
+      "riskAreaCount": 1,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "accuracy": 43,
+        "direction": "declining",
+        "stability": 46,
+        "attempts": 14,
+        "tier": 1,
+        "triggeringRule": "D2"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D3"
+    },
+    {
+      "learnerId": "MAY009-L07",
+      "pipelineMs": 51,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (48/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 48,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 3,
+      "sectionsWithData": 6,
+      "intCount": 3,
+      "intTiers": [
+        1
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Data Governance",
+      "intTopScore": 88,
+      "recCount": 1,
+      "recTypes": [
+        "remediation"
+      ],
+      "recPriorities": [
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Budgeting Concepts",
+      "planCount": 3,
+      "planTopics": [
+        "Budgeting Concepts",
+        "Cash Budget",
+        "Data Governance"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 0,
+      "riskAreaCount": 4,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 48,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 3,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D5"
+    },
+    {
+      "learnerId": "MAY009-L08",
+      "pipelineMs": 53,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (55/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 55,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 85,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 3,
+      "sectionsWithData": 6,
+      "intCount": 4,
+      "intTiers": [
+        2,
+        3
+      ],
+      "intTopTier": 2,
+      "intTopTopic": "Budgeting Concepts",
+      "intTopScore": 90,
+      "recCount": 1,
+      "recTypes": [
+        "remediation"
+      ],
+      "recPriorities": [
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Budgeting Concepts",
+      "planCount": 3,
+      "planTopics": [
+        "Inventory Valuation",
+        "Budgeting Concepts",
+        "Cash Budget"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 1,
+      "riskAreaCount": 6,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 55,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 3,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D6"
+    },
+    {
+      "learnerId": "MAY009-L09",
+      "pipelineMs": 40,
+      "decisionId": "D7",
+      "decisionAction": "explain",
+      "decisionMode": "EXPLAIN",
+      "decisionPriority": "medium",
+      "decisionTopic": "Budgeting Concepts",
+      "decisionRationale": "Knowledge on Budgeting Concepts is usable but unreliable (stability: 38%). Consolidation with concept review is needed.",
+      "readinessScore": 55,
+      "readinessBand": "Developing",
+      "readinessConfidence": 85,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 2,
+      "sectionsWithData": 6,
+      "intCount": 2,
+      "intTiers": [
+        3
+      ],
+      "intTopTier": 3,
+      "intTopTopic": "Budgeting Concepts",
+      "intTopScore": 66,
+      "recCount": 0,
+      "recTypes": [],
+      "recPriorities": [],
+      "recTopType": null,
+      "recTopTopic": null,
+      "planCount": 2,
+      "planTopics": [
+        "Budgeting Concepts",
+        "ERP Systems"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 0,
+      "riskAreaCount": 4,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "stability": 38,
+        "accuracy": 71,
+        "direction": "slightly_declining",
+        "tier": 3,
+        "triggeringRule": "D7"
+      },
+      "expectedBand": "Approaching review-ready",
+      "expectedDecision": "D7"
+    },
+    {
+      "learnerId": "MAY009-L10",
+      "pipelineMs": 37,
+      "decisionId": "D10",
+      "decisionAction": "exploratory",
+      "decisionMode": "EXPLAIN",
+      "decisionPriority": "low",
+      "decisionTopic": null,
+      "decisionRationale": "More practice data is needed before adaptive coaching can personalize recommendations. Continue practicing across all sections.",
+      "readinessScore": 55,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 0,
+      "sectionsWithData": 6,
+      "intCount": 0,
+      "intTiers": [],
+      "intTopTier": null,
+      "intTopTopic": null,
+      "intTopScore": null,
+      "recCount": 0,
+      "recTypes": [],
+      "recPriorities": [],
+      "recTopType": null,
+      "recTopTopic": null,
+      "planCount": 0,
+      "planTopics": [],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 0,
+      "riskAreaCount": 0,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "triggeringRule": "D10"
+      },
+      "expectedBand": "Approaching review-ready",
+      "expectedDecision": "D7"
+    },
+    {
+      "learnerId": "MAY009-L11",
+      "pipelineMs": 29,
+      "decisionId": "D7",
+      "decisionAction": "explain",
+      "decisionMode": "EXPLAIN",
+      "decisionPriority": "medium",
+      "decisionTopic": "Cybersecurity",
+      "decisionRationale": "Knowledge on Cybersecurity is usable but unreliable (stability: 69%). Consolidation with concept review is needed.",
+      "readinessScore": 55,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 0,
+      "sectionsWithData": 6,
+      "intCount": 1,
+      "intTiers": [
+        3
+      ],
+      "intTopTier": 3,
+      "intTopTopic": "Cybersecurity",
+      "intTopScore": 44,
+      "recCount": 0,
+      "recTypes": [],
+      "recPriorities": [],
+      "recTopType": null,
+      "recTopTopic": null,
+      "planCount": 0,
+      "planTopics": [],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 0,
+      "riskAreaCount": 0,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "stability": 69,
+        "accuracy": 71,
+        "direction": "slightly_declining",
+        "tier": 3,
+        "triggeringRule": "D7"
+      },
+      "expectedBand": "Approaching review-ready",
+      "expectedDecision": "D7"
+    },
+    {
+      "learnerId": "MAY009-L12",
+      "pipelineMs": 34,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (55/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 55,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 85,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 3,
+      "sectionsWithData": 6,
+      "intCount": 4,
+      "intTiers": [
+        1,
+        2,
+        3
+      ],
+      "intTopTier": 2,
+      "intTopTopic": "Budgeting Concepts",
+      "intTopScore": 90,
+      "recCount": 2,
+      "recTypes": [
+        "remediation",
+        "remediation"
+      ],
+      "recPriorities": [
+        "high",
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Budgeting Concepts",
+      "planCount": 3,
+      "planTopics": [
+        "Revenue Recognition",
+        "Inventory Valuation",
+        "Budgeting Concepts"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 1,
+      "riskAreaCount": 5,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 55,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 3,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D5"
+    },
+    {
+      "learnerId": "MAY009-L13",
+      "pipelineMs": 38,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (40/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 40,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 85,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 6,
+      "sectionsWithData": 6,
+      "intCount": 7,
+      "intTiers": [
+        1,
+        2,
+        3
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Cash Budget",
+      "intTopScore": 110,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "high",
+        "high",
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Data Analytics",
+      "planCount": 3,
+      "planTopics": [
+        "Revenue Recognition",
+        "Inventory Valuation",
+        "Budgeting Concepts"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 4,
+      "riskAreaCount": 11,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 40,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 6,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D4"
+    },
+    {
+      "learnerId": "MAY009-L14",
+      "pipelineMs": 20,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (43/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 43,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 5,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 5,
+      "sectionsWithData": 4,
+      "intCount": 5,
+      "intTiers": [
+        1
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "CVP Analysis",
+      "intTopScore": 143,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "high",
+        "high",
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Revenue Recognition",
+      "planCount": 3,
+      "planTopics": [
+        "Revenue Recognition",
+        "Inventory Valuation",
+        "Budgeting Concepts"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 5,
+      "riskAreaCount": 7,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 43,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 5,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Recovery needed",
+      "expectedDecision": "D1"
+    },
+    {
+      "learnerId": "MAY009-L15",
+      "pipelineMs": 28,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (40/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 40,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 85,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 6,
+      "sectionsWithData": 6,
+      "intCount": 8,
+      "intTiers": [
+        1,
+        2,
+        3
+      ],
+      "intTopTier": 2,
+      "intTopTopic": "Inventory Valuation",
+      "intTopScore": 117,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "high",
+        "high",
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Budgeting Concepts",
+      "planCount": 3,
+      "planTopics": [
+        "Revenue Recognition",
+        "Inventory Valuation",
+        "Budgeting Concepts"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 5,
+      "riskAreaCount": 9,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 40,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 6,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D4"
+    },
+    {
+      "learnerId": "MAY009-L16",
+      "pipelineMs": 36,
+      "decisionId": "D7",
+      "decisionAction": "explain",
+      "decisionMode": "EXPLAIN",
+      "decisionPriority": "medium",
+      "decisionTopic": "Revenue Recognition",
+      "decisionRationale": "Knowledge on Revenue Recognition is usable but unreliable (stability: 79%). Consolidation with concept review is needed.",
+      "readinessScore": 65,
+      "readinessBand": "Approaching review-ready",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 4,
+      "topicCoverageTopicsAtRecovery": 0,
+      "sectionsWithData": 6,
+      "intCount": 7,
+      "intTiers": [
+        3,
+        4
+      ],
+      "intTopTier": 3,
+      "intTopTopic": "Revenue Recognition",
+      "intTopScore": 31,
+      "recCount": 3,
+      "recTypes": [
+        "remediation",
+        "challenge",
+        "challenge"
+      ],
+      "recPriorities": [
+        "medium",
+        "medium",
+        "medium"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Revenue Recognition",
+      "planCount": 0,
+      "planTopics": [],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": true,
+      "strengthsCount": 2,
+      "weaknessesCount": 0,
+      "riskAreaCount": 0,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "stability": 79,
+        "accuracy": 88,
+        "direction": "slightly_declining",
+        "tier": 3,
+        "triggeringRule": "D7"
+      },
+      "expectedBand": "Approaching review-ready",
+      "expectedDecision": "D9"
+    },
+    {
+      "learnerId": "MAY009-L17",
+      "pipelineMs": 41,
+      "decisionId": "D7",
+      "decisionAction": "explain",
+      "decisionMode": "EXPLAIN",
+      "decisionPriority": "medium",
+      "decisionTopic": "Inventory Valuation",
+      "decisionRationale": "Knowledge on Inventory Valuation is usable but unreliable (stability: 79%). Consolidation with concept review is needed.",
+      "readinessScore": 68,
+      "readinessBand": "Approaching review-ready",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 5,
+      "topicCoverageTopicsAtRecovery": 0,
+      "sectionsWithData": 6,
+      "intCount": 8,
+      "intTiers": [
+        3,
+        4
+      ],
+      "intTopTier": 3,
+      "intTopTopic": "Inventory Valuation",
+      "intTopScore": 25,
+      "recCount": 4,
+      "recTypes": [
+        "remediation",
+        "challenge",
+        "challenge",
+        "challenge"
+      ],
+      "recPriorities": [
+        "medium",
+        "medium",
+        "medium",
+        "medium"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Standard Costing",
+      "planCount": 0,
+      "planTopics": [],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": false,
+      "strengthsCount": 4,
+      "weaknessesCount": 0,
+      "riskAreaCount": 0,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "stability": 79,
+        "accuracy": 88,
+        "direction": "slightly_declining",
+        "tier": 3,
+        "triggeringRule": "D7"
+      },
+      "expectedBand": "Ready for focused review",
+      "expectedDecision": "D9"
+    },
+    {
+      "learnerId": "MAY009-L18",
+      "pipelineMs": 41,
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Standard Costing",
+      "decisionRationale": "Critical weakness: Standard Costing requires immediate remediation (accuracy: 88%, declining trend).",
+      "readinessScore": 72,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 7,
+      "topicCoverageTopicsAtReady": 5,
+      "topicCoverageTopicsAtRecovery": 1,
+      "sectionsWithData": 6,
+      "intCount": 6,
+      "intTiers": [
+        1,
+        3,
+        4
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Standard Costing",
+      "intTopScore": 45,
+      "recCount": 3,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "challenge"
+      ],
+      "recPriorities": [
+        "high",
+        "medium",
+        "medium"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Standard Costing",
+      "planCount": 1,
+      "planTopics": [
+        "Standard Costing"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": true,
+      "strengthsCount": 1,
+      "weaknessesCount": 0,
+      "riskAreaCount": 1,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "accuracy": 88,
+        "direction": "declining",
+        "stability": 79,
+        "attempts": 16,
+        "tier": 1,
+        "triggeringRule": "D2"
+      },
+      "expectedBand": "Approaching review-ready",
+      "expectedDecision": "D5"
+    },
+    {
+      "learnerId": "MAY009-L19",
+      "pipelineMs": 52,
+      "decisionId": "D9",
+      "decisionAction": "challenge",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "low",
+      "decisionTopic": "CVP Analysis",
+      "decisionRationale": "Strong performance on CVP Analysis (accuracy: 100%, 18 attempts). Challenge with advanced or case-based content.",
+      "readinessScore": 75,
+      "readinessBand": "Approaching review-ready",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 9,
+      "topicCoverageTopicsAtReady": 8,
+      "topicCoverageTopicsAtRecovery": 0,
+      "sectionsWithData": 6,
+      "intCount": 8,
+      "intTiers": [
+        4
+      ],
+      "intTopTier": 4,
+      "intTopTopic": "Revenue Recognition",
+      "intTopScore": 15,
+      "recCount": 3,
+      "recTypes": [
+        "challenge",
+        "challenge",
+        "challenge"
+      ],
+      "recPriorities": [
+        "medium",
+        "medium",
+        "medium"
+      ],
+      "recTopType": "challenge",
+      "recTopTopic": "CVP Analysis",
+      "planCount": 0,
+      "planTopics": [],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": true,
+      "strengthsCount": 5,
+      "weaknessesCount": 0,
+      "riskAreaCount": 0,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "accuracy": 100,
+        "stability": 100,
+        "attempts": 18,
+        "triggeringRule": "D9"
+      },
+      "expectedBand": "Ready for focused review",
+      "expectedDecision": "D9"
+    },
+    {
+      "learnerId": "MAY009-L20",
+      "pipelineMs": 43,
+      "decisionId": "D2",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Cash Budget",
+      "decisionRationale": "Critical weakness: Cash Budget requires immediate remediation (accuracy: 44%, declining trend).",
+      "readinessScore": 58,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 7,
+      "topicCoverageTopicsAtReady": 1,
+      "topicCoverageTopicsAtRecovery": 1,
+      "sectionsWithData": 6,
+      "intCount": 5,
+      "intTiers": [
+        1,
+        3,
+        4
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Cash Budget",
+      "intTopScore": 89,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "reinforcement",
+        "challenge",
+        "challenge"
+      ],
+      "recPriorities": [
+        "high",
+        "medium",
+        "medium",
+        "medium",
+        "medium"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Cash Budget",
+      "planCount": 1,
+      "planTopics": [
+        "Cash Budget"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": true,
+      "strengthsCount": 2,
+      "weaknessesCount": 1,
+      "riskAreaCount": 1,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "accuracy": 44,
+        "direction": "declining",
+        "stability": 57,
+        "attempts": 16,
+        "tier": 1,
+        "triggeringRule": "D2"
+      },
+      "expectedBand": "Approaching review-ready",
+      "expectedDecision": "D2"
+    },
+    {
+      "learnerId": "MAY009-L21",
+      "pipelineMs": 22,
+      "decisionId": "D7",
+      "decisionAction": "explain",
+      "decisionMode": "EXPLAIN",
+      "decisionPriority": "medium",
+      "decisionTopic": "Inventory Valuation",
+      "decisionRationale": "Knowledge on Inventory Valuation is usable but unreliable (stability: 85%). Consolidation with concept review is needed.",
+      "readinessScore": 55,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 5,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 0,
+      "sectionsWithData": 3,
+      "intCount": 1,
+      "intTiers": [
+        3
+      ],
+      "intTopTier": 3,
+      "intTopTopic": "Inventory Valuation",
+      "intTopScore": 44,
+      "recCount": 0,
+      "recTypes": [],
+      "recPriorities": [],
+      "recTopType": null,
+      "recTopTopic": null,
+      "planCount": 0,
+      "planTopics": [],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 0,
+      "riskAreaCount": 0,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "stability": 85,
+        "accuracy": 71,
+        "direction": "slightly_declining",
+        "tier": 3,
+        "triggeringRule": "D7"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D8"
+    },
+    {
+      "learnerId": "MAY009-L22",
+      "pipelineMs": 20,
+      "decisionId": "D7",
+      "decisionAction": "explain",
+      "decisionMode": "EXPLAIN",
+      "decisionPriority": "medium",
+      "decisionTopic": "Inventory Valuation",
+      "decisionRationale": "Knowledge on Inventory Valuation is usable but unreliable (stability: 38%). Consolidation with concept review is needed.",
+      "readinessScore": 55,
+      "readinessBand": "Developing",
+      "readinessConfidence": 85,
+      "topicCoverageTopicsWithData": 3,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 2,
+      "sectionsWithData": 2,
+      "intCount": 2,
+      "intTiers": [
+        3
+      ],
+      "intTopTier": 3,
+      "intTopTopic": "Inventory Valuation",
+      "intTopScore": 73,
+      "recCount": 0,
+      "recTypes": [],
+      "recPriorities": [],
+      "recTopType": null,
+      "recTopTopic": null,
+      "planCount": 2,
+      "planTopics": [
+        "Inventory Valuation",
+        "Budgeting Concepts"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 0,
+      "riskAreaCount": 4,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "stability": 38,
+        "accuracy": 64,
+        "direction": "stable",
+        "tier": 3,
+        "triggeringRule": "D7"
+      },
+      "expectedBand": "Not enough data",
+      "expectedDecision": "D8"
+    },
+    {
+      "learnerId": "MAY009-L23",
+      "pipelineMs": 3,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (?/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 0,
+      "readinessBand": "Not enough data",
+      "readinessConfidence": 80,
+      "topicCoverageTopicsWithData": 1,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 0,
+      "sectionsWithData": 0,
+      "intCount": 0,
+      "intTiers": [],
+      "intTopTier": null,
+      "intTopTopic": null,
+      "intTopScore": null,
+      "recCount": 0,
+      "recTypes": [],
+      "recPriorities": [],
+      "recTopType": null,
+      "recTopTopic": null,
+      "planCount": 0,
+      "planTopics": [],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 0,
+      "riskAreaCount": 0,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 0,
+        "band": "Not enough data",
+        "topicsAtRecovery": 0,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Not enough data",
+      "expectedDecision": "D10"
+    },
+    {
+      "learnerId": "MAY009-L24",
+      "pipelineMs": 3,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (?/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 0,
+      "readinessBand": "Not enough data",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 1,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 0,
+      "sectionsWithData": 0,
+      "intCount": 0,
+      "intTiers": [],
+      "intTopTier": null,
+      "intTopTopic": null,
+      "intTopScore": null,
+      "recCount": 0,
+      "recTypes": [],
+      "recPriorities": [],
+      "recTopType": null,
+      "recTopTopic": null,
+      "planCount": 0,
+      "planTopics": [],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 0,
+      "riskAreaCount": 0,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 0,
+        "band": "Not enough data",
+        "topicsAtRecovery": 0,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Not enough data",
+      "expectedDecision": "D10"
+    },
+    {
+      "learnerId": "MAY009-L25",
+      "pipelineMs": 22,
+      "decisionId": "D7",
+      "decisionAction": "explain",
+      "decisionMode": "EXPLAIN",
+      "decisionPriority": "medium",
+      "decisionTopic": "Inventory Valuation",
+      "decisionRationale": "Knowledge on Inventory Valuation is usable but unreliable (stability: 71%). Consolidation with concept review is needed.",
+      "readinessScore": 75,
+      "readinessBand": "Approaching review-ready",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 4,
+      "topicCoverageTopicsAtReady": 2,
+      "topicCoverageTopicsAtRecovery": 0,
+      "sectionsWithData": 1,
+      "intCount": 4,
+      "intTiers": [
+        3,
+        4
+      ],
+      "intTopTier": 3,
+      "intTopTopic": "Inventory Valuation",
+      "intTopScore": 25,
+      "recCount": 2,
+      "recTypes": [
+        "challenge",
+        "challenge"
+      ],
+      "recPriorities": [
+        "medium",
+        "medium"
+      ],
+      "recTopType": "challenge",
+      "recTopTopic": "Financial Ratio Analysis",
+      "planCount": 0,
+      "planTopics": [],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": false,
+      "strengthsCount": 2,
+      "weaknessesCount": 0,
+      "riskAreaCount": 0,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "stability": 71,
+        "accuracy": 88,
+        "direction": "slightly_declining",
+        "tier": 3,
+        "triggeringRule": "D7"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D8"
+    },
+    {
+      "learnerId": "MAY009-L26",
+      "pipelineMs": 37,
+      "decisionId": "D7",
+      "decisionAction": "explain",
+      "decisionMode": "EXPLAIN",
+      "decisionPriority": "medium",
+      "decisionTopic": "Budgeting Concepts",
+      "decisionRationale": "Knowledge on Budgeting Concepts is usable but unreliable (stability: 56%). Consolidation with concept review is needed.",
+      "readinessScore": 66,
+      "readinessBand": "Approaching review-ready",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 7,
+      "topicCoverageTopicsAtReady": 4,
+      "topicCoverageTopicsAtRecovery": 0,
+      "sectionsWithData": 4,
+      "intCount": 6,
+      "intTiers": [
+        3,
+        4
+      ],
+      "intTopTier": 3,
+      "intTopTopic": "Budgeting Concepts",
+      "intTopScore": 44,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "reinforcement",
+        "challenge",
+        "challenge",
+        "challenge"
+      ],
+      "recPriorities": [
+        "medium",
+        "medium",
+        "medium",
+        "medium",
+        "medium"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Budgeting Concepts",
+      "planCount": 1,
+      "planTopics": [
+        "Standard Costing"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": true,
+      "strengthsCount": 4,
+      "weaknessesCount": 0,
+      "riskAreaCount": 0,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "stability": 56,
+        "accuracy": 70,
+        "direction": "slightly_declining",
+        "tier": 3,
+        "triggeringRule": "D7"
+      },
+      "expectedBand": "Approaching review-ready",
+      "expectedDecision": "D9"
+    },
+    {
+      "learnerId": "MAY009-L27",
+      "pipelineMs": 37,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (46/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 46,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 85,
+      "topicCoverageTopicsWithData": 7,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 7,
+      "sectionsWithData": 6,
+      "intCount": 7,
+      "intTiers": [
+        1,
+        2
+      ],
+      "intTopTier": 2,
+      "intTopTopic": "Budgeting Concepts",
+      "intTopScore": 120,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation",
+        "remediation"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "high",
+        "high",
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Revenue Recognition",
+      "planCount": 3,
+      "planTopics": [
+        "Revenue Recognition",
+        "Inventory Valuation",
+        "Budgeting Concepts"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 5,
+      "riskAreaCount": 9,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 46,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 7,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Recovery needed",
+      "expectedDecision": "D1"
+    },
+    {
+      "learnerId": "MAY009-L28",
+      "pipelineMs": 52,
+      "decisionId": "D6",
+      "decisionAction": "quiz",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "medium",
+      "decisionTopic": "Budgeting Concepts",
+      "decisionRationale": "Emerging weakness on Budgeting Concepts (accuracy: 50%). Targeted practice to correct trajectory.",
+      "readinessScore": 55,
+      "readinessBand": "Developing",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 1,
+      "sectionsWithData": 6,
+      "intCount": 2,
+      "intTiers": [
+        2,
+        3
+      ],
+      "intTopTier": 2,
+      "intTopTopic": "Budgeting Concepts",
+      "intTopScore": 89,
+      "recCount": 1,
+      "recTypes": [
+        "remediation"
+      ],
+      "recPriorities": [
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Budgeting Concepts",
+      "planCount": 1,
+      "planTopics": [
+        "Budgeting Concepts"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": true,
+      "topicInRecs": true,
+      "strengthsCount": 0,
+      "weaknessesCount": 1,
+      "riskAreaCount": 1,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "accuracy": 50,
+        "direction": "slightly_declining",
+        "attempts": 14,
+        "tier": 2,
+        "triggeringRule": "D6"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D3"
+    },
+    {
+      "learnerId": "MAY009-L29",
+      "pipelineMs": 58,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (55/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 55,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 85,
+      "topicCoverageTopicsWithData": 8,
+      "topicCoverageTopicsAtReady": 0,
+      "topicCoverageTopicsAtRecovery": 3,
+      "sectionsWithData": 6,
+      "intCount": 4,
+      "intTiers": [
+        1,
+        2,
+        3
+      ],
+      "intTopTier": 2,
+      "intTopTopic": "Data Analytics",
+      "intTopScore": 85,
+      "recCount": 2,
+      "recTypes": [
+        "remediation",
+        "remediation"
+      ],
+      "recPriorities": [
+        "high",
+        "high"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Data Analytics",
+      "planCount": 3,
+      "planTopics": [
+        "Revenue Recognition",
+        "Budgeting Concepts",
+        "Data Analytics"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 0,
+      "weaknessesCount": 1,
+      "riskAreaCount": 5,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 55,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 3,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D5"
+    },
+    {
+      "learnerId": "MAY009-L30",
+      "pipelineMs": 134,
+      "decisionId": "D1",
+      "decisionAction": "remediation",
+      "decisionMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (57/100). Priority is rebuilding fundamentals across all sections.",
+      "readinessScore": 57,
+      "readinessBand": "Recovery needed",
+      "readinessConfidence": 100,
+      "topicCoverageTopicsWithData": 12,
+      "topicCoverageTopicsAtReady": 3,
+      "topicCoverageTopicsAtRecovery": 3,
+      "sectionsWithData": 6,
+      "intCount": 9,
+      "intTiers": [
+        1,
+        3,
+        4
+      ],
+      "intTopTier": 1,
+      "intTopTopic": "Cash Budget",
+      "intTopScore": 97,
+      "recCount": 5,
+      "recTypes": [
+        "remediation",
+        "remediation",
+        "remediation",
+        "reinforcement",
+        "challenge"
+      ],
+      "recPriorities": [
+        "high",
+        "high",
+        "high",
+        "medium",
+        "medium"
+      ],
+      "recTopType": "remediation",
+      "recTopTopic": "Statement of Cash Flows",
+      "planCount": 3,
+      "planTopics": [
+        "Statement of Cash Flows",
+        "Cash Budget",
+        "Data Analytics"
+      ],
+      "recoveryOrdered": true,
+      "contradictoryTopics": [],
+      "topicInInterventions": false,
+      "topicInRecs": false,
+      "strengthsCount": 2,
+      "weaknessesCount": 3,
+      "riskAreaCount": 4,
+      "profileCompleteness": true,
+      "_decisionEvidence": {
+        "readinessScore": 57,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 3,
+        "triggeringRule": "D1"
+      },
+      "expectedBand": "Developing",
+      "expectedDecision": "D2"
+    }
+  ],
+  "coverage": {
+    "decisions": {
+      "D1": {
+        "count": 16,
+        "learners": [
+          "MAY009-L01",
+          "MAY009-L02",
+          "MAY009-L03",
+          "MAY009-L04",
+          "MAY009-L05",
+          "MAY009-L07",
+          "MAY009-L08",
+          "MAY009-L12",
+          "MAY009-L13",
+          "MAY009-L14",
+          "MAY009-L15",
+          "MAY009-L23",
+          "MAY009-L24",
+          "MAY009-L27",
+          "MAY009-L29",
+          "MAY009-L30"
+        ]
+      },
+      "D2": {
+        "count": 3,
+        "learners": [
+          "MAY009-L06",
+          "MAY009-L18",
+          "MAY009-L20"
+        ]
+      },
+      "D3": {
+        "count": 0,
+        "learners": []
+      },
+      "D4": {
+        "count": 0,
+        "learners": []
+      },
+      "D5": {
+        "count": 0,
+        "learners": []
+      },
+      "D6": {
+        "count": 1,
+        "learners": [
+          "MAY009-L28"
+        ]
+      },
+      "D7": {
+        "count": 8,
+        "learners": [
+          "MAY009-L09",
+          "MAY009-L11",
+          "MAY009-L16",
+          "MAY009-L17",
+          "MAY009-L21",
+          "MAY009-L22",
+          "MAY009-L25",
+          "MAY009-L26"
+        ]
+      },
+      "D8": {
+        "count": 0,
+        "learners": []
+      },
+      "D9": {
+        "count": 1,
+        "learners": [
+          "MAY009-L19"
+        ]
+      },
+      "D10": {
+        "count": 1,
+        "learners": [
+          "MAY009-L10"
+        ]
+      }
+    },
+    "modes": {
+      "QUIZ": {
+        "count": 21,
+        "learners": [
+          "MAY009-L01",
+          "MAY009-L02",
+          "MAY009-L03",
+          "MAY009-L04",
+          "MAY009-L05",
+          "MAY009-L06",
+          "MAY009-L07",
+          "MAY009-L08",
+          "MAY009-L12",
+          "MAY009-L13",
+          "MAY009-L14",
+          "MAY009-L15",
+          "MAY009-L18",
+          "MAY009-L19",
+          "MAY009-L20",
+          "MAY009-L23",
+          "MAY009-L24",
+          "MAY009-L27",
+          "MAY009-L28",
+          "MAY009-L29",
+          "MAY009-L30"
+        ]
+      },
+      "SOCRATIC": {
+        "count": 0,
+        "learners": []
+      },
+      "STUDY_PLAN": {
+        "count": 0,
+        "learners": []
+      },
+      "EXPLAIN": {
+        "count": 9,
+        "learners": [
+          "MAY009-L09",
+          "MAY009-L10",
+          "MAY009-L11",
+          "MAY009-L16",
+          "MAY009-L17",
+          "MAY009-L21",
+          "MAY009-L22",
+          "MAY009-L25",
+          "MAY009-L26"
+        ]
+      },
+      "MOTIVATE": {
+        "count": 0,
+        "learners": []
+      },
+      "EXAM_REVIEW": {
+        "count": 0,
+        "learners": []
+      }
+    },
+    "tiers": {
+      "1": {
+        "count": 16,
+        "learners": [
+          "MAY009-L01",
+          "MAY009-L02",
+          "MAY009-L03",
+          "MAY009-L04",
+          "MAY009-L05",
+          "MAY009-L06",
+          "MAY009-L07",
+          "MAY009-L12",
+          "MAY009-L13",
+          "MAY009-L14",
+          "MAY009-L15",
+          "MAY009-L18",
+          "MAY009-L20",
+          "MAY009-L27",
+          "MAY009-L29",
+          "MAY009-L30"
+        ],
+        "topActions": 12
+      },
+      "2": {
+        "count": 8,
+        "learners": [
+          "MAY009-L04",
+          "MAY009-L08",
+          "MAY009-L12",
+          "MAY009-L13",
+          "MAY009-L15",
+          "MAY009-L27",
+          "MAY009-L28",
+          "MAY009-L29"
+        ],
+        "topActions": 6
+      },
+      "3": {
+        "count": 20,
+        "learners": [
+          "MAY009-L03",
+          "MAY009-L04",
+          "MAY009-L06",
+          "MAY009-L08",
+          "MAY009-L09",
+          "MAY009-L11",
+          "MAY009-L12",
+          "MAY009-L13",
+          "MAY009-L15",
+          "MAY009-L16",
+          "MAY009-L17",
+          "MAY009-L18",
+          "MAY009-L20",
+          "MAY009-L21",
+          "MAY009-L22",
+          "MAY009-L25",
+          "MAY009-L26",
+          "MAY009-L28",
+          "MAY009-L29",
+          "MAY009-L30"
+        ],
+        "topActions": 8
+      },
+      "4": {
+        "count": 8,
+        "learners": [
+          "MAY009-L16",
+          "MAY009-L17",
+          "MAY009-L18",
+          "MAY009-L19",
+          "MAY009-L20",
+          "MAY009-L25",
+          "MAY009-L26",
+          "MAY009-L30"
+        ],
+        "topActions": 1
+      },
+      "5": {
+        "count": 0,
+        "learners": []
+      }
+    },
+    "bands": {
+      "Recovery needed": 13,
+      "Developing": 10,
+      "Approaching review-ready": 5,
+      "Not enough data": 2
+    },
+    "decisionMatchRate": "9/30",
+    "uniqueOutputs": 9,
+    "exerciseDecisions": "6/10"
+  },
+  "calibration": {
+    "decisionMatches": 9,
+    "totalLearners": 30,
+    "mismatchCount": 21,
+    "mismatchLearners": [
+      {
+        "id": "MAY009-L03",
+        "expected": "D2",
+        "actual": "D1"
+      },
+      {
+        "id": "MAY009-L04",
+        "expected": "D2",
+        "actual": "D1"
+      },
+      {
+        "id": "MAY009-L06",
+        "expected": "D3",
+        "actual": "D2"
+      },
+      {
+        "id": "MAY009-L07",
+        "expected": "D5",
+        "actual": "D1"
+      },
+      {
+        "id": "MAY009-L08",
+        "expected": "D6",
+        "actual": "D1"
+      },
+      {
+        "id": "MAY009-L10",
+        "expected": "D7",
+        "actual": "D10"
+      },
+      {
+        "id": "MAY009-L12",
+        "expected": "D5",
+        "actual": "D1"
+      },
+      {
+        "id": "MAY009-L13",
+        "expected": "D4",
+        "actual": "D1"
+      },
+      {
+        "id": "MAY009-L15",
+        "expected": "D4",
+        "actual": "D1"
+      },
+      {
+        "id": "MAY009-L16",
+        "expected": "D9",
+        "actual": "D7"
+      },
+      {
+        "id": "MAY009-L17",
+        "expected": "D9",
+        "actual": "D7"
+      },
+      {
+        "id": "MAY009-L18",
+        "expected": "D5",
+        "actual": "D2"
+      },
+      {
+        "id": "MAY009-L21",
+        "expected": "D8",
+        "actual": "D7"
+      },
+      {
+        "id": "MAY009-L22",
+        "expected": "D8",
+        "actual": "D7"
+      },
+      {
+        "id": "MAY009-L23",
+        "expected": "D10",
+        "actual": "D1"
+      },
+      {
+        "id": "MAY009-L24",
+        "expected": "D10",
+        "actual": "D1"
+      },
+      {
+        "id": "MAY009-L25",
+        "expected": "D8",
+        "actual": "D7"
+      },
+      {
+        "id": "MAY009-L26",
+        "expected": "D9",
+        "actual": "D7"
+      },
+      {
+        "id": "MAY009-L28",
+        "expected": "D3",
+        "actual": "D6"
+      },
+      {
+        "id": "MAY009-L29",
+        "expected": "D5",
+        "actual": "D1"
+      },
+      {
+        "id": "MAY009-L30",
+        "expected": "D2",
+        "actual": "D1"
+      }
+    ],
+    "contradictoryPairs": 0,
+    "pipelineAvgMs": 37,
+    "pipelineMaxMs": 134,
+    "topicAlignmentRate": "100%",
+    "recoveryPlanOrderRate": "100%",
+    "readinessScoreRange": {
+      "min": 40,
+      "max": 75
+    },
+    "gapAnalysis": {
+      "missingDecisions": [
+        "D3",
+        "D4",
+        "D5",
+        "D8"
+      ],
+      "missingModes": [
+        "SOCRATIC",
+        "STUDY_PLAN",
+        "MOTIVATE",
+        "EXAM_REVIEW"
+      ],
+      "missingBands": [
+        "Ready for focused review"
+      ]
+    }
+  }
+}

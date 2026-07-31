@@ -1,0 +1,246 @@
+{
+  "session": "SESSION086P",
+  "target_session": "SESSION087",
+  "campaign": "Pack A Section F Cognitive Upgrade — Wave 1",
+  "predecessor": "SESSION086P (Repository Modernization Rebaseline)",
+  "rationale": "Pack A Section F has 2.7% HO (the lowest single-object HO section in the repository). All 75 items are Certified, structurally clean (0 DL-008, 0 DL-026), single-object architecture. Domain F (Technology & Analytics) items are definition-heavy textbook recall — ideal for scenario-based cognitive upgrade. Original queue authored in S77; refreshed and revalidated in S86P.",
+  "target_section": {
+    "pack": "A",
+    "section": "F",
+    "domain": "Technology and Analytics",
+    "total_items": 75,
+    "certified": 75,
+    "evaluate": 0,
+    "analyze": 2,
+    "apply": 13,
+    "understand": 59,
+    "remember": 1,
+    "ho_pct": "2.7%"
+  },
+  "target_mix": {
+    "evaluate": 8,
+    "analyze": 7,
+    "total": 15
+  },
+  "queue_changes_from_s77": {
+    "removed": [{"qid": "P1-F-020", "reason": "Already at Analyze (DS=4) — was Understand in S77 census. Upgraded by intermediate work."}],
+    "added": [{"qid": "P1-F-048", "current_cl": "Understand", "current_ds": 2, "topic": "Process mining use", "rationale": "COO evaluating process mining investment across 3 departments with inefficiency, cost, and improvement data"}]
+  },
+  "queue": {
+    "evaluate_targets": [
+      {
+        "qid": "P1-F-001",
+        "current_cl": "Understand",
+        "current_difficulty": "Easy",
+        "current_ds": 1,
+        "correct_choice": "A",
+        "topic": "ERP transaction integration",
+        "target_cl": "Evaluate",
+        "scenario_angle": "CIO evaluating ERP module implementation sequence with cost/benefit and dependency data across finance, supply chain, and HR modules"
+      },
+      {
+        "qid": "P1-F-005",
+        "current_cl": "Understand",
+        "current_difficulty": "Difficult",
+        "current_ds": 1,
+        "correct_choice": "A",
+        "topic": "Data dictionary definitions",
+        "target_cl": "Evaluate",
+        "scenario_angle": "Data governance committee evaluating metadata standard adoption across 3 legacy systems with consistency, cost, and migration trade-offs"
+      },
+      {
+        "qid": "P1-F-010",
+        "current_cl": "Understand",
+        "current_difficulty": "Easy",
+        "current_ds": 1,
+        "correct_choice": "D",
+        "topic": "Data cleansing duplicate customers",
+        "target_cl": "Evaluate",
+        "scenario_angle": "Data steward evaluating 3 de-duplication strategies (rule-based, ML fuzzy match, manual review) with merge confidence, cost-per-record, and false-positive risk data"
+      },
+      {
+        "qid": "P1-F-030",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate-Easy",
+        "current_ds": 2,
+        "correct_choice": "B",
+        "topic": "Blockchain shared ledger",
+        "target_cl": "Evaluate",
+        "scenario_angle": "CFO evaluating blockchain vs. traditional reconciliation for intercompany transactions with cost, settlement time, and audit trail data"
+      },
+      {
+        "qid": "P1-F-040",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate-Easy",
+        "current_ds": 2,
+        "correct_choice": "D",
+        "topic": "Change control migration",
+        "target_cl": "Evaluate",
+        "scenario_angle": "Audit committee evaluating 3 change control policy designs after an unauthorized ERP migration caused a $340K revenue recognition error"
+      },
+      {
+        "qid": "P1-F-048",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate-Easy",
+        "current_ds": 2,
+        "correct_choice": "D",
+        "topic": "Process mining use",
+        "target_cl": "Evaluate",
+        "scenario_angle": "COO evaluating process mining investment across AP, order-to-cash, and procurement — with process inefficiency metrics and implementation cost data"
+      },
+      {
+        "qid": "P1-F-050",
+        "current_cl": "Understand",
+        "current_difficulty": "Easy",
+        "current_ds": 1,
+        "correct_choice": "B",
+        "topic": "Technology ROI benefits tracking",
+        "target_cl": "Evaluate",
+        "scenario_angle": "FP&A director evaluating 3 technology ROI frameworks (NPV, payback, benefit-cost ratio) for a digital transformation initiative with $2.4M investment"
+      },
+      {
+        "qid": "P1-F-060",
+        "current_cl": "Understand",
+        "current_difficulty": "Easy",
+        "current_ds": 1,
+        "correct_choice": "A",
+        "topic": "Third-party vendor cyber risk",
+        "target_cl": "Evaluate",
+        "scenario_angle": "CISO evaluating vendor risk assessment methodology — comparing questionnaire-based, on-site audit, and continuous monitoring approaches with cost-coverage trade-off data"
+      }
+    ],
+    "analyze_targets": [
+      {
+        "qid": "P1-F-015",
+        "current_cl": "Apply",
+        "current_difficulty": "Easy",
+        "current_ds": 1,
+        "correct_choice": "B",
+        "topic": "Business intelligence dashboard",
+        "target_cl": "Analyze",
+        "scenario_angle": "FP&A analyst decomposing a multi-metric BI dashboard — identifying 3 KPIs driving a 4.2% margin decline across product lines"
+      },
+      {
+        "qid": "P1-F-025",
+        "current_cl": "Apply",
+        "current_difficulty": "Easy",
+        "current_ds": 1,
+        "correct_choice": "D",
+        "topic": "Sampling bias",
+        "target_cl": "Analyze",
+        "scenario_angle": "Internal auditor analyzing sampling methodology across 4 transaction populations to identify which sample design introduces selection bias and misstates control effectiveness"
+      },
+      {
+        "qid": "P1-F-035",
+        "current_cl": "Understand",
+        "current_difficulty": "Easy",
+        "current_ds": 1,
+        "correct_choice": "C",
+        "topic": "Encryption at rest and transit",
+        "target_cl": "Analyze",
+        "scenario_angle": "Security architect analyzing encryption requirements across 5 data flow paths (customer portal → ERP → data warehouse → BI → board report) to identify coverage gaps"
+      },
+      {
+        "qid": "P1-F-045",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate-Easy",
+        "current_ds": 2,
+        "correct_choice": "C",
+        "topic": "Data privacy minimization",
+        "target_cl": "Analyze",
+        "scenario_angle": "Privacy officer analyzing GDPR and CCPA data minimization compliance across CRM, HR, and marketing systems — identifying over-collection and retention violations"
+      },
+      {
+        "qid": "P1-F-055",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate-Easy",
+        "current_ds": 2,
+        "correct_choice": "D",
+        "topic": "Metadata management",
+        "target_cl": "Analyze",
+        "scenario_angle": "Data architect analyzing metadata quality metrics (completeness, accuracy, lineage coverage) across source-to-report pipeline for the CFO monthly close package"
+      },
+      {
+        "qid": "P1-F-065",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate-Easy",
+        "current_ds": 2,
+        "correct_choice": "B",
+        "topic": "Password policy weakness",
+        "target_cl": "Analyze",
+        "scenario_angle": "IT auditor analyzing authentication failure patterns — login source, time-of-day, and account privilege — to identify the highest-risk accounts for targeted remediation"
+      },
+      {
+        "qid": "P1-F-070",
+        "current_cl": "Understand",
+        "current_difficulty": "Moderate-Easy",
+        "current_ds": 2,
+        "correct_choice": "B",
+        "topic": "Data lake governance",
+        "target_cl": "Analyze",
+        "scenario_angle": "Chief data officer analyzing data lake ingestion quality (completeness, timeliness, schema conformance) across 5 source systems to prioritize governance investment"
+      }
+    ]
+  },
+  "queue_integrity": {
+    "all_qids_distinct": true,
+    "all_from_same_section": true,
+    "all_certified": true,
+    "total_items": 15,
+    "evaluate_count": 8,
+    "analyze_count": 7,
+    "evaluate_qids": ["P1-F-001","P1-F-005","P1-F-010","P1-F-030","P1-F-040","P1-F-048","P1-F-050","P1-F-060"],
+    "analyze_qids": ["P1-F-015","P1-F-025","P1-F-035","P1-F-045","P1-F-055","P1-F-065","P1-F-070"]
+  },
+  "duplicate_verification": {
+    "s77_session_executed": "S77 targeted Pack A Section B (not F) — no overlap",
+    "s79_session_executed": "S79 targeted Pack E Section F — different pack, no overlap",
+    "s81_s82_executed": "S81-S82 targeted Pack D Section B — different pack and section, no overlap",
+    "s61_s76_waves": "Targeted Pack B/D Sections A/B/D/E — different packs, no overlap",
+    "s83_s85_matching": "Targeted case packs only — no MCQ overlap",
+    "verdict": "CLEAN — zero duplicate targeting across all prior and executed campaigns"
+  },
+  "structural_precheck": {
+    "date": "2026-07-30",
+    "methodology": "Function-constructor parse of pack_a_corrected.js, per-item field extraction",
+    "dl_008": 0,
+    "dl_026": 0,
+    "rule_9": 0,
+    "all_certified": true,
+    "all_qids_found": true,
+    "architecture": "Single-object — no DL-016 risk"
+  },
+  "execution_prerequisites": [
+    "1. npm run preflight at T0 — confirm 0 divergences",
+    "2. Function-constructor census of Pack A Section F at T0 — reconfirm queue freshness",
+    "3. Backup pack_a_corrected.js with timestamp BEFORE any write",
+    "4. Batch size ≤ 30 items per governance guard Rule 5 (suggest 3 batches: 5+5+5 or 8+7)",
+    "5. Post-rewrite: confirm QID count = 500, Certified count = 500",
+    "6. Post-rewrite: governance guard 54/54 PASS",
+    "7. Post-rewrite: DL-008 = 0, DL-026 = 0, Rule 9 = 0 on all 15 items",
+    "8. npm run pipeline at Tend",
+    "9. REVISION_HISTORY.md entry at closeout"
+  ],
+  "difficulty_recalibration_guide": {
+    "Easy(1)_to_Analyze": "Moderate (3)",
+    "Easy(1)_to_Evaluate": "Moderate (3)",
+    "Moderate-Easy(2)_to_Analyze": "Moderate (3)",
+    "Moderate-Easy(2)_to_Evaluate": "Difficult (4)",
+    "Difficult(1)_to_Evaluate": "Difficult (4)"
+  },
+  "projected_impact": {
+    "section_ho_before": "2.7%",
+    "section_ho_after": "22.7%",
+    "evaluate_added": 8,
+    "analyze_added": 7,
+    "repository_ho_shift": "+0.6 pp (458→466 / 2451 = 18.7%→19.0%)"
+  },
+  "risk_assessment": {
+    "overall": "LOW",
+    "architecture_risk": "NONE — single-object architecture, no DL-016",
+    "certification_risk": "LOW — all items already Certified, no new items entering pool",
+    "structural_risk": "NONE — 0 DL-008, 0 DL-026, 0 Rule 9 on all 15 targets",
+    "content_authoring_load": "MEDIUM — each item needs new business scenario stem, 4 choice-specific distractors, correct answer with business interpretation, 3 wrong-choice explanations. ~15-20 min per item.",
+    "explanation_quality": "MEDIUM — Understand-level items have short explanations. Rewriting to Analyze/Evaluate requires full explanation authoring."
+  }
+}

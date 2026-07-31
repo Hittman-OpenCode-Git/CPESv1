@@ -1,0 +1,177 @@
+{
+  "session": "S69",
+  "board": "section-roi-board",
+  "timestamp": "2026-07-29T17:31:49.699Z",
+  "read_only": true,
+  "methodology": {
+    "packs_parsed": [
+      "pack_a_corrected.js",
+      "pack_b_corrected.js",
+      "pack_c_corrected.js",
+      "pack_d_corrected.js",
+      "pack_e_corrected.js"
+    ],
+    "section_mapping": "Regex-based from QuestionID per pack naming convention",
+    "deduplication": "Pack A uses dual-block architecture — QuestionID deduplicated, metadata block CognitiveLevel used",
+    "cognitive_level_threshold": "At or below Apply = Remember, Understand, Apply (candidates for upgrade to Analyze/Evaluate)"
+  },
+  "pool_summary": {
+    "total_items_pool_wide": 2540,
+    "total_certified": 2451,
+    "total_at_or_below_apply": 2182,
+    "total_at_or_below_apply_pct": 85.9,
+    "total_certified_at_or_below_apply": 2111
+  },
+  "sections": {
+    "A": {
+      "section": "A",
+      "total_items": 375,
+      "remember": 17,
+      "understand": 160,
+      "apply": 169,
+      "analyze": 11,
+      "evaluate": 17,
+      "unknown": 1,
+      "certified_total": 375,
+      "certified_at_or_below_apply": 346,
+      "upgrade_candidates": 346,
+      "at_or_below_apply_pct": 92.3,
+      "roi_assessment": "HIGH",
+      "roi_rationale": "Heavy calculations and judgment scenarios (ASC topics, discontinued ops, revenue recognition) — strong candidates for Analyze/Evaluate rewrite. Many Apply items can become \"recommend the treatment\" or \"evaluate the CFO's position\" type questions. Pool: 375 items, 346 at/below Apply (92%). Certified pool exposure: 346 items in learner pool at/below Apply."
+    },
+    "B": {
+      "section": "B",
+      "total_items": 500,
+      "remember": 25,
+      "understand": 135,
+      "apply": 320,
+      "analyze": 8,
+      "evaluate": 10,
+      "unknown": 2,
+      "certified_total": 500,
+      "certified_at_or_below_apply": 480,
+      "upgrade_candidates": 480,
+      "at_or_below_apply_pct": 96,
+      "roi_assessment": "HIGH",
+      "roi_rationale": "Budgeting scenarios with multiple variables, cash collection schedules, and forecast revision decisions naturally support Evaluate-level \"which budget approach should management recommend\" items. Pool: 500 items, 480 at/below Apply (96%). Certified pool exposure: 480 items in learner pool at/below Apply."
+    },
+    "C": {
+      "section": "C",
+      "total_items": 500,
+      "remember": 26,
+      "understand": 177,
+      "apply": 251,
+      "analyze": 37,
+      "evaluate": 9,
+      "unknown": 0,
+      "certified_total": 500,
+      "certified_at_or_below_apply": 454,
+      "upgrade_candidates": 454,
+      "at_or_below_apply_pct": 90.8,
+      "roi_assessment": "HIGH",
+      "roi_rationale": "Variance analysis, responsibility accounting, and KPI evaluation are inherently Evaluate domains. Many Apply items can be reframed as \"identify the root cause\" or \"recommend corrective action.\" Pool: 500 items, 454 at/below Apply (91%). Certified pool exposure: 454 items in learner pool at/below Apply."
+    },
+    "D": {
+      "section": "D",
+      "total_items": 375,
+      "remember": 2,
+      "understand": 131,
+      "apply": 194,
+      "analyze": 33,
+      "evaluate": 15,
+      "unknown": 0,
+      "certified_total": 375,
+      "certified_at_or_below_apply": 327,
+      "upgrade_candidates": 327,
+      "at_or_below_apply_pct": 87.2,
+      "roi_assessment": "HIGH",
+      "roi_rationale": "CVP, relevant costing, make-or-buy decisions, and transfer pricing are classic Analyze/Evaluate topics. Several Apply items can become multi-step decision scenarios. Pool: 375 items, 327 at/below Apply (87%). Certified pool exposure: 327 items in learner pool at/below Apply."
+    },
+    "E": {
+      "section": "E",
+      "total_items": 415,
+      "remember": 10,
+      "understand": 167,
+      "apply": 72,
+      "analyze": 95,
+      "evaluate": 67,
+      "unknown": 4,
+      "certified_total": 405,
+      "certified_at_or_below_apply": 249,
+      "upgrade_candidates": 249,
+      "at_or_below_apply_pct": 60,
+      "roi_assessment": "MEDIUM",
+      "roi_rationale": "COSO framework application, fraud risk assessment, and control deficiency evaluation are natural Evaluate domains. Many Understand items can become \"assess the control weakness\" scenarios. Pool: 415 items, 249 at/below Apply (60%). Certified pool exposure: 249 items in learner pool at/below Apply."
+    },
+    "F": {
+      "section": "F",
+      "total_items": 375,
+      "remember": 1,
+      "understand": 276,
+      "apply": 49,
+      "analyze": 21,
+      "evaluate": 26,
+      "unknown": 2,
+      "certified_total": 296,
+      "certified_at_or_below_apply": 255,
+      "upgrade_candidates": 326,
+      "at_or_below_apply_pct": 86.9,
+      "roi_assessment": "MEDIUM",
+      "roi_rationale": "Large pool (375 items, 326 at/below Apply) but Technology and Analytics items are harder to upgrade cognitively. Technology topics (ERP modules, data governance definitions, cybersecurity terms) are heavily definitional. Harder to write deep cognitive items without becoming a Part 2-style IT governance question.Certified pool exposure: 255 items in learner pool at/below Apply."
+    }
+  },
+  "roi_ranking": [
+    {
+      "section": "B",
+      "roi": "HIGH",
+      "upgrade_candidates": 480,
+      "certified_at_or_below_apply": 480,
+      "rationale": "Budgeting scenarios with multiple variables, cash collection schedules, and forecast revision decisions naturally support Evaluate-level \"which budget approach should management recommend\" items. Pool: 500 items, 480 at/below Apply (96%). Certified pool exposure: 480 items in learner pool at/below Apply."
+    },
+    {
+      "section": "C",
+      "roi": "HIGH",
+      "upgrade_candidates": 454,
+      "certified_at_or_below_apply": 454,
+      "rationale": "Variance analysis, responsibility accounting, and KPI evaluation are inherently Evaluate domains. Many Apply items can be reframed as \"identify the root cause\" or \"recommend corrective action.\" Pool: 500 items, 454 at/below Apply (91%). Certified pool exposure: 454 items in learner pool at/below Apply."
+    },
+    {
+      "section": "A",
+      "roi": "HIGH",
+      "upgrade_candidates": 346,
+      "certified_at_or_below_apply": 346,
+      "rationale": "Heavy calculations and judgment scenarios (ASC topics, discontinued ops, revenue recognition) — strong candidates for Analyze/Evaluate rewrite. Many Apply items can become \"recommend the treatment\" or \"evaluate the CFO's position\" type questions. Pool: 375 items, 346 at/below Apply (92%). Certified pool exposure: 346 items in learner pool at/below Apply."
+    },
+    {
+      "section": "D",
+      "roi": "HIGH",
+      "upgrade_candidates": 327,
+      "certified_at_or_below_apply": 327,
+      "rationale": "CVP, relevant costing, make-or-buy decisions, and transfer pricing are classic Analyze/Evaluate topics. Several Apply items can become multi-step decision scenarios. Pool: 375 items, 327 at/below Apply (87%). Certified pool exposure: 327 items in learner pool at/below Apply."
+    },
+    {
+      "section": "F",
+      "roi": "MEDIUM",
+      "upgrade_candidates": 326,
+      "certified_at_or_below_apply": 255,
+      "rationale": "Large pool (375 items, 326 at/below Apply) but Technology and Analytics items are harder to upgrade cognitively. Technology topics (ERP modules, data governance definitions, cybersecurity terms) are heavily definitional. Harder to write deep cognitive items without becoming a Part 2-style IT governance question.Certified pool exposure: 255 items in learner pool at/below Apply."
+    },
+    {
+      "section": "E",
+      "roi": "MEDIUM",
+      "upgrade_candidates": 249,
+      "certified_at_or_below_apply": 249,
+      "rationale": "COSO framework application, fraud risk assessment, and control deficiency evaluation are natural Evaluate domains. Many Understand items can become \"assess the control weakness\" scenarios. Pool: 415 items, 249 at/below Apply (60%). Certified pool exposure: 249 items in learner pool at/below Apply."
+    }
+  ],
+  "recommendation": "HIGHEST PRIORITY: Section B (480 candidates, 480 in learner pool); Section C (454 candidates, 454 in learner pool); Section A (346 candidates, 346 in learner pool); Section D (327 candidates, 327 in learner pool). SECONDARY: Section F (326 candidates); Section E (249 candidates). Begin with the section having the most Certified items at/below Apply to maximize learner impact. For each rewrite target, preserve the underlying accounting concept but elevate the question stem from \"calculate/identify\" to \"recommend/evaluate/assess.\" Use business-scenario framing with named companies and stakeholders.",
+  "domain_viability_notes": {
+    "A": "HIGH viability — financial reporting has many judgment scenarios (ASC 205-20, 606, 842, 326). Convert \"calculate depreciation\" to \"evaluate which depreciation method best reflects asset usage.\"",
+    "B": "HIGH viability — budgeting chain (sales → production → materials → cash) supports multi-step Analyze scenarios and \"recommend the budget approach\" Evaluate items.",
+    "C": "MEDIUM-HIGH viability — variance analysis and performance evaluation naturally support Analyze/Evaluate. \"Calculate the variance\" → \"Diagnose the root cause and recommend corrective action.\"",
+    "D": "HIGH viability — CVP, relevant costing, make-or-buy, special orders, and transfer pricing are decision-oriented. Many Apply items are one step away from Analyze.",
+    "E": "MEDIUM viability — COSO framework can support Evaluate (\"assess control deficiency severity\"), but many items are definition-based (5 components, 17 principles).",
+    "F": "LOW viability — Technology terms, data governance definitions, and cybersecurity frameworks are inherently Remember/Understand. Converting to Analyze/Evaluate risks drifting into Part 2 IT governance territory."
+  },
+  "next_steps": "Run section-level deep scan to identify specific QIDs at/below Apply within the highest-ROI section. Cross-reference with MASTER_QUESTION_REGISTRY.md for topic distribution. Produce per-item cognitive upgrade recommendation report."
+}

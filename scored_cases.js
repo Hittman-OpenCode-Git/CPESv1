@@ -636,11 +636,11 @@ const ENHANCED_CASE_BASE = [
                     "Translation loss"
                 ],
                 "RightItems": [
-                    "Eliminate in consolidation",
-                    "Recognize loss when carrying amount exceeds fair value after recoverability failure",
-                    "Report in OCI when applicable",
-                    "Report in OCI as cumulative translation adjustment"
-                ],
+    "Report in OCI when applicable",
+    "Report in OCI as cumulative translation adjustment",
+    "Recognize loss when carrying amount exceeds fair value after recoverability failure",
+    "Eliminate in consolidation"
+],
                 "Correct": {
                     "Intercompany sale": "Eliminate in consolidation",
                     "Asset impairment": "Recognize loss when carrying amount exceeds fair value after recoverability failure",
@@ -1409,11 +1409,11 @@ const ENHANCED_CASE_BASE = [
                     "Regression R-squared"
                 ],
                 "RightItems": [
-                    "Potential demand, subject to cancellation",
-                    "Committed demand not yet shipped",
-                    "Supply-chain constraint signal",
-                    "Model explanatory power"
-                ],
+    "Supply-chain constraint signal",
+    "Model explanatory power",
+    "Potential demand, subject to cancellation",
+    "Committed demand not yet shipped"
+],
                 "Correct": {
                     "Bookings": "Potential demand, subject to cancellation",
                     "Firm backlog": "Committed demand not yet shipped",
@@ -1763,11 +1763,11 @@ const ENHANCED_CASE_BASE = [
                     "Labor efficiency"
                 ],
                 "RightItems": [
-                    "Purchasing",
-                    "Production",
-                    "HR or staffing",
-                    "Production supervision"
-                ],
+    "Production supervision",
+    "Purchasing",
+    "Production",
+    "HR or staffing"
+],
                 "Correct": {
                     "Material price": "Purchasing",
                     "Material quantity": "Production",
@@ -2093,11 +2093,11 @@ const ENHANCED_CASE_BASE = [
                     "Market price"
                 ],
                 "RightItems": [
-                    "Operating income divided by assets",
-                    "Income after required asset charge",
-                    "Variable cost plus opportunity cost",
-                    "External benchmark when available"
-                ],
+    "External benchmark when available",
+    "Variable cost plus opportunity cost",
+    "Operating income divided by assets",
+    "Income after required asset charge"
+],
                 "Correct": {
                     "ROI": "Operating income divided by assets",
                     "Residual income": "Income after required asset charge",
@@ -2506,11 +2506,11 @@ const ENHANCED_CASE_BASE = [
                     "Warranty repairs"
                 ],
                 "RightItems": [
-                    "Prevention",
-                    "Appraisal",
-                    "Internal failure",
-                    "External failure"
-                ],
+    "Appraisal",
+    "Internal failure",
+    "External failure",
+    "Prevention"
+],
                 "Correct": {
                     "Supplier certification": "Prevention",
                     "Final inspection": "Appraisal",
@@ -2870,11 +2870,11 @@ const ENHANCED_CASE_BASE = [
                     "Continuous homogeneous output"
                 ],
                 "RightItems": [
-                    "Equivalent units",
-                    "Bottleneck analysis",
-                    "Lean waste review",
-                    "Process costing"
-                ],
+    "Bottleneck analysis",
+    "Process costing",
+    "Equivalent units",
+    "Lean waste review"
+],
                 "Correct": {
                     "Partially complete WIP": "Equivalent units",
                     "Lowest capacity resource": "Bottleneck analysis",
@@ -3544,11 +3544,11 @@ const ENHANCED_CASE_BASE = [
                     "Failed interface reconciliation"
                 ],
                 "RightItems": [
-                    "Lack of accountability",
-                    "Unauthorized access",
-                    "Unauthorized or erroneous report logic",
-                    "Incomplete or inaccurate data transfer"
-                ],
+    "Unauthorized access",
+    "Incomplete or inaccurate data transfer",
+    "Lack of accountability",
+    "Unauthorized or erroneous report logic"
+],
                 "Correct": {
                     "Shared administrator IDs": "Lack of accountability",
                     "Terminated users active": "Unauthorized access",
@@ -3890,11 +3890,11 @@ const ENHANCED_CASE_BASE = [
                     "Recommend inspection threshold"
                 ],
                 "RightItems": [
-                    "Descriptive",
-                    "Diagnostic",
-                    "Predictive",
-                    "Prescriptive"
-                ],
+    "Predictive",
+    "Prescriptive",
+    "Descriptive",
+    "Diagnostic"
+],
                 "Correct": {
                     "Summarize failure rate": "Descriptive",
                     "Investigate supplier batch relationship": "Diagnostic",
@@ -4315,11 +4315,11 @@ const ENHANCED_CASE_BASE = [
                     "Equipment purchase"
                 ],
                 "RightItems": [
-                    "Write down inventory",
-                    "Record liability and add to asset cost",
-                    "Classify as cash equivalent",
-                    "Classify as investing cash outflow"
-                ],
+    "Classify as cash equivalent",
+    "Classify as investing cash outflow",
+    "Record liability and add to asset cost",
+    "Write down inventory"
+],
                 "Correct": {
                     "FIFO inventory below NRV": "Write down inventory",
                     "ARO present value": "Record liability and add to asset cost",
@@ -4964,11 +4964,11 @@ const ENHANCED_CASE_BASE = [
                     "Learning and growth"
                 ],
                 "RightItems": [
-                    "Operating income",
-                    "On-time delivery",
-                    "Defect rate",
-                    "Training hours per employee"
-                ],
+    "On-time delivery",
+    "Operating income",
+    "Training hours per employee",
+    "Defect rate"
+],
                 "Correct": {
                     "Financial": "Operating income",
                     "Customer": "On-time delivery",
@@ -5411,11 +5411,11 @@ const ENHANCED_CASE_BASE = [
                     "No false-positive review"
                 ],
                 "RightItems": [
-                    "Unique credentials and access logging",
-                    "Change management",
-                    "Master-data governance",
-                    "Model monitoring"
-                ],
+    "Model monitoring",
+    "Master-data governance",
+    "Change management",
+    "Unique credentials and access logging"
+],
                 "Correct": {
                     "Shared bot account": "Unique credentials and access logging",
                     "Unapproved rule changes": "Change management",

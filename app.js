@@ -1617,7 +1617,7 @@ const ExamSessionManager = {
             let s = state.session;
             if (s) { s.mcqs = s.mcqs || []; s.cases = s.cases || []; }
             if (!s) {
-                $('sessionView').innerHTML = '<div class="empty-state"><div><h2>Ready for 2026-aligned original CMA Part 1 practice</h2><p>Select content to calculate the timer, then start a session. Review missed and marked questions after submission with targeted study links.</p></div></div>';
+                $('sessionView').innerHTML = `<div class="empty-state-visual"><div><h2>Ready for 2026-aligned original CMA Part 1 practice</h2><p>Select content to configure your timer, then start a session. Review missed and marked questions after submission with targeted study links.</p></div><div class="empty-state-cards"><div class="empty-state-card" onclick="quickStart('mcq');updateTimeEstimate();document.getElementById('sessionForm').requestSubmit()"><div class="empty-state-card-icon">&#128218;</div><h3>MCQ Practice</h3><p>500-item question bank per pack</p></div><div class="empty-state-card" onclick="quickStart('case');updateTimeEstimate();document.getElementById('sessionForm').requestSubmit()"><div class="empty-state-card-icon">&#128203;</div><h3>Case Studies</h3><p>Real exam-style scenarios</p></div><div class="empty-state-card" onclick="quickStart('full');updateTimeEstimate();document.getElementById('sessionForm').requestSubmit()"><div class="empty-state-card-icon">&#127891;</div><h3>Full Exam</h3><p>100 MCQs + 2 cases, 4 hours</p></div></div></div>`;
                 // Re-inject May companion card on landing page
                 if (typeof May !== 'undefined') {
                     sessionStorage.removeItem('mayCompanionDismissed');
@@ -3919,6 +3919,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         ExamSessionManager.start(e);
     };
+    // S107: Wrap Start Session button in sticky container for always-visible CTA
+    (function() {
+        let submitBtn = document.querySelector('#sessionForm button[type="submit"]');
+        if (submitBtn && !submitBtn.parentElement.classList.contains('setup-submit-sticky')) {
+            let wrapper = document.createElement('div');
+            wrapper.className = 'setup-submit-sticky';
+            submitBtn.parentElement.insertBefore(wrapper, submitBtn);
+            wrapper.appendChild(submitBtn);
+        }
+    })();
     document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
         showView(t.dataset.view);
         if (t.dataset.view === 'dashboardView') PerformanceDashboard.render();
@@ -3993,6 +4003,24 @@ function updateTimeEstimate() {
     // Show blueprint select only for blueprint mode
     let bpField = $('blueprintField');
     if (bpField) bpField.style.display = mode === 'blueprint' ? 'grid' : 'none';
+    syncContentCards();
+}
+
+function syncContentCards() {
+    let mode = $('mode').value;
+    document.querySelectorAll('.content-card').forEach(card => {
+        let radio = card.querySelector('input[type="radio"]');
+        if (radio && radio.value === mode) card.classList.add('selected');
+        else card.classList.remove('selected');
+    });
+}
+
+function quickStart(mode) {
+    $('mode').value = mode;
+    let radio = document.querySelector('input[name="contentType"][value="' + mode + '"]');
+    if (radio) radio.checked = true;
+    syncContentCards();
+    updateTimeEstimate();
 }
 
 function updateSliderNote() {
@@ -4047,16 +4075,17 @@ function renderValidation() {
         'D': typeof MCQ_BANK_D !== 'undefined' ? MCQ_BANK_D : [],
         'E': typeof MCQ_BANK_E !== 'undefined' ? MCQ_BANK_E : []
     };
-    let html = '<b>Catalog status</b><br>';
+    let totalMCQs = Object.values(banks).reduce((s, b) => s + b.length, 0);
     let allOk = true;
+    let detailHtml = '';
     for (let [label, bank] of Object.entries(banks)) {
         let ok = bank.length === 0 || (bank.length >= 75 && new Set(bank.map(q => q.Stem)).size === bank.length);
         if (bank.length > 0 && !ok) allOk = false;
         let counts = {};
         bank.forEach(q => counts[q.Section] = (counts[q.Section] || 0) + 1);
-        html += `Pack ${label}: ${bank.length} MCQs ${ok ? '\u2713' : '\u2717'}`;
-        if (bank.length) html += ` | ${Object.entries(counts).map(([s, c]) => s + ': ' + c).join(' | ')}`;
-        html += '<br>';
+        detailHtml += `Pack ${label}: ${bank.length} MCQs ${ok ? '\u2713' : '\u2717'}`;
+        if (bank.length) detailHtml += ` | ${Object.entries(counts).map(([s, c]) => s + ': ' + c).join(' | ')}`;
+        detailHtml += '<br>';
     }
     let caseBanks = {
         'A': (typeof CASE_BANK_A !== 'undefined' ? CASE_BANK_A : (typeof MIGRATED_CASE_BASE_A !== 'undefined' ? MIGRATED_CASE_BASE_A : [])),
@@ -4066,8 +4095,11 @@ function renderValidation() {
         'E': (typeof CASE_BANK_E !== 'undefined' ? CASE_BANK_E : (typeof MIGRATED_CASE_BASE_E !== 'undefined' ? MIGRATED_CASE_BASE_E : []))
     };
     let seenPacks = {}; for (let [label, cb] of Object.entries(caseBanks)) { if (cb && cb.length) { let key = cb.length + '|' + (cb[0].CaseID || ''); if (!seenPacks[key]) { seenPacks[key] = { labels: [label], count: cb.length, sections: cb.reduce((acc, c) => { c.SectionTags.forEach(s => acc[s] = (acc[s] || 0) + 1); return acc; }, {}) }; } else { seenPacks[key].labels.push(label); } } }
-    for (let k of Object.keys(seenPacks)) { let p = seenPacks[k]; html += `Case Pack ${p.labels.join('/')}: ${p.count} cases | ${Object.entries(p.sections).map(([s, n]) => s + ': ' + n).join(', ')}<br>`; }
-    html += `<b>${allOk ? 'All packs validated' : 'Some packs have issues'}</b>`;
+    let totalCases = Object.values(seenPacks).reduce((s, p) => s + p.count, 0);
+    for (let k of Object.keys(seenPacks)) { let p = seenPacks[k]; detailHtml += `Case Pack ${p.labels.join('/')}: ${p.count} cases | ${Object.entries(p.sections).map(([s, n]) => s + ': ' + n).join(', ')}<br>`; }
+    detailHtml += `<b>${allOk ? 'All packs validated' : 'Some packs have issues'}</b>`;
+    let summaryHtml = `<b>${totalMCQs.toLocaleString()} MCQs across 5 packs + ${totalCases} case sets</b> &mdash; ${allOk ? 'All validated' : 'Issues detected'}`;
+    let html = `${summaryHtml} <span class="catalog-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'\u25B2 Collapse':'\u25BC Details'">\u25BC Details</span><div class="catalog-detail">${detailHtml}</div>`;
     $('validationStatus').innerHTML = html;
 }
 

@@ -1,0 +1,41 @@
+{
+  "session": "SESSION072",
+  "board": "candidate-selector",
+  "timestamp": "2026-07-29T21:10:00.000Z",
+  "read_only": true,
+  "purpose": "Select 15 Pack D Section B rewrite candidates for full-wave cognitive upgrade",
+  "pack": "pack_d_corrected.js",
+  "section": "B",
+  "total_section_items": 100,
+  "already_rewritten_s70": ["P1-BD-095","P1-BD-089","P1-BD-083","P1-BD-082","P1-BD-080","P1-BD-079","P1-BD-078","P1-BD-077","P1-BD-071","P1-BD-064","P1-BD-050","P1-BD-043","P1-BD-035","P1-BD-015","P1-BD-007"],
+  "already_rewritten_s71": ["P1-BD-001","P1-BD-014","P1-BD-039","P1-BD-057","P1-BD-084"],
+  "already_rewritten_total": 20,
+  "remaining_pool": 80,
+  "selection_methodology": "Filtered remaining 80 items for Apply/Understand level. Excluded items already at Analyze/Evaluate (BD-022, BD-034, BD-038, BD-042, BD-049, BD-063, BD-070, BD-076, BD-081, BD-088, BD-090, BD-094). Selected highest-ROI candidates from distinct topic clusters with good rewrite potential. Replaced BD-022 (already Evaluate) and BD-100 (another strategic planning clone) with BD-029 and BD-073.",
+  "target_distribution": { "evaluate": 8, "analyze": 7 },
+  "queue": [
+    {"qid":"P1-BD-006","from":"Apply","to":"Evaluate","topic":"flexible budget variance analysis","current_diff":"Easy","target_diff":"Difficult","original_issues":"DL-013 boilerplate in EW-D","certified":true},
+    {"qid":"P1-BD-021","from":"Apply","to":"Evaluate","topic":"capital expenditure budget planning","current_diff":"Moderate","target_diff":"Very Difficult","original_issues":"DL-013 boilerplate in EW-C/D","certified":true},
+    {"qid":"P1-BD-023","from":"Apply","to":"Evaluate","topic":"direct labor budget calculation","current_diff":"Moderate","target_diff":"Very Difficult","original_issues":"DL-026 (EW_C empty) + DL-010 (EW_D wrong topic)","certified":true},
+    {"qid":"P1-BD-028","from":"Apply","to":"Analyze","topic":"direct labor budget calculation","current_diff":"Moderate-Easy","target_diff":"Difficult","original_issues":"Simple calculation, needs context","certified":true},
+    {"qid":"P1-BD-029","from":"Understand","to":"Evaluate","topic":"standard cost setting basis","current_diff":"Easy","target_diff":"Very Difficult","original_issues":"DL-013 boilerplate in EW-C/D","certified":true},
+    {"qid":"P1-BD-036","from":"Apply","to":"Analyze","topic":"operating budget vs financial budget","current_diff":"Moderate","target_diff":"Difficult","original_issues":"Basic definition, 1-sentence EC","certified":true},
+    {"qid":"P1-BD-037","from":"Apply","to":"Analyze","topic":"operating budget vs financial budget","current_diff":"Moderate","target_diff":"Difficult","original_issues":"Basic definition","certified":true},
+    {"qid":"P1-BD-044","from":"Understand","to":"Evaluate","topic":"time series forecasting components","current_diff":"Easy","target_diff":"Difficult","original_issues":"Definition-match","certified":true},
+    {"qid":"P1-BD-058","from":"Apply","to":"Evaluate","topic":"budget committee role","current_diff":"Moderate","target_diff":"Difficult","original_issues":"Basic definition","certified":true},
+    {"qid":"P1-BD-065","from":"Apply","to":"Analyze","topic":"selling and administrative expense budget","current_diff":"Moderate","target_diff":"Difficult","original_issues":"Basic definition","certified":true},
+    {"qid":"P1-BD-072","from":"Understand","to":"Evaluate","topic":"forecast accuracy measurement","current_diff":"Moderate-Easy","target_diff":"Difficult","original_issues":"Definition-match","certified":true},
+    {"qid":"P1-BD-073","from":"Understand","to":"Analyze","topic":"forecast accuracy measurement","current_diff":"Moderate","target_diff":"Difficult","original_issues":"DL-010 (EW_C describes residual income, not cost variance)","certified":true},
+    {"qid":"P1-BD-085","from":"Apply","to":"Evaluate","topic":"budget revision mid year","current_diff":"Moderate","target_diff":"Difficult","original_issues":"Basic definition","certified":true},
+    {"qid":"P1-BD-091","from":"Apply","to":"Evaluate","topic":"cash collection pattern budgeting","current_diff":"Moderate","target_diff":"Difficult","original_issues":"DL-013 boilerplate + DL-010","certified":true},
+    {"qid":"P1-BD-096","from":"Apply","to":"Analyze","topic":"strategic vs operational planning","current_diff":"Moderate","target_diff":"Difficult","original_issues":"DL-010 risk in EW_B","certified":true}
+  ],
+  "baseline_cognitive": {
+    "pack_d_section_b_remember": 0,
+    "pack_d_section_b_understand": 16,
+    "pack_d_section_b_apply": 65,
+    "pack_d_section_b_analyze": 9,
+    "pack_d_section_b_evaluate": 10,
+    "higher_order_pct": "19.0%"
+  }
+}

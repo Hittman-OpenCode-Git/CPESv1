@@ -1,0 +1,190 @@
+{
+  "batchId": "B3",
+  "classifications": [
+    {
+      "qid": "P1-BD-066",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Apply",
+      "confidence": "HIGH",
+      "rationale": "Classifying costs as fixed vs. variable is a direct application of cost behavior concepts. The candidate identifies which listed cost varies with sales volume — a one-step classification using a known framework, not a judgment among competing alternatives."
+    },
+    {
+      "qid": "P1-BD-014",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Evaluate",
+      "confidence": "HIGH",
+      "rationale": "CFO David Okonkwo must recommend a budget methodology, weighing four defensible alternatives with explicit trade-offs: cost ($185K) and disruption (8 weeks) of ZBB vs. better cost-driver linkage of ABB vs. sticking with familiar incremental budgeting vs. a phased transition. No single formula produces the answer; genuine professional judgment is required under uncertainty about which approach best serves Northfell's needs."
+    },
+    {
+      "qid": "P1-BD-097",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Evaluate",
+      "confidence": "HIGH",
+      "rationale": "The Board/CEO must evaluate competing arguments about strategic plan sequencing involving cash flow analysis, supplier interdependency (ISO 14001 required by distributor), governance authority, and e-commerce timeline feasibility. Multiple defensible positions exist with genuine trade-offs across financial, operational, and governance dimensions requiring professional judgment under uncertainty."
+    },
+    {
+      "qid": "P1-BD-023",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Evaluate",
+      "confidence": "MEDIUM",
+      "rationale": "Production Director James Okonkwo faces four defensible labor staffing alternatives, each trading off cost ($18.00 vs. $22.50 vs. $27.00 overtime), quality (permanent vs. temporary vs. subcontract), flexibility, and contractual overtime caps. While numerical inputs exist, the optimal choice requires weighing qualitative trade-offs (severance costs, rehiring risk, quality variability, subcontractor reliability) beyond pure arithmetic."
+    },
+    {
+      "qid": "P1-BD-015",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Evaluate",
+      "confidence": "HIGH",
+      "rationale": "The capital expenditure committee must allocate limited funds between two projects with trade-offs: current revenue protection (78% of revenue, shorter payback) vs. higher-margin growth (22% defense margins, 57% improvement). Choice D's phased approach reflects genuine resource allocation judgment requiring weighing strategic continuity, margin improvement, budget constraints, and milestone-based risk management."
+    },
+    {
+      "qid": "P1-BD-022",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Evaluate",
+      "confidence": "HIGH",
+      "rationale": "Operations Director Marcus Delgado must select a seasonal staffing strategy from four alternatives with trade-offs among cost ($32 vs $38/hr), idle-time expense, regulatory overtime caps, workforce flexibility, and knowledge retention. The optimal solution balances permanent labor's lower cost against temporary labor's flexibility — genuine multi-criteria judgment, not a single deterministic calculation."
+    },
+    {
+      "qid": "P1-BD-006",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Evaluate",
+      "confidence": "HIGH",
+      "rationale": "Controller Rebecca Walsh must evaluate four competing responses to a pattern of favorable variances, each with different implications: recognize the VP (accept the efficiency claim), defer pending re-benchmarking (professional skepticism), split recognition (compromise), or tighten benchmarks (challenge). Requires weighing evidence of genuine efficiency against the risk of rewarding outdated cost assumptions — a classic professional judgment scenario."
+    },
+    {
+      "qid": "P1-BD-041",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Apply",
+      "confidence": "MEDIUM",
+      "rationale": "Although framed as a board-level budget prioritization decision, the correct answer (C) is the textbook response: operating and financial budgets serve different purposes and should be presented together. This tests knowledge of budget types and their distinct roles rather than genuine evaluation. The two competing board positions are straw arguments resolved by recalling the defined purposes of each budget category."
+    },
+    {
+      "qid": "P1-DD-069",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Analyze",
+      "confidence": "MEDIUM",
+      "rationale": "Requires interpreting variance data (rate vs. efficiency), analyzing the learning curve explanation's plausibility, and determining investigation thresholds — cause-effect analysis of differing variance sources. While a recommendation is involved, the core cognitive skill is decomposing variance components and analyzing their relationships rather than weighing multiple equally defensible alternatives."
+    },
+    {
+      "qid": "P1-DD-061",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Remember",
+      "confidence": "HIGH",
+      "rationale": "Asks for a single required assumption of multi-product CVP analysis. The answer (constant sales mix) is a textbook fact retrieved from memory — no analysis, calculation, or judgment required. The stem defines the scenario and asks 'what must be assumed,' making this pure definitional recall."
+    },
+    {
+      "qid": "P1-ED-019",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Analyze",
+      "confidence": "HIGH",
+      "rationale": "Requires evaluating whether a specific acquisition decision aligns with a stated risk appetite by decomposing the governance document's criteria (technical expertise, operational capacity) and analyzing whether the facts satisfy each precondition. This is interpretive analysis of a governance framework against a specific transaction, not weighing genuinely defensible alternatives under uncertainty — the risk appetite statement provides deterministic criteria."
+    },
+    {
+      "qid": "P1-ED-030",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Analyze",
+      "confidence": "HIGH",
+      "rationale": "Analyzes whether a board's approval of a CEO-related-party transaction satisfies COSO Principle 2 independence requirements. Requires interpreting COSO's substantive independence standard (objective judgment, independent verification) beyond formal director classification and applying it to specific facts — analytical application of a governance framework, not a choice among equally defensible alternatives."
+    },
+    {
+      "qid": "P1-ED-044",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Evaluate",
+      "confidence": "HIGH",
+      "rationale": "The ERM team must select a risk response portfolio from four competing alternatives, each trading off mitigation cost vs. risk reduction coverage, insurance premiums vs. self-retention, and budget allocation across multiple risks. No single formula determines the optimal portfolio — genuine weighing of cost, likelihood, coverage, and risk appetite trade-offs under uncertainty."
+    },
+    {
+      "qid": "P1-ED-071",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Apply",
+      "confidence": "HIGH",
+      "rationale": "Given a scenario describing an unauthorized production change with no request, testing, or review, the candidate identifies the missing IT general control. This is direct application of IT control framework knowledge (change management) to a described failure — pattern recognition in a single-step classification, not analysis or evaluation of competing alternatives."
+    },
+    {
+      "qid": "P1-ED-069",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Analyze",
+      "confidence": "HIGH",
+      "rationale": "Requires analyzing three audit committee members' independence status under SEC Rule 10A-3 (cooling-off periods, material business relationships) and COSO Principle 2, then evaluating the governance implications of non-independence. Multiple data points to interpret (former CFO timeline, supplier relationship, financial expert qualification) — analytical application of regulatory standards to a multi-fact scenario."
+    },
+    {
+      "qid": "P1-ED-038",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Analyze",
+      "confidence": "HIGH",
+      "rationale": "Analyzes why MFA never got implemented in an agile environment by evaluating competing explanations (Scrum Master failure vs. security team failure vs. structural diffusion of accountability). Requires decomposing accountability across multiple roles and identifying the root cause — a COSO Principle 5 analysis of organizational structure and responsibility assignment, not a choice among equally defensible alternatives."
+    },
+    {
+      "qid": "P1-ED-045",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Analyze",
+      "confidence": "HIGH",
+      "rationale": "Requires classifying a control deficiency as material weakness or significant deficiency by analyzing multiple factors (materiality, compensating controls, duration, prior identification, foreseeable stress conditions). The core skill is applying auditing standards' classification framework to a complex fact pattern — analytical decomposition, not evaluation among equally viable options."
+    },
+    {
+      "qid": "P1-ED-003",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Analyze",
+      "confidence": "HIGH",
+      "rationale": "Analyzes structural gaps in a bank's assurance model by applying the Three Lines of Defense framework. Requires identifying which line(s) failed and evaluating whether an external auditor can substitute for missing internal lines. Analytical application of the governance framework to diagnose structural deficiencies — the correct answer follows from understanding the model's design, not weighing defensible alternatives."
+    },
+    {
+      "qid": "P1-ED-023",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Analyze",
+      "confidence": "HIGH",
+      "rationale": "Analyzes which control failed in a purchase order fraud scenario where transactions were structured just below the approval threshold. Requires decomposing preventive vs. detective controls and evaluating whether the authorization threshold design or the monitoring/aggregation mechanism was the root failure. Cause-effect analysis of a control breakdown, not selection among equally defensible alternatives."
+    },
+    {
+      "qid": "P1-FD-015",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Apply",
+      "confidence": "MEDIUM",
+      "rationale": "Applies encryption and key management principles to determine who can access unencrypted data in a cloud scenario. The central question — whether the cloud provider can access documents when the customer holds decryption keys — is answered by applying a known technical rule (key holder controls access). Some interpretation of the HSM/key management architecture is required but the principle is deterministic."
+    },
+    {
+      "qid": "P1-FD-046",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "UNCLASSIFIABLE",
+      "confidence": "LOW",
+      "rationale": "Structural defect: stem, choices, correctChoice, topic, and difficulty fields are all empty/null. No content exists to classify. This item requires data repair before cognitive level can be assessed."
+    },
+    {
+      "qid": "P1-FD-010",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Remember",
+      "confidence": "HIGH",
+      "rationale": "The stem defines self-service business intelligence ('business users build their own reports from a governed data source without relying solely on IT') and asks for the term. Pure definition-to-term matching — single-step retrieval from memory with no analysis, application, or judgment required."
+    },
+    {
+      "qid": "P1E-A-010",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Remember",
+      "confidence": "HIGH",
+      "rationale": "Asks 'Prepaid insurance is classified as:' with four balance sheet classification options. This is basic recall of a fundamental accounting classification — prepaid insurance is a current asset. No scenario, calculation, or interpretation; pure fact retrieval."
+    },
+    {
+      "qid": "P1E-B-063",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Remember",
+      "confidence": "HIGH",
+      "rationale": "Asks 'Incremental budgeting bases the budget on:' with four choices representing different budgeting methodologies. The stem is essentially a definition lookup — identifying which description matches the named concept. Single-step retrieval of a defined budgeting characteristic."
+    },
+    {
+      "qid": "P1E-D-030",
+      "labeledCognitiveLevel": "Evaluate",
+      "trueCognitiveLevel": "Apply",
+      "confidence": "HIGH",
+      "rationale": "A special order decision requiring application of the relevant costing rule: accept if incremental revenue exceeds incremental cost. The candidate must identify relevant costs (direct materials, direct labor, variable overhead) vs. irrelevant costs (fixed overhead, regular selling price) and perform the calculation ($68 price vs. $54 incremental cost = $14 contribution per unit). Known procedure applied with number substitution — no judgment among competing strategies."
+    }
+  ],
+  "summary": {
+    "totalItems": 25,
+    "trueEvaluate": 7,
+    "trueAnalyze": 8,
+    "trueApply": 5,
+    "trueUnderstand": 0,
+    "trueRemember": 4,
+    "unclassifiable": 1,
+    "misclassifiedCount": 18
+  }
+}

@@ -1,0 +1,4249 @@
+{
+  "title": "Session 80P — Matching Item Remediation Queue",
+  "generated": "2026-07-30T15:29:14.530Z",
+  "totalItems": 83,
+  "queue": [
+    {
+      "itemId": "CBQ-E1-Q5",
+      "caseId": "CBQ-E1",
+      "caseTitle": "Accounts Payable Controls and SOX Evaluation",
+      "section": "E",
+      "pack": 1,
+      "prompt": "Match each control to preventive or detective.",
+      "priorityScore": 41,
+      "findings": [
+        {
+          "category": "SAME_ANSWER_REUSE",
+          "severity": "HIGH",
+          "detail": "\"Preventive\" is the correct mapping for 2 different LeftItems: [\"Independent vendor approval\", \"Three-way match before payment\"]",
+          "affectedPrompts": [
+            "Independent vendor approval",
+            "Three-way match before payment"
+          ]
+        },
+        {
+          "category": "SAME_ANSWER_REUSE",
+          "severity": "HIGH",
+          "detail": "\"Detective\" is the correct mapping for 2 different LeftItems: [\"Duplicate-payment report review\", \"Bank reconciliation\"]",
+          "affectedPrompts": [
+            "Duplicate-payment report review",
+            "Bank reconciliation"
+          ]
+        },
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Independent vendor approval",
+              "right": "Preventive"
+            },
+            {
+              "index": 1,
+              "left": "Three-way match before payment",
+              "right": "Preventive"
+            },
+            {
+              "index": 2,
+              "left": "Duplicate-payment report review",
+              "right": "Detective"
+            },
+            {
+              "index": 3,
+              "left": "Bank reconciliation",
+              "right": "Detective"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "DUPLICATE_DISTRACTOR",
+          "severity": "HIGH",
+          "detail": "2 RightItems appear multiple times in the choices list: \"Preventive\" (2x), \"Detective\" (2x)",
+          "duplicateRightItems": [
+            {
+              "text": "Preventive",
+              "count": 2
+            },
+            {
+              "text": "Detective",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Author distinct RightItems for each LeftItem so no two prompts share the same answer text.",
+        "Author distinct RightItems for each LeftItem so no two prompts share the same answer text.",
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Remove duplicate RightItems; ensure all choices are unique.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ3-D1-Q6",
+      "caseId": "CBQ3-D1",
+      "caseTitle": "Absorption vs Variable Costing Income Reconciliation",
+      "section": "D",
+      "pack": 3,
+      "prompt": "Match each cost item to its classification under variable costing.",
+      "priorityScore": 31,
+      "findings": [
+        {
+          "category": "SAME_ANSWER_REUSE",
+          "severity": "HIGH",
+          "detail": "\"Product cost\" is the correct mapping for 3 different LeftItems: [\"Direct materials\", \"Direct labor\", \"Variable manufacturing overhead\"]",
+          "affectedPrompts": [
+            "Direct materials",
+            "Direct labor",
+            "Variable manufacturing overhead"
+          ]
+        },
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Direct materials",
+              "right": "Product cost"
+            },
+            {
+              "index": 1,
+              "left": "Direct labor",
+              "right": "Product cost"
+            },
+            {
+              "index": 2,
+              "left": "Variable manufacturing overhead",
+              "right": "Product cost"
+            },
+            {
+              "index": 3,
+              "left": "Fixed manufacturing overhead",
+              "right": "Period cost"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "DUPLICATE_DISTRACTOR",
+          "severity": "HIGH",
+          "detail": "1 RightItems appear multiple times in the choices list: \"Product cost\" (3x)",
+          "duplicateRightItems": [
+            {
+              "text": "Product cost",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Author distinct RightItems for each LeftItem so no two prompts share the same answer text.",
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Remove duplicate RightItems; ensure all choices are unique.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ2-C1-Q1",
+      "caseId": "CBQ2-C1",
+      "caseTitle": "Flexible Budget and Sales Variance Analysis",
+      "section": "C",
+      "pack": 2,
+      "prompt": "Match each variance category to the correct variance amount shown in Exhibit 1.",
+      "priorityScore": 30,
+      "findings": [
+        {
+          "category": "SAME_ANSWER_REUSE",
+          "severity": "HIGH",
+          "detail": "\"Requires separate price and quantity data beyond the summary\" is the correct mapping for 3 different LeftItems: [\"Direct materials efficiency variance\", \"Direct materials price variance\", \"Labor rate variance\"]",
+          "affectedPrompts": [
+            "Direct materials efficiency variance",
+            "Direct materials price variance",
+            "Labor rate variance"
+          ]
+        },
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Sales price variance",
+              "right": "Cannot be determined from a flexible budget report alone"
+            },
+            {
+              "index": 1,
+              "left": "Direct materials efficiency variance",
+              "right": "Requires separate price and quantity data beyond the summary"
+            },
+            {
+              "index": 2,
+              "left": "Direct materials price variance",
+              "right": "Requires separate price and quantity data beyond the summary"
+            },
+            {
+              "index": 3,
+              "left": "Labor rate variance",
+              "right": "Requires separate price and quantity data beyond the summary"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Is exactly equal to the total static budget variance\"]",
+          "unusedRightItems": [
+            "Is exactly equal to the total static budget variance"
+          ]
+        },
+        {
+          "category": "DUPLICATE_DISTRACTOR",
+          "severity": "HIGH",
+          "detail": "1 RightItems appear multiple times in the choices list: \"Requires separate price and quantity data beyond the summary\" (3x)",
+          "duplicateRightItems": [
+            {
+              "text": "Requires separate price and quantity data beyond the summary",
+              "count": 3
+            }
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Author distinct RightItems for each LeftItem so no two prompts share the same answer text.",
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set.",
+        "Remove duplicate RightItems; ensure all choices are unique."
+      ]
+    },
+    {
+      "itemId": "CBQ4-F2-Q2",
+      "caseId": "CBQ4-F2",
+      "caseTitle": "Artificial Intelligence & ML",
+      "section": "F",
+      "pack": 4,
+      "prompt": "For each machine learning application at OmniRetail, select whether it uses supervised or unsupervised learning.",
+      "priorityScore": 21,
+      "findings": [
+        {
+          "category": "SAME_ANSWER_REUSE",
+          "severity": "HIGH",
+          "detail": "\"Supervised learning\" is the correct mapping for 2 different LeftItems: [\"Demand forecasting\", \"Fraud detection\"]",
+          "affectedPrompts": [
+            "Demand forecasting",
+            "Fraud detection"
+          ]
+        },
+        {
+          "category": "SAME_ANSWER_REUSE",
+          "severity": "HIGH",
+          "detail": "\"Unsupervised learning\" is the correct mapping for 2 different LeftItems: [\"Customer segmentation\", \"Anomaly detection\"]",
+          "affectedPrompts": [
+            "Customer segmentation",
+            "Anomaly detection"
+          ]
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "2 RightItems are never used as a correct answer: [\"Reinforcement learning\", \"Semi-supervised learning\"]",
+          "unusedRightItems": [
+            "Reinforcement learning",
+            "Semi-supervised learning"
+          ]
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Author distinct RightItems for each LeftItem so no two prompts share the same answer text.",
+        "Author distinct RightItems for each LeftItem so no two prompts share the same answer text.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ3-A2-Q5",
+      "caseId": "CBQ3-A2",
+      "caseTitle": "Cash Flow - Indirect Method",
+      "section": "A",
+      "pack": 3,
+      "prompt": "Match the cash flow activity to its classification.",
+      "priorityScore": 12,
+      "findings": [
+        {
+          "category": "SAME_ANSWER_REUSE",
+          "severity": "HIGH",
+          "detail": "\"Deduct from Net Income (Operating)\" is the correct mapping for 2 different LeftItems: [\"Gain on sale of asset\", \"Decrease in accounts payable\"]",
+          "affectedPrompts": [
+            "Gain on sale of asset",
+            "Decrease in accounts payable"
+          ]
+        },
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "MEDIUM",
+          "detail": "3/4 LeftItems map sequentially to RightItems (75%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Depreciation expense",
+              "right": "Add back to Net Income (Operating)"
+            },
+            {
+              "index": 1,
+              "left": "Gain on sale of asset",
+              "right": "Deduct from Net Income (Operating)"
+            },
+            {
+              "index": 2,
+              "left": "Decrease in inventory",
+              "right": "Add to Net Income (Operating)"
+            }
+          ],
+          "sequentialRatio": 0.75
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Report in Investing Activities\"]",
+          "unusedRightItems": [
+            "Report in Investing Activities"
+          ]
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Author distinct RightItems for each LeftItem so no two prompts share the same answer text.",
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ-A2-Q6",
+      "caseId": "CBQ-A2",
+      "caseTitle": "Consolidation, Impairment, OCI, and Disclosure Package",
+      "section": "A",
+      "pack": 1,
+      "prompt": "Match each issue to the correct reporting treatment.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Intercompany sale",
+              "right": "Eliminate in consolidation"
+            },
+            {
+              "index": 1,
+              "left": "Asset impairment",
+              "right": "Recognize loss when carrying amount exceeds fair value after recoverability failure"
+            },
+            {
+              "index": 2,
+              "left": "Debt security unrealized gain",
+              "right": "Report in OCI when applicable"
+            },
+            {
+              "index": 3,
+              "left": "Translation loss",
+              "right": "Report in OCI as cumulative translation adjustment"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ-A3-Q6",
+      "caseId": "CBQ-A3",
+      "caseTitle": "Inventory, ARO, Subsequent Events, and Cash Classification",
+      "section": "A",
+      "pack": 1,
+      "prompt": "Match each item to its reporting treatment.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "FIFO inventory below NRV",
+              "right": "Write down inventory"
+            },
+            {
+              "index": 1,
+              "left": "ARO present value",
+              "right": "Record liability and add to asset cost"
+            },
+            {
+              "index": 2,
+              "left": "88-day Treasury bill",
+              "right": "Classify as cash equivalent"
+            },
+            {
+              "index": 3,
+              "left": "Equipment purchase",
+              "right": "Classify as investing cash outflow"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ-B2-Q6",
+      "caseId": "CBQ-B2",
+      "caseTitle": "Rolling Forecast and Regression Update",
+      "section": "B",
+      "pack": 1,
+      "prompt": "Match each metric to the best interpretation.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Bookings",
+              "right": "Potential demand, subject to cancellation"
+            },
+            {
+              "index": 1,
+              "left": "Firm backlog",
+              "right": "Committed demand not yet shipped"
+            },
+            {
+              "index": 2,
+              "left": "Supplier lead time",
+              "right": "Supply-chain constraint signal"
+            },
+            {
+              "index": 3,
+              "left": "Regression R-squared",
+              "right": "Model explanatory power"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ-C1-Q6",
+      "caseId": "CBQ-C1",
+      "caseTitle": "Flexible Budget and Variance Investigation",
+      "section": "C",
+      "pack": 1,
+      "prompt": "Match each variance to the manager most likely to investigate first.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Material price",
+              "right": "Purchasing"
+            },
+            {
+              "index": 1,
+              "left": "Material quantity",
+              "right": "Production"
+            },
+            {
+              "index": 2,
+              "left": "Labor rate",
+              "right": "HR or staffing"
+            },
+            {
+              "index": 3,
+              "left": "Labor efficiency",
+              "right": "Production supervision"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ-C2-Q6",
+      "caseId": "CBQ-C2",
+      "caseTitle": "Investment Center Performance and Transfer Pricing",
+      "section": "C",
+      "pack": 1,
+      "prompt": "Match each measure to the best description.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "ROI",
+              "right": "Operating income divided by assets"
+            },
+            {
+              "index": 1,
+              "left": "Residual income",
+              "right": "Income after required asset charge"
+            },
+            {
+              "index": 2,
+              "left": "Minimum transfer price with idle capacity",
+              "right": "Variable cost plus opportunity cost"
+            },
+            {
+              "index": 3,
+              "left": "Market price",
+              "right": "External benchmark when available"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ-C3-Q5",
+      "caseId": "CBQ-C3",
+      "caseTitle": "Balanced Scorecard and Operating Performance Review",
+      "section": "C",
+      "pack": 1,
+      "prompt": "Match each scorecard perspective to the best metric.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Financial",
+              "right": "Operating income"
+            },
+            {
+              "index": 1,
+              "left": "Customer",
+              "right": "On-time delivery"
+            },
+            {
+              "index": 2,
+              "left": "Internal process",
+              "right": "Defect rate"
+            },
+            {
+              "index": 3,
+              "left": "Learning and growth",
+              "right": "Training hours per employee"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ-D1-Q6",
+      "caseId": "CBQ-D1",
+      "caseTitle": "ABC, Quality Costs, and Process Improvement",
+      "section": "D",
+      "pack": 1,
+      "prompt": "Match each activity to its quality-cost category.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Supplier certification",
+              "right": "Prevention"
+            },
+            {
+              "index": 1,
+              "left": "Final inspection",
+              "right": "Appraisal"
+            },
+            {
+              "index": 2,
+              "left": "Scrap before shipment",
+              "right": "Internal failure"
+            },
+            {
+              "index": 3,
+              "left": "Warranty repairs",
+              "right": "External failure"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ-D2-Q6",
+      "caseId": "CBQ-D2",
+      "caseTitle": "Process Costing, Lean Waste, and Bottleneck Analysis",
+      "section": "D",
+      "pack": 1,
+      "prompt": "Match each issue to the best tool.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Partially complete WIP",
+              "right": "Equivalent units"
+            },
+            {
+              "index": 1,
+              "left": "Lowest capacity resource",
+              "right": "Bottleneck analysis"
+            },
+            {
+              "index": 2,
+              "left": "Unnecessary movement",
+              "right": "Lean waste review"
+            },
+            {
+              "index": 3,
+              "left": "Continuous homogeneous output",
+              "right": "Process costing"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ2-D2-Q6",
+      "caseId": "CBQ2-D2",
+      "caseTitle": "Joint Cost Allocation & Sell-or-Process-Further Decisions",
+      "section": "D",
+      "pack": 2,
+      "prompt": "Match each joint cost allocation method to its allocation basis.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "NRV method",
+              "right": "Final sales value minus further processing costs"
+            },
+            {
+              "index": 1,
+              "left": "Physical-units method",
+              "right": "Volume of output"
+            },
+            {
+              "index": 2,
+              "left": "Sales-value-at-split-off method",
+              "right": "Market value at split-off point"
+            },
+            {
+              "index": 3,
+              "left": "Constant gross-margin NRV method",
+              "right": "Joint cost allocated so every product has the same gross margin percentage"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ-E2-Q5",
+      "caseId": "CBQ-E2",
+      "caseTitle": "IT General Controls, Change Management, and Access Review",
+      "section": "E",
+      "pack": 1,
+      "prompt": "Match each exception to the primary risk.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Shared administrator IDs",
+              "right": "Lack of accountability"
+            },
+            {
+              "index": 1,
+              "left": "Terminated users active",
+              "right": "Unauthorized access"
+            },
+            {
+              "index": 2,
+              "left": "Unapproved emergency changes",
+              "right": "Unauthorized or erroneous report logic"
+            },
+            {
+              "index": 3,
+              "left": "Failed interface reconciliation",
+              "right": "Incomplete or inaccurate data transfer"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ-F2-Q6",
+      "caseId": "CBQ-F2",
+      "caseTitle": "Cybersecurity, RPA, and Finance Automation Governance",
+      "section": "F",
+      "pack": 1,
+      "prompt": "Match each finding to the main control response.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Shared bot account",
+              "right": "Unique credentials and access logging"
+            },
+            {
+              "index": 1,
+              "left": "Unapproved rule changes",
+              "right": "Change management"
+            },
+            {
+              "index": 2,
+              "left": "Duplicate vendor IDs",
+              "right": "Master-data governance"
+            },
+            {
+              "index": 3,
+              "left": "No false-positive review",
+              "right": "Model monitoring"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ-F1-Q4",
+      "caseId": "CBQ-F1",
+      "caseTitle": "Data Governance and Warranty Analytics Dashboard",
+      "section": "F",
+      "pack": 1,
+      "prompt": "Match each analytics request to its type.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Summarize failure rate",
+              "right": "Descriptive"
+            },
+            {
+              "index": 1,
+              "left": "Investigate supplier batch relationship",
+              "right": "Diagnostic"
+            },
+            {
+              "index": 2,
+              "left": "Estimate reserve",
+              "right": "Predictive"
+            },
+            {
+              "index": 3,
+              "left": "Recommend inspection threshold",
+              "right": "Prescriptive"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ2-B2-Q6",
+      "caseId": "CBQ2-B2",
+      "caseTitle": "Cash Budgeting and Forecasting",
+      "section": "B",
+      "pack": 2,
+      "prompt": "Match each forecast risk to the correct management response.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Cash deficit exceeds $100,000 in January",
+              "right": "Negotiate extended payment terms with suppliers"
+            },
+            {
+              "index": 1,
+              "left": "December credit collections arrive slower than budgeted",
+              "right": "Increase reliance on the line of credit in January"
+            },
+            {
+              "index": 2,
+              "left": "Equipment supplier offers a January discount but payment is due in February",
+              "right": "Defer purchase to February, increasing January cash available"
+            },
+            {
+              "index": 3,
+              "left": "Actual January sales exceed budget by 15%",
+              "right": "Increase both collections and COGS projections in the forecast"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ3-D2-Q6",
+      "caseId": "CBQ3-D2",
+      "caseTitle": "Job Order Costing & Overhead Application",
+      "section": "D",
+      "pack": 3,
+      "prompt": "Match each term to its correct description.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Predetermined overhead rate",
+              "right": "Estimated OH divided by estimated activity base"
+            },
+            {
+              "index": 1,
+              "left": "Normal costing",
+              "right": "Uses estimated rate to apply OH during the period"
+            },
+            {
+              "index": 2,
+              "left": "Cost driver",
+              "right": "Activity base that causes overhead costs"
+            },
+            {
+              "index": 3,
+              "left": "Overapplied overhead",
+              "right": "Applied OH exceeds actual OH incurred"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ4-D1-Q6",
+      "caseId": "CBQ4-D1",
+      "caseTitle": "Theory of Constraints & Throughput Contribution Analysis",
+      "section": "D",
+      "pack": 4,
+      "prompt": "Match each TOC measure to its correct definition.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Throughput",
+              "right": "Sales price minus direct materials"
+            },
+            {
+              "index": 1,
+              "left": "Operating expense",
+              "right": "All costs except direct materials"
+            },
+            {
+              "index": 2,
+              "left": "Inventory",
+              "right": "Materials purchased but not yet sold"
+            },
+            {
+              "index": 3,
+              "left": "Constraint",
+              "right": "Resource that limits overall output"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ4-D2-Q6",
+      "caseId": "CBQ4-D2",
+      "caseTitle": "Just-In-Time Manufacturing & Lean Waste Reduction",
+      "section": "D",
+      "pack": 4,
+      "prompt": "Match each lean concept to its correct description.",
+      "priorityScore": 11,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Cellular manufacturing",
+              "right": "Arranges machines in sequence to reduce movement and WIP"
+            },
+            {
+              "index": 1,
+              "left": "Kanban",
+              "right": "Visual signal that authorizes production"
+            },
+            {
+              "index": 2,
+              "left": "Kaizen",
+              "right": "Continuous incremental improvement involving all employees"
+            },
+            {
+              "index": 3,
+              "left": "Takt time",
+              "right": "Production pace that matches customer demand rate"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "NO_EXTRA_DISTRACTORS",
+          "severity": "MEDIUM",
+          "detail": "RightItems count (4) equals LeftItems count (4). No extra distractor choices — process of elimination works perfectly."
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Add 1-2 extra RightItems as plausible distractors."
+      ]
+    },
+    {
+      "itemId": "CBQ2-A2-Q4",
+      "caseId": "CBQ2-A2",
+      "caseTitle": "Inventory Valuation and LCM",
+      "section": "A",
+      "pack": 2,
+      "prompt": "Match the inventory valuation method to its primary characteristic.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "3/3 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "LIFO",
+              "right": "Matches recent costs to revenue"
+            },
+            {
+              "index": 1,
+              "left": "FIFO",
+              "right": "Ending inventory reflects current costs"
+            },
+            {
+              "index": 2,
+              "left": "Weighted Average",
+              "right": "Smooths out price fluctuations"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Always yields highest income\"]",
+          "unusedRightItems": [
+            "Always yields highest income"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ2-C1-Q2",
+      "caseId": "CBQ2-C1",
+      "caseTitle": "Flexible Budget and Sales Variance Analysis",
+      "section": "C",
+      "pack": 2,
+      "prompt": "Match each Q1 performance indicator to the most likely underlying cause.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Direct materials variance 15.2% unfavorable",
+              "right": "Possible material waste or higher input prices requiring purchasing and production review"
+            },
+            {
+              "index": 1,
+              "left": "Direct labor variance 2.4% unfavorable",
+              "right": "Small labor inefficiency within normal tolerance; monitor but no immediate action"
+            },
+            {
+              "index": 2,
+              "left": "Variable overhead 4.0% favorable",
+              "right": "Lower variable overhead spending or usage than expected at actual production levels"
+            },
+            {
+              "index": 3,
+              "left": "Sales volume 4.0% unfavorable",
+              "right": "Fewer units sold than budgeted; investigate demand or market share changes"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Fixed overhead spending exceeded the budget; review fixed cost commitments\"]",
+          "unusedRightItems": [
+            "Fixed overhead spending exceeded the budget; review fixed cost commitments"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ2-C1-Q3",
+      "caseId": "CBQ2-C1",
+      "caseTitle": "Flexible Budget and Sales Variance Analysis",
+      "section": "C",
+      "pack": 2,
+      "prompt": "Match each flexible budget component to its correct formula.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Flexible budget revenue",
+              "right": "Actual units sold x Budgeted selling price per unit"
+            },
+            {
+              "index": 1,
+              "left": "Flexible budget direct materials cost",
+              "right": "Actual units produced x Standard material cost per unit"
+            },
+            {
+              "index": 2,
+              "left": "Flexible budget variable overhead cost",
+              "right": "Actual units produced x Standard variable overhead rate per unit"
+            },
+            {
+              "index": 3,
+              "left": "Sales volume variance in dollars",
+              "right": "(Actual units sold - Budgeted units sold) x Budgeted contribution margin per unit"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Actual units sold x Actual selling price per unit\"]",
+          "unusedRightItems": [
+            "Actual units sold x Actual selling price per unit"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ2-C1-Q4",
+      "caseId": "CBQ2-C1",
+      "caseTitle": "Flexible Budget and Sales Variance Analysis",
+      "section": "C",
+      "pack": 2,
+      "prompt": "Match each management action to the variance signal that would most likely trigger it.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Authorize overtime production",
+              "right": "Favorable sales volume variance with backlog"
+            },
+            {
+              "index": 1,
+              "left": "Renegotiate supplier contracts",
+              "right": "Unfavorable direct materials price variance above threshold"
+            },
+            {
+              "index": 2,
+              "left": "Launch promotional campaign",
+              "right": "Unfavorable sales volume variance due to lost market share"
+            },
+            {
+              "index": 3,
+              "left": "Review fixed overhead commitments",
+              "right": "Unfavorable fixed overhead spending variance"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Favorable labor efficiency variance\"]",
+          "unusedRightItems": [
+            "Favorable labor efficiency variance"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ2-C1-Q5",
+      "caseId": "CBQ2-C1",
+      "caseTitle": "Flexible Budget and Sales Variance Analysis",
+      "section": "C",
+      "pack": 2,
+      "prompt": "Match each variance type to the organizational unit most likely responsible for it.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Direct materials usage variance",
+              "right": "Production manager"
+            },
+            {
+              "index": 1,
+              "left": "Labor rate variance",
+              "right": "Human resources or union contract terms"
+            },
+            {
+              "index": 2,
+              "left": "Sales volume variance",
+              "right": "Sales and marketing department"
+            },
+            {
+              "index": 3,
+              "left": "Variable overhead spending variance",
+              "right": "Department manager controlling indirect costs"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Corporate treasury\"]",
+          "unusedRightItems": [
+            "Corporate treasury"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ2-E1-Q1",
+      "caseId": "CBQ2-E1",
+      "caseTitle": "IT General Controls Assessment",
+      "section": "E",
+      "pack": 2,
+      "prompt": "Match each IT general control category to the primary risk it addresses.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Logical access controls",
+              "right": "Unauthorized users gaining system access"
+            },
+            {
+              "index": 1,
+              "left": "Change management controls",
+              "right": "Unauthorized or untested system modifications causing errors or security gaps"
+            },
+            {
+              "index": 2,
+              "left": "Computer operations controls",
+              "right": "Processing errors, data loss, or incomplete processing going undetected"
+            },
+            {
+              "index": 3,
+              "left": "Program development controls",
+              "right": "Flawed or malicious code introduced into production systems"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Hardware theft or environmental damage to data center\"]",
+          "unusedRightItems": [
+            "Hardware theft or environmental damage to data center"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ2-E1-Q2",
+      "caseId": "CBQ2-E1",
+      "caseTitle": "IT General Controls Assessment",
+      "section": "E",
+      "pack": 2,
+      "prompt": "Match each control deficiency identified in Exhibit 1 to the most appropriate remediation.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Shared admin accounts without MFA",
+              "right": "Implement individual accounts with multi-factor authentication and periodic access reviews"
+            },
+            {
+              "index": 1,
+              "left": "Changes approved only via email",
+              "right": "Establish a change advisory board with formal approval, testing, and rollback procedures"
+            },
+            {
+              "index": 2,
+              "left": "Developers accessing production data",
+              "right": "Enforce environment segregation and restrict production access to operations team only"
+            },
+            {
+              "index": 3,
+              "left": "No batch job completion review",
+              "right": "Implement automated job monitoring with alerts for failures and independent review of logs"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Install video surveillance and biometric access controls in the server room\"]",
+          "unusedRightItems": [
+            "Install video surveillance and biometric access controls in the server room"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ2-E1-Q3",
+      "caseId": "CBQ2-E1",
+      "caseTitle": "IT General Controls Assessment",
+      "section": "E",
+      "pack": 2,
+      "prompt": "Match each IT control type to the correct description of its purpose.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Preventive control",
+              "right": "Stops errors or unauthorized actions before they occur"
+            },
+            {
+              "index": 1,
+              "left": "Detective control",
+              "right": "Identifies errors or irregularities after they have occurred"
+            },
+            {
+              "index": 2,
+              "left": "Corrective control",
+              "right": "Resolves issues after detection to restore normal operations"
+            },
+            {
+              "index": 3,
+              "left": "Compensating control",
+              "right": "Provides alternative oversight when primary controls are not feasible"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Documents all system changes for audit trail purposes\"]",
+          "unusedRightItems": [
+            "Documents all system changes for audit trail purposes"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ2-E1-Q4",
+      "caseId": "CBQ2-E1",
+      "caseTitle": "IT General Controls Assessment",
+      "section": "E",
+      "pack": 2,
+      "prompt": "Match each application control type to its correct example.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Input validation",
+              "right": "Range check ensuring dollar amounts fall within expected limits"
+            },
+            {
+              "index": 1,
+              "left": "Processing control",
+              "right": "Run-to-run control totals verifying data processed completely"
+            },
+            {
+              "index": 2,
+              "left": "Output control",
+              "right": "Review of printed reports for reasonableness before distribution"
+            },
+            {
+              "index": 3,
+              "left": "Access control",
+              "right": "User authentication required to access the application"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Quarterly physical inventory count verification\"]",
+          "unusedRightItems": [
+            "Quarterly physical inventory count verification"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ2-E1-Q5",
+      "caseId": "CBQ2-E1",
+      "caseTitle": "IT General Controls Assessment",
+      "section": "E",
+      "pack": 2,
+      "prompt": "Match each IT role to the correct segregation-of-duties conflict if the role is combined with others.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "System administrator also performs user access reviews",
+              "right": "The administrator could grant excessive privileges and conceal the action during review"
+            },
+            {
+              "index": 1,
+              "left": "Developer also moves code to production",
+              "right": "Code could be deployed without independent testing or approval"
+            },
+            {
+              "index": 2,
+              "left": "IT operator also records changes in the change log",
+              "right": "Changes could be made without independent verification of completion"
+            },
+            {
+              "index": 3,
+              "left": "Database administrator also approves system access requests",
+              "right": "Access could be granted without independent approval, bypassing access controls"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"The CFO could override system controls and approve their own transactions\"]",
+          "unusedRightItems": [
+            "The CFO could override system controls and approve their own transactions"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-A1-Q3",
+      "caseId": "CBQ4-A1",
+      "caseTitle": "Intangible Assets and Goodwill Impairment",
+      "section": "A",
+      "pack": 4,
+      "prompt": "Match the asset to its correct amortization and impairment treatment under US GAAP.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "3/3 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Patent",
+              "right": "Amortized over useful life, tested for impairment if triggering event"
+            },
+            {
+              "index": 1,
+              "left": "Trademark",
+              "right": "Not amortized, tested for impairment at least annually"
+            },
+            {
+              "index": 2,
+              "left": "Goodwill",
+              "right": "Not amortized, tested for impairment at reporting unit level"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Amortized over 15 years straight-line\"]",
+          "unusedRightItems": [
+            "Amortized over 15 years straight-line"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ2-B3-Q6",
+      "caseId": "CBQ2-B3",
+      "caseTitle": "Sales Revenue Forecasting and Collection Analysis",
+      "section": "B",
+      "pack": 2,
+      "prompt": "Match each forecasting methodology to its correct description.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Trend analysis",
+              "right": "Projects future values based on historical growth rates"
+            },
+            {
+              "index": 1,
+              "left": "Seasonal adjustment",
+              "right": "Applies periodic multipliers to account for recurring patterns"
+            },
+            {
+              "index": 2,
+              "left": "Qualitative forecasting",
+              "right": "Relies on expert judgment when historical data is limited"
+            },
+            {
+              "index": 3,
+              "left": "Moving average",
+              "right": "Smooths random fluctuations by averaging consecutive periods"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Splits costs into fixed and variable components using regression\"]",
+          "unusedRightItems": [
+            "Splits costs into fixed and variable components using regression"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-B2-Q6",
+      "caseId": "CBQ3-B2",
+      "caseTitle": "Direct Labor and Manufacturing Overhead Budget",
+      "section": "B",
+      "pack": 3,
+      "prompt": "Match each budget component to its correct calculation formula.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Direct labor budget",
+              "right": "Units produced x DLH per unit x Wage rate"
+            },
+            {
+              "index": 1,
+              "left": "Variable overhead budget",
+              "right": "Actual DLH x Variable OH rate per DLH"
+            },
+            {
+              "index": 2,
+              "left": "Fixed overhead budget",
+              "right": "Remains constant within the relevant range"
+            },
+            {
+              "index": 3,
+              "left": "Applied manufacturing overhead",
+              "right": "Predetermined OH rate x Actual activity"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Units sold x Selling price\"]",
+          "unusedRightItems": [
+            "Units sold x Selling price"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-C1-Q1",
+      "caseId": "CBQ3-C1",
+      "caseTitle": "Balanced Scorecard Metrics",
+      "section": "C",
+      "pack": 3,
+      "prompt": "Nexus Manufacturing's strategy team has identified the following financial performance objectives. Match each objective to the correct balanced scorecard perspective indicator type.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Increase return on capital employed (ROCE) to 18%",
+              "right": "Financial — profitability"
+            },
+            {
+              "index": 1,
+              "left": "Reduce cost of goods sold by 5% through process improvements",
+              "right": "Financial — cost efficiency"
+            },
+            {
+              "index": 2,
+              "left": "Increase revenue from new product lines to 25% of total sales",
+              "right": "Financial — revenue growth"
+            },
+            {
+              "index": 3,
+              "left": "Achieve operating cash flow sufficient to fund capital expenditures",
+              "right": "Financial — liquidity and investment"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Customer — satisfaction\"]",
+          "unusedRightItems": [
+            "Customer — satisfaction"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-C1-Q2",
+      "caseId": "CBQ3-C1",
+      "caseTitle": "Balanced Scorecard Metrics",
+      "section": "C",
+      "pack": 3,
+      "prompt": "The Customer perspective of the balanced scorecard focuses on how the company creates value for its target customers. Match each customer objective to its specific measurement focus.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Improve on-time delivery rate from 91% to 98%",
+              "right": "Customer — operational excellence"
+            },
+            {
+              "index": 1,
+              "left": "Increase Net Promoter Score (NPS) from +32 to +50",
+              "right": "Customer — customer loyalty and satisfaction"
+            },
+            {
+              "index": 2,
+              "left": "Reduce customer churn rate from 15% to 8%",
+              "right": "Customer — customer retention"
+            },
+            {
+              "index": 3,
+              "left": "Increase market share in industrial automation from 12% to 18%",
+              "right": "Customer — market position"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Financial — revenue growth\"]",
+          "unusedRightItems": [
+            "Financial — revenue growth"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-C1-Q3",
+      "caseId": "CBQ3-C1",
+      "caseTitle": "Balanced Scorecard Metrics",
+      "section": "C",
+      "pack": 3,
+      "prompt": "The Internal Business Process perspective identifies the critical processes where the company must excel. Match each process improvement objective to the correct process type.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Reduce defect rate from 4.7 to below 2 per 1,000 units",
+              "right": "Operations management — quality"
+            },
+            {
+              "index": 1,
+              "left": "Reduce order-to-delivery cycle time from 14 days to 7 days",
+              "right": "Operations management — cycle time"
+            },
+            {
+              "index": 2,
+              "left": "Implement a supplier quality certification program",
+              "right": "Supplier management — quality assurance"
+            },
+            {
+              "index": 3,
+              "left": "Automate inventory replenishment to reduce stockouts by 50%",
+              "right": "Inventory management — efficiency"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Customer management — satisfaction\"]",
+          "unusedRightItems": [
+            "Customer management — satisfaction"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-C1-Q4",
+      "caseId": "CBQ3-C1",
+      "caseTitle": "Balanced Scorecard Metrics",
+      "section": "C",
+      "pack": 3,
+      "prompt": "The Learning and Growth perspective focuses on the intangible assets needed to support the other perspectives. Match each capability-building objective to its correct focus area.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Increase employee certification rate from 62% to 85%",
+              "right": "Human capital — employee skills and competencies"
+            },
+            {
+              "index": 1,
+              "left": "Implement an enterprise-wide CRM system to improve customer data analytics",
+              "right": "Information capital — technology infrastructure"
+            },
+            {
+              "index": 2,
+              "left": "Establish a culture of continuous improvement with 100% employee participation in Kaizen events",
+              "right": "Organization capital — culture and alignment"
+            },
+            {
+              "index": 3,
+              "left": "Launch a leadership development program for middle managers",
+              "right": "Human capital — leadership development"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Financial capital — investment returns\"]",
+          "unusedRightItems": [
+            "Financial capital — investment returns"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-C1-Q5",
+      "caseId": "CBQ3-C1",
+      "caseTitle": "Balanced Scorecard Metrics",
+      "section": "C",
+      "pack": 3,
+      "prompt": "The balanced scorecard distinguishes between leading and lagging indicators. Match each KPI to its correct classification as a leading or lagging indicator of financial performance.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Employee training hours completed",
+              "right": "Leading indicator — investments in human capital drive future performance"
+            },
+            {
+              "index": 1,
+              "left": "Customer satisfaction score (NPS)",
+              "right": "Leading indicator — customer satisfaction predicts future revenue"
+            },
+            {
+              "index": 2,
+              "left": "On-time delivery rate",
+              "right": "Leading indicator — operational quality drives customer retention"
+            },
+            {
+              "index": 3,
+              "left": "Return on capital employed (ROCE)",
+              "right": "Lagging indicator — measures the outcome of past strategic actions"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Lagging indicator — employee turnover rate\"]",
+          "unusedRightItems": [
+            "Lagging indicator — employee turnover rate"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-C2-Q4",
+      "caseId": "CBQ3-C2",
+      "caseTitle": "Transfer Pricing",
+      "section": "C",
+      "pack": 3,
+      "prompt": "Apex Components faces four distinct business scenarios. Match each scenario to the most appropriate transfer pricing method.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Division A has excess capacity and Division B needs 40,000 chips; no external buyer exists for these units",
+              "right": "Variable cost — with idle capacity, the opportunity cost is zero, so any transfer price above variable cost adds to company profit without sacrificing external sales"
+            },
+            {
+              "index": 1,
+              "left": "Division A sells identical chips externally at $50; the chip market is highly competitive with many suppliers",
+              "right": "Market price — competitive market provides an objective, verifiable price that aligns divisional incentives with company goals"
+            },
+            {
+              "index": 2,
+              "left": "Division A's chips are customized for Division B and have no external market; costs are stable and well-documented",
+              "right": "Full cost plus markup — cost-based pricing is appropriate when no market benchmark exists; a markup ensures the selling division earns a reasonable return"
+            },
+            {
+              "index": 3,
+              "left": "Division A is located in a low-tax country; Division B is in a high-tax country; the company wants to minimize total global tax",
+              "right": "Negotiated or manipulated transfer price — tax-minimization strategies may justify prices that differ from pure economic transfer pricing, subject to arm's-length compliance"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Dual pricing — credit the selling division at market price and charge the buying division at cost to resolve goal conflicts\"]",
+          "unusedRightItems": [
+            "Dual pricing — credit the selling division at market price and charge the buying division at cost to resolve goal conflicts"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-C3-Q4",
+      "caseId": "CBQ3-C3",
+      "caseTitle": "Flexible Budget Variances",
+      "section": "C",
+      "pack": 3,
+      "prompt": "Match each variance description to the correct variance formula for Precision Manufacturing's standard costing system.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Difference between actual revenue and flexible budget revenue at 12,000 units",
+              "right": "Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U"
+            },
+            {
+              "index": 1,
+              "left": "Difference between flexible budget variable cost at 12,000 units and actual variable cost",
+              "right": "Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A"
+            },
+            {
+              "index": 2,
+              "left": "Difference between static budget operating income and flexible budget operating income",
+              "right": "Sales volume variance — (Actual Units − Budgeted Units) × Standard Contribution Margin per Unit = (12,000 − 10,000) × $25 = $50,000 F"
+            },
+            {
+              "index": 3,
+              "left": "Difference between actual fixed overhead and budgeted fixed overhead",
+              "right": "Fixed overhead spending variance — Actual FOH − Budgeted FOH = $185,000 − $180,000 = $5,000 U"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Production volume variance — measures fixed overhead capacity utilization\"]",
+          "unusedRightItems": [
+            "Production volume variance — measures fixed overhead capacity utilization"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-E1-Q1",
+      "caseId": "CBQ3-E1",
+      "caseTitle": "COSO Enterprise Risk Management",
+      "section": "E",
+      "pack": 3,
+      "prompt": "The Chief Risk Officer is training department heads on the five COSO ERM 2017 components. Match each risk management activity to the correct ERM component.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Establishing the board's risk oversight structure and defining risk culture expectations",
+              "right": "Governance and Culture"
+            },
+            {
+              "index": 1,
+              "left": "Defining risk appetite and aligning risk tolerances with strategic planning",
+              "right": "Strategy and Objective-Setting"
+            },
+            {
+              "index": 2,
+              "left": "Identifying and assessing risks that could affect the achievement of strategic objectives",
+              "right": "Performance"
+            },
+            {
+              "index": 3,
+              "left": "Communicating risk information to stakeholders through structured reporting channels",
+              "right": "Information, Communication, and Reporting"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Review and Revision\"]",
+          "unusedRightItems": [
+            "Review and Revision"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-E1-Q2",
+      "caseId": "CBQ3-E1",
+      "caseTitle": "COSO Enterprise Risk Management",
+      "section": "E",
+      "pack": 3,
+      "prompt": "Match each ERM implementation activity at MedTech Devices to the correct COSO ERM component where the activity belongs.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Training plant managers on the company's risk culture expectations and ethical values",
+              "right": "Governance and Culture"
+            },
+            {
+              "index": 1,
+              "left": "Setting operational risk limits for each facility based on the board's risk appetite statement",
+              "right": "Strategy and Objective-Setting"
+            },
+            {
+              "index": 2,
+              "left": "Developing a risk heat map to prioritize the top 10 risks across all product lines",
+              "right": "Performance"
+            },
+            {
+              "index": 3,
+              "left": "Conducting semi-annual ERM program effectiveness reviews and updating the risk register",
+              "right": "Review and Revision"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Information, Communication, and Reporting\"]",
+          "unusedRightItems": [
+            "Information, Communication, and Reporting"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-E1-Q3",
+      "caseId": "CBQ3-E1",
+      "caseTitle": "COSO Enterprise Risk Management",
+      "section": "E",
+      "pack": 3,
+      "prompt": "MedTech Devices has identified the following risks during the Performance component assessment. Match each risk to the most appropriate risk response strategy.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Regulatory risk: New FDA traceability requirements may increase compliance costs by $500,000",
+              "right": "Acceptance — the cost of mitigation exceeds the potential impact; budget for compliance"
+            },
+            {
+              "index": 1,
+              "left": "Supplier risk: Single-source supplier for titanium may face labor strike; probability is low but impact is severe",
+              "right": "Mitigation — develop alternative supplier relationships and maintain safety stock"
+            },
+            {
+              "index": 2,
+              "left": "Technology risk: Current ERP system is obsolete and requires immediate upgrade to avoid operational disruption",
+              "right": "Mitigation — implement ERP upgrade project with dedicated budget and timeline"
+            },
+            {
+              "index": 3,
+              "left": "Market risk: Competitor is launching a similar surgical instrument at a 15% lower price point",
+              "right": "Acceptance — monitor competitor pricing and differentiate through quality and service"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Avoidance — discontinue all products in the affected category\"]",
+          "unusedRightItems": [
+            "Avoidance — discontinue all products in the affected category"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-E1-Q4",
+      "caseId": "CBQ3-E1",
+      "caseTitle": "COSO Enterprise Risk Management",
+      "section": "E",
+      "pack": 3,
+      "prompt": "The Review and Revision component requires MedTech Devices to assess changes that could affect ERM effectiveness. Match each change scenario to the correct ERM revision principle.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "The company plans to acquire a smaller competitor with a different risk culture",
+              "right": "Assess substantial change — the acquisition introduces new risks that must be integrated into the ERM program"
+            },
+            {
+              "index": 1,
+              "left": "The FDA has proposed new quality reporting requirements that could affect product clearance timelines",
+              "right": "Assess substantial change — regulatory changes may require updates to compliance risk assessments"
+            },
+            {
+              "index": 2,
+              "left": "A key supplier experienced a data breach that could affect MedTech's supply chain systems",
+              "right": "Assess substantial change — third-party risk from supplier breach affects MedTech's risk profile"
+            },
+            {
+              "index": 3,
+              "left": "The risk committee's quarterly review found two emerging risks not previously identified",
+              "right": "Pursue improvement in ERM — the risk identification process should be enhanced to capture emerging risks proactively"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Information and Communication — report the findings to the board\"]",
+          "unusedRightItems": [
+            "Information and Communication — report the findings to the board"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-E1-Q5",
+      "caseId": "CBQ3-E1",
+      "caseTitle": "COSO Enterprise Risk Management",
+      "section": "E",
+      "pack": 3,
+      "prompt": "Match each ERM benefit described by MedTech's CRO to the correct COSO ERM component that primarily delivers that benefit.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Improved risk awareness and ethical decision-making throughout the organization",
+              "right": "Governance and Culture — establishes tone at the top and risk culture"
+            },
+            {
+              "index": 1,
+              "left": "Better-informed strategic decisions because risk appetite is explicitly considered",
+              "right": "Strategy and Objective-Setting — integrates risk with strategic planning"
+            },
+            {
+              "index": 2,
+              "left": "Faster identification of operational risks through standardized risk assessment processes",
+              "right": "Performance — provides systematic risk identification and assessment tools"
+            },
+            {
+              "index": 3,
+              "left": "More effective board oversight through structured risk reporting and dashboards",
+              "right": "Information, Communication, and Reporting — delivers risk data to decision-makers"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Review and Revision — evaluates ERM effectiveness\"]",
+          "unusedRightItems": [
+            "Review and Revision — evaluates ERM effectiveness"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-E2-Q4",
+      "caseId": "CBQ3-E2",
+      "caseTitle": "Business Continuity and Disaster Recovery",
+      "section": "E",
+      "pack": 3,
+      "prompt": "FFCU has identified four business functions that require different recovery strategies. Match each function to the most appropriate recovery approach based on Exhibits 1 and 2.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Online banking platform — RTO 2 hours; RPO 15 minutes; critical to member trust and regulatory compliance",
+              "right": "Hot site or DRaaS — replicate systems in near-real-time to a geographically separate facility; automated failover within minutes"
+            },
+            {
+              "index": 1,
+              "left": "Loan origination system — RTO 24 hours; RPO 4 hours; moderate impact if unavailable for a day",
+              "right": "Warm site — pre-configured hardware and network connectivity available; load backup data and resume operations within 24 hours"
+            },
+            {
+              "index": 2,
+              "left": "Human resources portal — RTO 72 hours; RPO 24 hours; low criticality, can tolerate extended downtime",
+              "right": "Cold site or manual workaround — empty facility with power/cooling; acceptable for low-criticality functions that can be deferred"
+            },
+            {
+              "index": 3,
+              "left": "Teller transaction processing — RTO 4 hours; RPO 1 hour; high impact on branch operations",
+              "right": "Warm site with data replication — pre-staged environment with hourly data replication to meet the 4-hour RTO and 1-hour RPO"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Ignore — the function does not need any recovery plan\"]",
+          "unusedRightItems": [
+            "Ignore — the function does not need any recovery plan"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-F2-Q1",
+      "caseId": "CBQ3-F2",
+      "caseTitle": "Data Visualization",
+      "section": "F",
+      "pack": 3,
+      "prompt": "Based on Exhibit 1, each of the following retail metrics requires a specific chart type to communicate effectively. Match each data relationship to the most appropriate chart type.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Monthly revenue trend over 24 months showing seasonal patterns",
+              "right": "Line chart — best for continuous data over time; clearly shows trend direction, seasonality, and inflection points"
+            },
+            {
+              "index": 1,
+              "left": "Sales comparison across 30 stores to identify top and bottom performers",
+              "right": "Bar chart sorted descending — enables rapid visual comparison across categories; best for ranking"
+            },
+            {
+              "index": 2,
+              "left": "Relationship between advertising spend and weekly revenue",
+              "right": "Scatter plot with trend line — reveals correlation between two continuous variables; shows outliers"
+            },
+            {
+              "index": 3,
+              "left": "Proportion of total expenses by category (6 categories)",
+              "right": "Treemap or pie chart — effective for showing part-to-whole relationships with limited categories"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"3D pie chart — visually engaging option that management prefers for presentations\"]",
+          "unusedRightItems": [
+            "3D pie chart — visually engaging option that management prefers for presentations"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-F2-Q5",
+      "caseId": "CBQ3-F2",
+      "caseTitle": "Data Visualization",
+      "section": "F",
+      "pack": 3,
+      "prompt": "Insight Analytics trains the client's finance team on data storytelling. Match each data presentation goal to the visualization approach that BEST achieves it.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Show that Q4 sales are consistently higher than other quarters across three years",
+              "right": "Small multiples (three line charts side by side) — enables comparison of quarterly patterns across years while maintaining consistent scale"
+            },
+            {
+              "index": 1,
+              "left": "Identify which product categories have profit margins significantly above or below the company average",
+              "right": "Diverging bar chart centered on the average — categories extending right are above average; left are below; zero line provides immediate reference"
+            },
+            {
+              "index": 2,
+              "left": "Communicate to the board that the company achieved its revenue target despite economic headwinds",
+              "right": "Annotated KPI dashboard with trend arrow and variance callout — headline number, trend line, and contextual narrative guide interpretation"
+            },
+            {
+              "index": 3,
+              "left": "Compare each store's actual sales to its individual target and prior year performance",
+              "right": "Bullet chart for each store — shows actual vs target vs prior year in a compact, single-bar format with comparative benchmarks"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"3D exploded pie chart — makes the presentation visually impressive for the board meeting\"]",
+          "unusedRightItems": [
+            "3D exploded pie chart — makes the presentation visually impressive for the board meeting"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-F1-Q1",
+      "caseId": "CBQ4-F1",
+      "caseTitle": "Cloud Computing Models",
+      "section": "F",
+      "pack": 4,
+      "prompt": "The IT steering committee is evaluating different cloud service models for MedTech's applications. Using Exhibit 1, match each application requirement to the most appropriate cloud service model.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "The HR department needs a payroll and benefits administration system; they want to avoid any hardware or software management and access it through a web browser",
+              "right": "SaaS — software is fully managed by the vendor and accessed via browser; the customer manages only data and user access"
+            },
+            {
+              "index": 1,
+              "left": "The IT team wants to build a custom inventory management application; they need a platform with development tools, database, and middleware but want to avoid managing underlying infrastructure",
+              "right": "PaaS — provides development platform and runtime environment; vendor manages infrastructure, OS, and middleware; customer manages applications and data"
+            },
+            {
+              "index": 2,
+              "left": "The data science team needs raw virtual servers, storage, and networking to run analytics workloads; they will manage the OS and applications themselves",
+              "right": "IaaS — provides virtualized computing resources; customer manages OS, middleware, runtime, applications, and data; vendor manages physical infrastructure"
+            },
+            {
+              "index": 3,
+              "left": "The ERP system contains sensitive financial and patient data; MedTech needs maximum control and is considering keeping it on-premise",
+              "right": "On-premise — maximum control over all layers; customer manages everything including physical security; appropriate for highly regulated data"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Community cloud — shared infrastructure among several organizations with common compliance concerns\"]",
+          "unusedRightItems": [
+            "Community cloud — shared infrastructure among several organizations with common compliance concerns"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-F1-Q5",
+      "caseId": "CBQ4-F1",
+      "caseTitle": "Cloud Computing Models",
+      "section": "F",
+      "pack": 4,
+      "prompt": "The IT steering committee is considering different cloud deployment models. Match each deployment model to the scenario that BEST fits its characteristics.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "MedTech's ERP system must comply with strict FDA and HIPAA requirements; the company wants dedicated infrastructure but has no need for a massive capital investment in a new data center",
+              "right": "Private cloud — dedicated infrastructure for a single organization; provides the highest security and compliance control while avoiding data center capital costs"
+            },
+            {
+              "index": 1,
+              "left": "MedTech's R&D team needs a sandbox environment to test new analytics tools; they want low cost and do not need dedicated infrastructure",
+              "right": "Public cloud — resources shared across multiple organizations; lowest cost but least control; appropriate for development, testing, and non-sensitive workloads"
+            },
+            {
+              "index": 2,
+              "left": "MedTech and two other medical device companies want to share a cloud environment that meets their common regulatory requirements while keeping costs lower than a fully private cloud",
+              "right": "Community cloud — shared infrastructure among several organizations with common compliance concerns (e.g., HIPAA, FDA); balances cost and compliance"
+            },
+            {
+              "index": 3,
+              "left": "MedTech acquired a small distributor and needs to quickly integrate their IT systems without a long capital approval process",
+              "right": "Public cloud (rapid deployment) — quick provisioning, pay-as-you-go pricing; ideal for acquisitions, temporary workloads, or rapid scaling without capital investment"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Hybrid cloud — combination of public and private; allows sensitive data to remain in private cloud while leveraging public cloud for elasticity\"]",
+          "unusedRightItems": [
+            "Hybrid cloud — combination of public and private; allows sensitive data to remain in private cloud while leveraging public cloud for elasticity"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ3-B3-Q6",
+      "caseId": "CBQ3-B3",
+      "caseTitle": "Comprehensive Profit Planning Using CVP Analysis",
+      "section": "B",
+      "pack": 3,
+      "prompt": "Match each CVP concept to its correct formula.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Contribution margin per unit",
+              "right": "Selling price minus variable cost per unit"
+            },
+            {
+              "index": 1,
+              "left": "Break-even point (units)",
+              "right": "Fixed costs divided by contribution margin per unit"
+            },
+            {
+              "index": 2,
+              "left": "Margin of safety (units)",
+              "right": "Actual sales minus break-even sales"
+            },
+            {
+              "index": 3,
+              "left": "Operating leverage",
+              "right": "Contribution margin divided by operating income"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Total revenue minus total cost\"]",
+          "unusedRightItems": [
+            "Total revenue minus total cost"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-B2-Q6",
+      "caseId": "CBQ4-B2",
+      "caseTitle": "Budgeted Balance Sheet and Financial Budget",
+      "section": "B",
+      "pack": 4,
+      "prompt": "Match each budgeted balance sheet line item to the primary budget or policy that determines it.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Cash",
+              "right": "Cash budget and collection/disbursement timing"
+            },
+            {
+              "index": 1,
+              "left": "Accounts receivable",
+              "right": "Sales budget and credit collection policy"
+            },
+            {
+              "index": 2,
+              "left": "Inventory",
+              "right": "Cost of goods sold budget and purchases budget"
+            },
+            {
+              "index": 3,
+              "left": "Accounts payable",
+              "right": "Purchases budget and supplier payment terms"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Production budget and labor efficiency\"]",
+          "unusedRightItems": [
+            "Production budget and labor efficiency"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-B1-Q2",
+      "caseId": "CBQ5-B1",
+      "caseTitle": "Strategic Management and Forecasting",
+      "section": "B",
+      "pack": 5,
+      "prompt": "Match the strategic scenario to the correct component of Porter's Five Forces.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "A startup invents a cheaper alternative material",
+              "right": "Threat of substitutes"
+            },
+            {
+              "index": 1,
+              "left": "Only two suppliers control 90% of the raw materials",
+              "right": "Bargaining power of suppliers"
+            },
+            {
+              "index": 2,
+              "left": "A major client demands a 10% price reduction",
+              "right": "Bargaining power of buyers"
+            },
+            {
+              "index": 3,
+              "left": "Low capital requirements allow new competitors to enter easily",
+              "right": "Threat of new entrants"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Intensity of competitive rivalry\"]",
+          "unusedRightItems": [
+            "Intensity of competitive rivalry"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-C2-Q1",
+      "caseId": "CBQ4-C2",
+      "caseTitle": "Customer Profitability Analysis",
+      "section": "C",
+      "pack": 4,
+      "prompt": "Great Lakes Distribution uses the ABC cost hierarchy to classify activities. Match each activity cost to the correct hierarchy level.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Processing a customer's individual purchase order",
+              "right": "Batch-level cost — each order requires order processing regardless of order size"
+            },
+            {
+              "index": 1,
+              "left": "Making a sales call to a retail customer",
+              "right": "Customer-sustaining cost — sales visits support the customer relationship, not individual orders"
+            },
+            {
+              "index": 2,
+              "left": "Product sourcing and supplier qualification for each product line",
+              "right": "Product-sustaining cost — sourcing activities maintain the product line's availability in the assortment"
+            },
+            {
+              "index": 3,
+              "left": "Receiving and storing a pallet of goods from a supplier",
+              "right": "Unit-level cost — receiving costs vary with each pallet of goods handled"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Facility-sustaining cost — corporate overhead not traceable to specific activities\"]",
+          "unusedRightItems": [
+            "Facility-sustaining cost — corporate overhead not traceable to specific activities"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-C2-Q2",
+      "caseId": "CBQ4-C2",
+      "caseTitle": "Customer Profitability Analysis",
+      "section": "C",
+      "pack": 4,
+      "prompt": "Based on the ABC cost hierarchy, match each cost driver to the cost it most appropriately drives.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Number of purchase orders placed",
+              "right": "Batch-level — order entry, picking, and shipping costs vary with order count"
+            },
+            {
+              "index": 1,
+              "left": "Number of sales calls made to each customer",
+              "right": "Customer-sustaining — sales and account management costs vary with customer relationship intensity"
+            },
+            {
+              "index": 2,
+              "left": "Number of products carried in the product line",
+              "right": "Product-sustaining — category management and vendor compliance costs vary with product count"
+            },
+            {
+              "index": 3,
+              "left": "Number of delivery stops per route",
+              "right": "Batch-level — delivery routing and stop costs vary with each delivery stop"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Unit-level — cost of goods sold varies with each unit sold\"]",
+          "unusedRightItems": [
+            "Unit-level — cost of goods sold varies with each unit sold"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-C2-Q3",
+      "caseId": "CBQ4-C2",
+      "caseTitle": "Customer Profitability Analysis",
+      "section": "C",
+      "pack": 4,
+      "prompt": "Referring to Exhibit 1, Great Lakes Distribution wants to calculate customer-level profitability. Match each cost allocation approach to its correct description.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Allocating order processing costs to customers",
+              "right": "Use number of orders as the allocation base — each customer is charged proportionally to order count"
+            },
+            {
+              "index": 1,
+              "left": "Allocating sales visit costs to customers",
+              "right": "Use number of sales visits as the allocation base — each customer is charged proportionally to visit frequency"
+            },
+            {
+              "index": 2,
+              "left": "Allocating delivery costs to customers",
+              "right": "Use number of delivery stops as the allocation base — each customer is charged proportionally to stop frequency"
+            },
+            {
+              "index": 3,
+              "left": "Allocating product sourcing costs to customers",
+              "right": "Use number of products purchased as the allocation base — customers buying from more product lines bear more sourcing cost"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Use revenue as the allocation base — larger customers bear more cost regardless of service consumption\"]",
+          "unusedRightItems": [
+            "Use revenue as the allocation base — larger customers bear more cost regardless of service consumption"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-C2-Q4",
+      "caseId": "CBQ4-C2",
+      "caseTitle": "Customer Profitability Analysis",
+      "section": "C",
+      "pack": 4,
+      "prompt": "Using the data in Exhibit 1, classify each customer based on the likely profitability profile when ABC costing is applied.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Corner Grocers chain — $2.45M revenue, 360 orders, 12 sales visits",
+              "right": "High profit potential — high revenue, moderate service demands, 67% gross margin"
+            },
+            {
+              "index": 1,
+              "left": "Lakeside Restaurant — $185K revenue, 240 orders, 24 sales visits, 25 special requests",
+              "right": "Low profit potential — low revenue, very high service intensity relative to revenue"
+            },
+            {
+              "index": 2,
+              "left": "County Hospital Kitchen — $620K revenue, 180 orders, 6 sales visits",
+              "right": "Moderate profit potential — mid-size revenue, low service intensity, efficient operations"
+            },
+            {
+              "index": 3,
+              "left": "Campus Dining — $1.18M revenue, 300 orders, 120 delivery stops",
+              "right": "Moderate profit potential — good revenue but higher delivery costs due to many delivery stops"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Negative profit — costs exceed revenue\"]",
+          "unusedRightItems": [
+            "Negative profit — costs exceed revenue"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-C2-Q5",
+      "caseId": "CBQ4-C2",
+      "caseTitle": "Customer Profitability Analysis",
+      "section": "C",
+      "pack": 4,
+      "prompt": "Based on the customer profitability analysis, Great Lakes Distribution is considering strategic actions. Match each potential action to the most appropriate customer situation.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Lakeside Restaurant shows very low profitability despite moderate total purchases",
+              "right": "Reprice or restructure service — consider minimum order quantities or service fees for high-touch, low-revenue customers"
+            },
+            {
+              "index": 1,
+              "left": "Corner Grocers chain is highly profitable and has potential to grow",
+              "right": "Invest and grow — offer volume discounts or dedicated support to strengthen the relationship"
+            },
+            {
+              "index": 2,
+              "left": "County Hospital Kitchen has efficient operations and consistent ordering patterns",
+              "right": "Maintain — current service level is efficient and profitable; monitor for changes"
+            },
+            {
+              "index": 3,
+              "left": "Campus Dining has good revenue but frequent small deliveries increase costs",
+              "right": "Negotiate delivery schedule — consolidate deliveries to reduce stop frequency while maintaining service quality"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Terminate relationship — costs exceed any possible revenue\"]",
+          "unusedRightItems": [
+            "Terminate relationship — costs exceed any possible revenue"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-C2-Q1",
+      "caseId": "CBQ5-C2",
+      "caseTitle": "Responsibility Centers and ROI",
+      "section": "C",
+      "pack": 5,
+      "prompt": "OmniSource uses responsibility accounting to classify each business unit. Match each unit to the correct type of responsibility center based on what its manager is accountable for.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Distribution Center — manager controls costs but does not set prices or make capital decisions",
+              "right": "Cost center — accountable for cost control and operational efficiency only"
+            },
+            {
+              "index": 1,
+              "left": "Neighborhood Store #12 — manager controls both revenue and costs; capital equipment decisions made centrally",
+              "right": "Profit center — accountable for both revenue and expenses, but not capital investment decisions"
+            },
+            {
+              "index": 2,
+              "left": "Warehouse Store #4 — manager controls revenue, costs, and has authority to approve capital expenditures up to $25,000",
+              "right": "Investment center — accountable for revenue, expenses, and return on invested capital"
+            },
+            {
+              "index": 3,
+              "left": "E-commerce Division — manager controls revenue, costs, and all technology investment decisions",
+              "right": "Investment center — accountable for all financial results including technology ROI"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Revenue center — accountable for sales generation only\"]",
+          "unusedRightItems": [
+            "Revenue center — accountable for sales generation only"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-C2-Q2",
+      "caseId": "CBQ5-C2",
+      "caseTitle": "Responsibility Centers and ROI",
+      "section": "C",
+      "pack": 5,
+      "prompt": "Using Exhibit 1 data, match each performance measure calculation to the correct result for Warehouse Store #4.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Return on Investment (ROI) = Operating Income / Average Operating Assets",
+              "right": "ROI = 14.6% — $1,240,000 / $8,500,000"
+            },
+            {
+              "index": 1,
+              "left": "Margin ratio = Operating Income / Net Revenue",
+              "right": "Margin = 12.7% — $1,240,000 / $9,800,000"
+            },
+            {
+              "index": 2,
+              "left": "Turnover ratio = Net Revenue / Average Operating Assets",
+              "right": "Turnover = 1.15 — $9,800,000 / $8,500,000"
+            },
+            {
+              "index": 3,
+              "left": "Residual Income (RI) assuming 10% required rate of return",
+              "right": "RI = $390,000 — $1,240,000 − (10% × $8,500,000)"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"ROI = 10.2% — incorrect calculation using net income\"]",
+          "unusedRightItems": [
+            "ROI = 10.2% — incorrect calculation using net income"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-C2-Q3",
+      "caseId": "CBQ5-C2",
+      "caseTitle": "Responsibility Centers and ROI",
+      "section": "C",
+      "pack": 5,
+      "prompt": "The CFO is evaluating whether to use ROI or Residual Income (RI) for evaluating store managers. Match each performance measure characteristic to the correct metric (ROI or RI).",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Expresses performance as a percentage, enabling comparison across stores of different sizes",
+              "right": "ROI — a relative measure that facilitates comparison across centers"
+            },
+            {
+              "index": 1,
+              "left": "May cause managers to reject profitable projects that earn less than the division's current ROI",
+              "right": "ROI — a potential disadvantage as managers may maximize their ROI rather than total company value"
+            },
+            {
+              "index": 2,
+              "left": "Measures absolute dollar value created above the required return on invested capital",
+              "right": "RI — an absolute dollar measure that shows how much value was added above the cost of capital"
+            },
+            {
+              "index": 3,
+              "left": "Aligns manager decisions with company-wide value creation when the same required rate is used",
+              "right": "RI — aligns managerial decisions with company-wide goal congruence when required rate equals cost of capital"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Net Income — the simplest performance metric\"]",
+          "unusedRightItems": [
+            "Net Income — the simplest performance metric"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-C2-Q4",
+      "caseId": "CBQ5-C2",
+      "caseTitle": "Responsibility Centers and ROI",
+      "section": "C",
+      "pack": 5,
+      "prompt": "The E-commerce Division manager proposes a $1,000,000 technology upgrade expected to generate $130,000 in annual operating income. The corporate required rate of return is 10%. Match each analysis to the correct evaluation of this proposal.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Current E-commerce ROI: $980,000 / $4,200,000 = 23.3%",
+              "right": "If evaluated on ROI, the manager may REJECT this project because 13.0% is below the current division ROI of 23.3%"
+            },
+            {
+              "index": 1,
+              "left": "Proposed project ROI: $130,000 / $1,000,000 = 13.0%",
+              "right": "The project ROI of 13.0% exceeds the 10% cost of capital, so it creates economic value"
+            },
+            {
+              "index": 2,
+              "left": "Post-project E-commerce ROI: ($980,000 + $130,000) / ($4,200,000 + $1,000,000) = 21.0%",
+              "right": "The blended ROI decreases from 23.3% to 21.0%, which may discourage the manager from accepting"
+            },
+            {
+              "index": 3,
+              "left": "Project Residual Income: $130,000 − (10% × $1,000,000) = $30,000",
+              "right": "RI is POSITIVE at $30,000, meaning the project adds value above the required return"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"If evaluated on RI, the manager would REJECT this project because it reduces overall value\"]",
+          "unusedRightItems": [
+            "If evaluated on RI, the manager would REJECT this project because it reduces overall value"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-C2-Q5",
+      "caseId": "CBQ5-C2",
+      "caseTitle": "Responsibility Centers and ROI",
+      "section": "C",
+      "pack": 5,
+      "prompt": "OmniSource's controller is designing a balanced performance measurement system. Match each performance dimension to the most appropriate metric from the given options.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Financial performance of investment centers",
+              "right": "Financial — ROI and Residual Income measure investment center profitability"
+            },
+            {
+              "index": 1,
+              "left": "Customer satisfaction and market position",
+              "right": "Customer — Net Promoter Score and market share track customer loyalty and competitive position"
+            },
+            {
+              "index": 2,
+              "left": "Internal process efficiency and quality",
+              "right": "Internal Process — defect rates and cycle time measure operational efficiency"
+            },
+            {
+              "index": 3,
+              "left": "Employee development and innovation capability",
+              "right": "Learning and Growth — employee training hours and certification rates measure capability development"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Strategic — revenue growth rate measures market expansion\"]",
+          "unusedRightItems": [
+            "Strategic — revenue growth rate measures market expansion"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-C3-Q2",
+      "caseId": "CBQ5-C3",
+      "caseTitle": "Sales Quantity and Volume Variances",
+      "section": "C",
+      "pack": 5,
+      "prompt": "The CFO needs to explain each variance component to the VP of Sales. Match each variance concept to the correct calculated result based on the data in Exhibit 1.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "SAME_ANSWER_REUSE",
+          "severity": "HIGH",
+          "detail": "\"$198,000 Favorable — EverFresh sold 15,000 more total units than budgeted; at the budgeted weighted-average CM of $13.20, this generated $198,000 of additional contribution margin regardless of product mix\" is the correct mapping for 2 different LeftItems: [\"Sales Volume Variance = $230,000 F — total impact of selling different volumes at budgeted margins\", \"Sales Quantity Variance = (Total Actual Units − Total Budget Units) × Budgeted WACM\"]",
+          "affectedPrompts": [
+            "Sales Volume Variance = $230,000 F — total impact of selling different volumes at budgeted margins",
+            "Sales Quantity Variance = (Total Actual Units − Total Budget Units) × Budgeted WACM"
+          ]
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "2 RightItems are never used as a correct answer: [\"$32,000 Favorable — EverFresh sold a higher proportion of Premium Juice Blends (43.5% actual vs 40% budget) which carry a higher $18 CM, increasing total contribution beyond the quantity-only effect\", \"$230,000 Unfavorable — an incorrect aggregation that reverses the sign\"]",
+          "unusedRightItems": [
+            "$32,000 Favorable — EverFresh sold a higher proportion of Premium Juice Blends (43.5% actual vs 40% budget) which carry a higher $18 CM, increasing total contribution beyond the quantity-only effect",
+            "$230,000 Unfavorable — an incorrect aggregation that reverses the sign"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Author distinct RightItems for each LeftItem so no two prompts share the same answer text.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-D3-Q4",
+      "caseId": "CBQ4-D3",
+      "caseTitle": "Capacity Management Concepts",
+      "section": "D",
+      "pack": 4,
+      "prompt": "The CFO must recommend a capacity management strategy for each department. Match each department's situation to the most appropriate capacity strategy using Exhibit 1.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Cutting Department — practical capacity is 38,000 but actual is only 28,000; 10,000 units of capacity are idle",
+              "right": "Reduce unused capacity — investigate why 26% of practical capacity is idle; consider using excess capacity for new products or outsourcing selected operations to fill the gap"
+            },
+            {
+              "index": 1,
+              "left": "Assembly Department — practical capacity is 42,000; this is the highest capacity in the plant; other departments limit total output to 28,000",
+              "right": "Identify as the bottleneck — this department currently does not limit output, but management should monitor it to ensure Assembly remains the constraint"
+            },
+            {
+              "index": 2,
+              "left": "Finishing Department — practical capacity is 40,000; new equipment would increase capacity to 55,000 but cost $2.5M",
+              "right": "Defer capital investment — current capacity exceeds demand; investing in additional capacity would increase fixed costs without increasing throughput"
+            },
+            {
+              "index": 3,
+              "left": "All departments — Summit's management wants to understand the true cost of carrying unused capacity over the business cycle",
+              "right": "Use normal capacity for strategic planning — 32,000 units reflects average long-term demand; compare actual to normal to assess capacity utilization over the business cycle"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Outsource all production — contract manufacturing eliminates capacity management concerns\"]",
+          "unusedRightItems": [
+            "Outsource all production — contract manufacturing eliminates capacity management concerns"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-D1-Q1",
+      "caseId": "CBQ5-D1",
+      "caseTitle": "Value Chain and Business Process Improvement",
+      "section": "D",
+      "pack": 5,
+      "prompt": "Heritage Furniture's management team is analyzing primary activities in Porter's value chain. Match each business process to the correct primary activity category.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Negotiating with lumber suppliers and managing raw material inventory levels",
+              "right": "Inbound Logistics — activities related to receiving, storing, and managing inputs"
+            },
+            {
+              "index": 1,
+              "left": "Operating CNC cutting machines and managing the furniture assembly line",
+              "right": "Operations — activities that transform inputs into finished products"
+            },
+            {
+              "index": 2,
+              "left": "Managing finished goods warehousing and coordinating delivery to retail customers",
+              "right": "Outbound Logistics — activities that collect, store, and distribute finished goods to customers"
+            },
+            {
+              "index": 3,
+              "left": "Managing the showroom sales team and running digital advertising campaigns",
+              "right": "Marketing and Sales — activities that make customers aware of products and facilitate purchases"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Service — activities that maintain product value after purchase\"]",
+          "unusedRightItems": [
+            "Service — activities that maintain product value after purchase"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-D1-Q2",
+      "caseId": "CBQ5-D1",
+      "caseTitle": "Value Chain and Business Process Improvement",
+      "section": "D",
+      "pack": 5,
+      "prompt": "Porter's value chain also includes support activities that enable the primary activities. Match each corporate function to the correct support activity category.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Managing employee recruitment, training, and performance evaluation processes",
+              "right": "Human Resource Management — recruiting, training, and developing employees"
+            },
+            {
+              "index": 1,
+              "left": "Developing the ERP system and maintaining the company website and e-commerce platform",
+              "right": "Technology Development — systems, software, and process innovation to support operations"
+            },
+            {
+              "index": 2,
+              "left": "Sourcing raw materials, negotiating supplier contracts, and managing vendor relationships",
+              "right": "Procurement — sourcing and purchasing inputs including materials, equipment, and services"
+            },
+            {
+              "index": 3,
+              "left": "Designing new furniture collections and improving manufacturing processes",
+              "right": "Technology Development — research and development for new products and process design"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Firm Infrastructure — general management, legal, accounting, and finance\"]",
+          "unusedRightItems": [
+            "Firm Infrastructure — general management, legal, accounting, and finance"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-D1-Q3",
+      "caseId": "CBQ5-D1",
+      "caseTitle": "Value Chain and Business Process Improvement",
+      "section": "D",
+      "pack": 5,
+      "prompt": "Based on the value chain analysis in Exhibit 1, match each cost reduction initiative to the value chain activity it targets.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Implement just-in-time (JIT) delivery from lumber suppliers to reduce warehousing costs by reducing raw material inventory levels",
+              "right": "Inbound Logistics — JIT reduces raw material holding costs and improves inventory turnover"
+            },
+            {
+              "index": 1,
+              "left": "Apply Six Sigma DMAIC methodology to reduce the defect rate from 5.2% to 2.5% in the assembly and finishing processes",
+              "right": "Operations — Six Sigma reduces waste and rework costs by eliminating defects at the source"
+            },
+            {
+              "index": 2,
+              "left": "Automate the order-to-ship process and implement zone-based delivery routing to reduce shipping costs",
+              "right": "Outbound Logistics — automation reduces labor costs; zone routing reduces fuel and driver costs"
+            },
+            {
+              "index": 3,
+              "left": "Shift advertising spend from print catalogs to digital channels; reduce showroom square footage",
+              "right": "Marketing and Sales — digital advertising is more cost-effective; smaller showroom reduces occupancy costs"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Service — self-service warranty portal reduces call center staffing requirements\"]",
+          "unusedRightItems": [
+            "Service — self-service warranty portal reduces call center staffing requirements"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-D1-Q4",
+      "caseId": "CBQ5-D1",
+      "caseTitle": "Value Chain and Business Process Improvement",
+      "section": "D",
+      "pack": 5,
+      "prompt": "Heritage Furniture is evaluating different process improvement methodologies. Match each methodology to its correct description and application.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Six Sigma — data-driven methodology for reducing process variation and defects",
+              "right": "Reducing defect rate from 5.2% to 2.5% using DMAIC — defining, measuring, analyzing, improving, and controlling"
+            },
+            {
+              "index": 1,
+              "left": "Benchmarking — comparing performance metrics to industry best practices",
+              "right": "Comparing Heritage's $38.5M operations cost to the $35.0M industry benchmark to identify the 10% gap"
+            },
+            {
+              "index": 2,
+              "left": "Business Process Reengineering (BPR) — fundamental redesign of business processes",
+              "right": "Redesigning the entire order-to-cash process from scratch to eliminate non-value-added steps and achieve radical improvement"
+            },
+            {
+              "index": 3,
+              "left": "Kaizen (Continuous Improvement) — small, incremental improvements by all employees",
+              "right": "Empowering assembly line workers to suggest and implement small daily improvements to workstation layout and workflow"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Implementing an ERP system to integrate all business functions into a single platform\"]",
+          "unusedRightItems": [
+            "Implementing an ERP system to integrate all business functions into a single platform"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-D1-Q5",
+      "caseId": "CBQ5-D1",
+      "caseTitle": "Value Chain and Business Process Improvement",
+      "section": "D",
+      "pack": 5,
+      "prompt": "Heritage Furniture wants to assess which activities in its value chain are core competencies versus commodity activities. Match each assessment to the correct strategic implication.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Custom furniture design and hand-finishing techniques — competitors cannot replicate; customers pay premium pricing",
+              "right": "Core competency — invest in retaining and strengthening this capability; it provides competitive advantage"
+            },
+            {
+              "index": 1,
+              "left": "Payroll processing and basic accounting — multiple third-party providers can perform at lower cost",
+              "right": "Outsource or automate — non-core activity that can be performed more efficiently by specialized providers"
+            },
+            {
+              "index": 2,
+              "left": "Lumber procurement — several suppliers available; market is competitive and transparent",
+              "right": "Manage for cost efficiency — procurement costs should be minimized through competitive bidding and supplier management"
+            },
+            {
+              "index": 3,
+              "left": "CNC cutting operations — machine cost is similar across competitors; no significant differentiation",
+              "right": "Manage for cost efficiency — operations cost must be at or below industry benchmark to remain competitive"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Divest — sell this business unit entirely\"]",
+          "unusedRightItems": [
+            "Divest — sell this business unit entirely"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-D2-Q1",
+      "caseId": "CBQ5-D2",
+      "caseTitle": "Six Sigma and Quality Control",
+      "section": "D",
+      "pack": 5,
+      "prompt": "The Six Sigma team is planning the DMAIC project. Match each DMAIC phase to the correct activity that PAC's team would perform during that phase.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "5/5 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Define - the team defines the problem, project scope, and customer requirements",
+              "right": "Documenting that the brake caliper defect rate is 6,210 ppm and setting a target of reducing it to 3,100 ppm within 12 months"
+            },
+            {
+              "index": 1,
+              "left": "Measure - the team collects baseline data and measures current process performance",
+              "right": "Collecting 90 days of production data showing that 85% of defects originate in the machining center's tolerance drift"
+            },
+            {
+              "index": 2,
+              "left": "Analyze - the team identifies root causes of defects and process variation",
+              "right": "Using a cause-and-effect diagram and hypothesis testing to determine that coolant temperature variation is the primary root cause of bore diameter defects"
+            },
+            {
+              "index": 3,
+              "left": "Improve - the team develops and implements solutions to address root causes",
+              "right": "Installing temperature control sensors on the machining center and implementing a statistical process control (SPC) chart for real-time bore diameter monitoring"
+            },
+            {
+              "index": 4,
+              "left": "Control - the team monitors the improved process to sustain gains",
+              "right": "Implementing a weekly SPC review meeting and a monthly audit to ensure the temperature control system remains calibrated and operators follow the new procedure"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Designing a new brake caliper model with different specifications\"]",
+          "unusedRightItems": [
+            "Designing a new brake caliper model with different specifications"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-D2-Q2",
+      "caseId": "CBQ5-D2",
+      "caseTitle": "Six Sigma and Quality Control",
+      "section": "D",
+      "pack": 5,
+      "prompt": "The quality director needs to explain the cost of quality (COQ) categories to senior management. Match each quality cost item from Exhibit 1 to its correct COQ classification.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Employee quality training and certification programs costing $180,000 per quarter",
+              "right": "Prevention cost - costs incurred to prevent defects from occurring in the first place; proactive spending that reduces all other quality costs"
+            },
+            {
+              "index": 1,
+              "left": "Inline quality checks during production costing $210,000 per quarter",
+              "right": "Appraisal cost - costs of measuring, inspecting, and testing products to ensure they meet quality standards"
+            },
+            {
+              "index": 2,
+              "left": "Scrapped materials and rework labor from defective brake calipers costing $420,000 per quarter",
+              "right": "Internal failure cost - costs of defects discovered BEFORE the product reaches the customer; includes scrap, rework, and downtime"
+            },
+            {
+              "index": 3,
+              "left": "Customer warranty claims for field failures costing $580,000 per quarter",
+              "right": "External failure cost - costs of defects discovered AFTER the product reaches the customer; includes warranty claims, returns, and lost reputation"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Design cost - costs of developing new products and features\"]",
+          "unusedRightItems": [
+            "Design cost - costs of developing new products and features"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-D3-Q3",
+      "caseId": "CBQ5-D3",
+      "caseTitle": "Transfer Pricing (Dual Pricing)",
+      "section": "D",
+      "pack": 5,
+      "prompt": "Match each transfer pricing method to the scenario where it would be most appropriate.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Market-based",
+              "right": "An active external market exists and divisions operate as independent profit centers"
+            },
+            {
+              "index": 1,
+              "left": "Cost-based",
+              "right": "No reliable market price exists and company wants simplicity in administration"
+            },
+            {
+              "index": 2,
+              "left": "Negotiated",
+              "right": "Divisions have equal bargaining power and management encourages autonomy"
+            },
+            {
+              "index": 3,
+              "left": "Dual pricing",
+              "right": "Divisions have conflicting objectives and corporate wants goal congruence"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Division has no excess capacity and full external market demand exists\"]",
+          "unusedRightItems": [
+            "Division has no excess capacity and full external market demand exists"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-E2-Q1",
+      "caseId": "CBQ4-E2",
+      "caseTitle": "Application IT Controls",
+      "section": "E",
+      "pack": 4,
+      "prompt": "The internal audit team identified several scenarios where application controls should prevent or detect errors. Match each scenario to the appropriate application control from Exhibit 1.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "An accounts payable clerk accidentally enters $25,000 instead of $2,500 for the unit price of a surgical instrument on a purchase order",
+              "right": "Purchase order limit check — the entered unit price ($25,000) exceeds the 20% threshold above the expected price, triggering a rejection"
+            },
+            {
+              "index": 1,
+              "left": "A data entry operator creates an invoice referencing a vendor ID that does not exist in the approved vendor master table",
+              "right": "Vendor master validity check — the system verifies the vendor ID against the approved master table and rejects the invoice when no match is found"
+            },
+            {
+              "index": 2,
+              "left": "An order entry clerk enters a customer account number as 48219 instead of 48129 — a transposition of two digits",
+              "right": "Check digit validation — the modulus-10 algorithm detects the transposition error and rejects the account number as invalid"
+            },
+            {
+              "index": 3,
+              "left": "An order processor attempts to enter a sales order for a customer whose outstanding balance already exceeds the approved credit limit",
+              "right": "Customer credit limit check — the system blocks the order and notifies the order processor that the credit limit would be exceeded"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Completeness check — ensures all required fields like customer name, address, and order date are filled\"]",
+          "unusedRightItems": [
+            "Completeness check — ensures all required fields like customer name, address, and order date are filled"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-E2-Q4",
+      "caseId": "CBQ4-E2",
+      "caseTitle": "Application IT Controls",
+      "section": "E",
+      "pack": 4,
+      "prompt": "MedTech's internal audit team is classifying application controls by type. Match each control description to the correct control category using Exhibit 2.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "When a receiving clerk enters the quantity received, the ERP system verifies that it does not exceed the quantity ordered by more than 10%",
+              "right": "Input control — quantity reasonableness check prevents receiving errors from entering the system"
+            },
+            {
+              "index": 1,
+              "left": "The ERP system assigns sequential batch numbers to all invoice batches; the accounting supervisor reviews a daily gap report for missing batches",
+              "right": "Processing control — batch sequence verification ensures no invoice batches are lost or deleted during processing"
+            },
+            {
+              "index": 2,
+              "left": "The accounts payable manager reviews a weekly aged payables report and investigates any invoices older than 45 days",
+              "right": "Output control — periodic review of processed output ensures accuracy and triggers follow-up on anomalies"
+            },
+            {
+              "index": 3,
+              "left": "The ERP system restricts invoice entry to users in the AP Clerk role; procurement managers cannot enter invoices",
+              "right": "Access control — role-based security prevents users from performing incompatible functions"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"General IT control — relates to the overall IT environment rather than a specific application\"]",
+          "unusedRightItems": [
+            "General IT control — relates to the overall IT environment rather than a specific application"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-E3-Q4",
+      "caseId": "CBQ4-E3",
+      "caseTitle": "Foreign Corrupt Practices Act (FCPA)",
+      "section": "E",
+      "pack": 4,
+      "prompt": "The internal audit team classified each risk scenario from Exhibit 1 for further action. Match each scenario to the most appropriate compliance response.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Customs expediting fee — $500 paid to customs official; recorded as expense",
+              "right": "Permissible if properly approved and documented under company policy — establish clear policy on facilitating payments; continue monitoring"
+            },
+            {
+              "index": 1,
+              "left": "Agent commission — 15% via shell company; agent related to procurement minister",
+              "right": "Investigate immediately and consider termination — red flags indicate likely improper payments; may require voluntary disclosure to DOJ"
+            },
+            {
+              "index": 2,
+              "left": "Charitable donation request — $50,000 to minister's personal foundation",
+              "right": "Decline and report to compliance committee — donation to personal entity of government official is presumptively improper; offer alternative legitimate charitable options"
+            },
+            {
+              "index": 3,
+              "left": "Luxury client entertainment — $1,200/person including spouses for government clients",
+              "right": "Review and strengthen expense policy — entertainment exceeding $500 per person should require pre-approval; spouse attendance is presumptively improper"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"No action needed — these are standard business practices in emerging markets\"]",
+          "unusedRightItems": [
+            "No action needed — these are standard business practices in emerging markets"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-E1-Q1",
+      "caseId": "CBQ5-E1",
+      "caseTitle": "Internal Auditing Standards",
+      "section": "E",
+      "pack": 5,
+      "prompt": "Match each IIA Standard category to the type of guidance it provides.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "3/3 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Attribute Standards",
+              "right": "Define the characteristics and capabilities required for internal audit activities and individuals"
+            },
+            {
+              "index": 1,
+              "left": "Performance Standards",
+              "right": "Describe the nature of internal audit work and quality criteria for measuring performance"
+            },
+            {
+              "index": 2,
+              "left": "Implementation Standards",
+              "right": "Apply Attribute and Performance Standards to specific engagement types such as assurance or consulting"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Establish the ethical requirements for internal audit professionals including integrity and confidentiality\"]",
+          "unusedRightItems": [
+            "Establish the ethical requirements for internal audit professionals including integrity and confidentiality"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-E2-Q1",
+      "caseId": "CBQ5-E2",
+      "caseTitle": "Cybersecurity and Malware",
+      "section": "E",
+      "pack": 5,
+      "prompt": "The CISO is preparing an incident report for the board. Match each cybersecurity threat type to its role in the CCHS incident.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Phishing email",
+              "right": "The initial attack vector — a deceptive email with a malicious attachment bypassed human controls and delivered the trojan to the billing workstation"
+            },
+            {
+              "index": 1,
+              "left": "Remote Access Trojan (RAT)",
+              "right": "The persistence mechanism — remained undetected for 48 hours, exfiltrated credentials, and provided remote access for lateral movement"
+            },
+            {
+              "index": 2,
+              "left": "Ransomware",
+              "right": "The final payload — encrypted files across the network causing a 22-day operational outage and $18.2 million in estimated losses"
+            },
+            {
+              "index": 3,
+              "left": "DDoS (distraction attack)",
+              "right": "A coordinated traffic flood against the patient portal designed to divert IT resources during the ransomware deployment"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"A vulnerability scanning tool that identifies missing security patches across network devices and servers\"]",
+          "unusedRightItems": [
+            "A vulnerability scanning tool that identifies missing security patches across network devices and servers"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ4-F3-Q2",
+      "caseId": "CBQ4-F3",
+      "caseTitle": "Data Privacy & Cryptography",
+      "section": "F",
+      "pack": 4,
+      "prompt": "Match each cryptographic method to its correct description.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Symmetric encryption",
+              "right": "Uses one shared key for both encryption and decryption"
+            },
+            {
+              "index": 1,
+              "left": "Asymmetric encryption",
+              "right": "Uses a public-private key pair for encryption and decryption"
+            },
+            {
+              "index": 2,
+              "left": "Hashing",
+              "right": "Produces a fixed-length output that cannot be reversed to the original input"
+            },
+            {
+              "index": 3,
+              "left": "Digital signature",
+              "right": "Uses a private key to sign and a public key to verify authenticity"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"Reverses encrypted data by applying the original transformation\"]",
+          "unusedRightItems": [
+            "Reverses encrypted data by applying the original transformation"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-F1-Q1",
+      "caseId": "CBQ5-F1",
+      "caseTitle": "Big Data Characteristics",
+      "section": "F",
+      "pack": 5,
+      "prompt": "OmniMart's data environment exhibits characteristics of all four Vs of big data. Match each V to the data characteristic it describes.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Volume",
+              "right": "The massive scale of data generated from 12 million daily POS transactions and 4 million customer profiles"
+            },
+            {
+              "index": 1,
+              "left": "Velocity",
+              "right": "The high speed of data generation requiring real-time processing of 50,000 clickstream events per minute"
+            },
+            {
+              "index": 2,
+              "left": "Variety",
+              "right": "The diverse data formats including structured POS data, semi-structured RFID feeds, and unstructured social media text"
+            },
+            {
+              "index": 3,
+              "left": "Veracity",
+              "right": "The uncertainty and quality concerns arising from 22% incomplete profiles, 3% RFID read failures, and unreconciled cost data"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"The business value derived from analyzing data to create competitive advantage and improve decision-making\"]",
+          "unusedRightItems": [
+            "The business value derived from analyzing data to create competitive advantage and improve decision-making"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-F2-Q1",
+      "caseId": "CBQ5-F2",
+      "caseTitle": "Robotic Process Automation (RPA)",
+      "section": "F",
+      "pack": 5,
+      "prompt": "The CFO's team is preparing a training deck on RPA for the audit committee. Match each RPA characteristic to its correct description.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Rule-based processing",
+              "right": "RPA bots execute predefined, structured steps following explicit business rules without deviation or judgment"
+            },
+            {
+              "index": 1,
+              "left": "User interface interaction",
+              "right": "RPA bots interact with applications through the same user interface as human users, requiring no system integration changes"
+            },
+            {
+              "index": 2,
+              "left": "Exception handling",
+              "right": "Bots flag transactions that fall outside predefined parameters for human review, with automated routing to the appropriate team member"
+            },
+            {
+              "index": 3,
+              "left": "Attended vs unattended mode",
+              "right": "Attended bots run on user desktops with human triggers; unattended bots run on servers on scheduled intervals without human intervention"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"RPA bots use machine learning algorithms to self-optimize process execution over time based on historical patterns\"]",
+          "unusedRightItems": [
+            "RPA bots use machine learning algorithms to self-optimize process execution over time based on historical patterns"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    },
+    {
+      "itemId": "CBQ5-F3-Q1",
+      "caseId": "CBQ5-F3",
+      "caseTitle": "Blockchain and Distributed Ledgers",
+      "section": "F",
+      "pack": 5,
+      "prompt": "The CFO is presenting blockchain fundamentals to the board. Match each blockchain concept to its correct accounting application.",
+      "priorityScore": 10,
+      "findings": [
+        {
+          "category": "ORDERED_ANSWER_PATTERN",
+          "severity": "HIGH",
+          "detail": "4/4 LeftItems map sequentially to RightItems (100%). Learner can guess by position.",
+          "sequentialPairs": [
+            {
+              "index": 0,
+              "left": "Distributed ledger",
+              "right": "A shared database across network participants that eliminates reconciliation between separate organizational systems"
+            },
+            {
+              "index": 1,
+              "left": "Immutability",
+              "right": "Data permanence that prevents retroactive alteration of records, strengthening audit trail reliability"
+            },
+            {
+              "index": 2,
+              "left": "Smart contracts",
+              "right": "Self-executing code that automatically triggers actions such as payment release when predefined delivery conditions are met"
+            },
+            {
+              "index": 3,
+              "left": "Consensus mechanism",
+              "right": "A validation process where network participants agree on transaction validity before records are added to the ledger"
+            }
+          ],
+          "sequentialRatio": 1
+        },
+        {
+          "category": "UNUSED_DISTRACTOR",
+          "severity": "LOW",
+          "detail": "1 RightItems are never used as a correct answer: [\"A cryptographic technique that encrypts all transaction data so only authorized participants can read the contents\"]",
+          "unusedRightItems": [
+            "A cryptographic technique that encrypts all transaction data so only authorized participants can read the contents"
+          ]
+        }
+      ],
+      "remediationHints": [
+        "Shuffle RightItems so correct answers are not at same position as prompts.",
+        "Either remove unused RightItems or assign them as distractors in a redesigned set."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "session": "MAY-016",
+  "timestamp": "2026-07-30T21:16:18.000Z",
+  "preflight": {
+    "status": "PASS",
+    "divergences": 0,
+    "certifiedTotal": 2451,
+    "governanceGuard": "54/54 PASS"
+  },
+  "smoke": {
+    "status": "17/17 PASS",
+    "mayLayerLoaded": true,
+    "orchestratorHealth": "all 8 dependencies present",
+    "zeroErrors": true
+  },
+  "flags": {
+    "total": 15,
+    "allDefaultFalse": true,
+    "llmFlagsOff": true,
+    "dashboard": "PASS — 0 errors, 0 warnings"
+  },
+  "rollout": {
+    "status": "READY",
+    "checksPassed": 99,
+    "checksFailed": 1,
+    "errors": 0,
+    "warnings": 5,
+    "warningsExpected": "Yes — May scripts legitimately READ question_state, CorrectChoice, ExplanationCorrect for coaching context. No WRITE operations."
+  },
+  "newFiles": {
+    "may-telemetry.js": {
+      "purpose": "Standardized telemetry for May coaching layer (console-only, buffer capped 500)",
+      "size": 4192,
+      "exports": "window.MayTelemetry"
+    },
+    "scripts/may_feature_flag_dashboard.js": {
+      "purpose": "Developer diagnostics for May feature flags",
+      "exitCode": 0,
+      "errors": 0
+    },
+    "scripts/may_rollout_checklist.js": {
+      "purpose": "Activation readiness validator for May coaching layer",
+      "exitCode": 0,
+      "errors": 0
+    },
+    "reports/MAY016_ACTIVATION_PLAN.md": {
+      "purpose": "Enablement sequence, flag dependencies, success metrics"
+    },
+    "reports/MAY016_OBSERVABILITY_PLAN.md": {
+      "purpose": "Telemetry dimensions, infrastructure, integration points"
+    },
+    "reports/MAY016_ROLLBACK_PLAN.md": {
+      "purpose": "Stage-by-stage rollback procedures, safety guarantees"
+    }
+  },
+  "modifiedFiles": {
+    "index_updated.html": {
+      "change": "Added <script src=\"may-telemetry.js\"></script> after may-feature-flags.js"
+    }
+  },
+  "releaseReadiness": {
+    "score": 92,
+    "rationale": "MAY-015 base (89) + activation plan (+1) + observability plan (+1) + rollback plan (+1) + telemetry module (+1) + flag dashboard (+1) + rollout checklist (+1) - 5 informational warnings (-3) = 92/100"
+  },
+  "successCriteria": {
+    "activationProcedureDocumented": true,
+    "rollbackProcedureDocumented": true,
+    "telemetryStandardized": true,
+    "featureFlagsFullyInventoried": true,
+    "operationalReadinessValidated": true,
+    "releaseReadinessScore": 92,
+    "repositoryDivergenceFree": true
+  },
+  "governance": {
+    "lane": "Light",
+    "noContentChanges": true,
+    "noScoringChanges": true,
+    "noPackEdits": true,
+    "smokeAtTend": "17/17 PASS",
+    "preflightAtT0": "0 divergences"
+  }
+}

@@ -243,7 +243,7 @@ const MayCoachingOrchestrator = (function() {
         nextAction: null,
         routerPayload: null,
         _meta: {
-          orchestratorVersion: 'MAY006-1.0',
+          orchestratorVersion: 'MAY019-1.0',
           computedAt: new Date().toISOString(),
           flagsActive: flagsActive,
           degradedComponents: degraded,
@@ -274,6 +274,58 @@ const MayCoachingOrchestrator = (function() {
       };
     }
 
+    // MAY-017 — Telemetry collection
+    try {
+      if (typeof MayTelemetry !== 'undefined') {
+        if (decision) {
+          MayTelemetry.trackDecision({
+            decisionId: decision.decisionId,
+            action: decision.action,
+            coachingMode: decision.coachingMode,
+            priority: decision.priority,
+            topic: decision.topic
+          });
+          // CAL-06 (MAY-019): Track mode from decision engine
+          if (decision.coachingMode) {
+            MayTelemetry.trackMode(decision.coachingMode, 0);
+          }
+        }
+        if (readiness) {
+          MayTelemetry.trackReadiness({
+            overallBand: readiness.band,
+            overallScore: readiness.readinessScore,
+            topicsWithData: readiness.topicCoverage ? readiness.topicCoverage.topicsWithData : 0
+          });
+        }
+        if (recommendations && recommendations.length > 0) {
+          MayTelemetry.trackRecommendation({
+            count: recommendations.length,
+            topType: recommendations[0].type,
+            topTopic: recommendations[0].topic,
+            topPriority: recommendations[0].priority
+          });
+        }
+        // CAL-05 (MAY-019): Track top 3 interventions
+        if (interventions && interventions.queue && interventions.queue.length > 0) {
+          interventions.queue.slice(0, 3).forEach(function(iv) {
+            MayTelemetry.trackIntervention({
+              tier: iv.tier,
+              tierLabel: iv.tierLabel,
+              topic: iv.topic,
+              priorityScore: iv.priorityScore
+            });
+          });
+        }
+        // CAL-07 (MAY-019): Persist telemetry snapshot to localStorage
+        try {
+          var snap = MayTelemetry.snapshot();
+          if (typeof localStorage !== 'undefined') {
+            localStorage.setItem('cmaMayPilotTelemetry', JSON.stringify(snap));
+          }
+        } catch (ePersist) { /* persistence non-blocking */ }
+      }
+    } catch (e) { /* telemetry non-blocking */ }
+
     return {
       profile: profile,
       readiness: readiness,
@@ -285,7 +337,7 @@ const MayCoachingOrchestrator = (function() {
       nextAction: nextAction,
       routerPayload: routerPayload,
       _meta: {
-        orchestratorVersion: 'MAY006-1.0',
+        orchestratorVersion: 'MAY019-1.0',
         computedAt: new Date().toISOString(),
         flagsActive: flagsActive,
         degradedComponents: degraded

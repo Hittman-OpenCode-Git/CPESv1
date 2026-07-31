@@ -1,0 +1,319 @@
+{
+  "file": "SESSION076P_MAY_CONTEXT_SCHEMA.json",
+  "session": "S76P",
+  "date": "2026-07-29",
+  "purpose": "Defines the structured context object that powers all May coaching functions. This schema provides a single, complete snapshot of everything May needs to know about the current question, learner, and session state.",
+  "schema": {
+    "MayContext": {
+      "description": "Root context object passed to all May coaching functions",
+      "properties": {
+        "question": {"$ref": "#/schema/QuestionContext"},
+        "learner": {"$ref": "#/schema/LearnerContext"},
+        "session": {"$ref": "#/schema/SessionContext"},
+        "app": {"$ref": "#/schema/AppContext"},
+        "timestamp": {"type": "string", "format": "ISO 8601"}
+      }
+    },
+    "QuestionContext": {
+      "description": "Everything May knows about the current question",
+      "properties": {
+        "questionId": {"type": "string", "example": "P1-B-040"},
+        "pack": {"type": "string", "example": "A"},
+        "part": {"type": "integer", "example": 1},
+        "section": {"type": "string", "example": "B"},
+        "sectionName": {"type": "string", "example": "Planning, Budgeting, and Forecasting"},
+        "topic": {"type": "string", "example": "Budget variance investigation criteria"},
+        "subtopic": {"type": "string", "nullable": true},
+        "cognitiveLevel": {"type": "string", "enum": ["Remember", "Understand", "Apply", "Analyze", "Evaluate"], "example": "Evaluate"},
+        "difficulty": {"type": "string", "enum": ["Easy", "Moderate-Easy", "Moderate", "Difficult", "Very Difficult"], "example": "Difficult"},
+        "difficultyScore": {"type": "integer", "minimum": 1, "maximum": 5, "example": 4},
+        "stem": {"type": "string", "example": "Eastwood investigates any budget variance exceeding 5% of budgeted cost or $10,000..."},
+        "choices": {
+          "type": "object",
+          "properties": {
+            "A": {"type": "string"},
+            "B": {"type": "string"},
+            "C": {"type": "string"},
+            "D": {"type": "string"}
+          }
+        },
+        "correctChoice": {"type": "string", "enum": ["A", "B", "C", "D"], "example": "C"},
+        "explanationCorrect": {"type": "string"},
+        "explanationWrong": {
+          "type": "object",
+          "properties": {
+            "A": {"type": "string"},
+            "B": {"type": "string"},
+            "C": {"type": "string"},
+            "D": {"type": "string"}
+          }
+        },
+        "questionState": {"type": "string", "enum": ["Unprocessed", "In Audit", "Editorial Queue", "Certified", "Archived"]},
+        "isDefective": {"type": "boolean", "description": "True if QID is in active DEFECT_MANIFEST"},
+        "defectTags": {"type": "array", "items": {"type": "string"}, "description": "DL-008, DL-026, etc."},
+        "formulaReference": {"type": "string", "nullable": true},
+        "losTag": {"type": "string", "nullable": true, "example": "B.2.b"},
+        "pedagogicalCluster": {"type": "string", "nullable": true},
+        "isCaseItem": {"type": "boolean"},
+        "caseContext": {"$ref": "#/schema/CaseItemContext", "nullable": true}
+      }
+    },
+    "LearnerContext": {
+      "description": "Cross-session learner profile aggregated by MayLearnerState",
+      "properties": {
+        "learnerId": {"type": "string", "example": "student_1"},
+        "name": {"type": "string", "example": "Alex"},
+        "totalSessions": {"type": "integer", "example": 12},
+        "totalAttempts": {"type": "integer", "example": 487},
+        "overallAccuracy": {"type": "number", "minimum": 0, "maximum": 1, "example": 0.68},
+        "topicPerformance": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "attempts": {"type": "integer"},
+              "accuracy": {"type": "number"},
+              "trend": {"type": "string", "enum": ["improving", "stable", "declining", "insufficient_data"]},
+              "avgConfidence": {"type": "number"},
+              "hintDependency": {"type": "number", "description": "Fraction of attempts requiring hints"}
+            }
+          }
+        },
+        "weaknessClusters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "topic": {"type": "string"},
+              "clusterType": {"type": "string", "enum": ["persistentWeak", "declining", "unstable", "hintDependent", "difficultySensitive"]},
+              "severity": {"type": "number", "minimum": 0, "maximum": 1},
+              "attempts": {"type": "integer"},
+              "lastAttempt": {"type": "string", "format": "date"}
+            }
+          }
+        },
+        "readinessBands": {
+          "type": "object",
+          "additionalProperties": {"type": "string", "enum": ["Ready for focused review", "Approaching review-ready", "Developing", "Recovery needed", "Insufficient data"]}
+        },
+        "sectionReadiness": {
+          "type": "object",
+          "additionalProperties": {"type": "string"}
+        },
+        "confidenceCalibration": {
+          "type": "object",
+          "properties": {
+            "overconfidentRate": {"type": "number"},
+            "underconfidentRate": {"type": "number"},
+            "calibratedRate": {"type": "number"}
+          }
+        },
+        "misconceptionMap": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "misconceptionId": {"type": "string"},
+              "description": {"type": "string"},
+              "occurrences": {"type": "integer"},
+              "topics": {"type": "array", "items": {"type": "string"}},
+              "severity": {"type": "string", "enum": ["high", "medium", "low"]}
+            }
+          }
+        },
+        "casePatterns": {"$ref": "#/schema/CasePatterns"},
+        "practiceMix": {"$ref": "#/schema/PracticeMix"},
+        "examPlan": {
+          "type": "object",
+          "nullable": true,
+          "properties": {
+            "examDate": {"type": "string", "format": "date"},
+            "daysRemaining": {"type": "integer"},
+            "studyHoursPerWeek": {"type": "number"},
+            "targetScore": {"type": "integer"}
+          }
+        }
+      }
+    },
+    "SessionContext": {
+      "description": "Current session state",
+      "properties": {
+        "sessionId": {"type": "string"},
+        "sessionType": {"type": "string", "enum": ["practice", "exam", "review"]},
+        "mode": {"type": "string", "enum": ["mcq", "cases", "mixed"]},
+        "startTime": {"type": "string", "format": "ISO 8601"},
+        "elapsedMs": {"type": "integer"},
+        "currentQuestionIndex": {"type": "integer"},
+        "totalQuestions": {"type": "integer"},
+        "mcqsAnswered": {"type": "integer"},
+        "casesStarted": {"type": "integer"},
+        "casesCompleted": {"type": "integer"},
+        "isCompleted": {"type": "boolean"},
+        "isSubmitted": {"type": "boolean"},
+        "currentTopic": {"type": "string"},
+        "previousQuestion": {
+          "type": "object",
+          "nullable": true,
+          "properties": {
+            "questionId": {"type": "string"},
+            "selectedAnswer": {"type": "string", "nullable": true},
+            "correct": {"type": "boolean", "nullable": true},
+            "hintsRequested": {"type": "integer"},
+            "timeOnQuestion": {"type": "integer", "description": "milliseconds"}
+          }
+        }
+      }
+    },
+    "AppContext": {
+      "description": "Application-level state",
+      "properties": {
+        "mayConfig": {
+          "type": "object",
+          "properties": {
+            "enableLLM": {"type": "boolean", "default": false},
+            "tutoringPilotEnabled": {"type": "boolean", "default": false},
+            "coachingTabOpen": {"type": "boolean"},
+            "miniPanelOpen": {"type": "boolean"},
+            "examModeActive": {"type": "boolean", "description": "CMA Exam mode — blocks answer-revealing coaching"}
+          }
+        },
+        "defectManifestVersion": {"type": "string", "nullable": true},
+        "questionBankHash": {"type": "string", "nullable": true},
+        "screenWidth": {"type": "integer", "description": "For responsive layout decisions"},
+        "isMobile": {"type": "boolean"}
+      }
+    },
+    "CaseItemContext": {
+      "description": "Additional context when current question is a case item",
+      "properties": {
+        "caseId": {"type": "string", "example": "CBQ2-B2"},
+        "caseTitle": {"type": "string", "example": "Cash Budgeting and Forecasting"},
+        "itemIndex": {"type": "integer", "description": "Position within case (1-7)"},
+        "totalCaseItems": {"type": "integer"},
+        "exhibitCount": {"type": "integer"},
+        "previousItemsAnswered": {"type": "integer"},
+        "previousItemsCorrect": {"type": "integer"},
+        "scenarioText": {"type": "string"}
+      }
+    },
+    "CasePatterns": {
+      "type": "object",
+      "properties": {
+        "evidenceLocation": {"type": "number"},
+        "calculationSetup": {"type": "number"},
+        "exhibitInterpretation": {"type": "number"},
+        "controlJudgment": {"type": "number"},
+        "answerElimination": {"type": "number"}
+      }
+    },
+    "PracticeMix": {
+      "type": "object",
+      "properties": {
+        "recommendation": {"type": "string", "enum": ["MCQ Reinforcement", "Case Reinforcement", "Mixed Practice", "Untimed Recovery"]},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "evidenceFactors": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  },
+  "usageExample": {
+    "description": "Example MayContext populated for a learner answering P1-B-040",
+    "context": {
+      "question": {
+        "questionId": "P1-B-040",
+        "pack": "A",
+        "section": "B",
+        "sectionName": "Planning, Budgeting, and Forecasting",
+        "topic": "Budget variance investigation criteria",
+        "cognitiveLevel": "Evaluate",
+        "difficulty": "Difficult",
+        "difficultyScore": 4,
+        "stem": "Eastwood investigates any budget variance exceeding 5% of budgeted cost or $10,000, whichever is smaller. A department shows a $9,000 unfavorable variance on a $150,000 budget. Should this be investigated?",
+        "choices": {
+          "A": "No, because $9,000 is less than $10,000",
+          "B": "Yes, because 5% of $150,000 = $7,500, and it exceeds the threshold, so it should be investigated",
+          "C": "No, because 5% of $150,000 is $7,500 and $9,000 exceeds the $7,500 threshold",
+          "D": "Yes, because $9,000 exceeds $10,000"
+        },
+        "correctChoice": "B",
+        "explanationCorrect": "The variance exceeds the 5% of budget threshold ($7,500) since $9,000 > $7,500. Under management by exception principles...",
+        "explanationWrong": {
+          "A": "This distractor only applies the $10,000 threshold without considering the 5% rule...",
+          "B": "",
+          "C": "This distractor calculates the correct threshold but contradicts the conclusion with 'No'...",
+          "D": "This distractor incorrectly compares $9,000 to $10,000..."
+        },
+        "questionState": "Certified",
+        "isDefective": false,
+        "defectTags": [],
+        "isCaseItem": false
+      },
+      "learner": {
+        "learnerId": "student_1",
+        "overallAccuracy": 0.68,
+        "topicPerformance": {
+          "Budget variance investigation criteria": {"attempts": 3, "accuracy": 0.33, "trend": "declining"}
+        },
+        "weaknessClusters": [],
+        "readinessBands": {"B": "Developing"},
+        "confidenceCalibration": {"overconfidentRate": 0.22, "underconfidentRate": 0.08}
+      },
+      "session": {
+        "sessionType": "practice",
+        "mcqsAnswered": 14,
+        "currentQuestionIndex": 15,
+        "totalQuestions": 30
+      },
+      "app": {
+        "mayConfig": {"enableLLM": false, "examModeActive": false},
+        "screenWidth": 1440,
+        "isMobile": false
+      }
+    }
+  },
+  "recommendedCoachingModes": {
+    "description": "Based on context, May determines which coaching mode to use",
+    "modes": [
+      {
+        "mode": "hint",
+        "trigger": "Student has not answered yet, hint level < 5",
+        "action": "Provide next graduated hint level"
+      },
+      {
+        "mode": "explain_correct",
+        "trigger": "Student answered correctly, confidence low",
+        "action": "Reinforce explanation + check for lucky guess"
+      },
+      {
+        "mode": "explain_wrong",
+        "trigger": "Student answered incorrectly",
+        "action": "Analyze selected wrong choice, diagnose misconception, provide targeted coaching"
+      },
+      {
+        "mode": "socratic_probe",
+        "trigger": "Student asks 'why' or shows confusion",
+        "action": "Ask follow-up questions to guide reasoning"
+      },
+      {
+        "mode": "study_recommend",
+        "trigger": "Student asks 'what should I study' or shows topic weakness",
+        "action": "Generate personalized recommendation from performance data"
+      },
+      {
+        "mode": "exam_briefing",
+        "trigger": "CMA Exam mode, pre-exam",
+        "action": "Provide format briefing + weakness review without answer content"
+      },
+      {
+        "mode": "post_session_review",
+        "trigger": "Session completed",
+        "action": "Build review queue, generate session summary, recommend next steps"
+      }
+    ]
+  },
+  "implementationNotes": {
+    "contextBuilder": "Create may-context-builder.js as a standalone module that assembles this context from current app state, QUESTION_BANK, MayLearnerState, and May config.",
+    "performance": "Cache the context object per question. Rebuild only when: question changes, answer is selected, session state changes, or learner state updates.",
+    "privacy": "When sending context to external LLM (Stage 3), strip learnerId and name. Keep only anonymized performance aggregates.",
+    "examMode": "In CMA Exam mode (app.mayConfig.examModeActive === true), set correctChoice and explanationCorrect to null in the context object before any coaching function receives it."
+  }
+}

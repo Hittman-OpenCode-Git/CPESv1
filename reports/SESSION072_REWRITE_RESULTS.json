@@ -1,0 +1,60 @@
+{
+  "session": "SESSION072",
+  "title": "Section B Cognitive Upgrade Campaign — Wave 2",
+  "status": "COMPLETE",
+  "date": "2026-07-29",
+  "pack": "pack_d_corrected.js",
+  "backup": "backups/pack_d_corrected.js.bak-20260729171000",
+  "governance": {
+    "preflight": "2 pre-existing divergences (Pack E QID 545 vs 540, Certified delta 35) — unchanged from T0",
+    "governance_guard": "54/54 PASS",
+    "syntax": "PASS",
+    "qid_count": 500,
+    "parse": "PASS",
+    "certified_count": 456,
+    "dl008": "0 — all 15 items ExplanationWrong[CorrectChoice] = ''",
+    "dl026": "0 — all non-CC ExplanationWrong fields non-empty",
+    "dl037": "0",
+    "pipeline": "PASS — 0 new errors on Pack D. All errors/warnings pre-existing in other packs"
+  },
+  "rewrite_summary": {
+    "total_rewritten": 15,
+    "evaluate_count": 9,
+    "analyze_count": 6,
+    "source_apply": 11,
+    "source_understand": 4
+  },
+  "rewritten_items": [
+    {"qid":"P1-BD-006","from":"Apply","to":"Evaluate","topic":"Flexible budget variance — benchmark validity","company":"Fernhollow Manufacturing","stakeholder":"Controller Rebecca Walsh","difficulty":"Difficult (4)","defects_fixed":"DL-013 boilerplate in EW-D cleared via rewrite"},
+    {"qid":"P1-BD-021","from":"Apply","to":"Evaluate","topic":"Capital expenditure budget — debt covenant evaluation","company":"Underhill Manufacturing","stakeholder":"CFO Marcus Chen","difficulty":"Very Difficult (5)","defects_fixed":"DL-013 boilerplate in EW-C/D cleared via rewrite"},
+    {"qid":"P1-BD-023","from":"Apply","to":"Evaluate","topic":"Direct labor budget — workforce mix optimization","company":"Whitmore Industries","stakeholder":"Production Dir. James Okonkwo","difficulty":"Very Difficult (5)","defects_fixed":"DL-026 (EW_C empty) + DL-010 (EW_D wrong topic) fixed via rewrite"},
+    {"qid":"P1-BD-028","from":"Apply","to":"Analyze","topic":"Direct labor budget — blended rate timing analysis","company":"Crownridge Manufacturing","stakeholder":"Budget Analyst Priya Anand","difficulty":"Difficult (4)","defects_fixed":"Simple calculation upgraded to rate-change timing analysis"},
+    {"qid":"P1-BD-029","from":"Understand","to":"Evaluate","topic":"Standard cost setting — standard revision governance","company":"Dellwood Industries","stakeholder":"Controller Sarah Kessler","difficulty":"Very Difficult (5)","defects_fixed":"DL-013 boilerplate in EW-C/D cleared via rewrite"},
+    {"qid":"P1-BD-036","from":"Apply","to":"Analyze","topic":"Operating vs financial budget — profit-to-cash reconciliation","company":"Kirkwood Manufacturing","stakeholder":"Controller David Okonkwo","difficulty":"Difficult (4)","defects_fixed":"1-sentence EC expanded to full reconciliation analysis"},
+    {"qid":"P1-BD-037","from":"Apply","to":"Analyze","topic":"Operating vs financial budget — classification principles","company":"Ledgemont Corporation","stakeholder":"Finance Dir. Amara Osei","difficulty":"Difficult (4)","defects_fixed":"Basic definition upgraded to classification framework analysis"},
+    {"qid":"P1-BD-044","from":"Understand","to":"Evaluate","topic":"Time series forecasting — seasonal decomposition evaluation","company":"Sandpiper Industries","stakeholder":"Demand Planning Mgr. Naomi Singh","difficulty":"Difficult (4)","defects_fixed":"Definition-match upgraded to forecast model selection evaluation"},
+    {"qid":"P1-BD-058","from":"Apply","to":"Evaluate","topic":"Budget committee — governance model evaluation","company":"Ivorycrest Corporation","stakeholder":"CEO Patricia Owens","difficulty":"Difficult (4)","defects_fixed":"Basic definition upgraded to governance restructuring evaluation"},
+    {"qid":"P1-BD-065","from":"Apply","to":"Analyze","topic":"S&A expense budget — cost behavior + expansion analysis","company":"Prescott Industries","stakeholder":"Controller Raj Mehta","difficulty":"Difficult (4)","defects_fixed":"Basic definition upgraded to cost classification + CM analysis"},
+    {"qid":"P1-BD-072","from":"Understand","to":"Evaluate","topic":"Forecast accuracy — model selection with bias tradeoff","company":"Whitfield Corporation","stakeholder":"Demand Planning Team","difficulty":"Difficult (4)","defects_fixed":"Definition-match upgraded to MAPE-vs-bias model evaluation"},
+    {"qid":"P1-BD-073","from":"Understand","to":"Analyze","topic":"Forecast accuracy — MAD comparison with error structure","company":"Ashvale Manufacturing","stakeholder":"S&OP Mgr. Marcus Delgado","difficulty":"Difficult (4)","defects_fixed":"DL-010 (EW_C wrong topic) + definition-match fixed via rewrite"},
+    {"qid":"P1-BD-085","from":"Apply","to":"Evaluate","topic":"Budget revision — supply shock persistency evaluation","company":"Kelso Industries","stakeholder":"Controller Lisa Tran","difficulty":"Difficult (4)","defects_fixed":"Basic definition upgraded to revision criteria evaluation"},
+    {"qid":"P1-BD-091","from":"Apply","to":"Evaluate","topic":"Cash collection — discount program cash flow evaluation","company":"Quintwood Distribution","stakeholder":"Treasurer Teresa Ortiz","difficulty":"Difficult (4)","defects_fixed":"DL-013 boilerplate + DL-010 fixed via rewrite"},
+    {"qid":"P1-BD-096","from":"Apply","to":"Analyze","topic":"Strategic vs operational planning — resource conflict","company":"Valemont Corporation","stakeholder":"Controller James Wu","difficulty":"Difficult (4)","defects_fixed":"DL-010 risk in EW_B fixed via rewrite"}
+  ],
+  "section_b_before_after": {
+    "before": { "apply": 65, "understand": 16, "analyze": 9, "evaluate": 10, "higher_order_pct": "19.0%" },
+    "after": { "apply": 49, "understand": 12, "analyze": 17, "evaluate": 22, "higher_order_pct": "39.0%" },
+    "improvement": "+20.0 percentage points"
+  },
+  "pack_d_before_after": {
+    "before": { "analyze": 89, "evaluate": 55, "higher_order_pct": "28.8%" },
+    "after": { "analyze": 95, "evaluate": 64, "higher_order_pct": "31.8%" }
+  },
+  "questions_answered": {
+    "Q1_analyze_count": 6,
+    "Q2_evaluate_count": 9,
+    "Q3_section_b_higher_order": "39.0% (was 19.0% after S71, was 4.0% before S70)",
+    "Q4_throughput_held": "S71: 3.3 min/item (5 items). S72: 15 items. Script execution: 0.1s. Content authoring: ~10 min. Total cycle: ~16 min including governance. ~1.1 min/item at full wave — faster than S71's 3.3 min/item (amortized overhead).",
+    "Q5_next_session": "Continue Pack D Section B — 49 Apply + 12 Understand remain (61 low-order). Pack A Section B also viable (~80 low-order). Recommend Session 73 continue Pack D Section B momentum."
+  }
+}

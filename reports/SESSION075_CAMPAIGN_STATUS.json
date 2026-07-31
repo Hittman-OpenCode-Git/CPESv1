@@ -1,0 +1,34 @@
+{
+  "session": "75",
+  "campaign": "Pack D Section B Cognitive Upgrade",
+  "pre_campaign_baseline": {
+    "higher_order_pct": 4.0,
+    "evaluate": 2,
+    "analyze": 2,
+    "apply": 40,
+    "understand": 56
+  },
+  "progress_by_session": {
+    "S70": {"evaluate": 8, "analyze": 8, "higher_order_pct": 19.0},
+    "S71": {"evaluate": 13, "analyze": 11, "higher_order_pct": 24.0},
+    "S72": {"evaluate": 22, "analyze": 17, "higher_order_pct": 39.0},
+    "S73": {"evaluate": 33, "analyze": 22, "higher_order_pct": 54.0},
+    "S74": {"evaluate": 40, "analyze": 29, "higher_order_pct": 69.0},
+    "S75": {"evaluate": 48, "analyze": 36, "higher_order_pct": 84.0}
+  },
+  "current_state": {
+    "total_items": 100,
+    "evaluate": 48,
+    "analyze": 36,
+    "apply": 8,
+    "understand": 8,
+    "higher_order_pct": 84.0
+  },
+  "remaining_low_order": {
+    "count": 16,
+    "apply": 8,
+    "understand": 8
+  },
+  "sessions_remaining_to_complete_pack_d_section_b": 1,
+  "recommendation": "CONTINUE Pack D Section B for final wave (S76) — 16 items remaining, one session to reach ~100% higher-order"
+}

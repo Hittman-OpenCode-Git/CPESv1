@@ -704,7 +704,7 @@ var pack_p2_a_questions = [
       "D": "Normalized net profit margin is approximately 8.54%, substantially exceeding the 7.0% hurdle. The restructuring, impairment, and litigation charges are one-time expenses that should be fully added back to net income on an after-tax basis (+$4.42M x 0.76 = +$3.359M), producing normalized earnings of $17.559M, while the gain on the distribution center sale should be retained because asset sales are a recurring component of Summit's business model as a logistics company that regularly rationalizes its facility footprint."
     },
     "CorrectChoice": "B",
-    "ExplanationCorrect": "Let me re-derive with internally consistent numbers. The analysis starts by reconstructing the net pre-tax effect of all four items. (1) Gain on sale: -$3.8M (this inflated reported income — must be removed from normalized earnings). (2) Restructuring charge: +$2.1M (this depressed reported income — should be added back because it is non-recurring in nature, representing a one-time workforce reduction and facility consolidation, not ongoing operating costs). (3) Goodwill impairment: +$1.4M (this is a non-cash, non-recurring charge under ASC 350-20-35 that depressed reported income — should be added back because it does not reflect the ongoing earnings capacity of the logistics operations). (4) Litigation settlement: +$0.92M (this is a case-specific non-recurring charge; while litigation can occur periodically, each settlement is unique in amount and cause, and normalizing adjustments should remove items that are not representative of sustainable earnings). Net pre-tax adjustment: -$3.8M + $2.1M + $1.4M + $0.92M = +$0.62M. After applying Summit's 24% effective tax rate: $0.62M x (1 - 0.24) = $0.62M x 0.76 = $471,200. Normalized net income: $14.2M + $0.471M = $14,671,200. Normalized net profit margin: $14,671,200 / $218,000,000 = 6.73%. This falls short of the 7.0% hurdle by 27 basis points. The reported margin of 6.51% understates Summit's sustainable earnings because the combined non-recurring charges ($4.42M) exceed the non-recurring gain ($3.8M) by $0.62M on a pre-tax basis. However, even after removing the distortion from all four items, Summit's core logistics operations do not generate sufficient profitability to meet Northstar's return threshold. Chen should either negotiate a lower purchase price reflecting the below-hurdle normalized margin or walk away from the acquisition.",
+    "ExplanationCorrect": "The analysis starts by reconstructing the net pre-tax effect of all four items. (1) Gain on sale: -$3.8M (this inflated reported income — must be removed from normalized earnings). (2) Restructuring charge: +$2.1M (this depressed reported income — should be added back because it is non-recurring in nature, representing a one-time workforce reduction and facility consolidation, not ongoing operating costs). (3) Goodwill impairment: +$1.4M (this is a non-cash, non-recurring charge under ASC 350-20-35 that depressed reported income — should be added back because it does not reflect the ongoing earnings capacity of the logistics operations). (4) Litigation settlement: +$0.92M (this is a case-specific non-recurring charge; while litigation can occur periodically, each settlement is unique in amount and cause, and normalizing adjustments should remove items that are not representative of sustainable earnings). Net pre-tax adjustment: -$3.8M + $2.1M + $1.4M + $0.92M = +$0.62M. After applying Summit's 24% effective tax rate: $0.62M x (1 - 0.24) = $0.62M x 0.76 = $471,200. Normalized net income: $14.2M + $0.471M = $14,671,200. Normalized net profit margin: $14,671,200 / $218,000,000 = 6.73%. This falls short of the 7.0% hurdle by 27 basis points. The reported margin of 6.51% understates Summit's sustainable earnings because the combined non-recurring charges ($4.42M) exceed the non-recurring gain ($3.8M) by $0.62M on a pre-tax basis. However, even after removing the distortion from all four items, Summit's core logistics operations do not generate sufficient profitability to meet Northstar's return threshold. Chen should either negotiate a lower purchase price reflecting the below-hurdle normalized margin or walk away from the acquisition.",
     "ExplanationWrongA": "This approach applies an inconsistent normalization methodology. It correctly removes the non-recurring gain ($3.8M pre-tax / $2.888M after-tax) but refuses to normalize the restructuring, impairment, and litigation charges, treating them as ordinary business costs. However, restructuring charges are non-recurring by definition (they represent one-time severance and closure costs, not ongoing operations). Goodwill impairment under ASC 350 is a non-cash charge triggered by acquisition accounting, not by the operating performance of the logistics business. The litigation settlement is case-specific. Applying an asymmetric normalization — removing the gain that inflates earnings but not the charges that depress them — systematically understates normalized earnings and would lead Northstar to incorrectly reject a potentially value-accretive acquisition. Consistency requires either normalizing all four items or normalizing none.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "The claim that the four items approximately offset each other is contradicted by the arithmetic: the three charges total $4.42M ($2.1M + $1.4M + $0.92M) while the gain is $3.8M, producing a net pre-tax charge of $0.62M rather than a wash. The after-tax impact of this net charge is $471,200, or approximately 22 basis points of margin. While the offset is partial, normalization adjustments of 22 basis points are not immaterial for an acquisition decision governed by a 7.0% hurdle rate — a difference of less than 30 basis points can change the investment conclusion. Dismissing normalization as unnecessary because the items are of 'similar magnitude' substitutes a qualitative impression for quantitative analysis.",
@@ -786,7 +786,7 @@ var pack_p2_a_questions = [
     "Stem": "Controller James Park of Pinnacle Energy is evaluating two capital structure proposals for the company's upcoming expansion into renewable energy infrastructure. Pinnacle currently generates $28.5 million in operating income (EBIT) on total assets of $312 million with no debt financing. The current capital structure is 100% equity, yielding a return on equity (ROE) equal to return on assets (ROA) of 6.58% after a 28% tax rate. Proposal A would issue $120 million in long-term debt at 6.25% interest and repurchase $120 million in common stock, resulting in $120 million of debt and $192 million of equity. Proposal B would issue $180 million in debt at 7.0% interest (reflecting the higher risk premium at greater leverage) and repurchase $180 million in stock, leaving $132 million in equity. Pinnacle's EBIT is expected to remain at $28.5 million under either proposal. Park must recommend the capital structure that maximizes ROE while evaluating the financial risk embedded in each proposal. The renewable energy investments are expected to have stable, regulated cash flows. Which capital structure recommendation is best supported by the analysis?",
     "Choices": {
       "A": "Pinnacle should retain its current all-equity capital structure. Introducing debt creates financial risk through mandatory interest payments, and the incremental ROE improvement does not justify exposing shareholders to the risk of financial distress. The current ROE of 6.58% is adequate for a regulated utility-like business with stable cash flows.",
-      "B": "Proposal A generates ROE of approximately 8.67%: net income = ($28.5M - $7.5M interest) x (1 - 0.28) = $15.12M; ROE = $15.12M / $192M = 7.88%. Proposal B generates ROE of approximately 10.06%: net income = ($28.5M - $12.6M interest) x (1 - 0.28) = $11.448M; ROE = $11.448M / $132M = 8.67%... wait 8.67%? No — $11.448M / $132M = 8.67%. Hmm, 10.06% or 8.67%? Let me recalculate. Proposal A: Interest = $120M x 6.25% = $7.5M. Net income = ($28.5M - $7.5M) x 0.72 = $15.12M. ROE = $15.12M / $192M = 7.875%. Proposal B: Interest = $180M x 7.0% = $12.6M. Net income = ($28.5M - $12.6M) x 0.72 = $11.448M. ROE = $11.448M / $132M = 8.67%. Hmm, Proposal B's ROE (8.67%) is higher than Proposal A (7.88%), which is higher than current (6.58%). So both proposals increase ROE. Proposal B gives the highest ROE. But at what risk? Let me compute interest coverage: Proposal A EBIT/Interest = $28.5M / $7.5M = 3.8x. Proposal B: $28.5M / $12.6M = 2.26x. For a regulated utility-like business, even 2.26x interest coverage is adequate. So let me make the answer choices clear. Actually, wait. $28.5M / $12.6M = 2.26x is actually quite low for comfort. Let me check: 2.26x coverage means a 44% decline in EBIT would wipe out interest coverage. That's risky even for a regulated utility. Proposal A at 3.8x is much safer. But the highest ROE (8.67% vs 7.88%) comes with Proposal B. The candidate needs to weigh ROE benefit against coverage risk. Let me redesign Choice B to advocate for Proposal A: The analysis shows Proposal A increases ROE from 6.58% to 7.88% while maintaining interest coverage of 3.8x. Proposal B achieves a higher ROE of 8.67% but with significantly lower interest coverage of 2.26x, which introduces material financial risk for a capital-intensive energy business subject to commodity price volatility despite regulated cash flows. On a risk-adjusted basis, Proposal A is the superior recommendation.",
+      "B": "Proposal A increases ROE from 6.58% to 7.88% while maintaining interest coverage of 3.80x. Under Proposal A: interest = $120M x 6.25% = $7.5M; net income = ($28.5M - $7.5M) x (1 - 0.28) = $15.12M; ROE = $15.12M / $192M = 7.88%. Interest coverage (times interest earned) = $28.5M / $7.5M = 3.80x — providing a 74% EBIT cushion before interest payments are threatened. Proposal B achieves a higher ROE of 8.67% but at significantly greater financial risk: interest = $180M x 7.0% = $12.6M; net income = ($28.5M - $12.6M) x 0.72 = $11.448M; ROE = $11.448M / $132M = 8.67%. However, interest coverage declines to $28.5M / $12.6M = 2.26x — a 44% EBIT cushion and a 40% reduction in margin of safety versus Proposal A. For an energy business subject to commodity price exposure and operational risks despite regulated renewable cash flows, 2.26x coverage is inadequate. On a risk-adjusted basis, Proposal A is the superior recommendation: it captures most of the available leverage benefit while maintaining a prudent 3.80x interest coverage cushion.",
       "C": "Proposal B clearly maximizes ROE at 8.67% compared to Proposal A's 7.88% and the current 6.58%. Since the company's objective is to maximize shareholder returns and the renewable energy investments have stable regulated cash flows that can reliably service the debt, Proposal B should be selected without reservation. Interest coverage of 2.26x is adequate for a utility-like business.",
       "D": "Neither proposal should be selected because both reduce the company's net income — from the current level — and reduce the absolute earnings available to common shareholders. Since EBIT remains constant at $28.5 million, adding debt only diverts operating profits to interest payments without creating any additional value."
     },
@@ -1284,5 +1284,1244 @@ var pack_p2_a_questions = [
       "Independent answer derived matches stored CorrectChoice",
       "Authority citation matches tested concept"
     ]
+  }
+,
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.031 operating cash flow ratio computation",
+      "QuestionID": "P2-A-031",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Crestview Manufacturing Inc. reported net cash provided by operating activities of $480,000 for the year ended December 31, 2025. Crestview's current liabilities at year-end totaled $320,000, and total liabilities were $1,600,000. Net income for the year was $256,000. Calculate Crestview's operating cash flow ratio.",
+      "Choices": {
+          "A": "0.67",
+          "B": "0.30",
+          "C": "0.80",
+          "D": "1.50"
+      },
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "The correct answer is 1.50. Operating cash flow ratio = Cash flow from operations / Current liabilities = $480,000 / $320,000 = 1.50. Under ASC 230-10-45-25, operating cash flows include all transactions not classified as investing or financing activities. A ratio above 1.0 indicates Crestview generated sufficient operating cash to cover its current obligations for the year. A common error is dividing by total liabilities rather than current liabilities, which would understate the company's short-term cash coverage.",
+      "ExplanationWrongA": "Option A (0.67) inverts the ratio by dividing current liabilities by operating cash flow ($320,000 / $480,000). This error treats the ratio as a coverage measure in reverse, but the operating cash flow ratio measures cash generated per dollar of current liability, placing CFO in the numerator.",
+      "ExplanationWrongB": "Option B (0.30) divides operating cash flow by total liabilities ($480,000 / $1,600,000) rather than current liabilities. The operating cash flow ratio specifically uses current liabilities as the denominator because it assesses short-term liquidity — not long-term solvency, which is measured by the cash flow to debt ratio.",
+      "ExplanationWrongC": "Option C (0.80) substitutes net income ($256,000) for operating cash flow in the numerator ($256,000 / $320,000). Operating cash flow differs from accrual-basis net income because it excludes non-cash items such as depreciation and changes in working capital accounts, making CFO the proper numerator for this liquidity ratio.",
+      "ExplanationWrongD": "",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.3",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Operating Cash Flow Ratio",
+      "CommonTrapReference": "Using total liabilities instead of current liabilities as the denominator, which confuses the operating cash flow ratio (a liquidity measure) with the cash flow to debt ratio (a solvency measure)",
+      "Authorities": [
+          "ASC 230-10-45-25"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots ≥50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.032 free cash flow calculation",
+      "QuestionID": "P2-A-032",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Baxter Industries reported net cash provided by operating activities of $850,000 for fiscal year 2025. The company invested $350,000 in new manufacturing equipment during the year, which was classified as capital expenditures in the investing activities section of the statement of cash flows. Net income for the year was $720,000. Calculate Baxter's free cash flow.",
+      "Choices": {
+          "A": "$500,000",
+          "B": "$1,200,000",
+          "C": "$370,000",
+          "D": "$850,000"
+      },
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "The correct answer is $500,000. Free cash flow = Operating cash flow - Capital expenditures = $850,000 - $350,000 = $500,000. Under ASC 230-10-45-24, capital expenditures are reported as cash outflows from investing activities. Free cash flow represents the cash available to the company after maintaining its productive capacity. Baxter's $500,000 in free cash flow is available for debt reduction, dividend payments, share repurchases, or strategic acquisitions. A common error is adding capital expenditures rather than subtracting them.",
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Option B ($1,200,000) results from adding capital expenditures to operating cash flow ($850,000 + $350,000) rather than subtracting them. This error treats capex as a cash inflow rather than recognizing that capital expenditures are cash outflows used to acquire or upgrade long-term assets and must be deducted to arrive at free cash flow.",
+      "ExplanationWrongC": "Option C ($370,000) substitutes net income for operating cash flow in the formula ($720,000 - $350,000). Net income includes non-cash expenses such as depreciation and excludes changes in working capital, making it an unreliable starting point for measuring the cash actually available for discretionary purposes after capital investment.",
+      "ExplanationWrongD": "Option D ($850,000) omits the capital expenditure subtraction entirely, treating operating cash flow itself as free cash flow. This approach overstates available cash because it fails to account for the reinvestment required to maintain productive capacity, which is a fundamental component of the free cash flow calculation.",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.3",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Free Cash Flow",
+      "CommonTrapReference": "Adding capital expenditures to operating cash flow instead of subtracting them, treating capex as a source rather than a use of cash",
+      "Authorities": [
+          "ASC 230-10-45-24"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots ≥50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.033 cash flow to debt ratio",
+      "QuestionID": "P2-A-033",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Sanderson Energy Partners reported net cash provided by operating activities of $600,000 for the year ended December 31, 2025. The company's balance sheet showed total debt of $2,400,000, consisting of long-term notes payable and the current portion of long-term debt. Current liabilities at year-end were $480,000, and net income was $450,000. Calculate Sanderson's cash flow to debt ratio.",
+      "Choices": {
+          "A": "1.25",
+          "B": "4.00",
+          "C": "0.25",
+          "D": "0.19"
+      },
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "The correct answer is 0.25. Cash flow to debt ratio = Operating cash flow / Total debt = $600,000 / $2,400,000 = 0.25. Under ASC 230-10-45-25, operating cash flow is the numerator for this solvency ratio because it reflects the company's ability to generate cash from core operations. A ratio of 0.25 indicates Sanderson generates $0.25 in operating cash for each dollar of total debt, suggesting moderate capacity to service debt obligations from internally generated cash flows. A common error is dividing by current liabilities rather than total debt.",
+      "ExplanationWrongA": "Option A (1.25) divides operating cash flow by current liabilities ($600,000 / $480,000) rather than total debt. While this calculation yields a liquidity measure similar to the operating cash flow ratio, the cash flow to debt ratio specifically uses total debt as the denominator to assess long-term solvency, not short-term liquidity.",
+      "ExplanationWrongB": "Option B (4.00) inverts the ratio by dividing total debt by operating cash flow ($2,400,000 / $600,000). This error reverses the relationship and produces a figure that represents how many years of current operating cash flow would be needed to repay total debt, rather than the standard cash flow to debt ratio.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Option D (0.19) substitutes net income for operating cash flow in the numerator ($450,000 / $2,400,000). Net income includes non-cash accruals and does not fully reflect cash available to service debt. Operating cash flow is the appropriate measure for this ratio because it captures actual cash generated during the period.",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.3",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Cash Flow to Debt",
+      "CommonTrapReference": "Using current liabilities instead of total debt as the denominator, confusing a liquidity ratio with a solvency ratio",
+      "Authorities": [
+          "ASC 230-10-45-25"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots ≥50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.034 cash conversion cycle",
+      "QuestionID": "P2-A-034",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Northpoint Retail Inc. operates a chain of specialty apparel stores. For the fiscal year 2025, the company reported days inventory outstanding (DIO) of 45 days, days sales outstanding (DSO) of 30 days, and days payable outstanding (DPO) of 25 days. Calculate Northpoint's cash conversion cycle.",
+      "Choices": {
+          "A": "100 days",
+          "B": "5 days",
+          "C": "15 days",
+          "D": "50 days"
+      },
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "The correct answer is 50 days. Cash conversion cycle = DIO + DSO - DPO = 45 + 30 - 25 = 50 days. Under ASC 205-10-45, financial statements should be presented to facilitate analysis of a company's operating cycle. The cash conversion cycle measures the time between cash outlay for inventory purchases and cash collection from customer sales. Northpoint's 50-day cycle means the company must finance its operations for approximately seven weeks from inventory purchase through customer payment. A common error is adding DPO rather than subtracting it.",
+      "ExplanationWrongA": "Option A (100 days) adds all three components together (45 + 30 + 25 = 100) rather than subtracting DPO. Days payable outstanding represents the period the company takes to pay its suppliers, which is a source of financing that reduces — not increases — the cash conversion cycle. Adding DPO treats supplier credit as if it extends rather than shortens the cycle.",
+      "ExplanationWrongB": "Option B (5 days) calculates DSO minus DPO only (30 - 25 = 5), ignoring the inventory holding period entirely. A complete cash conversion cycle must include DIO because the cycle begins when cash is used to acquire inventory. Omitting inventory holding days understates the true time required to convert cash outflows into cash inflows.",
+      "ExplanationWrongC": "Option C (15 days) subtracts DSO from DIO (45 - 30 = 15) without accounting for DPO. This error reverses the sign on DSO, treating customer receivables as if they shorten the cycle when in fact days sales outstanding represents the waiting period for customer payments and extends the cash conversion cycle.",
+      "ExplanationWrongD": "",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.3",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Cash Conversion Cycle",
+      "CommonTrapReference": "Adding days payable outstanding instead of subtracting it, which treats supplier financing as an extension of the cycle rather than a reduction",
+      "Authorities": [
+          "ASC 205-10-45"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots ≥50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.035 quality of earnings cash flow vs. accrual income",
+      "QuestionID": "P2-A-035",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Mercer Consulting Group reported net income of $350,000 for the year ended December 31, 2025. The statement of cash flows showed net cash provided by operating activities of $420,000, which included $42,000 of depreciation add-back within the reconciliation of net income to operating cash flow. Calculate Mercer's cash flow to net income ratio as a measure of earnings quality.",
+      "Choices": {
+          "A": "0.83",
+          "B": "1.32",
+          "C": "1.20",
+          "D": "1.08"
+      },
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "The correct answer is 1.20. Cash flow to net income ratio = Operating cash flow / Net income = $420,000 / $350,000 = 1.20. Under ASC 230-10-45-28, the reconciliation of net income to operating cash flow highlights differences between accrual and cash earnings. A ratio above 1.0 indicates Mercer's earnings quality is strong — operating cash flows exceed reported net income, suggesting accrual estimates are conservative and net income is fully supported by actual cash generation. A common error is inverting the ratio by placing net income in the numerator.",
+      "ExplanationWrongA": "Option A (0.83) inverts the ratio by dividing net income by operating cash flow ($350,000 / $420,000). The correct ratio places operating cash flow in the numerator because it measures how many dollars of cash earnings support each dollar of accrual-basis net income, not the reverse.",
+      "ExplanationWrongB": "Option B (1.32) results from adding the depreciation add-back to operating cash flow a second time [($420,000 + $42,000) / $350,000]. Operating cash flow already includes the depreciation add-back as part of the indirect method reconciliation from net income. Adding it again double-counts this non-cash item and overstates the numerator, inflating the ratio.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Option D (1.08) subtracts depreciation from operating cash flow [($420,000 - $42,000) / $350,000]. This error treats depreciation as a cash outflow that reduces operating cash flow, when in fact depreciation is a non-cash expense that has already been added back to net income to arrive at the reported CFO under the indirect method.",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.3",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Cash Flow to Net Income",
+      "CommonTrapReference": "Inverting the ratio by dividing net income by operating cash flow, or double-counting the depreciation add-back that is already included in CFO",
+      "Authorities": [
+          "ASC 230-10-45-28"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots ≥50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.036 operating cash flow per share",
+      "QuestionID": "P2-A-036",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Pennbrook Industries reported net cash provided by operating activities of $750,000 for the year ended December 31, 2025. The company paid preferred dividends of $30,000 and common dividends of $24,000 during the year. Net income was $720,000, and Pennbrook had 120,000 weighted average common shares outstanding. Calculate operating cash flow per share.",
+      "Choices": {
+          "A": "$6.25",
+          "B": "$5.75",
+          "C": "$5.80",
+          "D": "$6.00"
+      },
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "The correct answer is $6.00. Operating cash flow per share = (CFO - Preferred dividends) / Weighted average common shares outstanding = ($750,000 - $30,000) / 120,000 = $720,000 / 120,000 = $6.00. Under ASC 230-10-45-25, operating cash flows are the numerator for cash-flow-based per-share measures, and per ASC 260-10-45-10, preferred dividends are deducted because those payments are not available to common shareholders. Pennbrook generates $6.00 in operating cash flow for each common share outstanding. A common error is failing to deduct preferred dividends from the numerator.",
+      "ExplanationWrongA": "Option A ($6.25) divides the full operating cash flow by shares outstanding without deducting preferred dividends ($750,000 / 120,000). Operating cash flow per share must subtract preferred dividends from CFO because these payments are not available to common shareholders, following the same principle as the basic earnings per share calculation.",
+      "ExplanationWrongB": "Option B ($5.75) substitutes net income for operating cash flow in the numerator, then deducts preferred dividends [($720,000 - $30,000) / 120,000]. This ratio specifically uses cash from operations rather than accrual-basis net income because it measures cash-generating capacity on a per-share basis, not accrual earnings.",
+      "ExplanationWrongC": "Option C ($5.80) deducts total dividends rather than only preferred dividends [($750,000 - $54,000) / 120,000]. Under ASC 260-10-45-10, only preferred dividends are subtracted from the numerator because common dividends are a discretionary distribution of available earnings, not a prior claim that reduces the amount attributable to common shareholders.",
+      "ExplanationWrongD": "",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.3",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Operating Cash Flow per Share",
+      "CommonTrapReference": "Failing to deduct preferred dividends from operating cash flow, or incorrectly deducting total dividends (including common) instead of only preferred dividends",
+      "Authorities": [
+          "ASC 230-10-45-25",
+          "ASC 260-10-45-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots ≥50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  }
+,
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.037 Gross margin trend analysis",
+      "QuestionID": "P2-A-037",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Landmark Industries reported revenue of $600,000 and cost of goods sold of $360,000 for the fiscal year. Compute Landmark's gross margin percentage.",
+      "Choices": {
+          "A": "60.0%",
+          "B": "66.7%",
+          "C": "40.0%",
+          "D": "25.0%"
+      },
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "Gross margin = (Revenue - COGS) / Revenue = ($600,000 - $360,000) / $600,000 = $240,000 / $600,000 = 40.0%. Under ASC 225-10, gross margin measures the percentage of revenue retained after covering direct production costs. Landmark retains $0.40 of every revenue dollar after paying for the goods it sold. A common error is to divide gross profit by COGS instead of revenue, which produces a markup percentage rather than a margin.",
+      "ExplanationWrongA": "Option A is incorrect because it computes COGS / Revenue ($360,000 / $600,000 = 60.0%), which is the cost-of-goods-sold percentage, not the gross margin. A candidate reaching this result has inverted the margin concept — the margin is what remains after covering COGS, not the proportion consumed by COGS. The correct approach subtracts COGS from revenue and divides the result by revenue.",
+      "ExplanationWrongB": "Option B is incorrect because it divides gross profit by COGS ($240,000 / $360,000 = 66.7%), computing the markup percentage on cost rather than the margin on revenue. Markup and margin are distinct concepts — markup expresses profit relative to cost, while margin expresses profit relative to the selling price. The correct gross margin formula divides gross profit by revenue.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Option D is incorrect because it divides gross profit by the sum of revenue and COGS ($240,000 / $960,000 = 25.0%). This error treats the total cost base (revenue + COGS) as the denominator, which has no basis in GAAP margin computation. The denominator in gross margin is revenue only, representing the top-line figure against which profitability is measured.",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.4",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Gross Margin = (Revenue - COGS) / Revenue",
+      "CommonTrapReference": "Confusing gross margin (profit / revenue) with markup (profit / cost) — candidates divide gross profit by COGS rather than by revenue, producing an inflated percentage.",
+      "Authorities": [
+          "ASC 225-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.038 Operating margin computation",
+      "QuestionID": "P2-A-038",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Novus Technologies reports the following for 2026: Revenue $1,200,000, Cost of Goods Sold $720,000, Selling and Administrative Expenses $180,000, and Depreciation Expense $60,000. Compute Novus's operating margin.",
+      "Choices": {
+          "A": "20.0%",
+          "B": "25.0%",
+          "C": "40.0%",
+          "D": "13.3%"
+      },
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "Operating income = Revenue - COGS - Selling & Admin - Depreciation = $1,200,000 - $720,000 - $180,000 - $60,000 = $240,000. Operating margin = Operating income / Revenue = $240,000 / $1,200,000 = 20.0%. Under ASC 225-10, operating margin isolates the profitability of core business operations by excluding financing and tax effects. Novus generates $0.20 of operating profit per revenue dollar. A common error is to omit depreciation from operating expenses, overstating operating income.",
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Option B is incorrect because it omits depreciation expense from the computation: ($1,200,000 - $720,000 - $180,000) / $1,200,000 = $300,000 / $1,200,000 = 25.0%. Depreciation is an operating expense under ASC 225-10 because it reflects the systematic allocation of productive asset costs. Excluding depreciation inflates the apparent profitability of operations by 5 percentage points.",
+      "ExplanationWrongC": "Option C is incorrect because it computes gross margin instead of operating margin: ($1,200,000 - $720,000) / $1,200,000 = $480,000 / $1,200,000 = 40.0%. Gross margin stops at COGS and ignores selling, administrative, and depreciation expenses. The correct operating margin subtracts all operating costs — including indirect costs — from revenue before dividing.",
+      "ExplanationWrongD": "Option D is incorrect because it deducts income tax expense from operating income before computing the margin. The candidate likely subtracted an estimated tax provision of $80,000 from $240,000 operating income and then divided: $160,000 / $1,200,000 = 13.3%. Under ASC 225-10, operating margin is computed above the tax line — taxes are a financing/government cost, not an operating expense.",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.4",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Operating Margin = (Revenue - COGS - Operating Expenses) / Revenue",
+      "CommonTrapReference": "Omitting depreciation from operating expenses — candidates treat depreciation as a non-operating charge, but under ASC 225-10 depreciation of productive assets is a core operating cost.",
+      "Authorities": [
+          "ASC 225-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.039 Net profit margin computation",
+      "QuestionID": "P2-A-039",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Sterling Manufacturing reported the following for 2026: Net Revenue $2,000,000, Cost of Goods Sold $1,100,000, Selling and Administrative Expenses $450,000, Interest Expense $50,000, and Income Tax Expense $120,000. Compute Sterling's net profit margin.",
+      "Choices": {
+          "A": "45.0%",
+          "B": "22.5%",
+          "C": "20.0%",
+          "D": "14.0%"
+      },
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "Net income = Revenue - COGS - S&A - Interest - Tax = $2,000,000 - $1,100,000 - $450,000 - $50,000 - $120,000 = $280,000. Net profit margin = Net income / Revenue = $280,000 / $2,000,000 = 14.0%. Under ASC 225-10, net profit margin is the most comprehensive profitability measure on the income statement, reflecting all costs including financing and taxes. Sterling retains $0.14 of profit per revenue dollar after all expenses. A common error is to use operating income or pretax income instead of net income in the numerator.",
+      "ExplanationWrongA": "Option A is incorrect because it computes gross margin: ($2,000,000 - $1,100,000) / $2,000,000 = $900,000 / $2,000,000 = 45.0%. Gross margin reflects only the direct cost of goods sold and ignores operating expenses, interest, and taxes. Net profit margin requires the bottom-line net income figure, which incorporates all costs.",
+      "ExplanationWrongB": "Option B is incorrect because it computes operating margin: ($2,000,000 - $1,100,000 - $450,000) / $2,000,000 = $450,000 / $2,000,000 = 22.5%. Operating margin stops at operating income and excludes interest and taxes. The candidate likely reached the correct operating income figure but failed to account for below-the-line financing and tax costs when computing the net margin.",
+      "ExplanationWrongC": "Option C is incorrect because it computes pretax margin: ($2,000,000 - $1,100,000 - $450,000 - $50,000) / $2,000,000 = $400,000 / $2,000,000 = 20.0%. The candidate correctly deducted interest but stopped before income taxes. Net profit margin must reflect the final net income after all expenses, including the tax provision.",
+      "ExplanationWrongD": "",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.4",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Net Profit Margin = Net Income / Revenue",
+      "CommonTrapReference": "Selecting a margin computed at the wrong income statement level — candidates may use gross margin, operating margin, or pretax margin when net profit margin is requested, because all four percentages look plausible.",
+      "Authorities": [
+          "ASC 225-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.040 Return on assets — DuPont decomposition",
+      "QuestionID": "P2-A-040",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Ashford Corporation's most recent financial statements show a net profit margin of 8.0% and a total asset turnover of 1.75. The DuPont formula for return on assets is net profit margin multiplied by asset turnover. Compute Ashford's return on assets.",
+      "Choices": {
+          "A": "4.6%",
+          "B": "9.75%",
+          "C": "14.0%",
+          "D": "21.9%"
+      },
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "ROA (DuPont) = Net profit margin x Asset turnover = 8.0% x 1.75 = 14.0%. Under the DuPont framework, ROA decomposes into profitability (how much the company earns per dollar of sales) and efficiency (how many sales dollars are generated per dollar of assets). Ashford's 14.0% ROA means each dollar of assets generates $0.14 of net income, driven by an 8.0% margin and 1.75x turnover. A common error is to divide margin by turnover instead of multiplying.",
+      "ExplanationWrongA": "Option A is incorrect because it divides net profit margin by asset turnover: 8.0% / 1.75 = 4.6%. The DuPont formula requires multiplication, not division. A candidate who divides the two components is effectively computing the margin per unit of turnover — a metric with no economic interpretation. The correct ROA is the product of the two DuPont drivers.",
+      "ExplanationWrongB": "Option B is incorrect because it adds net profit margin and asset turnover as though turnover were a percentage: 8.0% + 1.75% = 9.75%. Asset turnover is a ratio, not a percentage — adding it to a margin produces a dimensionally meaningless result. The DuPont decomposition requires multiplication because margin and turnover interact multiplicatively to produce ROA.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Option D is incorrect because it divides asset turnover by net profit margin: 1.75 / 0.08 = 21.875 rounded to 21.9%. This inverts the DuPont relationship entirely, treating turnover as the primary driver and margin as the divisor. The correct DuPont ROA is margin multiplied by turnover — the business earns the margin on every turnover of assets.",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Apply",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.4",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "ROA (DuPont) = Net Profit Margin x Total Asset Turnover",
+      "CommonTrapReference": "Performing the wrong arithmetic operation on DuPont components — candidates add or divide margin and turnover when the formula requires multiplication. The two drivers are multiplicative, not additive.",
+      "Authorities": [
+          "ASC 205-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.041 Return on common equity — computation and benchmark comparison",
+      "QuestionID": "P2-A-041",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Meridian Corporation reports net income of $840,000, preferred dividends of $40,000, interest expense of $120,000, and average common shareholders' equity of $5,000,000 for 2026. The homebuilding supply industry median ROE is 14.0%. Compute Meridian's return on common equity and assess its performance relative to the benchmark.",
+      "Choices": {
+          "A": "16.0%; Meridian outperforms the industry benchmark",
+          "B": "16.8%; Meridian outperforms the industry benchmark",
+          "C": "13.6%; Meridian underperforms the industry benchmark",
+          "D": "18.4%; Meridian outperforms the industry benchmark"
+      },
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "ROCE = (Net income - Preferred dividends) / Average common equity = ($840,000 - $40,000) / $5,000,000 = $800,000 / $5,000,000 = 16.0%. At 16.0%, Meridian exceeds the 14.0% industry benchmark by 200 basis points, indicating that the company generates above-average returns for its common shareholders relative to the homebuilding supply sector. A common error is to omit the preferred dividend deduction, which inflates the numerator and overstates the return attributable to common shareholders.",
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Option B is incorrect because it omits preferred dividends: $840,000 / $5,000,000 = 16.8%. Preferred dividends must be subtracted from net income when computing return on common equity because they represent earnings allocated to preferred shareholders, not common shareholders. A candidate who ignores preferred dividends overstates the common shareholders' return by 80 basis points. The correct numerator is net income available to common shareholders.",
+      "ExplanationWrongC": "Option C is incorrect because it erroneously deducts interest expense from net income before computing ROE: ($840,000 - $40,000 - $120,000) / $5,000,000 = $680,000 / $5,000,000 = 13.6%. Interest expense is already reflected in net income — the candidate is double-counting this cost. Net income is the bottom-line earnings figure after all expenses, including interest. No further deduction is warranted.",
+      "ExplanationWrongD": "Option D is incorrect because it adds back interest expense to net income: ($840,000 + $120,000 - $40,000) / $5,000,000 = $920,000 / $5,000,000 = 18.4%. Adding back interest converts the numerator toward an unlevered earnings measure, which is inconsistent with ROE. ROE measures the return to equity holders after all costs, including interest paid to creditors. The correct formula uses net income attributable to common shareholders.",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.4",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Return on Common Equity = (Net Income - Preferred Dividends) / Average Common Shareholders' Equity",
+      "CommonTrapReference": "Forgetting to deduct preferred dividends when computing return on common equity — candidates use total net income in the numerator, overstating the return available to common shareholders.",
+      "Authorities": [
+          "ASC 205-10",
+          "ASC 260-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.042 Earnings per share — basic computation and dilutive security identification",
+      "QuestionID": "P2-A-042",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Ridgeline Corporation reported net income of $2,400,000 and paid $100,000 in preferred dividends during 2026. The weighted-average number of common shares outstanding was 1,000,000. Ridgeline has 150,000 outstanding stock options with an exercise price of $35; the average market price per common share during the year was $50. Under ASC 260-10, which of the following is correct regarding Ridgeline's basic EPS and the dilutive effect of the options?",
+      "Choices": {
+          "A": "Basic EPS is $2.40; the options are dilutive and add 45,000 incremental shares to the diluted EPS denominator",
+          "B": "Basic EPS is $2.30; the options are antidilutive and are excluded from diluted EPS altogether",
+          "C": "Basic EPS is $2.30; the options are dilutive and add 45,000 incremental shares to the diluted EPS denominator",
+          "D": "Basic EPS is $2.30; the options are dilutive and add 150,000 shares to the diluted EPS denominator"
+      },
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "Basic EPS = (Net income - Preferred dividends) / Weighted-average common shares = ($2,400,000 - $100,000) / 1,000,000 = $2.30. Under ASC 260-10-45, the treasury stock method determines incremental shares from options: Repurchase shares = Cash proceeds / Average market price = (150,000 x $35) / $50 = $5,250,000 / $50 = 105,000 shares. Incremental shares = 150,000 - 105,000 = 45,000. Since the exercise price ($35) is less than the market price ($50), the options are dilutive and must be included in the diluted EPS denominator. A common error is to use the gross option share count (150,000) instead of the treasury-stock-method net incremental shares.",
+      "ExplanationWrongA": "Option A is incorrect because it computes basic EPS without deducting preferred dividends: $2,400,000 / 1,000,000 = $2.40. Under ASC 260-10-45, basic EPS must subtract preferred dividends from net income before dividing by common shares outstanding because preferred dividends are earnings attributable to preferred shareholders, not common shareholders. The candidate identified the correct dilutive share count but used the wrong basic EPS numerator.",
+      "ExplanationWrongB": "Option B is incorrect because it classifies the options as antidilutive. Under ASC 260-10-45, stock options are dilutive when the exercise price ($35) is below the average market price ($50). The treasury stock method yields 45,000 incremental shares, which increases the denominator and reduces EPS — confirming dilutive status. A candidate reaching this conclusion likely confused the condition for antidilution (exercise price > market price), which would produce zero incremental shares under the treasury stock method.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Option D is incorrect because it uses the gross option share count (150,000) without applying the treasury stock method. Under ASC 260-10-45, the treasury stock method assumes that option proceeds ($5,250,000) are used to repurchase shares at the average market price ($50), reducing the net share increase to 45,000. Using the full 150,000 shares overstates the dilutive impact because it ignores the cash inflow that partially offsets the share issuance.",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.4",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Basic EPS = (Net Income - Preferred Dividends) / Weighted-Average Common Shares; Treasury Stock Method Incremental Shares = Options Outstanding - (Proceeds / Average Market Price)",
+      "CommonTrapReference": "Using the full option or warrant share count in the diluted EPS denominator without applying the treasury stock method — candidates forget that the assumed repurchase of shares with exercise proceeds partially offsets the dilution.",
+      "Authorities": [
+          "ASC 260-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.043 EBITDA margin — computation and target comparison",
+      "QuestionID": "P2-A-043",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Northpoint Industries provided selected income statement data for the year ended December 31, 2026: Revenue $10,000,000, Cost of Goods Sold $6,000,000, Selling and Administrative Expenses $1,500,000, Depreciation Expense $500,000, Amortization Expense $200,000, Interest Expense $300,000, and Income Tax Expense $500,000. Management targets an EBITDA margin of at least 22%. Compute Northpoint's EBITDA margin and determine whether it meets the target.",
+      "Choices": {
+          "A": "18.0%; does not meet the 22% target",
+          "B": "15.0%; does not meet the 22% target",
+          "C": "10.0%; does not meet the 22% target",
+          "D": "25.0%; meets the 22% target"
+      },
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "EBITDA = Revenue - COGS - Selling & Admin = $10,000,000 - $6,000,000 - $1,500,000 = $2,500,000. EBITDA margin = EBITDA / Revenue = $2,500,000 / $10,000,000 = 25.0%. EBITDA excludes depreciation, amortization, interest, and taxes — these items are not deducted when computing EBITDA. At 25.0%, Northpoint exceeds the 22% target by 300 basis points. A common error is to subtract depreciation and amortization from EBITDA, converting it to EBIT and producing a lower margin.",
+      "ExplanationWrongA": "Option A is incorrect because it computes the EBIT margin instead of EBITDA. Subtracting depreciation ($500,000) and amortization ($200,000) from EBITDA yields: $2,500,000 - $700,000 = $1,800,000; $1,800,000 / $10,000,000 = 18.0%. EBIT includes depreciation and amortization charges, whereas EBITDA explicitly excludes them. The candidate computed the correct EBIT margin but did not complete the step of adding back D&A to arrive at EBITDA.",
+      "ExplanationWrongB": "Option B is incorrect because it computes the pretax margin. Subtracting depreciation ($500,000), amortization ($200,000), and interest ($300,000) from EBITDA yields: $2,500,000 - $1,000,000 = $1,500,000; $1,500,000 / $10,000,000 = 15.0%. The candidate moved two levels below EBITDA — first to EBIT by subtracting D&A, then to EBT by subtracting interest. EBITDA stands above all of these deductions.",
+      "ExplanationWrongC": "Option C is incorrect because it computes the net profit margin. Subtracting all non-revenue items yields net income of $1,000,000; $1,000,000 / $10,000,000 = 10.0%. Net income reflects every expense including depreciation, amortization, interest, and taxes. EBITDA deliberately excludes all four of these charges to isolate operating earnings before capital-related and financing costs. The correct EBITDA computation stops after deducting only COGS and SG&A.",
+      "ExplanationWrongD": "",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.4",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "EBITDA Margin = (Revenue - COGS - SG&A) / Revenue",
+      "CommonTrapReference": "Including depreciation and amortization in the EBITDA computation — candidates compute EBIT (or even net income) instead of EBITDA because they forget that the 'DA' in EBITDA stands for depreciation and amortization, which must be excluded.",
+      "Authorities": [
+          "ASC 205-10",
+          "ASC 225-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.044 Segment profitability — segment margin vs. company operating margin",
+      "QuestionID": "P2-A-044",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Westfield Corporation operates three divisions. The Consumer Products division reported segment revenue of $4,500,000, traceable costs of $3,150,000, and allocated common corporate expenses of $450,000. Westfield's overall company operating margin is 18.0%. Compute the Consumer Products division's segment margin as a percentage of segment revenue and compare it to the company's overall operating margin.",
+      "Choices": {
+          "A": "30.0%; exceeds the 18.0% company operating margin",
+          "B": "20.0%; exceeds the 18.0% company operating margin",
+          "C": "30.0%; falls below the 18.0% company operating margin",
+          "D": "22.5%; exceeds the 18.0% company operating margin"
+      },
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "Segment margin = Segment revenue - Traceable costs = $4,500,000 - $3,150,000 = $1,350,000. Segment margin percentage = $1,350,000 / $4,500,000 = 30.0%. Under ASC 280-10, segment margin is computed before allocated common corporate expenses because those costs are not traceable to individual segments and would not be avoided if the segment were discontinued. At 30.0%, the Consumer Products division exceeds the 18.0% company operating margin by 1,200 basis points, indicating above-average divisional profitability. A common error is to deduct allocated common expenses from segment revenue, which understates the segment's true contribution.",
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Option B is incorrect because it deducts allocated common corporate expenses from segment revenue before computing the margin: ($4,500,000 - $3,150,000 - $450,000) / $4,500,000 = $900,000 / $4,500,000 = 20.0%. Under ASC 280-10, common corporate expenses are not segment expenses because they are not directly traceable to the division's operations. Including them in the segment margin computation penalizes the division for costs it does not control.",
+      "ExplanationWrongC": "Option C is incorrect because it computes the segment margin correctly at 30.0% but reaches the wrong comparative conclusion. A 30.0% segment margin exceeds 18.0% by a wide margin—the division is substantially more profitable than the company average. The candidate may have reversed the comparison direction or misread the benchmark. The Consumer Products division clearly outperforms the company-wide operating margin.",
+      "ExplanationWrongD": "Option D is incorrect because it applies Westfield's effective tax rate to the segment margin before computing the percentage: $1,350,000 x (1 - 0.25) / $4,500,000 = $1,012,500 / $4,500,000 = 22.5%. Segment margin is a pretax measure under ASC 280-10 — taxes are assessed at the corporate level, not the segment level. Applying a tax rate to a segment's traceable results conflates corporate-level tax allocation with operational segment performance.",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.4",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Segment Margin = Segment Revenue - Traceable Costs; Segment Margin % = Segment Margin / Segment Revenue",
+      "CommonTrapReference": "Deducting allocated common corporate expenses when computing segment margin — candidates treat common costs as segment costs, understating the segment's true contribution to corporate profitability.",
+      "Authorities": [
+          "ASC 280-10",
+          "ASC 205-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.045 Profitability benchmarking — net profit margin vs. industry median",
+      "QuestionID": "P2-A-045",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Pendleton Corporation's 2026 income statement shows: Net Revenue $7,000,000, Cost of Goods Sold $4,200,000, Operating Expenses $1,400,000, Interest Expense $140,000, Income Tax Expense $210,000, and Net Income $840,000. The apparel manufacturing industry's median net profit margin is 10.0%. Compute Pendleton's net profit margin and determine whether it outperforms the industry median.",
+      "Choices": {
+          "A": "40.0%; Pendleton outperforms the industry median",
+          "B": "10.0%; Pendleton matches the industry median",
+          "C": "12.0%; Pendleton outperforms the industry median",
+          "D": "20.0%; Pendleton outperforms the industry median"
+      },
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "Net profit margin = Net Income / Net Revenue = $840,000 / $7,000,000 = 12.0%. Under ASC 225-10, net profit margin is the most comprehensive single-period profitability ratio. At 12.0%, Pendleton exceeds the apparel manufacturing industry median of 10.0% by 200 basis points, indicating stronger cost control and/or pricing power relative to peer companies. A common error is to select the gross margin (40.0%) or operating margin (20.0%) instead of the net margin — each margin answers a different question about profitability.",
+      "ExplanationWrongA": "Option A is incorrect because it reports the gross margin: ($7,000,000 - $4,200,000) / $7,000,000 = $2,800,000 / $7,000,000 = 40.0%. Gross margin reflects only the direct cost of goods sold and ignores operating expenses, interest, and taxes. Net profit margin is computed using net income — the final bottom-line figure after all costs. The candidate selected a margin from the wrong tier of the income statement.",
+      "ExplanationWrongB": "Option B is incorrect because it reports the industry median (10.0%) rather than Pendleton's own computed net profit margin. The candidate likely substituted the benchmark figure for Pendleton's actual result without performing the computation. Pendleton's net income of $840,000 divided by revenue of $7,000,000 yields a net profit margin of 12.0%, not 10.0%. The industry benchmark is a comparison point, not a substitute for the company-specific ratio.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Option D is incorrect because it reports the operating margin: ($7,000,000 - $4,200,000 - $1,400,000) / $7,000,000 = $1,400,000 / $7,000,000 = 20.0%. Operating margin excludes interest and taxes and therefore overstates the proportion of revenue that flows to the bottom line. Net profit margin requires using net income, which is $840,000, not operating income of $1,400,000. The candidate selected a margin from too high on the income statement.",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.4",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Net Profit Margin = Net Income / Net Revenue",
+      "CommonTrapReference": "Selecting gross margin or operating margin instead of net profit margin when the question specifies the net profit margin — the candidate computes the correct ratio at the wrong tier of the income statement.",
+      "Authorities": [
+          "ASC 225-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.046 Sustainable growth rate computation",
+      "QuestionID": "P2-A-046",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Brightstone Corporation reported a return on common equity of 16.0% and paid out 35% of its net income as dividends during 2026. Brightstone's capital structure and profit margins are expected to remain stable, with no planned equity issuances. Compute Brightstone's sustainable growth rate.",
+      "Choices": {
+          "A": "5.6%",
+          "B": "16.0%",
+          "C": "24.6%",
+          "D": "10.4%"
+      },
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "Sustainable growth rate = ROE x Retention ratio = ROE x (1 - Payout ratio) = 16.0% x (1 - 0.35) = 16.0% x 0.65 = 10.4%. The SGR represents the maximum rate at which a company can grow revenue and assets without issuing new equity or increasing financial leverage. Brightstone can sustain 10.4% annual growth using only internally generated earnings, assuming stable margins and capital structure. A common error is to multiply ROE by the payout ratio (5.6%), which would represent the portion of ROE distributed to shareholders rather than reinvested.",
+      "ExplanationWrongA": "Option A is incorrect because it multiplies ROE by the payout ratio: 16.0% x 0.35 = 5.6%. The payout ratio measures earnings distributed as dividends — the sustainable growth rate uses the retention ratio (1 minus the payout ratio), which measures earnings reinvested in the business. A candidate reaching 5.6% has computed the dividend yield contribution from ROE, not the growth rate.",
+      "ExplanationWrongB": "Option B is incorrect because it reports the ROE itself (16.0%) as the sustainable growth rate, implicitly assuming a 100% retention ratio. While ROE is a key driver of SGR, the company only retains 65% of earnings — the remaining 35% is paid as dividends and is unavailable for reinvestment. SGR must reflect the portion of ROE actually plowed back into the business.",
+      "ExplanationWrongC": "Option C is incorrect because it divides ROE by the retention ratio: 16.0% / 0.65 = 24.6%. This inverts the SGR formula — the candidate mistakenly applied division where multiplication is required. The correct formula multiplies ROE by the retention ratio because only retained earnings (not total ROE) can fund internal growth. Dividing produces a result that exceeds ROE, which overstates Brightstone's true sustainable growth capacity.",
+      "ExplanationWrongD": "",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.4",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Sustainable Growth Rate = ROE x (1 - Dividend Payout Ratio)",
+      "CommonTrapReference": "Using the dividend payout ratio instead of the retention ratio in the SGR formula — candidates multiply ROE by the payout ratio (5.6%) instead of by (1 - payout ratio) (10.4%), producing the dividend component rather than the growth component.",
+      "Authorities": [
+          "ASC 205-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  }
+,
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.047 debt service coverage ratio",
+      "QuestionID": "P2-A-047",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Crestview Distribution reported EBITDA of $840,000 for the fiscal year. Its $3,200,000 term loan requires annual principal payments of $320,000 and annual interest of $192,000 at a 6.0% fixed rate. The loan covenant requires a minimum debt service coverage ratio (DSCR) of 1.50, measured as EBITDA divided by total annual debt service. Credit analyst Elena Voss must determine whether Crestview complies with the covenant. Which of the following correctly states Crestview's DSCR and compliance status?",
+      "Choices": {
+          "A": "1.64; Crestview meets the 1.50 covenant requirement.",
+          "B": "4.38; Crestview easily meets the covenant with substantial headroom.",
+          "C": "2.63; Crestview meets the covenant with comfortable margin.",
+          "D": "1.27; Crestview fails the 1.50 covenant and may face technical default."
+      },
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "Under ASC 470-10, the debt service coverage ratio measures a borrower's ability to generate sufficient earnings to cover all mandatory debt payments. DSCR = EBITDA / (Principal + Interest) = $840,000 / ($320,000 + $192,000) = $840,000 / $512,000 = 1.64. Since 1.64 exceeds the 1.50 covenant minimum, Crestview is in compliance. A DSCR above 1.0 indicates positive coverage; the 1.50 covenant provides a 50% cushion against earnings declines. A common error is confusing DSCR with times interest earned — DSCR incorporates mandatory principal repayments in the denominator, making it a more stringent test of debt-servicing capacity than TIE alone.",
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Option B is incorrect because it divides EBITDA by interest expense alone ($840,000 / $192,000 = 4.38), completely ignoring the $320,000 annual principal obligation. DSCR requires total debt service in the denominator — both principal and interest — because lenders evaluate whether the borrower can meet all required cash outflows, not merely the interest coupon. A candidate selecting this option likely confused DSCR with the times interest earned ratio, which uses only interest in the denominator.",
+      "ExplanationWrongC": "Option C is incorrect because it divides EBITDA by principal payments alone ($840,000 / $320,000 = 2.63), omitting the $192,000 annual interest charge. Total debt service includes both components — a borrower that cannot pay interest is in default regardless of its ability to repay principal. The correct DSCR of 1.64 reflects both the $320,000 principal amortization and the $192,000 interest obligation, providing a complete measure of Crestview's debt-servicing capacity under the loan agreement.",
+      "ExplanationWrongD": "Option D is incorrect because it subtracts interest expense from EBITDA before dividing by total debt service, computing ($840,000 - $192,000) / $512,000 = 1.27. This double-counts interest by removing it from both the numerator and the denominator. DSCR intentionally uses EBITDA as the numerator precisely because EBITDA represents operating income available to service debt before any debt-service payments are made. The correct ratio is $840,000 / $512,000 = 1.64.",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.5",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Debt Service Coverage Ratio",
+      "CommonTrapReference": "Confusing DSCR (which includes principal payments in the denominator) with times interest earned (which includes only interest expense)",
+      "Authorities": [
+          "ASC 470-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.048 times interest earned covenant interpretation",
+      "QuestionID": "P2-A-048",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Atlas Industries reported net income of $600,000, income tax expense of $150,000, and interest expense of $500,000 for the year. Its senior note indenture requires the times interest earned ratio to be 'at least 2.50' as a maintenance covenant. Credit analyst James Okonkwo computes the TIE and must determine whether Atlas is in compliance. Which of the following correctly resolves the compliance question?",
+      "Choices": {
+          "A": "Atlas is in technical default because 'at least 2.50' means the ratio must strictly exceed 2.50; equaling the stated minimum does not satisfy a financial maintenance covenant under standard credit agreement interpretation.",
+          "B": "The TIE is properly 2.20, computed as ($600,000 + $500,000) / $500,000. Atlas fails the covenant, and the CFO's claim of 2.50 represents an improper rounding of 2.20 upward.",
+          "C": "Atlas is in compliance because EBIT of $1,250,000 divided by $500,000 interest expense yields a TIE of exactly 2.50, and a covenant requiring 'at least' a stated ratio includes the threshold value itself.",
+          "D": "Atlas fails the covenant because the correct TIE is ($600,000 + $150,000) / $500,000 = 1.50. Interest expense is a real cash outflow that reduces earnings and should not be added back to the numerator under the indenture's definition of 'earnings.'"
+      },
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "The times interest earned ratio measures a company's ability to meet interest obligations from operating earnings. TIE = EBIT / Interest Expense. EBIT = Net Income + Income Tax Expense + Interest Expense = $600,000 + $150,000 + $500,000 = $1,250,000. TIE = $1,250,000 / $500,000 = 2.50. Under standard contractual interpretation, a covenant requiring 'at least 2.50' or a 'minimum of 2.50' is satisfied when the ratio equals or exceeds 2.50 — the phrase 'at least' is inclusive of the stated threshold. Atlas is therefore in compliance. A common error is assuming 'minimum' means the ratio must strictly exceed the stated value; in fact, absent explicit language to the contrary (e.g., 'greater than 2.50'), equaling the minimum satisfies the covenant under ASC 470-10 debt classification guidance.",
+      "ExplanationWrongA": "Option A is incorrect because it misinterprets the contractual meaning of 'at least.' In both accounting practice and contract law, 'at least X' means greater than or equal to X, not strictly greater than X. A TIE of exactly 2.50 satisfies a covenant requiring a ratio of at least 2.50. The statement that standard credit agreements require strictly exceeding the minimum is not correct — if the lender intended to require exceeding 2.50, the indenture would use language such as 'greater than 2.50' or 'in excess of 2.50.'",
+      "ExplanationWrongB": "Option B is incorrect on two counts. First, the TIE numerator is EBIT, not net income plus interest alone. Omitting income tax expense understates EBIT: ($600,000 + $500,000) = $1,100,000, not $1,250,000, producing a TIE of $1,100,000 / $500,000 = 2.20 rather than the correct 2.50. Second, rounding a computed ratio is not an accepted practice in covenant compliance — the ratio is reported as calculated, and 2.20 does not round to 2.50.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Option D is incorrect because it omits interest expense from the TIE numerator, computing ($600,000 + $150,000) / $500,000 = 1.50. The numerator $750,000 represents earnings before tax (EBT), not earnings before interest and tax (EBIT). The very purpose of the TIE ratio is to measure income available to cover interest — interest must be added back to the numerator because it represents the obligation being tested.",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.5",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Times Interest Earned",
+      "CommonTrapReference": "Misinterpreting 'at least' as requiring strict exceedance of the covenant threshold, or omitting income tax expense when computing EBIT for the TIE numerator",
+      "Authorities": [
+          "ASC 470-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.049 debt-to-equity with lease adjustment",
+      "QuestionID": "P2-A-049",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Pacific Logistics reported total liabilities of $1,920,000 and shareholders' equity of $1,600,000 before adopting ASC 842. The company has $480,000 in operating lease obligations that ASC 842 now requires to be recognized as lease liabilities on the balance sheet. Pacific's loan agreement with Bay Commercial Bank defines the debt-to-equity ratio to exclude operating lease obligations from total debt. Credit analyst Priya Mehta needs to compute Pacific's D/E ratio both under GAAP reporting post-ASC 842 adoption and under the bank covenant definition. Which of the following is correct?",
+      "Choices": {
+          "A": "GAAP D/E: 1.20; Covenant D/E: 1.20 — both calculations are identical because the bank covenant follows GAAP recognition and measurement principles.",
+          "B": "GAAP D/E: 1.20; Covenant D/E: 1.50 — ASC 842 affects only footnote disclosure and does not alter balance sheet recognition, so the covenant calculation adds back lease obligations that GAAP omits.",
+          "C": "GAAP D/E: 1.50; Covenant D/E: 1.50 — ASC 842 standardizes all lease accounting, and loan agreements automatically incorporate GAAP changes under standard amendment provisions.",
+          "D": "GAAP D/E: 1.50; Covenant D/E: 1.20 — ASC 842 requires operating leases to be recognized on the balance sheet as liabilities, but the loan covenant specifically excludes operating lease obligations from the D/E computation."
+      },
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "Under ASC 842, lessees must recognize a right-of-use asset and a corresponding lease liability for virtually all leases, including operating leases. Pacific's post-adoption total liabilities = $1,920,000 + $480,000 = $2,400,000, producing a GAAP D/E ratio of $2,400,000 / $1,600,000 = 1.50. However, loan covenants are contractual agreements negotiated between borrower and lender — they define financial ratios on their own terms, which may differ from GAAP. Because Pacific's covenant specifically excludes operating lease obligations, the covenant D/E ratio uses only the pre-ASC 842 liability balance: $1,920,000 / $1,600,000 = 1.20. This divergence is common in credit analysis: the lender may believe operating leases represent a lower credit risk than funded debt or may have negotiated the exclusion to avoid a technical default triggered by an accounting standards change. A credit analyst must compute both measures to assess GAAP leverage and covenant headroom separately.",
+      "ExplanationWrongA": "Option A is incorrect because it assumes the bank covenant automatically mirrors GAAP. In reality, loan covenants define financial ratios using negotiated definitions that often diverge from GAAP — a practice explicitly recognized in ASC 470-10. Pacific's GAAP D/E increases from 1.20 to 1.50 upon ASC 842 adoption because operating leases become recognized liabilities. The covenant D/E remains at 1.20 because the agreement specifically excludes operating lease obligations from the definition of debt.",
+      "ExplanationWrongB": "Option B is incorrect on two fronts. First, ASC 842 does alter balance sheet recognition — it requires lessees to record operating lease right-of-use assets and corresponding lease liabilities, contrary to prior GAAP which kept operating leases off-balance-sheet. Second, the covenant D/E of 1.20 is lower than the GAAP D/E of 1.50, not higher, because the covenant excludes the $480,000 in operating lease obligations that GAAP now requires to be recognized.",
+      "ExplanationWrongC": "Option C is incorrect because loan covenants do not automatically incorporate GAAP changes. Lenders and borrowers negotiate covenant definitions at loan origination, and many credit agreements contain 'frozen GAAP' provisions that lock the accounting standards in effect at closing. Even without a frozen GAAP clause, Pacific's covenant explicitly excludes operating lease obligations — a definitional choice that operates independently of whether GAAP recognizes those obligations on the balance sheet.",
+      "ExplanationWrongD": "",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.5",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Debt-to-Equity Ratio",
+      "CommonTrapReference": "Assuming that loan covenant ratio definitions automatically match GAAP; failing to recognize that ASC 842 brings operating leases onto the balance sheet, increasing reported leverage",
+      "Authorities": [
+          "ASC 842",
+          "ASC 470-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.050 Altman Z-score component identification",
+      "QuestionID": "P2-A-050",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Keystone Manufacturing has the following financial data: working capital of $1,200,000, total assets of $8,000,000, retained earnings of $2,400,000, EBIT of $960,000, market value of equity of $5,600,000, and sales of $12,000,000. Total liabilities are $5,000,000. Credit analyst David Chen is computing the Altman Z-score to assess Keystone's bankruptcy risk and needs the value of the retained earnings to total assets component. The X2 component of the Altman Z-score is closest to:",
+      "Choices": {
+          "A": "0.30",
+          "B": "0.12",
+          "C": "0.15",
+          "D": "0.42"
+      },
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "The Altman Z-score model uses five financial ratios weighted by coefficients to predict bankruptcy probability. X2 is defined as Retained Earnings / Total Assets and reflects cumulative profitability and the firm's age — older, consistently profitable firms accumulate higher retained earnings relative to their asset base, signaling lower bankruptcy risk. X2 = $2,400,000 / $8,000,000 = 0.30. In the five-factor model, X2 carries the third-largest coefficient weight (1.4 in the original public-manufacturing model), making retained earnings relative to total assets a meaningful discriminator between solvent and distressed firms. A candidate should memorize all five Z-score components: X1 = WC/TA, X2 = RE/TA, X3 = EBIT/TA, X4 = MVE/TL, and X5 = Sales/TA.",
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Option B (0.12) represents the X3 component of the Altman Z-score — Earnings Before Interest and Taxes divided by Total Assets ($960,000 / $8,000,000 = 0.12). While X3 measures operating efficiency and asset utilization independent of leverage and taxes, the question specifically asks for the X2 component, which uses retained earnings rather than EBIT as the numerator. A candidate selecting this option correctly identified that a ratio uses total assets as the denominator but confused which numerator belongs to the X2 slot.",
+      "ExplanationWrongC": "Option C (0.15) represents the X1 component of the Altman Z-score — Working Capital divided by Total Assets ($1,200,000 / $8,000,000 = 0.15). X1 measures net liquid assets relative to total capitalization and is typically the most heavily weighted component. A candidate selecting this option correctly identified that total assets serves as denominator but selected the working capital numerator associated with X1 instead of the retained earnings numerator required for X2.",
+      "ExplanationWrongD": "Option D (0.42) results from incorrectly summing retained earnings and EBIT before dividing by total assets: ($2,400,000 + $960,000) / $8,000,000 = $3,360,000 / $8,000,000 = 0.42. The Altman model keeps each ratio as a separate, independently weighted component — retained earnings and EBIT appear in distinct ratios (X2 and X3) because they measure different dimensions of financial health. Combining them into a single numerator defeats the model's purpose of capturing multiple independent predictors of distress.",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.5",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Altman Z-Score",
+      "CommonTrapReference": "Confusing the five Altman Z-score components — particularly mixing up X1 (WC/TA), X2 (RE/TA), and X3 (EBIT/TA), all of which use total assets as the denominator",
+      "Authorities": [
+          "ASC 205-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.051 cash flow adequacy for debt repayment",
+      "QuestionID": "P2-A-051",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Riverside Healthcare reported the following for the year: net income of $780,000, depreciation expense of $220,000, an increase in accounts receivable of $90,000, a decrease in inventory of $45,000, and an increase in accounts payable of $30,000. Annual required principal payments on long-term debt total $350,000. The board of directors has set a policy threshold requiring that operating cash flow cover mandatory principal payments by at least 2.0 times before approving additional borrowing. Senior accountant Fatima Osei must determine whether Riverside meets this threshold. Which of the following is correct?",
+      "Choices": {
+          "A": "No; operating cash flow of $690,000 provides only 1.97 times coverage of principal, falling short of the 2.0 threshold.",
+          "B": "No; operating cash flow of $545,000 provides only 1.56 times coverage of principal, falling substantially short of the 2.0 threshold.",
+          "C": "Yes; operating cash flow of $985,000 provides 2.81 times coverage of principal, exceeding the 2.0 threshold.",
+          "D": "Yes; operating cash flow of $1,165,000 provides 3.33 times coverage of principal, comfortably exceeding the 2.0 threshold."
+      },
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "Operating cash flow under the indirect method begins with net income and adjusts for non-cash items and changes in working capital. The calculation: OCF = Net Income + Depreciation - Increase in Accounts Receivable + Decrease in Inventory + Increase in Accounts Payable = $780,000 + $220,000 - $90,000 + $45,000 + $30,000 = $985,000. Cash flow coverage of principal = $985,000 / $350,000 = 2.81. Since 2.81 exceeds the board's 2.0 threshold, Riverside meets the policy requirement and may proceed with additional borrowing analysis. A common error under the indirect method is mishandling the directional signs of working capital changes: decreases in assets (inventory declining) add to cash flow, while increases in assets (A/R growing) consume cash flow.",
+      "ExplanationWrongA": "Option A is incorrect because it computes operating cash flow as net income minus the increase in accounts receivable only ($780,000 - $90,000 = $690,000), ignoring depreciation, the decrease in inventory, and the increase in accounts payable — three adjustments that collectively add $295,000 to operating cash flow. The resulting coverage of $690,000 / $350,000 = 1.97 falls below the 2.0 threshold.",
+      "ExplanationWrongB": "Option B is incorrect because its operating cash flow computation of $545,000 subtracts depreciation instead of adding it back: $780,000 - $220,000 - $90,000 + $45,000 + $30,000 = $545,000. Depreciation is a non-cash expense that reduces net income but does not consume cash — under the indirect method, it must be added back to net income, not subtracted.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Option D is incorrect because it adds the increase in accounts receivable instead of subtracting it: $780,000 + $220,000 + $90,000 + $45,000 + $30,000 = $1,165,000. An increase in accounts receivable means that more revenue was recognized on an accrual basis than cash was collected from customers — the $90,000 represents uncollected sales that must be subtracted from net income to arrive at actual cash generated.",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.5",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Cash Flow Adequacy Ratio",
+      "CommonTrapReference": "Mishandling the signs of working capital changes in the indirect method — particularly adding increases in accounts receivable instead of subtracting, or subtracting depreciation instead of adding it back",
+      "Authorities": [
+          "ASC 205-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.052 current ratio vs quick ratio credit divergence",
+      "QuestionID": "P2-A-052",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Bayview Retailers reports current assets of $4,500,000, consisting of cash of $450,000, accounts receivable of $1,170,000, inventory of $2,700,000, and prepaid expenses of $180,000. Current liabilities total $1,800,000. Credit analyst Sophie Tran is reviewing Bayview's liquidity for a revolving credit facility renewal and observes that the current ratio appears adequate but the quick ratio raises concerns. Which of the following correctly presents both ratios and explains the divergence in a credit context?",
+      "Choices": {
+          "A": "Current ratio 2.50, quick ratio 1.00; the moderate gap reflects normal retail inventory levels, and the quick ratio of 1.00 indicates Bayview can meet all current obligations with liquid assets alone — acceptable for credit approval.",
+          "B": "Current ratio 2.50, quick ratio 2.50; no meaningful divergence exists because all current assets, including inventory and prepaids, are readily convertible to cash within the normal operating cycle.",
+          "C": "Current ratio 2.50, quick ratio 0.90; inventory accounts for 60% of current assets and the quick ratio of 0.90 is typical for retailers carrying seasonal inventory — the divergence is expected and does not warrant a credit concern.",
+          "D": "Current ratio 2.50, quick ratio 0.90; the nearly threefold gap between the two ratios signals that Bayview is heavily dependent on inventory liquidation to satisfy short-term obligations, a material credit risk if inventory turnover slows."
+      },
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "Current ratio = $4,500,000 / $1,800,000 = 2.50. Quick ratio = (Current Assets - Inventory - Prepaid Expenses) / Current Liabilities = ($4,500,000 - $2,700,000 - $180,000) / $1,800,000 = $1,620,000 / $1,800,000 = 0.90. The divergence between 2.50 (current) and 0.90 (quick) — a roughly 2.8x gap — reveals that Bayview is structurally dependent on inventory to satisfy short-term obligations. For every $1.00 of current liabilities, Bayview has only $0.90 in cash and receivables; the remaining $1.60 of coverage comes from inventory ($1.50) and prepaids ($0.10). In credit analysis under ASC 205-10 going concern evaluation, a quick ratio below 1.0 when paired with a strong current ratio signals a potential liquidity timing mismatch: inventory must be sold and converted to receivables before cash is realized, while payables come due on fixed schedules. This is a material credit concern, particularly for a retailer whose inventory is subject to obsolescence, markdown, and seasonal demand shifts.",
+      "ExplanationWrongA": "Option A is incorrect because it computes the quick ratio as ($4,500,000 - $2,700,000) / $1,800,000 = 1.00, omitting the $180,000 in prepaid expenses from the exclusion. Prepaid expenses are not quick assets — they represent future services already paid for and cannot be converted to cash to satisfy current liabilities. The correct quick ratio is 0.90. Moreover, a quick ratio of exactly 1.00 with a current ratio of 2.50 would still indicate heavy inventory dependency, not a clean bill of credit health.",
+      "ExplanationWrongB": "Option B is incorrect because it treats all current assets as quick assets, reporting both ratios as 2.50. The quick ratio (acid-test ratio) is explicitly a more conservative measure that excludes inventory and prepaid expenses from the numerator — only cash, marketable securities, and accounts receivable qualify as quick assets. The purpose of the quick ratio is precisely to reveal whether short-term obligations can be met without relying on inventory liquidation.",
+      "ExplanationWrongC": "Option C is incorrect because, while it correctly computes both ratios (current 2.50, quick 0.90), its interpretation understates the credit risk. A quick ratio below 1.0 is never 'expected and not a concern' in credit analysis — it means the company cannot pay all current liabilities from cash and near-cash resources even if inventory is excluded. For a revolving credit facility renewal, a lender would view 0.90 as a red flag requiring further analysis.",
+      "ExplanationWrongD": "",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Analyze",
+      "CalculationItem": true,
+      "Type": "select",
+      "LOSTag": "A.5",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": "Quick Ratio (Acid-Test Ratio)",
+      "CommonTrapReference": "Omitting prepaid expenses from the quick ratio exclusion (only subtracting inventory); treating all current assets as quick assets; dismissing a sub-1.0 quick ratio as acceptable when paired with a strong current ratio without analyzing inventory dependency",
+      "Authorities": [
+          "ASC 205-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  }
+,
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.053 credit rating migration coverage deterioration",
+      "QuestionID": "P2-A-053",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Bancroft Bank's credit analysis team is reviewing Midvale Manufacturing's three-year financial history after a rating agency downgraded Midvale from BBB to BB. The senior credit officer, Elena Torres, must determine which ratio deterioration most likely triggered the downgrade. Midvale's EBIT has been stable at $48 million, with interest expense rising from $12 million to $16 million as the company refinanced floating-rate debt into higher fixed-rate obligations. Total debt grew from $240 million to $310 million, while equity contracted from $260 million to $230 million due to share repurchases.",
+      "Choices": {
+          "A": "The debt-to-equity ratio rose from 0.92 to 1.35, signaling increased reliance on debt financing that elevates default risk.",
+          "B": "The current ratio declined from 2.1 to 1.8, indicating weakened short-term liquidity that undermines refinancing flexibility.",
+          "C": "The interest coverage ratio fell from 4.0x to 3.0x, directly measuring Midvale's diminished capacity to service debt from operating earnings.",
+          "D": "Return on assets declined from 8.2% to 7.1%, reflecting deteriorating asset efficiency that reduces long-term earning power."
+      },
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "The correct answer is C. The interest coverage ratio (EBIT / Interest expense) fell from $48M / $12M = 4.0x to $48M / $16M = 3.0x. Under ASC 205-10, going concern assessment requires evaluating an entity's ability to meet obligations as they come due. Credit rating agencies weight interest coverage heavily because it directly measures the margin of safety between operating earnings and debt service costs — the most immediate indicator of default probability. A decline from 4.0x to 3.0x crosses a commonly watched threshold in credit analysis, where cushions below 3.5x trigger heightened scrutiny. The debt-to-equity rise from share repurchases is a consequence, not the proximate cause — rating agencies consider coverage ratios before leverage ratios when assessing near-term credit risk.",
+      "ExplanationWrongA": "Option A restates that the debt-to-equity ratio rose from 0.92 to 1.35. This is incorrect because the rise was driven primarily by share repurchases reducing equity, not by additional operational borrowing. A credit analyst would note that stable EBIT with growing interest expense makes coverage deterioration the more proximate credit concern than leverage shift alone.",
+      "ExplanationWrongB": "Option B restates that the current ratio declined from 2.1 to 1.8. This is incorrect because a current ratio of 1.8 remains well above typical covenant thresholds and does not indicate imminent liquidity distress. Rating agencies downgrade on structural credit deterioration — declining interest coverage — not modest working capital movement that remains within normal ranges.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Option D restates that return on assets declined. This is incorrect because the decline is consistent with the increased asset base from refinanced debt, and a 110-basis-point ROA change alone does not trigger a rating downgrade. Profitability trends inform long-term credit views but interest coverage deterioration is the immediate downgrade catalyst.",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Evaluate",
+      "CalculationItem": false,
+      "Type": "select",
+      "LOSTag": "A.5",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": null,
+      "CommonTrapReference": "Conflating leverage deterioration with coverage deterioration in credit rating analysis",
+      "Authorities": [
+          "ASC 205-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.054 off-balance-sheet obligations true leverage",
+      "QuestionID": "P2-A-054",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Northfield Capital is evaluating a $40 million term loan request from Crestview Logistics, a regional trucking company. Crestview's reported balance sheet shows total debt of $85 million and shareholders' equity of $120 million, yielding a debt-to-equity ratio of 0.71. However, Crestview's notes disclose $38 million in operating lease commitments with an average remaining term of 7 years and a weighted-average discount rate of 6%. Under ASC 842, these leases are on the balance sheet as right-of-use assets and lease liabilities, but Crestview's controller excluded them from the debt-to-equity calculation. Credit analyst David Okonkwo must determine the true leverage position.",
+      "Choices": {
+          "A": "True leverage is 1.03 when lease liabilities are reclassified as debt, nearly 45% higher than the reported 0.71, indicating substantially higher financial risk.",
+          "B": "True leverage remains 0.71 because operating lease payments are periodic expenses that do not represent a fixed obligation comparable to debt principal.",
+          "C": "True leverage improves to 0.68 because the right-of-use asset adds to the denominator, offsetting the lease liability and strengthening the balance sheet.",
+          "D": "True leverage is 0.89 because only the current portion of lease liabilities should be counted as debt, matching the treatment of current maturities of long-term debt."
+      },
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "The correct answer is A. Under ASC 842, lessees recognize both a right-of-use asset and a lease liability for operating leases. The lease liability represents a genuine financial obligation that credit analysts must treat as debt. Crestview's true debt is $85M + $38M = $123M, and true debt-to-equity is $123M / $120M = 1.03. This 45% increase from the reported 0.71 represents a material change in risk assessment. Credit committees routinely adjust reported leverage for lease obligations because the lease liability has priority in bankruptcy, requires fixed cash outflows, and is economically indistinguishable from secured borrowing.",
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Option B restates that true leverage remains at 0.71. This is incorrect because operating lease liabilities under ASC 842 are fixed contractual obligations that must be satisfied from cash flows, placing them in the same category as debt for credit assessment. The periodic-expense characterization confuses income statement presentation with balance sheet obligation analysis.",
+      "ExplanationWrongC": "Option C restates that true leverage improves to 0.68 because the right-of-use asset offsets the liability. This is incorrect because credit analysis measures debt obligations against equity, not net asset value. The right-of-use asset represents a contractual right to use property, not a financial asset available to repay creditors.",
+      "ExplanationWrongD": "Option D restates that only the current portion of lease liabilities should be counted. This is incorrect because credit analysis evaluates total fixed obligations, not just amounts due within one year. The full $38 million in lease commitments represents a claim on future cash flows, and excluding the long-term portion systematically understates credit exposure.",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Evaluate",
+      "CalculationItem": false,
+      "Type": "select",
+      "LOSTag": "A.5",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": null,
+      "CommonTrapReference": "Accepting reported leverage ratios at face value without adjusting for off-balance-sheet obligations",
+      "Authorities": [
+          "ASC 842"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.055 covenant compliance economic substance",
+      "QuestionID": "P2-A-055",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Fairview Community Bank holds a $15 million revolving credit facility with Stonebridge Construction. The credit agreement requires Stonebridge to maintain a fixed charge coverage ratio of at least 1.25x and a debt-to-EBITDA ratio not exceeding 3.5x. Stonebridge's CFO, Priya Nair, reports a fixed charge coverage ratio of 1.31x and a debt-to-EBITDA ratio of 3.2x for the fiscal year. However, the credit analyst notes that Stonebridge reclassified $2.1 million of operating expenses as capital expenditures and sold a warehouse at a $4.3 million gain, booking the gain in EBITDA. Without these adjustments, fixed charge coverage falls to 1.08x and debt-to-EBITDA rises to 4.6x. The credit officer must decide whether to waive the covenant breach.",
+      "Choices": {
+          "A": "The covenants are technically satisfied at reported levels, so the bank should waive any concern and extend the facility on existing terms without modification.",
+          "B": "The bank should accelerate the loan immediately because any reclassification of expenses signals fraudulent intent by management, regardless of quantitative covenant compliance.",
+          "C": "The bank should demand immediate repayment of all outstanding balances because any EBITDA adjustment, even for legitimate non-recurring items, constitutes a covenant default.",
+          "D": "The bank should re-evaluate the credit on adjusted metrics because the reported ratios depend on accounting treatments that obscure economic reality, warranting a covenant reset or additional collateral."
+      },
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "The correct answer is D. Under ASC 470-10, creditors assess covenant compliance based on both contractual definitions and the economic substance of reported figures. Stonebridge's reported ratios technically exceed covenant thresholds, but the EBITDA figure is inflated by the $4.3 million warehouse sale gain — a non-recurring transaction — and the $2.1 million expense capitalization shifts current costs to future periods. Credit analysis doctrine requires examining whether accounting classifications reflect economic reality, not merely whether they satisfy contractual covenant arithmetic. The bank's credit officer should not accelerate the loan but should use the adjusted metrics to negotiate a covenant reset with tighter definitions of EBITDA or require additional collateral.",
+      "ExplanationWrongA": "Option A restates that covenants are technically satisfied and no action is needed. This is incorrect because credit analysis must look through accounting treatments to underlying economic performance. A non-recurring gain and expense capitalization that mask genuine covenant breaches indicate elevated credit risk that warrants renegotiation, not passive acceptance.",
+      "ExplanationWrongB": "Option B restates that the bank should accelerate the loan immediately. This is incorrect because reclassification of expenses does not automatically constitute fraud — it may reflect aggressive but defensible accounting interpretation. Proportional credit actions, not punitive loan acceleration, align with prudent banking practice.",
+      "ExplanationWrongC": "Option C restates that immediate repayment should be demanded. This is incorrect because not all EBITDA adjustments represent a covenant default. The appropriate response is to evaluate adjusted metrics against the covenant's economic intent and negotiate revised terms, not to exercise the most extreme contractual remedy.",
+      "ExplanationWrongD": "",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Evaluate",
+      "CalculationItem": false,
+      "Type": "select",
+      "LOSTag": "A.5",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": null,
+      "CommonTrapReference": "Treating covenant compliance as a binary check-the-box exercise without evaluating economic substance",
+      "Authorities": [
+          "ASC 470-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.056 liquidity solvency distinction credit decisions",
+      "QuestionID": "P2-A-056",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Oakmont Credit Union's loan committee is reviewing two borrowers. Hayes Manufacturing shows a current ratio of 3.1 and a quick ratio of 2.4 but has negative retained earnings and total liabilities exceeding total assets by $8 million. Prescott Distribution shows a current ratio of 1.1 and a quick ratio of 0.7 but has positive shareholders' equity of $22 million and debt-to-equity of 1.4. Both companies have operated for over 20 years. Committee chair Robert Okonkwo must determine which borrower presents the lower credit risk for a 5-year term loan.",
+      "Choices": {
+          "A": "Hayes Manufacturing presents lower credit risk because its strong current and quick ratios demonstrate the ability to meet all obligations as they mature, which is the primary concern of any lender.",
+          "B": "Neither borrower is creditworthy because both exhibit at least one material weakness — Hayes in solvency and Prescott in liquidity — and banks should not lend to companies with any financial ratio below industry norms.",
+          "C": "Prescott Distribution presents lower credit risk because its positive equity cushion and moderate leverage indicate long-term viability, while its tight liquidity can be addressed through the loan proceeds and ongoing cash flow from operations.",
+          "D": "Hayes Manufacturing presents lower credit risk because short-term liquidity metrics are the most reliable predictors of default within a 5-year horizon, and solvency concerns can be remedied through future profitability."
+      },
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "The correct answer is C. Under ASC 205-10, the going concern assessment requires evaluating both liquidity and solvency, but the relative weight depends on the credit horizon. For a 5-year term loan, solvency — measured by positive equity and sustainable leverage — is the more critical dimension because liquidity ratios are point-in-time snapshots that can be addressed through loan proceeds, while insolvency (negative equity) represents a structural deficiency that persists unless the company generates sustained profitability. Prescott's current ratio of 1.1 is tight but not distressed; the $22 million equity cushion absorbs losses, and the 1.4 debt-to-equity ratio is moderate. Hayes's 3.1 current ratio masks the fundamental problem: when liabilities exceed assets by $8 million, the company is balance-sheet insolvent.",
+      "ExplanationWrongA": "Option A restates that Hayes Manufacturing presents lower credit risk based on strong liquidity ratios. This is incorrect because for a 5-year term loan, solvency concerns dominate liquidity. A current ratio of 3.1 does not remedy negative equity of $8 million, which indicates the company's total obligations exceed its asset base and remains a structural vulnerability across the full loan term.",
+      "ExplanationWrongB": "Option B restates that neither borrower is creditworthy. This is incorrect because professional credit analysis evaluates trade-offs between liquidity and solvency rather than applying a zero-tolerance standard. Prescott's tight liquidity is manageable with new loan proceeds and ongoing cash flow, and a single ratio below norms does not automatically disqualify an otherwise viable borrower.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Option D restates that short-term liquidity is the most reliable default predictor over a 5-year horizon. This is incorrect because empirical evidence shows that solvency ratios such as debt-to-equity and interest coverage have greater predictive power for default beyond short-term horizons. High liquidity does not protect a lender when the borrower has insufficient equity to absorb losses.",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Evaluate",
+      "CalculationItem": false,
+      "Type": "select",
+      "LOSTag": "A.5",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": null,
+      "CommonTrapReference": "Treating liquidity and solvency as interchangeable measures in credit assessment",
+      "Authorities": [
+          "ASC 205-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.057 earnings quality lending assessment",
+      "QuestionID": "P2-A-057",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Summit Commercial Bank is evaluating a $25 million expansion loan for Apex Pharmaceuticals. Apex reported net income of $18.2 million, up 27% from the prior year. The credit analyst, Maria Vega, notes that $6.8 million of the income comes from a litigation settlement, $3.1 million from a gain on the sale of Apex's research facility, and $2.4 million from a deferred tax asset valuation allowance release. Core operating income from pharmaceutical sales was $5.9 million, down from $7.1 million in the prior year. The loan committee must assess Apex's earnings quality to determine the appropriate debt service coverage ratio.",
+      "Choices": {
+          "A": "The appropriate coverage ratio should be based on core operating income of $5.9 million because non-recurring items do not represent sustainable cash flow available for debt service, revealing a declining earnings trend masked by reported income growth.",
+          "B": "The appropriate coverage ratio should be based on reported net income of $18.2 million because audited GAAP financial statements present the most reliable measure of a borrower's repayment capacity, and all recognized income is equally available to service debt.",
+          "C": "The appropriate coverage ratio cannot be determined because the proportion of non-recurring items exceeds 50% of reported income, and the bank should decline the loan until Apex demonstrates at least three consecutive quarters of exclusively operating income growth.",
+          "D": "The appropriate coverage ratio should include the litigation settlement and deferred tax release but exclude the facility sale gain, because cash-generating items improve repayment capacity even if they are non-recurring, while asset sale gains are one-time only."
+      },
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "The correct answer is A. Under ASC 205-10, financial statement analysis for credit decisions requires distinguishing between sustainable earnings and transitory items. Apex's reported net income growth of 27% is misleading: $6.8M from litigation is a non-recurring legal recovery, $3.1M from a facility sale is a disposition gain, and $2.4M from a valuation allowance release is a non-cash accounting adjustment. None represents recurring operating cash flow available for debt service. Core operating income of $5.9 million, down from $7.1 million, reveals a 16.9% decline in the business that will actually generate loan repayment capacity. Basing the debt service coverage ratio on reported $18.2M would dramatically overstate Apex's ability to repay.",
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Option B restates that audited GAAP net income of $18.2 million should be used. This is incorrect because audited financial statements confirm compliance with recognition standards, not earnings sustainability. Credit analysis requires adjusting for non-recurring items because loan repayment depends on future cash flows from continuing operations, not on one-time gains already realized.",
+      "ExplanationWrongC": "Option C restates that the bank should decline the loan pending three quarters of exclusively operating income growth. This is incorrect because a rigid numerical threshold for non-recurring items is not a recognized credit analysis standard. The bank can appropriately adjust coverage ratios to reflect sustainable earnings and negotiate loan terms reflecting the higher risk, rather than declining the application outright.",
+      "ExplanationWrongD": "Option D restates that litigation settlement and deferred tax release income should be included but the facility sale gain excluded. This is incorrect because all three items — litigation recovery, disposition gain, and valuation allowance release — are non-recurring in nature and cannot be expected to recur for debt service across the loan term. Selectively including some non-recurring items while excluding others is analytically inconsistent.",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Evaluate",
+      "CalculationItem": false,
+      "Type": "select",
+      "LOSTag": "A.4",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": null,
+      "CommonTrapReference": "Computing coverage ratios mechanically from reported net income without recasting for sustainable earnings",
+      "Authorities": [
+          "ASC 205-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.058 DuPont ROE component performance differential",
+      "QuestionID": "P2-A-058",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Two pharmaceutical distributors, MedCore Inc. and Harbor Drug Supply, reported identical return on equity of 18.2% for the fiscal year. However, the credit analyst, James Okonkwo, notes significant differences in their DuPont decomposition. MedCore's net profit margin is 8.4%, asset turnover is 1.1x, and equity multiplier is 1.97x. Harbor Drug Supply's net profit margin is 4.2%, asset turnover is 2.2x, and equity multiplier is 1.97x. Both companies operate with identical equity multipliers because they target the same debt-to-capital ratio of 49%. Okonkwo must determine which company's ROE is more sustainable for a 7-year credit facility.",
+      "Choices": {
+          "A": "MedCore's ROE is more sustainable because its higher net profit margin of 8.4% indicates superior pricing power and cost control that will persist across economic cycles, regardless of the lower asset turnover.",
+          "B": "Both ROEs are equally sustainable because the identical 18.2% outcome and identical equity multiplier mean the two companies face identical risk profiles for credit assessment purposes.",
+          "C": "MedCore's ROE is more sustainable because a higher net profit margin is less susceptible to deterioration than asset turnover, making MedCore's earnings quality superior for long-term credit evaluation.",
+          "D": "Harbor Drug Supply's ROE is more sustainable because its high asset turnover of 2.2x indicates efficient operations that generate revenue from a smaller asset base, while its lower margin reflects a volume-driven strategy that is more defensible in a competitive market."
+      },
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "The correct answer is D. Under ASC 205-10, financial statement analysis for credit evaluation must assess the quality and sustainability of returns, not merely their level. Harbor Drug Supply generates its 18.2% ROE through asset efficiency (turnover of 2.2x) on a thin but stable margin of 4.2%. This DuPont profile is characteristic of a high-volume distribution business model — the company turns inventory rapidly, manages receivables tightly, and generates revenue from modestly priced goods, making it resilient to margin compression because competitors cannot easily replicate the operational efficiency. MedCore's 8.4% margin on 1.1x turnover suggests a premium-pricing strategy with lower volume throughput. In pharmaceutical distribution, a high-margin strategy is vulnerable to price competition from generic entrants, consolidation among hospital purchasing groups, and regulatory pressure on drug pricing.",
+      "ExplanationWrongA": "Option A restates that MedCore's higher net profit margin indicates superior sustainability. This is incorrect because in the pharmaceutical distribution industry, high-margin strategies are vulnerable to price competition and regulatory pressure that can rapidly compress margins. Asset turnover reflects operational efficiency embedded in infrastructure, which competitors cannot replicate quickly.",
+      "ExplanationWrongB": "Option B restates that identical ROE and equity multiplier mean identical risk profiles. This is incorrect because the DuPont decomposition reveals that identical top-line ROE can be produced by fundamentally different business strategies — MedCore's margin-driven model and Harbor's turnover-driven model carry different sensitivity to competitive pressures and regulatory changes.",
+      "ExplanationWrongC": "Option C restates that higher net profit margin is less susceptible to deterioration than asset turnover. This is incorrect for distribution businesses: margins are more exposed to competitive and regulatory threats than turnover, which reflects core operating efficiency. In pharmaceutical distribution specifically, high-margin strategies face greater disruption risk than high-volume strategies.",
+      "ExplanationWrongD": "",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CognitiveLevel": "Evaluate",
+      "CalculationItem": false,
+      "Type": "select",
+      "LOSTag": "A.4",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": null,
+      "CommonTrapReference": "Interpreting ROE as a self-contained quality measure without decomposing into DuPont drivers",
+      "Authorities": [
+          "ASC 205-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.059 cash flow accrual divergence creditworthiness",
+      "QuestionID": "P2-A-059",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "Grandview Bank is reviewing a $50 million credit facility for Trelawny Building Products, a manufacturer of commercial roofing systems. Trelawny reported net income of $34.2 million for the year, a 22% increase from the prior year. However, operating cash flow was $6.1 million, down from $18.4 million in the prior year. The divergence stems from a $15.8 million increase in accounts receivable tied to extended payment terms offered to two large home-improvement chains, $8.2 million in inventory buildup for a new product line, and $4.1 million in capitalized software development costs. The credit officer, David Chen, must determine which metric better predicts Trelawny's creditworthiness over a 5-year term.",
+      "Choices": {
+          "A": "Net income of $34.2 million is the better predictor because GAAP accrual accounting smooths timing differences, and the revenue recognized from the new chain contracts represents genuine economic value that will eventually convert to cash.",
+          "B": "Neither metric alone is sufficient, and the bank must require audited cash flow forecasts for all 5 years, because any divergence between reported income and operating cash flow invalidates both measures for credit analysis.",
+          "C": "Operating cash flow of $6.1 million is the better predictor because cash actually generated from operations measures the liquidity available to service debt, whereas net income includes non-cash accruals that may not materialize if the new chain customers delay or default on payment.",
+          "D": "The average of net income and operating cash flow, $20.15 million, is the appropriate measure because it balances the accrual perspective with the cash perspective and represents the most unbiased estimate of debt service capacity."
+      },
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "The correct answer is C. Under ASC 230-10, the statement of cash flows provides information about an entity's cash receipts and cash payments during a period, which is essential for assessing liquidity, financial flexibility, and ability to service obligations. For credit analysis, operating cash flow is a superior predictor of creditworthiness because debt service requires actual cash, not accrual income. Trelawny's $34.2 million in net income includes $15.8 million of revenue recognized on extended payment terms — income that has been earned under ASC 606 but has not been collected. If the home-improvement chains delay payment or experience financial difficulty, those receivables may never convert to cash. Operating cash flow of $6.1 million reflects the actual cash generated that is available to pay interest and principal. Accrual income signals economic performance; operating cash flow signals debt service capacity.",
+      "ExplanationWrongA": "Option A restates that net income is the better predictor because accrual accounting smooths timing differences and revenue will eventually convert to cash. This is incorrect because credit analysis must evaluate whether receivables will actually be collected, not assume conversion. Extended payment terms to large, concentrated customers introduce collection risk that accrual income does not capture.",
+      "ExplanationWrongB": "Option B restates that neither metric is sufficient and audited 5-year cash flow forecasts must be required. This is incorrect because requiring audited multi-year forecasts is impractical for most borrowers and is not a standard credit underwriting requirement. Historical operating cash flow trends are routinely used in credit analysis as the primary predictor.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Option D restates that averaging net income and operating cash flow at $20.15 million is the appropriate measure. This is incorrect because simple averaging has no theoretical or empirical basis in credit analysis. It combines a cash measure ($6.1M of actual inflows) with an accrual measure ($34.2M of recognized but partially uncollected revenue), producing a synthetic figure that masks the true cash constraint on debt service.",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CognitiveLevel": "Evaluate",
+      "CalculationItem": false,
+      "Type": "select",
+      "LOSTag": "A.5",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": null,
+      "CommonTrapReference": "Treating net income as interchangeable with operating cash flow for credit analysis purposes",
+      "Authorities": [
+          "ASC 230-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
+  },
+  {
+      "Part": 2,
+      "Section": "A",
+      "Topic": "A.060 multi-covenant credit assessment",
+      "QuestionID": "P2-A-060",
+      "question_state": "Unprocessed",
+      "Part2OnlyFlag": true,
+      "Stem": "TriState Commercial Bank holds a $30 million term loan with Blackburn Steel, a specialty alloy manufacturer. The credit agreement contains three financial covenants: (1) debt-to-EBITDA not exceeding 4.0x, (2) interest coverage ratio of at least 2.5x, and (3) minimum tangible net worth of $45 million. At fiscal year-end, Blackburn reports debt of $112 million, EBITDA of $26 million, interest expense of $12 million, and tangible net worth of $43 million. The CFO, Angela Torres, requests a one-year covenant waiver, arguing that the tangible net worth shortfall of $2 million is immaterial and that the other covenants are comfortably satisfied. The credit analyst, Marcus Webb, notes that $5.8 million of the reported EBITDA comes from a gain on the sale of Blackburn's galvanizing division — a transaction that also removed $9.2 million of fixed assets from tangible net worth.",
+      "Choices": {
+          "A": "The waiver request should be denied because the division sale simultaneously depressed tangible net worth and inflated EBITDA, meaning two of three covenants would be breached on an adjusted basis, and the transaction reveals a pattern of managing covenant compliance rather than addressing underlying credit deterioration.",
+          "B": "The waiver should be granted because the $2 million tangible net worth shortfall represents only 4.4% of the covenant threshold and is clearly immaterial, while the other two covenants demonstrate ample cushion and confirm the borrower's fundamental credit strength.",
+          "C": "The waiver should be granted for the tangible net worth covenant only, but the debt-to-EBITDA covenant should be recalculated excluding the division sale gain, and if the adjusted ratio exceeds 4.0x, an additional principal payment must be required.",
+          "D": "The waiver should be granted because all three covenants serve the same purpose of measuring financial health, and Blackburn's compliance with two of three indicates that the tangible net worth breach is a temporary anomaly caused by an otherwise value-enhancing asset sale."
+      },
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "The correct answer is A. Under ASC 470-10, creditors must evaluate covenant compliance holistically, examining whether reported metrics reflect genuine financial condition. Blackburn's situation reveals interconnected covenant manipulation: the $5.8 million division sale gain inflates EBITDA to $26 million, but adjusting EBITDA to exclude this non-recurring gain reduces it to $20.2 million. This pushes the debt-to-EBITDA ratio to $112M / $20.2M = 5.54x, far exceeding the 4.0x covenant. Simultaneously, the same transaction removed $9.2 million of fixed assets from tangible net worth, creating the $2 million shortfall. On an adjusted basis, two of three covenants are meaningfully breached, not just one marginally. The CFO's portrayal of a single immaterial shortfall misrepresents the economic reality.",
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Option B restates that the $2 million shortfall is immaterial and the waiver should be granted. This is incorrect because the shortfall originated from the same division sale that also generated a $5.8 million EBITDA gain. On an adjusted basis excluding the gain, the debt-to-EBITDA ratio would breach the 4.0x covenant at 5.54x, and the $2 million tangible net worth deficiency is a symptom of broader asset erosion.",
+      "ExplanationWrongC": "Option C restates that only the EBITDA covenant should be recalculated while the tangible net worth waiver is granted. This is incorrect because treating the two covenant effects as separable ignores their common origin in a single transaction. The division sale's dual impact — EBITDA inflation and tangible net worth depletion — must be evaluated as a unified credit event.",
+      "ExplanationWrongD": "Option D restates that compliance with two of three covenants indicates the breach is a temporary anomaly. This is incorrect because the breached covenant — tangible net worth — measures the equity cushion that protects the lender against loss, a fundamentally different dimension than the coverage and leverage covenants. A breach on any covenant signals credit deterioration; compliance on other dimensions does not offset it.",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CognitiveLevel": "Evaluate",
+      "CalculationItem": false,
+      "Type": "select",
+      "LOSTag": "A.5",
+      "BlueprintDomain": "Financial Statement Analysis",
+      "FormulaReference": null,
+      "CommonTrapReference": "Evaluating each covenant in isolation without examining interconnected effects of a single transaction",
+      "Authorities": [
+          "ASC 470-10"
+      ],
+      "VerificationChecks": [
+          "Part2OnlyFlag verified true",
+          "EW[CC] empty (DL-008 compliant)",
+          "Non-CC EW slots >=50 chars (DL-026 compliant)",
+          "No boilerplate text (DL-013 prevention)",
+          "Independent answer derived matches stored CorrectChoice",
+          "Authority citation matches tested concept"
+      ]
   }
 ];

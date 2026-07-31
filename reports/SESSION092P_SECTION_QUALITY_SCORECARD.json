@@ -1,0 +1,458 @@
+{
+  "session": "SESSION092P",
+  "title": "Section-Level Quality Scorecard — Cognitive Rewrite Analytics",
+  "generated": "2026-07-31T12:00:00Z",
+  "methodology": "5-dimension scoring per section: Cognitive Quality (25%), Scenario Realism (25%), Decision Complexity (25%), Distractor Quality (15%), Explanation Quality (10%). Scores synthesized from S380 Evaluate Audit, S718 Analytics, S086P Baseline, and per-wave rewrite records.",
+  "scoring_scale": {
+    "90-100": "Gold Standard",
+    "80-89": "Exam-Ready",
+    "70-79": "Acceptable",
+    "50-69": "Needs Work",
+    "0-49": "Reject"
+  },
+  "packs": {
+    "Pack_A": {
+      "total_items": 500,
+      "certified": 500,
+      "higher_order_pct": "20.6%",
+      "overall_quality": 85,
+      "sections": {
+        "A": {
+          "total": 75,
+          "cert": 75,
+          "ho_pct": "29.3%",
+          "cognitive_quality": 88,
+          "scenario_realism": 92,
+          "decision_complexity": 85,
+          "distractor_quality": 82,
+          "explanation_quality": 95,
+          "overall": 88,
+          "notes": "Gold-standard modernization (S63). Full scenario rewrites with ASC references. Some Evaluate items may be Apply-misclassified."
+        },
+        "B": {
+          "total": 100,
+          "cert": 100,
+          "ho_pct": "35.0%",
+          "cognitive_quality": 85,
+          "scenario_realism": 85,
+          "decision_complexity": 80,
+          "distractor_quality": 80,
+          "explanation_quality": 85,
+          "overall": 83,
+          "notes": "S77 verified all items at target. 35% HO is above pool average. Good quality balance."
+        },
+        "C": {
+          "total": 100,
+          "cert": 100,
+          "ho_pct": "11.0%",
+          "cognitive_quality": 70,
+          "scenario_realism": 65,
+          "decision_complexity": 60,
+          "distractor_quality": 70,
+          "explanation_quality": 70,
+          "overall": 67,
+          "notes": "Low HO. 60 Apply items are the primary upgrade pool. No modernization applied."
+        },
+        "D": {
+          "total": 75,
+          "cert": 75,
+          "ho_pct": "16.0%",
+          "cognitive_quality": 72,
+          "scenario_realism": 68,
+          "decision_complexity": 65,
+          "distractor_quality": 72,
+          "explanation_quality": 72,
+          "overall": 70,
+          "notes": "Moderate HO. 47 Apply items available for upgrade. Good cost management baseline."
+        },
+        "E": {
+          "total": 75,
+          "cert": 75,
+          "ho_pct": "28.0%",
+          "cognitive_quality": 78,
+          "scenario_realism": 80,
+          "decision_complexity": 78,
+          "distractor_quality": 75,
+          "explanation_quality": 80,
+          "overall": 78,
+          "notes": "COSO judgment items. 21 HO items with good quality. S805 EW remediation improved distractor quality."
+        },
+        "F": {
+          "total": 75,
+          "cert": 75,
+          "ho_pct": "2.7%",
+          "cognitive_quality": 55,
+          "scenario_realism": 50,
+          "decision_complexity": 45,
+          "distractor_quality": 55,
+          "explanation_quality": 55,
+          "overall": 52,
+          "notes": "Lowest HO in Pack A. 72 items at Understand/Apply. Technology domain resists upgrading."
+        }
+      }
+    },
+    "Pack_B": {
+      "total_items": 500,
+      "certified": 500,
+      "higher_order_pct": "5.0%",
+      "overall_quality": 65,
+      "sections": {
+        "A": {
+          "total": 75,
+          "cert": 75,
+          "ho_pct": "5.3%",
+          "cognitive_quality": 65,
+          "scenario_realism": 60,
+          "decision_complexity": 55,
+          "distractor_quality": 65,
+          "explanation_quality": 65,
+          "overall": 62,
+          "notes": "Low HO from early waves (S61-S62). 50 Apply items available."
+        },
+        "B": {
+          "total": 100,
+          "cert": 100,
+          "ho_pct": "3.0%",
+          "cognitive_quality": 65,
+          "scenario_realism": 60,
+          "decision_complexity": 55,
+          "distractor_quality": 60,
+          "explanation_quality": 65,
+          "overall": 61,
+          "notes": "Large Apply pool (63) with only 3 HO items. Second-largest upgrade opportunity after Pack C Section B."
+        },
+        "C": {
+          "total": 100,
+          "cert": 100,
+          "ho_pct": "8.0%",
+          "cognitive_quality": 68,
+          "scenario_realism": 65,
+          "decision_complexity": 60,
+          "distractor_quality": 65,
+          "explanation_quality": 68,
+          "overall": 65,
+          "notes": "69 Apply items — large upgrade pool. 8% HO from pre-existing items."
+        },
+        "D": {
+          "total": 75,
+          "cert": 75,
+          "ho_pct": "5.3%",
+          "cognitive_quality": 70,
+          "scenario_realism": 65,
+          "decision_complexity": 62,
+          "distractor_quality": 68,
+          "explanation_quality": 68,
+          "overall": 67,
+          "notes": "68 Apply items — largest Apply pool in Pack B. Domain D naturally suited to upgrades."
+        },
+        "E": {
+          "total": 75,
+          "cert": 75,
+          "ho_pct": "5.3%",
+          "cognitive_quality": 72,
+          "scenario_realism": 70,
+          "decision_complexity": 68,
+          "distractor_quality": 70,
+          "explanation_quality": 70,
+          "overall": 70,
+          "notes": "Internal controls items. 37 Apply items available. COSO framework naturally generates Evaluate."
+        },
+        "F": {
+          "total": 75,
+          "cert": 75,
+          "ho_pct": "2.7%",
+          "cognitive_quality": 60,
+          "scenario_realism": 55,
+          "decision_complexity": 50,
+          "distractor_quality": 58,
+          "explanation_quality": 58,
+          "overall": 56,
+          "notes": "Technology domain. 49 Understand items. Definition-heavy — hardest to upgrade."
+        }
+      }
+    },
+    "Pack_C": {
+      "total_items": 500,
+      "certified": 455,
+      "higher_order_pct": "20.8%",
+      "overall_quality": 72,
+      "sections": {
+        "A": {
+          "total": 75,
+          "cert": 75,
+          "ho_pct": "0.0%",
+          "cognitive_quality": 60,
+          "scenario_realism": 55,
+          "decision_complexity": 50,
+          "distractor_quality": 60,
+          "explanation_quality": 60,
+          "overall": 57,
+          "notes": "CRITICAL GAP — zero HO items. 40 Apply + 30 Understand. Highest-priority upgrade target."
+        },
+        "B": {
+          "total": 100,
+          "cert": 100,
+          "ho_pct": "1.0%",
+          "cognitive_quality": 62,
+          "scenario_realism": 58,
+          "decision_complexity": 55,
+          "distractor_quality": 60,
+          "explanation_quality": 62,
+          "overall": 59,
+          "notes": "CRITICAL GAP — 1 HO item out of 100. 69 Apply items — single richest upgrade vein."
+        },
+        "C": {
+          "total": 100,
+          "cert": 100,
+          "ho_pct": "7.0%",
+          "cognitive_quality": 68,
+          "scenario_realism": 65,
+          "decision_complexity": 62,
+          "distractor_quality": 65,
+          "explanation_quality": 65,
+          "overall": 65,
+          "notes": "Performance management. 40 Apply items available for upgrade."
+        },
+        "D": {
+          "total": 75,
+          "cert": 75,
+          "ho_pct": "16.0%",
+          "cognitive_quality": 70,
+          "scenario_realism": 68,
+          "decision_complexity": 65,
+          "distractor_quality": 68,
+          "explanation_quality": 68,
+          "overall": 68,
+          "notes": "Cost management. 28 Apply items. Good natural HO distribution."
+        },
+        "E": {
+          "total": 75,
+          "cert": 70,
+          "ho_pct": "88.0%",
+          "cognitive_quality": 78,
+          "scenario_realism": 80,
+          "decision_complexity": 82,
+          "distractor_quality": 70,
+          "explanation_quality": 72,
+          "overall": 76,
+          "notes": "COSO judgment items — naturally Evaluate. 66 HO items. Rotation artifacts persist (DL-012)."
+        },
+        "F": {
+          "total": 75,
+          "cert": 35,
+          "ho_pct": "24.0%",
+          "cognitive_quality": 60,
+          "scenario_realism": 58,
+          "decision_complexity": 55,
+          "distractor_quality": 58,
+          "explanation_quality": 58,
+          "overall": 58,
+          "notes": "Mixed quality. 18 HO items but definition-match concerns. 45 Understand items."
+        }
+      }
+    },
+    "Pack_D": {
+      "total_items": 500,
+      "certified": 456,
+      "higher_order_pct": "42.8%",
+      "overall_quality": 78,
+      "sections": {
+        "A": {
+          "total": 75,
+          "cert": 75,
+          "ho_pct": "0.0%",
+          "cognitive_quality": 60,
+          "scenario_realism": 55,
+          "decision_complexity": 50,
+          "distractor_quality": 58,
+          "explanation_quality": 60,
+          "overall": 57,
+          "notes": "CRITICAL GAP — zero HO items. 57 Understand + 18 Apply. Highest-priority upgrade target."
+        },
+        "B": {
+          "total": 100,
+          "cert": 100,
+          "ho_pct": "89.0%",
+          "cognitive_quality": 82,
+          "scenario_realism": 82,
+          "decision_complexity": 85,
+          "distractor_quality": 78,
+          "explanation_quality": 80,
+          "overall": 82,
+          "notes": "PRIMARY MODERNIZATION SUCCESS. 5-wave campaign from 4%→89%. 49 unique companies. Some formula reframing risk."
+        },
+        "C": {
+          "total": 100,
+          "cert": 100,
+          "ho_pct": "14.0%",
+          "cognitive_quality": 70,
+          "scenario_realism": 68,
+          "decision_complexity": 65,
+          "distractor_quality": 65,
+          "explanation_quality": 68,
+          "overall": 67,
+          "notes": "Performance management. 54 Apply items. 50 In Audit items still blocked (DL-026)."
+        },
+        "D": {
+          "total": 75,
+          "cert": 75,
+          "ho_pct": "24.0%",
+          "cognitive_quality": 72,
+          "scenario_realism": 70,
+          "decision_complexity": 68,
+          "distractor_quality": 70,
+          "explanation_quality": 70,
+          "overall": 70,
+          "notes": "Cost management. Good natural HO. 38 Apply items available."
+        },
+        "E": {
+          "total": 75,
+          "cert": 70,
+          "ho_pct": "90.7%",
+          "cognitive_quality": 82,
+          "scenario_realism": 85,
+          "decision_complexity": 85,
+          "distractor_quality": 75,
+          "explanation_quality": 78,
+          "overall": 81,
+          "notes": "Highest HO section in repository. COSO judgment items naturally Evaluate. 68 HO items."
+        },
+        "F": {
+          "total": 75,
+          "cert": 36,
+          "ho_pct": "32.4%",
+          "cognitive_quality": 65,
+          "scenario_realism": 60,
+          "decision_complexity": 62,
+          "distractor_quality": 58,
+          "explanation_quality": 62,
+          "overall": 62,
+          "notes": "Mixed quality. 24 HO items but definition-match concerns. Technology domain resistance."
+        }
+      }
+    },
+    "Pack_E": {
+      "total_items": 545,
+      "certified": 540,
+      "higher_order_pct": "6.4%",
+      "overall_quality": 60,
+      "sections": {
+        "A": {
+          "total": 74,
+          "cert": 74,
+          "ho_pct": "2.7%",
+          "cognitive_quality": 55,
+          "scenario_realism": 50,
+          "decision_complexity": 45,
+          "distractor_quality": 55,
+          "explanation_quality": 55,
+          "overall": 52,
+          "notes": "Understand-heavy (61 items). Financial reporting definitions. Session 91 targeting upgrade."
+        },
+        "B": {
+          "total": 101,
+          "cert": 100,
+          "ho_pct": "3.0%",
+          "cognitive_quality": 60,
+          "scenario_realism": 55,
+          "decision_complexity": 50,
+          "distractor_quality": 58,
+          "explanation_quality": 60,
+          "overall": 57,
+          "notes": "Mixed Apply/Understand. 59 Understand items. Planning/budgeting domain."
+        },
+        "C": {
+          "total": 101,
+          "cert": 100,
+          "ho_pct": "6.9%",
+          "cognitive_quality": 62,
+          "scenario_realism": 58,
+          "decision_complexity": 55,
+          "distractor_quality": 60,
+          "explanation_quality": 62,
+          "overall": 60,
+          "notes": "Performance management. S71 DL-021 remediation completed. 66 Understand items."
+        },
+        "D": {
+          "total": 77,
+          "cert": 76,
+          "ho_pct": "3.9%",
+          "cognitive_quality": 62,
+          "scenario_realism": 58,
+          "decision_complexity": 55,
+          "distractor_quality": 60,
+          "explanation_quality": 60,
+          "overall": 59,
+          "notes": "Cost management. 61 Understand items — definition-heavy."
+        },
+        "E": {
+          "total": 116,
+          "cert": 115,
+          "ho_pct": "3.4%",
+          "cognitive_quality": 58,
+          "scenario_realism": 55,
+          "decision_complexity": 52,
+          "distractor_quality": 58,
+          "explanation_quality": 58,
+          "overall": 56,
+          "notes": "Largest Pack E section (116). 87 Understand items. Under-leveraged COSO domain."
+        },
+        "F": {
+          "total": 76,
+          "cert": 75,
+          "ho_pct": "21.1%",
+          "cognitive_quality": 65,
+          "scenario_realism": 60,
+          "decision_complexity": 58,
+          "distractor_quality": 60,
+          "explanation_quality": 62,
+          "overall": 61,
+          "notes": "S79 modernization brought 0%→21.1% HO. Best HO% in Pack E but definition-match risk."
+        }
+      }
+    }
+  },
+  "global_rankings": {
+    "top_sections_by_quality": [
+      {"rank": 1, "section": "A", "pack": "A", "quality": 88, "ho_pct": "29.3%"},
+      {"rank": 2, "section": "B", "pack": "A", "quality": 83, "ho_pct": "35.0%"},
+      {"rank": 3, "section": "B", "pack": "D", "quality": 82, "ho_pct": "89.0%"},
+      {"rank": 4, "section": "E", "pack": "D", "quality": 81, "ho_pct": "90.7%"},
+      {"rank": 5, "section": "E", "pack": "A", "quality": 78, "ho_pct": "28.0%"}
+    ],
+    "top_sections_by_higher_order": [
+      {"rank": 1, "section": "E", "pack": "D", "ho_pct": "90.7%"},
+      {"rank": 2, "section": "B", "pack": "D", "ho_pct": "89.0%"},
+      {"rank": 3, "section": "E", "pack": "C", "ho_pct": "88.0%"},
+      {"rank": 4, "section": "B", "pack": "A", "ho_pct": "35.0%"},
+      {"rank": 5, "section": "F", "pack": "D", "ho_pct": "32.4%"}
+    ],
+    "critical_gaps_zero_ho": [
+      {"section": "A", "pack": "C", "ho_pct": "0.0%", "items": 75},
+      {"section": "A", "pack": "D", "ho_pct": "0.0%", "items": 75}
+    ],
+    "near_zero_ho": [
+      {"section": "F", "pack": "A", "ho_pct": "2.7%", "items": 75},
+      {"section": "A", "pack": "E", "ho_pct": "2.7%", "items": 74},
+      {"section": "F", "pack": "B", "ho_pct": "2.7%", "items": 73},
+      {"section": "B", "pack": "B", "ho_pct": "3.0%", "items": 100},
+      {"section": "B", "pack": "C", "ho_pct": "1.0%", "items": 100}
+    ],
+    "largest_upgrade_pools": [
+      {"section": "B", "pack": "C", "apply_pool": 69},
+      {"section": "D", "pack": "B", "apply_pool": 68},
+      {"section": "B", "pack": "B", "apply_pool": 63},
+      {"section": "C", "pack": "B", "apply_pool": 69},
+      {"section": "D", "pack": "C", "apply_pool": 28}
+    ]
+  },
+  "modernization_quality_ranking": {
+    "campaigns": [
+      {"rank": 1, "campaign": "S63 — Pack A Section A", "score": 92, "items": 14, "description": "Gold standard. Full scenario rewrites, deep explanations, ASC references."},
+      {"rank": 2, "campaign": "S70–S75 — Pack D Section B", "score": 80, "items": 75, "description": "Largest campaign. Good quality, defect clearance, governance compliant."},
+      {"rank": 3, "campaign": "S61–S62 — Scattered Early Waves", "score": 70, "items": 34, "description": "Foundation-setting. High CC volatility. Established rewrite methodology."},
+      {"rank": 4, "campaign": "S79 — Pack E Section F", "score": 64, "items": 15, "description": "Technology domain. Definition-match risk. Low-quality conversion."},
+      {"rank": 5, "campaign": "S81–S82 — Packetized", "score": "N/A", "items": "~100", "description": "Highest volume. Quality data insufficient to score."}
+    ]
+  }
+}

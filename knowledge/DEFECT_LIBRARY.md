@@ -2946,6 +2946,81 @@ After correction:
 
 ---
 
+## DL-038 — Matching Item RightItems Unicode Mismatch (CBQ5-C3-Q2)
+
+```
+Defect ID        DL-038
+Class            Structural
+Domain           Character Encoding — Correction Object Reference Integrity
+Severity         Medium (prevented derangement shuffle on affected item; no learner impact because item was already non-sequential)
+Detected By      Build-Time AI Verification (Session 85 Auditor Phase — Correct-to-RightItems cross-check)
+Status           Resolved
+```
+
+**Question IDs:** CBQ5-C3-Q2
+
+**File:** `case_pack_3_corrected.js`
+
+**Stem:** "The CFO needs to explain each variance component to the VP of Sales. Match each variance concept to the correct calculated result based on the data in Exhibit 1."
+
+### Issue
+
+Two RightItems entries used plain ASCII "x" (U+0078 LATIN SMALL LETTER X) where the Correct object and LeftItems used the Unicode multiplication sign "×" (U+00D7 MULTIPLICATION SIGN):
+
+| Location | Char | Text |
+|----------|------|------|
+| RightItems[2] | U+0078 | "yielding 25,000 additional units **x** $13.20 WACM" |
+| Correct["Market Size Variance..."] | U+00D7 | "yielding 25,000 additional units **×** $13.20 WACM" |
+| RightItems[3] | U+0078 | "represents 10,000 lost units **x** $13.20 WACM" |
+| Correct["Market Share Variance..."] | U+00D7 | "represents 10,000 lost units **×** $13.20 WACM" |
+
+Because "x" ≠ "×", these 2 Correct values were orphans — not found in the RightItems array. This blocked any automated shuffle/derangement algorithm that requires all Correct values to exist in RightItems.
+
+### Root Cause
+
+The S81 Wave 1 redesign expanded the RightItems for CBQ5-C3-Q2. The author wrote the Correct object with Unicode "×" (matching the LeftItems convention) but wrote two RightItems entries with plain ASCII "x." Character encoding inconsistency from multi-step content editing across sessions.
+
+### Pattern
+
+```javascript
+// BAD — ASCII "x" in RightItems but Unicode "×" in Correct
+RightItems: [..., "yielding 25,000 additional units x $13.20 WACM", ...]
+Correct: { "Market Size Variance = ... × Budgeted WACM": "yielding 25,000 additional units × $13.20 WACM" }
+```
+
+**Correct pattern:** Use the same Unicode character consistently across LeftItems, Correct, and RightItems.
+
+### Detection Rule
+
+For each matching item, compare each Correct value as a string against RightItems entries. If any Correct value has no exact string match in RightItems, flag for character-level diff. Common Unicode mismatch characters: × (U+00D7), − (U+2212), — (U+2014), ' (U+2018), ' (U+2019).
+
+### Validator / Source
+
+- **Primary detection:** Build-Time AI Verification — Session 85 Auditor Phase Correct-to-RightItems cross-check
+- **Automation potential:** Add Unicode normalization check to matching item validator
+
+### Correction
+
+Changed "x $13.20" → "× $13.20" in two RightItems entries (lines 3127-3128 of `case_pack_3_corrected.js`). Character encoding normalization only — no content change. Session 85 propagation script applied the fix before shuffling.
+
+### Regression Test
+
+- Verify CBQ5-C3-Q2 all Correct values found in RightItems
+- Verify derangement shuffle succeeds on the item
+- Verify no other matching items have orphaned Correct values (Session 85 auditor confirmed 0 others)
+
+### Resolved
+
+2026-07-30 — Session 85. Fix applied before ordered-pattern propagation. Item confirmed deranged and all Correct values present in RightItems.
+
+### Cross-References
+
+- S85 Auditor Phase: `reports/SESSION085_AUDITOR.md` §1.3
+- S85 Closeout: `reports/SESSION085_CLOSEOUT.md`
+- REVISION_HISTORY.md: Session 85 entry
+
+---
+
 ## Template for New Entries
 
 ```markdown

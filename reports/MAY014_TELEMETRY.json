@@ -1,0 +1,758 @@
+{
+  "_schema": "MAY014-1.0",
+  "_session": "MAY-014",
+  "_timestamp": "2026-07-30T19:03:25.145Z",
+  "_pipelineVersion": "MAY006-1.0",
+  "_decisionEngineVersion": "MAY014-1.0",
+  "_interventionPrioritizerVersion": "MAY014-1.0",
+  "aggregates": {
+    "profilesTested": 10,
+    "d1d10Coverage": {
+      "D1": {
+        "triggered": true,
+        "count": 1,
+        "profiles": [
+          "D1 — Critical Remediation"
+        ]
+      },
+      "D2": {
+        "triggered": true,
+        "count": 1,
+        "profiles": [
+          "D2 — Critical Weakness"
+        ]
+      },
+      "D3": {
+        "triggered": true,
+        "count": 1,
+        "profiles": [
+          "D3 — SOCRATIC Unstable Declining"
+        ]
+      },
+      "D4": {
+        "triggered": true,
+        "count": 1,
+        "profiles": [
+          "D4 — Exam Strategy"
+        ]
+      },
+      "D5": {
+        "triggered": true,
+        "count": 2,
+        "profiles": [
+          "D5 — Declining Trend",
+          "D7 — Fragile Knowledge"
+        ]
+      },
+      "D6": {
+        "triggered": true,
+        "count": 1,
+        "profiles": [
+          "D6 — Emerging Weakness"
+        ]
+      },
+      "D7": {
+        "triggered": false,
+        "count": 0,
+        "profiles": []
+      },
+      "D8": {
+        "triggered": true,
+        "count": 2,
+        "profiles": [
+          "D8 — Section Coverage Gap",
+          "D8 — Section Gap (D10 unreachable)"
+        ]
+      },
+      "D9": {
+        "triggered": true,
+        "count": 1,
+        "profiles": [
+          "D9 — High Mastery Challenge"
+        ]
+      },
+      "D10": {
+        "triggered": false,
+        "count": 0,
+        "profiles": []
+      }
+    },
+    "readinessDistribution": {
+      "scoreRange": {
+        "min": 42,
+        "max": 72,
+        "mean": 58
+      },
+      "scores": [
+        42,
+        69,
+        52,
+        52,
+        52,
+        65,
+        62,
+        52,
+        72
+      ],
+      "bandDistribution": {
+        "Recovery needed": 1,
+        "Developing": 4,
+        "Approaching review-ready": 4,
+        "Not enough data": 1
+      }
+    },
+    "modeDistribution": {
+      "QUIZ": 6,
+      "SOCRATIC": 1,
+      "STUDY_PLAN": 1,
+      "EXPLAIN": 2
+    },
+    "decisionPriorityDistribution": {
+      "critical": 2,
+      "high": 2,
+      "medium": 3,
+      "low": 3
+    }
+  },
+  "successCriteria": {
+    "CAL_READINESS": {
+      "pass": true,
+      "label": "At least one profile scores >= 68",
+      "value": "max=72"
+    },
+    "CAL_COVERAGE": {
+      "pass": false,
+      "label": "D1-D10 coverage >= 9/10",
+      "value": "8/10"
+    },
+    "CAL_MODE_DIVERSITY": {
+      "pass": true,
+      "label": "Mode diversity >= 4",
+      "value": "4 modes: QUIZ, SOCRATIC, STUDY_PLAN, EXPLAIN"
+    },
+    "CAL_SOCRATIC_REACHABLE": {
+      "pass": true,
+      "label": "SOCRATIC mode reached via D3",
+      "value": "1 profile(s)"
+    },
+    "CAL_D9_REACHABLE": {
+      "pass": true,
+      "label": "D9 challenge mode reached",
+      "value": "YES"
+    },
+    "CAL_NO_REGRESSIONS": {
+      "pass": true,
+      "label": "No score regressions vs. MAY-013 baseline",
+      "value": "PASS (verified post-run)"
+    },
+    "CAL_DETERMINISM": {
+      "pass": true,
+      "label": "Determinism preserved",
+      "value": "PASS (all deterministic arithmetic)"
+    },
+    "GOV_0_DIVERGENCES": {
+      "pass": true,
+      "label": "Zero governance divergences",
+      "value": "PASS (no pack/case/registry modifications)"
+    }
+  },
+  "results": [
+    {
+      "learnerProfile": {
+        "learnerId": "MAY014-L1",
+        "archetype": "D1 — Critical Remediation",
+        "sessionCount": 5,
+        "sessionsLast7Days": 5,
+        "sessionsLast28Days": 5,
+        "studyStreak": 5,
+        "examPlan": {
+          "hasScheduledExam": false,
+          "daysUntilExam": null
+        }
+      },
+      "readinessScore": {
+        "score": 42,
+        "band": "Recovery needed",
+        "confidence": 100,
+        "topicsAtReady": 0,
+        "topicsAtRecovery": 5,
+        "sectionsWithData": 5
+      },
+      "decisionId": "D1",
+      "coachingMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": null,
+      "decisionRationale": "Overall readiness is critically low (42/100). Priority is rebuilding fundamentals across all sections.",
+      "decisionEvidence": {
+        "readinessScore": 42,
+        "band": "Recovery needed",
+        "topicsAtRecovery": 5,
+        "triggeringRule": "D1"
+      },
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "tierClassification": {
+        "topActionTier": 1,
+        "topActionLabel": "Critical Weakness",
+        "tier1Count": 5,
+        "tier2Count": 1,
+        "tier3Count": 0,
+        "tier4Count": 0
+      },
+      "interventions": {
+        "count": 6,
+        "topTier": 1,
+        "topTopic": "COSO Framework"
+      },
+      "recommendations": {
+        "count": 5,
+        "types": [
+          "remediation",
+          "remediation",
+          "remediation",
+          "remediation",
+          "remediation"
+        ]
+      },
+      "explanations": {
+        "count": 3
+      },
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "learnerProfile": {
+        "learnerId": "MAY014-L2",
+        "archetype": "D2 — Critical Weakness",
+        "sessionCount": 8,
+        "sessionsLast7Days": 7,
+        "sessionsLast28Days": 8,
+        "studyStreak": 7,
+        "examPlan": {
+          "hasScheduledExam": false,
+          "daysUntilExam": null
+        }
+      },
+      "readinessScore": {
+        "score": 69,
+        "band": "Developing",
+        "confidence": 100,
+        "topicsAtReady": 5,
+        "topicsAtRecovery": 1,
+        "sectionsWithData": 5
+      },
+      "decisionId": "D2",
+      "coachingMode": "QUIZ",
+      "decisionPriority": "critical",
+      "decisionTopic": "Standard Costing",
+      "decisionRationale": "Critical weakness: Standard Costing requires immediate remediation (accuracy: 46%, declining trend).",
+      "decisionEvidence": {
+        "accuracy": 46,
+        "direction": "declining",
+        "stability": 75,
+        "attempts": 24,
+        "tier": 1,
+        "triggeringRule": "D2"
+      },
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "tierClassification": {
+        "topActionTier": 1,
+        "topActionLabel": "Critical Weakness",
+        "tier1Count": 1,
+        "tier2Count": 0,
+        "tier3Count": 0,
+        "tier4Count": 5
+      },
+      "interventions": {
+        "count": 6,
+        "topTier": 1,
+        "topTopic": "Standard Costing"
+      },
+      "recommendations": {
+        "count": 1,
+        "types": [
+          "remediation"
+        ]
+      },
+      "explanations": {
+        "count": 3
+      },
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "learnerProfile": {
+        "learnerId": "MAY014-L3",
+        "archetype": "D3 — SOCRATIC Unstable Declining",
+        "sessionCount": 7,
+        "sessionsLast7Days": 7,
+        "sessionsLast28Days": 7,
+        "studyStreak": 7,
+        "examPlan": {
+          "hasScheduledExam": false,
+          "daysUntilExam": null
+        }
+      },
+      "readinessScore": {
+        "score": 52,
+        "band": "Developing",
+        "confidence": 100,
+        "topicsAtReady": 0,
+        "topicsAtRecovery": 0,
+        "sectionsWithData": 5
+      },
+      "decisionId": "D3",
+      "coachingMode": "SOCRATIC",
+      "decisionPriority": "high",
+      "decisionTopic": "Standard Costing",
+      "decisionRationale": "Repeated errors on Standard Costing with declining performance (accuracy: 50%, 10 attempts). Socratic questioning targets systematic process-level misunderstanding.",
+      "decisionEvidence": {
+        "accuracy": 50,
+        "stability": 75,
+        "direction": "declining",
+        "attempts": 10,
+        "triggeringRule": "D3"
+      },
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "tierClassification": {
+        "topActionTier": 2,
+        "topActionLabel": "Emerging Weakness",
+        "tier1Count": 0,
+        "tier2Count": 1,
+        "tier3Count": 0,
+        "tier4Count": 0
+      },
+      "interventions": {
+        "count": 1,
+        "topTier": 2,
+        "topTopic": "Standard Costing"
+      },
+      "recommendations": {
+        "count": 1,
+        "types": [
+          "remediation"
+        ]
+      },
+      "explanations": {
+        "count": 1
+      },
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "learnerProfile": {
+        "learnerId": "MAY014-L4",
+        "archetype": "D4 — Exam Strategy",
+        "sessionCount": 8,
+        "sessionsLast7Days": 7,
+        "sessionsLast28Days": 8,
+        "studyStreak": 7,
+        "examPlan": {
+          "hasScheduledExam": true,
+          "daysUntilExam": 14
+        }
+      },
+      "readinessScore": {
+        "score": 52,
+        "band": "Developing",
+        "confidence": 100,
+        "topicsAtReady": 0,
+        "topicsAtRecovery": 0,
+        "sectionsWithData": 3
+      },
+      "decisionId": "D4",
+      "coachingMode": "STUDY_PLAN",
+      "decisionPriority": "high",
+      "decisionTopic": null,
+      "decisionRationale": "Exam is 13 days away with Developing readiness. Focused review with high-yield topics.",
+      "decisionEvidence": {
+        "daysUntilExam": 13,
+        "readinessBand": "Developing",
+        "topicsAtRecovery": 0,
+        "triggeringRule": "D4"
+      },
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "tierClassification": {
+        "topActionTier": 3,
+        "topActionLabel": "Fragile Knowledge",
+        "tier1Count": 0,
+        "tier2Count": 0,
+        "tier3Count": 2,
+        "tier4Count": 0
+      },
+      "interventions": {
+        "count": 2,
+        "topTier": 3,
+        "topTopic": "Cost Behavior"
+      },
+      "recommendations": {
+        "count": 2,
+        "types": [
+          "review",
+          "review"
+        ]
+      },
+      "explanations": {
+        "count": 2
+      },
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "learnerProfile": {
+        "learnerId": "MAY014-L5",
+        "archetype": "D5 — Declining Trend",
+        "sessionCount": 5,
+        "sessionsLast7Days": 5,
+        "sessionsLast28Days": 5,
+        "studyStreak": 5,
+        "examPlan": {
+          "hasScheduledExam": false,
+          "daysUntilExam": null
+        }
+      },
+      "readinessScore": {
+        "score": 52,
+        "band": "Developing",
+        "confidence": 100,
+        "topicsAtReady": 0,
+        "topicsAtRecovery": 0,
+        "sectionsWithData": 3
+      },
+      "decisionId": "D5",
+      "coachingMode": "QUIZ",
+      "decisionPriority": "medium",
+      "decisionTopic": "Revenue Recognition",
+      "decisionRationale": "Performance on Revenue Recognition is declining (delta: -27%). Intervene before the gap widens.",
+      "decisionEvidence": {
+        "topic": "Revenue Recognition",
+        "delta": -27,
+        "direction": "declining",
+        "accuracy": 67,
+        "triggeringRule": "D5"
+      },
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "tierClassification": {
+        "topActionTier": null,
+        "topActionLabel": null,
+        "tier1Count": 0,
+        "tier2Count": 0,
+        "tier3Count": 0,
+        "tier4Count": 0
+      },
+      "interventions": {
+        "count": 0,
+        "topTier": null,
+        "topTopic": null
+      },
+      "recommendations": {
+        "count": 1,
+        "types": [
+          "remediation"
+        ]
+      },
+      "explanations": {
+        "count": 0
+      },
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "learnerProfile": {
+        "learnerId": "MAY014-L6",
+        "archetype": "D6 — Emerging Weakness",
+        "sessionCount": 6,
+        "sessionsLast7Days": 6,
+        "sessionsLast28Days": 6,
+        "studyStreak": 6,
+        "examPlan": {
+          "hasScheduledExam": false,
+          "daysUntilExam": null
+        }
+      },
+      "readinessScore": {
+        "score": 65,
+        "band": "Approaching review-ready",
+        "confidence": 100,
+        "topicsAtReady": 2,
+        "topicsAtRecovery": 0,
+        "sectionsWithData": 3
+      },
+      "decisionId": "D6",
+      "coachingMode": "QUIZ",
+      "decisionPriority": "medium",
+      "decisionTopic": "Cash Flow Statement",
+      "decisionRationale": "Emerging weakness on Cash Flow Statement (accuracy: 50%). Targeted practice to correct trajectory.",
+      "decisionEvidence": {
+        "accuracy": 50,
+        "direction": "slightly_declining",
+        "attempts": 8,
+        "tier": 2,
+        "triggeringRule": "D6"
+      },
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "tierClassification": {
+        "topActionTier": 2,
+        "topActionLabel": "Emerging Weakness",
+        "tier1Count": 0,
+        "tier2Count": 1,
+        "tier3Count": 0,
+        "tier4Count": 2
+      },
+      "interventions": {
+        "count": 3,
+        "topTier": 2,
+        "topTopic": "Cash Flow Statement"
+      },
+      "recommendations": {
+        "count": 1,
+        "types": [
+          "remediation"
+        ]
+      },
+      "explanations": {
+        "count": 3
+      },
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "learnerProfile": {
+        "learnerId": "MAY014-L7",
+        "archetype": "D7 — Fragile Knowledge",
+        "sessionCount": 5,
+        "sessionsLast7Days": 5,
+        "sessionsLast28Days": 5,
+        "studyStreak": 5,
+        "examPlan": {
+          "hasScheduledExam": false,
+          "daysUntilExam": null
+        }
+      },
+      "readinessScore": {
+        "score": 62,
+        "band": "Approaching review-ready",
+        "confidence": 100,
+        "topicsAtReady": 2,
+        "topicsAtRecovery": 0,
+        "sectionsWithData": 4
+      },
+      "decisionId": "D5",
+      "coachingMode": "QUIZ",
+      "decisionPriority": "medium",
+      "decisionTopic": "Cost Behavior",
+      "decisionRationale": "Performance on Cost Behavior is declining (delta: -23%). Intervene before the gap widens.",
+      "decisionEvidence": {
+        "topic": "Cost Behavior",
+        "delta": -23,
+        "direction": "declining",
+        "accuracy": 63,
+        "triggeringRule": "D5"
+      },
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "tierClassification": {
+        "topActionTier": 4,
+        "topActionLabel": "Mastered Area",
+        "tier1Count": 0,
+        "tier2Count": 0,
+        "tier3Count": 0,
+        "tier4Count": 3
+      },
+      "interventions": {
+        "count": 3,
+        "topTier": 4,
+        "topTopic": "COSO Framework"
+      },
+      "recommendations": {
+        "count": 1,
+        "types": [
+          "remediation"
+        ]
+      },
+      "explanations": {
+        "count": 3
+      },
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "learnerProfile": {
+        "learnerId": "MAY014-L8",
+        "archetype": "D8 — Section Coverage Gap",
+        "sessionCount": 4,
+        "sessionsLast7Days": 4,
+        "sessionsLast28Days": 4,
+        "studyStreak": 4,
+        "examPlan": {
+          "hasScheduledExam": false,
+          "daysUntilExam": null
+        }
+      },
+      "readinessScore": {
+        "score": 52,
+        "band": "Approaching review-ready",
+        "confidence": 100,
+        "topicsAtReady": 0,
+        "topicsAtRecovery": 0,
+        "sectionsWithData": 3
+      },
+      "decisionId": "D8",
+      "coachingMode": "EXPLAIN",
+      "decisionPriority": "low",
+      "decisionTopic": null,
+      "decisionRationale": "Section coverage is incomplete (3/6 sections with data). Explore across the blueprint to build a comprehensive profile.",
+      "decisionEvidence": {
+        "sectionsWithData": 3,
+        "topicsWithData": 3,
+        "triggeringRule": "D8"
+      },
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "tierClassification": {
+        "topActionTier": 4,
+        "topActionLabel": "Mastered Area",
+        "tier1Count": 0,
+        "tier2Count": 0,
+        "tier3Count": 0,
+        "tier4Count": 3
+      },
+      "interventions": {
+        "count": 3,
+        "topTier": 4,
+        "topTopic": "Revenue Recognition"
+      },
+      "recommendations": {
+        "count": 0,
+        "types": []
+      },
+      "explanations": {
+        "count": 3
+      },
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "learnerProfile": {
+        "learnerId": "MAY014-L9",
+        "archetype": "D9 — High Mastery Challenge",
+        "sessionCount": 14,
+        "sessionsLast7Days": 7,
+        "sessionsLast28Days": 14,
+        "studyStreak": 7,
+        "examPlan": {
+          "hasScheduledExam": false,
+          "daysUntilExam": null
+        }
+      },
+      "readinessScore": {
+        "score": 72,
+        "band": "Approaching review-ready",
+        "confidence": 100,
+        "topicsAtReady": 6,
+        "topicsAtRecovery": 0,
+        "sectionsWithData": 5
+      },
+      "decisionId": "D9",
+      "coachingMode": "QUIZ",
+      "decisionPriority": "low",
+      "decisionTopic": "Budgeting Concepts",
+      "decisionRationale": "Strong performance on Budgeting Concepts (accuracy: 93%, 14 attempts). Challenge with advanced or case-based content.",
+      "decisionEvidence": {
+        "accuracy": 93,
+        "stability": 100,
+        "attempts": 14,
+        "triggeringRule": "D9"
+      },
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "tierClassification": {
+        "topActionTier": 4,
+        "topActionLabel": "Mastered Area",
+        "tier1Count": 0,
+        "tier2Count": 0,
+        "tier3Count": 0,
+        "tier4Count": 6
+      },
+      "interventions": {
+        "count": 6,
+        "topTier": 4,
+        "topTopic": "Revenue Recognition"
+      },
+      "recommendations": {
+        "count": 3,
+        "types": [
+          "challenge",
+          "challenge",
+          "challenge"
+        ]
+      },
+      "explanations": {
+        "count": 3
+      },
+      "degradedComponents": [],
+      "pipelineError": null
+    },
+    {
+      "learnerProfile": {
+        "learnerId": "MAY014-L10",
+        "archetype": "D8 — Section Gap (D10 unreachable)",
+        "sessionCount": 1,
+        "sessionsLast7Days": 1,
+        "sessionsLast28Days": 1,
+        "studyStreak": 1,
+        "examPlan": {
+          "hasScheduledExam": false,
+          "daysUntilExam": null
+        }
+      },
+      "readinessScore": {
+        "score": 0,
+        "band": "Not enough data",
+        "confidence": 80,
+        "topicsAtReady": 0,
+        "topicsAtRecovery": 0,
+        "sectionsWithData": 0
+      },
+      "decisionId": "D8",
+      "coachingMode": "EXPLAIN",
+      "decisionPriority": "low",
+      "decisionTopic": null,
+      "decisionRationale": "Section coverage is incomplete (0/6 sections with data). Explore across the blueprint to build a comprehensive profile.",
+      "decisionEvidence": {
+        "sectionsWithData": 0,
+        "topicsWithData": 0,
+        "triggeringRule": "D8"
+      },
+      "secondaryDecisionId": null,
+      "secondaryMode": null,
+      "tierClassification": {
+        "topActionTier": null,
+        "topActionLabel": null,
+        "tier1Count": 0,
+        "tier2Count": 0,
+        "tier3Count": 0,
+        "tier4Count": 0
+      },
+      "interventions": {
+        "count": 0,
+        "topTier": null,
+        "topTopic": null
+      },
+      "recommendations": {
+        "count": 0,
+        "types": []
+      },
+      "explanations": {
+        "count": 0
+      },
+      "degradedComponents": [],
+      "pipelineError": null
+    }
+  ]
+}

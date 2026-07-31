@@ -12,17 +12,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "A",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Difficult",
         "SectionName": "External Financial Reporting Decisions",
         "Topic": "E-A.001 Balance sheet purpose",
         "UniqueConceptKey": "E-A-001-Balance-sheet-purpose",
         "MicroTopic": "Balance sheet purpose",
         "CorrectChoice": "B",
         "Choices": {
-            "A": "To show cash flows",
-            "B": "To show financial position at a point in time",
-            "C": "To show changes in equity",
-            "D": "To show profitability over time"
+            "A": "Present using a liquidity-based format because the operating cycle exceeds 12 months, and classified presentation is misleading when the cycle is extended — note disclosure of the longer cycle",
+            "B": "Present using a classified balance sheet with current/noncurrent distinction, disclosing the extended operating cycle in the notes — the debt covenants require standard GAAP classification and a liquidity basis would violate ASC 210",
+            "C": "Present using a classified balance sheet with all assets except inventory classified as current, since only inventory is tied to the extended operating cycle",
+            "D": "Present using a classified balance sheet but reclassify the current portion of long-term debt to noncurrent, relying on the cycle extension to characterize it as long-term"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -35,21 +35,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "What is the primary purpose of the balance sheet?",
-        "ExplanationCorrect": "Balance sheet reports assets, liabilities, and equity at a specific date.",
+        "Stem": "CFO Maria Chen is evaluating Harbor Medical Supplies' balance sheet presentation for the upcoming audit committee meeting. Harbor distributes surgical supplies with an operating cycle that regularly extends 14 months. The company reports $4.2M in inventory, $800K in accounts receivable (average collection 14 months), and $3.5M in total current liabilities including a $1.2M current portion of long-term debt. Harbor's debt covenants with Regional Bank explicitly require GAAP-compliant financial statements, and S&P is reviewing Harbor's credit rating. A liquidity-based presentation would shift $5.0M from current to non-current, improving the current ratio from 0.42 to 1.85. Which balance sheet presentation should Maria Chen recommend?",
+        "ExplanationCorrect": "Under ASC 210-10-45, a classified balance sheet distinguishes current from noncurrent assets and liabilities. When an entity's operating cycle exceeds 12 months, ASC 210-10-45-4 requires disclosure of the longer cycle but does not permit abandoning the classified format. Harbor must use the classified presentation for three reasons. First, the debt covenants explicitly require GAAP-compliant statements — a liquidity basis is not GAAP for a surgical supply distributor and would constitute a covenant violation, potentially triggering acceleration of the $1.2M current portion. Second, ASC 210-10-45-7 permits using the operating cycle to determine current classification within the classified framework, so the extended 14-month cycle is already accommodated through standard classification rules. Third, Standard & Poor's credit rating review makes transparency essential — the classified format with note disclosure of the extended cycle serves both covenant compliance and user transparency. Lenders and rating agencies strongly prefer the classified format supplemented by industry-specific operating cycle disclosures rather than nonstandard presentation formats.",
         "QuestionID": "P1E-A-001",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "The statement of cash flows shows cash inflows and outflows, not financial position at a point in time.",
+        "ExplanationWrongA": "A liquidity-based balance sheet is permitted under ASC 210-10-45 only for certain specialized industries — such as broker-dealers and investment companies — where a classified presentation would not provide meaningful information. Harbor Medical Supplies, as a surgical supply distributor, does not qualify for this exception. More critically, Harbor's debt covenants explicitly require GAAP-compliant financial statements. Adopting a liquidity basis would breach the covenants regardless of how the numbers appear, because liquidity-based presentation is not GAAP for this entity. The improved current ratio (from 0.42 to 1.85) would be achieved at the cost of covenant non-compliance, which could trigger immediate acceleration of the $1.2M current portion of long-term debt.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "The statement of changes in equity shows equity transactions, not the overall financial position.",
-        "ExplanationWrongD": "The income statement shows profitability over time, not financial position at a point in time.",
+        "ExplanationWrongC": "Reclassifying all assets except inventory as current is inconsistent with ASC 210-10-45-4, which applies the operating cycle concept uniformly. When the operating cycle exceeds 12 months, the exception extends to all assets — inventory, receivables, and prepayments — expected to be realized within that cycle. Singling out inventory for non-current classification while treating $800K of trade receivables (also collected over 14 months) as current creates an internally contradictory presentation. External auditors would identify this inconsistency during review because the same operating cycle logic that supports inventory classification also applies to receivables arising from the same sales transactions.",
+        "ExplanationWrongD": "Reclassifying the current portion of long-term debt to non-current by invoking the operating cycle extension is a misapplication of ASC 470-10-45. Debt classification depends on the contractual repayment schedule, not the entity's operating cycle. The $1.2M due within 12 months of the balance sheet date is a current liability regardless of how long it takes to convert inventory to cash. Using the operating cycle to mask near-term debt maturities would misrepresent Harbor's liquidity position to both Regional Bank and S&P. This selective application of accounting rules to circumvent covenant requirements could constitute a material misstatement in the financial statements, exposing the company and its officers to regulatory scrutiny.",
         "question_state": "Certified",
-        "DifficultyScore": 2,
+        "DifficultyScore": 4,
         "certification_date": "2026-07-24",
         "certification_batch": "Session 68 Wave 1",
-        "CognitiveLevel": "Understand"
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -167,17 +167,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "A",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Difficult",
         "SectionName": "External Financial Reporting Decisions",
         "Topic": "E-A.004 Revenue recognition timing",
         "UniqueConceptKey": "E-A-004-Revenue-recognition-timing",
         "MicroTopic": "Revenue recognition timing",
         "CorrectChoice": "B",
         "Choices": {
-            "A": "Contract is signed",
-            "B": "Performance obligation is satisfied",
-            "C": "Cash is received",
-            "D": "Invoice is sent"
+            "A": "Recognize all revenue upon contract signing because the customer has committed and the contract is legally enforceable — the configuration services and support are incidental",
+            "B": "Identify three distinct performance obligations — the SaaS license, configuration services, and annual support — allocate the $180,000 contract price based on relative standalone selling prices, and recognize revenue as each obligation is satisfied",
+            "C": "Defer all revenue recognition until the configuration services are complete because the license has no standalone value without implementation",
+            "D": "Recognize the SaaS license revenue at contract signing, the configuration services revenue ratably over the implementation period, and the support revenue at the end of the contract year"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -190,21 +190,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Revenue is recognized under ASC 606 when:",
-        "ExplanationCorrect": "ASC 606 recognizes revenue when control transfers to the customer.",
+        "Stem": "Controller James Park of Meridian Manufacturing is evaluating revenue recognition under ASC 606 for a new contract with a regional hospital network. The contract bundles a SaaS supply-chain management license, customized configuration services requiring 90 days of implementation work, and 12 months of post-implementation support for a total price of $180,000. James has determined the standalone selling prices: SaaS license ($96,000), configuration services ($60,000), and annual support ($36,000). The hospital can license equivalent software from other vendors and separately engage implementation consultants. James must recommend the correct number of performance obligations and revenue recognition timing to the CFO before the contract is signed. Which approach should James recommend?",
+        "ExplanationCorrect": "Under ASC 606-10-25-14, a promised good or service is distinct — and therefore a separate performance obligation — if the customer can benefit from it either on its own or with readily available resources, and it is separately identifiable within the contract. All three elements satisfy this test. The SaaS license is distinct because the hospital can license equivalent supply-chain software from other vendors, demonstrating standalone value. The configuration services are distinct because the hospital could engage separate consultants to perform the implementation. The annual support represents a stand-ready obligation to provide assistance over 12 months, distinct from the initial license grant. The $180,000 transaction price is allocated using relative standalone selling prices: SaaS license ($96,000 / $192,000 x $180,000 = $90,000), configuration services ($60,000 / $192,000 x $180,000 = $56,250), support ($36,000 / $192,000 x $180,000 = $33,750). Revenue for the license is recognized at the point the customer obtains control; configuration revenue is recognized over the 90-day implementation period as services are performed; support revenue is recognized ratably over the 12-month service period. This approach faithfully depicts the transfer of promised goods and services.",
         "QuestionID": "P1E-A-004",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Signing the contract establishes the arrangement but does not trigger revenue recognition under ASC 606.",
+        "ExplanationWrongA": "Contract signing establishes enforceability under ASC 606-10-25-1, but it does not trigger revenue recognition. Revenue is recognized when — or as — the entity satisfies a performance obligation by transferring a promised good or service to the customer. Recognizing all $180,000 at contract signing would overstate revenue before Meridian has performed any of the three obligations. The configuration services and support are not 'incidental' — they are separately identifiable promises with standalone value, and ASC 606-10-25-21 requires each to be assessed for distinctness. This approach would produce a material misstatement of revenue in the period of contract signing.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Cash receipt is not the trigger under accrual accounting; revenue is recognized when the performance obligation is satisfied.",
-        "ExplanationWrongD": "Sending an invoice is an administrative step after revenue has already been recognized.",
+        "ExplanationWrongC": "Under ASC 606-10-25-19, a good or service is distinct even if the customer needs another good or service to obtain full benefit, provided the customer can benefit from the good or service together with readily available resources. The hospital can license equivalent supply-chain software from other vendors (the SaaS license is available from multiple providers), meaning the license has standalone value. While the configuration services are necessary for the hospital to use Meridian's specific software, ASC 606 does not require that the customer can use the specific good in isolation — only that it can benefit from the good with other readily available resources. Deferring all revenue until configuration is complete would delay recognition of revenue already earned for the license grant, understating revenue in the period the license is delivered.",
+        "ExplanationWrongD": "This approach incorrectly applies three different recognition patterns without ASC 606 justification. The SaaS license revenue should be recognized when control transfers — which is typically upon delivery, not at contract signing (the license is not yet usable). The support revenue represents a stand-ready obligation under ASC 606-10-25-19, recognized ratably over the 12-month service period — not deferred to a single point at year-end. Recognizing support revenue at contract-end while the service is being provided throughout the year does not faithfully depict the transfer of services to the customer and would understate revenue in each interim period.",
         "question_state": "Certified",
-        "DifficultyScore": 2,
+        "DifficultyScore": 4,
         "certification_date": "2026-07-24",
         "certification_batch": "Session 68 Wave 1",
-        "CognitiveLevel": "Understand"
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -219,17 +219,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "A",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "SectionName": "External Financial Reporting Decisions",
         "Topic": "E-A.005 Inventory measurement",
         "UniqueConceptKey": "E-A-005-Inventory-measurement",
         "MicroTopic": "Inventory measurement",
         "CorrectChoice": "A",
         "Choices": {
-            "A": "Lower of cost or net realizable value",
-            "B": "Fair value",
-            "C": "Cost",
-            "D": "Net realizable value"
+            "A": "Apply LCNRV at the individual item level for finished goods (write-down $42,000), evaluate raw materials through the finished-goods LCNRV lens (no separate write-down needed because the finished product's NRV exceeds cost), and apply LCNRV to WIP based on estimated selling price less costs to complete and sell ($28,000 write-down) — total write-down: $70,000 with separate disclosure of the three components",
+            "B": "Apply LCNRV at the aggregate level across all three inventory categories, computing a single $32,000 write-down based on the net NRV deficit of all categories combined — discloses the write-down as a single line item in cost of goods sold",
+            "C": "Write down only the finished goods inventory by $42,000 because LCNRV does not apply to raw materials or WIP — these are measured at cost until the finished product is sold",
+            "D": "Apply LCNRV to finished goods ($42,000) and WIP ($28,000), but value raw materials at replacement cost ($95,000) because raw material prices have declined below original cost — total charge: $78,000"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -242,19 +242,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Under U.S. GAAP, inventory is reported at:",
-        "ExplanationCorrect": "Inventory is reported at lower of cost or net realizable value under U.S. GAAP.",
+        "Stem": "Controller Sarah Lin of Pacific Foods must determine the year-end inventory write-down under ASC 330. Pacific's three product categories show the following: finished goods (Cost: $520,000, NRV: $478,000), raw materials held for production (Cost: $210,000, replacement cost: $185,000), and work-in-process (Cost: $340,000, estimated selling price of completed goods less costs to complete and sell: $312,000). The finished goods that consume these raw materials have an aggregate NRV of $680,000 versus aggregate cost of $620,000. Sarah must recommend the proper LCNRV application and total write-down to the CFO, with appropriate disclosure treatment. Which approach should Sarah recommend?",
+        "ExplanationCorrect": "Under ASC 330-10-35, inventory is measured at the lower of cost or net realizable value (LCNRV). Finished goods are evaluated individually: the $42,000 write-down ($520,000 minus $478,000) is required because NRV is below cost. For raw materials held for production, ASC 330-10-35-3 requires evaluation through the lens of the finished product they are used to produce. Since the finished goods consuming these raw materials have aggregate NRV of $680,000 versus aggregate cost of $620,000 — NRV exceeds cost — no separate raw material write-down is needed, even though replacement cost ($185,000) is below original cost ($210,000). For WIP, LCNRV is applied based on the estimated selling price of the completed product less costs to complete and sell: $312,000 NRV versus $340,000 cost = $28,000 write-down. Total write-down: $42,000 + $28,000 = $70,000. ASC 330-10-50 requires disclosure of the amount of any inventory write-down, and separate disclosure of the three components provides transparency about which product categories experienced market declines.",
         "QuestionID": "P1E-A-005",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "Fair value is used for certain financial instruments, not for inventory under U.S. GAAP.",
-        "ExplanationWrongC": "Cost alone does not reflect potential declines in inventory value below cost.",
-        "ExplanationWrongD": "Net realizable value alone does not consider the cost of inventory; the lower of cost and NRV is used.",
+        "ExplanationWrongB": "ASC 330-10-35 prohibits aggregate LCNRV grouping across dissimilar inventory categories when the categories have materially different NRV patterns. Finished goods show a $42,000 deficit while raw materials (through the finished-goods lens) show an NRV surplus — aggregating these would mask the genuine decline in finished goods by netting it against categories that are not impaired. The $32,000 aggregate figure understates the actual economic decline in finished goods and misleads financial statement users about which product lines are experiencing market pressure. ASC 330 requires LCNRV application at a level that prevents offsetting losses in one category against gains in another.",
+        "ExplanationWrongC": "ASC 330-10-35-3 explicitly requires raw materials held for production to be evaluated for write-down when the finished products they will be used to produce have an NRV below cost. In this case, the finished goods have aggregate NRV exceeding aggregate cost — so the raw materials do not require a separate write-down. However, the assertion that LCNRV 'does not apply' to raw materials or WIP is incorrect. WIP is directly subject to LCNRV: if the estimated selling price less costs to complete and sell ($312,000) is below WIP cost ($340,000), the $28,000 write-down must be recorded. Failing to write down WIP would overstate inventory by $28,000, violating the fundamental measurement principle of ASC 330.",
+        "ExplanationWrongD": "Replacement cost ($185,000) is the measurement basis under the lower of cost or market (LCM) approach applicable to LIFO inventories under ASC 330-10-35-1. Pacific Foods uses standard LCNRV, where the measurement basis is net realizable value, not replacement cost. For raw materials held for production under LCNRV, the evaluation pivots on the finished product's NRV, not the raw material's current purchase price. Since the finished goods show NRV ($680,000) exceeding cost ($620,000), no raw material write-down is warranted regardless of the decline in replacement cost. Using replacement cost would import a LIFO-specific measurement rule into a non-LIFO context, producing an incorrect write-down of $78,000 that overstates the inventory charge.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -269,17 +269,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "A",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Difficult",
         "SectionName": "External Financial Reporting Decisions",
         "Topic": "E-A.006 LIFO rising prices",
         "UniqueConceptKey": "E-A-006-LIFO-rising-prices",
         "MicroTopic": "LIFO rising prices",
         "CorrectChoice": "A",
         "Choices": {
-            "A": "LIFO",
-            "B": "Specific identification",
-            "C": "FIFO",
-            "D": "Average cost"
+            "A": "Adopt LIFO because the tax savings of $180,000 in Year 1 and improved operating cash flow outweigh the reduction in reported earnings (net income decreases by $130,000 after-tax). The LIFO conformity rule requires LIFO for both tax and financial reporting, so the earnings decline is unavoidable but the cash benefit is real. Flag that inventory turnover will increase artificially because the LIFO inventory base is valued at older, lower costs",
+            "B": "Retain FIFO because the net income reduction under LIFO would negatively affect the company's P/E ratio and may trigger compensation clawbacks tied to earnings targets — the tax savings are not worth the earnings impact",
+            "C": "Adopt LIFO for tax reporting only, retaining FIFO for financial reporting — this captures the tax savings without reducing reported earnings. The LIFO conformity rule only applies to public companies",
+            "D": "Adopt LIFO but revalue the LIFO layers annually to current cost using the LIFO reserve disclosure, which neutralizes the inventory turnover distortion — lenders will see through the LIFO effect"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -292,19 +292,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Which cost flow assumption results in the lowest net income during rising prices?",
-        "ExplanationCorrect": "LIFO assigns the most recent (higher) costs to expense, reducing net income in rising price periods.",
+        "Stem": "The controller of NorthStar Equipment has recommended switching from FIFO to LIFO for the company's steel and aluminum inventory. NorthStar's raw material costs have risen 18% over the past two years, and the controller projects continued inflation in metal commodity prices. The analysis shows: Year 1 tax savings of $180,000, a reduction in after-tax net income of $130,000, and a $1,100,000 decline in reported inventory on the balance sheet. The controller notes that the LIFO conformity rule (IRC Section 472) requires LIFO for both tax and financial reporting. The CFO must evaluate the recommendation and consider the impact on: (1) the company's cash position, (2) the P/E ratio given the earnings decline, (3) the inventory turnover ratio, and (4) the LIFO conformity requirement. Which recommendation should the CFO adopt?",
+        "ExplanationCorrect": "Under IRC §472(c) (the LIFO conformity rule), if LIFO is used for federal income tax purposes, it must also be used for financial reporting purposes. The related ASC 330-10-50 disclosure requirements mandate reporting the LIFO reserve in the notes to the financial statements. The controller's recommendation to adopt LIFO acknowledges this requirement correctly. The $180,000 in Year 1 tax savings is a permanent cash flow benefit — cash that stays with NorthStar rather than going to tax authorities. While after-tax net income declines by $130,000 (after the $180,000 pre-tax reduction at the applicable tax rate), the cash savings are real and recurring as long as inventory costs continue rising. The P/E ratio impact should be evaluated carefully: the earnings decline may affect the stock price, but sophisticated investors often add back LIFO reserve changes to compute earnings on a FIFO-equivalent basis — a fact the CFO should communicate to analysts. The inventory turnover ratio increases artificially under LIFO because COGS reflects recent higher costs while the inventory balance on the denominator reflects older, lower LIFO layers — this distortion should be flagged in management's discussion of operational metrics. The CFO should present the recommendation to the board with full disclosure of both the cash benefit and the financial statement impacts.",
         "QuestionID": "P1E-A-006",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "Specific identification matches actual costs to items sold, which may produce different results than LIFO.",
-        "ExplanationWrongC": "FIFO assigns older (lower) costs to expense, resulting in higher net income during rising prices.",
-        "ExplanationWrongD": "Average cost smooths price changes and produces results between FIFO and LIFO.",
+        "ExplanationWrongB": "Retaining FIFO avoids the earnings decline, but this analysis undervalues the permanent nature of the tax savings. The $180,000 annual tax saving is not a one-time deferral — it compounds as inventory levels and prices continue to rise. Over a 10-year horizon at 18% cost inflation, the cumulative tax savings could exceed $2,500,000 in present value terms. The P/E ratio impact is also mitigated by the fact that market analysts routinely adjust for LIFO-FIFO differences when comparing companies within an industry. Furthermore, if compensation targets or clawbacks are based on GAAP net income, the board could adjust the targets to neutralize the inventory accounting change — this is a governance decision, not an accounting constraint. The CFO should quantify the multi-year tax benefit before concluding that the Year 1 earnings impact justifies rejecting a permanent cash flow improvement.",
+        "ExplanationWrongC": "The LIFO conformity rule under IRC Section 472(c) applies to all taxpayers using LIFO, not only public companies. The rule states that a taxpayer may use the LIFO method only if the taxpayer establishes, to the satisfaction of the Secretary, that no procedure other than LIFO has been used for purposes of an annual report to shareholders, partners, or other proprietors, or to beneficiaries, or for credit purposes. This applies to any entity that issues financial statements — public or private. A privately held NorthStar would still need LIFO on both tax returns and its bank-reporting financial statements. Using LIFO for tax and FIFO for books would violate tax law and could result in the IRS disallowing LIFO altogether, triggering recapture of all deferred tax savings plus penalties and interest.",
+        "ExplanationWrongD": "The LIFO reserve is a disclosure item, not a revaluation mechanism. The LIFO reserve (disclosed in the notes under ASC 330-10-50) shows the excess of FIFO or current cost over the LIFO inventory value, but it does not change the balance sheet amounts. Inventory remains stated at LIFO cost on the face of the balance sheet; the LIFO reserve is supplementary disclosure. The inventory turnover ratio is computed using the reported balance sheet amounts — meaning it will increase because the denominator (average inventory) is stated at older, lower LIFO costs while the numerator (COGS) reflects current costs. Lenders and analysts may adjust turnover ratios using the LIFO reserve in their own analysis, but this is an external analytical choice, not a GAAP revaluation. The controller should flag the distortion in management commentary rather than suggest a non-existent accounting remedy.",
         "question_state": "Certified",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Apply"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -319,17 +319,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "A",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Difficult",
         "SectionName": "External Financial Reporting Decisions",
         "Topic": "E-A.007 Bond classification",
         "UniqueConceptKey": "E-A-007-Bond-classification",
         "MicroTopic": "Bond classification",
         "CorrectChoice": "C",
         "Choices": {
-            "A": "Current liability",
-            "B": "Equity",
-            "C": "Long-term liability",
-            "D": "Contingent liability"
+            "A": "Reclassify the full $2,500,000 bond balance as a current liability because the covenant violation occurred before the balance sheet date, regardless of the waiver — the waiver does not eliminate the violation",
+            "B": "Classify the bond as a current liability only for the $500,000 accelerated portion required by the waiver terms, with the remaining $2,000,000 remaining in non-current because the original maturity is still 8 years away",
+            "C": "Retain the full $2,500,000 bond as non-current because the lender granted a waiver before the financial statements were issued, and the waiver's accelerated payment of $500,000 does not mature within one year of the balance sheet date — the waiver negates the violation for classification purposes under ASC 470-10-45",
+            "D": "Split the bond equally between current and non-current ($1,250,000 each) as a conservative presentation, regardless of the waiver terms — this approach is always appropriate when a covenant is violated"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -342,19 +342,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "A 10-year bond issued at par is classified on the balance sheet as:",
-        "ExplanationCorrect": "A 10-year bond is a long-term liability until the maturity date approaches within one year.",
+        "Stem": "CFO David Okonkwo of Atlantic Logistics must determine the balance sheet classification of a $2,500,000 bond after receiving a Q4 debt covenant violation notice. The bond indenture requires Atlantic to maintain a debt-to-equity ratio below 2.5 — at December 31, Atlantic's ratio reached 2.7, triggering a technical default. On January 28 — three weeks before the February 15 financial statement issuance date — the lender granted a waiver. The waiver cures the violation but imposes a condition: $500,000 of the bond principal must be repaid within 18 months, while the remaining $2,000,000 retains its original 8-year maturity. David must classify this bond on the December 31 balance sheet and recommend the appropriate treatment to the audit committee. Which classification should David recommend?",
+        "ExplanationCorrect": "Under ASC 470-10-45-11, a long-term obligation that becomes callable due to a covenant violation may still be classified as non-current if the lender waives the call right before the financial statements are issued. The waiver received on January 28 — three weeks before the February 15 issuance date — cures the violation. The $500,000 accelerated repayment condition does not change the classification because it matures in 18 months, which exceeds 12 months from the balance sheet date of December 31. Only obligations due within one year of the balance sheet date (or operating cycle, if longer) are classified as current under ASC 210-10-45-7. Since the $500,000 obligation matures beyond 12 months and the remaining $2,000,000 retains its original 8-year term, the entire bond remains non-current. Atlantic must disclose the covenant violation, the waiver, and the accelerated repayment terms in the notes to the financial statements per ASC 470-10-50, but the balance sheet classification is unaffected.",
         "QuestionID": "P1E-A-007",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "A current liability is due within one year. A 10-year bond is long-term until the final year before maturity.",
-        "ExplanationWrongB": "A bond is debt, not equity. It represents a liability of the issuer.",
+        "ExplanationWrongA": "ASC 470-10-45-11 explicitly permits non-current classification when the creditor waives the right to demand repayment for a period greater than one year from the balance sheet date, and the waiver is obtained before the financial statements are issued. The covenant violation occurred at December 31, creating a condition that could have accelerated the debt — but the January 28 waiver removes the creditor's right to call the obligation. GAAP does not require automatic current classification solely because a violation existed at the balance sheet date; it considers events through the issuance date. The waiver effectively cures the violation for classification purposes, and reclassifying the full $2,500,000 as current would misrepresent Atlantic's actual obligation to repay within 12 months.",
+        "ExplanationWrongB": "Classification depends on the debtor's right to defer settlement, not on the dollar amount accelerated. The $500,000 accelerated portion matures in 18 months — beyond 12 months from the balance sheet date — and therefore does not meet the definition of a current liability under ASC 210-10-45-7. The waiver's conditions do not create a current obligation because no payment is required within one year. Classifying $500,000 as current while the contractual repayment date is 18 months away would overstate current liabilities and distort Atlantic's working capital and current ratio, potentially causing unnecessary concern among creditors and investors about near-term liquidity.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "A contingent liability depends on uncertain future events. A bond payable is a definite obligation.",
+        "ExplanationWrongD": "There is no GAAP concept of a 50/50 'conservative split' for debt classification. ASC 470-10-45 requires classification based on the specific facts — the existence of a waiver, the timing of accelerated payments relative to the balance sheet date, and the debtor's right to defer settlement. Arbitrarily assigning $1,250,000 to current classification when no amount is contractually due within 12 months would be a departure from GAAP that misrepresents Atlantic's liquidity position. Conservatism in accounting means recognizing losses when probable, not creating phantom current liabilities out of caution. External auditors would require the company to support classification with contractual terms and waiver conditions, not an arbitrary split.",
         "question_state": "Certified",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -571,17 +571,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "A",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Moderate",
         "SectionName": "External Financial Reporting Decisions",
         "Topic": "E-A.012 Contingent liability recognition",
         "UniqueConceptKey": "E-A-012-Contingent-liability-recognition",
         "MicroTopic": "Contingent liability recognition",
         "CorrectChoice": "D",
         "Choices": {
-            "A": "It is remote",
-            "B": "It is possible and can be estimated",
-            "C": "It is probable but not estimable",
-            "D": "It is probable and reasonably estimable"
+            "A": "Accrue the $150,000 claim (70% probable loss, range $100K–$200K), disclose the $300,000 claim in notes (reasonably possible, range $200K–$400K), and take no action on the $50,000 claim (remote, less than 5% probability)",
+            "B": "Accrue all three claims at their minimum amounts ($100K + $200K + $0) to present a conservative financial position — ASC 450 requires accrual when any probability of loss exists",
+            "C": "Accrue the $150,000 claim at $200,000 (high end of range), the $300,000 claim at $400,000, and the $50,000 claim at $50,000 — all three meet the 'probable' threshold",
+            "D": "Accrue $150,000 for the claim that is probable and reasonably estimable (range $100K–$200K, best estimate $150K), disclose the reasonably possible $300,000 claim in notes with the estimated range, and neither accrue nor disclose the remote $50,000 claim — ASC 450-20-25-2 requires both probability and estimability for accrual"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -594,19 +594,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "A contingent liability is recognized when:",
-        "ExplanationCorrect": "Contingent liabilities are accrued when probable and reasonably estimable.",
+        "Stem": "The audit committee of NorthStar Equipment is reviewing three pending legal claims at year-end. The general counsel has assessed each: Claim 1 — a product liability suit with a 70% probability of an unfavorable outcome and an estimated loss between $100,000 and $200,000 (best estimate: $150,000). Claim 2 — an environmental remediation claim where a loss is reasonably possible, with an estimated range of $200,000 to $400,000. Claim 3 — a breach of contract claim where the probability of an unfavorable outcome is remote (less than 5%) and legal estimates maximum exposure at $50,000. The committee chair asks the controller to determine the appropriate accounting treatment under ASC 450 for each claim.",
+        "ExplanationCorrect": "Under ASC 450-20 (Loss Contingencies), a contingent liability shall be accrued only when both conditions are met: (1) the loss is probable — the future event is likely to occur, and (2) the amount is reasonably estimable. Claim 1 meets both criteria (70% probable, best estimate $150,000), so a $150,000 liability is accrued. When a range exists, ASC 450-20-25-2 requires accrual at the best estimate within the range; if no best estimate, the minimum is accrued. Claim 2 is reasonably possible but not probable — ASC 450-20-50-3 requires footnote disclosure of the nature and estimated range ($200K–$400K), but no accrual. Claim 3 is remote — under ASC 450-20-50-6, no accrual or disclosure is required. Option D correctly applies the three-tier ASC 450 framework: accrue the probable and estimable claim, disclose the reasonably possible claim, and take no action on the remote claim.",
         "QuestionID": "P1E-A-012",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Remote contingencies are not recognized or disclosed in the financial statements.",
-        "ExplanationWrongB": "Possible contingencies that can be estimated are disclosed in notes but not accrued unless probable.",
-        "ExplanationWrongC": "Probable but not estimable contingencies are disclosed in notes but not accrued.",
+        "ExplanationWrongA": "This mixes correct treatment for Claim 1 and partial for Claim 2, but ignores that Claim 3 (remote) requires no disclosure — 'take no action' is correct for remote claims under ASC 450, but the answer misses why each claim is classified differently across the three-tier framework of probable, reasonably possible, and remote.",
+        "ExplanationWrongB": "ASC 450 does NOT require accrual for all probabilities; only probable AND estimable losses are accrued. Accruing all three claims at their minimum amounts would materially overstate liabilities and violate ASC 450-20-25-2, which explicitly limits accrual to losses that are both probable and reasonably estimable.",
+        "ExplanationWrongC": "Claims 2 (reasonably possible) and 3 (remote) do not meet the probable threshold — this approach treats all three identically despite different probability assessments. ASC 450 reserves accrual only for losses that are probable, which Claim 2 and Claim 3 are not.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -671,17 +671,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "A",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "SectionName": "External Financial Reporting Decisions",
         "Topic": "E-A.014 Finance lease criteria",
         "UniqueConceptKey": "E-A-014-Finance-lease-criteria",
         "MicroTopic": "Finance lease criteria",
         "CorrectChoice": "B",
         "Choices": {
-            "A": "The lease term is less than one year",
-            "B": "The PV of payments is substantially all of the fair value",
-            "C": "The asset has no residual value",
-            "D": "The lease is cancelable"
+            "A": "Classify as an operating lease because only one of the five criteria is met (lease term = 80% of economic life). The purchase option at 15% of fair value is not a bargain purchase option, and the specialized tooling criterion only applies if the asset has no alternative use to the lessor",
+            "B": "Classify as a finance lease because the lease term covers the major part (80%) of the asset's remaining economic life, which is one of the five ASC 842 criteria — only one criterion must be met for finance lease classification. The 15% purchase option may also constitute a bargain if fair value at exercise date is expected to exceed the option price, further supporting finance lease treatment",
+            "C": "Classify as a finance lease because all three conditions — lease term meets the major part threshold, purchase option, and specialized nature — are present. All three must be met for a finance lease",
+            "D": "Request a determination from the lessor — the classification is ambiguous because the lease term is exactly at the 75% bright-line threshold used in prior guidance (ASC 840), and the specialized-tooling criterion is subjective"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -694,19 +694,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Under ASC 842, a lessee classifies a lease as finance if:",
-        "ExplanationCorrect": "A finance lease exists when the PV of lease payments is substantially all of the asset fair value.",
+        "Stem": "Controller Raj Patel of Atlas Manufacturing is evaluating the lease classification for a custom CNC milling machine under ASC 842. The machine has an economic life of 10 years with no expected residual value. Atlas signed a non-cancelable lease with an 8-year term and annual payments of $95,000. The lease includes a purchase option allowing Atlas to buy the machine at the end of Year 8 for 15% of its then-estimated fair value. The milling machine was built to Atlas's specifications with proprietary tooling that cannot be repurposed by the lessor without significant modification. Raj must recommend the proper classification to the CFO and explain the consequence for Atlas's balance sheet. Which classification should Raj recommend?",
+        "ExplanationCorrect": "Under ASC 842-10-25-2, a lessee classifies a lease as a finance lease if ANY ONE of the following five criteria is met: (1) ownership transfers to the lessee by the end of the lease term, (2) the lease contains a purchase option the lessee is reasonably certain to exercise, (3) the lease term covers the major part of the remaining economic life of the asset, (4) the present value of lease payments equals or exceeds substantially all of the fair value, (5) the asset has no alternative use to the lessor at the end of the lease term. ASC 842-10-55-2 provides guidance that 'major part' generally means 75% or more of the remaining economic life. The 8-year lease term represents 80% of the 10-year economic life, clearly meeting criterion 3. The purchase option at 15% of estimated fair value after 8 years — on a machine expected to have limited remaining value beyond its specialized application — is likely a bargain option that Atlas would be reasonably certain to exercise, also meeting criterion 2. Because only one criterion needs to be met, and at least one (likely two) is satisfied, the lease must be classified as a finance lease. Atlas will recognize a right-of-use asset and lease liability on its balance sheet.",
         "QuestionID": "P1E-A-014",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "A lease term less than one year qualifies for the short-term lease exception but is not a finance lease criterion.",
+        "ExplanationWrongA": "ASC 842-10-25-2 requires only one of the five finance lease criteria to be satisfied — the criteria are disjunctive, not conjunctive. Even if the controller were correct that the purchase option does not qualify as a bargain (a questionable assumption given the 15% price on a 10-year-old specialized machine), the 80% lease term alone satisfies criterion 3. The phrase 'only one' mischaracterizes the threshold — 'only one' is enough. ASC 842 eliminated ASC 840's bright-line rules but retained the conceptual framework that a lease for the major part of an asset's economic life transfers substantially all of the risks and rewards of ownership, making finance lease classification appropriate.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Residual value is relevant but not the determinative criterion for finance lease classification.",
-        "ExplanationWrongD": "A cancelable lease is generally not a lease at all; the lessee does not have the right to use the asset.",
+        "ExplanationWrongC": "ASC 842-10-25-2 is disjunctive — any single criterion triggers finance lease classification. The assertion that all three conditions must be met is a fundamental misunderstanding of the standard's structure. The five criteria are alternate paths, not cumulative requirements. If the lease term alone covers the major part (80%) of the economic life, the lease is a finance lease regardless of whether the purchase option or specialized asset criteria are also satisfied. This error would lead to misclassification of leases across Atlas's equipment portfolio, particularly for leases that meet only one or two criteria but would still require finance lease treatment.",
+        "ExplanationWrongD": "ASC 842 eliminated the bright-line percentage thresholds that existed under ASC 840 — there is no fixed 75% or 90% rule to debate. Under ASC 842, 'major part' is a principle-based assessment, and 80% clearly qualifies. The lessee — not the lessor — makes the classification determination under ASC 842-10-25-1; there is no mechanism to defer classification to the lessor. The specialized-tooling criterion is not 'subjective' in a way that requires lessor input — it is an objective assessment of whether the asset has alternative use, which the lessee evaluates based on known facts about the asset's custom design. Requesting a lessor determination would be an abdication of the lessee's accounting responsibility and would delay proper balance sheet recognition.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -1223,17 +1223,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "A",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Difficult",
         "SectionName": "External Financial Reporting Decisions",
         "Topic": "E-A.025 Deferred tax liability",
         "UniqueConceptKey": "E-A-025-Deferred-tax-liability",
         "MicroTopic": "Deferred tax liability",
         "CorrectChoice": "A",
         "Choices": {
-            "A": "Taxable income is less than pretax income",
-            "B": "Permanent differences exist",
-            "C": "Taxable income exceeds pretax income",
-            "D": "Tax expense exceeds tax payable"
+            "A": "Record a deferred tax liability because the MACRS deduction in Year 1 ($480,000) exceeds straight-line book depreciation ($300,000), creating a taxable temporary difference of $180,000 — DTL = $37,800 at 21%. This reflects future higher taxable income when book depreciation exceeds tax depreciation in later years. The DTL increases the company's GAAP liabilities, potentially affecting debt covenant ratios, but the actual cash tax savings of $37,800 improve operating cash flow",
+            "B": "Record a deferred tax asset because the company is paying less tax now than the book expense suggests — the $37,800 represents a prepaid tax benefit that will be recovered when book depreciation exceeds tax depreciation",
+            "C": "Record no deferred tax because the total depreciation over the asset's life is the same ($2.4M) regardless of method — this is a permanent timing matter with zero net deferred tax effect",
+            "D": "Record a deferred tax liability of $180,000 ($2.4M x 21% x (1 - 5/8)) — applying a blended rate to the projected five-year depreciation difference. This overstates the DTL but conservatively protects against the bank review"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -1246,19 +1246,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "A deferred tax liability arises when:",
-        "ExplanationCorrect": "DTL arises when taxable income is less than pretax income (temporary difference).",
+        "Stem": "Tax Director Elena Torres of Summit Construction must determine the deferred tax treatment for $2,400,000 of heavy equipment purchased on January 2. Summit uses straight-line depreciation over 8 years with zero salvage value for book purposes ($300,000 annually) and MACRS for tax purposes, yielding a Year 1 deduction of $480,000. The applicable tax rate is 21%. Summit's lead bank is conducting its annual credit review next month, and Elena knows the resulting deferred tax position will affect the company's GAAP debt-to-equity ratio. The CFO has asked Elena to recommend the proper deferred tax accounting and explain the balance sheet and cash flow implications. Which recommendation should Elena present?",
+        "ExplanationCorrect": "Under ASC 740-10-25-2, a deferred tax liability is recognized for taxable temporary differences — situations where the tax basis of an asset is less than its book basis, resulting in future taxable amounts. In Year 1, book depreciation is $300,000 while tax depreciation (MACRS) is $480,000. The $180,000 excess tax deduction creates a taxable temporary difference because the tax return deducts more now, leaving less depreciation to deduct in future years when book depreciation exceeds tax depreciation. The DTL = $180,000 x 21% = $37,800. This DTL increases Summit's GAAP liabilities, which may modestly affect the debt-to-equity ratio for the bank review. However, Elena should explain to the CFO that the DTL represents a future obligation, not a current cash outflow, and that the $37,800 in actual cash tax savings improves Summit's operating cash flow in Year 1. Banks typically understand the non-cash nature of DTLs and may exclude them from covenant calculations upon request.",
         "QuestionID": "P1E-A-025",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "Permanent differences do not create deferred taxes; only temporary differences do.",
-        "ExplanationWrongC": "When taxable income exceeds pretax income, a deferred tax asset arises, not a liability.",
-        "ExplanationWrongD": "Tax expense exceeding tax payable describes the effect, not the cause of the timing difference.",
+        "ExplanationWrongB": "Paying less tax now than the book expense would suggest is precisely what creates a deferred tax liability, not a deferred tax asset. The relationship is: when tax depreciation exceeds book depreciation, taxable income is lower than book income, and the company pays less tax currently — creating a future obligation (DTL) to pay more tax when the pattern reverses. A deferred tax asset arises in the opposite scenario: when book expense exceeds tax deduction, causing higher taxable income now and a future deductible amount. Summit's situation is a classic temporary difference where the MACRS acceleration creates a DTL. Confusing DTA with DTL is a fundamental ASC 740 classification error that would misstate Summit's balance sheet and potentially affect the bank's assessment of the company's leverage.",
+        "ExplanationWrongC": "While the total depreciation over the asset's 8-year life is identical ($2,400,000) under both book and tax methods, ASC 740-10-25-2 requires recognition of deferred taxes on all temporary differences as they arise in each reporting period. The timing of deductions matters, not just the cumulative total. The $180,000 difference in Year 1 is a taxable temporary difference that must be recognized, even though it will reverse over the remaining 7 years. Failing to record the DTL would understate Summit's liabilities by $37,800 and overstate equity, producing financial statements that are not in conformity with GAAP. The bank review makes this omission particularly risky — auditors would identify the missing DTL as a material error.",
+        "ExplanationWrongD": "The $180,000 calculation uses an arbitrary blended-rate formula that is not supported by ASC 740. The DTL should be based on the cumulative temporary difference at the balance sheet date ($180,000 excess tax depreciation), multiplied by the enacted tax rate (21%), yielding $37,800. Recording a $180,000 DTL when the actual difference supports only $37,800 would overstate liabilities by $142,200, potentially triggering a debt covenant breach that the economic facts do not support. Furthermore, 'conservative bias' does not justify a non-GAAP measurement — ASC 740 requires measurement based on enacted tax rates applied to the specific temporary differences that exist at the reporting date. Banks review not just ratios but also the quality of accounting estimates, and a deliberately overstated liability would damage credibility.",
         "question_state": "Certified",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -1380,10 +1380,10 @@ const MCQ_BANK_E = [
         "MicroTopic": "Comprehensive income",
         "CorrectChoice": "B",
         "Choices": {
-            "A": "All equity changes except investments by and distributions to owners",
-            "B": "Net income plus OCI",
-            "C": "Net income only",
-            "D": "Revenue minus expenses"
+            "A": "Comprehensive income is $2,035,000 — net income is the primary driver of the $2,035K result. The foreign currency translation loss of $340K is the largest OCI component but represents only 16.2% of net income's magnitude",
+            "B": "Comprehensive income = $2,035,000 ($2,100K + $180K + $95K − $340K). The FX translation loss ($340K) is the largest single OCI component in absolute terms and drives a $340K negative divergence. However, the net OCI effect is negative $65K (−$340K + $180K + $95K). The FX loss is the primary divergence driver because it reduces comprehensive income below net income despite the positive pension and AFS adjustments",
+            "C": "Comprehensive income = $2,715,000 because all OCI components are additive to net income — foreign currency translation losses are reported as an offset to assets, not as an OCI reduction. Only realized FX losses reduce comprehensive income",
+            "D": "Comprehensive income = $2,410,000 — the pension prior service credit ($180K) is reported as a liability reduction and does not flow through OCI. Only the AFS gain ($95K) and FX loss ($340K) affect comprehensive income, producing net OCI of +$310K"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -1396,19 +1396,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Comprehensive income includes:",
-        "ExplanationCorrect": "Comprehensive income = net income + other comprehensive income.",
+        "Stem": "The FP&A analyst at Summit Construction is decomposing the quarterly comprehensive income statement for the board package. Net income is $2,100,000. Other comprehensive income items include: a foreign currency translation loss of ($340,000) from the Canadian subsidiary, a pension prior service credit of $180,000 from an amendment to the defined benefit plan, and an unrealized gain of $95,000 on available-for-sale debt securities. The CFO asks the analyst which OCI component drives the largest divergence between net income and comprehensive income, and to compute total comprehensive income.",
+        "ExplanationCorrect": "Under ASC 220-10-45-10A, comprehensive income comprises net income plus other comprehensive income. OCI includes foreign currency translation adjustments (ASC 830-30-45-12), pension prior service credits and actuarial gains/losses (ASC 715-30-35-11), and unrealized gains and losses on available-for-sale debt securities (ASC 320-10-45-1). Total comprehensive income = $2,100,000 + (−$340,000) + $180,000 + $95,000 = $2,035,000. The FX translation loss of $340,000 is the largest single OCI component in absolute terms, driving a $340,000 negative divergence from net income. While the net OCI effect is negative $65,000 after netting in the pension credit and AFS gain, the FX loss remains the primary divergence driver because it single-handedly pulls comprehensive income below net income despite the partially offsetting positive adjustments.",
         "QuestionID": "P1E-A-028",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "All equity changes except owner transactions describes comprehensive income, which the correct answer also states directly.",
+        "ExplanationWrongA": "While the FX loss is correctly identified as the largest component, this statement misses the full OCI calculation and the netting effect — comprehensive income is explicitly $2,100K + $180K + $95K − $340K = $2,035K. Net income is not simply 'the primary driver' when OCI components can materially change the total.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Net income alone excludes OCI items like unrealized gains/losses on AFS securities.",
-        "ExplanationWrongD": "Revenue minus expenses is net income, not comprehensive income.",
+        "ExplanationWrongC": "FX translation adjustments are reported in OCI, not as asset offsets — ASC 220-10-45-10A requires foreign currency translation adjustments to be included in OCI, affecting comprehensive income directly. Unrealized translation losses reduce comprehensive income in the period they occur, regardless of whether they are realized.",
+        "ExplanationWrongD": "Pension prior service credits are OCI components under ASC 715-30-35 — they are not liability adjustments excluded from total comprehensive income. All three components (FX translation loss, pension prior service credit, and AFS unrealized gain) are OCI items that affect comprehensive income; excluding the pension credit misstates the total.",
         "question_state": "Certified",
         "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -1480,10 +1480,10 @@ const MCQ_BANK_E = [
         "MicroTopic": "Impairment loss measurement",
         "CorrectChoice": "B",
         "Choices": {
-            "A": "Fair value minus cost to sell",
-            "B": "Carrying amount minus fair value",
-            "C": "Carrying amount minus undiscounted cash flows",
-            "D": "Carrying amount minus salvage value"
+            "A": "Asset Group 1 only is impaired — carrying amount $320K exceeds undiscounted cash flows ($280K), so proceed to Step 2: impairment = $320K − $250K (fair value) = $70,000 loss. Asset Groups 2 and 3 pass Step 1, no impairment",
+            "B": "Asset Group 1: impaired ($320K − $250K = $70K). Asset Group 2: not impaired — undiscounted cash flows ($410K) exceed carrying amount ($400K), so Step 2 is not triggered. Asset Group 3: carrying amount ($180K) exceeds undiscounted cash flows ($150K), triggering Step 2 — impairment = $180K − $130K = $50K. Total impairment: $120,000",
+            "C": "All three groups are impaired because the fair value of each is below its carrying amount — the undiscounted cash flow test in Step 1 is interpretive only and does not determine whether impairment must be recorded",
+            "D": "Only Asset Group 1 is impaired ($70,000), but Asset Group 3's $50,000 difference should also be recognized in OCI (other comprehensive income) as an unrealized holding loss — impairment only applies when the carrying amount is at least 20% above undiscounted cash flows"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -1496,19 +1496,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "An impairment loss under ASC 360 is measured as:",
-        "ExplanationCorrect": "Impairment loss = carrying amount - fair value (after failing step 1 recoverability test).",
+        "Stem": "The controller of Meridian Manufacturing is analyzing three fixed asset groups for potential impairment at year-end under ASC 360. The asset data is summarized below: Asset Group 1 — carrying amount $320,000, undiscounted future cash flows $280,000, fair value $250,000. Asset Group 2 — carrying amount $400,000, undiscounted future cash flows $410,000, fair value $380,000. Asset Group 3 — carrying amount $180,000, undiscounted future cash flows $150,000, fair value $130,000. The controller must determine which asset groups are impaired and compute the total impairment loss to be recognized in the income statement.",
+        "ExplanationCorrect": "Under ASC 360-10-35-17, the impairment test proceeds in two steps. Step 1 (recoverability test): compare the asset group's carrying amount to its undiscounted future cash flows. If carrying amount exceeds undiscounted cash flows, the asset is not recoverable, triggering Step 2. Asset Group 1 fails Step 1 ($320,000 > $280,000). Asset Group 2 passes Step 1 ($400,000 < $410,000) — no impairment regardless of fair value. Asset Group 3 fails Step 1 ($180,000 > $150,000). Step 2 (measurement): impairment loss = carrying amount − fair value. Asset Group 1: $320,000 − $250,000 = $70,000. Asset Group 3: $180,000 − $130,000 = $50,000. Total impairment = $120,000. The two-step process is mandatory under ASC 360; assets that pass Step 1 are not impaired even if fair value is below carrying amount.",
         "QuestionID": "P1E-A-030",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Fair value minus cost to sell is the measurement for impairment under IFRS for some assets.",
+        "ExplanationWrongA": "Asset Group 3 fails Step 1 (carrying $180K > undiscounted $150K) and therefore must be tested at Step 2 — the $50K impairment on Group 3 was missed. The undiscounted cash flow test is mandatory and reveals Group 3 is not recoverable, requiring impairment measurement.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Carrying amount minus undiscounted cash flows is the recoverability test (step 1), not the loss measurement.",
-        "ExplanationWrongD": "Carrying amount minus salvage value describes depreciation, not impairment.",
+        "ExplanationWrongC": "Step 1 is a mandatory recoverability test, not interpretive — ASC 360-10-35-17 requires comparing carrying amount to undiscounted cash flows. Asset Group 2 passes Step 1 because its undiscounted cash flows ($410K) exceed carrying amount ($400K), meaning it is recoverable and NOT impaired regardless of fair value.",
+        "ExplanationWrongD": "The 20% threshold is fabricated — ASC 360 has no percentage-based materiality threshold for Step 1. Additionally, impairment losses under U.S. GAAP are recognized in earnings, not OCI; ASC 360 provides no basis for classifying impairment losses on fixed assets as other comprehensive income.",
         "question_state": "Certified",
         "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -1732,10 +1732,10 @@ const MCQ_BANK_E = [
         "MicroTopic": "Aging method",
         "CorrectChoice": "C",
         "Choices": {
-            "A": "A percentage of net income",
-            "B": "Historical cash flows",
-            "C": "Analysis of receivables by age category",
-            "D": "A percentage of sales"
+            "A": "$15,000 — applying a flat 1.5% default rate to the total $1,000,000 AR balance using the percentage-of-receivables approach, which averages risk across aging buckets",
+            "B": "$8,500 — applying rates only to buckets 0–30 days (0.5%) and 31–60 days (2.0%), treating all receivables over 60 days as fully reserved ($28,000 direct write-off) — the direct write-off of older receivables replaces the need for a CECL estimate on those buckets",
+            "C": "$19,250 — computing by aging bucket: 0–30 days ($400K × 0.5% = $2,000) + 31–60 days ($250K × 2.0% = $5,000) + 61–90 days ($150K × 5.0% = $7,500) + over 90 days ($100K gross − $4,750 prior write-off = $95,250 × 5.0% = $4,750). Total estimated credit loss = $19,250 under ASC 326-20",
+            "D": "$22,000 — applying a 2.0% rate to all buckets based on the trailing 12-month average default experience, regardless of aging distinctions — CECL uses lifetime expected losses, not bucket-specific historical rates"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -1748,19 +1748,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Bad debt expense under the aging method is based on:",
-        "ExplanationCorrect": "The aging method estimates uncollectible amounts based on the age of each receivable.",
+        "Stem": "Credit Manager Maria Chen of Harbor Medical Supplies is evaluating the company's allowance for credit losses at December 31 under ASC 326 (CECL). The aged accounts receivable schedule is: 0–30 days — $400,000 (historical default rate 0.5%), 31–60 days — $250,000 (historical default rate 2.0%), 61–90 days — $150,000 (historical default rate 5.0%), over 90 days — $100,000 gross, of which $4,750 has already been specifically written off during the year, leaving $95,250 net. Management has concluded that historical default rates, adjusted for current conditions and reasonable forecasts, are appropriate for the CECL estimate. Maria needs to compute the required ending allowance for credit losses.",
+        "ExplanationCorrect": "Under ASC 326-20 (CECL), the allowance for credit losses is estimated using a pool-based approach that segments receivables by shared risk characteristics — here, by aging bucket. Each bucket's balance is multiplied by its respective historical default rate, adjusted for current conditions and reasonable forecasts: 0–30 days: $400,000 × 0.5% = $2,000. 31–60 days: $250,000 × 2.0% = $5,000. 61–90 days: $150,000 × 5.0% = $7,500. Over 90 days: ($100,000 − $4,750 written off) = $95,250 net × 5.0% = $4,750. Total = $19,250. ASC 326 requires lifetime expected losses, captured by assigning progressively higher default rates to older buckets. Receivables already written off are derecognized and excluded from the CECL pool.",
         "QuestionID": "P1E-A-035",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Bad debt expense is not based on net income; it is based on the aging of specific receivables.",
-        "ExplanationWrongB": "Historical cash flows are part of the estimate but the aging method specifically categorizes by age.",
+        "ExplanationWrongA": "A flat rate across all aging categories ignores that older receivables carry significantly higher default risk — the aging method specifically addresses this by assigning increasing rates to older buckets. The CECL model under ASC 326 requires segmenting receivables by risk characteristics, which a single pooled rate fails to do.",
+        "ExplanationWrongB": "The direct write-off of older receivables is a separate accounting event that does not substitute for CECL estimation — ASC 326 requires lifetime expected credit loss estimation for all remaining receivables in the pool, even those in older buckets where partial write-offs have already occurred. The net receivable amount must still be evaluated for credit losses.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "Percentage of sales is a separate method; the aging method focuses on the ending AR balance.",
+        "ExplanationWrongD": "A single pooled rate does not reflect the aging method's fundamental approach — receivables in different aging categories have different historical default patterns that must be reflected in the CECL estimate. ASC 326-20-55-5 permits vintage and aging-based approaches because different risk characteristics require differentiated default rate application.",
         "question_state": "Certified",
         "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -2425,17 +2425,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "A",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "SectionName": "External Financial Reporting Decisions",
         "Topic": "E-A.049 Variable consideration",
         "UniqueConceptKey": "E-A-049-Variable-consideration",
         "MicroTopic": "Variable consideration",
         "CorrectChoice": "B",
         "Choices": {
-            "A": "Weighted average",
-            "B": "Expected value or most likely amount",
-            "C": "Minimum amount",
-            "D": "Maximum amount"
+            "A": "Use the expected value method because the $8M contract has multiple possible bonus outcomes — apply probability-weighting: 40% x $200K + 35% x $100K + 25% x $0 = $115K estimated bonus. This always provides the most accurate estimate",
+            "B": "Evaluate both methods: the expected value method produces $115K ($80K + $35K + $0) which better captures the range of outcomes since multiple possibilities exist. However, the constraint requires assessing whether a significant reversal is probable — if any tier is uncertain to be achieved, the estimate must be constrained. Recommend expected value = $115K, subject to constraint assessment",
+            "C": "Use the most likely amount of $200,000 because there is a discrete probability distribution with a single most likely outcome — expected value is only appropriate for large portfolios of similar contracts",
+            "D": "Recognize zero bonus revenue until the construction is complete, because all three outcomes represent variable consideration that cannot be reliably estimated before the performance conditions are objectively met"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -2448,19 +2448,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Variable consideration in ASC 606 is estimated using:",
-        "ExplanationCorrect": "Variable consideration uses either expected value or most likely amount.",
+        "Stem": "Revenue Controller Amara Osei of NorthStar Equipment is evaluating variable consideration for an $8,000,000 bridge construction contract. The contract includes a performance bonus contingent on achieving specified milestones: $200,000 if the project is completed within 24 months (40% probability based on similar projects), $100,000 if completed within 27 months (35% probability), and $0 if completion extends beyond 27 months (25% probability, reflecting recent weather-related delays across NorthStar's project portfolio). Amara must recommend the appropriate estimation method under ASC 606 and determine whether the resulting estimate must be constrained. Which recommendation should Amara present to the CFO?",
+        "ExplanationCorrect": "Under ASC 606-10-32-8, an entity estimates variable consideration using either the expected value method or the most likely amount method. The expected value method — probability-weighting the possible outcomes: (40% x $200,000) + (35% x $100,000) + (25% x $0) = $115,000 — is appropriate here because NorthStar has a contract with multiple possible bonus outcomes, and probability data from similar projects provides a reasonable basis. The expected value better captures the full range of possibilities than selecting a single most likely outcome. Critically, however, ASC 606-10-32-11 imposes a constraint: the estimate is included in the transaction price only to the extent it is probable that a significant reversal of cumulative revenue will not occur. Amara must evaluate whether the $115,000 estimate, or a portion of it, faces a significant reversal risk. Factors include: the 25% probability of receiving $0 (a complete reversal), the dependence of the bonus on external factors like weather that NorthStar cannot control, and the limited number of similar contracts in NorthStar's experience. If constraint assessment indicates significant reversal risk, Amara must reduce the estimate — potentially to a lower amount if a particular bonus tier is uncertain. The recommendation must present both the estimate and the constraint analysis for CFO review.",
         "QuestionID": "P1E-A-049",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Simple weighted average is not specified; the standard requires expected value or most likely amount.",
+        "ExplanationWrongA": "The expected value method is one of two acceptable methods under ASC 606-10-32-8, but it is not always the most accurate, nor is it applied in isolation. ASC 606-10-32-11 requires constraining the estimate to the amount for which a significant revenue reversal is not probable. Presenting the $115,000 estimate without constraint analysis is incomplete — the constraint could reduce the recognized amount substantially if the 25% probability of receiving $0 is deemed a significant reversal risk. Additionally, for contracts with only a few possible outcomes, the most likely amount may be equally or more decision-useful depending on the facts. The unqualified claim that expected value 'always' provides the most accurate estimate is contradicted by ASC 606's explicit provision of two equally acceptable methods.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "The minimum amount would understate revenue and is not the required approach.",
-        "ExplanationWrongD": "The maximum amount would overstate revenue and is not the required approach.",
+        "ExplanationWrongC": "ASC 606-10-32-8 permits either the expected value method or the most likely amount method — neither is restricted to specific contract types. While the most likely amount ($200,000 at 40%) would be an acceptable estimate if selected, it is not the only option. The standard does not limit expected value to 'large portfolios of similar contracts' — it states that expected value 'may be appropriate' when the entity has a large number of contracts, but it does not prohibit its use for single contracts. NorthStar's contract has three discrete probability-weighted outcomes with historical data, making expected value a reasonable and transparent method. The controller should present both methods and recommend expected value accompanied by constraint analysis, because it more completely represents the range of possible bonus outcomes.",
+        "ExplanationWrongD": "ASC 606-10-32-11 does not require deferring all variable consideration to contract completion. The standard requires entities to estimate variable consideration at contract inception and update the estimate at each reporting date. Recognizing zero bonus until completion would delay revenue that is reasonably estimable, understating the transaction price and performance in each interim period. While the constraint may reduce the estimate if a significant reversal is probable, it does not default to zero — the entity must evaluate the specific facts and determine the amount that can be included. For a construction company with historical milestone achievement data, some bonus revenue is typically estimable before completion. Defaulting to zero without constraint analysis is an overly conservative interpretation that ASC 606 does not support.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -2777,17 +2777,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "A",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Moderate",
         "SectionName": "External Financial Reporting Decisions",
         "Topic": "E-A.058 Restructuring liability",
         "UniqueConceptKey": "E-A-058-Restructuring-liability",
         "MicroTopic": "Restructuring liability",
         "CorrectChoice": "B",
         "Choices": {
-            "A": "The board approves",
-            "B": "The liability is incurred and can be reasonably estimated",
-            "C": "Employees are terminated",
-            "D": "Restructuring is announced"
+            "A": "Recognize the full $2.1M restructuring charge on the date the CEO approves the plan because the commitment has been made — ASC 420 requires recognition when management formally commits",
+            "B": "Recognize $1,200,000 for severance (liability recognized when employees are notified and the plan is communicated — ASC 420-10-25-4) + $380,000 for the lease termination penalty (recognized when the lease is terminated or the company ceases using the property) + $520,000 warehouse impairment (ASC 360, not ASC 420 — recognized when the carrying amount exceeds fair value). The severance is recognized upon communication to employees, not merely upon CEO approval",
+            "C": "Recognize only the severance ($1.2M) at the communication date — the lease termination penalty is recognized when the landlord agrees to terminate, and the warehouse write-down is deferred until the warehouse is actually sold",
+            "D": "Recognize all three components immediately because the CEO has approved the plan and the company has a present obligation — ASC 420 does not distinguish between communication date and commitment date for recognition purposes"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -2800,19 +2800,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Under U.S. GAAP, a restructuring liability is recognized when:",
-        "ExplanationCorrect": "Restructuring liabilities are recognized when incurred and reasonably estimable.",
+        "Stem": "The controller of Pacific Foods is analyzing the recognition and measurement of a CEO-approved restructuring plan announced internally on November 15. The plan includes: (1) severance for 45 production employees — total cost $1,200,000; employees were formally notified on December 1 with required communication documentation. (2) An equipment lease termination — an early termination penalty of $380,000 applies; the company ceased using the leased equipment on December 10. (3) A warehouse write-down — the carrying amount of $520,000 exceeds fair value of $390,000 based on a December 15 third-party appraisal. The controller must determine the correct recognition date and measurement for each component under applicable U.S. GAAP standards.",
+        "ExplanationCorrect": "The three components of Pacific Foods' restructuring plan are governed by different accounting standards with distinct recognition triggers. Severance ($1,200,000): under ASC 420-10-25-4, a liability for one-time termination benefits is recognized when the plan meets all required criteria AND the arrangement has been communicated to affected employees — December 1, not the November 15 CEO approval date. Lease termination penalty ($380,000): under ASC 420-10-25-13, a liability for costs to terminate an operating lease is recognized when the entity ceases using the leased property — December 10, when Pacific Foods stopped using the equipment. Warehouse write-down ($520,000): this is an impairment of a long-lived asset governed by ASC 360, not ASC 420 — the $130,000 impairment loss ($520K − $390K) is recognized when the carrying amount exceeds fair value.",
         "QuestionID": "P1E-A-058",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Board approval is a necessary step but not sufficient; the liability must be incurred and reasonably estimable under U.S. GAAP.",
-        "ExplanationWrongC": "Employee termination is one event in a restructuring, but recognition requires the liability to meet the incurred-and-estimable criteria.",
-        "ExplanationWrongD": "Public announcement alone does not create a recognizable liability; the liability must be incurred and reliably measurable.",
+        "ExplanationWrongA": "CEO approval alone does not trigger recognition under ASC 420 — the liability must be incurred, which for severance requires communication to affected employees (ASC 420-10-25-4). Additionally, the warehouse write-down falls under ASC 360 (impairment of long-lived assets), not ASC 420, and is recognized based on fair value measurements rather than plan approval.",
+        "ExplanationWrongC": "The lease termination penalty is recognized when the company ceases using the leased property, not when the landlord agrees — the obligation arises from the entity's action (ceasing use), not the counterparty's consent. ASC 420-10-25-13 establishes the cease-use date as the recognition event for lease termination costs.",
+        "ExplanationWrongD": "The three components follow different recognition standards — severance (ASC 420, upon communication), lease termination (ASC 420, upon cease-use), and warehouse impairment (ASC 360, upon impairment identification). They cannot all be recognized on a single date. ASC 420 explicitly establishes different recognition triggers depending on the nature of the restructuring cost.",
         "ExplanationWrongB": "",
         "question_state": "Certified",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -3034,10 +3034,10 @@ const MCQ_BANK_E = [
         "MicroTopic": "Inventory method change",
         "CorrectChoice": "B",
         "Choices": {
-            "A": "Disclosed only",
-            "B": "Retrospective adjustment",
-            "C": "Not allowed",
-            "D": "Prospective only"
+            "A": "Apply the change prospectively from the current year forward because inventory costing is an estimate — the cumulative effect of the change ($180,000 pre-tax increase in beginning inventory) is recognized through current-year cost of goods sold, consistent with ASC 250's treatment of changes in accounting estimate",
+            "B": "Apply the change retrospectively — restate beginning retained earnings by $142,200 (after-tax, $180,000 × (1 − 21%)) to reflect the cumulative effect of the inventory method change on all prior periods presented. Adjust the deferred tax liability by $37,800 (the tax effect of the $180,000 pretax adjustment). ASC 250-10-45-5 requires retrospective application for changes in accounting principle unless impracticable, and a change in inventory costing method is a change in accounting principle",
+            "C": "Apply the change retrospectively but present the cumulative effect as a component of current-period net income (below income from continuing operations) rather than as a retained earnings adjustment — this preserves comparability of the current-year income statement while still reflecting the prior-period effect",
+            "D": "Recognize the $180,000 pretax difference as a cumulative-effect adjustment to cost of goods sold in the current year and disclose the pro forma effect on prior years in the notes — this combined approach satisfies both ASC 250 and the SEC's preference for income statement presentation of inventory changes"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -3050,19 +3050,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Under U.S. GAAP, a change from FIFO to weighted average is:",
-        "ExplanationCorrect": "Changes in inventory costing methods are applied retrospectively.",
+        "Stem": "The controller of Atlas Manufacturing is evaluating the financial statement impact of changing the company's inventory costing method from the weighted-average method to FIFO, effective January 1 of the current year. The cumulative pre-tax effect of the change is an $180,000 increase in the beginning inventory balance. The company's effective tax rate is 21% and it presents two years of comparative financial statements. The controller must determine how to apply this change under ASC 250, including the retained earnings adjustment, tax effect, and presentation in the comparative financial statements.",
+        "ExplanationCorrect": "Under ASC 250-10-45-5, a change in accounting principle — including a change in inventory costing method from weighted-average to FIFO — requires retrospective application. The beginning retained earnings for the earliest period presented must be adjusted by the cumulative after-tax effect: $180,000 × (1 − 0.21) = $142,200. The deferred tax liability increases by $37,800 ($180,000 × 21%), reflecting the additional tax that would have been due under FIFO in prior periods. All prior-period comparative financial statements are restated as if FIFO had always been applied. ASC 250-10-50-1 also requires disclosure of the nature and reason for the change and the effect on income from continuing operations and net income for each prior period presented.",
         "QuestionID": "P1E-A-063",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Disclosure alone is insufficient; a change in inventory costing method requires retrospective application to prior-period financial statements.",
-        "ExplanationWrongC": "Changes in inventory costing methods are permitted under U.S. GAAP when the new method is preferable and justified.",
-        "ExplanationWrongD": "Prospective application is used for changes in accounting estimates, not for changes in accounting principle such as inventory costing methods.",
+        "ExplanationWrongA": "ASC 250-10-45-9 specifies that a change in inventory costing method is a change in accounting principle — not a change in estimate. Changes in principle require retrospective application by adjusting opening retained earnings, not prospective treatment through current-year income. An inventory costing change is specifically classified as a principle change under GAAP.",
+        "ExplanationWrongC": "ASC 250-10-45-5 requires retrospective application by adjusting the opening balance of retained earnings for the earliest period presented — the cumulative effect is not recognized in current-period net income (even below income from continuing operations) for changes in accounting principle. The cumulative-effect-in-income approach was eliminated under ASC 250.",
+        "ExplanationWrongD": "The cumulative-effect-in-income approach was eliminated for changes in accounting principle under ASC 250 — retrospective application to prior-period financial statements is required. A combined presentation that mixes income statement recognition with footnote disclosure is not compliant with current GAAP and would cause the comparative statements to be prepared under inconsistent methods.",
         "ExplanationWrongB": "",
         "question_state": "Certified",
         "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -3234,10 +3234,10 @@ const MCQ_BANK_E = [
         "MicroTopic": "Bill-and-hold",
         "CorrectChoice": "A",
         "Choices": {
-            "A": "A substantive reason for holding",
-            "B": "Written contract",
-            "C": "Payment in full",
-            "D": "Physical delivery"
+            "A": "Customer X qualifies for bill-and-hold revenue recognition because a substantive business reason exists for the delayed delivery (customer's warehouse undergoing renovation) and the inventory is segregated and ready for transfer. Customer Y does not qualify — lack of warehouse space is the customer's operational constraint, not a substantive reason, and the goods must also be segregated. Customer Z also does not qualify — the product is not yet complete and therefore cannot be identified as belonging to the customer",
+            "B": "All three customers qualify for bill-and-hold treatment because each has a written contract and has requested delayed delivery — ASC 606-10-55-83 only requires a customer request for delivery delay, regardless of the reason",
+            "C": "Customer X qualifies. Customer Y qualifies — the customer's warehouse constraint is a legitimate business limitation that constitutes a substantive reason. Customer Z does not qualify because the product is incomplete",
+            "D": "Customers X and Z qualify — X has a substantive reason and segregated goods, and Z's production delay with a modified schedule represents a legitimate bill-and-hold arrangement. Customer Y is disqualified because the customer's space problem is not the seller's responsibility"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -3250,19 +3250,19 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Bill-and-hold arrangements require:",
-        "ExplanationCorrect": "Revenue can be recognized in bill-and-hold if the buyer has a substantive reason.",
+        "Stem": "A revenue recognition specialist at Atlantic Logistics is analyzing three customer arrangements at December 31 to determine whether bill-and-hold revenue recognition is appropriate under ASC 606. Customer X: delivery delayed because the customer's warehouse is undergoing a six-month renovation — the goods are manufactured, segregated in Atlantic's warehouse, and ready for transfer. Customer Y: delivery delayed because the customer's warehouse lacks space due to a temporary inventory surge — the goods are ready but commingled with other inventory in Atlantic's warehouse. Customer Z: delivery delayed because the customer requested a modified production schedule — the product is not yet manufactured and will not be complete until February. Which customers, if any, qualify for bill-and-hold revenue recognition in the current period?",
+        "ExplanationCorrect": "Under ASC 606-10-55-83 through 55-85, a bill-and-hold arrangement permits revenue recognition before physical delivery only when all specific criteria are met. The criteria include: (1) the reason for the bill-and-hold arrangement must be substantive (the customer requested it for a valid business purpose); (2) the product must be separately identified as belonging to the customer; (3) the product must be currently ready for physical transfer; and (4) the seller cannot have the ability to use or direct the product to another customer. Customer X satisfies all four criteria — the warehouse renovation is a substantive business reason, the goods are segregated, and they are ready for transfer. Customer Y fails criterion (1) — internal space constraints are an operational logistics issue, not a substantive reason, and the goods are commingled (failing criterion 2). Customer Z fails criterion (3) — the product is not yet manufactured and is not ready for physical transfer.",
         "QuestionID": "P1E-A-067",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongB": "A written contract supports the arrangement but the primary criterion for revenue recognition in bill-and-hold is a substantive reason for holding.",
-        "ExplanationWrongC": "Payment terms are negotiated between buyer and seller; the key requirement is a substantive business reason for the buyer to request delayed delivery.",
-        "ExplanationWrongD": "In a bill-and-hold arrangement, physical delivery has not occurred at the buyer's request; revenue can still be recognized when the buyer has a substantive reason to hold.",
+        "ExplanationWrongB": "ASC 606-10-55-85 requires that the reason for the bill-and-hold arrangement be substantive — a customer's lack of warehouse space is an operational constraint but not typically considered a substantive reason for the seller to retain the goods. Additionally, the goods must be separately identified as belonging to the customer; Customer Y's commingled inventory and Customer Z's incomplete product both fail the ASC 606 criteria.",
+        "ExplanationWrongC": "Customer Y's warehouse space limitation is not a substantive business reason — it is a customer logistics issue. ASC 606 requires the request be substantive (e.g., the buyer's production schedule constraints, lack of available capacity specifically attributable to that buyer). Temporary lack of warehouse space due to an inventory surge does not rise to the substantive threshold required by the standard.",
+        "ExplanationWrongD": "Customer Z's product is not yet complete — a bill-and-hold arrangement requires the goods to be ready for physical transfer to the customer (ASC 606-10-55-83(c)). An incomplete product cannot be identified as the customer's and cannot be ready for transfer. The production delay alone does not satisfy bill-and-hold criteria when the goods do not yet exist.",
         "ExplanationWrongA": "",
         "question_state": "Certified",
         "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -5919,7 +5919,7 @@ const MCQ_BANK_E = [
         "DifficultyScore": 4,
         "CognitiveLevel": "Apply"
     },
-{
+    {
         "StudyLinks": [
             {
                 "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
@@ -7179,56 +7179,56 @@ const MCQ_BANK_E = [
         "certification_batch": "S71",
         "CognitiveLevel": "Apply"
     },
-{
-	"StudyLinks": [
-		{
-		    "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
-		    "label": "IMA CMA Learning Outcome Statements, Part 1 Section C"
-		},
-		{
-		    "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
-		    "label": "OpenStax Accounting"
-		}
-	],
-	"SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
-	"Section": "C",
-	"Difficulty": "Difficult",
-	"SectionName": "Performance Management",
-	"Topic": "E-C.004 Labor rate variance",
-	"UniqueConceptKey": "E-C-004-Labor-rate-variance",
-	"MicroTopic": "Labor rate variance",
-	"CorrectChoice": "C",
-	"Choices": {
-		"A": "The Assembly Department's $7,500 unfavorable rate variance was caused by overtime premiums. Since the department exceeded its budgeted 2,000 hours by 500 hours, all excess hours were likely paid at time-and-a-half. The Finishing Department's $1,500 unfavorable variance is driven by skill-mix changes: the department replaced two senior welders ($28/hr) with three junior welders ($22/hr), lowering the average rate but increasing total hours.",
-		"B": "Both variances are driven by identical root causes. The total labor rate variance of $9,000U represents a systemic wage inflation problem across the plant, requiring renegotiation of the union contract to bring standard rates in line with market wages. Neither overtime nor skill-mix changes materially explain the variance because labor rates are set by the collective bargaining agreement.",
-		"C": "The Assembly Department's $7,500 unfavorable rate variance is primarily driven by a skill-mix upgrade: the department substituted senior machinists earning $28 per hour for standard-rate operators at $22 per hour on a complex custom order, increasing the blended actual rate to $25 per hour. The Finishing Department's $1,500 unfavorable variance is driven by overtime premiums: actual hours of 1,050 exceeded budgeted 1,000 hours, with the 50 excess hours paid at time-and-a-half ($33/hour vs. standard $22/hour).",
-		"D": "The total labor rate variance of $9,000U is not analytically meaningful because the rate and efficiency variances are interdependent. The Assembly Department's $7,500U rate variance is partially offset by a favorable efficiency variance from using higher-skilled workers who completed jobs faster, and the Finishing Department's $1,500U rate variance is caused by idle time, not overtime or skill-mix changes."
-	},
-	"CalculationItem": false,
-	"Part": 1,
-	"ItemType": "MCQ",
-	"LOSTag": "Part 1 Section C.1",
-	"VerifiedChecks": [
-		"Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
-		"Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
-		"Original practice item with unique micro-topic and stem",
-		"Answer key distribution balanced across A/B/C/D",
-		"Distractors written as plausible CMA-style traps"
-	],
-	"Stem": "Harbor Industrial's plant controller Priya Nair is analyzing November labor variances across two departments. Assembly Department: standard rate $22/hr, standard hours 2,000 for actual output. Actual results: 2,500 hours at an average actual rate of $25/hr (blended). Labor rate variance = ($25 − $22) × 2,500 = $7,500U. Finishing Department: standard rate $22/hr, standard hours 1,000 for actual output. Actual results: 1,050 hours at an average actual rate of $23.43/hr. Labor rate variance = ($23.43 − $22) × 1,050 ≈ $1,500U. Nair learns that Assembly took on a complex custom order requiring senior machinists ($28/hr) instead of standard-rate operators, while Finishing ran 50 overtime hours at time-and-a-half ($33/hr) to meet a shipment deadline. Which analysis correctly identifies the primary driver of each department's rate variance?",
-	"ExplanationCorrect": "The rate variance formula (AR − SR) × AH isolates the wage rate effect, but the analytical challenge is attributing the blended rate difference to its operational cause. Assembly: standard rate $22/hr, actual blended $25/hr. The $3/hr increase is explained by substituting $28/hr senior machinists for $22/hr operators — a skill-mix upgrade, not overtime. If all 2,500 hours were at $22/hr, cost = $55,000. Actual cost = 2,500 × $25 = $62,500; variance = $7,500U. This is consistent with ~63% of hours ($7,500 ÷ ($6/hr premium × 2,500) → the $3 blended premium reflects partial substitution). Finishing: actual 1,050 hours (50 overtime). Overtime premium = 50 hrs × ($33 − $22) = 50 × $11 = $550. The remaining $950 variance ($1,500 − $550) may reflect minor wage drift. The key analytical distinction: Assembly's variance is structural (skill-mix change — may recur if custom orders continue), while Finishing's is situational (overtime — one-time shipment deadline). Effective variance analysis requires decomposing the blended rate into its component drivers rather than treating the total $9,000U as a single problem.",
-	"QuestionID": "P1E-C-004",
-	"Part1OnlyFlag": true,
-	"ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
-	"ItemStyle": "single-select",
-	"ExplanationWrongC": "",
-	"ExplanationWrongA": "The Assembly Department's $7,500U variance is driven by a $3/hr blended rate increase on 2,500 hours. If caused by overtime at time-and-a-half, the standard $22/hr would become $33/hr — a $11/hr premium, not $3/hr. The $3/hr blended rate increase is consistent with partially substituting $28/hr senior machinists for $22/hr operators, where the $6/hr premium applied to a portion of hours produces a $3/hr blended average. A 500-hour excess over standard does not automatically mean overtime — the 2,500 actual hours may simply reflect more total hours worked at straight time. The Finishing Department's overtime attribution is directionally correct in this choice, but the Assembly diagnosis is reversed.",
-	"ExplanationWrongB": "Treating the $9,000U as a systemic wage inflation problem ignores the department-level operational data. Assembly's $25/hr average rate exceeds standard by $3/hr — far above any plausible across-the-board wage increase for a single month. Finishing's $23.43/hr average is only $1.43/hr above standard, inconsistent with systemic inflation that would affect both departments proportionally. The variance analyst's role is to decompose the total into its component drivers, not to aggregate them into a single explanation. Furthermore, attributing the variance to the union contract ignores the specific operational events (custom order, overtime deadline) that Nair's investigation already identified.",
-	"ExplanationWrongD": "The rate and efficiency variances are mathematically independent under the standard cost framework: rate variance uses actual hours, efficiency variance uses standard rate — the two variances do not offset or interact in the way described. While replacing standard operators with senior machinists could theoretically improve efficiency (fewer hours for the same output), the rate variance is computed on actual hours regardless. Assembly's 2,500 actual hours exceeded the 2,000 standard hours — this is an unfavorable efficiency variance, not a favorable one. If anything, the senior machinists worked more hours, not fewer. The claim of a favorable efficiency offset is contradicted by the data. Idle time in Finishing would appear as an efficiency variance, not a rate variance.",
-	"question_state": "Certified",
-	"DifficultyScore": 4,
-	"CognitiveLevel": "Analyze"
-},
+    {
+        "StudyLinks": [
+            {
+                "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+                "label": "IMA CMA Learning Outcome Statements, Part 1 Section C"
+            },
+            {
+                "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+                "label": "OpenStax Accounting"
+            }
+        ],
+        "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+        "Section": "C",
+        "Difficulty": "Difficult",
+        "SectionName": "Performance Management",
+        "Topic": "E-C.004 Labor rate variance",
+        "UniqueConceptKey": "E-C-004-Labor-rate-variance",
+        "MicroTopic": "Labor rate variance",
+        "CorrectChoice": "C",
+        "Choices": {
+            "A": "The Assembly Department's $7,500 unfavorable rate variance was caused by overtime premiums. Since the department exceeded its budgeted 2,000 hours by 500 hours, all excess hours were likely paid at time-and-a-half. The Finishing Department's $1,500 unfavorable variance is driven by skill-mix changes: the department replaced two senior welders ($28/hr) with three junior welders ($22/hr), lowering the average rate but increasing total hours.",
+            "B": "Both variances are driven by identical root causes. The total labor rate variance of $9,000U represents a systemic wage inflation problem across the plant, requiring renegotiation of the union contract to bring standard rates in line with market wages. Neither overtime nor skill-mix changes materially explain the variance because labor rates are set by the collective bargaining agreement.",
+            "C": "The Assembly Department's $7,500 unfavorable rate variance is primarily driven by a skill-mix upgrade: the department substituted senior machinists earning $28 per hour for standard-rate operators at $22 per hour on a complex custom order, increasing the blended actual rate to $25 per hour. The Finishing Department's $1,500 unfavorable variance is driven by overtime premiums: actual hours of 1,050 exceeded budgeted 1,000 hours, with the 50 excess hours paid at time-and-a-half ($33/hour vs. standard $22/hour).",
+            "D": "The total labor rate variance of $9,000U is not analytically meaningful because the rate and efficiency variances are interdependent. The Assembly Department's $7,500U rate variance is partially offset by a favorable efficiency variance from using higher-skilled workers who completed jobs faster, and the Finishing Department's $1,500U rate variance is caused by idle time, not overtime or skill-mix changes."
+        },
+        "CalculationItem": false,
+        "Part": 1,
+        "ItemType": "MCQ",
+        "LOSTag": "Part 1 Section C.1",
+        "VerifiedChecks": [
+            "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+            "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+            "Original practice item with unique micro-topic and stem",
+            "Answer key distribution balanced across A/B/C/D",
+            "Distractors written as plausible CMA-style traps"
+        ],
+        "Stem": "Harbor Industrial's plant controller Priya Nair is analyzing November labor variances across two departments. Assembly Department: standard rate $22/hr, standard hours 2,000 for actual output. Actual results: 2,500 hours at an average actual rate of $25/hr (blended). Labor rate variance = ($25 − $22) × 2,500 = $7,500U. Finishing Department: standard rate $22/hr, standard hours 1,000 for actual output. Actual results: 1,050 hours at an average actual rate of $23.43/hr. Labor rate variance = ($23.43 − $22) × 1,050 ≈ $1,500U. Nair learns that Assembly took on a complex custom order requiring senior machinists ($28/hr) instead of standard-rate operators, while Finishing ran 50 overtime hours at time-and-a-half ($33/hr) to meet a shipment deadline. Which analysis correctly identifies the primary driver of each department's rate variance?",
+        "ExplanationCorrect": "The rate variance formula (AR − SR) × AH isolates the wage rate effect, but the analytical challenge is attributing the blended rate difference to its operational cause. Assembly: standard rate $22/hr, actual blended $25/hr. The $3/hr increase is explained by substituting $28/hr senior machinists for $22/hr operators — a skill-mix upgrade, not overtime. If all 2,500 hours were at $22/hr, cost = $55,000. Actual cost = 2,500 × $25 = $62,500; variance = $7,500U. This is consistent with ~63% of hours ($7,500 ÷ ($6/hr premium × 2,500) → the $3 blended premium reflects partial substitution). Finishing: actual 1,050 hours (50 overtime). Overtime premium = 50 hrs × ($33 − $22) = 50 × $11 = $550. The remaining $950 variance ($1,500 − $550) may reflect minor wage drift. The key analytical distinction: Assembly's variance is structural (skill-mix change — may recur if custom orders continue), while Finishing's is situational (overtime — one-time shipment deadline). Effective variance analysis requires decomposing the blended rate into its component drivers rather than treating the total $9,000U as a single problem.",
+        "QuestionID": "P1E-C-004",
+        "Part1OnlyFlag": true,
+        "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+        "ItemStyle": "single-select",
+        "ExplanationWrongC": "",
+        "ExplanationWrongA": "The Assembly Department's $7,500U variance is driven by a $3/hr blended rate increase on 2,500 hours. If caused by overtime at time-and-a-half, the standard $22/hr would become $33/hr — a $11/hr premium, not $3/hr. The $3/hr blended rate increase is consistent with partially substituting $28/hr senior machinists for $22/hr operators, where the $6/hr premium applied to a portion of hours produces a $3/hr blended average. A 500-hour excess over standard does not automatically mean overtime — the 2,500 actual hours may simply reflect more total hours worked at straight time. The Finishing Department's overtime attribution is directionally correct in this choice, but the Assembly diagnosis is reversed.",
+        "ExplanationWrongB": "Treating the $9,000U as a systemic wage inflation problem ignores the department-level operational data. Assembly's $25/hr average rate exceeds standard by $3/hr — far above any plausible across-the-board wage increase for a single month. Finishing's $23.43/hr average is only $1.43/hr above standard, inconsistent with systemic inflation that would affect both departments proportionally. The variance analyst's role is to decompose the total into its component drivers, not to aggregate them into a single explanation. Furthermore, attributing the variance to the union contract ignores the specific operational events (custom order, overtime deadline) that Nair's investigation already identified.",
+        "ExplanationWrongD": "The rate and efficiency variances are mathematically independent under the standard cost framework: rate variance uses actual hours, efficiency variance uses standard rate — the two variances do not offset or interact in the way described. While replacing standard operators with senior machinists could theoretically improve efficiency (fewer hours for the same output), the rate variance is computed on actual hours regardless. Assembly's 2,500 actual hours exceeded the 2,000 standard hours — this is an unfavorable efficiency variance, not a favorable one. If anything, the senior machinists worked more hours, not fewer. The claim of a favorable efficiency offset is contradicted by the data. Idle time in Finishing would appear as an efficiency variance, not a rate variance.",
+        "question_state": "Certified",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze"
+    },
     {
         "StudyLinks": [
             {
@@ -7541,7 +7541,7 @@ const MCQ_BANK_E = [
         "certification_batch": "S71",
         "CognitiveLevel": "Understand"
     },
-{
+    {
         "StudyLinks": [
             {
                 "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
@@ -7735,16 +7735,14 @@ const MCQ_BANK_E = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongC": "",
+        "ExplanationWrongC": "Delaying replacement until year 3 to reduce the book loss from $180,000 to $60,000 means continuing to operate an asset below cost of capital for three additional years, destroying value each year. The book loss at any point represents economic depreciation that has already occurred — it is a sunk cost irrelevant to the replacement decision. The relevant comparison is between economic returns (8% vs 14%+), not book losses of different sizes. A candidate selecting this option applies a materiality framework to a sunk cost.",
         "question_state": "Certified",
-        "DifficultyScore": 1,
+        "DifficultyScore": 4,
         "ExplanationWrongA": "Replacing the equipment immediately is the correct action, but the rationale citing the $180,000 book loss as a tax benefit is secondary. The primary rationale is economic: the existing asset earns 8% while the company requires 11.5%, destroying shareholder value. The loss on disposal is deductible and provides a cash benefit, but the decision to replace should be driven by the ROI comparison — 8% < 11.5% means value destruction — not by the size of the accounting write-off. A candidate selecting this option makes the right decision for the wrong reason, conflating tax strategy with capital budgeting.",
         "ExplanationWrongB": "Retaining the equipment would improve accounting ROI as the NBV denominator declines — by year 5, NBV = $400,000 and ROI = 16%. But this improvement is purely a depreciation artifact, not genuine performance improvement. The asset's cash generation is unchanged; only the accounting denominator shrinks. The behavioral incentive (manager evaluated on ROI) conflicts with economic reality (value destruction below cost of capital). A candidate selecting this option confuses an improving accounting metric with improving economic performance.",
-        "ExplanationWrongC": "Delaying replacement until year 3 to reduce the book loss from $180,000 to $60,000 means continuing to operate an asset below cost of capital for three additional years, destroying value each year. The book loss at any point represents economic depreciation that has already occurred — it is a sunk cost irrelevant to the replacement decision. The relevant comparison is between economic returns (8% vs 14%+), not book losses of different sizes. A candidate selecting this option applies a materiality framework to a sunk cost.",
         "ExplanationWrongD": "",
         "certification_date": "2026-07-24",
         "certification_batch": "S71",
-        "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
     {
@@ -11030,10 +11028,10 @@ const MCQ_BANK_E = [
         "MicroTopic": "POHR allocation base selection labor vs automation",
         "CorrectChoice": "C",
         "Choices": {
-            "A": "Retain direct labor hours as the allocation base \u2014 DLH is the simplest and most widely understood method, consistent with the existing cost system design. Allocating the $2,600,000 of overhead across 130,000 total DLH yields a plant-wide rate of $20 per DLH. This approach preserves comparability with prior periods and avoids the implementation complexity and employee retraining costs associated with changing allocation bases.",
-            "B": "Adopt machine hours as the allocation base \u2014 machine hours are more relevant for the Machining department where most overhead costs relate to equipment (depreciation, maintenance, utilities), and less distortion-prone for Assembly where overhead ties to labor activity. The plant-wide rate of $173.33 per machine hour ($2,600,000 / 15,000 MH) correctly reflects the capital-intensive nature of modern manufacturing.",
-            "C": "Adopt departmental rates with separate allocation bases \u2014 Machining overhead of $1,600,000 driven by machine usage at $266.67 per machine hour, and Assembly overhead of $1,000,000 driven by direct labor at $12.50 per DLH. Departmental rates capture the fundamentally different cost structures of each department: Machining is capital-intensive (overhead driven by equipment hours), while Assembly is labor-intensive (overhead driven by direct labor activity). A single plant-wide rate would distort product costs by averaging together two departments with materially different cost drivers.",
-            "D": "Implement a full activity-based costing system with four cost pools (machining, setup, quality inspection, and material handling) rather than using any single-volume allocation base \u2014 even departmental rates oversimplify the cost structure because multiple activities drive overhead within each department, and only ABC can properly assign costs based on actual resource consumption."
+            "A": "Retain direct labor hours as the allocation base — DLH is the simplest and most widely understood method, consistent with the existing cost system design. Allocating the $2,600,000 of overhead across 130,000 total DLH yields a plant-wide rate of $20 per DLH. This approach preserves comparability with prior periods and avoids the implementation complexity and employee retraining costs associated with changing allocation bases.",
+            "B": "Adopt machine hours as the allocation base — machine hours are more relevant for the Machining department where most overhead costs relate to equipment (depreciation, maintenance, utilities), and less distortion-prone for Assembly where overhead ties to labor activity. The plant-wide rate of $173.33 per machine hour ($2,600,000 / 15,000 MH) correctly reflects the capital-intensive nature of modern manufacturing.",
+            "C": "Adopt departmental rates with separate allocation bases — Machining overhead of $1,600,000 driven by machine usage at $266.67 per machine hour, and Assembly overhead of $1,000,000 driven by direct labor at $12.50 per DLH. Departmental rates capture the fundamentally different cost structures of each department: Machining is capital-intensive (overhead driven by equipment hours), while Assembly is labor-intensive (overhead driven by direct labor activity). A single plant-wide rate would distort product costs by averaging together two departments with materially different cost drivers.",
+            "D": "Implement a full activity-based costing system with four cost pools (machining, setup, quality inspection, and material handling) rather than using any single-volume allocation base — even departmental rates oversimplify the cost structure because multiple activities drive overhead within each department, and only ABC can properly assign costs based on actual resource consumption."
         },
         "CalculationItem": false,
         "Part": 1,
@@ -11047,15 +11045,15 @@ const MCQ_BANK_E = [
             "Distractors written as plausible CMA-style traps"
         ],
         "Stem": "Harbor Tool & Die's cost accountant Lena Park is reviewing the plant's overhead allocation method ahead of a major capital investment in CNC automation. The plant currently applies a single plant-wide overhead rate based on direct labor hours (estimated $2,600,000 total overhead / 130,000 DLH = $20 per DLH). The plant has two departments with fundamentally different cost structures: Machining (estimated overhead $1,600,000, estimated 6,000 machine hours, 50,000 DLH) is capital-intensive with most overhead tied to machine depreciation, power, and maintenance. Assembly (estimated overhead $1,000,000, estimated 9,000 machine hours, 80,000 DLH) is labor-intensive with overhead driven by supervision, material handling, and indirect labor. After the automation investment, Machining's machine-hour intensity will increase 40% while DLH will decline 25%. Park must recommend whether the allocation basis should be updated before the new equipment goes live to avoid systematic product-cost distortion.",
-        "ExplanationCorrect": "Park should recommend departmental rates because the two departments have meaningfully different cost structures that a single plant-wide rate obscures. Under a single plant-wide DLH rate, every labor hour carries $20 of overhead regardless of whether it occurs in the capital-intensive Machining department (where the true overhead cost per DLH is $1,600,000 / 50,000 = $32.00) or the labor-intensive Assembly department ($1,000,000 / 80,000 = $12.50). Products consuming Machining hours are systematically undercosted by $12.00 per DLH, while products consuming Assembly hours are overcosted by $7.50 per DLH. After automation, the distortion worsens: Machining DLH drops to ~37,500, pushing its departmental rate to ~$42.67 per DLH if DLH remains the base. Using machine hours for Machining ($1,600,000 / 6,000 = $266.67 per MH) and DLH for Assembly ($12.50 per DLH) captures the actual cost drivers of each department. Departmental rates represent the right balance between accuracy and implementation complexity \u2014 they address the primary distortion without requiring the extensive data collection and system redesign of full ABC.",
+        "ExplanationCorrect": "Park should recommend departmental rates because the two departments have meaningfully different cost structures that a single plant-wide rate obscures. Under a single plant-wide DLH rate, every labor hour carries $20 of overhead regardless of whether it occurs in the capital-intensive Machining department (where the true overhead cost per DLH is $1,600,000 / 50,000 = $32.00) or the labor-intensive Assembly department ($1,000,000 / 80,000 = $12.50). Products consuming Machining hours are systematically undercosted by $12.00 per DLH, while products consuming Assembly hours are overcosted by $7.50 per DLH. After automation, the distortion worsens: Machining DLH drops to ~37,500, pushing its departmental rate to ~$42.67 per DLH if DLH remains the base. Using machine hours for Machining ($1,600,000 / 6,000 = $266.67 per MH) and DLH for Assembly ($12.50 per DLH) captures the actual cost drivers of each department. Departmental rates represent the right balance between accuracy and implementation complexity — they address the primary distortion without requiring the extensive data collection and system redesign of full ABC.",
         "QuestionID": "P1E-D-034",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Retaining a single plant-wide DLH rate when departments have fundamentally different cost structures \u2014 one capital-intensive, one labor-intensive \u2014 systematically undercosts products consuming Machining resources and overcosts Assembly-intensive products. The $20 plant-wide rate averages together Machining's true $32.00 per DLH and Assembly's $12.50 per DLH, and the distortion compounds after the automation investment reduces Machining DLH by 25% while increasing its overhead intensity. Comparability with prior periods is not a sufficient justification when the cost structure has materially changed.",
+        "ExplanationWrongA": "Retaining a single plant-wide DLH rate when departments have fundamentally different cost structures — one capital-intensive, one labor-intensive — systematically undercosts products consuming Machining resources and overcosts Assembly-intensive products. The $20 plant-wide rate averages together Machining's true $32.00 per DLH and Assembly's $12.50 per DLH, and the distortion compounds after the automation investment reduces Machining DLH by 25% while increasing its overhead intensity. Comparability with prior periods is not a sufficient justification when the cost structure has materially changed.",
         "ExplanationWrongB": "A single plant-wide machine-hour rate merely substitutes one distortion for another. While machine hours better reflect Machining's cost drivers, they poorly represent Assembly, where overhead is driven by direct labor activity (supervision, material handling) rather than machine time. Products using Assembly labor but few machine hours would be severely undercosted. The solution to one-dimensional cost distortion is not a different one-dimensional metric but rather a two-dimensional approach that matches the allocation base to each department's actual cost driver.",
         "ExplanationWrongC": "",
-        "ExplanationWrongD": "Full ABC would produce the most accurate product costs but introduces implementation complexity, data collection costs, and system redesign that may not be justified at this stage. The primary distortion in Harbor's current system arises from a single plant-wide rate applied across departments with materially different cost structures \u2014 a problem that departmental rates solve directly. Full ABC is the ideal long-term target, but departmental rates represent the appropriate and cost-effective next step. Implementing ABC prematurely, before departmental rates have been adopted, would overengineer the solution at a cost that may exceed the benefit of the additional accuracy.",
+        "ExplanationWrongD": "Full ABC would produce the most accurate product costs but introduces implementation complexity, data collection costs, and system redesign that may not be justified at this stage. The primary distortion in Harbor's current system arises from a single plant-wide rate applied across departments with materially different cost structures — a problem that departmental rates solve directly. Full ABC is the ideal long-term target, but departmental rates represent the appropriate and cost-effective next step. Implementing ABC prematurely, before departmental rates have been adopted, would overengineer the solution at a cost that may exceed the benefit of the additional accuracy.",
         "question_state": "Certified",
         "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
@@ -12723,17 +12721,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "F",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Moderate",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.001 Descriptive analytics",
-        "UniqueConceptKey": "E-F-001-Descriptive-analytics",
-        "MicroTopic": "Descriptive analytics",
-        "CorrectChoice": "D",
+        "Topic": "E-F.001 Descriptive analytics dashboard analysis",
+        "UniqueConceptKey": "E-F-001-Descriptive-analytics-dashboard-analysis",
+        "MicroTopic": "Descriptive analytics dashboard analysis",
+        "CorrectChoice": "B",
         "Choices": {
-            "A": "Why did it happen?",
-            "B": "What will happen?",
-            "C": "What should we do?",
-            "D": "What happened?"
+            "A": "Unit sales volume is declining across all regions, suggesting a systemic demand-side problem requiring pricing strategy changes",
+            "B": "The Northeast region's gross margin decline is the primary driver of the company-wide margin erosion, while other regions show stable or improving margins",
+            "C": "Operating expenses are the main source of profit deterioration, as the expense-to-revenue ratio has increased in every quarter",
+            "D": "The Southwest region's revenue growth is the most concerning trend because it masks underlying profitability problems in other regions"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -12746,21 +12744,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Descriptive analytics answers:",
-        "ExplanationCorrect": "Descriptive analytics answers \"what happened\" by summarizing historical data using metrics, dashboards, and reports. It is the foundational level of the analytics maturity model, providing the baseline information from which diagnostic, predictive, and prescriptive analytics are built.",
+        "Stem": "An FP&A analyst at Crestline Manufacturing reviews a quarterly operations dashboard showing performance across four regions. The dashboard displays: Northeast — revenue $12.4M (flat vs. prior year), gross margin declined from 38% to 31%, operating expenses $3.1M (unchanged); Southeast — revenue $18.2M (up 6%), gross margin 42% (up from 40%), operating expenses $4.4M (up 4%); Midwest — revenue $9.1M (down 3%), gross margin 35% (unchanged), operating expenses $2.4M (down 2%); Southwest — revenue $22.6M (up 14%), gross margin 28% (up from 27%), operating expenses $5.8M (up 12%). Company-wide gross margin declined from 35.1% to 33.0%. The CFO asks the analyst to decompose the company-wide margin decline to identify its primary source. Which analysis correctly identifies the decomposition?",
+        "ExplanationCorrect": "The Northeast region's gross margin decline from 38% to 31% on $12.4M of revenue is the primary driver of the company-wide margin erosion. At 38% margin, Northeast contributed $4.712M in gross profit; at 31%, it contributes $3.844M — a decline of $868,000. The Southeast region's margin actually improved (40% to 42%) and the Southwest region's margin improved slightly (27% to 28%). The Midwest margin was unchanged. With the other three regions showing stable or improving margins, the company-wide decline from 35.1% to 33.0% is almost entirely attributable to the Northeast's 7-percentage-point margin compression. Descriptive analytics decomposes aggregate metrics into their components to identify where action is needed; the analyst's role is to isolate the signal (Northeast margin erosion) from the noise (other regions' normal variation). This is a decomposition analysis — breaking down a company-wide metric into its constituent parts to identify the specific source of variance.",
         "QuestionID": "P1E-F-001",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "The labor efficiency variance is $2,000 favorable, not unfavorable. Since actual hours (900) were less than standard hours allowed (1,000), the variance is favorable. Reversing the sign (using actual minus standard instead of standard minus actual) produces the wrong sign and leads to this incorrect answer. The formula is Standard Rate x (Standard Hours Allowed - Actual Hours).",
-        "ExplanationWrongB": "$1,800 results from an incorrect rate or hours calculation. Using a $2 difference in hours multiplied by the wrong rate would yield this figure. The correct labor efficiency variance is $20 x (1,000 - 900) = $2,000 favorable.",
-        "ExplanationWrongC": "$2,200 results from a computational error such as using an incorrect standard rate or adding rather than subtracting. The standard rate is $20 and the hours difference is 100 (1,000 - 900), yielding exactly $2,000. This distractor reflects a common arithmetic or rate-selection error in variance calculations.",
+        "ExplanationWrongA": "Unit sales volume declines are not indicated by the dashboard data. The Northeast region shows flat revenue (not declining), the Southeast shows 6% growth, and the Southwest shows 14% growth. Only the Midwest shows a modest 3% revenue decline on its smallest base ($9.1M). The data does not support a conclusion of systemic demand-side decline across all regions. This choice incorrectly interprets revenue trends and reaches a conclusion not supported by the presented data. A correct descriptive analysis must be grounded in the specific metrics shown, not inferred from an assumed pattern.",
+        "ExplanationWrongC": "The expense-to-revenue ratio data does not support this conclusion. Northeast operating expenses are unchanged at $3.1M while revenue is flat; Southeast expenses grew 4% while revenue grew 6% (ratio improving); Midwest expenses declined 2% alongside a 3% revenue decline; Southwest expenses grew 12% while revenue grew 14% (ratio also improving). The dashboard shows that operating expenses are generally tracking with or below revenue growth across all regions. The primary profit deterioration is in gross margin, not operating expenses. This choice incorrectly attributes the margin decline to expenses when the data shows the margin compression is occurring above the operating expense line.",
+        "ExplanationWrongD": "The Southwest region's 14% revenue growth is the strongest growth rate in the company. While its 28% margin is the lowest of the four regions, the margin improved from 27% to 28% year-over-year — a positive trend, not a concerning one. The Southwest's contribution to company-wide margin is actually improving, not masking problems. This choice inverts the directional signal: the Southwest is contributing positively when the Northeast is the actual source of decline. A correct descriptive analysis must recognize the direction of each component's contribution, not confuse growth regions with problem regions.",
+        "ExplanationWrongB": "",
         "question_state": "Certified",
         "certification_date": "2026-07-22",
         "certification_batch": "R14 Wave 5",
-        "ExplanationWrongD": "",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -12777,15 +12775,15 @@ const MCQ_BANK_E = [
         "Section": "F",
         "Difficulty": "Moderate",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.002 Predictive analytics",
-        "UniqueConceptKey": "E-F-002-Predictive-analytics",
-        "MicroTopic": "Predictive analytics",
-        "CorrectChoice": "D",
+        "Topic": "E-F.002 Predictive model accuracy comparison",
+        "UniqueConceptKey": "E-F-002-Predictive-model-accuracy-comparison",
+        "MicroTopic": "Predictive model accuracy comparison",
+        "CorrectChoice": "C",
         "Choices": {
-            "A": "Prescriptive rules",
-            "B": "Historical data description",
-            "C": "Optimization models",
-            "D": "Statistical models to forecast outcomes"
+            "A": "The regression model is more accurate because it achieved a lower RMSE on the training dataset than the machine learning model",
+            "B": "The machine learning model is more accurate because it had the highest R-squared value across all three product categories",
+            "C": "The machine learning model generalizes better to unseen data, as evidenced by lower out-of-sample RMSE and MAE values across all product categories, though both models performed similarly on training data",
+            "D": "Neither model is acceptable because the RMSE values exceed 5% of the average monthly sales volume"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -12798,21 +12796,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Predictive analytics uses:",
-        "ExplanationCorrect": "Predictive analytics forecasts future outcomes using statistical models.",
+        "Stem": "A demand planning analyst at Meridian Consumer Goods is evaluating two forecasting models for monthly sales predictions across three product categories. Model A (Linear Regression) produced in-sample RMSE of $12,400, out-of-sample RMSE of $18,700, and MAE of $14,200. Model B (Machine Learning — Gradient Boosting) produced in-sample RMSE of $11,800, out-of-sample RMSE of $9,300, and MAE of $7,100. Both models achieved R-squared values above 0.85 on the training data. The average monthly sales volume across all categories is $380,000. Which conclusion about model accuracy is best supported by this data?",
+        "ExplanationCorrect": "The machine learning model (Model B) generalizes better to unseen data, which is the critical criterion for predictive model evaluation. While both models performed similarly on training data (in-sample RMSE: $12,400 vs. $11,800, only a 5% difference), Model B's out-of-sample RMSE ($9,300) is less than half of Model A's ($18,700), and its out-of-sample MAE ($7,100) is less than half of Model A's ($14,200). This substantial divergence between in-sample and out-of-sample performance for Model A indicates overfitting — the regression model memorized patterns in the training data that do not generalize to new data. Model B's more consistent performance across both training and test datasets indicates better generalization, which is what predictive analytics requires: the model that forecasts most accurately on data it has not seen before. The key insight is that training-set performance alone is an insufficient basis for model selection; out-of-sample validation metrics (RMSE and MAE on holdout data) are the proper basis for comparing predictive model accuracy.",
         "QuestionID": "P1E-F-002",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Prescriptive rules are used in prescriptive analytics to recommend actions, not to forecast outcomes.",
-        "ExplanationWrongB": "Describing historical data is the function of descriptive analytics, not predictive.",
-        "ExplanationWrongC": "Optimization models support prescriptive analytics by finding the best course of action.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongA": "Model A's in-sample RMSE ($12,400) is actually higher, not lower, than Model B's in-sample RMSE ($11,800), so the factual premise of this choice is incorrect. More importantly, even if Model A had a lower training RMSE, in-sample performance is not the correct basis for model selection. Models can achieve low training error through overfitting — memorizing noise in the training data rather than learning generalizable patterns. The proper evaluation criterion for predictive models is out-of-sample performance on data the model has not seen during training. Model A's out-of-sample RMSE ($18,700) is substantially worse than its in-sample RMSE ($12,400), confirming that the regression model is overfitting.",
+        "ExplanationWrongB": "R-squared is a measure of how well the model fits the training data, not a measure of predictive accuracy on unseen data. Both models achieved R-squared values above 0.85 on training data, and the stem does not report out-of-sample R-squared values. A high training R-squared can coexist with poor generalization when a model is overfitting. Selecting a model based on the highest R-squared from training data would favor an overfitted model that performs poorly on new data. This choice incorrectly treats a goodness-of-fit metric as a predictive accuracy metric.",
+        "ExplanationWrongD": "The RMSE values must be evaluated in the context of the data scale. For an average monthly sales volume of $380,000, Model B's out-of-sample RMSE of $9,300 represents approximately 2.4% of the average sales volume, and Model A's out-of-sample RMSE of $18,700 represents approximately 4.9%. Both are below the 5% threshold cited in this choice. Moreover, there is no universal 5% RMSE threshold; acceptability depends on the business context, the cost of forecast errors, and the available alternatives. Model B's 2.4% error rate on $380,000 average sales would likely be considered very strong performance in demand planning. Rejecting both models based on an arbitrary threshold when one model clearly outperforms the other is not a valid analytical conclusion.",
+        "ExplanationWrongC": "",
         "question_state": "Certified",
-        "DifficultyScore": 3,
         "certification_date": "2026-07-24",
         "certification_batch": "Session 68 Wave 1",
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -12827,17 +12825,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "F",
-        "Difficulty": "Easy",
+        "Difficulty": "Moderate",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.003 Prescriptive analytics",
-        "UniqueConceptKey": "E-F-003-Prescriptive-analytics",
-        "MicroTopic": "Prescriptive analytics",
-        "CorrectChoice": "D",
+        "Topic": "E-F.003 Prescriptive analytics output analysis",
+        "UniqueConceptKey": "E-F-003-Prescriptive-analytics-output-analysis",
+        "MicroTopic": "Prescriptive analytics output analysis",
+        "CorrectChoice": "A",
         "Choices": {
-            "A": "Historical results",
-            "B": "Future trends",
-            "C": "Current position",
-            "D": "Specific actions to take"
+            "A": "Decrease the Westlake plant's Line 2 production by 15% because its contribution margin per machine hour ($42) is the lowest of the constrained lines, and the prescriptive model correctly identifies this as the least efficient use of the bottleneck resource",
+            "B": "Increase Eastgate's Line 1 production because it has the highest total contribution margin, indicating it is the most profitable product line",
+            "C": "Maintain the current production schedule because the total throughput contribution of $1,842,000 cannot be meaningfully improved",
+            "D": "Shift all Westlake production to Eastgate because the Eastgate plant has higher contribution margins on both lines"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -12850,19 +12848,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Prescriptive analytics recommends:",
-        "ExplanationCorrect": "Prescriptive analytics suggests actions to achieve desired outcomes.",
+        "Stem": "An operations manager at Apex Manufacturing reviews output from a prescriptive analytics model that analyzed the company's two-plant production schedule. The model analyzed 3,600 possible schedule combinations and recommended a specific production reallocation. The current schedule and the model's recommendation are: Westlake Plant — Line 1: 12,000 units, contribution margin per unit $18, machine hours per unit 0.4, contribution per machine hour $45. Line 2: 8,000 units, CM per unit $21, machine hours per unit 0.5, CM per machine hour $42. Eastgate Plant — Line 1: 15,000 units, CM per unit $22, machine hours per unit 0.4, CM per machine hour $55. Line 2: 20,000 units, CM per unit $15, machine hours per unit 0.3, CM per machine hour $50. Both plants operate at 100% machine capacity (16,000 machine hours each). The model recommends reducing Westlake Line 2 by 15% and reallocating the freed machine hours to Eastgate Line 1. Which of the following correctly analyzes the model's recommendation?",
+        "ExplanationCorrect": "The model's recommendation to decrease Westlake Line 2 production is correct because it identifies the least efficient use of a constrained (bottleneck) resource. With both plants operating at full machine capacity, the constraining resource is machine hours. The contribution margin per machine hour is the correct metric for evaluating production trade-offs under a capacity constraint. Westlake Line 2 generates $42 per machine hour — the lowest of all four lines. Eastgate Line 1 generates $55 per machine hour — the highest. Reducing Westlake Line 2 by 15% (1,200 units × 0.5 MH = 600 machine hours freed) and reallocating those hours to Eastgate Line 1 (600 MH ÷ 0.4 MH/unit = 1,500 additional units at $22 CM = $33,000 incremental contribution, minus the $25,200 lost from Westlake Line 2 = $7,800 net gain). The prescriptive model correctly identifies that contribution per unit of the constrained resource, not total contribution margin, determines the optimal production mix. This is a resource-allocation analysis — the model's logic is sound because it reallocates from the lowest CM-per-machine-hour product to the highest.",
         "QuestionID": "P1E-F-003",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Describing historical results is the function of descriptive analytics, not prescriptive.",
-        "ExplanationWrongB": "Forecasting future trends is the function of predictive analytics, not prescriptive.",
-        "ExplanationWrongC": "Describing the current position is the function of descriptive analytics.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongB": "Eastgate Line 1's total contribution margin ($22 × 15,000 = $330,000) is high, but total contribution margin is not the correct metric for evaluating production allocation under a capacity constraint. Eastgate Line 2 produces $300,000 total contribution (20,000 × $15), but its contribution per machine hour ($50) exceeds Westlake Line 2 ($42). The correct analysis compares contribution margin per unit of the constrained resource (machine hours), not total contribution. A product with high total contribution could also consume a disproportionate share of the constrained resource, making it less efficient at the margin. This choice confuses total profitability with marginal efficiency under a bottleneck constraint.",
+        "ExplanationWrongC": "The total throughput contribution of $1,842,000 can be improved — the model's recommendation demonstrates exactly this. The prescriptive model's value is in finding improvements that are not obvious from aggregate totals. The analysis shows a specific, calculable improvement of $7,800 from reallocating machine hours from the lowest CM-per-hour line to the highest. Dismissing the model's recommendation based on the aggregate total rather than analyzing the marginal reallocation it proposes fails to engage with the prescriptive output. The correct analytical approach is to verify the model's logic by testing the marginal trade-off, not to accept or reject based on the top-line number.",
+        "ExplanationWrongD": "Shifting all Westlake production to Eastgate is not feasible because Eastgate is already at full machine capacity (16,000 hours). Westlake's 16,000 machine hours cannot simply be moved to a plant with no available capacity. The prescriptive model's marginal reallocation (15% of one line) reflects a real constraint: only the freed hours from reducing one line can be reallocated within the existing capacity limits. This choice proposes a solution that ignores the physical capacity constraints that the prescriptive model correctly incorporates. A full plant shutdown and transfer would require capital investment in new Eastgate capacity, which is not within the scope of the production schedule analysis.",
+        "ExplanationWrongA": "",
         "question_state": "Certified",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "certification_date": "2026-07-22",
+        "certification_batch": "R14 Wave 5",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -12906,13 +12906,15 @@ const MCQ_BANK_E = [
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongC": "Vision and value are not part of the original four Vs; the correct set is volume, velocity, variety, veracity.",
-        "ExplanationWrongD": "Visibility and validity are not part of the original four Vs of big data.",
-        "ExplanationWrongB": "Value and vision are sometimes discussed in big data contexts but are not among the defining four Vs.",
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "While Proposal Alpha would indeed provide stronger long-term cost control after the hardware is fully depreciated, this reasoning addresses only one dimension of the big data challenge. Apex's IoT sensor data has a documented 12% error rate that requires veracity validation tools, and Alpha lacks unstructured data processing capability. On-premise hardware without veracity features cannot resolve the data quality problem. Cost control is a legitimate consideration but must be weighed alongside the specific veracity and velocity requirements identified in Patel's analysis.",
+        "ExplanationWrongC": "Proposal Alpha's strength in high-velocity structured data processing is a valid consideration given Apex's 15 TB of daily ERP data. However, structured data throughput alone does not address the complete requirements. The 12% IoT sensor error rate requires veracity validation tools that Alpha lacks, and the 400% month-end velocity spike demands auto-scaling capability. An on-premise cluster with fixed capacity cannot dynamically scale to absorb a 4x ingestion surge without overprovisioning during normal operations.",
+        "ExplanationWrongD": "Avoiding capital expenditure is an ancillary benefit of the cloud subscription model, not the primary basis for the recommendation. While Proposal Beta's $25,000 monthly subscription eliminates the upfront capital outlay of $700,000, the controlling factors in this decision are the specific data requirements: veracity validation for the 12% IoT error rate and auto-scaling for the 400% velocity spikes at month-end. Framing the decision solely around capex avoidance overlooks the operational fit analysis that should drive a management accountant's recommendation.",
+        "ExplanationWrongB": "",
         "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "certification_date": "2026-07-22",
+        "certification_batch": "R14 Wave 5",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -12927,17 +12929,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "F",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Difficult",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.005 Big data volume",
-        "UniqueConceptKey": "E-F-005-Big-data-volume",
-        "MicroTopic": "Big data volume",
-        "CorrectChoice": "C",
+        "Topic": "E-F.005 Big data platform evaluation",
+        "UniqueConceptKey": "E-F-005-Big-data-platform-evaluation",
+        "MicroTopic": "Big data platform evaluation",
+        "CorrectChoice": "B",
         "Choices": {
-            "A": "Accuracy of data",
-            "B": "Different types of data",
-            "C": "Massive quantity of data",
-            "D": "Speed of data generation"
+            "A": "Proposal Alpha, because on-premise hardware provides stronger long-term cost control after depreciation",
+            "B": "Proposal Beta, because its veracity validation tools and auto-scaling directly address Apex's IoT data quality and velocity spike requirements",
+            "C": "Proposal Alpha, because 15 TB of daily structured data requires dedicated on-premise processing capacity",
+            "D": "Proposal Beta, because cloud subscriptions avoid upfront capital expenditure"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -12950,8 +12952,8 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Big data volume refers to:",
-        "ExplanationCorrect": "Concept: Big data is characterized by the 3 Vs: Volume, Velocity, and Variety. Volume refers to the massive scale or quantity of data being generated and stored, typically in terabytes or petabytes. In the context of the 3 Vs, volume specifically describes how much data exists, distinguishing its quantity dimension from the speed of generation (velocity) and the diversity of formats (variety).",
+        "Stem": "Riya Patel, Controller at Apex Manufacturing, must recommend one of two big data platform proposals to the CFO. Apex processes 15 TB of structured ERP data and 3 TB of unstructured IoT sensor data daily. Patel's analysis reveals that the IoT sensor data has a 12% error rate and that peak data ingestion velocity spikes 400% during month-end close. The two competing proposals are: Proposal Alpha — an on-premise Hadoop cluster ($700,000 capital cost, $100,000 annual operating cost) optimized for structured data processing but lacking unstructured data and data quality validation tools. Proposal Beta — a cloud-based data lake with integrated analytics ($25,000/month, 3-year commitment) offering native unstructured data support, automated scaling, and built-in veracity validation. The CFO's 3-year total cost threshold is $1,200,000. Which recommendation should Patel present?",
+        "ExplanationCorrect": "Proposal Beta is the stronger recommendation because it addresses the two specific data requirements Patel identified: veracity and velocity. The 12% IoT sensor error rate represents a veracity problem that requires data quality validation tools, which Beta provides natively and Alpha lacks entirely. The 400% month-end velocity spike requires auto-scaling capability; Beta's cloud architecture scales dynamically, while Alpha's fixed on-premise cluster would need to be sized for peak load with significant idle capacity during normal operations. From a cost perspective, Beta's 3-year total ($25,000 × 36 = $900,000) is competitive with Alpha's 3-year total ($700,000 + $300,000 = $1,000,000), and both fall within the CFO's $1.2M threshold. Under the COSO ERM framework, technology investment decisions should align with the organization's specific risk profile and operational requirements — Beta's veracity and velocity capabilities directly mitigate Apex's identified data risks. A common exam trap is to select a proposal based on a single criterion (cost, processing speed) rather than evaluating the full requirements profile. The management accountant's role is to assess total fitness for purpose, not to optimize a single dimension.",
         "QuestionID": "P1E-F-005",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
@@ -13277,17 +13279,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "F",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.012 ERP",
-        "UniqueConceptKey": "E-F-012-ERP",
-        "MicroTopic": "ERP",
-        "CorrectChoice": "C",
+        "Topic": "E-F.012 ERP system evaluation",
+        "UniqueConceptKey": "E-F-012-ERP-system-evaluation",
+        "MicroTopic": "ERP system evaluation",
+        "CorrectChoice": "B",
         "Choices": {
-            "A": "External vendors only",
-            "B": "Only accounting",
-            "C": "All business processes across an organization",
-            "D": "Only manufacturing"
+            "A": "Vendor Two, because the lower cost ($1.7M) and faster implementation (9 months) outweigh integration concerns",
+            "B": "Vendor One, because unified inter-module integration directly resolves Northland's data reconciliation problem while supporting expansion scalability",
+            "C": "Vendor Two, because specialized warehouse functionality satisfies the operations VP's stated requirement",
+            "D": "Vendor One, because standardized business processes are always the superior approach for growing companies"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -13300,19 +13302,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "ERP systems integrate:",
-        "ExplanationCorrect": "ERP integrates all business functions into one system.",
+        "Stem": "Marcus Chen, CFO of Northland Distribution, must select an ERP system to replace legacy accounting software. Northland operates 12 regional warehouses, processes 8,000 daily orders, and plans to expand into two new regions within 18 months. Two finalist proposals: Vendor One — a unified single-vendor ERP suite ($2.4M implementation, 14 months, $380,000 annual licensing) with strong inter-module integration and financial controls but requiring standardized processes. Vendor Two — a best-of-breed modular approach combining three specialized vendors ($1.7M implementation, 9 months, $290,000 combined annual licensing) offering superior warehouse functionality but requiring middleware for cross-module data synchronization. The controller reports that the current fragmented system produces five conflicting versions of the monthly margin report because data across modules does not reconcile. Which ERP approach should Chen recommend?",
+        "ExplanationCorrect": "Vendor One's unified platform is the stronger recommendation because it directly addresses the core business problem identified by the controller: cross-module data reconciliation. When a system produces five conflicting versions of the same report, the root cause is fragmented data sources with inconsistent integration — precisely the problem a unified ERP architecture solves through its single source of truth. Vendor Two's best-of-breed approach, despite lower upfront cost and specialized warehouse functionality, requires middleware for cross-module synchronization, which would perpetuate the reconciliation problem. For the planned two-region expansion, a unified platform with standardized processes scales more efficiently than a middleware-dependent architecture that must replicate integration points for each new region. Under COSO's Information and Communication principle, information systems should produce quality information that supports internal control — five conflicting margin reports represent a control deficiency that a unified platform directly remediates. A common exam trap is optimizing a single criterion such as cost, timeline, or department preference rather than evaluating the enterprise-wide impact of the decision.",
         "QuestionID": "P1E-F-012",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "ERP systems integrate all business processes across the enterprise, not just external vendor relationships.",
-        "ExplanationWrongB": "ERP systems extend beyond accounting to include manufacturing, supply chain, HR, and other functions.",
-        "ExplanationWrongD": "ERP covers the full enterprise beyond manufacturing, including finance, HR, supply chain, and sales.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongA": "While Vendor Two offers a lower implementation cost ($1.7M vs. $2.4M) and shorter timeline (9 vs. 14 months), these initial savings may be offset by ongoing operational costs from the data reconciliation problem. Northland's controller has already documented that the current fragmented system produces five conflicting versions of the monthly margin report. Adding a best-of-breed approach with middleware introduces the same integration risk the company is trying to escape. A management accountant evaluating ERP proposals must weigh total cost of ownership against the core business problem, not optimize for upfront savings alone. The reconciliation cost in Controller hours, decision errors, and audit exposure may exceed the $700,000 implementation premium of the unified platform over the system's life.",
+        "ExplanationWrongC": "The operations VP's requirement for specialized warehouse functionality is a legitimate concern, but it addresses only one of the three evaluation criteria. Northland's primary documented problem is cross-module data reconciliation, and the planned expansion into two new regions requires standardized, scalable processes. Selecting a vendor based solely on one department's functional preference risks creating the same fragmented data environment that caused the original five-version margin report problem. Effective ERP evaluation requires assessing total enterprise fit, not optimizing for a single functional area.",
+        "ExplanationWrongD": "Standardized business processes are a feature of unified ERP platforms and can support growth, but presenting them as always superior is an overgeneralization. The correct recommendation must be grounded in Northland's specific facts: the documented reconciliation problem and the expansion plan. Standardization alone does not automatically justify a recommendation — the analysis must connect the platform's capabilities to the organization's documented pain points. Management accountants evaluate fit to requirements, not abstract architectural preferences.",
+        "ExplanationWrongB": "",
         "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "certification_date": "2026-07-22",
+        "certification_batch": "R14 Wave 5",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -13427,17 +13431,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "F",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.015 Cloud computing",
-        "UniqueConceptKey": "E-F-015-Cloud-computing",
-        "MicroTopic": "Cloud computing",
-        "CorrectChoice": "D",
+        "Topic": "E-F.015 Cloud service model evaluation",
+        "UniqueConceptKey": "E-F-015-Cloud-service-model-evaluation",
+        "MicroTopic": "Cloud service model evaluation",
+        "CorrectChoice": "C",
         "Choices": {
-            "A": "Only physical servers",
-            "B": "Desktop applications",
-            "C": "Free unlimited storage",
-            "D": "On-demand computing resources via internet"
+            "A": "Software as a Service (SaaS), because it eliminates all IT maintenance and offers the fastest deployment",
+            "B": "Infrastructure as a Service (IaaS), because it provides maximum control over the operating system and security configuration",
+            "C": "Platform as a Service (PaaS), because it balances control over custom financial applications with reduced infrastructure management burden",
+            "D": "On-premise retention, because financial data should never be stored outside the corporate network"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -13450,19 +13454,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Cloud computing delivers:",
-        "ExplanationCorrect": "Cloud provides scalable, on-demand computing services.",
+        "Stem": "Amara Okafor, CIO of Sterling Financial Services, must recommend a cloud service model for the company's financial reporting and treasury systems. Sterling's controller requires the ability to customize reconciliation logic and maintain proprietary forecasting models built in Python, while the CFO wants to reduce the IT team's server maintenance workload. The compliance officer has flagged that Sterling, as a publicly traded company, must maintain audit trails and access controls that satisfy SOX requirements. Okafor's team evaluated three cloud service models: SaaS — turnkey financial applications with built-in compliance templates but limited customization (fastest deployment, lowest maintenance); PaaS — managed runtime environment supporting custom application development with configurable security controls (moderate maintenance); IaaS — virtualized infrastructure requiring Sterling to manage operating systems, middleware, and security patches (maximum control, highest maintenance). Which cloud service model should Okafor recommend?",
+        "ExplanationCorrect": "Platform as a Service (PaaS) is the most appropriate recommendation because it balances Sterling's competing requirements. The controller needs to customize reconciliation logic and maintain proprietary Python forecasting models, which requires a development platform — SaaS would not permit this level of customization. The CFO wants to reduce server maintenance workload, which PaaS achieves by managing the underlying infrastructure while Sterling retains control over applications and data. For SOX compliance, PaaS provides configurable security controls at the application and data layer, allowing Sterling to implement the access controls and audit trails required for financial reporting systems. IaaS would give maximum control but fails the CFO's objective of reducing maintenance burden since Sterling would still manage operating systems and patches. Under the COSO ERM framework, technology architecture decisions should align with the organization's risk appetite and business objectives — PaaS provides the right risk-control balance for a financial services company needing custom analytics with managed infrastructure. A common exam trap is defaulting to the model with maximum control or maximum convenience rather than matching the service model to the documented functional, operational, and compliance requirements.",
         "QuestionID": "P1E-F-015",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Cloud computing uses virtualized resources hosted remotely, not physical servers on premises.",
-        "ExplanationWrongB": "Cloud computing delivers infrastructure, platforms, and software, not just desktop applications.",
-        "ExplanationWrongC": "Cloud storage is typically metered and paid for on a usage basis, not free or unlimited.",
-        "ExplanationWrongD": "",
+        "ExplanationWrongA": "SaaS offers the fastest deployment and lowest maintenance burden, which would satisfy the CFO's objective. However, Sterling's controller has specifically identified the need to customize reconciliation logic and maintain proprietary Python forecasting models. SaaS platforms provide turnkey applications with fixed functionality; they would not permit the level of code-level customization required for proprietary financial models. Selecting SaaS would force Sterling to either abandon its custom analytics or build workarounds that increase operational risk. The decision must evaluate all three stakeholder requirements simultaneously, not optimize for a single objective at the expense of another.",
+        "ExplanationWrongB": "IaaS provides maximum control over operating systems, middleware, and security configuration, which would support the controller's customization requirements. However, the CFO's objective is to reduce the IT team's server maintenance workload, and IaaS requires Sterling to manage operating system patches, middleware updates, and security configurations. This effectively preserves the maintenance burden that the migration was intended to reduce. Selecting IaaS addresses one requirement at the direct expense of another, when a middle-ground solution exists that satisfies both objectives.",
+        "ExplanationWrongD": "The position that financial data should never be stored outside the corporate network is not supported by current regulatory or industry practice. Major financial institutions, publicly traded companies, and government agencies use cloud services with appropriate controls to meet SOX, PCI-DSS, and other regulatory requirements. The compliance officer's requirement for audit trails and access controls can be satisfied by properly configured cloud services. Rejecting cloud migration entirely for a categorical objection that does not reflect current technology risk management practice fails to evaluate the specific requirements and controls available in modern cloud architectures.",
+        "ExplanationWrongC": "",
         "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "certification_date": "2026-07-22",
+        "certification_batch": "R14 Wave 5",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -13477,17 +13483,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "F",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.016 Cybersecurity management",
-        "UniqueConceptKey": "E-F-016-Cybersecurity-management",
-        "MicroTopic": "Cybersecurity management",
-        "CorrectChoice": "C",
+        "Topic": "E-F.016 Cybersecurity investment prioritization",
+        "UniqueConceptKey": "E-F-016-Cybersecurity-investment-prioritization",
+        "MicroTopic": "Cybersecurity investment prioritization",
+        "CorrectChoice": "A",
         "Choices": {
-            "A": "Only firewalls",
-            "B": "Only passwords",
-            "C": "Identify, protect, detect, respond, recover",
-            "D": "Only encryption"
+            "A": "Multi-factor authentication and endpoint detection, because they reduce the highest-likelihood attack vector to which the organization has the weakest existing defense",
+            "B": "Data center physical security upgrades, because preventing physical access protects all digital assets from the ground up",
+            "C": "Encryption at rest for all databases, because regulatory fines for data breaches carry the highest financial impact",
+            "D": "An equal allocation across all five threat vectors, because cybersecurity is only as strong as its weakest link"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -13500,19 +13506,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Cybersecurity risk management includes:",
-        "ExplanationCorrect": "The NIST cybersecurity framework core functions.",
+        "Stem": "Diana Walsh, CISO of Harbor Regional Bank, must present a cybersecurity investment recommendation to the board. Her risk assessment identified five threat vectors with the following profiles: (1) Phishing and credential theft — high likelihood (3 incidents/month), moderate impact ($250,000 avg loss), current defense rated Weak; (2) Ransomware — moderate likelihood (0.5 incidents/month), high impact ($1.2M avg loss), current defense rated Moderate; (3) Insider data exfiltration — low likelihood (0.1 incidents/month), very high impact ($3M avg loss), current defense rated Strong; (4) DDoS attacks — moderate likelihood (1 incident/month), low impact ($50,000 avg loss), current defense rated Moderate; (5) Third-party vendor breach — low likelihood (0.2 incidents/month), high impact ($800,000 avg loss), current defense rated Moderate. The board allocated $600,000 for the current budget cycle. Walsh must recommend where to concentrate investment. Which recommendation best reflects risk-based prioritization?",
+        "ExplanationCorrect": "Multi-factor authentication and endpoint detection (Targeting Threat Vector 1) represents the strongest risk-based prioritization. Among the five vectors, phishing and credential theft presents the highest risk exposure: high likelihood (36 incidents/year) multiplied by moderate impact ($250,000) yields $9,000,000 in expected annual loss, with a Weak current defense rating indicating the largest protection gap. By contrast, ransomware (Vector 2) has a higher per-incident impact ($1.2M) but only 6 expected incidents per year ($7.2M expected loss) with Moderate existing defense. The insider threat (Vector 3) carries the highest single-incident impact ($3M) but occurs only 1.2 times per year ($3.6M expected loss) with Strong existing defense. Under the COSO ERM framework, risk responses should be prioritized based on a combination of likelihood, impact, and the gap between current and target risk levels — not on a single dimension. A common exam trap is prioritizing the highest-impact threat without considering likelihood, or spreading resources equally rather than concentrating on the highest risk-adjusted exposure. The management accountant evaluating cybersecurity investments applies the same expected-value reasoning used in operational risk assessment: expected loss = likelihood × impact, adjusted for existing control effectiveness.",
         "QuestionID": "P1E-F-016",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Firewalls are one technical safeguard but do not constitute a comprehensive cybersecurity program.",
-        "ExplanationWrongB": "Passwords are one authentication method; comprehensive security requires more than passwords alone.",
-        "ExplanationWrongD": "Encryption protects data confidentiality but is only one component of a comprehensive cybersecurity program.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongB": "Physical security is a foundational control, but Harbor Regional Bank's risk assessment does not identify physical access as one of the five profiled threat vectors. The data center security threat is not quantified in Walsh's assessment, and the existing controls against the profiled vectors range from Weak to Strong. Allocating scarce budget to an unquantified vector while leaving the highest-likelihood, weakest-defense vector unaddressed does not constitute risk-based prioritization — it represents a misallocation driven by the intuition that physical controls are always primary, rather than data-driven risk analysis.",
+        "ExplanationWrongC": "Encryption at rest for all databases addresses the data protection dimension of threat vectors 2, 3, and 5, but Walsh's assessment shows that existing defenses against these vectors are already rated Moderate or Strong. The most critical gap is in Vector 1 (Weak defense, high likelihood, moderate impact). While encryption is a valuable control, deploying it against vectors with adequate existing defenses while ignoring the vector with the weakest defense and highest expected loss is not risk-based prioritization. Effective cybersecurity budgeting requires directing resources to where the marginal risk reduction is greatest, not to the control that addresses the most vectors generically.",
+        "ExplanationWrongD": "Equal allocation across all five threat vectors is intuitively appealing under the weakest-link principle, but it is not supported by the quantitative risk data. With a $600,000 budget, equal allocation provides only $120,000 per vector, which may be insufficient to meaningfully improve the Weak defense against Vector 1 while providing unnecessary reinforcement to vectors already rated Moderate or Strong. The weakest-link principle applies to system architecture design, not to annual budget allocation. Under COSO ERM, resources should be directed where residual risk is highest — the vector with the combination of highest expected loss and weakest existing defense. Spreading limited resources evenly does not constitute a risk-based response; it is an undifferentiated control strategy that ignores the specific risk profile data Walsh collected.",
+        "ExplanationWrongA": "",
         "question_state": "Certified",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "certification_date": "2026-07-24",
+        "certification_batch": "Session 68 Wave 1",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -13777,17 +13785,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "F",
-        "Difficulty": "Easy",
+        "Difficulty": "Moderate",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.022 Data visualization",
-        "UniqueConceptKey": "E-F-022-Data-visualization",
-        "MicroTopic": "Data visualization",
-        "CorrectChoice": "C",
+        "Topic": "E-F.022 Data visualization effectiveness analysis",
+        "UniqueConceptKey": "E-F-022-Data-visualization-effectiveness-analysis",
+        "MicroTopic": "Data visualization effectiveness analysis",
+        "CorrectChoice": "D",
         "Choices": {
-            "A": "Make data more complex",
-            "B": "Eliminate analysis",
-            "C": "Communicate insights effectively",
-            "D": "Replace numerical data"
+            "A": "Chart 3 is the most effective because the 3D pie chart with 12 segments provides the most visually engaging presentation of expense category proportions",
+            "B": "Chart 1 is misleading because the bar chart uses a truncated y-axis starting at $600,000, which may exaggerate differences between departments",
+            "C": "Chart 2 should be replaced because a line chart cannot appropriately display data with only four time periods",
+            "D": "Chart 1 uses an appropriate visualization type (bar chart) but the truncated y-axis starting at $600,000 misrepresents the proportional differences by compressing the visual range"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -13800,19 +13808,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Data visualization is used to:",
-        "ExplanationCorrect": "Data visualization facilitates understanding of data insights.",
+        "Stem": "A controller at Crestline Manufacturing reviews the CFO's monthly dashboard containing the following visualizations: Chart 1 — a bar chart showing departmental expenses for the four largest cost centers (Marketing $720,000, Operations $1,050,000, IT $680,000, HR $640,000) with the y-axis starting at $600,000. Chart 2 — a line chart tracking quarterly gross margin percentages over the past year (Q1 34%, Q2 33%, Q3 31%, Q4 29%). Chart 3 — a 3D pie chart displaying the allocation of total SG&A expenses across 12 cost categories with varying slice sizes. Chart 4 — a scatter plot showing the relationship between marketing spend and revenue growth across 15 regional markets. Which analysis of these visualization choices is correct?",
+        "ExplanationCorrect": "Chart 1 correctly uses a bar chart for comparing discrete categories (four departments), which is the appropriate visualization type for this data. However, the truncated y-axis starting at $600,000 is a known visualization concern because it exaggerates the visual differences between bars. For example, Marketing at $720,000 appears proportionally much smaller than Operations at $1,050,000 when the axis starts at $600,000 than it would if the axis started at $0 (where the ratio $720K/$1,050K = 69% would be visually apparent). The visualization type is correct, but the axis scaling introduces a potential misinterpretation risk. Effective data visualization requires both the appropriate chart type and honest scaling that does not distort proportional relationships. This is a decomposition analysis — separating the chart type decision (correct) from the axis scaling decision (concerning) to evaluate each independently.",
         "QuestionID": "P1E-F-022",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Data visualization simplifies complex data to aid understanding, not to make it more complex.",
-        "ExplanationWrongB": "Data visualization supports and enhances analysis by making insights accessible, not eliminating analysis.",
-        "ExplanationWrongD": "Data visualization complements numerical data by presenting it visually, not replacing the underlying data.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongA": "A 3D pie chart with 12 segments is a known ineffective visualization choice. Three-dimensional effects distort the perceived relative size of pie slices; segments at the front of the 3D projection appear larger than equivalently sized segments at the back. With 12 categories, the individual slices become too small to compare visually, defeating the purpose of a pie chart, which works best with 3–5 categories. Visual appeal is not the standard for visualization effectiveness — accuracy of perception is. This choice confuses aesthetic preference with visualization best practice.",
+        "ExplanationWrongB": "Chart 1's bar chart type is correct for comparing discrete categories. The concern is specifically about the truncated y-axis, which may mislead but does not invalidate the entire visualization. Labeling the chart as misleading without distinguishing between the chart type (appropriate) and the scaling choice (concerning) is an overbroad assessment. The correct analysis separates these two dimensions: the bar chart format is correct; the axis scaling may need adjustment. This choice collapses a nuanced evaluation into a binary misleading/not-misleading judgment that loses analytical precision.",
+        "ExplanationWrongC": "A line chart with four data points over four quarters is an appropriate visualization for showing a trend over time. Four data points are sufficient to display a directional pattern (in this case, a clear 5-percentage-point declining trend from 34% to 29%). Line charts are the standard visualization for time-series data regardless of the number of periods, as long as the periods are sequentially ordered. A minimum-period requirement for line charts does not exist in data visualization best practice. This choice applies an arbitrary threshold that is not supported by visualization standards.",
+        "ExplanationWrongD": "",
         "question_state": "Certified",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "certification_date": "2026-07-22",
+        "certification_batch": "R14 Wave 5",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -13827,17 +13837,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "F",
-        "Difficulty": "Moderate-Easy",
+        "Difficulty": "Difficult",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.023 NIST framework",
-        "UniqueConceptKey": "E-F-023-NIST-framework",
-        "MicroTopic": "NIST framework",
-        "CorrectChoice": "A",
+        "Topic": "E-F.023 NIST CSF maturity evaluation",
+        "UniqueConceptKey": "E-F-023-NIST-CSF-maturity-evaluation",
+        "MicroTopic": "NIST CSF maturity evaluation",
+        "CorrectChoice": "B",
         "Choices": {
-            "A": "Identify, Protect, Detect, Respond, Recover",
-            "B": "Plan, Do, Check, Act",
-            "C": "Define, Measure, Analyze, Improve, Control",
-            "D": "Assess, Design, Implement, Monitor"
+            "A": "Invest in additional Protect controls, because the organization's existing investment in this category already demonstrates competence",
+            "B": "Invest in Detect controls, because the maturity gap between the strongest and weakest function creates the greatest residual risk exposure",
+            "C": "Invest in Respond and Recover controls, because these functions minimize damage after an incident has already occurred",
+            "D": "Maintain current investment levels equally, because the aggregate maturity score of 13 out of 25 is within acceptable range"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -13850,19 +13860,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "The NIST Cybersecurity Framework core functions are:",
-        "ExplanationCorrect": "NIST core: Identify, Protect, Detect, Respond, Recover.",
+        "Stem": "Lena Torres, Director of Internal Audit at Orion Healthcare, has completed a NIST Cybersecurity Framework maturity assessment across the five core functions. The results, rated on a 1–5 scale where 5 represents Adaptive maturity, are: Identify — 3 (Repeatable); Protect — 4 (Managed); Detect — 1 (Partial); Respond — 2 (Risk-Informed); Recover — 3 (Repeatable). Orion's board has approved a cybersecurity enhancement budget for the current year but expects Torres to recommend where it will deliver the greatest risk reduction. The company's most recent incident — a ransomware attack that went undetected for 18 days — caused $2.4 million in operational losses. Which investment priority should Torres recommend to the board?",
+        "ExplanationCorrect": "Torres should recommend investing in Detect controls because the maturity gap analysis reveals that Detect, at maturity level 1 (Partial), is the weakest function with the greatest distance from the organization's strongest function (Protect at level 4). In a defense-in-depth model, a severe weakness in detection creates a catastrophic single-point-of-failure: no matter how strong the Identify, Protect, Respond, and Recover functions are, an attack that bypasses protection will persist undetected if detection controls are immature. The 18-day undetected ransomware attack is direct empirical evidence of this gap — stronger detection would have reduced dwell time and contained losses. Under the NIST CSF framework, the functions are interdependent, not independent; a chain is as strong as its weakest link. The board should direct resources to close the largest maturity gap rather than reinforce already-strong functions or invest in post-incident functions while the detection failure goes unaddressed. A common exam trap is investing where the organization already shows competence rather than where the evidence demonstrates the greatest control deficiency.",
         "QuestionID": "P1E-F-023",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongB": "Plan, Do, Check, Act is the PDCA cycle from quality management, not the NIST Cybersecurity Framework core functions.",
-        "ExplanationWrongC": "Define, Measure, Analyze, Improve, Control is the DMAIC methodology from Six Sigma, not the NIST core.",
-        "ExplanationWrongD": "Assess, Design, Implement, Monitor is not the NIST Cybersecurity Framework; the core functions are Identify, Protect, Detect, Respond, Recover.",
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Investing in additional Protect controls that are already at maturity level 4 (Managed) would produce diminishing marginal returns. The Protect function is already Orion's strongest area, and the company's recent $2.4 million loss was caused by an undetected attack, not a protection failure. While protecting systems is always important, the board's directive is to deliver the greatest risk reduction with the current budget. Reinforcing an already-strong function while leaving a maturity-level-1 weakness unaddressed is not risk-based allocation — it is a continuation of the status quo that produced the 18-day undetected breach. Effective security investment follows the marginal-risk-reduction principle: the highest return comes from addressing the largest control gap.",
+        "ExplanationWrongC": "Respond and Recover controls are important post-incident functions, but investing in them while the Detect function remains at maturity level 1 would mean continuing to respond to incidents late. The ransomware attack went undetected for 18 days — the organization's problem is not that it responded poorly once the attack was discovered, but that the attack went undiscovered for more than two weeks. Improving Respond and Recover without first closing the detection gap would ensure that future incidents are also detected late, rendering faster response only marginally effective. In the NIST CSF framework, Detect must function before Respond and Recover can be triggered effectively.",
+        "ExplanationWrongD": "An aggregate maturity score of 13 out of 25 may appear in the middle of the range, but aggregation masks the critical structural weakness. A single function at maturity level 1 (Partial) indicates that detection is ad hoc, reactive, and not integrated into business processes. The NIST CSF framework is designed as a set of interdependent functions; the aggregate score is not the appropriate metric for investment prioritization. Treating all functions as equally acceptable because the average is moderate would leave the detection gap open — the same gap that enabled an 18-day undetected ransomware attack with $2.4 million in losses. Management accountants evaluate risk by identifying outlier exposures, not by averaging across categories to make the profile appear acceptable.",
+        "ExplanationWrongB": "",
         "question_state": "Certified",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Understand"
+        "certification_date": "2026-07-22",
+        "certification_batch": "R14 Wave 5",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -13927,17 +13939,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "F",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.025 Data governance",
-        "UniqueConceptKey": "E-F-025-Data-governance",
-        "MicroTopic": "Data governance",
-        "CorrectChoice": "C",
+        "Topic": "E-F.025 Data governance policy evaluation",
+        "UniqueConceptKey": "E-F-025-Data-governance-policy-evaluation",
+        "MicroTopic": "Data governance policy evaluation",
+        "CorrectChoice": "D",
         "Choices": {
-            "A": "Security rules only",
-            "B": "Retention schedules only",
-            "C": "Policies for overall data management",
-            "D": "Storage policies only"
+            "A": "Adopt the CCPA standard as the baseline, because California's framework is the most stringent and therefore compliant with all other regimes",
+            "B": "Maintain separate governance policies for each regulation to ensure precision, accepting the administrative overhead",
+            "C": "Defer to GDPR as the global standard, because the EU regulation carries the highest maximum penalties",
+            "D": "Adopt a unified data governance framework aligned to the most rigorous requirement per policy dimension, with jurisdiction-specific overlays where necessary"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -13950,19 +13962,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Data governance defines:",
-        "ExplanationCorrect": "Data governance encompasses policies, procedures, and standards for data.",
+        "Stem": "Priya Kapoor chairs the Data Governance Committee at Meridian Global Analytics, which processes consumer data from customers in the United States (subject to CCPA and sectoral laws), the European Union (subject to GDPR), and Brazil (subject to LGPD). The committee must recommend a data governance architecture that satisfies three objectives: (1) compliance with all applicable regulations, (2) operational efficiency for the data management team, and (3) adaptability as new state-level U.S. privacy laws emerge. Three regulatory dimensions differ materially across jurisdictions: data subject access request (DSAR) response timelines (GDPR: 30 days, CCPA: 45 days, LGPD: 15 days), consent requirements for secondary data use (GDPR: opt-in, CCPA: opt-out, LGPD: opt-in), and breach notification deadlines (GDPR: 72 hours, CCPA: without unreasonable delay, LGPD: within reasonable time). Which governance architecture should Kapoor recommend?",
+        "ExplanationCorrect": "A unified data governance framework with the most rigorous requirement per policy dimension and jurisdiction-specific overlays is the optimal approach. This strategy achieves all three committee objectives. For compliance, adopting the strictest requirement per dimension (15-day DSAR timeline from LGPD, opt-in consent from GDPR/LGPD, 72-hour breach notification from GDPR) ensures that all jurisdictional requirements are satisfied simultaneously since meeting the most rigorous standard automatically meets the less rigorous ones. For operational efficiency, a single unified framework eliminates the need for the data management team to maintain multiple parallel processes, reducing administrative overhead and the risk of applying the wrong jurisdictional standard to a request. For adaptability, the framework's modular design means that when a new state-level U.S. privacy law emerges, Kapoor's team only needs to add an overlay rather than restructure the entire governance architecture. Under COSO's Information and Communication principle, information quality depends on consistent governance processes — a unified framework provides the single source of truth that fragmented jurisdictional policies cannot. A common exam trap is selecting the most familiar regulation as the default rather than conducting a dimension-by-dimension analysis to build a framework that satisfies all requirements efficiently.",
         "QuestionID": "P1E-F-025",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Data governance encompasses policies for availability, usability, integrity, and security of data, not just security rules.",
-        "ExplanationWrongB": "Retention schedules are one part of data governance, but governance also includes quality, access, privacy, and compliance policies.",
-        "ExplanationWrongD": "Storage policies are a subset; data governance includes data quality, metadata, access controls, and lifecycle management.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongA": "CCPA is not the most stringent across all regulatory dimensions. While California's framework is influential, GDPR requires opt-in consent for secondary data use (more stringent than CCPA's opt-out), and LGPD requires a 15-day DSAR response (more stringent than CCPA's 45 days). Assuming that CCPA is the most stringent because it is the most visible U.S. state privacy law is an overgeneralization. An effective governance recommendation requires comparing each regulatory dimension independently, not selecting a single regulation as the default baseline based on reputation or familiarity. Adopting CCPA as the universal baseline would fail GDPR's opt-in consent requirement for EU customer data.",
+        "ExplanationWrongB": "Maintaining separate governance policies for each regulation would achieve precision, but the committee's second objective is operational efficiency. Three separate DSAR workflows, consent management systems, and breach notification procedures would require the data management team to triage every request by jurisdiction before determining which process to follow. This administrative overhead creates both cost and compliance risk — a team member may mistakenly apply the wrong jurisdictional standard. The committee's mandate requires balancing compliance with efficiency, not optimizing for one at the expense of the other. A unified framework that meets all requirements through the most rigorous per-dimension standard achieves both objectives simultaneously.",
+        "ExplanationWrongC": "Deferring to GDPR based on penalty magnitude is a single-factor decision that ignores the committee's other objectives and the specific dimensional differences across the three regimes. While GDPR penalties can reach 4% of global annual revenue, LGPD has a 15-day DSAR timeline that is twice as fast as GDPR's 30 days. Adopting GDPR as the global standard would fail LGPD's more stringent DSAR requirement for Brazilian customer data. The appropriate methodology is to evaluate each regulatory dimension independently, identify the most rigorous requirement, and build a framework that satisfies all dimensions, not to select one regulation based on a single attribute such as penalty magnitude.",
+        "ExplanationWrongD": "",
         "question_state": "Certified",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "certification_date": "2026-07-24",
+        "certification_batch": "Session 68 Wave 1",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -14329,15 +14343,15 @@ const MCQ_BANK_E = [
         "Section": "F",
         "Difficulty": "Moderate",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.033 Big data auditing",
-        "UniqueConceptKey": "E-F-033-Big-data-auditing",
-        "MicroTopic": "Big data auditing",
-        "CorrectChoice": "C",
+        "Topic": "E-F.033 Audit population analysis comparison",
+        "UniqueConceptKey": "E-F-033-Audit-population-analysis-comparison",
+        "MicroTopic": "Audit population analysis comparison",
+        "CorrectChoice": "D",
         "Choices": {
-            "A": "Reducing sample sizes",
-            "B": "Replacing professional judgment",
-            "C": "Enabling analysis of entire populations",
-            "D": "Eliminating all testing"
+            "A": "Full population testing confirms the sample's conclusion, because both approaches identified the same error rate of approximately 1.3%",
+            "B": "The traditional sample was more effective because it found a higher error rate per transaction examined than the full population analysis",
+            "C": "Full population testing invalidates the sample approach because any discrepancy between the two methods means sampling is unreliable",
+            "D": "Full population testing identified a materially different pattern, revealing that the sample overrepresented small-dollar transactions which inflated the error rate, while the true population error rate on large transactions is lower"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -14350,19 +14364,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Big data analytics helps auditors by:",
-        "ExplanationCorrect": "Big data allows auditors to analyze full data populations.",
+        "Stem": "An internal auditor at Harbor Medical Supplies compared results from a traditional statistical sample with a full population analysis of 42,000 accounts payable transactions. The traditional sample: 200 transactions randomly selected, 3 errors found (1.5% error rate), all errors in transactions under $500, extrapolated population error $94,500. The full population analysis: all 42,000 transactions tested using automated scripts, 287 errors found (0.68% overall error rate), of which 62 errors were in transactions over $10,000 (0.24% error rate on large transactions) and 225 errors in transactions under $500 (1.37% error rate on small transactions). Total actual error value: $73,200. Which of the following correctly analyzes the comparison between these two methods?",
+        "ExplanationCorrect": "Full population testing revealed a materially different pattern from the sample. The sample found a 1.5% error rate, but this was driven entirely by small-dollar transactions (which the sample overrepresented) and extrapolated to a $94,500 error estimate that overstated the actual $73,200 error total by 29%. The full population analysis showed that large transactions ($10,000+) had a much lower error rate (0.24%) than small transactions (1.37%), but because the sample was random and small, it captured mostly small-dollar transactions and missed this stratification. The key analytical insight is not that sampling failed, but that the sample's homogeneous error rate assumption (applying the 1.5% rate to all transactions) was invalid because the error rate varies materially by transaction size. This is a comparative analysis — decomposing the population into subpopulations by transaction size reveals that the sample's conclusion was directionally correct (errors exist) but materially imprecise (the extrapolation overstated the error amount by 29%).",
         "QuestionID": "P1E-F-033",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Big data enables auditors to analyze entire populations, making sample size reduction less relevant than full population testing.",
-        "ExplanationWrongB": "Big data analytics supports auditor judgment by providing more comprehensive evidence but does not replace professional judgment.",
-        "ExplanationWrongD": "Big data changes the nature of testing by allowing full population analysis but does not eliminate the need for audit procedures.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongA": "The sample and the full population analysis did not identify the same error rate. The sample found 1.5% (3 of 200), while the full population found 0.68% (287 of 42,000). Even accounting for sampling variation, the full population rate is less than half the sample rate. More importantly, the sample's extrapolation of $94,500 overstates the actual error total of $73,200 by $21,300, a 29% overstatement. Claiming that both approaches identified the same error rate ignores the material difference in both the rate and the dollar magnitude. A correct comparison must acknowledge the quantitative differences between the two methods' results, not minimize them.",
+        "ExplanationWrongB": "The sample's higher error rate per transaction examined (1.5% vs. 0.68%) does not indicate greater effectiveness. The sample captured a disproportionate number of small-dollar transactions, which carry a higher error rate, while missing the large-transaction subpopulation where errors are rarer but individually more significant. A higher error rate in a sample that is not representative of the population structure is not a measure of effectiveness — it indicates sampling bias. The full population analysis, by examining every transaction, produced the more accurate and complete picture of the error pattern.",
+        "ExplanationWrongC": "A discrepancy between sample results and full population results does not invalidate sampling as an audit methodology. The appropriate conclusion is that the sample's assumption of a homogeneous error rate across all transaction sizes was incorrect, not that sampling itself is unreliable. Stratified sampling (dividing the population into large and small transaction strata before sampling) would likely have produced a more accurate estimate. The analysis should identify why the sample and population results diverged (error rate varies by transaction size) rather than concluding that any discrepancy between the two methods means one method is invalid.",
+        "ExplanationWrongD": "",
         "question_state": "Certified",
+        "certification_date": "2026-07-22",
+        "certification_batch": "R14 Wave 5",
         "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -14477,17 +14493,17 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "F",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.036 Cloud risks",
-        "UniqueConceptKey": "E-F-036-Cloud-risks",
-        "MicroTopic": "Cloud risks",
-        "CorrectChoice": "A",
+        "Topic": "E-F.036 Cloud migration risk evaluation",
+        "UniqueConceptKey": "E-F-036-Cloud-migration-risk-evaluation",
+        "MicroTopic": "Cloud migration risk evaluation",
+        "CorrectChoice": "C",
         "Choices": {
-            "A": "Data security and privacy concerns",
-            "B": "Reduced scalability",
-            "C": "Less accessibility",
-            "D": "Lower costs"
+            "A": "Prioritize data security risk mitigation, because breaches carry the highest reputational impact of all risk categories",
+            "B": "Begin with vendor lock-in mitigation, because dependence on a single cloud provider creates the most irreversible exposure",
+            "C": "Prioritize availability and business continuity risk mitigation, because these risks carry the highest combined likelihood and financial impact with the weakest existing controls",
+            "D": "Address compliance risk first, because regulatory penalties for data sovereignty violations are imposed regardless of actual harm"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -14500,19 +14516,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Cloud risks include:",
-        "ExplanationCorrect": "Cloud computing introduces data security and privacy risks.",
+        "Stem": "Tomas Reyes, Risk Manager at Pacific Coast Logistics, is evaluating four risk categories associated with migrating the company's ERP and warehouse management systems to a cloud platform. His risk assessment matrix shows: (1) Data security breach — moderate likelihood (15% annual probability), very high impact ($4,000,000 estimated loss), existing controls rated Strong (encryption, access management, monitoring in place); (2) Availability and business continuity — high likelihood (40% annual probability), high impact ($1,500,000 estimated loss per major outage), existing controls rated Weak (single-region deployment, no automated failover); (3) Vendor lock-in — moderate likelihood (20% annual probability of costly migration), moderate impact ($600,000 migration cost), existing controls rated Moderate (multi-cloud architecture partially implemented); (4) Compliance and data sovereignty — low likelihood (10% annual probability of regulatory action), high impact ($2,000,000 estimated penalty), existing controls rated Strong (data residency mapping complete, legal review current). Reyes must recommend which risk category to prioritize for the migration's first-phase risk mitigation investment. Which recommendation best reflects risk-based prioritization?",
+        "ExplanationCorrect": "Availability and business continuity risk should be prioritized because it presents the highest expected loss combined with the weakest existing controls. The expected annual loss (EAL) for each risk category: (1) Data security: 15% × $4,000,000 = $600,000, with Strong controls already mitigating much of this exposure; (2) Availability: 40% × $1,500,000 = $600,000, with Weak existing controls meaning most of this expected loss is uncontrolled; (3) Vendor lock-in: 20% × $600,000 = $120,000 with Moderate controls; (4) Compliance: 10% × $2,000,000 = $200,000 with Strong controls. While data security and availability have equal gross expected loss ($600,000), the existing control effectiveness is the decisive factor: Strong controls on data security mean the residual risk is already low, while Weak controls on availability mean nearly the full expected loss remains unmitigated. Under the COSO ERM framework, risk response prioritization must consider both inherent risk (likelihood × impact) and residual risk (after existing controls). For Pacific Coast Logistics, a single-region cloud deployment with no automated failover represents a Weak control environment that converts a 40% annual probability of outage into an almost-certain multi-year event. A common exam trap is prioritizing the risk with the highest single impact ($4M data breach) without considering that existing controls already reduce that exposure, while a lower-impact but higher-likelihood risk with weak controls represents the greater residual exposure.",
         "QuestionID": "P1E-F-036",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongB": "Cloud computing typically increases scalability through on-demand resources, rather than reducing it.",
-        "ExplanationWrongC": "Cloud computing improves accessibility by enabling access from anywhere with internet connectivity.",
-        "ExplanationWrongD": "Cloud can reduce capital costs but introduces operational costs; cost is an attribute, not a risk of cloud computing.",
-        "ExplanationWrongA": "",
+        "ExplanationWrongA": "Data security breaches carry the highest reputational impact, and the $4,000,000 maximum loss is the largest single figure in the matrix. However, Reyes's assessment shows that existing controls against data security are rated Strong, with encryption, access management, and monitoring already in place. This means the residual risk after controls is substantially lower than the inherent risk of $600,000 expected annual loss. Prioritizing a risk with Strong controls while a risk with equal expected annual loss ($600,000) and Weak controls remains unaddressed is not risk-based prioritization — it is prioritizing by headline impact number rather than by residual risk exposure. Reputational impact is a legitimate consideration but must be weighed alongside control effectiveness and likelihood.",
+        "ExplanationWrongB": "Vendor lock-in represents a genuine concern in cloud migration strategy, particularly at moderate likelihood (20%) with Moderate existing controls. However, the expected annual loss of $120,000 is substantially lower than the availability risk ($600,000 EAL with Weak controls). The lock-in risk is also partially mitigated by the multi-cloud architecture that is already partially implemented. While lock-in should be addressed in subsequent phases, directing first-phase resources to a risk with one-fifth the expected loss and stronger existing controls than the availability risk is not consistent with the residual-risk prioritization principle. Risk prioritization requires comparing residual exposures, not addressing risks in order of perceived irreversibility.",
+        "ExplanationWrongD": "Compliance risk carries real penalties ($2,000,000 maximum) and strict liability applies regardless of actual harm, making it a serious concern. However, Reyes's assessment rates existing controls against compliance as Strong, with data residency mapping complete and legal review current. The expected annual loss of $200,000 with Strong controls means the residual risk is already well-managed. Additionally, the 10% likelihood is the lowest of the four categories. Prioritizing the lowest-likelihood, best-controlled risk for first-phase investment would leave the highest residual exposure (availability at $600,000 EAL with Weak controls) unaddressed. Regulatory penalties are a real concern but must be evaluated within the complete residual risk framework, not in isolation.",
+        "ExplanationWrongC": "",
         "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "certification_date": "2026-07-22",
+        "certification_batch": "R14 Wave 5",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [
@@ -16520,14 +16538,12 @@ const MCQ_BANK_E = [
         "ItemStyle": "single-select",
         "ExplanationWrongD": "",
         "question_state": "Certified",
-        "DifficultyScore": 1,
+        "DifficultyScore": 4,
         "ExplanationWrongA": "Competitive benchmarking alone is incomplete. While comparing against competitors reveals market position, it provides no internal baseline and limits comparison to within-industry peers who may also have suboptimal processes. The recommended approach uses competitive benchmarking as a phase within a broader program, not as the sole methodology.",
         "ExplanationWrongB": "Internal benchmarking alone creates a closed-loop system — Renaissance benchmarks against itself, confirming improvement but not competitiveness. A company can improve internally while competitors improve faster. Sole reliance on internal benchmarking risks complacency — 'better than we were' substitutes for 'as good as we need to be.'",
         "ExplanationWrongC": "Functional benchmarking against same-day-fulfillment e-commerce is overly ambitious as a starting point. The 3.2→same-day gap is an order of magnitude, and the processes and infrastructure may not be transferable. Functional benchmarking is most effective after the organization understands its own capabilities and market position. A candidate selecting this option pursues best-in-class without the intermediate steps that make the comparison actionable.",
-        "ExplanationWrongD": "",
         "certification_date": "2026-07-24",
         "certification_batch": "S71",
-        "DifficultyScore": 4,
         "CognitiveLevel": "Analyze"
     },
     {
@@ -20528,15 +20544,15 @@ const MCQ_BANK_E = [
         "Section": "F",
         "Difficulty": "Moderate",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.044 Analytics maturity",
-        "UniqueConceptKey": "E-F-044-Analytics-maturity",
-        "MicroTopic": "Analytics maturity",
-        "CorrectChoice": "B",
+        "Topic": "E-F.044 Analytics maturity gap analysis",
+        "UniqueConceptKey": "E-F-044-Analytics-maturity-gap-analysis",
+        "MicroTopic": "Analytics maturity gap analysis",
+        "CorrectChoice": "A",
         "Choices": {
-            "A": "Monitoring",
-            "B": "Descriptive analytics",
-            "C": "Predictive analytics",
-            "D": "Prescriptive analytics"
+            "A": "Data infrastructure and predictive analytics, because both have maturity scores of 1 and the widest gaps relative to the target maturity level of 3 required to support the 3-year strategic plan",
+            "B": "Data governance and visualization, because the 1-point gaps in these dimensions are the easiest to close with existing resources",
+            "C": "Descriptive analytics and reporting, because strengthening areas of existing competence to excellence creates the fastest path to overall capability improvement",
+            "D": "All five dimensions equally, because the average maturity score of 2.4 indicates that no single dimension is critically behind"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -20549,19 +20565,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Data analytics maturity model level 1 is:",
-        "ExplanationCorrect": "Level 1 is descriptive: what happened.",
+        "Stem": "A chief data officer at Northland Analytics assessed the company's analytics maturity across five capability dimensions on a 1–5 scale where 3 is the target level required to support the 3-year strategic plan. The assessment results are: Descriptive Analytics — maturity 4 (target 3, gap +1); Diagnostic Analytics — maturity 3 (target 3, gap 0); Data Infrastructure — maturity 1 (target 3, gap -2); Predictive Analytics — maturity 1 (target 3, gap -2); Data Governance — maturity 3 (target 3, gap 0). The CDO must identify the two highest-priority capability gaps to address in the next budget cycle. Which gap analysis is correct?",
+        "ExplanationCorrect": "Data Infrastructure and Predictive Analytics are the two capabilities with maturity scores of 1 and gaps of -2 relative to the target of 3. These are the only dimensions below the target maturity level. Data infrastructure at level 1 indicates that foundational technology (data storage, processing, integration) is at an ad hoc stage, which constrains all higher-level analytics capabilities. Predictive analytics at level 1 means the company cannot forecast demand, model scenarios, or identify leading indicators — a critical gap for a 3-year strategic plan that requires forward-looking decision support. The gap analysis methodology is straightforward: identify capabilities where current maturity < target maturity, and prioritize the largest negative gaps. Capabilities at or above target (descriptive at +1, diagnostic at 0, governance at 0) do not require immediate investment. This is a gap identification analysis — comparing current state to target state across dimensions to isolate where investment is needed.",
         "QuestionID": "P1E-F-044",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Monitoring is a more advanced stage of analytics maturity; the first level is descriptive analytics.",
-        "ExplanationWrongC": "Predictive analytics is a higher maturity level; level 1 is descriptive analytics.",
-        "ExplanationWrongD": "Prescriptive analytics is the highest maturity level; level 1 is descriptive analytics.",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Data governance (maturity 3, gap 0) and visualization (not listed among the five assessed dimensions) cannot be identified as the priority gaps. Governance is already at the target level and requires maintenance investment, not priority remediation. The concept of prioritizing the 'easiest to close' gaps confuses ease of remediation with business impact. Gap analysis under a strategic plan prioritizes the capabilities most critical to achieving the target state, not the gaps that require the least effort to close. A capability at maturity 1 that is essential to the strategic plan should receive resources even if it is difficult to develop.",
+        "ExplanationWrongC": "Descriptive analytics at maturity 4 is already 1 point above the target of 3, and diagnostic analytics at maturity 3 is exactly at the target. These are areas of strength, not gaps. The strategy of strengthening existing competence to excellence has some merit in general capability development, but the CDO is specifically asked to identify priority capability gaps for achieving the 3-year target state. Investing in areas that already exceed the target while leaving data infrastructure and predictive analytics at maturity level 1 would ensure that the company continues to excel at describing what happened while remaining unable to build the infrastructure needed for advanced analytics or to predict what will happen. This is a misallocation that prioritizes reinforcement over gap closure.",
+        "ExplanationWrongD": "An average maturity score of 2.4 masks the bimodal distribution: three capabilities at or above target (3, 3, 4) and two capabilities critically below target (1, 1). Averages are inappropriate for gap analysis when the distribution is polarized. The two level-1 capabilities are 2 full maturity levels below the target of 3, representing fundamental capability deficits, not moderate shortfalls. Treating all dimensions equally because the average appears adequate is statistically unsound and would leave the two most critical capability gaps unaddressed. Effective gap analysis disaggregates the average to identify outlier dimensions requiring intervention.",
+        "ExplanationWrongA": "",
         "question_state": "Certified",
+        "certification_date": "2026-07-22",
+        "certification_batch": "R14 Wave 5",
         "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -20778,15 +20796,15 @@ const MCQ_BANK_E = [
         "Section": "F",
         "Difficulty": "Moderate",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.049 Data warehouse vs lake",
-        "UniqueConceptKey": "E-F-049-Data-warehouse-vs-lake",
-        "MicroTopic": "Data warehouse vs lake",
-        "CorrectChoice": "B",
+        "Topic": "E-F.049 Data architecture trade-off analysis",
+        "UniqueConceptKey": "E-F-049-Data-architecture-trade-off-analysis",
+        "MicroTopic": "Data architecture trade-off analysis",
+        "CorrectChoice": "A",
         "Choices": {
-            "A": "Cost",
-            "B": "Structure and processing level",
-            "C": "Storage size",
-            "D": "Speed"
+            "A": "The ERP and CRM data should be routed to the data warehouse, while IoT sensor data should be routed to the data lake, because the warehouse is optimized for structured, schema-defined querying and the lake accommodates raw, unstructured data for future exploratory analysis",
+            "B": "All three data sources should be consolidated into a single data lake, because data lakes are the modern standard and can handle any data type including structured transaction records",
+            "C": "All three data sources should be loaded into the data warehouse, because the warehouse's schema-on-write approach ensures data quality for financial reporting which is the highest organizational priority",
+            "D": "IoT data should be discarded because sensor data is not relevant to financial analysis, and only ERP and CRM data should be stored in the warehouse"
         },
         "CalculationItem": false,
         "Part": 1,
@@ -20799,19 +20817,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Data warehouse vs data lake main difference is:",
-        "ExplanationCorrect": "Data warehouses store processed data; data lakes store raw data.",
+        "Stem": "A data architect at Apex Manufacturing is designing the data architecture for consolidating three data sources: (1) ERP transaction records — 500,000 rows of structured financial data monthly, schema-defined, requiring fast SQL querying for month-end close reporting; (2) CRM customer interaction logs — 2 million records monthly, structured but with variable-length fields, used for customer profitability analysis; (3) IoT production sensor data — 50 million readings daily, semi-structured JSON format with inconsistent field names across sensor generations, primarily stored for future predictive maintenance modeling. The company has both a data warehouse (optimized for structured, schema-on-write, SQL-based analytics) and a data lake (optimized for raw storage, schema-on-read, supporting diverse data formats). Which data routing analysis is correct?",
+        "ExplanationCorrect": "Routing ERP and CRM data to the data warehouse and IoT sensor data to the data lake correctly matches each data source's characteristics to the appropriate architecture. ERP data is highly structured with a defined schema, requires fast SQL querying for month-end close reporting, and benefits from the warehouse's schema-on-write approach that validates and standardizes data on ingestion — essential for financial reporting accuracy. CRM data, while having variable-length fields, is still structured and used for customer profitability analysis that requires SQL aggregations and joins, which the warehouse is optimized for. IoT sensor data has inconsistent field names across sensor generations (schema variability over time), arrives at massive volume (50 million readings daily), and is primarily stored for future-use cases that are not yet defined. The data lake's schema-on-read approach is ideal here: raw data is stored without transformation, and the schema is applied only when the data is read for a specific analysis. This is a comparative architecture analysis — decomposing the data sources by their structural characteristics and matching each to the storage architecture whose strengths align with those characteristics.",
         "QuestionID": "P1E-F-049",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "Cost is a secondary consideration; the main difference is the level of data structure and processing.",
-        "ExplanationWrongC": "Storage size is a characteristic but not the defining difference between warehouse and lake.",
-        "ExplanationWrongD": "Speed is a performance metric, not the fundamental structural difference between warehouse and lake.",
-        "ExplanationWrongB": "",
+        "ExplanationWrongB": "Consolidating all data into a single data lake ignores the specific requirements of the ERP and CRM data. Month-end close reporting requires fast, reliable SQL queries against validated, schema-consistent data — which is the data warehouse's core strength. A data lake using schema-on-read would require the financial reporting team to validate and structure the ERP data at query time for every report, introducing latency and the risk of inconsistent transformations across reports. While data lakes can store structured data, the warehouse is purpose-built for the type of financial analytics that Apex's ERP and CRM data supports. Routing all data to the lake because it is the 'modern standard' substitutes architectural fashion for requirement-based analysis.",
+        "ExplanationWrongC": "Loading the IoT sensor data (50 million readings daily, semi-structured, inconsistent field names) into a data warehouse designed for schema-on-write would require defining and enforcing a schema on the raw sensor data before ingestion. This creates two problems: the inconsistent field names across sensor generations would require a complex ETL transformation layer to normalize, and 50 million daily readings would impose heavy write overhead on a warehouse optimized for read performance. Additionally, if the sensor data is primarily stored for future-use cases (predictive maintenance models not yet defined), applying a schema now may preclude analytical approaches not yet anticipated. The warehouse's schema-on-write model is a poor fit for high-volume, schema-variable, future-use data.",
+        "ExplanationWrongD": "Discarding IoT sensor data because it is not relevant to current financial analysis is a short-sighted data architecture decision. The stated purpose of storing the sensor data is future predictive maintenance modeling, which will improve operational efficiency and reduce production downtime costs. Predictive maintenance uses sensor data to identify patterns that precede equipment failure — this has direct financial implications through reduced maintenance costs, avoided downtime, and extended asset life. A management accountant should recognize that operational data with future financial impact is relevant to the organization even if it does not directly feed current financial reporting. The appropriate approach is to route it to the architecture (data lake) best suited for its storage and eventual analytical use.",
+        "ExplanationWrongA": "",
         "question_state": "Certified",
+        "certification_date": "2026-07-22",
+        "certification_batch": "R14 Wave 5",
         "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "CognitiveLevel": "Analyze"
     },
     {
         "StudyLinks": [
@@ -21576,22 +21596,22 @@ const MCQ_BANK_E = [
         ],
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "Section": "F",
-        "Difficulty": "Moderate",
+        "Difficulty": "Difficult",
         "SectionName": "Technology and Analytics",
-        "Topic": "E-F.065 Maximum tolerable downtime",
-        "UniqueConceptKey": "E-F-065-Maximum-tolerable-downtime",
-        "MicroTopic": "Maximum tolerable downtime",
-        "CorrectChoice": "C",
+        "Topic": "E-F.065 Business continuity recovery prioritization",
+        "UniqueConceptKey": "E-F-065-Business-continuity-recovery-prioritization",
+        "MicroTopic": "Business continuity recovery prioritization",
+        "CorrectChoice": "A",
         "Choices": {
-            "A": "Recovery time objective",
-            "B": "System capacity",
-            "C": "Maximum time a system can be unavailable",
-            "D": "Recovery point objective"
+            "A": "The trading platform, because its MTD is the shortest (2 hours) and the gap between its RTO (1 hour) and MTD leaves the narrowest recovery window, indicating the highest criticality",
+            "B": "The general ledger, because financial reporting systems must always receive the highest priority in any business continuity plan",
+            "C": "The payroll system, because employee compensation disruption creates immediate workforce risk regardless of quantitative thresholds",
+            "D": "The CRM system, because customer-facing systems have the highest revenue impact and should always be recovered first"
         },
         "CalculationItem": false,
         "Part": 1,
         "ItemType": "MCQ",
-        "LOSTag": "Part 1 Section E.5",
+        "LOSTag": "Part 1 Section F.5",
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
             "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21599,19 +21619,21 @@ const MCQ_BANK_E = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "Stem": "Maximum tolerable downtime (MTD) is:",
-        "ExplanationCorrect": "MTD is the longest acceptable outage period.",
+        "Stem": "Javier Mendez leads the Business Continuity team at Atlas Securities, a broker-dealer that processes approximately $200 million in daily trades. The team has completed a business impact analysis for five critical systems with the following recovery parameters: Trading Platform — RTO 1 hour, RPO 30 seconds, MTD 2 hours, hourly downtime cost $950,000; General Ledger — RTO 8 hours, RPO 4 hours, MTD 48 hours, hourly downtime cost $75,000; Payroll System — RTO 24 hours, RPO 8 hours, MTD 72 hours, hourly downtime cost $12,000; CRM System — RTO 4 hours, RPO 1 hour, MTD 24 hours, hourly downtime cost $180,000; Email System — RTO 12 hours, RPO 6 hours, MTD 36 hours, hourly downtime cost $45,000. The IT disaster recovery budget can fund enhanced recovery capabilities for two systems in the current cycle. Mendez must recommend which system receives the highest priority. Which recommendation best reflects the business continuity principles of MTD and RTO analysis?",
+        "ExplanationCorrect": "The trading platform should receive the highest recovery priority because its MTD of 2 hours is the shortest across all five systems, indicating that a disruption exceeding 2 hours would cause unacceptable harm to the organization. The narrow gap between RTO (1 hour) and MTD (2 hours) means the recovery team has only a 60-minute window to restore the system before crossing the maximum tolerable downtime threshold. This compressed recovery window reflects the system's criticality. With an hourly downtime cost of $950,000, a single MTD-exceeding outage would cost the organization $1.9 million or more. Business continuity prioritization is fundamentally driven by MTD: the system with the shortest MTD has the least tolerance for disruption and therefore requires the most robust recovery investment. RTO defines the target recovery speed, and systems whose RTO approaches their MTD represent the highest priority because the margin for error is smallest. Under COSO's operations objectives, business continuity planning must ensure that critical business functions can continue within tolerable downtime thresholds. While the general ledger and CRM systems are important, their MTD values of 48 hours and 24 hours respectively provide substantially more recovery time, reducing the urgency of enhanced recovery investment relative to the trading platform. A common exam trap is prioritizing systems based on functional importance rather than quantitative MTD/RTO analysis — MTD is the objective measure of criticality.",
         "QuestionID": "P1E-F-065",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "ItemStyle": "single-select",
-        "ExplanationWrongA": "RTO is the target restoration time; MTD is the maximum total time a system can be unavailable before causing severe harm.",
-        "ExplanationWrongB": "System capacity is a performance measure, not related to downtime tolerance.",
-        "ExplanationWrongD": "RPO defines acceptable data loss; MTD defines the maximum duration a system can be unavailable.",
-        "ExplanationWrongC": "",
+        "ExplanationWrongB": "The general ledger is a critical financial reporting system, but its MTD of 48 hours provides a two-day recovery window with an RTO of 8 hours, meaning the recovery team has a 40-hour margin between the target recovery time and the maximum tolerable downtime. The hourly downtime cost of $75,000 is substantially lower than the trading platform's $950,000. While financial reporting is essential, business continuity prioritization is based on quantitative MTD analysis, not on a categorical hierarchy of system types. A blanket rule that financial systems always receive highest priority would, in this case, direct scarce recovery resources away from a system whose failure could cost nearly $1 million per hour and has only a 2-hour tolerance for disruption.",
+        "ExplanationWrongC": "Payroll disruption creates real workforce risk and would generate significant employee relations issues if prolonged. However, the payroll system's MTD of 72 hours (three full business days) and RTO of 24 hours indicate that the organization can tolerate a full day of payroll system unavailability before recovery must be initiated. With an hourly downtime cost of $12,000, the financial impact is also the lowest of the five systems. Business continuity prioritization must distinguish between systems that are important (payroll) and systems whose failure is existentially threatening to the organization within hours (trading platform at 2-hour MTD). Immediate workforce risk is a legitimate consideration, but management accountants rely on the MTD framework to make objective prioritization decisions across competing claims of importance.",
+        "ExplanationWrongD": "The CRM system is customer-facing and has the second-highest hourly downtime cost at $180,000. Its MTD of 24 hours and RTO of 4 hours give it a 20-hour recovery window margin, far more generous than the trading platform's 60-minute margin. While customer impact is important, the trading platform's downtime costs are more than five times higher per hour ($950,000 vs. $180,000), and its MTD is twelve times shorter (2 hours vs. 24 hours). Under business continuity principles, the system with the shortest MTD and highest cost of downtime should receive priority, regardless of whether it is customer-facing, internal, or financial. The CRM system represents the second-highest priority and would be an appropriate candidate for the second enhanced recovery slot, but it should not displace the trading platform as the highest-priority system.",
+        "ExplanationWrongA": "",
         "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Understand"
+        "certification_date": "2026-07-22",
+        "certification_batch": "R14 Wave 5",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "StudyLinks": [

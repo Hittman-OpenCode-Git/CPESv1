@@ -1048,12 +1048,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Applied manufacturing overhead"
                 ],
                 "RightItems": [
-                    "Units produced x DLH per unit x Wage rate",
-                    "Actual DLH x Variable OH rate per DLH",
-                    "Remains constant within the relevant range",
-                    "Predetermined OH rate x Actual activity",
-                    "Units sold x Selling price"
-                ],
+    "Remains constant within the relevant range",
+    "Units produced x DLH per unit x Wage rate",
+    "Predetermined OH rate x Actual activity",
+    "Units sold x Selling price",
+    "Actual DLH x Variable OH rate per DLH"
+],
                 "Correct": {
                     "Direct labor budget": "Units produced x DLH per unit x Wage rate",
                     "Variable overhead budget": "Actual DLH x Variable OH rate per DLH",
@@ -1393,12 +1393,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Operating leverage"
                 ],
                 "RightItems": [
-                    "Selling price minus variable cost per unit",
-                    "Fixed costs divided by contribution margin per unit",
-                    "Actual sales minus break-even sales",
-                    "Contribution margin divided by operating income",
-                    "Total revenue minus total cost"
-                ],
+    "Total revenue minus total cost",
+    "Contribution margin divided by operating income",
+    "Fixed costs divided by contribution margin per unit",
+    "Actual sales minus break-even sales",
+    "Selling price minus variable cost per unit"
+],
                 "Correct": {
                     "Contribution margin per unit": "Selling price minus variable cost per unit",
                     "Break-even point (units)": "Fixed costs divided by contribution margin per unit",
@@ -1557,12 +1557,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Achieve operating cash flow sufficient to fund capital expenditures"
                 ],
                 "RightItems": [
-                    "Financial — profitability",
-                    "Financial — cost efficiency",
-                    "Financial — revenue growth",
-                    "Financial — liquidity and investment",
-                    "Customer — satisfaction"
-                ],
+    "Financial — cost efficiency",
+    "Financial — revenue growth",
+    "Financial — liquidity and investment",
+    "Customer — satisfaction",
+    "Financial — profitability"
+],
                 "Correct": {
                     "Increase return on capital employed (ROCE) to 18%": "Financial — profitability",
                     "Reduce cost of goods sold by 5% through process improvements": "Financial — cost efficiency",
@@ -1606,12 +1606,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Increase market share in industrial automation from 12% to 18%"
                 ],
                 "RightItems": [
-                    "Customer — operational excellence",
-                    "Customer — customer loyalty and satisfaction",
-                    "Customer — customer retention",
-                    "Customer — market position",
-                    "Financial — revenue growth"
-                ],
+    "Customer — customer loyalty and satisfaction",
+    "Customer — customer retention",
+    "Customer — operational excellence",
+    "Financial — revenue growth",
+    "Customer — market position"
+],
                 "Correct": {
                     "Improve on-time delivery rate from 91% to 98%": "Customer — operational excellence",
                     "Increase Net Promoter Score (NPS) from +32 to +50": "Customer — customer loyalty and satisfaction",
@@ -1655,12 +1655,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Automate inventory replenishment to reduce stockouts by 50%"
                 ],
                 "RightItems": [
-                    "Operations management — quality",
-                    "Operations management — cycle time",
-                    "Supplier management — quality assurance",
-                    "Inventory management — efficiency",
-                    "Customer management — satisfaction"
-                ],
+    "Operations management — cycle time",
+    "Supplier management — quality assurance",
+    "Operations management — quality",
+    "Customer management — satisfaction",
+    "Inventory management — efficiency"
+],
                 "Correct": {
                     "Reduce defect rate from 4.7 to below 2 per 1,000 units": "Operations management — quality",
                     "Reduce order-to-delivery cycle time from 14 days to 7 days": "Operations management — cycle time",
@@ -1704,12 +1704,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Launch a leadership development program for middle managers"
                 ],
                 "RightItems": [
-                    "Human capital — employee skills and competencies",
-                    "Information capital — technology infrastructure",
-                    "Organization capital — culture and alignment",
-                    "Human capital — leadership development",
-                    "Financial capital — investment returns"
-                ],
+    "Organization capital — culture and alignment",
+    "Human capital — leadership development",
+    "Human capital — employee skills and competencies",
+    "Information capital — technology infrastructure",
+    "Financial capital — investment returns"
+],
                 "Correct": {
                     "Increase employee certification rate from 62% to 85%": "Human capital — employee skills and competencies",
                     "Implement an enterprise-wide CRM system to improve customer data analytics": "Information capital — technology infrastructure",
@@ -1753,12 +1753,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Return on capital employed (ROCE)"
                 ],
                 "RightItems": [
-                    "Leading indicator — investments in human capital drive future performance",
-                    "Leading indicator — customer satisfaction predicts future revenue",
-                    "Leading indicator — operational quality drives customer retention",
-                    "Lagging indicator — measures the outcome of past strategic actions",
-                    "Lagging indicator — employee turnover rate"
-                ],
+    "Lagging indicator — measures the outcome of past strategic actions",
+    "Lagging indicator — employee turnover rate",
+    "Leading indicator — customer satisfaction predicts future revenue",
+    "Leading indicator — operational quality drives customer retention",
+    "Leading indicator — investments in human capital drive future performance"
+],
                 "Correct": {
                     "Employee training hours completed": "Leading indicator — investments in human capital drive future performance",
                     "Customer satisfaction score (NPS)": "Leading indicator — customer satisfaction predicts future revenue",
@@ -2125,12 +2125,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Division A is located in a low-tax country; Division B is in a high-tax country; the company wants to minimize total global tax"
                 ],
                 "RightItems": [
-                    "Variable cost — with idle capacity, the opportunity cost is zero, so any transfer price above variable cost adds to company profit without sacrificing external sales",
-                    "Market price — competitive market provides an objective, verifiable price that aligns divisional incentives with company goals",
-                    "Full cost plus markup — cost-based pricing is appropriate when no market benchmark exists; a markup ensures the selling division earns a reasonable return",
-                    "Negotiated or manipulated transfer price — tax-minimization strategies may justify prices that differ from pure economic transfer pricing, subject to arm's-length compliance",
-                    "Dual pricing — credit the selling division at market price and charge the buying division at cost to resolve goal conflicts"
-                ],
+    "Negotiated or manipulated transfer price — tax-minimization strategies may justify prices that differ from pure economic transfer pricing, subject to arm's-length compliance",
+    "Full cost plus markup — cost-based pricing is appropriate when no market benchmark exists; a markup ensures the selling division earns a reasonable return",
+    "Dual pricing — credit the selling division at market price and charge the buying division at cost to resolve goal conflicts",
+    "Variable cost — with idle capacity, the opportunity cost is zero, so any transfer price above variable cost adds to company profit without sacrificing external sales",
+    "Market price — competitive market provides an objective, verifiable price that aligns divisional incentives with company goals"
+],
                 "Correct": {
                     "Division A has excess capacity and Division B needs 40,000 chips; no external buyer exists for these units": "Variable cost — with idle capacity, the opportunity cost is zero, so any transfer price above variable cost adds to company profit without sacrificing external sales",
                     "Division A sells identical chips externally at $50; the chip market is highly competitive with many suppliers": "Market price — competitive market provides an objective, verifiable price that aligns divisional incentives with company goals",
@@ -2521,12 +2521,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Difference between actual fixed overhead and budgeted fixed overhead"
                 ],
                 "RightItems": [
-                    "Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U",
-                    "Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A",
-                    "Sales volume variance — (Actual Units − Budgeted Units) × Standard Contribution Margin per Unit = (12,000 − 10,000) × $25 = $50,000 F",
-                    "Fixed overhead spending variance — Actual FOH − Budgeted FOH = $185,000 − $180,000 = $5,000 U",
-                    "Production volume variance — measures fixed overhead capacity utilization"
-                ],
+    "Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A",
+    "Sales volume variance — (Actual Units − Budgeted Units) × Standard Contribution Margin per Unit = (12,000 − 10,000) × $25 = $50,000 F",
+    "Fixed overhead spending variance — Actual FOH − Budgeted FOH = $185,000 − $180,000 = $5,000 U",
+    "Production volume variance — measures fixed overhead capacity utilization",
+    "Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U"
+],
                 "Correct": {
                     "Difference between actual revenue and flexible budget revenue at 12,000 units": "Selling price variance — (Actual Price − Standard Price) × Actual Quantity = ($73 − $75) × 12,000 = $24,000 U",
                     "Difference between flexible budget variable cost at 12,000 units and actual variable cost": "Flexible budget variable cost variance — Sum of (actual cost − standard cost × actual units) for DM, DL, VOH, VS&A",
@@ -3275,11 +3275,11 @@ const ENHANCED_CASE_BASE3 = [
                     "Overapplied overhead"
                 ],
                 "RightItems": [
-                    "Estimated OH divided by estimated activity base",
-                    "Uses estimated rate to apply OH during the period",
-                    "Activity base that causes overhead costs",
-                    "Applied OH exceeds actual OH incurred"
-                ],
+    "Applied OH exceeds actual OH incurred",
+    "Activity base that causes overhead costs",
+    "Estimated OH divided by estimated activity base",
+    "Uses estimated rate to apply OH during the period"
+],
                 "Correct": {
                     "Predetermined overhead rate": "Estimated OH divided by estimated activity base",
                     "Normal costing": "Uses estimated rate to apply OH during the period",
@@ -3752,12 +3752,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Communicating risk information to stakeholders through structured reporting channels"
                 ],
                 "RightItems": [
-                    "Governance and Culture",
-                    "Strategy and Objective-Setting",
-                    "Performance",
-                    "Information, Communication, and Reporting",
-                    "Review and Revision"
-                ],
+    "Review and Revision",
+    "Information, Communication, and Reporting",
+    "Governance and Culture",
+    "Performance",
+    "Strategy and Objective-Setting"
+],
                 "Correct": {
                     "Establishing the board's risk oversight structure and defining risk culture expectations": "Governance and Culture",
                     "Defining risk appetite and aligning risk tolerances with strategic planning": "Strategy and Objective-Setting",
@@ -3800,12 +3800,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Conducting semi-annual ERM program effectiveness reviews and updating the risk register"
                 ],
                 "RightItems": [
-                    "Governance and Culture",
-                    "Strategy and Objective-Setting",
-                    "Performance",
-                    "Review and Revision",
-                    "Information, Communication, and Reporting"
-                ],
+    "Review and Revision",
+    "Performance",
+    "Strategy and Objective-Setting",
+    "Governance and Culture",
+    "Information, Communication, and Reporting"
+],
                 "Correct": {
                     "Training plant managers on the company's risk culture expectations and ethical values": "Governance and Culture",
                     "Setting operational risk limits for each facility based on the board's risk appetite statement": "Strategy and Objective-Setting",
@@ -3849,12 +3849,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Market risk: Competitor is launching a similar surgical instrument at a 15% lower price point"
                 ],
                 "RightItems": [
-                    "Acceptance — the cost of mitigation exceeds the potential impact; budget for compliance",
-                    "Mitigation — develop alternative supplier relationships and maintain safety stock",
-                    "Mitigation — implement ERP upgrade project with dedicated budget and timeline",
-                    "Acceptance — monitor competitor pricing and differentiate through quality and service",
-                    "Avoidance — discontinue all products in the affected category"
-                ],
+    "Mitigation — develop alternative supplier relationships and maintain safety stock",
+    "Avoidance — discontinue all products in the affected category",
+    "Acceptance — monitor competitor pricing and differentiate through quality and service",
+    "Mitigation — implement ERP upgrade project with dedicated budget and timeline",
+    "Acceptance — the cost of mitigation exceeds the potential impact; budget for compliance"
+],
                 "Correct": {
                     "Regulatory risk: New FDA traceability requirements may increase compliance costs by $500,000": "Acceptance — the cost of mitigation exceeds the potential impact; budget for compliance",
                     "Supplier risk: Single-source supplier for titanium may face labor strike; probability is low but impact is severe": "Mitigation — develop alternative supplier relationships and maintain safety stock",
@@ -3898,12 +3898,12 @@ const ENHANCED_CASE_BASE3 = [
                     "The risk committee's quarterly review found two emerging risks not previously identified"
                 ],
                 "RightItems": [
-                    "Assess substantial change — the acquisition introduces new risks that must be integrated into the ERM program",
-                    "Assess substantial change — regulatory changes may require updates to compliance risk assessments",
-                    "Assess substantial change — third-party risk from supplier breach affects MedTech's risk profile",
-                    "Pursue improvement in ERM — the risk identification process should be enhanced to capture emerging risks proactively",
-                    "Information and Communication — report the findings to the board"
-                ],
+    "Pursue improvement in ERM — the risk identification process should be enhanced to capture emerging risks proactively",
+    "Assess substantial change — the acquisition introduces new risks that must be integrated into the ERM program",
+    "Assess substantial change — regulatory changes may require updates to compliance risk assessments",
+    "Information and Communication — report the findings to the board",
+    "Assess substantial change — third-party risk from supplier breach affects MedTech's risk profile"
+],
                 "Correct": {
                     "The company plans to acquire a smaller competitor with a different risk culture": "Assess substantial change — the acquisition introduces new risks that must be integrated into the ERM program",
                     "The FDA has proposed new quality reporting requirements that could affect product clearance timelines": "Assess substantial change — regulatory changes may require updates to compliance risk assessments",
@@ -3946,12 +3946,12 @@ const ENHANCED_CASE_BASE3 = [
                     "More effective board oversight through structured risk reporting and dashboards"
                 ],
                 "RightItems": [
-                    "Governance and Culture — establishes tone at the top and risk culture",
-                    "Strategy and Objective-Setting — integrates risk with strategic planning",
-                    "Performance — provides systematic risk identification and assessment tools",
-                    "Information, Communication, and Reporting — delivers risk data to decision-makers",
-                    "Review and Revision — evaluates ERM effectiveness"
-                ],
+    "Strategy and Objective-Setting — integrates risk with strategic planning",
+    "Review and Revision — evaluates ERM effectiveness",
+    "Information, Communication, and Reporting — delivers risk data to decision-makers",
+    "Governance and Culture — establishes tone at the top and risk culture",
+    "Performance — provides systematic risk identification and assessment tools"
+],
                 "Correct": {
                     "Improved risk awareness and ethical decision-making throughout the organization": "Governance and Culture — establishes tone at the top and risk culture",
                     "Better-informed strategic decisions because risk appetite is explicitly considered": "Strategy and Objective-Setting — integrates risk with strategic planning",
@@ -4291,12 +4291,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Teller transaction processing — RTO 4 hours; RPO 1 hour; high impact on branch operations"
                 ],
                 "RightItems": [
-                    "Hot site or DRaaS — replicate systems in near-real-time to a geographically separate facility; automated failover within minutes",
-                    "Warm site — pre-configured hardware and network connectivity available; load backup data and resume operations within 24 hours",
-                    "Cold site or manual workaround — empty facility with power/cooling; acceptable for low-criticality functions that can be deferred",
-                    "Warm site with data replication — pre-staged environment with hourly data replication to meet the 4-hour RTO and 1-hour RPO",
-                    "Ignore — the function does not need any recovery plan"
-                ],
+    "Warm site with data replication — pre-staged environment with hourly data replication to meet the 4-hour RTO and 1-hour RPO",
+    "Ignore — the function does not need any recovery plan",
+    "Warm site — pre-configured hardware and network connectivity available; load backup data and resume operations within 24 hours",
+    "Cold site or manual workaround — empty facility with power/cooling; acceptable for low-criticality functions that can be deferred",
+    "Hot site or DRaaS — replicate systems in near-real-time to a geographically separate facility; automated failover within minutes"
+],
                 "Correct": {
                     "Online banking platform — RTO 2 hours; RPO 15 minutes; critical to member trust and regulatory compliance": "Hot site or DRaaS — replicate systems in near-real-time to a geographically separate facility; automated failover within minutes",
                     "Loan origination system — RTO 24 hours; RPO 4 hours; moderate impact if unavailable for a day": "Warm site — pre-configured hardware and network connectivity available; load backup data and resume operations within 24 hours",
@@ -4813,12 +4813,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Proportion of total expenses by category (6 categories)"
                 ],
                 "RightItems": [
-                    "Line chart — best for continuous data over time; clearly shows trend direction, seasonality, and inflection points",
-                    "Bar chart sorted descending — enables rapid visual comparison across categories; best for ranking",
-                    "Scatter plot with trend line — reveals correlation between two continuous variables; shows outliers",
-                    "Treemap or pie chart — effective for showing part-to-whole relationships with limited categories",
-                    "3D pie chart — visually engaging option that management prefers for presentations"
-                ],
+    "Bar chart sorted descending — enables rapid visual comparison across categories; best for ranking",
+    "3D pie chart — visually engaging option that management prefers for presentations",
+    "Line chart — best for continuous data over time; clearly shows trend direction, seasonality, and inflection points",
+    "Scatter plot with trend line — reveals correlation between two continuous variables; shows outliers",
+    "Treemap or pie chart — effective for showing part-to-whole relationships with limited categories"
+],
                 "Correct": {
                     "Monthly revenue trend over 24 months showing seasonal patterns": "Line chart — best for continuous data over time; clearly shows trend direction, seasonality, and inflection points",
                     "Sales comparison across 30 stores to identify top and bottom performers": "Bar chart sorted descending — enables rapid visual comparison across categories; best for ranking",
@@ -4979,12 +4979,12 @@ const ENHANCED_CASE_BASE3 = [
                     "Compare each store's actual sales to its individual target and prior year performance"
                 ],
                 "RightItems": [
-                    "Small multiples (three line charts side by side) — enables comparison of quarterly patterns across years while maintaining consistent scale",
-                    "Diverging bar chart centered on the average — categories extending right are above average; left are below; zero line provides immediate reference",
-                    "Annotated KPI dashboard with trend arrow and variance callout — headline number, trend line, and contextual narrative guide interpretation",
-                    "Bullet chart for each store — shows actual vs target vs prior year in a compact, single-bar format with comparative benchmarks",
-                    "3D exploded pie chart — makes the presentation visually impressive for the board meeting"
-                ],
+    "3D exploded pie chart — makes the presentation visually impressive for the board meeting",
+    "Small multiples (three line charts side by side) — enables comparison of quarterly patterns across years while maintaining consistent scale",
+    "Diverging bar chart centered on the average — categories extending right are above average; left are below; zero line provides immediate reference",
+    "Annotated KPI dashboard with trend arrow and variance callout — headline number, trend line, and contextual narrative guide interpretation",
+    "Bullet chart for each store — shows actual vs target vs prior year in a compact, single-bar format with comparative benchmarks"
+],
                 "Correct": {
                     "Show that Q4 sales are consistently higher than other quarters across three years": "Small multiples (three line charts side by side) — enables comparison of quarterly patterns across years while maintaining consistent scale",
                     "Identify which product categories have profit margins significantly above or below the company average": "Diverging bar chart centered on the average — categories extending right are above average; left are below; zero line provides immediate reference",

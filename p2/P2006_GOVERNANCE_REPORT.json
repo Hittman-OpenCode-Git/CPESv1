@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "session": "P2-006",
+    "subagent": "governance-check",
+    "date": "2026-07-29T21:26:00Z",
+    "description": "Governance guard validation, preflight, and structural checks for P2-006 Wave 2"
+  },
+  "preflight": {
+    "command": "npm run preflight",
+    "status": "HALT — 2 divergences (pre-existing Part 1)",
+    "divergences": [
+      {
+        "type": "WARN",
+        "detail": "Pack E QID count 545 (expected 540) — known: R-series items P1-E-R01 through P1-E-R40 + DL-034 fix"
+      },
+      {
+        "type": "WARN",
+        "detail": "Certified divergence: baseline 2417 vs raw grep 2452 (delta: 35) — known: recent certification waves"
+      }
+    ],
+    "p1_packs": "A-E all OK (parse, 500/500/500/500/545)",
+    "p1_certified": 2452,
+    "governance_guard_tests": "54/54 PASS"
+  },
+  "governance_guard_p2": {
+    "command": "GovernanceGuardP2.validatePack('pack_p2_a.js')",
+    "result": {
+      "pass": true,
+      "totalItems": 60,
+      "violations": 0
+    },
+    "rule_checks": {
+      "rule_2_dl_008": { "violations": 0, "status": "PASS" },
+      "rule_6_dl_026": { "violations": 0, "status": "PASS" },
+      "rule_9_dl_037": { "violations": 0, "status": "PASS" },
+      "rule_10_dl_021": { "violations": 0, "status": "PASS" },
+      "rule_11_part2onlyflag": { "violations": 0, "status": "PASS — all 60 items carry Part2OnlyFlag: true" }
+    }
+  },
+  "structural_checks": {
+    "qid_count": 60,
+    "qid_range": "P2-A-001 through P2-A-060",
+    "qid_format": "All match /^P2-[A-F]-\\d{3}$/",
+    "part2onlyflag": "60/60 present and true",
+    "single_object_architecture": "Confirmed — no dual-block architecture",
+    "question_state": "60/60 Unprocessed",
+    "dl_008": 0,
+    "dl_026": 0,
+    "dl_021": 0,
+    "dl_037": 0,
+    "dl_013_boilerplate": "0 detected"
+  },
+  "pack_file_status": {
+    "file": "pack_p2_a.js",
+    "size_bytes": null,
+    "backup": "backups/pack_p2_a.js.bak-20260729170901 (230,963 bytes)",
+    "hash_unstable": true,
+    "note": "Hash will stabilize when CURRENT_BASELINES_P2.md is created (PR04 prerequisite)"
+  },
+  "remediation_status": {
+    "p2_a_017_explanation_correct": "REPAIRED — drafting notes removed",
+    "p2_a_019_choice_b": "REPAIRED — authoring scratch work replaced",
+    "p2_a_017_choice_b": "UNREPAIRED — contains authoring notes (not in repair scope)",
+    "p2_a_017_verification_checks": "UNREPAIRED — contains drafting commentary (not in repair scope)"
+  }
+}

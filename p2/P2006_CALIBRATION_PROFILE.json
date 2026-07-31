@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "session": "P2-006",
+    "subagent": "calibration-board",
+    "date": "2026-07-29T21:12:00Z",
+    "description": "Wave 2 calibration targets for P2-A-031 through P2-A-060"
+  },
+  "wave_1_current_state": {
+    "items": 30,
+    "qid_range": "P2-A-001 through P2-A-030",
+    "difficulty": {
+      "Easy_1": 0,
+      "ModerateEasy_2": 0,
+      "Moderate_3": 0,
+      "Difficult_4": 21,
+      "VeryDifficult_5": 9
+    },
+    "cognitive": {
+      "Remember": 0,
+      "Understand": 0,
+      "Apply": 0,
+      "Analyze": 16,
+      "Evaluate": 14
+    },
+    "correctChoiceDistribution": {
+      "A": 7, "B": 12, "C": 6, "D": 5
+    }
+  },
+  "wave_2_targets": {
+    "qid_range": "P2-A-031 through P2-A-060",
+    "item_count": 30,
+    "difficulty": {
+      "Easy_1": 6,
+      "ModerateEasy_2": 10,
+      "Moderate_3": 11,
+      "Difficult_4": 3,
+      "VeryDifficult_5": 0
+    },
+    "cognitive": {
+      "Remember": 0,
+      "Understand": 0,
+      "Apply": 10,
+      "Analyze": 12,
+      "Evaluate": 8
+    },
+    "correctChoice": {
+      "A": { "target": 9, "note": "Bring A from 7 to 16 cumulative for ~26.7%" },
+      "B": { "target": 0, "note": "Do NOT add B-correct items. Current 12 (40%) already above ceiling" },
+      "C": { "target": 10, "note": "Bring C from 6 to 16 cumulative for ~26.7%" },
+      "D": { "target": 11, "note": "Bring D from 5 to 16 cumulative for ~26.7%" }
+    },
+    "difficulty_cognitive_mapping": {
+      "Easy_1": { "count": 6, "cognitive": "Apply", "rationale": "Single-step ratio computation with all inputs explicitly given" },
+      "ModerateEasy_2": { "count": 10, "cognitive_split": { "Apply": 4, "Analyze": 6 }, "rationale": "Apply: one-step computation with data selection. Analyze: compute + interpret against single benchmark" },
+      "Moderate_3": { "count": 11, "cognitive_split": { "Analyze": 6, "Evaluate": 5 }, "rationale": "Analyze: multi-step computation with interpretation. Evaluate: judgment-based selection among competing analytical interpretations" },
+      "Difficult_4": { "count": 3, "cognitive": "Evaluate", "rationale": "Requires professional judgment across multiple analytical frameworks" }
+    },
+    "cognitive_verification": {
+      "Apply": { "from_Easy": 6, "from_ModEasy": 4, "total": 10, "target": 10 },
+      "Analyze": { "from_ModEasy": 6, "from_Moderate": 6, "total": 12, "target": 12 },
+      "Evaluate": { "from_Moderate": 5, "from_Difficult": 3, "total": 8, "target": 8 }
+    }
+  },
+  "cumulative_after_wave_2": {
+    "items": 60,
+    "difficulty": {
+      "Easy_1": 6, "ModerateEasy_2": 10, "Moderate_3": 11,
+      "Difficult_4": 24, "VeryDifficult_5": 9
+    },
+    "cognitive": {
+      "Remember": 0, "Understand": 0, "Apply": 10,
+      "Analyze": 28, "Evaluate": 22
+    },
+    "correctChoiceDistribution": {
+      "A": 16, "B": 12, "C": 16, "D": 16
+    }
+  },
+  "coverage_targets": {
+    "los_a3_cash_flow_analysis": {
+      "items": 12,
+      "topics": [
+        "Operating cash flow ratio computation and interpretation",
+        "Free cash flow calculation and analysis",
+        "Cash conversion cycle components",
+        "Cash flow adequacy ratio",
+        "Quality of earnings — cash flow vs. accrual income divergence",
+        "Cash flow to debt ratio",
+        "Operating cash flow to capital expenditures",
+        "Cash flow per share",
+        "Cash reinvestment ratio",
+        "Cash flow coverage of fixed charges",
+        "Cash flow return on assets",
+        "Cash flow-based DuPont analysis"
+      ]
+    },
+    "los_a4_profitability_assessment": {
+      "items": 10,
+      "topics": [
+        "Gross margin trend analysis",
+        "Operating margin decomposition",
+        "Net profit margin normalization",
+        "ROA decomposition (margin x turnover)",
+        "ROE DuPont three-way analysis",
+        "Sustainable growth rate link to profitability",
+        "EPS quality assessment (basic vs diluted, adjusted)",
+        "EBITDA margin interpretation",
+        "Segment profitability analysis",
+        "Profitability benchmarking against industry"
+      ]
+    },
+    "los_a5_credit_analysis": {
+      "items": 8,
+      "topics": [
+        "Debt service coverage ratio",
+        "Altman Z-score components",
+        "Covenant compliance assessment",
+        "Credit rating migration analysis",
+        "Solvency ratio interpretation",
+        "Liquidity vs. solvency distinction in credit decisions",
+        "Off-balance-sheet obligations impact on credit metrics",
+        "Cash flow adequacy for debt repayment"
+      ]
+    }
+  },
+  "prohibited_patterns": [
+    "No multi-signal integration (comparing 3+ ratios simultaneously)",
+    "No strategic recommendation items (e.g., 'which capital structure should the company adopt?')",
+    "No multi-year trend projection requiring compound growth",
+    "No items where correct answer requires professional judgment without a single defensible path",
+    "No items with >2 numerical calculations required to reach the answer (for Easy through Moderate)",
+    "No items that embed authoring notes or scratch work"
+  ],
+  "phase_plan": {
+    "phase_1": {
+      "items": "P2-A-031 to P2-A-036",
+      "count": 6,
+      "difficulty": "Easy (1)",
+      "cognitive": "Apply",
+      "description": "Single-step ratio computations with all inputs explicitly given. Cash flow ratios, profitability ratios, credit ratios"
+    },
+    "phase_2": {
+      "items": "P2-A-037 to P2-A-046",
+      "count": 10,
+      "difficulty": "Moderate-Easy (2)",
+      "cognitive": "4 Apply + 6 Analyze",
+      "description": "Ratio computation with data selection from a brief scenario. Some items require interpretation against a single benchmark"
+    },
+    "phase_3": {
+      "items": "P2-A-047 to P2-A-057",
+      "count": 11,
+      "difficulty": "Moderate (3)",
+      "cognitive": "6 Analyze + 5 Evaluate",
+      "description": "Multi-step or comparative analysis. Some items require professional judgment among competing interpretations"
+    },
+    "phase_4": {
+      "items": "P2-A-058 to P2-A-060",
+      "count": 3,
+      "difficulty": "Difficult (4)",
+      "cognitive": "Evaluate",
+      "description": "Professional judgment items requiring evaluation across multiple frameworks (but NOT multi-signal integration)"
+    }
+  }
+}
