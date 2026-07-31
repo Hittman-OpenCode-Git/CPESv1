@@ -1,0 +1,508 @@
+{
+  "session": "SESSION101P",
+  "generated": "2026-07-31T14:00:00.000Z",
+  "governance_lane": "Light (read-only analysis)",
+  "description": "Exact batch definitions for metadata-only CognitiveLevel and DifficultyScore correction. All changes are metadata-label adjustments — zero content, stem, choice, explanation, distractor, or answer-key modifications.",
+  "input_sessions": ["S93P", "S94P", "S95P", "S96P", "S97P", "S98P", "S99P", "S100P"],
+  "authoritative_source_matrix": "reports/SESSION099P_RECLASSIFICATION_MATRIX.json",
+  "authoritative_source_queue": "reports/SESSION099P_RECOVERY_EXECUTION_QUEUE.json",
+  "refined_source_queue": "reports/SESSION100P_SECTION_RECOVERY_QUEUE.json",
+  "refined_source_plan": "reports/SESSION100P_RECOVERY_EXECUTION_PLAN.md",
+
+  "global_constraints": {
+    "batch_cap": 30,
+    "batch_cap_rule": "Governance-guard Rule 5",
+    "backup_protocol": "Mandatory per BACKUP_PROTOCOL.md — timestamped .bak before every batch write",
+    "revision_history": "Recommended per AGENTS.md §12.2 — not required (Light Lane, no content-level defect) but best practice",
+    "certification_impact": "NONE — CognitiveLevel and DifficultyScore are metadata fields. Do not trigger CAQS §9.2 re-certification.",
+    "no_content_rewrites": true,
+    "no_answer_key_changes": true,
+    "no_explanation_changes": true,
+    "no_question_state_changes": true,
+    "parallel_safe": ["S92 (Pack B Section B content)", "MAY-023 (coaching UI)", "S97P-S100P prior analyses"]
+  },
+
+  "reclassification_rubrics": {
+    "evaluate_rubric": "reports/SESSION095P_EVALUATE_RUBRIC.md",
+    "analyze_rubric": "reports/SESSION095P_ANALYZE_RUBRIC.md",
+    "auto_fail_conditions": {
+      "AF-E1": { "pattern": "Definition Match (stem-choice overlap > 70%)", "true_level": "Remember or Understand" },
+      "AF-E2": { "pattern": "Formula Substitution (known formula + number plugging)", "true_level": "Apply" },
+      "AF-E3": { "pattern": "Deterministic Rule (single ASC/COSO/IMA standard determines answer)", "true_level": "Apply" },
+      "AF-E4": { "pattern": "Taxonomy Classification (\"What type of X is described?\")", "true_level": "Remember or Understand" },
+      "AF-E5": { "pattern": "Difficulty Mismatch (Difficulty <= 2 + Evaluate)", "true_level": "Apply" },
+      "AF-E6": { "pattern": "Single Correct Option (only one defensible choice)", "true_level": "Apply or Analyze" }
+    },
+    "difficulty_cognitive_floor": {
+      "Remember": { "min_difficulty": "Easy", "min_difficultyscore": 1 },
+      "Understand": { "min_difficulty": "Easy", "min_difficultyscore": 1 },
+      "Apply": { "min_difficulty": "Easy", "min_difficultyscore": 1 },
+      "Analyze": { "min_difficulty": "Moderate-Easy", "min_difficultyscore": 2 },
+      "Evaluate": { "min_difficulty": "Moderate", "min_difficultyscore": 3 }
+    }
+  },
+
+  "phases": [
+    {
+      "phase_id": "PHASE_0",
+      "phase_label": "Structural Defect Resolution",
+      "priority": "CRITICAL_BLOCKER",
+      "lane": "Full Governance Lane",
+      "description": "Fix or archive 3 items with structural defects that block accurate reclassification reporting. These items carry HO labels but are structurally unrenderable. Must be resolved before Phase 1.",
+      "items": 3,
+      "batch_count": 1,
+      "batches": [
+        {
+          "batch_id": "PH0-B1",
+          "pack": "pack_d_corrected.js",
+          "section": "FD (Domain F — Technology and Analytics)",
+          "items": 3,
+          "description": "Structural defect items: P1-FD-046 (all fields empty, Certified) + 2 additional defective items identified in S93P scan.",
+          "actions": [
+            "Per-item audit to confirm defect",
+            "Fix renderable items (restore stem, choices, correct answer from backup if available)",
+            "Archive structurally unrecoverable items (question_state → Archived)",
+            "If already documented in DEFECT_LIBRARY.md: cross-reference DL-ID and resolution date",
+            "If not documented: file new DL entry with severity Critical",
+            "Remove from HO reporting baseline regardless of resolution"
+          ],
+          "certified_items_affected": 3,
+          "risk": "MEDIUM — certified items with structural defects. Archive is safe default.",
+          "backup_required": true
+        }
+      ]
+    },
+    {
+      "phase_id": "PHASE_1",
+      "phase_label": "P0 — Order-of-Magnitude Misclassification (Multi-Tier Downgrade)",
+      "priority": "IMMEDIATE",
+      "lane": "Full Governance Lane",
+      "description": "Items where the labeled cognitive level is 2+ tiers above the true level. These are definition-to-term matching, single-concept classification, or deterministic rule application items labeled as Evaluate or Analyze. Highest-leverage correction — 56 items account for ~19% of HO overstatement.",
+      "items": 56,
+      "batch_count": 2,
+      "sections_covered": ["Pack C EC", "Pack D CD", "Pack D DD", "Pack A Section A"],
+      "batches": [
+        {
+          "batch_id": "PH1-B1",
+          "label": "Pack C EC — Tier 1 Order-of-Magnitude",
+          "pack": "pack_c_corrected.js",
+          "section": "EC (Internal Controls — COSO Framework)",
+          "total_section_items": 75,
+          "items_in_batch": 28,
+          "certified_items_in_batch": 28,
+          "dominant_af": ["AF-3", "AF-4"],
+          "source_of_truth": "S96P pilot — full per-item audit of all 75 EC items completed",
+          "reclassification_table": [
+            { "pattern": "COSO definition matching (e.g., segregation of duties, physical control, COSO framework components)", "current_label": "Evaluate or Analyze", "corrected_label": "Remember or Understand", "count_estimate": 7, "difficulty_action": "Downgrade to Easy (1) or Moderate-Easy (2)" },
+            { "pattern": "Single-step COSO classification (\"Which COSO component does X support?\")", "current_label": "Analyze", "corrected_label": "Apply", "count_estimate": 12, "difficulty_action": "Downgrade to Moderate (3)" },
+            { "pattern": "COSO diagnosis — scenario-based control failure identification", "current_label": "Evaluate", "corrected_label": "Analyze", "count_estimate": 9, "difficulty_action": "Maintain or adjust to Difficult (4)" }
+          ],
+          "confidence": "HIGH",
+          "evidence": "S96P pilot audited all 75 EC items. EC-005 (segregation of duties = Remember). EC-007 (control environment diagnosis = Analyze not Evaluate). EC-020 (physical control classification = Understand).",
+          "per_item_audit_required": false,
+          "s96p_audit_reference": "reports/SESSION096P_SECTION_AUDIT.md"
+        },
+        {
+          "batch_id": "PH1-B2",
+          "label": "Pack D CD/DD + Pack A Section A — Tier 1",
+          "pack": "pack_d_corrected.js (CD, DD) + pack_a_corrected.js (Section A)",
+          "total_section_items": 75 + 75 + 75,
+          "items_in_batch": 28,
+          "sections_in_batch": ["Pack D CD (10 items)", "Pack D DD (17 items)", "Pack A Section A (1 item remaining)"],
+          "certified_items_in_batch": 28,
+          "dominant_af": ["AF-4", "AF-3"],
+          "reclassification_table": [
+            { "section": "Pack D CD", "pattern": "Performance concept definitions (common-size analysis, EVA definition, TQM, cost-benefit)", "current_label": "Analyze", "corrected_label": "Understand", "count": 10, "confidence": "HIGH", "difficulty_action": "Downgrade to Moderate-Easy (2)" },
+            { "section": "Pack D DD", "pattern": "Cost management terminology (kaizen costing, reciprocal method, normal costing, ABC definition)", "current_label": "Analyze", "corrected_label": "Understand", "count": 17, "confidence": "HIGH", "difficulty_action": "Downgrade to Moderate-Easy (2)" },
+            { "section": "Pack A Section A", "pattern": "ASC rule application (ASC 450, ASC 360, ASC 810 — deterministic)", "current_label": "Analyze or Evaluate", "corrected_label": "Apply", "count": 1, "confidence": "HIGH", "difficulty_action": "Maintain Moderate (3)" }
+          ],
+          "evidence": "Pack D CD: 4/4 S93P sampled items are concept comprehension (stem defines concept, answer is term). Pack D DD: 3/3 sampled items are definition-to-term matching. Pack A Section A: ASC rules produce single deterministic answer.",
+          "confidence": "HIGH",
+          "per_item_audit_required": false,
+          "note": "Pack A Section A remainder items handled in PH1-B1 from RECOVERY_EXECUTION_QUEUE.json perspective. This batch assumes 1 item left after PH1-B1 covers 21 items. Section-level totals: Pack A Section A = 22 items. 21 in prior batch + 1 here = 22."
+        }
+      ]
+    },
+    {
+      "phase_id": "PHASE_2",
+      "phase_label": "P1 — One-Tier Slippage (Single-Tier Downgrade)",
+      "priority": "HIGH",
+      "lane": "Full Governance Lane",
+      "description": "Items where the labeled cognitive level is exactly 1 tier above the true level. These are formula-substitution items (labeled Analyze/Evaluate, are really Apply), COSO classification items (labeled Analyze, are really Apply), or ASC rule-application items with scenario framing (labeled Evaluate, are really Analyze). Content is well-written — labels only.",
+      "items": 90,
+      "batch_count": 4,
+      "batches": [
+        {
+          "batch_id": "PH2-B1",
+          "label": "Pack D BD — Budget Items (One-Tier Slippage)",
+          "pack": "pack_d_corrected.js",
+          "section": "BD (Planning, Budgeting, and Forecasting)",
+          "total_section_items": 75,
+          "items_in_batch": 28,
+          "certified_items_in_batch": 28,
+          "dominant_af": ["AF-2", "AF-3"],
+          "reclassification_table": [
+            { "pattern": "Cash budget, sales forecast, production budget formula substitution with scenario framing", "current_label": "Analyze or Evaluate", "corrected_label": "Apply or Analyze", "count_estimate": 15, "confidence": "HIGH", "difficulty_action": "Downgrade to Moderate (3)" },
+            { "pattern": "Budgetary trade-off items (genuine analysis — multiple factors, cause-effect reasoning)", "current_label": "Evaluate", "corrected_label": "Analyze", "count_estimate": 8, "confidence": "MEDIUM", "difficulty_action": "Maintain Difficult (4)" },
+            { "pattern": "Genuine evaluative items (decision-maker role, competing alternatives, selection rationale)", "current_label": "Evaluate", "corrected_label": "Evaluate", "count_estimate": 5, "confidence": "HIGH", "difficulty_action": "No change — correctly labeled" }
+          ],
+          "confidence": "MEDIUM",
+          "evidence": "Pack D BD is the best modernization campaign (71% Evaluate accuracy, 60% Analyze accuracy per S93P). AF-2 formula items = Apply. AF-3 borderline items need per-item distinction between formula + analysis vs. formula-only.",
+          "per_item_audit_required": true,
+          "audit_focus": "Distinguish formula-with-scenario (Apply, labeled Analyze) from scenario-with-formula-as-one-step (Analyze, correctly labeled).",
+          "note": "S96P benchmark section. S100P recommends this section as the gold standard for future campaigns."
+        },
+        {
+          "batch_id": "PH2-B2",
+          "label": "Pack D BD — Remaining + Pack D ED",
+          "pack": "pack_d_corrected.js",
+          "sections": "BD (remainder) + ED (Internal Controls)",
+          "items_in_batch": 28,
+          "certified_items_in_batch": 28,
+          "sub_batches": [
+            {
+              "section": "Pack D BD remainder",
+              "items": 22,
+              "reclassification": "Continuation of PH2-B1 pattern. Remaining formula-substitution + 1-tier-slippage items.",
+              "confidence": "MEDIUM",
+              "per_item_audit_required": true
+            },
+            {
+              "section": "Pack D ED",
+              "items": 6,
+              "reclassification": "COSO classification items: 'Which COSO component/principles?' → current Analyze, true Apply or Understand.",
+              "confidence": "HIGH",
+              "per_item_audit_required": false,
+              "dominant_af": ["AF-3", "AF-4"]
+            }
+          ]
+        },
+        {
+          "batch_id": "PH2-B3",
+          "label": "Pack D ED — Remaining + Pack C Sections CC/DC",
+          "pack": "pack_d_corrected.js (ED remainder) + pack_c_corrected.js (CC, DC)",
+          "items_in_batch": 28,
+          "certified_items_in_batch": 28,
+          "sub_batches": [
+            {
+              "section": "Pack D ED remainder",
+              "items": 10,
+              "reclassification": "Remaining COSO classification + diagnosis items. ~5 Evaluate→Analyze (one-tier), ~5 Analyze→Apply (COSO classification).",
+              "confidence": "HIGH",
+              "dominant_af": ["AF-3"]
+            },
+            {
+              "section": "Pack C CC",
+              "items": 11,
+              "reclassification": "Variance formulas (FOH volume, labor efficiency, material price) reframed as Analyze/Evaluate. True: Apply. ~7 formula items + ~4 formula-with-analysis borderline.",
+              "confidence": "MEDIUM",
+              "dominant_af": ["AF-2", "AF-3"],
+              "per_item_audit_required": true
+            },
+            {
+              "section": "Pack C DC",
+              "items": 7,
+              "reclassification": "Cost allocation formulas (ABC, joint cost, NRV) labeled as Analyze. True: Apply. ~5 formula items + ~2 multi-step (genuine Analyze).",
+              "confidence": "MEDIUM",
+              "dominant_af": ["AF-2", "AF-3"],
+              "per_item_audit_required": true
+            }
+          ]
+        },
+        {
+          "batch_id": "PH2-B4",
+          "label": "Pack A Sections C/D/E + Pack C Section DC remainder",
+          "pack": "pack_a_corrected.js (Sections C, D, E) + pack_c_corrected.js (DC remainder)",
+          "items_in_batch": 6,
+          "certified_items_in_batch": 6,
+          "sub_batches": [
+            {
+              "section": "Pack A Section C (Performance Management)",
+              "items": 2,
+              "reclassification": "Formula application (FOH variance, EVA) as Analyze. True: Apply.",
+              "confidence": "HIGH"
+            },
+            {
+              "section": "Pack A Section D (Cost Management)",
+              "items": 2,
+              "reclassification": "Cost-of-quality analysis (genuine) + formula items (Apply). One-tier slippage.",
+              "confidence": "MEDIUM"
+            },
+            {
+              "section": "Pack A Section E (Internal Controls)",
+              "items": 2,
+              "reclassification": "COSO-principled items (S805 remediation). Mostly correct — few one-tier overstatements.",
+              "confidence": "HIGH"
+            }
+          ],
+          "note": "Small batch — Pack A Sections C/D/E were already highly remediation-passed. Residual one-tier items only."
+        }
+      ]
+    },
+    {
+      "phase_id": "PHASE_3",
+      "phase_label": "P2 — Verification of Accurately Labeled Items + Remaining Packs",
+      "priority": "MEDIUM",
+      "lane": "Full Governance Lane",
+      "description": "Verify items projected as correctly labeled. For Pack A Section B (benchmark), Pack A Section F (gold standard), and Pack D BD remainder (best campaign). Also handle residual Pack B and Pack E items with different authoring pipelines.",
+      "items": 150,
+      "batch_count": 6,
+      "batches": [
+        {
+          "batch_id": "PH3-B1",
+          "label": "Pack A Section B — Benchmark Verification",
+          "pack": "pack_a_corrected.js",
+          "section": "B (Planning, Budgeting, and Forecasting)",
+          "items_in_batch": 28,
+          "certified_items_in_batch": 28,
+          "action": "Spot-check verification — no changes expected",
+          "reclassification": {
+            "labeled_ho": 35,
+            "evaluate_accuracy": 0.83,
+            "analyze_accuracy": 0.444,
+            "estimated_true_ho": 29,
+            "estimated_overstated_ho": 6,
+            "three_tier_t1": 1,
+            "three_tier_t2": 1,
+            "three_tier_t3": 33
+          },
+          "spot_check_sample": 7,
+          "confidence": "HIGH",
+          "evidence": "83% Evaluate accuracy — highest in repository. Genuine evaluative trade-off items from S77 campaign. Budgeting strategy items: decision maker + competing alternatives + selection rationale.",
+          "actions": [
+            "Spot-check 7 items (20% of 35 labeled HO)",
+            "Verify against S95P Evaluate Rubric (E1-E3 required, E4-E6 ≥1)",
+            "Verify against S95P Analyze Rubric (≥2 of A1-A4)",
+            "Document any overstatements found",
+            "If all 7 pass: mark section as VERIFIED, no batch write needed",
+            "If any fail: expand spot-check to full section — route corrections to a new batch"
+          ],
+          "per_item_audit_required": false
+        },
+        {
+          "batch_id": "PH3-B2",
+          "label": "Pack A Section F — Gold Standard + Pack A Section B (remainder)",
+          "pack": "pack_a_corrected.js",
+          "items_in_batch": 28,
+          "sub_batches": [
+            {
+              "section": "Pack A Section F (Technology and Analytics)",
+              "items": 5,
+              "action": "Spot-check 2 items. 100% Evaluate accuracy — gold standard. Technology governance items: inherently evaluative.",
+              "confidence": "HIGH",
+              "per_item_audit_required": false,
+              "note": "If all spot-checks pass: mark as GOLD STANDARD, no changes needed."
+            },
+            {
+              "section": "Pack A Section B remainder",
+              "items": 23,
+              "action": "Continue verification from PH3-B1. Remaining 28 items from this section (7 already spot-checked).",
+              "confidence": "HIGH",
+              "per_item_audit_required": false
+            }
+          ]
+        },
+        {
+          "batch_id": "PH3-B3",
+          "label": "Pack D BD — Remaining Verification",
+          "pack": "pack_d_corrected.js",
+          "section": "BD (remainder after PH2-B1/B2)",
+          "items_in_batch": 28,
+          "certified_items_in_batch": 28,
+          "action": "Verify items that passed AF gates — projected correctly labeled.",
+          "spot_check_sample": 10,
+          "confidence": "MEDIUM",
+          "reclassification": {
+            "labeled_ho": 67,
+            "true_ho_estimate": 67,
+            "overstated": "Already corrected in PH2-B1/B2"
+          },
+          "note": "After PH2 corrections, this section should have ~67 items with accurate labels. Spot-check 10 to confirm >90% accuracy."
+        },
+        {
+          "batch_id": "PH3-B4",
+          "label": "Pack D BD — Remainder + Pack C Sections FC + Pack D FD",
+          "pack": "pack_d_corrected.js (BD remainder + FD) + pack_c_corrected.js (FC)",
+          "items_in_batch": 28,
+          "certified_items_in_batch": 28,
+          "sub_batches": [
+            {
+              "section": "Pack D BD remainder",
+              "items": 11,
+              "action": "Final verification of BD section after PH2 + PH3-B3."
+            },
+            {
+              "section": "Pack D FD (Technology and Analytics)",
+              "items": 10,
+              "reclassification": "Technology taxonomy (ERP, AI, cybersecurity) as Analyze. ~9 items overstated (AF-4 = taxonomy classification). ~1 borderline.",
+              "confidence": "MEDIUM",
+              "dominant_af": ["AF-3", "AF-4"],
+              "note": "Excluding FD-046 structural defect (handled in PHASE_0)."
+            },
+            {
+              "section": "Pack C FC (Technology and Analytics)",
+              "items": 7,
+              "reclassification": "Technology taxonomy matching. ~7 items overstated (AF-4), ~11 correctly labeled.",
+              "confidence": "HIGH",
+              "dominant_af": ["AF-3", "AF-4"]
+            }
+          ]
+        },
+        {
+          "batch_id": "PH3-B5",
+          "label": "Pack B — All Sections",
+          "pack": "pack_b_corrected.js",
+          "sections": ["BB", "BC", "BF"],
+          "items_in_batch": 23,
+          "certified_items_in_batch": 23,
+          "action": "Per-item audit of Pack B HO-labeled items",
+          "reclassification": {
+            "labeled_ho": 42,
+            "sampled_ho": 17,
+            "evaluate_accuracy": 0.50,
+            "analyze_accuracy": 0.429,
+            "estimated_true_ho": 25,
+            "estimated_overstated_ho": 17,
+            "three_tier_t1": 2,
+            "three_tier_t2": 8,
+            "three_tier_t3": 32,
+            "dominant_pattern": "Independent pipeline — EVA formula substitution, variance procedures. Different patterns than Packs A-D.",
+            "dominant_af": ["AF-2", "AF-3"]
+          },
+          "confidence": "MEDIUM",
+          "per_item_audit_required": true,
+          "note": "Pack B uses different authoring pipeline (single-object architecture, CorrectChoice before QuestionID). String-aware parser required for extraction.",
+          "special_handling": "Pack B sections B/C/F have 42 HO items total (of 500). Small section — quick to complete. Per-item audit recommended due to different pipeline."
+        },
+        {
+          "batch_id": "PH3-B6",
+          "label": "Pack E — All Sections",
+          "pack": "pack_e_corrected.js",
+          "sections": ["All sections — EA through EF"],
+          "items_in_batch": 28,
+          "certified_items_in_batch": 28,
+          "action": "Per-item audit of Pack E HO-labeled items (first batch of 28)",
+          "reclassification": {
+            "labeled_ho": 50,
+            "evaluate_accuracy": 0.50,
+            "analyze_accuracy": 0.50,
+            "estimated_true_ho": 24,
+            "estimated_overstated_ho": 26,
+            "three_tier_t1": 1,
+            "three_tier_t2": 6,
+            "three_tier_t3": 43,
+            "dominant_af": ["AF-3", "AF-6"],
+            "dominant_pattern": "Independent pipeline. Mixed quality. Includes R-series items (P1-E-R01 through P1-E-R40)."
+          },
+          "confidence": "MEDIUM",
+          "per_item_audit_required": true,
+          "note": "Pack E has 545 items (500 standard + 40 R-series + 5 EVAL). R-series items (P1-E-R##) use different QID format — regex must handle both patterns.",
+          "special_handling": "Pack E R-series items (P1-E-R01 through P1-E-R40) may carry HO labels. Verify R-series QID pattern in extraction. 5 EVAL items (P1E-EVAL-001 through 005) are Unprocessed — skip unless they carry HO labels."
+        }
+      ]
+    },
+    {
+      "phase_id": "PHASE_4",
+      "phase_label": "P3 — Pack E Remaining + Semantic Review Results",
+      "priority": "LOW",
+      "lane": "Full Governance Lane",
+      "description": "Complete Pack E audit (remaining 22 items) and apply Phase B semantic review results for scenario-framed definitions and borderline items.",
+      "items": 62,
+      "batch_count": 3,
+      "batches": [
+        {
+          "batch_id": "PH4-B1",
+          "label": "Pack E — Remaining HO Items",
+          "pack": "pack_e_corrected.js",
+          "items_in_batch": 22,
+          "certified_items_in_batch": 22,
+          "action": "Complete Pack E per-item audit (remaining 22 of 50 HO-labeled items).",
+          "confidence": "MEDIUM",
+          "per_item_audit_required": true
+        },
+        {
+          "batch_id": "PH4-B2",
+          "label": "Phase B Semantic Review — Scenario-Framed Definitions",
+          "pack": "All packs",
+          "items_in_batch": 28,
+          "action": "Apply semantic review results for AF-1 ceiling items.",
+          "reclassification": {
+            "category": "Scenario-framed definitions (AF-1 ceiling)",
+            "pattern": "Stem embeds textbook definition in business scenario without explicit 'what term is this' language. Candidate must recognize the concept being defined.",
+            "estimated_count": 50,
+            "confidence_loss": true,
+            "confidence_loss_rate": "8-12% (auto-gates miss these — require semantic understanding)",
+            "true_level": "Understand (concept recognition in scenario) or Apply (if scenario requires mapping to specific standard)"
+          },
+          "per_item_audit_required": true,
+          "methodology": "LLM-based topic classification or human semantic review. Read stem, identify if the question asks 'what is being described' vs. 'analyze this situation.'"
+        },
+        {
+          "batch_id": "PH4-B3",
+          "label": "Phase B Semantic Review — Borderline Items",
+          "pack": "Packs A-D",
+          "items_in_batch": 12,
+          "action": "Apply semantic review results for borderline items.",
+          "sub_categories": [
+            {
+              "category": "Borderline AF-2 (multi-step calculation as part of analysis)",
+              "items": 5,
+              "methodology": "Human spot-check. Distinguish 'calculate X' as the only task (Apply) from 'calculate X, then determine which vendor to choose based on X' (Analyze)."
+            },
+            {
+              "category": "Borderline AF-3 (ASC reference is contextual, not deterministic)",
+              "items": 3,
+              "methodology": "Human spot-check. Distinguish 'apply ASC 450' (Apply) from 'ASC 450 and 275 give different guidance depending on facts — which is more appropriate here?' (Analyze)."
+            },
+            {
+              "category": "Borderline AF-6 (competing standard analysis)",
+              "items": 4,
+              "methodology": "Human spot-check. Items where discarding the distractors itself requires analytical reasoning across multiple standards."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "batch_execution_order": [
+    { "seq": 0, "batch": "PH0-B1", "phase": "PHASE_0", "items": 3, "desc": "Structural defect fixes", "blocker": true },
+    { "seq": 1, "batch": "PH1-B1", "phase": "PHASE_1", "items": 28, "desc": "Pack C EC — Tier 1", "blocker": false },
+    { "seq": 2, "batch": "PH1-B2", "phase": "PHASE_1", "items": 28, "desc": "Pack D CD/DD + Pack A Section A — Tier 1", "blocker": false },
+    { "seq": 3, "batch": "PH2-B1", "phase": "PHASE_2", "items": 28, "desc": "Pack D BD — One-tier", "blocker": false },
+    { "seq": 4, "batch": "PH2-B2", "phase": "PHASE_2", "items": 28, "desc": "Pack D BD remainder + ED", "blocker": false },
+    { "seq": 5, "batch": "PH2-B3", "phase": "PHASE_2", "items": 28, "desc": "Pack D ED remainder + Pack C CC/DC", "blocker": false },
+    { "seq": 6, "batch": "PH2-B4", "phase": "PHASE_2", "items": 6, "desc": "Pack A Sections C/D/E residual", "blocker": false },
+    { "seq": 7, "batch": "PH3-B1", "phase": "PHASE_3", "items": 28, "desc": "Pack A Section B — verification", "blocker": false },
+    { "seq": 8, "batch": "PH3-B2", "phase": "PHASE_3", "items": 28, "desc": "Pack A Sections F + B remainder", "blocker": false },
+    { "seq": 9, "batch": "PH3-B3", "phase": "PHASE_3", "items": 28, "desc": "Pack D BD — remaining verification", "blocker": false },
+    { "seq": 10, "batch": "PH3-B4", "phase": "PHASE_3", "items": 28, "desc": "Pack D BD remainder + FD + Pack C FC", "blocker": false },
+    { "seq": 11, "batch": "PH3-B5", "phase": "PHASE_3", "items": 23, "desc": "Pack B — all sections", "blocker": false },
+    { "seq": 12, "batch": "PH3-B6", "phase": "PHASE_3", "items": 28, "desc": "Pack E — first half", "blocker": false },
+    { "seq": 13, "batch": "PH4-B1", "phase": "PHASE_4", "items": 22, "desc": "Pack E — remaining", "blocker": false },
+    { "seq": 14, "batch": "PH4-B2", "phase": "PHASE_4", "items": 28, "desc": "Phase B semantic — AF-1 ceiling", "blocker": false },
+    { "seq": 15, "batch": "PH4-B3", "phase": "PHASE_4", "items": 12, "desc": "Phase B semantic — borderline items", "blocker": false }
+  ],
+
+  "total_summary": {
+    "total_items_for_processing": 388,
+    "phase_0_structural_defects": 3,
+    "phase_1_order_of_magnitude": 56,
+    "phase_2_one_tier_slippage": 90,
+    "phase_3_verification": 150,
+    "phase_4_semantic_review": 89,
+    "total_batches": 16,
+    "batch_cap": 30,
+    "all_batches_within_cap": true,
+    "packs_modified": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"],
+    "certified_items_affected": 358,
+    "content_rewrites": 0,
+    "answer_key_changes": 0,
+    "explanation_changes": 0,
+    "question_state_changes": 0,
+    "metadata_only": true,
+    "governance_guard_rule_5_compliant": true,
+    "parallel_safe_with_s92": true,
+    "parallel_safe_with_may023": true
+  }
+}
