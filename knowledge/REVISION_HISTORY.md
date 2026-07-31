@@ -28757,4 +28757,89 @@ Executed the first modernization wave for Pack A Section F (Domain F: Technology
 
 One item (P1-F-020) was originally queued in S77 but was removed from this wave — it had already been upgraded to Analyze by intermediate work between S77 and S86P. Replaced with P1-F-048 (process mining use).
 
+---
+
+## SESSION 90 — Pack B Section F Cognitive Upgrade Wave 1 — 2026-07-30
+
+**Type:** WRITE (pack_b_corrected.js — Full Governance Lane)
+**Backup:** `backups/pack_b_corrected.js.bak-20260730231249` (1,508,181 bytes)
+**Script:** `scripts/session90_rewrite.js`
+**Deliverables:** `reports/SESSION090_PLANNER.md`, `reports/SESSION090_AUDITOR.md`, `reports/SESSION090_IMPLEMENTER.md`, `reports/SESSION090_CLOSEOUT.md`
+
+### Summary
+
+Executed Wave 1 of the Pack B Section F cognitive modernization campaign — the #2-ranked section by ROI from S86P (score: 90). Rewrote 15 items from Understand/definition-matching to full business scenarios at Analyze (7 items) and Evaluate (8 items) cognitive levels, mirroring the successful Pack A Section F Wave 1 campaign (S87). Additionally repaired 2 items with missing CognitiveLevel/Difficulty metadata (P1B-F-120 → Evaluate, P1B-F-138 → Analyze). CC-EW rotation applied to 11 of 15 items.
+
+### Pre-Wave State
+
+| Metric | Value |
+|--------|-------|
+| Section F total | 75 |
+| Evaluate | 2 (P1B-F-091, P1B-F-116) |
+| Analyze | 0 |
+| Higher Order | 2 (2.7%) |
+| Understand | 49 |
+| Apply | 22 |
+| MISSING CL/DS | 2 (P1B-F-120, P1B-F-138) |
+
+### Post-Wave State
+
+| Metric | Value |
+|--------|-------|
+| Section F total | 75 |
+| Evaluate | 11 (+9) |
+| Analyze | 8 (+8) |
+| Higher Order | 19 (25.3%, +22.7pp) |
+| Understand | 34 (-15) |
+| Apply | 22 (unchanged) |
+| MISSING CL/DS | 0 (-2) |
+| Certified | 75/75 (unchanged) |
+| DL-008 | 0 |
+| DL-026 | 0 |
+
+### Rewrite Targets
+
+**Evaluate (8):** P1B-F-086 (AI model selection for fraud detection, Meridian Analytics/Elena Voss), P1B-F-089 (blockchain vs. centralized ledger, Pacific Foods/James Park), P1B-F-110 (incident response plan gaps, Westlake Health/Rachel Tam), P1B-F-122 (cloud vendor selection, Orion Industrial/Marcus Chen), P1B-F-131 (RPA governance framework, Northland Bank/Sarah Kwan), P1B-F-135 (generative AI control framework, Summit Manufacturing/David Okonkwo), P1B-F-140 (data ethics framework, Crescent Analytics/Amara Singh), P1B-F-148 (RPA control deficiency prioritization, Harbor Distribution/Leo Tran)
+
+**Analyze (7):** P1B-F-095 (SDLC methodology selection, Phoenix Corp/Priya Nair), P1B-F-108 (SOC report reliance analysis, Grant & Chen LLP/Thomas Reid), P1B-F-113 (RPA vs AI process classification, Atlas Manufacturing/Nina Okonkwo), P1B-F-121 (smart contract risk analysis, Orion Supply Chain/Grace Liu), P1B-F-136 (shared responsibility breach analysis, Meridian Insurance/Daniel Park), P1B-F-141 (blockchain feasibility assessment, Verde Supply Co./Maria Santos), P1B-F-145 (system implementation strategy, Eastwood Medical/Robert Klein)
+
+**Metadata Repair (2):** P1B-F-120 (MISSING → Evaluate/Difficult/DS=4), P1B-F-138 (MISSING → Analyze/Moderate/DS=3)
+
+### Difficulty Recalibration Applied
+
+| From | To | Difficulty | DS |
+|------|----|------------|----|
+| Understand (any DS) | Evaluate | Difficult | 4 |
+| Understand (any DS) | Analyze | Moderate | 3 |
+
+### Bug Encountered
+
+The initial `session90_rewrite.js` omitted `CognitiveLevel` and `DifficultyScore` fields from the REWRITE_F* objects (only `Difficulty` was included, matching the S89 pattern where the script was verified to work). Post-write census revealed 15 items with MISSING CL/DS. Root cause: different field access pattern between S89 and S90 scripts. A targeted fix script reassigned the correct values. **Lesson learned for future waves:** the field `DifficultyScore` must be distinct from `Difficulty` in REWRITE objects, and both must be explicitly set.
+
+### Verification
+
+| Gate | Result |
+|------|--------|
+| Preflight (T0+Tend) | PASS — 0 divergences |
+| Governance guard | 54/54 PASS |
+| Pipeline | PASS (validators pass; pre-existing warnings only) |
+| Syntax check | PASS |
+| QID count | 500 (unchanged) |
+| Certified count | 500 (unchanged) |
+| DL-008 on Section F | 0 |
+| DL-026 on Section F | 0 |
+| COGNITIVE_LEVEL MISSING | 0 |
+
+### Strategic Impact
+
+Pack B Section F now exceeds the 22.7% HO target achieved by Pack A Section F after its Wave 1, reaching 25.3% (boosted by metadata repairs). This confirms the S86P forecast that Pack B Section F was the next-highest ROI campaign. The section now has:
+- 19 higher-order items (11 Evaluate + 8 Analyze)
+- Clean single-object architecture
+- Zero DL-008/DL-026 exposure
+- Can serve as a modernization benchmark alongside Pack A Section F
+
+### Recommended Next
+
+Session 91 — Pack E Section A Cognitive Upgrade Wave 1 (Rank #3 in S86P, score: 78).
+
 
