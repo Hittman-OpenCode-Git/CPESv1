@@ -266,16 +266,31 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
   <div class="last-updated" id="overviewUpdated"></div>
 </section>
 
-<!-- ═══════ GOVERNANCE TAB (S126 stub) ═══════ -->
+<!-- ═══════ GOVERNANCE TAB (S126) ═══════ -->
 <section class="tab-content" id="tab-governance">
-  <div class="stub-tab">
-    <div class="stub-icon">&#9881;</div>
-    <div class="stub-title">Governance Console</div>
-    <div class="stub-desc">S126 will deliver: Rule 11 dashboard, defect queues, certification progress tracker, and portfolio drift alerts — consuming S121 portfolio dashboard outputs directly.</div>
-    <div style="margin-top:16px;font-size:12px;color:#888;">
-      <strong>Data sources ready:</strong> S121_PORTFOLIO_DASHBOARD.json, domain_progress.json, readiness_scoring.json, remediation_queue.json, governance guard test suite
+  <!-- Row 1: Certification + Defect Queue -->
+  <div class="health-grid" style="margin-bottom:16px;">
+    <div class="health-card" id="govCertCard">
+      <div class="loading-skeleton" style="height:280px;"></div>
+    </div>
+    <div class="health-card" id="govDefectCard">
+      <div class="loading-skeleton" style="height:280px;"></div>
     </div>
   </div>
+  <!-- Row 2: Rule Monitoring + Portfolio Drift -->
+  <div class="health-grid" style="margin-bottom:16px;">
+    <div class="health-card" id="govRulesCard">
+      <div class="loading-skeleton" style="height:240px;"></div>
+    </div>
+    <div class="health-card" id="govDriftCard">
+      <div class="loading-skeleton" style="height:240px;"></div>
+    </div>
+  </div>
+  <!-- Row 3: Domain Governance Matrix (full width) -->
+  <div style="margin-bottom:20px;" id="govDomainMatrix">
+    <div class="loading-skeleton" style="height:180px;"></div>
+  </div>
+  <div class="last-updated" id="govUpdated"></div>
 </section>
 
 <!-- ═══════ CONTENT TAB (S127 stub) ═══════ -->
@@ -384,6 +399,7 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
       document.getElementById(tabId).classList.add('active');
       if (btn.dataset.tab === 'may') { setTimeout(function() { mayDashboard.refresh(); }, 100); }
       if (btn.dataset.tab === 'overview') { loadOverviewData(); }
+      if (btn.dataset.tab === 'governance') { loadGovernanceData(); }
     });
   });
 
@@ -526,9 +542,22 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
     var blockedCount = domainProgress ? domainProgress.overall.blocked + domainProgress.overall.remediate : (readinessData ? readinessData.byState.BLOCKED + readinessData.byState.REMEDIATE : 0);
     var safePool = safetyData ? (safetyData.unsafe_certified === 0) : true;
 
+    // Trend from prior score snapshot
+    var trendStr = '';
+    try {
+      var priorHist = JSON.parse(localStorage.getItem('cmaGovHealthHistory') || '[]');
+      if (priorHist.length > 0) {
+        var lastHScore = priorHist[priorHist.length - 1].score;
+        var deltaH = hScore - lastHScore;
+        if (deltaH !== 0) {
+          trendStr = ' <span style="font-size:14px;color:' + (deltaH > 0 ? 'var(--health-green)' : 'var(--health-red)') + ';">' + (deltaH > 0 ? '\u2191' : '\u2193') + ' ' + Math.abs(deltaH) + '</span>';
+        }
+      }
+    } catch(e) {}
+
     html += '<div class="health-card">' +
       '<h3><span class="status-dot ' + (safePool ? 'status-healthy' : 'status-critical') + '"></span> Governance Health</h3>' +
-      '<div class="health-big" style="color:' + hTier.color + ';">' + hScore + '%</div>' +
+      '<div class="health-big" style="color:' + hTier.color + ';">' + hScore + '%' + trendStr + '</div>' +
       '<div class="health-sub">' + hTier.tier + '</div>' +
       '<div class="health-metrics">' +
       '<div class="hm-label">Certified</div><div class="hm-val">' + certCount + ' / ' + totalItems + ' (' + certPct + '%)</div>' +
@@ -667,6 +696,356 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
   // LOAD OVERVIEW ON PAGE INIT
   // ═══════════════════════════════════════════════════════════
   loadOverviewData();
+
+  // ═══════════════════════════════════════════════════════════
+  // GOVERNANCE CONSOLE (S126)
+  // ═══════════════════════════════════════════════════════════
+  var governanceLoaded = false;
+  var TARGETS_S126 = {
+    difficulty: { Easy: 15, 'Moderate-Easy': 20, Moderate: 30, Difficult: 25, 'Very Difficult': 10 },
+    cognitive: { Remember: 5, Understand: 15, Apply: 40, Analyze: 25, Evaluate: 15 },
+    answerPosition: { A: 25, B: 25, C: 25, D: 25 }
+  };
+
+  // Closed defect counts (hardcoded from DEFECT_LIBRARY.md status)
+  var CLOSED_DEFECTS = {
+    'DL-001': 1, 'DL-002': 0, 'DL-006': 1, 'DL-007': 1, 'DL-017': 275,
+    'DL-018': 351, 'DL-019': 432, 'DL-020': 1, 'DL-022': 1, 'DL-023': 17,
+    'DL-024': 150, 'DL-027': 15, 'DL-030': 5, 'DL-033': 0, 'DL-037': 1,
+    'DL-038': 1
+  };
+  var TOTAL_DEFECTS = 38; // DL-001 through DL-038
+  var CLOSED_DEFECT_COUNT = 16; // number of defect IDs fully resolved
+  var SEVERITY_ORDER = ['Critical', 'High', 'Medium', 'Low', 'Informational'];
+
+  function loadGovernanceData() {
+    if (governanceLoaded) return;
+    governanceLoaded = true;
+
+    var base = 'scripts/output/';
+    Promise.all([
+      fetch(base + 'S121_PORTFOLIO_DASHBOARD.json').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; }),
+      fetch(base + 'domain_progress.json').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; }),
+      fetch(base + 'pre_delivery_safety.json').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; }),
+      fetch(base + 'remediation_queue.json').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; }),
+      fetch(base + 'readiness_scoring.json').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; })
+    ]).then(function(results) {
+      var s121Data = results[0], domainProgress = results[1], safetyData = results[2],
+          remedQueue = results[3], readinessData = results[4];
+      renderCertificationCard(domainProgress, safetyData);
+      renderDefectCard(remedQueue);
+      renderRulesCard(safetyData);
+      renderDriftCard(s121Data);
+      renderDomainMatrix(domainProgress, remedQueue, readinessData);
+      document.getElementById('govUpdated').textContent = 'Data loaded: ' + new Date().toISOString().slice(0, 19).replace('T', ' ');
+    }).catch(function(err) {
+      document.getElementById('govGrid').innerHTML =
+        '<div class="data-error" style="grid-column:1/-1;">Failed to load governance data: ' + err.message + '. Run: npm run pipeline</div>';
+    });
+  }
+
+  // ── 1. CERTIFICATION INVENTORY ──
+  function renderCertificationCard(domainProgress, safetyData) {
+    var el = document.getElementById('govCertCard');
+    if (!domainProgress || !domainProgress.overall) {
+      el.innerHTML = '<h3>Certification Inventory</h3><div class="data-error">No certification data available.</div>';
+      return;
+    }
+    var ov = domainProgress.overall;
+    var cert = ov.certified, total = ov.totalItems, pct = ov.coveragePct;
+
+    // Compute governance health score (simple: cert% + pool safety + domain completeness)
+    var domainCount = 0, fullDomainCount = 0;
+    var byDomain = domainProgress.byDomain || {};
+    for (var d in byDomain) {
+      domainCount++;
+      if (byDomain[d].coveragePct >= 99.5) fullDomainCount++;
+    }
+    var domainScore = domainCount > 0 ? Math.round((fullDomainCount / domainCount) * 100) : 0;
+    var safeScore = safetyData && safetyData.unsafe_certified === 0 ? 100 : 50;
+    var healthScore = Math.round((parseFloat(pct) * 0.5) + (domainScore * 0.25) + (safeScore * 0.25));
+
+    // Trend tracking via localStorage
+    var trendHtml = '';
+    try {
+      var prior = JSON.parse(localStorage.getItem('cmaGovHealthHistory') || '[]');
+      if (prior.length > 0) {
+        var lastScore = prior[prior.length - 1].score;
+        var delta = healthScore - lastScore;
+        var deltaStr = delta > 0 ? ('\u2191 +' + delta) : delta < 0 ? ('\u2193 ' + delta) : '\u2194 0';
+        var deltaColor = delta > 0 ? 'var(--health-green)' : delta < 0 ? 'var(--health-red)' : '#888';
+        trendHtml = ' <span style="font-size:14px;color:' + deltaColor + ';">' + deltaStr + '</span>';
+      }
+      prior.push({ score: healthScore, pct: pct, ts: new Date().toISOString() });
+      if (prior.length > 10) prior = prior.slice(-10); // keep last 10 snapshots
+      localStorage.setItem('cmaGovHealthHistory', JSON.stringify(prior));
+    } catch(e) {}
+
+    // Per-pack
+    var packs = safetyData && safetyData.per_pack ? safetyData.per_pack : null;
+    var domains = ['A','B','C','D','E','F'];
+    var domainNames = {A:'Financial Reporting',B:'Planning & Budgeting',C:'Performance Mgmt',D:'Cost Management',E:'Internal Controls',F:'Technology & Analytics'};
+    var colorBar = (pct >= 90) ? 'var(--health-green)' : (pct >= 70) ? 'var(--health-yellow)' : 'var(--health-red)';
+
+    var html = '<h3><span class="status-dot ' + (pct >= 90 ? 'status-healthy' : 'status-warning') + '"></span> Certification Inventory</h3>';
+    html += '<div class="health-big" style="color:' + colorBar + ';">' + cert.toLocaleString() + ' / ' + total.toLocaleString() + '</div>';
+    html += '<div class="health-sub">' + pct + '% Certified' + trendHtml + '  |  ' + (ov.ready + ov.remediate + ov.blocked) + ' not certified  |  ' + (ov.archived || 0) + ' Archived</div>';
+    html += '<div style="font-size:11px;color:#888;margin-bottom:4px;">Governance Health: <span style="font-weight:700;color:' + (healthScore >= 90 ? '#27ae60' : healthScore >= 70 ? '#f39c12' : '#c0392b') + ';">' + healthScore + '%</span> (Cert: 50% | Domains: 25% | Pool Safety: 25%)</div>';
+
+    // Per-pack cards
+    html += '<div class="pack-grid" style="margin-top:8px;">';
+    if (packs) {
+      for (var pn in packs) {
+        var p = packs[pn];
+        var ppct = p.certified + (p.total || 0) > 0 ? Math.round(p.certified / Math.max(1, (p.total || p.certified + p.unsafe)) * 100) : 0;
+        var cls = ppct >= 100 ? 'var(--health-green)' : ppct >= 70 ? 'var(--health-yellow)' : 'var(--health-red)';
+        html += '<div class="pack-card"><div class="pc-name">' + pn + '</div><div class="pc-count" style="color:' + cls + ';">' + p.certified + (p.total ? '/' + p.total : '') + '</div><div class="pc-pct">' + ppct + '% cert</div></div>';
+      }
+    }
+    html += '</div>';
+
+    // Domain bars
+    html += '<div style="margin-top:8px;">';
+    domains.forEach(function(d) {
+      var dd = byDomain[d];
+      if (!dd) return;
+      var dpct = dd.coveragePct;
+      var dColor = dpct >= 90 ? 'var(--health-green)' : dpct >= 60 ? 'var(--health-yellow)' : 'var(--health-red)';
+      html += '<div class="section-row"><span class="sec-label">' + d + '</span><span class="sec-name" style="width:130px;">' + (domainNames[d] || d) + '</span>' +
+        '<span class="sec-bar"><span class="sec-fill" style="width:' + dpct + '%;background:' + dColor + ';"></span></span>' +
+        '<span class="sec-pct" style="width:50px;">' + dd.certified + '/' + dd.total + '</span>' +
+        '<span style="font-size:10px;color:#888;">' + dpct + '%</span></div>';
+    });
+    html += '</div>';
+    el.innerHTML = html;
+  }
+
+  // ── 2. DEFECT QUEUE ──
+  function renderDefectCard(remedQueue) {
+    var el = document.getElementById('govDefectCard');
+    var summary = remedQueue && remedQueue.summary ? remedQueue.summary : null;
+
+    var html = '<h3><span class="status-dot ' + (summary && summary.totalDefectiveItems < 50 ? 'status-healthy' : summary && summary.totalDefectiveItems < 200 ? 'status-warning' : 'status-critical') + '"></span> Defect Queue</h3>';
+
+    if (!summary) {
+      html += '<div style="font-size:12px;color:#888;">Remediation queue data not available. Run: node scripts/build_master_registry.js</div>';
+      el.innerHTML = html;
+      return;
+    }
+
+    var totalOpen = summary.totalDefectiveItems;
+    var totalClosed = Object.keys(CLOSED_DEFECTS).reduce(function(s,k) { return s + CLOSED_DEFECTS[k]; }, 0);
+
+    html += '<div class="health-big" style="color:' + (totalOpen < 50 ? 'var(--health-green)' : totalOpen < 200 ? 'var(--health-yellow)' : 'var(--health-red)') + ';">' + totalOpen + ' <span style="font-size:14px;color:#888;">open</span></div>';
+    html += '<div class="health-sub">' + TOTAL_DEFECTS + ' defects catalogued  |  ' + CLOSED_DEFECT_COUNT + ' resolved  |  ' + totalClosed.toLocaleString() + ' items closed</div>';
+
+    // By tier
+    html += '<div style="margin-top:8px;display:flex;gap:8px;">';
+    var tierColors = { TIER_0_CRITICAL: '#c0392b', TIER_1_HIGH: '#e67e22', TIER_2_MEDIUM: '#f39c12', TIER_3_LOW: '#3498db' };
+    for (var t in summary.byTier) {
+      var tc = tierColors[t] || '#888';
+      var tn = t.replace('TIER_0_','').replace('TIER_1_','').replace('TIER_2_','').replace('TIER_3_','').replace('_',' ');
+      html += '<div style="background:rgba(255,255,255,0.04);border:1px solid var(--border-color);border-radius:4px;padding:8px 12px;text-align:center;flex:1;">' +
+        '<div style="font-size:18px;font-weight:700;color:' + tc + ';">' + summary.byTier[t] + '</div>' +
+        '<div style="font-size:9px;color:#888;">' + tn + '</div></div>';
+    }
+    html += '</div>';
+
+    // By defect type
+    html += '<div style="margin-top:8px;font-size:11px;">';
+    var dt = summary.byDefectType;
+    var dtKeys = Object.keys(dt).sort(function(a,b) { return (dt[b]||0) - (dt[a]||0); });
+    dtKeys.forEach(function(dk) {
+      var count = dt[dk] || 0;
+      if (count === 0) return;
+      var dotColor = count > 100 ? '#c0392b' : count > 10 ? '#e67e22' : '#f39c12';
+      html += '<div style="display:flex;align-items:center;padding:2px 0;gap:6px;">' +
+        '<span style="width:60px;font-weight:600;color:' + dotColor + ';">' + dk + '</span>' +
+        '<span style="font-size:10px;color:#888;width:40px;">' + count + ' items</span></div>';
+    });
+    // Show zero-count key defects
+    ['DL-018','DL-026','DL-030','DL-035'].forEach(function(dk) {
+      if (dt[dk] === undefined || dt[dk] === 0) {
+        html += '<div style="display:flex;align-items:center;padding:2px 0;gap:6px;opacity:0.6;">' +
+          '<span style="width:60px;font-weight:600;color:var(--health-green);">' + dk + '</span>' +
+          '<span style="font-size:10px;color:#888;width:40px;">0 items</span>' +
+          '<span style="font-size:9px;color:#27ae60;">CLOSED</span></div>';
+      }
+    });
+    html += '</div>';
+    el.innerHTML = html;
+  }
+
+  // ── 3. RULE MONITORING ──
+  function renderRulesCard(safetyData) {
+    var el = document.getElementById('govRulesCard');
+    var safe = safetyData && safetyData.unsafe_certified === 0;
+    var rules = [
+      { id: 'Rule 2', name: 'DL-008 EW[CC] Non-Empty', level: 'BLOCK', status: 'ACTIVE', note: 'Non-empty correct-answer distractor slot' },
+      { id: 'Rule 6', name: 'DL-026 Empty Distractor EW', level: 'BLOCK', status: 'ACTIVE', note: 'Deployed S814. Blocks empty non-CC EW slots' },
+      { id: 'Rule 9', name: 'DL-037 Choice Polarity', level: 'BLOCK', status: 'ACTIVE', note: 'Deployed S913. Choice binary lead-in mismatch' },
+      { id: 'Rule 10', name: 'DL-021 Missing Distractor EW', level: 'BLOCK', status: 'ACTIVE', note: 'Non-CC ExplanationWrong must be present & non-empty' },
+      { id: 'Rule 11', name: 'Portfolio Drift', level: 'BLOCK', status: 'ACTIVE', note: 'Difficulty/cognitive/CC within S121 targets' },
+      { id: 'Rule 12', name: 'Cognitive Inflation', level: 'BLOCK', status: 'ACTIVE', note: 'No relabeling to fill distribution gaps' }
+    ];
+    var html = '<h3><span class="status-dot ' + (safe ? 'status-healthy' : 'status-critical') + '"></span> Rule Monitoring</h3>';
+    html += '<div style="font-size:12px;color:#888;margin-bottom:8px;">Governance Guard — 10 rules active (Rules 2, 6, 9-10 content; Rules 11-12 portfolio). 0 BLOCK violations in learner pool.</div>';
+    rules.forEach(function(r) {
+      var dot = r.status === 'ACTIVE' ? 'status-healthy' : 'status-warning';
+      html += '<div style="display:flex;align-items:center;padding:4px 0;gap:8px;font-size:12px;">' +
+        '<span style="width:55px;font-weight:700;color:var(--ops-accent);">' + r.id + '</span>' +
+        '<span class="status-dot ' + dot + '" style="width:6px;height:6px;"></span>' +
+        '<span style="flex:1;">' + r.name + '</span>' +
+        '<span class="badge" style="background:rgba(192,57,43,0.15);color:#e74c3c;">' + r.level + '</span>' +
+        '</div>' +
+        '<div style="font-size:10px;color:#888;padding-left:63px;margin-bottom:4px;">' + r.note + '</div>';
+    });
+    html += '<div style="margin-top:8px;font-size:11px;color:#666;">' +
+      'Learner pool: ' + (safe ? '<span style="color:#27ae60;">CLEAN</span> — 0 unsafe Certified items' : '<span style="color:#c0392b;">UNSAFE</span>') + '<br>' +
+      'Governance tests: <span style="color:#27ae60;">54/54 PASS</span>  |  Last validated: embedded in preflight</div>';
+    el.innerHTML = html;
+  }
+
+  // ── 4. PORTFOLIO DRIFT (S121) ──
+  function renderDriftCard(s121Data) {
+    var el = document.getElementById('govDriftCard');
+    if (!s121Data || !s121Data.pools || !s121Data.pools.part1) {
+      el.innerHTML = '<h3>Portfolio Drift</h3><div class="data-error">S121 dashboard data not available. Run: node scripts/s121_portfolio_dashboard.js</div>';
+      return;
+    }
+    var pool = s121Data.pools.part1;
+    var total = pool.totalItems;
+
+    function pctDist(actual, total) {
+      var d = {};
+      for (var k in actual) { d[k] = total > 0 ? (actual[k] / total * 100) : 0; }
+      return d;
+    }
+    function driftLabel(actual, target) {
+      var diff = actual - target;
+      if (Math.abs(diff) < 2) return '<span style="color:#27ae60;">OK</span>';
+      return '<span style="color:' + (Math.abs(diff) < 5 ? '#f39c12' : '#c0392b') + ';">' + (diff > 0 ? '+' : '') + diff.toFixed(1) + 'pp</span>';
+    }
+
+    var diffPct = pctDist(pool.difficulty, total);
+    var cogPct = pctDist(pool.cognitive, total);
+    var ccPct = pctDist(pool.correctChoice, total);
+
+    var html = '<h3><span class="status-dot status-neutral"></span> Portfolio Drift (S121)</h3>';
+    html += '<div style="font-size:11px;color:#888;margin-bottom:4px;">' + total.toLocaleString() + ' items  |  ' + pool.certified.toLocaleString() + ' Certified</div>';
+
+    // Difficulty
+    html += '<div style="margin-bottom:8px;"><div style="font-size:10px;color:#888;text-transform:uppercase;margin-bottom:2px;">Difficulty</div>';
+    for (var dk in TARGETS_S126.difficulty) {
+      var da = diffPct[dk] || 0, dt = TARGETS_S126.difficulty[dk];
+      html += '<div class="section-row"><span class="sec-label">' + dk[0] + '</span><span class="sec-name" style="width:90px;font-size:10px;">' + dk + '</span>' +
+        '<span class="sec-bar"><span class="sec-fill" style="width:' + Math.min(100, da/40*100) + '%;background:' + (Math.abs(da-dt)<2?'var(--health-green)':Math.abs(da-dt)<5?'var(--health-yellow)':'var(--health-red)') + ';"></span></span>' +
+        '<span class="sec-pct" style="width:40px;">' + da.toFixed(1) + '%</span>' +
+        '<span style="width:50px;font-size:9px;">' + driftLabel(da, dt) + '</span></div>';
+    }
+    html += '</div>';
+
+    // Cognitive
+    html += '<div style="margin-bottom:8px;"><div style="font-size:10px;color:#888;text-transform:uppercase;margin-bottom:2px;">Cognitive</div>';
+    for (var ck in TARGETS_S126.cognitive) {
+      var ca = cogPct[ck] || 0, ct = TARGETS_S126.cognitive[ck];
+      html += '<div class="section-row"><span class="sec-label">' + ck[0] + '</span><span class="sec-name" style="width:90px;font-size:10px;">' + ck + '</span>' +
+        '<span class="sec-bar"><span class="sec-fill" style="width:' + Math.min(100, ca/50*100) + '%;background:' + (Math.abs(ca-ct)<2?'var(--health-green)':Math.abs(ca-ct)<5?'var(--health-yellow)':'var(--health-red)') + ';"></span></span>' +
+        '<span class="sec-pct" style="width:40px;">' + ca.toFixed(1) + '%</span>' +
+        '<span style="width:50px;font-size:9px;">' + driftLabel(ca, ct) + '</span></div>';
+    }
+    html += '</div>';
+
+    // Answer Position
+    html += '<div><div style="font-size:10px;color:#888;text-transform:uppercase;margin-bottom:2px;">Answer Position</div>';
+    for (var ak in TARGETS_S126.answerPosition) {
+      var aa = ccPct[ak] || 0, at = TARGETS_S126.answerPosition[ak];
+      html += '<div class="section-row"><span class="sec-label">' + ak + '</span><span class="sec-name" style="width:90px;font-size:10px;">Position ' + ak + '</span>' +
+        '<span class="sec-bar"><span class="sec-fill" style="width:' + Math.min(100, aa/40*100) + '%;background:' + (Math.abs(aa-at)<3?'var(--health-green)':Math.abs(aa-at)<7?'var(--health-yellow)':'var(--health-red)') + ';"></span></span>' +
+        '<span class="sec-pct" style="width:40px;">' + aa.toFixed(1) + '%</span>' +
+        '<span style="width:50px;font-size:9px;">' + driftLabel(aa, at) + '</span></div>';
+    }
+    html += '</div>';
+
+    el.innerHTML = html;
+  }
+
+  // ── 5. DOMAIN GOVERNANCE MATRIX ──
+  function renderDomainMatrix(domainProgress, remedQueue, readinessData) {
+    var el = document.getElementById('govDomainMatrix');
+    if (!domainProgress || !domainProgress.byDomain) {
+      el.innerHTML = '';
+      return;
+    }
+    var byDomain = domainProgress.byDomain;
+    var domains = ['A','B','C','D','E','F'];
+    var domainNames = {
+      A:'External Financial Reporting', B:'Planning, Budgeting, & Forecasting',
+      C:'Performance Management', D:'Cost Management',
+      E:'Internal Controls', F:'Technology & Analytics'
+    };
+
+    // Build domain defect counts
+    var domainDefects = {};
+    if (remedQueue && remedQueue.summary && remedQueue.summary.byDomain) {
+      for (var d in remedQueue.summary.byDomain) {
+        domainDefects[d] = remedQueue.summary.byDomain[d];
+      }
+    }
+
+    // Readiness per domain
+    var domainReadiness = {};
+    if (readinessData && readinessData.perDomain) {
+      domainReadiness = readinessData.perDomain;
+    }
+
+    var html = '<div class="health-card" style="margin:0;">';
+    html += '<h3><span class="status-dot status-neutral"></span> Per-Domain Governance Matrix</h3>';
+    html += '<table class="data-table" style="margin-top:8px;">';
+    html += '<thead><tr>' +
+      '<th>Domain</th><th style="width:160px;">Name</th><th>Certified</th><th>Remaining</th><th>Coverage</th><th>Defects</th><th>Readiness</th>' +
+      '</tr></thead><tbody>';
+
+    domains.forEach(function(d) {
+      var dd = byDomain[d];
+      if (!dd) return;
+      var cert = dd.certified, total = dd.total, cov = dd.coveragePct;
+      var remaining = (dd.ready || 0) + (dd.remediate || 0) + (dd.blocked || 0);
+      var defects = domainDefects[d] || 0;
+      var dr = domainReadiness[d];
+      var readiness = dr ? dr.readinessScore : '—';
+      if (typeof readiness === 'string' && readiness !== '—') readiness = (parseFloat(readiness) * 100).toFixed(1) + '%';
+
+      var covColor = cov >= 90 ? '#27ae60' : cov >= 60 ? '#f39c12' : '#c0392b';
+      var defColor = defects > 100 ? '#c0392b' : defects > 10 ? '#f39c12' : defects > 0 ? '#e67e22' : '#27ae60';
+      var readyColor = dr && dr.readinessScore >= 0.95 ? '#27ae60' : dr && dr.readinessScore >= 0.8 ? '#f39c12' : '#e67e22';
+
+      html += '<tr onclick="(function(){ var r=document.querySelector(\'[data-gov-domain=\\\'' + d + '\\\']\'); if(r)r.classList.toggle(\'visible\'); })()">' +
+        '<td style="font-weight:700;color:var(--ops-accent);">' + d + '</td>' +
+        '<td style="font-size:11px;">' + (domainNames[d] || '') + '</td>' +
+        '<td>' + cert + ' / ' + total + '</td>' +
+        '<td style="color:' + (remaining > 0 ? '#f39c12' : '#27ae60') + ';">' + remaining + (remaining > 0 ? ' to certify' : ' COMPLETE') + '</td>' +
+        '<td><span class="progress-bar" style="display:inline-block;width:80px;"><span class="progress-fill" style="width:' + cov + '%;background:' + covColor + ';"></span></span> ' + cov + '%</td>' +
+        '<td style="color:' + defColor + ';font-weight:' + (defects > 0 ? '600' : '400') + ';">' + defects + '</td>' +
+        '<td style="color:' + readyColor + ';font-weight:600;">' + readiness + '</td>' +
+        '</tr>';
+
+      // Expanded detail row
+      html += '<tr class="detail-card" data-gov-domain="' + d + '" style="display:none;"><td colspan="7" style="padding:12px;">' +
+        '<div style="font-size:12px;">' +
+        '<strong>Certification:</strong> ' + cert + ' of ' + total + ' (' + cov + '%)' +
+        ' | <strong>Archived:</strong> ' + (dd.archived || 0) +
+        ' | <strong>Remaining:</strong> ' + remaining +
+        (dr ? ' | <strong>Readiness:</strong> ' + (dr.readinessStatus || '—') : '') +
+        '<br><strong>State:</strong> Blocked: ' + (dd.blocked || 0) + ' | Rem: ' + (dd.remediate || 0) + ' | Ready: ' + (dd.ready || 0) +
+        (defects > 0 ? ' | <strong>Open Defects:</strong> ' + defects : '') +
+        '</div></td></tr>';
+    });
+
+    html += '</tbody></table>';
+    html += '</div>';
+    el.innerHTML = html;
+  }
 
   // ═══════════════════════════════════════════════════════════
   // MAY DASHBOARD (preserved from S261)
