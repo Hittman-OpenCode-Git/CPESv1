@@ -1,20 +1,20 @@
 # Validation Report Summary
 
-**Generated:** 2026-07-31T14:43:04.509Z
+**Generated:** 2026-07-31T16:12:05.668Z
 **Project:** CMA Part 1 Exam Simulator v2.0
 
 ## Results
 
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
-| Repository Validator | PASS | 0 | 0 | 2ms |
-| Metadata Validator | FAIL | 18 | 5 | 591ms |
-| Blueprint Validator | WARN | 0 | 232 | 359ms |
-| Difficulty Validator | FAIL | 18 | 42 | 336ms |
-| Reference Validator | WARN | 0 | 95 | 274ms |
-| Explanation Validator | FAIL | 11 | 35 | 566ms |
-| Case Integrity Validator | FAIL | 2 | 8 | 96ms |
-| PsychometricValidator | FAIL | 119 | 1809 | 4604ms |
+| Repository Validator | PASS | 0 | 0 | 4ms |
+| Metadata Validator | FAIL | 18 | 5 | 495ms |
+| Blueprint Validator | WARN | 0 | 232 | 280ms |
+| Difficulty Validator | FAIL | 18 | 42 | 271ms |
+| Reference Validator | WARN | 0 | 95 | 214ms |
+| Explanation Validator | FAIL | 11 | 35 | 553ms |
+| Case Integrity Validator | FAIL | 2 | 8 | 113ms |
+| PsychometricValidator | FAIL | 119 | 1809 | 2945ms |
 
 **Total Errors:** 168
 **Total Warnings:** 2226
@@ -24,14 +24,14 @@
 
 ### Repository Validator
 **Status:** PASS
-**Duration:** 2ms
+**Duration:** 4ms
 **Statistics:**
 - Question Packs: 5
 - Case Banks: 5
 
 ### Metadata Validator
 **Status:** FAIL
-**Duration:** 591ms
+**Duration:** 495ms
 **Statistics:**
 - Cases Checked: 45
 **Errors:**
@@ -62,7 +62,7 @@
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 359ms
+**Duration:** 280ms
 **Statistics:**
 - Cases Checked: 45
 - Cross-Domain Cases: 0
@@ -308,7 +308,7 @@
 
 ### Difficulty Validator
 **Status:** FAIL
-**Duration:** 336ms
+**Duration:** 271ms
 **Statistics:**
 - Cases Checked: 45
 - Items Checked: 235
@@ -385,7 +385,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 274ms
+**Duration:** 214ms
 **Statistics:**
 - Cases Checked: 45
 - Total References: 0
@@ -490,7 +490,7 @@
 
 ### Explanation Validator
 **Status:** FAIL
-**Duration:** 566ms
+**Duration:** 553ms
 **Statistics:**
 - MCQ Questions Checked: 2545
 - Case Items Checked: 235
@@ -551,7 +551,7 @@
 
 ### Case Integrity Validator
 **Status:** FAIL
-**Duration:** 96ms
+**Duration:** 113ms
 **Statistics:**
 - Total Cases Checked: 45
 - Total Items Checked: 235
@@ -579,7 +579,7 @@
 
 ### PsychometricValidator
 **Status:** FAIL
-**Duration:** 4604ms
+**Duration:** 2945ms
 **Statistics:**
 - AbsoluteLanguageValidator.questionsScanned: 2545
 - AbsoluteLanguageValidator.findings: 1044

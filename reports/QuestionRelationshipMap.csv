@@ -1,102 +1,12 @@
 QuestionID,CaseID,File,Domain,Topic,QuestionType,BloomLevel,Prompt
-CBQ-A1-Q1,CBQ-A1,scored_cases.js,External Financial Reporting Decisions,Revenue recognition,numeric,Apply,Enter service-plan revenue recognized at Dec. 31.
-CBQ-A1-Q2,CBQ-A1,scored_cases.js,External Financial Reporting Decisions,Contract liabilities,numeric,Apply,Enter the contract liability remaining for the service plans at Dec. 31.
-CBQ-A1-Q3,CBQ-A1,scored_cases.js,External Financial Reporting Decisions,Revenue recognition,select,Analyze,Which treatment is most appropriate for the replacement parts shipment?
-CBQ-A1-Q4,CBQ-A1,scored_cases.js,External Financial Reporting Decisions,Statement of cash flows,numeric,Apply,"Using the indirect method and Exhibit 2 data, enter cash flow from operating activities. (Income-tax cash effects are no"
-CBQ-A1-Q5,CBQ-A1,scored_cases.js,External Financial Reporting Decisions,Deferred taxes,numeric,Apply,Enter the deferred tax liability created by the depreciation temporary difference.
-CBQ-A1-Q6,CBQ-A1,scored_cases.js,External Financial Reporting Decisions,External reporting judgment,multi,Evaluate,Select audit-review risks that require judgment rather than simple cash matching.
-CBQ-A2-Q1,CBQ-A2,scored_cases.js,External Financial Reporting Decisions,Consolidations,numeric,Apply,Enter the unrealized intercompany profit remaining in ending inventory.
-CBQ-A2-Q2,CBQ-A2,scored_cases.js,External Financial Reporting Decisions,Impairment,numeric,Apply,Enter the impairment loss for the asset group.
-CBQ-A2-Q3,CBQ-A2,scored_cases.js,External Financial Reporting Decisions,OCI,numeric,Apply,Enter net OCI effect from the two OCI items.
-CBQ-A2-Q4,CBQ-A2,scored_cases.js,External Financial Reporting Decisions,Consolidations,select,Analyze,How is Delta dividends activity treated in consolidation?
-CBQ-A2-Q5,CBQ-A2,scored_cases.js,External Financial Reporting Decisions,Financial reporting effects,multi,Evaluate,"Select items that reduce consolidated income, assets, or accumulated OCI/equity in this case."
-CBQ-A2-Q6,CBQ-A2,scored_cases.js,External Financial Reporting Decisions,External reporting,match,Analyze,Match each issue to the correct reporting treatment.
-CBQ-B1-Q1,CBQ-B1,scored_cases.js,"Planning, Budgeting, and Forecasting",Production budget,numeric,Apply,Enter January required production units.
-CBQ-B1-Q2,CBQ-B1,scored_cases.js,"Planning, Budgeting, and Forecasting",Production budget,numeric,Apply,Enter February required production units.
-CBQ-B1-Q3,CBQ-B1,scored_cases.js,"Planning, Budgeting, and Forecasting",Direct materials budget,numeric,Apply,Enter January material purchases in pounds.
-CBQ-B1-Q4,CBQ-B1,scored_cases.js,"Planning, Budgeting, and Forecasting",Cash budget,numeric,Apply,Enter January cash collections.
-CBQ-B1-Q5,CBQ-B1,scored_cases.js,"Planning, Budgeting, and Forecasting",Cash budget,numeric,Apply,Enter January borrowing required to maintain the minimum cash balance.
-CBQ-B1-Q6,CBQ-B1,scored_cases.js,"Planning, Budgeting, and Forecasting",Budgeting judgment,multi,Evaluate,Select common errors that would understate January borrowing.
-CBQ-B2-Q1,CBQ-B2,scored_cases.js,"Planning, Budgeting, and Forecasting",Forecasting,numeric,Apply,Enter total forecast cost using updated machine hours.
-CBQ-B2-Q2,CBQ-B2,scored_cases.js,"Planning, Budgeting, and Forecasting",Sensitivity analysis,numeric,Apply,Enter the increase in forecast cost from base to updated machine hours.
-CBQ-B2-Q3,CBQ-B2,scored_cases.js,"Planning, Budgeting, and Forecasting",Forecasting indicators,select,Analyze,Which indicator is least useful as a leading operational indicator?
-CBQ-B2-Q4,CBQ-B2,scored_cases.js,"Planning, Budgeting, and Forecasting",Regression,multi,Evaluate,Select statements that correctly interpret the regression output.
-CBQ-B2-Q5,CBQ-B2,scored_cases.js,"Planning, Budgeting, and Forecasting",Rolling forecast,fill,Understand,Fill in the blank: A rolling forecast maintains a constant planning horizon by adding a new period as the current period
-CBQ-B2-Q6,CBQ-B2,scored_cases.js,"Planning, Budgeting, and Forecasting",Forecasting,match,Analyze,Match each metric to the best interpretation.
-CBQ-C1-Q1,CBQ-C1,scored_cases.js,Performance Management,Material price variance,numeric,Apply,Enter the direct material price variance as a positive amount.
-CBQ-C1-Q2,CBQ-C1,scored_cases.js,Performance Management,Material quantity variance,numeric,Apply,Enter the direct material quantity variance as a signed amount; use negative for favorable.
-CBQ-C1-Q3,CBQ-C1,scored_cases.js,Performance Management,Labor efficiency variance,numeric,Apply,Enter the direct labor efficiency variance as a signed amount; use negative for favorable.
-CBQ-C1-Q4,CBQ-C1,scored_cases.js,Performance Management,Labor rate variance,select,Evaluate,Which explanation best fits the labor rate variance?
-CBQ-C1-Q5,CBQ-C1,scored_cases.js,Performance Management,Flexible budgeting,multi,Evaluate,Select variances that should be analyzed using actual output rather than static planned output.
-CBQ-C1-Q6,CBQ-C1,scored_cases.js,Performance Management,Responsibility accounting,match,Analyze,Match each variance to the manager most likely to investigate first.
-CBQ-C2-Q1,CBQ-C2,scored_cases.js,Performance Management,Residual income,numeric,Apply,Enter Motor Division residual income.
-CBQ-C2-Q2,CBQ-C2,scored_cases.js,Performance Management,ROI,numeric,Apply,Enter Motor Division ROI percentage as a whole number.
-CBQ-C2-Q3,CBQ-C2,scored_cases.js,Performance Management,Transfer pricing,select,Analyze,"With idle capacity and no opportunity cost, what is the minimum transfer price from the company perspective?"
-CBQ-C2-Q4,CBQ-C2,scored_cases.js,Performance Management,Performance measurement,multi,Evaluate,Select reasons residual income may improve goal congruence compared with ROI.
-CBQ-C2-Q5,CBQ-C2,scored_cases.js,Performance Management,Transfer pricing,fill,Understand,Fill in the blank: A transfer price should promote goal _____ so divisional decisions support overall company interests.
-CBQ-C2-Q6,CBQ-C2,scored_cases.js,Performance Management,Performance management,match,Analyze,Match each measure to the best description.
-CBQ-D1-Q1,CBQ-D1,scored_cases.js,Cost Management,Activity-based costing,numeric,Apply,Enter total ABC cost assigned to Product B from the three pools.
-CBQ-D1-Q2,CBQ-D1,scored_cases.js,Cost Management,Quality costs,numeric,Apply,Enter total external failure cost.
-CBQ-D1-Q3,CBQ-D1,scored_cases.js,Cost Management,ABC distortion,select,Evaluate,Which product is most likely undercosted by a plantwide labor-hour rate?
-CBQ-D1-Q4,CBQ-D1,scored_cases.js,Cost Management,Quality costs,multi,Evaluate,Select prevention or appraisal activities from the quality exhibit.
-CBQ-D1-Q5,CBQ-D1,scored_cases.js,Cost Management,ABC,fill,Understand,Fill in the blank: ABC assigns overhead using activity cost _____ rather than a single volume base.
-CBQ-D1-Q6,CBQ-D1,scored_cases.js,Cost Management,Quality costs,match,Analyze,Match each activity to its quality-cost category.
-CBQ-D2-Q1,CBQ-D2,scored_cases.js,Cost Management,Process costing,numeric,Apply,Enter equivalent units for conversion costs using weighted-average.
-CBQ-D2-Q2,CBQ-D2,scored_cases.js,Cost Management,Process costing,numeric,Apply,Enter conversion cost per equivalent unit.
-CBQ-D2-Q3,CBQ-D2,scored_cases.js,Cost Management,Theory of constraints,select,Analyze,Which operation is the bottleneck?
-CBQ-D2-Q4,CBQ-D2,scored_cases.js,Cost Management,Lean operations,multi,Evaluate,Select actions consistent with lean thinking.
-CBQ-D2-Q5,CBQ-D2,scored_cases.js,Cost Management,Process costing,fill,Understand,Fill in the blank: Equivalent units combine completed units and partially completed work expressed as _____ units.
-CBQ-D2-Q6,CBQ-D2,scored_cases.js,Cost Management,Cost management,match,Analyze,Match each issue to the best tool.
-CBQ-E1-Q1,CBQ-E1,scored_cases.js,Internal Controls,Segregation of duties,select,Analyze,Which control weakness is most directly related to fictitious vendor risk?
-CBQ-E1-Q2,CBQ-E1,scored_cases.js,Internal Controls,Control activities,multi,Evaluate,Select controls that would improve the AP process.
-CBQ-E1-Q3,CBQ-E1,scored_cases.js,Internal Controls,Deficiency evaluation,numeric,Apply,"Enter the duplicate/fictitious payment loss as a percentage of pretax income, rounded to one decimal place."
-CBQ-E1-Q4,CBQ-E1,scored_cases.js,Internal Controls,COSO limitations,fill,Understand,"Fill in the blank: Management override and collusion are inherent limitations, so internal control provides reasonable, "
-CBQ-E1-Q5,CBQ-E1,scored_cases.js,Internal Controls,Control classification,match,Analyze,Match each control to preventive or detective.
-CBQ-E1-Q6,CBQ-E1,scored_cases.js,Internal Controls,SOX evidence,select,Analyze,Which evidence issue most weakens operating effectiveness?
-CBQ-E2-Q1,CBQ-E2,scored_cases.js,Internal Controls,Access controls,select,Evaluate,Which response best addresses shared administrator IDs?
-CBQ-E2-Q2,CBQ-E2,scored_cases.js,Internal Controls,Access review,numeric,Apply,Enter the terminated-user exception rate as a percentage rounded to one decimal place.
-CBQ-E2-Q3,CBQ-E2,scored_cases.js,Internal Controls,IT controls,multi,Evaluate,Select ITGCs relevant to the exceptions.
-CBQ-E2-Q4,CBQ-E2,scored_cases.js,Internal Controls,Change management,fill,Understand,Fill in the blank: Emergency changes should receive timely post-implementation review and _____.
-CBQ-E2-Q5,CBQ-E2,scored_cases.js,Internal Controls,ITGC risk,match,Analyze,Match each exception to the primary risk.
-CBQ-E2-Q6,CBQ-E2,scored_cases.js,Internal Controls,Monitoring,select,Analyze,Why is 14-day log retention a concern?
-CBQ-F1-Q1,CBQ-F1,scored_cases.js,Technology and Analytics,Data quality,numeric,Apply,"Enter the percentage of claims missing installation date, as a whole number."
-CBQ-F1-Q2,CBQ-F1,scored_cases.js,Technology and Analytics,Data governance,select,Evaluate,Which data governance response best addresses inconsistent product codes?
-CBQ-F1-Q3,CBQ-F1,scored_cases.js,Technology and Analytics,Data quality,multi,Evaluate,Select data-quality dimensions directly affected.
-CBQ-F1-Q4,CBQ-F1,scored_cases.js,Technology and Analytics,Analytics types,match,Analyze,Match each analytics request to its type.
-CBQ-F1-Q5,CBQ-F1,scored_cases.js,Technology and Analytics,Data lineage,fill,Understand,"Fill in the blank: Documentation showing source fields, transformations, and report logic is data _____."
-CBQ-F1-Q6,CBQ-F1,scored_cases.js,Technology and Analytics,Analytics governance,select,Apply,What is the best recommendation before presenting the dashboard to executives?
-CBQ-A3-Q1,CBQ-A3,scored_cases.js,External Financial Reporting Decisions,Inventory measurement,numeric,Apply,Enter the inventory write-down required under lower of cost and NRV.
-CBQ-A3-Q2,CBQ-A3,scored_cases.js,External Financial Reporting Decisions,Asset retirement obligations,numeric,Apply,Enter the amount added to the asset cost for the asset retirement obligation at initial recognition.
-CBQ-A3-Q3,CBQ-A3,scored_cases.js,External Financial Reporting Decisions,Subsequent events,select,Analyze,How should the customer bankruptcy be treated?
-CBQ-A3-Q4,CBQ-A3,scored_cases.js,External Financial Reporting Decisions,Cash classification,select,Analyze,How should the 88-day Treasury bill normally be classified?
-CBQ-A3-Q5,CBQ-A3,scored_cases.js,External Financial Reporting Decisions,Statement of cash flows,numeric,Apply,Enter operating cash flow using the listed cash-flow data before separately adjusting for the inventory write-down.
-CBQ-A3-Q6,CBQ-A3,scored_cases.js,External Financial Reporting Decisions,External reporting,match,Analyze,Match each item to its reporting treatment.
-CBQ-B3-Q1,CBQ-B3,scored_cases.js,"Planning, Budgeting, and Forecasting",Expected value,numeric,Apply,Enter expected unit sales.
-CBQ-B3-Q2,CBQ-B3,scored_cases.js,"Planning, Budgeting, and Forecasting",Forecasting,numeric,Apply,Enter expected sales dollars.
-CBQ-B3-Q3,CBQ-B3,scored_cases.js,"Planning, Budgeting, and Forecasting",Cash collections,numeric,Apply,Enter expected current-month cash collections from current-month sales.
-CBQ-B3-Q4,CBQ-B3,scored_cases.js,"Planning, Budgeting, and Forecasting",Cash budget,numeric,Apply,Enter total cash available before disbursements.
-CBQ-B3-Q5,CBQ-B3,scored_cases.js,"Planning, Budgeting, and Forecasting",Cash budget,select,Analyze,Is borrowing required after planned disbursements and minimum cash?
-CBQ-B3-Q6,CBQ-B3,scored_cases.js,"Planning, Budgeting, and Forecasting",Forecast assumptions,multi,Evaluate,Select assumptions that most directly affect the borrowing result.
-CBQ-C3-Q1,CBQ-C3,scored_cases.js,Performance Management,Performance variance,numeric,Apply,Enter the unfavorable operating income variance as a positive amount.
-CBQ-C3-Q2,CBQ-C3,scored_cases.js,Performance Management,Nonfinancial measures,numeric,Apply,Enter the on-time delivery shortfall in percentage points.
-CBQ-C3-Q3,CBQ-C3,scored_cases.js,Performance Management,Balanced scorecard,select,Analyze,Which metric is most clearly a learning and growth measure?
-CBQ-C3-Q4,CBQ-C3,scored_cases.js,Performance Management,Leading indicators,multi,Evaluate,Select likely leading indicators of future financial performance.
-CBQ-C3-Q5,CBQ-C3,scored_cases.js,Performance Management,Balanced scorecard,match,Analyze,Match each scorecard perspective to the best metric.
-CBQ-C3-Q6,CBQ-C3,scored_cases.js,Performance Management,Responsibility accounting,select,Analyze,Which issue should production investigate first?
-CBQ-F2-Q1,CBQ-F2,scored_cases.js,Internal Controls,RPA benefits,numeric,Apply,Enter monthly labor hours saved by RPA.
-CBQ-F2-Q2,CBQ-F2,scored_cases.js,Internal Controls,Exception analytics,numeric,Apply,Enter the number of invoices routed to exception handling each month.
-CBQ-F2-Q3,CBQ-F2,scored_cases.js,Internal Controls,Cybersecurity controls,select,Analyze,Which governance finding creates the clearest accountability risk?
-CBQ-F2-Q4,CBQ-F2,scored_cases.js,Internal Controls,Automation governance,multi,Evaluate,Select controls that should be added before expanding automation.
-CBQ-F2-Q5,CBQ-F2,scored_cases.js,Internal Controls,Analytics governance,fill,Understand,Fill in the blank: Periodic review of false positives and missed exceptions is model _____.
-CBQ-F2-Q6,CBQ-F2,scored_cases.js,Internal Controls,Technology controls,match,Analyze,Match each finding to the main control response.
+CBQ2-A3-Q5,CBQ2-A3,scored_cases2.js,External Financial Reporting Decisions,Receivables,fill,Understand,The method of estimating bad debt using an aging schedule is known as the ______ approach.
 CBQ2-A3-Q1,CBQ2-A3,scored_cases2.js,External Financial Reporting Decisions,ASC 606,numeric,Apply,Calculate the transaction price allocated to the Hardware performance obligation (round to nearest whole dollar).
 CBQ2-A3-Q2,CBQ2-A3,scored_cases2.js,External Financial Reporting Decisions,Receivables,numeric,Apply,Calculate the required ending balance in the Allowance for Doubtful Accounts.
-CBQ2-A3-Q3,CBQ2-A3,scored_cases2.js,External Financial Reporting Decisions,Revenue,multi,Evaluate,"Under ASC 606, which criteria indicate a distinct performance obligation?"
 CBQ2-A3-Q4,CBQ2-A3,scored_cases2.js,External Financial Reporting Decisions,Receivables,select,Analyze,"If the unadjusted ADA balance was a $5,000 debit, what is the bad debt expense?"
-CBQ2-A3-Q5,CBQ2-A3,scored_cases2.js,External Financial Reporting Decisions,Receivables,fill,Understand,The method of estimating bad debt using an aging schedule is known as the ______ approach.
-CBQ2-A2-Q1,CBQ2-A2,scored_cases2.js,External Financial Reporting Decisions,Inventory,select,Analyze,"Under US GAAP for a FIFO firm, inventory is valued at:"
+CBQ2-A3-Q3,CBQ2-A3,scored_cases2.js,External Financial Reporting Decisions,Revenue,multi,Evaluate,"Under ASC 606, which criteria indicate a distinct performance obligation?"
 CBQ2-A2-Q2,CBQ2-A2,scored_cases2.js,External Financial Reporting Decisions,Inventory,numeric,Apply,What is the per-unit valuation for the inventory at year-end?
 CBQ2-A2-Q3,CBQ2-A2,scored_cases2.js,External Financial Reporting Decisions,Inventory,numeric,Apply,What is the total inventory write-down required?
+CBQ2-A2-Q1,CBQ2-A2,scored_cases2.js,External Financial Reporting Decisions,Inventory,select,Analyze,"Under US GAAP for a FIFO firm, inventory is valued at:"
 CBQ2-A2-Q4,CBQ2-A2,scored_cases2.js,External Financial Reporting Decisions,Inventory,match,Analyze,Match the inventory valuation method to its primary characteristic.
 CBQ2-A2-Q5,CBQ2-A2,scored_cases2.js,External Financial Reporting Decisions,Inventory,multi,Evaluate,Which costs are capitalized into inventory?
 CBQ2-B1-Q1,CBQ2-B1,scored_cases2.js,"Planning, Budgeting, and Forecasting",Production Budget,numeric,Apply,How many units must Apex produce in January?
@@ -167,10 +77,10 @@ CBQ2-F2-Q2,CBQ2-F2,scored_cases2.js,Technology and Analytics,Data quality dimens
 CBQ2-F2-Q3,CBQ2-F2,scored_cases2.js,Technology and Analytics,Metadata management,fill,Understand,"Enter the term for the data that describes the structure, context, and meaning of other data — for example, the definiti"
 CBQ2-F2-Q4,CBQ2-F2,scored_cases2.js,Technology and Analytics,Data privacy and regulatory compliance,fill,Understand,"Enter the regulatory framework acronym that requires HealthPlus to protect member health information, including implemen"
 CBQ2-F2-Q5,CBQ2-F2,scored_cases2.js,Technology and Analytics,Data lifecycle management,fill,Analyze,Enter the term for the data lifecycle stage in which HealthPlus should implement a formal data retention schedule that s
-CBQ3-A1-Q1,CBQ3-A1,scored_cases3.js,External Financial Reporting Decisions,Leases,numeric,Apply,Calculate the present value of the lease payments (round to nearest dollar).
-CBQ3-A1-Q2,CBQ3-A1,scored_cases3.js,External Financial Reporting Decisions,Lease Classification,select,Analyze,"Based on ASC 842, how should Meridian classify this lease?"
 CBQ3-A1-Q3,CBQ3-A1,scored_cases3.js,External Financial Reporting Decisions,Lease Accounting,fill,Understand,"Under ASC 842, the lessee records a lease liability and a ______________ asset on the balance sheet."
+CBQ3-A1-Q1,CBQ3-A1,scored_cases3.js,External Financial Reporting Decisions,Leases,numeric,Apply,Calculate the present value of the lease payments (round to nearest dollar).
 CBQ3-A1-Q4,CBQ3-A1,scored_cases3.js,External Financial Reporting Decisions,Lease Amortization,numeric,Apply,What is the lease liability balance at the end of Year 1 after the first payment? (Use the PV calculated previously).
+CBQ3-A1-Q2,CBQ3-A1,scored_cases3.js,External Financial Reporting Decisions,Lease Classification,select,Analyze,"Based on ASC 842, how should Meridian classify this lease?"
 CBQ3-A1-Q5,CBQ3-A1,scored_cases3.js,External Financial Reporting Decisions,Lease Criteria,multi,Evaluate,Which of the following are criteria for a finance lease?
 CBQ3-A2-Q1,CBQ3-A2,scored_cases3.js,External Financial Reporting Decisions,Cash Flows,numeric,Apply,Calculate the Net Cash Provided by Operating Activities.
 CBQ3-A2-Q2,CBQ3-A2,scored_cases3.js,External Financial Reporting Decisions,Cash Flows,numeric,Apply,Calculate the Net Cash Provided by (Used in) Investing Activities.
@@ -199,9 +109,9 @@ CBQ3-C1-Q2,CBQ3-C1,scored_cases3.js,Performance Management,Balanced scorecard �
 CBQ3-C1-Q3,CBQ3-C1,scored_cases3.js,Performance Management,Balanced scorecard — internal business process perspective,match,Analyze,The Internal Business Process perspective identifies the critical processes where the company must excel. Match each pro
 CBQ3-C1-Q4,CBQ3-C1,scored_cases3.js,Performance Management,Balanced scorecard — learning and growth perspective,match,Analyze,The Learning and Growth perspective focuses on the intangible assets needed to support the other perspectives. Match eac
 CBQ3-C1-Q5,CBQ3-C1,scored_cases3.js,Performance Management,Leading vs lagging indicators in balanced scorecard,match,Analyze,The balanced scorecard distinguishes between leading and lagging indicators. Match each KPI to its correct classificatio
-CBQ3-C2-Q1,CBQ3-C2,scored_cases3.js,Performance Management,Transfer pricing method selection — market-based,select,Evaluate,Apex Components currently evaluates division managers based on divisional operating income. Division A has sufficient ca
 CBQ3-C2-Q2,CBQ3-C2,scored_cases3.js,Performance Management,Goal congruence failure — external sourcing cost impact,select,Analyze,"Using Exhibit 1 and Exhibit 2, if Division A sells all 150,000 chips externally at $50 and Division B must purchase chip"
 CBQ3-C2-Q3,CBQ3-C2,scored_cases3.js,Performance Management,Transfer pricing policy design factors,multi,Analyze,The corporate controller is evaluating transfer pricing alternatives. Which of the following factors should be considere
+CBQ3-C2-Q1,CBQ3-C2,scored_cases3.js,Performance Management,Transfer pricing method selection — market-based,select,Evaluate,Apex Components currently evaluates division managers based on divisional operating income. Division A has sufficient ca
 CBQ3-C2-Q4,CBQ3-C2,scored_cases3.js,Performance Management,Transfer pricing method selection — scenario matching,match,Evaluate,Apex Components faces four distinct business scenarios. Match each scenario to the most appropriate transfer pricing met
 CBQ3-C2-Q5,CBQ3-C2,scored_cases3.js,Performance Management,Goal congruence and divisional performance evaluation,select,Evaluate,Division B's manager argues that using market-based transfer pricing at $50 unfairly penalizes Division B because the ch
 CBQ3-C3-Q1,CBQ3-C3,scored_cases3.js,Performance Management,Sales volume variance for operating income,select,Apply,"The production manager notes that actual revenue exceeded the static budget by $126,000 and believes performance was str"
@@ -231,9 +141,9 @@ CBQ3-E1-Q2,CBQ3-E1,scored_cases3.js,Internal Controls,COSO ERM 2017 — applying
 CBQ3-E1-Q3,CBQ3-E1,scored_cases3.js,Internal Controls,Risk response strategies — ERM Performance component,match,Evaluate,MedTech Devices has identified the following risks during the Performance component assessment. Match each risk to the m
 CBQ3-E1-Q4,CBQ3-E1,scored_cases3.js,Internal Controls,COSO ERM — Review and Revision component,match,Evaluate,The Review and Revision component requires MedTech Devices to assess changes that could affect ERM effectiveness. Match 
 CBQ3-E1-Q5,CBQ3-E1,scored_cases3.js,Internal Controls,COSO ERM — benefits by component,match,Analyze,Match each ERM benefit described by MedTech's CRO to the correct COSO ERM component that primarily delivers that benefit
-CBQ3-E2-Q1,CBQ3-E2,scored_cases3.js,Internal Controls,Disaster recovery site selection,select,Evaluate,"Based on Exhibit 1, FFCU's online banking platform and member call center system both require a Recovery Time Objective "
 CBQ3-E2-Q2,CBQ3-E2,scored_cases3.js,Internal Controls,BC/DR governance and testing requirements,select,Analyze,FFCU's internal audit team identifies that the current disaster recovery plan has not been tested in 18 months and that 
 CBQ3-E2-Q3,CBQ3-E2,scored_cases3.js,Internal Controls,Essential BCP components,multi,Analyze,"The BC/DR planning committee is developing the recovery strategy. According to COSO and IT governance frameworks, which "
+CBQ3-E2-Q1,CBQ3-E2,scored_cases3.js,Internal Controls,Disaster recovery site selection,select,Evaluate,"Based on Exhibit 1, FFCU's online banking platform and member call center system both require a Recovery Time Objective "
 CBQ3-E2-Q4,CBQ3-E2,scored_cases3.js,Internal Controls,Matching recovery strategies to business requirements,match,Evaluate,FFCU has identified four business functions that require different recovery strategies. Match each function to the most 
 CBQ3-E2-Q5,CBQ3-E2,scored_cases3.js,Internal Controls,"BC/DR governance, fiduciary duty, and regulatory compliance",select,Evaluate,FFCU's CFO asks whether BC/DR costs can be justified as a necessary business expense rather than discretionary spending.
 CBQ3-F1-Q1,CBQ3-F1,scored_cases3.js,Technology and Analytics,SDLC phases — Analysis,fill,Understand,Enter the single word that describes the SDLC phase where the project team defines functional requirements by gathering 
@@ -243,19 +153,19 @@ CBQ3-F1-Q4,CBQ3-F1,scored_cases3.js,Technology and Analytics,Change management i
 CBQ3-F1-Q5,CBQ3-F1,scored_cases3.js,Technology and Analytics,Environment segregation in SDLC,fill,Analyze,Enter the two-word term for the environment that should be strictly separated from the development and testing environme
 CBQ3-F2-Q1,CBQ3-F2,scored_cases3.js,Technology and Analytics,Chart type selection based on data relationships,match,Analyze,"Based on Exhibit 1, each of the following retail metrics requires a specific chart type to communicate effectively. Matc"
 CBQ3-F2-Q2,CBQ3-F2,scored_cases3.js,Technology and Analytics,Avoiding misleading visualizations — 3D chart distortion,select,Analyze,The client's current dashboard uses a 3D pie chart to show inventory turnover by product category. The chart has 8 categ
-CBQ3-F2-Q3,CBQ3-F2,scored_cases3.js,Technology and Analytics,Dashboard design principles and best practices,multi,Evaluate,Insight Analytics proposes a redesigned dashboard following the principles in Exhibit 2. Which of the following dashboar
 CBQ3-F2-Q4,CBQ3-F2,scored_cases3.js,Technology and Analytics,Cognitive perception and pre-attentive processing in data visualization,select,Analyze,The client's CFO asks Insight Analytics to explain why the proposed dashboard replaces a data table showing 30 stores' s
+CBQ3-F2-Q3,CBQ3-F2,scored_cases3.js,Technology and Analytics,Dashboard design principles and best practices,multi,Evaluate,Insight Analytics proposes a redesigned dashboard following the principles in Exhibit 2. Which of the following dashboar
 CBQ3-F2-Q5,CBQ3-F2,scored_cases3.js,Technology and Analytics,Data storytelling — matching visualization to communication goal,match,Evaluate,Insight Analytics trains the client's finance team on data storytelling. Match each data presentation goal to the visual
 CBQ4-A1-Q1,CBQ4-A1,scored_cases4.js,External Financial Reporting Decisions,Goodwill,numeric,Apply,Calculate the initial amount of Goodwill recognized on the acquisition date.
 CBQ4-A1-Q2,CBQ4-A1,scored_cases4.js,External Financial Reporting Decisions,Impairment,numeric,Apply,Calculate the goodwill impairment loss recognized at the end of Year 2.
 CBQ4-A1-Q3,CBQ4-A1,scored_cases4.js,External Financial Reporting Decisions,Intangibles,match,Analyze,Match the asset to its correct amortization and impairment treatment under US GAAP.
-CBQ4-A1-Q4,CBQ4-A1,scored_cases4.js,External Financial Reporting Decisions,Intangibles,multi,Evaluate,Which of the following would be capitalized as part of the cost of an internally developed patent?
 CBQ4-A1-Q5,CBQ4-A1,scored_cases4.js,External Financial Reporting Decisions,Impairment,select,Analyze,"If a reporting unit's fair value is greater than its carrying amount, what is the next step for goodwill impairment test"
+CBQ4-A1-Q4,CBQ4-A1,scored_cases4.js,External Financial Reporting Decisions,Intangibles,multi,Evaluate,Which of the following would be capitalized as part of the cost of an internally developed patent?
+CBQ4-A2-Q5,CBQ4-A2,scored_cases4.js,External Financial Reporting Decisions,Contingencies,fill,Understand,A contingent gain is generally recognized in the financial statements only when it is ____________.
 CBQ4-A2-Q1,CBQ4-A2,scored_cases4.js,External Financial Reporting Decisions,Warranties,numeric,Apply,Calculate the total warranty expense reported on the Year 1 income statement.
 CBQ4-A2-Q2,CBQ4-A2,scored_cases4.js,External Financial Reporting Decisions,Warranties,numeric,Apply,Calculate the warranty liability balance at the end of Year 1.
 CBQ4-A2-Q3,CBQ4-A2,scored_cases4.js,External Financial Reporting Decisions,Contingencies,numeric,Apply,What amount should Nova accrue as a liability for the Patent Infringement lawsuit?
 CBQ4-A2-Q4,CBQ4-A2,scored_cases4.js,External Financial Reporting Decisions,Contingencies,select,Analyze,How should Nova handle the Environmental Fine claim?
-CBQ4-A2-Q5,CBQ4-A2,scored_cases4.js,External Financial Reporting Decisions,Contingencies,fill,Understand,A contingent gain is generally recognized in the financial statements only when it is ____________.
 CBQ4-B1-Q1,CBQ4-B1,scored_cases4.js,"Planning, Budgeting, and Forecasting",High-Low,numeric,Apply,Calculate the variable cost per machine hour using the High-Low method.
 CBQ4-B1-Q2,CBQ4-B1,scored_cases4.js,"Planning, Budgeting, and Forecasting",High-Low,numeric,Apply,Calculate the total fixed cost using the High-Low method.
 CBQ4-B1-Q3,CBQ4-B1,scored_cases4.js,"Planning, Budgeting, and Forecasting",Regression,numeric,Apply,"What is the estimated total cost for 7,000 hours using the Regression model?"
@@ -283,9 +193,9 @@ CBQ4-D2-Q3,CBQ4-D2,scored_cases4.js,Cost Management,Setup reduction — SMED,sel
 CBQ4-D2-Q4,CBQ4-D2,scored_cases4.js,Cost Management,JIT system characteristics,multi,Evaluate,Select the characteristics that correctly apply to a JIT/lean manufacturing system.
 CBQ4-D2-Q5,CBQ4-D2,scored_cases4.js,Cost Management,Kanban,fill,Understand,"In a JIT system, production is authorized by a visual signal called a ______ card."
 CBQ4-D2-Q6,CBQ4-D2,scored_cases4.js,Cost Management,Lean terminology,match,Analyze,Match each lean concept to its correct description.
-CBQ4-D3-Q1,CBQ4-D3,scored_cases4.js,Cost Management,Capacity denominator level selection for fixed overhead allocation,select,Evaluate,"Summit Furniture's Cutting Department can theoretically produce 50,000 units per year. After accounting for scheduled ma"
 CBQ4-D3-Q2,CBQ4-D3,scored_cases4.js,Cost Management,Fixed overhead volume variance under different denominator levels,select,Apply,"Using Exhibit 2, what would be the difference in the fixed overhead volume variance if Summit Furniture changed its deno"
 CBQ4-D3-Q3,CBQ4-D3,scored_cases4.js,Cost Management,Capacity measure implications on financial reporting,multi,Analyze,The CFO is evaluating the implications of the capacity denominator level choice. Which of the following statements corre
+CBQ4-D3-Q1,CBQ4-D3,scored_cases4.js,Cost Management,Capacity denominator level selection for fixed overhead allocation,select,Evaluate,"Summit Furniture's Cutting Department can theoretically produce 50,000 units per year. After accounting for scheduled ma"
 CBQ4-D3-Q4,CBQ4-D3,scored_cases4.js,Cost Management,Capacity management strategies — theory of constraints,match,Evaluate,The CFO must recommend a capacity management strategy for each department. Match each department's situation to the most
 CBQ4-D3-Q5,CBQ4-D3,scored_cases4.js,Cost Management,Capacity policy — balancing accounting accuracy with stakeholder communication,select,Evaluate,Summit's CFO must recommend a denominator level to the board. The board is concerned about minimizing unfavorable volume
 CBQ4-E1-Q1,CBQ4-E1,scored_cases4.js,Internal Controls,COSO — Control Environment component,select,Evaluate,"Summit Electronics' internal audit team has identified inconsistent tone at the middle, where plant managers tolerate mi"
@@ -324,78 +234,3 @@ CBQ4-B2-Q3,CBQ4-B2,scored_cases4.js,"Planning, Budgeting, and Forecasting",Payab
 CBQ4-B2-Q4,CBQ4-B2,scored_cases4.js,"Planning, Budgeting, and Forecasting",Cash budgeting,numeric,Apply,Enter the ending cash balance at March 31.
 CBQ4-B2-Q5,CBQ4-B2,scored_cases4.js,"Planning, Budgeting, and Forecasting",Financial budget relationships,select,Analyze,Which budgeted financial statement item is NOT directly affected by the sales collection assumption?
 CBQ4-B2-Q6,CBQ4-B2,scored_cases4.js,"Planning, Budgeting, and Forecasting",Financial budget preparation,match,Analyze,Match each budgeted balance sheet line item to the primary budget or policy that determines it.
-CBQ5-B2-Q1,CBQ5-B2,scored_cases5.js,External Financial Reporting Decisions,Bonds,numeric,Apply,Calculate the cash interest payment made every six months.
-CBQ5-B2-Q2,CBQ5-B2,scored_cases5.js,External Financial Reporting Decisions,Bonds,numeric,Apply,Calculate the issue price of the bonds (round to nearest whole dollar).
-CBQ5-B2-Q3,CBQ5-B2,scored_cases5.js,External Financial Reporting Decisions,Bonds,numeric,Apply,"Calculate the interest expense to be recorded for the first six months (ending June 30, Year 1)."
-CBQ5-B2-Q4,CBQ5-B2,scored_cases5.js,External Financial Reporting Decisions,Bonds,numeric,Apply,Calculate the carrying value of the bond immediately after the first interest payment on June 30.
-CBQ5-B2-Q5,CBQ5-B2,scored_cases5.js,External Financial Reporting Decisions,Bonds,select,Analyze,How are bond issue costs treated under current US GAAP?
-CBQ5-A2-Q1,CBQ5-A2,scored_cases5.js,External Financial Reporting Decisions,Comprehensive Income,numeric,Apply,Calculate the total Comprehensive Income for the year.
-CBQ5-A2-Q2,CBQ5-A2,scored_cases5.js,External Financial Reporting Decisions,OCI,multi,Evaluate,Which of the following items bypass the income statement and go directly to Other Comprehensive Income (OCI)?
-CBQ5-A2-Q3,CBQ5-A2,scored_cases5.js,External Financial Reporting Decisions,Treasury Stock,numeric,Apply,What is the total reduction to Stockholders' Equity resulting from the treasury stock purchase?
-CBQ5-A2-Q4,CBQ5-A2,scored_cases5.js,External Financial Reporting Decisions,Treasury Stock,select,Analyze,"If Silverline used the par value method instead of the cost method for treasury stock, how would the initial purchase af"
-CBQ5-A2-Q5,CBQ5-A2,scored_cases5.js,External Financial Reporting Decisions,Comprehensive Income,fill,Understand,Comprehensive income includes all changes in equity during a period except those resulting from investments by and distr
-CBQ5-B1-Q1,CBQ5-B1,scored_cases5.js,"Planning, Budgeting, and Forecasting",Forecasting,numeric,Apply,Calculate the forecasted cost for May using a 3-month simple moving average.
-CBQ5-B1-Q2,CBQ5-B1,scored_cases5.js,"Planning, Budgeting, and Forecasting",Strategic Management,match,Analyze,Match the strategic scenario to the correct component of Porter's Five Forces.
-CBQ5-B1-Q3,CBQ5-B1,scored_cases5.js,"Planning, Budgeting, and Forecasting",Budgeting Methodologies,select,Analyze,Which budgeting approach requires managers to justify every dollar of their budget from scratch each year?
-CBQ5-B1-Q4,CBQ5-B1,scored_cases5.js,"Planning, Budgeting, and Forecasting",Strategic Management,multi,Evaluate,Which of the following represent internal factors in a SWOT analysis?
-CBQ5-B1-Q5,CBQ5-B1,scored_cases5.js,"Planning, Budgeting, and Forecasting",Forecasting,fill,Understand,"A ______ smoothing forecast applies different weights to past data, usually assigning the highest weight to the most rec"
-CBQ5-C1-Q1,CBQ5-C1,scored_cases5.js,Performance Management,Mix Variance,numeric,Apply,Calculate the Direct Material Mix Variance for Material A.
-CBQ5-C1-Q2,CBQ5-C1,scored_cases5.js,Performance Management,Mix Variance,numeric,Apply,Calculate the Direct Material Mix Variance for Material B.
-CBQ5-C1-Q3,CBQ5-C1,scored_cases5.js,Performance Management,Mix Variance,numeric,Apply,Calculate the Total Direct Material Mix Variance.
-CBQ5-C1-Q4,CBQ5-C1,scored_cases5.js,Performance Management,Yield Variance,select,Analyze,"If the total actual input quantity (10,000 lbs) was exactly equal to the total standard input quantity allowed for actua"
-CBQ5-C1-Q5,CBQ5-C1,scored_cases5.js,Performance Management,Sales Mix Variance,multi,Evaluate,"In a multi-product firm, a sales mix variance arises when:"
-CBQ5-C2-Q1,CBQ5-C2,scored_cases5.js,Performance Management,Responsibility center classification,match,Analyze,OmniSource uses responsibility accounting to classify each business unit. Match each unit to the correct type of respons
-CBQ5-C2-Q2,CBQ5-C2,scored_cases5.js,Performance Management,"ROI, margin, turnover, and residual income calculations",match,Apply,"Using Exhibit 1 data, match each performance measure calculation to the correct result for Warehouse Store #4."
-CBQ5-C2-Q3,CBQ5-C2,scored_cases5.js,Performance Management,ROI vs Residual Income — advantages and disadvantages,match,Analyze,The CFO is evaluating whether to use ROI or Residual Income (RI) for evaluating store managers. Match each performance m
-CBQ5-C2-Q4,CBQ5-C2,scored_cases5.js,Performance Management,Goal congruence — ROI vs Residual Income decision example,match,Evaluate,"The E-commerce Division manager proposes a $1,000,000 technology upgrade expected to generate $130,000 in annual operati"
-CBQ5-C2-Q5,CBQ5-C2,scored_cases5.js,Performance Management,Balanced scorecard — linking metrics to performance dimensions,match,Analyze,OmniSource's controller is designing a balanced performance measurement system. Match each performance dimension to the 
-CBQ5-D1-Q1,CBQ5-D1,scored_cases5.js,Cost Management,Porter's value chain — primary activities,match,Analyze,Heritage Furniture's management team is analyzing primary activities in Porter's value chain. Match each business proces
-CBQ5-D1-Q2,CBQ5-D1,scored_cases5.js,Cost Management,Porter's value chain — support activities,match,Analyze,Porter's value chain also includes support activities that enable the primary activities. Match each corporate function 
-CBQ5-D1-Q3,CBQ5-D1,scored_cases5.js,Cost Management,Process improvement initiatives by value chain activity,match,Analyze,"Based on the value chain analysis in Exhibit 1, match each cost reduction initiative to the value chain activity it targ"
-CBQ5-D1-Q4,CBQ5-D1,scored_cases5.js,Cost Management,"Process improvement methodologies — Six Sigma, BPR, Kaizen, Benchmarking",match,Analyze,Heritage Furniture is evaluating different process improvement methodologies. Match each methodology to its correct desc
-CBQ5-D1-Q5,CBQ5-D1,scored_cases5.js,Cost Management,Core competency identification and strategic implications,match,Evaluate,Heritage Furniture wants to assess which activities in its value chain are core competencies versus commodity activities
-CBQ5-D2-Q1,CBQ5-D2,scored_cases5.js,Cost Management,DMAIC phases and their application in manufacturing,match,Analyze,The Six Sigma team is planning the DMAIC project. Match each DMAIC phase to the correct activity that PAC's team would p
-CBQ5-D2-Q2,CBQ5-D2,scored_cases5.js,Cost Management,"Cost of quality - prevention, appraisal, internal failure, external failure",match,Analyze,The quality director needs to explain the cost of quality (COQ) categories to senior management. Match each quality cost
-CBQ5-D2-Q3,CBQ5-D2,scored_cases5.js,Cost Management,Six Sigma financial justification - net savings calculation,numeric,Apply,"Using Exhibit 2 data, calculate the total annual net savings expected from the Six Sigma initiative after subtracting th"
-CBQ5-D2-Q4,CBQ5-D2,scored_cases5.js,Cost Management,Cost of quality - prevention vs. failure cost trade-off,select,Analyze,Which of the following best describes the relationship between prevention costs and total quality costs in the cost of q
-CBQ5-D2-Q5,CBQ5-D2,scored_cases5.js,Cost Management,Six Sigma and Quality Control,multi,Evaluate,The quality director is preparing a presentation to justify the Six Sigma program to the board. Which of the following s
-CBQ5-D3-Q1,CBQ5-D3,scored_cases5.js,Cost Management,Transfer Pricing (Dual Pricing),numeric,Apply,"Assuming Division A has excess capacity to produce the 15,000 components needed by Division B and no external sales woul"
-CBQ5-D3-Q2,CBQ5-D3,scored_cases5.js,Cost Management,Transfer Pricing (Dual Pricing),select,Evaluate,"Given that Division A has excess capacity and Division B has an external alternative at $70, which transfer pricing meth"
-CBQ5-D3-Q3,CBQ5-D3,scored_cases5.js,Cost Management,Transfer Pricing (Dual Pricing),match,Analyze,Match each transfer pricing method to the scenario where it would be most appropriate.
-CBQ5-D3-Q4,CBQ5-D3,scored_cases5.js,Cost Management,Transfer Pricing (Dual Pricing),select,Understand,Which of the following best describes dual pricing?
-CBQ5-D3-Q5,CBQ5-D3,scored_cases5.js,Cost Management,Transfer Pricing (Dual Pricing),multi,Evaluate,Which of the following statements about transfer pricing at IndusTech are valid conclusions? (Select all that apply.)
-CBQ5-E1-Q1,CBQ5-E1,scored_cases5.js,Internal Controls,Internal Auditing Standards,match,Understand,Match each IIA Standard category to the type of guidance it provides.
-CBQ5-E1-Q2,CBQ5-E1,scored_cases5.js,Internal Controls,Internal Auditing Standards,select,Apply,The internal audit department previously performed consulting engagements for the lending department. Based on IIA Stand
-CBQ5-E1-Q3,CBQ5-E1,scored_cases5.js,Internal Controls,Internal Auditing Standards,multi,Understand,"The CAE has drafted a revised internal audit charter for Audit Committee approval. Based on IIA Standards, which element"
-CBQ5-E1-Q4,CBQ5-E1,scored_cases5.js,Internal Controls,Internal Auditing Standards,select,Apply,"Under the IIA Standards, which reporting structure best supports internal audit independence at First Continental Bank?"
-CBQ5-E1-Q5,CBQ5-E1,scored_cases5.js,Internal Controls,Internal Auditing Standards,multi,Understand,The CAE needs to establish a Quality Assurance and Improvement Program (QAIP) under IIA Standards. Which of the followin
-CBQ5-E2-Q1,CBQ5-E2,scored_cases5.js,Internal Controls,Cybersecurity and Malware,match,Understand,The CISO is preparing an incident report for the board. Match each cybersecurity threat type to its role in the CCHS inc
-CBQ5-E2-Q2,CBQ5-E2,scored_cases5.js,Internal Controls,Cybersecurity and Malware,select,Apply,"Based on the incident timeline, which control failure was the MOST critical enabler of the ransomware attack at CCHS?"
-CBQ5-E2-Q3,CBQ5-E2,scored_cases5.js,Internal Controls,Cybersecurity and Malware,numeric,Apply,"Using Exhibit 2 data, the CISO proposes implementing MFA for all internal system access at a cost of $420,000 annually. "
-CBQ5-E2-Q4,CBQ5-E2,scored_cases5.js,Internal Controls,Cybersecurity and Malware,multi,Evaluate,"Based on Exhibit 2, which control improvements should CCHS implement to prevent a recurrence? (Select all that apply.)"
-CBQ5-E2-Q5,CBQ5-E2,scored_cases5.js,Internal Controls,Cybersecurity and Malware,select,Evaluate,The board asks whether paying the ransom was the right decision. Based on cybersecurity best practices and internal cont
-CBQ5-E3-Q1,CBQ5-E3,scored_cases5.js,Internal Controls,Data Privacy Frameworks,select,Apply,DataBridge Solutions Inc. has been found by a EU supervisory authority to have intentionally violated EU data subjects' 
-CBQ5-E3-Q2,CBQ5-E3,scored_cases5.js,Internal Controls,Data Privacy Frameworks,select,Apply,"Using the data in Exhibit 1, what is the expected annual net benefit (or cost) of implementing the proposed privacy comp"
-CBQ5-E3-Q3,CBQ5-E3,scored_cases5.js,Internal Controls,Data Privacy Frameworks,select,Remember,"DataBridge discovers that an employee inadvertently exposed a database containing personal data of 3,200 EU data subject"
-CBQ5-E3-Q4,CBQ5-E3,scored_cases5.js,Internal Controls,Data Privacy Frameworks,select,Understand,An EU data subject submits a request to DataBridge demanding that the company delete all personal data collected about t
-CBQ5-E3-Q5,CBQ5-E3,scored_cases5.js,Internal Controls,Data Privacy Frameworks,select,Analyze,DataBridge needs to transfer personal data of EU customers from its Irish subsidiary to its primary data center in Chica
-CBQ5-F1-Q1,CBQ5-F1,scored_cases5.js,Technology and Analytics,Big Data Characteristics,match,Understand,OmniMart's data environment exhibits characteristics of all four Vs of big data. Match each V to the data characteristic
-CBQ5-F1-Q2,CBQ5-F1,scored_cases5.js,Technology and Analytics,Big Data Characteristics,select,Apply,OmniMart's management accounting team wants to use the big data initiative to improve inventory management. Which applic
-CBQ5-F1-Q3,CBQ5-F1,scored_cases5.js,Technology and Analytics,Big Data Characteristics,numeric,Apply,"Using the projections in Exhibit 1, calculate the total net benefit (benefits minus costs) for the three-year period. En"
-CBQ5-F1-Q4,CBQ5-F1,scored_cases5.js,Technology and Analytics,Big Data Characteristics,multi,Evaluate,The management accounting team must design data governance controls to address the veracity challenges identified in Exh
-CBQ5-F1-Q5,CBQ5-F1,scored_cases5.js,Technology and Analytics,Big Data Characteristics,select,Evaluate,The CFO is concerned about organizational readiness for the Big Data Analytics Initiative. Which factor is MOST critical
-CBQ5-F2-Q1,CBQ5-F2,scored_cases5.js,Technology and Analytics,Robotic Process Automation (RPA),match,Understand,The CFO's team is preparing a training deck on RPA for the audit committee. Match each RPA characteristic to its correct
-CBQ5-F2-Q2,CBQ5-F2,scored_cases5.js,Technology and Analytics,Robotic Process Automation (RPA),select,Apply,"Based on the data in Exhibit 1, which finance process is the STRONGEST candidate for RPA implementation at Meridian?"
-CBQ5-F2-Q3,CBQ5-F2,scored_cases5.js,Technology and Analytics,Robotic Process Automation (RPA),numeric,Apply,"Using the scenario data, calculate the annual net benefit (annual benefits minus annual ongoing costs) for the RPA initi"
-CBQ5-F2-Q4,CBQ5-F2,scored_cases5.js,Technology and Analytics,Robotic Process Automation (RPA),multi,Evaluate,Which of the following processes from Exhibit 1 are appropriate candidates for RPA? (Select all that apply.)
-CBQ5-F2-Q5,CBQ5-F2,scored_cases5.js,Technology and Analytics,Robotic Process Automation (RPA),select,Evaluate,"Based on Exhibit 2, which internal control enhancement is MOST critical to address the segregation of duties (SOD) risk "
-CBQ5-F3-Q1,CBQ5-F3,scored_cases5.js,Technology and Analytics,Blockchain and Distributed Ledgers,match,Understand,The CFO is presenting blockchain fundamentals to the board. Match each blockchain concept to its correct accounting appl
-CBQ5-F3-Q2,CBQ5-F3,scored_cases5.js,Technology and Analytics,Blockchain and Distributed Ledgers,select,Apply,"Based on Exhibit 1, which blockchain application offers the GREATEST potential benefit to GlobalLink's accounting operat"
-CBQ5-F3-Q3,CBQ5-F3,scored_cases5.js,Technology and Analytics,Blockchain and Distributed Ledgers,numeric,Apply,"Using the data in Exhibit 2, calculate the annual working capital benefit from reducing the payment cycle from 32 days t"
-CBQ5-F3-Q4,CBQ5-F3,scored_cases5.js,Technology and Analytics,Blockchain and Distributed Ledgers,multi,Evaluate,Which of the following are advantages of implementing a permissioned blockchain for GlobalLink's supply chain? (Select a
-CBQ5-F3-Q5,CBQ5-F3,scored_cases5.js,Technology and Analytics,Blockchain and Distributed Ledgers,select,Evaluate,The internal audit team is evaluating control considerations for the blockchain implementation. Which control concern is
-CBQ5-C3-Q1,CBQ5-C3,scored_cases5.js,Performance Management,Sales Volume Variance,numeric,Apply,Calculate the total Sales Volume Variance for EverFresh Beverage for the second quarter. Use the convention: favorable =
-CBQ5-C3-Q2,CBQ5-C3,scored_cases5.js,Performance Management,"Sales variance decomposition — mix, quantity, market size, and market share",match,Analyze,The CFO needs to explain each variance component to the VP of Sales. Match each variance concept to the correct calculat
-CBQ5-C3-Q3,CBQ5-C3,scored_cases5.js,Performance Management,Market Share Variance,numeric,Apply,"Calculate the Market Share Variance for EverFresh Beverage. Use the convention: favorable = negative, unfavorable = posi"
-CBQ5-C3-Q4,CBQ5-C3,scored_cases5.js,Performance Management,Performance evaluation — choosing the right variance metric,select,Evaluate,EverFresh's VP of Sales argues that the sales team should be evaluated on the market share variance rather than the tota
-CBQ5-C3-Q5,CBQ5-C3,scored_cases5.js,Performance Management,Variance interpretation and management action,multi,Evaluate,"Based on the variance analysis, which of the following conclusions are valid? Select all that apply."

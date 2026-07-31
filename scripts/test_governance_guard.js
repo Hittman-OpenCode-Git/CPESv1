@@ -1,8 +1,14 @@
 ﻿/**
- * Governance Guard Plugin — Test Suite v3.0 (S221)
+ * Governance Guard Plugin — Test Suite v4.0 (S109P)
  *
  * Tests the core detection logic without requiring an OpenCode session.
  * Run: node scripts/test_governance_guard.js
+ *
+ * S109P CHANGES:
+ * - Added RULE 11 (Cognitive Classification Gates): AF-3 (deterministic rule application),
+ *   AF-4 (taxonomy classification), AF-5 (difficulty-cognitive mismatch) as BLOCK-level gates.
+ * - Added findCognitiveViolations function + 12 new tests.
+ * - Test suite expanded from 54 to 66 tests.
  *
  * S221 CHANGES:
  * - Added RULE 7 (DERIVED_REGISTRY_NOT_AUTHORITATIVE) tests — derived registry path matching
@@ -149,6 +155,41 @@ function findDL021Violations(text) {
       } else if (typeof obj[ewKey] === 'string' && obj[ewKey].length === 0) {
         violations.push({ letter: L, qid: obj.QuestionID || '(unknown)', reason: 'empty' });
       }
+    }
+  }
+  return violations;
+}
+
+function findCognitiveViolations(text) {
+  const violations = [];
+  const objects = extractObjectsFromText(text);
+  for (const obj of objects) {
+    const cog = obj.CognitiveLevel;
+    if (!cog || !/^(Analyze|Evaluate)$/.test(cog)) continue;
+
+    const qid = obj.QuestionID || '(unknown)';
+    const stem = obj.Stem || '';
+    const ec = obj.ExplanationCorrect || '';
+    const diff = obj.DifficultyScore;
+
+    // GATE 3 (AF-3) — Deterministic Rule Application
+    const hasRuleRef = /Under (ASC|IFRS|COSO|GAAP|IAS)/i.test(stem);
+    const hasTradeOff = /competing|best option|weigh|trade.off|balance/i.test(ec);
+    if (hasRuleRef && !hasTradeOff) {
+      violations.push({ qid, cog, gate: 'AF-3', reason: 'Deterministic rule application without trade-off language', actual: 'Apply' });
+    }
+
+    // GATE 4 (AF-4) — Taxonomy Classification
+    if (/what type of|which (COSO|component|category|cost)|classified as/i.test(stem)) {
+      violations.push({ qid, cog, gate: 'AF-4', reason: 'Taxonomy/classification question', actual: 'Apply' });
+    }
+
+    // GATE 5 (AF-5) — Difficulty-Cognitive Mismatch
+    if (cog === 'Evaluate' && diff !== undefined && diff <= 2) {
+      violations.push({ qid, cog, gate: 'AF-5', reason: `Evaluate requires DifficultyScore >= 3 (got ${diff})`, actual: 'Analyze' });
+    }
+    if (cog === 'Analyze' && diff !== undefined && diff == 1) {
+      violations.push({ qid, cog, gate: 'AF-5', reason: `Analyze requires DifficultyScore >= 2 (got ${diff})`, actual: 'Apply' });
     }
   }
   return violations;
@@ -684,6 +725,179 @@ test("Rule 10 PASS — item with all distractor EW fields populated", () => {
   }`;
   const v = findDL021Violations(text);
   assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+// ── RULE 11: Cognitive Classification Gates (AF-3/4/5) ──────────
+console.log("\nRULE 11 — Cognitive Classification Gates (S109P)\n");
+
+console.log("  GATE 3 (AF-3) — Deterministic Rule Application\n");
+
+test("AF-3 BLOCK — ASC reference + no trade-off + Evaluate", () => {
+  const text = `{
+    "QuestionID": "P1-A-012",
+    "CorrectChoice": "B",
+    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 4,
+    "Stem": "Under ASC 450, which accounts for loss contingencies, what is the required treatment when a loss is probable and reasonably estimable?",
+    "ExplanationCorrect": "Under ASC 450, a loss contingency must be accrued (recorded as a liability) when both conditions are met. The standard requires recognition of the estimated loss amount."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+  assert(v[0].gate === "AF-3", `Expected AF-3, got ${v[0].gate}`);
+});
+
+test("AF-3 BLOCK — IFRS reference + no trade-off + Analyze", () => {
+  const text = `{
+    "QuestionID": "P1-A-022",
+    "CorrectChoice": "A",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3,
+    "Stem": "Under IFRS, how are internally developed intangible costs treated during the research phase?",
+    "ExplanationCorrect": "Under IAS 38, research costs are expensed as incurred. Development costs meeting six criteria may be capitalized."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+  assert(v[0].gate === "AF-3", `Expected AF-3, got ${v[0].gate}`);
+  assert(v[0].cog === "Analyze");
+});
+
+test("AF-3 PASS — ASC reference WITH trade-off language (genuine Evaluate)", () => {
+  const text = `{
+    "QuestionID": "P1-GEN-001",
+    "CorrectChoice": "C",
+    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 4,
+    "Stem": "Under ASC 606, the CFO must decide whether to recognize revenue over time or at a point in time for the custom software contract.",
+    "ExplanationCorrect": "The CFO must weigh the competing interests of front-loading revenue recognition against the risk of restatement. The best option balances ASC 606 compliance with the board's preference for conservative accounting. There is a trade-off between early revenue recognition and audit defensibility."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 0, `Expected 0 violations (trade-off language suppresses AF-3), got ${v.length}`);
+});
+
+console.log("\n  GATE 4 (AF-4) — Taxonomy Classification\n");
+
+test("AF-4 BLOCK — 'What type of control' + Evaluate", () => {
+  const text = `{
+    "QuestionID": "P1-EC-020",
+    "CorrectChoice": "D",
+    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 3,
+    "Stem": "What type of control is a mandatory vacation policy that requires employees to take at least five consecutive days off?",
+    "ExplanationCorrect": "Mandatory vacation policies are detective controls because they help detect irregularities or unauthorized activities during the employee's absence."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 1, `Expected 1 violation, got ${v.length}`);
+  assert(v[0].gate === "AF-4", `Expected AF-4, got ${v[0].gate}`);
+});
+
+test("AF-4 BLOCK — 'Which COSO component' + Analyze", () => {
+  const text = `{
+    "QuestionID": "P1-EC-030",
+    "CorrectChoice": "B",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 2,
+    "Stem": "Which COSO component includes policies and procedures that help ensure management directives are carried out?",
+    "ExplanationCorrect": "Control Activities is the COSO component that includes policies and procedures such as approvals, authorizations, verifications, and reconciliations."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length >= 1, `Expected >=1 violation (AF-4 + possibly AF-5), got ${v.length}`);
+  assert(v.some(x => x.gate === "AF-4"), "Expected AF-4 gate to fire");
+});
+
+test("AF-4 BLOCK — 'classified as' + Evaluate", () => {
+  const text = `{
+    "QuestionID": "P1-DC-010",
+    "CorrectChoice": "A",
+    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 3,
+    "Stem": "A cost that remains constant in total regardless of production volume is classified as which type of cost?",
+    "ExplanationCorrect": "Fixed costs remain constant in total within the relevant range regardless of changes in production volume."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.some(x => x.gate === "AF-4"), "Expected AF-4 gate to fire on classification question");
+});
+
+console.log("\n  GATE 5 (AF-5) — Difficulty-Cognitive Mismatch\n");
+
+test("AF-5 BLOCK — Evaluate at DifficultyScore=1", () => {
+  const text = `{
+    "QuestionID": "P1-DIFF-001",
+    "CorrectChoice": "C",
+    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 1,
+    "Stem": "The CFO recommends a strategic initiative based on a multi-year NPV analysis.",
+    "ExplanationCorrect": "The analysis includes sensitivity testing of discount rates and competitor response scenarios."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length >= 1, `Expected >=1 violation, got ${v.length}`);
+  assert(v.some(x => x.gate === "AF-5"), "Expected AF-5 gate to fire (Evaluate at Easy)");
+});
+
+test("AF-5 BLOCK — Analyze at DifficultyScore=1", () => {
+  const text = `{
+    "QuestionID": "P1-DIFF-002",
+    "CorrectChoice": "A",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 1,
+    "Stem": "Sales data shows a pattern of declining margins in the Northeast region over the last three quarters.",
+    "ExplanationCorrect": "The margin decline correlates with increased competition from two new entrants in the Northeast market."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length >= 1, `Expected >=1 violation, got ${v.length}`);
+  assert(v.some(x => x.gate === "AF-5"), "Expected AF-5 gate to fire (Analyze at Easy)");
+});
+
+test("AF-5 PASS — Analyze at DifficultyScore=2 (boundary minimum)", () => {
+  const text = `{
+    "QuestionID": "P1-DIFF-003",
+    "CorrectChoice": "B",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 2,
+    "Stem": "Compare the two variance reports and identify which production line has the most significant efficiency decline.",
+    "ExplanationCorrect": "Line 3 shows a 12% decline in labor efficiency compared to 3% and 5% for Lines 1 and 2 respectively."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 0, `Expected 0 violations (Analyze at Difficulty=2 meets minimum), got ${v.length}`);
+});
+
+console.log("\n  Negative Tests — Genuine Higher-Order Items Pass\n");
+
+test("PASS — Genuine Evaluate: decision maker + competing alternatives + trade-off + Diff=4", () => {
+  const text = `{
+    "QuestionID": "P1-GEN-EVAL-001",
+    "CorrectChoice": "D",
+    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 4,
+    "Stem": "CFO Maria Chen must recommend a sourcing strategy. Options: (1) offshore production at lower cost but longer lead times, (2) domestic production at higher cost but faster delivery, (3) hybrid approach with partial offshoring. The board prioritizes both cost reduction and supply chain reliability.",
+    "ExplanationCorrect": "The CFO must balance the cost savings of offshoring against the supply chain risk. The hybrid approach offers a trade-off: moderate cost savings while retaining domestic capacity for surge demand. Given the board's dual priorities, the hybrid strategy best balances competing objectives."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 0, `Expected 0 violations (genuine Evaluate passes all gates), got ${v.length}`);
+});
+
+test("PASS — Genuine Analyze: data interpretation + comparison + Diff=3", () => {
+  const text = `{
+    "QuestionID": "P1-GEN-ANALYZE-001",
+    "CorrectChoice": "C",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3,
+    "Stem": "A manufacturing company's variance report shows a favorable material price variance of $15,000 and an unfavorable material quantity variance of $22,000. What is the most likely explanation for this pattern?",
+    "ExplanationCorrect": "The favorable price variance suggests the purchasing manager bought lower-cost materials, but the unfavorable quantity variance indicates those materials had higher waste or defect rates. The combined effect is $7,000 unfavorable, suggesting the cheaper materials were not cost-effective overall."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 0, `Expected 0 violations (genuine Analyze passes all gates), got ${v.length}`);
+});
+
+test("PASS — Item without CognitiveLevel field (not HO, no trigger)", () => {
+  const text = `{
+    "QuestionID": "P1-BASIC-001",
+    "CorrectChoice": "A",
+    "DifficultyScore": 1,
+    "Stem": "What is the formula for contribution margin?",
+    "ExplanationCorrect": "Contribution margin = Sales revenue - Variable costs."
+  }`;
+  const v = findCognitiveViolations(text);
+  assert(v.length === 0, `Expected 0 violations (no CognitiveLevel = no trigger), got ${v.length}`);
 });
 
 // ── RULE 1/4 BLOCK UPGRADE (architectural verification) ─────────

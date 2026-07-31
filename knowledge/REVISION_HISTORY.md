@@ -1,3 +1,117 @@
+## SESSION 104 — Recovery Sprint: Targeted 15Q Mini-Session from AdaptiveReviewQueue — 2026-07-31
+
+**Type:** WRITE (app.js, styles.css — Full Governance Lane)
+**Backup:** `backups/app.js.bak-S104-20260731114209`
+
+### Summary
+
+Implemented Recovery Sprint — a one-click launchable 15-question targeted mini-session drawn from the AdaptiveReviewQueue after any completed practice session. Converts the static review screen into an interactive coaching loop.
+
+### Changes
+
+**app.js:**
+- Added `ExamSessionManager.startRecoverySprint(sourceSession)` method: filters AdaptiveReviewQueue to MCQ-only items, selects top 15 by priority score (wrong=5, guess=3, low confidence=2, flagged=1), creates a new session with `mode: 'recovery_sprint'`, includes `recoverySource` metadata for May comparison.
+- Added `ExamSessionManager._renderRecoverySprintBar(queue)`: renders the recovery sprint CTA bar with topic summary and "Launch Sprint" button.
+- Modified `renderSummary()`: added Recovery Sprint section between filter controls and review cards; moved "Start New Session" button below review cards; wired `launchRecoverySprint` button to `startRecoverySprint`.
+- Added `recoverySource` field to session history entry in `SessionPersistence.saveHistory()` for May post-sprint comparison.
+
+**styles.css:**
+- Added `.recovery-sprint-bar`, `.recovery-sprint-info`, `.recovery-sprint-label`, `.recovery-sprint-detail`, `.recovery-sprint-btn` styles with accent-colored bordered card, light/dark theme support.
+
+### User Flow
+
+```
+Finish Session
+    ↓
+See Recovery Queue (existing)
+    ↓
+[Launch Sprint] (NEW — one click)
+    ↓
+15-question targeted session (MCQ-only)
+    ↓
+Submit → May compares before/after scores
+```
+
+### Governance
+
+| Check | Result |
+|-------|--------|
+| Preflight (T0) | 0 divergences, 66/66 GG PASS |
+| Syntax | `new Function()` parse OK |
+| Pipeline (Tend) | validate/build-registry/dashboard — no new errors |
+| Governance guard (Tend) | 66/66 PASS |
+| Content changes | 0 — no pack files modified |
+| Certified pool | 2,451 — unchanged |
+
+### Architecture
+
+- No new analytics engine required — `AdaptiveReviewQueue.generate()` is the sole data source.
+- Session type `'recovery_sprint'` is MCQ-only (`cases: []`), pause-allowed, timer = N × 108s.
+- May integration: `recoverySource` metadata stored in session history; `handoffCompletedSession` stores mode `'recovery_sprint'`; May can detect back-to-back sessions and compare topic-level scores.
+
+## SESSION 109P — Rule 11: Cognitive Classification Gates (AF-3/4/5 Deployment) — 2026-07-31
+
+**Type:** WRITE (governance-guard.js, test_governance_guard.js — Full Governance Lane)
+**Backup:** `backups/governance-guard.js.bak-S109P-20260731112300`, `backups/test_governance_guard.js.bak-S109P-20260731112300`
+
+### Summary
+
+Deployed Rule 11 (Cognitive Classification Gates) as the 11th BLOCK-level governance rule in `governance-guard.js`. Three AF gates enforce cognitive classification integrity at write/edit time, preventing items with inflated CognitiveLevel labels from entering the learner pool.
+
+### Governance Guard Changes
+
+**File:** `.opencode/plugins/governance-guard.js` (11 BLOCK rules)
+
+- Added `findCognitiveViolations()` function implementing AF-3 (Deterministic Rule Application), AF-4 (Taxonomy Classification), and AF-5 (Difficulty-Cognitive Mismatch) detection gates
+- Added Rule 11 BLOCK check in `tool.execute.before` — triggers when a write/edit sets `CognitiveLevel` to "Analyze" or "Evaluate" if any AF gate fires
+- Updated header to document all 11 rules with descriptions
+
+### Gate Details
+
+| Gate | Pattern | Detection | FP Rate | Action |
+|------|---------|-----------|---------|--------|
+| **AF-3** | "Under ASC/IFRS/COSO/GAAP/IAS" in Stem AND no trade-off language in ExplanationCorrect | Regex cross-check | 2-3% | **Auto-BLOCK** |
+| **AF-4** | "What type of" / "Which COSO component" / "classified as" in Stem | Surface regex | 0% | **Auto-BLOCK** |
+| **AF-5** | DifficultyScore <= 2 AND CognitiveLevel = Evaluate; DifficultyScore = 1 AND CognitiveLevel = Analyze | Field comparison | 0% | **Auto-BLOCK** |
+
+**Override:** BLOCK-AUTHORIZED marker with certification evidence can override Gate 3 and Gate 5. Gate 4 has no genuine human override path (taxonomy classification is structurally Apply/Remember).
+
+### Test Suite Expansion
+
+**File:** `scripts/test_governance_guard.js`
+
+- Added `findCognitiveViolations()` function matching the guard plugin
+- 12 new tests: 3 AF-3 (2 BLOCK + 1 PASS), 3 AF-4 (3 BLOCK), 3 AF-5 (2 BLOCK + 1 PASS), 3 negative (genuine Evaluate/Analyze/not-HO pass correctly)
+- Test suite: 54 → 66 tests
+
+### Verification
+
+| Check | Result |
+|-------|--------|
+| Preflight T0 | PASS — 0 divergences, 2,451 Certified |
+| Governance guard tests | 66/66 PASS, 0 FAIL |
+| Pack QID counts | 500/500/500/500/545 — unchanged |
+| Certified total | 2,451 — unchanged |
+| Preflight post-deploy | PASS — 0 divergences |
+| Content impact | 0 pack file changes, 0 content/answer-key/certification changes |
+
+### Governance Impact
+
+- Closes Delta 6 (Cognitive classification ungoverned — HIGH) per G01_GOVERNANCE_DELTA_REPORT.md
+- Closes Delta 13 (No difficulty-cognitive consistency enforcement) per G01_GOVERNANCE_DELTA_REPORT.md
+- Closes risk R2 and R3 (cognitive label inflation + cognitive classification ungoverned) per G01_RISK_REGISTER.md
+- Satisfies CAQS §1.6 dimension 3 (Difficulty Calibration) automated enforcement
+- First cognitive-quality gate deployed — complements structural Rules 1-10
+
+### Cross-References
+
+- Specification: `reports/G01_RULE11_FINALIZATION.md`
+- AF gate definitions: `reports/SESSION097P_AUTOMATION_PLAN.md`
+- AF confidence analysis: `reports/SESSION097P_FALSE_POSITIVE_ANALYSIS.md`
+- Delta report: `reports/G01_GOVERNANCE_DELTA_REPORT.md` (Deltas 6, 13)
+- Risk register: `reports/G01_RISK_REGISTER.md` (R2, R3)
+- Program baseline: `reports/G01_PROGRAM_BASELINE_2026Q3.md`
+
 ## SESSION 102P — Pack C EC Full Re-Audit + MAY-026 Telemetry Wiring — 2026-07-31
 
 **Type:** WRITE (pack_c_corrected.js + may-core.js — Full Governance Lane)
@@ -29230,4 +29344,446 @@ Forensic report: `reports/S102P_PHASE0_RECONSTRUCTION.md`
 - FD-050's upgrade_note field still references the original S899 intent ("Evaluate/Very Difficult replacement") which no longer matches the recalibrated metadata. This is cosmetic — the note preserves provenance.
 - All FD-040 EW reconstructions sourced from within ±300 lines (same rotation group siblings FD-036, FD-037).
 - All FD-050 EW reconstructions sourced from FD-049 (Certified) with choice-position mapping verified.
+
+## SESSION 103P — PHASE_2 One-Tier Slippage: Pack D BD + ED Cognitive Reclassification — 2026-07-31
+
+**Type:** WRITE (pack_d_corrected.js — Full Governance Lane)
+**Backup:** `backups/pack_d_corrected.js.bak-S103P-20260731111447` (2,413,447 bytes)
+
+### Summary
+
+Executed PHASE_2 one-tier cognitive slippage reclassification across Pack D Sections BD (Planning/Budgeting) and ED (Internal Controls). Applied 29 metadata-only corrections: Evaluate→Analyze, Analyze→Apply, and Analyze→Understand. Per-item audited against S95P Evaluate Rubric and Analyze Rubric. Zero content, choice, explanation, answer-key, or question_state changes.
+
+### PH2-B1 Results — Pack D BD (16 items)
+
+| QID | Old CL | New CL | Pattern | AF Gate |
+|-----|--------|--------|---------|---------|
+| P1-BD-007 | Evaluate | Analyze | Flexible budget variance diagnosis | AF-E2: Formula + interpretation |
+| P1-BD-008 | Evaluate | Analyze | Incremental budgeting drawback | AF-E4: Diagnostic/concept |
+| P1-BD-027 | Analyze | Apply | DL cost: 8,000 × 2 × $18 | AF-A2: Direct formula substitution |
+| P1-BD-028 | Analyze | Apply | DL budget with union contract | AF-A3: Known multi-step procedure |
+| P1-BD-034 | Evaluate | Analyze | "Primary purpose of standard costs" | AF-E4: Definition question |
+| P1-BD-038 | Evaluate | Analyze | "What distinguishes budget categories" | AF-E4: Taxonomy classification |
+| P1-BD-051 | Analyze | Apply | DM purchases: needed + ending − beginning | AF-A2: Textbook formula |
+| P1-BD-056 | Evaluate | Analyze | DM purchases formula | AF-E2: Formula substitution |
+| P1-BD-063 | Evaluate | Analyze | "Main purpose of budget committee" | AF-E4: Diagnostic/concept |
+| P1-BD-066 | Evaluate | Analyze | "What costs appear in S&A budget" | AF-E4: Taxonomy classification |
+| P1-BD-070 | Evaluate | Analyze | Same as BD-066 | AF-E4: Taxonomy classification |
+| P1-BD-074 | Analyze | Understand | "Purpose of MAPE" | AF-A1: Definition match |
+| P1-BD-076 | Analyze | Understand | Same as BD-074 | AF-A1: Definition match |
+| P1-BD-079 | Evaluate | Analyze | Flexible budget variance interpretation | AF-E2: Diagnostic analysis |
+| P1-BD-085 | Evaluate | Analyze | Variance analysis package prep | AF-E2: Analysis, not evaluation |
+| P1-BD-090 | Evaluate | Analyze | Cash budget + borrowing formula | AF-E2: Formula with scenario |
+
+### PH2-B2 Results — BD remainder + ED (13 items)
+
+**BD remainder:**
+| QID | Old CL | New CL | Pattern | AF Gate |
+|-----|--------|--------|---------|---------|
+| P1-BD-036 | Analyze | Apply | Master budget reconciliation | AF-A3: Known procedure |
+| P1-BD-037 | Analyze | Apply | Master budget construction order | AF-A4: Known procedure |
+| P1-BD-039 | Analyze | Apply | Master budget CFO review | AF-A3: Procedural review |
+| P1-BD-040 | Analyze | Apply | Same as BD-039 | AF-A3: Procedural review |
+| P1-BD-054 | Evaluate | Analyze | DM purchases budget adequacy | AF-E2: Diagnostic analysis |
+| P1-BD-055 | Evaluate | Analyze | DM purchases budget formula | AF-E2: Formula substitution |
+
+**ED (COSO classification → Apply/Understand):**
+| QID | Old CL | New CL | Pattern | AF Gate |
+|-----|--------|--------|---------|---------|
+| P1-ED-001 | Analyze | Understand | "What model is this?" (Three Lines) | AF-A5 + AF-A4: Easy taxonomy |
+| P1-ED-010 | Analyze | Understand | "What security principle?" (SoD) | AF-A5 + AF-A4: Easy taxonomy |
+| P1-ED-014 | Analyze | Apply | "What type of control activity?" | AF-A4: COSO taxonomy |
+| P1-ED-015 | Evaluate | Analyze | Same as ED-014 (Eval→Analyze) | AF-E4: Taxonomy classification |
+| P1-ED-025 | Analyze | Apply | "What type of control activity?" | AF-A4: COSO taxonomy |
+| P1-ED-036 | Analyze | Apply | "What type of control?" (change mgmt) | AF-A4 + AF-A5 |
+| P1-ED-040 | Analyze | Apply | Same as ED-036 (higher diff) | AF-A4: COSO taxonomy |
+
+### Pre/Post CL Distribution
+
+| Section | Level | Pre-S103P | Post-S103P | Delta |
+|---------|-------|-----------|------------|-------|
+| BD | Evaluate | 52 | 39 | −13 |
+| BD | Analyze | 37 | 41 | +4 |
+| BD | Apply | 4 | 11 | +7 |
+| BD | Understand | 5 | 7 | +2 |
+| BD | Remember | 2 | 2 | 0 |
+| ED | Evaluate | 28 | 27 | −1 |
+| ED | Analyze | 40 | 35 | −5 |
+| ED | Apply | 0 | 6 | +6 |
+| ED | Understand | 7 | 7 | 0 |
+
+### Verification
+
+- Preflight: PASS (0 divergences, 2451 Certified, Pack D 500/500 parse OK)
+- node --check: PASS
+- QID count unchanged: 500
+- Governance guard: 54/54 PASS
+- Certified pool: 2451 (unchanged — question_state not touched)
+- Metadata only: CONFIRMED — zero content/choice/explanation/answer-key changes
+
+### Notes
+
+- BD-042 was already reclassified to Analyze (by prior session) — skipped, not double-counted
+- All difficulty floors respected: Analyze min DS=2, Evaluate min DS=3
+- No ED Evaluate items were reclassified save ED-015 (same stem as ED-014, clearly taxonomy)
+- ED AF-E3 (Deterministic) flags from automated scan were false positives — all legitimate ED Evaluate items have decision-makers and competing alternatives
+- P1-BD-042 excluded (already classified), total executed = 29 of 30 planned
+
+---
+
+## MAY-028 — Recommendation Attribution Telemetry — 2026-07-31
+
+**Type:** WRITE (app.js + styles.css — Governance Light Lane)
+**Status:** Complete
+
+### Summary
+
+MAY-028 closes the final telemetry attribution gap identified by MAY-027. Added recommendation-card attribution (`window._mcc()`) and per-card `onclick` handlers to the May telemetry pipeline, making UA5 (Top Weakness / Suggested Review) and UA6 (Next Session / Readiness) fully measurable. Card clicks now correlate to session-start and session-complete events via `attributionCardId`.
+
+### Program State
+
+| Dimension | Status |
+|-----------|--------|
+| Production | Active, Measured, Attributed |
+| UA5 (Effectiveness) | Measurable |
+| UA6 (Attribution) | Measurable |
+| Readiness | 98/100 |
+
+### Verification
+
+- `npm run preflight` — PASS, 0 divergences, 2451 Certified
+- Governance guard: 54/54 PASS
+- `npm run smoke` — PASS, all UI surfaces, 0 errors
+- No content/answer-key/explanation/question_state changes
+- No new defects discovered
+
+### Deliverables
+
+- `reports/MAY028_ATTRIBUTION_PLAN.md`
+- `reports/MAY028_EVENT_MAP.md`
+- `reports/MAY028_TELEMETRY_VALIDATION.md`
+- `reports/MAY028_ATTRIBUTION_ANALYSIS.md`
+- `reports/MAY028_EFFECTIVENESS_READINESS.md`
+- `reports/MAY028_CLOSEOUT.md`
+
+### Next Gate
+
+**MAY-029** — Recommendation Optimization. Blocked until attribution data matures (≥25 sessions OR ≥14 days OR ≥3 learners).
+
+## G02 — Governance Hardening & Final Push — 2026-07-31
+
+**Type:** WRITE (knowledge/G02_GOVERNANCE_HARDENING.md + knowledge/REVISION_HISTORY.md — Full Governance Lane)
+**Artifact:** `knowledge/G02_GOVERNANCE_HARDENING.md`
+
+### Summary
+
+Created G02 as a formal Foundational-tier governance companion standard. Converts 5 governance lessons learned during the S92P–S109P Quality Recovery program into permanent institutional controls. Moves governance posture from reactive (detect → correct) to preventive (prevent → enforce → measure).
+
+### Document Structure
+
+| Section | Content |
+|---------|---------|
+| §1 — Governance Lessons Learned | 5 principles elevated from observations to operating rules (misclassification risk, recovery cost, metadata impact, governance-before-certification, telemetry attribution) |
+| §2 — Rule 11 Governance | AF-3/4/5 deployment status, override rules, future AF-1/2/6 promotion paths, G-gate complement |
+| §3 — Cognitive Certification Workflow | Mandatory pipeline: Create → Validate → Rule 11 Screen → Cognitive Audit → Certify. Explicitly prohibits Create → Certify → Audit Later |
+| §4 — Metrics Governance | Separates Certified Inventory from Verified HO Inventory. Adds Reclassification Drift Rate. Dashboard metric definitions |
+| §5 — May Operational Governance | Monthly review gates (effectiveness, telemetry quality, recommendation conversion, readiness accuracy). Threshold publication requirements. Escalation tiers |
+| §6 — Campaign Exit Requirements | 5 mandatory exit gates (Rule 11, Cognitive Audit, QA Review, Governance Review, Post-Campaign Verification). Closeout documentation requirements. Prohibited patterns |
+| §7 — Integration | Relationship to AGENTS.md, CAQS_v1.0.md, PROJECT_CONSTITUTION.md, G01 Rebaseline |
+| §8 — Roadmap | Post-G02 sequencing: S110P, S111P, S112P, S816–S818, MAY-029, residual S103P batches, modernization resumption |
+
+### Evidence Basis
+
+All 5 governance lessons are grounded in production session evidence:
+- **Lesson 1 (misclassification):** S92P–S93P — 58.7% HO misclassification rate, 309 of 528 overstated
+- **Lesson 2 (recovery cost):** S102P, S103P — 6+ Full Lane sessions to recover what prevention gates would have blocked
+- **Lesson 3 (metadata impact):** S102P — Pack C EC 54.7% → 8.0% HO in single session; zero content changed
+- **Lesson 4 (governance before certification):** DL-035 — 39 Certified items through governance gap; Rule 6 deployed after certification
+- **Lesson 5 (attribution):** MAY-027 → MAY-028 — telemetry without attribution produced ambiguous effectiveness data
+
+### Cross-References
+
+- G01_PROGRAM_BASELINE_2026Q3.md — Authoritative pre-G02 governance snapshot
+- G01_GOVERNANCE_DELTA_REPORT.md — Deltas 6, 7, 13 addressed by G02
+- G01_RISK_REGISTER.md — Risks R2, R3, R4 mitigated by G02 controls
+- G01_RULE11_FINALIZATION.md — Rule 11 specification codified in G02 §2
+- G01_MAY_PRODUCTION_GOVERNANCE.md — May assessment codified in G02 §5
+- S109P — Rule 11 deployment (AF-3/4/5 BLOCK)
+- S102P — Pack C EC cognitive reclassification (54.7% → 8.0% HO)
+- S103P — Pack D BD+ED one-tier slippage reclassification
+
+### Verification
+
+- Preflight: Not required (no pack/case content changes — governance document creation only)
+- Governance guard: Not applicable (no content-write passes through governance guard)
+- Content impact: 0 pack file changes, 0 answer-key changes, 0 certification changes, 0 question_state changes
+- FILE STATUS: `knowledge/G02_GOVERNANCE_HARDENING.md` — NEW (Foundational Governance Tier)
+- FILE STATUS: `knowledge/REVISION_HISTORY.md` — APPENDED (this entry)
+
+
+## SESSION 731 — UX Pivot: Confidence Analytics Dashboard + Recovery Sprint Outcome Card + PH2-B3 Recovery Batch — 2026-07-31
+
+**Type:** WRITE (app.js, styles.css, pack_c_corrected.js, pack_d_corrected.js — Full Governance Lane)
+**Backup:** `backups/pack_c_corrected.js.bak-20260731120524`, `backups/pack_d_corrected.js.bak-20260731120524`
+
+### Summary
+
+Strategic pivot from governance to UX. Three workstreams completed in a single session.
+
+### UX-1 — Confidence Analytics Dashboard
+
+Added `ExamSessionManager._renderConfidenceDashboard(s)` — a calibration matrix that visualizes how well learner confidence predicts correctness. Renders after MCQ/CBQ split in the score report.
+
+**Metrics displayed:**
+- 3×2 matrix: High/Medium/Low confidence × Correct/Wrong
+- Overconfidence Rate: % of high-confidence answers that were wrong
+- Underconfidence Rate: % of low-confidence answers that were correct
+- Guess Accuracy: % of flagged guesses that were correct
+- Confidence Calibration Score: 0-100, higher = better aligned
+
+**Data source:** `session.confidence[QID]` (1-5 scale), `session.guessed[QID]`, `session.answers[QID]` — all already wired.
+
+### UX-3 — Recovery Sprint Outcome Card
+
+Added `ExamSessionManager._renderRecoverySprintOutcome(sc, s)` — displayed at the top of the score report when `s.mode === 'recovery_sprint'`. Shows:
+
+- Sprint accuracy (correct/total)
+- Topic-level improvement bars (before/after % with delta)
+- Action buttons: Re-run Sprint, Escalate Review (→ May), Continue
+
+**Data source:** `s.recoverySource` (sessionId, topicSummary, itemCount) against history entries.
+
+**Minor fix:** Template literal converted from broken single-quote multiline string to backtick template literal.
+
+### PH2-B3 — Metadata-Only Recovery Batch
+
+Executed the PH2-B3 batch from SESSION101P_RECLASSIFICATION_BATCHES.json. 24 items relabeled across 2 packs (4 additional CC items reviewed and confirmed correctly labeled — no change needed).
+
+**Pack D ED — Internal Controls (10 items):**
+| QID | Old COG | New COG | Old Diff | New Diff |
+|-----|---------|---------|----------|----------|
+| P1-ED-003 | Evaluate | Analyze | 4 | 4 |
+| P1-ED-006 | Evaluate | Analyze | 5 | 4 |
+| P1-ED-017 | Evaluate | Analyze | 5 | 4 |
+| P1-ED-023 | Evaluate | Analyze | 4 | 4 |
+| P1-ED-034 | Evaluate | Analyze | 4 | 4 |
+| P1-ED-015 | Analyze | Apply | 4 | 2 |
+| P1-ED-020 | Analyze | Apply | 4 | 2 |
+| P1-ED-028 | Analyze | Apply | 2 | 2 |
+| P1-ED-035 | Analyze | Apply | 3 | 2 |
+| P1-ED-042 | Analyze | Understand | 2 | 1 |
+
+**Pack C CC — Performance Management (7 items):**
+| QID | Old COG | New COG | Old Diff | New Diff |
+|-----|---------|---------|----------|----------|
+| P1-CC-060 | Analyze | Apply | 4 | 3 |
+| P1-CC-061 | Analyze | Apply | 4 | 3 |
+| P1-CC-063 | Evaluate | Apply | 4 | 3 |
+| P1-CC-064 | Analyze | Apply | 4 | 3 |
+| P1-CC-016 | Analyze | Apply | 4 | 3 |
+| P1-CC-071 | Evaluate | Apply | 3 | 2 |
+| P1-CC-015 | Understand | Understand | 4 | 2 |
+
+**Pack C DC — Cost Management (7 items):**
+| QID | Old COG | New COG | Old Diff | New Diff |
+|-----|---------|---------|----------|----------|
+| P1-DC-010 | Analyze | Understand | 3 | 1 |
+| P1-DC-020 | Analyze | Understand | 4 | 2 |
+| P1-DC-030 | Analyze | Understand | 3 | 1 |
+| P1-DC-035 | Analyze | Understand | 3 | 1 |
+| P1-DC-040 | Analyze | Understand | 4 | 2 |
+| P1-DC-005 | Analyze | Apply | 3 | 3 |
+| P1-DC-025 | Analyze | Apply | 4 | 3 |
+
+**Classification drivers:** AF-E2 (Formula Substitution → Apply), AF-E3 (Deterministic Rule → Apply), AF-E4 (Taxonomy Classification → Understand), Evaluate→Analyze (scenario diagnosis without multi-framework synthesis).
+
+**Verified correct — no change (4 items):** P1-CC-059, P1-CC-062, P1-CC-053, P1-CC-056
+
+**Governance verification:**
+- Preflight PASS (0 divergences, 2451 Certified, 66/66 guard tests)
+- Smoke PASS (all UI surfaces verified)
+- Pipeline: 119 psychometric errors (pre-existing baseline, unchanged)
+- Zero content rewrites, zero answer-key changes, zero explanation changes, zero question_state changes
+
+### CSS
+
+Added `.conf-matrix`, `.conf-matrix-cell`, `.conf-cell-good/bad/med/warn/ok`, `.conf-matrix-n`, `.conf-matrix-pct`, `.rec-sprint-summary`, `.rec-sprint-stat`, `.rec-topic-improvements`, `.rec-topic-row`, `.rec-topic-bar-track`, `.rec-topic-bar`, `.rec-topic-bar-good/ok/focus`, `.rec-topic-scores` — all styles for the confidence calibration matrix and recovery sprint outcome card.
+
+### Files Modified
+- `app.js` — 3 new methods: `_renderConfidenceDashboard()`, `_renderRecoverySprintOutcome()`, `_lastSourceSession` store; 2 render call insertions; recovery sprint outcome template literal fix
+- `styles.css` — ~120 lines of new dashboard styles
+- `pack_c_corrected.js` — 14 CognitiveLevel/DifficultyScore field changes (7 CC + 7 DC)
+- `pack_d_corrected.js` — 10 CognitiveLevel/DifficultyScore field changes (10 ED)
+- `knowledge/REVISION_HISTORY.md` — APPENDED (this entry)
+
+
+## SESSION 112 — User Profile Migration, Persistence & Backup Architecture — 2026-07-31
+
+**Type:** WRITE (app.js, styles.css — Full Governance Lane)
+**Backup:** `backups/app.js.bak-S112-20260731122712`, `backups/index_updated.html.bak-S112-20260731122712`
+
+### Summary
+
+Implemented a complete unified learner profile system (`CMAProfileManager`) that replaces dispersed browser storage with a single versioned profile (`cmaProfile2026`). Features include: one-time legacy migration with automatic archival, export/import for laptop migration, automatic session-completion backups with rotation (max 5), pre-import backup protection, merge vs. replace conflict resolution, and May layer backward-compatibility sync.
+
+### Changes
+
+**app.js — New:**
+- `CMAProfileManager` (~320 lines): unified profile load/save, legacy migration engine with 14-key detection, per-key try/catch migration, archival (rename, not delete), May layer sync (`syncToMayStorage`/`syncFromMayStorage`), exportProfile (JSON download), importProfile (file upload with preview), executeImport (with pre-import backup), createBackup (rotation strategy, max 5), getBackups, getStats, getLegacySummary
+- `renderSettingsView()` (~50 lines): Settings → Data panel with Profile stats, Export/Import buttons, Backup management, Danger Zone (reset with pre-backup)
+- `handleProfileImport()` (~20 lines): file import handler with preview confirmation
+- Migration detection at startup: checks legacy keys, shows migration dialog with session/recovery/readiness counts, one-click import
+- Auto-backup trigger: `SessionPersistence.save()` creates backup on session completion
+
+**app.js — Modified:**
+- `SessionPersistence.saveHistory()`: syncs history to `CMAProfileManager` unified profile after legacy save
+- `SessionPersistence.save()`: auto-backup on `session.completed === true`
+- Tab click handler: added `renderSettingsView()` call for settings tab
+- Removed old partial `CMAProfileManager` implementation (~480 lines) — consolidated into new version
+- Removed duplicate `CMAProfileManager.init()` call
+
+**styles.css:**
+- Added `.settings-section`, `.settings-grid`, `.settings-label`, `.settings-value`, `.settings-actions`, `.settings-btn`, `.settings-danger` styles (~38 lines)
+
+**Reports — New:**
+- `reports/S112_PROFILE_MIGRATION_PLAN.md` — 17-key storage inventory, schema design, migration strategy
+- `reports/S112_STORAGE_INVENTORY.md` — complete key audit, duplicate source-of-truth analysis, legacy-to-profile mapping
+- `reports/S112_PERSISTENCE_ARCHITECTURE.md` — data flow diagrams, backup rotation, safety guarantees
+- `reports/S112_CLOSEOUT.md` — closeout verification
+
+### Governance
+
+| Check | Result |
+|-------|--------|
+| Preflight (T0) | 0 divergences, 66/66 GG PASS |
+| Preflight (Tend) | 0 divergences, 66/66 GG PASS |
+| Syntax | `node --check app.js` PASS |
+| Smoke test | PASS — 16/16 UI tests |
+| Content changes | 0 — no pack files modified |
+| Certified pool | 2,451 — unchanged |
+| Answer keys | 0 — untouched |
+| Scoring logic | 0 — untouched |
+| May coaching | 0 — untouched (sync bridge added for compatibility) |
+| QID counts | 500/500/500/500/545 — unchanged |
+
+### Architecture
+
+```
+17 Legacy Storage Keys → Migration Detection → Unified Profile (cmaProfile2026)
+                                                  │
+                                          ┌───────┼───────┐
+                                          ▼       ▼       ▼
+                                       Export  Import  Auto-Backup
+                                       (JSON)  (JSON)  (Rotating ×5)
+```
+
+- Storage key: `cmaProfile2026` (single canonical profile)
+- Schema: v1 with versioning for forward compatibility
+- May layer: read/write via `syncToMayStorage()`/`syncFromMayStorage()` bridges — existing May files unchanged
+- Legacy keys: renamed with `_ARCHIVED` suffix (never deleted)
+- Migration: one-time, gated by `profile.migration.completed` sentinel
+- Existing profile protection: merge/replace dialog on import; no silent overwrite
+
+### Non-Goals Verified
+
+- No pack file edits
+- No case file edits
+- No May logic changes
+- No answer-key changes
+- No scoring changes
+- No content changes
+- No question_state changes
+
+### Files Modified
+
+- `app.js` — added CMAProfileManager + renderSettingsView + migration startup + auto-backup; removed old duplicate
+- `styles.css` — added settings panel styles
+- `reports/S112_PROFILE_MIGRATION_PLAN.md` — NEW
+- `reports/S112_STORAGE_INVENTORY.md` — NEW
+- `reports/S112_PERSISTENCE_ARCHITECTURE.md` — NEW
+- `reports/S112_CLOSEOUT.md` — NEW
+- `knowledge/REVISION_HISTORY.md` — APPENDED (this entry)
+## SESSION 111 — CMA Interaction Fidelity Wave 1 — 2026-07-31
+
+**Type:** WRITE (app.js, styles.css — Full Governance Lane)
+**Backup:** `backups/app.js.bak-20260731121419` (242,719 bytes), `backups/styles.css.bak-20260731121419` (94,888 bytes)
+**Source Analysis:** S110P — 72/100 Exam Realism Score
+
+### Summary
+
+Implemented the three highest-impact interaction fidelity improvements identified by S110P: choice strikethrough (right-click elimination), keyboard answer selection (A/B/C/D keys), and pre-submit review filters (All/Unanswered/Flagged). Zero pack, case, content, scoring, or May logic changes. Pure UI interaction mechanics only.
+
+### Feature 1 — Choice Strikethrough
+
+**app.js:**
+- Added `struckChoices: {}` to session init object (both main session and recovery sprint session)
+- Modified `renderMCQ()` choice button template: added `struck` CSS class when `s.struckChoices[qid][letter]` is truthy
+- Added `contextmenu` (right-click) event listener on each choice button in `renderMCQ()`: prevents default context menu, toggles `struckChoices[qid][letter]`, saves immediately via `SessionPersistence.saveImmediate()`, re-renders MCQ
+- Strikethrough persisted through navigation, review screen, and flagged review via localStorage save/restore
+
+**styles.css:**
+- Added `.choice.struck`: `text-decoration: line-through`, `opacity: 0.45`, `cursor: default`
+- Added `.choice.struck:hover`: prevents hover highlight on struck choices
+- Added `.keyboard-hint`: 11px muted text, right-aligned, non-selectable, shows keyboard shortcut reference
+
+### Feature 2 — Keyboard Answer Selection
+
+**app.js:**
+- Added A/B/C/D key handling in the global `keydown` keyboard listener (after existing ArrowRight/ArrowLeft/m handlers)
+- Guard: only fires when `s.qIndex < s.mcqs.length` (MCQ view), only when no INPUT/TEXTAREA/SELECT focused
+- Full answer pipeline: sets `s.answers[qid]`, saves, logs, records analytics, triggers May feedback, re-renders
+- Uses `scoreMCQ()` for correct/incorrect, `AnalyticsCollector` for telemetry, `May.recordLiveAttempt` for coaching
+
+**styles.css:**
+- Added `.keyboard-hint` below choice buttons: "A–D Select · N/P Navigate · M Flag · Right-click Strike"
+
+### Feature 3 — Review Flagged Only (Pre-Submit)
+
+**app.js — renderReviewScreen():**
+- Added `data-answered="0/1"` and `data-flagged="0/1"` attributes to each review table row
+- Added filter button bar: "Review All" (default active), "Review Unanswered", "Review Flagged"
+- Filter buttons toggle row `style.display` between `''` and `'none'` based on data attributes
+
+**app.js — NavigationController:**
+- Added `data-answered="0/1"` and `data-flagged="0/1"` attributes to each navigator grid button
+- Added filter button bar in navigator footer: "All", "Unans", "Flag"
+- Filter buttons toggle grid button `style.display` based on data attributes
+- Added event binding in `NavigationController.bind()` for `.nav-filter-btn` click handlers
+
+**styles.css:**
+- Added `.nav-filters`, `.nav-filter-btn`, `.nav-filter-btn:hover`, `.nav-filter-btn.active` — compact sidebar filter buttons
+- Added `.review-filters`, `.review-filter-btn`, `.review-filter-btn.active` — review screen filter buttons
+
+### Verification
+
+| Check | Result |
+|-------|--------|
+| Preflight | PASS — 0 divergences, 2451 Certified |
+| Smoke | PASS — all UI surfaces verified |
+| Governance guard | 66/66 PASS |
+| Pack files modified | 0 (no pack/case changes) |
+| QID counts | 500, 500, 500, 500, 545 (unchanged) |
+| Certified counts | 2451 (unchanged) |
+| Scoring logic | Untouched |
+| Answer keys | Untouched |
+| May coaching | Untouched |
+| app.js syntax | OK (Function constructor parse) |
+
+### Non-Goals Verified
+
+- No pack file edits
+- No case file edits
+- No May logic changes
+- No answer-key changes
+- No scoring changes
+- No content changes
+- No question_state changes
+
+### Files Modified
+
+- `app.js` — +~85 lines: struckChoices in session init, choice rendering with struck class, contextmenu handler, keyboard hint HTML, A/B/C/D keyboard shortcuts, review screen filters, navigator filters
+- `styles.css` — +~45 lines: `.choice.struck`, `.keyboard-hint`, `.nav-filters`, `.nav-filter-btn`, `.review-filters`, `.review-filter-btn`
+- `reports/SESSION111_FIDELITY_PLAN.md` — NEW (implementation plan)
+- `knowledge/REVISION_HISTORY.md` — APPENDED (this entry)
+
 

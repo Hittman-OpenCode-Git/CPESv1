@@ -43,6 +43,583 @@ const STUDY_LINKS = {
 };
 
 // ============================================================
+// S112 — CMAProfileManager: Unified Learner Profile & Migration
+// ============================================================
+const CMAProfileManager = {
+    STORAGE_KEY: 'cmaProfile2026',
+    BACKUP_PREFIX: 'cmaProfile2026_backup_',
+    MAX_BACKUPS: 5,
+
+    LEGACY_KEYS: [
+        'cmaP1History2026', 'cmaP1SeenQuestions2026', 'cmaP1Dashboard',
+        'cmaMayLearnerState', 'cmaMaySelectedLearnerId', 'cmaMayStudentRoll',
+        'cmaMayPilotUsageLog', 'cmaMaySafetyLog', 'cmaMayGateLog',
+        'cmaMaySessionTelemetry', 'cmaMayPilotTelemetry', 'cmaMayPilotTelemetryArchive',
+        'cmaDefectManifest_DL008_DL026'
+    ],
+
+    _default() {
+        return {
+            schemaVersion: 1,
+            profileId: 'local-profile-' + Date.now().toString(36),
+            metadata: { createdAt: new Date().toISOString(), migratedAt: null, lastBackupAt: null, lastSessionAt: null },
+            migration: { completed: false, completedAt: null, sourceKeys: [] },
+            theme: (function () { try { return localStorage.getItem('cma-theme') || 'light'; } catch (e) { return 'light'; } })(),
+            sessionHistory: [],
+            seenQuestionIds: [],
+            mayLearnerState: {},
+            mayStudentRoll: [],
+            mayUsageLog: [],
+            maySafetyLog: [],
+            mayGateLog: [],
+            maySessionTelemetry: [],
+            mayPilotTelemetry: {},
+            mayPilotTelemetryArchive: [],
+            maySelectedLearnerId: null,
+            defectManifestCache: null
+        };
+    },
+
+    load() {
+        try {
+            var raw = localStorage.getItem(this.STORAGE_KEY);
+            if (raw) {
+                var profile = JSON.parse(raw);
+                var defaults = this._default();
+                for (var k in defaults) { if (!(k in profile) && defaults.hasOwnProperty(k)) profile[k] = defaults[k]; }
+                return profile;
+            }
+        } catch (e) { /* corrupted */ }
+        return this._default();
+    },
+
+    save(profile) {
+        try {
+            profile.metadata.lastSessionAt = new Date().toISOString();
+            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(profile));
+            return true;
+        } catch (e) {
+            try {
+                if (profile.sessionHistory && profile.sessionHistory.length > 50) profile.sessionHistory = profile.sessionHistory.slice(-50);
+                if (profile.mayUsageLog && profile.mayUsageLog.length > 100) profile.mayUsageLog = profile.mayUsageLog.slice(-100);
+                profile.metadata.lastSessionAt = new Date().toISOString();
+                localStorage.setItem(this.STORAGE_KEY, JSON.stringify(profile));
+                return true;
+            } catch (e2) { return false; }
+        }
+    },
+
+    // ── Migration detection ──────────────────────────────
+    hasLegacyData() {
+        for (var i = 0; i < this.LEGACY_KEYS.length; i++) {
+            try { if (localStorage.getItem(this.LEGACY_KEYS[i]) !== null) return true; } catch (e) {}
+        }
+        return false;
+    },
+
+    // ── Legacy data inventory for UI preview ──────────────
+    getLegacySummary() {
+        var summary = { sessions: 0, seenQuestions: 0, maySessions: 0, mayLogs: 0, hasData: false };
+        try {
+            var hist = JSON.parse(localStorage.getItem('cmaP1History2026') || '[]');
+            summary.sessions = hist.length;
+            if (hist.length > 0) summary.hasData = true;
+        } catch (e) {}
+        try {
+            var seen = JSON.parse(localStorage.getItem('cmaP1SeenQuestions2026') || '[]');
+            summary.seenQuestions = seen.length;
+            if (seen.length > 0) summary.hasData = true;
+        } catch (e) {}
+        try {
+            var may = JSON.parse(localStorage.getItem('cmaMayLearnerState') || '{}');
+            summary.maySessions = (may.sessions || []).length;
+            if ((may.sessions || []).length > 0) summary.hasData = true;
+        } catch (e) {}
+        try {
+            var usageLog = JSON.parse(localStorage.getItem('cmaMayPilotUsageLog') || '[]');
+            summary.mayLogs = usageLog.length;
+        } catch (e) {}
+        return summary;
+    },
+
+    // ── One-time migration ───────────────────────────────
+    migrateLegacy(profile) {
+        var srcKeys = [];
+        var safeRead = function (key) { try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : null; } catch (e) { return null; } };
+
+        // Session history
+        var hist = safeRead('cmaP1History2026');
+        if (hist && Array.isArray(hist) && hist.length > 0) { profile.sessionHistory = hist.slice(0, 100); srcKeys.push('cmaP1History2026'); }
+
+        // Seen questions
+        var seen = safeRead('cmaP1SeenQuestions2026');
+        if (seen && Array.isArray(seen)) { profile.seenQuestionIds = seen; srcKeys.push('cmaP1SeenQuestions2026'); }
+
+        // Dashboard (merge into history if not already covered)
+        var db = safeRead('cmaP1Dashboard');
+        if (db && !profile.sessionHistory.length) { srcKeys.push('cmaP1Dashboard'); }
+
+        // May learner state
+        var mayLS = safeRead('cmaMayLearnerState');
+        if (mayLS && typeof mayLS === 'object' && !Array.isArray(mayLS)) { profile.mayLearnerState = mayLS; srcKeys.push('cmaMayLearnerState'); }
+
+        // May support data
+        var maySid = localStorage.getItem('cmaMaySelectedLearnerId');
+        if (maySid) { profile.maySelectedLearnerId = maySid; srcKeys.push('cmaMaySelectedLearnerId'); }
+
+        var mayRoll = safeRead('cmaMayStudentRoll');
+        if (mayRoll && Array.isArray(mayRoll)) { profile.mayStudentRoll = mayRoll; srcKeys.push('cmaMayStudentRoll'); }
+
+        var mayUsage = safeRead('cmaMayPilotUsageLog');
+        if (mayUsage && Array.isArray(mayUsage)) { profile.mayUsageLog = mayUsage.slice(0, 200); srcKeys.push('cmaMayPilotUsageLog'); }
+
+        var maySafety = safeRead('cmaMaySafetyLog');
+        if (maySafety && Array.isArray(maySafety)) { profile.maySafetyLog = maySafety.slice(0, 50); srcKeys.push('cmaMaySafetyLog'); }
+
+        var mayGate = safeRead('cmaMayGateLog');
+        if (mayGate && Array.isArray(mayGate)) { profile.mayGateLog = mayGate.slice(0, 50); srcKeys.push('cmaMayGateLog'); }
+
+        var mayTelem = safeRead('cmaMaySessionTelemetry');
+        if (mayTelem && Array.isArray(mayTelem)) { profile.maySessionTelemetry = mayTelem.slice(0, 100); srcKeys.push('cmaMaySessionTelemetry'); }
+
+        var mayPilot = safeRead('cmaMayPilotTelemetry');
+        if (mayPilot && typeof mayPilot === 'object') { profile.mayPilotTelemetry = mayPilot; srcKeys.push('cmaMayPilotTelemetry'); }
+
+        var mayPilotArch = safeRead('cmaMayPilotTelemetryArchive');
+        if (mayPilotArch && Array.isArray(mayPilotArch)) { profile.mayPilotTelemetryArchive = mayPilotArch; srcKeys.push('cmaMayPilotTelemetryArchive'); }
+
+        var dmCache = safeRead('cmaDefectManifest_DL008_DL026');
+        if (dmCache) { profile.defectManifestCache = dmCache; srcKeys.push('cmaDefectManifest_DL008_DL026'); }
+
+        // Theme
+        try { var theme = localStorage.getItem('cma-theme'); if (theme) profile.theme = theme; } catch (e) {}
+
+        // Mark migration complete
+        profile.migration.completed = true;
+        profile.migration.completedAt = new Date().toISOString();
+        profile.migration.sourceKeys = srcKeys;
+
+        return profile;
+    },
+
+    // ── Archive legacy keys (rename, don't delete) ───────
+    archiveLegacyKeys() {
+        var archived = [];
+        for (var i = 0; i < this.LEGACY_KEYS.length; i++) {
+            try {
+                var val = localStorage.getItem(this.LEGACY_KEYS[i]);
+                if (val !== null) {
+                    localStorage.setItem(this.LEGACY_KEYS[i] + '_ARCHIVED', val);
+                    localStorage.removeItem(this.LEGACY_KEYS[i]);
+                    archived.push(this.LEGACY_KEYS[i]);
+                }
+            } catch (e) { /* best-effort */ }
+        }
+        // Also archive theme if present
+        try { var theme = localStorage.getItem('cma-theme'); if (theme !== null) { localStorage.setItem('cma-theme_ARCHIVED', theme); localStorage.removeItem('cma-theme'); } } catch (e) {}
+        return archived;
+    },
+
+    // ── Sync profile data back to May storage (for May layer compatibility) ──
+    syncToMayStorage(profile) {
+        try {
+            if (profile.mayLearnerState && Object.keys(profile.mayLearnerState).length > 0) {
+                localStorage.setItem('cmaMayLearnerState', JSON.stringify(profile.mayLearnerState));
+            }
+            if (profile.maySelectedLearnerId) localStorage.setItem('cmaMaySelectedLearnerId', profile.maySelectedLearnerId);
+            if (profile.mayStudentRoll && profile.mayStudentRoll.length > 0) localStorage.setItem('cmaMayStudentRoll', JSON.stringify(profile.mayStudentRoll));
+            if (profile.mayUsageLog && profile.mayUsageLog.length > 0) localStorage.setItem('cmaMayPilotUsageLog', JSON.stringify(profile.mayUsageLog));
+            if (profile.maySafetyLog && profile.maySafetyLog.length > 0) localStorage.setItem('cmaMaySafetyLog', JSON.stringify(profile.maySafetyLog));
+            if (profile.mayGateLog && profile.mayGateLog.length > 0) localStorage.setItem('cmaMayGateLog', JSON.stringify(profile.mayGateLog));
+            if (profile.maySessionTelemetry && profile.maySessionTelemetry.length > 0) localStorage.setItem('cmaMaySessionTelemetry', JSON.stringify(profile.maySessionTelemetry));
+            if (profile.mayPilotTelemetry && Object.keys(profile.mayPilotTelemetry).length > 0) localStorage.setItem('cmaMayPilotTelemetry', JSON.stringify(profile.mayPilotTelemetry));
+            if (profile.mayPilotTelemetryArchive && profile.mayPilotTelemetryArchive.length > 0) localStorage.setItem('cmaMayPilotTelemetryArchive', JSON.stringify(profile.mayPilotTelemetryArchive));
+            if (profile.defectManifestCache) localStorage.setItem('cmaDefectManifest_DL008_DL026', JSON.stringify(profile.defectManifestCache));
+        } catch (e) { /* best-effort */ }
+    },
+
+    // ── Pull latest May data into profile (for export) ───
+    syncFromMayStorage(profile) {
+        try {
+            var mayLS = JSON.parse(localStorage.getItem('cmaMayLearnerState') || 'null');
+            if (mayLS && typeof mayLS === 'object') profile.mayLearnerState = mayLS;
+            var sid = localStorage.getItem('cmaMaySelectedLearnerId');
+            if (sid) profile.maySelectedLearnerId = sid;
+            var roll = JSON.parse(localStorage.getItem('cmaMayStudentRoll') || 'null');
+            if (roll && Array.isArray(roll)) profile.mayStudentRoll = roll;
+            var ulog = JSON.parse(localStorage.getItem('cmaMayPilotUsageLog') || 'null');
+            if (ulog && Array.isArray(ulog)) profile.mayUsageLog = ulog;
+            var slog = JSON.parse(localStorage.getItem('cmaMaySafetyLog') || 'null');
+            if (slog && Array.isArray(slog)) profile.maySafetyLog = slog;
+            var glog = JSON.parse(localStorage.getItem('cmaMayGateLog') || 'null');
+            if (glog && Array.isArray(glog)) profile.mayGateLog = glog;
+            var tlog = JSON.parse(localStorage.getItem('cmaMaySessionTelemetry') || 'null');
+            if (tlog && Array.isArray(tlog)) profile.maySessionTelemetry = tlog;
+            var ptele = JSON.parse(localStorage.getItem('cmaMayPilotTelemetry') || 'null');
+            if (ptele && typeof ptele === 'object') profile.mayPilotTelemetry = ptele;
+            var parch = JSON.parse(localStorage.getItem('cmaMayPilotTelemetryArchive') || 'null');
+            if (parch && Array.isArray(parch)) profile.mayPilotTelemetryArchive = parch;
+            var dmc = JSON.parse(localStorage.getItem('cmaDefectManifest_DL008_DL026') || 'null');
+            if (dmc) profile.defectManifestCache = dmc;
+            try { profile.theme = localStorage.getItem('cma-theme') || profile.theme; } catch (e) {}
+        } catch (e) { /* best-effort */ }
+        return profile;
+    },
+
+    // ── Export full profile as downloadable JSON ─────────
+    exportProfile() {
+        var profile = this.load();
+        this.syncFromMayStorage(profile);
+        var blob = new Blob([JSON.stringify(profile, null, 2)], { type: 'application/json' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'cma-profile-backup-' + new Date().toISOString().slice(0, 10) + '.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        return true;
+    },
+
+    // ── Import profile from file ──────────────────────────
+    importProfile(file, onPreview, onComplete, onError) {
+        var self = this;
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            try {
+                var imported = JSON.parse(e.target.result);
+                // Validate
+                if (!imported.schemaVersion) { onError('Invalid profile file: missing schemaVersion.'); return; }
+                if (typeof imported.schemaVersion !== 'number') { onError('Invalid profile: schemaVersion must be a number.'); return; }
+
+                // Preview
+                var preview = {
+                    schemaVersion: imported.schemaVersion,
+                    sessionCount: (imported.sessionHistory || []).length,
+                    seenQuestions: (imported.seenQuestionIds || []).length,
+                    maySessions: (imported.mayLearnerState && imported.mayLearnerState.sessions ? imported.mayLearnerState.sessions.length : 0),
+                    lastSession: imported.metadata ? imported.metadata.lastSessionAt : null,
+                    migrated: imported.migration ? imported.migration.completed : false
+                };
+                if (onPreview) onPreview(preview, imported);
+            } catch (err) {
+                onError('Failed to parse profile file: ' + err.message);
+            }
+        };
+        reader.onerror = function () { onError('Failed to read file.'); };
+        reader.readAsText(file);
+    },
+
+    // ── Execute import (after confirmation) ──────────────
+    executeImport(importedProfile) {
+        // Pre-import backup
+        this.createBackup();
+
+        // Merge or replace current profile
+        var profile = this.load();
+        // Preserve profileId if local profile exists
+        if (profile.profileId && profile.profileId !== importedProfile.profileId) {
+            importedProfile.profileId = profile.profileId;
+        }
+        importedProfile.metadata.importedAt = new Date().toISOString();
+        this.save(importedProfile);
+
+        // Sync to May storage for compatibility
+        this.syncToMayStorage(importedProfile);
+
+        // Restore theme
+        try { document.documentElement.setAttribute('data-theme', importedProfile.theme || 'light'); } catch (e) {}
+        if (typeof renderThemeToggle === 'function') renderThemeToggle();
+
+        return true;
+    },
+
+    // ── Backup management ────────────────────────────────
+    createBackup() {
+        try {
+            var profile = this.load();
+            this.syncFromMayStorage(profile);
+            var ts = new Date().toISOString();
+            var backupEntry = { timestamp: ts, profile: profile };
+
+            // Load rotation index
+            var rotations = [];
+            try { rotations = JSON.parse(localStorage.getItem(this.STORAGE_KEY + '_backupIndex') || '[]'); } catch (e) {}
+
+            // Write backup slot
+            var slot = rotations.length % this.MAX_BACKUPS;
+            localStorage.setItem(this.BACKUP_PREFIX + slot, JSON.stringify(backupEntry));
+
+            // Update index
+            if (rotations.length >= this.MAX_BACKUPS) rotations.shift();
+            rotations.push({ slot: slot, timestamp: ts, sessions: profile.sessionHistory ? profile.sessionHistory.length : 0 });
+            localStorage.setItem(this.STORAGE_KEY + '_backupIndex', JSON.stringify(rotations));
+
+            profile.metadata.lastBackupAt = ts;
+            this.save(profile);
+            return ts;
+        } catch (e) { return null; }
+    },
+
+    getBackups() {
+        try { return JSON.parse(localStorage.getItem(this.STORAGE_KEY + '_backupIndex') || '[]'); } catch (e) { return []; }
+    },
+
+    // ── Profile statistics ────────────────────────────────
+    getStats(profile) {
+        profile = profile || this.load();
+        return {
+            sessions: (profile.sessionHistory || []).length,
+            seenQuestions: (profile.seenQuestionIds || []).length,
+            maySessions: (profile.mayLearnerState && profile.mayLearnerState.sessions ? profile.mayLearnerState.sessions.length : 0),
+            migrationCompleted: profile.migration ? profile.migration.completed : false,
+            migrationDate: profile.migration ? profile.migration.completedAt : null,
+            backups: this.getBackups().length,
+            lastBackup: profile.metadata ? profile.metadata.lastBackupAt : null,
+            profileCreated: profile.metadata ? profile.metadata.createdAt : null
+        };
+    },
+
+    // ── Initialize — detect, migrate, sync ────────────────
+    init() {
+        var profile = this.load();
+        window._cmaMigrationNeeded = false;
+
+        // Check for legacy data
+        if (!profile.migration.completed && this.hasLegacyData()) {
+            window._cmaMigrationProfile = profile;
+            window._cmaMigrationNeeded = true;
+        } else if (!profile.migration.completed) {
+            profile.migration.completed = true;
+            profile.migration.completedAt = new Date().toISOString();
+            this.save(profile);
+        }
+
+        // Sync May storage on load (ensure May layer has latest data)
+        this.syncToMayStorage(profile);
+
+        // Store in-memory reference
+        window._cmaProfile = profile;
+        return profile;
+    },
+
+    // ── Show migration dialog on page load ────────────────
+    showMigrationDialog() {
+        var profile = window._cmaMigrationProfile || this.load();
+        var summary = this.getLegacySummary();
+        var self = this;
+
+        var dialog = document.createElement('div');
+        dialog.className = 'recovery-modal';
+        dialog.id = 'migrationDialog';
+        dialog.innerHTML =
+            '<div class="recovery-modal-backdrop"></div>' +
+            '<div class="recovery-modal-dialog" role="dialog" aria-labelledby="migrationTitle" style="max-width:540px;">' +
+            '<h2 id="migrationTitle">Previous Learner History Detected</h2>' +
+            '<p>We found learner data from a previous version stored in your browser.</p>' +
+            '<div class="profile-summary-card" style="margin:12px 0;">' +
+            '<p><strong>Sessions completed:</strong> ' + summary.sessions + '</p>' +
+            '<p style="margin-top:4px;"><strong>Questions seen:</strong> ' + summary.seenQuestions + '</p>' +
+            '<p style="margin-top:4px;"><strong>May coaching data:</strong> ' + (summary.maySessions > 0 ? summary.maySessions + ' sessions' : 'None') + '</p>' +
+            '</div>' +
+            '<p class="small" style="color:var(--text-muted);margin-top:8px;">This data will be migrated to your unified learner profile. Your legacy data will be archived (not deleted) for safety — you can recover it later if needed.</p>' +
+            '<div class="recovery-modal-actions" style="flex-direction:column;gap:8px;">' +
+            '<button id="migrationImport" class="primary">Import Existing Data</button>' +
+            '<button id="migrationSkip" class="secondary">Skip — Start Fresh</button>' +
+            '</div></div>';
+        document.body.appendChild(dialog);
+        document.getElementById('migrationImport').onclick = function () {
+            profile = self.migrateLegacy(profile);
+            self.save(profile);
+            self.archiveLegacyKeys();
+            dialog.remove();
+            window._cmaMigrationNeeded = false;
+            if (typeof ExamSessionManager !== 'undefined') ExamSessionManager.renderHistory();
+            renderSettingsView();
+            showSaveStatus('Profile migrated successfully', 'saved');
+        };
+        document.getElementById('migrationSkip').onclick = function () {
+            profile.migration.completed = true;
+            profile.migration.completedAt = new Date().toISOString();
+            self.save(profile);
+            dialog.remove();
+            window._cmaMigrationNeeded = false;
+            renderSettingsView();
+        };
+    },
+
+    // ── Restore profile from backup slot ─────────────────
+    restoreBackup(slot) {
+        try {
+            var raw = localStorage.getItem(this.BACKUP_PREFIX + slot);
+            if (!raw) return false;
+            var entry = JSON.parse(raw);
+            if (!entry || !entry.profile) return false;
+
+            // Pre-restore backup of current
+            this.createBackup();
+
+            this.save(entry.profile);
+            this.syncToMayStorage(entry.profile);
+            try { document.documentElement.setAttribute('data-theme', entry.profile.theme || 'light'); } catch (e) {}
+            renderSettingsView();
+            if (typeof ExamSessionManager !== 'undefined') ExamSessionManager.renderHistory();
+            return true;
+        } catch (e) { return false; }
+    },
+
+    // ── Merge imported profile with existing ─────────────
+    mergeProfile(importedProfile) {
+        var existing = this.load();
+        var existingDates = {};
+        (existing.sessionHistory || []).forEach(function (h) { existingDates[h.date] = true; });
+
+        var newSessions = (importedProfile.sessionHistory || []).filter(function (h) { return !existingDates[h.date]; });
+        var merged = (existing.sessionHistory || []).concat(newSessions);
+
+        var mergedProfile = {
+            schemaVersion: existing.schemaVersion,
+            profileId: existing.profileId,
+            metadata: {
+                createdAt: existing.metadata.createdAt,
+                migratedAt: existing.metadata.migratedAt,
+                lastBackupAt: existing.metadata.lastBackupAt,
+                lastSessionAt: new Date().toISOString(),
+                mergedAt: new Date().toISOString()
+            },
+            migration: existing.migration,
+            theme: importedProfile.theme || existing.theme,
+            sessionHistory: merged.slice(0, 500),
+            seenQuestionIds: importedProfile.seenQuestionIds || existing.seenQuestionIds || [],
+            mayLearnerState: importedProfile.mayLearnerState || existing.mayLearnerState || {},
+            mayStudentRoll: importedProfile.mayStudentRoll || existing.mayStudentRoll || [],
+            mayUsageLog: importedProfile.mayUsageLog || existing.mayUsageLog || [],
+            maySafetyLog: importedProfile.maySafetyLog || existing.maySafetyLog || [],
+            mayGateLog: importedProfile.mayGateLog || existing.mayGateLog || [],
+            maySessionTelemetry: importedProfile.maySessionTelemetry || existing.maySessionTelemetry || [],
+            mayPilotTelemetry: importedProfile.mayPilotTelemetry || existing.mayPilotTelemetry || {},
+            mayPilotTelemetryArchive: importedProfile.mayPilotTelemetryArchive || existing.mayPilotTelemetryArchive || [],
+            maySelectedLearnerId: importedProfile.maySelectedLearnerId || existing.maySelectedLearnerId,
+            defectManifestCache: importedProfile.defectManifestCache || existing.defectManifestCache
+        };
+        return mergedProfile;
+    }
+};
+
+// ── S112: Settings/Data view renderer ─────────────────────
+function renderSettingsView() {
+    var profile = window._cmaProfile || CMAProfileManager.init();
+    var stats = CMAProfileManager.getStats(profile);
+    var backups = CMAProfileManager.getBackups();
+    var migration = profile.migration || {};
+
+    var html = '<h2>Settings</h2>';
+
+    // Profile info
+    html += '<div class="settings-section"><h3>Profile</h3>';
+    html += '<div class="settings-grid">';
+    html += '<div><span class="settings-label">Profile ID</span><span class="settings-value">' + (profile.profileId || '—') + '</span></div>';
+    html += '<div><span class="settings-label">Created</span><span class="settings-value">' + (stats.profileCreated ? new Date(stats.profileCreated).toLocaleDateString() : '—') + '</span></div>';
+    html += '<div><span class="settings-label">Total Sessions</span><span class="settings-value">' + stats.sessions + '</span></div>';
+    html += '<div><span class="settings-label">Questions Seen</span><span class="settings-value">' + stats.seenQuestions + '</span></div>';
+    html += '<div><span class="settings-label">Migration</span><span class="settings-value">' + (migration.completed ? 'Completed ' + (migration.completedAt ? new Date(migration.completedAt).toLocaleDateString() : '') : 'Not needed') + '</span></div>';
+    html += '<div><span class="settings-label">Last Backup</span><span class="settings-value">' + (stats.lastBackup ? new Date(stats.lastBackup).toLocaleString() : 'None') + '</span></div>';
+    html += '</div></div>';
+
+    // Data management
+    html += '<div class="settings-section"><h3>Data Management</h3>';
+    html += '<div class="settings-actions">';
+    html += '<button class="primary settings-btn" onclick="CMAProfileManager.exportProfile()" title="Download your full learner profile as a JSON file">Export Full Profile</button> ';
+    html += '<button class="secondary settings-btn" id="importProfileBtn" onclick="document.getElementById(\'importProfileFile\').click()" title="Restore a previously exported profile">Import Profile</button>';
+    html += '<input type="file" id="importProfileFile" accept=".json" style="display:none" onchange="handleProfileImport(this.files[0])">';
+    html += '</div>';
+    html += '<p class="small" style="margin-top:12px;">Export creates a complete backup of your learner history, session records, and May coaching data. Use this to transfer your profile to another device or to create a safety backup.</p>';
+    html += '<p class="small"><strong>Import replaces</strong> your current profile data. A pre-import backup is created automatically.</p>';
+    html += '</div>';
+
+    // Backup history
+    if (backups.length > 0) {
+        html += '<div class="settings-section"><h3>Automatic Backups</h3>';
+        html += '<p class="small">Last ' + Math.min(backups.length, 5) + ' backup(s) retained. Click <strong>Restore</strong> to roll back to a previous snapshot.</p>';
+        html += '<div class="settings-grid">';
+        for (var i = 0; i < backups.length; i++) {
+            var b = backups[i];
+            html += '<div style="display:flex;justify-content:space-between;align-items:center;width:100%;"><div><span class="settings-label">Backup ' + (b.slot + 1) + '</span><span class="settings-value">' + new Date(b.timestamp).toLocaleString() + ' (' + b.sessions + ' sessions)</span></div>';
+            html += '<button onclick="if(CMAProfileManager.restoreBackup(' + b.slot + ')){alert(\'Backup restored. Current profile was backed up first.\')}" class="btn btn-small" style="padding:2px 10px;font-size:0.75rem;">Restore</button></div>';
+        }
+        html += '</div></div>';
+    }
+
+    // Danger zone
+    html += '<div class="settings-section settings-danger"><h3>Danger Zone</h3>';
+    html += '<button class="secondary settings-btn" style="color:var(--red,#dc2626);border-color:var(--red,#dc2626)" onclick="if(confirm(\'This will clear ALL your learner data including session history, May coaching state, and settings. This cannot be undone.\\n\\nA backup will be created before clearing.\\n\\nContinue?\')){CMAProfileManager.createBackup();localStorage.removeItem(CMAProfileManager.STORAGE_KEY);alert(\'Profile cleared. Backup created before clearing. Reloading page.\');location.reload()}">Reset All Learner Data</button>';
+    html += '<p class="small" style="margin-top:4px;">A backup is created before clearing. You can restore it via Import.</p>';
+    html += '</div>';
+
+    document.getElementById('settingsView').innerHTML = html;
+}
+
+// ── S112: Profile import handler ──────────────────────────
+function handleProfileImport(file) {
+    if (!file) return;
+    CMAProfileManager.importProfile(file,
+        // onPreview
+        function (preview, fullProfile) {
+            var existing = window._cmaProfile || CMAProfileManager.load();
+            var hasExisting = existing.sessionHistory && existing.sessionHistory.length > 0;
+            var existingSessions = hasExisting ? existing.sessionHistory.length : 0;
+            var importedSessions = preview.sessionCount;
+
+            var msg = 'Import Profile Preview\n\n';
+            msg += 'File contains: ' + importedSessions + ' sessions, ' + preview.seenQuestions + ' seen questions\n';
+            msg += 'Schema version: v' + preview.schemaVersion + '\n';
+            msg += 'Last activity: ' + (preview.lastSession ? new Date(preview.lastSession).toLocaleString() : 'Unknown') + '\n\n';
+
+            if (hasExisting) {
+                msg += 'Your current profile has ' + existingSessions + ' sessions.\n';
+                msg += 'A backup of your current profile will be created before import.\n\n';
+                msg += 'Choose an action:\n';
+                msg += '  [OK] = Merge (keep both profiles' + "'" + ' data)\n';
+                msg += '  [Cancel] = Replace dialog';
+                var choice = confirm(msg + '\n\nClick OK to MERGE profiles, or Cancel for more options.');
+                if (choice) {
+                    CMAProfileManager.createBackup();
+                    var merged = CMAProfileManager.mergeProfile(fullProfile);
+                    CMAProfileManager.save(merged);
+                    CMAProfileManager.syncToMayStorage(merged);
+                    window._cmaProfile = merged;
+                    renderSettingsView();
+                    if (typeof ExamSessionManager !== 'undefined') ExamSessionManager.renderHistory();
+                    alert('Profiles merged. ' + merged.sessionHistory.length + ' sessions total.');
+                } else {
+                    var msg2 = 'Replace your current profile (' + existingSessions + ' sessions) with the imported one (' + importedSessions + ' sessions)?\n\nYour current profile will be backed up first.';
+                    if (confirm(msg2)) {
+                        CMAProfileManager.executeImport(fullProfile);
+                        renderSettingsView();
+                        if (typeof ExamSessionManager !== 'undefined') ExamSessionManager.renderHistory();
+                        alert('Profile replaced. ' + importedSessions + ' sessions imported. Reloading to apply.');
+                        location.reload();
+                    }
+                }
+            } else {
+                msg += 'Click OK to import. A backup of the current profile will be created.';
+                if (confirm(msg)) {
+                    CMAProfileManager.createBackup();
+                    CMAProfileManager.executeImport(fullProfile);
+                    renderSettingsView();
+                    if (typeof ExamSessionManager !== 'undefined') ExamSessionManager.renderHistory();
+                    alert('Profile imported. ' + importedSessions + ' sessions restored. Reloading to apply.');
+                    location.reload();
+                }
+            }
+        },
+        // onError
+        function (err) { alert('Import failed: ' + err); }
+    );
+}
+
+// ============================================================
 // Constants
 // ============================================================
 const DECIMAL_PRECISION = 10000000000;
@@ -786,6 +1363,8 @@ const SessionPersistence = {
             if (sn.session && sn.session.completed) {
                 localStorage.removeItem(this.CHECKPOINT_KEY);
                 localStorage.removeItem(this.JOURNAL_KEY);
+                // S112 — Auto-backup on session complete
+                try { CMAProfileManager.createBackup(); } catch (e) {}
             }
             if (this._verifySave(sn)) {
                 persistSaveStatus('All progress saved', 'saved');
@@ -1027,10 +1606,13 @@ const SessionPersistence = {
                 difficultyPreset: sc ? sc.difficultyPreset : 'standard',
                 grade: sc ? sc.grade : null,
                 cbqCorrect, cbqTotal,
-                topicSnapshot
+                topicSnapshot,
+                recoverySource: s.recoverySource || null
             });
             localStorage.setItem(this.HISTORY_KEY, JSON.stringify(h.slice(0, 100)));
             this.updateDashboard(h[0]);
+            // S112 — Update unified profile with session history
+            try { var prof = CMAProfileManager.load(); prof.sessionHistory = h.slice(0, 100); CMAProfileManager.save(prof); CMAProfileManager.syncToMayStorage(prof); } catch (e) {}
         } catch (e) { /* ignore */ }
     },
 
@@ -1169,6 +1751,7 @@ const ExamSessionManager = {
             flags: {},
             caseAnswers: {},
             caseFlags: {},
+            struckChoices: {},
             confidence: {},
             guessed: {},
             start: Date.now(),
@@ -1605,7 +2188,9 @@ const ExamSessionManager = {
         this.renderSummary('priority');
         if (typeof May !== 'undefined') May.handoffCompletedSession(state.session);
         if (typeof MayTelemetry !== 'undefined') {
-            MayTelemetry.trackAdoption({ recommendationType: 'Session', cardId: 'session-complete', topic: '', presented: false, panelOpened: false, clicked: false, sessionStarted: false, completed: true, timestamp: new Date().toISOString() });
+            var _attribC = window._mayAttributionCard;
+            MayTelemetry.trackAdoption({ recommendationType: 'Session', cardId: 'session-complete', topic: '', presented: false, panelOpened: false, clicked: false, sessionStarted: false, completed: true, attributionCardId: (_attribC && _attribC.cardId) || null, attributionCardType: (_attribC && _attribC.recommendationType) || null, timestamp: new Date().toISOString() });
+            window._mayAttributionCard = null;
         }
         if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_PRODUCTION_MAY_INTEGRATION')) {
             setTimeout(() => {
@@ -1729,8 +2314,9 @@ const ExamSessionManager = {
               </div>
               <h2>${nl2br(q.Stem)}</h2>
               <div class="choices" role="radiogroup" aria-label="Answer choices">${CHOICES.map(c =>
-                    `<button class="choice ${sel === c ? 'selected' : ''}" data-choice="${c}" role="radio" aria-checked="${sel === c}" tabindex="0"><span class="letter">${c}</span><span>${q.Choices[c]}</span></button>`
+                    `<button class="choice ${sel === c ? 'selected' : ''} ${s.struckChoices[q.QuestionID] && s.struckChoices[q.QuestionID][c] ? 'struck' : ''}" data-choice="${c}" role="radio" aria-checked="${sel === c}" tabindex="0"><span class="letter">${c}</span><span>${q.Choices[c]}</span></button>`
                 ).join('')}</div>
+              <div class="keyboard-hint" title="Keyboard shortcuts">A–D Select &middot; N/P Navigate &middot; M Flag &middot; Right-click Strike</div>
               <div class="item-tools">
                 <label class="flag"><input id="flagBox" type="checkbox" ${s.flags[q.QuestionID] ? 'checked' : ''}> Mark for review</label>
                 <label class="guess"><input id="guessBox" type="checkbox" ${guessed ? 'checked' : ''}> I guessed</label>
@@ -1772,6 +2358,15 @@ const ExamSessionManager = {
                     }
                     this.renderMCQ(q);
                 };
+                b.addEventListener('contextmenu', (ev) => {
+                    ev.preventDefault();
+                    let ch = b.dataset.choice;
+                    if (!s.struckChoices[q.QuestionID]) s.struckChoices[q.QuestionID] = {};
+                    s.struckChoices[q.QuestionID][ch] = !s.struckChoices[q.QuestionID][ch];
+                    SessionPersistence.saveImmediate();
+                    SessionPersistence.logAction('strike ' + q.QuestionID + '=' + ch + '=' + s.struckChoices[q.QuestionID][ch]);
+                    this.renderMCQ(q);
+                });
             });
             let fb = $('flagBox');
             if (fb) fb.onchange = e => { s.flags[q.QuestionID] = e.target.checked; SessionPersistence.saveImmediate(); SessionPersistence.logAction('flag ' + q.QuestionID + '=' + e.target.checked); AnalyticsCollector.recordFlag(q.QuestionID, e.target.checked); };
@@ -2039,11 +2634,13 @@ const ExamSessionManager = {
     renderReviewScreen() {
         try {
             let s = state.session;
-            let mcqRows = s.mcqs.map((q, i) =>
-                `<tr><td>${i + 1}</td><td>${q.Section}</td><td>${q.Topic}</td><td>${s.answers[q.QuestionID] ? '<span class="status-answered">Answered</span>' : '<span class="status-unanswered">Unanswered</span>'}</td><td>${s.flags[q.QuestionID] ? '<span class="status-flagged">Flagged</span>' : ''}</td><td><button class="secondary smallbtn" data-jump="${i}">Go</button></td></tr>`
-            ).join('');
+            let mcqRows = s.mcqs.map((q, i) => {
+                let answered = !!s.answers[q.QuestionID];
+                let flagged = !!s.flags[q.QuestionID];
+                return `<tr data-answered="${answered ? '1' : '0'}" data-flagged="${flagged ? '1' : '0'}"><td>${i + 1}</td><td>${q.Section}</td><td>${q.Topic}</td><td>${answered ? '<span class="status-answered">Answered</span>' : '<span class="status-unanswered">Unanswered</span>'}</td><td>${flagged ? '<span class="status-flagged">Flagged</span>' : ''}</td><td><button class="secondary smallbtn" data-jump="${i}">Go</button></td></tr>`;
+            }).join('');
             let caseRows = s.cases.map((c, i) =>
-                `<tr><td>C${i + 1}</td><td>${c.SectionTags.join(', ')}</td><td>${c.Title}</td><td>Case set</td><td></td><td><button class="secondary smallbtn" data-casejump="${i}">Go</button></td></tr>`
+                `<tr data-answered="1" data-flagged="0"><td>C${i + 1}</td><td>${c.SectionTags.join(', ')}</td><td>${c.Title}</td><td>Case set</td><td></td><td><button class="secondary smallbtn" data-casejump="${i}">Go</button></td></tr>`
             ).join('');
             let unanswered = s.mcqs.filter((_, i) => !s.answers[s.mcqs[i].QuestionID]).length;
             s.cases.forEach(c => { c.Items.forEach((_, i) => { if (!s.caseAnswers[this.caseKey(c, i)]) unanswered++; }); });
@@ -2057,6 +2654,11 @@ const ExamSessionManager = {
             <span>Unanswered: <b>${unanswered}</b></span>
             <span>Flagged: <b>${Object.values(s.flags).filter(Boolean).length + Object.values(s.caseFlags).filter(Boolean).length}</b></span>
           </div>
+          <div class="review-filters">
+            <button class="secondary review-filter-btn active" data-reviewfilter="all">Review All</button>
+            <button class="secondary review-filter-btn" data-reviewfilter="unanswered">Review Unanswered</button>
+            <button class="secondary review-filter-btn" data-reviewfilter="flagged">Review Flagged</button>
+          </div>
           <table class="review-table"><thead><tr><th>#</th><th>Section</th><th>Topic</th><th>Status</th><th>Flag</th><th></th></tr></thead><tbody>${mcqRows}${caseRows}</tbody></table>
           <div class="exam-actions">
             <button id="backToItems" class="secondary">Back to Items</button>
@@ -2064,6 +2666,18 @@ const ExamSessionManager = {
           </div>
         </article>`;
             NavigationController.bind();
+            document.querySelectorAll('.review-filter-btn').forEach(btn => {
+                btn.onclick = () => {
+                    document.querySelectorAll('.review-filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    let f = btn.dataset.reviewfilter;
+                    document.querySelectorAll('.review-table tbody tr').forEach(tr => {
+                        if (f === 'all') tr.style.display = '';
+                        else if (f === 'unanswered') tr.style.display = tr.dataset.answered === '0' ? '' : 'none';
+                        else if (f === 'flagged') tr.style.display = tr.dataset.flagged === '1' ? '' : 'none';
+                    });
+                };
+            });
             let b = $('backToItems');
             if (b) b.onclick = () => this.render();
             let f = $('finishExam');
@@ -2131,6 +2745,163 @@ const ExamSessionManager = {
 
     pct(x) { return x === null ? 'n/a' : Math.round(x * 100) + '%'; },
 
+    _renderConfidenceDashboard(s) {
+        let entries = [];
+        s.mcqs.forEach(q => {
+            let ans = s.answers[q.QuestionID];
+            if (ans === undefined) return;
+            let correct = scoreMCQ(q, ans) === 1;
+            let conf = s.confidence[q.QuestionID] || 0;
+            if (conf === 0) return;
+            entries.push({ conf, correct, guessed: !!s.guessed[q.QuestionID] });
+        });
+        if (entries.length === 0) return '';
+
+        let Hc = entries.filter(e => e.conf >= 4 && e.correct).length;
+        let Hw = entries.filter(e => e.conf >= 4 && !e.correct).length;
+        let Mc = entries.filter(e => e.conf === 3 && e.correct).length;
+        let Mw = entries.filter(e => e.conf === 3 && !e.correct).length;
+        let Lc = entries.filter(e => e.conf <= 2 && e.correct).length;
+        let Lw = entries.filter(e => e.conf <= 2 && !e.correct).length;
+
+        let total = entries.length;
+        let overconfident = entries.filter(e => e.conf >= 4 && !e.correct).length;
+        let underconfident = entries.filter(e => e.conf <= 2 && e.correct).length;
+        let guessed = entries.filter(e => e.guessed).length;
+        let guessedCorrect = entries.filter(e => e.guessed && e.correct).length;
+
+        let overconfidencePct = Math.round(overconfident / Math.max(1, entries.filter(e => e.conf >= 4).length) * 100);
+        let underconfidencePct = Math.round(underconfident / Math.max(1, entries.filter(e => e.conf <= 2).length) * 100);
+        let guessAccuracy = guessed > 0 ? Math.round(guessedCorrect / guessed * 100) : null;
+
+        let Htot = Hc + Hw, Mtot = Mc + Mw, Ltot = Lc + Lw;
+        let Hacc = Htot > 0 ? Math.round(Hc / Htot * 100) : 0;
+        let Macc = Mtot > 0 ? Math.round(Mc / Mtot * 100) : 0;
+        let Lacc = Ltot > 0 ? Math.round(Lc / Ltot * 100) : 0;
+
+        // Calibration score: higher = better aligned. Perfect would be Hacc=100, Lacc=0.
+        let calScore = Math.round(Math.max(0, Math.min(100,
+            50 + (Hacc - 80) * 1.2 + (30 - Lacc) * 0.5
+        )));
+
+        let cell = (n, d, css) =>
+            `<td class="conf-matrix-cell ${css}">${n > 0 ? '<span class="conf-matrix-n">' + n + '</span>' + (d ? '<span class="conf-matrix-pct">' + Math.round(n / d * 100) + '%</span>' : '') : '<span class="conf-matrix-n">&mdash;</span>'}</td>`;
+
+        return `<div class="dashboard-card" style="grid-column:1/-1;text-align:left;">
+          <h3 style="text-align:center;">Confidence Calibration</h3>
+          <table class="conf-matrix">
+            <thead><tr><th></th><th class="conf-matrix-th-correct">Correct</th><th class="conf-matrix-th-wrong">Wrong</th></tr></thead>
+            <tbody>
+              <tr><td class="conf-matrix-label">High</td>${cell(Hc, Htot, 'conf-cell-good')}${cell(Hw, Htot, 'conf-cell-bad')}</tr>
+              <tr><td class="conf-matrix-label">Medium</td>${cell(Mc, Mtot, 'conf-cell-med')}${cell(Mw, Mtot, 'conf-cell-med')}</tr>
+              <tr><td class="conf-matrix-label">Low</td>${cell(Lc, Ltot, 'conf-cell-warn')}${cell(Lw, Ltot, 'conf-cell-ok')}</tr>
+            </tbody>
+          </table>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;font-size:0.85rem;justify-content:center;">
+            <span title="High confidence but wrong"><b>Overconfidence:</b> ${overconfidencePct}% of high-confidence answers</span>
+            <span title="Low confidence but right"><b>Underconfidence:</b> ${underconfidencePct}% of low-confidence answers</span>
+            ${guessAccuracy !== null ? '<span title="Guesses that turned out correct"><b>Guess Accuracy:</b> ' + guessAccuracy + '% (' + guessedCorrect + '/' + guessed + ')</span>' : ''}
+            <span><b>Calibration Score:</b> <span class="conf-badge ' + (calScore >= 80 ? 'conf-high' : calScore >= 50 ? 'conf-med' : 'conf-low') + '">' + calScore + '/100</span></span>
+          </div>
+          <p class="small" style="margin-top:10px;">A well-calibrated learner: high confidence = correct, low confidence = wrong. <a href="#" onclick="showView(\'coachView\'); if(typeof May!==\'undefined\'){May.startSessionReview();May.renderView()} return false;" style="text-decoration:underline;">Review with May \u2192</a></p>
+        </div>`;
+    },
+
+    _renderRecoverySprintOutcome(sc, s) {
+        if (!s || s.mode !== 'recovery_sprint' || !s.recoverySource || !s.recoverySource.sessionId) return '';
+
+        let history = SessionPersistence.getHistory() || [];
+        let sourceEntry = history.find(h => h.id === s.recoverySource.sessionId);
+        if (!sourceEntry) return '';
+
+        let sourceScore = sourceEntry.scaledScore;
+        let currentRaw = s.mcqs.filter((q, i) => {
+            let ans = s.answers[q.QuestionID];
+            return ans !== undefined && scoreMCQ(q, ans) === 1;
+        }).length;
+        let currentTotal = s.mcqs.filter((q, i) => s.answers[q.QuestionID] !== undefined).length;
+        let currentPct = currentTotal > 0 ? Math.round(currentRaw / currentTotal * 100) : 0;
+
+        let sprintCorrect = s.mcqs.filter(q => s.answers[q.QuestionID] !== undefined && scoreMCQ(q, s.answers[q.QuestionID]) === 1).length;
+        let sprintTotal = s.mcqs.filter(q => s.answers[q.QuestionID] !== undefined).length;
+        let beforePct = Math.round(sprintCorrect / Math.max(1, sprintTotal) * 100);
+
+        // Topic-level improvement
+        let topicImprovements = [];
+        let topicSummary = s.recoverySource.topicSummary || {};
+        Object.keys(topicSummary).sort().forEach(topic => {
+            let sprintItems = s.mcqs.filter(q => {
+                let qTopic = q.Topic || '';
+                return qTopic.toLowerCase().indexOf(topic.toLowerCase()) !== -1 || topic.toLowerCase().indexOf(qTopic.toLowerCase()) !== -1;
+            });
+            let tc = sprintItems.filter(q => s.answers[q.QuestionID] !== undefined && scoreMCQ(q, s.answers[q.QuestionID]) === 1).length;
+            let tt = sprintItems.filter(q => s.answers[q.QuestionID] !== undefined).length;
+            let beforeTopicAcc = sourceEntry.topicSnapshot && sourceEntry.topicSnapshot[topic]
+                ? sourceEntry.topicSnapshot[topic].accuracy : null;
+            let afterTopicPct = tt > 0 ? Math.round(tc / tt * 100) : null;
+            if (beforeTopicAcc !== null && afterTopicPct !== null) {
+                topicImprovements.push({ topic, before: beforeTopicAcc, after: afterTopicPct, delta: afterTopicPct - beforeTopicAcc });
+            } else if (afterTopicPct !== null) {
+                topicImprovements.push({ topic, before: null, after: afterTopicPct, delta: null });
+            }
+        });
+        topicImprovements.sort((a, b) => (b.delta || 0) - (a.delta || 0));
+
+        let topicHtml = topicImprovements.length > 0
+            ? topicImprovements.map(t => {
+                let barW = Math.max(4, t.after);
+                let barCls = t.delta !== null && t.delta >= 10 ? 'rec-topic-bar-good' : t.delta !== null && t.delta >= 0 ? 'rec-topic-bar-ok' : 'rec-topic-bar-focus';
+                let deltaStr = t.delta !== null ? (t.delta >= 0 ? '+' : '') + t.delta + '%' : '';
+                return '<div class="rec-topic-row"><div class="rec-topic-name" title="' + t.topic + '">' + t.topic + '</div><div class="rec-topic-bar-track"><div class="rec-topic-bar ' + barCls + '" style="width:' + barW + '%"></div></div><div class="rec-topic-scores">' + (t.before !== null ? t.before + '%' : '&mdash;') + ' ' + (t.delta !== null && t.delta >= 0 ? '\u2192' : '\u2192') + ' <strong>' + t.after + '%</strong> ' + deltaStr + '</div></div>';
+            }).join('')
+            : '';
+
+        return `<div class="dashboard-card" style="grid-column:1/-1;text-align:left;border-left:4px solid var(--primary);">
+          <h3 style="text-align:center;">Recovery Sprint Outcome</h3>
+          <div class="rec-sprint-summary">
+            <div class="rec-sprint-stat">
+              <div class="dashboard-stat" style="color:var(--primary);">${sprintCorrect}/${sprintTotal}</div>
+              <p>Sprint accuracy</p>
+            </div>
+            <div class="rec-sprint-stat">
+              <div class="dashboard-stat" style="color:${currentPct >= 70 ? '#22c55e' : '#f59e0b'};">${currentPct}%</div>
+              <p>Correct out of answered</p>
+            </div>
+          </div>
+          <p class="small" style="text-align:center;margin-top:8px;"><em>Recovery sprints target your weakest topics with 15 high-priority questions. Each sprint improves your readiness for the next full practice session.</em></p>
+          ${topicHtml ? '<div class="rec-topic-improvements"><h4 style="margin-bottom:8px;">Topic Improvement</h4>' + topicHtml + '</div>' : ''}
+          <div style="display:flex;gap:8px;margin-top:14px;justify-content:center;">
+            <button class="secondary" onclick="ExamSessionManager.startRecoverySprint(ExamSessionManager._lastSourceSession)" style="font-size:0.8rem;">Re-run Sprint</button>
+            <button class="secondary" onclick="showView('coachView'); if(typeof May!=='undefined'){May.startSessionReview();May.renderView()}" style="font-size:0.8rem;">Escalate Review</button>
+          </div>
+          <p class="small" style="text-align:center;margin-top:4px;"><a href="#" onclick="showView('sessionView'); return false;">Continue</a></p>
+        </div>`;
+    },
+
+    _renderRecoverySprintBar(queue) {
+        var mcqEntries = queue.filter(function(e) { return e.type === 'mcq'; });
+        mcqEntries.sort(function(a, b) { return b.score - a.score; });
+        var sprintEntries = mcqEntries.slice(0, 15);
+        if (sprintEntries.length === 0) return '';
+        var topicCounts = {};
+        sprintEntries.forEach(function(e) {
+            var t = e.topic || 'General';
+            topicCounts[t] = (topicCounts[t] || 0) + 1;
+        });
+        var topicPairs = [];
+        for (var t in topicCounts) { topicPairs.push(t + ' (' + topicCounts[t] + ')'); }
+        var topicSummary = topicPairs.join(', ');
+        var qualifier = sprintEntries.length >= 15 ? '15 questions targeting your weakest areas' : (sprintEntries.length + ' questions targeting your weakest areas');
+        return '<div class="recovery-sprint-bar">'
+            + '<div class="recovery-sprint-info">'
+            + '<span class="recovery-sprint-label">Recovery Sprint</span>'
+            + '<span class="recovery-sprint-detail">' + qualifier + '</span>'
+            + '</div>'
+            + (topicSummary ? '<p class="small" style="margin:4px 0 0 0;color:var(--text-muted);">Topics: ' + topicSummary + '</p>' : '')
+            + '<button id="launchRecoverySprint" class="primary recovery-sprint-btn">Launch Sprint</button>'
+            + '</div>';
+    },
+
     _renderMayRecommendationPanel() {
         if (typeof MayFeatureFlags === 'undefined' || !MayFeatureFlags.isEnabled('ENABLE_PRODUCTION_MAY_INTEGRATION')) return '';
         if (typeof MayLearnerState === 'undefined') return '';
@@ -2154,11 +2925,16 @@ const ExamSessionManager = {
                 MayTelemetry.trackAdoption({ recommendationType: 'Next Session', cardId: 'next-session', topic: (suggestedTopic || ''), presented: true, panelOpened: false, clicked: false, sessionStarted: false, completed: false, timestamp: _ts });
                 MayTelemetry.trackAdoption({ recommendationType: 'Readiness', cardId: 'readiness', topic: (readinessBand || ''), presented: true, panelOpened: false, clicked: false, sessionStarted: false, completed: false, timestamp: _ts });
             }
+            var _tw = topWeak ? topWeak.topic : '';
+            var _st = suggestedTopic || '';
+            var _twEsc = _tw.replace(/'/g, "\\'");
+            var _stEsc = _st.replace(/'/g, "\\'");
+            var _rbEsc = readinessBand.replace(/'/g, "\\'");
             return '<div class="may-recommendation-panel"><h3>May Recommendations</h3><div class="may-rec-grid">'
-                + '<div class="may-rec-card"><div class="may-rec-label">Top Weakness</div><div class="may-rec-value">' + (topWeak ? topWeak.topic + ' (' + (topWeak.accuracy || 0) + '%)' : 'Not enough data') + '</div></div>'
-                + '<div class="may-rec-card"><div class="may-rec-label">Suggested Review</div><div class="may-rec-value">' + (suggestedTopic || 'Complete more sessions') + '</div></div>'
-                + '<div class="may-rec-card"><div class="may-rec-label">Next Session</div><div class="may-rec-value">' + nextAction + '</div></div>'
-                + '<div class="may-rec-card"><div class="may-rec-label">Readiness</div><div class="may-rec-value may-rec-band ' + bandCls + '">' + readinessBand + '</div></div>'
+                + '<div class="may-rec-card" id="may-rec-weakness" onclick="window._mcc(\'Top Weakness\',\'top-weakness\',\'' + _twEsc + '\')"><div class="may-rec-label">Top Weakness</div><div class="may-rec-value">' + (topWeak ? topWeak.topic + ' (' + (topWeak.accuracy || 0) + '%)' : 'Not enough data') + '</div></div>'
+                + '<div class="may-rec-card" id="may-rec-suggested" onclick="window._mcc(\'Suggested Review\',\'suggested-review\',\'' + _stEsc + '\')"><div class="may-rec-label">Suggested Review</div><div class="may-rec-value">' + (suggestedTopic || 'Complete more sessions') + '</div></div>'
+                + '<div class="may-rec-card" id="may-rec-next" onclick="window._mcc(\'Next Session\',\'next-session\',\'' + _stEsc + '\')"><div class="may-rec-label">Next Session</div><div class="may-rec-value">' + nextAction + '</div></div>'
+                + '<div class="may-rec-card" id="may-rec-readiness" onclick="window._mcc(\'Readiness\',\'readiness\',\'' + _rbEsc + '\')"><div class="may-rec-label">Readiness</div><div class="may-rec-value may-rec-band ' + bandCls + '">' + readinessBand + '</div></div>'
                 + '</div><p class="small" style="margin-top:8px;"><a href="#" onclick="showView(\'coachView\'); if(typeof May!==\'undefined\'){May.renderView()} if(typeof MayTelemetry!==\'undefined\'){MayTelemetry.trackAdoption({recommendationType:\'Panel Link\',cardId:\'rec-panel-link\',topic:\'\',presented:false,panelOpened:true,clicked:true,sessionStarted:false,completed:false,timestamp:new Date().toISOString()})} return false;">Open May for full coaching \u2192</a></p></div>';
         } catch (e) { return ''; }
     },
@@ -2220,6 +2996,7 @@ const ExamSessionManager = {
             $('sessionView').innerHTML = `<article class="summary-card">
           <h2>Score Report</h2>
           ${this.compositionNoteHtml()}
+          ${this._renderRecoverySprintOutcome(sc, s)}
           <div class="score-hero">
             <div>
               <span class="score-num">${sc.scaled}</span><span class="score-den"> / 500</span>
@@ -2237,6 +3014,8 @@ const ExamSessionManager = {
 
           <h3>MCQ vs CBQ Split</h3>
           ${mcqCbqSplit}
+
+          ${this._renderConfidenceDashboard(s)}
 
           <h3>Section Performance (Sorted Weakest → Strongest)</h3>
           <div class="scoregrid">${tiles}</div>
@@ -2270,9 +3049,12 @@ const ExamSessionManager = {
             <button class="secondary" data-filter="missed">Missed Only</button>
             <button class="secondary" data-filter="marked">Marked Only</button>
             <button class="secondary" data-filter="all">All Items</button>
-            <button id="again" class="primary">Start Another Session</button>
           </div>
+          ${this._renderRecoverySprintBar(queue)}
           <div id="reviewCards">${reviewHtml}</div>
+          <div style="margin-top:16px;text-align:center;">
+            <button id="again" class="secondary">Start New Session</button>
+          </div>
 
           ${CmaScoringDisclaimer('full')}
         </article>`;
@@ -2280,6 +3062,8 @@ const ExamSessionManager = {
             document.querySelectorAll('[data-filter]').forEach(b => b.onclick = () => this.renderSummary(b.dataset.filter));
             let a = $('again');
             if (a) a.onclick = () => $('sessionForm').requestSubmit();
+            let rsBtn = $('launchRecoverySprint');
+            if (rsBtn) rsBtn.onclick = () => ExamSessionManager.startRecoverySprint(s);
             this.renderHistory();
         } catch (e) {
             console.error('renderSummary error:', e);
@@ -2308,9 +3092,11 @@ const NavigationController = {
         let total = s.mcqs.length + s.cases.length;
         let current = s.qIndex;
 
-        let mcqBtns = s.mcqs.map((q, i) =>
-            `<button class="navitem ${i === current ? 'current' : ''} ${s.answers[q.QuestionID] ? 'answered' : ''} ${s.flags[q.QuestionID] ? 'flagged' : ''}" data-jump="${i}" title="${q.QuestionID || 'Q' + (i + 1)}">${i + 1}</button>`
-        ).join('');
+        let mcqBtns = s.mcqs.map((q, i) => {
+            let answ = !!s.answers[q.QuestionID];
+            let flg = !!s.flags[q.QuestionID];
+            return `<button class="navitem ${i === current ? 'current' : ''} ${answ ? 'answered' : ''} ${flg ? 'flagged' : ''}" data-jump="${i}" data-answered="${answ ? '1' : '0'}" data-flagged="${flg ? '1' : '0'}" title="${q.QuestionID || 'Q' + (i + 1)}">${i + 1}</button>`;
+        }).join('');
         let caseBtns = s.cases.map((c, i) =>
             `<button class="navitem nav-case ${s.mcqs.length + i === current ? 'current' : ''}" data-casejump="${i}" title="${c.CaseID || 'Case ' + (i + 1)}">C${i + 1}</button>`
         ).join('');
@@ -2331,6 +3117,11 @@ const NavigationController = {
       <div class="nav-stats">
         <span>Unanswered: <b>${unanswered}</b></span>
         <span>Flagged: <b>${Object.values(s.flags).filter(Boolean).length}</b></span>
+      </div>
+      <div class="nav-filters">
+        <button class="nav-filter-btn active" data-navfilter="all" title="Show all items">All</button>
+        <button class="nav-filter-btn" data-navfilter="unanswered" title="Show unanswered only">Unans</button>
+        <button class="nav-filter-btn" data-navfilter="flagged" title="Show flagged only">Flag</button>
       </div>
       <button id="reviewScreen" class="secondary nav-review-btn">Review Screen</button>
     </aside>`;
@@ -2353,6 +3144,18 @@ const NavigationController = {
         });
         let r = $('reviewScreen');
         if (r) r.onclick = ExamSessionManager.renderReviewScreen.bind(ExamSessionManager);
+        document.querySelectorAll('.nav-filter-btn').forEach(btn => {
+            btn.onclick = () => {
+                document.querySelectorAll('.nav-filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                let f = btn.dataset.navfilter;
+                document.querySelectorAll('.navgrid [data-jump]').forEach(el => {
+                    if (f === 'all') el.style.display = '';
+                    else if (f === 'unanswered') el.style.display = el.dataset.answered === '0' ? '' : 'none';
+                    else if (f === 'flagged') el.style.display = el.dataset.flagged === '1' ? '' : 'none';
+                });
+            };
+        });
     },
 
     navigateTo(idx) {
@@ -2366,6 +3169,75 @@ const NavigationController = {
             s.caseIndex = idx - s.mcqs.length;
         }
         ExamSessionManager.render();
+    },
+
+    startRecoverySprint(sourceSession) {
+        this._lastSourceSession = sourceSession;
+        var queue = AdaptiveReviewQueue.generate(sourceSession);
+        var mcqEntries = queue.filter(function(e) { return e.type === 'mcq'; });
+        mcqEntries.sort(function(a, b) { return b.score - a.score; });
+        var sprintEntries = mcqEntries.slice(0, 15);
+        var sprintMcqs = sprintEntries.map(function(e) { return e.item; });
+
+        if (sprintMcqs.length === 0) {
+            alert('No MCQ items available for a Recovery Sprint. Try completing a practice session with MCQs first.');
+            return;
+        }
+
+        var topicSummary = {};
+        sprintEntries.forEach(function(e) {
+            var t = e.topic || 'General';
+            topicSummary[t] = (topicSummary[t] || 0) + 1;
+        });
+        var sprintSections = [];
+        var seenSec = {};
+        sprintMcqs.forEach(function(q) { if (!seenSec[q.Section]) { seenSec[q.Section] = true; sprintSections.push(q.Section); } });
+
+        state.session = {
+            id: Date.now().toString(36),
+            mode: 'recovery_sprint',
+            sections: sprintSections,
+            mcqs: sprintMcqs,
+            cases: [],
+            qIndex: 0,
+            caseIndex: 0,
+            caseTaskIndex: 0,
+            caseExhibitIndex: 0,
+            answers: {},
+            flags: {},
+            caseAnswers: {},
+            caseFlags: {},
+            struckChoices: {},
+            confidence: {},
+            guessed: {},
+            start: Date.now(),
+            duration: sprintMcqs.length * 108,
+            completed: false,
+            submitted: false,
+            _mcqGatePassed: true,
+            timerWarnings: [],
+            paused: false,
+            pausedElapsed: 0,
+            tierCounts: {},
+            tierPoolCounts: {},
+            recoverySource: {
+                sessionId: sourceSession.id,
+                topicSummary: topicSummary,
+                itemCount: sprintMcqs.length
+            }
+        };
+
+        AnalyticsCollector.init(state.session);
+        AnalyticsCollector.logEvent('session_start', { mode: 'recovery_sprint', mcqs: sprintMcqs.length, cases: 0 });
+        SessionPersistence.clear();
+        showView('sessionView');
+        this.render();
+        this.startTimer();
+        this.startAutoSave();
+
+        if (typeof MayTelemetry !== 'undefined') {
+            MayTelemetry.trackAdoption({ recommendationType: 'Recovery Sprint', cardId: 'recovery-sprint-launch', topic: sprintEntries.length >= 10 ? 'Full Sprint' : 'Partial Sprint', presented: false, panelOpened: false, clicked: true, sessionStarted: true, completed: false, timestamp: new Date().toISOString() });
+        }
     }
 };
 
@@ -3362,6 +4234,20 @@ const PerformanceDashboard = {
 
         // Readiness model and study plan
         let readiness = ReadinessModel.compute(history);
+
+        // S112P — Unified learner record from MayAnalyticsBridge
+        let unifiedRecord = null;
+        if (typeof MayLearnerState !== 'undefined') {
+            try { unifiedRecord = MayLearnerState.getUnifiedLearnerRecord(history); } catch (e) {}
+        }
+        PerformanceDashboard._unifiedRecord = unifiedRecord;
+
+        // UX-2 — Domain Readiness Scores
+        let domainScores = null;
+        if (typeof MayLearnerState !== 'undefined') {
+            try { domainScores = MayLearnerState.getDomainReadinessScores(); } catch (e) {}
+        }
+
         let latestEntry = history.length > 0 ? history[0] : null;
         let studyPlan = generateStudyPlan(
             readiness,
@@ -3385,6 +4271,8 @@ const PerformanceDashboard = {
           </div>
 
           ${ReadinessModel.renderReadinessCard(readiness)}
+
+          ${domainScores ? MayLearnerState.renderDomainReadinessCard(domainScores) : ''}
 
           ${generateStudyPlan.renderStudyPlanCard(studyPlan)}
 
@@ -3923,6 +4811,31 @@ const ReviewCoach = {
 };
 
 // ============================================================
+// MAY-028: Recommendation card click attribution helper
+// ============================================================
+window._mcc = function(t, c, tp) {
+    if (typeof MayTelemetry !== 'undefined') {
+        MayTelemetry.trackAdoption({
+            recommendationType: t,
+            cardId: c,
+            topic: tp || '',
+            presented: false,
+            panelOpened: false,
+            clicked: true,
+            sessionStarted: false,
+            completed: false,
+            timestamp: new Date().toISOString()
+        });
+    }
+    window._mayAttributionCard = {
+        recommendationType: t,
+        cardId: c,
+        topic: tp || '',
+        clickedAt: new Date().toISOString()
+    };
+};
+
+// ============================================================
 // Init
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -3930,6 +4843,17 @@ document.addEventListener('DOMContentLoaded', () => {
     renderValidation();
     // Session 96: Defer diagnostics until after manifest loads (~200ms for fetch)
     setTimeout(renderDefectDiagnostics, 300);
+
+    // S112 — Initialize unified learner profile and detect legacy data
+    CMAProfileManager.init();
+
+    // S112 — Show migration dialog if legacy data exists
+    if (window._cmaMigrationNeeded) {
+        setTimeout(function () {
+            CMAProfileManager.showMigrationDialog();
+        }, 500);
+    }
+
     ExamSessionManager.render();
     renderCatalog();
     ExamSessionManager.renderHistory();
@@ -3983,7 +4907,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (tooltip) tooltip.textContent = 'May is tracking your session. Review your results after submitting.';
         }
         if (typeof MayTelemetry !== 'undefined') {
-            MayTelemetry.trackAdoption({ recommendationType: 'Session', cardId: 'session-start', topic: '', presented: false, panelOpened: false, clicked: false, sessionStarted: true, completed: false, timestamp: new Date().toISOString() });
+            var _attrib = window._mayAttributionCard;
+            MayTelemetry.trackAdoption({ recommendationType: 'Session', cardId: 'session-start', topic: '', presented: false, panelOpened: false, clicked: false, sessionStarted: true, completed: false, attributionCardId: (_attrib && _attrib.cardId) || null, attributionCardType: (_attrib && _attrib.recommendationType) || null, timestamp: new Date().toISOString() });
         }
         ExamSessionManager.start(e);
     };
@@ -4000,6 +4925,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
         showView(t.dataset.view);
         if (t.dataset.view === 'dashboardView') PerformanceDashboard.render();
+        if (t.dataset.view === 'settingsView') renderSettingsView();
         if (t.dataset.view === 'coachView') {
             if (typeof May !== 'undefined') May.renderView(); else ReviewCoach.renderFullCoach();
         }
@@ -4048,6 +4974,26 @@ document.addEventListener('DOMContentLoaded', () => {
             if (s.qIndex < s.mcqs.length) {
                 let qid = s.mcqs[s.qIndex].QuestionID;
                 s.flags[qid] = !s.flags[qid];
+                ExamSessionManager.render();
+            }
+        }
+        let k = e.key.toUpperCase();
+        if (k === 'A' || k === 'B' || k === 'C' || k === 'D') {
+            let s = state.session;
+            if (s.qIndex < s.mcqs.length && s.qIndex < (s.mcqs || []).length) {
+                e.preventDefault();
+                let q = s.mcqs[s.qIndex];
+                s.answers[q.QuestionID] = k;
+                SessionPersistence.saveImmediate();
+                SessionPersistence.logAction('keyboard-answer ' + q.QuestionID + '=' + k);
+                AnalyticsCollector.endQuestion(q.QuestionID);
+                let isCorrect = scoreMCQ(q, k) === 1;
+                AnalyticsCollector.recordAnswer(q.QuestionID, isCorrect, s.confidence[q.QuestionID], s.guessed[q.QuestionID]);
+                AnalyticsCollector.startQuestion(q.QuestionID);
+                if (typeof May !== 'undefined') {
+                    May.recordLiveAttempt(q, k, isCorrect, May.context._liveHintCount || 0, false, 0, s.confidence[q.QuestionID]);
+                    May.showPostAnswerFeedback(q, isCorrect);
+                }
                 ExamSessionManager.render();
             }
         }

@@ -4695,6 +4695,7 @@ const May = {
                 </div>
                 ${readinessHtml}
                 ${sectionReadinessHtml}
+                ${this._renderDomainReadinessDashboard()}
                 ${casePatternHtml}
                 ${practiceGuidanceHtml}
                 ${practiceMixHtml}
@@ -5029,6 +5030,63 @@ const May = {
         return '<div class="may-case-pattern-panel may-readiness-panel may-section-panel">'
             + '<h3 class="may-insights-title">Section Readiness</h3>'
             + '<div class="may-section-grid">' + sectionItems + '</div>'
+            + '</div>';
+    },
+
+    // UX-2 — Domain Readiness Dashboard
+    // Renders a priority-ordered dashboard of the 6 CMA Part 1 blueprint domains
+    // with numeric readiness scores, progress bars, trend arrows, and weakest/strongest flags.
+    _renderDomainReadinessDashboard() {
+        let ds = MayLearnerState.getDomainReadinessScores();
+        if (!ds || !ds.hasData) return '';
+
+        let trendArrows = {
+            improving: '↑',
+            declining: '↓',
+            stable: '→'
+        };
+        let trendColors = {
+            improving: '#22c55e',
+            declining: '#ef4444',
+            stable: '#9ca3af'
+        };
+        let scoreColors = function(score) {
+            if (score >= 80) return '#22c55e';
+            if (score >= 60) return '#f59e0b';
+            return '#ef4444';
+        };
+
+        let maxScore = ds.domains.reduce((max, d) => Math.max(max, d.score || 0), 0);
+
+        let rows = ds.domains.map((d, idx) => {
+            let score = d.score !== null ? d.score : '—';
+            let pct = d.score !== null ? Math.round(d.score / Math.max(maxScore, 1) * 100) : 0;
+            let scColor = d.score !== null ? scoreColors(d.score) : '#9ca3af';
+            let trendArrow = trendArrows[d.trend] || '→';
+            let trendColor = trendColors[d.trend] || '#9ca3af';
+            let borderStyle = '';
+            if (d.isWeakest) borderStyle = 'border-left: 3px solid #ef4444;';
+            else if (d.isStrongest) borderStyle = 'border-left: 3px solid #22c55e;';
+            let cls = d.isWeakest ? ' may-domain-weakest' : (d.isStrongest ? ' may-domain-strongest' : '');
+            let impactTag = d.isWeakest ? '<span class="may-domain-tag may-domain-tag-weak">Weakest</span>' : (d.isStrongest ? '<span class="may-domain-tag may-domain-tag-strong">Strongest</span>' : '');
+            let priorityNum = d.hasData ? idx + 1 : '—';
+
+            return '<div class="may-domain-row' + cls + '" style="' + borderStyle + '">'
+                + '<div class="may-domain-priority">' + (d.hasData ? '#' + priorityNum : '—') + '</div>'
+                + '<div class="may-domain-info">'
+                + '<div class="may-domain-name">' + d.label + impactTag + '</div>'
+                + '<div class="may-domain-bar-track"><div class="may-domain-bar-fill" style="width:' + pct + '%;background:' + scColor + ';"></div></div>'
+                + '<div class="may-domain-meta">' + d.topicCount + ' topic(s) · ' + d.attempts + ' attempts</div>'
+                + '</div>'
+                + '<div class="may-domain-score" style="color:' + scColor + ';">' + score + '</div>'
+                + '<div class="may-domain-trend" style="color:' + trendColor + ';" title="' + d.trend + '">' + trendArrow + '</div>'
+                + '</div>';
+        }).join('');
+
+        return '<div class="may-case-pattern-panel may-domain-panel">'
+            + '<h3 class="may-insights-title">Domain Readiness</h3>'
+            + '<p class="may-domain-subtitle">Recovery priority order — weakest first</p>'
+            + rows
             + '</div>';
     },
 

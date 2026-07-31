@@ -985,6 +985,189 @@ const MayLearnerState = {
         };
     },
 
+    // UX-2 — Domain readiness scores for the Domain Readiness Dashboard
+    // Computes a numeric score (0–100) for each of the 6 CMA Part 1 blueprint domains,
+    // weighted by topic accuracy across all tracked attempts within that domain.
+    // Includes trend direction, weakest/strongest flags, and recovery priority ordering.
+    getDomainReadinessScores() {
+        let topicProgress = this.getTopicProgress();
+        let trends = this.getTrends();
+        let trendMap = {};
+        trends.forEach(t => { trendMap[t.topic] = t; });
+
+        let domainNames = {
+            A: 'External Financial Reporting',
+            B: 'Planning, Budgeting & Forecasting',
+            C: 'Performance Management',
+            D: 'Cost Management',
+            E: 'Internal Controls',
+            F: 'Technology & Analytics'
+        };
+
+        // Aggregate topics into domains
+        let domains = { A: [], B: [], C: [], D: [], E: [], F: [] };
+        Object.entries(topicProgress).forEach(([topic, tp]) => {
+            (tp.sectionsSeen || []).forEach(sec => {
+                if (domains[sec]) {
+                    domains[sec].push({ topic, ...tp, trend: trendMap[topic] || null });
+                }
+            });
+        });
+
+        // Compute domain scores
+        let domainResults = [];
+        Object.entries(domains).forEach(([sec, topics]) => {
+            if (topics.length === 0) {
+                domainResults.push({
+                    section: sec,
+                    label: domainNames[sec],
+                    score: null,
+                    attempts: 0,
+                    topicCount: 0,
+                    trend: 'stable',
+                    hasData: false,
+                    rationale: 'No topic data in this domain yet.'
+                });
+                return;
+            }
+
+            // Weighted score: accuracy * attempt count
+            let totalWeight = 0, weightedSum = 0;
+            let totalAttempts = 0;
+            let improvingCount = 0, decliningCount = 0;
+
+            topics.forEach(t => {
+                let accuracy = t.accuracy;
+                let attempts = t.totalAttempts;
+                if (accuracy !== null && attempts > 0) {
+                    weightedSum += accuracy * attempts;
+                    totalWeight += attempts;
+                    totalAttempts += attempts;
+                }
+                if (t.trend && t.trend.direction === 'improving') improvingCount++;
+                if (t.trend && t.trend.direction === 'declining') decliningCount++;
+            });
+
+            let score = totalWeight > 0 ? Math.round(weightedSum / totalWeight) : null;
+            let topicCount = topics.length;
+
+            // Trend direction for the domain
+            let trend = 'stable';
+            if (decliningCount > improvingCount) trend = 'declining';
+            else if (improvingCount > decliningCount) trend = 'improving';
+
+            domainResults.push({
+                section: sec,
+                label: domainNames[sec],
+                score,
+                attempts: totalAttempts,
+                topicCount,
+                trend,
+                hasData: score !== null,
+                rationale: score !== null
+                    ? 'Based on ' + totalAttempts + ' attempts across ' + topicCount + ' topic(s).'
+                    : 'Not enough data in this domain.'
+            });
+        });
+
+        // Sort by score ascending (weakest first = recovery priority)
+        domainResults.sort((a, b) => {
+            if (a.score === null && b.score === null) return 0;
+            if (a.score === null) return 1;
+            if (b.score === null) return -1;
+            return a.score - b.score;
+        });
+
+        // Tag weakest and strongest
+        let dataResults = domainResults.filter(d => d.hasData);
+        if (dataResults.length >= 2) {
+            dataResults[0].isWeakest = true;
+            dataResults[dataResults.length - 1].isStrongest = true;
+        }
+
+        return {
+            domains: domainResults,
+            hasData: dataResults.length > 0,
+            modelVersion: 'S111-1.0',
+            computedAt: new Date().toISOString()
+        };
+    },
+
+    // ── UX-2 — Domain Readiness Dashboard card renderer ────────
+    // Renders the domain readiness scores as a dashboard card.
+    // Called by PerformanceDashboard.render() in app.js.
+    renderDomainReadinessCard(scores) {
+        if (!scores || !scores.hasData) {
+            return `<div class="dashboard-card" style="grid-column:1/-1;">
+            <h3>Domain Readiness</h3>
+            <p class="small">Not enough data yet — complete practice sessions across different CMA topics to see domain readiness.</p>
+          </div>`;
+        }
+
+        let domains = scores.domains || [];
+        let bandColors = {
+            'Recovery needed': '#ef4444',
+            'Developing': '#f59e0b',
+            'Approaching review-ready': '#22c55e',
+            'Ready for focused review': '#3b82f6',
+            'Not enough data': '#9ca3af'
+        };
+
+        let sectionNames = {
+            A: 'External Financial Reporting',
+            B: 'Planning, Budgeting & Forecasting',
+            C: 'Performance Management',
+            D: 'Cost Management',
+            E: 'Internal Controls',
+            F: 'Technology & Analytics'
+        };
+
+        // Map scores to readiness bands
+        function scoreBand(score) {
+            if (score === null) return 'Not enough data';
+            if (score >= 80) return 'Ready for focused review';
+            if (score >= 70) return 'Approaching review-ready';
+            if (score >= 50) return 'Developing';
+            return 'Recovery needed';
+        }
+
+        let domainCards = domains.map(d => {
+            let band = scoreBand(d.score);
+            let color = bandColors[band] || '#9ca3af';
+            let scoreText = d.hasData ? d.score + '%' : '—';
+            let trendIcon = d.trend === 'improving' ? '↑' : d.trend === 'declining' ? '↓' : '→';
+            let trendColor = d.trend === 'improving' ? '#22c55e' : d.trend === 'declining' ? '#ef4444' : '#9ca3af';
+            let attemptsText = d.hasData ? d.attempts + ' attempts' : '';
+            let topicsText = d.topicCount > 0 ? d.topicCount + ' topic' + (d.topicCount !== 1 ? 's' : '') : '';
+            let weakestBadge = d.isWeakest ? '<span style="background:#fef2f2;color:#ef4444;font-size:0.7rem;padding:1px 6px;border-radius:3px;margin-left:4px;">Weakest</span>' : '';
+            let strongestBadge = d.isStrongest ? '<span style="background:#f0fdf4;color:#22c55e;font-size:0.7rem;padding:1px 6px;border-radius:3px;margin-left:4px;">Strongest</span>' : '';
+
+            return `<div class="domain-card" style="border-left:3px solid ${color};padding:10px 12px;background:#fff;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <div>
+                  <b style="font-size:0.9rem;">${d.label}${weakestBadge}${strongestBadge}</b>
+                  <div class="small" style="color:#6b7280;">${topicsText}${d.hasData ? ' · ' + attemptsText : ''}</div>
+                </div>
+                <div style="text-align:right;">
+                  <div style="font-size:1.4rem;font-weight:700;color:${color};">${scoreText}</div>
+                  <div style="color:${trendColor};font-size:0.85rem;">${trendIcon} ${d.trend}</div>
+                </div>
+              </div>
+              <div style="margin-top:6px;background:#f3f4f6;border-radius:4px;height:6px;overflow:hidden;">
+                <div style="background:${color};height:100%;width:${d.hasData ? d.score : 0}%;border-radius:4px;transition:width 0.3s ease;"></div>
+              </div>
+            </div>`;
+        }).join('');
+
+        return `<div class="dashboard-card" style="grid-column:1/-1;">
+          <h3>Domain Readiness</h3>
+          <p class="small" style="margin-bottom:12px;">Readiness scores by CMA Part 1 blueprint domain — based on your practice attempts. Domains are ordered weakest first (recovery priority).</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;">
+            ${domainCards}
+          </div>
+        </div>`;
+    },
+
     // ── S105 — Calibration hooks & known limitations ─────────
     // Readiness thresholds are scenario-validated only (no real learner data yet).
     // When real learner-state data becomes available, the following hooks exist:
@@ -2035,4 +2218,288 @@ const MayLearnerState = {
             sessions:opts.sessions, topicPerformance:tp, subtopicPerformance:{},
             misconceptionPatterns:[], recommendationLog:[], sessionSummaries:[], lastUpdated:new Date().toISOString() };
     },
+
+    // ═══════════════════════════════════════════════════════════
+    // S112P — MayAnalyticsBridge
+    // Joins cmaP1History2026 (session-level) with
+    // cmaMayLearnerState (attempt-level) into a single
+    // unified learner record. No new telemetry required.
+    // ═══════════════════════════════════════════════════════════
+
+    getUnifiedLearnerRecord(history) {
+        history = history || [];
+        let mayData = this.load();
+        let intelligence = this.getLearnerIntelligence();
+        let readiness = this.getReadinessSummary();
+        let topicProgress = this.getTopicProgress();
+        let confidence = this.getConfidenceCalibration();
+        let clusters = this.getWeaknessClusters();
+        let outcomes = this.getOutcomeSummary();
+        let recurrence = this.getRecommendationRecurrence();
+
+        let correlated = this._bridge_correlateSessions(history, mayData);
+        let recovery = this._bridge_extractRecoverySprints(history, mayData);
+        let archetype = this._bridge_computeArchetype(history, mayData, intelligence);
+        let plateau = this._bridge_computePlateauSignal(history, mayData, intelligence);
+
+        let nScored = history.filter(h => h.scaledScore != null).length;
+        let scores = history.filter(h => h.scaledScore != null).map(h => h.scaledScore);
+        let daysActive = history.length > 0
+            ? Math.max(1, Math.ceil((new Date(history[0].date) - new Date(history[history.length - 1].date)) / 86400000) + 1)
+            : 0;
+
+        let unifiedReadiness = {
+            band: archetype === 'ready' ? 'At Target' :
+                  archetype === 'plateaued' ? 'Approaching Target' :
+                  archetype === 'developing' ? 'Approaching Target' : 'Below Target',
+            archetype: archetype.archetype,
+            archetypeConfidence: archetype.confidence,
+            mayBand: readiness && readiness.hasEnoughData ? readiness.overall.band : null,
+            mayConfidence: readiness && readiness.hasEnoughData ? readiness.overall.confidence : null,
+            mayTopicCount: readiness && readiness.topics ? readiness.topics.filter(t => t.band !== 'Not enough data').length : 0,
+            mayReadyCount: readiness && readiness.topics ? readiness.topics.filter(t => t.band === 'Ready for focused review').length : 0,
+            mayRecoveryCount: readiness && readiness.topics ? readiness.topics.filter(t => t.band === 'Recovery needed').length : 0,
+            decisiveFactors: archetype.factors || []
+        };
+
+        return {
+            meta: {
+                computedAt: new Date().toISOString(),
+                bridgeVersion: 'S112-1.0',
+                modelVersion: intelligence.meta.modelVersion,
+                engineVersion: intelligence.meta.engineVersion
+            },
+            history: {
+                totalSessions: history.length,
+                totalScored: nScored,
+                firstSession: history.length > 0 ? history[history.length - 1].date : null,
+                lastSession: history.length > 0 ? history[0].date : null,
+                daysActive,
+                averageScore: scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : null,
+                bestScore: scores.length > 0 ? Math.max(...scores) : null,
+                latestScore: scores.length > 0 ? scores[0] : null,
+                sessions: history.slice(0, 20)
+            },
+            readiness: unifiedReadiness,
+            intelligence: {
+                strengths: intelligence.strengths,
+                weaknesses: intelligence.weaknesses,
+                trends: intelligence.trends,
+                misconceptions: intelligence.misconceptions,
+                sessionCount: intelligence.meta.sessionCount,
+                topicCount: intelligence.meta.topicCount
+            },
+            recovery: {
+                totalSprints: recovery.sprints.length,
+                completedSprints: recovery.sprints.filter(s => s.completed).length,
+                sprintsToNextBand: recovery.sprintsToNextBand,
+                sprints: recovery.sprints,
+                hasSprints: recovery.sprints.length > 0
+            },
+            recommendations: {
+                delivered: intelligence.recommendations.length,
+                positiveOutcomes: outcomes.positive,
+                neutralOutcomes: outcomes.neutral,
+                recurrence: recurrence
+            },
+            confidence: confidence,
+            topicProgress: topicProgress,
+            clusters: clusters,
+            behavioralProfile: {
+                archetype: archetype.archetype,
+                archetypeConfidence: archetype.confidence,
+                sessionTrend: archetype.sessionTrend,
+                sessionSpacing: archetype.sessionSpacing,
+                plateauState: plateau,
+                behavioralPatterns: archetype.patterns
+            },
+            _provenance: {
+                historySource: 'cmaP1History2026',
+                maySource: 'cmaMayLearnerState',
+                historySize: history.length,
+                maySessionCount: mayData.sessions ? mayData.sessions.length : 0,
+                correlatedSessions: correlated.length,
+                bridgeVersion: 'S112-1.0'
+            }
+        };
+    },
+
+    _bridge_correlateSessions(history, mayData) {
+        let maySessions = mayData.sessions || [];
+        let correlated = [];
+        history.forEach(h => {
+            let candidates = maySessions.filter(ms => {
+                let hDate = new Date(h.date);
+                let msDate = new Date(ms.date);
+                return Math.abs(hDate - msDate) < 3600000; // within 1 hour
+            });
+            if (candidates.length > 0) {
+                correlated.push({ history: h, maySession: candidates[0] });
+            } else {
+                correlated.push({ history: h, maySession: null });
+            }
+        });
+        return correlated;
+    },
+
+    _bridge_extractRecoverySprints(history, mayData) {
+        let sprints = [];
+        history.forEach((h, i) => {
+            if (h.recoverySource && h.recoverySource.sessionId) {
+                let topics = h.recoverySource.topicSummary || {};
+                let topicList = Object.keys(topics);
+                let sprintScore = h.scaledScore || 0;
+                sprints.push({
+                    sessionId: h.recoverySource.sessionId,
+                    date: h.date,
+                    historyIndex: i,
+                    topics: topicList,
+                    topicSummary: topics,
+                    score: sprintScore,
+                    passed: h.passed || false,
+                    completed: true
+                });
+            }
+        });
+        let sorted = sprints.sort((a, b) => new Date(b.date) - new Date(a.date));
+        return {
+            sprints: sorted,
+            sprintsToNextBand: sorted.length > 0
+                ? Math.max(0, 3 - sorted.slice(0, 3).filter(s => s.score >= 360).length)
+                : null
+        };
+    },
+
+    _bridge_computeArchetype(history, mayData, intelligence) {
+        let nSessions = history.length;
+        let nScored = history.filter(h => h.scaledScore != null).length;
+        let scores = history.filter(h => h.scaledScore != null).map(h => h.scaledScore);
+        let avgScore = scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : null;
+        let passRate = nScored > 0 ? Math.round(history.filter(h => h.scaledScore >= 360).length / nScored * 100) : null;
+
+        let recent = scores.slice(0, Math.min(5, scores.length));
+        let older = scores.slice(Math.min(5, scores.length));
+        let recentAvg = recent.length > 0 ? Math.round(recent.reduce((a, b) => a + b, 0) / recent.length) : null;
+        let olderAvg = older.length > 0 ? Math.round(older.reduce((a, b) => a + b, 0) / older.length) : null;
+        let delta = (recentAvg !== null && olderAvg !== null) ? recentAvg - olderAvg : 0;
+
+        let direction = 'flat';
+        if (delta >= 5) direction = 'improving';
+        else if (delta <= -5) direction = 'declining';
+
+        let nImproving = (intelligence.trends || []).filter(t => t.direction === 'improving').length;
+        let nDeclining = (intelligence.trends || []).filter(t => t.direction === 'declining').length;
+        let nStrengths = (intelligence.strengths || []).length;
+        let nWeaknesses = (intelligence.weaknesses || []).length;
+
+        let sessionDates = history.map(h => new Date(h.date)).sort((a, b) => a - b);
+        let avgSpacingDays = 0;
+        if (sessionDates.length >= 2) {
+            let gaps = [];
+            for (let i = 1; i < sessionDates.length; i++) {
+                gaps.push((sessionDates[i] - sessionDates[i - 1]) / 86400000);
+            }
+            avgSpacingDays = Math.round(gaps.reduce((a, b) => a + b, 0) / gaps.length * 10) / 10;
+        }
+
+        let archetype = 'new';
+        let confidence = 0;
+        let factors = [];
+
+        if (nScored < 3) {
+            archetype = 'new';
+            confidence = nScored > 0 ? 0.4 : 0.9;
+            factors = ['insufficient_data'];
+        } else if (avgScore >= 370 && passRate >= 60 && direction !== 'declining' && nWeaknesses <= 2 && nStrengths >= 2) {
+            archetype = 'ready';
+            confidence = avgScore >= 400 ? 0.9 : 0.7;
+            factors = ['high_performance', 'consistent', 'broad_coverage'];
+        } else if (direction === 'flat' && avgScore >= 320 && avgScore < 370 && nScored >= 5 && recentAvg !== null && olderAvg !== null && Math.abs(delta) < 10) {
+            archetype = 'plateaued';
+            confidence = nScored >= 8 ? 0.8 : 0.6;
+            factors = ['flat_trajectory', 'moderate_scores', 'no_improvement'];
+        } else if ((direction === 'improving' && delta >= 10) || (nImproving > nDeclining && avgScore >= 300)) {
+            archetype = 'developing';
+            confidence = nImproving >= 3 ? 0.8 : 0.6;
+            factors = ['improving_trend', 'positive_direction'];
+        } else if (direction === 'declining' && delta <= -10) {
+            archetype = 'developing';
+            confidence = 0.5;
+            factors = ['declining_trend', 'needs_intervention'];
+        } else {
+            archetype = 'developing';
+            confidence = 0.4;
+            factors = ['mixed_signals'];
+        }
+
+        return {
+            archetype,
+            confidence: Math.round(confidence * 100) / 100,
+            factors,
+            sessionTrend: { direction, delta, recentAvg, olderAvg, recent: recent.slice(0, 5), older: older.slice(0, 5) },
+            sessionSpacing: { avgDays: avgSpacingDays, totalDays: daysFromHistory(history), nSessions: nSessions },
+            patterns: {
+                flagRevisitationRate: computeFlagRate(history),
+                topicDiversity: computeTopicDiversity(history),
+                preferredDifficulty: computePreferredDifficulty(history),
+                explanationEngagement: 0,
+                recoverySprintCount: history.filter(h => h.recoverySource && h.recoverySource.sessionId).length
+            }
+        };
+
+        function daysFromHistory(h) {
+            if (h.length < 2) return 0;
+            let dates = h.map(e => new Date(e.date)).sort((a, b) => a - b);
+            return Math.ceil((dates[dates.length - 1] - dates[0]) / 86400000);
+        }
+
+        function computeFlagRate(h) {
+            let sessionsWithFlags = h.filter(s => s.mode === 'full' || s.mode === 'mcq').length;
+            return sessionsWithFlags > 0 ? Math.round(sessionsWithFlags / h.length * 100) : 0;
+        }
+
+        function computeTopicDiversity(h) {
+            let allTopics = new Set();
+            h.forEach(s => { if (s.topicSnapshot) Object.keys(s.topicSnapshot).forEach(t => allTopics.add(t)); });
+            return allTopics.size;
+        }
+
+        function computePreferredDifficulty(h) {
+            let counts = {};
+            h.forEach(s => { let d = s.difficultyPreset || 'standard'; counts[d] = (counts[d] || 0) + 1; });
+            let max = 0, pref = 'standard';
+            Object.entries(counts).forEach(([k, v]) => { if (v > max) { max = v; pref = k; } });
+            return pref;
+        }
+    },
+
+    _bridge_computePlateauSignal(history, mayData, intelligence) {
+        let nScored = history.filter(h => h.scaledScore != null).length;
+        if (nScored < 5) return { isPlateaued: false, confidence: 0, evidence: 'insufficient_data' };
+
+        let scores = history.filter(h => h.scaledScore != null).map(h => h.scaledScore);
+        let recent5 = scores.slice(0, Math.min(5, scores.length));
+        let range = Math.max(...recent5) - Math.min(...recent5);
+        let mean = Math.round(recent5.reduce((a, b) => a + b, 0) / recent5.length);
+        let stdDev = Math.round(Math.sqrt(recent5.reduce((s, v) => s + (v - mean) ** 2, 0) / recent5.length));
+
+        let decliningTopics = (intelligence.trends || []).filter(t => t.direction === 'declining').length;
+        let improvingTopics = (intelligence.trends || []).filter(t => t.direction === 'improving').length;
+
+        let isPlateaued = range <= 30 && stdDev <= 15 && decliningTopics <= 1 && improvingTopics <= 1 && mean >= 300 && mean < 380;
+
+        return {
+            isPlateaued,
+            confidence: isPlateaued ? (nScored >= 10 ? 0.85 : 0.6) : 0.3,
+            evidence: isPlateaued ? 'score_range_tight' : 'not_plateaued',
+            metrics: {
+                recentScoreRange: range,
+                recentStdDev: stdDev,
+                recentMean: mean,
+                recentScores: recent5,
+                decliningTopics,
+                improvingTopics
+            }
+        };
+    }
 };

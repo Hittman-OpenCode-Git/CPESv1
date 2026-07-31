@@ -2,20 +2,21 @@
  * Governance Guard Plugin — CMA Part 1 Exam Simulator
  *
  * Enforces governance rules at tool-execution level.
- * Rules 1-9 are all BLOCK level (S221 upgrade — Phase 1 execution; S913 Rule 9 deployed).
+ * Rules 1-11 are all BLOCK level (S221 upgrade — Phase 1 execution).
  *
- * Depends on: CAQS_v1.0.md, DEFECT_LIBRARY.md (DL-008, DL-026, DL-037)
+ * Depends on: CAQS_v1.0.md, DEFECT_LIBRARY.md (DL-008, DL-026, DL-037, DL-021)
  *
- * RULE 1 (BLOCK) — question_state changes must pair with REVISION_HISTORY.md updates
- * RULE 2 (BLOCK) — ExplanationWrong[CorrectChoice] must be "" (DL-008 enforcement)
- * RULE 3 (BLOCK) — MASTER_QUESTION_REGISTRY.md is generated, never edited
- * RULE 4 (BLOCK) — answer-key changes must include recomputed verification note
- * RULE 5 (BLOCK) — ≤30 question objects per change-set without block-authorization
- * RULE 6 (BLOCK) — non-CorrectChoice ExplanationWrong slots must be non-empty (DL-026 enforcement)
- * RULE 7 (BLOCK) — DERIVED_REGISTRY_NOT_AUTHORITATIVE (no hand-editing derived registries)
- * RULE 8 (BLOCK) — UNTRACKED_ARTIFACT (session packages must be registered)
- * RULE 9 (BLOCK) — Choice binary lead-in polarity mismatch (DL-037 enforcement)
+ * RULE 1  (BLOCK) — question_state changes must pair with REVISION_HISTORY.md updates
+ * RULE 2  (BLOCK) — ExplanationWrong[CorrectChoice] must be "" (DL-008 enforcement)
+ * RULE 3  (BLOCK) — MASTER_QUESTION_REGISTRY.md is generated, never edited
+ * RULE 4  (BLOCK) — answer-key changes must include recomputed verification note
+ * RULE 5  (BLOCK) — ≤30 question objects per change-set without block-authorization
+ * RULE 6  (BLOCK) — non-CorrectChoice ExplanationWrong slots must be non-empty (DL-026 enforcement)
+ * RULE 7  (BLOCK) — DERIVED_REGISTRY_NOT_AUTHORITATIVE (no hand-editing derived registries)
+ * RULE 8  (BLOCK) — UNTRACKED_ARTIFACT (session packages must be registered)
+ * RULE 9  (BLOCK) — Choice binary lead-in polarity mismatch (DL-037 enforcement)
  * RULE 10 (BLOCK) — non-CorrectChoice ExplanationWrong slots must be present and non-empty (DL-021 enforcement)
+ * RULE 11 (BLOCK) — Cognitive classification gates (AF-3/4/5) — S109P
  */
 
 const BLOCK_AUTH_RE = /BLOCK-AUTHORIZED|batch-authorized|AUTHORIZED-BLOCK/i;
@@ -167,6 +168,42 @@ export const GovernanceGuard = async ({ client }) => {
     return violations;
   }
 
+  /** Return array of { qid, cog, gate, reason, actual } for cognitive classification violations */
+  function findCognitiveViolations(text) {
+    const violations = [];
+    const objects = extractObjectsFromText(text);
+    for (const obj of objects) {
+      const cog = obj.CognitiveLevel;
+      if (!cog || !/^(Analyze|Evaluate)$/.test(cog)) continue;
+
+      const qid = obj.QuestionID || '(unknown)';
+      const stem = obj.Stem || '';
+      const ec = obj.ExplanationCorrect || '';
+      const diff = obj.DifficultyScore;
+
+      // GATE 3 (AF-3) — Deterministic Rule Application → BLOCK
+      const hasRuleRef = /Under (ASC|IFRS|COSO|GAAP|IAS)/i.test(stem);
+      const hasTradeOff = /competing|best option|weigh|trade.off|balance/i.test(ec);
+      if (hasRuleRef && !hasTradeOff) {
+        violations.push({ qid, cog, gate: 'AF-3', reason: 'Deterministic rule application without trade-off language', actual: 'Apply' });
+      }
+
+      // GATE 4 (AF-4) — Taxonomy Classification → BLOCK
+      if (/what type of|which (COSO|component|category|cost)|classified as/i.test(stem)) {
+        violations.push({ qid, cog, gate: 'AF-4', reason: 'Taxonomy/classification question', actual: 'Apply' });
+      }
+
+      // GATE 5 (AF-5) — Difficulty-Cognitive Mismatch → BLOCK
+      if (cog === 'Evaluate' && diff !== undefined && diff <= 2) {
+        violations.push({ qid, cog, gate: 'AF-5', reason: `Evaluate requires DifficultyScore >= 3 (got ${diff})`, actual: cog === 'Evaluate' ? 'Analyze' : 'Apply' });
+      }
+      if (cog === 'Analyze' && diff !== undefined && diff == 1) {
+        violations.push({ qid, cog, gate: 'AF-5', reason: `Analyze requires DifficultyScore >= 2 (got ${diff})`, actual: 'Apply' });
+      }
+    }
+    return violations;
+  }
+
   /** Count QuestionID + ItemID markers in text */
   function countQuestions(text) {
     if (!text) return 0;
@@ -311,6 +348,24 @@ export const GovernanceGuard = async ({ client }) => {
           "and contain choice-specific text. Absent distractor slots deprive\n" +
           "learners of educational feedback on incorrect selections (see\n" +
           "DEFECT_LIBRARY.md DL-021 — Pack E Section C)."
+        );
+      }
+
+      // ── RULE 11: BLOCK cognitive classification inflation (AF-3/4/5) ──
+      const cogViolations = findCognitiveViolations(checkText);
+      if (cogViolations.length > 0) {
+        const lines = cogViolations
+          .map(v => `  ${v.qid} — CognitiveLevel: ${v.cog} triggered ${v.gate}: ${v.reason} (suggested: ${v.actual})`)
+          .join("\n");
+        throw new Error(
+          `GOVERNANCE RULE 11 — BLOCKED (Cognitive Classification Gate)\n` +
+          `${cogViolations.length} item(s) with inflated CognitiveLevel:\n` +
+          `${lines}\n\n` +
+          "Per CAQS §1.6 dimension 3 (Difficulty Calibration) and S95P HO Framework:\n" +
+          "  AF-3: Deterministic rule application → not Analyze/Evaluate (use Apply)\n" +
+          "  AF-4: Taxonomy/classification → not Analyze/Evaluate (use Apply)\n" +
+          "  AF-5: DifficultyScore too low for claimed CognitiveLevel\n" +
+          "Override: include BLOCK-AUTHORIZED marker with certification evidence."
         );
       }
 

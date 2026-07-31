@@ -1,0 +1,194 @@
+{
+  "session": "S103P",
+  "phase": "PHASE_2 — One-Tier Slippage",
+  "date": "2026-07-31T15:15:59.175Z",
+  "packs_modified": [
+    "pack_d_corrected.js"
+  ],
+  "sections": [
+    "BD",
+    "ED"
+  ],
+  "total_changes": 29,
+  "metadata_only": true,
+  "zero_content_changes": true,
+  "zero_answer_key_changes": true,
+  "zero_explanation_changes": true,
+  "zero_question_state_changes": true,
+  "changes": [
+    {
+      "qid": "P1-BD-007",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E2: Flexible budget variance diagnosis — formula application with interpretation, not evaluative decision-making"
+    },
+    {
+      "qid": "P1-BD-008",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E4: Diagnostic question about incremental budgeting drawbacks — concept comprehension, not evaluation"
+    },
+    {
+      "qid": "P1-BD-034",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E4: Definition question — \"What is the primary purpose of standard costs?\" — taxonomy classification"
+    },
+    {
+      "qid": "P1-BD-038",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E4: Taxonomy classification — \"What distinguishes these two budget categories?\" — concept differentiation"
+    },
+    {
+      "qid": "P1-BD-056",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E2: Formula substitution — purchases = needed + ending − beginning. One-tier from Evaluate"
+    },
+    {
+      "qid": "P1-BD-063",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E4: Diagnostic question — \"What is the main...\" budget committee purpose. Concept comprehension"
+    },
+    {
+      "qid": "P1-BD-066",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E4: Taxonomy — \"What costs would typically appear in an S&A budget?\" — classification"
+    },
+    {
+      "qid": "P1-BD-070",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E4: Same pattern as BD-066 — S&A budget taxonomy, not evaluation"
+    },
+    {
+      "qid": "P1-BD-079",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E2: Flexible budget variance interpretation — diagnostic analysis (identify cause), not evaluative recommendation"
+    },
+    {
+      "qid": "P1-BD-085",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E2: Variance analysis package preparation — analysis of variance causes, not decision between competing alternatives"
+    },
+    {
+      "qid": "P1-BD-090",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E2: Cash budget formula application with borrowing scenario — formulaic, not evaluative"
+    },
+    {
+      "qid": "P1-BD-027",
+      "oldCL": "Analyze",
+      "newCL": "Apply",
+      "reason": "AF-A2: Direct labor cost formula — 8,000 × 2 × 18 = 288,000. Pure formula substitution"
+    },
+    {
+      "qid": "P1-BD-028",
+      "oldCL": "Analyze",
+      "newCL": "Apply",
+      "reason": "AF-A3: Multi-step direct labor budget with union contract — known procedure execution, not analysis"
+    },
+    {
+      "qid": "P1-BD-051",
+      "oldCL": "Analyze",
+      "newCL": "Apply",
+      "reason": "AF-A2: Direct materials purchases formula — needed + ending − beginning. Textbook formula"
+    },
+    {
+      "qid": "P1-BD-074",
+      "oldCL": "Analyze",
+      "newCL": "Understand",
+      "reason": "AF-A1: Definition match — \"What is the purpose of MAPE?\" — concept definition, not analysis"
+    },
+    {
+      "qid": "P1-BD-076",
+      "oldCL": "Analyze",
+      "newCL": "Understand",
+      "reason": "AF-A1: Same as BD-074 — MAPE definition matching. Textbook concept recall"
+    },
+    {
+      "qid": "P1-BD-054",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E2: Direct materials purchases budget adequacy analysis — diagnostic, not evaluative"
+    },
+    {
+      "qid": "P1-BD-055",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E2: DM purchases budget formula — needed + ending − beginning × cost. Formula application, one-tier from Evaluate"
+    },
+    {
+      "qid": "P1-BD-036",
+      "oldCL": "Analyze",
+      "newCL": "Apply",
+      "reason": "AF-A3: Master budget reconciliation — known procedure execution (operating → financial budget flow)"
+    },
+    {
+      "qid": "P1-BD-037",
+      "oldCL": "Analyze",
+      "newCL": "Apply",
+      "reason": "AF-A4: Master budget construction ordering — known procedure, not analysis"
+    },
+    {
+      "qid": "P1-BD-039",
+      "oldCL": "Analyze",
+      "newCL": "Apply",
+      "reason": "AF-A3: Master budget review — procedural review of budget components, not analytical decomposition"
+    },
+    {
+      "qid": "P1-BD-040",
+      "oldCL": "Analyze",
+      "newCL": "Apply",
+      "reason": "AF-A3: Same as BD-039 — master budget CFO review, procedure execution"
+    },
+    {
+      "qid": "P1-ED-001",
+      "oldCL": "Analyze",
+      "newCL": "Understand",
+      "reason": "AF-A5 + AF-A4: Easy (DS=1) taxonomy — \"What model is this?\" (Three Lines). Definition match"
+    },
+    {
+      "qid": "P1-ED-010",
+      "oldCL": "Analyze",
+      "newCL": "Understand",
+      "reason": "AF-A5 + AF-A4: Easy (DS=1) taxonomy — \"What security principle?\" (SoD). Definition match"
+    },
+    {
+      "qid": "P1-ED-014",
+      "oldCL": "Analyze",
+      "newCL": "Apply",
+      "reason": "AF-A4: Taxonomy classification — \"What type of control activity?\" — COSO control classification"
+    },
+    {
+      "qid": "P1-ED-015",
+      "oldCL": "Evaluate",
+      "newCL": "Analyze",
+      "reason": "AF-E4: Same as ED-014 (verification control type) but labeled Evaluate. One-tier to Analyze"
+    },
+    {
+      "qid": "P1-ED-025",
+      "oldCL": "Analyze",
+      "newCL": "Apply",
+      "reason": "AF-A4: Taxonomy classification — \"What type of control activity?\" (approval threshold). COSO classification"
+    },
+    {
+      "qid": "P1-ED-036",
+      "oldCL": "Analyze",
+      "newCL": "Apply",
+      "reason": "AF-A4 + AF-A5: Taxonomy — \"What type of control?\" (change management). Easy (DS=1) Analyze→Apply"
+    },
+    {
+      "qid": "P1-ED-040",
+      "oldCL": "Analyze",
+      "newCL": "Apply",
+      "reason": "AF-A4: Taxonomy classification — same as ED-036 but at higher difficulty. Control type classification"
+    }
+  ]
+}

@@ -77,9 +77,9 @@ This document captures the authoritative governance baseline as of July 31, 2026
 | Rule 8 | BLOCK | Untracked artifacts | S221 |
 | Rule 9 | BLOCK | Choice binary lead-in polarity (DL-037) | S913 |
 | Rule 10 | BLOCK | DL-021 absent distractor EW fields | S814 |
-| **Rule 11** | **BLOCK** | **Cognitive classification gates (AF-3/4/5)** | **DESIGNED (S99P) — NOT DEPLOYED** |
+| **Rule 11** | **BLOCK** | **Cognitive classification gates (AF-3/4/5)** | **DEPLOYED (S109P)** |
 
-**Test suite:** 54/54 PASS (pre-Rule 11). 12 additional tests designed for Rule 11 (S99P §6.1).
+**Test suite:** 66/66 PASS (post-Rule 11 deployment). 12 additional tests designed for Rule 11 (S109P §G01_RULE11_FINALIZATION.md §3.1).
 
 ---
 

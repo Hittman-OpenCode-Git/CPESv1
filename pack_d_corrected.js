@@ -4259,7 +4259,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "While management-by-exception does call for investigating significant variances regardless of direction, recommending investigation alone sidesteps the core finding: the standard itself is demonstrably wrong. A $28,000 variance that exactly equals 12% of the flexible budget signals a systematic standard error, not an operational anomaly requiring investigation. The correct action is to revise the standard, not to treat the variance as a mystery to be explored.",
     "ExplanationWrongD": "Dismissing a large favorable variance simply because it is favorable is a dangerous oversight. Favorable variances from inflated standards mask deteriorating cost control and create complacency. If the standard overstates costs by 12% and actual costs are at the industry benchmark, the variance reports favorable even though the company is merely average. When the standard is next updated, a large unfavorable variance will suddenly appear.",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -4311,7 +4311,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Option D focuses exclusively on the ongoing cost differential ($42,000 vs. $9,200/year) while ignoring the savings ZBB may generate. If ZBB identifies even $42,001 in annual savings, it breaks even on sustainment cost — and the shipping pilot suggests savings could be substantially higher. The correct framework is a net benefit analysis: (ZBB-identified savings) − (ZBB implementation cost + sustainment premium) = net benefit. Focusing on cost alone is incomplete because the purpose of changing budget methodology is not to minimize the budgeting department's cost — it is to improve overall resource allocation. A candidate selecting this option may have applied a cost-minimization framework to a decision that requires a cost-benefit framework.",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -5299,7 +5299,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Option D uses an arbitrary $18.75 blended rate — the simple average of $18.00 and $19.50 — producing a $300,000 budget. This approach ignores that production is evenly distributed across months and that two-thirds of Q3 production occurs after August 1 at the higher rate. The effective weighted rate is $19.00/hour (($18.00 × 2,667 units × 2 hrs) + ($19.50 × 5,333 units × 2 hrs)) / 16,000 hours = approximately $19.00/hour, not $18.75. The $18.75 rate is a compromise figure, not an analytically derived one — it is $8,000 below the actual expected cost. Under CMA Part 1, budget assumptions must be grounded in factual analysis. A candidate selecting this option may have defaulted to 'splitting the difference' rather than performing the weighted calculation that properly reflects production timing.",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -5351,7 +5351,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Option D uses an arbitrary blended rate of $18.75 — the simple average of $18.00 and $19.50. This approach ignores the unequal weighting of production across months: two-thirds of Q3 production occurs after the rate increase, so the effective rate is closer to $19.50 than to $18.00. The $18.75 rate is not supported by any factual basis — it is a compromise figure, not an analytically derived one. While the resulting $300,000 might appear 'reasonable,' it is approximately $4,000 below the actual expected cost, creating a small but unnecessary planning error. Under CMA Part 1, budget assumptions must be grounded in factual analysis, not convenient averages. A candidate selecting this option may have defaulted to splitting the difference rather than performing the weighted calculation.",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -5655,7 +5655,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Option D argues that the bonus should be denied because the $10.00 standard price is outdated. While it is true that standards should reflect currently attainable performance, this rationale misses the central issue: the purchasing manager's decision caused a net loss regardless of whether the standard is current or outdated. Even if the standard were revised to $9.50, the problem remains that the lower price was achieved through lower quality, generating $15,500 in excess usage costs — an outcome that would be unfavorable regardless of which standard price is used. The standard cost card should indeed incorporate quality specifications, but the bonus decision turns on whether the manager's action created net value for the company, not on the age of the standard. A candidate selecting this option identified a secondary issue (standard revision) while missing the primary one (interdependent variance causality).",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -5755,7 +5755,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Option D identifies credit sales timing and depreciation as drivers but omits the capital expenditure ($140K) and inventory build ($45K) — two material items that together account for $185K of the $485K gap. More importantly, this analysis has the depreciation effect directionally wrong: depreciation REDUCES operating income without affecting cash, which means operating income is LOWER than it would be without depreciation — this narrows, not widens, the profit-to-cash gap (operating income without depreciation would be $492K, not $420K). The candidate must correctly identify the directional effect of each reconciling item. A candidate selecting this option recognized some drivers correctly but omitted material items and mischaracterized depreciation's directional effect.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze",
+    "CognitiveLevel": "Apply",
     "certification_batch": "; S72 cognitive upgrade wave 2"
   },
   {
@@ -5806,7 +5806,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Option D incorrectly ties the classification to the department that prepares the budget. In practice, the operating budget is a collaborative effort involving sales, production, purchasing, HR, and finance departments — not just 'department managers.' The financial budget, while coordinated by the finance/treasury function, draws input from capital project sponsors, department heads requesting equipment, and the CFO's office. More importantly, classification should be based on the nature and purpose of the budget item, not its preparer. Under CMA Part 1, budgets are classified by their role in the master budget architecture, not by organizational responsibility. A candidate selecting this option may have confused responsibility accounting (who is accountable for a budget) with budget classification (what type of plan the budget represents).",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze",
+    "CognitiveLevel": "Apply",
     "certification_batch": "; S72 cognitive upgrade wave 2"
   },
   {
@@ -5857,7 +5857,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Option D correctly identifies the $140,000 equipment purchase as a financial budget item that does not appear in the operating budget. However, it incorrectly assumes this is the ONLY source of divergence. A $140K capital outflow cannot explain a $505K swing from +$420K profit to -$85K cash deficit — the equipment purchase alone accounts for only ~28% of the total cash-operating gap. This option also ignores the largest driver: credit sales timing ($145K of Q2 sales uncollected, partially offset by $310K of Q1 collections). Furthermore, the two budgets should NOT 'diverge by exactly $140,000' — depreciation, credit sales timing, and working capital changes all create additional differences. Under CMA Part 1, the correct analysis identifies ALL material reconciling items, not just the most visible one. A candidate selecting this option correctly identified the capital budget as a source of divergence but over-simplified by treating it as the sole explanation.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -5907,7 +5907,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Option D correctly identifies the capital expenditure as a financial budget item that does not appear in the operating budget. However, it incorrectly assumes this is the ONLY source of divergence — a $140K equipment purchase cannot explain a $505K swing. The operating budget's $420K profit already includes all operating revenues and expenses on an accrual basis; the capital expenditure is an additional cash outflow, not a deduction from operating income. Furthermore, this option ignores credit sales timing (the largest driver of the divergence) and depreciation (which works in the opposite direction). A candidate selecting this option identified the capital budget as a source of cash-operating divergence but over-simplified by treating it as the sole explanation.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze",
+    "CognitiveLevel": "Apply",
     "certification_batch": "; S71 benchmark rewrite"
   },
   {
@@ -5954,7 +5954,7 @@ var MCQ_BANK_D = [
     ],
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze",
+    "CognitiveLevel": "Apply",
     "ExplanationWrongA": "This analysis incorrectly treats both budgets as uniformly improved. While the operating budget benefits from the gross profit contribution, the financial budget's improvement is partially offset by the additional borrowing needed to finance the accelerated production. Treating the financial budget as uniformly improved ignores the debt covenant violation. A candidate selecting this may be aggregating financial effects without considering how different components of the financial budget (cash vs. balance sheet ratios) react differently to the same transaction.",
     "ExplanationWrongB": "This analysis correctly identifies that the operating budget improves and the financial budget worsens but incorrectly attributes the financial budget deterioration to 'additional debt drawn to finance the accelerated production cycle.' Under accrual accounting, accelerating revenue recognition and the associated production does not necessarily require incremental borrowing beyond what would have occurred at the normal production schedule. The debt-to-equity ratio concern is valid per the existing budget projections, but the causal mechanism described is tenuous. A candidate selecting this may be correctly observing the two-budget tension but attributing it to an incorrect mechanism.",
     "ExplanationWrongC": "This analysis makes an inappropriate temporal comparison — evaluating the proposal's effect against next year's budget rather than this year's budget. Management accounting evaluates decisions based on incremental effects: the relevant comparison is the current-year budget with the proposal vs. without the proposal, not the current year vs. next year. The $400,000 shift from next year to this year is a timing difference, not an economic loss to the company over the two-year period. A candidate selecting this may be confusing timing effects with economic effects.",
@@ -6509,7 +6509,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Option D proposes a split-order strategy: standard quantity at $4.20 plus spot-market purchase for the incremental 2,300 lbs. This defeats the purpose of the volume discount, which requires a single order of 30,000+ lbs — splitting the order loses the $3.85 rate entirely. The standard order at $4.20 would cost $137,340, and the spot-market purchase (likely at or above $4.20 given a small lot size with no volume leverage) would add cost without capturing the discount. Under CMA Part 1, volume discounts are all-or-nothing propositions — the cost advantage comes from the supplier's ability to plan a single large production run, and splitting the order destroys the economic logic of the discount. A candidate selecting this option may have attempted to hedge without recognizing that the discount structure requires commitment.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -6659,7 +6659,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Option D partially supports the purchasing manager but concedes the inventory direction is reversed — effectively agreeing with the production supervisor's calculation. The buffer is not separately appropriate because the 1.5-unit standard already accounts for normal waste.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -6709,7 +6709,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Option D proposes negotiating a fixed-price contract, a reasonable long-term suggestion but does not address the immediate Q1 purchasing decision. The January order window is now.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -6759,7 +6759,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Proposal D recommends a hybrid: expanded authority for capital pre-authorization only, tighter variance thresholds, and retaining the committee for budget review. While a hybrid approach appears to capture the 'best' of each proposal, it introduces governance complexity: the committee now has authority over capital proposals but not headcount, and tighter variance thresholds but no change to the review process. This creates a rulebook that is harder to administer, communicate, and enforce — different decisions follow different approval paths. Under CMA Part 1, governance simplicity and clarity have value: a well-understood governance structure is more likely to be followed consistently than a complex one. The current structure already functions effectively, and none of the three proposals has identified a genuine deficiency that requires restructuring. A candidate selecting this option may have defaulted to the 'most comprehensive' solution without evaluating whether the added complexity is justified by a specific problem.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -7111,7 +7111,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Option D inflates Q2's $178,000 by a uniform 15% to match the sales growth rate ($204,700). This approach assumes all S&A costs are perfectly variable with sales revenue — as if every dollar of S&A moves in lockstep with every dollar of sales. In reality, some S&A components are fixed (office rent, base salaries, insurance) and do not increase with sales volume, while others are variable (commissions, shipping). A uniform percentage increase overstates the variable component and ignores the step-cost structure of the sales force. Under CMA Part 1, S&A budgets should disaggregate costs by behavior pattern rather than applying a blanket growth rate.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -7262,7 +7262,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Option D spreads small cuts across all four categories ($50K fixed + $15K freight + $10K CS incentive + natural commission decline). This is a 'death by a thousand cuts' approach — each individual cut appears manageable, but the cumulative effect may degrade multiple functions simultaneously. Reducing insurance coverage ($50K) increases the company's risk exposure; renegotiating freight contracts risks service disruption; cutting the customer service incentive may reduce call quality. Additionally, relying on 'natural' commission decline from a higher sales base is analytically weak — it assumes the sales mix stays constant and the commission structure doesn't change. Under CMA Part 1, spreading cuts superficially appears conservative but can actually be riskier than targeted cuts because it affects all functions simultaneously, making it harder to isolate and manage any resulting problems.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -7462,7 +7462,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Option D selects Model B because 'machine learning is the industry standard.' This rationale substitutes a trend-following argument for analytical decision-making. Whether a technology is an 'industry standard' is irrelevant to whether it is the right investment for Apex specifically — the company's cost structure ($14.2M COGS), team capacity (2 analysts), and accuracy requirements determine the correct decision, not what competitors are doing. Additionally, 'positioning for future analytics' is a strategic argument that should be costed separately — buying Model B now for capabilities Apex may need in 3 years is speculative unless the board has explicitly authorized a digital transformation initiative. A candidate selecting this option may have substituted a technology adoption heuristic for a structured cost-benefit analysis.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -7664,7 +7664,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Transfer pricing determines the price at which goods or services are exchanged between divisions of the same company, typically for performance evaluation and tax planning. It has no connection to forecast accuracy measurement. MAPE evaluates how closely a forecasting model's predictions match actual outcomes, not how internal transactions are priced. A candidate confusing interdivisional pricing with forecast diagnostics would select this option.",
     "question_state": "Certified",
     "DifficultyScore": 3,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -7764,7 +7764,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "The three activities do NOT contribute equally to the $370 unfavorable total. Receiving variance: $2,700 U (volume) + $1,350 F (rate) = $1,350 U (72% of net unfavorable). Inspection variance: $1,400 U (volume) + $1,280 F (rate) = $120 U (6%). Setup variance: $820 U (rate) + $1,920 F (volume) = $1,100 F (22% favorable offset). The receiving activity's volume increase (150 unexpected orders) is the dominant driver. Under CMA Part 1, variance decomposition must isolate individual activity impacts — concluding 'all three contributed equally' when one activity accounts for 72% of the net unfavorable is an analytical error. A candidate may have selected this option by looking at the total variance of $370 and assuming equal contribution, rather than performing the per-activity decomposition.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -7914,7 +7914,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Deferring investigation to Q2 compounds the risk. If the volume assumption is wrong, Q2's variance report will also be distorted — trend analysis on two distorted quarters yields no insight and wastes three months. The cost of a thorough investigation now is small relative to the cost of operating with a miscalibrated benchmark for multiple quarters.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -8215,7 +8215,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Option D proposes dual variance reports — one against each standard. While this seems comprehensive, it doubles the reporting burden and creates confusion about which numbers represent 'the budget.' More importantly, running two parallel sets of variance reports signals that the organization cannot commit to a single plan — it undermines the budget as the authoritative financial benchmark. A single set of reports against a revised, realistic budget, supplemented by a clear disclosure of the supply shock's impact and the revision rationale, provides the same information more clearly and with less administrative overhead. A candidate selecting this option may have attempted to satisfy all audiences without recognizing that multiple 'official' budgets create ambiguity about which targets managers are accountable for.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate",
+    "CognitiveLevel": "Analyze",
     "certification_batch": "; S72 cognitive upgrade wave 2"
   },
   {
@@ -8469,7 +8469,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "The June 30 cash balance before borrowing is $50,000, exactly at the minimum. A $10,000 draw provides a $10,000 working capital buffer (20% above the covenant floor), which is a proportionate and reasonable cushion for a business of this size. Drawing $30,000 would leave $75,000 in cash — a $25,000 excess above the minimum. While treasury professionals value buffers, they should be proportionate to risk. The $20,000 of unnecessary borrowing would incur approximately $1,600 in annual interest cost with no offsetting benefit to the business.",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -17776,7 +17776,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "The balanced scorecard is a performance measurement tool, not a governance model for control responsibilities.",
     "ExplanationWrongD": "COSO ERM is broader risk-management guidance; the distinct operational, oversight, and internal-audit layers describe the three lines model.",
     "DifficultyScore": 1,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -17877,7 +17877,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Option D incorrectly assigns responsibility. The first line (operational management) owns and executes controls — it is not responsible for determining whether those controls are tested by external audit or for independently assuring their effectiveness. Branch managers and operational staff implement controls over day-to-day activities; they do not design the audit scope, evaluate auditor performance, or provide independent assurance to the board.",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -17987,7 +17987,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "Monitoring frequency and risk velocity",
     "UniqueConceptKey": "E-D006-monitoring-frequency-risk-velocity",
     "LOSTag": "E Internal controls",
-    "Difficulty": "Very Difficult",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Westgate Insurance processes 12,000 claims per month through an automated adjudication system that applies 48 business rules to each claim. The internal audit department tests the system's rule logic once annually during the year-end audit cycle. A whistleblower reports that one claims adjuster has been exploiting a known system weakness: rule #37 (duplicate claim detection) fails when two claims for the same incident are submitted more than 72 hours apart. Over 11 months, the adjuster processed 340 duplicate claims totaling $1.7M in improper payments by simply waiting 4 days between submissions. The annual audit did not detect the scheme because the sampling period fell outside the fraud window. Which best evaluates the monitoring frequency gap under COSO Principle 16?",
@@ -18026,8 +18026,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "Option B misunderstands audit sampling. The annual testing cycle would draw a sample from transactions occurring during the audit period — typically the weeks surrounding year-end fieldwork. If the fraud perpetrator strategically timed submissions to fall between audit cycles, the sample would not capture those transactions regardless of sample size. Audit sampling tests transactions within a defined population; it cannot detect transactions outside the sampled time window. This is precisely why Principle 16 emphasizes ongoing monitoring at a frequency commensurate with risk.",
     "ExplanationWrongC": "Option C deflects responsibility to the wrong control function. While a strong second line ideally would have identified the vulnerability, COSO does not make risk management solely responsible for monitoring control effectiveness. Principle 16 applies across the organization: management (first line) implements ongoing monitoring, risk management (second line) monitors control design and effectiveness, and internal audit (third line) provides independent assurance. The failure is multi-line: management failed to implement continuous monitoring, and internal audit failed to calibrate evaluation frequency.",
     "ExplanationWrongD": "",
-    "DifficultyScore": 5,
-    "CognitiveLevel": "Evaluate"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -18227,7 +18227,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Risk transfer shifts financial consequences to a third party, such as through insurance. Limiting user access based on job duties is a preventive access control, not a risk-financing strategy.",
     "ExplanationWrongD": "Management override is bypassing controls, not a principle for limiting user access.",
     "DifficultyScore": 1,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -18427,7 +18427,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Preventive controls aim to stop errors before they occur. A supervisor recounting after the count is performed is detective — it identifies and corrects errors that have already occurred during the initial count.",
     "ExplanationWrongD": "Segregation of duties separates incompatible responsibilities; a one-person recount by a supervisor is independent verification, not the segregation concept itself.",
     "DifficultyScore": 2,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -18476,8 +18476,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Option D recommends risk avoidance — exiting the market entirely — which may be premature without evaluating intermediate options. Risk avoidance eliminates the downside but also eliminates the $3.5 million annual cost savings. Under COSO ERM, risk response selection should consider the portfolio effect: does this risk, in combination with other risks in the portfolio, exceed the organization's risk appetite? The scenario describes a $72 million enterprise with an 8% risk appetite — the board needs to evaluate whether the combined FX, political, and supply chain risks of this single-source country exceed 8% of equity, not simply exit because each risk dimension is significant. The analysis should also consider risk sharing (joint venture, political risk insurance) and risk reduction (partial diversification) as alternatives between the extremes of full acceptance and full avoidance. Choosing the most extreme risk response without evaluating intermediate options violates the ERM principle of proportional response.",
     "question_state": "Active",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
     "upgrade_note": "S899 Phase 1 — Evaluate replacement for archived P1-ED-015 (DL-012 rotation clone)"
   },
   {
@@ -18538,7 +18538,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "Compensation structure fraud risk assessment",
     "UniqueConceptKey": "E-D017-compensation-fraud-risk-assessment",
     "LOSTag": "E Internal controls",
-    "Difficulty": "Very Difficult",
+    "Difficulty": "Difficult",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Stratton Medical Devices implemented a new territory manager compensation plan under which managers earn commission only on quarterly revenue above 95% of their assigned quota. Managers who fall below the 95% threshold receive zero commission for the entire quarter — a cliff structure with no graduated payout. In the most recent fiscal year, six of the company's 18 territory managers recorded suspiciously high sales revenue in the final week of each calendar quarter, followed by unusually elevated product returns in the first week of the subsequent quarter — a pattern indicative of channel stuffing. The VP of Sales defends the plan, stating that aggressive incentives drive performance and that quarter-end revenue concentration followed by returns is within normal business fluctuations. The internal audit director notes that the compensation plan was not evaluated as a fraud risk factor during the enterprise risk assessment. Evaluate whether Stratton adequately assessed fraud risk under COSO Principle 8.",
@@ -18577,8 +18577,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "While sales incentive plans with aggressive targets are common, COSO Principle 8 does not exempt standard or widespread industry practices from fraud risk assessment. The relevant question is not whether a practice is common but whether it creates pressures or incentives that could lead to fraudulent financial reporting. A cliff commission structure — where all compensation is forfeited below a precise threshold — creates categorically different behavioral incentives than a graduated commission plan. The medical device industry has been subject to significant regulatory enforcement actions related to sales practices, making it particularly important to evaluate compensation structures.",
     "ExplanationWrongC": "This argument incorrectly separates entity-level fraud risk assessment from operational and process-level fraud risk. COSO Principle 8 requires an integrated assessment where fraud risks are considered across all levels of the organization, including those arising from specific incentive structures. The channel stuffing pattern is not merely an operational revenue recognition control issue — it is an indicator of potential fraudulent financial reporting. A systematic pattern where 33% of territory managers exhibit suspicious behavior correlated with the compensation plan's structure is a fraud risk indicator that should have been identified through a properly conducted fraud risk assessment.",
     "ExplanationWrongD": "While some quarter-end sales concentration is normal, the specific pattern described — 33% of managers consistently recording unusually high revenue in the final week followed by elevated returns in the subsequent quarter's first week, repeated across multiple quarters — is specifically characteristic of channel stuffing. COSO Principle 8 requires management to assess fraud risk with appropriate professional skepticism, which means investigating patterns that systematically deviate from expected norms rather than dismissing them as routine fluctuations. The direct temporal alignment between the cliff structure and the observed revenue-and-returns pattern should heighten, not diminish, the need for fraud risk assessment.",
-    "DifficultyScore": 5,
-    "CognitiveLevel": "Evaluate"
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -18689,7 +18689,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "erm risk response strategies",
     "UniqueConceptKey": "E-D020-erm-risk-response-strategies",
     "LOSTag": "E Internal controls",
-    "Difficulty": "Moderate",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Thornbury decides to purchase insurance to address a significant identified risk rather than eliminate the underlying activity. What enterprise risk management response is this?",
@@ -18728,8 +18728,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Option C correctly identifies the split-purchase scheme but proposes a remediation that does not scale. A daily total cap would prevent the specific pattern described (four requisitions on one day), but a determined manager could split the orders across four consecutive business days. Transaction-splitting detection requires pattern analysis — cumulative spend by requisitioner vs. vendor over a period, not a simple daily cap. More significantly, daily caps do not address the root control failure: the ERP system's rule engine only applies per-transaction limits, allowing the same requisitioner-vendor combination to circumvent controls through aggregation. The correct remediation upgrades the rule engine logic, not the dollar cap.",
     "ExplanationWrongD": "",
     "question_state": "Active",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
     "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-ED-020 (DL-012 rotation clone)"
   },
   {
@@ -18882,7 +18882,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "This option correctly identifies that individual thresholds can be circumvented by structuring but prescribes an extreme and operationally impractical remedy. Routing all purchase orders — regardless of dollar amount — through a centralized procurement committee would paralyze a construction company's operations, where hundreds of routine material purchases occur weekly. COSO Principle 12 does not mandate the elimination of all delegation; it requires that control activities be designed to address the assessed risk. A targeted detective monitoring control — aggregate review of near-threshold transactions by initiator — addresses the specific structuring risk without eliminating the efficiency of delegated purchasing authority for routine, legitimate transactions.",
     "ExplanationWrongD": "",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "CognitiveLevel": "Analyze"
   },
   {
     "Part": 1,
@@ -18983,7 +18983,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Segregation may support purchasing controls, but the specific activity described is management authorization.",
     "ExplanationWrongD": "Risk assessment identifies and analyzes risk; it is not the transaction-level approval control described.",
     "DifficultyScore": 2,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -19135,7 +19135,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Control environment concerns tone, structure, and accountability; the stem focuses on evaluating whether controls continue to operate.",
     "ExplanationWrongD": "",
     "DifficultyScore": 2,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -19439,7 +19439,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Option C incorrectly separates culture from execution. Under COSO ERM, culture is defined by how the organization behaves — not by what it says it values. The disconnect between leadership communications and operational behavior is not 'adequate culture, deficient execution' — it is the definition of a performative risk culture. The CEO's emails and the board's funding constitute aspiration; the performance ratings, unchanged risk assessments, and employee survey responses constitute reality. When aspiration and reality diverge systematically across multiple indicators, the culture is the gap between them.",
     "ExplanationWrongD": "Option D reduces a systemic cultural issue to individual leadership accountability. While the CEO bears ultimate responsibility for risk culture, replacing the CEO without addressing the structural drivers of the performative culture (performance measurement systems, investigation methodologies, risk committee charter) would leave the underlying culture unchanged. COSO ERM addresses culture as an organizational characteristic shaped by structures, incentives, and processes — not as a personal attribute of the chief executive.",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate",
+    "CognitiveLevel": "Analyze",
     "upgrade_note": "S56 Phase 5 — Evaluate replacement for archived P1-ED-034 (DL-012 rotation clone)"
   },
   {
@@ -19450,7 +19450,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "data backup disaster recovery",
     "UniqueConceptKey": "E-D035-data-backup-disaster-recovery",
     "LOSTag": "E Internal controls",
-    "Difficulty": "Moderate",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Jettison maintains offsite backups of critical financial data and a documented plan for restoring systems after a disruption. What control objective does this address?",
@@ -19489,8 +19489,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "Transaction authorization controls approve business transactions; they do not restore systems after an outage.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Confidentiality controls protect data from unauthorized disclosure. While offsite backups must also be secured, the primary control objective described — restoring systems after disruption — addresses availability, not confidentiality alone.",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -19540,7 +19540,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Physical controls restrict tangible access to facilities and hardware. Change management is a logical and procedural control governing software modifications — testing, approval, and documentation — not physical entry to a data center.",
     "ExplanationWrongD": "",
     "DifficultyScore": 1,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -19743,7 +19743,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "",
     "question_state": "Active",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze",
+    "CognitiveLevel": "Apply",
     "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-ED-040 (DL-012 rotation clone)"
   },
   {
@@ -19805,7 +19805,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "risk assessment likelihood impact",
     "UniqueConceptKey": "E-D042-risk-assessment-likelihood-impact",
     "LOSTag": "E Internal controls",
-    "Difficulty": "Moderate-Easy",
+    "Difficulty": "Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Quarrycrest's risk management team scores identified risks based on their likelihood of occurring and the potential impact if they do. What process is this?",
@@ -19844,8 +19844,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Risk transfer shifts financial consequences to a third party, typically through insurance or contracts. Scoring risks by likelihood and impact is a prioritization step within risk assessment that helps determine which risks warrant transfer, mitigation, or acceptance.",
     "ExplanationWrongD": "Monitoring evaluates whether controls continue to function; the stem is about assessing risk before deciding on responses.",
-    "DifficultyScore": 2,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
