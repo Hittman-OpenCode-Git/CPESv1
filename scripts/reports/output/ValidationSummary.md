@@ -1,37 +1,37 @@
 # Validation Report Summary
 
-**Generated:** 2026-07-31T03:51:27.890Z
+**Generated:** 2026-07-31T14:43:04.509Z
 **Project:** CMA Part 1 Exam Simulator v2.0
 
 ## Results
 
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
-| Repository Validator | PASS | 0 | 0 | 3ms |
-| Metadata Validator | FAIL | 18 | 5 | 137ms |
-| Blueprint Validator | WARN | 0 | 232 | 98ms |
-| Difficulty Validator | FAIL | 18 | 42 | 123ms |
-| Reference Validator | WARN | 0 | 95 | 101ms |
-| Explanation Validator | FAIL | 11 | 35 | 162ms |
-| Case Integrity Validator | FAIL | 2 | 8 | 31ms |
-| PsychometricValidator | FAIL | 117 | 1795 | 1187ms |
+| Repository Validator | PASS | 0 | 0 | 2ms |
+| Metadata Validator | FAIL | 18 | 5 | 591ms |
+| Blueprint Validator | WARN | 0 | 232 | 359ms |
+| Difficulty Validator | FAIL | 18 | 42 | 336ms |
+| Reference Validator | WARN | 0 | 95 | 274ms |
+| Explanation Validator | FAIL | 11 | 35 | 566ms |
+| Case Integrity Validator | FAIL | 2 | 8 | 96ms |
+| PsychometricValidator | FAIL | 119 | 1809 | 4604ms |
 
-**Total Errors:** 166
-**Total Warnings:** 2212
+**Total Errors:** 168
+**Total Warnings:** 2226
 **Overall Status:** FAIL
 
 ## Details
 
 ### Repository Validator
 **Status:** PASS
-**Duration:** 3ms
+**Duration:** 2ms
 **Statistics:**
 - Question Packs: 5
 - Case Banks: 5
 
 ### Metadata Validator
 **Status:** FAIL
-**Duration:** 137ms
+**Duration:** 591ms
 **Statistics:**
 - Cases Checked: 45
 **Errors:**
@@ -62,7 +62,7 @@
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 98ms
+**Duration:** 359ms
 **Statistics:**
 - Cases Checked: 45
 - Cross-Domain Cases: 0
@@ -308,7 +308,7 @@
 
 ### Difficulty Validator
 **Status:** FAIL
-**Duration:** 123ms
+**Duration:** 336ms
 **Statistics:**
 - Cases Checked: 45
 - Items Checked: 235
@@ -385,7 +385,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 101ms
+**Duration:** 274ms
 **Statistics:**
 - Cases Checked: 45
 - Total References: 0
@@ -490,15 +490,15 @@
 
 ### Explanation Validator
 **Status:** FAIL
-**Duration:** 162ms
+**Duration:** 566ms
 **Statistics:**
 - MCQ Questions Checked: 2545
 - Case Items Checked: 235
 - Questions with Placeholder Explanations: 1
 - Fields with Placeholder Text: 1
 - Short Explanations (<50 chars): 32
-- Correct Explanation Avg Length: 445
-- Wrong Explanation Avg Length: 310
+- Correct Explanation Avg Length: 451
+- Wrong Explanation Avg Length: 313
 - Placeholder Pattern: "Common misunderstanding": 1
 **Errors:**
 - pack_d_corrected.js [82] (P1-BD-008): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
@@ -551,7 +551,7 @@
 
 ### Case Integrity Validator
 **Status:** FAIL
-**Duration:** 31ms
+**Duration:** 96ms
 **Statistics:**
 - Total Cases Checked: 45
 - Total Items Checked: 235
@@ -579,32 +579,32 @@
 
 ### PsychometricValidator
 **Status:** FAIL
-**Duration:** 1187ms
+**Duration:** 4604ms
 **Statistics:**
 - AbsoluteLanguageValidator.questionsScanned: 2545
-- AbsoluteLanguageValidator.findings: 1022
-- AbsoluteLanguageValidator.pattern.only/exclusively: 820
-- AbsoluteLanguageValidator.pattern.must: 59
-- AbsoluteLanguageValidator.pattern.always: 74
+- AbsoluteLanguageValidator.findings: 1044
+- AbsoluteLanguageValidator.pattern.only/exclusively: 833
+- AbsoluteLanguageValidator.pattern.must: 64
+- AbsoluteLanguageValidator.pattern.always: 76
 - AbsoluteLanguageValidator.pattern.never: 43
-- AbsoluteLanguageValidator.pattern.exactly: 19
-- AbsoluteLanguageValidator.pattern.no-other/exception/alternative: 3
+- AbsoluteLanguageValidator.pattern.exactly: 20
+- AbsoluteLanguageValidator.pattern.no-other/exception/alternative: 4
 - AbsoluteLanguageValidator.pattern.impossible: 4
 - AmbiguityValidator.questionsScanned: 2545
-- AmbiguityValidator.findings: 473
-- AmbiguityValidator.vagueQualifierHits: 180
+- AmbiguityValidator.findings: 474
+- AmbiguityValidator.vagueQualifierHits: 182
 - DistractorSimilarityValidator.questionsScanned: 2544
 - DistractorSimilarityValidator.highSimilarityPairs: 127
-- DistractorSimilarityValidator.moderateSimilarityPairs: 316
-- DistractorSimilarityValidator.totalFlagged: 443
+- DistractorSimilarityValidator.moderateSimilarityPairs: 311
+- DistractorSimilarityValidator.totalFlagged: 438
 - ExplanationConsistencyValidator.questionsScanned: 2545
 - ExplanationConsistencyValidator.findings: 0
 - MathematicalValidator.questionsScanned: 2545
 - MathematicalValidator.findings: 0
 - MathematicalValidator.falsePositiveRate: 0%
 - modules: 5
-- totalErrors: 117
-- totalWarnings: 1795
+- totalErrors: 119
+- totalWarnings: 1809
 **Errors:**
 - [AbsoluteLanguageValidator] P1-A-013 Choice D: "Reverse the $2,400,000 of Q4 Orion sales and restate Meridian's previously issued Q4 interim financial information, treating the Orion transactions as if they never occurred because collectibility was always in doubt." — contains absolute language "always"
 - [AbsoluteLanguageValidator] P1-A-013 Choice D: "Reverse the $2,400,000 of Q4 Orion sales and restate Meridian's previously issued Q4 interim financial information, treating the Orion transactions as if they never occurred because collectibility was always in doubt." — contains absolute language "never"
@@ -703,6 +703,8 @@
 - [AbsoluteLanguageValidator] P1-FD-001 Choice D: "It guarantees the data will always be completely accurate" — contains absolute language "always"
 - [AbsoluteLanguageValidator] P1-FD-002 Choice C: "It guarantees the data will always be completely accurate" — contains absolute language "always"
 - [AbsoluteLanguageValidator] P1-FD-011 Choice D: "The encryption was cryptographically sound but the key management architecture failed in multiple dimensions; the incident response team's HSM recommendation is necessary but insufficient — it addresses key storage but does not address the lack of network segmentation, the absence of key access auditing, and the failure to apply the principle that encryption keys should never be stored alongside the data they protect" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-A-007 Choice D: "Split the bond equally between current and non-current ($1,250,000 each) as a conservative presentation, regardless of the waiver terms — this approach is always appropriate when a covenant is violated" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-A-049 Choice A: "Use the expected value method because the $8M contract has multiple possible bonus outcomes — apply probability-weighting: 40% x $200K + 35% x $100K + 25% x $0 = $115K estimated bonus. This always provides the most accurate estimate" — contains absolute language "always"
 - [AbsoluteLanguageValidator] P1E-A-070 Choice A: "Never" — contains absolute language "never"
 - [AbsoluteLanguageValidator] P1E-A-078 Choice A: "Never" — contains absolute language "never"
 - [AbsoluteLanguageValidator] P1E-B-004 Choice A: "Is always zero" — contains absolute language "always"
@@ -1418,17 +1420,35 @@
 - [AbsoluteLanguageValidator] P1-FD-063 Choice A: "The COSO ERM cube exclusively" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-FD-064 Choice B: "The COSO ERM cube exclusively" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1-FD-065 Choice D: "The COSO ERM cube exclusively" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-001 Choice C: "Present using a classified balance sheet with all assets except inventory classified as current, since only inventory is tied to the extended operating cycle" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-005 Choice C: "Write down only the finished goods inventory by $42,000 because LCNRV does not apply to raw materials or WIP — these are measured at cost until the finished product is sold" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-006 Choice C: "Adopt LIFO for tax reporting only, retaining FIFO for financial reporting — this captures the tax savings without reducing reported earnings. The LIFO conformity rule only applies to public companies" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-007 Choice B: "Classify the bond as a current liability only for the $500,000 accelerated portion required by the waiver terms, with the remaining $2,000,000 remaining in non-current because the original maturity is still 8 years away" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-014 Choice A: "Classify as an operating lease because only one of the five criteria is met (lease term = 80% of economic life). The purchase option at 15% of fair value is not a bargain purchase option, and the specialized tooling criterion only applies if the asset has no alternative use to the lessor" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-014 Choice B: "Classify as a finance lease because the lease term covers the major part (80%) of the asset's remaining economic life, which is one of the five ASC 842 criteria — only one criterion must be met for finance lease classification. The 15% purchase option may also constitute a bargain if fair value at exercise date is expected to exceed the option price, further supporting finance lease treatment" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-014 Choice B: "Classify as a finance lease because the lease term covers the major part (80%) of the asset's remaining economic life, which is one of the five ASC 842 criteria — only one criterion must be met for finance lease classification. The 15% purchase option may also constitute a bargain if fair value at exercise date is expected to exceed the option price, further supporting finance lease treatment" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1E-A-014 Choice C: "Classify as a finance lease because all three conditions — lease term meets the major part threshold, purchase option, and specialized nature — are present. All three must be met for a finance lease" — contains absolute language "must"
 - [AbsoluteLanguageValidator] P1E-A-024 Choice A: "Only common shares" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-024 Choice B: "Only preferred stock" — contains absolute language "only/exclusively"
-- [AbsoluteLanguageValidator] P1E-A-028 Choice C: "Net income only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-028 Choice A: "Comprehensive income is $2,035,000 — net income is the primary driver of the $2,035K result. The foreign currency translation loss of $340K is the largest OCI component but represents only 16.2% of net income's magnitude" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-028 Choice C: "Comprehensive income = $2,715,000 because all OCI components are additive to net income — foreign currency translation losses are reported as an offset to assets, not as an OCI reduction. Only realized FX losses reduce comprehensive income" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-028 Choice D: "Comprehensive income = $2,410,000 — the pension prior service credit ($180K) is reported as a liability reduction and does not flow through OCI. Only the AFS gain ($95K) and FX loss ($340K) affect comprehensive income, producing net OCI of +$310K" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-029 Choice D: "Depreciated only if used in operations" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-030 Choice A: "Asset Group 1 only is impaired — carrying amount $320K exceeds undiscounted cash flows ($280K), so proceed to Step 2: impairment = $320K − $250K (fair value) = $70,000 loss. Asset Groups 2 and 3 pass Step 1, no impairment" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-030 Choice C: "All three groups are impaired because the fair value of each is below its carrying amount — the undiscounted cash flow test in Step 1 is interpretive only and does not determine whether impairment must be recorded" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-030 Choice C: "All three groups are impaired because the fair value of each is below its carrying amount — the undiscounted cash flow test in Step 1 is interpretive only and does not determine whether impairment must be recorded" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1E-A-030 Choice D: "Only Asset Group 1 is impaired ($70,000), but Asset Group 3's $50,000 difference should also be recognized in OCI (other comprehensive income) as an unrealized holding loss — impairment only applies when the carrying amount is at least 20% above undiscounted cash flows" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-032 Choice A: "Disclose only if SEC regulations explicitly require the disclosure" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-035 Choice B: "$8,500 — applying rates only to buckets 0–30 days (0.5%) and 31–60 days (2.0%), treating all receivables over 60 days as fully reserved ($28,000 direct write-off) — the direct write-off of older receivables replaces the need for a CECL estimate on those buckets" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-048 Choice B: "Only if total loss" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-049 Choice B: "Evaluate both methods: the expected value method produces $115K ($80K + $35K + $0) which better captures the range of outcomes since multiple possibilities exist. However, the constraint requires assessing whether a significant reversal is probable — if any tier is uncertain to be achieved, the estimate must be constrained. Recommend expected value = $115K, subject to constraint assessment" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1E-A-049 Choice C: "Use the most likely amount of $200,000 because there is a discrete probability distribution with a single most likely outcome — expected value is only appropriate for large portfolios of similar contracts" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-052 Choice D: "Only when asset is sold" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-055 Choice A: "Permanent differences only" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-055 Choice C: "Only taxable temporary differences" — contains absolute language "only/exclusively"
-- [AbsoluteLanguageValidator] P1E-A-063 Choice A: "Disclosed only" — contains absolute language "only/exclusively"
-- [AbsoluteLanguageValidator] P1E-A-063 Choice D: "Prospective only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-058 Choice C: "Recognize only the severance ($1.2M) at the communication date — the lease termination penalty is recognized when the landlord agrees to terminate, and the warehouse write-down is deferred until the warehouse is actually sold" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-067 Choice A: "Customer X qualifies for bill-and-hold revenue recognition because a substantive business reason exists for the delayed delivery (customer's warehouse undergoing renovation) and the inventory is segregated and ready for transfer. Customer Y does not qualify — lack of warehouse space is the customer's operational constraint, not a substantive reason, and the goods must also be segregated. Customer Z also does not qualify — the product is not yet complete and therefore cannot be identified as belonging to the customer" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1E-A-067 Choice B: "All three customers qualify for bill-and-hold treatment because each has a written contract and has requested delayed delivery — ASC 606-10-55-83 only requires a customer request for delivery delay, regardless of the reason" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-A-069 Choice A: "A liability only" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-B-005 Choice A: "Only fixed elements" — contains absolute language "only/exclusively"
 - [AbsoluteLanguageValidator] P1E-B-005 Choice D: "Only variable elements" — contains absolute language "only/exclusively"
@@ -1980,11 +2000,12 @@
 - [AmbiguityValidator] P1-FD-025 Choice B: "Concept drift: the physical relationship between sensor readings and machine failure has fundamentally changed. The new 5-axis machines are built differently, so vibration at 450 Hz that once predicted bearing failure may now be normal operating behavior. Remediation: rebuild the model with new feature engineering accounting for different machine physics." — contains vague qualifier matching /\bmay\b/
 - [AmbiguityValidator] P1-FD-025 Choice C: "Normal model decay: all ML models degrade over time as equipment ages, and the decline from 92% to 76% over 9 months is within expected tolerances. Remediation: continue monitoring the model and lower the alert threshold to reduce false alarms." — contains vague qualifier matching /\bnormal(?:ly)?\b/
 - [AmbiguityValidator] P1-FD-031 Choice D: "Continue normal operations and document the activity for next month's report" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1E-A-006 Choice B: "Retain FIFO because the net income reduction under LIFO would negatively affect the company's P/E ratio and may trigger compensation clawbacks tied to earnings targets — the tax savings are not worth the earnings impact" — contains vague qualifier matching /\bmay\b/
 - [AmbiguityValidator] P1E-A-008: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-A-014 Choice B: "Classify as a finance lease because the lease term covers the major part (80%) of the asset's remaining economic life, which is one of the five ASC 842 criteria — only one criterion must be met for finance lease classification. The 15% purchase option may also constitute a bargain if fair value at exercise date is expected to exceed the option price, further supporting finance lease treatment" — contains vague qualifier matching /\bmay\b/
 - [AmbiguityValidator] P1E-A-015: Choices C and D have high word overlap (80%) — may fail to discriminate
 - [AmbiguityValidator] P1E-A-017 Choice C: "Significant influence (typically 20-50%)" — contains vague qualifier matching /\btypical(?:ly)?\b/
 - [AmbiguityValidator] P1E-A-020: Choices B and C have high word overlap (100%) — may fail to discriminate
-- [AmbiguityValidator] P1E-A-030: Choices B and D have high word overlap (80%) — may fail to discriminate
 - [AmbiguityValidator] P1E-A-040: Choices B and C have high word overlap (80%) — may fail to discriminate
 - [AmbiguityValidator] P1E-A-071: Choices A and D have high word overlap (75%) — may fail to discriminate
 - [AmbiguityValidator] P1E-B-006: Choices A and C have high word overlap (100%) — may fail to discriminate
@@ -2368,16 +2389,11 @@
 - [DistractorSimilarityValidator] P1-DD-042: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1-DD-043: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1-DD-045: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
-- [DistractorSimilarityValidator] P1E-A-005: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1E-A-008: Choices A and D (distractor-distractor) share high similarity (100%)
-- [DistractorSimilarityValidator] P1E-A-012: Choices C and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1E-A-015: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1E-A-017: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1E-A-020: Choices B and C (distractor-distractor) share high similarity (100%)
-- [DistractorSimilarityValidator] P1E-A-025: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
-- [DistractorSimilarityValidator] P1E-A-028: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1E-A-029: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
-- [DistractorSimilarityValidator] P1E-A-030: Choices B and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1E-A-036: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1E-A-036: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
 - [DistractorSimilarityValidator] P1E-A-036: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination

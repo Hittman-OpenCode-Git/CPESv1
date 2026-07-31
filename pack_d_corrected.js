@@ -9023,8 +9023,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "While separating controllable from uncontrollable variances is a valid management reporting technique for individual performance evaluation, the plant manager's question is about understanding the total $41,580 labor cost overrun. The rate variance accounts for $21,780 — more than half the total. Excluding it from the analysis would understate the cost impact by 52% and leave management with an incomplete picture for budgeting future periods. Both components should be reported, with the rate variance clearly noted as externally driven by the contractual wage schedule.",
     "ExplanationWrongD": "Analyzing labor variances as a single combined amount obscures the distinct operational drivers that require different management responses. The $21,780 rate variance calls for updating the standard cost card and adjusting product pricing to reflect the permanently higher wage structure. The $19,800 efficiency variance calls for targeted training investment and mentoring programs for new hires. Combining both into a single 'turnover cost' figure prevents Meridian from taking targeted corrective action and violates the fundamental purpose of variance analysis: decomposing total deviations into individually actionable components.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -9034,7 +9034,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "labor rate and efficiency variance",
     "UniqueConceptKey": "C-D002-labor-rate-and-efficiency-variance",
     "LOSTag": "C Performance management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Bramblewood paid direct labor at 19 per hour instead of the 18 standard rate, and used 2,100 actual hours versus a 2,000 hour standard. What is the labor rate variance?",
@@ -9723,8 +9723,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "The direct materials price variance measures the difference between actual and standard price for raw materials. It is unrelated to sales mix analysis. The sales mix variance isolates the contribution margin effect of selling products in proportions different from the budgeted mix, holding total volume constant.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -9734,7 +9734,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "sales mix variance two-product calculation",
     "UniqueConceptKey": "C-D016-sales-mix-variance-two-product",
     "LOSTag": "C Performance management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Novara Industries budgeted sales of 5,000 units of Basic (standard CM $30 per unit) and 5,000 units of Deluxe (standard CM $55 per unit), for a total of 10,000 units. For the quarter, Novara actually sold 10,000 total units: 4,200 units of Basic (actual CM $28) and 5,800 units of Deluxe (actual CM $52). The controller needs to isolate the effect of the changed product mix on total contribution margin. Using standard contribution margins, what is the sales mix variance?",
@@ -9823,8 +9823,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "The three products did not contribute equally. Product X produced an unfavorable variance of $20,000 (selling 800 fewer units than the budgeted-mix allocation), Product Y produced a favorable variance of $24,000 (selling 600 more units), and Product Z produced a favorable variance of $12,000 (selling 200 more units). The magnitudes differ significantly.",
     "ExplanationWrongD": "The direct materials price variance measures the difference between actual and standard input prices. It relates to purchasing and manufacturing inputs, not to the composition of sales. The sales mix variance specifically captures the profit effect of shifts in the relative proportions of different products sold.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -9834,7 +9834,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "sales mix variance three-product analysis",
     "UniqueConceptKey": "C-D018-sales-mix-variance-three-product",
     "LOSTag": "C Performance management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Aspen Components budgets the following quarterly product mix: Product X — 4,000 units (standard CM $25), Product Y — 3,000 units (standard CM $40), and Product Z — 3,000 units (standard CM $60). Budgeted total units: 10,000. Actual quarterly results show total sales of 10,000 units broken down as: Product X — 3,200 units, Product Y — 3,600 units, and Product Z — 3,200 units. The controller is preparing a mix variance analysis using standard contribution margins. Which product's mix shift contributed most significantly to the total favorable sales mix variance?",
@@ -11123,8 +11123,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Not all three customers are unprofitable. Alpha generated $164,475 and Gamma generated $110,730 in customer-level profit. Only Beta is unprofitable ($26,300 loss). The recommendation to terminate all three would destroy $275,205 in combined profitable contribution, which is contrary to a customer profitability analysis that seeks to identify and manage the unprofitable customer while retaining and growing profitable relationships.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -11134,7 +11134,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "customer profitability multi-customer analysis",
     "UniqueConceptKey": "C-D044-customer-profitability-multi-customer",
     "LOSTag": "C Performance management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Hightower Distribution is conducting a customer profitability analysis. The controller has assembled the following data for three key accounts. Service cost drivers are: delivery at $85 per order, order processing at $42 per order line, and sales support at $120 per sales call. Revenue and cost data: Alpha — Revenue $520,000, COGS $320,000, 45 orders, 280 order lines, 12 sales calls, returns and allowances $8,500. Beta — Revenue $200,000, COGS $140,000, 120 orders, 850 order lines, 45 sales calls, returns and allowances $35,000. Gamma — Revenue $280,000, COGS $155,000, 30 orders, 180 order lines, 8 sales calls, returns and allowances $3,200. Which customer is the least profitable, and what is the recommended course of action?",
@@ -11323,8 +11323,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "This ranking places Crest first correctly, but then reverses Nova and Apex. Apex's ratio (26.8%) is lower than Nova's (31.4%) because Apex consumes substantially more service resources per dollar of revenue. Apex incurs $36,100 in customer-specific costs compared to Nova's $24,800, and Apex's COGS ratio (65%) is the highest of the three customers.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -11334,7 +11334,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "customer profitability ratio ranking",
     "UniqueConceptKey": "C-D048-customer-profitability-ratio-ranking",
     "LOSTag": "C Performance management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "TriStone Industries is evaluating the profitability of three major customers using activity-based customer costing. Customer-specific service costs and their drivers: delivery $72 per order, order processing $38 per order line, and sales support $105 per sales call. Customer data — Nova: Revenue $290,000, COGS $174,000, 42 orders, 258 order lines, 16 sales calls, returns $4,200. Apex: Revenue $440,000, COGS $286,000, 30 orders, 374 order lines, 22 sales calls, returns $12,000. Crest: Revenue $215,000, COGS $118,250, 22 orders, 168 order lines, 10 sales calls, returns $1,800. Compute the customer profitability ratio (customer-level profit divided by customer revenue) for each and rank from most profitable to least profitable.",
@@ -11824,8 +11824,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "No other income or expense items besides COGS and SG&A are presented in the comparative statements. The margin compression from 12.0% in 2023 to 9.0% in 2024 is fully explained by the change in COGS and SG&A as a percentage of revenue. The analysis should focus on the line items actually reported in the common-size presentation.",
     "ExplanationWrongD": "Break-even analysis determines the sales volume at which total revenue equals total costs, resulting in zero profit. It does not express income statement items as percentages of revenue. Common-size (vertical) analysis converts each line item to a percentage of a base figure—typically revenue—enabling meaningful comparisons across periods or companies.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -11835,7 +11835,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "common-size margin compression analysis",
     "UniqueConceptKey": "C-D058-common-size-margin-compression",
     "LOSTag": "C Performance management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Meridian Products' controller prepared the following comparative income statement summary for the board. 2024: Revenue $1,120,000, COGS $694,400, SG&A $324,800, Operating income $100,800. 2023: Revenue $1,000,000, COGS $580,000, SG&A $300,000, Operating income $120,000. Revenue grew 12%, but operating income declined to $100,800. The controller converted both years to common-size statements with revenue as 100%. Based on this common-size analysis, which expense category most explains the margin compression?",
@@ -12024,8 +12024,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "R&D spending has been stable at approximately 5% of revenue across all three years (5.1% in 2022, 5.0% in 2023, 5.2% in 2024). A stable R&D ratio does not drive trend changes in operating margin. In common-size analysis, a line item that maintains a constant percentage of revenue has no directional impact on margin trends.",
     "ExplanationWrongD": "Revenue is the base of the common-size analysis (set to 100% for each year), so revenue trends cannot be evaluated from the common-size percentages alone. Common-size analysis intentionally neutralizes scale effects to focus on structural changes in the cost and expense relationships. Separate horizontal analysis would be needed to assess revenue growth trends.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -12035,7 +12035,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "common-size multi-period trend analysis",
     "UniqueConceptKey": "C-D062-common-size-multi-period-trend",
     "LOSTag": "C Performance management",
-    "Difficulty": "Moderate",
+    "Difficulty": "Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Ridgepoint Manufacturing's controller prepared three years of common-size income statement data (all items expressed as a percentage of revenue). 2024: COGS 63.5%, Gross margin 36.5%, R&D 5.2%, SG&A 22.8%, Operating income 8.5%. 2023: COGS 61.2%, Gross margin 38.8%, R&D 5.0%, SG&A 24.0%, Operating income 9.8%. 2022: COGS 58.7%, Gross margin 41.3%, R&D 5.1%, SG&A 25.5%, Operating income 10.7%. Reviewing the three-year common-size trends, which observation describes the most significant structural shift in Ridgepoint's operations, and what is its most likely operational cause?",
@@ -12175,7 +12175,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -12224,8 +12224,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "VOH spending fails the dual-threshold test ($1,200 < $4,000 dollar threshold), so company policy explicitly excludes it from investigation regardless of net benefit. Moreover, the combined cost of $5,200 exceeds the $5,000 budget constraint — requesting an override to investigate a variance that fails the significance test undermines the control environment. The dual-threshold policy exists precisely to prevent investigation resources from being diluted across immaterial variances. Including VOH spending violates both the policy gate and the budget constraint.",
     "ExplanationWrongD": "Excluding DL efficiency because it 'barely' exceeds the dollar threshold misinterprets the purpose of a dual-threshold policy. The threshold is a binary gate: $4,500 exceeds $4,000, and 5.2% exceeds 3% — the variance qualifies. Once qualified, the decision turns on net benefit, and DL efficiency's $700 net benefit is positive. Leaving $600 of budget unspent while excluding a qualifying variance with positive net benefit is irrational under any resource-allocation framework. The dollar magnitude of the variance ($4,500U) is not 'marginal' — it represents a 5.2% deviation from standard that, if uncorrected, compounds over future periods.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -12324,8 +12324,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "This choice fails to apply either threshold. All six variances would be investigated at a cost far exceeding the expected benefit of resolving the three smallest variances. DM quantity ($2,800F, 3.3%) and VOH spending ($1,200F, 1.8%) fail BOTH thresholds. DL efficiency fails the dollar threshold ($4,500 < $5,000), and FOH budget fails the percentage threshold (4.7% < 5%). Investigating all variances without filtering is not cost-benefit analysis — it is indiscriminate investigation that wastes resources on variances unlikely to yield actionable insights.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -12335,7 +12335,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "variance investigation multi dual-threshold",
     "UniqueConceptKey": "C-D068-variance-investigation-multi-threshold",
     "LOSTag": "C Performance management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Stratford Industries' controller applies a cost-benefit framework to the monthly variance report. The investigation policy requires that a variance exceed BOTH a $5,000 absolute threshold AND a 5% of standard threshold to warrant investigation. The current month's variances are: Direct materials price — $6,200 unfavorable, 7.1% of standard; Direct materials quantity — $2,800 favorable, 3.3% of standard; Direct labor rate — $9,100 unfavorable, 9.4% of standard; Direct labor efficiency — $4,500 unfavorable, 5.2% of standard; Variable overhead spending — $1,200 favorable, 1.8% of standard; Fixed overhead budget — $5,800 unfavorable, 4.7% of standard. Under this dual-threshold cost-benefit framework, which variances most likely warrant investigation?",
@@ -12524,8 +12524,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Zero-based budgeting requires all expenses to be justified from a zero base each period. It is a budgeting methodology, not a management philosophy. Total quality management (TQM) is a company-wide philosophy emphasizing continuous improvement and customer satisfaction as the responsibility of every employee.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -12535,7 +12535,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "COQ profile quality approach",
     "UniqueConceptKey": "C-D072-coq-profile-quality-approach",
     "LOSTag": "C Performance management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Pinecrest Industries' annual cost of quality report shows the following: Prevention costs $52,000, Appraisal costs $78,000, Internal failure costs $210,000, External failure costs $340,000, for total quality costs of $680,000. The controller is benchmarking Pinecrest's quality management maturity against industry frameworks. Pinecrest's COQ profile — with conformance costs (prevention + appraisal) at 19.1% of total quality costs and failure costs at 80.9% — is most consistent with which quality management approach?",
@@ -12674,8 +12674,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Activity-based costing assigns overhead costs to products based on activities and cost drivers. It is a cost accounting methodology, not a management philosophy. TQM is a comprehensive approach emphasizing continuous improvement and customer focus at every level of the organization.",
     "ExplanationWrongD": "Lean manufacturing is defined by waste elimination, flow improvement, and pull systems, not by a specific COQ profile. However, this COQ profile is more precisely described by TQM maturity — the prevention-dominant cost structure (67.0% of total in prevention) with very low failure costs is the hallmark of a mature TQM organization that has internalized the principle that quality must be designed in, not inspected in. Lean organizations can have this profile, but the COQ distribution is a direct indicator of TQM implementation maturity rather than Lean methodology adoption.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -12685,7 +12685,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "COQ maturity TQM assessment",
     "UniqueConceptKey": "C-D075-coq-maturity-tqm-assessment",
     "LOSTag": "C Performance management",
-    "Difficulty": "Moderate",
+    "Difficulty": "Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Oakhaven Manufacturing's annual cost of quality report shows the following: Prevention costs $380,000 (supplier audits, design reviews, process capability studies, quality training), Appraisal costs $120,000 (in-process inspection, testing, calibration), Internal failure costs $45,000 (scrap and rework caught before shipment), and External failure costs $22,000 (warranty claims and customer returns). Total quality costs are $567,000. The controller is presenting this COQ profile to the board as evidence of the company's quality management maturity. How should this COQ profile be characterized?",
@@ -13424,8 +13424,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "This incorrectly reverses the sign of EVA. A positive EVA of $96,000 means NOPAT ($448,000) exceeds the dollar capital charge ($352,000), indicating the division is generating returns above its cost of capital and creating shareholder value. A negative EVA would mean NOPAT is less than the capital charge. The computation here erroneously treats the relationship as Capital Charge minus NOPAT rather than NOPAT minus Capital Charge.",
     "ExplanationWrongD": "EVA can be computed directly from the information provided because all three required inputs are given: NOPAT = $448,000, Invested Capital = $3,200,000, and WACC = 11%. The computation is EVA = $448,000 - ($3,200,000 x 0.11) = $448,000 - $352,000 = $96,000. No additional data such as divisional tax rate, depreciation adjustments, or market value of capital is needed to compute this basic EVA.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -13435,7 +13435,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "EVA calculation shareholder value",
     "UniqueConceptKey": "C-D090-eva-calculation-shareholder-value",
     "LOSTag": "C Performance management",
-    "Difficulty": "Moderate",
+    "Difficulty": "Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Westgate Division reports net operating profit after tax (NOPAT) of $448,000, invested capital of $3,200,000, and a weighted average cost of capital (WACC) of 11%. The corporate controller is evaluating the division using economic value added (EVA). What is the division's EVA, and does it create shareholder value?",
@@ -13574,8 +13574,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Activity-based costing assigns costs to products and services based on resource-consuming activities. It is a cost measurement methodology. Value-based management is a broader framework that ties strategy, performance measurement, and compensation to the objective of maximizing shareholder value, often using EVA as the key metric.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -13585,7 +13585,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "EVA NOPAT adjustments computation",
     "UniqueConceptKey": "C-D093-eva-nopat-adjustments",
     "LOSTag": "C Performance management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Northfield Division reports GAAP operating income of $620,000 for the year. The corporate controller is computing EVA and has identified the following adjustments: Goodwill amortization of $35,000 included in operating income must be added back for EVA purposes because it is a non-cash charge that does not reflect current economic value consumption. A LIFO reserve increase of $28,000 must be added back to convert LIFO-based inventory costs to a current-cost basis more representative of economic reality. Northfield's effective tax rate is 25%, invested capital is $4,500,000, and the WACC is 10%. Compute Northfield's NOPAT and EVA, incorporating the required adjustments on an after-tax basis.",
@@ -14024,8 +14024,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "This computation divides budgeted overhead ($420,000) by actual direct labor hours (26,500) rather than budgeted direct labor hours (28,000). A predetermined overhead rate must be computed using budgeted (denominator) activity, not actual activity. Using actual hours in the denominator produces a rate of $15.85/DLH and applied overhead of $420,025, which incorrectly treats the predetermined rate as an ex-post computation rather than an ex-ante planning tool.",
     "ExplanationWrongD": "This computation divides actual overhead ($398,000) by actual hours (26,500) to produce $15.02/DLH. This is an actual overhead rate, not a predetermined rate. Normal costing requires a predetermined rate using budgeted overhead and budgeted activity. An actual rate would defeat the purpose of normal costing, which is to apply overhead during the period without waiting for year-end actual costs.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -14035,7 +14035,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "normal costing OH rate under overapplied",
     "UniqueConceptKey": "D-D002-normal-costing-oh-rate-calculation",
     "LOSTag": "D Cost management",
-    "Difficulty": "Moderate",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "At the start of the year, Ashworth Manufacturing prepared the following overhead budget: budgeted manufacturing overhead $420,000, budgeted direct labor hours 28,000, and budgeted machine hours 12,000. Ashworth uses direct labor hours as its overhead allocation base. At year-end, actual manufacturing overhead totaled $398,000 and actual direct labor hours were 26,500. Compute the predetermined overhead rate, the amount of overhead applied during the year, and the over- or underapplied overhead balance.",
@@ -14124,8 +14124,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Variable costing treats fixed manufacturing overhead as a period cost expensed when incurred, not as a product cost. The stem describes applying overhead using a predetermined rate based on budgeted costs and comparing applied to actual at year-end. This defines normal costing—actual costing uses actual rates.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -14135,7 +14135,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "overhead proration underapplied COGS adjustment",
     "UniqueConceptKey": "D-D004-overhead-proration-material-underapplied",
     "LOSTag": "D Cost management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Venice Manufacturing's controller Aaron Beckett is reviewing year-end overhead disposition with the audit committee. Venice uses normal costing with machine hours as the allocation base. Actual manufacturing overhead was $152,400 against applied overhead of $140,000 (14,000 actual machine hours × $10 predetermined rate), yielding $12,400 underapplied — 8.9% of applied overhead. The controller has always closed underapplied overhead entirely to Cost of Goods Sold, arguing it is simpler and that Venice's lean inventory levels make the distortion negligible. This year, however, the external auditor flagged the practice because the applied overhead in ending accounts is: Work in Process $14,200, Finished Goods $36,800, and Cost of Goods Sold $89,000. The auditor contends the amount is material and GAAP requires proration. The audit committee needs an analysis of how the controller's write-off method versus GAAP proration affects reported gross margin and inventory valuation.",
@@ -14174,8 +14174,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Total account balances are not the correct proration basis because the underapplication distortion affects only the overhead component, not the direct materials and labor that also reside in each account. COGS has $559,000 in total costs but only $89,000 in applied overhead — using the full $559,000 as the allocation weight gives COGS 65.0% of the proration ($8,060) instead of the correct 63.6% ($7,883). While the dollar difference appears small ($177), the principle matters: GAAP specifically requires proration based on the overhead applied in each account. Using total balances could materially distort allocation if WIP had an unusually high direct-material component, for example.",
     "ExplanationWrongD": "Underapplied overhead from normal costing is a product cost adjustment, not a period expense. It arises because the predetermined rate under-absorbed actual overhead costs — the costs are still product costs; they were simply under-allocated. Correcting the under-allocation through proration to WIP, FG, and COGS properly assigns the previously undercharged product costs to the accounts where those costs belong. Reporting underapplied overhead as a separate line item below gross margin would contravene absorption costing, which requires all manufacturing costs — including corrected overhead — to flow through inventory and COGS. This treatment is sometimes seen in variable costing frameworks but is not GAAP for external reporting.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -15024,8 +15024,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Using dollar value of purchases as the driver conflates economic significance with transaction-processing effort. While monetary magnitude matters for value-based allocation in financial reporting contexts, ABC is a cost management tool that assigns resource costs based on what activities consume, not what those activities purchase. A $100,000 single-line-item order and a $100,000 50-line-item order impose dramatically different workloads on the purchasing department, yet would receive identical cost assignments under this criterion. Under the IMA's ABC framework, the cost driver must reflect the activity's consumption pattern, not the economic value of the transaction. This approach would systematically over-cost high-value, low-effort purchases and under-cost low-value, high-effort purchases.",
     "ExplanationWrongD": "Justifying line-item selection because a lower activity rate indicates greater cost efficiency reverses the logic of ABC design. The activity rate is an output of driver selection, not a criterion for it. Selecting a driver because it produces a lower rate is equivalent to choosing a measurement tool because it produces more favorable numbers. The R-squared of 0.47 for line items means that more than half the variation in purchasing costs is unexplained by this driver, creating systematic cost distortions. ABC's conceptual foundation, as established by CAM-I (Consortium for Advanced Manufacturing-International) and Kaplan, requires that the driver faithfully represents the consumption of activity resources. Cost efficiency analysis is a separate management exercise that follows from, not precedes, accurate cost measurement.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -15035,7 +15035,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "ABC driver selection R-squared evaluation",
     "UniqueConceptKey": "D-D022-abc-driver-selection-correlation",
     "LOSTag": "D Cost management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Prescott Industries' controller is designing an ABC system for the purchasing department. The purchasing activity cost pool is $180,000. Two potential cost drivers are under consideration: number of purchase orders (1,200 POs annually, R-squared = 0.82 with actual resource consumption) and number of line items (4,500 annually, R-squared = 0.47). A third proposal suggests using the dollar value of purchases as the driver, arguing that monetary magnitude better captures economic significance. The controller must recommend which driver-selection criterion should govern the ABC design. Under ABC principles, which recommendation is most appropriate?",
@@ -15274,8 +15274,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "A 15.0% margin of safety ratio means implantables can absorb only a 15% sales decline before reaching break-even — a narrow cushion in medical device markets subject to sudden regulatory changes, reimbursement rate adjustments, and competitor product launches. There is no universal '10% adequacy threshold' in management accounting; the appropriate target depends on industry volatility, fixed cost intensity, and the company's risk tolerance. Furthermore, the reallocation is not risk-neutral: total dollar margin of safety increases by $96,000 and the two lines' risk profiles become better balanced.",
     "ExplanationWrongD": "Comparing absolute break-even points across product lines of different sizes is fundamentally misleading. Implantables' $2,720,000 break-even represents 85% of its budgeted sales, leaving only a 15% margin of safety. Instruments' $3,360,000 break-even is only 70% of its budgeted sales, providing a 30% cushion — twice as strong on a relative basis. The margin of safety ratio, not the absolute break-even dollar amount, is the correct measure of downside risk. A product line with a $50M break-even on $100M in sales (50% MoS) is far safer than one with a $2M break-even on $2.1M in sales (4.8% MoS), despite the latter having the lower absolute break-even.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -15285,7 +15285,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "margin of safety calculation",
     "UniqueConceptKey": "D-D027-margin-of-safety-calculation",
     "LOSTag": "D Cost management",
-    "Difficulty": "Moderate-Easy",
+    "Difficulty": "Moderate",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Bellcourt budgets sales of 24,000 units for a product line. Break-even volume is 18,500 units. What is the margin of safety in units?",
@@ -15525,7 +15525,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongD": "Replacing variable costs with fixed-cost equipment increases, not decreases, operating leverage. Higher fixed costs relative to variable costs mean operating income becomes more, not less, sensitive to changes in sales volume.",
     "question_state": "Certified",
     "DifficultyScore": 1,
-    "CognitiveLevel": "Analyze"
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -15774,8 +15774,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "$70.21 incorrectly compounds the reduction rate using (0.97)^6 for six periods (six quarters instead of four), producing an excessively aggressive target. The reduction applies quarterly over one year, which is four compounding periods, not six.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -15785,7 +15785,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "kaizen costing compound reduction",
     "UniqueConceptKey": "D-D037-kaizen-costing-compound-reduction",
     "LOSTag": "D Cost management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Marlin Industries applies kaizen costing to its primary product line. The current manufacturing cost is $85.00 per unit. The kaizen target is a 3% cost reduction per quarter for the upcoming year (four quarters). Assuming the reduction is applied multiplicatively each quarter to the prior quarter's cost level, what is the year-end target cost per unit?",
@@ -15924,8 +15924,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "$75.66 applies only a single quarter's reduction to each component: $42 x 0.95 + $28 x 0.97 + $15 x 0.98 = $39.90 + $27.16 + $14.70 = $81.76. Actually, this computes to $81.76 for one quarter. The correct four-quarter kaizen target compounds each component over four periods. Single-period application captures only the first step of the continuous improvement process.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -15935,7 +15935,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "kaizen multi-component compound",
     "UniqueConceptKey": "D-D040-kaizen-multi-component",
     "LOSTag": "D Cost management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Windsor Products applies kaizen costing with component-specific reduction targets. The current unit cost structure is: direct materials $42.00 (target: 5% reduction per quarter), direct labor $28.00 (target: 3% reduction per quarter), and manufacturing overhead $15.00 (target: 2% reduction per quarter). Each reduction compounds multiplicatively over four quarters. What is the year-end kaizen target cost per unit?",
@@ -16024,8 +16024,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "$12.27 uses only the March data point ($13,500 / 1,100 = $12.27), ignoring the high-low comparison entirely. The high-low method requires using both the highest and lowest activity observations to compute the variable rate per unit. Using a single data point confuses average cost (which includes fixed costs) with the incremental variable cost.",
     "ExplanationWrongD": "$3.90 results from dividing the hour difference by itself without properly incorporating costs. The high-low method computes variable cost as the change in total cost divided by the change in activity level: ($17,400 - $13,500) / (1,600 - 1,100).",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -16035,7 +16035,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "high-low method variable cost per unit",
     "UniqueConceptKey": "D-D042-high-low-method-vc-per-hour",
     "LOSTag": "D Cost management",
-    "Difficulty": "Moderate",
+    "Difficulty": "Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Elmdale Maintenance tracked machine hours and maintenance costs for the first six months: Jan (1,200 hrs, $14,400), Feb (1,450, $16,200), Mar (1,100, $13,500), Apr (1,600, $17,400), May (1,350, $15,300), Jun (1,520, $16,500). High point: Apr (1,600 hrs, $17,400). Low point: Mar (1,100 hrs, $13,500). Using the high-low method, what is the variable cost per machine hour?",
@@ -16124,8 +16124,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Using the high-low prediction formula Y = $4,920 + $7.80X with 1,750 machine hours: Y = $4,920 + $7.80(1,750) = $4,920 + $13,650 = $18,570. The $21,000 amount does not correspond to any correct calculation using the high-low cost equation provided.",
     "question_state": "Certified",
-    "DifficultyScore": 3,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -16135,7 +16135,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "high-low method cost prediction",
     "UniqueConceptKey": "D-D044-high-low-method-prediction",
     "LOSTag": "D Cost management",
-    "Difficulty": "Moderate",
+    "Difficulty": "Moderate-Easy",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Elmdale Maintenance has determined that its monthly maintenance costs follow the high-low cost equation Y = $4,920 + $7.80X, where Y is total maintenance cost and X is machine hours. Predict the total maintenance costs at 1,750 machine hours.",
@@ -16274,8 +16274,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "The direct method completely ignores all services exchanged between service departments, allocating service costs only to production departments. The reciprocal method, in contrast, uses simultaneous equations to fully recognize services provided between service departments in both directions, producing the most accurate cost allocations.",
     "ExplanationWrongD": "This amount results from applying incorrect percentages under the direct method or from miscomputing the production department shares. The reciprocal method correctly uses simultaneous equations to determine each service department's fully loaded cost, yielding $274,286 for IT and $228,572 for HR, with Production A receiving 50% of IT and 40% of HR.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -16285,7 +16285,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "reciprocal method production A allocation",
     "UniqueConceptKey": "D-D047-reciprocal-method-computation",
     "LOSTag": "D Cost management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Briarwood Manufacturing has two service departments: IT (cost $240,000, usage: 25% by HR, 50% by Production A, 25% by Production B) and HR (cost $160,000, usage: 15% by IT, 40% by Production A, 45% by Production B). Using the reciprocal method, what is the total cost allocated to Production A?",
@@ -16374,8 +16374,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "While the $6,723 difference equals approximately 1.6% of the product line's $420,000 operating income, applying a bright-line 5% materiality threshold without considering qualitative factors is oversimplified. Materiality under U.S. GAAP (per FASB Concepts Statement No. 8) and in management accounting practice is not a fixed percentage rule — it is a judgment about whether an item's magnitude would influence the decisions of a reasonable user. At 1.6% of operating income, most practitioners would consider this difference immaterial, particularly given the additional complexity of the reciprocal method. The controller should explain that while the 5% threshold is a common rule of thumb, the definitive test is whether knowing the more precise number would change a business decision. At $6,723 on $2.8 million in revenue, it likely would not.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -16385,7 +16385,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "reciprocal vs direct method comparison",
     "UniqueConceptKey": "D-D049-method-comparison-reciprocal-vs-direct",
     "LOSTag": "D Cost management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Briarwood's controller is deciding between the direct method and the reciprocal method for allocating service department costs to production departments for pricing decisions. Data: IT $240K (25% to HR, 50% to ProdA, 25% to ProdB), HR $160K (15% to IT, 40% to ProdA, 45% to ProdB). Under the reciprocal method, Production B receives $6,723 more than under the direct method. The CFO asks: at what dollar threshold would this $6,723 difference be considered material enough to justify the additional complexity of the reciprocal method? The product line in question generates annual revenue of $2.8 million with a 15% operating margin. Which recommendation should the controller present?",
@@ -16474,8 +16474,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "This option reverses the stated step-down order. The specification clearly states that Cafeteria is allocated first, then Maintenance, then IT. The controller must explain to the production manager why, under this specific ordering, Production A receives more total allocation despite B's higher share of Maintenance. While changing the step-down sequence would alter the outcome — and firms sometimes test different sequences to assess sensitivity — the controller's task is to explain the result of the stated order, not to propose changing it. The step-down method's sensitivity to ordering sequence is itself a methodological limitation that the controller should acknowledge: the allocation to each production department depends on where each service department falls in the sequence, meaning different ordering assumptions produce different department cost totals.",
     "ExplanationWrongD": "Under the direct method, Production B would receive a DIFFERENT allocation from both the step-down method and from Production A. The direct method ignores inter-service flows entirely: Cafeteria would allocate only to A (45/85 = 52.94%) and B (40/85 = 47.06%); Maintenance only to A (35/80 = 43.75%) and B (45/80 = 56.25%); IT only to A (55%) and B (45%). The direct method produces its own biases — it does not simply reverse the step-down outcome. Claiming that B would receive more under the direct method may or may not be true; what IS true is that both the step-down and direct methods are imperfect approximations. The reciprocal method is the only method that fully captures inter-service department cost flows and produces theoretically correct allocations regardless of ordering.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -16485,7 +16485,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "step method allocation production department",
     "UniqueConceptKey": "D-D051-step-method-allocation",
     "LOSTag": "D Cost management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Northfield Manufacturing allocates three service departments using the step-down method. Data: Cafeteria $120K, Maintenance $180K, IT $90K. Service usage: Cafeteria→Maintenance 10%, IT 5%, ProdA 45%, ProdB 40%. Maintenance→IT 20%, ProdA 35%, ProdB 45%. IT→ProdA 55%, ProdB 45%. The step order is Cafeteria first, then Maintenance, then IT. The production manager for Department B (which receives 45% of Maintenance but only 45% of IT) questions why Department A receives more total allocation despite B consuming a higher share of maintenance. The controller must explain the sequencing effect to management. Which explanation correctly addresses the production manager's concern?",
@@ -16524,8 +16524,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "The gross margin approach treats only production costs as variable, classifying COGS ($380,000) as variable while treating variable SG&A ($92,000) as fixed. This methodological error inflates the ratio to 59.6% ($560,000/$940,000) and produces a forecast of $272,309 — substantially higher than the contribution margin projection. The flaw is conceptual: variable SG&A costs like sales commissions and shipping do vary with sales volume and must be included in the variable cost pool for CVP forecasting. Using gross margin instead of contribution margin for forecasting systematically overstates projected profitability because it understates the variable cost base. The contribution margin income statement format exists precisely because GAAP income statements (which report gross margin) do not separate costs by behavior.",
     "ExplanationWrongD": "Treating all costs as variable and applying the 12% growth to CM ($468,000 x 1.12) while reclassifying fixed costs ($355,000) as variable produces a fundamentally distorted forecast. This approach assumes that cost behavior is irrelevant to forecasting — that every dollar of cost scales with every dollar of sales. In reality, fixed costs (depreciation, rent, salaried personnel) do not change with sales volume in the short run. The contribution margin methodology is the standard precisely because it respects cost behavior: variable costs scale proportionally with sales, while fixed costs remain constant in the relevant range. Ignoring this distinction produces forecasts that are neither reliable nor useful for management decision-making.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -16535,7 +16535,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "CM ratio sales increase projection",
     "UniqueConceptKey": "D-D052-cm-ratio-sales-projection",
     "LOSTag": "D Cost management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Fairmont Company's controller prepared a contribution margin income statement: Sales $940,000, Variable production $380,000, Variable SG&A $92,000, Contribution margin $468,000, Fixed production $210,000, Fixed SG&A $145,000, Operating income $113,000. The CFO asks for a forecast of next quarter's operating income assuming a 12% sales increase and no change in cost structure. Three analysts propose different forecasting methods: (1) Apply the 12% growth rate directly to current operating income; (2) Use the gross margin approach treating COGS as the only variable cost; (3) Use the contribution margin approach. The controller must recommend which forecasting method provides the most reliable projection. Which recommendation should the controller present?",
@@ -17024,8 +17024,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Using only the lowest-CM product (Y at $33/unit, BEP = 14,182 units) as the ultra-conservative worst-case scenario commits the same methodological error as the high-CM-only approach, in the opposite direction. It assumes Product X — which generates 60% of sales and has a higher CM of $42 — makes no contribution to covering fixed costs. This is not a realistic worst-case scenario; it is an abandonment of both products' sales reality. The weighted-average CM approach is the standard not because it is the most or least conservative, but because it is the most accurate representation of how both products jointly contribute to profitability. Conservatism in accounting judgments applies to estimates of uncertain future outcomes, not to the selection of an analytical methodology.",
     "ExplanationWrongD": "Using a weighted-average revenue ($110 per unit) instead of weighted-average contribution margin ($38.40) is a fundamental misapplication of CVP logic. Revenue includes recovery of variable costs, which are not available to cover fixed costs. The break-even formula requires contribution margin because only CM represents the pool of funds that covers fixed costs and generates profit. A weighted-average revenue approach would produce a BEP of 4,255 units ($468,000/$110) — dramatically lower than the correct 12,188 units. This methodology error would lead management to believe the company breaks even at roughly one-third of the actual required volume, creating significant risk of under-production and operating losses. The distinction between revenue and contribution margin is not a rounding nuance; it is the conceptual core of CVP analysis.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -17035,7 +17035,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "evaluate product mix shift tradeoff BEP vs total CM",
     "UniqueConceptKey": "D-D062-evaluate-product-mix-shift-tradeoff-bep-vs-cm",
     "LOSTag": "D Cost management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Westbrook Company sells two products in a constant sales mix. Product X sells for $120 per unit with variable costs of $78 (CM = $42) and represents 60% of unit sales. Product Y sells for $95 per unit with variable costs of $62 (CM = $33) and represents 40% of unit sales. Total fixed costs are $468,000. The current weighted-average contribution margin (WACM) is $38.40, producing a break-even point of 12,188 units and operating income of $151,200 at the forecasted 16,125 units. The marketing director, Angela Frost, has proposed a campaign to shift the product mix toward the higher-priced Product X, targeting a new mix of 75% X / 25% Y. The campaign would cost $52,000 annually. Frost projects that the campaign would not change total unit sales. However, the operations manager warns that Product X requires more skilled labor and a shift to 75% X would create production bottlenecks, adding $38,000 in overtime and expediting costs. Which recommendation should the controller present?",
@@ -17074,8 +17074,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "Phasing out Product Y eliminates 6,450 units (40% of 16,125) at $33 CM = $212,850 in contribution, while saving only $38,000 in bottleneck costs and adding $0 in campaign costs. Even at the higher $42 CM for Product X, replacing Y's volume with X would require 5,071 additional X units (($33 x 6,450) / $42) just to maintain current CM — requiring total X volume of 14,746, which would leave Y's former customers unserved. A candidate selecting this may be focused on reducing complexity without quantifying the CM sacrificed.",
     "ExplanationWrongD": "Negotiating the campaign cost down to $35,000 reduces the income decline from $68,231 to $51,231 — a smaller loss, but still a loss. The controller's recommendation must be based on best available estimates, not hypothetical renegotiation. Recommending approval conditional on cost reduction subordinates the analytical decision to an uncertain future event. A candidate may be attempting to salvage a proposal they favor rather than evaluating it objectively.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate"
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply"
   },
   {
     "Part": 1,
@@ -17085,7 +17085,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "cvp analysis multiple products",
     "UniqueConceptKey": "D-D063-cvp-analysis-multiple-products",
     "LOSTag": "D Cost management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Netherfield sells two products with different contribution margins and wants to compute a break-even point in total units. What must be assumed to compute a meaningful combined break-even point?",
@@ -17124,8 +17124,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Equal selling prices are not required for multi-product CVP analysis. The critical assumption is a constant sales mix—that the relative proportions of each product sold remain stable. Without a constant mix, the weighted-average contribution margin changes with each unit sold, making a single break-even point meaningless.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Analyze"
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Understand"
   },
   {
     "Part": 1,
@@ -17135,7 +17135,7 @@ var MCQ_BANK_D = [
     "MicroTopic": "multi-product target profit units",
     "UniqueConceptKey": "D-D064-multi-product-target-profit",
     "LOSTag": "D Cost management",
-    "Difficulty": "Difficult",
+    "Difficulty": "Moderate",
     "ItemType": "MCQ",
     "ItemStyle": "single-select",
     "Stem": "Using the same data from Westbrook Company: Product X sells for $120, VC $78, mix 60%. Product Y sells for $95, VC $62, mix 40%. Fixed costs $468,000. Management now wants to earn a target operating income of $185,000. Assuming a constant sales mix, how many total units must be sold to achieve this target profit, and what is the breakdown by product?",
@@ -17424,8 +17424,8 @@ var MCQ_BANK_D = [
     "ExplanationWrongC": "The efficiency and rate variances are likely interconnected: paying overtime premiums (.80 vs. .00) may be a consequence of new hires working slower (1,300 hours vs. 1,200 standard), requiring overtime to meet production schedules. Investigating them in isolation would miss this potential relationship. A holistic variance analysis examines interactions between efficiency, rate, and volume effects -- a key skill for the management accountant interpreting production cost data.",
     "ExplanationWrongD": "No, management by exception does not mandate a rigid 10% threshold. Organizations set investigation criteria based on materiality, pattern, controllability, and strategic importance. The 8.3% efficiency gap (100 excess hours) and 5.3% rate gap (.80 above standard) may individually fall below an arbitrary 10% cutoff, but together they represent ,540 in unfavorable cost -- real money that affects product margins. A competent controller evaluates the full context, not just a single-number threshold.",
     "question_state": "Certified",
-    "DifficultyScore": 4,
-    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
     "upgrade_note": "S886 Analyze/Evaluate upgrade - 2026-07-28"
   },
   {
@@ -23519,9 +23519,9 @@ var MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Option A recommends adding a second factor (SMS code) to complement the existing two factors (password + digital certificate). SMS-based one-time codes are widely used but have known vulnerabilities: SIM swapping, SS7 network interception, and social engineering of mobile carriers. More importantly, adding SMS OTP does not address the specific vulnerability in the described attack. An attacker who has compromised the workstation and obtained the user's password and digital certificate can also intercept SMS codes if the user receives them on the same compromised device (many users access SMS through their computer) or through a SIM-swap attack coordinated with the workstation compromise. The correct remediation should address the authentication architecture, not simply add more factors.",
-    "ExplanationWrongB": "Option B correctly recommends moving from password-based authentication but recommends the wrong technology. Biometric authentication (fingerprint, facial recognition) addresses the 'something you are' factor — it replaces or supplements passwords. However, biometric authentication does not address the specific vulnerability: a compromised workstation that can intercept authentication credentials. If an attacker has installed a keylogger on the workstation, they can capture the password. If they have also compromised the certificate store, they have both factors. Biometric data captured at the workstation level (e.g., a fingerprint scanner) could also be intercepted by malware that hooks into the biometric driver. The root problem is not the type of authentication factors but the trustworthiness of the endpoint performing the authentication.",
-    "ExplanationWrongC": "Option C proposes a hardware token solution that addresses 'what you have' (the FIDO2 key) and reduces reliance on passwords. However, FIDO2/WebAuthn primarily solves the problem of phishing-resistant authentication — it binds the authentication to the origin (website domain), preventing an attacker from using stolen credentials on a fake website. The scenario describes a compromised workstation, not a phishing attack. If the attacker controls the user's workstation, they can potentially intercept the FIDO2 authentication ceremony at the browser level or use the authenticated session after the user has logged in. FIDO2 is an important security improvement for credential phishing but does not solve the 'untrusted endpoint' problem described in the scenario.",
+    "ExplanationWrongA": "Choice A is incorrect because structured data is the category that fits neatly into predefined rows and columns — as in the relational database tables referenced in the stem. The stem asks about the second category, which is data from emails, videos, and social media posts that does not conform to a fixed schema or tabular format. A candidate may reverse the two categories or assume all business data qualifies as structured.",
+    "ExplanationWrongB": "Choice B is incorrect because metadata is data about data — attributes such as creation date, author, file size, and data lineage — not the content itself. The stem describes actual content files (emails, videos, posts), not descriptive tags about those files. A candidate may confuse information about data with the underlying data content.",
+    "ExplanationWrongC": "Choice C is incorrect because master data represents key business entities such as customers, products, suppliers, and chart of accounts that are shared across systems. Emails, videos, and social media content are not master data records but rather unstructured content that does not fit predefined schemas. A candidate may conflate any non-transactional data category with master data.",
     "ExplanationWrongD": "",
     "question_state": "Active",
     "DifficultyScore": 4,
@@ -23792,9 +23792,9 @@ var MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Option A recommends preserving both legacy taxonomies as a risk mitigation strategy, which directly contradicts the purpose of master data management. Keeping both the 6-region and product-family structures alongside a 'unified view' creates three representations of the same business entities — increasing complexity and confusion, not reducing it. The scenario explicitly states that inconsistent regional hierarchies caused the Northeast revenue gap in the quarterly report. Preserving the legacy structures means the underlying data inconsistency persists; the unified view becomes a reconciliation layer that must continuously translate between incompatible taxonomies. This is a data architecture anti-pattern: adding a layer on top of inconsistent sources does not resolve the inconsistency — it defers it to the presentation layer. The board's risk concern is valid, but the appropriate risk mitigation is to validate the MDM model with business stakeholders before cutover, not to maintain legacy taxonomies indefinitely.",
-    "ExplanationWrongB": "Option B correctly identifies that a 'big bang' approach carries risk but proposes the wrong alternative. A phased migration by legacy system means the company operates with two regional hierarchies and two product taxonomies during the transition — exactly the inconsistency the MDM program was chartered to eliminate. During the phased period, every cross-system report, every consolidated financial statement, and every customer-facing communication would need to reconcile between the legacy and MDM taxonomies. This creates a prolonged period of data inconsistency that is operationally more complex and error-prone than a validated cutover. The correct risk-mitigated approach for an MDM deployment is not a phased system-by-system migration but a validated parallel run where the MDM model is tested against production data, business rules are verified, and the cutover occurs after validation — not a gradual system-by-system retirement of legacy taxonomies.",
-    "ExplanationWrongC": "Option C recommends deferring the decision indefinitely while technology evolves — a governance failure. The quarterly report discrepancy was specifically cited as the trigger for the MDM program, meaning inconsistent master data is already causing financial reporting errors that could affect investor confidence. The AI/ML-based matching proposal does not solve the fundamental problem: matching algorithms can probabilistically link 'Northeast' to 'New England + Mid-Atlantic,' but they cannot decide what the authoritative regional structure should be. That is a business governance decision, not a technology problem. Waiting for AI to mature delegates a governance responsibility to a future technology capability. The board should make the governance decision now (what is the authoritative regional structure?) and implement MDM to enforce it, whether or not AI-assisted matching is used during the transition.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "",
     "ExplanationWrongD": "",
     "question_state": "Active",
     "DifficultyScore": 5,
@@ -23994,13 +23994,13 @@ var MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Option A identifies bot proliferation as the primary issue and recommends limiting bot count. However, the scenario's control deficiencies are not caused by too many bots — they are caused by a complete absence of governance over bot lifecycle, access management, change control, and segregation of duties. Limiting bot count to 20 does not address any of the identified control failures: (1) it does not fix the bot with domain admin access, (2) it does not ensure bots are deactivated when employees leave, (3) it does not prevent bot owners from making production changes without testing, and (4) it does not address the segregation of duties gap where bots process vendor payments and also modify vendor master data. A cap on bot count is a governance theater response — it creates the appearance of control while leaving all the substantial control failures unaddressed.",
+    "ExplanationWrongA": "Choice A is incorrect because predictive analytics uses historical data and statistical models to forecast future outcomes and identify trends. The stem describes maintaining a single, authoritative, consistent source of core customer and product information — a foundational data governance function, not a forward-looking analytical activity. A candidate may confuse any data-related term with the specific discipline described.",
     "ExplanationWrongB": "",
-    "ExplanationWrongC": "Option C correctly identifies process documentation as important but misprioritizes it. Documenting bot processes is a foundational governance activity, but it is not the triggering event that would have prevented or detected the control failures described. Documenting what the AP bot does does not prevent it from having domain admin access — access control requires an authorization framework and periodic access reviews, not documentation. Documenting that the vendor-master bot can also change bank account details does not address the segregation of duties conflict — the conflict exists regardless of whether it is documented. Process documentation is necessary but insufficient; it must be paired with controls that enforce the documented processes. Furthermore, implementing documentation across 34 undocumented bots would take months, while deactivating bots belonging to departed employees and revoking unnecessary privileged access are immediate risk-reduction actions.",
-    "ExplanationWrongD": "",
+    "ExplanationWrongC": "Choice C is incorrect because data mining searches large datasets to discover hidden patterns, correlations, and relationships. Master data management focuses on establishing and governing the quality, consistency, and authority of reference data — which is a prerequisite for effective data mining but serves a distinct purpose. A candidate may conflate data discovery with data stewardship.",
+    "ExplanationWrongD": "Choice D is incorrect because robotic process automation (RPA) automates repetitive, rules-based manual tasks such as data entry between systems using software bots. RPA does not establish or govern a single, authoritative source of core business data — it moves data between systems, while master data management defines what data is authoritative. The stem describes maintaining consistent customer and product information across multiple systems, which is the defining purpose of master data management.",
     "question_state": "Active",
-    "DifficultyScore": 5,
-    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Understand",
     "upgrade_note": "S899 Phase 1 — Evaluate/Very Difficult replacement for archived P1-FD-050 (DL-012 rotation clone)"
   },
   {

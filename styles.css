@@ -4100,3 +4100,94 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   font-size: 1rem;
   font-weight: 700;
 }
+
+/* ===== MAY-022 — Production Integration: Recommendation Panel ===== */
+.may-recommendation-panel {
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 16px 0;
+}
+[data-theme="dark"] .may-recommendation-panel {
+  background: #1a1f2e;
+  border-color: #2d3548;
+}
+.may-recommendation-panel h3 {
+  margin: 0 0 14px 0;
+  font-size: 0.95rem;
+  font-weight: 650;
+  color: var(--text, #111827);
+}
+.may-rec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+.may-rec-card {
+  background: var(--bg-alt, #f9fafb);
+  border: 1px solid var(--border-light, #f0f0f0);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+[data-theme="dark"] .may-rec-card {
+  background: #1e2433;
+  border-color: #2d3548;
+}
+.may-rec-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted, #6b7280);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.may-rec-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text, #111827);
+  line-height: 1.35;
+}
+.may-rec-band {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+}
+.may-rec-danger { background: #fef2f2; color: #b91c1c; }
+.may-rec-warning { background: #fffbeb; color: #b45309; }
+.may-rec-info { background: #eff6ff; color: #1d4ed8; }
+.may-rec-muted { background: #f3f4f6; color: #6b7280; }
+[data-theme="dark"] .may-rec-danger { background: #2d1414; color: #fca5a5; }
+[data-theme="dark"] .may-rec-warning { background: #2d2314; color: #fcd34d; }
+[data-theme="dark"] .may-rec-info { background: #141e2d; color: #93c5fd; }
+[data-theme="dark"] .may-rec-muted { background: #1e2433; color: #9ca3af; }
+
+/* ===== MAY-022 — Contextual entry point labels ===== */
+.may-launcher-ctx-btn {
+  display: inline-block;
+  margin: 0 2px;
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-light, #e5e7eb);
+  background: var(--bg-alt, #f9fafb);
+  color: var(--text-muted, #6b7280);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.may-launcher-ctx-btn:hover {
+  background: var(--header-bg, #eef2ff);
+  border-color: var(--header-accent, #6366f1);
+  color: var(--text, #111827);
+}
+[data-theme="dark"] .may-launcher-ctx-btn {
+  border-color: #374151;
+  background: #1e2433;
+  color: #9ca3af;
+}
+[data-theme="dark"] .may-launcher-ctx-btn:hover {
+  background: #252d3f;
+  border-color: #6366f1;
+  color: #e5e7eb;
+}

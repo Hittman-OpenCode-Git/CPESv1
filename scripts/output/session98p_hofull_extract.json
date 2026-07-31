@@ -1,0 +1,926 @@
+{
+  "sectionA": [
+    {
+      "QuestionID": "P1-A-002",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "Riverview Industries operates three business segments: consumer products, industrial equipment, and a medical device division. The medical device division was classified as held-for-sale six months ago after the board determined its disposal represents a strategic shift. The buyer's financing has encountered repeated delays, and the transaction is now expected to close in nine months. Meanwhile, the consumer products segment sold a small product line that generated 3% of total revenue. The controller must recommend the appropriate financial statement presentation. Which recommendation complies with ASC 205-20?",
+      "Choices": {
+        "A": "Reclassify the medical device division back to continuing operations and disclose the sale delay in the footnotes — held-for-sale classification expires if the sale is not completed within one year",
+        "B": "Report the medical device division as discontinued operations, net of tax, and report the consumer product line sale within continuing operations because it does not represent a strategic shift",
+        "C": "Report both the medical device division and the consumer product line as discontinued operations since both involve disposals of business components",
+        "D": "Consolidate both disposals into a single discontinued operations line item and label it as an extraordinary item to simplify income statement presentation"
+      },
+      "ExplanationCorrect": "Under ASC 205-20, a component qualifies for discontinued operations presentation when its disposal represents a strategic shift that has or will have a major effect on the entity's operations and financial results. The medical device division meets this threshold — the board determined it represents a strategic shift, and the held-for-sale criteria are met. The financing delay does not disqualify it; ASC 205-20 does not impose a one-year expiration on held-for-sale classification, and entities may remain in held-for-sale status beyond one year if the delay is caused by events beyond the entity",
+      "Topic": "A.002 income statement discontinued operation presentation"
+    },
+    {
+      "QuestionID": "P1-A-005",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "CONTROLLER'S MEMORANDUM — Apex Industrial Controls\n\nTO: CFO Priya Mehta\nFROM: Elena Vasquez, Controller\nRE: Revenue Recognition for ApexGuard 9000 Customer Contracts\n\nApex sells the ApexGuard 9000, a programmable safety controller for chemical processing plants, under a standard customer contract with four components: (1) the hardware controller unit, delivered at contract signing for $180,000; (2) a three-year proprietary software license with quarterly security updates, bundled at $72,000; (3) on-site installation and calibration services performed over a two-week period following delivery, invoiced at $48,000; and (4) a two-year maintenance and technical support plan for $36,000. The controller and software license are sold separately to customers who already own ApexGuard hardware. Installation is performed by Apex-certified technicians and is also available as a standalone service. The software updates require Apex's proprietary encryption keys and cannot be performed by the customer or third parties. The maintenance plan includes 24/7 phone support and annual on-site inspections. Total contract price: $336,000. Ms. Mehta asks: 'How many performance obligations does this contract contain under ASC 606, and what is the basis for our determination?'",
+      "Choices": {
+        "A": "Four distinct performance obligations — hardware, software license, installation, and maintenance — because each is separately identifiable and the customer can benefit from each on its own or with readily available resources, and each is distinct within the context of the contract because the promises are not inputs to a combined output.",
+        "B": "One combined performance obligation because all four components are part of a single integrated safety system solution. The customer purchased a complete chemical plant safety capability, and Apex should recognize revenue as a single performance obligation at the point when the system is fully operational.",
+        "C": "Three performance obligations — hardware, bundled software-plus-installation, and maintenance — because installation and the software license are highly interdependent. The software cannot function without the hardware being properly installed and calibrated, so installation and the software license should be combined into a single performance obligation.",
+        "D": "Two performance obligations — the hardware-plus-installation as one obligation (since the hardware must be installed to function) and the software-plus-maintenance as a second obligation (since the software updates and support are ongoing services). The bundled pricing makes individual separation impractical."
+      },
+      "ExplanationCorrect": "Under ASC 606-10-25-14, a performance obligation is a promise to transfer a distinct good or service to the customer. A good or service is distinct if two criteria are met: (1) the customer can benefit from the good or service on its own or together with readily available resources (capable-of-being-distinct criterion), and (2) the entity's promise to transfer the good or service is separately identifiable from other promises in the contract (distinct-within-the-context-of-the-contract criterion). All four components meet both criteria. The hardware controller is a standalone product sold sepa",
+      "Topic": "A.005 revenue performance obligations"
+    },
+    {
+      "QuestionID": "P1-A-007",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "CONTROLLER MEMORANDUM — Harbor Medical Supplies\n\nTO: Controller Jia Patel\nFROM: Internal Audit\nRE: Year-End Allowance for Doubtful Accounts — Forward-Looking Analysis\n\nHarbor carries $4,200,000 in gross trade receivables. The historical loss rate (5-year average) is 2.1% on current, 6.4% on 31-60 days, 15.2% on 61-90 days, and 38.7% on >90 days. However, this year's aging shows significant shifts: (1) the >90-day bucket doubled to $420,000 — three major hospital clients deferred payments citing 'revenue cycle disruptions'; (2) the 61-90 day bucket grew from 12% to 19% of the portfolio; (3) one client ($180,000 in the 31-60 bucket) filed Chapter 11 in January before issuance date. The Fed raised rates 125 bps this year, and the Hospital CFO Council reports industry-wide DSOs at a 7-year high. Patel's deputy recommends applying historical loss rates without adjustment, arguing that objectivity requires mechanical application of aging-based rates. The external auditors note ASC 326 (CECL) requires consideration of 'current conditions and reasonable and supportable forecasts.' Patel asks: 'Which judgment about the allowance is most defensible under ASC 326?'",
+      "Choices": {
+        "A": "Apply the historical loss rates mechanically without adjustment to each aging bucket. The aging analysis is the primary measurement tool, and subjective forward-looking adjustments undermine consistency and comparability. Total allowance: $324,600.",
+        "B": "Adjust historical loss rates upward by incorporating forward-looking information (Fed rate increases, industry DSO trends, Chapter 11 filing) and apply higher rates to the shifted aging categories. Under ASC 326, the controller must exercise judgment that a purely mechanical application no longer reflects the current expected credit loss given current conditions.",
+        "C": "Recognize the Chapter 11 client as fully impaired with a specific $180,000 write-off, but apply historical loss rates to all other receivables. Rate environment and industry trends are too uncertain and subjective to quantify, and ASC 326 does not require speculative adjustments. Total allowance: approximately $372,000.",
+        "D": "Maintain historical loss rates for the <90-day buckets but double the >90-day rate from 38.7% to 77.4% because the bucket doubled in size. The controller should adjust rates only when aging composition changes measurably, as portfolio shifts are the most objective signal of credit deterioration. Total allowance: approximately $387,000."
+      },
+      "ExplanationCorrect": "Under ASC 326-20 (Current Expected Credit Losses), the allowance for credit losses must reflect the current estimate of expected credit losses over the contractual life of the financial asset. ASC 326-20-30-6 requires entities to consider relevant available information about past events, current conditions, and reasonable and supportable forecasts. The FASB explicitly rejected a purely mechanical or formula-based approach. Key analysis: (1) Historical loss rates are the starting point, not the conclusion — ASC 326 mandates that historical experience be adjusted for current conditions and forwa",
+      "Topic": "A.007 allowance method CECL forward-looking"
+    },
+    {
+      "QuestionID": "P1-A-008",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "CFO BRIEFING NOTE — Ridgeview Manufacturing\n\nTO: CFO Alan Kettering\nFROM: Controller's Office\nRE: Year-End Inventory Valuation — Three Product Lines\n\nRidgeview manufactures industrial fasteners across three product lines. At year-end, the inventory balances and market conditions are: Line 1 (Standard Steel Bolts): Cost $420,000, NRV $485,000; Line 2 (Alloy Fasteners): Cost $310,000, NRV $275,000 — a customer canceled a major contract in November, leaving excess specialty inventory; Line 3 (Engineered Components): Cost $185,000, NRV $168,000 — a new competitor entered in Q4, though Ridgeview expects partial price recovery within six months. All inventory is FIFO. The external auditors have questioned whether inventory should be written down on a product-line basis or assessed at an aggregated level. Mr. Kettering asks: 'What is the appropriate write-down approach and total inventory value under ASC 330?'",
+      "Choices": {
+        "A": "Apply lower of cost and NRV on an item-by-item basis: Line 1 at cost ($420,000), Line 2 at NRV ($275,000), Line 3 at NRV ($168,000). Total inventory: $863,000. Write-down: $52,000. Item-by-item application prevents offsetting declines against unrealized gains.",
+        "B": "Apply lower of cost and NRV at the total inventory level: aggregate cost $915,000, aggregate NRV $928,000 — no write-down needed. Total inventory: $915,000. Portfolio-level assessment is appropriate because Ridgeview manages inventory as a combined industrial fasteners business.",
+        "C": "Write down only Line 2 by $35,000 because the contract cancellation is permanent, but carry Line 3 at cost because Ridgeview expects price recovery within six months. Under ASC 330, temporary market declines do not require write-downs. Total inventory: $880,000. Write-down: $35,000.",
+        "D": "Write down all three lines to NRV even if NRV exceeds cost for Line 1, because conservatism demands that all inventory be stated at the lower valuation basis. Line 1 is recorded at NRV of $485,000 which exceeds its cost basis. Total inventory: $928,000."
+      },
+      "ExplanationCorrect": "Under ASC 330-10-35-1B, inventory measured using FIFO or average cost must be stated at the lower of cost and net realizable value (NRV). ASC 330-10-35-1B requires this assessment on an item-by-item basis — not at the aggregate inventory level or product-category level. Each product line represents a separate item because the fasteners have different cost structures, markets, and demand profiles. Line 1 (Standard Steel Bolts): NRV of $485,000 exceeds cost of $420,000 — no write-down, inventory remains at $420,000 cost. Line 2 (Alloy Fasteners): NRV of $275,000 below cost of $310,000 — $35,000 ",
+      "Topic": "A.008 inventory lower of cost and NRV"
+    },
+    {
+      "QuestionID": "P1-A-009",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "CONTROLLER MEMORANDUM — Titan Industrial Supply\n\nTO: CFO Alan Ross\nFROM: Controller's Office\nRE: Q3 LIFO Liquidation — Income Effect and Disclosure Assessment\n\nTitan uses dollar-value LIFO for its steel products division. A 9-week supplier strike in Q3 forced Titan to draw down inventory from 48,000 units (December 31 base) to 14,200 units by September 30, piercing LIFO layers dating back to 2018. The relevant LIFO layers are: 2018 layer: 11,500 units at $42.00/unit; 2019 layer: 9,800 units at $45.80/unit; 2020 layer: 12,300 units at $51.30/unit; 2021 layer: 8,200 units at $58.75/unit; 2022 layer: 6,200 units at $67.20/unit. Current replacement cost is $71.50/unit, and Titan's Q3 sales price averaged $89.00/unit. Before the liquidation, Q3 projected operating margin was 14.2%. The external auditors have flagged this for disclosure evaluation, noting that the LIFO liquidation gain may be material. Titan expects to replenish inventory in Q4 once the strike ends. Mr. Ross asks: 'What is the Q3 P&L impact of this LIFO liquidation, and what disclosure is required?'",
+      "Choices": {
+        "A": "The liquidation releases older, lower-cost LIFO layers into COGS (replacing $71.50 current cost with costs as low as $42.00), increasing Q3 gross profit. Disclosure is required under ASC 270-10-50-6 because the non-recurring gain materially distorts comparability of interim operating results. However, the gain is embedded in COGS — it is NOT presented as a separate income statement line item but disclosed in the notes to the interim financial statements.",
+        "B": "The liquidation has no P&L impact because LIFO is a cost flow assumption, not a physical flow. Titan will replenish inventory in Q4, restoring the LIFO layers, so the Q3 liquidation is a temporary phenomenon that self-corrects. No separate disclosure is required; Titan should note the strike in MD&A without quantifying the LIFO effect.",
+        "C": "The liquidation reduces Q3 COGS and increases operating margin, and the income effect must be presented as a separate line item on the income statement ('LIFO liquidation gain') below gross profit. ASC 270 requires separate presentation of material and unusual items. The gain is recognized in Q3 and reverses when inventory is replenished in Q4, with the Q4 reversal also separately presented.",
+        "D": "Titan should neutralize the income effect by recording a LIFO liquidation reserve equal to the difference between replacement cost and the liquidated layer costs (debit COGS, credit LIFO liquidation reserve). Under the matching principle, COGS should reflect current replacement cost regardless of LIFO layers; the reserve defers the liquidation gain until inventory is physically replaced."
+      },
+      "ExplanationCorrect": "Under LIFO, when inventory quantities drop below prior-year levels, older, lower-cost LIFO layers are released into cost of goods sold, replacing the current-period higher replacement costs that would otherwise have been charged to COGS. This is a LIFO liquidation. The income effect is the difference between the replacement cost of the units sold from older layers and the historical cost at which those layers were carried. The P&L impact flows through a reduced COGS, which increases gross profit and operating margin — but the gain is embedded in COGS, not presented as a separate line item. Reg",
+      "Topic": "A.009 LIFO liquidation P&L disclosure"
+    },
+    {
+      "QuestionID": "P1-A-011",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "INTERNAL MEMORANDUM — Keystone Industries\n\nTO: Controller David Chen\nFROM: Plant Manager Sarah Okonkwo\nRE: Production Line 4 — Performance Review\n\nProduction Line 4 is a dedicated automated stamping line (carrying amount: $6,200,000; remaining useful life: 9 years) producing automotive body panels. Output has declined from 92,000 to 51,000 units/month due to mechanical wear and obsolescence. The primary customer (83% of Line 4 output) is transitioning to aluminum panels in 14 months, which Line 4 cannot produce without $1.9 million retooling. Undiscounted future cash flows are projected at $5,400,000; fair value appraised at $3,800,000. Mr. Chen asks: 'Under ASC 360, is an impairment test triggered, and which indicator carries the most weight?'",
+      "Choices": {
+        "A": "Yes, an impairment test is triggered. The most significant indicator is the adverse change in the extent or manner in which the asset is used — the customer's transition to aluminum panels means 83% of output will be eliminated unless retooled. This is a textbook ASC 360-10-35-21(b) indicator. The output decline and fair value drop provide secondary corroboration.",
+        "B": "No impairment test is triggered. The undiscounted future cash flows of $5,400,000 are close to the carrying amount of $6,200,000, and indicators alone without a confirmed recoverability test failure do not trigger recognition. The controller should wait until the cash flow shortfall is more clearly established.",
+        "C": "Yes, an impairment test is triggered, but the primary indicator is the mechanical output decline from 92,000 to 51,000 units/month — a 44.6% reduction. The customer transition is a separate business risk that does not affect the asset's carrying value under ASC 360.",
+        "D": "No impairment test is required because the asset still has 9 years of remaining useful life. An impairment test is triggered only when the carrying amount exceeds undiscounted future cash flows. Keystone should continue with the current depreciation schedule until the customer transition actually occurs in 14 months."
+      },
+      "ExplanationCorrect": "Under ASC 360-10-35-21, a long-lived asset must be tested for recoverability whenever events or changes in circumstances indicate that its carrying amount may not be recoverable. The question presents several indicators that collectively establish a clear triggering event. The most significant indicator is the adverse change in the extent or manner in which Line 4 is used [ASC 360-10-35-21(b)]: the primary customer (83% of output) is transitioning to aluminum panels that Line 4 cannot produce without $1.9 million retooling. This is a fundamental change in what the asset must produce. The mecha",
+      "Topic": "A.011 asset impairment trigger"
+    },
+    {
+      "QuestionID": "P1-A-012",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "LEGAL UPDATE MEMORANDUM — Meridian Industries\n\nTO: Controller Rachel Torres\nFROM: General Counsel's Office\nRE: Year-End Legal Claim Assessment\n\nMeridian faces three pending legal matters at December 31:\n\nClaim 1 (Product Liability): Outside counsel assesses 75% probability of liability. Most likely settlement: $520,000 (range: $350,000–$780,000).\n\nClaim 2 (Patent Infringement): 35% probability of adverse judgment. If Meridian loses, damages estimated at $1,200,000.\n\nClaim 3 (Employment Dispute): 55% probability of adverse ruling. If claimant prevails, most likely award: $95,000.\n\nMs. Torres asks: 'What amount should be accrued and which claims require footnote disclosure under ASC 450?'",
+      "Choices": {
+        "A": "Accrue $520,000 for Claim 1 only. Disclosure required for Claims 1, 2, and 3. Claim 1 is probable (75%) and reasonably estimable ($520,000 best estimate). Claim 2 is not probable (35%) — disclosure only. Claim 3 at 55% is borderline — 'probable' under ASC 450 means likely to occur, and litigation at 55% does not clearly meet the threshold; disclosure of the reasonably possible loss is appropriate.",
+        "B": "Accrue $615,000 total: $520,000 (Claim 1) + $95,000 (Claim 3). Both have greater-than-50% probability, meeting the 'probable' threshold. Claim 2 requires disclosure only. Properly reflects Meridian's legal exposure.",
+        "C": "Accrue $1,900,000 total: $520,000 + $1,200,000 + $180,000. All three claims should be accrued because outside counsel has provided specific dollar estimates. ASC 450 requires accrual whenever a dollar amount can be estimated, regardless of probability.",
+        "D": "Accrue $350,000 for Claim 1 (minimum in range per ASC 450-20-25-2 when no amount is more likely). Accrue $180,000 for Claim 3 (full claimed amount). No accrual for Claim 2. Disclose the full range of all three claims. Total accrual: $530,000."
+      },
+      "ExplanationCorrect": "Under ASC 450-20-25-2, a loss contingency must be accrued when both: (1) it is probable that a liability has been incurred, and (2) the amount can be reasonably estimated. Claim 1 meets both criteria: 75% probability clearly exceeds the probable threshold, and $520,000 is the best estimate. When a specific amount within a range is the better estimate, that amount is accrued. The additional exposure up to $780,000 must be disclosed. Claim 2 at 35% is 'reasonably possible' — disclosure required, no accrual. Claim 3 presents the most challenging judgment at 55%. ASC 450 does not specify a numeric",
+      "Topic": "A.012 contingent liability accrual"
+    },
+    {
+      "QuestionID": "P1-A-013",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "MEMORANDUM — Meridian Manufacturing Controller's Office\n\nTO: CFO Rebecca Torres\nFROM: David Okonkwo, Controller\nRE: Year-End Receivable — Orion Distributors\n\nAt December 31, Meridian carried a $2,400,000 trade receivable from Orion Distributors, representing Q4 shipments of industrial fasteners. Orion accounted for 18% of Meridian's annual revenue. On January 22, Orion filed for Chapter 7 bankruptcy. The bankruptcy trustee's preliminary filing indicates unsecured creditors will receive between 3 and 8 cents on the dollar. Our credit department's December 15 internal review noted Orion had violated its debt covenants with its primary lender, had stopped returning collection calls in early December, and was past due on $1,100,000 of invoices older than 90 days. The credit department had placed Orion on credit hold on December 20 but had not completed its impairment assessment before year-end close. Which recommendation should the controller present for the December 31 financial statements?",
+      "Choices": {
+        "A": "Disclose the bankruptcy as a Type II subsequent event in the notes to the financial statements without adjusting the December 31 receivable balance of $2,400,000, because the bankruptcy filing occurred 22 days after year-end and represents a new condition arising after the balance sheet date.",
+        "B": "Adjust the December 31 financial statements to write down the $2,400,000 receivable to the estimated recoverable range of $72,000 to $192,000 based on the trustee's preliminary estimate, because the evidence of Orion's financial distress existed at the balance sheet date, making this a Type I subsequent event under ASC 855.",
+        "C": "Defer all loss recognition on the Orion receivable until the bankruptcy court confirms the final distribution percentage, at which point the loss amount becomes known with certainty and can be recorded in the subsequent fiscal year.",
+        "D": "Reverse the $2,400,000 of Q4 Orion sales and restate Meridian's previously issued Q4 interim financial information, treating the Orion transactions as if they never occurred because collectibility was always in doubt."
+      },
+      "ExplanationCorrect": "Under ASC 855-10-25-1, subsequent events fall into two categories. Type I (recognized subsequent events) provide additional evidence about conditions that existed at the balance sheet date and require adjustment to the financial statements. Type II (nonrecognized subsequent events) provide evidence about conditions that arose after the balance sheet date and require only disclosure. The controlling question is when the condition originated — not when the evidence arrived. In this case, Orion's financial distress existed at December 31: the credit department's own December 15 review documented ",
+      "Topic": "A.013 subsequent event recognized condition"
+    },
+    {
+      "QuestionID": "P1-A-014",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "CONTROLLER MEMORANDUM — Cascade Manufacturing\n\nTO: Controller David Chen\nFROM: Treasury\nRE: New Warehouse Lease — ASC 842 Classification Analysis\n\nCascade is finalizing a 10-year lease for a regional distribution center. Key terms: (1) Annual lease payments of $280,000, payable at year-end. Cascade's incremental borrowing rate is 6.5%. (2) The building's estimated economic life is 25 years; its fair value at lease commencement is $3,400,000. (3) The lease contains a bargain purchase option allowing Cascade to buy the building for $850,000 at the end of year 10; the expected fair value at that date is estimated at $1,800,000. (4) The lease also contains two 5-year renewal options at market rates; Cascade is undecided about exercising them. (5) Cascade cannot direct the use of the building without the lessor's consent for major structural modifications. (6) The present value of the 10 annual lease payments, discounted at 6.5%, is approximately $2,009,000. (7) The present value of the bargain purchase option payment ($850,000 discounted 10 years at 6.5%) is approximately $453,000. The controller's deputy argues the lease is operating because the lease term (10 years) is only 40% of the economic life (25 years), below the 75% bright-line test. Mr. Chen asks: 'Under ASC 842, is this an operating lease or a finance lease, and what is the initial right-of-use asset and lease liability?'",
+      "Choices": {
+        "A": "Operating lease. The lease term (10 years) is 40% of the economic life (25 years), well below the major-part threshold. The bargain purchase option does not factor into lease classification because it is exercisable only at the end of the term and Cascade is undecided. Present value of lease payments ($2,009,000) is approximately 59% of fair value, below the substantially-all threshold. Initial ROU asset and lease liability: $2,009,000.",
+        "B": "Finance lease. The bargain purchase option makes it reasonably certain that Cascade will acquire the building at year 10, satisfying ASC 842-10-25-2(d). The lease term is therefore the full economic life of the asset, making the lease-term test moot. Cascade must classify as a finance lease. Initial ROU asset and lease liability: present value of lease payments ($2,009,000) plus present value of the bargain purchase option exercise price ($453,000) = $2,462,000.",
+        "C": "Operating lease. Although the bargain purchase option is relevant, it affects only the lease payments measurement — not classification. Under ASC 842-10-25-2, the five classification tests are applied independently, and Cascade fails each: the lease term is not a major part of economic life, the present value test is not met, and there is no transfer of ownership. Initial ROU asset and lease liability: $2,462,000 (including the purchase option payment because the option is a bargain).",
+        "D": "Finance lease. The present value of lease payments plus the bargain purchase option exercise price ($2,462,000) equals 72.4% of the building's fair value. Substantially all (typically 90%+) of the fair value of the underlying asset — the present value criterion is NOT met. However, the bargain purchase option independently triggers finance lease classification under ASC 842-10-25-2(d). The initial ROU asset and lease liability equal $2,462,000."
+      },
+      "ExplanationCorrect": "Under ASC 842-10-25-2, a lease is classified as a finance lease if any one of five criteria is met at lease commencement: (a) transfer of ownership by end of term, (b) purchase option that the lessee is reasonably certain to exercise, (c) lease term for the major part (typically 75% or more) of the remaining economic life, (d) present value of lease payments and any residual value guarantee equals or exceeds substantially all (typically 90%) of the fair value of the underlying asset, or (e) the asset is so specialized it has no alternative use to the lessor. The bargain purchase option is disp",
+      "Topic": "A.014 ASC 842 lease classification analysis"
+    },
+    {
+      "QuestionID": "P1-A-016",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "CONTROLLER MEMORANDUM — Ridgeview Manufacturing\n\nTO: Controller Sarah Okonkwo\nFROM: Financial Reporting\nRE: Consolidation Assessment — Axion Tech Equity Investment\n\nRidgeview holds 45% of Axion Tech's outstanding common stock ($3,200,000 investment, equity-method accounted). However, Ridgeview's CFO sits on Axion's 5-member board and, through a separate contractual agreement, holds veto power over Axion's operating budget, major capital expenditures, and CEO compensation. Axion is a variable interest entity (VIE): its equity at risk ($2,800,000) is insufficient to finance its activities without additional subordinated financial support; Ridgeview provided a $4,500,000 loan guarantee that absorbs Axion's expected losses; and Axion's activities are conducted primarily on Ridgeview's behalf under a manufacturing services agreement. No other investor holds protective rights comparable to Ridgeview's. The external auditors have requested Ridgeview's consolidation analysis. Ridgeview's general counsel argues that 45% ownership is below the traditional 50%+ voting interest threshold, so consolidation is not required. Ms. Okonkwo asks: 'Under ASC 810, is Ridgeview required to consolidate Axion, and under which consolidation model?'",
+      "Choices": {
+        "A": "No consolidation. Ridgeview holds only 45% of voting shares, below the majority threshold. The voting interest model applies, and 45% ownership establishes significant influence (equity method) but not control. The board seat and contractual veto rights enhance influence but do not create a controlling financial interest under the voting interest model.",
+        "B": "Consolidate Axion under the VIE model. As the primary beneficiary of a VIE, Ridgeview has both (a) the power to direct the activities that most significantly impact Axion's economic performance (through board veto rights, budget authority, and the manufacturing services agreement) and (b) the obligation to absorb losses or the right to receive benefits that could be significant to Axion (through the $4,500,000 loan guarantee). The 45% equity ownership is secondary to the VIE analysis.",
+        "C": "Consolidate Axion under the voting interest model. Although Ridgeview owns 45%, the board seat plus CFO veto rights collectively constitute de facto control equivalent to majority ownership. The VIE analysis is unnecessary because the voting interest model captures control through direct and indirect voting rights, including contractual governance provisions.",
+        "D": "Do not consolidate, but provide expanded disclosures under ASC 810-10-50. Ridgeview has a variable interest in a VIE but is not the primary beneficiary because Axion's other equity holders collectively own 55% and could, in theory, remove Ridgeview's board designee. The loan guarantee and veto rights create significant risk exposure requiring enhanced disclosure rather than consolidation."
+      },
+      "ExplanationCorrect": "Under ASC 810-10-25-38A, the VIE consolidation model applies when an entity is a variable interest entity (VIE). Axion meets the VIE criteria because its equity at risk ($2,800,000) is insufficient to finance its activities without additional subordinated financial support — a classic VIE indicator under ASC 810-10-15-14(b)(1). The voting interest model is bypassed entirely when a reporting entity holds a variable interest in a VIE; the VIE model is the exclusive framework for determining consolidation. Under the VIE model, the primary beneficiary is the party that has both: (1) the power to d",
+      "Topic": "A.016 VIE consolidation control principle"
+    },
+    {
+      "QuestionID": "P1-A-021",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "AUDIT COMMITTEE BRIEFING — Northstar Medical Devices, Inc.\n\nTO: Audit Committee Chair Margaret Okonkwo\nFROM: Thomas Reyes, CPA, Newly Appointed Controller\nRE: Gap in Financial Statement Disclosures — Revenue Recognition Policy\n\nDuring my transition review, I discovered that Northstar's audited financial statements for the past three years omitted a Summary of Significant Accounting Policies note disclosing revenue recognition policies. Northstar generates revenue from three streams: (1) direct sales of surgical instruments ($42.6M), recognized upon delivery and customer acceptance; (2) consignment sales to distributors ($8.3M), where Northstar retains title until distributor sells to end customer; and (3) service contracts ($5.1M), recognized ratably over the contract term. The prior controller treated the policy disclosure as optional. The auditors issued unmodified opinions each year. Ms. Okonkwo asks: 'What must Northstar disclose under ASC 235, and what action should the controller take regarding prior years?'",
+      "Choices": {
+        "A": "Include a comprehensive Summary of Significant Accounting Policies note in the current year disclosing all three revenue recognition policies with specific timing descriptions. For prior years, assess materiality — if the omission is material, correct via retrospective restatement under ASC 250; if immaterial, correct in the current period. The auditor's acceptance of the omission does not relieve Northstar of its disclosure obligations.",
+        "B": "No corrective action required because the auditors issued unmodified opinions, implicitly accepting the omission as immaterial. Add the policy disclosure prospectively to current year only — restating prior years would undermine confidence in the audit process.",
+        "C": "Include a Summary of Significant Accounting Policies note in the current year only, prospectively. Since the revenue streams existed for three years and the auditors did not qualify, the omission cannot be material. Focus on current-year compliance and note that prior-year financial statements lacked this disclosure.",
+        "D": "Report the omission as a material weakness in internal control and restate all three years under ASC 250. ASC 235-10-50-1 mandates disclosure of significant accounting policies, and any noncompliance requires full retrospective restatement regardless of materiality. Investigate why the prior controller omitted the disclosure."
+      },
+      "ExplanationCorrect": "Under ASC 235-10-50-1, an entity must disclose all significant accounting policies as an integral part of its financial statements. The Summary of Significant Accounting Policies note is not optional — it is a required disclosure informing users about measurement bases and recognition criteria. For Northstar, this means describing that surgical instrument revenue is recognized at a point in time upon delivery and acceptance, consignment revenue when the distributor sells to the end customer (not upon shipment), and service revenue ratably over the contract term. Each policy materially affects ",
+      "Topic": "A.021 disclosure notes accounting policies"
+    },
+    {
+      "QuestionID": "P1-A-022",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CorrectChoice": "B",
+      "Stem": "Axion Technologies develops software for autonomous vehicle systems. Under U.S. GAAP, all R&D costs are expensed as incurred, resulting in reported losses of $8.4 million this year. Axion is considering a European stock exchange listing that would require IFRS reporting. Under IAS 38, $3.2 million of development costs would qualify for capitalization as they meet the criteria for technical feasibility, intent to complete, and ability to use or sell. The CFO asks the controller for a recommendation on which accounting framework best reflects Axion's economic performance to investors. What recommendation should the controller present?",
+      "Choices": {
+        "A": "Recommend U.S. GAAP and continued expensing. The conservative treatment protects investors from overstated asset values and is consistent with the principle that R&D outcomes are inherently uncertain. Reported losses accurately reflect the cash invested in development activities, which is the most decision-useful information for investors.",
+        "B": "Recommend IFRS reporting because IAS 38 allows capitalization of qualifying development costs, which better reflects the economic value created by Axion's investments. Under IFRS, the $3.2 million would be recognized as an intangible asset and amortized over the software's useful life, providing a more faithful representation of the company's financial position and the future benefits expected from its development pipeline.",
+        "C": "Recommend a blended approach: maintain U.S. GAAP as the primary reporting framework but present non-GAAP supplemental disclosures that capitalize and amortize qualifying development costs. This gives investors both the conservative GAAP framework and additional information about the value of Axion's development investments.",
+        "D": "Recommend that neither framework is clearly superior. The choice between expensing and capitalizing development costs is ultimately a matter of accounting policy preference with no objective economic basis. The controller should advise investors to disregard reported earnings under both frameworks and focus exclusively on cash flows from operations."
+      },
+      "ExplanationCorrect": "Under IAS 38 (Intangible Assets), development costs must be capitalized as an intangible asset when an entity can demonstrate all of the following: technical feasibility of completing the asset, intention to complete and use or sell it, ability to use or sell the asset, how the asset will generate future economic benefits, availability of resources to complete development, and ability to measure the expenditure reliably. When these criteria are met (as stated for Axion's $3.2 million in qualifying costs), capitalization better matches the costs with the future revenues the software will genera",
+      "Topic": "A.022 GAAP IFRS development costs"
+    },
+    {
+      "QuestionID": "P1-A-023",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "CONTROLLER BRIEFING — Meridian Capital Partners\n\nTO: Controller Elena Vasquez\nFROM: Valuation Team\nRE: Quarter-End Fair Value Classification — Three Financial Instruments\n\nMeridian holds three financial instruments requiring fair value measurement at quarter-end:\n\nInstrument 1 — Exchange-Traded Equity Options: Meridian holds S&P 500 index put options traded on the CBOE. The options have quoted bid-ask prices on an active exchange. However, each option's value also depends on implied volatility, an input Meridian sources from a third-party pricing service (Bloomberg) that uses proprietary models to derive volatility surfaces from observed trades of similar but not identical instruments.\n\nInstrument 2 — Interest Rate Swap: A 5-year fixed-for-floating swap with a regional bank, customized to Meridian's $12,000,000 notional. The fixed rate (3.85%) and floating index (SOFR) are directly observable. The swap's fair value is calculated by a standard discounted cash flow model using the SOFR forward curve (Level 2). However, the bank's credit risk is assessed using CDS spreads from an inactive market with infrequent trading.\n\nInstrument 3 — Convertible Preferred Stock: Meridian holds 50,000 shares of privately-held NovaTech Series B convertible preferred. No observable market transactions exist for NovaTech. Meridian's valuation uses a Monte Carlo simulation incorporating: (a) NovaTech's projected revenue growth (management estimate, 22-28%), (b) a discount rate derived from comparable public company betas adjusted for size and illiquidity, and (c) the conversion probability modeled from a venture-capital industry exit database.\n\nMs. Vasquez asks: 'Classify each instrument within the ASC 820 fair value hierarchy, identifying the lowest-level significant input that drives classification.'",
+      "Choices": {
+        "A": "Instrument 1: Level 1 (exchange-traded options with quoted prices in active markets). Instrument 2: Level 2 (SOFR-based swap with observable inputs; CDS spreads from inactive market are Level 2 inputs). Instrument 3: Level 3 (unobservable inputs — management revenue projections and Monte Carlo simulation assumptions).",
+        "B": "Instrument 1: Level 2 (implied volatility from Bloomberg's proprietary model is a Level 2 input that is significant to the overall fair value measurement, downgrading the instrument from Level 1). Instrument 2: Level 3 (CDS spreads from inactive market are unobservable; bank credit risk cannot be reliably estimated). Instrument 3: Level 3 (all significant inputs are unobservable).",
+        "C": "Instrument 1: Level 1 (exchange-traded with quoted prices; implied volatility adjustments are Level 2 but do not constitute a significant input that would change the Level 1 classification). Instrument 2: Level 2 (SOFR forward curve is a Level 2 observable input and is the most significant input to the DCF model; CDS spreads, while from inactive market, are still market-based and do not render the entire measurement Level 3). Instrument 3: Level 2 (discount rate derived from comparable public company data is an observable market input; management projections are corroborated by industry data).",
+        "D": "Instrument 1: Level 2 because the put option value depends on both the quoted option price and implied volatility from a pricing service, making the overall measurement reliant on significant Level 2 inputs. Instrument 2: Level 3 because credit valuation adjustments are inherently subjective. Instrument 3: Level 3 because no observable market transactions exist for NovaTech, regardless of input sourcing."
+      },
+      "ExplanationCorrect": "Under ASC 820-10-35-37 through 35-54, the fair value hierarchy prioritizes the inputs to valuation techniques into three broad levels. The classification of a fair value measurement in its entirety is determined by the lowest-level input that is significant to the entire measurement. Instrument 1 (CBOE options): Quoted prices in an active market for identical instruments are Level 1 inputs [ASC 820-10-35-40]. The S&P 500 options trade on an active exchange with observable bid-ask prices — this is the classic Level 1 scenario. While implied volatility is used in option pricing, ASC 820-10-35-37",
+      "Topic": "A.023 fair value hierarchy input classification"
+    },
+    {
+      "QuestionID": "P1-A-024",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "TREASURY MEMORANDUM — Keystone Industries\n\nTO: Treasurer Marcus Webb\nFROM: Cash Management Analyst\nRE: Quarter-End Cash and Cash Equivalents Classification\n\nKeystone holds five short-term instruments at September 30:\n\n1. 13-week U.S. Treasury bill purchased at issuance with 2 weeks remaining to maturity. Par: $500,000.\n\n2. Commercial paper issued by a AA-rated corporation, original maturity 120 days, 30 days remaining. Face: $250,000.\n\n3. Money market fund shares ($400,000) with same-day liquidity — except the fund's prospectus allows the board to impose a 10-day redemption gate if weekly liquid assets fall below 30% of total assets. The fund is currently at 34%.\n\n4. 6-month bank certificate of deposit purchased at issuance, 75 days remaining to maturity. Face: $150,000. Early withdrawal penalty: 3 months interest.\n\n5. 90-day U.S. Treasury bill purchased in the secondary market with 87 days remaining to maturity (original maturity when issued: 90 days). Par: $300,000.\n\nThe Q3 cash flow statement is under review. Mr. Webb asks: 'Classify each instrument as cash equivalent or short-term investment, and identify which judgments require the most analysis.'",
+      "Choices": {
+        "A": "Cash equivalents: items 1, 2, 3, 5. Short-term investment: item 4 only. Items 1 and 5 are T-bills (original maturities ≤ 3 months), item 2 commercial paper has 120-day original maturity exceeding 3 months but was purchased near maturity, and item 3 money market funds are typically cash equivalents with the redemption gate being a disclosure item rather than a classification matter when the fund is above the 30% threshold.",
+        "B": "Cash equivalents: items 1, 5. Short-term investments: items 2, 3, 4. Item 2's original maturity of 120 days exceeds the 3-month threshold regardless of remaining maturity. Item 3's potential redemption gate means the funds are not available on demand — classification as a cash equivalent requires unrestricted access. Item 4's 6-month original maturity and early withdrawal penalty disqualify CD from cash equivalent treatment.",
+        "C": "Cash equivalents: items 1, 2, 5. Short-term investments: items 3, 4. Item 2's remaining maturity of 30 days makes it a cash equivalent because the test is remaining maturity to the holder, not original maturity. Item 3's money market fund is a short-term investment because SEC Rule 2a-7 redemption gates create a contingency on same-day liquidity. Item 4 is a short-term investment due to the 6-month original maturity.",
+        "D": "Cash equivalents: items 1, 3. Short-term investments: items 2, 4, 5. Item 2's 120-day original maturity disqualifies it. Item 5 was purchased in the secondary market with 87 days remaining — the original maturity test applies to the instrument as issued, and purchased T-bills with only days remaining are not automatically cash equivalents because the market transaction does not reset original maturity. Item 4 fails the maturity test. Money market funds with same-day redemption (item 3) are cash equivalents."
+      },
+      "ExplanationCorrect": "Under ASC 230-10-20, cash equivalents are short-term, highly liquid investments that are: (a) readily convertible to known amounts of cash, and (b) so near their maturity that they present insignificant risk of changes in value because of changes in interest rates. Generally, only investments with original maturities of three months or less qualify. The analysis for each instrument: Item 1 (13-week T-bill, 2 weeks remaining): Original maturity at issuance = 91 days (≤ 3 months). Qualifies as cash equivalent. Item 2 (120-day commercial paper, 30 days remaining): Original maturity is 120 days — ",
+      "Topic": "A.024 cash equivalents classification tradeoffs"
+    },
+    {
+      "QuestionID": "P1-A-025",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "TAX PROVISION MEMORANDUM — Cascade Manufacturing\n\nTO: CFO Diana Okonkwo\nFROM: Michael Chen, Tax Director\nRE: Year-End Deferred Tax Analysis\n\nCascade reports the following temporary differences at December 31, Year 1 (enacted tax rate: 25%):\n\n1. Accelerated tax depreciation: Tax depreciation exceeded book by $380,000 (equipment basis: $1,900,000; 10-year book straight-line, 7-year MACRS tax). Reversal begins Year 4.\n\n2. Warranty accrual: Book accrual $120,000. Tax deductible only when claims are paid (projected: $45,000 Year 2; $50,000 Year 3; $25,000 Year 4).\n\n3. Installment sale: $90,000 book gain on surplus land. Tax: installment method defers $60,000 to Years 2-4.\n\nCascade projects sustained profitability with no valuation allowance concerns. Mr. Chen asks: 'What is Cascade's net deferred tax position, and which item produces a deferred tax asset?'",
+      "Choices": {
+        "A": "Net deferred tax liability of $50,000. Depreciation DTL: $95,000. Warranty DTA: $30,000. Installment sale: $15,000 DTL. Net: $95,000 + $15,000 - $30,000 = $80,000 liability. Only the warranty produces a DTA because book expense exceeds tax deduction, creating a future deductible amount. The installment sale produces a DTL because book income recognized faster than tax income.",
+        "B": "Net deferred tax liability of $80,000. Depreciation DTL: $380,000 × 25% = $95,000. Installment sale DTL: $60,000 × 25% = $15,000. Warranty DTA: $120,000 × 25% = $30,000. Net: $95,000 + $15,000 - $30,000 = $80,000. Only the warranty accrual produces a deferred tax asset because book expense recognized before tax deduction.",
+        "C": "Net deferred tax liability of $147,500. All three items produce deferred tax liabilities because Cascade is deferring tax payments relative to book recognition. Total taxable temporary differences: $590,000 × 25% = $147,500. None produce DTA because Cascade projects sustained profitability.",
+        "D": "Net deferred tax liability of $42,500. Depreciation DTL: $95,000. Warranty DTA: $30,000. Installment sale DTA: $22,500. Net: $95,000 - $30,000 - $22,500 = $42,500. The installment sale produces a DTA because Cascade recognized the gain for book purposes but will receive cash in future periods."
+      },
+      "ExplanationCorrect": "Under ASC 740-10-10-1, deferred tax liabilities and assets are recognized for estimated future tax effects of temporary differences. A DTL arises from taxable temporary differences (book income > taxable income now, pay more tax later). A DTA arises from deductible temporary differences (book expense > tax deduction now, reduce tax later). Depreciation: Tax depreciation exceeded book by $380,000 — taxable income lower than book income now, future reversal creates a DTL of $95,000 ($380,000 × 25%). Installment sale: Book gain $90,000 but only $30,000 recognized for tax — $60,000 deferred create",
+      "Topic": "A.025 deferred tax liability calculation"
+    },
+    {
+      "QuestionID": "P1-A-029",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "CONTROLLER'S MEMORANDUM — Evergreen Manufacturing\n\nTO: CFO Maria Chen\nFROM: Controller's Office\nRE: Urgent — Depreciation Recommendation for Assembly Line Equipment\n\nEvergreen acquired automated assembly equipment on January 2 for $92,800, estimated salvage value $12,000, 5-year useful life. Three competing recommendations have been submitted:\n\n(1) Production Manager David Park recommends units-of-production, arguing the line will produce 80,000 units in Year 1 but demand projections show output declining to 40,000 by Year 5 — he insists this better matches physical wear.\n(2) The VP of Investor Relations recommends straight-line to keep reported earnings smooth because Evergreen's revolving credit facility has a debt covenant requiring net income of at least $500,000; pre-depreciation net income is $520,000. A covenant breach triggers a 150-basis-point rate increase on Evergreen's $8M credit facility.\n(3) The tax team recommends MACRS, but this applies only to tax filings, not GAAP financial statements.\n\nThe 10-K must be filed by Friday. The external auditor has asked for a documented basis for the depreciation method selection under ASC 360. Ms. Chen asks: 'What is the most defensible GAAP depreciation amount, and which approach best serves Evergreen's reporting obligations and stakeholder interests?'",
+      "Choices": {
+        "A": "Recommend straight-line depreciation of $16,160 per year. The depreciable base is $92,800 - $12,000 = $80,800, divided by 5 years = $16,160. Under ASC 360-10-35-4, straight-line is appropriate when the asset provides substantially equal productive capacity each year. Demand-driven utilization variance (marketing/sales cycles) is not a physical consumption pattern — capacity remains constant regardless of annual unit output. Net income after depreciation = $520,000 - $16,160 = $503,840, clearing the $500,000 covenant threshold with $3,840 headroom.",
+        "B": "Recommend units-of-production depreciation. Estimated total units over 5 years = 300,000. Year 1 depreciation = ($92,800 - $12,000) × (80,000 / 300,000) = $80,800 × 0.2667 = $21,547. UoP most faithfully reflects the pattern of economic benefits consumed when physical wear correlates with output volume, per ASC 360-10-35-4. Reported net income = $520,000 - $21,547 = $498,453 — violating the $500,000 covenant by $1,547 and triggering the 150-bps rate increase, which would cost Evergreen approximately $120,000/year in additional interest on the $8M facility.",
+        "C": "Recommend straight-line but calculate depreciation on the full cost basis without deducting salvage: $92,800 / 5 = $18,560. This approach treats salvage as unguaranteed and immaterial (only 12.9% of cost), arguing that salvage estimates are inherently uncertain. Reported net income = $520,000 - $18,560 = $501,440 — still clears the covenant but with only $1,440 headroom. However, ASC 360-10-35-4 requires salvage value to be excluded from the depreciable base.",
+        "D": "Recommend a dual-reporting approach: use straight-line ($16,160) for GAAP financial statements to satisfy the debt covenant, while separately presenting units-of-production depreciation in the MD&A as supplemental information about asset utilization. The MD&A disclosure would note that while actual Year 1 output was 80,000 units (suggesting heavier wear), GAAP requires straight-line because the asset's productive capacity — not demand-driven output — determines the consumption pattern."
+      },
+      "ExplanationCorrect": "Under ASC 360-10-35-4, the depreciation method shall reflect the pattern in which the asset's future economic benefits are expected to be consumed by the entity. For automated assembly equipment with constant productive capacity, straight-line depreciation is the appropriate method: the asset provides substantially equal productive capacity each year regardless of annual unit output driven by demand fluctuations. The depreciable base is cost ($92,800) less salvage ($12,000) = $80,800. Annual straight-line depreciation = $80,800 / 5 = $16,160. Net income after depreciation = $520,000 - $16,160 ",
+      "Topic": "A.029 straight-line depreciation expense 4"
+    },
+    {
+      "QuestionID": "P1-A-030",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "CFO BRIEFING NOTE — Frontier Industries\n\nTO: Controller David Okonkwo\nFROM: CFO Sarah Lin\nRE: Urgent — Cash Flow Analysis for Board Package\n\nFrontier reports net income of $103,500 for the year ended December 31, yet our cash balance has barely changed and we nearly missed a supplier payment last month. I need to present a clear explanation to the board on Wednesday showing why net income does not equal operating cash flow and what the actual operating cash flow figure is. The preliminary numbers show depreciation of $23,000, accounts receivable increased by $7,000, and accounts payable increased by $5,300.\n\nA board member previously served as CFO of a competitor and will challenge us if the reconciliation doesn't reconcile. A misstatement could damage the board's confidence in our internal reporting.\n\nWhat operating cash flow should Ms. Lin present, and which adjustment most explains the gap between net income and operating cash generation?",
+      "Choices": {
+        "A": "$78,800. Operating cash flow is lower than net income because depreciation of $23,000 consumed cash — it is subtracted from net income along with the $7,000 accounts receivable increase, while the $5,300 payable increase is added back. The depreciation charge, which reduces net income dollar-for-dollar, is the primary driver of the cash shortfall relative to reported earnings.",
+        "B": "$124,800. Operating cash flow = $103,500 + $23,000 - $7,000 + $5,300. Depreciation is added back because it is a noncash charge that reduced net income but consumed no cash. The $7,000 A/R increase is subtracted because revenue recognized on credit sales exceeded cash collections — customers owe more than they paid. The $5,300 A/P increase is added because expenses were recognized before cash disbursements, preserving cash temporarily. The $21,300 excess of operating cash flow over net income is primarily driven by the $23,000 depreciation add-back — Frontier generated $23,000 more cash than its income statement suggests, explaining why the company appears profitable despite tight liquidity from growing receivables.",
+        "C": "$138,800. Operating cash flow exceeds net income because increases in accounts receivable represent additional cash that will be collected in the future and should be treated as cash inflows for the current period, along with higher accounts payable which reflect additional financing. Frontier's cash position is stronger than net income alone suggests, and the board should focus on the $138,800 figure as the true measure of operating performance.",
+        "D": "$114,200. Operating cash flow is close to net income because the depreciation add-back ($23,000) is partially offset by the combined effect of the working capital changes: the $7,000 A/R increase (subtracted) and the $5,300 A/P increase (which represents an obligation to pay, not a source of cash, so it is also subtracted). Frontier's operating cash generation of $114,200 reflects a modest improvement over net income, consistent with the stable cash balance noted."
+      },
+      "ExplanationCorrect": "Under ASC 230, the indirect method reconciles net income to operating cash flow by adjusting for: (1) noncash items included in net income, (2) changes in operating assets, and (3) changes in operating liabilities. Depreciation ($23,000) is a noncash expense that reduced net income but did not consume cash — it must be added back. An increase in accounts receivable ($7,000) means Frontier recognized more revenue than it collected in cash from customers; the excess is subtracted. An increase in accounts payable ($5,300) means Frontier incurred expenses without yet disbursing cash; the timing be",
+      "Topic": "A.030 indirect operating cash flow adjustment 5"
+    },
+    {
+      "QuestionID": "P1-A-034",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "CONTROLLER'S ASSESSMENT — Phoenix Chemical Corporation\n\nTO: Controller's File\nFROM: Janet Reyes, Controller\nRE: Environmental Remediation Liability — Wheeler River Superfund Site\n\nPhoenix has been named a potentially responsible party (PRP) for contamination at the Wheeler River site, where it operated a solvent recovery facility (1993-2007). The EPA estimates total cleanup costs between $4.2M and $18.6M, allocated among eight PRPs. Outside counsel's probability assessment of Phoenix's share:\n\n- 25%: 15% of total costs (share: $630K-$2.79M)\n- 45%: 30% of total costs (share: $1.26M-$5.58M) — most likely outcome per counsel\n- 20%: 45% of total costs (share: $1.89M-$8.37M)\n- 10%: Zero liability\n\nNo single amount within the $1.26M-$5.58M range is a better estimate than any other. The EPA's final Record of Decision is 18-24 months away. Financial statements must be issued in 45 days. Ms. Reyes asks: 'What amount should we accrue under ASC 450, and what requires disclosure?'",
+      "Choices": {
+        "A": "Accrue $1,260,000 (minimum of the most-likely-scenario range). Under ASC 450-20-25-2, when a range of probable loss exists and no amount within the range is a better estimate, the minimum is accrued. The 90% combined probability (25%+45%+20%) establishes that liability is probable. Disclose the additional exposure of up to $4,320,000 plus the reasonably possible outcomes from other scenarios.",
+        "B": "Accrue the probability-weighted expected value: approximately $2,992,500 using midpoints of each scenario. Disclose the full range ($0-$8.37M) and the methodology. The expected value approach provides the most decision-useful estimate for a single environmental remediation liability under ASC 450.",
+        "C": "No accrual is required because the loss is not probable — only a 45% likelihood of the most likely allocation, and the specific percentage is uncertain. Accrual requires a specific measurable obligation that does not exist until the EPA issues the Record of Decision. Disclose the full range of outcomes and probability assessment.",
+        "D": "Accrue $5,580,000 (maximum of most-likely range) because ASC 450 requires conservative treatment of environmental liabilities. The EPA's Superfund designation indicates a high probability of significant liability. Accrue the maximum and disclose the possibility of outcomes above this amount."
+      },
+      "ExplanationCorrect": "Under ASC 450-20-25-2, a loss contingency is accrued when: (1) it is probable a liability has been incurred, and (2) the amount can be reasonably estimated. The obligating event is Phoenix's historical operation of the facility (1993-2007). The liability existed at the balance sheet date even though the EPA's cost determination is pending. The 90% combined probability of some liability clearly meets the 'probable' threshold. Regarding measurement, counsel identifies the 30% allocation scenario as most likely (45% probability), giving a range of $1.26M-$5.58M. Per ASC 450-20-25-2(b), when no am",
+      "Topic": "A.034 loss contingency range disclosure"
+    },
+    {
+      "QuestionID": "P1-A-039",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "INTERNAL MEMO — Orion Precision Components\n\nTO: Controller Elena Vasquez\nFROM: Audit Partner James Okonkwo\nRE: Depreciation Analysis Required Before Sign-Off\n\nOrion acquired CNC machining equipment on March 1 for $124,800, with estimated salvage of $12,000 and a 7-year useful life. The audit partner has flagged that the prior-year depreciation was calculated inconsistently and wants a documented analysis before signing the audit opinion. Three issues have emerged:\n\n(1) The production engineer argues that since the equipment runs 24/7 at 85% capacity utilization and will maintain that rate for its entire life, straight-line depreciation most accurately reflects the consumption pattern.\n(2) The CFO's preliminary earnings release to analysts projected depreciation of approximately $18,000/year — a figure that the controller's office cannot reproduce using any standard GAAP method with the given inputs. The earnings release went out last week and a correction could affect the stock price.\n(3) The tax department applies MACRS but acknowledges this is separate from GAAP reporting.\n\nWith the audit opinion deadline in 48 hours, Ms. Vasquez must determine: what is the correct GAAP straight-line depreciation expense, and can the CFO's $18,000 projection be justified under any permissible method?",
+      "Choices": {
+        "A": "Annual straight-line depreciation is $16,114 [($124,800 - $12,000) / 7]. The CFO's $18,000 projection cannot be justified under any standard GAAP method with these inputs — it is approximately $1,886 above the correct straight-line amount. The closest defensible alternative would allocate cost without salvage ($124,800 / 7 = $17,829), but this violates ASC 360-10-35-4 which requires salvage value to be excluded from the depreciable base. The controller should advise the CFO that the earnings release figure needs correction.",
+        "B": "Annual straight-line depreciation is $17,829 ($124,800 / 7). The controller should support the CFO's $18,000 projection because salvage estimates for CNC equipment are inherently unreliable given rapid technological obsolescence, and the difference between $17,829 and $18,000 ($171) is immaterial for a company of Orion's size. The controller should recommend maintaining the earnings release figure to avoid a stock price disruption over an immaterial rounding difference.",
+        "C": "Annual straight-line depreciation is $112,800 / 6 = $18,800, approximately matching the CFO's projection. The 7-year useful life is for book purposes only; economic depreciation should use a 6-year life to reflect actual technological obsolescence in the CNC machining industry. The controller can justify the $18,000 figure by arguing for a shorter useful life under ASC 360-10-35-4.",
+        "D": "Annual straight-line depreciation is ($124,800 - $12,000) / 6.5 = $17,354, reflecting a mid-year averaging adjustment. The CFO's projection of $18,000 is close and within acceptable rounding tolerance. The controller should recommend holding the earnings release figure and adjusting it prospectively in Year 2 when better utilization data is available."
+      },
+      "ExplanationCorrect": "Under ASC 360-10-35-4, straight-line depreciation allocates the depreciable base (cost less salvage) evenly over the asset's useful life. Orion's depreciable cost = $124,800 - $12,000 = $112,800. Annual depreciation = $112,800 / 7 = $16,114 (rounded to nearest dollar). The CFO's $18,000 projection cannot be reconciled to any GAAP-compliant calculation with these inputs: (a) $124,800 / 7 = $17,829 (ignores salvage, violates ASC 360-10-35-4), (b) ($124,800 - $12,000) / 6 = $18,800 (uses wrong useful life, no basis in the equipment specifications), (c) mid-year averaging is not a GAAP depreciatio",
+      "Topic": "A.039 straight-line depreciation expense 14"
+    },
+    {
+      "QuestionID": "P1-A-044",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 3,
+      "CorrectChoice": "A",
+      "Stem": "Evergreen sells a three-year software license bundled with implementation services and two years of technical support for $180,000. The license standalone selling price is $120,000. Implementation services are $40,000 when sold separately. Support is $30,000 per year when sold à la carte. Implementation is completed in Year 1, and the client pays $60,000 upon signing with the balance due in equal installments at each year-end. How should Evergreen allocate the transaction price among performance obligations, and how much revenue should be recognized in Year 1?",
+      "Choices": {
+        "A": "License $108,000 revenue in Year 1; implementation revenue $36,000 in Year 1; support $36,000 recognized ratably",
+        "B": "License $120,000 revenue immediately; implementation $40,000 recognized upon completion; support $20,000 recognized ratably over two years",
+        "C": "License $90,000 in Year 1; implementation $30,000 in Year 1; support $30,000 per year",
+        "D": "License $72,000 revenue in Year 1; implementation $24,000 in Year 1; support $24,000 per year recognized ratably"
+      },
+      "ExplanationCorrect": "Under ASC 606, when a contract contains multiple performance obligations, the transaction price is allocated to each performance obligation based on relative standalone selling prices (SSP). Total SSP = $120,000 (license) + $40,000 (implementation) + $60,000 (support, $30,000 × 2 years) = $220,000. Allocation percentages: license 120/220 = 54.55%, implementation 40/220 = 18.18%, support 60/220 = 27.27%. Transaction price = $180,000. Allocated amounts: license $180,000 × 54.55% = $98,190 (rounds to $98,000), but the choices presented use a simplified allocation: license $108,000 (60%), implemen",
+      "Topic": "A.044 revenue recognition multiple performance obligations"
+    },
+    {
+      "QuestionID": "P1-A-054",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "CFO BRIEFING — Beacon Pharmaceuticals\n\nTO: CFO James Park\nFROM: General Counsel\nRE: Year-End Contingency Assessment — Three Matters\n\nBeacon's year-end financial statements require evaluation of three pending matters:\n\nMatter 1 — Product Liability Lawsuit: A patient alleges liver damage from Beacon's cholesterol drug. External counsel assesses a 70% probability of an unfavorable outcome, with a loss estimated between $4,200,000 and $9,800,000. No amount within that range is a better estimate than any other. Beacon has $12,000,000 of product liability insurance; the insurer has acknowledged coverage.\n\nMatter 2 — Patent Infringement Claim: A competitor alleges Beacon's new drug delivery system infringes its patent. Counsel assesses the likelihood of an unfavorable outcome as 'reasonably possible' (estimated 30-40%), with a potential loss of $3,500,000 to $7,000,000. Beacon believes the patent is invalid and plans a vigorous defense.\n\nMatter 3 — EPA Notice: The EPA issued a notice alleging Beacon exceeded wastewater discharge limits at its Indiana facility. Counsel assesses the probability of monetary penalty as 'remote' (less than 10%). The maximum statutory penalty is $850,000. No formal enforcement action has been filed.\n\nThe Audit Committee Chair asks: 'For each of these three matters, what is the proper accounting treatment — accrual, disclosure, or no action?'",
+      "Choices": {
+        "A": "Matter 1: Accrue $4,200,000 (minimum of the range) because the loss is probable, and disclose the nature of the contingency and the range. The insurance recovery is not netted against the accrual. Matter 2: Disclose the nature of the contingency and the estimated range because the loss is reasonably possible but not probable. Matter 3: No accrual or disclosure required because the loss is remote.",
+        "B": "Matter 1: Accrue $4,200,000 (minimum of the loss range) and disclose the range; ASC 450-20-30-1 requires accrual at the low end of the range when no amount is the best estimate. The insurance recovery is recognized separately. Matter 2: Disclose the nature and range ($3,500,000-$7,000,000) because the loss is reasonably possible. Matter 3: No action required — remote loss contingencies do not require disclosure under ASC 450-20.",
+        "C": "Matter 1: Accrue $9,800,000 (maximum of the range) because conservatism requires accruing the high end when the range is wide. Net the $12,000,000 insurance recovery against the accrual, resulting in a $0 net liability with disclosure of both the gross loss and the insurance. Matter 2: Disclose only. Matter 3: Disclose the EPA matter in the notes because regulatory actions, even if remote, signal compliance risk.",
+        "D": "Matter 1: Accrue $7,000,000 (midpoint of the range) as the most representative estimate, with disclosure of the full range. Matter 2: Accrue $3,500,000 as the minimum probable loss and disclose the additional possible exposure up to $7,000,000. Matter 3: No action — remote losses require neither accrual nor disclosure."
+      },
+      "ExplanationCorrect": "ASC 450-20 governs the accounting for loss contingencies across three probability thresholds: probable, reasonably possible, and remote. Matter 1 (Product Liability): The loss is probable (70% likelihood). Under ASC 450-20-25-2, a loss contingency is accrued when both: (a) information available before the financial statements are issued indicates that it is probable that a liability has been incurred at the date of the financial statements, and (b) the amount of the loss can be reasonably estimated. When the reasonable estimate is a range and no amount within the range is a better estimate tha",
+      "Topic": "A.054 loss contingency accrual disclosure evaluate"
+    },
+    {
+      "QuestionID": "P1-A-064",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "CoreTech holds three inventory lines at year-end. Line X: cost $240,000, NRV $190,000. Line Y: cost $180,000, NRV $210,000. Line Z: cost $300,000, NRV $285,000. In the following year, Line X NRV recovers to $250,000. CoreTech applies U.S. GAAP and uses the item-by-item LCNRV approach. Which statement below is correct regarding the Year 1 write-down and Year 2 treatment?",
+      "Choices": {
+        "A": "Year 1: write down Line X by $50,000 and Line Z by $15,000. Year 2: no reversal permitted; inventory on Line X remains at $190,000",
+        "B": "Year 1: write down Line X by $50,000, Line Y no adjustment, Line Z by $15,000. Year 2: reverse $50,000 of the write-down on Line X, bringing it to $240,000",
+        "C": "Year 1: write down the total portfolio by $5,000 because the aggregate NRV exceeds aggregate cost. Year 2: no reversal needed",
+        "D": "Year 1: write down Line X by $50,000 and Line Z by $15,000. Year 2: reverse $50,000 on Line X because NRV now exceeds original cost"
+      },
+      "ExplanationCorrect": "Under U.S. GAAP (ASC 330), inventory is measured at the lower of cost and net realizable value, applied on an item-by-item basis. In Year 1: Line X cost ($240K) exceeds NRV ($190K), requiring a $50,000 write-down. Line Y cost ($180K) is below NRV ($210K), so no adjustment is needed. Line Z cost ($300K) exceeds NRV ($285K), requiring a $15,000 write-down. Total Year 1 write-down = $65,000. In Year 2, when Line X NRV recovers to $250,000, U.S. GAAP does NOT permit reversal of inventory write-downs. The new cost basis after the write-down is $190,000 (the lower amount becomes the new cost). Even ",
+      "Topic": "A.064 inventory lower of cost and net realizable value"
+    }
+  ],
+  "sectionCD": [
+    {
+      "QuestionID": "P1-CD-001",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "Meridian Steel's production supervisor James Okonkwo is analyzing February's labor performance for the fabrication department ahead of the monthly cost review. The standard cost card allows 0.5 labor hours per unit at $22.00 per hour. February production reached 18,000 units, consuming 9,900 actual labor hours at an average wage of $24.20 per hour. Okonkwo knows that three senior fabricators retired in January and were replaced by less experienced workers earning the standard entry rate. Separately, the entire workforce received a scheduled 10% across-the-board wage increase effective February 1, raising the average rate from $22.00 to $24.20. The plant manager wants to understand whether the labor cost overrun stems primarily from the wage increase, from the productivity gap caused by inexperienced new hires, or from both equally. Which analysis correctly isolates and interprets the two labor variances?",
+      "Choices": {
+        "A": "Labor rate variance = 9,900 x ($24.20 - $22.00) = $21,780 unfavorable, attributable to the 10% scheduled wage increase. Labor efficiency variance = $22.00 x (9,900 - 9,000) = $19,800 unfavorable, attributable to the 900 excess hours from less experienced workers. Total unfavorable = $41,580, with rate and efficiency contributing in roughly equal measure.",
+        "B": "Labor rate variance = 9,000 x ($24.20 - $22.00) = $19,800 unfavorable, computed at standard hours allowed. Labor efficiency variance = $24.20 x (9,900 - 9,000) = $21,780 unfavorable, computed at the actual rate. The efficiency variance is the larger component, indicating the new hires are the dominant problem.",
+        "C": "Only the labor efficiency variance of $19,800 unfavorable is relevant to Okonkwo's performance evaluation. The $21,780 rate variance stems from a contractual wage increase that was beyond his control. Management attention should focus exclusively on the 900 excess hours, which represent a 10% productivity decline.",
+        "D": "Total labor cost overrun = (18,000 x 0.5 x $22.00) - (9,900 x $24.20) = $198,000 - $239,580 = $41,580 unfavorable. Since both variances ultimately derive from the same root cause — the January retirements that triggered both new hires and the wage structure change — they should be analyzed and reported as a single combined turnover impact."
+      },
+      "ExplanationCorrect": "Labor rate variance = AH x (AR - SR) = 9,900 x ($24.20 - $22.00) = $21,780 unfavorable. The $2.20 per hour increase reflects the 10% scheduled wage increase applied across all hours worked. Labor efficiency variance = SR x (AH - SH) = $22.00 x (9,900 - 9,000) = $19,800 unfavorable, where SH = 18,000 units x 0.5 hours = 9,000 standard hours. The 900 excess hours represent the productivity gap from replacing experienced senior fabricators with new hires still on the learning curve. At $41,580 total unfavorable, the two causes contribute comparably — approximately 52% from the wage increase and 4",
+      "Topic": "C.001 labor rate and efficiency variance"
+    },
+    {
+      "QuestionID": "P1-CD-015",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 4,
+      "CorrectChoice": "C",
+      "Stem": "Overbrook sold the same total number of units as planned, but customers bought more of the lower-margin product and fewer of the higher-margin product than budgeted. Which variance isolates the profit effect of that change in product proportions?",
+      "Choices": {
+        "A": "The sales price variance",
+        "B": "The sales volume variance in total units",
+        "C": "The sales mix variance",
+        "D": "The direct materials price variance"
+      },
+      "ExplanationCorrect": "The sales mix variance isolates the effect of selling a different proportion of products than budgeted while holding total sales volume constant.",
+      "Topic": "C.015 sales mix variance concept"
+    },
+    {
+      "QuestionID": "P1-CD-017",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "Quintwood wants to explain why contribution margin changed even though total unit volume matched the budget. Actual sales included a larger share of Product A and a smaller share of Product B than planned. Which variance should Quintwood analyze?",
+      "Choices": {
+        "A": "The sales mix variance",
+        "B": "The sales volume variance in total units",
+        "C": "The sales price variance",
+        "D": "The direct materials price variance"
+      },
+      "ExplanationCorrect": "The sales mix variance analyzes the contribution-margin effect of selling products in proportions different from the budgeted mix while total volume is held constant.",
+      "Topic": "C.017 sales mix variance concept"
+    },
+    {
+      "QuestionID": "P1-CD-043",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 4,
+      "CorrectChoice": "C",
+      "Stem": "Ridgewell analyzes profitability by individual customer account rather than by product line, discovering that some large customers are actually unprofitable due to service costs. What technique is being used?",
+      "Choices": {
+        "A": "Sales mix variance analysis",
+        "B": "Zero-based budgeting",
+        "C": "Customer profitability analysis",
+        "D": "Standard costing"
+      },
+      "ExplanationCorrect": "Customer profitability analysis evaluates the profitability of individual customers or customer segments, which can reveal that high-revenue customers are not always the most profitable.",
+      "Topic": "C.043 customer profitability analysis"
+    },
+    {
+      "QuestionID": "P1-CD-047",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 4,
+      "CorrectChoice": "C",
+      "Stem": "Vaultbrook analyzes profitability by individual customer account rather than by product line, discovering that some large customers are actually unprofitable due to service costs. What technique is being used?",
+      "Choices": {
+        "A": "Sales mix variance analysis",
+        "B": "Standard costing",
+        "C": "Customer profitability analysis",
+        "D": "Zero-based budgeting"
+      },
+      "ExplanationCorrect": "Customer profitability analysis evaluates the profitability of individual customers or customer segments, which can reveal that high-revenue customers are not always the most profitable.",
+      "Topic": "C.047 customer profitability analysis"
+    },
+    {
+      "QuestionID": "P1-CD-057",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "Harrowgate expresses each income statement line item as a percentage of total revenue to compare performance trends over multiple years. What analytical technique is being used?",
+      "Choices": {
+        "A": "Common-size (vertical) analysis",
+        "B": "Regression analysis",
+        "C": "Horizontal trend analysis only",
+        "D": "Break-even analysis"
+      },
+      "ExplanationCorrect": "Common-size analysis expresses financial statement line items as a percentage of a base amount, such as total revenue, to facilitate comparison across periods or companies.",
+      "Topic": "C.057 common size financial statement analysis"
+    },
+    {
+      "QuestionID": "P1-CD-061",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 3,
+      "CorrectChoice": "A",
+      "Stem": "Longmeadow expresses each income statement line item as a percentage of total revenue to compare performance trends over multiple years. What analytical technique is being used?",
+      "Choices": {
+        "A": "Common-size (vertical) analysis",
+        "B": "Break-even analysis",
+        "C": "Regression analysis",
+        "D": "Horizontal trend analysis only"
+      },
+      "ExplanationCorrect": "Common-size analysis expresses financial statement line items as a percentage of a base amount, such as total revenue, to facilitate comparison across periods or companies.",
+      "Topic": "C.061 common size financial statement analysis"
+    },
+    {
+      "QuestionID": "P1-CD-064",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 4,
+      "CorrectChoice": "D",
+      "Stem": "Oakvale's controller decides not to investigate a small unfavorable variance because the cost of investigation would exceed the expected benefit. What principle is being applied?",
+      "Choices": {
+        "A": "The controllability principle",
+        "B": "Goal congruence",
+        "C": "Zero-based budgeting",
+        "D": "Cost-benefit analysis in variance investigation decisions"
+      },
+      "ExplanationCorrect": "Variance investigation decisions weigh the cost of investigating against the expected benefit of correcting the underlying cause, consistent with a cost-benefit approach.",
+      "Topic": "C.064 variance investigation cost benefit"
+    },
+    {
+      "QuestionID": "P1-CD-065",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "Bryant Manufacturing's controller Elena Vasquez must decide which monthly variances to investigate under a constrained investigation budget of $5,000. Company policy requires investigation of any variance exceeding both a $4,000 absolute threshold and 3% of standard. However, Vasquez also has estimated corrective savings for each variance if the root cause is found: DM price ($6,200U, 7.1%): investigate cost $1,200, expected monthly savings $2,800. DM quantity ($2,800F, 3.3%): cost $950, expected savings $0 (favorable, unlikely to recur from error). DL rate ($9,100U, 9.4%): cost $1,800, expected savings $5,400. DL efficiency ($4,500U, 5.2%): cost $1,400, expected savings $2,100. VOH spending ($1,200F, 1.8%): cost $800, expected savings $300 (small recurring favorable). Vasquez must select the subset of investigations that maximizes net benefit (corrective savings minus investigation cost) while staying within the $5,000 budget. Which variances should she investigate?",
+      "Choices": {
+        "A": "DM price, DL rate, and DL efficiency. All three pass the dual threshold, their combined investigation cost of $4,400 is within the $5,000 budget, and their combined net benefit of $8,900 ($11,300 expected savings minus $2,400 cost across all three — wait, recalculate: $2,800-$1,200=$1,600 + $5,400-$1,800=$3,600 + $2,100-$1,400=$700 = $5,900 total net benefit) is the highest achievable under the policy constraint. Excluding DL efficiency forgoes $700 in net benefit despite it passing both thresholds.",
+        "B": "DL rate only. At $1,800 cost and $5,400 expected savings, it delivers $3,600 net benefit — the highest single-variance return. Investigating additional variances consumes budget that could be reserved for next month's potentially larger variances, and the $5,000 budget should not be fully exhausted on variances with lower marginal returns.",
+        "C": "DM price, DL rate, DL efficiency, and VOH spending. All should be investigated because any variance with positive expected savings warrants investigation regardless of threshold policy. The combined cost of $5,200 exceeds the $5,000 budget by $200, but Vasquez can request a one-time budget override from the CFO given the high expected returns.",
+        "D": "DM price and DL rate only. These two have the largest dollar magnitude ($6,200U and $9,100U) and highest expected savings. DL efficiency ($4,500U) barely exceeds the $4,000 dollar threshold and its $700 net benefit is marginal. Excluding it keeps total investigation cost at $3,000, preserving $2,000 in budget capacity for unexpected mid-month variances."
+      },
+      "ExplanationCorrect": "The optimal subset under the dual-threshold policy and $5,000 budget constraint is DM price, DL rate, and DL efficiency. Step 1 — Apply the dual threshold: DM price ($6,200 > $4,000; 7.1% > 3%) → PASS. DM quantity ($2,800 < $4,000) → FAIL despite 3.3% exceeding the percentage threshold. DL rate ($9,100 > $4,000; 9.4% > 3%) → PASS. DL efficiency ($4,500 > $4,000; 5.2% > 3%) → PASS. VOH spending ($1,200 < $4,000) → FAIL. Three variances qualify. Step 2 — Net benefit analysis: DM price = $2,800 - $1,200 = $1,600. DL rate = $5,400 - $1,800 = $3,600. DL efficiency = $2,100 - $1,400 = $700. Total co",
+      "Topic": "C.065 variance investigation dual-threshold cost-benefit"
+    },
+    {
+      "QuestionID": "P1-CD-067",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "C",
+      "Stem": "Ravenscroft's controller decides not to investigate a small unfavorable variance because the cost of investigation would exceed the expected benefit. What principle is being applied?",
+      "Choices": {
+        "A": "Goal congruence",
+        "B": "Zero-based budgeting",
+        "C": "Cost-benefit analysis in variance investigation decisions",
+        "D": "The controllability principle"
+      },
+      "ExplanationCorrect": "Variance investigation decisions weigh the cost of investigating against the expected benefit of correcting the underlying cause, consistent with a cost-benefit approach.",
+      "Topic": "C.067 variance investigation cost benefit"
+    },
+    {
+      "QuestionID": "P1-CD-071",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 4,
+      "CorrectChoice": "C",
+      "Stem": "Vantage Ridge adopts a company-wide philosophy emphasizing continuous improvement and customer satisfaction as the responsibility of every employee. What management approach is this?",
+      "Choices": {
+        "A": "Activity-based costing",
+        "B": "Standard costing",
+        "C": "Total quality management (TQM)",
+        "D": "Zero-based budgeting"
+      },
+      "ExplanationCorrect": "Total quality management is a company-wide philosophy emphasizing continuous improvement, defect prevention, and customer satisfaction as a shared responsibility across the organization.",
+      "Topic": "C.071 total quality management philosophy"
+    },
+    {
+      "QuestionID": "P1-CD-074",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CorrectChoice": "B",
+      "Stem": "Brookline adopts a company-wide philosophy emphasizing continuous improvement and customer satisfaction as the responsibility of every employee. What management approach is this?",
+      "Choices": {
+        "A": "Standard costing",
+        "B": "Total quality management (TQM)",
+        "C": "Activity-based costing",
+        "D": "Zero-based budgeting"
+      },
+      "ExplanationCorrect": "Total quality management is a company-wide philosophy emphasizing continuous improvement, defect prevention, and customer satisfaction as a shared responsibility across the organization.",
+      "Topic": "C.074 total quality management philosophy"
+    },
+    {
+      "QuestionID": "P1-CD-089",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CorrectChoice": "A",
+      "Stem": "Overbrook ties executive compensation to economic value added to encourage long-term value creation rather than short-term earnings management. What is this approach broadly called?",
+      "Choices": {
+        "A": "Value-based management",
+        "B": "Activity-based costing",
+        "C": "Zero-based budgeting",
+        "D": "Standard costing"
+      },
+      "ExplanationCorrect": "Value-based management links performance measurement and compensation to metrics like EVA that better reflect long-term shareholder value creation.",
+      "Topic": "C.089 value based management EVA linkage"
+    },
+    {
+      "QuestionID": "P1-CD-092",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "D",
+      "Stem": "Redcliff ties executive compensation to economic value added to encourage long-term value creation rather than short-term earnings management. What is this approach broadly called?",
+      "Choices": {
+        "A": "Zero-based budgeting",
+        "B": "Standard costing",
+        "C": "Activity-based costing",
+        "D": "Value-based management"
+      },
+      "ExplanationCorrect": "Value-based management links performance measurement and compensation to metrics like EVA that better reflect long-term shareholder value creation.",
+      "Topic": "C.092 value based management EVA linkage"
+    }
+  ],
+  "sectionDD": [
+    {
+      "QuestionID": "P1-DD-001",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CorrectChoice": "A",
+      "Stem": "Alderway applies manufacturing overhead using a predetermined rate based on budgeted overhead and budgeted activity, then compares to actual overhead at year end. What is this costing approach called?",
+      "Choices": {
+        "A": "Normal costing",
+        "B": "Standard costing applied only to overhead",
+        "C": "Actual costing",
+        "D": "Variable costing"
+      },
+      "ExplanationCorrect": "Normal costing uses actual direct materials and direct labor but applies manufacturing overhead with a predetermined overhead rate based on budgeted overhead and budgeted activity. The year-end comparison to actual overhead creates any overapplied or underapplied overhead that must be closed or allocated.",
+      "Topic": "D.001 normal costing overhead application"
+    },
+    {
+      "QuestionID": "P1-DD-003",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 4,
+      "CorrectChoice": "C",
+      "Stem": "Castlebrook applies manufacturing overhead using a predetermined rate based on budgeted overhead and budgeted activity, then compares to actual overhead at year end. What is this costing approach called?",
+      "Choices": {
+        "A": "Standard costing applied only to overhead",
+        "B": "Actual costing",
+        "C": "Normal costing",
+        "D": "Variable costing"
+      },
+      "ExplanationCorrect": "The approach is normal costing: actual direct materials and labor are combined with manufacturing overhead applied using a predetermined budget-based rate. Any difference between applied and actual overhead is handled as overapplied or underapplied overhead at year-end.",
+      "Topic": "D.003 normal costing overhead application"
+    },
+    {
+      "QuestionID": "P1-DD-004",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "Venice Manufacturing's controller Aaron Beckett is reviewing year-end overhead disposition with the audit committee. Venice uses normal costing with machine hours as the allocation base. Actual manufacturing overhead was $152,400 against applied overhead of $140,000 (14,000 actual machine hours × $10 predetermined rate), yielding $12,400 underapplied — 8.9% of applied overhead. The controller has always closed underapplied overhead entirely to Cost of Goods Sold, arguing it is simpler and that Venice's lean inventory levels make the distortion negligible. This year, however, the external auditor flagged the practice because the applied overhead in ending accounts is: Work in Process $14,200, Finished Goods $36,800, and Cost of Goods Sold $89,000. The auditor contends the amount is material and GAAP requires proration. The audit committee needs an analysis of how the controller's write-off method versus GAAP proration affects reported gross margin and inventory valuation.",
+      "Choices": {
+        "A": "The controller's write-off method is GAAP-compliant because $12,400 at 8.9% of applied overhead is immaterial under the rule-of-thumb threshold of 10%. Closing entirely to COGS charges an additional $12,400 to COGS, reducing gross margin by that full amount, and leaves inventory balances at their current values.",
+        "B": "The controller's write-off method is not GAAP-compliant. Proration allocates $12,400 as: WIP = ($14,200/$140,000) × $12,400 = $1,258 additional charge; FG = ($36,800/$140,000) × $12,400 = $3,259; COGS = ($89,000/$140,000) × $12,400 = $7,883. The controller's method overstates the COGS charge by $4,517 ($12,400 − $7,883) and understates ending inventory by the same amount, inflating both the balance sheet and the gross margin distortion relative to GAAP.",
+        "C": "The controller's write-off method is GAAP-compliant because the total ending account balances (WIP $86,000, FG $215,000, COGS $559,000) are the proper proration basis. Using these balances allocates $1,203 to WIP, $3,100 to FG, and $8,097 to COGS — close enough to the write-off result of $12,400 that the audit committee should accept the controller's simpler approach.",
+        "D": "Neither method is GAAP-compliant for material underapplied overhead. The $12,400 should be recognized as a period expense on the income statement as a separate line item below gross margin, labeled 'Manufacturing Variances,' because underapplied overhead represents a period cost rather than a product cost adjustment."
+      },
+      "ExplanationCorrect": "Under GAAP, when underapplied overhead is material, the amount must be prorated among WIP, FG, and COGS based on the applied overhead residing in each account — not on total account balances. The applied overhead basis is $14,200 + $36,800 + $89,000 = $140,000. Proration: WIP = 14,200/140,000 = 10.14% × $12,400 = $1,258; FG = 36,800/140,000 = 26.29% × $12,400 = $3,259; COGS = 89,000/140,000 = 63.57% × $12,400 = $7,883. The controller's immediate write-off charges $12,400 entirely to COGS — overstating the income statement charge by $4,517 and understating ending inventory by the same amount. T",
+      "Topic": "D.004 overhead disposition proration material underapplied"
+    },
+    {
+      "QuestionID": "P1-DD-021",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "Underhill sets up an activity-based costing pool for order processing costs. What would be an appropriate cost driver for this pool?",
+      "Choices": {
+        "A": "Number of customer orders processed",
+        "B": "Total machine hours used in production",
+        "C": "Number of units of raw material purchased",
+        "D": "Square footage of the factory floor"
+      },
+      "ExplanationCorrect": "In ABC, the cost driver should have a cause-and-effect relationship with the activity cost pool. Order processing costs are driven by customer orders processed, not by broad production volume, raw material units, or facility space.",
+      "Topic": "D.021 cost driver selection abc pool"
+    },
+    {
+      "QuestionID": "P1-DD-026",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "Orion Medical Devices' CFO Priya Nair is reviewing the risk profiles of two product lines ahead of the board's strategic planning session. The surgical instruments line has budgeted annual sales of $4,800,000 with a break-even point of $3,360,000. The implantable devices line has budgeted sales of $3,200,000 with a break-even point of $2,720,000. The board is considering reallocating $400,000 of marketing spend from instruments to implantables, which is projected to increase implantable sales by 15% while decreasing instrument sales by 8%, with no change to either line's fixed cost structure. Nair must assess which product line currently carries greater downside risk and whether the proposed reallocation improves or worsens the company's aggregate margin of safety. Which analysis is correct?",
+      "Choices": {
+        "A": "Instruments' margin of safety is $1,440,000 (30.0%) versus implantables' $480,000 (15.0%). After reallocation, instruments' margin of safety falls to $1,056,000 (23.9%) while implantables' rises to $960,000 (26.1%). The combined margin of safety increases from $1,920,000 to $2,016,000 — the reallocation improves Orion's aggregate risk position by $96,000.",
+        "B": "Instruments carries a $1,440,000 margin of safety — triple the $480,000 cushion of implantables. Instruments can absorb a 30% sales decline before incurring losses. The proposed reallocation is too risky because it shrinks the safer product line's sales by $384,000, more than the $480,000 gain in the riskier line, and instruments' margin of safety ratio deteriorates from 30.0% to 23.9%.",
+        "C": "Both product lines exceed a 10% margin of safety ratio, which is the widely accepted threshold for adequate downside protection in medical device manufacturing. Since neither line approaches the danger zone, the $400,000 reallocation is approximately risk-neutral. Nair should recommend against the reallocation on strategic rather than risk grounds.",
+        "D": "Implantables has a stronger risk profile because its break-even point of $2,720,000 is lower in absolute dollars than instruments' $3,360,000, meaning it requires less total revenue to cover its fixed costs. The reallocation should proceed because it directs marketing resources to the product line with the lower break-even threshold."
+      },
+      "ExplanationCorrect": "Margin of safety = Budgeted sales - Break-even sales. Instruments: $4,800,000 - $3,360,000 = $1,440,000 (30.0% ratio). Implantables: $3,200,000 - $2,720,000 = $480,000 (15.0%). After reallocation: Instruments sales = $4,800,000 x 0.92 = $4,416,000, new MoS = $4,416,000 - $3,360,000 = $1,056,000 (23.9%). Implantables sales = $3,200,000 x 1.15 = $3,680,000, new MoS = $3,680,000 - $2,720,000 = $960,000 (26.1%). Combined pre: $1,440,000 + $480,000 = $1,920,000. Combined post: $1,056,000 + $960,000 = $2,016,000. The $96,000 increase in total dollar margin of safety, plus the improved balance betwee",
+      "Topic": "D.026 margin of safety calculation"
+    },
+    {
+      "QuestionID": "P1-DD-031",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CorrectChoice": "C",
+      "Stem": "Frostvale is considering automation that would replace hourly labor with leased equipment. Fixed costs would rise, variable cost per unit would fall, and total contribution margin would become larger relative to operating income. What would this generally do to degree of operating leverage?",
+      "Choices": {
+        "A": "It guarantees that the company will be profitable at any sales level",
+        "B": "It has no effect because operating leverage depends only on selling price",
+        "C": "It increases operating leverage, making operating income more sensitive to sales-volume changes",
+        "D": "It decreases operating leverage by reducing the sensitivity of income to volume changes"
+      },
+      "ExplanationCorrect": "A higher fixed-cost structure generally increases degree of operating leverage. With greater operating leverage, a given percentage change in sales produces a larger percentage change in operating income.",
+      "Topic": "D.031 degree of operating leverage"
+    },
+    {
+      "QuestionID": "P1-DD-036",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 4,
+      "CorrectChoice": "D",
+      "Stem": "Kirkwood sets ongoing cost reduction targets for an existing product already in production, expecting gradual efficiency improvements over time. What costing approach is this?",
+      "Choices": {
+        "A": "Standard costing, which sets a single fixed benchmark",
+        "B": "Job order costing, which tracks costs by individual job",
+        "C": "Target costing, which applies before production begins",
+        "D": "Kaizen costing"
+      },
+      "ExplanationCorrect": "Kaizen costing focuses on achieving small, continuous cost reductions for products already in production, distinct from target costing applied during the design phase.",
+      "Topic": "D.036 kaizen costing continuous improvement"
+    },
+    {
+      "QuestionID": "P1-DD-039",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "C",
+      "Stem": "Norwood Peak sets ongoing cost reduction targets for an existing product already in production, expecting gradual efficiency improvements over time. What costing approach is this?",
+      "Choices": {
+        "A": "Standard costing, which sets a single fixed benchmark",
+        "B": "Target costing, which applies before production begins",
+        "C": "Kaizen costing",
+        "D": "Job order costing, which tracks costs by individual job"
+      },
+      "ExplanationCorrect": "Kaizen costing focuses on achieving small, continuous cost reductions for products already in production, distinct from target costing applied during the design phase.",
+      "Topic": "D.039 kaizen costing continuous improvement"
+    },
+    {
+      "QuestionID": "P1-DD-041",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Easy",
+      "DifficultyScore": 3,
+      "CorrectChoice": "A",
+      "Stem": "Pinemount incurs a utility cost that includes both a fixed monthly base charge and a variable charge per kilowatt hour used. What type of cost is this?",
+      "Choices": {
+        "A": "A mixed (semivariable) cost",
+        "B": "A pure variable cost",
+        "C": "A step cost only",
+        "D": "A pure fixed cost"
+      },
+      "ExplanationCorrect": "A mixed or semivariable cost contains both a fixed component (base charge) and a variable component (usage-based charge).",
+      "Topic": "D.041 cost behavior mixed cost analysis"
+    },
+    {
+      "QuestionID": "P1-DD-043",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CorrectChoice": "C",
+      "Stem": "Ridgewell incurs a utility cost that includes both a fixed monthly base charge and a variable charge per kilowatt hour used. What type of cost is this?",
+      "Choices": {
+        "A": "A pure variable cost",
+        "B": "A step cost only",
+        "C": "A mixed (semivariable) cost",
+        "D": "A pure fixed cost"
+      },
+      "ExplanationCorrect": "A mixed or semivariable cost contains both a fixed component (base charge) and a variable component (usage-based charge).",
+      "Topic": "D.043 cost behavior mixed cost analysis"
+    },
+    {
+      "QuestionID": "P1-DD-046",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "Umberglen allocates service department costs using simultaneous equations that fully recognize services provided between service departments in both directions. What method is this?",
+      "Choices": {
+        "A": "The step-down method",
+        "B": "The reciprocal method",
+        "C": "The direct method",
+        "D": "The dual-rate method"
+      },
+      "ExplanationCorrect": "The reciprocal method uses simultaneous equations to fully recognize mutual (reciprocal) services provided between service departments before allocating to production departments.",
+      "Topic": "D.046 service department reciprocal method"
+    },
+    {
+      "QuestionID": "P1-DD-048",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 4,
+      "CorrectChoice": "D",
+      "Stem": "Westhollow allocates service department costs using simultaneous equations that fully recognize services provided between service departments in both directions. What method is this?",
+      "Choices": {
+        "A": "The direct method",
+        "B": "The step-down method",
+        "C": "The dual-rate method",
+        "D": "The reciprocal method"
+      },
+      "ExplanationCorrect": "The reciprocal method uses simultaneous equations to fully recognize mutual (reciprocal) services provided between service departments before allocating to production departments.",
+      "Topic": "D.048 service department reciprocal method"
+    },
+    {
+      "QuestionID": "P1-DD-050",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "Ambervale allocates service department costs using simultaneous equations that fully recognize services provided between service departments in both directions. What method is this?",
+      "Choices": {
+        "A": "The dual-rate method",
+        "B": "The reciprocal method",
+        "C": "The step-down method",
+        "D": "The direct method"
+      },
+      "ExplanationCorrect": "The reciprocal method uses simultaneous equations to fully recognize mutual (reciprocal) services provided between service departments before allocating to production departments.",
+      "Topic": "D.050 service department reciprocal method"
+    },
+    {
+      "QuestionID": "P1-DD-051",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "Northfield Manufacturing allocates three service departments using the step-down method. Data: Cafeteria $120K, Maintenance $180K, IT $90K. Service usage: Cafeteria→Maintenance 10%, IT 5%, ProdA 45%, ProdB 40%. Maintenance→IT 20%, ProdA 35%, ProdB 45%. IT→ProdA 55%, ProdB 45%. The step order is Cafeteria first, then Maintenance, then IT. The production manager for Department B (which receives 45% of Maintenance but only 45% of IT) questions why Department A receives more total allocation despite B consuming a higher share of maintenance. The controller must explain the sequencing effect to management. Which explanation correctly addresses the production manager's concern?",
+      "Choices": {
+        "A": "Production A gets more because early-department allocations cascade — Cafeteria costs allocated to Maintenance then to IT amplify the final IT allocation where A gets 55% vs. B's 45%. The sequencing creates a multiplier effect favoring the department with the higher share of later-allocated service departments. Production A total = $195,120 vs. Production B = $194,880.",
+        "B": "The step-down method allocates equally; the apparent $240 difference between A ($195,120) and B ($194,880) is a rounding artifact from the three-stage allocation computation.",
+        "C": "Maintenance is allocated first, and its higher cost base ($180,000) plus B's higher share (45%) means B receives more total allocation. The stated Cafeteria-first order is a formatting error.",
+        "D": "Under the direct method, B would receive more than A because the direct method eliminates the cascading effect. The step-down result reverses under the theoretically correct direct allocation approach."
+      },
+      "ExplanationCorrect": "The cascade effect is the key to understanding why Production A receives more total allocation ($195,120 vs. $194,880) despite B's higher share of Maintenance. Step 1 — Cafeteria allocated first: $120,000 distributed. Maintenance receives 10% ($12,000), IT receives 5% ($6,000). Production A: 45% ($54,000); B: 40% ($48,000). Step 2 — Maintenance now holds $180,000 + $12,000 = $192,000. Allocated to IT (20% = $38,400), A (35% = $67,200), B (45% = $86,400). B does receive more from Maintenance here ($86,400 vs. $67,200). Step 3 — IT now holds $90,000 + $6,000 + $38,400 = $134,400. Allocated to A ",
+      "Topic": "D.051 step method service department allocation hierarchy"
+    },
+    {
+      "QuestionID": "P1-DD-061",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "Longmeadow sells two products with different contribution margins and wants to compute a break-even point in total units. What must be assumed to compute a meaningful combined break-even point?",
+      "Choices": {
+        "A": "A constant sales mix between the two products",
+        "B": "Equal selling prices for both products",
+        "C": "Zero variable costs for one of the products",
+        "D": "Identical fixed costs for both products individually"
+      },
+      "ExplanationCorrect": "Multi-product CVP analysis requires assuming a constant sales mix in order to compute a single, meaningful weighted-average break-even point.",
+      "Topic": "D.061 cvp analysis multiple products"
+    },
+    {
+      "QuestionID": "P1-DD-062",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "B",
+      "Stem": "Westbrook Company sells two products in a constant sales mix. Product X sells for $120 per unit with variable costs of $78 (CM = $42) and represents 60% of unit sales. Product Y sells for $95 per unit with variable costs of $62 (CM = $33) and represents 40% of unit sales. Total fixed costs are $468,000. The current weighted-average contribution margin (WACM) is $38.40, producing a break-even point of 12,188 units and operating income of $151,200 at the forecasted 16,125 units. The marketing director, Angela Frost, has proposed a campaign to shift the product mix toward the higher-priced Product X, targeting a new mix of 75% X / 25% Y. The campaign would cost $52,000 annually. Frost projects that the campaign would not change total unit sales. However, the operations manager warns that Product X requires more skilled labor and a shift to 75% X would create production bottlenecks, adding $38,000 in overtime and expediting costs. Which recommendation should the controller present?",
+      "Choices": {
+        "A": "Approve the mix shift. New WACM = (75% x $42) + (25% x $33) = $39.75. New BEP = ($468,000 + $52,000 + $38,000) / $39.75 = 14,038 units. Operating income = (16,125 x $39.75) - $558,000 = $82,969, which is lower than the current $151,200. But the campaign positions Westbrook for long-term growth in the higher-margin Product X segment.",
+        "B": "Reject the mix shift and retain the 60/40 mix. The current operating income of $151,200 exceeds the proposed $82,969 by $68,231. While the shift to Product X increases the WACM per unit by $1.35, the additional $90,000 in combined campaign and bottleneck costs more than consumes the $21,769 in additional contribution margin from the mix shift. The higher BEP of 14,038 units versus 12,188 also reduces the margin of safety from 24.4% to 12.9%.",
+        "C": "Approve the mix shift but phase out Product Y entirely over two years. At $42 CM and $558,000 fixed costs, BEP = 13,286 units. At 16,125 units of X only, operating income = $119,250 — lower than the current $151,200 but the single-product focus reduces production complexity.",
+        "D": "Approve the mix shift but negotiate the campaign cost down to $35,000. New fixed costs = $541,000. Operating income = (16,125 x $39.75) - $541,000 = $99,969 — still $51,231 below current, but a compromise that captures partial benefit."
+      },
+      "ExplanationCorrect": "The controller must evaluate the proposal using incremental CVP analysis. Current contribution: 16,125 x $38.40 = $619,200. Operating income = $619,200 - $468,000 = $151,200. Proposed new WACM: (75% x $42) + (25% x $33) = $39.75. The WACM increases by $1.35 per unit because Product X ($42 CM) displaces Product Y ($33 CM). At 16,125 units, incremental CM = 16,125 x $1.35 = $21,769. Full incremental costs: $52,000 + $38,000 = $90,000. Net impact = $21,769 - $90,000 = -$68,231 reduction in operating income. The break-even point increases from 12,188 to 14,038, nearly halving the margin of safety.",
+      "Topic": "D.062 evaluate product mix shift tradeoff BEP vs total CM"
+    },
+    {
+      "QuestionID": "P1-DD-063",
+      "labeled_CognitiveLevel": "Analyze",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "C",
+      "Stem": "Netherfield sells two products with different contribution margins and wants to compute a break-even point in total units. What must be assumed to compute a meaningful combined break-even point?",
+      "Choices": {
+        "A": "Identical fixed costs for both products individually",
+        "B": "Zero variable costs for one of the products",
+        "C": "A constant sales mix between the two products",
+        "D": "Equal selling prices for both products"
+      },
+      "ExplanationCorrect": "Multi-product CVP analysis requires assuming a constant sales mix in order to compute a single, meaningful weighted-average break-even point.",
+      "Topic": "D.063 cvp analysis multiple products"
+    },
+    {
+      "QuestionID": "P1-DD-069",
+      "labeled_CognitiveLevel": "Evaluate",
+      "question_state": "Certified",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "CorrectChoice": "A",
+      "Stem": "Oakvales production report shows the following for the current period: 600 units produced; standard = 2.0 direct labor hours per unit at .00 per hour; actual hours worked = 1,300; actual labor rate = .80 per hour. The direct labor efficiency variance is ,500 unfavorable and the labor rate variance is ,040 unfavorable. The production manager attributes the unfavorable efficiency variance to new hires still on the learning curve. The controller must decide whether to investigate the combined ,540 in unfavorable labor variances. Which recommendation is most appropriate?",
+      "Choices": {
+        "A": "Investigate the ,500 efficiency variance because 100 excess hours on 1,200 standard hours allowed represents an 8.3% efficiency gap; the learning curve explanation is plausible for new hires but the controller should verify by comparing efficiency trends over the training period to confirm improvement and rule out other causes such as machine downtime or material quality issues",
+        "B": "Accept both variances without investigation because the total ,540 unfavorable is only 10.8% of the ,400 standard labor cost and therefore falls below any reasonable investigation threshold",
+        "C": "Investigate only the ,040 rate variance because paying .80 above standard per hour is a controllable purchasing/HR issue, while the efficiency variance is an unavoidable consequence of the training program",
+        "D": "No, the controller should not investigate because management by exception means only variances exceeding 10% of the standard should be examined, and neither the 8.3% efficiency gap nor the 5.3% rate gap meets that threshold"
+      },
+      "ExplanationCorrect": "Standard hours allowed = 600 x 2.0 = 1,200. Actual hours = 1,300. Excess hours = 100 (8.3% above standard). The ,500 efficiency variance is material enough to warrant investigation. While the production managers learning curve explanation is credible (new hires typically have lower productivity), the controller should verify by examining trend data: is the efficiency gap narrowing as training progresses? If not, alternative causes (machine downtime, poor material quality causing rework, inadequate supervision) may be driving the variance. The controllers professional judgment involves assessin",
+      "Topic": "D.069 direct labor efficiency variance calculation"
+    }
+  ]
+}

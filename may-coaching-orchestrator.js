@@ -316,11 +316,22 @@ const MayCoachingOrchestrator = (function() {
             });
           });
         }
-        // CAL-07 (MAY-019): Persist telemetry snapshot to localStorage
+        // CAL-07 (MAY-019/MAY-027): Persist full telemetry buffer + snapshot to localStorage
         try {
-          var snap = MayTelemetry.snapshot();
           if (typeof localStorage !== 'undefined') {
-            localStorage.setItem('cmaMayPilotTelemetry', JSON.stringify(snap));
+            var snap = MayTelemetry.snapshot();
+            var fullBuffer = MayTelemetry.drain();
+            var sessId = 'sess_' + new Date().toISOString().replace(/[:.]/g, '-');
+            localStorage.setItem('cmaMayPilotTelemetry', JSON.stringify({ events: fullBuffer, snapshot: snap }));
+            localStorage.setItem('cmaMayPilotTelemetrySnapshot', JSON.stringify(snap));
+            var archive = [];
+            try {
+              var existing = JSON.parse(localStorage.getItem('cmaMayPilotTelemetryArchive') || '[]');
+              archive = existing;
+            } catch (eParse) { /* start fresh */ }
+            archive.push({ sessionId: sessId, timestamp: new Date().toISOString(), eventCount: fullBuffer.length, events: fullBuffer, snapshot: snap });
+            if (archive.length > 50) archive = archive.slice(-50);
+            localStorage.setItem('cmaMayPilotTelemetryArchive', JSON.stringify(archive));
           }
         } catch (ePersist) { /* persistence non-blocking */ }
       }

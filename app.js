@@ -1604,6 +1604,17 @@ const ExamSessionManager = {
         SessionPersistence.clear();
         this.renderSummary('priority');
         if (typeof May !== 'undefined') May.handoffCompletedSession(state.session);
+        if (typeof MayTelemetry !== 'undefined') {
+            MayTelemetry.trackAdoption({ recommendationType: 'Session', cardId: 'session-complete', topic: '', presented: false, panelOpened: false, clicked: false, sessionStarted: false, completed: true, timestamp: new Date().toISOString() });
+        }
+        if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_PRODUCTION_MAY_INTEGRATION')) {
+            setTimeout(() => {
+                let tooltip = document.getElementById('mayLauncherTooltip');
+                if (tooltip) tooltip.textContent = 'Review your session with May \u2014 see strengths, weak areas, and next steps.';
+                let label = document.querySelector('#mayLauncherBtn .may-launcher-label');
+                if (label) label.textContent = 'May \u2014 Review';
+            }, 100);
+        }
     },
 
     remaining() {
@@ -1622,6 +1633,22 @@ const ExamSessionManager = {
                 if (typeof May !== 'undefined') {
                     sessionStorage.removeItem('mayCompanionDismissed');
                     setTimeout(() => { May._injectMayCompanionCard(); May._updateMayLauncherState(); }, 50);
+                }
+                if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_PRODUCTION_MAY_INTEGRATION') && typeof May !== 'undefined') {
+                    setTimeout(() => {
+                        let tooltip = document.getElementById('mayLauncherTooltip');
+                        if (tooltip) {
+                            let data = typeof MayLearnerState !== 'undefined' ? MayLearnerState.load() : null;
+                            let sessionCount = data && data.sessions ? data.sessions.length : 0;
+                            if (sessionCount >= 3) {
+                                tooltip.textContent = 'Review weak areas, analyze missed questions, or continue your study plan with May.';
+                            } else if (sessionCount >= 1) {
+                                tooltip.textContent = 'Analyze your missed questions or review your study plan with May.';
+                            } else {
+                                tooltip.textContent = 'Meet May \u2014 your CMA Part 1 study companion.';
+                            }
+                        }
+                    }, 100);
                 }
                 return;
             }
@@ -2104,6 +2131,38 @@ const ExamSessionManager = {
 
     pct(x) { return x === null ? 'n/a' : Math.round(x * 100) + '%'; },
 
+    _renderMayRecommendationPanel() {
+        if (typeof MayFeatureFlags === 'undefined' || !MayFeatureFlags.isEnabled('ENABLE_PRODUCTION_MAY_INTEGRATION')) return '';
+        if (typeof MayLearnerState === 'undefined') return '';
+        try {
+            let clusters = MayLearnerState.getWeaknessClusters();
+            let readiness = MayLearnerState.getReadinessSummary();
+            let topWeak = clusters && clusters.persistentWeak && clusters.persistentWeak.length > 0 ? clusters.persistentWeak[0] : null;
+            let declining = clusters && clusters.declining && clusters.declining.length > 0 ? clusters.declining[0] : null;
+            let suggestedTopic = declining ? declining.topic : (topWeak ? topWeak.topic : null);
+            let readinessBand = readiness && readiness.overall ? readiness.overall.band : 'Not enough data';
+            let bandCls = readinessBand === 'Recovery needed' ? 'may-rec-danger' : readinessBand === 'Developing' ? 'may-rec-warning' : readinessBand === 'Approaching review-ready' ? 'may-rec-info' : 'may-rec-muted';
+            let nextAction = suggestedTopic ? 'Review ' + suggestedTopic + ' questions' : 'Start a practice session';
+            let data = MayLearnerState.load();
+            let sessionCount = data.sessions ? data.sessions.length : 0;
+            let hasData = sessionCount >= 1;
+            if (!hasData) return '';
+            if (typeof MayTelemetry !== 'undefined') {
+                var _ts = new Date().toISOString();
+                MayTelemetry.trackAdoption({ recommendationType: 'Top Weakness', cardId: 'top-weakness', topic: (topWeak ? topWeak.topic : ''), presented: true, panelOpened: false, clicked: false, sessionStarted: false, completed: false, timestamp: _ts });
+                MayTelemetry.trackAdoption({ recommendationType: 'Suggested Review', cardId: 'suggested-review', topic: (suggestedTopic || ''), presented: true, panelOpened: false, clicked: false, sessionStarted: false, completed: false, timestamp: _ts });
+                MayTelemetry.trackAdoption({ recommendationType: 'Next Session', cardId: 'next-session', topic: (suggestedTopic || ''), presented: true, panelOpened: false, clicked: false, sessionStarted: false, completed: false, timestamp: _ts });
+                MayTelemetry.trackAdoption({ recommendationType: 'Readiness', cardId: 'readiness', topic: (readinessBand || ''), presented: true, panelOpened: false, clicked: false, sessionStarted: false, completed: false, timestamp: _ts });
+            }
+            return '<div class="may-recommendation-panel"><h3>May Recommendations</h3><div class="may-rec-grid">'
+                + '<div class="may-rec-card"><div class="may-rec-label">Top Weakness</div><div class="may-rec-value">' + (topWeak ? topWeak.topic + ' (' + (topWeak.accuracy || 0) + '%)' : 'Not enough data') + '</div></div>'
+                + '<div class="may-rec-card"><div class="may-rec-label">Suggested Review</div><div class="may-rec-value">' + (suggestedTopic || 'Complete more sessions') + '</div></div>'
+                + '<div class="may-rec-card"><div class="may-rec-label">Next Session</div><div class="may-rec-value">' + nextAction + '</div></div>'
+                + '<div class="may-rec-card"><div class="may-rec-label">Readiness</div><div class="may-rec-value may-rec-band ' + bandCls + '">' + readinessBand + '</div></div>'
+                + '</div><p class="small" style="margin-top:8px;"><a href="#" onclick="showView(\'coachView\'); if(typeof May!==\'undefined\'){May.renderView()} if(typeof MayTelemetry!==\'undefined\'){MayTelemetry.trackAdoption({recommendationType:\'Panel Link\',cardId:\'rec-panel-link\',topic:\'\',presented:false,panelOpened:true,clicked:true,sessionStarted:false,completed:false,timestamp:new Date().toISOString()})} return false;">Open May for full coaching \u2192</a></p></div>';
+        } catch (e) { return ''; }
+    },
+
     renderSummary(filter) {
         if (filter === undefined) filter = 'priority';
         try {
@@ -2201,6 +2260,8 @@ const ExamSessionManager = {
           ${ReviewCoach.renderPostSessionCard()}
 
           ${ReadinessModel.renderReadinessCard(readiness)}
+
+          ${this._renderMayRecommendationPanel()}
 
           <h3>Adaptive Review Queue</h3>
           <p class="small">Prioritized by: Incorrect (weight 5) &gt; Guesses (3) &gt; Low confidence (2) &gt; Slow correct (2) &gt; Marked (1).</p>
@@ -3916,6 +3977,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typeof May !== 'undefined') {
             let card = document.getElementById('mayCompanionCard');
             if (card) card.remove();
+        }
+        if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_PRODUCTION_MAY_INTEGRATION')) {
+            let tooltip = document.getElementById('mayLauncherTooltip');
+            if (tooltip) tooltip.textContent = 'May is tracking your session. Review your results after submitting.';
+        }
+        if (typeof MayTelemetry !== 'undefined') {
+            MayTelemetry.trackAdoption({ recommendationType: 'Session', cardId: 'session-start', topic: '', presented: false, panelOpened: false, clicked: false, sessionStarted: true, completed: false, timestamp: new Date().toISOString() });
         }
         ExamSessionManager.start(e);
     };

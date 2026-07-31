@@ -5,7 +5,10 @@
  * LLM telemetry gated behind ENABLE_LLM flag (always false in MAY-016).
  * Buffer capped at 500 events; oldest evicted on overflow.
  * 
- * Session: MAY-016
+ * Event types (7): decision, mode, readiness, recommendation, intervention,
+ *   adoption (MAY-025), engagement (MAY-025)
+ * 
+ * Sessions: MAY-016 (base), MAY-025 (adoption + engagement events)
  * Governance: Light Lane (UI/observability — no pack/case/content impact)
  */
 
@@ -87,6 +90,26 @@ var MayTelemetry = (function() {
     return entry;
   }
 
+  function trackAdoption(data) {
+    var entry = { type: 'adoption', timestamp: _now(), data: data };
+    _buffer.push(entry);
+    if (_buffer.length > MAX_BUFFER) _buffer.shift();
+    if (_shouldLog()) {
+      try { console.debug('[MayTelemetry] Adoption:', data.recommendationType, 'panelOpened=' + data.panelOpened + ' clicked=' + data.clicked); } catch (e) {}
+    }
+    return entry;
+  }
+
+  function trackEngagement(data) {
+    var entry = { type: 'engagement', timestamp: _now(), data: data };
+    _buffer.push(entry);
+    if (_buffer.length > MAX_BUFFER) _buffer.shift();
+    if (_shouldLog()) {
+      try { console.debug('[MayTelemetry] Engagement:', data.action); } catch (e) {}
+    }
+    return entry;
+  }
+
   function startTimer(label) {
     _timers[label] = (typeof performance !== 'undefined') ? performance.now() : Date.now();
   }
@@ -131,6 +154,8 @@ var MayTelemetry = (function() {
     trackReadiness: trackReadiness,
     trackRecommendation: trackRecommendation,
     trackIntervention: trackIntervention,
+    trackAdoption: trackAdoption,
+    trackEngagement: trackEngagement,
     startTimer: startTimer,
     endTimer: endTimer,
     snapshot: snapshot,

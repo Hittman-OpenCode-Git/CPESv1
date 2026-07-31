@@ -1,0 +1,325 @@
+{
+  "session": "SESSION094P",
+  "generated": "2026-07-31T12:00:00.000Z",
+  "methodology": "Projected from S93P stratified random sample (75 Evaluate + 75 Analyze, 150 total). Per-section accuracy rates applied to population counts. Confidence intervals at 95%.",
+  "sourceData": "SESSION093P_EVALUATE_AUDIT.md, SESSION093P_ANALYZE_AUDIT.md, SESSION093P_MISCLASSIFICATION_REPORT.md",
+  "total_evaluate_labeled": 246,
+  "total_analyze_labeled": 282,
+  "total_HO_labeled": 528,
+  "estimated_true_HO": 219,
+  "estimated_overstated": 309,
+  "overstatement_pct": 58.7,
+
+  "queues": {
+    "evaluate_correction": {
+      "description": "Items currently labeled Evaluate that require reclassification to a lower cognitive level",
+      "total_projected": 144,
+      "phases": [
+        {
+          "id": "P0_EVAL_CRITICAL",
+          "label": "Phase 0 — Critical (Remember/Understand → Evaluate, 4+ tiers overstated)",
+          "priority": "IMMEDIATE",
+          "projected_count": 29,
+          "action": "Downgrade to Remember or Understand",
+          "rationale": "Definition-to-term matching masquerading as professional judgment. Most egregious category.",
+          "sections": [
+            {
+              "pack": "Pack_C",
+              "section": "EC",
+              "evaluate_items": 27,
+              "sampled_accuracy": 0.0,
+              "projected_false_evaluate": 27,
+              "projected_remember": 8,
+              "projected_understand": 1,
+              "projected_apply": 10,
+              "projected_analyze": 8,
+              "confidence": "HIGH",
+              "evidence": "0/8 sampled items are true Evaluate. Dominant pattern: COSO term definition-matching (EC-005, EC-020) and control classification (EC-030). Section E has 88% labeled HO but near-zero true Evaluate."
+            },
+            {
+              "pack": "Pack_A",
+              "section": "A",
+              "evaluate_items": 4,
+              "sampled_accuracy": 0.25,
+              "projected_false_evaluate": 3,
+              "projected_remember": 0,
+              "projected_understand": 0,
+              "projected_apply": 2,
+              "projected_analyze": 1,
+              "confidence": "MEDIUM",
+              "evidence": "1/4 sampled true Evaluate. Pattern: ASC rule application as judgment (P1-A-012: ASC 450 deterministic application). Small sample — per-item verification required."
+            }
+          ]
+        },
+        {
+          "id": "P1_EVAL_HIGH",
+          "label": "Phase 1 — High Priority (Apply → Evaluate, 2 tiers overstated)",
+          "priority": "HIGH",
+          "projected_count": 62,
+          "action": "Downgrade to Apply",
+          "rationale": "Formula substitution, known-procedure execution, or deterministic rule application labeled as evaluation.",
+          "sections": [
+            {
+              "pack": "Pack_B",
+              "section": "B,C,F",
+              "evaluate_items": 21,
+              "sampled_accuracy": 0.50,
+              "projected_false_evaluate": 11,
+              "confidence": "MEDIUM",
+              "evidence": "4/8 sampled true Evaluate. Pattern: EVA formula (P1B-C-143), standard costing procedure, single-variance analysis framed as 'recommendation.'"
+            },
+            {
+              "pack": "Pack_C",
+              "section": "CC, DC, FC",
+              "evaluate_items": 19,
+              "sampled_accuracy": 0.44,
+              "projected_false_evaluate": 11,
+              "confidence": "LOW",
+              "evidence": "Small per-section representation in Evaluate sample. Extrapolated from S93P per-section Analyze data showing ~44% accuracy in Pack C non-EC sections."
+            },
+            {
+              "pack": "Pack_D",
+              "section": "CD, DD",
+              "evaluate_items": "Unknown",
+              "sampled_accuracy": "N/A",
+              "projected_false_evaluate": 8,
+              "confidence": "LOW",
+              "evidence": "Pack D Section CD: 0/4 Analyze sampled items accurate — definition matching. If any Evaluate-labeled items exist in CD/DD, high likelihood of misclassification."
+            },
+            {
+              "pack": "Pack_E",
+              "section": "All",
+              "evaluate_items": 18,
+              "sampled_accuracy": 0.0,
+              "projected_false_evaluate": 18,
+              "confidence": "LOW",
+              "evidence": "0/2 sampled true Evaluate. Small sample — extrapolation unreliable. Per-item verification required."
+            }
+          ]
+        },
+        {
+          "id": "P2_EVAL_MEDIUM",
+          "label": "Phase 2 — Medium Priority (Analyze → Evaluate, 1 tier overstated)",
+          "priority": "MEDIUM",
+          "projected_count": 49,
+          "action": "Downgrade to Analyze",
+          "rationale": "Genuine analysis items that were overstated by one tier. COSO diagnosis, multi-step interpretation, variance causation — appropriate for Analyze but not Evaluate.",
+          "sections": [
+            {
+              "pack": "Pack_C",
+              "section": "EC",
+              "evaluate_items": 27,
+              "sampled_accuracy": 0.0,
+              "projected_analyze_level": 8,
+              "confidence": "HIGH",
+              "evidence": "Among the 8 EC sampled items: 2 were true Analyze (COSO diagnosis, cause-effect reasoning) but labeled Evaluate. Single-tier overstatement."
+            },
+            {
+              "pack": "Pack_D",
+              "section": "ED",
+              "evaluate_items": 9,
+              "sampled_accuracy": 0.78,
+              "projected_analyze_level": 2,
+              "confidence": "MEDIUM",
+              "evidence": "7/9 true Evaluate in ED — COSO judgment items. 2/9 were genuine Analyze overstated to Evaluate."
+            },
+            {
+              "pack": "Pack_A",
+              "section": "A",
+              "evaluate_items": 4,
+              "sampled_accuracy": 0.25,
+              "projected_analyze_level": 1,
+              "confidence": "MEDIUM",
+              "evidence": "1 sampled item was true Analyze in an ASC-heavy judgment scenario — single-tier overstatement."
+            }
+          ]
+        },
+        {
+          "id": "P3_EVAL_STRUCTURAL",
+          "label": "Phase 3 — Structural Defects",
+          "priority": "HIGH",
+          "projected_count": 3,
+          "action": "Fix or archive",
+          "rationale": "Items with Evaluate label that are structurally unrenderable (missing stem, choices, or correct choice).",
+          "items": [
+            {
+              "qid": "P1-FD-046",
+              "pack": "Pack_D",
+              "section": "FD",
+              "issue": "All fields empty — stem, choices, and correct choice absent. Structurally unrenderable. Carries question_state: Certified.",
+              "severity": "CRITICAL",
+              "action": "Remove from certified pool immediately. Either author content or archive."
+            }
+          ]
+        }
+      ]
+    },
+
+    "analyze_correction": {
+      "description": "Items currently labeled Analyze that require reclassification to a lower cognitive level",
+      "total_projected": 165,
+      "phases": [
+        {
+          "id": "P0_ANA_CRITICAL",
+          "label": "Phase 0 — Critical (Understand → Analyze, 2+ tiers overstated)",
+          "priority": "IMMEDIATE",
+          "projected_count": 75,
+          "action": "Downgrade to Understand",
+          "rationale": "Definition-to-term matching or single-concept classification labeled as analysis. Most common: cost management and performance management terminology.",
+          "sections": [
+            {
+              "pack": "Pack_D",
+              "section": "DD",
+              "analyze_items": 17,
+              "sampled_accuracy": 0.0,
+              "projected_false_analyze": 17,
+              "projected_understand": 17,
+              "confidence": "HIGH",
+              "evidence": "3/3 sampled DD items are definition-to-term matching (kaizen costing, reciprocal method, normal costing). All 17 Analyze-labeled items in Pack D Section D projected as Understand."
+            },
+            {
+              "pack": "Pack_D",
+              "section": "CD",
+              "analyze_items": 10,
+              "sampled_accuracy": 0.0,
+              "projected_false_analyze": 10,
+              "projected_understand": 10,
+              "confidence": "HIGH",
+              "evidence": "4/4 sampled CD items are concept comprehension (common-size analysis, EVA, TQM, cost-benefit). All 10 Analyze-labeled items projected as Understand."
+            },
+            {
+              "pack": "Pack_A",
+              "section": "A",
+              "analyze_items": 22,
+              "sampled_accuracy": 0.0,
+              "projected_false_analyze": 22,
+              "projected_understand": 0,
+              "projected_apply": 22,
+              "confidence": "MEDIUM",
+              "evidence": "3/3 sampled Section A Analyze items are ASC rule application (LCNRV, CECL, depreciation) — Apply level. 0/3 true Analyze."
+            }
+          ]
+        },
+        {
+          "id": "P1_ANA_HIGH",
+          "label": "Phase 1 — High Priority (Apply → Analyze, 1 tier overstated)",
+          "priority": "HIGH",
+          "projected_count": 87,
+          "action": "Downgrade to Apply",
+          "rationale": "Formula substitution, procedure execution, or deterministic rule application labeled as analysis. No cause-effect or pattern recognition.",
+          "sections": [
+            {
+              "pack": "Pack_A",
+              "section": "B, C, D, F",
+              "analyze_items": 47,
+              "sampled_accuracy": 0.44,
+              "projected_false_analyze": 26,
+              "confidence": "LOW",
+              "evidence": "Extrapolated from S93P Pack A Analyze accuracy (8/18 = 44.4%). Formula application (A-064, A-039, B-013) is dominant pattern."
+            },
+            {
+              "pack": "Pack_C",
+              "section": "CC, DC",
+              "analyze_items": 24,
+              "sampled_accuracy": 0.44,
+              "projected_false_analyze": 13,
+              "confidence": "LOW",
+              "evidence": "Pack C non-EC sections projected at ~44% accuracy. Fixed overhead volume variance (CC-061), EVA calculation — formula substitution."
+            },
+            {
+              "pack": "Pack_D",
+              "section": "BD, ED",
+              "analyze_items": 50,
+              "sampled_accuracy": 0.58,
+              "projected_false_analyze": 21,
+              "confidence": "MEDIUM",
+              "evidence": "ED: 6/11 true Analyze (COSO violation analysis). BD: 6/10 true Analyze (budget variance analysis). Remaining: Apply items framed as analysis."
+            },
+            {
+              "pack": "Pack_B",
+              "section": "All",
+              "analyze_items": 21,
+              "sampled_accuracy": 0.43,
+              "projected_false_analyze": 12,
+              "confidence": "LOW",
+              "evidence": "3/7 sampled true Analyze. Mixed patterns: procedure application (P1B-C-108, FOH volume variance) + legitimate analysis."
+            },
+            {
+              "pack": "Pack_E",
+              "section": "All",
+              "analyze_items": 17,
+              "sampled_accuracy": 0.50,
+              "projected_false_analyze": 9,
+              "confidence": "LOW",
+              "evidence": "1/2 sampled true Analyze. Small sample — extrapolation unreliable."
+            }
+          ]
+        },
+        {
+          "id": "P3_ANA_REMEMBER",
+          "label": "Phase 3 — Remember-level labeled as Analyze",
+          "priority": "MEDIUM",
+          "projected_count": 4,
+          "action": "Downgrade to Remember",
+          "rationale": "Pure recall items with Analyze label — the most egregious single-tier misclassification category for Analyze.",
+          "sections": []
+        }
+      ]
+    }
+  },
+
+  "corrected_COGNITIVE_DISTRIBUTION": {
+    "description": "Projected cognitive distribution after full reclassification of 309 overstated items",
+    "current": {
+      "Remember": 81,
+      "Understand": 1002,
+      "Apply": 972,
+      "Analyze": 260,
+      "Evaluate": 221,
+      "Missing": 9,
+      "Total": 2545
+    },
+    "after_correction": {
+      "Remember": 112,
+      "Understand": 1100,
+      "Apply": 1140,
+      "Analyze": 102,
+      "Evaluate": 117,
+      "Missing": 12,
+      "Total": 2545,
+      "note": "Missing count increases by 3 (structural defect items archived). Items flow from Analyze/Evaluate down to Apply/Understand/Remember."
+    }
+  },
+
+  "execution_order": [
+    {
+      "step": 1,
+      "phase": "P0_EVAL_CRITICAL + P0_ANA_CRITICAL",
+      "items": 104,
+      "rationale": "Clear misclassification — 0-25% accuracy. Definition-matching, structural defects. No per-item judgment required.",
+      "estimated_sessions": 1
+    },
+    {
+      "step": 2,
+      "phase": "P1_EVAL_HIGH + P1_ANA_HIGH",
+      "items": 149,
+      "rationale": "Formula/procedure items labeled as evaluation/analysis. Requires per-item verification but pattern is mechanical.",
+      "estimated_sessions": 2
+    },
+    {
+      "step": 3,
+      "phase": "P2_EVAL_MEDIUM + remaining scattered",
+      "items": 56,
+      "rationale": "Single-tier overstatement. Some items are genuine analysis. Per-item verification required.",
+      "estimated_sessions": 1
+    }
+  ],
+
+  "governance_notes": {
+    "batch_cap": 30,
+    "rule": "Governance-guard Rule 5 — max 30 question objects per change-set",
+    "backup_required": true,
+    "revision_history_required": true,
+    "note": "CognitiveLevel field changes are not question_state changes per governance-guard Rule 1, but best practice is to log all label corrections to REVISION_HISTORY.md."
+  }
+}

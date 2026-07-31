@@ -1,0 +1,275 @@
+{
+  "session": "SESSION099P",
+  "generated": "2026-07-31T23:59:00.000Z",
+  "description": "Prioritized execution queue for repository-wide cognitive reclassification. All items require metadata-only changes (CognitiveLevel + DifficultyScore). Zero content, stem, choice, explanation, or answer-key changes.",
+  "total_items_to_correct": 296,
+  "total_structural_defect_items": 3,
+  "estimated_effort_hours": 5,
+  "batch_cap": 30,
+  "governance_rule": "Governance-guard Rule 5 — max 30 question objects per change-set",
+  "execution_phases": [
+    {
+      "phase": "PHASE_0",
+      "label": "Phase 0 — Structural Defect Fixes (IMMEDIATE)",
+      "priority": "CRITICAL",
+      "items": 3,
+      "action": "Fix or archive",
+      "rationale": "Items with HO labels that are structurally unrenderable. Must be addressed before any reclassification.",
+      "items_list": [
+        {
+          "qid": "P1-FD-046",
+          "pack": "pack_d_corrected.js",
+          "section": "FD",
+          "issue": "All fields empty — stem, choices, and correct choice absent. Carries question_state: Certified.",
+          "current_label": "Evaluate",
+          "action": "Archive immediately. Remove from Certified pool. Catalog in DEFECT_LIBRARY.md if not already documented."
+        },
+        {
+          "qid": "P1-FD-XXX",
+          "pack": "pack_d_corrected.js",
+          "section": "FD",
+          "issue": "Additional structural defects identified in S93P (2 more, ~3 total projected).",
+          "current_label": "Evaluate",
+          "action": "Per-item audit to confirm. Fix or archive."
+        },
+        {
+          "qid": "P1-FD-YYY",
+          "pack": "pack_d_corrected.js",
+          "section": "FD",
+          "issue": "Additional structural defect.",
+          "current_label": "Analyze",
+          "action": "Per-item audit to confirm. Fix or archive."
+        }
+      ],
+      "batches_required": 1,
+      "notes": "These items block accurate reporting and should not carry any cognitive label. Per DEFECT_LIBRARY.md DL-034 precedent: structural defects with Certified state should be immediate-fix priority."
+    },
+    {
+      "phase": "PHASE_1",
+      "label": "Phase 1 — Tier 1 (Order-of-Magnitude Errors: Remember/Understand → Evaluate/Analyze)",
+      "priority": "IMMEDIATE",
+      "items": 56,
+      "action": "Downgrade to Remember or Understand",
+      "rationale": "Definition-to-term matching or single-concept classification items labeled as Analyze/Evaluate. Most egregious misclassification — 4+ tiers overstated in some cases. Seven of EC's 66 HO items are this category.",
+      "sections": [
+        {
+          "section": "Pack_C_Section_EC",
+          "pack": "pack_c_corrected.js",
+          "items": 7,
+          "current_label": "Evaluate or Analyze",
+          "corrected_label": "Remember or Understand",
+          "confidence": "HIGH",
+          "evidence": "S96P pilot: EC-005 (segregation of duties), EC-020 (physical control classification), EC-008 (COSO framework definition) — all definition-matching.",
+          "batch_count": 1,
+          "note": "S96P pilot already audited all 75 items."
+        },
+        {
+          "section": "Pack_D_Section_CD",
+          "pack": "pack_d_corrected.js",
+          "items": 10,
+          "current_label": "Analyze",
+          "corrected_label": "Understand",
+          "confidence": "HIGH",
+          "evidence": "4/4 sampled items are concept comprehension (common-size, EVA, TQM, cost-benefit). Stem defines the concept. Answer is the term.",
+          "batch_count": 1
+        },
+        {
+          "section": "Pack_D_Section_DD",
+          "pack": "pack_d_corrected.js",
+          "items": 17,
+          "current_label": "Analyze",
+          "corrected_label": "Understand",
+          "confidence": "HIGH",
+          "evidence": "3/3 sampled items are definition-to-term matching (kaizen costing, reciprocal method, normal costing).",
+          "batch_count": 1
+        },
+        {
+          "section": "Pack_A_Section_A",
+          "pack": "pack_a_corrected.js",
+          "items": 4,
+          "current_label": "Evaluate or Analyze",
+          "corrected_label": "Apply",
+          "confidence": "MEDIUM",
+          "evidence": "ASC rule application (P1-A-012: ASC 450; P1-A-039: depreciation formula). Deterministic standard application.",
+          "batch_count": 1
+        },
+        {
+          "section": "Remaining_Packs",
+          "pack": "All",
+          "items": 18,
+          "current_label": "Evaluate or Analyze",
+          "corrected_label": "Remember/Understand/Apply",
+          "confidence": "LOW",
+          "evidence": "Scattered across Pack B and Pack E. Per-item verification required. Extrapolated from S93P per-pack accuracy rates.",
+          "batch_count": 1
+        }
+      ],
+      "batches_required": 5
+    },
+    {
+      "phase": "PHASE_2",
+      "label": "Phase 2 — Tier 2 (One-Tier Slippage: Apply → Analyze, Analyze → Evaluate)",
+      "priority": "HIGH",
+      "items": 90,
+      "action": "Downgrade by one tier (Evaluate → Analyze, or Analyze → Apply)",
+      "rationale": "Formula substitution, procedure execution, or COSO classification items labeled one tier too high. Content is well-written — relabel only.",
+      "sections": [
+        {
+          "section": "Pack_D_Section_BD",
+          "pack": "pack_d_corrected.js",
+          "items": 22,
+          "current_label": "Analyze or Evaluate",
+          "corrected_label": "Apply or Analyze",
+          "confidence": "MEDIUM",
+          "evidence": "Formula-execution items reframed as Analyze. Genuine trade-off items correctly labeled. Section-level accuracy: 60-71%.",
+          "batch_count": 1
+        },
+        {
+          "section": "Pack_D_Section_ED",
+          "pack": "pack_d_corrected.js",
+          "items": 16,
+          "current_label": "Analyze or Evaluate",
+          "corrected_label": "Apply or Analyze",
+          "confidence": "MEDIUM",
+          "evidence": "COSO classification items: 'Which COSO component does X support?' — classified as Analyze, should be Apply. Genuine COSO diagnosis items correctly labeled.",
+          "batch_count": 1
+        },
+        {
+          "section": "Pack_C_Section_EC",
+          "pack": "pack_c_corrected.js",
+          "items": 11,
+          "current_label": "Evaluate",
+          "corrected_label": "Analyze",
+          "confidence": "HIGH",
+          "evidence": "S96P pilot: EC-007 (diagnosing control environment), EC-011 (risk assessment failure). Genuine scenario-based items that ask the candidate to identify what went wrong (Analyze), not to make a recommendation (Evaluate).",
+          "batch_count": 1
+        },
+        {
+          "section": "Pack_C_Sections_CC_DC",
+          "pack": "pack_c_corrected.js",
+          "items": 11,
+          "current_label": "Evaluate or Analyze",
+          "corrected_label": "Apply or Analyze",
+          "confidence": "LOW",
+          "evidence": "Formula substitution (EVA, FOH volume variance, ABC allocation) labeled as Analyze/Evaluate. Per-item verification required.",
+          "batch_count": 1
+        },
+        {
+          "section": "Pack_A_Section_A",
+          "pack": "pack_a_corrected.js",
+          "items": 4,
+          "current_label": "Analyze or Evaluate",
+          "corrected_label": "Apply or Analyze",
+          "confidence": "MEDIUM",
+          "evidence": "ASC rule application items overstated by one tier.",
+          "batch_count": 1
+        },
+        {
+          "section": "Pack_A_ALL_C_D_E",
+          "pack": "pack_a_corrected.js",
+          "items": 10,
+          "current_label": "Analyze or Evaluate",
+          "corrected_label": "Apply or Analyze",
+          "confidence": "LOW",
+          "evidence": "Scattered across Sections C, D, E. Mixed patterns. Per-item verification required.",
+          "batch_count": 1
+        },
+        {
+          "section": "Remaining_Packs",
+          "pack": "Packs_B_E",
+          "items": 16,
+          "current_label": "Evaluate or Analyze",
+          "corrected_label": "Analyze or Apply",
+          "confidence": "LOW",
+          "evidence": "Scattered across Pack B (formula substitution) and Pack E (different pipeline).",
+          "batch_count": 1
+        }
+      ],
+      "batches_required": 7
+    },
+    {
+      "phase": "PHASE_3",
+      "label": "Phase 3 — Tier 3 (Verification of Accurately Labeled Items)",
+      "priority": "MEDIUM",
+      "items": 150,
+      "action": "Verify and document — no changes expected",
+      "rationale": "Items that passed the gate during pilot or project to be correctly labeled. Per-item spot-check verification only.",
+      "sections": [
+        {
+          "section": "Pack_A_Section_B",
+          "pack": "pack_a_corrected.js",
+          "items": 35,
+          "confidence": "HIGH",
+          "evidence": "83% Evaluate accuracy. Genuine evaluative trade-off items. S77 campaign benchmark.",
+          "action": "Spot-check 5 items. Confirm labels. Document as gold standard exemplars."
+        },
+        {
+          "section": "Pack_A_Section_F",
+          "pack": "pack_a_corrected.js",
+          "items": 5,
+          "confidence": "HIGH",
+          "evidence": "100% Evaluate accuracy. Technology governance — inherently evaluative.",
+          "action": "Spot-check 2 items. Confirm labels. Gold standard."
+        },
+        {
+          "section": "Pack_D_Section_BD_remainder",
+          "pack": "pack_d_corrected.js",
+          "items": 67,
+          "confidence": "MEDIUM",
+          "evidence": "Best modernization campaign. 71% Evaluate, 60% Analyze accuracy. Many genuinely evaluative.",
+          "action": "Spot-check 10 items. Confirm labels for items not in Phase 2."
+        },
+        {
+          "section": "Remaining_Verified",
+          "pack": "All",
+          "items": 43,
+          "confidence": "MEDIUM",
+          "evidence": "Mixed sections. Items with high probability of correct labeling.",
+          "action": "Spot-check per section. Verify against gate criteria. Document."
+        }
+      ],
+      "batches_required": 6
+    }
+  ],
+  "execution_order": [
+    {
+      "step": 0,
+      "phase": "PHASE_0",
+      "items": 3,
+      "action": "Fix or archive structural defects",
+      "note": "Must be resolved before Phase 1 — accurate reporting requires zero dead items in HO pool."
+    },
+    {
+      "step": 1,
+      "phase": "PHASE_1",
+      "items": 56,
+      "action": "Downgrade order-of-magnitude misclassifications",
+      "note": "Highest-leverage correction. 56 items account for ~18% of the total overstatement but are the most egregious. Definition-matching → Remember/Understand."
+    },
+    {
+      "step": 2,
+      "phase": "PHASE_2",
+      "items": 90,
+      "action": "Downgrade one-tier slippage",
+      "note": "Formula substitution, procedure execution, classification items. Per-item audit required for LOW-confidence sections."
+    },
+    {
+      "step": 3,
+      "phase": "PHASE_3",
+      "items": 150,
+      "action": "Verify accurately labeled items",
+      "note": "Spot-check verification. No changes expected for HIGH-confidence sections. Per-item audit for LOW-confidence sections."
+    }
+  ],
+  "difficulty_calibration_note": "Many HO-labeled items also carry inflated difficulty scores. When downgrading CognitiveLevel, also review DifficultyScore for consistency: Evaluate → minimum Moderate (3), Analyze → minimum Moderate (2), Apply at Easy (1) is valid. Items like EC-031 (Risk appetite, labeled Very Difficult(1) = inconsistency — DifficultyScore 1 is impossible for Evaluate).",
+  "deliverable_format": "Each batch produces: (1) Per-item before/after CognitiveLevel and DifficultyScore, (2) Confidence level (HIGH/MEDIUM/LOW), (3) Evidence from S95P rubrics, (4) Batch summary with QID list. All changes logged to REVISION_HISTORY.md per governance best practice.",
+  "governance_notes": {
+    "batch_cap": 30,
+    "rule_reference": "Governance-guard Rule 5",
+    "backup_required": true,
+    "backup_protocol": "per BACKUP_PROTOCOL.md",
+    "revision_history_required": true,
+    "revision_history_note": "CognitiveLevel changes are not question_state changes per governance-guard Rule 1, but best practice is to log all label corrections to REVISION_HISTORY.md.",
+    "certification_impact": "None. Changing CognitiveLevel does not invalidate CAQS §1.7.2 certification. Content (stem, choices, explanations, answer key) is unchanged. Suggested amendment: items with 2+ tier downgrade should flag for lower-confidence re-verification on CAQS Dimension 2 (Cognitive Level)."
+  }
+}

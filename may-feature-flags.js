@@ -26,7 +26,8 @@ const MayFeatureFlags = (function() {
     ENABLE_ADAPTIVE_COACHING: false,
     ENABLE_READINESS_SCORING: false,
     ENABLE_ADAPTIVE_ORCHESTRATION: false,
-    ENABLE_COACHING_MEMORY: false
+    ENABLE_COACHING_MEMORY: false,
+    ENABLE_PRODUCTION_MAY_INTEGRATION: true
   };
 
   var _changeLog = [];

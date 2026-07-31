@@ -1,0 +1,372 @@
+{
+  "session": "SESSION100P",
+  "generated": "2026-07-31T12:52:00.000Z",
+  "methodology": "Synthesized from S93P (classification audit), S94P (priority sections), S96P (pilot data), S97P (automated gate results)",
+  "sourceData": [
+    "reports/SESSION093P_MISCLASSIFICATION_REPORT.md",
+    "reports/SESSION094P_PRIORITY_SECTIONS.md",
+    "reports/SESSION094P_RECERTIFICATION_QUEUE.json",
+    "reports/SESSION096P_RECLASSIFICATION_MODEL.md",
+    "reports/SESSION096P_RECOVERY_IMPACT.md",
+    "scripts/output/s097p_gate_results.json"
+  ],
+  "total_HO_labeled": 543,
+  "total_AF_flagged": 189,
+  "total_AF_clean": 354,
+  "estimated_true_HO": 219,
+
+  "executionQueues": {
+    "P0_CRITICAL": {
+      "priority": "IMMEDIATE — 0-25% accuracy sections",
+      "estimated_items": 101,
+      "estimated_sessions": 2,
+      "estimated_effort_hours": 4,
+      "approach": "Full-section reclassification. AF-3/4 auto-gate decisions trusted. Minimal per-item review needed.",
+      "sections": [
+        {
+          "rank": 1,
+          "pack": "Pack C",
+          "section": "EC",
+          "file": "pack_c_corrected.js",
+          "HO_labeled": 52,
+          "evaluate_item_count": 27,
+          "analyze_item_count": 25,
+          "sampled_evaluate_accuracy": 0.0,
+          "sampled_analyze_accuracy": 0.60,
+          "estimated_true_HO": 27,
+          "estimated_overstated_HO": 25,
+          "af_flagged_estimated": 27,
+          "dominant_AF": ["AF-3", "AF-4"],
+          "dominant_pattern": "COSO definition-matching as Evaluate. Control classification as Analyze.",
+          "three_tier_t1": 8,
+          "three_tier_t2": 11,
+          "three_tier_t3": 33,
+          "relabel_actions": [
+            "27 Evaluate items → Analyze (if COSO diagnosis) or Apply/Remember",
+            "5 Analyze items → Understand (control classification → taxonomy matching)",
+            "Zero content rewrites needed"
+          ],
+          "recommended_batches": ["C.1: 28 items (AF-3 + AF-4)", "C.2: 24 items (AF-2 + AF-6 + Phase B)"],
+          "certified_items_affected": 70,
+          "risk": "LOW — metadata-only changes. No answer keys or explanations touched."
+        },
+        {
+          "rank": 2,
+          "pack": "Pack A",
+          "section": "A (Section A)",
+          "file": "pack_a_corrected.js",
+          "HO_labeled": 22,
+          "evaluate_item_count": 4,
+          "analyze_item_count": 18,
+          "sampled_evaluate_accuracy": 0.25,
+          "sampled_analyze_accuracy": 0.0,
+          "estimated_true_HO": 5,
+          "estimated_overstated_HO": 17,
+          "af_flagged_estimated": 14,
+          "dominant_AF": ["AF-3"],
+          "dominant_pattern": "ASC rule application as judgment/analysis. Controller memos with deterministic standard answers.",
+          "three_tier_t1": 5,
+          "three_tier_t2": 12,
+          "three_tier_t3": 5,
+          "relabel_actions": [
+            "18 Analyze items → Apply (ASC 360 depreciation, ASC 450 contingency, ASC 810 consolidation)",
+            "3 Evaluate items → Apply (ASC rule application — deterministic)",
+            "1 Evaluate item → Analyze (genuine borderline)",
+            "Zero content rewrites needed"
+          ],
+          "recommended_batches": ["C.5: 22 items (all AF-3)"],
+          "certified_items_affected": 22,
+          "risk": "LOW — ASC rules are deterministic. AF-3 signal is very strong."
+        },
+        {
+          "rank": 3,
+          "pack": "Pack D",
+          "section": "DD",
+          "file": "pack_d_corrected.js",
+          "HO_labeled": 17,
+          "evaluate_item_count": 0,
+          "analyze_item_count": 17,
+          "sampled_evaluate_accuracy": null,
+          "sampled_analyze_accuracy": 0.0,
+          "estimated_true_HO": 0,
+          "estimated_overstated_HO": 17,
+          "af_flagged_estimated": 15,
+          "dominant_AF": ["AF-4", "AF-3"],
+          "dominant_pattern": "Cost management terminology as Analyze. Definition-to-term matching (kaizen costing, reciprocal method, normal costing).",
+          "three_tier_t1": 15,
+          "three_tier_t2": 2,
+          "three_tier_t3": 0,
+          "relabel_actions": [
+            "17 Analyze items → Understand or Apply",
+            "Majority: Understand (definition-to-term matching)",
+            "Some: Apply (procedure classification)",
+            "Zero content rewrites needed"
+          ],
+          "recommended_batches": ["C.3: 17 items (AF-3 + AF-4)"],
+          "certified_items_affected": 17,
+          "risk": "LOW — definition-to-term matching is unambiguous."
+        },
+        {
+          "rank": 4,
+          "pack": "Pack D",
+          "section": "CD",
+          "file": "pack_d_corrected.js",
+          "HO_labeled": 10,
+          "evaluate_item_count": 0,
+          "analyze_item_count": 10,
+          "sampled_evaluate_accuracy": null,
+          "sampled_analyze_accuracy": 0.0,
+          "estimated_true_HO": 0,
+          "estimated_overstated_HO": 10,
+          "af_flagged_estimated": 8,
+          "dominant_AF": ["AF-4", "AF-2"],
+          "dominant_pattern": "Performance management concepts as Analyze. Common-size analysis, EVA definition, TQM, cost-benefit analysis as definitions.",
+          "three_tier_t1": 8,
+          "three_tier_t2": 2,
+          "three_tier_t3": 0,
+          "relabel_actions": [
+            "10 Analyze items → Understand",
+            "All are concept comprehension — definition-to-term matching",
+            "Zero content rewrites needed"
+          ],
+          "recommended_batches": ["C.4: 10 items (AF-2 + AF-4)"],
+          "certified_items_affected": 10,
+          "risk": "LOW — unambiguous definition-matching."
+        }
+      ]
+    },
+
+    "P1_HIGH": {
+      "priority": "HIGH — 50-79% accuracy sections, large volume",
+      "estimated_items": 159,
+      "estimated_sessions": 3,
+      "estimated_effort_hours": 5,
+      "approach": "Targeted reclassification. AF-2 items get human spot-check. AF-3 items auto-gated.",
+      "sections": [
+        {
+          "rank": 5,
+          "pack": "Pack D",
+          "section": "BD (Section B)",
+          "file": "pack_d_corrected.js",
+          "HO_labeled": 89,
+          "evaluate_item_count": 39,
+          "analyze_item_count": 50,
+          "sampled_evaluate_accuracy": 0.71,
+          "sampled_analyze_accuracy": 0.60,
+          "estimated_true_HO": 67,
+          "estimated_overstated_HO": 22,
+          "af_flagged_estimated": 22,
+          "dominant_AF": ["AF-2", "AF-3"],
+          "dominant_pattern": "Good quality overall (best modernization campaign). Formula items reframed as HO.",
+          "three_tier_t1": 2,
+          "three_tier_t2": 20,
+          "three_tier_t3": 67,
+          "relabel_actions": [
+            "~10 Evaluate items → Analyze (one-tier slippage — genuine analysis, not evaluation)",
+            "~12 Analyze items → Apply (formula substitution with scenario framing)",
+            "Content is well-written. Labels only."
+          ],
+          "recommended_batches": ["C.9: 28 items", "C.10: 22 items"],
+          "certified_items_affected": 89,
+          "risk": "MEDIUM — higher accuracy means more borderline items. Per-item review recommended for AF-2 flagged items.",
+          "note": "S96P recommends this section as the benchmark for future campaigns."
+        },
+        {
+          "rank": 6,
+          "pack": "Pack D",
+          "section": "ED",
+          "file": "pack_d_corrected.js",
+          "HO_labeled": 77,
+          "evaluate_item_count": 27,
+          "analyze_item_count": 50,
+          "sampled_evaluate_accuracy": 0.78,
+          "sampled_analyze_accuracy": 0.55,
+          "estimated_true_HO": 61,
+          "estimated_overstated_HO": 16,
+          "af_flagged_estimated": 25,
+          "dominant_AF": ["AF-3", "AF-6"],
+          "dominant_pattern": "Genuine COSO diagnosis items correctly labeled. One-step COSO classification overstated.",
+          "three_tier_t1": 3,
+          "three_tier_t2": 13,
+          "three_tier_t3": 61,
+          "relabel_actions": [
+            "~5 Evaluate items → Analyze (COSO diagnosis, not evaluation)",
+            "~11 Analyze items → Apply or Understand (COSO classification as analysis)",
+            "Genuine COSO judgment items preserved"
+          ],
+          "recommended_batches": ["C.11: 28 items", "C.12: 16 items"],
+          "certified_items_affected": 77,
+          "risk": "MEDIUM — COSO classification borderline items require per-item semantic review."
+        },
+        {
+          "rank": 7,
+          "pack": "Pack D",
+          "section": "A (Section A)",
+          "file": "pack_d_corrected.js",
+          "HO_labeled": 73,
+          "evaluate_item_count": 73,
+          "analyze_item_count": 0,
+          "af_flagged_estimated": 35,
+          "dominant_AF": ["AF-3"],
+          "dominant_pattern": "ASC rule application as Evaluate. Similar to Pack A Section A pattern.",
+          "relabel_actions": [
+            "~35 items → Apply (ASC rules — deterministic standard application)",
+            "~10 items → Analyze (genuine borderline cases)",
+            "~28 items — correctly labeled (genuine financial reporting analysis)"
+          ],
+          "recommended_batches": ["C.6: 28 items", "C.7: 27 items"],
+          "certified_items_affected": 73,
+          "risk": "LOW-MEDIUM — AF-3 signal is strong for ASC rule items."
+        }
+      ]
+    },
+
+    "P2_MEDIUM": {
+      "priority": "MEDIUM — 60-65% accuracy, moderate volume",
+      "estimated_items": 98,
+      "estimated_sessions": 2,
+      "estimated_effort_hours": 3,
+      "approach": "Per-item audit. AF-2 formula items = Apply. AF-3 rule items = Apply. AF-4 taxonomy = Understand.",
+      "sections": [
+        {
+          "rank": 8,
+          "pack": "Pack C",
+          "section": "CC",
+          "file": "pack_c_corrected.js",
+          "HO_labeled": 29,
+          "estimated_overstated_HO": 11,
+          "dominant_AF": ["AF-2", "AF-3"],
+          "dominant_pattern": "Variance formulas as Analyze/Evaluate."
+        },
+        {
+          "rank": 9,
+          "pack": "Pack C",
+          "section": "DC",
+          "file": "pack_c_corrected.js",
+          "HO_labeled": 23,
+          "estimated_overstated_HO": 8,
+          "dominant_AF": ["AF-2", "AF-3"],
+          "dominant_pattern": "Cost allocation formulas. ABC calculations."
+        },
+        {
+          "rank": 10,
+          "pack": "Pack D",
+          "section": "FD",
+          "file": "pack_d_corrected.js",
+          "HO_labeled": 25,
+          "estimated_overstated_HO": 9,
+          "dominant_AF": ["AF-3", "AF-4"],
+          "dominant_pattern": "Technology classification. ERP, AI, cybersecurity definitions."
+        },
+        {
+          "rank": 11,
+          "pack": "Pack C",
+          "section": "FC",
+          "file": "pack_c_corrected.js",
+          "HO_labeled": 18,
+          "estimated_overstated_HO": 7,
+          "dominant_AF": ["AF-3", "AF-4"],
+          "dominant_pattern": "Technology taxonomy matching."
+        },
+        {
+          "rank": 12,
+          "pack": "Pack A",
+          "section": "B",
+          "file": "pack_a_corrected.js",
+          "HO_labeled": 35,
+          "evaluate_accuracy": 0.83,
+          "estimated_overstated_HO": 6,
+          "dominant_pattern": "Benchmark section. Minimal overstatement but 6 items need correction."
+        },
+        {
+          "rank": 13,
+          "pack": "Pack A",
+          "sections": ["C", "D"],
+          "file": "pack_a_corrected.js",
+          "HO_labeled": 35,
+          "estimated_overstated_HO": 10,
+          "dominant_pattern": "Mixed — formula items + genuine analysis. Per-item audit needed."
+        }
+      ],
+      "recommended_batches": ["C.8: 28 items (CC)", "C.13: 23 items (DC)", "C.14: 18 items (FC)", "C.15: 25 items (FD)", "C.16: 28 items (Pack A B/C/D residual)"]
+    },
+
+    "P3_LOW": {
+      "priority": "LOW — small sections, mixed quality",
+      "estimated_items": 85,
+      "estimated_sessions": 2,
+      "estimated_effort_hours": 3,
+      "approach": "Full per-item audit. Pack B and Pack E have different authoring pipelines; patterns may differ.",
+      "sections": [
+        {
+          "rank": 14,
+          "pack": "Pack B",
+          "sections": ["BB", "BC", "BF"],
+          "file": "pack_b_corrected.js",
+          "HO_labeled": 23,
+          "estimated_overstated_HO": 12,
+          "dominant_AF": ["AF-2", "AF-3"],
+          "dominant_pattern": "EVA formula, variance procedures. Small section — quick to complete.",
+          "recommended_batches": ["C.17: 23 items"]
+        },
+        {
+          "rank": 15,
+          "pack": "Pack E",
+          "sections": ["All"],
+          "file": "pack_e_corrected.js",
+          "HO_labeled": 50,
+          "estimated_overstated_HO": 11,
+          "dominant_AF": ["AF-3", "AF-6"],
+          "dominant_pattern": "Independent authoring pipeline. Mixed quality. Includes R-series items.",
+          "recommended_batches": ["C.18: 28 items", "C.19: 22 items"]
+        }
+      ]
+    },
+
+    "P4_SEMANTIC": {
+      "priority": "DEFERRED — Phase B semantic review results",
+      "estimated_items": 62,
+      "estimated_sessions": 1,
+      "estimated_effort_hours": 2.5,
+      "approach": "Human or LLM-based semantic review of AF-1 ceiling + borderline items.",
+      "categories": [
+        {
+          "type": "Scenario-framed definitions (AF-1 ceiling)",
+          "estimated_count": 50,
+          "detection": "Stem embeds textbook definition in business scenario without explicit 'what term is this' language.",
+          "solution": "LLM-based topic classification or human semantic review."
+        },
+        {
+          "type": "Borderline AF-2 (multi-step calculation)",
+          "estimated_count": 5,
+          "detection": "Items where 'calculate' is one step in genuine analytical chain.",
+          "solution": "Human spot-check."
+        },
+        {
+          "type": "Borderline AF-3 (ASC reference is contextual)",
+          "estimated_count": 3,
+          "detection": "Trade-off language exists but was missed by regex.",
+          "solution": "Human spot-check."
+        },
+        {
+          "type": "Borderline AF-6 (competing standard analysis)",
+          "estimated_count": 4,
+          "detection": "Items comparing multiple standards before selecting one.",
+          "solution": "Human spot-check."
+        }
+      ]
+    }
+  },
+
+  "summary": {
+    "total_items_for_relabeling": 505,
+    "total_batches": 20,
+    "total_estimated_effort_hours": 17.5,
+    "total_estimated_sessions": 11,
+    "approach": "Scripted batch relabeling via s100p_reclassify.js. Zero content rewrites. Metadata-only changes.",
+    "certified_items_affected": 358,
+    "certification_impact": "NONE — CognitiveLevel is metadata. Does not trigger CAQS §9.2 re-certification.",
+    "governance_batch_cap": 30,
+    "backup_protocol": "Mandatory per BACKUP_PROTOCOL.md — one backup per batch"
+  }
+}

@@ -100,8 +100,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "",
 		"ExplanationWrongC": "Reporting both the medical device division and the consumer product line as discontinued operations overstates the scope of discontinued operations. ASC 205-20 provides a single model: only disposals representing a strategic shift that has or will have a major effect on operations qualify. The sale of a small product line generating 3% of total revenue is a routine divestiture, not a strategic shift. Including this minor disposition in discontinued operations would inflate the 'income from continuing operations' figure by excluding modest gains or losses that are part of normal business activity, misleading users about the sustainability of Riverview's ongoing earnings. A candidate selecting this option is applying a mechanical 'any disposal = discontinued operations' rule rather than evaluating whether each disposal individually meets the strategic shift threshold.",
 		"ExplanationWrongD": "Consolidating both disposals into one line item and labeling it as an extraordinary item is incorrect on two separate grounds. First, ASU 2015-01 eliminated the extraordinary item classification from U.S. GAAP — items may no longer be presented as extraordinary on the income statement. Second, ASC 205-20 requires discontinued operations to be presented separately from continuing operations with specific line-item disclosure of the component's results and any gain or loss on disposal. Lumping a strategic-shift disposal (medical devices) together with a routine product line sale (consumer products) and applying a non-existent classification (extraordinary items) violates both the presentation and classification requirements. A candidate selecting this option is confusing pre-2015 GAAP extraordinary item presentation with current discontinued operations requirements.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Evaluate"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -111,7 +111,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "cash flow from operations indirect method",
 		"UniqueConceptKey": "A-003-cash-flow-from-operations-indirect-method",
 		"LOSTag": "A.1 Financial statements",
-		"Difficulty": "Moderate-Easy",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "A company reports net income of $172,000, depreciation expense of $53,000, a gain on sale of equipment of $14,000, and an increase in accounts receivable of $10,000. What is cash flow from operations under the indirect method?",
@@ -256,8 +256,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "This recommendation incorrectly treats four separately identifiable deliverables as a single combined performance obligation because they relate to the same customer need. Under ASC 606-10-25-19 through 25-22, promises ARE distinct within the context of the contract unless they are inputs to a combined output the customer has contracted for. Apex is not delivering a single integrated safety system — the customer receives a hardware controller, a software license, installation services, and ongoing maintenance. Each can function without the others (the hardware can run third-party software; the software is sold standalone; installation is a one-time service; maintenance is ongoing support). The fact that a customer purchased all four components from Apex in one contract does not make them a single performance obligation. ASC 606 requires entities to identify all distinct goods and services — disaggregation, not aggregation, is the default. The controller should advise that four separate performance obligations exist, with revenue recognized as each is satisfied, not as a single combined deliverable.",
 		"ExplanationWrongC": "This recommendation correctly identifies that performance obligations should be assessed for combination but incorrectly combines the software license and installation. Under ASC 606-10-25-21, promises are combined into a single performance obligation when (a) the goods or services in the bundle are inputs to a combined output, and (b) the bundle is significantly modified or customized. Installation does not significantly modify or customize the software license — the software is a pre-built proprietary product; installation is the physical setup and calibration of hardware. The software license is a right-to-use intellectual property that is distinct from the physical installation service. A customer could purchase the software license without installation (e.g., if they already have a configured ApexGuard 9000) or purchase installation without the software license (e.g., if they use third-party safety software). The controller should not combine these two promises — they are separately identifiable and should be accounted for as distinct performance obligations.",
 		"ExplanationWrongD": "This recommendation undercounts performance obligations by assuming that bundled pricing merges goods and services into combined units. Under ASC 606-10-25-14, the distinctness analysis is based on the nature of the promise, not on pricing structure. The transaction price is allocated to performance obligations based on standalone selling prices (ASC 606-10-32-28 through 32-35), not used to determine whether obligations are distinct. Additionally, the hardware controller is sold separately and is capable of being distinct — it does not require installation to function (the customer could install it themselves or use a third-party installer). The software license is a separate right-to-use asset, not merely an adjunct to maintenance. The controller should identify four distinct performance obligations: hardware, software license, installation services, and maintenance plan. Bundled contract pricing allocates the total consideration — it does not collapse distinct promises into combined obligations.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Evaluate"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -267,7 +267,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "contract liability for advance collections",
 		"UniqueConceptKey": "A-006-contract-liability-for-advance-collections",
 		"LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
-		"Difficulty": "Moderate-Easy",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "Vantage received annual service fees in advance before performing the services. Which response is most appropriate?",
@@ -360,8 +360,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "",
 		"ExplanationWrongC": "This recommendation limits forward-looking adjustments to the single identifiable credit event (Chapter 11 filing) while dismissing systemic indicators as 'too uncertain.' ASC 326-20-30-7 states that entities should not rely solely on past events to estimate expected credit losses but should also consider current conditions and reasonable forecasts. The industry-wide DSO elevation and Fed rate increases are market-level signals that courts and regulators have accepted as relevant forward-looking information for CECL purposes. Treating only individually identifiable defaults as relevant while ignoring portfolio-level risk signals produces an incomplete estimate. Additionally, the Chapter 11 client's financial distress likely existed before the bankruptcy filing — ASC 326 requires assessing credit quality at the reporting date using all available information, including post-balance-sheet confirmatory evidence. A controller who limits analysis to discrete defaults while dismissing systematic deterioration underestimates the allowance.",
 		"ExplanationWrongD": "This recommendation applies a mechanical formula (doubling the rate because the bucket doubled) rather than exercising genuine judgment about credit quality. While aging composition shifts are relevant, the appropriate response is not to apply a proportional rate adjustment — that substitutes arithmetic for analysis. The >90-day bucket may have doubled because of systemic factors (hospital industry DSO deterioration, rising interest costs) that also affect the 61-90 and 31-60 day collectibility. Under ASC 326, the controller should evaluate why the shift occurred and whether those same drivers affect other buckets, then adjust rates accordingly based on the underlying credit conditions, not the magnitude of the shift. A formulaic doubling also ignores the forward-looking signals (Fed rate increases, industry trends) that ASC 326 mandates be considered. The controller should apply adjusted rates informed by all available evidence rather than a mechanical scaling of the historical rate.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Analyze"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -371,7 +371,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "inventory lower of cost and NRV",
 		"UniqueConceptKey": "A-008-inventory-lower-of-cost-and-nrv",
 		"LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
-		"Difficulty": "Difficult",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "CFO BRIEFING NOTE — Ridgeview Manufacturing\n\nTO: CFO Alan Kettering\nFROM: Controller's Office\nRE: Year-End Inventory Valuation — Three Product Lines\n\nRidgeview manufactures industrial fasteners across three product lines. At year-end, the inventory balances and market conditions are: Line 1 (Standard Steel Bolts): Cost $420,000, NRV $485,000; Line 2 (Alloy Fasteners): Cost $310,000, NRV $275,000 — a customer canceled a major contract in November, leaving excess specialty inventory; Line 3 (Engineered Components): Cost $185,000, NRV $168,000 — a new competitor entered in Q4, though Ridgeview expects partial price recovery within six months. All inventory is FIFO. The external auditors have questioned whether inventory should be written down on a product-line basis or assessed at an aggregated level. Mr. Kettering asks: 'What is the appropriate write-down approach and total inventory value under ASC 330?'",
@@ -412,8 +412,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "This recommendation incorrectly applies LCM at the aggregate portfolio level. ASC 330-10-35-1B requires item-by-item application. While aggregate cost ($915,000) is below aggregate NRV ($928,000), this masks that Line 2 and Line 3 individually have NRV below cost. A portfolio approach would allow the $65,000 unrealized gain on Line 1 to offset $52,000 in required write-downs on Lines 2 and 3 — violating the LCM principle that losses must be recognized when they occur. The controller should apply LCM separately to each product line. The fact that Ridgeview manages inventory as a combined business does not determine the accounting unit of account — ASC 330 specifies item-by-item application.",
 		"ExplanationWrongC": "This recommendation incorrectly distinguishes between a 'permanent' contract cancellation and an expected price recovery. ASC 330-10-35-2 applies LCM at each reporting date based on conditions existing at that date, without regard to expected future recoveries. There is no 'temporary decline' exception for FIFO inventory — the standard requires write-down whenever NRV at the reporting date is below cost. Both Line 2 ($35,000) and Line 3 ($17,000) require adjustment. No 'temporary decline' exception exists. If prices recover, Ridgeview reverses the write-down up to the original write-down amount (not above cost), but in the future period, not at the current balance sheet date.",
 		"ExplanationWrongD": "This recommendation contains two fundamental errors. First, it proposes writing up Line 1 inventory above cost to NRV — not permitted under U.S. GAAP. LCM rules state inventory at the lower of cost or NRV; when cost is below NRV, inventory remains at cost. Writing up to NRV would recognize an unrealized holding gain, which ASC 330 does not permit. Second, the recommendation frames a write-up as 'conservatism,' but conservatism means not overstating assets or income — writing inventory above cost does the opposite. The controller should apply LCM item-by-item: Line 1 at cost ($420,000), Line 2 at NRV ($275,000), Line 3 at NRV ($168,000). Total: $863,000. Write-down: $52,000.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Evaluate"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -423,7 +423,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "LIFO liquidation income effect and disclosure",
 		"UniqueConceptKey": "A-009-lifo-liquidation-analysis",
 		"LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
-		"Difficulty": "Difficult",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "CONTROLLER MEMORANDUM — Titan Industrial Supply\n\nTO: CFO Alan Ross\nFROM: Controller's Office\nRE: Q3 LIFO Liquidation — Income Effect and Disclosure Assessment\n\nTitan uses dollar-value LIFO for its steel products division. A 9-week supplier strike in Q3 forced Titan to draw down inventory from 48,000 units (December 31 base) to 14,200 units by September 30, piercing LIFO layers dating back to 2018. The relevant LIFO layers are: 2018 layer: 11,500 units at $42.00/unit; 2019 layer: 9,800 units at $45.80/unit; 2020 layer: 12,300 units at $51.30/unit; 2021 layer: 8,200 units at $58.75/unit; 2022 layer: 6,200 units at $67.20/unit. Current replacement cost is $71.50/unit, and Titan's Q3 sales price averaged $89.00/unit. Before the liquidation, Q3 projected operating margin was 14.2%. The external auditors have flagged this for disclosure evaluation, noting that the LIFO liquidation gain may be material. Titan expects to replenish inventory in Q4 once the strike ends. Mr. Ross asks: 'What is the Q3 P&L impact of this LIFO liquidation, and what disclosure is required?'",
@@ -464,8 +464,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "This recommendation asserts that a LIFO liquidation has no P&L impact because it is a 'cost flow assumption, not a physical flow.' This is a fundamental misunderstanding. The income statement reflects the costs assigned to inventory sold during the period — when LIFO layers are liquidated, the historical costs of those older layers flow through COGS, replacing what would have been current-period costs. This directly and immediately affects reported gross profit. The fact that Titan will replenish in Q4 does not reverse or neutralize the Q3 income effect; Q4 purchases create new LIFO layers at then-current prices and are accounted for separately under the LIFO annual measurement rules. A controller claiming no P&L impact would misstate Q3 earnings and fail to satisfy the disclosure requirements under ASC 270-10-50-6 for material interim events affecting comparability.",
 		"ExplanationWrongC": "This recommendation correctly identifies that a LIFO liquidation affects income but incorrectly asserts that the gain must be presented as a separate line item on the face of the income statement. U.S. GAAP does not require — and does not contemplate — separately presenting a 'LIFO liquidation gain' line item. The liquidation effect is embedded within cost of goods sold; the COGS line reflects whatever inventory costs were charged based on the LIFO cost flow, including any liquidated layer costs. Separately presenting the gain would incorrectly suggest that the LIFO liquidation is a revenue or gain transaction, when it is simply the result of applying the LIFO method to lower-than-normal ending inventory levels. The correct treatment is to disclose the dollar amount of the LIFO liquidation effect in the notes to the financial statements, not to disaggregate it on the income statement.",
 		"ExplanationWrongD": "This recommendation proposes creating a 'LIFO liquidation reserve' to neutralize the liquidation's income effect — an approach that has no basis in U.S. GAAP. The LIFO method, consistently applied, assigns to COGS the costs of the most recently acquired inventory; when ending inventory drops below prior-year levels, earlier layer costs automatically flow through COGS. There is no GAAP provision that allows or requires an entity to override this mechanical result with a reserve account. Creating a debit to COGS and credit to a reserve to 'restore' replacement-cost COGS would be an inappropriate departure from the LIFO cost flow assumption. The matching principle does not override the specific inventory valuation method selected; if Titan's management believes replacement-cost COGS better reflects economic reality, the remedy is to evaluate whether LIFO remains the appropriate inventory method — not to selectively override it with ad hoc reserves during liquidation periods.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Analyze"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -475,7 +475,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "straight-line depreciation expense",
 		"UniqueConceptKey": "A-010-straight-line-depreciation-expense",
 		"LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
-		"Difficulty": "Moderate-Easy",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "A company purchases equipment for $96,000 on July 1. It has an estimated salvage value of $12,000 and a useful life of 7 years. Using straight-line depreciation, what is the depreciation expense for the first calendar year?",
@@ -568,8 +568,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "This recommendation conflates two distinct steps: (1) determining whether indicators require a recoverability test, and (2) performing the test itself. The standard requires testing whenever indicators suggest the carrying amount may not be recoverable — it does NOT require knowing the cash flows are below carrying amount before testing. Multiple indicators exist: the customer transition changes how the asset will be used, the output decline is substantial, and the fair value ($3,800,000) is well below carrying amount. The controller must perform the test. The fact that undiscounted cash flows ($5,400,000) fall below carrying amount confirms testing was required — and that impairment recognition follows. If cash flows had exceeded carrying amount, impairment would not be recognized, but the indicators still required performing the test. Waiting until cash flows clearly fail is circular reasoning.",
 		"ExplanationWrongC": "This recommendation correctly identifies that impairment testing is triggered but misidentifies the primary indicator. While the output decline is genuine, it is secondary to the customer-driven change in asset use. Under ASC 360-10-35-21(b), a significant adverse change in the extent or manner of use is an explicit indicator. The customer's aluminum transition renders Line 4's current configuration obsolete — precisely the type of change ASC 360 contemplates. The output decline corroborates but is more properly classified under 21(c) (market value decrease). Characterizing the customer transition as 'a separate business risk' misunderstands impairment accounting — a change in customer demand rendering an asset obsolete is a textbook ASC 360 triggering event.",
 		"ExplanationWrongD": "This recommendation makes two critical errors. First, it reverses the ASC 360 framework: testing is required when indicators exist, not only when carrying amount is known to exceed undiscounted cash flows. The controller cannot skip the indicator evaluation step. Second, it suggests waiting until the customer actually transitions in 14 months. ASC 360-10-35-21 evaluates indicators at each reporting date based on current circumstances. The announced transition, known incompatibility of Line 4 with aluminum, and required $1.9 million retooling are current indicators existing at the balance sheet date. They do not become indicators only when production stops. The controller should test now and, based on undiscounted cash flows of $5,400,000 vs. carrying amount of $6,200,000, recognize an impairment loss.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Evaluate"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -579,7 +579,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "contingent liability accrual",
 		"UniqueConceptKey": "A-012-contingent-liability-accrual",
 		"LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
-		"Difficulty": "Difficult",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "LEGAL UPDATE MEMORANDUM — Meridian Industries\n\nTO: Controller Rachel Torres\nFROM: General Counsel's Office\nRE: Year-End Legal Claim Assessment\n\nMeridian faces three pending legal matters at December 31:\n\nClaim 1 (Product Liability): Outside counsel assesses 75% probability of liability. Most likely settlement: $520,000 (range: $350,000–$780,000).\n\nClaim 2 (Patent Infringement): 35% probability of adverse judgment. If Meridian loses, damages estimated at $1,200,000.\n\nClaim 3 (Employment Dispute): 55% probability of adverse ruling. If claimant prevails, most likely award: $95,000.\n\nMs. Torres asks: 'What amount should be accrued and which claims require footnote disclosure under ASC 450?'",
@@ -620,8 +620,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "This recommendation incorrectly applies a simple majority-probability rule (greater than 50% = probable) to trigger accrual. Under ASC 450-20-20, 'probable' means the future event is likely to occur — a higher threshold than 'more likely than not' (the ASC 740 tax position standard). A 55% probability on litigation does not clearly meet 'likely to occur,' given the inherent uncertainty of employment litigation. In practice, firms generally require 70-80% probability before accrual. Additionally, the $95,000 is the most likely award IF the claimant prevails — a conditional estimate introducing a second layer of uncertainty. The controller should disclose Claim 3 as reasonably possible. The correct total accrual is $520,000 for Claim 1 only.",
 		"ExplanationWrongC": "This recommendation fundamentally misunderstands ASC 450's two-condition framework. The standard requires BOTH probability AND estimability — not estimability alone. Claim 2 has a specific dollar estimate ($1,200,000) but only 35% probability — far below the 'probable' threshold. Accruing $1,200,000 for an unlikely event dramatically overstates liabilities. Claim 3's $180,000 is the plaintiff's demand, not an estimate of probable loss (counsel estimates a $95,000 award IF the claimant prevails). ASC 450 does not permit accrual based solely on the existence of a dollar estimate — the probability criterion is essential.",
 		"ExplanationWrongD": "This recommendation contains two critical errors. First, it misapplies ASC 450-20-25-2's range guidance. When no amount within a range is a better estimate, accrue the MINIMUM. But when a specific amount IS a better estimate (Claim 1: $520,000 is the most likely), that best estimate is accrued, not the minimum. Accruing only $350,000 understates the liability. Second, it accrues the full $180,000 claimed amount for Claim 3, which is the plaintiff's demand, not an estimate of probable loss. The most likely outcome from counsel is $95,000 conditional on an adverse ruling at only 55% probability. The controller should accrue $520,000 for Claim 1 and disclose Claims 1, 2, and 3.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Evaluate"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -631,7 +631,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "subsequent event recognized condition",
 		"UniqueConceptKey": "A-013-subsequent-event-recognized-condition",
 		"LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
-		"Difficulty": "Difficult",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "MEMORANDUM — Meridian Manufacturing Controller's Office\n\nTO: CFO Rebecca Torres\nFROM: David Okonkwo, Controller\nRE: Year-End Receivable — Orion Distributors\n\nAt December 31, Meridian carried a $2,400,000 trade receivable from Orion Distributors, representing Q4 shipments of industrial fasteners. Orion accounted for 18% of Meridian's annual revenue. On January 22, Orion filed for Chapter 7 bankruptcy. The bankruptcy trustee's preliminary filing indicates unsecured creditors will receive between 3 and 8 cents on the dollar. Our credit department's December 15 internal review noted Orion had violated its debt covenants with its primary lender, had stopped returning collection calls in early December, and was past due on $1,100,000 of invoices older than 90 days. The credit department had placed Orion on credit hold on December 20 but had not completed its impairment assessment before year-end close. Which recommendation should the controller present for the December 31 financial statements?",
@@ -672,8 +672,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "",
 		"ExplanationWrongC": "Deferring recognition until the bankruptcy court confirms the final distribution percentage violates the fundamental accrual accounting principle that losses be recognized when they are probable and reasonably estimable, not when they become certain. Under ASC 450-20-25-2, an estimated loss from a loss contingency is accrued if information available before the financial statements are issued indicates that an asset has been impaired and the amount of loss can be reasonably estimated. The bankruptcy trustee's preliminary estimate of 3 to 8 cents on the dollar, combined with Meridian's own credit department findings, provides a reasonable basis for estimation. Waiting for court confirmation could take 12-18 months, during which Meridian's financial statements would carry an asset at $2,400,000 that is almost entirely uncollectible. This would mislead financial statement users about Meridian's true financial position. ASC 855 does not permit deferring Type I adjustments until the precise amount is known — reasonable estimation is sufficient and required.",
 		"ExplanationWrongD": "Reversing previously recognized revenue and restating interim financial information would be appropriate only if the original sale was fraudulent or if the revenue recognition criteria under ASC 606 were not met at the time of sale. There is no evidence in this scenario that the original sales to Orion violated ASC 606 — the goods were shipped, accepted, and invoiced based on Orion's credit standing at the time. The fact that a customer subsequently becomes insolvent does not retroactively invalidate properly recognized revenue. Revenue recognition and collectibility assessment are distinct accounting events. Under ASC 606, revenue is recognized when control transfers to the customer; credit losses are accounted for separately under ASC 450-20 and ASC 326 (CECL). The correct treatment is to recognize the subsequent impairment as a bad debt expense in the current period, not to restate prior sales. Restating revenue for a legitimate sale that later proves uncollectible would fundamentally undermine the reliability of reported revenue across all periods and is not supported by any accounting standard.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Evaluate"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -683,7 +683,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "ASC 842 operating vs finance lease judgment",
 		"UniqueConceptKey": "A-014-asc842-lease-classification-analysis",
 		"LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
-		"Difficulty": "Difficult",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "CONTROLLER MEMORANDUM — Cascade Manufacturing\n\nTO: Controller David Chen\nFROM: Treasury\nRE: New Warehouse Lease — ASC 842 Classification Analysis\n\nCascade is finalizing a 10-year lease for a regional distribution center. Key terms: (1) Annual lease payments of $280,000, payable at year-end. Cascade's incremental borrowing rate is 6.5%. (2) The building's estimated economic life is 25 years; its fair value at lease commencement is $3,400,000. (3) The lease contains a bargain purchase option allowing Cascade to buy the building for $850,000 at the end of year 10; the expected fair value at that date is estimated at $1,800,000. (4) The lease also contains two 5-year renewal options at market rates; Cascade is undecided about exercising them. (5) Cascade cannot direct the use of the building without the lessor's consent for major structural modifications. (6) The present value of the 10 annual lease payments, discounted at 6.5%, is approximately $2,009,000. (7) The present value of the bargain purchase option payment ($850,000 discounted 10 years at 6.5%) is approximately $453,000. The controller's deputy argues the lease is operating because the lease term (10 years) is only 40% of the economic life (25 years), below the 75% bright-line test. Mr. Chen asks: 'Under ASC 842, is this an operating lease or a finance lease, and what is the initial right-of-use asset and lease liability?'",
@@ -724,8 +724,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "",
 		"ExplanationWrongC": "This recommendation acknowledges the bargain purchase option but misapplies ASC 842 by treating it as relevant only to measurement (lease payments) without affecting classification. Under ASC 842-10-25-2(b), a purchase option the lessee is reasonably certain to exercise is itself a classification criterion — it independently triggers finance lease classification. The recommendation's assertion that Cascade 'fails each' classification test is wrong: the bargain purchase option satisfies criterion (b). Furthermore, the recommendation is internally inconsistent: if the option is a bargain (making its exercise reasonably certain), then under ASC 842-10-30-1 the exercise price must be included in the lease payments for measurement purposes. The recommendation's measurement ($2,462,000 including the option payment) is correct, but this measurement is inconsistent with operating lease classification — the very fact that the option exercise price is included in the lease liability measurement reflects the conclusion that exercise is reasonably certain. A candidate selecting this option likely focuses on the lease-term test in isolation and fails to integrate the purchase option across both classification and measurement.",
 		"ExplanationWrongD": "This recommendation reaches the correct classification conclusion (finance lease) but for partially incorrect reasoning. The analysis of the present value test is flawed: the relevant present value calculation for criterion (d) uses lease payments plus any residual value guarantee — the bargain purchase option exercise price is included in lease payments (as the recommendation acknowledges), so the present value of lease payments IS $2,462,000. At 72.4% of fair value, this falls below the substantially-all threshold (typically 90%), so criterion (d) is properly not met. However, the recommendation's framing implies the present value test must be evaluated independently of the purchase option, which creates confusion. More importantly, the recommendation states that criterion (d) is 'NOT met' as if this were a point against finance lease classification, when in fact criterion (b) (bargain purchase option) alone is sufficient. The correct analysis is: the bargain purchase option triggers finance lease classification under criterion (b); all other criteria are moot once any single criterion is satisfied. A controller should identify criterion (b) as the determinative factor, not perform an exhaustive weighted assessment of all five criteria.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Analyze"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -735,7 +735,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "equity method investment influence",
 		"UniqueConceptKey": "A-015-equity-method-investment-influence",
 		"LOSTag": "A.3 Consolidated financial statements",
-		"Difficulty": "Easy",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "Frontier owns 30% of another company and can participate in policy decisions. Which response is most appropriate?",
@@ -828,8 +828,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "",
 		"ExplanationWrongC": "This recommendation reaches the correct conclusion (consolidate) but applies the wrong consolidation model. The voting interest model is not the correct framework when the entity is a VIE. Under ASC 810-10-25-38A, the VIE model exclusively governs consolidation of variable interest entities. The recommendation's concept of 'de facto control' through board seats and contractual governance provisions is a voting-interest-model construct that does not align with VIE analysis. More concerningly, even if the voting interest model applied, contractual veto rights are protective rights under ASC 810, not substantive participating rights that grant control. The correct analysis is: (1) determine Axion is a VIE, (2) identify Ridgeview as the primary beneficiary under the VIE model (power + economics), (3) consolidate. A candidate selecting this option recognizes that consolidation is required but uses the wrong analytical framework, which could lead to errors in more complex VIE structures where the voting interest model would produce a different answer.",
 		"ExplanationWrongD": "This recommendation correctly identifies Axion as a VIE and Ridgeview as holding a variable interest, but incorrectly concludes Ridgeview is not the primary beneficiary. The threshold for the loss-absorption criterion is 'potentially significant to the VIE,' not 'certain to result in losses.' Ridgeview's $4,500,000 loan guarantee far exceeds Axion's $2,800,000 equity at risk, clearly meeting the 'potentially significant' standard under ASC 810-10-25-38A. The argument that other shareholders could 'in theory' remove Ridgeview's board designee is weak: under ASC 810-10-25-38D, kick-out rights held by a simple majority do not preclude primary beneficiary status unless those rights are substantive — i.e., exercisable by a single party or small group without significant barriers. The 55% represents dispersed shareholders with no evidence of coordination capacity. Disclosure without consolidation is appropriate only for non-primary-beneficiary variable interest holders. Ridgeview meets both prongs of the primary beneficiary test and must consolidate.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Analyze"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -839,7 +839,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "intercompany inventory profit elimination",
 		"UniqueConceptKey": "A-017-intercompany-inventory-profit-elimination",
 		"LOSTag": "A.3 Consolidated financial statements",
-		"Difficulty": "Easy",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "Harbor sold inventory to its subsidiary and the inventory remains unsold to outsiders at year-end. Which response is most appropriate?",
@@ -1088,8 +1088,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "This recommendation incorrectly treats the auditor's unmodified opinion as conclusive evidence that the omission was immaterial and permitted. Under AU-C 200, an unmodified opinion means the auditor concluded the financial statements are presented fairly in all material respects — it does not certify every disclosure requirement was satisfied. Auditors can and do miss required disclosures. Auditor oversight does not retroactively make the omission GAAP-compliant. ASC 250 does not permit ignoring a GAAP error because it was previously audited. The controller must independently assess materiality and determine whether retrospective restatement is required (if material) or current-period correction is sufficient (if immaterial). 'Auditor acceptance' is not a valid GAAP defense.",
 		"ExplanationWrongC": "This recommendation makes an invalid logical leap: the omission 'cannot be material' because otherwise the auditors would have qualified. This assumes perfect auditor detection, which is not a premise of auditing or accounting standards. Material omissions can and do go undetected. Additionally, requiring only prospective disclosure ignores ASC 250-10-45-23: errors in previously issued financial statements must be corrected. The correction may be prospective if immaterial, but the controller must make this determination through a materiality assessment, not assume it based on the auditor's opinion.",
 		"ExplanationWrongD": "This recommendation overcorrects in two respects. First, it mandates full retrospective restatement regardless of materiality — ASC 250-10-45-23 provides for correction of immaterial errors in the current period without restatement. If the omission was not material, restatement is not required. Second, it automatically classifies the omission as a material weakness in internal control. While a missing required disclosure may indicate a control deficiency, a material weakness determination requires evaluating the likelihood and magnitude of potential misstatement — it is not automatic. The controller should first correct the disclosure, assess materiality, and separately evaluate internal control implications.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Evaluate"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -1139,7 +1139,7 @@ var MCQ_BANK_A = [
 		"ExplanationWrongC": "This recommendation creates complexity without resolving the fundamental question. While non-GAAP supplemental disclosures can provide additional context, they lack the audit assurance, standardized measurement, and regulatory oversight of primary financial statements prepared under a recognized framework. Investors may discount supplemental disclosures as management-selected metrics. If Axion's development costs genuinely meet IAS 38 criteria, adopting IFRS as the primary framework gives investors audited, standardized, comparable information about the capitalized development asset. The controller should recommend a single clear framework rather than relying on supplementary presentations that vary in credibility and comparability.",
 		"ExplanationWrongD": "This recommendation incorrectly frames the GAAP-vs-IFRS difference as mere policy preference. IAS 38 and ASC 730/985 reflect fundamentally different judgments about when development costs meet the definition of an asset. Under the FASB/IASB Conceptual Framework, an asset is a present economic resource controlled by the entity as a result of past events. IAS 38 interprets successful development as creating an asset when the six capitalization criteria are met; GAAP takes a more restrictive view. For Axion, with $3.2 million in qualifying development costs, the IFRS treatment better reflects the economic substance of value-creating activities. Advising investors to ignore earnings entirely is not a defensible recommendation for a controller — earnings information, properly measured, remains decision-useful.",
 		"DifficultyScore": 3,
-		"CognitiveLevel": "Evaluate"
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -1190,8 +1190,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "This recommendation over-classifies both Instrument 1 and Instrument 2 as lower levels than appropriate. Instrument 1: The S&P 500 put options trade on an active exchange (CBOE) with quoted bid-ask prices for identical instruments — the quintessential Level 1 scenario under ASC 820-10-35-40. Bloomberg's implied volatility data, while sourced from a third party, reflects market-observable data; ASC 820-10-35-37A specifically allows for adjustments to quoted prices when the adjustment is not significant to the overall measurement. For exchange-traded options, the primary price discovery happens through the quoted market price, and implied volatility is generally not a significant independent adjustment that would downgrade the classification. Instrument 2: CDS spreads from an inactive market remain observable market-based inputs — Level 2, not Level 3. Under ASC 820-10-35-48, Level 2 inputs include quoted prices for similar assets in markets that are not active. Inactive does not mean unobservable; it means infrequent trading. The bank's credit risk estimated from CDS spreads is a Level 2 input. A controller who classifies CDS-based adjustments as Level 3 is confusing 'less observable' with 'unobservable.'",
 		"ExplanationWrongC": "This recommendation incorrectly classifies Instrument 3 (NovaTech convertible preferred stock) as Level 2. While the discount rate derivation begins with observable comparable company data, the significant entity-specific adjustments (size premium, illiquidity discount) and the primary valuation inputs (management revenue projections of 22-28% growth, Monte Carlo simulation parameters) are unobservable. Under ASC 820-10-35-52, Level 3 inputs are 'unobservable inputs for the asset or liability.' When the most significant inputs to a valuation are entity-developed assumptions that cannot be corroborated by observable market data, the entire measurement is classified as Level 3. The controller's argument that 'discount rate derived from comparable public company data' makes the measurement Level 2 fails because: (1) the adjustments to get from comparable public companies to NovaTech are themselves Level 3 inputs (size premium, illiquidity discount), and (2) the revenue projections that drive the valuation are purely management assumptions. ASC 820 requires classification based on the lowest-level significant input — the revenue projections are clearly Level 3 and clearly significant.",
 		"ExplanationWrongD": "This recommendation misclassifies Instrument 1 as Level 2 for incorrect reasons. ASC 820-10-35-40 explicitly provides that 'a quoted price in an active market provides the most reliable evidence of fair value and shall be used to measure fair value whenever available.' The existence of an active market for identical instruments (CBOE-traded S&P 500 options) means Level 1 classification applies. The concern about implied volatility does not change this — Bloomberg's implied volatility is itself derived from observed market transactions (it IS a market-observable input), and the quoted option price on an active exchange absorbs market participants' collective assessment including volatility expectations. ASC 820-10-35-41 states that Level 1 inputs shall not be adjusted except in specific circumstances (e.g., when the entity holds a large number of similar assets and the quoted price is not accessible at the measurement date). CBOE options with active trading do not meet those exception criteria. A controller who defaults to Level 2 whenever any input is sourced externally overstates the measurement uncertainty of exchange-traded instruments.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Analyze"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -1201,7 +1201,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "cash equivalents maturity and liquidity restrictions",
 		"UniqueConceptKey": "A-024-cash-equivalents-classification-analysis",
 		"LOSTag": "A.1 Financial statements",
-		"Difficulty": "Difficult",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "TREASURY MEMORANDUM — Keystone Industries\n\nTO: Treasurer Marcus Webb\nFROM: Cash Management Analyst\nRE: Quarter-End Cash and Cash Equivalents Classification\n\nKeystone holds five short-term instruments at September 30:\n\n1. 13-week U.S. Treasury bill purchased at issuance with 2 weeks remaining to maturity. Par: $500,000.\n\n2. Commercial paper issued by a AA-rated corporation, original maturity 120 days, 30 days remaining. Face: $250,000.\n\n3. Money market fund shares ($400,000) with same-day liquidity — except the fund's prospectus allows the board to impose a 10-day redemption gate if weekly liquid assets fall below 30% of total assets. The fund is currently at 34%.\n\n4. 6-month bank certificate of deposit purchased at issuance, 75 days remaining to maturity. Face: $150,000. Early withdrawal penalty: 3 months interest.\n\n5. 90-day U.S. Treasury bill purchased in the secondary market with 87 days remaining to maturity (original maturity when issued: 90 days). Par: $300,000.\n\nThe Q3 cash flow statement is under review. Mr. Webb asks: 'Classify each instrument as cash equivalent or short-term investment, and identify which judgments require the most analysis.'",
@@ -1242,8 +1242,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "",
 		"ExplanationWrongC": "This recommendation makes two errors. First, it classifies item 2 (120-day commercial paper) as a cash equivalent on the incorrect premise that 'the test is remaining maturity to the holder, not original maturity.' ASC 230 clearly uses original maturity as the primary criterion — an investment with original maturity exceeding three months does not become a cash equivalent merely because it was purchased close to maturity. Second, the recommendation classifies item 3 (money market fund) as a short-term investment — this conclusion is directionally correct (the redemption gate is a meaningful restriction) but for a different reason than the one stated. SEC Rule 2a-7 redemption gates do not automatically disqualify money market funds from cash equivalent treatment; rather, the specific gate provision in the fund's prospectus creates a restriction on same-day liquidity that is inconsistent with cash equivalent classification. The analyst's confusion between 'original maturity' and 'remaining maturity' is the most common error tested on CMA Part 1 cash equivalents questions.",
 		"ExplanationWrongD": "This recommendation misclassifies item 5 (90-day T-bill purchased in secondary market) as a short-term investment. The original maturity test refers to the original maturity of the instrument at issuance, not whether the instrument was purchased at original issuance or in the secondary market. A 90-day T-bill has a 90-day original maturity regardless of whether Keystone acquired it in the primary auction or secondary market. The argument that 'the market transaction does not reset original maturity' is true — but the original maturity was already 90 days from the Treasury's issuance, which meets the ≤ 3-month criterion. The recommendation also misclassifies item 3 (money market fund) as a cash equivalent without addressing the redemption gate. A treasury analyst who treats the secondary market purchase as resetting the maturity calendar — or who ignores redemption restrictions on money market funds — would produce a materially different cash equivalents balance.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Analyze"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -1253,7 +1253,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "deferred tax liability calculation",
 		"UniqueConceptKey": "A-025-deferred-tax-liability-calculation",
 		"LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
-		"Difficulty": "Difficult",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "TAX PROVISION MEMORANDUM — Cascade Manufacturing\n\nTO: CFO Diana Okonkwo\nFROM: Michael Chen, Tax Director\nRE: Year-End Deferred Tax Analysis\n\nCascade reports the following temporary differences at December 31, Year 1 (enacted tax rate: 25%):\n\n1. Accelerated tax depreciation: Tax depreciation exceeded book by $380,000 (equipment basis: $1,900,000; 10-year book straight-line, 7-year MACRS tax). Reversal begins Year 4.\n\n2. Warranty accrual: Book accrual $120,000. Tax deductible only when claims are paid (projected: $45,000 Year 2; $50,000 Year 3; $25,000 Year 4).\n\n3. Installment sale: $90,000 book gain on surplus land. Tax: installment method defers $60,000 to Years 2-4.\n\nCascade projects sustained profitability with no valuation allowance concerns. Mr. Chen asks: 'What is Cascade's net deferred tax position, and which item produces a deferred tax asset?'",
@@ -1294,8 +1294,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "",
 		"ExplanationWrongC": "This recommendation incorrectly classifies all three items as deferred tax liabilities without distinguishing between taxable and deductible temporary differences. Under ASC 740-10-20, a DTA is recognized for deductible temporary differences — where the book basis of a liability exceeds its tax basis. The warranty accrual is a textbook deductible temporary difference: Cascade has a $120,000 accrued warranty liability on its books but zero tax basis, creating a $30,000 DTA ($120,000 × 25%). Additionally, using the total book gain ($90,000) rather than the deferred portion ($60,000) overstates the installment sale temporary difference. Only the timing difference creates a deferred tax effect — the $30,000 already recognized for tax has no deferred tax impact. The controller must analyze each temporary difference individually for direction.",
 		"ExplanationWrongD": "This recommendation correctly identifies the depreciation DTL ($95,000) and warranty DTA ($30,000) but incorrectly classifies the installment sale gain as producing a deferred tax asset. The installment sale is a taxable temporary difference, not a deductible one. Cascade recognized $90,000 of book gain but only $30,000 of tax gain — meaning book income exceeds taxable income by $60,000. This creates a DTL of $15,000, not a DTA. The common error is confusing cash flow timing (Cascade will collect cash later) with book-tax timing (Cascade already recognized the book income). Deferred tax classification follows book-tax differences, not cash flow patterns. The correct net deferred tax liability is $80,000 ($95,000 + $15,000 - $30,000).",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Evaluate"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -1305,7 +1305,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "accounting equation equity calculation 1",
 		"UniqueConceptKey": "A-026-accounting-equation-equity-calculation-1",
 		"LOSTag": "A.1 Financial statements",
-		"Difficulty": "Easy",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "Beacon reports total assets of $324,300 and total liabilities of $127,100. What total equity should be reported?",
@@ -1502,8 +1502,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "This recommendation adopts units-of-production, yielding $21,547 in Year 1 depreciation and net income of $498,453 — breaching the $500,000 debt covenant by $1,547. The $120,000 annual interest cost from the covenant breach far exceeds any benefit from matching output volume. More importantly, UoP is misapplied when output decline is demand-driven rather than physical-capacity-driven. The machine's productive capability is constant; the fact that Evergreen's sales team projects declining orders is a revenue forecasting issue, not an asset consumption pattern. Under ASC 360-10-35-4, the depreciation method should reflect the pattern of economic benefits consumed — and a machine that can produce the same quantity each year consumes its service potential evenly, regardless of whether marketing sells all output. A candidate selecting this option conflates demand cycles with physical wear.",
 		"ExplanationWrongC": "This recommendation ignores salvage value, computing $92,800 / 5 = $18,560 instead of the correct ($92,800 - $12,000) / 5 = $16,160. ASC 360-10-35-4 explicitly requires salvage value to be excluded from the depreciable base because salvage represents expected residual value that is not consumed during the asset's use. Net income would be $501,440, leaving only $1,440 of covenant headroom — dangerously thin against any future earnings fluctuations. The argument that salvage estimates are 'inherently uncertain' does not justify ignoring them; ASC 360 requires management to estimate salvage based on current conditions and revise depreciation prospectively if estimates change (ASC 250-10-45-17). A candidate selecting this option is over-applying conservatism at the expense of GAAP compliance.",
 		"ExplanationWrongD": "This recommendation attempts a hybrid approach — straight-line for GAAP, supplemental UoP in MD&A. However, the MD&A disclosure would create a self-contradiction: management would simultaneously argue that straight-line best reflects the consumption pattern (for GAAP) while warning investors that actual output was much higher, suggesting greater wear. This inconsistency would invite auditor scrutiny and potentially undermine the credibility of both reports. Furthermore, under SEC guidance, MD&A must discuss known trends and uncertainties reasonably likely to materially affect future results; describing declining demand while using straight-line depreciation for an asset whose output is declining puts management in the position of defending two contradictory narratives. A candidate selecting this option values flexibility over consistency — but a single, well-supported GAAP position is stronger than two loosely connected reports.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Evaluate"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -1513,7 +1513,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "indirect operating cash flow adjustment 5",
 		"UniqueConceptKey": "A-030-indirect-operating-cash-flow-adjustment-5",
 		"LOSTag": "A.1 Financial statements",
-		"Difficulty": "Difficult",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "CFO BRIEFING NOTE — Frontier Industries\n\nTO: Controller David Okonkwo\nFROM: CFO Sarah Lin\nRE: Urgent — Cash Flow Analysis for Board Package\n\nFrontier reports net income of $103,500 for the year ended December 31, yet our cash balance has barely changed and we nearly missed a supplier payment last month. I need to present a clear explanation to the board on Wednesday showing why net income does not equal operating cash flow and what the actual operating cash flow figure is. The preliminary numbers show depreciation of $23,000, accounts receivable increased by $7,000, and accounts payable increased by $5,300.\n\nA board member previously served as CFO of a competitor and will challenge us if the reconciliation doesn't reconcile. A misstatement could damage the board's confidence in our internal reporting.\n\nWhat operating cash flow should Ms. Lin present, and which adjustment most explains the gap between net income and operating cash generation?",
@@ -1554,8 +1554,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "",
 		"ExplanationWrongC": "This analysis incorrectly adds the $7,000 accounts receivable increase, treating credit sales as if they generated cash in the current period: $103,500 + $23,000 + $7,000 + $5,300 = $138,800. Under ASC 230, increases in operating assets like A/R are subtracted because they represent revenue recognized on an accrual basis that has not yet been collected in cash. The $7,000 A/R increase means customers owe Frontier $7,000 more than at the beginning of the year — Frontier has not received this cash. A candidate selecting this option misunderstands the directional logic of working capital adjustments: increases in current assets consume cash (subtract), increases in current liabilities provide cash (add).",
 		"ExplanationWrongD": "This analysis incorrectly subtracts the $5,300 accounts payable increase, treating unpaid bills as a cash outflow: $103,500 + $23,000 - $7,000 - $5,300 = $114,200. Under ASC 230, increases in operating liabilities are added back because Frontier has recognized expenses but deferred cash payment, temporarily preserving cash. The $5,300 A/P increase means Frontier owes suppliers $5,300 more — it has the cash in hand rather than having disbursed it. A candidate selecting this option reverses the directional logic for liabilities: increases in current liabilities are sources of cash (add), decreases are uses of cash (subtract). This presentation would understate Frontier's actual cash generation and weaken Ms. Lin's board presentation.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Analyze"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -1565,7 +1565,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "retained earnings rollforward 6",
 		"UniqueConceptKey": "A-031-retained-earnings-rollforward-6",
 		"LOSTag": "A.1 Financial statements",
-		"Difficulty": "Moderate-Easy",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "Granite began the year with retained earnings of $195,000, earned net income of $80,400, and declared dividends of $20,700. What ending retained earnings should be reported?",
@@ -1763,8 +1763,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "This recommendation incorrectly applies expected value methodology to a single litigation contingency. Under ASC 450-20-25-2, for a single obligation with a range of possible outcomes, the guidance directs accrual of the minimum in the range when no single amount is a better estimate. The expected value approach (approximately $2,992,500) is appropriate for large portfolios of homogeneous obligations (warranty claims, customer rebates), where the law of large numbers operates. A single environmental remediation liability is an n-of-1 event — Phoenix will pay one specific amount, not the probability-weighted average. The FASB explicitly rejected expected-value measurement for single-obligation contingencies in the ASC 450 framework. The controller should accrue $1,260,000 (minimum of most-likely range) and disclose the full range of exposure.",
 		"ExplanationWrongC": "This recommendation incorrectly concludes the loss is not probable. Under ASC 450-20-20, 'probable' means the future event is likely to occur. Outside counsel's assessment shows a 90% combined probability of some liability (25%+45%+20%), clearly meeting the probable threshold. The uncertainty about the exact allocation percentage (15%, 30%, or 45%) does not negate probability — the controller can estimate using the most likely scenario and apply range guidance. The EPA's pending Record of Decision does not excuse accrual: ASC 410-30 (Environmental Obligations) and ASC 450 both require recognition when the liability is probable and estimable, regardless of pending regulatory action. Many environmental liabilities are accrued years before final regulatory determination.",
 		"ExplanationWrongD": "This recommendation incorrectly invokes 'conservatism' to accrue the maximum rather than the minimum. Under ASC 450-20-25-2, when a range of probable loss exists and no amount is a better estimate, accrue the MINIMUM — not the maximum. The conceptual framework no longer includes conservatism as a desirable qualitative characteristic; neutrality (freedom from bias) is preferred over conservative bias. Accruing $5,580,000 when the best estimate ranges from $1,260,000 to $5,580,000 would overstate Phoenix's liability and understate income, creating a reserve that could be reversed in a future period. The controller should accrue the minimum ($1,260,000) and disclose the $4,320,000 additional exposure — users receive complete information about the range without bias toward overstatement. The EPA Superfund designation informs probability, but the measurement framework operates independently of the enforcement agency's identity.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Evaluate"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -1774,7 +1774,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "basic EPS weighted-average shares 10",
 		"UniqueConceptKey": "A-035-basic-eps-weighted-average-shares-10",
 		"LOSTag": "A.1 Financial statements",
-		"Difficulty": "Moderate-Easy",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "Keystone had 60,000 common shares outstanding all year and issued 14,000 additional shares on July 1. Net income was $210,000, and preferred dividends were $18,000. What is basic EPS?",
@@ -2022,8 +2022,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "This analysis divides the full cost by useful life without deducting salvage: $124,800 / 7 = $17,829 (rounded to $17,828 in the prior version). Under ASC 360-10-35-4, salvage value must be excluded from the depreciable base because it represents value not consumed during the asset's use. The argument that salvage is 'inherently unreliable' does not justify ignoring it — ASC 360 requires management to estimate salvage based on current conditions. Furthermore, the controller cannot 'support' an $18,000 projection that is $1,886 above the correct GAAP figure simply to avoid a stock price disruption. The IMA Statement of Ethical Professional Practice requires competence (accurate reporting) and credibility (communicating information fairly and objectively). A candidate selecting this option prioritizes market perception over GAAP compliance and professional ethics.",
 		"ExplanationWrongC": "This analysis uses a 6-year life instead of 7: ($124,800 - $12,000) / 6 = $112,800 / 6 = $18,800. Under ASC 250-10-45-17, a change in accounting estimate (including useful life) must be justified by new information or changed circumstances — the controller cannot retroactively shorten the useful life simply to match the CFO's projection. The 'economic depreciation' argument conflates tax considerations (where shorter lives may be permissible) with GAAP financial reporting. Furthermore, the $18,800 figure is $800 above even the CFO's projection, so this approach would still not produce the desired $18,000 result. A candidate selecting this option engages in estimate manipulation to validate a predetermined figure rather than independently determining the correct depreciable life.",
 		"ExplanationWrongD": "This analysis invents a 6.5-year life and mid-year averaging: ($124,800 - $12,000) / 6.5 = $17,354. Two fundamental errors exist: (1) there is no basis in the equipment specifications for a 6.5-year life — the documented useful life is 7 years, and (2) mid-year averaging (or half-year conventions) are tax depreciation conventions (MACRS) not used in straight-line GAAP financial reporting. Under U.S. GAAP, a full year of depreciation is taken in the year of acquisition unless placed in service mid-year, in which case time-proportionate depreciation applies — but averaging across all years is not a standard GAAP treatment. A candidate selecting this option conflates tax depreciation conventions with GAAP financial reporting methods. Furthermore, $17,354 is still $646 below the CFO's $18,000 projection, failing even the pragmatic objective.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Analyze"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -2281,7 +2281,7 @@ var MCQ_BANK_A = [
 		"ExplanationWrongD": "Option D allocates $72K/$24K/$24K which represents a 40%/13%/13% split of the $180K transaction price. This allocation significantly undervalues the license relative to its SSP. At 120/220 of total SSP, the license should receive approximately 55% of the transaction price (~$98K), not 40%. The $72K figure appears to use 40% as the allocation percentage — possibly derived from 120/300 using a mistaken total SSP calculation that double-counts or omits obligations. Re-computing the relative SSP correctly at $120K/$40K/$60K = $220K total is essential to correct allocation.",
 		"question_state": "Certified",
 		"DifficultyScore": 3,
-		"CognitiveLevel": "Analyze",
+		"CognitiveLevel": "Apply",
 		"certification_date": "2026-07-28",
 		"certification_batch": "Pack A Final Closure — S892",
 		"upgrade_note": "Pack A Final Closure - S892 Analyze replacement for archived P1-A-044"
@@ -2803,8 +2803,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongB": "",
 		"ExplanationWrongC": "This recommendation makes three errors. First, it accrues the maximum of the loss range ($9,800,000) rather than the minimum ($4,200,000). Under ASC 450-20-30-1, when no amount within a range is a better estimate than any other, the minimum amount in the range is accrued. Accruing the maximum overstates the liability and is inconsistent with the standard's guidance — this is not a conservatism judgment; it is a deviation from the prescribed accounting. Second, it nets the insurance recovery against the loss accrual, reporting a net liability of $0. ASC 450-20-30-1 requires separate presentation: a probable loss is accrued as a liability, and a probable insurance recovery is recognized as an asset (typically a receivable). Netting would understate both total assets and total liabilities. Third, the recommendation requires disclosure of the EPA matter (Matter 3), which is remote. Under ASC 450-20, remote loss contingencies generally require neither accrual nor disclosure. Requiring disclosure of a remote regulatory matter that has not yet resulted in a formal enforcement action goes beyond the standard's requirements.",
 		"ExplanationWrongD": "This recommendation makes three errors. First, it accrues the midpoint of the loss range ($7,000,000) rather than the minimum. ASC 450-20-30-1 explicitly states that when no amount within the range is a better estimate, the minimum should be accrued — not the midpoint and not the maximum. The midpoint may be intuitive as 'most representative,' but the standard does not support this approach. Second, the recommendation requires accrual of Matter 2 (patent infringement at $3,500,000) as a 'minimum probable loss,' but the probability assessment is 'reasonably possible' (30-40%), not 'probable.' The accrual threshold under ASC 450-20-25-2 is probable, not reasonably possible. Accruing a liability when the loss is merely reasonably possible overstates liabilities and violates the recognition criteria. Third, the recommendation appropriately takes no action on Matter 3 (remote), but this correct conclusion is paired with two material errors on Matters 1 and 2. A controller selecting this option conflates the midpoint with the minimum (Matter 1) and the reasonably possible threshold with the probable threshold (Matter 2) — two of the most commonly tested ASC 450 traps.",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Evaluate"
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply"
 	},
 	{
 		"Part": 1,
@@ -2814,7 +2814,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "basic EPS weighted-average shares 30",
 		"UniqueConceptKey": "A-055-basic-eps-weighted-average-shares-30",
 		"LOSTag": "A.1 Financial statements",
-		"Difficulty": "Moderate-Easy",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "Frontier had 80,000 common shares outstanding all year and issued 18,000 additional shares on July 1. Net income was $270,000, and preferred dividends were $24,000. What is basic EPS?",
@@ -3320,8 +3320,8 @@ var MCQ_BANK_A = [
 		"ExplanationWrongC": "Option C incorrectly applies the portfolio (aggregate) approach rather than the item-by-item approach. Under U.S. GAAP, LCNRV is typically applied on an item-by-item basis unless specific criteria for portfolio grouping are met. Computing aggregate cost ($720K) against aggregate NRV ($685K) yields a $35K total difference, but this masks the individual overstatements. More critically, the portfolio approach is not the default under U.S. GAAP — item-by-item is the required method unless grouping is specifically justified. The aggregate approach can hide material overstatements in individual inventory lines by netting them against lines where cost is below NRV.",
 		"ExplanationWrongD": "Option D incorrectly reverses the write-down in Year 2 even though it correctly acknowledges that Line X's NRV ($250K) now exceeds its original cost ($240K). Under U.S. GAAP, the prohibition on write-down reversals applies regardless of whether NRV recovers above original cost. Once written down, inventory is carried at the new, lower cost basis ($190K for Line X). The NRV recovery to any amount — even exceeding original cost — does not trigger a reversal under GAAP. This choice represents a candidate who understands that LCNRV applies but mistakenly believes the ceiling is original cost when NRV recovers. The correct rule: the write-down creates an irrevocable new cost basis under GAAP.",
 		"question_state": "Certified",
-		"DifficultyScore": 4,
-		"CognitiveLevel": "Analyze",
+		"DifficultyScore": 3,
+		"CognitiveLevel": "Apply",
 		"certification_date": "2026-07-28",
 		"certification_batch": "Pack A Final Closure — S892",
 		"upgrade_note": "Pack A Final Closure - S892 Analyze replacement for archived P1-A-064"
@@ -3334,7 +3334,7 @@ var MCQ_BANK_A = [
 		"MicroTopic": "basic EPS weighted-average shares 40",
 		"UniqueConceptKey": "A-065-basic-eps-weighted-average-shares-40",
 		"LOSTag": "A.1 Financial statements",
-		"Difficulty": "Moderate-Easy",
+		"Difficulty": "Moderate",
 		"ItemType": "MCQ",
 		"ItemStyle": "single-select",
 		"Stem": "Pioneer had 90,000 common shares outstanding all year and issued 20,000 additional shares on July 1. Net income was $300,000, and preferred dividends were $27,000. What is basic EPS?",

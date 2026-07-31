@@ -3847,6 +3847,10 @@ const May = {
             activeSessionId: this.context.sessionId,
             activeExamMode: this.isFullTabBlocked()
         });
+
+        if (typeof MayTelemetry !== 'undefined') {
+            MayTelemetry.trackAdoption({ recommendationType: 'similar_question', topic: topic, section: section, panelOpened: false, clicked: true, timestamp: new Date().toISOString() });
+        }
     },
 
     _recommendNext() {
@@ -3924,9 +3928,11 @@ const May = {
             activeSessionId: this.context.sessionId,
             activeExamMode: this.isFullTabBlocked()
         });
-    },
 
-    // ── Generate a targeted recovery/remediation set ──────
+        if (typeof MayTelemetry !== 'undefined') {
+            MayTelemetry.trackAdoption({ recommendationType: isPersistent ? 'persistent_weak' : 'declining_or_unstable', topic: targetTopic, section: candidates.length > 0 ? candidates[0].Section : null, panelOpened: false, clicked: true, timestamp: new Date().toISOString() });
+        }
+    },
     _generateRecoverySet(count) {
         count = count || 10;
         let clusters = MayLearnerState.getWeaknessClusters();
@@ -4473,6 +4479,7 @@ const May = {
         // Session 103 — Section-level readiness grid
         let sectionReadinessHtml = this._renderSectionReadiness();
         // Session 103 — Provenance/help toggle
+        let effectivenessHtml = this._renderEffectivenessScorecard();
         let readinessProvenanceHtml = this._renderReadinessProvenance();
 
         // Chat messages
@@ -4691,6 +4698,7 @@ const May = {
                 ${casePatternHtml}
                 ${practiceGuidanceHtml}
                 ${practiceMixHtml}
+                ${effectivenessHtml}
                 ${readinessProvenanceHtml}
 
                 <div class="may-export-row">
@@ -5060,6 +5068,53 @@ const May = {
             + '<div class="may-prov-thresholds">' + thresholdLines.join(' ') + '</div>'
             + '<p class="may-prov-note">Snapshot is evidence-based and conservative. Bands reflect topic-level accuracy, stability, and trend data only \u2014 no exam prediction.</p>'
             + '</div>'
+            + '</div>';
+    },
+
+    _renderEffectivenessScorecard() {
+        if (typeof MayEffectivenessScorer === 'undefined') return '';
+        var sc = MayEffectivenessScorer.compute();
+        if (!sc || sc.sessionsAnalyzed === 0) return '';
+
+        var funnelHtml = '';
+        if (sc.dimensions && sc.dimensions.length >= 3) {
+            var adoption = sc.dimensions[2]; // User Adoption is dimension 3 (0-indexed 2)
+            if (adoption && adoption.funnel && adoption.funnel.presented > 0) {
+                var f = adoption.funnel;
+                var maxF = Math.max(f.presented, f.opened, f.clicked, f.started, f.completed, 1);
+                var barW = function(v) { return Math.round((v / maxF) * 100); };
+                funnelHtml = '<div class="may-effect-funnel">'
+                    + '<div class="may-effect-funnel-title">Adoption Funnel</div>'
+                    + '<div class="may-effect-funnel-row"><span class="may-effect-funnel-label">Presented</span><span class="may-effect-funnel-bar"><i style="width:' + barW(f.presented) + '%"></i></span><span class="may-effect-funnel-val">' + f.presented + '</span></div>'
+                    + '<div class="may-effect-funnel-row"><span class="may-effect-funnel-label">Opened</span><span class="may-effect-funnel-bar"><i style="width:' + barW(f.opened) + '%"></i></span><span class="may-effect-funnel-val">' + f.opened + '</span></div>'
+                    + '<div class="may-effect-funnel-row"><span class="may-effect-funnel-label">Clicked</span><span class="may-effect-funnel-bar"><i style="width:' + barW(f.clicked) + '%"></i></span><span class="may-effect-funnel-val">' + f.clicked + '</span></div>'
+                    + '<div class="may-effect-funnel-row"><span class="may-effect-funnel-label">Started</span><span class="may-effect-funnel-bar"><i style="width:' + barW(f.started) + '%"></i></span><span class="may-effect-funnel-val">' + f.started + '</span></div>'
+                    + '<div class="may-effect-funnel-row"><span class="may-effect-funnel-label">Completed</span><span class="may-effect-funnel-bar"><i style="width:' + barW(f.completed) + '%"></i></span><span class="may-effect-funnel-val">' + f.completed + '</span></div>'
+                    + '</div>';
+            }
+        }
+
+        var dimHtml = '';
+        if (sc.dimensions) {
+            sc.dimensions.forEach(function(d) {
+                var cls = d.verdict === 'STRONG' ? 'may-effect-strong' : (d.verdict === 'ADEQUATE' ? 'may-effect-adequate' : (d.verdict === 'WEAK' ? 'may-effect-weak' : (d.verdict === 'FAILING' ? 'may-effect-failing' : 'may-effect-muted')));
+                dimHtml += '<div class="may-effect-dim ' + cls + '">'
+                    + '<div class="may-effect-dim-header"><span class="may-effect-dim-name">' + d.dimension + '</span><span class="may-effect-dim-score">' + (d.verdict === 'INSUFFICIENT DATA' ? '\u2014' : d.rawScore) + '</span></div>'
+                    + '<div class="may-effect-dim-label">' + d.verdict + '</div>'
+                    + '</div>';
+            });
+        }
+
+        var verdictCls = sc.verdict === 'STRONG' ? 'may-effect-strong' : (sc.verdict === 'ADEQUATE' ? 'may-effect-adequate' : (sc.verdict === 'WEAK' ? 'may-effect-weak' : 'may-effect-muted'));
+
+        return '<div class="may-case-pattern-panel may-effect-panel">'
+            + '<h3 class="may-insights-title">Effectiveness Scorecard ' + (sc.hasEnoughData ? '<span class="may-effect-composite ' + verdictCls + '">' + sc.compositeScore + '</span>' : '') + '</h3>'
+            + (sc.hasEnoughData
+                ? '<div class="may-effect-verdict ' + verdictCls + '">' + sc.verdict + '</div>'
+                : '<p class="may-effect-pending">' + sc.sessionsAnalyzed + ' session(s) recorded. ' + (sc.insufficientDimensions ? sc.insufficientDimensions.length + ' dimension(s) await data.' : 'Need ' + (3 - sc.sessionsAnalyzed) + ' more sessions for baseline.') + '</p>')
+            + funnelHtml
+            + dimHtml
+            + '<p class="may-effect-meta">' + sc.sessionsAnalyzed + ' sessions, ' + sc.totalEvents + ' events</p>'
             + '</div>';
     },
 
@@ -5481,6 +5536,10 @@ const May = {
         // Pulse the floating launcher to signal "review ready"
         setTimeout(() => this._pulseLauncherReview(), 500);
         this.renderView();
+
+        if (typeof MayTelemetry !== 'undefined') {
+            MayTelemetry.trackEngagement({ action: 'sessionResultsDisplayed', mcqAnswered: mcqAnswered, mcqTotal: (sessionObj.mcqs || []).length, reviewCount: this.context.reviewQuestions.length, timestamp: new Date().toISOString() });
+        }
     },
 
     // ── Clear current question context ───────────────────
@@ -5530,6 +5589,10 @@ const May = {
             this.context.reviewStudentAnswer = studentChoiceLetter;
             this.context.reviewCorrectAnswer = correctLetter;
             this.context.reviewIsCorrect = isCorrect;
+
+            if (typeof MayTelemetry !== 'undefined') {
+                MayTelemetry.trackAdoption({ recommendationType: 'review_bridge', cardId: qid, topic: found.Topic || '', section: found.Section || '', panelOpened: true, clicked: false, timestamp: new Date().toISOString() });
+            }
         }
     },
 
@@ -6501,6 +6564,9 @@ const May = {
         let card = document.getElementById('mayCompanionCard');
         if (card) card.remove();
         sessionStorage.setItem('mayCompanionDismissed', '1');
+        if (typeof MayTelemetry !== 'undefined') {
+            MayTelemetry.trackEngagement({ action: 'dismissed', timestamp: new Date().toISOString() });
+        }
         // Ensure launcher is visible
         this._updateMayLauncherState();
     },
@@ -6527,17 +6593,21 @@ const May = {
         document.body.appendChild(wrapper.firstElementChild);
 
         this._updateMayLauncherState();
+
+        if (typeof MayTelemetry !== 'undefined') {
+            MayTelemetry.trackEngagement({ action: 'tooltipViewed', timestamp: new Date().toISOString() });
+        }
     },
 
     _updateMayLauncherState() {
-        let launcher = document.getElementById('mayLauncher');
+        var launcher = document.getElementById('mayLauncher');
         if (!launcher) return;
 
-        let hasActive = (typeof state !== 'undefined' && state.session && !state.session.completed);
-        let isExamMode = hasActive && state.session && state.session.mode === 'full';
+        var hasActive = (typeof state !== 'undefined' && state.session && !state.session.completed);
+        var isExamMode = hasActive && state.session && state.session.mode === 'full';
 
         // During MCQ session: mini panel is present at bottom-right — reposition launcher above it
-        let miniPanel = document.getElementById('mayMini');
+        var miniPanel = document.getElementById('mayMini');
         if (miniPanel) {
             launcher.style.bottom = '370px';
             launcher.style.opacity = '0.85';
@@ -6550,6 +6620,9 @@ const May = {
         } else {
             launcher.style.bottom = '20px';
             launcher.style.opacity = '1';
+            if (typeof MayTelemetry !== 'undefined') {
+                MayTelemetry.trackEngagement({ action: 'tooltipViewed', timestamp: new Date().toISOString() });
+            }
         }
     },
 
@@ -6562,6 +6635,12 @@ const May = {
         // Switch to May tab and render
         if (typeof showView !== 'undefined') showView('coachView');
         this.renderView();
+
+        if (typeof MayTelemetry !== 'undefined') {
+            var _ts = new Date().toISOString();
+            MayTelemetry.trackAdoption({ recommendationType: 'Launcher', cardId: 'may-launcher', topic: '', presented: false, panelOpened: true, clicked: true, sessionStarted: false, completed: false, timestamp: _ts });
+            MayTelemetry.trackEngagement({ action: 'tooltipClicked', timestamp: _ts });
+        }
 
         // Pulse the launcher briefly
         let btn = document.getElementById('mayLauncherBtn');
