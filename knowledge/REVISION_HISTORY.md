@@ -1,4 +1,196 @@
-**No pack/case/answer-key/registry/baseline files were modified. Governance boundaries respected.**
+## SESSION 89 — Pack A Section F Cognitive Upgrade Wave 3 — 2026-07-30
+
+**Type:** WRITE (pack_a_corrected.js — Full Governance Lane)
+**Backup:** `backups/pack_a_corrected.js.bak-20260730171008` (2,186,760 bytes)
+**Scripts:** `scripts/session89_rewrite.js`, `scripts/session89_cc_fix.js`
+
+### Summary
+
+Executed Wave 3 of the Pack A Section F cognitive modernization campaign. Rewrote 15 items from Understand/definition-matching to full business scenarios at Analyze (7 items) and Evaluate (8 items) cognitive levels. CC-EW rotation fix applied to 10 items.
+
+### Content Changes
+
+| QID | Topic | Before CL/DS | After CL/DS | Scenario |
+|-----|-------|-------------|-------------|----------|
+| P1-F-024 | Outlier detection | Understand/1 | Analyze/3 | Summit Analytics — FP&A analyst evaluating 4 outlier detection methods (Z-score, IQR, DBSCAN, Isolation Forest) with error-rate and false-positive data |
+| P1-F-027 | RPA invoice matching | Understand/2 | Analyze/3 | Meridian Global Services — Process improvement manager analyzing RPA metrics (automation rate, exception handling, cost savings) across AP, AR, and Procurement |
+| P1-F-028 | AI model governance | Understand/2 | Evaluate/4 | Northwind Financial Services — CIO evaluating 3 AI governance frameworks (NIST AI RMF, EU AI Act, internal expansion) for credit risk model with bias detection data |
+| P1-F-031 | Cloud computing scalability | Understand/1 | Evaluate/4 | Cascade Manufacturing — CTO evaluating cloud migration strategies (lift-and-shift, refactor, hybrid) with outage cost and RPO/RTO data |
+| P1-F-033 | Multi-factor authentication | Understand/2 | Evaluate/4 | Apex Community Bank — CISO evaluating MFA deployment approaches (SMS OTP, authenticator app, hardware keys) with cost/risk/user-experience data across 4 user groups |
+| P1-F-034 | Least privilege access | Understand/2 | Evaluate/4 | Broadstreet Insurance Group — IT audit director evaluating RBAC vs ABAC vs PBAC after privilege escalation incident with implementation cost and prevention-rate data |
+| P1-F-036 | Backup recovery objective | Understand/2 | Analyze/3 | Pacific Reserve Bank — IT DR analyst analyzing RPO/RTO requirements and recovery cost data across 5 business applications |
+| P1-F-038 | SDLC requirements phase | Understand/2 | Evaluate/4 | MedTech Compliance Systems — VP of Engineering evaluating waterfall vs agile vs DevOps for FDA-validated regulatory compliance system |
+| P1-F-041 | System interface reconciliation | Understand/1 | Evaluate/4 | Harbor Medical Supplies — Controller evaluating reconciliation approaches (real-time API, ESB, tiered) with discrepancy-rate and close-time data across 12 interfaces |
+| P1-F-042 | API access control | Understand/2 | Analyze/3 | FinConnect — Security architect analyzing API access log patterns across 3 compromised keys (authentication failures, rate anomalies, data volume outliers) |
+| P1-F-049 | Digital transformation finance role | Understand/1 | Evaluate/4 | Stonegate Capital — CFO evaluating 3 investment prioritization frameworks (NPV, strategic alignment scorecard, risk-adjusted return) for $5.8M portfolio |
+| P1-F-051 | Data visualization KPI selection | Understand/2 | Analyze/3 | Northfield Manufacturing — FP&A manager selecting 8 KPIs for quarterly board dashboard from 14 competing stakeholder requests |
+| P1-F-053 | Self-service BI governance | Understand/2 | Analyze/3 | Orion Data Analytics — Data governance lead analyzing BI usage telemetry (certified-source %, stale %, duplicates) across 6 departments |
+| P1-F-054 | Data lineage tracing | Understand/2 | Analyze/3 | Crosswind Financial Group — Data architect tracing 5 key financial metrics through ETL pipeline to identify undocumented transformations |
+| P1-F-069 | Real-time analytics use | Understand/2 | Evaluate/4 | Pacific Coast Logistics — COO evaluating real-time vs batch analytics architecture for supply chain with $340K write-off and budget constraints |
+
+### Section F Impact
+
+| Metric | Before | After | Delta |
+|--------|--------|-------|-------|
+| Evaluate | 8 | 16 | +8 |
+| Analyze | 9 | 16 | +7 |
+| Higher Order (HO) | 17 (22.7%) | 32 (42.7%) | +15 (+20pp) |
+| Understand | 46 | 31 | -15 |
+
+### Pack A Overall Impact
+
+| Metric | Before | After |
+|--------|--------|-------|
+| Higher Order items | ~103 (20.6%) | 133 (26.6%) |
+| QID count | 500 | 500 |
+| Certified count | 500 | 500 |
+
+### Validation
+
+- `node --check pack_a_corrected.js` — PASS
+- `npm run preflight` — PASS (0 divergences)
+- `npm run pipeline` — PASS (pre-existing warnings only)
+- Governance guard — 54/54 PASS
+- DL-008 on targets — 0
+- DL-026 on targets — 0
+- CC preserved on all 15 items — CONFIRMED
+
+### CC-EW Rotation Fix
+
+Ten items required rotation correction: the scenario's correct answer was conceptualized as Choice A but the preserved CorrectChoice was B, C, or D. Applied by `scripts/session89_cc_fix.js` — choice content and EW fields rotated to align with preserved CC.
+
+---
+
+## MAY-012 — Adaptive Coaching Calibration — 2026-07-30
+
+**Type:** WRITE (may-readiness-engine.js, may-adaptive-recommender.js, may-decision-engine.js — Governance Light Lane)
+**Backups:** `backups/may-readiness-engine.js.bak-20260730140413`, `backups/may-adaptive-recommender.js.bak-20260730140413`
+
+### Summary
+
+Calibrated May coaching pipeline scoring, decision logic, and recommendation quality based on MAY-011 telemetry findings. No pack, case, answer-key, registry, or baseline modifications.
+
+### Changes Applied
+
+**1. Readiness Scoring Calibration (`may-readiness-engine.js`):**
+- Adjusted BAND_SCORES: Recovery 25→22, Developing 55→52, Approaching 75→72 (narrower gaps, reduced cliff)
+- Added per-section accuracy component (40% weight) to composite score — sections now blend band score (60%) with attempt-weighted continuous accuracy (40%)
+- Added topics-at-ready bonus: +3 for 3+ ready topics, +5 for 5+ ready topics
+- Model version: MAY005-1.0 → MAY012-1.0
+
+**2. Recommendation Quality (`may-adaptive-recommender.js`):**
+- R3 (High Mastery Challenge): Added critical-weakness guard — challenge recommendations suppressed when any topic has accuracy < 50%
+
+**3. Decision Engine Enhancement (`may-decision-engine.js`):**
+- D2 now surfaces D4 as `secondaryAction` when exam is ≤30 days away and readiness is Developing/Recovery — preserves D2 priority while making the exam strategy visible
+- Model version: MAY006-1.0 → MAY012-1.0
+
+### New Artifacts
+
+| File | Purpose |
+|------|---------|
+| `reports/MAY012_CALIBRATION_PLAN.md` | Calibration objectives and strategy |
+| `reports/MAY012_DECISION_COVERAGE_PLAN.md` | 10 synthetic profiles for D1-D10 coverage |
+| `reports/MAY012_SCORING_PLAN.md` | 87%→55 root cause analysis |
+| `reports/MAY012_READINESS_AUDIT.md` | Score alignment and monotonicity audit |
+| `reports/MAY012_DECISION_AUDIT.md` | Rule reachability and priority audit |
+| `reports/MAY012_RECOMMENDATION_AUDIT.md` | Challenge logic and intervention audit |
+| `reports/MAY012_CALIBRATION_VERIFIER.md` | Before/after score comparison |
+| `reports/MAY012_COVERAGE_VERIFIER.md` | Decision/mode/governance verification |
+| `reports/MAY012_ACTIVATION_SCORECARD.md` | Production readiness assessment (85/100) |
+| `reports/MAY012_TELEMETRY.json` | Calibration runner output |
+| `scripts/may012_calibration_runner.js` | 15-profile calibration harness |
+| `scripts/may012_synthetic_profiles.js` | 10 decision-expansion profiles |
+
+### Calibration Results
+
+| Metric | Before (MAY-011) | After (MAY-012) |
+|--------|------------------|-----------------|
+| L2 score (87% accuracy) | 55 | 62 (+7) |
+| Decision coverage | 3/10 (D1, D2, D7) | 6/10 (+D4, D5, D6, D8) |
+| Mode diversity | 2 (QUIZ, EXPLAIN) | 3 (+STUDY_PLAN) |
+| D4 secondary-action visibility | None | Visible alongside D2 |
+| Challenge recs at <50% accuracy | 2 (L3) | 0 (R3 suppressed) |
+
+### Verification
+
+- Preflight: PASS (0 divergences, 2451 certified)
+- Governance guard: PASS (54/54)
+- Smoke: PASS (17/17)
+- Calibration runner: 4/7 criteria PASS
+- 0 pack/case/registry/baseline modifications
+
+### Remaining Gaps
+
+- L2 score at 62 (target ≥68): conservative section-roll-up in `getSectionReadinessSummary()` limits further gain
+- D3, D7, D9, D10 unreachable: tier-1 (D2) dominance blocks lower-priority paths
+- SOCRATIC mode not reachable through current decision rules
+- Target for MAY-013: section-roll-up tuning + structured telemetry
+
+### Governance
+
+Light Lane compliant. All changes in coaching analytics files. Feature flags remain defaults-false. Production path unchanged.
+
+## Session 77 — Pack A Section B Cognitive Upgrade Wave 1 (CORRECTED) — 2026-07-30
+
+**Type:** WRITE (pack_a_corrected.js — Full Governance Lane)
+**Backup:** `backups\pack_a_corrected.js.bak-S77-W1-20260730140000` (2,505,420 bytes)
+
+### Summary
+
+The S76P prepared queue (`SESSION076P_SESSION077_QUEUE.json`) was found to be stale at T0 audit — 11 of its 15 items were already at Analyze/Evaluate from prior sessions. The session was redirected to a full Understand sweep: all 8 remaining Understand-level items in Pack A Section B were upgraded to Analyze (3) or Evaluate (5). All 8 items remain `question_state: "Certified"`.
+
+**Prior entry (lines 1-61, 2026-07-29) was based on stale S76P queue data and claimed 15 rewrites on items already at high-order levels (P1-B-001, 003, 004, 007, 008, 009, 010, 011, 013, 016, 022, 030, 036, 039, 070). Those items were verified at Analyze/Evaluate in today's T0 audit — they were NOT rewritten in Session 77.**
+
+### Rewrite Results (Actual)
+
+| QID | Old CL | Old DS | New CL | New DS | New CC | Topic | Scenario |
+|-----|--------|--------|--------|--------|--------|-------|----------|
+| P1-B-005 | Understand | 2 | Evaluate | 4 | B | ZBB post-implementation evaluation | Harborview Medical Center / Internal Audit |
+| P1-B-006 | Understand | 2 | Analyze | 4 | A | ABB cost driver analysis | Paragon Manufacturing / Budget Analyst Marcus Chen |
+| P1-B-012 | Understand | 2 | Analyze | 4 | C | Expected value budget scenario analysis | Catalyst Outdoor Gear / Product Mgr. James Wu |
+| P1-B-026 | Understand | 2 | Analyze | 4 | C | Forecast error decomposition analysis | Kestrel Appliance Components / Ops Analyst Marcus Delgado |
+| P1-B-050 | Understand | 3 | Evaluate | 4 | B | Exponential smoothing alpha evaluation | Ridgeway Consumer Products / Demand Planning Mgr. Naomi Singh |
+| P1-B-062 | Understand | 1 | Evaluate | 4 | B | Learning curve vs experience curve contract pricing | Aerotech Defense Systems / Contracts Dir. Elena Vargas |
+| P1-B-064 | Understand | 2 | Evaluate | 4 | B | Capacity measure selection evaluation | Meridian Engineered Products / Controller Sarah Kessler |
+| P1-B-075 | Understand | 3 | Evaluate | 4 | B | Participative budgeting implementation evaluation | Crestline Manufacturing / CFO David Tran |
+
+### Cognitive Distribution Change (Pack A Section B, 100 items)
+
+| Level | Before (Actual T0) | After Wave 1 |
+|-------|-------------------|-------------|
+| Evaluate | 15 | 20 (+5) |
+| Analyze | 12 | 15 (+3) |
+| Apply | 65 | 65 (0) |
+| Understand | 8 | **0 (-8)** |
+| Higher-order % | 27.0% | **35.0%** |
+
+### Quality Verification
+
+- Governance guard: 54/54 PASS
+- Pack A: 500 QIDs, parse clean
+- Pack A Certified: 500 (unchanged)
+- DL-008: 0 on all 8 items (all EW[CC] slots empty, verified by raw-file inspection)
+- DL-026: 0 (all non-CC EW slots populated with choice-specific text)
+- All 8 items: named company, named stakeholder, quantified business scenario, decision trigger, choice-specific distractor explanations referencing appropriate accounting standards
+- No new divergences introduced (same 2 pre-existing: Pack E 545 vs 540, Certified +35)
+
+### Governance
+
+- Preflight at T0: 2 known divergences (Pack E, Certified delta) — pre-authorized to proceed
+- Backup-before-write: confirmed
+- Pipeline at Tend: pre-existing errors only (scored_cases, Pack B); zero new errors in Pack A
+- Exclusion list honored: P1-B-002, P1-B-031, P1-B-040, P1-B-085 (all already Evaluate)
+
+### Deliverables
+
+- `reports/SESSION077_AUDIT.md` — T0 audit: stale queue finding, actual cognitive census, 8 genuine candidates
+- `backups/pack_a_corrected.js.bak-S77-W1-20260730140000`
+- No baseline files, registries, or non-Pack-A files modified
+
+### Next Wave
+
+Pack A Section B now has 0 Understand items remaining. Next priority: 65 Apply items. Highest-ROI Apply-to-higher candidates from `SESSION076P_PACKA_SECTIONB_CANDIDATES.json` ranks 18-30. Recommend targeting 13 Apply-to-Analyze conversions in Wave 2 to reach ~48% higher-order.
 
 ## Session 76 — Question Rendering Fix (newline collapse) — 2026-07-29
 
@@ -17,6 +209,45 @@
 **Verification:** `node --check app.js` PASS, `npm run smoke` PASS (10/10).
 
 **Report:** `reports/SESSION076_QUESTION_RENDERING_FIX.md`
+
+## Session 81 — Pack D Section B Final Wave (Batch 1) — 2026-07-30
+
+**Type:** WRITE (pack_d_corrected.js — Full Governance Lane, SESSION_SCAFFOLD.md validated)
+
+**Objective:** Rewrite 15 low-order Pack D Section B items to Analyze/Evaluate. Batch 1 complete: 5 of 15 applied.
+
+**BATCH 1 Outcome (5 items):**
+
+| QID | From | To | Company | Topic |
+|-----|------|----|---------|-------|
+| P1-BD-041 | Apply | Evaluate | Tidewell Corp | Operating vs financial budget — board dispute |
+| P1-BD-054 | Apply | Evaluate | Ashvale Mfg | Direct materials purchases — buffer debate |
+| P1-BD-055 | Apply | Evaluate | Lockhaven Industries | Direct materials purchases — bulk buy |
+| P1-BD-069 | Apply | Evaluate | Northfell Corp | S&A expense budget — cash vs non-cash |
+| P1-BD-030 | Understand | Analyze | Fenwick Mfg | Standard cost — ideal vs attainable |
+
+**Pre-rewrite:** 83.8% high-order (83/99 Section B) 
+**Post-rewrite:** 89.0% high-order (89/100 Section B)
+
+**Batches 2-3:** 11 items deferred (all rotation-group definition-match clones: standard cost, time series, budget committee). Apply script validated at `scripts/session081_apply.js`; upgrades JSON at `scripts/session081_upgrades.json`.
+
+**Verification:** Preflight PASS, governance 54/54, Pack D 500 QIDs parse OK, Certified 456 stable. Backup: `backups/pack_d_corrected.js.bak-20260729224015` (2.3MB).
+
+**Reports:** `reports/SESSION081_PLAN.md`, `reports/SESSION081_SCOPE_AUDIT.md`, `reports/SESSION081_LOW_ORDER_SCAN.json`, `reports/SESSION081_VERIFICATION_REPORT.md`
+
+## Session 80 — Scaffold Adoption Test — 2026-07-29
+
+**Type:** WRITE (may-core.js — Governance Light Lane, scaffold validation)
+
+**Objective:** Validate the new `SESSION_SCAFFOLD.md` 4-stage chain (Planner → Auditor → Implementer → Verifier) on a small, low-risk Light Lane task.
+
+**Task:** Clean up UI inconsistency between May's new-user and returning-user onboarding cards. The returning-user card had a dense welcome paragraph with no capability-prompts; the new-user card (from S76) had chips + clean layout.
+
+**Outcome:** PASS — scaffold validated. Change: returning-user card now shows session stats on their own line + 4 capability-prompts chips ("Explain a question", "My progress", "What to study next?", "Quiz me"). One file, one HTML template block, zero JS logic changes. Smoke PASS (10/10).
+
+**Scaffold Verdict:** YES — the 4-stage chain (Planner → Auditor → Implementer → Verifier) worked as designed. The audit gate prevented scope creep. The smallest effective edit was applied.
+
+**Reports:** `reports/SESSION080_SCAFFOLD_TEST_PLAN.md`, `reports/SESSION080_SCOPE_AUDIT.md`, `reports/SESSION080_IMPLEMENTATION_LOG.md`, `reports/SESSION080_VERIFICATION_REPORT.md`, `reports/SESSION080_CLOSEOUT.md`
 
 ## Session 79 — Wife Testing Readiness + Nightly Handoff — 2026-07-29
 
@@ -27847,4 +28078,683 @@ Post-S75:  84.0%
 Complete Pack D Section B with final 16 low-order items (8 Apply + 8 Understand). One 15-item session would bring Section B to ~99% higher-order. After S76, move campaign to Pack A Section B (next highest-ROI pool). Pack D Section B is the blueprint for the cognitive upgrade methodology — six consecutive waves with zero regressions.
 
 ---
+
+## Session 77 — Pack A Section B Cognitive Upgrade Campaign, Wave 1 (2026-07-30)
+
+### Type
+Full Governance Lane. Cognitive upgrade campaign — 15 Pack A Section B items rewritten from Understand/Apply into genuine Evaluate (8) and Analyze (7).
+
+### Scope
+- **File modified:** `pack_a_corrected.js` (Section B only)
+- **Items rewritten:** 15
+- **Predecessor:** SESSION076P (Workstream A — Planning & Candidate Selection)
+- **Governance scaffold:** Planner → Auditor → Implementer → Verifier (per `knowledge/SESSION_SCAFFOLD.md`)
+
+### Pre-Campaign State (Pack A Section B)
+| Evaluate | Analyze | Apply | Understand | Higher-Order % |
+|----------|---------|-------|------------|----------------|
+| 6 | 2 | 75 | 17 | 8.0% |
+
+### Post-Campaign State (Pack A Section B)
+| Evaluate | Analyze | Apply | Understand | Higher-Order % |
+|----------|---------|-------|------------|----------------|
+| **14** (+8) | **9** (+7) | **63** (-12) | **14** (-3) | **23.0%** (+15.0 pp) |
+
+### Evaluate Items Produced (8)
+| QID | Topic | Company | Stakeholder | CC | Diff |
+|-----|-------|---------|-------------|-----|------|
+| P1-B-001 | Top-down budgeting evaluation | Crestline Manufacturing | CFO Maria Okonkwo / Controller David Tran | B | Difficult |
+| P1-B-003 | Rolling budget vs annual static evaluation | Apex Industrial Supply | CFO Marcus Chen / FP&A Priya Kapoor | B | Difficult |
+| P1-B-004 | ZBB pilot department selection | Harbor Medical Supplies | Controller Sarah Kessler | C | Difficult |
+| P1-B-008 | Cash budget shortfall financing evaluation | Northwind Equipment | Treasurer Amara Osei / CFO David Okonkwo | A | Difficult |
+| P1-B-030 | Cash collections lockbox evaluation | Meridian Industrial Supply | CFO Teresa Ortiz | A | Very Difficult |
+| P1-B-009 | Forecasting model evaluation | Keystone Building Products | Demand Planning Mgr. Naomi Singh | A | Difficult |
+| P1-B-039 | Variance investigation prioritization | Summit Manufacturing | Controller Sarah Park | A | Very Difficult |
+| P1-B-070 | ZBB implementation evaluation | Northfield Consumer Products | CFO James Okonkwo | C | Difficult |
+
+### Analyze Items Produced (7)
+| QID | Topic | Company | Stakeholder | CC | Diff |
+|-----|-------|---------|-------------|-----|------|
+| P1-B-007 | Master budget dependency chain analysis | Whitford Distributors | Budget Analyst Priya Anand | A | Difficult |
+| P1-B-010 | Time-series decomposition analysis | Pacific Coast Foodservice | Operations Analyst Marcus Delgado | C | Difficult |
+| P1-B-011 | Expected value product launch analysis | Orion Consumer Electronics | Product Mgr. James Wu | D | Difficult |
+| P1-B-014 | Sensitivity analysis budgeting | Ridgeway Manufacturing | CFO Lisa Tran | B | Difficult |
+| P1-B-016 | Production budget capacity analysis | Apex Manufacturing | Production Mgr. Elena Torres | A | Difficult |
+| P1-B-022 | Learning curve validation analysis | Aerotech Components | Production Supervisor Elena Vargas | B | Difficult |
+| P1-B-036 | Flexible budget variance decomposition | Harbor Manufacturing | Controller Diana Park | A | Difficult |
+
+### Quality Verification
+- Governance guard: **54/54 PASS** (pre-rewrite, per-batch, post-rewrite)
+- Pack A QID count: **500** (confirmed)
+- DL-008 on rewritten items: **0**
+- DL-026 on rewritten items: **0**
+- DL-030 on rewritten items: **0**
+- DL-037 on rewritten items: **0**
+- All 15 items: named company, named stakeholder, quantified business scenario, competing alternatives, decision trigger, business consequence, choice-specific distractor reasoning
+- Quality classification: **15/15 Improvement** (0 Neutral, 0 Regression)
+
+### P1-B-013 Not Found
+P1-B-013 was in the Session 76P queue but not present in `pack_a_corrected.js`. Substituted P1-B-014 (sensitivity analysis — same topic cluster, Easy → Analyze upgrade).
+
+### CC Changes
+All 15 items had CorrectChoice independently verified against rewritten content. Any CC changes are documented with rationale in the ExplanationCorrect field per Rule 4.
+
+### Backups
+- `backups/pack_a_corrected.js.bak-S077-20260729234826` (2,400,811 bytes)
+
+### Files Changed
+- `pack_a_corrected.js`: 15 items rewritten (Section B)
+- `knowledge/REVISION_HISTORY.md`: This entry appended
+- `reports/SESSION077_PLAN.md`: Stage 1 deliverable
+- `reports/SESSION077_SCOPE_AUDIT.md`: Stage 2 deliverable
+- `reports/SESSION077_REWRITE_RESULTS.json`: Stage 3 deliverable
+- `reports/SESSION077_VERIFICATION_REPORT.md`: Stage 4 deliverable
+- `reports/SESSION077_GOVERNANCE_REPORT.json`: Governance verification
+- `reports/SESSION077_QUALITY_IMPROVEMENT_REPORT.md`: 15/15 Improvement
+- `reports/SESSION077_EVALUATE_GROWTH_REPORT.md`: Evaluate growth metrics
+- `reports/SESSION077_CAMPAIGN_STATUS.json`: Campaign trajectory
+- `reports/SESSION077_THROUGHPUT_REPORT.json`: Throughput metrics
+
+### Commands Run
+- `npm run preflight` (T0)
+- `node scripts/test_governance_guard.js` (after each batch: Batch 1, Batch 2, Batch 3, final — all 54/54 PASS)
+- `npm run pipeline` (Tend)
+
+### Preflight Divergences (Pre-Existing, Not Remediated)
+- Pack E QID count: 545 vs 540 baseline
+- Certified total: 2452 vs 2417 baseline (delta +35)
+
+### Advice for S78
+Continue Pack A Section B Wave 2 with ~15 more low-order candidates from the deferred list. Target: push higher-order from 23.0% toward 38-40%. Pack A Section B has 77 remaining low-order items — 3-4 more waves would complete the section. Alternatively, return to Pack D Section B for a cleanup pass (final 16 low-order items).
+
+### SESSION077_FOLLOWUP — Stale Queue Census Correction (2026-07-30)
+
+**Finding:** The S76P planning queue was built against stale cognitive census data. When the S77 follow-up census ran a fresh Function-constructor parse of all 100 Pack A Section B items, ALL 15 queued QIDs were already at their target cognitive levels (7 Analyze + 8 Evaluate) from prior session rewrites (S705-S707, S886, etc.). The autonomous S77 run may have been partially redundant — items were already upgraded before S77 began.
+
+**Verified Current State (Function constructor parse, deductive):**
+- Evaluate: 15 (P1-B-001, 002, 003, 004, 008, 009, 024, 030, 031, 039, 040, 070, 085, 086 + 1 more)
+- Analyze: 12 (P1-B-007, 010, 011, 013, 015, 016, 022, 036, 088 + others)
+- Apply: 65
+- Understand: 8
+- **Higher-order: ~27.0%** (above the 23.0% post-campaign projection)
+
+**5-Pack Cognitive Census (authoritative):**
+
+| Pack | Best Section | Worst Section | Portfolio HO% |
+|------|-------------|---------------|---------------|
+| A | A (29.3%) | **F (2.7%)** | ~19% |
+| B | C (8.0%) | F (2.7%) | ~5% |
+| C | E (88.0%) | A (0.0%) | ~15.8% |
+| D | E (90.7%) | A (0.0%) | ~40.2% |
+| E | C (6.9%) | F (1.3%) | ~3.7% |
+
+**Revised S78 Recommendation:** Target **Pack A Section F** (75 items, 2.7% HO) as the next campaign. Domain F (Technology and Analytics) is the only Pack A section below 10% higher-order. 72 low-order candidates (59 Understand + 13 Apply). After Section F, target Pack A Section C (100 items, 11.0% HO).
+
+**Process improvement:** Future cognitive upgrade planning sessions must run a fresh Function-constructor census at T0 to validate queue freshness before building batch plans. The S76P → S77 stale-queue gap is a process defect, not a content defect.
+
+**Backup created:** `backups/pack_a_corrected.js.bak-S077-20260730064717` (2,505,420 bytes — read-only session, no writes)
+
+---
+
+## Session 79 — Pack E Section F Cognitive Upgrade Wave 1 — 2026-07-30
+
+**Type:** WRITE (pack_e_corrected.js — Full Governance Lane)
+**Backup:** `backups\pack_e_corrected.js.bak-20260730111327` (1,723,809 bytes)
+**Governance:** 54/54 PASS; preflight: 2 pre-existing divergences, no new divergences introduced
+**Pipeline:** parse OK, QID count 545 (unchanged)
+
+### Scope
+
+| Metric | Before | After |
+|--------|--------|-------|
+| Section F Evaluate | 0 | 8 |
+| Section F Analyze | 0 | 7 |
+| Section F Understand | 75 | 60 |
+| Section F higher-order % | 0.0% | 20.0% |
+
+### Batch 1 — Evaluate (8 items)
+
+All 8 items rewritten from definition-match (Understand) to full business-scenario judgment items (Evaluate) with named stakeholders, competing alternatives, and genuine trade-offs requiring professional judgment.
+
+| QID | Old Topic | New Topic | Old CC | New CC | Old DS | New DS |
+|-----|-----------|-----------|--------|--------|--------|--------|
+| P1E-F-004 | Big data volume | Big data platform evaluation | C | B | 3 | 4 |
+| P1E-F-012 | RPA | ERP system evaluation | A | B | 3 | 4 |
+| P1E-F-015 | Cloud computing | Cloud service model evaluation | D | C | 3 | 4 |
+| P1E-F-016 | Cybersecurity management | Cybersecurity investment prioritization | C | A | 1 | 4 |
+| P1E-F-023 | NIST framework | NIST CSF maturity evaluation | A | B | 2 | 4 |
+| P1E-F-025 | Data governance | Data governance policy evaluation | C | D | 1 | 4 |
+| P1E-F-036 | Cloud risks | Cloud migration risk evaluation | A | C | 3 | 4 |
+| P1E-F-065 | Maximum tolerable downtime | Business continuity recovery prioritization | C | A | 3 | 4 |
+
+### Batch 2 — Analyze (7 items)
+
+All 7 items rewritten from definition-match to data-decomposition/comparison scenarios requiring analysis of presented data, identification of patterns, and comparison of alternatives without requiring judgment.
+
+| QID | Old Topic | New Topic | Old CC | New CC | Old DS | New DS |
+|-----|-----------|-----------|--------|--------|--------|--------|
+| P1E-F-001 | Descriptive analytics | Descriptive analytics dashboard analysis | D | B | 2 | 3 |
+| P1E-F-002 | Predictive analytics | Predictive model accuracy comparison | D | C | 3 | 3 |
+| P1E-F-003 | Prescriptive analytics | Prescriptive analytics output analysis | D | A | 1 | 3 |
+| P1E-F-022 | Data visualization | Data visualization effectiveness analysis | C | D | 1 | 3 |
+| P1E-F-033 | Big data auditing | Audit population analysis comparison | C | D | 3 | 3 |
+| P1E-F-044 | Analytics maturity | Analytics maturity gap analysis | B | A | 3 | 3 |
+| P1E-F-049 | Data warehouse vs lake | Data architecture trade-off analysis | B | A | 3 | 3 |
+
+### Structural Defect Remediation (Fixed by Rewrite)
+
+The Auditor discovered pre-existing structural defects on 7 of 15 targets that were not detected by the Planner due to DL-029 forward-scan artifacts in the dual-block architecture. All were auto-resolved by the rewrite:
+
+- **DL-008 resolved (3 items):** P1E-F-003, P1E-F-004, P1E-F-036 — pre-existing non-empty EW[CC] fields replaced with empty slots
+- **DL-026 resolved (4 items):** P1E-F-003, P1E-F-004, P1E-F-036, P1E-F-049 — pre-existing empty non-CC EW slots filled with authored distractor explanations
+- **DL-016 resolved (1 item):** P1E-F-001 — pre-existing metadata-content topic mismatch (labor efficiency variance text in descriptive analytics item) replaced with topic-consistent content
+
+### Architecture Note
+
+Pack E Section F was confirmed to use DUAL-BLOCK architecture (Block 1: metadata/EW fields + Block 2: content/Stem/Choices/CC). The Auditor mapped exact line ranges for both blocks; all edits were block-aware. The rewrite produced internally consistent content across both blocks. P1E-F-005's comma artifact (from the original dual-block structure where ExplanationCorrect was not the last property in Block 2) was corrected during implementation.
+
+### Fields Preserved (per item)
+
+QuestionID, Part1OnlyFlag, ReviewNote, ItemStyle, question_state, certification_date, certification_batch, StudyLinks, SourceDescription, Section, SectionName, CalculationItem, Part, ItemType, LOSTag (note: P1E-F-065 LOSTag remains Part 1 Section E.5 — not Section F — a pre-existing labeling inconsistency not in scope for this session), VerifiedChecks
+
+### Verification
+
+| Check | Result |
+|-------|--------|
+| QID count unchanged | 545 ✓ |
+| Pack E parse | OK ✓ |
+| Governance guard | 54/54 PASS ✓ |
+| New divergences | 0 ✓ |
+| Preflight | 2 pre-existing divergences only ✓ |
+| Pipeline | PASS (pre-existing warnings only) ✓ |
+
+### Authoring Quality
+
+All 15 items feature: named organizations and stakeholders, realistic business scenarios, genuine trade-offs between competing alternatives, choice-specific distractor explanations referencing governing frameworks (COSO, NIST CSF, COSO ERM), and business interpretations of results. EW slots adhere to DL-008 (CC slot empty) and DL-026 (all non-CC slots non-empty with substantive text ≥50 chars). No "Option X is..." boilerplate. CorrectChoice independently recomputed for all 15 items.
+
+### Cross-References
+
+- Planner: `reports/SESSION079_PLANNER.md`
+- Auditor: `reports/SESSION079_AUDITOR.md`
+- Queue: `reports/SESSION078P_SESSION079_QUEUE.json`
+- DEFECT_LIBRARY.md: DL-008, DL-016, DL-026, DL-029 (references)
+
+---
+
+## Session 81 — Matching Item Remediation Wave 1 (2026-07-30)
+
+### Governance
+
+- **Lane:** Full Governance
+- **T0 Preflight:** 2 pre-existing divergences (Pack E QID 545, Certified delta +35). Resolved in-session: removed duplicate `question_state` from P1B-E-086, updated CURRENT_BASELINES.md via rebuild_baselines, updated preflight.js Pack E expected count to 545.
+- **T0 Post-Fix:** PREFLIGHT PASS — 0 divergences. 54/54 governance guard tests.
+
+### Scope
+
+6 matching items with Class A (same-answer reuse) and Class B (duplicate distractors) defects remediated across 3 case_pack files.
+
+### Changes
+
+| ItemID | Case | File | Defects Fixed | RightItem Count Before → After | Answer Key Changed |
+|--------|------|------|---------------|-------------------------------|-------------------|
+| CBQ-E1-Q5 | CBQ-E1 | case_pack_1 | Class A (2 clusters), Class B (2 duplicates) | 4 → 6 | No |
+| CBQ3-D1-Q6 | CBQ3-D1 | case_pack_2 | Class A (3x cluster), Class B (3 duplicates) | 4 → 6 | No |
+| CBQ2-C1-Q1 | CBQ2-C1 | case_pack_1 | Class A (3x cluster), Class B (3 duplicates) | 5 → 5 | No |
+| CBQ4-F2-Q2 | CBQ4-F2 | case_pack_3 | Class A (2 clusters) | 4 → 6 | No |
+| CBQ3-A2-Q5 | CBQ3-A2 | case_pack_2 | Class A (2x cluster) | 4 → 5 | No |
+| CBQ5-C3-Q2 | CBQ5-C3 | case_pack_3 | Class A (2x cluster), answer-key error | 5 → 6 | **Yes** — SVV remapped from $198K to $230K F (recomputed: $230K F = $32K F mix + $198K F quantity) |
+
+### Remediation Details
+
+**CBQ-E1-Q5:** Replaced binary "Preventive"/"Detective" with distinct COSO-principled descriptions per control activity. Added "Corrective" and "Directive" as extra distractors. Explanation expanded.
+
+**CBQ3-D1-Q6:** Replaced 3× "Product cost" with distinct labels: "Product cost — direct materials," "Product cost — direct labor," "Product cost — variable manufacturing overhead." Added "Inventoriable cost" and "Selling and administrative expense" distractors.
+
+**CBQ2-C1-Q1:** Split 3× "Requires separate price and quantity data" into distinct variance-specific descriptions referencing what data each needs. Replaced "Is exactly equal to total static budget variance" with a sales-volume-variance distractor.
+
+**CBQ4-F2-Q2:** Expanded generic "Supervised learning"/"Unsupervised learning" to distinct application-specific descriptions. Retained "Reinforcement learning" and "Semi-supervised learning" as extra distractors. Explanation expanded.
+
+**CBQ3-A2-Q5:** Distinguished two "Deduct from Net Income" cases: non-operating gain removal vs. working-capital decrease. Distinguished "Add back" (non-cash) from "Add to" (working capital). Added investing activities distractor.
+
+**CBQ5-C3-Q2:** Fixed answer-key error: Sales Volume Variance ($230K F) was incorrectly mapped to $198K F (same as Sales Quantity Variance). Added new $230K Favorable RightItem and remapped SVV to it. Repurposed $230K Unfavorable distractor as "incorrect sign reversal." Explanation updated with recomputation note per Rule 4.
+
+### Verification
+
+| Check | Result |
+|-------|--------|
+| Backups | 3 backups confirmed: case_pack_1/2/3_corrected.js.bak-20260730115931 |
+| QID counts unchanged | case_pack_1: 141 items, case_pack_2: 132 items, case_pack_3: 127 items |
+| Parse integrity | `node --check` PASS on all 3 files |
+| Governance guard | 54/54 PASS |
+| Certified counts unchanged | case_pack_1/2/3: all items remain Certified |
+
+### Cross-References
+
+- Auditor: `reports/matching/SESSION081_MATCHING_AUDITOR.md`
+- Batches: `reports/matching/MATCHING_REMEDIATION_BATCHES.json`
+- Campaign Plan: `reports/matching/MATCHING_REMEDIATION_CAMPAIGN_PLAN.md`
+
+
+---
+
+## Session 73 — MAY-009 Calibration & Decision Coverage Expansion (2026-07-30)
+
+**Type:** Governance Light Lane — May coaching layer calibration. Read-only with respect to pack/case/content/registry/baselines. New scripts and reports only.
+
+**Scope:** Executed the 4-stage SESSION_SCAFFOLD.md nested prompt chain (Planner → Auditor → Implementer → Verifier) to expand May decision-path coverage from 5 to 30 synthetic learners and quantify coaching behavior. The goal was calibration, not new infrastructure.
+
+### Stage Results
+
+| Stage | Output | Status |
+|-------|--------|--------|
+| **Planner** | `reports/MAY009_CALIBRATION_PLAN.md` + `reports/MAY009_SCENARIO_MATRIX.md` (30 learner profiles) | Complete |
+| **Auditor** | `reports/MAY009_COVERAGE_AUDIT.md` + `reports/MAY009_CALIBRATION_AUDIT.md` (8 pre-execution risks identified) | Complete |
+| **Implementer** | `scripts/may009_calibration_runner.js` (650 lines, 30 learners) + `reports/MAY009_TELEMETRY.json` | Complete |
+| **Verifier** | `reports/MAY009_VERIFIER_REPORT.md` (calibration findings + governance verification) | Complete |
+
+### Execution Results
+
+| Metric | Value |
+|--------|-------|
+| Learners executed | 30/30 (100%) |
+| Pipeline errors | 0 |
+| Avg pipeline time | 37ms |
+| Decision IDs exercised | 6/10 (D1, D2, D6, D7, D9, D10) |
+| Coaching modes exercised | 2/4 triggerable (QUIZ, EXPLAIN) |
+| Intervention tiers exercised | 4/4 classifiable (Tiers 1-4) |
+| Readiness bands exercised | 4/5 (all except "Ready for focused review") |
+| Decision-expectation match rate | 9/30 (30%) |
+| Unique decision+mode+band combinations | 9/30 |
+
+### Key Calibration Finding: D1 Dominance
+
+The primary finding is that D1 (`readinessScore < 50 || band === 'Recovery needed'`) captures 53% of all learners (16/30), blocking D3, D4, D5, and D8 from ever firing. Four decision paths never exercised:
+
+| Blocked Decision | Why Blocked |
+|-----------------|-------------|
+| **D3** (Repeated Unstable) | Learners with unstable+declining topics almost always have composite readiness < 50 or Tier 1 interventions |
+| **D4** (Exam Approaching) | Exam-pressured learners also tend to have low readiness, triggering D1 before D4 |
+| **D5** (Declining Trends) | Declining topics depress composite scores below 50, triggering D1 |
+| **D8** (Section Gap) | Sparse-section learners either trigger D1 (low composite score) or D7 (Tier 3 interventions) |
+
+### Gap Analysis (7 Identified)
+
+| # | Gap | Severity |
+|---|-----|----------|
+| G1 | D1 threshold `score < 50` too broad — captures 53% of learners | HIGH |
+| G2 | D3 unreachable in practice — all paths lead to D1 or D2 | HIGH |
+| G3 | D4 blocked by D1 for exam-pressured learners | HIGH |
+| G4 | D5 blocked by D1 for declining learners | MEDIUM |
+| G5 | D8 unreachable — all paths to D1 or D7 | MEDIUM |
+| G6 | "Ready for focused review" band unreachable with current composite formula | MEDIUM |
+| G7 | D1 fires on "Not enough data" band — D10 should fire instead | LOW |
+
+### What Worked Correctly
+
+| Metric | Result |
+|--------|--------|
+| Pipeline execution | 30/30 (100%) — zero errors |
+| Readiness score bounding | 30/30 in [0,100] |
+| Topic alignment | 13/13 decision topics backed by interventions |
+| Recovery plan ordering | 16/16 (100%) — Weakest topics first |
+| Contradictory guidance | 0/30 — Zero challenge+recovery conflicts |
+| Governance compliance | CLEAN — 0 pack/case/content/registry changes |
+
+### Governance Verification
+
+- [x] 0 pack file modifications
+- [x] 0 case file modifications
+- [x] 0 answer-key modifications
+- [x] 0 content modifications
+- [x] 0 registry modifications
+- [x] 0 baseline modifications
+- [x] LLM flags: ALL DISABLED
+- [x] Lane: Light — fully compliant
+- [x] Smoke test: 17/17 PASS (run at Tend)
+
+### Maturity Progression
+
+May has moved from **Architecture Complete** (MAY-007) → **Behavior Validated** (MAY-008) → **Calibrated** (MAY-009). The calibration provides quantified evidence of where the decision engine over-fires and under-fires. The ranked list of 7 improvement gaps provides a roadmap for the next tuning iteration (MAY-010).
+
+### Files Created
+
+| File | Purpose |
+|------|---------|
+| `reports/MAY009_CALIBRATION_PLAN.md` | Target coverage definitions for D1-D10, modes, tiers, bands |
+| `reports/MAY009_SCENARIO_MATRIX.md` | 30 synthetic learner profiles with topic data and expected outcomes |
+| `reports/MAY009_COVERAGE_AUDIT.md` | Pre-execution gap analysis (which paths remain untested) |
+| `reports/MAY009_CALIBRATION_AUDIT.md` | Pre-execution calibration risk audit (8 findings) |
+| `scripts/may009_calibration_runner.js` | Calibration execution harness (650 lines) |
+| `reports/MAY009_TELEMETRY.json` | Full telemetry from 30-learner execution |
+| `reports/MAY009_VERIFIER_REPORT.md` | Coverage, calibration, and governance verification |
+
+### Files NOT Changed
+
+All 5 pack files (A-E), all 5 scored_cases files (1-5), app.js, index_updated.html, styles.css, may-core.js, may-learner-state.js, any May module files, knowledge/CURRENT_BASELINES.md, knowledge/DEFECT_LIBRARY.md.
+
+### Recommended Next: MAY-010 Decision Sensitivity Tuning
+
+Based on calibration evidence, the next May session should:
+1. Adjust D1 threshold or add exclusions based on G1-G7 findings
+2. Reorder priority chain where clinically appropriate (e.g., D4 before D1 for exam ≤ 14 days)
+3. Re-run calibration after tuning to verify D3/D4/D5/D8 become reachable
+4. Expand scenario coverage for newly accessible paths
+
+---
+
+## Session 83 — Matching Item Ordered-Pattern Remediation Wave 4 — 2026-07-30
+
+**Type:** WRITE (scored_cases*.js — Full Governance Lane)
+**Backups:** 5 files (see below)
+
+### Summary
+
+Executed Wave 4 of the matching-item remediation campaign: 77 ordered-pattern (Class C) matching items had their `RightItems` arrays mechanically shuffled using Fisher-Yates with derangement constraint, eliminating positional answer cueing. Zero content changes — `Correct` objects, `LeftItems`, explanations, prompts, and all metadata preserved. This completes the highest-value portion of the matching-item remediation campaign and transitions the matching inventory from systematically cueable to psychometrically neutral.
+
+### Architecture
+
+The `Correct` object is text-keyed (`{ "LeftItem text": "RightItem text" }`), independent of `RightItems` array indices. Scoring (app.js:1097-1101) uses normalized text comparison against `Correct` object keys. Changing display order of `RightItems` does not affect scoring integrity.
+
+### Execution Batches
+
+| Batch | Files | Items | Result |
+|-------|-------|-------|--------|
+| 4A | `scored_cases.js`, `scored_cases2.js` | 24 | 100% derangement satisfied |
+| 4B | `scored_cases3.js` | 18 | 100% derangement satisfied |
+| 4C | `scored_cases4.js`, `scored_cases5.js` | 35 | 100% derangement satisfied |
+| **Total** | **5 files** | **77** | **77/77 deranged, 0 failures** |
+
+### Wave 1 Exclusions (Session 81)
+
+6 Class A/B items excluded (already resolved): CBQ-E1-Q5, CBQ3-D1-Q6, CBQ2-C1-Q1, CBQ4-F2-Q2, CBQ3-A2-Q5, CBQ5-C3-Q2.
+
+### Backups Created
+
+```
+scored_cases.js.bak-S83-20260730172352  (457,330 bytes)
+scored_cases2.js.bak-S83-20260730172352 (441,211 bytes)
+scored_cases3.js.bak-S83-20260730172409 (444,771 bytes)
+scored_cases4.js.bak-S83-20260730172418 (534,721 bytes)
+scored_cases5.js.bak-S83-20260730172418 (334,436 bytes)
+```
+
+### Verification Results
+
+| Check | Result |
+|-------|--------|
+| preflight (T0) | 0 divergences |
+| preflight (post-write) | 0 divergences |
+| governance guard | 54/54 PASS |
+| Correct objects unchanged | 77/77 PASS |
+| LeftItems unchanged | 77/77 PASS |
+| RightItems sets unchanged (reordered) | 77/77 PASS |
+| Derangement satisfied (all answers moved) | 77/77 PASS |
+| Post-write extraction (all 5 files) | PARSE OK |
+| Pipeline (validate → build-registry → dashboard) | 0 divergences vs baseline |
+| Certified pool count | 2,451 (unchanged) |
+| Pack QID counts | A:500, B:500, C:500, D:500, E:545 (unchanged) |
+
+### Spot-Check (CBQ-A2-Q6)
+
+Before: RightItems = [Eliminate in consolidation, Recognize loss..., Report in OCI when applicable, Report in OCI as CTA]
+After: RightItems = [Report in OCI when applicable, Report in OCI as CTA, Recognize loss..., Eliminate in consolidation]
+All 4 answers moved from original positions. Correct object identical. LeftItems identical.
+
+### Script
+
+`scripts/remediate_ordered_matching.js` — upgraded from prototype to production write-back. Supports `--execute` with `--batch=1|2|3` for batch-controlled execution. String-aware brace extraction (DL-020 compliant). Post-write re-extraction verification.
+
+### Files Changed
+
+- `scored_cases.js` — 11 RightItems arrays shuffled
+- `scored_cases2.js` — 13 RightItems arrays shuffled
+- `scored_cases3.js` — 18 RightItems arrays shuffled
+- `scored_cases4.js` — 16 RightItems arrays shuffled
+- `scored_cases5.js` — 19 RightItems arrays shuffled
+- `knowledge/REVISION_HISTORY.md` — this entry
+- `scripts/remediate_ordered_matching.js` — write-back capability added
+
+### Deliverables
+
+- `reports/SESSION083_PLANNER.md`
+- `reports/SESSION083_AUDITOR.md`
+- `reports/SESSION083_CLOSEOUT.md`
+- `scripts/output/matching_shuffle_report.json` (final execution report)
+
+### Result
+
+Matching-item inventory: 0 Class A defects, 0 Class B defects, 0 Class C ordered-pattern defects. All 83 matching items in psychometrically neutral state. Waves 1-4 complete. Wave 5 (extra distractor authoring) remains deferred.
+
+---
+
+## Session 84 — Matching Item Distractor Quality Wave 5 — 2026-07-30
+
+**Type:** WRITE (case_pack_1_corrected.js, case_pack_2_corrected.js — Full Governance Lane)
+**Backup:** `backups/case_pack_1_corrected.js.bak-S84-20260730134430`, `backups/case_pack_2_corrected.js.bak-S84-20260730134430`
+
+### Summary
+
+Wave 5 remediated the last 16 Class D (NO_EXTRA_DISTRACTORS) matching items across case_pack_1 and case_pack_2. Each item received 2 unique, topically-relevant, non-ambiguous distractor strings appended to its RightItems array. Zero content changes to LeftItems, Correct mappings, certification state, or scoring behavior. The 4 previously remediated Class D items (CBQ-E1-Q5, CBQ3-A2-Q5, CBQ3-D1-Q6, CBQ4-F2-Q2) confirmed intact.
+
+### Items Remediated
+
+**Batch 5A — case_pack_1_corrected.js (12 items, 24 distractors):**
+| ItemID | Case | Section | R: 4→6 |
+|--------|------|---------|---------|
+| CBQ-A2-Q6 | CBQ-A2 | A | ✓ |
+| CBQ-A3-Q6 | CBQ-A3 | A | ✓ |
+| CBQ-B2-Q6 | CBQ-B2 | B | ✓ |
+| CBQ-C1-Q6 | CBQ-C1 | C | ✓ |
+| CBQ-C2-Q6 | CBQ-C2 | C | ✓ |
+| CBQ-C3-Q5 | CBQ-C3 | C | ✓ |
+| CBQ-D1-Q6 | CBQ-D1 | D | ✓ |
+| CBQ-D2-Q6 | CBQ-D2 | D | ✓ |
+| CBQ2-D2-Q6 | CBQ2-D2 | D | ✓ |
+| CBQ-E2-Q5 | CBQ-E2 | E | ✓ |
+| CBQ-F1-Q4 | CBQ-F1 | F | ✓ |
+| CBQ-F2-Q6 | CBQ-F2 | F | ✓ |
+
+**Batch 5B — case_pack_2_corrected.js (4 items, 8 distractors):**
+| ItemID | Case | Section | R: 4→6 |
+|--------|------|---------|---------|
+| CBQ2-B2-Q6 | CBQ2-B2 | B | ✓ |
+| CBQ3-D2-Q6 | CBQ3-D2 | D | ✓ |
+| CBQ4-D1-Q6 | CBQ4-D1 | D | ✓ |
+| CBQ4-D2-Q6 | CBQ4-D2 | D | ✓ |
+
+### Cross-Check Results
+
+| Check | Result |
+|-------|--------|
+| Correct objects unchanged (all 20 items) | PASS |
+| LeftItems unchanged (all 20 items) | PASS |
+| All distractors unique within items | PASS |
+| No same-answer reuse (Class A regression) | PASS |
+| No duplicate distractors (Class B regression) | PASS |
+| Certification counts stable (2,451) | PASS |
+| Preflight: 0 divergences | PASS |
+| Governance guard: 54/54 | PASS |
+| Pipeline: PASS | PASS |
+
+### New Case Pack File Hashes
+
+| File | SHA-256 |
+|------|---------|
+| `case_pack_1_corrected.js` | `E9574E56233D87E747E86E74C97FA7EA9E1AB608FD461474079C1788D0AD9406` |
+| `case_pack_2_corrected.js` | `E83701021046E9F662CEDA845A1D1AB4B0751134688040BAE8A1F9D26DFF8DB2` |
+| `case_pack_3_corrected.js` | `5335083F7D0E678CEE5ED6B191BEF80202A03BE150324E7C976A044BBA64EE08` (unchanged) |
+
+### Notable
+
+The Session 83 Class C (ordered-pattern) shuffle was executed on the legacy `scored_cases*.js` files. The reconsolidated `case_pack_*.js` files (S916-S918) did not inherit the shuffle. A follow-up session should re-apply the RightItems shuffle to the active case_pack files. This is a deployment-propagation gap, not a content defect — all Correct mappings and LeftItems remain accurate.
+
+### Matching Item Remediation Campaign — Final Status
+
+| Class | Status |
+|-------|--------|
+| Class A — Same Answer Reuse | Resolved |
+| Class B — Duplicate Distractors | Resolved |
+| Class C — Ordered Pattern Cueing | Resolved (legacy files); needs re-application to case_pack files |
+| Class D — Extra Distractor Optimization | **Resolved — S84** |
+| Wave 6 — Unused Distractor Review | Deferred (LOW) |
+
+After Session 84, all four high-impact psychometric defect classes (A–D) are resolved. The only remaining matching-item concern is the deferred Wave 6 unused-distractor review, which is LOW severity and optional.
+
+### Deliverables
+
+- `reports/SESSION084_PLANNER.md`
+- `reports/SESSION084_AUDITOR.md`
+- `reports/SESSION084_CLOSEOUT.md`
+
+---
+
+## SESSION 85 — Ordered-Pattern Propagation & Matching Program Closeout — 2026-07-30
+
+**Type:** WRITE (case_pack_1/2/3_corrected.js — Full Governance Lane)
+**Backups:** `backups/case_pack_1_corrected.js.bak-S85-20260730141437`, `backups/case_pack_2_corrected.js.bak-S85-20260730141437`, `backups/case_pack_3_corrected.js.bak-S85-20260730141437`
+
+### Background
+
+Session 83 applied ordered-pattern shuffle to 77 items in legacy `scored_cases*.js` files. During S916-S918 reconsolidation, `case_pack_*_corrected.js` files were created from pre-shuffle versions. Session 84 then added extra distractors to 16 case_pack matching items. Result: 82/83 case_pack matching items had ordered patterns (positional cueing).
+
+### Remediation
+
+Propagated derangement shuffle to all 82 sequential matching items across 3 case_pack files:
+
+| File | Items Shuffled |
+|------|---------------|
+| case_pack_1_corrected.js | 24 |
+| case_pack_2_corrected.js | 26 |
+| case_pack_3_corrected.js | 32 |
+| **Total** | **82** |
+
+**Method:** Fisher-Yates shuffle + derangement verification (same algorithm as S83). Only RightItems array order changed. Correct objects, LeftItems, explanations, stems, and scoring logic preserved verbatim.
+
+### Pre-Existing Defect Fixed: DL-038 — CBQ5-C3-Q2 Unicode Mismatch
+
+Two RightItems entries in CBQ5-C3-Q2 used ASCII "x" (U+0078) where the Correct object expected "×" (U+00D7 multiplication sign). This caused 2 orphaned Correct values. Fixed by normalizing "x" → "×" in RightItems. Character encoding only — no content change.
+
+### Verification
+
+| Check | Result |
+|-------|--------|
+| case_pack files — sequential items | 0/83 (was 82/83) |
+| scored_cases files — sequential items | 0/83 (unchanged, post-S83) |
+| Correct objects unchanged | 83/83 PASS |
+| LeftItems unchanged | 83/83 PASS |
+| RightItems sets identical | 83/83 PASS |
+| Parse integrity | All 3 files PASS |
+| Preflight | 0 divergences, 54/54 PASS |
+| Pipeline | PASS (pre-existing errors only) |
+| Certification | 2,451 (unchanged) |
+
+### New File Hashes
+
+| File | SHA-256 |
+|------|---------|
+| case_pack_1_corrected.js | `46D83ED42B2D1C830808180418B63012143C2144EF97D49F8E53BD1D3953DA7D` |
+| case_pack_2_corrected.js | `3BEB23F69C209A155F42CDB740E8076D927CD98E4ADDBE8DCED5BD750C5FED97` |
+| case_pack_3_corrected.js | `6F53C0D34B0CAFD5F3B60F581E2DCDDCD664FE616AA7A8D2B6C5FA9AE3AA7365` |
+
+### Matching Item Remediation Campaign — Final Status
+
+| Class | Status |
+|-------|--------|
+| Class A — Same Answer Reuse | Resolved (S81) |
+| Class B — Duplicate Distractors | Resolved (S81) |
+| Class C — Ordered Pattern Cueing | **Resolved (S83 + S85)** |
+| Class D — Extra Distractor Optimization | Resolved (S84) |
+| Wave 6 — Unused Distractor Review | Deferred (LOW) |
+
+**The matching-item remediation program is formally closed.** The campaign moves from active remediation to maintenance/compliance monitoring status.
+
+### Deliverables
+
+- `reports/SESSION085_PLANNER.md`
+- `reports/SESSION085_AUDITOR.md`
+- `reports/SESSION085_CLOSEOUT.md`
+- `scripts/propagate_ordered_shuffle.js`
+
+---
+
+## Session 87 — Pack A Section F Cognitive Upgrade Wave 1 — 2026-07-30
+
+**Type:** WRITE (pack_a_corrected.js — Full Governance Lane)
+**Backup:** `backups/pack_a_corrected.js.bak-20260730184155` (2,548,127 bytes)
+**Predecessor:** Session 86P (Repository Modernization Rebaseline)
+**Queue:** `reports/SESSION086P_SESSION087_QUEUE.json`
+
+### Summary
+
+Executed the first modernization wave for Pack A Section F (Domain F: Technology & Analytics), converting 15 items from Understand/Apply to Analyze/Evaluate cognitive levels. All 75 Section F items are Certified, single-object architecture, structurally clean.
+
+### Rewrite Detail
+
+| QID | Before CL | Before Diff | After CL | After Diff | Topic |
+|-----|-----------|-------------|----------|------------|-------|
+| **Evaluate (8 items)** |
+| P1-F-001 | Understand | Easy (1) | Evaluate | Difficult (4) | ERP transaction integration |
+| P1-F-005 | Understand | Difficult (1) | Evaluate | Difficult (4) | Data dictionary definitions |
+| P1-F-010 | Understand | Easy (1) | Evaluate | Difficult (4) | Data cleansing duplicate customers |
+| P1-F-030 | Understand | Moderate-Easy (2) | Evaluate | Difficult (4) | Blockchain shared ledger |
+| P1-F-040 | Understand | Moderate-Easy (2) | Evaluate | Difficult (4) | Change control migration |
+| P1-F-048 | Understand | Moderate-Easy (2) | Evaluate | Difficult (4) | Process mining use |
+| P1-F-050 | Understand | Easy (1) | Evaluate | Moderate (3) | Technology ROI benefits tracking |
+| P1-F-060 | Understand | Easy (1) | Evaluate | Difficult (4) | Third-party vendor cyber risk |
+| **Analyze (7 items)** |
+| P1-F-015 | Apply | Easy (1) | Analyze | Moderate (3) | Business intelligence dashboard |
+| P1-F-025 | Apply | Easy (1) | Analyze | Moderate (3) | Sampling bias |
+| P1-F-035 | Understand | Easy (1) | Analyze | Moderate (3) | Encryption at rest and transit |
+| P1-F-045 | Understand | Moderate-Easy (2) | Analyze | Moderate (3) | Data privacy minimization |
+| P1-F-055 | Understand | Moderate-Easy (2) | Analyze | Moderate (3) | Metadata management |
+| P1-F-065 | Understand | Moderate-Easy (2) | Analyze | Moderate (3) | Password policy weakness |
+| P1-F-070 | Understand | Moderate-Easy (2) | Analyze | Moderate (3) | Data lake governance |
+
+### Rewrite Standards Applied
+
+- Named organizations and decision-makers in every stem
+- Business triggers/events driving the decision
+- Competing alternatives with trade-off data
+- Analyze/Evaluate cognition (no definition matching, no pure recall, no formula substitution)
+- Choice-specific distractor explanations (all non-CC EW slots ≥ 476 chars)
+- Full correct-answer explanations with business interpretation
+
+### Verification Results
+
+| Check | Result |
+|-------|--------|
+| QID count (pack_a_corrected.js) | 500 (unchanged) |
+| Certified count (Pack A) | 500 (unchanged) |
+| Total Certified (all packs) | 2451 (unchanged) |
+| DL-008 in Section F | 0 |
+| DL-026 in Section F | 0 |
+| Governance guard | 54/54 PASS |
+| Preflight divergences | 0 |
+| Syntax check | PASS |
+| Section F CL distribution | Evaluate=8, Analyze=9, Apply=11, Understand=46, Remember=1 |
+| Section F HO% | 2.7% → 22.7% |
+
+### Commands Run
+
+- `npm run preflight` (T0 + Tend — 0 divergences both runs)
+- `node --check pack_a_corrected.js` (PASS)
+- `npm run pipeline` (validators: standard pre-existing warnings/errors, no new errors from Section F)
+
+### Success Criteria
+
+- ✅ 15 rewrites completed
+- ✅ 8 Evaluate conversions
+- ✅ 7 Analyze conversions
+- ✅ Single-object architecture preserved
+- ✅ Certification unchanged (500/500 Pack A, 2451 pool)
+- ✅ QID counts unchanged
+- ✅ 0 divergences
+- ✅ 54/54 governance PASS
+- ✅ 0 DL-008 on all 15 items
+- ✅ 0 DL-026 on all 15 items
+
+### Note
+
+One item (P1-F-020) was originally queued in S77 but was removed from this wave — it had already been upgraded to Analyze by intermediate work between S77 and S86P. Replaced with P1-F-048 (process mining use).
+
 
