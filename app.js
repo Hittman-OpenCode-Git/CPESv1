@@ -6289,6 +6289,9 @@ var GuidedTour = {
             if (step.tab === 'studyView' && typeof renderStudyView === 'function') renderStudyView();
             if (step.tab === 'dashboardView' && typeof PerformanceDashboard !== 'undefined') PerformanceDashboard.render();
             if (step.tab === 'coachView' && typeof May !== 'undefined' && May._renderCompactCoach) May._renderCompactCoach();
+            if (step.tab === 'settingsView' && typeof renderSettingsView === 'function') renderSettingsView();
+            if (step.tab === 'historyView' && typeof ExamSessionManager !== 'undefined') ExamSessionManager.renderHistory();
+            if (step.tab === 'operationsView' && typeof renderOperationsView === 'function') renderOperationsView();
         }
         // S130 — Wait for tab render + scroll-into-view before positioning
         requestAnimationFrame(function () {
