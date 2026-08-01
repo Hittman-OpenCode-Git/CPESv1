@@ -939,9 +939,9 @@ const May = {
 
     // ── Return whether the mini-panel should be hidden ────
     isMiniPanelSuppressed() {
-        // Suppress mini-panel during real-exam-conditions simulation
-        if (typeof state !== 'undefined' && state.session) {
-            return state.session.mode === 'full'; // CMA Exam mode
+        // S130 — Mini-panel replaced by floating May panel; suppress during all active sessions
+        if (typeof state !== 'undefined' && state.session && !state.session.completed) {
+            return true;
         }
         return false;
     },
@@ -6785,30 +6785,8 @@ const May = {
 
     // ── Persistent May Launcher (floating bottom-right) ─────
     _injectMayLauncher() {
-        let existing = document.getElementById('mayLauncher');
-        if (existing) return;
-
-        let profile = MayLearnerState.getUserProfile();
-        let hasProfile = !!profile.name;
-        let label = hasProfile ? 'May' : 'May';
-
-        let launcherHtml = `<div class="may-launcher" id="mayLauncher">
-            <span class="may-launcher-tooltip" id="mayLauncherTooltip">May is here if you need help reviewing later.</span>
-            <button class="may-launcher-btn" id="mayLauncherBtn" onclick="May.openMayFromLauncher()" title="Open May — your study companion">
-                <span class="may-launcher-icon">M</span>
-                <span class="may-launcher-label">${label}</span>
-            </button>
-        </div>`;
-
-        let wrapper = document.createElement('div');
-        wrapper.innerHTML = launcherHtml;
-        document.body.appendChild(wrapper.firstElementChild);
-
-        this._updateMayLauncherState();
-
-        if (typeof MayTelemetry !== 'undefined') {
-            MayTelemetry.trackEngagement({ action: 'tooltipViewed', timestamp: new Date().toISOString() });
-        }
+        // S130 — Launcher replaced by floating May panel; no-op
+        return;
     },
 
     _updateMayLauncherState() {

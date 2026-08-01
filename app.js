@@ -2457,14 +2457,6 @@ const ExamSessionManager = {
             MayTelemetry.trackAdoption({ recommendationType: 'Session', cardId: 'session-complete', topic: '', presented: false, panelOpened: false, clicked: false, sessionStarted: false, completed: true, attributionCardId: (_attribC && _attribC.cardId) || null, attributionCardType: (_attribC && _attribC.recommendationType) || null, timestamp: new Date().toISOString() });
             window._mayAttributionCard = null;
         }
-        if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_PRODUCTION_MAY_INTEGRATION')) {
-            setTimeout(() => {
-                let tooltip = document.getElementById('mayLauncherTooltip');
-                if (tooltip) tooltip.textContent = 'Review your session with May \u2014 see strengths, weak areas, and next steps.';
-                let label = document.querySelector('#mayLauncherBtn .may-launcher-label');
-                if (label) label.textContent = 'May \u2014 Review';
-            }, 100);
-        }
     },
 
     remaining() {
@@ -2482,23 +2474,7 @@ const ExamSessionManager = {
                 // Re-inject May companion card on landing page
                 if (typeof May !== 'undefined') {
                     sessionStorage.removeItem('mayCompanionDismissed');
-                    setTimeout(() => { May._injectMayCompanionCard(); May._updateMayLauncherState(); }, 50);
-                }
-                if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_PRODUCTION_MAY_INTEGRATION') && typeof May !== 'undefined') {
-                    setTimeout(() => {
-                        let tooltip = document.getElementById('mayLauncherTooltip');
-                        if (tooltip) {
-                            let data = typeof MayLearnerState !== 'undefined' ? MayLearnerState.load() : null;
-                            let sessionCount = data && data.sessions ? data.sessions.length : 0;
-                            if (sessionCount >= 3) {
-                                tooltip.textContent = 'Review weak areas, analyze missed questions, or continue your study plan with May.';
-                            } else if (sessionCount >= 1) {
-                                tooltip.textContent = 'Analyze your missed questions or review your study plan with May.';
-                            } else {
-                                tooltip.textContent = 'Meet May \u2014 your CMA Part 1 study companion.';
-                            }
-                        }
-                    }, 100);
+                    setTimeout(() => { May._injectMayCompanionCard(); }, 50);
                 }
                 return;
             }
@@ -2601,7 +2577,6 @@ const ExamSessionManager = {
             CalculatorEngine.render();
             if (typeof May !== 'undefined') {
                 May.resetLiveHints();
-                May._updateMayLauncherState();
             }
             if (s.paused) {
                 let rb = $('resumeBtn');
@@ -5302,7 +5277,6 @@ window._mac = function(actionType, handlerName) {
     switch (handlerName) {
         case 'startFoundations':
             showView('setupView');
-            if (typeof May !== 'undefined') { May._updateMayLauncherState(); }
             break;
         case 'focusWeakest':
             showView('coachView');
@@ -5405,15 +5379,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     $('sessionForm').onsubmit = e => {
-        // Hide May companion card when session starts
+        // Hide May companion card and floating panel when session starts
         if (typeof May !== 'undefined') {
             let card = document.getElementById('mayCompanionCard');
             if (card) card.remove();
         }
-        if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_PRODUCTION_MAY_INTEGRATION')) {
-            let tooltip = document.getElementById('mayLauncherTooltip');
-            if (tooltip) tooltip.textContent = 'May is tracking your session. Review your results after submitting.';
-        }
+        var floatPanel = document.getElementById('mayFloatingPanel');
+        if (floatPanel) floatPanel.remove();
         if (typeof MayTelemetry !== 'undefined') {
             var _attrib = window._mayAttributionCard;
             MayTelemetry.trackAdoption({ recommendationType: 'Session', cardId: 'session-start', topic: '', presented: false, panelOpened: false, clicked: false, sessionStarted: true, completed: false, attributionCardId: (_attrib && _attrib.cardId) || null, attributionCardType: (_attrib && _attrib.recommendationType) || null, timestamp: new Date().toISOString() });
@@ -6251,6 +6223,9 @@ var GuidedTour = {
     stop: function (completed) {
         this.active = false;
         this._destroyOverlay();
+        // S130 — Return to home after tour to avoid leaving hidden/admin tabs exposed
+        if (typeof showView === 'function') showView('homeView');
+        if (typeof renderHomeView === 'function') renderHomeView();
         if (completed && this.tourType === 'beginner') {
             var profile = this._ensureState();
             profile.onboarding.tourCompleted = true;
@@ -6663,30 +6638,119 @@ function renderStudyView() {
 
 // ── S130: May Floating Bubble & Compact Coach ──
 if (typeof May !== 'undefined') {
-    May.Floating = {
-        _init: function () {
-            var btn = document.getElementById('mayFloatBtn');
-            if (btn) { btn.style.display = 'block'; }
-        },
-        _toggle: function () {
-            var coachView = document.getElementById('coachView');
-            if (coachView && coachView.classList.contains('active')) {
-                showView('homeView');
-                renderHomeView();
-            } else {
-                showView('coachView');
-                May._renderCompactCoach();
-            }
-        },
-        _hide: function () {
-            var btn = document.getElementById('mayFloatBtn');
-            if (btn) { btn.style.display = 'none'; }
-        },
-        _show: function () {
-            var btn = document.getElementById('mayFloatBtn');
-            if (btn) { btn.style.display = 'block'; }
+May.Floating = {
+    _pos: { top: 72, right: 20 },
+    _init: function () {
+        var btn = document.getElementById('mayFloatBtn');
+        if (!btn) return;
+        btn.classList.add('may-float-visible');
+        var self = this;
+        var dragging = false, moved = false, startX = 0, startY = 0, baseX = 0, baseY = 0;
+        btn.onpointerdown = function (e) {
+            dragging = true; moved = false;
+            startX = e.clientX; startY = e.clientY;
+            var r = btn.getBoundingClientRect();
+            baseX = r.left; baseY = r.top;
+            btn.setPointerCapture(e.pointerId);
+        };
+        btn.onpointermove = function (e) {
+            if (!dragging) return;
+            var dx = e.clientX - startX, dy = e.clientY - startY;
+            if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
+            if (!moved) return;
+            var x = Math.max(8, Math.min(window.innerWidth - 52, baseX + dx));
+            var y = Math.max(8, Math.min(window.innerHeight - 52, baseY + dy));
+            btn.style.left = x + 'px'; btn.style.top = y + 'px'; btn.style.right = 'auto';
+        };
+        btn.onpointerup = function () {
+            if (!dragging) return;
+            dragging = false;
+            var r = btn.getBoundingClientRect();
+            self._pos = { top: r.top, right: window.innerWidth - r.right };
+        };
+        btn.addEventListener('click', function (e) {
+            if (moved) { moved = false; return; }
+            self._toggle();
+        });
+    },
+    _toggle: function () {
+        var panel = document.getElementById('mayFloatingPanel');
+        if (panel) { this._collapse(); return; }
+        this._expand();
+    },
+    _expand: function () {
+        var btn = document.getElementById('mayFloatBtn');
+        if (btn) btn.classList.remove('may-float-visible');
+        var panel = document.createElement('div');
+        panel.id = 'mayFloatingPanel';
+        panel.className = 'may-floating-panel';
+        var r = btn ? btn.getBoundingClientRect() : { left: window.innerWidth - 100, top: 72 };
+        var panelTop = r.top, panelLeft = Math.max(8, r.left - 160);
+        panel.style.top = panelTop + 'px'; panel.style.left = panelLeft + 'px'; panel.style.right = 'auto';
+        panel.innerHTML =
+            '<div class="may-floating-handle" id="mayFloatingHandle"><span>May AI Coach</span><button class="may-floating-min" id="mayFloatingMin" title="Collapse to dot">&minus;</button><button class="may-floating-close" id="mayFloatingClose" title="Close May">&times;</button></div>' +
+            '<div class="may-floating-body">' +
+            '<div class="may-floating-avatar">M</div>' +
+            '<h3>May AI Coach</h3>' +
+            '<p>Ready to help you analyze performance, identify weaknesses, and build your study plan.</p>' +
+            '<button class="may-floating-open" id="mayFloatingOpenCoach">Open Full Coach</button>' +
+            '</div>';
+        document.body.appendChild(panel);
+        var self = this;
+        // Drag handle
+        var handle = document.getElementById('mayFloatingHandle');
+        var dragging = false, sx = 0, sy = 0, bx = 0, by = 0;
+        handle.onpointerdown = function (e) {
+            dragging = true; sx = e.clientX; sy = e.clientY;
+            var rect = panel.getBoundingClientRect();
+            bx = rect.left; by = rect.top;
+            handle.setPointerCapture(e.pointerId);
+        };
+        handle.onpointermove = function (e) {
+            if (!dragging) return;
+            var x = Math.max(8, Math.min(window.innerWidth - panel.offsetWidth - 8, bx + e.clientX - sx));
+            var y = Math.max(8, Math.min(window.innerHeight - panel.offsetHeight - 8, by + e.clientY - sy));
+            panel.style.left = x + 'px'; panel.style.top = y + 'px'; panel.style.right = 'auto';
+        };
+        handle.onpointerup = function () { dragging = false; };
+        document.getElementById('mayFloatingClose').onclick = function () { self._hide(); };
+        document.getElementById('mayFloatingMin').onclick = function () { self._collapse(); };
+        document.getElementById('mayFloatingOpenCoach').onclick = function () {
+            self._hide();
+            if (typeof showView !== 'undefined') showView('coachView');
+            if (typeof May !== 'undefined' && May.renderView) May.renderView();
+        };
+    },
+    _collapse: function () {
+        var panel = document.getElementById('mayFloatingPanel');
+        if (panel) {
+            var r = panel.getBoundingClientRect();
+            this._pos = { top: r.top, right: window.innerWidth - r.right };
+            panel.remove();
         }
-    };
+        var btn = document.getElementById('mayFloatBtn');
+        if (btn) {
+            btn.style.top = this._pos.top + 'px';
+            btn.style.right = this._pos.right + 'px';
+            btn.style.left = 'auto';
+            btn.classList.add('may-float-visible');
+        }
+    },
+    _hide: function () {
+        var panel = document.getElementById('mayFloatingPanel');
+        if (panel) panel.remove();
+        var btn = document.getElementById('mayFloatBtn');
+        if (btn) btn.classList.remove('may-float-visible');
+    },
+    _showDot: function () {
+        var btn = document.getElementById('mayFloatBtn');
+        if (btn) { btn.classList.add('may-float-visible'); }
+    },
+    _hideDot: function () {
+        var btn = document.getElementById('mayFloatBtn');
+        if (btn) { btn.classList.remove('may-float-visible'); }
+    }
+};
 
     May._renderCompactCoach = function () {
         var el = document.getElementById('coachView');

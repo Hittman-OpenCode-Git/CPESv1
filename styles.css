@@ -409,6 +409,12 @@ a { color: var(--accent); }
   text-transform: uppercase;
   letter-spacing: .04em;
 }
+label.checkbox-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
 select, .case-input {
   padding: 9px 12px;
   border: 1px solid var(--border);
@@ -783,7 +789,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 /* Floating desktop-style financial calculator */
 .floating-calculator {
   position: fixed;
-  top: 88px;
+  top: 120px;
   right: 22px;
   z-index: 300;
   width: clamp(200px, 60vw, 244px);
@@ -5988,13 +5994,14 @@ button:disabled { opacity: .45; cursor: not-allowed; }
     cursor: pointer;
     z-index: 1050;
     box-shadow: 0 2px 12px rgba(124,58,237,0.35);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     transition: transform 0.2s, box-shadow 0.2s;
     font-size: 18px;
     font-weight: 700;
 }
+.may-float-btn.may-float-visible { display: flex; }
 
 .may-float-btn:hover {
     transform: scale(1.1);
@@ -6016,11 +6023,83 @@ button:disabled { opacity: .45; cursor: not-allowed; }
     border: 2px solid #fff;
 }
 
+/* ===== Floating May Coach Panel ===== */
+.may-floating-panel {
+    position: fixed;
+    top: 120px;
+    right: 80px;
+    width: 340px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    z-index: 1100;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+}
+.may-floating-handle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    background: linear-gradient(135deg, var(--accent), #7c3aed);
+    color: #fff;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    cursor: move;
+    user-select: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+.may-floating-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+    opacity: 0.8;
+}
+.may-floating-close:hover { opacity: 1; }
+.may-floating-min {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 6px;
+    line-height: 1;
+    opacity: 0.8;
+    margin-right: 2px;
+}
+.may-floating-min:hover { opacity: 1; }
+.may-floating-body { padding: 16px; text-align: center; }
+.may-floating-avatar {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #7c3aed);
+    color: #fff; font-size: 1.6rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 10px;
+}
+.may-floating-body h3 { margin: 0 0 6px; color: var(--text); font-size: 1rem; }
+.may-floating-body p { color: var(--text-secondary); font-size: 0.82rem; margin: 0 0 14px; line-height: 1.4; }
+.may-floating-open {
+    background: linear-gradient(135deg, var(--accent), #7c3aed);
+    color: #fff; border: none; border-radius: 6px;
+    padding: 8px 22px; cursor: pointer; font-weight: 600;
+    font-size: 0.9rem;
+}
+.may-floating-open:hover { opacity: 0.9; }
+
 /* ============================================================
    S130 — Exam Integrity Mode (hide non-exam elements during Full Exam)
    ============================================================ */
 
-.exam-integrity-mode .may-float-btn { display: none !important; }
+.exam-integrity-mode .may-float-btn.may-float-visible { display: none !important; }
+.exam-integrity-mode .may-floating-panel { display: none !important; }
 .exam-integrity-mode .tabs { display: none !important; }
 .exam-integrity-mode .hero { display: none !important; }
 .exam-integrity-mode .setup-panel { display: none !important; }
@@ -6031,7 +6110,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 
 .session-active .setup-panel { display: none; }
 .session-active .layout { grid-template-columns: 1fr; }
-.session-active .may-float-btn { display: none; }
+.session-active .may-float-btn.may-float-visible { display: none !important; }
 
 /* ============================================================
    S130 — Compact May Coach View
