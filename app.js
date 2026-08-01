@@ -6677,7 +6677,7 @@ function renderStudyView() {
 // ── S130: May Floating Bubble & Compact Coach ──
 if (typeof May !== 'undefined') {
 May.Floating = {
-    _pos: { top: 396, right: 390 },
+    _pos: { top: 346, right: 170 },
     _init: function () {
         var btn = document.getElementById('mayFloatBtn');
         if (!btn) return;
@@ -6696,8 +6696,8 @@ May.Floating = {
             var dx = e.clientX - startX, dy = e.clientY - startY;
             if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
             if (!moved) return;
-            var x = Math.max(8, Math.min(window.innerWidth - 74, baseX + dx));
-            var y = Math.max(8, Math.min(window.innerHeight - 74, baseY + dy));
+            var x = Math.max(8, Math.min(window.innerWidth - btn.offsetWidth - 8, baseX + dx));
+            var y = Math.max(8, Math.min(window.innerHeight - btn.offsetHeight - 8, baseY + dy));
             btn.style.left = x + 'px'; btn.style.top = y + 'px'; btn.style.right = 'auto';
         };
         btn.onpointerup = function () {
@@ -6719,7 +6719,7 @@ May.Floating = {
     _expand: function () {
         var btn = document.getElementById('mayFloatBtn');
         // Read position BEFORE hiding the dot (hidden elements return zero rect)
-        var r = btn ? btn.getBoundingClientRect() : { left: window.innerWidth - 456, top: 396 };
+        var r = btn ? btn.getBoundingClientRect() : { left: window.innerWidth - 266, top: 346 };
         if (btn) btn.classList.remove('may-float-visible');
         var panel = document.createElement('div');
         panel.id = 'mayFloatingPanel';

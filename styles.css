@@ -409,7 +409,7 @@ a { color: var(--accent); }
   text-transform: uppercase;
   letter-spacing: .04em;
 }
-label.checkbox-label {
+#sessionForm > label.checkbox-label {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
@@ -584,11 +584,9 @@ fieldset {
   padding: 8px 12px;
 }
 fieldset > label {
-  font-size: 12px;
+  font-size: 13px;
   padding: 2px 0;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 fieldset > legend {
   grid-column: 1 / -1;
@@ -790,7 +788,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .floating-calculator {
   position: fixed;
   top: 630px;
-  right: 209px;
+  right: 30px;
   z-index: 300;
   width: clamp(200px, 60vw, 244px);
   margin: 0;
@@ -5984,11 +5982,11 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 
 .may-float-btn {
     position: fixed;
-    top: 396px;
-    right: 390px;
-    width: 66px;
-    height: 66px;
-    border-radius: 50%;
+    top: 346px;
+    right: 170px;
+    min-width: 66px;
+    height: auto;
+    border-radius: 33px;
     background: linear-gradient(135deg, var(--accent), #7c3aed);
     color: #fff;
     border: none;
@@ -5996,10 +5994,11 @@ button:disabled { opacity: .45; cursor: not-allowed; }
     z-index: 1050;
     box-shadow: 0 2px 12px rgba(124,58,237,0.35);
     display: none;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 8px 14px;
     transition: transform 0.2s, box-shadow 0.2s;
-    font-size: 13px;
     font-weight: 700;
 }
 .may-float-btn.may-float-visible { display: flex; }
@@ -6009,9 +6008,8 @@ button:disabled { opacity: .45; cursor: not-allowed; }
     box-shadow: 0 4px 20px rgba(124,58,237,0.5);
 }
 
-.may-float-btn::before {
-    content: 'May';
-}
+.may-float-label { font-size: 14px; font-weight: 700; line-height: 1; }
+.may-float-sub { font-size: 9px; font-weight: 400; opacity: 0.85; line-height: 1; margin-top: 1px; }
 
 .may-float-dot {
     position: absolute;
