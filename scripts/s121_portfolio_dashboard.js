@@ -55,11 +55,11 @@ const ANSWER_TOLERANCE = 0.03; // 22–28%
 // ── Pack Definitions ──────────────────────────────────────────────
 
 const P1_PACKS = [
-  { name: "Pack A",  file: "pack_a_corrected.js",  variable: "MCQ_BANK_A" },
-  { name: "Pack B",  file: "pack_b_corrected.js",  variable: "MCQ_BANK_B" },
-  { name: "Pack C",  file: "pack_c_corrected.js",  variable: "MCQ_BANK_C" },
-  { name: "Pack D",  file: "pack_d_corrected.js",  variable: "MCQ_BANK_D" },
-  { name: "Pack E",  file: "pack_e_corrected.js",  variable: "MCQ_BANK_E" },
+  { name: "Pack A",  file: "content/packs/pack_a_corrected.js",  variable: "MCQ_BANK_A" },
+  { name: "Pack B",  file: "content/packs/pack_b_corrected.js",  variable: "MCQ_BANK_B" },
+  { name: "Pack C",  file: "content/packs/pack_c_corrected.js",  variable: "MCQ_BANK_C" },
+  { name: "Pack D",  file: "content/packs/pack_d_corrected.js",  variable: "MCQ_BANK_D" },
+  { name: "Pack E",  file: "content/packs/pack_e_corrected.js",  variable: "MCQ_BANK_E" },
 ];
 
 const P2_PACKS = [

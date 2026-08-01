@@ -32,7 +32,7 @@ global.ExamSessionManager = {
 };
 
 // Load pack data first (for realistic QID data)
-lg(path.join(b, "pack_a_corrected.js"));
+lg(path.join(b, "content/packs/pack_a_corrected.js"));
 lg(path.join(b, "may-learner-state.js"));
 
 let qs = global.MCB_BANK_A || global.MCQ_BANK_A;

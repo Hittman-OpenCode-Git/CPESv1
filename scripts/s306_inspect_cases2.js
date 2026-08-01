@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
 
-for (const file of ['scored_cases2.js', 'scored_cases3.js', 'scored_cases4.js', 'scored_cases5.js']) {
+for (const file of ['content/cases/legacy/scored_cases2.js', 'content/cases/legacy/scored_cases3.js', 'content/cases/legacy/scored_cases4.js', 'content/cases/legacy/scored_cases5.js']) {
   const code = fs.readFileSync(path.join(ROOT, file), 'utf8');
   const varMatches = code.match(/(?:var|const|let)\s+(\w+)\s*=/g) || [];
   const vars = [...new Set(varMatches.map(m => m.replace(/(?:var|const|let)\s+/, '').replace(/\s*=$/, '')))];

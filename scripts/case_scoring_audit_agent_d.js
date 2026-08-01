@@ -36,7 +36,7 @@ console.log("=== AGENT D: AGGREGATE CASE SCORING AUDIT (Session 61) ===\n");
 // --- Load all 5 scored_cases*.js files via Function constructor ---
 let allGlobals = {};
 
-for (const f of ['scored_cases.js', 'scored_cases2.js', 'scored_cases3.js', 'scored_cases4.js', 'scored_cases5.js']) {
+for (const f of ['content/cases/legacy/scored_cases.js', 'content/cases/legacy/scored_cases2.js', 'content/cases/legacy/scored_cases3.js', 'content/cases/legacy/scored_cases4.js', 'content/cases/legacy/scored_cases5.js']) {
     const src = fs.readFileSync(path.join(BASE, f), 'utf-8');
     try {
         const extractFn = new Function(`

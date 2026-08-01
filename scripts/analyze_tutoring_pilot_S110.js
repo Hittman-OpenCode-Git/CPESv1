@@ -42,7 +42,7 @@ global.window = {};
 global.setTimeout = (fn) => { fn(); return 0; };
 global.clearTimeout = () => {};
 
-lg(path.join(b, "pack_a_corrected.js"));
+lg(path.join(b, "content/packs/pack_a_corrected.js"));
 lg(path.join(b, "may-learner-state.js"));
 lg(path.join(b, "may-core.js"));
 

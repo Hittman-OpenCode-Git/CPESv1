@@ -10,10 +10,10 @@ const ROOT = path.resolve(__dirname, '..');
 
 // Mapping: pack file → case variable → scored_cases destination → new variable name
 const MIGRATIONS = [
-  { pack: 'pack_a_corrected.js', caseVar: 'CASE_BANK_A', dest: 'scored_cases.js', newVar: 'MIGRATED_CASE_BASE_A' },
-  { pack: 'pack_b_corrected.js', caseVar: 'CASE_BANK_B', dest: 'scored_cases2.js', newVar: 'MIGRATED_CASE_BASE_B' },
-  { pack: 'pack_c_corrected.js', caseVar: 'CASE_BANK_C', dest: 'scored_cases3.js', newVar: 'MIGRATED_CASE_BASE_C' },
-  { pack: 'pack_d_corrected.js', caseVar: 'CASE_BANK_D', dest: 'scored_cases4.js', newVar: 'MIGRATED_CASE_BASE_D' },
+  { pack: 'pack_a_corrected.js', caseVar: 'CASE_BANK_A', dest: 'content/cases/legacy/scored_cases.js', newVar: 'MIGRATED_CASE_BASE_A' },
+  { pack: 'pack_b_corrected.js', caseVar: 'CASE_BANK_B', dest: 'content/cases/legacy/scored_cases2.js', newVar: 'MIGRATED_CASE_BASE_B' },
+  { pack: 'pack_c_corrected.js', caseVar: 'CASE_BANK_C', dest: 'content/cases/legacy/scored_cases3.js', newVar: 'MIGRATED_CASE_BASE_C' },
+  { pack: 'pack_d_corrected.js', caseVar: 'CASE_BANK_D', dest: 'content/cases/legacy/scored_cases4.js', newVar: 'MIGRATED_CASE_BASE_D' },
 ];
 
 function timestamp() {
@@ -293,7 +293,7 @@ console.log('\nPhase 4: Verification...');
 console.log('  Running syntax checks...');
 
 for (const f of ['pack_a_corrected.js', 'pack_b_corrected.js', 'pack_c_corrected.js', 'pack_d_corrected.js', 'pack_e_corrected.js',
-  'scored_cases.js', 'scored_cases2.js', 'scored_cases3.js', 'scored_cases4.js', 'scored_cases5.js', 'app.js']) {
+  'content/cases/legacy/scored_cases.js', 'content/cases/legacy/scored_cases2.js', 'content/cases/legacy/scored_cases3.js', 'content/cases/legacy/scored_cases4.js', 'content/cases/legacy/scored_cases5.js', 'app.js']) {
   try {
     const content = fs.readFileSync(path.join(ROOT, f), 'utf8');
     new Function(content); // Will throw if syntax error

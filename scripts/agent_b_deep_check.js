@@ -20,11 +20,11 @@ function loadFile(name) {
   return new Function(wrapped)();
 }
 
-const files = ["scored_cases.js","scored_cases2.js","scored_cases3.js","scored_cases4.js","scored_cases5.js"];
+const files = ["content/cases/legacy/scored_cases.js","content/cases/legacy/scored_cases2.js","content/cases/legacy/scored_cases3.js","content/cases/legacy/scored_cases4.js","content/cases/legacy/scored_cases5.js"];
 
 // Check migrated CASE-A* QuestionCount vs Items.length
 console.log("=== MIGRATED_CASE_BASE_A: QCount vs Items.length ===");
-const d1 = loadFile("scored_cases.js");
+const d1 = loadFile("content/cases/legacy/scored_cases.js");
 (d1.MIGRATED_CASE_BASE_A || []).forEach(c => {
   const qc = c.QuestionCount || "MISSING";
   const il = (c.Items || []).length;

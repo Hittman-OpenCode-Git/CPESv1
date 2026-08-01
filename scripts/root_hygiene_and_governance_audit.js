@@ -16,7 +16,6 @@ const PERMITTED_ROOT_PREFIXES = [
     'pack_c_corrected',
     'pack_d_corrected',
     'pack_e_corrected',
-    'scored_cases',
     'styles.css',
     'index_updated',
     'app.js',

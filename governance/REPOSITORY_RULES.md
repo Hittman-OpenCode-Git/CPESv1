@@ -19,7 +19,7 @@ This document codifies the rules that govern the physical organization, change m
 
 Permitted root items:
 - Runtime: `app.js`, `index_updated.html`, `styles.css`
-- Content: `pack_a_corrected.js` through `pack_e_corrected.js`, `scored_cases.js` through `scored_cases5.js`
+- Content: `pack_a_corrected.js` through `pack_e_corrected.js`, `content/cases/legacy/scored_cases.js` through `content/cases/legacy/scored_cases5.js`
 - Control: `AGENTS.md`, `opencode.json`, `package.json`, `package-lock.json`, `VERSION`
 
 Prohibited root items:

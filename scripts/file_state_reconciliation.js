@@ -207,21 +207,21 @@ console.log(`Timestamp: ${new Date().toISOString()}`);
 console.log("");
 
 // Agent 1: DL-008 in Pack C + D
-const dl008_c = checkDL008("Pack C", "pack_c_corrected.js");
-const dl008_d = checkDL008("Pack D", "pack_d_corrected.js");
+const dl008_c = checkDL008("Pack C", "content/packs/pack_c_corrected.js");
+const dl008_d = checkDL008("Pack D", "content/packs/pack_d_corrected.js");
 const totalDL008 = dl008_c.length + dl008_d.length;
 console.log(`\n=== DL-008 Summary: ${totalDL008} violations across Pack C+D ===`);
 
 // Agent 2: DL-013 in Pack C Section F + Pack D Section F
-const dl013_f_c = checkDL013SectionF("Pack C", "pack_c_corrected.js");
-const dl013_f_d = checkDL013SectionF("Pack D", "pack_d_corrected.js");
+const dl013_f_c = checkDL013SectionF("Pack C", "content/packs/pack_c_corrected.js");
+const dl013_f_d = checkDL013SectionF("Pack D", "content/packs/pack_d_corrected.js");
 console.log(`\n=== DL-013 Section F Summary ===`);
 console.log(`  Pack C Section F: ${dl013_f_c.sectionFHits} hits`);
 console.log(`  Pack D Section F: ${dl013_f_d.sectionFHits} hits`);
 
 // Also verify: QuestionID counts
 console.log(`\n=== QuestionID Integrity ===`);
-["pack_a_corrected.js","pack_b_corrected.js","pack_c_corrected.js","pack_d_corrected.js","pack_e_corrected.js"].forEach(f => {
+["content/packs/pack_a_corrected.js","content/packs/pack_b_corrected.js","content/packs/pack_c_corrected.js","content/packs/pack_d_corrected.js","content/packs/pack_e_corrected.js"].forEach(f => {
     const c = fs.readFileSync(f, "utf8");
     const count = (c.match(/"QuestionID":/g) || []).length;
     console.log(`  ${f}: ${count} QIDs (expected 500)`);
@@ -230,7 +230,7 @@ console.log(`\n=== QuestionID Integrity ===`);
 
 // Also: check for "A candidate may select" (other DL-013 pattern)
 console.log(`\n=== DL-013 Pattern: "A candidate may select this option" ===`);
-["pack_c_corrected.js","pack_d_corrected.js"].forEach(f => {
+["content/packs/pack_c_corrected.js","content/packs/pack_d_corrected.js"].forEach(f => {
     const c = fs.readFileSync(f, "utf8");
     const hits = (c.match(/A candidate may select this option by misapplying/g) || []).length;
     const hitsCF = c.match(/represents a plausible misconception[\s\S]*?A candidate may select this option by misapplying/g) || [];

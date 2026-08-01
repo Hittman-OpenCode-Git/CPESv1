@@ -5,11 +5,11 @@ const fs = require("fs");
 const path = require("path");
 
 const PACKS = [
-  { file: "pack_a_corrected.js", varName: "MCQ_BANK_A", label: "Pack A" },
-  { file: "pack_b_corrected.js", varName: "MCQ_BANK_B", label: "Pack B" },
-  { file: "pack_c_corrected.js", varName: "MCQ_BANK_C", label: "Pack C" },
-  { file: "pack_d_corrected.js", varName: "MCQ_BANK_D", label: "Pack D" },
-  { file: "pack_e_corrected.js", varName: "MCQ_BANK_E", label: "Pack E" },
+  { file: "content/packs/pack_a_corrected.js", varName: "MCQ_BANK_A", label: "Pack A" },
+  { file: "content/packs/pack_b_corrected.js", varName: "MCQ_BANK_B", label: "Pack B" },
+  { file: "content/packs/pack_c_corrected.js", varName: "MCQ_BANK_C", label: "Pack C" },
+  { file: "content/packs/pack_d_corrected.js", varName: "MCQ_BANK_D", label: "Pack D" },
+  { file: "content/packs/pack_e_corrected.js", varName: "MCQ_BANK_E", label: "Pack E" },
 ];
 
 const BASE_DIR = "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026";

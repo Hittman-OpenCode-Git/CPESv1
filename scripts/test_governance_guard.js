@@ -576,7 +576,7 @@ test("Block: DEFECT_MANIFEST (derived defect manifest)", () => {
 });
 
 test("Not flagged: pack source files (authoritative)", () => {
-  assert(!DERIVED_REGISTRY_RE.test("pack_a_corrected.js"));
+  assert(!DERIVED_REGISTRY_RE.test("content/packs/pack_a_corrected.js"));
   assert(!DERIVED_REGISTRY_RE.test("scored_cases.js"));
 });
 
@@ -923,13 +923,14 @@ test("Rule 4: RECOMPUTED_RE detects all verification phrases", () => {
 
 test("Rule 4: SOURCE_FILE_RE detects all pack and case files", () => {
   const files = [
-    "pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js",
-    "pack_d_corrected.js", "pack_e_corrected.js",
+    "content/packs/pack_a_corrected.js", "content/packs/pack_b_corrected.js", "content/packs/pack_c_corrected.js",
+    "content/packs/pack_d_corrected.js", "content/packs/pack_e_corrected.js",
     "scored_cases.js", "scored_cases2.js",
   ];
   const SOURCE_FILE_RE = /^(pack_[a-e]_corrected\.js|scored_cases\d*\.js)$/i;
   for (const f of files) {
-    assert(SOURCE_FILE_RE.test(f), `Should match source file: "${f}"`);
+    const bn = require("path").basename(f);
+    assert(SOURCE_FILE_RE.test(bn), `Should match source file: "${f}"`);
   }
   assert(!SOURCE_FILE_RE.test("app.js"));
   assert(!SOURCE_FILE_RE.test("styles.css"));

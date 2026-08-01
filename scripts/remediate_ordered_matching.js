@@ -15,11 +15,11 @@ const ROOT = path.resolve(__dirname, '..');
 const OUTPUT_DIR = path.join(ROOT, 'scripts', 'output');
 
 const CASE_FILES = [
-    'scored_cases.js',
-    'scored_cases2.js',
-    'scored_cases3.js',
-    'scored_cases4.js',
-    'scored_cases5.js'
+    'content/cases/legacy/scored_cases.js',
+    'content/cases/legacy/scored_cases2.js',
+    'content/cases/legacy/scored_cases3.js',
+    'content/cases/legacy/scored_cases4.js',
+    'content/cases/legacy/scored_cases5.js'
 ];
 
 // Wave 1 items already resolved in Session 81 (Class A/B redesign)
@@ -438,9 +438,9 @@ function main() {
 
     // Batch-to-files mapping
     const BATCH_FILES = {
-        1: ['scored_cases.js', 'scored_cases2.js'],           // Batch 4A: 22 items
-        2: ['scored_cases3.js'],                                // Batch 4B: 27 items
-        3: ['scored_cases4.js', 'scored_cases5.js']            // Batch 4C: 26 items
+        1: ['content/cases/legacy/scored_cases.js', 'content/cases/legacy/scored_cases2.js'],           // Batch 4A: 22 items
+        2: ['content/cases/legacy/scored_cases3.js'],                                // Batch 4B: 27 items
+        3: ['content/cases/legacy/scored_cases4.js', 'content/cases/legacy/scored_cases5.js']            // Batch 4C: 26 items
     };
 
     console.log('Session 83 — Ordered Matching Pattern Remediation Wave 4');

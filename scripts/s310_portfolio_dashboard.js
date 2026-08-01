@@ -49,7 +49,7 @@ const PACK_FILE = {
   A: 'pack_a_corrected.js', B: 'pack_b_corrected.js', C: 'pack_c_corrected.js',
   D: 'pack_d_corrected.js', E: 'pack_e_corrected.js'
 };
-const CASE_FILES = ['scored_cases.js', 'scored_cases2.js', 'scored_cases3.js', 'scored_cases4.js', 'scored_cases5.js'];
+const CASE_FILES = ['content/cases/legacy/scored_cases.js', 'content/cases/legacy/scored_cases2.js', 'content/cases/legacy/scored_cases3.js', 'content/cases/legacy/scored_cases4.js', 'content/cases/legacy/scored_cases5.js'];
 
 // ── Live Source Verification ──────────────────────────────────────
 

@@ -39,11 +39,11 @@ const SECTION_NAMES = {
 };
 
 const PACK_FILES = {
-  pack_a: { file: "pack_a_corrected.js", var: "MCQ_BANK_A" },
-  pack_b: { file: "pack_b_corrected.js", var: "MCQ_BANK_B" },
-  pack_c: { file: "pack_c_corrected.js", var: "MCQ_BANK_C" },
-  pack_d: { file: "pack_d_corrected.js", var: "MCQ_BANK_D" },
-  pack_e: { file: "pack_e_corrected.js", var: "MCQ_BANK_E" },
+  pack_a: { file: "content/packs/pack_a_corrected.js", var: "MCQ_BANK_A" },
+  pack_b: { file: "content/packs/pack_b_corrected.js", var: "MCQ_BANK_B" },
+  pack_c: { file: "content/packs/pack_c_corrected.js", var: "MCQ_BANK_C" },
+  pack_d: { file: "content/packs/pack_d_corrected.js", var: "MCQ_BANK_D" },
+  pack_e: { file: "content/packs/pack_e_corrected.js", var: "MCQ_BANK_E" },
 };
 
 // ── JSON Loading ────────────────────────────────────────────────

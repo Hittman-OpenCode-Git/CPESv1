@@ -4,7 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const FILE = path.join(__dirname, '..', 'scored_cases.js');
+const FILE = path.join(__dirname, '..', 'content/cases/legacy/scored_cases.js');
 const BACKUP = path.join(__dirname, '..', 'backups', 'scored_cases.js.bak-' + 
     new Date().toISOString().replace(/[:.]/g, '').substring(0, 14));
 

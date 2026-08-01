@@ -19,10 +19,10 @@ function backup(fp) {
 console.log('\n=== FIX 1: Adding DifficultyScore to 4 CBQ cases ===');
 
 const diffScoreFixes = [
-  { file: 'scored_cases2.js', caseId: 'CBQ2-A3', insertAfter: 'ProductionStatus: "Draft"' },
-  { file: 'scored_cases3.js', caseId: 'CBQ3-A1', insertAfter: 'ProductionStatus: "Draft"' },
-  { file: 'scored_cases4.js', caseId: 'CBQ4-A1', insertAfter: 'ProductionStatus: "Draft"' },
-  { file: 'scored_cases5.js', caseId: 'CBQ5-B2', insertAfter: 'ProductionStatus: "Draft"' },
+{ file: 'content/cases/legacy/scored_cases2.js', caseId: 'CBQ2-A3', insertAfter: 'ProductionStatus: "Draft"' },
+{ file: 'content/cases/legacy/scored_cases3.js', caseId: 'CBQ3-A1', insertAfter: 'ProductionStatus: "Draft"' },
+{ file: 'content/cases/legacy/scored_cases4.js', caseId: 'CBQ4-A1', insertAfter: 'ProductionStatus: "Draft"' },
+{ file: 'content/cases/legacy/scored_cases5.js', caseId: 'CBQ5-B2', insertAfter: 'ProductionStatus: "Draft"' },
 ];
 
 for (const fix of diffScoreFixes) {
@@ -98,11 +98,11 @@ console.log('  app.js: ' + appContent.length + ' bytes');
 console.log('\n=== FIX 4: Adding Section F bank cloning to scored_cases files ===');
 
 const caseFiles = [
-  { file: 'scored_cases.js', base: 'ENHANCED_CASE_BASE' },
-  { file: 'scored_cases2.js', base: 'ENHANCED_CASE_BASE2' },
-  { file: 'scored_cases3.js', base: 'ENHANCED_CASE_BASE3' },
-  { file: 'scored_cases4.js', base: 'ENHANCED_CASE_BASE4' },
-  { file: 'scored_cases5.js', base: 'ENHANCED_CASE_BASE5' },
+{ file: 'content/cases/legacy/scored_cases.js', base: 'ENHANCED_CASE_BASE' },
+{ file: 'content/cases/legacy/scored_cases2.js', base: 'ENHANCED_CASE_BASE2' },
+{ file: 'content/cases/legacy/scored_cases3.js', base: 'ENHANCED_CASE_BASE3' },
+{ file: 'content/cases/legacy/scored_cases4.js', base: 'ENHANCED_CASE_BASE4' },
+{ file: 'content/cases/legacy/scored_cases5.js', base: 'ENHANCED_CASE_BASE5' },
 ];
 
 for (const cf of caseFiles) {
@@ -137,7 +137,7 @@ for (const cf of caseFiles) {
 // ===== VERIFICATION =====
 console.log('\n=== VERIFICATION ===');
 const filesToCheck = ['pack_a_corrected.js','pack_b_corrected.js','pack_c_corrected.js','pack_d_corrected.js','pack_e_corrected.js',
-  'scored_cases.js','scored_cases2.js','scored_cases3.js','scored_cases4.js','scored_cases5.js','app.js'];
+  'content/cases/legacy/scored_cases.js','content/cases/legacy/scored_cases2.js','content/cases/legacy/scored_cases3.js','content/cases/legacy/scored_cases4.js','content/cases/legacy/scored_cases5.js','app.js'];
 
 let allPass = true;
 for (const f of filesToCheck) {

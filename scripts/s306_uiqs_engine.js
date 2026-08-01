@@ -14,11 +14,11 @@ const PACKS = [
 ];
 
 const CASE_DEFS = [
-  { file: 'scored_cases.js', varname: 'ENHANCED_CASE_BASE', label: 'Case Bank 1' },
-  { file: 'scored_cases2.js', varname: 'ENHANCED_CASE_BASE2', label: 'Case Bank 2' },
-  { file: 'scored_cases3.js', varname: 'ENHANCED_CASE_BASE3', label: 'Case Bank 3' },
-  { file: 'scored_cases4.js', varname: 'ENHANCED_CASE_BASE4', label: 'Case Bank 4' },
-  { file: 'scored_cases5.js', varname: 'ENHANCED_CASE_BASE5', label: 'Case Bank 5' },
+  { file: 'content/cases/legacy/scored_cases.js', varname: 'ENHANCED_CASE_BASE', label: 'Case Bank 1' },
+  { file: 'content/cases/legacy/scored_cases2.js', varname: 'ENHANCED_CASE_BASE2', label: 'Case Bank 2' },
+  { file: 'content/cases/legacy/scored_cases3.js', varname: 'ENHANCED_CASE_BASE3', label: 'Case Bank 3' },
+  { file: 'content/cases/legacy/scored_cases4.js', varname: 'ENHANCED_CASE_BASE4', label: 'Case Bank 4' },
+  { file: 'content/cases/legacy/scored_cases5.js', varname: 'ENHANCED_CASE_BASE5', label: 'Case Bank 5' },
 ];
 
 function parsePack(def) {

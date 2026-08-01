@@ -18,7 +18,7 @@ for (const [k, v] of Object.entries(i)) {
 
 // Inspect case file
 console.log('\n=== scored_cases.js ===');
-const caseFile = path.join(ROOT, 'scored_cases.js');
+const caseFile = path.join(ROOT, 'content/cases/legacy/scored_cases.js');
 const caseCode = fs.readFileSync(caseFile, 'utf8');
 
 // Try different variable names

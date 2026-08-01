@@ -856,11 +856,11 @@ function computeHash(filepath) {
   ];
 
   const caseFiles = [
-    { file: 'scored_cases.js', name: 'scored_cases' },
-    { file: 'scored_cases2.js', name: 'scored_cases2' },
-    { file: 'scored_cases3.js', name: 'scored_cases3' },
-    { file: 'scored_cases4.js', name: 'scored_cases4' },
-    { file: 'scored_cases5.js', name: 'scored_cases5' },
+    { file: 'content/cases/legacy/scored_cases.js', name: 'scored_cases' },
+    { file: 'content/cases/legacy/scored_cases2.js', name: 'scored_cases2' },
+    { file: 'content/cases/legacy/scored_cases3.js', name: 'scored_cases3' },
+    { file: 'content/cases/legacy/scored_cases4.js', name: 'scored_cases4' },
+    { file: 'content/cases/legacy/scored_cases5.js', name: 'scored_cases5' },
   ];
 
   const allMCQ = [];

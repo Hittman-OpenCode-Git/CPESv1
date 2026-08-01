@@ -4,7 +4,7 @@
 
 const fs = require('fs');
 
-const file = 'scored_cases.js';
+const file = 'content/cases/legacy/scored_cases.js';
 let content = fs.readFileSync(file, 'utf8');
 
 let changes = 0;

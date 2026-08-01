@@ -24,11 +24,11 @@ const path = require("path");
 // ── Pack file definitions ────────────────────────────────────────
 
 const PACKS = [
-  { file: "pack_a_corrected.js", varName: "MCQ_BANK_A", label: "Pack A" },
-  { file: "pack_b_corrected.js", varName: "MCQ_BANK_B", label: "Pack B" },
-  { file: "pack_c_corrected.js", varName: "MCQ_BANK_C", label: "Pack C" },
-  { file: "pack_d_corrected.js", varName: "MCQ_BANK_D", label: "Pack D" },
-  { file: "pack_e_corrected.js", varName: "MCQ_BANK_E", label: "Pack E" },
+  { file: "content/packs/pack_a_corrected.js", varName: "MCQ_BANK_A", label: "Pack A" },
+  { file: "content/packs/pack_b_corrected.js", varName: "MCQ_BANK_B", label: "Pack B" },
+  { file: "content/packs/pack_c_corrected.js", varName: "MCQ_BANK_C", label: "Pack C" },
+  { file: "content/packs/pack_d_corrected.js", varName: "MCQ_BANK_D", label: "Pack D" },
+  { file: "content/packs/pack_e_corrected.js", varName: "MCQ_BANK_E", label: "Pack E" },
 ];
 
 // ── Rule 9 regex patterns (DL-037: Choice binary lead-in polarity) ─

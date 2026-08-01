@@ -8,7 +8,7 @@ console.log(JSON.stringify(nc,null,2));
 
 // Get breakdown by file
 console.log('\n\n=== BREAKDOWN BY FILE ===');
-for(const fn of ['scored_cases.js','scored_cases2.js','scored_cases3.js','scored_cases4.js','scored_cases5.js']){
+for(const fn of ['content/cases/legacy/scored_cases.js','content/cases/legacy/scored_cases2.js','content/cases/legacy/scored_cases3.js','content/cases/legacy/scored_cases4.js','content/cases/legacy/scored_cases5.js']){
   const fr=d.blocker_classification.filter(x=>x.file===fn);
   const byClass={};
   fr.forEach(x=>{byClass[x.overall_blocker_class]=(byClass[x.overall_blocker_class]||0)+1});

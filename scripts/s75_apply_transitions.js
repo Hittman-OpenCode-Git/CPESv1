@@ -53,10 +53,10 @@ const transitions = {
 };
 
 const files = [
-    "scored_cases2.js",
-    "scored_cases3.js",
-    "scored_cases4.js",
-    "scored_cases5.js",
+    "content/cases/legacy/scored_cases2.js",
+    "content/cases/legacy/scored_cases3.js",
+    "content/cases/legacy/scored_cases4.js",
+    "content/cases/legacy/scored_cases5.js",
 ];
 
 const results = {};

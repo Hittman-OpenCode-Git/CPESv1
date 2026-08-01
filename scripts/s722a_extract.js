@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const base = "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026";
-const packs = ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"];
+const packs = ["content/packs/pack_a_corrected.js", "content/packs/pack_b_corrected.js", "content/packs/pack_c_corrected.js", "content/packs/pack_d_corrected.js", "content/packs/pack_e_corrected.js"];
 
 const results = {};
 

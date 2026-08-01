@@ -16,11 +16,11 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 
 const PACKS = [
-  { file: "pack_a_corrected.js", label: "Pack A", expectedQIDs: 500 },
-  { file: "pack_b_corrected.js", label: "Pack B", expectedQIDs: 500 },
-  { file: "pack_c_corrected.js", label: "Pack C", expectedQIDs: 500 },
-  { file: "pack_d_corrected.js", label: "Pack D", expectedQIDs: 500 },
-  { file: "pack_e_corrected.js", label: "Pack E", expectedQIDs: 545 },
+  { file: "content/packs/pack_a_corrected.js", label: "Pack A", expectedQIDs: 500 },
+  { file: "content/packs/pack_b_corrected.js", label: "Pack B", expectedQIDs: 500 },
+  { file: "content/packs/pack_c_corrected.js", label: "Pack C", expectedQIDs: 500 },
+  { file: "content/packs/pack_d_corrected.js", label: "Pack D", expectedQIDs: 500 },
+  { file: "content/packs/pack_e_corrected.js", label: "Pack E", expectedQIDs: 545 },
 ];
 
 const BASELINES_PATH = path.join(ROOT, "knowledge", "CURRENT_BASELINES.md");

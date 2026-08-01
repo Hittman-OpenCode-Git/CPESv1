@@ -1,5 +1,5 @@
 const fs=require("fs");
-let c=fs.readFileSync("scored_cases.js","utf8");
+let c=fs.readFileSync("content/cases/legacy/scored_cases.js","utf8");
 const ids=["CASE-A1","CASE-A-C1","CASE-A-D1","CASE-A2","CASE-A-C4","CASE-A-D5","CASE-A-C9","CASE-A-D10"];
 let n=0;
 for(const cid of ids){
@@ -8,4 +8,4 @@ for(const cid of ids){
   process.stdout.write(cid+" ");
 }
 console.log("\nItem-level changes: "+n);
-fs.writeFileSync("scored_cases.js",c,"utf8");
+fs.writeFileSync("content/cases/legacy/scored_cases.js",c,"utf8");

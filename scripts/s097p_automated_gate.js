@@ -275,11 +275,11 @@ function checkAF6(item) {
 
 // ── Main scan ──────────────────────────────────────────────────
 const packFiles = [
-  "pack_a_corrected.js",
-  "pack_b_corrected.js",
-  "pack_c_corrected.js",
-  "pack_d_corrected.js",
-  "pack_e_corrected.js"
+  "content/packs/pack_a_corrected.js",
+  "content/packs/pack_b_corrected.js",
+  "content/packs/pack_c_corrected.js",
+  "content/packs/pack_d_corrected.js",
+  "content/packs/pack_e_corrected.js"
 ];
 
 const results = {

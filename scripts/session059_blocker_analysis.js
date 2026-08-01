@@ -208,7 +208,7 @@ function analyzeCase(caseText, fileName) {
 // === MAIN ===
 console.log('Session 59 Blocker Analysis (v5) — Starting...\n');
 
-const FILES = ['scored_cases.js','scored_cases2.js','scored_cases3.js','scored_cases4.js','scored_cases5.js'];
+const FILES = ['content/cases/legacy/scored_cases.js','content/cases/legacy/scored_cases2.js','content/cases/legacy/scored_cases3.js','content/cases/legacy/scored_cases4.js','content/cases/legacy/scored_cases5.js'];
 const allResults = [], patterns = new Set();
 const certified = [], nonCert = [];
 

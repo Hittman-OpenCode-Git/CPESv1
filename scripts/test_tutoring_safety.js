@@ -63,7 +63,7 @@ global.clearTimeout = () => {};
 
 // Load pack data and May framework
 // may-learner-state.js must load before may-core.js (May references MayLearnerState)
-lg(path.join(b, "pack_a_corrected.js"));
+lg(path.join(b, "content/packs/pack_a_corrected.js"));
 lg(path.join(b, "may-learner-state.js"));
 lg(path.join(b, "may-core.js"));
 

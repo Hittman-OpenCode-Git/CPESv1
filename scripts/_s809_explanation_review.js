@@ -28,8 +28,8 @@ function extractPack(filePath) {
     return map;
 }
 
-const packC = extractPack("pack_c_corrected.js");
-const packD = extractPack("pack_d_corrected.js");
+const packC = extractPack("content/packs/pack_c_corrected.js");
+const packD = extractPack("content/packs/pack_d_corrected.js");
 
 // === EVALUATION FUNCTIONS ===
 

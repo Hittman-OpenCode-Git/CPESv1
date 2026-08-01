@@ -7,7 +7,7 @@ global.localStorage=(()=>{let s={};return{getItem(k){return s[k]||null},setItem(
 let dom={};global.document={getElementById(id){if(!dom[id])dom[id]={innerHTML:"",textContent:"",style:{}};return dom[id];},addEventListener(){},querySelectorAll(){return[]},createElement(){return{style:{},className:"",innerHTML:""}}};
 global.setTimeout=(fn)=>fn(); global.scoreMCQ=(q,a)=>a===q.CorrectChoice?1:0;
 global.ExamSessionManager={caseKey(c,i){return c.CaseID+"-"+i},correctCase(it,a){return String(a).trim().toLowerCase()===String(it.Correct).trim().toLowerCase()},practiceScores(){return null}};
-lg(path.join(b,"pack_a_corrected.js")); lg(path.join(b,"may-learner-state.js")); lg(path.join(b,"may-core.js"));
+lg(path.join(b,"content/packs/pack_a_corrected.js")); lg(path.join(b,"may-learner-state.js")); lg(path.join(b,"may-core.js"));
 
 let qs = global.MCQ_BANK_A;
 let P=0,F=0;

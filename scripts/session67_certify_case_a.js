@@ -1,6 +1,6 @@
 // Session 67: Certify all 8 CASE-A* migrated cases in scored_cases.js
 const fs = require('fs');
-const file = 'scored_cases.js';
+const file = 'content/cases/legacy/scored_cases.js';
 let content = fs.readFileSync(file, 'utf8');
 
 const caseIDs = [

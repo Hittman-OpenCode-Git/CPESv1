@@ -376,11 +376,11 @@ function main() {
   ];
 
   const caseFiles = [
-    'scored_cases.js',
-    'scored_cases2.js',
-    'scored_cases3.js',
-    'scored_cases4.js',
-    'scored_cases5.js'
+    'content/cases/legacy/scored_cases.js',
+    'content/cases/legacy/scored_cases2.js',
+    'content/cases/legacy/scored_cases3.js',
+    'content/cases/legacy/scored_cases4.js',
+    'content/cases/legacy/scored_cases5.js'
   ];
 
   let allQuestions = [];

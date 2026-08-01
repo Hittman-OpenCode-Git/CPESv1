@@ -1,5 +1,5 @@
 const fs = require('fs');
-const raw = fs.readFileSync('scored_cases.js', 'utf8');
+const raw = fs.readFileSync('content/cases/legacy/scored_cases.js', 'utf8');
 
 // Find the array assignment
 const jsonStart = raw.indexOf('[');

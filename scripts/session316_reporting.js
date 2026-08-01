@@ -14,7 +14,7 @@ const productionResults = {
   wave: "Wave 2",
   items: ["P1-E-R11","P1-E-R14","P1-E-R15","P1-E-R16","P1-E-R17","P1-E-R19","P1-E-R20","P1-E-R30","P1-E-R31","P1-E-R32"],
   source: "SESSION314_AUTHORING_BATCH_FULL.json",
-  target: "pack_e_corrected.js",
+  target: "content/packs/pack_e_corrected.js",
   promotionStatus: "COMPLETE",
   preInsertionState: { items: 510, certified: 510, production: 10 },
   postInsertionState: { items: 520, certified: 520, production: 20 },

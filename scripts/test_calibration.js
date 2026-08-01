@@ -26,7 +26,7 @@ global.ExamSessionManager = {
     practiceScores() { return null; }
 };
 
-lg(path.join(b, "pack_a_corrected.js"));
+lg(path.join(b, "content/packs/pack_a_corrected.js"));
 lg(path.join(b, "may-learner-state.js"));
 
 let passed = 0, failed = 0;

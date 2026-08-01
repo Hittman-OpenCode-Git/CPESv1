@@ -18,11 +18,11 @@ const OUTPUT_DIR = path.join(REPO_ROOT, "scripts", "output");
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "post_change_qc.json");
 
 const PACKS = [
-  { name: "pack_a", file: "pack_a_corrected.js", expected: 500 },
-  { name: "pack_b", file: "pack_b_corrected.js", expected: 500 },
-  { name: "pack_c", file: "pack_c_corrected.js", expected: 500 },
-  { name: "pack_d", file: "pack_d_corrected.js", expected: 500 },
-  { name: "pack_e", file: "pack_e_corrected.js", expected: 540 },
+  { name: "pack_a", file: "content/packs/pack_a_corrected.js", expected: 500 },
+  { name: "pack_b", file: "content/packs/pack_b_corrected.js", expected: 500 },
+  { name: "pack_c", file: "content/packs/pack_c_corrected.js", expected: 500 },
+  { name: "pack_d", file: "content/packs/pack_d_corrected.js", expected: 500 },
+  { name: "pack_e", file: "content/packs/pack_e_corrected.js", expected: 540 },
 ];
 
 // ── Helpers ──────────────────────────────────────────────────────

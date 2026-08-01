@@ -11,11 +11,11 @@ const BACKUP_DIR = path.join(BASE, 'backups');
 const REPORTS_DIR = path.join(BASE, 'reports');
 
 const FILES = [
-  { file: 'scored_cases.js', var: 'ENHANCED_CASE_BASE', pack: '1' },
-  { file: 'scored_cases2.js', var: 'ENHANCED_CASE_BASE2', pack: '2' },
-  { file: 'scored_cases3.js', var: 'ENHANCED_CASE_BASE3', pack: '3' },
-  { file: 'scored_cases4.js', var: 'ENHANCED_CASE_BASE4', pack: '4' },
-  { file: 'scored_cases5.js', var: 'ENHANCED_CASE_BASE5', pack: '5' }
+{ file: 'content/cases/legacy/scored_cases.js', var: 'ENHANCED_CASE_BASE', pack: '1' },
+{ file: 'content/cases/legacy/scored_cases2.js', var: 'ENHANCED_CASE_BASE2', pack: '2' },
+{ file: 'content/cases/legacy/scored_cases3.js', var: 'ENHANCED_CASE_BASE3', pack: '3' },
+{ file: 'content/cases/legacy/scored_cases4.js', var: 'ENHANCED_CASE_BASE4', pack: '4' },
+{ file: 'content/cases/legacy/scored_cases5.js', var: 'ENHANCED_CASE_BASE5', pack: '5' }
 ];
 
 // Step 1: Backup all 5 scored_cases files

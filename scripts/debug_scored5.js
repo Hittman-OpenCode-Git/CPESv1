@@ -1,5 +1,5 @@
 const fs = require('fs');
-const content = fs.readFileSync('C:/Users/User/OneDrive/Desktop/CMA_Part_1_2026/scored_cases5.js', 'utf8');
+const content = fs.readFileSync('C:/Users/User/OneDrive/Desktop/CMA_Part_1_2026/content/cases/legacy/scored_cases5.js', 'utf8');
 
 // After case 2 (CBQ5-A2), find where the next CaseID appears
 const re = content.match(/const\s+ENHANCED_CASE_BASE5\s*=\s*\[/);

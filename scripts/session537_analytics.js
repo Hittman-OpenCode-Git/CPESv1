@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const scoredCasesPath = 'C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\scored_cases.js';
+const scoredCasesPath = 'C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\content\\cases\\legacy\\scored_cases.js';
 const raw = fs.readFileSync(scoredCasesPath, 'utf8');
 
 // Parse the file using Function constructor
@@ -578,7 +578,7 @@ const report = {
     meta: {
         generated: new Date().toISOString(),
         agent: 'Agent Q+S+T Combined - Session 537',
-        file: 'scored_cases.js',
+        file: 'content/cases/legacy/scored_cases.js',
         casesParsed: cases.length,
         totalItems: allItems.length
     },

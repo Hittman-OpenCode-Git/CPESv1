@@ -11,7 +11,7 @@ function loadFile(name) {
 
 // Check which CBQ cases have 5 vs 6 items and their QuestionCount
 console.log("=== CBQ cases with 5 items ===");
-["scored_cases.js","scored_cases2.js","scored_cases3.js","scored_cases4.js","scored_cases5.js"].forEach(f => {
+["content/cases/legacy/scored_cases.js","content/cases/legacy/scored_cases2.js","content/cases/legacy/scored_cases3.js","content/cases/legacy/scored_cases4.js","content/cases/legacy/scored_cases5.js"].forEach(f => {
   const d = loadFile(f);
   ["ENHANCED_CASE_BASE","ENHANCED_CASE_BASE2","ENHANCED_CASE_BASE3","ENHANCED_CASE_BASE4","ENHANCED_CASE_BASE5"].forEach(k => {
     if (!d[k]) return;
@@ -25,7 +25,7 @@ console.log("=== CBQ cases with 5 items ===");
 });
 
 console.log("\n=== CBQ cases with 6 items ===");
-["scored_cases.js","scored_cases2.js","scored_cases3.js","scored_cases4.js","scored_cases5.js"].forEach(f => {
+["content/cases/legacy/scored_cases.js","content/cases/legacy/scored_cases2.js","content/cases/legacy/scored_cases3.js","content/cases/legacy/scored_cases4.js","content/cases/legacy/scored_cases5.js"].forEach(f => {
   const d = loadFile(f);
   ["ENHANCED_CASE_BASE","ENHANCED_CASE_BASE2","ENHANCED_CASE_BASE3","ENHANCED_CASE_BASE4","ENHANCED_CASE_BASE5"].forEach(k => {
     if (!d[k]) return;
@@ -41,7 +41,7 @@ console.log("\n=== CBQ cases with 6 items ===");
 // Tally
 console.log("\n=== Summary ===");
 let total5 = 0, total6 = 0;
-["scored_cases.js","scored_cases2.js","scored_cases3.js","scored_cases4.js","scored_cases5.js"].forEach(f => {
+["content/cases/legacy/scored_cases.js","content/cases/legacy/scored_cases2.js","content/cases/legacy/scored_cases3.js","content/cases/legacy/scored_cases4.js","content/cases/legacy/scored_cases5.js"].forEach(f => {
   const d = loadFile(f);
   ["ENHANCED_CASE_BASE","ENHANCED_CASE_BASE2","ENHANCED_CASE_BASE3","ENHANCED_CASE_BASE4","ENHANCED_CASE_BASE5"].forEach(k => {
     if (!d[k]) return;
@@ -59,7 +59,7 @@ console.log("Total enhanced: " + (total5 + total6));
 // Check: does every enhanced case's QuestionCount match Items.length?
 console.log("\n=== QuestionCount mismatches (enhanced) ===");
 let mismatches = 0;
-["scored_cases.js","scored_cases2.js","scored_cases3.js","scored_cases4.js","scored_cases5.js"].forEach(f => {
+["content/cases/legacy/scored_cases.js","content/cases/legacy/scored_cases2.js","content/cases/legacy/scored_cases3.js","content/cases/legacy/scored_cases4.js","content/cases/legacy/scored_cases5.js"].forEach(f => {
   const d = loadFile(f);
   ["ENHANCED_CASE_BASE","ENHANCED_CASE_BASE2","ENHANCED_CASE_BASE3","ENHANCED_CASE_BASE4","ENHANCED_CASE_BASE5"].forEach(k => {
     if (!d[k]) return;

@@ -20,11 +20,11 @@ function extractWithFunction(filePath, varName) {
 }
 
 const packConfigs = [
-    { file: "pack_a_corrected.js", varName: "MCQ_BANK_A", backup: "backups\\pack_a_corrected.js.bak-20260726174053" },
-    { file: "pack_b_corrected.js", varName: "MCQ_BANK_B", backup: "backups\\pack_b_corrected.js.bak-20260726174053" },
-    { file: "pack_c_corrected.js", varName: "MCQ_BANK_C", backup: "backups\\pack_c_corrected.js.bak-20260726173128" },
-    { file: "pack_d_corrected.js", varName: "MCQ_BANK_D", backup: "backups\\pack_d_corrected.js.bak-20260726173128" },
-    { file: "pack_e_corrected.js", varName: "MCQ_BANK_E", backup: "backups\\pack_e_corrected.js.bak-20260726173128" }
+    { file: "content/packs/pack_a_corrected.js", varName: "MCQ_BANK_A", backup: "backups\\pack_a_corrected.js.bak-20260726174053" },
+    { file: "content/packs/pack_b_corrected.js", varName: "MCQ_BANK_B", backup: "backups\\pack_b_corrected.js.bak-20260726174053" },
+    { file: "content/packs/pack_c_corrected.js", varName: "MCQ_BANK_C", backup: "backups\\pack_c_corrected.js.bak-20260726173128" },
+    { file: "content/packs/pack_d_corrected.js", varName: "MCQ_BANK_D", backup: "backups\\pack_d_corrected.js.bak-20260726173128" },
+    { file: "content/packs/pack_e_corrected.js", varName: "MCQ_BANK_E", backup: "backups\\pack_e_corrected.js.bak-20260726173128" }
 ];
 
 console.log("=" .repeat(80));

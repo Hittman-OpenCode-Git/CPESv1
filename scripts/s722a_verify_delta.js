@@ -5,11 +5,11 @@ const base = "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026";
 
 // Load pre-S722 backups and current files for Packs C, D, E (Wave 2 pre-write)
 const packMap = {
-    "pack_c_corrected.js": { backup: "backups\\pack_c_corrected.js.bak-20260726173128" },
-    "pack_d_corrected.js": { backup: "backups\\pack_d_corrected.js.bak-20260726173128" },
-    "pack_e_corrected.js": { backup: "backups\\pack_e_corrected.js.bak-20260726173128" },
-    "pack_a_corrected.js": { backup: "backups\\pack_a_corrected.js.bak-20260726174053" },
-    "pack_b_corrected.js": { backup: "backups\\pack_b_corrected.js.bak-20260726174053" }
+    "content/packs/pack_c_corrected.js": { backup: "backups\\pack_c_corrected.js.bak-20260726173128" },
+    "content/packs/pack_d_corrected.js": { backup: "backups\\pack_d_corrected.js.bak-20260726173128" },
+    "content/packs/pack_e_corrected.js": { backup: "backups\\pack_e_corrected.js.bak-20260726173128" },
+    "content/packs/pack_a_corrected.js": { backup: "backups\\pack_a_corrected.js.bak-20260726174053" },
+    "content/packs/pack_b_corrected.js": { backup: "backups\\pack_b_corrected.js.bak-20260726174053" }
 };
 
 function extractMetadata(code) {

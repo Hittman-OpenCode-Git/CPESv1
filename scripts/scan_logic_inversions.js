@@ -93,12 +93,12 @@ function detectLogicInversions(item) {
 // ── Main scan ──────────────────────────────────────────────────
 
 const packFiles = [
-  { name: "pack_a_corrected.js", varName: "MCQ_BANK_A" },
-  { name: "pack_b_corrected.js", varName: "MCQ_BANK_B" },
-  { name: "pack_c_corrected.js", varName: "MCQ_BANK_C" },
-  { name: "pack_d_corrected.js", varName: "MCQ_BANK_D" },
-  { name: "pack_e_corrected.js", varName: "MCQ_BANK_E" },
-  { name: "scored_cases.js", varName: "SCORED_CASES" },
+  { name: "content/packs/pack_a_corrected.js", varName: "MCQ_BANK_A" },
+  { name: "content/packs/pack_b_corrected.js", varName: "MCQ_BANK_B" },
+  { name: "content/packs/pack_c_corrected.js", varName: "MCQ_BANK_C" },
+  { name: "content/packs/pack_d_corrected.js", varName: "MCQ_BANK_D" },
+  { name: "content/packs/pack_e_corrected.js", varName: "MCQ_BANK_E" },
+  { name: "content/cases/legacy/scored_cases.js", varName: "SCORED_CASES" },
 ];
 
 const results = {

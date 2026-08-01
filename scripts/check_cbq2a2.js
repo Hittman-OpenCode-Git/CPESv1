@@ -1,5 +1,5 @@
 const fs=require('fs');
-const c=fs.readFileSync('C:/Users/User/OneDrive/Desktop/CMA_Part_1_2026/scored_cases2.js','utf8');
+const c=fs.readFileSync('C:/Users/User/OneDrive/Desktop/CMA_Part_1_2026/content/cases/legacy/scored_cases2.js','utf8');
 const re=/const\s+\w+\s*=\s*\[/;const m=c.match(re);
 const arrText=c.substring(m.index+m[0].length,c.indexOf('];',m.index)+2);
 const cases=[];let depth=0,inStr=false,esc=false,start=-1;

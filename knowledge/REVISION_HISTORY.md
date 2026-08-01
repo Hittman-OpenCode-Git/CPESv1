@@ -30379,4 +30379,259 @@ S122 produced six deliverables capturing Part 1 excellence patterns, cognitive-l
 
 Part 1 accumulated a 58.7% cognitive misclassification rate (309 of 528 labeled HO items) because the original template pipeline assigned cognitive labels by rotation position rather than by actual question demand. The recovery program (S92P–S109P) required 6+ Full Governance Lane sessions to correct — far more expensive than prevention. The S122 libraries and §17 governance rules exist to prevent recurrence in Part 2.
 
+---
+
+## S126B — Safe Repository Restructuring & Runtime Isolation — 2026-08-01
+
+**Type:** RESTRUCTURE (read-only analysis + directory creation + safe file moves — Full Governance Lane)
+
+### Background
+
+Repository contained 5,936 files, 388 directories, and ~53 root-level files. Root clutter had been flagged as a structural concern. S126B was the execution phase: separate runtime, governance, knowledge, development, and archive assets without breaking any application behavior.
+
+### Deliverables
+
+1. **`reports/S126_REPO_SNAPSHOT.txt`** — Complete recursive file listing with sizes
+2. **`reports/S126_DEPENDENCY_MAP.md`** — Cross-reference of all 53 root files: what each references, what references it, full May module dependency graph, governance runtime vs build-time split
+3. **`reports/S126_DIRECTORY_CLASSIFICATION.md`** — Every directory classified ACTIVE/REFERENCE/ARCHIVE/MIXED with risk heatmap and recommended target structure
+4. **`reports/S126_RUNTIME_FREEZE.md`** — Every root file classified RUNTIME/GOVERNANCE/KNOWLEDGE/DEV/ARCHIVE/UNKNOWN
+5. **`reports/S126_RESTRUCTURE_BEFORE.md`** — Pre-restructure metrics capture
+6. **`reports/S126_RESTRUCTURE_AFTER.md`** — Post-restructure comparison
+7. **`reports/S126_VALIDATION_REPORT.md`** — Complete validation results with all 8 stop conditions verified
+
+### Files Moved (Proven Non-Runtime)
+
+| From (root) | To | Files | Risk |
+|-------------|----|-------|------|
+| `seed-profile.json` | `dev/seed-profile.json` | 1 | Zero (0 programmatic references) |
+| `autonomy/` | `archive/autonomy/` | 4 | Zero (session 89C artifacts) |
+| `tools/` | `dev/tools/` | 3 | Zero (0 build-script references) |
+
+### Files Restored (Build-Tool Dependencies)
+
+`scored_cases1-5.js` — Moved to `archive/scored_cases_legacy/`, then restored to root after discovering 45 build scripts reference them by simple filename. Breaking those scripts violates "no path breakage." Deferred to S127 (script path fix before re-move).
+
+### New Directories Created
+
+| Directory | Purpose |
+|-----------|---------|
+| `app/` | Future application modules (May, app.js) |
+| `ui/` | Future UI components |
+| `dev/` | Development tooling (seed-profile.json, tools/) |
+| `dev/tools/` | Maintenance scripts |
+| `archive/scored_cases_legacy/` | Backup copies of scored_cases1-5 |
+| `archive/autonomy/` | Session 89C archive |
+
+### Key Finding
+
+Root clutter is NOT caused by abandoned development artifacts — it is caused by legitimate application growth (41 runtime-loaded files at root). The real cleanup requires application modularization, not further archival. The next step (S127A) is a Runtime Modularization Plan to move May modules, data packs, and app.js into structured subdirectories.
+
+### Validation
+
+| Check | Result |
+|-------|--------|
+| Preflight | PASS — 0 divergences |
+| Governance Guard | PASS — 66/66 |
+| Runtime integrity | PASS — no runtime files moved |
+| Path integrity | PASS — 0 build script references broken |
+| Files deleted | 0 — all preserved |
+| Rollback path | Confirmed — git history + archive copies |
+
+### Files Modified
+
+- None (content preservation). All operations were directory creation + file copy + remove.
+
+### Governance Impact
+
+- 0 question_state changes
+- 0 answer-key changes
+- 0 pack-file modifications
+- 0 governance-file modifications
+- Root: 53 files → 52 files (−1)
+- Root: 19 directories → 20 directories (+1)
+
+---
+
+## S127 — Runtime Modularization (Phases B–E Execution) — 2026-08-01
+
+**Type:** RESTRUCTURE (file relocation + path updates — Full Governance Lane)
+
+### Summary
+
+Executed the S127A modularization plan. Moved 42 runtime files from repository root into structured subdirectories: data packs to `content/`, May AI coaching modules to `app/may/`, main application to `app/`. Replaced every `<script>` tag in `index_updated.html` and `admin.html` to reference new paths. Updated 28 build scripts in `scripts/` to resolve pack files from `content/packs/` and `content/cases/`.
+
+### Key Insight
+
+The dependency analysis proved all 42 files use global-variable-based architecture with zero file-level import paths. Moving them was a mechanical path-update operation — not a code refactoring. Load order was preserved identically.
+
+### Phases Executed
+
+**Phase B — DATA Files (8 files → content/)**
+- 5 MCQ packs: `pack_a–e_corrected.js` → `content/packs/`
+- 3 case packs: `case_pack_1–3_corrected.js` → `content/cases/`
+- Updated `index_updated.html` lines 116–127 with section-grouped comments
+
+**Phase C — May Modes (7 files → app/may/modes/)**
+- `may-coaching-modes/` → `app/may/modes/`
+- `may-coaching-modes/` directory removed from root
+- Updated `index_updated.html` lines 137–144
+
+**Phase D — May Modules (25 files → app/may/)**
+- All 25 `may-*.js` files → `app/may/`
+- Grouped in HTML: Core Layer, Coaching Modes, Engine + Dashboard Layer
+- Updated `index_updated.html` lines 131–165
+
+**Phase E — Application (2 files → app/)**
+- `app.js` → `app/app.js`
+- `scripts/output/admin_dashboard_data.js` → `app/admin/admin_dashboard_data.js`
+- Updated `index_updated.html` lines 167–168
+- Updated `admin.html` line 384
+
+### Script Path Updates (28 files)
+
+Updated 28 `.js` files in `scripts/` to resolve pack files from `content/packs/`:
+- `config.js`, `governance_guard_engine.js`, `pre_delivery_safety_check.js`, `scan_logic_inversions.js`, `s121_portfolio_dashboard.js`, `admin_service_layer.js`, `policy_drift_detector.js`, `post_change_qc.js`, `lib/RepositoryValidator.js`, `s097p_automated_gate.js`, `agent_g_extract_templates.js`, `file_state_reconciliation.js`, `s722a_extract.js`, `s722a_verify_delta.js`, `s722a_verify_delta2.js`, `test_governance_guard.js` (+ SOURCE_FILE_RE fix), and 11 calibration/testing scripts.
+
+Also updated `preflight.js` to look in `content/packs/`.
+
+### Files NOT Moved
+
+- `scored_cases1-5.js` — remain at root (45 build-script dependencies; deferred to future session)
+- `index_updated.html`, `admin.html`, `styles.css` — entry points stay at root
+- `main.js` — Electron shell stays at root
+
+### Verification
+
+| Check | Result |
+|-------|--------|
+| Preflight | PASS — 0 divergences |
+| Governance Guard | PASS — 66/66 |
+| Root files | 53 → **18** (−35) |
+| Runtime load chain | Identical order, updated paths |
+| HTML script tags | All 42 updated + section-grouped |
+| admin.html paths | Updated |
+
+### Governance Impact
+
+- 0 question_state changes
+- 0 answer-key changes
+- 0 pack-file content modifications
+- File moves only: 42 files relocated, 28 script paths updated
+- Preflight: 0 divergences, 2451 certified, governance guard 66/66 PASS
+- HTML: 168 lines (was 155, +13 for section comments)
+
+---
+
+## S128A — Scored Cases Dependency Audit — 2026-08-01
+
+**Type:** AUDIT (read-only — Full Governance Lane)
+
+### Background
+
+After S127 reduced root from 52 to 18 files, the 5 remaining `scored_cases1-5.js` files were the largest remaining anomaly. S126B had found 45 build-script references to these files, which prevented their removal. S128A was a comprehensive audit to answer: are these files runtime-required, tooling-only, duplicated by `content/cases/`, or entirely legacy?
+
+### Key Findings
+
+1. **Runtime status: 0 references.** Neither `index_updated.html` nor `admin.html` loads any `scored_cases*.js` file. The application loads `content/cases/case_pack_1-3_corrected.js` instead. `app.js` contains a legacy code path referencing `ENHANCED_CASE_BANK_*` variables, but since scored_cases files aren't loaded, this path always returns empty arrays.
+
+2. **Content duplication: full for 75 CBQ cases.** The `case_pack_*` files consolidate all 75 CBQ-prefixed case studies from the five scored_cases files. No CBQ content is missing.
+
+3. **Content gap: 45 old-style cases.** `scored_cases2/3/4` contain 15 old-style cases each (CASE-B12..B26, CASE-C1..C15, CASE-D1..D15) — migrated from MCQ banks by Session 60. These are NOT in any case_pack file. However, since no HTML loads scored_cases files, these 45 cases are already inaccessible to learners.
+
+4. **Build-tool dependencies: ~16 scripts.** `config.js`, `build_master_registry.js`, `governance_guard_engine.js`, `RepositoryValidator.js`, and ~12 other scripts reference scored_cases files by filename. These would break if files were removed without path updates.
+
+5. **No HTML loads scored_cases*.js.** Zero runtime impact from removal.
+
+### Recommendation
+
+Move scored_cases files to `content/cases/legacy/`, update ~16 build-tool references, regenerate registries, and update baselines. The root would go from 18 → 13 files — the final ideal state. However, the ROI is marginal: 5 files vs 16+ script edits. The files are well-classified as legacy; the tooling just needs to acknowledge their new location.
+
+### Deliverable
+
+`reports/S128A_SCORED_CASES_AUDIT.md` — Complete inventory of all references, content duplication analysis, variable mapping, and migration recommendation.
+
+### Governance Impact
+
+- 0 question_state changes
+- 0 answer-key changes
+- 0 file modifications (read-only audit)
+- Preflight: N/A (read-only)
+
+---
+
+## S128B — Legacy Scored Cases Retirement — 2026-08-01
+
+**Type:** RESTRUCTURE (Full Governance Lane)
+
+### Summary
+
+Executed the S128A recommendation. Moved the 5 legacy `scored_cases1-5.js` files from root to `content/cases/legacy/`. Updated ~38 build-tool, configuration, and registry references to resolve files from the new location. This was the final structural holdout from the pre-modularization architecture.
+
+### Precondition Verification
+
+S128A confirmed:
+- 0 runtime references (no HTML loads scored_cases files)
+- All 75 CBQ cases fully duplicated in `content/cases/case_pack_*`
+- 45 old-style cases already inaccessible (no HTML loads them)
+- ~16 build-tool scripts needed path updates (mechanical change)
+
+### Files Moved
+
+| From (root) | To | Size |
+|-------------|----|------|
+| `scored_cases.js` | `content/cases/legacy/scored_cases.js` | 456 KB |
+| `scored_cases2.js` | `content/cases/legacy/scored_cases2.js` | 440 KB |
+| `scored_cases3.js` | `content/cases/legacy/scored_cases3.js` | 443 KB |
+| `scored_cases4.js` | `content/cases/legacy/scored_cases4.js` | 533 KB |
+| `scored_cases5.js` | `content/cases/legacy/scored_cases5.js` | 333 KB |
+
+### Files Updated (~38)
+
+**Build-tool scripts (17):** `config.js`, `build_master_registry.js`, `governance_guard_engine.js`, `RepositoryValidator.js`, `migrate_cases_session60.js`, `case_scoring_audit_agent_d.js`, `s310_portfolio_dashboard.js`, `s306_uiqs_engine.js`, `s305_exhibit_analysis.js`, `s304_blueprint_analysis.js`, `s303_explanation_analysis.js`, `s306_inspect_cases2.js`, `agent_b_deep_check.js`, `agent_b_case_schema_audit.js`, `agent_b_quick_check.js`, `check_patterns.js`, `rebuild_baselines_s916.js`
+
+**Additional discovered (18):** `debug_scored5*.js`, `check_cbq2a2.js`, `s75_apply_transitions.js`, `scan_logic_inversions.js`, `remediate_ordered_matching.js`, `s306_inspect*.js`, `s537_certify.js`, `session315/67/059/529/537/65/62/916` scripts, `root_hygiene_and_governance_audit.js`
+
+**Configuration (3):** `knowledge/CURRENT_BASELINES.md`, `governance/REPOSITORY_RULES.md`, `.commandcode/settings.json`
+
+Documentation files (REVISION_HISTORY.md, DEFECT_LIBRARY.md, AGENTS.md, test assertions) left unchanged — those are conceptual references, not file paths.
+
+### Final Root State
+
+**Root: 13 files.** All are legitimate entry points, configuration, or platform files:
+
+| Category | Files |
+|----------|-------|
+| Entry points | `index_updated.html`, `admin.html`, `styles.css`, `main.js` |
+| Config | `package.json`, `package-lock.json`, `opencode.json`, `.gitignore` |
+| Launchers | `launch.vbs`, `CMA_Learning_Platform.lnk`, `CMA Learning Platform.lnk` |
+| Instructions | `AGENTS.md`, `VERSION` |
+
+### Journey Complete
+
+| Session | Root Files | Change |
+|---------|-----------|--------|
+| Start | 53 | Original |
+| S126B | 52 | seed-profile.json, autonomy/, tools/ moved |
+| S127 | 18 | 42 runtime files moved to app/, content/ |
+| **S128B** | **13** | 5 legacy scored_cases moved to content/cases/legacy/ |
+
+**Total: 40 files removed from root. Repository architecture is now a product structure, not a recovery-era project.**
+
+### Verification
+
+| Check | Result |
+|-------|--------|
+| Preflight | PASS — 0 divergences |
+| Governance Guard | PASS — 66/66 |
+| Runtime integrity | PASS — no runtime files moved |
+| Root target | **13 files** — reached ideal state |
+
+### Governance Impact
+
+- 0 question_state changes
+- 0 answer-key changes
+- 0 pack-file content modifications
+- File moves only: 5 files relocated, ~38 script/config paths updated
+- Preflight: 0 divergences, 2451 certified, governance guard 66/66 PASS
+
 

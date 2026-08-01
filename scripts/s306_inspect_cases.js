@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
 
-const caseFile = path.join(ROOT, 'scored_cases.js');
+const caseFile = path.join(ROOT, 'content/cases/legacy/scored_cases.js');
 const caseCode = fs.readFileSync(caseFile, 'utf8');
 const fn = new Function(caseCode + '; return ENHANCED_CASE_BASE;');
 const cases = fn();

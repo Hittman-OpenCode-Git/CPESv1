@@ -1,5 +1,5 @@
 const fs = require('fs');
-const content = fs.readFileSync('C:/Users/User/OneDrive/Desktop/CMA_Part_1_2026/scored_cases5.js', 'utf8');
+const content = fs.readFileSync('C:/Users/User/OneDrive/Desktop/CMA_Part_1_2026/content/cases/legacy/scored_cases5.js', 'utf8');
 
 // Test regex match
 const re = /const\s+\w+\s*=\s*\[/;

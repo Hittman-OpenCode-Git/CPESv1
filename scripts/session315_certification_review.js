@@ -731,8 +731,8 @@ const dashboard = {
     noAnswerKeyChanges: true,
     noScoringChanges: true,
     unchangedFiles: [
-      "pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js",
-      "pack_d_corrected.js", "scored_cases.js", "scored_cases2-5.js",
+      "content/packs/pack_a_corrected.js", "content/packs/pack_b_corrected.js", "content/packs/pack_c_corrected.js",
+      "content/packs/pack_d_corrected.js", "content/cases/legacy/scored_cases.js", "content/cases/legacy/scored_cases2-5.js",
       "app.js", "may-core.js", "may-learner-state.js", "index_updated.html", "styles.css"
     ]
   },

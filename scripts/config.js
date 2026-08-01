@@ -88,15 +88,15 @@ module.exports = {
 
     questionPacks: [
 
-        "pack_a_corrected.js",
+        "content/packs/pack_a_corrected.js",
 
-        "pack_b_corrected.js",
+        "content/packs/pack_b_corrected.js",
 
-        "pack_c_corrected.js",
+        "content/packs/pack_c_corrected.js",
 
-        "pack_d_corrected.js",
+        "content/packs/pack_d_corrected.js",
 
-        "pack_e_corrected.js"
+        "content/packs/pack_e_corrected.js"
 
     ],
 
@@ -106,15 +106,15 @@ module.exports = {
 
     caseBanks: [
 
-        "scored_cases.js",
+        "content/cases/legacy/scored_cases.js",
 
-        "scored_cases2.js",
+        "content/cases/legacy/scored_cases2.js",
 
-        "scored_cases3.js",
+        "content/cases/legacy/scored_cases3.js",
 
-        "scored_cases4.js",
+        "content/cases/legacy/scored_cases4.js",
 
-        "scored_cases5.js"
+        "content/cases/legacy/scored_cases5.js"
 
     ],
 

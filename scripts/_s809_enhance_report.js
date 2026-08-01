@@ -47,7 +47,7 @@ const enhancedSummary = {
     agent: "D",
     task: "Explanation Review - 38 Domain E Seed Items (Pack C: 19, Pack D: 19)",
     scope: "READ-ONLY audit - no modifications made",
-    files_scanned: ["pack_c_corrected.js", "pack_d_corrected.js"],
+    files_scanned: ["content/packs/pack_c_corrected.js", "content/packs/pack_d_corrected.js"],
     total_seeds: 38,
     found: 38,
     not_found: 0,
