@@ -822,8 +822,61 @@ const DECIMAL_PRECISION = 10000000000;
 const round10 = v => Math.round(v * DECIMAL_PRECISION) / DECIMAL_PRECISION;
 const CHOICES = ['A', 'B', 'C', 'D'];
 
+function renderMarkdownTables(text) {
+    if (!text || typeof text !== 'string') return text;
+    var lines = text.split('\n');
+    var result = [];
+    var i = 0;
+    while (i < lines.length) {
+        var line = lines[i];
+        if (/^\s*\|[^|\n]+\|/.test(line) && i + 1 < lines.length && /^\s*\|[\s\-:|]+\|/.test(lines[i + 1])) {
+            var headerLine = line;
+            var sepLine = lines[i + 1];
+            var dataLines = [];
+            var j = i + 2;
+            while (j < lines.length && /^\s*\|[^|\n]+\|/.test(lines[j])) {
+                dataLines.push(lines[j]);
+                j++;
+            }
+            var headers = headerLine.split('|').map(function(c) { return c.trim(); }).filter(function(c) { return c !== ''; });
+            var seps = sepLine.split('|').map(function(c) { return c.trim(); }).filter(function(c) { return c !== ''; });
+            var alignMap = seps.map(function(s) {
+                var left = s.charAt(0) === ':';
+                var right = s.charAt(s.length - 1) === ':';
+                if (left && right) return 'center';
+                if (right) return 'right';
+                return 'left';
+            });
+            var rows = dataLines.map(function(dl) {
+                return dl.split('|').map(function(c) { return c.trim(); }).filter(function(c, idx, arr) { return idx > 0 || c !== ''; });
+            });
+            var html = '<table><thead><tr>';
+            for (var h = 0; h < headers.length; h++) {
+                html += '<th style="text-align:' + (alignMap[h] || 'left') + '">' + headers[h] + '</th>';
+            }
+            html += '</tr></thead><tbody>';
+            for (var r = 0; r < rows.length; r++) {
+                html += '<tr>';
+                for (var c = 0; c < headers.length; c++) {
+                    var cell = (rows[r] && rows[r][c]) ? rows[r][c] : '';
+                    html += '<td style="text-align:' + (alignMap[c] || 'left') + '">' + cell + '</td>';
+                }
+                html += '</tr>';
+            }
+            html += '</tbody></table>';
+            result.push(html);
+            i = j;
+        } else {
+            result.push(line);
+            i++;
+        }
+    }
+    return result.join('\n');
+}
+
 function nl2br(text) {
     if (!text || typeof text !== 'string') return text || '';
+    text = renderMarkdownTables(text);
     if (/<[a-z][\s\S]*>/i.test(text)) return text;
     let html = text.replace(/\n\n+/g, '</p><p>');
     html = html.replace(/\n/g, '<br>');
@@ -1976,6 +2029,7 @@ const ExamSessionManager = {
         if (mode === 'full' || ($('realConditions') && $('realConditions').checked)) {
             document.body.classList.add('exam-integrity-mode');
         }
+        document.body.classList.add('session-active');
         showView('sessionView');
         this.render();
         this.startTimer();
@@ -2392,6 +2446,7 @@ const ExamSessionManager = {
         clearInterval(autoSaveInt);
         // S130 — Remove exam integrity mode on session completion
         document.body.classList.remove('exam-integrity-mode');
+        document.body.classList.remove('session-active');
         AnalyticsCollector.logEvent('session_submit', {});
         SessionPersistence.saveHistory();
         SessionPersistence.clear();
@@ -4157,10 +4212,9 @@ const PerformanceAnalytics = {
     renderRemediationCard(plan) {
         if (!plan || plan.length === 0) return '<p class="small">Complete a scored session to receive targeted study recommendations.</p>';
         return plan.map(r => {
-            let bg = r.priority === 'high' ? '#fef2f2' : r.priority === 'medium' ? '#fff7ed' : '#f0f9ff';
-            let border = r.priority === 'high' ? '#fca5a5' : r.priority === 'medium' ? '#fdba74' : '#bae6fd';
+            let cls = r.priority === 'high' ? 'remediation-card-high' : r.priority === 'medium' ? 'remediation-card-med' : 'remediation-card-info';
             let icon = r.priority === 'high' ? '!' : r.priority === 'medium' ? '>' : 'i';
-            return `<div style="background:${bg};border:1px solid ${border};border-radius:6px;padding:10px;margin:8px 0;font-size:0.9rem;"><span style="font-weight:700;margin-right:8px;">${icon}</span><strong>${r.category}:</strong> ${r.text}</div>`;
+            return `<div class="remediation-card ${cls}"><span style="font-weight:700;margin-right:8px;">${icon}</span><strong>${r.category}:</strong> ${r.text}</div>`;
         }).join('');
     },
 
@@ -5337,6 +5391,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $('recoveryResume').onclick = () => {
             modal.remove();
             persistSaveStatus('Your previous exam session was successfully restored. All progress has been recovered.', 'recovery');
+            document.body.classList.add('session-active');
             showView('sessionView');
             ExamSessionManager.render();
             ExamSessionManager.startTimer();
@@ -6292,6 +6347,10 @@ var GuidedTour = {
         } else {
             targetEl = document.getElementById(step.attach);
         }
+        // S130 — Target actual May content card instead of full-height coachView container
+        if (step.attach === 'coachView') {
+            targetEl = document.querySelector('#coachView .may-compact') || targetEl;
+        }
         if (!targetEl) {
             targetEl = document.querySelector('.work-panel') || document.querySelector('main.layout') || document.body;
         }
@@ -6323,16 +6382,23 @@ var GuidedTour = {
         var tooltipWidth = 400;
 
         if (step.position === 'center') {
+            // S130 — For tall elements, use a capped effective size so the spotlight doesn't engulf the viewport
+            var effectiveH = Math.min(rect.height, 300);
+            var effectiveTop = rect.top + Math.max(0, (rect.height - effectiveH) / 2);
             var cx = rect.left + rect.width / 2;
-            var cy = rect.top + rect.height / 2;
-            var size = Math.max(rect.width, rect.height, 200) + 40;
+            var cy = effectiveTop + effectiveH / 2;
+            var size = Math.max(rect.width, effectiveH, 200) + 40;
             this.__spotlightEl.style.left = (cx - size / 2) + 'px';
             this.__spotlightEl.style.top = (cy - size / 2) + 'px';
             this.__spotlightEl.style.width = size + 'px';
             this.__spotlightEl.style.height = size + 'px';
             this.__spotlightEl.style.borderRadius = '50%';
             var tx = cx - tooltipWidth / 2;
-            var ty = rect.bottom + 16;
+            // S130 — prefer below the target, but go above if there's no room
+            var estH = this.__tooltipEl ? this.__tooltipEl.offsetHeight : 200;
+            var ty = (effectiveTop + effectiveH + 16 + estH > window.innerHeight - 16)
+                ? rect.top - estH - 16
+                : rect.bottom + 16;
             var clamped = this._clampTooltip(tx, ty, tooltipWidth, this.__tooltipEl);
             this.__tooltipEl.style.left = clamped.left + 'px';
             this.__tooltipEl.style.top = clamped.top + 'px';
@@ -6633,22 +6699,762 @@ if (typeof May !== 'undefined') {
     // Initialize floating bubble on load
     setTimeout(function () { May.Floating._init(); }, 1000);
 } else {
-    // Fallback when May is not yet loaded
+    // Fallback when May is not yet loaded — still show quiz entries
     var __compactCoachFallback = function () {
         var el = document.getElementById('coachView');
         if (!el) return;
-        el.innerHTML = '<div class="may-compact"><div class="may-compact-avatar">M</div><h3>May AI Coach</h3><p>Complete a practice session to unlock May coaching features.</p></div>';
+        var quizEntries = MayQuizController._renderQuizEntries();
+        el.innerHTML = '<div class="may-compact"><div class="may-compact-avatar">M</div><h3>May AI Coach</h3><p>Complete a practice session to unlock May coaching features.</p>' + quizEntries + '</div>';
     };
     // Override floating button click for fallback
     var fb = document.getElementById('mayFloatBtn');
     if (fb) {
         fb.onclick = function () {
             if (typeof May !== 'undefined' && May.Floating) { May.Floating._toggle(); }
-            else { showView('coachView'); if (typeof ReviewCoach !== 'undefined') ReviewCoach.renderFullCoach(); }
+            else { showView('coachView'); MayQuizController._renderSetup(); }
         };
         fb.style.display = 'block';
     }
 }
+
+// ============================================================
+// S129 — MayQuizController: Interactive Socratic Quiz Mode
+// ============================================================
+const MayQuizController = {
+    QUIZ_SIZE: 5,
+
+    // ── Current quiz state ──
+    currentQuiz: null,
+
+    _getAllBanks() {
+        var banks = [];
+        try { if (typeof MCQ_BANK_A !== 'undefined') banks.push(MCQ_BANK_A); } catch (e) { }
+        try { if (typeof MCQ_BANK_B !== 'undefined') banks.push(MCQ_BANK_B); } catch (e) { }
+        try { if (typeof MCQ_BANK_C !== 'undefined') banks.push(MCQ_BANK_C); } catch (e) { }
+        try { if (typeof MCQ_BANK_D !== 'undefined') banks.push(MCQ_BANK_D); } catch (e) { }
+        try { if (typeof MCQ_BANK_E !== 'undefined') banks.push(MCQ_BANK_E); } catch (e) { }
+        var all = [];
+        for (var i = 0; i < banks.length; i++) {
+            for (var j = 0; j < banks[i].length; j++) all.push(banks[i][j]);
+        }
+        return all;
+    },
+
+    // ── Question Filters ──
+    _filterBySection(questions, section) {
+        var s = section.toUpperCase();
+        return questions.filter(function (q) { return q.Section === s; });
+    },
+
+    _filterByTopic(questions, keyword) {
+        var kw = keyword.toLowerCase();
+        return questions.filter(function (q) {
+            var topic = (q.Topic || '').toLowerCase();
+            var stem = (q.Stem || '').toLowerCase();
+            var micro = (q.MicroTopic || '').toLowerCase();
+            var sectionName = (q.SectionName || '').toLowerCase();
+            return topic.indexOf(kw) !== -1 || stem.indexOf(kw) !== -1 || micro.indexOf(kw) !== -1 || sectionName.indexOf(kw) !== -1;
+        });
+    },
+
+    _filterByDifficulty(questions, minDifficulty) {
+        return questions.filter(function (q) {
+            var ds = q.DifficultyScore || 3;
+            return ds >= minDifficulty;
+        });
+    },
+
+    _filterByCollection(collectionId) {
+        var qids = CMAProfileManager.getCollectionQuestionIds(collectionId);
+        if (!qids || qids.length === 0) return [];
+        var all = this._getAllBanks();
+        var qidSet = {};
+        for (var i = 0; i < qids.length; i++) qidSet[qids[i]] = true;
+        return all.filter(function (q) { return qidSet[q.QuestionID]; });
+    },
+
+    _filterWeakAreas(topN) {
+        topN = topN || 3;
+        var clusters = null;
+        try {
+            if (typeof MayLearnerState !== 'undefined') clusters = MayLearnerState.getWeaknessClusters();
+        } catch (e) { }
+        var weakTopics = [];
+        if (clusters && clusters.persistentWeak) {
+            for (var i = 0; i < Math.min(topN, clusters.persistentWeak.length); i++) {
+                weakTopics.push(clusters.persistentWeak[i].topic);
+            }
+        }
+        if (weakTopics.length === 0 && clusters && clusters.declining) {
+            for (var j = 0; j < Math.min(topN, clusters.declining.length); j++) {
+                weakTopics.push(clusters.declining[j].topic);
+            }
+        }
+        if (weakTopics.length === 0) return [];
+        var all = this._getAllBanks();
+        var results = [];
+        for (var t = 0; t < weakTopics.length; t++) {
+            var topicResults = this._filterByTopic(all, weakTopics[t]);
+            for (var r = 0; r < topicResults.length; r++) results.push(topicResults[r]);
+        }
+        return results;
+    },
+
+    _filterRecovery() {
+        return this._filterByCollection('recovery-candidates');
+    },
+
+    // ── Dedup by UniqueConceptKey, then shuffle ──
+    _dedupAndShuffle(questions) {
+        var seen = {};
+        var deduped = [];
+        for (var i = 0; i < questions.length; i++) {
+            var key = questions[i].UniqueConceptKey || questions[i].QuestionID;
+            if (!seen[key]) { seen[key] = true; deduped.push(questions[i]); }
+        }
+        var arr = deduped.slice();
+        for (var j = arr.length - 1; j > 0; j--) {
+            var k = Math.floor(Math.random() * (j + 1));
+            var tmp = arr[j]; arr[j] = arr[k]; arr[k] = tmp;
+        }
+        return arr;
+    },
+
+    // ── Resolve a quiz source label from filter ──
+    _resolveSourceLabel(filter, value) {
+        var domainLabels = { 'A': 'External Financial Reporting', 'B': 'Planning & Budgeting', 'C': 'Performance Management', 'D': 'Cost Management', 'E': 'Internal Controls', 'F': 'Technology & Analytics' };
+        if (filter === 'section' && domainLabels[value]) return domainLabels[value];
+        if (filter === 'section') return 'Section ' + value;
+        if (filter === 'topic') return 'Topic: ' + value;
+        if (filter === 'formula') return 'Formula: ' + value;
+        if (filter === 'weak') return 'Weakest Areas';
+        if (filter === 'recovery') return 'Recovery Candidates';
+        if (filter === 'collection') return 'Collection: ' + value;
+        return 'Selected Questions';
+    },
+
+    // ── Build question pool from filter ──
+    _buildPool(filter, value) {
+        var pool = [];
+        switch (filter) {
+            case 'section':
+                pool = this._filterBySection(this._getAllBanks(), value);
+                break;
+            case 'topic':
+                pool = this._filterByTopic(this._getAllBanks(), value);
+                break;
+            case 'formula':
+                pool = this._filterByTopic(this._getAllBanks(), value);
+                break;
+            case 'weak':
+                pool = this._filterWeakAreas(3);
+                break;
+            case 'recovery':
+                pool = this._filterRecovery();
+                break;
+            case 'collection':
+                pool = this._filterByCollection(value);
+                break;
+            case 'all':
+            default:
+                pool = this._getAllBanks();
+                break;
+        }
+        return this._dedupAndShuffle(pool);
+    },
+
+    // ── Start Quiz ──
+    startQuiz(filter, value, mode) {
+        mode = mode || 'knowledge';
+        var pool = this._buildPool(filter, value);
+        if (pool.length === 0) {
+            alert('No questions found for this selection. Try a different topic or complete more sessions for weak-area data.');
+            return false;
+        }
+        var count = Math.min(this.QUIZ_SIZE, pool.length);
+        var questions = pool.slice(0, count);
+        this.currentQuiz = {
+            questions: questions,
+            mode: mode,
+            currentIndex: 0,
+            results: [],
+            filter: filter,
+            filterValue: value || '',
+            sourceLabel: this._resolveSourceLabel(filter, value),
+            startedAt: new Date().toISOString()
+        };
+        this._renderActiveQuiz();
+        return true;
+    },
+
+    // ── Restart with same filter ──
+    restartQuiz() {
+        if (this.currentQuiz) {
+            this.startQuiz(this.currentQuiz.filter, this.currentQuiz.filterValue, this.currentQuiz.mode);
+        }
+    },
+
+    // ── End quiz and show results ──
+    endQuiz() {
+        if (!this.currentQuiz) return;
+        var quiz = this.currentQuiz;
+        this._saveQuizResult();
+        this._renderResults();
+        this.currentQuiz = null;
+    },
+
+    // ── Cancel quiz ──
+    cancelQuiz() {
+        if (this.currentQuiz && this.currentQuiz.results.length > 0) {
+            this._saveQuizResult();
+        }
+        this.currentQuiz = null;
+        this._renderSetup();
+    },
+
+    // ── Submit answer ──
+    submitAnswer(answerIndexOrText) {
+        var quiz = this.currentQuiz;
+        if (!quiz) return;
+        var q = quiz.questions[quiz.currentIndex];
+        var correct = q.CorrectChoice;
+        var isCorrect = false;
+        var userAnswer = null;
+
+        if (quiz.mode === 'knowledge') {
+            userAnswer = answerIndexOrText;
+            isCorrect = (userAnswer === correct);
+        } else {
+            // Socratic mode — compare text to correct choice text
+            userAnswer = (answerIndexOrText || '').trim();
+            var correctText = q.Choices && q.Choices[correct] ? q.Choices[correct].toLowerCase() : '';
+            // Fuzzy match: check if user answer contains key terms from correct choice
+            isCorrect = userAnswer.length > 0 && (userAnswer === correct.toLowerCase() || correctText.indexOf(userAnswer.toLowerCase()) !== -1 || this._socraticFuzzyMatch(userAnswer, correctText));
+        }
+
+        quiz.results.push({
+            question: q,
+            userAnswer: userAnswer,
+            isCorrect: isCorrect,
+            mode: quiz.mode,
+            timestamp: new Date().toISOString()
+        });
+
+        // Render feedback
+        this._renderFeedback(q, isCorrect, userAnswer);
+    },
+
+    _socraticFuzzyMatch(userAnswer, correctText) {
+        if (!userAnswer || !correctText) return false;
+        var userWords = userAnswer.toLowerCase().split(/\s+/).filter(function (w) { return w.length > 3; });
+        var correctWords = correctText.split(/\s+/).filter(function (w) { return w.length > 3; });
+        if (userWords.length === 0) return false;
+        var matchCount = 0;
+        for (var i = 0; i < userWords.length; i++) {
+            if (correctWords.indexOf(userWords[i]) !== -1) matchCount++;
+        }
+        return (matchCount / userWords.length) >= 0.5;
+    },
+
+    // ── Move to next question ──
+    nextQuestion() {
+        var quiz = this.currentQuiz;
+        if (!quiz) return;
+        quiz.currentIndex++;
+        if (quiz.currentIndex >= quiz.questions.length) {
+            this.endQuiz();
+        } else {
+            this._renderActiveQuiz();
+        }
+    },
+
+    // ── Save bookmark for current question ──
+    saveCurrentQuestion(collectionId) {
+        var quiz = this.currentQuiz;
+        if (!quiz) return;
+        var q = quiz.questions[quiz.currentIndex];
+        collectionId = collectionId || 'must-master';
+        CMAProfileManager.addToCollection(collectionId, q.QuestionID);
+    },
+
+    // ── Persist quiz history to profile ──
+    _saveQuizResult() {
+        var quiz = this.currentQuiz;
+        if (!quiz || quiz.results.length === 0) return;
+        var correct = 0;
+        for (var i = 0; i < quiz.results.length; i++) {
+            if (quiz.results[i].isCorrect) correct++;
+        }
+        var profile = CMAProfileManager.load();
+        if (!profile.mayQuizHistory) profile.mayQuizHistory = [];
+        profile.mayQuizHistory.push({
+            date: quiz.startedAt,
+            completedAt: new Date().toISOString(),
+            mode: quiz.mode,
+            sourceLabel: quiz.sourceLabel,
+            filter: quiz.filter,
+            filterValue: quiz.filterValue,
+            total: quiz.results.length,
+            correct: correct,
+            accuracy: Math.round(correct / Math.max(1, quiz.results.length) * 100),
+            questionIds: quiz.results.map(function (r) { return r.question.QuestionID; }),
+            topicSnapshot: this._computeTopicSnapshot(quiz.results)
+        });
+        if (profile.mayQuizHistory.length > 200) profile.mayQuizHistory = profile.mayQuizHistory.slice(-200);
+        CMAProfileManager.save(profile);
+    },
+
+    _computeTopicSnapshot(results) {
+        var snapshot = {};
+        for (var i = 0; i < results.length; i++) {
+            var topic = (results[i].question.Topic || results[i].question.MicroTopic || 'Unknown').split(' ').slice(0, 3).join(' ');
+            if (!snapshot[topic]) snapshot[topic] = { attempts: 0, correct: 0 };
+            snapshot[topic].attempts++;
+            if (results[i].isCorrect) snapshot[topic].correct++;
+        }
+        return snapshot;
+    },
+
+    getQuizHistory() {
+        var profile = CMAProfileManager.load();
+        return profile.mayQuizHistory || [];
+    },
+
+    // ── Quiz Setup UI ──
+    _renderSetup() {
+        var el = document.getElementById('coachView');
+        if (!el) return;
+        var sections = ['A', 'B', 'C', 'D', 'E', 'F'];
+        var sectionNames = { 'A': 'Ext. Financial Reporting', 'B': 'Planning & Budgeting', 'C': 'Performance Mgmt', 'D': 'Cost Management', 'E': 'Internal Controls', 'F': 'Tech & Analytics' };
+        var topicChips = ['COSO', 'variance', 'budget', 'cash flow', 'ratio', 'GAAP', 'cost', 'inventory', 'ethics', 'overhead', 'internal control', 'standard cost', 'transfer pricing', 'CVP', 'process costing'];
+        var quizHistory = this.getQuizHistory();
+        var recentAccuracy = null;
+        if (quizHistory.length > 0) {
+            var recent = quizHistory.slice(-5);
+            var totalC = 0, totalT = 0;
+            for (var i = 0; i < recent.length; i++) { totalC += recent[i].correct; totalT += recent[i].total; }
+            recentAccuracy = totalT > 0 ? Math.round(totalC / totalT * 100) : null;
+        }
+
+        var html = '<div class="may-quiz-setup">';
+        html += '<h3>&#128218; Quiz Me</h3>';
+        html += '<p class="may-quiz-setup-intro">Choose a topic below and I\'ll quiz you with real CMA Part 1 questions. No session required.</p>';
+
+        if (recentAccuracy !== null) {
+            var accCls = recentAccuracy >= 80 ? 'good' : recentAccuracy >= 60 ? '' : 'bad';
+            html += '<p class="small">Recent quiz accuracy: <span class="' + accCls + '">' + recentAccuracy + '%</span> (' + Math.min(5, quizHistory.length) + ' quizzes)</p>';
+        }
+
+        // Domain chips
+        html += '<div class="may-quiz-chip-row-label">By Domain</div>';
+        html += '<div class="may-quiz-chip-row" id="mayQuizDomainChips">';
+        for (var s = 0; s < sections.length; s++) {
+            html += '<button class="may-quiz-chip" data-filter="section" data-value="' + sections[s] + '" onclick="MayQuizController._selectChip(this,\'section\')">' + sections[s] + ': ' + sectionNames[sections[s]] + '</button>';
+        }
+        html += '</div>';
+
+        // Topic chips
+        html += '<div class="may-quiz-chip-row-label">By Topic</div>';
+        html += '<div class="may-quiz-chip-row" id="mayQuizTopicChips">';
+        for (var t = 0; t < topicChips.length; t++) {
+            html += '<button class="may-quiz-chip" data-filter="topic" data-value="' + topicChips[t] + '" onclick="MayQuizController._selectChip(this,\'topic\')">' + topicChips[t] + '</button>';
+        }
+        html += '</div>';
+
+        // Special collections
+        html += '<div class="may-quiz-chip-row-label">Special</div>';
+        html += '<div class="may-quiz-chip-row" id="mayQuizSpecialChips">';
+        html += '<button class="may-quiz-chip" data-filter="weak" data-value="" onclick="MayQuizController._selectChip(this,\'weak\')">&#128200; Weakest Areas</button>';
+        html += '<button class="may-quiz-chip" data-filter="recovery" data-value="" onclick="MayQuizController._selectChip(this,\'recovery\')">&#127919; Recovery Q\'s</button>';
+        html += '<button class="may-quiz-chip" data-filter="collection" data-value="must-master" onclick="MayQuizController._selectChip(this,\'collection\')">&#11088; Must Master</button>';
+        html += '<button class="may-quiz-chip" data-filter="collection" data-value="formula-review" onclick="MayQuizController._selectChip(this,\'collection\')">&#129518; Formula Review</button>';
+        html += '<button class="may-quiz-chip" data-filter="collection" data-value="technology-weaknesses" onclick="MayQuizController._selectChip(this,\'collection\')">&#128187; Tech Weaknesses</button>';
+        // User collections
+        var collections = CMAProfileManager.getCollections();
+        for (var cid in collections) {
+            if (collections[cid].type === 'user') {
+                html += '<button class="may-quiz-chip" data-filter="collection" data-value="' + cid + '" onclick="MayQuizController._selectChip(this,\'collection\')">&#128278; ' + collections[cid].name + '</button>';
+            }
+        }
+        html += '</div>';
+
+        // Mode selection
+        html += '<div style="margin-top:4px;"><div class="may-quiz-chip-row-label">Quiz Mode</div></div>';
+        html += '<div class="may-quiz-mode-row">';
+        html += '<button class="may-quiz-mode-btn selected" id="mayQuizModeKnowledge" onclick="MayQuizController._selectMode(\'knowledge\')"><div class="may-quiz-mode-btn-title">&#128196; Knowledge Check</div><div class="may-quiz-mode-btn-desc">Standard multiple choice with answer choices shown</div></button>';
+        html += '<button class="may-quiz-mode-btn" id="mayQuizModeSocratic" onclick="MayQuizController._selectMode(\'socratic\')"><div class="may-quiz-mode-btn-title">&#128161; Guided Socratic</div><div class="may-quiz-mode-btn-desc">No answer choices at first — type your answer, then see choices if needed</div></button>';
+        html += '</div>';
+
+        // Start button
+        html += '<button class="may-quiz-start-btn" id="mayQuizStartBtn" disabled onclick="MayQuizController._handleStart()">Start Quiz</button>';
+        html += '<p class="small" id="mayQuizSelectionHint" style="margin-top:8px;text-align:center;">Select a domain, topic, or collection above</p>';
+
+        html += '</div>';
+        el.innerHTML = html;
+        this._selectedFilter = null;
+        this._selectedValue = null;
+        this._selectedMode = 'knowledge';
+    },
+
+    _selectedFilter: null,
+    _selectedValue: null,
+    _selectedMode: 'knowledge',
+
+    _selectChip(btn, filter) {
+        // Deselect siblings in the same chip row
+        var row = btn.parentNode;
+        var chips = row.querySelectorAll('.may-quiz-chip');
+        for (var i = 0; i < chips.length; i++) chips[i].classList.remove('selected');
+
+        // If clicking the already-selected chip, deselect it
+        if (btn.classList.contains('selected')) {
+            btn.classList.remove('selected');
+            this._selectedFilter = null;
+            this._selectedValue = null;
+        } else {
+            btn.classList.add('selected');
+            this._selectedFilter = filter;
+            this._selectedValue = btn.getAttribute('data-value');
+            // Deselect chips in other rows
+            var allRows = document.querySelectorAll('.may-quiz-chip-row');
+            for (var r = 0; r < allRows.length; r++) {
+                if (allRows[r] !== row) {
+                    var otherChips = allRows[r].querySelectorAll('.may-quiz-chip');
+                    for (var c = 0; c < otherChips.length; c++) otherChips[c].classList.remove('selected');
+                }
+            }
+        }
+
+        this._updateStartButton();
+    },
+
+    _selectMode(mode) {
+        this._selectedMode = mode;
+        var knowledgeBtn = document.getElementById('mayQuizModeKnowledge');
+        var socraticBtn = document.getElementById('mayQuizModeSocratic');
+        if (knowledgeBtn) knowledgeBtn.classList.toggle('selected', mode === 'knowledge');
+        if (socraticBtn) socraticBtn.classList.toggle('selected', mode === 'socratic');
+    },
+
+    _updateStartButton() {
+        var btn = document.getElementById('mayQuizStartBtn');
+        var hint = document.getElementById('mayQuizSelectionHint');
+        if (btn) btn.disabled = !this._selectedFilter;
+        if (hint) hint.style.display = this._selectedFilter ? 'none' : 'block';
+    },
+
+    _handleStart() {
+        if (!this._selectedFilter) return;
+        this.startQuiz(this._selectedFilter, this._selectedValue, this._selectedMode);
+    },
+
+    // ── Active Quiz Rendering ──
+    _renderActiveQuiz() {
+        var quiz = this.currentQuiz;
+        if (!quiz) return;
+        var el = document.getElementById('coachView');
+        if (!el) return;
+        var q = quiz.questions[quiz.currentIndex];
+        var qNum = quiz.currentIndex + 1;
+        var total = quiz.questions.length;
+        var progressPct = Math.round((quiz.currentIndex) / total * 100);
+
+        var html = '<div class="may-quiz-active">';
+
+        // Progress
+        html += '<div class="may-quiz-progress-text"><span class="may-quiz-question-number">Question ' + qNum + ' of ' + total + '</span><span>' + quiz.sourceLabel + '</span></div>';
+        html += '<div class="may-quiz-progress-bar"><div class="may-quiz-progress-fill" style="width:' + progressPct + '%"></div></div>';
+
+        // Source tag
+        html += '<div class="may-quiz-source-tag">' + (q.Section || '') + ' &middot; ' + (q.Topic || 'Unknown topic') + '</div>';
+
+        // Stem
+        html += '<div class="may-quiz-stem">' + nl2br(q.Stem || '') + '</div>';
+
+        // Choices or Socratic input
+        if (quiz.mode === 'knowledge') {
+            html += this._renderKnowledgeChoices(q);
+        } else {
+            html += this._renderSocraticInput(q);
+        }
+
+        // Action buttons
+        html += '<div class="may-quiz-action-row">';
+        html += '<button class="may-quiz-save-btn" onclick="MayQuizController.saveCurrentQuestion(\'must-master\')">&#11088; Save</button>';
+        html += '<button class="may-quiz-end-btn" onclick="MayQuizController.cancelQuiz()">&#10005; End Quiz</button>';
+        html += '</div>';
+
+        html += '</div>';
+        el.innerHTML = html;
+
+        // Focus socratic input if applicable
+        if (quiz.mode === 'socratic') {
+            setTimeout(function () {
+                var input = document.getElementById('mayQuizSocraticInput');
+                if (input) input.focus();
+            }, 100);
+        }
+    },
+
+    _renderKnowledgeChoices(q) {
+        var letters = ['A', 'B', 'C', 'D'];
+        var html = '<div class="may-quiz-choices">';
+        for (var i = 0; i < letters.length; i++) {
+            var choiceText = q.Choices && q.Choices[letters[i]] ? q.Choices[letters[i]] : null;
+            if (!choiceText) continue;
+            html += '<button class="may-quiz-choice" onclick="MayQuizController.submitAnswer(\'' + letters[i] + '\')">';
+            html += '<span class="may-quiz-choice-letter">' + letters[i] + '</span>';
+            html += '<span class="may-quiz-choice-text">' + choiceText + '</span>';
+            html += '</button>';
+        }
+        html += '</div>';
+        return html;
+    },
+
+    _renderSocraticInput(q) {
+        var html = '<div class="may-quiz-socratic-area">';
+        html += '<div class="may-quiz-socratic-label">Type your answer:</div>';
+        html += '<input type="text" class="may-quiz-socratic-input" id="mayQuizSocraticInput" placeholder="Type your best answer..." onkeydown="if(event.key===\'Enter\')MayQuizController._submitSocratic()">';
+        html += '<button class="may-quiz-socratic-submit" onclick="MayQuizController._submitSocratic()">Submit Answer</button>';
+        html += '<button class="may-quiz-show-choices-btn" onclick="MayQuizController._showChoicesAsHint()">Show answer choices</button>';
+        html += '</div>';
+        return html;
+    },
+
+    _submitSocratic() {
+        var input = document.getElementById('mayQuizSocraticInput');
+        if (!input || !input.value.trim()) return;
+        this.submitAnswer(input.value);
+    },
+
+    _showChoicesAsHint() {
+        var quiz = this.currentQuiz;
+        if (!quiz) return;
+        var q = quiz.questions[quiz.currentIndex];
+        var letters = ['A', 'B', 'C', 'D'];
+        var html = '<div class="may-quiz-socratic-hint">Here are the answer choices — now select one:<br>';
+        for (var i = 0; i < letters.length; i++) {
+            var choiceText = q.Choices && q.Choices[letters[i]] ? q.Choices[letters[i]] : null;
+            if (!choiceText) continue;
+            html += '<br><button class="may-quiz-choice" onclick="MayQuizController.submitAnswer(\'' + letters[i] + '\')"><span class="may-quiz-choice-letter">' + letters[i] + '</span><span class="may-quiz-choice-text">' + choiceText + '</span></button>';
+        }
+        html += '</div>';
+        // Replace the socratic area with the hint + choices
+        var area = document.querySelector('.may-quiz-socratic-area');
+        if (area) area.outerHTML = html;
+    },
+
+    // ── Feedback Rendering ──
+    _renderFeedback(q, isCorrect, userAnswer) {
+        var quiz = this.currentQuiz;
+        if (!quiz) return;
+        var el = document.getElementById('coachView');
+        if (!el) return;
+        var correct = q.CorrectChoice;
+        var correctText = q.Choices && q.Choices[correct] ? q.Choices[correct] : '';
+        var qNum = quiz.currentIndex + 1;
+        var total = quiz.questions.length;
+        var progressPct = Math.round((quiz.currentIndex + 1) / total * 100);
+
+        var html = '<div class="may-quiz-active">';
+
+        // Progress
+        html += '<div class="may-quiz-progress-text"><span class="may-quiz-question-number">Question ' + qNum + ' of ' + total + '</span><span>' + quiz.sourceLabel + '</span></div>';
+        html += '<div class="may-quiz-progress-bar"><div class="may-quiz-progress-fill" style="width:' + progressPct + '%"></div></div>';
+        html += '<div class="may-quiz-source-tag">' + (q.Section || '') + ' &middot; ' + (q.Topic || 'Unknown topic') + '</div>';
+
+        // Stem — dimmed
+        html += '<div class="may-quiz-stem" style="opacity:0.7">' + nl2br(q.Stem || '') + '</div>';
+
+        // Show choices with correct/wrong highlighting
+        html += '<div class="may-quiz-choices">';
+        var letters = ['A', 'B', 'C', 'D'];
+        for (var i = 0; i < letters.length; i++) {
+            var choiceText = q.Choices && q.Choices[letters[i]] ? q.Choices[letters[i]] : null;
+            if (!choiceText) continue;
+            var cls = 'may-quiz-choice answered';
+            if (letters[i] === correct) cls += ' correct-choice';
+            if (quiz.mode === 'knowledge' && letters[i] === userAnswer && userAnswer !== correct) cls += ' wrong-choice';
+            html += '<div class="' + cls + '"><span class="may-quiz-choice-letter">' + letters[i] + '</span><span class="may-quiz-choice-text">' + choiceText + '</span></div>';
+        }
+        html += '</div>';
+
+        // Feedback box
+        if (isCorrect) {
+            html += '<div class="may-quiz-feedback correct">';
+            html += '<div class="may-quiz-feedback-label">&#10003; Correct!</div>';
+            html += '<div class="may-quiz-feedback-correct-answer">' + correct + ': ' + correctText + '</div>';
+            html += '</div>';
+        } else {
+            html += '<div class="may-quiz-feedback incorrect">';
+            html += '<div class="may-quiz-feedback-label">&#10007; Incorrect</div>';
+            if (quiz.mode === 'socratic') {
+                html += '<div>Your answer: "' + userAnswer + '"</div>';
+            }
+            html += '<div class="may-quiz-feedback-correct-answer">The correct answer is ' + correct + ': ' + correctText + '</div>';
+            // Show brief explanation snippet
+            var ec = q.ExplanationCorrect || '';
+            if (ec.length > 20) {
+                var snippet = ec.substring(0, 250);
+                if (ec.length > 250) snippet += '...';
+                html += '<div class="may-quiz-feedback-explanation">' + nl2br(snippet) + '</div>';
+            }
+            html += '</div>';
+        }
+
+        // Next button
+        var isLast = (quiz.currentIndex >= quiz.questions.length - 1);
+        html += '<div class="may-quiz-action-row">';
+        html += '<button class="may-quiz-save-btn" onclick="MayQuizController.saveCurrentQuestion(\'must-master\')">&#11088; Save</button>';
+        if (!isCorrect) {
+            html += '<button class="may-quiz-save-btn" onclick="MayQuizController.saveCurrentQuestion(\'recovery-candidates\')">&#127919; Save to Recovery</button>';
+        }
+        html += '<button class="may-quiz-end-btn" onclick="MayQuizController.endQuiz()">&#10005; End Quiz</button>';
+        html += '<button class="may-quiz-next-btn" onclick="MayQuizController.nextQuestion()">' + (isLast ? 'See Results &rarr;' : 'Next Question &rarr;') + '</button>';
+        html += '</div>';
+
+        html += '</div>';
+        el.innerHTML = html;
+    },
+
+    // ── Results Rendering ──
+    _renderResults() {
+        var quiz = this.currentQuiz || this._lastQuizForResults;
+        if (!quiz) return;
+        var el = document.getElementById('coachView');
+        if (!el) return;
+
+        var total = quiz.results.length;
+        var correct = 0;
+        for (var i = 0; i < total; i++) { if (quiz.results[i].isCorrect) correct++; }
+        var accuracy = total > 0 ? Math.round(correct / total * 100) : 0;
+        var scoreCls = accuracy >= 80 ? 'high' : accuracy >= 60 ? 'medium' : 'low';
+        var impactCls = accuracy >= 80 ? 'positive' : accuracy >= 60 ? 'neutral' : 'warning';
+        var impactMsg = accuracy >= 80 ? 'Strong performance! This topic area looks solid.' :
+            accuracy >= 60 ? 'Decent performance. Review the missed concepts to strengthen this area.' :
+                'This topic needs work. Consider a Recovery Sprint to address these gaps.';
+        var readyMsg = accuracy >= 80 ? 'Readiness Impact: +1' : accuracy >= 60 ? 'Readiness Impact: neutral' : 'Readiness Impact: -1';
+
+        var html = '<div class="may-quiz-results">';
+        html += '<div class="may-quiz-results-header">';
+        html += '<h3>Quiz Complete</h3>';
+        html += '<p>' + quiz.sourceLabel + ' &middot; ' + (quiz.mode === 'knowledge' ? 'Knowledge Check' : 'Guided Socratic') + '</p>';
+        html += '</div>';
+
+        // Score circle
+        html += '<div class="may-quiz-score-circle ' + scoreCls + '">';
+        html += '<span class="may-quiz-score-number">' + accuracy + '%</span>';
+        html += '<span class="may-quiz-score-label">Accuracy</span>';
+        html += '</div>';
+
+        // Stats
+        html += '<div class="may-quiz-results-stats">';
+        html += '<div class="may-quiz-results-stat"><div class="may-quiz-results-stat-value">' + total + '</div><div class="may-quiz-results-stat-label">Questions</div></div>';
+        html += '<div class="may-quiz-results-stat"><div class="may-quiz-results-stat-value">' + correct + '</div><div class="may-quiz-results-stat-label">Correct</div></div>';
+        html += '<div class="may-quiz-results-stat"><div class="may-quiz-results-stat-value">' + (total - correct) + '</div><div class="may-quiz-results-stat-label">Missed</div></div>';
+        html += '</div>';
+
+        // Impact
+        html += '<div class="may-quiz-results-impact ' + impactCls + '">';
+        html += '<strong>' + readyMsg + '</strong><br>' + impactMsg;
+        html += '</div>';
+
+        // Actions
+        html += '<div class="may-quiz-results-actions">';
+        html += '<button class="may-quiz-results-btn primary" onclick="MayQuizController.restartQuiz()">&#128260; Quiz Again</button>';
+        html += '<button class="may-quiz-results-btn secondary" onclick="MayQuizController._renderSetup()">&#128218; New Quiz</button>';
+        if (accuracy < 80) {
+            html += '<button class="may-quiz-results-btn danger" onclick="MayQuizController._launchRecoverySprint()">&#127919; Launch Recovery Sprint</button>';
+        }
+        html += '</div>';
+
+        // Review items
+        html += '<div class="may-quiz-results-review">';
+        var missedCount = 0;
+        for (var j = 0; j < quiz.results.length; j++) {
+            var r = quiz.results[j];
+            var q = r.question;
+            var reviewCls = r.isCorrect ? 'correct-review' : 'wrong-review';
+            if (r.isCorrect && accuracy >= 80) continue; // Skip correct if doing well
+            if (!r.isCorrect) missedCount++;
+            html += '<div class="may-quiz-review-item ' + reviewCls + '">';
+            html += '<div class="may-quiz-review-item-q">Q' + (j + 1) + ': ' + (r.isCorrect ? '&#10003; Correct' : '&#10007; Missed') + ' &middot; ' + (q.Section || '') + ' &middot; ' + (q.Difficulty || '') + '</div>';
+            html += '<div>' + nl2br((q.Stem || '').substring(0, 180)) + (q.Stem && q.Stem.length > 180 ? '...' : '') + '</div>';
+            if (!r.isCorrect) {
+                var cc = q.CorrectChoice;
+                var ct = q.Choices && q.Choices[cc] ? q.Choices[cc] : '';
+                html += '<div style="margin-top:4px;color:#ef4444;font-weight:600;">Correct: ' + cc + '. ' + ct.substring(0, 120) + '</div>';
+            }
+            html += '</div>';
+            if (missedCount >= 3 && r.isCorrect) break; // Limit review items
+        }
+        html += '</div>';
+
+        html += '</div>';
+        el.innerHTML = html;
+
+        // Store for navigation back to results
+        this._lastQuizForResults = quiz;
+    },
+
+    _launchRecoverySprint() {
+        var quiz = this.currentQuiz || this._lastQuizForResults;
+        if (!quiz) return;
+        // Save missed QIDs to recovery-candidates collection
+        for (var i = 0; i < quiz.results.length; i++) {
+            if (!quiz.results[i].isCorrect) {
+                CMAProfileManager.addToCollection('recovery-candidates', quiz.results[i].question.QuestionID);
+            }
+        }
+        // Launch recovery sprint
+        showView('studyView');
+        renderStudyView();
+        setTimeout(function () {
+            var recoveryEl = document.getElementById('recoveryCandidates');
+            if (recoveryEl) recoveryEl.scrollIntoView({ behavior: 'smooth' });
+        }, 200);
+    },
+
+    // ── Render quiz entry buttons in compact May view ──
+    _renderQuizEntries() {
+        var html = '';
+        html += '<div class="may-quiz-entries">';
+        html += '<button class="may-quiz-entry-btn" onclick="MayQuizController._renderSetup()"><span class="may-quiz-entry-icon">&#128218;</span> Quiz Me</button>';
+        html += '<button class="may-quiz-entry-btn" onclick="MayQuizController._selectedFilter=\'weak\';MayQuizController._selectedValue=\'\';MayQuizController.startQuiz(\'weak\',\'\',\'knowledge\')"><span class="may-quiz-entry-icon">&#128200;</span> Weak Areas</button>';
+        html += '<button class="may-quiz-entry-btn" onclick="MayQuizController._selectedFilter=\'recovery\';MayQuizController._selectedValue=\'\';MayQuizController.startQuiz(\'recovery\',\'\',\'knowledge\')"><span class="may-quiz-entry-icon">&#127919;</span> Recovery Quiz</button>';
+        html += '<button class="may-quiz-entry-btn" onclick="MayQuizController._renderSetup()"><span class="may-quiz-entry-icon">&#128278;</span> Collections</button>';
+        html += '</div>';
+        return html;
+    },
+
+    // ── Quick start quiz from a known filter ──
+    quickQuiz(filter, value, mode) {
+        this._selectedFilter = filter;
+        this._selectedValue = value || '';
+        this._selectedMode = mode || 'knowledge';
+        showView('coachView');
+        this.startQuiz(filter, value, mode);
+    }
+};
+
+// ── Override May compact coach to include quiz entries ──
+(function () {
+    var _origRenderCompactCoach = May && May._renderCompactCoach;
+    if (typeof May !== 'undefined') {
+        May._renderCompactCoach = function () {
+            var el = document.getElementById('coachView');
+            if (!el) return;
+            var quizEntries = MayQuizController._renderQuizEntries();
+            el.innerHTML = '<div class="may-compact">' +
+                '<div class="may-compact-avatar">M</div>' +
+                '<h3>May AI Coach</h3>' +
+                '<p>Ready to help you analyze performance, identify weaknesses, and build your study plan.</p>' +
+                quizEntries +
+                '<button class="may-compact-open" onclick="May.renderView()" style="margin-top:16px;">Open Full Coach</button>' +
+                '</div>';
+        };
+    }
+})();
 
 // ── S124: Help & Learning Center ──
 function renderHelpCenter() {
