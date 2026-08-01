@@ -6539,6 +6539,14 @@ function renderHomeView() {
     html += '<span class="home-card-cta">Open Coach &rarr;</span>';
     html += '</div>';
 
+    // Quiz card
+    html += '<div class="home-card home-card-quiz" onclick="showView(\'coachView\');MayQuizController._renderSetup()">';
+    html += '<div class="home-card-icon">&#128161;</div>';
+    html += '<h3>Quick Quiz</h3>';
+    html += '<p>5-question micro-quizzes on any domain, topic, or bookmark collection. Knowledge Check or Guided Socratic mode — no session required.</p>';
+    html += '<span class="home-card-cta">Quiz Me &rarr;</span>';
+    html += '</div>';
+
     // Analytics card
     html += '<div class="home-card home-card-analytics" onclick="showView(\'dashboardView\')">';
     html += '<div class="home-card-icon">&#128200;</div>';
@@ -6680,11 +6688,12 @@ May.Floating = {
     },
     _expand: function () {
         var btn = document.getElementById('mayFloatBtn');
+        // Read position BEFORE hiding the dot (hidden elements return zero rect)
+        var r = btn ? btn.getBoundingClientRect() : { left: window.innerWidth - 80, top: 72 };
         if (btn) btn.classList.remove('may-float-visible');
         var panel = document.createElement('div');
         panel.id = 'mayFloatingPanel';
         panel.className = 'may-floating-panel';
-        var r = btn ? btn.getBoundingClientRect() : { left: window.innerWidth - 100, top: 72 };
         var panelTop = r.top, panelLeft = Math.max(8, r.left - 160);
         panel.style.top = panelTop + 'px'; panel.style.left = panelLeft + 'px'; panel.style.right = 'auto';
         panel.innerHTML =
@@ -6697,10 +6706,11 @@ May.Floating = {
             '</div>';
         document.body.appendChild(panel);
         var self = this;
-        // Drag handle
+        // Drag handle — skip drag when clicking buttons
         var handle = document.getElementById('mayFloatingHandle');
         var dragging = false, sx = 0, sy = 0, bx = 0, by = 0;
         handle.onpointerdown = function (e) {
+            if (e.target.closest('button')) return; // let button clicks through
             dragging = true; sx = e.clientX; sy = e.clientY;
             var rect = panel.getBoundingClientRect();
             bx = rect.left; by = rect.top;

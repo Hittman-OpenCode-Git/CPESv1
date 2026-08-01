@@ -5715,6 +5715,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 
 .home-card-study { border-left: 4px solid #2563eb; }
 .home-card-coach { border-left: 4px solid #7c3aed; }
+.home-card-quiz { border-left: 4px solid #f59e0b; }
 .home-card-analytics { border-left: 4px solid #059669; }
 .home-card-collections { border-left: 4px solid #d97706; }
 .home-card-history { border-left: 4px solid #0ea5e9; }
