@@ -30634,4 +30634,31 @@ Documentation files (REVISION_HISTORY.md, DEFECT_LIBRARY.md, AGENTS.md, test ass
 - File moves only: 5 files relocated, ~38 script/config paths updated
 - Preflight: 0 divergences, 2451 certified, governance guard 66/66 PASS
 
+---
+
+## S129 — May Label Consistency + Admin Gate Session-Only — 2026-08-01
+
+**Type:** UI FIX — Governance Light Lane
+
+### 1. May AI Label Consistency
+
+**Issue:** The floating May button showed "AI Tutor" as its subtitle, while all 28 other user-facing labels in the application used "Coach" (e.g., "AI Review Coach", "May AI Coach", "Open Coach"). This was the only instance of "Tutor" in the user-facing UI.
+
+**Fix:** Changed `AI Tutor` → `AI Coach` in `index_updated.html`. Also fixed `tutor-layer breakdown` → `coaching breakdown` in `app/may/may-core.js`.
+
+### 2. Admin Gate Session-Only Persistence
+
+**Issue:** Operations Console activation persisted permanently via localStorage. Once activated, the Admin tab appeared on every page load, even after closing the browser.
+
+**Fix:** Changed `AdminGate` persistence from localStorage (profile-based) to sessionStorage (`cmaAdminGate` key). Activation now clears when the browser tab closes. Click counter state is now session-scoped (closure variable, not the learner profile).
+
+**Changed files:** `index_updated.html`, `app/may/may-core.js`, `app/app.js`
+
+### Governance Impact
+
+- 0 question_state changes
+- 0 answer-key changes
+- 0 pack-file modifications
+- UI-only changes (labels + persistence mechanism)
+
 

@@ -3378,7 +3378,7 @@ const May = {
         if (weakTopics.length > 0) {
             let [topic, v] = weakTopics[0];
             nextLines.push('- Focus session on **' + topic + '** (' + Math.round(v.c / v.n * 100) + '% recent accuracy) — review the governing rule, then work 5-6 items mixing concept and calculation.');
-            nextLines.push('- After each incorrect item, tap **Explain** to see the full tutor-layer breakdown — especially the common trap and pattern-recognition sections.');
+            nextLines.push('- After each incorrect item, tap **Explain** to see the full coaching breakdown — especially the common trap and pattern-recognition sections.');
             if (patterns.length > 0 && patterns[0].count >= 3) {
                 nextLines.push('- Watch for **' + (May.PATTERN_NAMES[patterns[0].pattern] || patterns[0].pattern) + '** — this has appeared ' + patterns[0].count + ' times. Review the boundary between the correct concept and this trap.');
             }

@@ -6454,16 +6454,23 @@ var GuidedTour = {
 var AdminGate = {
     REQUIRED_CLICKS: 5,
     CLICK_WINDOW_MS: 3000,
+    STORAGE_KEY: 'cmaAdminGate',
 
     init: function () {
-        var profile = CMAProfileManager.load();
-        if (!profile.onboarding) profile.onboarding = {};
-        if (profile.onboarding.adminActivated) {
+        if (this._isActivated()) {
             this._showAdmin();
         } else {
             this._hideAdmin();
             this._wireVersionTrigger();
         }
+    },
+
+    _isActivated: function () {
+        try { return sessionStorage.getItem(this.STORAGE_KEY) === '1'; } catch (e) { return false; }
+    },
+
+    _setActivated: function () {
+        try { sessionStorage.setItem(this.STORAGE_KEY, '1'); } catch (e) {}
     },
 
     _hideAdmin: function () {
@@ -6474,7 +6481,6 @@ var AdminGate = {
     _showAdmin: function () {
         var opsTab = document.querySelector('.tab[data-view="operationsView"]');
         if (opsTab) opsTab.style.display = '';
-        // Also add badge indicator
         if (opsTab && !opsTab.querySelector('.admin-badge')) {
             var badge = document.createElement('span');
             badge.className = 'admin-badge';
@@ -6486,26 +6492,21 @@ var AdminGate = {
 
     _wireVersionTrigger: function () {
         var self = this;
-        var profile = CMAProfileManager.load();
-        // Attach click counter to version display in settings
+        var clickState = { count: 0, timestamp: 0 };
         function checkClick() {
-            if (!profile.onboarding) profile.onboarding = {};
             var now = Date.now();
-            if (now - (profile.onboarding.adminClickTimestamp || 0) > self.CLICK_WINDOW_MS) {
-                profile.onboarding.adminClickCount = 0;
+            if (now - clickState.timestamp > self.CLICK_WINDOW_MS) {
+                clickState.count = 0;
             }
-            profile.onboarding.adminClickCount = (profile.onboarding.adminClickCount || 0) + 1;
-            profile.onboarding.adminClickTimestamp = now;
-            if (profile.onboarding.adminClickCount >= self.REQUIRED_CLICKS) {
-                profile.onboarding.adminActivated = true;
-                profile.onboarding.adminClickCount = 0;
-                CMAProfileManager.save(profile);
+            clickState.count += 1;
+            clickState.timestamp = now;
+            if (clickState.count >= self.REQUIRED_CLICKS) {
+                clickState.count = 0;
+                self._setActivated();
                 self._showAdmin();
                 alert('Admin console activated. You now have access to Operations, Governance, Portfolio, Repository, and Certification tools.');
             }
-            CMAProfileManager.save(profile);
         }
-        // Wire to settings version display
         window._adminGateClickHandler = checkClick;
     },
 
