@@ -789,8 +789,8 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 /* Floating desktop-style financial calculator */
 .floating-calculator {
   position: fixed;
-  top: 120px;
-  right: 22px;
+  top: 630px;
+  right: 209px;
   z-index: 300;
   width: clamp(200px, 60vw, 244px);
   margin: 0;
@@ -5984,8 +5984,8 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 
 .may-float-btn {
     position: fixed;
-    top: 136px;
-    right: 310px;
+    top: 396px;
+    right: 390px;
     width: 66px;
     height: 66px;
     border-radius: 50%;

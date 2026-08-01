@@ -746,7 +746,7 @@ function renderSettingsView() {
 
     // S124 — Version / admin gate trigger
     html += '<div class="settings-section"><h3>About</h3>';
-    html += '<p class="small"><span id="settingsVersionLabel" style="cursor:pointer;color:var(--text-muted)" title="Click for admin access">CMA Learning Platform v0.10.1-alpha</span></p>';
+    html += '<p class="small"><span id="settingsVersionLabel" style="cursor:default;color:var(--text-muted)">CMA Learning Platform v0.10.1-alpha</span></p>';
     html += '</div>';
 
     document.getElementById('settingsView').innerHTML = html;
@@ -2450,12 +2450,39 @@ const ExamSessionManager = {
         AnalyticsCollector.logEvent('session_submit', {});
         SessionPersistence.saveHistory();
         SessionPersistence.clear();
+        // S130 — Auto-save missed questions to recovery-candidates collection
+        this._saveMissedToCollection(state.session);
         this.renderSummary('priority');
         if (typeof May !== 'undefined') May.handoffCompletedSession(state.session);
         if (typeof MayTelemetry !== 'undefined') {
             var _attribC = window._mayAttributionCard;
             MayTelemetry.trackAdoption({ recommendationType: 'Session', cardId: 'session-complete', topic: '', presented: false, panelOpened: false, clicked: false, sessionStarted: false, completed: true, attributionCardId: (_attribC && _attribC.cardId) || null, attributionCardType: (_attribC && _attribC.recommendationType) || null, timestamp: new Date().toISOString() });
             window._mayAttributionCard = null;
+        }
+    },
+
+    // S130 — Auto-save all missed question IDs to recovery-candidates collection
+    _saveMissedToCollection(s) {
+        if (!s) return;
+        var missed = [];
+        // MCQs
+        s.mcqs.forEach(function (q) {
+            if (scoreMCQ(q, s.answers[q.QuestionID]) !== 1) {
+                missed.push(q.QuestionID);
+            }
+        });
+        // Case items
+        s.cases.forEach(function (c) {
+            c.Items.forEach(function (it, i) {
+                var key = ExamSessionManager.caseKey(c, i);
+                if (!ExamSessionManager.correctCase(it, s.caseAnswers[key])) {
+                    missed.push(key);
+                }
+            });
+        });
+        if (missed.length === 0) return;
+        for (var m = 0; m < missed.length; m++) {
+            CMAProfileManager.addToCollection('recovery-candidates', missed[m]);
         }
     },
 
@@ -5525,6 +5552,10 @@ function quickStart(mode) {
     updateTimeEstimate();
 }
 
+function setMode(mode) {
+    quickStart(mode);
+}
+
 function updateSliderNote() {
     let slider = $('difficultySlider');
     let note = $('sliderNote');
@@ -6484,7 +6515,6 @@ var AdminGate = {
         var handler = window._adminGateClickHandler;
         if (!handler) return;
         el.style.cursor = 'pointer';
-        el.title = 'Click for admin access';
         el.onclick = handler;
     }
 };
@@ -6647,7 +6677,7 @@ function renderStudyView() {
 // ── S130: May Floating Bubble & Compact Coach ──
 if (typeof May !== 'undefined') {
 May.Floating = {
-    _pos: { top: 136, right: 310 },
+    _pos: { top: 396, right: 390 },
     _init: function () {
         var btn = document.getElementById('mayFloatBtn');
         if (!btn) return;
@@ -6689,7 +6719,7 @@ May.Floating = {
     _expand: function () {
         var btn = document.getElementById('mayFloatBtn');
         // Read position BEFORE hiding the dot (hidden elements return zero rect)
-        var r = btn ? btn.getBoundingClientRect() : { left: window.innerWidth - 376, top: 136 };
+        var r = btn ? btn.getBoundingClientRect() : { left: window.innerWidth - 456, top: 396 };
         if (btn) btn.classList.remove('may-float-visible');
         var panel = document.createElement('div');
         panel.id = 'mayFloatingPanel';
@@ -7587,7 +7617,6 @@ function renderHelpCenter() {
     html += '<div class="help-card"><b>How many questions are there?</b> 2,545 multiple-choice questions across 5 question packs (A-E), plus 75 integrated case studies with ~5 items each. Content covers all 6 blueprint domains.</div>';
     html += '<div class="help-card"><b>Can I pause during an exam?</b> Yes, unless "Simulate Real Exam Conditions" is checked. Note: the real CMA exam does not allow pausing. This feature is a study aid only.</div>';
     html += '<div class="help-card"><b>Does May work offline?</b> May coaching runs entirely in your browser. No internet connection is required after the initial page load.</div>';
-    html += '<div class="help-card"><b>How do I access admin features?</b> Admin tools are hidden by default for normal learners. Go to Settings and rapidly click the version number 5 times to activate.</div>';
     html += '</div>';
 
     html += '</div>';
