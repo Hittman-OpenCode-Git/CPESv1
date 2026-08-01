@@ -5278,8 +5278,6 @@ window._mac = function(actionType, handlerName) {
 document.addEventListener('DOMContentLoaded', () => {
     CalculatorEngine.render();
     renderValidation();
-    // Session 96: Defer diagnostics until after manifest loads (~200ms for fetch)
-    setTimeout(renderDefectDiagnostics, 300);
 
     // S112 — Initialize unified learner profile and detect legacy data
     CMAProfileManager.init();
@@ -5302,10 +5300,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // S130 — Render Study view tab content
     renderStudyView();
 
-    // UX-4: Inject bookmark collections panel — now in Study view
+    // UX-4: Inject bookmark collections panel into left panel
     (function () {
-        var bcPanel = document.getElementById('bookmarkCollectionsPanel');
-        if (bcPanel) renderBookmarkCollections();
+        var setupPanel = document.querySelector('.setup-panel');
+        if (setupPanel) {
+            var bcPanel = document.createElement('div');
+            bcPanel.id = 'bookmarkCollectionsPanel';
+            bcPanel.className = 'collections-panel';
+            setupPanel.appendChild(bcPanel);
+            renderBookmarkCollections();
+        }
     })();
 
     // Check for saved session
@@ -5534,7 +5538,7 @@ function renderDefectDiagnostics() {
         html += '<span class="diag-warn">No manifest loaded — blocking is inactive. Verify governance files.</span><br>';
     }
 
-    var diag = document.getElementById('defectDiagnostics');
+    var diag = document.getElementById('operationsDiag');
     if (diag) diag.innerHTML = html;
 }
 
@@ -6043,6 +6047,7 @@ function renderOperationsView() {
     };
 
     var html = '<div class="ops-console">' +
+        '<div class="diag-panel" id="operationsDiag" aria-label="Delivery pool diagnostics">Loading diagnostics...</div>' +
         '<div class="ops-tabs">' +
             '<button class="ops-tab active" data-opspanel="governance">Governance</button>' +
             '<button class="ops-tab" data-opspanel="content">Content</button>' +
@@ -6058,6 +6063,9 @@ function renderOperationsView() {
     html += '</div>';
 
     el.innerHTML = html;
+
+    // S130 — Populate delivery pool diagnostics in Operations console
+    setTimeout(function () { renderDefectDiagnostics(); }, 100);
 
     // Render initial panel (governance)
     var activePanel = el.querySelector('.ops-panel[data-opspanel="governance"]');
@@ -6538,9 +6546,6 @@ function renderStudyView() {
             }
         } catch (e) { recoveryEl.innerHTML = '<p class="small">Missed questions will appear here after your first session.</p>'; }
     }
-
-    // Bookmark Collections
-    renderBookmarkCollections();
 }
 
 // ── S130: May Floating Bubble & Compact Coach ──

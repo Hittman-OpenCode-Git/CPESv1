@@ -296,7 +296,7 @@ a { color: var(--accent); }
 /* ===== Layout ===== */
 .layout {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 340px 1fr;
   gap: 16px;
   padding: 16px;
   max-width: 1400px;
@@ -316,12 +316,14 @@ a { color: var(--accent); }
   transition: background var(--transition), border var(--transition);
 }
 .setup-panel {
-  display: none;
+  padding: 16px;
+  height: fit-content;
+  position: sticky;
+  top: 68px;
 }
 .work-panel {
   min-height: 760px;
   overflow: hidden;
-  width: 100%;
 }
 
 /* ===== Tabs ===== */
@@ -6000,7 +6002,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .exam-integrity-mode .may-float-btn { display: none !important; }
 .exam-integrity-mode .tabs { display: none !important; }
 .exam-integrity-mode .hero { display: none !important; }
-.exam-integrity-mode #defectDiagnostics { display: none !important; }
+.exam-integrity-mode .setup-panel { display: none !important; }
 
 /* ============================================================
    S130 — Compact May Coach View
