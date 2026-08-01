@@ -5984,10 +5984,10 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 
 .may-float-btn {
     position: fixed;
-    top: 60px;
-    right: 20px;
-    width: 44px;
-    height: 44px;
+    top: 136px;
+    right: 310px;
+    width: 66px;
+    height: 66px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--accent), #7c3aed);
     color: #fff;
@@ -5999,7 +5999,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
     align-items: center;
     justify-content: center;
     transition: transform 0.2s, box-shadow 0.2s;
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 700;
 }
 .may-float-btn.may-float-visible { display: flex; }
@@ -6010,15 +6010,15 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 }
 
 .may-float-btn::before {
-    content: 'M';
+    content: 'May';
 }
 
 .may-float-dot {
     position: absolute;
-    top: 4px;
-    right: 4px;
-    width: 10px;
-    height: 10px;
+    top: 6px;
+    right: 6px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background: #34d399;
     border: 2px solid #fff;
