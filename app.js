@@ -6189,7 +6189,7 @@ var GuidedTour = {
         this.stepIndex = 0;
         this.tourType = tourType;
         this._createOverlay();
-        this._showStep(tour.steps[0]);
+        this._gotoStep(tour.steps[0]);
     },
 
     // ── Stop the tour ──
@@ -6215,14 +6215,30 @@ var GuidedTour = {
         if (!tour) return;
         this.stepIndex++;
         if (this.stepIndex >= tour.steps.length) { this.stop(true); return; }
-        this._showStep(tour.steps[this.stepIndex]);
+        this._gotoStep(tour.steps[this.stepIndex]);
     },
 
     prev: function () {
         var tour = this.TOURS[this.tourType];
         if (!tour || this.stepIndex <= 0) return;
         this.stepIndex--;
-        this._showStep(tour.steps[this.stepIndex]);
+        this._gotoStep(tour.steps[this.stepIndex]);
+    },
+
+    // ── Go to step with tab-switch wait ──
+    _gotoStep: function (step) {
+        var self = this;
+        // Switch to the target tab if needed
+        if (step.tab) {
+            if (typeof showView === 'function') showView(step.tab);
+            if (step.tab === 'studyView' && typeof renderStudyView === 'function') renderStudyView();
+            if (step.tab === 'dashboardView' && typeof PerformanceDashboard !== 'undefined') PerformanceDashboard.render();
+            if (step.tab === 'coachView' && typeof May !== 'undefined' && May._renderCompactCoach) May._renderCompactCoach();
+        }
+        // S130 — Wait for tab render + scroll-into-view before positioning
+        requestAnimationFrame(function () {
+            setTimeout(function () { self._showStep(step); }, 200);
+        });
     },
 
     // ── Create overlay DOM ──
@@ -6260,10 +6276,7 @@ var GuidedTour = {
     // ── Show a specific step ──
     _showStep: function (step) {
         var tour = this.TOURS[this.tourType];
-        // Switch to the target tab if needed
-        if (step.tab) {
-            if (typeof showView === 'function') showView(step.tab);
-        }
+
         // Position spotlight
         var targetEl = null;
         if (step.attach === 'header') {
@@ -6280,44 +6293,17 @@ var GuidedTour = {
             targetEl = document.getElementById(step.attach);
         }
         if (!targetEl) {
-            // Fall back to center-of-screen if target not found
             targetEl = document.querySelector('.work-panel') || document.querySelector('main.layout') || document.body;
         }
-        var rect = targetEl.getBoundingClientRect();
-        var margin = 8;
-        if (step.position === 'center') {
-            // Center spotlight on the element
-            var cx = rect.left + rect.width / 2;
-            var cy = rect.top + rect.height / 2;
-            var size = Math.max(rect.width, rect.height, 200) + 40;
-            this.__spotlightEl.style.left = (cx - size / 2) + 'px';
-            this.__spotlightEl.style.top = (cy - size / 2) + 'px';
-            this.__spotlightEl.style.width = size + 'px';
-            this.__spotlightEl.style.height = size + 'px';
-            this.__spotlightEl.style.borderRadius = '50%';
-            // Position tooltip below the element
-            this.__tooltipEl.style.left = Math.max(20, cx - 200) + 'px';
-            this.__tooltipEl.style.top = (rect.bottom + 16) + 'px';
-            this.__tooltipEl.style.width = '400px';
-        } else if (step.position === 'top') {
-            this.__spotlightEl.style.left = (rect.left - margin) + 'px';
-            this.__spotlightEl.style.top = (rect.top - margin) + 'px';
-            this.__spotlightEl.style.width = (rect.width + margin * 2) + 'px';
-            this.__spotlightEl.style.height = (rect.height + margin * 2) + 'px';
-            this.__spotlightEl.style.borderRadius = '8px';
-            this.__tooltipEl.style.left = Math.max(20, rect.left + rect.width / 2 - 200) + 'px';
-            this.__tooltipEl.style.top = (rect.top - 160 > 20 ? rect.top - 160 : rect.bottom + 16) + 'px';
-            this.__tooltipEl.style.width = '400px';
-        } else {
-            this.__spotlightEl.style.left = (rect.left - margin) + 'px';
-            this.__spotlightEl.style.top = (rect.top - margin) + 'px';
-            this.__spotlightEl.style.width = (rect.width + margin * 2) + 'px';
-            this.__spotlightEl.style.height = (rect.height + margin * 2) + 'px';
-            this.__spotlightEl.style.borderRadius = '8px';
-            this.__tooltipEl.style.left = Math.max(20, rect.left - 16) + 'px';
-            this.__tooltipEl.style.top = (rect.bottom + 16) + 'px';
-            this.__tooltipEl.style.width = Math.min(400, rect.width + 32) + 'px';
-        }
+
+        // S130 — Scroll target into view before positioning
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+
+        var self = this;
+        setTimeout(function () {
+            self._positionSpotlight(targetEl, step);
+        }, 300);
+
         // Update content
         document.getElementById('tourStepIndicator').textContent =
             (this.stepIndex + 1) + ' of ' + tour.steps.length;
@@ -6328,6 +6314,64 @@ var GuidedTour = {
         // Update next button text on last step
         var isLast = this.stepIndex >= tour.steps.length - 1;
         document.getElementById('tourNext').textContent = isLast ? 'Finish \u2713' : 'Next \u2192';
+    },
+
+    // ── Position spotlight and tooltip ──
+    _positionSpotlight: function (targetEl, step) {
+        var rect = targetEl.getBoundingClientRect();
+        var margin = 8;
+        var tooltipWidth = 400;
+
+        if (step.position === 'center') {
+            var cx = rect.left + rect.width / 2;
+            var cy = rect.top + rect.height / 2;
+            var size = Math.max(rect.width, rect.height, 200) + 40;
+            this.__spotlightEl.style.left = (cx - size / 2) + 'px';
+            this.__spotlightEl.style.top = (cy - size / 2) + 'px';
+            this.__spotlightEl.style.width = size + 'px';
+            this.__spotlightEl.style.height = size + 'px';
+            this.__spotlightEl.style.borderRadius = '50%';
+            var tx = cx - tooltipWidth / 2;
+            var ty = rect.bottom + 16;
+            var clamped = this._clampTooltip(tx, ty, tooltipWidth, this.__tooltipEl);
+            this.__tooltipEl.style.left = clamped.left + 'px';
+            this.__tooltipEl.style.top = clamped.top + 'px';
+            this.__tooltipEl.style.width = tooltipWidth + 'px';
+        } else if (step.position === 'top') {
+            this.__spotlightEl.style.left = (rect.left - margin) + 'px';
+            this.__spotlightEl.style.top = (rect.top - margin) + 'px';
+            this.__spotlightEl.style.width = (rect.width + margin * 2) + 'px';
+            this.__spotlightEl.style.height = (rect.height + margin * 2) + 'px';
+            this.__spotlightEl.style.borderRadius = '8px';
+            var tx2 = rect.left + rect.width / 2 - tooltipWidth / 2;
+            var ty2 = rect.top - 160 > 20 ? rect.top - 160 : rect.bottom + 16;
+            var clamped2 = this._clampTooltip(tx2, ty2, tooltipWidth, this.__tooltipEl);
+            this.__tooltipEl.style.left = clamped2.left + 'px';
+            this.__tooltipEl.style.top = clamped2.top + 'px';
+            this.__tooltipEl.style.width = tooltipWidth + 'px';
+        } else {
+            this.__spotlightEl.style.left = (rect.left - margin) + 'px';
+            this.__spotlightEl.style.top = (rect.top - margin) + 'px';
+            this.__spotlightEl.style.width = (rect.width + margin * 2) + 'px';
+            this.__spotlightEl.style.height = (rect.height + margin * 2) + 'px';
+            this.__spotlightEl.style.borderRadius = '8px';
+            var narrowWidth = Math.min(tooltipWidth, rect.width + 32);
+            var tx3 = rect.left - 16;
+            var ty3 = rect.bottom + 16;
+            var clamped3 = this._clampTooltip(tx3, ty3, narrowWidth, this.__tooltipEl);
+            this.__tooltipEl.style.left = clamped3.left + 'px';
+            this.__tooltipEl.style.top = clamped3.top + 'px';
+            this.__tooltipEl.style.width = narrowWidth + 'px';
+        }
+    },
+
+    // ── S130: Clamp tooltip within viewport ──
+    _clampTooltip: function (left, top, width, tooltipEl) {
+        var padding = 16;
+        var estHeight = tooltipEl ? tooltipEl.offsetHeight : 180;
+        left = Math.max(padding, Math.min(left, window.innerWidth - width - padding));
+        top = Math.max(padding, Math.min(top, window.innerHeight - estHeight - padding));
+        return { left: left, top: top };
     }
 };
 
