@@ -1,0 +1,121 @@
+Task: Author 15 CMA Part 2 multiple-choice questions for Domain C (Decision Analysis).
+
+You are acting as a CMA exam content author. You must produce 15 complete question JSON objects following the exact specifications below. Do not search the web — all necessary formulas, patterns, and rules are provided inline.
+
+---
+
+BATCH SPECIFICATION — 15 QIDs
+
+Q1: P2-C-001 | C.1 CVP breakeven units | Moderate(3) | Apply | Formula: DA-01 B/E units = FC / CM per Unit
+Q2: P2-C-002 | C.1 CVP breakeven dollars | Moderate(3) | Apply | Formula: DA-02 B/E $ = FC / CM Ratio
+Q3: P2-C-003 | C.1 CVP target profit units | Difficult(4) | Apply | Formula: DA-03 Target Profit = (FC + TP) / CM per Unit
+Q4: P2-C-004 | C.1 CVP margin of safety | Moderate(3) | Apply | Formula: DA-04 Margin of Safety = (Actual - BE) / Actual
+Q5: P2-C-005 | C.1 CVP operating leverage | Mod-Easy(2) | Understand | No formula (conceptual)
+Q6: P2-C-006 | C.1 CVP weighted average CM | Difficult(4) | Apply | Formula: DA-06 Multi-product WACM
+Q7: P2-C-007 | C.1 CVP breakeven concept | Easy(1) | Remember | No formula (definition)
+Q8: P2-C-008 | C.1 CVP assumptions | Mod-Easy(2) | Understand | No formula (conceptual)
+Q9: P2-C-009 | C.1 CVP sensitivity analysis | Difficult(4) | Apply | Formula: DA-03
+Q10: P2-C-010 | C.2 special order | Moderate(3) | Apply | Formula: DA-07 Shut-down point rules
+Q11: P2-C-011 | C.2 make-or-buy | Difficult(4) | Apply | Formula: DA-08 Process further rules
+Q12: P2-C-012 | C.2 sell-or-process | Difficult(4) | Apply | Formula: DA-08
+Q13: P2-C-013 | C.2 sunk cost concept | Easy(1) | Remember | No formula (definition)
+Q14: P2-C-014 | C.2 opportunity cost | Mod-Easy(2) | Understand | No formula (conceptual)
+Q15: P2-C-015 | C.4 add-or-drop segment | Moderate(3) | Apply | Formula: DA-07
+
+DISTRIBUTION TARGETS: Easy=2, Mod-Easy=3, Moderate=5, Difficult=5. Remember=2, Understand=3, Apply=10.
+ANSWER POSITIONS: distribute ~4 items each to A/B/C/D across the 15 items. No streak of 4+ same letter.
+
+---
+
+FORMULAS (DA-01 through DA-07)
+
+DA-01: Breakeven (units) = Fixed Costs / CM per Unit
+DA-02: Breakeven (dollars) = Fixed Costs / CM Ratio
+DA-03: Target Profit (units) = (Fixed Costs + Target Profit) / CM per Unit
+DA-04: Margin of Safety = (Actual Sales - BE Sales) / Actual Sales
+DA-05: Degree of Operating Leverage = CM / Operating Income
+DA-06: Multi-product WACM = sum of (Sales Mix % x CM per Unit) per product
+DA-07: Shut-down / Special order — accept if incremental revenue > incremental cost. Continue if Price >= Minimum AVC
+DA-08: Sell-or-process-further or Make-or-buy — proceed if incremental revenue > incremental cost (ignore sunk costs)
+
+---
+
+DISTRACTOR TRAPS (T1-T7)
+
+T1: Including sunk costs in analysis
+T2: Treating per-unit fixed costs as if variable
+T3: Using absorption/full cost for special-order pricing
+T4: Forgetting opportunity cost in make-or-buy
+T5: Applying joint costs to process-further decisions
+T6: Omitting capacity constraints in multi-product CVP
+T7: Using average instead of incremental cost
+
+---
+
+JSON SCHEMA (exact field order required)
+
+{
+  "Part": 2,
+  "Section": "C",
+  "Topic": "C.NNN descriptive-topic",
+  "QuestionID": "P2-C-NNN",
+  "question_state": "Unprocessed",
+  "Part2OnlyFlag": true,
+  "Stem": "business scenario text",
+  "Choices": { "A": "...", "B": "...", "C": "...", "D": "..." },
+  "CorrectChoice": "X",
+  "ExplanationCorrect": "full explanation, 200+ chars, names relevant costing authority",
+  "ExplanationWrongA": "distractor-specific text, 75+ chars, or empty if CorrectChoice is A",
+  "ExplanationWrongB": "distractor-specific text, 75+ chars, or empty if CorrectChoice is B",
+  "ExplanationWrongC": "distractor-specific text, 75+ chars, or empty if CorrectChoice is C",
+  "ExplanationWrongD": "distractor-specific text, 75+ chars, or empty if CorrectChoice is D",
+  "Difficulty": "Moderate",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Apply",
+  "CalculationItem": true,
+  "Type": "select",
+  "LOSTag": "C.1",
+  "BlueprintDomain": "Decision Analysis",
+  "FormulaReference": "DA-01 Breakeven (units) = Fixed Costs / CM per Unit",
+  "CommonTrapReference": "Including sunk costs in relevant-cost analysis",
+  "Authorities": ["IMA SMA on relevant costing"],
+  "VerificationChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty",
+    "Non-CC EW slots >= 75 chars",
+    "No boilerplate text",
+    "Difficulty justified",
+    "Independent answer derived",
+    "Authority citations match tested concept"
+  ]
+}
+
+---
+
+GOVERNANCE RULES (must follow)
+
+1. ExplanationWrong at the CorrectChoice letter: MUST be empty string "".
+2. All 3 non-CC ExplanationWrong slots: MUST be >= 75 characters, choice-specific text.
+3. No "No, ... should be investigated" type polarity mismatches.
+4. Part2OnlyFlag: true for all items.
+5. NO boilerplate: never use "represents a plausible misconception" or "A candidate may select this option by misapplying" or "does not align with CMA Part 1".
+
+---
+
+BUSINESS REALISM
+
+Use these company names: Atlas Manufacturing, Pine Ridge Components, Harbor Food Processors, Meridian Equipment, Northstar Analytics, Lakeside Medical Supply.
+Stakeholders: Controller, CFO, Operations Manager, VP of Manufacturing.
+Scenario openers: "The controller is evaluating...", "The VP of Manufacturing must decide...", "Management is analyzing..."
+
+---
+
+EXPLANATION TEMPLATE
+
+Correct: "Under relevant costing principles, only incremental costs and revenues are considered when evaluating [decision]. [Formula with values] = [result]. Therefore, [business interpretation]. A common error is [specific trap]."
+
+Wrong: "Option [letter] incorrectly [specific error]. A candidate selecting this option likely [misconception]. The correct approach is [contrast]. This is a common area of confusion between [two concepts]."
+
+---
+
+OUTPUT: A single JSON array containing all 15 question objects. Ready for insertion into pack_p2_c.js.

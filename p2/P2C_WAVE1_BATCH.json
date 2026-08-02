@@ -1,0 +1,37 @@
+{
+  "batchId": "P2C-WAVE1",
+  "session": "P2-C-001",
+  "pack": "pack_p2_c.js",
+  "part": 2,
+  "section": "C",
+  "domain": "Decision Analysis",
+  "items": [
+    { "qid": "P2-C-001", "los": "C.1", "topic": "CVP — breakeven units", "difficulty": "Moderate", "difficultyScore": 3, "cognitiveLevel": "Apply", "calculationItem": true, "formulaRef": "DA-01 Breakeven (units) = Fixed Costs / CM per Unit" },
+    { "qid": "P2-C-002", "los": "C.1", "topic": "CVP — breakeven dollars", "difficulty": "Moderate", "difficultyScore": 3, "cognitiveLevel": "Apply", "calculationItem": true, "formulaRef": "DA-02 Breakeven (dollars) = Fixed Costs / CM Ratio" },
+    { "qid": "P2-C-003", "los": "C.1", "topic": "CVP — target profit units", "difficulty": "Difficult", "difficultyScore": 4, "cognitiveLevel": "Apply", "calculationItem": true, "formulaRef": "DA-03 Target Profit (units) = (FC + Target Profit) / CM per Unit" },
+    { "qid": "P2-C-004", "los": "C.1", "topic": "CVP — margin of safety", "difficulty": "Moderate", "difficultyScore": 3, "cognitiveLevel": "Apply", "calculationItem": true, "formulaRef": "DA-04 Margin of Safety = (Actual Sales - BE Sales) / Actual Sales" },
+    { "qid": "P2-C-005", "los": "C.1", "topic": "CVP — operating leverage", "difficulty": "Moderate-Easy", "difficultyScore": 2, "cognitiveLevel": "Understand", "calculationItem": false, "formulaRef": "DA-05 Degree of Operating Leverage = CM / Operating Income" },
+    { "qid": "P2-C-006", "los": "C.1", "topic": "CVP — weighted average CM", "difficulty": "Difficult", "difficultyScore": 4, "cognitiveLevel": "Apply", "calculationItem": true, "formulaRef": "DA-06 Multi-product weighted average CM" },
+    { "qid": "P2-C-007", "los": "C.1", "topic": "CVP — breakeven concept", "difficulty": "Easy", "difficultyScore": 1, "cognitiveLevel": "Remember", "calculationItem": false, "formulaRef": "" },
+    { "qid": "P2-C-008", "los": "C.1", "topic": "CVP — assumptions and limitations", "difficulty": "Moderate-Easy", "difficultyScore": 2, "cognitiveLevel": "Understand", "calculationItem": false, "formulaRef": "" },
+    { "qid": "P2-C-009", "los": "C.1", "topic": "CVP — sensitivity analysis", "difficulty": "Difficult", "difficultyScore": 4, "cognitiveLevel": "Apply", "calculationItem": true, "formulaRef": "DA-03" },
+    { "qid": "P2-C-010", "los": "C.2", "topic": "Marginal analysis — special order", "difficulty": "Moderate", "difficultyScore": 3, "cognitiveLevel": "Apply", "calculationItem": true, "formulaRef": "DA-07 Shut-down point: Price >= Minimum AVC" },
+    { "qid": "P2-C-011", "los": "C.2", "topic": "Marginal analysis — make-or-buy", "difficulty": "Difficult", "difficultyScore": 4, "cognitiveLevel": "Apply", "calculationItem": true, "formulaRef": "DA-08 Sell-or-process-further: Incremental Revenue > Incremental Cost" },
+    { "qid": "P2-C-012", "los": "C.2", "topic": "Marginal analysis — sell-or-process", "difficulty": "Difficult", "difficultyScore": 4, "cognitiveLevel": "Apply", "calculationItem": true, "formulaRef": "DA-08" },
+    { "qid": "P2-C-013", "los": "C.2", "topic": "Marginal analysis — concept (sunk costs)", "difficulty": "Easy", "difficultyScore": 1, "cognitiveLevel": "Remember", "calculationItem": false, "formulaRef": "" },
+    { "qid": "P2-C-014", "los": "C.2", "topic": "Marginal analysis — opportunity cost", "difficulty": "Moderate-Easy", "difficultyScore": 2, "cognitiveLevel": "Understand", "calculationItem": false, "formulaRef": "" },
+    { "qid": "P2-C-015", "los": "C.4", "topic": "Relevant costing — add-or-drop segment", "difficulty": "Moderate", "difficultyScore": 3, "cognitiveLevel": "Apply", "calculationItem": true, "formulaRef": "DA-07" }
+  ],
+  "targets": {
+    "totalItems": 15,
+    "difficultyDistribution": { "Easy": 2, "Moderate-Easy": 3, "Moderate": 5, "Difficult": 5 },
+    "cognitiveDistribution": { "Remember": 2, "Understand": 3, "Apply": 10 },
+    "answerPositionBalance": "Target ~4 items each at A/B/C/D across the 15 items",
+    "calculationItems": 11,
+    "conceptualItems": 4,
+    "losCoverage": { "C.1": 9, "C.2": 5, "C.4": 1 }
+  },
+  "outputFile": "p2/pack_p2_c.js",
+  "packArrayVar": "pack_p2_c_questions",
+  "commitMessage": "P2C-WAVE1: P2-C-001 through P2-C-015 — CVP analysis, marginal analysis, relevant costing (15 items)"
+}

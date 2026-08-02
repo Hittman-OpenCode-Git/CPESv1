@@ -1,0 +1,40 @@
+{
+  "Part": 2,
+  "Section": "C",
+  "Topic": "C.010 Marginal analysis — special order decision",
+  "QuestionID": "P2-C-010",
+  "question_state": "Unprocessed",
+  "Part2OnlyFlag": true,
+  "Stem": "Atlas Manufacturing normally sells its product for $45 per unit. Current production and sales are 20,000 units per year, well below the plant's capacity of 30,000 units. Variable costs are $30 per unit (direct materials $12, direct labor $8, variable overhead $5, variable selling costs $5). Total annual fixed costs are $400,000. A one-time special order from an international buyer offers to purchase 2,500 units at $29 per unit. The order would incur no variable selling costs and would have no effect on regular sales. The controller must recommend whether to accept or reject the order.",
+  "Choices": {
+    "A": "Accept, because the special order contributes $10,000 toward fixed costs and profit.",
+    "B": "Reject, because the special order price of $29 is below the full absorption cost per unit of $50, resulting in a loss on each unit sold.",
+    "C": "Reject, because the special order price of $29 is below the normal selling price of $45, and accepting special orders below market price damages the company's pricing power.",
+    "D": "Accept, because the incremental revenue of $72,500 covers both the variable and allocated fixed costs, leaving a positive margin."
+  },
+  "CorrectChoice": "A",
+  "ExplanationCorrect": "Under relevant costing principles, only incremental costs and revenues matter for special-order decisions. The relevant variable cost is $25 per unit ($30 total variable cost minus $5 variable selling costs avoided on this order). Incremental revenue = 2,500 × $29 = $72,500. Incremental cost = 2,500 × $25 = $62,500. Net contribution = $72,500 − $62,500 = $10,000. Since the order generates positive contribution margin and there is idle capacity, it should be accepted. Fixed costs are irrelevant — they will be incurred whether or not the order is accepted. The $5 variable selling cost per unit is also irrelevant because the international buyer's order incurs no selling costs. A common error is using full absorption cost (which includes allocated fixed costs) as the decision criterion, which incorrectly suggests the order should be rejected.",
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "Full absorption cost per unit = Variable cost + (Fixed costs ÷ Normal volume) = $30 + ($400,000 ÷ 20,000) = $30 + $20 = $50. While $29 is below $50, the $20 of allocated fixed costs per unit is irrelevant to the decision — fixed costs totaling $400,000 will be incurred regardless. Relevant-cost analysis compares only incremental revenue ($72,500) against incremental cost ($62,500), yielding a positive contribution of $10,000. A candidate selecting this option is applying absorption-costing logic to a marginal-analysis decision, a common confusion between external financial reporting and internal decision-making frameworks.",
+  "ExplanationWrongC": "The normal selling price of $45 is irrelevant to this decision because the special order represents an independent market segment (international buyer) that would not otherwise purchase the product at any price. Accepting the order does not cannibalize regular sales and does not affect the regular market price. The existence of idle capacity means the company can serve both markets without trade-offs. A candidate selecting this option is treating pricing-strategy concerns as decision factors when the relevant question is simply whether incremental revenue exceeds incremental cost.",
+  "ExplanationWrongD": "The incremental cost analysis does not include allocated fixed costs — only the incremental variable costs of $25 per unit matter. Total incremental costs = 2,500 × $25 = $62,500. Incremental revenue = $72,500. The net contribution is $10,000, not a 'positive margin after covering variable and allocated fixed costs.' Allocated fixed costs per unit are not incremental and should be excluded from the analysis. A candidate making this error has accepted the order for the right conclusion but using flawed reasoning — including sunk or unavoidable costs in the incremental calculation.",
+  "Difficulty": "Moderate",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Apply",
+  "CalculationItem": true,
+  "Type": "select",
+  "LOSTag": "C.2",
+  "BlueprintDomain": "Decision Analysis",
+  "FormulaReference": "DA-07: Accept special order if incremental revenue > incremental cost",
+  "CommonTrapReference": "T3: Using absorption unit cost for special-order pricing",
+  "Authorities": ["IMA SMA on relevant costing"],
+  "VerificationChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty",
+    "Non-CC EW slots >= 75 chars",
+    "No boilerplate text",
+    "Difficulty justified",
+    "Independent answer derived: (2,500 × $29) − (2,500 × $25) = $72,500 − $62,500 = $10,000",
+    "Authority citations match tested concept"
+  ]
+}
