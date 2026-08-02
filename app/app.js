@@ -2090,6 +2090,8 @@ const ExamSessionManager = {
 
         let result = [];
         let usedKeys = new Set();
+        let usedTopicClusters = new Set();
+        let sectionPicks = {};
         let tierCounts = {};
 
         let diffLabels = Object.keys(distribution).sort((a, b) => (distribution[b] || 0) - (distribution[a] || 0));
@@ -2114,11 +2116,22 @@ const ExamSessionManager = {
                     let simKey = q._similarityKey || q.UniqueConceptKey || this._fallbackSimKey(q) || q.QuestionID;
                     return !usedKeys.has(simKey);
                 });
+                candidates.sort((a, b) => {
+                    let ca = this._topicClusterKey(a);
+                    let cb = this._topicClusterKey(b);
+                    let aNew = ca && !usedTopicClusters.has(ca) ? 0 : 1;
+                    let bNew = cb && !usedTopicClusters.has(cb) ? 0 : 1;
+                    if (aNew !== bNew) return aNew - bNew;
+                    return (sectionPicks[a.Section] || 0) - (sectionPicks[b.Section] || 0);
+                });
                 candidates = candidates.slice(0, target - filled);
 
                 for (let q of candidates) {
                     let simKey = q._similarityKey || q.UniqueConceptKey || this._fallbackSimKey(q) || q.QuestionID;
                     usedKeys.add(simKey);
+                    let tc = this._topicClusterKey(q);
+                    if (tc) usedTopicClusters.add(tc);
+                    sectionPicks[q.Section] = (sectionPicks[q.Section] || 0) + 1;
                     tierCounts[q._tier || 3] = (tierCounts[q._tier || 3] || 0) + 1;
                 }
                 result.push(...candidates);
@@ -2129,11 +2142,23 @@ const ExamSessionManager = {
         // ---- Fill remaining count if short (fall through all tiers) ----
         let needed = count - result.length;
         if (needed > 0) {
-            let remaining = shuffle(pool.filter(q =>
+            let remaining = pool.filter(q =>
                 !usedKeys.has(q._similarityKey || q.UniqueConceptKey || this._fallbackSimKey(q) || q.QuestionID)
-            ));
+            );
+            remaining.sort((a, b) => {
+                let ca = this._topicClusterKey(a);
+                let cb = this._topicClusterKey(b);
+                let aNew = ca && !usedTopicClusters.has(ca) ? 0 : 1;
+                let bNew = cb && !usedTopicClusters.has(cb) ? 0 : 1;
+                if (aNew !== bNew) return aNew - bNew;
+                return (sectionPicks[a.Section] || 0) - (sectionPicks[b.Section] || 0);
+            });
+            remaining = shuffle(remaining);
             for (let q of remaining.slice(0, needed)) {
                 tierCounts[q._tier || 3] = (tierCounts[q._tier || 3] || 0) + 1;
+                let tc = this._topicClusterKey(q);
+                if (tc) usedTopicClusters.add(tc);
+                sectionPicks[q.Section] = (sectionPicks[q.Section] || 0) + 1;
             }
             result.push(...remaining.slice(0, needed));
         }
@@ -2372,6 +2397,17 @@ const ExamSessionManager = {
             .substring(0, 60);
         let topicCore = (q.Topic || '').replace(/^[A-F]\.?\d*\s*/i, '').replace(/\s+\d+$/, '').trim();
         return stemFp + '|' + topicCore + '|' + (q.Section || '');
+    },
+
+    _topicClusterKey(q) {
+        if (q.pedagogical_cluster) return 'pc:' + q.pedagogical_cluster;
+        let cluster = (q.Topic || '')
+            .replace(/^[A-F]\.?\d*\s+/, '')
+            .replace(/\s+\d+$/, '')
+            .trim()
+            .toLowerCase();
+        if (cluster) return 'tc:' + cluster + '|' + (q.Section || '');
+        return null;
     },
 
     weightedPick(pool, count, sections) {
