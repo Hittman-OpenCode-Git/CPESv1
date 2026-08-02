@@ -1778,6 +1778,31 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   white-space: pre-line;
   color: var(--text);
 }
+.review-section-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+  font-size: 0.82rem;
+  table-layout: fixed;
+}
+.review-section-body th,
+.review-section-body td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.review-section-body th {
+  background: var(--surface-alt);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+.review-section-body tr:nth-child(even) td {
+  background: var(--surface-alt);
+}
 .review-section.review-why-correct .review-section-label {
   color: var(--success);
 }
@@ -6102,6 +6127,10 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .exam-integrity-mode .tabs { display: none !important; }
 .exam-integrity-mode .hero { display: none !important; }
 .exam-integrity-mode .setup-panel { display: none !important; }
+.exam-integrity-mode .collection-save-btn { display: none !important; }
+.exam-integrity-mode .confidence-row { display: none !important; }
+.exam-integrity-mode .guess { display: none !important; }
+.exam-integrity-mode .composition-note { display: none !important; }
 
 /* ============================================================
    S130 — Session Active Mode (hide setup panel during any active session)

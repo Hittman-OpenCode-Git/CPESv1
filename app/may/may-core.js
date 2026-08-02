@@ -948,14 +948,18 @@ const May = {
 
     // ── Return whether the full May tab should be blocked ─
     isFullTabBlocked() {
-        if (typeof state !== 'undefined' && state.session && !state.session.completed) {
-            if (state.session.mode !== 'full') return false;
-            // Only block when the exam has actually started (questions are loaded)
-            let hasQuestions = (state.session.mcqs && state.session.mcqs.length > 0) ||
-                               (state.session.cases && state.session.cases.length > 0);
-            return hasQuestions;
-        }
-        return false;
+        if (typeof state === 'undefined' || !state.session || state.session.completed) return false;
+        // W1-A — Delegate exam-state derivation to the shared single source
+        // (app.js isExamIntegrityMode). Falls back to legacy inline logic if
+        // the helper is unavailable (load-order safety).
+        let integrityMode = (typeof isExamIntegrityMode === 'function')
+            ? isExamIntegrityMode(state.session)
+            : (state.session.mode === 'full');
+        if (!integrityMode) return false;
+        // Only block when the exam has actually started (questions are loaded)
+        let hasQuestions = (state.session.mcqs && state.session.mcqs.length > 0) ||
+                           (state.session.cases && state.session.cases.length > 0);
+        return hasQuestions;
     },
 
     _updateDisplayName() {
@@ -4493,7 +4497,12 @@ const May = {
             // Session 88: If review questions are loaded (post-session handoff), show review greeting
             let hasReview = this.context.reviewQuestions && this.context.reviewQuestions.length > 0;
             // Check if CMA Exam mode is active and offer pre-exam briefing
-            let isExamMode = typeof state !== 'undefined' && state.session && state.session.mode === 'full' && !state.session.completed;
+            // W1-B — derived from the shared isExamIntegrityMode source
+            let cur = typeof state !== 'undefined' ? state.session : null;
+            let isExamMode = !!(cur && !cur.completed) &&
+                (typeof isExamIntegrityMode === 'function'
+                    ? isExamIntegrityMode(cur)
+                    : cur.mode === 'full');
             if (hasReview) {
                 let mCqCount = this.context.reviewQuestions.filter(r => r.type === 'mcq').length;
                 let caseCount = this.context.reviewQuestions.filter(r => r.type === 'case').length;
@@ -6794,7 +6803,10 @@ const May = {
         if (!launcher) return;
 
         var hasActive = (typeof state !== 'undefined' && state.session && !state.session.completed);
-        var isExamMode = hasActive && state.session && state.session.mode === 'full';
+        // W1-B — derived from the shared isExamIntegrityMode source
+        var isExamMode = hasActive && (typeof isExamIntegrityMode === 'function'
+            ? isExamIntegrityMode(state.session)
+            : state.session.mode === 'full');
 
         // During MCQ session: mini panel is present at bottom-right — reposition launcher above it
         var miniPanel = document.getElementById('mayMini');

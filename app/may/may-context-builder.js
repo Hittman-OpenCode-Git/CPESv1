@@ -76,6 +76,24 @@ const MayContextBuilder = (function() {
   }
 
   /**
+   * W1-B — Unified exam-state signal for the context layer.
+   * Exam state is derived from the single shared source of truth
+   * (app.js isExamIntegrityMode). Prefer May.isFullTabBlocked(), which
+   * composes that source with session-lifecycle guards (in-progress +
+   * questions loaded + not completed); fall back to direct derivation
+   * with the completed-session guard for standalone/load-order safety.
+   */
+  function _isExamIntegrityActive() {
+    if (typeof May !== 'undefined' && typeof May.isFullTabBlocked === 'function') {
+      try { return !!May.isFullTabBlocked(); } catch (e) { /* fall through */ }
+    }
+    const cur = (typeof state !== 'undefined') ? state.session : null;
+    if (!cur || cur.completed) return false;
+    if (typeof isExamIntegrityMode === 'function') return !!isExamIntegrityMode(cur);
+    return cur.mode === 'full';
+  }
+
+  /**
    * Get current app/session state.
    */
   function _getAppState() {
@@ -98,9 +116,12 @@ const MayContextBuilder = (function() {
         state.tutoringPilotEnabled = May.config.tutoringPilotEnabled || false;
         state.coachingTabOpen = May._coachingTabOpen || false;
         state.miniPanelOpen = May._miniPanelOpen || false;
-        state.examModeActive = May._examModeActive || false;
       }
     } catch (e) { /* not loaded */ }
+
+    // W1-B — examModeActive now derives from the unified source (was the
+    // never-set May._examModeActive, which made exam_briefing routing dead).
+    state.examModeActive = _isExamIntegrityActive();
 
     return state;
   }
@@ -262,8 +283,14 @@ const MayContextBuilder = (function() {
    * @returns {Object} AppContext
    */
   function buildAppContext() {
+    const mayConfig = _getAppState();
     return {
-      mayConfig: _getAppState(),
+      mayConfig: mayConfig,
+      // W1-B — expose examModeActive at the AppContext top level so
+      // _recommendMode's `a.examModeActive` check resolves (the flag was
+      // previously only nested under mayConfig, making exam_briefing
+      // routing unreachable even when the underlying signal was live).
+      examModeActive: mayConfig.examModeActive,
       defectManifestVersion: null,
       questionBankHash: null,
       screenWidth: typeof window !== 'undefined' ? window.innerWidth : 1200,

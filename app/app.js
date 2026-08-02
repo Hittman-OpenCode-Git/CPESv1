@@ -1938,6 +1938,15 @@ function scoreMCQ(item, ans) {
 // ============================================================
 // ExamSessionManager
 // ============================================================
+// W1-A — Single source of truth for exam-integrity mode derivation.
+// A session is in exam-integrity mode when it is a full exam OR real
+// exam conditions are active. Used by start, resume, restore, and
+// May gating so every consumer derives the same signal.
+function isExamIntegrityMode(session) {
+    if (!session) return false;
+    return session.mode === 'full' || session.realConditions === true;
+}
+
 const ExamSessionManager = {
     start(e) {
         e.preventDefault();
@@ -1998,6 +2007,7 @@ const ExamSessionManager = {
             id: Date.now().toString(36),
             mode,
             sections: secs,
+            realConditions: !!($('realConditions') && $('realConditions').checked),
             mcqs,
             cases: allCases,
             qIndex: 0,
@@ -2026,7 +2036,7 @@ const ExamSessionManager = {
         AnalyticsCollector.logEvent('session_start', { mode, mcqs: mcqs.length, cases: allCases.length });
         SessionPersistence.clear();
         // S130 — Exam Integrity Mode: hide non-exam UI during Full Exam or real-conditions
-        if (mode === 'full' || ($('realConditions') && $('realConditions').checked)) {
+        if (isExamIntegrityMode(state.session)) {
             document.body.classList.add('exam-integrity-mode');
         }
         document.body.classList.add('session-active');
@@ -2423,8 +2433,7 @@ const ExamSessionManager = {
     },
 
     pause() {
-        if (!state.session || state.session.mode === 'full') return;
-        if ($('realConditions')?.checked) return;
+        if (!state.session || isExamIntegrityMode(state.session)) return;
         state.session.paused = !state.session.paused;
         if (state.session.paused) {
             clearInterval(timerInt);
@@ -2564,12 +2573,12 @@ const ExamSessionManager = {
             <div class="exam-top">
               <span>Item ${s.qIndex + 1} of ${s.mcqs.length + s.cases.length} <span class="item-id">${q.QuestionID}</span></span>
               <div class="exam-top-right">
-                ${s.mode !== 'full' && !($('realConditions')?.checked) ? `<button id="pauseBtn" class="btn-icon" title="${s.paused ? 'Resume' : 'Pause'}">${s.paused ? '\u25B6' : '\u23F8'}</button>` : ''}
+                ${!isExamIntegrityMode(s) ? `<button id="pauseBtn" class="btn-icon" title="${s.paused ? 'Resume' : 'Pause'}">${s.paused ? '\u25B6' : '\u23F8'}</button>` : ''}
                 <span class="timerblock"><span>Time remaining</span><span class="timer${this.remaining() < 300 ? (this.remaining() < 60 ? ' danger' : ' warning') : ''}">${fmt(this.remaining())}</span></span>
               </div>
             </div>
             ${s.paused ? '<div class="pause-overlay"><div class="pause-modal"><h2>Session Paused</h2><p>Your session has been paused. Timer, autosave, and navigation timer have been suspended.</p><div class="pause-disclaimer"><strong>Important:</strong> The official CMA exam does not allow pausing. The timer runs continuously in the real testing environment. This pause feature is a study aid provided by the simulator only.</div><button id="resumeBtn" class="primary">Resume Session</button></div></div>' : ''}
-            ${s.mode !== 'full' && $('realConditions')?.checked ? '<div class="exam-notice">Simulate Real Exam Conditions is active. Pause is disabled. Timer runs continuously.</div>' : ''}
+            ${s.mode !== 'full' && s.realConditions === true ? '<div class="exam-notice">Simulate Real Exam Conditions is active. Pause is disabled. Timer runs continuously.</div>' : ''}
             <div class="timer-bar"><div class="timer-bar-fill${this.remaining() < 300 ? (this.remaining() < 60 ? ' danger' : ' warning') : ''}" style="width:${Math.max(0, Math.min(100, (1 - this.remaining() / s.duration) * 100))}%"></div></div>
             ${this.compositionNoteHtml()}
             <article class="item-card">
@@ -2780,12 +2789,12 @@ const ExamSessionManager = {
             <div class="exam-top">
               <span>Case ${s.caseIndex + 1} of ${s.cases.length}</span>
               <div class="exam-top-right">
-                ${s.mode !== 'full' && !($('realConditions')?.checked) ? `<button id="pauseBtn" class="btn-icon" title="${s.paused ? 'Resume' : 'Pause'}">${s.paused ? '\u25B6' : '\u23F8'}</button>` : ''}
+                ${!isExamIntegrityMode(s) ? `<button id="pauseBtn" class="btn-icon" title="${s.paused ? 'Resume' : 'Pause'}">${s.paused ? '\u25B6' : '\u23F8'}</button>` : ''}
                 <span class="timerblock"><span>Time remaining</span><span class="timer${this.remaining() < 300 ? (this.remaining() < 60 ? ' danger' : ' warning') : ''}">${fmt(this.remaining())}</span></span>
               </div>
             </div>
             ${s.paused ? '<div class="pause-overlay"><div class="pause-modal"><h2>Session Paused</h2><p>Your session has been paused. Timer, autosave, and navigation timer have been suspended.</p><div class="pause-disclaimer"><strong>Important:</strong> The official CMA exam does not allow pausing. The timer runs continuously in the real testing environment. This pause feature is a study aid provided by the simulator only.</div><button id="resumeBtn" class="primary">Resume Session</button></div></div>' : ''}
-            ${s.mode !== 'full' && $('realConditions')?.checked ? '<div class="exam-notice">Simulate Real Exam Conditions is active. Pause is disabled. Timer runs continuously.</div>' : ''}
+            ${s.mode !== 'full' && s.realConditions === true ? '<div class="exam-notice">Simulate Real Exam Conditions is active. Pause is disabled. Timer runs continuously.</div>' : ''}
             <h2>${c.Title}</h2>
             <div class="meta-row">${c.SectionTags.map(x => `<span class="pill">Section ${x}</span>`).join('')}<span class="pill">Exhibit-based case simulation</span></div>
             <p>${nl2br(c.ScenarioText)}</p>
@@ -2834,10 +2843,7 @@ const ExamSessionManager = {
             let activeExhibit = (c.Exhibits || [])[exhibitIndex];
             let task = c.Items[taskIndex];
             let taskAnswered = (i) => { let ans = s.caseAnswers[this.caseKey(c, i)]; return Array.isArray(ans) ? ans.length > 0 : !!(ans && String(ans).length); };
-            let exhibitHtml = activeExhibit ? (activeExhibit.Type === 'table' ?
-                `<div class="case-exhibit"><h3>${activeExhibit.Title}</h3><table><thead><tr>${activeExhibit.Headers.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${activeExhibit.Rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`
-                : `<div class="case-exhibit"><h3>${activeExhibit.Title}</h3><p>${activeExhibit.Body}</p></div>`) :
-                '<div class="case-exhibit"><h3>Scenario</h3><p>No separate exhibits provided.</p></div>';
+            var exhibitHtml = activeExhibit ? this.renderExhibitSafe(activeExhibit) : '<div class="case-exhibit"><h3>Scenario</h3><p>No separate exhibits provided.</p></div>';
             $('sessionView').innerHTML = `<div class="case-exam-shell">
           <section class="case-exam-exhibits">
             <div class="exam-top">
@@ -2848,7 +2854,7 @@ const ExamSessionManager = {
             </div>
             <h2>${c.Title}</h2>
             <p>${nl2br(c.ScenarioText)}</p>
-            <div class="exhibit-tabs">${(c.Exhibits || []).map((ex, i) => `<button class="exhibit-tab ${i === exhibitIndex ? 'active' : ''}" data-exhibit="${i}">${ex.Title}</button>`).join('')}</div>
+            <div class="exhibit-tabs">${(c.Exhibits || []).map((ex, i) => `<button class="exhibit-tab ${i === exhibitIndex ? 'active' : ''}" data-exhibit="${i}">${String(ex.Title || 'Exhibit')}</button>`).join('')}</div>
             ${exhibitHtml}
           </section>
           <section class="case-exam-task">
@@ -2905,10 +2911,38 @@ const ExamSessionManager = {
 
     caseExhibitsHtml(c) {
         if (!c.Exhibits || !c.Exhibits.length) return '';
-        return `<div class="case-exhibits">${c.Exhibits.map(ex => {
-            if (ex.Type === 'table') return `<div class="case-exhibit"><h3>${ex.Title}</h3><table><thead><tr>${ex.Headers.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${ex.Rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
-            return `<div class="case-exhibit"><h3>${ex.Title}</h3><p>${ex.Body}</p></div>`;
-        }).join('')}</div>`;
+        var self = this;
+        return '<div class="case-exhibits">' + c.Exhibits.map(function(ex) { return self.renderExhibitSafe(ex); }).join('') + '</div>';
+    },
+
+    renderExhibitSafe: function(ex) {
+        if (!ex) return '<div class="case-exhibit"><h3>Exhibit</h3><p>No exhibit data available.</p></div>';
+        var title = this._escapeHtml(String(ex.Title || 'Exhibit'));
+        if (ex.Type === 'table') {
+            var headers = ex.Headers || [];
+            var rows = ex.Rows || [];
+            if (!headers.length && Array.isArray(ex.Body)) {
+                var b = ex.Body;
+                if (b.length > 0 && Array.isArray(b[0])) { headers = b[0]; rows = b.slice(1); }
+            }
+            if (!headers.length) return '<div class="case-exhibit"><h3>' + title + '</h3><p>Table exhibit contains no headers or rows.</p></div>';
+            var headerHtml = '<tr>' + headers.map(function(h) { return '<th>' + this._escapeHtml(String(h)) + '</th>'; }, this).join('') + '</tr>';
+            var rowHtml = rows.map(function(row) {
+                if (!Array.isArray(row)) row = [String(row)];
+                var cells = [];
+                for (var i = 0; i < headers.length; i++) {
+                    cells.push('<td>' + this._escapeHtml(String(row[i] != null ? row[i] : '')) + '</td>');
+                }
+                return '<tr>' + cells.join('') + '</tr>';
+            }, this).join('');
+            return '<div class="case-exhibit"><h3>' + title + '</h3><table><thead>' + headerHtml + '</thead><tbody>' + rowHtml + '</tbody></table></div>';
+        }
+        var bodyText = ex.Body != null ? this._escapeHtml(String(ex.Body)) : '';
+        return '<div class="case-exhibit"><h3>' + title + '</h3><p>' + bodyText + '</p></div>';
+    },
+
+    _escapeHtml: function(str) {
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     },
 
     caseKey(c, i) { return c.CaseID + '-' + i; },
@@ -3842,12 +3876,12 @@ const AdaptiveReviewQueue = {
           <div class="review-breakdown">
             ${sections.tested ? `<div class="review-section review-tested">
               <div class="review-section-label">What was tested</div>
-              <div class="review-section-body">${sections.tested}</div>
+              <div class="review-section-body">${nl2br(sections.tested)}</div>
             </div>` : ''}
 
             ${sections.correct ? `<div class="review-section review-why-correct">
               <div class="review-section-label">${isCorrect ? 'Why this is correct' : 'Why the correct answer wins'}</div>
-              <div class="review-section-body">${sections.correct}</div>
+              <div class="review-section-body">${nl2br(sections.correct)}</div>
             </div>` : ''}
 
             ${!isCorrect && yourWrongExplanation ? `<div class="review-section review-why-wrong">
@@ -3862,7 +3896,7 @@ const AdaptiveReviewQueue = {
 
             ${sections.takeaway ? `<div class="review-section review-takeaway">
               <div class="review-section-label">Exam takeaway</div>
-              <div class="review-section-body">${sections.takeaway}</div>
+              <div class="review-section-body">${nl2br(sections.takeaway)}</div>
             </div>` : ''}
           </div>
 
@@ -5382,7 +5416,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '<div class="recovery-modal-backdrop"></div>' +
             '<div class="recovery-modal-dialog" role="dialog" aria-labelledby="recoveryTitle">' +
             '<h2 id="recoveryTitle">Unfinished Session Found</h2>' +
-            (s ? '<p>You have an in-progress exam session from <strong>' + timeStr + '</strong> ago.</p>' : '<p>You have an in-progress exam session.</p>') +
+            (s ? '<p>You have an in-progress <strong>' + (s.mode === 'full' ? 'exam' : s.mode === 'recovery_sprint' ? 'recovery sprint' : 'practice') + ' session</strong> from <strong>' + timeStr + '</strong> ago.</p>' : '<p>You have an in-progress session.</p>') +
             '<p class="small">Your progress is automatically saved. You can resume where you left off.</p>' +
             '<div class="recovery-modal-actions">' +
             '<button id="recoveryResume" class="primary">Resume Session</button>' +
@@ -5392,6 +5426,13 @@ document.addEventListener('DOMContentLoaded', () => {
         $('recoveryResume').onclick = () => {
             modal.remove();
             persistSaveStatus('Your previous exam session was successfully restored. All progress has been recovered.', 'recovery');
+            // W1-A — Re-derive exam-integrity mode from the restored session so a
+            // resumed Full Exam (or real-conditions session) keeps non-exam UI hidden.
+            if (isExamIntegrityMode(state.session)) {
+                document.body.classList.add('exam-integrity-mode');
+            } else {
+                document.body.classList.remove('exam-integrity-mode');
+            }
             document.body.classList.add('session-active');
             showView('sessionView');
             ExamSessionManager.render();
@@ -6243,6 +6284,10 @@ var GuidedTour = {
     start: function (tourType) {
         var tour = this.TOURS[tourType];
         if (!tour) return;
+        if (tourType === 'admin' && typeof AdminGate !== 'undefined' && !AdminGate._isActivated()) {
+            if (typeof renderSettingsView === 'function') { showView('settingsView'); renderSettingsView(); }
+            return;
+        }
         this.active = true;
         this.stepIndex = 0;
         this.tourType = tourType;
@@ -6363,14 +6408,23 @@ var GuidedTour = {
         if (!targetEl) {
             targetEl = document.querySelector('.work-panel') || document.querySelector('main.layout') || document.body;
         }
+        // P4-W1-C T2 — body fallback: force center position so spotlight is visible
+        var stepForPosition = (targetEl === document.body) ? { position: 'center' } : step;
+        // P4-W1-C T4 — skip scrollIntoView on sticky/fixed elements to avoid page jump
+        var cs = window.getComputedStyle(targetEl);
+        if (!cs || (cs.position !== 'sticky' && cs.position !== 'fixed')) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+        }
 
-        // S130 — Scroll target into view before positioning
-        targetEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
-
+        // W1-C — Position only once the smooth scroll has settled. The prior
+        // fixed 300ms timer raced the browser's ~300-600ms smooth-scroll
+        // animation, so placement was computed from a mid-animation rect and
+        // the spotlight/tooltip ended up displaced (or off-screen) once the
+        // scroll finished.
         var self = this;
-        setTimeout(function () {
-            self._positionSpotlight(targetEl, step);
-        }, 300);
+        this._whenScrollSettled(function () {
+            self._positionSpotlight(targetEl, stepForPosition);
+        });
 
         // Update content
         document.getElementById('tourStepIndicator').textContent =
@@ -6382,6 +6436,33 @@ var GuidedTour = {
         // Update next button text on last step
         var isLast = this.stepIndex >= tour.steps.length - 1;
         document.getElementById('tourNext').textContent = isLast ? 'Finish \u2713' : 'Next \u2192';
+    },
+
+    // W1-C — Invoke cb after the active smooth scroll has settled. Uses the
+    // scrollend event when available, with a scroll-stability poll as a
+    // fallback (older engines) and a hard 900ms cap so placement is never
+    // blocked indefinitely.
+    _whenScrollSettled: function (cb) {
+        var done = false;
+        var finish = function () { if (done) return; done = true; cb(); };
+        try {
+            if ('onscrollend' in window) {
+                window.addEventListener('scrollend', finish, { once: true });
+            }
+        } catch (e) { /* scrollend not available */ }
+        var lastY = window.scrollY;
+        var stable = 0;
+        var iv = setInterval(function () {
+            var y = window.scrollY;
+            if (Math.abs(y - lastY) < 1) {
+                stable++;
+                if (stable >= 2) { clearInterval(iv); finish(); }
+            } else {
+                stable = 0;
+                lastY = y;
+            }
+        }, 50);
+        setTimeout(function () { clearInterval(iv); finish(); }, 900);
     },
 
     // ── Position spotlight and tooltip ──
@@ -6438,6 +6519,22 @@ var GuidedTour = {
             this.__tooltipEl.style.top = clamped3.top + 'px';
             this.__tooltipEl.style.width = narrowWidth + 'px';
         }
+        // P4-W1-C T1 — clamp spotlight within viewport so no part renders off-screen
+        this._clampSpotlight();
+    },
+
+    _clampSpotlight: function () {
+        var pad = 16;
+        var s = this.__spotlightEl;
+        if (!s) return;
+        var left = parseFloat(s.style.left) || 0;
+        var top = parseFloat(s.style.top) || 0;
+        var w = parseFloat(s.style.width) || 0;
+        var h = parseFloat(s.style.height) || 0;
+        left = Math.max(pad, Math.min(left, window.innerWidth - w - pad));
+        top = Math.max(pad, Math.min(top, window.innerHeight - h - pad));
+        s.style.left = left + 'px';
+        s.style.top = top + 'px';
     },
 
     // ── S130: Clamp tooltip within viewport ──

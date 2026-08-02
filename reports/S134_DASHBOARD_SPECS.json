@@ -1,0 +1,321 @@
+{
+  "specId": "S134_DASHBOARD_SPECS",
+  "session": "S134",
+  "phase": "Phase 2 — Dashboard Specifications",
+  "generated": "2026-08-01",
+  "designLanguage": {
+    "cssVariables": {
+      "surface": "var(--surface)",
+      "surfaceAlt": "var(--surface-alt)",
+      "border": "var(--border)",
+      "borderLight": "var(--border-light)",
+      "primary": "var(--primary)",
+      "textSecondary": "var(--text-secondary)",
+      "textMuted": "var(--text-muted)"
+    },
+    "cssClasses": {
+      "grid": "dashboard-grid",
+      "card": "dashboard-card",
+      "cardH3": "dashboard-card h3",
+      "stat": "dashboard-stat",
+      "cardP": "dashboard-card p",
+      "section": "dashboard-section",
+      "sectionB": "dashboard-section b",
+      "trendList": "trend-list",
+      "trendItem": "trend-item"
+    },
+    "colorTokens": {
+      "green": "#22c55e",
+      "amber": "#f59e0b",
+      "red": "#ef4444",
+      "blue": "#3b82f6",
+      "purple": "#8b5cf6"
+    }
+  },
+  "dashboards": {
+    "governance": {
+      "title": "Governance Dashboard",
+      "description": "Governance health, certified inventory, rule enforcement, open defects, and portfolio drift",
+      "refreshHint": "Data from domain_progress.json + readiness_scoring.json + admin_dashboard_data.js",
+      "cards": [
+        {
+          "id": "gov-health",
+          "title": "Governance Health",
+          "type": "stat-grid",
+          "gridColumn": "span 4",
+          "columns": 2,
+          "dataBindings": [
+            { "field": "overall.certified", "source": "domain_progress.json", "type": "integer", "label": "Certified", "format": "number" },
+            { "field": "overall.ready", "source": "domain_progress.json", "type": "integer", "label": "Ready", "format": "number" },
+            { "field": "overall.remediate", "source": "domain_progress.json", "type": "integer", "label": "Remediate", "format": "number" },
+            { "field": "portfolioReadiness.byState.BLOCKED", "source": "readiness_scoring.json", "type": "integer", "label": "Blocked", "format": "number" },
+            { "field": "overall.coveragePct", "source": "domain_progress.json", "type": "number", "label": "Coverage", "format": "percent" },
+            { "field": "portfolioReadiness.readinessScore", "source": "readiness_scoring.json", "type": "string", "label": "Readiness", "format": "number2dp" }
+          ]
+        },
+        {
+          "id": "gov-certified-inventory",
+          "title": "Certified Inventory by Domain",
+          "type": "progress-bar-list",
+          "gridColumn": "span 4",
+          "dataBindings": [
+            { "field": "byDomain.{domain}.certified", "source": "domain_progress.json", "type": "integer", "label": "Certified", "iterate": "A,B,C,D,E,F" },
+            { "field": "byDomain.{domain}.total", "source": "domain_progress.json", "type": "integer", "label": "Total", "iterate": "A,B,C,D,E,F" },
+            { "field": "byDomain.{domain}.coveragePct", "source": "domain_progress.json", "type": "number", "label": "Coverage", "iterate": "A,B,C,D,E,F" },
+            { "field": "byDomain.{domain}.domainName", "source": "domain_progress.json", "type": "string", "label": "Domain", "iterate": "A,B,C,D,E,F" },
+            { "field": "byDomain.{domain}.remainingToCertify", "source": "domain_progress.json", "type": "integer", "label": "Remaining", "iterate": "A,B,C,D,E,F" }
+          ]
+        },
+        {
+          "id": "gov-rule-enforcement",
+          "title": "Rule Enforcement Status",
+          "type": "rule-table",
+          "gridColumn": "span 4",
+          "dataBindings": [
+            { "field": "metadata.governanceGuardStatus", "source": "admin_dashboard_data.js", "type": "string", "label": "Guard Status", "format": "text" }
+          ],
+          "staticRules": [
+            { "id": "RULE_1", "name": "question_state + REVISION_HISTORY pairing", "level": "BLOCK" },
+            { "id": "RULE_2", "name": "ExplanationWrong[CorrectChoice] non-empty", "level": "BLOCK" },
+            { "id": "RULE_3", "name": "MASTER_QUESTION_REGISTRY generated-only", "level": "BLOCK" },
+            { "id": "RULE_4", "name": "Answer-key changes require recomputed note", "level": "BLOCK" },
+            { "id": "RULE_5", "name": "Max 30 question objects per change-set", "level": "BLOCK" },
+            { "id": "RULE_6", "name": "non-CorrectChoice ExplanationWrong non-empty", "level": "BLOCK" },
+            { "id": "RULE_7", "name": "No hand-editing derived registries", "level": "BLOCK" },
+            { "id": "RULE_8", "name": "Session packages must be registered", "level": "BLOCK" },
+            { "id": "RULE_9", "name": "Choice binary lead-in polarity mismatch", "level": "BLOCK" },
+            { "id": "RULE_10", "name": "non-CorrectChoice ExplanationWrong present+non-empty", "level": "BLOCK" }
+          ]
+        },
+        {
+          "id": "gov-open-defects",
+          "title": "Open Defect Summary",
+          "type": "stat-grid-with-detail",
+          "gridColumn": "span 4",
+          "dataBindings": [
+            { "field": "perDomain.{domain}.blocked", "source": "readiness_scoring.json", "type": "integer", "label": "Blocked", "iterate": "A,B,C,D,E,F" },
+            { "field": "perDomain.{domain}.remediate", "source": "readiness_scoring.json", "type": "integer", "label": "Remediate", "iterate": "A,B,C,D,E,F" },
+            { "field": "perPack.{pack}.BLOCKED", "source": "readiness_scoring.json", "type": "integer", "label": "Blocked", "iterate": "pack_a,pack_b,pack_c,pack_d,pack_e" },
+            { "field": "perPack.{pack}.REMEDIATE", "source": "readiness_scoring.json", "type": "integer", "label": "Remediate", "iterate": "pack_a,pack_b,pack_c,pack_d,pack_e" }
+          ]
+        },
+        {
+          "id": "gov-portfolio-drift",
+          "title": "Portfolio Drift Alerts",
+          "type": "alert-list",
+          "gridColumn": "span 4",
+          "dataDriven": false,
+          "description": "Computed at render time by comparing S121 distributions against S121_PORTFOLIO_TARGETS.md immutable targets. Flags per-pack dimensions where |actual% - target%| > 5pp.",
+          "dataBindings": [
+            { "field": "packs[N].difficulty.*", "source": "S121_PORTFOLIO_DASHBOARD.json", "label": "Difficulty per pack" },
+            { "field": "packs[N].cognitive.*", "source": "S121_PORTFOLIO_DASHBOARD.json", "label": "Cognitive per pack" },
+            { "field": "packs[N].correctChoice.*", "source": "S121_PORTFOLIO_DASHBOARD.json", "label": "Answer position per pack" }
+          ]
+        }
+      ]
+    },
+    "portfolio": {
+      "title": "Portfolio Dashboard",
+      "description": "Difficulty balance, cognitive balance, answer position balance, domain coverage, and LOS coverage",
+      "refreshHint": "Data from S121_PORTFOLIO_DASHBOARD.json",
+      "cards": [
+        {
+          "id": "port-difficulty",
+          "title": "Difficulty Distribution",
+          "type": "stacked-bar-chart",
+          "gridColumn": "span 4",
+          "description": "Target vs. actual difficulty distribution per pack",
+          "dataBindings": [
+            { "field": "packs[N].difficulty.*", "source": "S121_PORTFOLIO_DASHBOARD.json", "type": "object", "keys": ["Easy","Moderate-Easy","Moderate","Difficult","Very Difficult"] },
+            { "field": "packs[N].name", "source": "S121_PORTFOLIO_DASHBOARD.json", "type": "string" },
+            { "field": "packs[N].totalItems", "source": "S121_PORTFOLIO_DASHBOARD.json", "type": "integer" }
+          ],
+          "targetPercentages": {
+            "Easy": 15, "Moderate-Easy": 20, "Moderate": 30, "Difficult": 25, "Very Difficult": 10
+          },
+          "renderHint": "Stacked horizontal bar: 5 packs × 5 difficulty tiers. Each bar shows actual%. Overlay target% as vertical line markers. Highlight bars where any tier exceeds ±5pp drift."
+        },
+        {
+          "id": "port-cognitive",
+          "title": "Cognitive Level Distribution",
+          "type": "stacked-bar-chart",
+          "gridColumn": "span 4",
+          "description": "Target vs. actual cognitive level distribution per pack",
+          "dataBindings": [
+            { "field": "packs[N].cognitive.*", "source": "S121_PORTFOLIO_DASHBOARD.json", "type": "object", "keys": ["Remember","Understand","Apply","Analyze","Evaluate"] },
+            { "field": "packs[N].name", "source": "S121_PORTFOLIO_DASHBOARD.json", "type": "string" },
+            { "field": "packs[N].totalItems", "source": "S121_PORTFOLIO_DASHBOARD.json", "type": "integer" }
+          ],
+          "targetPercentages": {
+            "Remember": 5, "Understand": 15, "Apply": 40, "Analyze": 25, "Evaluate": 15
+          },
+          "renderHint": "Stacked horizontal bar: 5 packs × 5 cognitive tiers. Show (missing) items as a separate grey segment if present. Highlight packs where Analyze+Evaluate < 30%."
+        },
+        {
+          "id": "port-answer-position",
+          "title": "Answer Position Balance",
+          "type": "radial-bar-group",
+          "gridColumn": "span 2",
+          "description": "CorrectChoice distribution across A/B/C/D per pack",
+          "dataBindings": [
+            { "field": "packs[N].correctChoice.*", "source": "S121_PORTFOLIO_DASHBOARD.json", "type": "object", "keys": ["A","B","C","D"] },
+            { "field": "packs[N].name", "source": "S121_PORTFOLIO_DASHBOARD.json", "type": "string" }
+          ],
+          "targetRange": { "min": 22, "max": 28 },
+          "renderHint": "5 radial mini-bars (one per pack). Each shows A/B/C/D as 4 segments within 22-28% target band. Highlight positions outside 22-28%."
+        },
+        {
+          "id": "port-domain-coverage",
+          "title": "Domain Coverage",
+          "type": "heatmap-table",
+          "gridColumn": "span 4",
+          "description": "Per-pack × per-section certified coverage matrix",
+          "dataBindings": [
+            { "field": "bySection[N].certified", "source": "domain_progress.json", "type": "integer" },
+            { "field": "bySection[N].total", "source": "domain_progress.json", "type": "integer" },
+            { "field": "bySection[N].pack", "source": "domain_progress.json", "type": "string" },
+            { "field": "bySection[N].section", "source": "domain_progress.json", "type": "string" }
+          ],
+          "renderHint": "5×6 heatmap: rows=packs (A-E), columns=sections (A-F). Each cell shows certified/total with color gradient: grey (<70%), amber (70-89%), green (90-99%), blue (100%)."
+        },
+        {
+          "id": "port-pool-overview",
+          "title": "Pool Overview",
+          "type": "stat-comparison",
+          "gridColumn": "span 4",
+          "description": "Part 1 vs. Part 2 comparison cards",
+          "dataBindings": [
+            { "field": "pools.part1.totalItems", "source": "S121_PORTFOLIO_DASHBOARD.json", "type": "integer", "label": "Part 1 Items" },
+            { "field": "pools.part1.certified", "source": "S121_PORTFOLIO_DASHBOARD.json", "type": "integer", "label": "Part 1 Certified" },
+            { "field": "pools.part2.totalItems", "source": "S121_PORTFOLIO_DASHBOARD.json", "type": "integer", "label": "Part 2 Items" },
+            { "field": "pools.part2.certified", "source": "S121_PORTFOLIO_DASHBOARD.json", "type": "integer", "label": "Part 2 Certified" }
+          ],
+          "renderHint": "Two-column comparison. Left: Part 1 stat cards (total, certified ratio, difficulty distribution donut, cognitive bar). Right: Part 2 same layout."
+        }
+      ]
+    },
+    "repository": {
+      "title": "Repository Health Dashboard",
+      "description": "Repository size, archives, backups, restore status, and archive health",
+      "refreshHint": "Data from S123_AFTER_REPORT.md (manual snapshot)",
+      "cards": [
+        {
+          "id": "repo-size",
+          "title": "Repository Size",
+          "type": "stat-with-breakdown",
+          "gridColumn": "span 4",
+          "dataBindings": [
+            { "field": "totalFiles", "source": "S123", "type": "integer", "label": "Total Files (excl. node_modules/.git)" },
+            { "field": "totalSizeMB", "source": "S123", "type": "number", "label": "Total Size", "format": "MB" },
+            { "field": "rootFiles", "source": "S123", "type": "integer", "label": "Root Files" },
+            { "field": "reportsTotalFiles", "source": "S123", "type": "integer", "label": "reports/ Files" },
+            { "field": "reportsTotalSizeMB", "source": "S123", "type": "number", "label": "reports/ Size", "format": "MB" },
+            { "field": "knowledgeTotalFiles", "source": "S123", "type": "integer", "label": "knowledge/ Files" },
+            { "field": "knowledgeActiveDocs", "source": "S123", "type": "integer", "label": "knowledge/ Active Docs" }
+          ]
+        },
+        {
+          "id": "repo-backups",
+          "title": "Backup Status",
+          "type": "stat-card-group",
+          "gridColumn": "span 2",
+          "dataBindings": [
+            { "field": "backupsTotalFiles", "source": "S123", "type": "integer", "label": "Backup Files", "format": "number" },
+            { "field": "backupsTotalSizeMB", "source": "S123", "type": "number", "label": "Backup Size", "format": "MB" },
+            { "field": "rootBakFiles", "source": "S123", "type": "integer", "label": "Root .bak Files", "format": "number" }
+          ]
+        },
+        {
+          "id": "repo-archives",
+          "title": "Archive Status",
+          "type": "stat-card-group",
+          "gridColumn": "span 2",
+          "dataBindings": [
+            { "field": "archiveTotalFiles", "source": "S123", "type": "integer", "label": "Archived Files", "format": "number" },
+            { "field": "archiveTotalSizeMB", "source": "S123", "type": "number", "label": "Archive Size", "format": "MB" },
+            { "field": "archiveZipCount", "source": "S123", "type": "integer", "label": "Zip Packages", "format": "number" },
+            { "field": "archiveCatalogPresent", "source": "S123", "type": "boolean", "label": "Catalog Present", "format": "boolean" }
+          ]
+        },
+        {
+          "id": "repo-restore",
+          "title": "Restore Readiness",
+          "type": "checklist-card",
+          "gridColumn": "span 4",
+          "dataBindings": [
+            { "field": "backupsTotalFiles", "source": "S123", "type": "integer", "label": "Backups exist" },
+            { "field": "archiveCatalogPresent", "source": "S123", "type": "boolean", "label": "Archive catalog present" },
+            { "field": "rootBakFiles", "source": "S123", "type": "integer", "label": "No root .bak files (cleaned)" }
+          ],
+          "renderHint": "Checklist items with green check / red X. All 3 must pass for green status."
+        },
+        {
+          "id": "repo-archive-health",
+          "title": "Archive Health",
+          "type": "table-with-badges",
+          "gridColumn": "span 4",
+          "dataDriven": false,
+          "description": "Static table from S123 archive package inventory. Update manually.",
+          "dataBindings": [
+            { "field": "archiveZipCount", "source": "S123", "type": "integer", "label": "Total archive packages" }
+          ],
+          "staticArchivePackages": [
+            { "name": "RECOVERY_PROGRAM_S93P-S109P.zip", "files": 43, "sizeKB": 299, "category": "Recovery Program" },
+            { "name": "SESSION_REPORTS_1-20.zip", "files": 138, "sizeKB": 1240, "category": "Session Reports" },
+            { "name": "SESSION_REPORTS_21-40.zip", "files": 156, "sizeKB": 1845, "category": "Session Reports" },
+            { "name": "SESSION_REPORTS_41-60.zip", "files": 148, "sizeKB": 2100, "category": "Session Reports" },
+            { "name": "SESSION_REPORTS_61-80.zip", "files": 142, "sizeKB": 1950, "category": "Session Reports" },
+            { "name": "SESSION_REPORTS_81-100.zip", "files": 131, "sizeKB": 1780, "category": "Session Reports" },
+            { "name": "KNOWLEDGE_ARCHIVES.zip", "files": 47, "sizeKB": 520, "category": "Knowledge" },
+            { "name": "SCRIPTS_ARCHIVES.zip", "files": 19, "sizeKB": 450, "category": "Scripts" },
+            { "name": "REPORTS_SUBDIRECTORIES.zip", "files": 98, "sizeKB": 680, "category": "Reports Subdirectories" },
+            { "name": "BACKUPS_CONSOLIDATED.zip", "files": 50, "sizeKB": 32000, "category": "Backup Consolidation" },
+            { "name": "ROOT_CLEANUP.zip", "files": 2, "sizeKB": 15, "category": "Root Cleanup" },
+            { "name": "MISCELLANEOUS.zip", "files": 64, "sizeKB": 420, "category": "Miscellaneous" }
+          ]
+        }
+      ]
+    }
+  },
+  "crossDashboardBindings": {
+    "headerStats": [
+      { "field": "overall.coveragePct", "source": "domain_progress.json", "label": "Pipeline Coverage", "format": "percent", "description": "Certified items / total items" },
+      { "field": "overall.certified", "source": "domain_progress.json", "label": "Certified Items", "format": "number" },
+      { "field": "portfolioReadiness.byState.BLOCKED", "source": "readiness_scoring.json", "label": "Blocked Items", "format": "number" },
+      { "field": "metadata.governanceGuardStatus", "source": "admin_dashboard_data.js", "label": "Governance Guard", "format": "text" }
+    ],
+    "footerTimestamps": [
+      { "field": "generated", "source": "S121_PORTFOLIO_DASHBOARD.json", "label": "S121" },
+      { "field": "generatedTimestamp", "source": "domain_progress.json", "label": "Domain Progress" },
+      { "field": "timestamp", "source": "readiness_scoring.json", "label": "Readiness Scorer" },
+      { "field": "metadata.buildTimestamp", "source": "admin_dashboard_data.js", "label": "Admin Data" }
+    ]
+  },
+  "layout": {
+    "header": {
+      "height": "auto",
+      "children": [
+        { "type": "title", "content": "Program Operations Console" },
+        { "type": "stat-row", "bindings": ["headerStats.0", "headerStats.1", "headerStats.2", "headerStats.3"] }
+      ]
+    },
+    "tabBar": {
+      "tabs": ["Governance", "Portfolio", "Repository"],
+      "activeColor": "var(--primary)",
+      "inactiveColor": "var(--text-muted)"
+    },
+    "tabContent": {
+      "gridColumns": 4,
+      "gap": "12px",
+      "padding": "12px",
+      "maxWidth": "1200px",
+      "marginX": "auto"
+    },
+    "footer": {
+      "type": "timestamp-row",
+      "bindings": ["footerTimestamps.0", "footerTimestamps.1", "footerTimestamps.2", "footerTimestamps.3"],
+      "fontSize": "11px",
+      "color": "var(--text-muted)"
+    }
+  }
+}

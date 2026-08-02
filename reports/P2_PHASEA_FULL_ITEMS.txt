@@ -1,0 +1,197 @@
+### P1-BD-008
+
+Topic: B.008 incremental budgeting drawback | CC=D | Diff=Moderate-Easy/4 | CL=Analyze
+
+STEM:
+Hawkridge builds its annual budget by adjusting last year's actual results by an inflation percentage. What is a key drawback of this approach?
+
+CHOICES:
+
+  [A] It eliminates the need for a sales forecast
+
+  [B] It requires zero-based justification for every line item
+
+  [C] It guarantees the most efficient allocation of resources
+
+  [D] It can perpetuate inefficiencies from prior periods without requiring justification of costs
+
+EXPLANATION_CORRECT:
+Incremental budgeting, by starting from prior actuals, can carry forward past inefficiencies since costs are not re-justified from a zero base.
+
+---
+
+### P1-BD-015
+
+Topic: B.015 capital expenditure budget planning | CC=D | Diff=Difficult/4 | CL=Evaluate
+
+STEM:
+Emberline Industries' capital expenditure committee has two competing proposals. Project Alpha ($2.1M) replaces aging stamping equipment on the consumer goods line (78% of revenue, 14% margins), reducing downtime 18% with 3.1-year payback. Project Omega ($2.8M) installs automated sensor calibration enabling entry into defense contracting (22% margins), but requires ISO 9001 certification, 6-9 month qualification, and produces no revenue until Year 2. $3.0M hard cap. CFO Marcus Chen must recommend. Which approach best aligns capital budgeting with strategic planning?
+
+CHOICES:
+
+  [A] Fund Alpha in full ($2.1M). Alpha supports 78% of current revenue, has shorter payback, and stays within budget. Reconsider Omega next cycle.
+
+  [B] Fund Omega in full ($2.8M). 22% defense margins represent a 57% improvement over 14% consumer margins. Capital budgeting should prioritize highest-return projects regardless of strategic continuity. Defer Alpha by authorizing overtime maintenance.
+
+  [C] Reject both. Return $3.0M to shareholders as a special dividend and await a more compelling capital allocation opportunity.
+
+  [D] Fund Alpha in full ($2.1M) to protect current revenue, and allocate $0.9M to Omega Phase 1 — ISO certification ($320K), feasibility study ($180K), and initial sensor design ($400K). Full Omega funding in next budget cycle after milestones achieved.
+
+EXPLANATION_CORRECT:
+The phased approach best aligns capital budgeting with strategic planning by simultaneously protecting the current revenue base and advancing the strategic pivot. Capital budgets should reflect the strategic plan: Emberline's board identified defense contracting as a growth priority, but the consumer goods line funds the transition. Funding Alpha maintains reliability of 78% of revenue. Meanwhile, $0.9M for Omega Phase 1 achieves critical-path milestones (ISO certification, customer qualification). This staged-gate approach is standard practice: fund de-risking activities first, then commit full capital when uncertainty is reduced.
+
+---
+
+### P1-BD-056
+
+Topic: B.056 direct materials purchases budget | CC=D | Diff=Moderate/4 | CL=Analyze
+
+STEM:
+Glenmore needs 25,000 pounds of material for production, wants ending inventory of 4,000 pounds, and has beginning inventory of 3,000 pounds. How many pounds should be purchased?
+
+CHOICES:
+
+  [A] 28,000 pounds
+
+  [B] 25,000 pounds
+
+  [C] 22,000 pounds
+
+  [D] 26,000 pounds
+
+EXPLANATION_CORRECT:
+The direct materials purchases budget determines the quantity of materials to buy. Production needs are 25,000 lbs. The company desires 4,000 lbs of ending inventory to start the next period, but has 3,000 lbs already in beginning inventory. Purchases = Production needs (25,000) + Desired ending (4,000) - Beginning (3,000) = 26,000 pounds.
+
+---
+
+### P1-BD-064
+
+Topic: B.065 selling and administrative expense budget with step-cost analysis | CC=C | Diff=Moderate/3 | CL=Analyze
+
+STEM:
+Meridian Equipment Distributors employs four salespeople, each handling up to $300,000/quarter. Each additional salesperson costs $15,000/quarter. Controller Diana Park gathered: Q1 sales $800,000, S&A $142,000; Q2 sales $1,100,000, S&A $178,000. Q3 projected at $1,265,000 (+15%). Using the high-low method and considering capacity constraints, what should Q3 S&A budget be?
+
+CHOICES:
+
+  [A] $178,000 — Q2's actual S&A expenses, carried forward since the cost structure is established
+
+  [B] $197,800 — high-low method: $46,000 fixed + $0.12 × $1,265,000
+
+  [C] $212,800 — $197,800 high-low base + $15,000 for fifth salesperson required when Q3 exceeds $1,200,000 capacity
+
+  [D] $204,700 — Q2's $178,000 increased by uniform 15% to match sales growth
+
+EXPLANATION_CORRECT:
+High-low: Variable rate = ($178,000−$142,000)/($1,100,000−$800,000) = $36,000/$300,000 = $0.12/dollar. Fixed = $142,000−$0.12×$800,000 = $46,000. Q3 baseline = $46,000+$0.12×$1,265,000 = $197,800. Capacity check: 4×$300,000 = $1,200,000 < $1,265,000 → need 5th salesperson at $15,000. Total = $212,800. The key analytical judgment: cost behavior analysis alone is insufficient when capacity constraints introduce step costs at specific volume thresholds.
+
+---
+
+### P1-BD-070
+
+Topic: B.070 selling and administrative expense budget | CC=B | Diff=Moderate/4 | CL=Analyze
+
+STEM:
+Uplandview prepares a budget for fixed and variable selling and administrative expenses based on projected sales volume. What costs would typically appear as variable in this budget?
+
+CHOICES:
+
+  [A] Multi-year lease payments on office space
+
+  [B] Sales commissions that vary directly with sales volume
+
+  [C] The CEO's fixed annual salary
+
+  [D] Straight-line depreciation on headquarters
+
+EXPLANATION_CORRECT:
+Sales commissions vary directly with sales volume, making them a variable component of the selling and administrative expense budget, unlike fixed salaries, depreciation, or lease payments.
+
+---
+
+### P1-BD-076
+
+Topic: B.076 forecast accuracy measurement | CC=D | Diff=Moderate/4 | CL=Understand
+
+STEM:
+Bramblewood evaluates its sales forecasting model by comparing forecasted values to actual results using mean absolute percentage error. What is the purpose of this measurement?
+
+CHOICES:
+
+  [A] To calculate the company's residual income
+
+  [B] To set the transfer price between two divisions
+
+  [C] To determine the exact cause of a specific cost variance
+
+  [D] To assess the accuracy and reliability of the forecasting method used
+
+EXPLANATION_CORRECT:
+Forecast error measures such as mean absolute percentage error assess how accurate a forecasting method has been, guiding potential model improvements.
+
+---
+
+### P1-BD-077
+
+Topic: B.077 activity-based budgeting variance decomposition | CC=B | Diff=Difficult/4 | CL=Analyze
+
+STEM:
+Bayside Manufacturing uses activity-based budgeting. The budget assumed: 1,200 receiving orders at $18/order, 90 setups at $240/setup, and 600 inspections at $35/inspection. Budgeted total = $64,200. Actual results: 1,350 receiving orders at $17/order, 82 setups at $250/setup, and 640 inspections at $33/inspection. Actual total = $64,570. The $370 unfavorable total variance must be decomposed. Which activity driver and variance type contributed most to the total variance?
+
+CHOICES:
+
+  [A] Setup rate variance — the $10/setup rate increase caused the largest single variance component at $820 unfavorable
+
+  [B] Receiving volume variance — the additional 150 orders at the standard $18 rate caused $2,700 unfavorable, partially offset by a $1,350 favorable rate variance
+
+  [C] Inspection volume variance — the 40 extra inspections were the primary driver at $1,400 unfavorable
+
+  [D] All three activities contributed roughly equally — no single driver dominates the $370 total variance
+
+EXPLANATION_CORRECT:
+Decompose each activity: RECEIVING: Volume variance = (1,350−1,200)×$18 = $2,700 U (most impactful). Rate variance = ($17−$18)×1,350 = $1,350 F. Net = $1,350 U. SETUP: Volume = (82−90)×$240 = $1,920 F. Rate = ($250−$240)×82 = $820 U. Net = $1,100 F. INSPECTION: Volume = (640−600)×$35 = $1,400 U. Rate = ($33−$35)×640 = $1,280 F. Net = $120 U. Total = $1,350U−$1,100F+$120U = $370 U. The receiving volume variance of $2,700U is the single largest component — the 150 additional orders at $18/order dominates. Management should investigate why receiving activity increased 12.5% above budget.
+
+---
+
+### P1-BD-079
+
+Topic: B.079 flexible budget at actual activity | CC=D | Diff=Difficult/4 | CL=Analyze
+
+STEM:
+Solaris Manufacturing's Q1 flexible budget performance report shows a $15,000 favorable variance. The department's cost formula is $58,000 fixed plus $4.50 per machine hour. Actual activity: 11,200 machine hours, actual overhead: $103,400. Production Manager Elena Vargas argues the variance is misleading — a new product line required more setup hours than the standard accounts for. The controller suspects overtime spending on the legacy line masked what should have been a larger favorable variance. Which follow-up investigation approach is most appropriate?
+
+CHOICES:
+
+  [A] Accept the $15,000 favorable variance as reported. A favorable variance indicates performance exceeded expectations, and investigating it wastes management time.
+
+  [B] Investigate only the overtime spending on the legacy product line. The production manager's volume miscalibration claim is self-serving.
+
+  [C] Defer investigation until Q2 results are available. A single quarter's variance could be random; trend analysis across multiple periods provides more reliable evidence.
+
+  [D] Recalibrate the flexible budget volume assumption for the new product line's actual setup hours, then decompose the remaining variance into spending and efficiency components to isolate the overtime impact.
+
+EXPLANATION_CORRECT:
+Both the volume miscalibration claim and the spending concern merit investigation because they imply different serious problems. If the volume assumption is wrong, future variance reports will be systematically distorted. If the overtime concern is valid, Solaris is incurring avoidable costs. Flexible budget cost = $58,000 + ($4.50×11,200) = $108,400. Actual cost was $103,400 — a $5,000 favorable variance after correction. A favorable variance is not necessarily good news — it can signal a flawed benchmark that will produce misleading signals in future periods.
+
+---
+
+### P1-BD-100
+
+Topic: B.100 strategic vs operational planning horizon | CC=D | Diff=Moderate/4 | CL=Analyze
+
+STEM:
+Ashfield's board sets a five-year strategic plan, while department managers prepare detailed annual operating budgets. How do these two planning levels differ?
+
+CHOICES:
+
+  [A] Operating budgets are prepared only once every five years
+
+  [B] Strategic plans are prepared by external auditors only
+
+  [C] They cover the exact same time horizon and level of detail
+
+  [D] Strategic plans set broad, long-term direction, while operating budgets translate strategy into detailed short-term financial targets
+
+EXPLANATION_CORRECT:
+Strategic planning sets broad, long-term organizational direction, while the annual operating budget translates that strategy into specific, detailed short-term financial targets.
+
+---

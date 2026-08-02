@@ -3021,6 +3021,289 @@ Changed "x $13.20" → "× $13.20" in two RightItems entries (lines 3127-3128 of
 
 ---
 
+## DL-039 — Certified Pack D Section B DL-008 Cluster (9 Items, Unblocklisted)
+
+```
+Defect ID        DL-039
+Class            Structural / Content (hybrid)
+Domain           Explanation Slot Error — rotation-artifact DL-008 cluster
+Severity         HIGH (learner-safety — 9 Certified items in Tier 1 delivery with non-empty ExplanationWrong[CorrectChoice])
+Detected By      Build-Time AI Verification (P1 Repository Truth Verification, 2026-08-01 — Function-constructor within-object scan)
+Status           Open — discovered, not remediated
+Category         Rotation-artifact cluster missed by prior DL-008 closeout
+```
+
+**Question IDs:** P1-BD-008, P1-BD-015, P1-BD-056, P1-BD-064, P1-BD-070, P1-BD-076, P1-BD-077, P1-BD-079, P1-BD-100 (all `question_state: "Certified"`)
+
+**File:** `content/packs/pack_d_corrected.js`
+
+### Issue
+
+Nine Certified Pack D Section B items have a non-empty `ExplanationWrong[CorrectChoice]` slot (DL-008 / EV8 violation). 8 of the 9 additionally carry DL-026 (one empty non-CC distractor slot). None of the 9 QIDs appear in any runtime blocklist source, so they are delivered to learners as Tier 1.
+
+| QID | CC | EW[CC] len | Empty non-CC slot |
+|-----|----|-----------|--------------------|
+| P1-BD-008 | D | 751 | C |
+| P1-BD-015 | D | 461 | C |
+| P1-BD-056 | D | 1,038 | C |
+| P1-BD-064 | C | 375 | B |
+| P1-BD-070 | B | 783 | C |
+| P1-BD-076 | D | 796 | — |
+| P1-BD-077 | B | 196 | A |
+| P1-BD-079 | D | 352 | C |
+| P1-BD-100 | D | 827 | A |
+
+**Verified patterns (raw-file inspection, AGENTS.md §5):**
+- P1-BD-008 EW_D contains **cross-item ZBB text** ("Option D focuses exclusively on the ongoing cost differential ($42,000 vs. $9,200/year)…") — the actual Choice D is "It can perpetuate inefficiencies from prior periods…" (incremental budgeting). DL-016-style cross-item contamination.
+- P1-BD-064 EW_C describes **Choice B's error** ("applies the high-low method … but overlooks the step-cost constraint") at the C slot — DL-010-style misassignment at the CorrectChoice position.
+
+### Root Cause
+
+Pack D Section B Block 1 / S74 cognitive-upgrade wave rotation artifacts. The 2026-07-23 DL-008 full-pool closeout reported Pack D "0 remaining"; this Section B cluster escaped because the closeout's residual counts covered Sections A/C/D/E while Section B rotation artifacts were not re-scanned after the S74 cognitive upgrade rewrote CognitiveLevel/DifficultyScore fields.
+
+### Detection Rule
+
+```
+For each question Q (Function-constructor parse):
+  let cc = Q.CorrectChoice;         // same object as EW fields
+  if Q["ExplanationWrong" + cc] is a non-empty string → DL-008
+  for L in {A,B,C,D}, L != cc:
+    if Q["ExplanationWrong" + L] is "" or absent → DL-026
+```
+
+### Validator / Source
+
+`Build-Time AI Verification` — P1 within-object scan (DL-029-compliant: CC read from the same parsed object as EW slots, never forward-scanned from QID).
+
+### Correction
+
+Not executed (P1 read-only). Remediation path: clear or re-attribute `ExplanationWrong[CorrectChoice]` per EV8; author the 8 empty non-CC slots; re-verify per DL-008/DL-026 detection rule; confirm no CorrectChoice change required (CC values themselves are correct for the rendered stem).
+
+### Regression Test
+
+- Re-run P1 within-object scan: 0 Certified DL-008 across all 5 packs
+- Re-run P1 DL-026 scan: 0 empty non-CC slots on Certified items
+- Rebuild `DEFECT_MANIFEST_DL008_DL026.json` from Function-constructor parse; confirm `dl008_certified: 0` is truthful
+
+### Resolved
+
+2026-08-01 — S133 (P2 Phase A). All 9 items remediated in 1 batch (≤30 Rule 5). Category 1 (5 items: BD-008, BD-056, BD-070, BD-076, BD-100) received full EW re-authoring (all non-CC slots were cross-item contaminated); Category 2 (4 items: BD-015, BD-064, BD-077, BD-079) received CC-slot clear + empty-slot fill. CorrectChoice unchanged (verified correct for rendered stems). Post-fix independent scan: **0 Certified DL-008, 0 Certified DL-026** pool-wide. Preflight 0 divergences, guard 66/66. Backup: `backups/pack_d_corrected.js.bak-20260801194044`. Full report: `reports/P2_DL039_REMEDIATION_REPORT.md`.
+
+### Cross-References
+
+- P1 report: `reports/P1_REPOSITORY_TRUTH_VERIFICATION.md` §3
+- P2 remediation report: `reports/P2_DL039_REMEDIATION_REPORT.md`
+- DL-008 entry (DEFECT_LIBRARY.md): parent defect class — 2026-07-23 closeout scope did not cover this Pack D Section B cluster
+- DL-010: misassigned choice explanations (P1-BD-064 pattern)
+- DL-016: cross-item rotation shift (P1-BD-008 pattern)
+- Manifest staleness: S725/S726 documented regeneration requirement — regeneration targeted in P2 Phase E
+
+---
+
+## DL-040 — Non-Registry `question_state: "Active"` (20 Items, Runtime-Deliverable)
+
+```
+Defect ID        DL-040
+Class            Structural / Governance
+Domain           Metadata Registry Gap — unregistered governance state
+Severity         MEDIUM (governance invisibility + runtime delivery exposure; no content error)
+Detected By      Build-Time AI Verification (P1 Repository Truth Verification, 2026-08-01)
+Status           Open — discovered, not remediated
+Category         Registry/standard divergence from S899 authoring practice
+```
+
+**Question IDs:** Pack C (9): P1-EC-001, P1-EC-005, P1-EC-010, P1-EC-030, P1-EC-055, P1-FC-005, P1-FC-016, P1-FC-045, P1-FC-050. Pack D (11): P1-ED-002, P1-ED-015, P1-ED-020, P1-ED-040, P1-ED-050, P1-FD-002, P1-FD-010, P1-FD-020, P1-FD-040, P1-FD-046, P1-FD-050.
+
+**Files:** `content/packs/pack_c_corrected.js`, `content/packs/pack_d_corrected.js`
+
+### Issue
+
+20 items carry `question_state: "Active"` — a value **not registered** in QUESTION_METADATA_STANDARD.md §9.1 (Unprocessed / In Audit / Editorial Queue / Certified / Archived). Consequences:
+
+1. **Governance invisibility:** excluded from the 2,451 Certified count and from all state-based reporting; no governance rule tracks them.
+2. **Runtime deliverability:** `assignTier` (app/app.js:1068) does NOT hard-exclude "Active" (only Archived / In Audit / Editorial Queue). All 19 scored items land at qualityScore ≥ 2 → **Tier 2**; P1-FD-046 scores −1 → Tier 3. `selectWithDifficultyDistribution` (app/app.js:2058) fill order includes Tier 2/3 → these items can reach learners despite never being Certified.
+3. **Registry divergence:** S899 (2026-07-28) introduced the state during authoring; S103P (2026-07-31) preserved it; the standard was never updated.
+
+Note: P1-FD-046 is a known shell item (no content block) — it reaches Tier 3 but lacks renderable content; delivery fallback may still surface it.
+
+### Root Cause
+
+S899 Phase 1 authoring (2026-07-28) used `question_state: "Active"` for 20 replacement items without amending QUESTION_METADATA_STANDARD.md §9.1 or TAXONOMY_REGISTRY.md. The state is an informal "in authoring / active replacement" marker that no governance rule recognizes.
+
+### Detection Rule
+
+```
+question_state not in {Unprocessed, In Audit, Editorial Queue, Certified, Archived} → flag
+```
+
+### Validator / Source
+
+`Build-Time AI Verification` — Function-constructor parse, state enumeration check.
+
+### Correction
+
+Not executed (P1 read-only). Options: (a) register "Active" as a legitimate state in the standard + add governance tracking, or (b) transition the 20 items to a registered state (Unprocessed or Editorial Queue) before any further certification work. P1-FD-046 should be Archived (shell item).
+
+### Regression Test
+
+- All question_state values in all 5 packs are members of the §9.1 registry (or the registry is amended to include "Active")
+- No non-Certified, non-Archived state flows into a delivery tier
+- Count reconciliation: 2,451 Certified + registered non-certified + Archived = 2,545
+
+### Resolved
+
+2026-08-01 — S133 (P2 Phase E). User decision: **transition to registered states** (option b). 19 items transitioned "Active" → "Unprocessed" (Pack C: 9, Pack D: 10); P1-FD-046 (shell item) transitioned "Active" → "Archived". All 20 items now carry §9.1-registered states. Post-fix scan: **0 "Active" remaining** across all 5 packs. Preflight 0 divergences, guard 66/66. Backups: `pack_c_corrected.js.bak-20260801194738`, `pack_d_corrected.js.bak-20260801194738`.
+
+### Cross-References
+
+- P1 report: `reports/P1_REPOSITORY_TRUTH_VERIFICATION.md` §4
+- P2 remediation report: `reports/P2_DL039_REMEDIATION_REPORT.md` (Phase E section)
+- S899 entry: `knowledge/REVISION_HISTORY.md` line 1446
+- S103P entry: `knowledge/REVISION_HISTORY.md` line 29523
+
+---
+
+## DL-041 — Certified Pack A Section E Items Missing CognitiveLevel + DifficultyScore
+
+```
+Defect ID        DL-041
+Class            Structural
+Domain           Metadata Completeness
+Severity         MEDIUM (metadata-incomplete Certified items in Tier 1 learner pool)
+Detected By      Build-Time AI Verification (P1 Repository Truth Verification, 2026-08-01)
+Status           Open — discovered, not remediated
+Category         Metadata field absence on Certified items
+```
+
+**Question IDs:** P1-E-081, P1-E-082, P1-E-083 (all `question_state: "Certified"`)
+
+**File:** `content/packs/pack_a_corrected.js`
+
+### Issue
+
+Three Certified Pack A Section E items have **no `CognitiveLevel` key and no `DifficultyScore` key** at all (verified by Function-constructor parse + key enumeration — zero Cognitive-matching keys). Impact:
+
+- Difficulty calibration (CAQS §6, DCS §3) cannot classify these items.
+- May coaching reads `CognitiveLevel` (app/may/may-context-builder.js:168) → silently degrades.
+- CAQS §6.2 distribution reporting excludes them.
+- They are Tier 1 Certified and in the active learner pool.
+
+### Root Cause
+
+Pack A Section E certification wave (S805-era) certified items without full metadata normalization; the three items (E-081/082/083) predate the metadata-standard rollout and were never enriched.
+
+### Detection Rule
+
+```
+For each question Q: if !Q.CognitiveLevel → flag; if Q.DifficultyScore is undefined → flag
+```
+
+### Validator / Source
+
+`Build-Time AI Verification` — Function-constructor parse.
+
+### Correction
+
+Not executed (P1 read-only). Add `CognitiveLevel` + `DifficultyScore` per CAQS §6 and DCS §3 defaults after content review; validate no CL/Diff mismatch (DL-031 pattern) before assignment.
+
+### Regression Test
+
+- 2,545/2,545 items carry CognitiveLevel + DifficultyScore (Function-constructor parse)
+- May coaching calibration sample uses the new labels without error
+
+### Resolved
+
+2026-08-01 — S133 (P2 Phase B). All 3 items labeled per Rule 11 AF-E4 (named decision-maker, judgment, competing alternatives) + DCS v1.1 §3 (Evaluate → DifficultyScore 4) + S122 COSO Evaluate exemplars. P1-E-081/082/083: `Difficulty: "Difficult"`, `DifficultyScore: 4`, `CognitiveLevel: "Evaluate"`. No DL-031 (none are definition-match). Field placement mirrors E-080 (Difficulty before ItemType; DifficultyScore/CognitiveLevel at object end). Post-fix scan: **0 items missing CognitiveLevel or DifficultyScore** across all 5 packs. Preflight 0 divergences, guard 66/66. Backup: `backups/pack_a_corrected.js.bak-20260801194339`. Full report: `reports/P2_METADATA_VERIFICATION.md`.
+
+### Cross-References
+
+- P1 report: `reports/P1_REPOSITORY_TRUTH_VERIFICATION.md` §5
+- P2 metadata report: `reports/P2_METADATA_VERIFICATION.md`
+- DL-031: difficulty inflation pattern to avoid when assigning labels
+- S805: Pack A Section E certification wave
+
+---
+
+## DL-042 — Resume Does Not Restore Exam-Integrity Mode (Delivery-Integrity Bypass)
+
+```
+Defect ID        DL-042
+Class            Structural
+Domain           Session Recovery — Exam-Integrity UI State
+Severity         HIGH (delivery-integrity bypass — non-exam UI exposed during a resumed Full Exam / real-conditions session)
+Detected By      P4-W1-A verification session (2026-08-01) — confirmed against app/app.js
+Status           Resolved — W1-A, 2026-08-01
+Category         Exam-integrity mode body class not re-derived on resume
+```
+
+**Files:** `app/app.js`, `app/may/may-core.js`
+
+### Issue
+
+`ExamSessionManager.start()` adds `exam-integrity-mode` to `document.body` when a session is in exam-integrity mode (Full Exam, or real exam conditions checked). On **resume**, the recovery-modal handler restored `session-active` and re-rendered but never re-applied `exam-integrity-mode` from the restored session. Result: a learner resuming a Full Exam (or real-conditions session) sees non-exam UI — tabs, hero panel, setup controls, and May surfaces — during the exam, an assessment-conditions integrity bypass.
+
+Two contributing defects:
+1. **No re-derivation on resume** — the body class was only applied in the start path.
+2. **`realConditions` was not persisted** — the session snapshot omitted it, so render-time logic read the live DOM checkbox (`$('realConditions')?.checked`), which is reset to unchecked after a page reload, diverging from the actual session conditions. The derived signal therefore disagreed between start and resume (split-brain).
+
+Additionally, May's `isFullTabBlocked()` derived exam state inline (`state.session.mode === 'full'`), a second, inconsistent source that ignored `realConditions` — the same split-brain class.
+
+### Root Cause
+
+Start path computed exam-integrity mode from live DOM; resume path computed it from nothing; May computed it from a different inline expression. No single source of truth existed, so state reconstruction on resume was incomplete.
+
+### Pattern
+
+```
+Start Full Exam → body.exam-integrity-mode added
+Resume Full Exam → body.session-active added, exam-integrity-mode NOT added → non-exam UI visible
+```
+
+### Detection Rule
+
+For each session-resume code path, assert `document.body.classList.contains('exam-integrity-mode')` equals `isExamIntegrityMode(state.session)` after resume.
+
+### Correction (W1-A)
+
+1. **Centralized derivation:** Added global `isExamIntegrityMode(session)` = `session.mode === 'full' || session.realConditions === true` in `app/app.js` (single source of truth).
+2. **Persist `realConditions`:** Session object now stores `realConditions` at creation; `start()`, `pause()`, and MCQ/case render logic (pause button, exam notice) read the persisted value instead of the live DOM checkbox.
+3. **Resume re-derivation:** The `recoveryResume` handler re-applies (or removes) `exam-integrity-mode` from `isExamIntegrityMode(state.session)`.
+4. **May gating unification:** `isFullTabBlocked()` in `app/may/may-core.js` delegates exam-state derivation to `isExamIntegrityMode` (with legacy fallback for load-order safety), preserving the `!completed` and has-questions gates.
+
+### Regression Test
+
+Extended `scripts/smoke_test.js` with a W1-A Resume Integrity block (3 scenarios × start + resume):
+- Full Exam → integrity mode active at start and restored on resume
+- Real-conditions practice → integrity mode active at start and restored on resume
+- Normal practice → integrity mode absent at start and after resume
+
+Result: 26/26 smoke checks PASS, including all 9 W1-A checks. Preflight 0 divergences, guard 66/66. Backups: `backups/app.js.bak-W1A-20260801200732`, `backups/may-core.js.bak-W1A-20260801200949`.
+
+### Resolved
+
+2026-08-01 — W1-A. Applies to new sessions. Pre-existing in-flight sessions created before this fix without `realConditions` fall back to `mode === 'full'` derivation (the `realConditions` checkbox path for those sessions is not recoverable from the old snapshot).
+
+### W1-B Follow-On — Exam State Unification (2026-08-01, Resolved)
+
+The split-brain exam-state model documented above was fully closed in W1-B:
+
+1. **Dead flag removed** — `May._examModeActive` (read in may-context-builder.js:101, never set anywhere) is no longer read. `examModeActive` in `_getAppState()` now derives from `_isExamIntegrityActive()`, which prefers `May.isFullTabBlocked()` (itself composed from the shared `isExamIntegrityMode(session)`) with a direct-derivation fallback carrying the `!completed` guard.
+2. **Routing wiring fixed** — a second latent defect: `buildAppContext()` nested `examModeActive` under `mayConfig`, while `_recommendMode()` read `a.examModeActive` on the AppContext top level — so `exam_briefing` routing was unreachable even with a live flag. `buildAppContext()` now exposes `examModeActive` at the top level (keeping `mayConfig` intact).
+3. **Remaining inline derivations unified** — may-core.js:4500 (pre-exam chat greeting) and may-core.js:6801 (launcher state) now derive from `isExamIntegrityMode` with the session-lifecycle guards. app.js `pause()` merged its duplicate guards onto `isExamIntegrityMode`.
+4. **Answer-leakage control** — `ANSWER_LEAKAGE_EXAM` (may-core.js:6283) reads `context.examModeActive`, which the guarded-speak path sets from `isFullTabBlocked()` (unified). Now additionally protective for real-conditions sessions.
+
+Post-W1-B smoke: **35/35 PASS** — unified gate, context `examModeActive`, and `exam_briefing` routing verified reachable for Full Exam and real-conditions sessions, correctly absent for practice. No duplicate flags or parallel state models remain.
+
+### Cross-References
+
+- S130 exam-integrity-mode CSS: `styles.css:6100-6104`
+- May `isFullTabBlocked`: `app/may/may-core.js` (§W1-A)
+- `isExamIntegrityMode`: `app/app.js` (line ~1945)
+- Resume handler: `app/app.js` (line ~5407)
+- W1-B: `app/may/may-context-builder.js` (`_isExamIntegrityActive`, `buildAppContext`), `app/may/may-core.js` (§W1-B), REVISION_HISTORY.md S135
+
+---
+
 ## Template for New Entries
 
 ```markdown

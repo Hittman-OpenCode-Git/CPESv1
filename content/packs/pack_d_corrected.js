@@ -4306,10 +4306,10 @@ var MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as choice-specific explanations targeting documented CMA exam traps"
     ],
-    "ExplanationWrongA": "Option A extrapolates the shipping department's 7.4% savings rate ($28,000 on ~$376,000 of freight-related costs) to the entire $9.4M expense base, projecting ~$700,000 in savings. This is a classic statistical error: extrapolating from an unrepresentative sample. Freight costs are inherently more discretionary than many other expense categories (raw materials are governed by contracts, depreciation by asset schedules, production labor by collective bargaining agreements). The shipping department pilot proves ZBB can work — but only for expense categories similar to shipping. A defensible recommendation requires identifying the portion of total expenses that is addressable through ZBB-style review, not blanket extrapolation. A candidate selecting this option may have applied simple proportional math without evaluating sample representativeness.",
-    "ExplanationWrongB": "Option B treats CMA Part 1 as endorsing ZBB as the 'preferred' methodology, which overstates the guidance. CMA Part 1 teaches that budget methodology selection should match organizational circumstances — there is no single 'preferred' method. ZBB is rigorous but costly and disruptive; incremental budgeting is efficient but can carry forward inefficiencies; activity-based budgeting links costs to drivers. The correct methodology depends on the organization's cost structure complexity, available resources, and capacity for change — not on a universal ranking. Additionally, '18 years of incremental budgeting' by itself is not a justification for change — the question is whether the existing methodology is producing suboptimal resource allocation, not whether it has been used for a long time.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Option D focuses exclusively on the ongoing cost differential ($42,000 vs. $9,200/year) while ignoring the savings ZBB may generate. If ZBB identifies even $42,001 in annual savings, it breaks even on sustainment cost — and the shipping pilot suggests savings could be substantially higher. The correct framework is a net benefit analysis: (ZBB-identified savings) − (ZBB implementation cost + sustainment premium) = net benefit. Focusing on cost alone is incomplete because the purpose of changing budget methodology is not to minimize the budgeting department's cost — it is to improve overall resource allocation. A candidate selecting this option may have applied a cost-minimization framework to a decision that requires a cost-benefit framework.",
+    "ExplanationWrongA": "Option A is incorrect because incremental budgeting does not eliminate the need for a sales forecast. The forecast still drives the budget; the incremental approach adjusts prior period results for inflation rather than building from zero. Failing to forecast sales would leave the company without a revenue baseline, which no budget methodology supports.",
+    "ExplanationWrongB": "Option B describes zero-based budgeting, not incremental budgeting. Incremental budgeting starts from the prior period's actual amounts and adjusts them, so it does NOT require each line item to be justified from a zero base. Confusing the two methodologies is a common error on this topic.",
+    "ExplanationWrongC": "Option C is incorrect because incremental budgeting does not guarantee efficient resource allocation. Because costs are carried forward from prior periods, inefficiencies embedded in last year's actuals are perpetuated without re-justification — the opposite of guaranteed efficiency.",
+    "ExplanationWrongD": "",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze"
   },
@@ -4672,8 +4672,8 @@ var MCQ_BANK_D = [
     ],
     "ExplanationWrongA": "Funding Alpha alone treats the capital budget as disconnected from the strategic plan. The board identified defense contracting as a growth priority — deferring Omega loses 12 months on ISO certification and customer qualification. A capital budget that ignores strategic priorities is not a budget — it is an extrapolation of the status quo. Payback period alone cannot override strategic fit.",
     "ExplanationWrongB": "Funding Omega alone and deferring Alpha through overtime maintenance is a high-risk bet. The consumer goods line produces 78% of revenue; deferring equipment replacement to authorize overtime is not sustainable. If the existing equipment fails catastrophically, Emberline loses the revenue stream funding both businesses. Capital budgeting should not bet the company on a single project when a phased approach can advance both.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Rejecting both proposals and returning capital to shareholders is a decision to exit both businesses. The $3.0M is a capital expenditure budget, not excess cash. The board allocated it based on strategic priorities. Returning it abandons both the current revenue base (not replacing aging equipment) and the growth strategy. A special dividend is appropriate when a company cannot find value-creating investments — here, both Alpha and Omega are value-creating.",
+    "ExplanationWrongC": "Option C is incorrect because rejecting both proposals and returning the $3.0M to shareholders abandons the board's stated defense-contracting growth priority without considering a phased alternative. A more appropriate response preserves the current revenue base while advancing the strategic pivot through staged funding, as Option D does.",
+    "ExplanationWrongD": "",
     "DifficultyScore": 4,
     "CognitiveLevel": "Evaluate"
   },
@@ -6753,10 +6753,10 @@ var MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as choice-specific explanations targeting documented CMA exam traps"
     ],
-    "ExplanationWrongA": "Proposal 1 expands the committee's authority to include headcount approval and capital spending pre-authorization, adding $32,000 in cost and 4 weeks to the process. While the proposal cites COSO Principle 14 (internal communication), expanding formal approval authority to a committee for operational decisions like headcount and capital spending slows decision-making without proportionate governance benefit. The budget committee's role is to coordinate budget development and review — extending its authority into operational territory (hiring decisions, capital approval) creates a bottleneck where routine decisions require committee deliberation. Under CMA Part 1, governance structures should match the decisions they govern: budget review is appropriately a committee function; operational approvals are appropriately a line-management function. A candidate selecting this option may have equated 'more governance' with 'better governance' without evaluating whether the expansion addresses a demonstrated deficiency.",
-    "ExplanationWrongB": "Proposal 2 dissolves the committee entirely, centralizing budget review in the finance department. While this option appears cost-efficient ($48,000 annual savings, 10-day timeline), it eliminates the cross-functional coordination that is the budget committee's primary value. Department heads from sales, production, and HR currently negotiate resource trade-offs in committee — without this forum, resource allocation decisions are made unilaterally by finance without operational input. The predictable result: budgets that are technically sound but operationally unworkable, leading to budget revisions, variance disputes, and erosion of budget credibility. Under CMA Part 1, the master budget requires coordination across functions (sales forecast → production plan → purchasing → labor → cash) — the committee structure enforces this interdependence. A candidate selecting this option may have prioritized cost minimization over coordination quality.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Proposal D recommends a hybrid: expanded authority for capital pre-authorization only, tighter variance thresholds, and retaining the committee for budget review. While a hybrid approach appears to capture the 'best' of each proposal, it introduces governance complexity: the committee now has authority over capital proposals but not headcount, and tighter variance thresholds but no change to the review process. This creates a rulebook that is harder to administer, communicate, and enforce — different decisions follow different approval paths. Under CMA Part 1, governance simplicity and clarity have value: a well-understood governance structure is more likely to be followed consistently than a complex one. The current structure already functions effectively, and none of the three proposals has identified a genuine deficiency that requires restructuring. A candidate selecting this option may have defaulted to the 'most comprehensive' solution without evaluating whether the added complexity is justified by a specific problem.",
+    "ExplanationWrongA": "Option A (28,000 pounds) adds the beginning inventory balance instead of subtracting it and ignores the desired ending inventory. Purchases = production needs (25,000) + desired ending inventory (4,000) − beginning inventory (3,000) = 26,000. Adding rather than subtracting beginning inventory is a common sign error.",
+    "ExplanationWrongB": "Option B (25,000 pounds) uses only the production requirement and ignores both inventory adjustments. The purchases budget must also add the desired ending inventory and subtract the beginning inventory already on hand.",
+    "ExplanationWrongC": "Option C (22,000 pounds) subtracts the beginning inventory but omits the desired ending inventory. Purchases = 25,000 + 4,000 − 3,000 = 26,000. Forgetting to add the 4,000-pound desired ending inventory understates the purchase requirement.",
+    "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze"
@@ -7156,8 +7156,8 @@ var MCQ_BANK_D = [
       "Distractors written as plausible CMA-style traps"
     ],
     "ExplanationWrongA": "Simply carrying forward Q2's actual expenses fails to separate fixed and variable components. S&A costs contain both fixed (salaries, facility) and variable (commissions, shipping) elements. A 15% volume increase affects only the variable portion at $0.12 per sales dollar, not the full $178,000 base. The high-low method must be applied first, then step-costs evaluated.",
-    "ExplanationWrongB": "",
-    "ExplanationWrongC": "This correctly applies the high-low method ($46,000 fixed + $0.12 × $1,265,000 = $197,800) but overlooks the step-cost constraint. Each salesperson handles max $300,000/quarter. Four salespeople = $1,200,000 capacity. Q3's $1,265,000 exceeds this, requiring a fifth salesperson at $15,000/quarter. Ignoring capacity constraints when scaling costs is a common budgeting error.",
+    "ExplanationWrongB": "Option B ($197,800) correctly applies the high-low method but omits the step-cost constraint. Each salesperson handles at most $300,000/quarter, so four handle $1,200,000. Q3 sales of $1,265,000 exceed this capacity, requiring a fifth salesperson at $15,000. Adding that step cost gives the correct budget of $212,800.",
+    "ExplanationWrongC": "",
     "ExplanationWrongD": "A uniform 15% increase double-counts the volume effect. The high-low method already captures the volume-driven variable cost increase. Applying a flat percentage to both fixed and variable costs inflates the budget. Additionally, this ignores the specific step-cost trigger at $1,200,000 sales where salesperson capacity is exhausted.",
     "question_state": "Certified",
     "DifficultyScore": 3,
@@ -7456,10 +7456,10 @@ var MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as choice-specific explanations targeting documented CMA exam traps"
     ],
-    "ExplanationWrongA": "Option A selects Model A based on cost alone (89% cheaper than Model B), arguing that precision beyond ~15% MAPE has diminishing returns for a mid-market distributor. However, a 6.6 percentage point MAPE improvement (from 12.8% to 6.2%) on $14.2M COGS represents approximately $561,000 in annual savings — the cost differential between Model A ($5,400) and Model B ($48,000) is only $42,600, yielding a 13x return on the incremental investment. The diminishing returns argument would be valid if MAPE improvement were, say, from 3% to 2%, but at 12.8%, Apex is well above the threshold where accuracy improvements deliver material inventory savings. A candidate selecting this option may have evaluated cost in isolation without quantifying the benefit of improved accuracy.",
-    "ExplanationWrongB": "Option B selects Model B based on a simple benefit-cost calculation: ~$561,000 savings vs. ~$69,000 total cost (license + labor). While the headline benefit-cost ratio of approximately 8:1 is compelling, this approach ignores implementation feasibility — Model B requires 12 analyst hours/week, which may exceed Rachel's two-analyst team's capacity. If the team cannot sustain the 12 hours/week, forecast quality degrades and the theoretical MAPE improvement is never realized. Under CMA Part 1 capital investment decisions, projected returns must be adjusted for implementation risk — a model that cannot be operated effectively delivers none of its projected benefits. A candidate selecting this option correctly quantified the benefit but failed to assess operational feasibility.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Option D selects Model B because 'machine learning is the industry standard.' This rationale substitutes a trend-following argument for analytical decision-making. Whether a technology is an 'industry standard' is irrelevant to whether it is the right investment for Apex specifically — the company's cost structure ($14.2M COGS), team capacity (2 analysts), and accuracy requirements determine the correct decision, not what competitors are doing. Additionally, 'positioning for future analytics' is a strategic argument that should be costed separately — buying Model B now for capabilities Apex may need in 3 years is speculative unless the board has explicitly authorized a digital transformation initiative. A candidate selecting this option may have substituted a technology adoption heuristic for a structured cost-benefit analysis.",
+    "ExplanationWrongA": "Option A is incorrect because multi-year lease payments on office space are fixed contractual obligations that do not vary with sales volume. Only costs that change in direct proportion to activity belong in the variable portion of the selling and administrative expense budget.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C is incorrect because the CEO's fixed annual salary does not change with sales volume. Fixed compensation is a fixed cost in the budget, not a variable component driven by activity.",
+    "ExplanationWrongD": "Option D is incorrect because straight-line depreciation on headquarters is a fixed cost — the depreciation charge is the same each period regardless of sales volume. A variable selling or administrative cost must change as sales activity changes.",
     "question_state": "Certified",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze"
@@ -7758,10 +7758,10 @@ var MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as choice-specific explanations targeting documented CMA exam traps"
     ],
-    "ExplanationWrongA": "The setup rate variance = Actual Setups × (Actual Rate − Standard Rate) = 82 × ($250 − $240) = $820 unfavorable. While this is a real variance, the receiving volume variance is $2,700 unfavorable (150 extra orders × $18 standard rate), which is more than 3 times larger. The rate variance suggests the setup rate increase is relatively modest ($10/hour on 82 setups). Total setup impact = rate variance ($820 U) + volume variance (8 fewer setups × $240 = $1,920 F) = net $1,100 favorable for setups. A candidate selecting this option may have correctly calculated the rate variance but failed to compare its magnitude to the much larger receiving volume variance.",
-    "ExplanationWrongB": "Receiving volume variance = (1,350 − 1,200) × $18 = $2,700 unfavorable. Receiving rate variance = 1,350 × ($17 − $18) = $1,350 favorable. Net receiving impact = $1,350 unfavorable. This is the largest activity-driver impact ($1,350 unfavorable). However, the setup activity actually generated a net $1,100 favorable variance ($820 U rate + $1,920 F volume), partially offsetting the receiving variance. The total variance of $370 unfavorable is the net of all three activities. Under CMA Part 1 ABB variance decomposition, the analysis must identify which activity driver contributed most to the net unfavorable result.",
-    "ExplanationWrongC": "Inspection volume variance = (640 − 600) × $35 = $1,400 unfavorable. Inspection rate variance = 640 × ($33 − $35) = $1,280 favorable. Net inspection impact = $120 unfavorable. While $1,400 unfavorable on volume is significant, the $1,280 favorable rate variance ($2/lb below standard) nearly offsets it. The net inspection impact ($120 U) is much smaller than the net receiving impact ($1,350 U). A candidate selecting this option may have focused on the gross volume variance number without recognizing that the favorable rate variance substantially offsets it.",
-    "ExplanationWrongD": "The three activities do NOT contribute equally to the $370 unfavorable total. Receiving variance: $2,700 U (volume) + $1,350 F (rate) = $1,350 U (72% of net unfavorable). Inspection variance: $1,400 U (volume) + $1,280 F (rate) = $120 U (6%). Setup variance: $820 U (rate) + $1,920 F (volume) = $1,100 F (22% favorable offset). The receiving activity's volume increase (150 unexpected orders) is the dominant driver. Under CMA Part 1, variance decomposition must isolate individual activity impacts — concluding 'all three contributed equally' when one activity accounts for 72% of the net unfavorable is an analytical error. A candidate may have selected this option by looking at the total variance of $370 and assuming equal contribution, rather than performing the per-activity decomposition.",
+    "ExplanationWrongA": "Option A is incorrect because residual income is a divisional performance measure (operating income minus the required return on invested capital), unrelated to forecast accuracy. Bramblewood's MAPE computation evaluates how well the forecasting model predicts actual results.",
+    "ExplanationWrongB": "Option B is incorrect because transfer prices are set based on market prices or cost-based pricing policies between divisions, not by forecast error measurement. MAPE assesses the accuracy of the sales forecast, not interdivisional pricing.",
+    "ExplanationWrongC": "Option C is incorrect because determining the exact cause of a cost variance requires variance analysis (price/rate and quantity/efficiency decomposition), not forecast error metrics. Mean absolute percentage error measures the average size of forecast deviations to judge model reliability.",
+    "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 4,
     "CognitiveLevel": "Understand"
@@ -7808,8 +7808,8 @@ var MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "This includes only the receiving cost ($21,600) and omits the setup and inspection activity costs. A complete analysis must include all three cost drivers. Recompute by summing all activity costs.",
+    "ExplanationWrongA": "Option A is incorrect because the setup rate variance of $820 unfavorable is not the largest single component. Receiving volume variance is $2,700 unfavorable (150 additional orders × $18), which exceeds the setup rate variance by more than three times. The setup activity also nets favorable ($1,920 F volume − $820 U rate = $1,100 F), so it cannot be the primary driver of the $370 unfavorable total.",
+    "ExplanationWrongB": "",
     "ExplanationWrongC": "This includes only one activity cost and omits the other two. The correct analysis decomposes the total variance into rate and volume effects for each of the three cost drivers.",
     "ExplanationWrongD": "This double-counts one of the activity cost components. Verify that each activity is counted exactly once using the formula: activity rate × budgeted activity volume.",
     "question_state": "Certified",
@@ -7910,8 +7910,8 @@ var MCQ_BANK_D = [
     ],
     "ExplanationWrongA": "Accepting a favorable variance without investigation ignores a fundamental principle: favorable variances can signal problems as serious as unfavorable ones. If the flexible budget volume assumption is miscalibrated, future reports will be systematically distorted. If overtime spending is absorbing the benefit, Solaris is incurring avoidable costs that compound. Management-by-exception should investigate significant variances regardless of direction.",
     "ExplanationWrongB": "Investigating only overtime while dismissing the volume claim as self-serving is a process error. If the volume assumption is miscalibrated, every future variance report will be distorted regardless of what the overtime investigation finds. Both hypotheses are testable against Q1 production records. The controller should verify claims against data, not prejudge which stakeholder is credible.",
-    "ExplanationWrongC": "",
-    "ExplanationWrongD": "Deferring investigation to Q2 compounds the risk. If the volume assumption is wrong, Q2's variance report will also be distorted — trend analysis on two distorted quarters yields no insight and wastes three months. The cost of a thorough investigation now is small relative to the cost of operating with a miscalibrated benchmark for multiple quarters.",
+    "ExplanationWrongC": "Option C is incorrect because deferring investigation until Q2 compounds the risk. If the flexible budget volume assumption is miscalibrated, Q2's variance report will be distorted as well, and trend analysis on two distorted periods provides no additional signal. The controller's specific claims — volume miscalibration and overtime masking — should be investigated immediately, as Option D proposes.",
+    "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze"
@@ -8968,10 +8968,10 @@ var MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as choice-specific explanations targeting documented CMA exam traps"
     ],
-    "ExplanationWrongA": "",
-    "ExplanationWrongB": "Option B incorrectly swaps the multipliers between the two variance formulas. The labor rate variance is calculated as Actual Hours × (Actual Rate − Standard Rate) = 9,900 × $2.20 = $21,780 unfavorable. The labor efficiency variance is calculated as Standard Rate × (Actual Hours − Standard Hours) = $22.00 × (9,900 − 9,000) = $19,800 unfavorable. Option B reverses these: it applies the rate difference to standard hours (9,000 × $2.20) for the rate variance and multiplies the hour difference by the actual rate ($24.20 × 900) for the efficiency variance. The computational error produces variances with the wrong dollar amounts and — critically — reverses the conclusion about which component is larger. A candidate selecting this option may have memorized the general shape of the formulas without internalizing which multiplier belongs to which variance.",
-    "ExplanationWrongC": "Option C correctly identifies that the $21,780 rate variance stems from a contractual wage increase beyond Okonkwo's control and is not relevant to his performance evaluation. However, the plant manager's question is about understanding the total $41,580 labor cost overrun — not about evaluating Okonkwo individually. The rate variance accounts for 52% of the total overrun. Excluding it from the analysis would understate the cost impact by more than half and leave management with an incomplete budget for next year (the higher $24.20 rate will persist). Under CMA Part 1, variance analysis serves two distinct purposes: performance evaluation (where controllability matters) and cost analysis/planning (where all components matter). A candidate selecting this option correctly applied the controllability principle for evaluation but failed to recognize that the plant manager's question addresses cost understanding, not individual performance.",
-    "ExplanationWrongD": "Option D lumps both variances into a single 'turnover impact' of $41,580, arguing they share a common root cause (January retirements). While it is true that the retirements triggered both new hires and the wage structure change, the two variances require different management responses: the $21,780 rate variance calls for updating the standard cost card and adjusting product cost estimates to reflect the permanently higher wage structure, while the $19,800 efficiency variance calls for targeted training investment and accelerated onboarding programs. Combining them into one figure prevents Meridian from taking targeted corrective action and violates the fundamental purpose of variance analysis: to decompose total deviations into individually actionable components so management can address each root cause separately.",
+    "ExplanationWrongA": "Option A is incorrect because operating budgets are prepared annually (and revised during the year), not once every five years. The five-year horizon applies to the strategic plan; the operating budget is the detailed annual translation of that strategy.",
+    "ExplanationWrongB": "Option B is incorrect because strategic plans are developed by the board and senior management, not by external auditors. External auditors express an opinion on financial statements; they do not prepare the company's strategic plan.",
+    "ExplanationWrongC": "Option C is incorrect because the two planning levels differ in both time horizon and level of detail. Strategic plans set broad, long-term direction, while operating budgets translate strategy into specific, detailed short-term financial targets — different scope and granularity by design.",
+    "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze"
@@ -17824,7 +17824,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C correctly identifies the second line's failure as the primary defect but proposes the wrong remediation. The second line (risk management) failed because it approved the $950,000 override after a cursory review — not because it lacked a formal policy framework. A new policy would be a document on a shelf unless accompanied by a change in reporting structure that enables the second line to exercise genuine independent challenge. The root cause is that the credit manager's manager (the divisional controller) directed the override, and risk management reports to the same divisional controller — creating a conflict where the second line reports to the person whose decisions it is supposed to challenge. The structural fix requires the second line to have a reporting line independent of the operational chain it monitors.",
     "ExplanationWrongD": "",
-    "question_state": "Active",
+    "question_state": "Unprocessed",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-ED-002 (DL-012 rotation clone)"
@@ -18475,7 +18475,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Option D recommends risk avoidance — exiting the market entirely — which may be premature without evaluating intermediate options. Risk avoidance eliminates the downside but also eliminates the $3.5 million annual cost savings. Under COSO ERM, risk response selection should consider the portfolio effect: does this risk, in combination with other risks in the portfolio, exceed the organization's risk appetite? The scenario describes a $72 million enterprise with an 8% risk appetite — the board needs to evaluate whether the combined FX, political, and supply chain risks of this single-source country exceed 8% of equity, not simply exit because each risk dimension is significant. The analysis should also consider risk sharing (joint venture, political risk insurance) and risk reduction (partial diversification) as alternatives between the extremes of full acceptance and full avoidance. Choosing the most extreme risk response without evaluating intermediate options violates the ERM principle of proportional response.",
-    "question_state": "Active",
+    "question_state": "Unprocessed",
     "DifficultyScore": 2,
     "CognitiveLevel": "Apply",
     "upgrade_note": "S899 Phase 1 — Evaluate replacement for archived P1-ED-015 (DL-012 rotation clone)"
@@ -18727,7 +18727,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "Option B confuses authentication with authorization. Biometric verification confirms who the plant manager is — it does not determine what the plant manager is authorized to approve. The transaction occurred because the ERP system allowed the manager to create four separate requisitions, each below the approval limit. Biometric authentication would still identify the same person creating the same four requisitions — it would not flag the split-purchase pattern. This is a category error: authentication controls (something you are, have, or know) address identity verification, not authorization boundaries. The control deficiency is in the authorization rules, not the identity verification mechanism.",
     "ExplanationWrongC": "Option C correctly identifies the split-purchase scheme but proposes a remediation that does not scale. A daily total cap would prevent the specific pattern described (four requisitions on one day), but a determined manager could split the orders across four consecutive business days. Transaction-splitting detection requires pattern analysis — cumulative spend by requisitioner vs. vendor over a period, not a simple daily cap. More significantly, daily caps do not address the root control failure: the ERP system's rule engine only applies per-transaction limits, allowing the same requisitioner-vendor combination to circumvent controls through aggregation. The correct remediation upgrades the rule engine logic, not the dollar cap.",
     "ExplanationWrongD": "",
-    "question_state": "Active",
+    "question_state": "Unprocessed",
     "DifficultyScore": 2,
     "CognitiveLevel": "Apply",
     "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-ED-020 (DL-012 rotation clone)"
@@ -19741,7 +19741,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "Option B conflates inherent risk with residual risk. The risk manager described the ERP failure scenario and its financial and operational consequences — this is an inherent risk assessment (the risk before considering existing controls). The observed fact that this has not occurred in five years is a valid input to likelihood assessment, not evidence that the risk was assessed on a residual basis. Inherent risk assessment considers the nature and magnitude of the risk without regard to controls. The appropriate next step is to assess residual risk by evaluating the effectiveness of existing controls (backup systems, disaster recovery, ITGC) in reducing either the likelihood or impact of the ERP failure scenario. Option B also misinterprets the scenario — the risk manager did evaluate likelihood (incorrectly, but an evaluation was performed), so the fundamental defect is not that likelihood was omitted.",
     "ExplanationWrongC": "Option C proposes expanding the risk universe rather than correcting the existing assessment, which misallocates resources. The risk assessment process under COSO Principle 7 should first ensure that identified risks are correctly evaluated before expanding the scope of risk identification. Adding more risk scenarios to a flawed assessment framework compounds the problem — if likelihood and impact are inconsistently calibrated, adding more risks simply produces more inconsistently calibrated risk assessments. Furthermore, the board's risk appetite of 6% of equity is a constraint on the total risk portfolio, not just a single ERP failure. Before allocating resources to identifying additional risks, the risk manager should correct the existing assessment and ensure all identified risks are evaluated consistently against the board's stated appetite and tolerance boundaries.",
     "ExplanationWrongD": "",
-    "question_state": "Active",
+    "question_state": "Unprocessed",
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply",
     "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-ED-040 (DL-012 rotation clone)"
@@ -20253,7 +20253,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C focuses on a subset of the access control deficiencies (role design) while ignoring the more fundamental JML process failure. Role-based access with least privilege is a design principle for future-state access management, but the immediate remediation must address the 34 active terminated-employee accounts and the shared generic accounts. Redesigning roles is a medium-term project that does not close the existing access gap. The scenario asks for the most critical deficiency — the presence of 34 active accounts for terminated employees is an immediate security exposure that must be closed before embarking on a role-redesign initiative. Furthermore, least-privilege role design does not solve the shared-account problem; shared accounts violate the principle of individual accountability regardless of how tightly scoped their permissions are.",
     "ExplanationWrongD": "",
-    "question_state": "Active",
+    "question_state": "Unprocessed",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-ED-050 (DL-012 rotation clone)"
@@ -21619,7 +21619,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C correctly recommends API-based integration but overcomplicates the architecture by proposing an event-driven pattern for a synchronous request-response use case. Event-driven architecture is appropriate when changes in one system should be consumed asynchronously by multiple downstream systems. Here, the e-commerce platform needs to check inventory at the moment a customer views a product page — a synchronous request-response pattern. Publishing inventory changes as events would require the e-commerce platform to maintain its own inventory cache and process events to keep it current, adding complexity and the risk of cache staleness. The APM's 12-month data requirement is satisfied by the ERP's standard reporting module, not by an event-driven integration. For two-system, request-response integration, REST APIs are the appropriate choice.",
     "ExplanationWrongD": "",
-    "question_state": "Active",
+    "question_state": "Unprocessed",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-FD-002 (DL-012 rotation clone)"
@@ -22020,7 +22020,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Option C changes the encryption algorithm (AES-256 → AES-512) without addressing how keys are managed. The scenario provides no evidence that AES-256 was cryptographically broken — the attacker obtained the keys, not a mathematical weakness in AES. Moving to a longer key and adding an HSM addresses future key protection but would not have prevented the current breach because the attacker already has the AES-256 keys and the encrypted data. Rotating keys after a breach is necessary regardless of algorithm, but the priority remediation should address the key management failure that allowed the attacker to obtain the keys in the first place — namely, that production encryption keys were stored in a backup system without access controls equivalent to the production environment.",
     "ExplanationWrongD": "",
-    "question_state": "Active",
+    "question_state": "Unprocessed",
     "DifficultyScore": 4,
     "CognitiveLevel": "Evaluate",
     "upgrade_note": "S899 Phase 1 — Evaluate replacement for archived P1-FD-010 (DL-012 rotation clone)"
@@ -22523,7 +22523,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "Option B argues that the performance gap does not indicate overfitting because the holdout accuracy is close to random guessing. This argument is inverted: a model that achieves 98% on training data but only 55% on unseen data is the definition of severe overfitting. The model has learned the training data's noise rather than its signal. A model performing at chance level on holdout data is worse than useless for credit risk assessment — it is systematically making decisions based on patterns that do not generalize. Option B also contains an internal contradiction: it first claims overfitting is not the issue, then recommends collecting more data (a standard anti-overfitting technique). If overfitting were not the issue, more data would not help. The 98%-vs-55% gap is a textbook overfitting signal.",
     "ExplanationWrongC": "Option C correctly identifies the need for pre-deployment validation but applies the wrong release criterion. A credit risk model with a 2% false positive rate still misclassifies 2% of loan applicants — in a portfolio of 10,000 applications, that is 200 applicants who are either wrongly denied credit or wrongly approved for loans they cannot repay. For credit risk models, false negatives (approving bad loans) are typically more costly than false positives (denying good loans). An audit committee reviewing a model for regulatory compliance should require evidence that the model is not overfit and performs above an acceptable threshold across all relevant demographic segments — not approve deployment based solely on a single aggregate metric. The false positive rate is one dimension; false negative rate, demographic parity, and model interpretability are equally important for credit risk models.",
     "ExplanationWrongD": "",
-    "question_state": "Active",
+    "question_state": "Unprocessed",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-FD-020 (DL-012 rotation clone)"
@@ -23523,7 +23523,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "Choice B is incorrect because metadata is data about data — attributes such as creation date, author, file size, and data lineage — not the content itself. The stem describes actual content files (emails, videos, posts), not descriptive tags about those files. A candidate may confuse information about data with the underlying data content.",
     "ExplanationWrongC": "Choice C is incorrect because master data represents key business entities such as customers, products, suppliers, and chart of accounts that are shared across systems. Emails, videos, and social media content are not master data records but rather unstructured content that does not fit predefined schemas. A candidate may conflate any non-transactional data category with master data.",
     "ExplanationWrongD": "",
-    "question_state": "Active",
+    "question_state": "Unprocessed",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze",
     "upgrade_note": "S899 Phase 1 — Analyze replacement for archived P1-FD-040 (DL-012 rotation clone)"
@@ -23796,7 +23796,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "",
-    "question_state": "Active",
+    "question_state": "Archived",
     "DifficultyScore": 5,
     "CognitiveLevel": "Evaluate",
     "upgrade_note": "S899 Phase 1 — SCRATCH AUTHOR: Evaluate/Very Difficult replacement for archived P1-FD-046. Original FD-046 was a Remember/Easy definition-match clone (DL-012 rotation)."
@@ -23998,7 +23998,7 @@ var MCQ_BANK_D = [
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Choice C is incorrect because data mining searches large datasets to discover hidden patterns, correlations, and relationships. Master data management focuses on establishing and governing the quality, consistency, and authority of reference data — which is a prerequisite for effective data mining but serves a distinct purpose. A candidate may conflate data discovery with data stewardship.",
     "ExplanationWrongD": "Choice D is incorrect because robotic process automation (RPA) automates repetitive, rules-based manual tasks such as data entry between systems using software bots. RPA does not establish or govern a single, authoritative source of core business data — it moves data between systems, while master data management defines what data is authoritative. The stem describes maintaining consistent customer and product information across multiple systems, which is the defining purpose of master data management.",
-    "question_state": "Active",
+    "question_state": "Unprocessed",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
     "upgrade_note": "S899 Phase 1 — Evaluate/Very Difficult replacement for archived P1-FD-050 (DL-012 rotation clone)"

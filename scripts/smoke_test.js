@@ -218,6 +218,161 @@ async function main() {
     fail("Orchestrator readiness check: no result");
   }
 
+  // W1-B — verify the unified exam-state signal reaches May's context layer:
+  // May.isFullTabBlocked gate, context app.examModeActive, and the
+  // recommendedCoachingMode (exam_briefing should now be reachable).
+  async function w1bExamStateAssert(label, expectActive) {
+    const res = await page.evaluate(() => {
+      try {
+        const gate = (typeof May !== 'undefined' && typeof May.isFullTabBlocked === 'function') ? May.isFullTabBlocked() : null;
+        let ctxActive = null, rec = null;
+        if (typeof MayContextBuilder !== 'undefined' && state && state.session && state.session.mcqs && state.session.mcqs.length) {
+          const ctx = MayContextBuilder.buildFullContext(state.session.mcqs[0].QuestionID);
+          ctxActive = !!(ctx && ctx.app && ctx.app.examModeActive);
+          rec = ctx ? ctx.recommendedCoachingMode : null;
+        }
+        return { gate, ctxActive, rec };
+      } catch (e) { return { err: e.message }; }
+    });
+    if (res.err) { fail(label + ": context assert error: " + res.err); return; }
+    res.gate === expectActive
+      ? pass(label + ": May.isFullTabBlocked = " + res.gate + " (unified gate)")
+      : fail(label + ": May.isFullTabBlocked = " + res.gate + " (expected " + expectActive + ")");
+    res.ctxActive === expectActive
+      ? pass(label + ": context app.examModeActive = " + res.ctxActive)
+      : fail(label + ": context app.examModeActive = " + res.ctxActive + " (expected " + expectActive + ")");
+    if (expectActive) {
+      res.rec === 'exam_briefing'
+        ? pass(label + ": recommendedCoachingMode = exam_briefing (routing reachable)")
+        : fail(label + ": recommendedCoachingMode = " + res.rec + " (expected exam_briefing)");
+    } else {
+      res.rec !== 'exam_briefing'
+        ? pass(label + ": recommendedCoachingMode = " + res.rec + " (no exam briefing for non-exam)")
+        : fail(label + ": recommendedCoachingMode = exam_briefing (unexpected for non-exam)");
+    }
+  }
+
+  // ── W1-A: Resume Integrity (exam-integrity-mode restoration) ──────
+  // Verifies that resuming a saved session re-derives exam-integrity mode
+  // from the restored session (Full Exam / real-conditions -> integrity
+  // mode active; normal practice -> integrity mode absent).
+
+  async function suppressOnboarding() {
+    await page.evaluate(() => {
+      try {
+        if (window.GuidedTour) GuidedTour.stop(false);
+        if (window.CMAProfileManager) {
+          const p = CMAProfileManager.load();
+          if (p) { p.onboarding = p.onboarding || {}; p.onboarding.tourCompleted = true; CMAProfileManager.save(p); }
+        }
+        const prof = JSON.parse(localStorage.getItem("cmaProfile2026") || "null");
+        if (prof) { prof.onboarding = prof.onboarding || {}; prof.onboarding.tourCompleted = true; localStorage.setItem("cmaProfile2026", JSON.stringify(prof)); }
+        const ov = document.getElementById("guidedTourOverlay");
+        if (ov) ov.remove();
+      } catch (e) { /* not available */ }
+    });
+  }
+
+  async function bodyHasClass(cls) {
+    return page.evaluate((c) => document.body.classList.contains(c), cls);
+  }
+
+  async function startSession(mode, realConditions) {
+    await page.evaluate(({ m, rc }) => {
+      const modeEl = document.getElementById("mode");
+      if (modeEl) modeEl.value = m;
+      const rcEl = document.getElementById("realConditions");
+      if (rcEl) rcEl.checked = !!rc;
+      const f = document.getElementById("sessionForm");
+      if (f) f.requestSubmit();
+    }, { m: mode, rc: realConditions });
+    await page.waitForTimeout(8000); // tiered pool build + first render
+    await page.evaluate(() => { try { SessionPersistence.saveImmediate(); } catch (e) {} });
+  }
+
+  async function resumeAndAssert(label, expectIntegrity) {
+    await page.reload({ waitUntil: "domcontentloaded", timeout: 60000 });
+    await page.waitForTimeout(4000);
+    // W1-A test hygiene — dismiss first-run tour if it re-triggered on reload
+    // so it cannot intercept the recovery-modal resume click.
+    await page.evaluate(() => {
+      try {
+        if (window.GuidedTour) GuidedTour.stop(false);
+        const ov = document.getElementById("guidedTourOverlay");
+        if (ov) ov.remove();
+      } catch (e) { /* not available */ }
+    });
+    const resumeBtn = await page.$("#recoveryResume");
+    if (!resumeBtn) { fail(label + ": recovery modal did not appear"); return; }
+    await resumeBtn.click();
+    await page.waitForTimeout(2500);
+    const integrity = await bodyHasClass("exam-integrity-mode");
+    const active = await bodyHasClass("session-active");
+    integrity === expectIntegrity
+      ? pass(label + ": exam-integrity-mode " + (expectIntegrity ? "restored (no integrity bypass)" : "correctly absent"))
+      : fail(label + ": exam-integrity-mode " + (expectIntegrity ? "NOT restored (integrity bypass)" : "unexpectedly present"));
+    active
+      ? pass(label + ": session-active restored")
+      : fail(label + ": session-active not restored");
+  }
+
+  async function clearForNextScenario() {
+    await page.evaluate(() => { try { SessionPersistence.clear(); } catch (e) {} });
+    await page.goto(FILE_URL, { waitUntil: "domcontentloaded", timeout: 60000 });
+    await page.waitForTimeout(3000);
+    await suppressOnboarding();
+  }
+
+  await suppressOnboarding();
+
+  // Scenario 1 — Full Exam: integrity mode at start and after resume
+  await startSession("full", false);
+  (await bodyHasClass("exam-integrity-mode"))
+    ? pass("W1-A Full exam: exam-integrity-mode active at start")
+    : fail("W1-A Full exam: exam-integrity-mode NOT active at start");
+  await resumeAndAssert("W1-A Full exam resume", true);
+  await w1bExamStateAssert("W1-B Full exam", true);
+  await clearForNextScenario();
+
+  // Scenario 2 — Real-conditions practice: integrity mode at start and after resume
+  await startSession("mcq", true);
+  (await bodyHasClass("exam-integrity-mode"))
+    ? pass("W1-A Real conditions: exam-integrity-mode active at start")
+    : fail("W1-A Real conditions: exam-integrity-mode NOT active at start");
+  await resumeAndAssert("W1-A Real conditions resume", true);
+  await w1bExamStateAssert("W1-B Real conditions", true);
+  await clearForNextScenario();
+
+  // Scenario 3 — Normal practice: integrity mode must stay absent
+  await startSession("mcq", false);
+  (await bodyHasClass("exam-integrity-mode"))
+    ? fail("W1-A Normal practice: exam-integrity-mode unexpectedly active")
+    : pass("W1-A Normal practice: no exam-integrity-mode at start");
+  await resumeAndAssert("W1-A Practice resume", false);
+  await w1bExamStateAssert("W1-B Practice", false);
+  await clearForNextScenario();
+
+  // ── W1-C: Tour framework presence + first-step render ──────────
+  // (Full geometry matrix covered by scripts/tour_diagnostic.js.)
+  await clearForNextScenario();
+  const tourStart = await page.evaluate(() => {
+    try {
+      if (typeof GuidedTour === "undefined") return { ok: false, reason: "GuidedTour missing" };
+      GuidedTour.start("beginner");
+      return { ok: true };
+    } catch (e) { return { ok: false, reason: e.message }; }
+  });
+  await page.waitForTimeout(1400);
+  const tourRender = await page.evaluate(() => {
+    const ov = document.getElementById("guidedTourOverlay");
+    const t = document.getElementById("tourTooltip");
+    return { overlay: !!ov, tooltip: !!t && t.offsetHeight > 0, next: !!document.getElementById("tourNext") };
+  });
+  tourStart.ok && tourRender.overlay && tourRender.tooltip && tourRender.next
+    ? pass("W1-C: tour framework renders (overlay + tooltip + Next)")
+    : fail("W1-C: tour render problem " + JSON.stringify({ tourStart: tourStart, tourRender: tourRender }));
+  await page.evaluate(() => { try { if (window.GuidedTour) GuidedTour.stop(false); } catch (e) {} });
+
   // ── Errors ───────────────────────────────────────────────────
 
   const defErrors = pageErrors.filter(

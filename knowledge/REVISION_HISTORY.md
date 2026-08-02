@@ -30661,4 +30661,381 @@ Documentation files (REVISION_HISTORY.md, DEFECT_LIBRARY.md, AGENTS.md, test ass
 - 0 pack-file modifications
 - UI-only changes (labels + persistence mechanism)
 
+---
+
+## S130 — Roadmap Rebaseline — 2026-08-01
+
+**Type:** Planning / Governance Documentation — Full Governance Lane (REVISION_HISTORY.md touched; no content edits)
+
+### 1. Context
+
+Following S122 (Excellence & Benchmarking), S123 (archive), S124 (operations console), S126B (restructure), S127 (runtime modularization), and S128A (scored cases audit):
+
+- Repository architecture stabilization completed.
+- Runtime modularization completed.
+- Operations Console foundation established.
+- Recovery findings re-evaluated.
+
+### 2. Roadmap Revised
+
+| # | Track | Status |
+|---|-------|--------|
+| P1 | Repository Truth Verification | Planned — gate for all downstream work |
+| P2 | Cognitive Integrity Verification | Planned — depends on P1 |
+| P3 | Pack C/D Completion | Blocked by P2 |
+| P4 | Parallel Hardening | Active — Operations Console, Admin Gating, UX Stabilization, Test Coverage |
+| P5 | Alpha Exit Criteria | Future |
+| P6 | Beta Readiness Review | Future |
+
+### 3. Notable Change
+
+Previous assumptions of large-scale cognitive relabeling were replaced with a **verification-first approach**. The S93P 58.7% misclassification figure is a historical observation on the pre-recovery population (150-item sample), not proof that a comparable share of the current certified inventory requires relabeling. Post-recovery state: 2,451/2,545 certified (96.3%), governance guard 66/66 PASS, Rule 11 deployed, S122 Gold Standard / False Positive libraries institutionalized. Remaining remediation is now evidence-driven.
+
+### 4. Deliverables
+
+| File | Purpose |
+|------|---------|
+| `knowledge/ROADMAP_ACTIVE.md` | Operational source of truth (short, day-to-day planning) |
+| `knowledge/ALPHA_EXIT_CRITERIA.md` | Draft placeholder — metrics TBA after P2/P3/P4 |
+
+### Governance Impact
+
+- 0 question_state changes
+- 0 answer-key changes
+- 0 pack-file modifications
+- Preflight: PASS — 0 divergences, 2451 certified, governance guard 66/66
+- Backups: `backups/REVISION_HISTORY.md.bak-20260801171336`, `backups/ROADMAP.md.bak-20260801171241`
+
+---
+
+## S131 — P1 Repository Truth Verification — 2026-08-01
+
+**Type:** Read-Only Audit — Full Governance Lane (DEFECT_LIBRARY.md + REVISION_HISTORY.md touched; no pack/state/content edits)
+
+### 1. Verdict
+
+Baseline counts **CONFIRMED**. Learner-pool safety claims **REFUTED** — 3 defect clusters not captured by any prior scan or runtime blocklist.
+
+### 2. Confirmed Baselines
+
+| Check | Result |
+|-------|--------|
+| QID counts | 500/500/500/500/545 = 2,545 |
+| Certified | 500/500/455/456/540 = **2,451** (matches CURRENT_BASELINES.md §2) |
+| Parse integrity | ✅ all 5 packs (Function-constructor + node --check) |
+| Governance guard | 66/66 PASS |
+| question_state coverage | 2,545/2,545 (100%, no MISSING state) |
+| Cognitive distribution | Analyze 188 / Evaluate 164 — matches S122 documented counts |
+| Preflight | 0 divergences |
+
+### 3. New Findings (logged as DL-039 / DL-040 / DL-041)
+
+| DL | Finding | Severity | Learner Impact |
+|----|---------|----------|----------------|
+| DL-039 | 9 Certified Pack D Section B items carry non-empty ExplanationWrong[CorrectChoice] (DL-008); 8 also DL-026. Cross-item (P1-BD-008) + misassigned (P1-BD-064) text at CC slot. **Not in any blocklist.** | HIGH | Tier 1 delivery — wrong feedback on correct answer |
+| DL-040 | 20 items carry non-registry `question_state: "Active"` (Pack C: 9, Pack D: 11). Not registered in §9.1; invisible to counts; assignTier does not hard-exclude → Tier 2/3 deliverable. | MEDIUM | Non-Certified items can reach learners |
+| DL-041 | 3 Certified Pack A Section E items (P1-E-081/082/083) missing CognitiveLevel + DifficultyScore. | MEDIUM | Metadata-incomplete Tier 1 items |
+
+### 4. Systemic Finding — Stale Defect Manifest
+
+`governance/DEFECT_MANIFEST_DL008_DL026.json` (2026-07-27) predates S899 and current pack state. Reports `dl008_certified: 0` and `dl026_certified: 0` — **both false** (DL-039 has 9 / 8 respectively). All 264 blocked entries are P1-EC/ED/FC/FD; zero Pack B/D Section B coverage. S725/S726 regeneration requirement was never executed for Packs A/B.
+
+### 5. P1 → P2 Implication
+
+P2 (Cognitive Integrity Verification) scope must include the DL-039 explanation-slot integrity cluster — it is a learner-safety item, not just a label question. Labels/counts themselves are confirmed intact (188/164 matches S122).
+
+### Governance Impact
+
+- 0 question_state changes
+- 0 answer-key changes
+- 0 pack-file modifications
+- New report: `reports/P1_REPOSITORY_TRUTH_VERIFICATION.md`
+- New defect entries: DL-039, DL-040, DL-041 (DEFECT_LIBRARY.md)
+- Preflight: PASS — 0 divergences, 2451 certified, governance guard 66/66
+- Backups: `backups/DEFECT_LIBRARY.md.bak-20260801172937`
+
+---
+
+## S132 — P2 Execution Planning — 2026-08-01
+
+**Type:** Planning — Full Governance Lane (read-only; no pack/state/content writes)
+
+### 1. Decision
+
+P2 promoted to **primary lane** (critical path); P4 Hardening runs **parallel** (no dependency). Rationale: P1 found new certified-pool defects (DL-039/040/041), making P2 the last meaningful content-integrity gate before P3.
+
+### 2. Evidence-Based Scope Discovery (read-only inspection)
+
+Phase A inspection of the 9 DL-039 items found contamination **broader than the CC slot**:
+
+| Category | Items | Finding |
+|----------|-------|---------|
+| Cat 1 — Full EW contamination | 5 (BD-008, BD-056, BD-070, BD-076, BD-100) | ALL non-empty EW slots describe a different question (ZBB pilot, budget committee, forecast model, variance decomposition, labor variance) — not just the CC slot |
+| Cat 2 — CC-slot misassignment | 4 (BD-015, BD-064, BD-077, BD-079) | Non-CC slots topically correct; CC slot holds a different choice's distractor text |
+
+All 9 also carry 1 empty non-CC slot (DL-026). CorrectChoice verified correct for rendered stems — **no answer-key changes**.
+
+Phase B inspection: DL-041 items (P1-E-081/082/083) are missing **Difficulty, DifficultyScore, AND CognitiveLevel** (broader than P1's "CognitiveLevel only" note). All are topically coherent COSO Evaluate-type items (Principles 17/11, SoD) with full EC/EW text.
+
+Phase D: 9 downstream consumer sites mapped (app.js:1524/4853/4869/5819; may-context-builder:150; may-learner-state:110/150; may-core:5315/5410/5457).
+
+Difficulty-5 population: **29 items** (A:2, B:0, C:11, D:14, E:2); 2 known-defective (P1-FC-050, P1-FD-046) → 27 reviewable for sampling.
+
+### 3. Deliverables
+
+| File | Purpose |
+|------|---------|
+| `reports/P2_EXECUTION_PLAN.md` | Full P2 plan: Phases A-E, batches, verification, governance controls |
+| `knowledge/ROADMAP_ACTIVE.md` | P1 COMPLETE; P2 ACTIVE (primary); P4 ACTIVE (parallel); P3 deferred |
+
+### 4. P2 Phases (as planned)
+
+- **Phase A** — DL-039: 9 items, 1 batch (≤30), full EW re-author (Cat 1: 5) + CC clear/empty fill (Cat 2: 4)
+- **Phase B** — DL-041: 3 items, add Difficulty/DifficultyScore/CognitiveLevel per DCS v1.1 + S122 + Rule 11
+- **Phase C** — Sampling: Analyze 30 / Evaluate 30 / Diff-5 12 = 72 items; residual-rate threshold ≤5%
+- **Phase D** — Consumer verification: 9 sites
+- **Phase E** — Governance fixes: DL-040 "Active" registry decision; manifest regeneration
+
+### Governance Impact
+
+- 0 question_state changes
+- 0 answer-key changes
+- 0 pack-file modifications
+- New report: `reports/P2_EXECUTION_PLAN.md`
+- Preflight: PASS — 0 divergences, 2451 certified, governance guard 66/66
+
+### Open Decisions (awaiting user)
+
+- D1: DL-040 "Active" — register in §9.1 (recommended) vs. transition to Unprocessed/Editorial Queue
+- D2: P1-FD-046 shell — Archive (recommended)
+- D3: Phase A execution — this session (recommended) vs. next
+- D4: P4 parallel start — now (recommended)
+
+---
+
+## S133 — P2 Execution: Phase A (DL-039), Phase B (DL-041), Phase E (DL-040) — 2026-08-01
+
+**Type:** Content + Metadata + State Repair — Full Governance Lane (3 pack files modified)
+
+**Decisions executed:** D1 → transition "Active" to registered states; D2 → P1-FD-046 Archived; D3 → Phase A executed this session; D4 → P4 started in parallel.
+
+### 1. Phase A — DL-039 Remediation (pack_d_corrected.js, 9 Certified Pack D Section B items)
+
+| Category | Items | Action |
+|----------|-------|--------|
+| Cat 1 — Full EW contamination | BD-008, BD-056, BD-070, BD-076, BD-100 | Full EW re-author (15 contaminated non-CC slots) + CC clear |
+| Cat 2 — CC misassignment | BD-015, BD-064, BD-077, BD-079 | CC clear + 4 empty-slot fills |
+
+- 9 CC slots cleared to `""` (EV8/DL-008); 8 empty non-CC slots authored; 15 contaminated slots re-authored (topicality repair)
+- CorrectChoice unchanged (verified correct for rendered stems — no answer-key changes)
+- Backup: `backups/pack_d_corrected.js.bak-20260801194044`
+
+### 2. Phase B — DL-041 Metadata Repair (pack_a_corrected.js, 3 Certified Pack A Section E items)
+
+P1-E-081/082/083: added `Difficulty: "Difficult"`, `DifficultyScore: 4`, `CognitiveLevel: "Evaluate"` (Rule 11 AF-E4 + DCS v1.1 §3 + S122 COSO exemplars; no DL-031). Field placement mirrors E-080 convention. Backup: `backups/pack_a_corrected.js.bak-20260801194339`.
+
+### 3. Phase E — DL-040 State Transition (pack_c + pack_d, 20 items)
+
+- 19 items `"Active"` → `"Unprocessed"` (Pack C: P1-EC-001/005/010/030/055, P1-FC-005/016/045/050; Pack D: P1-ED-002/015/020/040/050, P1-FD-002/010/020/040/050)
+- P1-FD-046 (shell item) `"Active"` → `"Archived"`
+- Backups: `pack_c_corrected.js.bak-20260801194738`, `pack_d_corrected.js.bak-20260801194738`
+
+### 4. Post-Fix Verification (independent Function-constructor scan)
+
+| Metric | Before | After |
+|--------|--------|-------|
+| Certified DL-008 (pool-wide) | 9 | **0** |
+| Certified DL-026 (pool-wide) | 8 | **0** |
+| `"Active"` state items | 20 | **0** |
+| Missing CognitiveLevel | 3 | **0** |
+| Missing DifficultyScore | 3 | **0** |
+| Certified total | 2,451 | **2,451** (unchanged) |
+| QID total | 2,545 | **2,545** (unchanged) |
+| States | — | Unprocessed 24 (was 5), Archived 70 (was 69) |
+| Governance guard | 66/66 | **66/66** |
+| Preflight | 0 divergences | **0 divergences** |
+
+### 5. Deliverables
+
+| File | Purpose |
+|------|---------|
+| `reports/P2_DL039_REMEDIATION_REPORT.md` | Phase A full evidence |
+| `reports/P2_METADATA_VERIFICATION.md` | Phase B + Difficulty-5 integrity context |
+| DEFECT_LIBRARY.md | DL-039, DL-040, DL-041 → **Resolved** |
+
+### 6. Remaining P2 Phases
+
+- **Phase C** — Cognitive integrity sampling (Analyze 30 / Evaluate 30 / Diff-5 12 = 72 items; ≤5% residual threshold)
+- **Phase D** — Downstream consumer verification (9 sites)
+- **Phase E remainder** — Regenerate `DEFECT_MANIFEST_DL008_DL026.json` from Function-constructor parse (S725/S726 requirement)
+
+### Governance Impact
+
+- 9 question_state changes (19 Active→Unprocessed, 1 Active→Archived, 0 Certified touched)
+- 0 answer-key changes
+- 3 pack files modified (A, C, D) — all backed up pre-write
+- Preflight: PASS — 0 divergences, 2451 certified, governance guard 66/66
+
+---
+
+## S134 — P4-W1-A: Resume Integrity Fix (Exam-Integrity Mode Restoration) — 2026-08-01
+
+**Lane:** Full Governance Lane (learner-delivery safety logic). **Files:** `app/app.js`, `app/may/may-core.js`, `scripts/smoke_test.js`.
+
+### 1. Defect
+
+Resuming a Full Exam (or real-conditions practice) session restored `session-active` but did not re-apply `exam-integrity-mode` to `document.body`, exposing non-exam UI (tabs, hero, setup controls, May surfaces) during a resumed exam. `realConditions` was never persisted in the session snapshot, and May's `isFullTabBlocked()` derived exam state from a separate inline expression — a split-brain exam-state model. Logged as **DL-042** (HIGH, Resolved).
+
+### 2. Changes Applied
+
+1. **`app/app.js`** — Added global `isExamIntegrityMode(session)` = `session.mode === 'full' || session.realConditions === true` (single source of truth).
+2. **`app/app.js`** — `start()` persists `realConditions` into the session object; integrity-mode body class now derived from `isExamIntegrityMode(state.session)` instead of the live DOM checkbox.
+3. **`app/app.js`** — `pause()` and MCQ/case render logic (pause button + exam notice) read the persisted `realConditions`/`isExamIntegrityMode` instead of `$('realConditions').checked`.
+4. **`app/app.js`** — `recoveryResume` handler re-applies (or removes) `exam-integrity-mode` from `isExamIntegrityMode(state.session)`.
+5. **`app/may/may-core.js`** — `isFullTabBlocked()` delegates exam-state derivation to `isExamIntegrityMode` (legacy fallback for load-order safety), preserving the `!completed` and has-questions gates.
+6. **`scripts/smoke_test.js`** — Added W1-A Resume Integrity block (3 scenarios × start + resume = 9 checks).
+
+### 3. Verification (raw evidence)
+
+| Check | Result |
+|-------|--------|
+| `node --check app/app.js` | OK |
+| `node --check app/may/may-core.js` | OK |
+| `node --check scripts/smoke_test.js` | OK |
+| `npm run preflight` | PASS — 0 divergences, 2,451 certified, guard 66/66 |
+| `npm run smoke` | **26/26 PASS** (incl. Full-exam resume integrity restored, Real-conditions resume integrity restored, Practice resume integrity absent) |
+| `npm run pipeline` | Content-baseline FAIL (158 errors) — all pre-existing content/repository-file findings (metadata 18, difficulty 18, case integrity 2, psychometric 119, root-layout "Missing required file: app.js"). **Zero errors reference app/app.js or app/may/may-core.js. No regression.** |
+
+### 4. Governance Impact
+
+- 0 question_state changes, 0 answer-key changes, 0 pack/case file edits
+- Backups: `backups/app.js.bak-W1A-20260801200732`, `backups/may-core.js.bak-W1A-20260801200949` (both non-zero, confirmed pre-write)
+- DEFECT_LIBRARY.md: DL-042 added (Resolved)
+- Applies to new sessions; pre-existing in-flight sessions without `realConditions` fall back to `mode === 'full'` derivation
+
+### 5. Follow-On
+
+- **P4-W1-B** — Unify `May._examModeActive` (may-context-builder.js:101) with `isExamIntegrityMode`/`isFullTabBlocked` to restore `exam_briefing` routing and close the remaining split-brain path.
+- **P4-W1-C** — Tour positioning reproduction and hardening.
+- **P4-W1-D** — Case renderer per-item isolation.
+- **P2-C** — Cognitive integrity sampling.
+
+---
+
+## S135 — P4-W1-B: Exam State Unification (Split-Brain Elimination) — 2026-08-01
+
+**Lane:** Full Governance Lane (learner-delivery safety logic). **Files:** `app/may/may-context-builder.js`, `app/may/may-core.js`, `app/app.js`, `scripts/smoke_test.js`.
+
+### 1. Defect
+
+Two parallel exam-state models remained after W1-A:
+1. `May._examModeActive` was read in may-context-builder.js:101 but **never set anywhere** — so `examModeActive` in the context layer was permanently `false` and `exam_briefing` routing was dead.
+2. A **second latent wiring bug**: `buildAppContext()` nested `examModeActive` under `mayConfig`, while `_recommendMode()` read `a.examModeActive` at the AppContext top level — so even a live flag could never route to `exam_briefing`.
+3. Inline derivations remained in may-core.js:4500 (pre-exam greeting) and may-core.js:6801 (launcher state).
+
+### 2. Changes Applied
+
+1. **`app/may/may-context-builder.js`** — Added `_isExamIntegrityActive()` (prefers `May.isFullTabBlocked()` — itself composed from the shared `isExamIntegrityMode(session)` — with a direct-derivation fallback carrying the `!completed` guard). `_getAppState()` sets `examModeActive` from it, replacing the dead `May._examModeActive` read.
+2. **`app/may/may-context-builder.js`** — `buildAppContext()` now exposes `examModeActive` at the AppContext top level (keeping `mayConfig` intact), making `_recommendMode()`'s `a.examModeActive` check resolve.
+3. **`app/may/may-core.js`** — Pre-exam greeting (4500) and launcher state (6801) derive from `isExamIntegrityMode` with lifecycle guards.
+4. **`app/app.js`** — `pause()` merged its duplicate guards onto `isExamIntegrityMode`.
+5. **`scripts/smoke_test.js`** — Added `w1bExamStateAssert` (9 checks: gate + context `examModeActive` + `recommendedCoachingMode` across Full Exam / Real conditions / Practice).
+
+### 3. Verification (raw evidence)
+
+| Check | Result |
+|-------|--------|
+| `node --check` × 4 files | OK |
+| `npm run preflight` (re-run at T0 of W1-B) | PASS — 0 divergences, 2,451 certified, guard 66/66 |
+| `npm run smoke` | **35/35 PASS** — Full Exam: gate=true, context `examModeActive=true`, routing=`exam_briefing`; Real conditions: same; Practice: all false/absent |
+| `npm run pipeline` | Not re-run — no content/regeneration work in this session; W1-A closeout already established the content baseline (unchanged) |
+
+### 4. Governance Impact
+
+- 0 question_state changes, 0 answer-key changes, 0 pack/case file edits
+- Backups: `backups/may-context-builder.js.bak-W1B-20260801202240`, `backups/may-core.js.bak-W1B-20260801202240`, `backups/app.js.bak-W1B-20260801202248`
+- DEFECT_LIBRARY.md: DL-042 → W1-B follow-on resolution documented
+- Single source of truth achieved: `isExamIntegrityMode(session)` → May gating, May context, exam briefing, answer-leakage controls, resume behavior. No duplicate flags remain.
+
+### 5. Follow-On
+
+- **P4-W1-C** — Tour positioning reproduction and hardening (only after a reliable repro).
+- **P4-W1-D** — Case renderer per-item isolation.
+- **P2-C** — Cognitive integrity sampling.
+- **P2-D** — Downstream consumer verification.
+
+## S136 — Wife Acceptance Test (WAT) Preparation Window — 2026-08-01
+
+**Type:** AUDIT + FIX (app.js, styles.css — Full Governance Lane — Alpha Freeze)
+**Backup:** `backups/app.js.bak-S136-20260801210934`, `backups/styles.css.bak-S136-20260801210934`
+
+### Objective
+
+Stabilize the application for a non-developer user evaluation before resuming formal development. Freeze all feature work (no May Quiz Mode, Floating May, Session Layout Redesign, Operations tabs, Electron enhancements). Gather feedback from someone who didn't build the system.
+
+### Phase 1 — Known Defect Sweep (Read-Only)
+
+All audits performed via `task` agents with raw source evidence per AGENTS.md §5:
+
+| Area | Verdict | Evidence |
+|------|---------|----------|
+| **Tours** (Beginner, Recovery, May, Analytics, Admin) | **PASS** | All 5 tours structurally verified. 0 stale selectors. 0 off-screen steps. Tour diagnostic confirms 60/60 steps OK across 5 viewport configurations. W1-C scroll-settlement fix resolves prior "stuck progression" defects. |
+| **Case Exhibits** | **PASS** | Graceful degradation verified. Null/missing/empty/malformed exhibits render appropriate messages. DL-023 Body-as-table fallback functional. Both practice and exam modes have try/catch recovery. One cosmetic gap: exhibit tab Title missing guard (fixed below). |
+| **Resume** | **PASS** | DL-042 resolved. `realConditions` persisted through save/restore cycle. All 4 session types (Practice, Recovery, Full Exam, Real Conditions) restore exam-integrity-mode correctly on resume. `isExamIntegrityMode()` is single source of truth. |
+| **Exam Integrity** | **PASS** | CSS rules at lines 6100-6104 hide all non-exam UI. `isExamIntegrityMode()` gates 6 call sites. Pause blocked during integrity mode. May surfaces gated correctly. W1-A/W1-B smoke checks confirm 9 resume integrity scenarios + 6 unified gate scenarios. |
+| **Table Rendering** | **PASS with gap** | All MCQ stems, case exhibits, and distractor explanations render markdown tables as proper HTML. Review section subsections ("What was tested," "Why correct," "Exam takeaway") bypassed `nl2br()` — architectural gap. No content currently triggers it, but defect if future authors include tables in explanations (fixed below). |
+
+### Phase 2 — User-Facing Polish Fixes
+
+**Fix 1 — Review section table rendering (app.js lines 3879, 3884, 3899):** Wrapped `sections.tested`, `sections.correct`, and `sections.takeaway` with `nl2br()` so that markdown pipe tables in `ExplanationCorrect` substrings render as proper HTML tables instead of raw `|` characters.
+
+**Fix 2 — Review section table CSS (styles.css lines 1781-1805):** Added `.review-section-body table/th/td` styles (border-collapse, zebra striping, header uppercase, padding) matching the existing `.item-card table` visual standard. Tables in review breakdowns now render styled.
+
+**Fix 3 — Exhibit tab Title guard (app.js line 2857):** Changed `${ex.Title}` to `${String(ex.Title || 'Exhibit')}` so that missing `Title` fields display "Exhibit" instead of "undefined" on the tab button.
+
+### Phase 3 — Documentation
+
+Created two files:
+
+| File | Purpose |
+|------|---------|
+| `reports/WIFE_ACCEPTANCE_TEST.md` | 4-session test script: Session 1 (tour + 10 MCQs + bookmark + resume), Session 2 (Recovery + May + analytics), Session 3 (Full Exam: verify integrity mode + pause blocked + crash-resume + submit), Session 4 (stress test: back button, reload, multi-tab, cases, natural use) |
+| `reports/WAT_FEEDBACK.md` | Structured feedback template with 5 categories (Confusing, Friction, Bugs, Missing, Favorites) per session, plus overall verdict and top-3 fixes |
+
+### Exit Criteria
+
+| Criterion | Status |
+|-----------|--------|
+| Preflight clean (0 divergences) | PASS |
+| Governance guard 66/66 | PASS |
+| Certified pool 2,451 | PASS |
+| Tour functional (0 blocked/offscreen) | PASS |
+| Resume functional (all 4 types) | PASS |
+| Exam integrity functional (DL-042 resolved) | PASS |
+| Case renderer stable (graceful degradation) | PASS |
+| Tables readable (review sections nl2br + CSS) | FIXED |
+
+### Verification
+
+- Preflight: 0 divergences, 66/66 guard, 2,451 certified
+- Smoke: 35/35 PASS (all W1-A/B/C checks)
+- app.js syntax: node --check clean
+- No pack file modifications (content frozen)
+
+### Phase 2 — Additional Polish Fixes (S136 Continuation — 2026-08-01 ~21:13)
+
+**Backup:** `backups/app.js.bak-S136-20260801211257`, `backups/styles.css.bak-S136-20260801211257`
+
+**Fix 4 — Exam-mode bookmark save button hidden (styles.css line 6130-6133):** Added `.exam-integrity-mode .collection-save-btn { display: none !important; }` — the `+ Save` bookmark button was visible during Full Exam and Real Conditions sessions, violating exam realism. Also added hide rules for `.confidence-row` (confidence rating buttons), `.guess` ("I guessed" checkbox), and `.composition-note` (session metadata) — all study-tool UI elements inappropriate for simulated exam conditions.
+
+**Fix 5 — Recovery modal mode-aware language (app.js line 5419):** Changed hardcoded "exam session" to dynamic mode-aware text: practice mode shows "practice session," full mode shows "exam session," recovery_sprint shows "recovery sprint session." Previously all resumed sessions were mislabeled as "exam sessions" regardless of the actual session type.
+
+**Fix 6 — Admin tour gate bypass closed (app.js line 6286-6289):** Added `AdminGate._isActivated()` check in `GuidedTour.start()` — the admin tour is now blocked unless the 5-click version-label easter egg has been activated. Previously the admin tour was accessible from the Help Center by any user, exposing operations/governance content without gate activation. Blocked users are silently redirected to Settings view.
+
+### Additional Verification
+
+- Preflight: 0 divergences, 66/66 guard, 2,451 certified (unchanged)
+- app.js syntax: node --check clean
+- No pack file modifications (content frozen)
+- All 4 fixes are single-file app.js or styles.css edits; no architecture changes
 
