@@ -1598,6 +1598,7 @@ const SessionPersistence = {
     JOURNAL_KEY: 'cmaP1SessionJournal',
     HISTORY_KEY: 'cmaP1History2026',
     SEEN_KEY: 'cmaP1SeenQuestions2026',
+    TOPIC_SEEN_KEY: 'cmaP1SeenTopics2026',
     DASHBOARD_KEY: 'cmaP1Dashboard',
     MAX_CHECKPOINTS: 20,
     MAX_RETRIES: 3,
@@ -1824,6 +1825,19 @@ const SessionPersistence = {
             s.mcqs.forEach(q => { correct += scoreMCQ(q, s.answers[q.QuestionID]); if (!seen.includes(q.QuestionID)) seen.push(q.QuestionID); });
             s.cases.forEach(c => { if (!seen.includes(c.CaseID)) seen.push(c.CaseID); });
             localStorage.setItem(this.SEEN_KEY, JSON.stringify(seen));
+            // S138 — Record topic clusters for cross-session diversity
+            let topicSeenList = JSON.parse(localStorage.getItem(this.TOPIC_SEEN_KEY) || '[]');
+            s.mcqs.forEach(q => {
+                let tc = ExamSessionManager._topicClusterKey(q);
+                if (tc && !topicSeenList.includes(tc)) topicSeenList.push(tc);
+            });
+            s.cases.forEach(c => {
+                c.Items.forEach(it => {
+                    let tc = ExamSessionManager._topicClusterKey(it);
+                    if (tc && !topicSeenList.includes(tc)) topicSeenList.push(tc);
+                });
+            });
+            localStorage.setItem(this.TOPIC_SEEN_KEY, JSON.stringify(topicSeenList));
             let sc = ExamSessionManager.practiceScores();
             let analyticsSummary = AnalyticsCollector.getSummary();
             let breakdown = PerformanceAnalytics.computeBreakdown(s);
@@ -1903,6 +1917,7 @@ const SessionPersistence = {
     clearHistory() {
         localStorage.removeItem(this.HISTORY_KEY);
         localStorage.removeItem(this.SEEN_KEY);
+        localStorage.removeItem(this.TOPIC_SEEN_KEY);
         localStorage.removeItem(this.DASHBOARD_KEY);
     }
 };
@@ -1956,6 +1971,8 @@ const ExamSessionManager = {
         let dist = this.getDifficultyDistribution();
         let seen = [];
         try { seen = JSON.parse(localStorage.getItem(SessionPersistence.SEEN_KEY) || '[]'); } catch (e) { }
+        let topicSeen = [];
+        try { topicSeen = JSON.parse(localStorage.getItem(SessionPersistence.TOPIC_SEEN_KEY) || '[]'); } catch (e) { }
 
         // Build tiered pool (cached per pack selection)
         let tieredPool = this.getMCQPool();
@@ -1973,7 +1990,7 @@ const ExamSessionManager = {
             sectionPool.byTier[t].push(q);
         }
 
-        let selection = this.selectWithDifficultyDistribution(sectionPool, c.mcqs, secs, dist, seen);
+        let selection = this.selectWithDifficultyDistribution(sectionPool, c.mcqs, secs, dist, seen, topicSeen);
         let mcqs = selection.mcqs;
         let tierCounts = selection.tierCounts || {};
 
@@ -2065,7 +2082,7 @@ const ExamSessionManager = {
         return dists[sliderVal] || dists[3];
     },
 
-    selectWithDifficultyDistribution(tieredPool, count, sections, distribution, seen) {
+    selectWithDifficultyDistribution(tieredPool, count, sections, distribution, seen, topicSeen) {
         if (count === 0) return { mcqs: [], tierCounts: {} };
         if (!tieredPool || !tieredPool.flat || !tieredPool.flat.length) return { mcqs: [], tierCounts: {} };
 
@@ -2119,9 +2136,17 @@ const ExamSessionManager = {
                 candidates.sort((a, b) => {
                     let ca = this._topicClusterKey(a);
                     let cb = this._topicClusterKey(b);
-                    let aNew = ca && !usedTopicClusters.has(ca) ? 0 : 1;
-                    let bNew = cb && !usedTopicClusters.has(cb) ? 0 : 1;
-                    if (aNew !== bNew) return aNew - bNew;
+                    // Rank 0: unseen in session AND unseen ever (best — cross-session blind spot)
+                    // Rank 1: unseen in session BUT seen ever (good — within-session diversity)
+                    // Rank 2: seen in session (avoid)
+                    let aRank = 2, bRank = 2;
+                    if (ca && !usedTopicClusters.has(ca)) {
+                        aRank = (topicSeen && topicSeen.includes(ca)) ? 1 : 0;
+                    }
+                    if (cb && !usedTopicClusters.has(cb)) {
+                        bRank = (topicSeen && topicSeen.includes(cb)) ? 1 : 0;
+                    }
+                    if (aRank !== bRank) return aRank - bRank;
                     return (sectionPicks[a.Section] || 0) - (sectionPicks[b.Section] || 0);
                 });
                 candidates = candidates.slice(0, target - filled);
@@ -2148,9 +2173,14 @@ const ExamSessionManager = {
             remaining.sort((a, b) => {
                 let ca = this._topicClusterKey(a);
                 let cb = this._topicClusterKey(b);
-                let aNew = ca && !usedTopicClusters.has(ca) ? 0 : 1;
-                let bNew = cb && !usedTopicClusters.has(cb) ? 0 : 1;
-                if (aNew !== bNew) return aNew - bNew;
+                let aRank = 2, bRank = 2;
+                if (ca && !usedTopicClusters.has(ca)) {
+                    aRank = (topicSeen && topicSeen.includes(ca)) ? 1 : 0;
+                }
+                if (cb && !usedTopicClusters.has(cb)) {
+                    bRank = (topicSeen && topicSeen.includes(cb)) ? 1 : 0;
+                }
+                if (aRank !== bRank) return aRank - bRank;
                 return (sectionPicks[a.Section] || 0) - (sectionPicks[b.Section] || 0);
             });
             remaining = shuffle(remaining);
