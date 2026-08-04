@@ -1,6 +1,5 @@
 # Node
 node_modules/
-package-lock.json
 
 # Backup files (constitution §11.4)
 *.bak
