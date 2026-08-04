@@ -1,23 +1,23 @@
 # Validation Report Summary
 
-**Generated:** 2026-08-02T00:15:48.286Z
+**Generated:** 2026-08-03T11:39:27.103Z
 **Project:** CMA Part 1 Exam Simulator v2.0
 
 ## Results
 
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
-| Repository Validator | FAIL | 1 | 0 | 3ms |
-| Metadata Validator | FAIL | 18 | 5 | 393ms |
-| Blueprint Validator | WARN | 0 | 232 | 490ms |
-| Part 2 Blueprint Validator | WARN | 0 | 1 | 1ms |
-| Difficulty Validator | FAIL | 18 | 42 | 538ms |
-| Reference Validator | WARN | 0 | 95 | 510ms |
-| Explanation Validator | WARN | 0 | 35 | 536ms |
-| Case Integrity Validator | FAIL | 2 | 8 | 58ms |
-| PsychometricValidator | FAIL | 119 | 1809 | 4879ms |
+| Repository Validator | FAIL | 1 | 0 | 6ms |
+| Metadata Validator | FAIL | 18 | 5 | 684ms |
+| Blueprint Validator | WARN | 0 | 232 | 438ms |
+| Part 2 Blueprint Validator | WARN | 0 | 1 | 2ms |
+| Difficulty Validator | FAIL | 18 | 42 | 501ms |
+| Reference Validator | WARN | 0 | 95 | 418ms |
+| Explanation Validator | FAIL | 4 | 35 | 707ms |
+| Case Integrity Validator | FAIL | 2 | 8 | 109ms |
+| PsychometricValidator | FAIL | 119 | 1809 | 5840ms |
 
-**Total Errors:** 158
+**Total Errors:** 162
 **Total Warnings:** 2227
 **Overall Status:** FAIL
 
@@ -25,7 +25,7 @@
 
 ### Repository Validator
 **Status:** FAIL
-**Duration:** 3ms
+**Duration:** 6ms
 **Statistics:**
 - Question Packs: 5
 - Case Banks: 5
@@ -34,7 +34,7 @@
 
 ### Metadata Validator
 **Status:** FAIL
-**Duration:** 393ms
+**Duration:** 684ms
 **Statistics:**
 - Cases Checked: 45
 **Errors:**
@@ -65,7 +65,7 @@
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 490ms
+**Duration:** 438ms
 **Statistics:**
 - Cases Checked: 45
 - Cross-Domain Cases: 0
@@ -311,7 +311,7 @@
 
 ### Part 2 Blueprint Validator
 **Status:** WARN
-**Duration:** 1ms
+**Duration:** 2ms
 **Statistics:**
 - P2 MCQ Packs Found: 0
 - P2 Case Packs Found: 0
@@ -322,7 +322,7 @@
 
 ### Difficulty Validator
 **Status:** FAIL
-**Duration:** 538ms
+**Duration:** 501ms
 **Statistics:**
 - Cases Checked: 45
 - Items Checked: 235
@@ -399,7 +399,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 510ms
+**Duration:** 418ms
 **Statistics:**
 - Cases Checked: 45
 - Total References: 0
@@ -503,8 +503,8 @@
 - content/cases/legacy/scored_cases4.js[14] (CBQ4-B2) exhibit "CBQ4-B2-E2": Exhibit is never referenced by any item
 
 ### Explanation Validator
-**Status:** WARN
-**Duration:** 536ms
+**Status:** FAIL
+**Duration:** 707ms
 **Statistics:**
 - MCQ Questions Checked: 2545
 - Case Items Checked: 235
@@ -514,6 +514,11 @@
 - Correct Explanation Avg Length: 451
 - Wrong Explanation Avg Length: 312
 - Placeholder Pattern: "Common misunderstanding": 1
+**Errors:**
+- content/packs/pack_c_corrected.js [429] (P1-FC-005): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- content/packs/pack_c_corrected.js [440] (P1-FC-016): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- content/packs/pack_c_corrected.js [469] (P1-FC-045): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- content/packs/pack_c_corrected.js [474] (P1-FC-050): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
 **Warnings:**
 - content/packs/pack_a_corrected.js [35] (P1-A-036): ExplanationWrongC is short (44 chars)
 - content/packs/pack_a_corrected.js [45] (P1-A-046): ExplanationWrongB is short (38 chars)
@@ -553,7 +558,7 @@
 
 ### Case Integrity Validator
 **Status:** FAIL
-**Duration:** 58ms
+**Duration:** 109ms
 **Statistics:**
 - Total Cases Checked: 45
 - Total Items Checked: 235
@@ -581,7 +586,7 @@
 
 ### PsychometricValidator
 **Status:** FAIL
-**Duration:** 4879ms
+**Duration:** 5840ms
 **Statistics:**
 - AbsoluteLanguageValidator.questionsScanned: 2545
 - AbsoluteLanguageValidator.findings: 1044

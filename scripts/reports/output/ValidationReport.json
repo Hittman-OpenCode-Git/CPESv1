@@ -10,7 +10,7 @@
       "Question Packs": 5,
       "Case Banks": 5
     },
-    "duration": 3,
+    "duration": 6,
     "confidence": 100
   },
   {
@@ -46,7 +46,7 @@
     "statistics": {
       "Cases Checked": 45
     },
-    "duration": 393,
+    "duration": 684,
     "confidence": 100
   },
   {
@@ -297,7 +297,7 @@
       "Domain: Planning, Budgeting, and Forecasting": 8,
       "Domain: Technology and Analytics": 7
     },
-    "duration": 490,
+    "duration": 438,
     "confidence": 100
   },
   {
@@ -313,7 +313,7 @@
       "P2 Items Checked": 0,
       "P2 Cases Checked": 0
     },
-    "duration": 1,
+    "duration": 2,
     "confidence": 100
   },
   {
@@ -395,7 +395,7 @@
       "Cognitive: Evaluate": 62,
       "Cognitive: Understand": 18
     },
-    "duration": 538,
+    "duration": 501,
     "confidence": 100
   },
   {
@@ -505,13 +505,18 @@
       "Orphan Exhibits (unreferenced)": 65,
       "Orphan References (missing exhibits)": 0
     },
-    "duration": 510,
+    "duration": 418,
     "confidence": 100
   },
   {
     "validator": "Explanation Validator",
-    "status": "WARN",
-    "errors": [],
+    "status": "FAIL",
+    "errors": [
+      "content/packs/pack_c_corrected.js [429] (P1-FC-005): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty (\"\").",
+      "content/packs/pack_c_corrected.js [440] (P1-FC-016): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty (\"\").",
+      "content/packs/pack_c_corrected.js [469] (P1-FC-045): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty (\"\").",
+      "content/packs/pack_c_corrected.js [474] (P1-FC-050): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty (\"\")."
+    ],
     "warnings": [
       "content/packs/pack_a_corrected.js [35] (P1-A-036): ExplanationWrongC is short (44 chars)",
       "content/packs/pack_a_corrected.js [45] (P1-A-046): ExplanationWrongB is short (38 chars)",
@@ -559,7 +564,7 @@
       "Wrong Explanation Avg Length": 312,
       "Placeholder Pattern: \"Common misunderstanding\"": 1
     },
-    "duration": 536,
+    "duration": 707,
     "confidence": 100
   },
   {
@@ -592,7 +597,7 @@
       "Cases with Duplicate Explanations": 0,
       "Cases with Missing Exhibits": 0
     },
-    "duration": 58,
+    "duration": 109,
     "confidence": 100
   },
   {
@@ -2556,7 +2561,7 @@
       "totalErrors": 119,
       "totalWarnings": 1809
     },
-    "duration": 4879,
+    "duration": 5840,
     "confidence": 100
   }
 ]
