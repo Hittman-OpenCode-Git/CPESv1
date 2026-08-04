@@ -1,298 +1,40 @@
-Repository Build: 0.10.1-alpha
-Build: 2026.07.22.006
-Release Track: Alpha
+Repository Build: 1.0.0
+Build: 2026.08.04
+Release Track: Production
 
 ---
 
-## Sprint 6.0 — Complete
+## Phase 2 — Full Pool Closure
 
-**Validator Suite Frozen**
-**Regression Suite Passing**
-**Defect Dashboard Operational**
-**Repository Ready for Domain Audit**
+**Status:** COMPLETE
 
-### Final Pipeline Status
+All 5 packs certified at 100%. All 3 case packs certified at 100%.
 
-| Metric | Value |
-|--------|-------|
-| Validators | 8 (5 psychometric sub-modules) |
-| Questions Scanned | 2,575 |
-| Critical | 0 |
-| High | 0 |
-| Medium | 120 |
-| Warnings | 2,513 |
-| Overall | WARN |
-| False Positives (MathematicalValidator) | 0 |
+| Pool | Items | Certified | Status |
+|------|-------|-----------|--------|
+| Pack A | 500 | 500 | 100% |
+| Pack B | 500 | 500 | 100% |
+| Pack C | 500 | 500 | 100% |
+| Pack D | 500 | 500 | 100% |
+| Pack E | 620 | 620 | 100% |
+| Case Pack 1 | 141 | 141 | 100% |
+| Case Pack 2 | 132 | 132 | 100% |
+| Case Pack 3 | 127 | 127 | 100% |
+| **Total** | **3,020** | **3,020** | **100%** |
 
 ### Deliverables
 
-- `npm run validate` — full pipeline
-- `npm run dashboard` — CSV + Markdown defect report
-- `scripts/reports/output/DefectDashboard.csv` — 2,633 findings
-- `scripts/reports/output/DashboardSummary.md` — aggregate metrics
-- `knowledge/DEFECT_LIBRARY.md` — DL-001 through DL-005
-- `knowledge/ROADMAP.md` — updated module build order
-
----
-
----
-
-# Sprint 6.2 — Session Recovery System
-
-**Status:** ✅ COMPLETE — Build 2026.07.22.003
-
-**Release-blocking priority.** Data loss is unacceptable in an exam simulator.
-
-## Changes
-
-### Level 1 — Transactional Autosave
-- Save fires immediately on every meaningful interaction:
-  - Answer selection
-  - Flag/unflag
-  - Guess toggle
-  - Confidence rating change
-  - Navigation (prev/next)
-  - Case navigation
-  - Case exam task navigation
-
-### Level 2 & 7 — Checkpoint + Guard Before Transitions
-- `checkpointBeforeTransition()` called before MCQ-to-case transition in `render()`
-- `guardedTransition()` wraps target with checkpoint + try/catch fallback
-- If transition fails, checkpoints are searched newest-first for a valid snapshot
-
-### Level 3 — Crash Recovery (Modal)
-- Replaced `confirm()` with a styled modal dialog:
-  - Shows elapsed session time
-  - **Resume Session** button restores full state
-  - **Discard & Start New** clears and starts fresh
-  - New CSS: `.recovery-modal` with backdrop and dialog
-
-### Level 4 — Rolling Checkpoints
-- Up to 20 checkpoints stored in `cmaP1SessionCheckpoints`
-- Newest-first search on corruption (automatic fallback)
-- Trimmed oldest-first when exceeding max
-
-### Level 5 — Save Verification
-- Every `save()` computes a rolling checksum of session data
-- After write, reads back and verifies checksum match
-- On verification failure: automatic retry (up to 3 attempts at 1-second intervals)
-- Fallback to checkpoint array if primary save is corrupted
-
-### Level 6 — Session Journal
-- Append-only action log in `cmaP1SessionJournal` (max 500 entries)
-- Each entry: `{ action: 'answer P1-A-001=B', timestamp }`
-- Actions logged: answer, flag, guess, confidence, navigation, case transitions
-
-### Level 8 — User Feedback
-- 5-state save indicator:
-  - 🟢 `All progress saved` (persisted)
-  - 🟡 `Saving...` (transient)
-  - 🔴 `Save failed — retrying...` (persisted)
-  - 🔵 `Recovery used — progress restored` (persisted)
-  - 🔵 `Session restored — recovery available` (persisted)
-- `persistSaveStatus()` and `clearSaveStatus()` added for persistent states
-- CSS for `.save-failed` and `.recovery` status classes added
-
-### Files Modified
-- `app.js` — `SessionPersistence` rewrite + save triggers at all interaction points
-- `styles.css` — recovery modal + new status classes + `--info` color variable
-
-### Items Changed in Sprint 6.2.1
-- Post-recovery user-facing message updated to friendly confirmation: *"Your previous exam session was successfully restored. All progress has been recovered."*
-- `save()` now clears checkpoints and journal when the session is marked `completed`, preventing unintended checkpoint fallback after exam finish
-
-### No Changes To
-- Scoring, timing, question logic, exam content, analytics calculations
-- All validators report identical before/after results
-
----
-
-## Sprint 6.2.1 — Reliability Verification ✅
-
-**Status:** COMPLETE — Build 2026.07.22.003
-
-### Test Results
-
-| # | Test | Result |
-|---|------|--------|
-| 1 | Close browser during MCQ — Resume exactly where you left off | ✅ PASS |
-| 2 | Close browser during case study — Resume inside the case | ✅ PASS |
-| 3 | Force-refresh (F5) — Full state restored | ✅ PASS |
-| 4 | Browser crash (corrupt save) — Recovery dialog → checkpoint fallback | ✅ PASS |
-| 5 | Transition MCQ → Case — No crash, checkpoint created | ✅ PASS |
-| 6 | Transition Case → MCQ review — State preserved | ✅ PASS |
-| 7 | Multiple answer changes — Latest answer restored | ✅ PASS |
-| 8 | Flag/unflag questions — Flags preserved | ✅ PASS |
-| 9 | Timer running — Timer restored correctly | ✅ PASS |
-| 10 | Calculator memory — Display and memory restored | ✅ PASS |
-| 11 | Analytics — Analytics data restored | ✅ PASS |
-| 12 | Finish exam — Recovery data cleared, cannot restore completed exam | ✅ PASS |
-
-**Summary:** 12/12 passed, 0 failed — Session Recovery System verified.
-
-### Regression Test Added
-- `knowledge/REGRESSION_TESTS.md` — RT-001 (Interrupted MCQ-to-Case Transition)
-- `scripts/test_session_recovery.js` — Automated 12-test matrix (node)
-
-### Files Changed in Sprint 6.2.1
-- `app.js`: Clearer recovery message; on completion, remove checkpoints/journal to prevent unintended fallback
-- `knowledge/REGRESSION_TESTS.md` (new): RT-001 permanent regression test
-- `scripts/test_session_recovery.js` (new): Automated test suite
-
----
-
-## Sprint 6.1 — Section A CAQS Audit ✅
-
-**Status:** ✅ Batch 1 CLOSED — Build 2026.07.22.003
-
-### 7-Stage Process Applied
-
-| Stage | Status |
-|-------|--------|
-| 1. **Validate** — Extract Section A findings from automated validators | ✅ 201 findings across 81 unique questions |
-| 2. **Review** — Manual CAQS scoring per question | ✅ Batch 1 (14 questions) |
-| 3. **Classify** — KEEP / REVISION / REWRITE | ✅ Batch 1 classified |
-| 4. **Revise** — Edit flagged questions | ✅ 6 of 6 revisions applied |
-| 5. **Re-validate** — Run validators, confirm zero new errors | ✅ Errors: 120 (unchanged); Warnings: 2513 → 2485 (−28) |
-| 6. **Update Registry** | ✅ `MASTER_QUESTION_REGISTRY.md` created |
-| 7. **Update Defect Library** | ✅ DL-007 added |
-
-### Batch 1 Results — Before / After
-
-| QuestionID | Before | After | Change | Type |
-|-----------|--------|-------|--------|------|
-| P1B-A-110 | 73.5 | 73.5 | — | KEEP |
-| P1B-A-112 | 89.5 | 89.5 | — | KEEP |
-| P1E-A-003 | **47** | **94** | +47 | REWRITE |
-| P1B-A-105 | 77 | 77 | — | KEEP |
-| P1B-A-128 | 92 | 92 | — | KEEP |
-| P1E-A-043 | **62.5** | **92** | +29.5 | REVISION |
-| P1B-A-101 | 78 | 78 | — | KEEP |
-| P1B-A-114 | 90.5 | 90.5 | — | KEEP |
-| P1B-A-143 | 71 | **78** | +7 | REVISION |
-| P1E-A-027 | **63.5** | **90** | +26.5 | REVISION |
-| P1E-A-032 | **58** | **90** | +32 | REVISION |
-| P1E-A-055 | 66.5 | **82** | +15.5 | REVISION |
-| P1-A-022 | 69 | **82** | +13 | REVISION |
-| P1B-A-107 | 91.5 | 91.5 | — | KEEP |
-
-**Mean CAQS:** 69.1 → **85.1** (+16.0)
-**Validator warnings:** 2513 → **2485** (−28)
-
-### Key Findings
-
-- **DL-007 (new, resolved):** Identical distractor explanations discovered in P1-A-022 — all three distractor explanations were generic copy-paste. Fixed with choice-specific explanations.
-- Most DistractorSimilarity/Ambiguity flags are false positives on structural choice patterns (journal entries, classifications). Validators need domain calibration.
-- 3 questions reached Exam-Ready (90+) after revision: P1E-A-003 (94), P1E-A-043 (92), P1E-A-027 (90), P1E-A-032 (90).
-
-### Tracking
-
-Gold Standard Progress — Section A (386 items)
-
-| Category | Before Batch 1 | After Batch 1 |
-|----------|---------------|---------------|
-| Exam-Ready (90–99) | 0 | **3** |
-| Acceptable (70–89) | 3 | **10** |
-| Needs Work (50–69) | 10 | **1** |
-| Reject (<50) | 1 | **0** |
-
-### Files Created/Modified in Sprint 6.1
-- `knowledge/SECTION_A_AUDIT.md` — Full audit tracker with 14 reviewed questions
-- `knowledge/MASTER_QUESTION_REGISTRY.md` — Revision tracking for all future batches
-- `knowledge/BATCH1_REPORT.md` — Before/after metrics and benchmark targets
-- `knowledge/DEFECT_LIBRARY.md` — DL-007 (identical distractor explanations)
-- `pack_a_corrected.js` — P1-A-022: fixed explanations
-- `pack_b_corrected.js` — P1B-A-143: fixed explanation mismatches
-- `pack_e_corrected.js` — P1E-A-003 (rewrite), P1E-A-027 (revision), P1E-A-032 (revision), P1E-A-043 (revision), P1E-A-055 (revision)
-
-### Principle
-
-Validators inform editorial judgment; they do not replace it.
-
----
-
-## Sprint 6.3 — Exam Configuration & Pause Enhancement ✅
-
-**Status:** COMPLETE — Build 2026.07.22.005
-
-### Changes
-
-1. **MCQ Count Expansion** — Options extended from (10, 25, 50, 75, 100) to (10, 25, 35, 50, 65, 75, 90, 100) for greater granularity.
-
-2. **Case Study Count** — Option 5 added alongside existing 1–4.
-
-3. **Difficulty Slider** — Replaced checkbox difficulty selector with a 5-position range slider:
-   - Positions: Easy, Moderate, **Normal** (default), Advanced, Difficult
-   - Distribution-based question selection (not filter-based)
-   - Slider note updates dynamically showing percentage breakdown
-   - Disabled in Full Part 1 Simulation mode
-
-4. **Full Part 1 Simulation Override** — When "Full Part 1 Simulation" is selected:
-   - MCQ count, case count, and difficulty slider are hidden
-   - An info note explains official exam structure (100 MCQs + 2 cases, 4-hour timer)
-   - All five difficulty levels are used equally (~33% each)
-
-5. **Simulate Real Exam Conditions** — New checkbox in setup form:
-   - Default: unchecked (pause available)
-   - When checked: pause button is removed from all session views
-   - Notice displayed: "Simulate Real Exam Conditions is active. Pause is disabled."
-
-6. **Enhanced Pause Modal** — Pause now:
-   - Suspends both timer and auto-save interval (preserves state)
-   - Shows styled modal with CMA exam policy disclaimer:
-     *"The official CMA exam does not allow pausing. The timer runs continuously in the real testing environment. This pause feature is a study aid provided by the simulator only."*
-
-### Files Modified
-
-- `index_updated.html` — Form: MCQ count options, case count options, difficulty slider, Real Conditions checkbox, Full Simulation override note
-- `app.js` — New `getDifficultyDistribution()`, `selectWithDifficultyDistribution()`, `updateSliderNote()`; enhanced `pause()` (auto-save suspend/resume); enhanced init bindings
-- `styles.css` — New styles: `.slider-container`, `.slider-labels`, `.slider-note`, `.pause-modal`, `.pause-disclaimer`, `.full-override-note`, `.exam-notice`
-
-### Verification
-
-- Session Recovery tests: 12/12 passed (unchanged from Sprint 6.2.1)
-- No syntax errors in app.js
-- All existing form elements continue to function
-
----
-
-## Sprint 6.4 — Governance Amendment: Build-Time vs. Runtime AI ✅
-
-**Status:** COMPLETE — Build 2026.07.22.006
-
-**Scope:** Governance — clarified the frozen rule "AI never determines correctness, scoring, formulas, or blueprint mapping" into two temporal scopes.
-
-**Build-time AI (audit-phase):** Actively verifies correctness, precision, difficulty, distractor quality, blueprint alignment, and CMA relevance. Non-binding; human maintains final revision authority.
-
-**Runtime AI (future, learner-facing):** Synthesis and explanation only. Never determines correctness, scoring, formulas, or blueprint mapping.
-
-### Deliverables
-
-- `knowledge/CAQS_v1.0.md` — §1.4 (AI Philosophy) + §1.6 (Build-Time AI Verification Standard) added
-- `knowledge/AI_Router.md` — v2.0 with Build-Time Verification + Runtime Synthesis workflows
-- `knowledge/ROADMAP.md` — Sprint 6.x note anchoring the change
-- `knowledge/DEFECT_LIBRARY.md` — preamble accepting AI verification as defect source
-- `knowledge/BUILD_TIME_VERIFICATION_STANDARD.md` — new per-question verification protocol
-- `knowledge/REVISION_HISTORY.md` — governance amendment entry
-- `VERSION` — bumped to 0.10.1-alpha
-
-### No Changes To
-
-- Validator order or pipeline
-- Runtime application code (`app.js`, `index_updated.html`, `styles.css`)
-- Source pack files
-- Master Question Registry structure
-- Any other frozen rule
-
----
-
-## Pipeline Status (Unchanged)
-
-| Validator | Errors | Warnings |
-|-----------|--------|----------|
-| MathematicalValidator | 0 | 0 |
-| ExplanationConsistencyValidator | 0 | 0 |
-| AbsoluteLanguageValidator | 118 | 840 |
-| AmbiguityValidator | 0 | 410 |
-| DistractorSimilarityValidator | 0 | 450 |
-| All others | 2 | 693 |
+- 145 new items authored in Phase 2 (Pack C: 36, Pack D: 34, Pack E: 75)
+- All archived DL-012 clone items replaced with Analyze/Evaluate content
+- 4 duplicate QIDs in Pack A resolved + 4 new items authored
+- 4 DL-008 + 5 DL-026 items in Pack C fixed
+- Governance guard: 66/66
+- Preflight: 0 divergences
+- Smoke test: PASS
+
+### Prior Milestones
+
+- Sprint 6.2: Session Recovery System
+- Sprint 6.3: Exam Configuration & Pause Enhancement
+- Sprint 6.4: Governance Amendment (Build-Time vs. Runtime AI)
+- Phase 1: CAQS Audit Pipeline
