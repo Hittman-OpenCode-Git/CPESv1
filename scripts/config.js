@@ -62,7 +62,7 @@ module.exports = {
 
     requiredFiles: [
 
-        "app.js",
+        "app/app.js",
 
         "styles.css",
 
@@ -250,7 +250,7 @@ module.exports = {
 
         // Allowed values
         allowedTypes: ["numeric", "select", "multi", "fill", "match"],
-        allowedDifficulties: ["Easy", "Moderate", "Difficult", "Very Difficult"],
+        allowedDifficulties: ["Easy", "Moderate-Easy", "Moderate", "Difficult", "Very Difficult"],
         allowedProductionStatuses: ["Draft", "Review", "QA", "Production", "Retired"],
         allowedCognitiveLevels: ["Remember", "Understand", "Apply", "Analyze", "Evaluate"],
         allowedCalculationComplexity: ["None", "Simple", "Moderate", "Complex"],
@@ -305,8 +305,9 @@ module.exports = {
         // Difficulty distribution targets (from EXAM_BLUEPRINT.md)
         difficultyTargets: {
             "Easy": 0.15,
-            "Moderate": 0.45,
-            "Difficult": 0.30,
+            "Moderate-Easy": 0.20,
+            "Moderate": 0.30,
+            "Difficult": 0.25,
             "Very Difficult": 0.10
         },
 

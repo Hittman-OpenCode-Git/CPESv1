@@ -24,7 +24,7 @@ class DifficultyValidator extends Validator {
         const banks = config.caseBanks;
         let totalCases = 0;
         let totalItems = 0;
-        let difficultyDistribution = { "Easy": 0, "Moderate": 0, "Difficult": 0, "Very Difficult": 0 };
+        let difficultyDistribution = { "Easy": 0, "Moderate-Easy": 0, "Moderate": 0, "Difficult": 0, "Very Difficult": 0 };
         let cognitiveDistribution = {};
 
         banks.forEach(file => {

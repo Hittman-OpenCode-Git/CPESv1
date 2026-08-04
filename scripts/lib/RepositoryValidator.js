@@ -19,7 +19,7 @@ class RepositoryValidator extends Validator {
         // ----------------------------
 
         const requiredFiles = [
-            "app.js",
+            "app/app.js",
             "styles.css",
             "index_updated.html"
         ];

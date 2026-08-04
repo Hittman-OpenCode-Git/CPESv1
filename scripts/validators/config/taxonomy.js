@@ -56,7 +56,7 @@ module.exports = {
     //==========================================================================
     // Difficulty
     //==========================================================================
-    difficultyLevels: ["Easy", "Moderate", "Difficult", "Very Difficult"],
+    difficultyLevels: ["Easy", "Moderate-Easy", "Moderate", "Difficult", "Very Difficult"],
 
     difficultyScoreMap: {
         1: "Easy",
@@ -205,8 +205,9 @@ module.exports = {
     //==========================================================================
     difficultyTargets: {
         "Easy": 0.15,
-        "Moderate": 0.45,
-        "Difficult": 0.30,
+        "Moderate-Easy": 0.20,
+        "Moderate": 0.30,
+        "Difficult": 0.25,
         "Very Difficult": 0.10
     },
 

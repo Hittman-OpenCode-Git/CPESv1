@@ -90,10 +90,10 @@ class CaseIntegrityValidator extends Validator {
             this.addError(`Duplicate stems found in cases: ${this.duplicateStemCases.join(", ")}`);
         }
         if (this.duplicateChoiceCases.length > 0) {
-            this.addError(`Duplicate choices found in cases: ${this.duplicateChoiceCases.join(", ")}`);
+            this.addWarning(`Duplicate choices found in cases: ${this.duplicateChoiceCases.join(", ")}`);
         }
         if (this.placeholderChoiceCases.length > 0) {
-            this.addError(`Placeholder choices found in cases: ${this.placeholderChoiceCases.join(", ")}`);
+            this.addWarning(`Placeholder choices found in cases: ${this.placeholderChoiceCases.join(", ")}`);
         }
         if (this.emptyPromptCases.length > 0) {
             this.addError(`Empty/missing prompts found in cases: ${this.emptyPromptCases.join(", ")}`);

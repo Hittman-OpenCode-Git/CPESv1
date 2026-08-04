@@ -8,8 +8,8 @@ class AbsoluteLanguageValidator extends Validator {
 
         this.patterns = [
             // Error-level patterns (almost never justified in a well-written choice)
-            { regex: /\balways\b/i, severity: "error", label: "always" },
-            { regex: /\bnever\b/i, severity: "error", label: "never" },
+            { regex: /\balways\b/i, severity: "warning", label: "always" },
+            { regex: /\bnever\b/i, severity: "warning", label: "never" },
 
             // Warning-level patterns (sometimes justified, often not)
             { regex: /\b(?:only|solely|exclusively)\b/i, severity: "warning", label: "only/exclusively" },

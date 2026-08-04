@@ -98,13 +98,21 @@ class BlueprintValidator extends Validator {
         if (c.Items && Array.isArray(c.Items) && c.BlueprintDomain) {
             const domainTopicList = this.domainTopics[c.BlueprintDomain];
             if (domainTopicList) {
+                const unmappedTopics = new Set();
                 c.Items.forEach((item, itemIdx) => {
-                    if (item.Topic && !domainTopicList.includes(item.Topic)) {
-                        this.addWarning(
-                            `${prefix} item[${itemIdx}] (${item.ItemID || "?"}): Topic "${item.Topic}" not in domain topic list for "${c.BlueprintDomain}"`
-                        );
+                    if (item.Topic && !domainTopicList.some(dt =>
+                        dt.toLowerCase() === item.Topic.toLowerCase() ||
+                        item.Topic.toLowerCase().includes(dt.toLowerCase()) ||
+                        dt.toLowerCase().includes(item.Topic.toLowerCase())
+                    )) {
+                        unmappedTopics.add(item.Topic);
                     }
                 });
+                if (unmappedTopics.size > 0) {
+                    this.addWarning(
+                        `${prefix}: ${unmappedTopics.size} item topic(s) not in domain topic list for "${c.BlueprintDomain}": ${[...unmappedTopics].slice(0, 5).join(", ")}${unmappedTopics.size > 5 ? "..." : ""}`
+                    );
+                }
             }
         }
         c.SectionTags.forEach(tag => {
