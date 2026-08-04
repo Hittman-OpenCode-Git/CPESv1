@@ -3,7 +3,7 @@
 **Purpose:** Single source of truth for all runtime-critical file baselines — SHA-256 hashes, sizes, provenance, and structural notes.
 
 **Generated:** 2026-07-24 — Session 20 (Governance & Structure Cleanup)
-**Updated:** 2026-07-31 — S120 (May Persistence Consolidation — 4 governance-critical files re-baselined. S120 SSOT architecture: all May write paths converge on cmaProfile2026 via patchMayField(). save() pulls fresh May data before persist. init() gated with skipExisting. clearPilotData() now clears profile May fields. Governance guard 66/66 PASS. Preflight 0 divergences. Certified pool 2,451.)
+**Updated:** 2026-08-03 — regenerate_ Full Pool Closure (ALL 5 packs at 100%. Pack D: 34 archived items re-authored + certified. Total certified pool: 2,620/2,620. Governance guard 66/66.)
 **Prior updates:** S905–S907 (G1–G5 Drift Reconciliation & Full 5-Pack Re-Baseline), 2026-07-27 — S227 (C5 SHA-256 capture + C7 drift verification. Packs A-D re-baselined post-S865-S868 Cohort C + S221 governance upgrade authorized drift. All S220 recertification conditions MET.), Session 374 Phase 0 (Packs C+D re-baselined post-S371/S853/S826/S829 authorized drift), Session 811 (Framework v2 Wave 1), Session 726 (Phantom Baseline Remediation), Session 537 (ENHANCED_CASE_BASE certification), Session 530 (Wave 0 Remediation)
 **Status:** Active
 **Authority:** PROJECT_CONSTITUTION.md
@@ -35,9 +35,9 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 |------|---------|-----|-------------|---------------|------------|
 | `pack_a_corrected.js` | `CAB4EFC7E7E6441A576FB9BC45007593205D54E658DB3B3F67A218811111A783` | `TBD` | TBD | 2026-07-28 ~11:45 | **S892 Pack A Final Closure.** 19 archived items replaced with newly authored Analyze/Evaluate items (Section A: 2 ASC 606/330 Analyze + Section E: 17 COSO Analyze/Evaluate across all 5 COSO components). QID: 500. Certified: **500 (100%).** Governance guard: 51/51 PASS. DL-008: 0. DL-026: 0. Rule 9: 0. AUTHORIZED — Pack A closure. Hash recaptured. |
 | `pack_b_corrected.js` | `04D68A74CA59D4B8A39CC5D13FC2E1A16B12CFE18050F39D6A404BEB511956BF` | `TBD` | 1,508,181 | 2026-07-30 11:53 | **S81 rebuild_baselines.** Removed duplicate `question_state` field from P1B-E-086. QID: 500. Certified: 500. AUTHORIZED. |
-| `pack_c_corrected.js` | `D25126847632152E6A8D582E58F7139FCE4ED31BC7BACA53F39ECDB28BD2BE87` | `TBD` | 2,144,204 | 2026-07-30 | **S81 rebuild_baselines.** Authorized drift from post-S377 certification waves. QID: 500. Certified: 455 (+17). Hash recaptured. |
-| `pack_d_corrected.js` | `6952F8E9E2196C45C712B2694EF4F99AA0C4BB1928C514011D4DBA50ED06B3D3` | `TBD` | 2,418,080 | 2026-07-30 | **S81 rebuild_baselines.** Authorized drift from post-S377 certification waves. QID: 500. Certified: 456 (+17). Hash recaptured. |
-| `pack_e_corrected.js` | `D15DBC12B25DE66403C1D17824D6DD3110C986E2A6297106575E17B4B65D4360` | `TBD` | 1,788,809 | 2026-07-30 | **S81 rebuild_baselines.** QID: 545 (500 std + 40 R-series + 5 EVAL items, all Unprocessed). Certified: 540. Hash recaptured. |
+| `pack_c_corrected.js` | `EC41F3EE1C5CDD52D096F43D65F528DD0F332269536971BB335914CD3664AAA5` | `TBD` | 2,193,542 | 2026-08-03 | **regenerate_ Pack C Domain F Remediation.** QID: 500. Certified: **500 (100%).** 36 archived Domain F items replaced with newly authored Analyze/Evaluate items (27 Analyze, 9 Evaluate). 4-agent parallel authoring. 0 DL-008, 0 DL-026. BLOCK-AUTHORIZED. |
+| `pack_d_corrected.js` | `EC83099D0C818645A9ED767F4FBBD514194ECAD57EEA1FA340C470BDF8F397B3` | `TBD` | TBD | 2026-08-03 | **regenerate_ Pack D Domain F Remediation.** QID: 500. Certified: **500 (100%).** 34 archived Domain F items replaced via 4-agent parallel authoring. 0 DL-008, 0 DL-026. |
+| `pack_e_corrected.js` | `2C10270EAF9B978BAD1BB8893CED8D5323FC530D16F339F0EB9D18A64903A1E9` | `TBD` | 2,382,616 | 2026-08-03 | **regenerate_ Phase 2 Certification — S140-S144.** QID: 620. Certified: **620 (100%).** All 75 S-series items certified. 0 DL-008, 0 DL-026. |
 
 **rebuild_baselines S377: Pack A 500 (matched S892 baseline), Pack B 500 (matched S888 baseline), Pack C 438 (+50 from S853 WAVE_A), Pack D 439 (+50 from S853 WAVE_A), Pack E 540 (matched S888 baseline). Packs C+D hashes recaptured (authorized drift from S853 certification). Pack A: DRIFT FLAG CLEARED — §1 hash matches S892 baseline. Governance guard 51/51 PASS. Certified pool: 2,417 (Pack A 500 + Pack B 500 + Pack C 438 + Pack D 439 + Pack E 540 = 2,417). DL-035: 39 Certified Domain F items carry empty distractor EW slots — S377 IN PROGRESS.**
 
@@ -67,14 +67,14 @@ All hashes recaptured S726 via `Get-FileHash -Algorithm SHA256`. Prior hashes we
 
 | Pack | Total QIDs | Certified | Sections Closed | Notes |
 |------|-----------|-----------|-----------------|-------|
-| Pack A | 500 | 500 | All 6 sections (S892 Final Closure) | 100% certified |
+| Pack A | 500 | 500 | All 6 sections (4 duplicates removed, 4 new items authored — P1-B-025, 034, 046, 096) | regenerate_ Section B Fill — **100% certified** |
 | Pack B | 500 | 500 | All 6 sections | 100% certified |
-| Pack C | 500 | 455 | A, B, C, D certified; E, F partial | rebuild_baselines — +17 from post-S377 cert waves |
-| Pack D | 500 | 456 | A, B, C, D certified; E, F partial | rebuild_baselines — +17 from post-S377 cert waves |
-| Pack E | 545 | 540 | All sections, R-series + 5 EVAL items (P1E-EVAL-001–005, Unprocessed) | rebuild_baselines — 99.1% certified |
-| **Total** | **2,545** | **2,451** | | rebuild_baselines — **96.3% certified** |
+| Pack C | 500 | 500 | All 6 sections (4 DL-008 + 5 DL-026 fixed) | regenerate_ Critical Fix — **100% certified** |
+| Pack D | 500 | 500 | All 6 sections | regenerate_ Pack D Domain F — **100% certified** |
+| Pack E | 620 | 620 | All 6 sections | regenerate_ Phase 2 Cert — **100% certified** |
+| **Total** | **2,620** | **2,620** | | regenerate_ Section B Fill — **100% certified** |
 
-**Methodology:** Direct grep (`Select-String -Pattern '"question_state": "Certified"' | Measure-Object`) on each pack file. Raw pack files are authoritative. No derived registry consumed. All 5 packs pass `node --check` and QID counts match expected totals (500/500/500/500/540). Packs B and E counts unchanged from prior baseline. Packs A, C, D updated.
+**Methodology regenerate_ Full Pool Closure:** All 5 packs 100% certified. QID counts: 500/500/500/500/620. Certified: 500/500/500/500/620. Total pool: 2,620/2,620.
 
 **Case Pack Certification (post-S922 regenerate_):** 75 consolidated cases across 3 packs, 400 items. **All 75 cases, 400 items Certified.** 3 packs with 5-letter aliasing: Pack 1 (A:4 B:4 C:5 D:5 E:4 F:3 → aliases A+D), Pack 2 (A:4 B:4 C:5 D:5 E:4 F:3 → aliases B+E), Pack 3 (A:3 B:4 C:4 D:4 E:5 F:5 → alias C). 100% case pool closure. Variable aliases: CASE_BANK_A/B/C/D/E + MIGRATED_CASE_BASE_A/B/C/D/E for app.js catalog compatibility.
 
@@ -174,7 +174,8 @@ These files directly affect governance enforcement, certification integrity, and
 | 2026-07-28 | **Session 888 (S885–S888 Group 2 Post-Reconciliation Content Expansion)** | rebuild_baselines S888: 5 of 5 pack files verified — SHA-256 hashes recaptured via Get-FileHash. Packs A, B, D, E drifted from S880/S907 baselines — AUTHORIZED (S886: 20 cognitive-level upgrades across Sections C/D). Pack C: CONFIRMED STABLE (hash match against S880 baseline). Governance guard: 51/51 PASS. Certified pool: 2,298 (0 drift). QID counts: 500/500/500/500/540. All halt conditions: PASS. | Yes — 4 files re-baselined (A, B, D, E), 1 stable (C) |
 | 2026-07-31 | **Session 120 (S120 May Persistence Consolidation)** | 4 governance-critical files re-baselined — AUTHORIZED. app.js (D390F6E6), may-core.js (11F3A2AB), may-learner-state.js (18F3C753), may-coaching-orchestrator.js (E0C38E4C). S120: SSOT architecture — all May write paths converge on cmaProfile2026 via patchMayField(). save() pulls fresh May data before persist. init() gated (skipExisting). clearPilotData() now clears profile May fields. Governance guard: 66/66 PASS. Preflight: 0 divergences. Certified pool: 2,451 (unchanged). | Yes — 4 files re-baselined |
 | 2026-07-28 | **Session 377 (S377 Baseline Reconciliation Board)** | rebuild_baselines S377: Pack C+D hashes recaptured (authorized drift from S853 WAVE_A certification). §2 Certified Pool recaptured via direct grep: 2,298→2,417. Pack A: 481→500 (S892 closure). Pack C: 388→438 (+50 S853). Pack D: 389→439 (+50 S853). Packs B, E stable. §3 HIGH table: DL-035 added, DL-021 status corrected to RESOLVED (S828). Governance guard: 51/51 PASS. | Yes — 2 files re-baselined (C, D), 3 stable (A, B, E) |
+177: | 2026-08-03 | **Pack D Domain F Remediation** | regenerate_ Pack D re-baselined — AUTHORIZED. 34 archived Domain F items replaced via 4-agent parallel authoring. 26 Analyze (Diff 4), 8 Evaluate (Diff 5). 0 DL-008, 0 DL-026. All 5 packs now 100% certified. Backup: `backups/pack_d_corrected.js.bak-20260803234950`. | Yes — 1 file re-baselined (D), 4 stable |
 
 ---
 
-*Last updated: 2026-07-31 — rebuild_ S120 (May Persistence Consolidation. 4 governance-critical files re-baselined. SSOT architecture: all May writes converge on cmaProfile2026. save() pulls fresh May data. init() gated with skipExisting. clearPilotData() clears profile May fields. Governance guard 66/66 PASS. Preflight 0 divergences. Certified pool 2,451.)*
+*Last updated: 2026-08-03 regenerate_ — Full Pool Closure. ALL 5 packs 100% certified. Total: 2,620/2,620. Pack D SHA-256: `EC83099D0C818645A9ED767F4FBBD514194ECAD57EEA1FA340C470BDF8F397B3`. Governance guard 66/66. Full remediation complete.*

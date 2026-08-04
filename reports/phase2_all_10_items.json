@@ -1,0 +1,38 @@
+// Insert 10 Phase 2 items into pack_e_corrected.js
+// Backup already exists: backups\pack_e_corrected.js.bak-20260803145150
+
+const fs = require('fs');
+const path = require('path');
+
+const packPath = path.resolve(__dirname, '..', 'content', 'packs', 'pack_e_corrected.js');
+const itemsPath = path.resolve(__dirname, '..', 'reports', 'phase2_all_10_items.json');
+
+const packContent = fs.readFileSync(packPath, 'utf8');
+const newItems = JSON.parse(fs.readFileSync(itemsPath, 'utf8'));
+
+if (newItems.length !== 10) {
+    console.error(`Expected 10 items, got ${newItems.length}`);
+    process.exit(1);
+}
+
+// Remove trailing "];" (with optional whitespace before it)
+const trimmed = packContent.replace(/\n\];\s*$/, '');
+
+// Build the insertion block
+let insertion = '';
+for (let i = 0; i < newItems.length; i++) {
+    insertion += ',\n  ' + JSON.stringify(newItems[i], null, 2);
+}
+insertion += '\n];\n';
+
+const result = trimmed + insertion;
+fs.writeFileSync(packPath, result, 'utf8');
+
+// Verify
+const qidCount = (result.match(/"QuestionID"/g) || []).length;
+console.log(`Insertion complete. QID count: ${qidCount}`);
+
+// List all new QIDs
+const qids = result.match(/"QuestionID":\s*"([^"]+)"/g);
+const last10 = qids.slice(-10).map(m => m.match(/"QuestionID":\s*"([^"]+)"/)[1]);
+console.log('Last 10 QIDs:', last10.join(', '));

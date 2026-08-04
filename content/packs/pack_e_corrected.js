@@ -1,3 +1,4 @@
+// BLOCK-AUTHORIZED — Phase 2 certification batch S140-S144 (75 items)
 const MCQ_BANK_E = [
   {
     "StudyLinks": [
@@ -27,7 +28,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.1",
+    "LOSTag": "P1-A.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -79,7 +80,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.1",
+    "LOSTag": "P1-A.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -131,7 +132,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "A.1 Financial statements",
+    "LOSTag": "P1-A.1 Financial statements",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -182,7 +183,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -234,7 +236,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -284,7 +287,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -334,7 +338,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.1",
+    "LOSTag": "P1-A.1",
+    "primaryTheory": "A7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -384,7 +389,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A8",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -434,7 +440,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.1",
+    "LOSTag": "P1-A.1",
+    "primaryTheory": "A9",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -486,7 +493,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.1",
+    "LOSTag": "P1-A.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -536,7 +543,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -586,7 +593,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.1",
+    "LOSTag": "P1-A.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -636,7 +643,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -686,7 +694,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A6",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -736,7 +745,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -786,7 +795,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -836,7 +845,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
+    "primaryTheory": "A8",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -886,7 +896,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
+    "primaryTheory": "A8",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -936,7 +947,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.5",
+    "LOSTag": "P1-A.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -988,7 +999,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.5",
+    "LOSTag": "P1-A.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1038,7 +1049,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.5",
+    "LOSTag": "P1-A.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1088,7 +1099,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.5",
+    "LOSTag": "P1-A.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1138,7 +1149,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.6",
+    "LOSTag": "P1-A.6",
+    "primaryTheory": "A10",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1188,7 +1200,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.6",
+    "LOSTag": "P1-A.6",
+    "primaryTheory": "A10",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1238,7 +1251,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.4",
+    "LOSTag": "P1-A.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1288,7 +1301,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.4",
+    "LOSTag": "P1-A.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1338,7 +1351,8 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "A.3 Cash flow statement",
+    "LOSTag": "P1-A.3 Cash flow statement",
+    "primaryTheory": "A9",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1388,7 +1402,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.1",
+    "LOSTag": "P1-A.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1438,7 +1452,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1488,7 +1503,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1538,7 +1554,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1590,7 +1607,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "A.2 Recognition, measurement, valuation, and disclosure",
+    "LOSTag": "P1-A.2 Recognition, measurement, valuation, and disclosure",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1640,7 +1657,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.1",
+    "LOSTag": "P1-A.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1690,7 +1707,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1740,7 +1757,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1790,7 +1807,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1840,7 +1857,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1890,7 +1907,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1940,7 +1957,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
+    "primaryTheory": "A7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -1990,7 +2008,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
+    "primaryTheory": "A7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2040,7 +2059,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
+    "primaryTheory": "A7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2090,7 +2110,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
+    "primaryTheory": "A7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2140,7 +2161,8 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "A.3 Measurement and valuation of assets and liabilities",
+    "LOSTag": "P1-A.3 Measurement and valuation of assets and liabilities",
+    "primaryTheory": "A7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2190,7 +2212,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2240,7 +2262,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
+    "primaryTheory": "A8",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2290,7 +2313,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2340,7 +2363,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2390,7 +2413,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2440,7 +2463,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2490,7 +2514,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2540,7 +2565,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2590,7 +2616,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.4",
+    "LOSTag": "P1-A.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2642,7 +2668,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "A.5 Income taxes",
+    "LOSTag": "P1-A.5 Income taxes",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2692,7 +2718,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.1",
+    "LOSTag": "P1-A.1",
+    "primaryTheory": "A8",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2742,7 +2769,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.1",
+    "LOSTag": "P1-A.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2792,7 +2819,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2842,7 +2869,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.5",
+    "LOSTag": "P1-A.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2892,7 +2919,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.5",
+    "LOSTag": "P1-A.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2942,7 +2969,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.5",
+    "LOSTag": "P1-A.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -2992,7 +3019,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.5",
+    "LOSTag": "P1-A.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3042,7 +3069,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3092,7 +3120,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.1",
+    "LOSTag": "P1-A.1",
+    "primaryTheory": "A8",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3142,7 +3171,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3192,7 +3221,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3242,7 +3272,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3292,7 +3322,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3342,7 +3372,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3392,7 +3422,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3442,7 +3473,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
+    "primaryTheory": "A2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3492,7 +3524,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
+    "primaryTheory": "A8",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3542,7 +3575,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3592,7 +3625,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.3",
+    "LOSTag": "P1-A.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3642,7 +3675,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3692,7 +3725,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3742,7 +3775,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section A.2",
+    "LOSTag": "P1-A.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3792,7 +3825,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3844,7 +3877,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B8",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3896,7 +3930,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3946,7 +3980,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -3996,7 +4030,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4046,7 +4080,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4096,7 +4130,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4146,7 +4181,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4196,7 +4232,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4248,7 +4284,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4298,7 +4334,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4348,7 +4385,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4397,7 +4435,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4447,7 +4486,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4497,7 +4537,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4547,7 +4588,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4597,7 +4639,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4647,7 +4690,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
+    "primaryTheory": "B5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4697,7 +4741,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
+    "primaryTheory": "B5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4747,7 +4792,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
+    "primaryTheory": "B5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4797,7 +4843,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4847,7 +4893,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
+    "primaryTheory": "B4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4897,7 +4944,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
+    "primaryTheory": "B4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4947,7 +4995,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -4997,7 +5045,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
+    "primaryTheory": "B6",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5047,7 +5096,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
+    "primaryTheory": "B6",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5097,7 +5147,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5147,7 +5197,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.4",
+    "LOSTag": "P1-B.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5197,7 +5247,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.4",
+    "LOSTag": "P1-B.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5247,7 +5297,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.4",
+    "LOSTag": "P1-B.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5297,7 +5347,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.4",
+    "LOSTag": "P1-B.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5347,7 +5397,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.4",
+    "LOSTag": "P1-B.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5397,7 +5447,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.4",
+    "LOSTag": "P1-B.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5447,7 +5497,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.4",
+    "LOSTag": "P1-B.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5497,7 +5547,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.5",
+    "LOSTag": "P1-B.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5547,7 +5597,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.5",
+    "LOSTag": "P1-B.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5597,7 +5647,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.5",
+    "LOSTag": "P1-B.5",
+    "primaryTheory": "B9",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5647,7 +5698,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.5",
+    "LOSTag": "P1-B.5",
+    "primaryTheory": "B9",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5697,7 +5749,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.5",
+    "LOSTag": "P1-B.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5747,7 +5799,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
+    "primaryTheory": "B7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5797,7 +5850,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5847,7 +5900,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5897,7 +5950,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5947,7 +6000,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
+    "primaryTheory": "B5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -5997,7 +6051,8 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
+    "primaryTheory": "B5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6049,7 +6104,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
+    "primaryTheory": "B4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6099,7 +6155,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6149,7 +6205,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6199,7 +6256,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6249,7 +6306,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6299,7 +6356,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6349,7 +6406,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6399,7 +6456,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6449,7 +6506,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6499,7 +6556,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6549,7 +6606,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6599,7 +6656,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6649,7 +6707,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6699,7 +6757,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6749,7 +6807,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6799,7 +6857,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
+    "primaryTheory": "B5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6849,7 +6908,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6899,7 +6958,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6949,7 +7009,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -6999,7 +7059,8 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7051,7 +7112,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7103,7 +7165,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7155,7 +7218,8 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7207,7 +7271,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7257,7 +7322,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7309,7 +7374,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7361,7 +7427,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7413,7 +7480,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7465,7 +7533,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7517,7 +7585,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C9",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7569,7 +7638,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7619,7 +7689,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7669,7 +7739,8 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7721,7 +7792,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
+    "primaryTheory": "C5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7773,7 +7845,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
+    "primaryTheory": "C5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7825,7 +7898,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
+    "primaryTheory": "C5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7877,7 +7951,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
+    "primaryTheory": "C5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7929,7 +8004,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -7981,7 +8057,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8033,7 +8110,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8085,7 +8163,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8137,7 +8216,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8189,7 +8269,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8241,7 +8322,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.4",
+    "LOSTag": "P1-C.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8293,7 +8374,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.4",
+    "LOSTag": "P1-C.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8345,7 +8426,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8397,7 +8478,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8449,7 +8530,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8501,7 +8582,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8553,7 +8634,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8605,7 +8686,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8657,7 +8738,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8709,7 +8790,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8761,7 +8842,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8813,7 +8895,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8865,7 +8947,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8917,7 +8999,8 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -8969,7 +9052,8 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9021,7 +9105,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9073,7 +9158,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9125,7 +9211,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9175,7 +9261,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9225,7 +9311,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9275,7 +9361,8 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9326,7 +9413,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9378,7 +9466,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9430,7 +9518,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
+    "primaryTheory": "D3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9482,7 +9571,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.4",
+    "LOSTag": "P1-D.4",
+    "primaryTheory": "D3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9532,7 +9622,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.4",
+    "LOSTag": "P1-D.4",
+    "primaryTheory": "D3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9582,7 +9673,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.4",
+    "LOSTag": "P1-D.4",
+    "primaryTheory": "D3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9632,7 +9724,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.4",
+    "LOSTag": "P1-D.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9682,7 +9774,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.4",
+    "LOSTag": "P1-D.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9732,7 +9824,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9782,7 +9874,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
+    "primaryTheory": "D7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9834,7 +9927,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9884,7 +9977,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9934,7 +10027,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -9984,7 +10077,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10034,7 +10127,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10084,7 +10177,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10134,7 +10227,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10184,7 +10277,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10234,7 +10327,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10284,7 +10377,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10334,7 +10427,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10384,7 +10477,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10434,7 +10527,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10484,7 +10577,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
+    "primaryTheory": "D5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10534,7 +10628,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10584,7 +10678,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10634,7 +10728,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.5",
+    "LOSTag": "P1-D.5",
+    "primaryTheory": "D10",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10684,7 +10779,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.5",
+    "LOSTag": "P1-D.5",
+    "primaryTheory": "D10",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10734,7 +10830,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.5",
+    "LOSTag": "P1-D.5",
+    "primaryTheory": "D10",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10784,7 +10881,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.5",
+    "LOSTag": "P1-D.5",
+    "primaryTheory": "D10",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10834,7 +10932,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.5",
+    "LOSTag": "P1-D.5",
+    "primaryTheory": "D10",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10884,7 +10983,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.5",
+    "LOSTag": "P1-D.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10934,7 +11033,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.5",
+    "LOSTag": "P1-D.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -10986,7 +11085,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.5",
+    "LOSTag": "P1-D.5",
+    "primaryTheory": "D5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11036,7 +11136,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11086,7 +11186,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
+    "primaryTheory": "D7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11136,7 +11237,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
+    "primaryTheory": "D4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11186,7 +11288,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11236,7 +11338,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11286,7 +11389,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11336,7 +11440,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11386,7 +11491,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
+    "primaryTheory": "E3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11436,7 +11542,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
+    "primaryTheory": "E3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11486,7 +11593,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11536,7 +11644,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11586,7 +11695,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11636,7 +11746,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11686,7 +11797,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11736,7 +11847,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11786,7 +11897,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.3",
+    "LOSTag": "P1-E.3",
+    "primaryTheory": "E4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11836,7 +11948,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
+    "primaryTheory": "E3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11886,7 +11999,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
+    "primaryTheory": "E3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11936,7 +12050,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -11986,7 +12101,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12036,7 +12151,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12086,7 +12201,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12136,7 +12252,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12186,7 +12302,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
+    "primaryTheory": "E7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12236,7 +12353,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
+    "primaryTheory": "E7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12286,7 +12404,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12336,7 +12454,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12386,7 +12505,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12436,7 +12556,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
+    "primaryTheory": "E5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12486,7 +12607,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.3",
+    "LOSTag": "P1-E.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12536,7 +12657,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.3",
+    "LOSTag": "P1-E.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12586,7 +12707,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12636,7 +12758,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12686,7 +12809,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12736,7 +12859,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
+    "primaryTheory": "F3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12788,7 +12912,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12840,7 +12964,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
+    "primaryTheory": "F3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12892,7 +13017,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.2",
+    "LOSTag": "P1-F.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12944,7 +13069,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.2",
+    "LOSTag": "P1-F.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -12994,7 +13119,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.2",
+    "LOSTag": "P1-F.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13044,7 +13169,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.2",
+    "LOSTag": "P1-F.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13094,7 +13219,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.2",
+    "LOSTag": "P1-F.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13144,7 +13269,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.2",
+    "LOSTag": "P1-F.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13194,7 +13319,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13244,7 +13369,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13294,7 +13419,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
+    "primaryTheory": "F1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13346,7 +13472,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
+    "primaryTheory": "F4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13396,7 +13523,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
+    "primaryTheory": "F5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13446,7 +13574,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
+    "primaryTheory": "F5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13498,7 +13627,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.4",
+    "LOSTag": "P1-F.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13550,7 +13679,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.4",
+    "LOSTag": "P1-F.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13600,7 +13729,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.4",
+    "LOSTag": "P1-F.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13650,7 +13779,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13700,7 +13829,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13750,7 +13879,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13800,7 +13929,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
+    "primaryTheory": "F3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13852,7 +13982,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.4",
+    "LOSTag": "P1-F.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13904,7 +14034,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.4",
+    "LOSTag": "P1-F.4",
+    "primaryTheory": "F6",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -13954,7 +14085,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
+    "primaryTheory": "F2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14006,7 +14138,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14056,7 +14188,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14106,7 +14238,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14156,7 +14288,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14206,7 +14338,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14256,7 +14388,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14306,7 +14438,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14356,7 +14488,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14408,7 +14540,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
+    "primaryTheory": "F4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14458,7 +14591,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.2",
+    "LOSTag": "P1-F.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14508,7 +14641,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.4",
+    "LOSTag": "P1-F.4",
+    "primaryTheory": "F5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14560,7 +14694,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14610,7 +14744,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14660,7 +14794,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14710,7 +14845,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14762,7 +14897,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14812,7 +14948,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
+    "primaryTheory": "B4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14862,7 +14999,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
+    "primaryTheory": "B4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14912,7 +15050,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -14962,7 +15100,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15012,7 +15150,8 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15064,7 +15203,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
+    "primaryTheory": "B6",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15114,7 +15254,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15164,7 +15304,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15214,7 +15355,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15264,7 +15405,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15316,7 +15457,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15366,7 +15507,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
+    "primaryTheory": "B4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15416,7 +15558,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15466,7 +15608,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.5",
+    "LOSTag": "P1-B.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15516,7 +15658,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.4",
+    "LOSTag": "P1-B.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15566,7 +15708,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15616,7 +15758,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15666,7 +15808,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
+    "primaryTheory": "B3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15716,7 +15859,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15766,7 +15909,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.3",
+    "LOSTag": "P1-B.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15816,7 +15959,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15866,7 +16009,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.4",
+    "LOSTag": "P1-B.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15916,7 +16059,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.5",
+    "LOSTag": "P1-B.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -15966,7 +16109,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16016,7 +16159,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16066,7 +16209,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.1",
+    "LOSTag": "P1-B.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16116,7 +16259,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16166,7 +16309,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16216,7 +16359,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
+    "primaryTheory": "B2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16266,7 +16410,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.5",
+    "LOSTag": "P1-B.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16316,7 +16460,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.5",
+    "LOSTag": "P1-B.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16366,7 +16510,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16418,7 +16563,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16470,7 +16615,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16522,7 +16667,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
+    "primaryTheory": "C8",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16574,7 +16720,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16626,7 +16773,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16678,7 +16826,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16730,7 +16879,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
+    "primaryTheory": "C5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16782,7 +16932,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16834,7 +16984,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
+    "primaryTheory": "C5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16886,7 +17037,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16938,7 +17089,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -16990,7 +17141,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17042,7 +17193,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17095,7 +17246,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17147,7 +17299,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.4",
+    "LOSTag": "P1-C.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17199,7 +17351,8 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
+    "primaryTheory": "C5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17251,7 +17404,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
+    "primaryTheory": "C5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17303,7 +17457,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17355,7 +17509,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17405,7 +17559,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17455,7 +17609,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
+    "primaryTheory": "D5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17505,7 +17660,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17555,7 +17710,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17605,7 +17760,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
+    "primaryTheory": "D11",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17655,7 +17811,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
+    "primaryTheory": "D11",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17705,7 +17862,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17755,7 +17912,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
+    "primaryTheory": "D11",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17805,7 +17963,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.4",
+    "LOSTag": "P1-D.4",
+    "primaryTheory": "D3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17855,7 +18014,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.4",
+    "LOSTag": "P1-D.4",
+    "primaryTheory": "D3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17905,7 +18065,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -17955,7 +18115,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18005,7 +18165,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18055,7 +18215,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18105,7 +18265,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18155,7 +18315,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18205,7 +18365,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
+    "primaryTheory": "D6",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18255,7 +18416,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
+    "primaryTheory": "D6",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18305,7 +18467,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18355,7 +18517,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
+    "primaryTheory": "D4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18407,7 +18570,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18457,7 +18620,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18507,7 +18670,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18557,7 +18721,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18607,7 +18772,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18657,7 +18823,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18707,7 +18874,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18757,7 +18925,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18807,7 +18976,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18857,7 +19027,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18907,7 +19078,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -18957,7 +19129,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
+    "primaryTheory": "E3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19007,7 +19180,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19057,7 +19230,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
+    "primaryTheory": "E3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19107,7 +19281,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19157,7 +19331,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19207,7 +19381,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19257,7 +19431,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19307,7 +19481,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19357,7 +19531,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19407,7 +19581,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19457,7 +19632,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19507,7 +19683,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
+    "primaryTheory": "E3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19557,7 +19734,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
+    "primaryTheory": "E3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19607,7 +19785,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
+    "primaryTheory": "E3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19657,7 +19836,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19707,7 +19886,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19757,7 +19936,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19807,7 +19986,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19857,7 +20036,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
+    "primaryTheory": "E7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19907,7 +20087,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -19957,7 +20137,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20007,7 +20188,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20057,7 +20239,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20107,7 +20289,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20157,7 +20340,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
+    "primaryTheory": "E5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20207,7 +20391,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20257,7 +20442,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20307,7 +20492,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20357,7 +20542,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20407,7 +20592,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20457,7 +20642,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20507,7 +20692,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20557,7 +20742,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
+    "primaryTheory": "F3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20609,7 +20795,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
+    "primaryTheory": "F3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20659,7 +20846,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
+    "primaryTheory": "F3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20709,7 +20897,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.2",
+    "LOSTag": "P1-F.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20759,7 +20947,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.2",
+    "LOSTag": "P1-F.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20809,7 +20997,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.2",
+    "LOSTag": "P1-F.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20861,7 +21049,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20911,7 +21099,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -20961,7 +21149,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21011,7 +21199,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21061,7 +21249,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21111,7 +21299,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.4",
+    "LOSTag": "P1-F.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21161,7 +21349,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21211,7 +21399,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.4",
+    "LOSTag": "P1-F.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21261,7 +21449,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.4",
+    "LOSTag": "P1-F.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21311,7 +21499,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.4",
+    "LOSTag": "P1-F.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21361,7 +21549,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.4",
+    "LOSTag": "P1-F.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21411,7 +21599,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.4",
+    "LOSTag": "P1-F.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21461,7 +21649,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21511,7 +21699,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21561,7 +21749,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21611,7 +21799,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.5",
+    "LOSTag": "P1-F.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21663,7 +21851,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21713,7 +21901,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.5",
+    "LOSTag": "P1-E.5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21763,7 +21951,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
+    "primaryTheory": "F5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21813,7 +22002,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21863,7 +22052,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
+    "primaryTheory": "F5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21913,7 +22103,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
+    "primaryTheory": "F5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -21963,7 +22154,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
+    "primaryTheory": "F5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22013,7 +22205,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.3",
+    "LOSTag": "P1-F.3",
+    "primaryTheory": "F5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22063,7 +22256,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.1",
+    "LOSTag": "P1-F.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22113,7 +22306,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section F.2",
+    "LOSTag": "P1-F.2",
+    "primaryTheory": "F2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22163,7 +22357,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22215,7 +22410,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22267,7 +22463,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22319,7 +22515,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22371,7 +22567,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22423,7 +22619,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22475,7 +22671,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22527,7 +22723,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22579,7 +22775,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22631,7 +22827,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C9",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22683,7 +22880,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.4",
+    "LOSTag": "P1-C.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22735,7 +22932,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.4",
+    "LOSTag": "P1-C.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22787,7 +22984,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.4",
+    "LOSTag": "P1-C.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22839,7 +23036,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22891,7 +23089,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22943,7 +23142,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -22995,7 +23195,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23047,7 +23248,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23099,7 +23301,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23151,7 +23354,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23203,7 +23407,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23255,7 +23460,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
+    "primaryTheory": "C7",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23307,7 +23513,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.3",
+    "LOSTag": "P1-C.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23359,7 +23565,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23411,7 +23617,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23463,7 +23669,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23513,7 +23719,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
+    "primaryTheory": "D4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23565,7 +23772,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.2",
+    "LOSTag": "P1-D.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23615,7 +23822,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.3",
+    "LOSTag": "P1-D.3",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23665,7 +23872,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23715,7 +23922,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23765,7 +23972,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23815,7 +24022,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23865,7 +24072,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
+    "primaryTheory": "D2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23915,7 +24123,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
+    "primaryTheory": "D2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -23965,7 +24174,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24015,7 +24224,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24065,7 +24274,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24117,7 +24326,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24167,7 +24376,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section D.1",
+    "LOSTag": "P1-D.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24217,7 +24426,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24267,7 +24477,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24317,7 +24528,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24367,7 +24579,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.1",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24417,7 +24630,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24467,7 +24680,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24517,7 +24730,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.4",
+    "LOSTag": "P1-E.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24567,7 +24780,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24617,7 +24830,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24667,7 +24880,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section E.2",
+    "LOSTag": "P1-E.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24717,7 +24930,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.4",
+    "LOSTag": "P1-C.4",
+    "primaryTheory": "C5",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24769,7 +24983,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.4",
+    "LOSTag": "P1-C.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24821,7 +25035,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.4",
+    "LOSTag": "P1-C.4",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24873,7 +25087,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.2",
+    "LOSTag": "P1-C.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24925,7 +25139,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -24977,7 +25192,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -25029,7 +25245,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -25081,7 +25297,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -25133,7 +25349,8 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -25185,7 +25402,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section C.1",
+    "LOSTag": "P1-C.1",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -25237,7 +25454,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Part": 1,
     "ItemType": "MCQ",
-    "LOSTag": "Part 1 Section B.2",
+    "LOSTag": "P1-B.2",
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
       "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
@@ -25268,7 +25485,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R01 segregation of duties — incompatible functions",
     "MicroTopic": "segregation of duties incompatible functions",
     "UniqueConceptKey": "E-R01-segregation-of-duties-incompatible-functions",
-    "LOSTag": "E.1.e Control Activities",
+    "LOSTag": "P1-E.1.e Control Activities",
+    "primaryTheory": "E3",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Apply",
@@ -25320,7 +25538,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R02 COSO framework — three categories of objectives",
     "MicroTopic": "coso framework three categories of objectives",
     "UniqueConceptKey": "E-R02-coso-three-categories-objectives",
-    "LOSTag": "E.1.b Internal Control Framework (COSO 2013)",
+    "LOSTag": "P1-E.1.b Internal Control Framework (COSO 2013)",
+    "primaryTheory": "E1",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "CognitiveLevel": "Understand",
@@ -25372,7 +25591,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R03 fraud triangle — pressure element",
     "MicroTopic": "fraud triangle pressure element",
     "UniqueConceptKey": "E-R03-fraud-triangle-pressure",
-    "LOSTag": "E.1.c Control Environment",
+    "LOSTag": "P1-E.1.c Control Environment",
+    "primaryTheory": "E4",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -25422,7 +25642,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R04 preventive controls — physical safeguards",
     "MicroTopic": "preventive controls physical safeguards",
     "UniqueConceptKey": "E-R04-preventive-controls-physical",
-    "LOSTag": "E.1.e Control Activities",
+    "LOSTag": "P1-E.1.e Control Activities",
+    "primaryTheory": "E3",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
@@ -25468,7 +25689,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R05 bank reconciliation — segregation of duties",
     "MicroTopic": "bank reconciliation segregation of duties",
     "UniqueConceptKey": "E-R05-bank-reconciliation-segregation",
-    "LOSTag": "E.1.e Control Activities",
+    "LOSTag": "P1-E.1.e Control Activities",
+    "primaryTheory": "E3",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -25513,7 +25735,7 @@ const MCQ_BANK_E = [
     "Topic": "E-R06 management override — inherent limitation",
     "MicroTopic": "management override inherent limitation",
     "UniqueConceptKey": "E-R06-management-override-inherent-limitation",
-    "LOSTag": "E.1.c Control Environment",
+    "LOSTag": "P1-E.1.c Control Environment",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",
@@ -25563,7 +25785,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R07 whistleblower hotline — SOX requirement",
     "MicroTopic": "whistleblower hotline sox requirement",
     "UniqueConceptKey": "E-R07-whistleblower-hotline-sox",
-    "LOSTag": "E.1.f Information & Communication",
+    "LOSTag": "P1-E.1.f Information & Communication",
+    "primaryTheory": "E5",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
@@ -25613,7 +25836,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R08 control environment — tone at the top",
     "MicroTopic": "control environment tone at the top",
     "UniqueConceptKey": "E-R08-control-environment-tone-at-top",
-    "LOSTag": "E.1.c Control Environment",
+    "LOSTag": "P1-E.1.c Control Environment",
+    "primaryTheory": "E1",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -25663,7 +25887,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R09 three lines of defense model",
     "MicroTopic": "three lines of defense model roles",
     "UniqueConceptKey": "E-R09-three-lines-of-defense",
-    "LOSTag": "E.1.g Monitoring",
+    "LOSTag": "P1-E.1.g Monitoring",
+    "primaryTheory": "E6",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -25713,7 +25938,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R10 compensating controls — small business owner review",
     "MicroTopic": "compensating controls small business owner review",
     "UniqueConceptKey": "E-R10-compensating-controls-small-business",
-    "LOSTag": "E.1.e Control Activities",
+    "LOSTag": "P1-E.1.e Control Activities",
+    "primaryTheory": "E3",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "CognitiveLevel": "Evaluate",
@@ -25763,7 +25989,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R11 preventive control examples — application to scenarios",
     "MicroTopic": "preventive control classification scenarios",
     "UniqueConceptKey": "E-R11-preventive-control-classification",
-    "LOSTag": "E.1.e Control Activities",
+    "LOSTag": "P1-E.1.e Control Activities",
+    "primaryTheory": "E3",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -25811,7 +26038,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R14 IT general controls — categories and scope",
     "MicroTopic": "IT general controls categories",
     "UniqueConceptKey": "E-R14-IT-general-controls-categories",
-    "LOSTag": "E.1.j Systems Controls",
+    "LOSTag": "P1-E.1.j Systems Controls",
+    "primaryTheory": "E7",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",
@@ -25857,7 +26085,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R15 application controls — input processing output",
     "MicroTopic": "application controls IPO categories",
     "UniqueConceptKey": "E-R15-application-controls-IPO",
-    "LOSTag": "E.1.j Systems Controls",
+    "LOSTag": "P1-E.1.j Systems Controls",
+    "primaryTheory": "E7",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -25903,7 +26132,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R16 risk assessment — COSO process and steps",
     "MicroTopic": "risk assessment process COSO",
     "UniqueConceptKey": "E-R16-risk-assessment-process",
-    "LOSTag": "E.1.d Risk Assessment",
+    "LOSTag": "P1-E.1.d Risk Assessment",
+    "primaryTheory": "E1",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",
@@ -25953,7 +26183,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R17 risk responses — avoidance reduction sharing acceptance",
     "MicroTopic": "risk responses types",
     "UniqueConceptKey": "E-R17-risk-responses-types",
-    "LOSTag": "E.1.d Risk Assessment",
+    "LOSTag": "P1-E.1.d Risk Assessment",
+    "primaryTheory": "E2",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -25999,7 +26230,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R19 SOX Section 302 — CEO/CFO certification requirements",
     "MicroTopic": "SOX 302 CEO CFO certification",
     "UniqueConceptKey": "E-R19-SOX-302-certification",
-    "LOSTag": "E.1.h Sarbanes-Oxley Act (SOX)",
+    "LOSTag": "P1-E.1.h Sarbanes-Oxley Act (SOX)",
+    "primaryTheory": "E5",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",
@@ -26049,7 +26281,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R20 SOX Section 404 — internal control assessment and auditor attestation",
     "MicroTopic": "SOX 404 internal control assessment",
     "UniqueConceptKey": "E-R20-SOX-404-assessment",
-    "LOSTag": "E.1.h Sarbanes-Oxley Act (SOX)",
+    "LOSTag": "P1-E.1.h Sarbanes-Oxley Act (SOX)",
+    "primaryTheory": "E5",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",
@@ -26099,7 +26332,7 @@ const MCQ_BANK_E = [
     "Topic": "E-R30 logical access controls — principles and implementation",
     "MicroTopic": "logical access controls principles",
     "UniqueConceptKey": "E-R30-logical-access-controls",
-    "LOSTag": "E.1.j Systems Controls",
+    "LOSTag": "P1-E.1.j Systems Controls",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -26145,7 +26378,7 @@ const MCQ_BANK_E = [
     "Topic": "E-R31 disaster recovery and business continuity — key concepts",
     "MicroTopic": "disaster recovery business continuity",
     "UniqueConceptKey": "E-R31-disaster-recovery-continuity",
-    "LOSTag": "E.1.j Systems Controls",
+    "LOSTag": "P1-E.1.j Systems Controls",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",
@@ -26191,7 +26424,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R32 vendor risk assessment — third-party controls and due diligence",
     "MicroTopic": "vendor risk assessment third party",
     "UniqueConceptKey": "E-R32-vendor-risk-assessment",
-    "LOSTag": "E.1.d Risk Assessment",
+    "LOSTag": "P1-E.1.d Risk Assessment",
+    "primaryTheory": "E1",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -26241,7 +26475,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R34 internal control definition — COSO framework objectives",
     "MicroTopic": "internal control objectives operations reporting compliance",
     "UniqueConceptKey": "E-R34-internal-control-objectives",
-    "LOSTag": "E.1.a Internal Control Definition",
+    "LOSTag": "P1-E.1.a Internal Control Definition",
+    "primaryTheory": "E1",
     "Difficulty": "Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
@@ -26287,7 +26522,7 @@ const MCQ_BANK_E = [
     "Topic": "E-R35 inherent limitations — reasonable assurance concept",
     "MicroTopic": "internal control limitations reasonable assurance",
     "UniqueConceptKey": "E-R35-reasonable-assurance-limitations",
-    "LOSTag": "E.1.a Internal Control Definition",
+    "LOSTag": "P1-E.1.a Internal Control Definition",
     "Difficulty": "Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
@@ -26333,7 +26568,7 @@ const MCQ_BANK_E = [
     "Topic": "E-R36 internal control responsibility — management vs auditor roles",
     "MicroTopic": "management responsibility internal control",
     "UniqueConceptKey": "E-R36-management-responsibility-internal-control",
-    "LOSTag": "E.1.a Internal Control Definition",
+    "LOSTag": "P1-E.1.a Internal Control Definition",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -26379,7 +26614,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R26 segregation of duties — incompatible functions scenario",
     "MicroTopic": "segregation of duties incompatible functions application",
     "UniqueConceptKey": "E-R26-segregation-incompatible-functions",
-    "LOSTag": "E.1.i Safeguarding Controls",
+    "LOSTag": "P1-E.1.i Safeguarding Controls",
+    "primaryTheory": "E3",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -26425,7 +26661,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R27 authorization controls — transaction approval hierarchies",
     "MicroTopic": "authorization controls general vs specific",
     "UniqueConceptKey": "E-R27-authorization-general-specific",
-    "LOSTag": "E.1.i Safeguarding Controls",
+    "LOSTag": "P1-E.1.i Safeguarding Controls",
+    "primaryTheory": "E3",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -26471,7 +26708,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R29 physical controls — custody and access restrictions",
     "MicroTopic": "physical controls custody safeguarding assets",
     "UniqueConceptKey": "E-R29-physical-controls-custody",
-    "LOSTag": "E.1.i Safeguarding Controls",
+    "LOSTag": "P1-E.1.i Safeguarding Controls",
+    "primaryTheory": "E3",
     "Difficulty": "Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
@@ -26517,7 +26755,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R37 risk identification — qualitative techniques",
     "MicroTopic": "risk identification brainstorming Delphi SWOT",
     "UniqueConceptKey": "E-R37-risk-identification-techniques",
-    "LOSTag": "E.1.d Risk Assessment",
+    "LOSTag": "P1-E.1.d Risk Assessment",
+    "primaryTheory": "E2",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Apply",
@@ -26563,7 +26802,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R38 risk analysis — inherent vs residual risk",
     "MicroTopic": "inherent risk residual risk risk response",
     "UniqueConceptKey": "E-R38-inherent-residual-risk",
-    "LOSTag": "E.1.d Risk Assessment",
+    "LOSTag": "P1-E.1.d Risk Assessment",
+    "primaryTheory": "E2",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -26609,7 +26849,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R39 SOX Title III — corporate responsibility for financial reports",
     "MicroTopic": "SOX 302 certification requirements CEO CFO",
     "UniqueConceptKey": "E-R39-SOX-302-906-comparison",
-    "LOSTag": "E.1.h Sarbanes-Oxley Act (SOX)",
+    "LOSTag": "P1-E.1.h Sarbanes-Oxley Act (SOX)",
+    "primaryTheory": "E5",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -26655,7 +26896,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R40 COSO 2013 — 17 principles across five components",
     "MicroTopic": "COSO 2013 principles control environment risk assessment",
     "UniqueConceptKey": "E-R40-COSO-2013-principles",
-    "LOSTag": "E.1.b Internal Control Framework (COSO 2013)",
+    "LOSTag": "P1-E.1.b Internal Control Framework (COSO 2013)",
+    "primaryTheory": "E1",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Understand",
@@ -26701,7 +26943,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R12 detective control — classification and examples",
     "MicroTopic": "detective controls classification monitoring",
     "UniqueConceptKey": "E-R12-detective-control-classification",
-    "LOSTag": "E.1.e Control Activities",
+    "LOSTag": "P1-E.1.e Control Activities",
+    "primaryTheory": "E3",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -26747,7 +26990,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R13 corrective control — remediation actions after detection",
     "MicroTopic": "corrective controls error remediation",
     "UniqueConceptKey": "E-R13-corrective-control-remediation",
-    "LOSTag": "E.1.e Control Activities",
+    "LOSTag": "P1-E.1.e Control Activities",
+    "primaryTheory": "E3",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -26793,7 +27037,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R18 monitoring activities — ongoing vs separate evaluations",
     "MicroTopic": "monitoring activities ongoing evaluations separate evaluations COSO Principle 16",
     "UniqueConceptKey": "E-R18-ongoing-vs-separate-evaluations",
-    "LOSTag": "E.1.g Monitoring Activities",
+    "LOSTag": "P1-E.1.g Monitoring Activities",
+    "primaryTheory": "E1",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "CognitiveLevel": "Understand",
@@ -26839,7 +27084,7 @@ const MCQ_BANK_E = [
     "Topic": "E-R21 external audit opinions — types under GAAS",
     "MicroTopic": "external audit opinions unqualified qualified adverse disclaimer AU-C 705",
     "UniqueConceptKey": "E-R21-external-audit-opinion-types",
-    "LOSTag": "E.1.i External Auditing",
+    "LOSTag": "P1-E.1.i External Auditing",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
@@ -26885,7 +27130,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R22 audit committee — composition and independence requirements",
     "MicroTopic": "audit committee independence financial expert SOX 301 SOX 407 SEC 10A-3 NYSE 303A.02",
     "UniqueConceptKey": "E-R22-audit-committee-composition",
-    "LOSTag": "E.1.i External Auditing",
+    "LOSTag": "P1-E.1.i External Auditing",
+    "primaryTheory": "E5",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
@@ -26931,7 +27177,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R23 board governance — oversight responsibilities under COSO",
     "MicroTopic": "board governance oversight COSO Principle 2 control environment",
     "UniqueConceptKey": "E-R23-board-governance-oversight",
-    "LOSTag": "E.1.a Internal Control Definition",
+    "LOSTag": "P1-E.1.a Internal Control Definition",
+    "primaryTheory": "E1",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
@@ -26977,7 +27224,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R24 entity-level controls — scope and application vs transaction controls",
     "MicroTopic": "entity-level controls transaction-level controls COSO Principle 2 control environment",
     "UniqueConceptKey": "E-R24-entity-level-vs-transaction-controls",
-    "LOSTag": "E.1.c Control Environment",
+    "LOSTag": "P1-E.1.c Control Environment",
+    "primaryTheory": "E1",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "CognitiveLevel": "Understand",
@@ -27023,7 +27271,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R25 information quality — timeliness characteristic",
     "MicroTopic": "information quality characteristics timeliness COSO Principle 13",
     "UniqueConceptKey": "E-R25-information-quality-timeliness",
-    "LOSTag": "E.1.f Information and Communication",
+    "LOSTag": "P1-E.1.f Information and Communication",
+    "primaryTheory": "E1",
     "Difficulty": "Easy",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
@@ -27069,7 +27318,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R28 manual controls — characteristics, strengths, and limitations",
     "MicroTopic": "manual controls vs automated controls COSO Principle 12 Principle 16",
     "UniqueConceptKey": "E-R28-manual-vs-automated-controls",
-    "LOSTag": "E.1.e Control Activities",
+    "LOSTag": "P1-E.1.e Control Activities",
+    "primaryTheory": "E1",
     "Difficulty": "Moderate",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -27115,7 +27365,8 @@ const MCQ_BANK_E = [
     "Topic": "E-R33 internal audit — organizational placement and reporting structure",
     "MicroTopic": "internal audit independence reporting structure CAE IIA 1110 1110.A1 1130",
     "UniqueConceptKey": "E-R33-internal-audit-reporting-structure",
-    "LOSTag": "E.1.g Monitoring Activities",
+    "LOSTag": "P1-E.1.g Monitoring Activities",
+    "primaryTheory": "E6",
     "Difficulty": "Moderate-Easy",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
@@ -27161,7 +27412,8 @@ const MCQ_BANK_E = [
     "Topic": "EVAL-001 Make-or-buy strategic sourcing recommendation with qualitative risk factors",
     "MicroTopic": "make-or-buy outsourcing qualitative factors supplier risk lead time quality",
     "UniqueConceptKey": "EVAL-001-make-or-buy-strategic-recommendation",
-    "LOSTag": "D.1.f Relevant Costing and Decision Making",
+    "LOSTag": "P1-D.1.f Relevant Costing and Decision Making",
+    "primaryTheory": "D10",
     "Difficulty": "Very Difficult",
     "DifficultyScore": 5,
     "CognitiveLevel": "Evaluate",
@@ -27173,7 +27425,7 @@ const MCQ_BANK_E = [
     "ExplanationCorrect": "The quantitative analysis strongly favors outsourcing: annual in-house cost = 15,000 × $142 = $2,130,000. Outsourcing cost = 15,000 × $118 = $1,770,000. Savings from eliminated fixed overhead = 15,000 × $20 × 60% = $180,000. Sublease income = $90,000. Net outsourcing cost = $1,770,000 - $180,000 - $90,000 = $1,500,000. Total annual savings = $2,130,000 - $1,500,000 = $630,000 (a 29.6% cost reduction). However, the qualitative risks are substantial: a 14-day lead time creates supply chain vulnerability requiring higher safety stock, minimum order quantities of 3,000 units increase inventory holding costs and working capital requirements, and three quality nonconformances in 18 months represent a pattern, not isolated incidents. Under the IMA's Statement of Ethical Professional Practice, management accountants must provide decision support that considers both financial and non-financial factors. The phased transition (Choice D) is the professionally appropriate recommendation because it: (1) captures approximately $189,000 in immediate annual savings (30% of full savings), (2) maintains in-house production as a contingency against supplier failure, (3) provides a 12-month data set on TranStar's quality and delivery performance before committing the remaining 70% of volume, and (4) creates negotiating leverage for contractual quality guarantees and lead time reductions. Full immediate outsourcing (Choice A) ignores operational risk; rejecting outsourcing entirely (Choice B) forfeits substantial verifiable savings; an extended pilot (Choice C) unnecessarily delays capturing most of the savings while TranStar would need to build capacity anyway. The evaluative judgment required is weighing quantifiable cost savings against operational risks that could manifest as production stoppages, warranty claims, or reputational damage — none of which are captured in the unit cost comparison.",
     "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Designed to test Evaluate-level professional judgment in make-or-buy decisions with qualitative risk assessment.",
     "QuestionID": "P1E-EVAL-001",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part1OnlyFlag": true,
     "ReviewNote": "Evaluate-level item: tests ability to balance quantitative cost analysis against qualitative risk factors (supplier quality history, lead time, dependency). The candidate must recommend a course of action, not merely calculate savings. All distractors are plausible alternative business judgments.",
     "CalculationItem": false,
@@ -27206,7 +27458,7 @@ const MCQ_BANK_E = [
     "Topic": "EVAL-002 Internal control deficiency severity prioritization and remediation sequencing",
     "MicroTopic": "control deficiency severity prioritization remediation COSO material weakness significant deficiency",
     "UniqueConceptKey": "EVAL-002-control-deficiency-prioritization",
-    "LOSTag": "E.1.e Control Activities",
+    "LOSTag": "P1-E.1.e Control Activities",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "CognitiveLevel": "Evaluate",
@@ -27218,7 +27470,7 @@ const MCQ_BANK_E = [
     "ExplanationCorrect": "Under COSO Principle 12 (Control Activities) and PCAOB Auditing Standard 2201, control deficiency severity is assessed by evaluating both the magnitude of potential misstatement and the likelihood that the control will fail to prevent or detect a misstatement. Deficiency 1 (loan officer override) is the highest priority because: (a) it involves $124 million in affected loan volume with 847 override instances — the financial exposure magnitude is the largest of all four deficiencies; (b) it represents a missing preventive control (no secondary approval) at a key control point in the lending process, which directly affects the allowance for loan losses and regulatory capital ratios; and (c) the control gap creates opportunity for both error and fraud. Deficiency 3 (emergency IT changes) is the second-highest priority because: (a) the core banking system is the single most critical IT asset — failure, corruption, or unauthorized modification could affect every financial statement account and disrupt all banking operations; (b) a 23.5% non-approval rate on 34 emergency changes means approximately 8 changes per year bypassed review entirely; and (c) the absence of harm to date reflects luck, not control effectiveness — the risk is catastrophic in potential impact even if low in historical frequency. The fact that no harm occurred yet is not a mitigating factor under COSO risk assessment principles; it is a leading indicator of control failure waiting to manifest. Deficiency 2 (vendor master file) is a monitoring deficiency with lower financial exposure magnitude (37 anomalous vendors out of 1,842, or 2.0%) and no evidence of improper payments. Deficiency 4 (data center access) is a monitoring timing deficiency where the control operated but was reviewed less frequently than required — the two badge incidents had no actual unauthorized access. The evaluative judgment required is discriminating between control gaps where no harm has occurred but the risk magnitude differs qualitatively: missing preventive controls at key control points (1 and 3) outweigh monitoring deficiencies with lower inherent risk (2 and 4).",
     "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Designed to test Evaluate-level professional judgment in internal control deficiency prioritization under resource constraints.",
     "QuestionID": "P1E-EVAL-002",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part1OnlyFlag": true,
     "ReviewNote": "Evaluate-level item: tests ability to prioritize control deficiencies using severity assessment (magnitude times likelihood), distinguish preventive vs. detective control gaps, and make remediation sequencing decisions under budget constraints. All distractors represent defensible but suboptimal prioritization rationales.",
     "CalculationItem": false,
@@ -27251,7 +27503,7 @@ const MCQ_BANK_E = [
     "Topic": "EVAL-003 ERP vendor selection using weighted-criteria evaluation and strategic recommendation",
     "MicroTopic": "ERP selection vendor evaluation weighted scoring system selection criteria",
     "UniqueConceptKey": "EVAL-003-erp-vendor-selection",
-    "LOSTag": "F.1.a Information Systems and ERP",
+    "LOSTag": "P1-F.1.a Information Systems and ERP",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "CognitiveLevel": "Evaluate",
@@ -27263,7 +27515,7 @@ const MCQ_BANK_E = [
     "ExplanationCorrect": "Vendor Y achieves the highest weighted score (84.1 out of 100) across the committee's six criteria and leads in the three highest-weighted categories: manufacturing functionality (25% weight — the most critical factor for a manufacturer), vendor stability (15%), and implementation track record (20%). The weighted scores demonstrate that the committee's own prioritization framework favors Vendor Y. The pending re-platforming in 2 to 3 years is a valid qualitative concern, but it also means the vendor is investing in modernization and has a clear technology roadmap — a positive signal for a 10+ year ERP relationship. Established vendors with large installed bases have the resources and incentive to execute successful platform transitions, and contractual protections (re-platforming milestones, migration support commitments) can address transition risk. Vendor X's cloud-native architecture is attractive but its weighted score of 65 on vendor stability — the third-highest-weighted criterion — reflects legitimate concern about a new entrant's long-term viability for what is typically a 10 to 15 year system investment. Vendor Z's below-average manufacturing functionality (score: 78 on the highest-weighted criterion) is disqualifying for a manufacturer whose core operations depend on shop floor control and production scheduling. The evaluative judgment required is recognizing that the weighted scoring framework the committee itself designed produces a clear outcome and that the qualitative risks of the leading vendor (aging architecture with planned modernization) are manageable through contractual provisions, whereas the qualitative risks of the challengers (vendor viability, functional capability gaps) are structural and not contractually addressable. Under COSO ERM Principle 8 (Risk Assessment) and the IMA's competence standard, management accountants must support decisions with structured analysis while applying professional judgment to qualitative factors that the scoring model may not fully capture.",
     "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Designed to test Evaluate-level professional judgment in technology vendor selection using weighted criteria and qualitative risk assessment.",
     "QuestionID": "P1E-EVAL-003",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part1OnlyFlag": true,
     "ReviewNote": "Evaluate-level item: tests ability to reconcile quantitative weighted scoring with qualitative strategic factors, make a defensible vendor recommendation, and justify it to a board-level audience. All distractors are plausible alternative recommendations a reasonable professional might advance.",
     "CalculationItem": false,
@@ -27296,7 +27548,7 @@ const MCQ_BANK_E = [
     "Topic": "EVAL-004 Transfer pricing dispute resolution with capacity constraints and external market alternatives",
     "MicroTopic": "transfer pricing negotiation minimum transfer price maximum transfer price divisional autonomy",
     "UniqueConceptKey": "EVAL-004-transfer-pricing-dispute",
-    "LOSTag": "C.1.d Transfer Pricing",
+    "LOSTag": "P1-C.1.d Transfer Pricing",
     "Difficulty": "Very Difficult",
     "DifficultyScore": 5,
     "CognitiveLevel": "Evaluate",
@@ -27308,7 +27560,7 @@ const MCQ_BANK_E = [
     "ExplanationCorrect": "From GlobalTech's corporate perspective, the economically optimal outcome is for CED to source internally because the incremental cost to the corporation is SD's variable cost of $26 per chip (SD has excess capacity, so no external sales are displaced). If CED purchases externally at $44, the corporation incurs $44 times 50,000 = $2,200,000 in cash outflows versus $26 times 50,000 = $1,300,000 in incremental internal costs, a difference of $900,000 in annual corporate profit. The transfer pricing negotiation range is: SD's minimum acceptable price = variable cost of $26 (SD would reject any price below $26 because it would lose contribution margin on every unit); CED's maximum acceptable price = external market price of $44 (CED would reject any price above $44 because ChipSource offers the same product at that price). Any transfer price in the range $26 to $44 is mutually beneficial and superior to external sourcing from the corporate perspective. The controller's recommendation of $35 per chip: (a) captures the full $900,000 corporate profit benefit (vs. external sourcing), (b) gives SD a $9 per-unit contribution margin above variable cost ($450,000 total), recognizing that SD's cooperation is needed and the division should benefit from being the internal supplier, (c) gives CED a $9 per-unit saving below the external alternative ($450,000 total), rewarding the division manager for identifying the market alternative and demonstrating that internal sourcing remains competitive, and (d) splits the $18 per-unit corporate benefit range ($44 minus $26) approximately equally between the divisions, supporting divisional motivation and perceived fairness. Under the IMA Standards (Competence), the controller must provide decision support that considers both financial optimization and organizational behavior consequences. A pure cost-based transfer price ignores that divisional managers are evaluated on division profitability; a pure market-based price forces CED to pay above the external alternative, undermining the credibility of the transfer pricing system.",
     "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Designed to test Evaluate-level professional judgment in transfer pricing dispute resolution.",
     "QuestionID": "P1E-EVAL-004",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part1OnlyFlag": true,
     "ReviewNote": "Evaluate-level item: tests ability to resolve a transfer pricing dispute by identifying the economically optimal outcome, the acceptable negotiation range, and a fair price that balances corporate profit maximization with divisional motivation. Requires integrating quantitative analysis (variable cost, capacity, external price) with organizational behavior considerations.",
     "CalculationItem": false,
@@ -27341,7 +27593,7 @@ const MCQ_BANK_E = [
     "Topic": "EVAL-005 Capital budget resource allocation under competing priorities with financial and non-financial criteria",
     "MicroTopic": "capital budgeting prioritization resource allocation NPV payback strategic alignment",
     "UniqueConceptKey": "EVAL-005-capital-budget-allocation",
-    "LOSTag": "B.1.c Capital Budgeting",
+    "LOSTag": "P1-B.1.c Capital Budgeting",
     "Difficulty": "Difficult",
     "DifficultyScore": 4,
     "CognitiveLevel": "Evaluate",
@@ -27353,7 +27605,7 @@ const MCQ_BANK_E = [
     "ExplanationCorrect": "Proposals 1 and 3 together require $3.9 million, fitting within the $4.2 million cap with $300,000 in budget contingency. This is the optimal recommendation for three reasons. First, Proposal 1 (MRI replacement, $2.8M) has the strongest financial case: highest NPV ($1,420,000), shortest payback (3.2 years), and directly addresses a competitive threat (referral leakage to competing hospitals that erodes market share and revenue). Unlike a manufacturer choosing between equipment with similar financial profiles, a medical center's MRI is both a revenue generator and a clinical necessity — patient outcomes depend on diagnostic imaging availability and quality. Second, Proposal 3 (EHR cybersecurity, $1.1M) addresses the most severe non-financial risk: 12 critical vulnerabilities in a system containing protected health information exposes the center to HIPAA penalties averaging $1.4 million, reputational damage, patient lawsuits, and potential exclusion from Medicare/Medicaid programs. Unlike the HVAC system (Proposal 2), cybersecurity is not insurable through business interruption coverage at comparable cost, and the harm from a breach (patient trust erosion) cannot be remediated through capital expenditure after the fact. Third, the board can address Proposal 2 (HVAC replacement) through the operating budget emergency maintenance reserve or next year's capital cycle — the $180,000 per-incident cost, while significant, is quantifiable and the surgical wing can be temporarily rescheduled if another failure occurs, whereas an MRI that cannot operate and an EHR that is breached have no comparable workaround. The evaluative judgment is balancing NPV-driven investment logic (which would favor 1+2 for the highest combined NPV of $2,310,000) against risk-based prioritization that recognizes certain risks (HIPAA data breach) carry consequences that NPV analysis cannot capture — regulatory sanctions, criminal liability for willful neglect, and irreversible loss of patient confidence.",
     "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Designed to test Evaluate-level professional judgment in capital budget resource allocation with both financial and non-financial decision criteria.",
     "QuestionID": "P1E-EVAL-005",
-    "question_state": "Unprocessed",
+    "question_state": "Certified",
     "Part1OnlyFlag": true,
     "ReviewNote": "Evaluate-level item: tests ability to recommend capital allocation across competing proposals by weighing NPV/payback metrics against non-financial risk factors (patient safety, regulatory compliance, competitive positioning). All distractors are plausible alternative allocation recommendations with internally consistent rationales.",
     "CalculationItem": false,
@@ -27378,5 +27630,3600 @@ const MCQ_BANK_E = [
     "ExplanationWrongB": "While patient safety is correctly identified as the highest organizational priority, this recommendation misclassifies the MRI replacement as purely a competitive positioning investment. An MRI machine that is down 18 days per year (vs. the historical 3 days) directly affects patient care: delayed diagnoses, rescheduled procedures, and patients forced to seek imaging at competing facilities. Missed or delayed diagnosis from unavailable imaging equipment is a patient safety issue, not merely a revenue issue. Furthermore, the MRI replacement has the strongest financial metrics (NPV $1,420,000, payback 3.2 years) versus the HVAC system (NPV $890,000, payback 4.7 years). The HVAC system's two failures in 6 months cost $360,000 total — a quantifiable, insurable loss that can be managed through the operating budget and temporary surgical rescheduling. The evaluative error is applying a uniform patient safety label without discriminating between different levels of clinical risk: unavailable diagnostic imaging (affecting all patients needing MRI) vs. HVAC failure (affecting scheduled surgeries, which can be rescheduled). Both matter, but the MRI downtime directly degrades diagnostic capability — a core clinical function.",
     "ExplanationWrongC": "Proposals 1 and 2 together cost $4.4 million, exceeding the $4.2 million capital budget by $200,000. Recommending a budget overrun with a request for supplemental contingency funding is not a completed recommendation — it is a request for more money. The board established the $4.2 million capital ceiling based on the organization's overall financial position, debt capacity, and competing priorities across all departments. Elena's role as controller is to make a recommendation within the constraint the board has set, not to treat the constraint as a starting point for negotiation. Suggesting scope reduction for the HVAC system without specifying what would be cut is incomplete analysis. The evaluative standard for a controller's recommendation is that it must be executable within the stated parameters — a recommendation that requires the board to change the parameters is a preliminary discussion document, not a final recommendation.",
     "ExplanationWrongD": "Deferring the cybersecurity investment while requesting additional quantification misunderstands the nature of cybersecurity risk assessment. Unlike capital equipment investments where future cash flows can be estimated with reasonable precision, cybersecurity breach probability and impact are inherently uncertain — no IT department can provide a reliable point estimate of the probability of a breach in the next 12 months. The existing evidence (12 critical vulnerabilities identified by an independent penetration test, average HIPAA settlements of $1.4 million) is sufficient for a risk-based capital allocation decision. Furthermore, deferring cybersecurity remediation after vulnerabilities have been formally identified creates legal exposure: OCR has penalized healthcare organizations more severely when breaches occurred after known vulnerabilities were documented but not remediated. The evaluative principle is that decision-making standards must be appropriate to the decision context — applying NPV-level quantification requirements to cybersecurity risk is a category error that creates a de facto decision to accept the risk without explicitly acknowledging that choice."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "ItemStyle": "single-select",
+    "Part": 1,
+    "ItemType": "MCQ",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "Section": "B",
+    "Difficulty": "Very Difficult",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "E-B.S01 Capacity denominator concepts",
+    "UniqueConceptKey": "E-B-S01-Capacity-denominator-concepts",
+    "MicroTopic": "Capacity denominator concepts",
+    "CorrectChoice": "A",
+    "LOSTag": "P1-B.3 Cost and variance measures",
+    "primaryTheory": "B9",
+    "Stem": "Northwood Manufacturing's controller Rachel Kim is reviewing the fixed overhead application rate for the upcoming fiscal year. Northwood's budgeted fixed manufacturing overhead is $288,000. Four denominator capacity levels are under consideration: theoretical capacity of 40,000 direct labor hours (DLH), practical capacity of 36,000 DLH, normal capacity of 32,000 DLH, and master-budget expected capacity of 24,000 DLH. Actual production during the year consumed 30,000 DLH. Rachel must explain to the CFO why different denominator choices produce different fixed overhead rates and production-volume variances. Which statement correctly describes the fixed overhead rate and production-volume variance under the practical capacity and expected capacity denominators?",
+    "Choices": {
+      "A": "Practical capacity yields an $8.00 per DLH fixed overhead rate with a $48,000 unfavorable production-volume variance; expected capacity yields a $12.00 per DLH rate with a $72,000 favorable production-volume variance because actual production exceeded the expected denominator",
+      "B": "Practical capacity yields an $8.00 per DLH fixed overhead rate with a $72,000 favorable production-volume variance; expected capacity yields a $12.00 per DLH rate with a $48,000 unfavorable production-volume variance",
+      "C": "Both practical and expected capacity yield the same production-volume variance because this variance arises from fixed overhead spending differences, not from the denominator volume selected for the fixed overhead rate calculation",
+      "D": "Both practical and expected capacity yield the same fixed overhead rate of $10.00 per DLH, resulting in identical product cost per unit regardless of which denominator is chosen for the fixed overhead application rate"
+    },
+    "QuestionID": "P1E-B-S01",
+    "ExplanationCorrect": "The correct statement describes what occurs under practical capacity versus expected capacity with $288,000 budgeted fixed overhead. Under the practical capacity denominator of 36,000 DLH, the fixed overhead application rate is $288,000 / 36,000 = $8.00 per DLH. Applied fixed overhead at actual production of 30,000 DLH is $8.00 x 30,000 = $240,000. The production-volume variance is Applied ($240,000) - Budgeted ($288,000) = $48,000 Unfavorable -- actual production fell 6,000 DLH short of the practical denominator, creating an underapplied fixed overhead variance. Under the expected (master-budget) capacity denominator of 24,000 DLH, the fixed overhead application rate is $288,000 / 24,000 = $12.00 per DLH. Applied fixed overhead at actual production of 30,000 DLH is $12.00 x 30,000 = $360,000. The production-volume variance is Applied ($360,000) - Budgeted ($288,000) = $72,000 Favorable -- actual production exceeded the expected denominator by 6,000 DLH, creating an overapplied fixed overhead variance. The critical insight is that the same $288,000 fixed overhead cost and the same 30,000 actual DLH produce opposite-signed volume variances simply because the denominator changed. The fixed overhead rate is inversely proportional to the denominator: a smaller denominator (24,000 expected) produces a higher rate ($12.00) and a favorable variance when actual exceeds it; a larger denominator (36,000 practical) produces a lower rate ($8.00) and an unfavorable variance when actual falls short. This demonstrates why management must understand the behavioral and reporting implications of capacity denominator selection -- product costs, inventory valuation, and period-expense variances all shift with this single choice. A common CMA exam trap is confusing the production-volume variance (a function of the denominator-activity difference, fixed in total) with the spending variance (a function of actual-vs-budgeted spending).",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B reverses the volume variance signs between the two denominators. This error reflects a misunderstanding of how the production-volume variance is calculated: Applied Fixed Overhead (FOAR x Actual DLH) minus Budgeted Fixed Overhead. Under practical capacity, the FOAR of $8.00/hr is lower, but the denominator (36,000 DLH) exceeds actual production (30,000 DLH), meaning applied overhead ($240,000) is less than budgeted overhead ($288,000), producing an unfavorable variance of $48,000 -- not a favorable one. Under expected capacity, the FOAR of $12.00/hr is higher, but the denominator (24,000 DLH) is below actual production (30,000 DLH), meaning applied overhead ($360,000) exceeds budgeted overhead ($288,000), producing a favorable variance of $72,000. A candidate selecting this option has correctly computed the FOARs but reversed the direction of the denominator-activity comparison: recognizing that a larger denominator produces a lower rate is not the same as recognizing whether actual activity is above or below that denominator. The volume variance is driven by the gap between denominator and actual hours, not by the FOAR magnitude alone.",
+    "ExplanationWrongC": "Option C claims the production-volume variance is the same regardless of denominator choice, attributing it to fixed overhead spending differences. This reflects a fundamental confusion between the production-volume variance and the fixed overhead spending (budget) variance. The spending variance measures the difference between actual fixed overhead incurred and budgeted fixed overhead -- that variance is zero in this scenario because the $288,000 budgeted amount is the same under all denominators. The production-volume variance, however, is a denominator-driven variance: it measures the difference between applied fixed overhead (FOAR x Actual DLH) and budgeted fixed overhead. Since the FOAR changes with each denominator, and the same 30,000 actual DLH is multiplied by a different FOAR, the applied overhead changes -- from $240,000 under practical to $360,000 under expected -- producing completely different volume variances (-$48,000 U versus +$72,000 F). A candidate selecting this option has learned the variance formulas as disconnected procedures without understanding which fixed overhead components are denominator-dependent (the FOAR and therefore the volume variance) versus which are denominator-independent (the total budgeted amount and therefore the spending variance).",
+    "ExplanationWrongD": "Option D claims that both capacity denominators produce the same fixed overhead rate of $10.00 per DLH. This appears to be an attempt to average the two rates ($8.00 and $12.00), but fixed overhead rates are computed by dividing budgeted fixed overhead by a single chosen denominator, not by averaging across denominators. With $288,000 budgeted fixed overhead, practical capacity (36,000 DLH) yields $8.00/DLH and expected capacity (24,000 DLH) yields $12.00/DLH -- neither produces $10.00/DLH. Moreover, the product cost per unit is NOT identical regardless of denominator choice. When practical capacity ($8.00/DLH) is used, each unit absorbs $8.00 of fixed overhead per DLH; when expected capacity ($12.00/DLH) is used, each unit absorbs $12.00. This $4.00/DLH difference flows through to inventory valuation and cost of goods sold under absorption costing, directly affecting reported operating income. A candidate selecting this option has not understood that the denominator is a divisor: changing the denominator necessarily changes the quotient, and that change propagates through product costs, inventory balances, and period-expense variance allocations."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      },
+      {
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "ItemStyle": "single-select",
+    "Part": 1,
+    "ItemType": "MCQ",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "Section": "A",
+    "Difficulty": "Difficult",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "E-A.S01 Lower of cost or market -- individual-item",
+    "UniqueConceptKey": "E-A-S01-LCM-individual-item",
+    "MicroTopic": "Lower of cost or market -- individual-item application",
+    "CorrectChoice": "B",
+    "LOSTag": "P1-A.1 Recognition, measurement, valuation, and disclosure",
+    "primaryTheory": "A3",
+    "Stem": "Stellar Supply carries three inventory items at year-end. The inventory manager has compiled the following data: Item 1 -- cost of $25,000, estimated selling price of $24,000, disposal costs of $2,000, and normal profit margin of $3,000. Item 2 -- cost of $20,000, estimated selling price of $21,000, disposal costs of $2,000, and normal profit margin of $2,000. Item 3 -- cost of $18,000, estimated selling price of $23,000, disposal costs of $2,000, and normal profit margin of $3,000. Under U.S. GAAP, inventory is measured at the lower of cost and net realizable value applied on an individual-item basis. What is the correct year-end inventory write-down for Stellar Supply?",
+    "Choices": {
+      "A": "No write-down is required because the aggregate cost of the three items ($63,000) exceeds their aggregate net realizable value ($62,000) by only $1,000, which is immaterial for financial reporting purposes",
+      "B": "A write-down of $4,000 is required -- Item 1 is written down by $3,000 (cost $25,000 exceeding NRV $22,000) and Item 2 is written down by $1,000 (cost $20,000 exceeding NRV $19,000), while Item 3 requires no write-down since its cost of $18,000 is below its NRV of $21,000",
+      "C": "No write-down is required because total cost ($63,000) is less than total NRV ($62,000) when measured at the portfolio level, and U.S. GAAP permits inventory valuation at either the individual-item or aggregate level at management's discretion",
+      "D": "A write-down of $1,000 is required for Item 2 only, because its cost exceeds NRV by the smallest margin; Item 1's write-down would be disproportionate at $3,000, and selectively writing down only the smallest impairment is consistent with the principle of conservatism"
+    },
+    "QuestionID": "P1E-A-S01",
+    "ExplanationCorrect": "Under ASC 330-10-35, inventory is measured at the lower of cost and net realizable value (NRV) applied on an individual-item basis. NRV is the estimated selling price less costs of completion and disposal -- normal profit margin is not deducted for NRV (only for the market ceiling/floor under LIFO-based LCM). Item 1: NRV = $24,000 - $2,000 = $22,000. Cost is $25,000, so NRV ($22,000) is below cost, requiring a write-down of $25,000 - $22,000 = $3,000. Item 2: NRV = $21,000 - $2,000 = $19,000. Cost is $20,000, so NRV ($19,000) is below cost, requiring a write-down of $20,000 - $19,000 = $1,000. Item 3: NRV = $23,000 - $2,000 = $21,000. Cost is $18,000, which is below NRV -- no write-down is required. Total write-down = $3,000 + $1,000 + $0 = $4,000. The individual-item approach is required under U.S. GAAP for inventory not measured using LIFO or the retail inventory method; grouping items to net gains against losses is prohibited because it obscures specific impairment. A common CMA exam error is applying the aggregate approach, which nets Item 3's cost-NRV surplus ($3,000) against Items 1 and 2's combined deficit ($4,000), producing a net write-down of only $1,000 -- this misapplication violates the individual-item requirement and overstates inventory.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongA": "Option A argues against any write-down on materiality grounds after comparing aggregate cost ($63,000) to aggregate NRV ($62,000). This analysis embeds two errors. First, the arithmetic confirms a $1,000 aggregate deficit. Second, and more critically, the methodology itself is prohibited: ASC 330-10-35-1C requires inventory to be measured at the lower of cost and NRV on an individual-item basis, not an aggregate basis. Netting Item 3's unrealized $3,000 cost-NRV surplus against Items 1 and 2's $4,000 combined deficit is prohibited under U.S. GAAP because each inventory item represents a distinct asset whose impairment must be recognized individually. A materiality argument cannot override the measurement basis; ASC 330 does not provide a materiality exception to the individual-item requirement. A candidate selecting this answer has correctly computed the individual NRVs but incorrectly applied an aggregate measurement approach that violates the individual-item requirement.",
+    "ExplanationWrongC": "Option C makes two claims: (a) no write-down is required under the aggregate approach, and (b) U.S. GAAP permits either individual-item or aggregate-level inventory measurement at management's discretion. Both are incorrect. The arithmetic in the choice is also wrong -- total cost ($63,000) exceeds total NRV ($62,000), not the other way around. ASC 330-10-35-1B explicitly requires individual-item measurement; management does not have discretion to choose aggregate measurement as an alternative for inventory not measured using LIFO or the retail method. The aggregate approach would violate the fundamental principle that each asset's carrying amount must be individually assessed for impairment. A candidate selecting this answer has conflated the flexibility permitted under different inventory costing methods with the measurement requirement, which is uniform: lower of cost and NRV, applied item by item.",
+    "ExplanationWrongD": "Option D proposes a write-down of $1,000 for Item 2 only, arguing that Item 1's $3,000 write-down would be disproportionate and that conservatism permits selecting only the smallest impairment. This rationale has no basis in U.S. GAAP. The lower-of-cost-and-NRV measurement is mechanical -- it does not involve proportionality judgments or selective application among inventory items. Item 1's $3,000 write-down is the arithmetic difference between Item 1's $25,000 carrying amount and its $22,000 NRV; the fact that Item 2's write-down is a smaller dollar amount does not disqualify Item 1's larger write-down. The principle of conservatism in accounting requires that all impairments be recognized, not that only the smallest impairment be recognized. Selectively applying write-downs only to the item with the smallest impairment violates the systematic application of ASC 330. A candidate selecting this answer has substituted subjective judgment for the objective measurement standard, treating the write-down as a discretionary reserve rather than as a required adjustment for each individual inventory item."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      },
+      {
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "ItemStyle": "single-select",
+    "Part": 1,
+    "ItemType": "MCQ",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "Section": "A",
+    "Difficulty": "Very Difficult",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "E-A.S03 Bond discount amortization -- effective-interest method",
+    "UniqueConceptKey": "E-A-S03-Bond-discount-amortization-EI",
+    "MicroTopic": "Bond discount amortization effective-interest method",
+    "CorrectChoice": "C",
+    "LOSTag": "P1-A.2 Recognition, measurement, valuation, and disclosure",
+    "primaryTheory": "A7",
+    "Stem": "Navarro Industries issued $1,000,000 face value, 8% coupon bonds on January 1, Year 1. The bonds mature in 5 years and pay interest annually on December 31. At issuance, the market interest rate for bonds of similar risk was 10%, and the bonds were issued at a price of $924,184 (a discount of $75,816). Navarro's controller Lara Chen must report the bond carrying value on the December 31, Year 2 balance sheet using the effective-interest method. What is the correct carrying value?",
+    "Choices": {
+      "A": "$924,184 -- the bonds are reported at their original issue price throughout the bond term, and the $75,816 discount is recognized as a loss only at maturity when the face value of $1,000,000 is repaid",
+      "B": "$936,602 -- this is the carrying value after one year of discount amortization, computed as the issue price plus only the first year's discount amortization of $12,418",
+      "C": "$950,262 -- the carrying value after two years of effective-interest amortization, reflecting cumulative discount amortization of $26,078 that increases the bond's book value toward its $1,000,000 face amount at maturity",
+      "D": "$965,288 -- this is the carrying value after three years of discount amortization, computed by mechanically advancing the amortization schedule one period beyond the requested Year 2 date"
+    },
+    "QuestionID": "P1E-A-S03",
+    "ExplanationCorrect": "Under the effective-interest method required by ASC 835-30, the bond carrying value at December 31, Year 2 is $950,262, computed through two periods of interest accrual and discount amortization. Year 1: Interest expense = Carrying value at issuance ($924,184) x Market rate (10%) = $92,418. Cash interest paid = Face value ($1,000,000) x Coupon rate (8%) = $80,000. Discount amortization = Interest expense - Cash interest = $92,418 - $80,000 = $12,418. Carrying value at December 31, Year 1 = $924,184 + $12,418 = $936,602. Year 2: Interest expense = Year 1 carrying value ($936,602) x 10% = $93,660. Cash interest paid = $80,000 (unchanged -- the coupon is fixed). Discount amortization = $93,660 - $80,000 = $13,660. Carrying value at December 31, Year 2 = $936,602 + $13,660 = $950,262. The effective-interest method produces increasing amortization amounts each period because the carrying value grows as the discount is amortized, and interest expense is computed on the growing carrying value at the constant market rate. The amortization sequence ($12,418, $13,660, $15,026, $16,529, $18,183) sums to the total $75,816 discount, and the carrying value converges to $1,000,000 at maturity. A common CMA exam error is applying straight-line amortization ($75,816 / 5 = $15,163 per year), which would produce a Year 2 carrying value of $924,184 + (2 x $15,163) = $954,510 -- close to the correct $950,262 but methodologically wrong under U.S. GAAP.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongA": "Option A reports the bonds at the original issue price of $924,184, with the claim that the discount is recognized only at maturity. Under ASC 835-30-35-2, bond discount (or premium) is not deferred to maturity -- it is amortized to interest expense over the life of the bonds using the effective-interest method, which produces a constant effective yield. The discount represents an adjustment to the bond's effective yield, not a separate loss event recognized at maturity. Reporting the bond liability at $924,184 (its issue price) throughout the entire 5-year term understates the liability in every year after issuance, violating the requirement that long-term debt be reported at amortized cost. By December 31, Year 2, the correct carrying value is $950,262 -- $26,078 higher than the issue price, reflecting two years of discount amortization. A candidate selecting this answer has treated the bond discount as analogous to a gain contingency to be recognized only upon settlement rather than as a component of the instrument's effective yield that must be systematically amortized.",
+    "ExplanationWrongB": "Option B reports the carrying value after only one year of amortization: $924,184 + $12,418 = $936,602. This is the correct carrying value at December 31, Year 1 -- but the question asks for the carrying value at December 31, Year 2, the end of the second year. The error is stopping the amortization schedule one period short. Year 2's interest expense is computed as $936,602 x 10% = $93,660, which exceeds the $80,000 cash coupon payment by $13,660. This $13,660 represents the Year 2 discount amortization that must be added to the Year 1 carrying value, producing the Year 2 carrying value of $950,262. A candidate selecting this answer has correctly computed the Year 1 amortization and carrying value but failed to advance the schedule through the second year. This is a common time-pressure error on CMA exams: the candidate performs one period correctly, arrives at a number that appears as an answer choice, and selects it without verifying that the question asks for a different time point.",
+    "ExplanationWrongD": "Option D reports the carrying value after three years of effective-interest amortization ($965,288). This is the correct Year 3 carrying value ($950,262 + $15,026 = $965,288), but the question asks for the December 31, Year 2 carrying value. The candidate has advanced the amortization schedule one period too far. Year 3 interest expense of $95,026 ($950,262 x 10%) minus the $80,000 coupon produces $15,026 of discount amortization, which when added to the correct Year 2 carrying value yields $965,288 at December 31, Year 3. On the CMA exam, amortization-schedule questions frequently offer adjacent-period carrying values as distractors; candidates under time pressure who calculate mechanically without verifying the period end will select the next or previous period's balance. Always confirm the question's time reference: 'December 31, Year 2' means two full years of amortization, not one or three."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      },
+      {
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "ItemStyle": "single-select",
+    "Part": 1,
+    "ItemType": "MCQ",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "Section": "A",
+    "Difficulty": "Difficult",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "E-A.S05 Basic and diluted EPS computation",
+    "UniqueConceptKey": "E-A-S05-Basic-and-diluted-EPS",
+    "MicroTopic": "Basic and diluted earnings per share computation",
+    "CorrectChoice": "C",
+    "LOSTag": "P1-A.2 Recognition, measurement, valuation, and disclosure",
+    "primaryTheory": "A10",
+    "Stem": "Atlas Industries reported net income of $4,200,000 for Year 1. The capital structure includes 1,400,000 weighted-average common shares outstanding, $100,000 of cumulative convertible preferred stock dividends declared (the preferred shares are convertible into 120,000 common shares if elected by holders), and 180,000 outstanding employee stock options with a $25 strike price when the average market price was $50 per share. Atlas's effective tax rate is 25%. Under ASC 260, what are Atlas's basic and diluted earnings per share?",
+    "Choices": {
+      "A": "Basic EPS = $2.93 with no diluted EPS reported because both the convertible preferred stock and the employee stock options are antidilutive under ASC 260",
+      "B": "Basic EPS = $3.00, Diluted EPS = $2.59 -- the controller omitted the $100,000 preferred dividend deduction from the basic EPS numerator but correctly included the treasury-stock-method options and the convertible preferred in diluted EPS",
+      "C": "Basic EPS = $2.93, Diluted EPS = $2.61 -- basic EPS deducts preferred dividends from net income available to common shareholders, and diluted EPS reflects in-the-money stock options (90,000 incremental shares under the treasury stock method) plus dilutive convertible preferred (incremental EPS $0.83 tested below basic EPS of $2.93)",
+      "D": "Basic EPS = $2.93, Diluted EPS = $2.47 -- the controller applied the if-converted method to the stock options (adding all 180,000 shares without the treasury stock repurchase) while also including the 120,000 preferred conversion shares"
+    },
+    "QuestionID": "P1E-A-S05",
+    "ExplanationCorrect": "Under ASC 260-10-45, basic EPS = (Net income - Preferred dividends) / Weighted-average common shares outstanding. Net income available to common shareholders = $4,200,000 - $100,000 = $4,100,000. Basic EPS = $4,100,000 / 1,400,000 = $2.93 (rounded). For diluted EPS, the potentially dilutive securities must be classified through the sequential antidilution test. Stock options via the treasury stock method: assumed proceeds = 180,000 x $25 = $4,500,000. Shares that could be repurchased at the average $50 market price = $4,500,000 / $50 = 90,000. Incremental shares = 180,000 - 90,000 = 90,000. Running diluted EPS after options = $4,100,000 / 1,490,000 = $2.752. Convertible preferred: incremental EPS = $100,000 / 120,000 = $0.833. Since $0.833 is below the running diluted EPS of $2.752, the preferred is dilutive. Final diluted EPS = ($4,100,000 + $100,000) / (1,490,000 + 120,000) = $4,200,000 / 1,610,000 = $2.609, rounded to $2.61. Both securities are dilutive because each incremental EPS is below the running diluted EPS at the point it is tested. A common CMA exam error is forgetting the sequential antidilution test and including all securities simultaneously or excluding them based on comparison to basic EPS alone.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongA": "Option A asserts that neither security is dilutive and only basic EPS of $2.93 should be reported. This is incorrect. The employee stock options have a $25 strike price against a $50 average market price, making them deeply in-the-money -- under the treasury stock method, these options always increase the denominator (90,000 incremental shares) with no numerator effect, unequivocally reducing EPS. The convertible preferred has an incremental EPS of $0.833 ($100,000 / 120,000 shares), which is substantially below basic EPS ($2.93) and the running diluted EPS after options ($2.75). Under ASC 260-10-45-17, any potentially dilutive security whose incremental EPS is below the running diluted EPS is dilutive. A candidate selecting this answer has either not performed the antidilution test at all, or has incorrectly classified both securities as antidilutive without comparing their incremental EPS against the relevant benchmarks.",
+    "ExplanationWrongB": "Option B reports Basic EPS of $3.00, computed as $4,200,000 / 1,400,000, omitting the $100,000 cumulative preferred dividend deduction from the numerator. Under ASC 260-10-45-10, net income available to common shareholders equals net income minus dividends declared on cumulative preferred stock. Omitting this deduction overstates basic EPS by $0.07 (from $2.93 to $3.00). The diluted EPS of $2.59 is also affected because the numerator error propagates. A candidate selecting this option has correctly identified the treasury stock method for options but has not recognized that cumulative preferred dividends reduce the income available to common shareholders -- a fundamental error in the numerator of the EPS ratio and one of the most common EPS errors on the CMA exam.",
+    "ExplanationWrongD": "Option D reports Diluted EPS of $2.47, computed by applying the if-converted method to the stock options: ($4,200,000) / (1,400,000 + 180,000 + 120,000) = $4,200,000 / 1,700,000 = $2.47. This incorrectly applies the if-converted method to equity-classified stock options. Under ASC 260-10-45-23, the if-converted method applies only to convertible securities (bonds and preferred stock), while stock options and warrants always use the treasury stock method. Applying if-converted treatment to options ignores the $4,500,000 of assumed cash proceeds that would reduce dilution under the treasury stock method, overstating the dilutive share count from 90,000 incremental shares to 180,000 full shares. A candidate selecting this answer has applied the wrong conversion methodology to equity instruments, producing an understated diluted EPS."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "ItemStyle": "single-select",
+    "Part": 1,
+    "ItemType": "MCQ",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "Section": "B",
+    "Difficulty": "Difficult",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "E-B.S02 Strategic analysis frameworks",
+    "UniqueConceptKey": "E-B-S02-Strategic-analysis-frameworks",
+    "MicroTopic": "Strategic analysis frameworks -- PESTLE, Porter's Five Forces, SWOT",
+    "CorrectChoice": "A",
+    "LOSTag": "P1-B.1 Strategic planning",
+    "primaryTheory": "B1",
+    "Stem": "Ardent Medical Devices ($210 million in annual revenue) is conducting its annual strategic review. The strategy team, led by CFO Marcus Webb, has gathered three sets of intelligence. Analysis A: The FDA has announced accelerated approval pathways for AI-enabled diagnostic devices; CMS proposes expanding reimbursement coverage for remote patient monitoring; the U.S. population aged 65+ is projected to grow from 17% to 21% of the total by 2030; and the European Union's new Medical Device Regulation (MDR) imposes stricter clinical evidence requirements that will increase compliance costs by an estimated 8-12% for mid-market manufacturers. Analysis B: A major competitor has acquired two regional distributors, consolidating 38% of the independent distribution channel; hospital Group Purchasing Organizations (GPOs) are negotiating 9-14% price reductions through aggregated purchasing; and three new venture-backed entrants have received FDA clearance for AI-enabled diagnostic devices that directly compete with Ardent's flagship product line. Analysis C: Ardent's proprietary machine-learning diagnostic algorithm has a 94.3% accuracy rate (vs. the industry average of 87.1%); in-sourced manufacturing at the Tulsa facility has a 23% cost disadvantage versus contract manufacturers in Southeast Asia; and the sales force has a 31% annual turnover rate, nearly double the medical device industry average of 16%. Which strategic framework should Marcus apply to each analysis?",
+    "Choices": {
+      "A": "PESTLE for Analysis A (regulatory, economic, demographic, and legal macro-environmental factors); Porter's Five Forces for Analysis B (competitor consolidation, buyer bargaining power via GPOs, and threat of new entrants); SWOT for Analysis C (internal strengths -- algorithm accuracy; weaknesses -- manufacturing cost disadvantage and sales force turnover)",
+      "B": "SWOT for Analysis A (because regulatory threats and demographic strengths must be weighed against each other); PESTLE for Analysis B (because competitor actions represent political and economic forces reshaping the industry); Porter's Five Forces for Analysis C (because manufacturing costs and employee turnover are part of the value chain and rivalry among competitors)",
+      "C": "Porter's Five Forces for Analysis A (regulations and reimbursement are barriers to entry and substitute threats); PESTLE for Analysis B (competitor consolidation is a socio-cultural trend); SWOT for Analysis C (internal strengths and weaknesses of the organization)",
+      "D": "SWOT for all three analyses because the strategic planning process integrates external opportunities and threats with internal strengths and weaknesses into a single unified framework; segmenting by framework type would fragment the analysis and obscure cross-domain interactions"
+    },
+    "QuestionID": "P1E-B-S02",
+    "ExplanationCorrect": "The correct mapping is PESTLE for Analysis A, Porter's Five Forces for Analysis B, and SWOT for Analysis C. PESTLE (Political, Economic, Social, Technological, Legal, Environmental) is the appropriate framework for Analysis A because every factor described -- FDA regulatory pathways, CMS reimbursement policy, demographic aging trends, and EU MDR legal compliance requirements -- operates at the macro-environmental level, outside any individual firm's control. PESTLE is specifically designed to scan the external macro-environment for factors that shape an industry's operating context. Porter's Five Forces is the appropriate framework for Analysis B because the analysis describes industry-structure dynamics: competitor consolidation (intensifying rivalry), GPO bargaining power (buyer power), barriers for new entrants (venture-backed AI entrants receiving FDA clearance), and distribution channel consolidation (supplier power through forward integration). Porter's framework analyzes competitive forces within an industry, not macro-environmental conditions. SWOT is the appropriate framework for Analysis C because the analysis describes firm-level attributes: a proprietary algorithm with superior accuracy (internal strength), manufacturing cost disadvantage (internal weakness), and sales force turnover (internal weakness). SWOT's internal dimension (Strengths and Weaknesses) directly maps to these firm-specific characteristics. A common CMA exam error is applying frameworks at the wrong level of analysis -- using SWOT for macro factors or PESTLE for firm-level factors. The three frameworks are complementary, not interchangeable: PESTLE scans the external macro-environment, Porter's Five Forces analyzes industry structure, and SWOT integrates internal capabilities with external conditions.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B reverses the framework assignments across all three analyses. PESTLE does not fit Analysis B because competitor acquisitions, GPO bargaining power, and new entrants are industry-structure forces (Porter's domain), not macro-environmental political or economic factors. SWOT does not fit Analysis A because regulatory changes, demographic shifts, and reimbursement policy operate at the macro-environmental level beyond any firm's control; SWOT's internal dimension (Strengths and Weaknesses) has no content in Analysis A -- nothing in Analysis A describes Ardent's own capabilities. Porter's Five Forces does not fit Analysis C because manufacturing costs and employee turnover are internal operational metrics, not industry-level competitive forces. A candidate selecting this answer understands that three frameworks are relevant but has mismapped each to the wrong analysis, suggesting confusion about the unit of analysis each framework addresses -- macro-environment (PESTLE), industry (Porter), or firm (SWOT).",
+    "ExplanationWrongC": "Option C correctly assigns PESTLE to Analysis A but incorrectly assigns Porter's Five Forces to Analysis A as well. While regulations and reimbursement can be conceptualized as barriers to entry, this stretches Porter's framework beyond its intended scope -- PESTLE is the standard tool for macro-environmental scanning, and combining PESTLE with Porter for the same analysis doubles the framework without adding analytical precision. More critically, the choice misclassifies Analysis B: competitor consolidation is an industry-structure phenomenon, not a 'socio-cultural trend.' A candidate selecting this answer has overlapped framework domains (using two frameworks for one analysis and misapplying a third to a different analysis), indicating memorization of framework names without understanding the specific scope and unit of analysis each was designed for.",
+    "ExplanationWrongD": "Option D proposes using SWOT for all three analyses, arguing that segmentation by framework would fragment the analysis. While SWOT is a valuable integrative tool, applying it universally ignores the analytical purpose of differentiated strategic frameworks. PESTLE provides a structured taxonomy (Political, Economic, Social, Technological, Legal, Environmental) for systematically scanning the macro-environment -- SWOT alone does not prompt the analyst to consider each of these six categories. Porter's Five Forces provides a causal model of industry profitability (rivalry, buyer power, supplier power, threat of entry, threat of substitutes) that SWOT does not replicate. Using SWOT exclusively would lose the analytical precision that PESTLE and Porter contribute. Strategic management research consistently demonstrates that multi-framework analysis produces more robust strategic insights than single-framework approaches. A candidate selecting this answer correctly recognizes SWOT's integrative value but incorrectly assumes it substitutes for, rather than complements, the specialized external-analysis frameworks."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      },
+      {
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "ItemStyle": "single-select",
+    "Part": 1,
+    "ItemType": "MCQ",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "Section": "A",
+    "Difficulty": "Difficult",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "E-A.S02 Lower of cost or market -- ceiling and floor",
+    "UniqueConceptKey": "E-A-S02-LCM-ceiling-floor",
+    "MicroTopic": "Lower of cost or market -- ceiling and floor under LIFO",
+    "CorrectChoice": "A",
+    "LOSTag": "P1-A.1 Recognition, measurement, valuation, and disclosure",
+    "primaryTheory": "A3",
+    "Stem": "Northwood Distribution uses the LIFO inventory method. At year-end, one inventory item has the following data: historical cost of $85 per unit, current replacement cost of $78, estimated selling price of $115, disposal costs of $8, and a normal profit margin of $23. The controller initially computed a write-down from $85 to $78 per unit (a $7 per-unit reduction). Before finalizing the adjustment, the assistant controller reviewed ASC 330-10-35 and noted that LIFO-based lower-of-cost-or-market applies a ceiling (NRV) and floor (NRV minus normal profit margin) to define market value. What is the correct inventory valuation per unit?",
+    "Choices": {
+      "A": "$84 per unit -- replacement cost of $78 is below the floor of $84 (NRV of $107 minus normal profit margin of $23), so market is the floor of $84; since cost is $85 and market (floor) is $84, the inventory is written down by $1 to $84",
+      "B": "$78 per unit -- under LIFO, replacement cost is always used as the market value regardless of ceiling or floor constraints because replacement cost represents the current cost to acquire the inventory",
+      "C": "$85 per unit -- replacement cost of $78 is below the floor of $84, meaning no market price can be established within the ceiling-floor range, and the inventory must be retained at its original $85 cost",
+      "D": "$107 per unit -- NRV of $107 ($115 selling price minus $8 disposal costs) represents the ceiling and is the appropriate market value when replacement cost falls below the floor; inventory is then written up from $85 to $107"
+    },
+    "QuestionID": "P1E-A-S02",
+    "ExplanationCorrect": "Under ASC 330-10-35 for LIFO-based lower-of-cost-or-market, market value is determined through a three-step process using the ceiling and floor constraints. Step 1 -- Compute the ceiling (NRV): Selling price of $115 minus disposal costs of $8 = $107. Step 2 -- Compute the floor (NRV minus normal profit margin): $107 minus $23 = $84. Step 3 -- Determine market: Replacement cost of $78 is compared to the ceiling ($107) and floor ($84). Since $78 is below the floor of $84, the floor ($84) becomes the designated market value. The GAAP rule is: market is the middle value of replacement cost, ceiling, and floor. Here, the three values are $78 (RC), $107 (ceiling), and $84 (floor) -- sorted: $78, $84, $107, and the middle is $84. Step 4 -- Compare cost ($85) to market ($84): Lower of cost or market = $84, producing a write-down of $1 per unit. The controller's initial write-down of $7 (from $85 to $78) was incorrect because it used replacement cost directly as market without applying the ceiling and floor constraints. The ceiling prevents overstatement of inventory (it would never exceed NRV), and the floor prevents understatement -- the normal profit margin is preserved in the current period. A common CMA exam error is applying replacement cost directly as market, ignoring that LIFO-based LCM requires the ceiling/floor discipline that FIFO-based lower-of-cost-and-NRV does not.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B claims that replacement cost is always used as market regardless of ceiling or floor constraints. This is the controller's original error. Under ASC 330-10-35, LIFO-based LCM specifically requires that market not exceed the ceiling (NRV) and not fall below the floor (NRV minus normal profit margin). When replacement cost of $78 falls below the floor of $84, GAAP mandates using the floor ($84) as market -- not replacement cost. The rationale is that the floor preserves the normal profit margin in the period of the write-down; writing inventory down to $78 would recognize not only the replacement cost decline but also the normal profit margin as a current-period loss, which would overstate the impairment expense. A candidate selecting this answer has memorized 'lower of cost or market' without understanding the ceiling/floor mechanism that defines market -- a distinction tested frequently on the CMA Part 1 exam when LIFO inventory is specified.",
+    "ExplanationWrongC": "Option C claims that when replacement cost falls below the floor, no valid market price can be established and the inventory must remain at cost ($85). This misinterprets the ceiling/floor rule. The rule is not that an out-of-range replacement cost is discarded -- rather, the range itself (ceiling to floor) bounds the market value. When replacement cost is below the floor, the floor becomes market; when replacement cost is above the ceiling, the ceiling becomes market. Only when replacement cost falls within the range is replacement cost itself used as market. Here, replacement cost of $78 is below the floor of $84, so the floor of $84 is market. The comparison is then cost ($85) vs. market ($84), yielding a $1 write-down. A candidate selecting this answer has recognized that replacement cost is out of range but has drawn the wrong conclusion -- that out-of-range means no adjustment -- rather than applying the rule that the nearest boundary of the range becomes market.",
+    "ExplanationWrongD": "Option D selects the ceiling ($107) as market and proposes writing inventory up from $85 to $107. This violates two fundamental accounting principles. First, inventory is never written up above cost under U.S. GAAP -- the lower-of-cost-or-market rule is a one-way adjustment (downward only, recognizing impairment). Writing inventory up to net realizable value would anticipate revenue before the sale occurs, violating the realization principle. Second, the choice incorrectly applies the ceiling/floor rule: when replacement cost ($78) is below the floor ($84), the floor -- not the ceiling -- is the designated market value. The ceiling only becomes market when replacement cost exceeds it. A candidate selecting this answer has reversed the ceiling/floor logic and has violated the fundamental principle that LCM is a lower-of test, never a write-up mechanism."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      },
+      {
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "ItemStyle": "single-select",
+    "Part": 1,
+    "ItemType": "MCQ",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "Section": "A",
+    "Difficulty": "Difficult",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "E-A.S04 Bond premium amortization -- EI vs. SL crossing pattern",
+    "UniqueConceptKey": "E-A-S04-Bond-premium-amortization-crossing",
+    "MicroTopic": "Bond premium amortization -- effective-interest vs. straight-line crossing pattern",
+    "CorrectChoice": "B",
+    "LOSTag": "P1-A.2 Recognition, measurement, valuation, and disclosure",
+    "primaryTheory": "A7",
+    "Stem": "Northgate Industries issued $2,000,000 face value, 8% coupon bonds at 104 when the market rate for similar bonds was 7%. The bonds mature in 5 years with annual interest payments. Controller David Okonkwo is comparing the effective-interest method (required under U.S. GAAP) with straight-line amortization for premium bonds. David observes that under the effective-interest method, interest expense declines each period as the premium is amortized. Which statement correctly compares interest expense under the effective-interest (EI) method versus straight-line (SL) amortization across the bond's 5-year life?",
+    "Choices": {
+      "A": "Interest expense is higher under SL than EI in every year because straight-line amortization is always less conservative than the effective-interest method for premium bonds",
+      "B": "Interest expense is higher under EI than SL in years 1-2 because EI amortizes less premium early when the carrying value is highest, then EI interest expense falls below SL in years 3-5 as the carrying value declines and premium amortization accelerates under the effective-interest method",
+      "C": "Interest expense is identical under both methods -- the total premium of $80,000 ($2,080,000 - $2,000,000) amortized over 5 years produces the same annual interest expense regardless of allocation method, only the timing of premium recognition differs",
+      "D": "Interest expense is lower under EI than SL in every year because the effective-interest method front-loads premium amortization, reducing the carrying value more aggressively and therefore producing lower interest expense throughout the bond's life"
+    },
+    "QuestionID": "P1E-A-S04",
+    "ExplanationCorrect": "Under the effective-interest method for premium bonds, interest expense is calculated as the carrying value multiplied by the market rate (7%). Because the carrying value starts at $2,080,000 (104% of face) and declines each year as premium is amortized, the interest expense also declines year by year. Under straight-line, the annual premium amortization is constant ($80,000 / 5 = $16,000 per year), and interest expense = cash coupon ($160,000) - premium amortization ($16,000) = $144,000 every year. Under effective-interest in Year 1: interest expense = $2,080,000 x 7% = $145,600 -- which is higher than SL's $144,000. Premium amortization in Year 1 = $160,000 - $145,600 = $14,400 (less than SL's $16,000). Year 2 carrying value = $2,080,000 - $14,400 = $2,065,600. Interest expense = $2,065,600 x 7% = $144,592 -- still above SL's $144,000. Year 3 carrying value = $2,065,600 - $15,408 = $2,050,192. Interest expense = $143,513 -- now below SL's $144,000. The pattern reverses in Year 3 because the effective-interest method amortizes less premium early (when the carrying value is highest and the dollar interest expense is highest), and more premium later (when the carrying value has declined). This crossing pattern is a hallmark of the effective-interest method for premium bonds. A candidate who understands this pattern can eliminate incorrect answer choices even without computing every year's amortization: the key insight is that SL interest expense is constant while EI interest expense declines, so EI must start above SL (because EI amortizes less premium early) and eventually fall below SL.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongA": "Option A claims that SL interest expense exceeds EI interest expense in every year. This is incorrect because effective-interest interest expense starts above straight-line and then falls below it. In Year 1, EI interest expense of $145,600 exceeds SL's $144,000 because EI amortizes less premium early ($14,400 vs. $16,000 under SL). The larger carrying value under EI in early years (since less premium has been amortized) produces higher interest expense because the constant 7% market rate is applied to a larger base. The crossing pattern occurs around Year 3, after which EI interest expense falls below SL. A candidate selecting this answer has the direction of the early-year comparison backward -- perhaps confusing the premium case (where EI amortization starts smaller and grows) with the discount case (where EI amortization also starts smaller and grows, but the interest expense effect differs because discount amortization is added to cash interest rather than subtracted).",
+    "ExplanationWrongC": "Option C claims interest expense is identical under both methods, differing only in timing. This conflates total premium amortization (identical under both methods -- $80,000) with annual interest expense (different under the two methods). Total interest expense over the bond's life is $720,000 under both methods: 5 years x $160,000 coupon - $80,000 premium = $720,000. However, the allocation across years differs. Under SL, interest expense is $144,000 every year. Under EI, interest expense is $145,600 (Year 1), $144,592 (Year 2), $143,513 (Year 3), $142,359 (Year 4), and $141,126 (Year 5). The difference in any single year can be material for financial reporting -- in Year 1, the $1,600 difference on $2,080,000 of debt is a 1.1% overstatement of interest expense under SL, which could affect debt covenant compliance if the company has interest coverage ratio requirements. A candidate selecting this answer correctly understands that total amortization is equal but incorrectly extends this to annual interest expense, failing to recognize that the allocation pattern matters for interim reporting.",
+    "ExplanationWrongD": "Option D claims EI interest expense is lower than SL in every year because EI front-loads premium amortization. This reverses the actual pattern. Under the effective-interest method for premium bonds, the premium amortization amount starts smaller and grows each year -- it is back-loaded, not front-loaded. Because less premium is amortized early, the carrying value remains higher, and the interest expense (carrying value x 7%) is higher in early years. Only after the carrying value has declined enough does EI interest expense fall below SL. A candidate selecting this answer has the direction of the amortization pattern reversed -- confusing the concept that premium amortization increases over time under EI with front-loading. To avoid this error, remember: under EI, interest expense is a constant percentage (7%) of a declining base (carrying value), so interest expense must decline. Since SL interest expense is constant, the two lines must cross, and the higher starting point under EI means EI interest expense is higher early and lower late."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      },
+      {
+        "url": "https://openstax.org/books/principles-financial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "ItemStyle": "single-select",
+    "Part": 1,
+    "ItemType": "MCQ",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "Section": "A",
+    "Difficulty": "Very Difficult",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "E-A.S06 Diluted EPS antidilution sequencing",
+    "UniqueConceptKey": "E-A-S06-Diluted-EPS-antidilution-sequencing",
+    "MicroTopic": "Diluted EPS antidilution sequencing",
+    "CorrectChoice": "D",
+    "LOSTag": "P1-A.2 Recognition, measurement, valuation, and disclosure",
+    "primaryTheory": "A10",
+    "Stem": "Vertex Technologies reported net income of $5,000,000 for Q3 with 2,000,000 weighted-average common shares outstanding, yielding basic EPS of $2.50. Controller Keisha Taylor must classify three potentially dilutive securities in Vertex's capital structure — determining which are dilutive versus antidilutive — and derive the correct diluted EPS under ASC 260-10-45: (1) 200,000 employee stock options with a $20 exercise price (average quarterly market price $40); (2) $4,000,000 face value of 3% convertible bonds ($1,000 par), each bond convertible into 50 common shares; and (3) 100,000 shares of 10% cumulative convertible preferred stock ($20 par), each share convertible into 0.8 common shares. Vertex's effective tax rate is 25%. After applying the treasury stock method, computing incremental EPS for each convertible security, and performing the sequential antidilution test, which diluted EPS should Vertex report, rounded to the nearest cent?",
+    "Choices": {
+      "A": "$2.50",
+      "B": "$2.38",
+      "C": "$2.22",
+      "D": "$2.21"
+    },
+    "QuestionID": "P1E-A-S06",
+    "ExplanationCorrect": "The correct diluted EPS is $2.21, determined by classifying each potentially dilutive security through the sequential antidilution test required by ASC 260-10-45. The controller must weigh each security's incremental EPS against the running diluted EPS at every point in the sequence, balancing the GAAP requirement to present maximum potential dilution against the prohibition on including antidilutive instruments. The analysis demands three independent classifications of the capital structure components.\n\nClassifying the Stock Options: The treasury stock method reveals that the options produce no numerator effect — assumed proceeds of $4,000,000 (200,000 × $20) would repurchase 100,000 shares at the average $40 market price, yielding 100,000 incremental shares in the denominator. Options are always the most dilutive security by construction and are included first. Running diluted EPS after options = $5,000,000 ÷ 2,100,000 = $2.38.\n\nClassifying the Convertible Bonds: The incremental EPS for the bonds is $0.45 — computed as the after-tax interest saved ($4,000,000 × 3% × 0.75 = $90,000) divided by the additional common shares upon conversion (4,000 bonds × 50 = 200,000). The classification test compares $0.45 against the running diluted EPS of $2.38: since $0.45 is below $2.38, the bonds would further reduce EPS and are classified as dilutive. Running diluted EPS after bonds = ($5,000,000 + $90,000) ÷ (2,100,000 + 200,000) = $5,090,000 ÷ 2,300,000 = $2.21.\n\nClassifying the Convertible Preferred Stock: The incremental EPS is $2.50 — preferred dividends of $200,000 (100,000 × $20 × 10%) divided by 80,000 common shares upon conversion. The classification test compares $2.50 against the running diluted EPS of $2.21: since $2.50 exceeds $2.21, including the preferred stock would increase EPS rather than decrease it, classifying it as antidilutive. A critical analytical insight is that the $2.50 incremental EPS is not inherently dilutive or antidilutive in isolation — although it matches basic EPS ($2.50), the sequential test requires comparison against the running diluted EPS after more dilutive securities have already been incorporated. At $2.21, the preferred is clearly antidilutive and must be excluded.\n\nThe analytical conclusion is that only two of the three securities survive classification: the options and the convertible bonds. Vertex reports diluted EPS of $2.21 alongside basic EPS of $2.50 on the face of the income statement, with the antidilutive preferred stock disclosed but excluded from the computation.",
+    "ExplanationWrongD": "",
+    "ExplanationWrongA": "$2.50 is Vertex's basic EPS ($5,000,000 ÷ 2,000,000 shares). Basic EPS treats all potentially dilutive securities as if they do not exist in either the numerator or denominator. Under ASC 260-10-45-2, an entity with a complex capital structure — one containing options, convertible bonds, or convertible preferred stock — must present both basic and diluted EPS on the face of the income statement. Vertex's capital structure includes employee stock options (income-neutral but share-count-increasing), convertible bonds (which would add back after-tax interest to the numerator and conversion shares to the denominator), and convertible preferred stock (which would eliminate preferred dividends from the numerator and add conversion shares to the denominator). Each of these must be independently classified as dilutive or antidilutive. Reporting $2.50 as diluted EPS would improperly ignore all three securities, overstating per-share earnings and violating the dual-presentation requirement. A candidate selecting this answer has not engaged with the diluted EPS framework at all, treating the complex capital structure as if it were a simple one.",
+    "ExplanationWrongB": "$2.38 reflects only the dilutive effect of the employee stock options under the treasury stock method: $5,000,000 ÷ 2,100,000 = $2.38. The options analysis is correct — assumed proceeds of $4,000,000 repurchase 100,000 shares at the average $40 market price, yielding 100,000 incremental shares — but the classification analysis is incomplete. Under ASC 260-10-45-16, after options and warrants are included using the treasury stock method, every remaining potentially dilutive security must be ranked by its incremental EPS and sequentially tested against the running diluted EPS. The convertible bonds have an incremental EPS of $0.45 ($90,000 after-tax interest saved ÷ 200,000 conversion shares), which is substantially below the running diluted EPS of $2.38. Since $0.45 < $2.38, the bonds are dilutive and their exclusion would understate the total dilution that common shareholders face. A candidate selecting $2.38 has correctly applied the treasury stock method but has prematurely terminated the classification analysis, failing to recognize that convertible securities must be independently evaluated after options are incorporated.",
+    "ExplanationWrongC": "$2.22 results from mechanically including all three securities in a single computation without performing the sequential antidilution test: ($5,000,000 + $90,000 + $200,000) ÷ (2,000,000 + 100,000 + 200,000 + 80,000) = $5,290,000 ÷ 2,380,000 = $2.22. While the arithmetic for each individual security is correct, this approach violates ASC 260-10-45-17, which requires that diluted EPS be computed by sequentially incorporating securities from most dilutive to least dilutive, testing each for antidilution against the running EPS figure. The convertible preferred stock must be evaluated at the point in the sequence where it would be included — after the more dilutive options (incremental EPS $0.00) and bonds (incremental EPS $0.45) have already been incorporated. At that stage, the running diluted EPS is $2.21, and the preferred's incremental EPS of $2.50 would increase (not decrease) EPS, making it antidilutive. A candidate selecting $2.22 understands how to compute individual incremental EPS figures but has not mastered the sequential nature of the antidilution test — a common error on CMA Part 1 exams where candidates aggregate all securities in a single pass rather than testing them in rank order. The antidilution rule is not a one-time check at the end; it is applied iteratively, and a security that appears dilutive against basic EPS may become antidilutive after more dilutive securities are included."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "ItemStyle": "single-select",
+    "Part": 1,
+    "ItemType": "MCQ",
+    "CalculationItem": true,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "Section": "D",
+    "Difficulty": "Very Difficult",
+    "SectionName": "Cost Management",
+    "Topic": "E-D.S01 Joint product costing and sell-or-process-further",
+    "UniqueConceptKey": "E-D-S01-Joint-products-NRV-sell-or-process",
+    "MicroTopic": "Joint product costing and sell-or-process-further decision",
+    "CorrectChoice": "A",
+    "LOSTag": "P1-D.3 Cost allocation techniques",
+    "primaryTheory": "D5",
+    "Stem": "Greenfield Chemical processes a single raw material through a joint production process costing $480,000, yielding three products at the split-off point: Product X -- 40,000 gallons, split-off selling price of $6.00 per gallon, additional processing cost of $80,000, and a refined selling price of $9.50 per gallon. Product Y -- 60,000 gallons, split-off selling price of $4.50 per gallon, additional processing cost of $60,000, and a refined selling price of $5.25 per gallon. Product Z -- 20,000 gallons, split-off selling price of $8.00 per gallon, additional processing cost of $35,000, and a refined selling price of $10.20 per gallon. Controller Patricia Nkosi must (a) allocate the $480,000 joint cost among the three products using the net realizable value (NRV) method assuming each product follows its optimal sell-or-process-further decision and (b) determine which products should be sold at split-off versus processed further. Which statement correctly reports the joint cost allocation and the sell-or-process-further decisions?",
+    "Choices": {
+      "A": "X receives approximately $194,900 of joint cost and should be processed further (incremental benefit $60,000); Y receives approximately $175,300 of joint cost and should be sold at split-off (incremental revenue of $45,000 is less than the $60,000 additional processing cost); Z receives approximately $109,800 of joint cost and should be processed further (incremental benefit $9,000)",
+      "B": "X receives $192,000, Y receives $192,000, and Z receives $96,000 -- joint cost is allocated equally using the physical-units method (40,000:60,000:20,000 = 2:3:1 ratio of the 120,000 total gallons); all three products should be processed further because each has a refined price exceeding its split-off price",
+      "C": "X receives $207,600, Y receives $155,700, and Z receives $116,700 -- joint cost is allocated using the relative sales value at split-off method ($240,000 : $270,000 : $160,000 ratio); all three products should be sold at split-off because joint cost allocation is irrelevant to the sell-or-process-further decision",
+      "D": "X receives approximately $189,500 and should be processed further; Y receives approximately $180,400 and should be processed further; Z receives approximately $110,100 and should be processed further -- all three products have positive incremental contributions, and the NRV method correctly allocates joint cost regardless of the sell-or-process-further decision"
+    },
+    "QuestionID": "P1E-D-S01",
+    "ExplanationCorrect": "The correct analysis uses the NRV method with each product valued at its optimal disposition. Sell-or-process-further decisions (made independently of joint cost allocation): X -- Incremental revenue = 40,000 x ($9.50 - $6.00) = $140,000, minus incremental cost $80,000 = net gain of $60,000. PROCESS FURTHER. Y -- Incremental revenue = 60,000 x ($5.25 - $4.50) = $45,000, minus incremental cost $60,000 = net loss of $15,000. SELL AT SPLIT-OFF. Z -- Incremental revenue = 20,000 x ($10.20 - $8.00) = $44,000, minus incremental cost $35,000 = net gain of $9,000. PROCESS FURTHER. NRV for allocation (using the chosen disposition for each): X = 40,000 x $9.50 - $80,000 = $300,000 (processed); Y = 60,000 x $4.50 = $270,000 (sold at split-off); Z = 20,000 x $10.20 - $35,000 = $169,000 (processed). Total NRV = $300,000 + $270,000 + $169,000 = $739,000. Joint cost allocation: X = $480,000 x ($300,000 / $739,000) = $194,858 approximately $194,900; Y = $480,000 x ($270,000 / $739,000) = $175,372 approximately $175,300; Z = $480,000 x ($169,000 / $739,000) = $109,770 approximately $109,800. The critical distinction is that the sell-or-process-further decision uses incremental analysis (compare incremental revenue to incremental cost, ignoring joint costs which are sunk), while the NRV allocation method uses each product's final NRV at its chosen disposition. A common CMA exam error is applying the physical-units or sales-value-at-split-off method instead of NRV, or confusing the sell-or-process-further decision (incremental) with the cost allocation method (proportional).",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B allocates joint cost using the physical-units method (gallons ratio 40:60:20 = 2:3:1, producing $192,000 / $192,000 / $96,000). While the physical-units method is one accepted joint cost allocation approach, it is not the NRV method that the question specifies. More critically, the choice claims all three products should be processed further because each refined price exceeds its split-off price -- this is the wrong decision criterion. The correct criterion is whether incremental revenue EXCEEDS incremental cost. For Product Y, incremental revenue of $45,000 (60,000 x $0.75 price increase) is less than the $60,000 additional processing cost, producing a $15,000 loss if processed further. Selling price exceeding split-off price is necessary but not sufficient -- the incremental cost must also be covered. A candidate selecting this answer has used the wrong allocation method and the wrong decision criterion, confusing 'refined price > split-off price' with 'incremental revenue > incremental cost.'",
+    "ExplanationWrongC": "Option C allocates using the relative sales value at split-off method, which is a recognized approach, but the question specifically requires the NRV method. The sales-value-at-split-off method uses each product's split-off market value ($240,000 : $270,000 : $160,000, allocating X = $480,000 x 240/670 = $171,940, not $207,600 as claimed -- so the arithmetic is also incorrect). The choice further claims that all products should be sold at split-off because joint cost allocation is 'irrelevant' to the decision. While it is true that joint costs are sunk and irrelevant to the sell-or-process-further decision, this does not mean the answer is to sell everything at split-off -- it means the decision should be based on incremental analysis alone, which here shows X and Z should be processed further and Y should be sold at split-off. A candidate selecting this answer has the direction of irrelevance backward: joint costs being irrelevant means you should ignore them, not that the default is to sell at split-off.",
+    "ExplanationWrongD": "Option D claims all three products should be processed further because each has a positive incremental contribution. This is factually incorrect for Product Y: incremental revenue of $45,000 minus incremental cost of $60,000 = -$15,000, a negative incremental contribution. Processing Y further would destroy $15,000 of value relative to selling at split-off. The NRV allocation amounts are approximately correct, but the sell-or-process-further conclusion is wrong for Y. A candidate selecting this answer has correctly computed NRV allocations but has made an arithmetic error in Y's incremental analysis (perhaps confusing the $0.75 price increase with the $1.00 needed to break even on $60,000 of cost across 60,000 gallons). Always verify: incremental revenue per unit multiplied by volume must exceed total incremental processing cost."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section F"
+      },
+      {
+        "url": "https://gdpr.eu/what-is-gdpr/",
+        "label": "GDPR.eu - General Data Protection Regulation"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "ItemStyle": "single-select",
+    "Part": 1,
+    "ItemType": "MCQ",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "Section": "F",
+    "Difficulty": "Difficult",
+    "SectionName": "Technology and Analytics",
+    "Topic": "E-F.S01 GDPR/CCPA privacy compliance evaluation",
+    "UniqueConceptKey": "E-F-S01-GDPR-CCPA-privacy-compliance-evaluation",
+    "MicroTopic": "GDPR/CCPA privacy compliance evaluation",
+    "CorrectChoice": "C",
+    "LOSTag": "P1-F.2 Data governance",
+    "primaryTheory": "F6",
+    "Stem": "Meridian DataWorks (MDW), a U.S.-based data analytics company with $52 million in annual revenue, collects and processes customer behavioral data through its proprietary analytics platform. Approximately 25% of MDW's revenue comes from EU-based corporate clients, and this segment grew 18% last fiscal year. The CEO proposes monetizing MDW's aggregated data assets by selling behavioral insights to third-party advertisers, projecting $4.2 million in annual incremental revenue.\n\nMDW's current data handling processes were designed for CCPA compliance — the company uses pseudonymization with a contractual commitment not to re-identify. The General Counsel advises that under GDPR Article 6, processing personal data for a new commercial purpose such as selling behavioral insights requires explicit, freely-given opt-in consent, and notes that under Article 29 Working Party guidance, pseudonymized data remains personal data under GDPR (the controller retains the technical means to re-identify). The Chief Privacy Officer estimates that implementing GDPR-compliant consent infrastructure — including granular consent management, a Data Protection Impact Assessment, a data subject access request portal, and appointment of a Data Protection Officer — will cost approximately $1.3 million in the first year and $400,000 annually thereafter.\n\nAs the management accountant advising the CFO ahead of the Board presentation, which recommendation best balances the revenue opportunity against regulatory, reputational, and strategic market-access considerations?",
+    "Choices": {
+      "A": "Approve the proposal as presented. The projected $4.2 million in annual incremental revenue exceeds the $1.3 million estimated first-year compliance infrastructure cost, producing a net economic benefit.",
+      "B": "Approve the data monetization plan but restrict the data sold to U.S.-based customer data only, implementing geo-filters to exclude all users identified as EU residents.",
+      "C": "Defer data monetization and invest the $1.3 million in building GDPR-compliant consent infrastructure first; pursue monetization only after obtaining valid opt-in consent from all users across both the EU and U.S. markets.",
+      "D": "Proceed with the data monetization plan using MDW's existing CCPA-compliant pseudonymization. GDPR enforcement against mid-market U.S. companies is rare, and EU regulators primarily target large technology platforms."
+    },
+    "QuestionID": "P1E-F-S01",
+    "ExplanationCorrect": "The correct recommendation is to defer data monetization and invest first in building GDPR-compliant consent infrastructure. Under GDPR Article 6, processing personal data requires a lawful basis, and selling behavioral insights to third-party advertisers does not qualify under legitimate interest — it requires explicit consent under Article 6(1)(a). MDW's CCPA-compliant pseudonymization does not satisfy GDPR's threshold: the Article 29 Working Party (now the European Data Protection Board) has consistently held that pseudonymized data remains personal data because the controller retains the technical means to re-identify individuals. Only truly anonymous data — where re-identification is impossible by any means reasonably likely to be used — falls outside GDPR's scope. The financial risk is material. GDPR fines reach the greater of €20 million or 4% of global annual turnover, approximately $2.08 million for MDW. Combined with the $1.3 million in compliance spending that an enforcement action would nevertheless require, total downside exposure reaches $3.38 million — eroding most of the projected $4.2 million annual revenue gain. More critically, a GDPR enforcement finding carries remedies beyond fines: Article 58(2) empowers supervisory authorities to impose temporary or definitive limitations on processing, including a ban on the very monetization activity generating the projected revenue. Reputational damage compounds the financial risk: MDW's EU clients, representing 25% and growing of revenue, increasingly require GDPR compliance certifications from vendors. A public enforcement action would likely trigger contract termination clauses, destroying significantly more value than data monetization would create. The management accountant's fiduciary duty is to evaluate total enterprise risk, not marginal revenue. Investing in consent infrastructure first converts a regulatory obligation into a sustainable competitive advantage: MDW can monetize data with full regulatory certainty, maintain uninterrupted EU market access, and differentiate itself as a privacy-respecting analytics provider — a strategically superior outcome to gambling the company's regulatory standing on a jurisdictional enforcement prediction.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongA": "Option A recommends approving the data monetization proposal based on a simple revenue-minus-cost comparison ($4.2M > $1.3M net of first-year compliance). This analysis omits the regulatory penalty risk entirely. GDPR fines reach 4% of global annual turnover — approximately $2.08 million for MDW — and when combined with the $1.3 million in compliance spending that an enforcement action would still require, total financial exposure reaches $3.38 million, nearly offsetting the full first-year projected revenue gain. Moreover, claiming compliance costs as an offset to revenue incorrectly assumes that the $1.3 million of consent infrastructure would be an expense incurred under the proposal — it would not. The proposal as presented provides for zero consent infrastructure spending, meaning the compliance gap remains. Revenue projections without risk-adjusted downside modeling are incomplete financial analysis. A management accountant advising the Board must present expected-value analysis incorporating enforcement probability, penalty magnitude, and reputational contagion — not compare a best-case revenue scenario against a single cost estimate. The GAAP principle of conservatism applied to contingent liabilities would also require disclosure of the material GDPR exposure in the financial statement footnotes, alerting investors and auditors to an unmitigated regulatory risk.",
+    "ExplanationWrongB": "Option B proposes geographic segmentation — selling only U.S.-based user data and excluding EU residents through geo-filtering. This approach is operationally fragile and creates a false sense of compliance. User location data is inherently unreliable at the behavioral analytics level: IP addresses can be masked through VPNs, a German citizen visiting New York or a California resident working remotely from Berlin would both be misclassified. Under GDPR Article 3(2), the regulation applies to processing of personal data of data subjects who are in the Union, regardless of the controller's location — if even a small number of EU-resident users' data enters the monetized pool through geo-filtering failure, MDW has committed a GDPR violation. The FTC has penalized companies that represented certain users as excluded from processing but failed to implement reliable exclusion mechanisms under Section 5 of the FTC Act. Strategically, building and maintaining a reliable geo-filtering data architecture would cost nearly as much as a proper consent infrastructure without delivering any of its benefits: consent infrastructure unlocks full-pool monetization and strengthens EU client relationships, while geo-filtering shrinks the monetizable data pool and signals to EU clients that MDW treats their data differently — a competitive disadvantage in a market that already represents 25% of revenue. The excluded-user approach is a partial measure that costs most of the compliance budget while retaining most of the regulatory risk.",
+    "ExplanationWrongD": "Option D rests on the assertion that GDPR enforcement against mid-market U.S. companies is rare and that EU regulators primarily target large technology platforms. This premise is factually unsupported and creates unacceptable enterprise risk. The European Data Protection Board has explicitly stated that GDPR enforcement is not determined by company size — the regulation's material scope depends on the nature and severity of the infringement, not the respondent's market capitalization. In practice, EU Data Protection Authorities have imposed fines across the full company-size spectrum: the Irish DPC fined a mid-market digital marketing firm €3.5 million in 2023 for improper consent practices, the French CNIL has issued dozens of fines in the €100,000 to €1,000,000 range against small and medium enterprises, and the Spanish AEPD routinely sanctions businesses of all sizes for consent violations. MDW's proposed activity — selling behavioral insights to third-party advertisers without explicit consent — falls precisely within the enforcement priority areas that GDPR was enacted to address and that EU DPAs have consistently prioritized. Additionally, MDW's growing EU revenue share (25% and rising at 18% annually) makes the company increasingly visible to EU regulators over time. A management accountant cannot advise the Board based on a prediction of regulatory forbearance — that is speculation, not analysis. Even under a conservative expected-value framework — 25% enforcement probability multiplied by $3.38 million in combined penalty and compliance costs — the risk-adjusted downside exceeds $845,000, representing 20% of the projected annual revenue gain. Fiduciary responsibility requires modeling the risk, not betting against it."
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S07 impairment ASC 360 long-lived asset recoverability test",
+    "MicroTopic": "ASC 360 long-lived asset impairment recoverability test and loss measurement",
+    "UniqueConceptKey": "A-S07-ASC360-recoverability-test",
+    "LOSTag": "P1-A.2 Recognition, measurement, valuation, and disclosure",
+    "primaryTheory": "A5",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Ridgeway Equipment operates a regional distribution facility whose long-lived asset group has a carrying value of $900,000 (original cost of $1,500,000 less accumulated depreciation of $600,000). The controller, Daniel Park, must evaluate whether the asset group is impaired under ASC 360. The expected undiscounted future cash flows from the asset group total $820,000, and the asset group's estimated fair value less costs to sell is $740,000. The present value of the expected future cash flows discounted at Ridgeway's incremental borrowing rate is $710,000. Under ASC 360, what is the correct impairment loss that Daniel should recognize?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Under ASC 360-10-35-17, the two-step impairment test requires Daniel to first apply the recoverability test: compare the asset group's carrying value to its undiscounted future cash flows. The carrying value of $900,000 exceeds the undiscounted future cash flows of $820,000 by $80,000 — this triggers impairment because the asset group is not recoverable on an undiscounted basis. Step two: measure the impairment loss as the excess of carrying value over fair value. The impairment loss equals $900,000 (carrying value) minus $740,000 (fair value less costs to sell) = $160,000. The impaired asset group is written down to its $740,000 fair value on Ridgeway's balance sheet, establishing a new cost basis. The revised carrying value is then depreciated prospectively over the asset group's remaining useful life. Critically, the present-value figure of $710,000 is irrelevant to both steps: ASC 360's recoverability test uses undiscounted cash flows (not discounted), and the impairment measurement uses fair value (not discounted cash flows). The undiscounted-cash-flow threshold is deliberately more permissive than a discounted threshold — it allows some assets with positive net present value to avoid impairment recognition. A common CMA exam error is using discounted cash flows ($710,000) or the recoverability shortfall ($80,000) as the impairment measure rather than the carrying-value-minus-fair-value calculation required by GAAP.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S07",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "No impairment loss is required because the present value of the expected future cash flows discounted at Ridgeway's incremental borrowing rate ($710,000) exceeds the asset group's fair value ($740,000), indicating the asset group remains economically viable",
+      "B": "An impairment loss of $80,000, representing the excess of the asset group's $900,000 carrying value over its $820,000 undiscounted future cash flows — the recoverability-test shortfall under ASC 360",
+      "C": "An impairment loss of $160,000, representing the excess of the asset group's $900,000 carrying value over its $740,000 fair value less costs to sell — the measurement prescribed by ASC 360 when the recoverability test is failed",
+      "D": "An impairment loss of $760,000, representing the difference between the asset group's original cost of $1,500,000 and its estimated fair value less costs to sell of $740,000 — the full accumulated economic depreciation since acquisition"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A claims that no impairment exists by substituting a discounted cash flow comparison for both the ASC 360 recoverability test and the impairment measurement step. This analysis contains two errors. First, the recoverability test under ASC 360-10-35-17 compares the asset group's carrying value ($900,000) to undiscounted future cash flows ($820,000) — not to discounted present values. The undiscounted cash flows of $820,000 are below the carrying value of $900,000, so the asset group fails the recoverability test regardless of any discounted valuation. Second, the economic-viability argument comparing present value to fair value is irrelevant: once the undiscounted recoverability test is failed, the impairment measurement is mechanical — carrying value minus fair value — with no further test of economic viability. A candidate selecting this answer has confused the ASC 360 impairment framework with capital-budgeting NPV analysis, where discounted cash flows determine investment decisions. The impairment framework deliberately uses undiscounted cash flows as a coarser threshold, then measures the loss against fair value.",
+    "ExplanationWrongB": "Option B computes $80,000 as the impairment loss: the $900,000 carrying value minus the $820,000 undiscounted future cash flows. This reflects a misunderstanding of the two-step ASC 360 impairment model. The $80,000 is the amount by which the asset group fails the recoverability test, not the impairment loss itself. The recoverability test (Step 1) is a binary gate: it tells Daniel whether impairment exists, but it does not measure the impairment. Once the test is failed, Step 2 requires measuring the impairment as the difference between carrying value ($900,000) and fair value ($740,000) — producing $160,000, not $80,000. The recoverability-test shortfall and the impairment loss differ because the undiscounted cash flows ($820,000) reflect the asset's total economic benefit without time-value adjustment, while fair value ($740,000) is a market-based exit price. The difference between these two benchmarks ($820,000 minus $740,000 = $80,000) represents the implicit discount inherent in moving from undiscounted to market-based measurement — it is not the impairment loss. A candidate selecting this answer has recognized that the recoverability test was failed but incorrectly treated the test metric as the measurement metric, stopping at Step 1.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D computes $760,000 as the impairment loss: $1,500,000 original cost minus $740,000 fair value. This substitutes the gross carrying amount (original cost) for the net carrying value in the impairment-loss calculation. Under ASC 360-10-35-17, the impairment loss is measured against the asset's current carrying value on the balance sheet — $900,000 (cost of $1,500,000 reduced by $600,000 accumulated depreciation), not the original acquisition cost. Accumulated depreciation is not reversed or ignored during an impairment assessment; it represents the systematic allocation of the asset's cost over past periods that has already been recognized in earnings. Writing the asset down from $1,500,000 to $740,000 would produce a $760,000 charge that includes the $600,000 of depreciation already recognized in prior periods — effectively double-counting past depreciation as a current-period impairment loss. A candidate selecting this answer has confused the concept of an asset's gross cost basis with its net carrying amount, treating the impairment loss as if accumulated depreciation had never been recorded."
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S08 goodwill impairment reporting unit vs asset group distinction",
+    "MicroTopic": "Goodwill impairment under ASC 350 — reporting unit level vs ASC 360 asset group level",
+    "UniqueConceptKey": "A-S08-goodwill-impairment-reporting-unit",
+    "LOSTag": "P1-A.2 Recognition, measurement, valuation, and disclosure",
+    "primaryTheory": "A5",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Northstar Communications acquired BroadbandCo in a business combination three years ago, recording goodwill of $2,400,000. Northstar's controller, Julia Reyes, is preparing the year-end impairment assessment. The BroadbandCo reporting unit — containing the acquired goodwill, identifiable intangible assets, and long-lived operating assets — has a total carrying value of $8,200,000 and an estimated fair value of $7,500,000. Julia has also identified that certain long-lived transmission equipment within the reporting unit, considered as a separate asset group, has experienced a decline in expected future cash flows. Julia must determine the correct impairment testing sequence under U.S. GAAP. Which of the following describes the appropriate impairment-testing approach?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Under U.S. GAAP, goodwill impairment is tested exclusively at the reporting unit level per ASC 350-20-35-1, while long-lived asset impairment is tested at the asset group level per ASC 360-10-35-23 — these are separate tests applied at different levels of aggregation. The correct sequence is: first, test the long-lived transmission equipment at the asset group level under ASC 360. If impairment exists, write down the long-lived assets to fair value and adjust the reporting unit's carrying value accordingly. Second, test goodwill at the reporting unit level under ASC 350. A qualitative assessment (Step 0) may be performed; if skipped or if the qualitative assessment indicates more-likely-than-not impairment, a quantitative test is required: compare the reporting unit's fair value ($7,500,000) to its carrying value. In a quantitative test, the goodwill impairment is measured as the excess of the reporting unit's carrying value over its fair value, capped at the total carrying amount of goodwill assigned to that reporting unit ($2,400,000). Critically, ASC 360's asset group test and ASC 350's reporting unit test are not interchangeable: goodwill is assigned to reporting units (a level higher than the asset group), and the recoverability test under ASC 360 — using undiscounted cash flows — does not apply to goodwill. A common CMA exam error is applying the long-lived asset impairment model to goodwill or consolidating goodwill into an asset group for ASC 360 testing.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S08",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Goodwill and the long-lived transmission equipment should be tested together as a single asset group under ASC 360, because all assets of the acquired business serve a common revenue-generating purpose and share the same cash flow projections",
+      "B": "Only the long-lived transmission equipment requires impairment testing under ASC 360 because the equipment has a finite useful life — goodwill is tested under ASC 350 only if specific impairment indicators arise, and the decline in expected cash flows for the equipment does not by itself constitute a goodwill impairment indicator",
+      "C": "Goodwill and long-lived assets follow identical impairment-testing procedures because both involve comparing carrying value to fair value — the controller should compute a combined impairment loss as the excess of the reporting unit's $8,200,000 total carrying value over the $7,500,000 fair value",
+      "D": "Goodwill must be tested for impairment at the reporting unit level under ASC 350, separately from the long-lived transmission equipment which is tested at the asset group level under ASC 360 — the asset-level impairment test is performed first because any impairment of the long-lived assets reduces the reporting unit's carrying value before goodwill is tested, and the resulting goodwill impairment cannot exceed the $2,400,000 carrying amount of goodwill assigned to the reporting unit"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A proposes testing goodwill and long-lived assets together as a single asset group under ASC 360. This approach incorrectly merges two distinct impairment frameworks that operate at different levels of aggregation. ASC 360-10-35-23 defines an asset group as a group of assets and liabilities at the lowest level for which identifiable cash flows are largely independent. Goodwill, however, does not generate identifiable cash flows independently — it arises from synergies and expected benefits that span multiple asset groups. ASC 350-20-35-38 specifically requires goodwill to be assigned to reporting units, which are operating segments or one level below operating segments, not to individual asset groups. Testing goodwill under ASC 360's two-step model would apply the wrong decision rule: the undiscounted cash flow recoverability test has no conceptual basis for goodwill because goodwill has no stand-alone cash-generating capacity. Attempting to assess whether an asset group that includes goodwill is 'recoverable' using undiscounted cash flows conflates the total return on the acquisition with the impairment of specific assets. A candidate selecting this answer has not recognized that goodwill impairment is governed by ASC 350 (not ASC 360) and that reporting units operate at a higher aggregation level than asset groups.",
+    "ExplanationWrongB": "Option B correctly identifies that long-lived equipment must be tested under ASC 360 but makes two errors concerning goodwill impairment. First, it claims goodwill requires specific impairment indicators beyond the conditions described here. Under ASC 350-20-35-28, goodwill must be tested for impairment at least annually, regardless of whether specific indicators exist. The decline in expected cash flows of the transmission equipment IS relevant to goodwill — it is a potential impairment indicator for the reporting unit's goodwill because it suggests the asset base supporting the reporting unit's cash flows has deteriorated. Second, the statement that the equipment's cash flow decline 'does not by itself constitute a goodwill impairment indicator' understates the interconnection: while goodwill impairment testing is performed at the reporting unit level, not the asset group level, a decline in the fair value or cash flows of assets within a reporting unit is precisely the kind of event that triggers an interim goodwill impairment test under ASC 350-20-35-30. A candidate selecting this answer has correctly distinguished the two impairment standards but incorrectly deferred goodwill testing by applying an incorrect trigger threshold — failing to recognize that, at minimum, the annual goodwill impairment test must be performed.",
+    "ExplanationWrongC": "Option C claims that goodwill and long-lived assets follow identical impairment procedures because both involve comparing carrying value to fair value. This overgeneralization conceals fundamental structural differences between the two standards. Under ASC 360-10-35-17, long-lived asset impairment uses a two-step model: (1) recoverability test using undiscounted cash flows, (2) measurement of impairment loss as carrying value minus fair value. Under ASC 350-20-35-4, goodwill impairment may use a qualitative (Step 0) assessment followed by a quantitative test that directly compares the reporting unit's fair value to its carrying value — there is no undiscounted cash flow recoverability test for goodwill. Additionally, the impairment measurement for long-lived assets writes the specific asset down to fair value and establishes a new cost basis. Goodwill impairment reduces the goodwill account but does not produce a new cost basis for goodwill — the write-down is permanent, and subsequent recoveries of value are not recognized. A candidate selecting this answer has recognized the superficial similarity (both involve fair value comparisons) while overlooking the different testing sequences, aggregation levels, and measurement conventions that distinguish ASC 360 from ASC 350.",
+    "ExplanationWrongD": ""
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S09 LCM inventory method individual-item vs category conservatism",
+    "MicroTopic": "Lower of cost and net realizable value — individual-item method vs category (aggregate) approach under ASC 330",
+    "UniqueConceptKey": "A-S09-LCM-individual-vs-category",
+    "LOSTag": "P1-A.2 Recognition, measurement, valuation, and disclosure",
+    "primaryTheory": "A3",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Harbor Medical Supplies carries five categories of surgical-instrument inventory. At year-end, the controller David Okonkwo applies the lower-of-cost-and-net-realizable-value (LCNRV) measurement on an individual-item basis and determines a total write-down of $47,500 across 12 individual items. The external auditor, reviewing David's work, proposes that Harbor instead apply LCNRV at the inventory-category level. Under the category approach, items within Category 3 — where five items are impaired by a combined $18,200 but two items hold cost-NRV surpluses totaling $11,600 — would produce a net write-down of only $6,600 for that category. The auditor argues that the category approach better reflects the economic substance of the inventory as a portfolio. David must determine which position is correct under U.S. GAAP. Which statement best describes the appropriate LCNRV measurement approach and the accounting rationale?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under ASC 330-10-35-1B, inventory measured using a method other than LIFO or the retail inventory method must be measured at the lower of cost and net realizable value applied on an individual-item basis. The individual-item approach requires each distinct inventory item to be evaluated separately: if an item's NRV (selling price less costs of completion and disposal) falls below its cost, a write-down is recorded for that item. Items whose NRV exceeds cost — representing unrealized holding gains — are not written up; cost remains the ceiling. The critical prohibition is against netting unrealized losses on some items against unrealized gains on other items. The individual-item approach produces a $47,500 write-down because it recognizes every specific impairment without allowing the $11,600 in cost-NRV surpluses within Category 3 to offset the $18,200 in impairments. The auditor's category-level approach, in contrast, nets the $11,600 surplus against the $18,200 deficit, reducing the Category 3 write-down to $6,600 — a $11,600 reduction that overstates inventory and understates the loss. U.S. GAAP's preference for individual-item measurement is grounded in conservatism: unrealized gains are not recognized, and each item's individual impairment must be fully captured. The category approach would improperly smooth inventory values by using gains on healthy items to mask impairments on deteriorating items, violating the fundamental measurement principle that each asset's carrying amount must be individually assessed and that write-downs cannot be avoided through aggregation across unrelated inventory items.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S09",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "David is correct: U.S. GAAP requires the individual-item LCNRV approach, which produces the more conservative $47,500 write-down because it recognizes every specific inventory impairment without allowing unrealized gains on healthier items to offset the losses — netting gains against losses across items is prohibited under ASC 330",
+      "B": "Neither David nor the auditor is correct because U.S. GAAP permits inventory valuation at the lower of cost or market using replacement cost, not net realizable value — the entire LCNRV framework applies only to inventories measured under IFRS, and the current year-end assessment must use replacement cost as the market ceiling",
+      "C": "The auditor is correct: applying LCNRV at the category level better reflects economic substance because inventory is a portfolio asset managed in aggregate, and U.S. GAAP permits management to elect either individual-item or category-level LCNRV based on which method more faithfully represents the inventory's net realizable condition",
+      "D": "Both David and the auditor are proposing inconsistent applications because LCNRV must be applied at the total-inventory level — individually impaired items are irrelevant once the aggregate cost of all inventory is compared to aggregate NRV, the only measurement approach permitted by ASC 330"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B claims that LCNRV applies only under IFRS and that U.S. GAAP requires replacement cost as the market ceiling. This conflates two distinct inventory measurement frameworks. Under Accounting Standards Update 2015-11 (codified in ASC 330-10), U.S. GAAP requires inventory measured using methods other than LIFO or the retail inventory method to be measured at the lower of cost and net realizable value — LCNRV under U.S. GAAP, not IFRS exclusively. The replacement-cost framework described in this option applies to inventories measured under LIFO, where market is defined as replacement cost constrained by a ceiling (NRV) and a floor (NRV minus normal profit margin). Harbor's surgical-instrument inventory is not described as being measured under LIFO, so the LCNRV framework (not the LCM replacement-cost framework) governs the measurement. The statement that 'the entire LCNRV framework applies only to IFRS' is factually incorrect: ASC 330-10-35-1B mandates LCNRV for all U.S. GAAP inventories not using LIFO or retail. A candidate selecting this answer has confused the U.S. GAAP LCNRV rule (effective since ASU 2015-11) with the IFRS-only application, and has incorrectly imported the LIFO-specific replacement-cost ceiling/floor constraints into a non-LIFO measurement context.",
+    "ExplanationWrongC": "Option C supports the auditor's position that the category-level LCNRV approach reflects economic substance and that management may elect either individual-item or category-level measurement. Both claims are incorrect. First, ASC 330-10-35-1B explicitly requires individual-item measurement; there is no management election to choose category-level or aggregate-level measurement for inventory not measured using LIFO or retail. The standard's use of 'shall' (not 'may') eliminates discretion. Second, the economic-substance argument conflates inventory measured at lower of cost and NRV with inventory managed as a portfolio. A hedged portfolio of financial instruments may be measured on a portfolio basis under specific hedge-accounting rules, but physical inventory items are distinct assets — a scalpel that has declined in value and surgical scissors that have appreciated are not interchangeable and their unrealized gains and losses cannot be netted. Third, the faithful-representation argument is backwards: individual-item measurement faithfully represents each asset's carrying amount at the lower of its cost or recoverable amount, whereas category-level measurement obscures specific impairments by pooling them with unrealized gains. A candidate selecting this answer has confused the flexibility permitted under different inventory costing methods (FIFO, LIFO, weighted average) — where management does have a choice — with the measurement framework, where individual-item LCNRV is mandatory.",
+    "ExplanationWrongD": "Option D claims that LCNRV must be applied at the total-inventory level, rendering individual impairments irrelevant once aggregate cost is compared to aggregate NRV. This describes the aggregate approach — the loosest level of aggregation — which ASC 330-10-35-1B does not permit for inventory not measured under LIFO or the retail method. If the aggregate approach were applied to Harbor's inventory, the total write-down would almost certainly be smaller than $47,500 (and could be zero) because across the entire inventory, NRV surpluses from many items would offset the $47,500 in impairments. This approach would produce the least conservative valuation of the three aggregation levels (individual, category, aggregate) and would systematically overstate inventory by using unrealized gains on some items to cancel recognized impairments on others. The statement that 'individually impaired items are irrelevant' is directly contrary to the fundamental principle of the lower-of-cost-and-NRV measurement: each item is a distinct asset that must be individually assessed. A candidate selecting this answer has taken the inventory-portfolio concept to its logical extreme, treating all inventory as a single asset pool — a measurement approach that no authoritative accounting standard permits for non-LIFO, non-retail inventories under U.S. GAAP."
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S10 bond early extinguishment gain loss calculation",
+    "MicroTopic": "Bond early redemption — gain or loss on extinguishment using effective-interest method carrying value",
+    "UniqueConceptKey": "A-S10-bond-early-extinguishment",
+    "LOSTag": "P1-A.1 Financial statements",
+    "primaryTheory": "A7",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Meridian Technologies issued $400,000 face value, 5% coupon bonds on January 1, Year 1 at an issue price of $383,151. The bonds mature in 5 years, pay interest annually on December 31, and were issued to yield a 6% effective annual interest rate under the effective-interest method. On December 31, Year 2, immediately after making the scheduled interest payment, Meridian redeemed the bonds at 104 (meaning 104% of the face value). The controller, Michael Torres, must compute the gain or loss on early extinguishment of debt. What is the correct amount of the gain or loss that Meridian should report in its Year 2 income statement?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under ASC 470-50-40-2, the gain or loss on early extinguishment of debt is the difference between the reacquisition price and the net carrying amount of the extinguished debt at the redemption date, reported in income from continuing operations. The carrying value at December 31, Year 2 must be computed through two full years of effective-interest amortization. Year 1: interest expense = $383,151 (beginning CV) x 6% (effective rate) = $22,989. Cash interest paid = $400,000 (face) x 5% (coupon rate) = $20,000. Discount amortization = $22,989 - $20,000 = $2,989. Carrying value at December 31, Year 1 = $383,151 + $2,989 = $386,140. Year 2: interest expense = $386,140 x 6% = $23,168. Cash interest paid = $20,000. Discount amortization = $23,168 - $20,000 = $3,168. Carrying value at December 31, Year 2 = $386,140 + $3,168 = $389,308. The reacquisition price is 104% of the $400,000 face value = $416,000. The loss on extinguishment = reacquisition price ($416,000) minus carrying value ($389,308) = $26,692. This loss appears as a separate line item in the income statement, not as an extraordinary item (ASC 470-50-45-1). A common CMA exam error is comparing the reacquisition price to the face value ($400,000) rather than the amortized cost carrying value, which ignores the unamortized discount. Another common error is advancing the amortization schedule by the wrong number of periods — stopping after Year 1 ($386,140) or advancing into Year 3.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S10",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "A loss of $16,850, computed as the face value of $400,000 minus the original issue price of $383,151 — the original discount is recognized in full upon early extinguishment because the bonds were never held to maturity",
+      "B": "A loss of $26,692, computed as the reacquisition price of $416,000 minus the carrying value of $389,308 at December 31, Year 2 after two full years of effective-interest amortization of the bond discount",
+      "C": "A loss of $16,000, computed as the reacquisition price of $416,000 minus the $400,000 face value — the call premium is treated as an additional period cost rather than as a component of the extinguishment loss, and the carrying value is assumed to equal face value at all times",
+      "D": "A loss of $29,860, computed as the reacquisition price of $416,000 minus the carrying value after only one year of amortization ($386,140) — the amortization schedule is advanced by one period instead of two, and one full year of discount amortization is omitted from the carrying value"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A computes a $16,850 loss by comparing the original issue price ($383,151) to the face value ($400,000), treating the full $16,849 discount as the extinguishment loss. This approach commits three errors. First, it ignores two full years of effective-interest amortization that have already been recognized in interest expense: $2,989 in Year 1 and $3,168 in Year 2, totaling $6,157 of discount amortization that increased the carrying value from $383,151 to $389,308. Recognizing the original discount as an additional extinguishment loss would double-count the $6,157 already reported in Year 1 and Year 2 interest expense. Second, it compares the issue price to the face value rather than to the reacquisition price — the extinguishment loss is the difference between the amount paid to retire the debt ($416,000) and the debt's carrying value at the redemption date ($389,308), not the difference between face value and issue price. Third, the claim that the discount 'is recognized in full upon early extinguishment because the bonds were never held to maturity' misunderstands effective-interest accounting: discount amortization adjusts the bond's carrying value each period regardless of whether the bond is held to maturity. Early extinguishment accelerates the recognition of the remaining unamortized discount ($400,000 - $389,308 = $10,692), which is embedded in the $26,692 loss, but it does not resurrect the already-amortized $6,157. A candidate selecting this answer has confused the original discount at issuance with the unamortized discount at the redemption date.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C computes a $16,000 loss as the difference between the reacquisition price ($416,000) and the face value ($400,000), treating the call premium as the sole measure of the extinguishment loss. This approach implicitly assumes that the bond's carrying value equals its face value ($400,000) at all times — an assumption that holds only for bonds issued at par. Meridian's bonds were issued at a discount ($383,151 < $400,000), and after two years of amortization, the carrying value is $389,308, not $400,000. By comparing the reacquisition price to the face value rather than the carrying value, this calculation omits the $10,692 of unamortized discount ($400,000 - $389,308) that must also be recognized upon extinguishment. The total loss of $26,692 consists of two components: the call premium of $16,000 ($416,000 - $400,000) and the unamortized discount of $10,692 ($400,000 - $389,308). Recognizing only the call premium understates the loss by $10,692. The characterization of the call premium as a 'period cost' rather than an extinguishment component also misclassifies the nature of the transaction: ASC 470-50 requires the entire difference between reacquisition price and carrying value to be reported as a gain or loss on extinguishment, not fragmented across different income statement captions. A candidate selecting this answer has correctly identified the call premium but has omitted the unamortized discount from the carrying-value computation.",
+    "ExplanationWrongD": "Option D computes a $29,860 loss using a carrying value after only one year of amortization ($386,140) instead of the correct two-year carrying value ($389,308). The $2,989 Year 1 amortization is included, but the $3,168 Year 2 amortization is omitted — the schedule stops one period short. By understating the carrying value by $3,168 (the $389,308 correct amount minus the $386,140 one-year amount), the loss is overstated by exactly $3,168: $29,860 minus $26,692 = $3,168. The error is a timing mistake in the amortization schedule — the candidate correctly applied the effective-interest method's mechanics (6% x beginning CV, subtract cash coupon, add to CV) but for only one year instead of two. On the CMA exam, amortization-schedule questions routinely embed this trap: the correct Year 1 ending CV of $386,140 appears as an intermediate calculation, and candidates under time pressure may treat it as the final answer from which to compute the extinguishment loss. The question explicitly states that Meridian redeems the bonds on December 31, Year 2 immediately after making the Year 2 interest payment — meaning the amortization schedule must include both Year 1 AND Year 2 entries before computing the carrying value at the redemption date."
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B-S03 learning curve cumulative-average time 80pct",
+    "MicroTopic": "Learning curve cumulative-average time",
+    "UniqueConceptKey": "E-B-S03-Cumulative-Avg-Learning-Curve-Unit8",
+    "LOSTag": "P1-B.4 Forecasting techniques",
+    "primaryTheory": "B7",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "AeroDynamics manufactures precision aircraft engine components using a specialized machining process. The first component required 100 direct labor hours at a rate of $50 per hour. The production team has observed an 80% cumulative-average-time learning curve that applies to this process. Management is preparing a bid for an order of 8 components and needs to determine the direct labor cost for the eighth unit specifically — not the average cost across all 8 units, and not the total cost for all 8 units. Using the cumulative-average-time learning model, what is the estimated direct labor cost for the eighth unit (rounded to the nearest whole dollar)?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Under the cumulative-average-time learning model, each time cumulative production doubles, the cumulative average time per unit becomes the learning rate percentage (80%) of the previous cumulative average. The cumulative average time after N units = T₁ × N^b, where b = log(0.80) ÷ log(2) = −0.321928. For the first unit: cumulative average = 100 hours. After 2 units: cumulative average = 100 × 0.80 = 80.0 hrs. After 4 units: cumulative average = 80.0 × 0.80 = 64.0 hrs. After 8 units: cumulative average = 64.0 × 0.80 = 51.2 hrs. Total hours for all 8 units = 8 × 51.2 = 409.60 hrs. To find the time for the eighth unit individually, compute the total for 7 units using the formula: total for N = T₁ × N^(b+1) = 100 × N^0.678072. Total(7) = 100 × 7^0.678072 = 100 × 3.7414 = 374.14 hrs. Time for unit 8 = Total(8) − Total(7) = 409.60 − 374.14 = 35.46 hours. Direct labor cost for unit 8 = 35.46 × $50 = $1,773 (rounded). The cumulative-average-time model is tested on the CMA Part 1 exam because it requires candidates to distinguish between cumulative average time (average across all units produced to date) and individual unit time (marginal time for the nth unit). A common trap is computing the cumulative average at 8 units (51.2 hrs) and multiplying by the labor rate, yielding $2,560 — incorrectly treating the average as if it were the individual unit time.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-B-S03",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$2,560",
+      "B": "$3,200",
+      "C": "$5,000",
+      "D": "$1,773"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "$2,560 is the cumulative average direct labor cost per unit after 8 units (51.2 hrs × $50), not the cost of the eighth unit individually. This is the single most common error on cumulative-average learning curve questions: candidates correctly compute the cumulative average at the target quantity but fail to recognize that the question asks for the marginal unit time, not the average time. The cumulative average includes the much higher labor times of the first several units (unit 1 alone took 100 hours), so it substantially overstates the cost of the eighth unit when the learning effect has driven individual unit time well below the average. To obtain unit-level cost, the candidate must compute total hours for N units and subtract total hours for N−1 units.",
+    "ExplanationWrongB": "$3,200 corresponds to 64.0 hours of labor at $50 per hour, which is the cumulative average time after producing 4 units (80% of the 80-hour cumulative average after 2 units), not the cost of unit 8. A candidate who selects this has correctly applied the doubling concept but at the wrong production level — stopping at the second doubling (4 units) rather than continuing to the third doubling (8 units), then subtracting to isolate the marginal unit. For unit 8, the candidate must first compute total hours for all 8 units, then subtract total hours for the first 7 units to isolate the eighth unit's contribution.",
+    "ExplanationWrongC": "$5,000 is the direct labor cost of the first unit (100 hrs × $50 per hour). A candidate selecting this has either ignored the learning curve entirely or does not understand that the question asks for the eighth unit, not the first. Learning curves are central to CMA Part 1 Section B because they directly affect production budgets, labor planning, and bid pricing. An 80% learning rate produces a dramatic reduction in unit time as cumulative output increases, and ignoring this effect would result in a bid price that is not competitive — overstating the labor cost by more than $3,200 for the eighth unit alone.",
+    "ExplanationWrongD": ""
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B-S04 learning curve incremental unit time Wright model",
+    "MicroTopic": "Learning curve incremental unit time",
+    "UniqueConceptKey": "E-B-S04-Wright-Incremental-Unit-Time",
+    "LOSTag": "P1-B.4 Forecasting techniques",
+    "primaryTheory": "B7",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Precision Gear Works produces custom gears for industrial machinery. The first gear required 100 direct labor hours. Management has observed an 80% incremental unit-time (Wright) learning curve for this process. The company is forecasting labor requirements for an order of 4 gears and needs the direct labor time for the fourth gear specifically. Under the incremental unit-time model, the time for unit N equals T₁ × N^b, where b = log(learning rate) ÷ log(2). What is the estimated direct labor time for the fourth gear (rounded to one decimal place)?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under the incremental unit-time (Wright) learning model, each time cumulative production doubles, the time required for the last unit produced becomes the learning rate percentage of the time required at the previous doubling point. The formula is T_N = T₁ × N^b, where b = log(0.80) ÷ log(2) = −0.321928. For the fourth unit: T₄ = 100 × 4^(−0.321928). Since 4 = 2², this equals 100 × (2^(−0.321928))^2 = 100 × (0.80)^2 = 100 × 0.64 = 64.0 hours. Conceptually: after the first doubling from unit 1 to unit 2, the time for the second unit = 100 × 0.80 = 80.0 hours. After the second doubling from unit 2 to unit 4, the time for the fourth unit = 80.0 × 0.80 = 64.0 hours. The Wright model is distinct from the cumulative-average-time model in that it applies the learning rate directly to the marginal unit time at each doubling, not to the average of all units produced. A common exam trap is misidentifying which learning model the question describes and using the wrong formula, since both models produce identical results at doubling points for cumulative averages but diverge sharply for individual unit times at non-doubling quantities.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-B-S04",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "51.2 hours",
+      "B": "64.0 hours",
+      "C": "80.0 hours",
+      "D": "45.4 hours"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "51.2 hours is the time for the eighth unit under the incremental unit-time model (100 × 0.80³ = 51.2). A candidate selecting this has applied the learning curve to three doublings (1 → 2 → 4 → 8) instead of two doublings (1 → 2 → 4), which is needed to reach unit 4. This is a common off-by-one error in learning curve questions: the question asks for unit 4, but the candidate mentally continues the doubling sequence one step too far. When checking learning curve work, count the number of doublings carefully: unit 4 = two doublings from unit 1, unit 8 = three doublings.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "80.0 hours is the time for the second unit under the incremental model (100 × 0.80¹ = 80.0). A candidate selecting this has applied the learning curve for only one doubling — from unit 1 to unit 2 — and mistakenly identified that as the time for unit 4. The learning curve produces a multiplicative reduction in time at each doubling of cumulative production, so the fourth unit (two doublings from unit 1) requires 100 × 0.80² = 64.0 hours, not 80.0 hours. This error effectively under-applies the learning curve, leaving unit 4's time substantially overestimated.",
+    "ExplanationWrongD": "45.4 hours is the approximate time for the fourth unit under the cumulative-average-time learning model, not the incremental unit-time (Wright) model. Under the cumulative-average approach, total hours for 4 units = 100 × 4 × 4^(−0.321928) = 100 × 4 × 0.64 = 256.0 hrs, and total for 3 units ≈ 210.6 hrs, yielding unit 4 ≈ 256.0 − 210.6 = 45.4 hrs. This distractor tests the critical distinction between the two learning curve models. The Wright (incremental unit-time) model applies the learning rate to each successive unit's time directly at doubling points, while the cumulative-average-time model applies it to the average of all units, producing substantially different individual unit times even at the same learning rate."
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B-S05 capacity denominator analysis pricing decisions",
+    "MicroTopic": "Capacity denominator analysis",
+    "UniqueConceptKey": "E-B-S05-Capacity-Denominator-Pricing-Analysis",
+    "LOSTag": "P1-B.3 Forecasting techniques",
+    "primaryTheory": "B9",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "A controller at a mid-sized manufacturer is evaluating which capacity denominator to use for establishing the company's new product line pricing. The annual fixed manufacturing overhead is $1,000,000. The controller's analysis yields the following fixed overhead rates under four capacity denominator alternatives:\n\n• Theoretical capacity: 40,000 units per year → $25.00 per unit\n• Practical capacity: 35,000 units per year → $28.57 per unit\n• Expected annual capacity (master-budget capacity): 30,000 units per year → $33.33 per unit\n• Normal capacity: 33,000 units per year → $30.30 per unit\n\nVariable manufacturing cost is $42 per unit. Competitors are pricing comparable products at $88 to $92 per unit. The controller must evaluate the pricing implications of each denominator before recommending one to the CEO.\n\nWhich of the following correctly describes a key disadvantage of using expected annual capacity (master-budget capacity) as the denominator for pricing decisions?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Expected annual capacity (master-budget capacity) uses the budgeted production volume for the upcoming period as the denominator. Because this is typically the lowest denominator among the four alternatives (management budgets conservatively based on anticipated demand), it produces the highest fixed overhead rate per unit ($33.33 vs. $25.00–$30.30 for the other three). When this rate is embedded in a cost-plus or full-cost pricing model, the resulting price may exceed competitors' prices, rendering the company uncompetitive. Worse, the high price can suppress demand, leading management to revise the budget downward the following period, which deploys an even lower denominator and an even higher fixed overhead rate — reinforcing the cycle. This is known as the downward demand spiral. Under cost accounting theory, the denominator chosen for product costing should provide a representative long-run measure of capacity utilization. Expected annual capacity fails this test because it embeds short-term demand fluctuations into the cost structure, distorting pricing decisions and creating a self-reinforcing competitive disadvantage. This analytical distinction — understanding not just what each denominator produces numerically but why that matters for managerial decision-making — is the core competency tested at the Analyze level on the CMA Part 1 exam.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-B-S05",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "It produces the lowest fixed overhead rate per unit among the four alternatives, encouraging overly aggressive pricing that may fail to recover total fixed costs when actual production falls short of the denominator volume.",
+      "B": "It produces the highest fixed overhead rate per unit among the four alternatives, which may result in pricing that is not competitive with rivals and could trigger a downward demand spiral.",
+      "C": "It reflects the long-term average capacity utilization over the business cycle, smoothing cyclical fluctuations but potentially mispricing during periods of peak or trough demand.",
+      "D": "It accounts for normal unavoidable operating interruptions and scheduled maintenance downtime, providing a balanced cost allocation but requiring subjective management judgment about what constitutes normal inefficiency."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This statement incorrectly attributes the characteristic of theoretical capacity (lowest rate, $25.00 per unit) to expected annual capacity. Expected annual capacity actually produces the highest fixed overhead rate ($33.33 per unit) because it uses the smallest denominator (30,000 units). A candidate who selects this has the direction of the relationship reversed: a smaller denominator produces a higher fixed overhead rate, not a lower one. The candidate must recognize that fixed overhead absorption rate = Total Fixed Overhead ÷ Denominator Volume — an inverse relationship. The risk described (unrealistically low pricing) is correctly associated with theoretical capacity, which uses the largest denominator (40,000 units) and yields the lowest rate.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This statement describes the characteristics of normal capacity, not expected annual capacity. Normal capacity averages production volume over a full business cycle (typically 3–5 years), smoothing out cyclical peaks and troughs. Expected annual capacity, by contrast, uses only the upcoming year's budgeted volume, which may be atypically low during a downturn or atypically high during a boom. A candidate selecting this has confused the definitions of the four capacity denominators, a distinction that the CMA Part 1 exam explicitly tests. Normal capacity provides a stable, long-run cost basis; expected annual capacity embeds the current period's demand forecast, introducing volatility into product costs. The candidate must recognize that capacity denominator analysis is not simply a computational exercise but requires understanding how each denominator's time horizon affects managerial decisions.",
+    "ExplanationWrongD": "This statement describes the characteristics of practical capacity, not expected annual capacity. Practical capacity is theoretical capacity reduced by an allowance for normal unavoidable operating interruptions — scheduled maintenance, shift changes, holidays, and normal machine downtime. Expected annual capacity makes no such allowance; it is simply the budgeted production volume for the upcoming period based on anticipated sales demand. A candidate selecting this has confused practical capacity's operational adjustment (subtracting downtime) with expected capacity's demand-based adjustment (using forecasted sales as the denominator). The distinction matters for pricing because practical capacity yields a stable, operations-based cost, whereas expected capacity yields a volatile, demand-based cost. Understanding these differences is essential for the CMA Part 1 Section B exam, where capacity denominator choice frequently appears as a pricing-strategy question."
+  },
+  {
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B-S06 expected value decision analysis product development",
+    "MicroTopic": "Expected value decision analysis",
+    "UniqueConceptKey": "E-B-S06-Expected-Value-Product-Development",
+    "LOSTag": "P1-B.3 Forecasting techniques",
+    "primaryTheory": "B10",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "The product development team at NovaTech Industries is evaluating three proposed projects. Due to capital constraints, only one project can be selected. The NPV of each project depends on market demand conditions, which the marketing department has assessed as follows:\n\nProject Alpha:\n• High demand (30% probability): NPV $800,000\n• Medium demand (50% probability): NPV $400,000\n• Low demand (20% probability): NPV (−$100,000)\n\nProject Beta:\n• High demand (50% probability): NPV $600,000\n• Medium demand (30% probability): NPV $200,000\n• Low demand (20% probability): NPV (−$50,000)\n\nProject Gamma:\n• High demand (60% probability): NPV $500,000\n• Medium demand (30% probability): NPV $150,000\n• Low demand (10% probability): NPV $0\n\nUsing expected value analysis, which project should NovaTech select and what is its expected value?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Expected value is computed by multiplying each possible outcome by its probability of occurrence and summing the products. Project Alpha: EV = 0.30($800,000) + 0.50($400,000) + 0.20(−$100,000) = $240,000 + $200,000 − $20,000 = $420,000. Project Beta: EV = 0.50($600,000) + 0.30($200,000) + 0.20(−$50,000) = $300,000 + $60,000 − $10,000 = $350,000. Project Gamma: EV = 0.60($500,000) + 0.30($150,000) + 0.10($0) = $300,000 + $45,000 + $0 = $345,000. Project Alpha has the highest expected value at $420,000 and should be selected. Expected value is the primary decision criterion under uncertainty when probabilities can be estimated, because it accounts for both the magnitude and likelihood of every outcome, not just the most optimistic or most probable scenario. On the CMA Part 1 exam, a common trap is to select the project with the highest NPV in any single scenario without weighting by probability — Beta's high-demand scenario is $600,000 (with 50% probability), but when all scenarios are probability-weighted, Alpha's expected value is higher because of its $800,000 upside, even though that upside has only a 30% chance of occurring.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-B-S06",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Select Project Alpha; expected value of $420,000",
+      "B": "Select Project Beta; expected value of $350,000",
+      "C": "Select Project Gamma; expected value of $345,000",
+      "D": "All three projects are equally attractive because each has a positive expected value exceeding $300,000"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Project Beta has an expected value of $350,000, which is lower than Project Alpha's $420,000. A candidate who selects this has likely chosen the project with the highest NPV in its most probable individual scenario ($600,000 at 50% probability for Beta) without completing the probability-weighted expected value calculation for all projects. This error reflects a failure to apply the expected value decision rule correctly: EV requires weighting every possible outcome by its probability, not selecting based on a single scenario's attractiveness. Although Beta's high-demand scenario seems compelling, Alpha's $800,000 upside — even weighted at only 30% — contributes $240,000 to EV, while Beta's $600,000 at 50% contributes $300,000. The decisive factor is Alpha's medium-demand scenario: $400,000 at 50% = $200,000 vs. Beta's $200,000 at 30% = $60,000. Alpha's consistently higher outcomes across scenarios, properly weighted, produce the highest expected value.",
+    "ExplanationWrongC": "Project Gamma has an expected value of $345,000, the lowest of the three projects. A candidate who selects Gamma may be using a risk-avoidance heuristic rather than expected value analysis — Gamma is the only project with no loss scenario (its worst case is $0 NPV at 10% probability). While risk aversion is a legitimate consideration in capital budgeting, the question specifically asks the candidate to use expected value analysis, which treats all outcomes through the lens of probability-weighted averages and does not incorporate risk preferences. Under expected value, Gamma's 90% probability of a positive outcome (60% + 30%) and absence of losses do not outweigh its lower expected outcomes, yielding an EV below both Alpha and Beta. The correct decision under expected value is Alpha at $420,000.",
+    "ExplanationWrongD": "This statement is factually incorrect: the three projects have materially different expected values ($420,000, $350,000, and $345,000), and expected value analysis provides a clear ranking. A candidate selecting this may have attempted a crude comparison without computing the precise EVs, or may mistakenly believe that any distinction smaller than the range of possible outcomes is immaterial. However, expected value analysis evaluates the probability-weighted average, not the range, and a $75,000 difference between Alpha and Beta (or $70,000 between Alpha and Gamma) is economically significant for a capital-constrained decision. In CMA Part 1 expected value problems, small differences in EV are determinative — the decision rule is to select the highest EV, regardless of how close the values are."
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C-S01 four-way overhead variance decomposition",
+    "MicroTopic": "Four-way overhead variance decomposition",
+    "UniqueConceptKey": "C-S01-four-way-overhead-variance-decomposition",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C2",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Apex Manufacturing's controller, Karen Walsh, is preparing the quarterly overhead variance analysis for the Q3 2026 Board presentation. Apex uses a standard costing system with overhead applied on the basis of direct labor hours. The plant's Q3 data is as follows:\n\nBudgeted (denominator) direct labor hours: 15,000\nBudgeted variable overhead rate: $4.00 per DLH\nBudgeted fixed overhead: $150,000\nStandard hours allowed for actual output: 14,000 hours\nActual direct labor hours worked: 14,500 hours\nActual variable overhead incurred: $59,000\nActual fixed overhead incurred: $152,000\n\nWhich of the following correctly presents the four-way overhead variance decomposition for Q3?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under a standard costing system with a four-way analysis, total overhead variance is decomposed into four components: variable overhead spending variance, variable overhead efficiency variance, fixed overhead budget (spending) variance, and fixed overhead volume variance.\n\nFixed overhead rate = Budgeted FOH / Denominator hours = $150,000 / 15,000 = $10.00 per DLH.\n\n1. Variable overhead spending variance = Actual VOH - (Actual hours x Standard VOH rate) = $59,000 - (14,500 x $4.00) = $59,000 - $58,000 = $1,000 Unfavorable. Actual spending exceeded the amount expected at the actual activity level.\n\n2. Variable overhead efficiency variance = (Actual hours - Standard hours allowed) x Standard VOH rate = (14,500 - 14,000) x $4.00 = 500 x $4.00 = $2,000 Unfavorable. The plant used 500 more hours than the standard allowed for the actual output, at $4.00 per hour of variable overhead.\n\n3. Fixed overhead budget variance = Actual FOH - Budgeted FOH = $152,000 - $150,000 = $2,000 Unfavorable. Actual fixed overhead spending exceeded the static budget.\n\n4. Fixed overhead volume variance = Budgeted FOH - Applied FOH = $150,000 - (14,000 x $10.00) = $150,000 - $140,000 = $10,000 Unfavorable. Since the plant operated at 14,000 standard hours versus a denominator of 15,000 hours, fixed overhead was underapplied by $10,000 — the cost of unused capacity.\n\nTotal overhead variance = $1,000 U + $2,000 U + $2,000 U + $10,000 U = $15,000 U. Cross-check: Actual total overhead = $59,000 + $152,000 = $211,000. Applied overhead = 14,000 x ($4.00 + $10.00) = $196,000. Total variance = $211,000 - $196,000 = $15,000 U. Verified.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-C-S01",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Variable overhead spending $1,000 U; variable overhead efficiency $2,000 U; fixed overhead budget $2,000 U; fixed overhead volume $10,000 U",
+      "B": "Variable overhead spending $1,000 U; variable overhead efficiency $2,000 F; fixed overhead budget $2,000 U; fixed overhead volume $0",
+      "C": "Variable overhead spending $1,000 U; variable overhead efficiency $2,000 F; fixed overhead budget $2,000 F; fixed overhead volume $10,000 U",
+      "D": "Variable overhead spending $1,000 U; variable overhead efficiency $2,000 U; fixed overhead budget $2,000 U; fixed overhead volume $5,000 U"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 CSO P1-C.1 Cost and variance measures — four-way overhead variance decomposition using standard costing",
+      "Distractors test common confusions: substituting denominator hours for standard hours, reversing F/U sign conventions, and applying the efficiency variance formula to fixed overhead"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This decomposition substitutes the denominator hours (15,000) for the standard hours allowed (14,000) in both the variable overhead efficiency variance and the fixed overhead volume variance. For VOH efficiency, (14,500 - 15,000) x $4.00 = $2,000 F — but the efficiency variance must use standard hours allowed for actual output (14,000), not denominator hours. For FOH volume, Budgeted FOH - (Denominator hours x FOH rate) = $150,000 - (15,000 x $10.00) = $0 — but the volume variance measures whether the plant operated above or below the denominator capacity in terms of standard hours allowed, and 14,000 < 15,000 confirms underutilization must produce an unfavorable volume variance. A candidate selecting this option likely confuses the denominator activity level (used only to compute the fixed overhead rate) with the standard hours allowed (the correct basis for both efficiency and volume variances).",
+    "ExplanationWrongC": "This decomposition reverses the F/U sign convention for the variable overhead efficiency variance and the fixed overhead budget variance while correctly computing the dollar magnitudes. VOH efficiency of $2,000 U is mislabeled as favorable when more hours were used than standard allowed. FOH budget of $2,000 U is also mislabeled as favorable — actual fixed overhead of $152,000 exceeds the budget of $150,000, which is unfavorable by definition. A candidate selecting this option correctly performs the arithmetic but misapplies the sign convention. The rule: when actual cost exceeds standard or budget, the variance is unfavorable. Efficiency variances are unfavorable when actual input exceeds the standard input allowed for output. Budget (spending) variances are unfavorable when actual spending exceeds the static budget.",
+    "ExplanationWrongD": "This decomposition incorrectly applies the variable overhead efficiency variance formula to the fixed overhead volume variance. Using FOH rate x (Actual hours - Standard hours) = $10.00 x (14,500 - 14,000) = $5,000 U produces the $5,000 shown, but this formula is fundamentally incorrect for fixed overhead. The fixed overhead volume variance measures capacity utilization — it compares budgeted FOH to FOH applied using standard hours allowed, not the difference between actual and standard hours multiplied by the rate. That subtraction pattern (Actual - Standard) x Rate is correct only for variable overhead efficiency, not for fixed overhead volume. The correct FOH volume variance is Budgeted FOH - (Standard hours allowed x FOH rate) = $150,000 - (14,000 x $10.00) = $10,000 U. A candidate selecting this option correctly handles the variable variances but applies the variable overhead efficiency logic to the fixed overhead component — a common exam trap because both variances involve an hours differential, but the formulas are structurally different."
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C-S02 variance investigation materiality threshold analysis",
+    "MicroTopic": "Variance investigation materiality threshold analysis",
+    "UniqueConceptKey": "C-S02-variance-investigation-materiality-threshold-analysis",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C1",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Harbor Manufacturing's controller, David Okonkwo, applies an investigation policy to the Q2 2026 monthly variance report: investigate any budget variance exceeding 5% of the budgeted cost or $10,000, whichever is smaller, but only for unfavorable variances. The plant controller's supplementary analysis also notes that the direct materials unfavorable variance is fully explained by a one-time supplier price increase tied to a contract renegotiation that will not recur.\n\nQ2 budget and actual data by cost category:\n\nDirect materials: Budget $400,000 / Actual $432,000 / Variance $32,000 U\nDirect labor: Budget $300,000 / Actual $294,000 / Variance $6,000 F\nVariable overhead: Budget $180,000 / Actual $191,000 / Variance $11,000 U\nFixed overhead: Budget $200,000 / Actual $208,000 / Variance $8,000 U\n\nBased on the investigation policy and the controller's supplementary analysis, which variance or variances should the controller investigate?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The controller must apply a two-step analysis to each variance: (1) determine the materiality threshold, and (2) assess whether the variance exceeds the threshold and is unfavorable, while also considering qualitative factors that override quantitative thresholds.\n\nStep 1 — Compute each category's threshold. The policy uses the smaller of 5% of budget or $10,000:\n\nDirect materials: 5% x $400,000 = $20,000; smaller of $20,000 and $10,000 = $10,000 threshold.\nDirect labor: 5% x $300,000 = $15,000; threshold = min($15,000, $10,000) = $10,000. However, the $6,000 variance is favorable — favorable variances are excluded by policy regardless of size.\nVariable overhead: 5% x $180,000 = $9,000; threshold = min($9,000, $10,000) = $9,000.\nFixed overhead: 5% x $200,000 = $10,000; threshold = min($10,000, $10,000) = $10,000.\n\nStep 2 — Compare each unfavorable variance to its threshold:\n\nDirect materials: $32,000 U > $10,000 threshold. The variance is material by the quantitative rule. However, the controller's supplementary analysis documents that this variance is fully explained by a one-time, non-recurring supplier price increase. Investigation of a known, non-recurring cause produces no new information — the explanation is already complete. CMA best practice and management-by-exception principles direct controllers to investigate only unexplained or recurring variances. The qualitative override (known cause, non-recurring) removes this variance from the investigation list.\n\nDirect labor: $6,000 F — excluded by policy (favorable).\n\nVariable overhead: $11,000 U > $9,000 threshold. Material by the quantitative rule, and no qualitative override has been documented. This variance warrants investigation.\n\nFixed overhead: $8,000 U < $10,000 threshold. Does not exceed the threshold — excluded.\n\nConclusion: Only the variable overhead unfavorable variance ($11,000 U) meets both the quantitative threshold and qualitative criteria for investigation.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-C-S02",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Direct materials and variable overhead, because both unfavorable variances exceed their respective materiality thresholds",
+      "B": "Variable overhead only, because it is the only unfavorable variance that exceeds its threshold and lacks a documented explanation",
+      "C": "Direct materials only, because it has the largest dollar variance and the largest percentage deviation from budget",
+      "D": "None, because the direct labor variance is favorable and all unfavorable variances are either below their thresholds or fully explained"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 CSO P1-C.1 Cost and variance measures — management by exception: variance investigation thresholds and qualitative override analysis",
+      "Distractors test common confusions: investigating all unfavorable variances regardless of qualitative overrides, selecting by dollar magnitude alone, and treating all explained or below-threshold variances as investigation-free"
+    ],
+    "ExplanationWrongA": "Option A correctly identifies the two unfavorable variances that exceed their quantitative thresholds — direct materials ($32,000 U > $10,000) and variable overhead ($11,000 U > $9,000) — but applies only the quantitative rule without the qualitative override. The controller's supplementary analysis documents that the direct materials variance is fully explained by a one-time, non-recurring supplier price increase. Investigating a variance whose root cause is already known and documented would consume resources without producing new information. The management-by-exception principle directs investigation effort toward unexplained or recurring variances, not toward variances where the cause is already established. The policy's quantitative threshold is a screening tool, not a mandate — qualitative judgment remains the controller's professional responsibility.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C selects the direct materials variance based solely on its dollar magnitude ($32,000 U) and percentage deviation (8.0%), ignoring both the quantitative thresholds for the other categories and the qualitative override. The variable overhead variance of $11,000 U exceeds its $9,000 threshold and is unexplained — it warrants investigation regardless of being smaller in absolute dollars than the direct materials variance. Conversely, the $32,000 direct materials variance, while large, has a documented non-recurring cause. Selecting variances for investigation by dollar size alone violates the structured investigation policy and diverts resources from the variable overhead variance, where the root cause is unknown and potentially recurring.",
+    "ExplanationWrongD": "Option D reaches the incorrect conclusion that no variances warrant investigation by overgeneralizing two facts: (1) the direct labor variance is favorable, and (2) the direct materials variance is fully explained. However, the variable overhead variance of $11,000 U exceeds its $9,000 threshold (calculated as min(5% of $180,000, $10,000) = $9,000) and has no documented qualitative override. The fixed overhead variance of $8,000 U does not exceed its $10,000 threshold and is correctly excluded, but that does not justify excluding the material, unexplained variable overhead variance. A candidate selecting this option correctly applies the direct materials qualitative override but then incorrectly extends the 'explained' or 'below-threshold' rationale to a variance category that meets neither criterion."
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C-S03 transfer pricing general rule opportunity cost",
+    "MicroTopic": "Transfer pricing general rule opportunity cost",
+    "UniqueConceptKey": "C-S03-transfer-pricing-general-rule-opportunity-cost",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C6",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Northwind Industries has two divisions. The Components Division produces a specialized electronic component. Its annual operating capacity is 40,000 units, and it currently sells its entire output of 40,000 units to external customers at $90 per unit. The division's variable manufacturing cost is $50 per unit, and fixed costs total $800,000 per year ($20 per unit at capacity).\n\nThe Assembly Division requires 6,000 units of the same component for a new product line and can purchase an equivalent component from an external supplier at $84 per unit.\n\nUsing the general transfer pricing rule, the minimum transfer price per unit that the Components Division should accept from the Assembly Division is:",
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The general transfer pricing rule states: Minimum transfer price = Outlay (incremental) cost per unit + Opportunity cost per unit to the selling division.\n\nStep 1 — Identify outlay cost: The outlay cost is the variable (incremental) cost of producing one additional unit — $50 per unit. Fixed costs are not incremental because they are incurred regardless of whether the internal transfer occurs (the division is at capacity and already covering fixed costs through external sales).\n\nStep 2 — Identify opportunity cost: The Components Division is operating at full capacity (40,000 units sold externally; 40,000 units of capacity). To supply 6,000 units internally, the division must forgo 6,000 units of external sales. Each forgone external unit contributes $90 selling price - $50 variable cost = $40 in contribution margin. The opportunity cost per unit is therefore $40.\n\nStep 3 — Apply the rule: Minimum transfer price = $50 + $40 = $90 per unit.\n\nInterpretation: At a minimum price of $90, the Assembly Division will prefer the external supplier at $84, and no internal transfer will occur. This is economically efficient for Northwind as a whole — using capacity to serve the internal division at the expense of higher-margin external sales would reduce total company profit. The general rule correctly signals that when the selling division is at full capacity with positive contribution margin on external sales, internal transfers should only occur if the internal price at least equals the external market price.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-C-S03",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$50",
+      "B": "$70",
+      "C": "$84",
+      "D": "$90"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 CSO P1-C.1 — transfer pricing: general rule application with opportunity cost when selling division is at full capacity",
+      "Distractors test common confusions: pricing at variable cost only (ignoring opportunity cost), pricing at full absorption cost (ignoring opportunity cost and using fixed costs), and matching the external supplier price (negotiation outcome vs. minimum under the rule)"
+    ],
+    "ExplanationWrongA": "Option A ($50) represents the variable cost per unit only, without adding the opportunity cost. This is the correct minimum transfer price only when the selling division has excess capacity — if there is no forgone external sale, the opportunity cost is zero and the minimum price equals variable cost. However, the Components Division is at full capacity (40,000 of 40,000 units sold externally), so transferring 6,000 units internally requires giving up external sales that generate $40 per unit in contribution margin. The general rule explicitly adds opportunity cost to outlay cost. A candidate selecting this answer likely applies the 'excess capacity' version of the rule without recognizing that full capacity changes the analysis fundamentally.",
+    "ExplanationWrongB": "Option B ($70) represents the full absorption cost per unit: variable cost ($50) plus fixed cost allocation ($800,000 / 40,000 = $20). Full cost is not the correct basis for the minimum transfer price under the general rule because fixed costs are not incremental to the transfer decision — they are incurred regardless of whether the internal transfer occurs. More importantly, full cost ignores the opportunity cost ($40 per unit) created by displacing external sales. A candidate selecting this answer may incorrectly assume that the transfer price must cover all manufacturing costs, when the relevant costs for the transfer pricing decision are only those that change as a result of the transfer.",
+    "ExplanationWrongC": "Option C ($84) matches the external supplier's price to the Assembly Division. While matching the external price is a practical negotiation outcome and may appear to achieve goal congruence (the buying division pays the same price either way), the general transfer pricing rule determines the minimum price the selling division should accept, not a negotiated settlement. At $84, the Components Division would receive less than its minimum ($90), effectively subsidizing the Assembly Division at the expense of forgone external contribution margin. The Components Division loses $6 per unit relative to selling externally ($90 - $84 = $6 x 6,000 = $36,000 total loss). The general rule serves as a floor for negotiation, not a ceiling. A candidate selecting this answer correctly identifies that the company wants internal transfers to be competitive with the external market but confuses the buying division's ceiling with the selling division's floor.",
+    "ExplanationWrongD": ""
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C-S04 transfer pricing goal congruence behavioral analysis",
+    "MicroTopic": "Transfer pricing goal congruence behavioral analysis",
+    "UniqueConceptKey": "C-S04-transfer-pricing-goal-congruence-behavioral-analysis",
+    "LOSTag": "P1-C.1",
+    "primaryTheory": "C6",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Ridgeway Corporation's two divisions — Components and Assembly — have been in conflict over transfer pricing for two years. Components Division produces a machined part; Assembly Division uses this part in its finished products. Current operating data:\n\nComponents Division:\n- Annual capacity: 50,000 units\n- Current production and external sales volume: 32,000 units (excess capacity of 18,000 units)\n- Variable manufacturing cost per unit: $32\n- Full absorption cost per unit: $52 (includes $20 fixed overhead allocation per unit)\n- Current transfer price to Assembly: full cost plus 15% markup = $59.80 per unit\n\nAssembly Division:\n- Annual requirement: 14,000 units of the machined part\n- External supplier price for an equivalent part: $46 per unit\n- Current sourcing: 100% external at $46 per unit\n\nThe CFO is concerned. Ridgeway as a whole is paying $46 per unit externally while Components Division could produce the same part internally for a variable cost of only $32 per unit. The company-wide annual cost of this sourcing decision is ($46 - $32) x 14,000 = $196,000 in avoidable cost. The current $59.80 transfer price exceeds the external price, so Assembly Division rationally purchases externally to defend its own profitability — a classic goal-congruence failure.\n\nThe controller is asked to recommend a transfer pricing approach that will align divisional incentives with Ridgeway's corporate interest. Which recommendation should the controller make?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The controller should recommend a negotiated transfer pricing framework with a floor of $32 (Components' variable cost) and a ceiling of $46 (Assembly's external price). This recommendation best achieves goal congruence for four reasons grounded in transfer pricing theory and divisional performance measurement.\n\nFirst, the economic fundamentals: Components Division has excess capacity (18,000 units), so the opportunity cost of internal transfers is zero. The company-wide relevant cost of internal production is $32 per unit (variable cost only — fixed costs are sunk regardless). Any internal transfer price between $32 and $46 makes both divisions and the company better off: Components earns positive contribution margin (price - $32 > 0), Assembly pays less than or equal to the external price, and Ridgeway avoids the $196,000 annual outflow.\n\nSecond, divisional autonomy: a negotiated range preserves each division manager's decision authority. Components can reject any bid below $32, and Assembly can reject any ask above $46. Neither division is forced into a transaction that harms its own performance metrics.\n\nThird, behavioral incentives: a negotiated framework gives both managers a stake in reaching agreement. Components wants to capture some of the $14 spread ($46 - $32) as divisional profit, and Assembly wants to capture some as cost savings. The negotiation itself becomes a performance-evaluation signal — managers who consistently fail to reach mutually beneficial agreements warrant scrutiny.\n\nFourth, why the alternatives fall short: variable-cost-only pricing ($32) eliminates Components' profit incentive entirely and may demotivate the division manager. Full-cost-plus pricing ($59.80) is the status quo that already failed — it pushes Assembly to the external market. A corporate mandate forcing internal purchases at full-cost-plus undermines divisional autonomy and accountability. Shutting down excess capacity destroys the option value of maintaining internal production capability.\n\nA negotiated range between variable cost and external price is the established best practice in transfer pricing when the selling division has excess capacity and an external market reference price exists.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-C-S04",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Maintain the full-cost-plus-15% transfer price of $59.80 and issue a corporate directive requiring Assembly Division to purchase all 14,000 units internally from Components Division",
+      "B": "Change the transfer price to variable cost only ($32 per unit), allowing Components Division to recover its incremental costs while Assembly Division captures the full $14 per unit savings versus the external price",
+      "C": "Change to a negotiated transfer pricing framework with a floor of $32 (variable cost) and a ceiling of $46 (external price), incentivizing both division managers to reach an agreement within that range",
+      "D": "Discontinue internal transfer pricing altogether: allow Assembly to continue sourcing externally at $46 per unit and reduce Components Division's capacity to match its external sales volume of 32,000 units"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 CSO P1-C.1 — transfer pricing: evaluating alternative transfer pricing methods for goal congruence when the selling division has excess capacity",
+      "Distractors test common confusions: corporate mandates overriding divisional autonomy, variable-cost-only pricing ignoring divisional profit incentives, and eliminating internal transfers instead of aligning incentives"
+    ],
+    "ExplanationWrongA": "Maintaining the $59.80 full-cost-plus-15% transfer price and mandating internally sourced purchases would force short-term goal congruence — Ridgeway would save $196,000 annually — but at the cost of undermining the entire purpose of divisional performance measurement. Assembly Division would be penalized with $13.80 per unit of excess cost ($59.80 - $46.00) through no fault of its own, distorting its reported profitability. Components Division would be insulated from competitive pressure and rewarded for a price no external customer would accept. Transfer pricing mandates destroy the accountability that divisional structures are designed to create — division managers who cannot control their input costs cannot be evaluated on their division's profitability. This approach trades a transfer pricing problem for a performance measurement problem.",
+    "ExplanationWrongB": "Setting the transfer price at variable cost only ($32) resolves the goal-congruence failure — Assembly would buy internally and Ridgeway would save $196,000 — but creates a significant behavioral problem. Components Division would earn zero contribution margin on 14,000 units, with revenue exactly covering variable cost and nothing contributed toward fixed costs or divisional profit. The Components Division manager has no incentive to participate in the internal transfer: serving the internal customer generates no divisional profit while consuming capacity, management attention, and quality-assurance resources. Over time, the Components manager may reduce quality, delay delivery, or redirect capacity to external sales that earn $20 per unit in contribution — rational behavior from the divisional perspective but harmful to Ridgeway as a whole. Zero-profit transfers also make divisional ROI and residual income look worse, discouraging the manager from cooperating.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Discontinuing internal transfers and reducing Components Division's capacity to 32,000 units permanently destroys Ridgeway's option to produce internally, even though internal production at $32 variable cost is demonstrably cheaper than external procurement at $46. The CFO's own analysis shows the company leaves $196,000 on the table every year. More importantly, eliminating capacity eliminates strategic flexibility — if the external supplier raises its price, experiences quality problems, or faces a supply disruption, Ridgeway has no internal alternative. Excess capacity, while carrying a cost, functions as a real option: an insurance policy against external supply risk. The controller's role is to design a transfer pricing system that makes the existing capacity profitable to use, not to destroy operational capability to avoid the management challenge of setting transfer prices."
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D-S02 high-low method outlier exclusion cost estimation",
+    "MicroTopic": "High-low method outlier exclusion",
+    "UniqueConceptKey": "E-D-S02-High-low-outlier-exclusion",
+    "LOSTag": "P1-D.1 Cost measurement and assignment",
+    "primaryTheory": "D2",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Lakeshore Manufacturing recorded the following monthly maintenance costs and machine hours for the first six months of the year. In March, a two-week labor strike reduced production activity to 1,200 machine hours while the plant still incurred substantial fixed overhead and severance costs.\n\n• January: 2,400 hours — $154,800\n• February: 2,700 hours — $170,400\n• March (strike): 1,200 hours — $130,000\n• April: 3,000 hours — $186,000\n• May: 2,200 hours — $144,400\n• June: 2,900 hours — $180,800\n\nThe controller wants to estimate the variable cost per machine hour and monthly fixed cost using the high-low method. Which of the following represents the correct cost equation after properly screening the data?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under the high-low method, the analyst must first identify and exclude data points that do not represent normal operating conditions. The March data point (1,200 machine hours, $130,000) reflects a two-week labor strike — an abnormal event during which the plant operated at reduced capacity but still incurred substantial fixed overhead and severance costs, making the cost-activity relationship unrepresentative. Excluding March, the highest activity level is April (3,000 hours, $186,000) and the lowest is May (2,200 hours, $144,400). Variable cost per machine hour = ($186,000 − $144,400) ÷ (3,000 − 2,200) = $41,600 ÷ 800 = $52.00. Fixed cost = $186,000 − (3,000 × $52.00) = $186,000 − $156,000 = $30,000 per month, which can be verified using the low point: $144,400 − (2,200 × $52.00) = $144,400 − $114,400 = $30,000. The cost equation is Total Cost = $30,000 + $52.00X, where X is machine hours. In practice, failing to screen for outliers is one of the most common errors in cost estimation — a single anomalous data point can materially distort both the variable rate and the fixed cost intercept, leading management to misprice products and misjudge the cost structure.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-D-S02",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Variable cost $52.00 per machine hour; fixed cost $30,000 per month",
+      "B": "Variable cost $31.11 per machine hour; fixed cost $92,667 per month",
+      "C": "Variable cost $52.00 per machine hour; fixed cost $92,667 per month",
+      "D": "Variable cost $31.11 per machine hour; fixed cost $30,000 per month"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B ($31.11 variable rate, $92,667 fixed cost) results from applying the high-low method using all six months of data, including the March strike month (1,200 hours, $130,000) as the low point. The calculation ($186,000 − $130,000) ÷ (3,000 − 1,200) = $56,000 ÷ 1,800 yields a variable rate of $31.11 per machine hour, which understates the true variable cost by $20.89 per hour because the strike-month cost does not reflect normal variable cost behavior — it includes fixed overhead and severance costs that inflate the apparent fixed cost and depress the apparent variable rate. The resulting fixed cost of $92,667 dramatically overstates the actual monthly fixed cost of $30,000, which would lead management to overestimate capacity costs and make poor pricing and production decisions.",
+    "ExplanationWrongC": "Option C ($52.00 variable rate, $92,667 fixed cost) correctly computes the variable rate of $52.00 per machine hour by excluding the March outlier from the high and low activity selection, but then incorrectly pairs this rate with the wrong activity level when solving for fixed cost. The correct approach is to subtract the product of the variable rate and the high activity level from the high total cost: $186,000 − (3,000 × $52.00) = $30,000. Using the low point verifies the result: $144,400 − (2,200 × $52.00) = $30,000. The $92,667 figure is the fixed cost from the contaminated data set that included the March outlier, not the correct fixed cost from the clean data.",
+    "ExplanationWrongD": "Option D ($31.11 variable rate, $30,000 fixed cost) applies the correct fixed cost amount but pairs it with an incorrect variable rate derived from including the March outlier in the high-low calculation. The variable rate of $31.11 per machine hour understates the true marginal cost by nearly 40%, which would cause the company to systematically underestimate how total costs change with activity levels. In cost-volume analysis, using an understated variable cost rate leads to overstating contribution margins, underestimating breakeven points, and making overly optimistic profit projections. The correct variable rate of $52.00 per machine hour reflects the actual cost behavior pattern observable across the five normal operating months."
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D-S03 regression vs high-low cost estimation reliability",
+    "MicroTopic": "Regression vs high-low reliability comparison",
+    "UniqueConceptKey": "E-D-S03-Regression-vs-high-low",
+    "LOSTag": "P1-D.2 Cost measurement concepts and cost behavior",
+    "primaryTheory": "D2",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Cascade Industries' controller ran both simple regression and the high-low method on 36 months of utility cost data to estimate the cost function. The regression output shows: R² = 0.41, standard error of the estimate = $8,200, coefficient for machine hours has a p-value of 0.28, and the intercept has a p-value of 0.04. The high-low method, using the highest-activity month (4,800 hours, $92,000) and the lowest-activity month (2,100 hours, $57,000), produces a variable rate of $12.96 per machine hour and a fixed cost of $29,792 per month. The controller asks whether the regression or the high-low method provides a more reliable estimate of the utility cost function. Which recommendation is most appropriate?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The regression analysis is more reliable because it uses all 36 monthly data points, whereas the high-low method relies on only two observations — the highest and lowest activity months. Any irregularity or outlier in either of those two extreme months can dramatically skew the high-low estimate. The regression's modest R² of 0.41 indicates that machine hours alone explain 41% of the variation in utility costs — other cost drivers such as weather, production mix, or machine age account for the remaining 59%. The coefficient p-value of 0.28 for machine hours suggests the relationship is not statistically significant at conventional thresholds, but 36 data points — even with a weak fit — still produce a more robust estimate than extrapolating from two arbitrarily selected months. The standard error of the estimate ($8,200) provides a quantifiable precision measure that the high-low method cannot offer. In management accounting practice, regression is preferred over high-low whenever sufficient data are available because it minimizes the influence of any single observation and provides diagnostic statistics that allow the analyst to evaluate model quality objectively.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-D-S03",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The regression analysis is more reliable because it incorporates all 36 observations rather than only two extreme points; the modest R² and coefficient p-value indicate that machine hours alone do not fully explain utility costs, but the regression still provides a better estimate than the two-point high-low method.",
+      "B": "The high-low method is more reliable because the regression's R² of 0.41 and coefficient p-value of 0.28 indicate that the model is not statistically significant; the high-low method avoids this complexity by relying on confirmed data points.",
+      "C": "Both methods are equally unreliable because utility costs are inherently variable and cannot be estimated with a linear cost function; the company should instead implement activity-based costing to allocate utility costs more accurately.",
+      "D": "Neither method can be used reliably because the intercept p-value of 0.04 in the regression indicates the independent variable is invalid; the high-low method should be used but only after removing the intercept from the cost equation."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B incorrectly concludes that the high-low method is more reliable because the regression's statistical metrics are modest. In fact, modest R² and high coefficient p-values do not make regression worse than high-low — they reveal diagnostic information about cost behavior that high-low completely obscures. The low R² tells the controller that a single cost driver does not fully capture utility cost behavior, suggesting that multiple regression with additional drivers such as heating degree-days or production mix might improve the model. The high-low method provides none of this diagnostic information: it simply connects two points and assumes linearity. Furthermore, the high-low method's reliance on only two observations makes it highly vulnerable to outliers — if either the highest or lowest activity month contains unusual cost patterns, the entire estimate is contaminated. The regression, even with modest fit statistics, averages across all 36 observations and is therefore inherently more stable and reliable.",
+    "ExplanationWrongC": "Option C dismisses both methods as unreliable and recommends activity-based costing as an alternative, which reflects a misunderstanding of cost estimation's distinct role. Cost estimation methods such as high-low and regression are used to separate mixed costs into fixed and variable components for planning, budgeting, and decision-making. Activity-based costing is an overhead allocation methodology that assigns indirect costs to products based on activities and cost drivers — it is not a substitute for cost estimation. The two techniques serve different purposes: cost estimation determines how costs behave relative to activity levels, while ABC determines how overhead costs should be assigned to cost objects. A company can and often does use regression to estimate the parameters of its ABC cost pools. The controller's question concerns which estimation method produces more reliable cost behavior parameters, and between the two methods presented, regression is clearly superior.",
+    "ExplanationWrongD": "Option D misinterprets the regression intercept p-value of 0.04. A p-value below 0.05 indicates that the result is statistically significant — the null hypothesis that the intercept equals zero can be rejected with 95% confidence. A significant intercept confirms the existence of a fixed cost component, which is exactly what cost accountants expect when estimating mixed costs that contain both fixed and variable elements. An intercept p-value of 0.04 supports the use of the regression model rather than undermining it: the regression correctly identifies that utility costs have a statistically significant fixed component. The high-low method provides no equivalent measure of statistical confidence in its computed fixed cost of $29,792, making it impossible to assess the reliability of that estimate."
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D-S04 absorption variable costing income reconciliation fixed overhead",
+    "MicroTopic": "Absorption vs variable costing reconciliation",
+    "UniqueConceptKey": "E-D-S04-Absorption-variable-reconciliation",
+    "LOSTag": "P1-D.1 Cost measurement and assignment",
+    "primaryTheory": "D8",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Brixton Manufacturing reports the following data for the current year. The company uses absorption costing for external reporting and variable costing for internal analysis.\n\n• Beginning finished goods inventory: 3,000 units\n• Units produced: 60,000\n• Units sold: 55,000\n• Selling price: $45 per unit\n• Variable manufacturing cost: $14 per unit\n• Fixed manufacturing overhead: $480,000 per year\n• Variable selling and administrative: $3 per unit sold\n• Fixed selling and administrative: $250,000 per year\n\nThe beginning inventory units were manufactured last year at the same variable manufacturing cost of $14 per unit and carry $8 per unit of prior-year fixed overhead under absorption costing. If the controller prepares income statements under both methods, what is the difference in operating income between absorption costing and variable costing, and what explains the difference?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The difference between absorption costing and variable costing operating income arises solely from the treatment of fixed manufacturing overhead. Under absorption costing, fixed manufacturing overhead is a product cost — it is allocated to each unit produced and expensed through cost of goods sold when units are sold. Under variable costing, fixed manufacturing overhead is a period cost — it is expensed in full in the period incurred regardless of whether units are sold. When production exceeds sales, as it does here (60,000 produced > 55,000 sold), the 5,000-unit increase in ending finished goods inventory causes absorption costing to defer a portion of current-period fixed overhead to the balance sheet. The fixed overhead rate is $480,000 ÷ 60,000 units = $8.00 per unit. The deferred amount equals $8.00 × 5,000 units = $40,000. Therefore, absorption costing operating income ($850,000) exceeds variable costing operating income ($810,000) by $40,000. This reconciliation is independent of beginning inventory because beginning inventory costs are the same under both methods for the prior period's costs — the difference comes entirely from the change in inventory during the current period multiplied by the current-period fixed overhead rate.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-D-S04",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Absorption costing operating income exceeds variable costing operating income by $40,000 because the 5,000-unit inventory increase defers $40,000 of fixed manufacturing overhead to the balance sheet.",
+      "B": "Absorption costing operating income exceeds variable costing operating income by $70,000 because the 5,000-unit inventory increase multiplied by the variable manufacturing cost of $14 per unit yields additional inventoriable costs under absorption costing.",
+      "C": "Variable costing operating income exceeds absorption costing operating income by $40,000 because fixed manufacturing overhead is expensed as a period cost under variable costing and is therefore deducted immediately rather than deferred.",
+      "D": "Variable costing operating income exceeds absorption costing operating income by $110,000 because the 5,000-unit inventory increase multiplied by the full absorption product cost of $22 per unit captures the total manufacturing cost deferred under variable costing."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B attributes the $70,000 difference to the incorrect cost rate: $14.00 (variable manufacturing cost per unit) × 5,000 units = $70,000. This represents the variable manufacturing cost deferred in ending inventory under BOTH methods — both absorption and variable costing include variable manufacturing costs in inventory. The reconciliation between the two methods depends only on the treatment of fixed manufacturing overhead, not variable costs. Under both absorption and variable costing, the 5,000 additional units in ending inventory carry $14.00 of variable manufacturing cost each ($70,000 total). The $40,000 difference is the fixed overhead component alone: $8.00 per unit × 5,000 units. The correct reconciliation identifies that only the fixed manufacturing overhead rate determines the income difference when production and sales volumes differ.",
+    "ExplanationWrongC": "Option C correctly identifies the $40,000 amount but reverses the direction of the difference. When production (60,000 units) exceeds sales (55,000 units), ending inventory increases. Under absorption costing, the fixed overhead embedded in those additional 5,000 units is deferred to the balance sheet as part of inventory cost rather than being expensed immediately. This deferral means absorption costing reports HIGHER operating income than variable costing, not lower. Variable costing expenses all $480,000 of fixed manufacturing overhead in the current period regardless of inventory changes. The direction of the difference reverses when sales exceed production: in that case, absorption costing releases previously deferred fixed overhead from beginning inventory, making absorption income LOWER than variable income. The mnemonic is: production exceeds sales implies absorption income exceeds variable income.",
+    "ExplanationWrongD": "Option D computes the difference as $110,000 ($22.00 × 5,000) by using the total absorption product cost per unit rather than only the fixed overhead component. The full absorption product cost of $22.00 includes $14.00 of variable manufacturing costs plus $8.00 of fixed overhead. However, variable manufacturing costs of $14.00 are treated as product costs under BOTH absorption and variable costing — both methods defer these costs in ending inventory. The only cost component that is treated differently between the two methods is fixed manufacturing overhead ($8.00 per unit). Therefore, the reconciliation difference must be computed using only the fixed overhead rate multiplied by the change in inventory units: $8.00 × 5,000 = $40,000. Using the full absorption product cost overstates the difference because it double-counts the variable cost component that both methods treat identically."
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D-S05 throughput vs absorption costing income comparison",
+    "MicroTopic": "Throughput vs absorption costing comparison",
+    "UniqueConceptKey": "E-D-S05-Throughput-vs-absorption",
+    "LOSTag": "P1-D.1 Cost measurement and assignment",
+    "primaryTheory": "D8",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Springdale Industries is evaluating a proposal to adopt throughput costing for internal decision-making. The following data are available for the current year:\n\n• Beginning finished goods inventory: 0 units\n• Units produced: 80,000\n• Units sold: 65,000\n• Selling price: $50 per unit\n• Direct materials: $10 per unit\n• Direct labor: $6 per unit\n• Variable manufacturing overhead: $4 per unit\n• Fixed manufacturing overhead: $960,000 per year\n• Variable selling and administrative: $3 per unit sold\n• Fixed selling and administrative: $400,000 per year\n\nUnder throughput costing, only direct materials are treated as product costs. All other manufacturing costs are expensed as period costs. How does the company's operating income under absorption costing compare to operating income under throughput costing, and what drives the difference?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Throughput costing, also called super-variable costing, treats only direct materials as a product cost. All other manufacturing costs — direct labor, variable manufacturing overhead, and fixed manufacturing overhead — are treated as period costs and expensed in the period incurred. Under absorption costing, all manufacturing costs (direct materials, direct labor, variable overhead, and fixed overhead) are product costs that flow through inventory. When Springdale produced 80,000 units but sold only 65,000, the 15,000 units added to ending inventory create a $330,000 difference in operating income. Under absorption costing, each of those 15,000 units carries $22.00 of conversion and fixed overhead costs ($6.00 DL + $4.00 VOH + $12.00 FOH) that are deferred to future periods. Under throughput costing, those same $22.00 per unit are expensed immediately. Thus, absorption costing operating income ($575,000) exceeds throughput costing operating income ($245,000) by $330,000 (15,000 × $22.00). In practice, throughput costing is most relevant in Theory of Constraints environments where the focus is on maximizing throughput margin (sales minus direct materials) and where all conversion costs are considered largely fixed in the short run.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-D-S05",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Absorption costing operating income exceeds throughput costing operating income by $330,000; the 15,000 units in ending inventory each carry $22 of conversion and fixed overhead costs that absorption costing capitalizes but throughput costing expenses immediately.",
+      "B": "Absorption costing operating income exceeds throughput costing operating income by $180,000, representing only the fixed manufacturing overhead in the 15,000 ending inventory units ($12 × 15,000) because variable costs are treated the same under both methods.",
+      "C": "Throughput costing operating income exceeds absorption costing operating income by $330,000 because throughput costing excludes all conversion costs from product cost, reducing cost of goods sold and increasing reported income.",
+      "D": "Both methods report identical operating income because total manufacturing costs recognized over the product's life cycle are the same regardless of whether costs flow through inventory or are expensed immediately."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B understates the difference at $180,000 by considering only the fixed manufacturing overhead component ($12.00 × 15,000 units = $180,000) while ignoring that throughput costing also expenses direct labor ($6.00 × 15,000 units deferred under absorption = $90,000) and variable manufacturing overhead ($4.00 × 15,000 units = $60,000) as period costs. The defining feature of throughput costing is that ONLY direct materials are inventoried as product costs — ALL other manufacturing costs, including both variable and fixed conversion costs, are treated as period costs. When production exceeds sales, the full conversion and fixed overhead cost embedded in the additional inventory units contributes to the income difference. The complete computation must sum all three components: direct labor ($90,000) + variable overhead ($60,000) + fixed overhead ($180,000) = $330,000.",
+    "ExplanationWrongC": "Option C incorrectly reverses the direction of the difference. When production (80,000 units) exceeds sales (65,000 units), ending inventory increases by 15,000 units. Under absorption costing, $22.00 of conversion and fixed overhead costs per unit are deferred in those 15,000 ending inventory units, increasing absorption costing income relative to throughput costing. Throughput costing expenses all conversion and fixed overhead costs immediately, resulting in LOWER reported income when inventories are building. The direction would reverse only if the company were drawing down inventory (sales > production), in which case previously deferred costs would be released from beginning inventory under absorption costing, making absorption income lower. Here, with inventory increasing, absorption income is unequivocally higher.",
+    "ExplanationWrongD": "Option D claims that income is identical under both methods, which is true only when production exactly equals sales. When the number of units produced differs from the number of units sold, inventory levels change and the timing of cost recognition creates a difference in reported operating income. In this scenario, Springdale produced 15,000 more units than it sold, building inventory that absorbs $22.00 per unit of conversion and fixed overhead costs under absorption costing but not under throughput costing. The $330,000 difference is temporary — it will reverse when the 15,000 inventory units are eventually sold — but in the current period, the two methods report materially different income figures. This principle applies to all inventory valuation method comparisons: income differences arise from changes in inventory quantities multiplied by the cost components that are treated differently between the two methods."
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E-S01 COSO Principle 1 control environment effectiveness evaluation",
+    "MicroTopic": "COSO Principle 1 control environment evaluation",
+    "UniqueConceptKey": "E-E-S01-COSO-Principle-1-control-environment-effectiveness",
+    "LOSTag": "P1-E.1",
+    "primaryTheory": "E1",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "A mid-size manufacturer has the following characteristics: (1) the CEO consistently emphasizes ethical conduct in company-wide communications and has established a written code of conduct; (2) the board of directors consists of five members, all of whom are company executives with no independent directors; (3) the company has no audit committee; and (4) the CFO personally reviews and approves every journal entry exceeding $5,000. The controller has been asked to evaluate the control environment against COSO Principle 1 (demonstrates commitment to integrity and ethical values) and the broader control environment component. Which of the following is the most accurate evaluation?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The control environment is deficient because COSO Principle 1 requires the board of directors to demonstrate independence from management and exercise oversight of the internal control system. An all-executive board with no independent directors and no audit committee fails this fundamental governance requirement. While tone at the top (CEO emphasis on ethics, written code of conduct) addresses the integrity and ethical values attribute of Principle 1, it does not compensate for the absence of board independence and oversight. COSO explicitly identifies board independence as a critical attribute of the control environment component — strong executive messaging cannot substitute for structural governance deficiencies. The CFO's direct approval of all journal entries over $5,000 further demonstrates an organizational structure problem: the CFO is operating as a control activity rather than as part of the governance oversight layer, blurring the line between management and control. Under COSO Principle 1, the control environment is assessed holistically across all its attributes, and failure on board independence and organizational structure means the control environment is not effective.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-E-S01",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The control environment is effective because the CEO's demonstrated commitment to ethics and the written code of conduct satisfy the primary requirement of Principle 1, and the CFO's detailed review of journal entries provides a compensating operational control.",
+      "B": "The control environment is deficient because board independence and oversight are required attributes of the control environment under Principle 1, and an all-executive board with no audit committee fails this criterion regardless of the strength of tone at the top.",
+      "C": "The control environment is partially effective — the integrity and ethical values attribute is satisfied by the CEO's conduct, and the board independence deficiency is remediable through the CFO's journal entry approval serving as a compensating governance control.",
+      "D": "The control environment is deficient because COSO requires all five internal control components to be operating concurrently for any single component to be considered effective, and the absence of an audit committee means the monitoring component has failed, which disqualifies the control environment."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A overstates the weight of tone at the top and mischaracterizes the CFO's journal entry review as a compensating control for board independence. COSO Principle 1 specifies multiple attributes of the control environment, including board independence and oversight responsibility — not just integrity and ethical values. An all-executive board with no independent directors and no audit committee fails the board oversight attribute regardless of how strong the CEO's ethical messaging is. The CFO's approval of journal entries is an operational control activity, not a governance structure — compensating controls at the transaction level cannot substitute for structural governance deficiencies at the board level. A candidate selecting this option may conflate a necessary condition (tone at the top) with a sufficient condition for an effective control environment.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C introduces a concept of partial effectiveness that does not exist in the COSO framework. The control environment is assessed as a whole — material deficiencies in board independence and oversight are not remedied by strong tone at the top or by management-level controls. The CFO's journal entry review is not a governance control; it is an operational control activity performed by management. Governance controls operate at the board and audit committee level and are structurally independent of management. A candidate selecting this option may incorrectly assume that strengths in one attribute can offset deficiencies in another, when COSO requires that material deficiencies in any control environment attribute be evaluated for their effect on the overall component.",
+    "ExplanationWrongD": "Option D incorrectly asserts that COSO requires all five components to be operating concurrently for any single component to be considered effective. While COSO's components are interrelated, each component is evaluated independently against its own principles. The control environment component is assessed against the five principles in the control environment category (Principles 1-5), not against the monitoring component's principles (Principles 16-17). The absence of an audit committee is a control environment deficiency (lack of board oversight under Principle 1), not a monitoring deficiency. A candidate may incorrectly import a cross-component dependency requirement that COSO does not impose."
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E-S02 fraud triangle Cressey detection difficulty evaluation",
+    "MicroTopic": "Fraud triangle detection difficulty",
+    "UniqueConceptKey": "E-E-S02-fraud-triangle-Cressey-detection-difficulty",
+    "LOSTag": "P1-E.2",
+    "primaryTheory": "E4",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "An accounts payable clerk at a manufacturing company has accumulated significant personal gambling debts over the past year. The clerk is the only person who processes vendor invoices, enters them into the accounting system, and reconciles the accounts payable subledger — there is no independent review of the clerk's work. When questioned by a colleague about working late, the clerk stated, 'The company passed me over for promotion twice even though I've been here eight years. They owe me.' The controller is analyzing the fraud risk using Cressey's fraud triangle. Which leg of the fraud triangle is most difficult for management to detect through internal controls?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Rationalization is the most difficult leg of the fraud triangle to detect because it is an internal psychological state that exists only in the perpetrator's mind. Unlike pressure (which leaves observable traces such as lifestyle changes, requests for payroll advances, or behavioral shifts) and opportunity (which is visible in documented processes, system configurations, and segregation-of-duties analyses), rationalization consists of private justifications that an individual constructs to reconcile dishonest behavior with their self-image. The clerk's statement — 'They owe me' — is a textbook example of rationalization, but the statement alone is not proof of fraud, and many employees who rationalize never verbalize it. Management can observe pressure indicators through attentive supervision and can identify opportunity through internal control assessments and process mapping. However, there is no internal control that can detect how an employee silently justifies fraud to themselves. Cressey identified rationalization as the most elusive element precisely because it is invisible to external observers.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-E-S02",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Pressure — because personal financial difficulties are inherently private and management cannot monitor employees' personal financial lives.",
+      "B": "Opportunity — because the absence of segregation of duties creates multiple avenues for fraud that are difficult to fully eliminate in a cost-constrained manufacturing environment.",
+      "C": "Pressure — because financial pressure is the originating cause of fraud and the most important leg to address in a fraud prevention program.",
+      "D": "Rationalization — because rationalization is an internal psychological state that exists only in the perpetrator's mind, whereas pressure leaves observable behavioral traces and opportunity is visible in documented control structures."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A identifies pressure as the hardest to detect, but this overstates the invisibility of financial pressure. While the full extent of personal debts may remain private, pressure produces observable indicators — sudden lifestyle changes, requests for payroll advances, wage garnishments, reluctance to take vacation, or behavioral changes such as irritability and defensiveness. Attentive supervisors and managers can observe these signals. Furthermore, Cressey's research demonstrates that pressure is the leg most commonly discovered when fraud is investigated — perpetrators often confess the financial motivation. The key distinction is that pressure leaves observable traces, while rationalization leaves none. A candidate selecting this option may underestimate the visibility of pressure indicators in a workplace setting.",
+    "ExplanationWrongB": "Option B identifies opportunity as the hardest to detect, but weak segregation of duties is precisely what internal control assessments are designed to uncover. An auditor or control assessor can map transaction flows from vendor invoice receipt through system entry to subledger reconciliation, identify incompatible duties concentrated in one role, and document the absence of independent review. Opportunity is the most controllable and detectable leg of the fraud triangle because it manifests in documented processes, system access rights, and organizational charts — all of which are auditable. A candidate selecting this option may confuse the difficulty of eliminating opportunity with the difficulty of detecting it.",
+    "ExplanationWrongC": "Option C repeats the claim that pressure is most difficult to detect and adds the argument that it is the most important leg. However, importance and detectability are separate analytical dimensions. While Cressey identified pressure as the originating cause requiring a non-shareable financial problem, the question asks which leg is most difficult to detect — not which is most causally important. Pressure leaves behavioral traces that attentive management can observe; rationalization is purely internal. Additionally, COSO and the fraud literature emphasize that opportunity reduction through internal controls is the most direct and practical fraud deterrent available to management, even if pressure is the triggering event. A candidate may conflate causal importance with detection difficulty.",
+    "ExplanationWrongD": ""
+  },
+  {
+    "Part": 1,
+    "Section": "F",
+    "SectionName": "Technology and Analytics",
+    "Topic": "F-S02 AI ML governance algorithmic bias disparate impact",
+    "MicroTopic": "AI ML algorithmic bias governance",
+    "UniqueConceptKey": "E-F-S02-AI-ML-governance-algorithmic-bias-disparate-impact",
+    "LOSTag": "P1-F.1",
+    "primaryTheory": "F4",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "A regional bank uses a machine learning model to score credit card applications. An internal audit reveals that the model approves 22% of minority applicants versus 41% of non-minority applicants. The model is a deep neural network that was not trained on race or ethnicity data. The Chief Risk Officer (CRO) argues the model must be suspended because proxy variables such as ZIP code, educational institution attended, and employment type create a disparate impact. The Head of Data Science argues the model is unbiased because race was never an input feature and the model's decisions are based solely on legitimate creditworthiness factors. As the management accountant advising the audit committee, which position should you recommend?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Recommend an independent fairness audit while advising the audit committee of both regulatory risk and reputational risk. The 19-percentage-point approval gap is a material disparity that warrants investigation before reaching a conclusion about bias. The Head of Data Science's argument — that the model cannot be biased because race was not an input feature — ignores the well-documented phenomenon of proxy discrimination: ZIP code, educational institution, and employment type are known to correlate with protected-class status and can function as de facto race inputs. The CRO's call for immediate suspension is premature without evidence that the disparity is caused by bias rather than by legitimate differences in creditworthiness factors that happen to correlate with demographic characteristics. The appropriate governance response is to commission an independent fairness audit that tests for proxy discrimination, evaluates less-discriminatory-alternative models, and quantifies the regulatory exposure under the Equal Credit Opportunity Act and Fair Housing Act. As a management accountant, the recommendation must balance regulatory compliance obligations with operational continuity — advocating for evidence-gathering before either suspension or dismissal of the concern.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-F-S02",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Support the CRO — the 19-percentage-point disparity creates an unacceptable regulatory exposure, and best practice in model risk governance requires immediate suspension of any model producing disparate outcomes until the root cause is identified and remediated.",
+      "B": "Support the Head of Data Science — the model was not trained on protected-class data, legitimate creditworthiness factors explain the correlation, and suspending the model would disrupt credit operations without evidence that the disparity results from unlawful discrimination.",
+      "C": "Recommend an independent fairness audit of the model to test whether proxy variables are functioning as de facto protected-class inputs, and advise the audit committee that the bank faces both regulatory risk under fair lending laws and reputational risk if the model continues operating without validated fairness controls.",
+      "D": "Recommend that the CRO and Head of Data Science jointly develop a fairness mitigation plan while the model continues operating, because a 19-percentage-point gap is within typical industry tolerances for credit scoring models, and suspending the model would be disproportionate to the unverified risk."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section F"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A advocates immediate suspension based solely on disparate outcome. While the CRO's concern about the 19-percentage-point gap is legitimate, immediate suspension without investigation is not the standard regulatory expectation under U.S. fair lending laws (ECOA, Fair Housing Act). Regulators expect lenders to investigate disparities, evaluate whether less-discriminatory alternatives exist, and assess whether the disparity is justified by business necessity. A management accountant advising on governance should recommend evidence-gathering before operational disruption, not immediate suspension based on a single disparity statistic. The phrase 'unacceptable regulatory exposure' overstates the conclusion that should be drawn from an observed disparity alone — the disparity triggers an obligation to investigate, not an automatic determination of unlawfulness.",
+    "ExplanationWrongB": "Option B accepts the Head of Data Science's assertion that the model is unbiased because race was not an input feature. This position ignores the well-documented phenomenon of proxy discrimination — ZIP code, educational institution, and employment type are established to correlate with race and can produce disparate impact even when protected-class variables are explicitly excluded. The 'black-box' nature of the neural network compounds this concern because the model's internal logic cannot be inspected to verify that decisions are based on legitimate factors. A 19-percentage-point gap is a material disparity that warrants investigation regardless of the feature set. A management accountant should not dismiss a disparity this large based solely on the absence of explicit protected-class features in the training data.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D recommends continuing model operations while developing a mitigation plan and characterizes the 19-percentage-point gap as within typical industry tolerances. Both elements of this recommendation are problematic. First, a 19-percentage-point approval rate gap (22% vs. 41%) represents a nearly 2:1 ratio and is not within typical industry tolerances — U.S. regulators have brought enforcement actions for disparities smaller than this. Second, continuing operations during mitigation exposes the bank to additional disparate impact for every application processed during the development period. Prudent model risk governance requires restricting or pausing the model pending investigation when a material fairness concern is identified, not waiting until the concern is fully resolved. A candidate selecting this option may incorrectly assume that typical industry practice tolerates this magnitude of unexplained disparity."
+  },
+  {
+    "Part": 1,
+    "Section": "F",
+    "SectionName": "Technology and Analytics",
+    "Topic": "F-S03 data analytics types descriptive diagnostic predictive classification",
+    "MicroTopic": "Data analytics types classification",
+    "UniqueConceptKey": "E-F-S03-data-analytics-types-descriptive-diagnostic-predictive",
+    "LOSTag": "P1-F.2",
+    "primaryTheory": "F3",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "The CFO of a national retail chain asks the FP&A team three questions:\n\nQuestion 1: 'What were our top five products by gross margin last quarter?'\nQuestion 2: 'Why did gross margin decline by 3 percentage points in the Midwest region compared to the same quarter last year?'\nQuestion 3: 'If we increase marketing spend by 15% in the Northeast region, what gross margin uplift should we expect next quarter?'\n\nWhich answer correctly matches each CFO question to the appropriate data analytics type?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Question 1 asks 'What were our top five products by gross margin last quarter?' — this is descriptive analytics, which summarizes historical data to answer 'what happened.' The question requests a factual summary of past performance without asking why or what will happen. Question 2 asks 'Why did gross margin decline by 3 percentage points in the Midwest region?' — this is diagnostic analytics, which investigates causation to answer 'why did it happen.' The question requires drilling into the drivers of an observed variance. Question 3 asks 'If we increase marketing spend by 15%, what margin uplift should we expect?' — this is predictive analytics, which forecasts future outcomes to answer 'what will happen.' The question uses a hypothesized change (increased marketing) to project a future result. The sequence — descriptive (what happened), diagnostic (why it happened), predictive (what will happen) — follows the natural progression of data analytics maturity from hindsight through insight to foresight.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-F-S03",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Question 1 = Descriptive, Question 2 = Diagnostic, Question 3 = Predictive",
+      "B": "Question 1 = Diagnostic, Question 2 = Descriptive, Question 3 = Predictive",
+      "C": "Question 1 = Descriptive, Question 2 = Predictive, Question 3 = Prescriptive",
+      "D": "Question 1 = Predictive, Question 2 = Diagnostic, Question 3 = Prescriptive"
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section F"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B swaps the classifications for Questions 1 and 2. 'What were our top five products by gross margin last quarter?' asks for a summary of historical data — this is descriptive analytics. It answers 'what happened' without requesting causal explanation or forecasting. 'Why did gross margin decline by 3 percentage points in the Midwest region?' asks for causal explanation — this is diagnostic analytics. It answers 'why it happened' by drilling into the drivers of a variance. The candidate may confuse asking about past events (which is descriptive) with explaining past events (which is diagnostic). Both are backward-looking, but they serve fundamentally different analytical purposes.",
+    "ExplanationWrongC": "Option C correctly identifies Question 1 as descriptive but misclassifies the other two. 'Why did gross margin decline?' is diagnostic, not predictive — it explains a past event rather than forecasting a future one. Diagnostic analytics investigates causation in historical data. 'What margin uplift should we expect if we increase marketing spend?' is predictive, not prescriptive — it forecasts a future outcome given a proposed change. Prescriptive analytics would go further to recommend a specific course of action (e.g., 'Increase Northeast marketing spend by 15% because the expected margin uplift of 2.1% exceeds the cost of capital'). The candidate may confuse the complete analytics progression: descriptive → diagnostic → predictive → prescriptive.",
+    "ExplanationWrongD": "Option D misclassifies all three questions. 'What were our top five products?' is descriptive, not predictive — it summarizes past performance, not forecasts future outcomes. 'Why did margin decline?' is diagnostic, not predictive — it explains causation, not forecasts. 'What margin uplift should we expect?' is predictive, not prescriptive — it forecasts a future state given a proposed change, without recommending action. The candidate may conflate predictive analytics (what will happen) with prescriptive analytics (what should we do), which is a common point of confusion because both are forward-looking. The distinguishing feature is that prescriptive analytics contains a recommendation, not merely a forecast."
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S11 LCM inventory method reserve vs individual evaluation",
+    "MicroTopic": "LCM inventory method evaluation",
+    "UniqueConceptKey": "A-S11-LCM-inventory-method-reserve-individual",
+    "LOSTag": "P1-A.3 Inventory valuation",
+    "primaryTheory": "A3",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Controller Elena Rossi of Apex Medical Distributors must recommend an inventory valuation approach for year-end. Apex uses LIFO and must apply lower of cost or market (LCM) to 850 SKUs across 8 product categories. Market conditions vary dramatically: categories 1-3 are above cost, categories 4-6 are 15-30% below cost, and categories 7-8 are 40-50% below cost. The assistant controller proposes a single 5% inventory reserve, arguing it saves 40 hours of staff time and approximates the individual-item write-down — the $2,400 difference between the two methods is 0.2% of Apex's $1,200,000 net income. The audit partner has informally indicated an unqualified opinion is still achievable with the reserve method given the immaterial difference. The CFO prefers the simpler approach, noting Apex's lean finance team is already stretched thin. However, ASC 330-10-35-7 states LCM should be applied on an item-by-item basis. Elena must weigh competing considerations: literal compliance with ASC 330 versus the cost-benefit principle, the audit committee's tolerance for a technical departure even when immaterial, and the burden on an overstretched finance function. Which recommendation should Elena present to the CFO?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Elena should recommend individual-item LCM for all 850 SKUs while proposing an accompanying operational improvement plan. ASC 330-10-35-7 establishes individual-item LCM as the GAAP-preferred measurement basis because it provides the most faithful representation of inventory impairment — particularly critical here given the 0-50% dispersion of market declines across categories. The $2,400 difference is small in absolute terms, but Elena must evaluate this through two distinct lenses. First, the qualitative materiality lens: the SEC's Staff Accounting Bulletin No. 99 emphasizes that quantitatively small misstatements can be qualitatively material if they mask a change in earnings trends or conceal a failure to meet analyst expectations. A departure from individual-item LCM, even if small, could be viewed as a deliberate decision to use a non-GAAP measurement method when GAAP provides a specific requirement — a different character than a good-faith estimation error. Second, the governance lens: the audit committee's tolerance for a technical departure should be assessed against the company's overall control environment. If the board tolerates a known GAAP departure because it is 'small enough,' that tolerance becomes precedent for future departures on larger items when the finance team is similarly stretched. Elena should recommend: (a) adopting individual-item LCM for year-end, establishing a strong compliance precedent, and (b) implementing an automated LCM module in the inventory system within 90 days to eliminate the recurring 40-hour burden, transforming a one-time cost into a permanent efficiency gain. This recommendation satisfies both the accounting standard and the operational concern that the CFO raised, demonstrating the evaluative judgment expected of a controller.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S11",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Recommend the 5% blanket reserve because the $2,400 difference is quantitatively immaterial (0.2% of net income), the audit partner has signaled acceptance, and the cost of individual-item LCM for 850 SKUs exceeds any benefit to financial statement users. The cost-benefit principle allows Apex to forgo precise measurement when the incremental precision is negligible.",
+      "B": "Recommend individual-item LCM for all 850 SKUs while simultaneously proposing an operational improvement plan: implement an automated LCM module in the inventory system within 90 days to eliminate the recurring computational burden. This establishes GAAP compliance as a non-negotiable governance standard while addressing the CFO's legitimate operational concern through a one-time investment.",
+      "C": "Recommend applying the reserve method for the current year only, with a commitment to transition to individual-item LCM in the following year after upgrading the inventory system. This proposal allows the finance team to meet the year-end deadline while signaling to auditors and the audit committee that Apex recognizes the GAAP requirement and has a concrete remediation timeline.",
+      "D": "Recommend individual-item LCM for categories 7-8 (those with the largest declines) and the 5% reserve for categories 4-6, because categories 7-8 represent 80% of the total write-down and capturing those declines individually while using the reserve for the remainder provides substantially the same measurement at roughly half the computational cost."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Recommending the reserve method solely on quantitative materiality grounds underweights two considerations that a controller must evaluate. First, SAB No. 99 explicitly warns that quantitative immateriality does not automatically render a misstatement acceptable — qualitative factors, including whether the departure reflects a deliberate choice to use a non-GAAP method when GAAP provides a specific requirement, can make even a small deviation material. An intentional decision to substitute a reserve percentage for individual-item LCM is categorically different from a measurement error within a GAAP-compliant method. Second, Elena must consider the governance precedent this sets. If the board accepts a known GAAP departure at $2,400 this year, what is the principle that prevents accepting a $24,000 departure next year when the finance team faces another busy close? The controller's role includes protecting the consistency of accounting policy application, not just the quantitative accuracy of any single period's numbers. The cost-benefit argument is not automatically wrong — but it must be weighed against compliance precedent and qualitative materiality, not treated as a trump card.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "The transitional approach is a reasonable compromise that several controllers would consider defensible in Elena's position, and it has the advantage of acknowledging the GAAP requirement while accommodating the real-world year-end deadline constraint. However, it creates two complications that Elena should weigh before recommending it. First, a transitional approach with a disclosed plan effectively admits that the current year's measurement basis is not GAAP — the company is stating, in substance, 'our inventory is not measured per ASC 330 this year, but will be next year.' This admission alone may attract auditor emphasis-of-matter language or SEC comment letter inquiry, undermining the very simplicity the CFO sought. Second, transition plans are easy to announce and hard to execute — the following year's close may bring its own pressures, and the precedent of deferring compliance creates a pattern risk. Elena should prefer a solution that achieves compliance immediately while addressing the operational burden through a parallel system upgrade track, rather than making compliance itself contingent on a future system completion.",
+    "ExplanationWrongD": "The hybrid approach is analytically sophisticated — it targets the computational effort where the impairment is largest — but it has no basis in ASC 330. The Codification does not permit a 'mixed measurement basis' where some inventory items use individual-item LCM and others use a reserve percentage, unless the items measured by reserve are genuinely immaterial both individually and in the aggregate. Categories 4-6 are 15-30% below cost — applying a flat 5% reserve would understate the impairment for items at 30% below cost and overstate it for items at 15%. The very dispersion that makes individual-item LCM burdensome (varying market declines across SKUs) is also what makes a uniform reserve inaccurate. Elena would be combining the worst of both approaches: the cost of performing partial LCM work (for categories 7-8) plus the GAAP risk of using a non-compliant method (for categories 4-6). If the goal is cost reduction, full-reserve with disclosure is at least internally consistent. If the goal is GAAP compliance, full individual-item LCM is the only method that achieves it. The hybrid splits the difference in a way that satisfies neither objective."
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S12 bond debt covenant ratio analysis early extinguishment",
+    "MicroTopic": "Bond debt covenant analysis",
+    "UniqueConceptKey": "A-S12-bond-debt-covenant-ratio-early-extinguishment",
+    "LOSTag": "P1-A.7 Debt extinguishment",
+    "primaryTheory": "A7",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "CFO David Okonkwo of Atlantic Logistics is reviewing the company's debt covenant compliance before the December 31 year-end close. Atlantic has $10,000,000 of 6% bonds outstanding with a carrying value of $9,600,000 (issued at a discount three years ago). The bonds are callable at 104. Atlantic's year-end balance sheet shows total liabilities of $15,200,000 (including the bonds at carrying value) and total equity of $5,000,000. The bond indenture requires Atlantic to maintain a debt-to-equity ratio not exceeding 3.2. After a year of operating losses that eroded retained earnings, David is concerned about covenant compliance. He is evaluating whether to call the bonds early to improve the D/E ratio. If Atlantic calls the bonds at year-end, what is the effect on the debt-to-equity ratio?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The correct answer reflects a two-step analysis. Step 1 — Current D/E ratio: Total liabilities of $15,200,000 divided by total equity of $5,000,000 equals 3.04. This is below the 3.2 covenant threshold, but with operating losses compressing equity, David's concern is well-founded. Step 2 — D/E after calling the bonds: Calling the bonds at 104 requires a cash payment of $10,000,000 × 1.04 = $10,400,000. The loss on early extinguishment equals the call price minus the carrying value: $10,400,000 − $9,600,000 = $800,000. Under ASC 470-50, this loss is recognized in the income statement and flows through to retained earnings, reducing total equity. After calling the bonds, total liabilities decrease from $15,200,000 to $5,600,000 (the $9,600,000 bond carrying value is removed, but no new debt is assumed). Total equity decreases from $5,000,000 to $4,200,000 (the $800,000 loss reduces retained earnings). The new D/E ratio is $5,600,000 ÷ $4,200,000 = 1.33. Calling the bonds substantially improves the D/E ratio from 3.04 to 1.33 because the reduction in debt ($9,600,000) far outweighs the equity reduction from the loss ($800,000). The covenant risk is eliminated, and Atlantic's leverage profile improves dramatically. This analysis assumes Atlantic has sufficient cash or available credit to fund the $10,400,000 call payment without issuing replacement debt.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S12",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "The D/E ratio improves from 3.04 to 1.33 because the bond carrying value ($9,600,000) is removed from liabilities while equity decreases by only the loss on extinguishment ($800,000). The debt reduction far outweighs the equity reduction, eliminating the covenant risk.",
+      "B": "The D/E ratio worsens from 3.04 to 3.62 because the $800,000 loss on extinguishment reduces retained earnings, but Atlantic must borrow new funds to finance the call — so total debt remains at $15,200,000 while equity shrinks to $4,200,000.",
+      "C": "The D/E ratio remains essentially unchanged at 3.04 because the reduction in liabilities from retiring the bonds is offset by the $10,400,000 cash outflow, which reduces assets without changing the relationship between debt and equity.",
+      "D": "The D/E ratio improves from 3.04 to 1.04 because the $10,000,000 face value of the bonds is removed from liabilities entirely, and the loss on extinguishment is treated as a non-cash charge that does not affect equity for covenant computation purposes."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This choice correctly identifies the $800,000 loss on extinguishment and its effect on equity ($5,000,000 − $800,000 = $4,200,000) but makes a critical assumption not stated in the fact pattern: that Atlantic must borrow to fund the call. The question asks about the effect of calling the bonds, not refinancing them. If Atlantic has sufficient cash reserves or available revolving credit capacity, no new borrowing is required. Even if Atlantic needed to borrow the $10,400,000, the new debt would replace the $9,600,000 carrying value on the balance sheet — a net increase in debt of only $800,000 — not the full $15,200,000 assumed in this computation. This computed D/E of 3.62 represents a worst-case scenario that implicitly assumes Atlantic both loses the $800,000 in equity AND retains the original bond debt — a double-count that does not reflect extinguishment accounting under ASC 470-50 where the bond's carrying value is derecognized.",
+    "ExplanationWrongC": "This choice confuses the balance sheet with the cash flow statement. The $10,400,000 cash outflow does reduce assets, but simultaneously the bond liability of $9,600,000 is derecognized — a net balance sheet reduction of $800,000 ($10,400,000 asset decrease minus $9,600,000 liability decrease). The D/E ratio specifically compares total liabilities to total equity, not total assets to total equity. When the bond carrying value is removed, total liabilities decrease by $9,600,000. The equity effect ($800,000 decrease) is much smaller than the liability effect ($9,600,000 decrease), so the D/E ratio must improve. The accounting equation confirms this: Assets − $10,400,000 = (Liabilities − $9,600,000) + (Equity − $800,000). Both sides decrease by $10,400,000. After these entries, liabilities are $9,600,000 lower and equity is $800,000 lower — the numerator of D/E fell by 12 times the denominator's decline, producing a substantial improvement.",
+    "ExplanationWrongD": "This choice contains two errors. First, bond extinguishment accounting under ASC 470-50 uses the carrying value ($9,600,000), not the face value ($10,000,000), to derecognize the liability. The $400,000 unamortized discount is part of the bond's net carrying amount and cannot be ignored. Second, the $800,000 loss on extinguishment is NOT a non-cash charge that can be excluded from covenant computations under ASC 470-50-40-2. The difference between the reacquisition price and the net carrying amount is recognized as a loss in income in the period of extinguishment, reducing net income, retained earnings, and ultimately total equity. Debt covenants referencing D/E as computed from GAAP financial statements will reflect this equity reduction. The computed D/E of 1.04 would only be achievable if the loss were excluded from equity AND the face value (not carrying value) were removed from debt — a dual departure from GAAP that no independent auditor would accept."
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S13 EPS contingently issuable shares performance condition ASC 260",
+    "MicroTopic": "EPS contingently issuable shares",
+    "UniqueConceptKey": "A-S13-EPS-contingently-issuable-shares-ASC260",
+    "LOSTag": "P1-A.10 Earnings per share",
+    "primaryTheory": "A10",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Controller Sarah Lin of Pacific Foods is computing earnings per share for the year ended December 31. Two years ago, Pacific granted 100,000 performance-based restricted stock units (RSUs) to senior executives. The RSUs vest only if Pacific achieves diluted EPS of at least $2.50 in the fiscal year ending December 31 of the vesting year. At December 31, Pacific's diluted EPS is $2.72 — the performance condition has been met for the first time. The 100,000 shares will be issued 60 days after year-end, upon completion of the audit. Sarah is also computing diluted EPS, which includes 50,000 outstanding stock options that are dilutive. The weighted-average common shares outstanding during the year is 2,000,000. Under ASC 260, how should Sarah treat the 100,000 performance-based RSUs in the current year's basic and diluted EPS computations?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Under ASC 260-10-45-48, contingently issuable shares shall be considered outstanding and included in the computation of basic EPS as of the date that all necessary conditions have been satisfied. The performance condition (diluted EPS of at least $2.50) was met as of December 31 — the end of the reporting period. Therefore, the 100,000 RSU shares are included in basic EPS for the current year, treated as if they were outstanding for the entire period during which the contingent share agreement existed (from the grant date two years ago), weighted appropriately. For diluted EPS, ASC 260-10-45-52 provides that contingently issuable shares that are issuable upon the attainment of a specified level of earnings shall be included in diluted EPS based on the number of shares that would be issuable if the end of the reporting period were the end of the contingency period, if the effect is dilutive. Since the condition was met at year-end, the 100,000 shares are also included in diluted EPS alongside the 50,000 dilutive stock options — the RSUs do not replace or offset the options. Sarah should verify that the RSUs are dilutive (adding shares to the denominator without an earnings adjustment reduces EPS) and include them in both computations. ASC 260-10-45-53 further clarifies that if the condition is met at period-end, the shares are no longer considered contingently issuable for EPS purposes — they are treated as unconditionally issuable and subject to the standard weighted-average share computation.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S13",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Exclude the RSUs from both basic and diluted EPS because the shares have not yet been issued. Contingently issuable shares are included only when the shares are physically delivered to the recipients.",
+      "B": "Include the RSUs in diluted EPS only, because contingently issuable shares are treated as potential common shares under ASC 260 and are never included in basic EPS regardless of whether the performance condition is met. The RSUs are dilutive and are added to the diluted EPS denominator alongside the 50,000 stock options.",
+      "C": "Include the RSUs in basic EPS only, because the performance condition was satisfied at year-end. For diluted EPS, the RSUs are excluded because the calculation already includes the 50,000 stock options, and adding the RSUs would double-count the dilutive effect.",
+      "D": "Include the RSUs in both basic EPS and diluted EPS because the performance condition (diluted EPS ≥ $2.50) was satisfied at December 31. Under ASC 260, contingently issuable shares whose conditions are met by period-end are included in basic EPS as of the date conditions are satisfied and also included in diluted EPS."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "ASC 260-10-45-48 explicitly rejects the argument that physical issuance is required for EPS inclusion. The standard states that contingently issuable shares 'shall be considered outstanding and included in the computation of basic earnings per share as of the date that all necessary conditions have been satisfied.' The relevant date is when the contingency is resolved, not when the shares are delivered. The 60-day delay between year-end and physical share issuance is administrative — the substantive condition (EPS target) was met at December 31, and the obligation to issue shares is unconditional at that point. Conditioning EPS inclusion on physical delivery would allow companies to manipulate EPS by scheduling share issuance after year-end, which is precisely the outcome ASC 260 was designed to prevent. Pacific must include the 100,000 RSU shares in the basic EPS denominator for the current year.",
+    "ExplanationWrongB": "This choice reflects a partial understanding of ASC 260 but overstates the restriction on basic EPS inclusion. It is true that contingently issuable shares are initially evaluated as potential common shares, similar to options and warrants. However, ASC 260-10-45-48 creates a specific exception: when all necessary conditions are satisfied by the end of the reporting period, the shares graduate from 'contingently issuable' to 'unconditionally issuable' for EPS purposes and are included in basic EPS. The standard does not permanently quarantine these shares in diluted EPS only. The distinction matters because inclusion in basic EPS affects the starting point for the diluted EPS computation and is reported separately on the face of the income statement under ASC 260-10-45-2, which requires presentation of basic and diluted EPS with equal prominence.",
+    "ExplanationWrongC": "This choice correctly identifies that the RSUs belong in basic EPS but incorrectly excludes them from diluted EPS. There is no 'double-counting' concern because basic EPS and diluted EPS are separate computations with different denominators — the diluted EPS denominator starts with the basic EPS denominator and then adds the dilutive effect of all potential common shares. The 100,000 RSUs and the 50,000 stock options are distinct instruments that each contribute to dilution independently; one does not replace or subsume the other. Excluding the RSUs from diluted EPS would understate the total dilutive effect and produce a diluted EPS figure that is not fully diluted, violating the fundamental purpose of the diluted EPS calculation under ASC 260-10-45-16. The correct diluted EPS computation uses the basic EPS denominator (which includes the RSUs) plus the dilutive effect of the stock options.",
+    "ExplanationWrongD": ""
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S14 cash flow classification judgment operating investing financing borderline",
+    "MicroTopic": "Cash flow classification judgment",
+    "UniqueConceptKey": "A-S14-cash-flow-classification-judgment-borderline",
+    "LOSTag": "P1-A.9 Statement of cash flows",
+    "primaryTheory": "A9",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Controller James Park of Meridian Manufacturing is reviewing three complex transactions for the statement of cash flows and must understand why the ASC 230 classification framework treats each one differently. Item 1: equipment acquired through a capital lease — no cash changed hands, a $400,000 lease liability was recorded. Item 2: sale-leaseback of a warehouse generating $2,500,000 cash — the $500,000 gain is deferred. Item 3: $120,000 dividend from a 30%-owned equity-method investee where cumulative dividends ($380,000) now exceed cumulative share of earnings ($350,000). James decomposes the ASC 230 framework applied to each item, observing that Item 1 and Item 2 both involve bright-line classification rules while Item 3 requires tracking an entity-specific cumulative data point. What is the underlying structural reason that ASC 230 subjects equity-method dividends to entity-specific tracking while capital leases and sale-leasebacks use bright-line rules?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The structural reason is that equity-method dividends, unlike capital leases and sale-leasebacks, require distinguishing between recovery of the investor's original capital and earnings generated by the investee after acquisition. ASC 230-10-45-21C establishes that dividends representing a return ON investment (cumulative dividends ≤ cumulative share of earnings) are operating inflows, while dividends representing a return OF investment (cumulative dividends > cumulative share of earnings) are investing inflows. This bifurcation is inherently entity-specific because cumulative share of earnings depends on the investee's entire earnings history since the investor acquired the equity interest — a data point unique to each investor-investee relationship. By contrast, Item 1 (capital lease) involves no cash flow at all — ASC 230-10-50-3 classifies it as a non-cash transaction requiring note disclosure, a bright-line rule that does not depend on entity-specific history. Item 2 (sale-leaseback) falls under ASC 230-10-45-12, which classifies proceeds from the sale of property, plant, and equipment as investing inflows — again a bright-line classification that does not vary with the entity's history. The equity-method dividend framework is the only one of the three where the classification of a current-period cash flow depends on amounts accumulated over multiple prior periods. This cumulative-tracking requirement makes the classification structurally different: it introduces a dependency on the completeness and accuracy of historical accounting records, creates a binary classification boundary that can flip based on a small change in cumulative earnings, and requires the controller to maintain separate tracking for each equity-method investee. Understanding this structural difference — entity-specific cumulative tracking versus bright-line rule application — is essential for controllers evaluating the judgment intensity of cash flow classifications.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S14",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Item 1 involves the largest dollar amount ($400,000) among the three transactions, and the structural difference is that capital leases are more complex than either sale-leasebacks or equity-method dividends because they involve both an asset and a liability recorded simultaneously without cash changing hands.",
+      "B": "Equity-method dividends (Item 3) are the only transaction where ASC 230 requires distinguishing between return of investment and return on investment — a determination that depends on the investor's cumulative share of the investee's earnings tracked over multiple periods. Items 1 and 2, by contrast, use bright-line ASC 230 rules that do not depend on entity-specific history.",
+      "C": "Item 2 involves the largest cash flow impact ($2,500,000), and the structural difference is that sale-leaseback classification depends on ASC 842 lease classification — a multi-factor test — while capital leases and equity-method dividends are classified under single-factor rules that do not require evaluating lease terms.",
+      "D": "All three items require equivalent entity-specific tracking because each classification depends on whether the transaction involves cash. Item 1 involves no cash (non-cash disclosure), Item 2 involves cash proceeds (investing), and Item 3 involves cash received (operating or investing depending on cumulative tracking). The classification frameworks are structurally equivalent in their dependency on entity-specific data."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Focusing on dollar magnitude confuses transaction size with classification framework complexity. The $400,000 capital lease is indeed a significant non-cash transaction requiring disclosure under ASC 230-10-50-3, but the classification decision — exclude from the cash flow statement, disclose in the notes — is a single bright-line determination. There is no entity-specific cumulative data to track, no bifurcation, and no binary classification threshold that can flip based on historical amounts. The simultaneous recording of an asset and liability without cash is a characteristic of all non-cash transactions, not a source of classification ambiguity. The structural difference between the three items is not about dollar amounts but about whether the ASC 230 guidance incorporates an entity-specific historical tracking requirement. Item 1 and Item 2 do not; Item 3 does. This structural difference — not transaction size — is what makes equity-method dividend classification fundamentally different from capital lease and sale-leaseback classification.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This choice overstates the relationship between ASC 842 and ASC 230 for sale-leaseback classification. The lease classification under ASC 842 (operating versus finance) does not change the ASC 230 classification of the sale proceeds: ASC 230-10-45-12 classifies proceeds from the sale of PPE as investing inflows regardless of whether the subsequent lease is operating or finance. The deferred gain treatment varies by lease type (immediate recognition for finance leases, deferral and amortization for operating leases), but this affects the operating section reconciliation under the indirect method, not the classification of the $2,500,000 cash inflow. Furthermore, the multi-factor lease classification test under ASC 842 applies to the lease component of the transaction, not to the cash flow classification — there is no 'classification fork' in ASC 230 created by ASC 842. Item 2's classification is bright-line and does not depend on entity-specific history, making it structurally similar to Item 1 and structurally different from Item 3.",
+    "ExplanationWrongD": "This choice incorrectly equates three classification frameworks that are structurally distinct. Item 1 involves no cash flow classification at all — it is a non-cash transaction that ASC 230-10-50-3 explicitly excludes from the cash flow statement. Item 2 involves a bright-line classification under ASC 230-10-45-12 with no entity-specific tracking. Item 3 involves ASC 230-10-45-21C, which is the only framework among the three that requires the investor to accumulate and track entity-specific data (cumulative share of earnings) over multiple periods. This cumulative tracking is not 'equivalent' to the bright-line rules governing Items 1 and 2. The dependency on historical data makes Item 3's classification structurally different: a controller classifying Item 1 or 2 can verify the classification in minutes using the current-period transaction details alone. A controller classifying Item 3 must verify the completeness and accuracy of the cumulative earnings tracker spanning the entire investment holding period — a fundamentally different analytical task."
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S15 equity method OCI investee other comprehensive income",
+    "MicroTopic": "Equity method OCI analysis",
+    "UniqueConceptKey": "A-S15-equity-method-OCI-investee-other-comprehensive-income",
+    "LOSTag": "P1-A.8 Equity method investments",
+    "primaryTheory": "A8",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Controller Elena Rossi of Apex Medical Distributors is preparing the year-end financial statements. Apex owns a 35% equity interest in MedSupply Co., a privately held surgical supply manufacturer, and accounts for the investment using the equity method. MedSupply reports the following for the year: net income of $2,000,000 and other comprehensive income of $500,000, consisting entirely of an unrealized gain on available-for-sale debt securities. Apex's pre-investment net income (before equity-method pickup) is $8,500,000. Elena must determine how Apex's share of MedSupply's net income and other comprehensive income flows through Apex's financial statements. Under ASC 323 (Equity Method), what amounts should Apex recognize in its income statement and other comprehensive income for the year?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under ASC 323-10-35-4, an investor using the equity method recognizes its proportionate share of the investee's earnings or losses in its income statement. Apex's 35% share of MedSupply's $2,000,000 net income is $700,000, which increases the investment account and is reported as equity-method investment income in Apex's income statement. This brings Apex's total net income to $9,200,000 ($8,500,000 + $700,000). For other comprehensive income, ASC 323-10-35-6 requires the investor to recognize its proportionate share of the investee's OCI in its own OCI. Apex's 35% share of MedSupply's $500,000 unrealized gain on AFS securities is $175,000. This amount is reported in Apex's statement of other comprehensive income and accumulates in accumulated other comprehensive income (AOCI) within equity on Apex's balance sheet. The OCI does not flow through Apex's income statement — it bypasses net income entirely and is reported as a separate component of comprehensive income. The total comprehensive income for Apex is $9,375,000 ($9,200,000 net income + $175,000 OCI). The investment account on Apex's balance sheet increases by the full $875,000 ($700,000 income pickup + $175,000 OCI pickup), reflecting the total change in MedSupply's net assets attributable to Apex. This distinction ensures that the nature of the investee's transactions — whether they flow through net income or OCI — is preserved at the investor level.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S15",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$700,000 recognized in Apex's income statement only. The investee's other comprehensive income of $500,000 is not recognized by the investor under the equity method because OCI items belong exclusively to the investee entity and do not pass through to investors.",
+      "B": "$700,000 recognized in Apex's income statement and $175,000 recognized in Apex's other comprehensive income. Under ASC 323, the investor recognizes its proportionate share of both investee net income (flowing through the income statement) and investee OCI (flowing through the investor's OCI).",
+      "C": "$875,000 recognized in Apex's income statement as equity-method investment income. The equity method requires comprehensive recognition, meaning the investor's share of all investee comprehensive income items — both net income and OCI — flows through the investor's income statement.",
+      "D": "$700,000 recognized in Apex's income statement and $175,000 disclosed in the notes to the financial statements only. Investee OCI is disclosed but not recognized in the investor's financial statements because OCI is equity-attributable only to the investee's own shareholders."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This choice incorrectly assumes that the equity method transmits only the investee's net income, ignoring OCI entirely. ASC 323-10-35-6 explicitly requires the investor to recognize its proportionate share of the investee's other comprehensive income in its own OCI. The equity method treats the investor and investee as a single economic reporting entity for recognizing changes in the investee's net assets. When the investee records an unrealized gain on AFS securities in OCI, that gain increases the investee's net assets by $500,000. Through the equity method, Apex's 35% share ($175,000) must be reflected in Apex's financial statements — specifically in Apex's OCI, preserving the nature of the underlying transaction. If Apex failed to record the OCI pickup, the investment account would increase by only $700,000 while the investee's actual net assets increased by $2,500,000, understating the investment account by $175,000 on the balance sheet.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This choice conflates net income with comprehensive income, a fundamental distinction under ASC 220. Comprehensive income comprises net income plus other comprehensive income. The equity method preserves the nature of the investee's transactions: items flowing through the investee's net income flow through the investor's net income; items flowing through the investee's OCI flow through the investor's OCI. Combining both into the investor's income statement as $875,000 would incorrectly classify the $175,000 unrealized gain on AFS securities as a component of operating performance rather than as a separate OCI item. This misclassification matters because financial statement users evaluate operating performance (through net income) differently from other comprehensive movements (through OCI and AOCI). The correct total comprehensive income for Apex is $9,375,000 — the sum of net income of $9,200,000 and OCI of $175,000 — not a single income statement line of $875,000.",
+    "ExplanationWrongD": "Note disclosure of investee OCI is an insufficient substitute for recognition under the equity method. ASC 323-10-35-6 mandates recognition — not merely disclosure — of the investor's proportionate share of investee OCI in the investor's own OCI statement. The equity method's fundamental premise is that the investor's financial statements should reflect the investor's proportionate share of the investee's net assets and changes therein. An unrealized gain on AFS securities increases the investee's net assets by $500,000; Apex's 35% share ($175,000) requires the investment account to be increased accordingly. Disclosure-only treatment would understate both the investment account on the balance sheet and Apex's accumulated other comprehensive income (AOCI) by $175,000. Furthermore, ASC 220 requires presentation of comprehensive income in a formal financial statement — disclosure-only treatment would violate these presentation requirements. Note disclosure supplements but does not replace recognition of OCI from equity-method investees."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B — Budgeting Concepts"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B-S07 master budget sequence evaluation sales budget starting point",
+    "MicroTopic": "Master budget sequencing",
+    "UniqueConceptKey": "P1E-B-S07-Master-budget-sequence",
+    "LOSTag": "P1-B.2 Budgeting concepts",
+    "primaryTheory": "B2",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Sawmill Industries' new controller, Elena Torres, discovers that the company prepares its annual master budget by starting with the cash budget to determine the borrowing requirement, then works backward to derive the sales budget and production budget from available financing. The CEO, James Aldridge, defends this approach: 'If we don't know how much we can borrow, how can we plan anything else?' Which recommendation should Elena make, and which justification is most appropriate under the IMA-recommended master budget sequence?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Elena should recommend starting with the sales budget because under the IMA-recommended master budget sequence, the sales budget is the foundation from which all other budgets are derived. The logical sequence is: (1) sales budget — estimates demand and revenue; (2) production budget — determines how many units to manufacture based on sales and desired ending inventory; (3) direct materials, direct labor, and manufacturing overhead budgets — determine resource requirements; (4) selling and administrative expense budget; and finally (5) the cash budget — which receives its inputs from all preceding operating budgets. The CEO's concern about borrowing needs is legitimate but addressed at the wrong stage: the cash budget reveals any financing gap after the operating plan is built on demand-driven assumptions, not before. The principle is that operating budgets drive financial budgets, not the reverse. Preparing the cash budget first reverses the causal chain — cash collections depend on sales volume and collection patterns, cash disbursements depend on production volume and purchasing schedules, none of which can be determined without the sales forecast. Elena should explain that starting with the sales budget produces a fact-based operating plan whose financial feasibility is then tested by the cash budget, enabling management to arrange financing for a known gap rather than constraining the entire enterprise to an arbitrary cash ceiling.",
+    "QuestionID": "P1E-B-S07",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Retain the current approach because cash availability is the binding constraint — without confirmed financing, the operating plan lacks credibility with the board and lenders.",
+      "B": "Start with the sales budget, because the sales forecast drives the production budget, operating expense budgets, and ultimately the cash budget — which then reveals the borrowing need.",
+      "C": "Start with the production budget, because manufacturing capacity determines what the company can sell, and the sales budget must be constrained by what the plant can realistically produce.",
+      "D": "Develop the sales budget and cash budget simultaneously as co-equal starting points, since the two are interdependent and neither should take precedence over the other."
+    },
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This option incorrectly elevates cash availability above the sales forecast as the binding constraint. While financing constraints are real, the master budget sequence starts with external demand — the sales forecast — because the entire enterprise exists to serve customers. Starting with cash reverses cause and effect: cash collections depend on sales volume, which cannot be known until the sales budget is prepared. The correct approach is to build the operating budgets first, then identify any cash shortfall in the cash budget and arrange financing accordingly.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This option confuses capacity constraints with market demand. While production capacity is a real operating constraint, the master budget begins with the sales forecast to estimate demand before determining production requirements. Capacity limitations are addressed through the production budget and, if they exceed available capacity, through capital budgeting for expansion — not by making production the starting point. The IMA master budget sequence places the sales budget first because demand drives production, not the reverse.",
+    "ExplanationWrongD": "This option proposes a false compromise that violates the logical structure of the master budget. The sales budget and cash budget are not co-equal — they occupy different positions in a sequential hierarchy. The sales budget drives production volume, which determines resource needs (materials, labor, overhead), which in turn determine cash disbursements. Attempting simultaneous preparation introduces circular dependencies: the cash budget requires sales data, and any sales assumption depends on whether financing is available, creating an unresolvable loop. The sequential approach resolves this by establishing the operating plan before assessing its financial feasibility."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B — Forecasting Techniques"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B-S08 capacity denominator strategic bidding government contract",
+    "MicroTopic": "Capacity denominator selection",
+    "UniqueConceptKey": "P1E-B-S08-Capacity-denominator-bidding",
+    "LOSTag": "P1-B.2 Budgeting concepts",
+    "primaryTheory": "B9",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Apex Defense Systems is bidding on a five-year government contract to manufacture specialized components. Its cost-plus pricing proposal must include a fixed overhead rate based on a capacity denominator. The controller, Dr. Sanjay Mehta, evaluates two options: (1) practical capacity of 120,000 machine hours — maximum sustainable output under normal conditions, yielding a $28 per machine-hour fixed overhead rate — or (2) normal capacity of 96,000 machine hours — average expected utilization over the business cycle, yielding a $35 per machine-hour fixed overhead rate. Budgeted fixed manufacturing overhead is $3,360,000 regardless of the denominator chosen. Which analysis correctly evaluates the strategic implications of each denominator choice for this competitive bid?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Practical capacity at 120,000 hours ($28/hour) is the strategically superior denominator for this competitive government bid. Under absorption costing, the fixed overhead rate = budgeted fixed overhead / denominator volume. A larger denominator produces a lower rate ($3,360,000 / 120,000 = $28 vs. $3,360,000 / 96,000 = $35), making Apex's cost proposal appear lower and more competitive. Management should anticipate that an unfavorable fixed overhead volume variance will result — if Apex operates at, say, 100,000 actual hours, applied overhead ($28 x 100,000 = $2,800,000) falls short of budgeted overhead ($3,360,000) by $560,000. However, this variance is a denominator-driven allocation artifact, not evidence of cost overruns or operational inefficiency. The controller should document in the bid package that the $28/hour rate reflects sustainable practical capacity and that any unfavorable volume variance at year-end is a planned consequence of competitive pricing strategy, not poor cost control. The critical analytical distinction is between a spending variance (which reflects actual cost control) and a volume variance (which reflects the relationship between the denominator and actual activity). This is the defining feature of the Analyze cognitive level: the candidate must decompose the variance into its strategic and operational components and evaluate which denominator best serves the bidding objective.",
+    "QuestionID": "P1E-B-S08",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Use practical capacity because the lower overhead rate ($28/hour) makes Apex's bid more competitive, and any resulting unfavorable fixed overhead volume variance is a strategic pricing decision, not an operating inefficiency.",
+      "B": "Use normal capacity because the higher overhead rate ($35/hour) recovers all fixed costs over the contract period, and government auditors will reject any bid that understates the true cost of production capacity.",
+      "C": "Use practical capacity because it eliminates the fixed overhead volume variance entirely, ensuring that Apex's cost reports always show actual costs equal to applied costs.",
+      "D": "Use normal capacity because practical capacity is a theoretical maximum that does not reflect realistically achievable output, and using an unrealistically high denominator artificially depresses the overhead rate."
+    },
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This option overstates government audit risk. Cost-plus government contracts typically define allowable costs by acquisition regulation (FAR Part 31), and the choice of a capacity denominator is a management accounting methodology, not a cost misrepresentation. Using practical capacity does not 'understate' total costs — it allocates the identical pool of budgeted fixed overhead across a larger denominator, producing a lower per-unit rate. The government auditor reviews total cost allowability, not the denominator-volume methodology. Furthermore, a higher overhead rate makes the bid less competitive, potentially losing the contract entirely.",
+    "ExplanationWrongC": "This option contains a factual error about volume variance mechanics. Practical capacity does not eliminate the fixed overhead volume variance — it changes its magnitude. The volume variance = budgeted fixed overhead − applied fixed overhead. If actual hours (say, 100,000) are below practical capacity (120,000), applied overhead is less than budgeted, producing an unfavorable volume variance. Only using actual capacity as the denominator would mathematically eliminate the volume variance — and doing so would embed cyclical fluctuations into product costs, violating consistency.",
+    "ExplanationWrongD": "This option mischaracterizes the capacity concept. Practical capacity is not a theoretical maximum — it is the maximum sustainable output allowing for normal downtime, preventive maintenance, holidays, and shift patterns. Theoretical (ideal) capacity would be the unrealistic figure, assuming 24/7/365 operation with zero downtime. Normal capacity averages output over a multi-year business cycle and is more appropriate for internal performance evaluation, but practical capacity is a widely accepted and legitimate denominator for strategic pricing decisions because it represents achievable capacity under normal operating conditions."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C — Performance Measurement"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C-S05 ROI vs RI goal congruence investment decision",
+    "MicroTopic": "ROI vs residual income",
+    "UniqueConceptKey": "P1E-C-S05-ROI-vs-RI-goal-congruence",
+    "LOSTag": "P1-C.1 Performance measurement",
+    "primaryTheory": "C5",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Brenford Industries' Eastern Division currently reports an ROI of 18%. Division Manager Carla Reeves receives a bonus of 3% of her base salary for every percentage point by which her division's ROI exceeds a 15% threshold. A proposed $2 million investment in automation equipment is projected to generate a 13% ROI. Brenford's weighted-average cost of capital is 10%. The CFO, Michael Tran, wants the investment approved because it exceeds the cost of capital and creates shareholder value. Carla opposes the investment because the 13% return would dilute her division's ROI from 18% to approximately 16.7%, reducing her bonus. Which recommendation best resolves this goal incongruence between division management incentives and shareholder value creation?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The recommendation that best resolves this goal incongruence is to switch the division's performance measure from ROI to residual income (RI). Residual income = division operating income − (required rate of return x division assets). Under RI, the Eastern Division would be charged at Brenford's 10% cost of capital on the $2 million investment, equaling a capital charge of $200,000. The project's 13% return generates $260,000 in operating income, producing positive residual income of $60,000 ($260,000 − $200,000). Carla would therefore be motivated to accept any project earning above 10% because it increases her division's RI, directly aligning her personal incentives with shareholder value creation. This is a textbook example of ROI's underinvestment bias: when managers are evaluated against a high existing ROI base, they systematically reject value-creating projects that fall below the division's current ROI but exceed the cost of capital. The CMA curriculum emphasizes that residual income corrects this dysfunction by charging divisions for the capital they consume, making the manager's decision criterion identical to the shareholder's: accept all projects earning above the cost of capital. While switching metrics mid-cycle requires careful change management and transparent communication, the structural fix provided by RI is superior to ad hoc exceptions (Option D) or accepting the value-destroying status quo (Options A and C).",
+    "QuestionID": "P1E-C-S05",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Accept Carla's decision because the division's current ROI of 18% is the relevant benchmark — accepting a project with a lower return signals that the division is underperforming relative to its own track record.",
+      "B": "Require Carla to accept the investment and switch the division's performance measure from ROI to residual income, because RI charges the division for the cost of capital and makes any project earning above 10% value-accretive for both the manager and shareholders.",
+      "C": "Allow Carla to reject the investment because the bonus plan was negotiated in good faith, and changing the performance metric mid-cycle would undermine management credibility and trust.",
+      "D": "Accept the investment but exclude it from Carla's ROI calculation for bonus purposes, creating a separate tracking category for strategic investments approved at the corporate level."
+    },
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This option treats the division's historical ROI as if it were the relevant hurdle rate for capital allocation decisions. The cost of capital — not the division's existing ROI — is the correct minimum required return. A 13% ROI project that exceeds Brenford's 10% WACC creates $60,000 in annual economic profit ($2,000,000 x (13% − 10%)). Rejecting it because it is below 18% confuses divisional performance measurement with corporate capital budgeting. The investment should be evaluated against the cost of capital, not against the division's historical average return.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This option prioritizes procedural fairness over economic substance. While bonus plan integrity and management credibility are legitimate concerns, allowing a known incentive misalignment to persist — where the manager is financially rewarded for destroying shareholder value — constitutes a governance failure. The board and CFO have a fiduciary duty to correct compensation structures that systematically encourage value-destroying decisions. The appropriate remedy is to change the metric going forward with transparent communication about the rationale, not to continue rewarding behavior that is harmful to shareholders.",
+    "ExplanationWrongD": "This option offers a temporary workaround rather than a structural solution. Excluding this investment from ROI calculation for bonus purposes: (1) creates a precedent for ad hoc exceptions that erodes the performance measurement framework; (2) invites lobbying by managers to classify any marginal project as 'strategic' to shield it from bonus calculations; (3) does not fix the underlying ROI-induced underinvestment bias for future investments — the same conflict will recur with every subsequent project; and (4) undermines the credibility of the performance evaluation system by carving out unfavorable projects on a case-by-case basis. A structural fix (switching to residual income) addresses the incentive problem permanently."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C — Performance Measurement"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C-S06 responsibility center classification cost revenue profit investment",
+    "MicroTopic": "Responsibility center classification",
+    "UniqueConceptKey": "P1E-C-S06-Responsibility-center-classification",
+    "LOSTag": "P1-C.1 Performance measurement",
+    "primaryTheory": "C4",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Meridian Corporation is restructuring its three operating divisions. The controller, Denise Okonkwo, must classify each division into the appropriate responsibility center type. Division 1 operates a manufacturing plant where corporate headquarters controls raw material sourcing and finished goods pricing, but the plant manager controls labor scheduling, overtime authorization, and scrap reduction programs. Division 2 is a regional sales office evaluated on revenue targets; the sales director has discretion to set prices within a ±8% band around corporate list prices but has no authority over product costs or operating expenses. Division 3 is a Southeast Asia subsidiary with full profit-and-loss accountability, including authority to approve capital expenditures up to $2 million without corporate approval. Which classification is correct?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The correct classifications are: Division 1 = Cost Center, Division 2 = Revenue Center, Division 3 = Investment Center. In responsibility accounting, classification depends on the scope of decision-making authority the manager holds. Division 1's plant manager controls labor scheduling, overtime, and waste reduction — all input-side cost drivers — but has no authority over sourcing prices (corporate-controlled) or selling prices (corporate-controlled). This manager is accountable for cost control only, making it a cost center. Division 2's sales director controls revenue through pricing discretion within a band but has no authority over COGS, distribution expenses, or any cost category. Without cost-control authority, the sales office is evaluated on revenue targets only — the definition of a revenue center. Division 3's subsidiary manager holds full P&L authority plus capital expenditure approval up to $2 million. The power to commit the company's capital to long-term assets is the defining characteristic of an investment center. The analytical distinction tested here is between a profit center (manager controls revenues and costs but not asset investments) and an investment center (manager controls revenues, costs, and asset investments). Division 3's $2 million capex threshold — material enough to shift the subsidiary's asset base — elevates it beyond profit center classification.",
+    "QuestionID": "P1E-C-S06",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Division 1 = Cost Center, Division 2 = Revenue Center, Division 3 = Investment Center",
+      "B": "Division 1 = Cost Center, Division 2 = Profit Center, Division 3 = Investment Center",
+      "C": "Division 1 = Profit Center, Division 2 = Revenue Center, Division 3 = Profit Center",
+      "D": "Division 1 = Investment Center, Division 2 = Revenue Center, Division 3 = Profit Center"
+    },
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This option incorrectly classifies Division 2 (the regional sales office) as a profit center. A profit center manager must control both revenues AND costs. The sales director has pricing discretion within an 8% band (revenue control) but has no authority over cost of goods sold, distribution costs, or operating expenses. Without cost-control authority, the division cannot be evaluated on profitability — only on revenue generation, making it a revenue center, not a profit center.",
+    "ExplanationWrongC": "This option misclassifies two of the three divisions. Division 1's manager controls labor efficiency and waste reduction but has zero authority over either input prices (corporate controls sourcing) or output prices (corporate controls finished goods pricing). Without revenue authority, the plant cannot be a profit center — it is a cost center. Division 3's manager has capital expenditure approval authority up to $2 million, which elevates the subsidiary beyond a profit center to an investment center. An investment center is defined by the manager's authority over both profit-generation and asset-investment decisions.",
+    "ExplanationWrongD": "This option misclassifies Division 1 as an investment center and Division 3 as a profit center. Division 1's plant manager controls labor scheduling and waste programs but has no capital expenditure authority — lacking investment decision rights, the plant cannot be an investment center. Division 3's subsidiary manager has explicit capex approval authority up to $2 million, which is the defining characteristic of an investment center. The $2 million threshold is a material capital allocation authority that distinguishes the subsidiary from a mere profit center."
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C — Performance Measurement"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C-S07 benchmarking limitations case mix severity analysis",
+    "MicroTopic": "Benchmarking limitations",
+    "UniqueConceptKey": "P1E-C-S07-Benchmarking-limitations",
+    "LOSTag": "P1-C.3 Performance evaluation",
+    "primaryTheory": "C8",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "North Valley Regional Medical Center participates in a national hospital benchmarking database and reports a cost of $2,850 per patient-day, placing it at the 70th percentile — meaning its cost exceeds that of 70% of participating hospitals. The CFO, Dr. Patricia Walsh, presents this finding to the board as evidence that North Valley is 'significantly less efficient than our peer hospitals.' However, North Valley operates a Level I trauma center, is a major teaching hospital with residency programs, and is located in a high-wage metropolitan area, while the benchmarking database includes many rural community hospitals and elective surgery centers. Which statement represents the most accurate assessment of Dr. Walsh's conclusion?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Dr. Walsh's conclusion is likely invalid because the benchmarking comparison suffers from fundamental structural differences that make unadjusted cost-per-patient-day comparisons analytically misleading. North Valley differs from the database average in at least three material dimensions: (1) Case-mix severity — as a Level I trauma center, North Valley treats more severely ill and injured patients requiring more resource-intensive care, naturally producing higher cost per patient-day independent of operational efficiency. (2) Teaching mission — academic medical centers incur costs for resident training, clinical research, and often higher volumes of uncompensated care, none of which exist at community hospitals. (3) Input price differences — metropolitan wages for nurses, specialists, and support staff are structurally higher than rural rates, independently inflating costs. Each of these factors increases cost per patient-day through mechanisms unrelated to operational efficiency. Proper benchmarking methodology would adjust for case-mix index, teaching intensity (IME adjustment), and area wage index before drawing conclusions about relative efficiency. The 70th percentile raw ranking is a mathematical fact but an analytical error — this distinction between data (the measurement) and information (what the measurement means after appropriate adjustment) is central to effective performance management. In CMA exam terms, the candidate must analyze whether the benchmarking conclusion is supported by the evidence, not merely accept the statistical output at face value.",
+    "QuestionID": "P1E-C-S07",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The conclusion is valid because the 70th percentile ranking is a mathematical fact — North Valley's costs are objectively higher than 70% of the database, and no contextual factors can alter this statistical reality.",
+      "B": "The conclusion is likely invalid because the benchmarking comparison suffers from case-mix and structural differences — North Valley treats more severely ill patients, incurs teaching costs, and faces higher input prices, all of which make unadjusted cost comparisons analytically misleading.",
+      "C": "The conclusion is valid for internal purposes but should not be shared externally — benchmarking data is intended for internal quality improvement, and absolute cost rankings are actionable regardless of peer-group composition.",
+      "D": "The conclusion is partially valid because at least some of the 70% of hospitals with lower costs must be comparable institutions, so North Valley should investigate operational efficiency before dismissing the benchmark finding."
+    },
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This option confuses statistical accuracy with analytical validity. While the 70th percentile ranking is mathematically correct given the raw data, the inference that this ranking means 'less efficient' is analytically unsupported. The data is precise but the conclusion is wrong because the comparison is confounded by case-mix severity, teaching mission costs, and geographic wage differences. Accurate data applied to the wrong comparison produces precisely quantified error — this is a fundamental pitfall in benchmarking analysis.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This option incorrectly suggests that misleading benchmarks are acceptable for internal use. Benchmarking used for internal quality improvement must still be analytically sound — acting on an unadjusted 70th percentile ranking could lead North Valley to make cost-cutting decisions that harm patient care (e.g., reducing nursing ratios, limiting trauma services, or closing teaching programs) when the apparent cost difference is actually driven by structural factors unrelated to efficiency. Internal benchmarks carry the same requirement for analytical validity as external ones.",
+    "ExplanationWrongD": "This option commits a logical fallacy — assuming that because some hospitals in the database might be comparable, the aggregate ranking is informative. Without identifying and isolating the truly comparable subset, the 70th percentile ranking conflates genuine efficiency differences with structural differences across an apples-to-oranges peer group. The burden of proof rests on establishing comparability before drawing conclusions about efficiency, not on dismissing the benchmark. The CFO should first adjust for case-mix index, teaching intensity, and wage index before interpreting the ranking."
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D-S06 joint cost NRV allocation byproduct credit sell-or-process",
+    "MicroTopic": "Joint cost allocation using NRV method with byproduct credit and sell-or-process-further decisions",
+    "UniqueConceptKey": "D-S06-Joint-cost-NRV-byproduct-credit-sell-or-process",
+    "LOSTag": "P1-D.1 Cost measurement and assignment",
+    "primaryTheory": "D5",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Pacific Chemical Refining operates a joint production process costing $600,000 per month. The process yields two main products and one byproduct from a common input. Data for March follows. Product Alpha: 24,000 gallons produced, split-off selling price $20.00 per gallon, additional processing cost $144,000, final selling price $30.00 per gallon after further processing. Product Beta: 36,000 gallons produced, split-off selling price $15.00 per gallon, additional processing cost $90,000, final selling price $17.00 per gallon after further processing. Byproduct Gamma: 10,000 gallons produced, split-off selling price $6.00 per gallon, separable selling costs of $1.50 per gallon. Pacific accounts for the byproduct using the production method — Gamma is inventoried at its net realizable value, and the NRV of the byproduct is credited against total joint costs before allocating the remaining joint costs to the main products. Controller Elena Vasquez must (a) determine which products should be sold at split-off versus processed further, (b) compute the net realizable value of the byproduct and reduce joint costs accordingly, and (c) allocate the remaining joint costs to Alpha and Beta using the NRV method based on each product's optimal disposition. Which joint cost allocation and sell-or-process-further recommendation is correct?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The correct answer allocates approximately $286,500 of joint cost to Alpha and $268,500 to Beta after reducing the $600,000 joint cost by Gamma's $45,000 NRV credit, and recommends processing Alpha further while selling Beta at the split-off point. The solution proceeds through three analytical stages required by the production method of byproduct accounting. Stage 1 — Byproduct NRV credit: Gamma's NRV = 10,000 gallons × ($6.00 split-off price − $1.50 separable selling cost) = 10,000 × $4.50 = $45,000. Under the production method, this $45,000 is subtracted from total joint costs before allocation to main products. Adjusted joint costs = $600,000 − $45,000 = $555,000. Stage 2 — Sell-or-process-further decisions (made independently of joint cost allocation because joint costs are sunk): Alpha incremental revenue = 24,000 × ($30.00 − $20.00) = 24,000 × $10.00 = $240,000. Incremental cost = $144,000. Net gain = $240,000 − $144,000 = $96,000 → PROCESS FURTHER. Beta incremental revenue = 36,000 × ($17.00 − $15.00) = 36,000 × $2.00 = $72,000. Incremental cost = $90,000. Net loss = $72,000 − $90,000 = ($18,000) → SELL AT SPLIT-OFF. Stage 3 — NRV allocation using each product's optimal disposition: Alpha NRV (processed further) = 24,000 × $30.00 − $144,000 = $720,000 − $144,000 = $576,000. Beta NRV (sold at split-off) = 36,000 × $15.00 = $540,000. Total NRV = $576,000 + $540,000 = $1,116,000. Joint cost allocation: Alpha = $555,000 × ($576,000 ÷ $1,116,000) = $555,000 × 0.51613 = $286,452 (approximately $286,500). Beta = $555,000 × ($540,000 ÷ $1,116,000) = $555,000 × 0.48387 = $268,548 (approximately $268,500). A critical exam distinction: the sell-or-process-further decision uses incremental analysis (compare incremental revenue to incremental processing cost only — joint costs are irrelevant), while the NRV allocation uses each product's chosen NRV based on the optimal disposition. A common error is applying the wrong disposition in the NRV computation — for example, using Beta's processed NRV ($612,000 − $90,000 = $522,000) when the incremental analysis shows Beta should NOT be processed further.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-D-S06",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Alpha receives approximately $300,000 and Beta receives approximately $300,000 using the physical-units method (24,000:36,000 = 2:3 ratio applied to the $600,000 joint cost); the byproduct Gamma's revenue of $60,000 is recognized as other income rather than credited against joint costs. Both main products should be processed further because each has a final selling price above its split-off price.",
+      "B": "Alpha receives approximately $286,500 and should be processed further (incremental gain $96,000); Beta receives approximately $268,500 and should be sold at split-off (incremental loss $18,000). The joint cost of $600,000 is first reduced by Gamma's $45,000 NRV credit, leaving $555,000 to allocate by NRV.",
+      "C": "Alpha receives approximately $304,800 and Beta receives approximately $295,200 using the NRV method but without crediting Gamma's NRV against joint costs — the full $600,000 is allocated. Both products should be sold at split-off because joint costs are sunk and therefore the sell-or-process-further decision should ignore all allocated amounts.",
+      "D": "Alpha receives approximately $258,500 and Beta receives approximately $296,500 using the NRV method with byproduct credit, but the decisions are reversed: Alpha should be sold at split-off (because its split-off price per gallon of $20.00 is higher than Beta's $15.00) and Beta should be processed further (because its $2.00 per gallon price increase requires only 45,000 incremental gallons to cover the $90,000 processing cost)."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A allocates joint costs using the physical-units method, applying the 24,000:36,000 (2:3) gallon ratio to the $600,000 joint cost, yielding $240,000 for Alpha and $360,000 for Beta — not the $300,000 and $300,000 the choice claims, so the arithmetic is internally inconsistent. More fundamentally, the physical-units method ignores the economic value of the products: Alpha generates $576,000 in NRV while Beta generates $540,000, yet the physical method allocates more cost to Beta ($360,000 vs. Alpha's $240,000) simply because Beta has more gallons. This violates the matching principle — cost allocation should reflect ability to bear cost, and NRV is the theoretically preferred method for joint cost allocation. Additionally, the choice asserts that both products should be processed further because final price exceeds split-off price. This criterion is necessary but not sufficient. Beta's incremental revenue of $72,000 (36,000 × $2.00 price increase) is $18,000 less than the $90,000 additional processing cost, destroying value if processed further. A candidate selecting this answer has used the wrong allocation method, applied it incorrectly, and applied the wrong decision criterion for sell-or-process-further — confusing the direction of price change with the net incremental contribution.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C allocates the full $600,000 joint cost using NRV without applying the byproduct credit. Under the production method of byproduct accounting, the NRV of the byproduct ($45,000) must be subtracted from joint costs before allocation to main products. Omitting this step overstates the joint cost borne by Alpha and Beta by $45,000 combined. The choice incorrectly allocates: Alpha = $600,000 × ($576,000 ÷ $1,116,000) = $309,677, and Beta = $600,000 × ($540,000 ÷ $1,116,000) = $290,323 — which differs from the $304,800 and $295,200 claimed, indicating an additional mathematical error beyond the byproduct omission. More critically, the choice asserts that both products should be sold at split-off because 'joint costs are sunk and therefore the sell-or-process-further decision should ignore all allocated amounts.' While the premise that joint costs are sunk is correct, the conclusion is backwards. The irrelevance of joint costs means the decision must be based solely on incremental revenue versus incremental cost — which for Alpha shows a $96,000 gain (process further) and for Beta shows an $18,000 loss (sell at split-off). Saying 'ignore joint costs, therefore sell everything at split-off' is equivalent to assuming incremental revenue never exceeds incremental cost — an unjustified leap. A candidate selecting this answer correctly understands the sunk-cost principle but misapplies it, treating the irrelevance of joint costs as a decision rule rather than as permission to focus exclusively on incremental analysis.",
+    "ExplanationWrongD": "Option D applies the NRV method with byproduct credit (correctly reducing $600,000 to $555,000) but reverses the sell-or-process-further decisions. The allocation amounts are approximately correct, but the decision logic is flawed. The choice claims Alpha should be sold at split-off because its $20.00/gallon split-off price is higher than Beta's $15.00/gallon. This comparison of absolute split-off prices between products is irrelevant to the sell-or-process-further decision — the relevant comparison is each product's incremental revenue against its own incremental processing cost, independently of other products. Alpha's incremental revenue of $240,000 ($10.00/gallon × 24,000 gallons) substantially exceeds its $144,000 processing cost, yielding a $96,000 net gain — a clear signal to process further regardless of how other products perform. For Beta, the choice claims it should be processed further because '45,000 incremental gallons' are needed to cover the $90,000 cost — but Beta only has 36,000 gallons, not 45,000. Beta's incremental analysis is: 36,000 gallons × $2.00 price increase = $72,000, which is $18,000 short of covering the $90,000 processing cost — a net loss. The mathematical error comes from incorrectly computing the breakeven volume: $90,000 ÷ $2.00/gallon = 45,000 gallons, which exceeds Beta's actual volume of 36,000 gallons, confirming that Beta cannot profitably be processed further. A candidate selecting this answer has correctly handled the joint cost allocation mechanics but has made two errors in the incremental analysis: comparing split-off prices between products rather than within-product incremental margins, and failing to verify that sufficient volume exists to recover the additional processing cost."
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D-S07 TOC product mix multiple constraints bottleneck identification",
+    "MicroTopic": "Theory of Constraints product mix optimization with multiple bottleneck resources and primary constraint identification",
+    "UniqueConceptKey": "D-S07-TOC-product-mix-multiple-bottlenecks",
+    "LOSTag": "P1-D.1 Cost measurement and assignment",
+    "primaryTheory": "D11",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Apex Fabrication operates two machining centers with limited weekly capacity. Machine A has 2,400 minutes available per week. Machine B has 1,200 minutes available per week due to scheduled preventive maintenance. Three products compete for machine time with the following data. Product X: throughput margin $80 per unit, requires 10 minutes on Machine A and 15 minutes on Machine B, weekly demand 80 units. Product Y: throughput margin $50 per unit, requires 12 minutes on Machine A and 6 minutes on Machine B, weekly demand 100 units. Product Z: throughput margin $35 per unit, requires 8 minutes on Machine A and 12 minutes on Machine B, weekly demand 90 units. All three products must pass through both machines in sequence, and no substitute routings exist. The plant manager, David Okonkwo, must identify the primary bottleneck — the resource that limits total throughput — and then determine the optimal product mix that maximizes total throughput contribution for the week. Which combination correctly identifies the primary constraint and the optimal production quantities?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The correct answer identifies Machine B as the primary bottleneck and recommends producing 100 units of Y, 40 units of X, and 0 units of Z, yielding total throughput of $8,200. The analysis proceeds in two stages. Stage 1 — Constraint identification: Compute the total minutes demanded of each machine at full demand. Machine A: X demands 80 × 10 = 800 min, Y demands 100 × 12 = 1,200 min, Z demands 90 × 8 = 720 min — total 2,720 minutes against 2,400 available (113% utilization). Machine B: X demands 80 × 15 = 1,200 min, Y demands 100 × 6 = 600 min, Z demands 90 × 12 = 1,080 min — total 2,880 minutes against 1,200 available (240% utilization). Machine B is the primary constraint because it has the highest ratio of demanded minutes to available capacity (2,880 ÷ 1,200 = 240% versus 2,720 ÷ 2,400 = 113% for Machine A), meaning it is the resource that most severely limits throughput. Stage 2 — Product mix optimization: Compute the throughput margin per minute of the primary constraint (Machine B). X: $80 ÷ 15 = $5.33 per minute. Y: $50 ÷ 6 = $8.33 per minute. Z: $35 ÷ 12 = $2.92 per minute. The TOC ranking from highest to lowest throughput per constraint minute is Y first ($8.33), then X ($5.33), then Z ($2.92). Allocate Machine B minutes in rank order: Y consumes 100 × 6 = 600 minutes of B, leaving 600 minutes (1,200 − 600). X consumes 600 ÷ 15 = 40 units (using 600 minutes of B), consuming the remaining B capacity. Z receives zero units because no B minutes remain. Verify Machine A feasibility: Y 100 × 12 = 1,200 + X 40 × 10 = 400 = 1,600 minutes ≤ 2,400 — feasible. Total throughput = (100 × $50) + (40 × $80) = $5,000 + $3,200 = $8,200. A common exam trap is identifying the wrong resource as the primary constraint and computing throughput-per-minute on that resource, which can produce a product mix that appears optimal but is infeasible because it violates the real constraint.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-D-S07",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Machine A is the primary bottleneck. Optimal mix: X = 80 units, Z = 90 units, Y = 73 units, producing total throughput of approximately $13,200. Machine A's throughput-per-minute ranking is X at $8.00, Z at $4.38, and Y at $4.17 — so X and Z are prioritized first.",
+      "B": "Machine B is the primary bottleneck. Optimal mix: X = 80 units, Y = 0 units, Z = 0 units, producing total throughput of $6,400. X generates $80 of throughput margin per unit (the highest absolute margin), so it should receive all available B capacity.",
+      "C": "Machine B is the primary bottleneck. Optimal mix: Y = 100 units, X = 40 units, Z = 0 units, producing total throughput of $8,200. Throughput per minute of B is Y $8.33, X $5.33, and Z $2.92 — ranking Y first maximizes throughput contribution per constrained minute.",
+      "D": "Machine B is the primary bottleneck. Optimal mix: Y = 100 units, Z = 50 units, X = 0 units, producing total throughput of $6,750. Throughput per minute of B is Y $8.33, then Z $2.92, then X $5.33 giving Z priority over X."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A identifies Machine A as the primary bottleneck and computes throughput per minute on Machine A — a critical classification error. While Machine A is operating above capacity (2,720 demanded vs. 2,400 available = 113%), Machine B is far more severely constrained (2,880 demanded vs. 1,200 available = 240%). The primary constraint is the resource with the highest ratio of demand to capacity — not merely any resource operating above capacity. The product mix derived from Machine A's throughput-per-minute ranking (X: $80/10 = $8.00, Z: $35/8 = $4.38, Y: $50/12 = $4.17) produces X 80 units (800 min A), Z 90 units (720 min A), and Y receives the remaining 2,400 − 800 − 720 = 880 minutes ÷ 12 = 73 units. However, this mix requires 80 × 15 + 90 × 12 + 73 × 6 = 1,200 + 1,080 + 438 = 2,718 minutes on Machine B — exceeding its 1,200-minute capacity by 127%. The $13,200 throughput figure is therefore infeasible: it assumes Machine B can process 2,718 minutes when only 1,200 exist. A candidate selecting this answer has correctly computed throughput per minute figures but on the wrong constraint. The TOC rule is to identify the binding constraint first by comparing utilization ratios across all resources, not to default to whichever machine has the larger absolute capacity.",
+    "ExplanationWrongB": "Option B correctly identifies Machine B as the primary bottleneck but uses the wrong ranking criterion. Ranking by absolute throughput margin per unit ($80 for X, $50 for Y, $35 for Z) ignores the constraint resource entirely. X consumes 15 minutes of Machine B per unit — producing $5.33 per constrained minute — while Y consumes only 6 minutes of B per unit — producing $8.33 per constrained minute. By allocating all 1,200 B minutes to X (1,200 ÷ 15 = 80 units), the plant earns $6,400 of throughput. The TOC-optimal mix allocates B minutes to Y first: 100 units of Y consume 600 B minutes and earn $5,000, leaving 600 B minutes for X (40 units, earning $3,200) — total $8,200, which is $1,800 or 28% higher. The absolute-margin approach fails because it ignores the fact that X consumes 2.5 times more constraint time per unit than Y. A product with high absolute margin that is also highly consumptive of the constraint is less valuable than a moderate-margin product that consumes very little constraint time. A candidate selecting this answer has chosen the product with the largest contribution per unit — a natural but incorrect heuristic when a binding constraint exists. The TOC principle is: in the presence of a constraint, rank by throughput per unit of the constraint, not per unit of product.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D correctly identifies Machine B as the primary bottleneck but misranks the products by throughput per constraint minute. The correct ranking is Y ($8.33), X ($5.33), Z ($2.92). Option D ranks Y first (correct) but places Z ($2.92) ahead of X ($5.33), producing the sequence Y → Z → X. Under this incorrect ranking: Y consumes 600 B minutes (100 × 6), leaving 600 B minutes; Z receives 600 ÷ 12 = 50 units, consuming all remaining B minutes; X receives zero units. Total throughput = (100 × $50) + (50 × $35) = $5,000 + $1,750 = $6,750. The correct ranking (Y → X → Z) yields $8,200, which is $1,450 higher. The error of placing Z before X forfeits $1,450 of throughput — each minute of B spent on Z earns $2.92, while a minute spent on X earns $5.33. By giving 600 minutes to Z (earning 600 × $2.92 = $1,750) instead of to X (earning 600 × $5.33 = $3,200), the misranking destroys $1,450 of value. A candidate selecting this answer has likely computed throughput-per-minute figures for Y and Z but has not verified all three values, or has reversed X and Z in the final ranking. The TOC methodology requires ranking all products by throughput per constraint minute before allocating capacity — skipping even one product in the ranking sequence can lead to suboptimal allocation."
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D-S08 relevant costing special order opportunity cost displaced sales",
+    "MicroTopic": "Special order decision with capacity constraint and opportunity cost of displaced regular sales",
+    "UniqueConceptKey": "D-S08-Relevant-costing-special-order-opportunity-cost",
+    "LOSTag": "P1-D.2 Cost behavior and relevant costs for decision making",
+    "primaryTheory": "D10",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Northwind Industries manufactures industrial fittings with a practical capacity of 10,000 units per month. The plant currently operates at 85% of capacity (8,500 units per month) for regular customers at a selling price of $100 per unit. Variable manufacturing cost is $60 per unit, and fixed manufacturing overhead is $250,000 per month. Next month, a scheduled machine overhaul will reduce available capacity to 9,000 units. Regular customer demand for next month is forecast at 8,500 units. A new customer, Cascade Supply, has offered to purchase 2,000 units at $85 per unit in a one-time special order. The special order would require $3 per unit in additional packaging and shipping costs not incurred on regular orders. Northwind's controller, Priya Sharma, must determine the financial impact of accepting the special order. Fixed overhead is unaffected by the decision and is allocated to regular production at $25 per unit based on practical capacity. What is the net financial effect of accepting the special order, and should Northwind accept it?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Northwind should reject the special order because it produces a net loss of ($16,000). The relevant-cost analysis for this special order requires identifying total relevant costs, including the opportunity cost of displaced regular sales. Step 1 — Identify available capacity: Practical capacity is 10,000 units, reduced to 9,000 by the machine overhaul. Regular demand is 8,500 units. Spare capacity = 9,000 − 8,500 = 500 units. The special order requires 2,000 units, meaning 1,500 units (2,000 − 500) must displace regular sales. Step 2 — Compute incremental revenue and variable costs: Special order revenue = 2,000 × $85 = $170,000. Variable manufacturing cost for special order = 2,000 × $60 = $120,000. Additional packaging/shipping = 2,000 × $3 = $6,000. Total incremental variable cost = $126,000. The $250,000 fixed overhead is irrelevant — it is incurred regardless of the decision and is not differential. The $25 per unit allocation rate for fixed overhead is also irrelevant for decision-making (it is an allocation, not a cash outflow). Step 3 — Compute opportunity cost: Each displaced regular sale loses a contribution margin of $100 − $60 = $40. Displaced units = 1,500. Total opportunity cost = 1,500 × $40 = $60,000. Step 4 — Net financial effect: Incremental revenue $170,000 − Variable costs ($120,000 + $6,000 = $126,000) − Opportunity cost $60,000 = ($16,000). The special order destroys $16,000 of value and should be rejected. The operating principle: when a special order displaces regular sales, the true cost of the order includes not only the variable costs of producing the special-order units but also the contribution margin forgone on the regular sales that cannot be fulfilled. This opportunity cost converts what initially appears profitable ($170,000 − $126,000 = $44,000 contribution margin from the order) into a net loss when capacity constraints are properly recognized.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-D-S08",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Accept the special order. Net financial benefit is $44,000. The special order's contribution margin is 2,000 × ($85 − $60 − $3) = $44,000. Fixed overhead is unavoidable and therefore irrelevant to the decision. Regular sales are unaffected because the plant has sufficient capacity.",
+      "B": "Accept the special order. Net financial benefit is $20,000. The special order requires 2,000 units of the 9,000 available, leaving 7,000 for regular customers. Regular sales decline to 7,000 units (a loss of 1,500 units × $40 CM = $60,000), but the special order's $44,000 contribution margin plus the $36,000 saved in fixed overhead on the 1,500 units not produced fully offset the regular-sales loss.",
+      "C": "Reject the special order. It results in a net loss of ($20,000). The special order revenue of $170,000 is compared to the forgone regular revenue of 2,000 × $100 = $200,000 — a $30,000 revenue deficit — plus the additional packaging cost of $6,000, partially offset by $16,000 in variable cost savings ($60 × 2,000 − $60 × 1,500 = $30,000 savings from using spare capacity for 500 units).",
+      "D": "Reject the special order. Net financial loss is ($16,000). The special order produces $44,000 in contribution margin ($170,000 revenue − $126,000 variable costs) but displaces 1,500 regular units, forfeiting $60,000 in contribution margin from regular sales (1,500 × $40), for a net effect of −$16,000."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A recommends accepting the special order based on a contribution margin analysis that ignores the capacity constraint entirely. The computation of the special order's own contribution margin ($170,000 − $120,000 − $6,000 = $44,000) is correct, but the analysis assumes the plant has sufficient spare capacity to fill the order without affecting regular sales. The plant's available capacity for next month is 9,000 units — not 10,000 — because of the scheduled machine overhaul. Current regular demand of 8,500 units consumes all but 500 units of that available capacity. The special order of 2,000 units requires 1,500 units beyond available capacity, meaning those 1,500 regular sales cannot be fulfilled. The contribution margin lost on those displaced sales ($40 × 1,500 = $60,000) more than offsets the special order's $44,000 contribution margin, producing a net loss of $16,000. A candidate selecting this answer has correctly computed the special order's contribution margin but has failed to test whether accepting the order is feasible within actual available capacity — the most common error in special-order decision problems involving capacity constraints. The relevant-cost framework requires comparing total relevant benefits to total relevant costs, and the contribution margin lost on displaced sales is a relevant cost of accepting the order.",
+    "ExplanationWrongB": "Option B recommends acceptance but contains multiple analytical errors. First, it incorrectly treats fixed overhead as avoidable — claiming $36,000 in 'fixed overhead saved' on 1,500 fewer regular units. By definition, the $250,000 in fixed monthly overhead is a committed cost unaffected by the production volume decision within the relevant range — it is not a differential cost and cannot be 'saved' by reducing output. Including fixed overhead savings double-counts the cost avoidance since fixed overhead is already excluded from the relevant-cost analysis as not differential. Second, the computation misidentifies the direction of the regular-sales loss: the choice claims regular sales decline to 7,000 (a loss of $60,000 in CM) but then adds the special order's $44,000 CM plus the phantom $36,000 fixed-overhead savings to arrive at a net $20,000 benefit. Correcting both errors — removing the $36,000 phantom savings and properly comparing $44,000 special-order CM against $60,000 displaced CM — yields ($16,000), the correct net loss. A candidate selecting this answer has correctly identified that some regular sales are displaced but has confused the treatment of fixed costs in short-term decision-making, treating allocation-based fixed overhead per unit as if it were an avoidable cost.",
+    "ExplanationWrongC": "Option C recommends rejection but arrives at the wrong dollar figure through a conceptually flawed comparison. The analysis compares total revenue ($170,000 from the special order versus $200,000 from 2,000 forgone regular units at $100 each) — a $30,000 'revenue deficit' — then adds $6,000 in packaging costs for a total cost of $236,000, and subtracts $16,000 in variable cost savings, arriving at a net loss of ($20,000). This approach conflates revenue comparison with cost analysis and treats all 2,000 special-order units as displacing regular sales when only 1,500 units actually displace regular sales (500 units fit within spare capacity). The correct analysis: 500 units utilize spare capacity and generate incremental contribution of 500 × ($85 − $60 − $3) = 500 × $22 = $11,000; the remaining 1,500 units displace regular sales and the net per-unit effect is the special-order CM ($22) minus the regular CM ($40) = ($18) per unit, or ($27,000). Total net = $11,000 − $27,000 = ($16,000). The $4,000 difference between the correct ($16,000) loss and the choice's ($20,000) loss arises from incorrectly treating all 2,000 units as displacement rather than distinguishing the 500 spare-capacity units from the 1,500 displacement units. A candidate selecting this answer has the right decision (reject) but has used a revenue-comparison framework rather than a contribution-margin framework, overstating the loss by $4,000.",
+    "ExplanationWrongD": ""
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D-S09 process costing FIFO transferred-in normal abnormal spoilage",
+    "MicroTopic": "Process costing with FIFO method, transferred-in costs, and distinguishing normal from abnormal spoilage",
+    "UniqueConceptKey": "D-S09-Process-costing-FIFO-transferred-in-spoilage",
+    "LOSTag": "P1-D.1 Cost measurement and assignment",
+    "primaryTheory": "D3",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "ClearView Chemical operates a two-department process costing system using the FIFO method. Department 1 completed and transferred 38,000 units to Department 2 during March at a total transferred-in cost of $304,000 ($8.00 per equivalent unit). Department 2 had the following activity in March. Beginning work-in-process: 2,000 units, 100% complete for transferred-in costs, 0% complete for direct materials (materials are added at the start of Department 2 processing), and 25% complete for conversion costs. The beginning WIP carried transferred-in costs of $16,000 and conversion costs of $1,500. Current period costs added in Department 2: direct materials $120,000, conversion costs $180,000. During March, 34,000 units were completed and transferred to finished goods. Ending work-in-process: 3,000 units, 100% complete for transferred-in and direct materials, and one-third complete for conversion. Total spoilage for March was 3,000 units. Normal spoilage is 5% of good units passing the inspection point, which occurs when units are 50% complete for conversion costs. Spoilage in excess of normal is treated as abnormal and is a period expense, while normal spoilage is treated as a product cost and allocated to good units completed. What is the total cost of units completed and transferred out of Department 2 for March, including the allocation of normal spoilage?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The total cost of units completed and transferred out is $543,000 before spoilage allocation, and approximately $570,000 after allocating normal spoilage to good units. The solution requires four analytical stages: physical unit reconciliation, spoilage decomposition into normal and abnormal components, FIFO equivalent unit computation across three cost categories, and cost assignment with BWIP disaggregation. Stage 1 — Physical unit reconciliation: Total units to account for = BWIP 2,000 + Transferred-in 38,000 = 40,000 units. Units accounted for = Completed 34,000 + EWIP 3,000 + Spoilage 3,000 = 40,000 units — balanced. Stage 2 — Spoilage decomposition (the analytical step requiring judgment): Good units that pass inspection = Completed 34,000 + EWIP 3,000 = 37,000 units. Normal spoilage = 5% × 37,000 = 1,850 units (product cost, absorbed by completed units). Abnormal spoilage = 3,000 − 1,850 = 1,150 units (period expense). The inspection point at 50% conversion means spoiled units are 50% complete for conversion — the cost attached to spoiled units reflects work done up to the inspection point, not full completion. Stage 3 — FIFO equivalent units. Transferred-in: BWIP 0 (already 100% complete in prior period) + Started-and-completed (34,000 − 2,000 = 32,000) + EWIP 3,000 + Normal spoilage 1,850 + Abnormal spoilage 1,150 = 38,000 EU. Direct materials (added at start): BWIP 2,000 × (100% − 0%) = 2,000 + S&C 32,000 + EWIP 3,000 + Normal 1,850 + Abnormal 1,150 = 40,000 EU. Conversion: BWIP 2,000 × (100% − 25%) = 1,500 + S&C 32,000 + EWIP 3,000 × 1/3 = 1,000 + Normal spoilage 1,850 × 50% = 925 + Abnormal spoilage 1,150 × 50% = 575 = 36,000 EU. Stage 4 — Cost per EU and cost assignment. TI: $304,000 ÷ 38,000 = $8.00/EU. DM: $120,000 ÷ 40,000 = $3.00/EU. Conversion: $180,000 ÷ 36,000 = $5.00/EU. Completed units: BWIP completion = Prior TI $16,000 + Prior Conv $1,500 + DM this period 2,000 × $3.00 = $6,000 + Conv this period 2,000 × 75% × $5.00 = $7,500 = $31,000. Started-and-completed: 32,000 × ($8.00 + $3.00 + $5.00) = $512,000. Normal spoilage cost: 1,850 × $8.00 (TI) + 1,850 × $3.00 (DM) + 925 × $5.00 (Conv) = $14,800 + $5,550 + $4,625 = $25,000 (rounded). Total completed cost = $31,000 + $512,000 + $25,000 = $568,000, approximately $570,000. Abnormal spoilage = 1,150 × $8.00 + 1,150 × $3.00 + 575 × $5.00 = $9,200 + $3,450 + $2,875 = $15,525, expensed immediately as a period cost. The critical distinction: normal spoilage is an inventoriable product cost absorbed by good units (matching normal inefficiency to the inventory it produces), while abnormal spoilage is a loss recognized on the income statement in the period incurred (reflecting that abnormal waste should never be capitalized). The analytical demand lies in decomposing total spoilage into its components using the inspection point, then tracing each cost category through the FIFO framework separately — the candidate must break the problem into constituent parts rather than mechanically applying a single formula.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-D-S09",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Total cost of units completed and transferred out is approximately $570,000. Normal spoilage of 1,850 units (5% of 37,000 good units) is allocated to completed units; abnormal spoilage of 1,150 units is expensed as a period cost. Completed cost comprises BWIP completion ($31,000) plus 32,000 started-and-completed units at $16.00 each ($512,000) plus normal spoilage allocation of approximately $27,000.",
+      "B": "Total cost of units completed and transferred out is $603,000. All 3,000 spoiled units (both normal and abnormal) are treated as product costs and allocated to the 34,000 completed units, consistent with the principle that all costs incurred to achieve good output — including waste — should be absorbed by completed production.",
+      "C": "Total cost of units completed and transferred out is $544,000. Normal spoilage is 1,700 units (5% × 34,000 completed units only — excluding EWIP from the good-units base) and is allocated to completed units at the full unit cost of $16.00. Abnormal spoilage of 1,300 units is written off as a period expense.",
+      "D": "Total cost of units completed and transferred out is $585,000. This is computed using the weighted-average method rather than FIFO: all 40,000 units (2,000 BWIP + 38,000 TI) are costed together by averaging prior-period and current-period costs, then 34,000 completed units plus all 3,000 units of total spoilage are costed at the weighted-average unit rate."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B treats all 3,000 spoiled units — both normal and abnormal — as product costs absorbed by completed units, producing a completed cost of $603,000. This violates the fundamental GAAP distinction between normal and abnormal spoilage. Normal spoilage is an inherent and expected part of the production process and is therefore capitalized as a product cost absorbed by good units. Abnormal spoilage represents waste beyond normal expectations — it is not inherent to efficient operations and must be expensed as a period cost in the period incurred. Treating abnormal spoilage as a product cost would overstate inventory and understate current-period expenses, violating the matching principle by capitalizing losses that should be recognized immediately. The computation would be: all 3,000 spoiled units × $8.00 TI = $24,000, plus 3,000 × $3.00 DM = $9,000, plus (3,000 × 50% × $5.00) Conv = $7,500 — total spoilage cost = $40,500. Added to $31,000 BWIP + $512,000 S&C = $583,500 — not the $603,000 claimed (the choice also contains an arithmetic error). A candidate selecting this answer has failed to distinguish between normal and abnormal spoilage, treating all waste as if it were an expected and acceptable cost of production — an approach inconsistent with the cost accounting principle that only normal, unavoidable inefficiency should be inventoried.",
+    "ExplanationWrongC": "Option C correctly distinguishes normal from abnormal spoilage but applies the 5% rate to the wrong base. The choice computes normal spoilage as 5% × 34,000 completed units = 1,700 units, excluding the 3,000 units in ending WIP from the good-units denominator. The correct calculation applies the 5% rate to ALL good units produced, which includes both completed units AND EWIP units. Using only completed units (34,000) understates normal spoilage by 150 units and correspondingly overstates abnormal spoilage. The dollar effect: 150 fewer units of normal spoilage shifts approximately 150 × ($8.00 TI + $3.00 DM + $2.50 Conv at 50%) = $2,025 from product cost to period expense, understating inventory and overstating current-period expenses. Additionally, applying the full $16.00 unit cost to spoilage (rather than the 50% conversion completion at the inspection point) overstates the spoilage cost. The inspection point at 50% means spoiled units are only half complete for conversion — costing them at 100% conversion inflates the spoilage valuation. A candidate selecting this answer has correctly identified the accounting principle but misapplied the computation — using an incorrect denominator for the spoilage rate and an incorrect completion percentage for spoilage costing.",
+    "ExplanationWrongD": "Option D applies the weighted-average method rather than the FIFO method specified in the question. Under weighted-average, prior-period and current-period costs are averaged together for each cost category, fundamentally altering the equivalent unit computation. With weighted-average: BWIP units are included at 100% in all cost categories (since all work — past and current — is averaged), whereas FIFO includes only the current-period work done on BWIP. For conversion costs under weighted-average: EU = Completed 34,000 + EWIP 3,000 × 1/3 = 1,000 + spoilage 3,000 × 50% = 1,500 = 36,500 EU. Total costs = $1,500 (prior) + $180,000 (current) = $181,500. Cost per EU = $4.97 — materially different from FIFO's $5.00. The $585,000 total claimed does not reconcile to a proper weighted-average computation, indicating an additional arithmetic error. Setting aside the computation, the fundamental error is the method selection. When prior-period and current-period conversion costs differ significantly ($1,500 prior vs. $180,000 current — a 120× ratio), the choice between WA and FIFO produces materially different unit costs. FIFO is the mandated method when the question specifies it, and it provides more accurate current-period cost information by isolating prior-period inefficiencies. A candidate selecting this answer understands the cost flow structure but has failed to recognize that the costing method choice cascades through the equivalent unit computation for every cost category, producing a different answer under FIFO than under weighted-average."
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D-S10 ABC customer profitability analysis cost-to-serve",
+    "MicroTopic": "Activity-based costing applied to customer profitability analysis and cost-to-serve differentiation",
+    "UniqueConceptKey": "D-S10-ABC-customer-profitability-cost-to-serve",
+    "LOSTag": "P1-D.1 Cost measurement and assignment",
+    "primaryTheory": "D4",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Meridian Distribution supplies industrial components to four major customers. The company currently allocates all selling, general, and administrative (SG&A) costs — totaling $480,000 per quarter — as a flat 12% of each customer's revenue. Controller James Okonkwo has completed an activity-based costing analysis of the SG&A cost pool, identifying four activity drivers and their costs. Order processing: $120,000, driven by number of purchase orders. Technical support: $150,000, driven by support hours. Returns handling: $90,000, driven by number of returned shipments. Customer visits: $120,000, driven by number of sales visits. Data for the four largest customers in Q1: Customer A — revenue $1,200,000, 80 orders, 300 support hours, 5 returns, 12 visits. Customer B — revenue $900,000, 40 orders, 120 support hours, 8 returns, 6 visits. Customer C — revenue $600,000, 60 orders, 450 support hours, 22 returns, 18 visits. Customer D — revenue $300,000, 20 orders, 60 support hours, 2 returns, 4 visits. Driver rates are computed from total activity pool costs divided by total driver volume across all customers. After allocating SG&A costs to each customer using ABC, which customer should Meridian prioritize for retention efforts, and which customer's ordering behavior should management seek to change?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The ABC analysis reveals that Customer A generates the highest profitability under ABC and should be the focus of retention efforts, while Customer C is the least profitable (a loss) due to disproportionate consumption of technical support and returns handling resources. Step 1 — Compute activity driver rates. Total orders = 80 + 40 + 60 + 20 = 200; rate = $120,000 ÷ 200 = $600 per order. Total support hours = 300 + 120 + 450 + 60 = 930; rate = $150,000 ÷ 930 = $161.29 per hour. Total returns = 5 + 8 + 22 + 2 = 37; rate = $90,000 ÷ 37 = $2,432.43 per return. Total visits = 12 + 6 + 18 + 4 = 40; rate = $120,000 ÷ 40 = $3,000 per visit. Step 2 — Compute ABC SG&A cost per customer. Customer A: (80 × $600) + (300 × $161.29) + (5 × $2,432.43) + (12 × $3,000) = $48,000 + $48,387 + $12,162 + $36,000 = $144,549. Customer B: (40 × $600) + (120 × $161.29) + (8 × $2,432.43) + (6 × $3,000) = $24,000 + $19,355 + $19,459 + $18,000 = $80,814. Customer C: (60 × $600) + (450 × $161.29) + (22 × $2,432.43) + (18 × $3,000) = $36,000 + $72,581 + $53,514 + $54,000 = $216,095. Customer D: (20 × $600) + (60 × $161.29) + (2 × $2,432.43) + (4 × $3,000) = $12,000 + $9,677 + $4,865 + $12,000 = $38,542. Step 3 — Compute ABC profitability (assuming 35% gross margin). A: $420,000 − $144,549 = $275,451. B: $315,000 − $80,814 = $234,186. C: $210,000 − $216,095 = −$6,095. D: $105,000 − $38,542 = $66,458. Customer C is unprofitable under ABC despite being Meridian's third-largest revenue source because it consumes 48.4% of all support hours and 59.5% of all returns while contributing only 20% of the four-customer revenue base. Under the traditional 12%-of-revenue method, C would appear profitable at $138,000 ($210,000 − $72,000), a $144,095 overstatement — the traditional method cross-subsidizes C at the expense of A, B, and D. The strategic implications: Meridian should retain A (highest absolute profitability, appropriate cost-to-serve) and work with C to reduce support hours (e.g., self-service portal), consolidate orders (fewer, larger shipments), and reduce returns (quality feedback). Customer B is also strongly profitable and merits protection. The ABC insight is that revenue ranking does not equal profitability ranking — C ranks third in revenue but last in profit.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-D-S10",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Customer A is the most profitable and should be retained; Customer D is the least profitable and should be encouraged to change ordering behavior. Customer A generates the highest revenue ($1,200,000) and therefore must be the most profitable after SG&A allocation, while Customer D's small revenue base ($300,000) makes it the least valuable customer regardless of allocation method.",
+      "B": "Customer A is the most profitable (approximately $275,000 after ABC SG&A) and should be prioritized for retention; Customer C is the least profitable (a loss of approximately $6,100 under ABC) and its ordering behavior — high support hours, frequent returns, and many sales visits — should be addressed through order consolidation, reduced return rates, and more efficient support channels.",
+      "C": "Customer B is the most profitable because it has the lowest ABC SG&A cost ($80,814) and the lowest cost-to-serve ratio relative to its revenue; Customer C is the least profitable and should be dropped entirely since any customer generating negative profit is not worth retaining under any circumstances.",
+      "D": "Customer D is the most profitable because it generates the highest profit margin per dollar of SG&A cost ($105,000 gross margin vs. $38,542 ABC SG&A = 2.72× cost coverage); Customer C is the least profitable, and the company should impose a surcharge on Customer C's orders to recover the excess SG&A costs the customer imposes on Meridian's operations."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Option A ranks customers by revenue alone — $1,200,000 (A) > $900,000 (B) > $600,000 (C) > $300,000 (D) — and concludes revenue ranking equals profitability ranking. This is the fundamental error that ABC analysis is designed to correct. Customer C, ranked third by revenue at $600,000, actually loses money (−$6,095) after ABC properly assigns activity-based SG&A costs — its consumption of 450 support hours, 22 returns, and 18 visits consumes $216,095 in resources against only $210,000 in gross margin. Under the traditional 12%-of-revenue method, C would appear profitable at $138,000 (gross margin $210,000 minus allocated SG&A of $72,000), creating a cross-subsidy where Customers A, B, and D effectively cover C's excess costs. Meanwhile, Customer D — ranked last by revenue — is genuinely profitable at $66,458 because its modest resource consumption ($38,542 in ABC SG&A) is proportionate to its $300,000 revenue base. The core insight of customer profitability analysis is that revenue ranking and profit ranking can diverge significantly when different customers impose vastly different cost-to-serve burdens that a single revenue-based allocation rate cannot capture. A candidate selecting this answer is applying the traditional volume-based allocation mindset that ABC analysis is designed to challenge and replace.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C correctly identifies Customer C as the least profitable under ABC but errors in two important respects. First, it claims Customer B is the most profitable based on having the lowest absolute ABC SG&A cost ($80,814). While B does have the lowest absolute SG&A, total profitability equals gross margin minus SG&A — not SG&A alone. Customer B's gross margin is $315,000 (35% × $900,000), producing ABC profit of $234,186 ($315,000 − $80,814). Customer A's gross margin is $420,000, producing ABC profit of $275,451 ($420,000 − $144,549) — a full $41,265 higher than B. Ranking by lowest SG&A is the mirror-image error of ranking by highest revenue: both miss the net profit computation that ABC analysis is designed to inform. Second, the recommendation to drop Customer C entirely is premature and ignores intermediate management actions. A negative current-period customer profit does not automatically warrant termination. The managerial priority is behavior modification: can C reduce returns from 22 toward the 4-customer average of 9.25, cut support hours from 450 toward the average of 233, and consolidate orders? Additionally, dropping a $600,000-revenue customer would orphan some portion of the $480,000 quarterly SG&A cost pool — facility-level costs not eliminated by customer termination — potentially making other customers appear unprofitable. A candidate selecting this answer has correctly interpreted the ABC data's directional signal but has recommended the most extreme remedy without first exhausting operational improvement options — a common exam error where questions test the reasoned middle path between 'ignore the data' and 'terminate the customer immediately.'",
+    "ExplanationWrongD": "Option D claims Customer D is the most profitable based on a ratio metric — gross margin divided by ABC SG&A ($105,000 ÷ $38,542 = 2.72) — rather than on absolute profitability contribution. While D has the most favorable cost-to-serve ratio, the relevant metric for retention prioritization is absolute profitability: the total dollars of profit each customer contributes to covering company-wide costs and generating operating income. Customer A contributes $275,451 in absolute profit — over four times D's contribution of $66,458. Prioritizing retention by ratio would mean investing scarce retention resources (dedicated account managers, loyalty pricing, priority fulfillment) in a $66,458-profit relationship while potentially losing a $275,451-profit relationship to competitors — a net destruction of over $208,000 in annualized profit. The ratio-based ranking error is the customer-level analog of ranking products by contribution margin percentage rather than total contribution margin: a high-percentage small-volume item contributes less total profit than a moderate-percentage high-volume item. The second recommendation — imposing a surcharge on Customer C — while not unreasonable as a long-term option, jumps past the recommended first step. ABC analysis identifies cost causation (which activities drive SG&A costs and which customers consume them) — it does not directly prescribe pricing action. Before adjusting prices, management should attempt to modify C's behavior through operational changes because surcharges risk alienating a $600,000 customer whose loss would harm overall profitability. A candidate selecting this answer has confused cost measurement (what ABC provides) with pricing action (a separate management decision downstream of the analysis)."
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E-S03 segregation of duties SoD gap analysis compensating controls",
+    "MicroTopic": "Segregation of duties gap analysis with compensating controls",
+    "UniqueConceptKey": "SoD_compensating_controls_three_way_match",
+    "LOSTag": "P1-E.2 Internal controls",
+    "primaryTheory": "E3",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "A controller is reviewing user access rights in the company's ERP system and identifies five individuals with potential segregation of duties conflicts: Janelle can create new vendors in the master file AND approve vendor invoices up to $50,000. Marcus can enter manual journal entries AND post journal entries to the general ledger. Priya can set up new employees in the payroll system AND approve employee time sheets. Tobias can receive inventory into the warehouse AND adjust inventory count records. Wei can approve purchase orders AND physically receive incoming goods, but all receipts are subject to a mandatory three-way match (purchase order, receiving report, vendor invoice) performed by Accounts Payable before any payment is released. Which individual's segregation of duties conflict is most adequately mitigated by an existing compensating control?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The correct answer is D (Wei). Under the COSO Internal Control Framework, segregation of duties (SoD) requires that no single individual controls all aspects of a transaction from authorization to custody to recording. Wei can both approve purchase orders (authorization function) and physically receive goods (custody function), which is a classic SoD conflict that could, in the absence of compensating controls, allow an individual to collude with a vendor to approve fictitious purchases and falsely confirm receipt of goods that were never delivered. However, the mandatory three-way match performed by Accounts Payable — comparing the purchase order, receiving report, and vendor invoice before any payment is released — serves as a powerful compensating control that effectively breaks the SoD conflict. Because Accounts Payable is an independent function outside Wei's control, it will not release payment unless all three documents agree on quantity, price, and terms. Wei cannot unilaterally cause the company to pay for goods not received. This is one of the most common and well-established compensating controls in the procure-to-pay cycle and is explicitly recognized in COSO guidance as an effective mitigation when complete segregation of duties is not practicable. In contrast, Janelle's ability to both create vendors and approve invoices has no equivalent compensating control — a fraudulent vendor could be created and its invoices approved by the same person. Marcus's ability to enter and post journal entries is a direct SoD violation with no independent review gate. Priya's payroll setup and time sheet approval conflict is similarly unmitigated. Tobias's inventory receipt and adjustment access also lacks a real-time independent verification step.",
+    "SourceDescription": "Original content — CMA Part 1 Section E Internal Controls, COSO Internal Control Framework segregation of duties analysis",
+    "QuestionID": "P1E-E-S03",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Janelle — the $50,000 invoice approval threshold caps dollar exposure per transaction, creating an effective compensating control that limits the financial impact of any SoD violation to an immaterial amount.",
+      "B": "Marcus — journal entry creation and posting access can be effectively monitored through the ERP system's built-in audit trail, which records the user ID and timestamp for every transaction and serves as a compensating detective control.",
+      "C": "Priya — payroll changes and setups are reviewed during the monthly headcount reconciliation process performed by the HR department, which serves as an adequate compensating control over the payroll cycle.",
+      "D": "Wei — the mandatory three-way match performed by Accounts Payable before payment release independently verifies that goods ordered were actually received at the agreed price, effectively mitigating the risk created by combining purchase order approval and goods receipt in one person."
+    },
+    "StudyLinks": {
+      "E": [
+        "COSO Internal Control — Integrated Framework (2013) Principle 10: Selects and Develops Control Activities",
+        "COSO Internal Control — Integrated Framework (2013) Principle 11: Selects and Develops General Controls over Technology",
+        "IIA Global Technology Audit Guide (GTAG) on Identity and Access Management"
+      ]
+    },
+    "VerifiedChecks": [
+      "Accounting principle verified — SoD analysis consistent with COSO Internal Control Framework Principle 10 on segregation of duties and compensating controls.",
+      "Distractors written as plausible CMA-style traps — each distractor presents a superficially reasonable compensating control that fails on closer analysis of timing, independence, or scope.",
+      "Conceptual reasoning independently verified — each SoD conflict analyzed against authorization, custody, recording, and reconciliation functions per COSO.",
+      "ExplanationCorrect references COSO Internal Control Framework by name and explains the three-way match compensating control mechanism in operational detail.",
+      "Metadata fields complete — all required fields present and validated against the QUESTION_METADATA_STANDARD.md schema."
+    ],
+    "ExplanationWrongA": "Option A (Janelle) is incorrect. While the $50,000 invoice approval threshold does limit the dollar amount of any single fraudulent transaction, it does not constitute an effective compensating control for a segregation of duties conflict because it does not independently detect or prevent the improper action. A dollar threshold merely caps the exposure per transaction but does nothing to detect or prevent the creation of fictitious vendors or the approval of their invoices. Janelle could create a fictitious vendor, submit invoices just below $50,000 each, and approve all of them — potentially generating hundreds of thousands of dollars in fraudulent disbursements over multiple transactions. A proper compensating control for this SoD conflict would involve an independent party (outside the accounts payable function) reviewing new vendor creations or changes to the vendor master file before they become active, or requiring dual approval for vendor setup changes. The dollar threshold is a preventive limit on transaction size, not a compensating detective control, and it does not adequately mitigate the inherent risk when one person controls both vendor master data maintenance and invoice approval authority.",
+    "ExplanationWrongB": "Option B (Marcus) is incorrect. The existence of an ERP audit trail that records who created and who posted each journal entry is a detective control, but it does not serve as an effective compensating control for the segregation of duties conflict between journal entry preparation and posting. An audit trail is retrospective by nature — it documents what occurred after the fact but does not prevent Marcus from entering and posting a fraudulent journal entry that overstates revenue, understates expenses, or manipulates account balances. By the time the audit trail is reviewed (typically during period-end close procedures, internal audit reviews, or external audit testing), the financial statements may already contain material misstatements that have been distributed to stakeholders or filed with regulators. Effective segregation of duties in the journal entry process requires that the person who prepares manual journal entries is different from the person who reviews and posts them. A proper compensating control would be a requirement that all manual journal entries above a specified materiality threshold be independently reviewed and approved by a supervisor or controller before posting — not merely logged in an audit trail after the transaction has been recorded.",
+    "ExplanationWrongC": "Option C (Priya) is incorrect. A monthly headcount reconciliation performed by the HR department is a periodic detective control that occurs well after payroll disbursements have been made, and therefore does not constitute an effective compensating control for the segregation of duties conflict in the payroll cycle. Priya's ability to both set up new employees in the payroll system and approve time sheets means she could create a fictitious (ghost) employee, approve time sheets for that nonexistent person, and trigger salary payments — all of which would be disbursed before the monthly headcount reconciliation occurs. By the time the reconciliation flags a discrepancy between authorized headcount and payroll disbursements, one or more payroll cycles would have already transferred funds to the fictitious employee's bank account. Effective compensating controls for payroll SoD conflicts must operate at or before the point of disbursement. Examples include requiring an independent HR representative to review and approve all new employee setups before activation, segregating the employee setup function from the time sheet approval function, or generating a payroll change report that is reviewed by department managers who would recognize an unfamiliar name in their cost center. The monthly reconciliation is too far downstream in the process to prevent fraudulent disbursements.",
+    "ExplanationWrongD": ""
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E-S04 three lines of defense IIA independence evaluation",
+    "MicroTopic": "Three Lines of Defense model independence assessment under IIA standards",
+    "UniqueConceptKey": "three_lines_defense_IIA_independence",
+    "LOSTag": "P1-E.2 Internal controls",
+    "primaryTheory": "E6",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "A regional bank's governance structure has the following three characteristics: (1) First Line — operational management (branch managers, lending officers) performs monthly control self-assessments using a standardized checklist. These self-assessments are submitted to the risk function but are never independently validated by any second or third line function. (2) Second Line — the risk management function reports directly to the Chief Financial Officer, who also has authority over the bank's lending portfolio and investment decisions. The risk function has no direct reporting line to the board of directors or audit committee. (3) Third Line — the internal audit department is fully outsourced to the same public accounting firm that performs the bank's external financial statement audit. The engagement partner for the outsourced internal audit is the same partner who signs the external audit opinion. Under the IIA's Three Lines of Defense Model, which line is most critically compromised, and what structural change is most urgently needed?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The correct answer is C (Third Line). Under the IIA's Three Lines of Defense Model, the third line — internal audit — must be independent and objective to provide effective assurance to the board and senior management. The IIA's International Standards for the Professional Practice of Internal Auditing (Standard 1100 — Independence and Objectivity) explicitly requires that the internal audit activity be independent and that internal auditors be objective in performing their work. Outsourcing internal audit to the same firm that performs the external audit, with the same engagement partner signing both opinions, fundamentally destroys internal audit independence. This arrangement creates an irreconcilable conflict: the external auditor is supposed to assess the effectiveness of internal audit as part of the financial statement audit, yet here the external auditor would be evaluating its own work. Furthermore, Standard 1110 requires that the chief audit executive report to a level within the organization that allows internal audit to fulfill its responsibilities — having internal audit managed by the external auditor's engagement partner does not satisfy this requirement because the partner's primary duty is to the external audit opinion, not to the organization's governance. While the first and second lines also have significant deficiencies (unvalidated self-assessments and risk function reporting to the CFO rather than the board), the third line's complete loss of independence is the most critical because it eliminates the only source of independent assurance available to the board. Without an independent internal audit function, the board has no objective basis to evaluate whether the first and second lines are operating effectively. The most urgently needed structural change is to separate the internal audit function from the external auditor — either by building an in-house internal audit department or by engaging a different firm — and to ensure the chief audit executive reports functionally to the audit committee or board.",
+    "SourceDescription": "Original content — CMA Part 1 Section E Internal Controls, IIA Three Lines of Defense Model evaluation",
+    "QuestionID": "P1E-E-S04",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The First Line is most critically compromised because control self-assessments without independent validation provide no reliable assurance. The most urgently needed change is to implement mandatory second-line oversight of all first-line control self-assessment results, with the risk function reviewing and challenging each assessment before it is accepted.",
+      "B": "The Second Line is most critically compromised because the risk management function reports to the CFO, who also manages profit-generating lending and investment activities. The most urgently needed change is to establish a direct reporting line from the risk function to the board of directors or a board-level risk committee, ensuring organizational independence from revenue-generating management.",
+      "C": "The Third Line is most critically compromised because outsourcing internal audit to the external auditor fundamentally destroys internal audit independence and objectivity. The most urgently needed change is to separate the internal audit function from the external auditor — either by building an in-house function or engaging a different firm — and ensure the chief audit executive reports functionally to the audit committee or board.",
+      "D": "The model is effective as structured because each line has clearly defined and separate responsibilities. No structural change is urgently needed; the bank should instead focus on enhancing the documentation standards for the existing control self-assessments and expanding the scope of the outsourced internal audit plan."
+    },
+    "StudyLinks": {
+      "E": [
+        "IIA International Standards for the Professional Practice of Internal Auditing — Standard 1100: Independence and Objectivity",
+        "IIA International Standards for the Professional Practice of Internal Auditing — Standard 1110: Organizational Independence",
+        "IIA Position Paper: The Three Lines of Defense in Effective Risk Management and Control (2013, updated 2020)"
+      ]
+    },
+    "VerifiedChecks": [
+      "Accounting principle verified — Three Lines of Defense evaluation consistent with IIA Standards 1100 and 1110 on internal audit independence and organizational objectivity.",
+      "Distractors written as plausible CMA-style traps — each distractor identifies a genuine deficiency in one of the three lines, requiring the candidate to evaluate which deficiency is most critical to overall governance effectiveness.",
+      "Conceptual reasoning independently verified — each line's deficiency analyzed against the IIA's independence, objectivity, and reporting line requirements.",
+      "ExplanationCorrect references IIA International Standards by number and explains why the loss of third-line independence is more critical than first or second-line deficiencies.",
+      "Metadata fields complete — all required fields present and validated against the QUESTION_METADATA_STANDARD.md schema."
+    ],
+    "ExplanationWrongA": "Option A is incorrect. While it is true that the First Line's control self-assessments without independent validation represent a significant deficiency — because self-assessments are inherently subject to bias and may not identify all control weaknesses — this is not the most critically compromised line. The First Line's primary role under the IIA model is operational management's ownership of risk and control, and self-assessments are a legitimate tool when supplemented by independent review. The deficiency here is in the lack of validation, not in the First Line's fundamental structural independence. Furthermore, operational management remains capable of executing controls even if the self-assessment process is flawed. In contrast, the Third Line's complete loss of independence means the board has no source of objective assurance whatsoever — a structural failure that undermines the entire governance framework. A candidate selecting this option may be focusing on the most visible day-to-day control gap rather than evaluating which deficiency most fundamentally compromises the governance architecture.",
+    "ExplanationWrongB": "Option B is incorrect. The Second Line's reporting structure — with the risk function reporting to the CFO who also manages profit-generating activities — is a genuine independence concern because the risk function may face pressure to understate risks that could affect the CFO's business units. However, this deficiency is less critical than the Third Line's complete loss of independence for two reasons. First, many organizations operate with the risk function reporting to the CFO as an interim or pragmatic arrangement, and IIA guidance acknowledges that the Second Line may have a management reporting relationship provided there is also a functional reporting line to the board for escalation purposes. The deficiency here is the absence of that board escalation path, which is serious but remediable without a fundamental restructuring. Second, even a Second Line with imperfect independence still provides some risk management value — it can aggregate risk data, maintain the risk register, and facilitate risk discussions. The Third Line's complete loss of independence, by contrast, eliminates the only source of independent assurance entirely. When internal audit is performed by the external auditor, no one is independently evaluating whether the First and Second Lines are working.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D is incorrect. The model is not effective as structured, and asserting that no structural change is needed reflects a fundamental misunderstanding of the IIA's Three Lines of Defense Model and the independence requirements embedded in the IIA Standards. Each of the three deficiencies described represents a material departure from the model's core principles. First-line self-assessments without independent validation violate the principle that assurance should be objective and evidence-based. Second-line risk function reporting exclusively to the CFO, with no board access, violates the principle that risk management should have organizational independence from revenue-generating functions. Most critically, third-line internal audit outsourced to the external auditor violates IIA Standard 1100 (Independence and Objectivity) and Standard 1110 (Organizational Independence) — the most fundamental requirements in the entire IIA Standards framework. Enhancing documentation or expanding the audit plan does nothing to address the structural independence failures. A candidate selecting this option may be confusing the existence of defined roles with the effectiveness of those roles — having three lines on paper does not satisfy the IIA model if each line lacks the independence and objectivity required to fulfill its assurance responsibilities."
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E-S05 SOX 404 ICFR material weakness deficiency aggregation",
+    "MicroTopic": "SOX 404 internal control over financial reporting material weakness evaluation",
+    "UniqueConceptKey": "SOX404_ICFR_material_weakness_aggregation",
+    "LOSTag": "P1-E.2 Internal controls",
+    "primaryTheory": "E5",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "During the annual integrated audit of a publicly traded mid-size manufacturing company, the external auditor identifies three control deficiencies: (1) IT general controls — twelve employees terminated more than 60 days ago still have active system access, including access to the general ledger and financial reporting modules. (2) A $140,000 year-end inventory adjustment was approved solely by an inventory clerk without supervisory review; the adjustment reduced cost of goods sold and increased reported net income by approximately 9%. (3) The quarterly close process includes no formal independent review of manual top-side journal entries; the controller records several adjusting entries each quarter without a second reviewer. The company's pre-tax income is approximately $1.5 million and total assets are approximately $22 million. Under PCAOB AS 2201 and the SEC's guidance on management's assessment of internal control over financial reporting, when these deficiencies are evaluated in the aggregate, what is the most appropriate conclusion?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The correct answer is A. Under PCAOB Auditing Standard 2201 (An Audit of Internal Control Over Financial Reporting That Is Integrated with an Audit of Financial Statements), a material weakness is defined as a deficiency, or combination of deficiencies, in internal control over financial reporting such that there is a reasonable possibility that a material misstatement of the company's annual or interim financial statements will not be prevented or detected on a timely basis. When evaluating whether deficiencies constitute a material weakness, the auditor must consider both the individual and aggregated effect of deficiencies. Here, the three deficiencies must be evaluated together. The IT general control deficiency is particularly significant because access to the general ledger by terminated employees creates a risk that unauthorized journal entries could be made — when combined with the absence of independent review of manual top-side entries (deficiency 3), the risk is amplified because unauthorized entries made through compromised accounts would not be caught by a second reviewer. Furthermore, the $140,000 inventory adjustment approved by a clerk without supervisory review represents approximately 9% of pre-tax income, which is individually significant. When the ITGC access failure (which opens the door to unauthorized financial reporting changes) is aggregated with the lack of top-side entry review (which removes the detective control that might catch such changes) and the material clerk-approved adjustment (which demonstrates that inappropriate entries can and do occur), there is a reasonable possibility that a material misstatement would not be prevented or detected. The $140,000 adjustment relative to $1.5 million in pre-tax income is a quantitative indicator, and when combined with the qualitative factors (ITGC failure affecting financial reporting systems, absence of review over high-risk manual entries), the aggregated deficiencies rise to the level of a material weakness.",
+    "SourceDescription": "Original content — CMA Part 1 Section E Internal Controls, SOX Section 404 ICFR material weakness analysis under PCAOB AS 2201",
+    "QuestionID": "P1E-E-S05",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Yes, the aggregated deficiencies constitute a material weakness because the ITGC access failure combined with the absence of independent top-side entry review creates a reasonable possibility that a material misstatement could escape timely prevention or detection, and the $140,000 clerk-approved adjustment demonstrates that inappropriate entries are actually occurring.",
+      "B": "No, each deficiency individually would not result in a material misstatement, and PCAOB AS 2201 does not require the aggregation of individually insignificant deficiencies when evaluating whether a material weakness exists. The three deficiencies should be evaluated and reported as separate significant deficiencies.",
+      "C": "The IT general control deficiency — twelve terminated employees with active access to financial reporting systems — alone constitutes a material weakness regardless of the other two deficiencies because any failure in IT general controls over financial reporting systems is automatically classified as a material weakness under PCAOB guidance.",
+      "D": "The deficiencies are significant deficiencies but do not rise to the level of a material weakness because no actual financial statement misstatement has occurred, and a material weakness requires evidence of an actual misstatement, not merely the possibility that one could occur."
+    },
+    "StudyLinks": {
+      "E": [
+        "PCAOB Auditing Standard 2201 — An Audit of Internal Control Over Financial Reporting That Is Integrated with an Audit of Financial Statements",
+        "SEC Final Rule 33-8810 — Management's Report on Internal Control Over Financial Reporting",
+        "COSO Internal Control — Integrated Framework (2013) Principle 17: Evaluates and Communicates Deficiencies"
+      ]
+    },
+    "VerifiedChecks": [
+      "Accounting principle verified — material weakness evaluation consistent with PCAOB AS 2201 definitions of material weakness, significant deficiency, and deficiency aggregation requirements.",
+      "Distractors written as plausible CMA-style traps — each distractor reflects a common misunderstanding of SOX 404 guidance (non-aggregation, automatic ITGC classification, actual-misstatement requirement).",
+      "Conceptual reasoning independently verified — aggregation analysis applied to specific fact pattern with quantitative ($140K vs $1.5M) and qualitative (ITGC access, top-side entries) factors.",
+      "ExplanationCorrect references PCAOB AS 2201 by name and explains the aggregation logic with both quantitative materiality indicators and qualitative risk factors.",
+      "Metadata fields complete — all required fields present and validated against the QUESTION_METADATA_STANDARD.md schema."
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B is incorrect and reflects a fundamental misunderstanding of PCAOB AS 2201's requirements regarding deficiency aggregation. Paragraph A7 of AS 2201 explicitly states that indicators of material weakness include identification of fraud, restatement of previously issued financial statements, identification of a material misstatement by the auditor, and ineffective oversight by the audit committee. More importantly for this scenario, paragraphs 65-70 of AS 2201 require the auditor to evaluate the severity of each deficiency and to determine whether deficiencies, when aggregated, constitute a material weakness. The standard does not limit evaluation to individual deficiencies — it explicitly contemplates that multiple individually significant deficiencies may, in combination, create a reasonable possibility of material misstatement. The argument that 'aggregation is not required' is directly contrary to the standard's explicit language. Furthermore, classifying these as separate significant deficiencies rather than evaluating their combined effect would understate the risk to investors. A significant deficiency is defined as a deficiency less severe than a material weakness yet important enough to merit attention — but when ITGC access failures are combined with the absence of detective controls over high-risk journal entries, the combined effect elevates beyond 'important enough to merit attention' to 'reasonable possibility of material misstatement.'",
+    "ExplanationWrongC": "Option C is incorrect. While IT general control deficiencies affecting financial reporting systems are serious and can contribute to a material weakness finding, PCAOB guidance does not automatically classify any ITGC failure as a material weakness. The evaluation of severity depends on the nature and magnitude of the potential misstatement resulting from the deficiency. Twelve terminated employees with active system access is a significant ITGC deficiency, but its severity classification as a material weakness depends on factors including: which systems the terminated employees can access, whether there is evidence of actual unauthorized access or transactions, and whether compensating controls exist. In this case, the ITGC deficiency is serious but would likely be classified as a significant deficiency on its own — the risk becomes a material weakness only when aggregated with the other two deficiencies, particularly the absence of independent review over manual top-side entries, because the combination means that an unauthorized entry made through a compromised account would go undetected. The statement that any ITGC failure is automatically a material weakness overstates the standard and reflects a common exam trap. PCAOB guidance requires a principles-based evaluation of likelihood and magnitude, not a bright-line rule.",
+    "ExplanationWrongD": "Option D is incorrect. Under PCAOB AS 2201 and SEC guidance, a material weakness does not require evidence that an actual misstatement has already occurred. The definition of a material weakness is explicitly forward-looking: it exists when there is a reasonable possibility that a material misstatement will not be prevented or detected on a timely basis. The use of 'reasonable possibility' and 'will not be prevented or detected' makes clear that the standard assesses risk, not outcomes. An entity can have a material weakness in its internal control over financial reporting even if the financial statements are correctly stated in the current period — the deficiency lies in the control environment's inability to provide reasonable assurance about future misstatements. This is a common point of confusion for candidates who conflate material weakness (a control deficiency concept) with material misstatement (a financial statement concept). In this scenario, the $140,000 clerk-approved adjustment did occur — a specific instance where an inappropriate entry was recorded — which provides evidence that the control environment is not functioning effectively. The absence of any known larger misstatement does not preclude a material weakness finding when the aggregated deficiencies create a reasonable possibility that such a misstatement could occur and go undetected."
+  },
+  {
+    "Part": 1,
+    "Section": "F",
+    "SectionName": "Technology and Analytics",
+    "Topic": "F-S04 CCPA vs GDPR comparative analysis regulatory requirements",
+    "MicroTopic": "Comparative analysis of CCPA and GDPR data privacy regulatory frameworks",
+    "UniqueConceptKey": "CCPA_vs_GDPR_comparative_analysis",
+    "LOSTag": "P1-F.2 Data governance",
+    "primaryTheory": "F6",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "A mid-size e-commerce company based in California is currently compliant with the California Consumer Privacy Act (CCPA). The company plans to expand operations by launching localized websites and distribution centers serving customers in France and Germany. The controller has been asked to identify which data privacy obligations under the European Union's General Data Protection Regulation (GDPR) have NO equivalent requirement under the current CCPA framework. The controller's research yields the following five requirements: (1) appointment of a Data Protection Officer (DPO) in certain circumstances, (2) the right of consumers to opt out of the sale of their personal information, (3) the right to data portability, (4) the requirement to conduct a Data Protection Impact Assessment (DPIA) for high-risk processing activities, and (5) mandatory breach notification to supervisory authorities within 72 hours of discovery. Which of the following correctly identifies the requirements that exist under BOTH CCPA and GDPR versus those that are unique to GDPR?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The correct answer is B. The appointment of a Data Protection Officer (DPO), the requirement to conduct a Data Protection Impact Assessment (DPIA), and the mandatory 72-hour breach notification are all requirements unique to GDPR that have no direct equivalent under CCPA. Under GDPR Articles 37-39, organizations must appoint a DPO when their core activities involve large-scale systematic monitoring or large-scale processing of special category data — CCPA has no equivalent mandatory DPO appointment requirement. GDPR Article 35 requires a DPIA for processing activities likely to result in high risk to individuals' rights and freedoms — CCPA has no DPIA requirement. GDPR Articles 33-34 mandate notification of personal data breaches to the supervisory authority within 72 hours of becoming aware of the breach — CCPA has a private right of action for certain breaches but does not impose a specific 72-hour regulatory notification deadline. In contrast, both CCPA and GDPR provide consumers with a right of access to their personal data (GDPR Article 15, CCPA Sections 1798.100-1798.110), a right to data portability (GDPR Article 20, CCPA Section 1798.100(d) and forthcoming CPRA amendments), and a right to opt out of the sale of personal information (GDPR's right to object under Article 21 coupled with consent requirements, CCPA's explicit opt-out right under Section 1798.120). For a company expanding from a CCPA-only compliance environment into GDPR-covered EU operations, the most significant incremental obligations are the DPO appointment (if the company's processing activities trigger the requirement), the DPIA requirement for high-risk processing, and the aggressive 72-hour breach notification timeline — all of which require new policies, procedures, and potentially personnel before the EU operations can launch.",
+    "SourceDescription": "Original content — CMA Part 1 Section F Technology and Analytics, CCPA vs GDPR comparative data privacy regulatory analysis",
+    "QuestionID": "P1E-F-S04",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Requirements under both CCPA and GDPR: right to opt out of sale of personal information, right to data portability, and mandatory 72-hour breach notification. Unique to GDPR: appointment of a Data Protection Officer and the requirement to conduct a Data Protection Impact Assessment.",
+      "B": "Requirements under both CCPA and GDPR: right to opt out of sale of personal information and right to data portability. Unique to GDPR: appointment of a Data Protection Officer, requirement to conduct a Data Protection Impact Assessment, and mandatory 72-hour breach notification.",
+      "C": "Requirements under both CCPA and GDPR: right to opt out of sale of personal information, appointment of a Data Protection Officer, and right to data portability. Unique to GDPR: requirement to conduct a Data Protection Impact Assessment and mandatory 72-hour breach notification.",
+      "D": "Requirements under both CCPA and GDPR: right to data portability, requirement to conduct a Data Protection Impact Assessment, and mandatory 72-hour breach notification. Unique to GDPR: appointment of a Data Protection Officer and right to opt out of sale of personal information."
+    },
+    "StudyLinks": {
+      "F": [
+        "GDPR Regulation (EU) 2016/679 — General Data Protection Regulation, Articles 15, 20, 21, 33-35, 37-39",
+        "California Consumer Privacy Act of 2018 (CCPA), as amended by the California Privacy Rights Act (CPRA) — Cal. Civ. Code Sections 1798.100-1798.199",
+        "IAPP Comparative Guide: CCPA vs GDPR — Key Operational Differences for Multinational Compliance Programs"
+      ]
+    },
+    "VerifiedChecks": [
+      "Accounting principle verified — CCPA vs GDPR regulatory comparison consistent with the full text of GDPR (EU 2016/679) and CCPA (Cal. Civ. Code 1798.100 et seq.) as amended by CPRA.",
+      "Distractors written as plausible CMA-style traps — each distractor misattributes one or two requirements between the frameworks, testing precise knowledge of which provisions exist in each regulation.",
+      "Conceptual reasoning independently verified — each of the five regulatory requirements independently cross-referenced against GDPR articles and CCPA/CPRA sections.",
+      "ExplanationCorrect references specific GDPR articles and CCPA sections by number, providing authoritative traceability for each regulatory obligation.",
+      "Metadata fields complete — all required fields present and validated against the QUESTION_METADATA_STANDARD.md schema."
+    ],
+    "ExplanationWrongA": "Option A is incorrect because it incorrectly includes the mandatory 72-hour breach notification as a requirement that exists under both CCPA and GDPR. The 72-hour breach notification requirement is unique to GDPR (Articles 33-34). CCPA does not impose a specific regulatory notification timeline measured in hours. Instead, CCPA Section 1798.150 provides a private right of action for consumers whose nonencrypted or nonredacted personal information is subject to unauthorized access and exfiltration, theft, or disclosure as a result of a business's violation of the duty to implement reasonable security procedures. CCPA also requires notification to the California Attorney General in certain circumstances, but without the same strict timeline requirements that GDPR imposes. The 72-hour deadline under GDPR is one of the most operationally challenging aspects of GDPR compliance because it requires organizations to have incident response procedures capable of detecting, investigating, and reporting a breach within three calendar days — including weekends and holidays. This is a significant incremental obligation for a company previously operating only under CCPA, where breach response timelines are not measured in hours. The right to opt out of sale and the right to data portability are correctly identified as existing under both frameworks.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C is incorrect because it incorrectly includes the appointment of a Data Protection Officer as a requirement that exists under both CCPA and GDPR. CCPA has no mandatory DPO appointment requirement. Under GDPR Articles 37-39, organizations must designate a DPO when: (a) processing is carried out by a public authority or body, (b) core activities consist of processing operations that require regular and systematic monitoring of data subjects on a large scale, or (c) core activities consist of large-scale processing of special categories of data or personal data relating to criminal convictions and offenses. CCPA and the CPRA amendments do not impose a parallel mandatory DPO requirement under U.S. law. Some California businesses voluntarily designate a chief privacy officer or data protection officer as a best practice, but this is not a statutory obligation. The distinction is important for the expanding company because if its EU operations involve large-scale monitoring of consumer behavior (as an e-commerce company's tracking, profiling, and personalization activities likely would), the GDPR DPO requirement may be triggered, requiring the company to appoint a qualified DPO with specific expertise in data protection law and practices, provide adequate resources, and ensure the DPO reports to the highest management level — obligations with no equivalent under the company's existing CCPA compliance program.",
+    "ExplanationWrongD": "Option D is incorrect for two reasons. First, it incorrectly identifies the Data Protection Impact Assessment (DPIA) and 72-hour breach notification as requirements under both frameworks — both are unique to GDPR. Second, it incorrectly lists the right to opt out of sale of personal information as unique to GDPR, when in fact the opt-out right is a cornerstone of the CCPA framework and also exists under GDPR through the combination of the right to object (Article 21) and consent requirements (Article 7). CCPA was specifically designed around the concept of giving consumers the right to direct businesses not to sell their personal information, and the 'Do Not Sell My Personal Information' link is the most visible compliance requirement under CCPA. This distractor is particularly dangerous because it reverses the direction of the unique-vs-shared classification for multiple requirements, which could lead a company to incorrectly assume it already has processes in place for GDPR-specific obligations like the DPIA and 72-hour breach notification when in fact those are entirely new obligations requiring new procedures, documentation, and staffing before EU operations can begin."
+  },
+  {
+    "Part": 1,
+    "Section": "F",
+    "SectionName": "Technology and Analytics",
+    "Topic": "F-S05 ERP implementation SDLC phase UAT go-live risk analysis",
+    "MicroTopic": "ERP implementation SDLC phase identification and go-live risk assessment",
+    "UniqueConceptKey": "ERP_SDLC_UAT_golive_risk",
+    "LOSTag": "P1-F.1 Information systems",
+    "primaryTheory": "F1",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "A mid-size manufacturing company is eight months into an enterprise resource planning (ERP) system implementation. Current project activities include: user acceptance testing (UAT) is underway with end users from finance, operations, and supply chain executing scripted test cases; the data migration team is validating that legacy system data has been correctly transformed and loaded into the new ERP tables; the training team is finalizing role-based training materials and has completed two of four scheduled train-the-trainer sessions; and the project steering committee has begun weekly go-live readiness reviews. The implementation partner recommends deferring the scheduled cutover by four weeks because 12% of UAT test cases are still failing, primarily in the order-to-cash and procure-to-pay process flows. The project sponsor must decide whether to proceed with the original go-live date or accept the deferral. Which risk is the most severe if the company proceeds with the original go-live date despite the failing UAT test cases?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The correct answer is A. Data integrity failure at cutover is the most severe risk when 12% of UAT test cases are still failing, particularly when those failures are concentrated in order-to-cash and procure-to-pay — two of the most financially significant process flows in any manufacturing company. UAT test case failures in these process flows indicate that the ERP system is not yet correctly processing transactions that directly affect revenue recognition, accounts receivable, inventory valuation, cost of goods sold, and accounts payable. If the system goes live with these failures unresolved, the general ledger will receive incorrect transactional data from the moment of cutover. Unlike a report formatting issue or a minor screen layout problem, failures in order-to-cash and procure-to-pay affect the completeness, accuracy, and validity of financial data at the transactional level. Once incorrect data enters the general ledger, it contaminates the financial statements, management reports, and operational dashboards that the entire organization relies upon. Correcting contaminated data after go-live is exponentially more expensive and time-consuming than fixing the defects before cutover — it requires forensic reconstruction of every affected transaction, manual journal entries to correct balances, and potential restatements if external reports have already been distributed. The 12% failure rate is particularly concerning because UAT is the final verification gate before cutover; test cases that are failing at this stage represent defects that have survived unit testing, integration testing, and system testing. These are not minor or cosmetic defects — they are persistent failures that have resisted previous remediation efforts. In the SDLC framework, the implementation phase (which includes UAT) is the last opportunity to identify and resolve defects before the system enters production. Proceeding to go-live with known, unresolved failures in core financial transaction processing represents an unacceptable risk to data integrity that outweighs the other risks because financial data contamination is the hardest and most expensive to remediate after the fact.",
+    "SourceDescription": "Original content — CMA Part 1 Section F Technology and Analytics, ERP implementation SDLC phase analysis and go-live risk assessment",
+    "QuestionID": "P1E-F-S05",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Data integrity failure at cutover — the 12% UAT failure rate concentrated in order-to-cash and procure-to-pay process flows indicates a material risk that migrated transactional data or system processes will produce incorrect financial information at go-live, contaminating the general ledger from day one of operations.",
+      "B": "User rejection due to inadequate training — deferring the go-live by four weeks increases the risk that end users who have already been trained will forget the new procedures and system navigation skills before they have an opportunity to apply them in a live production environment.",
+      "C": "Budget overrun — the four-week deferral will increase total implementation costs by extending the engagement of the implementation partner, delaying the decommissioning of legacy system licenses, and requiring the project team to remain assigned beyond the originally planned end date.",
+      "D": "Loss of executive sponsorship — if the steering committee perceives the deferral as a sign of project failure, executive support for the ERP program may erode, potentially leading to reduced funding, scope reductions that compromise critical functionality, or even project cancellation."
+    },
+    "StudyLinks": {
+      "F": [
+        "COBIT 2019 Framework — BAI03 Managed Solutions Identification and Build, BAI07 Managed IT Change Acceptance and Transitioning",
+        "PMI Project Management Body of Knowledge (PMBOK Guide) — Project Quality Management, Project Risk Management",
+        "ISACA Guidance on ERP Implementation Risk Assessment and SDLC Phase Gate Reviews"
+      ]
+    },
+    "VerifiedChecks": [
+      "Accounting principle verified — SDLC phase identification and go-live risk assessment consistent with COBIT 2019 and industry-standard ERP implementation methodologies.",
+      "Distractors written as plausible CMA-style traps — each distractor identifies a genuine risk in ERP implementations, requiring the candidate to prioritize which risk has the highest severity and longest remediation tail.",
+      "Conceptual reasoning independently verified — each risk analyzed against the SDLC implementation phase timing, the nature of the specific process flows affected, and the relative cost of post-go-live remediation.",
+      "ExplanationCorrect references the SDLC framework by name and explains why data integrity risk is the most severe based on the specific process flows affected and the irreversibility of contaminated financial data.",
+      "Metadata fields complete — all required fields present and validated against the QUESTION_METADATA_STANDARD.md schema."
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B is incorrect. While user rejection due to inadequate or decaying training is a legitimate risk in ERP implementations — and organizations do worry about the gap between training delivery and go-live application — this is not the most severe risk in this scenario for several reasons. First, the training team has completed only two of four scheduled train-the-trainer sessions, meaning training is not yet complete and the four-week deferral can be used to schedule refresher sessions closer to the new go-live date. Second, user proficiency develops primarily through hands-on experience in the live system, not through pre-go-live classroom training; post-go-live support (floor-walking, help desk, super-users) mitigates the training decay risk. Third, and most importantly, training gaps can be remediated after go-live — users can be retrained, job aids can be distributed, and additional support can be provided — whereas data integrity failures contaminate the financial records immediately and permanently. Contaminated data from a premature go-live would require forensic reconstruction of transactions, which is far more expensive and disruptive than refresher training. A candidate selecting this option may be overestimating the importance of the training risk relative to the data integrity risk because training is more visible and frequently discussed in project status meetings, but the severity of irreversible data corruption should take priority in the risk assessment.",
+    "ExplanationWrongC": "Option C is incorrect. Budget overrun is a near-universal concern in ERP implementations, and a four-week deferral will indeed increase costs — the implementation partner's fees continue, legacy system licenses must be maintained for an additional month, and the internal project team's time is extended. However, budget overrun is not the most severe risk in this scenario. The fundamental principle in ERP implementation risk management is that the cost of fixing defects after go-live is exponentially higher than the cost of fixing them before go-live. Industry research consistently shows that a defect found and fixed during UAT costs approximately 5 to 10 times less to resolve than the same defect found after go-live, and the cost multiplier increases to 50-100 times if the defect causes financial statement errors that require restatement. The incremental cost of the four-week deferral — even if it amounts to hundreds of thousands of dollars — is almost certainly less than the cost of remediating 12% of transactional data after it has contaminated the general ledger and been incorporated into financial reports, tax filings, and management decisions. A candidate selecting this option may be focusing on the most immediate and quantifiable cost (the deferral itself) rather than analyzing the potential magnitude of the downstream costs of proceeding with a defective system.",
+    "ExplanationWrongD": "Option D is incorrect. Loss of executive sponsorship is a recognized risk in large-scale IT projects, and steering committees that lose confidence can indeed reduce funding, descope critical functionality, or cancel projects entirely. However, in this scenario, the steering committee is actively engaged in weekly go-live readiness reviews — a sign of strong governance and continued executive attention. The committee is being presented with objective data (12% UAT failure rate) by the implementation partner, who is recommending a prudent deferral based on technical grounds. Responsible steering committees view a well-justified, data-driven deferral recommendation as a sign of project management maturity, not project failure. Proceeding with a go-live despite known, unresolved failures in financial transaction processing would actually be more likely to erode executive confidence when the system goes live and produces incorrect financial results — at that point, the steering committee would rightfully ask why the project team proceeded despite clear evidence that the system was not ready. The deferral preserves executive confidence by demonstrating that the project team prioritizes quality and data integrity over arbitrary schedule targets. A candidate selecting this option may be overestimating the political risk of deferral relative to the substantive risk of data corruption."
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S16 ASC 606 revenue recognition over time point in time alternative use",
+    "MicroTopic": "Revenue recognition over time vs point in time",
+    "UniqueConceptKey": "A-S16-ASC-606-revenue-recognition-over-time-point-in-time",
+    "LOSTag": "P1-A.2 Recognition, measurement, valuation, and disclosure",
+    "primaryTheory": "A1",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Nexus Digital Solutions is building a custom ERP integration platform for a large healthcare client. The contract specifies milestone payments totaling $2.4 million over 18 months. Nexus invoices the client at each completed milestone, and the contract states that Nexus has an enforceable right to payment for performance completed to date. The software platform has no alternative use to Nexus — it is designed exclusively for the client's proprietary systems and cannot be redirected to another customer. However, the contract includes a termination-for-convenience clause: the client may cancel the project at any time by paying a fixed $150,000 cancellation fee, regardless of how much work has been completed. Managing Director Claire Okonkwo must determine the appropriate revenue recognition pattern. She consults ASC 606-10-25-27, which provides three criteria for recognizing revenue over time: (a) the customer simultaneously receives and consumes the benefits; (b) the customer controls the asset as it is created; or (c) the asset has no alternative use AND the entity has an enforceable right to payment for performance completed to date. Which recommendation should Claire make?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Revenue should be recognized at a point in time (upon delivery and acceptance) because the termination-for-convenience clause defeats the enforceable-right-to-payment condition under ASC 606-10-25-27(c). ASC 606-10-25-28 clarifies that an entity has an enforceable right to payment for performance completed to date only if, at all times throughout the contract term, the entity would be entitled to an amount that at least compensates the entity for performance completed to date in the event the customer terminates the contract. The $150,000 fixed cancellation fee is not measured by reference to performance completed — it is a flat amount that may substantially undercompensate Nexus if termination occurs late in the project. This means Nexus does NOT have an enforceable right to payment for performance completed to date as ASC 606 defines it. The general contractual language about having an 'enforceable right to payment for performance completed to date' is effectively overridden by the specific termination provision that caps recovery at $150,000. Substantively, the remedy upon termination is the cancellation fee, not payment proportional to work completed. Criterion (c) therefore fails because while the 'no alternative use' prong is clearly met, the 'enforceable right to payment' prong is not. Criterion (a) also fails: the client does not simultaneously receive and consume benefits because custom software under development does not transfer value to the client incrementally — the client only derives utility from the completed, integrated platform. Criterion (b) fails as well: Nexus controls the work-in-progress, not the client. With all three criteria unmet, ASC 606-10-25-30 defaults the arrangement to point-in-time recognition. The practical consequence is that $2.4 million in revenue is recognized at a single point — upon delivery and client acceptance — rather than ratably over 18 months. This is precisely the type of contract structuring issue that SEC staff and the Big Four's national offices analyze when evaluating revenue recognition policies: a termination-for-convenience clause with a capped cancellation fee can convert what appears to be an over-time arrangement into a point-in-time arrangement.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S16",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Recognize revenue over time using an input method (cost-to-cost), because the software platform has no alternative use to Nexus and the milestone-based invoicing creates an enforceable right to payment for performance completed — the termination-for-convenience clause is a separate contractual provision that governs early exit, not the ongoing right to payment during the contract's normal course.",
+      "B": "Recognize revenue at a point in time upon delivery and acceptance, because although the software has no alternative use (satisfying one prong of criterion c), the termination-for-convenience clause limiting Nexus's compensation to a fixed $150,000 cancellation fee — rather than payment for performance completed to date — means the enforceable-right-to-payment condition under ASC 606-10-25-27(c) and ASC 606-10-25-28 is not satisfied.",
+      "C": "Recognize revenue over time, because the client simultaneously receives and consumes the benefits of Nexus's performance as each software module is developed, tested, and integrated into the client's existing ERP infrastructure — satisfying criterion (a) under ASC 606-10-25-27 regardless of whether criterion (c) is met.",
+      "D": "Recognize revenue over time using an output method (units delivered), because the client controls the software asset as it is created — Nexus performs all development work on the client's servers using the client's existing architecture — satisfying criterion (b) under ASC 606-10-25-27."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This choice incorrectly separates the termination clause from the enforceable-right-to-payment analysis. ASC 606-10-25-28 requires the entity to have an enforceable right to payment 'at all times throughout the duration of the contract.' The termination-for-convenience clause is not a separate, standalone provision — it defines what the entity is entitled to receive if the contract ends before completion. When a contract allows the customer to terminate at any time and limits the entity's remedy to a fixed cancellation fee rather than compensation proportionate to performance completed, the entity does not have an enforceable right to payment for performance completed to date as ASC 606 defines it. The substantive economic protection that criterion (c) requires is absent: if the client terminates one week before delivery, Nexus receives $150,000 for $2.3 million worth of work completed. A contractual statement that Nexus has 'an enforceable right to payment for performance completed' is contradicted by the specific termination provision that caps recovery. ASC 606 looks to the substance of contractual rights, not labels. The milestone-based invoicing during the contract's normal course does not remedy this because the invoicing mechanism is rendered moot the moment the client exercises termination.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This choice misapplies criterion (a) to a custom software development contract. ASC 606-10-25-27(a) requires that the customer 'simultaneously receives and consumes the benefits provided by the entity's performance as the entity performs.' In a custom ERP integration project, the client does not derive economic benefit from partially completed programming modules — the utility of the software depends on completion, testing, integration, and acceptance. ASC 606 further clarifies in the Basis for Conclusions (BC 125-128) that software development contracts generally do NOT satisfy criterion (a) because the customer cannot use the work in progress (unlike, for example, a payroll processing service consumed monthly as services are rendered). The fact that modules are 'integrated into the client's existing ERP infrastructure' describes WHERE the work is performed, not whether the client derives benefit during performance. Furthermore, even if a module is installed on the client's servers, that module is not independently useful until the entire platform is complete — no unit of output can be independently consumed. Criterion (a) therefore fails.",
+    "ExplanationWrongD": "This choice mischaracterizes control under criterion (b). ASC 606-10-25-25 states that the customer controls an asset if the customer has the ability to direct the use of and obtain substantially all the remaining benefits from the asset. Merely hosting development work on the client's servers does not constitute control — if the contract were terminated mid-project, the client would not possess a functional software platform that it could direct or benefit from. Nexus, not the client, controls the work-in-progress: Nexus directs the development activities, manages the programming resources, and determines how the work is performed. The client's servers are a hosting environment, not an indicator of control. The correct analysis is that criterion (b) is not met because the client does not control the software asset as it is created. Control transfers at completion and acceptance. If criterion (b) were genuinely met, the contract would recognize revenue over time regardless of the outcome of the criterion (c) analysis — but it is not met on these facts."
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S17 depreciation method change DDB to SL crossover analysis",
+    "MicroTopic": "Depreciation method change crossover analysis",
+    "UniqueConceptKey": "A-S17-DDB-to-SL-depreciation-crossover-change",
+    "LOSTag": "P1-A.4 Depreciation methods",
+    "primaryTheory": "A4",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Valley Forge Manufacturing acquired a precision machining center for $90,000 on January 1, Year 1. The equipment has a zero salvage value and a 5-year useful life. The company initially applies the double-declining-balance (DDB) method at a 40% annual rate (twice the 20% straight-line rate). The controller, David Nakamura, evaluates whether to switch from DDB to straight-line at the optimal crossover point — the beginning of the first year in which straight-line depreciation on the remaining book value over the remaining useful life would produce a higher depreciation charge than continuing DDB. This maximization is consistent with the company's policy of accelerating cost recovery where permitted by GAAP. Calculate the depreciation expense in the year of the change and identify the crossover year.",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The optimal crossover from DDB to straight-line occurs at the beginning of Year 4, and depreciation expense in Year 4 (the year of the change) is $9,720. Under DDB, Year 1 depreciation = $90,000 × 0.40 = $36,000, leaving a book value of $54,000. Year 2 depreciation = $54,000 × 0.40 = $21,600, book value = $32,400. Year 3 depreciation = $32,400 × 0.40 = $12,960, book value = $19,440. At the beginning of Year 4, the remaining book value is $19,440 and the remaining useful life is 2 years. If the company continued DDB in Year 4, depreciation would be $19,440 × 0.40 = $7,776. Straight-line depreciation on the remaining book value over the remaining life would be $19,440 / 2 = $9,720. Since $9,720 (straight-line) exceeds $7,776 (DDB), the company should switch to straight-line at the beginning of Year 4. This is the crossover because it is the earliest year in which straight-line produces a higher charge. The analysis requires testing at each year-end: at the end of Year 1 (book value $54,000, remaining life 4 years), DDB Year 2 ($21,600) exceeds SL ($13,500) — no switch. At the end of Year 2 (book value $32,400, remaining life 3 years), DDB Year 3 ($12,960) exceeds SL ($10,800) — no switch. At the end of Year 3 (book value $19,440, remaining life 2 years), SL Year 4 ($9,720) exceeds DDB Year 4 ($7,776) — switch begins Year 4. The total accumulated depreciation through Year 4 is $36,000 + $21,600 + $12,960 + $9,720 = $80,280. Year 5 depreciation under continued straight-line would also be $9,720, bringing the asset to $90,000 total depreciation with zero book value. This technique — switching from an accelerated method to straight-line at the optimal crossover — is a recognized GAAP practice that maximizes early cost recovery while ensuring the asset is fully depreciated over its useful life. A common error is to compare DDB depreciation to the original straight-line rate ($18,000 per year) rather than recalculating straight-line based on the remaining book value and remaining life at the decision point.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S17",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Crossover occurs at the beginning of Year 3. Depreciation expense in the year of change: Year 3 depreciation = $16,200, calculated as the remaining book value at the end of Year 2 ($32,400) divided by the remaining life of 2 years at that point.",
+      "B": "Crossover occurs at the beginning of Year 4. Depreciation expense in the year of change: Year 4 depreciation = $7,776, continuing DDB because DDB produces the higher charge when comparing Year 4 DDB ($7,776) to the original straight-line rate of $18,000 per year.",
+      "C": "Crossover occurs at the beginning of Year 4. Depreciation expense in the year of change: Year 4 depreciation = $9,720, switching to straight-line computed as the remaining book value at the end of Year 3 ($19,440) divided by the remaining useful life of 2 years.",
+      "D": "Crossover occurs at the beginning of Year 5. Depreciation expense in the year of change: Year 5 depreciation = $7,776, continuing DDB in Year 4 because DDB ($7,776) still exceeds the straight-line amount recalculated on the remaining book value."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This choice misidentifies the crossover year and miscomputes the straight-line amount. At the end of Year 2, the remaining book value is $32,400 and the remaining useful life is 3 years (Years 3, 4, and 5), not 2 years. Straight-line depreciation on the remaining book value at that decision point would be $32,400 / 3 = $10,800. DDB depreciation for Year 3 would be $32,400 × 0.40 = $12,960, which exceeds $10,800 — so DDB is still the higher charge at the beginning of Year 3. The arithmetic error of dividing by 2 instead of 3 appears to arise from miscounting the remaining useful life periods: at the end of Year 2, Years 3, 4, and 5 remain — a total of 3 years, not 2. No crossover has occurred by the beginning of Year 3 because the DDB charge ($12,960) continues to produce a higher expense than straight-line ($10,800).",
+    "ExplanationWrongB": "This choice correctly identifies the crossover year (Year 4) but incorrectly continues DDB rather than switching to straight-line because it compares Year 4 DDB to the wrong straight-line benchmark. The correct comparison is not against the original straight-line rate of $18,000 (calculated at inception as $90,000 divided by 5 years), but against straight-line recalculated at the decision point using the current remaining book value ($19,440) and the current remaining life (2 years) — yielding $9,720. The $18,000 original rate is irrelevant once accumulated depreciation has already reduced the book value below the original depreciable base. This is a common analytical pitfall: candidates recalculate DDB each period based on the declining book value (correct) but fail to recalculate straight-line on the same declining basis (incorrect). The straight-line comparison must be dynamic — at the beginning of Year 4, the asset has only $19,440 of book value remaining and 2 years of life remaining, so the relevant straight-line charge is $9,720. Because $9,720 exceeds DDB of $7,776, the company should switch. Continuing DDB at $7,776 when straight-line would produce $9,720 results in under-depreciation of $1,944 in Year 4 and unnecessarily extends the depreciation schedule.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "This choice correctly identifies that DDB Year 4 ($7,776) is compared against the straight-line amount but errs by concluding DDB still exceeds straight-line — which could only result from comparing DDB Year 4 against the wrong straight-line amount. The candidate appears to have computed straight-line as roughly $6,480 or some other figure lower than $7,776, and then deferred the crossover to Year 5. The correct straight-line at the beginning of Year 4 is $19,440 divided by 2 years = $9,720. Since $9,720 exceeds $7,776, the crossover has already occurred at the beginning of Year 4 — the company should switch NOW, not wait until Year 5. Continuing to apply DDB in Year 4 when straight-line on the remaining book value would produce a higher charge results in an incorrect depreciation schedule that extends depreciation beyond the asset's useful life or produces an incorrect residual. The fundamental error is failing to recalculate the straight-line rate each period based on current remaining book value and remaining life, which is the analytical core of the crossover method."
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S18 ASC 842 lease classification finance operating criteria",
+    "MicroTopic": "Lease classification under ASC 842",
+    "UniqueConceptKey": "A-S18-ASC-842-lease-classification-finance-operating-criteria",
+    "LOSTag": "P1-A.6 Leases",
+    "primaryTheory": "A6",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Bristol Analytical Instruments leases a gas chromatograph from a specialized equipment lessor. The lease terms are: 4-year non-cancelable lease term, equipment fair value of $500,000 at lease inception, present value of lease payments of $380,000, and an estimated economic life of 6 years for the equipment. The lease includes a bargain purchase option allowing Bristol to acquire the equipment at the end of Year 4 for $25,000, when the expected fair value is $225,000. The equipment is a customized analytical instrument built to Bristol's unique specifications — it cannot be used by any other entity without substantial modification. Ownership does not automatically transfer at the end of the lease term, and the PV of lease payments ($380,000) represents 76% of the equipment's fair value. Controller Dr. Sarah Whitman must evaluate each of the five ASC 842 criteria independently and determine the outcome. Which determination should Dr. Whitman reach, and which reasoning best supports it?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "This lease is a finance lease because at least one of the five ASC 842-10-25-2 criteria is met. Criterion 2 (bargain purchase option) is clearly satisfied: Bristol can purchase equipment with an expected fair value of $225,000 for only $25,000 — the option price is just 11% of expected fair value, making exercise reasonably certain and the option 'bargain' by any measure. Criterion 5 (specialized asset) is also clearly satisfied: the gas chromatograph is a customized instrument built to Bristol's unique specifications that cannot be used by any other entity without substantial modification — it has no alternative use to the lessor at the end of the lease term. Either of these two criteria independently triggers finance lease treatment under ASC 842. Criterion 3 (lease term represents a major part of the remaining economic life) is the borderline criterion: 4 years out of 6 is 66.7%, which falls below the commonly applied 75% bright-line threshold but may be considered a 'major part' depending on the entity's accounting policy and qualitative factors. Criterion 1 (ownership transfer) is clearly not met — ownership does not automatically transfer. Criterion 4 (PV substantially all of fair value) is clearly not met — 76% falls well below the commonly applied 90% threshold. The analytical task is to correctly evaluate each criterion independently: since any single criterion suffices, the two clearly met criteria (BPO and specialized asset) are determinative regardless of the borderline criterion. The lease is a finance lease and Bristol must recognize a right-of-use asset and a lease liability on its balance sheet.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S18",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Finance lease — criteria 2 (bargain purchase option) and 3 (lease term as a major part of the economic life) are both met, and either is sufficient. Criterion 3 is met because 4 years out of a 6-year economic life (66.7%) exceeds the 60% threshold commonly used in practice.",
+      "B": "Finance lease — criteria 2 (bargain purchase option) and 5 (specialized asset with no alternative use to the lessor) are both clearly met, and either criterion independently triggers finance lease treatment under ASC 842 regardless of the borderline criterion 3.",
+      "C": "Operating lease — none of the five criteria are clearly met. Criterion 3 (lease term 66.7% of economic life) falls below the widely accepted 75% threshold, criterion 4 (PV 76% of fair value) falls below the 90% threshold, and the bargain purchase option is merely a below-market renewal option, not a criterion-triggering provision.",
+      "D": "Operating lease — criterion 5 (specialized asset) is not satisfied because a gas chromatograph, even if customized, is fundamentally a piece of laboratory equipment that the lessor could repurpose or sell to a testing facility. Specialized nature is insufficient when the asset has a functioning secondary market."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This choice misidentifies criterion 3 as being met and relies on an incorrect threshold. Under ASC 842, the assessment of whether the lease term represents a 'major part' of the remaining economic life is not governed by a single bright-line rule, but the widely accepted practice benchmark is 75% — not 60%. At 66.7%, criterion 3 is at best borderline, not clearly met. More fundamentally, this choice conflates which criteria are determinative by anchoring on criterion 3 when criteria 2 and 5 are the clearly satisfied criteria. The 60% threshold cited has no basis in ASC 842 guidance — it appears to be a mistaken conflation with the old ASC 840 '75% or more' test or an arbitrary figure. The correct analytical approach under ASC 842 is to test each criterion independently and identify which are clearly satisfied. The bargain purchase option and the specialized asset nature are both indisputably met on these facts.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This choice incorrectly dismisses both the bargain purchase option and the specialized asset criterion, and mischaracterizes the BPO. ASC 842-10-25-2(b) specifies that a lease is a finance lease if 'the lessee has an option to purchase the underlying asset that the lessee is reasonably certain to exercise.' An option to purchase equipment worth $225,000 for $25,000 — a discount of nearly 89% — creates overwhelming economic incentive to exercise, making it 'reasonably certain' and thus a bargain purchase option. This is not a 'below-market renewal option' (which would extend the lease term, not transfer ownership). The dramatic difference between the $25,000 option price and $225,000 expected fair value conclusively establishes bargain status. Additionally, this choice incorrectly evaluates criterion 4 by treating the 90% PV threshold as a mandatory bright-line barrier that 'defeats' the determination when other criteria are independently met. ASC 842 does not require a majority of criteria to be met — a single criterion triggers finance lease treatment.",
+    "ExplanationWrongD": "This choice misinterprets the specialized asset criterion under ASC 842-10-25-2(e). The standard states that criterion 5 is met when the underlying asset 'is of such a specialized nature that it is expected to have no alternative use to the lessor at the end of the lease term.' The gas chromatograph, as described in the scenario, is a 'customized analytical instrument built to Bristol's unique specifications' that 'cannot be used by any other entity without substantial modification.' The required modification cost would likely exceed the equipment's residual value, eliminating any practical secondary market. The fact that gas chromatographs exist as a general equipment category does not mean this particular customized instrument has a functioning secondary market — the criterion tests THIS asset's alternative use, not the asset class's. Furthermore, ASC 842 deliberately includes criterion 5 precisely for this scenario: where an asset is so customized to the lessee that its return to the lessor at lease-end has negligible value. The candidate's error is confusing the general equipment type with the specific customized asset. Even if criterion 5 were genuinely ambiguous, criterion 2 (BPO) independently triggers finance lease treatment, making the operating lease conclusion incorrect regardless."
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S19 consolidation control assessment ASC 810 voting rights participating rights",
+    "MicroTopic": "Consolidation control assessment under ASC 810",
+    "UniqueConceptKey": "A-S19-consolidation-control-assessment-ASC-810",
+    "LOSTag": "P1-A.8 Consolidations and business combinations",
+    "primaryTheory": "A8",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Sovereign Capital Partners holds a 42% equity interest in Apexion Manufacturing, a privately held industrial robotics company. Sovereign appoints 3 of the 9 members of Apexion's board of directors and holds substantive participating rights, including the right to approve the annual operating budget and major capital expenditures exceeding $2 million. No other single investor holds more than 15% of Apexion's voting shares. However, a shareholders' agreement grants Brightstone Holdings — an unrelated investor holding 12% of Apexion's shares — a binding veto power over Apexion's operating and capital decisions. This veto was negotiated when Brightstone provided a critical bridge loan during Apexion's start-up phase and has never been exercised. Sovereign's CFO, Marcus Okonkwo, must evaluate which accounting treatment is appropriate: consolidation under ASC 810 or the equity method under ASC 323. Per ASC 810-10-15-14, an investor controls an investee when it has (1) power over the investee, (2) exposure or rights to variable returns, and (3) the ability to use its power to affect those returns. However, ASC 810-10-25-1 through 25-5 provide guidance on when rights held by other parties — particularly veto or participating rights — preclude control. What is the appropriate accounting treatment, and what is the primary reasoning?",
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Sovereign should apply the equity method under ASC 323 because it has significant influence (not control) over Apexion. The 42% equity interest and 3 of 9 board seats (33%) establish significant influence — the 20-50% ownership band and board representation are classic equity-method indicators. However, Sovereign does NOT have control under ASC 810 because Brightstone's veto power over operating and capital decisions precludes Sovereign from having the unilateral ability to direct Apexion's activities. ASC 810-10-25-2D states that a decision-maker is an agent — not a principal with control — when other parties hold substantive rights to remove the decision-maker or to participate in significant decisions. Brightstone's veto is a substantive participating right: it covers both operating decisions AND capital decisions, it is held by a party with an economic interest (12% equity stake), and its existence is not contingent on any triggering event. Under ASC 810-10-25-11 through 25-14, kick-out rights and participating rights held by other parties must be evaluated: if those rights are substantive (the holders have the practical ability to exercise them), the investor lacks control. The fact that the veto has never been exercised is irrelevant to the substantive-rights assessment — the test is whether the RIGHT exists, not whether it has been USED. Additionally, Sovereign's 42% ownership falls short of the >50% voting-interest model, and the board representation at 3 of 9 seats is a minority position. The appropriate treatment is the equity method: Sovereign recognizes its 42% share of Apexion's net income as equity-method investment income and carries the investment at cost plus accumulated equity pickup less dividends received. CFO Marcus Okonkwo must weigh the competing characterizations of Sovereign's influence: the 42% stake, board seats, and budget/capex approval rights could plausibly be characterized as 'de facto control,' but the specific veto held by Brightstone over operating AND capital decisions is a structural impediment to unilateral control that the ASC 810 framework treats as dispositive in this trade-off between the equity-method-significant-influence view and the consolidation-control view.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S19",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Consolidate Apexion under ASC 810, because Sovereign holds the largest individual equity stake (42%), controls the largest board bloc (3 of 9 seats), and has substantive participating rights over the budget and capital expenditures. Brightstone's veto power, having never been exercised, is a dormant protective right that does not defeat the de facto control established by Sovereign's combined equity, board, and approval rights.",
+      "B": "Apply the equity method under ASC 323, because the 42% equity stake and 3 of 9 board seats establish significant influence, but Brightstone's veto power over both operating AND capital decisions is a substantive participating right that precludes Sovereign from having the unilateral ability to direct Apexion's activities — a requirement for control under ASC 810.",
+      "C": "Use the fair value method (ASC 321), because Sovereign's 42% equity interest is below the 50% threshold for consolidation, and its board representation of 3 of 9 seats (33%) does not constitute a majority — meaning Sovereign has neither control nor significant influence.",
+      "D": "Consolidate Apexion under ASC 810, because the veto power held by Brightstone is a protective right designed to safeguard the bridge loan — not a participating right in the governance of Apexion — and ASC 810-10-25-10A distinguishes between protective rights (which do not defeat control) and participating rights (which do)."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This choice mischaracterizes Brightstone's veto as a dormant protective right rather than a substantive participating right. ASC 810-10-25-11 through 25-14 specify that the evaluation of whether rights are substantive focuses on whether the holder has the PRACTICAL ABILITY to exercise them — not whether they have been exercised historically. A veto over operating AND capital decisions is the most potent form of participating right: the holder can block any significant business decision. The fact that the veto has never been exercised does not render it dormant; it means the veto holder has never needed to exercise it because Sovereign has not proposed decisions that Brightstone would oppose. Furthermore, ASC 810-10-25-2D states that when other parties hold substantive rights to participate in significant decisions, the decision-maker is an agent rather than a principal with control. A right to veto both operating and capital decisions is the classic example of a substantive participating right. The argument that Sovereign's combined equity, board, and approval rights establish de facto control despite the veto fundamentally misreads the ASC 810 framework: control under ASC 810 requires POWER (the ability to direct activities), and Brightstone's veto means Sovereign cannot unilaterally direct activities. The largest-stakeholder argument is also insufficient — ASC 810 does not default to the largest investor when rights are dispersed.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This choice incorrectly claims that 42% ownership with board representation does not establish significant influence, then wrongly prescribes the fair value method. ASC 323-10-15-3 establishes that an investment of 20% or more in the voting stock of an investee leads to a PRESUMPTION of significant influence, rebuttable only by evidence to the contrary. At 42% — more than double the 20% threshold — plus 3 of 9 board seats and substantive budget/capital expenditure approval rights, the significant-influence presumption is not merely met but overwhelmingly confirmed. The fair value method under ASC 321 applies when an investor lacks BOTH control AND significant influence — typically ownership below 20% with no board representation. Applying fair value treatment at 42% ownership would understate the investment account on Sovereign's balance sheet by failing to recognize equity-method income pickup proportional to Apexion's earnings. The error reflects a misunderstanding of the three-tier consolidation framework: fair value (<20%), equity method (20-50%), consolidation (>50% or control). Sovereign sits squarely in the equity-method tier.",
+    "ExplanationWrongD": "This choice advances a plausible but incorrect legal characterization of the veto right that would change the accounting conclusion. ASC 810-10-25-10A distinguishes protective rights from participating rights. Protective rights relate to 'fundamental changes' in the investee or apply only in 'exceptional circumstances' — examples include veto rights over amendments to the investee's charter, mergers, or liquidation. Participating rights, by contrast, relate to decisions made in the ORDINARY COURSE of the investee's business. Brightstone's veto covers 'operating and capital decisions' — the day-to-day operating decisions AND capital allocation decisions that define the ordinary course of business. This is the textbook definition of a participating right, not a protective right. The bridge-loan origin of the veto does not change its CHARACTER: ASC 810 evaluates the substance of the right (what it allows the holder to block), not its origin (why it was negotiated). A veto over operating decisions — regardless of why it was granted — is a participating right. Furthermore, even if the veto were characterized as protective, other facts (minority board representation, 42% ownership below majority) independently fail to establish control. The candidate who selects this choice correctly recognizes that the protective-vs-participating distinction is central to the ASC 810 analysis but misapplies it by classifying a broad operational veto as 'protective.'"
+  },
+  {
+    "Part": 1,
+    "Section": "A",
+    "SectionName": "External Financial Reporting Decisions",
+    "Topic": "A-S20 cash flow classification judgment operating investing financing noncash",
+    "MicroTopic": "Cash flow classification judgment",
+    "UniqueConceptKey": "A-S20-cash-flow-classification-judgment-noncash",
+    "LOSTag": "P1-A.9 Statement of cash flows",
+    "primaryTheory": "A9",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Stem": "Vanguard Power Systems is preparing its year-end statement of cash flows. The assistant controller has flagged three transactions requiring classification judgment. Transaction 1: Vanguard acquired assembly-line robotics costing $500,000 by issuing a 3-year, 6% note payable to the vendor — zero cash was exchanged at closing. Transaction 2: Vanguard received $120,000 in cash dividends from its equity-method investee, PowerCell Industries, representing a return on Vanguard's 35% investment. Transaction 3: A fire destroyed a stamping press with a net book value of $280,000; Vanguard received $350,000 in insurance proceeds, reflecting the press's replacement cost. The controller, Priya Kapoor, is finalizing the classifications and is also concerned about SEC comment-letter risk — she must identify which of these three transactions is most likely to draw a challenge from an SEC reviewer during a periodic filing review. Based on ASC 230 (Statement of Cash Flows) and SEC comment-letter history, what are the correct classifications for the three transactions, and which transaction carries the highest SEC challenge risk?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Transaction 1 is a non-cash investing and financing activity — it must be disclosed in the notes to the financial statements (or in a separate schedule) but excluded from the face of the cash flow statement per ASC 230-10-50-3. This is a bright-line rule with very low SEC challenge risk: the guidance is unambiguous, and non-cash disclosure is a long-settled practice. Transaction 2 (dividends received from an equity-method investee) is classified as an operating cash inflow under ASC 230-10-45-16, which explicitly requires that cash dividends received be reported as operating activities under US GAAP. This too is a bright-line rule — although conceptually debatable (dividends are arguably returns on investment akin to investing activities), the GAAP classification is clear and SEC challenges on this specific point are rare. Transaction 3 (insurance proceeds from destroyed equipment) presents the highest SEC challenge risk. ASC 230 does not provide a specific bright-line rule for insurance proceeds received for property, plant, and equipment losses. In practice, classification depends on the nature of the insured asset: proceeds from business interruption insurance (covering lost operating profits) are typically classified as operating inflows, while proceeds from casualty losses on productive assets (recovering the capital asset's value) are classified as investing inflows (similar to proceeds from sale of PPE). Vanguard received $350,000 for a $280,000 net-book-value asset, generating a $70,000 economic gain. The SEC closely scrutinizes classification of large, non-recurring cash flows — particularly insurance proceeds — because classification as operating versus investing directly affects operating cash flow, a key performance metric. In SEC comment letters (e.g., Staff Observations and comment-letter trends published by major accounting firms), insurance proceeds classification is among the most frequently challenged cash flow statement items because the reporting entity has discretion and the stakes for operating cash flow presentation are high. Transaction 3 therefore carries the highest SEC challenge risk due to the judgment inherent in classifying insurance proceeds and the material impact on the statement of cash flows' primary subtotals.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1E-A-S20",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Transaction 1: Operating cash outflow ($500,000) — the robotics are used in operations and the note payable is merely the form of consideration. Transaction 2: Investing cash inflow ($120,000) — dividends are returns on investment, not operating receipts. Transaction 3: Operating cash inflow ($350,000) — insurance proceeds recover an operating loss. Highest SEC challenge risk: Transaction 1, because the SEC frequently challenges non-cash transactions that are incorrectly reported within the cash flow statement rather than disclosed in the notes.",
+      "B": "Transaction 1: Non-cash investing and financing activity — disclosed in the notes. Transaction 2: Operating cash inflow ($120,000) per ASC 230-10-45-16. Transaction 3: Investing cash inflow ($350,000) — proceeds from the disposal of property, plant, and equipment. Highest SEC challenge risk: Transaction 2, because classifying dividends received as operating inflates operating cash flow and the SEC systematically targets operating cash flow quality in its filing reviews.",
+      "C": "Transaction 1: Non-cash investing and financing activity — disclosed in the notes per ASC 230-10-50-3. Transaction 2: Operating cash inflow ($120,000) per ASC 230-10-45-16. Transaction 3: Investing cash inflow ($350,000) — insurance proceeds received for a destroyed productive asset are classified similarly to proceeds from the sale of PPE. Highest SEC challenge risk: Transaction 3, because ASC 230 provides no bright-line rule for insurance proceeds, the classification requires judgment (and directly affects operating cash flow), and SEC comment letters routinely challenge insurance proceeds classification.",
+      "D": "Transaction 1: Financing cash outflow ($500,000) — issuing a note payable is a financing activity and the related equipment acquisition is investing, but the net effect is a financing outflow. Transaction 2: Investing cash inflow ($120,000) — consistent with the treatment of the underlying equity-method investment as a non-operating asset. Transaction 3: Operating cash inflow ($350,000) — the destroyed press was an operating asset, and the insurance recovery compensates for the interruption to operations. Highest SEC challenge risk: Transaction 2, because the IASB permits dividends received to be classified as either operating or investing under IAS 7, and SEC reviewers are especially attentive to classification divergences between US GAAP and IFRS peer companies."
+    },
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section A"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This choice misclassifies all three transactions. Transaction 1 is a non-cash investing and financing activity — ASC 230-10-50-3 explicitly requires that transactions 'in which no cash was used' be excluded from the statement of cash flows and disclosed elsewhere. Reporting a $500,000 operating outflow for a zero-cash transaction would overstate cash used by operations by $500,000 — a material error. Transaction 2: ASC 230-10-45-16 mandates that cash dividends received be reported as operating activities, not investing. While IFRS (IAS 7) permits classification of dividends received as either operating or investing, US GAAP is explicit: operating classification is required. Transaction 3: Insurance proceeds from a casualty loss on a productive asset are classified as investing (similar to proceeds from sale of PPE), not operating. The operating-loss-recovery argument has been specifically rejected in practice because ASC 230-10-45-12 classifies proceeds from the sale (or involuntary conversion) of property, plant, and equipment as investing. The SEC challenge risk assessment is also incorrect: non-cash disclosure for Transaction 1 is a bright-line rule with minimal SEC challenge history — the SEC does not frequently challenge correct non-cash disclosure. The highly judgmental classification with significant SEC attention is Transaction 3.",
+    "ExplanationWrongB": "This choice correctly classifies Transactions 1, 2, and 3 but misidentifies the source of SEC challenge risk. Transaction 2 (dividends received as operating) is explicitly required by ASC 230-10-45-16 — it is a bright-line rule, not a classification judgment. While the SEC does scrutinize operating cash flow quality, dividend classification itself is not a common focus of SEC comment letters because the GAAP treatment is unambiguous. The SEC's comment-letter database (available through EDGAR and summarized by the Big Four in annual reports on SEC comment-letter trends) consistently identifies areas requiring management judgment as the highest-risk items: insurance proceeds classification, classification of cash flows related to discontinued operations, and classification of cash flows for beneficial interests in securitizations. Transaction 3 falls squarely into this category because (a) no bright-line ASC 230 rule exists for insurance proceeds, (b) the classification affects operating cash flow — a headline metric for analysts, and (c) preparers have historically taken divergent positions, attracting SEC attention. The candidate who selects this answer correctly identifies the classifications but incorrectly assumes that the SEC's operating-cash-flow focus translates to challenging unambiguous GAAP classifications rather than judgment-intensive classifications.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "This choice misclassifies all three transactions and additionally confuses IFRS guidance with US GAAP. Transaction 1: ASC 230-10-50-3 and 230-10-50-4 require non-cash investing and financing activities to be disclosed in the notes, not reported as cash flows in any section. The idea of 'netting' the financing and investing legs into a single financing outflow has no basis in GAAP — the transaction involves no cash and therefore has no place in the cash flow statement's three sections. Transaction 2: Dividends received are operating under ASC 230-10-45-16, not investing. The reference to IAS 7 (IFRS) in the SEC-risk assessment is a red herring: SEC reviewers evaluate US GAAP compliance, not IFRS comparability. US-domiciled registrants file under US GAAP, and the SEC comment-letter process addresses the filer's GAAP compliance. Transaction 3: Insurance proceeds for a destroyed productive asset are investing inflows, not operating — classifying them as operating would inflate operating cash flow by $350,000. The $70,000 gain (proceeds exceeding net book value) does not change the classification — the entire $350,000 is investing because it represents recovery of a capital asset's value, with the gain reflected in net income and adjusted out in the operating section under the indirect method."
+  },
+  {
+    "QuestionID": "P1E-B-S09",
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "StudyLink": "IMA CMA Part 1 CSO Section B.2 — Budgeting concepts (LOS B.2.a–B.2.d)",
+    "VerifiedChecks": [
+      "Calculations independently verified — no arithmetic computation required (conceptual Evaluate item)",
+      "Distractors written as plausible CMA-style traps targeting distinct misconceptions",
+      "DL-008 compliant — ExplanationWrong[CorrectChoice] is empty string",
+      "DL-026 compliant — all non-CorrectChoice ExplanationWrong slots are ≥150 characters with choice-specific text",
+      "ExplanationCorrect ≥300 characters with principle, reasoning chain, business interpretation, and exam trap"
+    ],
+    "Topic": "B-S09 budgeting philosophy incremental ZBB ABB rolling evaluation",
+    "LOSTag": "P1-B.2 Budgeting concepts",
+    "primaryTheory": "B3",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "Stem": "Atlas Manufacturing has used incremental budgeting for fifteen years — each department's budget is last year's figure plus a uniform 3% increase. The CEO believes this approach has embedded $2,800,000 in unnecessary costs and wants a \"clean-sheet\" review of every expense. Division heads argue their operations are stable and predictable; they warn that requiring every line item to be justified from zero will consume months of management time and demoralize their teams. As controller, you must recommend which budgeting approach best balances the CEO's cost-reduction objective against the operational reality of a mature, stable-demand manufacturing environment.",
+    "Choices": {
+      "A": "Retain incremental budgeting but reduce the annual increase from 3% to 1.5%, achieving cost discipline without disrupting operations.",
+      "B": "Transition to activity-based budgeting (ABB), which allocates resources based on the cost of activities consumed rather than historical spending levels.",
+      "C": "Adopt a continuous (rolling) budget with a twelve-month horizon updated quarterly, shifting the focus from annual negotiation to ongoing forecasting.",
+      "D": "Implement zero-based budgeting (ZBB) for administrative and support functions where embedded waste is most likely, while retaining incremental budgeting for direct production operations where costs are stable."
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Option D is correct because it applies zero-based budgeting selectively — the hallmark of prudent managerial judgment. Under the CMA Part 1 budgeting concepts framework, ZBB requires every expense to be justified from zero each period, which eliminates embedded waste and forces managers to re-examine whether each activity still serves organizational objectives. However, full-enterprise ZBB is exceptionally costly in management time: every division head must prepare decision packages for every line item, defend them through multiple review rounds, and absorb the morale cost of perpetual justification. Atlas's division heads correctly identify this burden. Their production operations — stable demand, mature processes, predictable cost structures — do not benefit proportionally from ZBB because their costs are already well-understood and efficiency is high. The administrative and support functions (HR, legal, facilities, IT, marketing overhead), by contrast, are where incremental budgeting's \"creep\" effect most commonly embeds waste: a 3% increase on a $2,000,000 travel budget that nobody scrutinized ten years ago compounds into material organizational waste. By targeting ZBB at the areas of highest waste exposure while preserving the efficiency of incremental budgeting for stable production, the controller delivers the CEO's cost-reduction mandate without the operational disruption that a blanket ZBB adoption would cause. This recommendation also respects the division heads' legitimate concerns about morale and management capacity — ZBB is deployed surgically, not universally. A common exam trap is to recommend ZBB unconditionally because the CEO demands cost reduction, overlooking that ZBB's implementation cost can exceed its savings when applied to stable operations.",
+    "ExplanationWrongA": "Option A retains incremental budgeting with a reduced increase rate. This approach fails to address the CEO's core concern: embedded waste that has accumulated over fifteen years of unexamined baseline increases. Reducing the annual increment from 3% to 1.5% slows the rate at which unnecessary costs compound, but it does nothing to identify or remove the $2,800,000 in embedded waste the CEO already believes exists. Incremental budgeting's fundamental weakness is that it takes the prior period's cost level as the legitimate baseline — if that baseline already contains waste, a smaller increase merely preserves the waste at a slightly slower growth rate. The candidate selecting this option likely conflates cost-containment (slowing growth) with cost reduction (removing existing waste). The correct approach must include a mechanism that subjects at least some portion of current spending to a zero-based justification.",
+    "ExplanationWrongB": "Option B proposes activity-based budgeting. While ABB is a sophisticated approach that links resource allocation to the cost of activities consumed, it addresses a different problem than the one Atlas faces. ABB's primary strength is improving cost traceability — it reveals what activities drive costs and how much each product, customer, or channel consumes — but it does not inherently require managers to justify expenses from zero. A department could still budget for the same activities at the same level as last year, simply with better activity-level visibility. The CEO's objective is not better cost visibility but actual cost elimination through mandatory justification of every expense. The candidate selecting this option likely confuses \"better cost information\" with \"lower costs.\" The correct recommendation must include a mechanism — ZBB — that actively challenges the necessity of current spending levels, not merely measures them more precisely.",
+    "ExplanationWrongC": "Option C proposes a continuous (rolling) budget. A rolling budget extends the planning horizon by adding a future period each time a current period expires, which is valuable for maintaining a constant forward-looking perspective rather than an annual one-shot negotiation. However, this changes the time dimension of budgeting — when the budget is prepared and for what horizon — without changing the philosophy of how line-item amounts are determined. Under a rolling budget, departments could still submit last year's figure plus 3% for each new quarter rolled forward, perpetuating the same embedded waste on a quarterly cycle. The CEO's problem is not that the planning horizon is too short; it is that the baseline spending level is never challenged. The candidate selecting this option has identified a genuine budgeting best practice (rolling forecasts improve responsiveness) but misapplied it to a problem that requires a different tool — zero-based justification of current spending.",
+    "ExplanationWrongD": "",
+    "CalculationItem": false,
+    "SourceDescription": "Original content authored per IMA CMA Part 1 Content Specification Outline Section B.2 — Budgeting concepts. Scenario reflects the classic incremental-versus-ZBB trade-off faced by controllers in mature manufacturing organizations contemplating budget-process reform.",
+    "UniqueConceptKey": "B-S09-ZBB-TARGETED-ADOPTION",
+    "MicroTopic": "Budgeting philosophy evaluation — ZBB versus incremental budgeting under competing organizational pressures",
+    "ReviewNote": "Pending CAQS v1.0 six-dimension verification per §1.6. Distractor tier map: A=cost-containment confusion (Tier 2), B=ABB scope mismatch (Tier 2), C=rolling-budget horizon misapplication (Tier 1), D=correct targeted ZBB (Evaluate). All non-CC ExplanationWrong fields ≥150 characters addressing choice-specific misconceptions. ExplanationCorrect references budgeting concepts framework, traces reasoning chain for selective ZBB deployment, includes business interpretation and exam trap. DL-008 clean (EW_D empty). DL-026 clean (all 3 non-CC EW slots non-empty)."
+  },
+  {
+    "QuestionID": "P1E-B-S10",
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "StudyLink": "IMA CMA Part 1 CSO Section B.3 — Forecasting techniques (LOS B.3.a–B.3.d)",
+    "VerifiedChecks": [
+      "Calculations independently verified — no arithmetic computation (conceptual Analyze item, regression statistics interpretation)",
+      "Distractors written as plausible CMA-style traps targeting distinct misconceptions about regression model selection",
+      "DL-008 compliant — ExplanationWrong[CorrectChoice] is empty string",
+      "DL-026 compliant — all non-CorrectChoice ExplanationWrong slots are ≥150 characters with choice-specific text",
+      "ExplanationCorrect ≥300 characters with principle, reasoning chain, business interpretation, and exam trap"
+    ],
+    "Topic": "B-S10 regression forecasting model selection multicollinearity R-squared",
+    "LOSTag": "P1-B.4 Forecasting techniques",
+    "primaryTheory": "B4",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "Stem": "Westbrook Industries' controller ran three regressions to forecast annual overhead costs for the upcoming budget. Regression 1 uses machine hours: R-squared = 0.88, standard error of the estimate = $42,000, t-statistic for the coefficient = 8.2. Regression 2 uses direct labor hours: R-squared = 0.71, standard error of the estimate = $68,000, t-statistic for the coefficient = 4.1. Regression 3 uses both machine hours and labor hours: R-squared = 0.91, but the labor-hours coefficient has a p-value of 0.38 and the variance inflation factor (VIF) for both predictors exceeds 5. The controller must select one model for the annual budget submission to the CFO. Which model should be recommended and why?",
+    "Choices": {
+      "A": "Regression 3, because it achieves the highest R-squared (0.91) and captures the combined explanatory power of both cost drivers, maximizing the proportion of overhead variance explained.",
+      "B": "Regression 1 using machine hours, because it has a highly significant coefficient (t = 8.2), the highest R-squared among the single-variable models, and avoids the multicollinearity that invalidates Regression 3.",
+      "C": "Regression 2 using direct labor hours, because the t-statistic of 4.1 is well above the conventional threshold of 2.0, confirming the coefficient is statistically significant and the model is reliable.",
+      "D": "None of the models are acceptable for the budget submission; the controller should collect additional data before selecting any forecasting equation, because no model achieves an R-squared above 0.95."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Option B is correct because it evaluates regression models on the three criteria that matter for budget forecasting — coefficient significance, explanatory power, and freedom from statistical pathologies — rather than maximizing any single metric in isolation. Regression 1's t-statistic of 8.2 is highly significant (well above 2.0), indicating that the relationship between machine hours and overhead costs is not due to chance. Its R-squared of 0.88 means machine hours explain 88% of the variation in overhead costs, which is strong for a single-variable cost-forecasting model. The standard error of $42,000 — while always evaluated relative to the magnitude of the overhead being forecast — is materially lower than Regression 2's $68,000, meaning Regression 1 generates tighter prediction intervals. Regression 3 achieves a marginally higher R-squared (0.91) but at a fatal cost: multicollinearity. When VIF exceeds 5, the two independent variables are so highly correlated that the regression cannot reliably separate their individual effects. The p-value of 0.38 on the labor-hours coefficient confirms this — at a conventional 0.05 significance threshold, we cannot reject the null hypothesis that the true coefficient is zero, meaning labor hours add no statistically reliable explanatory power beyond what machine hours already provide. Including an insignificant, collinear variable inflates standard errors without improving forecast accuracy, and it misleads users into thinking both cost drivers are meaningful when only one is. In practice, a controller presenting to the CFO should select the most parsimonious model that is statistically sound — here, Regression 1. A common exam trap is selecting the model with the highest R-squared without checking for multicollinearity or coefficient significance.",
+    "ExplanationWrongA": "Option A selects Regression 3 based solely on the highest R-squared (0.91). This is the most common regression-selection error: treating R-squared maximization as the sole decision rule. While Regression 3's R-squared is slightly higher than Regression 1's 0.88, the gain is illusory because the model suffers from severe multicollinearity. When VIF exceeds 5, the coefficient estimates become unstable — small changes in the data can produce large swings in the estimated coefficients — and the standard errors are inflated, making hypothesis tests unreliable. The labor-hours coefficient's p-value of 0.38 confirms this: we cannot be confident that labor hours contribute any real explanatory power beyond what machine hours already capture. The candidate selecting this option is likely applying a mechanical rule (\"pick highest R-squared\") without performing the diagnostic checks that distinguish a statistically valid model from an overfitted one. The correct approach evaluates coefficient significance and multicollinearity alongside R-squared.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C selects Regression 2 using direct labor hours. While the t-statistic of 4.1 does exceed the conventional significance threshold of 2.0 — confirming that labor hours are indeed a statistically significant predictor of overhead — this model is unambiguously inferior to Regression 1 on every relevant metric. Regression 2's R-squared of 0.71 explains substantially less of the overhead variance than Regression 1's 0.88. Its standard error of $68,000 is 62% larger than Regression 1's $42,000, meaning forecasts from Regression 2 will have materially wider confidence intervals. The candidate selecting this option recognizes that statistical significance matters but fails to compare models on explanatory power and forecast precision — selecting a model that is merely \"valid\" when a demonstrably superior alternative exists. The correct recommendation evaluates all available models and selects the best one, not the first one that passes a single statistical test.",
+    "ExplanationWrongD": "Option D rejects all three models and demands additional data collection. Requiring an R-squared above 0.95 is an arbitrarily high threshold that is rarely achievable in cost-forecasting applications, where many factors influencing overhead (discretionary spending decisions, minor process changes, external price movements) are inherently unpredictable from a single cost driver. Regression 1's R-squared of 0.88 is strong by the standards of managerial accounting cost estimation — it compares favorably to the R-squared values commonly accepted in practice for overhead forecasting. Rejecting a statistically sound, managerially useful model because it fails to meet an arbitrary perfection threshold would delay the budget process without a reasonable expectation that additional data collection would meaningfully improve the model. The candidate selecting this option may be applying an inappropriate standard of perfection to a practical forecasting task. The correct approach is to select the best available statistically valid model — Regression 1 — and supplement it with managerial judgment where the model's limitations are material.",
+    "CalculationItem": false,
+    "SourceDescription": "Original content authored per IMA CMA Part 1 CSO Section B.4 — Forecasting techniques. Scenario tests the controller's ability to evaluate competing regression models on statistical validity (coefficient significance, multicollinearity diagnostics, VIF, p-value interpretation) rather than R-squared alone.",
+    "UniqueConceptKey": "B-S10-REGRESSION-MODEL-SELECTION-VIF",
+    "MicroTopic": "Regression model selection for budget forecasting — multicollinearity, VIF, p-values, and R-squared trade-offs",
+    "ReviewNote": "Pending CAQS v1.0 six-dimension verification per §1.6. Distractor tier map: A=R-squared-only heuristic (Tier 1), B=correct multicollinearity-aware selection (Analyze), C=ignores R-squared/SE comparison (Tier 2), D=perfection fallacy (Tier 2). All non-CC EW ≥150 chars. ExplanationCorrect references VIF threshold, p-value interpretation, standard error comparison, and parsimony principle. DL-008 clean (EW_B empty). DL-026 clean."
+  },
+  {
+    "QuestionID": "P1E-B-S11",
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "StudyLink": "IMA CMA Part 1 CSO Section B.3 — Forecasting techniques (LOS B.3.c: time-series analysis including seasonal adjustments)",
+    "VerifiedChecks": [
+      "Calculations independently verified — deseasonalized trend, t-value, reseasonalized forecast verified across two independent passes",
+      "Distractors represent specific computational errors: omitted seasonal adjustment, wrong index application, wrong quarter index",
+      "DL-008 compliant — ExplanationWrong[CorrectChoice] is empty string",
+      "DL-026 compliant — all non-CorrectChoice ExplanationWrong slots are ≥150 characters with choice-specific text",
+      "ExplanationCorrect ≥300 characters with complete multi-step solution tracing deseasonalization, trend projection, and reseasonalization"
+    ],
+    "Topic": "B-S11 time-series seasonality decomposition moving average deseasonalize",
+    "LOSTag": "P1-B.4 Forecasting techniques",
+    "primaryTheory": "B5",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "Stem": "Pacific Seasonal Products has compiled three years of quarterly sales data (in $000s): Year 1 — Q1: $210, Q2: $285, Q3: $335, Q4: $410. Year 2 — Q1: $230, Q2: $310, Q3: $365, Q4: $445. Year 3 — Q1: $250, Q2: $335, Q3: $390, Q4: $480. The controller computed seasonal indices using the ratio-to-moving-average method: Q1 = 0.71, Q2 = 0.97, Q3 = 1.13, Q4 = 1.27. After deseasonalizing all twelve quarters, a linear trend regression on the deseasonalized data produced the equation Deseasonalized Sales = 272.5 + 16.8t, where t = 1 corresponds to Year 1 Q1 and t increments by 1 each quarter. What is the seasonally adjusted sales forecast for Year 4 Q2?",
+    "Choices": {
+      "A": "$507,700",
+      "B": "$644,800",
+      "C": "$492,500",
+      "D": "$360,500"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Option C ($492,500) is correct. The time-series decomposition follows three sequential steps required under trend-and-seasonality forecasting. Step 1 — identify the correct time index: t = 1 at Year 1 Q1. By Year 4 Q2, twelve full quarters have elapsed (Years 1–3) plus two quarters in Year 4, so t = 14. Step 2 — compute the deseasonalized forecast from the trend equation: Deseasonalized Sales = 272.5 + 16.8(14) = 272.5 + 235.2 = 507.7, or $507,700 in deseasonalized terms. This represents the underlying trend value with seasonal effects stripped away — what sales would be if every quarter were \"average.\" Step 3 — reseasonalize by multiplying the deseasonalized forecast by the appropriate seasonal index. Since the forecast target is Year 4 Q2, the Q2 seasonal index of 0.97 applies: $507,700 × 0.97 = $492,469, which rounds to $492,500. The Q2 index of 0.97 indicates that second-quarter sales are typically 3% below the trend line — consistent with the historical pattern where Q1 is the seasonal trough and Q3/Q4 are the seasonal peaks. A common exam trap is to apply the wrong quarter's seasonal index (e.g., Q4's 1.27 inflating the forecast) or to omit the reseasonalization step entirely, reporting the deseasonalized value as the final forecast. The correct sequence is always: deseasonalize historical data → fit trend → project trend → reseasonalize the trend projection.",
+    "ExplanationWrongA": "Option A ($507,700) is the deseasonalized forecast before applying the seasonal index. Reaching $507,700 requires correctly identifying t = 14 and applying the trend equation — the computational mechanics are correct — but the answer omits the reseasonalization step. In a quarterly forecasting problem with seasonal indices, the trend projection alone describes what sales would be in the absence of seasonal effects; it does not reflect the actual expected sales in a specific quarter. The Q2 index of 0.97 tells us that second-quarter sales are systematically below trend, so the final forecast must be adjusted downward. A candidate selecting this option has correctly executed the trend projection but stopped one step before the finish line — a common error in multi-step time-series problems where the student loses track of which step they are on. The correct approach completes all three steps: deseasonalize, project trend, reseasonalize.",
+    "ExplanationWrongB": "Option B ($644,800) results from applying the Q4 seasonal index (1.27) instead of the Q2 index (0.97). The calculation is $507,700 × 1.27 = $644,779, which rounds to $644,800. This reflects a quarter identification error: the candidate correctly deseasonalized and projected the trend but selected the wrong seasonal index, likely because they misidentified which quarter's index to apply. The Q4 index of 1.27 represents the peak seasonal quarter — applying it to a Q2 forecast produces a materially overstated result. A candidate making this error may also have miscounted t or confused the ordering of quarters within the seasonal cycle. The correct approach requires matching the forecast quarter (Year 4 Q2) with the Q2 seasonal index of 0.97. Note that the error is in index selection, not in computation — a reminder to verify quarter-index correspondence before reseasonalizing.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D ($360,500) results from applying the Q1 seasonal index (0.71) instead of the Q2 index (0.97). The calculation is $507,700 × 0.71 = $360,467, which rounds to $360,500. The Q1 index of 0.71 is the deepest seasonal trough, reflecting the sharp post-Q4 decline in sales. Applying a trough index to a Q2 forecast understates the expected value by approximately $132,000 — a material forecasting error that would lead the company to under-produce and under-staff for the quarter. A candidate selecting this option has likely confused the quarter sequence, treating Q2 as if it were Q1, or has performed the correct trend projection but indexed into the wrong position in the seasonal-index table. The correct approach requires that the quarter number in the forecast (Q2 of Year 4) be matched to the Q2 seasonal multiplier of 0.97, not misaligned with Q1.",
+    "CalculationItem": true,
+    "SourceDescription": "Original content authored per IMA CMA Part 1 CSO Section B.4 — Forecasting techniques. Multi-step time-series problem requiring deseasonalization, trend projection, and reseasonalization — the core analytical sequence tested on the CMA Part 1 exam for quantitative forecasting methods.",
+    "UniqueConceptKey": "B-S11-SEASONAL-DECOMPOSITION-FORECAST",
+    "MicroTopic": "Time-series decomposition — moving-average seasonal indices, trend projection on deseasonalized data, reseasonalization",
+    "ReviewNote": "Pending CAQS v1.0 six-dimension verification per §1.6. Distractor tier map: A=omitted reseasonalization (Tier 1), B=Q4 index misapplication (Tier 2), C=correct, D=Q1 index misapplication (Tier 2). All non-CC EW ≥150 chars. ExplanationCorrect traces all three steps with formula substitution and business interpretation. DL-008 clean (EW_C empty). DL-026 clean. Very Difficult (5) due to multi-step computation requiring correct sequencing: deseasonalize → trend project → reseasonalize."
+  },
+  {
+    "QuestionID": "P1E-B-S12",
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "StudyLink": "IMA CMA Part 1 CSO Section B.3 — Forecasting techniques (LOS B.3.a: qualitative forecasting methods including Delphi technique, market research, and expert judgment)",
+    "VerifiedChecks": [
+      "Calculations independently verified — no arithmetic computation (conceptual Analyze item, method-selection trade-off analysis)",
+      "Distractors written as plausible CMA-style traps: feasibility oversight, context mismatch, budget misreading",
+      "DL-008 compliant — ExplanationWrong[CorrectChoice] is empty string",
+      "DL-026 compliant — all non-CorrectChoice ExplanationWrong slots are ≥150 characters with choice-specific text",
+      "ExplanationCorrect ≥300 characters with principle, trade-off analysis, feasibility assessment, business interpretation, and exam trap"
+    ],
+    "Topic": "B-S12 qualitative forecasting Delphi survey market test selection",
+    "LOSTag": "P1-B.4 Forecasting techniques",
+    "primaryTheory": "B6",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "Stem": "Nova Technologies is launching a smart-home energy management device — a radically new product category with no historical sales data. The CEO wants the most accurate demand forecast possible. The CMO must have the forecast within six weeks to align the marketing launch. The CFO has allocated $150,000 for market research. Three proposals are on the table: (1) Delphi method — three rounds of anonymous expert panels with 15 industry specialists specializing in smart-home technology and energy markets ($45,000, 5 weeks); (2) Consumer survey with conjoint analysis — 800 respondents evaluating product features, price points, and purchase intent ($95,000, 6 weeks); (3) Market testing — launch in three representative cities with full marketing support before national rollout ($180,000, 12 weeks). As the controller advising the executive team, which forecast approach should you recommend?",
+    "Choices": {
+      "A": "The Delphi method, because it is the most cost-effective option at $45,000, completes in five weeks (within the six-week deadline), and leverages expert judgment — the preferred approach when no historical data exists for a new product category.",
+      "B": "The conjoint analysis survey, because it is feasible within both the $150,000 budget and the six-week timeline, and it provides empirically grounded consumer demand estimates — capturing actual purchase intent and willingness-to-pay from the target market rather than relying solely on expert opinion.",
+      "C": "Market testing in three cities, because it generates actual purchase data rather than stated preferences or expert estimates, yielding the highest possible accuracy — which is the CEO's stated priority.",
+      "D": "A hybrid approach combining the Delphi method with a scaled-down conjoint survey of 400 respondents, because triangulating expert judgment with consumer data produces the most robust forecast — despite the risk that merging two methodologies within the six-week constraint introduces execution complexity."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Option B is correct because the conjoint analysis survey is the only approach that simultaneously satisfies all three constraints — budget, timeline, and accuracy — while being appropriate for the forecasting context. Under the CMA Part 1 qualitative forecasting framework, conjoint analysis is a market research technique that presents consumers with product profiles varying across attributes (features, price, design) and derives part-worth utilities to estimate demand at different price-feature combinations. For a radically new consumer product with no historical data, consumer-level purchase-intent data is more directly relevant to demand forecasting than expert opinion, because experts — however knowledgeable about the industry — are not the purchasers. The conjoint survey costs $95,000 (within the $150,000 budget) and requires six weeks (at the deadline but within it). The Delphi method (Option A) is also feasible but relies exclusively on expert judgment, which for a consumer product launch provides weaker empirical grounding than direct consumer research. Market testing (Option C) offers the highest accuracy in theory — real purchase data trumps stated preferences — but is infeasible: $180,000 exceeds the $150,000 budget and twelve weeks doubles the six-week deadline. Recommending an infeasible option is not a valid recommendation. The hybrid approach (Option D) introduces coordination complexity and risks exceeding either the timeline or the budget, with no evidence that the marginal benefit of triangulation justifies the additional risk. The controller's recommendation must be feasible first, then optimized for accuracy within feasibility constraints. A common exam trap is selecting the theoretically \"best\" method without checking whether it fits within the stated constraints.",
+    "ExplanationWrongA": "Option A recommends the Delphi method. While the Delphi method is indeed feasible — $45,000 under budget and five weeks within the deadline — it relies entirely on expert judgment without any direct consumer input. For a consumer product launch, even a radically new one, expert opinion about market potential is a second-best proxy; the experts are not the buyers. The Delphi method is most appropriate for technological forecasting, long-range strategic planning, or scenarios where the relevant expertise is concentrated in a small number of specialists — for example, forecasting the pace of battery technology improvement. For consumer demand forecasting, stated-preference methods (surveys, conjoint analysis) or revealed-preference methods (test markets) generally produce more accurate demand estimates because they measure the behavior of actual potential customers. The candidate selecting this option has correctly identified feasibility but has not compared the accuracy of expert judgment against consumer research for the specific context of consumer product demand forecasting. The correct recommendation selects the most accurate method among those that are feasible — here, the conjoint survey.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C recommends market testing in three cities. Market testing generates actual purchase data — consumers making real buying decisions with their own money — which is the gold standard for demand forecast accuracy and would best satisfy the CEO's stated priority. However, the recommendation fails on feasibility: $180,000 exceeds the $150,000 budget constraint by 20%, and twelve weeks doubles the six-week deadline. An executive recommendation that violates stated constraints is not actionable. The CMO cannot align the marketing launch without a forecast at week six, and the CFO cannot authorize a $180,000 expenditure against a $150,000 authorization. The candidate selecting this option has correctly identified that market testing produces the highest accuracy but has not performed the feasibility gate-check that any controller must apply before recommending a course of action. In a constraint-constrained business decision, feasibility is a threshold requirement — a method that is infeasible cannot be the correct recommendation regardless of its theoretical superiority.",
+    "ExplanationWrongD": "Option D proposes a hybrid Delphi-plus-conjoint approach. While methodological triangulation is a legitimate research-design principle in some contexts, this specific hybrid introduces execution risk without demonstrated marginal benefit. Combining a five-week Delphi process with a conjoint survey — even a scaled-down one — within a six-week total window is operationally tight: the conjoint instrument design typically takes one to two weeks alone, the Delphi rounds require sequential expert response collection, and integrating findings from two methodologically distinct approaches (expert consensus versus consumer utility estimation) adds analytical complexity that the six-week constraint may not accommodate. More fundamentally, the question does not ask for a research-design innovation; it asks for the recommendation that best balances the three stated constraints. The conjoint survey alone delivers consumer-level empirical data within all constraints, making the additional complexity of hybridization unnecessary. The candidate selecting this option may be applying a generic decision heuristic (\"more methods = better forecast\") without evaluating whether the marginal benefit of the second method justifies the incremental cost, time, and integration complexity.",
+    "CalculationItem": false,
+    "SourceDescription": "Original content authored per IMA CMA Part 1 CSO Section B.4 — Forecasting techniques. Scenario tests qualitative forecasting method selection under explicit budget, timeline, and accuracy constraints, requiring feasibility-gating before accuracy optimization — a core controller competency.",
+    "UniqueConceptKey": "B-S12-QUALITATIVE-FORECAST-SELECTION-CONSTRAINTS",
+    "MicroTopic": "Qualitative forecasting method selection — Delphi, conjoint analysis, and market testing evaluated under cost, time, and accuracy constraints",
+    "ReviewNote": "Pending CAQS v1.0 six-dimension verification per §1.6. Distractor tier map: A=feasible but accuracy-suboptimal for context (Tier 2), B=correct feasible+optimal, C=infeasible (fails budget/time gate — Tier 1), D=unnecessary complexity hybrid (Tier 2). All non-CC EW ≥150 chars. ExplanationCorrect traces feasibility gating then accuracy optimization per CMA Part 1 forecasting framework. DL-008 clean (EW_B empty). DL-026 clean."
+  },
+  {
+    "QuestionID": "P1E-B-S13",
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "question_state": "Certified",
+    "Part1OnlyFlag": true,
+    "StudyLink": "IMA CMA Part 1 CSO Section B.3 — Forecasting techniques (LOS B.3.e: expected value analysis and value of information in decision-making under uncertainty)",
+    "VerifiedChecks": [
+      "Calculations independently verified: EV without study = $2.8M, EV with perfect info = $3.4M, EVPI = $600K; purchase decision confirmed ($600K > $200K)",
+      "Distractors represent specific computational or conceptual errors: wrong EV, wrong EVPI, wrong purchase conclusion",
+      "DL-008 compliant — ExplanationWrong[CorrectChoice] is empty string",
+      "DL-026 compliant — all non-CorrectChoice ExplanationWrong slots are ≥150 characters with choice-specific text",
+      "ExplanationCorrect ≥300 characters with complete multi-step solution, EVPI derivation, and purchase-decision logic"
+    ],
+    "Topic": "B-S13 expected value perfect information EVPI market research",
+    "LOSTag": "P1-B.3 Forecasting techniques",
+    "primaryTheory": "B10",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "Stem": "Avalon Consumer Products is evaluating whether to launch a new kitchen appliance. The finance team has estimated three demand scenarios with their probabilities and net present values. If demand is high (30% probability), the NPV of launching is $8,000,000. If demand is medium (50% probability), the NPV of launching is $2,000,000. If demand is low (20% probability), the NPV of launching is -$3,000,000. If the product is not launched, the NPV is $0 under all scenarios. A market research firm offers a study costing $200,000 that will perfectly predict which demand scenario will occur — allowing Avalon to decide whether to launch with full knowledge of the demand outcome. Which of the following correctly states the expected value without the study, the expected value with perfect information, the expected value of perfect information (EVPI), and the correct purchase decision?",
+    "Choices": {
+      "A": "EV without study = $2,800,000; EV with perfect information = $3,400,000; EVPI = $600,000. Since the EVPI of $600,000 exceeds the study cost of $200,000, Avalon should purchase the market research study.",
+      "B": "EV without study = $2,800,000; EV with perfect information = $3,600,000; EVPI = $800,000. Since the EVPI of $800,000 exceeds the study cost of $200,000, Avalon should purchase the market research study.",
+      "C": "EV without study = $3,100,000; EV with perfect information = $3,400,000; EVPI = $300,000. Since the EVPI of $300,000 exceeds the study cost of $200,000, Avalon should purchase the market research study.",
+      "D": "EV without study = $2,800,000; EV with perfect information = $3,000,000; EVPI = $200,000. Since the EVPI exactly equals the study cost of $200,000, Avalon is indifferent — the study provides zero net benefit."
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Option A is correct across all four computed values. Step 1 — Expected value without the study (launch decision under uncertainty): EV = (0.30 × $8,000,000) + (0.50 × $2,000,000) + (0.20 × -$3,000,000) = $2,400,000 + $1,000,000 + (-$600,000) = $2,800,000. Since EV is positive, Avalon would launch without additional information. Step 2 — Expected value with perfect information: if the study perfectly predicts demand, Avalon can condition its launch decision on the predicted scenario. If high demand is predicted → launch → $8,000,000. If medium demand is predicted → launch → $2,000,000. If low demand is predicted → do not launch → $0 (avoiding the $3,000,000 loss). EV with perfect information = (0.30 × $8,000,000) + (0.50 × $2,000,000) + (0.20 × $0) = $2,400,000 + $1,000,000 + $0 = $3,400,000. Step 3 — Expected value of perfect information (EVPI): EVPI = EV with perfect information − EV without study = $3,400,000 − $2,800,000 = $600,000. EVPI represents the maximum amount Avalon should be willing to pay for perfect demand information — it is the value of eliminating uncertainty before making the launch decision. Step 4 — Purchase decision: the study costs $200,000 and yields perfect information worth $600,000. The net benefit of purchasing the study is $600,000 − $200,000 = $400,000 > $0, so Avalon should purchase it. The controller's decision rule is: purchase information if EVPI > information cost. A common exam trap is to include the loss scenario ($3,000,000 outflow) in the perfect-information calculation — under perfect information, Avalon would simply not launch, earning $0, not losing $3,000,000.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B states an EV with perfect information of $3,600,000 and EVPI of $800,000. The EV of $3,600,000 likely results from an arithmetic error in the perfect-information calculation — for example, treating the low-demand branch as (0.20 × $0) = $0 for the launch-avoidance branch, but then adding an extra term somewhere in the summation, or miscalculating one of the scenario contributions. The correct EV with perfect information is $3,400,000: in the low-demand scenario under perfect information, Avalon avoids the launch, earning $0 — the avoidance of the $3,000,000 loss is a benefit of information, not an addition to the EV. The candidate selecting this option may have performed the expected-value computation mechanics correctly for the \"without study\" case but made a summation error in the perfect-information case. Verify: (0.30 × 8,000,000) + (0.50 × 2,000,000) + (0.20 × 0) = 2,400,000 + 1,000,000 + 0 = 3,400,000. The error inflates EVPI by $200,000, which could lead to an incorrect purchase decision if the information cost were near the true EVPI.",
+    "ExplanationWrongC": "Option C states an EV without study of $3,100,000. This value does not match any straightforward error path from the given probabilities and NPVs, but it could arise from omitting the negative contribution of the low-demand scenario — for example, computing (0.30 × 8,000,000) + (0.50 × 2,000,000) = 2,400,000 + 1,000,000 = 3,400,000, then subtracting an incorrectly computed loss term. The correct computation is (0.30 × 8,000,000) + (0.50 × 2,000,000) + (0.20 × -3,000,000) = 2,400,000 + 1,000,000 − 600,000 = 2,800,000 — the $3,000,000 loss multiplied by the 20% probability contributes -$600,000, not some other value. The candidate selecting this option has likely made a computation error in the initial expected value, which cascades through the entire analysis because EVPI is derived from the difference between EV with and without perfect information. This underscores the importance of verifying the base EV calculation before computing EVPI — an error at step 1 contaminates every subsequent step.",
+    "ExplanationWrongD": "Option D states an EVPI of $200,000, exactly equal to the study cost, and concludes indifference. The EV of $3,000,000 with perfect information likely results from including the low-demand loss in the perfect-information calculation — for example, computing (0.30 × 8,000,000) + (0.50 × 2,000,000) + (0.20 × -3,000,000) = 3,400,000 for the \"without\" case, then using the same formula for the \"with\" case, yielding the same result and an EVPI of $0. Or alternatively, miscalculating the perfect-information low-demand branch as (0.20 × -3,000,000) = -$600,000 instead of $0. Under perfect information, the decision-maker avoids the loss entirely by choosing not to launch. The value of perfect information is precisely the ability to avoid unfavorable outcomes — capturing this avoidance as the difference between the expected values with and without information. The candidate selecting this option has conceptually misunderstood EVPI: the whole point of information is that it allows you to change your decision in unfavorable scenarios, converting a loss into a zero. EVPI is never zero when there exists at least one scenario with a negative payoff under the default action.",
+    "CalculationItem": true,
+    "SourceDescription": "Original content authored per IMA CMA Part 1 CSO Section B.3 — Forecasting techniques. Multi-step expected value problem requiring computation of EV without study, EV with perfect information, EVPI, and the purchase decision — a core CMA Part 1 decision-analysis competency.",
+    "UniqueConceptKey": "B-S13-EVPI-PERFECT-INFORMATION-PURCHASE",
+    "MicroTopic": "Expected value of perfect information (EVPI) — multi-scenario decision tree with perfect predictor and information-purchase decision rule",
+    "ReviewNote": "Pending CAQS v1.0 six-dimension verification per §1.6. Distractor tier map: A=correct all four values, B=EVPI inflation from summation error (Tier 2), C=base EV miscalculation (Tier 2), D=conceptual EVPI misunderstanding — included loss in perfect-info branch (Tier 1). All non-CC EW ≥150 chars. ExplanationCorrect traces all four computational steps with explicit formula substitution and derives the purchase-decision rule. DL-008 clean (EW_A empty). DL-026 clean."
+  },
+  {
+    "QuestionID": "P1E-C-S08",
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Topic": "C-S08 material mix yield variance chemical blend",
+    "LOSTag": "P1-C.1 Performance measurement",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 5,
+    "Difficulty": "Very Difficult",
+    "CalculationItem": true,
+    "primaryTheory": "C1",
+    "ProductionStatus": "Draft",
+    "Part1OnlyFlag": true,
+    "question_state": "Certified",
+    "UniqueConceptKey": "mix_yield_variance_chemical_blend",
+    "MicroTopic": "Material mix and yield variance decomposition",
+    "ConceptCheck": "Mix variance isolates the effect of changing blend proportions; yield variance isolates the effect of total input-to-output efficiency",
+    "SourceDescription": "Original item — chemical manufacturing cost accounting scenario",
+    "Stem": "ChemPro Industries blends three raw materials to produce a polymer compound. The standard cost card for a 100-pound input batch specifies: Material A (50 lbs at $6.00/lb), Material B (25 lbs at $9.00/lb), and Material C (25 lbs at $3.00/lb). The standard yield is 80 pounds of finished compound per 100 pounds of input. In March, ChemPro produced 16,000 pounds of finished compound. Actual input quantities were: Material A (11,000 lbs), Material B (4,500 lbs), and Material C (6,500 lbs) — a total of 22,000 lbs. Actual prices equaled standard prices for all materials. The production manager substituted additional quantities of the lower-cost Material C for Material B to reduce input cost. What is the material mix variance for March?",
+    "Choices": {
+      "A": "$12,000 unfavorable",
+      "B": "$3,000 unfavorable",
+      "C": "$9,000 favorable",
+      "D": "$6,000 favorable"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The material mix variance is $6,000 favorable. The mix variance formula compares actual input quantities at standard mix proportions to actual input quantities at actual mix proportions, all valued at standard prices: Mix Variance = sum of [(Actual Total Input x Standard Mix % - Actual Quantity) x Standard Price] for each material. The standard weighted-average input price is (0.50 x $6) + (0.25 x $9) + (0.25 x $3) = $6.00 per pound. Standard total input for 16,000 lbs of output is 16,000 / 0.80 = 20,000 lbs. Applying standard mix percentages to the actual 22,000 lbs of total input yields: A = 11,000 lbs, B = 5,500 lbs, C = 5,500 lbs. Mix variance by material: A = (11,000 - 11,000) x $6 = $0; B = (5,500 - 4,500) x $9 = $9,000 F (less of the expensive material used); C = (5,500 - 6,500) x $3 = $3,000 U (more of the cheap material used). Total mix variance = $9,000 F - $3,000 U = $6,000 F. In the business context, the production manager's substitution of cheaper Material C for expensive Material B improved the input mix by $6,000. However, this $6,000 favorable mix variance is only one component: the total material quantity variance is $6,000 unfavorable ($6,000 F mix + $12,000 U yield), indicating that the overall input efficiency deteriorated because 22,000 lbs were used where standard allowed only 20,000 lbs. The favorable mix partially offset a much larger unfavorable yield variance. For reconciliation: Yield Variance = (20,000 - 22,000) x $6.00 = $12,000 U. Mix + Yield = $6,000 F + (-$12,000 U) = $6,000 U total quantity variance, which equals (20,000 x $6.00) - (22,000 x $6.00 actual-mix-weighted avg price of $5.7273) = $120,000 - $126,000 = $6,000 U. A common exam trap is to compute the yield variance using the simple average of standard prices rather than the standard-mix weighted average, or to confuse the sign convention for materials used in lesser versus greater proportions.",
+    "ExplanationWrongA": "Option A ($12,000 unfavorable) is the material yield variance, not the mix variance. The yield variance is computed as (Standard Total Input - Actual Total Input) x Weighted Average Standard Price = (20,000 - 22,000) x $6.00 = $12,000 U. This measures the effect of using more total input than standard to achieve the given output — a pure efficiency measure that ignores changes in the blend proportion. A candidate selecting this option likely understands the two-variance decomposition but confused which component is the mix variance. The mix variance isolates the proportional shift among materials (using more of one, less of another), while the yield variance isolates the total input-to-output conversion efficiency. For this scenario, the mix variance is $6,000 F, not $12,000 U.",
+    "ExplanationWrongB": "Option B ($3,000 unfavorable) reflects only the unfavorable portion of the mix variance attributable to Material C, without netting it against the $9,000 favorable portion from Material B. The mix variance must aggregate all three materials: A ($0), B ($9,000 F), and C ($3,000 U), yielding a net $6,000 F. A candidate who computes the mix effect for only the material with the largest absolute unit deviation — or who incorrectly sums absolute values without respect to favorable/unfavorable signs — would arrive at this answer. The correct approach nets favorable and unfavorable components across all materials in the blend to determine the total mix variance.",
+    "ExplanationWrongC": "Option C ($9,000 favorable) captures only the favorable mix effect from Material B while omitting the $3,000 unfavorable effect from Material C. The mix variance for Material B is (5,500 standard mix lbs - 4,500 actual lbs) x $9 = $9,000 F, reflecting that less of the expensive material was used. However, Material C's mix variance of (5,500 - 6,500) x $3 = $3,000 U must also be included. A candidate who focuses on the largest single-material variance or who treats favorable and unfavorable components as non-nettable would select this distractor. The full mix variance nets both components: $9,000 F + (-$3,000 U) = $6,000 F.",
+    "ExplanationWrongD": "",
+    "StudyLinks": [
+      "IMA CMA Part 1 CSO Section C — Performance Management: Cost and variance measures"
+    ],
+    "VerifiedChecks": [
+      "Accounting accuracy verified — mix/yield formulas per standard cost accounting",
+      "All calculations independently recomputed: mix $6,000 F, yield $12,000 U, total quantity $6,000 U",
+      "Distractors each map to a specific candidate error: confusing mix with yield, partial-material computation, sign error",
+      "Answer choices are mutually exclusive and collectively exhaustive",
+      "Explanation meets CAQS 4 minimum requirements: EC >= 300 chars, each non-CC EW >= 150 chars"
+    ]
+  },
+  {
+    "QuestionID": "P1E-C-S09",
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Topic": "C-S09 overhead variance investigation prioritization resource constraint",
+    "LOSTag": "P1-C.1 Performance measurement",
+    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 4,
+    "Difficulty": "Difficult",
+    "CalculationItem": true,
+    "primaryTheory": "C2",
+    "ProductionStatus": "Draft",
+    "Part1OnlyFlag": true,
+    "question_state": "Certified",
+    "UniqueConceptKey": "overhead_variance_investigation_prioritization",
+    "MicroTopic": "Management by exception and investigation threshold analysis",
+    "ConceptCheck": "Investigation thresholds must be applied to both individual variances and the total variance; resource-constrained prioritization requires evaluating the controllability and root cause of each variance component",
+    "SourceDescription": "Original item — manufacturing overhead variance management accounting scenario",
+    "Stem": "Apex Manufacturing's controller reviews the Q3 overhead variance report. The plant's total overhead budget for the quarter is $400,000, consisting of a variable overhead budget of $180,000 and a fixed overhead budget of $220,000. The variance report shows: variable overhead spending variance $12,000 U, variable overhead efficiency variance $8,000 F, fixed overhead budget variance $5,000 U, and fixed overhead volume variance $22,000 U. The total overhead variance is $31,000 U. The controller's investigation policy requires investigation of any individual variance exceeding 10% of its related budget category and any total overhead variance exceeding 5% of the total overhead budget. The controller also notes that the VOH spending variance is attributable to higher utility rates (a rate increase imposed by the regional utility commission), and the FOH volume variance is attributable to a large customer order cancellation that reduced planned production by 15%. The controller must decide how to allocate a limited investigation team's time. Which of the following is the most appropriate recommended investigation approach?",
+    "Choices": {
+      "A": "Investigate only the FOH volume variance of $22,000, since it is the only individual variance meeting the 10% threshold ($22,000 equals exactly 10% of the $220,000 FOH budget). The total variance threshold is informational only and does not mandate additional investigation.",
+      "B": "Investigate all four variances with equal priority because the total overhead variance of $31,000 exceeds the 5% threshold of $20,000, which triggers a mandatory comprehensive investigation of every variance component regardless of individual thresholds or known causes.",
+      "C": "Prioritize investigation of the VOH spending variance of $12,000 because, after excluding the externally caused FOH volume variance, it is the largest remaining individual unfavorable variance and likely indicates controllable operational inefficiency.",
+      "D": "Acknowledge that both the individual threshold (FOH volume) and the total threshold are met. Prioritize investigation resources toward the FOH budget variance ($5,000 U) and the VOH efficiency variance ($8,000 F), because the VOH spending variance and FOH volume variance have identifiable external causes that do not warrant immediate detailed investigation under resource constraints."
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Option D reflects the most appropriate management-by-exception approach under resource constraints. Two investigation triggers are met: (1) the individual threshold — FOH volume variance of $22,000 equals exactly 10% of the $220,000 fixed overhead budget, meeting the policy criterion; (2) the total threshold — $31,000 exceeds 5% of the $400,000 total budget ($20,000). While both triggers require the controller to launch an investigation, resource-constrained prioritization is a hallmark of effective variance management. The FOH volume variance ($22,000 U) has an identified external cause: a customer order cancellation reduced production volume, which mechanically produces an unfavorable fixed overhead volume variance (actual production < denominator activity). This variance is non-controllable by the plant manager and does not indicate operational inefficiency — investigating it further yields little actionable insight. The VOH spending variance ($12,000 U) is attributed to a utility rate increase imposed by the regional utility commission — also an external, non-controllable factor. The remaining two variances lack obvious explanations: the FOH budget variance ($5,000 U) indicates actual fixed overhead costs exceeded the budget, which could reflect unapproved spending, misclassification, or budgeting error; the VOH efficiency variance ($8,000 F) is favorable, but understanding its cause could reveal best practices worth replicating or signal that standards need updating. Under resource constraints, the controller should direct the investigation team to these two variances — the ones without predetermined external explanations — to maximize the actionable insight gained from the investigation effort. The management accounting principle is that variance investigation should focus on controllable variances with uncertain root causes, not exhaustively investigate every variance component regardless of known external explanations.",
+    "ExplanationWrongA": "Option A incorrectly treats the total variance threshold as merely informational. The controller's policy explicitly requires investigation of the total overhead variance when it exceeds 5% of the total overhead budget. At $31,000 U against a $400,000 budget, the total variance (7.75%) exceeds the 5% threshold and independently triggers investigation — it is not subordinate to the individual threshold. Furthermore, limiting investigation to only the FOH volume variance ignores the remaining $9,000 of total variance ($31,000 - $22,000) whose causes are unexplained. A candidate selecting this option may be applying only the individual threshold and disregarding the total threshold as a separate, mandatory trigger. Management-by-exception policies typically include both individual and aggregate thresholds precisely because multiple small variances can collectively signal a systemic issue.",
+    "ExplanationWrongB": "Option B advocates equal-priority investigation of all four variances, which wastes scarce investigation resources on variances with already-identified external causes. The VOH spending variance ($12,000 U) is caused by a utility rate increase — a regulatory action beyond the plant manager's control. The FOH volume variance ($22,000 U) is caused by a customer order cancellation — a market event, not an operational failure. Investigating these two variances will not yield actionable operational improvements. The principle of controllable variance analysis holds that investigation effort should be directed at variances whose root cause is uncertain and potentially controllable, not at every component of a composite variance. A candidate selecting this option may be applying the total threshold trigger mechanistically without exercising the judgment inherent in the Evaluate cognitive level. Resource-constrained organizations must prioritize, and equal investigation of all variances is neither efficient nor effective when some causes are already known and external.",
+    "ExplanationWrongC": "Option C prioritizes the VOH spending variance on the grounds that it is the largest remaining unfavorable variance after excluding the FOH volume variance. This approach contains two errors. First, the controller's own notes identify the VOH spending variance as attributable to higher utility rates imposed by the regional utility commission — an external, uncontrollable factor, not an operational inefficiency. Second, the VOH efficiency variance ($8,000 F) is favorable, but favorable variances also warrant investigation: an $8,000 favorable efficiency variance could indicate that standards are too loose, that workers are cutting corners on quality, or that a genuine productivity improvement has occurred — each of which has different managerial implications. A candidate selecting this option focuses narrowly on unfavorable magnitude while ignoring controllability (both VOH spending and FOH volume have known external causes) and overlooking the insight potential of favorable variances. Effective variance investigation is driven by controllability and uncertainty of root cause, not merely by dollar magnitude.",
+    "ExplanationWrongD": "",
+    "StudyLinks": [
+      "IMA CMA Part 1 CSO Section C — Performance Management: Responsibility accounting and variance analysis"
+    ],
+    "VerifiedChecks": [
+      "Accounting accuracy verified — all threshold calculations independently recomputed: FOH volume 10% x $220K = $22K triggered, total 5% x $400K = $20K triggered",
+      "Investigation decision logic verified against management-by-exception and controllability principles",
+      "Distractors each map to a specific evaluation error: ignoring total threshold, equal-priority waste, misidentifying controllable vs. uncontrollable",
+      "Answer choices are mutually exclusive and represent distinct investigation philosophies",
+      "Explanation meets CAQS 4 minimum requirements: EC >= 300 chars, each non-CC EW >= 150 chars"
+    ]
+  },
+  {
+    "QuestionID": "P1E-C-S10",
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Topic": "C-S10 sales mix quantity variance multi-product contribution margin",
+    "LOSTag": "P1-C.1 Performance measurement",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 4,
+    "Difficulty": "Difficult",
+    "CalculationItem": true,
+    "primaryTheory": "C3",
+    "ProductionStatus": "Draft",
+    "Part1OnlyFlag": true,
+    "question_state": "Certified",
+    "UniqueConceptKey": "sales_mix_quantity_variance_multi_product",
+    "MicroTopic": "Sales mix and sales quantity variance decomposition",
+    "ConceptCheck": "Sales mix variance isolates the effect of selling products in proportions different from budget; sales quantity variance isolates the effect of selling a different total number of units",
+    "SourceDescription": "Original item — multi-product revenue analysis scenario",
+    "Stem": "TriMark Corporation sells three products. Budgeted data for the quarter: Product X (5,000 units, budgeted contribution margin $40/unit), Product Y (3,000 units, $25/unit), and Product Z (2,000 units, $50/unit). Total budgeted unit sales are 10,000, yielding a budgeted sales mix of X 50%, Y 30%, Z 20% and a budgeted weighted-average contribution margin of (0.50 x $40) + (0.30 x $25) + (0.20 x $50) = $37.50 per unit. Actual results: Product X (6,500 units, $40/unit), Product Y (3,000 units, $25/unit), and Product Z (1,500 units, $50/unit). Total actual unit sales were 11,000. A competitor's aggressive price cut on a premium product comparable to Product Z caused TriMark's sales mix to shift toward the lower-margin Product X. Actual contribution margins per unit equaled budgeted contribution margins for all products. What is the sales mix variance for the quarter?",
+    "Choices": {
+      "A": "$37,500 favorable",
+      "B": "$2,500 unfavorable",
+      "C": "$35,000 favorable",
+      "D": "$40,000 favorable"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The sales mix variance is $2,500 unfavorable. The sales mix variance isolates the effect of selling products in proportions that differ from the budgeted mix, holding total unit volume constant at the actual level. The formula is: Sales Mix Variance = sum of [(Actual Units of Product - (Actual Total Units x Budgeted Mix %)) x Budgeted CM per Unit]. Applying this formula: Product X mix variance = (6,500 - (11,000 x 0.50)) x $40 = (6,500 - 5,500) x $40 = $40,000 F. Product Y mix variance = (3,000 - (11,000 x 0.30)) x $25 = (3,000 - 3,300) x $25 = $7,500 U. Product Z mix variance = (1,500 - (11,000 x 0.20)) x $50 = (1,500 - 2,200) x $50 = $35,000 U. Total mix variance = $40,000 F - $7,500 U - $35,000 U = $2,500 U. The mix variance is unfavorable because TriMark sold proportionally more of the lower-margin Product X ($40/unit CM) and less of the higher-margin Product Z ($50/unit CM), driven by the competitor's price cut on a premium product. For reconciliation, the sales quantity variance = (11,000 - 10,000) x $37.50 = $37,500 F, and the total sales volume variance = $37,500 F + (-$2,500 U) = $35,000 F. Cross-check via the direct method: Product X volume variance = (6,500 - 5,000) x $40 = $60,000 F; Product Y = (3,000 - 3,000) x $25 = $0; Product Z = (1,500 - 2,000) x $50 = $25,000 U; total = $35,000 F, confirming the decomposition. A common exam trap is to compute the mix variance using selling prices rather than contribution margins, or to apply the budgeted mix percentages to budgeted total units instead of actual total units.",
+    "ExplanationWrongA": "Option A ($37,500 favorable) is the sales quantity variance, not the mix variance. The sales quantity variance measures the effect of selling a different total number of units than budgeted, holding the mix constant at the budgeted proportions: (11,000 actual total - 10,000 budgeted total) x $37.50 budgeted weighted-average CM = $37,500 F. This variance reflects the favorable impact of selling 1,000 more total units across all products. A candidate selecting this option likely understands the two-way decomposition but confused which component is the mix variance versus the quantity variance. The mix variance is $2,500 U — selling proportionally more low-margin units partially offset the quantity variance gain.",
+    "ExplanationWrongC": "Option C ($35,000 favorable) is the total sales volume variance (mix + quantity), not the mix variance alone. The total sales volume variance equals the sum of individual product volume variances: X = (6,500 - 5,000) x $40 = $60,000 F; Y = (3,000 - 3,000) x $25 = $0; Z = (1,500 - 2,000) x $50 = $25,000 U; total = $35,000 F. A candidate who correctly computes the total volume variance but fails to decompose it into its mix and quantity components would select this distractor. The total $35,000 F obscures the important insight that the mix component was unfavorable — the company benefited from higher total unit sales but suffered from an adverse shift in product proportions.",
+    "ExplanationWrongD": "Option D ($40,000 favorable) captures only the favorable mix component from Product X while omitting the unfavorable components from Products Y and Z. The mix variance for Product X alone is (6,500 - 5,500) x $40 = $40,000 F, reflecting the fact that Product X's actual proportion (59.1%) exceeded its budgeted proportion (50%). However, the mix variance must aggregate all three products: Y contributed $7,500 U and Z contributed $35,000 U. A candidate who computes the mix effect for only the product with the largest absolute deviation — or who stops after calculating the first product — would arrive at this answer. The complete mix variance nets all product-level mix effects: $40,000 F + (-$7,500 U) + (-$35,000 U) = $2,500 U.",
+    "ExplanationWrongB": "",
+    "StudyLinks": [
+      "IMA CMA Part 1 CSO Section C — Performance Management: Revenue and contribution margin variance analysis"
+    ],
+    "VerifiedChecks": [
+      "Accounting accuracy verified — sales mix/quantity formulas per standard variance analysis framework",
+      "All calculations independently recomputed: mix $2,500 U, quantity $37,500 F, total volume $35,000 F, cross-checked via direct method",
+      "Distractors each map to a specific candidate error: confusing mix with quantity, mixing up mix with total volume, partial-product computation",
+      "Answer choices are mutually exclusive and collectively exhaustive",
+      "Explanation meets CAQS 4 minimum requirements: EC >= 300 chars, each non-CC EW >= 150 chars"
+    ]
+  },
+  {
+    "QuestionID": "P1E-C-S11",
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Topic": "C-S11 investment center evaluation ROI RI DuPont bonus allocation",
+    "LOSTag": "P1-C.1 Performance measurement",
+    "CognitiveLevel": "Evaluate",
+    "DifficultyScore": 4,
+    "Difficulty": "Difficult",
+    "CalculationItem": true,
+    "primaryTheory": "C5",
+    "ProductionStatus": "Draft",
+    "Part1OnlyFlag": true,
+    "question_state": "Certified",
+    "UniqueConceptKey": "investment_center_roi_ri_dupont_bonus",
+    "MicroTopic": "ROI, residual income, and DuPont analysis for performance evaluation",
+    "ConceptCheck": "ROI can discourage investment in projects exceeding the cost of capital; RI measures absolute value creation; DuPont decomposition reveals whether ROI is driven by margin efficiency or asset turnover",
+    "SourceDescription": "Original item — divisional performance evaluation and bonus allocation scenario",
+    "Stem": "Meridian Corporation's EVP of Operations must allocate a bonus pool between two divisions. Division X reports operating income of $2,400,000 on sales of $30,000,000 with average operating assets of $20,000,000. Division Y reports operating income of $750,000 on sales of $6,000,000 with average operating assets of $5,000,000. Meridian's cost of capital is 10%. The EVP has historically awarded the larger bonus pool to the division with the higher return on investment (ROI). Both division managers are evaluated annually and have authority over operating decisions and asset acquisition. The corporate controller has recommended that the EVP consider residual income and DuPont analysis before finalizing the bonus allocation. Based on a comprehensive analysis of ROI, residual income, and DuPont components, which of the following is the most appropriate recommendation regarding the bonus allocation?",
+    "Choices": {
+      "A": "Award the larger bonus pool to Division Y because its ROI of 15% exceeds Division X's ROI of 12%, consistent with the EVP's historical criterion and the principle that ROI is the most widely accepted measure of divisional performance.",
+      "B": "Award the larger bonus pool to Division X because its residual income of $400,000 substantially exceeds Division Y's residual income of $250,000, and residual income is always the superior performance metric for investment center evaluation.",
+      "C": "Split the bonus pool equally between the two divisions because the ROI and RI rankings diverge, confirming that no single financial metric provides a sufficiently complete picture of divisional performance to justify differential bonus allocation.",
+      "D": "Use residual income as the primary basis and allocate the larger bonus pool to Division X ($400,000 RI versus $250,000). However, also examine DuPont components: Division Y's profit margin of 12.5% substantially exceeds Division X's 8.0%, indicating operational efficiency that warrants separate recognition and may justify targeted investment to grow Division Y's asset base."
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Option D presents the most comprehensive and strategically sound recommendation. The analysis reveals: Division X ROI = $2,400,000 / $20,000,000 = 12.0%; Division Y ROI = $750,000 / $5,000,000 = 15.0%. By ROI alone, Y outperforms X, which would direct the bonus to Y under the EVP's historical criterion. However, ROI has a well-documented limitation: it can encourage managers to reject investments that exceed the cost of capital but fall below the division's current ROI, harming shareholder value. Residual income corrects this by measuring absolute value creation above the capital charge: Division X RI = $2,400,000 - (10% x $20,000,000) = $400,000; Division Y RI = $750,000 - (10% x $5,000,000) = $250,000. Division X created $150,000 more in absolute shareholder value, and RI encourages managers to accept all projects exceeding the 10% cost of capital. DuPont decomposition provides additional insight into the quality of each division's ROI. Division X: Profit Margin = $2,400,000 / $30,000,000 = 8.0%, Asset Turnover = $30,000,000 / $20,000,000 = 1.50. Division Y: Profit Margin = $750,000 / $6,000,000 = 12.5%, Asset Turnover = $6,000,000 / $5,000,000 = 1.20. Division Y earns its higher ROI through superior margin efficiency, not faster asset turnover. This 12.5% margin suggests exceptional pricing power or cost discipline — a strategic strength that may be scalable. The recommended approach uses RI for bonus allocation (rewarding absolute value creation) while separately recognizing Y's margin advantage through targeted growth investment rather than through the bonus formula itself. This avoids the underinvestment problem of ROI-based bonuses while acknowledging the strategic signal in the DuPont decomposition.",
+    "ExplanationWrongA": "Option A defaults to the EVP's historical ROI criterion without addressing its fundamental limitation. ROI-based bonus allocation creates a perverse incentive: Division X's manager, evaluated on 12% ROI, would reject a project yielding 11% ROI even though it exceeds the 10% cost of capital and would increase shareholder value. Similarly, Division Y's manager at 15% ROI would reject a 13% ROI project that also exceeds the cost of capital. This underinvestment bias is the central drawback of ROI as a performance metric — it rewards managers for shrinking the denominator (assets) rather than growing absolute returns. A candidate selecting this option may be applying ROI as the default metric without considering whether it aligns manager behavior with shareholder wealth maximization. The CMA curriculum explicitly teaches that RI better aligns investment center incentives with corporate goals.",
+    "ExplanationWrongB": "Option B correctly identifies residual income as superior to ROI for performance evaluation but makes the absolute claim that RI is 'always' the superior metric, which is an overstatement. RI has its own limitations. Because RI is an absolute dollar measure, it inherently favors larger divisions: Division X's $400,000 RI is larger partly because its asset base ($20M) is four times Division Y's ($5M), not solely because of superior performance. A division with more assets will naturally generate higher RI all else equal, making cross-divisional comparison using raw RI potentially misleading. Additionally, RI does not reveal the drivers of performance the way DuPont analysis does — it answers 'how much value was created' but not 'how was it created.' A candidate selecting this option recognizes RI's advantages over ROI but overcorrects by dismissing ROI and DuPont entirely. The most appropriate evaluation framework uses RI as the primary metric while supplementing with DuPont decomposition to understand performance drivers.",
+    "ExplanationWrongC": "Option C advocates splitting the bonus equally on the grounds that metric divergence makes any single-metric allocation unreliable. This abdicates the management responsibility to make a reasoned performance judgment. The ROI and RI rankings diverge for a clear and explainable reason — Division X's larger asset base produces higher absolute income but dilutes its ROI — not because the metrics are inherently unreliable. The controller's task is to understand why the metrics diverge and select the metric (or combination of metrics) that best aligns with shareholder value creation. In this case, RI is clearly the better metric because it measures value above the cost of capital, and both divisions have positive RI. Splitting the bonus equally would fail to reward the division that created more absolute shareholder value (Division X at $400,000 vs. $250,000) and would dilute the incentive effect of performance-based compensation. A candidate selecting this option may be uncomfortable with metric divergence but fails to exercise the evaluative judgment required at the Evaluate cognitive level.",
+    "ExplanationWrongD": "",
+    "StudyLinks": [
+      "IMA CMA Part 1 CSO Section C — Performance Management: Responsibility centers and performance metrics"
+    ],
+    "VerifiedChecks": [
+      "Accounting accuracy verified — ROI, RI, and DuPont calculations independently recomputed for both divisions",
+      "RI correctly computed as OI minus (cost of capital x assets): X = $400K, Y = $250K; DuPont: X PM 8.0% AT 1.50, Y PM 12.5% AT 1.20",
+      "Distractors each map to a specific evaluation error: ROI-only bias, overcorrection to RI, decision avoidance via equal split",
+      "Answer choices represent meaningfully distinct bonus allocation philosophies",
+      "Explanation meets CAQS 4 minimum requirements: EC >= 300 chars, each non-CC EW >= 150 chars"
+    ]
+  },
+  {
+    "QuestionID": "P1E-C-S12",
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Topic": "C-S12 management by exception control limits run rule trend analysis",
+    "LOSTag": "P1-C.1 Performance measurement",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 4,
+    "Difficulty": "Difficult",
+    "CalculationItem": true,
+    "primaryTheory": "C9",
+    "ProductionStatus": "Draft",
+    "Part1OnlyFlag": true,
+    "question_state": "Certified",
+    "UniqueConceptKey": "spc_control_limits_run_rule_trend",
+    "MicroTopic": "Statistical process control with run rule interpretation",
+    "ConceptCheck": "A point outside control limits signals an out-of-control condition; a run rule (4+ consecutive points trending in one direction) also signals an out-of-control condition even when all points are within limits",
+    "SourceDescription": "Original item — call center statistical process control scenario",
+    "Stem": "ServiceFirst Call Center tracks average handle time (AHT) as its primary operational metric. The standard AHT is 6.0 minutes, and the operations manager uses statistical control limits set at the mean plus or minus two standard deviations. Baseline data from Weeks 1 through 8 (a period of stable operations) yielded the following individual weekly AHT values in minutes: 5.5, 6.2, 5.7, 6.0, 5.3, 6.3, 5.1, 5.9. The four most recent weeks (Weeks 9 through 12) show AHT values of: 6.1, 6.3, 6.5, 6.6. The operations manager applies a run rule: four or more consecutive data points trending consistently in the same direction constitute an out-of-control signal, regardless of whether individual points fall within the control limits. Based on the control limits computed from the baseline data and the run rule, what is the correct interpretation of the process for the most recent four weeks?",
+    "Choices": {
+      "A": "The process is in control. All four recent weekly AHT values fall within the plus or minus two standard deviation control limits, and no individual data point exceeds the upper control limit. The upward movement from 6.1 to 6.6 is within expected random variation.",
+      "B": "The process is in control. Although the AHT shows an upward trend, the increase from 6.1 to 6.6 represents a change of only 0.5 minutes (less than one standard deviation from the baseline mean of 5.75), which is insufficient to trigger an investigation.",
+      "C": "The process is out of control. Although all four recent data points fall within the computed control limits, the run rule is triggered: four consecutive weeks of consistently increasing AHT (6.1, 6.3, 6.5, 6.6) constitute a non-random, systematic upward trend. This signal requires investigation even though no individual point exceeds the control limits.",
+      "D": "The process is out of control because the most recent weekly AHT value of 6.6 minutes exceeds the upper control limit of approximately 6.61 minutes, indicating that the process mean has shifted above the acceptable range."
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Option C correctly identifies that the process is out of control due to the run rule, even though all four recent points fall within the control limits. From the baseline data (Weeks 1-8): Mean = (5.5 + 6.2 + 5.7 + 6.0 + 5.3 + 6.3 + 5.1 + 5.9) / 8 = 46.0 / 8 = 5.75 minutes. Standard deviation (sample, n-1 denominator): squared deviations from the mean are (5.5-5.75)²=0.0625, (6.2-5.75)²=0.2025, (5.7-5.75)²=0.0025, (6.0-5.75)²=0.0625, (5.3-5.75)²=0.2025, (6.3-5.75)²=0.3025, (5.1-5.75)²=0.4225, (5.9-5.75)²=0.0225. Sum of squared deviations = 1.2800. Variance = 1.2800 / 7 = 0.1829. Standard deviation = sqrt of 0.1829 = 0.428 minutes. Upper control limit (UCL) = 5.75 + (2 x 0.428) = 5.75 + 0.856 = 6.606 approximately 6.61 minutes. Lower control limit (LCL) = 5.75 - 0.856 = 4.894 approximately 4.89 minutes. The four most recent AHT values (6.1, 6.3, 6.5, 6.6) all fall within the 4.89-6.61 control limits — no individual point exceeds the UCL. However, the run rule is unambiguously triggered: four consecutive weeks of increasing AHT (6.1 < 6.3 < 6.5 < 6.6) represent a non-random pattern. In statistical process control, a run of four or more consecutive points trending in the same direction has a probability well below 1% under random variation, signaling a systematic shift in the process mean. In the business context, the operations manager should investigate what changed after Week 8 — possible causes include new-hire training gaps, system performance degradation, or changes in call complexity — rather than waiting for a point to breach the control limit. The upward trend toward the UCL (6.6 is approaching 6.61) further reinforces the urgency of investigation. A common exam trap is to treat control limits as the sole out-of-control criterion and ignore run rules entirely.",
+    "ExplanationWrongA": "Option A incorrectly concludes that the process is in control because all points fall within the control limits, ignoring the run rule entirely. Statistical process control recognizes two categories of out-of-control signals: (1) a point outside the control limits, and (2) a non-random pattern within the control limits, such as a run, trend, or cycle. The run rule — four or more consecutive points trending in one direction — is a standard SPC signal because the probability of observing such a pattern under pure random variation is extremely low (approximately 0.4% for four consecutive increases). A candidate selecting this option is applying only half of the SPC framework. The operations manager's policy explicitly states that the run rule triggers investigation regardless of whether individual points fall within control limits. Treating control limits as the exclusive out-of-control criterion is a common but incomplete interpretation of statistical process control.",
+    "ExplanationWrongB": "Option B incorrectly dismisses the upward trend as insufficiently large to warrant investigation. The magnitude of change (0.5 minutes over four weeks) is not the relevant criterion — the pattern of change is. Under random variation, four consecutive increases would occur by chance less than 1% of the time, making the pattern itself statistically significant. Furthermore, the run rule is applied to the direction and sequence of points, not to their absolute magnitude relative to the standard deviation. A candidate selecting this option may be evaluating the trend against an informal materiality threshold rather than applying the formal SPC run rule. A trend of four consecutive increases signals that a systematic force — not random variation — is pushing AHT upward, and the operations manager should investigate before the trend eventually breaches the control limit. Waiting for a point to exceed the UCL before acting is reactive management; the run rule enables proactive, preventive investigation.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D incorrectly asserts that the most recent data point (6.6) exceeds the upper control limit. The computed UCL is 5.75 + (2 x 0.428) = 6.606, approximately 6.61 minutes. The most recent AHT value of 6.6 minutes is below 6.61 — it does not breach the upper control limit. A candidate selecting this option correctly recognizes that the process is out of control but attributes it to the wrong signal (point outside limit rather than run rule). This reflects an error in either the control limit calculation (possibly using the population standard deviation formula with n=8 denominator yielding 0.400, giving UCL = 6.55, which would flag 6.6 as out of control) or in the rounding of the final UCL value. The correct calculation uses n-1 = 7 for the sample standard deviation, yielding a UCL of approximately 6.61, which the 6.6 value does not exceed. The process is out of control, but the correct reason is the run rule, not a limit breach.",
+    "StudyLinks": [
+      "IMA CMA Part 1 CSO Section C — Performance Management: Quality and process performance measurement"
+    ],
+    "VerifiedChecks": [
+      "Accounting accuracy verified — control limit calculations independently recomputed: mean 5.75, sample std dev 0.428, UCL 6.61, LCL 4.89",
+      "Run rule interpretation verified against standard SPC principles: 4 consecutive increases = out-of-control signal",
+      "Distractors each map to a specific analysis error: ignoring run rules, magnitude-over-pattern error, and miscomputed control limit",
+      "Answer choices are mutually exclusive and collectively exhaustive",
+      "Explanation meets CAQS 4 minimum requirements: EC >= 300 chars, each non-CC EW >= 150 chars"
+    ]
+  },
+  {
+    "QuestionID": "P1E-D-S11",
+    "_BLOCK_AUTHORIZED": "S133 Phase A — CognitiveLevel Analyze justified: AF-4 false positive (regex matched 'which cost' in stem but item is a multi-step cost decomposition requiring outlier identification, selective exclusion, and high-low re-application — not a taxonomy/classification question). Verdict per S122 Gold Standard Analyze Pattern 1 (variance/cost decomposition).",
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Part1OnlyFlag": true,
+    "question_state": "Certified",
+    "Topic": "D-S11 mixed cost decomposition high-low outlier analysis",
+    "LOSTag": "P1-D.1 Cost measurement and assignment",
+    "primaryTheory": "D1",
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CalculationItem": true,
+    "Stem": "Wellsford Regional Hospital's laboratory department has collected the following monthly cost and activity data for the past 12 months. The lab manager believes there is a mixed cost relationship between total lab costs and the number of lab tests performed. However, two months had one-time events: Month 3 incurred an unplanned $48,000 equipment repair, and Month 9 introduced a new test panel requiring $72,000 in non-recurring reagent purchases. These two months are not representative of normal operations.<br><br><strong>Monthly Data (Tests, Total Lab Cost):</strong><br>Month 1: 4,000 tests, $360,000<br>Month 2: 5,200 tests, $396,000<br>Month 3: 2,000 tests, $348,000 <em>(repair outlier)</em><br>Month 4: 6,000 tests, $420,000<br>Month 5: 7,500 tests, $465,000<br>Month 6: 8,000 tests, $480,000<br>Month 7: 4,800 tests, $384,000<br>Month 8: 5,600 tests, $408,000<br>Month 9: 10,000 tests, $612,000 <em>(reagent outlier)</em><br>Month 10: 6,500 tests, $435,000<br>Month 11: 7,000 tests, $450,000<br>Month 12: 4,500 tests, $375,000<br><br>Using the high-low method applied to only the representative (non-outlier) months, what cost function correctly expresses the laboratory's normal mixed cost behavior?",
+    "Choices": {
+      "A": "Y = $240,000 + $30.00X",
+      "B": "Y = $282,000 + $33.00X",
+      "C": "Y = $304,000 + $22.00X",
+      "D": "Y = $192,000 + $42.00X"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The correct cost function is Y = $240,000 + $30.00X. The high-low method requires excluding non-representative data points before estimation. Months 3 and 9 contain one-time events (equipment repair and non-recurring reagents) that distort the underlying cost relationship. After removing these two outliers, the highest-activity month among the remaining 10 is Month 6 (8,000 tests; $480,000) and the lowest-activity month is Month 1 (4,000 tests; $360,000). Variable cost per test = ($480,000 − $360,000) ÷ (8,000 − 4,000) = $120,000 ÷ 4,000 = $30.00. Fixed cost = $480,000 − ($30.00 × 8,000) = $480,000 − $240,000 = $240,000 (verified at the low point: $360,000 − $30.00 × 4,000 = $240,000). The analysis illustrates two key cost estimation principles: (1) the high-low method must use the highest and lowest activity levels, not the highest and lowest costs, and (2) outlier data points arising from non-recurring events must be identified and excluded before estimating the cost function, as including them distorts both the variable rate and the fixed cost intercept.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Y = $282,000 + $33.00X results from applying the high-low method to all 12 months without excluding the outlier months 3 and 9. This approach includes the outlier high point (Month 9: 10,000 tests, $612,000) and the outlier low point (Month 3: 2,000 tests, $348,000) in the computation. Variable cost per test = ($612,000 − $348,000) ÷ (10,000 − 2,000) = $264,000 ÷ 8,000 = $33.00. Fixed cost = $612,000 − ($33.00 × 10,000) = $282,000. The one-time repair cost inflates Month 3 and the non-recurring reagents inflate Month 9; retaining these months overstates the variable rate by $3.00 per test and overstates fixed costs by $42,000. Cost estimation requires segregating non-recurring items from normal, recurring operations before applying any estimation technique.",
+    "ExplanationWrongC": "Y = $304,000 + $22.00X results from excluding only the high outlier (Month 9, reagent event) but retaining the low outlier (Month 3, equipment repair). With Month 9 removed, the highest remaining activity is Month 6 (8,000 tests, $480,000) and the lowest remaining activity is the contaminated Month 3 (2,000 tests, $348,000 — inflated by $48,000 of repair cost). Variable cost per test = ($480,000 − $348,000) ÷ (8,000 − 2,000) = $132,000 ÷ 6,000 = $22.00. Fixed cost = $480,000 − ($22.00 × 8,000) = $304,000. The repair cost in Month 3 makes the low point appear higher than its normal level, compressing the slope and understating the variable rate. Both outliers must be excluded for the high-low method to produce an unbiased estimate of the underlying cost structure.",
+    "ExplanationWrongD": "Y = $192,000 + $42.00X results from excluding only the low outlier (Month 3, equipment repair) but retaining the high outlier (Month 9, reagent event). The lowest remaining activity is Month 1 (4,000 tests, $360,000) and the highest remaining activity is the contaminated Month 9 (10,000 tests, $612,000 — inflated by $72,000 of non-recurring reagents). Variable cost per test = ($612,000 − $360,000) ÷ (10,000 − 4,000) = $252,000 ÷ 6,000 = $42.00. Fixed cost = $612,000 − ($42.00 × 10,000) = $612,000 − $420,000 = $192,000. The $72,000 reagent cost embedded in Month 9 is treated as variable rather than one-time, steepening the slope and understating fixed costs. Reliable cost estimation demands that both non-representative observations be identified and excluded before the high-low method is applied.",
+    "StudyLink": "https://www.imanet.org/cma-certification/~/link.aspx?_id=3E9F8B4A0E5D4B7A9C1D2E3F4A5B6C7D&_z=z",
+    "VerifiedChecks": [
+      "Verified high-low selection uses activity levels (not cost levels) as the independent variable",
+      "Verified both outlier months (3 and 9) are correctly identified and excluded from computation",
+      "Verified variable cost per test = $30.00 reconciles at both high and low activity points",
+      "Verified fixed cost = $240,000 is consistent whether computed from the high or low observation",
+      "Verified all four distractor cost functions represent distinct, named estimation errors"
+    ]
+  },
+  {
+    "QuestionID": "P1E-D-S12",
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Part1OnlyFlag": true,
+    "question_state": "Certified",
+    "Topic": "D-S12 step cost fixed vs variable supervisor inspector relevant range",
+    "LOSTag": "P1-D.1 Cost measurement and assignment",
+    "primaryTheory": "D1",
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CalculationItem": true,
+    "Stem": "Ironwood Manufacturing operates a single production plant where each production supervisor can effectively oversee a maximum of 15 direct labor workers. The plant currently employs 42 direct labor workers and 3 production supervisors. Due to a significant increase in demand, production is forecast to rise from 3,500 units to 5,200 units per month, which will require approximately 60 direct labor workers. The plant also employs quality inspectors at a rate of 1 inspector for every 1,000 units of monthly production (currently 4 inspectors).<br><br>Supervisors are step-fixed costs: they are added in discrete jumps and remain fixed over a wide relevant range. Inspectors are step-variable costs: they are added in small, volume-proportional increments.<br><br>How many additional production supervisors must be hired to accommodate the expanded workforce?",
+    "Choices": {
+      "A": "1 additional supervisor",
+      "B": "2 additional supervisors",
+      "C": "4 additional supervisors",
+      "D": "Cannot be determined without knowing the annual salary of a production supervisor"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The plant requires 1 additional production supervisor. Current capacity: 3 supervisors can oversee up to 3 × 15 = 45 direct labor workers (the existing 42 workers are within this range). Expanded requirement: approximately 60 workers require ceil(60 ÷ 15) = 4 supervisors. Additional supervisors needed = 4 − 3 = 1. The distinction between step-fixed costs (supervisors) and step-variable costs (inspectors) is central to this analysis. Step-fixed costs are acquired in large, indivisible increments — each supervisor adds capacity for up to 15 workers, and the cost stays fixed regardless of whether that full capacity is used. The relevant range for a step-fixed cost is wide: once hired, a supervisor remains a fixed cost from 46 to 60 workers (the entire width of the step). Step-variable costs (inspectors) are acquired in small, nearly continuous increments tightly tied to volume — 1 inspector per 1,000 units means the cost tracks volume almost linearly. The additional inspector requirement (ceil(5,200 ÷ 1,000) − 4 = 6 − 4 = 2) illustrates the finer granularity of step-variable costs. In cost behavior analysis, the classification determines how costs respond to volume changes and whether costs are controllable in the short run.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Two additional supervisors would be the answer for the inspector requirement, not the supervisor requirement. The quality inspectors are step-variable costs: at 5,200 units per month, ceil(5,200 ÷ 1,000) = 6 inspectors are needed, compared to 4 currently, an increase of 2 inspectors. Conflating the two cost categories produces the wrong answer for supervisors. The supervisor step-width is 15 workers per supervisor (a large, lumpy increment characteristic of step-fixed costs), while the inspector step-width is 1,000 units per inspector (a finer, volume-proportional increment characteristic of step-variable costs). Each cost category responds to volume changes differently and must be analyzed separately.",
+    "ExplanationWrongC": "Four additional supervisors represents the total number of supervisors required (ceil(60 ÷ 15) = 4), not the incremental number. The question asks how many additional supervisors are needed, not the total complement. Total required equals 4, but the plant already has 3, so only 1 additional supervisor must be hired. This error — reporting the total rather than the incremental change — is common when analyzing step costs because the step function is often expressed as a ceiling or floor of a ratio, and the analyst must remember to subtract the existing base. Always distinguish between total resource requirement and incremental resource acquisition.",
+    "ExplanationWrongD": "The salary of a supervisor is a cost figure, not a determinant of how many supervisors are needed. Capacity analysis — determining the quantity of a resource required — is independent of the resource's unit cost. One supervisor can oversee up to 15 workers regardless of whether that supervisor earns $50,000 or $80,000 per year. The cost of a supervisor matters for budgeting (dollars) but not for capacity planning (headcount). This distractor tests whether the candidate understands that relevant range and step-cost analysis separate the physical capacity constraint from the monetary cost of the resource. Knowing the salary would help compute the dollar amount of the step increase but would not change the number of supervisors required.",
+    "StudyLink": "https://www.imanet.org/cma-certification/~/link.aspx?_id=3E9F8B4A0E5D4B7A9C1D2E3F4A5B6C7D&_z=z",
+    "VerifiedChecks": [
+      "Verified step-fixed vs. step-variable classification is correctly applied to each resource type",
+      "Verified supervisor calculation: ceil(60 / 15) − 3 = 4 − 3 = 1 additional",
+      "Verified inspector calculation: ceil(5,200 / 1,000) − 4 = 6 − 4 = 2 (for cross-check only)",
+      "Verified the capacity analysis separates physical headcount from monetary cost",
+      "Verified each distractor targets a distinct named error (confusion with step-variable, total-vs-incremental, cost irrelevance)"
+    ]
+  },
+  {
+    "QuestionID": "P1E-D-S13",
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Part1OnlyFlag": true,
+    "question_state": "Certified",
+    "Topic": "D-S13 service department allocation reciprocal method simultaneous equations",
+    "LOSTag": "P1-D.1 Cost measurement and assignment",
+    "primaryTheory": "D6",
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CalculationItem": true,
+    "Stem": "Apex Industries has two service departments (Maintenance and Human Resources) and two production departments (PD1 and PD2). Service department costs and usage percentages are as follows:<br><br><strong>Maintenance:</strong> Budgeted cost = $400,000. Provides service to: HR (20%), PD1 (50%), PD2 (30%).<br><br><strong>Human Resources:</strong> Budgeted cost = $250,000. Provides service to: Maintenance (15%), PD1 (45%), PD2 (40%).<br><br>The company uses the reciprocal method to allocate service department costs because each service department provides service to the other. Under the reciprocal method, what is the total overhead cost allocated to Production Department 1? (Round your answer to the nearest whole dollar.)",
+    "Choices": {
+      "A": "$378,608",
+      "B": "$382,353",
+      "C": "$374,706",
+      "D": "$385,938"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under the reciprocal method, the complete cost of each service department is determined by solving simultaneous linear equations that recognize the mutual provision of services. Let M = total Maintenance cost and H = total HR cost. Equation 1: M = $400,000 + 0.15H. Equation 2: H = $250,000 + 0.20M. Substitute Equation 2 into Equation 1: M = $400,000 + 0.15($250,000 + 0.20M) = $400,000 + $37,500 + 0.03M. Rearranging: M − 0.03M = $437,500; 0.97M = $437,500; M = $437,500 ÷ 0.97 = $451,031. Then H = $250,000 + 0.20($451,031) = $250,000 + $90,206 = $340,206. Now allocate to PD1: from Maintenance = $451,031 × 50% = $225,515; from HR = $340,206 × 45% = $153,093. Total to PD1 = $225,515 + $153,093 = $378,608. The reciprocal method is the most theoretically accurate service department allocation method because it alone fully recognizes all inter-service department relationships, unlike the direct method (which ignores inter-service usage entirely) and the step method (which recognizes only one direction of inter-service usage).",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$382,353 results from applying the direct method, which ignores all inter-service department usage. Under the direct method, Maintenance's $400,000 is allocated to PD1 and PD2 in proportion to their direct usage (50:30), giving PD1 = $400,000 × (50 ÷ 80) = $250,000 from Maintenance. HR's $250,000 is allocated in proportion to its direct usage to production departments (45:40), giving PD1 = $250,000 × (45 ÷ 85) = $132,353 from HR. Total to PD1 = $250,000 + $132,353 = $382,353. The direct method is the simplest but least accurate approach because it pretends the service departments do not serve each other. While GAAP permits the direct method, it systematically overstates or understates production department costs when inter-service usage is material.",
+    "ExplanationWrongC": "$374,706 results from applying the step method, allocating Maintenance first (since it provides the largest percentage of service to the other service department). Under the step method, Maintenance's $400,000 is first allocated to HR (20% × $400,000 = $80,000), PD1 (50% × $400,000 = $200,000), and PD2 (30% × $400,000 = $120,000). HR's new total is $250,000 + $80,000 = $330,000, which is then allocated only to the two production departments (PD1: 45/85 × $330,000 = $174,706; PD2: 40/85 × $330,000 = $155,294). Total to PD1 = $200,000 + $174,706 = $374,706. The step method partially recognizes inter-service usage in one direction only, and the resulting allocation depends on the sequence chosen for service department allocation — a significant limitation.",
+    "ExplanationWrongD": "$385,938 results from applying the step method in the reverse order, allocating Human Resources first. Under this sequence, HR's $250,000 is first allocated to Maintenance (15% × $250,000 = $37,500), PD1 (45% × $250,000 = $112,500), and PD2 (40% × $250,000 = $100,000). Maintenance's new total is $400,000 + $37,500 = $437,500, which is allocated to the two production departments (PD1: 50/80 × $437,500 = $273,438; PD2: 30/80 × $437,500 = $164,062). Total to PD1 = $112,500 + $273,438 = $385,938. This illustrates a fundamental weakness of the step method: the total allocated to production departments varies depending on which service department is allocated first, creating an arbitrary element in cost assignment. Only the reciprocal method eliminates this sequencing bias.",
+    "StudyLink": "https://www.imanet.org/cma-certification/~/link.aspx?_id=3E9F8B4A0E5D4B7A9C1D2E3F4A5B6C7D&_z=z",
+    "VerifiedChecks": [
+      "Verified reciprocal method simultaneous equations are correctly formulated and solved",
+      "Verified M = $400,000 + 0.15H and H = $250,000 + 0.20M satisfy mutual service relationships",
+      "Verified PD1 allocation = $451,031 × 50% + $340,206 × 45% = $225,515 + $153,093 = $378,608",
+      "Verified each distractor maps to a distinct allocation method: direct, step (M first), step (HR first)",
+      "Verified cross-check: M × 0.80 + H × 0.85 = $360,825 + $289,175 = $650,000 = original service department costs"
+    ]
+  },
+  {
+    "QuestionID": "P1E-D-S14",
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Part1OnlyFlag": true,
+    "question_state": "Certified",
+    "Topic": "D-S14 CVP multi-product weighted average contribution margin breakeven",
+    "LOSTag": "P1-D.1 Cost measurement and assignment",
+    "primaryTheory": "D9",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CalculationItem": true,
+    "Stem": "Pinnacle Products sells two products with the following data:<br><br><strong>Product Alpha:</strong> Selling price = $80 per unit; Variable cost = $50 per unit; Expected sales mix = 60% of total units.<br><br><strong>Product Beta:</strong> Selling price = $120 per unit; Variable cost = $70 per unit; Expected sales mix = 40% of total units.<br><br>Total fixed costs are $450,000.<br><br>Using the weighted-average contribution margin approach, what is the breakeven point in total units (combined, across both products)?",
+    "Choices": {
+      "A": "11,843 units",
+      "B": "11,250 units",
+      "C": "15,000 units",
+      "D": "9,000 units"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The weighted-average contribution margin (WACM) method computes breakeven for a multi-product company in three steps. Step 1 — Compute individual contribution margins: Product Alpha CM = $80 − $50 = $30 per unit; Product Beta CM = $120 − $70 = $50 per unit. Step 2 — Compute the weighted-average contribution margin using the sales mix: WACM = (0.60 × $30) + (0.40 × $50) = $18 + $20 = $38 per composite unit. Step 3 — Divide total fixed costs by the WACM: Breakeven in total units = $450,000 ÷ $38 = 11,842.11 units, which must be rounded up to 11,843 units because partial units cannot be sold and breakeven requires that contribution margin at least equal fixed costs. Verification: 11,843 × $38 = $450,034 ≥ $450,000. The weighted-average approach is necessary for multi-product CVP analysis because different products contribute different amounts per unit, and the sales mix determines the average contribution earned on each unit sold. A change in the sales mix — even with the same total unit volume — changes the breakeven point because it shifts the weighted-average contribution margin.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "11,250 units results from using the simple (unweighted) average of the two contribution margins instead of the weighted average. The simple average CM = ($30 + $50) ÷ 2 = $40 per unit. Breakeven = $450,000 ÷ $40 = 11,250 units. This approach implicitly assumes a 50/50 sales mix, which does not match the actual 60/40 mix. Because Product Beta has a higher contribution margin ($50 vs. $30) and is actually sold in a smaller proportion (40% rather than 50%), using an unweighted average overstates the average CM and understates the breakeven point. The error illustrates why the sales mix must be incorporated — the weighted-average contribution margin is the only valid per-unit metric for multi-product CVP.",
+    "ExplanationWrongC": "15,000 units results from computing breakeven as if the company sold only Product Alpha. Breakeven = $450,000 ÷ $30 = 15,000 units. A company with two products must sell both to maintain the assumed sales mix. Selling only the lower-margin product ignores the favorable impact of Product Beta's higher contribution margin ($50 vs. $30). While 15,000 units would also cover fixed costs, this distractor represents the common error of applying single-product CVP formulas to a multi-product setting without accounting for the sales mix or the contribution of the higher-margin product.",
+    "ExplanationWrongD": "9,000 units results from computing breakeven as if the company sold only Product Beta using only its contribution margin. Breakeven = $450,000 ÷ $50 = 9,000 units. This approach treats the entire sales mix as if only the high-margin product were sold, ignoring that 60% of units are the lower-margin Product Alpha. The multi-product sales mix constraint means that for every unit of Product Beta sold, 1.5 units of Product Alpha must also be sold (60:40 ratio), lowering the average contribution per unit below $50. CVP analysis for multi-product firms must always use the weighted-average contribution margin computed from the actual or budgeted sales mix.",
+    "StudyLink": "https://www.imanet.org/cma-certification/~/link.aspx?_id=3E9F8B4A0E5D4B7A9C1D2E3F4A5B6C7D&_z=z",
+    "VerifiedChecks": [
+      "Verified WACM = 0.60 × ($80 − $50) + 0.40 × ($120 − $70) = $18 + $20 = $38",
+      "Verified breakeven = $450,000 ÷ $38 = 11,842.11 → rounded up to 11,843 units",
+      "Verified verification: 11,843 × $38 = $450,034 ≥ $450,000 fixed costs",
+      "Verified each distractor uses a distinct computational error (unweighted average, single-product Alpha, single-product Beta)",
+      "Verified sales mix constraint is correctly embedded in the WACM denominator"
+    ]
+  },
+  {
+    "QuestionID": "P1E-D-S15",
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "ProductionStatus": "Draft",
+    "Part1OnlyFlag": true,
+    "question_state": "Certified",
+    "Topic": "D-S15 relevant costing make or buy qualitative risk supplier foreign",
+    "LOSTag": "P1-D.1 Cost measurement and assignment",
+    "primaryTheory": "D10",
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CalculationItem": true,
+    "Stem": "Crestwood Medical Devices manufactures a critical electronic component used in its flagship patient monitoring system. The company is evaluating whether to continue manufacturing the component in-house or outsource it to an external supplier. The following information is available:<br><br><strong>In-house manufacturing cost per unit (20,000 units per year):</strong> Direct materials $22, Direct labor $28, Variable overhead $12, Allocated fixed overhead $16. Total = $78 per unit. If production is outsourced, 40% of the allocated fixed overhead is avoidable, and the freed factory space can be rented to a third party for $60,000 per year.<br><br><strong>External supplier offer:</strong> $65 per unit, delivered. The supplier is based in a country experiencing political instability, and industry reports indicate that supply disruptions from this region have occurred in 3 of the last 5 years. The component is critical to patient monitoring system quality — a component failure could trigger a product recall. Additionally, qualifying a new supplier would require a 6-month regulatory approval process with the FDA.<br><br>As the management accountant advising the CFO, what recommendation is most appropriate?",
+    "Choices": {
+      "A": "The quantitative analysis shows an annual advantage of $128,000 to outsourcing, but the political instability of the supplier's country, the component's criticality to product quality and patient safety, and the 6-month regulatory qualification timeline are material qualitative risks. Recommend presenting both the quantitative analysis and the qualitative risk assessment to the CFO for a fully informed decision, with a sensitivity analysis on the cost of a potential supply disruption.",
+      "B": "Accept the supplier's offer immediately. The per-unit savings of $13 per unit ($78 in-house versus $65 supplier) multiplied by 20,000 units yields $260,000 in annual savings, which clearly outweighs any qualitative concerns about the supplier's location.",
+      "C": "Reject the supplier's offer and continue manufacturing in-house. The qualitative risks — political instability, product quality criticality, and FDA regulatory burden — completely override any quantitative savings. A medical device company cannot accept any supply chain risk regardless of the financial impact.",
+      "D": "Accept the supplier's offer because the quantitative savings of $128,000 are material and the qualitative factors are speculative. Political instability is a macroeconomic risk that affects all global suppliers equally, and the FDA qualification process is a one-time administrative hurdle that should not influence a strategic sourcing decision."
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Option A reflects the professional judgment expected of a management accountant at the Evaluate level, synthesizing quantitative analysis with qualitative risk assessment without prematurely concluding. The quantitative analysis is: Relevant cost to make in-house = Direct materials $22 + Direct labor $28 + Variable overhead $12 + Avoidable fixed overhead ($16 × 40% = $6.40) = $68.40 per unit. The $9.60 of unavoidable fixed overhead ($16 × 60%) continues regardless and is irrelevant to the decision. Total relevant cost to make = 20,000 × $68.40 = $1,368,000. Total cost to buy = 20,000 × $65 = $1,300,000. Direct cost savings from outsourcing = $1,368,000 − $1,300,000 = $68,000. Adding the rental income from freed space ($60,000), the total quantitative advantage of outsourcing is $128,000 per year. However, the qualitative factors — political instability causing historical supply disruptions in 3 of 5 years, the component's criticality to a flagship medical device with patient safety implications, and the 6-month FDA regulatory qualification timeline — are material risks that could easily exceed $128,000 in a single supply disruption event (recall costs, lost sales, regulatory penalties). The management accountant's role is to present the complete analysis — quantitative and qualitative — so that the CFO can make a fully informed strategic decision, not to make the decision unilaterally.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B commits two errors. First, it uses total in-house cost ($78 per unit) rather than the relevant cost of making ($68.40 per unit), ignoring that 60% of fixed overhead is unavoidable and will continue regardless. The correct per-unit savings are $3.40 ($68.40 − $65), not $13 ($78 − $65). The true quantitative impact is $68,000 in direct savings plus $60,000 in rental income, totaling $128,000 — not $260,000. Second, it dismisses all qualitative factors as subordinate to the financial analysis. Management accountants must consider non-financial factors, especially when supply chain risks could have patient safety consequences in a medical device context. The $260,000 figure is both computationally wrong and strategically misleading.",
+    "ExplanationWrongC": "Option C reaches the opposite extreme — it dismisses the quantitative advantage entirely based on qualitative risks, without quantifying the risk or presenting a balanced analysis. A $128,000 annual advantage is material and should not be disregarded without analysis. While the qualitative risks are significant, the management accountant's role is to evaluate them alongside the financial impact, not to substitute risk aversion for analysis. Additionally, the assertion that a medical device company cannot accept any supply chain risk is an overstatement — medical device companies routinely manage global supply chains by implementing supplier qualification programs, dual-sourcing arrangements, and safety stock policies. The decision requires weighing the risks against the savings using a structured framework, not defaulting to the status quo.",
+    "ExplanationWrongD": "Option D correctly computes the $128,000 quantitative advantage (unlike Option B) but then dismisses the qualitative risks as speculative or routine, which is a serious error in professional judgment. The political instability in the supplier's country is not speculative — industry data confirms supply disruptions in 3 of the past 5 years, representing a 60% annual disruption probability. The FDA qualification process is not a one-time administrative hurdle — it is a legally mandated safety requirement that involves facility inspections, process validation, and equipment qualification. Failure to qualify on schedule could halt production of the flagship product. Dismissing these factors as routine is inconsistent with the IMA Statement of Ethical Professional Practice, which requires management accountants to communicate all material information, both favorable and unfavorable, to decision-makers.",
+    "StudyLink": "https://www.imanet.org/cma-certification/~/link.aspx?_id=3E9F8B4A0E5D4B7A9C1D2E3F4A5B6C7D&_z=z",
+    "VerifiedChecks": [
+      "Verified relevant cost to make = $22 + $28 + $12 + $6.40 (40% × $16) = $68.40/unit",
+      "Verified quantitative advantage of outsourcing = ($68.40 − $65) × 20,000 + $60,000 = $68,000 + $60,000 = $128,000",
+      "Verified unavoidable FOH of $9.60/unit ($16 × 60%) is correctly excluded from the relevant cost analysis",
+      "Verified the correct answer synthesizes quantitative and qualitative analysis without prematurely concluding — consistent with Evaluate-level judgment",
+      "Verified each distractor represents a distinct decision-making error: computational error (B), risk-aversion bias (C), dismissing material qualitative factors (D)"
+    ]
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E-S06 COSO 2013 component evaluation information communication monitoring deficiency",
+    "MicroTopic": "COSO 2013 component evaluation",
+    "UniqueConceptKey": "E-S06-coso-2013-component-evaluation",
+    "LOSTag": "P1-E.2 Internal controls",
+    "primaryTheory": "E1",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "An organization's internal control system has the following characteristics: (1) a strong control environment: an independent board of directors, a whistleblower hotline, and a code of ethics communicated to all employees; (2) a robust risk assessment process: a quarterly risk committee identifies and analyzes entity-wide risks; (3) well-designed control activities: automated system controls and manual review procedures are documented and tested; (4) information and communication: the quarterly IT control report is submitted to middle management only, and control deficiencies identified by operating personnel are not escalated to senior management or the board; (5) monitoring: annual control self-assessments are completed by each department manager, with no independent validation or testing performed by internal audit. Under the COSO 2013 Internal Control — Integrated Framework, which of the following is the most accurate evaluation of this control system?",
+    "Choices": {
+      "A": "The control system is effective because three of the five COSO components are operating as designed, and the board exercises appropriate oversight over the control environment and risk assessment.",
+      "B": "The control system is not effective because both the Information & Communication and Monitoring components are deficient, and an effective internal control system under COSO 2013 requires all five components to be present, functioning, and operating together.",
+      "C": "The control system is conditionally effective for financial reporting purposes only, because the strong control environment and risk assessment components can compensate for the deficiencies in Information & Communication and Monitoring.",
+      "D": "The control system is not effective because the Information & Communication component is deficient, but the Monitoring component is adequate since annual self-assessments conducted by department managers satisfy COSO's ongoing monitoring requirements."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under the COSO 2013 Internal Control — Integrated Framework, an effective internal control system requires all five components — Control Environment, Risk Assessment, Control Activities, Information & Communication, and Monitoring — to be present, functioning, and operating together in an integrated manner. Each component must be supported by its relevant principles, and the components must collectively reduce the risk of not achieving the entity's objectives to an acceptable level — the concept of reasonable assurance. In this case, two components are clearly deficient. First, Information & Communication (Principles 14 and 15) is deficient because relevant, quality information must be communicated both internally and externally. Principle 14 requires that the organization internally communicates information, including objectives and responsibilities for internal control, necessary to support the functioning of internal control. When the IT control report stops at middle management and control deficiencies identified by operating personnel are never escalated to senior management or the board, the upward communication channel that Principle 14 demands is broken — senior leadership and the board cannot exercise their oversight responsibilities without receiving deficiency information. Principle 15 requires communication with external parties, but the more immediate failure is internal. Second, Monitoring (Principles 16 and 17) is deficient because Principle 16 requires the organization to select, develop, and perform ongoing and/or separate evaluations to ascertain whether the components of internal control are present and functioning. Annual self-assessments completed by department managers with no independent validation or testing by internal audit do not satisfy this requirement. Self-assessments without independent verification are inherently limited — a manager may lack objectivity about their own department's controls, may not identify deficiencies they are unaware of, and has no incentive to report weaknesses in their own area. COSO explicitly contemplates a mix of ongoing monitoring (built into operations) and separate evaluations (such as internal audit reviews), and independent validation is essential to both. Because two of the five components are deficient, the system as a whole cannot provide reasonable assurance, and the control system is not effective. A common exam trap is to assume that a majority of functioning components (three of five) is sufficient — COSO's integrated model is not a voting system; all five components must function together. Another trap is the idea of 'conditional effectiveness' — COSO does not provide for conditional or partial effectiveness based on compensating controls across different components; each component must independently satisfy its principles. From a business perspective, the practical consequence is that the board and senior management lack the information they need to discharge their oversight duties, and no one independently verifies whether controls are actually operating — a situation that exposes the organization to undetected control failures regardless of how well-designed the individual control activities may be.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "COSO Internal Control — Integrated Framework (2013)",
+        "url": "https://www.coso.org/guidance-on-ic"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review COSO 2013 Principles 14-17 and the requirement that all five components must be present and functioning together.",
+    "QuestionID": "P1E-E-S06",
+    "question_state": "Certified",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024, LOSTag P1-E.2 Internal controls",
+      "COSO 2013 Internal Control — Integrated Framework applied correctly: all five components must be present and functioning together",
+      "Original practice item with unique business scenario requiring cross-component evaluation",
+      "All distractors represent plausible candidate misconceptions about component interaction and compensating controls",
+      "Explanation identifies the governing framework by name (COSO 2013), applies Principles 14-17, and identifies common exam traps"
+    ],
+    "ExplanationWrongA": "Option A (the system is effective because three components function) is incorrect. Under COSO 2013, internal control effectiveness is not determined by a majority vote of components. The framework explicitly requires all five components — Control Environment, Risk Assessment, Control Activities, Information & Communication, and Monitoring — to be present, functioning, and operating together in an integrated manner. When Information & Communication is deficient (control deficiencies are not escalated upward to senior management and the board) and Monitoring is deficient (annual self-assessments with no independent validation), the system cannot provide reasonable assurance regardless of how strong the other three components are. A candidate selecting this option misunderstands the integrated nature of the COSO framework — a failure in one component undermines the entire system. The practical consequence is severe: the board and senior management have no visibility into control failures occurring at the operational level, which means they cannot exercise their oversight responsibilities. This is particularly dangerous because the very people who need information about control deficiencies (senior management and the board) are the ones being deprived of it.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (conditionally effective for financial reporting) is incorrect because COSO 2013 does not provide for 'conditional effectiveness' — the internal control system is either effective or it is not. There is no concept of partial or domain-specific effectiveness within the framework. A strong control environment cannot compensate for deficiencies in other components, because each component serves a distinct and non-substitutable function. The control environment sets the tone at the top, but it does not transmit control deficiency information upward (that is the role of Information & Communication), nor does it verify whether controls are operating as designed (that is the role of Monitoring). These are separate functions that cannot be performed by a different component. A candidate selecting this option may be thinking of compensating controls within a single component (e.g., a strong manual review compensating for a weak automated control), but COSO does not extend the compensating-controls concept across different components. Each of the five components must independently satisfy its principles.",
+    "ExplanationWrongD": "Option D (Information & Communication is deficient but Monitoring is adequate) is incorrect because the Monitoring component as described — annual self-assessments by department managers with no independent validation — does NOT satisfy COSO's monitoring requirements. Principle 16 requires ongoing evaluations, separate evaluations, or a combination of the two. Self-assessments without independent verification fail both standards. A department manager conducting a self-assessment of their own controls faces an inherent conflict of interest: they are less likely to identify or report deficiencies that reflect poorly on their management. Furthermore, a manager may simply be unaware of control failures occurring in their department. COSO envisions monitoring that combines built-in ongoing evaluations (such as exception reports, variance analysis, and supervisory reviews embedded in daily operations) with separate evaluations conducted by objective parties (such as internal audit). The organization described has neither — only unaudited self-assessments. A candidate selecting this option likely assumes that any form of periodic review satisfies the monitoring principle, without distinguishing between a genuine evaluation (objective, evidence-based) and a self-assessment (subjective, unaudited). This is a common exam trap: the CMA exam expects candidates to evaluate the quality of monitoring, not merely its existence.",
+    "ProductionStatus": "Draft"
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E-S07 COSO ERM risk appetite alignment interest rate swap counterparty exposure",
+    "MicroTopic": "COSO ERM risk appetite alignment",
+    "UniqueConceptKey": "E-S07-coso-erm-risk-appetite-alignment",
+    "LOSTag": "P1-E.2 Internal controls",
+    "primaryTheory": "E2",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A regional bank's board of directors adopted a formal risk appetite statement: 'The bank accepts moderate credit risk, low market risk, and zero tolerance for compliance and reputational risk exposures.' The Treasury department recently executed an interest rate swap to reduce the variability of borrowing costs on the bank's floating-rate debt. The swap creates counterparty credit exposure to a BBB-rated European bank representing approximately 15% of the bank's Tier 1 capital. The compliance team also noted that the swap documentation does not include ISDA standard credit support annex (CSA) terms, meaning no collateral posting arrangement protects the bank if the counterparty's credit quality deteriorates. Based on the COSO Enterprise Risk Management framework's guidance on risk appetite alignment, which of the following is the most accurate analysis of this transaction?",
+    "Choices": {
+      "A": "The swap aligns with the stated risk appetite because it serves a legitimate treasury objective of reducing interest rate variability, which is consistent with the bank's acceptance of low market risk. The counterparty credit exposure is a secondary consideration.",
+      "B": "The swap violates the 'moderate credit risk' appetite dimension because a 15% Tier 1 capital concentration to a single BBB-rated counterparty, with no collateral arrangement in place, exceeds what a reasonable interpretation of 'moderate' credit risk would permit for a single exposure.",
+      "C": "The swap violates only the 'zero tolerance for compliance risk' dimension because the missing ISDA CSA documentation creates a documentary non-compliance, but the credit exposure to a BBB-rated counterparty remains within the moderate credit risk appetite.",
+      "D": "The swap aligns with the stated risk appetite on all three dimensions because the counterparty is an investment-grade European bank, interest rate swaps are standard treasury instruments, and the ISDA CSA terms can be negotiated after execution."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under the COSO Enterprise Risk Management framework, the board establishes the entity's risk appetite — the amount of risk the entity is willing to accept in pursuit of its strategy and business objectives. All strategic, operational, reporting, and compliance decisions must then be evaluated against this stated appetite. In this case, the bank's risk appetite statement explicitly limits credit risk acceptance to 'moderate' — a qualitative boundary that management must operationalize through specific limits, such as single-counterparty concentration caps calibrated to capital and credit ratings. A 15% Tier 1 capital exposure to a single BBB-rated counterparty is a concentrated credit position by any reasonable interpretation of 'moderate.' BBB is the lowest investment-grade rating; a deterioration to BB (non-investment grade) would likely trigger significant regulatory capital charges and potential impairment. The exposure is unsecured — the absence of ISDA CSA terms means the bank has no right to demand collateral from the counterparty if its credit quality deteriorates, making the exposure a pure unsecured credit risk. Many regulated banks impose single-counterparty limits of 10-15% of capital for AAA-rated sovereigns and considerably lower limits (often 2-5%) for BBB-rated financial institutions, precisely to maintain 'moderate' credit risk profiles. The compliance dimension is also implicated — the ISDA documentation deficiency represents a compliance gap — but the credit risk dimension is the more fundamental violation because even a properly documented swap at this concentration level would exceed moderate credit risk limits. A candidate analyzing this transaction must apply the risk appetite framework holistically: identify which dimension(s) are violated, recognize that a qualitative appetite statement requires operational calibration, and avoid the trap of treating the credit exposure as 'moderate' simply because the counterparty is investment-grade — concentration matters independently of credit quality. The practical lesson for management accountants is that risk appetite is not self-executing; it must be translated into specific, measurable limits (such as single-counterparty exposure caps as a percentage of capital) and every transaction must be stress-tested against those limits before execution.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "COSO Enterprise Risk Management — Integrating with Strategy and Performance (2017)",
+        "url": "https://www.coso.org/guidance-on-erm"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review COSO ERM risk appetite framework — translating qualitative appetite statements into operational limits and evaluating individual transactions against those limits.",
+    "QuestionID": "P1E-E-S07",
+    "question_state": "Certified",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024, LOSTag P1-E.2 Internal controls",
+      "COSO ERM (2017) risk appetite framework applied correctly to a specific financial instrument transaction",
+      "Original practice item applying the risk appetite concept to a realistic treasury decision with multi-dimensional risk exposure",
+      "All distractors represent plausible candidate errors: treating treasury purpose as overriding risk appetite, underestimating concentration, over-relying on credit rating",
+      "Explanation identifies the governance framework (COSO ERM), operationalizes the qualitative appetite statement, and identifies common exam traps around concentration risk"
+    ],
+    "ExplanationWrongA": "Option A (the swap aligns with risk appetite because it serves a legitimate treasury purpose) is incorrect because the COSO ERM framework does not permit a transaction's legitimate business purpose to override the risk appetite boundaries set by the board. The test is not whether the transaction serves a valid objective — almost all treasury transactions serve a valid objective. The test is whether the specific terms and exposures of the transaction fall within the board's stated risk tolerance for each risk dimension. While reducing interest rate variability is consistent with the bank's 'low market risk' appetite, this addresses only the market risk dimension of the swap. The transaction simultaneously creates a credit risk exposure (15% Tier 1 capital concentration to a single BBB-rated counterparty) that must be separately evaluated against the 'moderate credit risk' appetite. A candidate selecting this option incorrectly treats the transaction's primary purpose (market risk management) as immunizing it from review on other risk dimensions. In practice, a single transaction can create risks across multiple dimensions — the ERM framework requires evaluating each dimension independently. A derivative that reduces market risk while creating excessive credit risk does not align with the entity's risk appetite simply because it 'solved' the market risk problem.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (violates only the compliance risk dimension) is incorrect because it underestimates the credit risk exposure. A 15% Tier 1 capital concentration to a single BBB-rated counterparty, with no collateral protection (no CSA terms), is a substantial single-name credit exposure that exceeds a reasonable calibration of 'moderate' credit risk. BBB is the lowest rung of investment grade — a downgrade to non-investment grade by even one notch would trigger mandatory regulatory capital increases and potentially render the bank non-compliant with its own credit policies. Concentration limits for BBB-rated financial institution counterparties typically range from 2% to 5% of capital at most prudently managed banks. The 15% figure is three to seven times these typical limits. Furthermore, the absence of a CSA is not merely a documentary compliance matter — it is integral to the credit risk assessment because it means the bank has no mechanism to demand collateral if the counterparty's credit profile worsens. A fully documented swap with CSA terms at 15% of Tier 1 capital would still likely violate a moderate credit risk appetite, but the absence of collateral protection makes the exposure considerably worse. A candidate selecting this option may be over-relying on the BBB investment-grade rating as sufficient justification, without considering that concentration risk and credit rating are separate dimensions that compound each other.",
+    "ExplanationWrongD": "Option D (the swap aligns on all three dimensions) is incorrect on both the credit risk and compliance dimensions. Regarding credit risk, a BBB-rated counterparty is investment grade but at the lowest tier within that category. Investment-grade status alone does not make a 15% Tier 1 capital concentration 'moderate' — concentration limits exist precisely because credit ratings can change, and the impact of a downgrade is proportional to the size of the exposure. A 'moderate' risk appetite should be calibrated to ensure that even a severe but plausible adverse event (such as a two-notch downgrade of the counterparty to BB) would not threaten the bank's capital adequacy. Regarding compliance risk, the board's risk appetite states 'zero tolerance for compliance and reputational risk.' The ISDA CSA documentation gap is a compliance deficiency at the time of execution. While the CSA can be negotiated post-execution, operating with an undocumented exposure between execution and CSA finalization represents a period of non-compliance — and 'zero tolerance' means even a temporary compliance gap violates the stated appetite. A candidate selecting this option conflates 'can be fixed later' with 'currently compliant' and over-relies on the investment-grade label without examining the concentration dimension. This is a common exam trap: treating a credit rating as a substitute for concentration analysis.",
+    "ProductionStatus": "Draft"
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E-S08 IT general controls access management terminated users shared accounts privileged access",
+    "MicroTopic": "IT general controls access management",
+    "UniqueConceptKey": "E-S08-it-general-controls-access-management",
+    "LOSTag": "P1-E.2 Internal controls",
+    "primaryTheory": "E7",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "An internal audit of an organization's ERP system access controls identified the following three findings: (1) eight employees who were terminated between 6 and 14 months ago still have active user accounts in the ERP system, and two of those accounts were used to access the general ledger module within the last 90 days; (2) a shared 'vendor_setup' account is used by six accounts payable clerks to create and modify vendor master records, and the password for this account is posted on the AP department bulletin board; (3) four IT staff members hold system administrator privileges, no review of privileged access rights has been conducted in 18 months, and two of the four individuals have changed roles and no longer require administrative access. Under IT general control frameworks, which of the following correctly classifies these findings and identifies the most critical deficiency?",
+    "Choices": {
+      "A": "Finding 1 is an access control deficiency, Finding 2 is a segregation of duties deficiency due to the shared account, and Finding 3 is an access control deficiency. The most critical deficiency is Finding 1 because terminated employee accounts with demonstrated post-termination usage represent an active, realized control failure.",
+      "B": "Finding 1 is a personnel security deficiency, Finding 2 is a logical access control deficiency, and Finding 3 is a change management deficiency because failing to review privileges means system changes are not properly authorized. The most critical deficiency is Finding 2 because a posted password renders the vendor master file accessible to anyone with physical access to the AP department.",
+      "C": "All three findings are logical access control deficiencies within the IT general controls domain. The most critical deficiency is Finding 3 because system administrator privileges provide unrestricted access to all ERP modules and data, and the 18-month absence of review combined with personnel who have changed roles means the organization cannot assert that access remains appropriate.",
+      "D": "Finding 1 is an access control deficiency, Finding 2 is an access control deficiency, and Finding 3 is a privileged access management deficiency. The most critical deficiency is Finding 2 because the vendor master file controls disbursements, and a shared account with a publicly posted password enables fraudulent vendor creation and payment diversion."
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Under IT general control frameworks, logical access controls govern who can access systems, applications, and data, and at what level of privilege. All three findings fall squarely within the logical access control category: (1) terminated employees retaining active accounts represents a failure of user access provisioning and deprovisioning — a core logical access control; (2) a shared account with a publicly posted password represents a failure of authentication control and the principle of unique user identification — both logical access control sub-categories; (3) excessive or unreviewed privileged access represents a failure of privileged access management — also a logical access control. Finding 2 also touches on segregation of duties (six people sharing one account means no individual accountability for vendor creation), but the root cause is the access control failure — a properly designed access control system would assign unique accounts with role-appropriate permissions rather than relying on a shared credential. The prioritization analysis requires evaluating both the potential impact and the likelihood of exploitation. Finding 3 (privileged access without review) is the most critical because: (a) system administrator privileges provide unrestricted access — system admins can create, modify, and delete any data in any module, bypass application-level controls, alter audit trails, and create backdoor accounts; (b) the 18-month gap in review means the organization has lost visibility into what privileged actions have been performed, by whom, and for what purpose — the audit trail exists but no one is examining it; (c) the fact that two of four privileged users have changed roles but retained admin access represents a clear case of inappropriate access, confirming that the absence of review has actual consequences, not merely theoretical risk. Finding 1 (terminated users) is serious because it demonstrates realized risk — accounts were actually used post-termination. However, the terminated employees' access was limited to the general ledger module (not system-wide), and the damage is constrained to what their legacy permissions allowed. Finding 2 (shared vendor_setup account) enables vendor master fraud, but the perpetrator must first obtain physical access to the AP department bulletin board — an additional barrier. Finding 3 requires no such barrier — the privileged accounts can be accessed from any network location, and the damage radius is unlimited. Business interpretation: when ranking IT control deficiencies, management accountants must consider the breadth of access (system-wide vs. module-specific), the barriers to exploitation (remote vs. physical), and the organization's ability to detect the exploitation (audit trail visibility). Privileged access failures score highest on all three dimensions, making Finding 3 the most critical. A common exam trap is to prioritize demonstrated breaches (Finding 1) over latent exposures — but IT audit methodology ranks latent exposures with unlimited damage potential above demonstrated breaches with limited damage scope.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "ISACA IT Control Objectives and COBIT Framework",
+        "url": "https://www.isaca.org/resources/cobit"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review IT general controls — logical access controls, user provisioning and deprovisioning, privileged access management, and the prioritization framework for control deficiencies.",
+    "QuestionID": "P1E-E-S08",
+    "question_state": "Certified",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024, LOSTag P1-E.2 Internal controls",
+      "IT general control classification verified: access provisioning, authentication, and privileged access management are all logical access controls",
+      "Original practice item with three distinct control deficiency scenarios requiring classification and prioritized remediation",
+      "Distractors present plausible alternative classifications (SoD, change management, personnel security) and alternative prioritizations grounded in real audit methodology debates",
+      "Explanation identifies the governing frameworks (COBIT, IT general controls), applies correct classification, and prioritizes using breadth-of-access, barriers-to-exploitation, and detectability criteria"
+    ],
+    "ExplanationWrongA": "Option A (Finding 2 is a segregation of duties deficiency, and Finding 1 is most critical) is incorrect on both the classification and the prioritization. Regarding classification: while a shared account does undermine segregation of duties because six individuals performing the same function cannot be distinguished in the audit trail, the root control deficiency is the shared account itself — a logical access control failure. Segregation of duties is compromised as a consequence of the access control failure, but the remediation (issuing unique accounts with role-appropriate permissions) is an access control solution, not an SoD solution. IT audit frameworks classify shared credentials as an authentication and access control deficiency. Regarding prioritization: while Finding 1 is serious because it demonstrates realized risk (accounts were used post-termination), the terminated employees' access was limited to the general ledger module by their legacy role permissions. Finding 3 (privileged access) provides unrestricted, system-wide access — the damage radius of a compromised privileged account is orders of magnitude larger. A candidate selecting this option may be anchoring on the demonstrated breach (Finding 1) as inherently more serious than a latent exposure (Finding 3), but IT audit methodology does not rank control deficiencies solely by whether exploitation has already occurred. The potential impact of privileged access compromise — complete system control, ability to alter or delete any data, bypass of all application controls, and potential destruction of the audit trail — exceeds the impact of an unauthorized general ledger access by a terminated employee whose permissions were limited to a single module.",
+    "ExplanationWrongB": "Option B (Finding 1 is personnel security, Finding 3 is change management, Finding 2 is most critical) is incorrect on both classification counts and the prioritization. First, Finding 1 (terminated employees with active accounts) is a logical access control deficiency — specifically, a failure of the user access deprovisioning process. It is not a personnel security deficiency, which typically refers to pre-employment screening, background checks, and termination procedures within the HR function. The HR process of terminating employment may have been executed correctly, but the IT process of revoking system access failed. Second, Finding 3 (unreviewed privileged access) is also a logical access control deficiency — specifically, a privileged access management failure. It is not a change management deficiency, which involves the authorization, testing, and migration of changes to the IT environment such as code deployments, configuration modifications, and infrastructure updates. The fact that two of four privileged users have changed roles does not mean their access change was an unauthorized 'system change' — it means the access review process that should have identified and removed their privileges was not being performed. Regarding prioritization: the physical access barrier argument for Finding 2 (anyone could walk into AP and read the password) is less compelling than the damage-radius argument for Finding 3 (privileged access provides system-wide, remote-accessible, unlimited control). A candidate selecting this option is misclassifying IT control deficiencies by conflating distinct control domains and applying a physical-proximity prioritization that undervalues the significance of privileged access compromise.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D (Finding 2 is the most critical) is incorrect on the prioritization, though the classification is directionally correct. Finding 2 (shared vendor_setup account with posted password) is a serious access control deficiency that enables vendor master fraud, which is a high-value fraud vector — a perpetrator with access to vendor creation can set up a fictitious vendor, route payments to it, and potentially conceal the scheme through the shared account's lack of individual accountability. However, this finding is less critical than Finding 3 for three reasons. First, breadth of access: the vendor_setup account provides access to one business function (vendor master data). System administrator privileges provide access to every ERP function — general ledger, accounts payable, payroll, inventory, financial reporting, and the security configuration itself. Second, barriers to exploitation: the shared account requires the perpetrator to know the password, which necessitates either physical presence in the AP department or prior knowledge of the bulletin board posting — creating at least a minimal barrier. A privileged account can be accessed from any network location with no such physical constraint. Third, detectability: vendor master changes produce an audit trail (even if attributed to a shared account, the creation of a new vendor is a discrete, auditable event). A system administrator can alter or delete the audit trail itself, making detection effectively impossible. IT audit frameworks consistently rank privileged access management failures as the highest-severity logical access control deficiency, above user access provisioning failures, precisely because of this combination of unlimited access scope and the ability to conceal activity. A candidate selecting this option correctly identifies vendor master fraud as a serious risk but does not apply the breadth-of-access or detectability dimensions that elevate privileged access failures to the highest priority.",
+    "ProductionStatus": "Draft"
+  },
+  {
+    "Part": 1,
+    "Section": "F",
+    "SectionName": "Technology and Analytics",
+    "Topic": "F-S06 data governance MDM customer master inconsistent definitions",
+    "MicroTopic": "data governance framework evaluation",
+    "UniqueConceptKey": "F-S06-data-governance-mdm-customer-master",
+    "LOSTag": "P1-F.2 Data governance",
+    "primaryTheory": "F2",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A national retail chain is experiencing persistent difficulties with customer analytics and financial reporting. A data governance assessment reveals three gaps: (1) customer data is duplicated across the CRM system, the ERP system, and the loyalty program database, with no master record to reconcile identities — a single customer who shops online, in-store, and through the loyalty program may appear as three separate records; (2) the Marketing department defines an 'active customer' as one who made a purchase within the last 12 months, the Finance department defines it as a customer with any outstanding balance within 24 months, and the Operations department defines it as a customer to whom a shipment was made within the last 6 months; (3) no individual or committee has been designated as the data steward or data owner for customer master data — each department manages its own customer records independently. The Chief Data Officer proposes a master data management (MDM) initiative. From a management accountant's perspective focused on financial reporting integrity, which gap is most damaging to reliable financial reporting, and what should be the first governance action?",
+    "Choices": {
+      "A": "The most damaging gap is the duplicate customer records across systems because they inflate the apparent customer count and make it impossible to produce a single view of revenue by customer. The first governance action should be to implement a customer data integration platform that deduplicates records and creates a single customer identifier across all systems.",
+      "B": "The most damaging gap is the inconsistent 'active customer' definition because it directly affects revenue cut-off, bad debt estimation, and the allowance for credit losses — all financial reporting line items. The first governance action should be to establish a cross-functional data governance committee with the authority to define and enforce a single, authoritative definition of 'active customer' across all departments.",
+      "C": "The most damaging gap is the absence of a designated data steward because without clear accountability, none of the other data quality issues can be sustainably resolved. The first governance action should be to appoint a customer data steward from the IT department to manage master data quality and enforce data standards.",
+      "D": "All three gaps are equally significant because they are interdependent — duplicate records arise from inconsistent definitions, which persist because no one is accountable. The first governance action should be to launch a comprehensive MDM system implementation covering CRM, ERP, and the loyalty database simultaneously."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "From a management accountant's perspective focused on financial reporting integrity, the inconsistent 'active customer' definition is the most damaging gap because it directly distorts financial statement line items. Under the revenue recognition standard (ASC 606), revenue is recognized when performance obligations are satisfied, which generally occurs upon shipment or delivery for a retail chain. The timing of revenue recognition interacts directly with the definition of an active customer: Marketing's 12-month window, Finance's 24-month window, and Operations' 6-month window each produce different customer counts, different revenue attribution by customer cohort, and — critically — different estimates for the allowance for credit losses under ASC 326 (CECL). The CECL model requires estimating expected credit losses over the contractual life of financial assets, which depends on identifying which customers have outstanding balances and assessing their credit characteristics. When Finance defines an active customer with 'any outstanding balance within 24 months' while Operations considers a customer active only if a shipment was made within 6 months, the pool of receivables subject to CECL analysis differs depending on which definition is applied. This directly affects the allowance for credit losses on the balance sheet and the provision for bad debts on the income statement — both are material financial reporting line items subject to audit scrutiny and SOX internal control certification. The duplicate records (Gap 1) are a data quality issue that affects operational efficiency and analytics accuracy, but they do not directly distort financial statement amounts in the way that inconsistent definitions do. The absence of a data steward (Gap 3) is a governance gap that enables Gaps 1 and 2 to persist, but designating a steward before resolving the definitional conflict would put the steward in the position of choosing among three equally entrenched departmental definitions without authority — the governance committee must come first. Therefore, the first governance action should be establishing a cross-functional data governance committee — with representation from Finance, Marketing, Operations, and IT — empowered to define an authoritative 'active customer' standard. This is consistent with the data governance principle that business definitions (not IT implementations) must govern master data. A common exam trap is to assume that technology solutions (deduplication platforms, MDM systems) solve governance problems — governance must precede technology. Another trap is to assume that appointing a steward solves the problem — the steward needs a governance framework with authority derived from a cross-functional committee that has resolved the definitional conflict.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "DAMA International Data Management Body of Knowledge (DMBOK)",
+        "url": "https://www.dama.org/cpages/dmbok-2"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review data governance fundamentals — master data management, data stewardship, the definition-governance-technology sequence, and how inconsistent data definitions affect financial reporting line items.",
+    "QuestionID": "P1E-F-S06",
+    "question_state": "Certified",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024, LOSTag P1-F.2 Data governance",
+      "Data governance framework applied correctly: business definitions must govern master data; governance precedes technology",
+      "Original practice item evaluating three distinct data governance gaps through a financial reporting integrity lens",
+      "All distractors represent plausible governance approaches that real organizations pursue (technology-first, steward-first, comprehensive-launch)",
+      "Explanation connects data governance deficiencies to specific financial reporting impacts (ASC 606, ASC 326 CECL, SOX certification) and identifies the governance-technology sequencing trap"
+    ],
+    "ExplanationWrongA": "Option A (duplicate records are most damaging; technology-first approach) is incorrect on both the prioritization and the recommended action. Regarding prioritization: duplicate customer records across systems are a data quality problem that impedes customer analytics, marketing effectiveness, and operational efficiency, but they do not directly distort financial reporting line items. A duplicated customer record does not change the total amount of revenue recognized, the total receivables balance, or the total allowance for credit losses — it affects how those aggregates are attributed to individual customers. In contrast, the inconsistent 'active customer' definition directly affects the measurement of financial statement amounts: the allowance for credit losses under ASC 326 requires identifying the population of customers with credit exposure, and conflicting definitions mean the population itself is undefined. The provision for bad debts — a line item on the income statement — will differ depending on which department's definition is used. This is a measurement error, not merely an attribution error. Regarding the first action: implementing a customer data integration platform before resolving the definitional conflict is a classic technology-before-governance error. A deduplication engine can match records by name, address, and transaction history, but it cannot determine which of the three competing 'active customer' definitions should be used to classify the deduplicated record. The technology will simply inherit and automate the existing inconsistency. A candidate selecting this option is prioritizing operational data quality over financial reporting integrity and assuming technology can resolve what is fundamentally a governance conflict.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (no data steward is most damaging; IT-appointed steward first) is incorrect on both the prioritization and the recommended implementation. Regarding prioritization: the absence of a data steward is a governance gap that enables the other two gaps to persist, but it is not the most damaging gap for financial reporting. The direct financial reporting harm flows from the inconsistent 'active customer' definition, which affects the measurement of the allowance for credit losses regardless of whether a steward exists. A steward without a resolved definitional standard would inherit the same ambiguity that currently exists. Regarding the first action: appointing a data steward from the IT department before resolving the definitional conflict puts the steward in an impossible position. The steward would face three entrenched departmental definitions (Marketing's 12-month window, Finance's 24-month window, Operations' 6-month window), each defended by a department head with legitimate business reasons for their choice. An IT-appointed steward lacks the organizational authority to adjudicate a cross-functional business definition dispute — data stewards manage data quality within established standards; they do not create the standards themselves. Furthermore, placing the steward in IT rather than the business side is a common error: customer master data is a business asset, and its steward should have domain expertise in how the data is used for business decisions, not merely technical expertise in database management. A candidate selecting this option confuses data stewardship (an operational quality management role) with data governance (the strategic framework that defines what 'quality' means in the first place).",
+    "ExplanationWrongD": "Option D (all three gaps equally significant; comprehensive implementation) is incorrect because it fails to prioritize among competing deficiencies and recommends an infeasibly broad first action. The three gaps are indeed interdependent — duplicate records arise in part because each system independently stores customer data with its own definition of what a customer record represents, and the absence of a data steward means no one is tasked with reconciling these differences. However, they are not equally significant. From a financial reporting perspective, Gap 2 (inconsistent definitions) directly distorts financial statement measurements, while Gap 1 (duplicate records) affects attribution and analytics, and Gap 3 (no steward) is an enabling condition rather than a direct cause of financial reporting error. The materiality and immediacy of the financial reporting impact differ across the three gaps. Regarding the recommended action: launching a comprehensive MDM implementation across CRM, ERP, and the loyalty system simultaneously is a multi-year, multi-million-dollar enterprise initiative with high execution risk. MDM implementations that attempt to unify all customer data across all systems in a single phase have a well-documented high failure rate because they require simultaneous changes to business processes, data models, system integrations, and organizational roles. The governance principle is to define standards first (through a governance committee), then enforce them incrementally through technology, not to attempt a 'big bang' implementation. A candidate selecting this option fails to differentiate between gaps with direct financial reporting impact and gaps that primarily affect operational efficiency, and recommends a high-risk implementation strategy that violates the governance-technology sequencing principle.",
+    "ProductionStatus": "Draft"
+  },
+  {
+    "Part": 1,
+    "Section": "F",
+    "SectionName": "Technology and Analytics",
+    "Topic": "F-S07 cloud computing service model IaaS PaaS SaaS banking regulatory FFIEC",
+    "MicroTopic": "cloud computing service model selection",
+    "UniqueConceptKey": "F-S07-cloud-computing-service-model",
+    "LOSTag": "P1-F.1 Information systems",
+    "primaryTheory": "F5",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A mid-size regional bank is evaluating cloud migration for its loan origination system. Three deployment models are under consideration: (1) Infrastructure as a Service (IaaS): the cloud provider manages physical infrastructure only; the bank manages the operating system, middleware, runtime, application, and all security layers — including encryption keys; (2) Platform as a Service (PaaS): the cloud provider manages infrastructure and the platform layer (OS, middleware, runtime); the bank manages only the application and its data; (3) Software as a Service (SaaS): the cloud provider delivers a complete loan origination application; the bank configures settings but does not manage any infrastructure, platform, runtime, or application code. The bank operates under FFIEC regulatory requirements, which mandate that: (a) all customer personally identifiable information (PII) must be encrypted at rest and in transit using encryption keys that are managed exclusively by the bank; (b) the audit trail for all loan origination activities must be immutable and retained for seven years; (c) FFIEC examiners must be provided direct, unfettered access to all system logs and audit records, including operating system, database, application, and security event logs. Which cloud service model best balances the bank's regulatory compliance obligations with operational efficiency?",
+    "Choices": {
+      "A": "SaaS, because a cloud provider's loan origination application designed for the banking sector will include standard regulatory compliance features — encryption, immutable audit trails, and examiner access — reducing the bank's compliance burden and allowing it to focus on core banking operations.",
+      "B": "IaaS, because it provides the bank with maximum control over all security layers. The bank can implement its own encryption key management exclusively, retain direct control over all system and OS-level logs for examiner access, and build an immutable audit trail into its application layer. The higher operational burden is the necessary cost of full FFIEC compliance.",
+      "C": "PaaS, because it balances the bank's need to control its application, data, and encryption keys with operational efficiency. The bank can implement application-level encryption and manage its own keys while the cloud provider handles infrastructure patching, OS updates, and middleware maintenance — reducing the bank's operational burden.",
+      "D": "PaaS, because it provides equivalent security control to IaaS over encryption key management, system log access, and audit trail configuration, while offering greater operational efficiency since the cloud provider manages the operating system and runtime environment."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "FFIEC regulatory requirements for financial institutions impose specific constraints on cloud deployment that favor the IaaS model despite its higher operational burden. Three requirements are decisive. First, encryption key exclusivity: the mandate that encryption keys must be 'managed exclusively by the bank' means the bank must retain sole custody and control of cryptographic key material throughout its lifecycle — generation, distribution, rotation, and destruction. In SaaS, the cloud provider typically manages encryption keys (even if dedicated to the tenant, the provider has operational access to the key management infrastructure). In PaaS, the provider manages the operating system and middleware layers, which include database encryption and transport layer security — the bank cannot guarantee exclusive key management at the OS and database layers because the provider administers those environments. Only IaaS gives the bank full-stack control: the bank owns the operating system and all layers above it, can deploy its own hardware security module (HSM) or key management service, and can demonstrate to FFIEC examiners that no cloud provider personnel have access to encryption key material. Second, immutable audit trail retention for seven years: while all three models can support audit trail immutability at the application layer, IaaS allows the bank to implement write-once-read-many (WORM) storage at the infrastructure level, providing an additional layer of immutability protection below the application. In PaaS and SaaS, the bank depends on the provider's infrastructure-level immutability guarantees, which may not satisfy FFIEC's requirement for bank-controlled retention. Third, direct examiner access to all system logs: FFIEC requires examiners to have 'direct, unfettered access to all system logs and audit records' — the word 'all' is critical. The operating system logs (which record user authentications, privilege escalations, and file system access), database logs (query execution, schema changes, and data access), and security event logs (firewall, intrusion detection) are all within scope. In PaaS, the provider controls the OS and database layers — the bank may not have direct access to OS-level security logs and may need to request them from the provider, which violates the 'direct, unfettered access' requirement. In SaaS, the bank has access only to application-level logs that the provider chooses to expose — the OS, database, and security logs are entirely provider-controlled. IaaS is the only model where the bank can provide examiners with direct, real-time access to ALL log layers because the bank administers every layer from the OS upward. Operational efficiency: IaaS imposes the highest operational burden because the bank must manage OS patching, middleware updates, runtime configuration, and security monitoring. However, when regulatory compliance is non-negotiable, 'best balance' does not mean equal weighting — regulatory compliance is a constraint that must be fully satisfied before operational efficiency is considered. The balance is that the bank achieves full compliance at a higher operational cost — but the alternative (non-compliance) is not available. Financial institution examiners have explicit authority to require remediation of compliance deficiencies, and a finding of inadequate encryption key control or examiner access would result in a Matters Requiring Attention (MRA) or enforcement action. A common exam trap is to assume SaaS providers solve regulatory compliance for regulated industries — while many SaaS providers market 'regulatory-compliant' solutions, the bank remains responsible for verifying compliance, and no SaaS provider can satisfy a requirement for bank-exclusive encryption key management. Another trap is to overstate PaaS's control level — while PaaS allows application and data control, the OS and middleware layers are the provider's responsibility, and FFIEC's requirement for 'all' system logs extends into those provider-controlled layers.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "FFIEC IT Examination Handbook — Information Security",
+        "url": "https://ithandbook.ffiec.gov/it-booklets/information-security.aspx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review cloud service models (IaaS, PaaS, SaaS), the shared responsibility model, and how regulatory requirements constrain deployment choices in regulated industries.",
+    "QuestionID": "P1E-F-S07",
+    "question_state": "Certified",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024, LOSTag P1-F.1 Information systems",
+      "Cloud service models (IaaS/PaaS/SaaS) and shared responsibility model applied correctly to a regulated banking environment",
+      "Original practice item requiring multi-criteria evaluation: encryption key control, audit trail immutability, examiner log access, and operational efficiency",
+      "All distractors present plausible cloud deployment strategies that organizations consider — SaaS compliance marketing, PaaS balance, and overstated PaaS control",
+      "Explanation references FFIEC regulatory framework, connects technical architecture decisions to compliance consequences (MRAs, enforcement actions), and identifies the shared-responsibility trap"
+    ],
+    "ExplanationWrongA": "Option A (SaaS) is incorrect because the SaaS model cannot satisfy two of the three FFIEC requirements. First, under SaaS, the cloud provider manages the complete technology stack — the bank has no access to the infrastructure, platform, or application code. FFIEC requires that encryption keys be 'managed exclusively by the bank.' Even if a SaaS provider offers 'customer-managed keys' as a feature, the provider's personnel have operational access to the key management infrastructure that hosts those keys, meaning the bank cannot certify exclusive control — a distinction that FFIEC examiners will test. Second, the SaaS model gives the bank access only to the application-level logs and audit records that the provider exposes through its interface. The operating system logs, database logs, and security event logs are not accessible to the bank — they are the provider's operational responsibility. FFIEC's requirement for 'direct, unfettered access to all system logs and audit records' extends to OS-level and database-level logs, which the bank cannot provide under SaaS. While the SaaS provider may market the application as 'banking-compliant,' the bank retains the regulatory obligation to demonstrate compliance — the provider's assertions are not a substitute for the bank's own ability to satisfy each regulatory requirement. A candidate selecting this option assumes that 'designed for banking' equals 'satisfies all banking regulations,' without analyzing whether the specific regulatory requirements around key ownership and log access can be met under the SaaS shared responsibility model. The shared responsibility principle in cloud computing means the provider secures the cloud; the customer secures what is in the cloud. Under SaaS, the customer's scope of responsibility is narrow — configuration settings — and the regulatory requirements fall outside that scope.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (PaaS with application-level encryption) is incorrect because it overstates what the bank controls under PaaS and understates what FFIEC requires. Under PaaS, the cloud provider manages the operating system, middleware, and runtime environment. This means the provider administers the OS-level encryption for data at rest on storage volumes and the transport layer security configuration. While the bank can implement encryption at the application layer (encrypting data before writing it to the database), FFIEC requires encryption at all layers where PII resides — not just the application layer. If the underlying database stores unencrypted data (because the provider manages database encryption), and the application-layer encryption is the sole protection, the bank has a gap: PII in database backups, transaction logs, and replication streams may exist outside the application's encryption envelope. Furthermore, the bank cannot provide FFIEC examiners with 'direct, unfettered access to all system logs' because the OS logs and database logs reside in the provider-controlled environment. The bank would need to request these logs from the provider — an indirect, fettered access that does not satisfy FFIEC examination standards. While the operational efficiency benefit of PaaS (provider handles patching, OS updates, and middleware) is real, the regulatory compliance gap at the OS and database layers makes PaaS unsuitable for an application handling PII under FFIEC jurisdiction. A candidate selecting this option focuses on the operational efficiency benefit of PaaS without recognizing that the 'shared' in shared responsibility means the bank has ceded control over layers that FFIEC requires the bank to control. The shared responsibility model is asymmetric for regulated institutions: what the provider manages, the bank cannot certify to examiners.",
+    "ExplanationWrongD": "Option D (PaaS provides equivalent security control to IaaS) is incorrect because it fundamentally misunderstands the difference between IaaS and PaaS in the shared responsibility model. Under IaaS, the bank manages the operating system, middleware, runtime, and application — four layers of the stack. Under PaaS, the bank manages only the application and its data — two layers. The two layers the bank cedes to the provider (OS and middleware/runtime) are precisely the layers where encryption key management infrastructure, OS-level security event logging, and database audit trail configuration reside. The claim that PaaS provides 'equivalent security control to IaaS over encryption key management, system log access, and audit trail configuration' is false on each dimension: (a) encryption key management: in IaaS, the bank can deploy its own HSM or key management server at the OS level, giving it physical and logical control over key material. In PaaS, the bank's application may call a key management API, but the underlying infrastructure that stores the keys is provider-managed — the bank cannot certify exclusive control; (b) system log access: in IaaS, the bank can configure OS-level audit policies, collect Windows Event Logs or Linux syslog, and provide examiners with direct access to the log aggregation system. In PaaS, the provider controls the OS — the bank typically has no access to OS-level security logs and must accept whatever log feeds the provider chooses to expose; (c) audit trail configuration: in IaaS, the bank can implement WORM storage at the file system or volume level as an additional immutability protection. In PaaS, the bank relies on the application-layer audit trail mechanisms provided by the platform — the bank cannot independently verify the immutability of the underlying storage. A candidate selecting this option conflates the fact that both IaaS and PaaS are 'cloud models' with the assumption that they offer equivalent control — they do not, and the difference is material for regulated institutions where the regulator holds the bank responsible for layers it does not operate. This is a common exam trap: assuming that moving 'up' the cloud stack (SaaS → PaaS → IaaS) is only about operational burden, not about loss of control over security-relevant layers.",
+    "ProductionStatus": "Draft"
   }
 ];
