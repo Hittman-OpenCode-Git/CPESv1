@@ -7,6 +7,6 @@
   </defs>
   <rect width="256" height="256" rx="48" fill="url(#bg)"/>
   <text x="128" y="112" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="72" font-weight="700" fill="white">CMA</text>
-  <text x="128" y="170" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="28" font-weight="600" fill="#93c5fd">PART 1</text>
+  <text x="128" y="170" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="28" font-weight="600" fill="#93c5fd">TEST SIM</text>
   <rect x="64" y="190" width="128" height="6" rx="3" fill="#2563eb"/>
 </svg>

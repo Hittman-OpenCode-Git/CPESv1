@@ -8,7 +8,7 @@ const fs = require('fs');
 
 let mainWindow;
 
-const APP_NAME = 'CMA Learning Platform';
+const APP_NAME = 'CMA Test Sim';
 const APP_VERSION = '0.10.1-alpha';
 
 function createWindow() {
