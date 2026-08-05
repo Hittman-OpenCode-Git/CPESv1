@@ -7003,3 +7003,179 @@ button:disabled { opacity: .45; cursor: not-allowed; }
     .may-quiz-action-row { flex-wrap: wrap; }
     .may-quiz-entries { flex-direction: column; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   1920px Display Optimization — Full Desktop Scaling
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (min-width: 1600px) {
+  /* ── Layout: wider sidebar, more content space ── */
+  .layout {
+    max-width: 1700px;
+    grid-template-columns: 380px 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* ── Hero header ── */
+  .hero { padding: 24px 48px; }
+  .hero-inner { max-width: 1500px; }
+  .hero h1 { font-size: 32px; }
+  .lede { font-size: 15px; max-width: 800px; }
+
+  /* ── Coach panel wider ── */
+  .coach-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  /* ── Score tiles: 4-across ── */
+  .scoregrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  /* ── Case layout: wider passages ── */
+  .case-layout { gap: 20px; }
+
+  /* ── Floating calculator: reposition for wider screen ── */
+  .floating-calculator {
+    top: 80px;
+    right: 60px;
+    width: clamp(220px, 10vw, 268px);
+  }
+
+  /* ── Exam MCQ container (more central) ── */
+  .exam-mcq-container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ── Review cards: 3-across ── */
+  .review-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  /* ── May coach floating panel: more room ── */
+  .may-floating-panel {
+    right: 40px;
+    bottom: 40px;
+  }
+
+  /* ── Catalog cards: 3-across default ── */
+  .catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ≥1920px — Full HD+ Scaling
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (min-width: 1920px) {
+  /* ── Root scaling: bump base font size slightly ── */
+  html { font-size: 17px; }
+
+  /* ── Layout: wider still ── */
+  .layout {
+    max-width: 1840px;
+    grid-template-columns: 420px 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  /* ── Hero header ── */
+  .hero { padding: 28px 56px; }
+  .hero-inner { max-width: 1700px; }
+  .hero h1 { font-size: 36px; }
+
+  /* ── Score tiles: larger cards ── */
+  .scoregrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .scoretile {
+    padding: 20px 22px;
+  }
+
+  /* ── Coach: keep 3-across with more gap ── */
+  .coach-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .coach-card { padding: 18px; }
+
+  /* ── Case layout ── */
+  .case-layout { gap: 24px; }
+  .case-passage { padding: 24px; }
+
+  /* ── Floating calculator reposition ── */
+  .floating-calculator {
+    top: 100px;
+    right: 80px;
+    width: clamp(240px, 8vw, 280px);
+  }
+
+  /* ── Float restore button reposition ── */
+  .calc-float-btn.calc-float-visible {
+    bottom: 120px;
+    right: 36px;
+  }
+
+  /* ── May coach: more breathing room ── */
+  .may-floating-panel {
+    right: 60px;
+    bottom: 60px;
+  }
+
+  /* ── Exam MCQ container ── */
+  .exam-mcq-container {
+    max-width: 1000px;
+  }
+
+  /* ── Choices: slightly larger tap/click area ── */
+  .choice-row {
+    padding: 14px 16px;
+  }
+
+  /* ── Setup panel: larger cards ── */
+  .setup-panel { padding: 20px; }
+
+  /* ── Case exhibit tables: larger font ── */
+  .case-exhibit table { font-size: 14px; }
+  .case-exhibit th,
+  .case-exhibit td { padding: 10px 14px; }
+
+  /* ── Review grid ── */
+  .review-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ≥2560px — QHD / 4K Ready
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (min-width: 2560px) {
+  html { font-size: 18px; }
+  .layout {
+    max-width: 2200px;
+    grid-template-columns: 460px 1fr;
+    gap: 28px;
+    padding: 28px;
+  }
+  .hero-inner { max-width: 2000px; }
+  .hero h1 { font-size: 40px; }
+  .floating-calculator {
+    top: 120px;
+    right: 120px;
+    width: clamp(260px, 6vw, 300px);
+  }
+  .exam-mcq-container { max-width: 1100px; }
+  .coach-grid { grid-template-columns: repeat(4, 1fr); }
+  .review-grid { grid-template-columns: repeat(4, 1fr); }
+  .scoregrid { grid-template-columns: repeat(5, 1fr); }
+}
