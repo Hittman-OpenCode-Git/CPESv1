@@ -1558,6 +1558,7 @@ const CalculatorEngine = {
         calc.dataset.dragBound = '1';
         let dragging = false, startX = 0, startY = 0, baseX = 0, baseY = 0;
         handle.onpointerdown = e => {
+            if (e.target.tagName === 'BUTTON') return;
             dragging = true;
             startX = e.clientX; startY = e.clientY;
             let rect = calc.getBoundingClientRect();
