@@ -1499,16 +1499,36 @@ const CalculatorEngine = {
             let fb = document.createElement('div');
             fb.id = 'calcFloatRestore';
             fb.className = 'calc-float-btn';
-            fb.title = 'Restore calculator';
+            fb.title = 'Drag to reposition, click to restore';
             fb.innerHTML = '<span class="calc-float-label">123</span><span class="calc-float-sub">CALC</span>';
-            fb.onclick = () => {
+
+            let self = this;
+            let dragBtn = false, btnStartX = 0, btnStartY = 0, btnBaseX = 0, btnBaseY = 0;
+            fb.onpointerdown = e => {
+                dragBtn = true;
+                btnStartX = e.clientX; btnStartY = e.clientY;
+                let r = fb.getBoundingClientRect();
+                btnBaseX = r.left; btnBaseY = r.top;
+                fb.setPointerCapture(e.pointerId);
+            };
+            fb.onpointermove = e => {
+                if (!dragBtn) return;
+                let x = Math.max(0, Math.min(window.innerWidth - fb.offsetWidth, btnBaseX + e.clientX - btnStartX));
+                let y = Math.max(0, Math.min(window.innerHeight - fb.offsetHeight, btnBaseY + e.clientY - btnStartY));
+                fb.style.left = x + 'px'; fb.style.top = y + 'px'; fb.style.right = 'auto';
+            };
+            fb.onpointerup = () => {
+                let moved = dragBtn && (Math.abs(btnBaseX - fb.getBoundingClientRect().left) > 3 || Math.abs(btnBaseY - fb.getBoundingClientRect().top) > 3);
+                dragBtn = false;
+                if (moved) return;
+                // Was a click (no drag) — restore calculator
                 let c = $('floatingCalculator');
                 if (c) {
                     c.classList.remove('minimized');
                     let mb = $('calcMinimize');
                     if (mb) mb.textContent = '\u2212';
                 }
-                this.hideCalcFloatBtn();
+                self.hideCalcFloatBtn();
             };
             document.body.appendChild(fb);
         }

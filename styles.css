@@ -941,8 +941,11 @@ button:disabled { opacity: .45; cursor: not-allowed; }
   align-items: center;
   justify-content: center;
   transition: transform 0.2s, box-shadow 0.2s;
+  touch-action: none;
+  user-select: none;
 }
-.calc-float-btn.calc-float-visible { display: flex; }
+.calc-float-btn.calc-float-visible { display: flex; cursor: grab; }
+.calc-float-btn:active { cursor: grabbing; }
 .calc-float-btn:hover {
   transform: scale(1.08);
   box-shadow: 0 6px 20px rgba(37,99,235,0.55);
