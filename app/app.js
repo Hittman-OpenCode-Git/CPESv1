@@ -1,5 +1,5 @@
 // =============================================================
-// CMA Part 1 2026 Practice Simulator — Exam Engine v8.0
+// CMA Test Sim — Exam Engine v8.0
 // =============================================================
 
 // ---- Theme toggle ----
@@ -1499,8 +1499,8 @@ const CalculatorEngine = {
             let fb = document.createElement('div');
             fb.id = 'calcFloatRestore';
             fb.className = 'calc-float-btn';
-            fb.title = 'Drag to reposition, click to restore';
-            fb.innerHTML = '<span class="calc-float-label">123</span><span class="calc-float-sub">CALC</span>';
+            fb.title = 'CMA Test Sim Calculator — drag to reposition, click to open';
+            fb.innerHTML = '<span class="calc-float-label"><span class="calc-float-key">1</span><span class="calc-float-key">2</span><span class="calc-float-key">3</span></span><span class="calc-float-sub">CALC</span>';
 
             let self = this;
             let dragBtn = false, btnStartX = 0, btnStartY = 0, btnBaseX = 0, btnBaseY = 0;

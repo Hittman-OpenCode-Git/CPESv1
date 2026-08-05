@@ -55,7 +55,7 @@ async function main() {
   await page.waitForTimeout(4000);
 
   const title = await page.title();
-  if (title.includes("CMA Part 1")) pass("Title: " + title);
+  if (title.includes("CMA Test Sim")) pass("Title: " + title);
   else fail("Title mismatch: " + title);
 
   // ── Start Session ────────────────────────────────────────────
