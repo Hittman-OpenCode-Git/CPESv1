@@ -1393,7 +1393,7 @@ const CalculatorEngine = {
         ];
         let el = document.createElement('div');
         el.innerHTML = `<section id="floatingCalculator" class="exam-calculator floating-calculator" aria-label="On-screen calculator" role="application">
-      <div class="calc-title" id="calcDragHandle"><b>Calculator</b><span class="calc-memory-indicator">M: ${this.setValue(state.calcMemory)}</span><button class="calc-minimize" id="calcMinimize" aria-label="Minimize calculator">\u2212</button></div>
+      <div class="calc-title" id="calcDragHandle"><b>Calculator</b><span class="calc-memory-indicator">M: ${this.setValue(state.calcMemory)}</span><button class="calc-history-clear" id="calcClearHistory" title="Clear history" aria-label="Clear calculator history">&#x2326;</button><button class="calc-minimize" id="calcMinimize" aria-label="Minimize calculator">\u2212</button></div>
       <input id="calcDisplay" class="calc-display" value="${state.calcDisplay}" inputmode="decimal" aria-label="Calculator display" tabindex="0">
       <div class="calc-grid">${buttons.map(([k, label]) =>
             `<button type="button" class="calc-btn ${k === '=' ? 'equals' : ''}" data-calc="${k}" tabindex="-1">${label}</button>`
@@ -1409,6 +1409,10 @@ const CalculatorEngine = {
         <button type="button" data-calc="mminus" tabindex="-1">M\u2212</button>
         <button type="button" data-calc="mr" tabindex="-1">MR</button>
         <button type="button" data-calc="mc" tabindex="-1">MC</button>
+      </div>
+      <div class="calc-history-header" id="calcHistoryToggle">
+        <span>History</span>
+        <span class="calc-history-arrow">&#9660;</span>
       </div>
       <div class="calc-history" id="calcHistory"></div>
     </section>`;
@@ -1433,8 +1437,91 @@ const CalculatorEngine = {
         let minBtn = $('calcMinimize');
         if (minBtn) minBtn.onclick = () => {
             let c = $('floatingCalculator');
-            if (c) { c.classList.toggle('minimized'); minBtn.textContent = c.classList.contains('minimized') ? '+' : '\u2212'; }
+            if (c) {
+                c.classList.toggle('minimized');
+                let minimized = c.classList.contains('minimized');
+                minBtn.textContent = minimized ? '+' : '\u2212';
+                if (minimized) {
+                    this.showCalcFloatBtn();
+                } else {
+                    this.hideCalcFloatBtn();
+                }
+            }
         };
+
+        // Clear history with double-confirmation
+        let clearBtn = $('calcClearHistory');
+        if (clearBtn) {
+            clearBtn.confirmState = 0;
+            clearBtn.onclick = () => {
+                clearBtn.confirmState = (clearBtn.confirmState || 0) + 1;
+                if (clearBtn.confirmState === 1) {
+                    clearBtn.textContent = '\u2713?';
+                    clearBtn.style.color = '#f59e0b';
+                    clearBtn.title = 'Click again to confirm clear';
+                    setTimeout(() => {
+                        if (clearBtn.confirmState === 1) {
+                            clearBtn.confirmState = 0;
+                            clearBtn.textContent = '\u2326';
+                            clearBtn.style.color = '';
+                            clearBtn.title = 'Clear history';
+                        }
+                    }, 3000);
+                } else {
+                    clearBtn.confirmState = 0;
+                    clearBtn.textContent = '\u2326';
+                    clearBtn.style.color = '';
+                    clearBtn.title = 'Clear history';
+                    state.calcHistory = [];
+                    let ch = $('calcHistory');
+                    if (ch) ch.innerHTML = '';
+                }
+            };
+        }
+
+        // Collapsible history
+        let histToggle = $('calcHistoryToggle');
+        if (histToggle) {
+            histToggle.onclick = () => {
+                let hist = $('calcHistory');
+                if (hist) {
+                    hist.classList.toggle('calc-history-collapsed');
+                    let arrow = histToggle.querySelector('.calc-history-arrow');
+                    if (arrow) {
+                        arrow.textContent = hist.classList.contains('calc-history-collapsed') ? '\u25B6' : '\u25BC';
+                    }
+                }
+            };
+        }
+
+        // Floating restore button (render once)
+        if (!$('calcFloatRestore')) {
+            let fb = document.createElement('div');
+            fb.id = 'calcFloatRestore';
+            fb.className = 'calc-float-btn';
+            fb.title = 'Restore calculator';
+            fb.innerHTML = '<span class="calc-float-label">123</span><span class="calc-float-sub">CALC</span>';
+            fb.onclick = () => {
+                let c = $('floatingCalculator');
+                if (c) {
+                    c.classList.remove('minimized');
+                    let mb = $('calcMinimize');
+                    if (mb) mb.textContent = '\u2212';
+                }
+                this.hideCalcFloatBtn();
+            };
+            document.body.appendChild(fb);
+        }
+    },
+
+    showCalcFloatBtn() {
+        let fb = $('calcFloatRestore');
+        if (fb) fb.classList.add('calc-float-visible');
+    },
+
+    hideCalcFloatBtn() {
+        let fb = $('calcFloatRestore');
+        if (fb) fb.classList.remove('calc-float-visible');
     },
 
     handleKey(k) {

@@ -31796,3 +31796,192 @@ No new Part 1 items, no content changes, no state transitions except:
 
 Part 1 is in maintenance-only mode. All authoring resources redirect to Part 2.
 
+=== SCHEMA LOCK — 2026-08-04 ===
+
+## P2 Schema Lock Session (P2-020) — Content Pipeline Phase 1
+
+### Summary
+Ratified P2_EXPANSION_PLAN.md §1 schema as P2_SCHEMA_STANDARD.md v1.0. Applied three schema changes to all 155 existing P2 items across Packs A (100), B (40), and C (15). Created Pack F skeleton. Deployed Rules 13 and 14 to governance guard.
+
+### Changes
+| Change | Before | After | Impact |
+|--------|--------|-------|--------|
+| Field rename |  + '
+Type: select' +  |  + 'ItemStyle: single-select' +  | Avoids collision with case-item scoring discriminator (app.js:1934) |
+| Field rename |  + 'VerificationChecks' +  |  + 'VerifiedChecks' +  | Matches Part 1 convention; one validator serves both parts |
+| New field | (absent) |  + 'UniqueConceptKey' +  | Highest-precedence dedup signal per P2_EXPANSION_PLAN.md §1.1 |
+
+### Pack Realignment (6 Packs, 1 Domain Per Pack)
+| Pack | Domain | Items | Status |
+|------|--------|-------|--------|
+| pack_p2_a.js | A — Financial Statement Analysis | 100 | Schema-migrated |
+| pack_p2_b.js | B — Corporate Finance | 40 | Schema-migrated |
+| pack_p2_c.js | C — Decision Analysis (625 target) | 15 | Schema-migrated |
+| pack_p2_d.js | D — Risk Management (250 target) | 0 | Empty skeleton |
+| pack_p2_e.js | E — Investment Decisions (250 target) | 0 | Empty skeleton |
+| pack_p2_f.js | F — Professional Ethics (375 target) | 0 | CREATED (new) |
+
+### Governance Guard Changes
+- RULE 13 (BLOCK): Part2OnlyFlag must be true on every P2 MCQ item
+- RULE 14 (BLOCK): Cross-part QID boundary — P1-QIDs blocked in P2 packs and vice versa
+- SOURCE_FILE_RE extended to match pack_p2_[a-f].js
+- Test suite: 66?74 tests (8 new: Rule 13=4, Rule 14=4)
+
+### Verification
+- Preflight: 0 divergences (Part 1 fully intact)
+- Governance guard: 74/74 PASS
+- All 155 P2 items parse correctly (100+40+15)
+- 0 DL-008, 0 DL-026, 0 DL-013 on all 155 migrated items
+- Backups: pack_p2_a/b/c.js.bak-20260804112638 (511KB + 202KB + 67KB)
+
+### New Files
+- p2/P2_SCHEMA_STANDARD.md — Ratified schema standard v1.0
+- p2/pack_p2_f.js — Pack F skeleton (Domain F, Professional Ethics)
+- scripts/migrate_p2_schema.js — Schema migration tool
+
+### Files Modified
+- .opencode/plugins/governance-guard.js (Rules 13, 14; P2 file matching)
+- scripts/test_governance_guard.js (v5.0, 74 tests)
+- p2/pack_p2_a.js, p2/pack_p2_b.js, p2/pack_p2_c.js (schema migration)
+
+### Next Steps (Phase 1: Schema Lock)
+1. P2_SCHEMA_STANDARD.md v1.0 ratified — content authoring can now proceed with locked schema
+2. Pack C (Domain C) is priority for next authoring wave — highest CSO weight (25%), lowest inventory (15/625)
+3. Pack D/E/F skeletons need initial waves
+4. P2 preflight.js needed for T0 pack integrity checks
+5. Formula cross-reference validator pending for P2 items
+
+
+
+=== P2 PHASE 1 CONTINUED — 2026-08-04 ===
+
+## P2 CSO Weight Reallocation + P2 Preflight (P2-020)
+
+### CSO Weight Reallocation (P2003_QID_STANDARD.md v2.0)
+Amended P2003 from 5-pack flat-500 layout to 6-pack CSO-weight-faithful layout:
+- Domain C: 500 ? 625 (25% CSO weight — heaviest domain)
+- Cross-domain phantom pack (P2-F-376–500) dissolved ? CrossDomainTags array
+- Domain F promoted to dedicated pack (pack_p2_f.js, 375 items)
+- Domain D and E split into separate packs (was co-located in pack_p2_d.js)
+- Section assignment ranges updated: C 001–625, F 001–375, D/E 001–250 each
+- Schema skeleton updated to match ratified P2_SCHEMA_STANDARD.md v1.0
+- Prohibited patterns expanded: Type?ItemStyle, VerificationChecks?VerifiedChecks
+
+### P2 Preflight (scripts/preflight_p2.js)
+Created T0 governance check for Part 2 packs:
+- QID count + Function-constructor parse check for all 6 P2 packs
+- Part2OnlyFlag completeness check per pack
+- Schema conformance: ItemStyle (not Type), VerifiedChecks (not VerificationChecks), UniqueConceptKey
+- Cross-part QID boundary: no P1- QIDs in P2 packs
+- QID uniqueness cross-pack scan
+- Certified pool tracking
+- Governance guard test suite integration (74/74)
+- npm script: npm run preflight:p2
+- Developmental-aware: missing packs reported as INFO, not WARN
+- Verification: 0 divergences on current 155-item development pool
+
+### Governance Guard Status
+- Rules 13 (Part2OnlyFlag) and 14 (Cross-Part QID Boundary) deployed and tested (74/74 PASS)
+- SOURCE_FILE_RE extended to pack_p2_[a-f].js
+- Part 1 guard fully intact (0 regressions)
+
+### Verification
+- Part 1 preflight: 0 divergences, 2,620 Certified
+- P2 preflight: 0 divergences, 155 QIDs, 4/6 packs active
+- Governance guard: 74/74 PASS
+- All 155 P2 items: 100% Part2OnlyFlag, 0 legacy Type/VerificationChecks, 0 P1- QIDs
+
+
+=== P2 PHASE 1 CLOSEOUT — 2026-08-04 ===
+
+## P2 Phase 1 Complete — Schema Lock + Governance + Infrastructure
+
+### Completed
+- pack_p2_d.js + pack_p2_e.js skeletons created (6/6 packs active)
+- P2 Schema Validator (scripts/validators/p2_schema_validator.js) — 155 items, 0 errors
+- P2 baselines file (p2/CURRENT_BASELINES_P2.md) — authoritative certified pool snapshot
+- P2-B-005 missing ExplanationWrongA fixed (DL-018 pattern, CC=A field absent)
+- npm scripts: validate:p2, preflight:p2
+
+### Verification
+- Part 1 preflight: 0 divergences, 2,620 Certified
+- P2 preflight: 0 divergences, 155 QIDs, 6/6 packs active
+- P2 schema validator: 155 items, 0 errors
+- Governance guard: 74/74 PASS
+
+### New Files (Phase 1)
+- p2/pack_p2_d.js — Domain D skeleton (Risk Management, 250 target)
+- p2/pack_p2_e.js — Domain E skeleton (Investment Decisions, 250 target)
+- p2/pack_p2_f.js — Domain F skeleton (Professional Ethics, 375 target)
+- p2/P2_SCHEMA_STANDARD.md — Ratified v1.0
+- p2/CURRENT_BASELINES_P2.md — P2 certified pool baseline
+- scripts/preflight_p2.js — P2 T0 governance check
+- scripts/validators/p2_schema_validator.js — Schema enforcement
+- scripts/migrate_p2_schema.js — Schema migration tool
+
+### Modified Files (Phase 1)
+- .opencode/plugins/governance-guard.js (Rules 13, 14; P2 file matching)
+- scripts/test_governance_guard.js (v5.0, 74 tests)
+- p2/P2003_QID_STANDARD.md (v2.0 — CSO weight reallocation)
+- p2/pack_p2_a.js, pack_p2_b.js, pack_p2_c.js (schema migration)
+- package.json (preflight:p2, validate:p2 scripts)
+
+### Phase 1 Deliverables Summary
+| Deliverable | Status |
+|------------|--------|
+| 6-pack layout (1 domain per pack) | 6/6 active |
+| Schema ratified (P2_SCHEMA_STANDARD.md v1.0) | Done |
+| CSO weight reallocation (C: 500?625) | Done |
+| Cross-domain phantom pack ? CrossDomainTags | Done |
+| Schema migration (155 items: Type?ItemStyle, VC?VerifiedChecks, +UniqueConceptKey) | Done |
+| Governance guard P2 rules (13, 14) | Deployed |
+| P2 preflight (npm run preflight:p2) | Done |
+| P2 schema validator (npm run validate:p2) | Done |
+| P2 baselines file | Done |
+
+### Ready for Content Authoring
+Phase 1 infrastructure is complete. Content authoring can proceed with locked schema.
+Priority: Pack C (825 target, 15 items) ? Pack B (500 target, 40 items) ? Pack A (500 target, 100 items)
+
+
+=== P2 WAVE 2 CLOSEOUT — 2026-08-05 ===
+
+## P2 Content Wave 2: 30 Items Across All 6 Packs
+
+### Summary
+Authored and integrated 30 new Part 2 MCQs (5 per pack) across all 6 domains.
+
+### Integration Results
+| Pack | Domain | Before | Added | After | QID Range |
+|------|--------|--------|-------|-------|-----------|
+| A | Financial Statement Analysis | 100 | 5 | **105** | P2-A-101–105 |
+| B | Corporate Finance | 40 | 5 | **45** | P2-B-041–045 |
+| C | Decision Analysis | 15 | 5 | **20** | P2-C-016–020 |
+| D | Risk Management | 0 | 5 | **5** | P2-D-001–005 |
+| E | Investment Decisions | 0 | 5 | **5** | P2-E-001–005 |
+| F | Professional Ethics | 0 | 5 | **5** | P2-F-001–005 |
+| **Total** | | **155** | **30** | **185** | |
+
+### Quality Verification
+- Schema validator: 185 items, 0 errors
+- P2 preflight: 0 divergences
+- Part 1 preflight: 0 divergences, 2,620 Certified intact
+- Governance guard: 74/74 PASS
+- DL-008: 0, DL-026: 0, DL-013: 0 across all 185 items
+- Part2OnlyFlag: 185/185 true
+- QID uniqueness: 185 unique, 0 duplicates
+
+### Content Highlights
+- Pack A: cash flow ratios, DuPont, earnings quality, Altman Z-score, SGR
+- Pack B: CCC, EOQ, WACC, residual dividend, M&A synergy
+- Pack C: multi-product CVP, shut-down point, make-or-buy, sell-or-process-further, transfer pricing
+- Pack D: risk classification, COSO ERM components, risk assessment, risk response, ERM governance
+- Pack E: NPV, NPV-vs-IRR, payback period, profitability index, sensitivity analysis
+- Pack F: IMA competence, confidentiality, integrity, credibility, conflict resolution
+
+### New Scripts
+- scripts/normalize_p2_batch.js — schema normalization utility
+- scripts/integrate_p2_batch.js — batch integration from JSON files
+- scripts/p2_wave_integrate.js — inline item integration
+- scripts/p2_wave_finalize.js — finalize integration
+

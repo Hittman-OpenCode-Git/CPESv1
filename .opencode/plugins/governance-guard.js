@@ -1,10 +1,11 @@
 /**
- * Governance Guard Plugin — CMA Part 1 Exam Simulator
+ * Governance Guard Plugin — CMA Part 1 & Part 2 Exam Simulator
  *
  * Enforces governance rules at tool-execution level.
- * Rules 1-11 are all BLOCK level (S221 upgrade — Phase 1 execution).
+ * Rules 1-14 are all BLOCK level (S221 upgrade).
  *
- * Depends on: CAQS_v1.0.md, DEFECT_LIBRARY.md (DL-008, DL-026, DL-037, DL-021)
+ * Depends on: CAQS_v1.0.md, DEFECT_LIBRARY.md (DL-008, DL-026, DL-037, DL-021),
+ *             P2_SCHEMA_STANDARD.md (Rule 13, Rule 14)
  *
  * RULE 1  (BLOCK) — question_state changes must pair with REVISION_HISTORY.md updates
  * RULE 2  (BLOCK) — ExplanationWrong[CorrectChoice] must be "" (DL-008 enforcement)
@@ -18,13 +19,20 @@
  * RULE 10 (BLOCK) — non-CorrectChoice ExplanationWrong slots must be present and non-empty (DL-021 enforcement)
  * RULE 11 (BLOCK) — Cognitive classification gates (AF-3/4/5) — S109P
  * RULE 12 (BLOCK) — Cognitive-First Assignment (cognitive relabeling without content change) — S121
+ * RULE 13 (BLOCK) — Part2OnlyFlag must be true on every P2 MCQ item (P2 schema enforcement)
+ * RULE 14 (BLOCK) — Cross-part QID boundary — P1-QIDs blocked in P2 packs and vice versa
  */
 
 const BLOCK_AUTH_RE = /BLOCK-AUTHORIZED|batch-authorized|AUTHORIZED-BLOCK/i;
 const RECOMPUTED_RE = /recomputed|independently verified|independently recalculated|re-verified|recomputation verified/i;
 const MAX_QUESTIONS = 30;
 
-const SOURCE_FILE_RE = /^(pack_[a-e]_corrected\.js|scored_cases\d*\.js|case_pack_\d+_corrected\.js)$/i;
+const P1_SOURCE_FILE_RE = /^(pack_[a-e]_corrected\.js|scored_cases\d*\.js|case_pack_\d+_corrected\.js)$/i;
+const P2_SOURCE_FILE_RE = /^pack_p2_[a-f]\.js$/i;
+const SOURCE_FILE_RE = /^(pack_[a-e]_corrected\.js|scored_cases\d*\.js|case_pack_\d+_corrected\.js|pack_p2_[a-f]\.js)$/i;
+
+const P1_QID_RE = /\bP1[A-E]?-[A-F]-(?:R\d{2}|\d{3})\b/;
+const P2_QID_RE = /\bP2-[A-F]-\d{3}\b/;
 
 // RULE 7: Derived registry paths — must NOT be hand-edited
 const DERIVED_REGISTRY_RE = /(registry[\\\/](packs|domains|cases)[\\\/]|MasterQuestionRegistry\.csv$|MASTER_QUESTION_REGISTRY\.md$|SESSION_STATUS_\d{4}-\d{2}-\d{2}\.md$|CURRENT_BASELINES\.md$|DEFECT_MANIFEST_DL008_DL026\.json$)/i;
@@ -200,6 +208,36 @@ export const GovernanceGuard = async ({ client }) => {
       }
       if (cog === 'Analyze' && diff !== undefined && diff == 1) {
         violations.push({ qid, cog, gate: 'AF-5', reason: `Analyze requires DifficultyScore >= 2 (got ${diff})`, actual: 'Apply' });
+      }
+    }
+    return violations;
+  }
+
+  /** Return array of { qid, reason } for RULE 13 violations — P2 items missing Part2OnlyFlag: true */
+  function findPart2OnlyFlagViolations(text) {
+    const violations = [];
+    const objects = extractObjectsFromText(text);
+    for (const obj of objects) {
+      const qid = obj.QuestionID || '(unknown)';
+      if (!P2_QID_RE.test(qid)) continue;
+      if (obj.Part2OnlyFlag !== true) {
+        violations.push({ qid, reason: `Part2OnlyFlag is ${JSON.stringify(obj.Part2OnlyFlag)} (must be true)` });
+      }
+    }
+    return violations;
+  }
+
+  /** Return array of { qid, reason } for RULE 14 violations — cross-part QID contamination */
+  function findCrossPartQIDViolations(text) {
+    const violations = [];
+    const objects = extractObjectsFromText(text);
+    for (const obj of objects) {
+      const qid = obj.QuestionID || '(unknown)';
+      if (P2_QID_RE.test(qid) && obj.Part !== 2) {
+        violations.push({ qid, reason: `P2- QID format but Part field is ${JSON.stringify(obj.Part)} (expected 2)` });
+      }
+      if (P1_QID_RE.test(qid) && obj.Part === 2) {
+        violations.push({ qid, reason: `P1- QID format in Part 2 item` });
       }
     }
     return violations;
@@ -409,6 +447,40 @@ export const GovernanceGuard = async ({ client }) => {
             );
           }
         }
+      }
+
+      // ── RULE 13: BLOCK Part2OnlyFlag missing/false on P2 items ──
+      const p2pFlags = findPart2OnlyFlagViolations(checkText);
+      if (p2pFlags.length > 0) {
+        const lines = p2pFlags
+          .map(v => `  ${v.qid}: ${v.reason}`)
+          .join("\n");
+        throw new Error(
+          `GOVERNANCE RULE 13 — BLOCKED (Part2OnlyFlag)\n` +
+          `${p2pFlags.length} P2 item(s) with missing/false Part2OnlyFlag:\n` +
+          `${lines}\n\n` +
+          "Per P2_SCHEMA_STANDARD.md §2: every Part 2 MCQ item must carry\n" +
+          "Part2OnlyFlag: true (strict boolean). This gates cross-part\n" +
+          "certification and prevents Part 1 content from entering P2 packs.\n" +
+          "Add: \"Part2OnlyFlag\": true"
+        );
+      }
+
+      // ── RULE 14: BLOCK cross-part QID contamination ─────────────
+      const cpart = findCrossPartQIDViolations(checkText);
+      if (cpart.length > 0) {
+        const lines = cpart
+          .map(v => `  ${v.qid}: ${v.reason}`)
+          .join("\n");
+        throw new Error(
+          `GOVERNANCE RULE 14 — BLOCKED (Cross-Part QID Boundary)\n` +
+          `${cpart.length} cross-part QID violation(s):\n` +
+          `${lines}\n\n` +
+          "Per P2_SCHEMA_STANDARD.md §5: QIDs are namespaced by exam part.\n" +
+          "P2- prefixed QIDs must only appear in P2 packs (pack_p2_[a-f].js)\n" +
+          "with \"Part\": 2. P1- prefixed QIDs must not appear in P2 packs.\n" +
+          "Each exam part is a separate content domain."
+        );
       }
 
       // ── RULE 5: BLOCK >30 question objects without auth ───────

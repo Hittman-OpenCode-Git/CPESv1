@@ -1,11 +1,12 @@
-# P2003 — CMA Part 2 QID & Identifier Standard v1.0
+# P2003 — CMA Part 2 QID & Identifier Standard v2.0
 
-**Version:** 1.0
+**Version:** 2.0 (Schema Lock — CSO Weight Reallocation)
 **Status:** Active — Part 2 Architecture
-**Authority:** P2001_PART2_BLUEPRINT_FOUNDATION.md, P2002_REPOSITORY_LAYOUT.md, P2002_CERTIFICATION_STANDARD.md
-**Date:** 2026-07-29
-**Session:** P2-003 — qid-architecture
+**Authority:** P2_SCHEMA_STANDARD.md v1.0, P2_EXPANSION_PLAN.md, P2001_PART2_BLUEPRINT_FOUNDATION.md
+**Date:** 2026-07-29 (v1.0), **2026-08-04** (v2.0)
+**Session:** P2-003 (v1.0) → P2-020 Schema Lock (v2.0)
 **Scope:** Single source of truth for all CMA Part 2 identifier generation (MCQ QIDs, CaseIDs, ItemIDs, ExhibitIDs)
+**Amended by:** P2_EXPANSION_PLAN.md §0.1 (CSO weights), §3 (6-pack layout), P2_SCHEMA_STANDARD.md (field schema)
 
 ---
 
@@ -15,7 +16,11 @@
 
 **Pattern:** `P2-{Section}-{NNN}`
 **Regex:** `^P2-[A-F]-\d{3}$`
-**Range regex:** `^P2-[A-F]-(0[0-9]{2}|[1-4][0-9]{2}|500)$`
+**Range regex (per section):**
+- A, B: `^P2-[AB]-(0[0-9]{2}|[1-4][0-9]{2}|500)$`
+- C: `^P2-C-(0[0-9]{2}|[1-5][0-9]{2}|6[0-1][0-9]|62[0-5])$`  (001–625)
+- D, E: `^P2-[DE]-(0[0-9]{2}|[12][0-4][0-9]|250)$`  (001–250)
+- F: `^P2-F-(0[0-9]{2}|[1-2][0-9]{2}|3[0-6][0-9]|37[0-5])$`  (001–375)
 
 | Component | Description | Examples |
 |-----------|-------------|----------|
@@ -25,21 +30,40 @@
 | `-` | Separator | Required |
 | `{NNN}` | Zero-padded 3-digit sequence number | `001` through `500` |
 
-### 1.2 Section Assignments
+### 1.2 Section Assignments (CSO Weight-Faithful — 6 Packs)
 
-| Section | Domain | QID Range | Pack File | Count |
-|---------|--------|-----------|-----------|-------|
-| A | Financial Statement Analysis | P2-A-001 to P2-A-500 | pack_p2_a.js | 500 |
-| B | Corporate Finance | P2-B-001 to P2-B-500 | pack_p2_b.js | 500 |
-| C | Decision Analysis | P2-C-001 to P2-C-500 | pack_p2_c.js | 500 |
-| D | Risk Management | P2-D-001 to P2-D-250 | pack_p2_d.js | 250 |
-| E | Investment Decisions | P2-E-001 to P2-E-250 | pack_p2_d.js | 250 |
-| F | Professional Ethics | P2-F-001 to P2-F-375 | pack_p2_e.js | 375 |
-| F | Cross-domain | P2-F-376 to P2-F-500 | pack_p2_e.js | 125 |
+| Section | Domain | CSO Weight | QID Range | Pack File | Count |
+|---------|--------|------------|-----------|-----------|-------|
+| A | Financial Statement Analysis | 20% | P2-A-001 to P2-A-500 | pack_p2_a.js | 500 |
+| B | Corporate Finance | 20% | P2-B-001 to P2-B-500 | pack_p2_b.js | 500 |
+| C | Decision Analysis | 25% | P2-C-001 to P2-C-625 | pack_p2_c.js | **625** |
+| D | Risk Management | 10% | P2-D-001 to P2-D-250 | pack_p2_d.js | 250 |
+| E | Investment Decisions | 10% | P2-E-001 to P2-E-250 | pack_p2_e.js | 250 |
+| F | Professional Ethics | 15% | P2-F-001 to P2-F-375 | pack_p2_f.js | 375 |
 
-**Total: 2,500 MCQs across 5 pack files.**
+**Total: 2,500 MCQs across 6 pack files.**
 
-> Cross-domain items share the F section letter for QID purposes (`P2-F-376` through `P2-F-500`) but carry `"Section": "Cross"` internally and test concepts spanning two or more domains.
+> **Amendment (v2.0):** The original v1.0 5-pack layout allocated a flat 500 items to Domain C (25% CSO weight) and placed cross-domain items at P2-F-376–500. This created a 125-item shortfall in C — the heaviest domain on the exam. v2.0 corrects this:
+> - **Domain C:** 500 → 625 (matches 25% CSO weight)
+> - **Cross-domain phantom pack dissolved.** Items that test multiple domains are tagged via `CrossDomainTags: ["B","E"]` on their primary-domain record. ~125 items (~5%) are expected to carry a secondary tag.
+> - **Pack F promoted to dedicated pack.** Domain F (Professional Ethics, 15%) now occupies its own pack file.
+
+### 1.2a Cross-Domain Tagging (replaces phantom pack)
+
+Items that test concepts spanning multiple domains use the `CrossDomainTags` array:
+
+```jsonc
+{
+  "Section": "B",                    // primary domain
+  "QuestionID": "P2-B-042",
+  "CrossDomainTags": ["E"]           // also tests Investment Decisions
+}
+```
+
+- Primary domain determines the QID section letter and pack file
+- Secondary domains are listed in `CrossDomainTags`
+- Target: ~125 items (5%) carry at least one secondary tag
+- Items with cross-domain tags count against their primary domain's allocation, not a separate pool
 
 ### 1.3 QID Generation Rules
 
@@ -50,7 +74,7 @@
 5. QIDs are globally unique across all 5 packs (enforced by section letter prefix).
 6. Every QID must parse cleanly via the uniform regex `^P2-[A-F]-\d{3}$`.
 
-### 1.4 Complete MCQ Item JSON Skeleton
+### 1.4 Complete MCQ Item JSON Skeleton (Ratified — P2_SCHEMA_STANDARD.md v1.0)
 
 ```jsonc
 {
@@ -60,13 +84,9 @@
   "QuestionID": "P2-A-001",
   "question_state": "Unprocessed",
   "Part2OnlyFlag": true,
+  "UniqueConceptKey": "A-001-liquidity-current-ratio",
   "Stem": "",
-  "Choices": {
-    "A": "",
-    "B": "",
-    "C": "",
-    "D": ""
-  },
+  "Choices": { "A": "", "B": "", "C": "", "D": "" },
   "CorrectChoice": "",
   "ExplanationCorrect": "",
   "ExplanationWrongA": "",
@@ -77,47 +97,68 @@
   "DifficultyScore": 3,
   "CognitiveLevel": "Apply",
   "CalculationItem": false,
+  "ItemStyle": "single-select",
+  "LOSTag": "A.1",
   "BlueprintDomain": "Financial Statement Analysis",
-  "LearningOutcomeStatement": "A.1",
   "FormulaReference": "",
   "CommonTrapReference": "",
+  "Authorities": [],
+  "VerifiedChecks": [
+    "Part2OnlyFlag verified true",
+    "EW[CC] empty (DL-008 compliant)",
+    "Non-CC EW slots ≥50 chars (DL-026 compliant)",
+    "No boilerplate text (DL-013 prevention)",
+    "Difficulty justified",
+    "Independent answer derived",
+    "Authority citations match tested concept"
+  ],
+  "CrossDomainTags": [],
   "DecisionTreeReference": "",
-  "PrimaryCompetency": "Calculation",
-  "Industry": "",
-  "CompanyType": "",
-  "Stakeholder": "",
-  "BusinessFunction": "",
-  "Scale": "Standard",
-  "VerificationChecks": [
-    "Stem aligns with LOS A.1",
-    "Choices are plausible CMA-style distractors",
-    "Explanation follows EV1-EV8"
-  ]
+  "pedagogical_cluster": "",
+  "certification_date": "",
+  "certification_batch": ""
 }
 ```
+
+> **v2.0 changes from v1.0:** `Type` → `ItemStyle` (avoids engine collision with case-item scoring), `VerificationChecks` → `VerifiedChecks` (Part 1 convention), added `UniqueConceptKey` (dedup signal), `CrossDomainTags` (replaces phantom pack), `Authorities` array. Dropped `Industry`, `CompanyType`, `Stakeholder`, `BusinessFunction`, `Scale` — 5 case-study metadata fields that leaked into MCQ skeleton.
 
 ### 1.5 MCQ Metadata Field Reference
 
 | Field | Type | Required | Notes |
 |-------|------|----------|-------|
 | `Part` | Integer | Yes | Must be `2` |
-| `Section` | String | Yes | A-F (or `"Cross"` for cross-domain) |
+| `Section` | String | Yes | A–F (one letter per item) |
 | `Topic` | String | Yes | Controlled vocabulary: `{Section}.{NNN} {descriptor}` |
 | `QuestionID` | String | Yes | Format: `P2-{Section}-{NNN}` |
 | `question_state` | String | Yes | `Unprocessed` / `In Audit` / `Editorial Queue` / `Certified` / `Archived` |
-| `Part2OnlyFlag` | Boolean | **Yes** | Must be `true` — blocks certification if absent, false, or falsy |
+| `Part2OnlyFlag` | Boolean | **Yes** 🔴 | Must be `true` — Rule 13 BLOCKs certification if absent/false |
+| `UniqueConceptKey` | String | **Yes** 🔴 | `{Section}-{NNN}-{kebab-desc}`. Highest-precedence dedup signal. |
 | `Stem` | String | Yes | Question text |
 | `Choices` | Object | Yes | `{ "A": "...", "B": "...", "C": "...", "D": "..." }` |
 | `CorrectChoice` | String | Yes | One of: `"A"`, `"B"`, `"C"`, `"D"` |
 | `ExplanationCorrect` | String | Yes | Minimum 50 characters; must reference Part 2 authority |
-| `ExplanationWrongA` | String | Yes | Minimum 50 characters if A ≠ CorrectChoice; `""` if A = CorrectChoice |
-| `ExplanationWrongB` | String | Yes | Minimum 50 characters if B ≠ CorrectChoice; `""` if B = CorrectChoice |
-| `ExplanationWrongC` | String | Yes | Minimum 50 characters if C ≠ CorrectChoice; `""` if C = CorrectChoice |
-| `ExplanationWrongD` | String | Yes | Minimum 50 characters if D ≠ CorrectChoice; `""` if D = CorrectChoice |
+| `ExplanationWrongA` | String | Yes | ≥50 chars if A ≠ CC; `""` if A = CC |
+| `ExplanationWrongB` | String | Yes | ≥50 chars if B ≠ CC; `""` if B = CC |
+| `ExplanationWrongC` | String | Yes | ≥50 chars if C ≠ CC; `""` if C = CC |
+| `ExplanationWrongD` | String | Yes | ≥50 chars if D ≠ CC; `""` if D = CC |
 | `Difficulty` | String | Yes | `Easy` / `Moderate-Easy` / `Moderate` / `Difficult` / `Very Difficult` |
 | `DifficultyScore` | Integer | Yes | 1–5 |
 | `CognitiveLevel` | String | Yes | `Remember` / `Understand` / `Apply` / `Analyze` / `Evaluate` |
 | `CalculationItem` | Boolean | Yes | `true` if item requires arithmetic computation |
+| `ItemStyle` | String | Yes 🔴 | `single-select` / `multi-select` / `numeric` / `fill` / `match` |
+| `LOSTag` | String | Yes | e.g. `"A.1"`, `"C.4"` |
+| `BlueprintDomain` | String | Yes | Full CSO domain name |
+| `FormulaReference` | String | — | Links to FORMULA_MASTER_P2.md |
+| `CommonTrapReference` | String | — | Named distractor trap pattern |
+| `Authorities` | Array | — | Governing standards/citations |
+| `VerifiedChecks` | Array | Yes | Structural verification checklist |
+| `CrossDomainTags` | Array | — | Secondary domain tags `["B","E"]` — replaces phantom cross-domain pack |
+| `DecisionTreeReference` | String | — | Links to decision tree document |
+| `pedagogical_cluster` | String | — | Session composition dedup |
+| `certification_date` | String | — | Written at certification |
+| `certification_batch` | String | — | Written at certification |
+
+🔴 = Engine-critical field. Shared Part 1/Part 2 scoring, pool, and dedup code reads by exact name.
 
 ---
 
@@ -262,7 +303,7 @@ function routeIdentifier(id) {
 | CaseID (unified) | `CBQ2{PackNum}-{Section}{Seq}` | `^CBQ2\d?-[A-F]\d+$` | `CBQ2-A1` |
 | ItemID | `{CaseID}-Q{N}` | `^CBQ2\d?-[A-F]\d+-Q\d+$` | `CBQ2-A1-Q3` |
 | ExhibitID | `{CaseID}-E{N}` | `^CBQ2\d?-[A-F]\d+-E\d+$` | `CBQ2-A1-E1` |
-| MCQ pack file | `pack_p2_{letter}.js` | `^pack_p2_[a-e]\.js$` | `pack_p2_a.js` |
+| MCQ pack file | `pack_p2_{letter}.js` | `^pack_p2_[a-f]\.js$` | `pack_p2_a.js` |
 | Case pack file | `case_pack_p2_{n}.js` | `^case_pack_p2_[1-3]\.js$` | `case_pack_p2_1.js` |
 
 ---
@@ -302,6 +343,9 @@ function routeIdentifier(id) {
 | Reused QIDs or CaseIDs | Globally unique IDs |
 | Missing `Part2OnlyFlag` | Mandatory `true` on every item |
 | Missing `"Part": 2` | Mandatory on every item |
+| `"Type"` field on MCQ items | Use `"ItemStyle"` (reserved for case-item scoring discriminator) |
+| `"VerificationChecks"` (old spelling) | Use `"VerifiedChecks"` (Part 1 convention) |
+| `"Industry"`, `"CompanyType"`, `"Stakeholder"`, `"BusinessFunction"`, `"Scale"` on MCQs | Dropped — case-study metadata, not used by engine |
 
 ---
 
@@ -310,8 +354,9 @@ function routeIdentifier(id) {
 | Property | Value |
 |----------|-------|
 | Document ID | P2003 |
-| Version | 1.0 |
-| Date | 2026-07-29 |
-| Session | P2-003 — qid-architecture |
+| Version | 2.0 |
+| Date | 2026-08-04 |
+| Session | P2-020 — Schema Lock |
 | Status | Active |
-| Supersedes | P2002 §c, §d, §h |
+| Amends | v1.0 → 6-pack layout, C 001–625 range, cross-domain→tags, ratified field schema |
+| See also | P2_SCHEMA_STANDARD.md, P2_EXPANSION_PLAN.md |

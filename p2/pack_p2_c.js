@@ -1,22 +1,4 @@
-// ============================================================================
-// pack_p2_c.js — CMA Part 2, Pack C: Decision Analysis
-// Domain: C — Decision Analysis (25% exam weight)
-// LOS Coverage: C.1 through C.7
-// Target: 500 MCQs
-// Architecture: SINGLE-OBJECT (no dual-block)
-// Governance: Rules 2/6/9/10/11 BLOCK-level active
-// ============================================================================
-
 var pack_p2_c_questions = [
-  // =========================================================
-  // Wave 1: P2-C-001 through P2-C-015 — CVP Analysis, Marginal Analysis, Relevant Costing
-  // Items: 15 | Authored: 2026-08-02 | Session: P2-C-001
-  // Governance: DL-008/026/021/037 clean, Rule 11 compliant
-  // Distribution: Apply=10, Understand=3, Remember=2
-  // Difficulty: Easy=2, Mod-Easy=3, Moderate=5, Difficult=5
-  // Answer positions: A=4, B=3, C=4, D=4
-  // =========================================================
-  // P2-C-001: C.001 CVP breakeven analysis in units | Moderate(3) | Apply | DA-01: Breakeven (units) = Fixed Costs / CM per Unit
   {
     "Part": 2,
     "Section": "C",
@@ -24,6 +6,7 @@ var pack_p2_c_questions = [
     "QuestionID": "P2-C-001",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-001-cvp-breakeven-analysis-in-units",
     "Stem": "Atlas Manufacturing produces a single product line. The selling price is $200 per unit, variable manufacturing costs are $120 per unit, and variable selling costs are $5 per unit. Total annual fixed manufacturing and administrative costs are $450,000. The controller is preparing the annual operating plan and needs to determine the breakeven point.",
     "Choices": {
       "A": "2,250 units",
@@ -41,7 +24,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.1",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "DA-01: Breakeven (units) = Fixed Costs / CM per Unit",
@@ -49,7 +32,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -58,17 +41,15 @@ var pack_p2_c_questions = [
       "Independent answer derived: CM = $200−($120+$5)=$75; BE = $450,000/$75 = 6,000",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-002: C.002 CVP breakeven analysis in dollars | Moderate(3) | Apply | DA-02: Breakeven (dollars) = Fixed Costs / CM Ratio
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.002 CVP breakeven analysis in dollars",
     "QuestionID": "P2-C-002",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-002-cvp-breakeven-analysis-in-dollars",
     "Stem": "Pine Ridge Components sells industrial fasteners at an average selling price of $25 per unit. Variable costs are $15 per unit. Total annual fixed costs are $500,000. The CFO wants to know the breakeven point in sales dollars for the upcoming budget presentation.",
     "Choices": {
       "A": "$1,250,000",
@@ -86,7 +67,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.1",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "DA-02: Breakeven (dollars) = Fixed Costs / CM Ratio",
@@ -94,7 +75,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -103,17 +84,15 @@ var pack_p2_c_questions = [
       "Independent answer derived: CM = $10, CM Ratio = $10/$25 = 0.40, BE = $500,000/0.40 = $1,250,000",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-003: C.003 CVP target profit analysis in units | Difficult(4) | Apply | DA-03: Target Profit (units) = (Fixed Costs + Target Profit) / CM per Unit
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.003 CVP target profit analysis in units",
     "QuestionID": "P2-C-003",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-003-cvp-target-profit-analysis-in-units",
     "Stem": "Meridian Equipment manufactures a specialized valve used in industrial pumps. The selling price is $350 per unit, variable costs are $210 per unit, and total annual fixed costs are $560,000. Management has set a target operating profit of $280,000 for the upcoming year. The controller needs to determine how many units must be sold to achieve this target.",
     "Choices": {
       "A": "4,000 units",
@@ -131,7 +110,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.1",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "DA-03: Target Profit (units) = (Fixed Costs + Target Profit) / CM per Unit",
@@ -139,7 +118,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -148,17 +127,15 @@ var pack_p2_c_questions = [
       "Independent answer derived: CM=$140; ($560K+$280K)/$140 = 6,000",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-004: C.004 CVP margin of safety analysis | Moderate(3) | Apply | DA-04: Margin of Safety = (Actual Sales − BE Sales) / Actual Sales
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.004 CVP margin of safety analysis",
     "QuestionID": "P2-C-004",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-004-cvp-margin-of-safety-analysis",
     "Stem": "Harbor Food Processors budgeted sales of $3,600,000 for the current year. The company's breakeven sales are $2,700,000. The VP of Operations is concerned about a potential industry downturn and asks the controller to compute the margin of safety percentage to assess the company's risk exposure.",
     "Choices": {
       "A": "33.3%",
@@ -176,7 +153,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.1",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "DA-04: Margin of Safety = (Actual Sales − BE Sales) / Actual Sales",
@@ -184,7 +161,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -193,17 +170,15 @@ var pack_p2_c_questions = [
       "Independent answer derived: ($3,600K−$2,700K)/$3,600K = $900K/$3,600K = 25%",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-005: C.005 CVP degree of operating leverage concept | Moderate-Easy(2) | Understand | DA-05: Degree of Operating Leverage = CM / Operating Income
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.005 CVP degree of operating leverage concept",
     "QuestionID": "P2-C-005",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-005-cvp-degree-of-operating-leverage-concept",
     "Stem": "The CFO of Northstar Analytics is reviewing two possible cost structures for a new data analytics service. Structure X has high fixed costs and low variable costs per unit. Structure Y has low fixed costs and high variable costs per unit. Both structures produce the same operating income at the current sales volume. The CFO asks the controller which structure has the higher degree of operating leverage (DOL) and what this implies for the company's earnings risk.",
     "Choices": {
       "A": "Structure Y has the higher DOL because its variable costs are higher, meaning each additional sale contributes less margin and magnifies the effect of sales changes on operating income.",
@@ -221,7 +196,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
     "CalculationItem": false,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.1",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "DA-05: Degree of Operating Leverage = CM / Operating Income",
@@ -229,7 +204,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -238,17 +213,15 @@ var pack_p2_c_questions = [
       "Independent answer derived",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-006: C.006 CVP multi-product weighted average contribution margin | Difficult(4) | Apply | DA-06: WACM = sum of (Sales Mix % × CM per Unit) per product
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.006 CVP multi-product weighted average contribution margin",
     "QuestionID": "P2-C-006",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-006-cvp-multi-product-weighted-average-contribution-margin",
     "Stem": "Lakeside Medical Supply sells two product lines: a premium surgical kit (Model X) and a standard kit (Model Y). Model X accounts for 60% of total unit sales with a selling price of $120 and variable cost of $70 per kit. Model Y accounts for 40% of total unit sales with a selling price of $80 and variable cost of $50 per kit. Total annual fixed costs are $420,000. The controller needs to compute the company-wide breakeven point in total units.",
     "Choices": {
       "A": "10,000 units",
@@ -266,7 +239,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.1",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "DA-06: WACM = sum of (Sales Mix % × CM per Unit) per product",
@@ -274,7 +247,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -283,18 +256,16 @@ var pack_p2_c_questions = [
       "Independent answer derived: WACM = (0.60×$50)+(0.40×$30)=$42; BE = $420K/$42 = 10,000",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-007: C.007 CVP breakeven concept definition | Easy(1) | Remember | Conceptual
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.007 CVP breakeven concept definition",
     "QuestionID": "P2-C-007",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
-    "Stem": "In cost-volume-profit analysis, the breakeven point is:",
+    "UniqueConceptKey": "C-007-cvp-breakeven-concept-definition",
+    "Stem": "The controller of Northfield Manufacturing is preparing the annual operating plan and needs to identify the sales level at which the company neither earns a profit nor incurs a loss. In cost-volume-profit analysis, the breakeven point is:",
     "Choices": {
       "A": "The sales level at which total revenues equal total fixed costs, with variable costs covered by contribution margin from additional units.",
       "B": "The maximum sales volume achievable given existing production capacity and the current cost structure.",
@@ -311,7 +282,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
     "CalculationItem": false,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.1",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "",
@@ -319,7 +290,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -328,17 +299,15 @@ var pack_p2_c_questions = [
       "Independent answer derived",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-008: C.008 CVP assumptions and limitations | Moderate-Easy(2) | Understand | Conceptual
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.008 CVP assumptions and limitations",
     "QuestionID": "P2-C-008",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-008-cvp-assumptions-and-limitations",
     "Stem": "The controller of Ridgeview Electronics is preparing a CVP analysis to evaluate the launch of a new product line. Before presenting the analysis to management, the controller identifies several limitations of CVP analysis. Which of the following is a recognized limitation of CVP analysis?",
     "Choices": {
       "A": "CVP analysis assumes costs can be cleanly separated into fixed and variable components, which may be difficult in practice for semi-variable costs and step costs.",
@@ -356,7 +325,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
     "CalculationItem": false,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.1",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "",
@@ -364,7 +333,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -373,17 +342,15 @@ var pack_p2_c_questions = [
       "Independent answer derived",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-009: C.009 CVP sensitivity analysis — incremental profit impact | Difficult(4) | Apply | DA-03: Target Profit principles — incremental CM vs. incremental FC analysis
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.009 CVP sensitivity analysis — incremental profit impact",
     "QuestionID": "P2-C-009",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-009-cvp-sensitivity-analysis-incremental-profit-impact",
     "Stem": "Summit Packaging currently sells 25,000 units per year at $40 per unit. Variable costs are $24 per unit, and total annual fixed costs are $320,000. The VP of Sales proposes increasing the advertising budget by $60,000, which is expected to boost annual sales volume to 30,000 units. Assuming no other changes, what is the net effect of this proposal on annual operating income?",
     "Choices": {
       "A": "$80,000 increase",
@@ -401,7 +368,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.1",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "DA-03: Target Profit principles — incremental CM vs. incremental FC analysis",
@@ -409,7 +376,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -418,17 +385,15 @@ var pack_p2_c_questions = [
       "Independent answer derived: Incremental CM = 5,000×$16 = $80K; net = $80K−$60K = $20K increase",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-010: C.010 Marginal analysis — special order decision | Moderate(3) | Apply | DA-07: Accept special order if incremental revenue > incremental cost
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.010 Marginal analysis — special order decision",
     "QuestionID": "P2-C-010",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-010-marginal-analysis-special-order-decision",
     "Stem": "Atlas Manufacturing normally sells its product for $45 per unit. Current production and sales are 20,000 units per year, well below the plant's capacity of 30,000 units. Variable costs are $30 per unit (direct materials $12, direct labor $8, variable overhead $5, variable selling costs $5). Total annual fixed costs are $400,000. A one-time special order from an international buyer offers to purchase 2,500 units at $29 per unit. The order would incur no variable selling costs and would have no effect on regular sales. The controller must recommend whether to accept or reject the order.",
     "Choices": {
       "A": "Accept, because the special order contributes $10,000 toward fixed costs and profit.",
@@ -446,7 +411,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.2",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "DA-07: Accept special order if incremental revenue > incremental cost",
@@ -454,7 +419,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -463,17 +428,15 @@ var pack_p2_c_questions = [
       "Independent answer derived: (2,500 × $29) − (2,500 × $25) = $72,500 − $62,500 = $10,000",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-011: C.011 Marginal analysis — make-or-buy with opportunity cost | Difficult(4) | Apply | DA-08: Make-or-buy — relevant cost = avoidable costs + opportunity cost
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.011 Marginal analysis — make-or-buy with opportunity cost",
     "QuestionID": "P2-C-011",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-011-marginal-analysis-make-or-buy-with-opportunity-cost",
     "Stem": "Pine Ridge Components currently manufactures 15,000 units of Part M-7 internally, incurring the following per-unit costs: direct materials $8.00, direct labor $11.00, variable overhead $4.00, and allocated fixed overhead $9.00 (of which only $3.00 per unit is avoidable if the part is purchased externally). An outside supplier has offered to supply all 15,000 units at $28.00 each. If Pine Ridge purchases from the outside supplier, the freed production space can be used to manufacture a new product that would generate $45,000 in incremental contribution margin. The VP of Manufacturing asks the controller to determine whether to make or buy Part M-7.",
     "Choices": {
       "A": "Make, because the total relevant cost to make ($435,000) exceeds the purchase cost ($420,000), yielding a $15,000 disadvantage to buying.",
@@ -491,7 +454,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.2",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "DA-08: Make-or-buy — relevant cost = avoidable costs + opportunity cost",
@@ -499,7 +462,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -508,17 +471,15 @@ var pack_p2_c_questions = [
       "Independent answer derived: (15,000 × $26) + $45,000 = $435,000 make vs. $420,000 buy = $15,000 advantage to buy",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-012: C.012 Marginal analysis — sell-or-process-further decision | Difficult(4) | Apply | DA-08: Process further if Incremental Revenue > Incremental Cost
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.012 Marginal analysis — sell-or-process-further decision",
     "QuestionID": "P2-C-012",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-012-marginal-analysis-sell-or-process-further-decision",
     "Stem": "Harbor Food Processors produces an intermediate food ingredient at a joint processing cost of $180,000 per batch. At the split-off point, 10,000 gallons of the product can be sold as-is for $12 per gallon, generating $120,000 in revenue. Alternatively, the product can be further processed at an additional cost of $3.50 per gallon into a premium ingredient that would sell for $17 per gallon. The controller is evaluating whether to sell at split-off or process further.",
     "Choices": {
       "A": "Process further, because incremental revenue of $170,000 exceeds incremental cost of $35,000, yielding a net benefit of $135,000 per batch.",
@@ -536,7 +497,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.2",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "DA-08: Process further if Incremental Revenue > Incremental Cost",
@@ -544,7 +505,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -553,17 +514,15 @@ var pack_p2_c_questions = [
       "Independent answer derived: (10,000 × $5) − (10,000 × $3.50) = $50,000 − $35,000 = $15,000",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-013: C.013 Marginal analysis — sunk cost concept | Easy(1) | Remember | Conceptual
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.013 Marginal analysis — sunk cost concept",
     "QuestionID": "P2-C-013",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-013-marginal-analysis-sunk-cost-concept",
     "Stem": "In the context of decision analysis, which of the following best describes a sunk cost?",
     "Choices": {
       "A": "A future cost that varies between decision alternatives and must be included in the incremental analysis.",
@@ -581,7 +540,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember",
     "CalculationItem": false,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.2",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "",
@@ -589,7 +548,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -598,17 +557,15 @@ var pack_p2_c_questions = [
       "Independent answer derived",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-014: C.014 Marginal analysis — opportunity cost concept | Moderate-Easy(2) | Understand | Conceptual
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.014 Marginal analysis — opportunity cost concept",
     "QuestionID": "P2-C-014",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-014-marginal-analysis-opportunity-cost-concept",
     "Stem": "Meridian Equipment owns a specialized machine that is currently idle. A production manager proposes using the machine to manufacture a new component that would generate $90,000 in contribution margin. However, the controller notes that six months from now, the machine will be needed for a scheduled production run of the company's best-selling product, which will generate $75,000 in contribution margin. If the new component's production cannot be completed and the machine reconfigured in time for the scheduled run, what is the opportunity cost of using the machine now?",
     "Choices": {
       "A": "$0, because the machine is currently idle and has no alternative use in the present period.",
@@ -626,7 +583,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand",
     "CalculationItem": false,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.2",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "",
@@ -634,7 +591,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -643,17 +600,15 @@ var pack_p2_c_questions = [
       "Independent answer derived",
       "Authority citations match tested concept"
     ]
-  }
-,
-
-  // P2-C-015: C.015 Relevant costing — add-or-drop segment decision | Moderate(3) | Apply | DA-07: Segment margin = Revenue − Variable Costs − Avoidable Fixed Costs
-  {
+  },
+    {
     "Part": 2,
     "Section": "C",
     "Topic": "C.015 Relevant costing — add-or-drop segment decision",
     "QuestionID": "P2-C-015",
     "question_state": "Unprocessed",
     "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-015-relevant-costing-add-or-drop-segment-decision",
     "Stem": "Harbor Food Processors operates three product lines. Financial results for the Packaged Salads line are as follows: sales revenue $480,000, variable costs $336,000, direct fixed costs (avoidable if the line is dropped) $108,000, and allocated common fixed costs $72,000. The allocated common fixed costs are corporate overhead that would continue regardless of whether the Packaged Salads line is retained. The VP of Operations is considering dropping the line due to its reported loss. The controller is asked to evaluate the financial impact of dropping the Packaged Salads line.",
     "Choices": {
       "A": "Dropping the line would increase overall company profit by $36,000, because the segment currently reports a loss of $36,000.",
@@ -671,7 +626,7 @@ var pack_p2_c_questions = [
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
     "CalculationItem": true,
-    "Type": "select",
+    "ItemStyle": "single-select",
     "LOSTag": "C.4",
     "BlueprintDomain": "Decision Analysis",
     "FormulaReference": "DA-07: Segment margin = Revenue − Variable Costs − Avoidable Fixed Costs",
@@ -679,7 +634,7 @@ var pack_p2_c_questions = [
     "Authorities": [
       "IMA SMA on relevant costing"
     ],
-    "VerificationChecks": [
+    "VerifiedChecks": [
       "Part2OnlyFlag verified true",
       "EW[CC] empty",
       "Non-CC EW slots >= 75 chars",
@@ -688,13 +643,220 @@ var pack_p2_c_questions = [
       "Independent answer derived: Segment margin = $480K − $336K − $108K = $36K positive; dropping loses this contribution",
       "Authority citations match tested concept"
     ]
+  },
+    {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.016 multi-product-cvp-weighted-average-cm",
+    "QuestionID": "P2-C-016",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-016-multi-product-cvp-wacm-breakeven",
+    "Stem": "Kellerman Industries produces two products. Product X has a contribution margin of $24 per unit and Product Y has a contribution margin of $40 per unit. The expected sales mix is three units of X for every one unit of Y. Total fixed costs are $336,000. The controller is preparing the breakeven analysis for the annual operating plan.",
+    "Choices": {
+      "A": "8,400 units",
+      "B": "10,500 units",
+      "C": "12,000 units",
+      "D": "14,000 units"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "In multi-product CVP analysis, the breakeven point uses the weighted average contribution margin (WACM) based on the sales mix. For a bundle of 4 units (3X + 1Y), total CM = (3 x $24) + (1 x $40) = $72 + $40 = $112. WACM per unit = $112 / 4 = $28. Breakeven in total units = $336,000 / $28 = 12,000 units. Kellerman must sell a combined 12,000 units: 9,000 units of X and 3,000 units of Y. Products with different CM must be weighted, not averaged; the simple arithmetic mean of the two CM values ($32) would understate the breakeven point because it overweights the higher-CM product relative to the actual mix.",
+    "ExplanationWrongA": "8,400 units results from dividing fixed costs by Product Y's CM alone ($336,000 / $40), ignoring Product X entirely. A candidate making this error treats the lower-margin product as though its contribution data is irrelevant, analogous to trap T1: excluding a relevant component from the weighted analysis. T1: including sunk costs / excluding relevant costs",
+    "ExplanationWrongB": "10,500 units results from computing a simple average CM of ($24 + $40) / 2 = $32 and dividing $336,000 / $32. The simple average assumes equal sales of both products, ignoring the 3:1 mix. Because Product Y has a higher CM and represents a smaller share of the mix, the simple average overstates WACM. T2: treating unit data as if uniformly distributed",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "14,000 units results from dividing fixed costs by Product X's CM alone ($336,000 / $24), ignoring Product Y's higher $40 contribution entirely. Each unit of Y in the bundle contributes $40 toward fixed costs; excluding Y inflates the breakeven quantity. T1: treating relevant contribution data as though it does not factor into the decision.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-01: Breakeven = Fixed Costs / Weighted Average CM per Unit",
+    "CommonTrapReference": "T2: Using simple average CM instead of sales-mix-weighted WACM",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=50 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified",
+      "Independent calculation: WACM=28, BE=12,000",
+      "Authority citations match"
+    ]
+  },
+    {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.017 shut-down-point-short-run",
+    "QuestionID": "P2-C-017",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-017-shut-down-continue-if-price-covers-avc",
+    "Stem": "Denton Manufacturing operates a single production line with monthly fixed costs of $180,000. The product sells for $48 per unit, variable manufacturing cost is $26 per unit, and variable selling cost is $4 per unit. Current monthly production and sales are 4,500 units, well below capacity of 10,000. Operating income is negative. The controller must recommend whether to continue operations or shut down in the short run.",
+    "Choices": {
+      "A": "Shut down immediately, because fixed costs are avoidable in the long run",
+      "B": "Shut down, because operating income of $(99,000) is negative and the factory is below capacity",
+      "C": "Continue operating, because the $48 selling price exceeds the $26 variable manufacturing cost per unit",
+      "D": "Continue operating, because the $48 selling price exceeds the $30 average variable cost per unit, generating $18 contribution per unit toward fixed costs"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The short-run shut-down rule: continue if price covers AVC. Total variable cost = $26 + $4 = $30 per unit. Selling price of $48 exceeds $30 AVC, generating $18 CM per unit. Total CM = 4,500 x $18 = $81,000, which reduces the loss from $180,000 (shut-down) to $99,000 (operating). The $81,000 advantage of continuing makes the decision clear. Fixed costs of $180,000 are committed in the short run; they are irrelevant. This is grounded in marginal analysis and CVP framework.",
+    "ExplanationWrongA": "Shutting down because fixed costs are avoidable in the long run confuses short-run and long-run analysis. In the short run, $180,000 in fixed costs are committed and unavoidable. The relevant question is whether $48 price exceeds $30 AVC -- it does, contributing $81,000 toward unavoidable fixed costs. T1: including committed fixed costs in short-run relevant-cost analysis when they are sunk and common to both alternatives.",
+    "ExplanationWrongB": "Negative operating income of $(99,000) does not justify shut-down when the shut-down alternative produces a larger loss of $180,000. The $81,000 CM reduces the loss relative to ceasing operations. The correct comparison: operate and lose $99K vs. shut down and lose $180K -- an $81K advantage to continuing.",
+    "ExplanationWrongC": "While the $48 price exceeds the $26 variable manufacturing cost, this analysis is incomplete -- it omits the $4 variable selling cost per unit. Total variable cost is $30, and correct CM is $18, not $22. Although the conclusion to continue happens to be correct here, the reasoning is flawed. In a scenario with higher selling costs, this partial analysis could produce the wrong recommendation. T2: narrowly defining variable cost without capturing all costs that vary with the decision.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-07: Shut-down -- Continue if Price >= Minimum AVC",
+    "CommonTrapReference": "T1: Including sunk costs in relevant-cost analysis",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=50 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified",
+      "Independent: AVC=$30, $48>$30, continue; loss vs shut-down: $99K vs $180K",
+      "Authority citations match"
+    ]
+  },
+    {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.018 Make-or-buy analysis with opportunity cost",
+    "QuestionID": "P2-C-018",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-018-make-or-buy-analysis-with-opportunity-cost",
+    "Stem": "Northfield Industries produces a motor bracket in-house at a variable cost of $25 per unit. The bracket absorbs $80,000 of annual fixed overhead, of which 50% is avoidable if production ceases. An external supplier offers the bracket for $22 per unit. If Northfield outsources, the idle factory space can be subleased for $50,000 annually. Annual demand is 20,000 units. The controller is evaluating the annual net financial impact of accepting the supplier’s offer.",
+    "Choices": {
+      "A": "$150,000 lower cost by outsourcing",
+      "B": "$110,000 lower cost by outsourcing",
+      "C": "$100,000 lower cost by outsourcing",
+      "D": "$60,000 lower cost by outsourcing"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under relevant costing, the make-or-buy analysis compares the total relevant cost of each alternative. Relevant cost to make = variable cost + avoidable fixed overhead = ($25 × 20,000) + ($80,000 × 50%) = $500,000 + $40,000 = $540,000. Relevant cost to buy = purchase cost − opportunity benefits = ($22 × 20,000) − $50,000 sublease revenue = $440,000 − $50,000 = $390,000. Net advantage = $540,000 − $390,000 = $150,000 lower cost by outsourcing. The $40,000 of unavoidable fixed overhead (50% of $80,000) continues under both alternatives and is irrelevant. A critical exam principle: avoidable fixed costs increase the relevant cost of making; opportunity benefits reduce the relevant cost of buying. Both must be included for a complete analysis.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "$110,000 lower cost results from forgetting the $40,000 avoidable fixed overhead. The make cost is understated at variable cost only ($25 × 20,000 = $500,000) while the buy cost correctly includes the sublease benefit ($22 × 20,000 − $50,000 = $390,000). The difference of $110,000 understates the true $150,000 advantage. The $40,000 of avoidable fixed overhead represents a cost that will be incurred only if production continues in-house; it is a relevant cost of the make alternative. This error reflects trap T2 — treating all fixed costs as irrelevant to the decision, when in fact the avoidable portion is a differential cost.",
+    "ExplanationWrongC": "$100,000 lower cost results from forgetting the $50,000 sublease revenue that becomes available only under the outsourced alternative. The make cost is correctly computed at $540,000 ($500,000 variable + $40,000 avoidable fixed), but the buy cost is compared at the purchase price alone ($22 × 20,000 = $440,000), yielding $540,000 − $440,000 = $100,000. The $50,000 lease income reduces the net cost of buying and must be subtracted to reflect the full economic impact. This error reflects trap T4 — forgetting the opportunity cost in the make-or-buy comparison. Sublease revenue is an opportunity benefit of outsourcing.",
+    "ExplanationWrongD": "$60,000 lower cost results from forgetting both the $40,000 avoidable fixed overhead and the $50,000 sublease revenue. The make cost is understated at variable cost only ($25 × 20,000 = $500,000), and the buy cost is overstated at purchase price only ($22 × 20,000 = $440,000), yielding $500,000 − $440,000 = $60,000. This double omission captures neither the relevant cost of making nor the relevant cost of buying, producing a result that understates the true savings by $90,000. This error reflects traps T2 and T4 — excluding both avoidable fixed costs and opportunity benefits from the relevant-cost framework.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-08: Relevant costing — outsource if avoidable costs of making + opportunity cost > purchase cost − opportunity benefits",
+    "CommonTrapReference": "T4: Forgetting opportunity cost in make-or-buy; T2: Treating unit fixed costs as if variable — failing to isolate avoidable fixed overhead",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty",
+      "Non-CC EW slots >= 75 chars",
+      "No boilerplate text",
+      "Difficulty justified",
+      "Independent answer derived: Make = $500K + $40K = $540K; Buy = $440K − $50K = $390K; advantage = $150K",
+      "Authority citations match tested concept"
+    ]
+  },
+    {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.019 Sell-or-process-further — joint products",
+    "QuestionID": "P2-C-019",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-019-sell-or-process-further-joint-products",
+    "Stem": "Pacific Foods processes a single agricultural input into three joint products. Joint processing costs total $240,000 per batch. After the split-off point, Product Alpha can be sold as-is for $80,000 or processed further at a cost of $45,000 and sold for $130,000. Product Beta can be sold as-is for $120,000 or processed further at a cost of $30,000 and sold for $145,000. Product Gamma can be sold as-is for $60,000 or processed further at a cost of $15,000 and sold for $72,000. The controller is evaluating which products, if any, should be processed further.",
+    "Choices": {
+      "A": "Alpha and Beta only",
+      "B": "Alpha only",
+      "C": "Alpha and Gamma only",
+      "D": "All three products"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under sell-or-process-further analysis, joint costs are sunk at the split-off point and irrelevant. For each product, compare incremental revenue (final selling price minus split-off selling price) to incremental processing cost. Alpha: incremental revenue = $130,000 − $80,000 = $50,000, incremental cost = $45,000, net gain = $5,000 — process further. Beta: incremental revenue = $145,000 − $120,000 = $25,000, incremental cost = $30,000, net loss = $(5,000) — sell at split-off. Gamma: incremental revenue = $72,000 − $60,000 = $12,000, incremental cost = $15,000, net loss = $(3,000) — sell at split-off. Only Alpha should be processed further. The $240,000 joint cost was intentionally included in the problem as a distractor — allocating it to individual products would distort every comparison. Joint costs are common costs incurred before the split-off point and are irrelevant to decisions beyond that point.",
+    "ExplanationWrongA": "Selecting both Alpha and Beta for further processing includes Beta, which fails the incremental test. Beta’s incremental revenue of $25,000 ($145,000 − $120,000) is $5,000 less than its incremental processing cost of $30,000, producing a net loss. A candidate may select Beta for further processing after allocating a portion of the $240,000 joint cost to Beta and mistakenly concluding that further processing helps ‘recover’ the allocated cost. This error reflects trap T5 — applying joint costs, which are sunk at the split-off point, to the sell-or-process-further decision. Only incremental revenue and incremental cost are relevant.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Selecting Alpha and Gamma for further processing incorrectly includes Gamma. Gamma’s incremental revenue of $12,000 ($72,000 − $60,000) is $3,000 less than its incremental processing cost of $15,000, producing a net loss. The correct test is whether the incremental revenue exceeds the incremental processing cost, not whether the final selling price alone exceeds the processing cost. A candidate selecting Gamma may be comparing the final price of $72,000 against the $15,000 processing cost without subtracting the $60,000 split-off value — forgetting that the split-off sales value is forgone if the product is processed further. This error reflects trap T5 — focusing on absolute amounts rather than incremental differences.",
+    "ExplanationWrongD": "Selecting all three products to process further includes both Beta and Gamma, each of which produces a net loss from further processing. Beta loses $5,000 ($25,000 − $30,000) and Gamma loses $3,000 ($12,000 − $15,000). Only Alpha’s incremental revenue of $50,000 exceeds its incremental cost of $45,000. A candidate selecting all three may be allocating the $240,000 joint cost across products and reasoning that further processing helps recover allocated joint costs across the full product line. This error reflects trap T5 — joint costs of $240,000 are sunk and must be excluded from the incremental analysis for each product.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-08: Process further — Process if Incremental Revenue > Incremental Cost",
+    "CommonTrapReference": "T5: Applying joint costs to sell-or-process-further decisions — joint costs are sunk at the split-off point and irrelevant",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty",
+      "Non-CC EW slots >= 75 chars",
+      "No boilerplate text",
+      "Difficulty justified",
+      "Independent answer derived: Alpha $50K>$45K process; Beta $25K<$30K sell; Gamma $12K<$15K sell",
+      "Authority citations match tested concept"
+    ]
+  },
+    {
+    "Part": 2,
+    "Section": "C",
+    "Topic": "C.020 Transfer pricing with capacity constraint — opportunity cost",
+    "QuestionID": "P2-C-020",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-020-transfer-pricing-with-capacity-constraint",
+    "Stem": "Westlake Division manufactures a specialized component sold to outside customers for $85 per unit. Variable cost per unit is $50, and annual fixed costs are $420,000. The division operates at full capacity, producing and selling 20,000 units per year. Eastlake Division of the same company requests 3,000 units from Westlake. To fill this internal order, Westlake must reduce outside sales by 3,000 units. The controller is determining the minimum transfer price Westlake should accept for the internal order.",
+    "Choices": {
+      "A": "$50 per unit",
+      "B": "$71 per unit",
+      "C": "$85 per unit",
+      "D": "$120 per unit"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "When the selling division operates at full capacity, the minimum transfer price equals variable cost plus the opportunity cost of lost external sales. Variable cost = $50 per unit. Opportunity cost per unit = lost contribution margin on outside sales = selling price minus variable cost = $85 − $50 = $35. Minimum transfer price = $50 + $35 = $85 per unit. At this price, the selling division is indifferent between selling internally and selling externally, because it recovers both its out-of-pocket cost and the $35 contribution margin it would have earned on each unit in the external market. The $420,000 of fixed costs is irrelevant to the transfer price — fixed costs are committed and do not vary with the internal transfer decision. When the selling division has idle capacity, the minimum transfer price is simply variable cost; at full capacity, the lost contribution margin on forgone sales becomes the binding constraint.",
+    "ExplanationWrongA": "$50 per unit represents the variable cost alone, ignoring the $35 contribution margin forgone on each unit of external sales displaced by the internal order. Because Westlake is at full capacity, every unit transferred internally means one less unit sold externally, sacrificing $35 of contribution margin. The minimum transfer price must recover both the variable cost and this opportunity cost. At $50 per unit, the selling division would realize zero contribution margin on transferred units versus $35 per unit on external sales — an unacceptable outcome. This error reflects trap T4 — forgetting the opportunity cost in pricing decisions when capacity is constrained.",
+    "ExplanationWrongB": "$71 per unit incorrectly computes the unit cost as variable cost plus average fixed cost ($50 + $420,000 ÷ 20,000 = $50 + $21 = $71). Fixed costs are committed and unavoidable within the relevant range; they are not relevant to the transfer pricing decision. The minimum transfer price formula requires variable cost and opportunity cost only — the $21 per unit of allocated fixed cost should be excluded. Using full absorption cost as the transfer price floor overstates the minimum when the selling division has idle capacity and understates it at full capacity because it ignores the opportunity cost. This error reflects trap T2 — treating fixed costs as if they are a relevant variable cost component of the transfer price.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "$120 per unit results from an incorrect formula that adds the contribution margin to the selling price ($85 + $35 = $120), double-counting the revenue forgone. The contribution margin of $35 already captures the net benefit lost per unit; adding it to the full $85 selling price essentially counts both the external revenue and the lost margin. The minimum transfer price is variable cost ($50) plus opportunity cost — the forgone contribution margin ($35) — yielding $85. When the selling division is at full capacity, the minimum transfer price equals the external market price, which is the economic result of the formula: $50 + ($85 − $50) = $85. This error reflects trap T4 — incorrectly measuring opportunity cost by adding rather than decomposing the external price.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-09: Transfer pricing min = Variable Cost + Opportunity Cost",
+    "CommonTrapReference": "T4: Forgetting opportunity cost in make-or-buy/transfer pricing — omitting the lost contribution margin when the selling division is at full capacity",
+    "Authorities": [
+      "IMA SMA on relevant costing"
+    ],
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty",
+      "Non-CC EW slots >= 75 chars",
+      "No boilerplate text",
+      "Difficulty justified",
+      "Independent answer derived: Min transfer price = $50 VC + ($85 − $50) opportunity cost = $50 + $35 = $85",
+      "Authority citations match tested concept"
+    ]
   }
-
-  // Wave 2: P2-C-016 through P2-C-030 — (transfer pricing, expected value, perfect information)
-  // ... remaining waves fill through P2-C-500
 ];
-
-// Export for module consumers
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = pack_p2_c_questions;
-}

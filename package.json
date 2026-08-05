@@ -13,6 +13,8 @@
     "generate-registry": "node scripts/generate_registry.js",
     "pipeline": "npm run validate && npm run build-registry && npm run dashboard",
     "preflight": "node scripts/preflight.js",
+    "preflight:p2": "node scripts/preflight_p2.js",
+    "validate:p2": "node scripts/validators/p2_schema_validator.js",
     "smoke": "node scripts/smoke_test.js",
     "electron": "electron .",
     "electron-dev": "electron . --dev"

@@ -1,5 +1,5 @@
 ﻿/**
- * Governance Guard Plugin — Test Suite v4.0 (S109P)
+ * Governance Guard Plugin — Test Suite v5.0 (P2 Schema Lock)
  *
  * Tests the core detection logic without requiring an OpenCode session.
  * Run: node scripts/test_governance_guard.js
@@ -28,6 +28,12 @@
  *
  * S814 CHANGES:
  * - Added RULE 6 (DL-026 enforcement): BLOCK certification of items
+ *
+ * SCHEMA LOCK CHANGES (2026-08-04):
+ * - Added RULE 13 (Part2OnlyFlag enforcement): BLOCK items with missing/false Part2OnlyFlag
+ * - Added RULE 14 (Cross-Part QID Boundary): BLOCK cross-part QID contamination
+ * - Added findPart2OnlyFlagViolations + findCrossPartQIDViolations functions + 6 new tests.
+ * - Test suite expanded from 66 to 72 tests.
  *   with empty/absent non-CorrectChoice ExplanationWrong slots.
  * - Added findDL026Violations function + 5 new tests.
  *
@@ -900,6 +906,136 @@ test("PASS — Item without CognitiveLevel field (not HO, no trigger)", () => {
   assert(v.length === 0, `Expected 0 violations (no CognitiveLevel = no trigger), got ${v.length}`);
 });
 
+// ═══════════════════════════════════════════════════════════════
+// RULE 13 — Part2OnlyFlag enforcement (P2 Schema Lock)
+// ═══════════════════════════════════════════════════════════════
+
+const P2_QID_RE = /\bP2-[A-F]-\d{3}\b/;
+const P1_QID_RE_TEST = /\bP1[A-E]?-[A-F]-(?:R\d{2}|\d{3})\b/;
+
+function findPart2OnlyFlagViolations(text) {
+  const violations = [];
+  const objects = extractObjectsFromText(text);
+  for (const obj of objects) {
+    const qid = obj.QuestionID || '(unknown)';
+    if (!P2_QID_RE.test(qid)) continue;
+    if (obj.Part2OnlyFlag !== true) {
+      violations.push({ qid, reason: `Part2OnlyFlag is ${JSON.stringify(obj.Part2OnlyFlag)} (must be true)` });
+    }
+  }
+  return violations;
+}
+
+function findCrossPartQIDViolations(text) {
+  const violations = [];
+  const objects = extractObjectsFromText(text);
+  for (const obj of objects) {
+    const qid = obj.QuestionID || '(unknown)';
+    if (P2_QID_RE.test(qid) && obj.Part !== 2) {
+      violations.push({ qid, reason: `P2- QID format but Part field is ${JSON.stringify(obj.Part)} (expected 2)` });
+    }
+    if (P1_QID_RE_TEST.test(qid) && obj.Part === 2) {
+      violations.push({ qid, reason: `P1- QID format in Part 2 item` });
+    }
+  }
+  return violations;
+}
+
+console.log("\n  RULE 13 — Part2OnlyFlag Enforcement\n");
+
+test("Rule 13 BLOCK — P2 item with Part2OnlyFlag: false", () => {
+  const text = `{
+    "QuestionID": "P2-A-001",
+    "Part": 2,
+    "Part2OnlyFlag": false,
+    "Stem": "...",
+    "CorrectChoice": "B"
+  }`;
+  const v = findPart2OnlyFlagViolations(text);
+  assert(v.length === 1, `Expected 1 violation (Part2OnlyFlag false), got ${v.length}`);
+});
+
+test("Rule 13 BLOCK — P2 item missing Part2OnlyFlag entirely", () => {
+  const text = `{
+    "QuestionID": "P2-B-050",
+    "Part": 2,
+    "Stem": "...",
+    "CorrectChoice": "C"
+  }`;
+  const v = findPart2OnlyFlagViolations(text);
+  assert(v.length === 1, `Expected 1 violation (Part2OnlyFlag missing), got ${v.length}`);
+});
+
+test("Rule 13 PASS — P2 item with Part2OnlyFlag: true", () => {
+  const text = `{
+    "QuestionID": "P2-A-001",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Stem": "...",
+    "CorrectChoice": "B"
+  }`;
+  const v = findPart2OnlyFlagViolations(text);
+  assert(v.length === 0, `Expected 0 violations (Part2OnlyFlag true), got ${v.length}`);
+});
+
+test("Rule 13 PASS — P1 item (not subject to Part2OnlyFlag check)", () => {
+  const text = `{
+    "QuestionID": "P1-A-001",
+    "Part": 1,
+    "Part2OnlyFlag": false,
+    "Stem": "...",
+    "CorrectChoice": "A"
+  }`;
+  const v = findPart2OnlyFlagViolations(text);
+  assert(v.length === 0, `Expected 0 violations (P1 item exempt), got ${v.length}`);
+});
+
+console.log("\n  RULE 14 — Cross-Part QID Boundary\n");
+
+test("Rule 14 BLOCK — P2- QID with Part != 2", () => {
+  const text = `{
+    "QuestionID": "P2-A-099",
+    "Part": 1,
+    "Stem": "...",
+    "CorrectChoice": "D"
+  }`;
+  const v = findCrossPartQIDViolations(text);
+  assert(v.length === 1, `Expected 1 violation (P2 QID but Part=1), got ${v.length}`);
+});
+
+test("Rule 14 BLOCK — P1- QID with Part == 2", () => {
+  const text = `{
+    "QuestionID": "P1-A-099",
+    "Part": 2,
+    "Stem": "...",
+    "CorrectChoice": "D"
+  }`;
+  const v = findCrossPartQIDViolations(text);
+  assert(v.length === 1, `Expected 1 violation (P1 QID but Part=2), got ${v.length}`);
+});
+
+test("Rule 14 PASS — P2- QID with Part == 2", () => {
+  const text = `{
+    "QuestionID": "P2-A-001",
+    "Part": 2,
+    "Stem": "...",
+    "CorrectChoice": "B"
+  }`;
+  const v = findCrossPartQIDViolations(text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
+test("Rule 14 PASS — P1- QID with Part == 1", () => {
+  const text = `{
+    "QuestionID": "P1-A-099",
+    "Part": 1,
+    "Stem": "...",
+    "CorrectChoice": "D"
+  }`;
+  const v = findCrossPartQIDViolations(text);
+  assert(v.length === 0, `Expected 0 violations, got ${v.length}`);
+});
+
 // ── RULE 1/4 BLOCK UPGRADE (architectural verification) ─────────
 console.log("\nRULE 1 + RULE 4 — BLOCK upgrade (S221 Phase 1)\n");
 
@@ -921,19 +1057,23 @@ test("Rule 4: RECOMPUTED_RE detects all verification phrases", () => {
   }
 });
 
-test("Rule 4: SOURCE_FILE_RE detects all pack and case files", () => {
-  const files = [
+test("Rule 4: SOURCE_FILE_RE detects all pack and case files (P1 + P2)", () => {
+  const p1Files = [
     "content/packs/pack_a_corrected.js", "content/packs/pack_b_corrected.js", "content/packs/pack_c_corrected.js",
     "content/packs/pack_d_corrected.js", "content/packs/pack_e_corrected.js",
     "scored_cases.js", "scored_cases2.js",
   ];
-  const SOURCE_FILE_RE = /^(pack_[a-e]_corrected\.js|scored_cases\d*\.js)$/i;
-  for (const f of files) {
+  const p2Files = [
+    "p2/pack_p2_a.js", "p2/pack_p2_b.js", "p2/pack_p2_c.js", "p2/pack_p2_d.js", "p2/pack_p2_e.js", "p2/pack_p2_f.js",
+  ];
+  const SOURCE_FILE_RE = /^(pack_[a-e]_corrected\.js|scored_cases\d*\.js|case_pack_\d+_corrected\.js|pack_p2_[a-f]\.js)$/i;
+  for (const f of [...p1Files, ...p2Files]) {
     const bn = require("path").basename(f);
-    assert(SOURCE_FILE_RE.test(bn), `Should match source file: "${f}"`);
+    assert(SOURCE_FILE_RE.test(bn), `Should match source file: "${f}" (basename: "${bn}")`);
   }
   assert(!SOURCE_FILE_RE.test("app.js"));
   assert(!SOURCE_FILE_RE.test("styles.css"));
+  assert(!SOURCE_FILE_RE.test("pack_p2_g.js")); // only a-f
 });
 
 // ── Summary ────────────────────────────────────────────────────
