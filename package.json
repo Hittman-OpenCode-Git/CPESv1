@@ -20,7 +20,7 @@
     "electron-dev": "electron . --dev"
   },
   "devDependencies": {
-    "electron": "^33.4.11",
+    "electron": "^43.3.0",
     "playwright": "^1.61.1"
   }
 }
