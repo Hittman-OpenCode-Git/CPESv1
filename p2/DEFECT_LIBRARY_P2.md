@@ -18,7 +18,7 @@ Class            Content
 Domain           Explanation/Answer-Key Integrity
 Severity         Critical
 Detected By      Build-Time AI Verification (P2-028 certification scan)
-Status           Open — routed to Editorial Queue (not Certified)
+Status           Resolved — item repaired (CorrectChoice D = 6.73% below hurdle, meta-commentary removed), re-certified 2026-08-21; verified in-file 2026-08-22. Residual Choice B margin figure fixed 2026-08-22 — see DL-P2-008.
 ```
 
 **Question ID:** P2-A-017
@@ -51,7 +51,7 @@ Class            Content
 Domain           Explanation Integrity / Precision
 Severity         High
 Detected By      Build-Time AI Verification (P2-028 certification scan)
-Status           Open — routed to Editorial Queue
+Status           Resolved — item repaired (stem reworded, ROA 9.5% with after-tax add-back, meta-commentary removed), re-certified 2026-08-21; verified in-file 2026-08-22.
 ```
 
 **Question ID:** P2-A-084
@@ -80,7 +80,7 @@ Class            Content
 Domain           Numerical Accuracy / Explanation Integrity
 Severity         High
 Detected By      Build-Time AI Verification (P2-028 certification scan)
-Status           Open — routed to Editorial Queue
+Status           Resolved — item recomputed to WACC 8.39% with market-value weights (Equity $1,800M; Debt $1,447.5M; Preferred $80M), re-certified 2026-08-21; verified in-file 2026-08-22.
 ```
 
 **Question ID:** P2-B-024
@@ -109,7 +109,7 @@ Class            Content
 Domain           Explanation Integrity
 Severity         Medium
 Detected By      Build-Time AI Verification (P2-028 certification scan)
-Status           Open — routed to Editorial Queue
+Status           Resolved — opening meta-commentary removed (clean DIO/DSO/DPO/CCC = 50/38/44/44 computation retained), re-certified 2026-08-21; verified in-file 2026-08-22.
 ```
 
 **Question ID:** P2-B-048
@@ -138,7 +138,7 @@ Class            Content
 Domain           Explanation/Answer-Key Integrity
 Severity         High
 Detected By      Build-Time AI Verification (P2-028 certification scan)
-Status           Open — routed to Editorial Queue
+Status           Resolved — Kp reconciled to 8.99% (net proceeds $92 − $3 = $89), CorrectChoice A, re-certified 2026-08-21; verified in-file 2026-08-22.
 ```
 
 **Question ID:** P2-B-055
@@ -162,3 +162,175 @@ Compute the cost of preferred consistently (net proceeds after flotation → 8.9
 ## Cross-Cutting Finding
 
 All five defects share one root cause: **the concurrent authoring session that produced Packs A/B/C left iterative drafting notes and unreconciled answer keys in the content.** The pattern-based scan found zero equivalent artifacts in Packs D/E/F (authored under the CAQS-compliant workflow this session). Remediation recommendation: run a dedicated correctness audit of the A/B/C packs independent of the artifact-pattern scan (pattern-matching cannot detect silent answer-key errors that lack a leaked note).
+
+**Update 2026-08-22:** All five items verified repaired and Certified in-file (A-017, A-084, B-024, B-048, B-055). A follow-up full-pack leaked-note sweep of `p2/pack_p2_a.js` (160 items) found one residual instance of the same defect class — P2-A-112 — plus a second silent answer-key-adjacent error in P2-A-006. Both logged below (DL-P2-006, DL-P2-007) and repaired the same session.
+
+---
+
+## DL-P2-006 — P2-A-006 Alternative 1 D/E Internally Inconsistent
+
+```
+Defect ID        DL-P2-006
+Class            Content
+Domain           Numerical Accuracy / Answer-Key Integrity
+Severity         High (stated transaction does not produce the stated D/E; uncorrected, mis-teaches equity-for-debt swap mechanics and breaks the designated answer's argument)
+Detected By      User full-pass arithmetic review (2026-08-22); confirmed by Build-Time AI Verification against raw file
+Status           Resolved — Alternative 1 re-tuned to $40M issuance/retirement (2026-08-22)
+```
+
+**Question ID:** P2-A-006
+
+**File:** `p2/pack_p2_a.js`
+
+### Issue
+
+Alternative 1 (issue $100M in new equity, retire $100M in debt) was scored as producing D/E = 1.73. That figure is only obtainable by holding equity flat at $150M (260/150 = 1.73) — but an equity issuance for cash must credit equity ($150M → $250M), giving D/E = 260/250 = **1.04**. At the correct 1.04, Alternative 1 shows better leverage than Alternative 3 (1.47), collapsing the designated answer (C) and its "Alternative 1 reduces leverage less" argument.
+
+Secondary defect in the same item: Choice C stated interest coverage improvement "to an estimated 2.50" while ExplanationCorrect computed 2.27 ($40.0M / $17.6M).
+
+### Root Cause
+
+Drafting error — the author applied the debt retirement to total debt but never applied the equity increase from the issuance. The choice-text coverage figure was not reconciled with the explanation's computation.
+
+### Correction
+
+Re-tuned Alternative 1 to a $40M equity issuance / $40M debt retirement (governance decision 2026-08-22 — preserves the answer key and the dilution-vs-asset-sale-vs-refinancing contrast; a $100M issuance is mathematically unrecoverable because equity +$100M caps D/E at 1.44, below Alt 3's 1.47):
+
+- D/E = (360 − 40) / (150 + 40) = 320/190 = **1.68** (still above peer range 0.80–1.50 and above Alt 3's 1.47)
+- Dilution = 40/190 ≈ **21%** (book-equity basis, consistent with the D/E arithmetic)
+- Interest savings = $40M × 8.0% = **$3.2M** (8% of operating income)
+- Choice C coverage figure corrected **2.50 → 2.27** to match ExplanationCorrect
+
+CorrectChoice unchanged (C). Five text locations updated: Stem, Choices.A, Choices.C, ExplanationCorrect, ExplanationWrongA.
+
+### Regression Test
+
+- Recompute D/E = 1.684 ≈ 1.68; coverage = 40/17.6 = 2.273 ≈ 2.27
+- EW[CC=C] remains empty (DL-008); all non-CC EW slots non-empty (DL-026)
+- Full-pack object-level scan: 0 DL-008, 0 DL-026 across 160 items
+
+### Resolved
+
+2026-08-22 — Applied with independent recomputation. Backup: `p2/pack_p2_a.js.bak-20260822130240`.
+
+---
+
+## DL-P2-007 — P2-A-112 Leaked Drafting Note in ExplanationCorrect
+
+```
+Defect ID        DL-P2-007
+Class            Content
+Domain           Explanation Integrity
+Severity         Medium (leaked authoring self-correction; underlying math correct)
+Detected By      Build-Time AI Verification — full-pack leaked-note sweep (2026-08-22)
+Status           Resolved
+```
+
+**Question ID:** P2-A-112
+
+**File:** `p2/pack_p2_a.js`
+
+### Issue
+
+ExplanationCorrect contained the author's drafting self-correction verbatim: *"…OI = $24M − $16M = $8M. Wait — OI unchanged? Let me recompute: $24M − $16M = $8M. Same OI but higher CM.…"* The DOL computation itself is correct (pre-automation 2.50, post-automation 3.00); only the meta-commentary leaked into learner-facing text.
+
+Secondary defect: CommonTrapReference was truncated mid-formula ("…confusing DOL = CM/").
+
+### Root Cause
+
+Same iterative-drafting pipeline as DL-P2-001 through DL-P2-005. The P2-028 pattern sweep missed this instance because the item sits in the P2-A-090–160 range expanded after the sweep's pattern set was run.
+
+### Correction
+
+Removed the leaked note ("Wait — OI unchanged? Let me recompute: $24M − $16M = $8M."). Completed the truncated trap: "…confusing DOL = CM/OI with cost-structure ratios (CM/FC) or revenue-based ratios (Revenue/OI)". CorrectChoice (A) and all explanation text otherwise unchanged.
+
+### Resolved
+
+2026-08-22 — Applied. Backup: `p2/pack_p2_a.js.bak-20260822130240`.
+
+---
+
+## DL-P2-008 — P2-A-017 Choice B Margin Figure Internally Inconsistent
+
+```
+Defect ID        DL-P2-008
+Class            Content
+Domain           Numerical Accuracy (distractor self-description)
+Severity         Medium (distractor arithmetic mismatch; correct answer unaffected — found during verification of the DL-P2-001 repair)
+Detected By      Build-Time AI Verification (2026-08-22)
+Status           Resolved
+```
+
+**Question ID:** P2-A-017
+
+**File:** `p2/pack_p2_a.js`
+
+### Issue
+
+Choice B claimed "approximately 8.54%" for normalized earnings of $17.559M on $218M revenue — the correct quotient is **8.05%** (17.559/218 = 8.05). The 8.54% figure corresponds to adding back the full pre-tax $4.42M without tax effect (14.2 + 4.42 = 18.62; 18.62/218 = 8.54%). ExplanationWrongB repeated the wrong 8.54%. Also stale: VerifiedChecks read "EW[CC=B] empty" while CorrectChoice is D.
+
+### Correction
+
+8.54% → 8.05% in Choices.B and ExplanationWrongB. VerifiedChecks string corrected to "EW[CC=D] empty (DL-008 compliant)".
+
+### Resolved
+
+2026-08-22 — Applied with recomputation (17.5592/218 = 8.05%). Backup: `p2/pack_p2_a.js.bak-20260822130240`.
+
+---
+
+## DL-P2-009 — Unreconciled Numeric Headers + Hedge Language (WACC/LBO/Bond Cluster)
+
+```
+Defect ID        DL-P2-009
+Class            Content
+Domain           Numerical Accuracy / Answer-Key Integrity (correct-choice header values)
+Severity         Critical for 2 items (B-019, B-021) | High for 2 (B-018, B-052) | Medium for 2 (B-022, B-050)
+Detected By      Independent full-pass review (2026-08-22 Section B verification report); confirmed by Build-Time AI Verification against raw file
+Status           Resolved — all 6 items fixed 2026-08-22; borderline B-006 wording tightened
+```
+
+**Question IDs:** P2-B-018, P2-B-019, P2-B-021, P2-B-022, P2-B-050, P2-B-052 (plus borderline P2-B-006)
+
+**File:** `p2/pack_p2_b.js`
+
+### Issue
+
+Six Certified items carry correct-choice header values that contradict the derivation shown in the same choice, papered over with hedge language ("or X depending on rounding at intermediate steps", "may reflect a specific capital structure"):
+
+| QID | Stored header | Correct value | Notes |
+|-----|---------------|---------------|-------|
+| P2-B-018 | D: 10.84% | **10.60%** | Hedge in EC; 10.84% also in EWA/EWC; distractor C header 10.43% also contradicted its own components (→ 10.60%) |
+| P2-B-019 | D: 11.45% | **9.35%** | Hedge in EC; distractors A (10.98% → 9.77%) and C (9.84% → 9.17%) also internally inconsistent |
+| P2-B-021 | D: 9.98% | **13.62%** | Hedge in EC; distractor A (7.42% → 8.75%) also inconsistent; C's average propagated 9.74% → 11.56% |
+| P2-B-022 | "14.00% tier" | **12.00% tier** | Tier misstated in 5 locations (Choice D, EC, EWA, EWC, VerifiedChecks); rejection decision was already correct (11.5% < 12%) |
+| P2-B-050 | B: ~$903 vs EC $895.69 | **$901.58** | EC used wrong PVIFA (6.477 vs 6.5613); VerifiedChecks said ~$896 — three figures, one item |
+| P2-B-052 | B: ~$352M | **$404M** | Derivation in Choice B, EC, and VerifiedChecks all produced $404M; $352M was an unreconciled leftover |
+
+Borderline: P2-B-006 labeled Stock R (−0.50% alpha) "on the SML"; the explanation disclosed the gap but the wording was imprecise. Tightened to "slightly below the SML … best treated as fair value." No answer-key change.
+
+### Root Cause
+
+Same unreconciled-drafting root cause as DL-P2-001 through DL-P2-005: header values from an earlier draft survived while the derivation arithmetic was corrected; hedge language was added instead of reconciling. The concentration in the WACC/component-cost cluster (B-018/019/021/022 are template siblings) suggests the drafting iteration occurred at the template level.
+
+### Detection Rule
+
+For each item: extract the choice-header number and the derivation shown in the same choice or explanation; flag mismatches. Flag hedge phrases: "depending on rounding", "or close to this", "may reflect a specific capital structure", "depending on the exact inputs".
+
+### Correction
+
+30 text/number replacements applied 2026-08-22 (all values recomputed independently). CorrectChoice letters unchanged — all six were already correct as letters; the learner-facing header numbers were wrong. All EW[CC] slots remain empty (DL-008 clean).
+
+### Regression Test
+
+- Object-level parse: 100 items; DL-008: 0; DL-026: 0
+- Broken-value sweep (10.84%, 11.45%, 9.98%, 10.43%, $352M, 6.477, $895.69, 7.42% — Re, 10.98% — omitting, 9.84% — using): 0 remnants
+- Hedge-language sweep: 0 remnants
+- Recomputes match edited text: 10.60% / 9.35% / 13.62% / $901.58 / $404M
+- `node --check` PASS; `node scripts/preflight_p2.js` PASS 0 divergences
+
+### Resolved
+
+2026-08-22 — Session P2-033. Backup: `p2/pack_p2_b.js.bak-20260822162214`.
+
+**Independent re-verification PASS (2026-08-22, Section B closeout):** 7/7 corrected items re-verified from scratch — every stored value matches the reviewer's independent recomputation; zero hedge-language remnants; CorrectChoice letters unchanged; EW[CC] slots empty. Pack B closes at 100/100 with no open findings.

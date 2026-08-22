@@ -1,5 +1,169 @@
 # REVISION_HISTORY_P2.md — CMA Part 2 Exam Simulator
 
+## Session P2-034 — Section B Verification Closeout (100/100 Clean)
+
+**Date:** 2026-08-22
+**Session Type:** Read-Only Audit Closeout (Governance Light Lane — no content changes)
+**Verifier:** Independent reviewer — re-verification of the 7 corrected items via the dedicated upload file
+
+### Result
+
+- All 7 corrected items re-verified from scratch: **0 errors** (Critical 0, High 0, Medium 0, Low 0).
+- Headers match derivations; prohibited hedge language absent; CorrectChoice letters unchanged (006=C, 018=D, 019=D, 021=D, 022=D, 050=B, 052=B); EW[CC] slots empty; distractor explanations intact.
+- Reviewer independently confirmed the corrected-source SHA256 (`B701DA638…`) differs from the pre-fix manifest hash — verifying the upload was genuinely the modified file.
+- B-052's depreciation caveat classified by the reviewer as a legitimate assumption disclosure, not the prohibited hedge type.
+- Combined with the 94 items confirmed clean in the full-pack review: **Pack B is 100/100 with no open findings.**
+
+### Closes
+
+- DL-P2-009 remediation (Session P2-033): independently verified PASS.
+
+**Revision recorded by:** P2-034 — Section B Verification Closeout
+**Date:** 2026-08-22
+
+## Session P2-033 — Section B Numeric-Header Remediation (DL-P2-009, 7 items)
+
+**Date:** 2026-08-22
+**Session Type:** Defect Repair (Full Governance Lane)
+**User approval:** Documented here — user authorized "Fix all 6" + "Minor wording fix" for B-006 (2026-08-22)
+**Backup timestamp:** 2026-08-22T16:22:14 — `p2/pack_p2_b.js.bak-20260822162214` (409,984 bytes, matches pre-edit source); doc backups under `backups/`
+
+### T0 State (verified before any write)
+
+- `npm run preflight` PASS — 0 divergences; `node scripts/preflight_p2.js` PASS — 0 divergences; guard 74/74
+
+### Source of Findings
+
+Independent Section B full-pass review (100/100 items located and recomputed). All 7 findings dual-verified against raw file evidence before any write: 6 confirmed numeric-header errors + 1 borderline wording issue. Spot-checks of the reviewer's "OK" items (B-001, B-013, B-017, B-025) reproduced exactly, validating the review method on both sides.
+
+### Repairs Applied (30 text/number replacements, all values recomputed independently)
+
+| QID | Defect | Fix | CorrectChoice |
+|-----|--------|-----|---------------|
+| P2-B-018 | D header 10.84% vs components summing to 10.60%; hedge in EC | Header → 10.60%; hedge removed; EWA/EWC updated; distractor C header 10.43% → 10.60% (also contradicted its own components) | D (unchanged) |
+| P2-B-019 | D header 11.45% vs 9.35%; hedge in EC; A and C headers also broken | D → 9.35%; A → 9.77%; C → 9.17%; hedge removed; EWC reconciled | D (unchanged) |
+| P2-B-021 | D header 9.98% vs 13.62%; hedge in EC; A header broken; C average stale | D → 13.62%; A → 8.75%; C → 11.56% average; hedge removed; EWC reconciled | D (unchanged) |
+| P2-B-022 | "14.00% tier" claimed for Gamma at $26M cumulative (12% tier is correct) in 5 locations | 14.00% → 12.00% in Choice D, EC, EWA, EWC, VerifiedChecks; rejection decision unchanged | D (unchanged) |
+| P2-B-050 | Three price figures (~$903 header, $895.69 EC with wrong PVIFA 6.477, $896 VC) vs true $901.58 | Unified at $901.58 / ~$902 in Choice B, EC, EWC, VerifiedChecks; PVIFA corrected to 6.5613 | B (unchanged) |
+| P2-B-052 | Header ~$352M vs derivation $404M in same choice, EC, and VerifiedChecks | Header → $404M; range hedge replaced with coherent conservative-basis language | B (unchanged) |
+| P2-B-006 | Stock R (−0.50% alpha) labeled "on the SML" | Wording tightened: "slightly below the SML … best treated as fair value" in Choice C and EC | C (unchanged) |
+
+### Governance Compliance (Verified)
+
+| Check | Result |
+|-------|--------|
+| Rule 5 batch cap (7 items ≤ 30) | PASS |
+| Backup-before-write | PASS (3 files, timestamped, non-zero) |
+| `node --check` | PASS |
+| Object-level parse | 100 items, 100 unique |
+| DL-008 / DL-026 full-pack scan | 0 / 0 |
+| Broken-value sweep + hedge-language sweep | 0 remnants each |
+| CorrectChoice letters | Unchanged (7/7 verified) |
+| `node scripts/preflight_p2.js` (Tend) | PASS — 0 divergences |
+| `npm run preflight` (Tend) | PASS — 0 divergences, guard 74/74 |
+
+### Process Notes
+
+- All six errors share DL-P2-001…005's root cause: leftover header values from an earlier draft, patched with hedge language instead of reconciled. Concentration in the WACC/component-cost template cluster (B-018/019/021/022) confirms template-level drafting iteration. The hedge phrases ("depending on rounding", "may reflect a specific capital structure") are now treated as detection signatures — zero tolerated in pack content.
+- `p2/DEFECT_LIBRARY_P2.md`: DL-P2-009 logged (systemic cluster entry with per-item table).
+- Items remain Certified (content corrections + re-verification, per P2-029/P2-030 precedent).
+
+**Revision recorded by:** P2-033 — Section B Numeric-Header Remediation
+**Date:** 2026-08-22
+
+## Session P2-032 — Governance Formalization: Third-Party Content Review Handoffs
+
+**Date:** 2026-08-22
+**Session Type:** Governance Documentation (Full Lane — governance-critical file edit; zero content/answer-key/state changes)
+**Files changed:** `AGENTS.md` (v2.0 → v2.1, new §18), `knowledge/REVISION_HISTORY.md` (append), this file (prepend)
+
+### What Changed
+
+- Added **AGENTS.md §18 — Third-Party Content Review Handoffs**, formalizing the lessons from the P2-030/P2-031 Pack A review sequence:
+  - §18.1 index-failure signatures (retrieval-style results for literal-ID queries; prefix-truncated index windows; char-budget contradictions)
+  - §18.2 mandatory handoff protocol for pack files > ~200KB: verbatim ≤40KB parts, part→QID manifest, byte-for-byte concat proof, control-query direction
+  - §18.3 evidence hierarchy for third-party auditors (chunked bytes > verbatim block in chunk > paste alone > hashes/line numbers alone)
+  - §18.4 auditor-side controls (index-limitation presumption, control queries, chunk requests)
+  - §18.5 closeout logging requirements
+- Version: AGENTS.md 2.0 → 2.1.
+
+### Verification
+
+- `npm run preflight` PASS — 0 divergences; `node scripts/preflight_p2.js` PASS — 0 divergences; governance guard 74/74.
+- No pack content, question_state, or answer-key changes.
+
+**Revision recorded by:** P2-032 — Governance Formalization
+**Date:** 2026-08-22
+
+## Session P2-031 — Independent Full-Pass Verification Closeout (160/160 Pack A)
+
+**Date:** 2026-08-22
+**Session Type:** Read-Only Audit Closeout (Governance Light Lane — no content changes, no question_state changes)
+**Verifier:** User independent audit — full pass across all 160 Pack A items
+
+### Result
+
+- **P2-A-090–P2-A-160 (71 items):** independent arithmetic recomputation of every calculation-bearing item — all correct. Qualitative items verified on-topic and well-constructed: VIE consolidation (ASC 810), foreign currency translation (ASC 830), off-balance-sheet lease capitalization, combined DOL×DFL leverage, ROIC/EVA, Beneish M-Score, channel stuffing and bill-and-hold (ASC 606), cookie-jar reserves, non-GAAP reconciliation (Regulation G), going-concern opinions, industry life-cycle ratio benchmarking, cyclical P/E normalization.
+- **P2-A-112:** verified present and clean (no leaked scratch-work; DOL 2.50/3.00 correct).
+- **P2-A-006 and P2-A-017 fixes:** re-confirmed independently (D/E 1.68/1.47; margin 8.05%).
+- **Pack verdict:** 160/160 items verified. No remaining open defects. The only defect ever found in this pack was the pre-fix P2-A-006 (DL-P2-006), resolved.
+
+### Closes
+
+- P2-030 process note — "full arithmetic pass on A-090–A-160 recommended in a future session": **COMPLETED this session, result clean.**
+
+### Process Lesson (Verification Tooling)
+
+An independent auditor's file-attachment search tool silently indexed only a prefix (~items 001–089) of a 730KB pack file, producing repeated false-negative "item not found" results across byte-identical attachments. Root cause: retrieval-style indexing over a content window, returning unrelated items for literal-ID queries. **Control adopted:** for verification handoffs, split large pack files into ≤40KB verbatim parts (each fully indexable by retrieval tooling) and supply a part→QID manifest. The 20-part split of `p2/pack_p2_a.js` (2026-08-22, verbatim concat check EXACT MATCH) was used to complete this audit and is retained under `C:\Users\User\AppData\Local\Temp\opencode\p2a_parts\` for future independent-auditor handoffs.
+
+**Revision recorded by:** P2-031 — Independent Verification Closeout
+**Date:** 2026-08-22
+
+## Session P2-030 — Pack A Review Remediation (P2-A-006, P2-A-112, P2-A-017)
+
+**Date:** 2026-08-22
+**Session Type:** Defect Repair (Full Governance Lane)
+**User approval:** Documented here — user authorized "Re-tune Alt 1 to $40M (Recommended)" + "Include all" companion fixes (2026-08-22)
+**Backup timestamp:** 2026-08-22T13:02:40 — `p2/pack_p2_a.js.bak-20260822130240` (730,159 bytes, matches pre-edit source exactly); doc backups under `backups/` for DEFECT_LIBRARY_P2.md, REVISION_HISTORY_P2.md, CURRENT_BASELINES_P2.md
+
+### T0 State (verified before any write)
+
+- `npm run preflight` — PASS: Part 1 2620 Certified, 0 divergences, guard 74/74
+- `node scripts/preflight_p2.js` — PASS: P2 495/495 Certified (A: 160, B: 100, C: 75, D: 50, E: 60, F: 50), 0 divergences, guard 74/74
+
+### Repairs Applied (re-derived independently)
+
+| QID | Defect | Fix | CorrectChoice |
+|-----|--------|-----|---------------|
+| P2-A-006 | Alt 1 D/E internally inconsistent — stated 1.73 only obtainable by holding equity flat; correct under stated transaction is 1.04 (260/250), which would beat Alt 3's 1.47 and collapse the answer key. Secondary: Choice C coverage "2.50" vs ExplanationCorrect "2.27". | Re-tuned Alt 1 to $40M issuance / $40M retirement: D/E = 320/190 = **1.68**, dilution = 40/190 ≈ **21%**, interest savings **$3.2M**; Choice C coverage corrected 2.50 → 2.27. Five locations updated: Stem, Choices.A, Choices.C, ExplanationCorrect, ExplanationWrongA | C (unchanged) |
+| P2-A-112 | Leaked drafting note in ExplanationCorrect ("Wait — OI unchanged? Let me recompute: $24M − $16M = $8M."); truncated CommonTrapReference ("confusing DOL = CM/") | Note removed; trap completed to "…confusing DOL = CM/OI with cost-structure ratios (CM/FC) or revenue-based ratios (Revenue/OI)" | A (unchanged) |
+| P2-A-017 | Distractor B claimed "8.54%" for $17.559M/$218M (true **8.05%** — the 8.54% corresponds to a non-tax-effected add-back); ExplanationWrongB repeated 8.54%; stale VerifiedChecks "EW[CC=B]" (CC is D) | 8.54% → 8.05% in Choices.B and ExplanationWrongB; VerifiedChecks corrected to "EW[CC=D]" | D (unchanged) |
+
+### Governance Compliance (Verified)
+
+| Check | Result |
+|-------|--------|
+| Backup-before-write (4 files, timestamped, non-zero) | PASS |
+| `node --check p2/pack_p2_a.js` | PASS |
+| Object-level re-parse (Function constructor) | 160 items, 160 unique QIDs |
+| DL-008 / DL-026 full-pack scan | 0 / 0 |
+| Independent recompute (D/E 1.684, coverage 2.273, DOL 2.5/3.0, margin 8.05%) | All match edited text |
+| Leaked-note re-sweep (all 6 P2 packs) | 0 remaining |
+| Rule 5 batch cap (3 items ≤ 30) | PASS |
+| `node scripts/preflight_p2.js` (Tend) | PASS — 495/495 Certified, 0 divergences |
+| `npm run preflight` (Tend) | PASS — 2620 Certified, 0 divergences, guard 74/74 |
+
+### Process Notes
+
+- P2-A-006's $100M equity issuance was mathematically unrecoverable: equity +$100M caps D/E at 360/250 = 1.44 — below Alt 3's 1.47 — so no debt-retirement amount could preserve the "reduces leverage less" premise. The $40M re-tune preserves the answer key and the dilution-vs-asset-sale-vs-refinancing contrast. Dilution is now stated on the book-equity basis, consistent with the D/E arithmetic.
+- Full-pack leaked-note sweep found one residual artifact (A-112) in the P2-A-090–160 range — the P2-028 pattern set ran before that range was expanded (P2-025 wave).
+- `p2/DEFECT_LIBRARY_P2.md`: DL-P2-001…005 statuses corrected to Resolved (P2-029 claimed the update but the file still read "Open" — claim/evidence divergence); DL-P2-006/007/008 logged for this session's three repairs.
+- `p2/CURRENT_BASELINES_P2.md` NOT hand-edited (Rule 7 — derived registry; footer prohibits hand-editing between schema-lock sessions). Remains stale: §1 shows Pack A 100 QIDs / 0 Certified vs actual 160/160, and pre-schema-lock pack counts. Flagged for the next schema-lock/regeneration session.
+- Items P2-A-090–A-160 (71 items) have NOT had a numeric re-verification pass; this session's pattern sweep found no other artifacts in that range, but a full arithmetic pass is recommended in a future session.
+
+**Revision recorded by:** P2-030 — Pack A Review Remediation
+**Date:** 2026-08-22
+
 ## Session P2-025 — Sections A/B/C Expansion Wave 3 (75 Items)
 
 **Date:** 2026-08-21

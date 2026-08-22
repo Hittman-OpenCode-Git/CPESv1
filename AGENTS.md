@@ -1,6 +1,6 @@
 # AGENTS.md — CMA Part 1 Exam Simulator Standing Instructions
 
-**Version:** 2.0 (Session 73 — Governance Lanes)
+**Version:** 2.1 (Session P2-032 — Third-Party Content Review Handoffs)
 **Status:** Active
 **Authority:** PROJECT_CONSTITUTION.md
 **Applies to:** All Computer/AI sessions in this repository
@@ -396,3 +396,49 @@ The S122 Part 1 Excellence & Benchmarking Program deliverables are permanent ins
 3. **Analyze/Evaluate Pattern Catalogs** — "How should I structure this item?"
 
 Full details at AGENTS.md §11.2 (Approved Internal Reference Libraries).
+
+---
+
+## 18. Third-Party Content Review Handoffs
+
+**Effective:** 2026-08-22 (Session P2-032). When a human or external AI reviews repository content **without shell/repo access**, evidence must be sized to the reviewer's tooling.
+
+**Precedent:** The 2026-08-22 Pack A review (Sessions P2-030/P2-031) — an auditor's file-attachment search tool silently indexed only a prefix of the 730KB `p2/pack_p2_a.js` (~89 of 160 items), producing repeated false-negative "item not found" results across byte-identical attachments. The dispute consumed multiple rounds and resolved only when the pack was split into fully-indexable parts. The auditor's "char-budget" arithmetic also produced a plausible-but-wrong item-count inference. These failure modes cost days of re-litigation.
+
+### 18.1 Index-Failure Signatures — Recognize Before Arguing Evidence
+
+| Signature | Meaning |
+|-----------|---------|
+| A literal-ID query (e.g., "P2-A-112") returns unrelated content | Retrieval-style (semantic) indexing — not literal string search. A literal index cannot return unrelated content. |
+| No query surfaces content past a cutoff QID, across many rewordings | Prefix-truncated index window. Repeated queries against the same partial index accumulate zero additional confidence. |
+| Reviewer's char-budget arithmetic contradicts their own direct samples | Per-item average anchored on an assumed (unverified) item count. |
+
+None of these signatures are evidence about file contents. Stop the dispute and switch to chunked parts (§18.2).
+
+### 18.2 Handoff Protocol — Mandatory for Pack Files > ~200KB
+
+1. **Split** the pack into verbatim parts of ≤ 40KB each (~10K tokens) — small enough that any retrieval index must ingest each part fully.
+2. **Emit a part→QID manifest** (QID ranges per part, part count, source SHA256).
+3. **Prove no-gap/no-dup:** the concatenation of all parts must reproduce the source byte-for-byte; record the check result in the handoff (the split is then self-verifying content evidence, not a claim).
+4. **Direct the reviewer to a control test:** attach one part containing an already-verified item and confirm their tool finds it; then attach the disputed item's part.
+
+Reference implementation: `C:\Users\User\AppData\Local\Temp\opencode\split_p2a_for_verification.js` (2026-08-22, 20-part split of `p2/pack_p2_a.js`, concat check EXACT MATCH).
+
+### 18.3 Evidence Hierarchy for Third-Party Auditors
+
+| Tier | Evidence | Weight |
+|------|----------|--------|
+| 1 | Chunked parts of the actual file bytes the auditor can search themselves | Conclusive |
+| 2 | Verbatim raw blocks + a chunked part containing them | Strong |
+| 3 | Hand-pasted blocks alone | Weak — a style-matched paste does not establish provenance, regardless of internal consistency |
+| 4 | git hashes, line numbers, shell outputs, typed manifests | Inadmissible alone — unexecutable without repo access |
+
+### 18.4 Auditor-Side Controls (When Acting as the Reviewer Without Repo Access)
+
+- Treat "not found in my indexed copy" as an **index limitation**, not a finding, until a chunked part is tested.
+- Run a control query on known content (e.g., an already-verified fix) to confirm the index is current before trusting any negative result.
+- If literal-ID queries return unrelated content, the tool is doing semantic retrieval — request chunked parts rather than issuing more searches.
+
+### 18.5 Closeout Logging
+
+Third-party review closeouts are logged in the governing revision history (Part 2: `knowledge/REVISION_HISTORY_P2.md`) including: reviewer, scope, verdict, open recommendations closed, and process lessons. Precedent: P2-031 (160/160 Pack A verification closeout).

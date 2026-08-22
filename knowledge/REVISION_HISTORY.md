@@ -31985,3 +31985,31 @@ Authored and integrated 30 new Part 2 MCQs (5 per pack) across all 6 domains.
 - scripts/p2_wave_integrate.js � inline item integration
 - scripts/p2_wave_finalize.js � finalize integration
 
+
+---
+
+## 2026-08-22 — Governance Formalization: Third-Party Content Review Handoffs (AGENTS.md v2.1)
+
+**Session:** P2-032
+**Governance Lane:** Full (governance-critical documentation edit; zero content/answer-key/state changes)
+**Files changed:** `AGENTS.md` (v2.0 → v2.1), `knowledge/REVISION_HISTORY.md` (this entry), `knowledge/REVISION_HISTORY_P2.md` (P2-032 entry)
+**Backup timestamp:** 2026-08-22T15:02:30 — `backups/AGENTS.md.bak-20260822150230`, `backups/REVISION_HISTORY.md.bak-20260822150230`, `backups/REVISION_HISTORY_P2.md.bak-20260822150230` (all confirmed non-zero)
+
+### What Changed
+
+- **AGENTS.md §18 added** — Third-Party Content Review Handoffs: index-failure signatures (§18.1), the ≤40KB chunked-parts handoff protocol with part→QID manifest and byte-for-byte concat proof (§18.2), the third-party evidence hierarchy (§18.3), auditor-side controls (§18.4), and closeout logging requirements (§18.5).
+
+### Why
+
+- Precedent (2026-08-22): an independent auditor's file-attachment search tool silently indexed only a prefix (~89 of 160 items) of `p2/pack_p2_a.js` (730KB), producing repeated false-negative "item not found" results across byte-identical attachments. The auditor's char-budget arithmetic also produced a plausible-but-wrong item-count inference. Resolution required splitting the pack into 20 verbatim ≤40KB parts with a part→QID manifest plus a control query — after which the auditor independently verified all 160 items clean (P2-031 closeout).
+- Lesson: verification evidence for reviewers without repo access must be sized to their tooling. Shell outputs, hashes, and line numbers are unverifiable for them and must never be the sole basis of a handoff.
+
+### Verification
+
+- `npm run preflight` — PASS, 0 divergences (T0 and Tend)
+- `node scripts/preflight_p2.js` — PASS, 0 divergences (T0 and Tend)
+- Governance guard — 74/74 PASS
+- No pack content, question_state, or answer-key changes in this session
+
+**Revision recorded by:** P2-032 — Governance Formalization
+**Date:** 2026-08-22
