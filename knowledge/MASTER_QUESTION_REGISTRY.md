@@ -2,16 +2,16 @@
   ⚠️  GENERATED FILE — DO NOT EDIT.
   Source of truth: pack source files in content/packs/.
   Regenerate via: node scripts/generate_registry.js
-  Last generated: 2026-08-22 00:47:03
+  Last generated: 2026-08-22 01:10:58
   Source hash: 7e1a0913
 -->
 
 # Master Question Registry — CMA Part 1 Exam Simulator
 
 **Status:** Generated Artifact
-**Generated:** 2026-08-22 00:47:03
+**Generated:** 2026-08-22 01:10:58
 **Source Hash:** `7e1a0913`
-**Total Questions:** 2855
+**Total Questions:** 3020
 
 > ⚠️ **This file is auto-generated.** Never edit it directly.
 > Source of truth: the five pack source files (`content/packs/pack_*_corrected.js`)
@@ -24,9 +24,9 @@
 
 | Metric | Value |
 |--------|-------|
-| Total Questions | 2855 |
+| Total Questions | 3020 |
 | Scored (CAQS available) | 0 |
-| Not Yet Scored | 2855 |
+| Not Yet Scored | 3020 |
 | Exam-Ready (≥90) | 0 |
 | Acceptable (70–89) | 0 |
 | Needs Work (50–69) | 0 |
@@ -36,11 +36,11 @@
 
 | Section | Domain | Total | With Validator Findings |
 |---------|--------|------:|----------------------:|
-| C | Performance Management | 441 | 80 |
-| E | Internal Controls | 425 | 90 |
-| I | I | 459 | 62 |
-| P | P | 1112 | 204 |
-| T | T | 418 | 101 |
+| C | Performance Management | 468 | 80 |
+| E | Internal Controls | 453 | 90 |
+| I | I | 492 | 62 |
+| P | P | 1168 | 204 |
+| T | T | 439 | 101 |
 
 ---
 
@@ -2668,241 +2668,406 @@
 | P1E-E-S08 | I | E-S08 IT general controls access management termin | Difficult | P1-E.2 Internal controls | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-S06 | T | F-S06 data governance MDM customer master inconsis | Difficult | P1-F.2 Data governance | pack_e_corrected.js | 0 | 0 | — | Not Scored |
 | P1E-F-S07 | T | F-S07 cloud computing service model IaaS PaaS SaaS | Difficult | P1-F.1 Information systems | pack_e_corrected.js | 0 | 0 | — | Not Scored |
-| CBQ2-A3-Q5 | E | Receivables | Moderate | Revenue recognition under ASC 606; Inventory valuation methods (FIFO, LIFO, weighted average) | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-A3-Q1 | E | ASC 606 | Moderate | Revenue recognition under ASC 606; Inventory valuation methods (FIFO, LIFO, weighted average) | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-A3-Q2 | E | Receivables | Moderate | Revenue recognition under ASC 606; Inventory valuation methods (FIFO, LIFO, weighted average) | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-A3-Q4 | E | Receivables | Moderate | Revenue recognition under ASC 606; Inventory valuation methods (FIFO, LIFO, weighted average) | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-A3-Q3 | E | Revenue | Moderate | Revenue recognition under ASC 606; Inventory valuation methods (FIFO, LIFO, weighted average) | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-A2-Q2 | E | Inventory | Moderate | Inventory | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-A2-Q3 | E | Inventory | Moderate | Inventory | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-A2-Q1 | E | Inventory | Moderate | Inventory | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-A2-Q4 | E | Inventory | Moderate | Inventory | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-A2-Q5 | E | Inventory | Moderate | Inventory | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B1-Q1 | P | Production Budget | Easy | Production Budget; Materials Budget; Budget sequence | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B1-Q2 | P | Production Budget | Easy | Production Budget; Materials Budget; Budget sequence | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B1-Q3 | P | Materials Budget | Easy | Production Budget; Materials Budget; Budget sequence | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B1-Q4 | P | Materials Budget | Easy | Production Budget; Materials Budget; Budget sequence | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B1-Q5 | P | Budget sequence | Easy | Production Budget; Materials Budget; Budget sequence | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B2-Q1 | P | Cash collections | Difficult | Cash collections; Cash disbursements; Cash budget; Cash budget financing; Cash budget analysis | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B2-Q2 | P | Cash disbursements | Difficult | Cash collections; Cash disbursements; Cash budget; Cash budget financing; Cash budget analysis | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B2-Q3 | P | Cash budget | Difficult | Cash collections; Cash disbursements; Cash budget; Cash budget financing; Cash budget analysis | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B2-Q4 | P | Cash budget financing | Difficult | Cash collections; Cash disbursements; Cash budget; Cash budget financing; Cash budget analysis | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B2-Q5 | P | Cash budget analysis | Difficult | Cash collections; Cash disbursements; Cash budget; Cash budget financing; Cash budget analysis | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B2-Q6 | P | Cash budget management | Difficult | Cash collections; Cash disbursements; Cash budget; Cash budget financing; Cash budget analysis | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B3-Q1 | P | Sales forecasting | Difficult | Sales forecasting; Revenue budgeting; Forecasting methods; Cash collection analysis | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B3-Q2 | P | Sales forecasting | Difficult | Sales forecasting; Revenue budgeting; Forecasting methods; Cash collection analysis | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B3-Q3 | P | Revenue budgeting | Difficult | Sales forecasting; Revenue budgeting; Forecasting methods; Cash collection analysis | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B3-Q4 | P | Forecasting methods | Difficult | Sales forecasting; Revenue budgeting; Forecasting methods; Cash collection analysis | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B3-Q5 | P | Cash collection analysis | Difficult | Sales forecasting; Revenue budgeting; Forecasting methods; Cash collection analysis | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-B3-Q6 | P | Forecasting methods | Difficult | Sales forecasting; Revenue budgeting; Forecasting methods; Cash collection analysis | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C1-Q1 | P | Flexible budget variance decomposition | Moderate | Flexible budget variance analysis; Sales volume and price variance computation; Efficiency and spending variance interpretation; Variance investigation decisions; Performance reporting | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C1-Q2 | P | Variance interpretation and investigation | Moderate | Flexible budget variance analysis; Sales volume and price variance computation; Efficiency and spending variance interpretation; Variance investigation decisions; Performance reporting | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C1-Q3 | P | Flexible budget formulas | Moderate | Flexible budget variance analysis; Sales volume and price variance computation; Efficiency and spending variance interpretation; Variance investigation decisions; Performance reporting | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C1-Q4 | P | Variance-driven management decisions | Moderate | Flexible budget variance analysis; Sales volume and price variance computation; Efficiency and spending variance interpretation; Variance investigation decisions; Performance reporting | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C1-Q5 | P | Variance responsibility accounting | Moderate | Flexible budget variance analysis; Sales volume and price variance computation; Efficiency and spending variance interpretation; Variance investigation decisions; Performance reporting | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C2-Q1 | P | Direct materials price variance | Moderate | Direct materials price and quantity variance computation; Direct labor rate and efficiency variance computation; Variable overhead spending and efficiency variance analysis; Standard cost card interpretation; Integrated variance investigation decisions | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C2-Q2 | P | Direct materials quantity variance | Moderate | Direct materials price and quantity variance computation; Direct labor rate and efficiency variance computation; Variable overhead spending and efficiency variance analysis; Standard cost card interpretation; Integrated variance investigation decisions | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C2-Q3 | P | Direct labor rate variance | Moderate | Direct materials price and quantity variance computation; Direct labor rate and efficiency variance computation; Variable overhead spending and efficiency variance analysis; Standard cost card interpretation; Integrated variance investigation decisions | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C2-Q4 | P | Direct labor efficiency variance | Moderate | Direct materials price and quantity variance computation; Direct labor rate and efficiency variance computation; Variable overhead spending and efficiency variance analysis; Standard cost card interpretation; Integrated variance investigation decisions | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C2-Q5 | P | Variable overhead efficiency variance | Moderate | Direct materials price and quantity variance computation; Direct labor rate and efficiency variance computation; Variable overhead spending and efficiency variance analysis; Standard cost card interpretation; Integrated variance investigation decisions | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C3-Q1 | P | Return on investment computation | Moderate | Return on investment (ROI) computation and analysis; Residual income (RI) computation and analysis; Comparison of ROI and RI for investment decisions; Investment center performance measurement; Goal congruence in decentralization | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C3-Q2 | P | Residual income computation | Moderate | Return on investment (ROI) computation and analysis; Residual income (RI) computation and analysis; Comparison of ROI and RI for investment decisions; Investment center performance measurement; Goal congruence in decentralization | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C3-Q3 | P | ROI impact of new investments | Moderate | Return on investment (ROI) computation and analysis; Residual income (RI) computation and analysis; Comparison of ROI and RI for investment decisions; Investment center performance measurement; Goal congruence in decentralization | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C3-Q4 | P | Residual income and goal congruence | Moderate | Return on investment (ROI) computation and analysis; Residual income (RI) computation and analysis; Comparison of ROI and RI for investment decisions; Investment center performance measurement; Goal congruence in decentralization | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-C3-Q5 | P | Divisional performance comparison | Moderate | Return on investment (ROI) computation and analysis; Residual income (RI) computation and analysis; Comparison of ROI and RI for investment decisions; Investment center performance measurement; Goal congruence in decentralization | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D1-Q1 | C | ABC cost pool identification | Moderate | Activity-based costing methodology and cost driver identification; Comparison of traditional costing versus ABC; ABC cost pool and driver selection; Product cost distortion analysis under traditional systems; Implementation considerations for ABC systems | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D1-Q2 | C | Traditional costing limitations | Moderate | Activity-based costing methodology and cost driver identification; Comparison of traditional costing versus ABC; ABC cost pool and driver selection; Product cost distortion analysis under traditional systems; Implementation considerations for ABC systems | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D1-Q3 | C | ABC cost driver selection | Moderate | Activity-based costing methodology and cost driver identification; Comparison of traditional costing versus ABC; ABC cost pool and driver selection; Product cost distortion analysis under traditional systems; Implementation considerations for ABC systems | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D1-Q4 | C | ABC implementation challenges | Moderate | Activity-based costing methodology and cost driver identification; Comparison of traditional costing versus ABC; ABC cost pool and driver selection; Product cost distortion analysis under traditional systems; Implementation considerations for ABC systems | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D1-Q5 | C | Traditional cost allocation with plantwide rate | Moderate | Activity-based costing methodology and cost driver identification; Comparison of traditional costing versus ABC; ABC cost pool and driver selection; Product cost distortion analysis under traditional systems; Implementation considerations for ABC systems | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D2-Q1 | C | Joint cost allocation — NRV method | Difficult | Joint cost allocation — NRV method; Joint cost allocation — physical-units method; Sell-or-process-further analysis; Joint cost concepts; Joint costing terminology | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D2-Q2 | C | Joint cost allocation — physical-units method | Difficult | Joint cost allocation — NRV method; Joint cost allocation — physical-units method; Sell-or-process-further analysis; Joint cost concepts; Joint costing terminology | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D2-Q3 | C | Sell-or-process-further analysis | Difficult | Joint cost allocation — NRV method; Joint cost allocation — physical-units method; Sell-or-process-further analysis; Joint cost concepts; Joint costing terminology | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D2-Q4 | C | Joint cost concepts | Difficult | Joint cost allocation — NRV method; Joint cost allocation — physical-units method; Sell-or-process-further analysis; Joint cost concepts; Joint costing terminology | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D2-Q5 | C | Joint costing terminology | Difficult | Joint cost allocation — NRV method; Joint cost allocation — physical-units method; Sell-or-process-further analysis; Joint cost concepts; Joint costing terminology | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D2-Q6 | C | Joint cost allocation methods | Difficult | Joint cost allocation — NRV method; Joint cost allocation — physical-units method; Sell-or-process-further analysis; Joint cost concepts; Joint costing terminology | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D3-Q1 | C | Weighted-average equivalent units | Moderate | Weighted-average equivalent unit computation; FIFO equivalent unit computation; Cost per equivalent unit and cost allocation; Process costing for multiple departments; Comparison of weighted-average and FIFO methods | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D3-Q2 | C | FIFO equivalent units | Moderate | Weighted-average equivalent unit computation; FIFO equivalent unit computation; Cost per equivalent unit and cost allocation; Process costing for multiple departments; Comparison of weighted-average and FIFO methods | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D3-Q3 | C | Weighted-average cost per equivalent unit | Moderate | Weighted-average equivalent unit computation; FIFO equivalent unit computation; Cost per equivalent unit and cost allocation; Process costing for multiple departments; Comparison of weighted-average and FIFO methods | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D3-Q4 | C | Cost allocation to completed units | Moderate | Weighted-average equivalent unit computation; FIFO equivalent unit computation; Cost per equivalent unit and cost allocation; Process costing for multiple departments; Comparison of weighted-average and FIFO methods | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-D3-Q5 | C | Method comparison — weighted-average vs FIFO | Moderate | Weighted-average equivalent unit computation; FIFO equivalent unit computation; Cost per equivalent unit and cost allocation; Process costing for multiple departments; Comparison of weighted-average and FIFO methods | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-E1-Q1 | I | IT general control categories | Moderate | IT general controls framework and components; Logical access controls; Change management controls; Computer operations controls; System development lifecycle controls | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-E1-Q2 | I | IT control remediation | Moderate | IT general controls framework and components; Logical access controls; Change management controls; Computer operations controls; System development lifecycle controls | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-E1-Q3 | I | IT control types | Moderate | IT general controls framework and components; Logical access controls; Change management controls; Computer operations controls; System development lifecycle controls | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-E1-Q4 | I | Application controls vs IT general controls | Moderate | IT general controls framework and components; Logical access controls; Change management controls; Computer operations controls; System development lifecycle controls | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-E1-Q5 | I | IT segregation of duties | Moderate | IT general controls framework and components; Logical access controls; Change management controls; Computer operations controls; System development lifecycle controls | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-E2-Q1 | I | Segregation of duties — fraud risk identification | Moderate | Segregation of duties — authorization, custody, and recordkeeping; Internal control design — preventive and detective controls; COSO internal control framework components; Fraud risk assessment in financial processes; Control activity design and implementation | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-E2-Q2 | I | Preventive vs detective controls | Moderate | Segregation of duties — authorization, custody, and recordkeeping; Internal control design — preventive and detective controls; COSO internal control framework components; Fraud risk assessment in financial processes; Control activity design and implementation | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-E2-Q3 | I | COSO internal control framework components | Moderate | Segregation of duties — authorization, custody, and recordkeeping; Internal control design — preventive and detective controls; COSO internal control framework components; Fraud risk assessment in financial processes; Control activity design and implementation | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-E2-Q4 | I | Fraud risk indicators in procurement | Moderate | Segregation of duties — authorization, custody, and recordkeeping; Internal control design — preventive and detective controls; COSO internal control framework components; Fraud risk assessment in financial processes; Control activity design and implementation | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-E2-Q5 | I | Control activity design and implementation | Moderate | Segregation of duties — authorization, custody, and recordkeeping; Internal control design — preventive and detective controls; COSO internal control framework components; Fraud risk assessment in financial processes; Control activity design and implementation | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-F1-Q1 | T | Analytics maturity levels | Moderate | Data analytics maturity levels; Data governance for analytics readiness | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-F1-Q2 | T | Diagnostic analytics | Moderate | Data analytics maturity levels; Data governance for analytics readiness | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-F1-Q3 | T | Predictive analytics | Moderate | Data analytics maturity levels; Data governance for analytics readiness | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-F1-Q4 | T | Prescriptive analytics | Moderate | Data analytics maturity levels; Data governance for analytics readiness | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-F1-Q5 | T | Data governance and analytics readiness | Moderate | Data analytics maturity levels; Data governance for analytics readiness | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-F2-Q1 | T | Master data management | Moderate | Data governance framework and principles; Data lifecycle management; Data quality dimensions and controls; Master data management; Data privacy and regulatory compliance | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-F2-Q2 | T | Data quality dimensions | Moderate | Data governance framework and principles; Data lifecycle management; Data quality dimensions and controls; Master data management; Data privacy and regulatory compliance | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-F2-Q3 | T | Metadata management | Moderate | Data governance framework and principles; Data lifecycle management; Data quality dimensions and controls; Master data management; Data privacy and regulatory compliance | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-F2-Q4 | T | Data privacy and regulatory compliance | Moderate | Data governance framework and principles; Data lifecycle management; Data quality dimensions and controls; Master data management; Data privacy and regulatory compliance | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ2-F2-Q5 | T | Data lifecycle management | Moderate | Data governance framework and principles; Data lifecycle management; Data quality dimensions and controls; Master data management; Data privacy and regulatory compliance | scored_cases2.js | 0 | 0 | — | Not Scored |
-| CBQ3-A1-Q3 | E | Lease Accounting | Moderate | Lease accounting under ASC 842 | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-A1-Q1 | E | Leases | Moderate | Lease accounting under ASC 842 | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-A1-Q4 | E | Lease Amortization | Moderate | Lease accounting under ASC 842 | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-A1-Q2 | E | Lease Classification | Moderate | Lease accounting under ASC 842 | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-A1-Q5 | E | Lease Criteria | Moderate | Lease accounting under ASC 842 | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-A2-Q1 | E | Cash Flows | Moderate | Cash Flows | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-A2-Q2 | E | Cash Flows | Moderate | Cash Flows | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-A2-Q3 | E | Cash Flows | Moderate | Cash Flows | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-A2-Q4 | E | Cash Flows | Moderate | Cash Flows | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-A2-Q5 | E | Cash Flows | Moderate | Cash Flows | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B1-Q1 | P | Cash Budgeting | Moderate | Cash Budgeting; Master Budget; Working Capital Management; Budget Types | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B1-Q2 | P | Cash Budgeting | Moderate | Cash Budgeting; Master Budget; Working Capital Management; Budget Types | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B1-Q3 | P | Master Budget | Moderate | Cash Budgeting; Master Budget; Working Capital Management; Budget Types | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B1-Q4 | P | Working Capital Management | Moderate | Cash Budgeting; Master Budget; Working Capital Management; Budget Types | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B1-Q5 | P | Budget Types | Moderate | Cash Budgeting; Master Budget; Working Capital Management; Budget Types | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B2-Q1 | P | Direct labor budget | Difficult | Direct labor budget; Manufacturing overhead budget; Overhead application rate; Overhead cost behavior; Overhead application | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B2-Q2 | P | Manufacturing overhead budget | Difficult | Direct labor budget; Manufacturing overhead budget; Overhead application rate; Overhead cost behavior; Overhead application | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B2-Q3 | P | Overhead application rate | Difficult | Direct labor budget; Manufacturing overhead budget; Overhead application rate; Overhead cost behavior; Overhead application | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B2-Q4 | P | Overhead cost behavior | Difficult | Direct labor budget; Manufacturing overhead budget; Overhead application rate; Overhead cost behavior; Overhead application | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B2-Q5 | P | Overhead application | Difficult | Direct labor budget; Manufacturing overhead budget; Overhead application rate; Overhead cost behavior; Overhead application | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B2-Q6 | P | Budget formulas | Difficult | Direct labor budget; Manufacturing overhead budget; Overhead application rate; Overhead cost behavior; Overhead application | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B3-Q1 | P | Contribution margin | Difficult | Contribution margin; Break-even analysis; Margin of safety; Target profit analysis; CVP assumptions | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B3-Q2 | P | Break-even analysis | Difficult | Contribution margin; Break-even analysis; Margin of safety; Target profit analysis; CVP assumptions | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B3-Q3 | P | Margin of safety | Difficult | Contribution margin; Break-even analysis; Margin of safety; Target profit analysis; CVP assumptions | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B3-Q4 | P | Target profit analysis | Difficult | Contribution margin; Break-even analysis; Margin of safety; Target profit analysis; CVP assumptions | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B3-Q5 | P | CVP assumptions | Difficult | Contribution margin; Break-even analysis; Margin of safety; Target profit analysis; CVP assumptions | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-B3-Q6 | P | CVP formulas | Difficult | Contribution margin; Break-even analysis; Margin of safety; Target profit analysis; CVP assumptions | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C1-Q1 | P | Balanced scorecard — financial perspective | Moderate | Balanced Scorecard Metrics | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C1-Q2 | P | Balanced scorecard — customer perspective | Moderate | Balanced Scorecard Metrics | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C1-Q3 | P | Balanced scorecard — internal business process per | Moderate | Balanced Scorecard Metrics | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C1-Q4 | P | Balanced scorecard — learning and growth perspecti | Moderate | Balanced Scorecard Metrics | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C1-Q5 | P | Leading vs lagging indicators in balanced scorecar | Moderate | Balanced Scorecard Metrics | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C2-Q2 | P | Goal congruence failure — external sourcing cost i | Moderate | Transfer Pricing | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C2-Q3 | P | Transfer pricing policy design factors | Moderate | Transfer Pricing | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C2-Q1 | P | Transfer pricing method selection — market-based | Moderate | Transfer Pricing | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C2-Q4 | P | Transfer pricing method selection — scenario match | Moderate | Transfer Pricing | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C2-Q5 | P | Goal congruence and divisional performance evaluat | Moderate | Transfer Pricing | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C3-Q1 | P | Sales volume variance for operating income | Moderate | Flexible Budget Variances | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C3-Q2 | P | Flexible budget variance computation — direct mate | Moderate | Flexible Budget Variances | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C3-Q3 | P | Interpreting flexible budget variances | Moderate | Flexible Budget Variances | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C3-Q4 | P | Variance analysis formulas and classification | Moderate | Flexible Budget Variances | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-C3-Q5 | P | Performance evaluation using flexible budgets | Moderate | Flexible Budget Variances | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D1-Q1 | C | Absorption costing unit cost | Difficult | Absorption costing unit cost; Variable costing unit cost; Income reconciliation; Costing method comparison; Variable costing classification | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D1-Q2 | C | Variable costing unit cost | Difficult | Absorption costing unit cost; Variable costing unit cost; Income reconciliation; Costing method comparison; Variable costing classification | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D1-Q3 | C | Income reconciliation | Difficult | Absorption costing unit cost; Variable costing unit cost; Income reconciliation; Costing method comparison; Variable costing classification | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D1-Q4 | C | Costing method comparison | Difficult | Absorption costing unit cost; Variable costing unit cost; Income reconciliation; Costing method comparison; Variable costing classification | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D1-Q5 | C | Variable costing classification | Difficult | Absorption costing unit cost; Variable costing unit cost; Income reconciliation; Costing method comparison; Variable costing classification | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D1-Q6 | C | Cost classification | Difficult | Absorption costing unit cost; Variable costing unit cost; Income reconciliation; Costing method comparison; Variable costing classification | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D2-Q1 | C | Predetermined overhead rate | Difficult | Predetermined overhead rate; Job cost sheet; Overhead variance; Overhead disposition; Costing system types | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D2-Q2 | C | Job cost sheet | Difficult | Predetermined overhead rate; Job cost sheet; Overhead variance; Overhead disposition; Costing system types | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D2-Q3 | C | Overhead variance | Difficult | Predetermined overhead rate; Job cost sheet; Overhead variance; Overhead disposition; Costing system types | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D2-Q4 | C | Overhead disposition | Difficult | Predetermined overhead rate; Job cost sheet; Overhead variance; Overhead disposition; Costing system types | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D2-Q5 | C | Costing system types | Difficult | Predetermined overhead rate; Job cost sheet; Overhead variance; Overhead disposition; Costing system types | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D2-Q6 | C | Job-order costing terminology | Difficult | Predetermined overhead rate; Job cost sheet; Overhead variance; Overhead disposition; Costing system types | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D3-Q1 | C | Service department cost allocation methods | Moderate | Cost Allocation (Step-Down) | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D3-Q2 | C | Allocation base selection | Moderate | Cost Allocation (Step-Down) | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D3-Q3 | C | Step-down allocation method — sequence and mechani | Moderate | Cost Allocation (Step-Down) | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D3-Q4 | C | Dual-rate versus single-rate cost allocation | Moderate | Cost Allocation (Step-Down) | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-D3-Q5 | C | Purpose and justification of cost allocations | Moderate | Cost Allocation (Step-Down) | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-E1-Q1 | I | COSO ERM 2017 — five components | Moderate | COSO Enterprise Risk Management | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-E1-Q2 | I | COSO ERM 2017 — applying components to implementat | Moderate | COSO Enterprise Risk Management | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-E1-Q3 | I | Risk response strategies — ERM Performance compone | Moderate | COSO Enterprise Risk Management | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-E1-Q4 | I | COSO ERM — Review and Revision component | Moderate | COSO Enterprise Risk Management | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-E1-Q5 | I | COSO ERM — benefits by component | Moderate | COSO Enterprise Risk Management | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-E2-Q2 | I | BC/DR governance and testing requirements | Moderate | Business Continuity and Disaster Recovery | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-E2-Q3 | I | Essential BCP components | Moderate | Business Continuity and Disaster Recovery | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-E2-Q1 | I | Disaster recovery site selection | Moderate | Business Continuity and Disaster Recovery | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-E2-Q4 | I | Matching recovery strategies to business requireme | Moderate | Business Continuity and Disaster Recovery | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-E2-Q5 | I | BC/DR governance, fiduciary duty, and regulatory c | Moderate | Business Continuity and Disaster Recovery | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-F1-Q1 | T | SDLC phases — Analysis | Easy | System Development Life Cycle (SDLC) | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-F1-Q2 | T | SDLC — testing phases | Easy | System Development Life Cycle (SDLC) | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-F1-Q3 | T | SDLC methodologies — Agile vs Waterfall | Easy | System Development Life Cycle (SDLC) | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-F1-Q4 | T | Change management in SDLC | Easy | System Development Life Cycle (SDLC) | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-F1-Q5 | T | Environment segregation in SDLC | Easy | System Development Life Cycle (SDLC) | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-F2-Q1 | T | Chart type selection based on data relationships | Moderate | Data Visualization | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-F2-Q2 | T | Avoiding misleading visualizations — 3D chart dist | Moderate | Data Visualization | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-F2-Q4 | T | Cognitive perception and pre-attentive processing  | Moderate | Data Visualization | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-F2-Q3 | T | Dashboard design principles and best practices | Moderate | Data Visualization | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ3-F2-Q5 | T | Data storytelling — matching visualization to comm | Moderate | Data Visualization | scored_cases3.js | 0 | 0 | — | Not Scored |
-| CBQ4-A1-Q1 | E | Goodwill | Moderate | Long-lived asset accounting including impairment; Intangible asset recognition and amortization | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-A1-Q2 | E | Impairment | Moderate | Long-lived asset accounting including impairment; Intangible asset recognition and amortization | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-A1-Q3 | E | Intangibles | Moderate | Long-lived asset accounting including impairment; Intangible asset recognition and amortization | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-A1-Q5 | E | Impairment | Moderate | Long-lived asset accounting including impairment; Intangible asset recognition and amortization | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-A1-Q4 | E | Intangibles | Moderate | Long-lived asset accounting including impairment; Intangible asset recognition and amortization | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-A2-Q5 | E | Contingencies | Easy | Warranties; Contingencies | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-A2-Q1 | E | Warranties | Easy | Warranties; Contingencies | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-A2-Q2 | E | Warranties | Easy | Warranties; Contingencies | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-A2-Q3 | E | Contingencies | Easy | Warranties; Contingencies | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-A2-Q4 | E | Contingencies | Easy | Warranties; Contingencies | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-B1-Q1 | P | High-Low | Moderate | High-Low; Regression; Cost Behavior | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-B1-Q2 | P | High-Low | Moderate | High-Low; Regression; Cost Behavior | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-B1-Q3 | P | Regression | Moderate | High-Low; Regression; Cost Behavior | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-B1-Q4 | P | Regression | Moderate | High-Low; Regression; Cost Behavior | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-B1-Q5 | P | Cost Behavior | Moderate | High-Low; Regression; Cost Behavior | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-C1-Q1 | P | VOH Variances | Easy | VOH Variances; FOH Variances; Overhead Variances | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-C1-Q2 | P | VOH Variances | Easy | VOH Variances; FOH Variances; Overhead Variances | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-C1-Q3 | P | FOH Variances | Easy | VOH Variances; FOH Variances; Overhead Variances | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-C1-Q4 | P | FOH Variances | Easy | VOH Variances; FOH Variances; Overhead Variances | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-C1-Q5 | P | Overhead Variances | Easy | VOH Variances; FOH Variances; Overhead Variances | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-C2-Q1 | P | ABC cost hierarchy — activity classification | Moderate | Customer Profitability Analysis | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-C2-Q2 | P | Cost driver identification in ABC | Moderate | Customer Profitability Analysis | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-C2-Q3 | P | Allocation base selection for customer profitabili | Moderate | Customer Profitability Analysis | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-C2-Q4 | P | Customer profitability analysis — interpreting res | Moderate | Customer Profitability Analysis | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-C2-Q5 | P | Strategic actions from customer profitability anal | Moderate | Customer Profitability Analysis | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D1-Q1 | C | Throughput contribution | Difficult | Throughput contribution; Optimal product mix — TOC; TOC priority ranking; Throughput accounting concepts; TOC five focusing steps | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D1-Q2 | C | Optimal product mix — TOC | Difficult | Throughput contribution; Optimal product mix — TOC; TOC priority ranking; Throughput accounting concepts; TOC five focusing steps | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D1-Q3 | C | TOC priority ranking | Difficult | Throughput contribution; Optimal product mix — TOC; TOC priority ranking; Throughput accounting concepts; TOC five focusing steps | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D1-Q4 | C | Throughput accounting concepts | Difficult | Throughput contribution; Optimal product mix — TOC; TOC priority ranking; Throughput accounting concepts; TOC five focusing steps | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D1-Q5 | C | TOC five focusing steps | Difficult | Throughput contribution; Optimal product mix — TOC; TOC priority ranking; Throughput accounting concepts; TOC five focusing steps | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D1-Q6 | C | TOC terminology | Difficult | Throughput contribution; Optimal product mix — TOC; TOC priority ranking; Throughput accounting concepts; TOC five focusing steps | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D2-Q1 | C | Inventory carrying cost — JIT | Difficult | Inventory carrying cost — JIT; JIT cost savings; Setup reduction — SMED; JIT system characteristics; Kanban | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D2-Q2 | C | JIT cost savings | Difficult | Inventory carrying cost — JIT; JIT cost savings; Setup reduction — SMED; JIT system characteristics; Kanban | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D2-Q3 | C | Setup reduction — SMED | Difficult | Inventory carrying cost — JIT; JIT cost savings; Setup reduction — SMED; JIT system characteristics; Kanban | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D2-Q4 | C | JIT system characteristics | Difficult | Inventory carrying cost — JIT; JIT cost savings; Setup reduction — SMED; JIT system characteristics; Kanban | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D2-Q5 | C | Kanban | Difficult | Inventory carrying cost — JIT; JIT cost savings; Setup reduction — SMED; JIT system characteristics; Kanban | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D2-Q6 | C | Lean terminology | Difficult | Inventory carrying cost — JIT; JIT cost savings; Setup reduction — SMED; JIT system characteristics; Kanban | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D3-Q2 | C | Fixed overhead volume variance under different den | Moderate | Capacity Management Concepts | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D3-Q3 | C | Capacity measure implications on financial reporti | Moderate | Capacity Management Concepts | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D3-Q1 | C | Capacity denominator level selection for fixed ove | Moderate | Capacity Management Concepts | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D3-Q4 | C | Capacity management strategies — theory of constra | Moderate | Capacity Management Concepts | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-D3-Q5 | C | Capacity policy — balancing accounting accuracy wi | Moderate | Capacity Management Concepts | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E1-Q1 | I | COSO — Control Environment component | Moderate | COSO Internal Control Framework | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E1-Q2 | I | COSO — Risk Assessment component and change assess | Moderate | COSO Internal Control Framework | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E1-Q3 | I | COSO — Control Activities component design | Moderate | COSO Internal Control Framework | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E1-Q4 | I | COSO — Information and Communication component | Moderate | COSO Internal Control Framework | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E1-Q5 | I | COSO — Monitoring Activities component | Moderate | COSO Internal Control Framework | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E2-Q1 | I | Input control matching to data entry scenarios | Moderate | Application IT Controls | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E2-Q2 | I | Management override of controls and control effect | Moderate | Application IT Controls | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E2-Q3 | I | Processing controls — types and applications | Moderate | Application IT Controls | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E2-Q4 | I | Classifying application controls by category | Moderate | Application IT Controls | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E2-Q5 | I | Segregation of duties in automated systems | Moderate | Application IT Controls | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E3-Q1 | I | FCPA facilitating payments exception | Moderate | Foreign Corrupt Practices Act (FCPA) | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E3-Q2 | I | Third-party intermediary risk under FCPA | Moderate | Foreign Corrupt Practices Act (FCPA) | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E3-Q3 | I | FCPA compliance program strengthening | Moderate | Foreign Corrupt Practices Act (FCPA) | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E3-Q4 | I | FCPA compliance responses by risk scenario | Moderate | Foreign Corrupt Practices Act (FCPA) | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-E3-Q5 | I | FCPA accounting provisions and internal control re | Moderate | Foreign Corrupt Practices Act (FCPA) | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F1-Q1 | T | Cloud service model selection — shared responsibil | Moderate | Cloud Computing Models | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F1-Q2 | T | Cloud economics and cost-benefit analysis | Moderate | Cloud Computing Models | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F1-Q3 | T | Cloud security, compliance, and vendor risk manage | Moderate | Cloud Computing Models | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F1-Q4 | T | Cloud computing accounting — capitalization vs exp | Moderate | Cloud Computing Models | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F1-Q5 | T | Cloud deployment models — public, private, communi | Moderate | Cloud Computing Models | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F2-Q1 | T | Artificial Intelligence & ML | Moderate | Artificial Intelligence & ML | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F2-Q2 | T | Artificial Intelligence & ML | Moderate | Artificial Intelligence & ML | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F2-Q3 | T | Artificial Intelligence & ML | Moderate | Artificial Intelligence & ML | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F2-Q4 | T | Artificial Intelligence & ML | Moderate | Artificial Intelligence & ML | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F2-Q5 | T | Artificial Intelligence & ML | Moderate | Artificial Intelligence & ML | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F3-Q1 | T | Data Privacy & Cryptography | Moderate | Data Privacy & Cryptography | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F3-Q2 | T | Data Privacy & Cryptography | Moderate | Data Privacy & Cryptography | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F3-Q3 | T | Data Privacy & Cryptography | Moderate | Data Privacy & Cryptography | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F3-Q4 | T | Data Privacy & Cryptography | Moderate | Data Privacy & Cryptography | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-F3-Q5 | T | Data Privacy & Cryptography | Moderate | Data Privacy & Cryptography | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-B2-Q1 | P | Inventory budgeting | Moderate | Inventory budgeting; Receivables budgeting; Payables budgeting; Cash budgeting; Financial budget relationships | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-B2-Q2 | P | Receivables budgeting | Moderate | Inventory budgeting; Receivables budgeting; Payables budgeting; Cash budgeting; Financial budget relationships | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-B2-Q3 | P | Payables budgeting | Moderate | Inventory budgeting; Receivables budgeting; Payables budgeting; Cash budgeting; Financial budget relationships | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-B2-Q4 | P | Cash budgeting | Moderate | Inventory budgeting; Receivables budgeting; Payables budgeting; Cash budgeting; Financial budget relationships | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-B2-Q5 | P | Financial budget relationships | Moderate | Inventory budgeting; Receivables budgeting; Payables budgeting; Cash budgeting; Financial budget relationships | scored_cases4.js | 0 | 0 | — | Not Scored |
-| CBQ4-B2-Q6 | P | Financial budget preparation | Moderate | Inventory budgeting; Receivables budgeting; Payables budgeting; Cash budgeting; Financial budget relationships | scored_cases4.js | 0 | 0 | — | Not Scored |
+| CBQ-A1-Q1 | E | Revenue recognition | Moderate | Revenue recognition under ASC 606; Liability recognition and measurement; Statement of cash flows preparation and analysis; Deferred tax accounting (ASC 740) | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A1-Q2 | E | Contract liabilities | Moderate | Revenue recognition under ASC 606; Liability recognition and measurement; Statement of cash flows preparation and analysis; Deferred tax accounting (ASC 740) | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A1-Q3 | E | Revenue recognition | Moderate | Revenue recognition under ASC 606; Liability recognition and measurement; Statement of cash flows preparation and analysis; Deferred tax accounting (ASC 740) | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A1-Q4 | E | Statement of cash flows | Moderate | Revenue recognition under ASC 606; Liability recognition and measurement; Statement of cash flows preparation and analysis; Deferred tax accounting (ASC 740) | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A1-Q5 | E | Deferred taxes | Moderate | Revenue recognition under ASC 606; Liability recognition and measurement; Statement of cash flows preparation and analysis; Deferred tax accounting (ASC 740) | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A1-Q6 | E | External reporting judgment | Moderate | Revenue recognition under ASC 606; Liability recognition and measurement; Statement of cash flows preparation and analysis; Deferred tax accounting (ASC 740) | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A2-Q1 | E | Consolidations | Difficult | Consolidations; Impairment; OCI; Financial reporting effects; External reporting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A2-Q2 | E | Impairment | Difficult | Consolidations; Impairment; OCI; Financial reporting effects; External reporting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A2-Q3 | E | OCI | Difficult | Consolidations; Impairment; OCI; Financial reporting effects; External reporting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A2-Q4 | E | Consolidations | Difficult | Consolidations; Impairment; OCI; Financial reporting effects; External reporting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A2-Q5 | E | Financial reporting effects | Difficult | Consolidations; Impairment; OCI; Financial reporting effects; External reporting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A2-Q6 | E | External reporting | Difficult | Consolidations; Impairment; OCI; Financial reporting effects; External reporting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A3-Q1 | E | Inventory measurement | Moderate | Inventory measurement; Asset retirement obligations; Subsequent events; Cash classification; Statement of cash flows | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A3-Q2 | E | Asset retirement obligations | Moderate | Inventory measurement; Asset retirement obligations; Subsequent events; Cash classification; Statement of cash flows | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A3-Q3 | E | Subsequent events | Moderate | Inventory measurement; Asset retirement obligations; Subsequent events; Cash classification; Statement of cash flows | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A3-Q4 | E | Cash classification | Moderate | Inventory measurement; Asset retirement obligations; Subsequent events; Cash classification; Statement of cash flows | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A3-Q5 | E | Statement of cash flows | Moderate | Inventory measurement; Asset retirement obligations; Subsequent events; Cash classification; Statement of cash flows | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-A3-Q6 | E | External reporting | Moderate | Inventory measurement; Asset retirement obligations; Subsequent events; Cash classification; Statement of cash flows | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-A2-Q1 | E | Inventory | Moderate | Inventory | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-A2-Q2 | E | Inventory | Moderate | Inventory | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-A2-Q3 | E | Inventory | Moderate | Inventory | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-A2-Q4 | E | Inventory | Moderate | Inventory | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-A2-Q5 | E | Inventory | Moderate | Inventory | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B1-Q1 | P | Production budget | Moderate | Production budget; Direct materials budget; Cash budget; Budgeting judgment | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B1-Q2 | P | Production budget | Moderate | Production budget; Direct materials budget; Cash budget; Budgeting judgment | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B1-Q3 | P | Direct materials budget | Moderate | Production budget; Direct materials budget; Cash budget; Budgeting judgment | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B1-Q4 | P | Cash budget | Moderate | Production budget; Direct materials budget; Cash budget; Budgeting judgment | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B1-Q5 | P | Cash budget | Moderate | Production budget; Direct materials budget; Cash budget; Budgeting judgment | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B1-Q6 | P | Budgeting judgment | Moderate | Production budget; Direct materials budget; Cash budget; Budgeting judgment | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B2-Q1 | P | Forecasting | Difficult | Forecasting; Sensitivity analysis; Forecasting indicators; Regression; Rolling forecast | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B2-Q2 | P | Sensitivity analysis | Difficult | Forecasting; Sensitivity analysis; Forecasting indicators; Regression; Rolling forecast | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B2-Q3 | P | Forecasting indicators | Difficult | Forecasting; Sensitivity analysis; Forecasting indicators; Regression; Rolling forecast | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B2-Q4 | P | Regression | Difficult | Forecasting; Sensitivity analysis; Forecasting indicators; Regression; Rolling forecast | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B2-Q5 | P | Rolling forecast | Difficult | Forecasting; Sensitivity analysis; Forecasting indicators; Regression; Rolling forecast | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B2-Q6 | P | Forecasting | Difficult | Forecasting; Sensitivity analysis; Forecasting indicators; Regression; Rolling forecast | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B3-Q1 | P | Expected value | Moderate | Expected value; Forecasting; Cash collections; Cash budget; Forecast assumptions | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B3-Q2 | P | Forecasting | Moderate | Expected value; Forecasting; Cash collections; Cash budget; Forecast assumptions | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B3-Q3 | P | Cash collections | Moderate | Expected value; Forecasting; Cash collections; Cash budget; Forecast assumptions | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B3-Q4 | P | Cash budget | Moderate | Expected value; Forecasting; Cash collections; Cash budget; Forecast assumptions | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B3-Q5 | P | Cash budget | Moderate | Expected value; Forecasting; Cash collections; Cash budget; Forecast assumptions | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-B3-Q6 | P | Forecast assumptions | Moderate | Expected value; Forecasting; Cash collections; Cash budget; Forecast assumptions | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B1-Q1 | P | Production Budget | Easy | Production Budget; Materials Budget; Budget sequence | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B1-Q2 | P | Production Budget | Easy | Production Budget; Materials Budget; Budget sequence | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B1-Q3 | P | Materials Budget | Easy | Production Budget; Materials Budget; Budget sequence | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B1-Q4 | P | Materials Budget | Easy | Production Budget; Materials Budget; Budget sequence | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B1-Q5 | P | Budget sequence | Easy | Production Budget; Materials Budget; Budget sequence | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C1-Q1 | P | Material price variance | Difficult | Material price variance; Material quantity variance; Labor efficiency variance; Labor rate variance; Flexible budgeting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C1-Q2 | P | Material quantity variance | Difficult | Material price variance; Material quantity variance; Labor efficiency variance; Labor rate variance; Flexible budgeting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C1-Q3 | P | Labor efficiency variance | Difficult | Material price variance; Material quantity variance; Labor efficiency variance; Labor rate variance; Flexible budgeting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C1-Q4 | P | Labor rate variance | Difficult | Material price variance; Material quantity variance; Labor efficiency variance; Labor rate variance; Flexible budgeting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C1-Q5 | P | Flexible budgeting | Difficult | Material price variance; Material quantity variance; Labor efficiency variance; Labor rate variance; Flexible budgeting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C1-Q6 | P | Responsibility accounting | Difficult | Material price variance; Material quantity variance; Labor efficiency variance; Labor rate variance; Flexible budgeting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C2-Q1 | P | Residual income | Difficult | Residual income; ROI; Transfer pricing; Performance measurement; Performance management | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C2-Q2 | P | ROI | Difficult | Residual income; ROI; Transfer pricing; Performance measurement; Performance management | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C2-Q3 | P | Transfer pricing | Difficult | Residual income; ROI; Transfer pricing; Performance measurement; Performance management | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C2-Q4 | P | Performance measurement | Difficult | Residual income; ROI; Transfer pricing; Performance measurement; Performance management | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C2-Q5 | P | Transfer pricing | Difficult | Residual income; ROI; Transfer pricing; Performance measurement; Performance management | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C2-Q6 | P | Performance management | Difficult | Residual income; ROI; Transfer pricing; Performance measurement; Performance management | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C3-Q1 | P | Performance variance | Difficult | Performance variance; Nonfinancial measures; Balanced scorecard; Leading indicators; Responsibility accounting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C3-Q2 | P | Nonfinancial measures | Difficult | Performance variance; Nonfinancial measures; Balanced scorecard; Leading indicators; Responsibility accounting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C3-Q3 | P | Balanced scorecard | Difficult | Performance variance; Nonfinancial measures; Balanced scorecard; Leading indicators; Responsibility accounting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C3-Q4 | P | Leading indicators | Difficult | Performance variance; Nonfinancial measures; Balanced scorecard; Leading indicators; Responsibility accounting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C3-Q5 | P | Balanced scorecard | Difficult | Performance variance; Nonfinancial measures; Balanced scorecard; Leading indicators; Responsibility accounting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-C3-Q6 | P | Responsibility accounting | Difficult | Performance variance; Nonfinancial measures; Balanced scorecard; Leading indicators; Responsibility accounting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C1-Q1 | P | Flexible budget variance decomposition | Moderate | Flexible budget variance analysis; Sales volume and price variance computation; Efficiency and spending variance interpretation; Variance investigation decisions; Performance reporting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C1-Q2 | P | Variance interpretation and investigation | Moderate | Flexible budget variance analysis; Sales volume and price variance computation; Efficiency and spending variance interpretation; Variance investigation decisions; Performance reporting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C1-Q3 | P | Flexible budget formulas | Moderate | Flexible budget variance analysis; Sales volume and price variance computation; Efficiency and spending variance interpretation; Variance investigation decisions; Performance reporting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C1-Q4 | P | Variance-driven management decisions | Moderate | Flexible budget variance analysis; Sales volume and price variance computation; Efficiency and spending variance interpretation; Variance investigation decisions; Performance reporting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C1-Q5 | P | Variance responsibility accounting | Moderate | Flexible budget variance analysis; Sales volume and price variance computation; Efficiency and spending variance interpretation; Variance investigation decisions; Performance reporting | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C2-Q1 | P | Direct materials price variance | Moderate | Direct materials price and quantity variance computation; Direct labor rate and efficiency variance computation; Variable overhead spending and efficiency variance analysis; Standard cost card interpretation; Integrated variance investigation decisions | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C2-Q2 | P | Direct materials quantity variance | Moderate | Direct materials price and quantity variance computation; Direct labor rate and efficiency variance computation; Variable overhead spending and efficiency variance analysis; Standard cost card interpretation; Integrated variance investigation decisions | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C2-Q3 | P | Direct labor rate variance | Moderate | Direct materials price and quantity variance computation; Direct labor rate and efficiency variance computation; Variable overhead spending and efficiency variance analysis; Standard cost card interpretation; Integrated variance investigation decisions | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C2-Q4 | P | Direct labor efficiency variance | Moderate | Direct materials price and quantity variance computation; Direct labor rate and efficiency variance computation; Variable overhead spending and efficiency variance analysis; Standard cost card interpretation; Integrated variance investigation decisions | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C2-Q5 | P | Variable overhead efficiency variance | Moderate | Direct materials price and quantity variance computation; Direct labor rate and efficiency variance computation; Variable overhead spending and efficiency variance analysis; Standard cost card interpretation; Integrated variance investigation decisions | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-D1-Q1 | C | Activity-based costing | Difficult | Activity-based costing; Quality costs; ABC distortion; ABC | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-D1-Q2 | C | Quality costs | Difficult | Activity-based costing; Quality costs; ABC distortion; ABC | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-D1-Q3 | C | ABC distortion | Difficult | Activity-based costing; Quality costs; ABC distortion; ABC | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-D1-Q4 | C | Quality costs | Difficult | Activity-based costing; Quality costs; ABC distortion; ABC | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-D1-Q5 | C | ABC | Difficult | Activity-based costing; Quality costs; ABC distortion; ABC | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-D1-Q6 | C | Quality costs | Difficult | Activity-based costing; Quality costs; ABC distortion; ABC | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-D2-Q1 | C | Process costing | Difficult | Process costing; Theory of constraints; Lean operations; Cost management | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-D2-Q2 | C | Process costing | Difficult | Process costing; Theory of constraints; Lean operations; Cost management | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-D2-Q3 | C | Theory of constraints | Difficult | Process costing; Theory of constraints; Lean operations; Cost management | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-D2-Q4 | C | Lean operations | Difficult | Process costing; Theory of constraints; Lean operations; Cost management | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-D2-Q5 | C | Process costing | Difficult | Process costing; Theory of constraints; Lean operations; Cost management | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-D2-Q6 | C | Cost management | Difficult | Process costing; Theory of constraints; Lean operations; Cost management | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D1-Q1 | C | ABC cost pool identification | Moderate | Activity-based costing methodology and cost driver identification; Comparison of traditional costing versus ABC; ABC cost pool and driver selection; Product cost distortion analysis under traditional systems; Implementation considerations for ABC systems | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D1-Q2 | C | Traditional costing limitations | Moderate | Activity-based costing methodology and cost driver identification; Comparison of traditional costing versus ABC; ABC cost pool and driver selection; Product cost distortion analysis under traditional systems; Implementation considerations for ABC systems | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D1-Q3 | C | ABC cost driver selection | Moderate | Activity-based costing methodology and cost driver identification; Comparison of traditional costing versus ABC; ABC cost pool and driver selection; Product cost distortion analysis under traditional systems; Implementation considerations for ABC systems | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D1-Q4 | C | ABC implementation challenges | Moderate | Activity-based costing methodology and cost driver identification; Comparison of traditional costing versus ABC; ABC cost pool and driver selection; Product cost distortion analysis under traditional systems; Implementation considerations for ABC systems | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D1-Q5 | C | Traditional cost allocation with plantwide rate | Moderate | Activity-based costing methodology and cost driver identification; Comparison of traditional costing versus ABC; ABC cost pool and driver selection; Product cost distortion analysis under traditional systems; Implementation considerations for ABC systems | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D2-Q1 | C | Joint cost allocation — NRV method | Difficult | Joint cost allocation — NRV method; Joint cost allocation — physical-units method; Sell-or-process-further analysis; Joint cost concepts; Joint costing terminology | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D2-Q2 | C | Joint cost allocation — physical-units method | Difficult | Joint cost allocation — NRV method; Joint cost allocation — physical-units method; Sell-or-process-further analysis; Joint cost concepts; Joint costing terminology | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D2-Q3 | C | Sell-or-process-further analysis | Difficult | Joint cost allocation — NRV method; Joint cost allocation — physical-units method; Sell-or-process-further analysis; Joint cost concepts; Joint costing terminology | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D2-Q4 | C | Joint cost concepts | Difficult | Joint cost allocation — NRV method; Joint cost allocation — physical-units method; Sell-or-process-further analysis; Joint cost concepts; Joint costing terminology | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D2-Q5 | C | Joint costing terminology | Difficult | Joint cost allocation — NRV method; Joint cost allocation — physical-units method; Sell-or-process-further analysis; Joint cost concepts; Joint costing terminology | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D2-Q6 | C | Joint cost allocation methods | Difficult | Joint cost allocation — NRV method; Joint cost allocation — physical-units method; Sell-or-process-further analysis; Joint cost concepts; Joint costing terminology | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D3-Q1 | C | Weighted-average equivalent units | Moderate | Weighted-average equivalent unit computation; FIFO equivalent unit computation; Cost per equivalent unit and cost allocation; Process costing for multiple departments; Comparison of weighted-average and FIFO methods | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D3-Q2 | C | FIFO equivalent units | Moderate | Weighted-average equivalent unit computation; FIFO equivalent unit computation; Cost per equivalent unit and cost allocation; Process costing for multiple departments; Comparison of weighted-average and FIFO methods | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D3-Q3 | C | Weighted-average cost per equivalent unit | Moderate | Weighted-average equivalent unit computation; FIFO equivalent unit computation; Cost per equivalent unit and cost allocation; Process costing for multiple departments; Comparison of weighted-average and FIFO methods | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D3-Q4 | C | Cost allocation to completed units | Moderate | Weighted-average equivalent unit computation; FIFO equivalent unit computation; Cost per equivalent unit and cost allocation; Process costing for multiple departments; Comparison of weighted-average and FIFO methods | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-D3-Q5 | C | Method comparison — weighted-average vs FIFO | Moderate | Weighted-average equivalent unit computation; FIFO equivalent unit computation; Cost per equivalent unit and cost allocation; Process costing for multiple departments; Comparison of weighted-average and FIFO methods | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-E1-Q1 | I | Segregation of duties | Difficult | Segregation of duties; Control activities; Deficiency evaluation; COSO limitations; Control classification | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-E1-Q2 | I | Control activities | Difficult | Segregation of duties; Control activities; Deficiency evaluation; COSO limitations; Control classification | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-E1-Q3 | I | Deficiency evaluation | Difficult | Segregation of duties; Control activities; Deficiency evaluation; COSO limitations; Control classification | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-E1-Q4 | I | COSO limitations | Difficult | Segregation of duties; Control activities; Deficiency evaluation; COSO limitations; Control classification | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-E1-Q5 | I | Control classification | Difficult | Segregation of duties; Control activities; Deficiency evaluation; COSO limitations; Control classification | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-E1-Q6 | I | SOX evidence | Difficult | Segregation of duties; Control activities; Deficiency evaluation; COSO limitations; Control classification | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-E2-Q1 | I | Access controls | Difficult | Access controls; Access review; IT controls; Change management; ITGC risk | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-E2-Q2 | I | Access review | Difficult | Access controls; Access review; IT controls; Change management; ITGC risk | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-E2-Q3 | I | IT controls | Difficult | Access controls; Access review; IT controls; Change management; ITGC risk | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-E2-Q4 | I | Change management | Difficult | Access controls; Access review; IT controls; Change management; ITGC risk | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-E2-Q5 | I | ITGC risk | Difficult | Access controls; Access review; IT controls; Change management; ITGC risk | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-E2-Q6 | I | Monitoring | Difficult | Access controls; Access review; IT controls; Change management; ITGC risk | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-F2-Q1 | I | RPA benefits | Difficult | RPA benefits; Exception analytics; Cybersecurity controls; Automation governance; Analytics governance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-F2-Q2 | I | Exception analytics | Difficult | RPA benefits; Exception analytics; Cybersecurity controls; Automation governance; Analytics governance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-F2-Q3 | I | Cybersecurity controls | Difficult | RPA benefits; Exception analytics; Cybersecurity controls; Automation governance; Analytics governance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-F2-Q4 | I | Automation governance | Difficult | RPA benefits; Exception analytics; Cybersecurity controls; Automation governance; Analytics governance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-F2-Q5 | I | Analytics governance | Difficult | RPA benefits; Exception analytics; Cybersecurity controls; Automation governance; Analytics governance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-F2-Q6 | I | Technology controls | Difficult | RPA benefits; Exception analytics; Cybersecurity controls; Automation governance; Analytics governance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-E1-Q1 | I | IT general control categories | Moderate | IT general controls framework and components; Logical access controls; Change management controls; Computer operations controls; System development lifecycle controls | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-E1-Q2 | I | IT control remediation | Moderate | IT general controls framework and components; Logical access controls; Change management controls; Computer operations controls; System development lifecycle controls | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-E1-Q3 | I | IT control types | Moderate | IT general controls framework and components; Logical access controls; Change management controls; Computer operations controls; System development lifecycle controls | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-E1-Q4 | I | Application controls vs IT general controls | Moderate | IT general controls framework and components; Logical access controls; Change management controls; Computer operations controls; System development lifecycle controls | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-E1-Q5 | I | IT segregation of duties | Moderate | IT general controls framework and components; Logical access controls; Change management controls; Computer operations controls; System development lifecycle controls | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-F1-Q1 | T | Data quality | Difficult | Data quality; Data governance; Analytics types; Data lineage; Analytics governance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-F1-Q2 | T | Data governance | Difficult | Data quality; Data governance; Analytics types; Data lineage; Analytics governance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-F1-Q3 | T | Data quality | Difficult | Data quality; Data governance; Analytics types; Data lineage; Analytics governance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-F1-Q4 | T | Analytics types | Difficult | Data quality; Data governance; Analytics types; Data lineage; Analytics governance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-F1-Q5 | T | Data lineage | Difficult | Data quality; Data governance; Analytics types; Data lineage; Analytics governance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ-F1-Q6 | T | Analytics governance | Difficult | Data quality; Data governance; Analytics types; Data lineage; Analytics governance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-F1-Q1 | T | Analytics maturity levels | Moderate | Data analytics maturity levels; Data governance for analytics readiness | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-F1-Q2 | T | Diagnostic analytics | Moderate | Data analytics maturity levels; Data governance for analytics readiness | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-F1-Q3 | T | Predictive analytics | Moderate | Data analytics maturity levels; Data governance for analytics readiness | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-F1-Q4 | T | Prescriptive analytics | Moderate | Data analytics maturity levels; Data governance for analytics readiness | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-F1-Q5 | T | Data governance and analytics readiness | Moderate | Data analytics maturity levels; Data governance for analytics readiness | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-F2-Q1 | T | Master data management | Moderate | Data governance framework and principles; Data lifecycle management; Data quality dimensions and controls; Master data management; Data privacy and regulatory compliance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-F2-Q2 | T | Data quality dimensions | Moderate | Data governance framework and principles; Data lifecycle management; Data quality dimensions and controls; Master data management; Data privacy and regulatory compliance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-F2-Q3 | T | Metadata management | Moderate | Data governance framework and principles; Data lifecycle management; Data quality dimensions and controls; Master data management; Data privacy and regulatory compliance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-F2-Q4 | T | Data privacy and regulatory compliance | Moderate | Data governance framework and principles; Data lifecycle management; Data quality dimensions and controls; Master data management; Data privacy and regulatory compliance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-F2-Q5 | T | Data lifecycle management | Moderate | Data governance framework and principles; Data lifecycle management; Data quality dimensions and controls; Master data management; Data privacy and regulatory compliance | case_pack_1_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-A3-Q1 | E | ASC 606 | Moderate | Revenue recognition under ASC 606; Inventory valuation methods (FIFO, LIFO, weighted average) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-A3-Q2 | E | Receivables | Moderate | Revenue recognition under ASC 606; Inventory valuation methods (FIFO, LIFO, weighted average) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-A3-Q3 | E | Revenue | Moderate | Revenue recognition under ASC 606; Inventory valuation methods (FIFO, LIFO, weighted average) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-A3-Q4 | E | Receivables | Moderate | Revenue recognition under ASC 606; Inventory valuation methods (FIFO, LIFO, weighted average) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-A3-Q5 | E | Receivables | Moderate | Revenue recognition under ASC 606; Inventory valuation methods (FIFO, LIFO, weighted average) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A1-Q1 | E | Leases | Moderate | Lease accounting under ASC 842 | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A1-Q2 | E | Lease Classification | Moderate | Lease accounting under ASC 842 | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A1-Q3 | E | Lease Accounting | Moderate | Lease accounting under ASC 842 | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A1-Q4 | E | Lease Amortization | Moderate | Lease accounting under ASC 842 | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A1-Q5 | E | Lease Criteria | Moderate | Lease accounting under ASC 842 | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A2-Q1 | E | Cash Flows | Moderate | Cash Flows | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A2-Q2 | E | Cash Flows | Moderate | Cash Flows | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A2-Q3 | E | Cash Flows | Moderate | Cash Flows | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A2-Q4 | E | Cash Flows | Moderate | Cash Flows | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-A2-Q5 | E | Cash Flows | Moderate | Cash Flows | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-A1-Q1 | E | Goodwill | Moderate | Long-lived asset accounting including impairment; Intangible asset recognition and amortization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-A1-Q2 | E | Impairment | Moderate | Long-lived asset accounting including impairment; Intangible asset recognition and amortization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-A1-Q3 | E | Intangibles | Moderate | Long-lived asset accounting including impairment; Intangible asset recognition and amortization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-A1-Q4 | E | Intangibles | Moderate | Long-lived asset accounting including impairment; Intangible asset recognition and amortization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-A1-Q5 | E | Impairment | Moderate | Long-lived asset accounting including impairment; Intangible asset recognition and amortization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B2-Q1 | P | Cash collections | Difficult | Cash collections; Cash disbursements; Cash budget; Cash budget financing; Cash budget analysis | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B2-Q2 | P | Cash disbursements | Difficult | Cash collections; Cash disbursements; Cash budget; Cash budget financing; Cash budget analysis | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B2-Q3 | P | Cash budget | Difficult | Cash collections; Cash disbursements; Cash budget; Cash budget financing; Cash budget analysis | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B2-Q4 | P | Cash budget financing | Difficult | Cash collections; Cash disbursements; Cash budget; Cash budget financing; Cash budget analysis | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B2-Q5 | P | Cash budget analysis | Difficult | Cash collections; Cash disbursements; Cash budget; Cash budget financing; Cash budget analysis | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B2-Q6 | P | Cash budget management | Difficult | Cash collections; Cash disbursements; Cash budget; Cash budget financing; Cash budget analysis | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B3-Q1 | P | Sales forecasting | Difficult | Sales forecasting; Revenue budgeting; Forecasting methods; Cash collection analysis | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B3-Q2 | P | Sales forecasting | Difficult | Sales forecasting; Revenue budgeting; Forecasting methods; Cash collection analysis | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B3-Q3 | P | Revenue budgeting | Difficult | Sales forecasting; Revenue budgeting; Forecasting methods; Cash collection analysis | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B3-Q4 | P | Forecasting methods | Difficult | Sales forecasting; Revenue budgeting; Forecasting methods; Cash collection analysis | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B3-Q5 | P | Cash collection analysis | Difficult | Sales forecasting; Revenue budgeting; Forecasting methods; Cash collection analysis | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-B3-Q6 | P | Forecasting methods | Difficult | Sales forecasting; Revenue budgeting; Forecasting methods; Cash collection analysis | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B1-Q1 | P | Cash Budgeting | Moderate | Cash Budgeting; Master Budget; Working Capital Management; Budget Types | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B1-Q2 | P | Cash Budgeting | Moderate | Cash Budgeting; Master Budget; Working Capital Management; Budget Types | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B1-Q3 | P | Master Budget | Moderate | Cash Budgeting; Master Budget; Working Capital Management; Budget Types | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B1-Q4 | P | Working Capital Management | Moderate | Cash Budgeting; Master Budget; Working Capital Management; Budget Types | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B1-Q5 | P | Budget Types | Moderate | Cash Budgeting; Master Budget; Working Capital Management; Budget Types | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B2-Q1 | P | Direct labor budget | Difficult | Direct labor budget; Manufacturing overhead budget; Overhead application rate; Overhead cost behavior; Overhead application | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B2-Q2 | P | Manufacturing overhead budget | Difficult | Direct labor budget; Manufacturing overhead budget; Overhead application rate; Overhead cost behavior; Overhead application | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B2-Q3 | P | Overhead application rate | Difficult | Direct labor budget; Manufacturing overhead budget; Overhead application rate; Overhead cost behavior; Overhead application | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B2-Q4 | P | Overhead cost behavior | Difficult | Direct labor budget; Manufacturing overhead budget; Overhead application rate; Overhead cost behavior; Overhead application | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B2-Q5 | P | Overhead application | Difficult | Direct labor budget; Manufacturing overhead budget; Overhead application rate; Overhead cost behavior; Overhead application | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B2-Q6 | P | Budget formulas | Difficult | Direct labor budget; Manufacturing overhead budget; Overhead application rate; Overhead cost behavior; Overhead application | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C3-Q1 | P | Return on investment computation | Moderate | Return on investment (ROI) computation and analysis; Residual income (RI) computation and analysis; Comparison of ROI and RI for investment decisions; Investment center performance measurement; Goal congruence in decentralization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C3-Q2 | P | Residual income computation | Moderate | Return on investment (ROI) computation and analysis; Residual income (RI) computation and analysis; Comparison of ROI and RI for investment decisions; Investment center performance measurement; Goal congruence in decentralization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C3-Q3 | P | ROI impact of new investments | Moderate | Return on investment (ROI) computation and analysis; Residual income (RI) computation and analysis; Comparison of ROI and RI for investment decisions; Investment center performance measurement; Goal congruence in decentralization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C3-Q4 | P | Residual income and goal congruence | Moderate | Return on investment (ROI) computation and analysis; Residual income (RI) computation and analysis; Comparison of ROI and RI for investment decisions; Investment center performance measurement; Goal congruence in decentralization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-C3-Q5 | P | Divisional performance comparison | Moderate | Return on investment (ROI) computation and analysis; Residual income (RI) computation and analysis; Comparison of ROI and RI for investment decisions; Investment center performance measurement; Goal congruence in decentralization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C1-Q1 | P | Balanced scorecard — financial perspective | Moderate | Balanced Scorecard Metrics | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C1-Q2 | P | Balanced scorecard — customer perspective | Moderate | Balanced Scorecard Metrics | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C1-Q3 | P | Balanced scorecard — internal business process per | Moderate | Balanced Scorecard Metrics | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C1-Q4 | P | Balanced scorecard — learning and growth perspecti | Moderate | Balanced Scorecard Metrics | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C1-Q5 | P | Leading vs lagging indicators in balanced scorecar | Moderate | Balanced Scorecard Metrics | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C2-Q1 | P | Transfer pricing method selection — market-based | Moderate | Transfer Pricing | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C2-Q2 | P | Goal congruence failure — external sourcing cost i | Moderate | Transfer Pricing | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C2-Q3 | P | Transfer pricing policy design factors | Moderate | Transfer Pricing | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C2-Q4 | P | Transfer pricing method selection — scenario match | Moderate | Transfer Pricing | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C2-Q5 | P | Goal congruence and divisional performance evaluat | Moderate | Transfer Pricing | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C3-Q1 | P | Sales volume variance for operating income | Moderate | Flexible Budget Variances | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C3-Q2 | P | Flexible budget variance computation — direct mate | Moderate | Flexible Budget Variances | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C3-Q3 | P | Interpreting flexible budget variances | Moderate | Flexible Budget Variances | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C3-Q4 | P | Variance analysis formulas and classification | Moderate | Flexible Budget Variances | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-C3-Q5 | P | Performance evaluation using flexible budgets | Moderate | Flexible Budget Variances | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-C1-Q1 | P | VOH Variances | Easy | VOH Variances; FOH Variances; Overhead Variances | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-C1-Q2 | P | VOH Variances | Easy | VOH Variances; FOH Variances; Overhead Variances | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-C1-Q3 | P | FOH Variances | Easy | VOH Variances; FOH Variances; Overhead Variances | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-C1-Q4 | P | FOH Variances | Easy | VOH Variances; FOH Variances; Overhead Variances | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-C1-Q5 | P | Overhead Variances | Easy | VOH Variances; FOH Variances; Overhead Variances | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D1-Q1 | C | Absorption costing unit cost | Difficult | Absorption costing unit cost; Variable costing unit cost; Income reconciliation; Costing method comparison; Variable costing classification | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D1-Q2 | C | Variable costing unit cost | Difficult | Absorption costing unit cost; Variable costing unit cost; Income reconciliation; Costing method comparison; Variable costing classification | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D1-Q3 | C | Income reconciliation | Difficult | Absorption costing unit cost; Variable costing unit cost; Income reconciliation; Costing method comparison; Variable costing classification | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D1-Q4 | C | Costing method comparison | Difficult | Absorption costing unit cost; Variable costing unit cost; Income reconciliation; Costing method comparison; Variable costing classification | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D1-Q5 | C | Variable costing classification | Difficult | Absorption costing unit cost; Variable costing unit cost; Income reconciliation; Costing method comparison; Variable costing classification | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D1-Q6 | C | Cost classification | Difficult | Absorption costing unit cost; Variable costing unit cost; Income reconciliation; Costing method comparison; Variable costing classification | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D2-Q1 | C | Predetermined overhead rate | Difficult | Predetermined overhead rate; Job cost sheet; Overhead variance; Overhead disposition; Costing system types | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D2-Q2 | C | Job cost sheet | Difficult | Predetermined overhead rate; Job cost sheet; Overhead variance; Overhead disposition; Costing system types | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D2-Q3 | C | Overhead variance | Difficult | Predetermined overhead rate; Job cost sheet; Overhead variance; Overhead disposition; Costing system types | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D2-Q4 | C | Overhead disposition | Difficult | Predetermined overhead rate; Job cost sheet; Overhead variance; Overhead disposition; Costing system types | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D2-Q5 | C | Costing system types | Difficult | Predetermined overhead rate; Job cost sheet; Overhead variance; Overhead disposition; Costing system types | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D2-Q6 | C | Job-order costing terminology | Difficult | Predetermined overhead rate; Job cost sheet; Overhead variance; Overhead disposition; Costing system types | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D3-Q1 | C | Service department cost allocation methods | Moderate | Cost Allocation (Step-Down) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D3-Q2 | C | Allocation base selection | Moderate | Cost Allocation (Step-Down) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D3-Q3 | C | Step-down allocation method — sequence and mechani | Moderate | Cost Allocation (Step-Down) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D3-Q4 | C | Dual-rate versus single-rate cost allocation | Moderate | Cost Allocation (Step-Down) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-D3-Q5 | C | Purpose and justification of cost allocations | Moderate | Cost Allocation (Step-Down) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D1-Q1 | C | Throughput contribution | Difficult | Throughput contribution; Optimal product mix — TOC; TOC priority ranking; Throughput accounting concepts; TOC five focusing steps | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D1-Q2 | C | Optimal product mix — TOC | Difficult | Throughput contribution; Optimal product mix — TOC; TOC priority ranking; Throughput accounting concepts; TOC five focusing steps | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D1-Q3 | C | TOC priority ranking | Difficult | Throughput contribution; Optimal product mix — TOC; TOC priority ranking; Throughput accounting concepts; TOC five focusing steps | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D1-Q4 | C | Throughput accounting concepts | Difficult | Throughput contribution; Optimal product mix — TOC; TOC priority ranking; Throughput accounting concepts; TOC five focusing steps | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D1-Q5 | C | TOC five focusing steps | Difficult | Throughput contribution; Optimal product mix — TOC; TOC priority ranking; Throughput accounting concepts; TOC five focusing steps | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D1-Q6 | C | TOC terminology | Difficult | Throughput contribution; Optimal product mix — TOC; TOC priority ranking; Throughput accounting concepts; TOC five focusing steps | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D2-Q1 | C | Inventory carrying cost — JIT | Difficult | Inventory carrying cost — JIT; JIT cost savings; Setup reduction — SMED; JIT system characteristics; Kanban | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D2-Q2 | C | JIT cost savings | Difficult | Inventory carrying cost — JIT; JIT cost savings; Setup reduction — SMED; JIT system characteristics; Kanban | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D2-Q3 | C | Setup reduction — SMED | Difficult | Inventory carrying cost — JIT; JIT cost savings; Setup reduction — SMED; JIT system characteristics; Kanban | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D2-Q4 | C | JIT system characteristics | Difficult | Inventory carrying cost — JIT; JIT cost savings; Setup reduction — SMED; JIT system characteristics; Kanban | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D2-Q5 | C | Kanban | Difficult | Inventory carrying cost — JIT; JIT cost savings; Setup reduction — SMED; JIT system characteristics; Kanban | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D2-Q6 | C | Lean terminology | Difficult | Inventory carrying cost — JIT; JIT cost savings; Setup reduction — SMED; JIT system characteristics; Kanban | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-E2-Q1 | I | Segregation of duties — fraud risk identification | Moderate | Segregation of duties — authorization, custody, and recordkeeping; Internal control design — preventive and detective controls; COSO internal control framework components; Fraud risk assessment in financial processes; Control activity design and implementation | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-E2-Q2 | I | Preventive vs detective controls | Moderate | Segregation of duties — authorization, custody, and recordkeeping; Internal control design — preventive and detective controls; COSO internal control framework components; Fraud risk assessment in financial processes; Control activity design and implementation | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-E2-Q3 | I | COSO internal control framework components | Moderate | Segregation of duties — authorization, custody, and recordkeeping; Internal control design — preventive and detective controls; COSO internal control framework components; Fraud risk assessment in financial processes; Control activity design and implementation | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-E2-Q4 | I | Fraud risk indicators in procurement | Moderate | Segregation of duties — authorization, custody, and recordkeeping; Internal control design — preventive and detective controls; COSO internal control framework components; Fraud risk assessment in financial processes; Control activity design and implementation | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ2-E2-Q5 | I | Control activity design and implementation | Moderate | Segregation of duties — authorization, custody, and recordkeeping; Internal control design — preventive and detective controls; COSO internal control framework components; Fraud risk assessment in financial processes; Control activity design and implementation | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-E1-Q1 | I | COSO ERM 2017 — five components | Moderate | COSO Enterprise Risk Management | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-E1-Q2 | I | COSO ERM 2017 — applying components to implementat | Moderate | COSO Enterprise Risk Management | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-E1-Q3 | I | Risk response strategies — ERM Performance compone | Moderate | COSO Enterprise Risk Management | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-E1-Q4 | I | COSO ERM — Review and Revision component | Moderate | COSO Enterprise Risk Management | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-E1-Q5 | I | COSO ERM — benefits by component | Moderate | COSO Enterprise Risk Management | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-E2-Q1 | I | Disaster recovery site selection | Moderate | Business Continuity and Disaster Recovery | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-E2-Q2 | I | BC/DR governance and testing requirements | Moderate | Business Continuity and Disaster Recovery | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-E2-Q3 | I | Essential BCP components | Moderate | Business Continuity and Disaster Recovery | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-E2-Q4 | I | Matching recovery strategies to business requireme | Moderate | Business Continuity and Disaster Recovery | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-E2-Q5 | I | BC/DR governance, fiduciary duty, and regulatory c | Moderate | Business Continuity and Disaster Recovery | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E1-Q1 | I | COSO — Control Environment component | Moderate | COSO Internal Control Framework | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E1-Q2 | I | COSO — Risk Assessment component and change assess | Moderate | COSO Internal Control Framework | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E1-Q3 | I | COSO — Control Activities component design | Moderate | COSO Internal Control Framework | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E1-Q4 | I | COSO — Information and Communication component | Moderate | COSO Internal Control Framework | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E1-Q5 | I | COSO — Monitoring Activities component | Moderate | COSO Internal Control Framework | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-F1-Q1 | T | SDLC phases — Analysis | Easy | System Development Life Cycle (SDLC) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-F1-Q2 | T | SDLC — testing phases | Easy | System Development Life Cycle (SDLC) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-F1-Q3 | T | SDLC methodologies — Agile vs Waterfall | Easy | System Development Life Cycle (SDLC) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-F1-Q4 | T | Change management in SDLC | Easy | System Development Life Cycle (SDLC) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-F1-Q5 | T | Environment segregation in SDLC | Easy | System Development Life Cycle (SDLC) | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-F2-Q1 | T | Chart type selection based on data relationships | Moderate | Data Visualization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-F2-Q2 | T | Avoiding misleading visualizations — 3D chart dist | Moderate | Data Visualization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-F2-Q3 | T | Dashboard design principles and best practices | Moderate | Data Visualization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-F2-Q4 | T | Cognitive perception and pre-attentive processing  | Moderate | Data Visualization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-F2-Q5 | T | Data storytelling — matching visualization to comm | Moderate | Data Visualization | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F1-Q1 | T | Cloud service model selection — shared responsibil | Moderate | Cloud Computing Models | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F1-Q2 | T | Cloud economics and cost-benefit analysis | Moderate | Cloud Computing Models | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F1-Q3 | T | Cloud security, compliance, and vendor risk manage | Moderate | Cloud Computing Models | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F1-Q4 | T | Cloud computing accounting — capitalization vs exp | Moderate | Cloud Computing Models | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F1-Q5 | T | Cloud deployment models — public, private, communi | Moderate | Cloud Computing Models | case_pack_2_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-A2-Q1 | E | Warranties | Easy | Warranties; Contingencies | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-A2-Q2 | E | Warranties | Easy | Warranties; Contingencies | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-A2-Q3 | E | Contingencies | Easy | Warranties; Contingencies | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-A2-Q4 | E | Contingencies | Easy | Warranties; Contingencies | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-A2-Q5 | E | Contingencies | Easy | Warranties; Contingencies | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-A2-Q1 | E | Comprehensive Income | Moderate | Comprehensive Income; OCI; Treasury Stock | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-A2-Q2 | E | OCI | Moderate | Comprehensive Income; OCI; Treasury Stock | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-A2-Q3 | E | Treasury Stock | Moderate | Comprehensive Income; OCI; Treasury Stock | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-A2-Q4 | E | Treasury Stock | Moderate | Comprehensive Income; OCI; Treasury Stock | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-A2-Q5 | E | Comprehensive Income | Moderate | Comprehensive Income; OCI; Treasury Stock | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-B2-Q1 | E | Bonds | Moderate | Bond payable accounting and amortization | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-B2-Q2 | E | Bonds | Moderate | Bond payable accounting and amortization | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-B2-Q3 | E | Bonds | Moderate | Bond payable accounting and amortization | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-B2-Q4 | E | Bonds | Moderate | Bond payable accounting and amortization | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-B2-Q5 | E | Bonds | Moderate | Bond payable accounting and amortization | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B3-Q1 | P | Contribution margin | Difficult | Contribution margin; Break-even analysis; Margin of safety; Target profit analysis; CVP assumptions | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B3-Q2 | P | Break-even analysis | Difficult | Contribution margin; Break-even analysis; Margin of safety; Target profit analysis; CVP assumptions | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B3-Q3 | P | Margin of safety | Difficult | Contribution margin; Break-even analysis; Margin of safety; Target profit analysis; CVP assumptions | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B3-Q4 | P | Target profit analysis | Difficult | Contribution margin; Break-even analysis; Margin of safety; Target profit analysis; CVP assumptions | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B3-Q5 | P | CVP assumptions | Difficult | Contribution margin; Break-even analysis; Margin of safety; Target profit analysis; CVP assumptions | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ3-B3-Q6 | P | CVP formulas | Difficult | Contribution margin; Break-even analysis; Margin of safety; Target profit analysis; CVP assumptions | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-B1-Q1 | P | High-Low | Moderate | High-Low; Regression; Cost Behavior | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-B1-Q2 | P | High-Low | Moderate | High-Low; Regression; Cost Behavior | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-B1-Q3 | P | Regression | Moderate | High-Low; Regression; Cost Behavior | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-B1-Q4 | P | Regression | Moderate | High-Low; Regression; Cost Behavior | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-B1-Q5 | P | Cost Behavior | Moderate | High-Low; Regression; Cost Behavior | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-B2-Q1 | P | Inventory budgeting | Moderate | Inventory budgeting; Receivables budgeting; Payables budgeting; Cash budgeting; Financial budget relationships | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-B2-Q2 | P | Receivables budgeting | Moderate | Inventory budgeting; Receivables budgeting; Payables budgeting; Cash budgeting; Financial budget relationships | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-B2-Q3 | P | Payables budgeting | Moderate | Inventory budgeting; Receivables budgeting; Payables budgeting; Cash budgeting; Financial budget relationships | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-B2-Q4 | P | Cash budgeting | Moderate | Inventory budgeting; Receivables budgeting; Payables budgeting; Cash budgeting; Financial budget relationships | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-B2-Q5 | P | Financial budget relationships | Moderate | Inventory budgeting; Receivables budgeting; Payables budgeting; Cash budgeting; Financial budget relationships | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-B2-Q6 | P | Financial budget preparation | Moderate | Inventory budgeting; Receivables budgeting; Payables budgeting; Cash budgeting; Financial budget relationships | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-B1-Q1 | P | Forecasting | Moderate | Forecasting; Strategic Management; Budgeting Methodologies | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-B1-Q2 | P | Strategic Management | Moderate | Forecasting; Strategic Management; Budgeting Methodologies | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-B1-Q3 | P | Budgeting Methodologies | Moderate | Forecasting; Strategic Management; Budgeting Methodologies | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-B1-Q4 | P | Strategic Management | Moderate | Forecasting; Strategic Management; Budgeting Methodologies | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-B1-Q5 | P | Forecasting | Moderate | Forecasting; Strategic Management; Budgeting Methodologies | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-C2-Q1 | P | ABC cost hierarchy — activity classification | Moderate | Customer Profitability Analysis | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-C2-Q2 | P | Cost driver identification in ABC | Moderate | Customer Profitability Analysis | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-C2-Q3 | P | Allocation base selection for customer profitabili | Moderate | Customer Profitability Analysis | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-C2-Q4 | P | Customer profitability analysis — interpreting res | Moderate | Customer Profitability Analysis | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-C2-Q5 | P | Strategic actions from customer profitability anal | Moderate | Customer Profitability Analysis | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C1-Q1 | P | Mix Variance | Moderate | Mix Variance; Yield Variance; Sales Mix Variance | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C1-Q2 | P | Mix Variance | Moderate | Mix Variance; Yield Variance; Sales Mix Variance | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C1-Q3 | P | Mix Variance | Moderate | Mix Variance; Yield Variance; Sales Mix Variance | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C1-Q4 | P | Yield Variance | Moderate | Mix Variance; Yield Variance; Sales Mix Variance | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C1-Q5 | P | Sales Mix Variance | Moderate | Mix Variance; Yield Variance; Sales Mix Variance | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C2-Q1 | P | Responsibility center classification | Moderate | Responsibility Centers and ROI | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C2-Q2 | P | ROI, margin, turnover, and residual income calcula | Moderate | Responsibility Centers and ROI | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C2-Q3 | P | ROI vs Residual Income — advantages and disadvanta | Moderate | Responsibility Centers and ROI | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C2-Q4 | P | Goal congruence — ROI vs Residual Income decision  | Moderate | Responsibility Centers and ROI | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C2-Q5 | P | Balanced scorecard — linking metrics to performanc | Moderate | Responsibility Centers and ROI | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C3-Q1 | P | Sales Volume Variance | Moderate | Sales Quantity and Volume Variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C3-Q2 | P | Sales variance decomposition — mix, quantity, mark | Moderate | Sales Quantity and Volume Variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C3-Q3 | P | Market Share Variance | Moderate | Sales Quantity and Volume Variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C3-Q4 | P | Performance evaluation — choosing the right varian | Moderate | Sales Quantity and Volume Variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-C3-Q5 | P | Variance interpretation and management action | Moderate | Sales Quantity and Volume Variances | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D3-Q1 | C | Capacity denominator level selection for fixed ove | Moderate | Capacity Management Concepts | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D3-Q2 | C | Fixed overhead volume variance under different den | Moderate | Capacity Management Concepts | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D3-Q3 | C | Capacity measure implications on financial reporti | Moderate | Capacity Management Concepts | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D3-Q4 | C | Capacity management strategies — theory of constra | Moderate | Capacity Management Concepts | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-D3-Q5 | C | Capacity policy — balancing accounting accuracy wi | Moderate | Capacity Management Concepts | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D1-Q1 | C | Porter's value chain — primary activities | Moderate | Value Chain and Business Process Improvement | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D1-Q2 | C | Porter's value chain — support activities | Moderate | Value Chain and Business Process Improvement | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D1-Q3 | C | Process improvement initiatives by value chain act | Moderate | Value Chain and Business Process Improvement | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D1-Q4 | C | Process improvement methodologies — Six Sigma, BPR | Moderate | Value Chain and Business Process Improvement | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D1-Q5 | C | Core competency identification and strategic impli | Moderate | Value Chain and Business Process Improvement | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D2-Q1 | C | DMAIC phases and their application in manufacturin | Moderate | Six Sigma and Quality Control | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D2-Q2 | C | Cost of quality - prevention, appraisal, internal  | Moderate | Six Sigma and Quality Control | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D2-Q3 | C | Six Sigma financial justification - net savings ca | Moderate | Six Sigma and Quality Control | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D2-Q4 | C | Cost of quality - prevention vs. failure cost trad | Moderate | Six Sigma and Quality Control | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D2-Q5 | C | Six Sigma and Quality Control | Moderate | Six Sigma and Quality Control | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D3-Q1 | C | Transfer Pricing (Dual Pricing) | Moderate | Transfer Pricing (Dual Pricing) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D3-Q2 | C | Transfer Pricing (Dual Pricing) | Moderate | Transfer Pricing (Dual Pricing) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D3-Q3 | C | Transfer Pricing (Dual Pricing) | Moderate | Transfer Pricing (Dual Pricing) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D3-Q4 | C | Transfer Pricing (Dual Pricing) | Moderate | Transfer Pricing (Dual Pricing) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-D3-Q5 | C | Transfer Pricing (Dual Pricing) | Moderate | Transfer Pricing (Dual Pricing) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E2-Q1 | I | Input control matching to data entry scenarios | Moderate | Application IT Controls | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E2-Q2 | I | Management override of controls and control effect | Moderate | Application IT Controls | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E2-Q3 | I | Processing controls — types and applications | Moderate | Application IT Controls | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E2-Q4 | I | Classifying application controls by category | Moderate | Application IT Controls | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E2-Q5 | I | Segregation of duties in automated systems | Moderate | Application IT Controls | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E3-Q1 | I | FCPA facilitating payments exception | Moderate | Foreign Corrupt Practices Act (FCPA) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E3-Q2 | I | Third-party intermediary risk under FCPA | Moderate | Foreign Corrupt Practices Act (FCPA) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E3-Q3 | I | FCPA compliance program strengthening | Moderate | Foreign Corrupt Practices Act (FCPA) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E3-Q4 | I | FCPA compliance responses by risk scenario | Moderate | Foreign Corrupt Practices Act (FCPA) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-E3-Q5 | I | FCPA accounting provisions and internal control re | Moderate | Foreign Corrupt Practices Act (FCPA) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E1-Q1 | I | Internal Auditing Standards | Moderate | Internal Auditing Standards | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E1-Q2 | I | Internal Auditing Standards | Moderate | Internal Auditing Standards | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E1-Q3 | I | Internal Auditing Standards | Moderate | Internal Auditing Standards | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E1-Q4 | I | Internal Auditing Standards | Moderate | Internal Auditing Standards | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E1-Q5 | I | Internal Auditing Standards | Moderate | Internal Auditing Standards | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E2-Q1 | I | Cybersecurity and Malware | Moderate | Cybersecurity and Malware | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E2-Q2 | I | Cybersecurity and Malware | Moderate | Cybersecurity and Malware | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E2-Q3 | I | Cybersecurity and Malware | Moderate | Cybersecurity and Malware | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E2-Q4 | I | Cybersecurity and Malware | Moderate | Cybersecurity and Malware | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E2-Q5 | I | Cybersecurity and Malware | Moderate | Cybersecurity and Malware | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E3-Q1 | I | Data Privacy Frameworks | Moderate | Data Privacy Frameworks | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E3-Q2 | I | Data Privacy Frameworks | Moderate | Data Privacy Frameworks | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E3-Q3 | I | Data Privacy Frameworks | Moderate | Data Privacy Frameworks | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E3-Q4 | I | Data Privacy Frameworks | Moderate | Data Privacy Frameworks | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-E3-Q5 | I | Data Privacy Frameworks | Moderate | Data Privacy Frameworks | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F2-Q1 | T | Artificial Intelligence & ML | Moderate | Artificial Intelligence & ML | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F2-Q2 | T | Artificial Intelligence & ML | Moderate | Artificial Intelligence & ML | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F2-Q3 | T | Artificial Intelligence & ML | Moderate | Artificial Intelligence & ML | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F2-Q4 | T | Artificial Intelligence & ML | Moderate | Artificial Intelligence & ML | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F2-Q5 | T | Artificial Intelligence & ML | Moderate | Artificial Intelligence & ML | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F3-Q1 | T | Data Privacy & Cryptography | Moderate | Data Privacy & Cryptography | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F3-Q2 | T | Data Privacy & Cryptography | Moderate | Data Privacy & Cryptography | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F3-Q3 | T | Data Privacy & Cryptography | Moderate | Data Privacy & Cryptography | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F3-Q4 | T | Data Privacy & Cryptography | Moderate | Data Privacy & Cryptography | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ4-F3-Q5 | T | Data Privacy & Cryptography | Moderate | Data Privacy & Cryptography | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F1-Q1 | T | Big Data Characteristics | Moderate | Big Data Characteristics | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F1-Q2 | T | Big Data Characteristics | Moderate | Big Data Characteristics | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F1-Q3 | T | Big Data Characteristics | Moderate | Big Data Characteristics | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F1-Q4 | T | Big Data Characteristics | Moderate | Big Data Characteristics | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F1-Q5 | T | Big Data Characteristics | Moderate | Big Data Characteristics | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F2-Q1 | T | Robotic Process Automation (RPA) | Moderate | Robotic Process Automation (RPA) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F2-Q2 | T | Robotic Process Automation (RPA) | Moderate | Robotic Process Automation (RPA) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F2-Q3 | T | Robotic Process Automation (RPA) | Moderate | Robotic Process Automation (RPA) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F2-Q4 | T | Robotic Process Automation (RPA) | Moderate | Robotic Process Automation (RPA) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F2-Q5 | T | Robotic Process Automation (RPA) | Moderate | Robotic Process Automation (RPA) | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F3-Q1 | T | Blockchain and Distributed Ledgers | Moderate | Blockchain and Distributed Ledgers | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F3-Q2 | T | Blockchain and Distributed Ledgers | Moderate | Blockchain and Distributed Ledgers | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F3-Q3 | T | Blockchain and Distributed Ledgers | Moderate | Blockchain and Distributed Ledgers | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F3-Q4 | T | Blockchain and Distributed Ledgers | Moderate | Blockchain and Distributed Ledgers | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
+| CBQ5-F3-Q5 | T | Blockchain and Distributed Ledgers | Moderate | Blockchain and Distributed Ledgers | case_pack_3_corrected.js | 0 | 0 | — | Not Scored |
 
 ---
 
@@ -10007,8 +10172,8 @@ Questions that triggered one or more validator errors or warnings:
 ---
 
 <!--
-  Registry regenerated on 2026-08-22 00:47:03
+  Registry regenerated on 2026-08-22 01:10:58
   Source hash: 7e1a0913
-  Questions: 2855
+  Questions: 3020
   To regenerate: node scripts/generate_registry.js
 -->

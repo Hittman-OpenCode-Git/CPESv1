@@ -184,7 +184,7 @@ function parseMCQPack(filePath, packLabel) {
 function evalCaseData(content) {
   // Find all array declarations: const|var NAME = [...];
   // Look for ENHANCED_CASE prepended names
-  const varPattern = /(?:const|var|let)\s+(ENHANCED_CASE\w*)\s*=\s*\[/g;
+  const varPattern = /(?:const|var|let)\s+((?:ENHANCED_CASE|CASE_PACK)_\w*)\s*=\s*\[/g;
   const varNames = [];
   let match;
   while ((match = varPattern.exec(content)) !== null) {
@@ -377,11 +377,9 @@ function main() {
   ];
 
   const caseFiles = [
-    'content/cases/legacy/scored_cases.js',
-    'content/cases/legacy/scored_cases2.js',
-    'content/cases/legacy/scored_cases3.js',
-    'content/cases/legacy/scored_cases4.js',
-    'content/cases/legacy/scored_cases5.js'
+    'content/cases/case_pack_1_corrected.js',
+    'content/cases/case_pack_2_corrected.js',
+    'content/cases/case_pack_3_corrected.js'
   ];
 
   let allQuestions = [];
