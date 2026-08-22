@@ -4629,16 +4629,12 @@ const May = {
             onboardButtons = `<div class="may-empty-chat may-greeting-chat">
                 <p class="may-greeting-actions">
                     <button class="may-action-btn" onclick="May._handleOnboardingResponse('part','Part 1')">Part 1 — Financial Planning, Performance, and Analytics</button>
-                    <button class="may-action-btn may-action-hint" onclick="May._handleOnboardingResponse('part','Part 2')">Part 2 — Strategic Financial Management</button>
-                    <button class="may-action-btn" onclick="May._handleOnboardingResponse('part','Both')">Both Part 1 and Part 2</button>
                 </p>
             </div>`;
         } else if (onboardStep === 'ASK_PLAN_PART') {
             onboardButtons = `<div class="may-empty-chat may-greeting-chat">
                 <p class="may-greeting-actions">
                     <button class="may-action-btn" onclick="May._handleOnboardingResponse('plan-part','Part 1')">Part 1</button>
-                    <button class="may-action-btn may-action-hint" onclick="May._handleOnboardingResponse('plan-part','Part 2')">Part 2</button>
-                    <button class="may-action-btn" onclick="May._handleOnboardingResponse('plan-part','Both')">Both</button>
                     <button class="may-action-btn" onclick="May._handleOnboardingResponse('plan-part','Not sure yet')">Not sure yet</button>
                 </p>
             </div>`;
