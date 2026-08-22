@@ -71,14 +71,15 @@ function parseMCQPack(filePath, packLabel) {
   const content = fs.readFileSync(filePath, 'utf8');
   const results = [];
 
-  // Try to find the array name dynamically
-  const arrayMatch = content.match(/const\s+(\w+)\s*=\s*\[/);
+  // Try to find the array name dynamically (const/var/let; tolerate a
+  // "// comment" between the assignment and the opening bracket).
+  const arrayMatch = content.match(/(?:const|var|let)\s+(\w+)\s*=\s*/);
   if (!arrayMatch) return results;
   const arrayName = arrayMatch[1];
 
   // Extract each object
   let depth = 0;
-  let startIdx = content.indexOf('[');
+  let startIdx = content.indexOf('[', arrayMatch.index);
   if (startIdx === -1) return results;
   startIdx++; // skip '['
   let objStart = -1;
@@ -368,11 +369,11 @@ function main() {
 
   // 1. Extract MCQ packs
   const mcqFiles = [
-    'pack_a_corrected.js',
-    'pack_b_corrected.js',
-    'pack_c_corrected.js',
-    'pack_d_corrected.js',
-    'pack_e_corrected.js'
+    'content/packs/pack_a_corrected.js',
+    'content/packs/pack_b_corrected.js',
+    'content/packs/pack_c_corrected.js',
+    'content/packs/pack_d_corrected.js',
+    'content/packs/pack_e_corrected.js'
   ];
 
   const caseFiles = [

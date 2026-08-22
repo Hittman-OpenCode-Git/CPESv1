@@ -9,7 +9,7 @@
  *
  * Per CAQS v1.0 frozen architecture, the Registry is a GENERATED artifact.
  * NEVER edit knowledge/MASTER_QUESTION_REGISTRY.md directly.
- * Source of truth: pack source files in project root.
+ * Source of truth: pack source files in content/packs/.
  */
 
 const fs = require('fs');
@@ -144,9 +144,9 @@ function tierLabel(score) {
 // ============================================================
 function generateRegistry(questions, findings) {
     const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
-    const sourceHash = fs.existsSync(path.join(ROOT, 'pack_a_corrected.js'))
+    const sourceHash = fs.existsSync(path.join(ROOT, 'content', 'packs', 'pack_a_corrected.js'))
         ? require('crypto').createHash('md5')
-            .update(fs.readFileSync(path.join(ROOT, 'pack_a_corrected.js'), 'utf8')).digest('hex').slice(0, 8)
+            .update(fs.readFileSync(path.join(ROOT, 'content', 'packs', 'pack_a_corrected.js'), 'utf8')).digest('hex').slice(0, 8)
         : 'unknown';
 
     const lines = [];
@@ -154,7 +154,7 @@ function generateRegistry(questions, findings) {
     // Header banner
     lines.push('<!--');
     lines.push('  ⚠️  GENERATED FILE — DO NOT EDIT.');
-    lines.push('  Source of truth: pack source files in project root.');
+    lines.push('  Source of truth: pack source files in content/packs/.');
     lines.push('  Regenerate via: node scripts/generate_registry.js');
     lines.push('  Last generated: ' + timestamp);
     lines.push('  Source hash: ' + sourceHash);
@@ -168,7 +168,7 @@ function generateRegistry(questions, findings) {
     lines.push('**Total Questions:** ' + questions.length);
     lines.push('');
     lines.push('> ⚠️ **This file is auto-generated.** Never edit it directly.');
-    lines.push('> Source of truth: the five pack source files (`pack_*_corrected.js`)');
+    lines.push('> Source of truth: the five pack source files (`content/packs/pack_*_corrected.js`)');
     lines.push('> and case bank files (`scored_cases*.js`).');
     lines.push('> Regenerate via `node scripts/generate_registry.js`.');
     lines.push('');

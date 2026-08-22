@@ -10,15 +10,15 @@
 
 | Metric | Value |
 |--------|-------|
-| Total Assessment Items | **1780** |
-| Standalone MCQ Questions | **1545** |
+| Total Assessment Items | **1355** |
+| Standalone MCQ Questions | **1120** |
 | Case Study Items | **235** |
 | Blueprint Domains Covered | **6** |
-| Average Metadata Completeness | **99.8%** |
-| Questions with Bloom's Level | **1776 (99.8%)** |
-| Questions with Difficulty Score | **1776 (99.8%)** |
-| Questions with Formula Reference | **22 (1.2%)** |
-| Calculation Items | **362 (20.3%)** |
+| Average Metadata Completeness | **100.0%** |
+| Questions with Bloom's Level | **1355 (100.0%)** |
+| Questions with Difficulty Score | **1355 (100.0%)** |
+| Questions with Formula Reference | **22 (1.6%)** |
+| Calculation Items | **337 (24.9%)** |
 | Gold Standard Items | **0 (0%)** |
 | Repository Health Score (backlog) | **42/100** |
 
@@ -28,7 +28,7 @@
 
 | Domain | Count | % of Total |
 |--------|------:|-----------:|
-| Planning, Budgeting, and Forecasting     |   346 |  19.4% |\n| Performance Management                   |   341 |  19.2% |\n| Internal Controls                        |   301 |  16.9% |\n| Cost Management                          |   276 |  15.5% |\n| Technology and Analytics                 |   261 |  14.7% |\n| External Financial Reporting Decisions   |   255 |  14.3% |
+| Planning, Budgeting, and Forecasting     |   259 |  19.1% |\n| Performance Management                   |   253 |  18.7% |\n| Internal Controls                        |   234 |  17.3% |\n| Cost Management                          |   216 |  15.9% |\n| External Financial Reporting Decisions   |   200 |  14.8% |\n| Technology and Analytics                 |   193 |  14.2% |
 
 ---
 
@@ -36,7 +36,7 @@
 
 | Level | Count | % of Total | Target % | Status |
 |-------|------:|-----------:|---------:|--------|
-| Remember        |    93 |   5.2% |     5% | ✓ On track |\n| Understand      |   693 |  38.9% |    15% | ⚠ Off target |\n| Apply           |   711 |  39.9% |    40% | ✓ On track |\n| Analyze         |   151 |   8.5% |    25% | ⚠ Off target |\n| Evaluate        |   128 |   7.2% |    15% | ✓ On track |\n| Unassigned      |     4 |   0.2% |     0% | ⚠ Needs assignment |
+| Remember        |    51 |   3.8% |     5% | ✓ On track |\n| Understand      |   516 |  38.1% |    15% | ⚠ Off target |\n| Apply           |   516 |  38.1% |    40% | ✓ On track |\n| Analyze         |   160 |  11.8% |    25% | ⚠ Off target |\n| Evaluate        |   112 |   8.3% |    15% | ✓ On track |\n| Unassigned      |     0 |   0.0% |     0% | ⚠ Needs assignment |
 
 ---
 
@@ -44,7 +44,7 @@
 
 | Difficulty | Count | % of Total |
 |-----------|------:|-----------:|
-| Moderate             |   814 |  45.7% |\n| Easy                 |   400 |  22.5% |\n| Moderate-Easy        |   328 |  18.4% |\n| Difficult            |   223 |  12.5% |\n| Very Difficult       |    11 |   0.6% |\n| Unassigned           |     4 |   0.2% |
+| Moderate             |   598 |  44.1% |\n| Easy                 |   278 |  20.5% |\n| Moderate-Easy        |   249 |  18.4% |\n| Difficult            |   203 |  15.0% |\n| Very Difficult       |    27 |   2.0% |
 
 ---
 
@@ -52,7 +52,7 @@
 
 | Type | Count | % of Total |
 |------|------:|-----------:|
-| MCQ             |  1545 |  86.8% |\n| numeric         |    62 |   3.5% |\n| select          |    62 |   3.5% |\n| match           |    51 |   2.9% |\n| multi           |    41 |   2.3% |\n| fill            |    19 |   1.1% |
+| MCQ             |  1120 |  82.7% |\n| numeric         |    62 |   4.6% |\n| select          |    62 |   4.6% |\n| match           |    51 |   3.8% |\n| multi           |    41 |   3.0% |\n| fill            |    19 |   1.4% |
 
 ---
 
@@ -62,12 +62,12 @@
 |-------|---------:|--------|
 | QuestionID | **100.0%** | ✓ Complete |
 | Domain | **100.0%** | ✓ Complete |
-| Bloom's Level | **99.8%** | ⚠ Needs enrichment |
-| Difficulty | **99.8%** | ⚠ Needs enrichment |
+| Bloom's Level | **100.0%** | ✓ Complete |
+| Difficulty | **100.0%** | ✓ Complete |
 | Calculation Required | **100.0%** | ✓ Tracked |
-| Accounting Principle | **9.6%** | ⚠ Partial coverage |
-| Formula Reference | **1.2%** | ⚠ Partial |
-| Confidence Rating | **27.5%** | ⚠ Partial |
+| Accounting Principle | **12.6%** | ⚠ Partial coverage |
+| Formula Reference | **1.6%** | ⚠ Partial |
+| Confidence Rating | **34.3%** | ⚠ Partial |
 
 ---
 
@@ -77,7 +77,7 @@
 
 The following questions lack Bloom's level or difficulty classification and should be prioritized:
 
-- **P1B-A-136** (pack_b_corrected.js): Missing Bloom's Level + Missing Difficulty\n- **P1B-B-158** (pack_b_corrected.js): Missing Bloom's Level + Missing Difficulty\n- **P1B-B-165** (pack_b_corrected.js): Missing Bloom's Level + Missing Difficulty\n- **P1B-E-084** (pack_b_corrected.js): Missing Bloom's Level + Missing Difficulty
+(None found)
 
 ### Case Studies Missing Parent-Child Relationships
 
@@ -87,11 +87,11 @@ All case items are properly linked to parent cases. ✓
 
 ## Recommendations
 
-1. **Enrich metadata** — Add Bloom's Level to 4 items and DifficultyScore to 4 items
+1. **Enrich metadata** — Add Bloom's Level to 0 items and DifficultyScore to 0 items
 2. **Expand explanations** — 18 items have explanations under 50 characters
-3. **Add formula references** — Only 22 of 362 calculation items have FormulaReference populated
+3. **Add formula references** — Only 22 of 337 calculation items have FormulaReference populated
 4. **Begin domain-by-domain audit** — Start with Section A (External Financial Reporting Decisions) as the highest-coverage domain
 
 ---
 
-*Generated by build_master_registry.js — Registry contains 1780 assessment items across 5 MCQ packs and 5 case study files.*
+*Generated by build_master_registry.js — Registry contains 1355 assessment items across 5 MCQ packs and 5 case study files.*
