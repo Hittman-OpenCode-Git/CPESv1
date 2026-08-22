@@ -32,3 +32,6 @@ temp_*.txt
 # Environment
 .env
 .env.local
+
+# OpenCode internal session/goal state (transient, not committed)
+.opencode/goals/
