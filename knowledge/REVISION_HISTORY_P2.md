@@ -1,5 +1,65 @@
 # REVISION_HISTORY_P2.md — CMA Part 2 Exam Simulator
 
+## Session P2-038 — Section C Wave 2, Session 1 (17 new items, C-076…C-092)
+
+**Date:** 2026-08-23
+**Session Type:** Content Authoring (Full Governance Lane)
+**User approval:** Documented here — user authorized "start the first batch of 17 questions and plan for three sessions of 17, 17, and 16" (2026-08-23)
+**Plan:** `p2/P2C_WAVE2_AUTHORING_PLAN.md` — 50 items over 3 sessions closing the Section C weight gap (75 → 125 MCQs, 25% exam weight target)
+**Backup timestamp:** 2026-08-23T13:51:57 — `p2/pack_p2_c.js.bak-20260823135157` (pre-insert restore point used once: initial insert omitted the array comma; pack restored from backup and re-inserted correctly)
+
+### T0 State (verified before any write)
+
+- `npm run preflight` PASS — 0 divergences; `node scripts/preflight_p2.js` PASS — 0 divergences; guard 74/74
+
+### Items Authored (17, all `question_state: "Unprocessed"`)
+
+| QID | LOS | Topic | Cog | Diff | CC |
+|-----|-----|-------|-----|------|----|
+| C-076 | C.1 | Cash breakeven vs accounting breakeven | Apply | ME | B |
+| C-077 | C.1 | Multi-product BE after sales-mix shift | Apply | M | C |
+| C-078 | C.1 | MOS × DOL maximum sales decline | Analyze | D | B |
+| C-079 | C.2 | Special order displacing sales + commission savings | Analyze | D | A |
+| C-080 | C.2 | Sell-or-process with capacity constraint | Analyze | D | D |
+| C-081 | C.2 | Keep-or-replace with tax on disposal | Apply | M | C |
+| C-082 | C.3 | Value-based pricing | Apply | M | A |
+| C-083 | C.3 | Price-change break-even volume | Analyze | D | B |
+| C-084 | C.4 | Add-or-drop with released-capacity redeployment | Analyze | D | D |
+| C-085 | C.4 | Learning-curve pricing on repeat order | Apply | D | C |
+| C-086 | C.4 | Temporary shutdown — relevant advantage | Analyze | M | D |
+| C-087 | C.5 | Throughput per constraint minute | Apply | ME | A |
+| C-088 | C.5 | **Shadow price of binding constraint (zero-hit theory #1 of 3)** | Apply | M | B |
+| C-089 | C.6 | EVPI as research-budget ceiling | Apply | M | D |
+| C-090 | C.6 | Pilot-option value (sequential tree) | Analyze | D | C |
+| C-091 | C.7 | Outsourcing with supplier-failure expected cost | Apply | D | C |
+| C-092 | C.7 | Strategic make-or-buy with switching costs | Evaluate | VD | A |
+
+### Governance Compliance (Verified)
+
+| Check | Result |
+|-------|--------|
+| Rule 5 (17 items ≤ 30) | PASS |
+| Backup-before-write + restore after insertion defect | PASS |
+| `node --check` | PASS |
+| Pack parse | 75 → 92 items |
+| DL-008 / DL-026 pack-wide | 0 / 0 |
+| Independent recompute audit | 16/16 calculation checks ALL PASS |
+| Authoring-caution sweep (leaks/hedges/truncated traps) | 0 |
+| CC letter balance (session) | A 4 / B 4 / C 5 / D 4 |
+| Cognitive (session) | Apply 9 / Analyze 7 / Evaluate 1 |
+| Difficulty (session) | ME 2 / M 6 / D 8 / VD 1 |
+| `node scripts/preflight_p2.js` (Tend) | PASS — 0 divergences |
+| `npm run preflight` (Tend) | PASS — 0 divergences, guard 74/74 |
+
+### Notes
+
+- Zero-hit theory progress: shadow price cluster item 1 of 3 authored (C-088); items 2–3 scheduled for Session 2.
+- Wave status: 17/50 authored (34%). Sessions 2 (17) and 3 (16) remain per the plan.
+- Items remain "Unprocessed" — certification only after the full wave is externally reviewed per AGENTS.md §18.
+
+**Revision recorded by:** P2-038 — Section C Wave 2, Session 1
+**Date:** 2026-08-23
+
 ## Session P2-037 — Source-of-Truth Remediation (DL-P2-012, 20 findings)
 
 **Date:** 2026-08-22
