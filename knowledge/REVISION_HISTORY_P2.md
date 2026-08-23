@@ -1,5 +1,26 @@
 # REVISION_HISTORY_P2.md — CMA Part 2 Exam Simulator
 
+## Session P2-036 — Section C Verification Closeout (C-022 Confirmed; Cross-Pack Pending)
+
+**Date:** 2026-08-22
+**Session Type:** Read-Only Audit Closeout (Governance Light Lane — no content changes)
+**Verifier:** Independent reviewer — final review of the P2-035 corrections (via the dedicated corrections review file)
+
+### Result
+
+- **P2-C-022 (Critical) fix: CONFIRMED RESOLVED** — all five verification checks pass: target cost recomputed ($85 − $17 − $8 = $60), Choice B terse with zero scratch-work remnants, EWA cross-reference corrected to "See D", EW_D empty (DL-008), trap complete.
+- **Pack C trap completions (9): CONFIRMED ACCURATE** — 8 of 9 cross-checked against the reviewer's own source records from the substantive review; C-025 internally consistent but not independently cross-checked.
+- **Cross-pack trap completions (6: A-108, B-049, E-007, E-016, F-007, F-015): PENDING independent confirmation** — reviewer has no source copies of packs A/B/E/F. All six verified internally against our own sources pre-commit.
+- 0 errors. Verdict: Pack C closeout accepted; cross-pack confirmations deferred to staged uploads.
+
+### Notes
+
+- Residual design observation (non-blocking, from reviewer): C-022's Choice D (correct answer) still carries a full worked-solution paragraph — consistent with the worked-solutions-in-choices design note logged in P2-035, deferred to a future editorial pass.
+- Next: stage packs D/E/F for independent substantive review per AGENTS.md §18.2 (D/E/F have not yet had full-pass reviews); optionally stage A/B parts to close the 6 cross-pack trap confirmations.
+
+**Revision recorded by:** P2-036 — Section C Verification Closeout
+**Date:** 2026-08-22
+
 ## Session P2-035 — Section C Review Remediation (C-022 + 15 trap completions)
 
 **Date:** 2026-08-22

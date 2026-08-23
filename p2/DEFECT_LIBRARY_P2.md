@@ -381,6 +381,8 @@ CorrectChoice unchanged (D). EW[CC=D] remains empty (DL-008 clean).
 
 2026-08-22 — Session P2-035. Backup: `p2/pack_p2_c.js.bak-20260822211414`.
 
+**Independent verification PASS (2026-08-22, Section C closeout P2-036):** C-022 fix confirmed resolved on all five checks; target cost recomputed independently ($85 − $17 − $8 = $60).
+
 ---
 
 ## DL-P2-011 — Systemic CommonTrapReference Truncation (Template ~100-Char Cut)
@@ -423,3 +425,5 @@ All 15 fields completed to full sentences matched to each item's stem context (2
 ### Resolved
 
 2026-08-22 — Session P2-035. Backups: `p2/pack_p2_{a,b,c,e,f}.js.bak-20260822211414`.
+
+**Independent verification (2026-08-22, P2-036):** 9 Pack C completions confirmed accurate by the reviewer (8 cross-checked against their own source records; C-025 internally consistent). 6 cross-pack completions (A-108, B-049, E-007, E-016, F-007, F-015) pending independent confirmation — reviewer lacks source copies of packs A/B/E/F; all six verified internally against our sources pre-commit.
