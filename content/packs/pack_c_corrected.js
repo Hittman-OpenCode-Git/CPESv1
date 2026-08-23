@@ -541,7 +541,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Use the cost method and recognize dividends only",
       "B": "Consolidate the investee's financial statements fully",
       "C": "Use the equity method, recognizing a proportionate share of investee income",
-      "D": "Record the investment at fair value with all gains in OCI"
+      "D": "Record the investment at fair value with gains in OCI"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "An investment of 20% to 50% with significant influence is accounted for using the equity method. Under the equity method, the investor recognizes its proportionate share of the investee's net income as investment income, increasing the investment account. Dividends received reduce the investment carrying amount, not increase income.",
@@ -592,7 +592,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Larkspur owns 30% of the voting stock of an investee and can exercise significant influence. How should the investment be accounted for?",
     "Choices": {
       "A": "Consolidate the investee's financial statements fully",
-      "B": "Record the investment at fair value with all gains in OCI",
+      "B": "Record the investment at fair value with gains in OCI",
       "C": "Use the cost method and recognize dividends only",
       "D": "Use the equity method, recognizing a proportionate share of investee income"
     },
@@ -647,7 +647,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Use the equity method, recognizing a proportionate share of investee income",
       "B": "Consolidate the investee's financial statements fully",
       "C": "Use the cost method and recognize dividends only",
-      "D": "Record the investment at fair value with all gains in OCI"
+      "D": "Record the investment at fair value with gains in OCI"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "An investment representing 20% to 50% of voting stock with significant influence is accounted for using the equity method. The investor recognizes its share of the investee's earnings as income and increases the investment account accordingly. Dividends received from the investee reduce the investment carrying amount.",
@@ -697,7 +697,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Nightingale owns 30% of the voting stock of an investee and can exercise significant influence. How should the investment be accounted for?",
     "Choices": {
-      "A": "Record the investment at fair value with all gains in OCI",
+      "A": "Record the investment at fair value with gains in OCI",
       "B": "Use the equity method, recognizing a proportionate share of investee income",
       "C": "Consolidate the investee's financial statements fully",
       "D": "Use the cost method and recognize dividends only"
@@ -751,7 +751,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Oakhurst owns 30% of the voting stock of an investee and can exercise significant influence. How should the investment be accounted for?",
     "Choices": {
       "A": "Consolidate the investee's financial statements fully",
-      "B": "Record the investment at fair value with all gains in OCI",
+      "B": "Record the investment at fair value with gains in OCI",
       "C": "Use the equity method, recognizing a proportionate share of investee income",
       "D": "Use the cost method and recognize dividends only"
     },
@@ -6343,7 +6343,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Complete removal of the need for variance analysis",
       "B": "Automatic alignment with corporate strategic goals",
       "C": "Budgetary slack, where managers understate revenue or overstate costs to make targets easier to achieve",
-      "D": "Elimination of all motivational benefits of budgeting"
+      "D": "Elimination of the motivational benefits of budgeting"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Participative budgeting can improve buy-in but creates a risk of budgetary slack if managers build in a cushion to make performance targets easier to achieve.",
@@ -6391,7 +6391,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Waverly allows department managers to set their own budget targets with little oversight. What risk does this participative approach create?",
     "Choices": {
-      "A": "Elimination of all motivational benefits of budgeting",
+      "A": "Elimination of the motivational benefits of budgeting",
       "B": "Automatic alignment with corporate strategic goals",
       "C": "Complete removal of the need for variance analysis",
       "D": "Budgetary slack, where managers understate revenue or overstate costs to make targets easier to achieve"
@@ -6444,7 +6444,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Budgetary slack, where managers understate revenue or overstate costs to make targets easier to achieve",
       "B": "Automatic alignment with corporate strategic goals",
-      "C": "Elimination of all motivational benefits of budgeting",
+      "C": "Elimination of the motivational benefits of budgeting",
       "D": "Complete removal of the need for variance analysis"
     },
     "CorrectChoice": "A",
@@ -6495,7 +6495,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Automatic alignment with corporate strategic goals",
       "B": "Budgetary slack, where managers understate revenue or overstate costs to make targets easier to achieve",
-      "C": "Elimination of all motivational benefits of budgeting",
+      "C": "Elimination of the motivational benefits of budgeting",
       "D": "Complete removal of the need for variance analysis"
     },
     "CorrectChoice": "B",
@@ -6544,7 +6544,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Bellwood allows department managers to set their own budget targets with little oversight. What risk does this participative approach create?",
     "Choices": {
-      "A": "Elimination of all motivational benefits of budgeting",
+      "A": "Elimination of the motivational benefits of budgeting",
       "B": "Automatic alignment with corporate strategic goals",
       "C": "Budgetary slack, where managers understate revenue or overstate costs to make targets easier to achieve",
       "D": "Complete removal of the need for variance analysis"
@@ -6597,7 +6597,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Complete removal of the need for variance analysis",
       "B": "Automatic alignment with corporate strategic goals",
-      "C": "Elimination of all motivational benefits of budgeting",
+      "C": "Elimination of the motivational benefits of budgeting",
       "D": "Budgetary slack, where managers understate revenue or overstate costs to make targets easier to achieve"
     },
     "CorrectChoice": "D",
@@ -6647,7 +6647,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Lower manager buy-in and potentially unrealistic targets due to limited operational input",
       "B": "Guaranteed accuracy because executives have complete information",
-      "C": "Faster achievement of all financial targets",
+      "C": "Faster achievement of financial targets",
       "D": "Elimination of the need for a sales forecast"
     },
     "CorrectChoice": "A",
@@ -6698,7 +6698,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Elimination of the need for a sales forecast",
       "B": "Lower manager buy-in and potentially unrealistic targets due to limited operational input",
       "C": "Guaranteed accuracy because executives have complete information",
-      "D": "Faster achievement of all financial targets"
+      "D": "Faster achievement of financial targets"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Top-down budgeting can be faster to prepare but often results in less realistic targets and lower buy-in from the managers responsible for achieving them.",
@@ -6745,7 +6745,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Falconridge's senior executives set budget targets and impose them on department managers with minimal input. What is a key drawback of this approach?",
     "Choices": {
-      "A": "Faster achievement of all financial targets",
+      "A": "Faster achievement of financial targets",
       "B": "Guaranteed accuracy because executives have complete information",
       "C": "Lower manager buy-in and potentially unrealistic targets due to limited operational input",
       "D": "Elimination of the need for a sales forecast"
@@ -6848,7 +6848,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Lower manager buy-in and potentially unrealistic targets due to limited operational input",
       "B": "Guaranteed accuracy because executives have complete information",
       "C": "Elimination of the need for a sales forecast",
-      "D": "Faster achievement of all financial targets"
+      "D": "Faster achievement of financial targets"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Top-down budgeting can be faster to prepare but often results in less realistic targets and lower buy-in from the managers responsible for achieving them.",
@@ -6895,7 +6895,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Ivorygate's senior executives set budget targets and impose them on department managers with minimal input. What is a key drawback of this approach?",
     "Choices": {
-      "A": "Faster achievement of all financial targets",
+      "A": "Faster achievement of financial targets",
       "B": "Lower manager buy-in and potentially unrealistic targets due to limited operational input",
       "C": "Guaranteed accuracy because executives have complete information",
       "D": "Elimination of the need for a sales forecast"
@@ -7983,7 +7983,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Activity-based budgeting (ABB) builds the budget around the activities and cost drivers needed to produce outputs. It does not require justifying every expense from zero each year — that is the defining characteristic of zero-based budgeting. ABB links resources to activity levels; ZBB mandates that every expenditure be defended from ground zero regardless of prior spending patterns.",
+    "ExplanationWrongA": "Option A identifies incremental budgeting, but the stem describes kaizen budgeting. Incremental budgeting carries the prior period's budget forward and adjusts it — by a percentage or negotiated change — without assuming ongoing within-year improvement. The stem's defining fact is that the targets assume ongoing incremental cost reductions throughout the year based on continuous improvement efforts, which is kaizen budgeting's signature. The word 'incremental' in the stem refers to cost improvements over time, not to incremental budgeting's base-and-adjust method.",
     "ExplanationWrongB": "Incremental budgeting adjusts the prior period budget by a percentage, preserving the existing cost structure without targeting improvements. Kaizen budgeting explicitly incorporates continuous cost reduction goals, challenging every process to become more efficient each period rather than accepting the status quo.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Activity-based budgeting assigns costs to activities and cost drivers to determine resource needs, but it does not inherently embed ongoing cost reduction targets. Kaizen budgeting is the specific technique that builds assumed incremental, continuous improvements directly into the budget, requiring each period's costs to decline through documented process efficiencies. A candidate may confuse the activity focus of ABB with the continuous improvement mandate that defines kaizen budgeting.",
@@ -8034,8 +8034,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "Activity-based budgeting (ABB) builds the budget around the activities and cost drivers needed to produce outputs. It does not require justifying every expense from zero each year — that is the defining characteristic of zero-based budgeting. ABB links resources to activity levels; ZBB mandates that every expenditure be defended from ground zero regardless of prior spending patterns.",
-    "ExplanationWrongB": "Zero-based budgeting requires all expenses to be justified each period from zero. It is intensive but can eliminate embedded waste.",
+    "ExplanationWrongA": "Option A identifies incremental budgeting, but the stem describes kaizen budgeting. Incremental budgeting carries the prior period's budget forward and adjusts it — by a percentage or negotiated change — without assuming ongoing within-year improvement. The stem's defining fact is that the targets assume ongoing incremental cost reductions throughout the year based on continuous improvement efforts, which is kaizen budgeting's signature. The word 'incremental' in the stem refers to cost improvements over time, not to incremental budgeting's base-and-adjust method.",
+"ExplanationWrongB": "Option B identifies zero-based budgeting, but the stem describes kaizen budgeting. ZBB rebuilds each department's budget from zero each period; Emberton's targets assume ongoing incremental cost reductions throughout the year from continuous improvement efforts — the defining feature of kaizen budgeting. The distinction: ZBB justifies every cost from a zero base each cycle, while kaizen embeds expected improvements directly into each period's targets.",
     "ExplanationWrongC": "Activity-based budgeting links resource consumption to activities and cost drivers. It focuses on what resources are needed, not on continuous improvement targets. Kaizen budgeting specifically embeds incremental cost reductions into the budget to drive ongoing efficiency gains throughout the budget period.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
@@ -8087,7 +8087,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Activity-based budgeting links resource allocation to the activities and cost drivers that produce outputs, but it does not inherently require continuous improvement or cost reduction over the budget period. Kaizen budgeting is the specific technique that builds assumed, ongoing incremental cost reductions from continuous improvement efforts directly into the budget targets. A candidate may confuse ABB's focus on activity cost drivers with kaizen budgeting's mandate for ongoing efficiency gains.",
-    "ExplanationWrongC": "Zero-based budgeting requires all expenses to be justified each period from zero. It is intensive but can eliminate embedded waste.",
+"ExplanationWrongC": "Option C identifies zero-based budgeting, but Fairhaven's approach is kaizen budgeting. The stem's tell is the phrase \"ongoing incremental cost reductions throughout the year based on continuous improvement\" — that is kaizen's signature, not ZBB's. ZBB rebuilds budgets from a zero base each period; it does not assume continuous within-year improvement. Kaizen budgeting bakes the improvement expectation into the targets themselves.",
     "ExplanationWrongD": "Incremental budgeting adjusts the prior period budget by a percentage, preserving the existing cost structure without targeting improvements. Kaizen budgeting explicitly incorporates continuous cost reduction goals, challenging every process to become more efficient each period rather than accepting the status quo.",
     "question_state": "Certified",
     "DifficultyScore": 3,
@@ -8161,7 +8161,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "It perfectly predicts seasonal spikes in demand",
       "B": "It requires no historical data to compute",
       "C": "It reduces the effect of random short-term fluctuations to reveal the underlying trend",
-      "D": "It eliminates the need for any judgment in forecasting"
+      "D": "It eliminates the need for judgment in forecasting"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "A moving average smooths short-term random fluctuations in a data series, helping to reveal the underlying trend for forecasting purposes.",
@@ -8211,7 +8211,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "It requires no historical data to compute",
       "B": "It perfectly predicts seasonal spikes in demand",
-      "C": "It eliminates the need for any judgment in forecasting",
+      "C": "It eliminates the need for judgment in forecasting",
       "D": "It reduces the effect of random short-term fluctuations to reveal the underlying trend"
     },
     "CorrectChoice": "D",
@@ -8262,7 +8262,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "It reduces the effect of random short-term fluctuations to reveal the underlying trend",
       "B": "It perfectly predicts seasonal spikes in demand",
-      "C": "It eliminates the need for any judgment in forecasting",
+      "C": "It eliminates the need for judgment in forecasting",
       "D": "It requires no historical data to compute"
     },
     "CorrectChoice": "A",
@@ -8311,7 +8311,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Kestrel calculates a three-month moving average of sales to smooth out short-term fluctuations before forecasting the next period. What is the primary benefit of this method?",
     "Choices": {
-      "A": "It eliminates the need for any judgment in forecasting",
+      "A": "It eliminates the need for judgment in forecasting",
       "B": "It reduces the effect of random short-term fluctuations to reveal the underlying trend",
       "C": "It perfectly predicts seasonal spikes in demand",
       "D": "It requires no historical data to compute"
@@ -8362,7 +8362,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Larkspur calculates a three-month moving average of sales to smooth out short-term fluctuations before forecasting the next period. What is the primary benefit of this method?",
     "Choices": {
-      "A": "It eliminates the need for any judgment in forecasting",
+      "A": "It eliminates the need for judgment in forecasting",
       "B": "It perfectly predicts seasonal spikes in demand",
       "C": "It reduces the effect of random short-term fluctuations to reveal the underlying trend",
       "D": "It requires no historical data to compute"
@@ -8415,7 +8415,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "It requires no historical data to compute",
       "B": "It perfectly predicts seasonal spikes in demand",
-      "C": "It eliminates the need for any judgment in forecasting",
+      "C": "It eliminates the need for judgment in forecasting",
       "D": "It reduces the effect of random short-term fluctuations to reveal the underlying trend"
     },
     "CorrectChoice": "D",
@@ -10137,8 +10137,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "It maximizes overall company profit regardless of capacity",
       "B": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price",
-      "C": "It eliminates the need for any market price data",
-      "D": "It guarantees goal congruence in all cases"
+      "C": "It eliminates the need for market price data",
+      "D": "It guarantees goal congruence"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Negotiated transfer pricing preserves divisional autonomy and can produce a price acceptable to both divisions, though it does not guarantee optimal companywide results.",
@@ -10186,10 +10186,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Westbrook's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is a key advantage of negotiated transfer pricing?",
     "Choices": {
-      "A": "It eliminates the need for any market price data",
+      "A": "It eliminates the need for market price data",
       "B": "It maximizes overall company profit regardless of capacity",
       "C": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price",
-      "D": "It guarantees goal congruence in all cases"
+      "D": "It guarantees goal congruence"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Negotiated transfer pricing preserves divisional autonomy and can produce a price acceptable to both divisions, though it does not guarantee optimal companywide results.",
@@ -10237,9 +10237,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Yarrow's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is a key advantage of negotiated transfer pricing?",
     "Choices": {
-      "A": "It eliminates the need for any market price data",
+      "A": "It eliminates the need for market price data",
       "B": "It maximizes overall company profit regardless of capacity",
-      "C": "It guarantees goal congruence in all cases",
+      "C": "It guarantees goal congruence",
       "D": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price"
     },
     "CorrectChoice": "D",
@@ -10290,8 +10290,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price",
       "B": "It maximizes overall company profit regardless of capacity",
-      "C": "It guarantees goal congruence in all cases",
-      "D": "It eliminates the need for any market price data"
+      "C": "It guarantees goal congruence",
+      "D": "It eliminates the need for market price data"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Negotiated transfer pricing preserves divisional autonomy and can produce a price acceptable to both divisions, though it does not guarantee optimal companywide results.",
@@ -10339,9 +10339,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Ashgrove's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is a key advantage of negotiated transfer pricing?",
     "Choices": {
-      "A": "It guarantees goal congruence in all cases",
+      "A": "It guarantees goal congruence",
       "B": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price",
-      "C": "It eliminates the need for any market price data",
+      "C": "It eliminates the need for market price data",
       "D": "It maximizes overall company profit regardless of capacity"
     },
     "CorrectChoice": "B",
@@ -10390,10 +10390,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Birchwood's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is a key advantage of negotiated transfer pricing?",
     "Choices": {
-      "A": "It eliminates the need for any market price data",
+      "A": "It eliminates the need for market price data",
       "B": "It maximizes overall company profit regardless of capacity",
       "C": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price",
-      "D": "It guarantees goal congruence in all cases"
+      "D": "It guarantees goal congruence"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Negotiated transfer pricing preserves divisional autonomy and can produce a price acceptable to both divisions, though it does not guarantee optimal companywide results.",
@@ -10441,9 +10441,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Copperline's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is a key advantage of negotiated transfer pricing?",
     "Choices": {
-      "A": "It eliminates the need for any market price data",
+      "A": "It eliminates the need for market price data",
       "B": "It maximizes overall company profit regardless of capacity",
-      "C": "It guarantees goal congruence in all cases",
+      "C": "It guarantees goal congruence",
       "D": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price"
     },
     "CorrectChoice": "D",
@@ -11492,7 +11492,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "Standard costing establishes predetermined cost targets for internal performance measurement and variance calculation. It does not involve comparing processes or performance metrics against external organizations.",
     "ExplanationWrongB": "Variance analysis compares actual to standard or budgeted amounts. It identifies where performance deviated but is a diagnostic tool, not the specific answer to the question posed.",
-    "ExplanationWrongC": "Zero-based budgeting requires all expenses to be justified each period from zero. It is intensive but can eliminate embedded waste.",
+"ExplanationWrongC": "Option C identifies zero-based budgeting, but Waverly is benchmarking. The stem's key facts — comparing processes and performance metrics against best-in-class organizations to identify improvement opportunities — define benchmarking. ZBB concerns how a budget is built (justifying every expense from zero); it says nothing about measuring performance against external standards. The comparison-to-others element is what rules ZBB out.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 3,
@@ -13546,7 +13546,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Nightingale tracks on-time delivery rate and customer satisfaction scores alongside financial results. What is the primary benefit of including these nonfinancial measures?",
     "Choices": {
       "A": "They provide leading indicators of future financial performance and a more complete view of operations",
-      "B": "They replace the need for any financial statements",
+      "B": "They replace the need for financial statements",
       "C": "They are required only for external regulatory reporting",
       "D": "They guarantee improved financial results automatically"
     },
@@ -13595,7 +13595,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Oakhurst tracks on-time delivery rate and customer satisfaction scores alongside financial results. What is the primary benefit of including these nonfinancial measures?",
     "Choices": {
-      "A": "They replace the need for any financial statements",
+      "A": "They replace the need for financial statements",
       "B": "They provide leading indicators of future financial performance and a more complete view of operations",
       "C": "They guarantee improved financial results automatically",
       "D": "They are required only for external regulatory reporting"
@@ -13645,7 +13645,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Prairiewood tracks on-time delivery rate and customer satisfaction scores alongside financial results. What is the primary benefit of including these nonfinancial measures?",
     "Choices": {
-      "A": "They replace the need for any financial statements",
+      "A": "They replace the need for financial statements",
       "B": "They guarantee improved financial results automatically",
       "C": "They provide leading indicators of future financial performance and a more complete view of operations",
       "D": "They are required only for external regulatory reporting"
@@ -13696,7 +13696,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Quillfeather tracks on-time delivery rate and customer satisfaction scores alongside financial results. What is the primary benefit of including these nonfinancial measures?",
     "Choices": {
       "A": "They guarantee improved financial results automatically",
-      "B": "They replace the need for any financial statements",
+      "B": "They replace the need for financial statements",
       "C": "They are required only for external regulatory reporting",
       "D": "They provide leading indicators of future financial performance and a more complete view of operations"
     },
@@ -13748,7 +13748,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "They provide leading indicators of future financial performance and a more complete view of operations",
       "B": "They are required only for external regulatory reporting",
       "C": "They guarantee improved financial results automatically",
-      "D": "They replace the need for any financial statements"
+      "D": "They replace the need for financial statements"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Nonfinancial performance measures often serve as leading indicators of future financial results and provide insight into drivers not captured by financial data alone.",
@@ -13798,7 +13798,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "They guarantee improved financial results automatically",
       "B": "They provide leading indicators of future financial performance and a more complete view of operations",
       "C": "They are required only for external regulatory reporting",
-      "D": "They replace the need for any financial statements"
+      "D": "They replace the need for financial statements"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Nonfinancial performance measures often serve as leading indicators of future financial results and provide insight into drivers not captured by financial data alone.",
@@ -13846,7 +13846,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Thornfield sets transfer prices for a product with an active external market equal to the prevailing market price. What is the main advantage of this approach?",
     "Choices": {
-      "A": "It eliminates the need for any negotiation between divisions",
+      "A": "It eliminates the need for negotiation between divisions",
       "B": "It guarantees the selling division earns no profit",
       "C": "It approximates an arm's-length price and preserves goal congruence when a competitive external market exists",
       "D": "It minimizes the buying division's reported costs"
@@ -13899,7 +13899,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "It guarantees the selling division earns no profit",
       "B": "It minimizes the buying division's reported costs",
-      "C": "It eliminates the need for any negotiation between divisions",
+      "C": "It eliminates the need for negotiation between divisions",
       "D": "It approximates an arm's-length price and preserves goal congruence when a competitive external market exists"
     },
     "CorrectChoice": "D",
@@ -13951,7 +13951,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "It approximates an arm's-length price and preserves goal congruence when a competitive external market exists",
       "B": "It guarantees the selling division earns no profit",
       "C": "It minimizes the buying division's reported costs",
-      "D": "It eliminates the need for any negotiation between divisions"
+      "D": "It eliminates the need for negotiation between divisions"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "When a competitive external market exists, market-based transfer pricing approximates an arm's-length price and generally supports goal congruence between divisions.",
@@ -14001,7 +14001,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "It minimizes the buying division's reported costs",
       "B": "It approximates an arm's-length price and preserves goal congruence when a competitive external market exists",
-      "C": "It eliminates the need for any negotiation between divisions",
+      "C": "It eliminates the need for negotiation between divisions",
       "D": "It guarantees the selling division earns no profit"
     },
     "CorrectChoice": "B",
@@ -14051,7 +14051,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Yarrow sets transfer prices for a product with an active external market equal to the prevailing market price. What is the main advantage of this approach?",
     "Choices": {
       "A": "It guarantees the selling division earns no profit",
-      "B": "It eliminates the need for any negotiation between divisions",
+      "B": "It eliminates the need for negotiation between divisions",
       "C": "It approximates an arm's-length price and preserves goal congruence when a competitive external market exists",
       "D": "It minimizes the buying division's reported costs"
     },
@@ -14103,7 +14103,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "It guarantees the selling division earns no profit",
       "B": "It minimizes the buying division's reported costs",
-      "C": "It eliminates the need for any negotiation between divisions",
+      "C": "It eliminates the need for negotiation between divisions",
       "D": "It approximates an arm's-length price and preserves goal congruence when a competitive external market exists"
     },
     "CorrectChoice": "D",
@@ -14155,7 +14155,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "To allow timely product costing during the period without waiting for actual overhead costs to be known",
       "B": "To guarantee zero over- or underapplied overhead",
       "C": "To comply with a rule that the use of actual costs is prohibited",
-      "D": "To eliminate the need for any overhead allocation"
+      "D": "To eliminate the need for overhead allocation"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "A predetermined overhead rate, calculated before the period begins, allows timely costing of jobs throughout the period rather than waiting until actual costs are known at year-end.",
@@ -14203,7 +14203,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Brightpoint uses job order costing and applies overhead based on a predetermined rate using direct labor hours. Why use a predetermined rate rather than actual overhead?",
     "Choices": {
-      "A": "To eliminate the need for any overhead allocation",
+      "A": "To eliminate the need for overhead allocation",
       "B": "To allow timely product costing during the period without waiting for actual overhead costs to be known",
       "C": "To guarantee zero over- or underapplied overhead",
       "D": "To comply with a rule that the use of actual costs is prohibited"
@@ -14255,7 +14255,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Cedarline uses job order costing and applies overhead based on a predetermined rate using direct labor hours. Why use a predetermined rate rather than actual overhead?",
     "Choices": {
       "A": "To guarantee zero over- or underapplied overhead",
-      "B": "To eliminate the need for any overhead allocation",
+      "B": "To eliminate the need for overhead allocation",
       "C": "To allow timely product costing during the period without waiting for actual overhead costs to be known",
       "D": "To comply with a rule that the use of actual costs is prohibited"
     },
@@ -14307,7 +14307,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "To comply with a rule that the use of actual costs is prohibited",
       "B": "To guarantee zero over- or underapplied overhead",
-      "C": "To eliminate the need for any overhead allocation",
+      "C": "To eliminate the need for overhead allocation",
       "D": "To allow timely product costing during the period without waiting for actual overhead costs to be known"
     },
     "CorrectChoice": "D",
@@ -14358,7 +14358,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "To allow timely product costing during the period without waiting for actual overhead costs to be known",
       "B": "To guarantee zero over- or underapplied overhead",
-      "C": "To eliminate the need for any overhead allocation",
+      "C": "To eliminate the need for overhead allocation",
       "D": "To comply with a rule that the use of actual costs is prohibited"
     },
     "CorrectChoice": "A",
@@ -15222,7 +15222,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Vesper produced 12,000 units and sold 10,000 units. Fixed manufacturing overhead was $96,000 for the period. Compared with absorption costing, how does variable costing treat the fixed manufacturing overhead tied to the 2,000 units added to inventory?",
     "Choices": {
-      "A": "It eliminates the fixed overhead from all income reports",
+      "A": "It eliminates the fixed overhead from income reports",
       "B": "It expenses all $96,000 in the current period instead of deferring a portion in inventory",
       "C": "It assigns fixed overhead only to finished goods, not to units sold",
       "D": "It capitalizes fixed overhead into inventory under the same method as absorption costing"
@@ -15274,7 +15274,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Westbrook uses variable costing for internal reports. Production managers ask why fixed manufacturing overhead is not assigned to units in ending inventory. Which explanation is correct?",
     "Choices": {
       "A": "Fixed manufacturing overhead is attached to ending inventory based on units produced",
-      "B": "Fixed manufacturing overhead is removed from all income reports",
+      "B": "Fixed manufacturing overhead is removed from income reports",
       "C": "Fixed manufacturing overhead is expensed in the period incurred instead of being inventoried as product cost",
       "D": "Fixed manufacturing overhead is capitalized into inventory under variable and absorption costing in the same way"
     },
@@ -16693,7 +16693,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "They guarantee actual costs will equal the standard",
       "B": "They eliminate the need to ever review actual costs",
       "C": "They provide a benchmark for evaluating actual performance and simplify variance analysis",
-      "D": "They remove the need for any budgeting process"
+      "D": "They remove the need for a budgeting process"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Standard costs provide a predetermined benchmark against which actual performance is measured, simplifying variance analysis and highlighting areas needing attention.",
@@ -16741,7 +16741,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Cliffside sets standard costs at the start of the year and investigates variances that exceed a materiality threshold. What is a primary benefit of using standard costs?",
     "Choices": {
       "A": "They eliminate the need to ever review actual costs",
-      "B": "They remove the need for any budgeting process",
+      "B": "They remove the need for a budgeting process",
       "C": "They guarantee actual costs will equal the standard",
       "D": "They provide a benchmark for evaluating actual performance and simplify variance analysis"
     },
@@ -16793,7 +16793,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "They provide a benchmark for evaluating actual performance and simplify variance analysis",
       "B": "They guarantee actual costs will equal the standard",
       "C": "They eliminate the need to ever review actual costs",
-      "D": "They remove the need for any budgeting process"
+      "D": "They remove the need for a budgeting process"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Standard costs provide a predetermined benchmark against which actual performance is measured, simplifying variance analysis and highlighting areas needing attention.",
@@ -16840,7 +16840,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Everfern sets standard costs at the start of the year and investigates variances that exceed a materiality threshold. What is a primary benefit of using standard costs?",
     "Choices": {
-      "A": "They remove the need for any budgeting process",
+      "A": "They remove the need for a budgeting process",
       "B": "They provide a benchmark for evaluating actual performance and simplify variance analysis",
       "C": "They guarantee actual costs will equal the standard",
       "D": "They eliminate the need to ever review actual costs"
@@ -16891,7 +16891,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Falconridge sets standard costs at the start of the year and investigates variances that exceed a materiality threshold. What is a primary benefit of using standard costs?",
     "Choices": {
       "A": "They guarantee actual costs will equal the standard",
-      "B": "They remove the need for any budgeting process",
+      "B": "They remove the need for a budgeting process",
       "C": "They provide a benchmark for evaluating actual performance and simplify variance analysis",
       "D": "They eliminate the need to ever review actual costs"
     },
@@ -17193,7 +17193,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Eliminating waste and non-value-added activities throughout the production process",
       "B": "Maximizing inventory levels to avoid stockouts",
       "C": "Increasing batch sizes to reduce the number of setups",
-      "D": "Eliminating all quality control inspections"
+      "D": "Eliminating quality control inspections"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Lean manufacturing focuses on eliminating waste and non-value-added activities, often through smaller batch sizes, pull production, and continuous improvement.",
@@ -17240,7 +17240,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Mossbrook implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels. What is a central goal of this approach?",
     "Choices": {
-      "A": "Eliminating all quality control inspections",
+      "A": "Eliminating quality control inspections",
       "B": "Eliminating waste and non-value-added activities throughout the production process",
       "C": "Increasing batch sizes to reduce the number of setups",
       "D": "Maximizing inventory levels to avoid stockouts"
@@ -17290,7 +17290,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Nettlefield implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels. What is a central goal of this approach?",
     "Choices": {
-      "A": "Eliminating all quality control inspections",
+      "A": "Eliminating quality control inspections",
       "B": "Increasing batch sizes to reduce the number of setups",
       "C": "Eliminating waste and non-value-added activities throughout the production process",
       "D": "Maximizing inventory levels to avoid stockouts"
@@ -17340,7 +17340,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Oakenshaw implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels. What is a central goal of this approach?",
     "Choices": {
-      "A": "Eliminating all quality control inspections",
+      "A": "Eliminating quality control inspections",
       "B": "Maximizing inventory levels to avoid stockouts",
       "C": "Increasing batch sizes to reduce the number of setups",
       "D": "Eliminating waste and non-value-added activities throughout the production process"
@@ -17391,7 +17391,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Poplarwood implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels. What is a central goal of this approach?",
     "Choices": {
       "A": "Eliminating waste and non-value-added activities throughout the production process",
-      "B": "Eliminating all quality control inspections",
+      "B": "Eliminating quality control inspections",
       "C": "Increasing batch sizes to reduce the number of setups",
       "D": "Maximizing inventory levels to avoid stockouts"
     },
@@ -18459,7 +18459,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Westbrook Health System operates a pharmacy narcotics tracking system across six hospitals. The automated reconciliation control does not flag discrepancies for quantities under 50 units per transaction. The enterprise risk assessment rated narcotics diversion risk as Low - Residual based on the assumption that the monthly physical inventory audit would identify cumulative discrepancies. An internal audit revealed that $340,000 in Schedule II narcotics — approximately 17,000 dosage units — were unaccounted for over 14 months, with individual transactions averaging 38 units each, systematically below the threshold. The pharmacy director asserts the risk assessment was correct because the detective control was supposed to catch this. Which best evaluates whether the risk assessment properly distinguished inherent from residual risk?",
     "Choices": {
       "A": "The risk assessment was correct because the residual rating reflected the existence of the monthly inventory audit, and the loss resulted from audit execution failure.",
-      "B": "The assessment properly distinguished inherent from residual risk. The $340,000 loss demonstrates that no control system can eliminate all risk, consistent with COSO's reasonable assurance.",
+      "B": "The assessment properly distinguished inherent from residual risk. The $340,000 loss demonstrates that no control system can eliminate risk, consistent with COSO's reasonable assurance.",
       "C": "The assessment failed because it treated the detective control as fully effective without evaluating whether a monthly count could realistically detect small-quantity discrepancies aggregating across six facilities. The Low rating was based on an invalid assumption about control effectiveness.",
       "D": "The error was that inherent risk was understated. Narcotics diversion should have been rated High - Inherent regardless of compensating controls."
     },
@@ -18972,7 +18972,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Require a second employee to approve new vendor additions and review a monthly vendor-master change report",
       "B": "Require the same employee to also perform the monthly bank reconciliation",
-      "C": "Have an internal auditor review all payments above a threshold quarterly",
+      "C": "Have an internal auditor review payments above a threshold quarterly",
       "D": "Raise the dollar threshold for requiring supervisory approval of payments"
     },
     "CorrectChoice": "A",
@@ -19072,9 +19072,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "During an internal audit, Drake Distribution discovered that a former employee's system access remained active for 18 days after termination. No unauthorized transactions occurred during that period. Management wants to prevent recurrence. Which remediation is most appropriate?",
     "Choices": {
       "A": "Accept the risk since no actual fraud or data loss occurred during the gap",
-      "B": "Require stronger password complexity standards for all system users",
+      "B": "Require stronger password complexity standards for system users",
       "C": "Implement automated access deprovisioning triggered by termination in the HR system and require quarterly user access recertification by managers",
-      "D": "Convert all terminated employees to read-only access instead of removing access entirely"
+      "D": "Convert terminated employees to read-only access instead of removing access entirely"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Under the COSO Information and Communication component (Principles 13–14), timely and reliable information flows — including HR-to-IT communication of termination events — are essential for effective internal control. Analysis of the control breakdown: Drake Distribution had no automated linkage between HR termination records and IT access management. The 18-day access gap represents a systemic process-design deficiency — the absence of automated deprovisioning means every future termination will create the same exposure. Evaluation of remediation options: Option C (automated deprovisioning + quarterly recertification) addresses the root cause by creating a preventive automated control. This is analytically superior to: Option A (accept risk), which confuses outcome (no loss in this instance) with process quality (the gap will recur systemically); Option B (stronger passwords), which targets authentication rather than the authorization failure (access should not exist); and Option D (read-only access), which retains the terminated employee in the system, creating ongoing confidentiality risk and providing a malicious actor with reconnaissance capability. The correct analytical framework requires distinguishing between process-design failures and one-off incidents — when a control failure is systemic, the remediation must address the process design (automated deprovisioning) rather than the outcome or tangentially related controls. The automated HR-to-IT trigger is a preventive control; the quarterly recertification is a complementary detective control that ensures ongoing access appropriateness for active employees.",
@@ -19123,7 +19123,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Generate weekly exception reports for the sales manager to review and correct",
       "B": "Reconcile the sales order file to the invoice register at month-end",
-      "C": "Require a sales supervisor to manually approve every sales order before entry",
+      "C": "Require a sales supervisor to manually approve sales order before entry",
       "D": "Implement real-time field validation in the order entry system to reject entries with invalid customer codes, negative quantities, or missing ship-to addresses"
     },
     "CorrectChoice": "D",
@@ -19276,7 +19276,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Northland Energy, a publicly traded oil and gas company with $3.8 billion in annual revenue, experienced a material weakness in internal control over financial reporting related to reserve estimation. The audit committee, chaired by a retired petroleum engineer with 40 years of industry experience, approved the reserve estimates without substantive challenge. However, an SEC comment letter later identified that the committee lacked any member with current financial reporting expertise, and the remaining two members were a real estate developer and a former marketing executive. The board governance committee defended the composition, stating that the chair's technical expertise was sufficient to oversee reserve estimation risks. Under COSO Principle 4, which of the following best characterizes the board oversight deficiency at Northland?",
     "Choices": {
       "A": "The board satisfied COSO Principle 4 because the audit committee chair possessed deep industry knowledge, and COSO does not require financial reporting expertise on the audit committee.",
-      "B": "The board oversight was adequate because the SEC comment letter identified the weakness before material misstatement occurred, demonstrating that external regulatory review compensated for any internal governance gap.",
+      "B": "The board oversight was adequate because the SEC comment letter identified the weakness before material misstatement occurred, demonstrating that external regulatory review compensated for internal governance gap.",
       "C": "The audit committee failed to demonstrate a commitment to competence because it lacked members with sufficient understanding of financial reporting internal controls, causing the committee to over-rely on industry expertise without the financial reporting knowledge necessary to evaluate internal control effectiveness.",
       "D": "The governance deficiency was limited to the audit committee's failure to hire an outside consultant to review the reserve estimates, which would have satisfied COSO Principle 4 without requiring changes to committee composition."
     },
@@ -19381,7 +19381,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Granite's fraud risk assessment is adequate because sales compensation is a human resources matter and is explicitly excluded from the scope of COSO Principle 8, which focuses on financial reporting controls.",
       "B": "The organization failed to evaluate the fraud risk arising from compensation structures that create powerful incentives for sales personnel to circumvent revenue recognition controls to achieve compensation thresholds.",
       "C": "The fraud risk assessment deficiency is limited to the revenue recognition team's failure to detect the side letters, and fixing the revenue team's contract review process would fully address COSO Principle 8 requirements.",
-      "D": "Granite should eliminate all commission-based compensation because COSO Principle 8 prohibits any compensation structure that could potentially create incentive to commit fraud."
+      "D": "Granite should eliminate commission-based compensation because COSO Principle 8 prohibits compensation structure that could potentially create incentive to commit fraud."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO Principle 8 requires the organization to consider the potential for fraud in assessing risks to the achievement of objectives. The fraud risk assessment must explicitly consider the various ways fraud can occur, including the pressures and incentives that motivate individuals to commit fraudulent acts. The fraud triangle identifies three conditions present when fraud occurs: pressure/incentive, opportunity, and rationalization. Granite's fraud risk assessment is deficient because it failed to evaluate how the specific design of the compensation program created a pressure vector: (1) The commission structure pays 12% of total contract value immediately upon signing, meaning a sales representative who books a $2 million contract receives $240,000 in commission regardless of collectability. This creates a direct financial incentive to maximize contract value without regard for customer creditworthiness or contract enforceability. (2) The President's Club threshold ($2 million in Q4) adds a concentrated time-pressure element at quarter-end, which is precisely when the suspicious side letters appeared. The \"all-or-nothing\" nature of the threshold ($1.99M = no bonus; $2.0M = $50,000 + vacation) creates an exceptionally strong incentive to close the marginal deal at any cost. (3) The side letters with undisclosed cancellation rights suggest that sales personnel found a way around the revenue recognition controls — the opportunity component of the fraud triangle. COSO Principle 8 expects organizations to consider whether incentive structures could motivate fraudulent financial reporting or misappropriation of assets. This is not a \"HR matter\" — fraudulent revenue recognition to meet compensation targets is a direct financial reporting risk. A properly designed fraud risk assessment would have identified the combination of high-variable compensation, concentrated timing pressure, and deal-structuring authority as a high-risk area requiring specific anti-fraud controls.",
@@ -19584,7 +19584,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "OmniSource Foods, a $1.4 billion food distributor with 22 distribution centers, discovered that a regional procurement manager had approved $2.8 million in purchase orders to a shell company over 18 months. The internal investigation found: (1) the manager had sole authority to approve POs up to $75,000 without secondary review; (2) the vendor master file allowed additions without independent verification of vendor banking details; (3) the manager had disclosed $340,000 in personal debt and a recent divorce to HR six months before the scheme began; and (4) the manager told investigators, 'Everyone inflates expense reports — procurement is no different. The company barely checks anything.' The controller, Alisha Patel, categorized this as a failure of preventive controls and proposed reducing the single-approval PO limit to $25,000. Under COSO Principle 8, which of the following best evaluates whether Patel's proposed response addresses the root cause of the fraud?",
     "Choices": {
-      "A": "Patel's proposed response correctly addresses the root cause because reducing PO approval limits eliminates the opportunity for fraud by requiring dual approval on all transactions above $25,000, which directly removes the fraud triangle condition that enabled the scheme.",
+      "A": "Patel's proposed response correctly addresses the root cause because reducing PO approval limits eliminates the opportunity for fraud by requiring dual approval on transactions above $25,000, which directly removes the fraud triangle condition that enabled the scheme.",
       "B": "Patel's proposed response is adequate because the primary fraud triangle factor driving this scheme was pressure from the manager's $340,000 in personal debt, and lowering approval limits would deter future schemes by reducing opportunity regardless of the pressure and rationalization factors present.",
       "C": "Patel's proposed response is incomplete because it addresses only the opportunity leg of the fraud triangle through a control design change but does not address the rationalization factor evident in the manager's statement or the pressure indicators in the manager's personal financial situation, both of which COSO Principle 8 requires management to assess.",
       "D": "Patel's proposed response is unnecessary because the fraud was detected by existing controls — the fact that internal investigation identified the shell company purchases demonstrates that existing detective controls were functioning and that no additional preventive controls are required under COSO Principle 8."
@@ -19738,7 +19738,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Trinity Brands, a consumer packaged goods company, acquired a $340 million competitor, Pacific Coast Foods, and integrated its operations into Trinity's ERP system over a six-month period. During the first quarter-end close after integration, the controller, Marcus Webb, discovered that: (1) Pacific Coast's legacy inventory system used a different unit-of-measure convention (cases vs. eaches) that was not reconciled during data migration; (2) 12,400 customer records were duplicated because Pacific Coast used a different customer numbering scheme; (3) the acquired entity's cost accounting records for work-in-process were maintained in a standalone spreadsheet that was not migrated to the ERP; and (4) Trinity's financial reporting team learned of these issues only when the quarter-end consolidation produced a $4.7 million unexplained inventory variance. The CIO argued that the data migration was technically complete because all Pacific Coast records were successfully loaded into the ERP. Under COSO Principle 13, which of the following best evaluates the information quality failure at Trinity?",
     "Choices": {
-      "A": "The CIO is correct that data migration was complete because all Pacific Coast records were loaded into the ERP, and the identified issues — units of measure, customer duplication, and the spreadsheet — are reconciliation adjustments that occur during any acquisition integration and do not constitute an information quality deficiency under COSO.",
+      "A": "The CIO is correct that data migration was complete because Pacific Coast records were loaded into the ERP, and the identified issues — units of measure, customer duplication, and the spreadsheet — are reconciliation adjustments that occur during acquisition integration and do not constitute an information quality deficiency under COSO.",
       "B": "The information quality deficiency is that Trinity should have run a parallel close — maintaining Pacific Coast's legacy systems for one additional quarter while validating the migrated data against legacy reports — rather than attempting a single cutover to the integrated ERP.",
       "C": "Trinity failed to obtain or generate relevant and quality information because the data migration process did not validate that migrated data was fit for its intended purpose in financial reporting — data was loaded into the system but was not verified for completeness, accuracy, or usability in the financial reporting process.",
       "D": "The root cause of the information quality failure was that Pacific Coast's legacy systems were incompatible with Trinity's ERP, and COSO Principle 13 requires that acquired entities be maintained on separate systems until a full system conversion can be completed with third-party data quality assurance validation."
@@ -19843,7 +19843,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Access control -- the legacy-to-cloud role mapping process failed to ensure that permissions in the new system were restricted to those necessary for each user's current job responsibilities. The primary remediation requires an enterprise-wide access recertification for all 4,200 accounts and implementation of periodic user access reviews.",
       "B": "Change management -- the ERP migration was implemented without adequate end-to-end testing of the role-mapping conversion scripts, allowing legacy permissions to propagate into the production environment. The primary remediation requires re-executing the role-mapping migration with corrected conversion scripts in a controlled change window.",
-      "C": "Segregation of duties -- the 312 AP accounts with general ledger posting access represent an incompatible function combination that creates material fraud risk. The primary remediation requires immediate revocation of GL posting access from all AP department users, followed by a segregation-of-duties conflict analysis across all departments.",
+      "C": "Segregation of duties -- the 312 AP accounts with general ledger posting access represent an incompatible function combination that creates material fraud risk. The primary remediation requires immediate revocation of GL posting access from AP department users, followed by a segregation-of-duties conflict analysis across departments.",
       "D": "System operations -- the cloud ERP vendor failed to properly configure the role-based access controls during the implementation phase that were specified in the statement of work. The primary remediation requires the vendor to perform a root cause analysis and implement corrective configuration changes under the service level agreement."
     },
     "CorrectChoice": "A",
@@ -19894,8 +19894,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "The regional controller independently decided to defer the write-down and should be held solely accountable, as COSO Principle 3 places control responsibility on the individual performing the accounting function.",
       "B": "The organizational structure created accountability ambiguity because the dual-reporting arrangement allowed the RVP to exercise de facto control over accounting decisions while the Corporate Controller's functional authority lacked enforcement mechanisms.",
-      "C": "The Corporate Controller acted appropriately by deferring to the RVP's operational authority because COSO Principle 3 establishes that the highest-ranking executive in a reporting line has final authority over all decisions within that line.",
-      "D": "The matrix structure is inherently incompatible with COSO Principle 3, and Atlas Global should restructure to a purely functional reporting model where all controllers report exclusively to the Corporate Controller."
+      "C": "The Corporate Controller acted appropriately by deferring to the RVP's operational authority because COSO Principle 3 establishes that the highest-ranking executive in a reporting line has final authority over decisions within that line.",
+      "D": "The matrix structure is inherently incompatible with COSO Principle 3, and Atlas Global should restructure to a purely functional reporting model where controllers report exclusively to the Corporate Controller."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO Principle 3 requires that management establish, with board oversight, the structures, reporting lines, and appropriate authorities and responsibilities in the pursuit of objectives. The critical requirement is that authority and responsibility are clearly assigned and that accountability mechanisms function effectively — particularly where reporting lines are shared. Atlas Global's matrix structure exhibits a specific control breakdown: the formal reporting structure gives the Corporate Controller functional authority over accounting policy, but the practical authority — control over compensation, performance evaluations, and career progression — rests entirely with the Regional VP. When the RVP directed an accounting treatment that violated GAAP, the Corporate Controller received notification but had no mechanism to enforce compliance. The regional controller correctly escalated the issue, but the Corporate Controller's acknowledgment without action demonstrates that the functional reporting line had become ceremonial rather than operational. COSO Principle 3 does not prescribe a particular organizational structure — it requires that whatever structure exists has clearly assigned responsibilities and effective accountability. Atlas Global's matrix structure could work if (1) the Corporate Controller had authority to override accounting decisions made under regional pressure, (2) compensation decisions for controllers were shared between the functional and regional reporting lines, or (3) an escalation protocol existed for disputes between the two reporting authorities. The absence of any of these mechanisms is the COSO Principle 3 failure.",
@@ -20048,7 +20048,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "The risk response is adequate because the risk committee identified and approved specific actions, and COSO Principle 9 requires management to select and develop control activities — it does not prescribe the scale of the response.",
       "B": "The risk response is inconsistent with the assessed risk severity because the selected controls and contingency measures are not proportionate to the high-likelihood, critical-impact risk identified — the controls operate at an administrative level while the risk demands substantive operational mitigation.",
       "C": "The risk response should focus exclusively on financial contingency reserves — if the reserve were increased to $15 million (approximately 5 days of production), the risk would be adequately mitigated regardless of the design quality of the other controls.",
-      "D": "Paragon should immediately terminate all single-source supplier relationships and dual-source every component — COSO Principle 9 requires that the response eliminate the risk entirely when the assessed impact is critical."
+      "D": "Paragon should immediately terminate single-source supplier relationships and dual-source component — COSO Principle 9 requires that the response eliminate the risk entirely when the assessed impact is critical."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO Principle 9 requires the organization to identify and assess changes that could significantly impact the system of internal control, and to select, develop, and deploy control activities that contribute to the mitigation of risks to acceptable levels. The key concept is proportionality — when a risk is assessed as high-likelihood and critical-impact, the response must be commensurate with that severity. Paragon's response operates at an administrative level (quarterly meetings with undefined agendas, self-reported certifications with no verification) while the risk is operational (production stoppage from supplier failure). The $500,000 contingency reserve is objectively insufficient: at ~$3M/day in production revenue, $500,000 covers less than 4 hours of revenue, not 3 days as Option C states. Controls that work on paper but do not materially affect the assessed risk are not proportionate. COSO Principle 9 expects the organization to evaluate whether the selected controls actually reduce the risk to an acceptable level, not merely to select some controls and declare the risk addressed.",
@@ -20099,8 +20099,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "The matrix structure is functioning as designed because the division controllers properly escalated the issue to both reporting lines — the corporate controller was informed and the division presidents exercised their operational authority as the matrix intended.",
       "B": "The matrix structure created an authority conflict where division controllers faced competing directives from two reporting lines with misaligned incentives — the corporate controller's financial reporting authority was operationally subordinate to the division presidents' compensation-driven directives, and the controllers lacked structural protection to uphold the corporate authority.",
-      "C": "The deficiency is limited to the division presidents' compensation design — if revenue targets were removed from their bonus calculations, the matrix reporting structure would be effective without any changes to authority delegation.",
-      "D": "Pinnacle should abandon the matrix structure entirely and return to a purely functional organization where all controllers report exclusively to the corporate controller, because COSO Principle 3 prohibits dual reporting lines for control-related functions."
+      "C": "The deficiency is limited to the division presidents' compensation design — if revenue targets were removed from their bonus calculations, the matrix reporting structure would be effective without changes to authority delegation.",
+      "D": "Pinnacle should abandon the matrix structure entirely and return to a purely functional organization where controllers report exclusively to the corporate controller, because COSO Principle 3 prohibits dual reporting lines for control-related functions."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO Principle 3 requires management to establish, with board oversight, structures, reporting lines, and appropriate authorities and responsibilities in the pursuit of objectives. When an organization adopts a matrix structure with dual reporting lines, the principle requires that the authority relationships be designed so that control-related responsibilities are not subordinated to operational incentives. Pinnacle's structure formally assigned financial reporting authority to the corporate controller but failed to provide the division controllers with structural protection to exercise that authority when it conflicted with division presidents' directives. The division presidents' compensation (40% revenue-based) created an incentive to adopt aggressive revenue estimates, and the controllers lacked any mechanism — such as a mandatory escalation protocol, a requirement that corporate controller approval precede revenue recognition, or protection from retaliation — to uphold the corporate authority. The matrix structure itself is not the deficiency; the deficiency is that the structure established formal dual reporting without ensuring that control-related authority was operationally enforceable when it conflicted with operational authority. In practice, organizations with matrix structures must ensure that the 'dotted line' for internal control carries sufficient weight that it cannot be overridden by the 'solid line' for operations when control issues are at stake.",
@@ -20201,10 +20201,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Riverbend Community Bank, a $3.8 billion financial institution, identified four control deficiencies during its annual internal control evaluation. The Chief Audit Executive, Maria Gonzalez, classified them as follows: (1) three bank tellers shared a single cash drawer logon credential because new credentials were delayed — classified as a 'control deficiency'; (2) the loan officer who approved commercial loans also performed the annual independent loan review for the same loans — classified as a 'significant deficiency'; (3) the IT department had not applied security patches to the core banking system for 14 months, affecting 240,000 customer accounts — also classified as a 'significant deficiency'; and (4) the CFO had overridden the allowance for loan loss calculation prepared by the credit risk team for three consecutive quarters, each time reducing the allowance by $2-4 million to meet consensus earnings estimates — classified as a 'significant deficiency.' The external auditor disagreed with the classifications. Under COSO Principle 17, which classification appears most clearly inconsistent with the severity criteria?",
     "Choices": {
-      "A": "Deficiency 1 should have been classified as a significant deficiency because any credential-sharing incident in a regulated bank represents a material weakness regardless of duration or controls applied.",
+      "A": "Deficiency 1 should have been classified as a significant deficiency because credential-sharing incident in a regulated bank represents a material weakness regardless of duration or controls applied.",
       "B": "Deficiency 3 should have been classified as a material weakness because unpatched security vulnerabilities affecting 240,000 customer accounts for 14 months represent a reasonable possibility that a material misstatement or loss could occur and not be prevented or detected on a timely basis.",
       "C": "Deficiency 4 (CFO override of loan loss allowance) should have been classified as a material weakness because management override of a significant accounting estimate for three consecutive quarters to meet earnings targets represents a deficiency where there is a reasonable possibility that a material misstatement of the financial statements will not be prevented or detected.",
-      "D": "Deficiency 2 should have been classified as a material weakness because any segregation of duties deficiency in a lending function at a regulated bank automatically qualifies as a material weakness under COSO Principle 17, regardless of compensating controls."
+      "D": "Deficiency 2 should have been classified as a material weakness because segregation of duties deficiency in a lending function at a regulated bank automatically qualifies as a material weakness under COSO Principle 17, regardless of compensating controls."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "COSO Principle 17 requires the organization to evaluate and communicate internal control deficiencies in a timely manner to those parties responsible for taking corrective action. The severity classification framework distinguishes between control deficiencies, significant deficiencies, and material weaknesses based on the magnitude of potential misstatement and the likelihood of occurrence. The CFO's override of the loan loss allowance calculation for three consecutive quarters to meet consensus earnings estimates is the clearest misclassification: management override of a significant accounting estimate made for the specific purpose of meeting earnings targets is a textbook indicator of a material weakness. The key factors are: (1) the override was recurring (three consecutive quarters), not isolated; (2) the magnitude was material ($2-4 million per quarter for a $3.8 billion bank); (3) override was specifically motivated by earnings targets, indicating intentional bias; and (4) the CFO is the most senior financial officer, meaning the override could not be prevented by lower-level controls. A material weakness exists when there is a reasonable possibility that a material misstatement will not be prevented or detected on a timely basis — management override of this nature creates precisely that condition.",
@@ -20255,7 +20255,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "The annual audit cycle satisfies COSO Principle 16 because the error was detected within the same fiscal year, and COSO does not prescribe specific monitoring frequencies — annual evaluations are sufficient for billing controls.",
       "B": "The monitoring design is inadequate because a point-in-time annual review cannot provide timely detection of systematic errors introduced mid-cycle — COSO Principle 16 expects monitoring to be ongoing and integrated into operations, with frequency calibrated to the velocity at which errors can accumulate material impact.",
       "C": "The deficiency is that internal audit tested only a two-week sample period — if the sample period covered a full month, the monitoring design would be adequate regardless of evaluation frequency.",
-      "D": "Columbia should replace the annual internal audit review with a continuous automated monitoring tool that tests 100% of transactions — COSO Principle 16 requires continuous monitoring for all financially significant processes."
+      "D": "Columbia should replace the annual internal audit review with a continuous automated monitoring tool that tests 100% of transactions — COSO Principle 16 requires continuous monitoring for financially significant processes."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO Principle 16 requires the organization to select, develop, and perform ongoing and/or separate evaluations to ascertain whether the components of internal control are present and functioning. The key distinction is that the frequency and nature of monitoring must be calibrated to the risk being monitored. For a billing system processing $2.8 billion annually, a systematic coding error introduced in March and operating undetected for nine months before the December audit represents a monitoring frequency gap: the annual point-in-time review is too infrequent relative to the velocity at which a systematic error can accumulate material impact ($14 million at approximately $1.56 million per month). COSO Principle 16 expects organizations to consider the rate of change, the significance of the process, and the potential magnitude of undetected errors when designing monitoring activities. The annual audit 'worked as designed' only if the design objective was annual detection — but COSO's objective is timely detection. A monitoring activity that allows a $14 million systematic error to operate for nine months is not adequately frequent. The appropriate remediation is to supplement the annual separate evaluation with ongoing monitoring activities — such as monthly automated reasonableness tests, trend analysis of Medicare billing by CPT code, or exception reporting for changes in average charge per encounter.",
@@ -20307,7 +20307,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "The CIO's characterization is reasonable because the system was ultimately deployed to all 340 branches, and the deviations from the project plan represent operational execution variances that are inherent to large-scale IT implementations.",
       "B": "The deviations from the project plan represent failures in technology general controls during a significant system change — the shortened parallel runs, absent reconciliations, and incomplete go-live sign-offs mean that the organization cannot demonstrate that the system was implemented with controls functioning as designed.",
       "C": "The deficiencies are limited to project management — the system itself functioned correctly, and COSO Principle 11 governs the selection and development of technology controls, not adherence to project implementation timelines.",
-      "D": "The appropriate response is to extend the parallel run period to 60 days for future implementations — the 30-day standard was insufficient, and extending it would remediate all identified control deficiencies."
+      "D": "The appropriate response is to extend the parallel run period to 60 days for future implementations — the 30-day standard was insufficient, and extending it would remediate identified control deficiencies."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO Principle 11 requires the organization to select and develop general control activities over technology to support the achievement of objectives. Technology general controls apply to the acquisition, development, and maintenance of technology — not just to ongoing operations. When an organization undertakes a significant system implementation, the controls established in the project plan (parallel runs, reconciliations, multi-party sign-offs) are the technology general controls that ensure the new system processes transactions accurately and completely before being relied upon. The CIO's characterization of these as 'minor deviations' fundamentally misinterprets the role of implementation controls. Each control served a specific purpose: the 30-day parallel run confirmed that the new system produced results consistent with the legacy system over a full accounting cycle; the daily reconciliations detected processing discrepancies; and the tri-party sign-off ensured that operational, technical, and financial perspectives all confirmed readiness. When 51% of branches had shortened parallel runs, 33% lacked reconciliations, and 26% had incomplete sign-offs, the organization cannot assert that the implementation was controlled. Three-quarters of branches (approximately 255) had at least one control deviation. In practice, technology general controls during implementation are not project management niceties — they are control activities that ensure the integrity of the financial reporting system at the point of transition.",
@@ -20356,10 +20356,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Meridian Manufacturing Corporation recently completed its annual internal control assessment and identified two material weaknesses: (1) inadequate segregation of duties in the accounts payable system due to a lean staffing model, and (2) concentration risk from reliance on a single-source supplier for a critical raw material component. The CFO, audit committee, and risk committee are meeting to evaluate risk response options under the COSO ERM framework. Meridian has limited capital reserves — it cannot fund both a full ERP-based segregation-of-duties remediation and a dual-supplier qualification program in the current fiscal year. Management must recommend a risk response strategy that best balances available resources against the severity of each material weakness. Which of the following actions represents the most appropriate application of COSO ERM risk response principles given these constraints?",
     "Choices": {
-      "A": "Avoid the supplier concentration risk by immediately terminating the single-source contract and qualifying a second supplier, while accepting the segregation-of-duties weakness without any interim compensating controls until next year's budget cycle.",
-      "B": "Share the segregation-of-duties risk by outsourcing the entire accounts payable function to a third-party service provider, while accepting the supplier concentration risk without any mitigation.",
+      "A": "Avoid the supplier concentration risk by immediately terminating the single-source contract and qualifying a second supplier, while accepting the segregation-of-duties weakness without interim compensating controls until next year's budget cycle.",
+      "B": "Share the segregation-of-duties risk by outsourcing the entire accounts payable function to a third-party service provider, while accepting the supplier concentration risk without mitigation.",
       "C": "Reduce the supplier concentration risk by initiating dual-supplier qualification with the available capital, and reduce the segregation-of-duties risk through compensating detective controls — specifically, daily reconciliation reviews by the controller and monthly management exception reports — until full remediation funding is available in the next budget cycle.",
-      "D": "Accept both material weaknesses without implementing any mitigation or compensating controls, document the risk acceptance rationale in the board minutes, and revisit both items during the next annual assessment."
+      "D": "Accept both material weaknesses without implementing mitigation or compensating controls, document the risk acceptance rationale in the board minutes, and revisit both items during the next annual assessment."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Under the COSO Enterprise Risk Management framework, the risk response component requires management to select among four strategies — avoid, reduce, share, or accept — based on an assessment of each risk's severity, the entity's risk appetite, and the cost-benefit of available response options. When resource constraints limit the entity's ability to fully remediate multiple material weaknesses simultaneously, COSO ERM does not prescribe an all-or-nothing approach. Rather, the framework supports deploying available resources to the most critical exposures while implementing compensating controls (detective or preventive) for risks that cannot yet be fully remediated.\n\nOption C is the most appropriate response because it reflects a pragmatic, layered risk response strategy consistent with COSO ERM principles. First, it reduces the supplier concentration risk proactively by initiating dual-supplier qualification — a risk reduction strategy that directly addresses a material weakness that could halt production if the single-source supplier fails. Second, it reduces the segregation-of-duties risk through compensating detective controls (daily reconciliation reviews and monthly management exception reports). Compensating controls are expressly contemplated by COSO ERM: when preventive controls cannot be fully implemented due to resource or structural constraints, detective controls that identify errors or irregularities on a timely basis provide reasonable — not absolute — assurance that the risk is being managed. This layered approach reflects a cost-benefit evaluation: the entity deploys capital to the supply-chain risk (which has no easy compensating control) while deploying management oversight to the segregation-of-duties risk (where timely detection can mitigate the risk until structural remediation is funded).\n\nA common exam error on COSO ERM risk response questions is to treat the four strategies as mutually exclusive or to assume that material weaknesses must be either fully remediated or fully ignored. The framework is more flexible: an entity may reduce one risk, share another, accept a third, and avoid a fourth — all within the same assessment cycle — as long as each decision is grounded in a documented evaluation of severity, likelihood, and available resources. Option C correctly applies this principle by selecting different response intensities for different risks based on the entity's specific constraints, rather than applying a uniform strategy to all weaknesses.",
@@ -20509,7 +20509,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Bellwood is too small to fully segregate duties among its few accounting employees. What can help mitigate this control weakness?",
     "Choices": {
-      "A": "Outsourcing all accounting with no oversight",
+      "A": "Outsourcing accounting with no oversight",
       "B": "Eliminating internal controls entirely since the company is small",
       "C": "Increased owner or management review and oversight as a compensating control",
       "D": "Ignoring the risk since fraud is unlikely in small companies"
@@ -20562,7 +20562,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Cliffside is too small to fully segregate duties among its few accounting employees. What can help mitigate this control weakness?",
     "Choices": {
       "A": "Ignoring the risk since fraud is unlikely in small companies",
-      "B": "Outsourcing all accounting with no oversight",
+      "B": "Outsourcing accounting with no oversight",
       "C": "Eliminating internal controls entirely since the company is small",
       "D": "Increased owner or management review and oversight as a compensating control"
     },
@@ -20613,7 +20613,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Duskwood is too small to fully segregate duties among its few accounting employees. What can help mitigate this control weakness?",
     "Choices": {
       "A": "Increased owner or management review and oversight as a compensating control",
-      "B": "Outsourcing all accounting with no oversight",
+      "B": "Outsourcing accounting with no oversight",
       "C": "Eliminating internal controls entirely since the company is small",
       "D": "Ignoring the risk since fraud is unlikely in small companies"
     },
@@ -20717,7 +20717,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Falconridge is too small to fully segregate duties among its few accounting employees. What can help mitigate this control weakness?",
     "Choices": {
       "A": "Ignoring the risk since fraud is unlikely in small companies",
-      "B": "Outsourcing all accounting with no oversight",
+      "B": "Outsourcing accounting with no oversight",
       "C": "Increased owner or management review and oversight as a compensating control",
       "D": "Eliminating internal controls entirely since the company is small"
     },
@@ -20875,7 +20875,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Replace the independent audit committee chair with the Chief Operating Officer to bring deeper operational insight to board oversight discussions",
       "B": "Appoint a lead independent director with authority to set board agendas and convene executive sessions without management present, and recommend that the board disclose its leadership structure and the rationale for combining the Chairman and CEO roles in the proxy statement",
       "C": "Reduce board membership from nine to five directors so that the Chairman/CEO can make governance decisions more efficiently and oversight is streamlined",
-      "D": "Merge the audit committee into the full board since the Chairman/CEO personally oversees all committee activities and a single oversight body would eliminate redundancy"
+      "D": "Merge the audit committee into the full board since the Chairman/CEO personally oversees committee activities and a single oversight body would eliminate redundancy"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO Principle 4 requires the board of directors to demonstrate independence from management and to exercise oversight of the development and performance of internal control. When the Chairman also serves as CEO, structural independence is compromised because the same individual responsible for managing the company also leads the board charged with overseeing management. This creates a conflict: the CEO reports to the board, but the board is chaired by the CEO. To satisfy COSO Principle 4 under a combined Chairman/CEO structure, governance best practice — endorsed by institutional investors, proxy advisory firms, and the SEC — calls for appointing a lead independent director. This director must have clearly defined authority to set board agendas, convene executive sessions without management present, and ensure that independent directors control oversight of internal control. The SEC requires publicly traded companies to disclose their board leadership structure in the proxy statement and to explain the rationale for combining (or separating) the Chairman and CEO roles, along with any compensating governance mechanisms such as a lead independent director. In Meridian's case, appointing a lead independent director directly addresses Norton Capital's independence concern by establishing a formally independent channel for board oversight of internal control while providing the transparency that institutional investors expect. A common exam trap is to conflate board independence (COSO Principle 4) with tone at the top (COSO Principle 1 — the control environment): although both relate to governance, Principle 4 specifically addresses the board's structural independence from management and its oversight role, while Principle 1 addresses the broader ethical climate.",
@@ -21334,7 +21334,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "The quarterly monitoring frequency was appropriate because COSO Principle 16 does not prescribe a specific monitoring cadence, and the fraud detection algorithm was operating as designed — the loss resulted from a control design deficiency in the algorithm threshold, not a monitoring frequency failure.",
       "B": "The quarterly monitoring frequency was insufficient because COSO Principle 16 requires that monitoring be performed at a frequency commensurate with the velocity and nature of the risks — in a high-velocity real-time transaction environment, quarterly periodic evaluations must be supplemented with continuous monitoring mechanisms capable of detecting anomalous patterns between evaluation cycles.",
       "C": "Monitoring reviews should be conducted annually to allow sufficient data to accumulate for statistically meaningful analysis, as quarterly reviews produce sample sizes too small to detect low-frequency, low-value fraud patterns reliably.",
-      "D": "All monitoring should be performed at the individual transaction level in real time, with management reviewing every flagged transaction daily — COSO Principle 16 requires point-of-transaction monitoring for all high-velocity processing environments."
+      "D": "Monitoring should be performed at the individual transaction level in real time, with management reviewing flagged transactions daily — COSO Principle 16 requires point-of-transaction monitoring for high-velocity processing environments."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO Principle 16 requires that the organization select, develop, and perform ongoing and/or separate evaluations to ascertain whether the components of internal control are present and functioning. A critical dimension of Principle 16 is that the frequency of monitoring evaluations must be calibrated to the velocity of the risks being monitored. In this scenario, VelocityPay processes 8.2 million transactions daily, generating approximately 400 micro-fraud transactions per day. At this rate, a quarterly monitoring cycle means that by the time a pattern is detected, the fraud has been operating for up to 90 days, accumulating $387,000 in losses — a material amount. COSO Principle 16 explicitly contemplates that high-velocity environments require a mix of ongoing monitoring (continuous, built into operations) and separate evaluations (periodic, independent assessments). The quarterly review functioned as a separate evaluation but was not supplemented by ongoing monitoring capable of detecting anomalous transaction patterns between evaluation cycles. The fraud detection algorithm was functioning as a control activity (COSO Principle 10), but the monitoring component (Principle 16) failed because the evaluation frequency did not match the risk velocity. In a real-time transaction processing environment, continuous monitoring mechanisms — such as automated anomaly detection dashboards, real-time pattern recognition analytics, or daily exception reporting on transaction clusters — should supplement the periodic quarterly evaluations. The business interpretation is that monitoring frequency is not a one-size-fits-all decision; it must be risk-calibrated to the operating environment's transaction velocity. A common exam trap is confusing control activity design (the algorithm threshold) with monitoring design (the review cadence) — both are part of the internal control system, but they address different components of the COSO framework.",
@@ -21641,7 +21641,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Emergency patches are inherently incompatible with formal change management; the IT Director acted reasonably because 340 employees would have missed payroll, and the $1,100,000 loss was unforeseeable collateral damage from a necessary intervention.",
       "B": "The patch was deployed without testing, CAB approval, a rollback plan, or peer code review -- all required by Pinnacle's change management policy, including its emergency exception provision requiring documented manager approval, peer review, and a post-implementation review within 24 hours; none of the three minimum emergency requirements were satisfied.",
       "C": "The root cause was inadequate segregation of duties in IT, because a single developer wrote and deployed the patch without an independent reviewer; formal change management documentation would not have prevented the logic error embedded in the code.",
-      "D": "Management's failure to maintain a contingency reserve for payroll system errors, rather than the absence of change controls, is the appropriate root cause because all IT systems experience occasional failures and the $1,100,000 loss reflects a financial planning deficiency, not a control deficiency."
+      "D": "Management's failure to maintain a contingency reserve for payroll system errors, rather than the absence of change controls, is the appropriate root cause because IT systems experience occasional failures and the $1,100,000 loss reflects a financial planning deficiency, not a control deficiency."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "COSO Principle 11 requires that the organization select and develop general control activities over technology to support the achievement of objectives. Change management is a foundational IT General Control (ITGC) that ensures all modifications to production systems are authorized, tested, approved, and documented before deployment -- regardless of urgency. Pinnacle's existing change management policy contained an emergency exception provision with three minimum requirements: (i) documented manager approval, (ii) peer review by a second developer, and (iii) a mandatory post-implementation review within 24 hours. During the March 14 incident, the IT Director authorized a patch deployment within 90 minutes but satisfied none of these three requirements. The standard change controls -- testing, CAB review, rollback planning, and peer review -- were all bypassed. The logic error that triggered $1,100,000 in duplicate payments to 340 employees would likely have been detected by peer review (a second developer examining the code logic) or by testing (running the patch against a payroll simulation before production deployment). The absence of a rollback plan meant the organization had no pre-established mechanism to reverse the duplicate payments before funds reached employee accounts. The missing post-implementation review -- required within 24 hours -- would have identified the duplicate payment anomaly before 195 employees (57%) spent the overpaid funds and before recovery costs escalated to $85,000. COSO Principle 11 does not prohibit emergency changes; it explicitly requires that emergency change procedures exist, are documented, and are followed. Kwan's argument that the emergency justified bypassing controls conflates the legitimate need for timely action with the unjustified failure to follow the emergency procedures that were already embedded in Pinnacle's control framework. A well-designed ITGC framework treats emergency procedures as an integral component of the control environment, not an alternative to it. In practice, a controller or internal auditor should verify that emergency change procedures are not merely documented but actually followed under time pressure, because the emergency scenario is precisely when the control is most needed. A common exam trap is assuming that an 'emergency' label automatically exempts an organization from all internal controls; COSO Principle 11 explicitly requires that emergency procedures are embedded within and subject to the same control framework, not external to it.",
@@ -21689,7 +21689,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Cresthaven Health Partners, a nine-hospital network serving the Pacific Northwest, employs Sandra Okonkwo as Chief Compliance Officer and Dr. Robert Hargrove as Chief Medical Officer. Dr. Hargrove's responsibilities include oversight of all clinical department budgets, including cardiology, and a portion of his annual incentive compensation is tied to departmental revenue performance. During a routine coding compliance audit, Okonkwo identifies a systematic pattern of upcoding of evaluation and management (E&M) services within the cardiology department -- physician office visits are consistently billed at complexity levels (CPT 99214 and 99215) that medical record documentation does not support. Okonkwo estimates potential overbilling to Medicare and commercial insurers at $2.8 million over the 18-month audit window. Okonkwo presents her findings, including supporting audit workpapers, directly to Dr. Hargrove. Hargrove reviews the findings and characterizes the billing pattern as 'coding interpretation differences among reasonable professionals,' instructing Okonkwo not to escalate the matter to the audit committee or board. Okonkwo complies. Eighteen months later, a whistleblower complaint filed by a cardiology billing specialist triggers an investigation by the Office of Inspector General, confirming $2.8 million in overbilling and resulting in civil monetary penalties. Which best characterizes the internal communication failure that allowed this material control weakness to persist?",
     "Choices": {
-      "A": "The compliance officer's communication was deficient because she delivered findings informally rather than through a formal written compliance report submitted through established governance channels, and COSO Principle 14 requires that all internal communication of control deficiencies be documented in writing before escalation.",
+      "A": "The compliance officer's communication was deficient because she delivered findings informally rather than through a formal written compliance report submitted through established governance channels, and COSO Principle 14 requires that internal communication of control deficiencies be documented in writing before escalation.",
       "B": "The internal communication failure was that material information about a significant control deficiency was directed to an individual -- the Chief Medical Officer -- whose dual role of supervising the implicated department's budget and receiving incentive compensation tied to that department's revenue created a structural conflict of interest that prevented the information from reaching parties with independent authority to act.",
       "C": "The primary failure was the organization's lack of an anonymous whistleblower reporting mechanism, which would have allowed the cardiology billing specialist to bypass the compliance officer and report concerns directly to the audit committee without fear of retaliation, consistent with COSO Principle 14's requirement for alternative communication channels.",
       "D": "The compliance officer failed to simultaneously notify the organization's external legal counsel and CMS Medicare Administrative Contractor when the overbilling was discovered, because external regulatory reporting obligations under the False Claims Act supersede internal reporting hierarchies and represent the critical communication breakdown."
@@ -21742,7 +21742,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "The fraud risk assessment was adequate because it identified revenue recognition as a risk area at the enterprise level, and COSO Principle 8 requires entity-wide risk identification rather than disaggregation by individual compensation design features.",
       "B": "The fraud risk assessment was inadequate because COSO Principle 8 requires organizations to assess fraud risks arising from incentive structures and performance pressures. The binary cliff bonus at the 15% margin threshold creates a concentrated year-end incentive to manipulate revenue recognition -- a material fraud triangle 'pressure' that went unassessed when the enterprise risk framework treated 'revenue recognition pressure' as a generic medium risk without analyzing the compensation structure's specific effect.",
-      "C": "The fraud risk assessment was inadequate because COSO Principle 8 requires that all fraud-related risks be classified no lower than high, and classifying revenue recognition pressure as medium inherently understates the risk regardless of how the compensation structure is designed.",
+      "C": "The fraud risk assessment was inadequate because COSO Principle 8 requires that fraud-related risks be classified no lower than high, and classifying revenue recognition pressure as medium inherently understates the risk regardless of how the compensation structure is designed.",
       "D": "The fraud risk assessment was adequate because the company maintains revenue recognition controls, including customer acceptance documentation requirements for bill-and-hold transactions. COSO Principle 8 focuses on control design adequacy rather than incentive or compensation structure analysis."
     },
     "CorrectChoice": "B",
@@ -21894,10 +21894,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Westbrook Manufacturing operates 14 production facilities and maintains a supplier master file with 8,200 vendor records in its ERP system. An internal audit revealed that 31% of supplier payment terms in the master file are inconsistent with signed contracts, causing an estimated $1.8 million in missed early payment discounts and $420,000 in late payment penalties annually. The data governance committee, chaired by Controller Priya Nair, has approved a $350,000 budget for master data remediation. The committee must choose between: (1) a full manual audit of all 8,200 supplier records estimated at $480,000 and 16 weeks, (2) an automated rules-based cleanup script targeting the 2,542 records with the highest transaction volume (85% of spend) at $290,000 and 6 weeks, or (3) a phased approach starting with the top 500 suppliers by spend ($210,000, 4 weeks) followed by a machine-learning duplicate detection project ($180,000, 10 weeks). Considering the principle of cost-benefit under data governance frameworks, which recommendation should Controller Nair present to the committee?",
     "Choices": {
-      "A": "Full manual audit of all 8,200 supplier records — data quality is a foundational control and partial remediation leaves residual risk that compounds over time. The $480,000 cost is justified because every data error in the supplier master file represents a potential financial control weakness.",
+      "A": "Full manual audit of 8,200 supplier records — data quality is a foundational control and partial remediation leaves residual risk that compounds over time. The $480,000 cost is justified because data error in the supplier master file represents a potential financial control weakness.",
       "B": "Automated rules-based cleanup of the 2,542 highest-transaction-volume records — this approach targets 85% of the financial exposure ($1.89 million of the $2.22 million total) at 60% of the budget, with the fastest time-to-value. Remaining lower-volume records can be remediated in subsequent budget cycles.",
       "C": "Phased approach beginning with the top 500 suppliers — this is the lowest-cost option ($210,000) and leaves $140,000 in contingency. However, the ML project for duplicate detection does not address payment term inconsistencies, making the second phase ($180,000) a misallocation.",
-      "D": "Defer all remediation and renegotiate supplier contracts to include automatic electronic payment term validation — this addresses the root cause structurally and eliminates manual data entry errors at the source rather than cleaning historical data."
+      "D": "Defer remediation and renegotiate supplier contracts to include automatic electronic payment term validation — this addresses the root cause structurally and eliminates manual data entry errors at the source rather than cleaning historical data."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Under data governance frameworks such as DAMA-DMBOK and COSO Principle 11, data quality remediation should follow a risk-based prioritization methodology: identify the data errors that drive the largest financial and operational impact, remediate those first, and iterate. Controller Nair's committee faces a classic data governance resource allocation decision with three dimensions: financial exposure ($2.22M total), remediation cost, and time-to-value. The automated rules-based approach (Option B) is the optimal recommendation because: (1) it targets 85% of the financial exposure ($1.89M of $2.22M) at only 60% of the budget ($290K of $350K), achieving a 6.5:1 benefit-to-cost ratio in the first year; (2) the 6-week timeline recovers most early-payment discounts before the current fiscal year closes; (3) the remaining 2,558 low-volume supplier records represent only 15% of exposure and can be addressed in the next budget cycle with learnings from the initial cleanup. The full manual audit (Option A) exceeds the approved budget by 37% and requires 16 weeks — by which time another quarter of discount leakage has already occurred. The phased approach (Option C) correctly sequences remediation but misallocates $180,000 to duplicate detection when payment term inconsistency is the primary defect. Deferring remediation for contract renegotiation (Option D) ignores that contract terms must still be entered into the ERP system — automated validation reduces future errors but does not clean the 2,542 incorrect records already in the master file. Data quality remediation is never a one-time project; it is a continuous governance cycle of detect, prioritize, remediate, and monitor. Controller Nair's recommendation should maximize recoverable discounts within the approved budget while establishing the monitoring controls that prevent recurrence.",
@@ -22050,7 +22050,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "The CFO of Pemberton Healthcare asks the data analytics team: 'Our travel and entertainment spend rose 18% last year to $4.7 million. I need to know what the spend would have been if we had enforced the pre-approval policy for all trips above $2,500.' The analytics team has access to: (1) two years of detailed T&E transaction data with employee, department, amount, date, and purpose fields; (2) the policy enforcement log showing that pre-approval was required for only 40% of eligible trips; and (3) a dashboard showing monthly T&E spend by department with year-over-year comparisons. Which analytics methodology should the team apply to answer the CFO's question, and why?",
     "Choices": {
-      "A": "Descriptive analytics using transaction search and filtering — the team should query all trips above $2,500 that lacked pre-approval, sum the spend, and report the total as the policy non-compliance cost",
+      "A": "Descriptive analytics using transaction search and filtering — the team should query trips above $2,500 that lacked pre-approval, sum the spend, and report the total as the policy non-compliance cost",
       "B": "Predictive analytics using time-series forecasting — the team should model the historical T&E spend trend, project what spend would have been without the policy change, and compare to actuals",
       "C": "Prescriptive analytics using optimization modeling — the team should build a model that minimizes T&E spend subject to policy constraints and recommend the optimal enforcement rate",
       "D": "Predictive analytics using regression analysis — the team should build a model with pre-approval status as an independent variable to estimate the counterfactual spend that would have occurred had pre-approval been enforced for all trips above $2,500"
@@ -22148,8 +22148,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Hartfield Insurance Group deployed a machine learning model to automate claims triage, classifying each auto insurance claim as standard processing or elevated review. After 14 months and 62,000 processed claims, the actuarial analytics team led by Director Yuki Tanaka identified a pattern: claims from two specific ZIP codes representing 8.2% of the policyholder base were flagged for elevated review at 3.4 times the rate of claims from demographically comparable ZIP codes, despite having statistically indistinguishable claim severity on ultimate resolution. The model's training data included adjuster notes containing subjective language descriptors. Tanaka's team confirmed the model's overall accuracy is 91.4% but the disparate flagging rate is statistically significant at p < 0.001. Under responsible AI governance frameworks, which action should Tanaka recommend to the Chief Risk Officer?",
     "Choices": {
-      "A": "Decommission the model and return to manual claims triage — any algorithmic bias, regardless of magnitude, is unacceptable in an insurance context and exposes Hartfield to regulatory action under unfair claims practice statutes. Manual triage, while slower, eliminates algorithmic bias by relying on human judgment.",
-      "B": "Retrain the model using only structured data fields (claim amount, vehicle age, accident type) and exclude all adjuster notes and policyholder demographic data — this eliminates the source of potential bias and produces a more objective classification model.",
+      "A": "Decommission the model and return to manual claims triage — algorithmic bias, regardless of magnitude, is unacceptable in an insurance context and exposes Hartfield to regulatory action under unfair claims practice statutes. Manual triage, while slower, eliminates algorithmic bias by relying on human judgment.",
+      "B": "Retrain the model using only structured data fields (claim amount, vehicle age, accident type) and exclude adjuster notes and policyholder demographic data — this eliminates the source of potential bias and produces a more objective classification model.",
       "C": "Conduct a bias audit including feature importance analysis to identify which input variables drive the disparate flagging rate, retrain the model with debiased training data including fairness constraints, and implement ongoing monitoring with periodic fairness metrics reporting to the risk committee.",
       "D": "Apply a post-processing adjustment that reduces the elevated-review flagging rate for the two affected ZIP codes by a fixed percentage — this is the fastest remediation and can be deployed within days, addressing the statistical disparity while the model continues operating."
     },
@@ -22202,7 +22202,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "The exclusion of modified orders from the On-Time Delivery KPI — this definitional choice inflates the reported performance metric and masks real delivery performance on 14% of orders, directly undermining the reliability of the metric Okafor uses for production scheduling decisions.",
       "B": "The inclusion of scrapped units in the Production Efficiency KPI — counting defective output as production inflates the efficiency metric and creates an incentive to maximize throughput at the expense of quality, contradicting total quality management principles.",
-      "C": "The directional correlation of three KPIs creating a halo effect — when related metrics move together, they provide redundant information rather than independent signals, making the dashboard an echo chamber that reinforces the appearance of strong performance across all dimensions.",
+      "C": "The directional correlation of three KPIs creating a halo effect — when related metrics move together, they provide redundant information rather than independent signals, making the dashboard an echo chamber that reinforces the appearance of strong performance across dimensions.",
       "D": "The absence of a data lineage and definitional metadata layer documenting how each KPI is calculated, what data sources feed it, and what exclusions or transformations are applied before display — this represents the root governance deficiency from which the other three findings derive."
     },
     "CorrectChoice": "D",
@@ -22612,7 +22612,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Bridgeway Financial Services, a payment processor handling $12 billion in annual transaction volume, connects its core processing platform to 47 institutional clients via REST APIs. Each client integration uses a unique API key with role-based access to specific transaction types. During a security architecture review, CISO Daniel Park's team discovered that: (1) 12 of the 47 API integrations use API keys that have not been rotated in over 24 months, (2) the API gateway logs show that 8 clients are accessing transaction types outside their documented scope — the excess access was granted by a developer who broadened permissions to resolve a production issue 14 months ago and never reverted them, and (3) two decommissioned client integrations still have active API keys that have not been revoked. The API gateway processes an average of 3.2 million requests daily. Under COSO Principle 11 and API governance best practices, which remediation should CISO Park prioritize first?",
     "Choices": {
-      "A": "Immediately revoke the API keys for the two decommissioned client integrations — inactive credentials that remain valid are the highest-risk exposure because there is no legitimate business activity to detect anomalous usage against, and any access using these keys would be inherently unauthorized.",
+      "A": "Immediately revoke the API keys for the two decommissioned client integrations — inactive credentials that remain valid are the highest-risk exposure because there is no legitimate business activity to detect anomalous usage against, and access using these keys would be inherently unauthorized.",
       "B": "Implement a 90-day mandatory API key rotation policy for all 47 client integrations and revoke keys that exceed the rotation window — stale credentials are the most pervasive finding (12 of 47 integrations) and automated rotation prevents credential aging across the entire integration landscape.",
       "C": "Immediately rescope the 8 client integrations whose access exceeds their documented authorization — excessive permissions represent active, ongoing exposure where authorized clients can access transaction types outside their business relationship with Bridgeway, creating both data exposure risk and regulatory compliance exposure under payment processing standards.",
       "D": "Deploy an API threat detection system that monitors all 3.2 million daily requests for anomalous access patterns, then use the monitoring data to prioritize remediation of the specific integration risks identified by the audit — this provides continuous visibility and risk-based prioritization rather than ad-hoc remediation."
@@ -22663,7 +22663,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Valmont Industries, a defense contractor with $2.8 billion in government contracts, experienced a security incident eight months ago when a phishing attack compromised the credentials of a senior engineer, resulting in the exfiltration of 2,400 documents including technical specifications governed by ITAR (International Traffic in Arms Regulations). The incident response (IR) team contained the breach within 6 hours of detection, but a post-incident review revealed that: (1) the IR plan had not been tabletop-tested in 31 months, (2) the containment action inadvertently cut off access for 140 engineers working on a classified project with a delivery deadline 5 days later — delaying the project by 11 days and triggering a $640,000 contract penalty, and (3) the root cause analysis identified that the compromised engineer had local administrator privileges on their workstation, a configuration that deviated from the security baseline but had been approved by a now-departed IT director 4 years ago as a one-time exception. The board's risk committee, chaired by independent director Sarah Okonkwo, has asked the CISO to present a remediation plan that addresses the root causes of both the breach and the post-incident operational disruption. Under NIST CSF and COSO Principle 11, which remediation plan best evaluates the interconnected failures?",
     "Choices": {
-      "A": "Conduct quarterly tabletop exercises for the IR plan, revoke all local administrator privileges and enforce least-privilege access through group policy, and implement a formal exception management process requiring quarterly review and re-approval of all security baseline deviations — each control deficiency is addressed individually with a specific remediation action.",
+      "A": "Conduct quarterly tabletop exercises for the IR plan, revoke local administrator privileges and enforce least-privilege access through group policy, and implement a formal exception management process requiring quarterly review and re-approval of security baseline deviations — each control deficiency is addressed individually with a specific remediation action.",
       "B": "Redesign the incident response plan to include a business-impact assessment checkpoint before containment actions are executed — the $640,000 contract penalty was caused by a containment decision that did not consider operational impact, and this single process change prevents recurrence of the most costly consequence of the incident. The 31-month testing gap and privilege exception are secondary findings.",
       "C": "Implement an integrated governance program that addresses the three failures as interconnected control deficiencies: (1) mandatory semi-annual IR plan testing with tabletop exercises that include scenarios involving privileged user compromise and operational trade-off decisions, (2) a privileged access management system that enforces just-in-time elevation with automatic revocation rather than permanent local admin rights, and (3) an exception governance process requiring documented business justification, compensating controls, quarterly review, and automatic expiration — with the CISO accountable to the risk committee for all active exceptions.",
       "D": "Engage an external cybersecurity firm to design and implement a new security architecture including zero-trust network access, endpoint detection and response, and Security Information and Event Management (SIEM) integration — the root cause of all three failures is an insufficiently mature security architecture, and a comprehensive redesign addresses the systemic weakness rather than individual symptoms."
@@ -22714,7 +22714,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Paragon Manufacturing operates 19 factories across 6 countries producing industrial valves and fittings with $3.1 billion in annual revenue. The CIO's technology portfolio review identified that: (1) 8 of 19 factories run manufacturing execution systems (MES) on an operating system that reached end-of-life 14 months ago, with no security patches available; (2) the enterprise resource planning system (ERP) is 3 versions behind current release, with the vendor announcing end-of-support for the current version in 19 months; (3) the product lifecycle management (PLM) system is a custom-built application whose only remaining developer retired 8 months ago, with no documentation and no source code escrow; and (4) the IT capital budget for the next 24 months is $18.4 million. The MES upgrade across 8 factories is estimated at $8.2 million, the ERP upgrade at $5.6 million, and the PLM replacement at $4.8 million. CFO Javier Reyes notes that all three projects cannot be funded within the current capital plan and asks CIO Dr. Linh Nguyen to recommend a single project for immediate funding. Under COSO Principle 11 and technology portfolio governance, which recommendation should Dr. Nguyen make?",
     "Choices": {
-      "A": "Fund the MES upgrade ($8.2 million) — the 8 factories running on an end-of-life operating system with no security patches represent an active control failure that exposes the manufacturing operations to unpatched vulnerabilities every day. The ERP and PLM systems, while aging, are still supported and can be addressed in subsequent budget cycles.",
+      "A": "Fund the MES upgrade ($8.2 million) — the 8 factories running on an end-of-life operating system with no security patches represent an active control failure that exposes the manufacturing operations to unpatched vulnerabilities day. The ERP and PLM systems, while aging, are still supported and can be addressed in subsequent budget cycles.",
       "B": "Fund the ERP upgrade ($5.6 million) — the ERP system is the financial backbone of all 19 factories, and the 19-month support window is shorter than the typical ERP implementation timeline of 24-30 months. Delaying the ERP upgrade past the current budget cycle risks beginning the upgrade after end-of-support, which would mean operating an unsupported ERP system during the transition — an unacceptable financial reporting control risk.",
       "C": "Fund the PLM replacement ($4.8 million) — the custom-built system with no documentation and no developer is a single point of failure with zero recoverability. If the PLM system fails, Paragon loses the engineering specifications for every product it manufactures across all 19 factories — this is an existential operational risk that transcends the timeline-driven upgrade concerns of the MES and ERP systems.",
       "D": "Fund a risk assessment and architectural review ($1.2 million) to determine: (1) whether the MES, ERP, and PLM systems can be consolidated onto a common platform, reducing total program cost below the $18.4 million capital ceiling, (2) the minimum viable upgrade path for each system, and (3) interim compensating controls that reduce risk on the deferred systems. Use the remaining $17.2 million budget to fund the highest-priority project identified by the assessment."
@@ -22822,7 +22822,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "The dashboard measures activity volume rather than outcome quality, and KPI thresholds are set at levels that mask operational problems rather than surface them.",
       "B": "The dashboard does not include financial metrics alongside operational metrics, making it difficult to connect production data to financial performance.",
       "C": "The dashboard aggregates metrics by month rather than by week, which averages out daily spikes and conceals the true variability in operations.",
-      "D": "The dashboard should display only the five most critical KPIs on a single page, because any dashboard with more than five metrics overwhelms the user and loses effectiveness."
+      "D": "The dashboard should display only the five most critical KPIs on a single page, because dashboard with more than five metrics overwhelms the user and loses effectiveness."
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "The correct answer is A. Under the IMA Management Accounting Competency Framework and generally accepted dashboard design principles, effective dashboards must surface actionable insight — metrics should reveal when operational problems exist, not conceal them. The Westfield dashboard exhibits two classic KPI design failures. First, it measures activity (counting how many things are tracked) rather than outcome quality (whether thresholds are calibrated to flag real problems). The 42 KPIs create an illusion of rigor, but the three overdue deliveries that triggered no status change demonstrate that the thresholds lack diagnostic power. Second, the overtime KPI's generously high target is a threshold-setting error: any metric can show green if the target is set above the worst-case scenario. In management accounting practice, KPI targets should be calibrated to strategic objectives and operational constraints, not set to produce favorable colors. A common exam trap is to assume that more KPIs always mean better monitoring — quantity of metrics does not substitute for threshold calibration and diagnostic relevance.",
@@ -22871,9 +22871,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Controller James Okonkwo is reviewing the board presentation deck for Meridian Industrial's annual shareholder meeting. The revenue trend bar chart shows what appears to be dramatic growth — the bar for the current year towers over the prior-year bar by roughly five times its height. Upon closer inspection, James discovers the y-axis starts at $182 million rather than zero, making a 2.4% year-over-year revenue increase ($186.4M vs. $182.0M) visually appear as a 20%+ surge. The CFO, who prepared the chart, argues it is acceptable because the axis labels are technically accurate. Which of the following best describes the analytical and professional concern with this chart?",
     "Choices": {
       "A": "The chart violates the IMA Statement of Ethical Professional Practice because it is technically accurate — the axis labels reflect true values — but the visual impression it creates is materially misleading to shareholders who reasonably interpret bar height ratios as proportional to the underlying data.",
-      "B": "The chart is permissible under financial reporting standards because the axis labels are accurate and the presentation does not change any accounting numbers. Shareholders are expected to read axis labels carefully before drawing conclusions from visualizations.",
+      "B": "The chart is permissible under financial reporting standards because the axis labels are accurate and the presentation does not change accounting numbers. Shareholders are expected to read axis labels carefully before drawing conclusions from visualizations.",
       "C": "The primary issue is that the chart uses a bar chart format instead of a line chart. Line charts are the appropriate visualization for time-series revenue data because they do not encode magnitude in bar height, which eliminates the truncation concern entirely.",
-      "D": "The chart is acceptable if it includes a footnote stating that the y-axis does not start at zero. Full disclosure of the axis truncation satisfies the presentation requirements under U.S. GAAP and resolves any ethical concerns about the visual impression."
+      "D": "The chart is acceptable if it includes a footnote stating that the y-axis does not start at zero. Full disclosure of the axis truncation satisfies the presentation requirements under U.S. GAAP and resolves ethical concerns about the visual impression."
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "The correct answer is A. The IMA Statement of Ethical Professional Practice requires management accountants to communicate information fairly and objectively, providing all relevant information that could reasonably be expected to influence the intended user's understanding. While the axis labels on the truncated chart are numerically accurate, the visual encoding — bar height ratios — conveys a fundamentally different message than the underlying data supports. A bar chart's core visual encoding is length proportional to value; truncating the axis breaks this proportionality. The 2.4% increase becomes visually indistinguishable from a 20% increase because the human visual system compares bar heights, not axis labels. This is a classic case of technically accurate but materially misleading presentation. Under the IMA standards of competence and credibility, the management accountant has a duty to present information in a manner that does not subvert reasonable interpretation. A common exam trap is confusing numeric accuracy of labels with visual honesty of encoding — the two are independent properties.",
@@ -22921,7 +22921,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "At Crestline Foods, Operations Manager Diego Vargas presents a dashboard to the executive team showing that over the past 24 months, employee training hours per quarter and the first-pass quality yield percentage have both risen in near-lockstep (correlation coefficient r = 0.91). Diego argues that the data proves the training program caused the quality improvement and recommends doubling the training budget. Controller Priya Nair reviews the underlying data and finds that during the same period, Crestline also replaced three aging production lines with automated equipment and introduced a new supplier quality certification program. Which analytical concept, if overlooked, would lead to an unsupported investment decision?",
     "Choices": {
-      "A": "Regression to the mean — the quality improvement may reflect a natural return to average performance levels after an unusually poor period, rather than any intervention effect.",
+      "A": "Regression to the mean — the quality improvement may reflect a natural return to average performance levels after an unusually poor period, rather than intervention effect.",
       "B": "Correlation does not imply causation — the training hours and quality improvement move together temporally, but the automated equipment replacement and supplier certification program are confounding variables that could independently explain the quality gains.",
       "C": "Sampling error — the 24-month sample is too small to produce a statistically significant correlation coefficient, so the r = 0.91 value cannot be relied upon to make budget allocation decisions.",
       "D": "Survivorship bias — the analysis only includes production lines that remained operational during the 24-month period, excluding lines that were decommissioned during the same window."
@@ -23022,9 +23022,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Zenith Bay designs an executive dashboard showing key performance indicators with drill-down capability. What is the primary goal of good dashboard design?",
     "Choices": {
       "A": "To communicate relevant information clearly and support timely decision-making",
-      "B": "To replace all narrative reporting entirely",
+      "B": "To replace narrative reporting entirely",
       "C": "To include as many charts and metrics as technically possible",
-      "D": "To eliminate the need for any underlying data governance"
+      "D": "To eliminate the need for underlying data governance"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Effective dashboard design prioritizes clarity and relevance so users can quickly interpret data and make timely, informed decisions.",
@@ -23171,9 +23171,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Blackwood Distribution, a wholesale distributor with $340 million in annual revenue, suffered a ransomware attack that encrypted its accounts receivable subledger and customer master file. The company cannot determine which customers have outstanding balances, which invoices are past due, or which payments were received in the three days before the attack. The attacker did not exfiltrate data before deploying encryption — the forensic investigation confirms that data was encrypted in place but not copied externally. The IT team estimates 5–7 days to restore from backups, during which time approximately $2.8 million in scheduled customer payments are expected. Controller Marcus Okonkwo must prioritize the recovery response. Under the CIA triad and NIST CSF Respond function, which CIA element is most critically impacted first, and what is the correct recovery priority?",
     "Choices": {
-      "A": "Confidentiality is most critically impacted — the attacker had access to the AR subledger, which contains customer names, credit limits, and payment histories. The recovery priority must be notification to affected customers under state data breach laws before any operational restoration work begins.",
+      "A": "Confidentiality is most critically impacted — the attacker had access to the AR subledger, which contains customer names, credit limits, and payment histories. The recovery priority must be notification to affected customers under state data breach laws before operational restoration work begins.",
       "B": "Availability is most critically impacted — the encryption of the AR subledger prevents the company from determining who owes money, issuing statements, and processing incoming payments. The recovery priority is restoring access to accounts receivable data to resume cash collections, while concurrently verifying data integrity from backups.",
-      "C": "Integrity is most critically impacted because the attacker may have modified AR records before encryption. The recovery priority is a full forensic audit of every customer account balance against external confirmations before any collection activity resumes.",
+      "C": "Integrity is most critically impacted because the attacker may have modified AR records before encryption. The recovery priority is a full forensic audit of customer account balance against external confirmations before collection activity resumes.",
       "D": "All three CIA elements are equally impacted, so the recovery priority should be determined by the order in which the NIST CSF functions are listed: Identify the scope of encrypted records first, then Protect unaffected systems, then Detect residual threats, then Respond with restoration."
     },
     "CorrectChoice": "B",
@@ -23273,7 +23273,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Model 2 (VDI) is clearly superior because confidentiality of 380 clients' financial data is non-negotiable. The latency on trade execution is an acceptable operational inconvenience that does not rise to the level of an availability concern under the CIA triad.",
       "B": "Model 1 (VPN with MFA) is clearly superior because trade execution timeliness directly affects client investment outcomes — a 2-3 second delay could result in missed trading opportunities. The risk of data on personal devices is manageable with endpoint detection software.",
-      "C": "Neither model is optimal as configured. The CFO should reject both and require IT to design a third model that eliminates all trade-offs — full availability, full confidentiality, and zero latency — before approving any remote access solution.",
+      "C": "Neither model is optimal as configured. The CFO should reject both and require IT to design a third model that eliminates trade-offs — full availability, full confidentiality, and zero latency — before approving remote access solution.",
       "D": "This is a genuine CIA trade-off requiring compensating controls rather than a binary choice. The CFO should adopt Model 2 (VDI) for portfolio management access to protect client data confidentiality, but implement a separate, latency-optimized trade execution interface that does not expose full client records — accepting that different system functions have different CIA priority profiles."
     },
     "CorrectChoice": "D",
@@ -23500,7 +23500,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Variety — the three systems emit data in fundamentally different formats (semi-structured JSON, structured relational tables, unstructured free-text notes) that cannot be joined or reconciled without a common data model and transformation layer.",
       "B": "Volume — the 340 stores generate over 1.2 million data points daily (489,600 IoT readings, 680,000 POS transactions, and 32,000 ERP notes), overwhelming the reconciliation engine's processing capacity.",
-      "C": "Velocity — the IoT sensors update every 15 minutes while the ERP notes are entered only at shift changes, creating a timing mismatch that prevents simultaneous reconciliation.",
+      "C": "Velocity — the IoT sensors update 15 minutes while the ERP notes are entered only at shift changes, creating a timing mismatch that prevents simultaneous reconciliation.",
       "D": "Veracity — the store managers' ERP notes contain frequent errors such as miscounts, misplaced decimal points, and wrong SKU entries that corrupt the inventory reconciliation process."
     },
     "CorrectChoice": "A",
@@ -23563,7 +23563,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "Variance analysis compares actual results to budgeted or standard amounts to identify and explain deviations — it is a financial performance analysis tool, not a technique for discovering unknown patterns in transaction data. A candidate may associate analyzing data with any analytical method, but variance analysis examines known cost categories against benchmarks, while data mining discovers previously unknown patterns and relationships in large datasets.",
     "ExplanationWrongB": "Standard costing sets predetermined cost benchmarks. It facilitates variance analysis but does not directly address the broader question of cost allocation or performance evaluation.",
-    "ExplanationWrongC": "Zero-based budgeting requires all expenses to be justified each period from zero. It is intensive but can eliminate embedded waste.",
+"ExplanationWrongC": "Option C identifies zero-based budgeting, but Kingfisher is data mining. The stem describes analyzing large transaction datasets to uncover previously unknown purchasing patterns among customer segments — the definition of data mining. ZBB is a budgeting methodology that justifies expenses from a zero base; it has no role in discovering hidden relationships in transaction data. A budgeting technique cannot be the answer to an analytics question.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 3,
@@ -23682,7 +23682,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Underfitting — the model is too simple to capture the relationship between applicant characteristics and credit outcomes. The solution is to increase model complexity by adding interaction terms and polynomial features to the training dataset.",
       "B": "Overfitting — the model has memorized patterns specific to the training data that do not generalize to new applications. The appropriate corrective action is model simplification, regularization, or cross-validation during training to detect when the model begins fitting noise rather than signal.",
       "C": "Data leakage — the training dataset inadvertently contains information from the holdout set, artificially inflating the training accuracy. The solution is to ensure complete separation between training and testing datasets at the data extraction stage.",
-      "D": "Class imbalance — the 12,000 training applications contain far more approved loans than denied loans, causing the model to achieve high accuracy by simply predicting 'approve' for every application. The solution is to use stratified sampling or adjust the classification threshold."
+      "D": "Class imbalance — the 12,000 training applications contain far more approved loans than denied loans, causing the model to achieve high accuracy by simply predicting 'approve' for application. The solution is to use stratified sampling or adjust the classification threshold."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "The correct answer is B. Overfitting is one of the most critical concepts in predictive analytics and data mining. It occurs when a model learns the training data so precisely that it captures random noise and dataset-specific quirks rather than the true underlying relationship between features and the target variable. The hallmark of overfitting is a large gap between training accuracy and holdout/test accuracy — 98.7% vs. 71.4% in this case, a 27.3 percentage-point drop. Thomas's use of a holdout dataset is the standard diagnostic for detecting overfitting: the model is evaluated on data it has never seen, and if performance degrades substantially, the model has overfit. Corrective actions include model simplification (reducing the number of features or the complexity of the model), applying regularization techniques (L1/L2 regularization that penalize complexity during training), or using k-fold cross-validation during model development to monitor generalization performance throughout the training process. The IMA's analytics competency expects management accountants to understand that high training accuracy alone does not validate a predictive model — generalization performance on unseen data is the true test.",
@@ -24035,10 +24035,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "CalculationItem": false,
     "Stem": "Precision Parts Distributors is migrating its customer master data to a new CRM platform. A pre-migration data quality assessment of the 8,500-record customer master reveals: 98% of records have all required fields populated (completeness), but 15% of email addresses bounce when tested and 8% of phone numbers are disconnected or belong to different businesses (accuracy). The CRM migration project manager, Alicia Vega, must recommend which data quality dimension to prioritize for remediation before the migration cutover, given that the CRM will drive the company's email marketing campaigns, service ticket routing, and sales representative territory assignments.",
     "Choices": {
-      "A": "Completeness — focus on populating the remaining 2% of missing fields across customer records to ensure full data coverage before migration, because incomplete records degrade CRM automation rules that require all fields to be present.",
+      "A": "Completeness — focus on populating the remaining 2% of missing fields across customer records to ensure full data coverage before migration, because incomplete records degrade CRM automation rules that require fields to be present.",
       "B": "Accuracy — prioritize validating and correcting email addresses and phone numbers, because inaccurate contact data will cause customer-facing failures (bounced campaigns, missed service calls, sales routing errors) that directly impact revenue and customer retention.",
-      "C": "Consistency — standardize data formats across all records (phone number formats, address abbreviations, company name conventions) to ensure the CRM's deduplication and matching algorithms function correctly post-migration.",
-      "D": "Proceed with the migration as scheduled without remediation; data quality issues are inherent in any CRM migration and are more efficiently addressed post-go-live when end users can flag errors during daily use."
+      "C": "Consistency — standardize data formats across records (phone number formats, address abbreviations, company name conventions) to ensure the CRM's deduplication and matching algorithms function correctly post-migration.",
+      "D": "Proceed with the migration as scheduled without remediation; data quality issues are inherent in CRM migration and are more efficiently addressed post-go-live when end users can flag errors during daily use."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "The correct answer is B. Accuracy — the degree to which data correctly represents the real-world entity it describes — is the most critical data quality dimension when contact data drives revenue-generating business processes. A 15% email bounce rate means approximately 1,275 customers will not receive marketing communications, order confirmations, or service updates — directly impacting sales conversion and customer experience. An 8% phone inaccuracy rate means approximately 680 customers cannot be reached for service follow-ups, collections calls, or sales opportunities. These accuracy defects produce immediate, measurable business harm. The COSO ERM framework's information principle requires that data be 'sufficiently reliable for its intended use' — customer contact data that is 15% unreliable does not meet this standard for CRM-driven revenue processes. Completeness (Option A) is already at 98%, meaning only approximately 170 records have missing fields — a minor issue compared to the 1,275 records with wrong contact information. Consistency (Option C) improves data usability but does not correct factual errors — a consistently formatted wrong phone number still cannot reach the customer. Post-migration remediation (Option D) defers the problem but compounds it: inaccurate data will immediately generate customer complaints, erode trust in the new CRM, and create rework as the same records must be corrected after generating errors. In data quality management practice, accuracy defects in contact data are considered 'critical' defects because they cause customer-visible failures, while completeness and consistency defects are typically 'major' or 'minor' because their impact is internal and process-oriented.",
@@ -24123,8 +24123,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "CalculationItem": false,
     "Stem": "Apex Manufacturing's CFO dashboard displays month-end financial results on Day 3 using 'flash' estimates (preliminary close data with approximately 92% of all entries posted). The full accounting close completes on Day 7, and the final audited results historically differ from the Day 3 flash by 2–4% on key metrics including gross margin, operating income, and free cash flow. CFO Maria Santos uses the Day 3 dashboard to make preliminary staffing adjustments and raw material procurement decisions on Day 4, but defers dividend declarations and bank covenant compliance certifications until Day 8 when final close data is available. Santos must evaluate whether the flash reporting approach is appropriate or requires modification.",
     "Choices": {
-      "A": "Discontinue flash reporting — all Day 4 decisions should wait for Day 7 final close data to ensure decisions are based on verified, auditable numbers; the 2–4% variance introduces unacceptable decision risk across all categories.",
-      "B": "Treat flash estimates as authoritative — the 2–4% variance is immaterial for a manufacturing company and the timeliness benefit of making decisions on Day 4 rather than Day 8 outweighs the accuracy gap; deferring all decisions by 4 days creates unacceptable operational drag.",
+      "A": "Discontinue flash reporting — Day 4 decisions should wait for Day 7 final close data to ensure decisions are based on verified, auditable numbers; the 2–4% variance introduces unacceptable decision risk across categories.",
+      "B": "Treat flash estimates as authoritative — the 2–4% variance is immaterial for a manufacturing company and the timeliness benefit of making decisions on Day 4 rather than Day 8 outweighs the accuracy gap; deferring decisions by 4 days creates unacceptable operational drag.",
       "C": "Continue the current approach — flash estimates are appropriate for preliminary operational decisions (staffing, procurement) where timeliness outweighs precision, but material financial commitments (dividends, covenant certifications) should be based on final close data where accuracy is paramount.",
       "D": "Accelerate the close process from 7 days to 4 days by adding accounting staff and automating journal entry workflows, eliminating the flash-versus-final gap entirely so that Day 4 decisions use final data."
     },
@@ -24374,7 +24374,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Remove the ZIP code feature as a proxy variable, retrain the model, and conduct a post-remediation fairness audit before redeployment",
       "B": "Accept the 94% overall accuracy as adequate since the model meets conventional performance benchmarks and the demographic gap falls within statistical norms",
-      "C": "Adjust the approval threshold for the disadvantaged demographic group to equalize acceptance rates across all groups",
+      "C": "Adjust the approval threshold for the disadvantaged demographic group to equalize acceptance rates across groups",
       "D": "Add more features to the model to improve accuracy and assume that increased precision will naturally reduce demographic disparities"
     },
     "CorrectChoice": "A",
@@ -24425,7 +24425,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "A mandatory callback verification policy requiring the controller to confirm all wire transfer requests above $50,000 by voice call to the requester using a pre-established phone number on file — not a number in the email. This control operates independently of the recipient's ability to detect deception because it creates an out-of-band verification channel the attacker cannot intercept, and the decision rule ('always call, regardless of how authentic the email appears') eliminates the cognitive burden of evaluating each request's legitimacy.",
       "B": "Email authentication protocols (SPF, DKIM, and DMARC) configured to quarantine or reject emails that fail domain authentication. These protocols operate at the infrastructure layer and would detect the domain mismatch between the display name and the originating domain, but are only effective against direct domain spoofing — they do not block emails from lookalike domains that the attacker configures with valid authentication records.",
       "C": "Employee security awareness training that teaches controllers to identify phishing indicators such as domain mismatches, urgent language, and unusual payment requests. This control relies entirely on the recipient's vigilance at the moment of attack and is subject to the psychological pressure factors the attacker deliberately engineered (Friday afternoon timing, authority figure, real project context).",
-      "D": "A dual-authorization policy requiring two senior finance personnel to independently approve all wire transfers before they are released to the bank. This control provides defense-in-depth for the approval process but does not independently verify the legitimacy of the underlying request — if both approvers rely on the same fraudulent email as the source of truth, the dual signature adds no additional protection."
+      "D": "A dual-authorization policy requiring two senior finance personnel to independently approve wire transfers before they are released to the bank. This control provides defense-in-depth for the approval process but does not independently verify the legitimacy of the underlying request — if both approvers rely on the same fraudulent email as the source of truth, the dual signature adds no additional protection."
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Under COSO Principle 11 (technology general controls) and the NIST CSF Protect function (Awareness and Training, Protective Technology), evaluating which control is most structurally effective against spear-phishing requires analyzing how each control balances the competing demands of fraud prevention and business continuity. The mandatory callback verification policy (Option A) is structurally superior to the alternatives for three reasons that emerge from analyzing how each control interacts with the attacker's methodology. First, the callback operates out-of-band — it creates a verification channel (voice call to a pre-established number) that the attacker cannot intercept, spoof, or socially engineer because the attacker does not control the phone number on file. This is fundamentally different from email-based verification, which operates on the same channel the attacker used for the deception. Second, the callback converts a judgment-based decision ('is this email suspicious?') into a rule-based action ('always call for any wire request above the threshold, regardless of how authentic the request appears'). This conversion is critical because the attacker deliberately engineered psychological pressure points — Friday at 4:52 PM (end-of-week cognitive fatigue), the CFO's authority (hierarchy effect), a real project with a plausible amount (contextual legitimacy), and a time-pressure excuse — that degrade the recipient's ability to make accurate judgments. A rule that does not require judgment is immune to psychological manipulation. Third, the callback provides affirmative confirmation — it does not merely block suspicious transactions; it confirms legitimate ones, ensuring that business operations continue without disruption. This is the essential trade-off that effective controls must navigate: security measures that prevent fraudulent wires must not also prevent legitimate ones. Email authentication (Option B) fails against lookalike domains the attacker controls and does not address the verification gap at all. Security awareness training (Option C) depends on human judgment under precisely the conditions the attacker designed to exploit — it cannot resolve the trade-off between vigilance and operational efficiency. Dual authorization (Option D) routes the same fraudulent email to two people instead of one but does not independently verify the request — if both approvers trust the same deceptive email, the fraud succeeds. The callback policy is the only control that addresses the fundamental vulnerability — financial transaction instructions received via email are an inherently spoofable communication channel — while preserving the organization's ability to process legitimate wires efficiently.",
@@ -24473,9 +24473,9 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Ironwood Packaging's accounts payable clerk, Lisa Tran, receives a phone call at 10:15 AM from someone claiming to be 'Mark from Corporate IT Security.' The caller states that the AP system has flagged a failed security patch on Tran's workstation and that he needs her network password and the AP system administrator credentials to 'push the patch remotely and prevent an account lockout.' The caller provides Tran's employee ID number, department, and the date of her last password change — information that appears to authenticate his identity. Tran, who processes approximately 180 vendor invoices weekly, knows that an account lockout would halt all supplier payments. The internal audit director is evaluating why the AP function is disproportionately targeted by vishing attacks and must decompose the vulnerability into its structural components — the characteristics of the AP role, the nature of voice-based social engineering, and the limitations of existing controls — before recommending a control enhancement. Under COSO Principle 11 and NIST CSF, which analysis correctly decomposes the AP vishing vulnerability and identifies the most structurally effective control?",
     "Choices": {
       "A": "The AP function is vulnerable because clerks process high transaction volumes under payment deadlines, are accustomed to urgent internal requests, and handle routine phone interactions with internal and external parties. The most effective control removes the judgment element entirely: a strict policy that IT will never request passwords by any communication channel, combined with a mandatory 15-minute reporting requirement that converts 'should I trust this caller?' into 'this is always a reportable event.'",
-      "B": "The AP function is vulnerable because clerks have elevated system access but limited cybersecurity training compared to IT staff. The most effective mitigation is to revoke all AP system administrator credentials and require IT to process any system-level changes, ensuring no clerk ever has credentials worth stealing through social engineering.",
+      "B": "The AP function is vulnerable because clerks have elevated system access but limited cybersecurity training compared to IT staff. The most effective mitigation is to revoke AP system administrator credentials and require IT to process system-level changes, ensuring no clerk ever has credentials worth stealing through social engineering.",
       "C": "Vishing is inherently unpreventable because it exploits human trust through a real-time voice channel that preempts the reflective thinking email-based phishing allows. The most effective approach is to accept this residual risk and purchase cyber insurance that covers fraudulent payment losses from social engineering attacks.",
-      "D": "AP clerks are targeted because their contact information is publicly listed on the company website for vendor inquiries. The most effective control is to remove all AP staff names and direct phone numbers from public-facing materials and route all external calls through a switchboard that verifies caller identity."
+      "D": "AP clerks are targeted because their contact information is publicly listed on the company website for vendor inquiries. The most effective control is to remove AP staff names and direct phone numbers from public-facing materials and route external calls through a switchboard that verifies caller identity."
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Under COSO Principle 11 and the NIST CSF Protect function (Awareness and Training), decomposing the AP vishing vulnerability requires analyzing three interacting structural components and evaluating how different control approaches balance the competing demands of security and operational efficiency. First, the AP role's characteristics: clerks process high transaction volumes (180 invoices weekly) under strict payment deadlines, creating a work environment where urgency-based social engineering is particularly effective — the clerk has been conditioned to respond quickly to operational disruptions. AP clerks also routinely handle phone interactions with internal stakeholders (department heads, procurement, receiving) and external parties (vendors, banks), making them accustomed to phone-based requests and less likely to question a caller's legitimacy. Second, the vishing attack vector's characteristics: unlike email phishing, voice calls operate in real time, preempting the reflective analysis that email recipients can perform. The caller creates conversational momentum that pressures the target to respond before fully processing the request. Third, the control environment's limitations: existing controls rely on the clerk's judgment to distinguish legitimate from fraudulent callers — a judgment the attacker's social engineering is specifically designed to manipulate. The attacker provided accurate personal information (employee ID, department, password change date) — likely obtained from a prior data breach — to create false authentication. The structurally effective control is Option A's policy because it resolves the fundamental trade-off between security and usability by removing the clerk's judgment from the attack surface entirely. The policy operates on three levels: (1) it establishes a universal, non-negotiable rule (IT never requests passwords by any channel), (2) it reclassifies any password request from 'potentially suspicious' to 'always a security incident,' eliminating the ambiguity the attacker exploits, and (3) it creates a mandatory rapid-reporting requirement (15 minutes) that enables the security team to alert other potential targets before the attacker moves laterally across the organization. This control is structurally effective not because it teaches clerks to recognize vishing but because it makes the vishing attempt irrelevant — regardless of how convincing the caller is, the clerk's only action is to report, never to comply. Unlike approaches that attempt to improve clerk judgment (training) or increase barriers the attacker must overcome (credential revocation, caller screening), the never-request-passwords policy eliminates the decision point the attacker depends on, achieving security without imposing operational costs on the AP function.",
@@ -24714,8 +24714,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Implement a detective control — a daily segregation of duties violation report generated from the ERP's access logs and reviewed by the audit committee.",
       "B": "Redesign role-based access controls to assign the vendor creation and payment approval duties to mutually exclusive roles, then recertify all user access against the redesigned role matrix.",
-      "C": "Implement a compensating control requiring dual authorization for all payment runs exceeding $10,000, with the second approver independent of the procurement department.",
-      "D": "Accept the residual risk and document it in the enterprise risk register, noting that the ERP's immutable audit trail provides sufficient detective capability to identify any improper payments after the fact."
+      "C": "Implement a compensating control requiring dual authorization for payment runs exceeding $10,000, with the second approver independent of the procurement department.",
+      "D": "Accept the residual risk and document it in the enterprise risk register, noting that the ERP's immutable audit trail provides sufficient detective capability to identify improper payments after the fact."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Under the COSO Internal Control Framework, segregation of duties is a preventive control activity designed to reduce the risk of error or fraud by ensuring no single individual controls all phases of a transaction. Redesigning role-based access controls (RBAC) to assign vendor creation and payment approval to mutually exclusive roles directly addresses the root cause of the SoD conflict. This is the preferred long-term remediation because it is preventive rather than detective, operates automatically within the system rather than relying on manual oversight, and eliminates the conflict at the authorization layer where it originates. Cross-module SoD analysis — configuring the ERP to evaluate permission conflicts across modules, not just within them — is a standard ERP governance practice that should have been part of the initial implementation. A common exam trap is to select compensating controls (Option C) or detective controls (Option A) as the primary remediation: these are secondary layers that supplement but do not replace proper preventive SoD design.",
@@ -24747,10 +24747,10 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Nettlefield implements an enterprise resource planning (ERP) system to integrate finance, operations, and supply chain data into a single platform. What is a primary benefit of this integration?",
     "Choices": {
-      "A": "Automatic compliance with all external regulations",
-      "B": "Guaranteed reduction in all operating costs",
+      "A": "Automatic compliance with external regulations",
+      "B": "Guaranteed reduction in operating costs",
       "C": "Improved data consistency and real-time visibility across business functions",
-      "D": "Elimination of the need for any internal controls"
+      "D": "Elimination of the need for internal controls"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "ERP systems integrate data across business functions into a shared platform, improving consistency, reducing duplicate data entry, and enabling more timely, organization-wide visibility.",
@@ -24803,7 +24803,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "A failure in the CRM's data validation rules that allowed 3% of sales orders to be created with incomplete customer identifiers, and a data quality dashboard with field-completeness metrics would have detected it.",
       "B": "A network timeout during the overnight batch transfer that caused 3% of records to fail transmission without triggering retry logic, and enabling automatic retry with a dead-letter queue would have detected it.",
       "C": "A missing automated reconciliation control between the CRM sales order extract and the ERP booking confirmation, and a daily reconciliation report comparing record counts and dollar totals between the two systems would have detected it.",
-      "D": "An ERP posting validation rule that silently rejected 3% of sales orders because customer account numbers did not match the ERP's customer master, and an exception report listing all rejected transactions would have detected it."
+      "D": "An ERP posting validation rule that silently rejected 3% of sales orders because customer account numbers did not match the ERP's customer master, and an exception report listing rejected transactions would have detected it."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Under COSO Control Activities, interface reconciliation is a critical information processing control that verifies the completeness and accuracy of data transferred between systems. The control failure is the absence of an automated reconciliation between the source system (CRM) and the target system (ERP). Even when an interface job reports 'success,' that status typically means the job executed without technical errors — not that all records posted correctly. A daily automated reconciliation comparing CRM sales order count and total dollar value to ERP bookings would have detected the 3% discrepancy within 24 hours, allowing IT to investigate and repost the missing orders before they accumulated to $340,000. This is a batch-total or record-count control, a standard IT general control for system interfaces. The key insight is that the interface job's success status is a technical metric, not a business-completeness metric — only reconciliation against business data confirms completeness.",
@@ -24837,7 +24837,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "CalculationItem": false,
     "Stem": "Vertex Chemicals is upgrading its ERP from version 12.3 to 14.0. During user acceptance testing, the sales compensation team discovers that the custom commission calculation module — built five years ago by a consultant who has since left the company — produces incorrect payouts in the upgraded environment. The module calculates commissions for 85 sales representatives and processes approximately $2.1 million in monthly commission payments. IT Director Sarah Chen must select a post-upgrade validation approach before the system goes live. Which approach provides the strongest assurance that the commission module functions correctly?",
     "Choices": {
-      "A": "Execute a full regression test of all 1,400 system functions, including the commission module, before allowing any users onto the upgraded system.",
+      "A": "Execute a full regression test of 1,400 system functions, including the commission module, before allowing users onto the upgraded system.",
       "B": "Run a parallel operation for one full commission cycle where both the old and new systems process actual sales transactions independently, then compare commission calculations line by line.",
       "C": "Conduct key-transaction testing focused exclusively on the commission module, running the 20 most complex commission scenarios through the upgraded system and comparing results to expected values.",
       "D": "Deploy the upgrade to one sales region first as a pilot, processing that region's commissions in the new system for one month while monitoring for discrepancies against the prior period's calculations."
@@ -24874,8 +24874,8 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "CalculationItem": false,
     "Stem": "The CFO of Apex Manufacturing, Rachel Kim, wants the analytics team to store five years of unstructured transaction logs, sensor data from production equipment, and structured general ledger data in a single platform to support both financial reporting and operational analytics. The controller insists that financial reporting data must maintain a clear audit trail from source system to financial statement. The data science team argues that imposing a rigid schema on all data will limit their ability to discover patterns in the unstructured data. Which architecture best serves both requirements?",
     "Choices": {
-      "A": "A pure data warehouse architecture, migrating all unstructured data into structured relational tables with predefined schemas before loading, ensuring every data element has a defined data type and audit trail.",
-      "B": "A pure data lake architecture storing all data in its native format without transformation, applying schema-on-read at query time for both financial reporting and analytics use cases.",
+      "A": "A pure data warehouse architecture, migrating unstructured data into structured relational tables with predefined schemas before loading, ensuring data element has a defined data type and audit trail.",
+      "B": "A pure data lake architecture storing data in its native format without transformation, applying schema-on-read at query time for both financial reporting and analytics use cases.",
       "C": "A hybrid lakehouse architecture that stores unstructured data in the data lake with schema-on-read flexibility while maintaining structured GL data in the data warehouse with schema-on-write governance, connected by a unified metadata catalog providing lineage and auditability across both environments.",
       "D": "Maintain the existing data warehouse for GL data and store unstructured logs on low-cost object storage, querying them only for ad-hoc investigations without integrating them into the analytics platform."
     },
@@ -24910,7 +24910,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Traditional data warehouse: Provides the structured query performance and ACID compliance necessary for financial reporting; IoT data can be transformed before loading",
       "B": "Data lakehouse: Combines the ACID transaction support and schema enforcement needed for financial reporting with the schema-on-read flexibility required for semi-structured IoT data",
-      "C": "Data lake only: Stores all data in native format and provides sufficient SQL capabilities through modern query engines for both structured reporting and semi-structured analytics",
+      "C": "Data lake only: Stores data in native format and provides sufficient SQL capabilities through modern query engines for both structured reporting and semi-structured analytics",
       "D": "Separate warehouse and lake: Maintain the existing data warehouse for financial data and build a separate data lake for IoT data to optimize each workload independently"
     },
     "CorrectChoice": "B",
@@ -25014,7 +25014,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "The data warehouse approach should take priority because regulatory reporting carries legal obligations. The data lake can be configured with materialized views over the warehouse data for analytics, eliminating the need for schema-on-read.",
       "B": "The two architectures serve fundamentally different use cases and do not inherently conflict. Schema-on-write ensures consistent, auditable data for regulatory reporting, while schema-on-read provides the flexibility needed for exploratory analytics. Both can coexist within a governed data platform when supported by clear data classification policies.",
       "C": "The data lake approach should take priority because modern analytics demands flexibility. The data warehouse can be replaced by curated data zones within the lake where financial data is validated and versioned, satisfying audit requirements without maintaining a separate platform.",
-      "D": "The teams should converge on a single approach by selecting a lakehouse platform that applies schema enforcement through a unified metadata layer, ensuring all data — whether used for regulatory reporting or analytics — passes through the same governance checkpoint."
+      "D": "The teams should converge on a single approach by selecting a lakehouse platform that applies schema enforcement through a unified metadata layer, ensuring data — whether used for regulatory reporting or analytics — passes through the same governance checkpoint."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Schema-on-read and schema-on-write are complementary architectural patterns, not conflicting ones. Under COSO's information requirements, financial data for regulatory reporting demands consistency, reproducibility, and a verifiable audit trail — characteristics that schema-on-write provides by validating and structuring data before it enters the reporting environment. In contrast, customer transaction analysis benefits from schema-on-read because data scientists need to apply different analytical lenses to the same raw data without being constrained by a predefined schema designed for financial reporting. The key governance insight is that the conflict is not architectural but organizational: without clear data classification policies defining which data flows to which environment and under what governance rules, the two approaches can produce inconsistent numbers. The correct recommendation is to maintain both architectures with a governance framework that classifies data by its intended use — regulated financial data follows schema-on-write into the warehouse, while raw transactional and behavioral data enters the lake with schema-on-read flexibility.",
@@ -25049,7 +25049,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "During the quarterly audit at Harbor Financial Services, external auditor Lisa Park attempts to trace a $2.8 million 'average customer lifetime value' metric on the CFO dashboard back to its source systems. The data engineering team reports that the metric was calculated from raw transaction data ingested into the corporate data lake 14 months ago, but no metadata was captured at ingestion — there is no record of which source system the data came from, when it was loaded, or what transformations were applied. The data lake currently holds 18 months of transaction history. What capability is missing, and how should Harbor remediate it without rebuilding the data lake?",
     "Choices": {
       "A": "The missing capability is a data catalog with automated metadata capture. Harbor should implement a catalog that retroactively scans existing lake data to extract available metadata and configure it to capture source, timestamp, schema, and transformation lineage for all future ingestions.",
-      "B": "The missing capability is schema-on-write enforcement. Harbor should rebuild the data lake with an architecture that requires all ingested data to carry explicit source system identifiers, load timestamps, and transformation tags before it can be stored.",
+      "B": "The missing capability is schema-on-write enforcement. Harbor should rebuild the data lake with an architecture that requires ingested data to carry explicit source system identifiers, load timestamps, and transformation tags before it can be stored.",
       "C": "The missing capability is a manual reconciliation process. Harbor should assign a financial analyst to reconcile the dashboard metric to source system reports monthly and document the reconciliation in a spreadsheet maintained for auditor review.",
       "D": "The missing capability is an immutable audit trail. Harbor should implement a blockchain-based ingestion ledger that cryptographically hashes each data batch upon ingestion and records the hash on a distributed ledger for future audit verification."
     },
@@ -25084,7 +25084,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Approach 1 (embedded scripts in EHR) — this approach provides the lowest cost ($185,000/year), real-time access to production data without data extraction latency, and keeps audit analytics entirely within Osei's team, preserving auditor independence. The SQL-based infrastructure leverages existing technology investments and avoids the integration complexity of a standalone platform or the data-sharing concerns of outsourcing.",
       "B": "Approach 2 (standalone continuous auditing platform) — this approach balances independence, analytical capability, and cost. Storing audit analytics on a separate server preserves auditor independence from IT-controlled production systems, the dedicated platform provides pre-built healthcare billing analytics that the SQL-based approach would require Osei's team to develop from scratch, and the $435,000 first-year total cost is justified by superior detection capability and a demonstrated audit analytics framework.",
-      "C": "Approach 3 (outsourced continuous auditing service) — this approach provides maximum independence (external firm performs all monitoring), the broadest analytical capability (benchmarking against 27 other healthcare systems identifies patterns invisible to single-system analysis), and transfers implementation risk to the service provider. The $520,000 annual fee is justified by the superior detection capability and the board-level credibility of an external service provider's findings.",
+      "C": "Approach 3 (outsourced continuous auditing service) — this approach provides maximum independence (external firm performs monitoring), the broadest analytical capability (benchmarking against 27 other healthcare systems identifies patterns invisible to single-system analysis), and transfers implementation risk to the service provider. The $520,000 annual fee is justified by the superior detection capability and the board-level credibility of an external service provider's findings.",
       "D": "A hybrid approach — implement Approach 1 for the first 12 months to establish baseline analytics and demonstrate value to the board using the existing SQL infrastructure ($185,000), then transition to Approach 2 in year two to scale the program with a dedicated platform. This avoids committing to a $435,000 investment before demonstrating that continuous auditing produces actionable findings."
     },
     "CorrectChoice": "B",
@@ -25312,7 +25312,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "Distractors written as plausible CMA-style traps"
     ],
     "ExplanationWrongA": "Choice A is incorrect because sales forecasting projects future revenue using historical trends, economic indicators, and market analysis — it is a planning and budgeting activity. The stem describes continuous, automated review of actual transactions for anomalies, which is an audit monitoring function. A candidate may confuse any forward-looking analytical activity with the specific practice of continuous auditing.",
-    "ExplanationWrongB": "Zero-based budgeting requires all expenses to be justified each period from zero. It is a budgeting technique unrelated to audit methodology. The stem describes automated transaction monitoring, which is continuous auditing.",
+"ExplanationWrongB": "Option B identifies zero-based budgeting, which is unrelated to the scenario. Coalgate's audit function is applying continuous auditing — automated tools that monitor transactions for anomalies on an ongoing basis rather than relying solely on periodic manual sampling. ZBB is a budgeting methodology with no monitoring function; the stem's emphasis on automation and continuous transaction monitoring points only to continuous auditing.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Standard costing sets predetermined cost benchmarks for variance analysis. It is a cost accounting technique, not an audit approach. The stem describes automated transaction monitoring for anomalies, which is continuous auditing.",
     "question_state": "Certified",

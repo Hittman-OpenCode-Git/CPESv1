@@ -407,7 +407,7 @@
     "ReviewNote": "If missed or marked, review the linked study materials.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Patent and customer list are finite-lived intangibles; license, workforce, and trademark are all classified as goodwill because they lack separable market value.",
+      "A": "Patent and customer list are finite-lived intangibles; license, workforce, and trademark are classified as goodwill because they lack separable market value.",
       "B": "All five items are identifiable intangible assets. The patent and customer list have finite lives; the license, workforce, and trademark have indefinite lives because each can be renewed or retained indefinitely.",
       "C": "Patent and customer list are finite-lived identifiable intangibles; license and trademark are indefinite-lived identifiable intangibles; assembled workforce is goodwill.",
       "D": "The customer list and assembled workforce are both goodwill because customers and employees are not assets under ASC 805; the patent, license, and trademark are identifiable intangibles with indefinite lives."
@@ -662,7 +662,7 @@
       "A": "Multi-step separates operating from non-operating items with subtotals",
       "B": "Multi-step does not show gross profit",
       "C": "Single-step is required for public companies",
-      "D": "Multi-step combines all revenues together"
+      "D": "Multi-step combines revenues together"
     },
     "StudyLinks": [
       {
@@ -2704,7 +2704,7 @@
       "A": "Recognize the loss and create a negative investment account",
       "B": "Recognize 40% of the loss, reducing investment to zero, and disclose the remaining loss",
       "C": "Recognize the full loss of $3,000,000",
-      "D": "Do not recognize any loss because it exceeds the investment balance"
+      "D": "Do not recognize loss because it exceeds the investment balance"
     },
     "StudyLinks": [
       {
@@ -4005,7 +4005,7 @@
     "Choices": {
       "A": "Cyclical variation — because the Year 3 industry downturn created multi-quarter deviations from the baseline, and long-wave economic patterns are the primary driver of the revenue trajectory Veridian has experienced.",
       "B": "Trend component — because the persistent quarter-over-quarter increase from $2.1M to $3.6M over five years reflects the long-term direction of the data series, independent of quarterly renewal patterns, the Year 3 downturn, or random events.",
-      "C": "Seasonal variation — because the Q4 renewal spikes repeat predictably every year and represent the largest and most consistent pattern in Veridian's revenue data, dominating the multi-year trajectory.",
+      "C": "Seasonal variation — because the Q4 renewal spikes repeat predictably year and represent the largest and most consistent pattern in Veridian's revenue data, dominating the multi-year trajectory.",
       "D": "Irregular variation — because the Year 3 industry downturn was an unpredictable external shock, and the overall growth pattern reflects the compounding impact of multiple random events rather than a systematic component."
     },
     "StudyLinks": [
@@ -4463,7 +4463,7 @@
       "A": "Start with the prior year budget and adjust for inflation",
       "B": "Base the budget on zero defects",
       "C": "Justify all expenses from a zero base, as if the activity were new",
-      "D": "Use activity-based costing for all overhead allocations"
+      "D": "Use activity-based costing for overhead allocations"
     },
     "StudyLinks": [
       {
@@ -4544,7 +4544,7 @@
     "ReviewNote": "If missed or marked, review the linked study materials.",
     "CalculationItem": false,
     "Choices": {
-      "A": "All departments submit budgets simultaneously",
+      "A": " departments submit budgets simultaneously",
       "B": "The budget is not changed regardless of conditions",
       "C": "The budget is prepared once and used for the entire year",
       "D": "A new budget period is added as the current period ends, maintaining a constant horizon"
@@ -4587,7 +4587,7 @@
     "Choices": {
       "A": "Conducts external audits",
       "B": "Oversees the budget process, reviews submissions, and resolves conflicts",
-      "C": "Approves all sales transactions",
+      "C": "Approves sales transactions",
       "D": "Prepares detailed departmental budgets"
     },
     "StudyLinks": [
@@ -5206,10 +5206,10 @@
     "ReviewNote": "If missed or marked, review the linked study materials.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Spend equal time on all budget line items",
+      "A": "Spend equal time on budget line items",
       "B": "Focus only on areas where actual results deviate significantly from budget",
       "C": "Only investigate favorable variances",
-      "D": "Review all variances regardless of size"
+      "D": "Review variances regardless of size"
     },
     "StudyLinks": [
       {
@@ -5540,8 +5540,8 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Comparing the company's budget to industry best practices or competitors",
-      "B": "Setting all budget targets at historical levels",
-      "C": "Eliminating all non-value-added activities",
+      "B": "Setting budget targets at historical levels",
+      "C": "Eliminating non-value-added activities",
       "D": "Using zero-based budgeting only"
     },
     "StudyLinks": [
@@ -5706,7 +5706,7 @@
     "CalculationItem": false,
     "Choices": {
       "A": "The prior period budget adjusted for expected changes",
-      "B": "Zero with all items justified",
+      "B": "Zero with items justified",
       "C": "Industry benchmarks only",
       "D": "Activity-based cost drivers"
     },
@@ -5869,10 +5869,10 @@
     "ReviewNote": "If missed or marked, review the linked study materials.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Include all costs attributed to the Springfield plant because the plant manager bears overall responsibility for the facility's total cost structure and financial performance.",
+      "A": "Include costs attributed to the Springfield plant because the plant manager bears overall responsibility for the facility's total cost structure and financial performance.",
       "B": "Exclude the allocated corporate costs and the restructuring charge but include plant depreciation expense because Torres manages the assets that generate the depreciation and makes operational decisions affecting their utilization.",
       "C": "Exclude the allocated corporate costs, the restructuring charge, and plant depreciation expense; include only the cost categories Torres can directly influence through his operational decisions during the performance period.",
-      "D": "Include all costs except the restructuring charge, because restructuring is an infrequent corporate-level decision, while ongoing allocations and depreciation represent recurring costs of operating the Springfield facility."
+      "D": "Include costs except the restructuring charge, because restructuring is an infrequent corporate-level decision, while ongoing allocations and depreciation represent recurring costs of operating the Springfield facility."
     },
     "StudyLinks": [
       {
@@ -6286,7 +6286,7 @@
     "Choices": {
       "A": "Using only historical averages to predict the future",
       "B": "Identifying a single most likely outcome",
-      "C": "Eliminating all uncertainty in the forecast",
+      "C": "Eliminating uncertainty in the forecast",
       "D": "Developing multiple plausible future scenarios with different assumptions"
     },
     "StudyLinks": [
@@ -6813,7 +6813,7 @@
     "Choices": {
       "A": "Proposal Alpha: Breakeven = 9,118 units at $68 CM; margin of safety at 16,000 units = 43.0%. Under weak demand (12,800 units), operating income = $250,400. Despite higher fixed costs, the substantially greater CM per unit provides stronger downside protection and higher operating leverage when demand exceeds breakeven",
       "B": "Proposal Beta: Breakeven = 8,793 units at $58 CM; margin of safety at 16,000 units = 45.0%. Under weak demand (12,800 units), operating income = $232,400. The lower breakeven point provides superior downside protection, which aligns with the board's stated investment criteria, despite Alpha's higher CM",
-      "C": "Proposal Alpha: Breakeven = 11,824 units; margin of safety = 26.1%. Alpha's higher automation costs create unacceptable risk because the breakeven nearly doubles from the current 8,000 units, threatening profitability in any year demand falls below 11,824 units",
+      "C": "Proposal Alpha: Breakeven = 11,824 units; margin of safety = 26.1%. Alpha's higher automation costs create unacceptable risk because the breakeven nearly doubles from the current 8,000 units, threatening profitability in year demand falls below 11,824 units",
       "D": "Neither proposal — maintain the current cost structure. Both proposals increase fixed costs and operating leverage, which amplifies losses in weak-demand years. The board should defer capital investment until demand variability decreases"
     },
     "CorrectChoice": "B",
@@ -7188,9 +7188,9 @@
     "ReviewNote": "If missed or marked, review the linked study materials.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Sales revenue minus all variable costs",
+      "A": "Sales revenue minus variable costs",
       "B": "Sales revenue minus direct material costs",
-      "C": "Sales revenue minus all operating costs",
+      "C": "Sales revenue minus operating costs",
       "D": "Sales revenue minus fixed manufacturing overhead"
     },
     "StudyLinks": [
@@ -7202,9 +7202,9 @@
     "VerifiedChecks": [
       "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
     ],
-    "ExplanationWrongA": "Sales revenue minus all variable costs is the contribution margin concept, which includes variable overhead and variable selling costs. Throughput contribution is narrower and subtracts only direct materials.",
+    "ExplanationWrongA": "Sales revenue minus variable costs is the contribution margin concept, which includes variable overhead and variable selling costs. Throughput contribution is narrower and subtracts only direct materials.",
     "ExplanationWrongB": "",
-    "ExplanationWrongC": "Sales revenue minus all operating costs is net income/operating profit. Throughput contribution deducts only direct material costs, the truly variable costs under TOC.",
+    "ExplanationWrongC": "Sales revenue minus operating costs is net income/operating profit. Throughput contribution deducts only direct material costs, the truly variable costs under TOC.",
     "ExplanationWrongD": "Sales revenue minus fixed manufacturing overhead would give a measure that includes all other costs. Throughput contribution only subtracts direct material costs.",
     "DifficultyScore": 1,
     "CognitiveLevel": "Remember"
@@ -8691,7 +8691,7 @@
     "Choices": {
       "A": "Only direct labor costs",
       "B": "Direct materials, direct labor, and departmental overhead only",
-      "C": "All costs including allocated administrative expenses",
+      "C": " costs including allocated administrative expenses",
       "D": "Direct materials and direct labor only"
     },
     "StudyLinks": [
@@ -8921,8 +8921,8 @@
     "Choices": {
       "A": "Managers should be evaluated only on costs and revenues over which they have control",
       "B": "Segment reports should focus on gross margin rather than contribution margin",
-      "C": "Every cost should be allocated to the department that generates the most revenue",
-      "D": "All costs including allocated costs should be included in every manager's performance evaluation"
+      "C": " cost should be allocated to the department that generates the most revenue",
+      "D": " costs including allocated costs should be included in manager's performance evaluation"
     },
     "StudyLinks": [
       {
@@ -9427,7 +9427,7 @@
     "Choices": {
       "A": "The full manufacturing cost of Division A",
       "B": "$50 per unit",
-      "C": "Any price negotiated between the divisions",
+      "C": " price negotiated between the divisions",
       "D": "The variable cost of Division A"
     },
     "StudyLinks": [
@@ -9750,7 +9750,7 @@
       "A": "Set the transfer price at $105 — the external market price available to the buying division falls within the $70-$105 negotiable range and both divisions benefit relative to their external alternatives",
       "B": "Set the transfer price at $120 — the external selling price ensures the Motor Division is not disadvantaged by selling internally rather than to external customers",
       "C": "Set the transfer price at $70 — variable cost represents the true economic cost of production and maximizes total company profit by giving the Appliance Division the lowest possible input cost",
-      "D": "Set the transfer price at $95 — full absorption cost fairly allocates all manufacturing costs between the two divisions and prevents either division from subsidizing the other"
+      "D": "Set the transfer price at $95 — full absorption cost fairly allocates manufacturing costs between the two divisions and prevents either division from subsidizing the other"
     },
     "StudyLinks": [
       {
@@ -10392,7 +10392,7 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Benchmarking identifies performance gaps, while best practices identify methods to close those gaps",
-      "B": "Benchmarking is only used in manufacturing, while best practices apply to all industries",
+      "B": "Benchmarking is only used in manufacturing, while best practices apply to industries",
       "C": "There is no difference; the terms are synonymous",
       "D": "Best practices are more expensive than benchmarking"
     },
@@ -11073,7 +11073,7 @@
     "ReviewNote": "If missed or marked, review management by exception concept",
     "CalculationItem": false,
     "Choices": {
-      "A": "Managers investigate all variances regardless of size",
+      "A": "Managers investigate variances regardless of size",
       "B": "Managers only investigate favorable variances",
       "C": "Managers focus attention on significant deviations from standards and ignore minor variances",
       "D": "Management by exception requires investigating variances only at year-end"
@@ -11259,7 +11259,7 @@
     "Choices": {
       "A": "Investigate only unfavorable labor variances",
       "B": "Investigate variances exceeding a certain percentage of standard cost (e.g., 10%) or a fixed dollar amount",
-      "C": "Investigate all variances regardless of size",
+      "C": "Investigate variances regardless of size",
       "D": "Investigate only variances that affect gross margin"
     },
     "StudyLinks": [
@@ -11535,7 +11535,7 @@
     "Choices": {
       "A": "There is no difference; the terms are interchangeable",
       "B": "Normal costing is only used in service industries",
-      "C": "Normal costing uses standards only for overhead; standard costing uses actual costs for all inputs",
+      "C": "Normal costing uses standards only for overhead; standard costing uses actual costs for inputs",
       "D": "Normal costing uses actual direct materials and direct labor with applied overhead; standard costing uses predetermined standards for all manufacturing costs"
     },
     "StudyLinks": [
@@ -11720,7 +11720,7 @@
       "A": "Backflush costing records costs only when materials are purchased",
       "B": "Backflush costing delays the recording of manufacturing costs until after production is complete, eliminating the need for detailed WIP tracking",
       "C": "Backflush costing cannot be used with standard costs",
-      "D": "Backflush costing uses actual costs for all inputs, while standard costing uses predetermined standards"
+      "D": "Backflush costing uses actual costs for inputs, while standard costing uses predetermined standards"
     },
     "StudyLinks": [
       {
@@ -11766,7 +11766,7 @@
       "A": "Kaizen costing sets fixed standards for the entire year, while standard costing updates standards continuously",
       "B": "Kaizen costing uses only actual costs, while standard costing uses predetermined costs",
       "C": "Kaizen costing focuses on continuous cost reduction by setting progressively lower cost targets, while standard costing uses fixed targets",
-      "D": "Kaizen costing applies only to direct materials, while standard costing covers all costs"
+      "D": "Kaizen costing applies only to direct materials, while standard costing covers costs"
     },
     "StudyLinks": [
       {
@@ -11856,7 +11856,7 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Prime costs (direct materials and direct labor)",
-      "B": "All manufacturing costs including fixed overhead",
+      "B": " manufacturing costs including fixed overhead",
       "C": "Only direct materials costs",
       "D": "Direct materials, direct labor, and variable overhead"
     },
@@ -13124,7 +13124,7 @@
       "A": "Products consume activities, and activities consume resources",
       "B": "Overhead costs should be allocated using a single plantwide rate",
       "C": "Only variable costs should be traced to products",
-      "D": "All costs are allocated based on direct labor hours"
+      "D": " costs are allocated based on direct labor hours"
     },
     "StudyLinks": [
       {
@@ -13499,8 +13499,8 @@
     "CalculationItem": false,
     "Choices": {
       "A": "The $240,000 costs incurred before split-off that benefit both products",
-      "B": "All costs including additional processing",
-      "C": "All costs incurred after split-off",
+      "B": " costs including additional processing",
+      "C": " costs incurred after split-off",
       "D": "Only the direct materials costs"
     },
     "StudyLinks": [
@@ -14245,7 +14245,7 @@
     "CalculationItem": false,
     "Choices": {
       "A": "It eliminates the need to estimate overhead costs",
-      "B": "It provides exact product costs by using actual costs for all inputs",
+      "B": "It provides exact product costs by using actual costs for inputs",
       "C": "It is only used for tax reporting purposes",
       "D": "It smooths out seasonal fluctuations in overhead costs while capturing actual material and labor costs"
     },
@@ -14386,7 +14386,7 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Absorption costing income will be lower because fixed overhead is treated as a product cost",
-      "B": "Variable costing income will be higher because all fixed costs are expensed immediately",
+      "B": "Variable costing income will be higher because fixed costs are expensed immediately",
       "C": "Both methods will report the same operating income regardless of production vs. sales volume",
       "D": "Absorption costing income will be higher than variable costing income because fixed overhead is deferred in ending inventory"
     },
@@ -15796,7 +15796,7 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Human error — the AP manager inadvertently approved payments to a vendor that did not exist, demonstrating that even trained employees make mistakes that controls cannot prevent",
-      "B": "Management override — the CFO should have personally reviewed all vendor additions, and the failure to do so represents a breakdown in the tone at the top",
+      "B": "Management override — the CFO should have personally reviewed vendor additions, and the failure to do so represents a breakdown in the tone at the top",
       "C": "Collusion — the AP manager and purchasing manager combined their access rights to circumvent segregation of duties, and data analytics monitoring of vendor activity patterns would have been the most effective compensating detective control",
       "D": "Cost-benefit constraint — the cost of preventing this type of fraud through additional controls would exceed the $94,000 loss, so accepting the risk is the economically rational response"
     },
@@ -15935,7 +15935,7 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Assign Maria to all five functions and have the controller review her work weekly. Since Maria is the most senior and trusted employee, concentrating duties under one experienced person with supervisory review is more effective than spreading incompatible functions across three less-experienced staff who may not detect each other's errors.",
-      "B": "Assign James to recording sales invoices and opening mail (functions 2 and 3), Tanya to credit authorization and bank reconciliations (functions 1 and 4), and Maria to write-off approvals (function 5). This distributes the workload evenly and avoids overloading any single employee.",
+      "B": "Assign James to recording sales invoices and opening mail (functions 2 and 3), Tanya to credit authorization and bank reconciliations (functions 1 and 4), and Maria to write-off approvals (function 5). This distributes the workload evenly and avoids overloading single employee.",
       "C": "Assign James to recording sales invoices and the AR subledger (function 2), Tanya to opening mail and the cash receipts listing (function 3), and Maria to credit authorization, bank reconciliation, and write-off approvals (functions 1, 4, and 5). The controller will perform quarterly independent reviews of credit-limit changes and all write-offs exceeding $500 as compensating controls.",
       "D": "Assign James to recording sales invoices and preparing the bank reconciliation (functions 2 and 4), Tanya to opening mail and the cash receipts listing (function 3), and Maria to credit authorization and write-off approvals (functions 1 and 5). This plan isolates custody from the other functions."
     },
@@ -16357,7 +16357,7 @@
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "CalculationItem": false,
     "Choices": {
-      "A": "All members must be certified public accountants",
+      "A": " members must be certified public accountants",
       "B": "The audit committee chair must be the CEO",
       "C": "All members must be independent of management",
       "D": "The audit committee must include at least one government representative"
@@ -16499,8 +16499,8 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Conducting a physical inventory count quarterly",
-      "B": "Requiring all employees to sign a code of ethics annually",
-      "C": "Requiring a second signature on all checks over ,000",
+      "B": "Requiring employees to sign a code of ethics annually",
+      "C": "Requiring a second signature on checks over,000",
       "D": "Using data analytics to identify patterns such as expenses submitted just below approval thresholds or duplicate submissions"
     },
     "StudyLinks": [
@@ -17245,7 +17245,7 @@
       "A": "The CEO and CFO must certify the financial statements",
       "B": "Management must assess and report on the effectiveness of internal control over financial reporting, and the external auditor must attest to that assessment",
       "C": "The company must establish a whistleblower hotline",
-      "D": "The company must rotate its external audit firm every five years"
+      "D": "The company must rotate its external audit firm five years"
     },
     "StudyLinks": [
       {
@@ -17478,9 +17478,9 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Development, migration, and production access should be separated to prevent unauthorized changes",
-      "B": "The IT administrator should not have access to any financial data",
+      "B": "The IT administrator should not have access to financial data",
       "C": "Only external consultants should perform system migrations",
-      "D": "All IT staff should have identical system access levels"
+      "D": " IT staff should have identical system access levels"
     },
     "StudyLinks": [
       {
@@ -17758,7 +17758,7 @@
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Strong password policies for all users",
+      "A": "Strong password policies for users",
       "B": "Data encryption in transit using protocols such as TLS",
       "C": "Physical access controls to the server room",
       "D": "Data encryption at rest"
@@ -18556,7 +18556,7 @@
       "A": "It encourages employees to report concerns without fear of retaliation",
       "B": "It eliminates the need for internal audit",
       "C": "It replaces the need for a code of ethics",
-      "D": "It automatically notifies the SEC of all reports"
+      "D": "It automatically notifies the SEC of reports"
     },
     "StudyLinks": [
       {
@@ -18973,9 +18973,9 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Establishing policies and standards for data quality, security, and usage across the organization",
-      "B": "Replacing all legacy systems with cloud-based solutions",
+      "B": "Replacing legacy systems with cloud-based solutions",
       "C": "Reducing the number of employees in the IT department",
-      "D": "Eliminating all data redundancy in the organization"
+      "D": "Eliminating data redundancy in the organization"
     },
     "StudyLinks": [
       {
@@ -19615,7 +19615,7 @@
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Guaranteeing that all transactions are accurately classified in the general ledger",
+      "A": "Guaranteeing that transactions are accurately classified in the general ledger",
       "B": "Eliminating the need for auditors entirely",
       "C": "Providing a shared, cryptographically secure record of transactions that both parties and an independent verifier can trust",
       "D": "Replacing GAAP with blockchain-specific accounting standards"
@@ -19664,7 +19664,7 @@
       "A": "Proceed with the migration immediately — the SOC 2 clean report and 40% cost savings outweigh the compliance concerns raised by the compliance officer",
       "B": "Reject the migration entirely — cloud computing is inherently incompatible with regulated data such as HIPAA and GDPR-protected information",
       "C": "Negotiate contractual safeguards for data residency, EU Standard Contractual Clauses, and liability provisions that reflect the value of the data entrusted to the vendor, and conduct a privacy impact assessment before proceeding",
-      "D": "Migrate only non-regulated data to the cloud and maintain HIPAA and GDPR data on-premise indefinitely — this hybrid approach eliminates all cloud compliance risk"
+      "D": "Migrate only non-regulated data to the cloud and maintain HIPAA and GDPR data on-premise indefinitely — this hybrid approach eliminates cloud compliance risk"
     },
     "StudyLinks": [
       {
@@ -19797,9 +19797,9 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Implementing multiple layers of security controls so that if one layer fails, others provide protection",
-      "B": "Relying solely on a strong firewall for all security needs",
-      "C": "Using only antivirus software to protect all systems",
-      "D": "Outsourcing all security functions to a managed service provider"
+      "B": "Relying solely on a strong firewall for security needs",
+      "C": "Using only antivirus software to protect systems",
+      "D": "Outsourcing security functions to a managed service provider"
     },
     "StudyLinks": [
       {
@@ -19890,7 +19890,7 @@
     "Choices": {
       "A": "Each department maintains its own separate database for maximum flexibility",
       "B": "Data is entered once and flows seamlessly across modules, improving consistency and reducing redundant data entry",
-      "C": "The ERP system eliminates the need for any internal controls",
+      "C": "The ERP system eliminates the need for internal controls",
       "D": "ERP systems are less expensive than maintaining separate legacy systems"
     },
     "StudyLinks": [
@@ -19935,7 +19935,7 @@
     "CalculationItem": false,
     "Choices": {
       "A": "ERP implementations have no impact on business processes",
-      "B": "ERP systems automatically configure themselves without any customization",
+      "B": "ERP systems automatically configure themselves without customization",
       "C": "Inadequate user training and resistance to change can undermine the benefits of the new system",
       "D": "Segregation of duties controls are automatically configured and do not require adjustment"
     },
@@ -19980,9 +19980,9 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Users to query and join related data across tables without duplicating data",
-      "B": "Data to be stored redundantly in every table for faster access",
+      "B": "Data to be stored redundantly in table for faster access",
       "C": "Data to be stored in unstructured documents",
-      "D": "Only the database administrator to access any data"
+      "D": "Only the database administrator to access data"
     },
     "StudyLinks": [
       {
@@ -20026,9 +20026,9 @@
     "CalculationItem": false,
     "Choices": {
       "A": "The right to access their personal data and request its deletion under certain circumstances (right to be forgotten)",
-      "B": "The right to prevent the company from using any data analytics tools",
-      "C": "The right to demand compensation for any use of their data",
-      "D": "The right to require the company to share their data with all other customers"
+      "B": "The right to prevent the company from using data analytics tools",
+      "C": "The right to demand compensation for use of their data",
+      "D": "The right to require the company to share their data with other customers"
     },
     "StudyLinks": [
       {
@@ -20440,7 +20440,7 @@
       "A": "The SOC 2 Type II report can be partially relied upon — the Availability finding (backup failure) is the only finding that directly affects the completeness of Harbor's transaction data during the affected period, and additional procedures should be focused on that 6-day window",
       "B": "The SOC 2 Type II report can be relied upon because RouteCloud management has provided remediation responses for all three findings, demonstrating that the control environment is responsive to identified deficiencies",
       "C": "The SOC 2 Type II report cannot be relied upon without additional procedures because all three findings affect trust services categories relevant to the audit: Availability (backup failure) affects whether transaction data was complete during the gap period, Security (access recertification) affects whether unauthorized changes to financial data could have occurred, and Processing Integrity (change management deviation) affects whether system processing was authorized and tested",
-      "D": "The SOC 2 Type II report cannot be relied upon for any period because the combination of a backup failure, access review gap, and change management deviation indicates systemic control weaknesses that undermine the entire report"
+      "D": "The SOC 2 Type II report cannot be relied upon for period because the combination of a backup failure, access review gap, and change management deviation indicates systemic control weaknesses that undermine the entire report"
     },
     "StudyLinks": [
       {
@@ -20665,7 +20665,7 @@
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "CalculationItem": false,
     "Choices": {
-      "A": "RPA for all four processes because RPA is cheaper to deploy, faster to implement, and the processes are all back-office finance functions where deterministic automation is sufficient and regulatory explainability is important",
+      "A": "RPA for four processes because RPA is cheaper to deploy, faster to implement, and the processes are back-office finance functions where deterministic automation is sufficient and regulatory explainability is important",
       "B": "AI/ML for all four processes because machine learning can improve accuracy beyond deterministic rules for invoice matching and reconciliation, and the investment in a unified AI platform is more strategic than deploying separate RPA and AI/ML solutions",
       "C": "RPA for Processes 1 and 4 (AP Invoice Matching, GL Reconciliation — both are rules-based, structured-data processes where automation follows deterministic logic); AI/ML for Processes 2 and 3 (Customer Sentiment — unstructured text classification; Inventory Forecasting — pattern recognition from historical data with complex interdependencies)",
       "D": "AI/ML for Processes 1, 2, and 3 (invoice matching, sentiment, forecasting) and RPA for Process 4 (GL reconciliation) — invoice matching would benefit from ML-based pattern recognition for the 18% of invoices that arrive as unstructured PDFs"
@@ -20803,9 +20803,9 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Configure role-based access controls to separate vendor creation from purchase order approval, and implement a goods receipt tolerance threshold requiring supervisor review for quantity variances exceeding 5%",
-      "B": "Grant all department managers full access to all ERP modules so no single person bears exclusive responsibility for any transaction",
+      "B": "Grant department managers full access to ERP modules so no single person bears exclusive responsibility for transaction",
       "C": "Revert to manual segregation of duties by disabling the ERP's automated workflows — manual processes provide clearer visibility than system-configured controls",
-      "D": "Accept the current configuration as sufficient since the ERP system's built-in audit trail will detect any fraudulent transactions after they occur"
+      "D": "Accept the current configuration as sufficient since the ERP system's built-in audit trail will detect fraudulent transactions after they occur"
     },
     "StudyLinks": [
       {
@@ -21030,10 +21030,10 @@
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Risk 2 (Irreversible Payment Execution) — once a smart contract executes a payment, the funds cannot be recovered through the system, meaning any payment error (whether from a compromised oracle, a code bug, or a business dispute) becomes a permanent loss that affects the income statement",
+      "A": "Risk 2 (Irreversible Payment Execution) — once a smart contract executes a payment, the funds cannot be recovered through the system, meaning payment error (whether from a compromised oracle, a code bug, or a business dispute) becomes a permanent loss that affects the income statement",
       "B": "Risk 1 (Oracle Data Manipulation) — the 'oracle problem' is the most severe risk because the smart contract's payment decision depends entirely on the integrity of the WMS data feed; a compromised WMS can trigger unauthorized payments at scale with no human review between the data input and the payment execution, and the fraudulent transactions would appear as legitimate, system-processed payments on the blockchain",
-      "C": "Risk 3 (Smart Contract Code Vulnerability) — a coding error in the validation logic is a systematic defect that would affect EVERY transaction processed by the contract, not just isolated transactions, making it the risk with the widest potential financial statement impact",
-      "D": "Risk 4 (Blockchain Fork) — if Orion's financial records and the supplier's records diverge due to a blockchain fork, the external auditors cannot rely on either party's records as the single source of truth, fundamentally undermining the audit trail for all P2P transactions"
+      "C": "Risk 3 (Smart Contract Code Vulnerability) — a coding error in the validation logic is a systematic defect that would affect transaction processed by the contract, not just isolated transactions, making it the risk with the widest potential financial statement impact",
+      "D": "Risk 4 (Blockchain Fork) — if Orion's financial records and the supplier's records diverge due to a blockchain fork, the external auditors cannot rely on either party's records as the single source of truth, fundamentally undermining the audit trail for P2P transactions"
     },
     "StudyLinks": [
       {
@@ -21306,7 +21306,7 @@
     "Choices": {
       "A": "Development proceeds in iterative cycles with continuous stakeholder feedback and adaptation",
       "B": "The project is delivered in a single final release",
-      "C": "All requirements are fully defined at the beginning and changes are discouraged",
+      "C": " requirements are fully defined at the beginning and changes are discouraged",
       "D": "Testing occurs only at the end of the project"
     },
     "StudyLinks": [
@@ -21443,8 +21443,8 @@
     "Choices": {
       "A": "Eliminating the need for data security",
       "B": "Creating a single, consistent, authoritative source of master data across the organization",
-      "C": "Automating all customer communications",
-      "D": "Replacing all existing databases with a single file server"
+      "C": "Automating customer communications",
+      "D": "Replacing existing databases with a single file server"
     },
     "StudyLinks": [
       {
@@ -21488,7 +21488,7 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Category 1 (Access Management) — uncontrolled privileged access is the most severe control deficiency: domain-admin bots with no credential rotation and active terminated-employee bots create a direct risk of unauthorized financial transaction processing; at $215,000, it leaves $135,000 to begin addressing Category 2",
-      "B": "Category 2 (Change Control) — undocumented bot modifications have already caused a $47,000 financial loss through the currency conversion error; without change control, every bot execution is an untested, unapproved change to the financial reporting process",
+      "B": "Category 2 (Change Control) — undocumented bot modifications have already caused a $47,000 financial loss through the currency conversion error; without change control, bot execution is an untested, unapproved change to the financial reporting process",
       "C": "Category 3 (Exception Handling) — bots silently failing or processing incorrect data directly affects the completeness and accuracy of financial records; 11 of 14 bots lack exception handling, making this the most widespread deficiency",
       "D": "All three categories are equally critical; the Audit Director should present a supplemental funding request for $170,000 to remediate all three simultaneously"
     },
@@ -21852,9 +21852,9 @@
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "CalculationItem": false,
     "Choices": {
-      "A": "All users should have the same level of access for consistency",
-      "B": "Every user should have the highest level of access in case it is needed",
-      "C": "Only senior managers should have any system access",
+      "A": " users should have the same level of access for consistency",
+      "B": " user should have the highest level of access in case it is needed",
+      "C": "Only senior managers should have system access",
       "D": "Users are granted only the minimum levels of access necessary to perform their job functions"
     },
     "StudyLinks": [
@@ -21900,7 +21900,7 @@
     "Choices": {
       "A": "Framework 2 (IEEE 7000) — it is the most rigorous methodology for integrating ethical values into system design, the 5-month delay is a reasonable investment in ethical quality, and stakeholder engagement will strengthen relationships with both consumers and retail partners",
       "B": "Framework 1 (FAT) — it addresses the three most pressing ethical dimensions (fairness, accountability, transparency) at the lowest cost ($320,000) and fastest timeline, provides defensible documentation for both consumer advocates and retail partners, and does not require renegotiating existing data-sharing agreements",
-      "C": "Framework 3 (EU Ethics Guidelines) — as the most comprehensive global standard for trustworthy AI, it provides maximum defensibility against any future regulatory challenge and positions Crescent as an ethics leader in the consumer insights industry",
+      "C": "Framework 3 (EU Ethics Guidelines) — as the most comprehensive global standard for trustworthy AI, it provides maximum defensibility against future regulatory challenge and positions Crescent as an ethics leader in the consumer insights industry",
       "D": "Proceed with the model launch without a formal ethics framework, relying on Crescent's existing data privacy policy and internal ethical guidelines, and address ethical concerns reactively if they arise"
     },
     "StudyLinks": [
@@ -21945,7 +21945,7 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Finding 4 (GDPR Immutability Conflict) is the only genuine adoption blocker — node governance can be addressed by providing cooperative IT support, and Findings 1 and 2 are clearly not blockers based on the quantitative data provided",
-      "B": "Findings 1 (Throughput), 2 (Energy Cost), and 3 (Node Governance) are all genuine adoption blockers because they each represent technical limitations of the blockchain architecture",
+      "B": "Findings 1 (Throughput), 2 (Energy Cost), and 3 (Node Governance) are genuine adoption blockers because they each represent technical limitations of the blockchain architecture",
       "C": "No findings are genuine adoption blockers — all four concerns can be addressed through project planning: throughput is adequate, energy costs are negligible, cooperatives can be provided with IT support, and personal data can be stored off-chain with only hashes recorded on-chain to satisfy GDPR",
       "D": "Findings 3 (Node Governance) and 4 (GDPR Immutability Conflict) are genuine adoption blockers — 20 of 37 cooperatives cannot reliably participate as validator nodes, and the GDPR right-to-erasure conflict with blockchain immutability is a fundamental architectural incompatibility that cannot be resolved through process or policy changes"
     },
@@ -22267,7 +22267,7 @@
       "A": "Deficiency C (Untested Exception-Handling Scripts) — affecting 7 of 9 bots, this is the most widespread deficiency; duplicate postings and silent terminations directly affect the completeness and accuracy of financial records across the widest range of business processes",
       "B": "Deficiency B (Unlogged Transaction Overrides) — 47 transactions totaling $892,000 bypassed the SAP approval workflow in a single quarter, representing actual (not theoretical) financial statement impact; the absence of compensating detective controls means management cannot identify which bypassed transactions may be inappropriate",
       "C": "Deficiency A (Bot Credential Sharing) — a single compromised bot runtime grants an attacker the ability to post journal entries and approve invoices up to $100,000 across 6 different business processes, with the shared credential making individual accountability impossible; this represents the most severe segregation-of-duties and access-control breakdown",
-      "D": "All three deficiencies are equally severe because they all create a reasonable possibility that a material misstatement could occur and not be prevented or detected; the Audit Committee should authorize an emergency budget increase to remediate all three simultaneously"
+      "D": " three deficiencies are equally severe because they create a reasonable possibility that a material misstatement could occur and not be prevented or detected; the Audit Committee should authorize an emergency budget increase to remediate three simultaneously"
     },
     "StudyLinks": [
       {

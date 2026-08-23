@@ -32135,3 +32135,79 @@ Phrase-table transformation engine (78 specific rules + 19 generic verb-pattern 
 
 **Revision recorded by:** DL-043 Batch 2 Remediation
 **Date:** 2026-08-23
+
+---
+
+## 2026-08-23 — DL-043 Batch 3 Remediation (any/all/every Triage, 661 rewrites)
+
+**Session Type:** Content remediation (Full Governance Lane — Part 1 packs)
+**User approval:** Documented here — user authorized "go for batch 3" (2026-08-23)
+
+### Scope
+
+930 distractor-slot hits for any (229) / all (567) / every (80) / must (54) across 2,620 items; 643 distinct choice texts. Triage split:
+
+- **Transformed: 661 rewrites** (512 distinct texts) — overgeneralized quantifiers removed while preserving distractor falsity. Rotation families collapsed: "Wait for the external audit before designing any internal control" ×31, "It eliminates the need for any market price data" ×7, "It guarantees goal congruence in all cases" ×7, "Elimination of all motivational benefits of budgeting" ×6, etc.
+- **Kept (whitelist, 99 distinct):** enumerated "all N" counts, ZBB definitional texts ("resets every account"), "each period" phrasing, conditional "any of the / any amount" uses, ALL "must" occurrences (requirement phrasing — standard exam language, not a cueing term), and technical terms of art ("substantially all", absorption-costing definition "allocates all fixed overhead to products", reciprocal/direct method definitions).
+
+### Falsity Review
+
+Full before/after report generated (544 pairs). One damage case found and restored: the generic determiner-drop corrupted the technical phrase "Substantially all (typically 90%+)" in P1-A-014 choice D — restored verbatim. No other technical-phrase damage (all-or-nothing, all-events, etc. occur only in explanation fields, which were untouched).
+
+### Verification
+
+- `node --check` ×5 packs: PASS; item counts unchanged (500/500/500/500/620)
+- DL-008: 0; DL-026: 0 (all packs)
+- Residual any/all/every scan: 16 non-whitelisted hits — ALL verified intentional (technical/definitional phrases listed above)
+- `npm run preflight`: PASS — 0 divergences
+- CorrectChoice unchanged on all touched items
+
+### Governance
+
+- DL-043 updated: Batch 3 progress recorded; the any/every/all/must workstream is now CLOSED.
+
+### Remaining distractor-quality workstream
+
+- DL-013-class ZBB generic-EW cluster (13 items) — the only open item in the distractor-quality program.
+
+**Revision recorded by:** DL-043 Batch 3 Remediation
+**Date:** 2026-08-23
+
+---
+
+## 2026-08-23 — DL-043 Batch 4 (ZBB Generic-EW Cluster — Program Closeout)
+
+**Session Type:** Content remediation (Full Governance Lane — Part 1 packs)
+**User approval:** Documented here — user authorized "conitue with batch 4" (2026-08-23)
+
+### Scope
+
+Final workstream of the distractor-quality program: 13 ZBB generic-EW slots (DL-013-class choice-specificity gap), plus three additional misassigned EW slots discovered during execution.
+
+### Changes Applied
+
+- **13 choice-specific EW rewrites** (Pack C 5, Pack D 8) — each explanation now references the item's own stem facts and contrasts with the correct technique (kaizen budgeting, benchmarking, data mining, continuous auditing, customer profitability analysis, cost-benefit variance investigation, value-based management).
+- **3 additional misassignment corrections:** P1-BC-079 and P1-BC-080 EWA (ABB/ZBB hybrid text sat on an incremental-budgeting choice — rewritten for the incremental-budgeting trap) and P1-CD-070 EWD (controllability choice — rewritten).
+- One engine oversight corrected: the line-targeted rewrite briefly duplicated the new ZBB EW into CD-070's EWD slot; caught by the EW/slot topic-mismatch verifier and fixed in the same session.
+
+### Verification
+
+- `node --check` ×5 packs: PASS; item counts unchanged (500/500/500/500/620)
+- DL-008: 0; DL-026: 0 (all packs)
+- EW/slot topic alignment check on all 15 touched slots: PASS
+- Generic ZBB-EW remnants in the 13-item cluster: 0
+- `npm run preflight`: PASS — 0 divergences
+- CorrectChoice unchanged everywhere
+
+### Program Closeout
+
+**THE DISTRACTOR-QUALITY PROGRAM IS COMPLETE.** All four batches delivered:
+1. Logically equivalent / near-duplicate distractor pairs (DL-043): 7 rewrites + 4 triaged-distinct + 4 misassigned-EW fixes
+2. Strong absolute terms (always/never/impossible): 118 rewrites, 5 triaged-kept
+3. any/all/every triage: 661 rewrites, whitelist kept, 1 damage case restored
+4. ZBB generic-EW cluster: 13 rewrites + 3 bonus misassignment fixes
+
+Cumulative: 800+ distractor/explanation edits across 2,620 items, zero answer-key changes, zero DL-008/DL-026 regressions, preflight green at every step.
+
+**Revision recorded by:** DL-043 Batch 4 — Program Closeout
+**Date:** 2026-08-23

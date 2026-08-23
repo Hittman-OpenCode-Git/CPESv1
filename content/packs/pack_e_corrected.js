@@ -22,7 +22,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Present using a liquidity-based format because the operating cycle exceeds 12 months, and classified presentation is misleading when the cycle is extended — note disclosure of the longer cycle",
       "B": "Present using a classified balance sheet with current/noncurrent distinction, disclosing the extended operating cycle in the notes — the debt covenants require standard GAAP classification and a liquidity basis would violate ASC 210",
-      "C": "Present using a classified balance sheet with all assets except inventory classified as current, since only inventory is tied to the extended operating cycle",
+      "C": "Present using a classified balance sheet with assets except inventory classified as current, since only inventory is tied to the extended operating cycle",
       "D": "Present using a classified balance sheet but reclassify the current portion of long-term debt to noncurrent, relying on the cycle extension to characterize it as long-term"
     },
     "CalculationItem": false,
@@ -175,9 +175,9 @@ const MCQ_BANK_E = [
     "MicroTopic": "Revenue recognition timing",
     "CorrectChoice": "B",
     "Choices": {
-      "A": "Recognize all revenue upon contract signing because the customer has committed and the contract is legally enforceable — the configuration services and support are incidental",
+      "A": "Recognize revenue upon contract signing because the customer has committed and the contract is legally enforceable — the configuration services and support are incidental",
       "B": "Identify three distinct performance obligations — the SaaS license, configuration services, and annual support — allocate the $180,000 contract price based on relative standalone selling prices, and recognize revenue as each obligation is satisfied",
-      "C": "Defer all revenue recognition until the configuration services are complete because the license has no standalone value without implementation",
+      "C": "Defer revenue recognition until the configuration services are complete because the license has no standalone value without implementation",
       "D": "Recognize the SaaS license revenue at contract signing, the configuration services revenue ratably over the implementation period, and the support revenue at the end of the contract year"
     },
     "CalculationItem": false,
@@ -229,7 +229,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "A",
     "Choices": {
       "A": "Apply LCNRV at the individual item level for finished goods (write-down $42,000), evaluate raw materials through the finished-goods LCNRV lens (no separate write-down needed because the finished product's NRV exceeds cost), and apply LCNRV to WIP based on estimated selling price less costs to complete and sell ($28,000 write-down) — total write-down: $70,000 with separate disclosure of the three components",
-      "B": "Apply LCNRV at the aggregate level across all three inventory categories, computing a single $32,000 write-down based on the net NRV deficit of all categories combined — discloses the write-down as a single line item in cost of goods sold",
+      "B": "Apply LCNRV at the aggregate level across three inventory categories, computing a single $32,000 write-down based on the net NRV deficit of categories combined — discloses the write-down as a single line item in cost of goods sold",
       "C": "Write down only the finished goods inventory by $42,000 because LCNRV does not apply to raw materials or WIP — these are measured at cost until the finished product is sold",
       "D": "Apply LCNRV to finished goods ($42,000) and WIP ($28,000), but value raw materials at replacement cost ($95,000) because raw material prices have declined below original cost — total charge: $78,000"
     },
@@ -586,7 +586,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "D",
     "Choices": {
       "A": "Accrue the $150,000 claim (70% probable loss, range $100K–$200K), disclose the $300,000 claim in notes (reasonably possible, range $200K–$400K), and take no action on the $50,000 claim (remote, less than 5% probability)",
-      "B": "Accrue all three claims at their minimum amounts ($100K + $200K + $0) to present a conservative financial position — ASC 450 requires accrual when any probability of loss exists",
+      "B": "Accrue three claims at their minimum amounts ($100K + $200K + $0) to present a conservative financial position — ASC 450 requires accrual when probability of loss exists",
       "C": "Accrue the $150,000 claim at $200,000 (high end of range), the $300,000 claim at $400,000, and the $50,000 claim at $50,000 — all three meet the 'probable' threshold",
       "D": "Accrue $150,000 for the claim that is probable and reasonably estimable (range $100K–$200K, best estimate $150K), disclose the reasonably possible $300,000 claim in notes with the estimated range, and neither accrue nor disclose the remote $50,000 claim — ASC 450-20-25-2 requires both probability and estimability for accrual"
     },
@@ -1194,7 +1194,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Only common shares",
       "B": "Only preferred stock",
-      "C": "All securities",
+      "C": " securities",
       "D": "Convertible securities and options if dilutive"
     },
     "CalculationItem": false,
@@ -1396,7 +1396,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Comprehensive income is $2,035,000 — net income is the primary driver of the $2,035K result. The foreign currency translation loss of $340K is the largest OCI component but represents only 16.2% of net income's magnitude",
       "B": "Comprehensive income = $2,035,000 ($2,100K + $180K + $95K − $340K). The FX translation loss ($340K) is the largest single OCI component in absolute terms and drives a $340K negative divergence. However, the net OCI effect is negative $65K (−$340K + $180K + $95K). The FX loss is the primary divergence driver because it reduces comprehensive income below net income despite the positive pension and AFS adjustments",
-      "C": "Comprehensive income = $2,715,000 because all OCI components are additive to net income — foreign currency translation losses are reported as an offset to assets, not as an OCI reduction. Only realized FX losses reduce comprehensive income",
+      "C": "Comprehensive income = $2,715,000 because OCI components are additive to net income — foreign currency translation losses are reported as an offset to assets, not as an OCI reduction. Only realized FX losses reduce comprehensive income",
       "D": "Comprehensive income = $2,410,000 — the pension prior service credit ($180K) is reported as a liability reduction and does not flow through OCI. Only the AFS gain ($95K) and FX loss ($340K) affect comprehensive income, producing net OCI of +$310K"
     },
     "CalculationItem": false,
@@ -1750,9 +1750,9 @@ const MCQ_BANK_E = [
     "CorrectChoice": "C",
     "Choices": {
       "A": "$15,000 — applying a flat 1.5% default rate to the total $1,000,000 AR balance using the percentage-of-receivables approach, which averages risk across aging buckets",
-      "B": "$8,500 — applying rates only to buckets 0–30 days (0.5%) and 31–60 days (2.0%), treating all receivables over 60 days as fully reserved ($28,000 direct write-off) — the direct write-off of older receivables replaces the need for a CECL estimate on those buckets",
+      "B": "$8,500 — applying rates only to buckets 0–30 days (0.5%) and 31–60 days (2.0%), treating receivables over 60 days as fully reserved ($28,000 direct write-off) — the direct write-off of older receivables replaces the need for a CECL estimate on those buckets",
       "C": "$19,250 — computing by aging bucket: 0–30 days ($400K × 0.5% = $2,000) + 31–60 days ($250K × 2.0% = $5,000) + 61–90 days ($150K × 5.0% = $7,500) + over 90 days ($100K gross − $4,750 prior write-off = $95,250 × 5.0% = $4,750). Total estimated credit loss = $19,250 under ASC 326-20",
-      "D": "$22,000 — applying a 2.0% rate to all buckets based on the trailing 12-month average default experience, regardless of aging distinctions — CECL uses lifetime expected losses, not bucket-specific historical rates"
+      "D": "$22,000 — applying a 2.0% rate to buckets based on the trailing 12-month average default experience, regardless of aging distinctions — CECL uses lifetime expected losses, not bucket-specific historical rates"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -2661,7 +2661,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "D",
     "Choices": {
       "A": "Permanent differences only",
-      "B": "All differences including permanent",
+      "B": " differences including permanent",
       "C": "Only taxable temporary differences",
       "D": "All temporary differences"
     },
@@ -3769,7 +3769,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Never",
       "B": "U.S. GAAP for most contracts",
-      "C": "IFRS for all contracts",
+      "C": "IFRS for contracts",
       "D": "U.S. GAAP for contracts not meeting over-time criteria"
     },
     "CalculationItem": false,
@@ -4733,7 +4733,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Moving average purpose",
     "CorrectChoice": "B",
     "Choices": {
-      "A": "Eliminate all data variation",
+      "A": "Eliminate data variation",
       "B": "Smooth random fluctuations",
       "C": "Identify causal relationships",
       "D": "Forecast exponential growth"
@@ -5191,7 +5191,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Overhead to products",
       "B": "Revenue and cost responsibility to managers",
-      "C": "All costs to production",
+      "C": " costs to production",
       "D": "Costs based on cause-effect"
     },
     "CalculationItem": false,
@@ -5391,7 +5391,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Variable costs only",
       "B": "Costs manager can directly influence",
-      "C": "All costs charged to division",
+      "C": " costs charged to division",
       "D": "Fixed costs only"
     },
     "CalculationItem": false,
@@ -5441,7 +5441,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Revenue minus variable costs",
       "B": "Contribution margin minus common costs",
-      "C": "Revenue minus all costs",
+      "C": "Revenue minus costs",
       "D": "Revenue minus direct costs and traceable fixed costs"
     },
     "CalculationItem": false,
@@ -5463,7 +5463,7 @@ const MCQ_BANK_E = [
     "ItemStyle": "single-select",
     "ExplanationWrongA": "Revenue minus variable costs is contribution margin, not segment margin.",
     "ExplanationWrongB": "Contribution margin minus common costs incorrectly subtracts common costs; segment margin excludes common costs.",
-    "ExplanationWrongC": "Revenue minus all costs is net income after allocating all costs, not segment margin.",
+    "ExplanationWrongC": "Revenue minus costs is net income after allocating all costs, not segment margin.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 1,
@@ -5843,8 +5843,8 @@ const MCQ_BANK_E = [
     "CorrectChoice": "D",
     "Choices": {
       "A": "Costs are linear",
-      "B": "All costs are fixed",
-      "C": "All costs are variable",
+      "B": " costs are fixed",
+      "C": " costs are variable",
       "D": "Cost behavior is linear within a normal activity range"
     },
     "CalculationItem": false,
@@ -5945,7 +5945,7 @@ const MCQ_BANK_E = [
       "A": "Revenue minus total costs",
       "B": "Revenue minus variable costs",
       "C": "Revenue minus fixed costs",
-      "D": "Revenue minus all manufacturing costs"
+      "D": "Revenue minus manufacturing costs"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -5967,7 +5967,7 @@ const MCQ_BANK_E = [
     "ExplanationWrongA": "Revenue minus total costs equals net income, not contribution margin.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Revenue minus fixed costs is not a standard profit measure; variable costs must also be deducted.",
-    "ExplanationWrongD": "Revenue minus all manufacturing costs gives manufacturing margin, not contribution margin.",
+    "ExplanationWrongD": "Revenue minus manufacturing costs gives manufacturing margin, not contribution margin.",
     "question_state": "Certified",
     "DifficultyScore": 4,
     "CognitiveLevel": "Apply"
@@ -5993,7 +5993,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "C",
     "Choices": {
       "A": "Recommend $159,500 — computed as a two-month moving average of February and March — because using fewer periods makes the forecast more responsive to the upward trend, even though it relies on the two oldest data points.",
-      "B": "Recommend $182,333 — computed as a three-month moving average of April, May, and June — because including more observations reduces distortion from any single month's fluctuation and provides a more stable production target.",
+      "B": "Recommend $182,333 — computed as a three-month moving average of April, May, and June — because including more observations reduces distortion from single month's fluctuation and provides a more stable production target.",
       "C": "Recommend $189,500 — computed as a two-month moving average of May and June ($182,000 + $197,000) / 2 — because the shorter-period average using the most recent data responds more quickly to NovaTek's persistent upward sales trend.",
       "D": "Recommend $174,000 — computed as a three-month moving average of March, April, and May — because this balances recency against stability by using the three middle months of the five-month series."
     },
@@ -6150,7 +6150,7 @@ const MCQ_BANK_E = [
       "A": "First and last periods",
       "B": "Highest and lowest costs",
       "C": "Highest and lowest activity levels",
-      "D": "All data points"
+      "D": " data points"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -7263,7 +7263,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Labor rate variance",
     "CorrectChoice": "C",
     "Choices": {
-      "A": "The Assembly Department's $7,500 unfavorable rate variance was caused by overtime premiums. Since the department exceeded its budgeted 2,000 hours by 500 hours, all excess hours were likely paid at time-and-a-half. The Finishing Department's $1,500 unfavorable variance is driven by skill-mix changes: the department replaced two senior welders ($28/hr) with three junior welders ($22/hr), lowering the average rate but increasing total hours.",
+      "A": "The Assembly Department's $7,500 unfavorable rate variance was caused by overtime premiums. Since the department exceeded its budgeted 2,000 hours by 500 hours, excess hours were likely paid at time-and-a-half. The Finishing Department's $1,500 unfavorable variance is driven by skill-mix changes: the department replaced two senior welders ($28/hr) with three junior welders ($22/hr), lowering the average rate but increasing total hours.",
       "B": "Both variances are driven by identical root causes. The total labor rate variance of $9,000U represents a systemic wage inflation problem across the plant, requiring renegotiation of the union contract to bring standard rates in line with market wages. Neither overtime nor skill-mix changes materially explain the variance because labor rates are set by the collective bargaining agreement.",
       "C": "The Assembly Department's $7,500 unfavorable rate variance is primarily driven by a skill-mix upgrade: the department substituted senior machinists earning $28 per hour for standard-rate operators at $22 per hour on a complex custom order, increasing the blended actual rate to $25 per hour. The Finishing Department's $1,500 unfavorable variance is driven by overtime premiums: actual hours of 1,050 exceeded budgeted 1,000 hours, with the 50 excess hours paid at time-and-a-half ($33/hour vs. standard $22/hour).",
       "D": "The total labor rate variance of $9,000U is not analytically meaningful because the rate and efficiency variances are interdependent. The Assembly Department's $7,500U rate variance is partially offset by a favorable efficiency variance from using higher-skilled workers who completed jobs faster, and the Finishing Department's $1,500U rate variance is caused by idle time, not overtime or skill-mix changes."
@@ -7579,7 +7579,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Unfavorable variances only",
       "B": "Favorable variances only",
-      "C": "All variances",
+      "C": " variances",
       "D": "Significant variances only"
     },
     "CalculationItem": false,
@@ -8419,7 +8419,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "C",
     "Choices": {
       "A": "Revenue minus labor",
-      "B": "Revenue minus all variable costs",
+      "B": "Revenue minus variable costs",
       "C": "Revenue minus direct materials",
       "D": "Revenue minus fixed costs"
     },
@@ -8472,7 +8472,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Reducing inventory",
       "B": "Identifying and managing bottlenecks",
-      "C": "Reducing all costs",
+      "C": "Reducing costs",
       "D": "Increasing capacity everywhere"
     },
     "CalculationItem": false,
@@ -9668,7 +9668,7 @@ const MCQ_BANK_E = [
       "A": "Beginning WIP only",
       "B": "Current period work only",
       "C": "Ending WIP only",
-      "D": "All work to date"
+      "D": " work to date"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -9691,7 +9691,7 @@ const MCQ_BANK_E = [
     "ExplanationWrongA": "Beginning WIP is accounted for separately in FIFO; current period work is the focus.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Ending WIP is part of the calculation but FIFO separates current work from beginning WIP.",
-    "ExplanationWrongD": "All work to date describes weighted average, which combines beginning and current costs.",
+    "ExplanationWrongD": " work to date describes weighted average, which combines beginning and current costs.",
     "question_state": "Certified",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply"
@@ -9769,7 +9769,7 @@ const MCQ_BANK_E = [
       "A": "Capitalized",
       "B": "Included in inventory",
       "C": "Reported as a period expense",
-      "D": "Allocated to all units"
+      "D": "Allocated to units"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -10723,7 +10723,7 @@ const MCQ_BANK_E = [
       "A": "Variable costs only",
       "B": "Sunk costs",
       "C": "Future costs differing among alternatives",
-      "D": "All costs incurred"
+      "D": " costs incurred"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -10746,7 +10746,7 @@ const MCQ_BANK_E = [
     "ExplanationWrongA": "Not all variable costs are relevant; only those that differ between alternatives matter.",
     "ExplanationWrongB": "Sunk costs have already been incurred and are never relevant to future decisions.",
     "ExplanationWrongC": "",
-    "ExplanationWrongD": "All costs incurred include sunk and irrelevant costs; only relevant costs matter for decisions.",
+    "ExplanationWrongD": " costs incurred include sunk and irrelevant costs; only relevant costs matter for decisions.",
     "question_state": "Certified",
     "DifficultyScore": 2,
     "CognitiveLevel": "Understand"
@@ -10926,7 +10926,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Accept the order — the offered price of $68 exceeds the full absorption cost of $70 by $2 per unit, generating a $10,000 total contribution to profit",
       "B": "Reject the order — the offered price of $68 is below the regular selling price of $95 and accepting it would establish an unsustainable precedent with this customer",
-      "C": "Accept the order but require the customer to pay the regular $95 price on all future orders — this maximizes profit on the special order while preventing customer expectations of future discounts",
+      "C": "Accept the order but require the customer to pay the regular $95 price on future orders — this maximizes profit on the special order while preventing customer expectations of future discounts",
       "D": "Accept the order — the $68 price exceeds the $54 incremental cost per unit, generating a positive contribution margin of $70,000 that would not otherwise be earned"
     },
     "CalculationItem": false,
@@ -10975,7 +10975,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Keep-or-drop",
     "CorrectChoice": "D",
     "Choices": {
-      "A": "Revenue minus all costs",
+      "A": "Revenue minus costs",
       "B": "Market share",
       "C": "Total profit",
       "D": "Avoidable costs vs contribution margin"
@@ -10997,7 +10997,7 @@ const MCQ_BANK_E = [
     "Part1OnlyFlag": true,
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "ItemStyle": "single-select",
-    "ExplanationWrongA": "Revenue minus all costs includes allocated common costs, which are not relevant.",
+    "ExplanationWrongA": "Revenue minus costs includes allocated common costs, which are not relevant.",
     "ExplanationWrongB": "Market share is a qualitative factor but not the primary financial evaluation.",
     "ExplanationWrongC": "Total profit includes allocated costs; the decision should focus on avoidable costs and contribution.",
     "ExplanationWrongD": "",
@@ -11131,7 +11131,7 @@ const MCQ_BANK_E = [
       "A": "Retain direct labor hours as the allocation base — DLH is the simplest and most widely understood method, consistent with the existing cost system design. Allocating the $2,600,000 of overhead across 130,000 total DLH yields a plant-wide rate of $20 per DLH. This approach preserves comparability with prior periods and avoids the implementation complexity and employee retraining costs associated with changing allocation bases.",
       "B": "Adopt machine hours as the allocation base — machine hours are more relevant for the Machining department where most overhead costs relate to equipment (depreciation, maintenance, utilities), and less distortion-prone for Assembly where overhead ties to labor activity. The plant-wide rate of $173.33 per machine hour ($2,600,000 / 15,000 MH) correctly reflects the capital-intensive nature of modern manufacturing.",
       "C": "Adopt departmental rates with separate allocation bases — Machining overhead of $1,600,000 driven by machine usage at $266.67 per machine hour, and Assembly overhead of $1,000,000 driven by direct labor at $12.50 per DLH. Departmental rates capture the fundamentally different cost structures of each department: Machining is capital-intensive (overhead driven by equipment hours), while Assembly is labor-intensive (overhead driven by direct labor activity). A single plant-wide rate would distort product costs by averaging together two departments with materially different cost drivers.",
-      "D": "Implement a full activity-based costing system with four cost pools (machining, setup, quality inspection, and material handling) rather than using any single-volume allocation base — even departmental rates oversimplify the cost structure because multiple activities drive overhead within each department, and only ABC can properly assign costs based on actual resource consumption."
+      "D": "Implement a full activity-based costing system with four cost pools (machining, setup, quality inspection, and material handling) rather than using single-volume allocation base — even departmental rates oversimplify the cost structure because multiple activities drive overhead within each department, and only ABC can properly assign costs based on actual resource consumption."
     },
     "CalculationItem": false,
     "Part": 1,
@@ -11433,9 +11433,9 @@ const MCQ_BANK_E = [
     "CorrectChoice": "A",
     "Choices": {
       "A": "Identifying and analyzing risks to objectives",
-      "B": "Insuring against all risks",
-      "C": "Transferring all risks",
-      "D": "Eliminating all risks"
+      "B": "Insuring against risks",
+      "C": "Transferring risks",
+      "D": "Eliminating risks"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -12851,9 +12851,9 @@ const MCQ_BANK_E = [
     "MicroTopic": "Descriptive analytics dashboard analysis",
     "CorrectChoice": "B",
     "Choices": {
-      "A": "Unit sales volume is declining across all regions, suggesting a systemic demand-side problem requiring pricing strategy changes",
+      "A": "Unit sales volume is declining across regions, suggesting a systemic demand-side problem requiring pricing strategy changes",
       "B": "The Northeast region's gross margin decline is the primary driver of the company-wide margin erosion, while other regions show stable or improving margins",
-      "C": "Operating expenses are the main source of profit deterioration, as the expense-to-revenue ratio has increased in every quarter",
+      "C": "Operating expenses are the main source of profit deterioration, as the expense-to-revenue ratio has increased in quarter",
       "D": "The Southwest region's revenue growth is the most concerning trend because it masks underlying profitability problems in other regions"
     },
     "CalculationItem": false,
@@ -12959,7 +12959,7 @@ const MCQ_BANK_E = [
       "A": "Decrease the Westlake plant's Line 2 production by 15% because its contribution margin per machine hour ($42) is the lowest of the constrained lines, and the prescriptive model correctly identifies this as the least efficient use of the bottleneck resource",
       "B": "Increase Eastgate's Line 1 production because it has the highest total contribution margin, indicating it is the most profitable product line",
       "C": "Maintain the current production schedule because the total throughput contribution of $1,842,000 cannot be meaningfully improved",
-      "D": "Shift all Westlake production to Eastgate because the Eastgate plant has higher contribution margins on both lines"
+      "D": "Shift Westlake production to Eastgate because the Eastgate plant has higher contribution margins on both lines"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -13465,7 +13465,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "A",
     "Choices": {
       "A": "Automates repetitive rule-based tasks",
-      "B": "Replaces all accountants",
+      "B": "Replaces accountants",
       "C": "Performs complex judgments",
       "D": "Generates financial statements"
     },
@@ -13566,7 +13566,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Cloud service model evaluation",
     "CorrectChoice": "C",
     "Choices": {
-      "A": "Software as a Service (SaaS), because it eliminates all IT maintenance and offers the fastest deployment",
+      "A": "Software as a Service (SaaS), because it eliminates IT maintenance and offers the fastest deployment",
       "B": "Infrastructure as a Service (IaaS), because it provides maximum control over the operating system and security configuration",
       "C": "Platform as a Service (PaaS), because it balances control over custom financial applications with reduced infrastructure management burden",
       "D": "On-premise retention, because financial data should not be stored outside the corporate network"
@@ -13620,8 +13620,8 @@ const MCQ_BANK_E = [
     "CorrectChoice": "A",
     "Choices": {
       "A": "Multi-factor authentication and endpoint detection, because they reduce the highest-likelihood attack vector to which the organization has the weakest existing defense",
-      "B": "Data center physical security upgrades, because preventing physical access protects all digital assets from the ground up",
-      "C": "Encryption at rest for all databases, because regulatory fines for data breaches carry the highest financial impact",
+      "B": "Data center physical security upgrades, because preventing physical access protects digital assets from the ground up",
+      "C": "Encryption at rest for databases, because regulatory fines for data breaches carry the highest financial impact",
       "D": "An equal allocation across all five threat vectors, because cybersecurity is only as strong as its weakest link"
     },
     "CalculationItem": false,
@@ -14077,7 +14077,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Data governance policy evaluation",
     "CorrectChoice": "D",
     "Choices": {
-      "A": "Adopt the CCPA standard as the baseline, because California's framework is the most stringent and therefore compliant with all other regimes",
+      "A": "Adopt the CCPA standard as the baseline, because California's framework is the most stringent and therefore compliant with other regimes",
       "B": "Maintain separate governance policies for each regulation to ensure precision, accepting the administrative overhead",
       "C": "Defer to GDPR as the global standard, because the EU regulation carries the highest maximum penalties",
       "D": "Adopt a unified data governance framework aligned to the most rigorous requirement per policy dimension, with jurisdiction-specific overlays where necessary"
@@ -14383,7 +14383,7 @@ const MCQ_BANK_E = [
       "A": "Is prohibited",
       "B": "Has no accounting applications",
       "C": "Enhances analysis and automates tasks",
-      "D": "Replaces all professional judgment"
+      "D": "Replaces professional judgment"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -14482,7 +14482,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Full population testing confirms the sample's conclusion, because both approaches identified the same error rate of approximately 1.3%",
       "B": "The traditional sample was more effective because it found a higher error rate per transaction examined than the full population analysis",
-      "C": "Full population testing invalidates the sample approach because any discrepancy between the two methods means sampling is unreliable",
+      "C": "Full population testing invalidates the sample approach because discrepancy between the two methods means sampling is unreliable",
       "D": "Full population testing identified a materially different pattern, revealing that the sample overrepresented small-dollar transactions which inflated the error rate, while the true population error rate on large transactions is lower"
     },
     "CalculationItem": false,
@@ -14633,7 +14633,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Cloud migration risk evaluation",
     "CorrectChoice": "C",
     "Choices": {
-      "A": "Prioritize data security risk mitigation, because breaches carry the highest reputational impact of all risk categories",
+      "A": "Prioritize data security risk mitigation, because breaches carry the highest reputational impact of risk categories",
       "B": "Begin with vendor lock-in mitigation, because dependence on a single cloud provider creates the most irreversible exposure",
       "C": "Prioritize availability and business continuity risk mitigation, because these risks carry the highest combined likelihood and financial impact with the weakest existing controls",
       "D": "Address compliance risk first, because regulatory penalties for data sovereignty violations are imposed regardless of actual harm"
@@ -14686,7 +14686,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Audit analytics planning",
     "CorrectChoice": "C",
     "Choices": {
-      "A": "Automate all procedures",
+      "A": "Automate procedures",
       "B": "Replace the audit entirely",
       "C": "Identify risk areas",
       "D": "Eliminate sampling"
@@ -15702,7 +15702,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Investment in all projects above the required rate",
       "B": "Investment only in high-ROI projects",
-      "C": "Reducing all costs",
+      "C": "Reducing costs",
       "D": "Maximizing sales"
     },
     "CalculationItem": false,
@@ -15800,7 +15800,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Rolling forecast",
     "CorrectChoice": "C",
     "Choices": {
-      "A": "Every five years",
+      "A": " five years",
       "B": "Only when variances occur",
       "C": "Each period by adding a new period",
       "D": "Annually only"
@@ -16712,7 +16712,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Analytics variance analysis",
     "CorrectChoice": "D",
     "Choices": {
-      "A": "Eliminating all variances",
+      "A": "Eliminating variances",
       "B": "Reducing standard costs",
       "C": "Increasing production",
       "D": "Identifying root causes more quickly"
@@ -17504,7 +17504,7 @@ const MCQ_BANK_E = [
       "A": "Eliminating overhead",
       "B": "Using actual costs only",
       "C": "Recording costs at standard when goods are completed",
-      "D": "Tracking all costs in real time"
+      "D": "Tracking costs in real time"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -17804,7 +17804,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "A",
     "Choices": {
       "A": "Sales minus direct materials",
-      "B": "All costs of production",
+      "B": " costs of production",
       "C": "Full absorption cost",
       "D": "Variable costing"
     },
@@ -17904,7 +17904,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Constraint management",
     "CorrectChoice": "C",
     "Choices": {
-      "A": "Reducing all costs",
+      "A": "Reducing costs",
       "B": "Adding more products",
       "C": "Expanding the constraint capacity",
       "D": "Increasing inventory"
@@ -18157,7 +18157,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Practical capacity overhead",
     "CorrectChoice": "B",
     "Choices": {
-      "A": "All overhead is inventoried",
+      "A": " overhead is inventoried",
       "B": "Unused capacity cost is expensed",
       "C": "Unit costs are lowest",
       "D": "No variances occur"
@@ -18260,7 +18260,7 @@ const MCQ_BANK_E = [
       "A": "Budgeted costs",
       "B": "Actual materials and labor, applied overhead",
       "C": "Standard costs",
-      "D": "All actual costs"
+      "D": " actual costs"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -18308,7 +18308,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "C",
     "Choices": {
       "A": "Historical costs",
-      "B": "Actual costs for all inputs",
+      "B": "Actual costs for inputs",
       "C": "Standard costs for all inputs",
       "D": "Budgeted costs"
     },
@@ -18815,7 +18815,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "COSO principle 10",
     "CorrectChoice": "B",
     "Choices": {
-      "A": "Implement a single enterprise-wide control framework that standardizes authorization limits, segregation of duties, and reconciliation procedures across all departments — this ensures consistency and reduces control gaps",
+      "A": "Implement a single enterprise-wide control framework that standardizes authorization limits, segregation of duties, and reconciliation procedures across departments — this ensures consistency and reduces control gaps",
       "B": "Implement departmental control activities that are specifically selected to address the unique risks of each business process — procurement requires three-way matching and vendor approval workflows, payroll requires time attestation and exception reporting, and revenue requires credit approval and contract review, each tailored to the specific risks identified in the risk assessment",
       "C": "Deploy an automated ERP system with pre-configured control modules — selecting and developing individual control activities is unnecessary when the ERP vendor has already embedded industry best practices into the system",
       "D": "Document existing informal controls that managers have developed over time — these evolved organically in response to real operational needs and are more effective than formally designed control activities"
@@ -18971,7 +18971,7 @@ const MCQ_BANK_E = [
       "A": "Only the board",
       "B": "Only external parties",
       "C": "Only senior management",
-      "D": "All personnel about their duties"
+      "D": " personnel about their duties"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -19676,7 +19676,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "D",
     "Choices": {
       "A": "Is a preventive control only",
-      "B": "Replaces all controls",
+      "B": "Replaces controls",
       "C": "Eliminates the need for monitoring",
       "D": "Mitigates a deficiency in another control"
     },
@@ -20030,7 +20030,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Maximum controls regardless of cost",
       "B": "Zero cost controls",
-      "C": "Elimination of all risks",
+      "C": "Elimination of risks",
       "D": "Balance between costs and benefits"
     },
     "CalculationItem": false,
@@ -20434,7 +20434,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Analytics internal audit",
     "CorrectChoice": "C",
     "Choices": {
-      "A": "Replace all audit work",
+      "A": "Replace audit work",
       "B": "Eliminate the need for testing",
       "C": "Identify anomalies and patterns in data",
       "D": "Reduce professional skepticism"
@@ -20990,7 +20990,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "A",
     "Choices": {
       "A": "The ERP and CRM data should be routed to the data warehouse, while IoT sensor data should be routed to the data lake, because the warehouse is optimized for structured, schema-defined querying and the lake accommodates raw, unstructured data for future exploratory analysis",
-      "B": "All three data sources should be consolidated into a single data lake, because data lakes are the modern standard and can handle any data type including structured transaction records",
+      "B": " three data sources should be consolidated into a single data lake, because data lakes are the modern standard and can handle data type including structured transaction records",
       "C": "All three data sources should be loaded into the data warehouse, because the warehouse's schema-on-write approach ensures data quality for financial reporting which is the highest organizational priority",
       "D": "IoT data should be discarded because sensor data is not relevant to financial analysis, and only ERP and CRM data should be stored in the warehouse"
     },
@@ -21792,7 +21792,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "A",
     "Choices": {
       "A": "The trading platform, because its MTD is the shortest (2 hours) and the gap between its RTO (1 hour) and MTD leaves the narrowest recovery window, indicating the highest criticality",
-      "B": "The general ledger, because financial reporting systems must receive the highest priority in any business continuity plan",
+      "B": "The general ledger, because financial reporting systems must receive the highest priority in business continuity plan",
       "C": "The payroll system, because employee compensation disruption creates immediate workforce risk regardless of quantitative thresholds",
       "D": "The CRM system, because customer-facing systems have the highest revenue impact and should be recovered first"
     },
@@ -22613,7 +22613,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Random sampling",
       "B": "Cost allocation",
-      "C": "All defect causes equally",
+      "C": " defect causes equally",
       "D": "The vital few causes of defects"
     },
     "CalculationItem": false,
@@ -22717,7 +22717,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "It exceeds a predetermined threshold",
       "B": "It is favorable",
-      "C": "It is any amount",
+      "C": "It is amount",
       "D": "It is unfavorable"
     },
     "CalculationItem": false,
@@ -23399,7 +23399,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "BSC customization",
     "CorrectChoice": "D",
     "Choices": {
-      "A": "Identical for all companies",
+      "A": "Identical for companies",
       "B": "Based only on industry averages",
       "C": "Prepared by external consultants",
       "D": "Tailored to the organizations strategy"
@@ -23663,7 +23663,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Based on revenue",
       "B": "A cause-and-effect relationship with costs",
-      "C": "The same for all cost pools",
+      "C": "The same for cost pools",
       "D": "Arbitrary for simplicity"
     },
     "CalculationItem": false,
@@ -24267,7 +24267,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "C",
     "Choices": {
       "A": "Direct labor and overhead",
-      "B": "All manufacturing costs",
+      "B": " manufacturing costs",
       "C": "Direct materials and direct labor",
       "D": "Direct materials and overhead"
     },
@@ -24292,7 +24292,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "ItemStyle": "single-select",
     "ExplanationWrongA": "Direct labor and manufacturing overhead are conversion costs, not prime costs which are direct materials and direct labor.",
-    "ExplanationWrongB": "All manufacturing costs is a broader category; prime costs specifically include only direct materials and direct labor.",
+    "ExplanationWrongB": " manufacturing costs is a broader category; prime costs specifically include only direct materials and direct labor.",
     "ExplanationWrongD": "Direct materials and overhead is incorrect; prime costs consist of direct materials and direct labor.",
     "ExplanationWrongC": "",
     "DifficultyScore": 2,
@@ -24321,7 +24321,7 @@ const MCQ_BANK_E = [
       "A": "Direct materials and direct labor",
       "B": "Direct materials and overhead",
       "C": "Direct labor and manufacturing overhead",
-      "D": "All period costs"
+      "D": " period costs"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -25610,7 +25610,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Pressure — the controller's financial strain creates an incentive to commit fraud",
       "B": "Opportunity — the controller's access to override journal entries enables fraudulent activity",
-      "C": "Rationalization — the controller may believe the company is profitable enough to absorb any loss",
+      "C": "Rationalization — the controller may believe the company is profitable enough to absorb loss",
       "D": "Collusion — the controller could coordinate with subordinates to circumvent remaining controls"
     },
     "StudyLinks": [
@@ -25751,7 +25751,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed, review the inherent limitations of internal control under COSO and the distinction between inherent limitations and control deficiencies.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Management override can be prevented by implementing a second level of approval for all transactions above a materiality threshold",
+      "A": "Management override can be prevented by implementing a second level of approval for transactions above a materiality threshold",
       "B": "Management override cannot be fully prevented by any internal control system because management has the authority to override prescribed policies",
       "C": "Management override is a control deficiency because it indicates the control environment is not functioning effectively",
       "D": "Management override is only an inherent limitation in small entities where management has concentrated authority"
@@ -25802,9 +25802,9 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed, review SOX Section 301 requirements for audit committees and the role of whistleblower mechanisms in the information and communication component of internal control.",
     "CalculationItem": false,
     "Choices": {
-      "A": "The chief executive officer must personally review all whistleblower complaints before they are escalated to the audit committee",
+      "A": "The chief executive officer must personally review whistleblower complaints before they are escalated to the audit committee",
       "B": "Whistleblower complaints may only be submitted in writing and must include the employee's name and department",
-      "C": "The external auditor is responsible for maintaining the whistleblower hotline and investigating all complaints",
+      "C": "The external auditor is responsible for maintaining the whistleblower hotline and investigating complaints",
       "D": "The audit committee must establish procedures for the confidential, anonymous submission of concerns regarding accounting or auditing matters"
     },
     "StudyLinks": [
@@ -26248,7 +26248,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed, review SOX Section 302 certification requirements and the distinction between Section 302 (officer certifications) and Section 404 (internal control assessment).",
     "CalculationItem": false,
     "Choices": {
-      "A": "They have personally audited the financial statements and verified every transaction recorded during the period",
+      "A": "They have personally audited the financial statements and verified transaction recorded during the period",
       "B": "The external auditor has confirmed that the company has no material weaknesses in internal control over financial reporting",
       "C": "Based on their knowledge, the financial statements fairly present the financial condition and they have disclosed any significant deficiencies in internal control to the auditors and audit committee",
       "D": "The report contains no untrue statement of material fact and the financial statements fairly present the company's condition, with no requirement to discuss internal controls"
@@ -26302,7 +26302,7 @@ const MCQ_BANK_E = [
       "A": "Section 404 requires the CEO and CFO to personally certify the financial statements, while the external auditor verifies those certifications are not materially false",
       "B": "Section 404(a) requires management to assess and report on internal control effectiveness; Section 404(b) requires the external auditor to attest to management's assessment",
       "C": "Section 404 requires the audit committee to hire an independent consultant to evaluate internal control, replacing the external auditor's role in control evaluation",
-      "D": "Section 404 requires management to disclose all fraud to the SEC within four business days of discovery, regardless of materiality"
+      "D": "Section 404 requires management to disclose fraud to the SEC within four business days of discovery, regardless of materiality"
     },
     "StudyLinks": [
       {
@@ -26635,7 +26635,7 @@ const MCQ_BANK_E = [
       "A": "The assignment violates the principle of management override because the clerk could bypass approval controls",
       "B": "The assignment violates segregation of duties because it combines recording, custody, and reconciliation functions in one role",
       "C": "The assignment violates the principle of independent verification because only one person reviews each vendor account",
-      "D": "The assignment does not violate any internal control principle if each clerk's work is supervised by the department manager"
+      "D": "The assignment does not violate internal control principle if each clerk's work is supervised by the department manager"
     },
     "StudyLinks": [
       {
@@ -26682,7 +26682,7 @@ const MCQ_BANK_E = [
       "A": "Authorization controls, combining both general authorization (routine purchases within limits) and specific authorization (large purchases requiring individual approval)",
       "B": "Segregation of duties, because different individuals are involved at each dollar threshold level",
       "C": "Detective controls, because the approval process allows the organization to detect unauthorized purchases before payment",
-      "D": "Entity-level controls, because the policy applies across all departments rather than to a specific transaction type"
+      "D": "Entity-level controls, because the policy applies across departments rather than to a specific transaction type"
     },
     "StudyLinks": [
       {
@@ -26726,10 +26726,10 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed, review the layering of safeguarding controls: physical access restrictions, periodic independent counts, and segregation of custody from recording.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Surveillance cameras covering all inventory areas and requiring employee badges for building entry",
+      "A": "Surveillance cameras covering inventory areas and requiring employee badges for building entry",
       "B": "Annual external audit of inventory by the company's independent accounting firm",
       "C": "Locked storage with restricted access, periodic independent cycle counts, and segregation of custody from recording",
-      "D": "Requiring all inventory movements to be documented in the perpetual inventory system in real time"
+      "D": "Requiring inventory movements to be documented in the perpetual inventory system in real time"
     },
     "StudyLinks": [
       {
@@ -26867,8 +26867,8 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed, review SOX Section 302 (disclosure controls certification + ICFR responsibility) vs. Section 906 (criminal certification of report accuracy) vs. Section 404 (management assessment of ICFR + auditor attestation).",
     "CalculationItem": false,
     "Choices": {
-      "A": "That the report does not contain any untrue statement of material fact",
-      "B": "That the financial statements fairly present, in all material respects, the financial condition of the issuer",
+      "A": "That the report does not contain untrue statement of material fact",
+      "B": "That the financial statements fairly present, in material respects, the financial condition of the issuer",
       "C": "That the officers are responsible for establishing and maintaining internal control over financial reporting and have evaluated its effectiveness",
       "D": "That the report fully complies with the requirements of the Securities Exchange Act of 1934"
     },
@@ -26964,7 +26964,7 @@ const MCQ_BANK_E = [
       "A": "Requiring supervisory approval before claims exceeding $10,000 are processed for payment",
       "B": "Reconciling the daily processed claims total to the claims register at the end of each business day",
       "C": "Restricting access to the claims processing system to authorized personnel via unique user credentials",
-      "D": "Providing annual ethics training to all claims department employees on fraud awareness and reporting obligations"
+      "D": "Providing annual ethics training to claims department employees on fraud awareness and reporting obligations"
     },
     "StudyLinks": [
       {
@@ -27148,7 +27148,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed, review SOX Section 301 audit committee independence requirements, SEC Rule 10A-3 (no consulting fees, no affiliated persons), NYSE 303A.02 (financial literacy requirement), and SOX 407 (audit committee financial expert).",
     "CalculationItem": false,
     "Choices": {
-      "A": "A retired investment banker who has not been employed by or had any business relationship with the company for five years",
+      "A": "A retired investment banker who has not been employed by or had business relationship with the company for five years",
       "B": "A certified public accountant who was an audit partner on the company's engagement eight years ago and has since retired from the firm",
       "C": "A university accounting professor who receives standard director compensation and no other payments from the company",
       "D": "A senior vice president of finance at the company who receives a base salary, annual bonus, and equity compensation"
@@ -27195,10 +27195,10 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed, review COSO Principle 2 — the board oversees internal control, management designs and operates it. The board does not design controls, perform control procedures, or manage day-to-day risk.",
     "CalculationItem": false,
     "Choices": {
-      "A": "The board is responsible for designing and implementing specific control procedures across all business processes",
+      "A": "The board is responsible for designing and implementing specific control procedures across business processes",
       "B": "The board replaces the internal audit function by directly testing the operating effectiveness of key controls",
       "C": "The board exercises oversight of the internal control system, including evaluating whether management has designed and implemented effective controls",
-      "D": "The board delegates all internal control responsibilities to the external auditor to maintain independence and objectivity"
+      "D": "The board delegates internal control responsibilities to the external auditor to maintain independence and objectivity"
     },
     "StudyLinks": [
       {
@@ -27243,9 +27243,9 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Choices": {
       "A": "A board-approved company-wide code of ethics that applies to all employees, officers, and directors",
-      "B": "A requirement that all purchase orders exceeding $500 receive dual manager approval before processing",
+      "B": "A requirement that purchase orders exceeding $500 receive dual manager approval before processing",
       "C": "A monthly bank reconciliation performed by an accountant independent of cash receipts and disbursements",
-      "D": "A password policy requiring system users to change their credentials every 90 days"
+      "D": "A password policy requiring system users to change their credentials 90 days"
     },
     "StudyLinks": [
       {
@@ -27289,7 +27289,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "If memorizing COSO Principle 13 information quality characteristics, remember: accessibility, correctness, currency (timeliness), protection, retention, and sufficiency. Timeliness = available when needed, before the information loses relevance.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Completeness — information that includes all material facts and does not omit data relevant to the decision",
+      "A": "Completeness — information that includes material facts and does not omit data relevant to the decision",
       "B": "Verifiability — information that can be independently confirmed through documentation, audit trails, or third-party corroboration",
       "C": "Consistency — information prepared using the same methods and assumptions across periods and across business units",
       "D": "Timeliness — information that is available to decision-makers before it loses its capacity to influence the decision"
@@ -27430,7 +27430,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "Evaluate-level item: tests ability to balance quantitative cost analysis against qualitative risk factors (supplier quality history, lead time, dependency). The candidate must recommend a course of action, not merely calculate savings. All distractors are plausible alternative business judgments.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Recommend immediate full outsourcing to TranStar — the $630,000 in annual cost savings represents a 29.6% reduction in component cost that will flow directly to operating income, and incoming quality inspections can address any supplier quality concerns without sacrificing the financial benefit",
+      "A": "Recommend immediate full outsourcing to TranStar — the $630,000 in annual cost savings represents a 29.6% reduction in component cost that will flow directly to operating income, and incoming quality inspections can address supplier quality concerns without sacrificing the financial benefit",
       "B": "Recommend against outsourcing entirely — TranStar's quality nonconformance history and extended lead time create unacceptable operational risk regardless of cost savings, and Apex should instead invest in lean manufacturing initiatives to reduce in-house unit cost below the $118 supplier price",
       "C": "Recommend outsourcing to TranStar only after the supplier successfully completes a 6-month qualification program supplying 20% of Apex's annual volume at 98% or higher on-time delivery and zero critical quality incidents",
       "D": "Recommend a phased transition — begin with 30% of volume outsourced to TranStar while maintaining in-house production as a backup, negotiate contractual quality guarantees and reduced lead times during the transition, and re-evaluate after 12 months of performance data before committing to full outsourcing"
@@ -27477,7 +27477,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Deficiencies 1 and 3 — both involve override or bypass of preventive controls at key control points: loan origination decisions ($124M exposure) and core banking system integrity (potentially catastrophic impact). The absence of detected harm does not reduce the inherent risk severity of missing preventive authorization controls at critical process nodes",
       "B": "Deficiencies 1 and 2 — the loan officer override affects the largest dollar volume ($124M) and the unreconciled vendor master file represents the longest duration control failure (14 months) with the most identified anomalies (37 unmatched vendors), making this pair the highest composite risk by objective count and duration metrics",
-      "C": "Deficiencies 2 and 3 — the vendor master file has been unreconciled for 14 months (the longest duration of any deficiency) and the emergency change non-compliance rate of 23.5% is the highest failure rate among all four deficiencies, prioritizing the controls with the most demonstrable evidence of ongoing failure",
+      "C": "Deficiencies 2 and 3 — the vendor master file has been unreconciled for 14 months (the longest duration of deficiency) and the emergency change non-compliance rate of 23.5% is the highest failure rate among four deficiencies, prioritizing the controls with the most demonstrable evidence of ongoing failure",
       "D": "Deficiencies 1 and 4 — the loan override carries the highest financial exposure ($124M) and the data center access gap is the only deficiency with confirmed control failures (two terminated contractors retained active badges), combining financial materiality with tangible evidence of control breakdown"
     },
     "StudyLinks": [
@@ -27976,10 +27976,10 @@ const MCQ_BANK_E = [
     "primaryTheory": "A7",
     "Stem": "Northgate Industries issued $2,000,000 face value, 8% coupon bonds at 104 when the market rate for similar bonds was 7%. The bonds mature in 5 years with annual interest payments. Controller David Okonkwo is comparing the effective-interest method (required under U.S. GAAP) with straight-line amortization for premium bonds. David observes that under the effective-interest method, interest expense declines each period as the premium is amortized. Which statement correctly compares interest expense under the effective-interest (EI) method versus straight-line (SL) amortization across the bond's 5-year life?",
     "Choices": {
-      "A": "Interest expense is higher under SL than EI in every year because straight-line amortization is less conservative than the effective-interest method for premium bonds",
+      "A": "Interest expense is higher under SL than EI in year because straight-line amortization is less conservative than the effective-interest method for premium bonds",
       "B": "Interest expense is higher under EI than SL in years 1-2 because EI amortizes less premium early when the carrying value is highest, then EI interest expense falls below SL in years 3-5 as the carrying value declines and premium amortization accelerates under the effective-interest method",
       "C": "Interest expense is identical under both methods -- the total premium of $80,000 ($2,080,000 - $2,000,000) amortized over 5 years produces the same annual interest expense regardless of allocation method, only the timing of premium recognition differs",
-      "D": "Interest expense is lower under EI than SL in every year because the effective-interest method front-loads premium amortization, reducing the carrying value more aggressively and therefore producing lower interest expense throughout the bond's life"
+      "D": "Interest expense is lower under EI than SL in year because the effective-interest method front-loads premium amortization, reducing the carrying value more aggressively and therefore producing lower interest expense throughout the bond's life"
     },
     "QuestionID": "P1E-A-S04",
     "ExplanationCorrect": "Under the effective-interest method for premium bonds, interest expense is calculated as the carrying value multiplied by the market rate (7%). Because the carrying value starts at $2,080,000 (104% of face) and declines each year as premium is amortized, the interest expense also declines year by year. Under straight-line, the annual premium amortization is constant ($80,000 / 5 = $16,000 per year), and interest expense = cash coupon ($160,000) - premium amortization ($16,000) = $144,000 every year. Under effective-interest in Year 1: interest expense = $2,080,000 x 7% = $145,600 -- which is higher than SL's $144,000. Premium amortization in Year 1 = $160,000 - $145,600 = $14,400 (less than SL's $16,000). Year 2 carrying value = $2,080,000 - $14,400 = $2,065,600. Interest expense = $2,065,600 x 7% = $144,592 -- still above SL's $144,000. Year 3 carrying value = $2,065,600 - $15,408 = $2,050,192. Interest expense = $143,513 -- now below SL's $144,000. The pattern reverses in Year 3 because the effective-interest method amortizes less premium early (when the carrying value is highest and the dollar interest expense is highest), and more premium later (when the carrying value has declined). This crossing pattern is a hallmark of the effective-interest method for premium bonds. A candidate who understands this pattern can eliminate incorrect answer choices even without computing every year's amortization: the key insight is that SL interest expense is constant while EI interest expense declines, so EI must start above SL (because EI amortizes less premium early) and eventually fall below SL.",
@@ -28130,7 +28130,7 @@ const MCQ_BANK_E = [
     "Stem": "Meridian DataWorks (MDW), a U.S.-based data analytics company with $52 million in annual revenue, collects and processes customer behavioral data through its proprietary analytics platform. Approximately 25% of MDW's revenue comes from EU-based corporate clients, and this segment grew 18% last fiscal year. The CEO proposes monetizing MDW's aggregated data assets by selling behavioral insights to third-party advertisers, projecting $4.2 million in annual incremental revenue.\n\nMDW's current data handling processes were designed for CCPA compliance — the company uses pseudonymization with a contractual commitment not to re-identify. The General Counsel advises that under GDPR Article 6, processing personal data for a new commercial purpose such as selling behavioral insights requires explicit, freely-given opt-in consent, and notes that under Article 29 Working Party guidance, pseudonymized data remains personal data under GDPR (the controller retains the technical means to re-identify). The Chief Privacy Officer estimates that implementing GDPR-compliant consent infrastructure — including granular consent management, a Data Protection Impact Assessment, a data subject access request portal, and appointment of a Data Protection Officer — will cost approximately $1.3 million in the first year and $400,000 annually thereafter.\n\nAs the management accountant advising the CFO ahead of the Board presentation, which recommendation best balances the revenue opportunity against regulatory, reputational, and strategic market-access considerations?",
     "Choices": {
       "A": "Approve the proposal as presented. The projected $4.2 million in annual incremental revenue exceeds the $1.3 million estimated first-year compliance infrastructure cost, producing a net economic benefit.",
-      "B": "Approve the data monetization plan but restrict the data sold to U.S.-based customer data only, implementing geo-filters to exclude all users identified as EU residents.",
+      "B": "Approve the data monetization plan but restrict the data sold to U.S.-based customer data only, implementing geo-filters to exclude users identified as EU residents.",
       "C": "Defer data monetization and invest the $1.3 million in building GDPR-compliant consent infrastructure first; pursue monetization only after obtaining valid opt-in consent from all users across both the EU and U.S. markets.",
       "D": "Proceed with the data monetization plan using MDW's existing CCPA-compliant pseudonymization. GDPR enforcement against mid-market U.S. companies is rare, and EU regulators primarily target large technology platforms."
     },
@@ -28214,7 +28214,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Goodwill and the long-lived transmission equipment should be tested together as a single asset group under ASC 360, because all assets of the acquired business serve a common revenue-generating purpose and share the same cash flow projections",
+      "A": "Goodwill and the long-lived transmission equipment should be tested together as a single asset group under ASC 360, because assets of the acquired business serve a common revenue-generating purpose and share the same cash flow projections",
       "B": "Only the long-lived transmission equipment requires impairment testing under ASC 360 because the equipment has a finite useful life — goodwill is tested under ASC 350 only if specific impairment indicators arise, and the decline in expected cash flows for the equipment does not by itself constitute a goodwill impairment indicator",
       "C": "Goodwill and long-lived assets follow identical impairment-testing procedures because both involve comparing carrying value to fair value — the controller should compute a combined impairment loss as the excess of the reporting unit's $8,200,000 total carrying value over the $7,500,000 fair value",
       "D": "Goodwill must be tested for impairment at the reporting unit level under ASC 350, separately from the long-lived transmission equipment which is tested at the asset group level under ASC 360 — the asset-level impairment test is performed first because any impairment of the long-lived assets reduces the reporting unit's carrying value before goodwill is tested, and the resulting goodwill impairment cannot exceed the $2,400,000 carrying amount of goodwill assigned to the reporting unit"
@@ -28265,7 +28265,7 @@ const MCQ_BANK_E = [
       "A": "David is correct: U.S. GAAP requires the individual-item LCNRV approach, which produces the more conservative $47,500 write-down because it recognizes every specific inventory impairment without allowing unrealized gains on healthier items to offset the losses — netting gains against losses across items is prohibited under ASC 330",
       "B": "Neither David nor the auditor is correct because U.S. GAAP permits inventory valuation at the lower of cost or market using replacement cost, not net realizable value — the entire LCNRV framework applies only to inventories measured under IFRS, and the current year-end assessment must use replacement cost as the market ceiling",
       "C": "The auditor is correct: applying LCNRV at the category level better reflects economic substance because inventory is a portfolio asset managed in aggregate, and U.S. GAAP permits management to elect either individual-item or category-level LCNRV based on which method more faithfully represents the inventory's net realizable condition",
-      "D": "Both David and the auditor are proposing inconsistent applications because LCNRV must be applied at the total-inventory level — individually impaired items are irrelevant once the aggregate cost of all inventory is compared to aggregate NRV, the only measurement approach permitted by ASC 330"
+      "D": "Both David and the auditor are proposing inconsistent applications because LCNRV must be applied at the total-inventory level — individually impaired items are irrelevant once the aggregate cost of inventory is compared to aggregate NRV, the only measurement approach permitted by ASC 330"
     },
     "StudyLinks": [
       {
@@ -28312,7 +28312,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "A loss of $16,850, computed as the face value of $400,000 minus the original issue price of $383,151 — the original discount is recognized in full upon early extinguishment because the bonds were not held to maturity",
       "B": "A loss of $26,692, computed as the reacquisition price of $416,000 minus the carrying value of $389,308 at December 31, Year 2 after two full years of effective-interest amortization of the bond discount",
-      "C": "A loss of $16,000, computed as the reacquisition price of $416,000 minus the $400,000 face value — the call premium is treated as an additional period cost rather than as a component of the extinguishment loss, and the carrying value is assumed to equal face value at all times",
+      "C": "A loss of $16,000, computed as the reacquisition price of $416,000 minus the $400,000 face value — the call premium is treated as an additional period cost rather than as a component of the extinguishment loss, and the carrying value is assumed to equal face value at times",
       "D": "A loss of $29,860, computed as the reacquisition price of $416,000 minus the carrying value after only one year of amortization ($386,140) — the amortization schedule is advanced by one period instead of two, and one full year of discount amortization is omitted from the carrying value"
     },
     "StudyLinks": [
@@ -28598,7 +28598,7 @@ const MCQ_BANK_E = [
       "A": "Direct materials and variable overhead, because both unfavorable variances exceed their respective materiality thresholds",
       "B": "Variable overhead only, because it is the only unfavorable variance that exceeds its threshold and lacks a documented explanation",
       "C": "Direct materials only, because it has the largest dollar variance and the largest percentage deviation from budget",
-      "D": "None, because the direct labor variance is favorable and all unfavorable variances are either below their thresholds or fully explained"
+      "D": "None, because the direct labor variance is favorable and unfavorable variances are either below their thresholds or fully explained"
     },
     "StudyLinks": [
       {
@@ -28876,7 +28876,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Absorption costing operating income exceeds throughput costing operating income by $330,000; the 15,000 units in ending inventory each carry $22 of conversion and fixed overhead costs that absorption costing capitalizes but throughput costing expenses immediately.",
       "B": "Absorption costing operating income exceeds throughput costing operating income by $180,000, representing only the fixed manufacturing overhead in the 15,000 ending inventory units ($12 × 15,000) because variable costs are treated the same under both methods.",
-      "C": "Throughput costing operating income exceeds absorption costing operating income by $330,000 because throughput costing excludes all conversion costs from product cost, reducing cost of goods sold and increasing reported income.",
+      "C": "Throughput costing operating income exceeds absorption costing operating income by $330,000 because throughput costing excludes conversion costs from product cost, reducing cost of goods sold and increasing reported income.",
       "D": "Both methods report identical operating income because total manufacturing costs recognized over the product's life cycle are the same regardless of whether costs flow through inventory or are expensed immediately."
     },
     "StudyLinks": [
@@ -28925,7 +28925,7 @@ const MCQ_BANK_E = [
       "A": "The control environment is effective because the CEO's demonstrated commitment to ethics and the written code of conduct satisfy the primary requirement of Principle 1, and the CFO's detailed review of journal entries provides a compensating operational control.",
       "B": "The control environment is deficient because board independence and oversight are required attributes of the control environment under Principle 1, and an all-executive board with no audit committee fails this criterion regardless of the strength of tone at the top.",
       "C": "The control environment is partially effective — the integrity and ethical values attribute is satisfied by the CEO's conduct, and the board independence deficiency is remediable through the CFO's journal entry approval serving as a compensating governance control.",
-      "D": "The control environment is deficient because COSO requires all five internal control components to be operating concurrently for any single component to be considered effective, and the absence of an audit committee means the monitoring component has failed, which disqualifies the control environment."
+      "D": "The control environment is deficient because COSO requires five internal control components to be operating concurrently for single component to be considered effective, and the absence of an audit committee means the monitoring component has failed, which disqualifies the control environment."
     },
     "StudyLinks": [
       {
@@ -29026,7 +29026,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Support the CRO — the 19-percentage-point disparity creates an unacceptable regulatory exposure, and best practice in model risk governance requires immediate suspension of any model producing disparate outcomes until the root cause is identified and remediated.",
+      "A": "Support the CRO — the 19-percentage-point disparity creates an unacceptable regulatory exposure, and best practice in model risk governance requires immediate suspension of model producing disparate outcomes until the root cause is identified and remediated.",
       "B": "Support the Head of Data Science — the model was not trained on protected-class data, legitimate creditworthiness factors explain the correlation, and suspending the model would disrupt credit operations without evidence that the disparity results from unlawful discrimination.",
       "C": "Recommend an independent fairness audit of the model to test whether proxy variables are functioning as de facto protected-class inputs, and advise the audit committee that the bank faces both regulatory risk under fair lending laws and reputational risk if the model continues operating without validated fairness controls.",
       "D": "Recommend that the CRO and Head of Data Science jointly develop a fairness mitigation plan while the model continues operating, because a 19-percentage-point gap is within typical industry tolerances for credit scoring models, and suspending the model would be disproportionate to the unverified risk."
@@ -29130,7 +29130,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Recommend the 5% blanket reserve because the $2,400 difference is quantitatively immaterial (0.2% of net income), the audit partner has signaled acceptance, and the cost of individual-item LCM for 850 SKUs exceeds any benefit to financial statement users. The cost-benefit principle allows Apex to forgo precise measurement when the incremental precision is negligible.",
+      "A": "Recommend the 5% blanket reserve because the $2,400 difference is quantitatively immaterial (0.2% of net income), the audit partner has signaled acceptance, and the cost of individual-item LCM for 850 SKUs exceeds benefit to financial statement users. The cost-benefit principle allows Apex to forgo precise measurement when the incremental precision is negligible.",
       "B": "Recommend individual-item LCM for all 850 SKUs while simultaneously proposing an operational improvement plan: implement an automated LCM module in the inventory system within 90 days to eliminate the recurring computational burden. This establishes GAAP compliance as a non-negotiable governance standard while addressing the CFO's legitimate operational concern through a one-time investment.",
       "C": "Recommend applying the reserve method for the current year only, with a commitment to transition to individual-item LCM in the following year after upgrading the inventory system. This proposal allows the finance team to meet the year-end deadline while signaling to auditors and the audit committee that Apex recognizes the GAAP requirement and has a concrete remediation timeline.",
       "D": "Recommend individual-item LCM for categories 7-8 (those with the largest declines) and the 5% reserve for categories 4-6, because categories 7-8 represent 80% of the total write-down and capturing those declines individually while using the reserve for the remainder provides substantially the same measurement at roughly half the computational cost."
@@ -29324,7 +29324,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "$700,000 recognized in Apex's income statement only. The investee's other comprehensive income of $500,000 is not recognized by the investor under the equity method because OCI items belong exclusively to the investee entity and do not pass through to investors.",
       "B": "$700,000 recognized in Apex's income statement and $175,000 recognized in Apex's other comprehensive income. Under ASC 323, the investor recognizes its proportionate share of both investee net income (flowing through the income statement) and investee OCI (flowing through the investor's OCI).",
-      "C": "$875,000 recognized in Apex's income statement as equity-method investment income. The equity method requires comprehensive recognition, meaning the investor's share of all investee comprehensive income items — both net income and OCI — flows through the investor's income statement.",
+      "C": "$875,000 recognized in Apex's income statement as equity-method investment income. The equity method requires comprehensive recognition, meaning the investor's share of investee comprehensive income items — both net income and OCI — flows through the investor's income statement.",
       "D": "$700,000 recognized in Apex's income statement and $175,000 disclosed in the notes to the financial statements only. Investee OCI is disclosed but not recognized in the investor's financial statements because OCI is equity-attributable only to the investee's own shareholders."
     },
     "StudyLinks": [
@@ -29425,7 +29425,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Choices": {
       "A": "Use practical capacity because the lower overhead rate ($28/hour) makes Apex's bid more competitive, and any resulting unfavorable fixed overhead volume variance is a strategic pricing decision, not an operating inefficiency.",
-      "B": "Use normal capacity because the higher overhead rate ($35/hour) recovers all fixed costs over the contract period, and government auditors will reject any bid that understates the true cost of production capacity.",
+      "B": "Use normal capacity because the higher overhead rate ($35/hour) recovers fixed costs over the contract period, and government auditors will reject bid that understates the true cost of production capacity.",
       "C": "Use practical capacity because it eliminates the fixed overhead volume variance entirely, ensuring that Apex's cost reports show actual costs equal to applied costs.",
       "D": "Use normal capacity because practical capacity is a theoretical maximum that does not reflect realistically achievable output, and using an unrealistically high denominator artificially depresses the overhead rate."
     },
@@ -29612,7 +29612,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Alpha receives approximately $300,000 and Beta receives approximately $300,000 using the physical-units method (24,000:36,000 = 2:3 ratio applied to the $600,000 joint cost); the byproduct Gamma's revenue of $60,000 is recognized as other income rather than credited against joint costs. Both main products should be processed further because each has a final selling price above its split-off price.",
       "B": "Alpha receives approximately $286,500 and should be processed further (incremental gain $96,000); Beta receives approximately $268,500 and should be sold at split-off (incremental loss $18,000). The joint cost of $600,000 is first reduced by Gamma's $45,000 NRV credit, leaving $555,000 to allocate by NRV.",
-      "C": "Alpha receives approximately $304,800 and Beta receives approximately $295,200 using the NRV method but without crediting Gamma's NRV against joint costs — the full $600,000 is allocated. Both products should be sold at split-off because joint costs are sunk and therefore the sell-or-process-further decision should ignore all allocated amounts.",
+      "C": "Alpha receives approximately $304,800 and Beta receives approximately $295,200 using the NRV method but without crediting Gamma's NRV against joint costs — the full $600,000 is allocated. Both products should be sold at split-off because joint costs are sunk and therefore the sell-or-process-further decision should ignore allocated amounts.",
       "D": "Alpha receives approximately $258,500 and Beta receives approximately $296,500 using the NRV method with byproduct credit, but the decisions are reversed: Alpha should be sold at split-off (because its split-off price per gallon of $20.00 is higher than Beta's $15.00) and Beta should be processed further (because its $2.00 per gallon price increase requires only 45,000 incremental gallons to cover the $90,000 processing cost)."
     },
     "StudyLinks": [
@@ -29663,7 +29663,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Choices": {
       "A": "Machine A is the primary bottleneck. Optimal mix: X = 80 units, Z = 90 units, Y = 73 units, producing total throughput of approximately $13,200. Machine A's throughput-per-minute ranking is X at $8.00, Z at $4.38, and Y at $4.17 — so X and Z are prioritized first.",
-      "B": "Machine B is the primary bottleneck. Optimal mix: X = 80 units, Y = 0 units, Z = 0 units, producing total throughput of $6,400. X generates $80 of throughput margin per unit (the highest absolute margin), so it should receive all available B capacity.",
+      "B": "Machine B is the primary bottleneck. Optimal mix: X = 80 units, Y = 0 units, Z = 0 units, producing total throughput of $6,400. X generates $80 of throughput margin per unit (the highest absolute margin), so it should receive available B capacity.",
       "C": "Machine B is the primary bottleneck. Optimal mix: Y = 100 units, X = 40 units, Z = 0 units, producing total throughput of $8,200. Throughput per minute of B is Y $8.33, X $5.33, and Z $2.92 — ranking Y first maximizes throughput contribution per constrained minute.",
       "D": "Machine B is the primary bottleneck. Optimal mix: Y = 100 units, Z = 50 units, X = 0 units, producing total throughput of $6,750. Throughput per minute of B is Y $8.33, then Z $2.92, then X $5.33 giving Z priority over X."
     },
@@ -29767,7 +29767,7 @@ const MCQ_BANK_E = [
     "CalculationItem": true,
     "Choices": {
       "A": "Total cost of units completed and transferred out is approximately $570,000. Normal spoilage of 1,850 units (5% of 37,000 good units) is allocated to completed units; abnormal spoilage of 1,150 units is expensed as a period cost. Completed cost comprises BWIP completion ($31,000) plus 32,000 started-and-completed units at $16.00 each ($512,000) plus normal spoilage allocation of approximately $27,000.",
-      "B": "Total cost of units completed and transferred out is $603,000. All 3,000 spoiled units (both normal and abnormal) are treated as product costs and allocated to the 34,000 completed units, consistent with the principle that all costs incurred to achieve good output — including waste — should be absorbed by completed production.",
+      "B": "Total cost of units completed and transferred out is $603,000. 3,000 spoiled units (both normal and abnormal) are treated as product costs and allocated to the 34,000 completed units, consistent with the principle that costs incurred to achieve good output — including waste — should be absorbed by completed production.",
       "C": "Total cost of units completed and transferred out is $544,000. Normal spoilage is 1,700 units (5% × 34,000 completed units only — excluding EWIP from the good-units base) and is allocated to completed units at the full unit cost of $16.00. Abnormal spoilage of 1,300 units is written off as a period expense.",
       "D": "Total cost of units completed and transferred out is $585,000. This is computed using the weighted-average method rather than FIFO: all 40,000 units (2,000 BWIP + 38,000 TI) are costed together by averaging prior-period and current-period costs, then 34,000 completed units plus all 3,000 units of total spoilage are costed at the weighted-average unit rate."
     },
@@ -29820,7 +29820,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Customer A is the most profitable and should be retained; Customer D is the least profitable and should be encouraged to change ordering behavior. Customer A generates the highest revenue ($1,200,000) and therefore must be the most profitable after SG&A allocation, while Customer D's small revenue base ($300,000) makes it the least valuable customer regardless of allocation method.",
       "B": "Customer A is the most profitable (approximately $275,000 after ABC SG&A) and should be prioritized for retention; Customer C is the least profitable (a loss of approximately $6,100 under ABC) and its ordering behavior — high support hours, frequent returns, and many sales visits — should be addressed through order consolidation, reduced return rates, and more efficient support channels.",
-      "C": "Customer B is the most profitable because it has the lowest ABC SG&A cost ($80,814) and the lowest cost-to-serve ratio relative to its revenue; Customer C is the least profitable and should be dropped entirely since any customer generating negative profit is not worth retaining under any circumstances.",
+      "C": "Customer B is the most profitable because it has the lowest ABC SG&A cost ($80,814) and the lowest cost-to-serve ratio relative to its revenue; Customer C is the least profitable and should be dropped entirely since customer generating negative profit is not worth retaining under circumstances.",
       "D": "Customer D is the most profitable because it generates the highest profit margin per dollar of SG&A cost ($105,000 gross margin vs. $38,542 ABC SG&A = 2.72× cost coverage); Customer C is the least profitable, and the company should impose a surcharge on Customer C's orders to recover the excess SG&A costs the customer imposes on Meridian's operations."
     },
     "StudyLinks": [
@@ -29870,8 +29870,8 @@ const MCQ_BANK_E = [
     "ReviewNote": "",
     "CalculationItem": false,
     "Choices": {
-      "A": "Janelle — the $50,000 invoice approval threshold caps dollar exposure per transaction, creating an effective compensating control that limits the financial impact of any SoD violation to an immaterial amount.",
-      "B": "Marcus — journal entry creation and posting access can be effectively monitored through the ERP system's built-in audit trail, which records the user ID and timestamp for every transaction and serves as a compensating detective control.",
+      "A": "Janelle — the $50,000 invoice approval threshold caps dollar exposure per transaction, creating an effective compensating control that limits the financial impact of SoD violation to an immaterial amount.",
+      "B": "Marcus — journal entry creation and posting access can be effectively monitored through the ERP system's built-in audit trail, which records the user ID and timestamp for transaction and serves as a compensating detective control.",
       "C": "Priya — payroll changes and setups are reviewed during the monthly headcount reconciliation process performed by the HR department, which serves as an adequate compensating control over the payroll cycle.",
       "D": "Wei — the mandatory three-way match performed by Accounts Payable before payment release independently verifies that goods ordered were actually received at the agreed price, effectively mitigating the risk created by combining purchase order approval and goods receipt in one person."
     },
@@ -29919,7 +29919,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "",
     "CalculationItem": false,
     "Choices": {
-      "A": "The First Line is most critically compromised because control self-assessments without independent validation provide no reliable assurance. The most urgently needed change is to implement mandatory second-line oversight of all first-line control self-assessment results, with the risk function reviewing and challenging each assessment before it is accepted.",
+      "A": "The First Line is most critically compromised because control self-assessments without independent validation provide no reliable assurance. The most urgently needed change is to implement mandatory second-line oversight of first-line control self-assessment results, with the risk function reviewing and challenging each assessment before it is accepted.",
       "B": "The Second Line is most critically compromised because the risk management function reports to the CFO, who also manages profit-generating lending and investment activities. The most urgently needed change is to establish a direct reporting line from the risk function to the board of directors or a board-level risk committee, ensuring organizational independence from revenue-generating management.",
       "C": "The Third Line is most critically compromised because outsourcing internal audit to the external auditor fundamentally destroys internal audit independence and objectivity. The most urgently needed change is to separate the internal audit function from the external auditor — either by building an in-house function or engaging a different firm — and ensure the chief audit executive reports functionally to the audit committee or board.",
       "D": "The model is effective as structured because each line has clearly defined and separate responsibilities. No structural change is urgently needed; the bank should instead focus on enhancing the documentation standards for the existing control self-assessments and expanding the scope of the outsourced internal audit plan."
@@ -29970,7 +29970,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Yes, the aggregated deficiencies constitute a material weakness because the ITGC access failure combined with the absence of independent top-side entry review creates a reasonable possibility that a material misstatement could escape timely prevention or detection, and the $140,000 clerk-approved adjustment demonstrates that inappropriate entries are actually occurring.",
       "B": "No, each deficiency individually would not result in a material misstatement, and PCAOB AS 2201 does not require the aggregation of individually insignificant deficiencies when evaluating whether a material weakness exists. The three deficiencies should be evaluated and reported as separate significant deficiencies.",
-      "C": "The IT general control deficiency — twelve terminated employees with active access to financial reporting systems — alone constitutes a material weakness regardless of the other two deficiencies because any failure in IT general controls over financial reporting systems is automatically classified as a material weakness under PCAOB guidance.",
+      "C": "The IT general control deficiency — twelve terminated employees with active access to financial reporting systems — alone constitutes a material weakness regardless of the other two deficiencies because failure in IT general controls over financial reporting systems is automatically classified as a material weakness under PCAOB guidance.",
       "D": "The deficiencies are significant deficiencies but do not rise to the level of a material weakness because no actual financial statement misstatement has occurred, and a material weakness requires evidence of an actual misstatement, not merely the possibility that one could occur."
     },
     "StudyLinks": {
@@ -30118,7 +30118,7 @@ const MCQ_BANK_E = [
       "A": "Recognize revenue over time using an input method (cost-to-cost), because the software platform has no alternative use to Nexus and the milestone-based invoicing creates an enforceable right to payment for performance completed — the termination-for-convenience clause is a separate contractual provision that governs early exit, not the ongoing right to payment during the contract's normal course.",
       "B": "Recognize revenue at a point in time upon delivery and acceptance, because although the software has no alternative use (satisfying one prong of criterion c), the termination-for-convenience clause limiting Nexus's compensation to a fixed $150,000 cancellation fee — rather than payment for performance completed to date — means the enforceable-right-to-payment condition under ASC 606-10-25-27(c) and ASC 606-10-25-28 is not satisfied.",
       "C": "Recognize revenue over time, because the client simultaneously receives and consumes the benefits of Nexus's performance as each software module is developed, tested, and integrated into the client's existing ERP infrastructure — satisfying criterion (a) under ASC 606-10-25-27 regardless of whether criterion (c) is met.",
-      "D": "Recognize revenue over time using an output method (units delivered), because the client controls the software asset as it is created — Nexus performs all development work on the client's servers using the client's existing architecture — satisfying criterion (b) under ASC 606-10-25-27."
+      "D": "Recognize revenue over time using an output method (units delivered), because the client controls the software asset as it is created — Nexus performs development work on the client's servers using the client's existing architecture — satisfying criterion (b) under ASC 606-10-25-27."
     },
     "StudyLinks": [
       {
@@ -30402,7 +30402,7 @@ const MCQ_BANK_E = [
       "A": "Regression 3, because it achieves the highest R-squared (0.91) and captures the combined explanatory power of both cost drivers, maximizing the proportion of overhead variance explained.",
       "B": "Regression 1 using machine hours, because it has a highly significant coefficient (t = 8.2), the highest R-squared among the single-variable models, and avoids the multicollinearity that invalidates Regression 3.",
       "C": "Regression 2 using direct labor hours, because the t-statistic of 4.1 is well above the conventional threshold of 2.0, confirming the coefficient is statistically significant and the model is reliable.",
-      "D": "None of the models are acceptable for the budget submission; the controller should collect additional data before selecting any forecasting equation, because no model achieves an R-squared above 0.95."
+      "D": "None of the models are acceptable for the budget submission; the controller should collect additional data before selecting forecasting equation, because no model achieves an R-squared above 0.95."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Option B is correct because it evaluates regression models on the three criteria that matter for budget forecasting — coefficient significance, explanatory power, and freedom from statistical pathologies — rather than maximizing any single metric in isolation. Regression 1's t-statistic of 8.2 is highly significant (well above 2.0), indicating that the relationship between machine hours and overhead costs is not due to chance. Its R-squared of 0.88 means machine hours explain 88% of the variation in overhead costs, which is strong for a single-variable cost-forecasting model. The standard error of $42,000 — while always evaluated relative to the magnitude of the overhead being forecast — is materially lower than Regression 2's $68,000, meaning Regression 1 generates tighter prediction intervals. Regression 3 achieves a marginally higher R-squared (0.91) but at a fatal cost: multicollinearity. When VIF exceeds 5, the two independent variables are so highly correlated that the regression cannot reliably separate their individual effects. The p-value of 0.38 on the labor-hours coefficient confirms this — at a conventional 0.05 significance threshold, we cannot reject the null hypothesis that the true coefficient is zero, meaning labor hours add no statistically reliable explanatory power beyond what machine hours already provide. Including an insignificant, collinear variable inflates standard errors without improving forecast accuracy, and it misleads users into thinking both cost drivers are meaningful when only one is. In practice, a controller presenting to the CFO should select the most parsimonious model that is statistically sound — here, Regression 1. A common exam trap is selecting the model with the highest R-squared without checking for multicollinearity or coefficient significance.",
@@ -30614,7 +30614,7 @@ const MCQ_BANK_E = [
     "Stem": "Apex Manufacturing's controller reviews the Q3 overhead variance report. The plant's total overhead budget for the quarter is $400,000, consisting of a variable overhead budget of $180,000 and a fixed overhead budget of $220,000. The variance report shows: variable overhead spending variance $12,000 U, variable overhead efficiency variance $8,000 F, fixed overhead budget variance $5,000 U, and fixed overhead volume variance $22,000 U. The total overhead variance is $31,000 U. The controller's investigation policy requires investigation of any individual variance exceeding 10% of its related budget category and any total overhead variance exceeding 5% of the total overhead budget. The controller also notes that the VOH spending variance is attributable to higher utility rates (a rate increase imposed by the regional utility commission), and the FOH volume variance is attributable to a large customer order cancellation that reduced planned production by 15%. The controller must decide how to allocate a limited investigation team's time. Which of the following is the most appropriate recommended investigation approach?",
     "Choices": {
       "A": "Investigate only the FOH volume variance of $22,000, since it is the only individual variance meeting the 10% threshold ($22,000 equals exactly 10% of the $220,000 FOH budget). The total variance threshold is informational only and does not mandate additional investigation.",
-      "B": "Investigate all four variances with equal priority because the total overhead variance of $31,000 exceeds the 5% threshold of $20,000, which triggers a mandatory comprehensive investigation of every variance component regardless of individual thresholds or known causes.",
+      "B": "Investigate four variances with equal priority because the total overhead variance of $31,000 exceeds the 5% threshold of $20,000, which triggers a mandatory comprehensive investigation of variance component regardless of individual thresholds or known causes.",
       "C": "Prioritize investigation of the VOH spending variance of $12,000 because, after excluding the externally caused FOH volume variance, it is the largest remaining individual unfavorable variance and likely indicates controllable operational inefficiency.",
       "D": "Acknowledge that both the individual threshold (FOH volume) and the total threshold are met. Prioritize investigation resources toward the FOH budget variance ($5,000 U) and the VOH efficiency variance ($8,000 F), because the VOH spending variance and FOH volume variance have identifiable external causes that do not warrant immediate detailed investigation under resource constraints."
     },
@@ -30947,9 +30947,9 @@ const MCQ_BANK_E = [
     "Stem": "Crestwood Medical Devices manufactures a critical electronic component used in its flagship patient monitoring system. The company is evaluating whether to continue manufacturing the component in-house or outsource it to an external supplier. The following information is available:<br><br><strong>In-house manufacturing cost per unit (20,000 units per year):</strong> Direct materials $22, Direct labor $28, Variable overhead $12, Allocated fixed overhead $16. Total = $78 per unit. If production is outsourced, 40% of the allocated fixed overhead is avoidable, and the freed factory space can be rented to a third party for $60,000 per year.<br><br><strong>External supplier offer:</strong> $65 per unit, delivered. The supplier is based in a country experiencing political instability, and industry reports indicate that supply disruptions from this region have occurred in 3 of the last 5 years. The component is critical to patient monitoring system quality — a component failure could trigger a product recall. Additionally, qualifying a new supplier would require a 6-month regulatory approval process with the FDA.<br><br>As the management accountant advising the CFO, what recommendation is most appropriate?",
     "Choices": {
       "A": "The quantitative analysis shows an annual advantage of $128,000 to outsourcing, but the political instability of the supplier's country, the component's criticality to product quality and patient safety, and the 6-month regulatory qualification timeline are material qualitative risks. Recommend presenting both the quantitative analysis and the qualitative risk assessment to the CFO for a fully informed decision, with a sensitivity analysis on the cost of a potential supply disruption.",
-      "B": "Accept the supplier's offer immediately. The per-unit savings of $13 per unit ($78 in-house versus $65 supplier) multiplied by 20,000 units yields $260,000 in annual savings, which clearly outweighs any qualitative concerns about the supplier's location.",
-      "C": "Reject the supplier's offer and continue manufacturing in-house. The qualitative risks — political instability, product quality criticality, and FDA regulatory burden — completely override any quantitative savings. A medical device company cannot accept any supply chain risk regardless of the financial impact.",
-      "D": "Accept the supplier's offer because the quantitative savings of $128,000 are material and the qualitative factors are speculative. Political instability is a macroeconomic risk that affects all global suppliers equally, and the FDA qualification process is a one-time administrative hurdle that should not influence a strategic sourcing decision."
+      "B": "Accept the supplier's offer immediately. The per-unit savings of $13 per unit ($78 in-house versus $65 supplier) multiplied by 20,000 units yields $260,000 in annual savings, which clearly outweighs qualitative concerns about the supplier's location.",
+      "C": "Reject the supplier's offer and continue manufacturing in-house. The qualitative risks — political instability, product quality criticality, and FDA regulatory burden — completely override quantitative savings. A medical device company cannot accept supply chain risk regardless of the financial impact.",
+      "D": "Accept the supplier's offer because the quantitative savings of $128,000 are material and the qualitative factors are speculative. Political instability is a macroeconomic risk that affects global suppliers equally, and the FDA qualification process is a one-time administrative hurdle that should not influence a strategic sourcing decision."
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Option A reflects the professional judgment expected of a management accountant at the Evaluate level, synthesizing quantitative analysis with qualitative risk assessment without prematurely concluding. The quantitative analysis is: Relevant cost to make in-house = Direct materials $22 + Direct labor $28 + Variable overhead $12 + Avoidable fixed overhead ($16 × 40% = $6.40) = $68.40 per unit. The $9.60 of unavoidable fixed overhead ($16 × 60%) continues regardless and is irrelevant to the decision. Total relevant cost to make = 20,000 × $68.40 = $1,368,000. Total cost to buy = 20,000 × $65 = $1,300,000. Direct cost savings from outsourcing = $1,368,000 − $1,300,000 = $68,000. Adding the rental income from freed space ($60,000), the total quantitative advantage of outsourcing is $128,000 per year. However, the qualitative factors — political instability causing historical supply disruptions in 3 of 5 years, the component's criticality to a flagship medical device with patient safety implications, and the 6-month FDA regulatory qualification timeline — are material risks that could easily exceed $128,000 in a single supply disruption event (recall costs, lost sales, regulatory penalties). The management accountant's role is to present the complete analysis — quantitative and qualitative — so that the CFO can make a fully informed strategic decision, not to make the decision unilaterally.",
@@ -31138,7 +31138,7 @@ const MCQ_BANK_E = [
     "ItemStyle": "single-select",
     "Stem": "A national retail chain is experiencing persistent difficulties with customer analytics and financial reporting. A data governance assessment reveals three gaps: (1) customer data is duplicated across the CRM system, the ERP system, and the loyalty program database, with no master record to reconcile identities — a single customer who shops online, in-store, and through the loyalty program may appear as three separate records; (2) the Marketing department defines an 'active customer' as one who made a purchase within the last 12 months, the Finance department defines it as a customer with any outstanding balance within 24 months, and the Operations department defines it as a customer to whom a shipment was made within the last 6 months; (3) no individual or committee has been designated as the data steward or data owner for customer master data — each department manages its own customer records independently. The Chief Data Officer proposes a master data management (MDM) initiative. From a management accountant's perspective focused on financial reporting integrity, which gap is most damaging to reliable financial reporting, and what should be the first governance action?",
     "Choices": {
-      "A": "The most damaging gap is the duplicate customer records across systems because they inflate the apparent customer count and make it difficult to produce a single view of revenue by customer. The first governance action should be to implement a customer data integration platform that deduplicates records and creates a single customer identifier across all systems.",
+      "A": "The most damaging gap is the duplicate customer records across systems because they inflate the apparent customer count and make it difficult to produce a single view of revenue by customer. The first governance action should be to implement a customer data integration platform that deduplicates records and creates a single customer identifier across systems.",
       "B": "The most damaging gap is the inconsistent 'active customer' definition because it directly affects revenue cut-off, bad debt estimation, and the allowance for credit losses — all financial reporting line items. The first governance action should be to establish a cross-functional data governance committee with the authority to define and enforce a single, authoritative definition of 'active customer' across all departments.",
       "C": "The most damaging gap is the absence of a designated data steward because without clear accountability, none of the other data quality issues can be sustainably resolved. The first governance action should be to appoint a customer data steward from the IT department to manage master data quality and enforce data standards.",
       "D": "All three gaps are equally significant because they are interdependent — duplicate records arise from inconsistent definitions, which persist because no one is accountable. The first governance action should be to launch a comprehensive MDM system implementation covering CRM, ERP, and the loyalty database simultaneously."
