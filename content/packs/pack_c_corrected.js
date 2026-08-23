@@ -805,7 +805,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Amortize goodwill on a straight-line basis over 40 years",
       "B": "Increase goodwill whenever fair value rises above carrying amount",
-      "C": "Never test goodwill unless it is sold",
+      "C": "Limit goodwill impairment testing to the sale date",
       "D": "Compare the reporting unit's fair value to its carrying amount and recognize an impairment loss for any excess of carrying amount over fair value"
     },
     "CorrectChoice": "D",
@@ -859,7 +859,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Compare the reporting unit's fair value to its carrying amount and recognize an impairment loss for any excess of carrying amount over fair value",
       "B": "Increase goodwill whenever fair value rises above carrying amount",
       "C": "Amortize goodwill on a straight-line basis over 40 years",
-      "D": "Never test goodwill unless it is sold"
+      "D": "Limit goodwill impairment testing to the sale date"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Goodwill is tested at least annually for impairment by comparing the reporting unit's fair value to its carrying amount, recognizing impairment for any excess of carrying value over fair value.",
@@ -909,7 +909,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Rosewood performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current guidance?",
     "Choices": {
-      "A": "Never test goodwill unless it is sold",
+      "A": "Limit goodwill impairment testing to the sale date",
       "B": "Compare the reporting unit's fair value to its carrying amount and recognize an impairment loss for any excess of carrying amount over fair value",
       "C": "Increase goodwill whenever fair value rises above carrying amount",
       "D": "Amortize goodwill on a straight-line basis over 40 years"
@@ -965,7 +965,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Amortize goodwill on a straight-line basis over 40 years",
       "B": "Increase goodwill whenever fair value rises above carrying amount",
       "C": "Compare the reporting unit's fair value to its carrying amount and recognize an impairment loss for any excess of carrying amount over fair value",
-      "D": "Never test goodwill unless it is sold"
+      "D": "Limit goodwill impairment testing to the sale date"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Goodwill is tested at least annually for impairment by comparing the reporting unit's fair value to its carrying amount, recognizing impairment for any excess of carrying value over fair value.",
@@ -1017,7 +1017,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Increase goodwill whenever fair value rises above carrying amount",
       "B": "Amortize goodwill on a straight-line basis over 40 years",
-      "C": "Never test goodwill unless it is sold",
+      "C": "Limit goodwill impairment testing to the sale date",
       "D": "Compare the reporting unit's fair value to its carrying amount and recognize an impairment loss for any excess of carrying amount over fair value"
     },
     "CorrectChoice": "D",
@@ -3683,7 +3683,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Expense the entire cost immediately upon acquisition",
       "B": "Revalue the patent to fair value each year through net income",
       "C": "Amortize the patent's cost over its useful life",
-      "D": "Never amortize intangible assets with finite lives"
+      "D": "Do not amortize intangible assets with finite lives"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Intangible assets with finite useful lives are amortized over their useful life; those with indefinite lives are tested for impairment instead.",
@@ -3734,7 +3734,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Revalue the patent to fair value each year through net income",
       "B": "Expense the entire cost immediately upon acquisition",
-      "C": "Never amortize intangible assets with finite lives",
+      "C": "Do not amortize intangible assets with finite lives",
       "D": "Amortize the patent's cost over its useful life"
     },
     "CorrectChoice": "D",
@@ -3787,7 +3787,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Amortize the patent's cost over its useful life",
       "B": "Expense the entire cost immediately upon acquisition",
       "C": "Revalue the patent to fair value each year through net income",
-      "D": "Never amortize intangible assets with finite lives"
+      "D": "Do not amortize intangible assets with finite lives"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Intangible assets with finite useful lives are amortized over their useful life; those with indefinite lives are tested for impairment instead.",
@@ -3836,7 +3836,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Brookmoor acquires a patent with a finite useful life. How should the patent be accounted for after acquisition?",
     "Choices": {
-      "A": "Never amortize intangible assets with finite lives",
+      "A": "Do not amortize intangible assets with finite lives",
       "B": "Amortize the patent's cost over its useful life",
       "C": "Expense the entire cost immediately upon acquisition",
       "D": "Revalue the patent to fair value each year through net income"
@@ -3891,7 +3891,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Expense the entire cost immediately upon acquisition",
       "B": "Revalue the patent to fair value each year through net income",
       "C": "Amortize the patent's cost over its useful life",
-      "D": "Never amortize intangible assets with finite lives"
+      "D": "Do not amortize intangible assets with finite lives"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Intangible assets with finite useful lives are amortized over their useful life; those with indefinite lives are tested for impairment instead.",
@@ -10135,7 +10135,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Vesper's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is a key advantage of negotiated transfer pricing?",
     "Choices": {
-      "A": "It always maximizes overall company profit regardless of capacity",
+      "A": "It maximizes overall company profit regardless of capacity",
       "B": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price",
       "C": "It eliminates the need for any market price data",
       "D": "It guarantees goal congruence in all cases"
@@ -10187,7 +10187,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Westbrook's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is a key advantage of negotiated transfer pricing?",
     "Choices": {
       "A": "It eliminates the need for any market price data",
-      "B": "It always maximizes overall company profit regardless of capacity",
+      "B": "It maximizes overall company profit regardless of capacity",
       "C": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price",
       "D": "It guarantees goal congruence in all cases"
     },
@@ -10238,7 +10238,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Yarrow's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is a key advantage of negotiated transfer pricing?",
     "Choices": {
       "A": "It eliminates the need for any market price data",
-      "B": "It always maximizes overall company profit regardless of capacity",
+      "B": "It maximizes overall company profit regardless of capacity",
       "C": "It guarantees goal congruence in all cases",
       "D": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price"
     },
@@ -10289,7 +10289,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Zenith Bay's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is a key advantage of negotiated transfer pricing?",
     "Choices": {
       "A": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price",
-      "B": "It always maximizes overall company profit regardless of capacity",
+      "B": "It maximizes overall company profit regardless of capacity",
       "C": "It guarantees goal congruence in all cases",
       "D": "It eliminates the need for any market price data"
     },
@@ -10342,7 +10342,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "It guarantees goal congruence in all cases",
       "B": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price",
       "C": "It eliminates the need for any market price data",
-      "D": "It always maximizes overall company profit regardless of capacity"
+      "D": "It maximizes overall company profit regardless of capacity"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Negotiated transfer pricing preserves divisional autonomy and can produce a price acceptable to both divisions, though it does not guarantee optimal companywide results.",
@@ -10391,7 +10391,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Birchwood's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is a key advantage of negotiated transfer pricing?",
     "Choices": {
       "A": "It eliminates the need for any market price data",
-      "B": "It always maximizes overall company profit regardless of capacity",
+      "B": "It maximizes overall company profit regardless of capacity",
       "C": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price",
       "D": "It guarantees goal congruence in all cases"
     },
@@ -10442,7 +10442,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Copperline's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is a key advantage of negotiated transfer pricing?",
     "Choices": {
       "A": "It eliminates the need for any market price data",
-      "B": "It always maximizes overall company profit regardless of capacity",
+      "B": "It maximizes overall company profit regardless of capacity",
       "C": "It guarantees goal congruence in all cases",
       "D": "It preserves divisional autonomy while allowing managers to reach a mutually acceptable price"
     },
@@ -13849,7 +13849,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "It eliminates the need for any negotiation between divisions",
       "B": "It guarantees the selling division earns no profit",
       "C": "It approximates an arm's-length price and preserves goal congruence when a competitive external market exists",
-      "D": "It always minimizes the buying division's reported costs"
+      "D": "It minimizes the buying division's reported costs"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "When a competitive external market exists, market-based transfer pricing approximates an arm's-length price and generally supports goal congruence between divisions.",
@@ -13898,7 +13898,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Underwood sets transfer prices for a product with an active external market equal to the prevailing market price. What is the main advantage of this approach?",
     "Choices": {
       "A": "It guarantees the selling division earns no profit",
-      "B": "It always minimizes the buying division's reported costs",
+      "B": "It minimizes the buying division's reported costs",
       "C": "It eliminates the need for any negotiation between divisions",
       "D": "It approximates an arm's-length price and preserves goal congruence when a competitive external market exists"
     },
@@ -13950,7 +13950,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "It approximates an arm's-length price and preserves goal congruence when a competitive external market exists",
       "B": "It guarantees the selling division earns no profit",
-      "C": "It always minimizes the buying division's reported costs",
+      "C": "It minimizes the buying division's reported costs",
       "D": "It eliminates the need for any negotiation between divisions"
     },
     "CorrectChoice": "A",
@@ -13999,7 +13999,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Westbrook sets transfer prices for a product with an active external market equal to the prevailing market price. What is the main advantage of this approach?",
     "Choices": {
-      "A": "It always minimizes the buying division's reported costs",
+      "A": "It minimizes the buying division's reported costs",
       "B": "It approximates an arm's-length price and preserves goal congruence when a competitive external market exists",
       "C": "It eliminates the need for any negotiation between divisions",
       "D": "It guarantees the selling division earns no profit"
@@ -14053,7 +14053,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "It guarantees the selling division earns no profit",
       "B": "It eliminates the need for any negotiation between divisions",
       "C": "It approximates an arm's-length price and preserves goal congruence when a competitive external market exists",
-      "D": "It always minimizes the buying division's reported costs"
+      "D": "It minimizes the buying division's reported costs"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "When a competitive external market exists, market-based transfer pricing approximates an arm's-length price and generally supports goal congruence between divisions.",
@@ -14102,7 +14102,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Zenith Bay sets transfer prices for a product with an active external market equal to the prevailing market price. What is the main advantage of this approach?",
     "Choices": {
       "A": "It guarantees the selling division earns no profit",
-      "B": "It always minimizes the buying division's reported costs",
+      "B": "It minimizes the buying division's reported costs",
       "C": "It eliminates the need for any negotiation between divisions",
       "D": "It approximates an arm's-length price and preserves goal congruence when a competitive external market exists"
     },
@@ -14154,7 +14154,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "To allow timely product costing during the period without waiting for actual overhead costs to be known",
       "B": "To guarantee zero over- or underapplied overhead",
-      "C": "To comply with a rule that actual costs can never be used",
+      "C": "To comply with a rule that the use of actual costs is prohibited",
       "D": "To eliminate the need for any overhead allocation"
     },
     "CorrectChoice": "A",
@@ -14206,7 +14206,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "To eliminate the need for any overhead allocation",
       "B": "To allow timely product costing during the period without waiting for actual overhead costs to be known",
       "C": "To guarantee zero over- or underapplied overhead",
-      "D": "To comply with a rule that actual costs can never be used"
+      "D": "To comply with a rule that the use of actual costs is prohibited"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "A predetermined overhead rate, calculated before the period begins, allows timely costing of jobs throughout the period rather than waiting until actual costs are known at year-end.",
@@ -14257,7 +14257,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "To guarantee zero over- or underapplied overhead",
       "B": "To eliminate the need for any overhead allocation",
       "C": "To allow timely product costing during the period without waiting for actual overhead costs to be known",
-      "D": "To comply with a rule that actual costs can never be used"
+      "D": "To comply with a rule that the use of actual costs is prohibited"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "A predetermined overhead rate, calculated before the period begins, allows timely costing of jobs throughout the period rather than waiting until actual costs are known at year-end.",
@@ -14305,7 +14305,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Driftwood uses job order costing and applies overhead based on a predetermined rate using direct labor hours. Why use a predetermined rate rather than actual overhead?",
     "Choices": {
-      "A": "To comply with a rule that actual costs can never be used",
+      "A": "To comply with a rule that the use of actual costs is prohibited",
       "B": "To guarantee zero over- or underapplied overhead",
       "C": "To eliminate the need for any overhead allocation",
       "D": "To allow timely product costing during the period without waiting for actual overhead costs to be known"
@@ -14359,7 +14359,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "To allow timely product costing during the period without waiting for actual overhead costs to be known",
       "B": "To guarantee zero over- or underapplied overhead",
       "C": "To eliminate the need for any overhead allocation",
-      "D": "To comply with a rule that actual costs can never be used"
+      "D": "To comply with a rule that the use of actual costs is prohibited"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "A predetermined overhead rate, calculated before the period begins, allows timely costing of jobs throughout the period rather than waiting until actual costs are known at year-end.",
@@ -16690,7 +16690,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Bellwood sets standard costs at the start of the year and investigates variances that exceed a materiality threshold. What is a primary benefit of using standard costs?",
     "Choices": {
-      "A": "They guarantee actual costs will always equal the standard",
+      "A": "They guarantee actual costs will equal the standard",
       "B": "They eliminate the need to ever review actual costs",
       "C": "They provide a benchmark for evaluating actual performance and simplify variance analysis",
       "D": "They remove the need for any budgeting process"
@@ -16742,7 +16742,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "They eliminate the need to ever review actual costs",
       "B": "They remove the need for any budgeting process",
-      "C": "They guarantee actual costs will always equal the standard",
+      "C": "They guarantee actual costs will equal the standard",
       "D": "They provide a benchmark for evaluating actual performance and simplify variance analysis"
     },
     "CorrectChoice": "D",
@@ -16791,7 +16791,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Duskwood sets standard costs at the start of the year and investigates variances that exceed a materiality threshold. What is a primary benefit of using standard costs?",
     "Choices": {
       "A": "They provide a benchmark for evaluating actual performance and simplify variance analysis",
-      "B": "They guarantee actual costs will always equal the standard",
+      "B": "They guarantee actual costs will equal the standard",
       "C": "They eliminate the need to ever review actual costs",
       "D": "They remove the need for any budgeting process"
     },
@@ -16842,7 +16842,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "They remove the need for any budgeting process",
       "B": "They provide a benchmark for evaluating actual performance and simplify variance analysis",
-      "C": "They guarantee actual costs will always equal the standard",
+      "C": "They guarantee actual costs will equal the standard",
       "D": "They eliminate the need to ever review actual costs"
     },
     "CorrectChoice": "B",
@@ -16890,7 +16890,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Falconridge sets standard costs at the start of the year and investigates variances that exceed a materiality threshold. What is a primary benefit of using standard costs?",
     "Choices": {
-      "A": "They guarantee actual costs will always equal the standard",
+      "A": "They guarantee actual costs will equal the standard",
       "B": "They remove the need for any budgeting process",
       "C": "They provide a benchmark for evaluating actual performance and simplify variance analysis",
       "D": "They eliminate the need to ever review actual costs"
@@ -19173,7 +19173,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "Zenith Bay requires dual signatures on checks above a threshold before payment is released. Is this a preventive or detective control, and why?",
     "Choices": {
       "A": "A preventive control, because it stops an unauthorized payment before it occurs",
-      "B": "A compensating control used only when segregation is impossible",
+      "B": "A compensating control used only when segregation is not feasible",
       "C": "A corrective control, because it fixes problems after they occur",
       "D": "A detective control, because it identifies errors after the fact"
     },
@@ -22820,7 +22820,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Stem": "CFO Anita Rao reviews the Q3 operations dashboard for Westfield Manufacturing. The dashboard displays 42 KPIs across 11 tabs, each with a large red/amber/green status indicator. The VP of Operations argues the dashboard is comprehensive because every metric is tracked. However, Anita notices that three overdue supplier deliveries in July had no impact on any KPI status color, and a $340,000 overtime cost spike in September shows green because the overtime KPI was set against a generously high target. Which statement best explains why the dashboard fails to provide actionable insight?",
     "Choices": {
       "A": "The dashboard measures activity volume rather than outcome quality, and KPI thresholds are set at levels that mask operational problems rather than surface them.",
-      "B": "The dashboard does not include financial metrics alongside operational metrics, making it impossible to connect production data to financial performance.",
+      "B": "The dashboard does not include financial metrics alongside operational metrics, making it difficult to connect production data to financial performance.",
       "C": "The dashboard aggregates metrics by month rather than by week, which averages out daily spikes and conceals the true variability in operations.",
       "D": "The dashboard should display only the five most critical KPIs on a single page, because any dashboard with more than five metrics overwhelms the user and loses effectiveness."
     },
@@ -23500,7 +23500,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "Choices": {
       "A": "Variety — the three systems emit data in fundamentally different formats (semi-structured JSON, structured relational tables, unstructured free-text notes) that cannot be joined or reconciled without a common data model and transformation layer.",
       "B": "Volume — the 340 stores generate over 1.2 million data points daily (489,600 IoT readings, 680,000 POS transactions, and 32,000 ERP notes), overwhelming the reconciliation engine's processing capacity.",
-      "C": "Velocity — the IoT sensors update every 15 minutes while the ERP notes are entered only at shift changes, creating a timing mismatch that makes simultaneous reconciliation impossible.",
+      "C": "Velocity — the IoT sensors update every 15 minutes while the ERP notes are entered only at shift changes, creating a timing mismatch that prevents simultaneous reconciliation.",
       "D": "Veracity — the store managers' ERP notes contain frequent errors such as miscounts, misplaced decimal points, and wrong SKU entries that corrupt the inventory reconciliation process."
     },
     "CorrectChoice": "A",
@@ -24126,7 +24126,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
       "A": "Discontinue flash reporting — all Day 4 decisions should wait for Day 7 final close data to ensure decisions are based on verified, auditable numbers; the 2–4% variance introduces unacceptable decision risk across all categories.",
       "B": "Treat flash estimates as authoritative — the 2–4% variance is immaterial for a manufacturing company and the timeliness benefit of making decisions on Day 4 rather than Day 8 outweighs the accuracy gap; deferring all decisions by 4 days creates unacceptable operational drag.",
       "C": "Continue the current approach — flash estimates are appropriate for preliminary operational decisions (staffing, procurement) where timeliness outweighs precision, but material financial commitments (dividends, covenant certifications) should be based on final close data where accuracy is paramount.",
-      "D": "Accelerate the close process from 7 days to 4 days by adding accounting staff and automating journal entry workflows, eliminating the flash-versus-final gap entirely so that Day 4 decisions always use final data."
+      "D": "Accelerate the close process from 7 days to 4 days by adding accounting staff and automating journal entry workflows, eliminating the flash-versus-final gap entirely so that Day 4 decisions use final data."
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "The correct answer is C. Data timeliness — the degree to which data is available when needed for its intended use — must be evaluated in the context of the specific decision being made, not as an absolute standard. The COSO ERM framework's information principle states that information must be 'timely' and 'at an appropriate level of detail,' but 'appropriate' is context-dependent. For operational decisions like staffing adjustments (scheduling additional shifts for a production surge) and raw material procurement (issuing purchase orders based on demand signals), the cost of a 4-day delay likely exceeds the cost of acting on data that is 92–96% accurate. If gross margin is trending 3% below target, waiting 4 days to adjust staffing means 4 days of overstaffing costs; acting on Day 4 with data that is within 2–4% of the final figure generates a net benefit despite the imprecision. Conversely, dividend declarations and debt covenant compliance certifications are material, legally binding decisions where a 2–4% error could mean declaring a dividend the company cannot sustain or certifying compliance with a covenant that the final close would breach. The cost of being wrong on these decisions far exceeds the cost of a 4-day delay. The IMA Statement of Ethical Professional Practice requires management accountants to 'provide decision support information that is accurate, clear, concise, and timely' — the conjunctive 'and' acknowledges that accuracy and timeliness must be balanced, not traded off absolutely. The current approach achieves this balance by matching the data quality standard to the decision materiality. Option A unnecessarily sacrifices timeliness for decisions where precision is not required. Option B ignores materiality distinctions. Option D is a capital investment decision that may or may not be cost-justified.",
@@ -24572,7 +24572,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ItemStyle": "single-select",
     "Stem": "Kestrel Foods, a specialty food distributor with $175 million in annual revenue, maintains banking relationships with two regional banks. The accounts payable manager, Jenna Ruiz, receives an email from what appears to be the CFO's email address (cfo@kestrelfoods.com) with the subject line 'URGENT — Banking Change for Toscana Imports.' The email states: 'Jenna — we are switching Toscana's payment to a new account at First Mercantile Bank effective immediately. The attached letter from Toscana's CFO authorizes the change. We have been discussing this for two weeks — please update the vendor master before today's 2:00 PM payment run.' Ruiz notes three details: (1) the email was received at 1:47 PM, just 13 minutes before the payment run cutoff, (2) Toscana Imports has been a supplier for 11 years and has never changed its banking details, and (3) the attached letter from 'Toscana's CFO' uses a different email domain (toscana-imports.com instead of toscanaimports.com) and has a digital signature that does not verify. Ruiz must analyze these three indicators — timing pressure, behavioral anomaly, and technical inconsistency — to determine whether they individually or collectively indicate a BEC attack versus a legitimate but unusual request. Under COSO Principle 11 and the NIST CSF Detect function, which analysis of these indicators and the appropriate response is correct?",
     "Choices": {
-      "A": "The domain mismatch on the attached letter is the strongest single indicator of fraud — a legitimate vendor would never use a variant domain for official correspondence. This technical indicator is definitive, and Ruiz should reject the banking change and report the email as a suspected BEC attempt to the security team without further investigation.",
+      "A": "The domain mismatch on the attached letter is the strongest single indicator of fraud — a legitimate vendor would not use a variant domain for official correspondence. This technical indicator is definitive, and Ruiz should reject the banking change and report the email as a suspected BEC attempt to the security team without further investigation.",
       "B": "No single indicator is definitive on its own — timing pressure could be coincidental, a vendor banking change after 11 years is unusual but possible, and the domain mismatch could reflect a legitimate rebranding. However, when analyzed collectively, these three indicators form a pattern that is characteristic of BEC attacks: urgency to bypass normal controls, deviation from historical behavior, and technical inconsistencies. The converged pattern requires independent out-of-band verification — Ruiz should contact Toscana Imports at their known phone number from the vendor master file to confirm the request.",
       "C": "The timing (13 minutes before payment run cutoff) is the most important indicator because legitimate vendor banking changes require lead time for verification and approval — the urgency is by itself sufficient evidence of attempted fraud. The domain mismatch may be a legitimate rebranding, and the non-verifying signature could be a technical error. Ruiz should process the change to avoid missing the payment run and investigate afterward.",
       "D": "The digital signature that does not verify is the only indicator that matters because it provides objective technical evidence, whereas timing and behavioral patterns are subjective. Ruiz should forward the email and attachment to IT for signature analysis and proceed with the payment run in the meantime — the signature failure may be a benign certificate error."

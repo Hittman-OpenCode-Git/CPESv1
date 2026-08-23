@@ -645,7 +645,7 @@ var MCQ_BANK_A = [
       "A": "Disclose the bankruptcy as a Type II subsequent event in the notes to the financial statements without adjusting the December 31 receivable balance of $2,400,000, because the bankruptcy filing occurred 22 days after year-end and represents a new condition arising after the balance sheet date.",
       "B": "Adjust the December 31 financial statements to write down the $2,400,000 receivable to the estimated recoverable range of $72,000 to $192,000 based on the trustee's preliminary estimate, because the evidence of Orion's financial distress existed at the balance sheet date, making this a Type I subsequent event under ASC 855.",
       "C": "Defer all loss recognition on the Orion receivable until the bankruptcy court confirms the final distribution percentage, at which point the loss amount becomes known with certainty and can be recorded in the subsequent fiscal year.",
-      "D": "Reverse the $2,400,000 of Q4 Orion sales and restate Meridian's previously issued Q4 interim financial information, treating the Orion transactions as if they never occurred because collectibility was always in doubt."
+      "D": "Reverse the $2,400,000 of Q4 Orion sales and restate Meridian's previously issued Q4 interim financial information, treating the Orion transactions as if they had not occurred because collectibility was in doubt."
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Under ASC 855-10-25-1, subsequent events fall into two categories. Type I (recognized subsequent events) provide additional evidence about conditions that existed at the balance sheet date and require adjustment to the financial statements. Type II (nonrecognized subsequent events) provide evidence about conditions that arose after the balance sheet date and require only disclosure. The controlling question is when the condition originated — not when the evidence arrived. In this case, Orion's financial distress existed at December 31: the credit department's own December 15 review documented debt covenant violations, stopped collection calls, and invoices past due more than 90 days. Meridian had already placed Orion on credit hold before year-end. The January 22 bankruptcy filing is new evidence about a condition (Orion's insolvency) that already existed at the balance sheet date. This is a textbook Type I subsequent event requiring adjustment. Under ASC 450-20 (Loss Contingencies), a loss is accrued when it is probable that an asset has been impaired and the amount can be reasonably estimated. The trustee's preliminary estimate of 3 to 8 cents on the dollar provides a reasonable basis: the receivable should be written down to estimated recoverable value. When no amount within a range is a better estimate than any other, ASC 450-20-25-2 requires accrual of the minimum amount ($2,400,000 × 3% = $72,000) with disclosure of the additional possible loss. This produces a bad debt expense of approximately $2,328,000 in the current year, ensuring the December 31 balance sheet presents trade receivables at their net realizable value. A critical exam trap is confusing the evidence date (January 22 filing) with the condition date (December 31 distress). The condition date — not the evidence date — governs classification under ASC 855. Candidates who reason mechanically from the filing date alone will incorrectly select disclosure-only treatment (Choice A), missing the substantive accounting issue that the impairment condition existed at year-end.",
@@ -3318,7 +3318,7 @@ var MCQ_BANK_A = [
       "A": "Year 1: write down Line X by $50,000 and Line Z by $15,000. Year 2: no reversal permitted; inventory on Line X remains at $190,000",
       "B": "Year 1: write down Line X by $50,000, Line Y no adjustment, Line Z by $15,000. Year 2: reverse $50,000 of the write-down on Line X, bringing it to $240,000",
       "C": "Year 1: write down the total portfolio by $5,000 because the aggregate NRV exceeds aggregate cost. Year 2: no reversal needed",
-      "D": "Year 1: write down Line X by $50,000 and Line Z by $15,000. Year 2: reverse $50,000 on Line X because NRV now exceeds original cost"
+      "D": "Year 1: defer the Line X write-down because its NRV recovery is already expected; write down Line Z by $15,000. Year 2: no further adjustment"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "Under U.S. GAAP (ASC 330), inventory is measured at the lower of cost and net realizable value, applied on an item-by-item basis. In Year 1: Line X cost ($240K) exceeds NRV ($190K), requiring a $50,000 write-down. Line Y cost ($180K) is below NRV ($210K), so no adjustment is needed. Line Z cost ($300K) exceeds NRV ($285K), requiring a $15,000 write-down. Total Year 1 write-down = $65,000. In Year 2, when Line X NRV recovers to $250,000, U.S. GAAP does NOT permit reversal of inventory write-downs. The new cost basis after the write-down is $190,000 (the lower amount becomes the new cost). Even though NRV now exceeds the original cost ($240K), the inventory remains at $190,000 — the write-down creates a new cost basis that cannot be reversed upward. This is a key difference from IFRS (IAS 2), which permits reversal of write-downs when NRV recovers. The CMA Part 1 exam tests both GAAP and IFRS treatment, and candidates must know that GAAP prohibits LCNRV reversals. A common exam trap is applying IFRS reversal rules to a GAAP question.",
@@ -3347,7 +3347,7 @@ var MCQ_BANK_A = [
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Option B correctly identifies the Year 1 write-down amounts ($50K for Line X, $15K for Line Z) and correctly notes that Line Y requires no adjustment. However, the Year 2 treatment — reversing the $50,000 write-down — applies the IFRS rule (IAS 2 permits reversal of inventory write-downs when NRV recovers, limited to the amount of the original write-down). Under U.S. GAAP (ASC 330), inventory write-downs are NOT reversible. The $190,000 becomes the new cost basis for Line X, and the recovery to $250,000 NRV has no accounting effect. This is a frequent source of confusion on the CMA exam: candidates must distinguish GAAP (no reversal) from IFRS (reversal permitted up to original write-down amount).",
     "ExplanationWrongC": "Option C incorrectly applies the portfolio (aggregate) approach rather than the item-by-item approach. Under U.S. GAAP, LCNRV is typically applied on an item-by-item basis unless specific criteria for portfolio grouping are met. Computing aggregate cost ($720K) against aggregate NRV ($685K) yields a $35K total difference, but this masks the individual overstatements. More critically, the portfolio approach is not the default under U.S. GAAP — item-by-item is the required method unless grouping is specifically justified. The aggregate approach can hide material overstatements in individual inventory lines by netting them against lines where cost is below NRV.",
-    "ExplanationWrongD": "Option D incorrectly reverses the write-down in Year 2 even though it correctly acknowledges that Line X's NRV ($250K) now exceeds its original cost ($240K). Under U.S. GAAP, the prohibition on write-down reversals applies regardless of whether NRV recovers above original cost. Once written down, inventory is carried at the new, lower cost basis ($190K for Line X). The NRV recovery to any amount — even exceeding original cost — does not trigger a reversal under GAAP. This choice represents a candidate who understands that LCNRV applies but mistakenly believes the ceiling is original cost when NRV recovers. The correct rule: the write-down creates an irrevocable new cost basis under GAAP.",
+    "ExplanationWrongD": "Option D defers the Line X write-down in Year 1 because a future NRV recovery is anticipated. Under ASC 330, the LCNRV test is applied at each reporting date using the NRV at that date — an expected recovery does not defer the write-down. Line X must be written down by $50,000 in Year 1 regardless of expectations, and the recovery in Year 2 has no accounting effect under GAAP. A candidate selecting this option is treating inventory like an impaired long-lived asset whose write-down can wait for evidence; LCNRV is a point-in-time measurement, not a forecast-based estimate.",
     "question_state": "Certified",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply",
@@ -4305,7 +4305,7 @@ var MCQ_BANK_A = [
     "Choices": {
       "A": "Recommend Option 1 — Line of Credit Draw. Although the interest cost of $6,517 is the highest, the line of credit preserves supplier relationships, maintains customer relationships, is purpose-built for seasonal working capital needs, and provides a clean, transparent financing structure.",
       "B": "Recommend Option 2 — Receivables Factoring. The immediate cash receipt of $252,200 covers the full shortfall plus a buffer, and the 3.0% discount fee is a one-time cost. Transferring collection responsibility to Keystone also reduces administrative overhead.",
-      "C": "Recommend Option 3 — Delayed Disbursements. At $5,183 this is the lowest-cost option and therefore the most appropriate under the principle that the least-cost financing alternative is always preferred when covering a short-term cash deficit.",
+      "C": "Recommend Option 3 — Delayed Disbursements. At $5,183 this is the lowest-cost option and therefore the most appropriate under the principle that the least-cost financing alternative is preferred without regard to flexibility when covering a short-term cash deficit.",
       "D": "Recommend combining Options 1 and 2: factor $130,000 of receivables at $3,900 cost plus draw $100,000 from the line at $2,833 cost, for a blended cost of $6,733 — diversifying financing sources to reduce dependency on any single facility."
     },
     "CorrectChoice": "A",
@@ -5215,7 +5215,7 @@ var MCQ_BANK_A = [
       "A": "Record the supplier constraint as revenue",
       "B": "Ignore operational constraints unless year-end financial statements are issued",
       "C": "Update forecasts and consider budget revisions when assumptions materially change",
-      "D": "Keep all original assumptions because budgets can never change"
+      "D": "Keep all original assumptions because budgets are fixed once approved"
     },
     "CorrectChoice": "C",
     "ExplanationCorrect": "Planning should incorporate material changes in assumptions; rolling forecasts and revised budgets support management decisions.",
@@ -8504,7 +8504,7 @@ var MCQ_BANK_A = [
     "Stem": "Umbra's corporate leadership sets budget targets and pushes them down to department managers without their input. What is the primary risk of this top-down budgeting approach compared to participative budgeting?",
     "Choices": {
       "A": "Targets may be unrealistic and reduce manager buy-in and motivation",
-      "B": "The budget will always understate expected costs",
+      "B": "The budget will understate expected costs",
       "C": "Department managers gain excessive control over corporate strategy",
       "D": "The process becomes too slow to complete on schedule"
     },
@@ -8861,7 +8861,7 @@ var MCQ_BANK_A = [
       "A": "Investigate only variances caused by accounting staff",
       "B": "Focus management attention on significant, controllable, or unusual variances",
       "C": "Investigate every variance equally regardless of size",
-      "D": "Ignore favorable variances because they are always good"
+      "D": "Ignore favorable variances because favorable results need no explanation"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Management by exception prioritizes variances that warrant attention.",
@@ -9319,7 +9319,7 @@ var MCQ_BANK_A = [
     "Choices": {
       "A": "Set transfer pricing policies that promote goal congruence and fair performance evaluation",
       "B": "Use transfer prices only for tax reporting",
-      "C": "Always use a zero transfer price",
+      "C": "Use a zero transfer price",
       "D": "Let the buying division set price unilaterally"
     },
     "CorrectChoice": "A",
@@ -10030,7 +10030,7 @@ var MCQ_BANK_A = [
     "ItemStyle": "single-select",
     "Stem": "Selling Division capacity is 50,000 units. Current external demand is 35,000 units at $60/unit, variable cost is $28/unit, and Buying Division wants 20,000 units. Compare the minimum transfer price under two scenarios: (A) no external market exists beyond current demand, versus (B) an external buyer offers $52/unit for any unsold capacity. Which statement is correct?",
     "Choices": {
-      "A": "The minimum transfer price is $28 in both scenarios because variable cost always sets the floor",
+      "A": "The minimum transfer price is $28 in both scenarios because variable cost sets the floor",
       "B": "Under Scenario A the minimum is $28 (variable cost with no opportunity cost), while Under Scenario B the minimum is $52 because the selling division can sell externally at that price on its remaining 15,000 units of capacity",
       "C": "Under Scenario B the selling division should charge $60 because that is the regular market price",
       "D": "The minimum transfer price is $60 in both scenarios to maintain consistency with external pricing"
@@ -10133,7 +10133,7 @@ var MCQ_BANK_A = [
     "ItemStyle": "single-select",
     "Stem": "Titan needs a policy for deciding which variances to investigate. Which response is most appropriate?",
     "Choices": {
-      "A": "Ignore recurring small variances because they are always immaterial",
+      "A": "Ignore recurring small variances because their size alone proves they cannot signal a systemic problem",
       "B": "Consider size, recurrence, controllability, cost of investigation, and operational significance",
       "C": "Investigate based only on whether the variance is caused by price",
       "D": "Investigate only favorable variances"
@@ -10744,7 +10744,7 @@ var MCQ_BANK_A = [
     "Stem": "Granite needs a policy for deciding which variances to investigate. Which response is most appropriate?",
     "Choices": {
       "A": "Consider size, recurrence, controllability, cost of investigation, and operational significance",
-      "B": "Ignore recurring small variances because they are always immaterial",
+      "B": "Ignore recurring small variances because their size alone proves they cannot signal a systemic problem",
       "C": "Investigate based only on whether the variance is caused by price",
       "D": "Investigate only favorable variances"
     },
@@ -11354,7 +11354,7 @@ var MCQ_BANK_A = [
     "Stem": "Summit needs a policy for deciding which variances to investigate. Which response is most appropriate?",
     "Choices": {
       "A": "Investigate based only on whether the variance is caused by price",
-      "B": "Ignore recurring small variances because they are always immaterial",
+      "B": "Ignore recurring small variances because their size alone proves they cannot signal a systemic problem",
       "C": "Investigate only favorable variances",
       "D": "Consider size, recurrence, controllability, cost of investigation, and operational significance"
     },
@@ -11965,7 +11965,7 @@ var MCQ_BANK_A = [
     "Stem": "Frontier needs a policy for deciding which variances to investigate. Which response is most appropriate?",
     "Choices": {
       "A": "Investigate based only on whether the variance is caused by price",
-      "B": "Ignore recurring small variances because they are always immaterial",
+      "B": "Ignore recurring small variances because their size alone proves they cannot signal a systemic problem",
       "C": "Investigate only favorable variances",
       "D": "Consider size, recurrence, controllability, cost of investigation, and operational significance"
     },
@@ -12575,7 +12575,7 @@ var MCQ_BANK_A = [
     "ItemStyle": "single-select",
     "Stem": "Riverview needs a policy for deciding which variances to investigate. Which response is most appropriate?",
     "Choices": {
-      "A": "Ignore recurring small variances because they are always immaterial",
+      "A": "Ignore recurring small variances because their size alone proves they cannot signal a systemic problem",
       "B": "Investigate based only on whether the variance is caused by price",
       "C": "Investigate only favorable variances",
       "D": "Consider size, recurrence, controllability, cost of investigation, and operational significance"
@@ -13188,7 +13188,7 @@ var MCQ_BANK_A = [
       "A": "Investigate only favorable variances",
       "B": "Consider size, recurrence, controllability, cost of investigation, and operational significance",
       "C": "Investigate based only on whether the variance is caused by price",
-      "D": "Ignore recurring small variances because they are always immaterial"
+      "D": "Ignore recurring small variances because their size alone proves they cannot signal a systemic problem"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Variance investigation should consider multiple quantitative and qualitative factors.",
@@ -13795,7 +13795,7 @@ var MCQ_BANK_A = [
     "ItemStyle": "single-select",
     "Stem": "Quartz needs a policy for deciding which variances to investigate. Which response is most appropriate?",
     "Choices": {
-      "A": "Ignore recurring small variances because they are always immaterial",
+      "A": "Ignore recurring small variances because their size alone proves they cannot signal a systemic problem",
       "B": "Investigate based only on whether the variance is caused by price",
       "C": "Investigate only favorable variances",
       "D": "Consider size, recurrence, controllability, cost of investigation, and operational significance"
@@ -14405,8 +14405,8 @@ var MCQ_BANK_A = [
     "Stem": "Evergreen's two service departments (Maintenance: $200,000; IT: $150,000) provide 30% mutual cross-services to each other. Three production departments consume the remainder. The controller is evaluating three approaches: (1) the direct method, which ignores all interservice flows; (2) the step-down method, which recognizes only one direction of service flow; and (3) the reciprocal method, which captures both directions via simultaneous equations. Management prefers simplicity, but the CFO insists on cost accuracy for pricing decisions. Which recommendation should the controller present?",
     "Choices": {
       "A": "Recommend the reciprocal method because the 30% mutual service level is material to pricing accuracy, even though it requires algebraic computation; the cost of distorted product costs from simpler methods likely exceeds the computational burden",
-      "B": "Recommend the direct method because it is always acceptable under GAAP for external reporting and management should prioritize simplicity over accuracy for all cost allocation decisions",
-      "C": "Recommend the step-down method because it is a compromise that always captures the most material interservice flow while being simpler than the reciprocal method",
+      "B": "Recommend the direct method because it is acceptable under GAAP for external reporting and management should prioritize simplicity over accuracy for all cost allocation decisions",
+      "C": "Recommend the step-down method because it is a compromise that captures the most material interservice flow while being simpler than the reciprocal method",
       "D": "Recommend that no allocation method be used and instead treat all service department costs as period expenses because interservice flows make allocation inherently arbitrary"
     },
     "CorrectChoice": "A",
@@ -19936,7 +19936,7 @@ var MCQ_BANK_A = [
     "ItemStyle": "single-select",
     "Stem": "A company assigns the monthly bank reconciliation to an employee who has no involvement in cash receipts, disbursements, or recordkeeping. What is the primary control benefit of this segregation?",
     "Choices": {
-      "A": "It guarantees that fraud will never occur",
+      "A": "It guarantees that fraud will not occur",
       "B": "It provides an independent check that can detect errors or irregularities in the cash records",
       "C": "It eliminates the need for any other cash controls",
       "D": "It is required only for public companies"
@@ -20556,7 +20556,7 @@ var MCQ_BANK_A = [
     "Choices": {
       "A": "No weakness exists since the manager knows the inventory best",
       "B": "The lack of segregation between custody and counting increases the risk that shortages or theft could go undetected or be concealed",
-      "C": "The count will always be more accurate than an independent count",
+      "C": "The count will be more accurate than an independent count",
       "D": "This arrangement is required for accurate cycle counts"
     },
     "CorrectChoice": "D",
@@ -23360,7 +23360,7 @@ var MCQ_BANK_A = [
     "ItemStyle": "single-select",
     "Stem": "Frontier Financial's security architect is reviewing encryption coverage across five data flow paths in the customer-to-report pipeline: (Path-1) Customer Portal → Web Application Firewall: TLS 1.3, certificate valid; (Path-2) Web App → ERP System: internal network, no encryption, justified as 'internal traffic'; (Path-3) ERP → Data Warehouse: nightly ETL batch over VPN, data at rest encrypted in DW (AES-256), data in transit during ETL is unencrypted within the VPN tunnel; (Path-4) Data Warehouse → BI Tool: queries over internal network, no encryption, BI tool connects via ODBC with basic authentication (no Kerberos, no certificate); (Path-5) BI Tool → Board Report PDF: PDF generated on BI server, emailed to CFO as attachment, email uses TLS but the PDF itself has no password protection or DRM. The security architect must identify all encryption coverage gaps that expose financial data. Which analysis is correct?",
     "Choices": {
-      "A": "Only Path-2 has a gap — internal network traffic should always be encrypted, and labeling traffic as 'internal' does not eliminate the risk of internal threats or network compromise",
+      "A": "Only Path-2 has a gap — internal network traffic should be encrypted, and labeling traffic as 'internal' does not eliminate the risk of internal threats or network compromise",
       "B": "Paths 2, 4, and 5 have gaps — Path-2 lacks any encryption on financial transaction data between web app and ERP, Path-4 uses unencrypted ODBC with basic auth exposing query results, and Path-5 embeds financial data in an unprotected PDF distributed via email",
       "C": "Paths 2 and 4 have gaps — Path-5 is acceptable because the email transport layer uses TLS, which properly protects the PDF in transit",
       "D": "None of the paths have material gaps — VPN protects Path-3 transit, internal networks are trusted zones by design (Paths 2 and 4), and email TLS protects Path-5, making the current architecture defensible"

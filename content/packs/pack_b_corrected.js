@@ -410,7 +410,7 @@
       "A": "Patent and customer list are finite-lived intangibles; license, workforce, and trademark are all classified as goodwill because they lack separable market value.",
       "B": "All five items are identifiable intangible assets. The patent and customer list have finite lives; the license, workforce, and trademark have indefinite lives because each can be renewed or retained indefinitely.",
       "C": "Patent and customer list are finite-lived identifiable intangibles; license and trademark are indefinite-lived identifiable intangibles; assembled workforce is goodwill.",
-      "D": "Patent, customer list, and license are all finite-lived intangibles because each has a measurable economic term. The workforce and trademark are indefinite-lived intangibles because they have no fixed term."
+      "D": "The customer list and assembled workforce are both goodwill because customers and employees are not assets under ASC 805; the patent, license, and trademark are identifiable intangibles with indefinite lives."
     },
     "StudyLinks": [
       {
@@ -424,7 +424,7 @@
     "ExplanationWrongA": "This recommendation incorrectly classifies the renewable broadcasting license and trademark as goodwill. Both are identifiable intangible assets because they arise from contractual or legal rights (the license from government grant, the trademark from registration). Under ASC 805-20-55, assets that arise from contractual-legal rights are identifiable even if not separable. The license and trademark both meet this criterion and should be recognized separately from goodwill. Only the assembled workforce — which is neither separable nor arising from contractual/legal rights — should be classified as goodwill.",
     "ExplanationWrongB": "This recommendation errs by classifying the assembled workforce as an identifiable intangible asset. ASC 805-20-55-6 explicitly states that an assembled workforce is not an identifiable intangible asset to be recognized separately in a business combination. An assembled workforce does not arise from contractual or legal rights and is not separable — employees can leave. Furthermore, goodwill is not simply a residual; it represents the future economic benefits arising from assets acquired that are not individually identified, including workforce synergies. The workforce must be included in goodwill, not treated as an indefinite-lived intangible.",
     "ExplanationWrongC": "",
-    "ExplanationWrongD": "This recommendation misclassifies the renewable broadcasting license as a finite-lived intangible. Under ASC 350-30-35-4, an intangible asset has an indefinite useful life when there is no foreseeable limit on the period over which the asset is expected to generate cash flows. A license renewable indefinitely at minimal cost meets this criterion — the renewal option effectively extends the useful life without limit. Additionally, the trademark with indefinite renewal also has indefinite life, not the finite classification implied by grouping it with the workforce. The renewable nature of both items is the key differentiator, not the absence of a fixed term.",
+    "ExplanationWrongD": "This recommendation misclassifies the customer list as goodwill. Under ASC 805, a customer list acquired in a business combination IS an identifiable intangible asset: it arises from contractual or legal rights (customer relationships) and is separable — customer lists are routinely licensed or sold. It is carried at fair value with a finite useful life of 3 years (the average retention period). It also misclassifies the patent as indefinite-lived: the patent's 7-year remaining legal life caps its useful life, making it finite-lived by definition. The workforce remains the only item properly classified as goodwill.",
     "DifficultyScore": 4,
     "CognitiveLevel": "Analyze"
   },
@@ -3668,7 +3668,7 @@
     "ReviewNote": "If missed or marked, review the linked study materials.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Never changes",
+      "A": "Does not change",
       "B": "Includes only fixed costs",
       "C": "Adjusts for changes in actual activity levels",
       "D": "Is prepared once at the beginning of the period"
@@ -4505,7 +4505,7 @@
       "A": "Inflation adjustments to prior year costs",
       "B": "Incremental improvements in costs throughout the budget period",
       "C": "Radical reengineering of processes",
-      "D": "Budgets that never change once approved"
+      "D": "Budgets that are fixed once approved"
     },
     "StudyLinks": [
       {
@@ -4545,7 +4545,7 @@
     "CalculationItem": false,
     "Choices": {
       "A": "All departments submit budgets simultaneously",
-      "B": "The budget is never changed regardless of conditions",
+      "B": "The budget is not changed regardless of conditions",
       "C": "The budget is prepared once and used for the entire year",
       "D": "A new budget period is added as the current period ends, maintaining a constant horizon"
     },
@@ -6984,7 +6984,7 @@
     "Choices": {
       "A": "Only the dollar amount",
       "B": "Both the dollar amount and percentage in relation to materiality",
-      "C": "Variances are never investigated if they are favorable",
+      "C": "Variances are not investigated if they are favorable",
       "D": "Only the percentage deviation"
     },
     "StudyLinks": [
@@ -9381,7 +9381,7 @@
     "Choices": {
       "A": "It discourages replacement because current ROI is inflated by low net book value; new assets would reduce ROI",
       "B": "It has no effect on replacement decisions",
-      "C": "It encourages replacement because net book value is always lower than gross book value",
+      "C": "It encourages replacement because net book value is lower than gross book value",
       "D": "It encourages replacement because new equipment has higher net book value"
     },
     "StudyLinks": [
@@ -10115,7 +10115,7 @@
     "ReviewNote": "If missed or marked, review leading vs. lagging indicators in the balanced scorecard",
     "CalculationItem": false,
     "Choices": {
-      "A": "Lagging indicators are always financial measures and leading indicators are always nonfinancial measures",
+      "A": "Lagging indicators are financial measures and leading indicators are nonfinancial measures",
       "B": "Lagging indicators predict future performance, while leading indicators report past results",
       "C": "Leading indicators drive future performance and are often found in the learning and growth and internal process perspectives",
       "D": "The balanced scorecard only uses lagging indicators"
@@ -10347,7 +10347,7 @@
     "Choices": {
       "A": "It focuses on external comparisons only",
       "B": "It provides an objective basis for setting performance targets",
-      "C": "It always improves competitive advantage",
+      "C": "It improves competitive advantage",
       "D": "It may lead to copycat behavior rather than true innovation"
     },
     "StudyLinks": [
@@ -10394,7 +10394,7 @@
       "A": "Benchmarking identifies performance gaps, while best practices identify methods to close those gaps",
       "B": "Benchmarking is only used in manufacturing, while best practices apply to all industries",
       "C": "There is no difference; the terms are synonymous",
-      "D": "Best practices are always more expensive than benchmarking"
+      "D": "Best practices are more expensive than benchmarking"
     },
     "StudyLinks": [
       {
@@ -10712,7 +10712,7 @@
       "A": "Customer B likely has a higher cost-to-serve due to larger orders",
       "B": "Customer A likely has a higher cost-to-serve due to more complex service demands",
       "C": "Both customers have the same cost-to-serve if they purchase the same total volume",
-      "D": "Customer A always has higher gross margin than Customer B"
+      "D": "Customer A has higher gross margin than Customer B"
     },
     "StudyLinks": [
       {
@@ -11119,8 +11119,8 @@
     "ReviewNote": "If missed or marked, review when to investigate favorable vs. unfavorable variances",
     "CalculationItem": false,
     "Choices": {
-      "A": "Favorable variances should never be investigated because they improve profitability",
-      "B": "Favorable variances are always caused by random chance",
+      "A": "Favorable variances should not be investigated because they improve profitability",
+      "B": "Favorable variances are caused by random chance",
       "C": "Only unfavorable variances exceeding 10% of standard should be investigated",
       "D": "Favorable variances may warrant investigation if they result from using inferior materials that could harm quality or lead to future unfavorable usage variances"
     },
@@ -11672,7 +11672,7 @@
     "CalculationItem": false,
     "Choices": {
       "A": "Employees may become frustrated and demotivated if standards are perceived as unattainable",
-      "B": "Tight standards always lead to higher productivity",
+      "B": "Tight standards lead to higher productivity",
       "C": "Tight standards eliminate the need for variance analysis",
       "D": "Employees may be motivated to exceed the standards consistently"
     },
@@ -11812,7 +11812,7 @@
       "A": "Revise the material price standard mid-year because the change is significant and persistent",
       "B": "Continue using the old standard for the entire year, as standards are fixed once set",
       "C": "Only revise standards at year-end regardless of changes",
-      "D": "Never revise standards after the beginning of the period"
+      "D": "Do not revise standards after the beginning of the period"
     },
     "StudyLinks": [
       {
@@ -14063,7 +14063,7 @@
       "A": "Overhead costs are assigned to products in a timely manner without waiting for actual data",
       "B": "Predetermined rates eliminate overapplied or underapplied overhead",
       "C": "Product costs are more accurate with predetermined rates",
-      "D": "Predetermined rates are always lower than actual rates"
+      "D": "Predetermined rates are lower than actual rates"
     },
     "StudyLinks": [
       {
@@ -15937,7 +15937,7 @@
       "A": "Assign Maria to all five functions and have the controller review her work weekly. Since Maria is the most senior and trusted employee, concentrating duties under one experienced person with supervisory review is more effective than spreading incompatible functions across three less-experienced staff who may not detect each other's errors.",
       "B": "Assign James to recording sales invoices and opening mail (functions 2 and 3), Tanya to credit authorization and bank reconciliations (functions 1 and 4), and Maria to write-off approvals (function 5). This distributes the workload evenly and avoids overloading any single employee.",
       "C": "Assign James to recording sales invoices and the AR subledger (function 2), Tanya to opening mail and the cash receipts listing (function 3), and Maria to credit authorization, bank reconciliation, and write-off approvals (functions 1, 4, and 5). The controller will perform quarterly independent reviews of credit-limit changes and all write-offs exceeding $500 as compensating controls.",
-      "D": "Assign James to credit authorization and recording sales invoices (functions 1 and 2), Tanya to opening mail and bank reconciliation (functions 3 and 4), and Maria to write-off approvals (function 5). This separation ensures custody of cash is segregated from all other functions."
+      "D": "Assign James to recording sales invoices and preparing the bank reconciliation (functions 2 and 4), Tanya to opening mail and the cash receipts listing (function 3), and Maria to credit authorization and write-off approvals (functions 1 and 5). This plan isolates custody from the other functions."
     },
     "StudyLinks": [
       {
@@ -15955,7 +15955,7 @@
     "ExplanationWrongC": "",
     "ExplanationWrongA": "Concentrating all five functions under one employee, regardless of seniority, violates the foundational COSO principle that no single individual should control more than one of the four key functions (authorization, custody, record keeping, reconciliation). Weekly supervisory review is not a substitute for segregation — it is a detective compensating control layered on top of structural segregation. An employee with unfettered access to all five functions could perpetrate and conceal fraud between review cycles. The controller's review would need to reconstruct transactions after the fact — by which time cash could already be misappropriated and records altered. Seniority and trust are personnel attributes, not control attributes; COSO's Control Activities component requires structural separation regardless of the individuals involved.",
     "ExplanationWrongB": "Assigning James to both recording sales invoices (record keeping) and opening mail/cash receipts (custody) is the highest-risk incompatible combination in the revenue cycle. An employee who records customer accounts AND handles incoming cash can perpetrate lapping: steal a customer's check, apply the next customer's payment to the first customer's account to conceal the theft, and continue the cycle indefinitely. This is one of the most common revenue-cycle fraud schemes and is precisely the combination COSO's segregation principle is designed to prevent. Even workload distribution is a secondary concern — control design must prioritize isolating incompatible duties.",
-    "ExplanationWrongD": "Assigning James to both credit authorization and sales invoice recording combines authorization with record keeping. An employee who can approve credit limits AND record the resulting sales could extend credit to fictitious customers or related parties and record sham sales to meet revenue targets. Tanya's combination of cash custody (opening mail) and bank reconciliation places custody and reconciliation in the same hands — she could misappropriate cash receipts and conceal the shortage during reconciliation, defeating the purpose of the bank reconciliation as an independent check. This plan isolates custody from two other functions but creates two separate incompatible-duty concentrations."
+    "ExplanationWrongD": "Assigning James to both sales invoice recording and the bank reconciliation combines record keeping with reconciliation. The bank reconciliation is valuable only when performed independently of the person who maintains the records being reconciled — an employee who records customer accounts AND reconciles the bank can conceal a discrepancy in either direction and adjust the records to hide it. This plan also leaves James able to misstate the AR subledger without an independent check of the cash side. Segregation requires the reconciliation function to sit outside the record-keeping path, as in the correct plan where Maria performs the reconciliation."
   },
   {
     "Part": 1,
@@ -17947,7 +17947,7 @@
     "Choices": {
       "A": "Periodically test the plan through tabletop exercises, simulations, or full-scale recovery tests",
       "B": "Keep the plan confidential from IT staff to prevent security breaches",
-      "C": "File the plan with the SEC and never modify it",
+      "C": "File the plan with the SEC and do not modify it",
       "D": "Rely solely on the plan's documentation without testing since testing is too disruptive"
     },
     "StudyLinks": [
@@ -19937,7 +19937,7 @@
       "A": "ERP implementations have no impact on business processes",
       "B": "ERP systems automatically configure themselves without any customization",
       "C": "Inadequate user training and resistance to change can undermine the benefits of the new system",
-      "D": "Segregation of duties controls are automatically configured and never require adjustment"
+      "D": "Segregation of duties controls are automatically configured and do not require adjustment"
     },
     "StudyLinks": [
       {

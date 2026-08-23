@@ -32044,3 +32044,94 @@ Authored and integrated 30 new Part 2 MCQs (5 per pack) across all 6 domains.
 
 **Revision recorded by:** Distractor Quality Audit
 **Date:** 2026-08-23
+
+---
+
+## 2026-08-23 — DL-043 Batch 1 Remediation (7 rewrites + 4 triaged + 4 misassigned-EW fixes)
+
+**Session Type:** Content remediation (Full Governance Lane — Part 1 packs)
+**User approval:** Documented here — user authorized "document and update the governance. Then commit for a backup point and start remediation for batch 1" (2026-08-23)
+**Backup timestamp:** 2026-08-23T14:13:22 — `content/packs/pack_{a,b,d,e}_corrected.js.bak-20260823141322` (pack_c untouched)
+**Governance commit:** `09bdbbe` (DL-043 + DL-003 amendment, pre-remediation backup point)
+
+### Changes Applied
+
+| Item | Pack | Fix |
+|------|------|-----|
+| P1-A-064 | a | Choice D rewritten (was restatement duplicate of B): now tests the defer-write-down-on-expected-recovery trap; EWD rewritten to match |
+| P1B-A-085 | b | Choice D rewritten (was near-duplicate of A/B): now tests customer-list-as-goodwill trap; EWD rewritten |
+| P1B-E-086 | b | Choice D rewritten (was assignment-list clone of B): now tests record-keeping+reconciliation combination; EWD rewritten |
+| P1-CD-068 | d | EWA and EWC rewritten — both were misassigned (controllability / ZBB boilerplate from a different item) |
+| P1-CD-044 | d | EWC rewritten — ZBB boilerplate in a customer-profitability item (DL-010 amendment) |
+| P1-CD-072 | d | EWC rewritten — ZBB boilerplate in a quality-benchmarking item |
+| P1-CD-075 | d | EWB rewritten — ZBB boilerplate in a quality-maturity item |
+| P1-E-R11 | e | Choice D rewording (structural mimicry with C) |
+| P1-E-R13 | e | Choices A/D rewording (correction vs detection clarity) |
+| P1-E-R19 | e | Choice D rewritten (was restatement duplicate of B — both described 404(b) attestation): now tests incomplete-302 trap; EWD rewritten |
+
+**Triaged as distinct traps — no change (documented):** P1E-C-S01, P1E-C-S06, P1E-D-S04, P1E-F-S04 (superficially similar structure, genuinely different error sets on inspection).
+
+### Governance Writes
+
+- DL-043 updated: Batch 1 progress recorded.
+- DL-010 amended (2026-08-23): ZBB template contamination — 17 EW slots classified (13 on-topic-generic deferred to DL-013 workstream; 4 misassigned corrected).
+
+### Verification
+
+- `node --check` x5 packs: PASS
+- Item counts unchanged (500/500/500/500/620); DL-008 0; DL-026 0 (all packs)
+- Misassignment-fix presence confirmed in pack_d
+- `npm run preflight`: PASS — 0 divergences
+- CorrectChoice unchanged on all 12 touched items
+
+**Pending:** DL-043 Batch 2 (strong absolute terms — 128 items), then any/every/all/must triage (1,032 hits), DL-013-class ZBB generic-EW cluster (13 items).
+
+**Revision recorded by:** DL-043 Batch 1 Remediation
+**Date:** 2026-08-23
+
+---
+
+## 2026-08-23 — DL-043 Batch 2 Remediation (Strong Absolute Terms, 128 items)
+
+**Session Type:** Content remediation (Full Governance Lane — Part 1 packs)
+**User approval:** Documented here — user authorized "run batch 2 and commit afterward to save progress" (2026-08-23)
+**Backup timestamp:** 2026-08-23T14:13:22 (pack backups from Batch 1 — unchanged since; Batch 2 edits applied to the same session state)
+
+### Scope
+
+128 distractor-slot hits for the strong absolute terms (always 80 / never 44 / impossible 4) across 2,620 items. Grouped into 78 distinct choice texts — predominantly rotation-group template families (e.g., "Ignore recurring small variances because they are always immaterial" ×7, "Never test goodwill unless it is sold" ×5).
+
+### Method
+
+Phrase-table transformation engine (78 specific rules + 19 generic verb-pattern rules). Each rewrite preserves the distractor's falsity while removing the cueing term:
+- "they are always immaterial" → "their size alone proves they cannot signal a systemic problem"
+- "Never amortize intangible assets with finite lives" → "Do not amortize intangible assets with finite lives"
+- "It guarantees that fraud will never occur" → "It guarantees that fraud will not occur"
+- etc. — full table in the batch-2 report artifact
+
+### Triaged as legitimate (kept, 5)
+
+- Bare "Never" answer options in yes/no-format items: P1E-A-070, P1E-A-078, P1E-C-092
+- "almost always" hedge: P1-FC-038 (already hedged — not in the strong set)
+- Factually-true absolute: "Management override of established controls is always possible" (P1B-E-150)
+
+### Verification
+
+- 118 slot replacements applied across 5 packs (A 19, B 16, C 38, D 21, E 24)
+- `node --check` ×5 packs: PASS; item counts unchanged (500/500/500/500/620)
+- DL-008: 0; DL-026: 0 (all packs)
+- Residual strong-abs scan: 0 non-KEEP hits in distractor choices
+- `npm run preflight`: PASS — 0 divergences
+- CorrectChoice unchanged on all touched items
+
+### Governance
+
+- DL-043 updated: Batch 2 progress recorded.
+
+### Pending
+
+- any/every/all/must triage (1,032 hits — many legitimate technical uses)
+- DL-013-class ZBB generic-EW cluster (13 items)
+
+**Revision recorded by:** DL-043 Batch 2 Remediation
+**Date:** 2026-08-23

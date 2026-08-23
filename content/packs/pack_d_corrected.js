@@ -6484,7 +6484,7 @@ var MCQ_BANK_D = [
       "A": "Reject the discount — $7,776 in incremental carrying costs on 43,200 lbs exceeds the $8,640 savings, producing a net loss",
       "B": "Accept the discount — place a single 43,200-lb order in June. $8,640 savings exceeds $3,960 in incremental carrying costs, yielding a net benefit of $4,680",
       "C": "Order exactly 40,000 lbs in June to qualify for the discount, buying the remaining 3,200 lbs at full price in July",
-      "D": "Split the order across both months at standard price — inventory minimization always outweighs any discount"
+      "D": "Split the order across both months at standard price — inventory minimization outweighs any discount"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "Without discount: June purchase = 22,000+2,200−3,000 = 21,200 lbs at $5.00 = $106,000. July purchase = 22,000+2,200−2,200 = 22,000 lbs at $5.00 = $110,000. Total = $216,000. With discount: Total needed = 21,200+22,000 = 43,200 lbs at $4.80 = $207,360. Savings = $216,000−$207,360 = $8,640. Extra inventory held = (3,000+43,200−22,000)−2,200 = 22,000 lbs. Carrying cost = 22,000×$0.18 = $3,960. Net = $8,640−$3,960 = $4,680. Accept. Key insight: only excess inventory (July's requirement held during June) incurs incremental carrying cost, not the entire purchase.",
@@ -10482,7 +10482,7 @@ var MCQ_BANK_D = [
     "Stem": "Dellwood uses a dual-rate transfer pricing system, charging the buying division variable cost and crediting the selling division with variable cost plus a fixed fee. What is the primary purpose of this approach?",
     "Choices": {
       "A": "To encourage internal transfers at variable cost while still compensating the selling division for fixed costs",
-      "B": "To always match the external market price exactly",
+      "B": "To match the external market price exactly",
       "C": "To eliminate the need for any transfer pricing policy",
       "D": "To guarantee the selling division reports a loss every period"
     },
@@ -10534,7 +10534,7 @@ var MCQ_BANK_D = [
     "Choices": {
       "A": "To eliminate the need for any transfer pricing policy",
       "B": "To encourage internal transfers at variable cost while still compensating the selling division for fixed costs",
-      "C": "To always match the external market price exactly",
+      "C": "To match the external market price exactly",
       "D": "To guarantee the selling division reports a loss every period"
     },
     "CorrectChoice": "B",
@@ -10584,7 +10584,7 @@ var MCQ_BANK_D = [
     "Stem": "Frostvale uses a dual-rate transfer pricing system, charging the buying division variable cost and crediting the selling division with variable cost plus a fixed fee. What is the primary purpose of this approach?",
     "Choices": {
       "A": "To guarantee the selling division reports a loss every period",
-      "B": "To always match the external market price exactly",
+      "B": "To match the external market price exactly",
       "C": "To encourage internal transfers at variable cost while still compensating the selling division for fixed costs",
       "D": "To eliminate the need for any transfer pricing policy"
     },
@@ -10636,7 +10636,7 @@ var MCQ_BANK_D = [
     "Choices": {
       "A": "To eliminate the need for any transfer pricing policy",
       "B": "To guarantee the selling division reports a loss every period",
-      "C": "To always match the external market price exactly",
+      "C": "To match the external market price exactly",
       "D": "To encourage internal transfers at variable cost while still compensating the selling division for fixed costs"
     },
     "CorrectChoice": "D",
@@ -10687,7 +10687,7 @@ var MCQ_BANK_D = [
     "Choices": {
       "A": "To encourage internal transfers at variable cost while still compensating the selling division for fixed costs",
       "B": "To eliminate the need for any transfer pricing policy",
-      "C": "To always match the external market price exactly",
+      "C": "To match the external market price exactly",
       "D": "To guarantee the selling division reports a loss every period"
     },
     "CorrectChoice": "A",
@@ -10736,7 +10736,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Islewood uses a dual-rate transfer pricing system, charging the buying division variable cost and crediting the selling division with variable cost plus a fixed fee. What is the primary purpose of this approach?",
     "Choices": {
-      "A": "To always match the external market price exactly",
+      "A": "To match the external market price exactly",
       "B": "To encourage internal transfers at variable cost while still compensating the selling division for fixed costs",
       "C": "To eliminate the need for any transfer pricing policy",
       "D": "To guarantee the selling division reports a loss every period"
@@ -10787,7 +10787,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Jettison uses a dual-rate transfer pricing system, charging the buying division variable cost and crediting the selling division with variable cost plus a fixed fee. What is the primary purpose of this approach?",
     "Choices": {
-      "A": "To always match the external market price exactly",
+      "A": "To match the external market price exactly",
       "B": "To eliminate the need for any transfer pricing policy",
       "C": "To encourage internal transfers at variable cost while still compensating the selling division for fixed costs",
       "D": "To guarantee the selling division reports a loss every period"
@@ -11275,7 +11275,7 @@ var MCQ_BANK_D = [
     ],
     "ExplanationWrongA": "",
     "ExplanationWrongB": "Standard costing sets benchmarks for input costs. It does not measure customer profitability, which compares net contribution per customer after customer-specific costs.",
-    "ExplanationWrongC": "Zero-based budgeting requires all expenses to be justified each period from zero. It is a budgeting philosophy, not directly related to segment profitability reporting.",
+    "ExplanationWrongC": "Option C identifies Gamma as the least profitable based on a customer-level PROFIT of $14,270 — but Gamma is profitable, not the least profitable account. The analysis shows Beta with a customer-level LOSS of $26,300, driven by high order frequency, excessive returns, and service-cost intensity. C also recommends focusing growth on Alpha and Beta because they generate higher gross revenue — that reverses the finding: Beta, the higher-revenue account, is the profit destroyer once activity-based service costs are assigned. The point of customer profitability analysis is that gross revenue is not profit; the service-cost drivers decide which customers actually pay their way.",
     "ExplanationWrongD": "The calculation shows that two of the three customers are profitable while one generates a loss. Concluding that all three customers are unprofitable would be an overgeneralization. Customer profitability analysis evaluates accounts individually, and the appropriate response depends on whether the unprofitable customer can be turned around through repricing or cost reduction.",
     "question_state": "Certified",
     "DifficultyScore": 2,
@@ -12480,7 +12480,7 @@ var MCQ_BANK_D = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "The controllability principle addresses who should be held accountable for which variances based on their authority. The scenario describes comparing the cost of investigation to the expected benefit of uncovering and correcting the variance’s cause — a cost-benefit trade-off applied to the variance investigation decision.",
+    "ExplanationWrongA": "Option A applies the OR rule — investigating whenever a variance exceeds EITHER the dollar threshold OR the percentage threshold. The dual-threshold policy requires BOTH tests to pass. Under the OR rule, DL efficiency ($4,500; 5.2%) and FOH budget ($5,800; 4.7%) would both be investigated because each passes exactly one test. The cost-benefit design of the dual threshold exists precisely to filter out these one-sided variances: a large dollar variance on a small base, or a large percentage variance on a small dollar amount.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "Zero-based budgeting requires all expenses to be justified each period from zero. It is a budgeting philosophy, not directly related to segment profitability reporting.",
     "ExplanationWrongD": "A comprehensive investigation of all six variances regardless of threshold would be inefficient and costly. The company's policy applies a dual-threshold framework—only variances exceeding both $5,000 AND 5% warrant investigation. This cost-benefit approach focuses management attention on the most significant variances.",
@@ -12684,7 +12684,7 @@ var MCQ_BANK_D = [
     ],
     "ExplanationWrongA": "Standard costing sets predetermined benchmarks for input costs and measures variances from those standards. It is a cost control technique, not a company-wide philosophy that makes quality and continuous improvement the shared responsibility of every employee, which defines total quality management.",
     "ExplanationWrongB": "ABC assigns overhead based on activities and cost drivers. It is a cost allocation method, not a framework for aligning performance measures with organizational goals.",
-    "ExplanationWrongC": "Zero-based budgeting requires all expenses to be justified each period from zero. It is a budgeting philosophy, not directly related to segment profitability reporting.",
+    "ExplanationWrongC": "Option C reads Pinecrest's profile as lean manufacturing, but the numbers describe the opposite of a lean system: prevention spending of $52,000 is a fraction of the $550,000 in combined failure costs, and internal failure costs of $210,000 signal defects being produced and caught after the fact — precisely the waste lean programs eliminate. A lean operation drives failure costs down through built-in quality; Pinecrest's profile shows high appraisal reliance and heavy failure costs, the signature of a traditional, inspection-based quality system underinvesting in prevention. The benchmark should read the COQ ratios, not the vocabulary of the improvement program.",
     "ExplanationWrongD": "",
     "question_state": "Certified",
     "DifficultyScore": 3,
@@ -12833,7 +12833,7 @@ var MCQ_BANK_D = [
       "Distractors written as plausible CMA-style traps"
     ],
     "ExplanationWrongA": "Activity-based costing assigns overhead based on activities and cost drivers. It is a cost allocation method, not a company-wide philosophy emphasizing continuous improvement and shared responsibility for quality.",
-    "ExplanationWrongB": "Zero-based budgeting requires all expenses to be justified each period from zero. It is a budgeting philosophy, not a management approach focused on quality and continuous improvement.",
+    "ExplanationWrongB": "Option B describes Oakhaven as a 'developing' system, but the profile is fully mature. Prevention costs of $380,000 are 67.0% of total COQ and outweigh the combined failure costs of $67,000 by more than five to one; failure costs have been driven to just 11.8% of the total. A developing system still carries proportionately high failure costs while it builds prevention capacity — Oakhaven has already completed that transition. The correct reading of the ratios — dominant prevention plus minimal failure — is the defining signature of a mature TQM organization.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "Standard costing sets benchmarks for input costs and measures variances from those standards. It does not represent a company-wide philosophy of continuous improvement and customer satisfaction.",
     "question_state": "Certified",
@@ -14881,7 +14881,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Palisade allocates service department costs using the step-down method, ranking departments by the amount of service they provide to other service departments. What distinguishes this method?",
     "Choices": {
-      "A": "It only allocates costs to other service departments, never to production",
+      "A": "It allocates costs to other service departments but not to production departments",
       "B": "It allocates costs of all service departments simultaneously using equations",
       "C": "It ignores all services provided between service departments",
       "D": "It allocates costs sequentially, recognizing some but not all reciprocal services between service departments"
@@ -14934,7 +14934,7 @@ var MCQ_BANK_D = [
     "Choices": {
       "A": "It allocates costs sequentially, recognizing some but not all reciprocal services between service departments",
       "B": "It allocates costs of all service departments simultaneously using equations",
-      "C": "It only allocates costs to other service departments, never to production",
+      "C": "It allocates costs to other service departments but not to production departments",
       "D": "It ignores all services provided between service departments"
     },
     "CorrectChoice": "A",
@@ -14986,7 +14986,7 @@ var MCQ_BANK_D = [
       "A": "It ignores all services provided between service departments",
       "B": "It allocates costs sequentially, recognizing some but not all reciprocal services between service departments",
       "C": "It allocates costs of all service departments simultaneously using equations",
-      "D": "It only allocates costs to other service departments, never to production"
+      "D": "It allocates costs to other service departments but not to production departments"
     },
     "CorrectChoice": "B",
     "ExplanationCorrect": "The step-down method allocates service department costs sequentially. It recognizes some services provided among service departments, but once a service department is allocated, it does not receive allocations back, so reciprocal services are only partially recognized.",
@@ -15034,7 +15034,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Stonewell allocates service department costs using the step-down method, ranking departments by the amount of service they provide to other service departments. What distinguishes this method?",
     "Choices": {
-      "A": "It only allocates costs to other service departments, never to production",
+      "A": "It allocates costs to other service departments but not to production departments",
       "B": "It allocates costs of all service departments simultaneously using equations",
       "C": "It allocates costs sequentially, recognizing some but not all reciprocal services between service departments",
       "D": "It ignores all services provided between service departments"
@@ -15085,7 +15085,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Thornbury allocates service department costs using the step-down method, ranking departments by the amount of service they provide to other service departments. What distinguishes this method?",
     "Choices": {
-      "A": "It only allocates costs to other service departments, never to production",
+      "A": "It allocates costs to other service departments but not to production departments",
       "B": "It allocates costs of all service departments simultaneously using equations",
       "C": "It ignores all services provided between service departments",
       "D": "It allocates costs sequentially, recognizing some but not all reciprocal services between service departments"
@@ -15697,7 +15697,7 @@ var MCQ_BANK_D = [
     "Stem": "Greybridge has a high proportion of fixed costs relative to variable costs in its cost structure. What effect does this have on the degree of operating leverage?",
     "Choices": {
       "A": "No effect on operating leverage since it depends only on sales price",
-      "B": "A guarantee that the company will always be profitable",
+      "B": "A guarantee that the company will be profitable",
       "C": "A lower degree of operating leverage with less sensitivity to volume changes",
       "D": "A higher degree of operating leverage, meaning profit is more sensitive to changes in sales volume"
     },
@@ -15748,7 +15748,7 @@ var MCQ_BANK_D = [
     "Stem": "Hartland has a high proportion of fixed costs relative to variable costs in its cost structure. What effect does this have on the degree of operating leverage?",
     "Choices": {
       "A": "A higher degree of operating leverage, meaning profit is more sensitive to changes in sales volume",
-      "B": "A guarantee that the company will always be profitable",
+      "B": "A guarantee that the company will be profitable",
       "C": "No effect on operating leverage since it depends only on sales price",
       "D": "A lower degree of operating leverage with less sensitivity to volume changes"
     },
@@ -15849,7 +15849,7 @@ var MCQ_BANK_D = [
     "ItemStyle": "single-select",
     "Stem": "Jettison has a high proportion of fixed costs relative to variable costs in its cost structure. What effect does this have on the degree of operating leverage?",
     "Choices": {
-      "A": "A guarantee that the company will always be profitable",
+      "A": "A guarantee that the company will be profitable",
       "B": "A lower degree of operating leverage with less sensitivity to volume changes",
       "C": "A higher degree of operating leverage, meaning profit is more sensitive to changes in sales volume",
       "D": "No effect on operating leverage since it depends only on sales price"
@@ -19463,7 +19463,7 @@ var MCQ_BANK_D = [
     "Choices": {
       "A": "The compensating manual control was adequate because it operated for three months before a single failure was detected, reflecting an acceptably low error rate for a temporary control during system migration.",
       "B": "The compensating manual control was adequate because management made a formal documented decision to disable the automated control and implement the manual review. COSO Principle 12 requires only that policies establish what is expected; occasional failures do not indicate a control deficiency.",
-      "C": "The compensating manual control was inadequate because management should never disable an automated control during system migration — COSO Principle 12 requires that all automated application controls remain operational at all times regardless of implementation complexity.",
+      "C": "The compensating manual control was inadequate because management should not disable an automated control during system migration — COSO Principle 12 requires that all automated application controls remain operational at all times regardless of implementation complexity.",
       "D": "The compensating manual control was inadequate because it was not designed with sufficient precision to achieve the same control objective as the automated three-way match it replaced. Under COSO Principle 12, compensating controls must reduce the specific risk they address to an acceptable level — and here the manual review lacked systematic duplicate-payment detection, was operated by a single individual without independent verification, and did not segregate the invoice-review and payment-approval functions."
     },
     "CorrectChoice": "D",
@@ -20496,8 +20496,8 @@ var MCQ_BANK_D = [
     "Stem": "During a routine IT audit of Ellsworth Manufacturing, the auditor discovers: (1) 34 user accounts belong to employees terminated in the past 18 months and have never been deactivated; three of these accounts were used to access the general ledger module within the past 30 days. (2) The warehouse and accounts payable departments share three generic login accounts ('warehouse,' 'ap_clerk,' 'plant_manager') with known passwords posted on a bulletin board. (3) New employees receive system access the same day as their hire date, but the offboarding process has no IT notification step — HR processes termination paperwork without informing IT. (4) The ERP system supports role-based access but Ellsworth has not configured any roles. Under COSO Principle 11 (IT general controls), which combination of control failures is most critical, and what remediation should be prioritized?",
     "Choices": {
       "A": "The most critical failure is weak password management — the shared account passwords posted on a bulletin board represent the highest immediate security risk; the priority remediation is to enforce mandatory 90-day password rotation with complexity requirements and prohibit password sharing through policy",
-      "B": "The most critical failure is the absence of periodic access reviews — semi-annual access certification by department heads was never implemented; the priority remediation is to require all department heads to review and certify user access lists within 30 days",
-      "C": "The most critical failure is the absence of role-based access controls — the ERP system supports RBAC but it was never configured; the priority remediation is to design role profiles based on job functions and migrate all users to role-based access with least-privilege permissions",
+      "B": "The most critical failure is the absence of periodic access reviews — semi-annual access certification by department heads was not implemented; the priority remediation is to require all department heads to review and certify user access lists within 30 days",
+      "C": "The most critical failure is the absence of role-based access controls — the ERP system supports RBAC but it was not configured; the priority remediation is to design role profiles based on job functions and migrate all users to role-based access with least-privilege permissions",
       "D": "The most critical failure is the broken joiner-mover-leaver process — 34 terminated employees retain active accounts and three have been recently used; the priority remediation is to implement immediate, trigger-based account deactivation integrated with the HR termination workflow and eliminate all shared generic accounts"
     },
     "CorrectChoice": "D",
@@ -21784,7 +21784,7 @@ var MCQ_BANK_D = [
       "A": "It enables automated, real-time data exchange between systems without manual re-entry",
       "B": "It eliminates the need for any data security controls",
       "C": "It replaces the need for a chart of accounts",
-      "D": "It guarantees the data will always be completely accurate"
+      "D": "It guarantees the data will be completely accurate"
     },
     "CorrectChoice": "A",
     "ExplanationCorrect": "APIs enable different software systems to communicate and exchange data automatically, reducing manual data entry and enabling more real-time information flow.",
@@ -21834,7 +21834,7 @@ var MCQ_BANK_D = [
     "Choices": {
       "A": "It replaces the need for a chart of accounts",
       "B": "It enables automated, real-time data exchange between systems without manual re-entry",
-      "C": "It guarantees the data will always be completely accurate",
+      "C": "It guarantees the data will be completely accurate",
       "D": "It eliminates the need for any data security controls"
     },
     "CorrectChoice": "B",

@@ -333,7 +333,7 @@ const MCQ_BANK_E = [
       "A": "Reclassify the full $2,500,000 bond balance as a current liability because the covenant violation occurred before the balance sheet date, regardless of the waiver — the waiver does not eliminate the violation",
       "B": "Classify the bond as a current liability only for the $500,000 accelerated portion required by the waiver terms, with the remaining $2,000,000 remaining in non-current because the original maturity is still 8 years away",
       "C": "Retain the full $2,500,000 bond as non-current because the lender granted a waiver before the financial statements were issued, and the waiver's accelerated payment of $500,000 does not mature within one year of the balance sheet date — the waiver negates the violation for classification purposes under ASC 470-10-45",
-      "D": "Split the bond equally between current and non-current ($1,250,000 each) as a conservative presentation, regardless of the waiver terms — this approach is always appropriate when a covenant is violated"
+      "D": "Split the bond equally between current and non-current ($1,250,000 each) as a conservative presentation, regardless of the waiver terms — this approach is appropriate when a covenant is violated"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -2455,7 +2455,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Variable consideration",
     "CorrectChoice": "B",
     "Choices": {
-      "A": "Use the expected value method because the $8M contract has multiple possible bonus outcomes — apply probability-weighting: 40% x $200K + 35% x $100K + 25% x $0 = $115K estimated bonus. This always provides the most accurate estimate",
+      "A": "Use the expected value method because the $8M contract has multiple possible bonus outcomes — apply probability-weighting: 40% x $200K + 35% x $100K + 25% x $0 = $115K estimated bonus. This provides the most accurate estimate",
       "B": "Evaluate both methods: the expected value method produces $115K ($80K + $35K + $0) which better captures the range of outcomes since multiple possibilities exist. However, the constraint requires assessing whether a significant reversal is probable — if any tier is uncertain to be achieved, the estimate must be constrained. Recommend expected value = $115K, subject to constraint assessment",
       "C": "Use the most likely amount of $200,000 because there is a discrete probability distribution with a single most likely outcome — expected value is only appropriate for large portfolios of similar contracts",
       "D": "Recognize zero bonus revenue until the construction is complete, because all three outcomes represent variable consideration that cannot be reliably estimated before the performance conditions are objectively met"
@@ -3972,7 +3972,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Fixed cost per unit behavior",
     "CorrectChoice": "B",
     "Choices": {
-      "A": "Is always zero",
+      "A": "Is zero",
       "B": "Decreases as activity increases",
       "C": "Remains constant",
       "D": "Increases as activity increases"
@@ -4836,7 +4836,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "A",
     "Choices": {
       "A": "More responsive to recent changes",
-      "B": "More accurate always",
+      "B": "More accurate",
       "C": "More smooth",
       "D": "Less variable"
     },
@@ -5492,7 +5492,7 @@ const MCQ_BANK_E = [
       "A": "Not allocated",
       "B": "Allocated using reasonable bases",
       "C": "Directly traced to segments",
-      "D": "Always variable"
+      "D": "Variable"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -5842,7 +5842,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Relevant range",
     "CorrectChoice": "D",
     "Choices": {
-      "A": "Costs are always linear",
+      "A": "Costs are linear",
       "B": "All costs are fixed",
       "C": "All costs are variable",
       "D": "Cost behavior is linear within a normal activity range"
@@ -5892,8 +5892,8 @@ const MCQ_BANK_E = [
     "MicroTopic": "Step cost",
     "CorrectChoice": "D",
     "Choices": {
-      "A": "Is always fixed",
-      "B": "Is always variable",
+      "A": "Is fixed",
+      "B": "Is variable",
       "C": "Is not related to activity",
       "D": "Changes at specific activity intervals"
     },
@@ -8890,7 +8890,7 @@ const MCQ_BANK_E = [
       "A": "Challenging but achievable",
       "B": "Based on perfect conditions",
       "C": "Easily achieved",
-      "D": "Never changed"
+      "D": "Not changed"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -10771,7 +10771,7 @@ const MCQ_BANK_E = [
     "MicroTopic": "Sunk costs",
     "CorrectChoice": "D",
     "Choices": {
-      "A": "Always relevant",
+      "A": "Relevant",
       "B": "Future variable costs",
       "C": "Avoidable costs",
       "D": "Irrelevant to future decisions"
@@ -12600,7 +12600,7 @@ const MCQ_BANK_E = [
     "CorrectChoice": "D",
     "Choices": {
       "A": "Is a legitimate management tool",
-      "B": "Is always detected",
+      "B": "Is detected",
       "C": "Is allowed under SOX",
       "D": "Can circumvent effective controls"
     },
@@ -13414,7 +13414,7 @@ const MCQ_BANK_E = [
       "A": "Vendor Two, because the lower cost ($1.7M) and faster implementation (9 months) outweigh integration concerns",
       "B": "Vendor One, because unified inter-module integration directly resolves Northland's data reconciliation problem while supporting expansion scalability",
       "C": "Vendor Two, because specialized warehouse functionality satisfies the operations VP's stated requirement",
-      "D": "Vendor One, because standardized business processes are always the superior approach for growing companies"
+      "D": "Vendor One, because standardized business processes are the superior approach for growing companies"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -13569,7 +13569,7 @@ const MCQ_BANK_E = [
       "A": "Software as a Service (SaaS), because it eliminates all IT maintenance and offers the fastest deployment",
       "B": "Infrastructure as a Service (IaaS), because it provides maximum control over the operating system and security configuration",
       "C": "Platform as a Service (PaaS), because it balances control over custom financial applications with reduced infrastructure management burden",
-      "D": "On-premise retention, because financial data should never be stored outside the corporate network"
+      "D": "On-premise retention, because financial data should not be stored outside the corporate network"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -21792,9 +21792,9 @@ const MCQ_BANK_E = [
     "CorrectChoice": "A",
     "Choices": {
       "A": "The trading platform, because its MTD is the shortest (2 hours) and the gap between its RTO (1 hour) and MTD leaves the narrowest recovery window, indicating the highest criticality",
-      "B": "The general ledger, because financial reporting systems must always receive the highest priority in any business continuity plan",
+      "B": "The general ledger, because financial reporting systems must receive the highest priority in any business continuity plan",
       "C": "The payroll system, because employee compensation disruption creates immediate workforce risk regardless of quantitative thresholds",
-      "D": "The CRM system, because customer-facing systems have the highest revenue impact and should always be recovered first"
+      "D": "The CRM system, because customer-facing systems have the highest revenue impact and should be recovered first"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -22767,10 +22767,10 @@ const MCQ_BANK_E = [
     "MicroTopic": "Favorable variance interpretation",
     "CorrectChoice": "B",
     "Choices": {
-      "A": "Always positive",
+      "A": "Positive",
       "B": "The result of good performance or too-loose standards",
-      "C": "Never investigated",
-      "D": "Always beneficial"
+      "C": "Not investigated",
+      "D": "Beneficial"
     },
     "CalculationItem": false,
     "Part": 1,
@@ -25751,7 +25751,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed, review the inherent limitations of internal control under COSO and the distinction between inherent limitations and control deficiencies.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Management override can always be prevented by implementing a second level of approval for all transactions above a materiality threshold",
+      "A": "Management override can be prevented by implementing a second level of approval for all transactions above a materiality threshold",
       "B": "Management override cannot be fully prevented by any internal control system because management has the authority to override prescribed policies",
       "C": "Management override is a control deficiency because it indicates the control environment is not functioning effectively",
       "D": "Management override is only an inherent limitation in small entities where management has concentrated authority"
@@ -26010,7 +26010,7 @@ const MCQ_BANK_E = [
       "A": "All three are detective controls because they identify discrepancies in the purchasing and payment cycle",
       "B": "All three are preventive controls because each stops an undesirable event before it occurs",
       "C": "Dual signatures are detective, three-way matching is preventive, and account lockout is corrective",
-      "D": "Dual signatures and three-way matching are preventive; account lockout is detective"
+      "D": "Dual signatures and three-way matching prevent errors before they occur, but account lockout merely detects unauthorized access attempts"
     },
     "StudyLinks": [
       {
@@ -26251,7 +26251,7 @@ const MCQ_BANK_E = [
       "A": "They have personally audited the financial statements and verified every transaction recorded during the period",
       "B": "The external auditor has confirmed that the company has no material weaknesses in internal control over financial reporting",
       "C": "Based on their knowledge, the financial statements fairly present the financial condition and they have disclosed any significant deficiencies in internal control to the auditors and audit committee",
-      "D": "The company's internal control over financial reporting is effective and the external auditor has attested to that effectiveness without qualification"
+      "D": "The report contains no untrue statement of material fact and the financial statements fairly present the company's condition, with no requirement to discuss internal controls"
     },
     "StudyLinks": [
       {
@@ -26270,7 +26270,7 @@ const MCQ_BANK_E = [
     "ExplanationWrongA": "SOX Section 302 does not require the CEO and CFO to personally audit the financial statements or verify each transaction. The certification is based on their knowledge after reviewing the report and establishing appropriate disclosure controls and procedures. The external auditor, not management, performs the audit. The CEO and CFO certify based on information provided by their disclosure controls and internal control systems, not through personal verification of every transaction — which would be impractical for any company of meaningful size.",
     "ExplanationWrongB": "This describes an outcome that could result from a clean SOX 404(b) audit, but it is not a requirement of Section 302 certifications. Section 302 focuses on the CEO's and CFO's personal certifications about the accuracy of disclosures, the fair presentation of financial statements, and the disclosure of control deficiencies they know about. Section 404 addresses the external auditor's attestation on internal control effectiveness. The candidate is conflating Section 302 certification requirements with Section 404 external audit requirements.",
     "ExplanationWrongC": "",
-    "ExplanationWrongD": "This describes the ideal outcome of SOX Section 404 compliance (both 404(a) management assessment and 404(b) auditor attestation), not the requirements of Section 302. Section 302 requires officers to certify the accuracy of their reports and disclose known control deficiencies — it does not require an affirmative statement that internal control is effective, nor does it involve external auditor attestation. The candidate is confusing the two SOX sections, mistaking the internal control reporting requirements of Section 404 for the officer certification requirements of Section 302.",
+    "ExplanationWrongD": "This option captures only part of the Section 302 certification. The certification requires more than a statement that the report is accurate and the statements fairly present financial condition — the signing officers must also certify that they are responsible for disclosure controls and internal control over financial reporting and must disclose any significant deficiencies, material weaknesses, or fraud to the auditors and the audit committee. An option that omits the control-disclosure element describes an incomplete certification. Section 302's personal-liability weight comes from the full set of elements, not the accuracy statement alone.",
     "certification_date": "2026-07-27",
     "certification_session": "S316"
   },
@@ -27008,10 +27008,10 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed, review the distinction between correction (fixing the specific error) and corrective control (implementing structural change to prevent recurrence). Corrective controls address root causes.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Adjusting the perpetual inventory records to match the physical count of raw materials",
+      "A": "Correcting the 200-unit discrepancy by adjusting the perpetual inventory records to the physical count",
       "B": "Implementing a purchase-order-to-receiving-report matching requirement before inventory records are updated",
       "C": "Investigating the inventory discrepancy to determine that a receiving clerk had been entering fictitious receipts",
-      "D": "Conducting the monthly inventory reconciliation that compared perpetual records to the physical count"
+      "D": "The monthly inventory reconciliation that first identified the 200-unit discrepancy"
     },
     "StudyLinks": [
       {
@@ -27926,7 +27926,7 @@ const MCQ_BANK_E = [
     "Stem": "Northwood Distribution uses the LIFO inventory method. At year-end, one inventory item has the following data: historical cost of $85 per unit, current replacement cost of $78, estimated selling price of $115, disposal costs of $8, and a normal profit margin of $23. The controller initially computed a write-down from $85 to $78 per unit (a $7 per-unit reduction). Before finalizing the adjustment, the assistant controller reviewed ASC 330-10-35 and noted that LIFO-based lower-of-cost-or-market applies a ceiling (NRV) and floor (NRV minus normal profit margin) to define market value. What is the correct inventory valuation per unit?",
     "Choices": {
       "A": "$84 per unit -- replacement cost of $78 is below the floor of $84 (NRV of $107 minus normal profit margin of $23), so market is the floor of $84; since cost is $85 and market (floor) is $84, the inventory is written down by $1 to $84",
-      "B": "$78 per unit -- under LIFO, replacement cost is always used as the market value regardless of ceiling or floor constraints because replacement cost represents the current cost to acquire the inventory",
+      "B": "$78 per unit -- under LIFO, replacement cost is used as the market value regardless of ceiling or floor constraints because replacement cost represents the current cost to acquire the inventory",
       "C": "$85 per unit -- replacement cost of $78 is below the floor of $84, meaning no market price can be established within the ceiling-floor range, and the inventory must be retained at its original $85 cost",
       "D": "$107 per unit -- NRV of $107 ($115 selling price minus $8 disposal costs) represents the ceiling and is the appropriate market value when replacement cost falls below the floor; inventory is then written up from $85 to $107"
     },
@@ -27976,7 +27976,7 @@ const MCQ_BANK_E = [
     "primaryTheory": "A7",
     "Stem": "Northgate Industries issued $2,000,000 face value, 8% coupon bonds at 104 when the market rate for similar bonds was 7%. The bonds mature in 5 years with annual interest payments. Controller David Okonkwo is comparing the effective-interest method (required under U.S. GAAP) with straight-line amortization for premium bonds. David observes that under the effective-interest method, interest expense declines each period as the premium is amortized. Which statement correctly compares interest expense under the effective-interest (EI) method versus straight-line (SL) amortization across the bond's 5-year life?",
     "Choices": {
-      "A": "Interest expense is higher under SL than EI in every year because straight-line amortization is always less conservative than the effective-interest method for premium bonds",
+      "A": "Interest expense is higher under SL than EI in every year because straight-line amortization is less conservative than the effective-interest method for premium bonds",
       "B": "Interest expense is higher under EI than SL in years 1-2 because EI amortizes less premium early when the carrying value is highest, then EI interest expense falls below SL in years 3-5 as the carrying value declines and premium amortization accelerates under the effective-interest method",
       "C": "Interest expense is identical under both methods -- the total premium of $80,000 ($2,080,000 - $2,000,000) amortized over 5 years produces the same annual interest expense regardless of allocation method, only the timing of premium recognition differs",
       "D": "Interest expense is lower under EI than SL in every year because the effective-interest method front-loads premium amortization, reducing the carrying value more aggressively and therefore producing lower interest expense throughout the bond's life"
@@ -28310,7 +28310,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "CalculationItem": true,
     "Choices": {
-      "A": "A loss of $16,850, computed as the face value of $400,000 minus the original issue price of $383,151 — the original discount is recognized in full upon early extinguishment because the bonds were never held to maturity",
+      "A": "A loss of $16,850, computed as the face value of $400,000 minus the original issue price of $383,151 — the original discount is recognized in full upon early extinguishment because the bonds were not held to maturity",
       "B": "A loss of $26,692, computed as the reacquisition price of $416,000 minus the carrying value of $389,308 at December 31, Year 2 after two full years of effective-interest amortization of the bond discount",
       "C": "A loss of $16,000, computed as the reacquisition price of $416,000 minus the $400,000 face value — the call premium is treated as an additional period cost rather than as a component of the extinguishment loss, and the carrying value is assumed to equal face value at all times",
       "D": "A loss of $29,860, computed as the reacquisition price of $416,000 minus the carrying value after only one year of amortization ($386,140) — the amortization schedule is advanced by one period instead of two, and one full year of discount amortization is omitted from the carrying value"
@@ -29227,7 +29227,7 @@ const MCQ_BANK_E = [
     "CalculationItem": false,
     "Choices": {
       "A": "Exclude the RSUs from both basic and diluted EPS because the shares have not yet been issued. Contingently issuable shares are included only when the shares are physically delivered to the recipients.",
-      "B": "Include the RSUs in diluted EPS only, because contingently issuable shares are treated as potential common shares under ASC 260 and are never included in basic EPS regardless of whether the performance condition is met. The RSUs are dilutive and are added to the diluted EPS denominator alongside the 50,000 stock options.",
+      "B": "Include the RSUs in diluted EPS only, because contingently issuable shares are treated as potential common shares under ASC 260 and are not included in basic EPS regardless of whether the performance condition is met. The RSUs are dilutive and are added to the diluted EPS denominator alongside the 50,000 stock options.",
       "C": "Include the RSUs in basic EPS only, because the performance condition was satisfied at year-end. For diluted EPS, the RSUs are excluded because the calculation already includes the 50,000 stock options, and adding the RSUs would double-count the dilutive effect.",
       "D": "Include the RSUs in both basic EPS and diluted EPS because the performance condition (diluted EPS ≥ $2.50) was satisfied at December 31. Under ASC 260, contingently issuable shares whose conditions are met by period-end are included in basic EPS as of the date conditions are satisfied and also included in diluted EPS."
     },
@@ -29426,7 +29426,7 @@ const MCQ_BANK_E = [
     "Choices": {
       "A": "Use practical capacity because the lower overhead rate ($28/hour) makes Apex's bid more competitive, and any resulting unfavorable fixed overhead volume variance is a strategic pricing decision, not an operating inefficiency.",
       "B": "Use normal capacity because the higher overhead rate ($35/hour) recovers all fixed costs over the contract period, and government auditors will reject any bid that understates the true cost of production capacity.",
-      "C": "Use practical capacity because it eliminates the fixed overhead volume variance entirely, ensuring that Apex's cost reports always show actual costs equal to applied costs.",
+      "C": "Use practical capacity because it eliminates the fixed overhead volume variance entirely, ensuring that Apex's cost reports show actual costs equal to applied costs.",
       "D": "Use normal capacity because practical capacity is a theoretical maximum that does not reflect realistically achievable output, and using an unrealistically high denominator artificially depresses the overhead rate."
     },
     "VerifiedChecks": [
@@ -30259,7 +30259,7 @@ const MCQ_BANK_E = [
     "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
     "CalculationItem": false,
     "Choices": {
-      "A": "Consolidate Apexion under ASC 810, because Sovereign holds the largest individual equity stake (42%), controls the largest board bloc (3 of 9 seats), and has substantive participating rights over the budget and capital expenditures. Brightstone's veto power, having never been exercised, is a dormant protective right that does not defeat the de facto control established by Sovereign's combined equity, board, and approval rights.",
+      "A": "Consolidate Apexion under ASC 810, because Sovereign holds the largest individual equity stake (42%), controls the largest board bloc (3 of 9 seats), and has substantive participating rights over the budget and capital expenditures. Brightstone's veto power, having not been exercised, is a dormant protective right that does not defeat the de facto control established by Sovereign's combined equity, board, and approval rights.",
       "B": "Apply the equity method under ASC 323, because the 42% equity stake and 3 of 9 board seats establish significant influence, but Brightstone's veto power over both operating AND capital decisions is a substantive participating right that precludes Sovereign from having the unilateral ability to direct Apexion's activities — a requirement for control under ASC 810.",
       "C": "Use the fair value method (ASC 321), because Sovereign's 42% equity interest is below the 50% threshold for consolidation, and its board representation of 3 of 9 seats (33%) does not constitute a majority — meaning Sovereign has neither control nor significant influence.",
       "D": "Consolidate Apexion under ASC 810, because the veto power held by Brightstone is a protective right designed to safeguard the bridge loan — not a participating right in the governance of Apexion — and ASC 810-10-25-10A distinguishes between protective rights (which do not defeat control) and participating rights (which do)."
@@ -30704,7 +30704,7 @@ const MCQ_BANK_E = [
     "Stem": "Meridian Corporation's EVP of Operations must allocate a bonus pool between two divisions. Division X reports operating income of $2,400,000 on sales of $30,000,000 with average operating assets of $20,000,000. Division Y reports operating income of $750,000 on sales of $6,000,000 with average operating assets of $5,000,000. Meridian's cost of capital is 10%. The EVP has historically awarded the larger bonus pool to the division with the higher return on investment (ROI). Both division managers are evaluated annually and have authority over operating decisions and asset acquisition. The corporate controller has recommended that the EVP consider residual income and DuPont analysis before finalizing the bonus allocation. Based on a comprehensive analysis of ROI, residual income, and DuPont components, which of the following is the most appropriate recommendation regarding the bonus allocation?",
     "Choices": {
       "A": "Award the larger bonus pool to Division Y because its ROI of 15% exceeds Division X's ROI of 12%, consistent with the EVP's historical criterion and the principle that ROI is the most widely accepted measure of divisional performance.",
-      "B": "Award the larger bonus pool to Division X because its residual income of $400,000 substantially exceeds Division Y's residual income of $250,000, and residual income is always the superior performance metric for investment center evaluation.",
+      "B": "Award the larger bonus pool to Division X because its residual income of $400,000 substantially exceeds Division Y's residual income of $250,000, and residual income is the superior performance metric for investment center evaluation.",
       "C": "Split the bonus pool equally between the two divisions because the ROI and RI rankings diverge, confirming that no single financial metric provides a sufficiently complete picture of divisional performance to justify differential bonus allocation.",
       "D": "Use residual income as the primary basis and allocate the larger bonus pool to Division X ($400,000 RI versus $250,000). However, also examine DuPont components: Division Y's profit margin of 12.5% substantially exceeds Division X's 8.0%, indicating operational efficiency that warrants separate recognition and may justify targeted investment to grow Division Y's asset base."
     },
@@ -31138,7 +31138,7 @@ const MCQ_BANK_E = [
     "ItemStyle": "single-select",
     "Stem": "A national retail chain is experiencing persistent difficulties with customer analytics and financial reporting. A data governance assessment reveals three gaps: (1) customer data is duplicated across the CRM system, the ERP system, and the loyalty program database, with no master record to reconcile identities — a single customer who shops online, in-store, and through the loyalty program may appear as three separate records; (2) the Marketing department defines an 'active customer' as one who made a purchase within the last 12 months, the Finance department defines it as a customer with any outstanding balance within 24 months, and the Operations department defines it as a customer to whom a shipment was made within the last 6 months; (3) no individual or committee has been designated as the data steward or data owner for customer master data — each department manages its own customer records independently. The Chief Data Officer proposes a master data management (MDM) initiative. From a management accountant's perspective focused on financial reporting integrity, which gap is most damaging to reliable financial reporting, and what should be the first governance action?",
     "Choices": {
-      "A": "The most damaging gap is the duplicate customer records across systems because they inflate the apparent customer count and make it impossible to produce a single view of revenue by customer. The first governance action should be to implement a customer data integration platform that deduplicates records and creates a single customer identifier across all systems.",
+      "A": "The most damaging gap is the duplicate customer records across systems because they inflate the apparent customer count and make it difficult to produce a single view of revenue by customer. The first governance action should be to implement a customer data integration platform that deduplicates records and creates a single customer identifier across all systems.",
       "B": "The most damaging gap is the inconsistent 'active customer' definition because it directly affects revenue cut-off, bad debt estimation, and the allowance for credit losses — all financial reporting line items. The first governance action should be to establish a cross-functional data governance committee with the authority to define and enforce a single, authoritative definition of 'active customer' across all departments.",
       "C": "The most damaging gap is the absence of a designated data steward because without clear accountability, none of the other data quality issues can be sustainably resolved. The first governance action should be to appoint a customer data steward from the IT department to manage master data quality and enforce data standards.",
       "D": "All three gaps are equally significant because they are interdependent — duplicate records arise from inconsistent definitions, which persist because no one is accountable. The first governance action should be to launch a comprehensive MDM system implementation covering CRM, ERP, and the loyalty database simultaneously."

@@ -613,6 +613,16 @@ Repository-wide semantic scan across all packs and scored-case files. For each q
 - `ExplanationCorrect` text refers to the specific correct answer
 - No explanation text is wholly generic or describes a different choice
 
+### 2026-08-23 Amendment — ZBB Template Contamination (Pack C/D)
+
+During the DL-043 Batch 1 remediation, a systematic misassignment cluster surfaced: the explanation text *"Zero-based budgeting requires all expenses to be justified each period from zero…"* appears in 17 ExplanationWrong slots across Packs C and D. Classification:
+
+- **13 on-topic but generic** (Pack C 5: P1-BC-080, BC-081, CC-048, FC-036, FC-075; Pack D 8: P1-CD-045, CD-046, CD-049, CD-066, CD-069, CD-070, CD-091, CD-094) — these items genuinely carry a "Zero-based budgeting" distractor; the identical boilerplate EW is a DL-013-class choice-specificity gap, deferred to the DL-013 workstream.
+- **4 misassigned (correctness defect)** — the ZBB text sat in EW slots whose choices are unrelated: P1-CD-068 EWC (variance thresholds), P1-CD-044 EWC (customer profitability), P1-CD-072 EWC (quality benchmarking), P1-CD-075 EWB (quality maturity). All four rewritten 2026-08-23 with choice-specific explanations.
+- A companion "controllability principle" misassigned EWA in P1-CD-068 was corrected in the same pass.
+
+**Cross-check note:** the P1-CD-068/044/072/075 cluster shares the P1-CD-xxx template family that produced the DL-043 near-duplicate distractors — both defect classes trace to the same rotation-template pipeline.
+
 ---
 
 ## DL-011 — Reserved (Intentionally Skipped — Numbering Gap)
@@ -3360,6 +3370,10 @@ Rewrite ONE distractor of each pair to test a distinct misconception, preserving
 ### Resolved
 
 Not yet — Batch 1 (duplicate pairs) in progress 2026-08-23.
+
+**Batch 1 progress (2026-08-23):** 7 items rewritten with matching explanation updates — P1-A-064 (choice D), P1B-A-085 (D), P1B-E-086 (D), P1-E-R11 (D), P1-E-R13 (A/D), P1-E-R19 (D), P1-CD-068 (EWA/EWC misassignment). 4 pairs triaged as DISTINCT traps on inspection — P1E-C-S01, P1E-C-S06, P1E-D-S04, P1E-F-S04 — no rewrite needed (structural similarity only). 3 additional misassigned ZBB-explanation slots found and corrected during batch execution: P1-CD-044 EWC, P1-CD-072 EWC, P1-CD-075 EWB (see DL-010). Batch 2 (strong absolute terms, 128 items) pending.
+
+**Batch 2 progress (2026-08-23):** Strong absolute terms (always/never/impossible) in distractor slots remediated — 118 slot rewrites applied across 5 packs via a 78-rule phrase table (rotation-group families collapsed: e.g., "they are always immaterial" ×7, "It always maximizes overall company profit" ×7, "Never test goodwill unless it is sold" ×5). 5 items triaged as LEGITIMATE and kept: bare "Never" answer options (P1E-A-070, P1E-A-078, P1E-C-092), "almost always" hedge (P1-FC-038), and the factually-true "Management override of established controls is always possible" (P1B-E-150). Verified: 0 residual strong absolutes in distractor choices (non-KEEP), all packs parse, DL-008/DL-026 0, preflight PASS. **Pending:** any/every/all/must triage (1,032 hits) and DL-013-class ZBB generic-EW cluster (13 items).
 
 ---
 
