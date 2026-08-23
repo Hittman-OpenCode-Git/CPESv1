@@ -276,7 +276,7 @@ var pack_p2_f_questions = [
     "D": "Yes — but only if the payment is recorded as a 'consulting fee' in Orion's books to comply with the FCPA's accounting provisions."
   },
   "CognitiveLevel": "Apply",
-  "CommonTrapReference": "Overextending the facilitating payments exception to cover extortion — the exception is for routine,",
+  "CommonTrapReference": "Overextending the facilitating payments exception to cover extortion — the exception is for routine, low-value, non-discretionary government actions, never for extortion",
   "CorrectChoice": "C",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,
@@ -624,7 +624,7 @@ var pack_p2_f_questions = [
     "D": "An integrated report is a marketing document telling the company's value creation story without the constraints of GAAP financial reporting."
   },
   "CognitiveLevel": "Understand",
-  "CommonTrapReference": "Confusing integrated reporting with an annual report plus ESG appendix — it fundamentally changes th",
+  "CommonTrapReference": "Confusing integrated reporting with an annual report plus ESG appendix — it fundamentally changes the reporting model to connect capitals with value creation",
   "CorrectChoice": "B",
   "Difficulty": "Moderate-Easy",
   "DifficultyScore": 2,

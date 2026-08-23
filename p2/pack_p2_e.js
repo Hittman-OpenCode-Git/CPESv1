@@ -274,7 +274,7 @@ var pack_p2_e_questions = [
     "D": "Accept the project, because any IRR above 10% is automatically acceptable"
   },
   "CognitiveLevel": "Apply",
-  "CommonTrapReference": "Trap: Imposing arbitrary spread requirements (e.g., IRR must exceed WACC by X%) that do not exist in",
+  "CommonTrapReference": "Trap: Imposing arbitrary spread requirements (e.g., IRR must exceed WACC by X%) that do not exist in the IRR acceptance rule",
   "CorrectChoice": "A",
   "Difficulty": "Moderate-Easy",
   "DifficultyScore": 2,
@@ -663,7 +663,7 @@ var pack_p2_e_questions = [
     "D": "Crossover=20%. At WACC=10%, both should be accepted."
   },
   "CognitiveLevel": "Evaluate",
-  "CommonTrapReference": "Confusing which project dominates above vs. below the crossover — later cash flows suffer more from ",
+  "CommonTrapReference": "Confusing which project dominates above vs. below the crossover — later cash flows suffer more from a higher discount rate: the later-cash-flow project dominates below the crossover rate, and the earlier-cash-flow project dominates above it",
   "CorrectChoice": "C",
   "Difficulty": "Very Difficult",
   "DifficultyScore": 5,

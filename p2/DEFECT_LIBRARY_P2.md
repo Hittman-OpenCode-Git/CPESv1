@@ -334,3 +334,92 @@ For each item: extract the choice-header number and the derivation shown in the 
 2026-08-22 — Session P2-033. Backup: `p2/pack_p2_b.js.bak-20260822162214`.
 
 **Independent re-verification PASS (2026-08-22, Section B closeout):** 7/7 corrected items re-verified from scratch — every stored value matches the reviewer's independent recomputation; zero hedge-language remnants; CorrectChoice letters unchanged; EW[CC] slots empty. Pack B closes at 100/100 with no open findings.
+
+---
+
+## DL-P2-010 — P2-C-022 Leaked Authoring Note + Half-Edited Distractor
+
+```
+Defect ID        DL-P2-010
+Class            Content
+Domain           Explanation/Answer-Key Integrity (leaked drafting scratch-work inside a choice)
+Severity         Critical (learner-facing self-correction text inside an answer choice)
+Detected By      Independent full-pass review (2026-08-22 Section C substantive review); confirmed by Build-Time AI Verification against raw file
+Status           Resolved — 2026-08-22
+```
+
+**Question ID:** P2-C-022
+
+**File:** `p2/pack_p2_c.js`
+
+### Issue
+
+Choice B contained the author's drafting self-correction verbatim: *"$77.00 per unit — only the profit margin is deducted from the selling price ($85 − $17 = $68). Wait, that's 68, not 77. The value of 77 comes from $85 − $8 = $77 — deducting SG&A but forgetting the profit margin."*
+
+Three compounding defects: (1) leaked first-person scratch-work inside a candidate-facing choice; (2) the choice was half-edited — header states $77 while the opening clause describes the $68 computation; (3) ExplanationWrongA cross-referenced "See B for the complete step-by-step," but the step-by-step lives in Choice D (the correct answer), not B. The item's own CommonTrapReference was also cut mid-word ("…not just manufa").
+
+### Root Cause
+
+Same unreconciled-drafting root cause as DL-P2-001…009: the author drafted the choice as the $68 distractor, changed it to the $77 distractor, and left both the scratch-work and the stale cross-reference in place.
+
+### Correction
+
+- Choice B rewritten terse: "$77.00 per unit — deducting only SG&A from the selling price and forgetting the required 20% profit margin."
+- ExplanationWrongA: "See B" → "See D."
+- CommonTrapReference completed: "…the entire cost structure, not just manufacturing costs, must be covered before the required profit is available."
+
+CorrectChoice unchanged (D). EW[CC=D] remains empty (DL-008 clean).
+
+### Regression Test
+
+- Choice B contains no "Wait"/"68, not 77"/"comes from" text
+- EWA cross-reference points to D
+- Trap field ends with a complete sentence
+- `node --check` PASS; preflight_p2 PASS 0 divergences
+
+### Resolved
+
+2026-08-22 — Session P2-035. Backup: `p2/pack_p2_c.js.bak-20260822211414`.
+
+---
+
+## DL-P2-011 — Systemic CommonTrapReference Truncation (Template ~100-Char Cut)
+
+```
+Defect ID        DL-P2-011
+Class            Structural
+Domain           Metadata Completeness (CommonTrapReference fields cut mid-word by the authoring template)
+Severity         Low (metadata field, not learner-facing; violates the no-truncated-text completeness standard)
+Detected By      Build-Time AI Verification (dual-verification sweep triggered by the P2-C-022 finding, 2026-08-22)
+Status           Resolved — all 15 true cuts completed 2026-08-22
+```
+
+**Question IDs (15):** Pack A: P2-A-108. Pack B: P2-B-049. Pack C: P2-C-021, C-022, C-023, C-024, C-025, C-026, C-027, C-028, C-029 (nine consecutive items — one authoring block). Pack D: none. Pack E: P2-E-007, E-016. Pack F: P2-F-007, F-015.
+
+**Files:** `p2/pack_p2_a.js`, `p2/pack_p2_b.js`, `p2/pack_p2_c.js`, `p2/pack_p2_e.js`, `p2/pack_p2_f.js`
+
+### Issue
+
+Fifteen `CommonTrapReference` fields end mid-word or with dangling function words ("…not just manufa", "…overlay on th", "…weighted-av", "…the bottl", "…without a", "…suffer more from "), cut by a ~100-character template limit. Pack C's nine cuts are consecutive (C-021…C-029), identifying a single authoring block. The same defect class was repaired as an isolated case earlier (P2-A-112's "confusing DOL = CM/" — Session P2-030) without recognizing the systemic scope.
+
+### Root Cause
+
+The authoring template truncated the CommonTrapReference field at approximately 100 characters; items whose traps exceeded the limit were cut mid-word. Fields under the limit are unaffected; fields without trailing periods are a separate style convention, not truncation.
+
+### Detection Rule
+
+Flag `CommonTrapReference` values ending mid-word (last word is an incomplete fragment), with a dangling function word ("the", "a", "on", "in", "from"), with a dangling comma, or with a hyphen fragment ("weighted-av"). Do NOT flag fields merely lacking a trailing period — that is the pack's style convention for complete phrases.
+
+### Correction
+
+All 15 fields completed to full sentences matched to each item's stem context (2026-08-22, single authorized change-set across 5 packs; Rule 5 satisfied — 15 items ≤ 30).
+
+### Regression Test
+
+- Truncation scan re-run across all 6 packs: 0 true cuts remaining
+- All packs parse; item counts unchanged (A 160, B 100, C 75, D 50, E 60, F 50); DL-008 0; DL-026 0
+- `node --check` PASS × 5 edited packs; preflight_p2 PASS 0 divergences
+
+### Resolved
+
+2026-08-22 — Session P2-035. Backups: `p2/pack_p2_{a,b,c,e,f}.js.bak-20260822211414`.

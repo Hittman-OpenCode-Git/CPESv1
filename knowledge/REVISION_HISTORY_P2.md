@@ -1,5 +1,52 @@
 # REVISION_HISTORY_P2.md — CMA Part 2 Exam Simulator
 
+## Session P2-035 — Section C Review Remediation (C-022 + 15 trap completions)
+
+**Date:** 2026-08-22
+**Session Type:** Defect Repair (Full Governance Lane)
+**User approval:** Documented here — user authorized "All 15 trap cuts, all packs" (2026-08-22)
+**Backup timestamp:** 2026-08-22T21:14:14 — `p2/pack_p2_{a,b,c,e,f}.js.bak-20260822211414` (5 packs; D untouched); doc backups under `backups/`
+
+### T0 State (verified before any write)
+
+- `npm run preflight` PASS — 0 divergences; `node scripts/preflight_p2.js` PASS — 0 divergences; guard 74/74
+
+### Source of Findings
+
+Independent Section C substantive review (75/75 items, every calculation-bearing item recomputed): 1 Critical defect (P2-C-022), 0 arithmetic mismatches, verdict "passes with one Critical defect." Dual verification against raw file confirmed the finding and surfaced two extras: a half-edited Choice B and a stale "See B" cross-reference in EWA, plus a systemic CommonTrapReference truncation pattern (template ~100-char cut). Reviewer OK-side spot-checks (C-021, C-024, C-068, C-071) reproduced exactly — method validated.
+
+### Repairs Applied (17 text replacements, 16 items, 5 packs)
+
+| Item | Defect | Fix | CorrectChoice |
+|------|--------|-----|---------------|
+| P2-C-022 | Leaked "Wait, that's 68, not 77…" scratch-work in Choice B; half-edited $77 header; EWA cross-ref "See B" (step-by-step is in D); trap cut at "manufa" | Choice B rewritten terse ($77 distractor); "See B" → "See D"; trap completed | D (unchanged) |
+| P2-C-021, C-023…C-029 | CommonTrapReference cut mid-word (one authoring block) | All 9 completed to full sentences (DL-P2-011) | unchanged |
+| P2-A-108, P2-B-049, P2-E-007, P2-E-016, P2-F-007, P2-F-015 | CommonTrapReference cut mid-word | All 6 completed (DL-P2-011) | unchanged |
+
+### Governance Compliance (Verified)
+
+| Check | Result |
+|-------|--------|
+| Rule 5 batch cap (16 items ≤ 30) | PASS |
+| Backup-before-write (5 pack files + 2 docs) | PASS |
+| `node --check` × 5 edited packs | PASS |
+| Item counts unchanged (A 160 / B 100 / C 75 / D 50 / E 60 / F 50) | PASS |
+| DL-008 / DL-026 all packs | 0 / 0 |
+| Truncation re-scan (all 6 packs) | 0 true cuts remaining |
+| Leaked-note sweep (all 6 packs) | 0 |
+| `node scripts/preflight_p2.js` (Tend) | PASS — 0 divergences |
+| `npm run preflight` (Tend) | PASS — 0 divergences, guard 74/74 |
+
+### Process Notes
+
+- **Reviewer-side lessons (logged per §18.5):** (1) the reviewer's difficulty-field regex (`[\w-]+`) silently dropped the two "Very Difficult" items during manifest aggregation — a silent tooling gap resolved by asserting item count == manifest count before trusting distribution math; (2) a completeness pattern flag across many Pack C items: full worked-solution paragraphs embedded inside the Choices object (terse choices + explanations-only reasoning is the exam-realistic format). Logged as a tracked design note for a future editorial pass — NOT a defect and NOT remediated this session.
+- `p2/DEFECT_LIBRARY_P2.md`: DL-P2-010 (C-022 leaked note + broken choice, Resolved) and DL-P2-011 (systemic trap truncation, 15/15 fixed, Resolved) logged.
+- Items remain Certified (content corrections + re-verification, per P2-029/P2-030 precedent).
+- Section C pack state: 75/75 items, 0 arithmetic mismatches, C-022 remediated. Independent re-verification of the corrected items is the next step (P2-036 closeout, pending).
+
+**Revision recorded by:** P2-035 — Section C Review Remediation
+**Date:** 2026-08-22
+
 ## Session P2-034 — Section B Verification Closeout (100/100 Clean)
 
 **Date:** 2026-08-22

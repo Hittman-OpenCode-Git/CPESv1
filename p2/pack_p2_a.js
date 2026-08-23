@@ -4579,7 +4579,7 @@ var pack_p2_a_questions = [
     "D": "The common-size analysis is misleading when revenue is the denominator. If Ridgeway's revenue declined, the percentage increases in SG&A and R&D could reflect a shrinking denominator rather than actual spending increases, making any trend interpretation premature."
   },
   "CognitiveLevel": "Apply",
-  "CommonTrapReference": "Focusing on one favorable line-item trend (gross margin improvement) while ignoring offsetting unfav",
+  "CommonTrapReference": "Focusing on one favorable line-item trend (gross margin improvement) while ignoring offsetting unfavorable line-item trends (rising SG&A and R&D)",
   "CorrectChoice": "B",
   "Difficulty": "Moderate-Easy",
   "DifficultyScore": 2,

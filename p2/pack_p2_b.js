@@ -2085,7 +2085,7 @@ var pack_p2_b_questions = [
     "D": "The commercial paper effective cost cannot be compared to a line of credit because CP is unsecured while a credit line is a committed facility with different risk characteristics."
   },
   "CognitiveLevel": "Apply",
-  "CommonTrapReference": "Comparing stated rates without incorporating all fees (placement fees, commitment fees) or without a",
+  "CommonTrapReference": "Comparing stated rates without incorporating all fees (placement fees, commitment fees) or without accounting for the unused portion of the facility",
   "CorrectChoice": "A",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,

@@ -876,7 +876,7 @@ var pack_p2_c_questions = [
     "D": "Margin of safety = 25.0%. BE units = $360,000 / ($150−$90) = 6,000 units. MOS = (8,000−6,000)/8,000 = 25.0%. DOL at 8,000 units = CM/OI = ($60×8,000)/($480,000−$360,000) = $480,000/$120,000 = 4.0. A 10% sales decline reduces OI by 40% — from $120,000 to $72,000. The MOS tells us how far sales can fall before losses begin; DOL tells us the rate at which OI declines as sales fall. Together: with 25% MOS and DOL=4.0, a 25% sales decline produces a 100% OI decline — exactly to breakeven."
   },
   "CognitiveLevel": "Analyze",
-  "CommonTrapReference": "Computing MOS and DOL independently without recognizing their mathematical relationship — at the MOS",
+  "CommonTrapReference": "Computing MOS and DOL independently without recognizing their mathematical relationship — at the MOS point, MOS% × DOL = 100%",
   "CorrectChoice": "D",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,
@@ -914,17 +914,17 @@ var pack_p2_c_questions = [
   "CalculationItem": true,
   "Choices": {
     "A": "$60.00 per unit — the remaining balance after deducting profit and SG&A from the target selling price",
-    "B": "$77.00 per unit — only the profit margin is deducted from the selling price ($85 − $17 = $68). Wait, that's 68, not 77. The value of 77 comes from $85 − $8 = $77 — deducting SG&A but forgetting the profit margin.",
+    "B": "$77.00 per unit — deducting only SG&A from the selling price and forgetting the required 20% profit margin.",
     "C": "$68.00 per unit — the target selling price minus only the required profit margin. SG&A is a period cost and should not be deducted from the target cost.",
     "D": "$60.00 per unit. Target profit = 20% × $85 = $17.00. SG&A = $8.00. Allowable total cost = $85 − $17 = $68. Maximum allowable manufacturing cost = $68 − $8 = $60.00. If the company's estimated manufacturing cost exceeds $60, it must either reduce costs, accept a lower margin, or abandon the product."
   },
   "CognitiveLevel": "Apply",
-  "CommonTrapReference": "Forgetting to deduct SG&A from the allowable total cost — the entire cost structure, not just manufa",
+  "CommonTrapReference": "Forgetting to deduct SG&A from the allowable total cost — the entire cost structure, not just manufacturing costs, must be covered before the required profit is available",
   "CorrectChoice": "D",
   "Difficulty": "Moderate-Easy",
   "DifficultyScore": 2,
   "ExplanationCorrect": "Under target costing, the allowable cost is computed by working backward from the market-determined selling price. Target selling price = $85. Required profit = 20% × $85 = $17.00. Allowable total cost = Target price − Required profit = $85 − $17 = $68.00. This allowable total cost must cover both manufacturing costs and selling/administrative costs. Manufacturing cost = Allowable total cost − SG&A = $68.00 − $8.00 = $60.00. If the company estimates its actual manufacturing cost at, say, $65, there is a $5 cost gap that must be closed through value engineering, design changes, process improvements, or supplier negotiations. Target costing is a market-driven approach — the market sets the price, and the company must design its cost structure to deliver the required profit, rather than setting price by adding a markup to cost.",
-  "ExplanationWrongA": "The correct computation is $85 − $17 − $8 = $60. The answer states $60 but says 'the remaining balance' without showing the computation. See B for the complete step-by-step.",
+  "ExplanationWrongA": "The correct computation is $85 − $17 − $8 = $60. The answer states $60 but says 'the remaining balance' without showing the computation. See D for the complete step-by-step.",
   "ExplanationWrongB": "$77 per unit results from deducting only SG&A ($85−$8=$77) and forgetting the required 20% profit margin. The target cost must first satisfy the profit requirement ($17), then cover SG&A ($8), leaving the remaining balance for manufacturing. This approach ($85−$8=$77) would leave only $8 for profit if manufacturing cost equals $77 — an 9.4% margin, far below the 20% target.",
   "ExplanationWrongC": "SG&A costs of $8 per unit are part of the total cost to develop, produce, and deliver the product. They must be covered by the selling price alongside manufacturing costs. Deducting only the profit margin ($85−$17=$68) without also deducting SG&A overstates the allowable manufacturing cost — if the company builds to $68 manufacturing plus $8 SG&A, total cost is $76, leaving only $9 profit (10.6%, below the 20% target).",
   "ExplanationWrongD": "",
@@ -962,7 +962,7 @@ var pack_p2_c_questions = [
     "D": "The decision depends on whether fixed overhead is avoidable. If the special order uses idle capacity, some fixed overhead becomes avoidable, making the relevant cost higher than $37."
   },
   "CognitiveLevel": "Evaluate",
-  "CommonTrapReference": "Including allocated fixed overhead in the relevant-cost analysis — committed fixed costs within the ",
+  "CommonTrapReference": "Including allocated fixed overhead in the relevant-cost analysis — committed fixed costs within the relevant range do not change with the special-order decision",
   "CorrectChoice": "B",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,
@@ -1006,7 +1006,7 @@ var pack_p2_c_questions = [
     "D": "X = 150 units, Y = 0 units — maximizing the highest per-unit CM product first"
   },
   "CognitiveLevel": "Apply",
-  "CommonTrapReference": "Prioritizing products by per-unit CM instead of CM per constraint unit — when resources are limited,",
+  "CommonTrapReference": "Prioritizing products by per-unit CM instead of CM per constraint unit — when resources are limited, rank products by contribution margin per unit of the constrained resource",
   "CorrectChoice": "B",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,
@@ -1050,7 +1050,7 @@ var pack_p2_c_questions = [
     "D": "The strategies have equal EMV. Strategy A: $4.0M; Strategy B: $5.0M. Wait, those are NOT equal. The correct EMV for A is $4.0M and for B is $5.0M — B is higher by $1.0M."
   },
   "CognitiveLevel": "Analyze",
-  "CommonTrapReference": "Choosing the lower-risk option without computing EMV — risk preferences are a separate overlay on th",
+  "CommonTrapReference": "Choosing the lower-risk option without computing EMV — risk preferences are a separate overlay on the expected-value computation",
   "CorrectChoice": "B",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,
@@ -1093,7 +1093,7 @@ var pack_p2_c_questions = [
     "D": "Outsource but maintain 50% in-house production as a hedge. This captures half the savings ($75,000) while retaining backup capacity if the supplier fails to perform."
   },
   "CognitiveLevel": "Evaluate",
-  "CommonTrapReference": "Treating make-vs-buy as purely quantitative OR purely qualitative — the correct approach quantifies ",
+  "CommonTrapReference": "Treating make-vs-buy as purely quantitative OR purely qualitative — the correct approach quantifies the differential cost and then weighs the qualitative factors explicitly",
   "CorrectChoice": "B",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,
@@ -1137,7 +1137,7 @@ var pack_p2_c_questions = [
     "D": "P = 4,167 units, Q = 4,167 units — assuming equal unit sales of each product"
   },
   "CognitiveLevel": "Apply",
-  "CommonTrapReference": "Computing separate breakevens for each product and summing — multi-product BE requires a weighted-av",
+  "CommonTrapReference": "Computing separate breakevens for each product and summing — multi-product BE requires a weighted-average contribution margin based on the sales mix",
   "CorrectChoice": "B",
   "Difficulty": "Difficult",
   "DifficultyScore": 4,
@@ -1181,7 +1181,7 @@ var pack_p2_c_questions = [
     "D": "$70 — maximizing unit volume (9,000 units) maximizes total contribution"
   },
   "CognitiveLevel": "Apply",
-  "CommonTrapReference": "Assuming the highest price or highest volume maximizes total contribution — the optimum balances the",
+  "CommonTrapReference": "Assuming the highest price or highest volume maximizes total contribution — the optimum balances the unit margin against the volume response at each price",
   "CorrectChoice": "B",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,
@@ -1225,7 +1225,7 @@ var pack_p2_c_questions = [
     "D": "Alpha, because its higher throughput per unit ($180) means fewer units must be sold to cover the $180,000 monthly operating expenses."
   },
   "CognitiveLevel": "Apply",
-  "CommonTrapReference": "Prioritizing products by throughput per unit instead of throughput per constraint minute — the bottl",
+  "CommonTrapReference": "Prioritizing products by throughput per unit instead of throughput per constraint minute — the bottleneck workstation determines total output",
   "CorrectChoice": "B",
   "Difficulty": "Moderate",
   "DifficultyScore": 3,
