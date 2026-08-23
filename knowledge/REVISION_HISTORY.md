@@ -32013,3 +32013,34 @@ Authored and integrated 30 new Part 2 MCQs (5 per pack) across all 6 domains.
 
 **Revision recorded by:** P2-032 — Governance Formalization
 **Date:** 2026-08-22
+
+---
+
+## 2026-08-23 — Distractor Quality Audit + Governance (DL-043, DL-003 Amendment)
+
+**Session Type:** Read-only audit + governance documentation (Full Lane — DEFECT_LIBRARY.md / REVISION_HISTORY.md writes only)
+**Source:** User-reported exam practice feedback (all Part 1 modules): (1) logically equivalent distractors ("A is less than B / B is more than A") let learners eliminate two choices at once; (2) absolute terms (any/all/every) cause immediate distractor rejection.
+
+### Audit Results (2,620 items, all 5 packs, two independent scan passes)
+
+| Finding | Scope |
+|---------|-------|
+| Prose near-duplicate distractor pairs (ratio >= 0.55, >= 80 chars) | 22 pairs — Pack E 17 (worst: P1E-C-S01 3-way overlap; P1E-C-S06; P1E-F-S04; P1-E-R11/R13/R19), Pack B 3 (P1B-A-085, P1B-E-086), Pack A 1 (P1-A-064), Pack D 1 (P1-CD-068) |
+| True contrapositive pairs (X<Y vs Y>X) | 0 — the observed pattern is restatement duplication, not literal contraposition |
+| Strong absolute terms in distractor slots (always/never/impossible) | 128 items — A 20, B 18, C 39, D 21, E 30 |
+| any/every/all/must in distractor slots | 1,032 hits — triage (many legitimate technical uses) |
+| only/exclusively | 846 hits — mostly legitimate per DL-003 |
+
+### Governance Writes
+
+- **DL-043 logged** (Open): logically equivalent / near-duplicate distractor pairs — detection rules, correction protocol, regression test.
+- **DL-003 amended** (2026-08-23): term set extended with any/all/every; distractor-slot audit counts recorded.
+
+### Remediation Plan (authorized 2026-08-23)
+
+- Batch 1: rewrite one distractor per duplicate pair (11 items, 4 packs) — in progress this session.
+- Batch 2+: strong absolute terms (128 items) in <=30-item batches.
+- Then: triage pass on any/every/all/must (1,032 hits).
+
+**Revision recorded by:** Distractor Quality Audit
+**Date:** 2026-08-23
