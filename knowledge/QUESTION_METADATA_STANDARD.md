@@ -52,7 +52,7 @@ Every case study object in a `scored_cases*.js` array shall include the followin
 | `BlueprintObjectives` | Yes | Array[String] | — | Specific learning objectives tested, e.g. `["Cash budget preparation", "Cash collections forecasting"]`. |
 | `PrimaryCompetency` | Yes | String | — | Primary skill tested: `"Calculation"`, `"Conceptual"`, `"Analysis"`, `"Judgment"`. |
 | `EstimatedMinutes` | Yes | Integer | 30 | Expected time for an average candidate to complete all items. Range: 20–40. |
-| `Difficulty` | Yes | String | `"Moderate"` | Overall case difficulty. Values: `"Easy"`, `"Moderate"`, `"Difficult"`, `"Very Difficult"`. |
+| `Difficulty` | Yes | String | `"Moderate"` | Overall case difficulty. Values: `"Easy"`, `"Moderate-Easy"`, `"Moderate"`, `"Difficult"`, `"Very Difficult"`. |
 | `DifficultyScore` | Yes | Integer | 3 | Numeric difficulty 1–5: 1=Easy, 2=Moderate-Easy, 3=Moderate, 4=Difficult, 5=Very Difficult. |
 | `ScenarioText` | Yes | String | — | 2–4 sentence business scenario. Must include named company, stakeholder, business trigger, and task. |
 | `Exhibits` | Yes | Array[Object] | — | Array of exhibit objects (see Part 3). Minimum 2. |
@@ -155,7 +155,7 @@ Every item within a case's `Items` array shall include the following fields.
 | `Choices` | Conditional | Array[String] | Required for `select` and `multi` types. Array of answer choices. |
 | `LeftItems` | Conditional | Array[String] | Required for `match` type. Left-side items. |
 | `RightItems` | Conditional | Array[String] | Required for `match` type. Right-side items (may include extra distractors). |
-| `Difficulty` | Yes | String | Per-item difficulty. Values: `"Easy"`, `"Moderate"`, `"Difficult"`, `"Very Difficult"`. |
+| `Difficulty` | Yes | String | Per-item difficulty. Values: `"Easy"`, `"Moderate-Easy"`, `"Moderate"`, `"Difficult"`, `"Very Difficult"`. |
 | `DifficultyScore` | Yes | Integer | Per-item difficulty 1–5. |
 | `CognitiveLevel` | Yes | String | Cognitive skill tested (Bloom's updated). Values: `"Remember"`, `"Understand"`, `"Apply"`, `"Analyze"`, `"Evaluate"`. |
 | `CalculationRequired` | Yes | Boolean | `true` if the item requires arithmetic computation. |
@@ -274,14 +274,14 @@ Every explanation shall follow this structure. The sections need not be labeled,
 | `Title` | Must not be empty. Must not end with punctuation other than period. |
 | `SectionTags` | Must contain 1–2 values from `["A","B","C","D","E","F"]`. If 2, cross-domain tags must be E+F only. |
 | `BlueprintDomain` | Must match a domain name in EXAM_BLUEPRINT.md. |
-| `Difficulty` | Must be one of `["Easy", "Moderate", "Difficult", "Very Difficult"]`. |
+| `Difficulty` | Must be one of `["Easy", "Moderate-Easy", "Moderate", "Difficult", "Very Difficult"]`. |
 | `DifficultyScore` | Must be integer 1–5. |
 | `DifficultyScore` to `Difficulty` | 1=Easy, 2=Moderate-Easy, 3=Moderate, 4=Difficult, 5=Very Difficult. |
 | `EstimatedMinutes` | Must be integer 20–40. Must be achievable: average 5 minutes per item minimum. |
 | `QuestionCount` | Must equal `Items.length`. |
 | `ExhibitCount` | Must equal `Exhibits.length`. |
 | `ProductionStatus` | Must be one of `["Draft", "Review", "QA", "Production", "Retired"]`. |
-| `Version` | Must match semantic version `^\d+\.\d+$`. |
+| `Version` | Must match semantic version `^\d+\.\d+$` (the case-level `Version` field). The repository `VERSION` file separately uses 3-part SemVer per P2002 §e — a different artifact, not a conflict. |
 | `Confidence` | Must be integer 0–100. |
 | `ItemID` | Must match pattern `^CBQ\d*-[A-F]\d*-Q\d+$`. Must be unique within the case. |
 | `CognitiveLevel` | Must be one of `["Remember", "Understand", "Apply", "Analyze", "Evaluate"]`. |
@@ -306,7 +306,7 @@ Every row in every table exhibit must be referenced by at least one item. No dec
 
 ## 5.4 Cognitive Progression Rule
 
-Items must follow this sequence: numeric(2–3) → select(1–2) → multi(1) → fill(0–1) → match(1). Corresponding cognitive levels: Apply → Analyze → Evaluate → Understand → Synthesize.
+Items must follow this sequence: numeric(2–3) → select(1–2) → multi(1) → fill(0–1) → match(1). Corresponding cognitive levels: Apply → Analyze → Evaluate → Understand → Evaluate. ("Synthesize" in legacy text is narrative shorthand; the registered enumeration per §2.1 uses Evaluate for synthesis-level judgment.)
 
 ---
 
@@ -435,9 +435,9 @@ The metadata schema supports RESTful endpoints:
 
 The `DifficultyScore`, `CognitiveLevel`, and `EstimatedMinutes` fields support adaptive algorithms:
 
-- Entry-level items: Difficulty 1–2, CognitiveLevel `Recall` or `Understand`
+- Entry-level items: Difficulty 1–2, CognitiveLevel `Recall` (synonym of `Remember`) or `Understand`
 - Mid-level items: Difficulty 2–3, CognitiveLevel `Apply` or `Analyze`
-- Advanced items: Difficulty 3–5, CognitiveLevel `Evaluate` or `Synthesize`
+- Advanced items: Difficulty 3–5, CognitiveLevel `Evaluate` (including synthesis-level tasks)
 
 ---
 

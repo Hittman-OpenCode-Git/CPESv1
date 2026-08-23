@@ -427,3 +427,62 @@ All 15 fields completed to full sentences matched to each item's stem context (2
 2026-08-22 — Session P2-035. Backups: `p2/pack_p2_{a,b,c,e,f}.js.bak-20260822211414`.
 
 **Independent verification (2026-08-22, P2-036):** 9 Pack C completions confirmed accurate by the reviewer (8 cross-checked against their own source records; C-025 internally consistent). 6 cross-pack completions (A-108, B-049, E-007, E-016, F-007, F-015) pending independent confirmation — reviewer lacks source copies of packs A/B/E/F; all six verified internally against our sources pre-commit.
+
+---
+
+## DL-P2-012 — Source-of-Truth Defects (External Review, 20 Findings)
+
+```
+Defect ID        DL-P2-012
+Class            Structural / Documentation
+Domain           Source-of-Truth Materials (formula registry, identifier standards, layout docs, metadata standard)
+Severity         2 Critical | 6 High | 7 Medium | 5 Low (F-13 downgraded to a documentation note — different artifacts)
+Detected By      External SoT cross-section review (2026-08-22); every finding dual-verified against raw sources before remediation
+Status           Resolved — all 20 findings remediated 2026-08-22
+```
+
+**Files:** `p2/P2005_FORMULA_MASTER.json`, `p2/P2002_REPOSITORY_LAYOUT.md`, `p2/P2003_QID_STANDARD.md`, `p2/P2_RESEARCH_SECTIONS_TOPICS_THEORIES.md`, `knowledge/QUESTION_METADATA_STANDARD.md`
+
+### Findings and Corrections
+
+| # | Finding (severity) | Correction |
+|---|--------------------|------------|
+| 1 | IRR missing from formula registry (Critical) | Added ID-09 (decision-rule form, no closed form; multiple-IRR and reinvestment caveats) |
+| 2 | CaseID `CBQ2-` collision: Part 1 Pack 2 already uses bare `CBQ2-*` (verified in `content/cases/case_pack_1_corrected.js` / `case_pack_2_corrected.js`) (Critical) | Part 2 case IDs now REQUIRE the pack digit (`CBQ21-A1`, `CBQ22-B5`…); bare `CBQ2-` reserved for Part 1 Pack 2 |
+| 3 | P2002 stale 5-pack layout vs actual 6-pack repo (High) | Root file list + g.3 updated; research doc §4.6 remapped to pack_p2_d (D), e (E), f (F) |
+| 4 | FA-16/FA-17 cite SEC Regulation G (non-GAAP) for P/E and dividend yield (High) | Citations replaced with "Market-based ratio; financial ratio analysis theory" |
+| 5 | CCC missing from registry (High) | Added CB-10 (CCC = DIO + DSO − DPO) |
+| 6 | DDM cost of common equity missing (High) | Added CB-11 (Re = D1/P0 + g, with flotation-cost variant) |
+| 7 | Router misroutes `CBQ2-A1` to Part 1 (High) | Router order corrected: `^CBQ2\d-[A-F]\d+$` → Part2 checked FIRST |
+| 8 | D/E QID range regex `(0[0-9]{2}|[12][0-4][0-9]|250)` misses 150–199 (High) | Fixed to `(0[0-9]{2}|1[0-9]{2}|2[0-4][0-9]|250)` — tested 001–250 all match, 251 rejected |
+| 9 | RM-03 cites Principle 15 (Medium) | Changed to Principle 11 (Assesses Severity of Risk, including residual risk) |
+| 10 | P2003 Rule 5 says "5 packs" (Medium) | Both occurrences corrected to 6 packs |
+| 11 | Metadata Difficulty enum omits Moderate-Easy (Medium) | Added in §1.1 (case), §2.1 (item), §5.1 (validation) — now 5 values everywhere |
+| 12 | "Synthesize"/"Recall" outside CognitiveLevel enum (Medium) | Documented as aliases: Synthesize ≈ Evaluate-level synthesis; Recall = Remember |
+| 13 | Version 2-part vs 3-part SemVer (Medium→Low) | Documented: case `Version` = 2-part; repository `VERSION` = 3-part (P2002 §e) — different artifacts |
+| 14 | Max items per case: 7 (metadata) vs 6 (P2003) (Medium) | P2003 aligned to max 7 per QUESTION_METADATA_STANDARD §1.1 |
+| 15 | Review-package manifest hashed part 05 before the P2003 append (Medium) | Manifest regenerated with post-append hash |
+| 16 | DOL duplicated (FA-19 = DA-05) (Low) | Documented as intentional cross-domain alias via `note` field on both |
+| 17 | Type "select" vs ItemStyle "single-select" (Low) | Documented as naming divergence (case Type enum vs MCQ ItemStyle) — no change needed |
+| 18 | ASC 205-10 loose for analytical ratios (Low) | Accepted as defensible — no change |
+| 19 | Research §4.6 stale 5-pack mapping (Low) | Fixed (see #3) |
+| 20 | Missing minor formulas: payout ratio, FCF, total asset turnover, D/A (Low) | Added FA-22, FA-23, FA-24, FA-25 |
+| 21 | Case exemplar shows only 3 fields (Low) | Documented — it is a versioning example, not a full case exemplar |
+
+Registry: 52 → **59 formulas** (A 25, B 11, C 11, D 3, E 9, F 0), counts_match true, 59 unique IDs.
+
+### Root Cause
+
+Bootstrap-era artifacts (P2-001…P2-005) authored before the pack layout stabilized at 6 packs and before Part 1's case-pack ID usage was cross-checked; the formula registry was drafted against the early blueprint without a completeness cross-check against the research doc's theory layer.
+
+### Regression Test
+
+- Registry: 59/59 unique IDs, domain counts match, JSON parses
+- CBQ2 router: CBQ21-A1 → Part2; CBQ2-A1/B2 → Part1; CBQ-A1 → Part1 (all verified)
+- P2003 D/E regex: 001–250 match; 251 rejected (verified)
+- 0 remnants: "5 packs" (P2003), "Regulation G" (registry), "Principle 15" (registry), bare `CBQ2-` Part 2 patterns (P2002)
+- Library artifacts regenerated from corrected sources (catalog 59 formulas; inventory 525 lines)
+
+### Resolved
+
+2026-08-22 — Session P2-037. Backups: `backups/P2005_FORMULA_MASTER.json.bak-20260822222456` (+ P2002/P2003/research/metadata-standard backups, same timestamp).

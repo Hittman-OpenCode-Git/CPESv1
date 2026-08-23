@@ -9,7 +9,7 @@
     "A": {
       "letter": "A",
       "name": "Financial Statement Analysis",
-      "formula_count": 21,
+      "formula_count": 25,
       "formulas": [
         {
           "id": "FA-01",
@@ -18,8 +18,16 @@
           "section": "Liquidity Ratios",
           "notation": "Current Ratio = Current Assets / Current Liabilities",
           "variables": [
-            { "symbol": "CA", "name": "Current Assets", "description": "Cash + receivables + inventory + prepaids + marketable securities, expected to convert within 1 year" },
-            { "symbol": "CL", "name": "Current Liabilities", "description": "Obligations due within 1 year (A/P, accrued expenses, short-term debt, current portion of LTD)" }
+            {
+              "symbol": "CA",
+              "name": "Current Assets",
+              "description": "Cash + receivables + inventory + prepaids + marketable securities, expected to convert within 1 year"
+            },
+            {
+              "symbol": "CL",
+              "name": "Current Liabilities",
+              "description": "Obligations due within 1 year (A/P, accrued expenses, short-term debt, current portion of LTD)"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "ratio",
@@ -38,10 +46,26 @@
           "section": "Liquidity Ratios",
           "notation": "Quick Ratio = (Cash + Marketable Securities + Accounts Receivable) / Current Liabilities",
           "variables": [
-            { "symbol": "C", "name": "Cash", "description": "Cash and cash equivalents" },
-            { "symbol": "MS", "name": "Marketable Securities", "description": "Short-term investments readily convertible to cash" },
-            { "symbol": "AR", "name": "Accounts Receivable", "description": "Net realizable value of trade receivables" },
-            { "symbol": "CL", "name": "Current Liabilities", "description": "Obligations due within 1 year" }
+            {
+              "symbol": "C",
+              "name": "Cash",
+              "description": "Cash and cash equivalents"
+            },
+            {
+              "symbol": "MS",
+              "name": "Marketable Securities",
+              "description": "Short-term investments readily convertible to cash"
+            },
+            {
+              "symbol": "AR",
+              "name": "Accounts Receivable",
+              "description": "Net realizable value of trade receivables"
+            },
+            {
+              "symbol": "CL",
+              "name": "Current Liabilities",
+              "description": "Obligations due within 1 year"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "ratio",
@@ -60,9 +84,21 @@
           "section": "Liquidity Ratios",
           "notation": "Cash Ratio = (Cash + Marketable Securities) / Current Liabilities",
           "variables": [
-            { "symbol": "C", "name": "Cash", "description": "Cash and cash equivalents" },
-            { "symbol": "MS", "name": "Marketable Securities", "description": "Short-term investments readily convertible to cash" },
-            { "symbol": "CL", "name": "Current Liabilities", "description": "Obligations due within 1 year" }
+            {
+              "symbol": "C",
+              "name": "Cash",
+              "description": "Cash and cash equivalents"
+            },
+            {
+              "symbol": "MS",
+              "name": "Marketable Securities",
+              "description": "Short-term investments readily convertible to cash"
+            },
+            {
+              "symbol": "CL",
+              "name": "Current Liabilities",
+              "description": "Obligations due within 1 year"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "ratio",
@@ -81,8 +117,16 @@
           "section": "Activity Ratios",
           "notation": "Inventory Turnover = COGS / Average Inventory",
           "variables": [
-            { "symbol": "COGS", "name": "Cost of Goods Sold", "description": "Cost of inventory sold during the period" },
-            { "symbol": "AvgInv", "name": "Average Inventory", "description": "(Beginning Inventory + Ending Inventory) / 2" }
+            {
+              "symbol": "COGS",
+              "name": "Cost of Goods Sold",
+              "description": "Cost of inventory sold during the period"
+            },
+            {
+              "symbol": "AvgInv",
+              "name": "Average Inventory",
+              "description": "(Beginning Inventory + Ending Inventory) / 2"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "ratio",
@@ -101,8 +145,16 @@
           "section": "Activity Ratios",
           "notation": "DSO = (Average Accounts Receivable / Net Credit Sales) × 365",
           "variables": [
-            { "symbol": "AvgAR", "name": "Average Accounts Receivable", "description": "(Beginning AR + Ending AR) / 2" },
-            { "symbol": "NCS", "name": "Net Credit Sales", "description": "Total credit sales less returns and allowances" }
+            {
+              "symbol": "AvgAR",
+              "name": "Average Accounts Receivable",
+              "description": "(Beginning AR + Ending AR) / 2"
+            },
+            {
+              "symbol": "NCS",
+              "name": "Net Credit Sales",
+              "description": "Total credit sales less returns and allowances"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "days",
@@ -121,8 +173,16 @@
           "section": "Activity Ratios",
           "notation": "DPO = (Average Accounts Payable / Total Purchases) × 365",
           "variables": [
-            { "symbol": "AvgAP", "name": "Average Accounts Payable", "description": "(Beginning AP + Ending AP) / 2" },
-            { "symbol": "TP", "name": "Total Purchases", "description": "COGS + Ending Inventory − Beginning Inventory" }
+            {
+              "symbol": "AvgAP",
+              "name": "Average Accounts Payable",
+              "description": "(Beginning AP + Ending AP) / 2"
+            },
+            {
+              "symbol": "TP",
+              "name": "Total Purchases",
+              "description": "COGS + Ending Inventory − Beginning Inventory"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "days",
@@ -141,8 +201,16 @@
           "section": "Leverage Ratios",
           "notation": "D/E = Total Liabilities / Total Shareholders' Equity",
           "variables": [
-            { "symbol": "TL", "name": "Total Liabilities", "description": "All current and non-current obligations" },
-            { "symbol": "TSE", "name": "Total Shareholders' Equity", "description": "Common stock + APIC + retained earnings + AOCI − treasury stock" }
+            {
+              "symbol": "TL",
+              "name": "Total Liabilities",
+              "description": "All current and non-current obligations"
+            },
+            {
+              "symbol": "TSE",
+              "name": "Total Shareholders' Equity",
+              "description": "Common stock + APIC + retained earnings + AOCI − treasury stock"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "ratio",
@@ -161,8 +229,16 @@
           "section": "Leverage Ratios",
           "notation": "TIE = EBIT / Interest Expense",
           "variables": [
-            { "symbol": "EBIT", "name": "Earnings Before Interest and Taxes", "description": "Operating income" },
-            { "symbol": "IE", "name": "Interest Expense", "description": "Total interest incurred (including amortization of bond discount/premium)" }
+            {
+              "symbol": "EBIT",
+              "name": "Earnings Before Interest and Taxes",
+              "description": "Operating income"
+            },
+            {
+              "symbol": "IE",
+              "name": "Interest Expense",
+              "description": "Total interest incurred (including amortization of bond discount/premium)"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "ratio",
@@ -181,8 +257,16 @@
           "section": "Profitability Ratios",
           "notation": "Gross Margin % = (Gross Profit / Net Sales) × 100",
           "variables": [
-            { "symbol": "GP", "name": "Gross Profit", "description": "Net Sales − COGS" },
-            { "symbol": "NS", "name": "Net Sales", "description": "Total sales less returns, allowances, and discounts" }
+            {
+              "symbol": "GP",
+              "name": "Gross Profit",
+              "description": "Net Sales − COGS"
+            },
+            {
+              "symbol": "NS",
+              "name": "Net Sales",
+              "description": "Total sales less returns, allowances, and discounts"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -201,8 +285,16 @@
           "section": "Profitability Ratios",
           "notation": "Operating Margin % = (Operating Income / Net Sales) × 100",
           "variables": [
-            { "symbol": "OI", "name": "Operating Income", "description": "Gross Profit − Operating Expenses (SG&A, R&D, depreciation)" },
-            { "symbol": "NS", "name": "Net Sales", "description": "Total sales less returns, allowances, and discounts" }
+            {
+              "symbol": "OI",
+              "name": "Operating Income",
+              "description": "Gross Profit − Operating Expenses (SG&A, R&D, depreciation)"
+            },
+            {
+              "symbol": "NS",
+              "name": "Net Sales",
+              "description": "Total sales less returns, allowances, and discounts"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -220,8 +312,16 @@
           "section": "Profitability Ratios",
           "notation": "Net Margin % = (Net Income / Net Sales) × 100",
           "variables": [
-            { "symbol": "NI", "name": "Net Income", "description": "Revenue − all expenses + gains − losses − taxes" },
-            { "symbol": "NS", "name": "Net Sales", "description": "Total sales less returns, allowances, and discounts" }
+            {
+              "symbol": "NI",
+              "name": "Net Income",
+              "description": "Revenue − all expenses + gains − losses − taxes"
+            },
+            {
+              "symbol": "NS",
+              "name": "Net Sales",
+              "description": "Total sales less returns, allowances, and discounts"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -240,8 +340,16 @@
           "section": "Profitability Ratios",
           "notation": "ROA = Net Income / Average Total Assets",
           "variables": [
-            { "symbol": "NI", "name": "Net Income", "description": "Bottom-line earnings after all expenses and taxes" },
-            { "symbol": "AvgTA", "name": "Average Total Assets", "description": "(Beginning Total Assets + Ending Total Assets) / 2" }
+            {
+              "symbol": "NI",
+              "name": "Net Income",
+              "description": "Bottom-line earnings after all expenses and taxes"
+            },
+            {
+              "symbol": "AvgTA",
+              "name": "Average Total Assets",
+              "description": "(Beginning Total Assets + Ending Total Assets) / 2"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -260,9 +368,21 @@
           "section": "Profitability Ratios",
           "notation": "ROE = (Net Income − Preferred Dividends) / Average Common Shareholders' Equity",
           "variables": [
-            { "symbol": "NI", "name": "Net Income", "description": "Net income for the period" },
-            { "symbol": "PD", "name": "Preferred Dividends", "description": "Dividends on preferred stock" },
-            { "symbol": "AvgCSE", "name": "Average Common Equity", "description": "(Beginning Common Equity + Ending Common Equity) / 2" }
+            {
+              "symbol": "NI",
+              "name": "Net Income",
+              "description": "Net income for the period"
+            },
+            {
+              "symbol": "PD",
+              "name": "Preferred Dividends",
+              "description": "Dividends on preferred stock"
+            },
+            {
+              "symbol": "AvgCSE",
+              "name": "Average Common Equity",
+              "description": "(Beginning Common Equity + Ending Common Equity) / 2"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -281,9 +401,21 @@
           "section": "Profitability Ratios",
           "notation": "ROE = NPM × TAT × EM = (Net Income / Sales) × (Sales / Average Total Assets) × (Average Total Assets / Average Equity)",
           "variables": [
-            { "symbol": "NPM", "name": "Net Profit Margin", "description": "Net Income / Sales" },
-            { "symbol": "TAT", "name": "Total Asset Turnover", "description": "Sales / Average Total Assets" },
-            { "symbol": "EM", "name": "Equity Multiplier", "description": "Average Total Assets / Average Equity" }
+            {
+              "symbol": "NPM",
+              "name": "Net Profit Margin",
+              "description": "Net Income / Sales"
+            },
+            {
+              "symbol": "TAT",
+              "name": "Total Asset Turnover",
+              "description": "Sales / Average Total Assets"
+            },
+            {
+              "symbol": "EM",
+              "name": "Equity Multiplier",
+              "description": "Average Total Assets / Average Equity"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -302,9 +434,21 @@
           "section": "Market Ratios",
           "notation": "Basic EPS = (Net Income − Preferred Dividends) / Weighted Average Common Shares Outstanding",
           "variables": [
-            { "symbol": "NI", "name": "Net Income", "description": "Net income for the period" },
-            { "symbol": "PD", "name": "Preferred Dividends", "description": "Dividends on cumulative preferred stock (declared or not)" },
-            { "symbol": "WASO", "name": "Weighted Average Shares", "description": "Shares weighted by time outstanding during the period" }
+            {
+              "symbol": "NI",
+              "name": "Net Income",
+              "description": "Net income for the period"
+            },
+            {
+              "symbol": "PD",
+              "name": "Preferred Dividends",
+              "description": "Dividends on cumulative preferred stock (declared or not)"
+            },
+            {
+              "symbol": "WASO",
+              "name": "Weighted Average Shares",
+              "description": "Shares weighted by time outstanding during the period"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "dollars per share",
@@ -324,8 +468,16 @@
           "section": "Market Ratios",
           "notation": "P/E = Market Price per Share / Earnings per Share",
           "variables": [
-            { "symbol": "MPS", "name": "Market Price per Share", "description": "Current trading price of one common share" },
-            { "symbol": "EPS", "name": "Earnings per Share", "description": "Trailing 12-month or forward EPS" }
+            {
+              "symbol": "MPS",
+              "name": "Market Price per Share",
+              "description": "Current trading price of one common share"
+            },
+            {
+              "symbol": "EPS",
+              "name": "Earnings per Share",
+              "description": "Trailing 12-month or forward EPS"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "ratio",
@@ -334,7 +486,7 @@
             "Using basic EPS when diluted EPS is more conservative",
             "Comparing trailing P/E to forward P/E of another company"
           ],
-          "authority": "Market-based ratio; SEC Regulation G (non-GAAP)",
+          "authority": "Market-based ratio; financial ratio analysis theory",
           "examTrap": "P/E ratios are not comparable across industries. A 'low' P/E in a cyclical industry may signal peak earnings about to decline, not a bargain."
         },
         {
@@ -344,8 +496,16 @@
           "section": "Market Ratios",
           "notation": "Dividend Yield = (Annual Dividends per Share / Market Price per Share) × 100",
           "variables": [
-            { "symbol": "DPS", "name": "Dividends per Share", "description": "Total annual dividends declared per common share" },
-            { "symbol": "MPS", "name": "Market Price per Share", "description": "Current trading price of one common share" }
+            {
+              "symbol": "DPS",
+              "name": "Dividends per Share",
+              "description": "Total annual dividends declared per common share"
+            },
+            {
+              "symbol": "MPS",
+              "name": "Market Price per Share",
+              "description": "Current trading price of one common share"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -354,7 +514,7 @@
             "Using one quarter's dividend × 4 without confirming representativeness",
             "Using wrong share price date"
           ],
-          "authority": "Market-based ratio; SEC Regulation G",
+          "authority": "Market-based ratio; financial ratio analysis theory",
           "examTrap": "A high dividend yield may result from a declining stock price (denominator falling), not from generous dividends."
         },
         {
@@ -364,9 +524,21 @@
           "section": "Market Ratios",
           "notation": "BVPS = (Total Shareholders' Equity − Preferred Equity) / Common Shares Outstanding",
           "variables": [
-            { "symbol": "TSE", "name": "Total Shareholders' Equity", "description": "Total equity including preferred stock" },
-            { "symbol": "PE", "name": "Preferred Equity", "description": "Liquidation value or par value of preferred stock" },
-            { "symbol": "CSO", "name": "Common Shares Outstanding", "description": "Shares issued − treasury shares, at period end" }
+            {
+              "symbol": "TSE",
+              "name": "Total Shareholders' Equity",
+              "description": "Total equity including preferred stock"
+            },
+            {
+              "symbol": "PE",
+              "name": "Preferred Equity",
+              "description": "Liquidation value or par value of preferred stock"
+            },
+            {
+              "symbol": "CSO",
+              "name": "Common Shares Outstanding",
+              "description": "Shares issued − treasury shares, at period end"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "dollars per share",
@@ -385,8 +557,16 @@
           "section": "Leverage Ratios",
           "notation": "DOL = Contribution Margin / Operating Income",
           "variables": [
-            { "symbol": "CM", "name": "Contribution Margin", "description": "Sales − Total Variable Costs" },
-            { "symbol": "OI", "name": "Operating Income", "description": "CM − Fixed Costs" }
+            {
+              "symbol": "CM",
+              "name": "Contribution Margin",
+              "description": "Sales − Total Variable Costs"
+            },
+            {
+              "symbol": "OI",
+              "name": "Operating Income",
+              "description": "CM − Fixed Costs"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "ratio",
@@ -396,7 +576,8 @@
             "Computing at the wrong sales level"
           ],
           "authority": "Managerial accounting theory",
-          "examTrap": "DOL is a point elasticity—it changes at different sales levels. DOL of 3 means a 1% sales increase produces a 3% operating income increase at that specific sales level."
+          "examTrap": "DOL is a point elasticity—it changes at different sales levels. DOL of 3 means a 1% sales increase produces a 3% operating income increase at that specific sales level.",
+          "note": "Cross-domain alias: identical to DA-05 (Degree of Operating Leverage, CVP form). Retained in both domains for per-domain completeness; case authors may cite either ID."
         },
         {
           "id": "FA-20",
@@ -405,8 +586,16 @@
           "section": "Leverage Ratios",
           "notation": "DFL = EBIT / EBT = Operating Income / (Operating Income − Interest Expense)",
           "variables": [
-            { "symbol": "EBIT", "name": "Earnings Before Interest and Taxes", "description": "Operating income" },
-            { "symbol": "EBT", "name": "Earnings Before Taxes", "description": "EBIT − Interest Expense" }
+            {
+              "symbol": "EBIT",
+              "name": "Earnings Before Interest and Taxes",
+              "description": "Operating income"
+            },
+            {
+              "symbol": "EBT",
+              "name": "Earnings Before Taxes",
+              "description": "EBIT − Interest Expense"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "ratio",
@@ -424,8 +613,16 @@
           "section": "Profitability Ratios",
           "notation": "SGR = ROE × (1 − Dividend Payout Ratio)",
           "variables": [
-            { "symbol": "ROE", "name": "Return on Equity", "description": "Net Income / Average Common Equity" },
-            { "symbol": "b", "name": "Retention Ratio", "description": "1 − (Dividends / Net Income)" }
+            {
+              "symbol": "ROE",
+              "name": "Return on Equity",
+              "description": "Net Income / Average Common Equity"
+            },
+            {
+              "symbol": "b",
+              "name": "Retention Ratio",
+              "description": "1 − (Dividends / Net Income)"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -436,13 +633,117 @@
           ],
           "authority": "Corporate finance theory (Higgins, 1977)",
           "examTrap": "SGR assumes constant capital structure, dividend policy, and asset turnover. It is a theoretical maximum, not a forecast."
+        },
+        {
+          "id": "FA-22",
+          "name": "Dividend Payout Ratio",
+          "domain": "A",
+          "section": "Market Value Ratios",
+          "notation": "Payout Ratio = Dividends per Share / Earnings per Share",
+          "variables": [
+            {
+              "symbol": "DPS",
+              "name": "Dividends per Share"
+            },
+            {
+              "symbol": "EPS",
+              "name": "Earnings per Share"
+            }
+          ],
+          "rounding": "Two decimal places",
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "commonErrors": [
+            "Using total dividends instead of per-share values",
+            "Confusing payout ratio with retention ratio (b = 1 − payout)"
+          ],
+          "authority": "Corporate finance theory; dividend policy",
+          "examTrap": "Retention ratio is the complement: b = 1 − Payout Ratio. Sustainable growth (SGR) requires the retention ratio, not the payout ratio directly."
+        },
+        {
+          "id": "FA-23",
+          "name": "Free Cash Flow (FCF)",
+          "domain": "A",
+          "section": "Cash Flow Analysis",
+          "notation": "FCF = Operating Cash Flow − Net Capital Expenditures",
+          "variables": [
+            {
+              "symbol": "OCF",
+              "name": "Operating Cash Flow"
+            },
+            {
+              "symbol": "NCapex",
+              "name": "Net Capital Expenditures"
+            }
+          ],
+          "rounding": "Nearest whole dollar",
+          "tolerance": 1,
+          "tolerance_unit": "USD",
+          "commonErrors": [
+            "Including financing or investing inflows",
+            "Treating EBITDA as a proxy for FCF"
+          ],
+          "authority": "ASC 230-10 (Statement of Cash Flows)",
+          "examTrap": "FCF measures discretionary cash available after maintaining the asset base. Common error: adding borrowing proceeds (a financing inflow) into FCF."
+        },
+        {
+          "id": "FA-24",
+          "name": "Total Asset Turnover",
+          "domain": "A",
+          "section": "Activity Ratios",
+          "notation": "Total Asset Turnover = Net Sales / Average Total Assets",
+          "variables": [
+            {
+              "symbol": "NS",
+              "name": "Net Sales"
+            },
+            {
+              "symbol": "AvgTA",
+              "name": "Average Total Assets"
+            }
+          ],
+          "rounding": "Two decimal places",
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "commonErrors": [
+            "Using ending assets instead of average",
+            "Comparing asset-heavy and asset-light firms without context"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "A low ratio for a capital-intensive manufacturer is normal; the same ratio for a retailer signals inefficiency. Always interpret within the industry business model."
+        },
+        {
+          "id": "FA-25",
+          "name": "Debt-to-Assets Ratio",
+          "domain": "A",
+          "section": "Leverage Ratios",
+          "notation": "Debt-to-Assets = Total Liabilities / Total Assets",
+          "variables": [
+            {
+              "symbol": "TL",
+              "name": "Total Liabilities"
+            },
+            {
+              "symbol": "TA",
+              "name": "Total Assets"
+            }
+          ],
+          "rounding": "Two decimal places",
+          "tolerance": 0.01,
+          "tolerance_unit": "ratio",
+          "commonErrors": [
+            "Using long-term debt only instead of total liabilities",
+            "Confusing D/A with D/E"
+          ],
+          "authority": "ASC 205-10 (Presentation of Financial Statements)",
+          "examTrap": "D/A and the equity-financing ratio sum to 1. D/A is the safer metric when equity can approach zero (making D/E explode)."
         }
       ]
     },
     "B": {
       "letter": "B",
       "name": "Corporate Finance",
-      "formula_count": 9,
+      "formula_count": 11,
       "formulas": [
         {
           "id": "CB-01",
@@ -451,8 +752,16 @@
           "section": "Risk and Return",
           "notation": "E(R) = Σ(P_i × R_i)",
           "variables": [
-            { "symbol": "P_i", "name": "Probability of State i", "description": "Likelihood of economic state i occurring (must sum to 1.0)" },
-            { "symbol": "R_i", "name": "Return in State i", "description": "Expected return if state i occurs" }
+            {
+              "symbol": "P_i",
+              "name": "Probability of State i",
+              "description": "Likelihood of economic state i occurring (must sum to 1.0)"
+            },
+            {
+              "symbol": "R_i",
+              "name": "Return in State i",
+              "description": "Expected return if state i occurs"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -471,10 +780,26 @@
           "section": "Risk and Return",
           "notation": "σ = sqrt(Σ(P_i × (R_i − E(R))²))",
           "variables": [
-            { "symbol": "σ", "name": "Standard Deviation", "description": "Measure of total risk (dispersion around expected return)" },
-            { "symbol": "P_i", "name": "Probability of State i", "description": "Likelihood of state i" },
-            { "symbol": "R_i", "name": "Return in State i", "description": "Return if state i occurs" },
-            { "symbol": "E(R)", "name": "Expected Return", "description": "Probability-weighted average return" }
+            {
+              "symbol": "σ",
+              "name": "Standard Deviation",
+              "description": "Measure of total risk (dispersion around expected return)"
+            },
+            {
+              "symbol": "P_i",
+              "name": "Probability of State i",
+              "description": "Likelihood of state i"
+            },
+            {
+              "symbol": "R_i",
+              "name": "Return in State i",
+              "description": "Return if state i occurs"
+            },
+            {
+              "symbol": "E(R)",
+              "name": "Expected Return",
+              "description": "Probability-weighted average return"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -493,8 +818,16 @@
           "section": "Risk and Return",
           "notation": "CV = σ / E(R)",
           "variables": [
-            { "symbol": "σ", "name": "Standard Deviation", "description": "Absolute measure of dispersion" },
-            { "symbol": "E(R)", "name": "Expected Return", "description": "Mean expected return" }
+            {
+              "symbol": "σ",
+              "name": "Standard Deviation",
+              "description": "Absolute measure of dispersion"
+            },
+            {
+              "symbol": "E(R)",
+              "name": "Expected Return",
+              "description": "Mean expected return"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "ratio",
@@ -513,11 +846,31 @@
           "section": "Risk and Return",
           "notation": "R_e = R_f + β(R_m − R_f)",
           "variables": [
-            { "symbol": "R_e", "name": "Required Return on Equity", "description": "Cost of equity capital" },
-            { "symbol": "R_f", "name": "Risk-Free Rate", "description": "Return on a risk-free asset (typically 10-year U.S. Treasury)" },
-            { "symbol": "β", "name": "Beta", "description": "Measure of systematic risk relative to the market (β_market = 1)" },
-            { "symbol": "R_m", "name": "Market Return", "description": "Expected return on the market portfolio" },
-            { "symbol": "R_m − R_f", "name": "Market Risk Premium", "description": "Excess return demanded for bearing market risk" }
+            {
+              "symbol": "R_e",
+              "name": "Required Return on Equity",
+              "description": "Cost of equity capital"
+            },
+            {
+              "symbol": "R_f",
+              "name": "Risk-Free Rate",
+              "description": "Return on a risk-free asset (typically 10-year U.S. Treasury)"
+            },
+            {
+              "symbol": "β",
+              "name": "Beta",
+              "description": "Measure of systematic risk relative to the market (β_market = 1)"
+            },
+            {
+              "symbol": "R_m",
+              "name": "Market Return",
+              "description": "Expected return on the market portfolio"
+            },
+            {
+              "symbol": "R_m − R_f",
+              "name": "Market Risk Premium",
+              "description": "Excess return demanded for bearing market risk"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -537,14 +890,46 @@
           "section": "Cost of Capital",
           "notation": "WACC = (E/V × R_e) + (P/V × R_p) + (D/V × R_d × (1 − t))",
           "variables": [
-            { "symbol": "E", "name": "Market Value of Equity", "description": "Shares outstanding × share price" },
-            { "symbol": "P", "name": "Market Value of Preferred Stock", "description": "Preferred shares × price per share" },
-            { "symbol": "D", "name": "Market Value of Debt", "description": "Market value of interest-bearing debt" },
-            { "symbol": "V", "name": "Total Value", "description": "E + P + D" },
-            { "symbol": "R_e", "name": "Cost of Equity", "description": "Required return (CAPM or DDM)" },
-            { "symbol": "R_p", "name": "Cost of Preferred Stock", "description": "D_p / P_p" },
-            { "symbol": "R_d", "name": "Cost of Debt (pre-tax)", "description": "Yield to maturity on debt" },
-            { "symbol": "t", "name": "Marginal Tax Rate", "description": "Corporate income tax rate" }
+            {
+              "symbol": "E",
+              "name": "Market Value of Equity",
+              "description": "Shares outstanding × share price"
+            },
+            {
+              "symbol": "P",
+              "name": "Market Value of Preferred Stock",
+              "description": "Preferred shares × price per share"
+            },
+            {
+              "symbol": "D",
+              "name": "Market Value of Debt",
+              "description": "Market value of interest-bearing debt"
+            },
+            {
+              "symbol": "V",
+              "name": "Total Value",
+              "description": "E + P + D"
+            },
+            {
+              "symbol": "R_e",
+              "name": "Cost of Equity",
+              "description": "Required return (CAPM or DDM)"
+            },
+            {
+              "symbol": "R_p",
+              "name": "Cost of Preferred Stock",
+              "description": "D_p / P_p"
+            },
+            {
+              "symbol": "R_d",
+              "name": "Cost of Debt (pre-tax)",
+              "description": "Yield to maturity on debt"
+            },
+            {
+              "symbol": "t",
+              "name": "Marginal Tax Rate",
+              "description": "Corporate income tax rate"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -564,8 +949,16 @@
           "section": "Cost of Capital",
           "notation": "R_p = D_p / P_p",
           "variables": [
-            { "symbol": "D_p", "name": "Annual Preferred Dividend", "description": "Stated dollar dividend per preferred share" },
-            { "symbol": "P_p", "name": "Net Proceeds per Preferred Share", "description": "Market price less flotation costs" }
+            {
+              "symbol": "D_p",
+              "name": "Annual Preferred Dividend",
+              "description": "Stated dollar dividend per preferred share"
+            },
+            {
+              "symbol": "P_p",
+              "name": "Net Proceeds per Preferred Share",
+              "description": "Market price less flotation costs"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -584,8 +977,16 @@
           "section": "Cost of Capital",
           "notation": "After-Tax Cost of Debt = R_d × (1 − t)",
           "variables": [
-            { "symbol": "R_d", "name": "Pre-Tax Cost of Debt", "description": "Yield to maturity on the firm's debt" },
-            { "symbol": "t", "name": "Marginal Tax Rate", "description": "Corporate income tax rate" }
+            {
+              "symbol": "R_d",
+              "name": "Pre-Tax Cost of Debt",
+              "description": "Yield to maturity on the firm's debt"
+            },
+            {
+              "symbol": "t",
+              "name": "Marginal Tax Rate",
+              "description": "Corporate income tax rate"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -605,9 +1006,21 @@
           "section": "Working Capital Management",
           "notation": "EOQ = sqrt(2DS / H)",
           "variables": [
-            { "symbol": "D", "name": "Annual Demand", "description": "Total units required per year" },
-            { "symbol": "S", "name": "Ordering Cost", "description": "Fixed cost per order placed" },
-            { "symbol": "H", "name": "Holding Cost", "description": "Annual carrying cost per unit (storage, insurance, obsolescence, opportunity cost)" }
+            {
+              "symbol": "D",
+              "name": "Annual Demand",
+              "description": "Total units required per year"
+            },
+            {
+              "symbol": "S",
+              "name": "Ordering Cost",
+              "description": "Fixed cost per order placed"
+            },
+            {
+              "symbol": "H",
+              "name": "Holding Cost",
+              "description": "Annual carrying cost per unit (storage, insurance, obsolescence, opportunity cost)"
+            }
           ],
           "tolerance": 1,
           "tolerance_unit": "units",
@@ -626,9 +1039,21 @@
           "section": "International Finance",
           "notation": "Forward Premium/Discount (%) = ((Forward Rate − Spot Rate) / Spot Rate) × (360 / Days) × 100",
           "variables": [
-            { "symbol": "F", "name": "Forward Rate", "description": "Agreed-upon exchange rate for future settlement" },
-            { "symbol": "S", "name": "Spot Rate", "description": "Current exchange rate for immediate delivery" },
-            { "symbol": "Days", "name": "Forward Period", "description": "Number of days to forward contract maturity" }
+            {
+              "symbol": "F",
+              "name": "Forward Rate",
+              "description": "Agreed-upon exchange rate for future settlement"
+            },
+            {
+              "symbol": "S",
+              "name": "Spot Rate",
+              "description": "Current exchange rate for immediate delivery"
+            },
+            {
+              "symbol": "Days",
+              "name": "Forward Period",
+              "description": "Number of days to forward contract maturity"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -639,6 +1064,67 @@
           ],
           "authority": "International finance theory; interest rate parity",
           "examTrap": "FX markets use a 360-day year. A positive result means the foreign currency trades at a forward premium (strengthening). Direction matters for interpretation."
+        },
+        {
+          "id": "CB-10",
+          "name": "Cash Conversion Cycle (CCC)",
+          "domain": "B",
+          "section": "Working Capital Management",
+          "notation": "CCC = DIO + DSO − DPO",
+          "variables": [
+            {
+              "symbol": "DIO",
+              "name": "Days Inventory Outstanding"
+            },
+            {
+              "symbol": "DSO",
+              "name": "Days Sales Outstanding"
+            },
+            {
+              "symbol": "DPO",
+              "name": "Days Payable Outstanding"
+            }
+          ],
+          "rounding": "Whole days",
+          "tolerance": 0.01,
+          "tolerance_unit": "days",
+          "commonErrors": [
+            "ADDING DPO instead of subtracting it",
+            "Using 360 days instead of 365",
+            "Using COGS instead of purchases when computing DPO"
+          ],
+          "authority": "Working capital management theory",
+          "examTrap": "Lower CCC frees cash. A negative CCC means suppliers finance operations. Compute DPO from purchases (Purchases = COGS + ΔInventory) when purchases are not given."
+        },
+        {
+          "id": "CB-11",
+          "name": "Cost of Common Equity — Dividend Discount Model (Gordon Growth)",
+          "domain": "B",
+          "section": "Cost of Capital Components",
+          "notation": "Re = D1 / P0 + g",
+          "variables": [
+            {
+              "symbol": "D1",
+              "name": "Next Expected Dividend (D0 × (1+g))"
+            },
+            {
+              "symbol": "P0",
+              "name": "Current Stock Price"
+            },
+            {
+              "symbol": "g",
+              "name": "Constant Growth Rate"
+            }
+          ],
+          "rounding": "Two decimal places (percent)",
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "commonErrors": [
+            "Using D0 (last paid dividend) instead of D1",
+            "Ignoring flotation costs when valuing NEW equity"
+          ],
+          "authority": "Dividend Discount Model (Gordon, 1962)",
+          "examTrap": "D1 = D0 × (1 + g). For NEW common equity, adjust the denominator for flotation costs: Re = D1 / (P0 × (1 − F)) + g. Requires constant perpetual growth; not applicable to non-dividend payers."
         }
       ]
     },
@@ -654,8 +1140,16 @@
           "section": "Cost-Volume-Profit Analysis",
           "notation": "BE_units = Fixed Costs / CM per Unit",
           "variables": [
-            { "symbol": "FC", "name": "Fixed Costs", "description": "Total fixed costs (do not vary with output)" },
-            { "symbol": "CM/unit", "name": "Contribution Margin per Unit", "description": "Selling Price − Variable Cost per Unit" }
+            {
+              "symbol": "FC",
+              "name": "Fixed Costs",
+              "description": "Total fixed costs (do not vary with output)"
+            },
+            {
+              "symbol": "CM/unit",
+              "name": "Contribution Margin per Unit",
+              "description": "Selling Price − Variable Cost per Unit"
+            }
           ],
           "tolerance": 1,
           "tolerance_unit": "units",
@@ -675,8 +1169,16 @@
           "section": "Cost-Volume-Profit Analysis",
           "notation": "BE_$ = Fixed Costs / CM Ratio",
           "variables": [
-            { "symbol": "FC", "name": "Fixed Costs", "description": "Total fixed costs" },
-            { "symbol": "CM Ratio", "name": "Contribution Margin Ratio", "description": "CM per Unit / Selling Price, or Total CM / Total Sales" }
+            {
+              "symbol": "FC",
+              "name": "Fixed Costs",
+              "description": "Total fixed costs"
+            },
+            {
+              "symbol": "CM Ratio",
+              "name": "Contribution Margin Ratio",
+              "description": "CM per Unit / Selling Price, or Total CM / Total Sales"
+            }
           ],
           "tolerance": 1,
           "tolerance_unit": "dollars",
@@ -695,9 +1197,21 @@
           "section": "Cost-Volume-Profit Analysis",
           "notation": "Units_target = (Fixed Costs + Target Operating Profit) / CM per Unit",
           "variables": [
-            { "symbol": "FC", "name": "Fixed Costs", "description": "Total fixed costs" },
-            { "symbol": "TP", "name": "Target Operating Profit", "description": "Desired operating income (before tax)" },
-            { "symbol": "CM/unit", "name": "Contribution Margin per Unit", "description": "Price − Variable Cost per Unit" }
+            {
+              "symbol": "FC",
+              "name": "Fixed Costs",
+              "description": "Total fixed costs"
+            },
+            {
+              "symbol": "TP",
+              "name": "Target Operating Profit",
+              "description": "Desired operating income (before tax)"
+            },
+            {
+              "symbol": "CM/unit",
+              "name": "Contribution Margin per Unit",
+              "description": "Price − Variable Cost per Unit"
+            }
           ],
           "tolerance": 1,
           "tolerance_unit": "units",
@@ -716,8 +1230,16 @@
           "section": "Cost-Volume-Profit Analysis",
           "notation": "MOS (%) = ((Actual Sales − Breakeven Sales) / Actual Sales) × 100",
           "variables": [
-            { "symbol": "AS", "name": "Actual Sales", "description": "Current or budgeted sales" },
-            { "symbol": "BES", "name": "Breakeven Sales", "description": "Sales at breakeven point" }
+            {
+              "symbol": "AS",
+              "name": "Actual Sales",
+              "description": "Current or budgeted sales"
+            },
+            {
+              "symbol": "BES",
+              "name": "Breakeven Sales",
+              "description": "Sales at breakeven point"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -736,8 +1258,16 @@
           "section": "Cost-Volume-Profit Analysis",
           "notation": "DOL = Contribution Margin / Operating Income",
           "variables": [
-            { "symbol": "CM", "name": "Contribution Margin", "description": "Sales − Total Variable Costs" },
-            { "symbol": "OI", "name": "Operating Income", "description": "CM − Fixed Costs" }
+            {
+              "symbol": "CM",
+              "name": "Contribution Margin",
+              "description": "Sales − Total Variable Costs"
+            },
+            {
+              "symbol": "OI",
+              "name": "Operating Income",
+              "description": "CM − Fixed Costs"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "ratio",
@@ -747,7 +1277,8 @@
             "Computing at the wrong activity level"
           ],
           "authority": "Managerial accounting theory",
-          "examTrap": "DOL is highest near the breakeven point (operating income → 0 in denominator). Very high DOL signals both high upside and high downside risk."
+          "examTrap": "DOL is highest near the breakeven point (operating income → 0 in denominator). Very high DOL signals both high upside and high downside risk.",
+          "note": "Cross-domain alias: identical to FA-19 (Degree of Operating Leverage). Retained in both domains for per-domain completeness; case authors may cite either ID."
         },
         {
           "id": "DA-06",
@@ -756,8 +1287,16 @@
           "section": "Cost-Volume-Profit Analysis (Multi-Product)",
           "notation": "WACM = Σ(Sales Mix_i × CM_i)",
           "variables": [
-            { "symbol": "Sales Mix_i", "name": "Sales Mix Percentage of Product i", "description": "Proportion of total units from product i (must sum to 1.0)" },
-            { "symbol": "CM_i", "name": "CM per Unit of Product i", "description": "Price_i − Variable Cost_i" }
+            {
+              "symbol": "Sales Mix_i",
+              "name": "Sales Mix Percentage of Product i",
+              "description": "Proportion of total units from product i (must sum to 1.0)"
+            },
+            {
+              "symbol": "CM_i",
+              "name": "CM per Unit of Product i",
+              "description": "Price_i − Variable Cost_i"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "dollars per unit",
@@ -776,8 +1315,16 @@
           "section": "Marginal Analysis",
           "notation": "Shut Down if: Price < Minimum AVC",
           "variables": [
-            { "symbol": "P", "name": "Price", "description": "Selling price per unit" },
-            { "symbol": "AVC_min", "name": "Minimum Average Variable Cost", "description": "Lowest point on the AVC curve" }
+            {
+              "symbol": "P",
+              "name": "Price",
+              "description": "Selling price per unit"
+            },
+            {
+              "symbol": "AVC_min",
+              "name": "Minimum Average Variable Cost",
+              "description": "Lowest point on the AVC curve"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "dollars per unit",
@@ -796,8 +1343,16 @@
           "section": "Marginal Analysis",
           "notation": "Process Further if: Incremental Revenue − Incremental Cost > 0",
           "variables": [
-            { "symbol": "IR", "name": "Incremental Revenue", "description": "Revenue after processing − Revenue at split-off" },
-            { "symbol": "IC", "name": "Incremental Cost", "description": "Additional processing costs beyond split-off" }
+            {
+              "symbol": "IR",
+              "name": "Incremental Revenue",
+              "description": "Revenue after processing − Revenue at split-off"
+            },
+            {
+              "symbol": "IC",
+              "name": "Incremental Cost",
+              "description": "Additional processing costs beyond split-off"
+            }
           ],
           "tolerance": 1,
           "tolerance_unit": "dollars",
@@ -816,8 +1371,16 @@
           "section": "Transfer Pricing",
           "notation": "Transfer Price_min = Variable Cost per Unit + Opportunity Cost per Unit",
           "variables": [
-            { "symbol": "VC", "name": "Variable Cost", "description": "Incremental cost of producing one unit" },
-            { "symbol": "OC", "name": "Opportunity Cost", "description": "CM foregone on external sales sacrificed (only when at full capacity)" }
+            {
+              "symbol": "VC",
+              "name": "Variable Cost",
+              "description": "Incremental cost of producing one unit"
+            },
+            {
+              "symbol": "OC",
+              "name": "Opportunity Cost",
+              "description": "CM foregone on external sales sacrificed (only when at full capacity)"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "dollars per unit",
@@ -836,8 +1399,16 @@
           "section": "Decision Modeling Under Uncertainty",
           "notation": "EV = Σ(P_i × Outcome_i)",
           "variables": [
-            { "symbol": "P_i", "name": "Probability of Outcome i", "description": "Likelihood of outcome i (must sum to 1.0)" },
-            { "symbol": "Outcome_i", "name": "Payoff in Outcome i", "description": "Monetary or non-monetary result" }
+            {
+              "symbol": "P_i",
+              "name": "Probability of Outcome i",
+              "description": "Likelihood of outcome i (must sum to 1.0)"
+            },
+            {
+              "symbol": "Outcome_i",
+              "name": "Payoff in Outcome i",
+              "description": "Monetary or non-monetary result"
+            }
           ],
           "tolerance": 1,
           "tolerance_unit": "dollars",
@@ -856,8 +1427,16 @@
           "section": "Decision Modeling Under Uncertainty",
           "notation": "EVPI = EV_with perfect information − EV_without perfect information",
           "variables": [
-            { "symbol": "EV_w_PI", "name": "EV with Perfect Information", "description": "Weighted average of best outcomes under each state" },
-            { "symbol": "EV_wo_PI", "name": "EV without Perfect Information", "description": "EV of the optimal decision under uncertainty" }
+            {
+              "symbol": "EV_w_PI",
+              "name": "EV with Perfect Information",
+              "description": "Weighted average of best outcomes under each state"
+            },
+            {
+              "symbol": "EV_wo_PI",
+              "name": "EV without Perfect Information",
+              "description": "EV of the optimal decision under uncertainty"
+            }
           ],
           "tolerance": 1,
           "tolerance_unit": "dollars",
@@ -883,8 +1462,16 @@
           "section": "Risk Assessment",
           "notation": "Expected Loss = Probability × Impact",
           "variables": [
-            { "symbol": "P", "name": "Probability of Loss", "description": "Likelihood the risk event occurs" },
-            { "symbol": "I", "name": "Impact", "description": "Financial magnitude if the loss occurs" }
+            {
+              "symbol": "P",
+              "name": "Probability of Loss",
+              "description": "Likelihood the risk event occurs"
+            },
+            {
+              "symbol": "I",
+              "name": "Impact",
+              "description": "Financial magnitude if the loss occurs"
+            }
           ],
           "tolerance": 1,
           "tolerance_unit": "dollars",
@@ -903,8 +1490,16 @@
           "section": "Risk Assessment",
           "notation": "Risk Score = Likelihood × Severity",
           "variables": [
-            { "symbol": "L", "name": "Likelihood", "description": "Probability or frequency of occurrence on an ordinal scale (e.g., 1–5)" },
-            { "symbol": "S", "name": "Severity", "description": "Magnitude of impact on an ordinal scale (e.g., 1–5)" }
+            {
+              "symbol": "L",
+              "name": "Likelihood",
+              "description": "Probability or frequency of occurrence on an ordinal scale (e.g., 1–5)"
+            },
+            {
+              "symbol": "S",
+              "name": "Severity",
+              "description": "Magnitude of impact on an ordinal scale (e.g., 1–5)"
+            }
           ],
           "tolerance": 0,
           "tolerance_unit": "ordinal",
@@ -923,8 +1518,16 @@
           "section": "Risk Response",
           "notation": "Residual Risk = Inherent Risk − Controls Mitigation",
           "variables": [
-            { "symbol": "IR", "name": "Inherent Risk", "description": "Risk level before any controls or mitigation" },
-            { "symbol": "CM", "name": "Controls Mitigation", "description": "Risk reduction attributable to internal controls" }
+            {
+              "symbol": "IR",
+              "name": "Inherent Risk",
+              "description": "Risk level before any controls or mitigation"
+            },
+            {
+              "symbol": "CM",
+              "name": "Controls Mitigation",
+              "description": "Risk reduction attributable to internal controls"
+            }
           ],
           "tolerance": 1,
           "tolerance_unit": "ordinal",
@@ -933,7 +1536,7 @@
             "Reversing direction (Controls − Inherent)",
             "Assuming residual risk reaches zero"
           ],
-          "authority": "COSO ERM (2017) — Component 4: Review & Revision, Principle 15 (Assesses Substantial Change)",
+          "authority": "COSO ERM (2017) — Component 3: Performance, Principle 11 (Assesses Severity of Risk, including residual risk)",
           "examTrap": "Residual risk can never be zero—no control system is perfect. The CMA exam expects candidates to recognize that some residual risk always remains."
         }
       ]
@@ -941,7 +1544,7 @@
     "E": {
       "letter": "E",
       "name": "Investment Decisions",
-      "formula_count": 8,
+      "formula_count": 9,
       "formulas": [
         {
           "id": "ID-01",
@@ -950,11 +1553,31 @@
           "section": "Capital Budgeting",
           "notation": "NPV = Σ(CF_t / (1 + r)^t) − I_0",
           "variables": [
-            { "symbol": "CF_t", "name": "Cash Flow in Period t", "description": "Expected net after-tax cash inflow in period t" },
-            { "symbol": "r", "name": "Discount Rate", "description": "Required rate of return or cost of capital" },
-            { "symbol": "t", "name": "Time Period", "description": "Year index (1, 2, ..., n)" },
-            { "symbol": "n", "name": "Project Life", "description": "Number of periods" },
-            { "symbol": "I_0", "name": "Initial Investment", "description": "Cash outlay at t = 0" }
+            {
+              "symbol": "CF_t",
+              "name": "Cash Flow in Period t",
+              "description": "Expected net after-tax cash inflow in period t"
+            },
+            {
+              "symbol": "r",
+              "name": "Discount Rate",
+              "description": "Required rate of return or cost of capital"
+            },
+            {
+              "symbol": "t",
+              "name": "Time Period",
+              "description": "Year index (1, 2, ..., n)"
+            },
+            {
+              "symbol": "n",
+              "name": "Project Life",
+              "description": "Number of periods"
+            },
+            {
+              "symbol": "I_0",
+              "name": "Initial Investment",
+              "description": "Cash outlay at t = 0"
+            }
           ],
           "tolerance": 5,
           "tolerance_unit": "dollars",
@@ -975,8 +1598,16 @@
           "section": "Capital Budgeting",
           "notation": "PI = PV of Future Cash Flows / Initial Investment",
           "variables": [
-            { "symbol": "PV_CF", "name": "PV of Future Cash Flows", "description": "Sum of discounted cash inflows (excluding I_0)" },
-            { "symbol": "I_0", "name": "Initial Investment", "description": "Cash outlay at t = 0" }
+            {
+              "symbol": "PV_CF",
+              "name": "PV of Future Cash Flows",
+              "description": "Sum of discounted cash inflows (excluding I_0)"
+            },
+            {
+              "symbol": "I_0",
+              "name": "Initial Investment",
+              "description": "Cash outlay at t = 0"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "ratio",
@@ -995,8 +1626,16 @@
           "section": "Capital Budgeting",
           "notation": "Payback = Initial Investment / Annual Cash Flow (uniform CF); cumulative otherwise",
           "variables": [
-            { "symbol": "I_0", "name": "Initial Investment", "description": "Cash outlay at t = 0" },
-            { "symbol": "ACF", "name": "Annual Cash Flow", "description": "Uniform annual after-tax cash inflow" }
+            {
+              "symbol": "I_0",
+              "name": "Initial Investment",
+              "description": "Cash outlay at t = 0"
+            },
+            {
+              "symbol": "ACF",
+              "name": "Annual Cash Flow",
+              "description": "Uniform annual after-tax cash inflow"
+            }
           ],
           "tolerance": 0.1,
           "tolerance_unit": "years",
@@ -1015,8 +1654,16 @@
           "section": "Capital Budgeting",
           "notation": "DPP = time until cumulative discounted cash flows ≥ I_0",
           "variables": [
-            { "symbol": "I_0", "name": "Initial Investment", "description": "Cash outlay at t = 0" },
-            { "symbol": "DCF_t", "name": "Discounted Cash Flow in t", "description": "CF_t / (1 + r)^t" }
+            {
+              "symbol": "I_0",
+              "name": "Initial Investment",
+              "description": "Cash outlay at t = 0"
+            },
+            {
+              "symbol": "DCF_t",
+              "name": "Discounted Cash Flow in t",
+              "description": "CF_t / (1 + r)^t"
+            }
           ],
           "tolerance": 0.1,
           "tolerance_unit": "years",
@@ -1035,10 +1682,26 @@
           "section": "Capital Budgeting (Unequal Lives)",
           "notation": "EAA = NPV / PVIFA(r, n) = NPV / ((1 − (1 + r)^(−n)) / r)",
           "variables": [
-            { "symbol": "NPV", "name": "Net Present Value", "description": "Sum of discounted net cash flows" },
-            { "symbol": "PVIFA", "name": "PV Interest Factor of Annuity", "description": "(1 − (1 + r)^(−n)) / r" },
-            { "symbol": "r", "name": "Discount Rate", "description": "Required rate of return" },
-            { "symbol": "n", "name": "Project Life", "description": "Number of periods" }
+            {
+              "symbol": "NPV",
+              "name": "Net Present Value",
+              "description": "Sum of discounted net cash flows"
+            },
+            {
+              "symbol": "PVIFA",
+              "name": "PV Interest Factor of Annuity",
+              "description": "(1 − (1 + r)^(−n)) / r"
+            },
+            {
+              "symbol": "r",
+              "name": "Discount Rate",
+              "description": "Required rate of return"
+            },
+            {
+              "symbol": "n",
+              "name": "Project Life",
+              "description": "Number of periods"
+            }
           ],
           "tolerance": 5,
           "tolerance_unit": "dollars",
@@ -1057,10 +1720,26 @@
           "section": "Capital Budgeting",
           "notation": "ATCF = (Revenue − Cash Operating Expenses) × (1 − t) + (Depreciation × t)",
           "variables": [
-            { "symbol": "Rev", "name": "Revenue", "description": "Incremental revenue from the project" },
-            { "symbol": "COE", "name": "Cash Operating Expenses", "description": "Variable and fixed cash costs (excludes depreciation)" },
-            { "symbol": "t", "name": "Marginal Tax Rate", "description": "Corporate income tax rate" },
-            { "symbol": "Depr", "name": "Depreciation", "description": "Annual depreciation expense (non-cash)" }
+            {
+              "symbol": "Rev",
+              "name": "Revenue",
+              "description": "Incremental revenue from the project"
+            },
+            {
+              "symbol": "COE",
+              "name": "Cash Operating Expenses",
+              "description": "Variable and fixed cash costs (excludes depreciation)"
+            },
+            {
+              "symbol": "t",
+              "name": "Marginal Tax Rate",
+              "description": "Corporate income tax rate"
+            },
+            {
+              "symbol": "Depr",
+              "name": "Depreciation",
+              "description": "Annual depreciation expense (non-cash)"
+            }
           ],
           "tolerance": 1,
           "tolerance_unit": "dollars",
@@ -1080,8 +1759,16 @@
           "section": "Capital Budgeting",
           "notation": "MACRS Depreciation_t = Cost × MACRS Rate_t (from IRS Pub 946 tables)",
           "variables": [
-            { "symbol": "Cost", "name": "Asset Cost", "description": "Purchase price (MACRS ignores salvage value)" },
-            { "symbol": "Rate_t", "name": "MACRS Rate for Year t", "description": "Statutory percentage from IRS tables (3-, 5-, 7-year property classes)" }
+            {
+              "symbol": "Cost",
+              "name": "Asset Cost",
+              "description": "Purchase price (MACRS ignores salvage value)"
+            },
+            {
+              "symbol": "Rate_t",
+              "name": "MACRS Rate for Year t",
+              "description": "Statutory percentage from IRS tables (3-, 5-, 7-year property classes)"
+            }
           ],
           "tolerance": 1,
           "tolerance_unit": "dollars",
@@ -1101,8 +1788,16 @@
           "section": "Capital Budgeting",
           "notation": "ARR = Average Annual Net Income / Average Investment",
           "variables": [
-            { "symbol": "AANI", "name": "Average Annual Net Income", "description": "Average accrual-basis income over project life (after depreciation and tax)" },
-            { "symbol": "AI", "name": "Average Investment", "description": "(Initial Investment + Salvage Value) / 2" }
+            {
+              "symbol": "AANI",
+              "name": "Average Annual Net Income",
+              "description": "Average accrual-basis income over project life (after depreciation and tax)"
+            },
+            {
+              "symbol": "AI",
+              "name": "Average Investment",
+              "description": "(Initial Investment + Salvage Value) / 2"
+            }
           ],
           "tolerance": 0.01,
           "tolerance_unit": "percent",
@@ -1113,6 +1808,37 @@
           ],
           "authority": "Capital budgeting theory",
           "examTrap": "ARR is the only capital budgeting method using accounting income rather than cash flows. It ignores the time value of money entirely."
+        },
+        {
+          "id": "ID-09",
+          "name": "Internal Rate of Return (IRR)",
+          "domain": "E",
+          "section": "Capital Budgeting Methods",
+          "notation": "IRR = discount rate r where NPV = Σ(CF_t / (1 + r)^t) − I_0 = 0; accept if IRR > required return (WACC)",
+          "variables": [
+            {
+              "symbol": "r",
+              "name": "Discount Rate that zeroes NPV"
+            },
+            {
+              "symbol": "CF_t",
+              "name": "Cash Flow in Period t"
+            },
+            {
+              "symbol": "I_0",
+              "name": "Initial Investment"
+            }
+          ],
+          "rounding": "Two decimal places (percent)",
+          "tolerance": 0.01,
+          "tolerance_unit": "percent",
+          "commonErrors": [
+            "Accepting projects whose IRR is below WACC",
+            "Ranking mutually exclusive projects of different scale or timing by IRR",
+            "Ignoring the multiple-IRR problem when cash flows change sign more than once"
+          ],
+          "authority": "Capital budgeting theory (Fisher, 1930); IRR decision rule",
+          "examTrap": "IRR has no closed form — it is found by interpolation or calculator. The IRR method assumes reinvestment at the IRR itself; NPV assumes reinvestment at WACC. For independent projects IRR and NPV agree; for mutually exclusive projects they can conflict."
         }
       ]
     },
@@ -1124,19 +1850,46 @@
       "note": "Domain F tests the IMA Statement of Ethical Professional Practice, SOX 2002, FCPA, and corporate governance. All items are conceptual—no quantitative formulas are tested."
     }
   },
-  "total_formulas": 52,
+  "total_formulas": 59,
   "verified_against_blueprint": true,
   "cross_reference": {
     "blueprint_extraction": "p2/P2002_BLUEPRINT_EXTRACTION.json",
-    "certification_standard_sections": ["§D.4 (Numerical Validation)", "§E.1 (Formula Verification Protocol)"],
+    "certification_standard_sections": [
+      "§D.4 (Numerical Validation)",
+      "§E.1 (Formula Verification Protocol)"
+    ],
     "counts_match": true,
     "domain_counts": {
-      "A": { "expected": 21, "actual": 21, "match": true },
-      "B": { "expected": 9, "actual": 9, "match": true },
-      "C": { "expected": 11, "actual": 11, "match": true },
-      "D": { "expected": 3, "actual": 3, "match": true },
-      "E": { "expected": 8, "actual": 8, "match": true },
-      "F": { "expected": 0, "actual": 0, "match": true }
+      "A": {
+        "expected": 25,
+        "actual": 25,
+        "match": true
+      },
+      "B": {
+        "expected": 11,
+        "actual": 11,
+        "match": true
+      },
+      "C": {
+        "expected": 11,
+        "actual": 11,
+        "match": true
+      },
+      "D": {
+        "expected": 3,
+        "actual": 3,
+        "match": true
+      },
+      "E": {
+        "expected": 9,
+        "actual": 9,
+        "match": true
+      },
+      "F": {
+        "expected": 0,
+        "actual": 0,
+        "match": true
+      }
     }
   }
 }

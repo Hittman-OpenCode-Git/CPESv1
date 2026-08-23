@@ -1,5 +1,42 @@
 # REVISION_HISTORY_P2.md — CMA Part 2 Exam Simulator
 
+## Session P2-037 — Source-of-Truth Remediation (DL-P2-012, 20 findings)
+
+**Date:** 2026-08-22
+**Session Type:** Documentation/Registry Remediation (Full Governance Lane — SoT docs + formula registry; zero pack content changes)
+**User approval:** Documented here — user authorized "Fix all 20 (Recommended)" (2026-08-22)
+**Backup timestamp:** 2026-08-22T22:24:56 — `backups/` for P2005_FORMULA_MASTER.json, P2003_QID_STANDARD.md, P2002_REPOSITORY_LAYOUT.md, P2_RESEARCH_SECTIONS_TOPICS_THEORIES.md, QUESTION_METADATA_STANDARD.md, DEFECT_LIBRARY_P2.md, REVISION_HISTORY_P2.md
+
+### Source of Findings
+
+External SoT cross-section review (21 findings: 2 Critical, 6 High, 7 Medium, 6 Low). Every finding dual-verified against raw sources before remediation. One reviewer refutation accepted: our F4 "VaR zero-coverage" claim was wrong — `value-at-risk-interpretation` exists in pack D topics (hyphenated form escaped our word-boundary grep). One downgrade: F-13 (version formats) documented rather than changed.
+
+### Remediation Applied
+
+- **Formula registry** (`P2005_FORMULA_MASTER.json`): 52 → 59 formulas — added ID-09 (IRR), CB-10 (CCC), CB-11 (DDM cost of equity), FA-22 (payout ratio), FA-23 (FCF), FA-24 (total asset turnover), FA-25 (D/A). Fixed FA-16/FA-17 (Reg G → market-ratio theory) and RM-03 (Principle 15 → 11) citations. DOL duplication documented as intentional cross-domain alias (`note` fields). Counts + cross_reference reconciled (counts_match true).
+- **P2002_REPOSITORY_LAYOUT.md**: CBQ2 case IDs now REQUIRE the pack digit (CBQ21-A1, CBQ22-B5…) — resolves the verified collision with Part 1 Pack 2's bare `CBQ2-*` IDs (present in `content/cases/case_pack_1_corrected.js` and `case_pack_2_corrected.js`). Router reordered (Part 2 pattern checked first). False "not present in any Part 1 case ID" claim corrected with evidence. Root file list + g.3: 6 MCQ packs.
+- **P2003_QID_STANDARD.md**: D/E range regex fixed (150–199 now valid); "5 packs" → "6 packs" (2 spots); max items per case aligned to 7.
+- **P2_RESEARCH_SECTIONS_TOPICS_THEORIES.md**: §4.6 pack mapping updated to the 6-pack layout.
+- **QUESTION_METADATA_STANDARD.md**: Moderate-Easy added to all three Difficulty enums; Synthesize/Recall documented as aliases; Version 2-part vs 3-part clarified.
+
+### Verification (all checked)
+
+- Registry: 59/59 unique IDs, JSON parses, counts_match true
+- Router tests: CBQ21-A1→Part2, CBQ22-B5→Part2, CBQ2-A1/B2→Part1, CBQ-A1→Part1
+- Regex tests: P2-D-001…250 all match; P2-D-251 rejected
+- Zero remnants: "5 packs" (P2003), "Regulation G" / "Principle 15" (registry), bare `CBQ2-` Part 2 patterns (P2002)
+- Library artifacts regenerated: formula catalog (59 formulas, split into 2 review parts ≤40KB), topic inventory (525 lines)
+- Review package + manifest regenerated with corrected part-05 hash
+- `npm run preflight` + `node scripts/preflight_p2.js` PASS — 0 divergences (content untouched)
+
+### Notes
+
+- DL-P2-012 logged (cluster entry, 20 findings + correction table).
+- Case-study material library (p2/case_study_library/) now has verified sources: 09_FORMULA_CATALOG.md (59 formulas) and 10_TOPIC_INVENTORY_BY_SECTION.md (495-item topic grounding) are regenerated. Remaining library volumes (index, schema, per-section content maps, quality standards, authoring cautions) are next in the build queue.
+
+**Revision recorded by:** P2-037 — Source-of-Truth Remediation
+**Date:** 2026-08-22
+
 ## Session P2-036 — Section C Verification Closeout (C-022 Confirmed; Cross-Pack Pending)
 
 **Date:** 2026-08-22

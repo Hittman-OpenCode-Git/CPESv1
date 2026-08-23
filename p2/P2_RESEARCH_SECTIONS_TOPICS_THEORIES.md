@@ -195,7 +195,7 @@ This is the layer the existing blueprint only hints at via `part2_authorities`. 
 3. **Section C is the priority gap-risk.** At 25% weight and 7 LOS including the highest-order cognitive demands (Evaluate 10%), Decision Analysis needs the deepest theory coverage (CVP, marginal analysis, ToC, LP, transfer pricing, uncertainty). Ensure ToC/throughput and LP/Shadow-price items are not skipped — they are easy to under-author.
 4. **Risk Management (D) and Investment (E) are small but theory-dense.** 10% each but each carries 5–6 named frameworks. Do not let their small weight justify thin theory coverage; both are disproportionately framework-recognition tested.
 5. **Ethics (F) rewards scenario application.** The IMA 4-standard resolution sequence and the fraud triangle are repeatedly tested via applied scenarios, not recall. Author scenario-based items (special-order-ethics, whistle-blower, FCPA bribe scenarios).
-6. **Map theories to the planned pack structure** (from P2001 §2): pack_p2_a (A), pack_p2_b (B), pack_p2_c (C), pack_p2_d (D+E), pack_p2_e (F + cross-domain). Each pack's theory checklist = the relevant rows of §3.
+6. **Map theories to the planned pack structure** (from P2001 §2): pack_p2_a (A), pack_p2_b (B), pack_p2_c (C), pack_p2_d (D), pack_p2_e (E), pack_p2_f (F). Each pack's theory checklist = the relevant rows of §3.
 
 ---
 

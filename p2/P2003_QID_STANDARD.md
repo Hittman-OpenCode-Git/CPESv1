@@ -19,7 +19,7 @@
 **Range regex (per section):**
 - A, B: `^P2-[AB]-(0[0-9]{2}|[1-4][0-9]{2}|500)$`
 - C: `^P2-C-(0[0-9]{2}|[1-5][0-9]{2}|6[0-1][0-9]|62[0-5])$`  (001–625)
-- D, E: `^P2-[DE]-(0[0-9]{2}|[12][0-4][0-9]|250)$`  (001–250)
+- D, E: `^P2-[DE]-(0[0-9]{2}|1[0-9]{2}|2[0-4][0-9]|250)$`  (001–250)
 - F: `^P2-F-(0[0-9]{2}|[1-2][0-9]{2}|3[0-6][0-9]|37[0-5])$`  (001–375)
 
 | Component | Description | Examples |
@@ -71,7 +71,7 @@ Items that test concepts spanning multiple domains use the `CrossDomainTags` arr
 2. Sequence numbers are zero-padded to 3 digits (`001`–`500`).
 3. No gaps allowed — sequence numbers must be consecutive within each section block.
 4. No reuse — once a QID is assigned, it is never reassigned.
-5. QIDs are globally unique across all 5 packs (enforced by section letter prefix).
+5. QIDs are globally unique across all 6 packs (enforced by section letter prefix).
 6. Every QID must parse cleanly via the uniform regex `^P2-[A-F]-\d{3}$`.
 
 ### 1.4 Complete MCQ Item JSON Skeleton (Ratified — P2_SCHEMA_STANDARD.md v1.0)
@@ -244,7 +244,7 @@ Items that test concepts spanning multiple domains use the `CrossDomainTags` arr
 | `CBQ23-F2-Q6` | CBQ23-F2 | Sixth item (Pack 3) |
 
 Constraints:
-- N ranges 1–6 (min 5 items, max 6 per case)
+- N ranges 1–7 (min 5 items, max 7 per case, per QUESTION_METADATA_STANDARD.md §1.1)
 - Sequential within case, no gaps
 - Cognitive progression: Q1–Q2 = Apply, Q3–Q4 = Analyze, Q5 = Evaluate, Q6 (optional) = Evaluate/Synthesize
 
@@ -315,7 +315,7 @@ function routeIdentifier(id) {
 | Check | Rule | Severity |
 |-------|------|----------|
 | Format | Every QID must match `^P2-[A-F]-\d{3}$` | Error |
-| Uniqueness | Every QID must be unique across all 5 packs | Error |
+| Uniqueness | Every QID must be unique across all 6 packs | Error |
 | Section match | Section letter must match item's `Section` field | Error |
 | Range | Sequence number within defined range | Error |
 | Consecutive | No gaps in sequence numbers | Warning |

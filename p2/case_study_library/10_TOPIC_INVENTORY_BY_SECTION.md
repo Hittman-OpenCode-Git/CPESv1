@@ -1,0 +1,525 @@
+# Part 2 Topic Inventory by Section (MCQ Pack Grounding)
+
+**Status:** Reference material — generated 2026-08-22 from the `Topic` fields of `p2/pack_p2_a.js`…`pack_p2_f.js` (495 items). This is the complete topic vocabulary the Part 2 MCQ bank already covers, organized by section — the grounding inventory for case-study topic selection and gap detection.
+
+Item counts: A = 160, B = 100, C = 75, D = 50, E = 60, F = 50 (total 495).
+
+---
+
+## Section A — Financial Statement Analysis (160 distinct topics)
+
+- Altman Z-score component identification
+- Audit opinions — going-concern explanatory paragraph
+- Big bath charges — earnings normalization
+- Bill-and-hold arrangements — revenue timing red flag
+- Capitalized interest — ratio distortion and restatement
+- Cash Ratio — acute short-term solvency assessment under timing pressure
+- Cash flow composition — asset sales funding operating losses
+- Cash flow to capital expenditures — internal funding capacity
+- Channel stuffing — revenue timing red flags and earnings quality
+- Common-Size Financial Statements — purpose and base amounts
+- Comparative analysis — vertical analysis and expense structure benchmarking
+- Comparative ratio analysis — cross-sectional interpretation with industry context
+- Comparative — horizontal/trend analysis with base-year distortions
+- Comprehensive financial analysis — investment recommendation synthesis
+- Comprehensive income and OCI analysis
+- Cookie-jar reserves — earnings smoothing detection
+- Current Ratio — basic definition and formula components
+- Current Ratio — calculation from balance sheet data
+- Current Ratio — covenant compliance and classification quality analysis
+- Current ratio window dressing — paydown timing
+- Cyclical versus defensive earnings — normalized P/E
+- DFL — relationship between EBIT and EPS volatility
+- Debt-to-Assets — industry norms comparison and capital intensity analysis
+- Debt-to-EBITDA leverage
+- Debt-to-Equity — capital structure risk assessment and strategic alternatives
+- Deferred revenue — leading indicator of revenue trend
+- Deferred tax liabilities — debt versus equity classification
+- Degree of Financial Leverage — computation and interpretation
+- Degree of Financial Leverage — definition
+- Degree of Operating Leverage — computation from contribution margin format
+- Degree of Operating Leverage — definition
+- Degree of operating leverage — pre and post automation
+- Diluted EPS — treasury stock method
+- Dividend payout ratio — SGR and growth implications
+- Dividend yield trap — falling price versus rising payout
+- DuPont Analysis — three-component decomposition
+- DuPont ROE Decomposition — applying the three-component model
+- DuPont ROE component performance differential
+- DuPont ROE decomposition and driver identification
+- DuPont ROE decomposition — comparing two companies
+- DuPont cross-company comparison using DuPont framework
+- DuPont decomposition — diagnosing ROE changes across two periods
+- DuPont sensitivity analysis — which lever has the greatest impact
+- EBITDA margin — computation and target comparison
+- EV/EBITDA multiple
+- Earnings Quality — definition and indicators
+- Earnings manipulation red flags — M-Score profile in credit decisions
+- Earnings per share — basic computation and dilutive security identification
+- Earnings persistence — core versus transitory components
+- Earnings quality — cash flow vs accrual earnings divergence
+- Earnings quality — comprehensive assessment across multiple dimensions
+- Earnings quality — identifying red flags in reported earnings
+- Earnings quality — red flags in financial reporting
+- Economic value added — NOPAT versus capital charge
+- Fiscal year-end differences — seasonal comparability
+- Five-factor DuPont decomposition — tax and interest burden factors
+- Fixed asset turnover
+- Free cash flow dividend coverage
+- Goodwill and asset quality — ex-goodwill ratio analysis
+- Gross margin trend analysis
+- Gross margin vs. operating margin — divergent trend analysis
+- High DOL — business risk implications
+- Horizontal Analysis — income statement trend computation
+- Horizontal and vertical analysis — integrated financial statement assessment
+- Horizontal vs Vertical Analysis — definitions
+- Implied dividend growth versus sustainable growth
+- Industry life cycle — stage-adjusted ratio expectations
+- Inflation-adjusted ratio analysis — historical cost distortion
+- Integrated leverage and coverage — covenant compliance scenario
+- Internal growth rate
+- Interpretation of declining current ratio trend
+- Inventory Turnover and Days Sales in Inventory — interpretation
+- Inventory write-down — ratio effects under LCM
+- LIFO reserve adjustment — comparability with FIFO peers
+- Market value added
+- Multi-ratio liquidity assessment — differentiating short-term vs structural issues
+- Net profit margin computation
+- Net working capital to total assets
+- Non-GAAP measures — adjusted EBITDA quality
+- Off-balance-sheet financing — operating lease capitalization impact on D/E
+- Operating Cash Flow Ratio — divergence from accrual-based liquidity measures
+- Operating and financial leverage — combined leverage effect on earnings variability
+- Operating margin computation
+- PEG ratio — growth-adjusted valuation comparison
+- Price-to-book ratio — market versus accounting value
+- Price-to-sales ratio
+- Profitability analysis — evaluating segment performance and capital allocation
+- Profitability benchmarking — net profit margin vs. industry median
+- Quality of Earnings — cash flow vs accrual divergence analysis
+- Quality of income ratio
+- Quick Ratio — divergence from Current Ratio in inventory-intensive firm
+- Quick Ratio — formula components and what it excludes
+- Quick Ratio — why inventory is excluded
+- Quick ratio — inventory exclusion logic in contrasting business models
+- ROA — computation and comparison to ROE
+- ROE vs ROA — the effect of financial leverage
+- Receivables aging — DSO masking collectability deterioration
+- Receivables sales with recourse — operating cash flow quality
+- Restricted cash in liquidity analysis
+- Return on Equity — basic formula and interpretation
+- Return on assets — DuPont decomposition
+- Return on common equity — computation and benchmark comparison
+- Return on invested capital — NOPAT and invested capital computation
+- Revenue recognition policy changes and ratio distortion
+- Segment profitability — segment margin vs. company operating margin
+- Segment reporting — ASC 280 quantitative thresholds
+- Sustainable Growth Rate — computation and financing gap
+- Sustainable Growth Rate — constraints and implications
+- Sustainable Growth Rate — formula and meaning
+- Sustainable growth rate computation
+- Sustainable growth — evaluating growth strategy against financial constraints
+- Tangible net worth — debt coverage
+- Times Interest Earned — multi-period declining trend analysis with refinancing risk
+- Total Asset Turnover — interpretation of high vs low values
+- Total shareholder return
+- Translation exposure — functional currency determination under ASC 830
+- Trend Analysis — purpose and limitations
+- Variable interest entities — primary beneficiary determination under ASC 810
+- Vertical Analysis — common-size income statement comparison
+- Vertical Analysis — when most useful
+- Vertical analysis — common-size income statement trend
+- Working Capital — composition quality and operating cycle decomposition
+- Working capital turnover — net working capital efficiency
+- altman-zscore-manufacturing-distress
+- cash conversion cycle
+- cash flow accrual divergence creditworthiness
+- cash flow adequacy for debt repayment
+- cash flow to debt ratio
+- covenant compliance economic substance
+- credit rating migration coverage deterioration
+- cross-sectional comparison with peer group selection bias and business mix distortion
+- current ratio vs quick ratio credit divergence
+- days payable outstanding supplier relationship cash conversion tradeoff
+- days sales outstanding credit policy tightening analysis
+- debt service coverage ratio
+- debt-to-equity with lease adjustment
+- dupont-roe-decomposition
+- earnings quality lending assessment
+- earnings-quality-accruals
+- fixed charge coverage and off-balance-sheet lease obligations
+- free cash flow calculation
+- gross margin decline root cause analysis
+- integrated liquidity and leverage assessment with conflicting ratio signals
+- integrating multiple ratio limitations in a lending decision with qualitative risk factors
+- inventory turnover obsolescence risk assessment
+- liquidity solvency distinction credit decisions
+- multi-covenant credit assessment
+- net profit margin one-time item distortion evaluation
+- off-balance-sheet obligations true leverage
+- operating cash flow per share
+- operating cash flow ratio computation
+- operating margin cost structure assessment
+- operating-cash-flow-ratio
+- price to earnings ratio growth expectations interpretation
+- quality of earnings cash flow vs. accrual income
+- return on assets decomposition and asset efficiency analysis
+- return on equity financial leverage interaction evaluation
+- sustainable-growth-rate
+- times interest earned covenant interpretation
+- total asset turnover business model comparison asset heavy vs asset light
+---
+
+## Section B — Corporate Finance (100 distinct topics)
+
+- After-Tax Cost of Debt — yield to maturity with tax adjustment
+- Alpha computation — Jensen's alpha vs CAPM required return
+- Baumol model — optimal cash transfer amount
+- Beta interpretation — systematic risk and the security market line
+- Bond Valuation — YTM and price relationship
+- Bond refunding — NPV of call and reissue
+- Bond valuation — price when YTM differs from coupon
+- Bond-yield-plus-risk-premium cost of equity
+- Business risk vs financial risk — operating vs financing variability
+- CAPM Project Cost of Equity — divisional discount rate
+- CAPM Security Market Line — identifying mispriced securities
+- CAPM as WACC Input — computing cost of equity for WACC
+- CAPM — cost of equity with given beta and market risk premium
+- Capital Structure — Modigliani-Miller propositions with and without taxes
+- Capital market line vs security market line — total risk vs systematic risk
+- Cash Conversion Cycle — DIO + DSO − DPO
+- Cash conversion cycle — DIO, DSO, DPO computation
+- Coefficient of Variation — risk per unit of return comparison
+- Commercial paper vs. line of credit — effective annual cost
+- Compensating balance — loan size and effective rate
+- Convertible bond floor — conversion value versus straight-debt value
+- Cost of Preferred Stock — dividend yield with flotation costs
+- Cost of new common equity — dividend growth model with flotation costs
+- Cost of preferred stock and cost of retained earnings
+- Cost of trade credit — 2/10 net 30 effective annual rate
+- Covered interest arbitrage — borrowing, converting, and locking the forward
+- Credit policy relaxation — incremental contribution vs carrying cost
+- Currency options vs forward contracts — contingent exposures
+- Discount-interest loan — effective rate on usable funds
+- Diversification — systematic vs unsystematic risk elimination
+- Divestiture structures — spin-off, carve-out, split-off
+- Dividend Policy — relevance and signaling theory
+- Dividend clientele effect — investor self-selection by payout policy
+- Dividend dates — declaration, ex-dividend, record, and payment
+- Dutch auction repurchase — single clearing price mechanics
+- EOQ Sensitivity — impact of parameter changes on optimal quantity
+- EOQ with quantity discounts — total cost comparison
+- EOQ — inventory order quantity optimization
+- EPS indifference point — debt vs. equity financing
+- Effective annual rate — APR with monthly compounding
+- Expected Return — multi-state economic scenario analysis
+- Expected Return — probability-weighted average across economic states
+- FX Transaction Exposure — hedging with forward contracts
+- Factoring versus bank credit — effective cost comparison
+- Financial Leverage — degree of financial leverage and EPS sensitivity
+- Financial distress costs — direct vs indirect costs in the trade-off model
+- Foreign currency transaction — gain or loss on remeasurement
+- Forward FX Premium — computing and interpreting forward premium on a foreign currency
+- International cash management — netting, leading and lagging
+- Joint ventures and strategic alliances — shared risk vs shared control
+- LBO — debt capacity and free cash flow coverage
+- Lease vs Buy Analysis — net advantage to leasing
+- Lockbox system — float reduction cost-benefit analysis
+- M&A Valuation — synergy analysis and acquisition premium
+- Marginal Cost of Capital — investment opportunity schedule
+- Merger accretion/dilution — exchange ratio and pro-forma EPS
+- Merger types — horizontal, vertical, conglomerate
+- Money market hedge — borrowing the present value of the receivable
+- Money market instruments — T-bills, commercial paper, CDs
+- Multinational capital budgeting — currency-matched discounting
+- Optimal Capital Structure — trade-off theory and WACC minimization
+- Optimal capital structure — trade-off theory application
+- Pecking order theory — internal funds, debt, then equity
+- Political Risk — strategies for managing country risk in international investment
+- Portfolio Beta — weighted-average beta calculation
+- Portfolio beta — systematic vs. unsystematic risk
+- Project-Specific vs Firm-Wide WACC — risk-adjusted hurdle rates
+- Purchasing power parity — exchange rate forecast
+- Pure-play beta — unlevering and relevering with the Hamada formula
+- Reorder point with safety stock
+- Rights offering — theoretical value of a right
+- Risk-Return Investment Selection — comparing two projects with different profiles
+- Sale-leaseback — asset conversion and lease liability recognition
+- Share Repurchase — impact on EPS and stock price
+- Share repurchase vs. cash dividend — EPS impact
+- Small vs large stock dividend — fair value vs par capitalization
+- Standard Deviation — comparing two investments with different risk profiles
+- Standard Deviation — total risk measurement with probability weights
+- Stock Valuation — constant growth dividend discount model
+- Stock split versus stock dividend — equity and value effects
+- Takeover defenses — poison pill, golden parachute, white knight
+- Target valuation methods — DCF vs comparables vs precedent transactions
+- Tender offer versus negotiated merger — acquisition routes
+- Transfer pricing and tax arbitrage
+- Translation, transaction, and economic exposure — distinctions
+- Two-asset portfolio standard deviation — variance and covariance terms
+- WACC Book vs Market Value Weights — analytical assessment
+- WACC Component Identification — which capital sources are included
+- WACC Comprehensive — integrating CAPM, market weights, and tax adjustments
+- WACC Tax Shield Impact — comparing levered vs unlevered cost
+- WACC — calculation with market-value weights
+- WACC — flotation cost adjustment in capital budgeting
+- WACC — multiple capital sources with different costs
+- Warrant value — intrinsic value with exercise ratio
+- Working Capital Policy — conservative vs aggressive strategies
+- cash-conversion-cycle-reduction
+- economic-order-quantity
+- ma-synergy-valuation
+- residual-dividend-model
+- wacc-market-values
+---
+
+## Section C — Decision Analysis (75 distinct topics)
+
+- Add-or-drop segment with allocated fixed costs
+- After-tax target profit — gross-up conversion in CVP
+- Breakeven under a changed cost structure
+- Bundling pricing
+- CVP assumptions and limitations
+- CVP breakeven analysis in dollars
+- CVP breakeven analysis in units
+- CVP breakeven concept definition
+- CVP degree of operating leverage concept
+- CVP margin of safety analysis
+- CVP multi-product weighted average contribution margin
+- CVP sensitivity analysis — incremental profit impact
+- CVP target profit analysis in units
+- Capacity-constrained product mix — CM per machine hour
+- Cost structure indifference point
+- Cost-plus transfer pricing
+- Cost-plus versus market-based pricing — competitive market
+- Decision criteria under uncertainty — maximax, maximin, minimax regret
+- Dual pricing — asymmetric transfer prices
+- Expected value of perfect information — EVPI computation
+- Expected value of sample information — Bayes' rule
+- Expected value under uncertainty — decision tree
+- Game theory in pricing
+- Hidden costs of outsourcing
+- Keep-or-replace equipment — sunk cost exclusion
+- Level versus seasonal production
+- Life-cycle costing — full-life cost recovery in pricing
+- Make-or-buy analysis with opportunity cost
+- Make-vs-buy — quantitative and qualitative factors
+- Margin of safety — breakeven and operating leverage
+- Marginal analysis — make-or-buy with opportunity cost
+- Marginal analysis — opportunity cost concept
+- Marginal analysis — sell-or-process-further decision
+- Marginal analysis — special order decision
+- Marginal analysis — sunk cost concept
+- Markup on cost versus margin on price — conversion
+- Monte Carlo simulation in decision making
+- Multi-product breakeven — composite CM with sales mix
+- Newsvendor order quantity
+- Outsourcing to relax a bottleneck
+- Outsourcing with released space rental
+- Overtime versus capacity expansion
+- Price discrimination conditions
+- Price elasticity and contribution margin maximization
+- Pricing strategy — skimming versus penetration conditions
+- Product abandonment with cannibalization
+- Product mix with constrained resource — CM per machine hour
+- Profit-maximizing output under MR = MC
+- ROI-based target pricing
+- Relevant costing — add-or-drop segment decision
+- Relevant costing — special order below normal price
+- Retail shelf space — contribution per square foot
+- Risk aversion versus expected value
+- Scrap versus rework — incremental decision
+- Sell or lease an idle facility
+- Sell-or-process-further — joint products
+- Sensitivity analysis — ranking input impact on NPV
+- Sensitivity versus scenario analysis — distinctions
+- Sequential decision tree — staged investment rollback
+- Special order at full capacity — opportunity cost of displaced sales
+- Special order in foreign currency
+- Special order with one-time setup cost
+- Special order — contribution versus reference-price risk
+- Target costing — allowable cost computation
+- Target profit analysis in sales dollars
+- Taxes and the breakeven point
+- Temporary shutdown decision
+- Theory of constraints — throughput per constraint minute
+- Transfer price negotiation range — floor and ceiling
+- Transfer pricing method evaluation — market, negotiated, full-cost, variable-cost
+- Transfer pricing with capacity constraint — opportunity cost
+- Two-constraint product mix — corner point analysis
+- Yield management pricing
+- multi-product-cvp-weighted-average-cm
+- shut-down-point-short-run
+---
+
+## Section D — Risk Management (50 distinct topics)
+
+- Board risk committee vs. audit committee
+- COSO ERM components — Performance and Review
+- ERM — risk culture deficiency
+- Key risk indicators — leading vs. lagging
+- Residual risk — control effectiveness
+- Risk appetite statement — quantitative thresholds
+- Risk capacity vs. appetite vs. tolerance
+- Risk category classification
+- Risk retention — deductible optimization
+- Three lines of defense model
+- compliance-risk-management
+- coso-erm-components
+- coso-erm-information-communication-reporting
+- emerging-risk-horizon-scanning
+- enterprise-risk-aggregation
+- erm-governance-roles
+- erm-principle-10-prioritization
+- erm-principle-8-strategy-risk
+- erm-principle-9-risk-identification
+- erm-review-revision-substantial-change
+- erm-strategy-performance-integration
+- erm-substantial-change-response
+- erm-vs-traditional-silo
+- expected-loss-calculation
+- expected-loss-mitigation-cost-benefit
+- expected-loss-multi-outcome
+- financial-risk-types
+- hazard-risk
+- inherent-vs-residual-risk
+- kri-threshold-escalation
+- operational-risk-categories
+- quantitative-vs-qualitative-assessment
+- risk-acceptance-contingency
+- risk-appetite-statement-components
+- risk-category-classification
+- risk-correlation-portfolio
+- risk-culture-tone-at-top
+- risk-identification-delphi
+- risk-owner-accountability
+- risk-register-contents
+- risk-reporting-to-board
+- risk-response-avoidance
+- risk-response-pursue
+- risk-response-recommendation
+- risk-response-reduction-mitigation
+- risk-response-strategies
+- risk-score-heat-map
+- scenario-analysis-stress-testing
+- strategic-vs-operational-risk
+- value-at-risk-interpretation
+---
+
+## Section E — Investment Decisions (60 distinct topics)
+
+- Capital rationing — profitability index
+- Certainty equivalent approach
+- Equivalent annual annuity
+- IRR acceptance rule
+- Multiple IRRs — sign change problem
+- Mutually exclusive projects — NPV vs. IRR
+- NPV profile and crossover rate
+- NPV with uneven cash flows
+- Post-audit analysis
+- Real options — abandonment option
+- Real options — timing/deferral option
+- Scenario analysis — expected NPV
+- abandonment-option-value
+- accounting rate of return
+- after-tax-salvage-value
+- beta and project-specific cost of capital
+- capital-budgeting-methodology
+- capital-rationing-ranking
+- cost of capital as discount rate
+- decision-tree-staged-investment
+- depreciation-recapture
+- discount-rate-selection
+- discounted payback period
+- eaa-unequal-lives-2
+- equivalent annual annuity
+- expected-npv
+- independent-projects-decision
+- irr-interpolation
+- irr-limitations
+- irr-reinvestment-assumption
+- macrs-depreciation-tax-shield
+- macrs-tax-shield-year3
+- monte-carlo-simulation
+- mutually-exclusive-equal-life
+- nominal-cash-flow-conversion
+- npv-accept-reject-rule
+- npv-cost-savings-project
+- npv-equipment-investment
+- npv-irr-independent-projects
+- npv-vs-irr-mutually-exclusive
+- npv-working-capital
+- opportunity-cost-cash-flow
+- payback-non-uniform-cash-flows
+- payback-period
+- payback-with-salvage
+- profitability-index-calculation
+- profitability-index-capital-rationing
+- profitability-index-interpretation
+- radr-vs-certainty-equivalent
+- real options
+- real-option-flexibility-switch
+- real-vs-nominal-discount-rate
+- relevant cash flows
+- risk-adjusted-discount-rate
+- scenario analysis
+- sensitivity-analysis-most-sensitive
+- sensitivity-vs-scenario
+- straight-line-after-tax-cash-flow
+- sunk-vs-opportunity-cost
+- terminal-cash-flow
+---
+
+## Section F — Professional Ethics (50 distinct topics)
+
+- Audit committee independence (SOX 301)
+- ESG — integrated reporting framework
+- Earnings management pressure
+- Ethical issues — inventory misstatement
+- FCPA — books and records provision
+- FCPA — facilitating payments vs. bribery
+- Fraud triangle — pressure, opportunity, rationalization
+- IMA Integrity standard — conflict of interest
+- IMA resolution process — resignation decision
+- Sustainability reporting — GRI vs. SASB frameworks
+- audit-committee-responsibilities
+- competence-continuing-professional-development
+- competence-recognize-limitations
+- competence-recognizing-limits-of-expertise
+- competence-standards-compliance
+- comprehensive-ethics-scenario
+- confidentiality-after-employment
+- confidentiality-legal-disclosure-exception
+- confidentiality-no-personal-use
+- confidentiality-proprietary-data-disclosure
+- conflict-of-interest-family
+- corporate-governance-independence-tone
+- credibility-disclose-assumptions
+- credibility-disclose-limitations
+- credibility-error-disclosure-obligation
+- credibility-fair-communication
+- esg-frameworks-gri-sasb-tcfd
+- ethical-conflict-resolution-sequence
+- ethical-dilemma-pressure
+- fcpa-anti-bribery
+- fcpa-internal-controls
+- fraud-red-flags-financial-reporting
+- fraud-triangle-opportunity
+- fraud-triangle-rationalization
+- governance-roles
+- ima-four-standards
+- ima-resolution-first-step
+- integrity-conflict-of-interest-earnings
+- integrity-gifts-conflict-of-interest
+- integrity-refrain-from-conduct
+- integrity-scope
+- management-override-controls
+- sox-302-ceo-cfo-certification
+- sox-404-internal-control-reporting
+- sox-404b-auditor-attestation
+- sox-806-whistleblower-protection
+- sox-906-criminal-penalties
+- tcfd-climate-disclosure
+- uk-bribery-act-vs-fcpa
+- whistleblower-external-reporting

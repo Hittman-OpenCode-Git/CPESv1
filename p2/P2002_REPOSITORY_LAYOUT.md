@@ -174,13 +174,13 @@ CMA_Part_2_2026/                            (repository root)
 
 **Pattern:** `CBQ2{PackNum}-{Section}{Seq}`
 
-**Regex:** `^CBQ2\d?-[A-F]\d+$`
+**Regex:** `^CBQ2\d-[A-F]\d+$`
 
 | Component | Description | Examples |
 |-----------|-------------|----------|
 | `CBQ` | Literal prefix — "CMA Board Question" | All cases |
 | `2` | Exam Part identifier | Always `2` for Part 2 |
-| `{PackNum}` | Case pack number (omitted for pack 1) | `""` (pack 1), `2` (pack 2), `3` (pack 3) |
+| `{PackNum}` | Case pack number (REQUIRED — prevents `CBQ2-` collision with Part 1 Pack 2) | `1` (pack 1), `2` (pack 2), `3` (pack 3) |
 | `-` | Separator | Required |
 | `{Section}` | Domain letter A through F | `A` through `F` |
 | `{Seq}` | Sequential integer within section | `1`, `2`, `3`, ... |
@@ -189,8 +189,8 @@ CMA_Part_2_2026/                            (repository root)
 
 | CaseID | Pack | Section | Sequence |
 |--------|------|---------|----------|
-| `CBQ2-A1` | Pack 1 | Financial Statement Analysis | 1st case in Section A |
-| `CBQ2-C6` | Pack 1 | Decision Analysis | 6th case in Section C |
+| `CBQ21-A1` | Pack 1 | Financial Statement Analysis | 1st case in Section A |
+| `CBQ21-C6` | Pack 1 | Decision Analysis | 6th case in Section C |
 | `CBQ22-B5` | Pack 2 | Corporate Finance | 5th case in Section B |
 | `CBQ23-F2` | Pack 3 | Professional Ethics | 2nd case in Section F |
 
@@ -198,7 +198,7 @@ CMA_Part_2_2026/                            (repository root)
 
 | Part 1 Pattern | Part 2 Pattern | Collision Risk |
 |---------------|---------------|----------------|
-| `CBQ` | `CBQ2` | **None.** Part 1 uses `CBQ` prefix (no digit) or `CBQ{N}` where N ≥ 2 for later packs. The leading `2` digit immediately after `CBQ` is reserved for Part 2 and not present in any Part 1 case ID. |
+| `CBQ` (bare) / `CBQ{N}` | `CBQ2{N}` | **Resolved by the required pack digit.** Part 1 Pack 2 cases use the bare `CBQ2-` prefix — verified in `content/cases/case_pack_1_corrected.js` and `case_pack_2_corrected.js` (e.g., `CBQ2-A3`, `CBQ2-B2`, `CBQ2-C3`). A Part 2 case is therefore ALWAYS `CBQ2{N}-` with N ≥ 1 (e.g., `CBQ21-A1`). The bare `CBQ2-` shorthand is reserved for Part 1 Pack 2 and must never be used for Part 2. |
 | `CBQ3-A1` | `CBQ2` | **None.** 3 ≠ 2. |
 | `CBQ4-A1` | `CBQ2` | **None.** 4 ≠ 2. |
 
@@ -206,28 +206,28 @@ CMA_Part_2_2026/                            (repository root)
 
 **Pattern:** `{CaseID}-Q{N}`
 
-**Regex:** `^CBQ2\d?-[A-F]\d+-Q\d+$`
+**Regex:** `^CBQ2\d-[A-F]\d+-Q\d+$`
 
 **Examples:**
 
 | ItemID | CaseID | Position |
 |--------|--------|----------|
-| `CBQ2-A1-Q1` | `CBQ2-A1` | First item in the case |
-| `CBQ2-A1-Q5` | `CBQ2-A1` | Fifth item |
+| `CBQ21-A1-Q1` | `CBQ21-A1` | First item in the case |
+| `CBQ21-A1-Q5` | `CBQ21-A1` | Fifth item |
 | `CBQ22-B5-Q3` | `CBQ22-B5` | Third item |
 
 ### c.3 ExhibitID Format
 
 **Pattern:** `{CaseID}-E{N}`
 
-**Regex:** `^CBQ2\d?-[A-F]\d+-E\d+$`
+**Regex:** `^CBQ2\d-[A-F]\d+-E\d+$`
 
 **Examples:**
 
 | ExhibitID | CaseID | Type |
 |-----------|--------|------|
-| `CBQ2-A1-E1` | `CBQ2-A1` | First exhibit |
-| `CBQ2-A1-E2` | `CBQ2-A1` | Second exhibit |
+| `CBQ21-A1-E1` | `CBQ21-A1` | First exhibit |
+| `CBQ21-A1-E2` | `CBQ21-A1` | Second exhibit |
 | `CBQ22-C3-E1` | `CBQ22-C3` | First exhibit |
 
 ---
@@ -343,7 +343,7 @@ Each case object carries `Version` and `RevisionHistory` fields as defined in `Q
 
 ```jsonc
 {
-  "CaseID": "CBQ2-A1",
+  "CaseID": "CBQ21-A1",
   "Version": "1.2",
   "RevisionHistory": [
     { "Date": "2026-08-01", "Version": "1.0", "Author": "Case Author", "Summary": "Initial creation" },
@@ -373,6 +373,7 @@ Per `00_PROJECT_CONSTITUTION.md` §11 conventions (applied to Part 2), the repos
 | `pack_p2_c.js` | MCQ Pack C |
 | `pack_p2_d.js` | MCQ Pack D |
 | `pack_p2_e.js` | MCQ Pack E |
+| `pack_p2_f.js` | MCQ Pack F |
 | `case_pack_p2_1.js` | Case Pack 1 |
 | `case_pack_p2_2.js` | Case Pack 2 |
 | `case_pack_p2_3.js` | Case Pack 3 |
@@ -520,7 +521,7 @@ var pack_p2_{letter}_questions = [];
     mcqPacks: ['pack_p2_a', 'pack_p2_b', 'pack_p2_c', 'pack_p2_d', 'pack_p2_e'],
     casePacks: ['case_pack_p2_1', 'case_pack_p2_2', 'case_pack_p2_3'],
     qidPattern: /^P2-[A-F]-\d{3}$/,
-    caseIdPattern: /^CBQ2\d?-[A-F]\d+$/,
+    caseIdPattern: /^CBQ2\d-[A-F]\d+$/,
     totalTargetMCQs: 2500,
     totalTargetCases: 75
   };
@@ -594,8 +595,8 @@ function routeQID(qid) {
 **Universal CaseID router:**
 ```javascript
 function routeCaseID(caseId) {
-  if (/^CBQ\d?-[A-F]\d+$/.test(caseId)) return 'Part1';
-  if (/^CBQ2\d?-[A-F]\d+$/.test(caseId)) return 'Part2';
+  if (/^CBQ2\d-[A-F]\d+$/.test(caseId)) return 'Part2';
+  if (/^CBQ\d*-[A-F]\d+$/.test(caseId)) return 'Part1';
   throw new Error(`Unknown CaseID format: ${caseId}`);
 }
 ```
@@ -631,10 +632,10 @@ All pack files include a `Part` field (`"Part": 2` for all Part 2 items) as expl
 | Element | Pattern | Regex | Example |
 |---------|---------|-------|---------|
 | MCQ QID | `P2-{Section}-{NNN}` | `^P2-[A-F]-\d{3}$` | `P2-A-001` |
-| CaseID (pack 1) | `CBQ2-{Section}{Seq}` | `^CBQ2-[A-F]\d+$` | `CBQ2-A1` |
+| CaseID (pack 1) | `CBQ21-{Section}{Seq}` | `^CBQ21-[A-F]\d+$` | `CBQ21-A1` |
 | CaseID (pack 2+) | `CBQ2{PackNum}-{Section}{Seq}` | `^CBQ2[2-9]-[A-F]\d+$` | `CBQ22-B5` |
-| ItemID | `{CaseID}-Q{N}` | `^CBQ2\d?-[A-F]\d+-Q\d+$` | `CBQ2-A1-Q3` |
-| ExhibitID | `{CaseID}-E{N}` | `^CBQ2\d?-[A-F]\d+-E\d+$` | `CBQ2-A1-E1` |
+| ItemID | `{CaseID}-Q{N}` | `^CBQ2\d-[A-F]\d+-Q\d+$` | `CBQ21-A1-Q3` |
+| ExhibitID | `{CaseID}-E{N}` | `^CBQ2\d-[A-F]\d+-E\d+$` | `CBQ21-A1-E1` |
 | MCQ pack file | `pack_p2_{letter}.js` | `^pack_p2_[a-e]\.js$` | `pack_p2_a.js` |
 | Case pack file | `case_pack_p2_{n}.js` | `^case_pack_p2_[1-3]\.js$` | `case_pack_p2_1.js` |
 | Repository VERSION | SemVer 2.0.0 | `^\d+\.\d+\.\d+(-alpha|-beta)?$` | `0.1.0-alpha` |
