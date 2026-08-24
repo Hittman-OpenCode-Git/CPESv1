@@ -486,3 +486,93 @@ Bootstrap-era artifacts (P2-001…P2-005) authored before the pack layout stabil
 ### Resolved
 
 2026-08-22 — Session P2-037. Backups: `backups/P2005_FORMULA_MASTER.json.bak-20260822222456` (+ P2002/P2003/research/metadata-standard backups, same timestamp).
+
+---
+
+## DL-P2-013 — EVSI Definition Convention Ambiguity (P2-C-108)
+
+```
+Defect ID        DL-P2-013
+Class            Content
+Domain           Decision-Analysis Terminology / Internal Consistency
+Severity         High (internal contradiction between the stored key, a distractor explanation, and the governing convention — item failed validation)
+Detected By      External independent recomputation (2026-08-23, pre-certification review)
+Status           Resolved — P2-C-108 repaired via Option 1 (net-benefit re-scoping), 2026-08-23
+```
+
+**Question ID:** P2-C-108 (question_state "Unprocessed" at discovery — no learner exposure)
+
+**File:** `p2/pack_p2_c.js`
+
+### Issue
+
+The item asked for "the expected value of the test information (EVSI)" but stored the NET figure ($12,000 = $62,000 gross EVSI − $50,000 test cost) as the correct answer, while ExplanationWrongA's arithmetic ($202,000 − $140,000) computed the GROSS figure ($62,000) — a direct internal contradiction under any convention. Two competing definitions exist in the literature: (A) EVSI net of the information's acquisition cost; (B) EVSI as the gross value of the information, with cost subtracted afterward to decide purchase. The item mixed both.
+
+### Root Cause
+
+Agent-authored EVSI item (Wave 2, Session 2) initially used convention B with a partially-reconciled answer; the integrator's repair switched the key to convention A without updating the ExplanationWrongA sentence that still computed under convention B.
+
+### Correction (Option 1 — minimal, choices and CC preserved)
+
+- Stem re-scoped: asks for "the net expected benefit of purchasing the test, after considering its $50,000 cost" (answer $12,000, CC=D unchanged)
+- ExplanationCorrect now presents BOTH figures explicitly: gross EVSI $62,000; net benefit $12,000; maximum payment for the information itself $62,000
+- ExplanationWrongA arithmetic sentence repaired (no longer contradicts the key)
+- ExplanationWrongB/WrongC re-framed to the net-benefit question
+- FormulaReference + Topic/UniqueConceptKey updated ("net value of sample information")
+
+### Standing Rule
+
+Any EVSI/EVPI item must state its cost convention in the stem, or ask for a labeled quantity ("net benefit of purchasing" vs "gross value of the information"). Authors must cross-check every distractor explanation's arithmetic against the stored key before submission.
+
+### Regression Test
+
+- 17-point consistency sweep on the repaired item: 0 issues
+- Pack parse: 125 items; DL-008 0; DL-026 0; preflight PASS
+
+### Resolved
+
+2026-08-23 — Session P2-041. Backup: `p2/pack_p2_c.js.bak-20260823190739`.
+
+---
+
+## DL-P2-014 — Mix-Basis Ambiguity in Multi-Product Breakeven (P2-C-094)
+
+```
+Defect ID        DL-P2-014
+Class            Content
+Domain           Precision / Single-Answer Uniqueness
+Severity         High (two defensible numerical answers under two plausible interpretations of "sales mix" — certification blocker)
+Detected By      External consolidated review (2026-08-23); confirmed by dual recomputation
+Status           Resolved — stem disambiguated to "sales-revenue mix"; duplicate-answer distractor replaced; 2026-08-23
+```
+
+**Question ID:** P2-C-094
+
+**File:** `p2/pack_p2_c.js`
+
+### Issue
+
+The stem stated a "25% Citrus / 75% Balsamic" sales mix without specifying the basis. Under a revenue mix, BE$ = $95,000 / [0.25(0.40) + 0.75(0.50)] = $200,000 (choice B). Under a unit mix, WACM/unit = 0.25($16) + 0.75($30) = $26.50 and blended price = $55, giving BE units = 3,584.9 → 3,585, and 3,585 × $55 = **$197,175** (choice D). Both paths are legitimate; the item therefore had two defensible answers. The prior ExplanationWrongD incorrectly claimed the unit-mix method "manufactures" a revenue figure — it is a coherent method.
+
+### Root Cause
+
+Authoring ambiguity: "sales mix" is conventionally interpreted both ways. Multi-product breakeven items must state the mix basis explicitly.
+
+### Correction
+
+- Stem: "sales mix" → "sales-revenue mix … 25% Citrus revenue / 75% Balsamic revenue"
+- Choice D replaced: $197,175 → $202,128 (rounding trap: $95,000 / 0.47 with the weighted ratio prematurely rounded)
+- ExplanationWrongD rewritten to describe the rounding error
+
+### Standing Rule
+
+Any multi-product breakeven or WACM item must state the mix basis ("unit mix" or "revenue mix") in the stem. During review, recompute the answer under BOTH bases to test single-answer uniqueness.
+
+### Regression Test
+
+- $197,175 absent from the choices; B = $200,000 is the unique answer under the stated basis
+- Pack parse 125 items; DL-008 0; DL-026 0; preflight PASS
+
+### Resolved
+
+2026-08-23 — Session P2-042. Backup: `p2/pack_p2_c.js.bak-20260823201002`.

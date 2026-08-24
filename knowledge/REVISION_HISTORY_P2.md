@@ -1,5 +1,203 @@
 # REVISION_HISTORY_P2.md — CMA Part 2 Exam Simulator
 
+## Session P2-044 — Session 1 Certification (17 items → Certified, Pack C 125/125)
+
+**Date:** 2026-08-23
+**Session Type:** Content Certification (Full Governance Lane)
+**User approval:** Documented here — user authorized "yes" to certifying the 17 session-1 items and committing (2026-08-23)
+**Backup timestamp:** 2026-08-23T20:26:22 — `p2/pack_p2_c.js.bak-20260823202622`
+
+### Certification Basis (CAQS §1.7.2)
+
+1. **Six-dimension verification:** external review 17/17 PASS (P2-039 — every stored value reproduced independently, zero flags); integrator recomputation; quota compliance verified in P2-040.
+2. **User approval:** documented above.
+3. **Distractor tier map:** recorded per item (`DistractorTierMap`, 3 entries each).
+4. **No outstanding low-confidence claims.**
+
+### Applied
+
+- `question_state`: "Unprocessed" → **"Certified"** on P2-C-076…P2-C-092 (17 items)
+- `certification_session`: **"P2-044"**
+- `DistractorTierMap`: per item
+
+### Verification
+
+- 17/17 transitions; all fields present; `node --check` PASS
+- **Pack C: 125/125 Certified** — first fully-certified Part 2 pack
+- DL-008: 0; DL-026: 0; preflights PASS 0 divergences
+
+### Wave 2 Closeout — Final
+
+Section C: 75 → 125 items (50 authored across 3 sessions), all externally verified, all repaired, **all certified**. Section C now sits at its 25% exam-weight target with zero open findings.
+
+**Revision recorded by:** P2-044 — Session 1 Certification
+**Date:** 2026-08-23
+
+## Session P2-043 — Wave 2 Certification (33 items → Certified)
+
+**Date:** 2026-08-23
+**Session Type:** Content Certification (Full Governance Lane)
+**User approval:** Documented here — user authorized "Proceed with certification per CAQS §1.7.2… Apply question_state: 'Certified' to the 33 reviewed items, generate the distractor-tier map for each, create certification session P2-043, and write the closing revision entry" (2026-08-23)
+**Backup timestamp:** 2026-08-23T20:15:33 — `p2/pack_p2_c.js.bak-20260823201533`
+
+### Certification Basis (CAQS §1.7.2)
+
+1. **Six-dimension verification (HIGH confidence):** integrator recomputed all 33 items; external reviewer verified all 33 (27 clear, 6 repaired in P2-042); independent Python pass (user) converged on the same arithmetic, including the C-108 EVSI reconciliation (DL-P2-013).
+2. **User approval:** documented above.
+3. **Distractor tier map:** recorded per item (`DistractorTierMap` field, 3 entries each).
+4. **Low-confidence claims:** none outstanding — C-094 blocker (DL-P2-014) and all five follow-up findings resolved and revalidated in P2-042.
+
+### Certified Items (33)
+
+P2-C-093 … P2-C-125 — cognitive: Apply 11 / Analyze 7 / Evaluate 7 / Understand 6 / Remember 2 · difficulty: Easy 6 / Moderate-Easy 8 / Moderate 10 / Difficult 5 / Very Difficult 4 · answer letters A 8 / B 9 / C 8 / D 8.
+
+### Applied Fields (per item)
+
+- `question_state`: "Unprocessed" → **"Certified"**
+- `certification_session`: **"P2-043"**
+- `DistractorTierMap`: per-item 3-entry map (Tier 1 = most attractive/most common misconception)
+
+### Verification
+
+- 33/33 transitions applied; `node --check` PASS
+- Pack state: 125 items — 108 Certified (75 prior + 33 new), **17 remain "Unprocessed"** (P2-C-076…C-092, session 1 — externally verified 17/17 PASS in P2-039, awaiting a certification authorization)
+- DL-008: 0; DL-026: 0; `node scripts/preflight_p2.js` + `npm run preflight` PASS 0 divergences
+
+### Wave Closeout
+
+Section C Wave 2 is **complete and certified**: 50 items authored (P2-038/P2-040), externally verified, repaired (P2-041/P2-042), and 33 now certified. Pack C stands at 125 items (108 Certified). Certification of the remaining 17 session-1 items is a one-authorization action.
+
+**Revision recorded by:** P2-043 — Wave 2 Certification
+**Date:** 2026-08-23
+
+## Session P2-042 — Wave 2 Verdict Remediation (C-094 blocker + 5 repairs)
+
+**Date:** 2026-08-23
+**Session Type:** Content Repair (Full Governance Lane — 6 items, pre-certification)
+**User approval:** Documented here — user relayed the consolidated external verdict (2026-08-23)
+**Backup timestamp:** 2026-08-23T20:10:02 — `p2/pack_p2_c.js.bak-20260823201002`
+
+### External Verdict (33 items)
+
+27 clear · 1 certification blocker (C-094) · 5 repairs (C-098, C-101, C-109, C-114, C-122). C-108's net-benefit framing confirmed correct by the reviewer.
+
+### Repairs Applied (13 replacements, all keyed answers preserved)
+
+| Item | Finding | Repair |
+|------|---------|--------|
+| C-094 | Mix-basis ambiguity: unit-mix path legitimately yields $197,175 — two defensible answers (DL-P2-014) | Stem now specifies "sales-revenue mix"; choice D replaced with a rounding trap ($202,128 = $95,000 / 0.47); EWD rewritten |
+| C-098 | Contracted-job framing conflict (non-discretionary vs displaced) | Stem reworded: 300 hours allocable to rework OR the contracted job; EWA language aligned |
+| C-101 | EC conflated product-life-cycle pricing strategy with life-cycle costing | EC and EWD sentences corrected to separate the two concepts |
+| C-109 | Accept/reject not fully determinable from quantified facts | Choice A reworded to conditional acceptance ("proceed only subject to a quantified supply-risk assessment…"); EC reframed as best preliminary recommendation |
+| C-114 | Empty FormulaReference; overbroad legal phrasing | FormulaReference added (DA-03 pricing strategy); "price-discrimination statutes" → "competition, consumer-protection, and pricing laws" |
+| C-122 | FormulaReference mismatched construct | "DA-10 Expected Value" → "DA-10: Decision criteria under uncertainty (minimax regret)" |
+
+### Verification
+
+- 13/13 replacements applied; `node --check` PASS
+- C-094 uniqueness: $197,175 no longer exists as a choice; B = $200,000 sole answer under the stated revenue-mix basis
+- Pack: 125 items; DL-008 0; DL-026 0; both preflights PASS 0 divergences
+- Review artifacts (paste doc + JS parts) regenerated from the repaired pack
+
+### Certification Status
+
+**STILL ON HOLD** — awaiting the user's certification decision after the revalidation pass. All 33 items now carry external-review closure (27 clear + 6 repaired); certification requires the user's explicit approval per CAQS §1.7.2, then the distractor tier map and question_state transition.
+
+**Revision recorded by:** P2-042 — Verdict Remediation
+**Date:** 2026-08-23
+
+## Session P2-041 — C-108 EVSI Convention Repair (Pre-Certification Review Finding)
+
+**Date:** 2026-08-23
+**Session Type:** Content Repair (Full Governance Lane — single item, pre-certification)
+**User approval:** Documented here — user relayed the external verdict and approved Option 1 (2026-08-23)
+**Backup timestamp:** 2026-08-23T19:07:39 — `p2/pack_p2_c.js.bak-20260823190739`
+
+### Finding (external independent recomputation)
+
+P2-C-108 asked for EVSI but stored the NET figure ($12,000) while ExplanationWrongA's arithmetic computed the GROSS figure ($62,000) — an internal contradiction under any convention. Root cause: the integrator's earlier key repair switched conventions without updating the distractor text (DL-P2-013 logged).
+
+### Repair Applied (Option 1 — choices and CorrectChoice D preserved)
+
+| Field | Change |
+|-------|--------|
+| Stem | Re-scoped to "the net expected benefit of purchasing the test, after considering its $50,000 cost" |
+| ExplanationCorrect | Presents both figures: gross EVSI $62,000; net benefit $12,000; max payment for the information itself $62,000 |
+| ExplanationWrongA | Arithmetic sentence repaired — no longer contradicts the key |
+| ExplanationWrongB/C | Re-framed to the net-benefit question |
+| FormulaReference / Topic / UniqueConceptKey | Updated to "net value of sample information" |
+
+### Verification
+
+- 17-point consistency sweep: 0 issues
+- Pack parse: 125 items; DL-008: 0; DL-026: 0; `node --check` PASS
+- `node scripts/preflight_p2.js` + `npm run preflight`: PASS, 0 divergences
+- Paste review document regenerated (SHA256 updated)
+
+### Certification Status
+
+**STILL ON HOLD** — this repairs the first verdict item; certification of the 33-item wave awaits the full external verdict, after which the three-way reconciliation (external recomputation + independent Python pass + verbatim file state) will be documented before any question_state transition.
+
+**Revision recorded by:** P2-041 — C-108 Convention Repair
+**Date:** 2026-08-23
+
+## Session P2-040 — Section C Wave 2, Sessions 2+3 (33 items merged, wave complete)
+
+**Date:** 2026-08-23
+**Session Type:** Content Authoring + Integration (Full Governance Lane)
+**User approval:** Documented here — user authorized "start two agents for 17 and 16 mcqs" (2026-08-23)
+**Backup timestamp:** 2026-08-23T16:07:29 — `p2/pack_p2_c.js.bak-20260823160729` (pre-merge, 92 items)
+
+### Method
+
+Two parallel authoring agents (isolated output files — no concurrent pack writes). Integrator repaired agent defects and merged serially with full verification:
+
+1. **Slot-rotation defect (Session-2 agent):** 13 items authored with ExplanationWrong fields rotated — the correct-answer slot held choice A's explanation and EWA was empty. Uniform repair: `EWA = EW[CC]`; `EW[CC] = ""`. Verified per item that the moved text matched choice A's content. Session-3 agent was clean.
+2. **EVSI arithmetic error (P2-C-108):** agent stored EVSI = $62,000 (gross of the $50,000 test cost, then compared against it). Standard CMA convention nets the cost: EVSI = $152,000 − $140,000 = $12,000, which no choice offered — a candidate trained on the standard definition would find no matching answer. Fixed: Choice D $62,000 → $12,000; ExplanationCorrect and ExplanationWrongB rewritten to the net-cost convention.
+3. **Session-3 gaps:** P2-C-115 and P2-C-120 missing FormulaReference — added (DA-03, DA-06).
+
+### Result
+
+- Pack C: 92 → **125 items** (Wave 2 complete: C-076…C-125, 50 new items total across 3 sessions)
+- **Wave quota rollup matches plan EXACTLY:** cognitive Apply 20 / Analyze 14 / Evaluate 8 / Understand 6 / Remember 2 · difficulty Easy 6 / Moderate-Easy 10 / Moderate 16 / Difficult 13 / Very Difficult 5 · answer letters A 12 / B 13 / C 13 / D 12
+- Zero-hit shadow-price cluster complete: C-088 (Apply, compute), C-106 (Understand, interpretation), C-119 (Analyze, non-binding = $0)
+- DA-09 exercised (C-100, C-116); all DA-01…DA-11 covered ≥2× across the wave
+- Independent recomputation: all 33 new items verified (integrator recomputed every calculation; 32 clean, 1 caught and fixed — C-108)
+- DL-008: 0; DL-026: 0 pack-wide; `node --check` PASS
+- All 50 wave items remain `question_state: "Unprocessed"` — external review and certification pending
+
+### Notes
+
+- Agent-authoring lessons for the record: (1) subagent write-to-temp-file instructions silently failed — outputs had to be recovered from task results; (2) the slot-rotation pattern is detectable by the mechanical check `EWA empty AND EW[CC] non-empty` — now a standing integrator check; (3) EVSI/EVPI items must state the cost convention explicitly in the stem.
+- `npm run preflight` + `node scripts/preflight_p2.js` PASS — 0 divergences.
+
+**Revision recorded by:** P2-040 — Wave 2 Sessions 2+3 Merge
+**Date:** 2026-08-23
+
+## Session P2-039 — Section C Wave 2, Session 1: External Review Closeout (17/17 PASS)
+
+**Date:** 2026-08-23
+**Session Type:** Read-Only Audit Closeout (Governance Light Lane — no content changes)
+**Verifier:** Independent reviewer — full recomputation + QA of P2-C-076…P2-C-092
+
+### Result
+
+- **17/17 items PASS** — every stored CorrectChoice reproduced from independent calculation (cash BE 20,834; WACM 9,643; MOS×DOL 33.3%; displacing order −$8,000; constrained sell-or-process $800; disposal-tax outlay $68,750; price-change BE 27,273; redeployment +$20,000; learning-curve price $116.40; shutdown advantage +$60,000; throughput $6.00/$7.00 per min; shadow price $15/hr; EVPI $37,500; pilot option $100,000; supplier-failure savings $70,000; switching-costs judgment).
+- **Zero errors, zero review flags.** Schema checks pass: DL-008 (CC EW slots empty), distractor EWs ≥75 chars choice-specific, no boilerplate/hedge, CommonTrapReference complete sentences, Rule 11 gates satisfied (P2-C-092 Evaluate gate verified — named decision-maker VP Grace Kim, genuine multi-option judgment), blueprint mapping C.1–C.7 consistent, no Part 1 material, no near-duplicate distractors.
+- **C-088 special check confirmed:** shadow price $45/3 = $15/hr; Y's 300-unit demand cap correctly stated as binding.
+
+### Verdict
+
+Wave 2 Session 1 items are **ready to proceed toward certification** (certification is a separate authorized step — CAQS §1.7.2: HIGH-confidence verification documented + user approval + distractor tier map).
+
+### Notes
+
+- Reviewer noted upload-credit constraints: the Part 1 remediation-delta review (615 records) remains pending their capacity.
+- Wave status: 17/50 items authored and externally verified; sessions 2 (17) and 3 (16) remain.
+
+**Revision recorded by:** P2-039 — Wave 2 Session 1 Review Closeout
+**Date:** 2026-08-23
+
 ## Session P2-038 — Section C Wave 2, Session 1 (17 new items, C-076…C-092)
 
 **Date:** 2026-08-23
