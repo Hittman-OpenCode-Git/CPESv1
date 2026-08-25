@@ -1,0 +1,546 @@
+[
+ {
+  "CaseID": "CBQ21-B2",
+  "Title": "Financing the Expansion",
+  "SectionTags": [
+   "B"
+  ],
+  "BlueprintDomain": "Corporate Finance",
+  "BlueprintObjectives": [
+   "Compute component costs of capital including tax effects",
+   "Compute weighted average cost of capital at market-value weights",
+   "Evaluate how incremental financing changes the marginal hurdle rate"
+  ],
+  "PrimaryCompetency": "Calculation",
+  "EstimatedMinutes": 30,
+  "Difficulty": "Moderate",
+  "DifficultyScore": 3,
+  "ScenarioText": "Northstar Capital's board approved a $40 million capacity expansion, and CFO Priya Nair must present the funding plan. The treasury team has compiled current market values and component-cost inputs, and the committee expects the proposal to state the applicable hurdle rate and defend the financing mix.",
+  "Industry": "Industrial services",
+  "CompanyType": "Service provider",
+  "CompanyName": "Northstar Capital",
+  "Stakeholder": "CFO Priya Nair",
+  "BusinessFunction": "Capital structure planning",
+  "QuestionCount": 6,
+  "ExhibitCount": 2,
+  "ProductionStatus": "Draft",
+  "Version": "1.0",
+  "Tags": [
+   "WACC",
+   "CAPM",
+   "cost of capital",
+   "financing mix"
+  ],
+  "CreatedDate": "2026-08-24",
+  "ModifiedDate": "2026-08-24",
+  "Author": "AI",
+  "Confidence": 90,
+  "RevisionHistory": [
+   {
+    "Date": "2026-08-24",
+    "Version": "1.0",
+    "Author": "AI",
+    "Summary": "Initial creation"
+   }
+  ],
+  "question_state": "Unprocessed",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "LearningObjectives": [
+   "Compute after-tax cost of debt, cost of preferred, and CAPM cost of equity",
+   "Weight components at market values to compute WACC",
+   "Explain why incremental financing shifts the marginal cost of capital"
+  ],
+  "Exhibits": [
+   {
+    "ExhibitID": "CBQ21-B2-E1",
+    "CaseID": "CBQ21-B2",
+    "Type": "table",
+    "Title": "Exhibit 1 — Current Capital Structure (Market Values)",
+    "Purpose": "Provides the market-value weights and component inputs for the WACC computation.",
+    "ReferencedBy": [
+     "CBQ21-B2-Q1",
+     "CBQ21-B2-Q2",
+     "CBQ21-B2-Q3",
+     "CBQ21-B2-Q4"
+    ],
+    "Headers": [
+     "Component",
+     "Market value",
+     "Input"
+    ],
+    "Rows": [
+     [
+      "Long-term debt",
+      "$60M",
+      "Yield to maturity 6.0%"
+     ],
+     [
+      "Preferred stock",
+      "$20M",
+      "Annual dividend $2.50 per share; market price $25"
+     ],
+     [
+      "Common equity",
+      "$120M",
+      "Beta 1.20"
+     ],
+     [
+      "Total capital",
+      "$200M",
+      ""
+     ]
+    ],
+    "DataFormat": "USD millions except per-share amounts",
+    "AccuracyCheck": "Weights: 30% debt, 10% preferred, 60% equity"
+   },
+   {
+    "ExhibitID": "CBQ21-B2-E2",
+    "CaseID": "CBQ21-B2",
+    "Type": "table",
+    "Title": "Exhibit 2 — Market Parameters",
+    "Purpose": "Provides the tax rate and equity-market parameters required for component-cost formulas.",
+    "ReferencedBy": [
+     "CBQ21-B2-Q1",
+     "CBQ21-B2-Q3",
+     "CBQ21-B2-Q5",
+     "CBQ21-B2-Q6"
+    ],
+    "Headers": [
+     "Parameter",
+     "Value"
+    ],
+    "Rows": [
+     [
+      "Marginal tax rate",
+      "25%"
+     ],
+     [
+      "Risk-free rate",
+      "4.0%"
+     ],
+     [
+      "Market risk premium",
+      "5.5%"
+     ]
+    ],
+    "DataFormat": "Percentages",
+    "AccuracyCheck": "Inputs consistent with CAPM notation Rf + beta x MRP"
+   }
+  ],
+  "Items": [
+   {
+    "ItemID": "CBQ21-B2-Q1",
+    "Type": "numeric",
+    "Prompt": "Enter the AFTER-TAX cost of debt in percent, rounded to two decimals.",
+    "Correct": "4.50",
+    "Explanation": "Interest is tax-deductible, so the effective cost of debt = pre-tax yield × (1 − t) = 6.0% × (1 − 0.25) = 4.50% (per CB-07). Only the after-tax figure belongs inside the WACC — using the 6.0% coupon-side yield overstates the debt component by a third and biases the whole average upward.",
+    "Topic": "After-tax cost of debt",
+    "Subtopic": "Tax shield",
+    "Difficulty": "Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": true,
+    "FormulaReference": "CB-07: After-Tax Cost of Debt = Rd x (1 - t)",
+    "CommonTrapReference": "Entering the pre-tax yield directly into WACC.",
+    "EstimatedMinutes": 4,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "debt",
+     "tax shield"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ21-B2-Q2",
+    "Type": "numeric",
+    "Prompt": "Enter the cost of preferred stock in percent, rounded to two decimals.",
+    "Correct": "10.00",
+    "Explanation": "Cost of preferred = annual dividend ÷ market price = $2.50 ÷ $25.00 = 10.00% (per CB-06). Preferred dividends carry NO tax shield — they are paid from after-tax dollars — so unlike debt there is no (1 − t) adjustment here; applying one is the classic error.",
+    "Topic": "Cost of preferred stock",
+    "Subtopic": "Dividend yield method",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": true,
+    "FormulaReference": "CB-06: Rp = Dp / Pp",
+    "CommonTrapReference": "Applying the (1 - t) adjustment to preferred stock.",
+    "EstimatedMinutes": 4,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "preferred"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ21-B2-Q3",
+    "Type": "numeric",
+    "Prompt": "Enter the CAPM cost of common equity in percent, rounded to two decimals.",
+    "Correct": "10.60",
+    "Explanation": "CAPM: Re = Rf + beta × MRP = 4.0% + 1.20 × 5.5% = 4.0% + 6.6% = 10.60% (per CB-04). This is the return shareholders require for Northstar's systematic risk — the benchmark the business must beat on every incremental dollar of equity-funded investment.",
+    "Topic": "Cost of equity",
+    "Subtopic": "CAPM",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": true,
+    "FormulaReference": "CB-04: Re = Rf + b(Rm - Rf)",
+    "CommonTrapReference": "Multiplying beta by the market RETURN instead of the risk premium.",
+    "EstimatedMinutes": 4,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "CAPM"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ21-B2-Q4",
+    "Type": "numeric",
+    "Prompt": "Enter Northstar's current WACC in percent, rounded to two decimals.",
+    "Correct": "8.71",
+    "Explanation": "Weights at market value: debt 60/200 = 0.30, preferred 20/200 = 0.10, equity 120/200 = 0.60. WACC = 0.30 × 4.50% + 0.10 × 10.00% + 0.60 × 10.60% = 1.35% + 1.00% + 6.36% = 8.71% (per CB-05). Market-value weighting matters because book weights would underweight the equity investors actually price at premium levels.",
+    "Topic": "Weighted average cost of capital",
+    "Subtopic": "Market-value weights",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": true,
+    "FormulaReference": "CB-05: WACC = (E/V)Re + (P/V)Rp + (D/V)Rd(1-t)",
+    "CommonTrapReference": "Using book-value weights or omitting the preferred tranche.",
+    "EstimatedMinutes": 6,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "WACC"
+    ],
+    "Dependencies": [
+     "CBQ21-B2-Q1",
+     "CBQ21-B2-Q2",
+     "CBQ21-B2-Q3"
+    ]
+   },
+   {
+    "ItemID": "CBQ21-B2-Q5",
+    "Type": "select",
+    "Prompt": "The committee proposes funding the entire $40M with new 6% debt because 'debt is the cheapest source.' Which evaluation is correct?",
+    "Correct": "B",
+    "Choices": [
+     "The proposal is sound: 4.50% after-tax is below every other component, so the marginal cost of capital falls to 4.50%",
+     "Incremental borrowing raises the leverage ratio and therefore the equity holders' required return, so the true marginal cost exceeds 4.50% and evaluating the project at today's 8.71% WACC understates the appropriate hurdle",
+     "WACC is a fixed property of the firm and never changes with financing choices, so the hurdle remains 8.71% whatever the mix",
+     "Because the expansion is a single project, component costs are irrelevant and any rate above zero is acceptable"
+    ],
+    "Explanation": "Financing decisions change the capital structure, and structure changes component costs: added debt concentrates operating risk on a thinner equity cushion, pushing the CAPM cost of equity upward (the leverage effect formalized in Modigliani-Miller with taxes and trade-off theory). The marginal cost of the NEXT dollar blends the cheap new debt with the now-more-expensive equity base — it sits between 4.50% and the rising equity cost, not at either endpoint. Evaluating a multi-decade asset at yesterday's 8.71% while loading on debt quietly subsidizes the project's apparent returns.",
+    "Topic": "Marginal cost of capital",
+    "Subtopic": "Leverage feedback",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Treating the cheapest source as THE marginal cost of a large financing package.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "leverage",
+     "marginal cost"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ21-B2-Q6",
+    "Type": "select",
+    "Prompt": "Which funding recommendation best balances the competing considerations?",
+    "Correct": "A",
+    "Choices": [
+     "Fund with a MIX — approximately $20M of new debt plus $20M from internally generated funds or equity — preserving interest coverage and rating headroom while still capturing the deductibility of a meaningful debt layer, and re-compute the marginal WACC on the post-transaction structure for the project's hurdle rate",
+     "Fund entirely with new debt to maximize the tax shield, accepting whatever coverage ratios result",
+     "Fund entirely with new equity to eliminate financial risk completely, regardless of dilution at current prices",
+     "Defer the expansion until retained earnings fully cover the $40M internally"
+    ],
+    "Explanation": "The trade-off framework prices BOTH benefits and costs of debt: the shield argues for a meaningful debt layer, while distress risk, covenant headroom, and equity re-rating argue against concentrating a $40M program in one tranche. A balanced structure keeps the marginal WACC defensible and preserves capacity for future needs. All-debt (B) maximizes the shield but hands the committee a fragile balance sheet exactly when the new assets must ramp; all-equity (C) forfeits the shield and signals overpriced issuance if timed poorly; deferral (D) concedes strategic ground to competitors while cash accumulates.",
+    "Topic": "Financing structure recommendation",
+    "Subtopic": "Trade-off application",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Optimizing a single dimension (tax shield or risk) instead of the blended position.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "recommendation",
+     "structure"
+    ],
+    "Dependencies": []
+   }
+  ]
+ },
+ {
+  "CaseID": "CBQ21-E2",
+  "Title": "Replacing the Packaging Line: Unequal Lives",
+  "SectionTags": [
+   "E"
+  ],
+  "BlueprintDomain": "Investment Decisions",
+  "BlueprintObjectives": [
+   "Compare mutually exclusive replacements with unequal lives using equivalent annual annuity",
+   "Identify assumptions that drive the replacement decision",
+   "Formulate a defensible replacement recommendation"
+  ],
+  "PrimaryCompetency": "Analysis",
+  "EstimatedMinutes": 30,
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ScenarioText": "Meridian Foods' packaging line has three years left and costs $220,000 a year to operate and maintain; it could be sold today for $150,000 or fetch $40,000 in three years. A challenger system costs $600,000 installed, runs five years at $90,000 annually, and should realize $100,000 at replacement. Operations director Marcus Webb must recommend replace-now versus keep-three-more-years at a 10% cost of capital (tax effects excluded for comparability).",
+  "Industry": "Food processing",
+  "CompanyType": "Manufacturer",
+  "CompanyName": "Meridian Foods",
+  "Stakeholder": "Operations Director Marcus Webb",
+  "BusinessFunction": "Capital budgeting",
+  "QuestionCount": 6,
+  "ExhibitCount": 2,
+  "ProductionStatus": "Draft",
+  "Version": "1.0",
+  "Tags": [
+   "EAA",
+   "replacement",
+   "unequal lives"
+  ],
+  "CreatedDate": "2026-08-24",
+  "ModifiedDate": "2026-08-24",
+  "Author": "AI",
+  "Confidence": 90,
+  "RevisionHistory": [
+   {
+    "Date": "2026-08-24",
+    "Version": "1.0",
+    "Author": "AI",
+    "Summary": "Initial creation"
+   }
+  ],
+  "question_state": "Unprocessed",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "LearningObjectives": [
+   "Build present value of cost streams for defender and challenger",
+   "Convert unequal-life cost streams to equivalent annual annuities",
+   "Select and defend the replacement decision"
+  ],
+  "Exhibits": [
+   {
+    "ExhibitID": "CBQ21-E2-E1",
+    "CaseID": "CBQ21-E2",
+    "Type": "table",
+    "Title": "Exhibit 1 — Defender Versus Challenger",
+    "Purpose": "Provides the cash-relevant facts for both alternatives used in the annualized-cost comparison.",
+    "ReferencedBy": [
+     "CBQ21-E2-Q1",
+     "CBQ21-E2-Q2",
+     "CBQ21-E2-Q3",
+     "CBQ21-E2-Q6",
+     "CBQ21-E2-Q5"
+    ],
+    "Headers": [
+     "Factor",
+     "Defender (keep)",
+     "Challenger (replace)"
+    ],
+    "Rows": [
+     [
+      "Remaining/new life",
+      "3 years",
+      "5 years"
+     ],
+     [
+      "Annual operating cost",
+      "$220,000",
+      "$90,000"
+     ],
+     [
+      "Salvage today",
+      "$150,000",
+      "n/a"
+     ],
+     [
+      "Salvage at end of life",
+      "$40,000 (year 3)",
+      "$100,000 (year 5)"
+     ],
+     [
+      "Installed cost",
+      "n/a",
+      "$600,000"
+     ]
+    ],
+    "DataFormat": "USD; taxes excluded for comparability per the engagement scope",
+    "AccuracyCheck": "Keeping the machine means forgoing today's $150,000 salvage — an opportunity cost at time zero"
+   },
+   {
+    "ExhibitID": "CBQ21-E2-E2",
+    "CaseID": "CBQ21-E2",
+    "Type": "text",
+    "Title": "Exhibit 2 — Discount Factors at 10%",
+    "Purpose": "Provides the annuity and single-sum factors needed without external tables.",
+    "ReferencedBy": [
+     "CBQ21-E2-Q1",
+     "CBQ21-E2-Q2",
+     "CBQ21-E2-Q3",
+     "CBQ21-E2-Q4"
+    ],
+    "Body": "PVIFA(10%, 3 years) = 2.48685\nPVIFA(10%, 5 years) = 3.79079\nPVIF(10%, year 3) = 0.75131\nPVIF(10%, year 5) = 0.62092"
+   }
+  ],
+  "Items": [
+   {
+    "ItemID": "CBQ21-E2-Q1",
+    "Type": "numeric",
+    "Prompt": "Enter the PRESENT VALUE of keeping the defender for its remaining three years (costs positive), in dollars, within ±$500.",
+    "Correct": "667054",
+    "Explanation": "Keeping the machine sacrifices today's $150,000 sale (opportunity cost at t=0), pays $220,000 annually for three years, and recovers $40,000 at year three. PV = 150,000 + (220,000 × 2.48685) − (40,000 × 0.75131) = 150,000 + 547,107 − 30,053 = $667,054. The foregone salvage is the item analysts most often forget — selling the defender is half of the replace alternative.",
+    "Topic": "Replacement analysis",
+    "Subtopic": "Defender cost stream",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": true,
+    "FormulaReference": "PV of costs with opportunity cost of foregone salvage",
+    "CommonTrapReference": "Omitting the foregone salvage value from the keep alternative.",
+    "EstimatedMinutes": 6,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "defender",
+     "present value"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ21-E2-Q2",
+    "Type": "numeric",
+    "Prompt": "Enter the CHALLENGER's equivalent annual ANNUITY cost (a positive number), in dollars, within ±$500.",
+    "Correct": "231899",
+    "Explanation": "PV of challenger costs = 600,000 + (90,000 × 3.79079) − (100,000 × 0.62092) = 600,000 + 341,171 − 62,092 = $879,079. Spreading over five years: EAA = 879,079 ÷ 3.79079 = $231,899 per year. The EAA converts a lumpy five-year commitment into the constant annual figure that makes unequal lives comparable.",
+    "Topic": "Equivalent annual annuity",
+    "Subtopic": "Challenger annualization",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": true,
+    "FormulaReference": "ID-05: EAA = PV / PVIFA(r, n)",
+    "CommonTrapReference": "Comparing raw PVs of unequal-lived alternatives directly.",
+    "EstimatedMinutes": 6,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "EAA",
+     "challenger"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ21-E2-Q3",
+    "Type": "numeric",
+    "Prompt": "Enter the DEFENDER's equivalent annual annuity cost (a positive number), in dollars, within ±$500.",
+    "Correct": "268233",
+    "Explanation": "Defender EAA = 667,054 ÷ 2.48685 = $268,233 per year. Comparing the two annualized figures — $231,899 for the challenger against $268,233 for the defender — shows replacement saves roughly $36,300 EVERY YEAR on a like-for-like basis, which is the apples-to-apples comparison the unequal lives demand.",
+    "Topic": "Equivalent annual annuity",
+    "Subtopic": "Defender annualization",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": true,
+    "FormulaReference": "ID-05: EAA = PV / PVIFA(r, n)",
+    "CommonTrapReference": "Annualizing over the wrong life (using 5 years for the 3-year defender).",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "EAA",
+     "defender"
+    ],
+    "Dependencies": [
+     "CBQ21-E2-Q1"
+    ]
+   },
+   {
+    "ItemID": "CBQ21-E2-Q4",
+    "Type": "select",
+    "Prompt": "Why is the equivalent annual annuity method required here rather than comparing total present values of cost?",
+    "Correct": "B",
+    "Choices": [
+     "Because EAA discounts costs twice, adding conservatism to replacement decisions",
+     "Because the alternatives span UNEQUAL lives — the defender's 3-year cost stream and the challenger's 5-year stream are not directly comparable; annualizing places both on a per-year basis so the shorter option is not flattered by its earlier termination",
+     "Because EAA ignores salvage values, simplifying the arithmetic",
+     "Because the tax code requires annualized comparisons for equipment placed in service mid-year"
+    ],
+    "Explanation": "Total-PV comparisons bias decisions toward whichever alternative stops sooner: a 3-year cost stream will almost always show a smaller PV than a 5-year stream covering more years of service. Annualizing divides each PV by its own annuity factor, expressing both as cost-per-year-of-service and restoring comparability — the standard treatment for mutually exclusive replacements with unequal lives. Salvage is fully included (C), and no tax-timing rule drives the method (D).",
+    "Topic": "Unequal lives methodology",
+    "Subtopic": "EAA rationale",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Choosing the shorter-lived alternative because its undiscounted horizon looks cheaper.",
+    "EstimatedMinutes": 4,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "methodology"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ21-E2-Q5",
+    "Type": "select",
+    "Prompt": "Which development would MOST likely reverse the replace-now recommendation?",
+    "Correct": "A",
+    "Choices": [
+     "Evidence that the challenger's operating cost escalates rapidly after year 2 — maintenance contracts stepping up sharply — raising its effective annual cost above the defender's $268,233",
+     "A modest rise in general interest rates affecting both alternatives equally",
+     "Discovery that the defender's paint color no longer matches the facility standard",
+     "Confirmation that Product Z packaging volumes will grow 20%, requiring MORE machine-hours from whichever line is installed"
+    ],
+    "Explanation": "The decision rests on the challenger's $231,899 annualized cost staying below the defender's $268,233. If the challenger's own cost curve escalates steeply — aggressive service-contract step-ups being the usual culprit — its EAA climbs toward and past the defender's, flipping the ranking. Equal rate moves (B) hit both streams similarly and preserve the gap; cosmetic issues (C) are noise; higher volumes (D) raise the VALUE of the better machine, reinforcing replacement rather than reversing it.",
+    "Topic": "Decision sensitivity",
+    "Subtopic": "Ranking reversals",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Treating the EAA ranking as immutable without stress-testing its cost inputs.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "sensitivity"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ21-E2-Q6",
+    "Type": "select",
+    "Prompt": "Which recommendation should Marcus Webb present?",
+    "Correct": "C",
+    "Choices": [
+     "Keep the defender through year 3 because its book value is low and disposal would trigger a loss",
+     "Replace immediately, and additionally retire the defender early this quarter even before the challenger ships, to bank the $150,000 salvage sooner",
+     "REPLACE NOW with the challenger — its equivalent annual cost of $231,899 beats the defender's $268,233 by roughly $36,300 per year — sequencing the cutover during scheduled downtime so the $150,000 defender sale closes on delivery day",
+     "Solicit a third bid before acting, since two alternatives can never support a confident decision"
+    ],
+    "Explanation": "The annualized economics favor replacement decisively, and execution detail protects the value: cutting over during planned downtime avoids production loss, and closing the defender's sale on delivery day captures the $150,000 without carrying an idle asset. Book-value loss (A) is an accounting artifact irrelevant to cash economics. Early standalone disposal (B) strands production capability before the replacement arrives. Demanding endless bids (D) substitutes process for analysis — two well-specified, dominant/subordinate alternatives support action.",
+    "Topic": "Replacement recommendation",
+    "Subtopic": "Execution sequencing",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Evaluate",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Letting accounting loss aversion override cash-economics superiority.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "recommendation"
+    ],
+    "Dependencies": []
+   }
+  ]
+ }
+]

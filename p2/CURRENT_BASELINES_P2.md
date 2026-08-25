@@ -2,7 +2,7 @@
 
 **Purpose:** Authoritative reference for P2 preflight cross-checks.  
 **Status:** Active  
-**Updated:** 2026-08-04 — P2 Phase 1 Schema Lock  
+**Updated:** 2026-08-24 — Flash wave (P2-047): +90 Unprocessed MCQs (A 175, B 115, C 140, D 65, E 75, F 65; Certified unchanged at 545)
 **Preflight script:** `scripts/preflight_p2.js`
 
 ---
@@ -11,13 +11,13 @@
 
 | Pack | File | Target QIDs | Current QIDs | Certified | Hash (SHA256) |
 |------|------|-------------|-------------|-----------|---------------|
-| A | p2/pack_p2_a.js | 500 | 100 | 0 | — |
-| B | p2/pack_p2_b.js | 500 | 40 | 0 | — |
-| C | p2/pack_p2_c.js | 625 | 15 | 0 | — |
-| D | p2/pack_p2_d.js | 250 | 0 | 0 | — |
-| E | p2/pack_p2_e.js | 250 | 0 | 0 | — |
-| F | p2/pack_p2_f.js | 375 | 0 | 0 | — |
-| **Total** | | **2,500** | **155** | **0** | |
+| A | p2/pack_p2_a.js | 500 | 175 | 160 | — |
+| B | p2/pack_p2_b.js | 500 | 115 | 100 | — |
+| C | p2/pack_p2_c.js | 625 | 140 | 125 | — |
+| D | p2/pack_p2_d.js | 250 | 65 | 50 | — |
+| E | p2/pack_p2_e.js | 250 | 75 | 60 | — |
+| F | p2/pack_p2_f.js | 375 | 65 | 50 | — |
+| **Total** | | **2,500** | **635** | **545** | | |
 
 ---
 

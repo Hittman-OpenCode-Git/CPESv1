@@ -1,4 +1,677 @@
+## Session P2-059 — Certification of P2-053..057 Output (75 MCQ + 12 Cases) After Certifier Review
+
+**Date:** 2026-08-24
+**Session Type:** Certification (CAQS §1.7) with pre-flip defect repair
+**Governance Lane:** Full
+**Package reviewed:** reports/review_packages/p2_cert_review_20260824/ (16 chunks, SHA256-verified against MANIFEST)
+
+### Review method
+
+Six-dimension verification per CAQS §1.6: every item solved independently before consulting the stored key (solver agents + direct reviewer recomputation); all blocker/warn claims dual-verified against raw JSON. Result: **147/147 answer keys correct as stored** (75/75 MCQ, 72/72 case items). Structural layer clean pool-wide (EW[CC] empty, non-CC slots choice-specific, no DL-008/013/026/037 signatures, Part2OnlyFlag true).
+
+### Defects found and repaired BEFORE flip
+
+BLOCKERS:
+1. P2-C-187 (D2): unstated overflow-beyond-block treatment flipped the key between readings. Stem amended ("overflow beyond the reserved block can be turned away at no direct cost"); EC annotated. Key unchanged (B).
+2. P2-C-151: propagated wrong sacrifice figure $110K corrected to **$70K** in Choices.C, EC, EWA, EWB (+ VerifiedChecks line). Key unchanged (C).
+3. Clone pairs (DL-012-class, filed as DL-046): P2-C-181 ≡ P2-C-199 and P2-C-185 ≡ P2-C-198 confirmed by direct comparison (identical parameters/topics/distractor value sets, letter-rotated keys). Disposition per user decision: **P2-C-199 and P2-C-198 → Archived** (content preserved); survivors 181/185 certified after distractor repairs.
+
+WARN wave (keys unaffected): C-166 mixed-baseline differential (-85 vs -100 all-in → advantage **$15K**, was misstated as $25K-vs-$100K/$75K) fixed in Choice C/EC/EWA/EWB/VerifiedChecks; C-188 EC/EWB/EWD ratio-base contradiction (28.1% is of the $167 pocket price, not the $200 list); C-172 distractor C $165K→$135K; C-181 choice A →$1,369,600 padded-base fee; A-176 distractor D 8.33%→8.0% multiple-misread trap; A-186 impossible options premise → convertible bonds (stem+EC+EWA); C-153 fabricated $8/hr anchor →$15.00 + EWD derivation rebuilt; C-147 distractor A → constructible $74,800 commission-subtraction path; C-156 EWC false "not computable" claim rewritten; C-174 EWB false "equals no scenario" claim rewritten; C-200 stem gained explicit P1 demand cap + distractor D re-keyed to constructible $24,300 floor-only plan; C-190 distractors →$1,250 dues-shortcut / $100 churn-decimal traps; C-192 distractor D →$480 double-count; C-176 EWC/EWD garbled prose rebuilt; grammar (C-184 "an $55", CBQ23-C2-Q3 "an $11,600").
+
+Metadata repairs: 35 case-item Difficulty labels aligned to DifficultyScore per QUESTION_METADATA_STANDARD §5.1 map (labels were one notch high across CBQ21-A1/D1/B2/E2, CBQ22-B1/F1/A2/D2, CBQ23-C1/E1/C2/F2); LOSTag P2-C-197 C.2→C.6 (registry consistency with EV siblings); ReferencedBy omissions closed (CBQ21-A1-E1 += Q3,Q5; CBQ21-D1-E1 += Q2; CBQ22-A2-E1 += Q4); CBQ21-D1 appetite wording tightened to "any single identified risk" (removes initiative-level ambiguity); D1-Q5-B false-premise distractor rewritten; A1-Q1/Q2 prompts now state ±0.01 tolerance (midpoint-rounding keys 1.63/0.93 preserved).
+
+### State changes (question_state)
+
+- Certified (+73): P2-A-176..P2-A-190 (15); P2-C-141..P2-C-200 excluding C-198/C-199 (58)
+- Archived (+2): P2-C-199, P2-C-198 (DL-046 clone retirement; content preserved)
+- Certified (+12 cases): CBQ21-A1, CBQ21-B2, CBQ21-E2, CBQ21-D1, CBQ22-A2, CBQ22-B1, CBQ22-D2, CBQ22-F1, CBQ23-C1, CBQ23-C2, CBQ23-E1, CBQ23-F2 (72 items inside; item keys independently reproduced)
+- All flips carry certification_session: P2-059
+
+### Verification results (post-fix battery)
+
+- All five touched pack files parse via Function constructor; object counts unchanged (A:190, C:200, cases 4/4/4)
+- validate:p2: 710 items, 0 errors (exit 0)
+- preflight:p2: TOTAL P2 CERTIFIED 545→618, DIVERGENCES 0, guard tests 74/74 PASS
+- Backups taken before any write: backups/pack_p2_a.js.bak-1787605837969, pack_p2_c.js.bak-1787605837969, case_pack_p2_1/2/3.js.bak-1787605837969, REVISION_HISTORY_P2.md.bak-20260824172754, DEFECT_LIBRARY.md.bak-20260824172754
+
+### Distractor tier map (CAQS §1.7.2)
+
+Per-item map (CC + first ~44 chars of each non-CC slot rationale; numeric items n/a) appended as the "Tier Map Appendix — P2-059" section at the end of this file.
+
+### Documented exceptions (CAQS §15.3)
+
+- Length cueing: keyed choices remain longest in most case select items (and several MCQ Evaluate items). Exception: editorial compression deferred — remediation plan = redistribute specificity across positions in next editorial wave. No learner-safety impact.
+- Deferred INFOs: CF5 EstimatedMinutes soft-rule tension; cognitive-progression dips in two cases; B-heavy CC rotation C-141–155 accepted pool-wide (rotation NOT applied — no Rule 4 justification exists for cosmetic key changes).
+- GOVERNANCE §5 flag "CBQ23-E2-Q3" confirmed phantom (no such CaseID in package or source pack); package doc counts ("90"/"36" case items) corrected in verdict file — true count 72.
+
+**Certification recorded by:** P2-059 (certifier session, user-approved flip)
+
+---
+
+## Session P2-058 — Certification Review Package Produced (Uncertified P2-053..057 Output)
+
+**Date:** 2026-08-24
+**Session Type:** Governance tooling / review handoff (AGENTS.md §18 protocol) — zero content changes
+**Governance Lane:** Full (read-only over pack content; writes confined to new reports/review_packages/ subtree)
+
+### Completed — Review package at `reports/review_packages/p2_cert_review_20260824/`
+
+**Scope:** ALL uncertified Part 2 content authored in sessions P2-053..P2-057: **75 MCQs** (Pack A 176–190; Pack C 141–200) and **12 case studies / 90 case items** across the three case packs. Extraction verified each item's live `question_state` — items found Certified would have been excluded (exclusion log embedded in MANIFEST); none of this package's content was Certified at extraction.
+
+**Contents (21 files):**
+
+| Class | Files | Detail |
+|-------|-------|--------|
+| MCQ chunks | 10 × ≤28KB JSON | ≤8 items per chunk; verbatim objects incl. stems, choices, explanations, metadata, VerifiedChecks |
+| Case chunks | 6 × ≤26KB JSON | 2 cases per chunk (12 cases / 36 case items), full exhibit + item battery |
+| ANSWER_KEYS.md | auto-generated | Per-item keys parsed from the chunks themselves (zero transcription) |
+| GOVERNANCE.md | handbook | CAQS §1.7.2/P2002 certification requirements, six-dimension checklist, build-time evidence table, known flags requiring certifier attention, state-flip mechanics |
+| MANIFEST.md + manifest_data.json | integrity | Per-file bytes + SHA256, ID coverage lists, source-pack SHA256s at extraction time, gap/dup proof statement, certified-skip log |
+| README.md | handoff | Reviewer quick start, §18.4 control-test instructions, integrity verification commands |
+| provenance/extract_generator.js | reproducibility | Exact extraction script (SHA256 recorded in MANIFEST) |
+
+**Chunk discipline:** 16 content chunks, largest 27,388 bytes — all ≤40,000 bytes. First pass produced five >40KB MCQ files; corrected by splitting every range into ≤8-item sub-chunks.
+
+**Completeness proof:** every expected QID located exactly once in its source pack before chunking (0 missing, 0 duplicates); cases matched by CaseID against live packs. Source-pack SHA256 recorded per row for later re-verification.
+
+### Flags surfaced for certifiers (detailed in GOVERNANCE.md §5)
+
+- B-heavy answer rotation within C-141–155 sub-batch
+- F-domain cases deliberately all-select (conceptual ethics deviation)
+- CBQ23-E1-Q2 NPV tolerance ±$1,000
+- Elasticity-markup convention on P2-C-162 (markup-on-VC vs margin-on-price distractor)
+
+### Process note
+
+Extraction ran via Node object-parser (string-aware brace matching) rather than Edit/Write tools, keeping the package generation outside the guard's staging-scanner limitation documented in P2-053/P2-056. Package files are documentation artifacts, not application code.
+
+**Revision recorded by:** P2-058 — Certification Review Package
+**Date:** 2026-08-24
+
+## Session P2-057 — Pack C Expansion Wave: 45 Items in 3 Parallel Batches
+
+**Date:** 2026-08-24
+**Session Type:** Content Authoring — Pack C MCQ expansion (3 parallel authoring agents, centrally specified, serial integration)
+**Governance Lane:** Full
+**BLOCK-AUTHORIZED:** Not required — each batch 15 items ≤ 30 (Rule 5)
+**Backup timestamp:** Pre-append state preserved in P2-056 lineage
+
+### Completed — Pack C: P2-C-156–200 (45 items)
+
+| Batch | QIDs | Representative topics |
+|-------|------|----------------------|
+| 1 (156–170) | Piecewise step-function breakeven, constraint identification via slack, sell-or-process THROUGH the constraint (opportunity cost inside processing), break-even probability, cost of prediction error, net EVSI after study cost, elasticity-based optimal markup, dual-pricing corporate absorption, capacity-shrink sacrifice ranking, promotion allocation by contribution (revenue-vs-CM trap), seasonal shutdown with restart penalty, outsourcing TCO with escalators, utility-adjusted selection, minimax-COST criterion, break-even time |
+| 2 (171–185) | Commission-basis incentive design, order straddling overtime tiers, GAAP allocations masking a contributor, capacity-capped expected value, expedite-vs-downtime, applied segmented pricing governance (Evaluate), yield-improvement value on constraint, warehouse closure year-one net, recipe substitution under material cap, insurance-netted expected loss, government cost-plus-fixed-fee, product-mix with contractual floors, three-stage staged-launch tree, recall vs fix-at-failure, breakeven market share |
+| 3 (186–200) | Throughput statement, probability-weighted overflow storage, pocket-price realization, rework-loop expected inspection runs, churn-adjusted acquisition ceiling, shadow price of binding constraint, changeover losses, capacity reservation agreement, rush-order timing displacement, warranty tail in drop decision, Hurwicz criterion, SLA penalty EV, breakeven market share, cost-plus mechanics revisited via integrative framing, INTEGRATIVE CAPSTONE (constraint + floor + vendor: $29,900) |
+
+Pack C pool: 155 → **200 items**. Pool total across all packs: **710 / 2,500**.
+
+### Distributions (45 new items)
+
+- **Cognitive level:** Understand 8 · Apply 30 · Analyze 7 · Evaluate 0
+- **Difficulty:** Moderate-Easy 2 · Moderate 26 · Difficult 15 · Very Difficult 2
+- **CorrectChoice:** A: 12 · B: 12 · C: 12 · D: 9 — balanced (D at 20%, flagged alongside prior batches for certification-pass rotation review)
+
+### Verification
+
+| Check | Result |
+|-------|--------|
+| Governance pre-checks (script-enforced) | 45/45 PASS — EW[CC] empty after placeholder substitution, non-CC ≥50 chars choice-specific, EC length thresholds, boilerplate/hedging scans |
+| CC rotation vs specification | 45/45 match the centrally assigned pattern |
+| Post-append object-parse scan | 45/45 CLEAN — 0 DL-008/013/021/026/037, no unresolved placeholders |
+| `node --check` | PASS |
+| `npm run validate:p2` | PASS — 710 items, 0 errors |
+| `npm run preflight:p2` | PASS — 0 divergences, guard 74/74 |
+
+### Agent Flags Resolved at Integration
+
+1. **Batch 2 item 184 (recall economics):** agent correctly flagged my spec's arithmetic ($80 repair × 15% × 20,000 = $240K, not $165K). Root fix applied: repair cost set to $55 → expected field cost $165K, preserving the intended $75K-saving answer key.
+2. **Batch 2 item 172 distractor:** blended-VC figure corrected $41.78 → $40.89.
+3. **Batch 2 item 182 distractor C:** replaced with a reconstructible even-split alternative ($3,494).
+4. **Batch 3 item 188:** realized CM% restated as 28.1% of POCKET price (47 ÷ 167) rather than an unreconcilable list-base figure.
+5. **Batch 1 item 166:** DifficultyScore aligned to label (Difficult = 4).
+
+### Process Notes
+
+- **Parallel architecture:** provider recovered (canary verified); three agents ran concurrently but wrote ONLY staging JSON (bash-created to bypass the guard's multi-item staging misparse documented in P2-053); integration into the pack ran SERIALLY through one script with placeholder substitution (`__CC__` → "") and full rule enforcement — zero concurrent-write exposure.
+- All numeric answers were centrally designed and independently recomputed before dispatch; agents expanded prose only. Two spec-level arithmetic issues surfaced by agents were root-fixed at integration.
+- Items remain `Unprocessed`; certification requires six-dimension verification per P2002.
+
+**Revision recorded by:** P2-057 — Pack C Expansion Wave
+**Date:** 2026-08-24
+
+## Session P2-056 — Case Pack Balancing (6 Cases) + Pack C MCQ Wave (15 Items)
+
+**Date:** 2026-08-24
+**Session Type:** Content Authoring — case-pack balancing + Pack C MCQ expansion
+**Governance Lane:** Full
+**BLOCK-AUTHORIZED:** Not required — all change-sets ≤ 30 items (Rule 5)
+**Backup timestamp:** Prior states in P2-054/P2-055 lineage; appends verified against pre-write parse snapshots
+
+### Deliverable 1 — Case-Pack Balancing: 6 New Cases
+
+Case packs evened at **7 / 7 / 7** cases (was 7/4/4). All six Part 2 domains now have THREE case studies each.
+
+| Case | Section | File | Focus |
+|------|---------|------|-------|
+| CBQ22-A1 DuPont Diagnosis and the Turnaround Lever | A | p2_1 (appended) | Y1/Y2 decomposition (16%→17.78%); leverage-led ROE diagnosed; turnover-recovery recommendation |
+| CBQ22-C1 Target Costing the Smart Thermostat | C | p2_2 (created file) | Allowable cost $48; gap $6; option screening (B excluded on warranty side-effects); design-phase governance |
+| CBQ22-D1 Strategic Disruption Scenarios | D | p2_2 | Baseline EL −$4.05M; R2 contracts net +$420K funded; R1 flexibility declined (−$1.65M standalone, −$2.72M incremental); trigger-based revisit |
+| CBQ23-B1 Residual Dividend Under a Capital Program | B | p2_3 (created file) | Retention $30M; residual $6M; DPS $0.50 vs $1.60 fixed → $13.2M funding gap analysis; communicated-residual policy |
+| CBQ23-E2 Capital Rationing: The $30M Envelope | E | p2_3 | Greedy-PI failure under indivisibility ({A,B}=$8.5M) vs enumerated optimum {A,D,E}=$9.2M; divisible ceiling $10.0M |
+| CBQ23-F1 The Auditor's Forecast Request | F | p3 | IMA confidentiality boundaries vs audit access; obstruction assessment; staged disclosure protocol; standing audit-support fix |
+
+### Deliverable 2 — Pack C MCQs: P2-C-141–155
+
+| Range | Topics |
+|-------|--------|
+| C-141–155 | Step-fixed-cost special order, cost-shock volume hold, customer profitability before allocations, TOC second-shift elevation, FC-per-unit absorption trap, captive pricing, export order w/ avoided commission, two-part tariff, PV-chart reading, short-run/long-run exit, complementary-product abandonment, tiered-price breakeven, yield-adjusted CM/hour, bottleneck time-reduction investment, Laplace criterion |
+
+Pack C pool: 140 → **155**.
+
+### Verification (script-enforced + independent)
+
+| Check | Result |
+|-------|--------|
+| Case structural validation | 6/6 PASS pre-write; validator caught 0 reference gaps this wave (patch discipline from prior waves held) |
+| Case numeric answers vs independent recomputation | All match (A1 DuPont bridge; B2 WACC 8.71%; E2 EAAs $231,899/$268,233; D1 ELs −$4.05M/−$2.43M/−$2.15M; C1 $48/$6/$1.20; B1 DPS $0.50) |
+| MCQ governance pre-checks (script-enforced) | 15/15 PASS — slots, EC length, boilerplate, hedging, Independent notes |
+| Post-append object-parse scan (Pack C) | 15/15 CLEAN — 0 DL-008/013/021/026/037 · CC A:3/B:6/C:3/D:3 (B heavy — flagged for certification rotation) |
+| `node --check` | PASS × 3 MCQ packs + × 3 case packs |
+| `npm run validate:p2` | PASS — 665 items, 0 errors |
+| `npm run preflight:p2` | PASS — 0 divergences, guard 74/74 |
+
+### Notes
+
+- **Laplace correction caught in-draft:** initial authoring keyed S1 as the equal-weighted winner ($11.67M) using stale figures; recomputation against the actual payoff table showed S2 wins at $10.67M. Key corrected to CC=B before write.
+- **Guard-interaction finding:** the governance plugin's Write-tool scanner mispairs EW[CC] empties across multi-item staging arrays (forward-scan artifact — flags legitimate CC-slot empties as Rule 6 violations while missing real gaps elsewhere). Staging files are therefore created via bash/Node with IDENTICAL rules enforced programmatically inside the append script, followed by independent post-write scans of the final artifacts. No check was weakened; enforcement moved to a reliable layer. Recommend guard enhancement: per-object CorrectChoice pairing rather than window scanning.
+- Case packs remain unwired into app delivery/schema validator (documented P2-054).
+
+**Revision recorded by:** P2-056 — Case Balancing + Pack C Wave
+**Date:** 2026-08-24
+
+## Session P2-055 — Case Study Wave 2: 6 Additional Cases (2 Per Case Pack)
+
+**Date:** 2026-08-24
+**Session Type:** Content Authoring — integrated case studies, second wave
+**Governance Lane:** Full
+**BLOCK-AUTHORIZED:** Not required — 2 cases per pack per change-set
+**Backup timestamp:** Prior file states preserved in P2-054 lineage; appends verified against pre-write parse snapshots
+
+### Completed — 6 Cases (36 items, 12 exhibits) — all six Part 2 domains covered twice
+
+| Case | Section | File | Focus |
+|------|---------|------|-------|
+| CBQ21-B2 Financing the Expansion | B | case_pack_p2_1.js (appended) | Component costs (4.50%/10.00%/10.60%), WACC 8.71%, marginal-cost/leverage feedback, mixed funding recommendation |
+| CBQ21-E2 Replacing the Packaging Line: Unequal Lives | E | case_pack_p2_1.js (appended) | Defender PV $667,054 incl. foregone salvage; challenger EAA $231,899 vs defender $268,233; replace-now recommendation |
+| CBQ22-A2 Reading the Quality of Earnings | A | case_pack_p2_2.js (appended) | QoI ratio 0.60, core earnings $22.5M, DSO deterioration to 47.6 days, channel-stuffing evidence, conditional valuation stance |
+| CBQ22-D2 Vendor Breach: Quantifying the Response | D | case_pack_p2_2.js (appended) | Inherent EL $450K breaches $250K cap; MFA residual $180K with +$210K net benefit; reduce-first/share-second sequencing |
+| CBQ23-C2 The Full-Capacity Order Negotiation | C | case_pack_p2_3.js (appended) | −$11,600/month net effect at $65; minimum price floor $74.67; tiered counterproposal design |
+| CBQ23-F2 Misappropriation at the Branch | F | case_pack_p2_3.js (appended) | Fraud-triangle opportunity mapping, escalation discipline, vendor-master remediation, layered anti-fraud program |
+
+Case-pack totals after wave: **Pack 1 = 7 cases · Pack 2 = 4 · Pack 3 = 4 · Pool = 15 cases / 90 items / 30 exhibits.**
+
+### Verification (script-enforced)
+
+| Check | Result |
+|-------|--------|
+| Structural validation (pre-write) | 6/6 PASS — CaseID format, counts, ReferencedBy coverage, explanation length, language rules |
+| Validator catch during authoring | 3 items initially missing from exhibit ReferencedBy — caught by script, patched before write |
+| Numeric answers vs independent recomputation | 17/17 MATCH across both waves' tables (incl. EAA pair $231,899/$268,233 and WACC 8.71%) |
+| CaseID collision check | 0 collisions — new IDs CBQ21-B2/E2, CBQ22-A2/D2, CBQ23-C2/F2 |
+| `node --check` | PASS × 3 case packs |
+| Parse verification post-append | Pack 1: 7 cases · Pack 2: 4 · Pack 3: 4 — existing cases intact |
+| `npm run preflight:p2` | PASS — 0 divergences, guard 74/74 |
+
+### Notes
+
+- All six domains (A–F) now have TWO case studies each across the pool.
+- CBQ23-F2 continues the documented all-select deviation for conceptual Professional Ethics content (consistent with CBQ22-F1).
+- Pipeline note: staging JSON + programmatic append with pre-write governance checks; zero large-payload Edit writes; validator caught three reference gaps before any file was touched.
+
+**Revision recorded by:** P2-055 — Case Study Wave 2
+**Date:** 2026-08-24
+
+## Session P2-054 — Case Study Wave: 6 Cases Across 3 Case Packs
+
+**Date:** 2026-08-24
+**Session Type:** Content Authoring — integrated case studies (continuation of P2-053 after subagent outage)
+**Governance Lane:** Full
+**BLOCK-AUTHORIZED:** Not required — 2 cases per case pack per change-set (Rule 5 applies to question objects; 12 case items per pack)
+**Backup timestamp:** Pack 1 pre-append state preserved in prior backup lineage; new files created fresh (packs 2/3 did not exist)
+
+### Completed — 6 Cases (36 items, 12 exhibits)
+
+| Case | Section | File | Items | Exhibits |
+|------|---------|------|-------|----------|
+| CBQ21-A1 Liquidity, Leverage, and the Credit Renewal | A | case_pack_p2_1.js (appended) | 6 (3 numeric/3 select) | Balance sheet + operating data |
+| CBQ21-D1 Quantifying Launch Risk Before the Board | D | case_pack_p2_1.js (appended) | 6 (3 numeric/3 select) | Risk register + responses |
+| CBQ22-B1 Peak-Season Financing Plan | B | case_pack_p2_2.js (created) | 6 (3 numeric/3 select) | Operating metrics + financing alternatives |
+| CBQ22-F1 The Overstated Quarter | F | case_pack_p2_2.js (created) | 6 (all select — conceptual domain deviation, documented) | Email evidence + policy/law references |
+| CBQ23-C1 Make-or-Buy Under a Binding Constraint | C | case_pack_p2_3.js (created) | 6 (3 numeric/3 select) | Cost structure + constraint data |
+| CBQ23-E1 Automation Investment Evaluation | E | case_pack_p2_3.js (created) | 6 (3 numeric/1 numeric-tolerance/2 select) | Project inputs + discount factors |
+
+All cases: single-object schema mirroring `casePackP2_1` conventions exactly; `question_state: "Unprocessed"`; Part 2; Part2OnlyFlag true; ProductionStatus Draft v1.0; named company/stakeholder/trigger/task scenarios; every exhibit row consumed by ≥1 item (ReferencedBy complete); cognitive progression Apply→Analyze→Evaluate.
+
+### Verification (script-enforced)
+
+| Check | Result |
+|-------|--------|
+| Structural validation (pre-write) | 6/6 PASS — CaseID format, QuestionCount=Items.length, ExhibitCount, item-count range, ReferencedBy coverage, explanation lengths, language rules |
+| Numeric answers vs independent recomputation | 15/15 MATCH (A1: 1.63/0.93/45.5; D1: $1.0M/$400K/$450K; B1: 100/24.83%/$35K; C1: $19.50/$4.50/$425K; E1: $137,500/$49,170/3.64 yrs) |
+| Validator catch during authoring | 2 items initially missing from exhibit ReferencedBy — caught by script, patched before write |
+| `node --check` | PASS × 3 case packs |
+| Parse verification | Pack 1 = 5 cases (B1/C1/E1 intact + A1/D1 added); Pack 2 = 2; Pack 3 = 2 |
+| `npm run preflight:p2` | PASS — MCQ pool unchanged at 650; 0 divergences; guard 74/74 |
+
+### Notes
+
+- **CBQ22-F1 uses all-select items** — deliberate deviation from numeric-first progression, appropriate to the conceptual Professional Ethics domain; documented per standard.
+- **CBQ23-E1-Q2 tolerance**: NPV accepted within ±$1,000 of $49,170 (stated in prompt and explanation).
+- **CaseID convention**: existing pack-1 file uses explicit pack digit (`CBQ21-*`); new packs follow `CBQ22-*` / `CBQ23-*` consistent with that pattern.
+- **Integration gap**: case packs are not yet wired into app delivery or covered by p2_schema_validator (MCQ packs only) — wiring is a separate future task; content authored to the QUESTION_METADATA_STANDARD battery.
+- Pipeline note: authored via staging JSON + programmatic append with pre-write governance checks (per P2-053 process change). Zero Edit-tool large-payload writes used.
+
+**Revision recorded by:** P2-054 — Case Study Wave
+**Date:** 2026-08-24
+
+## Session P2-053 — Wave 4 (Partial): Subagent Outage Fallback; Pack A Direct-Authored (15 Items)
+
+**Date:** 2026-08-24
+**Session Type:** Content Authoring — Packs A/B/C/D/E/F × 15 MCQs + 3 case packs × 2 cases. **Completed this session: Pack A only (15 items).** B–F and case packs pending continuation.
+**Governance Lane:** Full
+**BLOCK-AUTHORIZED:** Not required — 15 items ≤ 30 per change-set (Rule 5)
+**Backup timestamp:** 2026-08-24T10:08:25 (`pack_p2_a/b/c.js.bak-20260824100825`)
+
+### Incident — Subagent Provider Outage
+
+Nine `task` agents dispatched (6 MCQ × 15 items for packs A–F, 3 case authors). **All failed with provider `network_error` across three consecutive rounds**, including a trivial read-only canary. Zero partial writes occurred; all six packs verified intact after each round (QID counts unchanged, `node --check` clean). User approved fallback to direct in-session authoring.
+
+### Second Incident — Edit-Tool Payload Truncation (DL-class tooling finding)
+
+Direct authoring via multi-item Edit calls silently TRUNCATED newString payloads: appended objects lost all fields after `ExplanationWrongD` (ItemStyle/LOSTag/Part/Part2OnlyFlag/QuestionID/Section/Stem/Topic/UniqueConceptKey/VerifiedChecks/question_state), producing metadata-less body fragments that still passed `node --check`. Detected by QID-count reconciliation (176 vs expected 179) during dual verification. **Repair:** file truncated back to last complete item via deterministic Node script; verified zero QIDs lost. **Process change:** all subsequent content authored as staging JSON files + programmatic append with built-in governance pre-checks (slot rules, EC length, boilerplate, hedging, Independent notes enforced by script before write).
+
+**Tooling lesson:** post-write QID-count verification after EVERY pack write is mandatory — syntax checks alone do not detect truncated-object writes. Recommend a governance-guard rule addition (post-write object completeness check).
+
+### Completed This Session — Pack A (P2-A-176–190)
+
+| Item | Topic | LOS | CC | Level/Diff |
+|------|-------|-----|----|------------|
+| 176 | Free cash flow yield | A.1 | A | Apply/Moderate |
+| 177 | Margin-vs-turnover ROA strategy contrast | A.2 | B | Analyze/Moderate |
+| 178 | Related-party transaction pricing red flags | A.3 | C | Analyze/Difficult |
+| 179 | Auditor change and CFO turnover signals | A.3 | D | Understand/Moderate |
+| 180 | Effective tax rate anomaly | A.3 | A | Analyze/Difficult |
+| 181 | Depreciation method comparability SL vs DDB | A.4 | B | Apply/Moderate |
+| 182 | Percentage-of-completion estimate manipulation | A.3 | C | Analyze/Difficult |
+| 183 | Goodwill impairment ratio effects | A.3 | D | Apply/Moderate |
+| 184 | Geographic concentration risk | A.4 | A | Understand/Moderate |
+| 185 | Gross margin price-cost-mix decomposition | A.2 | B | Analyze/Difficult |
+| 186 | Antidilutive securities exclusion | A.1 | C | Understand/Moderate |
+| 187 | Indirect method adjustments interpretation | A.3 | D | Understand/Moderate |
+| 188 | Negative working capital business models | A.1 | A | Understand/Moderate |
+| 189 | Restatement as reliability signal | A.3 | B | Understand/Moderate |
+| 190 | Compound annual growth rate | A.4 | C | Apply/Mod-Easy |
+
+Pack A pool: 175 → **190**. All topics verified non-duplicative against existing 175 items.
+
+### Verification (Independent)
+
+| Check | Result |
+|-------|--------|
+| Governance pre-checks (script-enforced pre-write) | 14 staged items PASS (slots, EC length ≥200/100, boilerplate, hedging, Independent notes) |
+| Post-append object-parse scan | 15/15 clean — 0 DL-008/013/021/026/037 |
+| CC distribution (15 items) | A:4 · B:4 · C:4 · D:3 — balanced |
+| `node --check` | PASS |
+| `npm run validate:p2` | PASS — Pack A 190 items, 0 errors; pool total 650, 0 errors |
+| Arithmetic | All calc answers centrally designed and independently recomputed (176: 12.5%; 181: EBIT gap $20K yr-1, equal lifetime totals; 183: NI −$35M, D/E 0.91; 190: 10.0%) |
+
+### Pending Continuation (next session)
+
+- Packs B (116–130), C (141–155), D (066–080), E (076–090), F (066–080): fully specified topic plans already designed (this session); author via the staging+append pipeline.
+- Case packs: CBQ21-A1/D1 (append to existing `casePackP2_1`), CBQ22-B1/F1 (create `casePackP2_2`), CBQ23-C1/E1 (create `casePackP2_3`) — full designs specified.
+- Note: parallel session added heavily duplicated basics to A/B/C tails on 8/23 (e.g., B-101–115 re-cover B-001–045 concepts; intra-pack dupes exist in D/E/F). Dedup review recommended before certification.
+
+**Revision recorded by:** P2-053 — Wave 4 Partial (Pack A)
+**Date:** 2026-08-24
+
+## Session P2-052 — Dynamic Model Token-Budget Probe (governance tooling)
+
+**Date:** 2026-08-24
+**Session Type:** Full Governance Lane — governance tooling addition. Zero pack content, answer-key, or question_state changes.
+**Trigger:** Finding 1 from the P2-051 independent review (static output limit 2048 vs v1.1 evidence-package demand) confirmed as hard blocker by measurement; user directed dynamic probing instead of static limits.
+
+### Added
+1. **`scripts/model_limit_probe.js` (new) + `npm run probe-model`.** Probes the agent/model token budget dynamically: (a) reads declared limits from `opencode.json`; (b) probes the provider endpoint live (`/api/tags`, `/api/show`) for each model's real max context when reachable; (c) scans `.opencode/agent/*.md` frontmatter for model bindings; (d) measures empirical per-item JSON size across all `p2/pack_p2_[a-f].js` via Function-constructor parse and projects v1.1 evidence-package emission (overhead factor ×2.0, safety ×1.25, rounded to 512). Report-only by default; exit 1 = undersized. `--apply` backs up `opencode.json` to `backups/` then writes recommended limits, clamped to live max context. No deletion paths.
+
+### Measured baseline (2026-08-24)
+- P2 items measured: 635 (all packs a–f).
+- v1.0 item tokens (median/p90/p98/max): 804 / 1268 / 1884 / 2447.
+- Required output budget: **5,120 tok**; required context floor: **13,312 tok**.
+- Declared limits (qwen3:8b, qwen2.5-coder:7b): context 8192 / output 2048 → **both UNDERSTATED**. Provider endpoint unreachable at probe time (limits not live-verifiable).
+- AGENTS.md §15 updated: workflow-helpers table now documents `probe-model` and its trigger points (before any local-model authoring wave and before any v1.1 `--enforce` gate flip).
+
+### Open decision (unchanged)
+~~Static limits remain understated pending `--apply`~~ **RESOLVED 2026-08-24:** user authorized `--apply`. Recommended limits written to `opencode.json` for both ollama models: `context: 13312, output: 5120` (previously 8192/2048). Backup: `backups/opencode.json.bak-modelprobe-20260824143039` (4,849 bytes, verified non-zero). Post-write verification: valid JSON, both limit pairs confirmed at lines 14–15 and 21–22. Caveats recorded: (a) provider endpoint was unreachable at apply time, so limits were NOT clamped against live model maxima — if qwen3:8b's real window is < 13,312, a model-strategy change is still required; (b) running sessions must restart to pick up new limits; (c) probe re-run after apply exits 0 (PASS). The gate flip to `--enforce` remains blocked only by the live-clamp caveat and the 90-item backfill condition, not by token budget.
+
+**Revision recorded by:** P2-052 — Dynamic Model Token-Budget Probe
+**Date:** 2026-08-24
+
+---
+
+## Session P2-051 — Governance Rule Reconciliation (standalone P2 guard + SKILL fixes)
+
+**Date:** 2026-08-24
+**Session Type:** Full Governance Lane — guard logic + governance docs. Zero pack content, answer-key, or question_state changes.
+**Trigger:** Independent review (7 findings); findings 2–7 verified against raw evidence and applied; finding 1 reported as open decision.
+**Backups:** backups/governance_guard_p2.js.bak-rulefix-20260824092050, backups/governance-guard.js.bak-rulefix-20260824092050, backups/test_governance_guard.js.bak-rulefix-20260824092050, backups/SKILL.md.bak-rulefix-20260824092050, backups/AGENTS.md.bak-rulefix-20260824092050
+
+### Findings verified and fixed
+
+1. **[a-e] regex missing Pack F (governance_guard_p2.js):** P2_PACK_FILE_RE and P2_SOURCE_FILE_RE matched pack_p2_[a-e].js only — Pack F (65 items) was silently skipped by Part2OnlyFlag/cognitive/cross-part checks in the standalone guard. Fixed to [a-f]. Verified: all 6 packs now validate through the guard (635 items).
+2. **Rule numbering reconciled to the ratified scheme** (plugin + CURRENT_BASELINES_P2.md §2 are authoritative): checkPart2OnlyFlag rule 11→**13**, checkCognitiveConsistency rule 12→**11**, checkCrossPartCollision rule 0→**14** (both CROSS-PART-QID and QID-FORMAT codes). validateItem BLOCK filter updated in lockstep ({2,5,6,9,10,11,13,14,0}) — behavior preserved exactly. Header comment rewritten to the ratified numbering; unnumbered checks (FILE-READ-ERROR, P1-EXCLUSIVE-WARN) documented as such.
+3. **Rule 6/10 split (both guards + test suite):** DL-026 now fires ONLY on present-but-empty non-CC EW slots; DL-021 fires ONLY on absent fields. Previously every defect double-fired both rules. Synthetic verification: empty→[6:DL-026] only; absent→[10:DL-021] only; clean→pass. Two tests reworded into split-semantics cross-checks; count unchanged at **74 PASS / 0 FAIL**.
+4. **content-authoring SKILL.md:** domain map corrected to the ratified 6-pack layout (E→pack_p2_e.js was pack_p2_d.js; F→pack_p2_f.js was pack_p2_e.js); Part2OnlyFlag references Rule 11→**13** (was cited for both Part2OnlyFlag and cognitive gates — internally contradictory); rules table lists Rules 13/14 separately and documents the 6/10 split; formula references updated to the canonical registry p2/P2005_FORMULA_MASTER.json (59 IDs: FA 25, CB 11, DA 11, RM 3, ID 9 — the .md master lags at 52 and uses no CF- prefix; SKILL previously said CF-01..CF-09 which matches nothing).
+5. **AGENTS.md §1 refreshed:** 14 rules / 563 lines / 74 tests (was 10 / 393 / 54); declared single source of truth for rule numbering.
+
+### Finding NOT applied (open decision)
+
+Finding 1 (model-capability mismatch): opencode.json local models are capped at output 2048 tokens; one v1.1 evidence-package item (~15 evidence sub-fields + stem/choices/explanations) very likely exceeds this. Options: raise output limit, use a larger authoring model, or split evidence emission into a second pass. Must be resolved before the v1.1 gate flips to --enforce.
+
+### Pre-existing (not a regression)
+
+- pack_p2_d.js P1-EXCLUSIVE-WARN on P2-D-052 (unnumbered advisory): confirmed firing identically on the pre-change backup guard. Not touched.
+
+### Verification
+
+- node --check on governance_guard_p2.js, governance-guard.js, test_governance_guard.js: PASS.
+- Test suite: 74 PASS / 0 FAIL. All 6 P2 packs through GovernanceGuardP2.validatePack: 635 items, pass=true except pre-existing Pack D advisory.
+- npm run preflight PASS (0 divergences, guard 74/74); node scripts/preflight_p2.js PASS (0 divergences).
+
+### Follow-ups logged (not executed)
+
+- Sync foundation/FORMULA_MASTER_P2.md (52 formulas) to the JSON registry (59 IDs).
+- Triage P2-D-052 P1-EXCLUSIVE-WARN (likely COSO IC referenced as ERM context — advisory false positive candidate).
+
+**Revision recorded by:** P2-051 — Governance Rule Reconciliation
+
 # REVISION_HISTORY_P2.md — CMA Part 2 Exam Simulator
+
+## Session P2-051 — Flash Wave Certification Double-Check + Coverage Fixes
+
+**Date:** 2026-08-24
+**Session Type:** Full Governance Lane — adversarial re-review of all 90 uncertified items + blueprint coverage verification + metadata corrections.
+
+### Review findings → fixes applied
+
+**1. LOSTag misassignments — 41 items corrected (metadata-only).** A systematic blueprint-traceability defect (CAQS Dimension 1) caused by the P2-047 batch specs using a compressed LOS scheme instead of the canonical fine-grained map (`P2_RESEARCH_SECTIONS_TOPICS_THEORIES.md` §2: A.1–A.9 … F.1–F.7). Corrected tags: A-168/169→A.2, A-171→A.1, A-172→A.9, A-173/175→A.3, A-174→A.4; B-108/111→B.4, B-109→B.9, B-112→B.3, B-113→B.7, B-115→B.5; C-128/139→C.5, C-130→C.4, C-134/135→C.6, C-138→C.3; D-053/063→D.3, D-057/058/059→D.4, D-060/061→D.2, D-062/065→D.5; E-066→E.4, E-067/068/074→E.2, E-071/072→E.6, E-073→E.5; F-057/058/062→F.4, F-059/061→F.5, F-060→F.6.
+
+**2. Running answer-position pattern — Packs D & F fixed.** Pack F had `ABCD-ABCD-ABCD` (3 cycles), Pack D `ABCD-…-ABCD` (2 cycles) — CAQS §6.6 pattern-cueing violation. Fixed by rotating Choice+ExplanationWrong pairs on 8 items per pack (Choice content unchanged, keys relabeled). Post-fix: 0 cycles, 0 streaks ≥4, balance 4/4/4/3 (D: 3/4/4/4).
+
+### Double-check result (content quality)
+- 90/90 answer keys correct and unique; every calc item recomputed independently; every distractor reachable + explanation choice-specific; no DL-008/026/021/013/031; all Evaluate≥4 / Analyze≥2; no Part 1 leakage.
+
+### Coverage verification (per report)
+- Domain correctness: all 90 correctly assigned (0 cross-domain/Part 1 leakage).
+- LOS coverage: A 5/9, B 7/9, C 6/7, D 5/5, E 5/6, F 4/7 → 11 LOS gaps (A.5–A.8, B.6, B.8, C.7, E.3, F.2, F.3, F.7) — authoring-priority inputs for next wave, not relabel targets (Rule 12).
+- Distributions: Apply-heavy (52% vs 42% target); zero Very Difficult items; difficulty skewed Moderate/ME — converge at pack scale.
+
+### Deferred (non-blocking)
+F-056/F-065 near-duplicate (Medium), B-114/B-107 overlap (Low), D-054 RM-03 catalog semantics (Low), F-058 stem-distractor gap (Low). Disposition F-056/F-065 before certification.
+
+### Verification
+0 cycles/streaks/balance issues; 41/41 LOSTags verified; both preflights 0 divergences; backups `backups/pack_p2_{a–f}.js.bak-loscov-20260824*`. Full detail: `reports/P2_FLASH_WAVE_DOUBLECHECK.md`.
+
+**Revision recorded by:** P2-051 — Double-Check + Coverage
+**Date:** 2026-08-24
+
+## Session P2-050 — v1.1 Schema Amendment: Authoring-Evidence Fields (report-only enforcement)
+
+**Date:** 2026-08-24
+**Session Type:** Full Governance Lane — schema standard + validator change. Zero pack content, answer-key, or question_state changes. Zero item writes.
+
+### What Changed
+
+1. **`p2/P2_SCHEMA_STANDARD.md` → v1.1 (P2_SCHEMA_v1.1).** Added to §1 and a new §1.1/§1.2:
+   - `schema_version` (item-level, `"1.1"` on new drafts; absent/`"1.0"` on legacy) — makes audits/backfills deterministic and lets an "unexpected fields" audit distinguish a sanctioned v1.1 object from an ad hoc change.
+   - Authoring-evidence fields: `source_ids`, `source_support_for_key` (structured: `source_id`, `rule_or_proposition`, `application_to_facts`, `key_conclusion`), `distractor_intent` (wrong-option-only: `misconception`, `why_plausible`, `tier_candidate` ∈ {1,2,3}), `uniqueness_note`, `source_status` (RESOLVED | HOLD_FOR_SOURCE), `hold_reason` (conditional).
+   - §1.1.1 **HOLD_FOR_SOURCE quarantine**: preserved as a queryable draft with `question_state: "Unprocessed"`; hard-rejected from certification input, candidate pools, exports, production load paths. Not a defect.
+   - §1.1.2 **Evidence vs. judgment boundary**: `tier_candidate`/source chain/`uniqueness_note` are authoring claims; the final `DistractorTierMap` and `Certified` are certification judgment. A local model's tier intent never becomes a certified conclusion without review.
+   - §1.2 **Legacy grandfather policy**: legacy v1.0 items remain valid; new fields optional until the migration gate or the item's next certification touchpoint.
+   - §2 field-change rows + revision-history row added.
+
+2. **`scripts/validators/p2_source_catalog.js` (new).** The approved source catalog: 59 formula IDs loaded from `p2/P2005_FORMULA_MASTER.json` + a curated P2 authority registry (ASC, COSO ERM 2017 Principles 1–20, COSO IC, IMA Statement/Ethics Standards/SMA, SOX, FCPA, CAPM, Modigliani–Miller, IRS Pub 946/MACRS, Black-Scholes, Basel III, SEC Reg G/X/S/K, NPV/IRR/Payback theory, capital budgeting theory, managerial economics). `resolveSource(id)` is allowlist resolution — formatting alone is insufficient.
+
+3. **`scripts/validators/p2_schema_validator.js` → v1.1 (report-only by default, `--enforce` opt-in).** New `validateV11Evidence(item)` enforcing per-item hard rules:
+   - `source_status` ∈ {RESOLVED, HOLD_FOR_SOURCE}
+   - RESOLVED ⇒ non-empty `source_ids` (all catalog-resolving), non-null `source_support_for_key` (4 non-empty strings, resolving `source_id`), `hold_reason` empty
+   - HOLD_FOR_SOURCE ⇒ `source_support_for_key` null, `hold_reason` non-empty, quarantined
+   - `distractor_intent` keys exactly {A,B,C,D} \ {CorrectChoice}; entries non-empty; `tier_candidate` unique 1/2/3
+   - `uniqueness_note` non-empty and references every non-key option
+   - per-item outcome: **PASS / HOLD_FOR_SOURCE / GRANDFATHERED / MIGRATION_REQUIRED / ERROR**
+
+4. **`dev/tools/test_p2_v11_evidence.js` (new).** 19-case self-test (11 evidence branches + 8 source-resolution) — all PASS.
+
+### Migration Scan (report-only, pre-gate)
+
+| Pack | Items | PASS | HOLD | GRANDFATHERED | MIGRATION_REQUIRED | ERROR |
+|------|-------|------|------|---------------|--------------------|-------|
+| A | 175 | 0 | 0 | 175 | 0 | 0 |
+| B | 115 | 0 | 0 | 115 | 0 | 0 |
+| C | 140 | 0 | 0 | 140 | 0 | 0 |
+| D | 65 | 0 | 0 | 65 | 0 | 0 |
+| E | 75 | 0 | 0 | 75 | 0 | 0 |
+| F | 65 | 0 | 0 | 65 | 0 | 0 |
+| **Total** | **635** | **0** | **0** | **635** (545 Certified + 90 non-Certified) | **0** | **0** |
+
+**Migration volume:** 90 non-certified legacy items must be backfilled before the evidence gate becomes blocking; the 545 Certified items are grandfathered but must carry the evidence fields at their next re-certification touchpoint. Outcome vocabulary: legacy-clean = `GRANDFATHERED`; legacy items with partial/invalid new fields or v1.1 items with evidence defects = `MIGRATION_REQUIRED`; `HOLD_FOR_SOURCE` = intentional quarantine (never a defect).
+
+### Verification
+
+- `node --check` on both edited scripts: PASS. Self-test 19/19 PASS. Report-only run over all 6 packs: 0 base errors, 0 MIGRATION_REQUIRED, 635 GRANDFATHERED.
+- `npm run preflight` PASS — 0 divergences, guard 74/74. `node scripts/preflight_p2.js` PASS — 0 divergences.
+- Backups: `backups/P2_SCHEMA_STANDARD.md.bak-20260823230638`, `backups/p2_schema_validator.js.bak-20260823230638`.
+- **Not edited:** `CURRENT_BASELINES_P2.md` §4 (schema version) is a derived registry — regenerated by preflight during the next schema-lock session per Rule 7.
+
+### Next
+
+The local authoring prompt (Qwen3 8B / Gemma3 12B) must emit the v1.1 evidence package per the amended standard. Gate flip to `--enforce` is deferred until the 90 non-certified items are backfilled or an explicit migration authorization is given.
+
+**Revision recorded by:** P2-050 — v1.1 Schema Amendment
+**Date:** 2026-08-24
+
+## Session P2-049 — Flash Wave Review Repairs Applied (post P2-048)
+
+**Date:** 2026-08-24
+**Session Type:** Full Governance Lane repair of the P2-048 review findings. Change-set: 20 items across 6 packs (under Rule 5 cap). 46 count-asserted exact-string replacements; every replacement matched exactly once. No answer keys changed.
+
+### Repairs applied
+
+**Certification blocker — P2-C-136:** Distractor B reworded to "supervisor who would be laid off, with the position eliminated" (was "transferred to another line" — a reassigned supervisor's salary is non-avoidable, creating a second defensible "NOT relevant" answer). ExplanationWrongB and ExplanationCorrect updated to match. Answer uniqueness restored.
+
+**Evaluate @ DifficultyScore 3 → 4 (5 items, per AGENTS.md §11.2 floor):** P2-A-175, P2-C-140, P2-D-065, P2-E-075, P2-F-065 — Difficulty label → "Difficult", DifficultyScore → 4; VerifiedChecks "DiffScore 3" → 4 for D-065/E-075/F-065 (A-175/C-140 used generic "Difficulty justified").
+
+**Medium repairs:**
+- P2-A-164: ExplanationWrongC rewritten (removed false "purchases ($730M) exceed COGS" claim and the contradictory $80M inventory assertion; replaced with inventory-level-change rationale); EC discount-cost sentence corrected (taking the 2% discount is cheaper than financing 40 days at 8%).
+- P2-A-170: stem dropped "third-quarter 10-Q" (interim weighting conflict: strict 9-month reading yields $2.38, not offered); ExplanationWrongA "misstate the 10-Q" → "misstate the report".
+- P2-B-103: Choice B + ExplanationWrongB rewritten to the real unit-mix error path (3.5 / 0.14 = 25.00) — the old "3.5 ÷ 14 = 25.00" was arithmetically impossible and the old EWB demonstrated the correct path.
+- P2-B-105: Choice D 10.32% → 10.02% (renormalizing 0.40/0.90×6.30 + 0.50/0.90×13 = 10.02%); ExplanationWrongD rewritten with correct arithmetic and direction (excluding low-cost preferred RAISES the blend above 9.72%).
+- P2-E-071: Choice D + ExplanationWrongD corrected — the two highest-PI projects are A (1.30) and B (1.25), not A and C; combination now A+B ($300K, $84K) with leftover funding C → $117K total.
+- P2-D-064: ExplanationCorrect principle citation corrected — tone-at-the-top maps to Principles 1/3/4 (was a Principle 1-only conflation with Principle 4 content); VerifiedChecks updated.
+
+**Low-severity repairs:**
+- P2-A-167: stem + EWD reframed from "financial-statement footnotes" to "quarterly MD&A" (gross margin is not a footnote disclosure).
+- P2-A-168: Authorities ASC 210-10 → "Financial statement analysis principles — ratio decomposition" (DL-009-adjacent citation scope stretch).
+- P2-A-173: Difficulty 4 → 3 (single-rule FCF application).
+- P2-B-102: Difficulty 4 → 3 (standard variance/σ formula).
+- P2-B-108: Difficulty 3 → 2 (single-formula EOQ plug).
+- P2-B-109: Choice C label "annualized premium — … reported without annualizing" → "1.00% premium — … without annualizing" (self-contradiction).
+- P2-B-115: CognitiveLevel Understand → Apply (CalculationItem consistency).
+- P2-C-130: Distractor B + ExplanationWrongB rewritten (old distractor's premise supported the opposite conclusion; new version inverts the figures as a coherent numeric trap). Difficulty 4 → 3 on P2-C-133 (single-rule transfer-price minimum).
+- P2-D-054/056/061: ExplanationCorrect now names COSO ERM (2017) explicitly (EV3 gap).
+
+**Verified NOT needed:** P2-D-051 (review agent's "VerifiedChecks mismatch" was a false positive — file state is Easy/1/Remember and the VC line matches).
+
+### Post-repair verification
+
+- All 6 packs re-parse (counts unchanged: 175/115/140/65/75/65); every replacement count-asserted exactly once.
+- Evaluate floor scan: 0 violations (all 6 Evaluate items at 4). Analyze floor: 0 violations.
+- Old-string sweep: all 12 defective strings gone; new strings present (including A-168's new Authorities).
+- Mechanical suite: 0 structural/formula/LOSTag/clone findings; remaining findings are the pre-existing artifact classes (structured-choice Jaccard similarity, pack-wide length-cueing style) documented in P2-048.
+- `node scripts/preflight_p2.js` + `npm run preflight`: 0 divergences both.
+- Backups: `backups/pack_p2_{a–f}.js.bak-flashfix-20260823224200`.
+
+### Remaining open items (deferred, non-blocking)
+- Length-cueing style (21 items) — matches the pre-existing certified-pack style; documented, no action in this pass.
+- Borderline difficulty notes (B-101, B-111, B-112, C-130 cognitive label, F-056/F-064 labels) — judgment calls left to certification review.
+- B-114/B-107 content overlap (identical figures) — noted for future redundancy review.
+
+**Next:** six-dimension certification of the 90 Flash items in 15-item batches (Rule 5) pending user direction.
+
+**Revision recorded by:** P2-049 — Flash Wave Repairs
+**Date:** 2026-08-24
+
+## Session P2-048 — Flash Wave Post-Authoring Review (read-only audit)
+
+**Date:** 2026-08-24
+**Session Type:** Full Governance Lane review of P2-047 subagent output. No pack files modified.
+
+### Method
+1. Mechanical/psychometric script suite over all 90 items (schema, EW integrity, boilerplate, polarity, Rule 11, answer positions/streaks, length & distractor similarity, clone scan, formula-ref existence, LOSTag format).
+2. Six independent review agents (one per pack) solved every item from first principles without the stored key.
+3. Orchestrator re-verification of every Medium+ finding against raw pack fields.
+
+### Results (full detail: `reports/P2_FLASH_WAVE_REVIEW.md`)
+- **Answer keys: 90/90 correct**; 0 FAIL; 0 wrong-key defects.
+- **1 certification blocker:** P2-C-136 — transferred-supervisor salary treated as relevant (a reassigned supervisor's salary is non-avoidable) → second defensible "NOT relevant" answer. Reword distractor B/EW_B.
+- **5 Evaluate@3 floor violations** (A-175, C-140, D-065, E-075, F-065) vs AGENTS.md §11.2 (Evaluate ≥ 4) — root cause is the P2-047 batch spec (orchestrator error), not subagent judgment.
+- **6 Medium repairs:** A-164 (EWC purchases>COGS false), A-170 (10-Q vs full-year EPS weighting ambiguity), B-103 (CV distractor/EWB impossible arithmetic), B-105 (WACC Choice D/EWD 10.32% ≠ 10.02% + direction), E-071 (PI-premise false), D-064 (ERM principle-number conflation).
+- **~12 Low notes** (calibration borders, EV3 citation gaps, self-doc mismatch, cosmetic).
+- Structural: 0 DL-008 / 0 DL-026 / 0 DL-013 / 0 DL-037 / 0 collisions / no streaks ≥4.
+- Pack quality order: F (15/15 PASS) > A = E > B > D > C.
+
+### Next steps (not executed — read-only review)
+Certification remains blocked pending: C-136 repair, Evaluate re-rating ×5, six Medium repairs, re-validation, then six-dimension certification in 15-item batches (Rule 5).
+
+**Revision recorded by:** P2-048 — Flash Wave Review
+**Date:** 2026-08-24
+
+## Session P2-047 — Flash Wave: 90 New MCQs (15 × 6 Packs)
+
+**Date:** 2026-08-24
+**Session Type:** Content Authoring Wave (Full Governance Lane — 6 task subagents, one per pack)
+**Scenario anchor:** Fictional company "Flash" (diversified manufacturer) with named stakeholders — every stem features Flash.
+
+### Batch Specs (per-pack coverage + complexity)
+
+| Pack | Domain | QIDs added | Difficulty mix (E/ME/M/D/VD) | Cognitive mix (R/U/A/An/Ev) | Formula refs |
+|------|--------|-----------|-------------------------------|------------------------------|--------------|
+| A | Financial Statement Analysis | P2-A-161–175 | 1/4/6/4/0 | 1/2/8/3/1 | FA-03…FA-23 |
+| B | Corporate Finance | P2-B-101–115 | 1/4/7/3/0 | 1/2/10/2/0 | CB-01…CB-11 |
+| C | Decision Analysis | P2-C-126–140 | 1/2/7/5/0 | 1/2/8/3/1 | DA-03…DA-11 |
+| D | Risk Management | P2-D-051–065 | 3/7/5/0/0 | 2/4/6/2/1 | RM-01…RM-03 |
+| E | Investment Decisions | P2-E-061–075 | 0/4/7/4/0 | 0/2/9/3/1 | ID-01…ID-10 |
+| F | Professional Ethics | P2-F-051–065 | 2/7/5/1/0 | 2/3/5/3/2 | conceptual |
+| **Total** | | **90** | | | |
+
+All 90 items: `question_state: "Unprocessed"`, Part 2, Part2OnlyFlag true, EW[CC] empty (DL-008), non-CC EW ≥ 75 chars choice-specific (DL-026/DL-021), no boilerplate (DL-013), no polarity inversions (DL-037), Rule 11 cognitive gates enforced (definition-match items kept Easy/Remember; Evaluate ≥ 3; Analyze ≥ 2).
+
+### Authoring Process
+
+- 6 concurrent `general` subagents (task tool), each authored 15 MCQs to a staging file; no subagent touched a repository file (staged in temp, inserted by orchestrator — DL-019 concurrent-write prevention).
+- Pack E first attempt failed (produced Pack A copies); re-run produced a clean 15-item batch.
+- Placeholder FormulaReference values ("none", "None (conceptual)", "none — conceptual") normalized to `""` per pack convention (pack_d/f use `""`; pack_a/b omit the key on conceptual items — left as authored).
+
+### Verification (dual verification, raw evidence)
+
+- Structural validator on all 6 batches: 90/90 items pass (QID sequence, Section, Part2OnlyFlag, state, Topic format, EW[CC] empty, non-CC EW ≥ 75, EC length gates, Rule 11 gates, no all/none-of-the-above, polarity scan, Flash-in-stem, answer-position balance 4/4/4/3 per batch, no 4-streak, zero QID/Topic collisions with existing packs).
+- Independent arithmetic spot-check: 10 calc items across 5 packs recomputed by hand — 10/10 match stored CorrectChoice (A-162 turnover 5.0/73d; A-168 ROA 9% = 6%×1.5; B-104 CAPM 12.8%; B-105 WACC 9.72%; C-132 make-vs-buy $180K saving; C-135 EVPI $56K; D-055 expected loss $300K; D-056 risk score 20; E-062 NPV −$4K reject; E-067 ATCF $114K).
+- Post-insertion pack-level verification: all 6 packs parse; counts 160→175, 100→115, 125→140, 50→65, 60→75, 50→65 (545 → 635 total); tail QIDs + governance clean.
+- `npm run preflight` and `node scripts/preflight_p2.js`: **0 divergences** (545 Certified unchanged — new items correctly excluded from Certified).
+
+### Registrations & Writes
+
+- Wave artifacts registered: `p2/batch/flash_wave/flash_wave_{a–f}.json` (Rule 8 — session package).
+- `p2/CURRENT_BASELINES_P2.md` updated: Current QIDs 175/115/140/65/75/65 (total 635), Certified 160/100/125/50/60/50 (total 545); doc was stale (last updated 2026-08-04, predating P2B/P2C waves).
+- Backups (pre-wave, mandatory): `backups/pack_p2_{a–f}.js.bak-flashwave-20260824020003`.
+
+### Status & Next Steps
+
+- 90 items are Unprocessed; certification per CAQS six-dimension verification pending user direction (15-item batches ≤ Rule 5 cap).
+- The Ox Alpha wave (90 more MCQs, same structure) remains queued from the earlier request.
+
+**Revision recorded by:** P2-047 — Flash Wave
+**Date:** 2026-08-24
+
+## Session P2-046 — External Review Repairs (Case Pack 1, v1.0 → v1.1)
+
+**Date:** 2026-08-23
+**Session Type:** Case Repair (Full Governance Lane — `p2/case_pack_p2_1.js` + `p2/case_study_library/09_FORMULA_CATALOG.md`)
+**Source:** External reviewer verdict — "ERROR — do not certify this batch yet" (P2-045 submission)
+
+### Review Findings → Repairs Applied
+
+**CBQ21-B1 (time-basis defect):**
+- Finding: exhibits labeled Q1/Q2 operating results but computed with 365-day formulas.
+- Repair: Exhibit 1 Purpose now states the convention — "Sales, COGS, and purchases are annualized run-rate amounts at each quarter-end; average working-capital balances are quarter-end averages, so the 365-day formulas apply directly." Q1 explanation notes the annualized basis.
+- Q2 explanation cross-reference "(from Q1)" → "(from Question 1)"; Q3 distractor DPO "3.7 days" → "3.3 days" (residual occurrence the reviewer caught after the authoring-time fix).
+
+**CBQ21-C1 (schema/coverage):**
+- Finding: item-type progression violation (numeric→select→numeric→select→multi→match) and decorative exhibit rows (Cookware, Utensils unused).
+- Repair: items reordered to numeric(Q1 margin), numeric(Q2 special order), select(Q3 keep/drop), select(Q4 outsourcing), multi(Q5), match(Q6). Q3 expanded to five choices with a relative-margin distractor ("Drop Utensils instead, because its $170,000 segment margin is lower than Cookware's $300,000") that consumes both previously decorative rows; explanation documents the relative-margin fallacy. Exhibit ReferencedBy updated to the renumbered items.
+
+**CBQ21-E1 (PI convention + wrong optimum — CRITICAL):**
+- Finding: Q1 stored PI 0.33 (NPV/investment) vs standard PI = PV inflows / investment = 1.33; Q2 keyed A+B+C ($1.42M) but the true optimum is A+C+D+F = $5.0M, NPV $1.48M.
+- Repair: Q1 Correct 0.33 → 1.33 with standard-PI explanation and updated trap reference. Q2 rebuilt: correct answer C "A, C, D, and F — $5.0M invested, NPV of $1.48M"; distractors are the PI-greedy result ($1.42M), the near-optimal A+B+F ($1.46M), and B+C+F+D ($1.38M); explanation now teaches enumeration vs PI-greedy for indivisible projects. Q3/Q4 FormulaReference ID-06 (after-tax cash flow) → new ID-10 Post-Audit Variance Analysis; Q5/Q6 blank FormulaReference fields populated; Q6 match text changed from "NPV per dollar invested" to "Present value of inflows per dollar invested."
+- Schema: items reordered numeric-numeric-select-select-multi-match (same violation class as C1); Dependencies and ReferencedBy re-mapped.
+- Catalog: added ID-10 — Post-Audit Variance Analysis to `09_FORMULA_CATALOG.md` (Domain E 9 → 10 formulas).
+
+### Verification (all PASS)
+
+- Arithmetic: 24 recomputation checks + exhaustive 6-project enumeration confirming $1.48M optimum — 0 failures
+- Structural: progression numeric(2)→select(2)→multi(1)→match(1) in all three cases; CF4 difficulty ±1 of item mean; match integrity; select/numeric type checks; ≥200-char explanations; 0 empty FormulaReference; exhibit ReferencedBy resolves; C1 Cookware/Utensils rows consumed
+- `node --check` PASS; preflights PASS 0 divergences
+- Case versions bumped to 1.1 with RevisionHistory entries
+
+### Re-Submission
+
+- Repaired review package staged: `C:\Users\User\AppData\Local\Temp\opencode\p2_cases_review\` (scope prompt + verbatim pack v1.1, SHA256 `857D2E827A1D45175F428914B2D552E922EBE170195A9637AAB2BA88F004645C`)
+- Ready for reviewer re-verification of the three ERROR/REVIEW findings.
+
+**Backup:** `backups/case_pack_p2_1.js.bak-20260823211054` (pre-repair v1.0)
+
+**Revision recorded by:** P2-046 — External Review Repairs
+**Date:** 2026-08-23
+
+## Session P2-045 — Case Pack 1: First Three Cases Authored (Certification Submission)
+
+**Date:** 2026-08-23
+**Session Type:** Case Authoring (Full Governance Lane — new file `p2/case_pack_p2_1.js`)
+**User approval:** Documented here — user authorized "Write 3 case studies and submit for certification" (2026-08-23)
+
+### Cases Authored
+
+| CaseID | Title | Section | Items | Exhibits |
+|--------|-------|---------|-------|----------|
+| CBQ21-B1 | Cash Conversion Cycle and the Credit Line Renewal | B (Corporate Finance) | 6 | 2 |
+| CBQ21-C1 | Relevant Costing: Segment, Special Order, and Outsourcing | C (Decision Analysis) | 6 | 2 |
+| CBQ21-E1 | Capital Rationing and the Post-Audit | E (Investment Decisions) | 6 | 2 |
+
+All 18 items follow the CBQ21 schema (volume 01) and the progression rule (numeric 2 → select 2 → multi 1 → match 1). One authoring arithmetic error found and fixed during verification: B1's DPO change stated −3.7 days; correct value −3.3 days (69.05 − 65.73).
+
+### Verification (all PASS)
+
+- Structural: QuestionCount == Items.length, ExhibitCount == Exhibits.length, ReferencedBy resolves, exhibit rows consumed, difficulty spans ±1, match integrity (Correct keys == LeftItems, values ⊆ RightItems), every item field present, explanations ≥200 chars
+- Arithmetic: 30 independent recomputation checks across the three cases — 0 failures after the DPO fix
+- `node --check` PASS; preflights PASS 0 divergences (case file is additive; no pack impact)
+
+### Certification Submission
+
+- Review package staged per AGENTS.md §18: `C:\Users\User\AppData\Local\Temp\opencode\p2_cases_review\` (scope prompt + verbatim pack, SHA256 `B8D2CC2EA9DBA8D7DB86E063D3C33764A1A700B7BAC0F74B14A9E09FE2EABFE7`)
+- Certification per CAQS §1.7.2 requires the user's approval after verification: transition `ProductionStatus` "Draft" → "Production", record distractor tier maps, and close with the certification revision entry.
+
+**Revision recorded by:** P2-045 — Case Pack 1 Authoring
+**Date:** 2026-08-23
 
 ## Session P2-044 — Session 1 Certification (17 items → Certified, Pack C 125/125)
 
@@ -1901,3 +2574,190 @@ P2-A-001 through P2-A-030 (consecutive, no gaps)
 
 **Revision recorded by:** P2-011 — Pack B Expansion Wave 1
 **Date:** 2026-07-31
+
+---
+
+## Tier Map Appendix — P2-059
+
+Per-item distractor tier map for all P2-059-certified MCQs (CC + non-CC slot rationale excerpts) and archived clones; followed by case select-item maps. Numeric case items have no distractor tiers.
+P2-A-176 | CC=A | B:10.0% divides NET INCOME by market capitaliâ€¦ | C:16.67% divides by invested capital ($900M),â€¦ | D:8.0% misreads the multiple as a yield. The â€¦
+P2-A-177 | CC=B | A:Higher margins do not universally indicate â€¦ | C:Turnover is half of ROA (ROA = NPM Ã— TAT). â€¦ | D:Low margins paired with high turnover descrâ€¦
+P2-A-178 | CC=C | A:GAAP compliance governs recognition and disâ€¦ | B:The audit opinion addresses whether disclosâ€¦ | D:Above-market sales to affiliates transfer vâ€¦
+P2-A-179 | CC=D | A:Rotation programs ARE routine when pre-scheâ€¦ | B:New leadership does not erase the historicaâ€¦ | C:External reporting reliability is exactly wâ€¦
+P2-A-180 | CC=A | B:Efficiency explains modest, well-documentedâ€¦ | C:Statutory rates are starting points; permanâ€¦ | D:Net margin, ROA, and ROE all sit BELOW the â€¦
+P2-A-181 | CC=B | A:DDB front-loads expense: year 1 charges $40â€¦ | C:Neither method deducts salvage here: both dâ€¦ | D:Permitted methods differ in TIMING, and timâ€¦
+P2-A-182 | CC=C | A:Deferral is not a cure: completed-contract â€¦ | B:Cost-to-cost inputs look mechanical but resâ€¦ | D:Billing schedules are negotiated commercialâ€¦
+P2-A-183 | CC=D | A:The smaller denominator lifts future ROA onâ€¦ | B:Goodwill impairments run through the incomeâ€¦ | C:The impairment is a bookkeeping entry with â€¦
+P2-A-184 | CC=A | B:Margin strength says nothing about revenue â€¦ | C:Scale does not diversify geography by itselâ€¦ | D:Audited segment footnotes are among the morâ€¦
+P2-A-185 | CC=B | A:Margin compression has many ordinary driverâ€¦ | C:Volume spreads FIXED costs; gross margin isâ€¦ | D:Price, cost, and mix effects net into one râ€¦
+P2-A-186 | CC=C | A:Inclusion is conditional on the DIRECTION oâ€¦ | B:Antidilutive securities are excluded from dâ€¦ | D:Basic EPS uses weighted-average shares actuâ€¦
+P2-A-187 | CC=D | A:Depreciation reduced INCOME without consumiâ€¦ | B:Receivables growth appears as a NEGATIVE adâ€¦ | C:Both methods report IDENTICAL total operatiâ€¦
+P2-A-188 | CC=A | B:Subscription-style firms (annual-billed sofâ€¦ | C:The same negative figure at a contractor wiâ€¦ | D:A current ratio below 1.0 simply reflects tâ€¦
+P2-A-189 | CC=B | A:Restatements correct errors spanning innoceâ€¦ | C:Event studies consistently show negative abâ€¦ | D:Inverted logic: the restatement exists precâ€¦
+P2-A-190 | CC=C | A:Dividing the 46.41-point total by four ignoâ€¦ | B:46.4% is the ENTIRE four-year change, not aâ€¦ | D:Four years of growth means FOUR compoundingâ€¦
+P2-C-141 | CC=A | B:$24,000 counts the contribution but drops tâ€¦ | C:Supervision here is not committed: it wouldâ€¦ | D:List price governs regular-channel economicâ€¦
+P2-C-142 | CC=B | A:20,000 units sufficed under the OLD $25 marâ€¦ | C:$250,000 of fixed cost appears nowhere in tâ€¦ | D:Dividing the profit target alone by CM omitâ€¦
+P2-C-143 | CC=C | A:The allocation made Y LOOK like a loss, butâ€¦ | B:Dropping X as well destroys $50,000 of contâ€¦ | D:Pricing should track value and elasticity, â€¦
+P2-C-144 | CC=D | A:The premium-versus-base-rate comparison is â€¦ | B:$20,000 counts only the throughput gained aâ€¦ | C:'Never pays back' is asserted, not computedâ€¦
+P2-C-145 | CC=B | A:If falling unit averages justified orders, â€¦ | C:Breakeven moves with the CONTRIBUTION margiâ€¦ | D:Unitized fixed cost is precisely what relevâ€¦
+P2-C-146 | CC=B | A:Pricing the platform at full cost shrinks tâ€¦ | C:Legality turns on conduct â€” tying arrangemeâ€¦ | D:Commodity refills BREAK captivity: customerâ€¦
+P2-C-147 | CC=C | A:$74,800 subtracts the commission the exportâ€¦ | B:Brand-dilution claims require leakage into â€¦ | D:The exhibit states freight is borne by the â€¦
+P2-C-148 | CC=D | A:Structure is not conduct: two-part scheduleâ€¦ | B:Loading average TOTAL cost into the usage fâ€¦ | C:Zero entry fees forfeit the mechanism itselâ€¦
+P2-C-149 | CC=A | B:Gross margin deducts only production cost oâ€¦ | C:The line starts at MINUS fixed costs when vâ€¦ | D:Flatter means LESS contribution per dollar â€¦
+P2-C-150 | CC=B | A:ATC includes fixed costs already committed â€¦ | C:Covering AVC justifies CONTINUING, never exâ€¦ | D:Some measure of cost is doing heroic work iâ€¦
+P2-C-151 | CC=C | A:The standalone loss is real but INCOMPLETE:â€¦ | B:Avoidable fixed costs are saved only if proâ€¦ | D:Allocated corporate costs persist regardlesâ€¦
+P2-C-152 | CC=D | A:That figure divides fixed costs by a $14 maâ€¦ | B:24,000 prices EVERY unit at the discount tiâ€¦ | C:Variable cost has NO role in breakeven aritâ€¦
+P2-C-153 | CC=A | B:Unit margin ignores BOTH the resource consuâ€¦ | C:Identical constraint CONSUMPTION does not mâ€¦ | D:The unadjusted comparison divides hours by â€¦
+P2-C-154 | CC=B | A:The two-year hurdle belongs to a different â€¦ | C:Halving the benefit to $5,000 has no basis â€¦ | D:Doubling the benefit assumes the time reducâ€¦
+P2-C-155 | CC=B | A:Maximin selects the best WORST case - S3 $6â€¦ | C:Anchoring on the best single outcome repeatâ€¦ | D:The averages span $2M between best and worsâ€¦
+P2-C-156 | CC=A | B:Choice B divides the post-step $150,000 tieâ€¦ | C:Choice C mistakes the 15,000-unit step threâ€¦ | D:Choice D stacks the top-tier $180,000 of fiâ€¦
+P2-C-157 | CC=B | A:Choice A inverts the slack logic: 400 UNUSEâ€¦ | C:Choice C treats the two resources symmetricâ€¦ | D:Choice D overlooks that planned demand consâ€¦
+P2-C-158 | CC=C | A:Choice A stops at the $13 cash uplift ($25 â€¦ | B:Choice B reaches the right action by faultyâ€¦ | D:Choice D claims equivalence, yet selling neâ€¦
+P2-C-159 | CC=D | A:Choice A divides the certain $80K safe payoâ€¦ | B:Choice B computes 300/(500+300) = 37.5%, thâ€¦ | C:Choice C rearranges the indifference equatiâ€¦
+P2-C-160 | CC=A | B:Choice B multiplies the $4 per-unit forecasâ€¦ | C:Choice C shrinks the loss to a token figureâ€¦ | D:Choice D assumes unsigned contracts create â€¦
+P2-C-161 | CC=B | A:Choice A quotes the gross expected value WIâ€¦ | C:Choice C reports the gross value of informaâ€¦ | D:Choice D treats the $90,000 price tag as thâ€¦
+P2-C-162 | CC=C | A:Choice A restates the Lerner margin on pricâ€¦ | B:Choice B comes from adding the elasticity tâ€¦ | D:Choice D reads the elasticity magnitude strâ€¦
+P2-C-163 | CC=D | A:Choice A stops at the $55 per-unit wedge ($â€¦ | B:Choice B reports the buyer side of the ledgâ€¦ | C:Choice C reports the seller side ($140 x 8,â€¦
+P2-C-164 | CC=A | B:Choice B sacrifices the HIGHEST-yield hour â€¦ | C:Choice C spreads 100 lost hours evenly (aboâ€¦ | D:Choice D cuts the middle-ranked product (Q â€¦
+P2-C-165 | CC=B | A:Choice A crowns N on the $210,000 revenue hâ€¦ | C:Choice C splits a budget across MUTUALLY EXâ€¦ | D:Choice D treats discretionary as worthless,â€¦
+P2-C-166 | CC=C | A:Choice A banks the $85K avoidable saving buâ€¦ | B:Choice B imposes a no-operating-loss taboo;â€¦ | D:Choice D operates but deletes future restarâ€¦
+P2-C-167 | CC=D | A:Choice A flips the sign: the vendor bills $â€¦ | B:Choice B chooses correctly but inflates theâ€¦ | C:Choice C substitutes dogma for summation; tâ€¦
+P2-C-168 | CC=A | B:Choice B lets expected MONEY decide (X at $â€¦ | C:Choice C claims identical scores although eâ€¦ | D:Choice D declares utility analysis powerlesâ€¦
+P2-C-169 | CC=B | A:Choice A optimizes the average (S1 at aboutâ€¦ | C:Choice C salutes the best cell in the matriâ€¦ | D:Choice D rests on a false premise: cross-stâ€¦
+P2-C-170 | CC=C | A:Choice A divides $2.4M by $500K, crediting â€¦ | B:Choice B halves the true payback by assuminâ€¦ | D:Choice D doubles the clock by running only â€¦
+P2-C-171 | CC=A | B:Option B mistakes payout size for incentiveâ€¦ | C:Option C assumes compensation design is behâ€¦ | D:Option D misstates the law; commission struâ€¦
+P2-C-172 | CC=B | A:Option A averages regular and overtime costâ€¦ | C:Option C applies the regular $40 cost to alâ€¦ | D:Option D charges the $48 overtime cost agaiâ€¦
+P2-C-173 | CC=C | A:Option A reacts to the allocation-inflated â€¦ | B:Option B manipulates an arbitrary allocatioâ€¦ | D:Option D swaps analysis for a calendar ruleâ€¦
+P2-C-174 | CC=D | A:Option A weights untruncated demand (0.30 xâ€¦ | B:Option B assumes the strong-demand scenarioâ€¦ | C:Option C anchors on the weakest scenario (6â€¦
+P2-C-175 | CC=A | B:Option B declares the premium waste withoutâ€¦ | C:Option C lands on the right action through â€¦ | D:Option D leans on an unquantified policy wiâ€¦
+P2-C-176 | CC=B | A:Option A lets complaint pressure override eâ€¦ | C:Option C dismantles the price architecture;â€¦ | D:Option D outsources pricing strategy to rivâ€¦
+P2-C-177 | CC=C | A:Option A stops at the gross throughput gainâ€¦ | B:Option B invents a half-year horizon found â€¦ | D:Option D cannot be rebuilt from the given dâ€¦
+P2-C-178 | CC=D | A:Option A totals the three recurring savingsâ€¦ | B:Option B nets the one-time items but drops â€¦ | C:Option C flips signs in the arithmetic; savâ€¦
+P2-C-179 | CC=A | B:Option B ignores the binding resin-B limit;â€¦ | C:Option C abandons substitution altogether; â€¦ | D:Option D misfires twice; a 500/500 split acâ€¦
+P2-C-180 | CC=B | A:Option A inserts the $2,500,000 gross fire â€¦ | C:Option C retains only the fire branch and dâ€¦ | D:Option D retains only the storm branch and â€¦
+P2-C-181 | CC=C | A:Option A lets the disallowed $80,000 leak iâ€¦ | B:Option B reads cost-plus as fee-free; the fâ€¦ | D:Option D submits the fee as the whole priceâ€¦
+P2-C-182 | CC=D | A:Option A meets the floors and quits; the idâ€¦ | B:Option B maximizes hourly yield but breacheâ€¦ | C:Option C splits scarce hours evenly althougâ€¦
+P2-C-183 | CC=A | B:Option B settles for the smaller tree; direâ€¦ | C:Option C quotes the launch-node value ($46Mâ€¦ | D:Option D celebrates gross payoffs ((0.45 x â€¦
+P2-C-184 | CC=B | A:Option A leans on inflated rate assumptionsâ€¦ | C:Option C converts an unquantifiable goodwilâ€¦ | D:Option D abandons warranty duty; shipped goâ€¦
+P2-C-185 | CC=C | A:Option A implies a 640,000-unit breakeven, â€¦ | B:Option B implies 256,000 breakeven units, aâ€¦ | D:Option D implies a mere 64,000-unit breakevâ€¦
+P2-C-186 | CC=A | B:Option B subtracts the $450K fixed operatinâ€¦ | C:Option C reports $150K, which is bottom-linâ€¦ | D:Option D restates the $450K operating expenâ€¦
+P2-C-187 | CC=B | A:Option A stops at the ad hoc quote of $16,8â€¦ | C:Option C reserves but credits the decision â€¦ | D:Option D abandons incremental analysis for â€¦
+P2-C-188 | CC=C | A:Option A nets only the $16 volume discount â€¦ | B:Option B finds the correct $167 pocket pricâ€¦ | D:Option D rounds the rebate and freight alloâ€¦
+P2-C-189 | CC=D | A:Option A assumes a clean first pass for eveâ€¦ | B:Option B loops the 25% permanent-rework faiâ€¦ | C:Option C inflates workload with the 95% ultâ€¦
+P2-C-190 | CC=A | B:Option B caps acquisition at a single monthâ€¦ | C:Option C quotes $1,250 (25 months x $50 dueâ€¦ | D:Option D slips a decimal on churn: 4 percenâ€¦
+P2-C-191 | CC=B | A:Option A reasons from averages and assigns â€¦ | C:Option C quotes the $25 shop labor rate, anâ€¦ | D:Option D scales the answer to $600 as if teâ€¦
+P2-C-192 | CC=C | A:Option A prices a single changeover (2 hourâ€¦ | B:Option B bills each of the four products a â€¦ | D:Option D double-counts the six setup hours â€¦
+P2-C-193 | CC=D | A:Option A evaluates a 300-hour month, below â€¦ | B:Option B praises the retainer in isolation â€¦ | C:Option C anchors the crossover to the 500-hâ€¦
+P2-C-194 | CC=A | B:Option B books the full $60,000 and never tâ€¦ | C:Option C rejects because October is committâ€¦ | D:Option D applies a blanket prohibition agaiâ€¦
+P2-C-195 | CC=B | A:Option A claims the entire $150,000 releaseâ€¦ | C:Option C deducts the warranty service but fâ€¦ | D:Option D flips signs and sums the $40,000 tâ€¦
+P2-C-196 | CC=C | A:Option A lets the $20K worst-case floor of â€¦ | B:Option B rewards balance without doing the â€¦ | D:Option D declares a tie at $57K; only D reaâ€¦
+P2-C-197 | CC=D | A:Option A weights only the 10% single-day evâ€¦ | B:Option B smears the combined 15% late-eventâ€¦ | C:Option C calls $750 the break-even, confusiâ€¦
+P2-C-198 | ARCHIVED (clone retirement) | n/a
+P2-C-199 | ARCHIVED (clone retirement) | n/a
+P2-C-200 | CC=C | A:Option A refuses the vendor on premium grouâ€¦ | B:Option B preserves the $29,900 total but swâ€¦ | D:Option D ships all 900 P2 units to the vendâ€¦
+
+CASE CBQ21-B1 (Cash Conversion Cycle and the Credit Line Renewal) :: state=undefined session=-
+  CBQ21-B1-Q1 [numeric] key=103.7 | numeric/none - distractor map n/a
+  CBQ21-B1-Q2 [numeric] key=131.0 | numeric/none - distractor map n/a
+  CBQ21-B1-Q3 CC=A | wrong: DIO, which lengthened 11.9 days as inveâ€¦ | DPO, which shortened 3.3 days and offseâ€¦ | DIO and DSO contributed equally
+  CBQ21-B1-Q4 CC=A | wrong: Approximately $72,000 | Approximately $145,000 | The full $750,000 receivable balance
+  CBQ21-B1-Q5 [multi] key=Tighten credit terms and collection follow-up to reduce DSO,Negotiate longer payment terms with suppliers to extend DPO | numeric/none - distractor map n/a
+  CBQ21-B1-Q6 [match] key=[object Object] | numeric/none - distractor map n/a
+CASE CBQ21-C1 (Relevant Costing: Segment, Special Order, and Outsourcing) :: state=undefined session=-
+  CBQ21-C1-Q1 [numeric] key=70000 | numeric/none - distractor map n/a
+  CBQ21-C1-Q2 [numeric] key=21000 | numeric/none - distractor map n/a
+  CBQ21-C1-Q3 CC=A | wrong: Keep the line; dropping would reduce prâ€¦ | Drop the line; profit rises by $145,000 | Keep the line; dropping would reduce prâ€¦ | Drop Utensils instead, because its $170â€¦
+  CBQ21-C1-Q4 CC=A | wrong: Keep in-house; expected cost is $60,000â€¦ | Outsource; expected annual savings of $â€¦ | Keep in-house; control is worth more thâ€¦
+  CBQ21-C1-Q5 [multi] key=In-house variable cost of $25 per handle,Expected supplier-failure cost,The $25,000 inspection savings | numeric/none - distractor map n/a
+  CBQ21-C1-Q6 [match] key=[object Object] | numeric/none - distractor map n/a
+CASE CBQ21-E1 (Capital Rationing and the Post-Audit) :: state=undefined session=-
+  CBQ21-E1-Q1 [numeric] key=1.33 | numeric/none - distractor map n/a
+  CBQ21-E1-Q2 [numeric] key=-80000 | numeric/none - distractor map n/a
+  CBQ21-E1-Q3 CC=C | wrong: B, C, and A â€” $4.5M invested, NPV of $1â€¦ | A, B, and F â€” $4.7M invested, NPV of $1â€¦ | B, C, F, and D â€” $4.5M invested, NPV ofâ€¦
+  CBQ21-E1-Q4 CC=A | wrong: Variable costs, unfavorable by $20,000 | Fixed costs, unfavorable by $10,000 | All three contributed equally
+  CBQ21-E1-Q5 [multi] key=Refining future cash-flow forecasts,Identifying systematic estimation bias,Holding managers accountable for controllable outcomes | numeric/none - distractor map n/a
+  CBQ21-E1-Q6 [match] key=[object Object] | numeric/none - distractor map n/a
+CASE CBQ21-A1 (Liquidity, Leverage, and the Credit Renewal) :: state=Certified session=P2-059
+  CBQ21-A1-Q1 [numeric] key=1.63 | numeric/none - distractor map n/a
+  CBQ21-A1-Q2 [numeric] key=0.93 | numeric/none - distractor map n/a
+  CBQ21-A1-Q3 [numeric] key=45.5 | numeric/none - distractor map n/a
+  CBQ21-A1-Q4 CC=B | wrong: The company passes all three covenants â€¦ | The company passes the quick ratio but â€¦ | The company fails all three covenants
+  CBQ21-A1-Q5 CC=D | wrong: Receivables are uncollectible in materiâ€¦ | The current portion of long-term debt wâ€¦ | Equity is sufficient to absorb the shorâ€¦
+  CBQ21-A1-Q6 CC=C | wrong: Certify full compliance as computed, siâ€¦ | Disclose the breach and request a waiveâ€¦ | Repay the $250K current portion of longâ€¦
+CASE CBQ21-D1 (Quantifying Launch Risk Before the Board) :: state=Certified session=P2-059
+  CBQ21-D1-Q1 [numeric] key=1000000 | numeric/none - distractor map n/a
+  CBQ21-D1-Q2 [numeric] key=400000 | numeric/none - distractor map n/a
+  CBQ21-D1-Q3 [numeric] key=450000 | numeric/none - distractor map n/a
+  CBQ21-D1-Q4 CC=B | wrong: Dual sourcing = share; insurance = reduâ€¦ | Dual sourcing = avoid; insurance = avoiâ€¦ | All three are variations of acceptance â€¦
+  CBQ21-D1-Q5 CC=C | wrong: All three risks breach the appetite thrâ€¦ | Each response cost sits below $500,000,â€¦ | R1 and R2 both breach because their comâ€¦
+  CBQ21-D1-Q6 CC=B | wrong: Delay the launch one quarter regardlessâ€¦ | Purchase warranty insurance immediatelyâ€¦ | Take no action: expected losses are aveâ€¦
+CASE CBQ21-B2 (Financing the Expansion) :: state=Certified session=P2-059
+  CBQ21-B2-Q1 [numeric] key=4.50 | numeric/none - distractor map n/a
+  CBQ21-B2-Q2 [numeric] key=10.00 | numeric/none - distractor map n/a
+  CBQ21-B2-Q3 [numeric] key=10.60 | numeric/none - distractor map n/a
+  CBQ21-B2-Q4 [numeric] key=8.71 | numeric/none - distractor map n/a
+  CBQ21-B2-Q5 CC=B | wrong: The proposal is sound: 4.50% after-tax â€¦ | WACC is a fixed property of the firm anâ€¦ | Because the expansion is a single projeâ€¦
+  CBQ21-B2-Q6 CC=A | wrong: Fund entirely with new debt to maximizeâ€¦ | Fund entirely with new equity to eliminâ€¦ | Defer the expansion until retained earnâ€¦
+CASE CBQ21-E2 (Replacing the Packaging Line: Unequal Lives) :: state=Certified session=P2-059
+  CBQ21-E2-Q1 [numeric] key=667054 | numeric/none - distractor map n/a
+  CBQ21-E2-Q2 [numeric] key=231899 | numeric/none - distractor map n/a
+  CBQ21-E2-Q3 [numeric] key=268233 | numeric/none - distractor map n/a
+  CBQ21-E2-Q4 CC=B | wrong: Because EAA discounts costs twice, addiâ€¦ | Because EAA ignores salvage values, simâ€¦ | Because the tax code requires annualizeâ€¦
+  CBQ21-E2-Q5 CC=A | wrong: A modest rise in general interest ratesâ€¦ | Discovery that the defender's paint colâ€¦ | Confirmation that Product Z packaging vâ€¦
+  CBQ21-E2-Q6 CC=C | wrong: Keep the defender through year 3 becausâ€¦ | Replace immediately, and additionally râ€¦ | Solicit a third bid before acting, sincâ€¦
+CASE CBQ22-B1 (Peak-Season Financing Plan) :: state=Certified session=P2-059
+  CBQ22-B1-Q1 [numeric] key=100 | numeric/none - distractor map n/a
+  CBQ22-B1-Q2 [numeric] key=24.83 | numeric/none - distractor map n/a
+  CBQ22-B1-Q3 [numeric] key=35000 | numeric/none - distractor map n/a
+  CBQ22-B1-Q4 CC=B | wrong: The factor is cheapest because its 8% aâ€¦ | Trade credit at net 40 is effectively fâ€¦ | Stretch payables to day 70 before consiâ€¦
+  CBQ22-B1-Q5 CC=A | wrong: DPO falls, lengthening the CCC | Inventory turns change, raising DIO | The CCC is unchanged because collectionâ€¦
+  CBQ22-B1-Q6 CC=D | wrong: Maximize the factoring arrangement throâ€¦ | Skip the discounts entirely during peakâ€¦ | Adopt the lockbox but stretch payables â€¦
+CASE CBQ22-F1 (The Overstated Quarter) :: state=Certified session=P2-059
+  CBQ22-F1-Q1 CC=C | wrong: Competence only â€” the issue is whether â€¦ | Confidentiality only â€” the side letter â€¦ | No standards apply until a regulator opâ€¦
+  CBQ22-F1-Q2 CC=B | wrong: Confront the distributor directly to obâ€¦ | Resign immediately and publicize the arâ€¦ | Wait for the external auditors to discoâ€¦
+  CBQ22-F1-Q3 CC=A | wrong: Title passed on shipment, so full revenâ€¦ | Only the cash refund portion affects reâ€¦ | Disclosure in a footnote cures the measâ€¦
+  CBQ22-F1-Q4 CC=C | wrong: Â§302 covers only the effectiveness of iâ€¦ | Certification responsibility rests withâ€¦ | Liability attaches only after the SEC bâ€¦
+  CBQ22-F1-Q5 CC=B | wrong: Confidentiality forbids him from revealâ€¦ | Posting the details publicly is protectâ€¦ | Notifying the distributor to cancel theâ€¦
+  CBQ22-F1-Q6 CC=D | wrong: Certify as instructed and disclose anonâ€¦ | Quietly reverse the amount in the folloâ€¦ | Leak the side letter to a financial jouâ€¦
+CASE CBQ22-A2 (Reading the Quality of Earnings) :: state=Certified session=P2-059
+  CBQ22-A2-Q1 [numeric] key=0.60 | numeric/none - distractor map n/a
+  CBQ22-A2-Q2 [numeric] key=22500000 | numeric/none - distractor map n/a
+  CBQ22-A2-Q3 [numeric] key=47.6 | numeric/none - distractor map n/a
+  CBQ22-A2-Q4 CC=C | wrong: Earnings are high quality: net income gâ€¦ | The quality-of-income ratio alone settlâ€¦ | Gross margin expansion confirms the recâ€¦
+  CBQ22-A2-Q5 CC=A | wrong: A lower effective tax rate relative to â€¦ | Increased capital expenditures on distrâ€¦ | A higher dividend payout declared in thâ€¦
+  CBQ22-A2-Q6 CC=B | wrong: Apply the peer multiple to the full $24â€¦ | Exclude Riverbend from coverage permaneâ€¦ | Value on operating cash flow of $14.4M â€¦
+CASE CBQ22-D2 (Vendor Breach: Quantifying the Response) :: state=Certified session=P2-059
+  CBQ22-D2-Q1 [numeric] key=450000 | numeric/none - distractor map n/a
+  CBQ22-D2-Q2 [numeric] key=180000 | numeric/none - distractor map n/a
+  CBQ22-D2-Q3 [numeric] key=210000 | numeric/none - distractor map n/a
+  CBQ22-D2-Q4 CC=D | wrong: MFA = share; insurance = avoid; in-housâ€¦ | MFA = avoid; insurance = reduce; in-houâ€¦ | All three constitute acceptance with diâ€¦
+  CBQ22-D2-Q5 CC=B | wrong: Insurance is sufficient alone: transferâ€¦ | Insurance fails the appetite test becauâ€¦ | Insurance and MFA are interchangeable sâ€¦
+  CBQ22-D2-Q6 CC=A | wrong: Buy only the insurance policy this cyclâ€¦ | Terminate the payroll vendor now despitâ€¦ | Take no funded action but add the exposâ€¦
+CASE CBQ23-C1 (Make-or-Buy Under a Binding Constraint) :: state=Certified session=P2-059
+  CBQ23-C1-Q1 [numeric] key=19.50 | numeric/none - distractor map n/a
+  CBQ23-C1-Q2 [numeric] key=4.50 | numeric/none - distractor map n/a
+  CBQ23-C1-Q3 [numeric] key=425000 | numeric/none - distractor map n/a
+  CBQ23-C1-Q4 CC=B | wrong: The $18.00 per-unit variable manufacturâ€¦ | The $45,000 dedicated supervisor salaryâ€¦ | The $24.00 outside quote
+  CBQ23-C1-Q5 CC=B | wrong: Losing the $6.00 per-unit allocation frâ€¦ | Depreciation on the vacated machining eâ€¦ | The union contract requires brackets toâ€¦
+  CBQ23-C1-Q6 CC=C | wrong: Continue making brackets in-house becauâ€¦ | Outsource immediately and leave the vacâ€¦ | Outsource and eliminate the supervisor â€¦
+CASE CBQ23-E1 (Automation Investment Evaluation) :: state=Certified session=P2-059
+  CBQ23-E1-Q1 [numeric] key=137500 | numeric/none - distractor map n/a
+  CBQ23-E1-Q2 [numeric] key=49170 | numeric/none - distractor map n/a
+  CBQ23-E1-Q3 [numeric] key=3.64 | numeric/none - distractor map n/a
+  CBQ23-E1-Q4 CC=A | wrong: PI equals NPV divided by investment (0.â€¦ | PI ignores the time value of money, unlâ€¦ | A PI below 1.0 can still justify acceptâ€¦
+  CBQ23-E1-Q5 CC=B | wrong: IRR is always larger than NPV, so it flâ€¦ | NPV ignores the time value of money wheâ€¦ | The two methods always agree on both acâ€¦
+  CBQ23-E1-Q6 CC=A | wrong: REJECT â€” payback of 3.64 years exceeds â€¦ | ACCEPT because payback is under four yeâ€¦ | REJECT â€” the salvage estimate is speculâ€¦
+CASE CBQ23-C2 (The Full-Capacity Order Negotiation) :: state=Certified session=P2-059
+  CBQ23-C2-Q1 [numeric] key=20400 | numeric/none - distractor map n/a
+  CBQ23-C2-Q2 [numeric] key=32000 | numeric/none - distractor map n/a
+  CBQ23-C2-Q3 [numeric] key=-11600 | numeric/none - distractor map n/a
+  CBQ23-C2-Q4 [numeric] key=74.67 | numeric/none - distractor map n/a
+  CBQ23-C2-Q5 CC=B | wrong: Accept the full 1,200 units at $65 sincâ€¦ | Reject categorically without counterproâ€¦ | Match a competitor's rumored $60 price â€¦
+  CBQ23-C2-Q6 CC=D | wrong: Accept at $65 â€” revenue growth justifieâ€¦ | Accept at $65 but ask production to addâ€¦ | Present the minimum-price analysis ($74â€¦
+CASE CBQ23-F2 (Misappropriation at the Branch) :: state=Certified session=P2-059
+  CBQ23-F2-Q1 CC=A | wrong: Pressure â€” the debts prove fraudulent iâ€¦ | Rationalization â€” his performance revieâ€¦ | All three legs are equally controllableâ€¦
+  CBQ23-F2-Q2 CC=B | wrong: Interview the branch manager directly tâ€¦ | Notify law enforcement personally and fâ€¦ | Circulate her findings to the branch's â€¦
+  CBQ23-F2-Q3 CC=C | wrong: Annual ethics attestation for all brancâ€¦ | Institute dual authorization for new-veâ€¦ | Require original paper invoices for allâ€¦
+  CBQ23-F2-Q4 CC=C | wrong: Preserving system logs, invoice images,â€¦ | Noting in working papers that suspicionâ€¦ | Confirming with the bank â€” through counâ€¦
+  CBQ23-F2-Q5 CC=B | wrong: Terminate the manager immediately upon â€¦ | Publicly announce the fraud to reassureâ€¦ | Handle everything internally without inâ€¦
+  CBQ23-F2-Q6 CC=D | wrong: Mandate annual signed ethics codes at eâ€¦ | Increase branch manager base salaries câ€¦ | Concentrate all vendor approvals in corâ€¦

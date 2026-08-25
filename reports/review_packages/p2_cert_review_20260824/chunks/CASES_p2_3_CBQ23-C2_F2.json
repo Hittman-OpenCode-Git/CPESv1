@@ -1,0 +1,522 @@
+[
+ {
+  "CaseID": "CBQ23-C2",
+  "Title": "The Full-Capacity Order Negotiation",
+  "SectionTags": [
+   "C"
+  ],
+  "BlueprintDomain": "Decision Analysis",
+  "BlueprintObjectives": [
+   "Apply opportunity cost of displaced sales to a special-order decision at full capacity",
+   "Compute the minimum acceptable price for a capacity-consuming order",
+   "Structure a counterproposal that preserves contribution economics"
+  ],
+  "PrimaryCompetency": "Analysis",
+  "EstimatedMinutes": 30,
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ScenarioText": "Hartwell Textiles runs 9,800 of its 10,000-unit monthly capacity, selling to regular customers at $80 with variable cost of $48. A national retailer requests 1,200 units per month for three months at $65 — and wants an answer before month-end. Controller Dana Walsh must quantify the true economics and arm the sales team with a defensible counterposition.",
+  "Industry": "Textile manufacturing",
+  "CompanyType": "Manufacturer",
+  "CompanyName": "Hartwell Textiles",
+  "Stakeholder": "Controller Dana Walsh",
+  "BusinessFunction": "Pricing decisions",
+  "QuestionCount": 6,
+  "ExhibitCount": 2,
+  "ProductionStatus": "Draft",
+  "Version": "1.0",
+  "Tags": [
+   "special order",
+   "opportunity cost",
+   "capacity",
+   "minimum price"
+  ],
+  "CreatedDate": "2026-08-24",
+  "ModifiedDate": "2026-08-24",
+  "Author": "AI",
+  "Confidence": 90,
+  "RevisionHistory": [
+   {
+    "Date": "2026-08-24",
+    "Version": "1.0",
+    "Author": "AI",
+    "Summary": "Initial creation"
+   }
+  ],
+  "question_state": "Unprocessed",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "LearningObjectives": [
+   "Compute incremental margin on a special order ignoring displacement",
+   "Quantify the opportunity cost of displaced regular sales",
+   "Derive the minimum acceptable price covering variable cost plus opportunity cost"
+  ],
+  "Exhibits": [
+   {
+    "ExhibitID": "CBQ23-C2-E1",
+    "CaseID": "CBQ23-C2",
+    "Type": "table",
+    "Title": "Exhibit 1 — Capacity and Regular Economics (Monthly)",
+    "Purpose": "Provides capacity utilization and regular-customer economics needed to identify displaced volume.",
+    "ReferencedBy": [
+     "CBQ23-C2-Q1",
+     "CBQ23-C2-Q2",
+     "CBQ23-C2-Q4"
+    ],
+    "Headers": [
+     "Factor",
+     "Value"
+    ],
+    "Rows": [
+     [
+      "Monthly capacity",
+      "10,000 units"
+     ],
+     [
+      "Current production (regular customers)",
+      "9,800 units"
+     ],
+     [
+      "Regular selling price",
+      "$80 per unit"
+     ],
+     [
+      "Variable cost per unit",
+      "$48 per unit"
+     ]
+    ],
+    "DataFormat": "USD; monthly figures",
+    "AccuracyCheck": "Idle capacity = 10,000 - 9,800 = 200 units"
+   },
+   {
+    "ExhibitID": "CBQ23-C2-E2",
+    "CaseID": "CBQ23-C2",
+    "Type": "text",
+    "Title": "Exhibit 2 — Retailer Request",
+    "Purpose": "States the special-order terms under negotiation.",
+    "ReferencedBy": [
+     "CBQ23-C2-Q1",
+     "CBQ23-C2-Q3",
+     "CBQ23-C2-Q5",
+     "CBQ23-C2-Q6"
+    ],
+    "Body": "The retailer requests 1,200 units per month for three consecutive months at $65 per unit, delivered. It positions the price as final: 'we can buy elsewhere.' No commitment beyond the three months is offered."
+   }
+  ],
+  "Items": [
+   {
+    "ItemID": "CBQ23-C2-Q1",
+    "Type": "numeric",
+    "Prompt": "Enter the MONTHLY incremental contribution margin the order would add if idle capacity were unlimited, in dollars.",
+    "Correct": "20400",
+    "Explanation": "Contribution = 1,200 units × ($65 − $48) = $20,400 per month. This is the number the order's champions will quote — and it is genuinely what the order adds IF no regular sales are sacrificed. Whether that condition holds is the entire analytical question.",
+    "Topic": "Special order margin",
+    "Subtopic": "Incremental contribution",
+    "Difficulty": "Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": true,
+    "FormulaReference": "Incremental CM = units x (price - VC)",
+    "CommonTrapReference": "Stopping the analysis at this figure without checking capacity.",
+    "EstimatedMinutes": 4,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "contribution margin"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ23-C2-Q2",
+    "Type": "numeric",
+    "Prompt": "Enter the MONTHLY opportunity cost of the regular sales that must be displaced, in dollars.",
+    "Correct": "32000",
+    "Explanation": "Idle capacity covers only 200 of the 1,200 requested units; the remaining 1,000 displace regular sales. Lost contribution = 1,000 × ($80 − $48) = $32,000 per month. This is REAL economic sacrifice — regular customers pay $80 for exactly the same machine time the order would consume at $65.",
+    "Topic": "Opportunity cost",
+    "Subtopic": "Displaced sales",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": true,
+    "FormulaReference": "Lost CM = displaced units x (regular price - VC)",
+    "CommonTrapReference": "Assuming the whole order fits into the 200-unit idle sliver.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "opportunity cost"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ23-C2-Q3",
+    "Type": "numeric",
+    "Prompt": "Enter the NET monthly effect of accepting the order as offered, in dollars (use a minus sign if negative).",
+    "Correct": "-11600",
+    "Explanation": "Net = incremental contribution − lost regular contribution = $20,400 − $32,000 = −$11,600 per month. Accepting as offered converts $32,000 of $80-sales into $20,400 of $65-sales while consuming identical scarce machine time — a $11,600 monthly step backward dressed as new business.",
+    "Topic": "Special order net effect",
+    "Subtopic": "Full-capacity decision",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": true,
+    "FormulaReference": "Net = incremental CM - lost CM",
+    "CommonTrapReference": "Accepting because price exceeds variable cost at full capacity.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "net effect"
+    ],
+    "Dependencies": [
+     "CBQ23-C2-Q1",
+     "CBQ23-C2-Q2"
+    ]
+   },
+   {
+    "ItemID": "CBQ23-C2-Q4",
+    "Type": "numeric",
+    "Prompt": "Enter the MINIMUM acceptable price per unit for the full 1,200-unit order, rounded to two decimals.",
+    "Correct": "74.67",
+    "Explanation": "The floor must cover variable cost PLUS the opportunity cost spread across every unit ordered: ($48 × 1,200 + $32,000) ÷ 1,200 = ($57,600 + $32,000) ÷ 1,200 = $89,600 ÷ 1,200 = $74.67. At anything below $74.67 Hartwell is literally paying to displace its best customers. Note this exceeds even the midpoint between $48 and $80 — full-capacity orders are expensive to serve.",
+    "Topic": "Minimum acceptable price",
+    "Subtopic": "Opportunity-cost pricing",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": true,
+    "FormulaReference": "Floor = [VC x Q + Lost CM] / Q",
+    "CommonTrapReference": "Quoting variable cost ($48) as the floor when capacity binds.",
+    "EstimatedMinutes": 6,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "minimum price"
+    ],
+    "Dependencies": [
+     "CBQ23-C2-Q2"
+    ]
+   },
+   {
+    "ItemID": "CBQ23-C2-Q5",
+    "Type": "select",
+    "Prompt": "Which counterproposal preserves Hartwell's economics while keeping the relationship alive?",
+    "Correct": "B",
+    "Choices": [
+     "Accept the full 1,200 units at $65 since three months of volume strengthens the retail partnership",
+     "Fulfill only the 200 truly-idle units at any price at or above $48 variable cost, and price any quantity beyond 200 at regular-list economics (or decline that portion) — explaining plainly that peak-season capacity is committed",
+     "Reject categorically without counterproposal, citing policy against below-list orders",
+     "Match a competitor's rumored $60 price to prevent the retailer from switching future volume"
+    ],
+    "Explanation": "The split structure prices each unit at its TRUE opportunity cost: idle units genuinely cost only $48 to serve, so any price above that adds pure contribution, while displaced units consume $80-worth of machine time and cannot be discounted without destroying value. Categorical rejection (C) forfeits the free $200-unit contribution out of pride; matching rumors (D) deepens losses by $15 per unit versus the offer already on the table; blanket acceptance (A) institutionalizes the −$11,600 monthly leak.",
+    "Topic": "Counterproposal design",
+    "Subtopic": "Tiered capacity pricing",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Treating all units in an order as having identical opportunity cost.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "counteroffer"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ23-C2-Q6",
+    "Type": "select",
+    "Prompt": "Which recommendation should Dana deliver to the sales VP?",
+    "Correct": "D",
+    "Choices": [
+     "Accept at $65 — revenue growth justifies temporary margin pressure during peak season",
+     "Accept at $65 but ask production to add a weekend shift at premium overtime to protect regular customers",
+     "Present the minimum-price analysis ($74.67) and refuse any discussion below it, ending negotiations",
+     "DECLINE the 1,200 at $65 as structured, present the tiered counter (idle units from $48; displaced units at regular economics), and share the capacity outlook honestly — positioning Hartwell as a disciplined partner rather than a distressed seller"
+    ],
+    "Explanation": "The recommendation executes the arithmetic through the relationship lens: declining the unprofitable structure protects $32,000/month of superior contribution, the tiered counter captures every dollar of genuinely available capacity, and transparent capacity communication converts 'no' into 'here is what works' — preserving the customer for periods when slack returns. Overtime (B) introduces a NEW relevant cost (premium wages) that likely pushes the true floor higher still, not lower. Hard refusal (C) wins the argument and loses the account.",
+    "Topic": "Negotiation recommendation",
+    "Subtopic": "Relationship-preserving refusal",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Framing capacity constraints as inflexibility instead of economics.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "recommendation"
+    ],
+    "Dependencies": []
+   }
+  ]
+ },
+ {
+  "CaseID": "CBQ23-F2",
+  "Title": "Misappropriation at the Branch",
+  "SectionTags": [
+   "F"
+  ],
+  "BlueprintDomain": "Professional Ethics",
+  "BlueprintObjectives": [
+   "Map fraud evidence to the fraud triangle and identify the control-addressable element",
+   "Apply IMA obligations when discovering suspected asset misappropriation",
+   "Design governance and anti-fraud program remediation"
+  ],
+  "PrimaryCompetency": "Judgment",
+  "EstimatedMinutes": 30,
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ScenarioText": "Controller Elena Vasquez of Harborline Distributors discovers that a branch manager appears to have routed roughly $180,000 over two years to a fictitious vendor he controls — fake invoices approved solely by him, paid to an account he opened. The audit committee meets Thursday; the branch manager is scheduled to present his quarterly results. Elena must decide her immediate actions and the governance remediation she will propose.",
+  "Industry": "Wholesale distribution",
+  "CompanyType": "Distributor",
+  "CompanyName": "Harborline Distributors",
+  "Stakeholder": "Controller Elena Vasquez",
+  "BusinessFunction": "Internal control",
+  "QuestionCount": 6,
+  "ExhibitCount": 2,
+  "ProductionStatus": "Draft",
+  "Version": "1.0",
+  "Tags": [
+   "fraud triangle",
+   "asset misappropriation",
+   "vendor fraud",
+   "governance"
+  ],
+  "CreatedDate": "2026-08-24",
+  "ModifiedDate": "2026-08-24",
+  "Author": "AI",
+  "Confidence": 90,
+  "RevisionHistory": [
+   {
+    "Date": "2026-08-24",
+    "Version": "1.0",
+    "Author": "AI",
+    "Summary": "Initial creation"
+   }
+  ],
+  "question_state": "Unprocessed",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "LearningObjectives": [
+   "Decompose fraud facts into pressure, opportunity, and rationalization",
+   "Sequence IMA-compliant actions upon discovery of suspected misappropriation",
+   "Prioritize control remediation addressing the opportunity leg",
+   "Specify investigation governance boundaries for management accountants"
+  ],
+  "Exhibits": [
+   {
+    "ExhibitID": "CBQ23-F2-E1",
+    "CaseID": "CBQ23-F2",
+    "Type": "table",
+    "Title": "Exhibit 1 — Evidence Summary",
+    "Purpose": "Provides the factual pattern Elena has assembled for committee review.",
+    "ReferencedBy": [
+     "CBQ23-F2-Q1",
+     "CBQ23-F2-Q3",
+     "CBQ23-F2-Q4"
+    ],
+    "Headers": [
+     "Finding",
+     "Detail"
+    ],
+    "Rows": [
+     [
+      "Vendor record",
+      "'Northgate Supply' created 26 months ago; address matches branch manager's storage unit; phone matches his mobile"
+     ],
+     [
+      "Invoice pattern",
+      "14 invoices, $8K-$22K, all approved solely by branch manager; no receiving documents; generic service descriptions"
+     ],
+     [
+      "Payments",
+      "All wired to one external account opened same month as vendor setup"
+     ],
+     [
+      "Personal context",
+      "Branch manager recently disclosed significant personal debts in unrelated conversation"
+     ]
+    ]
+   },
+   {
+    "ExhibitID": "CBQ23-F2-E2",
+    "CaseID": "CBQ23-F2",
+    "Type": "text",
+    "Title": "Exhibit 2 — Framework References",
+    "Purpose": "Summarizes the frameworks governing Elena's response.",
+    "ReferencedBy": [
+     "CBQ23-F2-Q2",
+     "CBQ23-F2-Q5",
+     "CBQ23-F2-Q6"
+    ],
+    "Body": "Fraud triangle: pressure (incentive/need), opportunity (control gap), rationalization (justification).\nIMA Statement: escalate suspected misconduct to appropriate authorities within the organization; do not engage in activities discrediting the profession; confidentiality bounds disclosure channels.\nGovernance practice: audit committee directs investigations via counsel and forensic specialists; management preserves evidence; crime/fidelity insurers require prompt notice; regulators or law enforcement engaged by the committee, not individual managers."
+   }
+  ],
+  "Items": [
+   {
+    "ItemID": "CBQ23-F2-Q1",
+    "Type": "select",
+    "Prompt": "Mapped to the fraud triangle, which element does the EVIDENCE most directly expose — and which is the only leg remediation can reliably address?",
+    "Correct": "A",
+    "Choices": [
+     "Opportunity — sole-approval authority over a vendor he controlled; opportunity is the leg that controls and segregation directly remove. Pressure (his disclosed debts) and rationalization (unknowable inner justification) are personal states no internal control eliminates",
+     "Pressure — the debts prove fraudulent intent and should anchor the referral package",
+     "Rationalization — his performance reviews will reveal the justification narrative",
+     "All three legs are equally controllable through policy statements"
+    ],
+    "Explanation": "The exhibits establish HOW the fraud became possible: one person could create a vendor, approve its invoices, and trigger payment — a closed loop of opportunity. Pressure and rationalization matter for understanding the actor but are private mental and personal conditions; anti-fraud architecture targets the OPPORTUNITY leg because that is the only one a control system touches (dual authorization, vendor-master change controls, analytics). Leading with the debt disclosure (B) invites defamation exposure while missing the systemic fix.",
+    "Topic": "Fraud triangle",
+    "Subtopic": "Opportunity mapping",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Building the case on motive while neglecting the control failure that enabled the act.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "fraud triangle"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ23-F2-Q2",
+    "Type": "select",
+    "Prompt": "What are Elena's correct IMMEDIATE actions upon completing her evidence assembly?",
+    "Correct": "B",
+    "Choices": [
+     "Interview the branch manager directly to hear his explanation before escalating",
+     "Secure copies of the evidence, restrict further payments to the vendor, and escalate confidentially to the audit committee chair — who directs any investigation through counsel and forensic specialists — taking care not to alert or confront the manager herself",
+     "Notify law enforcement personally and freeze the branch manager's employment",
+     "Circulate her findings to the branch's senior staff to corroborate details informally"
+    ],
+    "Explanation": "Discovery duties run UPWARD through governed channels: preserve evidence integrity, stop ongoing losses operationally, and hand direction to those empowered to investigate — the audit committee acting through counsel. Direct confrontation (A) tips the suspect, contaminates testimony, and exceeds a controller's role; self-directed law-enforcement contact and employment action (C) belong to the committee after legal advice; informal circulation (D) spreads confidential allegations without privilege protection.",
+    "Topic": "Discovery response",
+    "Subtopic": "Escalation discipline",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Playing detective — interviewing suspects and broadcasting findings before governance engages.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "escalation"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ23-F2-Q3",
+    "Type": "select",
+    "Prompt": "Which REMEDIATION should Elena propose as the highest-priority control fix?",
+    "Correct": "C",
+    "Choices": [
+     "Annual ethics attestation for all branch staff",
+     "Institute dual authorization for new-vendor master-data creation plus system-enforced separation of vendor setup from invoice approval, supplemented by periodic data-analytics matching of vendor addresses, banking details, and employee records",
+     "Raise the branch manager's compensation to reduce financial pressure",
+     "Require original paper invoices for all purchases above $5,000"
+    ],
+    "Explanation": "The scheme lived entirely inside ONE broken control point: unchecked vendor-master authority combined with single-signature approval. Closing that loop — dual authorization on master-data changes, enforced segregation between setup and approval, and analytics screening vendor records against employee data (addresses, bank accounts, phones) — removes the exact mechanism used. Attestations (A) and compensation (B) target pressure and culture, useful but indirect; paper invoices (D) add paperwork without breaking the approval monopoly that actually failed.",
+    "Topic": "Control remediation",
+    "Subtopic": "Vendor master controls",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Proposing cultural remedies where a structural control gap did the damage.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "controls",
+     "remediation"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ23-F2-Q4",
+    "Type": "select",
+    "Prompt": "Which action would VIOLATE proper investigation boundaries if Elena took it now?",
+    "Correct": "C",
+    "Choices": [
+     "Preserving system logs, invoice images, and wire records under restricted access",
+     "Noting in working papers that suspicion is unresolved and labels remain provisional",
+     "Conducting a covert forensic interview of the branch manager herself to 'get his side on record' before Thursday",
+     "Confirming with the bank — through counsel once engaged — the beneficial owner of the external account"
+    ],
+    "Explanation": "Forensic interviews belong to trained investigators operating under counsel's direction and legal privilege; a controller confronting the suspect risks tipping him off, tainting admissions, and creating liability — precisely why Exhibit 2 assigns investigation direction to the committee. Evidence preservation (A) and provisional language (B) are model practice, and beneficial-owner verification (D) is investigative work properly executed THROUGH counsel, not personally.",
+    "Topic": "Investigation boundaries",
+    "Subtopic": "Role limits",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Crossing from evidence custodian into amateur investigator.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "investigation"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ23-F2-Q5",
+    "Type": "select",
+    "Prompt": "Which committee-level response package is complete and correctly sequenced?",
+    "Correct": "B",
+    "Choices": [
+     "Terminate the manager immediately upon Elena's verbal summary, then investigate afterward if funds are unrecovered",
+     "Engage forensic specialists and counsel through the audit committee; issue litigation-hold/evidence-preservation notices; place payment blocks; notify the crime/fidelity carrier within policy deadlines; assess whether any filed statements require correction; decide law-enforcement referral on counsel's advice",
+     "Publicly announce the fraud to reassure employees, then determine the facts",
+     "Handle everything internally without insurer notice to protect renewal premiums"
+    ],
+    "Explanation": "Governed response runs specialist-first and deadline-aware: counsel preserves privilege and steers the investigation; preservation notices prevent spoliation; payment blocks stop ongoing loss; carriers can DENY claims for late notice, making timely insurer notification a cash recovery issue; financial-statement impact assessment protects reporting integrity; and referral decisions carry legal consequences best made on advice. Terminate-first (A) burns evidence and due process; publicity-before-facts (C) multiplies liability; premium-driven silence (D) trades recoverable funds for optics.",
+    "Topic": "Governance response",
+    "Subtopic": "Committee sequencing",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Missing insurer notice deadlines that forfeit otherwise valid recovery.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "governance",
+     "response"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ23-F2-Q6",
+    "Type": "select",
+    "Prompt": "Which ANTI-FRAUD PROGRAM design best prevents recurrence network-wide?",
+    "Correct": "D",
+    "Choices": [
+     "Mandate annual signed ethics codes at every location and declare the program complete",
+     "Increase branch manager base salaries company-wide to reduce financial pressure",
+     "Concentrate all vendor approvals in corporate headquarters with no branch input, maximizing central control",
+     "A layered program: enforced segregation of vendor-setup and payment approval, continuous data-analytics matching of vendors to employee data, a monitored anonymous hotline with non-retaliation guarantees, tone-at-top messaging backed by visible consequence management, and periodic fraud-risk assessments refreshed as processes change"
+    ],
+    "Explanation": "Sustainable prevention is LAYERED because the triangle has three legs and schemes adapt: structural controls kill today's opportunity, analytics catch tomorrow's variant, hotlines surface what systems miss (consistently the top detection method), tone determines whether people use any of it, and risk assessments keep the program current as the business changes. Codes alone (A) document intent without changing behavior; salaries (B) address one pressure among many and cannot be calibrated against unknown needs; total centralization (C) cripples operations and simply relocates the trust question.",
+    "Topic": "Anti-fraud program design",
+    "Subtopic": "Layered prevention",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Equating a signed code of conduct with a functioning control environment.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "prevention",
+     "program design"
+    ],
+    "Dependencies": []
+   }
+  ]
+ }
+]

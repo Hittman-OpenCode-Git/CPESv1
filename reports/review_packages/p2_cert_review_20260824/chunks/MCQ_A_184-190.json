@@ -1,0 +1,303 @@
+[
+ {
+  "Authorities": [
+   "ASC 280",
+   "Portfolio risk analysis"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": false,
+  "Choices": {
+   "A": "Concentration in one volatile region amplifies currency, political, and demand-cycle exposure — the analyst should stress-test growth durability and consider a higher risk premium before capitalizing reported earnings",
+   "B": "Geographic mix is irrelevant as long as consolidated margins remain strong",
+   "C": "Revenue diversifies automatically as companies scale, so today's concentration will self-correct",
+   "D": "Reportable-segment data is too unreliable to support any geographic risk conclusion"
+  },
+  "CognitiveLevel": "Understand",
+  "CommonTrapReference": "Capitalizing concentrated-region earnings at the same multiple as diversified peers",
+  "CorrectChoice": "A",
+  "Difficulty": "Moderate",
+  "DifficultyScore": 3,
+  "ExplanationCorrect": "ASC 280 segment disclosures exist precisely to expose concentration. Seventy percent of revenue from one emerging region means the earnings stream carries that region's currency volatility, political risk, and demand cycle — risks a diversified competitor does not bear. The analytical consequences are concrete: decompose growth into region-driven versus core components, apply scenario haircuts to the concentrated stream, and recognize that identical reported margins do NOT imply identical risk. Valuation and credit conclusions should reflect whether the earnings base could survive a single-region shock.",
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "Margin strength says nothing about revenue DURABILITY. A regional crisis hits the top line directly; high-margin firms with concentrated revenue lose more absolute profit per point of regional decline than diversified low-margin firms.",
+  "ExplanationWrongC": "Scale does not diversify geography by itself — expansion follows opportunity, which often deepens regional concentration. Absent deliberate strategy, the mix persists or worsens.",
+  "ExplanationWrongD": "Audited segment footnotes are among the more reliable disclosures available; imperfect cost allocation hardly justifies ignoring where three-quarters of the revenue originates. Imperfect information still dominates no information.",
+  "Part": 2,
+  "Section": "A",
+  "QuestionID": "P2-A-184",
+  "Stem": "Analyst Sofia Nguyen evaluates a distributor deriving 70% of revenue from one emerging-market region with high currency volatility. Which treatment of the geographic concentration is analytically correct?",
+  "Topic": "A.184 Geographic concentration risk",
+  "UniqueConceptKey": "a-184-geographic-concentration-risk",
+  "LOSTag": "A.4",
+  "ItemStyle": "single-select",
+  "Part2OnlyFlag": true,
+  "question_state": "Unprocessed",
+  "VerifiedChecks": [
+   "Part2OnlyFlag verified true",
+   "EW[CC] empty (DL-008 compliant)",
+   "Non-CC EW slots >=50 chars (DL-026 compliant)",
+   "No boilerplate text (DL-013 prevention)",
+   "Difficulty justified",
+   "Independent: 70% single-region revenue carries FX/political/demand concentration deserving premium",
+   "Authority citations match tested concept"
+  ]
+ },
+ {
+  "Authorities": [
+   "Gross margin analysis",
+   "Variance decomposition"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": false,
+  "Choices": {
+   "A": "The margin decline proves internal control failure or inventory shrinkage and warrants a fraud investigation before any other analysis",
+   "B": "COGS grew faster than sales — the analyst should decompose whether price realization lagged unit-cost inflation, or whether mix shifted toward lower-margin products, before drawing conclusions about causes or remedies",
+   "C": "Sales growth of 10% automatically restores margins over time as fixed costs spread across higher volume",
+   "D": "A single aggregate driver explains margin moves, so no further decomposition is useful"
+  },
+  "CognitiveLevel": "Analyze",
+  "CommonTrapReference": "Jumping from an aggregate margin change to a single-cause conclusion without price-cost-mix decomposition",
+  "CorrectChoice": "B",
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ExplanationCorrect": "Gross margin fell from 40% to 38% because COGS grew 13.7% against 10% sales growth — the arithmetic is unambiguous, but the CAUSES are not. Three candidate mechanisms dominate: input-cost inflation passed through more slowly than realized (price/cost timing), negative mix shift toward lower-margin products or channels, and volume driven by discounting that surrendered margin for share. Each implies different durability and different management responses. The disciplined analyst separates price, cost, and mix effects — using unit data where available — before attributing the compression to cost-control failure, competitive pressure, or deliberate strategy.",
+  "ExplanationWrongA": "Margin compression has many ordinary drivers — input inflation, mix shifts, promotional discounting. Fraud conclusions need corroboration such as inventory counts and supplier-invoice testing; jumping straight to shrinkage biases every subsequent analytical test.",
+  "ExplanationWrongB": "",
+  "ExplanationWrongC": "Volume spreads FIXED costs; gross margin is a per-unit concept largely indifferent to fixed-cost absorption. Discount-driven growth typically DEEPENS gross-margin erosion rather than repairing it.",
+  "ExplanationWrongD": "Price, cost, and mix effects net into one ratio; treating the net change as a single cause makes remediation guesswork — a pricing problem demands pricing action, a sourcing problem demands procurement action, and they call for opposite responses.",
+  "Part": 2,
+  "Section": "A",
+  "QuestionID": "P2-A-185",
+  "Stem": "Rafter Industries gross margin fell from 40% to 38% while sales grew 10% and COGS grew 13.7%. Which analytical approach to the margin compression is correct?",
+  "Topic": "A.185 Gross margin driver decomposition",
+  "UniqueConceptKey": "a-185-gross-margin-driver-decomposition",
+  "LOSTag": "A.2",
+  "ItemStyle": "single-select",
+  "Part2OnlyFlag": true,
+  "question_state": "Unprocessed",
+  "VerifiedChecks": [
+   "Part2OnlyFlag verified true",
+   "EW[CC] empty (DL-008 compliant)",
+   "Non-CC EW slots >=50 chars (DL-026 compliant)",
+   "No boilerplate text (DL-013 prevention)",
+   "Difficulty justified",
+   "Independent: COGS +13.7% outgrew sales +10%; decompose price/cost/mix before attributing cause",
+   "Authority citations match tested concept"
+  ]
+ },
+ {
+  "Authorities": [
+   "ASC 260",
+   "ASC 260-10-30"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": false,
+  "Choices": {
+   "A": "All outstanding options and convertible securities are always included in diluted EPS regardless of their incremental effect",
+   "B": "Antidilutive securities are ignored by GAAP entirely and never enter any part of the EPS computation",
+   "C": "Securities whose inclusion would INCREASE earnings per share are antidilutive and are excluded from diluted EPS; the dilution test is re-run every reporting period",
+   "D": "Basic EPS must be restated to include hypothetical option shares outstanding"
+  },
+  "CognitiveLevel": "Understand",
+  "CommonTrapReference": "Assuming all potentially dilutive instruments automatically enter diluted EPS",
+  "CorrectChoice": "C",
+  "Difficulty": "Moderate",
+  "DifficultyScore": 3,
+  "ExplanationCorrect": "Under ASC 260, diluted EPS includes potentially dilutive securities ONLY when their inclusion DECREASES EPS — the conservative direction. An in-the-money option whose assumed exercise proceeds repurchase more shares than it adds is antidilutive and drops out for that period. The classification can flip between periods as share prices move, which is why the test is re-performed each quarter. Basic EPS never changes for options or converts; diluted EPS is where the inclusion test operates, and its purpose is to show the WORST-CASE claim on earnings, not an average case.",
+  "ExplanationWrongA": "Inclusion is conditional on the DIRECTION of dilution: an option whose assumed exercise would raise EPS fails the test for that period. Blanket inclusion would overstate shareholders' claim on earnings instead of presenting its worst case.",
+  "ExplanationWrongB": "Antidilutive securities are excluded from diluted EPS for that period, but they remain subject to the test every period and can become dilutive when prices or assumptions shift. 'Ignored by GAAP entirely' overstates the treatment.",
+  "ExplanationWrongC": "",
+  "ExplanationWrongD": "Basic EPS uses weighted-average shares actually outstanding during the period. Hypothetical option shares appear only in the diluted computation, and even there only when dilutive.",
+  "Part": 2,
+  "Section": "A",
+  "QuestionID": "P2-A-186",
+  "Stem": "Controller David Kim computes Willow Textiles diluted EPS. In-the-money options would add shares on a treasury-stock basis such that diluted EPS would come out HIGHER than basic EPS. How should the options be treated?",
+  "Topic": "A.186 Antidilutive securities exclusion",
+  "UniqueConceptKey": "a-186-antidilutive-securities-exclusion",
+  "LOSTag": "A.1",
+  "ItemStyle": "single-select",
+  "Part2OnlyFlag": true,
+  "question_state": "Unprocessed",
+  "VerifiedChecks": [
+   "Part2OnlyFlag verified true",
+   "EW[CC] empty (DL-008 compliant)",
+   "Non-CC EW slots >=50 chars (DL-026 compliant)",
+   "No boilerplate text (DL-013 prevention)",
+   "Difficulty justified",
+   "Independent: Inclusion raising EPS = antidilutive -> excluded from diluted EPS this period",
+   "Authority citations match tested concept"
+  ]
+ },
+ {
+  "Authorities": [
+   "ASC 230",
+   "Cash flow statement analysis"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": false,
+  "Choices": {
+   "A": "The $30M depreciation add-back demonstrates that depreciation generated operating cash during the period",
+   "B": "Rising accounts receivable improved operating cash flow because more sales were booked",
+   "C": "Choosing the indirect method changes the total operating cash flow reported versus the direct method",
+   "D": "The $18M payables increase ADDS to cash because suppliers are financing operations — but the benefit reverses when stretched payments normalize; add-backs reconcile accrual income to cash rather than create it"
+  },
+  "CognitiveLevel": "Understand",
+  "CommonTrapReference": "Reading indirect-method adjustments as cash drivers instead of reconciling items",
+  "CorrectChoice": "D",
+  "Difficulty": "Moderate",
+  "DifficultyScore": 3,
+  "ExplanationCorrect": "The indirect method starts with accrual net income and adjusts toward cash reality. Depreciation is added back because it reduced income without consuming cash — the add-back UNDOES an expense, it does not manufacture money. Receivables growth is subtracted because those sales produced no collections yet. Payables growth is ADDED because suppliers effectively extended financing: goods received, cash unpaid. That payables boost is real this period and transient by nature — next period's payments will reverse it. Analysts therefore separate structural OCF improvement from timing benefits like payable stretching before concluding that cash generation genuinely improved.",
+  "ExplanationWrongA": "Depreciation reduced INCOME without consuming any cash; the add-back merely reverses that non-cash expense inside the reconciliation. Cash generation comes from collections net of payments — never from an accounting charge itself.",
+  "ExplanationWrongB": "Receivables growth appears as a NEGATIVE adjustment: revenue was recognized but not collected, so accrual income outran cash. Growing AR drains operating cash in the period it occurs.",
+  "ExplanationWrongC": "Both methods report IDENTICAL total operating cash flow; they differ only in presentation — direct lists gross receipts and payments by category, while indirect reconciles from net income.",
+  "ExplanationWrongD": "",
+  "Part": 2,
+  "Section": "A",
+  "QuestionID": "P2-A-187",
+  "Stem": "Analyst Priya Sharma reads Nuvora Industries operating cash flow reconciliation: net income $90M; depreciation add-back +$30M; receivables increase -$12M; payables increase +$18M. Which interpretation of these adjustments is correct?",
+  "Topic": "A.187 Indirect method adjustments interpretation",
+  "UniqueConceptKey": "a-187-indirect-method-adjustments-interpretation",
+  "LOSTag": "A.3",
+  "ItemStyle": "single-select",
+  "Part2OnlyFlag": true,
+  "question_state": "Unprocessed",
+  "VerifiedChecks": [
+   "Part2OnlyFlag verified true",
+   "EW[CC] empty (DL-008 compliant)",
+   "Non-CC EW slots >=50 chars (DL-026 compliant)",
+   "No boilerplate text (DL-013 prevention)",
+   "Difficulty justified",
+   "Independent: Dep add-back reverses non-cash expense; AR subtracts; AP add reverses next period",
+   "Authority citations match tested concept"
+  ]
+ },
+ {
+  "Authorities": [
+   "Working capital analysis",
+   "Business model analysis"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": false,
+  "Choices": {
+   "A": "For fast-turn retailers that collect from customers before paying suppliers, negative working capital is a low-cost funding source; the same figure signals distress in slow-turn industries — interpretation depends on the operating cycle",
+   "B": "Negative working capital always indicates imminent insolvency risk regardless of business model",
+   "C": "Negative working capital is universally a strength because liabilities exceed liquid assets",
+   "D": "Liquidity ratios become meaningless whenever working capital turns negative"
+  },
+  "CognitiveLevel": "Understand",
+  "CommonTrapReference": "Applying one working-capital sign interpretation across all business models",
+  "CorrectChoice": "A",
+  "Difficulty": "Moderate",
+  "DifficultyScore": 3,
+  "ExplanationCorrect": "Working capital's meaning depends on the operating cycle. A grocer sells inventory for cash within days while paying suppliers in 30-60 days: customers fund the business, so negative working capital reflects NEGATIVE net funding needs — a competitive advantage lowering capital intensity. A shipbuilder with the same negative balance may be stretching payables against slow-turning contracts — a distress marker. The analytical sequence: map the cash conversion cycle, check trend and composition (payables stretch versus genuine velocity), and benchmark against industry peers before labeling the sign good or bad.",
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "Subscription-style firms (annual-billed software, cash-scanning grocers) run negative working capital for years while thriving. Insolvency depends on the TIMING of obligations, not the sign of one balance-sheet net.",
+  "ExplanationWrongC": "The same negative figure at a contractor with milestone billings may be payables stretched against stalled projects — a distress marker. Context and trend decide whether the sign is strength or symptom.",
+  "ExplanationWrongD": "A current ratio below 1.0 simply reflects the funding model. Pair it with the cash conversion cycle and covenant headroom to judge whether the position is structural by design or newly deteriorating.",
+  "Part": 2,
+  "Section": "A",
+  "QuestionID": "P2-A-188",
+  "Stem": "Brixton Club runs negative working capital while turning inventory every 12 days and collecting sales in cash. A shipbuilder shows the same negative balance while stretching payables on stalled contracts. Which framework interprets these positions correctly?",
+  "Topic": "A.188 Negative working capital business models",
+  "UniqueConceptKey": "a-188-negative-working-capital-business-models",
+  "LOSTag": "A.1",
+  "ItemStyle": "single-select",
+  "Part2OnlyFlag": true,
+  "question_state": "Unprocessed",
+  "VerifiedChecks": [
+   "Part2OnlyFlag verified true",
+   "EW[CC] empty (DL-008 compliant)",
+   "Non-CC EW slots >=50 chars (DL-026 compliant)",
+   "No boilerplate text (DL-013 prevention)",
+   "Difficulty justified",
+   "Independent: Sign interpretation depends on operating cycle: velocity strength vs payable stretch",
+   "Authority citations match tested concept"
+  ]
+ },
+ {
+  "Authorities": [
+   "SEC Regulation S-K Item 4.02",
+   "Financial reporting reliability"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": false,
+  "Choices": {
+   "A": "A restatement proves management committed fraud and warrants immediate disqualification of the company's disclosures",
+   "B": "A restatement signals control weakness that discounts reliance on historical metrics until remediation is evidenced through control testing and sustained clean reporting",
+   "C": "Markets fully absorb restatements without consequence once corrected filings are made",
+   "D": "The originally filed statements remain the more reliable record compared with later restated versions"
+  },
+  "CognitiveLevel": "Understand",
+  "CommonTrapReference": "Equating restatement with proven fraud — or assuming zero consequences after correction",
+  "CorrectChoice": "B",
+  "Difficulty": "Moderate",
+  "DifficultyScore": 3,
+  "ExplanationCorrect": "Item 4.02 restatements correct material errors whose causes range from innocent oversight to deliberate manipulation — the filing itself establishes unreliability, not intent. The rational response recalibrates trust: internal-control weaknesses that permitted the error take time and evidence to remediate, prior-period estimates deserve extra skepticism, and cost-of-capital and litigation consequences typically persist. Analysts should use RESTATED figures for trend work, track the remediation timeline, and watch whether subsequent quarters validate the corrections before restoring full confidence in management's estimates.",
+  "ExplanationWrongA": "Restatements correct errors spanning innocent oversight to deliberate manipulation; fraud requires evidence of INTENT that the filing itself does not establish. Disqualifying every disclosure on the basis of one restatement overreaches the signal.",
+  "ExplanationWrongB": "",
+  "ExplanationWrongC": "Event studies consistently show negative abnormal returns, elevated spreads, and heightened litigation activity around restatements. Correction removes the error, not the credibility damage.",
+  "ExplanationWrongD": "Inverted logic: the restatement exists precisely because the original figures contained material errors. Restated statements supersede the originals for every analytical purpose.",
+  "Part": 2,
+  "Section": "A",
+  "QuestionID": "P2-A-189",
+  "Stem": "Flash Manufacturing files an Item 4.02 restatement correcting revenue-cutoff errors and disclosing a related material weakness. Which stance toward historical metrics and forward estimates is analytically sound?",
+  "Topic": "A.189 Restatement as reliability signal",
+  "UniqueConceptKey": "a-189-restatement-as-reliability-signal",
+  "LOSTag": "A.3",
+  "ItemStyle": "single-select",
+  "Part2OnlyFlag": true,
+  "question_state": "Unprocessed",
+  "VerifiedChecks": [
+   "Part2OnlyFlag verified true",
+   "EW[CC] empty (DL-008 compliant)",
+   "Non-CC EW slots >=50 chars (DL-026 compliant)",
+   "No boilerplate text (DL-013 prevention)",
+   "Difficulty justified",
+   "Independent: Item 4.02 establishes unreliability, not intent; use restated data pending remediation",
+   "Authority citations match tested concept"
+  ]
+ },
+ {
+  "Authorities": [
+   "Compound growth analysis",
+   "Comparative analysis"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "CalculationItem": true,
+  "Choices": {
+   "A": "11.6% — total growth of 46.41 points divided evenly across the four years",
+   "B": "46.4% — the cumulative four-year growth rate treated as the annual pace",
+   "C": "10.0% — (146.41 ÷ 100)^(1/4) − 1, compounding growth on growth",
+   "D": "7.9% — applying a five-period exponent to the four-year span"
+  },
+  "CognitiveLevel": "Apply",
+  "CommonTrapReference": "Using simple-average or total growth instead of the geometric compound rate",
+  "CorrectChoice": "C",
+  "Difficulty": "Moderate-Easy",
+  "DifficultyScore": 2,
+  "ExplanationCorrect": "Compound annual growth rate = (Ending ÷ Beginning)^(1/n) − 1 = ($146.41M ÷ $100M)^(1/4) − 1 = 1.4641^0.25 − 1 = 10.0%. CAGR captures growth-on-growth: each year's expansion compounds on the enlarged base, which is why the constant rate linking $100M to $146.41M across four years is 10%, not the 11.6% simple average. Trend analysis should anchor on CAGR whenever the base grows materially, because simple averages systematically overstate multi-year growth trajectories.",
+  "ExplanationWrongA": "Dividing the 46.41-point total by four ignores compounding: year two's growth builds on year one's larger base. Simple averaging overstates the sustainable annual pace.",
+  "ExplanationWrongB": "46.4% is the ENTIRE four-year change, not an annual rate. Presenting cumulative growth as annual overstates the trajectory nearly five-fold.",
+  "ExplanationWrongC": "",
+  "ExplanationWrongD": "Four years of growth means FOUR compounding intervals: (1.4641)^(1/4). Dividing by five periods shrinks the implied rate toward 7.9%.",
+  "Part": 2,
+  "Section": "A",
+  "QuestionID": "P2-A-190",
+  "Stem": "Willow Textiles grew revenue from $100M to $146.41M over four fiscal years. What compound annual growth rate should the analyst report?",
+  "Topic": "A.190 Compound annual growth rate",
+  "UniqueConceptKey": "a-190-compound-annual-growth-rate",
+  "LOSTag": "A.4",
+  "ItemStyle": "single-select",
+  "Part2OnlyFlag": true,
+  "question_state": "Unprocessed",
+  "VerifiedChecks": [
+   "Part2OnlyFlag verified true",
+   "EW[CC] empty (DL-008 compliant)",
+   "Non-CC EW slots >=50 chars (DL-026 compliant)",
+   "No boilerplate text (DL-013 prevention)",
+   "Difficulty justified",
+   "Independent: (146.41/100)^(1/4)-1 = 10.0%",
+   "Authority citations match tested concept"
+  ]
+ }
+]

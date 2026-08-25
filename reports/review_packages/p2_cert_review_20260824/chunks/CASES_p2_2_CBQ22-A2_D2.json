@@ -1,0 +1,569 @@
+[
+ {
+  "CaseID": "CBQ22-A2",
+  "Title": "Reading the Quality of Earnings",
+  "SectionTags": [
+   "A"
+  ],
+  "BlueprintDomain": "Financial Statement Analysis",
+  "BlueprintObjectives": [
+   "Compute the quality-of-income ratio and core earnings",
+   "Detect receivables growth diverging from revenue growth",
+   "Form a valuation stance that prices earnings-quality risk"
+  ],
+  "PrimaryCompetency": "Analysis",
+  "EstimatedMinutes": 30,
+  "Difficulty": "Difficult",
+  "DifficultyScore": 4,
+  "ScenarioText": "Equity analyst Jordan Reyes is preparing a pre-IPO note on Riverbend Outfitters. Net income of $24.0M on $200M of sales looks attractive against peer multiples, but operating cash flow tells a different story, receivables are ballooning, and margins are moving against the industry. Jordan must normalize the earnings before any multiple is applied.",
+  "Industry": "Apparel retail",
+  "CompanyType": "Retailer",
+  "CompanyName": "Riverbend Outfitters",
+  "Stakeholder": "Equity Analyst Jordan Reyes",
+  "BusinessFunction": "Investment research",
+  "QuestionCount": 6,
+  "ExhibitCount": 2,
+  "ProductionStatus": "Draft",
+  "Version": "1.0",
+  "Tags": [
+   "quality of earnings",
+   "accruals",
+   "core earnings",
+   "DSO"
+  ],
+  "CreatedDate": "2026-08-24",
+  "ModifiedDate": "2026-08-24",
+  "Author": "AI",
+  "Confidence": 90,
+  "RevisionHistory": [
+   {
+    "Date": "2026-08-24",
+    "Version": "1.0",
+    "Author": "AI",
+    "Summary": "Initial creation"
+   }
+  ],
+  "question_state": "Unprocessed",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "LearningObjectives": [
+   "Compute the quality-of-income ratio and interpret sub-1.0 readings",
+   "Normalize reported income to core earnings for transitory items",
+   "Quantify DSO deterioration and connect it to revenue-quality risk",
+   "Anchor valuation on normalized, cash-verified earnings"
+  ],
+  "Exhibits": [
+   {
+    "ExhibitID": "CBQ22-A2-E1",
+    "CaseID": "CBQ22-A2",
+    "Type": "table",
+    "Title": "Exhibit 1 — Headline Results ($M)",
+    "Purpose": "Provides the reported earnings, cash flow, sales, and one-time items required for normalization.",
+    "ReferencedBy": [
+     "CBQ22-A2-Q1",
+     "CBQ22-A2-Q2",
+     "CBQ22-A2-Q6"
+    ],
+    "Headers": [
+     "Item",
+     "Amount"
+    ],
+    "Rows": [
+     [
+      "Net income",
+      "$24.0"
+     ],
+     [
+      "Operating cash flow",
+      "$14.4"
+     ],
+     [
+      "Net sales",
+      "$200.0"
+     ],
+     [
+      "Pre-tax gain on sale of headquarters",
+      "$5.0"
+     ],
+     [
+      "Pre-tax restructuring charge",
+      "$3.0"
+     ],
+     [
+      "Tax rate",
+      "25%"
+     ]
+    ],
+    "DataFormat": "USD millions; 25% marginal rate applies to all adjustments",
+    "AccuracyCheck": "After-tax gain = 5.0 x 0.75 = 3.75; after-tax charge = 3.0 x 0.75 = 2.25"
+   },
+   {
+    "ExhibitID": "CBQ22-A2-E2",
+    "CaseID": "CBQ22-A2",
+    "Type": "table",
+    "Title": "Exhibit 2 — Growth and Receivables Trend",
+    "Purpose": "Provides prior-year comparatives exposing the receivables-sales divergence used in the DSO computation.",
+    "ReferencedBy": [
+     "CBQ22-A2-Q3",
+     "CBQ22-A2-Q4",
+     "CBQ22-A2-Q5"
+    ],
+    "Headers": [
+     "Item",
+     "Prior year",
+     "Current year",
+     "Change"
+    ],
+    "Rows": [
+     [
+      "Net sales ($M)",
+      "$178.6",
+      "$200.0",
+      "+12%"
+     ],
+     [
+      "Accounts receivable ($M)",
+      "$18.0",
+      "$26.1",
+      "+45%"
+     ],
+     [
+      "Industry gross margin",
+      "36%",
+      "34%",
+      "-2 pts"
+     ],
+     [
+      "Riverbend gross margin",
+      "34%",
+      "39%",
+      "+5 pts"
+     ]
+    ],
+    "DataFormat": "USD millions; margins in percent; 365-day convention",
+    "AccuracyCheck": "Receivables grew 45% against 12% sales growth — the central divergence"
+   }
+  ],
+  "Items": [
+   {
+    "ItemID": "CBQ22-A2-Q1",
+    "Type": "numeric",
+    "Prompt": "Enter the quality-of-income ratio (operating cash flow ÷ net income), rounded to two decimals.",
+    "Correct": "0.60",
+    "Explanation": "Quality of income = OCF ÷ NI = $14.4M ÷ $24.0M = 0.60. Only sixty cents of each reported earnings dollar arrived as cash this period — a reading far below the ~1.0 level expected for a stable business. Sustained sub-1.0 ratios mean accruals are carrying the income statement, and accrual-heavy earnings historically precede restatements, write-offs, or growth disappointments far more often than cash-backed earnings do.",
+    "Topic": "Quality of income ratio",
+    "Subtopic": "Cash verification of earnings",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": true,
+    "FormulaReference": "Quality of income = OCF / NI",
+    "CommonTrapReference": "Treating any positive OCF as confirmation of earnings quality regardless of magnitude.",
+    "EstimatedMinutes": 4,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "quality of earnings"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ22-A2-Q2",
+    "Type": "numeric",
+    "Prompt": "Enter CORE earnings (excluding both transitory items, net of tax), in dollars.",
+    "Correct": "22500000",
+    "Explanation": "After-tax gain = $5.0M × (1 − 0.25) = $3.75M; after-tax charge = $3.0M × 0.75 = $2.25M. Core earnings = $24.0M − $3.75M + $2.25M = $22.5M. Symmetry is the discipline: gains AND charges both leave if they will not recur — keeping only the flattering adjustment biases every downstream multiple.",
+    "Topic": "Core earnings normalization",
+    "Subtopic": "Transitory items",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": true,
+    "FormulaReference": "Core = NI - after-tax gains + after-tax charges",
+    "CommonTrapReference": "Adjusting out charges while leaving gains in reported earnings.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "core earnings"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ22-A2-Q3",
+    "Type": "numeric",
+    "Prompt": "Enter CURRENT-year days sales outstanding using year-end receivables and annual sales, rounded to one decimal.",
+    "Correct": "47.6",
+    "Explanation": "DSO = Receivables ÷ (Sales ÷ 365) = $26.1M ÷ ($200M/365) = $26.1M ÷ $0.5479M = 47.6 days — up from 36.8 days a year earlier ($18.0M ÷ [$178.6M/365]), a 10.8-day deterioration. Receivables growing 45% against 12% sales growth means bookings are running ahead of collections: either terms loosened, shipments were pulled forward, or some of those 'sales' are not going to convert at all.",
+    "Topic": "Days sales outstanding",
+    "Subtopic": "Deterioration quantification",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": true,
+    "FormulaReference": "FA-05: DSO = AR / (Sales / 365)",
+    "CommonTrapReference": "Reading receivables growth as a healthy sign of expansion.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "DSO",
+     "receivables"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ22-A2-Q4",
+    "Type": "select",
+    "Prompt": "Which composite assessment does Exhibits 1 and 2 best support?",
+    "Correct": "C",
+    "Choices": [
+     "Earnings are high quality: net income grew strongly and audited statements support the multiple applied",
+     "The quality-of-income ratio alone settles the analysis — 0.60 proves manipulation occurred",
+     "Cash covers only 60% of earnings, receivables grow three-and-a-half times faster than sales while DSO deteriorates nearly eleven days, and gross margin expands five points AGAINST an industry declining two — the classic overstatement profile; value the company on normalized, cash-supported earnings pending evidence",
+     "Gross margin expansion confirms the receivables growth reflects premium pricing power rather than channel pressure"
+    ],
+    "Explanation": "Individually each signal admits an innocent explanation; jointly they form the recognized overstatement pattern — accrual-heavy earnings, collection stress, and counter-consensus margin moves. The correct analytical posture is neither accusation nor acceptance but normalization: anchor on the $22.5M core figure, demand aging schedules and sell-through data, and price the uncertainty. A single ratio never proves fraud (B) — it triggers evidence-gathering — and margin expansion against the industry trend (D) is itself the anomaly requiring explanation, not reassurance.",
+    "Topic": "Composite earnings quality",
+    "Subtopic": "Signal convergence",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Weighing each red flag in isolation instead of reading the pattern.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "red flags",
+     "normalization"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ22-A2-Q5",
+    "Type": "select",
+    "Prompt": "Which additional artifact would MOST directly confirm channel stuffing as the driver?",
+    "Correct": "A",
+    "Choices": [
+     "Distributor-level sell-through data showing inventory piling up at customers alongside the quarter-end shipment spike — or documented return-rights/side-letter arrangements matching the receivables surge",
+     "A lower effective tax rate relative to the statutory rate",
+     "Increased capital expenditures on distribution centers",
+     "A higher dividend payout declared in the same quarter"
+    ],
+    "Explanation": "Channel stuffing leaves a specific fingerprint: goods sitting at distributors unsold (sell-in outrunning sell-through) and often contractual rights making those 'sales' reversible. Sell-through data or side letters convert suspicion into evidence. Tax rate (B) speaks to a different quality dimension, capex (C) is balance-sheet investment unrelated to the receivables bulge, and dividends (D) would if anything drain cash further without explaining who holds the goods.",
+    "Topic": "Evidence gathering",
+    "Subtopic": "Channel stuffing confirmation",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Accepting aggregate growth data where distributor-level sell-through is decisive.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "evidence"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ22-A2-Q6",
+    "Type": "select",
+    "Prompt": "Which valuation stance should Jordan's note take?",
+    "Correct": "B",
+    "Choices": [
+     "Apply the peer multiple to the full $24.0M reported figure since GAAP statements govern comparability",
+     "Value Riverbend on the $22.5M core base ONLY with cash-flow verification conditions attached — aging detail, sell-through evidence, and OCF tracking across coming quarters — applying a discount for unresolved earnings-quality risk until the divergence closes",
+     "Exclude Riverbend from coverage permanently because red flags were identified",
+     "Value on operating cash flow of $14.4M alone, ignoring earnings entirely"
+    ],
+    "Explanation": "The disciplined endpoint prices what is PROVEN and discounts what is not: core earnings of $22.5M represent sustainable operations, while the unexplained gap between accrual and cash — and between receivables and sales — is risk to be monitored through specific verifiable milestones. Multiplying reported income (A) capitalizes possibly overstated dollars; blacklisting (C) overreacts to signals that are not proof; cash-only valuation (D) discards the real earnings power a resolved picture might support. Conditional valuation aligns price with evidence.",
+    "Topic": "Valuation stance",
+    "Subtopic": "Risk-adjusted conclusion",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Paying peer multiples for earnings that cash flows have not confirmed.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "valuation"
+    ],
+    "Dependencies": []
+   }
+  ]
+ },
+ {
+  "CaseID": "CBQ22-D2",
+  "Title": "Vendor Breach: Quantifying the Response",
+  "SectionTags": [
+   "D"
+  ],
+  "BlueprintDomain": "Risk Management",
+  "BlueprintObjectives": [
+   "Compute inherent and residual expected loss for a third-party cyber event",
+   "Classify responses within the COSO ERM reduce/share/avoid taxonomy",
+   "Fund and sequence responses consistent with board risk appetite"
+  ],
+  "PrimaryCompetency": "Analysis",
+  "EstimatedMinutes": 30,
+  "Difficulty": "Moderate",
+  "DifficultyScore": 3,
+  "ScenarioText": "Crestline Steel's payroll processor reports a compromise exposing employee records, and risk lead Sofia Andrade must quantify exposure and fund responses before the next audit-committee meeting. The board's appetite caps residual EXPECTED loss per event class at $250,000 annually.",
+  "Industry": "Steel services",
+  "CompanyType": "Manufacturer",
+  "CompanyName": "Crestline Steel",
+  "Stakeholder": "Risk Lead Sofia Andrade",
+  "BusinessFunction": "Enterprise risk management",
+  "QuestionCount": 6,
+  "ExhibitCount": 2,
+  "ProductionStatus": "Draft",
+  "Version": "1.0",
+  "Tags": [
+   "cyber risk",
+   "expected loss",
+   "risk response",
+   "appetite"
+  ],
+  "CreatedDate": "2026-08-24",
+  "ModifiedDate": "2026-08-24",
+  "Author": "AI",
+  "Confidence": 90,
+  "RevisionHistory": [
+   {
+    "Date": "2026-08-24",
+    "Version": "1.0",
+    "Author": "AI",
+    "Summary": "Initial creation"
+   }
+  ],
+  "question_state": "Unprocessed",
+  "Part": 2,
+  "Part2OnlyFlag": true,
+  "LearningObjectives": [
+   "Quantify inherent versus residual expected loss for controls and insurance",
+   "Apply the appetite threshold to rank required actions",
+   "Sequence reduce-first, share-second response architecture"
+  ],
+  "Exhibits": [
+   {
+    "ExhibitID": "CBQ22-D2-E1",
+    "CaseID": "CBQ22-D2",
+    "Type": "table",
+    "Title": "Exhibit 1 — Exposure Profile (Annual)",
+    "Purpose": "Provides the probability and impact inputs for inherent expected-loss computation.",
+    "ReferencedBy": [
+     "CBQ22-D2-Q1",
+     "CBQ22-D2-Q3",
+     "CBQ22-D2-Q5"
+    ],
+    "Headers": [
+     "Factor",
+     "Value"
+    ],
+    "Rows": [
+     [
+      "Impact if major breach realized",
+      "$3,000,000"
+     ],
+     [
+      "Annual probability under current controls",
+      "15%"
+     ],
+     [
+      "Board residual-appetite cap per event class",
+      "$250,000"
+     ]
+    ],
+    "DataFormat": "USD; probabilities annual",
+    "AccuracyCheck": "Impact estimate includes notification, monitoring, legal, and regulatory response"
+   },
+   {
+    "ExhibitID": "CBQ22-D2-E2",
+    "CaseID": "CBQ22-D2",
+    "Type": "table",
+    "Title": "Exhibit 2 — Candidate Responses",
+    "Purpose": "Provides cost and effect of each candidate so residual risk and net benefit can be computed and classified.",
+    "ReferencedBy": [
+     "CBQ22-D2-Q2",
+     "CBQ22-D2-Q3",
+     "CBQ22-D2-Q4",
+     "CBQ22-D2-Q5",
+     "CBQ22-D2-Q6"
+    ],
+    "Headers": [
+     "Response",
+     "Cost",
+     "Effect"
+    ],
+    "Rows": [
+     [
+      "Enhanced MFA + continuous monitoring on the vendor connection",
+      "$60K per year",
+      "Cuts annual probability to 6%"
+     ],
+     [
+      "Cyber liability insurance",
+      "$90K per year",
+      "Transfers losses above a $750K retained layer to the carrier"
+     ],
+     [
+      "Terminate vendor; bring payroll fully in-house",
+      "Multi-year build estimated well above both options",
+      "Eliminates this vendor event class entirely"
+     ]
+    ],
+    "DataFormat": "USD annual unless noted",
+    "AccuracyCheck": "MFA effect applies to likelihood only; impact unchanged"
+   }
+  ],
+  "Items": [
+   {
+    "ItemID": "CBQ22-D2-Q1",
+    "Type": "numeric",
+    "Prompt": "Enter the INHERENT annual expected loss, in dollars.",
+    "Correct": "450000",
+    "Explanation": "Expected loss = probability × impact = 0.15 × $3,000,000 = $450,000 (RM-01) — the pre-action benchmark. It already breaches the board's $250,000 residual cap, so doing nothing is not among the compliant options Sofia can present.",
+    "Topic": "Inherent expected loss",
+    "Subtopic": "Cyber quantification",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": true,
+    "FormulaReference": "RM-01: Expected Loss = P x I",
+    "CommonTrapReference": "Benchmarking against worst-case impact rather than the weighted expectation.",
+    "EstimatedMinutes": 4,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "expected loss"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ22-D2-Q2",
+    "Type": "numeric",
+    "Prompt": "Enter the RESIDUAL annual expected loss under the enhanced-MFA option, in dollars.",
+    "Correct": "180000",
+    "Explanation": "Residual = revised probability × unchanged impact = 0.06 × $3,000,000 = $180,000. MFA and monitoring attack LIKELIHOOD — they make the event less likely to occur but change nothing about its $3M severity when it does. At $180K the position sits INSIDE the board's $250K cap for the first time.",
+    "Topic": "Residual expected loss",
+    "Subtopic": "Control effect",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": true,
+    "FormulaReference": "RM-03: Residual Risk",
+    "CommonTrapReference": "Assuming controls also shrink impact severity.",
+    "EstimatedMinutes": 4,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "residual risk",
+     "MFA"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ22-D2-Q3",
+    "Type": "numeric",
+    "Prompt": "Enter the net YEAR-ONE economic benefit of the enhanced-MFA program, in dollars.",
+    "Correct": "210000",
+    "Explanation": "Expected-loss avoided = $450,000 − $180,000 = $270,000; minus the $60,000 annual control cost → net benefit +$210,000. The control pays for itself more than four-fold in expectation while simultaneously curing the appetite breach — the strongest possible funding case the committee can receive.",
+    "Topic": "Mitigation cost-benefit",
+    "Subtopic": "Control funding",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": true,
+    "FormulaReference": "Net benefit = EL avoided − control cost",
+    "CommonTrapReference": "Weighing the $60K cost against the $3M IMPACT instead of the expected-loss reduction.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "cost-benefit"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ22-D2-Q4",
+    "Type": "select",
+    "Prompt": "Classify the three candidate responses in the COSO ERM taxonomy.",
+    "Correct": "D",
+    "Choices": [
+     "MFA = share; insurance = avoid; in-house conversion = reduce",
+     "MFA = avoid; insurance = reduce; in-house conversion = accept",
+     "All three constitute acceptance with different funding mechanisms",
+     "MFA = REDUCE (lowers likelihood); insurance = SHARE (transfers severity above retention); in-house conversion = AVOID (eliminates the vendor event class)"
+    ],
+    "Explanation": "Mechanism determines classification. MFA changes HOW OFTEN the event happens — reduce. Insurance changes WHO PAYS above the retention — share. Killing the vendor relationship removes the exposure class altogether — avoid, here at prohibitive operational cost, which is exactly why avoidance sits unused on the list. Acceptance would mean retaining the 15%/450K profile unfunded, which no proposal does.",
+    "Topic": "Response taxonomy",
+    "Subtopic": "Classification",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Labeling insurance as risk reduction — frequency is untouched.",
+    "EstimatedMinutes": 4,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "taxonomy"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ22-D2-Q5",
+    "Type": "select",
+    "Prompt": "Insurance alone carries a $90K premium and transfers losses above the $750K retention. Which evaluation of insurance AS THE PRIMARY response is correct?",
+    "Correct": "B",
+    "Choices": [
+     "Insurance is sufficient alone: transferring everything above $750K means Crestline bears no material exposure",
+     "Insurance leaves the 15% likelihood untouched — the event still occurs with operational, reputational, and regulatory consequences inside the retention layer — so it complements but cannot substitute for reducing likelihood; the compliant primary action is the MFA program at $180K residual",
+     "Insurance fails the appetite test because premiums count as expected loss",
+     "Insurance and MFA are interchangeable since both appear in Exhibit 2"
+    ],
+    "Explanation": "Sharing redistributes SEVERITY; it does nothing about FREQUENCY — the breach still happens, still disrupts payroll, still reaches regulators and headlines, all within the retained first layer and beyond the policy's scope. The board cap reads on RESIDUAL expected loss of the event class as experienced by the firm; likelihood-reduction (MFA, $180K) addresses it directly and earns a positive net benefit, while insurance works best layered behind likelihood reduction for tail severities. Premiums are a cost item, not expected loss (C) — the failure mode is substitution, not accounting.",
+    "Topic": "Share versus reduce",
+    "Subtopic": "Response sequencing",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Buying transfer first and calling the likelihood problem solved.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "insurance",
+     "sequencing"
+    ],
+    "Dependencies": []
+   },
+   {
+    "ItemID": "CBQ22-D2-Q6",
+    "Type": "select",
+    "Prompt": "What should Sofia recommend to the audit committee?",
+    "Correct": "A",
+    "Choices": [
+     "Fund the enhanced-MFA program immediately — net benefit +$210K and residual of $180K restores compliance with the $250K cap — and evaluate cyber insurance NEXT cycle as a tail-severity complement once likelihood reduction is embedded",
+     "Buy only the insurance policy this cycle and defer all control spending to next year's budget",
+     "Terminate the payroll vendor now despite the migration cost, since any breach risk is unacceptable",
+     "Take no funded action but add the exposure to the watchlist and re-present annually"
+    ],
+    "Explanation": "The recommendation follows the arithmetic and the taxonomy: likelihood-reduction first (it cures the breach of appetite AND pays for itself), tail-transfer second (insurance priced as a complement once the root cause is contained), avoidance rejected on cost-benefit grounds. Deferring controls for insurance-only (B) leaves frequency untouched and the root cause live; termination (C) spends multi-year money to solve a problem $60K annually now contains; watchlisting (D) manages optics while the firm remains $200K outside its own appetite line.",
+    "Topic": "Committee recommendation",
+    "Subtopic": "Response sequencing",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationRequired": false,
+    "FormulaReference": "",
+    "CommonTrapReference": "Funding visibility (watchlists) instead of exposure reduction.",
+    "EstimatedMinutes": 5,
+    "ExplanationVersion": 1,
+    "Tags": [
+     "recommendation"
+    ],
+    "Dependencies": []
+   }
+  ]
+ }
+]

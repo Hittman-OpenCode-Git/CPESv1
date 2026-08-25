@@ -1,0 +1,55 @@
+# MANIFEST — p2_cert_review_20260824
+
+**Generated:** 2026-08-24T19:42:26.128Z
+**Scope:** Uncertified Part 2 content authored in sessions P2-053..P2-057
+**Gap/dup proof:** every expected QID/CaseID was located exactly once in its source pack before chunking (0 missing, 0 duplicates). Chunks are verbatim `JSON.stringify` extractions — concatenating a chunk's objects back in listed order reproduces the source content for those IDs.
+
+## Content chunks
+
+| File | Kind | Count | IDs | Bytes | SHA256 | Source pack | Source SHA256 |
+|------|------|-------|-----|-------|--------|-------------|---------------|
+| `chunks/MCQ_A_176-183.json` | MCQ | 8 | P2-A-176, P2-A-177, P2-A-178, P2-A-179, P2-A-180, P2-A-181, P2-A-182, P2-A-183 | 27388 | `2A05EFD24B767D9EFC9ECA53AA0E367C3ED6D7BFEAFDA161F2195C61E16E5854` | p2/pack_p2_a.js | `82BA56C169583D9E…` |
+| `chunks/MCQ_A_184-190.json` | MCQ | 7 | P2-A-184, P2-A-185, P2-A-186, P2-A-187, P2-A-188, P2-A-189, P2-A-190 | 21998 | `ADDA525E9C4B1050BEF70D7290FD6699D8F9554A31000105A7FB4A485C641A6D` | p2/pack_p2_a.js | `82BA56C169583D9E…` |
+| `chunks/MCQ_C_141-148.json` | MCQ | 8 | P2-C-141, P2-C-142, P2-C-143, P2-C-144, P2-C-145, P2-C-146, P2-C-147, P2-C-148 | 23392 | `88D8ADEDCCEEA96310066D518C4D885F625558A9863D94E5F84931E29531BE17` | p2/pack_p2_c.js | `09D80B15D9C4EAB5…` |
+| `chunks/MCQ_C_149-155.json` | MCQ | 7 | P2-C-149, P2-C-150, P2-C-151, P2-C-152, P2-C-153, P2-C-154, P2-C-155 | 20320 | `A54494F5FE60A4A4D43AF13129E34D406AC090F30B45FA6C5D2C65FA5C754AFD` | p2/pack_p2_c.js | `09D80B15D9C4EAB5…` |
+| `chunks/MCQ_C_156-163.json` | MCQ | 8 | P2-C-156, P2-C-157, P2-C-158, P2-C-159, P2-C-160, P2-C-161, P2-C-162, P2-C-163 | 22719 | `13E8598A5CFA71EDA1F79C0575F48254B15A9B158C9DCFFD25932F443D28DA7D` | p2/pack_p2_c.js | `09D80B15D9C4EAB5…` |
+| `chunks/MCQ_C_164-170.json` | MCQ | 7 | P2-C-164, P2-C-165, P2-C-166, P2-C-167, P2-C-168, P2-C-169, P2-C-170 | 20296 | `2F83156AFF4E2EF1F3509E7C8361725D2654BE7E9E6DC036F70E9E2C763C3E2A` | p2/pack_p2_c.js | `09D80B15D9C4EAB5…` |
+| `chunks/MCQ_C_171-178.json` | MCQ | 8 | P2-C-171, P2-C-172, P2-C-173, P2-C-174, P2-C-175, P2-C-176, P2-C-177, P2-C-178 | 25939 | `8CA33AD6B4555116390516873CAF53BB736BEF3AB9FAA014E953C9D22187AD3E` | p2/pack_p2_c.js | `09D80B15D9C4EAB5…` |
+| `chunks/MCQ_C_179-185.json` | MCQ | 7 | P2-C-179, P2-C-180, P2-C-181, P2-C-182, P2-C-183, P2-C-184, P2-C-185 | 21399 | `2967807961155F77538B7E75946FFA9C833B515ACF2E33707E5A2C1651843A12` | p2/pack_p2_c.js | `09D80B15D9C4EAB5…` |
+| `chunks/MCQ_C_186-193.json` | MCQ | 8 | P2-C-186, P2-C-187, P2-C-188, P2-C-189, P2-C-190, P2-C-191, P2-C-192, P2-C-193 | 23431 | `5B9B310AC71FA8B1356DABB844162050981A1FF3F5BFE08A590EC5E406895B07` | p2/pack_p2_c.js | `09D80B15D9C4EAB5…` |
+| `chunks/MCQ_C_194-200.json` | MCQ | 7 | P2-C-194, P2-C-195, P2-C-196, P2-C-197, P2-C-198, P2-C-199, P2-C-200 | 19876 | `494F5D0AFE8F0AD3B798A27D28FBDC0435D1B5B34234F42706D42452175E7401` | p2/pack_p2_c.js | `09D80B15D9C4EAB5…` |
+| `chunks/CASES_p2_1_CBQ21-A1_D1.json` | CASE | 2 (12 items) | CBQ21-A1, CBQ21-D1 | 24310 | `BB269BC0C271E5E2E58778BC50F9BA63F1C08094B6E7C94F7D236C13E2295C03` | p2/case_pack_p2_1.js | `8C5A4ACEA29FA27D…` |
+| `chunks/CASES_p2_1_CBQ21-B2_E2.json` | CASE | 2 (12 items) | CBQ21-B2, CBQ21-E2 | 23095 | `67803DDE86356C382960F833221CA32E48A7B35383864496BC774AEA8083EC31` | p2/case_pack_p2_1.js | `8C5A4ACEA29FA27D…` |
+| `chunks/CASES_p2_2_CBQ22-B1_F1.json` | CASE | 2 (12 items) | CBQ22-B1, CBQ22-F1 | 25934 | `E17B6C01F7FCA2B429921A8AD6F665B02ADDD658240DAB23AC5A46D24B5EDBD2` | p2/case_pack_p2_2.js | `D3819A20A1A0ED58…` |
+| `chunks/CASES_p2_2_CBQ22-A2_D2.json` | CASE | 2 (12 items) | CBQ22-A2, CBQ22-D2 | 23972 | `9395634CCE494ADF5B4CFD8AF8B0BD56025F7B9BCF1EC117E3A47A9BE4241D1C` | p2/case_pack_p2_2.js | `D3819A20A1A0ED58…` |
+| `chunks/CASES_p2_3_CBQ23-C1_E1.json` | CASE | 2 (12 items) | CBQ23-C1, CBQ23-E1 | 24183 | `A46F3BABF6D2B49769B9BF86EE8D9031D7FEA8A1A5A0433F440F5D30948F934B` | p2/case_pack_p2_3.js | `51B1127042CBB8F6…` |
+| `chunks/CASES_p2_3_CBQ23-C2_F2.json` | CASE | 2 (12 items) | CBQ23-C2, CBQ23-F2 | 25517 | `BEC737E7148C42251FBBA6FA6BA0B1C6573896E08A7A4F1A54D12C6A4F799E13` | p2/case_pack_p2_3.js | `51B1127042CBB8F6…` |
+
+## Provenance
+
+| File | Bytes | SHA256 |
+|------|-------|--------|
+| `provenance/extract_generator.js` | 5706 | `F61D974F306B585C608A49FAC92FE65607359CF77F5E991FD8042DB1F0847C5B` |
+
+## Certified-skip log
+
+Items excluded because extraction found them already Certified (none expected for this package):
+
+| Chunk | Skipped-Certified IDs |
+|-------|------------------------|
+| `MCQ_A_176-183.json` | none |
+| `MCQ_A_184-190.json` | none |
+| `MCQ_C_141-148.json` | none |
+| `MCQ_C_149-155.json` | none |
+| `MCQ_C_156-163.json` | none |
+| `MCQ_C_164-170.json` | none |
+| `MCQ_C_171-178.json` | none |
+| `MCQ_C_179-185.json` | none |
+| `MCQ_C_186-193.json` | none |
+| `MCQ_C_194-200.json` | none |
+| `CASES_p2_1_CBQ21-A1_D1.json` | none |
+| `CASES_p2_1_CBQ21-B2_E2.json` | none |
+| `CASES_p2_2_CBQ22-B1_F1.json` | none |
+| `CASES_p2_2_CBQ22-A2_D2.json` | none |
+| `CASES_p2_3_CBQ23-C1_E1.json` | none |
+| `CASES_p2_3_CBQ23-C2_F2.json` | none |

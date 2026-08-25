@@ -673,7 +673,7 @@ Domain counts: A = 21, B = 9, C = 11, D = 3, E = 8, F = 0 (ethics is scenario-ba
 
 ---
 
-## Domain E — Investment Decisions (9 formulas)
+## Domain E — Investment Decisions (10 formulas)
 
 ### ID-01 — Net Present Value (NPV)
 
@@ -791,6 +791,19 @@ Domain counts: A = 21, B = 9, C = 11, D = 3, E = 8, F = 0 (ethics is scenario-ba
 | Authority | Capital budgeting theory (Fisher, 1930); IRR decision rule |
 | Common errors | Accepting projects whose IRR is below WACC; Ranking mutually exclusive projects of different scale or timing by IRR; Ignoring the multiple-IRR problem when cash flows change sign more than once |
 | Exam trap | IRR has no closed form — it is found by interpolation or calculator. The IRR method assumes reinvestment at the IRR itself; NPV assumes reinvestment at WACC. For independent projects IRR and NPV agree; for mutually exclusive projects they can conflict. |
+
+### ID-10 — Post-Audit Variance Analysis
+
+| Field | Value |
+|-------|-------|
+| Subsection | Capital Budgeting Control |
+| Notation | `Variance = Actual − Budget (decomposed by line: revenue, variable costs, fixed costs)` |
+| Variables | Actual_t / Budget_t = actual and budgeted amounts for each post-audit line item |
+| Rounding | Nearest whole dollar |
+| Tolerance | 1 dollar |
+| Authority | Capital budgeting control theory; post-completion audit practice |
+| Common errors | Sign errors (reporting unfavorable variances as favorable); Comparing totals without decomposing into drivers; Reporting the variance of a non-comparable period |
+| Exam trap | A post-audit decomposes the operating-income miss into revenue and cost drivers to improve future forecasts. It is not a punishment tool for uncontrollable variances, and acceptance criteria are never changed retroactively. |
 
 ---
 

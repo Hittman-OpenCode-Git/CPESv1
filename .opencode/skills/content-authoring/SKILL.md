@@ -41,14 +41,14 @@ Author  →  Certify  →  Audit later
 | B | Corporate Finance | 20% | `pack_p2_b.js` |
 | C | Decision Analysis | 25% | `pack_p2_c.js` |
 | D | Risk Management | 10% | `pack_p2_d.js` |
-| E | Investment Decisions | 10% | `pack_p2_d.js` |
-| F | Professional Ethics | 15% | `pack_p2_e.js` |
+| E | Investment Decisions | 10% | `pack_p2_e.js` |
+| F | Professional Ethics | 15% | `pack_p2_f.js` |
 
 ### Domain A — Financial Statement Analysis
 
 **Key Topics:** Ratio computation (liquidity, leverage, activity, profitability, market), horizontal/vertical/trend analysis, DuPont decomposition, earnings quality, operating/financial leverage.
 
-**Key Formulas (FA-01 through FA-21):** Foundation/FORMULA_MASTER_P2.md §Domain A — 21 formulas.
+**Key Formulas (FA-01 through FA-25):** `p2/P2005_FORMULA_MASTER.json` §Domain A — 25 formulas (canonical machine-readable registry; `foundation/FORMULA_MASTER_P2.md` lags at 21).
 
 **Bloom's Targets:** Remember 10%, Understand 20%, Apply 45%, Analyze 20%, Evaluate 5%.
 
@@ -66,7 +66,7 @@ Author  →  Certify  →  Audit later
 
 **Key Topics:** Risk and return (beta, CAPM), cost of capital (WACC, component costs), working capital management, capital structure, international finance, FX.
 
-**Key Formulas (CF-01 through CF-09):** Foundation/FORMULA_MASTER_P2.md §Domain B — 9 formulas.
+**Key Formulas (CB-01 through CB-11):** `p2/P2005_FORMULA_MASTER.json` §Domain B — 11 formulas (prefix is `CB-`, not `CF-`).
 
 **Bloom's Targets:** Remember 10%, Understand 20%, Apply 50%, Analyze 15%, Evaluate 5%.
 
@@ -120,7 +120,7 @@ Author  →  Certify  →  Audit later
 
 **Key Topics:** NPV, IRR, payback, discounted payback, profitability index, EAA, capital rationing, real options, after-tax cash flow analysis, MACRS depreciation.
 
-**Key Formulas (ID-01 through ID-08):** Foundation/FORMULA_MASTER_P2.md §Domain E — 8 formulas.
+**Key Formulas (ID-01 through ID-09):** `p2/P2005_FORMULA_MASTER.json` §Domain E — 9 formulas.
 
 **Bloom's Targets:** Remember 10%, Understand 15%, Apply 55%, Analyze 15%, Evaluate 5%.
 
@@ -178,7 +178,7 @@ Exhibit IDs: `{CaseID}-E{N}` (e.g., `CBQ2-A1-E1`)
 | `Topic` | Yes | String | Format: `"{Section}.{NNN} {descriptor}"` |
 | `QuestionID` | Yes | String | Format: `P2-{Section}-{NNN}` |
 | `question_state` | Yes | String | Must start as `"Unprocessed"` |
-| `Part2OnlyFlag` | Yes | Boolean | Must be `true` — enforced by Rule 11 |
+| `Part2OnlyFlag` | Yes | Boolean | Must be `true` — enforced by Rule 13 |
 | `Stem` | Yes | String | Question text |
 | `Choices` | Yes | Object `{A, B, C, D}` | Answer choices |
 | `CorrectChoice` | Yes | String (A-D) | Correct answer letter |
@@ -339,10 +339,12 @@ Before finalizing, verify all governance guard rules (governance_guard_p2.js):
 | Rule | Check |
 |------|-------|
 | Rule 2 | `ExplanationWrong[CorrectChoice]` is `""` (DL-008) |
-| Rule 6 | All 3 non-CC ExplanationWrong slots are non-empty (DL-026) |
+| Rule 6 | All 3 non-CC ExplanationWrong slots are present and non-empty — present-but-empty fires DL-026 (Rule 6), absent fires DL-021 (Rule 10) |
 | Rule 9 | No "No"+affirmative or "Yes"+negative choice lead-in mismatch (DL-037) |
 | Rule 10 | No absent distractor ExplanationWrong fields (DL-021) |
-| Rule 11 | `Part2OnlyFlag` is strictly `true`; QID format is `P2-{Section}-{NNN}` |
+| Rule 13 | `Part2OnlyFlag` is strictly `true` |
+| Rule 14 | QID format is `P2-{Section}-{NNN}` (cross-part boundary) |
+| Rule 11 | Cognitive level passes the AF-3/4/5 classification gates |
 
 ---
 
@@ -445,9 +447,10 @@ Before any Part 2 item leaves "Unprocessed" state, verify:
 | Condition | Action |
 |-----------|--------|
 | Part 1 concept tested as primary topic | **BLOCK** — item is Part 1 material, not Part 2 |
-| Missing Part2OnlyFlag | **BLOCK** — Rule 11 |
+| Missing Part2OnlyFlag | **BLOCK** — Rule 13 |
 | DL-008 violation (non-empty EW[CC]) | **BLOCK** — Rule 2 |
-| DL-026 violation (empty distractor EW) | **BLOCK** — Rule 6 |
+| DL-026 violation (present-but-empty distractor EW) | **BLOCK** — Rule 6 |
+| DL-021 violation (absent distractor EW field) | **BLOCK** — Rule 10 |
 | DL-037 logic inversion in choices | **BLOCK** — Rule 9 |
 | Rule 11 cognitive inflation (AF-3/4/5) | **BLOCK** — recalibrate cognitive level |
 | Formula mismatch with FORMULA_MASTER_P2.md | **BLOCK** — recalculate |
@@ -462,7 +465,7 @@ Before any Part 2 item leaves "Unprocessed" state, verify:
 | Document | Path | Purpose |
 |----------|------|---------|
 | Part 2 Blueprint | `foundation/P2001_PART2_BLUEPRINT_FOUNDATION.md` | Domain taxonomy, LOS, distribution targets |
-| Part 2 Formula Master | `foundation/FORMULA_MASTER_P2.md` | 52 formulas with tolerances, rounding, common errors |
+| Part 2 Formula Master | `p2/P2005_FORMULA_MASTER.json` | Canonical machine-readable registry: 59 formula IDs (FA 25, CB 11, DA 11, RM 3, ID 9). Human-readable: `foundation/FORMULA_MASTER_P2.md` (52 — lags the JSON; sync pending) |
 | Part 2 Certification Standard | `p2/P2002_CERTIFICATION_STANDARD.md` | Six-dimension verification, lifecycle, certification gates |
 | Part 2 QID Standard | `p2/P2003_QID_STANDARD.md` | QID/CaseID/ExhibitID format specifications |
 | Part 2 Content Launch Plan | `p2/P2003_CONTENT_LAUNCH_PLAN.md` | First authoring wave plan and governance checklist |

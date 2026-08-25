@@ -24,7 +24,7 @@ const PACKS = {
 function readPackItems(packLetter) {
   const fp = path.join(P2_DIR, PACKS[packLetter]);
   const content = fs.readFileSync(fp, "utf8");
-  const varName = "pack_p2_" + packLetter + "_questions";
+  const varName = "pack_p2_" + packLetter.toLowerCase() + "_questions";
   try {
     const items = new Function(content + "\nreturn " + varName + ";")();
     return { items, content, varName };

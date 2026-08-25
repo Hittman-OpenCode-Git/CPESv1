@@ -2,7 +2,8 @@
  * Governance Guard P2 — CMA Part 2 Exam Simulator
  *
  * Standalone Node.js module (NOT an OpenCode plugin).
- * Validates P2 items against all 11 governance rules.
+ * Validates P2 items against the ratified 14-rule scheme (numbering matches
+ * .opencode/plugins/governance-guard.js and CURRENT_BASELINES_P2.md §2).
  * CommonJS export: { GovernanceGuardP2 }
  *
  * Dependencies: None (zero-external-dependency, Node.js built-ins only)
@@ -12,15 +13,21 @@
  * RULE 3  (BLOCK) — MASTER_QUESTION_REGISTRY_P2.md is generated, never hand-edited
  * RULE 4  (WARN)  — answer-key changes must include recomputed verification note
  * RULE 5  (BLOCK) — ≤30 question objects per change-set without BLOCK-AUTHORIZED marker
- * RULE 6  (BLOCK) — non-CorrectChoice EW slots must be non-empty (DL-026 enforcement)
+ * RULE 6  (BLOCK) — non-CorrectChoice EW slots present-but-empty (DL-026 enforcement;
+ *                   absent fields are Rule 10/DL-021 — distinct conditions, no double-fire)
  * RULE 7  (BLOCK) — derived registries not hand-edited
  * RULE 8  (BLOCK) — untracked artifact enforcement
  * RULE 9  (BLOCK) — Choice binary lead-in polarity mismatch (DL-037 enforcement)
- * RULE 10 (BLOCK) — non-CorrectChoice EW slots must be present and non-empty (DL-021 enforcement)
- * RULE 11 (BLOCK) — Part2OnlyFlag must be strictly boolean true on every item [P2-only]
- * RULE 12 (BLOCK) — Cognitive-First Assignment (cognitive-gate validation + relabeling prohibition) — S121
+ * RULE 10 (BLOCK) — non-CorrectChoice EW fields ABSENT from object (DL-021 enforcement;
+ *                   present-but-empty is Rule 6/DL-026 — distinct conditions, no double-fire)
+ * RULE 11 (BLOCK) — Cognitive classification gates (AF-3/4/5): missing/invalid CognitiveLevel
+ *                   BLOCK; misclassification WARN — S109P
+ * RULE 13 (BLOCK) — Part2OnlyFlag must be strictly boolean true on every item [P2-only]
+ * RULE 14 (BLOCK) — Cross-part QID boundary (P1- QIDs in P2 packs; P2 QID format)
  *
- * Cross-part collision: reject P1- QIDs in P2 packs, reject CBQ (non-"2") CaseIDs in P2 case packs
+ * Not implemented in this module: RULE 12 (Cognitive-First Assignment relabeling
+ * prohibition — enforced by the OpenCode plugin), P1-exclusive-concept advisory
+ * (checkP1ExclusiveConcepts, unnumbered WARN-class check).
  */
 
 "use strict";
@@ -35,11 +42,11 @@ const BLOCK_AUTH_RE = /BLOCK-AUTHORIZED|batch-authorized|AUTHORIZED-BLOCK/i;
 const RECOMPUTED_RE = /recomputed|independently verified|independently recalculated|re-verified|recomputation verified/i;
 
 /** P2 source files — MCQ packs */
-const P2_PACK_FILE_RE = /^pack_p2_[a-e]\.js$/i;
+const P2_PACK_FILE_RE = /^pack_p2_[a-f]\.js$/i;
 /** P2 source files — case packs */
 const P2_CASE_FILE_RE = /^case_pack_p2_[1-3]\.js$/i;
 /** Combined: any P2 source file */
-const P2_SOURCE_FILE_RE = /^(pack_p2_[a-e]\.js|case_pack_p2_[1-3]\.js)$/i;
+const P2_SOURCE_FILE_RE = /^(pack_p2_[a-f]\.js|case_pack_p2_[1-3]\.js)$/i;
 
 /** Derived registry paths — must NOT be hand-edited */
 const DERIVED_REGISTRY_RE = /(registry[\\\/](packs|domains|cases)[\\\/]|MasterQuestionRegistry_P2\.csv$|MASTER_QUESTION_REGISTRY_P2\.md$|SESSION_STATUS_P2_\d{4}-\d{2}-\d{2}\.md$|CURRENT_BASELINES_P2\.md$|DEFECT_MANIFEST_DL008_DL026_P2\.json$|master_question_registry_p2\.md$)/i;
@@ -240,7 +247,8 @@ function checkDL008(item) {
 }
 
 /**
- * RULE 6 (DL-026): Non-CorrectChoice ExplanationWrong slots must be non-empty.
+ * RULE 6 (DL-026): Non-CorrectChoice ExplanationWrong slots present-but-empty.
+ * Distinct from Rule 10/DL-021: an ABSENT field fires Rule 10 only, not here.
  * @param {object} item
  * @returns {Array<{rule: number, code: string, message: string}>}
  */
@@ -252,11 +260,11 @@ function checkDL026(item) {
   for (const L of ["A", "B", "C", "D"]) {
     if (L === cc) continue;
     const ewKey = "ExplanationWrong" + L;
-    if (!(ewKey in item) || (typeof item[ewKey] === "string" && item[ewKey].length === 0)) {
+    if (ewKey in item && typeof item[ewKey] === "string" && item[ewKey].length === 0) {
       violations.push({
         rule: 6,
         code: "DL-026",
-        message: "ExplanationWrong" + L + " is empty or absent on " + qid + " (distractor slot must be non-empty)"
+        message: "ExplanationWrong" + L + " is empty on " + qid + " (distractor slot must be non-empty; absent fields are DL-021/Rule 10)"
       });
     }
   }
@@ -296,7 +304,8 @@ function checkDL037(item) {
 }
 
 /**
- * RULE 10 (DL-021): Non-CorrectChoice ExplanationWrong fields must be present AND non-empty.
+ * RULE 10 (DL-021): Non-CorrectChoice ExplanationWrong fields must be PRESENT.
+ * Distinct from Rule 6/DL-026: a present-but-empty field fires Rule 6 only, not here.
  * @param {object} item
  * @returns {Array<{rule: number, code: string, message: string}>}
  */
@@ -312,13 +321,7 @@ function checkDL021(item) {
       violations.push({
         rule: 10,
         code: "DL-021",
-        message: "ExplanationWrong" + L + " is absent from object on " + qid
-      });
-    } else if (typeof item[ewKey] === "string" && item[ewKey].length === 0) {
-      violations.push({
-        rule: 10,
-        code: "DL-021",
-        message: "ExplanationWrong" + L + " is empty on " + qid
+        message: "ExplanationWrong" + L + " is absent from object on " + qid + " (present-but-empty fields are DL-026/Rule 6)"
       });
     }
   }
@@ -326,7 +329,7 @@ function checkDL021(item) {
 }
 
 /**
- * RULE 11: Part2OnlyFlag must be strictly boolean true.
+ * RULE 13: Part2OnlyFlag must be strictly boolean true.
  * @param {object} item
  * @returns {Array<{rule: number, code: string, message: string}>}
  */
@@ -335,7 +338,7 @@ function checkPart2OnlyFlag(item) {
   const qid = item.QuestionID || item.ItemID || "(unknown)";
   if (!("Part2OnlyFlag" in item)) {
     violations.push({
-      rule: 11,
+      rule: 13,
       code: "P2-FLAG-ABSENT",
       message: qid + ": Part2OnlyFlag is missing (must be true on every P2 item)"
     });
@@ -344,7 +347,7 @@ function checkPart2OnlyFlag(item) {
   const flag = item.Part2OnlyFlag;
   if (typeof flag !== "boolean") {
     violations.push({
-      rule: 11,
+      rule: 13,
       code: "P2-FLAG-NON-BOOLEAN",
       message: qid + ": Part2OnlyFlag is " + typeof flag + " (" + JSON.stringify(flag) + ") — must be strictly boolean true"
     });
@@ -352,7 +355,7 @@ function checkPart2OnlyFlag(item) {
   }
   if (flag !== true) {
     violations.push({
-      rule: 11,
+      rule: 13,
       code: "P2-FLAG-FALSE",
       message: qid + ": Part2OnlyFlag is false — must be true on every P2 item"
     });
@@ -361,7 +364,7 @@ function checkPart2OnlyFlag(item) {
 }
 
 /**
- * RULE 12 (Cognitive-First Assignment): Validate cognitive level consistency.
+ * RULE 11 (Cognitive Classification Gates, AF-3/4/5): Validate cognitive level consistency.
  * BLOCK: missing CognitiveLevel field. BLOCK: invalid value. WARN: apparent misclassification.
  * @param {object} item
  * @returns {Array<{rule: number, code: string, severity: string, message: string}>}
@@ -374,7 +377,7 @@ function checkCognitiveConsistency(item) {
   // BLOCK: missing CognitiveLevel entirely
   if (!cog) {
     violations.push({
-      rule: 12,
+      rule: 11,
       code: "COG-MISSING",
       severity: "BLOCK",
       message: qid + ": CognitiveLevel field is missing (required for portfolio measurement per S121)"
@@ -386,7 +389,7 @@ function checkCognitiveConsistency(item) {
   const validCL = ["Remember", "Understand", "Apply", "Analyze", "Evaluate"];
   if (!validCL.includes(cog)) {
     violations.push({
-      rule: 12,
+      rule: 11,
       code: "COG-INVALID",
       severity: "BLOCK",
       message: qid + ": CognitiveLevel \"" + cog + "\" is not a valid value (must be one of: " + validCL.join(", ") + ")"
@@ -398,7 +401,7 @@ function checkCognitiveConsistency(item) {
   const diffScore = item.DifficultyScore;
   if (cog === "Evaluate" && diffScore !== undefined && diffScore <= 2) {
     violations.push({
-      rule: 12,
+      rule: 11,
       code: "COG-DIFF-MISMATCH",
       severity: "WARN",
       message: qid + ": CognitiveLevel is \"" + cog + "\" but DifficultyScore is " + diffScore + " (Evaluate requires >= 3)"
@@ -406,7 +409,7 @@ function checkCognitiveConsistency(item) {
   }
   if (cog === "Analyze" && diffScore !== undefined && diffScore === 1) {
     violations.push({
-      rule: 12,
+      rule: 11,
       code: "COG-DIFF-MISMATCH",
       severity: "WARN",
       message: qid + ": CognitiveLevel is \"" + cog + "\" but DifficultyScore is " + diffScore + " (Analyze requires >= 2)"
@@ -421,7 +424,7 @@ function checkCognitiveConsistency(item) {
     const hasTradeOff = /competing|best option|weigh|trade.off|balance|recommend|evaluate|which.*should/i.test(ec);
     if (hasRuleRef && !hasTradeOff) {
       violations.push({
-        rule: 12,
+        rule: 11,
         code: "COG-INFLATION-RULE",
         severity: "WARN",
         message: qid + ": CognitiveLevel is \"" + cog + "\" but stem invokes a deterministic rule without trade-off language — may be Apply"
@@ -439,7 +442,7 @@ function checkCognitiveConsistency(item) {
     const looksLikeDefinition = defPatterns.some(p => p.test(stem));
     if (looksLikeDefinition && !/(Compute|Calculate|Determine|Analyze|Evaluate|Recommend|Compare|Interpret)/i.test(stem)) {
       violations.push({
-        rule: 12,
+        rule: 11,
         code: "COG-INFLATION-DEF",
         severity: "WARN",
         message: qid + ": CognitiveLevel is \"" + cog + "\" but stem appears to be a definition/recall question — may be Remember/Understand"
@@ -461,7 +464,7 @@ function checkCrossPartCollision(item) {
   // Reject P1- QIDs in P2 packs
   if (qid && P1_QID_RE.test(qid)) {
     violations.push({
-      rule: 0,
+      rule: 14,
       code: "CROSS-PART-QID",
       message: qid + " has P1- QID prefix in a P2 pack file — rejected"
     });
@@ -471,7 +474,7 @@ function checkCrossPartCollision(item) {
     // Only flag if it looks like it should be a P2 QID (not a case item)
     if (!P2_CASEID_RE.test(qid) && !P1_QID_RE.test(qid)) {
       violations.push({
-        rule: 0,
+        rule: 14,
         code: "QID-FORMAT",
         message: qid + " does not match expected P2 QID format /^P2-[A-F]-\\d{3}$/"
       });
@@ -560,9 +563,11 @@ class GovernanceGuardP2 {
 
     allViolations.push(...checkP1ExclusiveConcepts(item));
 
-    // BLOCK-level violations cause pass=false (structural rules 2,5,6,9,10,11 are BLOCK)
+    // BLOCK-level violations cause pass=false (structural rules 2,5,6,9,10 are BLOCK;
+    // rule 11 cognitive gates BLOCK; rule 13 Part2OnlyFlag BLOCK; rule 14 cross-part BLOCK;
+    // rule 0 = unnumbered checks: FILE-READ-ERROR, P1-EXCLUSIVE-WARN)
     const blockViolations = allViolations.filter(
-      v => v.rule === 2 || v.rule === 5 || v.rule === 6 || v.rule === 9 || v.rule === 10 || v.rule === 11 || v.rule === 12 || v.rule === 0
+      v => v.rule === 2 || v.rule === 5 || v.rule === 6 || v.rule === 9 || v.rule === 10 || v.rule === 11 || v.rule === 13 || v.rule === 14 || v.rule === 0
     );
 
     return {
@@ -626,7 +631,8 @@ class GovernanceGuardP2 {
   /**
    * Validate a change-set (batch of content to be written).
    * Checks: Rule 2 (DL-008), Rule 5 (batch cap), Rule 6 (DL-026), Rule 9 (DL-037),
-   *         Rule 10 (DL-021), Rule 11 (Part2OnlyFlag).
+   *         Rule 10 (DL-021), Rule 13 (Part2OnlyFlag), Rule 11 (cognitive gates),
+   *         Rule 14 (cross-part boundary).
    * @param {string} newContent — the content being written
    * @param {string} filePath — the target file path (for context)
    * @returns {{ pass: boolean, violations: Array }}
@@ -653,18 +659,18 @@ class GovernanceGuardP2 {
     for (const item of items) {
       // RULE 2 (DL-008)
       allViolations.push(...checkDL008(item));
-      // RULE 6 (DL-026)
+      // RULE 6 (DL-026) — present-but-empty only
       allViolations.push(...checkDL026(item));
       // RULE 9 (DL-037)
       allViolations.push(...checkDL037(item));
-      // RULE 10 (DL-021)
+      // RULE 10 (DL-021) — absent only
       allViolations.push(...checkDL021(item));
-      // RULE 11 (Part2OnlyFlag) — only for P2 source files
+      // RULE 13 (Part2OnlyFlag) + RULE 11 (cognitive gates) — only for P2 source files
       if (isP2Source) {
     allViolations.push(...checkPart2OnlyFlag(item));
     allViolations.push(...checkCognitiveConsistency(item));
       }
-      // Cross-part collision
+      // RULE 14 (Cross-part QID boundary)
       allViolations.push(...checkCrossPartCollision(item));
     }
 
