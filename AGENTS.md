@@ -9,7 +9,7 @@
 
 ## 1. Governance Guard Plugin — Registered, Do Not Re-Litigate
 
-The `governance-guard` plugin is registered at `.opencode/plugins/governance-guard.js` (393 lines) and listed in `opencode.json` under `"plugin"`. It enforces 10 rules, all at BLOCK level (upgraded S221):
+The `governance-guard` plugin is registered at `.opencode/plugins/governance-guard.js` (563 lines) and listed in `opencode.json` under `"plugin"`. It enforces 14 rules, all at BLOCK level (upgraded S221). This numbering is the single source of truth — the standalone `scripts/governance_guard_p2.js` and the `content-authoring` skill use the same numbers:
 
 | Rule | Level | Behavior |
 |------|-------|----------|
@@ -18,13 +18,17 @@ The `governance-guard` plugin is registered at `.opencode/plugins/governance-gua
 | RULE 3 | **BLOCK** | MASTER_QUESTION_REGISTRY.md is generated — never hand-edit |
 | RULE 4 | **BLOCK** | answer-key changes must include a "recomputed" / "independently verified" note |
 | RULE 5 | **BLOCK** | Max 30 question objects per change-set without `BLOCK-AUTHORIZED` marker |
-| RULE 6 | **BLOCK** | non-CorrectChoice ExplanationWrong slots must be non-empty (DL-026 enforcement) |
+| RULE 6 | **BLOCK** | non-CorrectChoice ExplanationWrong slots present-but-empty (DL-026 enforcement). Distinct from Rule 10 — an absent field fires Rule 10 only, never Rule 6. |
 | RULE 7 | **BLOCK** | DERIVED_REGISTRY_NOT_AUTHORITATIVE — no hand-editing derived registries |
 | RULE 8 | **BLOCK** | UNTRACKED_ARTIFACT — session packages must be registered |
 | RULE 9 | **BLOCK** | Choice binary lead-in polarity mismatch (DL-037 enforcement) |
-| RULE 10 | **BLOCK** | non-CorrectChoice ExplanationWrong slots must be present and non-empty (DL-021 enforcement) |
+| RULE 10 | **BLOCK** | non-CorrectChoice ExplanationWrong fields ABSENT from the object (DL-021 enforcement). Distinct from Rule 6 — a present-but-empty field fires Rule 6 only, never Rule 10. |
+| RULE 11 | **BLOCK** | Cognitive classification gates (AF-3/4/5): missing/invalid CognitiveLevel BLOCK; misclassification WARN — S109P |
+| RULE 12 | **BLOCK** | Cognitive-First Assignment (cognitive relabeling without content change prohibition) — S121 |
+| RULE 13 | **BLOCK** | Part2OnlyFlag must be strictly boolean true on every P2 MCQ item (P2 schema enforcement) |
+| RULE 14 | **BLOCK** | Cross-part QID boundary: P1- QIDs blocked in P2 packs; P2- QIDs blocked in P1 packs |
 
-**The plugin is already active.** Do not ask permission or re-confirm registration each session. The test suite is at `scripts/test_governance_guard.js` (54 tests, all BLOCK-validated).
+**The plugin is already active.** Do not ask permission or re-confirm registration each session. The test suite is at `scripts/test_governance_guard.js` (74 tests, all validated; run via `npm run preflight`).
 
 ---
 
@@ -321,15 +325,16 @@ Governance exists to serve content integrity and learner safety. Every governanc
 
 ## 15. Workflow Helpers
 
-Three npm scripts are available for session workflow:
+Four npm scripts are available for session workflow:
 
 | Command | What It Does | When To Use |
 |---------|-------------|-------------|
 | `npm run preflight` | QID counts, parse check, certified counts, cross-check against CURRENT_BASELINES.md, governance guard test suite | **Full Lane: T0 mandatory.** Light Lane: recommended. |
 | `npm run smoke` | Playwright UI smoke test — verifies app loads, MCQ banks present, May coaching layer active | **Light Lane: Tend mandatory** after app/UI changes. Full Lane: optional. |
 | `npm run pipeline` | validate → build-registry → dashboard (full content validation + registry rebuild + dashboard) | **Full Lane: Tend required** after content/regeneration work. |
+| `npm run probe-model` | Dynamic agent/model token-budget probe (`scripts/model_limit_probe.js`) — measures real per-item emission demand from the P2 packs, projects v1.1 evidence-package size, probes the provider endpoint for each model's live max context, and reports whether declared `opencode.json` limits are adequate. Report-only by default; `--apply` writes recommended limits (auto-backup). Exit 1 = undersized. | **Before any authoring wave that depends on local models**, and before any P2_SCHEMA_STANDARD gate flip (e.g., v1.1 `--enforce`). Do not trust static limits when demand grows. |
 
-All three scripts exit 0 on pass, non-zero on failure. They are READ-ONLY and safe to run at any time.
+All four scripts exit 0 on pass, non-zero on failure. Preflight/smoke/pipeline are READ-ONLY and safe to run at any time. `probe-model` is read-only unless `--apply` is passed explicitly.
 
 ---
 

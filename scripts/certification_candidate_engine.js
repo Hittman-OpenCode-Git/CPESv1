@@ -1,21 +1,19 @@
 // Certification Candidate Engine — SESSION 850 Board A
-// Scans all packs and identifies READY inventory for certification waves.
-// Applies structural, identity, and governance readiness checks.
+// Migration 3 (DL-036 C2 fix): this engine is now a DOWNSTREAM CONSUMER of
+// scripts/output/readiness_scoring.json. Classification authority is the
+// Readiness Scorer; this tool enriches each scored item with pack-file
+// detail (domain, EW pattern, defect flags). Local QID patterns retired —
+// identity authority lives in engine/pack_reader.getQIDFormatRegex().
 // Output: scripts/output/certification_candidates.json
 const fs = require('fs');
 const path = require('path');
 const pr = require('./engine/pack_reader');
 
 const ROOT = path.resolve(__dirname, '..');
+const PACKS_DIR = path.join(ROOT, 'content', 'packs');
 const OUTPUT_DIR = path.join(__dirname, 'output');
 const PACKS = ['pack_a', 'pack_b', 'pack_c', 'pack_d', 'pack_e'];
-const QID_PATTERNS = {
-  pack_a: /^P1-[A-F]-\d{3}$/,
-  pack_b: /^P1B-[A-F]-\d{3}$/,
-  pack_c: /^P1-[A-F]C-\d{3}$/,
-  pack_d: /^P1-[A-F]D-\d{3}$/,
-  pack_e: /^P1E-[A-F]-\d{3}$/
-};
+const SCORER_ARTIFACT = path.join(__dirname, 'output', 'readiness_scoring.json');
 const VALID_CCS = ['A', 'B', 'C', 'D'];
 const DOMAINS = ['A', 'B', 'C', 'D', 'E', 'F'];
 const DOMAIN_NAMES = {
@@ -36,6 +34,30 @@ function loadDefectManifest() {
   } catch (e) {
     return null;
   }
+}
+
+/**
+ * DL-045 doctrine guards + load: the scorer artifact is mandatory upstream
+ * evidence. Refuse to run without it, on an empty scoring, or when any pack
+ * hash has moved since the scorer ran.
+ */
+function loadScoringArtifact() {
+  if (!fs.existsSync(SCORER_ARTIFACT)) {
+    throw new Error('NO SCORER ARTIFACT — run scripts/readiness_scorer.js first (DL-045 doctrine).');
+  }
+  const artifact = JSON.parse(fs.readFileSync(SCORER_ARTIFACT, 'utf8'));
+  if (!Array.isArray(artifact.items) || artifact.items.length === 0) {
+    throw new Error('EMPTY SCORER ARTIFACT — upstream scored zero items. Refusing to run (DL-045 doctrine).');
+  }
+  const recorded = artifact.packFileHashes || {};
+  const stale = [];
+  for (const packName of PACKS) {
+    if (recorded[packName] !== pr.getPackFileHash(packName, PACKS_DIR)) stale.push(packName);
+  }
+  if (stale.length > 0) {
+    throw new Error(`STALE SCORER ARTIFACT — pack hashes diverge for: ${stale.join(', ')}. Re-run readiness_scorer.js.`);
+  }
+  return artifact;
 }
 
 function isBlockedInManifest(qid, manifest) {
@@ -211,10 +233,23 @@ function run() {
   const timestamp = new Date().toISOString();
   const manifest = loadDefectManifest();
 
+  // ── Upstream evidence first (DL-036 C2: consume, don't re-classify) ──
+  const scoring = loadScoringArtifact();
+  const upstreamByQid = new Map();
+  for (const it of scoring.items) {
+    upstreamByQid.set(it.qid, it);
+  }
+
   const results = {
     specId: 'SESSION850_CANDIDATE_ENGINE_SPEC',
     board: 'A',
     generatedTimestamp: timestamp,
+    consumedArtifact: {
+      path: 'scripts/output/readiness_scoring.json',
+      sessionId: scoring.sessionId || null,
+      scorerTimestamp: scoring.timestamp || null,
+      classificationAuthority: 'readiness_scorer'
+    },
     summary: { totalScanned: 0, totalReady: 0, totalRemediate: 0, totalBlocked: 0, totalAlreadyCertified: 0, totalArchived: 0 },
     byDomain: {},
     byPack: {},
@@ -231,18 +266,27 @@ function run() {
   for (const packName of PACKS) {
     let items;
     try {
-      items = pr.parsePackFile(packName, ROOT);
+      items = pr.parsePackFile(packName, PACKS_DIR);
     } catch (e) {
-      results.byPack[packName] = { error: e.message, total: 0, ready: 0 };
-      continue;
+      // Strict: the scorer already proved these files parse. A failure here
+      // means drift between scorer run and now — refuse rather than emit
+      // a partial scan that looks clean.
+      throw new Error('PACK PARSE FAILED during candidate enrichment — ' + packName + ': ' + e.message);
     }
 
     const validItems = items.filter(i => i && i.QuestionID);
     const packResult = { total: validItems.length, ready: 0, remediate: 0, blocked: 0, certified: 0, archived: 0, pct: 0.0 };
-    const qidPattern = QID_PATTERNS[packName];
+    const qidPattern = pr.getQIDFormatRegex(packName);
 
     for (const item of validItems) {
+      const upstream = upstreamByQid.get(item.QuestionID);
+      if (!upstream) {
+        throw new Error('EVIDENCE CHAIN GAP — ' + item.QuestionID + ' present in pack file but absent from scorer artifact. Re-run readiness_scorer.js.');
+      }
       const readiness = evaluateReadiness(item, packName, qidPattern, manifest);
+      // Classification authority: upstream scorer (DL-036 C2).
+      readiness.state = upstream.readinessState;
+      readiness.reason = upstream.blockReason || readiness.reason;
       const qid = item.QuestionID;
       const section = (item.Section || item.Topic || '?').toString().charAt(0).toUpperCase();
       const domain = DOMAINS.includes(section) ? section : '?';
@@ -262,6 +306,7 @@ function run() {
         defectFlags: readiness.defects,
         warnings: readiness.warnings || [],
         blockReason: readiness.reason,
+        upstreamBlockReason: upstream.blockReason || null,
         readinessScore: readiness.score,
         ewPattern: readiness.ewPattern
       };
@@ -312,6 +357,20 @@ function run() {
 
     packResult.pct = packResult.total > 0 ? parseFloat((packResult.ready / packResult.total * 100).toFixed(1)) : 0.0;
     results.byPack[packName] = packResult;
+  }
+
+  // ── DL-036 regression invariant: totals must mirror the upstream scorer ──
+  const up = scoring.portfolioReadiness.byState;
+  const mine = {
+    BLOCKED: results.summary.totalBlocked,
+    REMEDIATE: results.summary.totalRemediate,
+    READY: results.summary.totalReady,
+    CERTIFY: results.summary.totalAlreadyCertified
+  };
+  for (const k of Object.keys(up)) {
+    if ((mine[k] || 0) !== (up[k] || 0)) {
+      throw new Error(`PARITY FAILURE vs scorer artifact (${k}: engine ${mine[k] || 0} vs scorer ${up[k] || 0})`);
+    }
   }
 
   const outputPath = path.join(OUTPUT_DIR, 'certification_candidates.json');

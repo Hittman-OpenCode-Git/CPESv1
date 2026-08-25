@@ -1880,7 +1880,7 @@ var MCQ_BANK_A = [
     ],
     "ExplanationWrongA": "This adds assets and liabilities. To solve for equity, liabilities are subtracted from assets.",
     "ExplanationWrongB": "This is $15,000 above the calculated equity and does not follow from assets minus liabilities.",
-    "ExplanationWrongC": "This is total liabilities, not total equity.",
+    "ExplanationWrongC": "Option C ($148,100) simply restates total liabilities. The candidate identified liabilities correctly but never finished applying the accounting equation: equity is the residual after liabilities are deducted from assets, $367,300 - $148,100 = $219,200.",
     "ExplanationWrongD": "",
     "DifficultyScore": 2,
     "CognitiveLevel": "Apply"
@@ -2404,7 +2404,7 @@ var MCQ_BANK_A = [
       "Distractors written as plausible CMA-style traps"
     ],
     "ExplanationWrongA": "This is $15,000 above the calculated equity and does not equal assets minus liabilities.",
-    "ExplanationWrongB": "This is total liabilities, not equity.",
+    "ExplanationWrongB": "Option B ($169,100) echoes Vantage total liabilities rather than reporting equity. Treating liabilities as the residual reverses the accounting equation; equity is what remains after liabilities are deducted from assets, $410,300 - $169,100 = $241,200.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "This adds assets and liabilities. The accounting equation requires subtracting liabilities to solve for equity.",
     "DifficultyScore": 2,
@@ -2927,7 +2927,7 @@ var MCQ_BANK_A = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "This is total liabilities, not total equity.",
+    "ExplanationWrongA": "Option A ($190,100) repeats Granite total liabilities figure. This stops one step short of the required calculation: under the accounting equation, equity equals assets minus liabilities, $453,300 - $190,100 = $263,200.",
     "ExplanationWrongB": "This adds assets and liabilities. Equity is assets minus liabilities.",
     "ExplanationWrongC": "This is $15,000 above the calculated equity and does not follow from the accounting equation.",
     "ExplanationWrongD": "",
@@ -3452,7 +3452,7 @@ var MCQ_BANK_A = [
       "Answer key distribution balanced across A/B/C/D",
       "Distractors written as plausible CMA-style traps"
     ],
-    "ExplanationWrongA": "This is total liabilities, not total equity.",
+    "ExplanationWrongA": "Option A ($211,100) carries Quartz liabilities number into the answer slot unchanged. Equity is not a second name for liabilities; it is the remainder after they are deducted from assets, $496,300 - $211,100 = $285,200.",
     "ExplanationWrongB": "This adds assets and liabilities. Equity is the residual amount after liabilities are subtracted from assets.",
     "ExplanationWrongC": "",
     "ExplanationWrongD": "This is $15,000 above the calculated equity and does not follow from assets minus liabilities.",

@@ -1,0 +1,42 @@
+{
+    "Part": 1,
+    "Section": "F",
+    "SectionName": "Technology and Analytics",
+    "Topic": "B-F.100 privacy regulations",
+    "MicroTopic": "CCPA basics",
+    "UniqueConceptKey": "B-F-100-CCPA-basics",
+    "LOSTag": "Privacy Regulations (GDPR, CCPA)",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Vanguard Corp collects personal information from California residents for its marketing activities. Under the California Consumer Privacy Act (CCPA), consumers have the right to:",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "CCPA grants California consumers the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale of personal information, and the right to non-discrimination for exercising these rights. These requirements have significant implications for data management and accounting systems.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1B-F-100",`n    "question_state": "Certified",100: true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Request deletion of their personal information held by the business",
+      "B": "Opt out of the sale of their personal information to third parties",
+      "C": "All of the above",
+      "D": "Request that a business disclose the categories and specific pieces of personal information collected about them"
+    },
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax: Principles of Accounting, Technology and Analytics",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
+    ],
+    "ExplanationWrongA": "The right to know is one right, but CCPA also grants deletion and opt-out rights.",
+    "ExplanationWrongB": "The opt-out right is one right, but CCPA also grants the right to know and delete.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "While the right to know what personal information is collected is a CCPA right, this is only one of several rights. 'All of the above' is the most complete answer."
+  }

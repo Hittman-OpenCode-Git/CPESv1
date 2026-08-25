@@ -125,7 +125,8 @@ export const GovernanceGuard = async ({ client }) => {
       for (const L of letters) {
         if (L === cc) continue;
         const ewKey = 'ExplanationWrong' + L;
-        if (!(ewKey in obj) || (typeof obj[ewKey] === 'string' && obj[ewKey].length === 0)) {
+        // DL-026 = present-but-empty ONLY. Absent fields are DL-021 (Rule 10).
+        if (ewKey in obj && typeof obj[ewKey] === 'string' && obj[ewKey].length === 0) {
           violations.push({ letter: L, qid: obj.QuestionID || '(unknown)' });
         }
       }
@@ -167,10 +168,9 @@ export const GovernanceGuard = async ({ client }) => {
       for (const L of letters) {
         if (L === cc) continue;
         const ewKey = 'ExplanationWrong' + L;
+        // DL-021 = ABSENT only. Present-but-empty fields are DL-026 (Rule 6).
         if (!(ewKey in obj)) {
           violations.push({ letter: L, qid: obj.QuestionID || '(unknown)', reason: 'absent' });
-        } else if (typeof obj[ewKey] === 'string' && obj[ewKey].length === 0) {
-          violations.push({ letter: L, qid: obj.QuestionID || '(unknown)', reason: 'empty' });
         }
       }
     }
@@ -340,20 +340,20 @@ export const GovernanceGuard = async ({ client }) => {
         );
       }
 
-      // ── RULE 6: BLOCK DL-026 (empty distractor EW slots) ──────
+      // ── RULE 6: BLOCK DL-026 (present-but-empty distractor EW slots) ──────
       const dl026 = findDL026Violations(checkText);
       if (dl026.length > 0) {
         const lines = dl026
-          .map(v => `  ExplanationWrong${v.letter} is empty/absent on ${v.qid}`)
+          .map(v => `  ExplanationWrong${v.letter} is empty on ${v.qid}`)
           .join("\n");
         throw new Error(
           `GOVERNANCE RULE 6 — BLOCKED (DL-026 empty distractor slot)\n` +
-          `${dl026.length} non-CorrectChoice ExplanationWrong slot(s) are empty or absent:\n` +
+          `${dl026.length} non-CorrectChoice ExplanationWrong slot(s) are present but empty:\n` +
           `${lines}\n\n` +
           "Per CAQS_v1.0.md §4.4: every distractor ExplanationWrong slot\n" +
           "(the 3 slots NOT matching CorrectChoice) must contain choice-specific\n" +
-          "explanatory text. Empty/missing distractor slots deprive learners of\n" +
-          "educational feedback on incorrect selections."
+          "explanatory text. (Absent fields are DL-021 / RULE 10.) Empty distractor\n" +
+          "slots deprive learners of educational feedback on incorrect selections."
         );
       }
 
@@ -381,10 +381,11 @@ export const GovernanceGuard = async ({ client }) => {
           .join("\n");
         throw new Error(
           `GOVERNANCE RULE 10 — BLOCKED (DL-021 absent distractor ExplanationWrong)\n` +
-          `${dl021.length} non-CorrectChoice ExplanationWrong slot(s) are absent or empty:\n` +
+          `${dl021.length} non-CorrectChoice ExplanationWrong slot(s) are absent from the object:\n` +
           `${lines}\n\n` +
           "Per DL-021: every distractor ExplanationWrong slot must be present\n" +
-          "and contain choice-specific text. Absent distractor slots deprive\n" +
+          "and contain choice-specific text. (Present-but-empty fields are\n" +
+          "DL-026 / RULE 6.) Absent distractor slots deprive\n" +
           "learners of educational feedback on incorrect selections (see\n" +
           "DEFECT_LIBRARY.md DL-021 — Pack E Section C)."
         );

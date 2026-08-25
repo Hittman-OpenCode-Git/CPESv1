@@ -671,7 +671,7 @@ const ENHANCED_CASE_BASE = [
                 "question_status": "Active",
                 "Difficulty": "Moderate",
                 "DifficultyScore": 3
-            }
+            },
             {
                 "Type": "multi",
                 "Prompt": "Select items that reduce consolidated income, assets, or accumulated OCI/equity in this case.",
@@ -2129,7 +2129,7 @@ const ENHANCED_CASE_BASE = [
                 "Difficulty": "Moderate",
                 "DifficultyScore": 3,
                 "ModifiedDate": "2026-07-26"
-            }
+            },
             {
                 "Type": "multi",
                 "Prompt": "Select reasons residual income may improve goal congruence compared with ROI.",
@@ -5041,7 +5041,7 @@ const ENHANCED_CASE_BASE = [
                 "Difficulty": "Difficult",
                 "DifficultyScore": 4,
                 "ModifiedDate": "2026-07-26"
-            }
+            },
             {
                 "Type": "multi",
                 "Prompt": "Select likely leading indicators of future financial performance.",

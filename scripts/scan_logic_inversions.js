@@ -12,6 +12,7 @@
 
 const path = require("path");
 const fs = require("fs");
+const { parsePack, SEVERITY } = require("./lib/pack_parser");
 
 // ── Regex patterns ─────────────────────────────────────────────
 
@@ -19,42 +20,30 @@ const PATTERN_NO_AFFIRMATIVE = /^No,.*\b(should be investigated|should be accept
 
 const PATTERN_YES_NEGATIVE = /^Yes,.*\b(should not|shouldn't|is not\b|isn't|would not|wouldn't|cannot|must not|is incorrect|is inappropriate|is not correct|is not appropriate|is not warranted|should not be|it should not|therefore it is not|thus it is not|hence it is not)\b/i;
 
-// ── Object extraction (same as governance guard) ────────────────
+// ── Object extraction (Migration 2: canonical parser) ────────────
+// Legacy raw-text brace-scan replaced by scripts/lib/pack_parser.js —
+// string-aware per-object parsing with zero-silent-drop accounting.
+// Malformed regions surface as loud errors instead of silent omissions.
 
-function extractObjectsFromText(text) {
-  const objects = [];
-  let pos = 0;
-  while (pos < text.length) {
-    const objStart = text.indexOf('{', pos);
-    if (objStart === -1) break;
-    let depth = 1;
-    let i = objStart + 1;
-    let inString = false, stringChar = '', escape = false;
-    while (depth > 0 && i < text.length) {
-      const ch = text[i];
-      if (escape) { escape = false; i++; continue; }
-      if (inString) {
-        if (ch === '\\') { escape = true; }
-        else if (ch === stringChar) { inString = false; stringChar = ''; }
-        i++; continue;
-      }
-      if (ch === '"' || ch === "'") { inString = true; stringChar = ch; i++; continue; }
-      if (ch === '{') depth++;
-      else if (ch === '}') depth--;
-      i++;
+function extractObjectsFromText(text, sourceName, errorSink) {
+  const parsed = parsePack(text, { sourceName: sourceName || "(input)" });
+  const banks = parsed.banks.filter(b => /^MCQ_BANK_/.test(b.name)).map(b => b.name);
+  if (banks.length === 0) return [];
+  const bankSet = new Set(banks);
+  for (const d of parsed.diagnostics) {
+    if (d.bank && !bankSet.has(d.bank)) continue;
+    const line = `[${sourceName}] ${d.code} @line ${d.line}: ${d.message}`;
+    if (d.severity === SEVERITY.ERROR) {
+      if (errorSink) errorSink.errors.push(line);
+      else console.error(line);
+    } else {
+      if (errorSink) errorSink.warnings.push(line);
+      else console.warn(line);
     }
-    if (depth !== 0) break;
-    const objText = text.substring(objStart, i);
-    let obj = null;
-    try { obj = JSON.parse(objText); } catch (e) {
-      try { obj = new Function('return (' + objText + ')')(); } catch (e2) {}
-    }
-    if (obj && typeof obj === 'object' && !Array.isArray(obj) && obj.Choices) {
-      objects.push(obj);
-    }
-    pos = i;
   }
-  return objects;
+  return parsed.records
+    .filter(r => bankSet.has(r.bank))
+    .map(r => r.object);
 }
 
 // ── Detection ──────────────────────────────────────────────────
@@ -118,7 +107,8 @@ for (const { name, varName } of packFiles) {
 
   try {
     const rawText = fs.readFileSync(filePath, "utf-8");
-    const objects = extractObjectsFromText(rawText);
+    const errorSink = { errors: [], warnings: [] };
+    const objects = extractObjectsFromText(rawText, name, errorSink);
 
     const hits = [];
     for (const obj of objects) {
@@ -131,7 +121,9 @@ for (const { name, varName } of packFiles) {
     results.packResults[name] = {
       itemsScanned: objects.length,
       inversions: hits.length,
-      hits
+      hits,
+      parseErrors: errorSink.errors,
+      parseWarnings: errorSink.warnings
     };
     results.totalItems += objects.length;
     results.totalInversions += hits.length;

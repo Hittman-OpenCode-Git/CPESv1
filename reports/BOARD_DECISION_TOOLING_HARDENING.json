@@ -1,0 +1,141 @@
+{
+  "record": "BOARD_DECISION_TOOLING_HARDENING",
+  "program": "200-Series Framework v2 Stewardship Execution",
+  "date": "2026-08-24",
+  "session_lane": "Governance Light (determination only)",
+  "companion_markdown": "reports/BOARD_DECISION_TOOLING_HARDENING.md",
+  "stop_conditions_fired": [],
+  "charter_framing": {
+    "classification": "instrument_calibration_not_architecture_construction",
+    "basis": [
+      "DL-020: string-unaware brace-matcher silently dropped objects; 336 real DL-008 items missed",
+      "DL-029: CC-offset forward-scans produced ~885 phantom violations",
+      "DL-036: zero artifact reuse between pipeline stages; 40-item routing divergence",
+      "DL-019: concurrent-write overwrite of 432 remediated items; lock protocol documented but unimplemented"
+    ]
+  },
+  "verification_probes": [
+    {
+      "id": "calm-amber-raven",
+      "agent": "general",
+      "purpose": "Plugin-resolution evidence for Item 4 gate",
+      "outcome": "status_complete_empty_output",
+      "verdict": "EVIDENCE_GATE_FAILED"
+    },
+    {
+      "id": "keen-amber-owl",
+      "agent": "explore",
+      "purpose": "Large-file delegation capability for Item 5 gate",
+      "outcome": "status_complete_empty_output",
+      "verdict": "EVIDENCE_GATE_FAILED"
+    }
+  ],
+  "new_findings": [
+    {
+      "finding": "Background delegation returns status=complete with empty output on trivial read-only tasks",
+      "evidence": ["calm-amber-raven", "keen-amber-owl"],
+      "recommended_dl_id": "DL-044",
+      "dl_class": "Process / Methodology",
+      "filing_owner": "next Full Governance Lane session",
+      "interim_policy": "Board investigations route through foreground task agents until DL-044 closes"
+    }
+  ],
+  "determinations": {
+    "item_1_canonical_pack_parser": {
+      "verdict": "APPROVED",
+      "priority": 1,
+      "target": "scripts/lib/pack_parser.js",
+      "closes": ["DL-020", "DL-029", "DL-036"],
+      "execution_lane": { "module_build": "Light", "consumer_migrations": "Full" },
+      "conditions": [
+        "Conformance harness before any consumer migrates: per-pack object counts equal raw grep -c '\"QuestionID\"' baselines",
+        "CorrectChoice always read from same enclosing object as ExplanationWrong fields (DL-029 rule)",
+        "String-aware matching proven against historical corruption corpus (DL-017 backtick artifacts, brackets-in-stems)",
+        "No silent drops: malformed regions surface as errors",
+        "One consumer per change-set; two consecutive agreeing scans (AGENTS.md §6) before next migration"
+      ]
+    },
+    "item_2_file_lock_plugin": {
+      "verdict": "APPROVED_AMENDED",
+      "priority": 2,
+      "closes": ["DL-019"],
+      "execution_lane": "Full",
+      "conditions": [
+        "Locks cover edit/write paths only; read-only tools never blocked",
+        "Staleness TTL/liveness; stale locks broken automatically with logged warning",
+        "Explicit override flag requiring justification string (logged)",
+        "AMENDMENT: session.idle post-write rescan invokes local scripts/foreground agents, never background delegation"
+      ]
+    },
+    "item_3_budget_injection_hook": {
+      "verdict": "APPROVED",
+      "priority": 3,
+      "execution_lane": "Light",
+      "conditions": [
+        "chat.params reads latest probe-model output and injects current limits into authoring context",
+        "Missing/stale output: inject nothing + warn; never fabricate limits"
+      ]
+    },
+    "item_4_dead_plugin_config_cleanup": {
+      "verdict": "APPROVED_CONDITIONAL",
+      "priority": 0,
+      "execution_lane": "Light",
+      "gate": "Board received no independent resolution evidence (probe empty); executing session must verify pre-write",
+      "pre_write_steps": [
+        "Read opencode.json plugin array verbatim",
+        "Confirm each bare npm name non-resolvable via node_modules glob + package.json dependency check (reported names: background-agents, goal-plugin, vibeguard, conductor, websearch-cited)",
+        "Confirm local entries governance-guard.js and stem-similarity-guard.js resolve; do not touch them",
+        "Back up opencode.json"
+      ],
+      "post_write_steps": [
+        "npm run preflight green (guard loads, full suite passes)"
+      ],
+      "fallback": "Any name that resolves or is referenced elsewhere stays and is logged"
+    },
+    "item_5_agents_md_9_4_update": {
+      "verdict": "REJECTED_AS_PROPOSED",
+      "replacement_action": "Retain §9.4 as written (prefer task over delegate); append dated retest annotation: 2026-08-24 two background delegations returned status=complete with empty output on trivial read-only tasks",
+      "rationale": "Audit premise failed live verification 2/2; documented guidance must not be flipped on unverified claims"
+    }
+  },
+  "sequencing": ["item_4_gated", "item_1", "item_2", "item_3"],
+  "execution_item_4": {
+    "date": "2026-08-24",
+    "verification_agent": "stewardship-inspector (foreground task ses_fcbb7fd2cffez3X0q5xVUh1j96)",
+    "evidence": {
+      "actual_names": ["opencode-background-agents", "opencode-goal-plugin", "opencode-vibeguard", "opencode-conductor", "opencode-websearch-cited"],
+      "node_modules_resolution": "none (prefixed and unprefixed globs checked)",
+      "package_json": "no dependencies key; devDependencies = electron ^33.4.11, playwright ^1.61.1 only",
+      "lockfiles": "absent from root package-lock.json and .opencode/package-lock.json",
+      "local_plugins_confirmed": { ".opencode/plugins/governance-guard.js": 563, ".opencode/plugins/stem-similarity-guard.js": 284 },
+      "cross_references": "documentation-only (archived DL012 proposal; EXTERNAL_INTEGRATION_DECISION_RECORD.md); no functional dependency; 'semiconductor' substring false positives excluded"
+    },
+    "standing_decision_check": "EXTERNAL_INTEGRATION_DECISION_RECORD.md reviewed - no decision overturned; record itself stale (cites absent opencode-supermemory); capability-table annotation recommended as follow-up",
+    "backup": "backups/opencode.json.bak-20260824153100",
+    "change": "plugin array 7 -> 2 entries (local guards retained); file 140 -> 135 lines; no other keys modified",
+    "post_edit_structural_verification": "PASS",
+    "runtime_confirmation": {
+      "command": "npm run preflight",
+      "date": "2026-08-24",
+      "exit_code": 0,
+      "divergences": 0,
+      "certified_total": 2620,
+      "guard_suite": "74/74 PASS",
+      "pack_parse": "A-D: 500 QIDs each; E: 620"
+    },
+    "gate_status": "CLOSED",
+    "pending_action": "none - gate closed 2026-08-24",
+    "environment_finding": "Foreground task restricted to stewardship-inspector/registry-integrity/drift-detector/governance-validator; general/explore denied via opencode.json permissions"
+  },
+  "sequencing_rationale": {
+    "item_4_first": "Near-free; de-risks config surface before heavier work lands",
+    "item_1_before_item_2": "Lock plugin rescan hook should consume the canonical parser rather than become consumer #139"
+  },
+  "rejected_alternatives": ["nested AGENTS.md", "MCP servers", "community plugins"],
+  "risk_register": [
+    { "risk": "Parser migration manufactures fresh count instability", "mitigation": "Conformance parity gate + one-consumer-per-change-set + §6 stability protocol" },
+    { "risk": "File-lock blocks legitimate concurrent work", "mitigation": "Narrow scope + TTL + logged break + justified override" },
+    { "risk": "Config edit breaks guard registration", "mitigation": "Local entries untouched; post-edit preflight mandatory" },
+    { "risk": "Remediation tooling creates new defects (DL-028 precedent)", "mitigation": "Tooling changes receive content-change-grade scrutiny; regression seeds from corruption corpus" }
+  ]
+}

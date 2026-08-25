@@ -1,0 +1,42 @@
+{
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "B-C.150 transfer pricing",
+    "MicroTopic": "transfer pricing goal congruence",
+    "UniqueConceptKey": "B-C-150-transfer-pricing",
+    "LOSTag": "LOS: Part 1, Section C.5.5 - Evaluate transfer pricing for goal congruence",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Division A (selling division) has variable cost of $25 and can sell externally for $40. Division B (buying division) can buy externally for $42. Division A has excess capacity. What transfer price would promote goal congruence?",
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "When Division A has excess capacity, the opportunity cost of internal transfer is just the variable cost ($25), as fixed costs are already covered and no external sales are forgone. Setting the transfer price at variable cost ($25) encourages Division B to buy internally and maximizes overall company profit. Division A still covers its variable cost and contributes to fixed costs.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "QuestionID": "P1B-C-150",`n    "question_state": "Certified",150: true,
+    "ReviewNote": "If missed or marked, review transfer pricing with excess capacity vs. full capacity",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "$25, equal to Division A's variable cost",
+      "B": "$40, equal to the external market price",
+      "C": "$33, the average of the two external prices",
+      "D": "$42, equal to Division B's external purchase price"
+    },
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax: Principles of Managerial Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Market price ($40) is appropriate when the selling division has no excess capacity. With excess capacity, the selling division gains by covering its variable cost and contributing to fixed costs.",
+    "ExplanationWrongC": "Averaging the two external prices ($33) is an arbitrary approach. With excess capacity, the theoretically correct minimum transfer price is the selling division's variable cost.",
+    "ExplanationWrongD": "$42 is Division B's external purchase price and exceeds Division A's market price. The buying division would not pay more than the market price from the external supplier."
+  }

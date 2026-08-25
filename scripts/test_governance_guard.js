@@ -116,7 +116,8 @@ function findDL026Violations(text) {
     for (const L of letters) {
       if (L === cc) continue;
       const ewKey = 'ExplanationWrong' + L;
-      if (!(ewKey in obj) || (typeof obj[ewKey] === 'string' && obj[ewKey].length === 0)) {
+      // DL-026 = present-but-empty ONLY. Absent fields are DL-021 (Rule 10).
+      if (ewKey in obj && typeof obj[ewKey] === 'string' && obj[ewKey].length === 0) {
         violations.push({ letter: L, qid: obj.QuestionID || '(unknown)' });
       }
     }
@@ -156,10 +157,9 @@ function findDL021Violations(text) {
     for (const L of letters) {
       if (L === cc) continue;
       const ewKey = 'ExplanationWrong' + L;
+      // DL-021 = ABSENT only. Present-but-empty fields are DL-026 (Rule 6).
       if (!(ewKey in obj)) {
         violations.push({ letter: L, qid: obj.QuestionID || '(unknown)', reason: 'absent' });
-      } else if (typeof obj[ewKey] === 'string' && obj[ewKey].length === 0) {
-        violations.push({ letter: L, qid: obj.QuestionID || '(unknown)', reason: 'empty' });
       }
     }
   }
@@ -410,7 +410,7 @@ test("Detect single DL-026: CC=A, ExplanationWrongB empty", () => {
   assert(v[0].letter === "B", `Expected letter B, got ${v[0].letter}`);
 });
 
-test("Detect DL-026: CC=D, ExplanationWrongA absent", () => {
+test("Rule 6/10 split: DL-026 does NOT fire on absent slot (absent = DL-021/Rule 10)", () => {
   const text = `{
     "QuestionID": "P1-DL026-002",
     "CorrectChoice": "D",
@@ -418,9 +418,11 @@ test("Detect DL-026: CC=D, ExplanationWrongA absent", () => {
     "ExplanationWrongC": "Option C is incorrect...",
     "ExplanationWrongD": ""
   }`;
-  const v = findDL026Violations(text);
-  assert(v.length === 1, `Expected 1 violation (absent A), got ${v.length}`);
-  assert(v[0].letter === "A", `Expected letter A, got ${v[0].letter}`);
+  const v26 = findDL026Violations(text);
+  assert(v26.length === 0, `Expected 0 DL-026 violations for absent A (split semantics), got ${v26.length}`);
+  const v21 = findDL021Violations(text);
+  assert(v21.length === 1 && v21[0].letter === "A" && v21[0].reason === "absent",
+    "Absent A must be caught by DL-021/Rule 10 instead");
 });
 
 test("Detect multiple empty non-CC slots: CC=D, both A and C empty", () => {
@@ -705,7 +707,7 @@ test("Rule 10 BLOCK — item with absent distractor EW field", () => {
   assert(v[2].reason === "absent", `Expected 'absent', got '${v[2].reason}'`);
 });
 
-test("Rule 10 BLOCK — item with empty distractor EW field", () => {
+test("Rule 6/10 split: DL-021 does NOT fire on present-but-empty slot (empty = DL-026/Rule 6)", () => {
   const text = `{
     "QuestionID": "P1-FD-001",
     "CorrectChoice": "A",
@@ -714,10 +716,11 @@ test("Rule 10 BLOCK — item with empty distractor EW field", () => {
     "ExplanationWrongC": "Choice C is incorrect because...",
     "ExplanationWrongD": "Choice D is incorrect because..."
   }`;
-  const v = findDL021Violations(text);
-  assert(v.length === 1, `Expected 1 violation (empty B), got ${v.length}`);
-  assert(v[0].letter === "B", `Expected letter B, got ${v[0].letter}`);
-  assert(v[0].reason === "empty", `Expected 'empty', got '${v[0].reason}'`);
+  const v21 = findDL021Violations(text);
+  assert(v21.length === 0, `Expected 0 DL-021 violations for present-but-empty B (split semantics), got ${v21.length}`);
+  const v26 = findDL026Violations(text);
+  assert(v26.length === 1 && v26[0].letter === "B",
+    "Present-but-empty B must be caught by DL-026/Rule 6 instead");
 });
 
 test("Rule 10 PASS — item with all distractor EW fields populated", () => {

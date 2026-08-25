@@ -482,7 +482,7 @@ const ENHANCED_CASE_BASE5 = [
                 "Difficulty": "Difficult",
                 "DifficultyScore": 4
             }
-        ,
+        ],
         "question_state": "Certified",
         "pack_state": "Draft",
         "pedagogical_cluster": "",

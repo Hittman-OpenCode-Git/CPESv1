@@ -1002,6 +1002,8 @@ This defect class caused a Tier 0 false alarm when Session 1's scanning script u
 
 2026-07-26 — S805: 57 Certified Pack A Section E items remediated. 171 ExplanationWrong fields authored with choice-specific, COSO-principled distractor explanations. All fields reference appropriate COSO principles (1-5: Control Environment, 6-9: Risk Assessment, 10-12: Control Activities, 13-15: Information & Communication, 16-17: Monitoring). Zero DL-008, zero empty distractor slots. Architecture investigation confirmed Section E uses single-object format (not dual-block) — the +1 shift was an ExplanationWrong rotation artifact from template-based authoring, not a metadata-vs-content block divergence. P1-E-084 naturally clean (last in rotation group). Governance guard 27/27 PASS. Pack A Section E learner pool fully secured.
 
+**2026-08-24 — Post-resolution instrument measurement (canonical pack_parser, Item 1 Phases A/B):** Role-tagging + `toCanonicalRecords` measured dual-block structure pool-wide: **paired metadata/content blocks = 0 across all five packs (2,620/2,620 single-object)**, independently confirmed by raw-key census (flat `ChoiceA`–`D` keys = 0 pool-wide; nested `Choices` exactly once per item). All historical dual-block citations under DL-016/DL-026/DL-029 refer to structures no longer present in current files — they describe history, not live architecture. Instrument evidence: conformance harness fingerprint pair `9d6c89c2…d1601`, artifact `reports/PHASE_B_CONFORMANCE_HARNESS_2026-08-24.json`.
+
 ---
 
 ---
@@ -1242,6 +1244,16 @@ After correction:
 ### Resolved
 
 2026-07-23 — 351 of 351 items remediated (Pack E: 349 items by Agent 2 across 13 batches; Pack A Section E: P1-E-031 by Agent 2, P1-E-032 by orchestrator). ExplanationWrong[CorrectChoice] fields added as `""`. **0 remaining.** P1-E-027 was a false positive (CorrectChoice=B, ExplanationWrongB exists and is ""). All other ExplanationWrong fields (A, B, D) are present with genuine, choice-specific text across all affected items.
+
+**2026-08-24 Amendment — Phase C targeting classification (canonical pack_parser EW-key census):**
+Four pool items exhibit absent-EW-slot structure (flat-EW counts: Pack B 1998/2000, Pack C 1999/2000, Pack E 2479/2480). All four classified **benign variant — absent slot == CorrectChoice**, distractor slots present with substantive text (632–846 chars), all Certified. Remediation = schema normalization only (`ExplanationWrong[CC]: ""`); zero learner-facing gap:
+
+| QID | State | CC | Absent slot | Distractor lens |
+|-----|-------|----|-------------|-----------------|
+| P1B-E-083 | Certified | C | C (== CC) | A:637, B:789, D:781 |
+| P1B-F-091 | Certified | C | C (== CC) | A:833, B:720, D:728 |
+| P1-EC-045 | Certified | C | C (== CC) | A:743, B:669, D:632 |
+| P1E-B-012 | Certified | C | C (== CC) | A:809, B:818, D:846 |
 
 ---
 
@@ -2133,6 +2145,55 @@ The DL-016 metadata-content mismatch causes EVERY scan tool to produce false-pos
 - REVISION_HISTORY.md: Entry appended
 - DEFECT_LIBRARY.md: This update
 
+**2026-08-24 Amendment — first canonical-parser pool-wide measurement (Migration 2):**
+With scan tooling migrated onto `scripts/lib/pack_parser.js` (orchestrator Gate 1), DL-026 was measured pool-wide under within-object extraction for the first time since the dual-block architecture closed. Twelve Certified items show exactly one EMPTY non-CorrectChoice EW slot each (distinct from the four absent-key benign targets in DL-018's amendment):
+
+| QID | State | CC | Empty non-CC slot |
+|-----|-------|----|--------------------|
+| P1-A-036 | Certified | D | C |
+| P1-A-046 | Certified | C | B |
+| P1-A-056 | Certified | D | A |
+| P1-A-066 | Certified | C | A |
+| P1-AC-026 | Certified | B | D |
+| P1-AC-028 | Certified | D | C |
+| P1E-A-020 | Certified | C | B |
+| P1E-A-024 | Certified | D | A |
+| P1E-A-031 | Certified | B | C |
+| P1E-D-016 | Certified | C | B |
+| P1E-F-006 | Certified | D | C |
+| P1E-F-007 | Certified | A | D |
+
+Status: **Open — remediation pending** (12 choice-specific distractor explanations, Rule-5 batched). These are live learner-pool items with a silent wrong-answer feedback slot.
+
+### Resolution — 2026-08-24 (c): Twelve-item enrichment wave executed
+
+**Classification correction (supersedes wording above and in REVISION_HISTORY Session c):** the twelve slots were NOT empty. All twelve held directionally-correct but SUB-FLOOR text (38–49 characters, below the CAQS EV1 50-character minimum). The orchestrator's Gate-1 message ("empty EW slots") collapses empty and sub-floor into one bucket; the canonical-parser census in Phase B had already distinguished absent (DL-018 class) from present-but-thin. No state changes; all twelve remain Certified; CorrectChoice untouched throughout.
+
+**Execution:** per-slot pre-state EXACT-match assertions (two earlier script attempts aborted safely on span-targeting bugs before any write — assertions working as designed), then offset-bounded replacement using parser record coordinates. Each authored explanation preserves the original diagnostic point and adds mechanism/numbers (lengths 201–253). P1-AC-028's replacement additionally repairs an arithmetically inconsistent rationale (old text claimed adding both AR figures, which does not yield $672,000; new text bounds the answer against reported sales instead).
+
+| QID | Slot | Before len | After len |
+|-----|------|-----------|-----------|
+| P1-A-036 | C | 44 | 253 |
+| P1-A-046 | B | 38 | 252 |
+| P1-A-056 | A | 44 | 219 |
+| P1-A-066 | A | 44 | 219 |
+| P1-AC-026 | D | 41 | 238 |
+| P1-AC-028 | C | 48 | 231 |
+| P1E-A-020 | B | 48 | 213 |
+| P1E-A-024 | A | 49 | 224 |
+| P1E-A-031 | C | 48 | 201 |
+| P1E-D-016 | B | 46 | 238 |
+| P1E-F-006 | C | 43 | 207 |
+| P1E-F-007 | D | 42 | 223 |
+
+**Post-wave battery:** orchestrator Gate 1 DL-026 **12 → 0** (DL-008 remains 0; DL-018 remains exactly the four DL-046-pending benign targets); validate warnings 1981 → 1969 (−12, one retired short-explanation warning per item); Errors 0; preflight 0 divergences; `npm run pipeline` GREEN.
+
+**Backups:** `pack_{a,c,e}_corrected.js.bak-dl026w-20260824201638`.
+
+Twelve-item status: **Resolved.** DL-026 overall remains open-ended as a monitored class via orchestrator Gate 1.
+
+**2026-08-24 — Dual-block historical-state annotation (Migration 3 closeout):** this entry's historical pool-wide counts (1,005 items; "Pack C/D 500 all affected") were measured under dual-block-era tooling whose metadata/content block conflation both inflated and distorted findings. Canonical-parser measurement closed the question: **paired metadata/content blocks = 0 across all five packs (2,620/2,620 single-object)**, dual-method verified (structural role pairing + flat `ChoiceA–D` key census = 0). Historical figures in this entry describe retired architecture, not live structure.
+
 ---
 
 ## DL-028 — DL-013 Remediation Tooling Regression (Short-Form Rewrite Creates Empty Slots)
@@ -2366,6 +2427,8 @@ After every scan, verify CorrectChoice positioning: if CC field appears BEFORE Q
 ### Resolved
 
 Not yet. Methodology correction documented. Scan scripts in `scripts/` directory may need updates to be CC-position-aware.
+
+**2026-08-24 — Dual-block historical-state annotation + methodology retirement (Migration 3 closeout):** this entry's core concern — CC-offset false positives from block-window scanning — is now structurally eliminated, not merely corrected per-scan. All active pipeline tools parse through `scripts/lib/pack_parser.js`, where CorrectChoice is read from the same enclosing parsed object as the EW fields by construction; forward-scan windows no longer exist in the toolchain. The 80-block and 242-vs-282 historical figures cited across this entry were artifacts of the retired methodology; current authoritative counts come from the orchestrator/scorer chain (Gate -1: 2620P / 0B post-regex-flip). Dual-block context: paired metadata/content blocks = 0 pool-wide (see DL-016/DL-026 annotations).
 
 ---
 
@@ -2878,6 +2941,19 @@ Not yet. Root cause identified and documented. Correction pending (C2 target: S8
 - `scripts/output/certification_candidates.json` (SESSION850) — inflated: 282 BLOCKED
 - DL-035: Concurrent governance gap finding (39 Domain F items)
 
+**2026-08-24 Amendment — sibling-class confirmation via canonical-parser Gate -1 (Migration 2):**
+With `scan_orchestrator.js` repaired (rootDir had silently emptied every gate post-reorganization) and its substrate migrated to the canonical parser, Gate -1's first real run blocked **80 items** — all Pack E supplemental series: `P1E-[A-F]-S##` and `P1E-EVAL-###`. Same root cause as this defect: `pack_reader.QID_REGEX.pack_e` was never extended when the supplemental series landed (it accepts only `P1E-[A-F]-\d{3}` and `P1-E-R\d{2}`). Proposed regex for Board disposition: `^(?:P1E-(?:[A-F]-\d{3}|[A-F]-S\d{2}|EVAL-\d{3})|P1-E-R\d{2})$`. No content defect implicated; blocks are pure identity-pattern gaps.
+
+### Resolved
+
+2026-08-24 — Migration 3 executed under three Board-authorized workstreams:
+
+1. **QID_REGEX flip (validated before flipping):** proposed regex tested against the full 620-item Pack E population — **620/620 matched, zero orphans**, family decomposition exact (500 standard + 40 R-series + 75 S-series + 5 EVAL-series), **zero over-matches** across 11 negative probes (foreign pack formats, invalid shapes, case variants). Structural spot-checks on 7 sampled supplemental items: all fully-formed Certified questions. Flip applied in BOTH live copies: `engine/pack_reader.js` QID_REGEX (identity authority, consumed by identity_validator) and `certification_candidate_engine.js` — whose local table was **deleted outright**, replaced by `pr.getQIDFormatRegex()`. Post-flip: Gate -1 **2620P / 0B** (was 2540P / 80B); all other gates unchanged.
+2. **Artifact-consumption wiring (C2):** `certification_candidate_engine.js` rewritten as a downstream consumer of `readiness_scoring.json`. Guards per DL-045 doctrine: missing artifact → refuse; empty scoring → refuse; pack-hash staleness vs current files → refuse; any parsed item absent from the scorer's items[] → hard error (evidence-chain gap). A structural **parity invariant** now throws if the engine's state totals diverge from the scorer's `portfolioReadiness.byState` by even one item. Chain run: orchestrator → scorer (**first non-empty scoring since the content/ reorganization** — the scorer carried the same repo-root rootDir bug and was silently scoring zero; repaired with the same guards) → engine: CERTIFY=2620 mirrored exactly.
+3. **Second silent-empty tool discovered & fixed:** `readiness_scorer.js` rootDir repaired (repo-root → content/packs, both call sites) with identical refusal guards.
+
+**Regression test now built-in:** any future regex/classification drift between the pair throws `PARITY FAILURE vs scorer artifact` instead of producing divergent BLOCKED counts.
+
 ---
 
 ## DL-037 — Choice Binary Lead-In Polarity Mismatch
@@ -3379,6 +3455,197 @@ Not yet — Batch 1 (duplicate pairs) in progress 2026-08-23.
 **Batch 3 progress (2026-08-23):** any/all/every triage complete — 661 distractor rewrites across 5 packs (512 distinct texts; rotation families collapsed: "Wait for the external audit before designing any internal control" ×31, "It eliminates the need for any market price data" ×7, etc.). Triaged and KEPT: enumerated "all N" counts, ZBB definitional texts ("resets every account"), "each period" phrasing, conditional "any of the/any amount" uses, ALL "must" occurrences (requirement phrasing — not a cueing term), and technical phrases ("substantially all", absorption-costing/reciprocal/direct method definitions). One generic-rule damage case found and restored during falsity review ("Substantially all (typically 90%+)" in P1-A-014). Verified: 0 non-whitelisted any/all/every residuals in distractor choices, all packs parse, DL-008/DL-026 0, preflight PASS. **Remaining:** DL-013-class ZBB generic-EW cluster (13 items) — the only open distractor-quality workstream.
 
 **Batch 4 progress (2026-08-23):** ZBB generic-EW cluster resolved — 13 choice-specific EW rewrites (Pack C 5: P1-BC-080, BC-081, CC-048, FC-036, FC-075; Pack D 8: P1-CD-045, CD-046, CD-049, CD-066, CD-069, CD-070, CD-091, CD-094), each now referencing the item's own stem facts and contrasting with the correct technique. Two additional misassigned EW slots found and fixed during execution: P1-BC-079 and P1-BC-080 EWA (ABB/ZBB hybrid text sat on an incremental-budgeting choice) and P1-CD-070 EWD (controllability choice). Verified: 0 generic-ZBB EW slots remain in the 13-item cluster; all packs parse; DL-008/DL-026 0; preflight PASS. **THE DISTRACTOR-QUALITY PROGRAM IS COMPLETE** — DL-043 (equivalence pairs), DL-003 (absolute language, all tiers), and the DL-013-class ZBB cluster are all closed.
+
+---
+
+## DL-044 — Legacy Case-Bank Structural Corruption (scored_cases.js / scored_cases5.js)
+
+```
+Defect ID        DL-044
+Class            Structural
+Domain           File Integrity — Case Bank Syntax Errors
+Severity         High (four cases unrenderable as stored; two entire case files were invisible to the validator suite until Migration 1 restored coverage)
+Detected By      Build-Time AI Verification — canonical pack_parser during Migration 1 equivalence diff (2026-08-24); independently confirmed by V8 JSON.parse position-mapped verdicts
+Status           Resolved — content wave executed 2026-08-24; 4 structural characters inserted; bidirectional byte-proof of zero data loss; validate Errors→0; pipeline green
+Category         Missing-comma corruption (3 sites) and DL-016-era fused-object residue fossilized into invalid syntax (1 site)
+```
+
+**Files:** `content/cases/legacy/scored_cases.js`, `content/cases/legacy/scored_cases5.js`
+
+**Case IDs / regions:**
+
+| File | Region span (bytes) | Line | Case | V8 JSON.parse verdict |
+|------|--------------------|------|------|----------------------|
+| scored_cases.js | 38171–68418 | 355 | CBQ-A2 | Expected ',' or ']' after array element @absOffset 63669 — `"DifficultyScore": 3 }` newline `{ "Type": "multi"` (missing comma between Items elements) |
+| scored_cases.js | 178601–204809 | 1814 | CBQ-C2 | Same missing-comma class @absOffset 200329 |
+| scored_cases.js | 407728–432382 | 4720 | CBQ-C3 | Same missing-comma class @absOffset 428756 |
+| scored_cases5.js | 12753–27876 | 233 | CBQ5-A2 area | Expected ',' or ']' @absOffset 27718 — metadata keys (`question_state`/`pack_state`/`pedagogical_tier`) fused after a nested close; cascades to MISMATCHED_CLOSER at byte 27876 |
+
+### Issue
+
+The legacy whole-array extractor (`ENHANCED_CASE_BASE\d*` regex + single `JSON.parse` → Function-constructor fallback) failed on these two files and **silently returned null** — meaning every validator consuming it (ExplanationValidator et al.) validated zero cases from either file while reporting nothing. The canonical per-object parser isolates the damage: scored_cases.js yields 12 valid cases + 3 precise ERROR diagnostics; scored_cases5.js yields 1 valid case + REGION_PARSE_FAILED + MISMATCHED_CLOSER + TRUNCATED_ARRAY (array discovery conservatively stops at the first structural mismatch).
+
+### Root Cause
+
+Missing commas between array elements in three cases' Items structures (scored_cases.js); scored_cases5.js carries the historical dual-block merge architecture fossilized into invalid syntax inside one object — the same template-pipeline era that produced DL-016/DL-026, surviving only in this file.
+
+### Impact
+
+- Pre-Migration-1: entire validation suite silently covered zero cases in these files; post-migration the corruption is loudly reported (validate Errors 0→5, Explanation Validator FAIL — correct behavior).
+- Runtime delivery exposure: RESOLVED by same-day reconciliation — root `scored_cases*.js` do not exist, no loader references the banks, and `getCasePool()` is unfed (see Amendment 2026-08-24(b) below). Original wording ("exposure unknown; app loads root-level copies") was stale on both counts.
+
+### Detection Rule
+
+Automated as of Migration 1: ExplanationValidator routes parser `REGION_PARSE_FAILED` / `MISMATCHED_CLOSER` / `TRUNCATED_ARRAY` diagnostics to errors for all `ENHANCED_CASE_BASE*` banks. Any validate run now fails loudly while these regions remain unrepaired.
+
+### Correction (proposed, not executed)
+
+Content wave with backup protocol: insert the three missing commas (byte-exact sites above); unfuse the CBQ5-A2 metadata block into a separate well-formed structure or remove the residue per content review; re-run `npm run validate` expecting Errors→0 and pipeline gate restored. Also reconcile legacy copies against root `scored_cases*.js`.
+
+### Regression Test
+
+After remediation: equivalence diff shows old/new both parse all 15+15 cases; validate returns to WARN status with Errors 0; conformance harness unchanged for packs.
+
+### Resolved
+
+2026-08-24 — DL-044 content wave executed under five Board conditions:
+
+1. **§3 backups:** `backups/scored_cases.js.bak-20260824164512` (456,450 B), `backups/scored_cases5.js.bak-20260824164512` (332,612 B).
+2. **Zero-data-loss deep-diff (bidirectional byte-proof):** shipped files reconstruct exactly from backups by removing the inserted tokens — forward constructive equivalence AND reverse excision both BYTE-EQUAL. Total change: **4 characters** (three `,` between Items elements in scored_cases.js @CBQ-A2/C2/C3; one `]` closing CBQ5-A2's Items array in scored_cases5.js @byte 27692). Content-token censuses unchanged.
+3. **Legacy-copy reconciliation (exposure question closed):** root-level `scored_cases*.js` do NOT exist; `content/cases/legacy/` is the sole copy. Neither `index_updated.html` nor `app/app.js` reference `scored_cases*` — case banks are validator-scope content with no runtime delivery path found. Corruption never reached learners; it silently blinded validation instead.
+4. **Post-fix battery:** parsePack 15/15 cases per file (was 12+3E and 1+3E); legacy whole-array eval also succeeds post-fix (15/15, JSON-valid); `npm run test:parser` 20/20; conformance harness ALL GATES PASS; equivalence diff TRUE on all shared-scope files; `npm run validate` Errors 0 / Failed 0 / Status WARN / exit 0 (warnings 1861→1983 from newly-covered case items — coverage expansion, not regression); **`npm run pipeline` GREEN end-to-end** (validate → registry rebuild [3,020 questions] → dashboard), restoring the Tend gate blocked since Migration 1.
+5. **Rule 5:** satisfied — 4 case objects touched.
+
+Post-fix note: scored_cases5.js contains 15 governance-junction sites of identical shape (`}\n        ],\n        "question_state"`); the repaired site was proven positionally within the CBQ5-A2 span.
+
+### Amendment — 2026-08-24 (b): Delivery-Layer Verdict + Residual Mechanisms
+
+**Verdict:** the corruption never reached learners at any delivery layer. Case banks are validator-scope content; no runtime path existed before or after the repair.
+
+**Residual mechanisms on record** (so a future session cannot rediscover them "the hard way" by re-adding a script tag):
+
+1. **Unfed `getCasePool()` hook** (`app/app.js:2393–2414`, consumed at `:2113`): the case-pool builder reads globals `CASE_BANK_A–E`, `MIGRATED_CASE_BASE_A–E`, and `ENHANCED_CASE_BANK_[A–F]` / `ENHANCED_CASE_BANK2–5_[A–F]` — none of which any loader provides. It never references the arrays the legacy files actually declare (`ENHANCED_CASE_BASE`, `ENHANCED_CASE_BASE5`). Net effect: integrated cases are structurally absent from runtime delivery, independent of file validity.
+2. **Script-tag re-add risk:** re-adding `<script>` tags for the legacy banks would execute their file-level `.map()` derivations under names (`ENHANCED_CASE_BANK5_A`…`_F`) that only partially match the hook's expectations — producing silently partial pools rather than an error. Any future loader work MUST reconcile global-name inventory against `getCasePool()`'s expectations first.
+
+---
+
+## DL-045 — Background-Delegation Silent-Empty Findings
+
+```
+Defect ID        DL-045
+Class            Process / Methodology
+Domain           Session Management / Delegation Tooling
+Severity         Medium (an investigation can conclude "no findings" from an empty result that was never evidence; also produced a defective pre-assigned ID in session prose)
+Detected By      Board tooling-hardening review (@registry-integrity check, 2026-08-24); ID assigned by Board determination — filing mandated in the DL-044 wave session
+Status           Open — routing doctrine active; no code-level guard implemented
+Category         Silent-empty results from background delegation treated as evidence
+```
+
+### Issue
+
+Background `delegate` runs against this repository can return empty/silent failures on large files, indistinguishable from a genuine "nothing found" result (precedent: AGENTS.md §9.4 item 7 — "delegate fails silently on this project's file sizes"). Any audit, scan, or review conclusion sourced from such a result is unsupported. Separately, this finding circulated in session prose carrying the pre-assigned ID "DL-044" while DL-044 was independently filed for case-bank corruption — two findings, one ID — until the registry-integrity check reallocated it as DL-045.
+
+### Root Cause
+
+Two compounding gaps: (a) delegation results were accepted without positive-evidence cross-checks, and (b) defect-ID allocation happened in prose rather than against DEFECT_LIBRARY registry state.
+
+### Detection Rule
+
+Any "clean" / "no findings" / "zero hits" claim sourced from a background delegation is inadmissible without a positive-evidence artifact (record count, QID list, or fingerprint) cross-checked per AGENTS.md §5. New DL-IDs must be allocated by scanning DEFECT_LIBRARY.md for the highest existing ID at allocation time.
+
+### Correct Pattern
+
+Investigations route through the four permitted foreground program agents (`stewardship-inspector`, `registry-integrity`, `drift-detector`, `governance-validator` — per current `opencode.json` permission set); background delegation output carries no evidentiary weight until corroborated. ID allocation queries the registry first.
+
+### Regression Test
+
+- Every delegation-sourced claim in future session reports cites a verifiable artifact.
+- Next new-defect filing demonstrates registry-first ID allocation (DL-046+).
+
+---
+
+## DL-046 — Corrupted Choice Text on Certified Item (P1E-A-024 Option C)
+
+```
+Defect ID        DL-046
+Class            Content
+Domain           Semantic Accuracy — Distractor Text Integrity
+Severity         High (Certified item presents a malformed answer choice to learners)
+Detected By      Build-Time AI Verification — evidence-gathering probe during the DL-026 enrichment wave (2026-08-24)
+Status           Open — discovered during the DL-026 wave; outside that wave's authorized scope
+Category         Truncated/garbled choice text surviving certification
+```
+
+**Question ID:** P1E-A-024 (Pack E, Section A, `question_state: "Certified"`)
+
+**File:** `content/packs/pack_e_corrected.js`
+
+### Issue
+
+Option C's raw value is `" securities"` — a leading space plus an orphaned fragment with no complete option text. Learners see a malformed choice on a live-pool item. CorrectChoice=D, ExplanationCorrect, and the remaining distractors are intact, so the answer key is unaffected; the defect is confined to one distractor slot's display text.
+
+### Root Cause
+
+Not yet determined. The fragment pattern suggests a mid-edit truncation during authoring or a template-fill failure that certification waves did not screen for — no existing gate validates choice-text completeness.
+
+### Detection Rule
+
+For each parsed item, flag any Choice[A–D] value whose trimmed length is less than a minimal floor (e.g., 8 characters) or that does not begin with an alphanumeric character. Candidate for a Gate-1 check when the orchestrator next gains content-shape rules.
+
+### Remediation Path
+
+Reconstruct the intended option from topic context (diluted-EPS scope — the sibling options are "Only common shares" / "Only preferred stock" / "Convertible securities and options if dilutive", so C was plausibly a third scope variant), then re-verify the item end-to-end before any further state change.
+
+---
+
+## DL-046 — P2 Rotation-Clone Pairs Inside a Certification Batch (P2-C-181≡199, P2-C-185≡198)
+
+```
+Defect ID        DL-046
+Class            Structural
+Domain           Clone Redundancy (certification-pipeline intake)
+Severity         Medium (would have injected duplicate measurement into the certified pool)
+Detected By      Build-Time AI Verification — P2-059 certifier review of p2_cert_review_20260824
+Status           Resolved — caught pre-certification; newer duplicates archived P2-059
+Category         Rotation-template clones (DL-012 class) surfacing in Part 2 authored content
+```
+
+**Question IDs:** P2-C-199, P2-C-198 (archived); survivors P2-C-181, P2-C-185 (repaired + certified)
+
+**Files:** p2/pack_p2_c.js
+
+### Issue
+
+Two rotation-clone pairs were discovered inside the P2-053..057 authoring output during certification review: identical scenario parameters, topic strings, and distractor VALUE SETS with letter-rotated answer keys:
+
+| Pair | Shared content | Key rotation |
+|------|----------------|--------------|
+| P2-C-181 ≡ P2-C-199 | cost-plus-fixed-fee: 7% fee, $80K lobbying exclusion, $1.2M base → $1,284,000 | C→B |
+| P2-C-185 ≡ P2-C-198 | break-even market share: $6.4M FC, $16 CM, 2,000,000-unit market → 20.0% | C→A |
+
+Both members of each pair were queued for certification together. The pre-flip certifier review caught them because clone comparison was on the checklist; an S853-style wave that only checks DL-008 would have certified all four.
+
+### Root Cause
+
+Authoring waves re-used a worked example’s parameter set across sessions with only cosmetic rewording and answer-position rotation. UniqueConceptKey strings differ only by item number, so exact-stem dedupe checks missed them.
+
+### Detection Rule
+
+Before any certification batch flip: compare candidate items pairwise on (normalized numeric-literal multiset + Topic string). Identical multiset + identical Topic = suspected clone; confirm by human review before archiving. (Jaccard stem similarity alone misses these — prose differs.)
+
+### Correction
+
+User-approved disposition: archive the newer duplicate of each pair (P2-C-199, P2-C-198 — question_state Archived, content preserved per §9.2), repair and certify the survivors. Survivor repairs also fixed the shared $1,364,000 padded-base distractor value (→$1,369,600) on P2-C-181.
+
+### Regression Test
+
+Certification batches must include a numeric-multiset + Topic clone scan across ALL packs (not just the batch) before state flips. Zero confirmed pairs = pass.
+
+### Cross-References
+
+- DL-012 (clone redundancy, Pack C/D Section E — same template-pipeline family)
+- DL-035 (certification-pool intake gap — Rule 6 response)
+- REVISION_HISTORY_P2.md Session P2-059 entry
 
 ---
 

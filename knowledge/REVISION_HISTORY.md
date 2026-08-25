@@ -1,3 +1,25 @@
+## S145 â€” Governance Rule Reconciliation: Rule 6/10 Split + AGENTS.md Â§1 Refresh â€” 2026-08-24
+
+**Session:** P2-051 (Full Governance Lane â€” guard logic + governance docs; zero pack content changes)
+**Trigger:** Independent review findings 2, 3, 5 (rule-numbering drift across plugin / standalone P2 guard / content-authoring skill; stale AGENTS.md Â§1; Rule 6/10 double-blocking).
+**Backups:** backups/governance-guard.js.bak-rulefix-20260824092050, backups/test_governance_guard.js.bak-rulefix-20260824092050, backups/AGENTS.md.bak-rulefix-20260824092050, backups/SKILL.md.bak-rulefix-20260824092050, backups/governance_guard_p2.js.bak-rulefix-20260824092050
+
+### Changes
+.
+- **Rule 6/10 split (plugin .opencode/plugins/governance-guard.js):** findDL026Violations now fires ONLY on present-but-empty non-CorrectChoice EW slots; findDL021Violations fires ONLY on absent fields. Previously every DL-026 defect also fired DL-021 (double BLOCK for one defect). Error messages updated to state the distinct conditions.
+- **Test suite (scripts/test_governance_guard.js):** replicated detectors split identically; two tests reworded into split-semantics cross-checks (DL-026 does-not-fire-on-absent with DL-021 cross-check; DL-021 does-not-fire-on-empty with DL-026 cross-check). Count unchanged: **74 PASS / 0 FAIL**.
+- **AGENTS.md Â§1 refresh:** 10 rules â†’ **14 rules** documented (added Rules 11â€“14: cognitive gates AF-3/4/5, Cognitive-First Assignment, Part2OnlyFlag, cross-part QID boundary); line count corrected 393 â†’ 563; test count corrected 54 â†’ 74. Â§1 declared the single source of truth for rule numbering.
+- **content-authoring SKILL.md:** Part2OnlyFlag references corrected Rule 11 â†’ **Rule 13** (was internally contradictory â€” cited Rule 11 for both Part2OnlyFlag and cognitive gates); rules table now lists Rules 13/14 separately and documents the 6/10 split.
+
+### Verification
+
+- node --check on both guard files: PASS. Test suite 74/74 PASS.
+- npm run preflight: PASS, 0 divergences (guard 74/74). preflight_p2.js: PASS, 0 divergences.
+
+### Companion P2 changes
+
+See REVISION_HISTORY_P2.md session P2-051: standalone governance_guard_p2.js rule numbering reconciled to the ratified scheme (Part2OnlyFlag 11â†’13, cognitive gates 12â†’11, cross-part QID 0â†’14), P2 pack regex [a-e]â†’[a-f] (Pack F was silently skipped by the standalone guard), and the same Rule 6/10 split.
+
 ## S144 â€” Phase 2 Content Authoring: Wave 4 (25 Items) â€” Phase 2 Complete â€” 2026-08-03
 
 **Source:** S141 gap analysis; S121 Portfolio Targets
@@ -31796,12 +31818,12 @@ No new Part 1 items, no content changes, no state transitions except:
 
 Part 1 is in maintenance-only mode. All authoring resources redirect to Part 2.
 
-=== SCHEMA LOCK — 2026-08-04 ===
+=== SCHEMA LOCK ï¿½ 2026-08-04 ===
 
-## P2 Schema Lock Session (P2-020) — Content Pipeline Phase 1
+## P2 Schema Lock Session (P2-020) ï¿½ Content Pipeline Phase 1
 
 ### Summary
-Ratified P2_EXPANSION_PLAN.md §1 schema as P2_SCHEMA_STANDARD.md v1.0. Applied three schema changes to all 155 existing P2 items across Packs A (100), B (40), and C (15). Created Pack F skeleton. Deployed Rules 13 and 14 to governance guard.
+Ratified P2_EXPANSION_PLAN.md ï¿½1 schema as P2_SCHEMA_STANDARD.md v1.0. Applied three schema changes to all 155 existing P2 items across Packs A (100), B (40), and C (15). Created Pack F skeleton. Deployed Rules 13 and 14 to governance guard.
 
 ### Changes
 | Change | Before | After | Impact |
@@ -31809,21 +31831,21 @@ Ratified P2_EXPANSION_PLAN.md §1 schema as P2_SCHEMA_STANDARD.md v1.0. Applied t
 | Field rename |  + '
 Type: select' +  |  + 'ItemStyle: single-select' +  | Avoids collision with case-item scoring discriminator (app.js:1934) |
 | Field rename |  + 'VerificationChecks' +  |  + 'VerifiedChecks' +  | Matches Part 1 convention; one validator serves both parts |
-| New field | (absent) |  + 'UniqueConceptKey' +  | Highest-precedence dedup signal per P2_EXPANSION_PLAN.md §1.1 |
+| New field | (absent) |  + 'UniqueConceptKey' +  | Highest-precedence dedup signal per P2_EXPANSION_PLAN.md ï¿½1.1 |
 
 ### Pack Realignment (6 Packs, 1 Domain Per Pack)
 | Pack | Domain | Items | Status |
 |------|--------|-------|--------|
-| pack_p2_a.js | A — Financial Statement Analysis | 100 | Schema-migrated |
-| pack_p2_b.js | B — Corporate Finance | 40 | Schema-migrated |
-| pack_p2_c.js | C — Decision Analysis (625 target) | 15 | Schema-migrated |
-| pack_p2_d.js | D — Risk Management (250 target) | 0 | Empty skeleton |
-| pack_p2_e.js | E — Investment Decisions (250 target) | 0 | Empty skeleton |
-| pack_p2_f.js | F — Professional Ethics (375 target) | 0 | CREATED (new) |
+| pack_p2_a.js | A ï¿½ Financial Statement Analysis | 100 | Schema-migrated |
+| pack_p2_b.js | B ï¿½ Corporate Finance | 40 | Schema-migrated |
+| pack_p2_c.js | C ï¿½ Decision Analysis (625 target) | 15 | Schema-migrated |
+| pack_p2_d.js | D ï¿½ Risk Management (250 target) | 0 | Empty skeleton |
+| pack_p2_e.js | E ï¿½ Investment Decisions (250 target) | 0 | Empty skeleton |
+| pack_p2_f.js | F ï¿½ Professional Ethics (375 target) | 0 | CREATED (new) |
 
 ### Governance Guard Changes
 - RULE 13 (BLOCK): Part2OnlyFlag must be true on every P2 MCQ item
-- RULE 14 (BLOCK): Cross-part QID boundary — P1-QIDs blocked in P2 packs and vice versa
+- RULE 14 (BLOCK): Cross-part QID boundary ï¿½ P1-QIDs blocked in P2 packs and vice versa
 - SOURCE_FILE_RE extended to match pack_p2_[a-f].js
 - Test suite: 66?74 tests (8 new: Rule 13=4, Rule 14=4)
 
@@ -31835,9 +31857,9 @@ Type: select' +  |  + 'ItemStyle: single-select' +  | Avoids collision with case
 - Backups: pack_p2_a/b/c.js.bak-20260804112638 (511KB + 202KB + 67KB)
 
 ### New Files
-- p2/P2_SCHEMA_STANDARD.md — Ratified schema standard v1.0
-- p2/pack_p2_f.js — Pack F skeleton (Domain F, Professional Ethics)
-- scripts/migrate_p2_schema.js — Schema migration tool
+- p2/P2_SCHEMA_STANDARD.md ï¿½ Ratified schema standard v1.0
+- p2/pack_p2_f.js ï¿½ Pack F skeleton (Domain F, Professional Ethics)
+- scripts/migrate_p2_schema.js ï¿½ Schema migration tool
 
 ### Files Modified
 - .opencode/plugins/governance-guard.js (Rules 13, 14; P2 file matching)
@@ -31845,25 +31867,25 @@ Type: select' +  |  + 'ItemStyle: single-select' +  | Avoids collision with case
 - p2/pack_p2_a.js, p2/pack_p2_b.js, p2/pack_p2_c.js (schema migration)
 
 ### Next Steps (Phase 1: Schema Lock)
-1. P2_SCHEMA_STANDARD.md v1.0 ratified — content authoring can now proceed with locked schema
-2. Pack C (Domain C) is priority for next authoring wave — highest CSO weight (25%), lowest inventory (15/625)
+1. P2_SCHEMA_STANDARD.md v1.0 ratified ï¿½ content authoring can now proceed with locked schema
+2. Pack C (Domain C) is priority for next authoring wave ï¿½ highest CSO weight (25%), lowest inventory (15/625)
 3. Pack D/E/F skeletons need initial waves
 4. P2 preflight.js needed for T0 pack integrity checks
 5. Formula cross-reference validator pending for P2 items
 
 
 
-=== P2 PHASE 1 CONTINUED — 2026-08-04 ===
+=== P2 PHASE 1 CONTINUED ï¿½ 2026-08-04 ===
 
 ## P2 CSO Weight Reallocation + P2 Preflight (P2-020)
 
 ### CSO Weight Reallocation (P2003_QID_STANDARD.md v2.0)
 Amended P2003 from 5-pack flat-500 layout to 6-pack CSO-weight-faithful layout:
-- Domain C: 500 ? 625 (25% CSO weight — heaviest domain)
-- Cross-domain phantom pack (P2-F-376–500) dissolved ? CrossDomainTags array
+- Domain C: 500 ? 625 (25% CSO weight ï¿½ heaviest domain)
+- Cross-domain phantom pack (P2-F-376ï¿½500) dissolved ? CrossDomainTags array
 - Domain F promoted to dedicated pack (pack_p2_f.js, 375 items)
 - Domain D and E split into separate packs (was co-located in pack_p2_d.js)
-- Section assignment ranges updated: C 001–625, F 001–375, D/E 001–250 each
+- Section assignment ranges updated: C 001ï¿½625, F 001ï¿½375, D/E 001ï¿½250 each
 - Schema skeleton updated to match ratified P2_SCHEMA_STANDARD.md v1.0
 - Prohibited patterns expanded: Type?ItemStyle, VerificationChecks?VerifiedChecks
 
@@ -31892,14 +31914,14 @@ Created T0 governance check for Part 2 packs:
 - All 155 P2 items: 100% Part2OnlyFlag, 0 legacy Type/VerificationChecks, 0 P1- QIDs
 
 
-=== P2 PHASE 1 CLOSEOUT — 2026-08-04 ===
+=== P2 PHASE 1 CLOSEOUT ï¿½ 2026-08-04 ===
 
-## P2 Phase 1 Complete — Schema Lock + Governance + Infrastructure
+## P2 Phase 1 Complete ï¿½ Schema Lock + Governance + Infrastructure
 
 ### Completed
 - pack_p2_d.js + pack_p2_e.js skeletons created (6/6 packs active)
-- P2 Schema Validator (scripts/validators/p2_schema_validator.js) — 155 items, 0 errors
-- P2 baselines file (p2/CURRENT_BASELINES_P2.md) — authoritative certified pool snapshot
+- P2 Schema Validator (scripts/validators/p2_schema_validator.js) ï¿½ 155 items, 0 errors
+- P2 baselines file (p2/CURRENT_BASELINES_P2.md) ï¿½ authoritative certified pool snapshot
 - P2-B-005 missing ExplanationWrongA fixed (DL-018 pattern, CC=A field absent)
 - npm scripts: validate:p2, preflight:p2
 
@@ -31910,19 +31932,19 @@ Created T0 governance check for Part 2 packs:
 - Governance guard: 74/74 PASS
 
 ### New Files (Phase 1)
-- p2/pack_p2_d.js — Domain D skeleton (Risk Management, 250 target)
-- p2/pack_p2_e.js — Domain E skeleton (Investment Decisions, 250 target)
-- p2/pack_p2_f.js — Domain F skeleton (Professional Ethics, 375 target)
-- p2/P2_SCHEMA_STANDARD.md — Ratified v1.0
-- p2/CURRENT_BASELINES_P2.md — P2 certified pool baseline
-- scripts/preflight_p2.js — P2 T0 governance check
-- scripts/validators/p2_schema_validator.js — Schema enforcement
-- scripts/migrate_p2_schema.js — Schema migration tool
+- p2/pack_p2_d.js ï¿½ Domain D skeleton (Risk Management, 250 target)
+- p2/pack_p2_e.js ï¿½ Domain E skeleton (Investment Decisions, 250 target)
+- p2/pack_p2_f.js ï¿½ Domain F skeleton (Professional Ethics, 375 target)
+- p2/P2_SCHEMA_STANDARD.md ï¿½ Ratified v1.0
+- p2/CURRENT_BASELINES_P2.md ï¿½ P2 certified pool baseline
+- scripts/preflight_p2.js ï¿½ P2 T0 governance check
+- scripts/validators/p2_schema_validator.js ï¿½ Schema enforcement
+- scripts/migrate_p2_schema.js ï¿½ Schema migration tool
 
 ### Modified Files (Phase 1)
 - .opencode/plugins/governance-guard.js (Rules 13, 14; P2 file matching)
 - scripts/test_governance_guard.js (v5.0, 74 tests)
-- p2/P2003_QID_STANDARD.md (v2.0 — CSO weight reallocation)
+- p2/P2003_QID_STANDARD.md (v2.0 ï¿½ CSO weight reallocation)
 - p2/pack_p2_a.js, pack_p2_b.js, pack_p2_c.js (schema migration)
 - package.json (preflight:p2, validate:p2 scripts)
 
@@ -31944,7 +31966,7 @@ Phase 1 infrastructure is complete. Content authoring can proceed with locked sc
 Priority: Pack C (825 target, 15 items) ? Pack B (500 target, 40 items) ? Pack A (500 target, 100 items)
 
 
-=== P2 WAVE 2 CLOSEOUT — 2026-08-05 ===
+=== P2 WAVE 2 CLOSEOUT ï¿½ 2026-08-05 ===
 
 ## P2 Content Wave 2: 30 Items Across All 6 Packs
 
@@ -31954,12 +31976,12 @@ Authored and integrated 30 new Part 2 MCQs (5 per pack) across all 6 domains.
 ### Integration Results
 | Pack | Domain | Before | Added | After | QID Range |
 |------|--------|--------|-------|-------|-----------|
-| A | Financial Statement Analysis | 100 | 5 | **105** | P2-A-101–105 |
-| B | Corporate Finance | 40 | 5 | **45** | P2-B-041–045 |
-| C | Decision Analysis | 15 | 5 | **20** | P2-C-016–020 |
-| D | Risk Management | 0 | 5 | **5** | P2-D-001–005 |
-| E | Investment Decisions | 0 | 5 | **5** | P2-E-001–005 |
-| F | Professional Ethics | 0 | 5 | **5** | P2-F-001–005 |
+| A | Financial Statement Analysis | 100 | 5 | **105** | P2-A-101ï¿½105 |
+| B | Corporate Finance | 40 | 5 | **45** | P2-B-041ï¿½045 |
+| C | Decision Analysis | 15 | 5 | **20** | P2-C-016ï¿½020 |
+| D | Risk Management | 0 | 5 | **5** | P2-D-001ï¿½005 |
+| E | Investment Decisions | 0 | 5 | **5** | P2-E-001ï¿½005 |
+| F | Professional Ethics | 0 | 5 | **5** | P2-F-001ï¿½005 |
 | **Total** | | **155** | **30** | **185** | |
 
 ### Quality Verification
@@ -31980,10 +32002,10 @@ Authored and integrated 30 new Part 2 MCQs (5 per pack) across all 6 domains.
 - Pack F: IMA competence, confidentiality, integrity, credibility, conflict resolution
 
 ### New Scripts
-- scripts/normalize_p2_batch.js — schema normalization utility
-- scripts/integrate_p2_batch.js — batch integration from JSON files
-- scripts/p2_wave_integrate.js — inline item integration
-- scripts/p2_wave_finalize.js — finalize integration
+- scripts/normalize_p2_batch.js ï¿½ schema normalization utility
+- scripts/integrate_p2_batch.js ï¿½ batch integration from JSON files
+- scripts/p2_wave_integrate.js ï¿½ inline item integration
+- scripts/p2_wave_finalize.js ï¿½ finalize integration
 
 
 ---
@@ -32211,3 +32233,177 @@ Cumulative: 800+ distractor/explanation edits across 2,620 items, zero answer-ke
 
 **Revision recorded by:** DL-043 Batch 4 â€” Program Closeout
 **Date:** 2026-08-23
+
+---
+
+## Session 2026-08-24 â€” Item 1 Phases A/B + Migration 1: Canonical Pack Parser Instrumentation
+
+**Lane:** Full Governance Lane (Migration 1 consumer change). **Scope:** tooling built new + one validator migrated; **zero changes to any pack or case file** (preflight hashes unchanged, Certified 2620 throughout).
+
+### Delivered
+
+1. **Phase A â€” `scripts/lib/pack_parser.js`** (backup `pack_parser.js.bak-20260824160114`): string-aware per-object parser. Zero-silent-drop enforced in code â€” independent top-level `{` census must equal brace-matched region accounting (`records + errorDiagnostics === totalRegions`) or `ParserInvariantViolation` throws; parsePack never returns null. Two-level severity taxonomy (ERROR = unmaterializable region; WARNING = degraded provenance). Role tagging (metadata/content/single by field shape) + `toCanonicalRecords()` canonical merge with `contentChoicesMatchMetadata` provenance. Deterministic output documented and test-enforced. Unit suite `scripts/test_pack_parser.js` (`npm run test:parser`): **20/20 PASS**, including neighbor isolation (real DL-017 poison among 499 good objects, mid/first/last variants) and two-run deep-equality determinism.
+2. **Phase B â€” Conformance harness** (`scripts/conformance_harness.js`; artifact `reports/PHASE_B_CONFORMANCE_HARNESS_2026-08-24.json`): count parity 5/5 packs (parsed === distinct === raw grep === expected; 500Ã—4 + 620); ground truth DL-039 nine **9/9 PASS** in post-S133 state + P1B-A-143 / P1-E-R33 edge checks; Â§6 stability fingerprint pair **identical**: `9d6c89c2â€¦d1601`. Dual-block divergence baseline measured **zero paired blocks pool-wide (2,620/2,620 single-object)**, dual-method verified (role pairing + flat `ChoiceAâ€“D` key census = 0). Historical dual-block citations under DL-016/DL-026/DL-029 now describe history, not live structure.
+3. **Migration 1 â€” ExplanationValidator onto canonical parser** (backup `ExplanationValidator.js.bak-20260824155945`): both extract methods replaced by `extractViaParser`; ERROR diagnostics route to addError, WARNINGs to addWarning; unmatched-declaration null semantics preserved. Equivalence diff (`scripts/migration1_equivalence_diff.js`): deep-equal TRUE on all files where legacy extraction succeeded; three files were legacy-blind (legacy returned null).
+
+### Coverage Restoration (the material outcome)
+
+| Metric | Pre-Migration | Post-Migration | Cause |
+|---|---|---|---|
+| MCQ Questions Checked | 2120 | **2620** | Legacy regex blinded to all of Pack C by its `// BLOCK-AUTHORIZED` declaration comment (S853-era); 500 items had never been Explanation-validated |
+| Case Items Checked | 235 | **312** | scored_cases.js (12 cases) + scored_cases5.js (1 case) recovered from silent whole-file null |
+| Validate Errors | 0 | 5 | All five = precise malformed-region diagnostics in the two legacy case banks â†’ filed as **DL-044** (Open) with byte/line coordinates |
+| Validate Warnings | 1858 | 1861 | +3 net from restored coverage; includes placeholder-pattern FALSE POSITIVE on P1-EC-009 EW-A (legitimate prose "reflects a common misunderstanding about SOC reports" over-matched by `/Common misunderstanding/i` â€” noted, not remediated) |
+
+Pack C's first-ever full validation pass produced **0 EV8/DL-008 errors** across its 500 items. Pipeline status: `npm run pipeline` intentionally blocked at the validate gate (exit 1) by DL-044 â€” correct gate behavior; registry generation consumes ValidationReport.json, so forcing downstream stages would propagate FAIL state into derived artifacts. Board to disposition: DL-044 content wave first, or explicit exception.
+
+### Verification (raw evidence)
+
+- T0 preflight PASS 0 divergences; closeout preflight PASS 0 divergences (Certified 2620)
+- `npm run test:parser` 20/20 exit 0; conformance harness ALL GATES PASS exit 0 (both re-run after Migration 1)
+- Equivalence diff: 7/7 shared-scope files identical TRUE
+- DL-018 four-target classification delivered: all benign variant (absent slot == CC=C; distractor slots 632â€“846 chars; Certified)
+
+### New defects / annotations
+
+- **DL-044 filed (Open)** â€” legacy case-bank structural corruption, coordinates above.
+- DL-018 amended with four benign-target QIDs; DL-016 annotated with instrument measurement closing the live-dual-block question.
+
+**Revision recorded by:** Item 1 Phases A/B + Migration 1 closeout
+**Date:** 2026-08-24
+
+---
+
+## Session 2026-08-24 (b) â€” DL-044 Content Wave + DL-045 Filing
+
+**Lane:** Full Governance. **Scope:** two legacy case-bank files repaired (structural punctuation only); ledgers updated. Zero pack files touched.
+
+### Wave execution (five Board conditions)
+
+1. **Â§3 backups:** `scored_cases.js.bak-20260824164512` / `scored_cases5.js.bak-20260824164512`.
+2. **Repairs:** scored_cases.js â€” three `,` inserted between Items elements (CBQ-A2 @~63669, CBQ-C2 @~200329, CBQ-C3 @~428756); scored_cases5.js â€” one `]` closing CBQ5-A2's Items array (@byte 27692). Total delta: **4 characters**.
+3. **Zero-data-loss deep-diff:** bidirectional byte-proof â€” forward constructive equivalence (backup + structural tokens == shipped) and reverse excision both BYTE-EQUAL per file; content-token censuses unchanged (356/356 and 303/303).
+4. **Legacy-copy reconciliation:** root `scored_cases*.js` do not exist; no loader references in `index_updated.html` or `app/app.js`. Case banks are validator-scope; corruption never had a runtime delivery path. DL-044 exposure question CLOSED.
+5. **Post-fix battery:** parsePack 15/15 cases both files; legacy whole-array eval succeeds; `test:parser` 20/20; harness ALL GATES PASS; equivalence diff TRUE on all shared-scope files (pack_c FALSE is the documented by-design legacy regex blindness); `npm run validate` Errors 0 / Failed 0 / WARN / exit 0 (warnings 1861â†’1983 = coverage expansion into 22 recovered cases); **`npm run pipeline` GREEN end-to-end** (registry rebuilt: 3,020 questions; dashboard regenerated) â€” Tend gate restored after being blocked since Migration 1.
+
+### Ledger updates
+
+- **DL-044 â†’ Resolved** with full resolution block above.
+- **DL-045 filed (Open):** background-delegation silent-empty findings + registry-first ID-allocation doctrine, per Board determination (`reports/BOARD_DECISION_TOOLING_HARDENING.md` Â§9).
+
+### Notes
+
+- Repair script asserted pre-conditions before each insertion (expected byte at offset, unique junction counts: 3-of-3 and 1-of-1) and aborted on any mismatch.
+- Deep-diff v1 failure was a verification-script artifact (blanket regex over-matched legitimate comma junctions); positional/anchored proofs supersede it â€” final proof is the bidirectional byte-equality above.
+
+**Revision recorded by:** DL-044 wave session
+**Date:** 2026-08-24
+
+---
+
+## Session 2026-08-24 (c) â€” Migration 2: Scanner Substrate onto Canonical Parser + Pattern Refinement
+
+**Lane:** Full Governance. **Scope:** tooling/validator changes only; zero pack or case file modifications (preflight 0 divergences before and after; Certified 2620).
+
+### Migrations
+
+1. **`scripts/engine/pack_reader.js`** (backup `.bak-20260824171150`) â€” Function-eval internals replaced with `pack_parser.parsePack`; API preserved exactly (same exports, same attached metadata props, same throw semantics). **19 downstream consumers** inherit canonical parsing, incl. `scan_orchestrator.js`, `identity_validator.js`, `readiness_scorer.js`, `certification_candidate_engine.js` (the latter two = Migration 3 pair, now sharing the canonical substrate). Parity proof: per-pack fingerprint (counts/distinct-QIDs/content-SHA256/metadata) **BYTE-EQUAL** pre/post across all five packs (`scripts/m2_packreader_fingerprint.js`).
+2. **`scripts/scan_logic_inversions.js`** (backup same timestamp) â€” raw-text brace-scan replaced by parser records filtered to `MCQ_BANK_*`; diagnostics routed to loud error/warning sinks recorded in the artifact. Parity: console output IDENTICAL to baseline (CLEAN, 2620 items).
+3. **`scripts/scan_orchestrator.js`** â€” rootDir repaired to `content/packs` (post-reorganization it had been silently scanning ZERO packs and writing an all-zero "clean" certification artifact â€” a live DL-045-class defect); added DL-045-doctrine guard: `totalScanned === 0` now refuses to write an artifact and exits 1; swallowed per-pack parse failures now surface via `PARSE_FAILURES[]` in artifact + console.
+4. **ExplanationValidator placeholder refinement** â€” bare `/Common misunderstanding/i` replaced by elaboration-aware pattern (CAQS Â§4.3 bans UNEXPLAINED use); P1-EC-009 false positive eliminated. Validate warnings 1983 â†’ 1981 (exactly the FP + rollup line); placeholder statistics all zeros; zero unexplained hits pool-wide.
+
+### First real orchestrator run (2620 items, was 0)
+
+| Signal | Count | Classification |
+|---|---|---|
+| Gate -1 blocked | 80 | All Pack E supplemental series failing identity regex â€” DL-036 sibling class; proposed regex filed for Board disposition |
+| Gate 1 DL-008 | 0 | Matches harness truth |
+| Gate 1 DL-016 | 0 | Consistent with dual-block-closed |
+| Gate 1 DL-018 | 4 | Exactly P1B-E-083/F-091/P1-EC-045/P1E-B-012 â€” cross-validates DL-018 amendment |
+| Gate 1 DL-026 | 12 | NEW: Certified items w/ one empty non-CC slot each â€” filed as DL-026 amendment, remediation pending |
+| Gate 2 EV3/DL-013 | 1794/37 | Pre-existing crude substring heuristics; informational |
+
+### Verification
+
+- Fingerprints byte-equal; logic-inversion parity identical; validate Errors 0 / WARN / exit 0; pipeline GREEN end-to-end; preflight Ã—2 green.
+- Backups: `pack_reader.js.bak-*`, `scan_logic_inversions.js.bak-*`, `ExplanationValidator.js.bak-m2-*` (all 20260824171150-series).
+
+### Findings filed
+
+- DL-026 amended: twelve-item table (all Certified), remediation pending.
+- DL-036 amended: sibling-class confirmation (80 blocks) + proposed QID_REGEX fix.
+- DL-044 amendment package landed earlier this session: delivery-layer verdict, unfed `getCasePool()` mechanism, script-tag re-add risk, stale-sentence correction.
+
+**Revision recorded by:** Migration 2 closeout
+**Date:** 2026-08-24
+
+---
+
+## Session 2026-08-24 (d) â€” DL-026 Twelve-Item Enrichment Wave + DL-046 Filing
+
+**Lane:** Full Governance (content write to three pack files). **Scope:** 12 EW-slot replacements in Packs A/C/E + ledger updates. Zero CorrectChoice changes; zero state changes.
+
+### Classification correction (recorded first, per evidence discipline)
+
+The twelve targets are NOT empty slots as stated in Session (c). All twelve held directionally-correct but SUB-FLOOR text (38â€“49 chars, under CAQS EV1's 50-char minimum); the orchestrator's "empty EW slots" message collapses both cases. This entry supersedes that wording; DL-026's amendment carries the same correction.
+
+### Execution
+
+- Â§3 backups: `pack_{a,c,e}_corrected.js.bak-dl026w-20260824201638`.
+- Authored 12 choice-specific explanations (201â€“253 chars), each preserving its predecessor's diagnostic point and adding mechanism/numbers; P1-AC-028's replacement also repairs an arithmetically inconsistent rationale.
+- Two script attempts aborted SAFELY on pre-state assertions before any write (span-targeting bugs: neighbor-item field capture); final version bounds searches by parser record offsets. Assertions worked exactly as designed.
+- Post verification per item: payload equality, â‰¥50 chars, CC-slot still `""`, zero parse errors â€” 12/12 PASS.
+
+### Battery
+
+| Check | Result |
+|---|---|
+| Orchestrator Gate 1 | DL-026 **12 â†’ 0**; DL-008 = 0; DL-018 = 4 (known benign targets untouched) |
+| Validate | Errors 0; warnings 1981 â†’ **1969 (âˆ’12**, one retired short-explanation warning per item**) |
+| Preflight | 0 divergences |
+| Pipeline | GREEN exit 0 |
+
+### New defect filed
+
+- **DL-046 (Open):** P1E-A-024 Option C raw value `" securities"` â€” truncated choice text on a Certified item. Found while gathering authoring evidence; out of this wave's authorized scope. Registry-first ID allocation verified against DEFECT_LIBRARY state (highest = DL-045).
+
+**Revision recorded by:** DL-026 enrichment wave
+**Date:** 2026-08-24
+
+---
+
+## Session 2026-08-24 (e) â€” Migration 3: QID Regex Flip + Artifact-Consumption Chain + Dual-Block Annotations Closed
+
+**Lane:** Full Governance. **Scope:** tooling only; zero pack/case content changes (preflight 0 divergences throughout; Certified 2620).
+
+### 1. QID_REGEX flip (validated pre-flip per Board condition)
+
+Proposed pattern tested against full 620-item Pack E population: 620/620 matched, zero orphans; family decomposition exact (500 standard + 40 R + 75 S + 5 EVAL); zero over-matches across 11 negative probes; 7 sampled supplemental items structurally complete. Flip applied at BOTH live copies: `engine/pack_reader.js` (identity authority via getQIDFormatRegex) and `certification_candidate_engine.js` local table DELETED (replaced by getQIDFormatRegex call). Post-flip orchestrator: Gate -1 **2620P / 0B** (was 2540P/80B); all other gates unchanged.
+
+### 2. Artifact-consumption wiring (DL-036 C2)
+
+`certification_candidate_engine.js` rewritten as downstream consumer of `readiness_scoring.json`: missing artifact / empty scoring / stale pack hashes â†’ refuse (DL-045 doctrine); parsed item absent from scorer items[] â†’ hard error; structural parity invariant throws on any state-total divergence vs scorer. Local classification retired â€” scorer is the single authority.
+
+**Second silent-empty tool found & fixed:** `readiness_scorer.js` carried the same repo-root rootDir bug (silent zero-item scoring since reorganization). Repaired both call sites to content/packs; added refusal guards (no-artifact, empty scan, hash staleness) and upstream-evidence + current-hash recording in its output.
+
+**First full chain run in repo history:** orchestrator (2620 scanned) â†’ scorer (Portfolio 1.0000 READY; CERTIFY=2620) â†’ engine (mirrors exactly; parity green).
+
+### 3. Dual-block historical-state annotations landed
+
+DL-016 (already annotated Phase B), DL-026, DL-029 now carry dated notes: historical dual-block counts describe retired architecture; live measurement = 0 paired blocks pool-wide, dual-method verified.
+
+### Battery
+
+test:parser 20/20 Â· harness ALL GATES Â· validate Errors 0/WARN/exit 0 (warnings 1969 stable) Â· preflight Ã—2 green Â· pipeline GREEN exit 0 Â· chain run green with parseFailures [].
+
+### Backups
+
+`pack_reader.js.bak-m3-*`, `certification_candidate_engine.js.bak-m3-*`, `readiness_scorer.js.bak-m3-*` (20260824222332 series).
+
+### Disposition notes
+
+- All migrations (1â€“3) complete: ExplanationValidator, defect scanners/orchestrator, readiness/candidate pair now all consume canonical parsing or upstream artifacts exclusively.
+- DL-046 remains Open (queued); legacy-script-tag guard rule parked as hardening candidate.
+
+**Revision recorded by:** Migration 3 closeout
+**Date:** 2026-08-24

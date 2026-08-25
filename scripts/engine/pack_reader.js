@@ -1,9 +1,13 @@
-// AM-1 Function Constructor Parse — canonical pack file reader
-// Shared by ALL Framework v2 scripts. Within-object extraction only.
-// FORBIDDEN: forward-scan, regex-window, flat-field matching.
+// AM-1 Canonical Pack Reader — shared by ALL Framework v2 scripts.
+// Within-object extraction only. FORBIDDEN: forward-scan, regex-window,
+// flat-field matching.
+// Migration 2 (2026-08-24): parsing delegated to scripts/lib/pack_parser.js
+// (string-aware per-object, zero-silent-drop). API preserved byte-for-byte;
+// error surface unchanged (throws on missing file / no bank / malformed region).
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { parsePack, SEVERITY } = require('../lib/pack_parser');
 
 const PACK_FILES = {
   pack_a: 'pack_a_corrected.js',
@@ -26,7 +30,10 @@ const QID_REGEX = {
   pack_b: /^P1B-[A-F]-\d{3}$/,
   pack_c: /^P1-[A-F]C-\d{3}$/,
   pack_d: /^P1-[A-F]D-\d{3}$/,
-  pack_e: /^(P1E-[A-F]-\d{3}|P1-E-R\d{2})$/
+  // Migration 3: accepts all Pack E supplemental series. Validated against
+  // the full 620-item population pre-flip (zero orphans, zero over-match):
+  // 500 standard + 40 R-series + 75 S-series + 5 EVAL-series.
+  pack_e: /^(?:P1E-(?:[A-F]-\d{3}|[A-F]-S\d{2}|EVAL-\d{3})|P1-E-R\d{2})$/
 };
 
 function sha256(content) {
@@ -44,17 +51,23 @@ function parsePackFile(packName, rootDir) {
   const raw = fs.readFileSync(filePath, 'utf8');
   const varName = VAR_NAMES[packName];
 
-  let items;
+  // Canonical parse (Migration 2). Zero-silent-drop: any ERROR diagnostic or
+  // missing bank declaration is a thrown failure, never an empty array.
+  let parsed;
   try {
-    const fn = new Function(raw + '\n; return ' + varName + ';');
-    items = fn();
+    parsed = parsePack(raw, { sourceName: fileName });
   } catch (e) {
-    throw new Error(`AM-1 Function Constructor Parse failed for ${fileName}: ${e.message}`);
+    throw new Error(`AM-1 canonical parse invariant violation for ${fileName}: ${e.message}`);
   }
-
-  if (!Array.isArray(items)) {
-    throw new Error(`Parsed ${fileName} but result is not an array (got ${typeof items})`);
+  const recs = parsed.records.filter(r => r.bank === varName);
+  const errDiags = parsed.diagnostics.filter(d => d.severity === SEVERITY.ERROR && (!d.bank || d.bank === varName));
+  if (recs.length === 0 || errDiags.length > 0) {
+    const detail = errDiags.length > 0
+      ? errDiags.map(d => `${d.code}@line${d.line}`).slice(0, 3).join('; ')
+      : `no ${varName} bank declaration found`;
+    throw new Error(`AM-1 canonical parse failed for ${fileName}: ${detail}`);
   }
+  const items = recs.map(r => r.object);
 
   items._packName = packName;
   items._fileName = fileName;

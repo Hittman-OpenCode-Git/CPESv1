@@ -1368,7 +1368,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     "ExplanationWrongA": "This divides net income by weighted-average shares without subtracting preferred dividends.",
     "ExplanationWrongB": "",
     "ExplanationWrongC": "This adds preferred dividends to net income rather than subtracting them: ($340,000 + $40,000) / 100,000 = $3.80. Under ASC 260, basic EPS subtracts preferred dividends from net income to compute income available to common shareholders. Adding them overstates the numerator and inflates EPS.",
-    "ExplanationWrongD": "This subtracts preferred dividends twice.",
+    "ExplanationWrongD": "Option D ($2.60) removes the preferred dividend deduction twice: $340,000 - $40,000 - $40,000 = $260,000, divided by 100,000 shares. Basic EPS deducts preferred dividends exactly once, leaving $300,000 attributable to common stockholders.",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply"
   },
@@ -1472,7 +1472,7 @@ const MCQ_BANK_C = // BLOCK-AUTHORIZED — Pack C Domain F remediation (36 items
     ],
     "ExplanationWrongA": "This assumes all sales were collected in cash, ignoring the change in accounts receivable. When AR increases, collections are less than sales because some customers have not yet paid. Cash collected = sales + beginning AR - ending AR = $607,000.",
     "ExplanationWrongB": "This reverses the AR adjustment, adding ending AR and subtracting beginning AR.",
-    "ExplanationWrongC": "This adds both beginning and ending AR to sales.",
+    "ExplanationWrongC": "Option C ($672,000) cannot represent collections from customers because it exceeds reported sales of $620,000. Receivables increased during the year, so cash collected must fall below sales: $620,000 + $48,000 - $61,000 = $607,000.",
     "ExplanationWrongD": "",
     "DifficultyScore": 3,
     "CognitiveLevel": "Apply"

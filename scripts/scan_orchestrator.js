@@ -11,6 +11,10 @@ const dl = require('./delta_ledger_builder');
 const OUTPUT_DIR = path.join(__dirname, 'output');
 const PACKS = ['pack_a', 'pack_b', 'pack_c', 'pack_d', 'pack_e'];
 
+// DL-045 doctrine: a swallowed parse failure must never vanish silently.
+// Populated by gate catch-sites, reset per pipeline run, exposed in the artifact.
+const PARSE_FAILURES = [];
+
 function runGateNeg1(rootDir) {
   const start = Date.now();
   const results = iv.runIdentityValidation(rootDir);
@@ -103,7 +107,7 @@ function runGate1(rootDir) {
     let packItems;
     try {
       packItems = pr.parsePackFile(packName, rootDir);
-    } catch (e) { continue; }
+    } catch (e) { PARSE_FAILURES.push(packName + ' — ' + e.message); continue; }
 
     for (const item of packItems) {
       if (!item.QuestionID) continue;
@@ -199,7 +203,7 @@ function runGate2(rootDir) {
     let packItems;
     try {
       packItems = pr.parsePackFile(packName, rootDir);
-    } catch (e) { continue; }
+    } catch (e) { PARSE_FAILURES.push(packName + ' — ' + e.message); continue; }
 
     for (const item of packItems) {
       if (!item.QuestionID) continue;
@@ -269,7 +273,7 @@ function runGate3(rootDir) {
     let packItems;
     try {
       packItems = pr.parsePackFile(packName, rootDir);
-    } catch (e) { continue; }
+    } catch (e) { PARSE_FAILURES.push(packName + ' — ' + e.message); continue; }
 
     for (const item of packItems) {
       if (!item.QuestionID) continue;
@@ -322,7 +326,7 @@ function runGate4(rootDir) {
     let packItems;
     try {
       packItems = pr.parsePackFile(packName, rootDir);
-    } catch (e) { continue; }
+    } catch (e) { PARSE_FAILURES.push(packName + ' — ' + e.message); continue; }
 
     for (const item of packItems) {
       if (!item.QuestionID) continue;
@@ -370,6 +374,7 @@ function runGate4(rootDir) {
 function runScanPipeline(rootDir) {
   const timestamp = new Date().toISOString();
   const totalStart = Date.now();
+  PARSE_FAILURES.length = 0;
 
   console.log('Gate -1: Identity Validation...');
   const gateNeg1 = runGateNeg1(rootDir);
@@ -462,6 +467,7 @@ function runScanPipeline(rootDir) {
     },
     totalRuntime: `${(totalRuntime / 1000).toFixed(1)}s`,
     packFileHashes,
+    parseFailures: [...PARSE_FAILURES],
     aggregateStatistics: {
       totalScanned: totalChecked,
       totalPassed: totalPassedGate1,
@@ -488,10 +494,9 @@ function runScanPipeline(rootDir) {
   return artifact;
 }
 
-function runSelfTest() {
+function runSelfTest(rootDir) {
   console.log('=== Scan Orchestrator Self-Test ===');
-  const rootDir = path.resolve(__dirname, '..');
-  const artifact = runScanPipeline(rootDir);
+  const artifact = runScanPipeline(rootDir || path.resolve(__dirname, '..', 'content', 'packs'));
 
   console.log(`Artifact ID: ${artifact.artifactId}`);
   console.log(`Total runtime: ${artifact.totalRuntime}`);
@@ -517,15 +522,23 @@ function runSelfTest() {
 
 if (require.main === module) {
   const args = process.argv.slice(2);
+  // Packs live at content/packs/ since the repository reorganization.
+  // Legacy repo-root resolution silently produced EMPTY scans that looked
+  // clean (DL-045 class) — never point this at a directory without banks.
+  const rootDir = path.resolve(__dirname, '..', 'content', 'packs');
   if (args.includes('--self-test')) {
-    const ok = runSelfTest();
+    const ok = runSelfTest(rootDir);
     process.exit(ok ? 0 : 1);
   }
 
-  const rootDir = path.resolve(__dirname, '..');
   console.log(`Scan Orchestrator — running pre-flight pipeline on ${rootDir}`);
 
   const artifact = runScanPipeline(rootDir);
+
+  if (artifact.aggregateStatistics.totalScanned === 0) {
+    console.error('EMPTY SCAN — zero items reached any gate. Refusing to write a clean-looking artifact (DL-045 doctrine).');
+    process.exit(1);
+  }
 
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   const outPath = path.join(OUTPUT_DIR, 'certification_scan_artifact.json');
@@ -536,6 +549,10 @@ if (require.main === module) {
   console.log(`Gate -1: ${artifact.aggregateStatistics.byGate.gate_neg1.passed}P / ${artifact.aggregateStatistics.byGate.gate_neg1.blocked}B`);
   console.log(`Gate 1: ${artifact.aggregateStatistics.byGate.gate_1.passed}P / ${artifact.aggregateStatistics.byGate.gate_1.blocked}B`);
   console.log(`Output: ${outPath}`);
+  if (artifact.parseFailures && artifact.parseFailures.length > 0) {
+    console.error('PARSE FAILURES (recorded in artifact):');
+    artifact.parseFailures.forEach(f => console.error('  ' + f));
+  }
   console.log(JSON.stringify(artifact.aggregateStatistics.byDefectClass));
 }
 

@@ -1,0 +1,213 @@
+{
+  "totalItems": 2620,
+  "results": [
+    {
+      "theory": "B. Capacity concepts",
+      "hits": 9
+    },
+    {
+      "theory": "A. LCM / lower of cost or market",
+      "hits": 12
+    },
+    {
+      "theory": "A. Bond effective-interest amortization",
+      "hits": 13
+    },
+    {
+      "theory": "B. Strategic planning frameworks (SWOT/PESTLE/Porter)",
+      "hits": 14
+    },
+    {
+      "theory": "A. EPS (basic/diluted)",
+      "hits": 18
+    },
+    {
+      "theory": "F. Privacy regs (GDPR/CCPA)",
+      "hits": 26
+    },
+    {
+      "theory": "D. Joint products/byproducts (physical/sales value/NRV)",
+      "hits": 27
+    },
+    {
+      "theory": "B. Learning curve theory",
+      "hits": 29
+    },
+    {
+      "theory": "A. Depreciation methods",
+      "hits": 34
+    },
+    {
+      "theory": "B. Forecasting: Delphi/naive/causal",
+      "hits": 35
+    },
+    {
+      "theory": "A. Impairment (ASC 360)",
+      "hits": 36
+    },
+    {
+      "theory": "D. Absorption vs variable vs throughput costing",
+      "hits": 36
+    },
+    {
+      "theory": "D. Cost estimation (high-low/regression/engineering/scatter)",
+      "hits": 37
+    },
+    {
+      "theory": "C. Sales variances (mix/market share)",
+      "hits": 41
+    },
+    {
+      "theory": "D. Service dept allocation (direct/step-down/reciprocal)",
+      "hits": 41
+    },
+    {
+      "theory": "A. Lease accounting (ASC 842)",
+      "hits": 45
+    },
+    {
+      "theory": "F. Cloud computing risks / blockchain",
+      "hits": 46
+    },
+    {
+      "theory": "F. Data analytics types (descriptive/diagnostic/predictive/prescriptive)",
+      "hits": 47
+    },
+    {
+      "theory": "B. Forecasting: regression/least-squares",
+      "hits": 53
+    },
+    {
+      "theory": "A. Revenue recognition (ASC 606 5-step)",
+      "hits": 56
+    },
+    {
+      "theory": "D. Overhead application (plantwide/departmental/multiple)",
+      "hits": 59
+    },
+    {
+      "theory": "D. Relevant/differential costing (make-or-buy/special/keep-drop/sell-process)",
+      "hits": 59
+    },
+    {
+      "theory": "C. Management by exception / control limits",
+      "hits": 62
+    },
+    {
+      "theory": "D. Job order vs process costing (WA/FIFO equiv units)",
+      "hits": 66
+    },
+    {
+      "theory": "B. Forecasting: time series (moving avg, exp smoothing, seasonality, trend)",
+      "hits": 70
+    },
+    {
+      "theory": "F. AI / Machine Learning / RPA",
+      "hits": 74
+    },
+    {
+      "theory": "C. Balanced Scorecard (4 perspectives/strategy map)",
+      "hits": 77
+    },
+    {
+      "theory": "C. Transfer pricing (market/cost/negotiated/dual/goal congruence)",
+      "hits": 78
+    },
+    {
+      "theory": "F. Data governance / data quality dimensions",
+      "hits": 87
+    },
+    {
+      "theory": "C. Responsibility centers",
+      "hits": 91
+    },
+    {
+      "theory": "A. Inventory cost flow (FIFO/LIFO/weighted-avg)",
+      "hits": 95
+    },
+    {
+      "theory": "D. Activity-based costing (pools/drivers/hierarchy)",
+      "hits": 104
+    },
+    {
+      "theory": "C. ROI/RI/EVA + DuPont decomposition",
+      "hits": 105
+    },
+    {
+      "theory": "A. Equity method / consolidation / goodwill",
+      "hits": 109
+    },
+    {
+      "theory": "B. ZBB / ABB / rolling forecasts / continuous budgeting",
+      "hits": 112
+    },
+    {
+      "theory": "D. Theory of Constraints / throughput accounting",
+      "hits": 113
+    },
+    {
+      "theory": "E. SOX (302/404) / ICFR / audit committee",
+      "hits": 123
+    },
+    {
+      "theory": "E. Three lines of defense / internal audit",
+      "hits": 128
+    },
+    {
+      "theory": "A. Cash flow statement (indirect/direct)",
+      "hits": 134
+    },
+    {
+      "theory": "C. Benchmarking types/process",
+      "hits": 138
+    },
+    {
+      "theory": "D. CVP (breakeven/target profit/MOS/operating leverage/multi-product)",
+      "hits": 144
+    },
+    {
+      "theory": "B. Flexible budget variance",
+      "hits": 145
+    },
+    {
+      "theory": "C. Four-way overhead variance analysis",
+      "hits": 162
+    },
+    {
+      "theory": "E. Fraud triangle (Cressey) / fraud prevention-detection",
+      "hits": 189
+    },
+    {
+      "theory": "D. Cost behavior (fixed/var/mixed/step/relevant range)",
+      "hits": 219
+    },
+    {
+      "theory": "E. IT general vs application controls / cybersecurity CIA",
+      "hits": 223
+    },
+    {
+      "theory": "E. Segregation of duties / control activities",
+      "hits": 227
+    },
+    {
+      "theory": "C. Standard costing & variance framework",
+      "hits": 240
+    },
+    {
+      "theory": "E. COSO ERM (2017)",
+      "hits": 259
+    },
+    {
+      "theory": "B. Master/operating/financial budget sequencing",
+      "hits": 295
+    },
+    {
+      "theory": "F. Information systems / ERP lifecycle",
+      "hits": 339
+    },
+    {
+      "theory": "E. COSO IC 2013 (5 components)",
+      "hits": 434
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+    "Part": 1,
+    "Section": "B",
+    "SectionName": "Planning, Budgeting, and Forecasting",
+    "Topic": "B-B.101 master budget components",
+    "MicroTopic": "master budget components",
+    "UniqueConceptKey": "B-B-101-master-budget-components",
+    "LOSTag": "B.1 Budgeting concepts and strategic planning",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Which is typically the first budget prepared in a master budget?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The sales budget is the starting point for the master budget because all other budgets depend on sales volume.",
+    "SourceDescription": "Original CMA Part 1 exam-style practice.",
+    "QuestionID": "P1B-B-101",`n    "question_state": "Certified",101: true,
+    "ReviewNote": "If missed or marked, review the linked study materials.",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Cash budget",
+      "B": "Production budget",
+      "C": "Budgeted balance sheet",
+      "D": "Sales budget"
+    },
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
+    ],
+    "ExplanationWrongA": "The cash budget is prepared later in the master budget process. It depends on information from the sales, production, and expense budgets, which must be completed first.",
+    "ExplanationWrongB": "The production budget depends on the sales budget. The quantity of production needed is determined by budgeted sales plus desired ending inventory minus beginning inventory.",
+    "ExplanationWrongC": "The budgeted balance sheet is the final budget prepared in the master budget. It incorporates information from all other budgets including the cash budget and budgeted income statement.",
+    "ExplanationWrongD": ""
+  }

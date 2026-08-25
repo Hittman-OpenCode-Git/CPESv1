@@ -28,9 +28,33 @@ function scoreReadiness(rootDir, scanArtifactPath) {
     }
   }
 
+  // Currency guard (DL-045 doctrine): a stale gate artifact must never feed
+  // readiness scoring silently.
+  if (scanArtifact && Array.isArray(scanArtifact.perItemResults)) {
+    const stale = [];
+    for (const packName of PACKS) {
+      const key = `pack_${packName}_corrected.js`;
+      const recorded = scanArtifact.packFileHashes ? scanArtifact.packFileHashes[key] : undefined;
+      const current = pr.getPackFileHash(packName, rootDir);
+      if (!recorded || recorded === 'ERROR' || recorded !== current) stale.push(key);
+    }
+    if (stale.length > 0) {
+      throw new Error(`STALE SCAN ARTIFACT — pack hashes diverge for: ${stale.join(', ')}. Re-run scripts/scan_orchestrator.js before scoring.`);
+    }
+    if (scanArtifact.aggregateStatistics && scanArtifact.aggregateStatistics.totalScanned === 0) {
+      throw new Error('EMPTY SCAN ARTIFACT — upstream pipeline scanned zero items. Scoring refused (DL-045).');
+    }
+  }
+
   const results = {
     sessionId: 'S322',
     timestamp,
+    upstreamEvidence: scanArtifact ? {
+      artifactId: scanArtifact.artifactId || null,
+      artifactTimestamp: scanArtifact.timestamp || null,
+      packFileHashes: scanArtifact.packFileHashes || null
+    } : null,
+    packFileHashes: Object.fromEntries(PACKS.map(p => [p, pr.getPackFileHash(p, rootDir)])),
     portfolioReadiness: {
       readinessScore: 0.0,
       readinessStatus: 'BLOCKED',
@@ -149,7 +173,8 @@ function scoreReadiness(rootDir, scanArtifactPath) {
 
 function runSelfTest() {
   console.log('=== Readiness Scorer Self-Test ===');
-  const rootDir = path.resolve(__dirname, '..');
+  // Packs live at content/packs/ since the repository reorganization.
+  const rootDir = path.resolve(__dirname, '..', 'content', 'packs');
 
   let scanArtifactPath = path.join(OUTPUT_DIR, 'certification_scan_artifact.json');
   const results = scoreReadiness(rootDir, scanArtifactPath);
@@ -180,12 +205,24 @@ if (require.main === module) {
     process.exit(ok ? 0 : 1);
   }
 
-  const rootDir = path.resolve(__dirname, '..');
+  const rootDir = path.resolve(__dirname, '..', 'content', 'packs');
   let scanArtifactPath = path.join(OUTPUT_DIR, 'certification_scan_artifact.json');
+
+  if (!fs.existsSync(scanArtifactPath)) {
+    console.error('NO SCAN ARTIFACT — scoring without Gate-pipeline evidence is refused (DL-045 doctrine).');
+    console.error('Run scripts/scan_orchestrator.js first.');
+    process.exit(1);
+  }
 
   console.log('Readiness Scorer — computing Framework v2 readiness states');
 
-  const results = scoreReadiness(rootDir, fs.existsSync(scanArtifactPath) ? scanArtifactPath : null);
+  let results;
+  try {
+    results = scoreReadiness(rootDir, scanArtifactPath);
+  } catch (e) {
+    console.error('SCORING REFUSED: ' + e.message);
+    process.exit(1);
+  }
 
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   const outPath = path.join(OUTPUT_DIR, 'readiness_scoring.json');

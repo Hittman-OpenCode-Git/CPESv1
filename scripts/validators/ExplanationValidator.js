@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const Validator = require("./Validator");
 const config = require("../config");
+const { parsePack, SEVERITY } = require("../lib/pack_parser");
 
 class ExplanationValidator extends Validator {
     constructor() {
@@ -10,7 +11,12 @@ class ExplanationValidator extends Validator {
             { pattern: /This is the correct choice/i, label: '"This is the correct choice"' },
             { pattern: /Plausible distractor: this choice misapplies/i, label: '"Plausible distractor: this choice misapplies..."' },
             { pattern: /^Plausible distractor:/i, label: '"Plausible distractor:"' },
-            { pattern: /Common misunderstanding/i, label: '"Common misunderstanding"' },
+            // Migration 2 refinement: the bare /Common misunderstanding/i
+            // over-matched legitimate prose (P1-EC-009: "reflects a common
+            // misunderstanding about SOC reports…"). CAQS §4.3/EV2 bans
+            // UNEXPLAINED use only — so the placeholder flag now requires
+            // the absence of elaboration markers.
+            { pattern: /\bcommon misunderstanding\b(?!\s*(?:about|regarding|concerning|around|in|is|was|are|involves|relates|that)\b|\s*:)/i, label: '"Common misunderstanding" (unexplained)' },
             { pattern: /This answer is correct because it is correct/i, label: '"This answer is correct because it is correct"' },
             { pattern: /^This answer is correct/i, label: '"This answer is correct"' },
         ];
@@ -111,68 +117,52 @@ class ExplanationValidator extends Validator {
         return this.report();
     }
 
+    /**
+     * Canonical extraction (Migration 1, Item 1 Phase C).
+     *
+     * Backed by scripts/lib/pack_parser.js — string-aware per-object parsing
+     * with zero-silent-drop accounting. Legacy whole-array extraction
+     * silently returned null on ANY malformed region (dropping every object
+     * in the file) and could not read declarations carrying // annotations
+     * (Pack C's BLOCK-AUTHORIZED line blinded it to 500 items).
+     *
+     * Behavior preserved: returns array of objects for matching banks,
+     * null when no matching declaration exists.
+     * Behavior improved: ERROR diagnostics route to addError (loud),
+     * WARNING diagnostics to addWarning; malformed regions isolate to
+     * per-object failures instead of poisoning the whole file.
+     */
     extractQuestions(content, filename) {
-        const varMatch = content.match(/(?:const|let|var)\s+(MCQ_BANK_\w+)\s*=\s*\[/);
-        if (!varMatch) return null;
-        const arrStart = content.indexOf('[', varMatch.index);
-        let depth = 1, pos = arrStart + 1;
-        let inString = false, stringChar = "", escape = false;
-        while (depth > 0 && pos < content.length) {
-            const ch = content[pos];
-            if (escape) { escape = false; pos++; continue; }
-            if (inString) {
-                if (ch === '\\') { escape = true; pos++; continue; }
-                if (ch === stringChar) { inString = false; stringChar = ""; }
-                pos++; continue;
-            }
-            if (ch === '"' || ch === "'") {
-                inString = true;
-                stringChar = ch;
-                pos++; continue;
-            }
-            if (ch === '[') depth++;
-            else if (ch === ']') depth--;
-            pos++;
-        }
-        const jsStr = content.substring(arrStart, pos);
-        try { return JSON.parse(jsStr); } catch(e) {
-            try {
-                const fn = new Function('return (' + jsStr + ')');
-                return fn();
-            } catch(e2) { return null; }
-        }
+        return this.extractViaParser(content, filename, /^MCQ_BANK_/);
     }
 
     extractCases(content, filename) {
-        const varMatch = content.match(/(?:const|let|var)\s+(ENHANCED_CASE_BASE\d*)\s*=\s*\[/);
-        if (!varMatch) return null;
-        const arrStart = content.indexOf('[', varMatch.index);
-        let depth = 1, pos = arrStart + 1;
-        let inString = false, stringChar = "", escape = false;
-        while (depth > 0 && pos < content.length) {
-            const ch = content[pos];
-            if (escape) { escape = false; pos++; continue; }
-            if (inString) {
-                if (ch === '\\') { escape = true; pos++; continue; }
-                if (ch === stringChar) { inString = false; stringChar = ""; }
-                pos++; continue;
-            }
-            if (ch === '"' || ch === "'") {
-                inString = true;
-                stringChar = ch;
-                pos++; continue;
-            }
-            if (ch === '[') depth++;
-            else if (ch === ']') depth--;
-            pos++;
+        return this.extractViaParser(content, filename, /^ENHANCED_CASE_BASE\d*$/);
+    }
+
+    extractViaParser(content, filename, bankPattern) {
+        let parsed;
+        try {
+            parsed = parsePack(content, { sourceName: filename });
+        } catch (e) {
+            this.addError(`[${filename}] canonical parser invariant violation: ${e.message}`);
+            return null;
         }
-        const jsStr = content.substring(arrStart, pos);
-        try { return JSON.parse(jsStr); } catch(e) {
-            try {
-                const fn = new Function('return (' + jsStr + ')');
-                return fn();
-            } catch(e2) { return null; }
-        }
+
+        const banks = parsed.banks.filter(b => bankPattern.test(b.name)).map(b => b.name);
+        if (banks.length === 0) return null; // mirrors legacy unmatched-declaration semantics
+
+        const bankSet = new Set(banks);
+        parsed.diagnostics.forEach(d => {
+            // Region-scoped diagnostics carry .bank; array-level ones apply
+            // whenever any target bank exists in this file.
+            if (d.bank && !bankSet.has(d.bank)) return;
+            const msg = `[${filename}] ${d.code} @line ${d.line}: ${d.message}`;
+            if (d.severity === SEVERITY.ERROR) this.addError(msg);
+            else this.addWarning(msg);
+        });
+
+        return parsed.records.filter(r => bankSet.has(r.bank)).map(r => r.object);
     }
 
     validateQuestion(q, filename, idx) {
