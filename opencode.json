@@ -1,12 +1,31 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "qwen3:8b": {
+          "name": "Qwen3 8B (local)",
+          "limit": {
+            "context": 13312,
+            "output": 5120
+          }
+        },
+        "qwen2.5-coder:7b": {
+          "name": "Qwen2.5 Coder 7B (local)",
+          "limit": {
+            "context": 13312,
+            "output": 5120
+          }
+        }
+      }
+    }
+  },
   "plugin": [
-    "opencode-background-agents",
-    "opencode-goal-plugin",
-    "opencode-supermemory",
-    "opencode-vibeguard",
-    "opencode-conductor",
-    "opencode-websearch-cited",
     "governance-guard",
     "stem-similarity-guard"
   ],
@@ -18,7 +37,13 @@
     "reserved": 10000
   },
   "watcher": {
-    "ignore": ["*.bak", "reports/**", "scripts/reports/**", "scripts/output/**", "node_modules/**"]
+    "ignore": [
+      "*.bak",
+      "reports/**",
+      "scripts/reports/**",
+      "scripts/output/**",
+      "node_modules/**"
+    ]
   },
   "instructions": [
     "AGENTS.md",
@@ -51,25 +76,38 @@
       "mode": "subagent",
       "description": "Audits real (non-synthetic) artifacts against S208 controls: the 6 drift categories, technical debt items, learner-safety impact. Use for S213 category review and S215 debt verification.",
       "prompt": "{file:./.opencode/agent/stewardship-inspector.md}",
-      "permission": { "edit": "deny", "bash": "deny", "webfetch": "deny" }
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "webfetch": "deny"
+      }
     },
     "registry-integrity": {
       "mode": "subagent",
       "description": "Validates single-source-of-truth and searches for duplicate ownership paths across all six registries. Use for S214 and the registry-integrity check in S216.",
       "prompt": "{file:./.opencode/agent/registry-integrity.md}",
-      "permission": { "edit": "deny", "bash": "deny" }
+      "permission": {
+        "edit": "deny",
+        "bash": "deny"
+      }
     },
     "drift-detector": {
       "mode": "subagent",
       "description": "Constructs controlled drift scenarios and scores detection, severity assignment, and response quality against the S208 Drift Detection Model. Use for S213 and drift-prevention checks in S216.",
       "prompt": "{file:./.opencode/agent/drift-detector.md}",
-      "permission": { "edit": "deny", "bash": "ask" }
+      "permission": {
+        "edit": "deny",
+        "bash": "ask"
+      }
     },
     "governance-validator": {
       "mode": "subagent",
       "description": "Reviews mitigation effectiveness, scalability, sustainability, operational resilience, and stop-condition compliance. Use for S215 mitigation review and S216 recertification scoring.",
       "prompt": "{file:./.opencode/agent/governance-validator.md}",
-      "permission": { "edit": "deny", "bash": "deny" }
+      "permission": {
+        "edit": "deny",
+        "bash": "deny"
+      }
     }
   },
   "command": {

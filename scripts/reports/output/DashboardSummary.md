@@ -1,52 +1,53 @@
 # Defect Dashboard Summary
 
-**Generated:** 2026-07-22T16:27:21.097Z
+**Generated:** 2026-08-25T02:34:09.775Z
 
 ## Overview
 
 | Severity | Count |
 |----------|-------|
-| Medium | 120 |
-| Warning | 2513 |
-| **Total** | **2633** |
+| Warning | 1969 |
+| **Total** | **1969** |
 
 ## By Validator
 
 | Validator | Errors | Warnings | Confidence |
 |-----------|--------|----------|------------|
-| AbsoluteLanguageValidator | 118 | 840 | 100% |
-| AmbiguityValidator | 0 | 410 | 100% |
-| Blueprint Validator | 0 | 395 | 100% |
-| Case Integrity Validator | 2 | 8 | 100% |
-| Difficulty Validator | 0 | 75 | 100% |
-| DistractorSimilarityValidator | 0 | 450 | 100% |
-| Explanation Validator | 0 | 158 | 100% |
-| Metadata Validator | 0 | 65 | 100% |
-| Reference Validator | 0 | 112 | 100% |
+| AbsoluteLanguageValidator | 0 | 764 | 100% |
+| AmbiguityValidator | 0 | 481 | 100% |
+| Blueprint Validator | 0 | 70 | 100% |
+| Case Integrity Validator | 0 | 10 | 100% |
+| Difficulty Validator | 0 | 39 | 100% |
+| DistractorSimilarityValidator | 0 | 417 | 100% |
+| Explanation Validator | 0 | 21 | 100% |
+| Metadata Validator | 0 | 4 | 100% |
+| Part 2 Blueprint Validator | 0 | 1 | 100% |
+| Reference Validator | 0 | 159 | 100% |
+| content/cases/legacy/scored_cases.js | 0 | 3 | 100% |
 
 ## By Category
 
 | Category | Findings |
 |----------|----------|
-| Language | 958 |
-| Distractor | 450 |
-| Ambiguity | 410 |
-| Blueprint | 395 |
-| Explanation | 158 |
-| Reference | 112 |
-| Difficulty | 75 |
-| Metadata | 65 |
-| Case | 10 |
+| Language | 764 |
+| Ambiguity | 481 |
+| Distractor | 417 |
+| Reference | 159 |
+| Blueprint | 71 |
+| Difficulty | 39 |
+| Explanation | 21 |
+| Case | 13 |
+| Metadata | 4 |
 
 ## Repository Metrics
 
 | Metric | Value |
 |--------|-------|
-| Questions Audited (MCQ items) | 12800 |
-| Validators / Sub-Modules | 9 |
+| Questions Audited (MCQ items) | 10600 |
+| Validators / Sub-Modules | 11 |
 | Critical | 0 |
 | High | 0 |
-| Medium | 120 |
-| Warnings | 2513 |
+| Medium | 0 |
+| Warnings | 1969 |
 | Average Confidence | 100% |
 | Overall Status | WARN |

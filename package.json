@@ -15,7 +15,9 @@
     "preflight": "node scripts/preflight.js",
     "preflight:p2": "node scripts/preflight_p2.js",
     "validate:p2": "node scripts/validators/p2_schema_validator.js",
+    "probe-model": "node scripts/model_limit_probe.js",
     "smoke": "node scripts/smoke_test.js",
+    "test:parser": "node scripts/test_pack_parser.js",
     "electron": "electron .",
     "electron-dev": "electron . --dev"
   },
