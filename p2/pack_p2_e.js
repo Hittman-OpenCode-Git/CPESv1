@@ -2633,7 +2633,8 @@ var pack_p2_e_questions = [
   "NPV = 151,640 - 120,000 = 31,640; accept",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2676,7 +2677,8 @@ var pack_p2_e_questions = [
   "Discounted inflows 146,000 < 150,000; NPV = -4,000; reject",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2719,7 +2721,8 @@ var pack_p2_e_questions = [
   "PI = 96,000 / 80,000 = 1.20; accept",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2762,7 +2765,8 @@ var pack_p2_e_questions = [
   "Payback = 300,000 / 75,000 = 4.0 years",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2805,7 +2809,8 @@ var pack_p2_e_questions = [
   "DPB = 2 + 59,380 / 67,590 = 2.9 years",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2848,7 +2853,8 @@ var pack_p2_e_questions = [
   "EAA Alpha 8,454 > EAA Beta 5,633; select Alpha",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2891,7 +2897,8 @@ var pack_p2_e_questions = [
   "ATCF = 90,000 + 24,000 = 114,000",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2934,7 +2941,8 @@ var pack_p2_e_questions = [
   "Year 2 MACRS = 500,000 x 32% = 160,000",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2977,7 +2985,8 @@ var pack_p2_e_questions = [
   "ARR = 40,000 / 200,000 = 20.0%",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2988,7 +2997,7 @@ var pack_p2_e_questions = [
 "Choices": {
   "A": "Project R, because the higher NPV measures greater value creation even though its IRR is lower",
   "B": "Project Q, because its IRR of 22% exceeds the 11% cost of capital",
-  "C": "Project Q, because the higher IRR always produces the higher NPV for projects with equal lives",
+  "C": "Project Q, because a higher IRR produces a higher NPV when projects have equal lives and clear the same cost of capital",
   "D": "Project Q, because NPV is unreliable when both projects clear the cost of capital"
 },
 "CognitiveLevel": "Analyze",
@@ -2999,7 +3008,7 @@ var pack_p2_e_questions = [
 "ExplanationCorrect": "For mutually exclusive projects, NPV is the governing criterion because it measures the absolute dollar value each project contributes to the firm, and IRR can conflict with NPV when projects differ in scale or in the timing of cash flows. Project R's NPV of $210,000 exceeds Project Q's $180,000, so R adds $30,000 more shareholder value even though its 16% IRR trails Q's 22%. Flash's capital committee should select Project R and treat the IRR as supplementary information only.",
 "ExplanationWrongA": "",
 "ExplanationWrongB": "This response applies the independent-project acceptance rule, accept when the IRR exceeds the cost of capital, to a ranking decision. Both projects clear the 11% hurdle, so that comparison does not separate them; for mutually exclusive projects the selection must be based on NPV, which favors Project R.",
-"ExplanationWrongC": "The claim that a higher IRR always accompanies a higher NPV for equal-life projects is false; the rankings can flip when projects differ in the scale of the outlay or the timing of inflows. Here Project Q's 22% IRR coexists with the lower $180,000 NPV, so the IRR ranking is not decisive and NPV should govern.",
+"ExplanationWrongC": "The claim that a higher IRR accompanies a higher NPV whenever lives are equal is false; the rankings can flip when projects differ in the scale of the outlay or the timing of inflows. Here Project Q's 22% IRR coexists with the lower $180,000 NPV, so the IRR ranking is not decisive and NPV should govern.",
 "ExplanationWrongD": "There is no basis for discarding NPV when both projects clear the cost of capital; NPV remains reliable and is the primary criterion for mutually exclusive choices. The $210,000 NPV of Project R is exactly the evidence needed to decide, and it points to Project R, not Project Q.",
 "FormulaReference": "ID-09: IRR = rate where NPV = 0; NPV governs mutually exclusive ranking",
 "ItemStyle": "single-select",
@@ -3020,7 +3029,8 @@ var pack_p2_e_questions = [
   "Mutually exclusive: NPV governs; R 210,000 > Q 180,000",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -3063,7 +3073,8 @@ var pack_p2_e_questions = [
   "A+B+C = 450,000 outlay, 117,000 NPV; feasible optimum",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -3106,7 +3117,8 @@ var pack_p2_e_questions = [
   "Net = 25,000 - 15,000 + 2,000 = 12,000 F",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -3149,7 +3161,8 @@ var pack_p2_e_questions = [
   "Real option: flexibility adds value beyond static NPV",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -3192,7 +3205,8 @@ var pack_p2_e_questions = [
   "RADR embeds project risk in the discount rate",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -3235,6 +3249,3920 @@ var pack_p2_e_questions = [
   "Incremental NPV 270,000; select Option 1",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
-}
+"question_state": "Certified",
+    "certification_session": "P2-060"
+},
+  {
+    "Authorities": [
+      "Corporate finance theory - NPV decision rule",
+      "IMA CMA Part 2 Content Specification, Domain E"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$4,355,000; accept the project.",
+      "B": "+$355,000; accept the project.",
+      "C": "-$209,000; reject the project.",
+      "D": "+$2,000,000; accept the project."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Reporting PV of inflows as NPV, or discounting with the wrong-life annuity factor",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is B. The governing principle is the NPV decision rule: a project adds value when the present value of its after-tax cash inflows exceeds the initial outlay, discounted at Flash's 10% cost of capital. Worked solution: PV of inflows = $1,000,000 x 4.355 = $4,355,000; NPV = $4,355,000 - $4,000,000 = +$355,000. Because NPV is positive, accepting the packaging line increases Flash's value by $355,000 in present-value terms, so CFO Elena Vasquez should fund it. In business terms the Cincinnati line earns just over its 10% hurdle on a $4 million base, a thin but real margin that leaves little room for volume shortfalls. A common exam trap is quoting the $4,355,000 present value of inflows as the NPV, forgetting to subtract the initial investment.",
+    "ExplanationWrongA": "Choice A reports the $4,355,000 present value of the six inflows as though it were the NPV. This skips subtracting the $4,000,000 outlay, mistaking gross present value for net value created; the decision rule requires PV of inflows minus the t=0 investment, which nets to +$355,000.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C discounts the six-year stream with the five-year annuity factor of 3.791, yielding -$209,000 and a wrongful rejection. Dropping Year 6 removes $1,000,000 of inflow the project genuinely delivers; the correct six-year factor at 10% is 4.355.",
+    "ExplanationWrongD": "Choice D sums six undiscounted $1,000,000 inflows and subtracts the outlay for +$2,000,000, ignoring the time value of money entirely. At Flash's 10% rate those future dollars shrink to a $4,355,000 present value; discounting, not nominal addition, produces the +$355,000 verdict.",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-076",
+    "Section": "E",
+    "Stem": "Flash, a diversified manufacturer with plants in Cincinnati, Erie, and Dayton, is evaluating a $4,000,000 automated packaging line for its Cincinnati plant. CFO Elena Vasquez expects the line to generate after-tax operating cash inflows of $1,000,000 per year for six years. Flash discounts capital projects at 10%. PV annuity factor, 6 years, 10% = 4.355. What is the project's net present value and the correct decision?",
+    "Topic": "E.076 expansion-line-npv-decision",
+    "UniqueConceptKey": "E-076-project-npv",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-step DCF application at moderate demand",
+      "Recompute: 1,000,000x4.355=4,355,000; 4,355,000-4,000,000=355,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory - sensitivity analysis in capital budgeting",
+      "IMA CMA Part 2 Content Specification, Domain E"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "It assigns probability distributions to many inputs and reruns the model thousands of times to build a distribution of NPV outcomes.",
+      "B": "It computes the probability-weighted NPV across a small set of internally consistent economic states.",
+      "C": "It isolates how much NPV changes as one assumption flexes across a range while other inputs stay fixed, revealing which estimates most affect the outcome.",
+      "D": "It raises the hurdle rate by a fixed premium to compensate for project-specific risk."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Confusing one-variable sensitivity analysis with Monte Carlo or scenario analysis",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is C. The technique Webb describes is sensitivity analysis: the analyst flexes one input, such as unit volume, selling price, resin cost, or the discount rate, across a plausible range while holding all other assumptions constant, then observes how far NPV moves. Its purpose is diagnostic ranking — identifying which assumptions carry the most value at risk so Flash's analysts know which estimates deserve the tightest supporting evidence before capital is committed. For the board, the message is practical: if a 5% swing in throughput moves NPV by hundreds of thousands of dollars, the volume forecast is the number to pressure-test hardest. Sensitivity analysis shows vulnerability to each estimate taken alone; it assigns no probabilities and combines no variables.",
+    "ExplanationWrongA": "Choice A describes Monte Carlo simulation — probability distributions on many inputs and thousands of randomized reruns. Webb's method flexes a single input deterministically and yields a point NPV per tested value; simulation, not sensitivity, is the randomized technique.",
+    "ExplanationWrongB": "Choice B describes scenario analysis, which moves several assumptions together across a few named economic states. The technique in the stem deliberately holds everything else constant while one variable moves — the defining trait of sensitivity analysis, not scenario construction.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D shifts to risk-adjusted hurdle rates, a discounting-policy response to risk. Sensitivity analysis changes no rate and assigns no probabilities; it simply measures how far NPV travels when one estimate is stressed across its range.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-077",
+    "Section": "E",
+    "Stem": "At Flash's quarterly capital review, treasurer Marcus Webb explains to the board how the company screens risky proposals for its Erie and Dayton plants. He describes a technique in which the analyst varies a single input — for example, unit sales volume, resin price, or the discount rate — across a range while holding every other assumption constant, observing how much the project's NPV moves. Which statement best describes what this technique accomplishes?",
+    "Topic": "E.077 sensitivity-analysis-purpose",
+    "UniqueConceptKey": "E-077-sensitivity-concept",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-concept discrimination at low load",
+      "Conceptual item - no computation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Hertz (1964), Risk Analysis in Capital Investment, Harvard Business Review",
+      "IMA CMA Part 2 Content Specification, Domain E"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Monte Carlo simulation",
+      "B": "Sensitivity analysis",
+      "C": "Scenario analysis",
+      "D": "Discounted payback analysis"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Attributing discrete-scenario weighting or one-at-a-time flexing to Monte Carlo",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The correct answer is A. Chen's description defines Monte Carlo simulation: every uncertain input receives a full probability distribution, the model is rerun thousands of times drawing values at random from those distributions, and the output is an entire probability distribution of project NPV rather than a single point estimate. First applied to capital budgeting by David Hertz in 1964, the technique lets Flash see the probability of a negative NPV, not merely whether the base case clears the hurdle — a decisive difference when sizing contingency reserves for uptime-sensitive equipment investments. The competing techniques either flex one variable at a time, build a few hand-constructed futures, or measure years-to-recovery; none produces a simulated distribution of thousands of randomized outcomes.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B names sensitivity analysis, which stresses one input at a time and reports point estimates for each tested value. Chen's quoted description assigns full probability distributions and draws thousands of random combinations — features unique to Monte Carlo simulation.",
+    "ExplanationWrongC": "Choice C names scenario analysis, a handful of hand-built, internally consistent futures weighted by judgment. The description instead automates randomness across thousands of trials, which is precisely how simulation differs from a few curated cases.",
+    "ExplanationWrongD": "Choice D offers discounted payback, a liquidity metric measuring years needed to recover the outlay in present-value terms. It generates no NPV distribution at all, so it cannot match a description of simulated outcome distributions.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-078",
+    "Section": "E",
+    "Stem": "During onboarding for Flash's new capital-budgeting analysts, controller Priya Chen reviews the company's risk-assessment toolkit. She reads aloud a description from the methodology manual: 'Each uncertain input — demand growth, resin price, machine uptime — is assigned a full probability distribution, and the project model is rerun thousands of times with values drawn at random, producing an entire distribution of possible project NPVs.' Which technique does this description define?",
+    "Topic": "E.078 monte-carlo-simulation-definition",
+    "UniqueConceptKey": "E-078-monte-carlo-concept",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: direct recall of a defined technique",
+      "Conceptual item - no computation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IRC Sec. 168 (MACRS); IRS Publication 946",
+      "Corporate finance theory - after-tax cash flow construction"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$750,000",
+      "B": "$1,000,000",
+      "C": "$375,000",
+      "D": "$875,000"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Omitting the depreciation tax shield when converting accrual projections to cash flow",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is D. The governing principle is after-tax cash flow construction: cash operating items are taxed at the marginal rate, while depreciation is a non-cash deduction whose only cash effect is the tax shield it creates. Worked solution: after-tax operating cash flow = (Revenue - Cash operating expenses) x (1 - t) + (Depreciation x t) = ($2,400,000 - $1,400,000) x 0.75 + ($500,000 x 0.25) = $750,000 + $125,000 = $875,000. For Reyes' Dayton extrusion upgrade, $875,000 is the first-year cash the project actually throws off and the figure that belongs in Flash's DCF model. The classic trap is dropping the $125,000 shield: depreciation never leaves Flash as cash, but every dollar deducted shelters income and saves 25 cents of tax.",
+    "ExplanationWrongA": "Choice A stops after taxing the operating margin ($750,000) and drops the depreciation tax shield. Depreciation is not a cash outflow, but deducting it saves Flash $125,000 of tax ($500,000 x 25%), which must be added back to reach $875,000.",
+    "ExplanationWrongB": "Choice B is the pre-tax operating cash flow of $1,000,000 with no tax applied at all. Flash pays cash taxes at a 25% marginal rate, so unlevered operating dollars must shrink by taxation before they enter any discounted cash flow model.",
+    "ExplanationWrongC": "Choice C reports accrual net income of $375,000 (($2,400,000 - $1,400,000 - $500,000) x 0.75) and forgets the $125,000 shield is real cash. Income subtracts depreciation as an expense; cash flow adds the shield back on top, producing $875,000.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "ID-06",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-079",
+    "Section": "E",
+    "Stem": "Flash plans a $3,500,000 extrusion-line upgrade at its Dayton plant. VP of Manufacturing Daniel Reyes supplies first-year operating projections: incremental revenue of $2,400,000, cash operating expenses of $1,400,000, and depreciation of $500,000 on the new equipment. Flash's marginal tax rate is 25%. What is the project's first-year after-tax operating cash flow?",
+    "Topic": "E.079 after-tax-operating-cash-flow",
+    "UniqueConceptKey": "E-079-atcf-computation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: standard ATCF formula with tax-shield step",
+      "Recompute: (2,400,000-1,400,000)x0.75=750,000; 500,000x0.25=125,000; total 875,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (objectivity, credibility)",
+      "Capital budgeting post-audit governance practice"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Labor inefficiency is the primary driver of the shortfall, and Erie supervision should be replaced.",
+      "B": "The shortfall reflects uncontrollable market forces, so no corrective action is warranted.",
+      "C": "The dominant driver is an aggressive volume assumption embedded in the original forecast; rebuild future proposals from demonstrated capacity and require post-audits to separate controllable variances from assumption error.",
+      "D": "Execution failed: the $240,000 gap proves poor installation management, and the project should be written off."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Blaming execution when the true driver is a biased volume forecast in the proposal",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is C. A capital post-audit exists to improve future forecasts, and Marsh's decomposition attributes cause before assigning blame. Of the $240,000 shortfall ($800,000 forecast vs. $560,000 actual), gross unfavorable components were volume -$180,000 and energy -$100,000, partly offset by favorable labor +$40,000; volume alone explains 75% of the net gap, and the approval file shows the proposal assumed 105% of demonstrated peak throughput, a level never sustained in trials. Erie's team largely executed against an impossible baseline while beating plan on labor efficiency. The remedy is process, not personnel: rebuild proposals from demonstrated capacity and require the post-audit template to separate controllable variances from forecast-assumption error, so future capital approvals rest on honest baselines and reviewers stay objective about whose estimate failed.",
+    "ExplanationWrongA": "Choice A blames labor, yet labor was the one favorable element (+$40,000). Selecting it inverts the decomposition's direction and would punish the strongest-performing area while ignoring the $180,000 volume gap rooted in the inflated 105%-of-peak assumption.",
+    "ExplanationWrongB": "Choice B dismisses the shortfall as uncontrollable and recommends no action. The volume component traces to Flash's own forecasting practice — an internal, fixable bias — and the $100,000 energy overrun invites contract and efficiency responses, so abdication wastes the post-audit's purpose.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D converts the gap into an execution indictment and a write-off call. Execution was mixed-to-good (labor favorable), the conveyor still yields $560,000 of genuine savings, and the evidence indicts the forecast baseline rather than installation management.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-080",
+    "Section": "E",
+    "Stem": "One year after commissioning a $3,200,000 conveyor automation project at Flash's Erie plant, Director of Internal Audit Kevin Marsh completes the required post-audit. Forecast annual cash savings were $800,000; actual savings were $560,000. His decomposition: throughput volume below plan -$180,000; energy costs above plan -$100,000; labor efficiency better than plan +$40,000. Review notes show the original proposal assumed 105% of demonstrated peak throughput, a level never achieved in pre-approval trials. Which conclusion should Marsh present to the capital committee?",
+    "Topic": "E.080 post-audit-variance-attribution",
+    "UniqueConceptKey": "E-080-postaudit-variance",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: requires decomposing variance components and attributing causation",
+      "Decomposition check: -180,000-100,000+40,000=-240,000 equals 560,000-800,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IRC Sec. 1231 (gain on disposition of business property)",
+      "ASC 360-10-40 (disposal of long-lived assets)",
+      "Corporate finance theory - terminal value in DCF"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$508,800",
+      "B": "$413,400",
+      "C": "$381,600",
+      "D": "$650,000"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Taxing the working-capital recovery or skipping tax on the salvage gain",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is B. The principle is that terminal flows enter the DCF after tax and after discounting, and only taxable items bear tax. After-tax salvage = $600,000 x (1 - 0.25) = $450,000, because selling machinery above its zero book value creates a fully taxable gain. The $200,000 working-capital recovery is a return of earlier investment, not income, so it is untaxed. Combined terminal inflow = $450,000 + $200,000 = $650,000; present value = $650,000 x 0.636 = $413,400. For Okafor, this terminal layer contributes $413,400 of present value to the project's NPV — material on a multi-million-dollar approval. The two recurring traps are taxing the working-capital reversal as if it were gain, and skipping discounting altogether because the figure looks final.",
+    "ExplanationWrongA": "Choice A skips the gain tax, discounting the full $800,000 ($600,000 salvage + $200,000 recovery) to $508,800. Selling $600,000 machinery at zero book value triggers a taxable gain; only the after-tax $450,000 joins the recovery in the terminal flow.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C taxes everything including the working-capital return: $800,000 x 0.75 = $600,000, then x 0.636 = $381,600. Recovering previously invested working capital is a return OF capital rather than taxable income; only the $600,000 salvage gain bears the 25% rate.",
+    "ExplanationWrongD": "Choice D uses the undiscounted $650,000 total, ignoring that these dollars arrive in Year 4. At Flash's 12% rate, four years of waiting cut the value to $413,400; terminal flows must be discounted like every other projected cash flow.",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-081",
+    "Section": "E",
+    "Stem": "Flash's material-handling project ends in Year 4. FP&A Manager Sarah Okafor models the terminal flows: machinery with a $600,000 salvage value against a zero book value (gain taxed at 25%), plus recovery of $200,000 of working capital invested at launch (not taxable). PV factor, Year 4, 12% = 0.636. What present value should Okafor attach to these terminal flows?",
+    "Topic": "E.081 terminal-value-after-tax",
+    "UniqueConceptKey": "E-081-terminal-value-pv",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two-step terminal-flow construction with tax and discounting",
+      "Recompute: 600,000x0.75=450,000; +200,000=650,000; 650,000x0.636=413,400",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "CAPM (Sharpe 1964; Lintner 1965)",
+      "Modigliani-Miller with taxes (investment-financing separation)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Apply the 9% corporate WACC to all projects so capital allocation stays consistent across divisions.",
+      "B": "Use 12% — the 9% WACC plus a flat 3% subjective cushion for uncertainty.",
+      "C": "Use 6% — the bond coupon — because the venture will be financed with that newly issued debt.",
+      "D": "Use 13% — the required return implied by comparable specialty-chemicals firms — because the discount rate must reflect the project's risk class, not Flash's average risk or its funding instrument."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Applying the corporate WACC uniformly to projects of differing risk classes",
+    "CorrectChoice": "D",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The correct answer is D. The governing principle is risk-matched discounting: value is created or destroyed at the project's risk class, so the hurdle rate must reflect the volatility of specialty-polymers cash flows, not Flash's average risk and not the funding instrument. Comparable specialty-chemicals firms imply 13% for this risk class, making 13% the defensible hurdle. Option A's uniform 9% WACC systematically overvalues volatile ventures whose true required return is 13% and starves safer extensions — Flash would chase bad risk and shun good. Option B's flat 3-point cushion is arbitrary, untethered to any measured risk differential. Option C confuses financing cost with asset risk: under Modigliani-Miller logic with taxes the investment decision separates from financing choice, and the 6% coupon prices Flash's creditworthiness, not polymer-market volatility. Vasquez should adopt 13% and document the comparables behind it.",
+    "ExplanationWrongA": "Choice A preserves procedural consistency by applying the 9% corporate WACC everywhere. Uniform discounting systematically blesses volatile ventures whose true required return is 13% and starves safer projects, corrupting capital allocation exactly where risk differs most from the corporate average.",
+    "ExplanationWrongB": "Choice B's WACC-plus-cushion feels prudent but is arbitrary: the premium ties to no measured risk differential and treats every uncertain project identically, masking the comparables-based 13% that this specific risk class commands in the market.",
+    "ExplanationWrongC": "Choice C anchors on the 6% bond coupon because debt funds the deal. The coupon prices Flash's own credit risk and carries a tax shield; it says nothing about polymer-market volatility, and standard corporate finance theory separates the investment decision from the financing choice.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-082",
+    "Section": "E",
+    "Stem": "Flash's corporate WACC is 9%, calibrated to its core appliance-components business. CFO Elena Vasquez must set the hurdle rate for a proposed $8,000,000 specialty-polymers venture at the Dayton plant whose returns are far more volatile than core operations. Comparable publicly traded specialty-chemicals firms imply a 13% required return for this risk class. The venture will be funded partly with Flash's recently issued 6% coupon bonds. Competing views exist inside the finance team: simplicity favors one consistent corporate rate, precision favors a risk-matched rate, and the bond desk notes the cheap new debt. Which hurdle-rate decision should Vasquez make?",
+    "Topic": "E.082 risk-adjusted-discount-rate-selection",
+    "UniqueConceptKey": "E-082-riskadjusted-hurdle-rate",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: judgment across competing hurdle-rate doctrines assigned to a named decision-maker",
+      "Conceptual item - no computation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IRC Sec. 168; IRS Publication 946 (MACRS percentage tables)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$260,000",
+      "B": "$1,040,000",
+      "C": "$180,000",
+      "D": "$312,000"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Confusing the MACRS deduction itself with the depreciation tax shield",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is A. The governing rules are MACRS mechanics under IRC Sec. 168: the depreciable basis is the full $2,000,000 cost because MACRS ignores salvage, Year 1 depreciation = $2,000,000 x 20% = $400,000, and Year 2 = $2,000,000 x 32% = $640,000. The tax shield — cash Flash keeps because depreciation shelters income — equals depreciation x tax rate: Year 1 = $400,000 x 25% = $100,000; Year 2 = $640,000 x 25% = $160,000; combined = $260,000. For Santos, $260,000 of cash-tax savings lands across Years 1-2 and enters the press project's DCF as an inflow. The recurring trap is stopping at $1,040,000 of deductions: a deduction reduces taxable income but is not itself the saving — multiply by the 25% marginal rate to convert it into dollars of tax kept.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B reports the combined MACRS deduction of $1,040,000 ($400,000 + $640,000) as though the deduction were the saving. Deductions cut taxable income; the cash effect is only 25 cents per dollar deducted, which nets to the $260,000 shield.",
+    "ExplanationWrongC": "Choice C halves the Year 2 rate as if the half-year convention applied there, computing $100,000 + $80,000 = $180,000. The convention places half a year of depreciation in Year 1 (already inside the published 20%) and the wrap in the year after recovery ends; Year 2 keeps its full 32%.",
+    "ExplanationWrongD": "Choice D applies a 30% tax rate, yielding $312,000. Flash's marginal rate is 25%, and shields must be computed at the marginal rate that will actually shelter the deductions; at 25% the combined Years 1-2 figure is $260,000.",
+    "FormulaReference": "ID-07",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-083",
+    "Section": "E",
+    "Stem": "Flash placed a $2,000,000 stamping press in service at its Cincinnati plant; it is 5-year MACRS property with published rates of 20% in Year 1 and 32% in Year 2. Divisional Controller Miguel Santos needs the combined depreciation tax shield for Years 1-2 to feed the automation proposal's cash flow model. Flash's marginal tax rate is 25%. What combined tax shield should Santos report?",
+    "Topic": "E.083 macrs-depreciation-tax-shield",
+    "UniqueConceptKey": "E-083-macrs-tax-shield",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two-year table lookup plus shield conversion",
+      "Recompute: 2,000,000x0.20=400,000 -> 100,000; x0.32=640,000 -> 160,000; total 260,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory - IRR decision rule and interpolation"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "IRR is approximately 15%; accept, because 15% exceeds the 12% hurdle.",
+      "B": "IRR is approximately 20%; accept, because the upper bound clears the hurdle.",
+      "C": "IRR is approximately 10%; reject, because the lower bound misses the hurdle.",
+      "D": "IRR cannot be estimated unless the two bracketing NPVs are equal in magnitude."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Reading either endpoint of the NPV sign change as the IRR itself",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is A. IRR is the discount rate where NPV crosses zero, and Kim's profile brackets that root between 10% (+$300,000) and 20% (-$300,000). Straight-line interpolation gives IRR = 10% + [$300,000 / ($300,000 + $300,000)] x (20% - 10%) = 10% + 0.50 x 10%, or approximately 15%. Because 15% exceeds Flash's 12% hurdle, NPV at 12% remains positive and the $5,000,000 flexible-manufacturing proposal should be accepted. Analytically, the sign change is the operative evidence: NPV declines as the rate rises, and the zero-crossing sits midway here only because the bracketing NPVs happen to be symmetric. Neither endpoint is the IRR — NPV is still positive at 10% and negative at 20% — so quoting a bound misreads the profile the whole analysis rests on.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B grabs the 20% endpoint as the IRR. At 20% NPV is -$300,000, meaning the zero-crossing lies below that rate; an endpoint where NPV is nonzero is by definition not the internal rate of return.",
+    "ExplanationWrongC": "Choice C mirrors the error on the low side, taking 10% where NPV is +$300,000. A positive NPV tells Kim the root sits above 10%; interpolation exists precisely because neither bracketing rate is the answer.",
+    "ExplanationWrongD": "Choice D claims equal magnitudes are required. Interpolation weights the gap proportionally — lower rate + [NPV_low / (NPV_low + |NPV_high|)] x spread — and works for any opposite-sign pair; symmetry here merely made the arithmetic land on 15%.",
+    "FormulaReference": "ID-09",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-084",
+    "Section": "E",
+    "Stem": "Flash's capital budgeting manager, Rachel Kim, is analyzing a $5,000,000 flexible-manufacturing proposal for the Dayton plant. The NPV profile shows NPV = +$300,000 at a 10% discount rate and NPV = -$300,000 at 20%. Flash's hurdle rate for automation projects is 12%. Estimating the internal rate of return by straight-line interpolation, what should Kim conclude and recommend?",
+    "Topic": "E.084 irr-interpolation-npv-profile",
+    "UniqueConceptKey": "E-084-irr-interpolation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: profile interpretation plus interpolation and decision tie-break",
+      "Recompute: 10%+(300,000/600,000)x10%=15%; 15%>12% accept",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory - accounting rate of return"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "14.44%",
+      "B": "58.00%",
+      "C": "26.00%",
+      "D": "28.89%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using initial cost instead of average investment, or cash flow instead of net income",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is C. ARR is the one capital-budgeting measure built on accrual accounting income, and its denominator is average investment rather than initial cost. Numerator: average annual net income = $580,000 after-tax cash inflow - $320,000 straight-line depreciation = $260,000. Denominator: average investment = ($1,800,000 cost + $200,000 salvage) / 2 = $1,000,000. ARR = $260,000 / $1,000,000 = 26.00%. For Nowak at Erie, 26.00% can be benchmarked against returns on Flash's existing inspection assets, but ARR ignores the time value of money and should inform, not replace, the NPV-based accept/reject call. The classic errors are dividing by the $1,800,000 purchase price, plugging the $580,000 cash flow into the numerator as if depreciation did not matter, or dropping salvage from the averaging base.",
+    "ExplanationWrongA": "Choice A divides $260,000 by the $1,800,000 purchase price (14.44%), substituting initial cost for average investment. ARR's denominator is the midpoint of the asset's book-equivalent value over life, ($1,800,000 + $200,000) / 2, giving 26.00%.",
+    "ExplanationWrongB": "Choice B plugs the $580,000 after-tax cash inflow into the numerator (58.00%). ARR is defined on accrual net income; using cash flow pretends the $320,000 annual depreciation never reduced accounting earnings and inflates the return beyond recognition.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D drops salvage from the averaging, using ($1,800,000 + $0) / 2 = $900,000 for 28.89%. The robot ends life holding $200,000 of recoverable value, and the standard convention averages beginning and ending investment values.",
+    "FormulaReference": "ID-08",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-085",
+    "Section": "E",
+    "Stem": "Flash is weighing a $1,800,000 automated inspection robot for its Erie plant. The robot carries a $200,000 estimated salvage value and depreciates straight-line over five years ($320,000 per year). Projected annual after-tax cash inflow is $580,000, implying average annual net income of $260,000. Plant Controller Tomasz Nowak prepares the accounting rate of return for the capital committee. What ARR should Nowak report?",
+    "Topic": "E.085 accounting-rate-of-return",
+    "UniqueConceptKey": "E-085-arr-calculation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: formula application with two classic base and numerator traps",
+      "Recompute: (1,800,000+200,000)/2=1,000,000; 260,000/1,000,000=26.00%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory - scenario analysis under uncertainty"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "It flexes each assumption independently while holding the others constant.",
+      "B": "It moves multiple related assumptions together within each coherent economic state, capturing interactions that single-variable tests miss.",
+      "C": "It draws every input at random from fitted distributions across thousands of trials.",
+      "D": "It replaces forecasting with a fixed premium added to the discount rate."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Treating scenario analysis as one-at-a-time variable testing",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is B. Herrera's approach is scenario analysis: each state — recession, base, expansion — is an internally consistent story in which volume, pricing, and resin costs move together, because in reality they interact; probability weights then produce an expected NPV across states. That joint movement is what last year's one-variable stress tests could not show: a recession cuts volume AND compresses prices simultaneously while resin-cost relief arrives late. Scenario analysis therefore captures interaction effects and the shape of downside tails while remaining transparent enough for board debate. It differs from simulation, which randomizes every input across thousands of trials, and from hurdle-rate padding, which changes no underlying assumption at all. For Flash, the deliverable is a defensible range of outcomes with explicit probabilities attached, not a single adjusted rate.",
+    "ExplanationWrongA": "Choice A restates sensitivity analysis — independent flexing of one assumption at a time. Herrera deliberately moves volume, price, and resin costs together inside each named state; joint movement to capture interactions is the essence of scenario analysis.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C describes Monte Carlo simulation with randomized draws across thousands of trials. Three hand-constructed, internally consistent economic states carrying assigned probabilities form the scenario method — curated stories, not stochastic sampling.",
+    "ExplanationWrongD": "Choice D substitutes a padded hurdle rate for analysis. Adding a premium to the discount rate alters no assumption and reveals nothing about which combination of volume, price, and cost drives failure — the diagnostic content Herrera's scenarios supply.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-086",
+    "Section": "E",
+    "Stem": "Budget Director Luis Herrera prepares Flash's annual capital submission to the board. For the proposed Dayton coating line he constructs three internally consistent futures — recession, base, expansion — in which volume, pricing, and resin costs all move together within each state, then weights the three resulting NPVs by their probabilities. A board member asks how this differs from last year's one-variable stress tests. Which statement correctly characterizes Herrera's approach?",
+    "Topic": "E.086 scenario-analysis-multi-variable",
+    "UniqueConceptKey": "E-086-scenario-concept",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: concept discrimination among three risk techniques",
+      "Conceptual item - no computation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Real options theory (Dixit & Pindyck 1994; Trigeorgis 1996)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Choose the staged pilot: the embedded expand-and-abandon options carry real value under high uncertainty, so path 2's static NPV materially understates its worth.",
+      "B": "Choose full-scale now: its static NPV of $1,400,000 is higher, and option value is too speculative to justify passing it up.",
+      "C": "Decline both paths: neither static NPV is large enough to justify exposure to an unproven market.",
+      "D": "Defer the decision until demand resolves, since waiting removes the uncertainty at no cost."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Comparing static NPVs while ignoring the value of embedded managerial options",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The correct answer is A. Real options theory holds that when uncertainty is high and commitment is costly or irreversible, managerial flexibility has quantifiable value that static NPV omits. Path 2 embeds two options: expand for $7,000,000 if the Erie pilot validates demand, or abandon and recover $3,000,000 if it fails — truncating the downside near $2,000,000 while preserving the upside. High demand volatility increases, rather than decreases, the worth of those options, so path 2's +$600,000 static NPV materially understates its true value against path 1's fully committed +$1,400,000. Waiting is not free either: competitors are circling, and pilot learning leaks to rivals, eroding the option being preserved. Whitfield should recommend the staged pilot and ask Vasquez to have the option premium valued explicitly before the board vote, with the defensible alternative documented.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B locks onto path 1's larger static NPV and dismisses option value as speculative. Under real options theory flexibility is most valuable when volatility is high; path 2's +$600,000 excludes the expand/abandon premium, so the static comparison is incomplete rather than decisive.",
+    "ExplanationWrongC": "Choice C rejects both paths on modest static NPVs. It overlooks that path 2 truncates downside near $2,000,000 through the $3,000,000 recovery while retaining expansion upside — a risk-return shape the raw figures do not convey.",
+    "ExplanationWrongD": "Choice D treats deferral as free certainty resolution. Waiting forfeits pilot learning, lets watching competitors move first, and can erode the option's underlying value; options to wait carry real costs whenever competition for the same market exists.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-087",
+    "Section": "E",
+    "Stem": "Flash weighs entering modular clean-room filtration, a market with highly uncertain demand. Corporate Development Director Alan Whitfield compares two paths for CFO Elena Vasquez. Path 1 commits $12,000,000 now for full-scale capacity, with static NPV of +$1,400,000. Path 2 invests $5,000,000 in an Erie pilot carrying the right, but not the obligation, to spend $7,000,000 expanding if demand proves strong, or to exit and recover $3,000,000 if it fails; path 2's static NPV is +$600,000 before crediting any option value. Demand volatility is high and two competitors are evaluating similar launches. Which recommendation should Whitfield take to Vasquez?",
+    "Topic": "E.087 real-options-staged-investment",
+    "UniqueConceptKey": "E-087-staged-real-option",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: option-value reasoning under volatility with strategic trade-offs",
+      "Conceptual item - no computation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory - capital rationing and profitability index"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Fund W and Y — total NPV $960,000.",
+      "B": "Fund X alone — it carries the highest profitability index.",
+      "C": "Fund W and X — total NPV $1,260,000.",
+      "D": "Fund X and Z — total NPV $1,056,000."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Ranking by PI alone without checking budget feasibility of combinations",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is D. Under capital rationing with indivisible projects, the objective is the greatest total NPV from a feasible package, not the highest standalone profitability index. Feasible combinations within Halvorsen's $6,000,000 cap: X+Z costs $3,600,000 + $2,400,000 = $6,000,000 and delivers NPV $720,000 + $336,000 = $1,056,000; W+Y costs $5,800,000 and delivers $960,000; W+Z costs $5,400,000 and delivers $876,000; Y+Z costs $5,200,000 and delivers $756,000; every single project scores lower still. X+Z wins even though X alone has the best PI (1.20), because taking X alone strands $2,400,000 of idle budget earning nothing. W+X promises $1,260,000 but is infeasible, exceeding the cap by $600,000. The committee should fund proposals X and Z.",
+    "ExplanationWrongA": "Choice A settles for W+Y at $960,000, the second-best feasible pairing. Checking X+Z ($6,000,000 cost, $1,056,000 NPV) reveals $96,000 more value inside the same cap; feasibility screening must extend to every combination rather than stop at a workable pair.",
+    "ExplanationWrongB": "Choice B follows the lone highest PI (X at 1.20) and strands $2,400,000 of budget earning nothing. Under rationing, PI guides selection order, but the objective is package NPV; X pairs with Z to use the full envelope productively.",
+    "ExplanationWrongC": "Choice C's W+X package promises $1,260,000 but costs $6,600,000 — $600,000 over the cap. Any combination violating the budget constraint is infeasible regardless of its NPV, which is the first screen in rationing analysis.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "ID-02",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-088",
+    "Section": "E",
+    "Stem": "Flash's capital committee, chaired by VP of Finance Ingrid Halvorsen, faces a $6,000,000 rationing cap for the coming cycle. Four indivisible proposals are pending: W — cost $3,000,000, NPV $540,000, PI 1.18; X — cost $3,600,000, NPV $720,000, PI 1.20; Y — cost $2,800,000, NPV $420,000, PI 1.15; Z — cost $2,400,000, NPV $336,000, PI 1.14. Unused budget earns nothing. Which funding package maximizes total NPV within the cap?",
+    "Topic": "E.088 capital-rationing-combination",
+    "UniqueConceptKey": "E-088-rationing-package",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: enumerating feasible packages and optimizing total NPV under a cap",
+      "Recompute: X+Z cost 3,600,000+2,400,000=6,000,000 <= cap; NPV 720,000+336,000=1,056,000 beats W+Y 960,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory - payback screening rule"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "0.25 years",
+      "B": "4.0 years",
+      "C": "6.0 years",
+      "D": "3.0 years"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using accounting net income or inverting the payback ratio",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The correct answer is B. The payback rule measures how quickly the initial outlay is recovered from project cash flows: payback = initial investment / uniform annual after-tax cash inflow = $2,400,000 / $600,000 = 4.0 years. Delgado should use the $600,000 cash figure — payback, like NPV, runs on cash, and the $200,000 depreciation is already reflected inside that after-tax inflow through the tax shield rather than added on top. Four years means Flash recovers its palletizing investment by Year 4; as a liquidity screen it complements but cannot replace NPV, since it ignores the time value of money and everything beyond the cutoff year. Classic slips include dividing by net income ($400,000 gives 6.0 years), inverting the ratio (0.25 years), or double-counting depreciation ($800,000 gives 3.0 years).",
+    "ExplanationWrongA": "Choice A inverts the ratio ($600,000 / $2,400,000 = 0.25), reporting the fraction recovered per year as though it were a recovery time. Payback divides the outlay by the annual inflow, and the units must resolve to years.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C divides by the $400,000 net income, stretching payback to 6.0 years. The rule consumes cash, and the $600,000 inflow already embeds depreciation's tax effect; substituting accrual income double-counts the depreciation drag on recovery speed.",
+    "ExplanationWrongD": "Choice D layers another $200,000 on top, dividing $2,400,000 by $800,000 for 3.0 years. The $600,000 after-tax inflow is already the complete cash figure; adding depreciation back again double-counts the shield and flatters the recovery speed.",
+    "FormulaReference": "ID-03",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-089",
+    "Section": "E",
+    "Stem": "Flash's Dayton plant comptroller, Rosa Delgado, screens a $2,400,000 palletizing system. It should generate annual after-tax cash inflows of $600,000; annual straight-line depreciation is $200,000, so projected annual net income is $400,000. Using the conventional payback rule, what is the payback period?",
+    "Topic": "E.089 uniform-payback-period",
+    "UniqueConceptKey": "E-089-payback-uniform",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-division payback computation",
+      "Recompute: 2,400,000/600,000=4.0 years",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory - EAA for unequal-lived mutually exclusive assets"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Machine Two, because its raw NPV of $574,860 is larger.",
+      "B": "Machine One, because its NPV is larger than Machine Two's.",
+      "C": "Machine One, because its equivalent annual annuity of $150,000 exceeds Machine Two's $132,000.",
+      "D": "Either machine — annualizing shows the two are equivalent."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Choosing the higher raw NPV when project lives are unequal",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is C. With mutually exclusive assets of unequal lives, raw NPV comparisons mislead because Machine Two enjoys two extra years of inflows; the equivalent annual annuity converts each NPV into a uniform yearly value over its own life at Flash's 10% rate. EAA(Machine One) = $475,500 / 3.170 = $150,000 per year; EAA(Machine Two) = $574,860 / 4.355 = $132,000 per year. Grant should select Machine One, the retrofit: despite the smaller lump-sum NPV, it creates $18,000 more value per year on a like-for-like basis. The trap is anchoring on $574,860 versus $475,500 — a comparison that implicitly assumes Flash can replicate Machine Two's economics in Years 5 and 6, which the data do not establish. Only when lives are equal does raw NPV comparison stand uncorrected.",
+    "ExplanationWrongA": "Choice A picks Machine Two on the raw $574,860 versus $475,500 NPV gap. Unequal lives invalidate that comparison: Machine Two's figure spans six years against four, silently assuming replicable economics in Years 5-6; annualized, Two yields only $132,000 against $150,000.",
+    "ExplanationWrongB": "Choice B selects Machine One but rests on a false premise — its NPV ($475,500) is smaller than Machine Two's. Right winner, wrong reason: the defensible case is the $150,000 versus $132,000 equivalent annual annuity, not a nonexistent NPV advantage.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D declares equivalence. The EAAs differ by $18,000 per year ($150,000 versus $132,000), roughly a 14% annual edge for Machine One — a gap far outside rounding that vanishes only under identical lives or identical EAAs, neither of which holds.",
+    "FormulaReference": "ID-05",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-090",
+    "Section": "E",
+    "Stem": "Flash must replace an Erie curing line and will select exactly one option. Discounted at 10%: Machine One, a retrofit with a 4-year life, has NPV of $475,500 (PV annuity factor, 4 years, 10% = 3.170). Machine Two, a replacement cell with a 6-year life, has NPV of $574,860 (PV annuity factor, 6 years, 10% = 4.355). Plant Engineering Director Alicia Grant annualizes the comparison for the capital committee. Which machine should Flash select?",
+    "Topic": "E.090 equivalent-annual-annuity-comparison",
+    "UniqueConceptKey": "E-090-eaa-unequal-lives",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: dual EAA computation overriding a naive NPV comparison",
+      "Recompute: 475,500/3.170=150,000; 574,860/4.355=132,000; choose Machine One",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.3",
+      "Capital budgeting NPV breakeven analysis (Fisher, 1930)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Approximately 9.6%, indicating the projected savings fail to cover even a 10% required return",
+      "B": "Approximately 12.0%, treating the nearest stated factor (3.605 at 12%) as the breakeven point",
+      "C": "Approximately 10.4%, the discount rate at which the system's NPV equals zero",
+      "D": "Approximately 12.9%, obtained by interpolating between the 12% and 16% annuity factors"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Interpolating toward the wrong rate or bracketing on the wrong side of the required annuity factor",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The breakeven discount rate is the rate at which NPV falls to zero; for conventional cash flows it equals the project's internal rate of return, and it is the central sensitivity statistic in rate-risk analysis. The system breaks even when the annuity factor satisfies 240,000 x factor = 900,000, so the required factor is 900,000 / 240,000 = 3.750. Because 3.750 lies between the stated factors 3.791 (10%) and 3.605 (12%), the breakeven rate sits between 10% and 12%. Interpolating: 10% + 2% x (3.791 - 3.750) / (3.791 - 3.605) = 10% + 2% x (0.041 / 0.186) = 10% + 0.44% = approximately 10.4%. For treasurer Marcus Webb, this means the Dayton AGV project remains value-accretive only up to a 10.4% discount rate; against Flash's 10% hurdle the cushion is roughly 0.4 percentage points, so a modest rise in financing cost or shortfall in savings would push NPV negative.",
+    "ExplanationWrongA": "The 9.6% figure reverses the interpolation direction by subtracting the adjustment from 10% rather than adding it. Because the required factor of 3.750 sits below the 10% factor of 3.791, NPV at 10% is already positive ($240,000 x 3.791 - $900,000 = $9,840), so the zero-NPV rate lies above 10%, near 10.4%; interpolating downward walks away from the true root.",
+    "ExplanationWrongB": "This choice stops at the nearest tabulated factor instead of interpolating. At 12%, PV = 240,000 x 3.605 = 865,200, leaving NPV = 865,200 - 900,000 = -34,800, which is below zero, so 12% overshoots the breakeven point rather than marking it. A candidate picking this option likely assumes the closest stated table value identifies the root, but the required factor of 3.750 sits between the 10% and 12% columns and demands interpolation.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "The 12.9% figure comes from bracketing the 12% and 16% columns, but that brackets the wrong side: because the required factor of 3.750 is larger than 3.605, NPV at 12% is already negative (-$34,800), so the zero-NPV rate must lie below 12%, between 10% and 12%. Interpolating within 12%-16% compounds the error by moving away from the true root of about 10.4%.",
+    "FormulaReference": "ID-09",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-091",
+    "Section": "E",
+    "Stem": "Flash's treasurer, Marcus Webb, is stress-testing a $900,000 automated guided-vehicle system for the Dayton plant before presenting it to the capital committee. The system is forecast to save $240,000 per year in after-tax cash for five years. Webb wants to know the project's breakeven discount rate - the rate at which NPV equals zero - as his key sensitivity measure. Stated annuity factors (5 years): 3.791 at 10%, 3.605 at 12%, and 2.991 at 16%. What is the approximate breakeven discount rate?",
+    "Topic": "E.091 breakeven-discount-rate",
+    "UniqueConceptKey": "E-091-breakeven-discount-rate",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-factor interpolation with wrong-bracket traps requires Analyze-level decomposition",
+      "Required factor 900,000/240,000 = 3.750; interpolate 10%-12%: 10% + 2%x(41/186) = 10.44% ~= 10.4%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.2",
+      "Incremental after-tax cash flow principle"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Negative $230,850; Flash should reject the expansion",
+      "B": "Positive $19,150; Flash should accept because working capital is recovered in Year 4",
+      "C": "Negative $401,600; Flash should reject because the terminal-year recovery is too uncertain to count",
+      "D": "Negative $151,600; Flash should reject and exclude working capital from the analysis entirely"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Omitting the working-capital investment from Year 0 or its recovery in the terminal year",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Under DCF project evaluation, the initial outlay includes every Year-0 cash commitment - equipment plus any investment in working capital - while the terminal year includes the recovery of that working capital as an inflow. Total Year-0 outlay = $1,800,000 equipment + $250,000 working capital = $2,050,000. Present value of operating inflows = $520,000 x 3.170 = $1,648,400. Present value of the Year-4 working-capital recovery = $250,000 x 0.683 = $170,750. NPV = $1,648,400 + $170,750 - $2,050,000 = -$230,850. Because the NPV is negative, CFO Elena Vasquez should advise the committee to decline the packaging-line expansion: once the working-capital commitment is capitalized into the outlay and credited back in Year 4, the project destroys about $231,000 of value at Flash's 10% cost of capital.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This answer counts the Year-4 recovery but leaves the $250,000 working-capital commitment out of the initial outlay, producing $1,648,400 + $170,750 - $1,800,000 = $19,150. The commitment is a real cash outflow at launch - inventory must be purchased and receivables financed before any inflows arrive - so excluding it from Year 0 understates the investment and flips a negative project to a barely positive one.",
+    "ExplanationWrongC": "This figure counts the working-capital investment in Year 0 but drops the Year-4 recovery: $1,648,400 - $2,050,000 = -$401,600. The recovery is a genuine cash inflow - when the project ends, inventory is sold down and receivables are collected, returning the $250,000 to Flash - so discarding it overstates the loss by exactly its $170,750 present value and misprices the project's terminal economics.",
+    "ExplanationWrongD": "Ignoring working capital on both sides produces $1,648,400 - $1,800,000 = -$151,600. Although the sign stays negative, this treatment misstates the economics by $79,250 relative to the correct NPV: the $250,000 tied up in inventory and receivables is both a genuine launch cost and a genuine terminal-year inflow, and omitting both hides the true funding requirement from the capital committee.",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-092",
+    "Section": "E",
+    "Stem": "Flash's CFO, Elena Vasquez, is evaluating a $1,800,000 packaging-line expansion at the Cincinnati plant. Launching the line requires a $250,000 investment in additional inventory and receivables, which will be fully recovered as a cash inflow at the end of Year 4. The line is forecast to generate $520,000 of annual after-tax operating cash inflow for four years. Flash applies a 10% cost of capital; the present value factors are 3.170 (annuity, 4 years, 10%) and 0.683 (single sum, Year 4, 10%). What is the project's NPV, and what should Flash do?",
+    "Topic": "E.092 working-capital-initial-outlay",
+    "UniqueConceptKey": "E-092-working-capital-initial-outlay",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: three-component NPV assembly with two-sided working-capital handling merits Apply/Moderate",
+      "Outlay 2,050,000; PV inflows 1,648,400 + recovery 170,750; NPV = -230,850; reject",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.3",
+      "Monte Carlo simulation method (Metropolis & Ulam, 1949)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The positive mean NPV confirms the robotics proposal will add exactly $410,000 of value if approved",
+      "B": "A 28% probability of negative NPV indicates the simulation model was built incorrectly and should be rerun",
+      "C": "Because the standard deviation exceeds the mean NPV, the proposal's expected NPV is actually negative",
+      "D": "The proposal shows a positive expected NPV but roughly a one-in-four chance of destroying value, so approval carries substantial downside risk"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Reading the simulated mean as a guaranteed outcome or mistaking dispersion data for model error",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Simulation output is a probability distribution of outcomes, not a single assured result, so each statistic carries distinct meaning. The mean NPV of $410,000 is the probability-weighted center of the distribution: on average the Erie robotics proposal adds value, which supports acceptance consideration. The 28% probability of NPV falling below zero quantifies downside exposure - nearly one outcome in four destroys value. A standard deviation of $680,000 against a $410,000 mean signals wide dispersion, meaning realized results could land far from the average in either direction. Together these outputs tell VP of Finance Alan Treiber that the proposal is attractive on expected value yet genuinely risky in single-trial terms - a balanced characterization no point estimate alone would provide.",
+    "ExplanationWrongA": "Reading the simulated mean as an assured outcome mistakes a distribution's center for a promise: across trials the realized NPV swings widely around $410,000, with 28% of outcomes falling below zero. The word 'exactly' confuses expected value with certainty; simulation informs a risk judgment, and Treiber should pair the mean with the dispersion statistics before recommending approval.",
+    "ExplanationWrongB": "A sizeable probability of loss is normal, informative output from a well-built simulation, not evidence of model failure. Simulations exist precisely to reveal that risky projects can produce negative outcomes some fraction of the time; discarding or rerunning the model because it reports a 28% chance of negative NPV confuses an uncomfortable finding with a technical defect.",
+    "ExplanationWrongC": "Dispersion and location measure different things: a standard deviation larger than the mean describes wide variability, not the sign of the average. The simulated mean remains positive at $410,000, so concluding the expected NPV is negative conflates spread with level - a category error that would wrongly discard a positive-expected-value opportunity.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-093",
+    "Section": "E",
+    "Stem": "Flash's finance team ran a Monte Carlo simulation (10,000 trials) on a proposed robotics upgrade for the Erie plant. The output reports: mean NPV of $410,000, standard deviation of NPV of $680,000, a 28% probability that NPV falls below zero, and slightly negative skewness. VP of Finance Alan Treiber asks the analyst team what conclusion the output supports. Which statement is best supported by the simulation results?",
+    "Topic": "E.093 simulation-output-interpretation",
+    "UniqueConceptKey": "E-093-simulation-output-interpretation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: interpretation of distribution statistics without computation fits Understand/Moderate-Easy",
+      "Conceptual item - no recomputation required; statistics interpreted qualitatively",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.6",
+      "Profitability index ranking under capital rationing"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Fund the Cincinnati press retrofit and the Dayton AGV expansion, which commits the entire $3,200,000 budget",
+      "B": "Fund the Erie robotics upgrade and the Cincinnati press retrofit, accepting $200,000 of uncommitted budget",
+      "C": "Fund the Erie robotics upgrade and the Dayton AGV expansion, preserving $400,000 of budget as a contingency reserve",
+      "D": "Fund the Cincinnati press retrofit and the fleet replacement, since the pair balances NPV with the fastest combined payback"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Treating budget exhaustion, contingency reserves, or payback as criteria instead of total NPV",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Under capital rationing, the governing objective is maximizing total NPV across the funded set subject to the budget ceiling; unspent dollars deployed at Flash's 10% cost of capital earn zero NPV, so full utilization has no independent value. Comparing feasible pairs: Erie + Cincinnati costs $3,000,000 and yields NPV of $520,000 + $595,000 = $1,115,000; Dayton + Cincinnati exhausts $3,200,000 but yields only $450,000 + $595,000 = $1,045,000; Erie + Dayton preserves $400,000 but yields $970,000; Cincinnati + fleet yields $875,000 (no triple fits, since the three smallest budgets total $3,800,000). CFO Renata Kovacs should therefore recommend the Erie robotics upgrade plus the Cincinnati press retrofit: swapping the $520,000-NPV Erie project for the $450,000-NPV Dayton project merely to spend the leftover $200,000 sacrifices $70,000 of shareholder value, and holding reserves or chasing fast payback are not value criteria.",
+    "ExplanationWrongA": "This package spends the full $3,200,000, but exhausting the budget is not itself a goal: idle funds invested at the cost of capital contribute zero NPV, while forcing the Dayton AGV expansion ($450,000 NPV) into the mix requires dropping the Erie robotics upgrade ($520,000 NPV), cutting total NPV from $1,115,000 to $1,045,000. The $70,000 sacrifice buys nothing except full utilization of the appropriation.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Holding a $400,000 contingency reserve drops total funded NPV to $970,000 - $145,000 below the optimal package - without any stated near-term use for the reserve. Under capital rationing, uncommitted funds parked at the cost of capital create zero value; unless a specific higher-return mid-year opportunity exists, the reserve argument forfeits measurable shareholder value for an unspecified benefit.",
+    "ExplanationWrongD": "Payback speed is a liquidity screen, not a value measure, and this pair delivers the lowest total NPV ($280,000 + $595,000 = $875,000) of any option shown - $240,000 below the optimum. Balancing NPV against payback as if they were co-equal criteria misapplies the rationing objective, which is to maximize aggregate NPV within the $3,200,000 ceiling.",
+    "FormulaReference": "ID-02",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-094",
+    "Section": "E",
+    "Stem": "Flash's capital committee, chaired by CFO Renata Kovacs, faces a $3,200,000 capital budget for the year and four independent proposals (figures show investment and NPV at Flash's 10% cost of capital): Erie robotics upgrade, $1,300,000 / $520,000 (PI 1.40); Cincinnati press retrofit, $1,700,000 / $595,000 (PI 1.35); Dayton AGV expansion, $1,500,000 / $450,000 (PI 1.30); corporate fleet replacement, $1,000,000 / $280,000 (PI 1.28). Proposals are indivisible, and any uncommitted funds can be invested at the 10% cost of capital. Which funding recommendation should Kovacs bring to the committee?",
+    "Topic": "E.094 capital-rationing-package-selection",
+    "UniqueConceptKey": "E-094-capital-rationing-package-selection",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: named decision-maker weighing four competing funding packages under a hard constraint warrants Evaluate/Very Difficult",
+      "P2+P3: 520,000+595,000 = 1,115,000 > P1+P3 1,045,000 > P1+P2 970,000 > P3+P4 875,000; choose P2+P3",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.2",
+      "Relevant costing - opportunity cost principle"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Include the $120,000 annual forgone rent as an opportunity cost; NPV is approximately -$116,000, so Flash should decline the lab",
+      "B": "Exclude the warehouse from the analysis because Flash already owns it; NPV is approximately $339,000, so Flash should proceed",
+      "C": "Charge the warehouse's original $600,000 book value against the project at Year 0 instead of rent; NPV is approximately -$261,000",
+      "D": "Reject the lab because leasing the warehouse at market rent is the higher-value use regardless of the lab's own operating cash flows"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Ignoring forgone rent on owned assets or charging book value instead of market opportunity cost",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "In project evaluation, using a resource Flash already owns imposes an opportunity cost equal to the cash benefit sacrificed from its best alternative use - here, $120,000 of market rent forgone each year. Charging it reduces the net annual benefit to $340,000 - $120,000 = $220,000. NPV = $220,000 x 3.791 - $950,000 = $834,020 - $950,000 = -$115,980, approximately -$116,000. Controller Priya Chen should report that the testing lab fails to cover the economic cost of occupying the warehouse: renting the space to an outside tenant generates more value than hosting the lab, so Flash should decline the lab proposal and lease the facility out.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Ownership does not make a resource free. Because the warehouse could be leased for $120,000 per year, converting it to lab use sacrifices real cash inflows; ignoring them overstates the project's NPV by the $454,920 present value of the rent stream ($120,000 x 3.791) and wrongly converts a negative project into a $339,000 positive one. Only resources with no alternative use carry zero opportunity cost.",
+    "ExplanationWrongC": "Historical book value is a sunk, accounting amount - the $600,000 was spent long ago and cannot be changed by today's decision - whereas the economically relevant sacrifice is the $120,000 annual market rent forgone. Charging book value instead of rent produces $1,288,940 - ($950,000 + $600,000) = -$261,060, a figure built on an irrelevant past cost while omitting the true ongoing opportunity cost.",
+    "ExplanationWrongD": "Once the $120,000 annual forgone rent is charged against the lab, the head-to-head comparison between hosting the lab and leasing the space has already been performed inside the NPV - the -$116,000 result IS the net of lab operations over the leasing alternative. Calling separately for the lease decision double-counts the same trade-off; the correct framing is a single relevant-cost comparison, which favors declining the lab.",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-095",
+    "Section": "E",
+    "Stem": "Flash plans a $950,000 materials-testing lab at its Dayton plant, sited in a vacant warehouse Flash owns outright. Controller Priya Chen notes the warehouse could instead be leased to an unrelated distributor for $120,000 per year, payable at each year-end, over the lab's five-year life. The lab is forecast to generate $340,000 of annual after-tax operating cash inflow. Flash uses a 10% cost of capital; the present value annuity factor (5 years, 10%) is 3.791. How should the warehouse be treated, and what is the lab's NPV on that basis?",
+    "Topic": "E.095 opportunity-cost-existing-asset",
+    "UniqueConceptKey": "E-095-opportunity-cost-existing-asset",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: distinguishing opportunity cost from ownership and book value requires applied judgment at Moderate",
+      "(340,000-120,000)x3.791 = 834,020; NPV = 834,020-950,000 = -115,980 ~= -116,000; decline",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.1",
+      "Capital budgeting NPV decision rule (Fisher, 1930)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Accept when the project recovers its initial investment within the company's target payback period",
+      "B": "Accept when the internal rate of return is exactly equal to the required rate of return",
+      "C": "Accept when the present value of future cash inflows discounted at the required return exceeds the initial investment",
+      "D": "Accept when average accounting income divided by average investment exceeds the cost of capital"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Substituting payback, IRR-indifference, or accrual-return tests for the positive-NPV criterion",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The net present value rule states that an independent project is acceptable when NPV is positive - that is, when the present value of its future cash inflows, discounted at the required rate of return, exceeds the initial investment. A positive NPV measures the dollar amount of value the project adds to Flash beyond recovering the cost of capital, which is why trainer Malik Dorsey teaches it as the primary criterion in Flash's finance curriculum. The other statements describe different tools: payback screens liquidity, an IRR equal to the hurdle marks indifference (NPV of zero), and the accrual-based return ratio ignores the time value of money.",
+    "ExplanationWrongA": "Payback measures only how quickly the initial cash is recovered; it ignores both the time value of money and any cash flows beyond the cutoff. Flash could accept a fast-payback project that destroys value at the required return, which is why payback functions as a liquidity screen rather than the NPV acceptance rule Dorsey is testing.",
+    "ExplanationWrongB": "An internal rate of return exactly equal to the required rate of return is the indifference point: NPV at that rate is zero, so the project earns precisely the cost of capital and adds nothing. Acceptance requires value creation beyond the required return, not merely breaking even against it.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "This describes the accounting rate of return, which uses accrual-basis income rather than cash flows and ignores the time value of money entirely. Benchmarking that ratio against the cost of capital mixes an unsophisticated accounting measure with a discounted-cash-flow hurdle, and it is not the NPV acceptance criterion Dorsey is quizzing the analysts on.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-096",
+    "Section": "E",
+    "Stem": "During Flash's internal finance boot camp, instructor Malik Dorsey reviews capital budgeting criteria with newly hired analysts. He asks them to identify the statement that correctly expresses the net present value decision rule as applied to an independent project. Which statement should the analysts select?",
+    "Topic": "E.096 npv-acceptance-criterion",
+    "UniqueConceptKey": "E-096-npv-acceptance-criterion",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-fact recall of the NPV rule fits Remember/Easy",
+      "Conceptual item - no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.4",
+      "Replacement chain (common-life) method"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Select Machine S; its four-year NPV of $104,600 exceeds Machine R's two-year NPV of $94,400",
+      "B": "Select Machine R; its replacement-chain NPV over four years of approximately $172,400 exceeds Machine S's $104,600",
+      "C": "Select Machine S; extending Machine R requires another $600,000 outlay in Year 2, which drives R's chained four-year NPV negative",
+      "D": "Select Machine S; its undiscounted four-year net cash advantage of $420,000 edges out Machine R's $400,000"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Comparing raw NPVs across unequal lives or mishandling the Year-2 replacement outlay",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Mutually exclusive assets with unequal lives are comparable only when evaluated over a common horizon, so Machine R must be replicated once to span Machine S's four-year life (the replacement-chain method). Chained R: PV of inflows = $400,000 x 3.170 = $1,268,000; PV of outlays = $600,000 at Year 0 plus $600,000 x 0.826 = $495,600 at Year 2, totaling $1,095,600; chained NPV = $1,268,000 - $1,095,600 = $172,400. Machine S: NPV = $380,000 x 3.170 - $1,100,000 = $1,204,600 - $1,100,000 = $104,600. On the matched four-year horizon, R creates roughly $67,800 more value than S. Plant manager Derek Olson should recommend Machine R: the naive side-by-side NPVs ($94,400 vs. $104,600) mislead because they compare a two-year benefit stream against a four-year one, hiding R's second cycle of service.",
+    "ExplanationWrongA": "Comparing Machine R's two-year NPV of $94,400 directly against Machine S's four-year $104,600 stacks streams of different lengths side by side. Over its shorter life R simply has fewer years of inflow to accumulate; replicating R through Years 3-4 contributes roughly $78,000 of additional discounted value that this truncated comparison never observes.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "The second $600,000 outlay is real, but it is more than covered by the Years 3-4 inflows it purchases: those inflows have present value of $400,000 x (0.751 + 0.683) = $573,600 against the $495,600 discounted reinvestment cost, adding about $78,000 of value. R's chained NPV is positive at approximately $172,400, so the claim that reinvestment drives it negative is factually wrong.",
+    "ExplanationWrongD": "Comparing undiscounted totals ignores the time value of money, the core defect of simple payback-style reasoning. On raw dollars R nets $1,600,000 - $1,200,000 = $400,000 versus S's $1,520,000 - $1,100,000 = $420,000, but R's cash arrives earlier and its Year-2 outlay is deferred, which is precisely why the discounted common-life analysis selects R by roughly $67,800.",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-097",
+    "Section": "E",
+    "Stem": "Flash's Dayton plant must choose one conveyor drive: Machine R costs $600,000, lasts 2 years, and returns $400,000 of annual after-tax cash inflow; Machine S costs $1,100,000, lasts 4 years, and returns $380,000 of annual after-tax cash inflow. Whichever machine is chosen will be replaced at the end of its life with an identical unit on the same terms, and demand is expected to continue indefinitely. Plant manager Derek Olson must recommend one machine; Flash discounts at 10% (annuity factor 3.170 for 4 years; single-sum Year 2 factor 0.826). On a common-life basis, which machine should Olson recommend?",
+    "Topic": "E.097 replacement-chain-common-life",
+    "UniqueConceptKey": "E-097-replacement-chain-common-life",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: decomposing unequal-life comparison into replication structure is Analyze/Difficult work",
+      "R chained: 400,000x3.170 - 600,000 - 600,000x0.826 = 172,400 > S: 380,000x3.170 - 1,100,000 = 104,600; pick R",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.4",
+      "Equivalent annual annuity method"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Choose Loader Y; its higher NPV of $260,000 governs the comparison",
+      "B": "Choose Loader X; dividing each NPV by useful life gives $52,500 versus $43,333 per year in X's favor",
+      "C": "The loaders are financially equivalent because both produce positive NPVs",
+      "D": "Choose Loader X; its equivalent annual annuity of approximately $66,200 exceeds Loader Y's $59,700"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Ranking unequal-life projects by raw NPV or by straight-line NPV per year instead of EAA",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The equivalent annual annuity converts each project's lump-sum NPV into a level annual amount using the annuity factor for its own life: EAA = NPV / PVIFA(r, n). Loader X: $210,000 / 3.170 = $66,246 per year. Loader Y: $260,000 / 4.355 = $59,702 per year, approximately $59,700. Because X delivers more value per year of service, facilities manager Grace Lindqvist should select Loader X even though Y's total NPV is $50,000 higher - Y needs six years to accumulate that total, and on an annualized basis X outperforms by about $6,500 per year. This apples-to-apples annualization is the standard resolution when mutually exclusive assets have unequal lives and repeated replacement is anticipated.",
+    "ExplanationWrongA": "Loader Y's larger total NPV reflects six years of accumulation versus X's four; raw NPVs of unequal-life projects are not directly comparable. Annualizing converts each lump sum into per-year service value, where X leads $66,246 to $59,702 - choosing Y on raw NPV buys $50,000 more in total by spending two extra years earning less per year.",
+    "ExplanationWrongB": "Dividing NPV by useful life straight-lines the surplus without discounting; it treats a dollar of Year 6 value as equal to a dollar of Year 1 value. The proper annualization discounts through the annuity factor, giving X $66,246 and Y $59,702 per year. The straight-line shortcut happens to favor X here, but for the wrong reason, and it would rank differently whenever long-lived projects carry back-loaded NPVs.",
+    "ExplanationWrongC": "Positive NPV establishes only that each loader individually clears Flash's 10% hurdle; it says nothing about which creates more value once one must be chosen. With the loaders mutually exclusive, the $6,544 annual gap ($66,246 vs. $59,702) is decisive, and treating the pair as equivalent forfeits that measurable advantage.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "ID-05",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-098",
+    "Section": "E",
+    "Stem": "Flash's facilities manager, Grace Lindqvist, must pick one of two mutually exclusive lift loaders with unequal lives. Loader X has an NPV of $210,000 over a 4-year life (annuity factor 3.170 at 10%); Loader Y has an NPV of $260,000 over a 6-year life (annuity factor 4.355 at 10%). Both loaders will be replaced repeatedly with equivalent units when worn out. Using the equivalent annual annuity approach, which loader should Lindqvist select?",
+    "Topic": "E.098 equivalent-annual-annuity-selection",
+    "UniqueConceptKey": "E-098-equivalent-annual-annuity-selection",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two divisions with provided factors suit Apply at Moderate-Easy",
+      "X: 210,000/3.170 = 66,246; Y: 260,000/4.355 = 59,702; choose X",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.3",
+      "Country risk premium methodology (Damodaran)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$454,100; the political premium affects only the hurdle-rate discussion, not the computed NPV",
+      "B": "$133,940; reject the plant because the adjusted NPV falls below the 4-point premium threshold",
+      "C": "$133,940; accept, although the cushion for estimation error narrows materially",
+      "D": "$355,900; apply the 4-point premium as a reduction of projected cash flows rather than of the discount rate"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Applying the country premium to cash flows instead of the discount rate, or omitting it entirely",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Political and country risk that could impair repatriation or continuity is incorporated by adding a country risk premium to the base discount rate: adjusted rate = 10% + 4% = 14%. NPV at 14% = $460,000 x 4.639 - $2,000,000 = $2,133,940 - $2,000,000 = $133,940. Ignoring the premium would have overstated value at $460,000 x 5.335 - $2,000,000 = $454,100, a $320,160 difference. Treasurer Alicia Grant can still recommend the components plant - the adjusted NPV remains positive - but she should flag that the acceptance margin has thinned from about $454,000 to about $134,000, leaving limited room for volume or cost surprises before the venture turns value-destructive.",
+    "ExplanationWrongA": "Leaving the premium out of the denominator values political-risk exposure at zero: the $454,100 figure discounts eight years of emerging-market cash flows as if they carried Ohio-level risk. The premium belongs in the rate, giving $460,000 x 4.639 - $2,000,000 = $133,940, some $320,160 lower - real compensation for expropriation and transfer-restriction exposure, not a footnote for the hurdle discussion.",
+    "ExplanationWrongB": "Although $133,940 is the correct adjusted NPV, rejecting on it is wrong: a positive NPV at the risk-adjusted rate means the project earns more than the return demanded for its political risk. There is no separate 'premium threshold' test - the premium already lives inside the 14% denominator, so the accept/reject rule stays NPV greater than zero.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Haircutting the cash flows ($460,000 x 0.96 = $441,600, then $441,600 x 5.335 - $2,000,000 = $355,936) misstates the mechanics: country risk raises the return investors require, which belongs in the discount rate, not as a proportional cut to every year's flow. The flow-haircut method compounds the distortion across all eight years and yields neither the correct NPV nor a defensible price for the risk.",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-099",
+    "Section": "E",
+    "Stem": "Flash is considering a $2,000,000 components plant in an emerging-market region where treasurer Alicia Grant has assessed meaningful political risk: expropriation and transfer-restriction exposure justifies adding a 4-percentage-point country risk premium to Flash's 10% base cost of capital. The plant is forecast to generate $460,000 of annual after-tax cash inflow for eight years. Present value annuity factors (8 years): 5.335 at 10%; 4.639 at 14%. After incorporating the country risk premium correctly, what is the project's NPV and the decision?",
+    "Topic": "E.099 country-risk-premium-npv",
+    "UniqueConceptKey": "E-099-country-risk-premium-npv",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: dual-scenario discounting with premium placement traps merits Apply/Moderate",
+      "At 14%: 460,000x4.639 - 2,000,000 = 133,940; vs 454,100 at 10%; accept with thinner margin",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.6",
+      "Post-audit review practice; sunk cost principle"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Continue operating the sorter; its forward-looking NPV of about $1,630,000 exceeds the $1,500,000 available from selling it now",
+      "B": "Terminate and sell now; the $2,160,000 lifetime shortfall against forecast discredits the original approval, and disposal salvages the most value",
+      "C": "Continue operating until the $4,000,000 initial investment has been recovered, since disposal before payback locks in a permanent loss",
+      "D": "Sell immediately; the sorter's $2,750,000 book value exceeds its disposal proceeds, so retaining it deepens a growing accounting loss"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Letting sunk cost, book value, or forecast embarrassment drive the forward-looking disposal choice",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Post-audit findings inform forecasts, but the keep-versus-sell decision rests solely on forward-looking cash flows: retain the asset if the present value of continuing exceeds immediate disposal value. Continuing: $430,000 x 3.791 = $1,630,130 over the remaining five years. Selling now yields $1,500,000. Because $1,630,130 exceeds $1,500,000 by $130,130, CFO Renata Kovacs's committee should adopt internal audit director Sofia Ramirez's data but reject termination: the sorter is worth more in operation than in sale. The historical underperformance - actual $430,000 versus $700,000 forecast, an $810,000 cumulative three-year gap - is sunk information that disciplines future forecasting; it neither adds to nor subtracts from the incremental comparison facing the committee today.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This reasoning lets retrospective embarrassment decide a prospective question. The $2,160,000 lifetime forecast gap is history: those dollars are gone regardless of the choice made now, and forecast credibility is a process lesson, not a cash flow. On forward-looking numbers the sorter retains $1,630,130 of value versus $1,500,000 from disposal, so selling 'to salvage the most value' forfeits $130,130.",
+    "ExplanationWrongC": "Demanding recovery of the $4,000,000 original cost before considering disposal is the sunk-cost fallacy: that expenditure is irretrievable under either course, so it cannot justify continuing. Only prospective flows matter - $1,630,130 from operating against $1,500,000 from sale - and here continuation happens to win, but on forward-looking grounds, not because of unrecovered history.",
+    "ExplanationWrongD": "Book value is an accounting construct, not a decision input: the gap between the $2,750,000 carrying amount and the $1,500,000 disposal value exists whether or not Flash sells today, and continued operation changes only how remaining value is consumed economically. Deciding on accounting-loss avoidance reverses the relevant-cost principle the post-audit program exists to enforce.",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-100",
+    "Section": "E",
+    "Stem": "Three years ago Flash approved a $4,000,000 automated sorting system for the Erie plant with an eight-year life and $700,000 of forecast annual after-tax cash inflow. Internal audit director Sofia Ramirez's post-audit finds actual inflows have run $430,000 per year, and the revised forecast for the remaining five years is also $430,000 per year. The system could be sold today for $1,500,000. Flash's cost of capital is 10% (annuity factor, 5 years, 10% = 3.791). Divisional VP of Operations Tomas Reyes urges termination and sale; corporate controller Ingrid Halvorsen urges continuation. Which course should the capital committee adopt?",
+    "Topic": "E.100 post-audit-continue-or-divest",
+    "UniqueConceptKey": "E-100-post-audit-continue-or-divest",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: named executives defending conflicting dispositions over sunk history require Evaluate/Very Difficult",
+      "Continue: 430,000x3.791 = 1,630,130 > 1,500,000 disposal; continue",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.2",
+      "Relevant costing - incremental cash flow principle"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$2,745,000",
+      "B": "$2,605,000",
+      "C": "$2,380,000",
+      "D": "$2,965,000"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Charging sunk study costs to the project or omitting installation, training, and disposal proceeds",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Project evaluation counts only incremental future cash flows; amounts already spent and irrevocable are sunk regardless of which option is chosen. The relevant Year-0 outlay comprises the invoice ($2,600,000), installation ($180,000), and operator training ($45,000) - all future, incremental commitments - less the $220,000 proceeds from selling the displaced machine, which is an incremental inflow of the replacement decision. Relevant outlay = $2,600,000 + $180,000 + $45,000 - $220,000 = $2,605,000. Controller Priya Chen should carry $2,605,000 into the DCF model; the $140,000 feasibility study was completed last quarter and its cost stands whether or not the line proceeds, so including it would penalize the project for money already spent.",
+    "ExplanationWrongA": "Adding the $140,000 study to the correct base gives $2,745,000, double-charging the project for a sunk cost. Because the study expense is identical under both the proceed and abandon scenarios, it has no bearing on the incremental comparison; carrying it into Year 0 biases the replacement analysis toward rejection.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Netting the old machine's $220,000 proceeds against the bare invoice while dropping installation ($180,000) and training ($45,000) omits two genuine incremental cash commitments incurred to place the line in service. The correct construction keeps every future incremental item: $2,600,000 + $180,000 + $45,000 - $220,000 = $2,605,000, which is $225,000 above this figure.",
+    "ExplanationWrongD": "This figure stacks the sunk study onto the gross outlay and simultaneously drops the $220,000 disposal offset - two errors in opposite directions that inflate the relevant outlay by $360,000. Both the study exclusion and the salvage credit are required features of incremental analysis for replacement decisions.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-101",
+    "Section": "E",
+    "Stem": "Flash is replacing an extrusion line at the Dayton plant. Last quarter Flash spent $140,000 on a feasibility study for the project. If approved now, Flash will pay a $2,600,000 equipment invoice, incur $180,000 of installation costs and $45,000 of operator training, and receive $220,000 from selling the machine being replaced. Controller Priya Chen asks the analyst to state the relevant initial cash outlay for the NPV analysis of the replacement decision. What is that outlay?",
+    "Topic": "E.101 relevant-initial-outlay",
+    "UniqueConceptKey": "E-101-relevant-initial-outlay",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: separating sunk, incremental, and offset components is standard Apply/Moderate work",
+      "2,600,000 + 180,000 + 45,000 - 220,000 = 2,605,000; study 140,000 excluded as sunk",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.3",
+      "Scenario analysis practice"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$3,150; the cell is safely profitable under realistic conditions",
+      "B": "-$678,400; the weak-case outcome anchors the investment verdict",
+      "C": "approximately $3,150; expected NPV is marginally positive, but outcomes range from +$653,000 to -$678,400, so the verdict hinges heavily on volume",
+      "D": "$19,000; the base case carries a 50% probability, so its outcome governs the decision"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Reporting the modal or worst-case scenario instead of the probability-weighted expected NPV",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Scenario analysis builds a distribution of NPVs and weights it by probability. Scenario NPVs (annuity factor 3.170, four years, 10%; outlay $2,200,000): Strong = $900,000 x 3.170 - $2,200,000 = $653,000; Base = $700,000 x 3.170 - $2,200,000 = $19,000; Weak = $480,000 x 3.170 - $2,200,000 = -$678,400. Expected NPV = 0.25 x $653,000 + 0.50 x $19,000 + 0.25 x (-$678,400) = $163,250 + $9,500 - $169,600 = $3,150. FP&A director Nadia Osei's read for the committee: the expectation is technically positive but razor-thin, the base case is essentially breakeven, and a quarter of the probability mass sits on a $678,400 loss. The dispersion, not the mean alone, should drive the decision - small adverse moves in volume flip the project deeply negative.",
+    "ExplanationWrongA": "Calling the cell 'safely profitable' reads only the thin positive mean and ignores the distribution around it: one scenario in four produces a $678,400 loss and the base case itself clears breakeven by just $19,000. An expectation of $3,150 on a $2,200,000 outlay is an invitation to stress-test assumptions, not evidence of safety.",
+    "ExplanationWrongB": "Anchoring on the weak case ignores its 25% weight and discards the upside scenarios entirely; the expected NPV aggregates all three outcomes into $3,150, not -$678,400. Worst-case figures inform downside planning and contingency sizing, but they are not the decision statistic for a probability-weighted evaluation.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Probability mass does not confer decision authority: a 50% modal scenario still leaves half the distribution elsewhere, including a 25% chance of a $678,400 loss that the base-case figure conceals. Decision analysis weights every scenario by its probability, producing the $3,150 expectation and the wide spread that Osei must surface to the committee.",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-102",
+    "Section": "E",
+    "Stem": "FP&A director Nadia Osei is building the risk case for a $2,200,000 flexible manufacturing cell at Flash's Cincinnati plant (four-year life, 10% cost of capital; annuity factor 3.170). Three demand scenarios drive annual after-tax cash inflows: Strong (probability 0.25) $900,000; Base (probability 0.50) $700,000; Weak (probability 0.25) $480,000. Computing each scenario's NPV and weighting by probability, what is the expected NPV and the correct characterization of the investment's risk profile?",
+    "Topic": "E.102 scenario-expected-npv",
+    "UniqueConceptKey": "E-102-scenario-expected-npv",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: constructing three scenario NPVs then weighting and interpreting dispersion is Analyze/Difficult",
+      "NPVs 653,000 / 19,000 / -678,400; EV = 163,250+9,500-169,600 = 3,150; margin positive, high dispersion",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.2",
+      "Modigliani-Miller separation of investment and financing"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Keep deducting the interest, because treating financing costs conservatively protects Flash against optimistic bias",
+      "B": "Deduct interest only when the kiln is debt-financed; equity-funded projects carry no financing charge to remove",
+      "C": "Interest is excluded because it is a non-cash charge, like depreciation, rather than an operating cash flow",
+      "D": "Exclude the interest, because financing costs are captured in the 10% discount rate; deducting them again double counts and biases NPV downward"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Double-counting financing by deducting interest from cash flows discounted at a WACC-based rate",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "DCF methodology separates the investment decision from the financing decision: the required return used as the discount rate already prices Flash's capital structure and financing costs, so project cash flows are stated before interest. Deducting the $95,000 of loan interest inside the cash flows while also discounting at a WACC-based 10% charges lenders' compensation twice - once in the numerator and once in the denominator - artificially depressing NPV and potentially rejecting value-creating projects. Controller Priya Chen should explain that this separation principle keeps the kiln's evaluation a pure operating question; financing effects enter through the rate (or, in specialized settings, through a separate valuation layer), never through both channels at once.",
+    "ExplanationWrongA": "Conservatism is not a license for double counting: deducting interest in the cash flows and again through the WACC-based discount rate penalizes the kiln twice for the same capital cost, producing a biased-low NPV rather than a prudent one. Sound methodology requires unbiased inputs - financing effects belong in the rate alone.",
+    "ExplanationWrongB": "Financing-channel treatment does not depend on how a particular project happens to be funded. Whether Flash issues debt, uses retained cash, or floats equity, capital-provider required returns are embedded in the discount rate, so project cash flows stay pre-financing in every case; conditioning the deduction on the presence of a loan misunderstands where financing costs enter the model.",
+    "ExplanationWrongC": "Unlike depreciation, interest is very much a cash payment - lenders receive it in dollars each period. Interest is excluded from project cash flows not because it lacks cash character but because its cost is captured in the discount rate; confusing the two rationales would equally mislead a candidate about depreciation's tax-shield role in the same model.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-103",
+    "Section": "E",
+    "Stem": "A Flash analyst preparing the evaluation of a new $3,500,000 kiln at the Erie plant proposes to deduct $95,000 of annual interest expense on the loan financing the purchase directly from the project's cash flows, and then to discount those cash flows at Flash's 10% weighted-average cost of capital. Controller Priya Chen reviews the draft. What correction should Chen make, and why?",
+    "Topic": "E.103 financing-charges-excluded",
+    "UniqueConceptKey": "E-103-financing-charges-excluded",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: conceptual grasp of the investment-financing separation fits Understand/Moderate-Easy",
+      "Conceptual item - no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.1",
+      "Discounted payback method"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Approximately 3.3 years",
+      "B": "Approximately 2.7 years",
+      "C": "Exactly 3.0 years",
+      "D": "Exactly 4.0 years"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Confusing simple with discounted payback or failing to interpolate within the recovery year",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Discounted payback finds when cumulative discounted cash flows recover the outlay, discounting each flow first. Discounted flows: Year 1 $300,000 x 0.909 = $272,700; Year 2 $500,000 x 0.826 = $413,000; Year 3 $550,000 x 0.751 = $413,050; Year 4 $450,000 x 0.683 = $307,350. Cumulative: $272,700; $685,700; $1,098,750; $1,406,100. Recovery of the $1,200,000 outlay occurs during Year 4: remaining need after Year 3 is $1,200,000 - $1,098,750 = $101,250, and $101,250 / $307,350 = 0.33 of the year, giving approximately 3.33 years, reported as 3.3 years. Assistant treasurer Owen Hartley can note that simple payback (about 2.73 years) looks faster only because it skips discounting - the discounted measure honestly reflects that later dollars recover less of the outlay than earlier ones.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "The 2.73-year figure is the simple payback: undiscounted cumulated flows reach $800,000 by Year 2, leaving $400,000 recovered $400,000/$550,000 = 0.73 into Year 3. It answers a different question by ignoring the time value of money; on a discounted basis recovery takes a further six-tenths of a year because later flows shrink in present-value terms.",
+    "ExplanationWrongC": "Cumulative discounted flows reach only $1,098,750 by the end of Year 3 - still $101,250 short of the $1,200,000 outlay - so recovery has not yet occurred at exactly 3.0 years. Reporting a whole number here abandons the required interpolation and declares complete a recovery that is still two-thirds of a year away.",
+    "ExplanationWrongD": "Rounding up to the first whole year after the crossing overstates recovery time: the Year-4 flow of $307,350 present value accrues across the year, so the final $101,250 is recovered 0.33 of the way in ($101,250 / $307,350), completing payback at about 3.33 years rather than a flat 4.0.",
+    "FormulaReference": "ID-04",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-104",
+    "Section": "E",
+    "Stem": "Flash's assistant treasurer, Owen Hartley, is computing the discounted payback period for a $1,200,000 injection-molding upgrade at the Erie plant. Forecast annual after-tax cash inflows are: Year 1 $300,000, Year 2 $500,000, Year 3 $550,000, Year 4 $450,000. Flash discounts at 10%; single-sum present value factors are 0.909, 0.826, 0.751, and 0.683 for Years 1 through 4. What is the discounted payback period?",
+    "Topic": "E.104 discounted-payback-uneven-flows",
+    "UniqueConceptKey": "E-104-discounted-payback-uneven-flows",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: four-flow discounting plus cumulative interpolation merits Apply/Moderate",
+      "Disc CFs 272,700/413,000/413,050/307,350; cum 1,098,750 at Yr3; 101,250/307,350 -> 3.33 -> 3.3 yrs",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 LO E.1",
+      "IRR decision rule (Fisher, 1930)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Accept when the IRR falls below the required rate of return, signaling quick capital recovery",
+      "B": "Accept when the IRR exceeds the required rate of return, which corresponds to a positive NPV for a conventional project",
+      "C": "Accept when the IRR is greater than zero, since any positive internal return benefits shareholders",
+      "D": "Accept when the IRR is exactly equal to the required rate of return, confirming efficient pricing"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Reversing the IRR-hurdle comparison or treating IRR-above-zero as the acceptance test",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "For a conventional project (outflow followed by inflows), the internal rate of return is the discount rate that sets NPV to zero, so the IRR exceeds the required rate of return precisely when NPV is positive at that required rate. Finance trainer Malik Dorsey's quiz point is the equivalence: IRR above the hurdle accepts the same projects the NPV rule accepts. An IRR equal to the hurdle is the indifference point (NPV of zero), an IRR below it destroys value at Flash's cost of capital, and a positive-but-sub-hurdle IRR still fails to compensate capital providers.",
+    "ExplanationWrongA": "A below-hurdle IRR means the project earns less than Flash's capital costs, however quickly the cash physically returns; discounting such flows at the required rate leaves NPV negative. Speed of recovery is a payback concept with no place in the IRR test, and reversing the comparison accepts exactly the projects the rule rejects.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Nearly every conventional project has an IRR above zero, so 'greater than zero' would approve ventures earning a fraction of a percent while Flash pays 10% for capital. The hurdle exists because capital carries a cost; an IRR clears the acceptance bar only by exceeding that required rate.",
+    "ExplanationWrongD": "Equality marks indifference, not efficiency: NPV is exactly zero, so shareholders gain nothing beyond the return capital requires elsewhere. Treating the equality point as an accept signal erodes the distinction between earning the cost of capital and creating value above it.",
+    "FormulaReference": "ID-09",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-105",
+    "Section": "E",
+    "Stem": "In Flash's analyst development program, instructor Malik Dorsey reviews the internal rate of return criterion. He asks the cohort to state, for an independent conventional project (an initial outlay followed by cash inflows), the condition under which the IRR method says the project should be accepted. Which condition should the cohort give?",
+    "Topic": "E.105 irr-hurdle-rule",
+    "UniqueConceptKey": "E-105-irr-hurdle-rule",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-rule recall fits Remember/Easy",
+      "Conceptual item - no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Real options theory (Dixit & Pindyck, Investment Under Uncertainty, 1994)",
+      "Trigeorgis, Real Options (1996)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Delay reduces value here, because the 4% construction escalation is a certain cash outflow while any tariff savings are speculative and unquantifiable.",
+      "B": "The value of waiting comes solely from investing the $4,800,000 elsewhere for twelve months, so any positive short-term yield justifies deferral.",
+      "C": "The option to wait is worthless, because a conventional NPV computed today already incorporates all possible tariff outcomes through the discount rate.",
+      "D": "Waiting functions as an option on information: the ruling resolves regulatory uncertainty, letting Flash commit the $4,800,000 only in states of the world where the line remains worthwhile, so the avoided downside can outweigh the 4% escalation."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Treating delay as pure cost escalation; ignoring information value of waiting",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Real-options theory holds that managerial flexibility to time an irreversible outlay has economic value beyond static NPV. Building today locks in $4,800,000 before the tariff ruling resolves; waiting converts commitment into a state-contingent decision, so Flash invests only when the ruling leaves the battery-pack line attractive at Dayton. The 4% escalation (about $192,000 on $4,800,000) is the price of that information, and it is justified whenever the avoided downside branch exceeds it. In business terms, Vasquez is buying the right to say no after the uncertainty clears — precisely the mechanism a fixed NPV of +$310,000 cannot capture.",
+    "ExplanationWrongA": "Choice A treats the decision as a static comparison of a certain escalation against speculative benefits and concludes delay destroys value. The misconception is point-estimate thinking that ignores the right-not-obligation structure: the speculative outcome is exactly what the delay option lets Flash avoid paying for in bad states.",
+    "ExplanationWrongB": "Choice B names only interest income on deferred funds as the source of delay value. That misses the dominant driver — resolution of tariff uncertainty before committing $4,800,000 — and would absurdly justify waiting even when deferral forfeits profitable operating seasons.",
+    "ExplanationWrongC": "Choice C assumes the discount rate inside conventional NPV already prices flexibility. A single risk-adjusted rate prices the passive asset's systematic risk; it does not model active responses such as postponing or canceling after new information arrives, which is where option value arises.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-106",
+    "Section": "E",
+    "Stem": "Flash CFO Elena Vasquez is evaluating a $4,800,000 battery-pack assembly line for the Dayton plant. Construction costs are projected to rise 4% if Flash waits twelve months, but a pending federal tariff ruling will be decided within that window and could materially change the line's imported-component costs. Static NPV analysis of building today shows +$310,000. Which statement best explains why the option to delay can add value despite the higher future construction cost?",
+    "Topic": "E.106-delay-option-information-value",
+    "UniqueConceptKey": "E-106-delay-information-value",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-principle comprehension item, capped at Moderate-Easy per Rule 11",
+      "Conceptual item verified against LO E.5 real-options definition (no computation required)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory — NPV primacy for mutually exclusive projects (Fisher, 1930)",
+      "Profitability Index ranking doctrine under capital rationing"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Select Echo, because its profitability index of 1.50 exceeds Delta's 1.30, signaling greater value created per dollar committed.",
+      "B": "Select Delta, because with mutually exclusive projects and unconstrained funding the highest NPV adds the most shareholder value; Echo's superior PI reflects only its smaller investment denominator.",
+      "C": "Select Echo, because PI and NPV produce identical rankings for mutually exclusive projects, and Echo's index is higher.",
+      "D": "Recompute PI as NPV divided by initial investment; on that basis Echo scores 0.50 versus Delta's 0.30, confirming Echo as the richer project."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Ranking mutually exclusive unconstrained projects by PI instead of NPV",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The NPV decision rule is primary: accept the set of projects that maximizes total firm value, and between mutually exclusive projects choose the largest positive NPV. Delta delivers $2,600,000 of discounted inflows on a $2,000,000 outlay for NPV of $600,000 (PI = 2,600,000 / 2,000,000 = 1.30); Echo delivers $1,200,000 on $800,000 for NPV of $400,000 (PI = 1,200,000 / 800,000 = 1.50). Because Flash can fund either project outright this cycle, capital is not rationed, so relative efficiency per dollar is irrelevant — absolute value added governs, and Delta adds $200,000 more ($600,000 vs $400,000). PI is the correct ranking tool only when the budget forces choosing among many smaller projects; Chen should present Delta and note that Echo's higher PI merely measures scale-adjusted attractiveness, not total wealth creation.",
+    "ExplanationWrongA": "Choice A applies the PI ranking rule outside its domain: PI orders projects efficiently under a fixed budget cap, but with mutually exclusive projects and no constraint it steers Flash toward the smaller $400,000 gain instead of the larger $600,000 gain.",
+    "ExplanationWrongC": "Choice C asserts PI and NPV rank identically for mutually exclusive projects. They conflict whenever project scales differ, as here (PI 1.50 vs 1.30 favors Echo while NPV $600,000 vs $400,000 favors Delta), so the premise collapses and Echo follows from a false claim of equivalence.",
+    "ExplanationWrongD": "Choice D redefines PI as NPV over initial investment, which merely shifts every score by minus one (Echo 0.50, Delta 0.30) and preserves the same ordering. The misconception is treating a rescaled ratio as a tie-breaking analysis rather than recognizing the scale-versus-efficiency conflict itself.",
+    "ExplanationWrongB": "",
+    "FormulaReference": "ID-02",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-107",
+    "Section": "E",
+    "Stem": "Controller Priya Chen must recommend one of two mutually exclusive packaging-line upgrades at Flash's Cincinnati plant; Flash can fund either project outright but will pursue only one this cycle, and no capital rationing applies. Upgrade Delta requires $2,000,000 and returns discounted inflows of $2,600,000 (profitability index 1.30; NPV $600,000). Upgrade Echo requires $800,000 and returns discounted inflows of $1,200,000 (profitability index 1.50; NPV $400,000). Which analysis should Chen present?",
+    "Topic": "E.107-pi-npv-ranking-conflict",
+    "UniqueConceptKey": "E-107-pi-npv-conflict",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-metric conflict analysis across two scaled projects exceeds Apply floor (>=3)",
+      "Independent recomputation: PI Delta=2,600,000/2,000,000=1.30; PI Echo=1,200,000/800,000=1.50; NPV gap=600,000-400,000=200,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Incremental relevant cash-flow principle (management accounting)",
+      "U.S. corporate income taxation of operating margins"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$405,000",
+      "B": "$810,000",
+      "C": "$135,000",
+      "D": "$540,000"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Netting lost sales dollars instead of lost contribution margin",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Incremental cash-flow analysis counts only changes the decision causes. New-line contribution margin = $2,400,000 x (1 - 0.55) = $1,080,000. Cannibalization removes existing contribution margin, not sales dollars: lost CM = $900,000 x 0.60 = $540,000. Net pre-tax incremental margin = $1,080,000 - $540,000 = $540,000; after tax at 25%, annual operating cash flow = $540,000 x 0.75 = $405,000. For Grant's Cincinnati launch case, the honest incremental figure is $405,000 because diverted standard-line customers were already generating $540,000 of contribution that Flash gives up the moment the premium line ships.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B computes $1,080,000 x 0.75 = $810,000 by taxing the full new-line contribution margin. It ignores cannibalization entirely, overstating annual cash flow by $405,000 — a serious error given the market study already documented the $900,000 sales diversion.",
+    "ExplanationWrongC": "Choice C nets lost sales dollars against new contribution — $1,080,000 - $900,000 = $180,000 — then taxes it to $135,000. The misconception is mixing revenue and contribution bases: the standard line surrenders only its 60% contribution margin ($540,000), not its full $900,000 of sales.",
+    "ExplanationWrongD": "Choice D reports the correct pre-tax net contribution of $540,000 but skips the 25% tax effect specified in the stem, double-counting neither shield nor drag — simply omitting the after-tax conversion step required of operating cash flows.",
+    "FormulaReference": "ID-06",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-108",
+    "Section": "E",
+    "Stem": "Flash plans to launch a premium compressor line at its Cincinnati plant next quarter. Director of FP&A Sofia Grant projects incremental sales of $2,400,000 per year carrying variable costs of 55% of sales. Market analysis indicates the new line will divert existing customers from Flash's standard compressor line, reducing that line's sales by $900,000 per year; the standard line carries a 60% contribution margin ratio. Ignoring depreciation and applying a 25% tax rate, what is the annual after-tax incremental operating cash flow attributable to the new line?",
+    "Topic": "E.108-cannibalization-incremental-flow",
+    "UniqueConceptKey": "E-108-cannibalization-flow",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two-layer contribution computation plus tax conversion sits at Moderate",
+      "Independent recomputation: new CM=2,400,000x0.45=1,080,000; lost CM=900,000x0.60=540,000; (1,080,000-540,000)x0.75=405,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory — capital rationing (internal vs external funding constraints)",
+      "IMA CMA Part 2 learning outcome E.6"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Soft rationing arises when external lenders withdraw credit; hard rationing is a temporary internal spending freeze that divisions routinely override.",
+      "B": "Hard rationing restricts only debt-financed proposals, while soft rationing restricts only equity-financed proposals.",
+      "C": "Soft rationing is an internally imposed ceiling, such as a divisional spending cap, that managers may sometimes petition to raise; hard rationing reflects genuine external limits on the funds the firm can raise at any price.",
+      "D": "Both forms are identical in origin and differ only in duration, with soft rationing lasting one budget cycle and hard rationing persisting across several."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Reversing soft (internal) vs hard (external) rationing definitions",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Capital rationing theory distinguishes constraints by origin. Soft rationing is self-imposed governance discipline — a divisional or enterprise budget ceiling set by management — and because the limit is administrative, sponsors can occasionally win exceptions for exceptional projects. Hard rationing originates outside the firm: capital markets themselves decline to supply financing at any acceptable price, so no internal petition can lift it. Webb's memo matters practically because the two forms demand different responses: negotiating or resequencing within soft limits versus shrinking the program to internally generated funds under hard limits.",
+    "ExplanationWrongA": "Choice A reverses the definitions completely, attributing soft rationing to lender withdrawal (an external, hence hard, constraint) and calling the internal freeze hard. A candidate memorizing labels without anchoring them to origin picks this mirror image.",
+    "ExplanationWrongB": "Choice B invents a financing-source distinction that the framework does not contain: both debt- and equity-funded proposals face whichever rationing regime is binding, which is defined by where the constraint lives, not by the instrument being financed.",
+    "ExplanationWrongD": "Choice D collapses the distinction into duration. The concepts differ by source of authority — internal policy versus external market capacity — not by how long they last; a one-cycle market shutdown is still hard rationing.",
+    "ExplanationWrongC": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-109",
+    "Section": "E",
+    "Stem": "In its annual capital-planning memo, Flash's treasury department, led by treasurer Marcus Webb, reminds division controllers that proposed projects face two distinct forms of capital rationing. Which statement correctly distinguishes the two forms?",
+    "Topic": "E.109-soft-hard-rationing-distinction",
+    "UniqueConceptKey": "E-109-soft-hard-rationing",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-fact definition discrimination, capped Easy per Rule 11",
+      "Conceptual item verified against LO E.6 capital-rationing definitions (no computation required)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Scenario analysis in capital budgeting (LO E.3)",
+      "COSO ERM 2017 — linkage of risk appetite and tolerance to decisions"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Proceed at full scale, because the base-case NPV of +$740,000 comfortably exceeds the magnitude of any single downside scenario reading.",
+      "B": "Adopt the phased build: it keeps the modeled downside floor (-$150,000) inside the board's $400,000 exposure cap while preserving a positive base-case NPV of +$520,000, whereas full scale breaches the cap at -$410,000.",
+      "C": "Decline the project, because any scenario carrying a negative NPV floor disqualifies an investment regardless of base-case economics.",
+      "D": "Proceed at full scale, because its probability-weighted NPV of $452,500 exceeds the phased build's $352,500, and the board cap governs expected losses rather than scenario floors."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Approving on base-case NPV while breaching the board's downside-exposure cap",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Board guidance functions as a risk tolerance: no single project may expose more than $400,000 of downside NPV, evaluated on the scenario floor rather than the probability-weighted mean. Full scale posts a recession floor of -$410,000, breaching the cap by $10,000 despite its richer +$740,000 base case; the phased build trims the floor to -$150,000, well inside the cap, and retains +$520,000 of base-case value. Rejecting the project sacrifices positive expected value unnecessarily. Vasquez should therefore advance the phased build: it is the only alternative that simultaneously satisfies the exposure constraint and creates value, which is the disciplined trade-off between opportunity and survivable loss that scenario analysis exists to surface.",
+    "ExplanationWrongA": "Choice A approves on base-case economics alone, ignoring that the board cap is written against worst-case exposure; at -$410,000 the full-scale floor breaches the $400,000 limit, so the very document authorizing the project rejects this configuration.",
+    "ExplanationWrongC": "Choice C imposes an absolute veto on any negative scenario floor. That standard would block nearly every real investment with cyclical exposure and discards the purpose of a calibrated cap, which tolerates bounded downside rather than demanding zero downside.",
+    "ExplanationWrongD": "Choice D argues from probability weighting ($452,500 vs $352,500) and recasts the board cap as an expected-loss limit. The guidance caps scenario-floor exposure, not the mean; substituting the wrong statistic quietly legalizes the breach that full scale commits.",
+    "ExplanationWrongB": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-110",
+    "Section": "E",
+    "Stem": "CFO Elena Vasquez brings a $3,200,000 plastics-recovery line proposal for Flash's Erie plant to the capital committee. Scenario modeling at the 10% WACC shows a base-case NPV of +$740,000 and a recession-scenario NPV floor of -$410,000 carrying 25% likelihood. Board guidance caps downside NPV exposure on any single project at $400,000 measured on the scenario floor. A phased build — installing half the line now and half in year three — lowers the modeled floor to -$150,000 but also trims base-case NPV to +$520,000; rejecting the project forfeits the value entirely. Which decision should Vasquez advance, and on what grounds?",
+    "Topic": "E.110-downside-scenario-npv-floor-decision",
+    "UniqueConceptKey": "E-110-downside-floor-decision",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Evaluate judgment under binding risk cap with quantified competing alternatives (>=4 required; assigned 5)",
+      "Verification: EV full=0.75x740,000-0.25x410,000=452,500; EV phased=0.75x520,000-0.25x150,000=352,500; floors -410,000 vs -150,000 vs cap 400,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Accounting Rate of Return convention — average investment basis",
+      "Capital budgeting theory — non-DCF screening methods"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "12.86%",
+      "B": "52.50%",
+      "C": "25.71%",
+      "D": "22.50%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using initial cost instead of average investment; cash flows instead of net income",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "ARR compares average annual accounting net income with average investment, where average investment = (initial cost + salvage value) / 2. Straight-line depreciation = ($1,400,000 - $200,000) / 5 = $240,000 per year. Average investment = ($1,400,000 + $200,000) / 2 = $800,000. ARR = $180,000 / $800,000 = 22.50%. Tanaka should report 22.50% for the Dayton inspection cell; the salvage adjustment matters because the asset's book value declines from $1,400,000 to $200,000, so the capital tied up across the life averages $800,000, not the full purchase price.",
+    "ExplanationWrongA": "Choice A divides the $180,000 income by the full $1,400,000 initial cost (12.86%), using the year-zero investment base instead of the average investment the ARR convention requires; the error understates the return by nearly ten points.",
+    "ExplanationWrongB": "Choice B computes ($180,000 + $240,000 depreciation) / $800,000 = $420,000 / $800,000 = 52.50%. It substitutes cash flow for accounting income, converting ARR into something closer to a payback-flavored ratio and violating the method's defining accrual basis.",
+    "ExplanationWrongC": "Choice C drops salvage from the averaging formula: ($1,400,000 + $0) / 2 = $700,000, giving $180,000 / $700,000 = 25.71%. Omitting terminal book value inflates the denominator's counterpart and misstates the return by over three percentage points.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "ID-08",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-111",
+    "Section": "E",
+    "Stem": "On January 1, Flash installed a $1,400,000 automated inspection cell at its Dayton plant. Plant controller Mei Tanaka estimates straight-line depreciation over five years to a $200,000 salvage value and projects average annual after-tax net income of $180,000 over the cell's life. What is the asset's accounting rate of return measured against average investment?",
+    "Topic": "E.111-arr-salvage-adjustment",
+    "UniqueConceptKey": "E-111-arr-salvage",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: three-step computation (depreciation, averaged base, ratio) at Moderate",
+      "Independent recomputation: Dep=(1,400,000-200,000)/5=240,000; AvgInv=(1,400,000+200,000)/2=800,000; 180,000/800,000=22.50%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Fisher equation — nominal vs real interest",
+      "Capital budgeting consistency principle (nominal flows with nominal rates; real with real)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Discounting must be internally consistent: nominal cash flows belong with nominal discount rates and constant-dollar (real) flows with real rates; pairing real flows with the nominal 9% rate strips inflation compensation out twice and biases the expansion's NPV downward.",
+      "B": "Constant-dollar forecasts are actually preferred with a nominal rate, because discounting automatically adjusts for inflation and leaves the result unbiased.",
+      "C": "The mismatch matters only when inflation runs above roughly 5%; below that threshold the distortion rounds away at two decimal places.",
+      "D": "The analyst should raise the discount rate further until the bias disappears, since corporate tax effects already embed price-level changes in the WACC."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Mixing real cash flows with nominal discount rates (or vice versa)",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The Fisher relation ties nominal rates to real rates plus expected inflation ((1 + nominal) = (1 + real)(1 + inflation)). Consistency is mandatory: discounting nominal cash flows requires the nominal rate; discounting real (constant-dollar) cash flows requires the real rate. Webb's analyst stripped inflation from the numerator but left it in the denominator, so purchasing power is penalized once in the flows and again in the rate — compounding the deflation across six years and materially understating the Erie expansion's NPV. The fix is to inflate the flows to nominal terms and keep the 9% WACC, or convert the WACC to its real equivalent and retain constant dollars.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B claims the nominal rate self-corrects constant-dollar inputs. The misconception is reading the discount rate as an inflation corrector; in fact the nominal rate already contains an inflation premium, so applying it to uninflated flows deducts inflation twice.",
+    "ExplanationWrongC": "Choice C invents a 5% materiality threshold. Even modest inflation compounds: at 3% over six years the extra penalty approaches 16% of terminal-year value, far beyond rounding, so the inconsistency is a function of horizon, not a magic cutoff.",
+    "ExplanationWrongD": "Choice D prescribes patching the symptom by inflating the discount rate ad hoc. Taxes affect after-tax cash flows, not the inflation content of the WACC; stacking a fudge factor onto the rate compounds rather than repairs the consistency violation.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-112",
+    "Section": "E",
+    "Stem": "While reviewing a capacity-expansion model for Flash's Erie plant, treasurer Marcus Webb finds the analyst projected all cash flows in constant (today's) dollars but discounted them at Flash's nominal 9% weighted-average cost of capital. Which principle identifies the flaw and states the proper pairing?",
+    "Topic": "E.112-nominal-real-consistency",
+    "UniqueConceptKey": "E-112-nominal-real-consistency",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: principle comprehension without computation, capped Moderate-Easy per Rule 11",
+      "Conceptual item verified against LO E.2 DCF consistency requirement (no computation required)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Discounted payback / break-even time method",
+      "Sensitivity analysis in capital budgeting (LO E.3)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Break-even occurs in about 4.0 years ($1,900,000 / $470,000), and the 20% shock leaves NPV near +$208,000, so both committee tests pass.",
+      "B": "Discounted break-even takes about 5.3 years, and the 20% shortfall drives NPV to approximately -$213,000, so the stress test fails even though the base case clears the hurdle.",
+      "C": "Discounted break-even takes about 5.3 years, and the stressed NPV remains positive at roughly +$167,000 because only the NPV, not the underlying cash flows, responds proportionally to volume.",
+      "D": "Discounted break-even falls inside four years, since cumulative receipts of $1,880,000 by year four leave only $20,000 of the outlay outstanding."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Reading simple payback as break-even time; shocking NPV instead of cash flows",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Discount each year's flow at 9% and accumulate: year 1 $431,000; year 2 $395,700; year 3 $362,800; year 4 $332,800; year 5 $305,500 (cumulative $1,827,800); year 6 $280,100. Recovery completes during year 6: remaining $72,200 / $280,100 = 0.26, so discounted break-even time = 5.3 years — inside the six-year life, so the first test passes. Stress test: cut annual flows 20% to $376,000 and recompute NPV with the six-year annuity factor: $376,000 x 4.486 - $1,900,000 = $1,686,736 - $1,900,000 = -$213,264. The cushion fails; Ortega must report to Vasquez that roughly one-fifth softer volumes flip the automation project negative, so pricing or volume guarantees deserve attention before approval.",
+    "ExplanationWrongA": "Choice A reports simple payback ($1,900,000 / $470,000 = 4.04 years) as the break-even time and quotes the unshocked base NPV (+$208,420) as surviving the stress. It ignores time value in test one and never applies the volume shock in test two.",
+    "ExplanationWrongC": "Choice C gets the break-even time right but then cuts the NPV itself by 20% ($208,420 x 0.80 = $166,736). Sensitivity shocks apply to the driver — annual cash flows — not to the output metric; scaling the answer instead of the input fabricates a passing grade.",
+    "ExplanationWrongD": "Choice D treats undiscounted cumulative receipts ($1,880,000 through year four) as if they were discounted balances. Discounting those same receipts leaves only $1,522,300 recovered by year four, so claiming near-complete recovery ignores the entire 9% time-value adjustment.",
+    "ExplanationWrongB": "",
+    "FormulaReference": "ID-04",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-113",
+    "Section": "E",
+    "Stem": "Flash's $1,900,000 warehouse-automation project at the Dayton plant is projected to generate $470,000 of after-tax cash flow annually for six years. Sponsor Luis Ortega, director of operations, must satisfy two tests from capital committee chair Elena Vasquez: (1) the project's discounted break-even time at Flash's 9% WACC, and (2) whether NPV survives a 20% shortfall in annual cash flows. Stated factors — present value of $1 due at the end of years 1 through 6 at 9%: 0.917, 0.842, 0.772, 0.708, 0.650, 0.596; six-year annuity factor at 9%: 4.486. Which conclusion is correct?",
+    "Topic": "E.113-discounted-breaktime-stress-test",
+    "UniqueConceptKey": "E-113-breaktime-stress",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: chained per-year discounting, interpolated break-time, and shocked-NPV rerun exceed Apply (>=3)",
+      "Independent recomputation: cum disc Y5=1,827,800; (1,900,000-1,827,800)/280,100=0.258 -> 5.3 yrs; shock 376,000x4.486-1,900,000=-213,264",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory — payback period via cumulative uneven cash flows"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "About 2.36 years",
+      "B": "About 3.2 years",
+      "C": "About 2.9 years",
+      "D": "About 2.42 years"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Dividing the outlay by an average or single-year inflow instead of cumulating",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "With uneven flows, payback is found on a cumulative basis. Recovered: end of year 1 $520,000; end of year 2 $1,000,000; during year 3 cumulative reaches $1,700,000, crossing the $1,650,000 outlay. Shortfall entering year 3 = $1,650,000 - $1,000,000 = $650,000; fraction of year 3 = $650,000 / $700,000 = 0.93. Payback = 2 + 0.93 = 2.93, about 2.9 years. Kowalski can tell the Erie plant team the retrofit returns its cash in just under three years, though payback alone says nothing about post-recovery flows or time value.",
+    "ExplanationWrongA": "Choice A divides the full outlay by the single largest inflow: $1,650,000 / $700,000 = 2.36 years. Using one year's flow as if it were an annuity ignores the actual recovery sequence and understates payback by over half a year.",
+    "ExplanationWrongB": "Choice B averages the five inflows ($2,550,000 / 5 = $510,000) and divides: $1,650,000 / $510,000 = 3.24 years. The uniform-flow shortcut misstates an uneven profile — early years recover faster than the average implies — and overshoots the true 2.9-year mark.",
+    "ExplanationWrongD": "Choice D divides the unrecovered balance after year 2 ($650,000) by all remaining inflows ($1,550,000) and adds two years: 2 + 0.42 = 2.42 years. The denominator should be year 3's flow alone, since recovery stops the moment cumulative cash covers the outlay.",
+    "ExplanationWrongC": "",
+    "FormulaReference": "ID-03",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-114",
+    "Section": "E",
+    "Stem": "Maintenance manager Ray Kowalski proposes a $1,650,000 conveyor retrofit for Flash's Erie plant with these projected after-tax cash inflows: year 1 $520,000; year 2 $480,000; year 3 $700,000; year 4 $450,000; year 5 $400,000. What is the project's payback period?",
+    "Topic": "E.114-payback-uneven-flows-interpolation",
+    "UniqueConceptKey": "E-114-payback-uneven",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: cumulative interpolation across an uneven stream at Moderate",
+      "Independent recomputation: cumulative 520k; 1,000k; 1,700k; shortfall 650k of Y3 700k -> 2+650/700=2.93 -> about 2.9 years",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Real options taxonomy — growth/expansion options (Trigeorgis, 1996)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Growth (expansion) option",
+      "B": "Abandonment option",
+      "C": "Switching (input-flexibility) option",
+      "D": "Deferral (timing) option"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Labeling a scale-up right as abandonment, switching, or deferral",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "A growth option is the right, without the obligation, to make follow-on investments that scale a successful initial position. Whitfield's agreement matches the definition exactly: the fourteen-cell replication right derives its worth from the pilot's proven 11% unit-cost reduction and is exercised only if results hold. In capital-budgeting terms the pilot functions as a paid feasibility study whose payoff is access to the larger program, which is why growth options justify accepting modest standalone pilot economics.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B selects abandonment, the right to exit and recover salvage when performance deteriorates. Whitfield's right triggers on success and scales operations up — the opposite direction of an exit right exercised on failure.",
+    "ExplanationWrongC": "Choice C selects the switching option, which concerns alternating inputs, outputs, or operating modes of an existing asset. Replication across fourteen cells adds capacity in new locations; it changes nothing about how any single cell switches between modes.",
+    "ExplanationWrongD": "Choice D selects deferral, the right to postpone a commitment until uncertainty resolves. The pilot has already been executed; what remains is not a delayed start but a scale-up of a completed, validated deployment.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-115",
+    "Section": "E",
+    "Stem": "Flash piloted a robotics retrofit in one Dayton machining cell and unit costs fell 11%. The investment agreement grants VP of corporate development Dana Whitfield the right — but not the obligation — to replicate the retrofit across Flash's fourteen remaining comparable cells if the results hold. In real-options terms, this replication right is best classified as which option type?",
+    "Topic": "E.115-growth-option-framing",
+    "UniqueConceptKey": "E-115-growth-option-frame",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-taxonomy recall, capped Easy per Rule 11",
+      "Conceptual item verified against LO E.5 option taxonomy (no computation required)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Real options theory — expand/contract options (Trigeorgis, 1996)",
+      "Springing leverage covenant practice in credit agreements"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Exercise the expansion option, because its gross option value of $340,000 exceeds the contraction option's $275,000 by $65,000.",
+      "B": "Retain both options for another cycle, preserving flexibility while demand data accumulates; the two rights can be exercised together once signals clarify.",
+      "C": "Exercise the contraction option, because its $275,000 gross value tops the expansion option's net value of $220,000, indicating dominance on a consistent basis.",
+      "D": "Exercise the contraction option: netting exercise costs leaves expansion at $220,000 versus contraction at $210,000 — a $10,000 edge too thin to justify flirting with a covenant breach when contraction restores headroom outright."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Comparing gross option values while ignoring differential exercise costs",
+    "CorrectChoice": "D",
+    "DifficultyScore": 5,
+    "Difficulty": "Very Difficult",
+    "ExplanationCorrect": "Option values are compared net of exercise costs. Expansion nets $340,000 - $120,000 = $220,000; contraction nets $275,000 - $65,000 = $210,000. On pure numbers the gap is $10,000 — about 4.5% — well inside estimation error for option valuations built on volatile motor-demand forecasts. Boone must also weigh the balance-sheet channel: expansion draws incremental borrowing against a springing leverage covenant, while contraction generates proceeds that restore comfortable headroom immediately. Sacrificing $10,000 of modeled option value to eliminate default-contingent downside is the judgment call evaluation questions exist to test, and the contraction exercise is the best-supported recommendation.",
+    "ExplanationWrongA": "Choice A ranks on gross values and ignores the asymmetric exercise costs ($120,000 vs $65,000), overstating expansion's edge at $65,000 when the true net gap is only $10,000 — a difference the covenant consequence easily overwhelms.",
+    "ExplanationWrongB": "Choice B assumes the rights are separable and renewable. The brief fixes them as mutually exclusive exercises available this cycle; holding both forfeits the repositioning window and lets the heat-treat cell sit idle while the covenant pressure persists.",
+    "ExplanationWrongC": "Choice C mixes bases — contraction's gross $275,000 against expansion's net $220,000 — and calls the mismatch dominance. Applied consistently, both sides net within $10,000 of each other, so the stated basis error manufactures a decisive margin that does not exist.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-116",
+    "Section": "E",
+    "Stem": "Weak industrial-motor demand forces general manager Alicia Boone to reposition Flash's Dayton heat-treatment cell this cycle, and Flash holds two mutually exclusive real options on the asset. Exercising the expansion option converts the cell to aerospace alloys: gross option value $340,000, exercise cost $120,000, but added borrowing pushes Flash to the edge of its springing leverage covenant. Exercising the contraction option sells the cell's excess capacity: gross option value $275,000, exercise cost $65,000, with proceeds restoring comfortable covenant headroom. Which recommendation is best supported?",
+    "Topic": "E.116-expand-contract-net-option-choice",
+    "UniqueConceptKey": "E-116-expand-contract-choice",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Evaluate trade-off between thin quantified edge and covenant/default risk, named decision-maker (>=4 required; assigned 5)",
+      "Verification: net expansion=340,000-120,000=220,000; net contraction=275,000-65,000=210,000; differential=10,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory — abandonment option and economic (present-value) comparison"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Continue operating, because selling at $1,475,000 against the $1,600,000 carrying value would book a $125,000 loss.",
+      "B": "Continue operating, because undiscounted remaining inflows of $1,560,000 exceed the $1,475,000 salvage proceeds.",
+      "C": "Abandon the cell: the present value of continued operation ($1,293,240) falls short of the salvage proceeds ($1,475,000), so abandonment creates $181,760 of incremental value.",
+      "D": "Abandon the cell, because recovering $1,475,000 of the original $2,000,000 commitment limits the lifetime loss on the project to $525,000."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Comparing salvage to book value or sunk cost instead of PV of continued use",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "An abandonment decision compares forward-looking alternatives: present value of continuing versus net salvage proceeds today. Continuing promises three years of $520,000 after-tax flows worth $520,000 x 2.487 = $1,293,240 at the 10% cost of capital; selling yields $1,475,000 now. Because $1,475,000 > $1,293,240, abandonment is superior by $181,760, and Chen should recommend disposal. Neither the $1,600,000 carrying value nor the original $2,000,000 outlay enters the comparison — both are sunk, accounting constructs with no bearing on which forward path creates more value for Flash's Erie operation.",
+    "ExplanationWrongA": "Choice A keeps the cell to avoid booking a $125,000 accounting loss ($1,600,000 carrying value vs $1,475,000 proceeds). Book-value comparisons drive reported earnings, not cash economics; the relevant contest is $1,293,240 of future value versus $1,475,000 today.",
+    "ExplanationWrongB": "Choice B sums undiscounted inflows (3 x $520,000 = $1,560,000) against salvage and continues on the slim $85,000 margin. Ignoring the 10% time-value haircut shrinks the true continuing value to $1,293,240, flipping the conclusion the moment discounting is applied.",
+    "ExplanationWrongD": "Choice D frames the sale around recovering part of the original $2,000,000 and capping lifetime losses. That is sunk-cost reasoning: the $2,000,000 is spent regardless, and only forward cash flows versus salvage determine whether abandoning adds the $181,760.",
+    "ExplanationWrongC": "",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-117",
+    "Section": "E",
+    "Stem": "Two years ago Flash paid $2,000,000 for a flexible machining cell at its Erie plant; straight-line depreciation over five years leaves a carrying value of $1,600,000 today. Controller Priya Chen can sell the cell now for net after-tax proceeds of $1,475,000, or operate it for three more years at expected after-tax cash flows of $520,000 per year — flows with a present value of $1,293,240 at Flash's 10% cost of capital (three-year annuity factor 2.487). What should Chen conclude?",
+    "Topic": "E.117-abandonment-versus-continue-pv",
+    "UniqueConceptKey": "E-117-abandonment-quantify",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: PV comparison plus quantified abandonment gain at Moderate",
+      "Independent recomputation: PV continue=520,000x2.487=1,293,240; salvage 1,475,000; abandon gains 1,475,000-1,293,240=181,760",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "NPV profile and Fisher intersection (crossover rate) theory",
+      "Mutually exclusive project ranking doctrine"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Ampex ranks ahead below the crossover rate, which lies between 6% and 10%; above it Volt leads, so at the 10% hurdle Volt is marginally preferred ($305,000 vs $298,000), and the ranking flips with modest rate movements.",
+      "B": "Volt ranks ahead below the crossover rate because front-loaded projects dominate early; Ampex overtakes only at discount rates beyond 14%.",
+      "C": "The crossover rate is the discount rate at which each package's individual NPV equals zero, so it can be read directly where the profiles cross the horizontal axis.",
+      "D": "Higher discount rates magnify the value of back-loaded cash flows, which explains Ampex's profile steepening upward as rates rise toward 14%."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Confusing the crossover rate with each project's own IRR",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The crossover rate is where two projects' NPV profiles intersect — equivalently, the IRR of the incremental (difference) cash flows. Lin's data show Ampex (back-loaded) ahead at 6% ($486,000 vs $412,000) but behind at 10% ($298,000 vs $305,000) and falling further behind at 14% ($131,000 vs $215,000): the profiles therefore cross between 6% and 10%. Back-loaded streams lose value faster as rates rise, which is why Ampex drops $188,000 from 6% to 10% while front-loaded Volt drops $107,000. At Flash's 10% hurdle Volt edges Ampex by $7,000, so the practical warning to the committee is that the recommendation is sensitive to small changes in the assumed rate — exactly the insight the crossover construct exists to expose.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B reverses the sensitivity logic: back-loaded Ampex leads at low rates and front-loaded Volt leads at high rates, the opposite of the plotted data (486 vs 412 at 6%; 298 vs 305 at 10%).",
+    "ExplanationWrongC": "Choice C equates the crossover rate with each package's own zero-NPV rate — its IRR. Those are different points: the crossover solves NPV_Ampex = NPV_Volt (the difference stream's IRR), while each profile's horizontal-axis crossing solves its own NPV = 0.",
+    "ExplanationWrongD": "Choice D inverts discounting mechanics: higher rates punish distant flows hardest, so Ampex's back-loaded profile falls steeply as rates rise (to $131,000 at 14%), it does not steepen upward; the claim contradicts the table Lin compiled.",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-118",
+    "Section": "E",
+    "Stem": "Assistant controller Derek Lin plotted NPV profiles for two mutually exclusive conveyor-control packages bid for Flash's Cincinnati plant. Package Volt (front-loaded savings): NPV $412,000 at 6%, $305,000 at 10%, $215,000 at 14%. Package Ampex (back-loaded savings): NPV $486,000 at 6%, $298,000 at 10%, $131,000 at 14%. Flash's hurdle rate is 10%. Which interpretation should Lin report to the capital committee?",
+    "Topic": "E.118-crossover-rate-profile-analysis",
+    "UniqueConceptKey": "E-118-crossover-analysis",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: profile-shape inference across three discount rates plus hurdle interpretation (>=3)",
+      "Verification: Ampex leads at 6% (486>412); Volt leads at 10% (305>298) and 14% (215>131); crossover bracketed between 6% and 10%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Post-audit feedback control in capital budgeting (LO E.6)",
+      "Forecast-calibration research on optimism bias in project planning"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Post-audits exist chiefly to assign blame for variances, and publicizing sponsor shortfalls motivates tighter forecasts through fear of sanction.",
+      "B": "Findings require restating originally approved NPVs so the capital-budget ledger reflects what should have been approved at the time of the decision.",
+      "C": "Documented forecast-versus-actual variances and their causes feed back into estimating templates, hurdle reviews, and sponsor track records, systematically damping the optimism that inflated prior approvals.",
+      "D": "Post-audit evidence cannot influence planning models until externally audited, so its practical role is archival documentation retained for control attestations."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Treating post-audit as blame assignment rather than forecast calibration",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The post-audit loop is a calibration mechanism: comparing forecasted volumes, downtime, and cash flows against realized outcomes, diagnosing why variances occurred, and wiring those causes back into the organization's estimating tools and incentive structure. Osei's finding — first-year volumes overstated about 30% and installation downtime underestimated across plants — identifies systematic optimism, not random noise. Feeding documented bias factors into templates, subjecting repeat offenders' assumptions to tougher hurdle review, and scoring sponsor forecasting accuracy converts hindsight into better ex-ante discipline on the next wave of approvals, which is the entire governance purpose of closing the loop.",
+    "ExplanationWrongA": "Choice A recasts the program as punishment. Blame-centered post-audits chill candid forecasting, encouraging sponsors to shade projections defensively — the opposite of the calibration objective the variance data is meant to serve.",
+    "ExplanationWrongB": "Choice B aims the findings backward, restating approved NPVs as if history could be re-decided. Post-audit value is prospective: the ledger records what was known then; only future proposals benefit from the diagnosed optimism pattern.",
+    "ExplanationWrongD": "Choice D freezes the loop behind an external-audit precondition. Nothing in capital-budgeting control practice requires third-party attestation before internal models absorb post-audit lessons; treating the evidence as inert archive wastes the diagnostic entirely.",
+    "ExplanationWrongC": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-119",
+    "Section": "E",
+    "Stem": "Flash's post-audit program, administered by internal audit lead Karen Osei, compared actuals for the last six funded projects against sponsor forecasts across the Cincinnati, Erie, and Dayton plants and found first-year volumes overstated by roughly 30% and installation downtime underestimated in every case. Which statement best explains how the post-audit loop improves future capital allocation?",
+    "Topic": "E.119-post-audit-bias-correction-loop",
+    "UniqueConceptKey": "E-119-postaudit-loop",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: process-mechanism comprehension, capped Moderate-Easy per Rule 11",
+      "Conceptual item verified against LO E.6 post-audit doctrine (no computation required)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Equivalent Annual Annuity method for unequal-lived mutually exclusive projects",
+      "Capital budgeting theory — repeatability assumption"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Machine K, because its total NPV of $323,610 exceeds J's $238,464, and NPV is the primary capital-budgeting criterion.",
+      "B": "Machine J, because its equivalent annual annuity of $72,000 ($238,464 / 3.312) exceeds K's $70,000 ($323,610 / 4.623) once the unequal lives are annualized.",
+      "C": "Machine K, because spreading $323,610 across six years of service yields more total operating years per purchase, and longer-lived assets create more value per buying decision.",
+      "D": "Neither machine dominates: both earn exactly the 8% required return at the margin, so the committee should split the award between the two vendors."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Choosing the larger total NPV across unequal lives without annualizing",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Direct NPV comparison is valid only for equal-lived projects. With unequal lives — and either machine repeatable at unchanged cost — the correct common yardstick is the equivalent annual annuity: NPV divided by the level-annuity factor at the required return. Machine J: $238,464 / 3.312 = $72,000 per year over four years. Machine K: $323,610 / 4.623 = $70,000 per year over six years. Park should select J: although K's headline NPV is $85,146 larger, J generates $2,000 more value per year, and under the repeatability assumption that annual advantage persists across replacement cycles, adding roughly $9,900 of present value per repeated chain segment. Annualizing neutralizes the life mismatch that makes K look superior.",
+    "ExplanationWrongA": "Choice A applies the NPV-primary rule across unequal lives. Raw NPVs embed different service horizons — four years versus six — so K's $323,610 buys six years of service while J's $238,464 buys four; comparing totals ignores the missing two years of J's chain.",
+    "ExplanationWrongC": "Choice C reasons from service length alone, treating more operating years as self-evidently more valuable per purchase. Value depends on cash generated per period relative to capital consumed; annualized, K's longer life earns $70,000 yearly against J's $72,000, so longevity does not rescue it.",
+    "ExplanationWrongD": "Choice D confuses earning the required return with indifference. Both machines clear 8% — their NPVs are strongly positive ($238,464 and $323,610) — meaning each beats the hurdle; 'earning the required return at the margin' describes a zero-NPV project, not either labeler.",
+    "ExplanationWrongB": "",
+    "FormulaReference": "ID-05",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-120",
+    "Section": "E",
+    "Stem": "Capital-budgeting manager Owen Park must choose one of two unequal-lived labeling machines for Flash's Dayton plant; whichever machine is chosen can be replaced at unchanged cost when worn out. Machine J carries a four-year life with NPV $238,464; machine K carries a six-year life with NPV $323,610. At Flash's 8% required return, the level-annuity factors are 3.312 for four years and 4.623 for six years. Which selection should Park defend?",
+    "Topic": "E.120-eaa-unequal-life-annualization",
+    "UniqueConceptKey": "E-120-eaa-annualize",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: annualized comparison defeating naive NPV ranking, two divisions plus interpretation, at Moderate",
+      "Independent recomputation: EAA J=238,464/3.312=72,000; EAA K=323,610/4.623=70,000; J exceeds K by 2,000/year",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Real options theory (abandonment option)",
+      "UCC Article 9 (secured transactions; collateral disposition)",
+      "Secured credit agreement negative covenants (event of default)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Proceed with the investment because the abandonment option lifts expected NPV to approximately $54,900, but obtain the lender's written consent to the contingent disposal before committing funds",
+      "B": "Reject the investment because the unadjusted NPV is negative and abandonment rights are too speculative to incorporate into discounted cash flow analysis",
+      "C": "Proceed without contacting the lender because disposing of collateral becomes relevant only if a sale is actually executed in a later period",
+      "D": "Treat the Year-1 salvage as assured, adding the full $2,750,000 to the weak-state branch so NPV rises to about $1,680,000 and the project is accepted immediately"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Excluding a quantifiable abandonment option; ignoring pledged-asset covenant consent",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The governing framework is real options theory: a right, not an obligation, to abandon adds value equal to the probability-weighted improvement in terminal outcomes, evaluated on a decision tree. Weak-state continuation value is $1,700,000 versus abandonment proceeds worth $2,750,000 x 0.909 = $2,499,750 today, so exercising the option in the weak state adds $799,750 of present value; weighted at 35%, the option contributes 0.35 x $799,750 = $279,913. Expected PV becomes (0.65 x $5,200,000) + (0.35 x $2,499,750) = $3,380,000 + $874,913 = $4,254,913, giving NPV = $4,254,913 - $4,200,000 = $54,913 versus -$225,000 without flexibility. Because the line is pledged collateral and Flash's credit agreement makes an unauthorized disposal above $500,000 an event of default, CFO Elena Vasquez must secure written lender consent to the contingent sale before committing - capturing the option value while protecting Flash's borrowing capacity.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Rejecting solely on the unadjusted -$225,000 NPV discards a measurable $279,913 of flexibility value; the misconception is that real options cannot be quantified inside DCF, yet the decision tree prices this one exactly and flips the project to positive NPV.",
+    "ExplanationWrongC": "Skipping lender consent risks a technical default: negative covenants attach to the pledge at closing rather than at disposition, so a contingent right to sell pledged equipment worth far more than $500,000 triggers the consent requirement before commitment, unlike unencumbered assets Flash could sell freely.",
+    "ExplanationWrongD": "Treating the unweighted $2,499,750 salvage as assured ignores probability dilution - the sale happens only in the weak state, so its true contribution is 35% of $799,750, or $279,913; skipping that weighting inflates NPV from $54,913 to a fictitious $1,679,750.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-121",
+    "Section": "E",
+    "Stem": "Flash Industries' CFO, Elena Vasquez, is evaluating a $4,200,000 composite-panel production line. Demand will be strong with 65% probability (present value of operating cash flows $5,200,000) or weak with 35% probability (present value of continuing operations only $1,700,000). Flash holds an abandonment option: at the end of Year 1 it may sell the line to a regional fabricator for net proceeds of $2,750,000 (present value factor, 1 year, 10% = 0.909). Flash's revolving credit agreement pledges the production line as collateral and bars disposal of collateral assets above $500,000 without written lender consent; unauthorized disposal is an event of default. The unadjusted expected NPV is negative, but the option-adjusted NPV is positive. Which course of action should Vasquez recommend?",
+    "Topic": "E.121 abandonment-option-loan-covenant-interplay",
+    "UniqueConceptKey": "E-121-abandon-option-covenant",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Evaluate DS5: named CFO weighs accept-with-consent vs reject vs proceed-unilateral alternatives)",
+      "Option value = 0.35x(2,750,000x0.909-1,700,000) = 279,913; NPV = 3,380,000+874,913-4,200,000 = 54,913",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IRC Section 1245 (depreciation recapture)",
+      "IRS Publication 946 (MACRS)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$1,200,000, because the full proceeds are received in cash and taxes apply only to recurring operating income",
+      "B": "$900,000, because the entire sale price is taxed at 25%",
+      "C": "$1,020,000, because tax applies only to the $720,000 gain over book value",
+      "D": "$1,380,000, because the $180,000 tax on the gain is added to the proceeds"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Taxing full salvage proceeds instead of the gain over book value",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Terminal disposal cash flows are governed by depreciation recapture rules (IRC Sec. 1245): the taxable amount is the excess of the sale price over the asset's tax book value, not the gross proceeds. Gain = $1,200,000 - $480,000 = $720,000; tax on gain = 0.25 x $720,000 = $180,000; after-tax inflow = $1,200,000 - $180,000 = $1,020,000. In Flash Coatings' terminal-year schedule this $1,020,000 replaces the machine's contribution from operations and correctly nets the tax cost of converting appreciated basis into cash; recording gross proceeds or taxing the whole price would misstate the final year's NPV contribution by $180,000.",
+    "ExplanationWrongA": "Booking the full $1,200,000 ignores that a sale above book value generates recapture income; the misconception is that asset disposals sit outside taxation, when in fact $180,000 of the proceeds belongs to the taxing authority, leaving $1,020,000 for Flash.",
+    "ExplanationWrongB": "Taxing the entire $1,200,000 uses the wrong base - recovery of the $480,000 basis is a return of capital; only the $720,000 gain is taxed, so the correct deduction is $180,000, not $300,000, and the inflow lands at $1,020,000 rather than $900,000.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Adding the $180,000 tax back to the proceeds reverses the cash direction: tax on a gain is an outflow, so it must be subtracted from the $1,200,000 received, yielding $1,020,000 instead of a figure exceeding the cash Flash collects at closing.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-122",
+    "Section": "E",
+    "Stem": "Flash Coatings, a Flash division, is retiring an electrostatic paint line at the end of a capital project. Controller Priya Chen notes the equipment's tax book value is $480,000, while its expected sale price at project end is $1,200,000. Flash's marginal tax rate is 25%. For the project's terminal-year cash flow analysis, what after-tax cash inflow should Chen record for the disposal?",
+    "Topic": "E.122 terminal-salvage-after-tax-proceeds",
+    "UniqueConceptKey": "E-122-salvage-tax-effect",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Apply DS3: two-step recapture computation with basis adjustment)",
+      "Gain 1,200,000-480,000=720,000; tax 0.25x720,000=180,000; after-tax inflow 1,200,000-180,000=1,020,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IRC Section 168 (MACRS)",
+      "IRS Publication 946"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "MACRS recovers more than $2,000,000 of cost, producing larger total deductions and therefore larger total tax shields than straight-line",
+      "B": "Both paths deduct $2,000,000 in total, but MACRS front-loads the shields; their present values are approximately $386,600 under MACRS versus $379,100 under straight-line, a timing advantage of about $7,500",
+      "C": "Straight-line produces the higher present value of shields because spreading deductions evenly avoids the discounting penalty that penalizes early deductions",
+      "D": "The two paths are economically identical because any timing difference in shields offsets when the asset is ultimately disposed of"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Assuming MACRS changes total deductions - it changes only their timing",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Total depreciation equals the $2,000,000 basis under both conventions; MACRS differs only in timing (IRC Sec. 168; IRS Pub 946). MACRS shields: Year 1 $400,000 x 25% = $100,000; Year 2 $640,000 x 25% = $160,000; Year 3 $96,000; Years 4-5 $57,600 each; Year 6 $28,800. Discounted at 10%: 100,000(.9091)+160,000(.8264)+96,000(.7513)+57,600(.6830)+57,600(.6209)+28,800(.5645) = $90,910+$132,224+$72,125+$39,341+$35,764+$16,258 = $386,622. Straight-line shields run $100,000 annually for five years: $100,000 x 3.791 = $379,100. MACRS's roughly $7,500 PV edge is pure timing - earlier shields are worth more - which is why profitable firms favor accelerated recovery even though nominal shield totals are identical at $500,000.",
+    "ExplanationWrongA": "Claiming MACRS 'recovers more' confuses timing with amount: both schedules sum to the full $2,000,000 basis and both generate $500,000 of nominal shields; the only economic difference is that MACRS collects its $500,000 sooner, raising present value by about $7,500.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "The claim inverts discounting logic - money arriving earlier is worth more, so accelerating shields helps rather than hurts; even spacing under straight-line is precisely what costs Flash about $7,500 of present value relative to MACRS.",
+    "ExplanationWrongD": "Assuming disposal neutralizes timing ignores time value: the $7,522 PV gap arises from when shields arrive, not whether they arrive, and no later offset restores the roughly $7,500 Flash forgoes by delaying deductions under straight-line.",
+    "FormulaReference": "ID-07",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-123",
+    "Section": "E",
+    "Stem": "Flash Fabrication is depreciating a $2,000,000 plasma cutter. Financial planning manager Tomas Rivera compares two tax paths over Flash's 25% marginal rate and a 10% discount rate: five-year MACRS (rates 20%, 32%, 19.2%, 11.52%, 11.52%, 5.76%) versus straight-line over five years. The present value annuity factor for 5 years at 10% is 3.791. Which analysis correctly evaluates the depreciation tax shields?",
+    "Topic": "E.123 macrs-sl-shield-pv-timing",
+    "UniqueConceptKey": "E-123-macrs-sl-timing",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Analyze DS4: multi-year schedule comparison and PV interpretation)",
+      "MACRS PV = 90,910+132,224+72,125+39,341+35,764+16,258 = 386,622; SL PV = 100,000x3.791 = 379,100; gap 7,522 (~7,500)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory (non-conventional cash flows; Descartes' rule of signs)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Multiple IRRs appear whenever a project's payback period extends beyond half of its useful life",
+      "B": "Two IRRs mean the spreadsheet erred, since a conventional project can produce only one discount rate that zeroes NPV",
+      "C": "When two IRRs exist, management accepts the project if the lower IRR exceeds the hurdle rate",
+      "D": "Cash flows that change sign more than once can produce several discount rates that set NPV to zero, and none of them reliably indicates whether Flash should accept the project"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Applying the single-IRR rule to cash flows with multiple sign changes",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The IRR is defined as any discount rate solving NPV = 0. With conventional flows (one sign change) the solution is unique, but Flash's recycling proposal flips sign twice - outflow, seven years of inflows, then a decommissioning outflow - so the polynomial describing NPV can have multiple real roots, bounded by the number of sign changes (Descartes' rule of signs). Each root is mathematically valid yet neither governs accept/reject: the usual IRR rule presumes a unique rate separating lending from borrowing regions of the NPV profile. Treasury analyst Beatriz Salas should therefore rely on NPV at Flash's cost of capital, which is why textbooks treat the multiple-root problem as a structural limitation of IRR for projects with late-life cleanup or shutdown costs rather than a computational curiosity.",
+    "ExplanationWrongA": "Linking multiple roots to payback invents a relationship that does not exist; the driver is the count of cash-flow sign changes, not how slowly early inflows recover the initial outlay.",
+    "ExplanationWrongB": "Treating two IRRs as spreadsheet error mistakes a mathematical property for a tooling bug; non-conventional flows genuinely admit several NPV-zeroing rates, and recalculating the same cash-flow series will reproduce both roots.",
+    "ExplanationWrongC": "Adopting the lower root as a decision threshold misapplies the rule - with multiple roots the NPV profile crosses zero more than once, so neither rate separates accept from reject regions and NPV evaluated at Flash's hurdle rate must decide.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "ID-09",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-124",
+    "Section": "E",
+    "Stem": "During a training session, Flash treasury analyst Beatriz Salas asks why her spreadsheet returned two IRRs for a recycling-equipment proposal whose cash flows are negative at purchase, strongly positive for seven years, and sharply negative again in the final year for decommissioning. Which statement gives the correct caution about the internal rate of return in this setting?",
+    "Topic": "E.124 irr-multiple-sign-change-caution",
+    "UniqueConceptKey": "E-124-irr-multiple-roots",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Understand DS2 cap respected: conceptual identification, no computation)",
+      "Conceptual item - no arithmetic to recompute",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory (NPV decision rule; staged outlays)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "-$494,100",
+      "B": "-$279,900",
+      "C": "-$88,500",
+      "D": "+$46,720"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Discounting a staged Year-1 outlay at t=0 or leaving it undiscounted",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "NPV discounts every flow to time zero, so a staged outlay must also be discounted (capital budgeting NPV principle, ID-01). PV of inflows = $1,400,000 x 3.2185 = $4,505,900. PV of outlays = $3,000,000 + ($2,000,000 x 0.8929) = $3,000,000 + $1,785,800 = $4,785,800. NPV = $4,505,900 - $4,785,800 = -$279,900. The Year-1 tooling payment is a t=0-equivalent cost of $1,785,800, not $2,000,000; treating staged spending as if it were all upfront overstates cost by $214,200. For Flash Components the cell expansion destroys roughly $280,000 of value at the 12% hurdle, so controller Ravi Menon should report rejection despite the attractive headline inflows.",
+    "ExplanationWrongA": "-$494,100 leaves the second tranche undiscounted, implicitly paying tooling today although cash leaves next year; discounting that $2,000,000 one period recovers $214,200 of value and moves NPV to -$279,900.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "-$88,500 discounts the tooling payment two years (factor 0.7972) as if it occurred with the first inflow; the cash actually departs at the end of Year 1, so the correct factor is 0.8929 and NPV lands at -$279,900.",
+    "ExplanationWrongD": "+$46,720 shifts all six inflows one year early (Years 1-5 annuity of 3.6048) against the full $5,000,000 of spending; aligning inflows to Years 2-6 removes the artificial $540,800 uplift and reveals the true negative NPV of -$279,900.",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-125",
+    "Section": "E",
+    "Stem": "Flash Components' controller, Ravi Menon, is evaluating a cell expansion in which $3,000,000 is spent immediately and $2,000,000 at the end of Year 1 for tooling. The cell generates $1,400,000 of annual after-tax cash flow in Years 2 through 6. Flash discounts at 12% (PV factors: Year 1 = 0.8929; Years 2-6 annuity = 3.2185). What is the project's NPV?",
+    "Topic": "E.125 staged-outlay-npv",
+    "UniqueConceptKey": "E-125-staged-outlay-npv",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Apply DS3: staged-outlay discounting with annuity offset)",
+      "NPV = 1,400,000x3.2185 - (3,000,000 + 2,000,000x0.8929) = 4,505,900 - 4,785,800 = -279,900",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting governance practice (post-audit follow-up)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "A structured comparison, conducted after a project is implemented, of its actual cash flows and outcomes against the estimates in the originally approved proposal",
+      "B": "A pre-approval challenge session in which department heads stress-test a sponsor's NPV assumptions before funds are released",
+      "C": "A quarterly reconciliation of accumulated depreciation on project assets to the fixed-asset subledger",
+      "D": "An external CPA engagement opining on whether Flash's financial statements are fairly presented"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Confusing a capital post-audit with a financial statement audit",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "By definition, a post-audit closes the feedback loop on capital budgeting: after implementation, analysts assemble the project's realized cash flows and compare them against the projections submitted in the funding request. The exercise serves three purposes - holding sponsors accountable for forecast quality, surfacing systematic estimation biases, and building calibration knowledge that improves future proposals. Committee chair Douglas Fenwick can summarize it for new members as backward-looking project accountability; it is distinct from pre-approval assumption review, routine ledger reconciliations, and the statutory financial statement audit, none of which examine realized-versus-projected performance of individual capital projects.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Pre-approval challenge sessions are gatekeeping reviews that occur before any cash moves; describing one as a post-audit conflates the two ends of the approval cycle, since a post-audit looks backward at realized results rather than forward at assumptions.",
+    "ExplanationWrongC": "Depreciation-to-subledger reconciliation is a bookkeeping control over recorded balances; it never touches the forecast-versus-actual comparison that defines a capital post-audit and would run identically whether or not the project had been appraised before funding.",
+    "ExplanationWrongD": "The external audit expresses an opinion on overall financial statements under generally accepted auditing standards; it neither evaluates individual capital projects nor compares their cash flows with sponsorship projections, which is the exclusive focus of a capital post-audit.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-126",
+    "Section": "E",
+    "Stem": "New members of Flash's capital review committee asked internal auditor Grace Liu, at committee chair Douglas Fenwick's request, to explain in one sentence what a capital-budgeting post-audit is. Which description is accurate?",
+    "Topic": "E.126 postaudit-definition",
+    "UniqueConceptKey": "E-126-postaudit-definition",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Remember DS1 cap respected: pure definitional recall)",
+      "Conceptual item - no arithmetic to recompute",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory (profitability index under capital rationing)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "PI = 0.77; the retrofit consumes 50% of the quarterly budget",
+      "B": "PI = 1.30; the retrofit consumes 65% of the quarterly budget",
+      "C": "PI = 2.30; the retrofit consumes 50% of the quarterly budget",
+      "D": "PI = 1.30; the retrofit consumes 50% of the quarterly budget"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Computing PI as Investment/PV or adding 1 by including the outlay",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Profitability index = PV of future cash flows / initial investment = $3,250,000 / $2,500,000 = 1.30, meaning $1.30 of discounted value per budget dollar committed (capital budgeting theory, ID-02). Budget share answers a different question measured against the constraint: $2,500,000 / $5,000,000 = 50%. Operations director Kenji Watanabe should present both figures separately - PI measures value efficiency per dollar invested, while the fraction consumed measures resource usage; his proposal earns 1.30 while using half the quarter's authorization, leaving $2,500,000 of capacity for other ranked projects.",
+    "ExplanationWrongA": "0.77 inverts the ratio (investment / PV); the PI divides the present value of benefits by the outlay, so the correct index is 1.30 even though the 50% budget-share figure happens to be stated correctly.",
+    "ExplanationWrongB": "The 65% figure divides the wrong pair - PV of flows over total budget ($3,250,000 / $5,000,000); consumption is measured by cash committed ($2,500,000 / $5,000,000 = 50%), even though the 1.30 index itself is computed correctly.",
+    "ExplanationWrongC": "2.30 adds 1 to the index by pushing the outlay into the numerator ((PV + I) / I); PI deliberately excludes the initial investment from benefits, so the extra index point comes from counting Flash's own cost as a benefit.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "ID-02",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-127",
+    "Section": "E",
+    "Stem": "Under its capital plan, Flash Assembly has $5,000,000 authorized this quarter. Operations director Kenji Watanabe proposes the Line-4 retrofit: a $2,500,000 outlay whose future cash flows carry a present value of $3,250,000 at Flash's hurdle rate. Compute the retrofit's profitability index and state the share of the quarter's budget it would consume.",
+    "Topic": "E.127 profitability-index-budget-share",
+    "UniqueConceptKey": "E-127-pi-budget-fraction",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Apply DS3: ratio computation plus separate constraint-share reasoning)",
+      "PI = 3,250,000/2,500,000 = 1.30; budget share = 2,500,000/5,000,000 = 50%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Sensitivity analysis theory (capital budgeting risk assessment)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "salvage value, discount rate, unit variable cost, unit sales",
+      "B": "discount rate, unit sales, unit variable cost, salvage value",
+      "C": "unit sales, unit variable cost, discount rate, salvage value",
+      "D": "unit sales, discount rate, unit variable cost, salvage value"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Ranking tornado bars by intuition or % input change instead of NPV swing width",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Tornado ranking uses the width of each bar - the absolute NPV range produced by flexing one variable while freezing the rest (sensitivity-analysis convention). Widths here: unit sales |$3,180,000 - $520,000| = $2,660,000; unit variable cost |$2,720,000 - $980,000| = $1,740,000; discount rate |$2,430,000 - $1,310,000| = $1,120,000; salvage |$1,930,000 - $1,770,000| = $160,000. Ordering widest to narrowest gives unit sales, unit variable cost, discount rate, salvage value. For FP&A lead Sandra Iqbal the managerial message is that forecasting effort belongs on volume and conversion economics: a modest miss in unit sales threatens nearly $2.7 million of value, whereas salvage assumptions are almost immaterial to the decision.",
+    "ExplanationWrongA": "Ascending order reads the diagram upside down - it flags the least dangerous input (salvage, $160,000 swing) as most critical and buries unit sales, whose $2,660,000 swing is over sixteen times larger.",
+    "ExplanationWrongB": "Leading with the discount rate assumes a variable touching every period must dominate, but measured impact says otherwise: its $1,120,000 swing trails unit sales ($2,660,000) and unit variable cost ($1,740,000); tornado rank reflects computed width, not mechanical reach.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Swapping the middle two entries typically comes from ranking inputs by flex size (+/-2 points looks smaller than +/-5%), yet impact is measured in NPV dollars - unit variable cost's $1,740,000 swing outranks the discount rate's $1,120,000 regardless of how far each input was moved.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-128",
+    "Section": "E",
+    "Stem": "Flash Packaging's automation project carries a base NPV of $1,850,000. FP&A lead Sandra Iqbal ran single-variable sensitivities, flexing one input at a time: unit sales +/-10% moved NPV between $520,000 and $3,180,000; unit variable cost +/-5% moved NPV between $980,000 and $2,720,000; the discount rate +/-2 percentage points moved NPV between $1,310,000 and $2,430,000; salvage value +/-20% moved NPV between $1,770,000 and $1,930,000. Ranked from the most to the least critical variable by NPV impact, the tornado diagram orders:",
+    "Topic": "E.128 tornado-diagram-variable-ranking",
+    "UniqueConceptKey": "E-128-tornado-ranking",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Analyze DS4: derive swing widths and rank, resisting intuition traps)",
+      "Widths: sales 2,660,000 > VC 1,740,000 > rate 1,120,000 > salvage 160,000 -> order C",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory (equivalent annual cost / EAA applied to service assets)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Convert each chiller's present value of costs into an equivalent annual cost and select the lower annual figure, because unequal-lived, revenue-free assets cannot be compared on total PV",
+      "B": "Select the chiller with the lower total present value of costs, since minimizing lifetime cost is the objective whichever lifespan applies",
+      "C": "Select the chiller with the higher NPV, since NPV remains the universal ranking criterion for mutually exclusive investments",
+      "D": "Select the chiller whose cost outlays are recovered fastest, since quicker cost recovery signals superior resource efficiency"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Comparing total PV of costs across unequal-lived service assets",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Service assets such as chillers produce no measurable inflows, so the decision reduces to cost minimization; with unequal lives, comparing total PVs is biased toward the shorter-lived option simply because fewer years of cost are counted. The equivalent annual cost method (the EAA machinery applied to costs) divides each option's PV of costs by its own annuity factor, restating every option as a level annual charge over its own life; the lowest equivalent annual cost wins. Assistant controller Devon Marsh should apply this rule because it normalizes the time dimension - Flash buys the cheaper stream of chilling service per year, which is exactly the comparison procurement intends when it says 'same service, different lives.'",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Lowest total PV rewards the 4-year chiller partly because it stops costing money sooner; without annualizing, the comparison silently assumes idle years after Chiller R ends and understates its true yearly cost of ownership relative to the 6-year alternative.",
+    "ExplanationWrongC": "NPV needs net inflows to be meaningful; with revenue-free service assets every candidate's cash-flow-based NPV is just negative cost, so the criterion degenerates and cannot discriminate between the two chillers at all.",
+    "ExplanationWrongD": "Fastest cost recovery applies payback logic to costs; payback ignores time value and everything beyond the cutoff, so it can crown a chiller that is permanently more expensive per year of service delivered.",
+    "FormulaReference": "ID-05",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-129",
+    "Section": "E",
+    "Stem": "Flash Logistics must buy one of two warehouse chillers that perform identical service but differ in life and cost profile: Chiller R runs 4 years, Chiller S runs 6 years; neither generates revenue directly. Assistant controller Devon Marsh asks which evaluation rule applies. Which statement is correct?",
+    "Topic": "E.129 equivalent-annual-cost-service-assets",
+    "UniqueConceptKey": "E-129-eac-service-assets",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Understand DS2 cap respected: method-selection concept, no computation)",
+      "Conceptual item - no arithmetic to recompute",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory (net working capital in DCF analysis)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$650,000",
+      "B": "$422,435",
+      "C": "$316,826",
+      "D": "$460,460"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Discounting the NWC recovery to the wrong year or taxing it as income",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Working-capital recovery returns balance-sheet dollars, not taxable income, so it enters the DCF untaxed and discounted from the year it arrives (DCF working-capital convention within the NPV framework). PV = $650,000 x 0.6499 = $422,435. The recovery only partially offsets the launch outlay: the same $650,000 sacrificed at time 0 has a PV of exactly $650,000, so the net working-capital drag on NPV is $650,000 - $422,435 = $227,565. Timing drives the loss - the faster the detergent line converts working capital back to cash, the smaller the drag; analyst Omar Haddad should note that taxing the recovery would understate NPV by $105,609, and skipping the discount step would overstate it by $227,565.",
+    "ExplanationWrongA": "Using the undiscounted $650,000 treats Year-5 dollars as if they arrived today; at 9%, waiting five years cuts the recovery's worth to $422,435, so the undiscounted figure overstates NPV by $227,565.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "$316,826 applies the 25% rate to the recovery itself; the misconception is treating returned working capital as taxable income, when it is a reversion of previously invested balance-sheet cash and enters the model gross, at $422,435.",
+    "ExplanationWrongD": "$460,460 discounts four years (factor 0.7084) instead of five; the line operates through the end of Year 5, so the recovery sits a full fifth year deeper in time and must use 0.6499, arriving at $422,435.",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-130",
+    "Section": "E",
+    "Stem": "Flash Consumer Products will invest $650,000 of net working capital when its detergent line launches (time 0) and expects to recover the full $650,000 when the line shuts at the end of Year 5. Flash discounts at 9% (PV factor, 5 years, 9% = 0.6499) and faces a 25% tax rate. In the NPV model, what present value should analyst Omar Haddad assign to the Year-5 working-capital recovery?",
+    "Topic": "E.130 nwc-terminal-recovery-present-value",
+    "UniqueConceptKey": "E-130-nwc-recovery-timing",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Apply DS3: timing-of-recovery discounting plus non-taxability nuance)",
+      "650,000x0.6499=422,435; 650,000x0.7084=460,460; 422,435x0.75=316,826",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory (capital rationing taxonomy)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Soft capital rationing",
+      "B": "Hard capital rationing",
+      "C": "Multi-period capital rationing",
+      "D": "Single-period capital rationing"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Confusing constraint source (soft/hard) with constraint duration (single/multi-period)",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Capital rationing is classified along two independent dimensions: source and duration. Duration distinguishes single-period rationing, where the binding budget constraint applies to one year only, from multi-period rationing, where spending ceilings bind in each of several successive years - exactly the five-year cap governance specialist Alice Tremblay is labeling. Source separately distinguishes soft rationing (internal, management-imposed limits) from hard rationing (external market limits on fundraising). Labeling Flash's policy correctly matters because multi-period constraints require sequencing analysis - a project attractive this year may consume capacity the next year needs - which single-period PI rankings ignore.",
+    "ExplanationWrongA": "Soft versus hard describes who imposes the limit (management internally versus capital markets externally); the manual's clause concerns how long the cap persists, a duration question those source-based terms do not address.",
+    "ExplanationWrongB": "Hard rationing identifies an external funding constraint; adopting it here mislabels an internal board-set ceiling and, more importantly, says nothing about the multi-year span the policy explicitly covers.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Single-period rationing binds one budget cycle only; Flash's cap binds all five years, so this label would push planners toward one-shot rankings and miss the cross-year capacity trade-offs the policy creates.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-131",
+    "Section": "E",
+    "Stem": "While drafting Flash's capital policy manual, governance specialist Alice Tremblay must name the situation in which headquarters caps each division's capital spending in every year of the five-year planning horizon, rather than in the current year alone. What is the standard term for this condition?",
+    "Topic": "E.131 multiperiod-capital-rationing-term",
+    "UniqueConceptKey": "E-131-rationing-period-scope",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Remember DS1 cap respected: terminology recall)",
+      "Conceptual item - no arithmetic to recompute",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory (replacement chain; equivalent annual annuity; truncated-horizon dominance)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Adopt Altair: it beats Vega both on the shortened horizon ($1,010,000 vs $880,000) and on equivalent annual annuity ($292,414 vs $277,611), so no reinvestment assumption rescues Vega",
+      "B": "Adopt Vega: chaining two Vega cycles yields 2 x $880,000 = $1,760,000 over eight years, exceeding Altair's $1,560,000",
+      "C": "Defer the choice until both systems can be re-quoted with identical eight-year service contracts, because unequal lives make the current data unusable",
+      "D": "Adopt Altair because its total NPV of $1,560,000 exceeds Vega's $880,000, and raw NPV comparisons are valid whenever both projects are acceptable"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Doubling a short-life NPV to fake a matched horizon; comparing raw unequal-life NPVs",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Two checks settle it. Shortened-life dominance: cutting Altair to Vega's horizon still leaves $1,010,000 > $880,000, so Altair wins even before any life-extension argument. Equivalent annual annuity: Vega $880,000 / 3.1699 = $277,611; Altair $1,560,000 / 5.3349 = $292,414 - Altair delivers about $14,803 more value per year. A proper Vega chain would earn $880,000 + ($880,000 x 0.6830) = $1,481,040 over eight years, still below Altair's $1,560,000, confirming the doubled-NPV shortcut is arithmetically wrong. VP of manufacturing Renata Kovacs should recommend Altair: it dominates on every defensible frame, and the residual implementation choices (financing mix, contract terms) do not affect the ranking.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Doubling NPV ignores that the second Vega cycle starts four years out - its $880,000 must be discounted by 0.6830 to $601,040, making the chain $1,481,040 rather than $1,760,000, which hands the decision to Altair.",
+    "ExplanationWrongC": "Waiting for re-quoted equal lives forfeits value the existing data already resolve; EAA and the truncation check exist precisely to compare unequal-lived systems today, so delay sacrifices the $292,414-per-year alternative without buying any new information.",
+    "ExplanationWrongD": "Raw NPV comparison reaches the right hardware for the wrong reason: with unequal lives it is not generally valid, and here it would mislead whenever a shorter-life system's annualized advantage appears - sound practice adopts Altair on dominance and EAA grounds, not the invalid shortcut.",
+    "FormulaReference": "ID-05",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-132",
+    "Section": "E",
+    "Stem": "Flash Appliance's VP of manufacturing, Renata Kovacs, must recommend one of two mutually exclusive finishing systems. System Vega: 4-year life, NPV $880,000. System Altair: 8-year life, NPV $1,560,000; even truncated to Vega's 4-year horizon, Altair's first-four-year flows carry an NPV of $1,010,000. At Flash's 10% rate, annuity factors are 3.1699 (4 years) and 5.3349 (8 years). Which recommendation and reasoning is soundest?",
+    "Topic": "E.132 truncated-horizon-dominance-check",
+    "UniqueConceptKey": "E-132-shortening-life-dominance",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Evaluate DS5: named VP chooses among adopt/chain/defer alternatives with conflicting heuristics)",
+      "EAA Vega 880,000/3.1699=277,611; Altair 1,560,000/5.3349=292,414; chain 880,000+880,000x0.6830=1,481,040<1,560,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Expected value decision theory (scenario analysis in capital budgeting)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$750,000",
+      "B": "$1,170,000",
+      "C": "$1,380,000",
+      "D": "$960,000"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Averaging scenario NPVs equally or dropping the downside branch",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Probability-weighted NPV weights each scenario outcome by its likelihood and sums the products: 0.30 x $2,400,000 = $720,000; 0.50 x $900,000 = $450,000; 0.20 x (-$1,050,000) = -$210,000; total = $960,000. The negative branch enters with its sign, pulling the expectation down by $210,000; equally weighting the three cases or dropping the recession branch would report $750,000 or $1,170,000, both overstating value. At $960,000 expected NPV, FP&A director Louis Grant can defend the launch to Flash's capital committee while quoting the recession case as the downside the $960,000 already absorbs.",
+    "ExplanationWrongA": "$750,000 is the simple arithmetic mean of the three NPVs; it strips out the likelihoods, treating a 20% recession as equal to a 50% stable market and understating the probability-weighted $960,000 by $210,000.",
+    "ExplanationWrongB": "$1,170,000 drops the recession branch entirely (0.30 x 2.4M + 0.50 x 0.9M); the misconception is that low-probability losses can be omitted, yet the 20% chance of -$1,050,000 legitimately subtracts $210,000 from expected value.",
+    "ExplanationWrongC": "$1,380,000 adds the recession contribution instead of subtracting it (0.72M + 0.45M + 0.21M); a loss scenario reduces expected NPV, so its signed term is -$210,000, bringing the correct figure down to $960,000.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "ID-01",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-133",
+    "Section": "E",
+    "Stem": "Flash Outdoor is pricing a pavilion-system product launch. FP&A director Louis Grant models three demand scenarios with associated NPVs: expansion $2,400,000 (30% likelihood), stable $900,000 (50%), recession -$1,050,000 (20%). What is the probability-weighted NPV Grant should report?",
+    "Topic": "E.133 scenario-probability-weighted-npv",
+    "UniqueConceptKey": "E-133-scenario-branch-ev",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Apply DS3: signed probability-weighted expectation across branches)",
+      "0.3x2,400,000 + 0.5x900,000 + 0.2x(-1,050,000) = 720,000+450,000-210,000 = 960,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory (IRR; margin of safety interpolation)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "The IRR is approximately 12.0%, so the rate could rise about 2 percentage points before NPV turns negative",
+      "B": "The IRR is approximately 13.0%, so the rate could rise about 3 percentage points above the 10% hurdle before NPV turns negative",
+      "C": "The IRR is approximately 14.0%, so the rate could rise about 4 percentage points before NPV turns negative",
+      "D": "The IRR is approximately 15.0%, so the rate could rise about 5 percentage points before NPV turns negative"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Stopping at the nearest table rate instead of interpolating to NPV = 0",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The margin of safety is the gap between the IRR - the rate where NPV = 0 - and the 10% hurdle. Break-even requires an annuity factor of $4,000,000 / $1,000,000 = 4.0000, which lies between the supplied rows: 12% gives 4.1114 and 14% gives 3.8887. Interpolating: 4.1114 - 4.0000 = 0.1114 of the total 0.2227 span, i.e., 0.1114 / 0.2227 = 0.50 of the two-point interval, giving IRR = 12% + (0.50 x 2%) = 13.0%. Controller Ingrid Halvorsen can therefore report a cushion of about 3 percentage points: Flash's conveyor remains value-accretive unless the required return jumps from 10% to roughly 13%, a substantial buffer against funding-cost shocks.",
+    "ExplanationWrongA": "Stopping at 12.0% reads the nearer table row instead of interpolating to the 4.0000 break-even factor; the zero-NPV rate sits halfway toward 14%, so the reported cushion is understated by about one percentage point.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Rounding outward to 14.0% treats the bracket's upper bound as the answer; at 14% the annuity factor 3.8887 is already below the 4.0000 break-even, meaning NPV is negative there - the zero-NPV rate lies between the rows, at about 13.0%.",
+    "ExplanationWrongD": "15.0% extrapolates past the supplied table as if the factor kept falling linearly beyond 3.8887; no supplied evidence supports that region, and interpolation anchored on the 12%/14% rows pins the break-even near 13.0%.",
+    "FormulaReference": "ID-09",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-134",
+    "Section": "E",
+    "Stem": "Flash Materials' six-year conveyor project requires $4,000,000 today and returns $1,000,000 at the end of each of six years. The hurdle rate is 10%. Table factors supplied by the treasury team: PV annuity factor at 12% = 4.1114; at 14% = 3.8887. Controller Ingrid Halvorsen wants to know how much cushion the project has against increases in the discount rate. Which statement characterizes the margin of safety correctly?",
+    "Topic": "E.134 discount-rate-margin-of-safety",
+    "UniqueConceptKey": "E-134-discount-margin-safety",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Analyze DS4: interpolate break-even factor and translate into safety margin)",
+      "Target factor 4.0000; interp (4.1114-4.0000)/(4.1114-3.8887)=0.1114/0.2227=0.50 -> IRR ~13.0%; margin ~3 pts",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Capital budgeting theory (ARR definition; accrual income numerator)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "$310,000, the average annual pre-tax cash inflow, because ARR measures cash generation",
+      "B": "$232,500, the average annual after-tax cash inflow, because ARR works from after-tax cash flows",
+      "C": "$142,500, the average annual accrual net income after depreciation and taxes",
+      "D": "$190,000, the annual cash inflow after deducting depreciation, because taxes are handled elsewhere in the metric"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Feeding cash inflows into ARR's numerator instead of accrual net income",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "ARR is the one capital-budgeting screen built on accrual accounting income, not cash flow: numerator = average annual net income after depreciation and tax; denominator = average investment. For Flash Furniture's showroom, pre-tax income per year = $310,000 - $120,000 = $190,000; tax at 25% = $47,500; average annual net income = $142,500. Cash-basis figures ($310,000 or $232,500) belong to payback, NPV, or IRR - substituting them inflates ARR because they skip the depreciation charge. Controller Miguel Santos should stress the nuance in training: Flash compares ARR against an accounting-return hurdle, so the numerator must mirror the financial-reporting income concept that hurdle references.",
+    "ExplanationWrongA": "Pre-tax cash inflow is a payback-era raw number; ARR's numerator must absorb both the $120,000 depreciation and the $47,500 tax, landing at $142,500 - using $310,000 more than doubles the true accounting return.",
+    "ExplanationWrongB": "After-tax cash inflow fixes the tax omission but still skips depreciation; ARR reports accrual income, so the $120,000 non-cash charge must reduce the base to $142,500 rather than the $232,500 cash measure.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "$190,000 stops after depreciation and ignores tax; income available to shareholders is after the $47,500 tax charge, so the correct accrual numerator is $142,500, not the pre-tax income figure.",
+    "FormulaReference": "ID-08",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-135",
+    "Section": "E",
+    "Stem": "Flash Furniture's controller, Miguel Santos, is correcting the training deck's definition of the accounting rate of return for a proposed showroom project. The line averages $310,000 of annual incremental pre-tax cash inflows, carries $120,000 of annual straight-line depreciation, and faces a 25% tax rate. Which quantity belongs in the numerator of the ARR computation?",
+    "Topic": "E.135 arr-numerator-average-net-income",
+    "UniqueConceptKey": "E-135-arr-income-numerator",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Understand DS2 cap respected: identify correct measure; incidental derivation shown)",
+      "(310,000-120,000)x0.75 = 142,500",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  }
+,
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-136",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-136-sensitivity-purpose-board",
+    "Topic": "E.136 sensitivity-analysis-purpose",
+    "Stem": "Chief financial officer Elena Vasquez is briefing Flash Industries' board on why the capital committee runs sensitivity analysis on every project above $500,000 before approval. Which statement best describes what sensitivity analysis contributes to the evaluation?",
+    "Choices": {
+      "A": "It identifies which input variables, when changed, have the greatest effect on the project's NPV, showing management where estimation risk is concentrated",
+      "B": "It replaces point estimates with probability distributions so that a full risk profile replaces the single-number NPV",
+      "C": "It guarantees the selected discount rate matches the project's true systematic risk by recalibrating beta for each input",
+      "D": "It converts accounting income projections into incremental cash flows so that sunk costs drop out of the analysis"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Sensitivity analysis holds every assumption constant except one, moves that input across a plausible range, and records the effect on NPV; repeating this across inputs reveals which estimates the decision actually depends on. Under standard capital-budgeting practice it answers where the estimate is fragile, not what the full probability distribution looks like. Business interpretation: Vasquez can tell the board that sensitivity output directs diligence hours toward the few assumptions, often volume, price, or terminal value, where error would change the accept decision. Common trap: confusing sensitivity analysis with scenario analysis, which moves several inputs together, or simulation, which samples full distributions.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B describes Monte Carlo simulation, not sensitivity analysis; the misconception is equating every risk technique with probabilistic modeling. Simulation samples entire distributions, while sensitivity flexes one variable at a time around deterministic base-case values.",
+    "ExplanationWrongC": "Choice C attaches beta calibration to the wrong tool; required-rate selection belongs to the risk-adjusted discount rate framework, not to sensitivity testing, which takes the discount rate as fixed while varying operating inputs.",
+    "ExplanationWrongD": "Choice D recasts cash-flow preparation as sensitivity work; converting accrual projections to incremental cash flows is a preliminary step performed before any risk technique is applied, so it cannot be what the sensitivity run itself contributes.",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "",
+    "CommonTrapReference": "Confusing sensitivity analysis with scenario analysis or simulation",
+    "Authorities": [
+      "Risk-adjustment techniques for capital budgeting (sensitivity, scenario, simulation)",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.3 risk analysis methods)"
+    ],
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Conceptual item; no arithmetic to recompute",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-137",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-137-radr-beta-buildup",
+    "Topic": "E.137 risk-adjusted-discount-rate",
+    "Stem": "Flash Components Group applies the capital asset pricing model to set divisional hurdle rates. Treasury analyst Omar Haddad works with a risk-free rate of 4.0%, a market risk premium of 8.0%, and a new-product venture whose beta is estimated at 1.25. Which discount rate should Haddad apply to the venture's projected cash flows?",
+    "Choices": {
+      "A": "4.00%",
+      "B": "14.00%",
+      "C": "10.00%",
+      "D": "20.00%"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The risk-adjusted discount rate under CAPM is Rf + beta x market premium. Substituting: 4.0% + 1.25 x 8.0% = 4.0% + 10.0% = 14.0%. Using the beta build-up ties the hurdle to the venture's own systematic risk rather than to the company-wide average, preventing low-risk divisions from subsidizing risky ones. Business interpretation: Haddad's 14% screen means the venture must clear a return well above Flash's composite cost of capital because its earnings co-vary more strongly with the market. Common trap: applying the corporate WACC to every project regardless of its risk class.",
+    "ExplanationWrongA": "Choice A stops at the risk-free component and drops the entire risk premium; the misconception is treating government-bond yield as sufficient compensation for a venture whose beta of 1.25 adds ten points of required return.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C imports the corporate-average habit, reading the inputs as a company hurdle of roughly 10% instead of scaling the premium by the venture-specific beta of 1.25, which adds ten points rather than six.",
+    "ExplanationWrongD": "Choice D doubles the premium by applying beta to the sum of risk-free rate and premium, adding 1.25 x 12% = 15% on top of 4%; CAPM multiplies beta only by the market risk premium, giving 4% + 10% = 14%.",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "ID-01",
+    "CommonTrapReference": "Using corporate WACC or double-counting the premium instead of beta x premium",
+    "Authorities": [
+      "CAPM risk-adjusted discount rate methodology",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.3 risk-adjusted discount rates)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 4.0% + 1.25 x 8.0% = 4.0% + 10.0% = 14.0%",
+      "Second pass: 1.25 x 8 = 10.0; 4 + 10 = 14 agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-138",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-138-certainty-equivalent-oneyear",
+    "Topic": "E.138 certainty-equivalent-valuation",
+    "Stem": "Flash Robotics expects a single risky cash flow of $120,000 one year from today. Controller Ingrid Solberg uses the certainty-equivalent approach with a certainty-equivalent factor of 0.85 for cash flows of this risk grade and a risk-free rate of 5.0%. What present value should Solberg record for the flow?",
+    "Choices": {
+      "A": "$114,286",
+      "B": "$102,000",
+      "C": "$97,143",
+      "D": "$89,286"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The certainty-equivalent method converts each risky flow into its guaranteed equivalent and discounts at the risk-free rate. Substituting: $120,000 x 0.85 = $102,000 certain; $102,000 / 1.05 = $97,143. The method prices risk in the numerator rather than inflating the discount rate, keeping time-value and risk adjustments separable. Business interpretation: Solberg's figure tells Flash what guaranteed payment today equals the gamble, useful when negotiating buyouts or insurance-like settlements. Common trap: applying the certainty factor after discounting, or forgetting it altogether and letting the discount rate carry all risk pricing.",
+    "ExplanationWrongA": "Choice A discounts the raw $120,000 at 5% ($120,000 / 1.05 = $114,286) and never applies the 0.85 certainty factor; the misconception is letting the discount rate do all the work, which overstates value because 5% prices only time, not risk.",
+    "ExplanationWrongB": "Choice B applies the certainty factor ($120,000 x 0.85 = $102,000) but skips the final risk-free discounting step, reporting a one-year-away certain amount as if it were today's money; present value requires dividing by 1.05.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D compounds the adjustments incorrectly, applying the factor twice or dividing by an inflated rate such as 1.14; the method calls for one multiplication by 0.85 followed by one division by 1.05, yielding $97,143.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "ID-01",
+    "CommonTrapReference": "Skipping the certainty factor or discounting after adjusting",
+    "Authorities": [
+      "Certainty-equivalent method for risk adjustment in DCF analysis",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.3)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 120,000 x 0.85 = 102,000; 102,000 / 1.05 = 97,142.86 rounds to 97,143",
+      "Second pass: 102/1.05 = 97.1429 thousand agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-139",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-139-npv-irr-crossover-timing",
+    "Topic": "E.139 npv-irr-conflict-attribution",
+    "Stem": "Flash Materials must choose between two mutually exclusive lines. Line X returns $600 per year for three years on a $1,200 outlay; Line Y returns nothing for two years and $2,150 in year three on the same outlay. At Flash's 8% base rate Y ranks higher, but above roughly 13% the ranking reverses. Finance director Grace Lin asks which explanation correctly attributes the crossover.",
+    "Choices": {
+      "A": "The conflict follows from cash-flow timing: earlier receipts dominate at high reinvestment-rate assumptions, so X wins at high rates while Y's concentrated back-loaded payoff wins only at low rates",
+      "B": "The conflict arises because NPV ignores the time value of money while IRR compounds it, so the two measures diverge whenever lives are equal but outlays differ",
+      "C": "The crossover exists only because the two lines have unequal lives; once both are annualized with EAA the conflict disappears entirely",
+      "D": "The reversal proves one measure is miscalculated; for conventional projects with equal lives, NPV and IRR rankings hold together across rate levels without exception"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "NPV-IRR conflicts for mutually exclusive projects stem from differences in cash-flow timing and magnitude, driven home by differing implicit reinvestment assumptions: NPV assumes reinvestment at the discount rate, IRR at the IRR itself. X's even $600 stream front-loads value, so higher rates erode it less and high-rate comparisons favor X; Y's single $2,150 terminal flow loses present value quickly as rates rise, winning only below the crossover near 13%. Verify at 8% using factors 0.926, 0.857, 0.794: X NPV = $600 x 2.577 - $1,200 = $346; Y NPV = $2,150 x 0.794 - $1,200 = $507, confirming Y ahead at low rates. Business interpretation: Lin should anchor the decision on NPV at the appropriate rate and read the crossover as a statement about rate uncertainty, not a calculation defect. Common trap: blaming unequal lives when both projects span three years.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B misstates the mechanics; NPV explicitly discounts at a required rate and does not ignore time value. Equal lives and equal outlays do not by themselves force divergence, and this pair conflicts precisely because timing differs, not scale.",
+    "ExplanationWrongC": "Choice C reaches for the unequal-lives remedy, but both lines run three years; annualization is irrelevant here, and the crossover persists under EAA because it originates in payment timing, not life mismatch.",
+    "ExplanationWrongD": "Choice D asserts rank identity for conventional projects at every rate level; the textbook exception is exactly the mutually-exclusive timing case shown, where lower-rate rankings legitimately reverse as the discount rate climbs.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "ID-01",
+    "CommonTrapReference": "Attributing NPV-IRR conflict to unequal lives instead of cash-flow timing",
+    "Authorities": [
+      "NPV rule primacy; NPV-IRR conflict doctrine for mutually exclusive projects",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.1, E.2)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed at 8%: X = 600 x (0.926+0.857+0.794) - 1,200 = 600 x 2.577 - 1,200 = 346",
+      "Y at 8%: 2,150 x 0.794 - 1,200 = 1,707 - 1,200 = 507; second pass confirms Y ahead at low rates",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-140",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-140-riskclass-project-choice",
+    "Topic": "E.140 risk-adjusted-project-selection",
+    "Stem": "Treasurer Nadia Rahman must recommend one of two mutually exclusive Flash expansions. Project A (capacity expansion, standard risk class, 10.0% required rate) costs $900,000 and returns $400,000 annually for three years, with PV factors at 10% of 0.909, 0.826, and 0.751. Project B (new-market venture, elevated risk class, 16.0% required rate) costs $950,000 and returns $450,000 annually for three years, with PV factors at 16% of 0.862, 0.743, and 0.641. Which recommendation should Rahman present?",
+    "Choices": {
+      "A": "Select Project B because its larger annual cash flow of $450,000 delivers more total money over three years than Project A's $400,000 stream",
+      "B": "Select Project B because its undiscounted margin of $400,000 exceeds Project A's $300,000 by a third",
+      "C": "Select Project A but only if both ventures are re-discounted at a common 10% rate so the comparison is like-for-like",
+      "D": "Select Project A because it produces the higher NPV at each project's own risk-adjusted rate: $94,400 versus $60,700"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Each project must clear its own risk-class hurdle before mutual exclusivity is decided. Project A: PV = $400,000 x (0.909 + 0.826 + 0.751) = $400,000 x 2.486 = $994,400; NPV = $994,400 - $900,000 = $94,400. Project B: PV = $450,000 x (0.862 + 0.743 + 0.641) = $450,000 x 2.246 = $1,010,700; NPV = $1,010,700 - $950,000 = $60,700. Project A adds more value after compensating for risk, so Rahman recommends A. Business interpretation: the venture's headline cash flows flatter it, but its 16% hurdle absorbs that premium; value, not gross receipts, decides. Common trap: ranking mutually exclusive projects on undiscounted totals or on a single blended rate that erases risk differences.",
+    "ExplanationWrongA": "Choice A ranks on raw annual cash flow and never discounts either stream; the misconception is equating bigger receipts with bigger value even though B's stream is discounted nearly twice as hard at 16%.",
+    "ExplanationWrongB": "Choice B compares undiscounted margins ($400,000 vs $300,000), ignoring both time value and the different capital bases; discounting at the stated factors reverses the ranking to $94,400 versus $60,700 in A's favor.",
+    "ExplanationWrongC": "Choice C demands a single blended rate, which destroys the risk information embedded in the two hurdles; re-discounting the venture at 10% would understate its required return and manufacture a false winner.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "ID-01",
+    "CommonTrapReference": "Ranking mutually exclusive projects without risk-adjusting each hurdle",
+    "Authorities": [
+      "Risk-adjusted discount rate application to unequal-risk projects",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.1, E.3)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed A: sum factors 0.909+0.826+0.751 = 2.486; x400,000 = 994,400; -900,000 = 94,400",
+      "Recomputed B: 0.862+0.743+0.641 = 2.246; x450,000 = 1,010,700; -950,000 = 60,700",
+      "Second pass agrees: A 94,400 > B 60,700",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Named decision-maker Nadia Rahman choosing between defensible alternatives per Rule 11",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-141",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-141-worksheet-wc-critique",
+    "Topic": "E.141 worksheet-working-capital-audit",
+    "Stem": "Flash Appliances' capital committee is auditing an analyst's NPV worksheet for a $60,000 working-capital investment tied to a four-year machine project. The worksheet omits the $60,000 outflow at inception and also omits the $60,000 recovery at the end of year four. Discounting uses 10% with a year-four factor of 0.683. Controller Marcus Bell asks which critique of the worksheet is correct.",
+    "Choices": {
+      "A": "The two omissions cancel almost exactly, because the same $60,000 enters and leaves the project, so the reported NPV is unaffected",
+      "B": "The worksheet overstates NPV by about $19,000, because omitting the initial outflow inflates value by the full $60,000 while omitting only the discounted $41,000 recovery claws back less",
+      "C": "The worksheet understates NPV because recovering working capital is a taxable gain that should reduce terminal cash flow beyond simple omission",
+      "D": "The omission treatment is proper under the after-tax cash-flow model, since working-capital movements are financing flows excluded from project analysis"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Working-capital investment belongs in project analysis: the outflow occurs at inception and the recovery at termination, each at full nominal amount with no tax on the round trip. Omitting the inception outflow raises NPV by $60,000; omitting the recovery lowers NPV by $60,000 x 0.683 = $40,980; net error = $60,000 - $40,980 = $19,020 overstatement. Because a dollar today outweighs a dollar in year four, the two omissions cannot cancel. Business interpretation: Bell should require both lines before the committee vote; the $19,020 bias could flip marginal approvals. Common trap: assuming symmetric dollar amounts net to zero regardless of timing.",
+    "ExplanationWrongA": "Choice A nets nominal dollars across four years, ignoring discounting; the year-four recovery is worth only $60,000 x 0.683 = $40,980 today, so the errors leave roughly $19,000 of overstatement rather than cancellation.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C invents a tax on the working-capital recovery; recovery of working capital is a return of investment, not a taxable event, and the worksheet's problem is omission of both legs, not taxation of either.",
+    "ExplanationWrongD": "Choice D misclassifies incremental operating working capital as a financing flow; it is an investment outflow recovered at termination and belongs in project free cash flow, so excluding both legs is the source of the bias rather than proper treatment.",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "ID-06",
+    "CommonTrapReference": "Netting equal-dollar working-capital flows across time as if they cancel",
+    "Authorities": [
+      "After-tax cash-flow model including working-capital investment and recovery",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.2)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: recovery PV = 60,000 x 0.683 = 40,980; net overstatement = 60,000 - 40,980 = 19,020",
+      "Second pass agrees: 0.683 x 60 = 40.98 thousand",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Named decision-maker Marcus Bell judging competing critiques per Rule 11",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-142",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-142-atcf-computation-line",
+    "Topic": "E.142 after-tax-cash-flow-computation",
+    "Stem": "Flash Packaging's proposed line will generate revenue of $600,000 with cash operating expenses of $350,000 next year. Depreciation on the line's assets is $80,000 and Flash's tax rate is 30%. Senior accountant Rosa Delgado computes the year-one after-tax cash flow as:",
+    "Choices": {
+      "A": "$119,000",
+      "B": "$175,000",
+      "C": "$199,000",
+      "D": "$170,000"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The after-tax cash-flow model is ATCF = (Revenue - Cash expenses)(1 - tax rate) + Depreciation x tax rate. Substituting: ($600,000 - $350,000) x 0.70 = $175,000 operating income after tax; depreciation shield = $80,000 x 0.30 = $24,000; ATCF = $175,000 + $24,000 = $199,000. The shield exists because depreciation reduces taxable income without consuming cash. Business interpretation: Delgado's $199,000 feeds directly into NPV as the annual operating inflow. Common trap: subtracting depreciation as if it were a cash outflow, or forgetting the tax shield entirely.",
+    "ExplanationWrongA": "Choice A subtracts depreciation from cash expenses first (($600,000-$350,000-$80,000) x 0.70 = $119,000), treating a non-cash charge as a cash drain; the model adds the $24,000 shield to after-tax operating income instead.",
+    "ExplanationWrongB": "Choice B stops after taxing operating income ($175,000) and drops the $80,000 x 0.30 = $24,000 depreciation shield, understating the project's true cash generation.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D nets revenue, expenses, and depreciation on a pre-tax basis ($600,000 - $350,000 - $80,000 = $170,000), reporting accounting income rather than after-tax cash flow and losing both the tax computation and the shield.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "ID-06",
+    "CommonTrapReference": "Treating depreciation as a cash outflow or dropping its tax shield",
+    "Authorities": [
+      "After-tax cash flow model: (Rev-Exp)(1-t) + Dep x t",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.2)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: (600,000-350,000) x 0.70 = 175,000; 80,000 x 0.30 = 24,000; total = 199,000",
+      "Second pass agrees: 250 x 0.7 = 175; 175 + 24 = 199 thousand",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-143",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-143-eaa-purpose-definition",
+    "Topic": "E.143 eaa-purpose-recall",
+    "Stem": "During a training session for Flash Manufacturing's finance staff, budget director Alan Whitcombe defines the equivalent annual annuity (EAA). Which definition is correct?",
+    "Choices": {
+      "A": "The interest rate that sets a project's NPV to zero, used as a screening hurdle",
+      "B": "The equal end-of-year cash flow whose present value equals the project's NPV over the project's life, enabling comparison of unequal-lived projects",
+      "C": "The average accounting income earned per year divided by the initial book investment",
+      "D": "The number of years required for cumulative discounted cash inflows to recover the initial outlay"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The equivalent annual annuity converts a project's NPV into a level annual stream over its own life: EAA = NPV / PV annuity factor for that life. Its purpose is comparability when mutually exclusive machines have different service lives; replacing chains or comparing EAAs puts both on the same per-year footing. Business interpretation: Whitcombe's staff can then rank a three-year machine against a five-year machine without bias toward the longer stream. Common trap: describing IRR, ARR, or discounted payback instead, which are different tools serving different questions.",
+    "ExplanationWrongA": "Choice A defines the internal rate of return, not the EAA; the misconception is conflating any single-number project metric with the annualization device used for unequal-life comparisons.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C defines accounting rate of return, an accrual-income measure with no connection to discounting; EAA starts from NPV, which is built on incremental cash flows.",
+    "ExplanationWrongD": "Choice D defines discounted payback period, a liquidity measure; it recovers cost rather than expressing value per year and cannot compare different-lived investments.",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Remember",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.4",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "ID-05",
+    "CommonTrapReference": "Mixing EAA up with IRR, ARR, or payback definitions",
+    "Authorities": [
+      "Equivalent Annual Annuity method for unequal-lived mutually exclusive projects",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.4)"
+    ],
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Conceptual item; no arithmetic to recompute",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-144",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-144-eaa-machine-comparison",
+    "Topic": "E.144 eaa-decomposition-comparison",
+    "Stem": "Flash Tooling must replace one press line and compares two mutually exclusive machines. Machine A has a three-year life and NPV of $12,300; Machine B has a five-year life and NPV of $17,500. At Flash's 10% cost of capital the PV annuity factors are 2.487 for three years and 3.791 for five years. Plant engineer Priya Raman asks which machine the EAA comparison favors and why.",
+    "Choices": {
+      "A": "Machine A, because its EAA of about $4,946 per year exceeds Machine B's $4,616 despite the smaller headline NPV",
+      "B": "Machine B, because the larger NPV of $17,500 dominates once both machines are annualized over a common horizon",
+      "C": "Machine B, because longer-lived assets convert to higher annual equivalents whenever NPV is positive",
+      "D": "Neither can be compared through EAA because their cash-flow patterns differ in shape as well as length"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "EAA divides NPV by the matching-life annuity factor. Machine A: $12,300 / 2.487 = $4,946 per year. Machine B: $17,500 / 3.791 = $4,616 per year. Machine A generates more value per year, so chaining replacements of A dominates adopting B; the five-year machine's NPV advantage dissolves once its extra years are priced. Business interpretation: Raman can justify the shorter-lived press on annualized value while retaining flexibility to re-tender sooner. Common trap: letting the larger undiscounted NPV decide, which systematically biases selection toward longer lives.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B treats the raw NPV gap as decisive and assumes annualization preserves it; dividing $17,500 across 3.791 of discount-weighted years actually yields less per year ($4,616) than A's $12,300 spread over 2.487 ($4,946).",
+    "ExplanationWrongC": "Choice C generalizes that longer life lifts the annual equivalent; the division shows the opposite here, since spreading NPV across more years can dilute it below a shorter rival's figure.",
+    "ExplanationWrongD": "Choice D claims EAA requires identical cash patterns; the method needs only each project's NPV and life-matched annuity factor, and differing shapes are precisely what annualization neutralizes.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.4",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "ID-05",
+    "CommonTrapReference": "Letting the larger NPV decide unequal-life comparisons",
+    "Authorities": [
+      "Equivalent Annual Annuity method for unequal-lived mutually exclusive projects",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.4)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed A: 12,300 / 2.487 = 4,945.7 rounds to 4,946",
+      "Recomputed B: 17,500 / 3.791 = 4,616.2 rounds to 4,616",
+      "Second pass agrees: A > B annually",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-145",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-145-abandonment-option-value",
+    "Topic": "E.145 abandonment-option-value",
+    "Stem": "Flash Outdoor evaluates a product line with two demand states: strong demand (probability 0.60) produces an NPV of $500,000, while weak demand (probability 0.40) produces an NPV of negative $200,000 if Flash rides it out. If Flash instead holds an option to abandon the line in the weak state and recover equipment worth $50,000, the weak-state NPV becomes positive $50,000. Financial planning manager Diego Fuentes calculates the value added by the abandonment option as:",
+    "Choices": {
+      "A": "$220,000",
+      "B": "$320,000",
+      "C": "$100,000",
+      "D": "$280,000"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Expected value without the option: 0.60 x $500,000 + 0.40 x (-$200,000) = $300,000 - $80,000 = $220,000. With abandonment: 0.60 x $500,000 + 0.40 x $50,000 = $300,000 + $20,000 = $320,000. Option value = $320,000 - $220,000 = $100,000, the difference the exit right contributes by truncating the loss tail. Business interpretation: Fuentes can justify structuring leases and supply contracts to preserve cheap exit, since flexibility itself carries six figures of expected value here. Common trap: quoting either expected value alone rather than the spread between them.",
+    "ExplanationWrongA": "Choice A reports the no-option expected value ($300,000 - $80,000 = $220,000); the misconception is stopping at the base case and never pricing what the abandonment right adds.",
+    "ExplanationWrongB": "Choice B reports the with-option expected value ($320,000) as if it were the option contribution; the option value is the increment over the $220,000 base, not the level itself.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D misweights the states, blending the weak-state figures inconsistently; correct 0.60/0.40 weighting of the with-option outcomes gives $320,000 and a spread of exactly $100,000 over the base case.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.5",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "",
+    "CommonTrapReference": "Reporting an expected-value level instead of the option incremental value",
+    "Authorities": [
+      "Real options valuation (option to abandon)",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.5)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: without option 0.6 x 500 + 0.4 x (-200) = 300 - 80 = 220; with option 300 + 0.4 x 50 = 320",
+      "Option value: 320 - 220 = 100 thousand; second pass agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-146",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-146-defer-option-classification",
+    "Topic": "E.146 real-option-type-classification",
+    "Stem": "Flash Energy holds land suitable for a plant it may build once pending emissions rules become clear; management can wait a year before committing. In real-options language, waiting for regulatory clarity before investing is best classified as:",
+    "Choices": {
+      "A": "An option to abandon, because Flash may exit the project after the rules are announced",
+      "B": "An expansion option, because the plant could later be scaled up if demand proves durable",
+      "C": "A contracting option, because waiting reduces the effective size of the commitment",
+      "D": "An option to defer, because investment timing flexibility has value when uncertainty may resolve in Flash favor"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The timing choice described is the classic deferral (wait-and-see) option: management owns the right, not the obligation, to invest later, and uncertainty that resolves over time gives waiting informational value. Deferral options matter most when volatility is high, the investment is partly irreversible, and Flash controls the timing. Business interpretation: valuing the wait prevents Flash from committing capital today merely to avoid standing still. Common trap: naming whichever other real-option type comes to mind rather than matching the flexibility described.",
+    "ExplanationWrongA": "Choice A names the abandonment right, which concerns exiting an existing project; the scenario concerns postponing entry, so no asset or project yet exists to abandon.",
+    "ExplanationWrongB": "Choice B describes scaling up an operating project; nothing in the scenario involves expanding capacity already built, only whether to begin at all.",
+    "ExplanationWrongC": "Choice C invokes shrinking an existing commitment; again the plant is unbuilt, so there is no scale to contract, and waiting changes timing rather than size.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.5",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "",
+    "CommonTrapReference": "Mixing up defer, expand, abandon, and contract option types",
+    "Authorities": [
+      "Real options taxonomy (defer, expand, contract, abandon)",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.5)"
+    ],
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Conceptual item; no arithmetic to recompute",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-147",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-147-capital-rationing-knapsack",
+    "Topic": "E.147 single-period-capital-rationing",
+    "Stem": "Flash Consumer faces a single-period capital budget of $1,000,000. Four independent projects are available: Project W costs $400,000 with NPV $180,000; Project X costs $350,000 with NPV $170,000; Project Y costs $300,000 with NPV $140,000; Project Z costs $450,000 with NPV $190,000. Capital analyst Sofia Marchetti must select the affordable combination that maximizes total NPV. Which selection should Marchetti make?",
+    "Choices": {
+      "A": "Projects X and Y together, the pairing with the highest average profitability index among affordable combinations",
+      "B": "Project Z alone, because it contributes the largest single-project NPV of $190,000",
+      "C": "Projects W and Z together, whose combined cost of $850,000 fits the budget while producing total NPV of $370,000",
+      "D": "Projects W and X together, using the full spirit of the budget with combined NPV of $350,000"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Single-period rationing maximizes total NPV across feasible sets, not individual PI rankings. Feasible pairs: W+X = $750,000 cost, $350,000 NPV; W+Y = $700,000, $320,000; W+Z = $850,000, $370,000; X+Y = $650,000, $310,000; X+Z = $800,000, $360,000; Y+Z = $750,000, $330,000. No triple fits inside $1,000,000 (cheapest is W+X+Y at $1,050,000). The maximum is W+Z at $370,000. Business interpretation: Marchetti should present W+Z with the idle $150,000 noted, since forcing spending to hit the ceiling would destroy value. Common trap: greedy PI selection (X then Y, total $310,000) or anchoring on the biggest single NPV.",
+    "ExplanationWrongA": "Choice A follows the profitability-index greedy habit; ranking by NPV-per-dollar picks X (0.486) then Y (0.467), but that combination yields only $310,000, well below W+Z at $370,000.",
+    "ExplanationWrongB": "Choice B anchors on the largest standalone NPV; single-project selection ignores that combining Z with W still fits the budget and nearly doubles the total contribution to $370,000.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D pairs W and X for $350,000 of NPV on $750,000 of spend; swapping X for Z costs only $100,000 more of budget yet adds $20,000 of NPV, so the near-budget combination still leaves $20,000 on the table versus W+Z.",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "ID-02",
+    "CommonTrapReference": "Greedy PI ranking or largest-single-NPV anchoring under rationing",
+    "Authorities": [
+      "Profitability Index use under single-period capital rationing",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.6, E.1)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed pairs: W+Z = 400+450 = 850 cost <= 1,000; NPV 180+190 = 370",
+      "Enumerated all pairs: max NPV = 370 (W+Z); cheapest triple W+X+Y = 1,050 > 1,000 infeasible",
+      "Second pass agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-148",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-148-postaudit-variance-use",
+    "Topic": "E.148 post-audit-variance-application",
+    "Stem": "Two years ago Flash Logistics approved a sorting automation project forecasting annual savings of $240,000. The post-audit team measures actual annual savings at $198,000. Internal audit lead Theo Brandt asks how the post-audit result should be applied. Which response is correct?",
+    "Choices": {
+      "A": "Report a $42,000 shortfall, or 17.5% below forecast, and feed the measurement back into the forecast discipline for future proposals rather than attempting to reverse the sunk decision",
+      "B": "Reverse the approval because actual savings fell short of forecast, unwinding the project to recover the difference",
+      "C": "Treat the shortfall as immaterial because the project still generates positive savings, and discontinue post-audits for this class of project",
+      "D": "Restate the original forecast downward to $198,000 so the project file shows the estimate was achieved"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "A post-audit compares realized outcomes against forecasts: variance = $198,000 - $240,000 = -$42,000, or -$42,000 / $240,000 = -17.5%. Its purpose is forward-looking learning: identifying systematic optimism, rewarding honest forecasting, and improving future capital allocation. The past decision is sunk; reversing a performing asset would add losses. Business interpretation: Brandt should route the 17.5% finding into the estimating playbook and check sibling projects for similar bias. Common trap: treating post-audits as performance trials of old decisions instead of calibration of future ones, or quietly restating forecasts to mask error.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B tries to un-decide a sunk investment; the misconception is reading governance follow-up as a reversal mechanism. Realized cash flows continue, and unwinding a functioning asset would compound the loss.",
+    "ExplanationWrongC": "Choice C dismisses a one-sixth forecasting miss as immaterial; systematic optimism of that size, left unmeasured, corrupts every subsequent ranking, which is precisely what post-audits exist to prevent.",
+    "ExplanationWrongD": "Choice D falsifies the record by restating the forecast to match results; destroying the forecast-versus-actual gap eliminates the very signal the post-audit produced.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "",
+    "CommonTrapReference": "Treating post-audit as decision reversal or restating forecasts to mask error",
+    "Authorities": [
+      "Post-audit purpose in capital budgeting governance",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.6)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 198,000 - 240,000 = -42,000; -42,000 / 240,000 = -17.5%",
+      "Second pass agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-149",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-149-discounted-payback-computation",
+    "Topic": "E.149 discounted-payback-calculation",
+    "Stem": "Flash Distribution invests $500,000 in conveyor upgrades projected to return $200,000 in year one, $250,000 in year two, and $180,000 in year three. At a 10% discount rate the PV factors are 0.909, 0.826, and 0.751. Treasury analyst Amara Diallo computes the discounted payback period as:",
+    "Choices": {
+      "A": "2.28 years",
+      "B": "2.83 years",
+      "C": "2.61 years",
+      "D": "3.00 years"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Discount each inflow, then accumulate: year 1 PV = $200,000 x 0.909 = $181,800; year 2 PV = $250,000 x 0.826 = $206,500, cumulative $388,300; year 3 PV = $180,000 x 0.751 = $135,180, cumulative $523,480. The outlay is recovered during year three: fraction needed = ($500,000 - $388,300) / $135,180 = $111,700 / $135,180 = 0.83 of the year, giving 2.83 years. Discounted payback always runs longer than undiscounted payback (2.28 years here) because discounting shrinks inflows. Business interpretation: Diallo figure tells Flash when the upgrade returns its cost in present-value terms. Common trap: reporting undiscounted payback, or rounding cumulative balances mid-stream.",
+    "ExplanationWrongA": "Choice A reports the undiscounted result: cumulative nominal inflows reach $450,000 by year two and cross $500,000 at 2 + $50,000/$180,000 = 2.28 years; it skips discounting entirely.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C misapplies the interpolation fraction (for example dividing the remaining balance by the year-two PV of $206,500), landing at 2.61 years; recovery actually occurs during year three against the year-three discounted inflow.",
+    "ExplanationWrongD": "Choice D rounds up to the whole year without interpolating, reporting three full years; cumulative discounted inflows cross $500,000 partway through year three at 2.83 years, so whole-year reporting overstates the wait.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "ID-04",
+    "CommonTrapReference": "Reporting undiscounted payback or skipping interpolation within the recovery year",
+    "Authorities": [
+      "Discounted payback period method",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.1)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 181,800; +206,500 = 388,300; +135,180 = 523,480; (500,000-388,300)/135,180 = 111,700/135,180 = 0.826",
+      "Result 2.826 rounds to 2.83 years; second pass agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "E",
+    "QuestionID": "P2-E-150",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "E-150-arr-average-investment-basis",
+    "Topic": "E.150 accounting-rate-of-return-computation",
+    "Stem": "Flash Ceramics is appraising a kiln costing $420,000 with a $20,000 salvage value and a four-year life. The kiln should generate income before depreciation of $130,000 per year. Flash defines the accounting rate of return as average annual net income divided by average book investment. Production accountant Luis Herrera computes ARR as:",
+    "Choices": {
+      "A": "7.14%",
+      "B": "59.09%",
+      "C": "22.73%",
+      "D": "13.64%"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Annual depreciation = ($420,000 - $20,000) / 4 = $100,000. Average annual net income = $130,000 - $100,000 = $30,000. Average book investment = ($420,000 + $20,000) / 2 = $220,000. ARR = $30,000 / $220,000 = 13.64%. ARR is an accrual measure: it uses net income, not cash flow, and per Flash definition divides by average rather than initial book value. Business interpretation: Herrera 13.64% screens the kiln against accounting-based targets, complementing, not replacing, NPV. Common trap: substituting cash flow for income, or dividing by initial cost instead of the average investment the definition requires.",
+    "ExplanationWrongA": "Choice A divides net income by the initial cost ($30,000 / $420,000 = 7.14%), ignoring the stated average-investment denominator and understating the return by nearly half.",
+    "ExplanationWrongB": "Choice B divides operating cash flow by average investment ($130,000 / $220,000 = 59.09%), skipping depreciation entirely; ARR is defined on accrual net income, not pre-depreciation cash flow.",
+    "ExplanationWrongC": "Choice C adds the salvage to the numerator (($30,000 + $20,000) / $220,000 = 22.73%), treating terminal recovery as operating income; salvage enters only the average-investment denominator under the stated definition.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "BlueprintDomain": "Investment Decisions",
+    "FormulaReference": "ID-08",
+    "CommonTrapReference": "Using initial cost instead of average investment, or cash flow instead of net income",
+    "Authorities": [
+      "Accounting Rate of Return method (ARR)",
+      "IMA CMA Part 2 CSO Section E - Investment Decisions (E.1, E.2)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: depreciation (420,000-20,000)/4 = 100,000; net income 30,000; avg investment (420,000+20,000)/2 = 220,000",
+      "ARR: 30,000/220,000 = 13.636% rounds to 13.64%; second pass agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  }
+,
+  {
+    "Authorities": [
+      "Corporate finance theory (capital budgeting risk tools; one-way sensitivity analysis)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "It varies one input at a time, such as unit volume or the discount rate, holds all other assumptions fixed, and shows which estimates move the NPV most",
+      "B": "It produces the single most likely outcome by assigning every input its expected value and computing one definitive NPV for the proposal",
+      "C": "It attaches probabilities to every possible combination of volume and price outcomes and reports the full distribution of NPV results",
+      "D": "It screens out any proposal whose underlying inputs cannot be independently verified by internal audit before funds are committed"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Treating sensitivity analysis as probabilistic forecasting",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Sensitivity analysis is a one-variable-at-a-time risk tool within capital budgeting: the analyst flexes a single input, such as unit volume, salvage value, or the discount rate, while freezing every other assumption, then records the resulting swing in NPV. Its purpose is diagnostic rather than predictive; it identifies which estimates the automated guided vehicle decision is most exposed to so Ferrero can target diligence, contingency planning, and post-approval monitoring on the variables that genuinely drive value. Business interpretation: a table showing NPV collapsing under modest volume declines tells the committee the case rests on demand durability rather than on financing terms. A common trap is conflating sensitivity analysis with scenario analysis, which moves several inputs together in coherent bundles, or with simulation, which assigns full probability distributions to inputs.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B describes producing a single point estimate from expected-value inputs; that is a base-case forecast, not sensitivity work. The misconception is that naming expected inputs constitutes risk analysis, whereas sensitivity analysis deliberately perturbs inputs one at a time around that base case to expose fragility before capital is committed.",
+    "ExplanationWrongC": "Choice C assigns probabilities to combinations of outcomes, which is the domain of probability-weighted scenarios or Monte Carlo simulation. Sensitivity analysis holds everything else fixed and reports deterministic swings, so it never produces a probability distribution of NPV outcomes for the committee to weigh.",
+    "ExplanationWrongD": "Choice D invents a verification gate that no standard sensitivity procedure contains; input verifiability is an audit and governance concern, separate from the analytical purpose of tracing NPV movements back to individual assumption changes ahead of the funding vote.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-151",
+    "Section": "E",
+    "Stem": "Treasurer Luis Ferrero is preparing Flash Industries' capital committee deck for a proposed automated guided vehicle system and plans a sensitivity table alongside the base-case NPV. Board members have asked what the table is meant to show. Which statement best describes the purpose of sensitivity analysis in this setting?",
+    "Topic": "E.151 one-way-sensitivity-purpose",
+    "UniqueConceptKey": "E-151-input-swing-mapping",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Conceptual check: one-variable-at-a-time definition contrasted against multi-input scenarios and probabilistic simulation = distinction confirmed"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (scenario analysis and expected NPV weighting)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$406,667, the simple average of the three scenario NPVs",
+      "B": "$410,000, the probability-weighted combination of the three stated scenarios",
+      "C": "$460,000, obtained by adding the worst-case loss back as if it were a gain",
+      "D": "$530,000, obtained by doubling the weight on the best case and halving the weight on the base case"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Averaging scenario NPVs without probability weights",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Scenario analysis prices uncertainty by weighting each internally coherent outcome by its probability: expected NPV = 0.50 x $420,000 + 0.25 x $900,000 + 0.25 x (-$100,000) = $210,000 + $225,000 - $25,000 = $410,000. This weighted figure, not the base case alone, is the unbiased summary of the packing line's contribution and is the number comparable against Flash's acceptance hurdle. Business interpretation: Raman can tell the capital committee that the probability-weighted outlook sits slightly below the $420,000 base case because the symmetric 25%/25% tail structure nets to negative skew once the worst-case loss enters with its full weight. A common trap is averaging the three NPVs equally, which silently substitutes equal odds for management's stated 50/25/25 probabilities and misstates expectations by $3,333.",
+    "ExplanationWrongA": "Choice A averages the three scenario NPVs equally to reach $406,667, an approach valid only if each outcome carried a one-third weight; management's stated 50/25/25 probabilities must multiply their respective NPVs before summation, and discarding them substitutes the modeler's indifference for the committee's expectations.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C flips the sign of the worst case, adding the $25,000 weighted loss instead of subtracting it and overstating the expectation by $50,000. Losses reduce expected NPV; only gains enter positively, so the -$100,000 outcome contributes -$25,000 to the weighted total.",
+    "ExplanationWrongD": "Choice D reallocates probability mass toward the best case, effectively inventing a 50% boom weight. Probabilities must sum to 100% and come from the stated scenario framework, not from optimism; the operative weights remain 50/25/25 exactly as communicated to the committee.",
+    "FormulaReference": "ID-01 NPV",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-152",
+    "Section": "E",
+    "Stem": "Controller Priya Raman summarized three scenarios for Flash Foods' proposed vacuum packing line: a base case carrying a 50% probability with an NPV of $420,000, a best case at 25% probability with an NPV of $900,000, and a worst case at 25% probability with an NPV of -$100,000. What expected NPV should Raman report to the capital committee?",
+    "Topic": "E.152 scenario-expected-npv",
+    "UniqueConceptKey": "E-152-probability-weighted-outcomes",
+    "VerifiedChecks": [
+      "Recomputed: 0.50 x 420000 = 210000; 0.25 x 900000 = 225000; 0.25 x -100000 = -25000; 210000 + 225000 - 25000 = 410000 (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (IRR decision rule versus cost of capital)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Reject, because annual inflows of $430,000 fall short of a competitive return on the $1,800,000 outlay",
+      "B": "Accept, because undiscounted inflows of $2,580,000 comfortably exceed the $1,800,000 price regardless of financing cost",
+      "C": "Accept, because the NPV at the 6.0% cost of capital is positive at $314,439, which means the IRR lies above 6.0%",
+      "D": "Take no action, because a positive NPV at the hurdle rate proves the IRR exactly equals the 6.0% cost of capital"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Comparing annual inflows to outlay instead of IRR to WACC",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The IRR rule accepts any independent project whose internal rate of return exceeds the cost of capital, and IRR's position relative to the hurdle is located by discounting cash flows at that hurdle: NPV = $430,000 x 4.9173 - $1,800,000 = $2,114,439 - $1,800,000 = $314,439. A positive NPV at 6.0% pins the break-even discount rate somewhere above 6.0%, so the acquisition's IRR exceeds Flash's hurdle and the deal clears the rule without solving for the exact percentage. Business interpretation: Okafor can defend the bolt-on to the board on return-versus-cost grounds using only the sign of NPV at the WACC, keeping the negotiation focused on price rather than on estimation mechanics. A common trap is reading a positive NPV at the hurdle as IRR equal to the cost of capital, when equality produces exactly zero NPV.",
+    "ExplanationWrongA": "Choice A benchmarks the yearly inflow against the outlay itself, a payback-style comparison that answers a liquidity question rather than a return question; the IRR rule asks whether the rate implied by the six-year stream beats 6.0%, and the positive $314,439 NPV shows that it does.",
+    "ExplanationWrongB": "Choice B accepts on undiscounted totals, ignoring time value entirely; $2,580,000 spread over six years is worth far less than its face amount. The IRR rule turns on discounted return, which is why the stated 4.9173 annuity factor, not gross receipts, drives the recommendation.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D mistakes what a positive NPV signifies: IRR exactly equal to the cost of capital drives NPV to zero, so the $314,439 surplus places the IRR above 6.0% and warrants immediate acceptance rather than indefinite further study.",
+    "FormulaReference": "ID-09 IRR",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-153",
+    "Section": "E",
+    "Stem": "M&A director Daniel Okafor is screening a bolt-on acquisition of a Midwest tooling shop for Flash Precision Group. The deal requires $1,800,000 today and is projected to return $430,000 per year for six years. At Flash's 6.0% cost of capital the six-year ordinary annuity factor is 4.9173. Applying the IRR acceptance rule, what should Okafor recommend?",
+    "Topic": "E.153 irr-hurdle-decision",
+    "UniqueConceptKey": "E-153-positive-npv-above-wacc",
+    "VerifiedChecks": [
+      "Recomputed: 430000 x 4.9173 = 2114439; 2114439 - 1800000 = 314439 > 0 so IRR > 6.0% (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (NPV and IRR ranking conflicts; crossover rates)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "X's later, larger inflows lose value fastest as rates rise, so below the 9.8% crossover X leads on NPV while Y's early-heavy profile earns the higher IRR; timing, not error, explains the reversal",
+      "B": "The conflict signals an arithmetic error, because NPV and IRR are mathematically required to rank mutually exclusive projects identically at every discount rate",
+      "C": "The IRR method implicitly assumes interim cash flows reinvest at the cost of capital, whereas NPV assumes reinvestment at each project's own IRR, and this reversed pairing produces the flip",
+      "D": "System X likely involves a smaller initial outlay, since leaner investments tend to post higher NPVs at low rates while ceding percentage-return honors to their rivals"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Assuming NPV and IRR must rank mutually exclusive projects alike",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "For mutually exclusive projects with different cash-flow timing, NPV and IRR legitimately disagree, and the disagreement decomposes along the rate-sensitivity and reinvestment-assumption fault line. System X concentrates value in distant periods, so its NPV curve is steep: raise the discount rate and X's advantage erodes, crossing System Y at the 9.8% crossover, beyond which Y dominates. At Flash's 8.0% hurdle, X's $512,000 beats Y's $468,000, and NPV's reinvest-at-the-discount-rate logic makes it the theoretically reliable guide, while Y's early inflows mechanically inflate its IRR to 14.0% versus X's 11.5%. Business interpretation: Webb should attribute the flip to timing structure and note that Flash takes X provided 8.0% genuinely reflects opportunity cost. A common trap is hunting for spreadsheet error where none exists; the crossover rate is the diagnostic that reconciles the two rankings.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B treats the divergence as proof of miscalculation; in fact ranking conflicts between NPV and IRR are a predictable artifact of differing cash-flow timing on mutually exclusive candidates, and the stated 9.8% crossover is exactly where the two curves exchange leadership.",
+    "ExplanationWrongC": "Choice C reverses the textbook reinvestment assumptions: IRR implicitly compounds interim flows at the project's own IRR, while NPV implicitly reinvests at the discount rate. Getting this backwards undermines the very argument for preferring NPV near the hurdle rate.",
+    "ExplanationWrongD": "Choice D imports a scale story the facts do not support; nothing in the data says X is cheaper, and X's NPV superiority at low rates stems from larger absolute dollar inflows arriving later, not from a smaller check being written up front.",
+    "FormulaReference": "ID-01 NPV",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-154",
+    "Section": "E",
+    "Stem": "Marcus Webb, the sell-side analyst covering Flash Logistics, is comparing two mutually exclusive sortation systems. System X posts the higher NPV at Flash's 8.0% discount rate ($512,000 versus $468,000), yet System Y carries the higher IRR (14.0% versus 11.5%), and the NPV profiles cross at 9.8%; X's cash inflows are heavily back-loaded while Y's arrive early. Which analysis correctly attributes the ranking conflict?",
+    "Topic": "E.154 npv-irr-crossover-timing",
+    "UniqueConceptKey": "E-154-late-cashflow-rate-sensitivity",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Consistency check: 8.0% hurdle < 9.8% crossover so X NPV leadership aligns with stated $512000 vs $468000 figures"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (profitability index ranking under capital rationing)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Fund P1 and P4, which absorb the entire $1,500,000 budget and deliver a combined NPV of $466,000",
+      "B": "Allocate the budget pro rata across all four proposals so every plant receives some funding this cycle",
+      "C": "Fund the two highest-profitability-index projects, P2 and P1, for a combined NPV of $450,000 with $200,000 held back",
+      "D": "Fund P2 and P4 for a combined NPV of $496,000, the maximum achievable within the $1,500,000 ceiling"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Funding the bundle that exhausts the budget rather than maximizes NPV",
+    "CorrectChoice": "D",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Under capital rationing with indivisible projects, the governing principle is to maximize total NPV across feasible bundles, using the profitability index (PI = PV of inflows per dollar committed) to organize the search but never to replace enumeration. Here PI ranks P2 at 1.40 ($240,000/$600,000 + 1), P4 at 1.32, P1 at 1.30, and P3 at 1.26. Feasible pairs inside the $1,500,000 ceiling: P2+P4 spends $1,400,000 for $496,000 NPV; P1+P4 spends the full $1,500,000 for $466,000; P1+P2 spends $1,300,000 for $450,000. The P2+P4 package wins even though it strands $100,000, because idle cash earns nothing but forced spending earns worse. Business interpretation: Marchetti should tell the board the residual belongs in next cycle's pool or short-term instruments rather than being pushed into P3 to satisfy a utilization instinct. A common trap is equating budget exhaustion with value maximization.",
+    "ExplanationWrongA": "Choice A spends every dollar but captures $30,000 less NPV than P2+P4; the misconception is that consuming the appropriation is virtuous. Indivisibility means the last project squeezed in can destroy the surplus, and $100,000 idle beats a worse factory mix.",
+    "ExplanationWrongB": "Choice B fragments indivisible projects; partial funding of a production line generates partial or zero returns, not proportional NPV. Capital rationing logic ranks whole proposals, and slicing the budget four ways guarantees the portfolio strays from the value-maximizing bundle.",
+    "ExplanationWrongC": "Choice C stops after the top two profitability indexes and misses that P4, third-ranked at 1.32, combines with P2 inside the ceiling for $46,000 more NPV than P2+P1. PI orders the search; it does not license skipping feasibility checks on the next candidate down.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "ID-02 PI",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-155",
+    "Section": "E",
+    "Stem": "CFO Elena Marchetti must allocate Flash Components' $1,500,000 capital budget across four independent factory proposals. Project P1 needs $700,000 for an NPV of $210,000; P2 needs $600,000 for an NPV of $240,000; P3 needs $500,000 for an NPV of $130,000; and P4 needs $800,000 for an NPV of $256,000. Projects are indivisible. Which funding package should Marchetti recommend to the board?",
+    "Topic": "E.155 rationing-portfolio-selection",
+    "UniqueConceptKey": "E-155-feasible-bundle-enumeration",
+    "VerifiedChecks": [
+      "Recomputed: P2+P4 outlay 600000 + 800000 = 1400000 <= 1500000; NPV 240000 + 256000 = 496000; rival best P1+P4 = 466000 (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (real options; expanded NPV with abandonment flexibility)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Decline the hub, because committing capital against a negative base-case NPV is imprudent however attractive the exit language reads",
+      "B": "Proceed, because the abandonment right adds $200,000 of expected value, lifting expanded NPV to positive $80,000",
+      "C": "Decline unless the exit right can be shown to add value exactly equal to the $120,000 shortfall, since options merely offset losses",
+      "D": "Proceed only if Osei can renegotiate the disappointment probability down to 25%, treating that figure as the natural tipping point for real-estate commitments"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Ignoring flexibility because base-case NPV is negative",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Real-options valuation extends conventional DCF: expanded NPV = static NPV + value of operating flexibility. The abandonment right is economically a put on the hub's continuation; its expected value = 40% x $500,000 = $200,000, so expanded NPV = -$120,000 + $200,000 = +$80,000. Flexibility is valuable precisely when outcomes can turn adverse, which is why a negative deterministic NPV does not doom a project carrying a credible exit; the put converts part of the downside branch into bounded exposure. Business interpretation: Osei should recommend proceeding and log the Year-1 review trigger in the treasury calendar, since the option decays if the exit window lapses unused or demand information arrives late. A common trap is dismissing flexibility as soft upside and deciding on the static number alone, thereby valuing the project as if Flash were locked in permanently.",
+    "ExplanationWrongA": "Choice A refuses to look past the static figure, treating prudence as obedience to the negative base case; when a contractual exit truncates the bad branch, the expected-value calculus legitimately flips to +$80,000 and commitment becomes the disciplined answer, not recklessness.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C invents a parity condition, demanding the option offset losses exactly before counting; real options add whatever expected value their payoff distribution implies, here $200,000, and no rule requires flexibility to neutralize precisely the base-case deficit.",
+    "ExplanationWrongD": "Choice D anchors on an arbitrary 25% tipping point unrelated to the economics; value changes continuously with probability, and at the actual 40% estimate the expanded NPV is already positive. Renegotiation theater cannot substitute for pricing the right Flash already holds.",
+    "FormulaReference": "ID-01 NPV",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-156",
+    "Section": "E",
+    "Stem": "Treasurer Nadia Osei is weighing Flash Retail Group's entry into a leased regional distribution hub requiring $2,000,000 upfront. Deterministic modeling shows a base-case NPV of -$120,000. However, Flash holds a contractual right to exit at the end of Year 1 by selling fixtures and terminating the lease; if regional demand disappoints, a 40% chance, exercising that exit would avoid subsequent cash outflows with a present value today of $500,000. What should Osei recommend?",
+    "Topic": "E.156 abandonment-expanded-npv",
+    "UniqueConceptKey": "E-156-flexibility-flips-sign",
+    "VerifiedChecks": [
+      "Recomputed: 0.40 x 500000 = 200000; -120000 + 200000 = 80000 (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (after-tax cash flow construction; depreciation tax shield)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$155,000, taxing revenue at 25% and subtracting cash expenses without any tax effect",
+      "B": "$280,000, pre-tax operating cash flow with depreciation added back but no tax taken",
+      "C": "$250,000, after-tax operating income plus the depreciation add-back",
+      "D": "$90,000, the after-tax net income with the depreciation add-back omitted"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Omitting the depreciation add-back after taxing operating income",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "After-tax cash flow follows the depreciation-shield construction: ATCF = (Sales - Cash expenses - Depreciation) x (1 - t) + Depreciation. Substituting: ($500,000 - $220,000 - $160,000) x 0.75 + $160,000 = $120,000 x 0.75 + $160,000 = $90,000 + $160,000 = $250,000. The equivalent shortcut confirms it: (Sales - Cash expenses)(1 - t) + t x Depreciation = $280,000 x 0.75 + 0.25 x $160,000 = $210,000 + $40,000 = $250,000. Depreciation is deducted to shield income from tax and then added back because it consumes no cash. Business interpretation: Ibarra's $250,000 feeds the press's NPV model and correctly reflects the government's 25% partnership in every operating dollar alongside the $40,000 annual shield the press generates. A common trap is stopping at after-tax net income and forgetting the add-back, understating Year 1 cash flow by nearly two-thirds.",
+    "ExplanationWrongA": "Choice A taxes revenue but leaves cash expenses untaxed, mixing an after-tax inflow with a pre-tax outflow for $155,000; consistency demands both sides enter after tax, or equivalently that tax apply only to earnings before the depreciation add-back restores the shield.",
+    "ExplanationWrongB": "Choice B reports pre-tax operating cash flow with the add-back but skips taxation altogether, overstating Year 1 by the $30,000 of tax owed on $120,000 of taxable income at the 25% rate before any shield discussion even begins.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D stops at $90,000, the after-tax net income, omitting the $160,000 depreciation add-back; the deduction reduced taxable income but consumed no cash, so failing to restore it understates distributable cash flow almost in half.",
+    "FormulaReference": "ID-06 ATCF",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-157",
+    "Section": "E",
+    "Stem": "Controller Robert Ibarra is building the Year 1 after-tax cash flow for Flash Fabrication's new stamping press. The press costs $800,000, first-year MACRS depreciation is 20.00% of cost, Year 1 sales are $500,000, cash operating expenses are $220,000, and Flash's tax rate is 25%. What is the Year 1 after-tax cash flow?",
+    "Topic": "E.157 year-one-atcf",
+    "UniqueConceptKey": "E-157-depreciation-shield-addback",
+    "VerifiedChecks": [
+      "Recomputed: (500000 - 220000 - 160000) x 0.75 + 160000 = 90000 + 160000 = 250000; cross-check (500000 - 220000) x 0.75 + 0.25 x 160000 = 210000 + 40000 = 250000 (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (equivalent annual annuity for unequal-lived projects)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "It discounts only the terminal values of each bid, isolating end-of-life salvage comparisons from operating noise",
+      "B": "It converts each project's NPV into a level annual amount over that project's own life, letting unequal-lived bids compete on yearly terms",
+      "C": "It ranks bids by raw total NPV so the largest absolute value creation wins regardless of differing horizons",
+      "D": "It restates each bid's cash flows at a common risk-adjusted rate so risk differences, rather than life differences, drive selection"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Ranking unequal-lived projects on raw NPV",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The equivalent annual annuity technique addresses the unequal-lives problem in capital budgeting: because an eight-year and a twelve-year asset cannot fairly be compared on total NPV alone, each NPV is converted into the level end-of-year payment whose present value, discounted at the cost of capital over that project's own life, equals the NPV (EAA = NPV divided by the appropriate annuity factor). The bids then compete on equal annual terms, and the higher EAA indicates the better repeatable choice under replacement chaining or perpetual renewal. Business interpretation: Petrov's briefing should stress that EAA normalizes horizon length, not risk; risk still enters through the discount rate chosen beforehand. A common trap is reading EAA as a risk adjustment, or as a substitute for computing NPV in the first place, when it is strictly a comparability conversion applied after sound NPVs exist.",
+    "ExplanationWrongA": "Choice A narrows the lens to terminal values, which ignores the operating annuities that dominate equipment economics; EAA spreads the whole NPV, operating and terminal together, into uniform yearly terms rather than isolating salvage for separate comparison.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C is precisely the raw-NPV bias the manual guards against; longer-lived bids mechanically accumulate larger total NPVs, so comparing undiscounted-for-life totals crowns whichever bid simply lasts longest rather than the one creating more value per year of service.",
+    "ExplanationWrongD": "Choice D describes risk repricing, the job of the risk-adjusted discount rate, not EAA; the technique assumes each bid's riskiness is already embedded in its NPV and adjusts solely for horizon mismatch between competing service lives.",
+    "FormulaReference": "ID-05 EAA",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-158",
+    "Section": "E",
+    "Stem": "During onboarding, credit manager Sofia Petrov is asked to brief a new Flash Industrial analyst on why the capital manual requires equivalent annual annuity (EAA) analysis whenever competing equipment bids quote different service lives. Which statement captures the purpose of the EAA technique?",
+    "Topic": "E.158 eaa-unequal-lives",
+    "UniqueConceptKey": "E-158-annuity-spreading-comparison",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Conceptual check: EAA defined as NPV divided by own-life annuity factor for horizon normalization = confirmed"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (CAPM-based risk-adjusted discount rates for divisions)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Build RADR as 4.00% + 1.30 x 6.00% + 1.00% = 12.80%; NPV is $40,000, and the 10.00% WACC would overstate it by $25,455 by undercharging venture risk",
+      "B": "Build RADR as 4.00% + 1.30 x (6.00% + 1.00%) = 13.10%, giving NPV of $37,347; the WACC gap is immaterial at a one-year horizon",
+      "C": "Build RADR as 4.00% + 6.00% + 1.00% = 11.00%, giving NPV of $56,216, since beta matters only for equity valuation and not project screening",
+      "D": "Any rate between 10.00% and 12.80% is defensible, so NPV spans $40,000 to $65,455 and the venture is robust either way"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Applying the firmwide WACC to a riskier divisional project",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "A CAPM-style build-up layers systematic risk onto the time value of money: RADR = risk-free + beta x market premium + applicable premia = 4.00% + 1.30 x 6.00% + 1.00% = 12.80%. One-year NPV at that rate: $1,128,000 / 1.128 - $960,000 = $1,000,000 - $960,000 = $40,000. Discounting instead at Flash's 10.00% firmwide WACC yields $1,128,000 / 1.10 - $960,000 = $1,025,455 - $960,000 = $65,455, overstating value by $25,455 because a conglomerate's average risk subsidizes a venture running 30% more volatile than the market. Decomposing the rate shows each component's role: pure time value, scaled systematic exposure, and an idiosyncratic size premium sitting outside the CAPM multiplication. Business interpretation: Haddad's build-up shows the venture still clears the hurdle once priced honestly, so the finding survives scrutiny. A common trap is treating WACC as a universal rate rather than the weighted average of divisional costs.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B folds the small-company premium inside the parenthetical that beta scales, inflating the market-premium term to 9.10% and landing at 13.10%; idiosyncratic-size adjustments belong outside the CAPM multiplication, and the resulting $37,347 NPV inherits that structural error.",
+    "ExplanationWrongC": "Choice C drops beta entirely, arguing it belongs to security analysis; project cash flows inherit divisional systematic risk exactly as shares do, so the 11.00% rate undercharges the venture and pads NPV to $56,216 with risk the market would charge for.",
+    "ExplanationWrongD": "Choice D dissolves the discipline, calling every rate in the range defensible; discount-rate selection is not a buffet, and the $25,455 spread between honest and lazy pricing is precisely the measurement error capital governance exists to prevent.",
+    "FormulaReference": "ID-01 NPV",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-159",
+    "Section": "E",
+    "Stem": "Treasury analyst Omar Haddad is decomposing the discount rate for a Flash Robotics venture project. He assembles a 4.00% risk-free rate, a divisional beta of 1.30 against a 6.00% market risk premium, and a separate 1.00% small-company premium, producing the venture's risk-adjusted discount rate. The project costs $960,000 today and returns $1,128,000 in one year. Which analysis correctly builds the rate and states the consequence of using Flash's 10.00% firmwide WACC instead?",
+    "Topic": "E.159 radr-beta-buildup",
+    "UniqueConceptKey": "E-159-division-risk-pricing",
+    "VerifiedChecks": [
+      "Recomputed: RADR 4.00 + 1.30 x 6.00 + 1.00 = 12.80; 1128000 / 1.128 = 1000000, NPV = 40000; 1128000 / 1.10 = 1025455, NPV = 65455, delta 25455 (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (discounted payback liquidity screening)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "2.55 years, the point where nominal inflows cumulate past the outlay",
+      "B": "4.00 years, because recovery completes only when the final year's inflow lands",
+      "C": "3.05 years, interpolating the Year 4 fraction against that year's discounted inflow",
+      "D": "3.50 years, splitting the difference across the final recovery year as a conservative estimate"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Reporting undiscounted payback as the discounted figure",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Discounted payback asks when cumulative discounted inflows first repay the outlay, retaining payback's liquidity focus while respecting time value. Discounted inflows at 10.00%: $180,000 x 0.9091 = $163,638; $200,000 x 0.8264 = $165,280; $220,000 x 0.7513 = $165,286; running total after Year 3 = $494,204, leaving $5,796 of the $500,000 outstanding. Year 4 brings $160,000 x 0.6830 = $109,280, so the fractional year = 5,796 / 109,280 = 0.05, and discounted payback = 3.05 years. Business interpretation: Rivera can assure the imaging-suite sponsor that value-adjusted recovery arrives barely past Year 3, materially sooner than rounding up suggests, while still noting the metric ignores everything after recovery. A common trap is quoting undiscounted payback of 2.55 years as though discounting were a formality, flattering the project by half a year of ignored financing cost.",
+    "ExplanationWrongA": "Choice A reports the nominal payback, 2.55 years, computed on undiscounted cash; it answers when dollars return, not when value returns, flattering the suite by roughly half a year of ignored financing cost and defeating the point of the exercise.",
+    "ExplanationWrongB": "Choice B abandons interpolation, booking recovery only at Year 4's end; the technique exists to locate the crossing inside the year, and stopping at 4.00 years wastes the precision the stated 0.6830 factor and the modest $5,796 shortfall provide.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D substitutes a split-the-difference convention for arithmetic; conservatism is not a method, and the true fraction is about 0.05 of Year 4, not 0.50, once the shortfall is measured against that year's $109,280 discounted inflow.",
+    "FormulaReference": "ID-04 Discounted Payback",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-160",
+    "Section": "E",
+    "Stem": "Treasurer Tomas Rivera is documenting the discounted payback of Flash Medical's imaging-suite upgrade: a $500,000 outlay followed by inflows of $180,000, $200,000, $220,000, and $160,000 in Years 1 through 4. At Flash's 10.00% discount rate the present value factors are 0.9091, 0.8264, 0.7513, and 0.6830. What discounted payback should Rivera report?",
+    "Topic": "E.160 discounted-payback-interpolation",
+    "UniqueConceptKey": "E-160-shortfall-fraction-year",
+    "VerifiedChecks": [
+      "Recomputed: PVs 163638 + 165280 + 165286 = 494204; remainder 5796; 5796 / 109280 = 0.053; payback 3.05 years (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (payback period as a liquidity screen)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Payback averages cash flows across the life of the project and cannot be computed until the project ends",
+      "B": "Payback identifies the value-maximizing project among mutually exclusive candidates, making later NPV work redundant",
+      "C": "Longer paybacks signal stronger projects, so the screen systematically favors slow-recovering proposals",
+      "D": "Payback ignores time value and drops every cash flow after the cutoff, so it gauges recovery speed, not value creation"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Reading payback recovery speed as value creation",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Payback measures elapsed time until cumulative nominal inflows equal the initial outlay. Two structural limitations confine it to a first-cut screen: it applies no discount factor, so a dollar recovered in Year 4 counts the same as one recovered in Year 1, and it is blind to everything after the cutoff, so a project that repays quickly and then dies outranks one that repays slightly later and generates years of additional value. Neither flaw is repairable by tweaking the threshold, which is why the manual routes every survivor to incremental-NPV review. Business interpretation: Solberg should read a fast payback as evidence about liquidity and risk exposure, useful context that NPV then weighs against total value created over the whole life. A common trap is promoting payback to a profitability verdict, a role its construction simply cannot support regardless of where the cutoff is set.",
+    "ExplanationWrongA": "Choice A misdescribes the mechanics; payback needs only inflows up to recovery and is computable mid-life, and its actual deficiencies are the missing discount factor and post-cutoff blindness, not any supposed dependence on terminal or lifetime-average data.",
+    "ExplanationWrongB": "Choice B awards payback a crown that only NPV may wear; recovery speed carries no information about the magnitude of value created afterward, which is exactly why the manual sends every screen survivor onward to full incremental-NPV review before commitment.",
+    "ExplanationWrongC": "Choice C inverts the screen's logic; shorter paybacks are the attractive ones for liquidity purposes, and nothing in the method rewards slow recovery, so the claimed systematic favoritism toward laggards does not exist in any version of the technique.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "ID-03 Payback",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-161",
+    "Section": "E",
+    "Stem": "Board member Ingrid Solberg notices that Flash Materials' capital manual lists payback period only as a preliminary screen ahead of full NPV review, and she asks the treasurer why it cannot stand alone. Which limitation of the payback method best answers her question?",
+    "Topic": "E.161 payback-screen-limits",
+    "UniqueConceptKey": "E-161-post-cutoff-blindness",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Conceptual check: dual limitation (no discounting + post-cutoff exclusion) traced against screening purpose = confirmed"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (incremental cash flow principles; nontaxable working capital reversion)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Restore $63,833, the recovery net of the 25% tax, raising NPV to $278,723",
+      "B": "Conclude the model is sound, because working capital belongs to balance-sheet planning and is excluded from incremental DCF cash flows",
+      "C": "Restore $85,110 untaxed, lifting NPV to $300,000, since the terminal working-capital return is a nontaxable reversion of invested funds",
+      "D": "Restore $170,220, reasoning that both the original charge and its mirror image were dropped, lifting NPV to $385,110"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Taxing the terminal working capital recovery",
+    "CorrectChoice": "C",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Incremental DCF treats the working-capital cycle as invested at inception and recovered at termination: the $150,000 tied up in receivables and inventory comes home when the automation retrofit winds down, and because the reversion merely hands back prior investment rather than creating taxable income, no tax applies to it. The omitted line's present value = $150,000 x 0.5674 = $85,110, so corrected NPV = $214,890 + $85,110 = $300,000. Karim's memo should also strike the workbook's 25%-tax assumption on this line, which would have shaved the restoration to $63,833 and repeated a category error in the audit trail itself. Business interpretation: the retrofit's true value sits materially above the reported figure, widening its margin over Flash's 12.00% hurdle and changing the ranking conversation at the next capital meeting. A common trap is taxing the terminal recovery as though it were an operating gain.",
+    "ExplanationWrongA": "Choice A applies the 25% rate to a reversion that generates no income; $150,000 coming home is not revenue, so taxing it before discounting manufactures a phantom liability and understates the correction at $63,833 instead of the warranted $85,110.",
+    "ExplanationWrongB": "Choice B waves working capital out of scope entirely; the inception charge already sits in the model, so symmetry demands its return, and excluding reversions while booking investments systematically biases every Flash DCF downward without any analytical basis.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D double-counts, adding $85,110 twice as if two reversions were missed; the worksheet charged working capital once, so exactly one $150,000 restoration, worth $85,110 in present value, belongs in the repair, not a mirrored pair.",
+    "FormulaReference": "ID-01 NPV",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-162",
+    "Section": "E",
+    "Stem": "Internal auditor Yusuf Karim is reviewing the DCF worksheet behind Flash Warehousing's proposed automation retrofit. The model charges a $150,000 buildout of net working capital at inception and applies Flash's 12.00% rate with a Year 5 factor of 0.5674, reporting NPV of $214,890. Karim finds no line restoring the $150,000 working capital at the end of Year 5, and the workbook notes assume that recovery would be taxed at 25%. Which assessment should Karim document?",
+    "Topic": "E.162 nwc-recovery-omission",
+    "UniqueConceptKey": "E-162-terminal-working-capital-return",
+    "VerifiedChecks": [
+      "Recomputed: 150000 x 0.5674 = 85110; 214890 + 85110 = 300000; taxed variant 150000 x 0.75 x 0.5674 = 63833 rejected (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "U.S. federal tax rules (MACRS accelerated cost recovery; half-year convention)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Year 1: $30,000; Year 2: $48,000, reflecting the accelerated front-loading of deductions before the half-year wrap-up",
+      "B": "Year 1: $15,000; Year 2: $30,000, as if the press were straight-lined with a half-year dose in the first period",
+      "C": "Year 1: $120,000; Year 2: $192,000, entering the raw deductions themselves as cash savings",
+      "D": "Year 1: $0; Year 2: $30,000, deferring the entire first-year benefit into the second year under the convention"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Confusing the MACRS deduction with the after-tax shield",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "MACRS accelerates cost recovery by applying statutory percentages to the full basis: Year 1 deduction = 20.00% x $600,000 = $120,000, producing a tax shield of $120,000 x 25% = $30,000; Year 2 deduction = 32.00% x $600,000 = $192,000, producing $192,000 x 25% = $48,000. The half-year convention trims the first year's percentage and appends a sixth year at 5.76% so the schedule still sums to the full $600,000 basis and $150,000 of lifetime shields, but it does not halve the early percentages again. Business interpretation: Fontaine's calendar shows treasury collecting nearly a third of the lifetime benefit within 24 months of placement in service, cash that part-funds the purchase and must sit in the NPV model at the proper years. A common trap is substituting straight-line logic, or booking the deduction itself as cash, when reading MACRS tables into project cash flows.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B imports straight-line arithmetic, $60,000 of first-half-year depreciation and $120,000 thereafter, yielding $15,000 and $30,000 shields; the class is five-year MACRS, and the statute's 20.00%/32.00% front load, not book depreciation, sets the deductions.",
+    "ExplanationWrongC": "Choice C books the deductions themselves as cash, $120,000 and $192,000; depreciation saves taxes but does not create dollars, so each figure must pass through the 25% rate to become the $30,000 and $48,000 shields the schedule actually delivers.",
+    "ExplanationWrongD": "Choice D pushes the whole first-year shield into Year 2; the half-year convention shrinks Year 1's percentage to 20.00%, it does not zero it, and Year 2's shield stays at $48,000 rather than absorbing a displaced $30,000 on top of its own.",
+    "FormulaReference": "ID-07 MACRS",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-163",
+    "Section": "E",
+    "Stem": "Controller Alicia Fontaine schedules the tax-shield calendar for Flash Metalworks' $600,000 five-year-class press. Under MACRS with the half-year convention, the depreciation percentages are 20.00% in Year 1, 32.00% in Year 2, 19.20% in Year 3, 11.52% in Years 4 and 5, and 5.76% in Year 6, and Flash's tax rate is 25%. Which pair of first-two-year depreciation tax shields is correct?",
+    "Topic": "E.163 macrs-halfyear-shields",
+    "UniqueConceptKey": "E-163-accelerated-first-year-deduction",
+    "VerifiedChecks": [
+      "Recomputed: Y1 600000 x 0.20 x 0.25 = 30000; Y2 600000 x 0.32 x 0.25 = 48000; lifetime 600000 x 0.25 = 150000 (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting practice (accounting rate of return on average investment)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "15.42%, dividing annual income by the full $960,000 initial cost",
+      "B": "26.43%, dividing annual income by the $560,000 average of beginning and ending book values",
+      "C": "92.50%, dividing annual income by the $160,000 salvage proceeds",
+      "D": "18.50%, dividing annual income by the $800,000 depreciable base"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Dividing income by initial cost instead of average investment",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The accounting rate of return on the average-investment basis relates accrual income to the capital actually tied up over the asset's life: average investment = (initial cost + salvage) / 2 = ($960,000 + $160,000) / 2 = $560,000, and ARR = $148,000 / $560,000 = 26.43%. The measure deliberately uses midpoint book value because the investment base shrinks as the $200,000 annual depreciation accumulates; dividing by the untouched initial cost understates the return the deployed assets truly earn. Business interpretation: Lin's 26.43% lets the board compare the cell's accounting profitability against divisional return targets on a consistent basis, complementing rather than replacing the cash-flow metrics in the capital report. A common trap is reaching for the initial cost out of habit and reporting 15.42%, a figure that drifts lower the longer the asset list grows.",
+    "ExplanationWrongA": "Choice A freezes the denominator at day-one cost, ignoring four years of depreciation shrinkage; the average-basis definition exists precisely to center the base at $560,000, and the resulting 15.42% understates performance by eleven percentage points.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C divides by salvage alone, treating residual trade-in value as the entire investment base; $160,000 is what remains at the end, not what was committed throughout, so the 92.50% figure is an artifact of the smallest denominator available.",
+    "ExplanationWrongD": "Choice D uses the $800,000 depreciable base, a cost-accounting subtotal relevant to scheduling depreciation, not to measuring capital employed; income accrues against the full asset including its salvage-backed tail, giving 26.43% rather than 18.50%.",
+    "FormulaReference": "ID-08 ARR",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-164",
+    "Section": "E",
+    "Stem": "M&A director Grace Lin is scoring Flash Appliances' proposed assembly-cell purchase for the annual capital report. The cell costs $960,000, carries $160,000 salvage after four years, and is depreciated straight-line at $200,000 per year; projected after-tax net income is $148,000 in each of the four years. What is the accounting rate of return on the average-investment basis?",
+    "Topic": "E.164 arr-average-investment",
+    "UniqueConceptKey": "E-164-book-income-over-midbalance",
+    "VerifiedChecks": [
+      "Recomputed: average investment (960000 + 160000) / 2 = 560000; 148000 / 560000 = 0.264286 -> 26.43%; initial-basis variant 148000 / 960000 = 15.42% (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (certainty equivalent adjustment to the riskless rate)"
+    ],
+    "BlueprintDomain": "Investment Decisions",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$180,952, discounting the raw $1,240,000 inflow at the risk-free rate without applying the factor",
+      "B": "$312,169, dividing the inflow by 0.90 before discounting at 5.00%",
+      "C": "-$819,048, subtracting the outlay twice from the risk-free present value",
+      "D": "$62,857, converting the risky inflow to $1,116,000 certain and discounting at 5.00%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Discounting the raw risky cash flow without the CE factor",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The certainty equivalent method strips risk from the cash flow rather than inflating the discount rate: the risky $1,240,000 becomes a sure $1,240,000 x 0.90 = $1,116,000, which is then discounted at the 5.00% risk-free rate: $1,116,000 / 1.05 = $1,062,857, and certainty-equivalent NPV = $1,062,857 - $1,000,000 = $62,857. The 0.90 factor encodes how much guaranteed money management considers identical to the risky prospect, keeping the time-value mechanics pure at the riskless rate. Business interpretation: Lindqvist's $62,857 is the risk-consistent surplus, directly comparable with any other certainty-equivalized proposal in Flash Marine Systems' portfolio review. A common trap is skipping the factor and discounting the raw expectation, which launders risk out of the analysis and overstates NPV by $118,095 on this project alone.",
+    "ExplanationWrongA": "Choice A discounts the raw expectation at the riskless rate, pocketing the risk adjustment without performing it; the 0.90 factor exists because uncertain dollars are worth less than promised ones, and omitting it inflates NPV to $180,952.",
+    "ExplanationWrongB": "Choice B runs the factor backwards, dividing by 0.90 as though the certain amount exceeded the risky one; certainty equivalents shrink risky inflows, so multiplying to $1,116,000, not dividing toward $1,377,778, is the operative step before discounting.",
+    "ExplanationWrongC": "Choice C nets the $1,000,000 outlay twice, once inside the discounting step and again afterward; the outlay is subtracted exactly once, making the correct surplus $62,857 rather than the nonsensical -$819,048 shown here.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "ID-01 NPV",
+    "ItemStyle": "single-select",
+    "LOSTag": "E.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-E-165",
+    "Section": "E",
+    "Stem": "Treasury analyst Petra Lindqvist applies the certainty equivalent approach to a risky Year 1 cash flow for Flash Marine Systems' harbor sensors project: an expected inflow of $1,240,000, a certainty equivalent factor of 0.90, a 5.00% risk-free rate, and a $1,000,000 outlay today. What certainty-equivalent NPV should Lindqvist record?",
+    "Topic": "E.165 certainty-equivalent-npv",
+    "UniqueConceptKey": "E-165-risk-adjusted-equivalent-cash",
+    "VerifiedChecks": [
+      "Recomputed: 1240000 x 0.90 = 1116000; 1116000 / 1.05 = 1062857; 1062857 - 1000000 = 62857 (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  }
 ];

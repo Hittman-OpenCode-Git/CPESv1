@@ -1,3 +1,25 @@
+## P2-061 — Part 2 Authoring Program: 360 MCQs + 9 Cases (Cross-Reference) — 2026-08-25
+
+**Session:** P2-061 (Full Governance Lane — P2 packs + case packs only; zero Part 1 file changes)
+**Full entry:** `knowledge/REVISION_HISTORY_P2.md` §P2-061.
+
+**Summary:** Authored and integrated 360 MCQs (60 per pack in four 15-item waves via staged parallel subagents) targeting the 11 known LOS gaps, plus 9 new case studies (3 per case pack). Pool now 1,070 P2 MCQs (708 Certified / 360 Unprocessed / 2 Archived) and 24 cases (15 Certified / 9 Unprocessed). Per-wave gate harness + arithmetic spot-checks all verified; two DL-045 silent-empty agent results retried successfully. `preflight_p2` 0 divergences; `validate:p2` 1,070 items, 0 errors; P1 pool untouched (2620, 0 divergences); pipeline GREEN. All new content is Unprocessed — certification deferred to a future user-directed wave.
+
+**Backups:** `pack_p2_{a..f}.js.bak-w{1..4}-*`, `case_pack_p2_{1,2,3}.js.bak-cases-20260825203011`, ledger backups as listed in the full entry.
+
+---
+
+## P2-060 — Part 2 Certification Close-Out Wave (Cross-Reference) — 2026-08-25
+
+**Session:** P2-060 (Full Governance Lane — P2 packs + case pack only; zero Part 1 file changes)
+**Full entry:** `knowledge/REVISION_HISTORY_P2.md` §P2-060 (governing P2 ledger).
+
+**Summary:** Certified the 90 remaining Unprocessed flash-wave MCQs (six ≤15-item batches, one per pack) and the case trio CBQ21-B1/C1/E1 after independent certifier verification. Pool now 708 Certified / 710 total (2 Archived by design). Pre-flip repairs: F-065 rewritten to a distinct concept per the P2-051 mandated disposition; B-112/E-070 absolute-language distractor fixes; F-064 Analyze floor correction (DS 2→3). All 48 calculation items independently recomputed by the certifier this session; keys verified. `preflight_p2`: 0 divergences, guard 74/74. `validate:p2`: 710 items, 0 errors. P1 pool untouched: `preflight` 0 divergences, 2620 Certified unchanged.
+
+**Backups:** `pack_p2_{a..f}.js.bak-p2-060flip-20260825164251`, `REVISION_HISTORY_P2.md.bak-20260825164432`, `case_pack_p2_1.js.bak-p2-060postflip-20260825165229` (backup-sequence deviation on the case trio disclosed in the full entry).
+
+---
+
 ## S145 — Governance Rule Reconciliation: Rule 6/10 Split + AGENTS.md §1 Refresh — 2026-08-24
 
 **Session:** P2-051 (Full Governance Lane — guard logic + governance docs; zero pack content changes)
@@ -32407,3 +32429,9 @@ test:parser 20/20 · harness ALL GATES · validate Errors 0/WARN/exit 0 (warning
 
 **Revision recorded by:** Migration 3 closeout
 **Date:** 2026-08-24
+
+---
+
+## Session P2-064 — Cross-Reference (Part 2 Overnight Completion Program checkpoint)
+
+**Date:** 2026-08-26. Part 2 authoring session executed under Full Governance Lane per AGENTS.md/P2002. Added +180 Unprocessed P2 MCQs (six 15-item waves x 2 cycles) and +9 Unprocessed P2 cases (3 per case pack). All writes backed up (backups/*.bak-P2-064-*), validated pre-integration (contract gates + 27 arithmetic spot-checks all agreeing), integrated via orchestrator-only splice with post-parse assertions, and verified post-write (preflight_p2 0 divergences; validate:p2 ERROR 0; P1 preflight 0 divergences, Certified 2,620 unchanged; pipeline GREEN). Part 1 pool untouched. Full detail: knowledge/REVISION_HISTORY_P2.md "Session P2-064". This entry is a pointer only; the authoritative record lives in REVISION_HISTORY_P2.md.

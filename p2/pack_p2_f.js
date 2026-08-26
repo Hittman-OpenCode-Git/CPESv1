@@ -2212,7 +2212,8 @@ var pack_p2_f_questions = [
   "Four IMA standards correctly listed",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },  {
 "Authorities": [
   "IMA Statement of Ethical Professional Practice - Competence Standard"
@@ -2254,7 +2255,8 @@ var pack_p2_f_questions = [
   "Competence standard correctly applied to expertise gap",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2297,7 +2299,8 @@ var pack_p2_f_questions = [
   "Confidentiality exceptions (authorized/legally required) correctly stated",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2340,7 +2343,8 @@ var pack_p2_f_questions = [
   "Integrity standard conflict-mitigation rule correctly applied",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },  {
 "Authorities": [
   "IMA Statement of Ethical Professional Practice - Credibility Standard"
@@ -2382,7 +2386,8 @@ var pack_p2_f_questions = [
   "Credibility standard disclosure duty correctly applied",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2425,7 +2430,8 @@ var pack_p2_f_questions = [
   "Resolution order: next level when superior involved, then audit committee/board",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },  {
 "Authorities": [
   "IMA Statement of Ethical Professional Practice",
@@ -2468,7 +2474,8 @@ var pack_p2_f_questions = [
   "Fraud triangle legs correctly identified",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2512,7 +2519,8 @@ var pack_p2_f_questions = [
   "Fraud triangle opportunity correctly identified from control weakness",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },  {
 "Authorities": [
   "Sarbanes-Oxley Act of 2002"
@@ -2554,7 +2562,8 @@ var pack_p2_f_questions = [
   "SOX 301 independence and 407 financial-expert requirements stated",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2597,7 +2606,8 @@ var pack_p2_f_questions = [
   "FCPA anti-bribery and books-and-records provisions applied",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2640,7 +2650,8 @@ var pack_p2_f_questions = [
   "SOX whistleblower retaliation prohibition analyzed across pretexts",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },  {
 "Authorities": [
   "Sarbanes-Oxley Act of 2002",
@@ -2683,7 +2694,8 @@ var pack_p2_f_questions = [
   "Earnings management vs. fraudulent misstatement distinction applied",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -2727,7 +2739,8 @@ var pack_p2_f_questions = [
   "Tipping = insider trading; family/no-payment defenses correctly rejected",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },  {
 "Authorities": [
   "IMA Statement of Ethical Professional Practice - Credibility Standard"
@@ -2735,7 +2748,7 @@ var pack_p2_f_questions = [
 "BlueprintDomain": "Professional Ethics",
 "CalculationItem": false,
 "Choices": {
-  "A": "Use the data, because the manager has been with Flash for fifteen years and has never misreported before",
+  "A": "Use the data, because the manager has a fifteen-year spotless record at Flash",
   "B": "Use the data but write the report so that the numbers cannot be checked against a source",
   "C": "Verify the data against the ERP records and resolve the discrepancy with the manager before relying on it in the report",
   "D": "Forward the data to the CFO and let the CFO decide whether to trust the manager"
@@ -2743,8 +2756,8 @@ var pack_p2_f_questions = [
 "CognitiveLevel": "Analyze",
 "CommonTrapReference": "Substituting trust or delegation for verification of incentive-affected data",
 "CorrectChoice": "C",
-"Difficulty": "Moderate-Easy",
-"DifficultyScore": 2,
+"Difficulty": "Moderate",
+"DifficultyScore": 3,
 "ExplanationCorrect": "Professional skepticism is a questioning attitude that recognizes that incentives, such as a bonus tied to cost reduction, can bias the information people provide. The IMA Credibility standard requires the management accountant to communicate information fairly and objectively, which in practice means verifying information that matters before it enters a report. The controller must compare the submission against the ERP records and resolve the discrepancy with the manager, because a report built on unverified, incentive-affected data would mislead the board and other users. Trust in a long-serving employee is not a substitute for verification, and the controller cannot delegate the credibility obligation to the CFO.",
 "ExplanationWrongA": "A fifteen-year record of honesty reduces the prior likelihood of misreporting but does not eliminate it, and the credibility obligation requires the controller to communicate information fairly and objectively. Where data conflict with the ERP records and the source has a bonus incentive, verification is required, not assumed trust.",
 "ExplanationWrongB": "Drafting the report so the numbers cannot be traced to a source is the opposite of fair, objective communication and violates the Credibility standard, which requires accurate, complete information users can rely on. Unverifiable reporting would also fail Flash's internal control expectations.",
@@ -2765,11 +2778,12 @@ var pack_p2_f_questions = [
   "EW[CC] empty (DL-008)",
   "Non-CC EW slots >=75 chars (DL-026)",
   "No boilerplate (DL-013)",
-  "Difficulty justified (Analyze, incentive-bias judgment, Mod-Easy 2)",
+  "Difficulty justified (Analyze, incentive-bias judgment, Moderate 3)",
   "Professional skepticism under Credibility standard applied",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },  {
 "Authorities": [
   "IMA Statement of Ethical Professional Practice"
@@ -2777,21 +2791,21 @@ var pack_p2_f_questions = [
 "BlueprintDomain": "Professional Ethics",
 "CalculationItem": false,
 "Choices": {
-  "A": "Accept the CFO's decision, because he is the senior financial officer and owns revenue recognition at Flash",
-  "B": "Escalate the matter to the next level above the CFO, such as the audit committee or board, because the immediate superior is the person directing the practice",
-  "C": "Notify the external auditor immediately, before raising the issue anywhere else inside Flash",
-  "D": "Resign immediately and leave without documenting the issue"
+  "A": "Share the details openly, because the audit committee already knows about the practice and further disclosure can do no harm",
+  "B": "Decline to discuss specifics outside authorized channels, citing the confidentiality obligation, while continuing to cooperate fully with the committee's review",
+  "C": "Share the details, because the peer is also a management accountant bound by the same IMA ethics standards",
+  "D": "Resign before the review concludes so that she cannot be implicated in the misstatement"
 },
 "CognitiveLevel": "Evaluate",
-"CommonTrapReference": "Deferring to the superior who created the conflict or skipping internal escalation",
+"CommonTrapReference": "Treating confidentiality as lifted once internal escalation is complete",
 "CorrectChoice": "B",
 "Difficulty": "Difficult",
 "DifficultyScore": 4,
-"ExplanationCorrect": "Because the immediate superior is the person directing the questionable practice, the IMA resolution process directs the accountant to present the matter to the next higher managerial level rather than to the superior who created the conflict. Escalating to the audit committee or board is appropriate because revenue recognition is material and the CFO will not correct it. Notifying the external auditor before exhausting internal channels reverses the process, resignation without documentation abandons the duty to correct the misstatement, and accepting the CFO's decision leaves materially misstated revenue in Flash's financial statements. If the conflict remains unresolved after exhausting internal review, the controller may consult the IMA Ethics Helpline or an objective advisor, and resignation is the final option, documented and timed to protect the company's stakeholders.",
-"ExplanationWrongA": "The CFO does not have authority to direct a violation of GAAP, and accepting his decision would leave materially misstated revenue in Flash's statements. The IMA resolution process requires the accountant to act on the conflict by escalating it, because the immediate superior is the source of the practice.",
+"ExplanationCorrect": "Under the IMA Statement, management accountants must refrain from disclosing confidential information acquired in the course of their work except when authorized by the organization or required by law. Because Flash's escalation has already occurred and a formal committee review is underway, the controller should keep cooperating through authorized channels and decline to discuss specifics with outsiders; a confidential consultation with an objective advisor such as the IMA Ethics Helpline remains available if she needs guidance. Committee awareness does not lift her personal confidentiality duty, shared professional membership confers no disclosure authority, and resigning mid-review abandons the professional duty to see the misstatement corrected rather than resolving it. This course protects both the integrity of Flash's review and the controller's ethical obligations.",
+"ExplanationWrongA": "Committee awareness does not lift the controller's own confidentiality obligation under the IMA Statement. Disclosing specifics outside authorized channels while a review is underway can prejudice Flash's interests and taint the evidence, and the Statement permits communication of confidential matters only when authorized by the organization or legally required.",
 "ExplanationWrongB": "",
-"ExplanationWrongC": "The IMA resolution process requires internal escalation through the chain of command before external communication, with external avenues considered only after internal review is exhausted and consistently with legal requirements. Notifying the auditor first would bypass Flash's audit committee and board, which are the appropriate next stop.",
-"ExplanationWrongD": "Immediate resignation without documentation abandons the accountant's duty to have the misstatement corrected and deprives Flash's board of the information it needs to act. The IMA process treats resignation as a last resort, after internal escalation and consultation with appropriate advisors.",
+"ExplanationWrongC": "Common membership in the IMA does not create disclosure authority for either party. The confidentiality standard binds each member individually, and a peer outside Flash has no organizational authorization to receive the information; the lawful channels for the peer are public filings and Flash's own authorized communications, not the controller's private knowledge.",
+"ExplanationWrongD": "Resigning before the review concludes treats an unresolved ethical conflict as a personal escape instead of following the resolution process. The IMA Statement treats resignation as a documented last resort after internal avenues are exhausted, and abandoning the review deprives Flash's board of the cooperation needed to correct the misstatement.",
 "FormulaReference": "",
 "ItemStyle": "single-select",
 "LOSTag": "F.1",
@@ -2799,18 +2813,3903 @@ var pack_p2_f_questions = [
 "Part2OnlyFlag": true,
 "QuestionID": "P2-F-065",
 "Section": "F",
-"Stem": "The controller at Flash discovers that the CFO has been backdating sales invoices so that revenue from the first days of the following month is recognized in the current month. When the controller raised the issue, the CFO said the practice is fine and the sales team deserves the credit. The controller must now decide the next step. Which is the best action under the IMA resolution process?",
-"Topic": "F.065 ethical-dilemma-resolution-steps-application",
-"UniqueConceptKey": "F-065-dilemma-resolution",
+"Stem": "The controller at Flash has already escalated the CFO's invoice-backdating practice to the audit committee, and the committee's review is underway. During the review, a peer from an industry association asks the controller directly whether the rumors about Flash's revenue practices are true. What is the controller's best course of action under the IMA Statement of Ethical Professional Practice?",
+"Topic": "F.065 confidentiality-in-ethical-resolution",
+"UniqueConceptKey": "F-065-confidentiality-during-review",
 "VerifiedChecks": [
   "Part2OnlyFlag verified true",
   "EW[CC] empty (DL-008)",
   "Non-CC EW slots >=75 chars (DL-026)",
   "No boilerplate (DL-013)",
   "Difficulty justified (Evaluate, named decision-maker, competing alternatives, DiffScore 4)",
-  "Resolution process applied when immediate superior is the source of the practice",
+  "Confidentiality boundary applied during post-escalation review (distinct concept from F-056 escalation rule)",
   "Authorities match"
 ],
-"question_state": "Unprocessed"
-}
+"question_state": "Certified",
+    "certification_session": "P2-060"
+},
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Integrity standard)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Because all three bids pass through the same documented scoring rubric, the competitive process itself removes any concern about her investment.",
+      "B": "Her undisclosed ownership interest in a competing bidder creates a conflict of interest that threatens the Integrity standard and requires disclosure and withdrawal from the evaluation.",
+      "C": "A family member's employment with a bidder raises issues, but a passive equity holding is too small to influence anyone and therefore raises none.",
+      "D": "She should quietly steer the award to whichever bidder offers the lowest price so that no personal preference can affect the result."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Treating a conflict as cured by fair process instead of disclosure",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The governing principle is the Integrity standard of the IMA Statement of Ethical Professional Practice, which requires members to mitigate actual conflicts of interest and refrain from conduct that would compromise their ability to perform duties. Dana Okafor's 12% stake in Meridian Tooling gives her a direct financial interest in a $4.2 million award she personally controls as scoring chair. In business terms, an undisclosed stake exposes Flash to biased evaluation, reputational damage, and bid protests from losing suppliers; the required response is prompt written disclosure to Flash and withdrawal from the evaluation committee, not reliance on process design to neutralize the interest.",
+    "ExplanationWrongA": "Choice A treats the scoring rubric as a substitute for integrity. A documented process cannot cure a hidden personal financial interest held by the person who chairs the scoring; the misconception is that fair procedure eliminates the need for disclosure. The correct contrast is disclosure and recusal before the evaluation proceeds.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C dismisses a passive holding as too small to matter. Materiality of influence is judged by the potential to bias decisions and by appearance, not by share count alone, and the choice also wrongly narrows the issue to family employment. The correct view is that any undisclosed interest in a bidder conflicts with Integrity.",
+    "ExplanationWrongD": "Choice D proposes steering toward the low bid to mask the situation. Steering still manipulates the outcome, leaves the interest undisclosed, and substitutes one impropriety for another. The correct approach is transparent disclosure and removal from the decision rather than outcome engineering.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-066",
+    "Section": "F",
+    "Stem": "Flash, a diversified manufacturer, is awarding a $4.2 million contract for a new stamping line. Purchasing director Dana Okafor has not disclosed that she owns a 12% equity stake in Meridian Tooling, one of three bidders, and she chairs the bid-scoring committee. Under the IMA Statement of Ethical Professional Practice, which statement best identifies the ethical issue?",
+    "Topic": "F.066 supplier-conflict-of-interest",
+    "UniqueConceptKey": "F-066-supplier-conflict-interest",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Moderate: recognizing an undisclosed-interest conflict within a realistic procurement role)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Credibility standard)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Competence, because compiling accurate schedules according to law is what the standard demands of preparers.",
+      "B": "Confidentiality, because information about a customer's distress belongs to Flash and must be kept from outside parties.",
+      "C": "Credibility, which requires communicating information fairly and objectively and disclosing all relevant information that could reasonably be expected to influence the lender's understanding of the reports.",
+      "D": "Integrity, because sending a package that omits bad news would prejudicially affect her ability to perform her duties."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Confusing Credibility's full-disclosure duty with Confidentiality",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The Credibility standard governs communication: it requires members to communicate information fairly and objectively and to disclose all relevant information that could reasonably be expected to influence an intended user's understanding. A customer generating 18% of Flash's $210 million revenue who is paying 75 days late with bankruptcy risk is plainly relevant to a lender reading the compliance package. In context, omitting Halloran Retail Group's condition would render an otherwise accurate package misleading; Priya Chen must include appropriate disclosure of the concentration and its credit status even though the loan agreement does not compel it.",
+    "ExplanationWrongA": "Choice A invokes Competence, which covers performing duties in accordance with laws, regulations, and technical standards - the quality of the preparer's skills, not completeness of disclosure to a user. The misconception is treating accurate arithmetic as sufficient; Credibility supplies the disclosure duty the scenario requires.",
+    "ExplanationWrongB": "Choice B stretches Confidentiality into a reason to withhold. That standard restricts disclosure of confidential information to unauthorized parties, but a lender entitled to the compliance package is an authorized user, and Credibility still requires full relevant disclosure to that user.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D cites Integrity, whose focus is mitigating conflicts and refraining from compromising conduct, not the content communicated to report users. The trap is matching a virtue word to the wrong element; the communication defect in this stem is squarely a Credibility failure.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-067",
+    "Section": "F",
+    "Stem": "Controller Priya Chen is assembling Flash's annual lender compliance package. She knows that Halloran Retail Group, a customer representing 18% of Flash's $210 million revenue, has begun paying 75 days late and faces a possible bankruptcy filing. The loan agreement contains no customer-concentration disclosure requirement. Which standard of the IMA Statement of Ethical Professional Practice governs how Priya communicates this information in the package?",
+    "Topic": "F.067 credibility-full-disclosure",
+    "UniqueConceptKey": "F-067-credibility-disclosure",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Moderate-Easy: comprehension-level standard discrimination, capped at 2 per Rule 11)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (ethical decision-making model)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Identify the ethical issue and the parties affected, then assess how the relevant IMA standards and facts bear on the situation.",
+      "B": "Escalate the matter to Flash's audit committee, then document the issue in a memorandum to the file.",
+      "C": "Consider alternative courses of action and select one, then identify which ethical issue is actually present.",
+      "D": "Obtain a legal opinion on potential liability, then determine whether any ethical standard is implicated."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Memorizing outcomes before sequence; skipping the identify step",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The IMA ethical decision-making model begins by identifying the ethical issue - the facts, the parties affected, and the values at stake - and then assessing the situation, including which elements of the IMA Statement of Ethical Professional Practice are implicated. Only after identification and assessment does the model move to considering alternative courses of action, deciding, and reflecting on the outcome. Marcus Webb's training answer should therefore pair identification first with assessment second; escalation, documentation, and legal consultation come later in the resolution process or alongside it, never before the issue itself is defined.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B starts mid-resolution. Escalation to the audit committee is an act taken after an issue has been identified and assessed, so beginning there skips the model's defining first phase and produces an escalation path with nothing properly framed to escalate.",
+    "ExplanationWrongC": "Choice C reverses the order. Weighing alternatives presupposes a defined problem; selecting a remedy before identifying the issue invites solving the wrong problem. The model deliberately places identification and assessment ahead of the alternatives stage.",
+    "ExplanationWrongD": "Choice D leads with legal positioning. Consulting an attorney can be prudent during resolution, but the model opens with recognizing the ethical issue and the standards involved; leading with litigation exposure confuses legal defense with ethical analysis.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-068",
+    "Section": "F",
+    "Stem": "During Flash's annual ethics training, treasurer Marcus Webb must state the opening phases of the IMA ethical decision-making model in the correct order. Which sequence is correct?",
+    "Topic": "F.068 ethics-model-first-steps",
+    "UniqueConceptKey": "F-068-model-step-sequence",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Easy: direct recall of the model's opening sequence)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Confidentiality standard)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Salary negotiations are private commercial discussions, so describing project details to a prospective employer is an ordinary job-market practice.",
+      "B": "Confidentiality obligations attach to signed agreements, so once Ravi resigns he may use any Flash knowledge he carries in his memory.",
+      "C": "The recruiter created the problem by soliciting the information, so Ravi bears no responsibility unless he accepts the offer first.",
+      "D": "Disclosing the unannounced expansion would breach the Confidentiality standard, which continues to protect Flash's information after employment ends, so Ravi must decline to share it wherever he works next."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Assuming confidentiality duties end when employment does",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The Confidentiality standard obliges members to refrain from using confidential information for unethical advantage to achieve illegal or unethical ends and to keep such information protected except when authorized or legally required to disclose. Flash's unannounced $30 million battery-pack expansion is competitively sensitive information whose value survives Ravi Patel's departure. In context, trading it for a richer competing offer would harm Flash and constitute unethical advantage regardless of where he ultimately works; the ethical issue is the continuing reach of confidentiality into post-employment use of inside knowledge, and the correct response is to decline the solicitation outright.",
+    "ExplanationWrongA": "Choice A normalizes leaking strategy as market practice. Private bargaining does not authorize disclosure of an employer's unannounced capital plans; the misconception equates negotiation candor with permission. Confidentiality, not negotiation etiquette, controls the content Ravi may share.",
+    "ExplanationWrongB": "Choice B ties the duty to paper agreements and memory tricks. Confidentiality under the IMA Statement is a professional obligation that does not evaporate at resignation nor apply only to documents one keeps; departing employees remain barred from exploiting retained confidential knowledge.",
+    "ExplanationWrongC": "Choice C relocates all fault to the solicitor. Being asked for confidential information does create the pressure point, but the professional's duty attaches to his own conduct; declining the request is precisely the test the standard sets, whatever the recruiter's motives may be.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-069",
+    "Section": "F",
+    "Stem": "Flash FP&A analyst Ravi Patel is interviewed by a recruiter for a competitor. The recruiter hints that an offer will look better if Ravi can share details of Flash's unannounced $30 million battery-pack plant expansion, saying the information would prove his seniority on major projects. Which statement best identifies the ethical issue Ravi faces?",
+    "Topic": "F.069 confidentiality-after-employment",
+    "UniqueConceptKey": "F-069-confidentiality-persistence",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Moderate: applying confidentiality persistence to a post-employment pressure scenario)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "GRI Standards (framework reference)",
+      "SASB Standards (framework reference)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Because carbon neutrality mathematically requires gross emissions of zero, any use of purchased offsets voids the label and makes the report fraudulent.",
+      "B": "Rising emissions need no narrative context because sophisticated readers of sustainability reports compute trends themselves from the data tables.",
+      "C": "The headline rests on selective framing: absolute emissions grew materially, offsets neutralize only part of the footprint, and adverse metrics are omitted, so the presentation misleads readers about environmental performance despite technically arguable language.",
+      "D": "GRI Standards prohibit environmental marketing claims in corporate reports altogether, so publishing the headline breaches GRI regardless of the underlying data."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Accepting a headline claim without checking the underlying trend data",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Greenwashing risk arises when communication creates a misleading overall impression through selection, emphasis, or omission even where individual words are defensible. Here the 'carbon-neutral' headline conceals a 14% rise in gross emissions (82,000 to 93,480 metric tons CO2e), relies on purchased offsets covering only 60% of the footprint, and drops a deteriorating water-intensity metric - classic selective disclosure. Responsible frameworks such as GRI expect balanced reporting of favorable and unfavorable results with methodology disclosed. In context, Naomi Brandt should restate the claim showing gross emissions, offset coverage, and water trends together, or withdraw the neutrality framing entirely.",
+    "ExplanationWrongA": "Choice A invents a zero-emissions definition and jumps to fraud. Offset-supported neutrality claims can be legitimate when scope, coverage, and method are transparently disclosed; the defect here is selective presentation rather than offset use itself, and overstating the failure to 'fraud' misdirects the analysis.",
+    "ExplanationWrongB": "Choice B assumes reader sophistication substitutes for honest framing. Frameworks judge overall impression, not just arithmetic availability; burying a double-digit emissions increase beneath a neutrality banner exploits exactly the asymmetry that disclosure duties exist to correct.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D attributes a blanket prohibition to GRI. GRI promotes balanced, multi-stakeholder disclosure; it does not prohibit environmental claims categorically. The report's actual problem is imbalance and omission - a subtler and more instructive failure than a fabricated rule violation.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-070",
+    "Section": "F",
+    "Stem": "Flash's first sustainability report headlines 'carbon-neutral manufacturing operations.' Sustainability lead Naomi Brandt's supporting data show Scope 1 and 2 emissions rising 14% year over year, from 82,000 to 93,480 metric tons of CO2-equivalent; purchased offsets cover 60% of the current figure; and the report omits water intensity, which deteriorated sharply. Evaluating the report against responsible ESG-reporting practice, which analysis is most accurate?",
+    "Topic": "F.070 carbon-neutral-greenwashing",
+    "UniqueConceptKey": "F-070-greenwashing-selective-disclosure",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Difficult: weighing partial truths across several disclosures to diagnose misleading impression; Analyze floor met)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false); trend check 82,000 x 1.14 = 93,480 consistent",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (ethical decision-making model)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Resign from Flash immediately and publish the excluded evidence so the market learns of the reserve weakness without delay.",
+      "B": "Consider alternative courses of action available to her - such as raising the omission with her manager's supervisor or Flash's audit committee - and evaluate each option's consequences against the standards before deciding and acting.",
+      "C": "Report the exclusion directly to the securities regulator, since internal channels are compromised whenever a manager initiates an omission.",
+      "D": "Comply with the direction, because briefing content belongs to the manager and the internal auditor's obligation stops at preparing what is requested."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Jumping to resignation or external reporting before internal alternatives",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "After identifying the issue and assessing the standards implicated, the IMA decision model directs the member to consider alternative courses of action and their consequences before deciding and acting. For Grace Lin, the legitimate alternatives include internal escalation above the involved manager - the supervisor, audit committee, or ethics channel - supported by documentation, with objective advisers such as IMA's ethics helpline available as a resource. Immediate resignation with publication and regulatory referral skip the deliberation phase entirely, while quiet compliance abandons the standards altogether. The model's discipline is to generate and weigh defensible options first, then act on the strongest among them.",
+    "ExplanationWrongA": "Choice A leaps past consideration of alternatives to the terminal remedies. Resigning and publishing impose maximal personal and organizational cost without testing internal channels, and public disclosure of unaudited reserve views may itself mislead markets - the opposite of the model's careful sequencing.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C presumes internal channels are exhausted when they have not been tried. External reporting is a last resort after escalation fails; jumping to the regulator forfeits the organization's chance to correct the packet and ignores the model's explicit ordering of alternatives.",
+    "ExplanationWrongD": "Choice D converts role boundaries into abdication. Preparing what is requested does not license participating in misleading a board; Credibility requires complete, objective communication, and the auditor who complies becomes an instrument of the very omission she identified.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-071",
+    "Section": "F",
+    "Stem": "Flash internal auditor Grace Lin has identified an ethical conflict: her manager directed her to exclude evidence of warranty-reserve deterioration from a board briefing packet. She has identified the issue and confirmed it implicates the Credibility and Integrity standards. Applying the next phase of the IMA ethical decision-making model, what should Grace do now?",
+    "Topic": "F.071 decision-model-alternatives-step",
+    "UniqueConceptKey": "F-071-model-alternative-courses",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Moderate-Easy: single-step application of the model's alternatives phase, capped at 2)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "SOX Section 302",
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Allow the December entries to stand and reverse them in early January, preserving the covenant calculation while correcting the record within weeks.",
+      "B": "Resign from Flash at once without documenting the entries or alerting anyone, avoiding personal certification exposure while leaving the matter with management.",
+      "C": "Take no action before the external audit fieldwork begins, trusting the engagement team's cut-off testing to surface and challenge the bill-and-hold population.",
+      "D": "Document the evidence and his objection, decline to support the misstated figures, and escalate to the audit committee chair under Flash's escalation policy and SOX Section 302 responsibilities, retaining counsel if internal resolution fails."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Reversing the entry later as if timing cures intentional misstatement",
+    "CorrectChoice": "D",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Bill-and-hold revenue without customer acceptance or transfer of control fails revenue recognition criteria, and booking $6.5 million of it to satisfy a leverage covenant is fraudulent financial reporting. As controller and a Section 302 certifier, Marcus Webb personally attests that the reports are fair and internally controlled, so acquiescence - even with planned reversal - makes him party to deception of lenders at the reporting date. The IMA Statement requires refusing complicity and escalating through defined channels; SOX reinforces certification accountability. Documenting evidence, formally dissenting, and escalating to the audit committee chair protects Flash, investors, and Webb simultaneously, with counsel as backup if resolution stalls.",
+    "ExplanationWrongA": "Choice A treats scheduled reversal as an antidote. A known intentional overstatement in certified year-end statements is misrepresentation when made, whatever happens in January; lenders relying on covenant math at the reporting date are deceived, and the certifier's attestation is false on its face.",
+    "ExplanationWrongB": "Choice B mistakes flight for responsibility. Resignation without documentation or escalation abandons investors to the scheme and does not discharge a certifier's obligations; regulators and courts examine what an officer knew and did, not merely where he worked afterward.",
+    "ExplanationWrongC": "Choice C outsources the controller's duty to the auditors' sampling. Cut-off testing can miss staged-goods bill-and-hold precisely because files look orderly; knowing silence while hoping for detection converts the controller from gatekeeper into bystander in a covenant-driven scheme.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-072",
+    "Section": "F",
+    "Stem": "On December 29, Flash controller Marcus Webb discovers that CFO Diane Reinhart directed staff to book $6.5 million of bill-and-hold revenue with no customer acceptance and goods staged in leased warehouse space - enough to keep Flash's leverage covenant satisfied at year-end. Diane argues the arrangements will be honored and reversed if deals slip. As controller and a Section 302 certifier weighing four individually arguable responses, which course of action should Marcus take?",
+    "Topic": "F.072 fraudulent-revenue-response",
+    "UniqueConceptKey": "F-072-misstatement-escalation-choice",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Very Difficult: named certifier evaluates four defensible-seeming responses under SOX and IMA duties; Evaluate floor met)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Integrity standard)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Decline the tickets and the hosted tour while the vendor's proposal is under review, disclose the offer under Flash's gift policy, and document the declination.",
+      "B": "Accept the tour because its technical content genuinely improves her evaluation expertise, provided she pays for her own dinner.",
+      "C": "Accept the gifts personally and compensate by scoring that vendor's bid more harshly than its merits warrant.",
+      "D": "Return the tickets but keep the dinner invitation, reasoning that hospitality beneath any published dollar threshold cannot compromise objectivity."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Valuing educational benefit over the appearance of compromised judgment",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The Integrity standard requires members to mitigate actual conflicts of interest, refuse gifts that appear to influence their actions, and refrain from conduct that would prejudice their ability to carry out duties ethically. Accepting vendor hospitality during a live $2.8 million bid evaluation creates both an influence risk and the appearance of compromised judgment, whatever Alicia Moreno's subjective confidence in her own objectivity. Declining while the evaluation is pending, disclosing the offer under Flash's gift policy, and documenting the response preserve both the reality and the perception of impartial scoring. In context, Flash's ability to defend the award against vendor protests depends on evaluators whose independence is clean in fact and in appearance.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B prices integrity by educational value. Genuine learning does not neutralize a benefit flowing from a party whose bid she scores; the misconception separates content from source, while Integrity examines the relationship the gift creates, and partial reimbursement does not cure acceptance during an active bid.",
+    "ExplanationWrongC": "Choice C answers generosity with bias in the opposite direction. Deliberately underrating a bidder is itself a distorted evaluation that compounds concealment with manipulation; the standard demands unbiased scoring, not offsetting prejudice, and the undisclosed gifts still taint the process.",
+    "ExplanationWrongD": "Choice D worships dollar thresholds. Appearance-based standards limit gifts by context - here an active bid - not merely by price, and hunting for a ceiling beneath which objectivity is assumed safe invites incremental erosion; the pending evaluation disqualifies the hospitality entirely.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-073",
+    "Section": "F",
+    "Stem": "Flash plant controller Alicia Moreno is scoring bids for a $2.8 million CNC retrofit. During the evaluation window, the favored vendor sends her premium concert tickets and an all-expenses-paid factory tour, calling them 'relationship building.' Which response aligns with the Integrity standard of the IMA Statement of Ethical Professional Practice?",
+    "Topic": "F.073 integrity-vendor-gifts",
+    "UniqueConceptKey": "F-073-integrity-gift-policy",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Moderate: applied recognition of appearance-based integrity duties in live procurement)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The findings form a mutually reinforcing red-flag cluster - threshold-splitting, undocumented sole-sourcing, and an undisclosed related-party vendor - whose joint probability under innocent explanations is remote, warranting an immediate fraud investigation and interview program.",
+      "B": "Paired invoicing simply mirrors Northgate Components' shipping schedule, so the invoice amounts are a logistics artifact rather than a control signal.",
+      "C": "Engineering's specification choices justify sole sourcing by definition, so the award growth requires no corroboration and the remaining observations are administrative noise.",
+      "D": "The missing rejection rationale is a paperwork lapse common in busy quarters, and addressing the clerk's filing backlog resolves everything the review surfaced."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Judging each anomaly in isolation instead of as a linked pattern",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Fraud analytics evaluate patterns jointly, because individual anomalies each admit innocent readings while combinations rarely do. Here, splitting purchases into paired $4,850 invoices evades Flash's $5,000 secondary-signature threshold; rapid sole-source growth to Northgate Components defeats competitive tension; the registered-agent address matching the buyer's cousin supplies a possible concealed-benefit channel; and the undocumented rejection of the lowest responsive bid removes the counterweight that would legitimize sole sourcing. Together these indicate a probable kickback arrangement. Tom Reyes should escalate to forensic review, preserve records, expand testing across the buyer's full portfolio, and conduct interviews under protocol rather than accept benign single-cause stories.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B launders the strongest quantitative signal into logistics. Shipping schedules do not explain amounts engineered to $150 beneath the exact approval threshold, repeatedly; the misconception accepts the first convenient cause instead of asking who benefits from that precise structure.",
+    "ExplanationWrongC": "Choice C lets an unsupported assertion substitute for evidence. Specifications may constrain sourcing, but definitional reasoning skips corroboration and ignores the related-party address and threshold splits that pure engineering necessity cannot touch; due diligence tests assertions rather than adopting them.",
+    "ExplanationWrongD": "Choice D isolates the weakest thread to unravel none. Missing rationales do occur innocently, yet treating the entire cluster as filing disorder ignores the convergence of motive, mechanism, and concealment; clearing a backlog changes none of the economics the data describe.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-074",
+    "Section": "F",
+    "Stem": "Flash internal audit manager Tom Reyes reviews procurement records: one senior buyer approved a tripling of sole-source awards to Northgate Components in eighteen months; Northgate invoices arrive in paired amounts of $4,850 each, just beneath Flash's $5,000 single-signature threshold; Northgate's registered agent address matches the buyer's cousin's residence; and the buyer rejected the lowest responsive bid without any documented rationale. Which conclusion best analyzes these findings?",
+    "Topic": "F.074 procurement-kickback-pattern",
+    "UniqueConceptKey": "F-074-kickback-red-flag-cluster",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Difficult: synthesizing four independent indicators into one inference; Analyze floor met)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false); threshold check 4,850 < 5,000 consistent",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Foreign Corrupt Practices Act (FCPA)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Both requests are bribery of foreign officials and neither amount may be paid under any labeling.",
+      "B": "The $40,000 retainer is permissible because it is documented as consulting services with a signed agreement and deliverables.",
+      "C": "The $250 charge may qualify as a facilitation payment expediting nondiscretionary routine governmental action, while the $40,000 retainer to influence discretionary licensing is an improper payment the FCPA prohibits.",
+      "D": "The FCPA reaches only payments above $10,000, so the $250 is lawful by size and only the retainer needs legal review."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Applying the facilitation-payment exception to discretionary licenses",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The FCPA's anti-bribery provisions prohibit corrupt payments to foreign officials to obtain or retain business or influence discretionary acts, while expressly excepting facilitating ('grease') payments whose purpose is to expedite nondiscretionary, routine governmental actions the official is already bound to perform. The $250 requested for mandated routine customs document processing fits the exception's profile. The $40,000 ministerial retainer targets a discretionary factory-license decision - a textbook prohibited payment regardless of consulting paperwork. Substance controls over labels: Daniel Kwon may pay the expedite fee per company policy with documentation, and must reject the retainer proposal and route it to legal and compliance escalation.",
+    "ExplanationWrongA": "Choice A erases the statutory exception. Treating the grease-payment carve-out as nonexistent overcomplies the statute into something it is not; the FCPA distinguishes bribes seeking discretionary advantage from fees expediting routine acts, and the customs charge sits on the routine side of that line.",
+    "ExplanationWrongB": "Choice B trusts paperwork over purpose. Signed deliverables cannot convert a payment aimed at influencing a discretionary license into consulting; the FCPA looks to corrupt intent and the official's leverage, so cosmetic contracting deepens rather than cures the violation.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D invents a de minimis floor. The statute contains no $10,000 threshold; small corrupt payments violate it as surely as large ones, and size-based reasoning would bless petty bribery while mislabeling the real dividing line between routine and discretionary government action.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-075",
+    "Section": "F",
+    "Stem": "Flash regional vice president Daniel Kwon oversees a subsidiary clearing imported components worth $1.1 million. A customs officer requests $250 to perform routine, nondiscretionary document processing that the tariff schedule already requires without delay. Separately, a government minister proposes a $40,000 'consulting retainer' to help Flash obtain a discretionary new factory license. Under the FCPA, how should Daniel classify the two payments?",
+    "Topic": "F.075 fcpa-facilitation-vs-bribe",
+    "UniqueConceptKey": "F-075-fcpa-grease-payment-boundary",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Moderate: boundary application of the facilitation-payment exception versus prohibited influence)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "SASB Standards (framework reference)",
+      "GRI Standards (framework reference)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "GRI organizes its standards by industry and concentrates on financially material topics selected for investor decision-making.",
+      "B": "SASB standards are industry-specific and target sustainability information that is financially material to investors, whereas GRI addresses an organization's impacts on the economy, environment, and people for a broader multi-stakeholder audience.",
+      "C": "Both frameworks require independent assurance of every disclosed metric before publication, differing mainly in geographic origin.",
+      "D": "SASB limits its coverage to climate metrics, leaving social and governance topics exclusively to other bodies."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Swapping GRI's multi-stakeholder lens with SASB's investor materiality",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The two dominant voluntary frameworks answer different questions. SASB sets industry-specific standards identifying sustainability factors reasonably likely to affect financial condition and operating performance - enterprise value - serving investors under a financial-materiality lens. GRI takes an impact-materiality perspective, reporting how the organization affects the economy, environment, and people, including human rights, for stakeholders broadly. For Flash, the choice follows audience: investor-facing capital-markets narratives lean SASB, comprehensive stakeholder accountability leans GRI, and many reporters blend both. Elena Vasquez should map Flash's material topics against the chosen framework's industry standard rather than assume the two are interchangeable labels for the same content.",
+    "ExplanationWrongA": "Choice A swaps the frameworks wholesale. Industry organization and investor financial materiality describe SASB, not GRI; assigning them backwards signals rote confusion between impact lens and value lens, the most common mix-up tested on this comparison.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C fabricates an assurance mandate. Voluntary adoption of either framework carries no universal requirement for independent assurance of all metrics; conflating emerging assurance practice with framework design misstates what publication itself demands of a reporter.",
+    "ExplanationWrongD": "Choice D shrinks SASB to climate. Its industry standards span environmental, social, and governance dimensions - labor practices, data security, and product stewardship among them - so excluding S and G topics misdescribes the architecture Elena would actually be adopting.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-076",
+    "Section": "F",
+    "Stem": "Flash CFO Elena Vasquez is deciding which sustainability framework should anchor Flash's first ESG disclosure and asks her team to explain how the GRI and SASB standards differ in orientation. Which characterization is correct?",
+    "Topic": "F.076 sasb-versus-gri-lens",
+    "UniqueConceptKey": "F-076-sasb-gri-materiality",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Moderate-Easy: comprehension-level discrimination between two named frameworks, capped at 2)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Fraud Triangle (Cressey)",
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "All three Cressey elements are demonstrably present - covenant-driven incentive pressure, opportunity embedded in concentrated journal-entry authority with unchecked system access, and rationalization framing the override as protective - so Flash faces elevated fraudulent-financial-reporting risk demanding compensating controls.",
+      "B": "Covenant pressure reflects ordinary business conditions rather than any fraud element, leaving opportunity as the single factor the memo actually establishes.",
+      "C": "A rationalization element cannot exist where managers sincerely believe their own justification, because sincere belief negates the consciousness of wrongdoing the element requires.",
+      "D": "The Cressey triangle was developed for asset misappropriation by lower-level employees and does not extend to top-management financial-reporting fraud."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Mapping pressure away as normal business and missing rationalization",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The Cressey fraud triangle posits that fraud emerges from the combination of pressure, opportunity, and rationalization. Sabine Keller's memo evidences each element: the leverage covenant supplies acute incentive pressure tied to a specific accounting outcome at a specific date; dual-role accountants holding both journal approval authority and unrestricted ledger access create the opportunity to execute and conceal entries; and the job-protection refrain institutionalizes rationalization before any entry is booked. Top-management financial reporting fraud is precisely the triangle's paradigm case, with rationalization often sincere. Raymond Osei should read the environment as high-risk and respond with compensating controls: segregate journal approval from access administration, mandate independent review of manual entries, and monitor covenant-proximity adjustments closely.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B waves away pressure as business-as-usual. Ordinary conditions become fraud-relevant pressure when they concentrate incentives on a specific accounting outcome at a specific date, as covenants do; discounting the first leg collapses the diagnostic and understates aggregate reporting risk.",
+    "ExplanationWrongC": "Choice C misunderstands rationalization as insincerity. The element describes the story that makes misconduct feel acceptable to its teller - sincerity strengthens rather than negates it; believing one's own protective framing is precisely how otherwise-honest executives authorize temporary entries that harden into fraud.",
+    "ExplanationWrongD": "Choice D misfiles the triangle by perpetrator level. Cressey's model explains trust-violating crime generally and applies squarely to management-overridden financial reporting, where pressure, opportunity, and rationalization operate at executive scale rather than being confined to employee theft.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-077",
+    "Section": "F",
+    "Stem": "Audit committee chair Raymond Osei asks Flash CFO Sabine Keller to assess year-end reporting risk. Sabine's memo documents: a leverage covenant Flash will breach unless EBITDA improves by quarter-end; journal-entry approval authority concentrated in two senior accountants who also hold unrestricted ledger-access rights; and a widely repeated management refrain that 'a temporary reclassification protects two hundred jobs until Q1 rebounds.' Which evaluation correctly maps this environment to the fraud triangle?",
+    "Topic": "F.077 fraud-triangle-assessment",
+    "UniqueConceptKey": "F-077-fraud-triangle-elements",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Very Difficult: evaluating competing readings of three documented conditions against a behavioral model; Evaluate floor met)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Integrity and Competence standards)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Capitalizing advertising is a recognized accounting option whenever benefits extend beyond year-end, so Kurt's proposal is an ordinary judgment call rather than an ethics issue.",
+      "B": "Bonus-plan architecture creates the incentive, so responsibility for how targets get met rests with compensation design and not with the controller who books the entries.",
+      "C": "The adjustment is acceptable because it self-corrects when February spending is charged, meaning no user of the December statements is actually harmed.",
+      "D": "Two intertwined issues are present - incentive pressure aimed at a personal threshold and intentional misclassification of a period cost to manufacture the missing $1.8 million - creating an integrity risk Elena must resist and escalate regardless of the reversal argument."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Calling an intent-driven reclass a neutral accounting judgment",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Advertising expended to generate current-period sales is a period cost; deferring $1.8 million of it without genuine asset criteria manufactures the exact income needed for Elena Marchetti's bonus, converting an accounting label into an earnings-management device. Intent distinguishes judgment from manipulation: Kurt Aldrich's own framing - that the reclass lifts income to exactly $48.0 million - announces the purpose, bridging the gap from the $46.2 million forecast to the threshold. Planned reversal does not cure misrepresentation at the reporting date any more than timing arguments do elsewhere. Under the IMA Statement, Elena should refuse the entry, document the discussion, and escalate; her compensation pressure heightens rather than excuses the duty.",
+    "ExplanationWrongA": "Choice A dresses the reclass in legitimacy. Deferral requires an identifiable future benefit consumed systematically, not a hope that February will reuse the creative; the proposal's arithmetic target betrays purpose, and calling purposeful misclassification a judgment call erases the line the standards draw.",
+    "ExplanationWrongB": "Choice B diffuses accountability into plan design. Compensation structures create temptation throughout corporate life; they do not transfer authorship of entries to HR. The controller who records a misstatement owns it professionally, and incentive presence is a risk factor, never an alibi.",
+    "ExplanationWrongC": "Choice C leans on reversibility. Users pricing Flash's December performance - the board, lenders, and bonus committee - consume the inflated figure when it matters; later correction restores history but not the interim decisions, which is why timing arguments fail in every reporting-fraud pattern.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-078",
+    "Section": "F",
+    "Stem": "Flash electronics division controller Elena Marchetti forecasts $46.2 million division operating income against a $48.0 million threshold that triggers her annual bonus. Division VP Kurt Aldrich proposes reclassifying $1.8 million of fourth-quarter advertising from operating expense to prepaid assets, observing that the campaign runs again in February and that the move lifts income to exactly $48.0 million. Analyzing the proposal, which statement is most accurate?",
+    "Topic": "F.078 bonus-threshold-manipulation",
+    "UniqueConceptKey": "F-078-incentive-pressure-misclassification",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Moderate: decomposing a proposal into incentive-pressure and misclassification components; Analyze floor met)",
+      "Arithmetic check: 46.2M + 1.8M = 48.0M threshold exactly met (independently recomputed twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Competence standard)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Delegate the schedules to a rotating intern and approve the output on the strength of the intern's coursework in leases.",
+      "B": "Complete targeted training on the new standard, consult authoritative guidance and Flash's technical accounting group, and build the schedules with reviewed support before finalizing.",
+      "C": "Prepare the schedules using prior-guidance conventions to save time, since the underlying contracts themselves have not changed.",
+      "D": "Prioritize delivery speed and leave substantive accuracy questions for the external audit team to raise during fieldwork."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Equating delegation with competence maintenance under new standards",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The Competence standard requires members to maintain appropriate professional expertise, perform duties in accordance with laws, regulations, and technical standards, and provide decision-support information that is accurate, clear, and credible. Facing a changed technical standard, Jordan Ellis builds competence deliberately - targeted training, authoritative consultation, and reviewed workpapers - so the lease schedules meet the standard as it now stands. Delegating to unqualified staff, freezing prior practice, or outsourcing accuracy to auditors each breach the duty to perform according to current technical requirements. In context, first-time adoption schedules feed covenant calculations and planning models, raising the stakes of preparer competence well beyond routine bookkeeping.",
+    "ExplanationWrongA": "Choice A substitutes delegation for development. Approving an intern's coursework as the control over covenant-relevant schedules abdicates the professional's own expertise requirement; supervision means reviewing qualified work, not laundering inexperience through a sign-off.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C freezes outdated practice. Unchanged contracts do not make unchanged accounting - the standard, not the document, defines recognition and measurement; relying on old conventions violates the duty to follow current technical standards precisely when they have moved.",
+    "ExplanationWrongD": "Choice D reassigns competence to the auditors. External teams test rather than author the client's schedules; delivering known-unverified work transfers the detection burden to a sampled process and breaches the credibility owed to the internal users who act on the numbers first.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-079",
+    "Section": "F",
+    "Stem": "Flash staff accountant Jordan Ellis is assigned to prepare Flash's first lessee accounting schedules under the newly effective lease standard, having previously worked only under prior lease guidance. Which action best reflects the Competence standard of the IMA Statement of Ethical Professional Practice?",
+    "Topic": "F.079 competence-new-standard-training",
+    "UniqueConceptKey": "F-079-competence-training-duty",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Easy: recognizes the competence-building response among plainly deficient alternatives)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Resolution of Ethical Conflict)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Raise the discrepancy openly at the next treasury staff meeting, pressing Lena Croft to correct the entry in front of her peers.",
+      "B": "Send an anonymous package documenting the misclassification to a financial journalist so public scrutiny forces Flash to restate division results.",
+      "C": "Except where policy or law directs otherwise, present the documented facts to the next higher managerial level not implicated in the conflict - Flash's corporate treasurer or audit committee - and seek counsel from an objective adviser such as IMA's ethics helpline while preserving his evidence.",
+      "D": "Book a silent correcting entry reversing the misclassification and inform no one, reasoning that restored ledgers resolve the issue without confrontation."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Escalating externally or confronting peers before policy channels",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The IMA Statement's resolution guidance directs the member to follow established policy first, then present the documented facts to the next higher managerial level not involved in the ethical conflict, consult objective advisers - including IMA's ethics helpline or, where appropriate, legal counsel - and retain documentation throughout. With his supervisor Lena Croft implicated in the $900 thousand intercompany misclassification reported to the bank syndicate, Omar Hadi's proper channel bypasses her to Flash's corporate treasurer or audit committee. Public confrontation, media leakage, and silent self-help each abandon the sequence: the first stages theater instead of resolution, the second escalates externally before internal levels are exhausted, and the third conceals a live control breakdown from those accountable for fixing it.",
+    "ExplanationWrongA": "Choice A chooses theater over procedure. Peer-level confrontation of a superior implicated in the conflict invites retaliation, contaminates witnesses, and bypasses the designated escalation tier; effectiveness rather than visibility is what the resolution sequence is built to protect.",
+    "ExplanationWrongB": "Choice B spends external ammunition first. Media disclosure of preliminary, unaudited findings may itself misinform syndicate markets and forfeits Flash's chance to correct; external escalation is the model's last resort once internal levels fail, not its opening move.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D plays lone restorer. Secretly reversing entries conceals an active misclassification attempt from those who must fix the control environment, leaves the perpetrator undiscovered, and inserts unauthorized edits into records the analyst does not own - three failures dressed as one fix.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-080",
+    "Section": "F",
+    "Stem": "Flash treasury analyst Omar Hadi discovers that assistant treasurer Lena Croft recorded a $900 thousand intercompany funding transfer as interest expense, shifting profit between two divisions whose separate quarterly results Flash's bank syndicate receives. Omar has identified the issue, matched it to the Integrity and Credibility standards, and confirmed his direct supervisor participates in the misclassification. Following the IMA model's resolution sequence, which course is consistent with the model?",
+    "Topic": "F.080 escalation-path-application",
+    "UniqueConceptKey": "F-080-higher-level-escalation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Difficult: sequencing resolution steps correctly amid supervisor involvement and tempting shortcuts; Apply at depth)",
+      "Conceptual item - no arithmetic to recompute (CalculationItem false)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-081",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.2",
+    "Topic": "F.081 revenue-recognition-return-rights",
+    "UniqueConceptKey": "F-081-substantive-return-rights",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "ASC 606 (Revenue from Contracts with Customers)",
+      "IMA Statement of Ethical Professional Practice (Honesty, Credibility)"
+    ],
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CommonTrapReference": "Treating physical shipment alone as control transfer under ASC 606",
+    "Stem": "Flash Industries, a diversified manufacturer with $480 million in annual sales, closes its fiscal year on December 31. On December 28, CFO Elena Vasquez directs assistant controller Derek Osei to record $3.2 million of shipments sent to regional distributors as December revenue. The distributors signed only non-binding letters of intent, hold unilateral rights to return unsold units through February, and Flash's historical return rate on such programs runs near 18 percent. Vasquez explains the entry is needed to keep reported growth above the level analysts expect. Which analysis most accurately characterizes the ethical issue Osei faces?",
+    "Choices": {
+      "A": "The entry is acceptable under ASC 606 because physical shipment occurred in December, and the return rights merely represent ordinary credit risk.",
+      "B": "The letters of intent eliminate the ethical concern because they document customer commitment before year-end.",
+      "C": "Booking revenue while substantive return rights and non-binding commitments exist front-loads income into the current period and misrepresents sustainable earning power to investors and lenders.",
+      "D": "The arrangement raises mainly a customs and logistics documentation issue rather than a financial reporting ethics matter."
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The governing standard is ASC 606, which recognizes revenue when control transfers, and substantive return rights restrict recognition to amounts not expected to be returned. With non-binding letters of intent, February return rights, and an 18 percent historical return rate, the $3.2 million fails the recognition criteria; recording it inflates fourth-quarter revenue by roughly $2.62 million net of expected returns (3,200,000 minus 576,000) and pulls forward income belonging to the following year. Under the IMA Statement's honesty and credibility standards, Osei must decline to record the entry as instructed and raise the matter through Flash's resolution channels. Business interpretation: analysts and lenders relying on the reported growth rate would be misled about demand actually earned by year-end, and the distortion reverses next quarter when returns arrive.",
+    "ExplanationWrongA": "Choice A is wrong because ASC 606 looks to transfer of control, not physical movement alone; substantive return rights and a non-binding commitment mean control has not reliably passed to the distributors. The misconception is that shipment equals sale, whereas expected returns and enforceable customer acceptance determine when recognition is permitted.",
+    "ExplanationWrongB": "Choice B is wrong because letters of intent are non-binding and provide no enforceable satisfaction of a performance obligation; a signature page does not convert unearned shipments into revenue. The misconception equates documentation with revenue quality, while ASC 606 requires actual transfer of control free of substantive return rights.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D is wrong because the defect sits in revenue measurement and honest representation, not trade paperwork; customs files could be flawless and the misstatement would remain intact. The misconception narrows ethics to operational compliance, whereas the IMA honesty standard reaches any distortion of results shown to markets and lenders.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-factor ASC 606 return-rights analysis across competing rationales supports Difficult/Analyze",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-082",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.3",
+    "Topic": "F.082 objective-advisor-consultation",
+    "UniqueConceptKey": "F-082-impartial-advisor-step",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Resolution of Ethical Conflict)"
+    ],
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Skipping impartial consultation and confronting the accused directly",
+    "Stem": "Flash treasury analyst Sofia Brandt notices that Midwest division rebate credits from a major customer were recorded as reductions of cost of goods sold in the division's books but excluded when computing the division general manager's incentive pool, adding about $340,000 to the payout. When she raised the discrepancy with the division controller, she was told the treatment follows a long-standing local convention. Uncertain whether the practice is a defensible policy nuance or an integrity violation, Brandt is deciding what to do next. Which action is most consistent with the IMA Statement's guidance on resolving ethical conflict?",
+    "Choices": {
+      "A": "Consult an objective advisor with no stake in the outcome, such as Flash's ethics counsel or an impartial professional resource, to clarify available courses of action before carrying the concern further.",
+      "B": "Confront the Midwest general manager directly and demand immediate restitution of the $340,000.",
+      "C": "Post a correcting entry to the incentive accrual herself so the records are accurate by month-end.",
+      "D": "Summarize the finding anonymously on an industry chat forum to see whether peers consider the treatment improper."
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The IMA Statement's resolution guidance directs members facing an ethical conflict to consult with an objective advisor, an impartial third party, or counsel to obtain an understanding of possible courses of action before taking the conflict outside the organization. Brandt's uncertainty is exactly the situation the advisory step addresses: an uninvolved reviewer can distinguish a defensible convention from an integrity breach without exposing her to retaliation or contaminating eventual evidence. Confronting the general manager, altering records unilaterally, or leaking the issue externally each create personal and evidentiary risk and bypass the structured path. In business terms, early impartial consultation protects both Flash and Brandt while preserving a documented basis for escalation if the concern survives review.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B errs by turning consultation into confrontation: the general manager controls the disputed computation and holds the incentive at stake, so direct demands invite suppression and leave Brandt without an objective read on whether a genuine violation exists. The IMA path calls for impartial advice first, then escalation through proper channels if the concern persists.",
+    "ExplanationWrongC": "Choice C mistakes the analyst's role for the controller's: unilaterally rebooking an executive incentive accrual without authorization would itself compromise integrity and objectivity and could destroy the audit trail reviewers would need. Record changes must follow approved review, not quiet self-help, however well intentioned the motive.",
+    "ExplanationWrongD": "Choice D breaches confidentiality by exposing Flash's internal compensation mechanics and customer arrangements to outsiders before any internal resolution attempt; anonymous posting also forfeits the documentation trail the IMA guidance expects. External disclosure is a last-resort measure reserved for exhausted processes or legally compelled situations.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: guided application of resolution guidance to a fact pattern supports Moderate/Apply",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-083",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.7",
+    "Topic": "F.083 integrated-reporting-concepts",
+    "UniqueConceptKey": "F-083-iirc-six-capitals",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "IIRC International Integrated Reporting Framework"
+    ],
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CommonTrapReference": "Confusing integrated reporting with a standalone ESG scorecard or filing substitute",
+    "Stem": "Sustainability director Naomi Reyes is preparing a board orientation module for Flash on developments in external reporting. She describes a framework in which an organization explains, in one concise communication, how it creates value over time, linking financial results with the manufactured, intellectual, human, social, natural, and financial resources it draws upon and affects. Which statement best captures what this approach is designed to accomplish?",
+    "Choices": {
+      "A": "It substitutes thematic value-creation disclosure for the entity's statutory financial statements.",
+      "B": "It ranks companies on a single composite index so investors can screen out low scorers mechanically.",
+      "C": "It confines disclosure to quantified environmental outputs such as emissions and water withdrawal.",
+      "D": "It connects financial performance with the resources and capitals an organization uses to create value over time, in one concise communication."
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The description matches the International Integrated Reporting Council's Framework, the foundation of integrated reporting: a concise communication connecting strategy, governance, performance, and prospects across the six capitals to explain how value is created over time. Reyes should stress that integrated reporting complements, and does not replace, audited financial statements; it gives providers of financial capital a fuller basis for judging long-term prospects than either a statutory filing or a standalone ESG scorecard supplies. For a diversified manufacturer like Flash, the practical payoff is tying plant investment (manufactured capital), workforce development (human capital), and energy inputs (natural capital) to the earnings trajectory the board already monitors, rather than publishing disconnected metric tables.",
+    "ExplanationWrongA": "Choice A confuses supplementation with replacement: statutory financial statements remain the audited backbone of external reporting, and integrated reporting adds a narrative-and-capitals layer on top of them. Candidates picking this option overstate the framework's legal reach, since no jurisdiction lets an integrated report displace required filings.",
+    "ExplanationWrongB": "Choice B describes an ESG rating methodology, not integrated reporting; the IIRC Framework prescribes no composite score, ranking formula, or screening metric. The misconception treats a reporting structure as an index product, mixing up framework publishers with commercial raters who score disclosures after the fact.",
+    "ExplanationWrongC": "Choice C collapses the six-capitals model into environmental metrics alone, dropping the human, social, intellectual, financial, and manufactured dimensions that give integrated reporting its breadth. Environmental-only disclosure is a narrow subset of the approach, not the framework itself, and misses the value-creation story the board module is meant to teach.",
+    "ExplanationWrongD": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-framework comprehension with definitional distractors fits Moderate-Easy/Understand",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-084",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.4",
+    "Topic": "F.084 management-override-evaluation",
+    "UniqueConceptKey": "F-084-cae-audit-committee-escalation",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "SOX Section 302",
+      "SOX Section 404",
+      "IMA Statement of Ethical Professional Practice (Integrity)",
+      "Dodd-Frank Act Section 922 (Whistleblower Program)"
+    ],
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CommonTrapReference": "Resolving management-override findings inside operations instead of the audit committee",
+    "Stem": "Renata Kowalski, chief audit executive at Flash, has assembled workpapers showing that a $1.8 million obsolescence write-down in the tools segment was reversed in September through a manual top-side journal entry approved by vice president of operations Tomas Igwe. The supporting valuation memo carries a signature date eleven days earlier than the count sheets it cites, warehouse disposal logs contradict the memo's condition assessments, and segment EBIT determines 40 percent of Igwe's annual incentive. Flash's audit committee meets in five days, and the quarterly release follows the next week. Which course of action should Kowalski take?",
+    "Choices": {
+      "A": "Classify the reversal as a permissible estimate revision, since inventory valuation inherently requires judgment and the variance sits within historical write-down volatility.",
+      "B": "Report the documented findings to the audit committee and recommend an independent investigation, supported by forensic review, completed before the quarterly release is issued.",
+      "C": "Meet privately with Igwe, obtain a written explanation, and close the finding internally if his memo is reaffirmed, informing the committee only in the annual summary.",
+      "D": "File a complaint with the SEC immediately, bypassing internal channels, because senior-executive involvement removes any obligation to use Flash's own reporting structure."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "This presents a potential fraudulent financial reporting matter implicating the certification duties of SOX Sections 302 and 404: a material estimate reversal, approved by the executive whose pay depends on it, rests on a chronologically impossible memo and contradicted condition logs. The CAE's functional reporting line runs to the audit committee precisely so findings of this gravity escape operational capture; committee referral with independent forensic review preserves due process, protects evidence, and gates the release on verified numbers. Option A ignores documentary contradiction; option C places the subject in control of the inquiry; option D leaps past internal mechanisms that still have time to operate, though Dodd-Frank Section 922 preserves whistleblower rights regardless. For Flash, committee-supervised investigation is the only course that honors Igwe's presumption of innocence while shielding the quarterly release from unverified earnings.",
+    "ExplanationWrongA": "Choice A hides behind the label of estimation: judgment in valuation licenses nothing when the support memo predates its own inputs and disposal logs refute the stated conditions. Treating documented contradiction as ordinary volatility abandons the evaluator's duty to weigh evidence quality, not merely the size of the swing.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C lets the accused control the record: private reaffirmation by Igwe neither tests the impossible memo date nor explains the conflicting disposal logs, and delaying committee notice invites evidence loss and retaliation risk. The CAE's independence depends on routing findings of this severity to those charged with governance while the release is still preventable.",
+    "ExplanationWrongD": "Choice D is premature: Dodd-Frank protects external reporting, but the resolution sequence calls for the audit committee and independent investigation first, absent urgency internal action cannot address. Immediate SEC referral forfeits the chance to correct the release responsibly while days still remain, and it is unwarranted before the committee has failed to act.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: named CAE weighs four defensible-seeming responses under deadline pressure, Evaluate floor met at VD/5",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-085",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.1",
+    "Topic": "F.085 lifecycle-disclosure-integrity",
+    "UniqueConceptKey": "F-085-complete-information-packet",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Fairness, Objectivity, Credibility)"
+    ],
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Omitting decision-changing cost data to steer a preferred-vendor outcome",
+    "Stem": "Flash purchasing analyst Amara Diallo must recommend one of two automated assembly cells to CFO Elena Vasquez. Vendor quotations show Cell One at $2.4 million with projected ten-year maintenance of $180,000 annually, and Cell Two at $2.65 million with maintenance of $95,000 annually. The plant manager, who golfs monthly with Cell One's regional sales lead, asks Diallo to present acquisition price and throughput only, leaving maintenance projections out of the comparison packet. Which assessment identifies the implicated IMA standards and the appropriate course?",
+    "Choices": {
+      "A": "Fairness, objectivity, and the credibility standard are implicated; Diallo should present the complete lifecycle cost comparison and decline to omit information that would reasonably alter the decision.",
+      "B": "Only technical competence is implicated, and providing the requested shorter packet is acceptable provided the full cost model remains available on request.",
+      "C": "Confidentiality governs the situation, so maintenance data supplied in confidence by bidders cannot appear in any internal decision packet.",
+      "D": "Because final selection rests with the CFO, forwarding the partial packet is harmless even if the omitted costs would reverse the ranking."
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The IMA Statement's fairness principle requires dealing impartially with all parties, the objectivity standard requires communicating information impartially, and the credibility standard requires disclosing all relevant information that could reasonably influence a user's understanding. Lifecycle totals decide the case: Cell One costs $2.4M plus 10 times $0.18M, or $4.20 million over ten years, versus Cell Two at $2.65M plus 10 times $0.095M, or $3.60 million, a $600,000 gap the requested omission would conceal and that reverses the apparent advantage of the lower sticker price. Diallo should present both cells on a total-cost basis, record the truncation request in writing, and escalate if pressed further. Handing the CFO a curated packet converts her analyst's report into covert advocacy for a preferred vendor and corrupts the capital decision it exists to inform.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B misfiles an integrity failure under competence: the issue is not skill but the deliberate shaping of a decision packet, and an available-on-request model does not cure a presentation engineered to mislead. The credibility standard obliges affirmative inclusion of decision-changing information in the packet itself, not passive completeness stored somewhere else.",
+    "ExplanationWrongC": "Choice C invokes the wrong standard: maintenance projections submitted in competitive bids are commercial estimates shared for evaluation, not secrets whose appearance before the internal decision-maker breaches confidentiality. Reading the standards this way inverts them, shielding vendors from exactly the comparison their quotations invite.",
+    "ExplanationWrongD": "Choice D assumes downstream officials will detect what was hidden; the CFO can weigh only what the packet contains. Decision rights never excuse supplying decision inputs selectively, and the $600,000 lifecycle disadvantage would silently flip the recommendation the CFO believes she is freely making.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: standard identification plus decisive lifecycle arithmetic (4.20M vs 3.60M) fits Moderate/Apply",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-086",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.5",
+    "Topic": "F.086 sox-section-302-recall",
+    "UniqueConceptKey": "F-086-section-302-certifications",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "SOX Section 302",
+      "SOX Section 402",
+      "SOX Section 404",
+      "SOX Section 409"
+    ],
+    "CognitiveLevel": "Remember",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CommonTrapReference": "Mixing up Section 302 officer certifications with Section 404 ICFR attestation",
+    "Stem": "Grace Lindqvist, newly appointed director of internal audit at Flash, is building Sarbanes-Oxley training for her staff and asks the team to match specific obligations to their originating sections of the act. Which obligation originates in Section 302?",
+    "Choices": {
+      "A": "Independent auditor attestation on the effectiveness of internal control over financial reporting for accelerated filers.",
+      "B": "Prohibition on personal loans to directors and executive officers of the company.",
+      "C": "Quarterly and annual certification by the chief executive officer and chief financial officer of the financial report and the effectiveness of disclosure controls and procedures.",
+      "D": "Rapid and current disclosure of material changes in the company's financial condition or operations."
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Section 302 created the executive certification regime: each periodic report must be personally certified by the CEO and CFO, covering the accuracy of the financial report, responsibility for and effectiveness of disclosure controls and procedures, and disclosure of material changes in internal control. Staff should keep the neighboring sections straight: the external auditor's ICFR attestation lives in Section 404, the loan prohibition in Section 402, and rapid-and-current disclosure of material changes in Section 409. For Flash, the practical meaning is that Lindqvist's control findings feed documents two officers sign under penalty of law each quarter, which is why identified deficiencies reach executive attention within days rather than surfacing years later in litigation.",
+    "ExplanationWrongA": "Choice A attaches to Section 404, not 302: the external auditor's attestation opinion on ICFR effectiveness is the hallmark of Section 404(b) for accelerated filers, while Section 302 concerns management's own certifications. Confusing management certification with auditor attestation is the classic pairing error this item targets.",
+    "ExplanationWrongB": "Choice B restates Section 402's ban on personal loans to directors and executive officers, a governance provision with no connection to the officer-certification duties that Section 302 created. Its presence tests whether candidates bind section numbers to substance rather than recalling titles in isolation.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D paraphrases Section 409's requirement for rapid and current disclosure of material changes in financial condition or operations, a market-transparency rule aimed at investors, not the certification mechanism of Section 302. The two provisions coexist in the same statute but answer different questions about who speaks and when.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: direct single-fact section recall with paired distractors fits Easy/Remember",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-087",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.2",
+    "Topic": "F.087 related-party-disclosure-gap",
+    "UniqueConceptKey": "F-087-regsk-item404-affiliation",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "SEC Regulation S-K Item 404 (Related Person Transactions)",
+      "ASC 210-20 (Related Party Disclosures)"
+    ],
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CommonTrapReference": "Assuming family-affiliate deals escape disclosure when priced near market",
+    "Stem": "During 10-K preparation, Flash controller Priya Chen learns that the chief operating officer's brother-in-law owns 45 percent of Crestline Packaging, a vendor that received $6.4 million of Flash purchases last year, about 12 percent of packaging spend, at prices roughly $575,000 above comparable market quotes in aggregate. No related-party disclosure appears in prior filings, and the drafting attorney argues the relationship is a private family matter. Which analysis best evaluates the disclosure position?",
+    "Choices": {
+      "A": "Family ties of officers fall outside financial reporting so long as employment and vendor ownership remain formally separate.",
+      "B": "Material dealings with an entity affiliated through a close family member of an executive are related-person transactions requiring disclosure, and the above-market pricing compounds the conflict Flash must reveal.",
+      "C": "Disclosure becomes obligatory only if Crestline is consolidated within Flash's reporting entity.",
+      "D": "Retroactive repricing of the purchase contracts to market eliminates any duty to describe the relationship in the filings."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "SEC Regulation S-K Item 404 requires disclosure of transactions in which a related person has a direct or indirect material interest above the $120,000 threshold, and related person expressly covers immediate family members of executive officers; ASC 210-20 similarly mandates disclosure of material related-party relationships and transactions. At $6.4 million, Crestline purchases exceed the threshold more than fifty-fold, the brother-in-law's 45 percent ownership creates the affiliation, and paying about $575,000 above market sharpens the conflict investors need to assess. The attorney's privacy framing fails because the duty turns on the transaction and the relationship, not the secrecy of family life; neither consolidation nor retrospective repricing extinguishes an obligation that attached when the transactions occurred. Flash must disclose the relationship, amounts, terms, and governance response in the current 10-K and evaluate correction of prior filings.",
+    "ExplanationWrongA": "Choice A repeats the attorney's error: Item 404's definition reaches immediate-family ownership interests precisely because informal affiliation moves value as effectively as formal ones. Formal separation of payroll and title does not neutralize the conflict-disclosure obligation the rule exists to enforce.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C imports a consolidation concept into a disclosure rule: related-person transaction reporting keys off affiliation and materiality, not balance-sheet combination, so an unconsolidated 45-percent-owned outside vendor squarely triggers Item 404. Consolidation analysis belongs to determining the reporting entity, not to this disclosure judgment.",
+    "ExplanationWrongD": "Choice D confuses remediation with obligation: repricing prospective contracts may fix economics going forward, but the disclosure duty arose when the above-market transactions happened, and investors in prior periods relied on filings that omitted the relationship. Disclosure and evaluation of prior-period correction come first and survive any cleanup negotiated afterward.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: reconciling SEC Item 404, ASC 210-20, and rebutted counterarguments supports Difficult/Analyze",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-088",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.3",
+    "Topic": "F.088 conflict-documentation-duty",
+    "UniqueConceptKey": "F-088-engagement-file-memo",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Resolution of Ethical Conflict - documentation)"
+    ],
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CommonTrapReference": "Leaving no durable file record of an ethical conflict and its resolution",
+    "Stem": "Senior accountant Luis Ortega at Flash resolved a dispute with his manager over allocating $150,000 of shared robotics-lab depreciation, concluding that the controller-department policy required allocation on robot-hours rather than headcount. He wants his handling of the disagreement to withstand later scrutiny by internal audit and, if necessary, the audit committee. Which action best satisfies the IMA Statement's expectation on documentation when working through an ethical or policy conflict?",
+    "Choices": {
+      "A": "Recap the resolution verbally at Friday's staff meeting so the group hears the rationale without creating a paper target.",
+      "B": "Keep a private notebook on his home computer logging suspicions and conversations for personal reference.",
+      "C": "Email a detailed account of the allocation debate to a former professor outside Flash to get an independent read on his reasoning.",
+      "D": "Prepare a dated memorandum for the engagement file stating the issue, the policies consulted, the individuals involved, the alternatives considered, and the resolution reached."
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The IMA Statement's resolution guidance expects practitioners to clarify relevant issues, consult as appropriate, and document the facts, the analysis, and the resolution, producing a record that internal audit, external reviewers, or the audit committee can independently reconstruct. Ortega's memo does exactly that for the $150,000 robotics-lab depreciation question: issue identified, authoritative policy source cited (robot-hours basis), participants named, alternatives weighed, and outcome stated. A spoken recap evaporates with turnover and memory decay; a private off-system notebook is unverifiable and outside records management; emailing outsiders discloses Flash information without authorization. Documentation converts personal recollection into institutional evidence, which protects the accountant as much as the organization.",
+    "ExplanationWrongA": "Choice A opts for evanescence: a verbal recap leaves no durable account of the policy cited, the people involved, or the alternatives rejected, so any later challenge reduces to a contest of memories. The documentation expectation exists precisely because spoken resolutions cannot be reconstructed under adversarial scrutiny.",
+    "ExplanationWrongB": "Choice B keeps the record where reviewers cannot reach it: a home-computer notebook sits outside Flash's records system, is unverifiable, and is useless to internal audit, while storing work suspicions off-system itself violates sound information governance. A private diary serves the writer's memory, not the accountability process.",
+    "ExplanationWrongC": "Choice C exports a live Flash dispute to an unauthorized outsider; whatever advice results, the transmission breaches confidentiality and sidesteps the sanctioned consultation channels inside the organization. Seeking independent perspective is legitimate, but only through approved advisors under appropriate safeguards.",
+    "ExplanationWrongD": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: applying a single documentation norm against three flawed alternatives fits Moderate-Easy/Apply",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-089",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.3",
+    "Topic": "F.089 confidentiality-escalation-limits",
+    "UniqueConceptKey": "F-089-authorized-disclosure-scope",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Confidentiality)"
+    ],
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Reading confidentiality as barring all discussion with counsel or authorities",
+    "Stem": "Flash corporate controller Ines Marchetti has documented evidence suggesting a senior buyer routed about $700,000 of orders to a vendor controlled by a relative through padded invoices. She intends to engage Flash's outside counsel and, depending on the findings, appropriate authorities. Colleagues warn her that the confidentiality standard forbids discussing the matter with anyone. Which evaluation of her disclosure latitude is correct?",
+    "Choices": {
+      "A": "The confidentiality standard bars discussion with anyone outside her direct chain of command, including counsel, until litigation formally begins.",
+      "B": "Having found misconduct, she may distribute the complete evidence file throughout the company to mobilize support quickly.",
+      "C": "She may share information with counsel and others responsible for resolving the matter, limited to what is necessary, because confidentiality does not shield illegal acts and permits disclosure that law or proper process requires.",
+      "D": "She should refrain from any disclosure until a regulator issues a subpoena compelling testimony."
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The IMA Statement's confidentiality standard requires members to refrain from using confidential information for unethical advantage, yet it expressly contemplates authorized disclosure: members keep information confidential except when disclosure is authorized or legally required, and they communicate with those in a position to resolve problems. Guided escalation to Flash's outside counsel, and to authorities where warranted, is disclosure to the parties responsible for resolving the conflict, scoped to what the inquiry needs; a suspected invoice-padding scheme cannot take refuge in confidentiality, which offers no protection to illegal activity. Choice A reads the standard as a gag on legitimate channels, B broadcasts beyond necessity, and D waits for compulsion the standard never imposes. Marchetti's planned path protects Flash's interests, the evidence, and her own position at the same time.",
+    "ExplanationWrongA": "Choice A converts confidentiality into isolation: the standard restricts misuse of confidential data, not consultation with counsel and authorized responders, and funneling every concern through a single compromised chain invites exactly the suppression that buried earlier warnings at other manufacturers.",
+    "ExplanationWrongB": "Choice B confuses authorized disclosure with unrestricted distribution: circulating an evidence dossier across the company prejudges the investigation, tips off subjects, and spreads unproven allegations well beyond anyone with a role in resolution. Necessity, not momentum, bounds the scope of permissible sharing under the standard.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D invents a compulsion precondition: the standard authorizes appropriate proactive disclosure and cooperation, and waiting for a subpoena would let the padded invoicing continue while exposing Flash to larger losses and Marchetti to the charge that she ignored known misconduct sitting in her own files.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: scoping disclosure latitude across four readings of one standard fits Moderate/Apply",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-090",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.3",
+    "Topic": "F.090 resignation-documented-last-resort",
+    "UniqueConceptKey": "F-090-exhaustion-before-resignation",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Resolution of Ethical Conflict)",
+      "Dodd-Frank Act Section 922"
+    ],
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CommonTrapReference": "Treating resignation as a first resort instead of a documented last resort",
+    "Stem": "Division controller Marcus Webb determined that Flash's Southwest division has been systematically understating warranty accruals by roughly $2.1 million per year at the direction of the division president, who argues competitors reserve less. Webb documented the computations, escalated in writing to the regional CFO, and was instructed to drop the matter; eight weeks later he referred it to Flash's corporate CFO, where it has stalled through two quarterly closes while the next release approaches. His file of computations, emails, and meeting notes is complete and contemporaneous. Which evaluation of Webb's position under the IMA resolution model is most defensible?",
+    "Choices": {
+      "A": "With internal avenues exhausted and the record preserved, declining to participate further and, if necessary, resigning and reporting to appropriate authorities represents the sanctioned last resort.",
+      "B": "He should suspend further action until the next performance cycle, since continuity of service sometimes accomplishes what confrontation cannot.",
+      "C": "Anonymous transmission of the accrual schedules to a financial journalist maximizes corrective pressure while minimizing personal exposure.",
+      "D": "He should offset the shortfall by quietly overstating warranty reserves in future quarters, letting the imbalance average out over time."
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The IMA resolution sequence proceeds from internal clarification through successive levels of management and, where the conflict remains unresolved at the highest levels, contemplates that the member disengage from the misconduct and consider resignation, retaining documentation of every step; external reporting to authorities is reserved for circumstances law or conscience compel. Webb has satisfied the internal prerequisites: written escalation past the regional CFO to the corporate level, two quarters of inaction, and a release imminent on figures he knows are understated by about $2.1 million annually. Continuing silent service, leaking to media, or compensating through opposite errors each breach integrity or confidentiality duties and provide no shelter when the misstatement surfaces. Resignation with a preserved record is not abandonment; it is the framework's terminal safeguard for a professional whose documented objections were overridden.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B romanticizes patience: two quarters of documented inaction at the top signal entrenchment, and each additional release Webb helps certify deepens his complicity in a misstatement he personally quantified. Waiting cycles are not a resolution mechanism; they are how bystanders gradually become participants.",
+    "ExplanationWrongC": "Choice C chooses leakage over lawful process: anonymous press disclosure breaches confidentiality before sanctioned external routes are explored and strips Webb of the protections that documented, attributable reporting provides. Media exposure is neither the IMA-sanctioned step nor a substitute for authorities acting through proper channels.",
+    "ExplanationWrongD": "Choice D proposes counter-error as remedy: deliberately overstating future reserves manufactures a fresh misstatement, destroys the comparability Webb is professionally bound to protect, and would itself constitute dishonest reporting discoverable in audit. Two distortions in one ledger compound rather than cancel.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: named controller judges terminal-stage alternatives after exhaustion, Evaluate floor met at VD/5",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-091",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.2",
+    "Topic": "F.091 expense-capitalization-pressure",
+    "UniqueConceptKey": "F-091-repairs-versus-modernization",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "ASC 360-10 (Property, Plant, and Equipment)",
+      "IMA Statement of Ethical Professional Practice (Honesty, Credibility)"
+    ],
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Capitalizing routine repairs as plant modernization before a financing event",
+    "Stem": "Ahead of Flash’s bond refinancing roadshow, engineering director Paul Okafor asks plant controller Dana Whitfield to classify $900,000 of scheduled summer overhaul work on four extrusion lines as plant modernization capitalized to the buildings account. The work replaces worn rollers, seals, and bearings to restore rated output and has been expensed as repairs in prior years. Whitfield calculates the reclassification would lift this quarter's EBITDA margin from 11.2 to 11.95 percent in materials prepared for rating agencies. Which identification of the ethical issue is accurate?",
+    "Choices": {
+      "A": "Capitalization is defensible because the overhauls restore productive capacity and thereby generate future benefits.",
+      "B": "Reclassifying recurring repair-type period costs into assets overstates current earnings and asset values to flatter refinancing metrics, an earnings-management misstatement that the honesty and credibility standards require her to refuse.",
+      "C": "The concern lies in revenue cutoff, since margin effects arise only from the timing of sales recognition.",
+      "D": "The issue is confined to income tax deductibility of the overhaul spending, leaving the financial statements themselves unaffected."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under ASC 360-10, expenditures that merely restore an asset's original operating condition, such as replacing worn rollers, seals, and bearings, are period costs; capitalization is reserved for additions or improvements extending service potential beyond original expectations. Reclassifying $900,000 of recurring overhauls therefore overstates both earnings and property, plant, and equipment, and doing so to polish the EBITDA margin shown to rating agencies is earnings management in textbook form: same business, cosmetically improved metrics, lender decisions made on distorted numbers (a 0.75-point margin gain on roughly $120 million of quarterly revenue, manufactured purely by relabeling). The IMA credibility standard obliges Whitfield to present information fully disclosed and fairly communicated, meaning she must refuse the reclassification and document the refusal; the prior-year expensing history is itself strong evidence the new treatment lacks principled support.",
+    "ExplanationWrongA": "Choice A smuggles enhancement language into restoration work: returning machines to their rated output maintains, rather than extends, service potential, which is why identical work sat in repair expense in prior years. The future-benefit criterion separates assets from losses, not ordinary repairs from slightly larger repairs.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C mislocates the defect in revenue timing when the manipulation sits entirely in cost classification: no sale moved periods, yet the margin rose 0.75 points purely from relabeling expense. Diagnosing the wrong line item guarantees strengthening the wrong control and leaving the actual lever untouched.",
+    "ExplanationWrongD": "Choice D shrinks a reporting-integrity issue into a tax footnote: whatever the deductibility position, the GAAP misstatement flows straight into EBITDA, PP&E balances, and the roadshow materials rating agencies rely upon. Parallel tax treatment neither excuses nor measures financial-reporting distortion.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: classification issue-spotting with quantified margin effect (0.9M/120M revenue = 0.75 pts) fits Moderate/Apply",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-092",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.2",
+    "Topic": "F.092 data-privacy-analytics-tension",
+    "UniqueConceptKey": "F-092-cross-border-health-data",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "EU GDPR Article 5 (Purpose Limitation)",
+      "California Consumer Privacy Act",
+      "IMA Statement of Ethical Professional Practice (Confidentiality, Competence)"
+    ],
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CommonTrapReference": "Letting analytics convenience override personal-data safeguards",
+    "Stem": "Flash's people-analytics pilot transmitted names, payroll bands, and voluntary health-screening results for 3,400 employees to an offshore benefits-analytics vendor whose security questionnaire shows no independent certification and whose data residency sits in a jurisdiction without an adequacy determination. Controller Beatrice Ansah is asked to approve phase-two funding, which would expand the feed to dependents' data. HR leadership argues the analytic insights justify continuation and that collection already occurred through the employment relationship. Which analysis of the tension is most sound?",
+    "Choices": {
+      "A": "Because the data was gathered through the employment relationship, its onward use for analytics falls outside any privacy constraint Flash must respect.",
+      "B": "Phase two is safe provided the vendor aggregates results after receipt, since aggregation retroactively cures deficiencies in consent and safeguards at the transfer stage.",
+      "C": "A legitimate analytical purpose does not discharge Flash's duty to protect personal data; transferring identifiable health information without informed consent, adequate vendor safeguards, or a lawful cross-border basis breaches confidentiality and data-protection principles, and funding should pause pending de-identification, contractual controls, and a lawful transfer mechanism.",
+      "D": "Privacy compliance is exclusively the Human Resources department's obligation, so the funding approval can proceed on finance grounds alone."
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Data-protection regimes such as the GDPR and the CCPA/CPRA rest on purpose limitation, informed consent, adequate safeguards, and lawful transfer mechanisms for personal data crossing borders, with health information attracting heightened sensitivity. Those principles collide directly with the pilot's design: identifiable health-screening results for 3,400 employees left for a jurisdiction without an adequacy determination and landed with an uncertified vendor, and phase two widens exposure to dependents who never gave employment-context consent at all. The IMA confidentiality standard and the competence duty place finance inside the chain of accountability, because Ansah's funding approval would operationalize the expanded transfer; the sound course is to withhold approval pending de-identification, enforceable contractual controls, certification, and a lawful transfer basis. Analytical value is real but is a benefit to pursue within constraints, not a license over them.",
+    "ExplanationWrongA": "Choice A stretches employment-context collection into universal license: consent to employ someone is not consent to export their health data to an uncertified offshore processor, and purpose-limitation doctrines exist precisely to block secondary uses nobody anticipated when handing over a form.",
+    "ExplanationWrongB": "Choice B misorders the safeguards: aggregation performed after an unprotected transfer cannot retroactively legitimize the exposure that already occurred en route, and dependents' identifiers in phase two defeat aggregation anyway. Cure-at-destination thinking ignores that the violation is the transfer itself.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D assigns stewardship to one department: data-protection obligations bind the enterprise, and the controller approving funds for the transfer participates in the processing decision. Functional silos do not allocate regulatory liability, as enforcement actions naming finance signatories regularly demonstrate.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-constraint privacy tension across consent, safeguards, and transfer grounds supports Difficult/Analyze",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-093",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.7",
+    "Topic": "F.093 esg-assurance-limitations",
+    "UniqueConceptKey": "F-093-limited-assurance-gap",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "ISAE 3000 (Revised) Limited Assurance Engagements",
+      "AA1000 Assurance Standard v3",
+      "GRI Standards and TCFD Recommendations (voluntary frameworks)"
+    ],
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CommonTrapReference": "Equating voluntary ESG disclosure with audited financial-statement rigor",
+    "Stem": "Treasurer Kwame Boateng is reviewing Flash's draft sustainability report, which publishes voluntary greenhouse-gas and safety metrics aligned with nongovernmental frameworks, together with an assurance provider's engagement letter proposing procedures under ISAE 3000 (Revised) at a limited-assurance level. A board member asks why the metrics deserve more caution than Flash's audited financial statements. Which response best explains the limitation?",
+    "Choices": {
+      "A": "ESG metrics are inherently unauditable because they measure qualitative commitments rather than transactions.",
+      "B": "Assurance firms are prohibited from examining sustainability information prepared under multiple frameworks simultaneously.",
+      "C": "Directors bear liability for published ESG metrics identical to that for audited financial statements, so additional caution adds nothing.",
+      "D": "Voluntary frameworks set no binding recognition and measurement rules comparable to GAAP, and limited assurance yields only negative-form comfort, so the metrics lack the completeness and verification depth of audited figures."
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Two structural gaps separate voluntary ESG disclosure from audited financials. First, framework status: GRI, TCFD, and similar bodies publish voluntary guidance rather than binding recognition and measurement standards, so Flash selects metrics, boundaries, and methodologies with wide discretion, weakening comparability and completeness. Second, assurance depth: an ISAE 3000 (Revised) limited engagement targets negative-form conclusions, that nothing came to the practitioner's attention causing belief the metrics are materially misstated, a far lighter procedure set than a reasonable-assurance audit built on transaction-level testing. Neither gap means the numbers are worthless; they mean the board should calibrate reliance accordingly and push for defined methodologies and, over time, reasonable assurance on the metrics that drive decisions.",
+    "ExplanationWrongA": "Choice A overstates into impossibility what practice refutes: emissions tonnage, injury rates, and water volumes are quantifiable and already assured in the market today. The real limitations are discretionary boundaries and lighter procedures, not metaphysical unmeasurability of the subject matter.",
+    "ExplanationWrongB": "Choice B invents a prohibition no assurance standard contains; practitioners routinely examine reports referencing several frameworks, scoping procedures around whichever assertions the engagement covers. Fabricated barriers distract from the genuine gaps in completeness and verification depth the correct answer identifies.",
+    "ExplanationWrongC": "Choice C asserts parity where law draws distinctions: director exposure for unaudited voluntary metrics differs materially from securities liability attaching to certified financial statements, and equal-liability claims would argue for more scrutiny rather than the complacency the sentence recommends.",
+    "ExplanationWrongD": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two-part comprehension of framework status plus assurance depth fits Moderate-Easy/Understand",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-094",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.4",
+    "Topic": "F.094 fraud-indicator-application",
+    "UniqueConceptKey": "F-094-topside-override-redflag",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "COSO Internal Control - Integrated Framework 2013 (Management Override)",
+      "SOX Section 404",
+      "ACFE Fraud Tree (Fraudulent Financial Reporting)"
+    ],
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Dismissing day-one top-side overrides as ordinary close noise",
+    "Stem": "During a control review, Flash assistant controller Omar Haddad compiles four month-end observations: (1) senior management posted unsupported top-side entries totaling $2.3 million on the final close day citing estimate alignment; (2) a cost-allocation run produced $400 rounding differences spread across cost centers; (3) a clerk transposed two digits in a utility accrual and corrected it the following morning; (4) unit volumes swung seasonally, as they do every third quarter. Applying fraud-indicator knowledge, which observation warrants escalation as most suggestive of intentional misstatement?",
+    "Choices": {
+      "A": "Observation 1, because senior-management override executed through poorly supported entries at the final close boundary is a recognized red flag of fraudulent financial reporting.",
+      "B": "Observation 2, because recurring rounding differences indicate the allocation engine has been tampered with.",
+      "C": "Observation 3, because digit transpositions are the signature of deliberate falsification.",
+      "D": "Observation 4, because seasonal volume swings mask revenue manipulations elsewhere in the ledger."
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Fraudulent financial reporting is overwhelmingly a management-override phenomenon, and COSO and practitioner literature alike flag the signature Haddad's first observation displays: executive involvement, entries booked outside normal processing at the last possible moment, thin support described only as estimate alignment, and a magnitude, $2.3 million, large enough to matter to reported results. Override defeats the assumption that functioning controls preclude misstatement, which is why auditors treat late unsupported top-side entries as a presumptive fraud-risk factor demanding escalation under SOX Section 404 discipline. By contrast, trivial rounding differences and self-corrected clerical slips are hallmarks of error, and predictable seasonality is a business property rather than an accounting event. Escalating observation 1 concentrates scarce investigative capacity where intent is actually indicated.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B elevates noise to conspiracy: $400 of rounding differences across cost centers is arithmetic residue of allocation engines, and no tampering narrative explains gains measured in hundreds against entries measured in millions. Pattern-matching on recurrence without magnitude or access evidence misreads ordinary error as scheme.",
+    "ExplanationWrongC": "Choice C mistakes the commonest human slip for a forgery signature: transposition errors occur randomly across typists and systems, and the next-morning correction demonstrates the absence of persistence that intent would show. Deliberate falsifiers rarely immortalize their work in self-announcing digit swaps they then repair.",
+    "ExplanationWrongD": "Choice D builds inference on a business constant: seasonal volume patterns recur from operations, not bookkeeping, and a masking theory without identifying any masked entry is speculation stacked on speculation. Red-flag discipline demands observable anomalies, not atmospheric distrust of ordinary cycles.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: red-flag discrimination among four close-period observations fits Moderate/Apply",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-095",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "F",
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.1",
+    "Topic": "F.095 ima-principles-recall",
+    "UniqueConceptKey": "F-095-four-overarching-principles",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Overarching Principles)"
+    ],
+    "CognitiveLevel": "Remember",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CommonTrapReference": "Confusing the four IMA principles with the four standards",
+    "Stem": "Ethics officer Danielle Ferreira opens Flash's annual ethics refresher by asking new analysts to state the four overarching principles of the IMA Statement of Ethical Professional Practice before the session turns to the individual standards. Which list should the analysts give?",
+    "Choices": {
+      "A": "Competence, Confidentiality, Integrity, and Credibility.",
+      "B": "Honesty, Fairness, Objectivity, and Responsibility.",
+      "C": "Diligence, Loyalty, Prudence, and Independence.",
+      "D": "Transparency, Accountability, Sustainability, and Compliance."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The IMA Statement rests on four overarching principles: Honesty, Fairness, Objectivity, and Responsibility. These animate everything beneath them, while the four standards of ethical professional practice, Competence, Confidentiality, Integrity, and Credibility, translate the principles into concrete obligations such as maintaining expertise, safeguarding information, mitigating conflicts, and communicating completely. Ferreira's sequencing is deliberate: analysts who internalize the principles-versus-standards architecture can trace any workplace dilemma, from a truncated vendor packet to a padded invoice, back to a named anchor before choosing an action. The remaining lists blend assurance-practice vocabulary and generic governance values that sound professional but appear nowhere in the IMA Statement's principle layer.",
+    "ExplanationWrongA": "Choice A lists the four standards, not the principles: Competence, Confidentiality, Integrity, and Credibility sit beneath the principles as operational duties. Swapping the layers is the single most common recall error on this topic and the one certification exams exploit most reliably.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C assembles an assurance-flavored quartet: Independence and prudence belong to external audit practice, loyalty and diligence to general professional rhetoric, and none appears among the IMA principles. Plausible professional diction is not IMA text, which is precisely the discrimination being tested.",
+    "ExplanationWrongD": "Choice D recites contemporary governance slogans, transparency and accountability among them, that populate proxy statements and ESG reports but not the IMA Statement's principle layer. Recognizing authentic framework language against generic virtue lists is the tested skill.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-list recall with layered standards distractor fits Easy/Remember",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-096",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.7",
+    "Topic": "F.096 double-materiality-concept",
+    "UniqueConceptKey": "F-096-double-materiality",
+    "Authorities": [
+      "GRI Standards (GRI 1: Foundation 2021)",
+      "EU Corporate Sustainability Reporting Directive (double materiality)"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CommonTrapReference": "Equating double materiality with investor-only securities-law materiality",
+    "Stem": "Flash Industries' sustainability director, Amara Osei, is drafting Flash's first sustainability report under the GRI Standards. When she tells CFO Elena Vasquez that the report will include detailed wastewater discharge metrics for Flash's Ohio plating line even though those disclosures have no measurable effect on Flash's cash flows or share value, Vasquez asks why the effort is justified. Which statement best explains the double-materiality concept that underlies GRI-based reporting?",
+    "Choices": {
+      "A": "A topic is material only if its omission or misstatement would influence the decisions of investors considering buying or selling Flash shares.",
+      "B": "A topic becomes material when the reported metric exceeds five percent of Flash's total assets.",
+      "C": "Materiality applies solely to environmental topics such as emissions and effluents, excluding social and workforce matters.",
+      "D": "Topics are material both when they affect enterprise value and when they represent significant impacts of Flash's operations on the economy, environment, and people."
+    },
+    "CorrectChoice": "D",
+    "ExplanationWrongA": "Choice A applies the securities-law investor lens alone. The misconception is that investor materiality fully governs sustainability reporting; GRI adds the impact lens, capturing significant effects on the environment, economy, and people regardless of cash-flow relevance.",
+    "ExplanationWrongB": "Choice B imports a financial-statement percentage threshold that no sustainability framework adopts. Materiality of a topic rests on the significance of its effects on enterprise value or stakeholders, not on a metric's ratio to Flash's total assets.",
+    "ExplanationWrongC": "Choice C wrongly narrows double materiality to environmental topics. The concept spans social, workforce, governance, and economic impacts as well, so Osei must screen every candidate topic, not just emissions and effluents, through both lenses.",
+    "ExplanationWrongD": "",
+    "ExplanationCorrect": "Under the GRI Standards (GRI 1: Foundation 2021), materiality is assessed through two lenses: impact materiality, meaning the organization's most significant effects on the economy, environment, and people, and financial materiality, meaning sustainability matters reasonably likely to affect cash flows, development, position, or cost of capital. Flash's plating-line discharges can be highly significant to the receiving watershed and nearby communities even though they do not currently change an investor's cash-flow expectations, so GRI-based reporting captures them under the impact lens. For Flash, the practical consequence is a report serving community and regulator audiences alongside investors, which is exactly the breadth Vasquez should expect from the effort.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Understand-level concept explanation capped at Moderate-Easy per Rule 11",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-097",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.2",
+    "Topic": "F.097 supplier-audit-bribery-dilemma",
+    "UniqueConceptKey": "F-097-supplier-bribery-dilemma",
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (Integrity and Credibility standards)",
+      "FCPA anti-bribery provisions"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CommonTrapReference": "Viewing third-party bribery findings and side-benefit offers as outside the accountant's duties",
+    "Stem": "During a scheduled supplier audit at the Mexican stamping plant that supplies roughly 30 percent of Flash Industries' chassis components, plant controller Miguel Santos finds a ledger entry labeled \"customs coordination\" for $28,000 wired to the personal account of a government inspector. The supplier's general manager privately offers Santos a locked-in preferential component price worth about $850,000 in annual savings for Flash if the entry is treated as routine and excluded from the audit report. In analyzing his position, which assessment is most accurate?",
+    "Choices": {
+      "A": "The finding creates only commercial risk for Flash because the payment was made by an independent supplier, leaving Santos without any professional obligation to raise it.",
+      "B": "The finding implicates Santos's Integrity and Credibility responsibilities, carries potential FCPA exposure for Flash through its supply chain, and the pricing offer is a conflict factor he must handle through transparent internal channels rather than privately.",
+      "C": "The supplier's engagement-confidentiality terms prevent Santos from including the finding in his report unless the supplier first provides written consent.",
+      "D": "Because $28,000 falls below Flash's $50,000 capitalization threshold, the payment is immaterial and needs no further professional attention."
+    },
+    "CorrectChoice": "B",
+    "ExplanationWrongA": "Choice A treats third-party distance as eliminating duty. The misconception is that only direct conduct matters; issuers face FCPA exposure through supply-chain parties, and Santos's professional duties attach to what he discovers in his own audit work.",
+    "ExplanationWrongC": "Choice C misreads engagement confidentiality. Such terms protect legitimate commercial information but cannot bar reporting a suspected illegal payment to a government inspector's personal account; Santos escalates internally under the IMA resolution pathway.",
+    "ExplanationWrongD": "Choice D applies a capitalization threshold where legality governs. Materiality thresholds guide accounting presentation, not whether a suspect payment warrants escalation; FCPA analysis turns on payment purpose and recipient status, never on transaction size alone.",
+    "ExplanationWrongB": "",
+    "ExplanationCorrect": "The IMA Statement's Integrity standard requires Santos to mitigate the conflict created by the pricing offer and refuse anything compromising his objectivity, while the Credibility standard requires him to communicate the finding completely and objectively through proper channels. Separately, payments to a government inspector's personal account implicate the FCPA's anti-bribery provisions, and issuers can face exposure through third parties acting on their behalf, so a supply-chain finding sits squarely within Flash's compliance perimeter. The correct analysis integrates all three strands: decline the inducement, escalate to Flash's general counsel and compliance function, and let the audit report stand on the evidence. Privately trading audit silence for purchasing savings would convert a compliance discovery into an active conflict.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-standard integration plus legal overlay warrants Difficult for an Analyze item",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-098",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.5",
+    "Topic": "F.098 whistleblower-channel-design",
+    "UniqueConceptKey": "F-098-whistleblower-channel-design",
+    "Authorities": [
+      "Sarbanes-Oxley Section 301(r)",
+      "Sarbanes-Oxley Section 806",
+      "Dodd-Frank Act Section 922"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Requiring identified complaints or routing all reports straight to regulators",
+    "Stem": "After an employee told colleagues she feared retaliation and stayed silent about a suspected inventory-control manipulation, Flash Industries' chief compliance officer, David Okafor, is rebuilding the company's whistleblower intake channel. Which design most closely satisfies the applicable Sarbanes-Oxley requirements?",
+    "Choices": {
+      "A": "Permit confidential and anonymous submissions concerning accounting, internal-control, and auditing matters, route them to the audit committee under documented retention and treatment procedures, and pair the channel with anti-retaliation safeguards aligned to Section 806 protections.",
+      "B": "Require complainants to identify themselves to the audit committee before any inquiry may open, so the due-process interests of accused managers are protected from the outset.",
+      "C": "Limit intake to complaints about senior-executive misconduct, referring operating-level concerns to plant human resources without any documentation or tracking requirements.",
+      "D": "Route each submission directly to the SEC under the Dodd-Frank award program so reporters preserve maximum award eligibility, with internal review performed afterward."
+    },
+    "CorrectChoice": "A",
+    "ExplanationWrongB": "Choice B's identity-first requirement contradicts Section 301(r)'s expectation of confidential, anonymous complaint handling and would recreate exactly the fear-driven silence Okafor is trying to fix; anonymity and fair process for accused managers coexist.",
+    "ExplanationWrongC": "Choice C narrows intake to executive misconduct, omitting the accounting, internal-control, and auditing complaints Section 301(r) targets regardless of seniority, and stripping documentation defeats the retention-and-treatment discipline the section requires.",
+    "ExplanationWrongD": "Choice D confuses award eligibility with channel design. Dodd-Frank permits direct SEC reporting without exhausting internal routes, so routing everything outward first forfeits Flash's own detection and remediation role while adding no protection reporters lack.",
+    "ExplanationWrongA": "",
+    "ExplanationCorrect": "Sarbanes-Oxley Section 301(r) directs the audit committee to establish procedures for the receipt, retention, and treatment of complaints regarding accounting, internal accounting controls, or auditing matters, expressly including confidential, anonymous submissions by employees, and Section 806 provides civil anti-retaliation protection for employees of public companies who report through covered channels. Okafor's design therefore needs anonymity-capable intake, audit-committee ownership, disciplined documentation, and visible anti-retaliation enforcement. Dodd-Frank's award program coexists with, rather than replaces, robust internal channels. The redesign responds directly to the fear-driven silence that let a suspected manipulation go unreported at Flash.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: applied design judgment across three statutes fits Moderate Apply",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-099",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.5",
+    "Topic": "F.099 audit-committee-independence-rules",
+    "UniqueConceptKey": "F-099-audit-committee-independence",
+    "Authorities": [
+      "Sarbanes-Oxley Section 301(m)",
+      "SEC and exchange listing standards on audit committee independence"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Remember",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CommonTrapReference": "Assuming CPA licensure or small consulting carve-outs satisfy independence",
+    "Stem": "Flash Industries' corporate secretary, Nadia Brandt, is screening director candidates before the board votes on next year's audit committee roster and asks what the independence standard actually requires of members. Which statement correctly states the requirement?",
+    "Choices": {
+      "A": "Each audit committee member must hold an active CPA license and maintain at least forty hours of annual continuing education in auditing.",
+      "B": "Members may accept no compensation from Flash apart from directors' fees, but consulting engagements valued up to $120,000 per year remain permissible.",
+      "C": "Members may receive only directors' fees and must otherwise be free of any consulting, advisory, or other compensatory relationship with Flash or any of its subsidiaries.",
+      "D": "Independence is achieved when a majority of the committee consists of non-management directors, permitting one inside executive with deep plant-operations knowledge to sit on the committee."
+    },
+    "CorrectChoice": "C",
+    "ExplanationWrongA": "Choice A conflates credentialing with independence. No CPA license or continuing-education quota is required to serve; the test concerns economic affiliation with Flash, and Section 407 separately addresses disclosing financial expertise rather than mandating licensure.",
+    "ExplanationWrongB": "Choice B invents a consulting carve-out. Any consulting or advisory fee from Flash disqualifies a member regardless of dollar amount, so even a modest $120,000 annual arrangement breaches the independence standard Brandt must apply.",
+    "ExplanationWrongD": "Choice D substitutes majority independence for full independence. Every member must satisfy the standard individually; seating one inside executive defeats the committee's structural ability to challenge management and oversee the external auditor objectively.",
+    "ExplanationWrongC": "",
+    "ExplanationCorrect": "Sarbanes-Oxley Section 301(m), implemented through the exchanges' listing standards, requires every member of a listed company's audit committee to be independent, defined principally as accepting no compensation from the company other than directors' fees and having no affiliation with the company or its subsidiaries beyond board service. For Flash, that means a respected operations executive cannot sit on the committee regardless of expertise, and no candidate can preserve a side consulting arrangement, however modest. The rule protects the objectivity of the group that hires, pays, and oversees the external auditor; economic tethering of any kind erodes that function.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-fact recall of the Section 301(m) test fits Easy Remember",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-100",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.7",
+    "Topic": "F.100 carbon-offset-claim-substantiation",
+    "UniqueConceptKey": "F-100-offset-substantiation",
+    "Authorities": [
+      "FTC Guides for the Use of Environmental Marketing Claims (Green Guides)",
+      "ISO 14064-2",
+      "GHG Protocol"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CommonTrapReference": "Deferring substantiation of offset-backed claims to the issuing registry",
+    "Stem": "Flash Industries plans to launch its new compact CNC line in three weeks under a \"carbon balanced\" banner supported by 40,000 offset credits purchased for $9 each ($360,000). Chief sustainability officer Lena Marchetti's review finds that 60 percent of the credits come from a forestry project whose emissions baseline was later shown to be overstated, undermining additionality, and that the registry permits those same credits to be counted toward a separate national pledge, creating double-counting exposure. General Counsel Thomas Whitfield asks Marchetti for her recommendation before the campaign is locked. Which recommendation is best supported?",
+    "Choices": {
+      "A": "Launch as scheduled, because the purchase price and credit volume were commercially reasonable and a recognized registry issued the credits, placing responsibility for quality on the registry.",
+      "B": "Hold the campaign until the portfolio is replaced with credits satisfying additionality, permanence, independent verification, and no-double-counting criteria, or narrow the claim to cover only the portion of emissions the current portfolio can credibly substantiate.",
+      "C": "Proceed with the launch but add a website footnote stating that offsets are estimates and reductions are approximate, shifting interpretive responsibility to readers of the fine print.",
+      "D": "Cancel the campaign and suspend publication of Flash's greenhouse-gas inventory for the year, minimizing scrutiny of the offset program while the credits are quietly replaced."
+    },
+    "CorrectChoice": "B",
+    "ExplanationWrongA": "Choice A outsources substantiation to the registry. Registry issuance proves a transaction occurred, not that baseline integrity, additionality, or non-double-counting hold; under the FTC Green Guides the advertiser, here Flash, bears the burden of competent evidence.",
+    "ExplanationWrongC": "Choice C relies on fine print. A disclaimer cannot cure an unsubstantiated headline because regulators assess the claim's overall net impression, and offsets-are-estimates language does not convert an unsupported carbon-balanced banner into a truthful one.",
+    "ExplanationWrongD": "Choice D suppresses reporting instead of repairing claims. Suspending the greenhouse-gas inventory deepens the transparency failure and invites precisely the scrutiny it hopes to avoid; the defensible course is replacing defective credits or narrowing the claim's scope.",
+    "ExplanationWrongB": "",
+    "ExplanationCorrect": "Environmental marketing claims must rest on competent and reliable substantiation, and under the FTC Green Guides the advertiser, not the registry, carries that burden; the overall net impression of the claim is what gets tested. Offsets with compromised baselines fail the additionality criterion, and credits simultaneously counted toward a national pledge violate the no-double-counting expectation embedded in ISO 14064-2 and GHG Protocol practice, so a product-wide \"carbon balanced\" banner is not currently supportable. Option B preserves both truthfulness and commercial flexibility: replace defective credits or scope the claim to the substantiated portion. Weighing a three-week launch window against enforcement risk, customer trust, and the reputational cost of retraction, the delay-or-narrow course is the only defensible recommendation Marchetti can give Whitfield.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Evaluate with named decision-maker and four defensible alternatives at the highest difficulty tier",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-101",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.6",
+    "Topic": "F.101 fcpa-books-and-records",
+    "UniqueConceptKey": "F-101-books-and-records",
+    "Authorities": [
+      "FCPA accounting provisions (15 U.S.C. 78m(b))",
+      "Securities Exchange Act Section 13(b)(2)"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Believing books-and-records liability requires proof of a completed bribe",
+    "Stem": "Assistant controller Kevin Zhao is reviewing the receivables detail for Flash Industries' Vietnamese distribution agent and finds $310,000 booked as \"market development services.\" The supporting invoices describe only generic deliverables with no dates, scopes, or acceptance evidence, and a treasury memo shows the funds landed in an entity beneficially owned by the spouse of a regional customs official. Zhao finds no indication that Flash requested any favorable government action. Which conclusion is correct under the FCPA's books-and-records provisions?",
+    "Choices": {
+      "A": "No books-and-records violation exists unless the government proves Flash intended to obtain or retain business through the payment.",
+      "B": "The entry is acceptable provided Flash's external auditors confirm the amount is fairly stated within aggregate financial-statement totals.",
+      "C": "Any recordkeeping problem is cured once Flash terminates the distribution agent and writes off the remaining balance.",
+      "D": "Recording the payment as market development services when the documentation supports no genuine services violates the accuracy requirement of the FCPA books-and-records provisions, regardless of whether a bribe is ever proven."
+    },
+    "CorrectChoice": "D",
+    "ExplanationWrongA": "Choice A imports anti-bribery intent into the books-and-records provisions. Those provisions demand accurate, fair records standing alone, so mischaracterizing the payment violates them even if no bribe is ever proven or even attempted.",
+    "ExplanationWrongB": "Choice B substitutes aggregate fairness for transaction-level accuracy. Auditors confirming overall totals do not validate that this $310,000 reflects genuine market development services; the accounting provisions operate on each recorded transaction's characterization.",
+    "ExplanationWrongC": "Choice C mistakes remediation for cure. Terminating the agent and writing off balances does not unmake false historical entries; correction of the records, a restatement assessment, and internal-control remediation all remain required once mischaracterization exists.",
+    "ExplanationWrongD": "",
+    "ExplanationCorrect": "The FCPA accounting provisions require issuers to make and keep books, records, and accounts that accurately and fairly reflect transactions and to maintain internal controls providing reasonable assurance that transactions are executed under management's authorization. Mischaracterizing a suspect disbursement as a legitimate expense defeats transaction-level accuracy on its own terms; the government need not prove a completed or even attempted bribe to charge a books-and-records violation. Aggregate fairness in the financial statements and later termination of the agent address different questions than the truthfulness of the original entry. Zhao's correct application is to treat the mischaracterized $310,000 as an accounting-provisions issue requiring escalation, correction of Flash's records, and an assessment of controls over distributor payments.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: applying the standalone accuracy standard against three common confusions fits Moderate Apply",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-102",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.3",
+    "Topic": "F.102 counsel-versus-auditor-advice-scope",
+    "UniqueConceptKey": "F-102-advice-scope-counsel-auditor",
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (resolution of ethical conflicts)",
+      "PCAOB auditing standards (external auditor role)"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CommonTrapReference": "Treating the external auditor as a substitute for personal legal counsel",
+    "Stem": "FP&A director Hannah Bergstrom of Flash Industries has identified a multi-year service-contract revenue arrangement in the European division whose legality she doubts. The IMA resolution guidance tells her to consult her own attorney regarding legal obligations, and Bergstrom is unsure how that step differs from raising the matter with Flash's external auditors, whom she trusts. Which statement best captures the distinction between the two sources of advice?",
+    "Choices": {
+      "A": "Independent counsel advises Bergstrom personally on her own legal rights and obligations arising from the situation, whereas the external auditors evaluate how the arrangement affects Flash's financial statements, disclosures, and controls rather than her individual legal position.",
+      "B": "If a question touches financial reporting, the external auditors act as Bergstrom's confidential legal advisors, making a separate consultation with counsel unnecessary.",
+      "C": "Counsel's contribution is limited to drafting contract wording after the accounting conclusion is already fixed, so counsel plays no role in judging the legality of an existing arrangement.",
+      "D": "Consulting either party fulfills the same IMA resolution step interchangeably, because counsel and auditors owe Bergstrom identical duties of loyalty in an ethical conflict."
+    },
+    "CorrectChoice": "A",
+    "ExplanationWrongB": "Choice B casts the external auditor as Bergstrom's confidential legal advisor. The auditor owes allegiance to investors under PCAOB standards, communications carry no attorney-client privilege, and the engagement addresses reporting implications rather than her personal legal rights.",
+    "ExplanationWrongC": "Choice C shrinks counsel's role to drafting. Assessing the legality of an existing arrangement is core legal advice that precedes any accounting conclusion, so treating counsel as a post-hoc scrivener misreads the consult-your-own-attorney step entirely.",
+    "ExplanationWrongD": "Choice D declares the two advisors interchangeable. Counsel and auditors operate under different engagement relationships and duties of loyalty, which is precisely why the IMA resolution pathway assigns each a distinct step instead of treating them as substitutes.",
+    "ExplanationWrongA": "",
+    "ExplanationCorrect": "The IMA Statement's resolution pathway directs a management accountant facing an ethical conflict to clarify relevant concepts with impartial advisers and to consult her own attorney as to her legal rights and obligations, a protective step aimed at the individual's exposure. Flash's external auditors occupy a different relationship: under PCAOB standards their engagement runs to expressing an opinion on the financial statements and internal control over financial reporting for the benefit of investors, not to counseling an employee about personal legal jeopardy, and their communications carry no attorney-client privilege. Understanding the split keeps Bergstrom's response properly sequenced, securing her own legal position with counsel while routing the accounting-treatment question through Flash's escalation process toward the auditors' eventual work.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: comprehension of two distinct advisory roles fits Moderate-Easy Understand",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-103",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.4",
+    "Topic": "F.103 rationalization-element-analysis",
+    "UniqueConceptKey": "F-103-rationalization-element",
+    "Authorities": [
+      "Fraud Triangle (Cressey) as reflected in COSO fraud-risk guidance",
+      "COSO Internal Control - Integrated Framework (2013)"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CommonTrapReference": "Calling wage grievances or weak controls rationalization instead of pressure/opportunity",
+    "Stem": "Interviewing for Flash Industries' internal audit function, senior auditor Rosa Camacho hears Flash logistics manager Trent Boyle explain fictitious freight claims totaling $74,000 booked over eighteen months: \"Wages here have been frozen while the company banked record margins, so the sloppy carrier paperwork effectively owed me a little back, and the insurer eats the difference, so nobody is actually hurt.\" Camacho notes that carrier-invoice matching controls were weak throughout the period and that Boyle's family medical bills had mounted. In fraud-triangle terms, which analysis correctly classifies what Boyle's quoted beliefs contribute?",
+    "Choices": {
+      "A": "Boyle's frozen wages constitute the rationalization element because they supplied his reason to steal.",
+      "B": "Boyle's stated beliefs that underpayment entitled him to restitution and that insurers absorbed the loss so no one was harmed constitute the rationalization element, distinct from the financial pressure that motivated him and the invoice-matching weakness that enabled him.",
+      "C": "The weak carrier-invoice matching control is the rationalization element because it convinced Boyle that detection was unlikely.",
+      "D": "The $74,000 magnitude itself demonstrates rationalization, since larger cumulative losses reveal deeper self-justification."
+    },
+    "CorrectChoice": "B",
+    "ExplanationWrongA": "Choice A labels Boyle's frozen wages rationalization. Wage stagnation belongs to the pressure leg supplying motive; the rationalization is the attitudinal narrative, entitlement plus victimless-loss framing, that made the theft feel acceptable to him personally.",
+    "ExplanationWrongC": "Choice C promotes the weak invoice-matching control to rationalization. That deficiency created opportunity, including perceived low detection risk; rationalization lives in Boyle's justifications, not in the condition of Flash's controls.",
+    "ExplanationWrongD": "Choice D reads loss magnitude as the element classifier. The $74,000 total informs impact assessment, but fraud-triangle classification depends on the function each fact serves, pressure, means, or justification, not on cumulative dollar size.",
+    "ExplanationWrongB": "",
+    "ExplanationCorrect": "In the Cressey fraud triangle, pressure or incentive supplies the motive, opportunity supplies the means, and rationalization is the attitudinal component, the internal narrative that makes misconduct feel acceptable to the actor. Boyle's entitlement story and his victimless-loss framing are precisely that narrative; his mounting medical bills are the pressure, and the deficient invoice-matching control is the opportunity. The analytic discipline Camacho needs is functional classification: assign each fact the role it plays rather than the emotional salience it carries. For Flash, the breakdown points to paired countermeasures, tightening invoice-matching controls against opportunity while reinforcing codes of conduct and tone at the top that attack rationalization before it hardens into entitlement.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: isolating one triangle element from a three-element fact pattern warrants Difficult Analyze",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-104",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.1",
+    "Topic": "F.104 competence-standard-application",
+    "UniqueConceptKey": "F-104-competence-expertise-gap",
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice - Competence standard"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Signing off beyond demonstrated expertise expecting auditors to catch errors",
+    "Stem": "Treasurer Marcus Webb asks corporate controller Priya Nair to finalize tonight the bifurcation analysis separating an embedded derivative from the convertible note Flash Industries just issued to fund its Reno automation expansion. Nair has never performed an embedded-derivative separation, cannot trace the valuation inputs in Webb's draft schedule, and the funding agreement closes tomorrow morning. What does the IMA Competence standard require of Nair?",
+    "Choices": {
+      "A": "Sign the schedule as drafted, relying on Flash's external auditors to detect and correct any errors before the filing is released.",
+      "B": "Refuse any involvement in the financing permanently, informing Webb that Flash must retain a derivatives advisory firm before the accounting function participates further.",
+      "C": "Proceed only on an adequate basis: obtain the requisite technical expertise through specialist consultation, verify the valuation inputs against source data, and decline to communicate conclusions she cannot support with sufficient relevant and reliable information.",
+      "D": "Complete the schedule using Webb's assumptions unchanged, adding an email notation that treasury furnished all valuation inputs."
+    },
+    "CorrectChoice": "C",
+    "ExplanationWrongA": "Choice A outsources diligence to a future audit. Preparer competence owns initial accuracy; assuming external auditors will catch embedded-derivative errors before filing abandons Nair's responsibility for issuing conclusions she can actually support.",
+    "ExplanationWrongB": "Choice B overreaches into permanent refusal. Competence requires acquiring or engaging needed expertise and honestly disclosing limitations, not abandoning participation in Flash's financing work altogether; withdrawal at that scale exceeds what the standard demands.",
+    "ExplanationWrongD": "Choice D launders assumptions through attribution. An email crediting treasury for the inputs does not make conclusions Nair cannot support acceptable; the recommendations she communicates still lack sufficient relevant and reliable underlying data.",
+    "ExplanationWrongC": "",
+    "ExplanationCorrect": "The IMA Competence standard obliges management accountants to maintain appropriate professional expertise, perform duties in accordance with applicable technical standards, and provide decision-support information and recommendations that are accurate, clear, concise, timely, and supported by sufficient relevant and reliable data. Facing a genuine expertise gap on an instrument that will drive Flash's covenant calculations and filed disclosures, Nair must close the gap before concluding: engage a valuation specialist, corroborate the inputs, and disclose any residual limitations rather than transmit an unsupported conclusion overnight. The standard neither lets her outsource diligence to a future audit nor forces withdrawal from her role; it demands that whatever she signs reflect analysis she is competent to stand behind, achievable here through immediate specialist support.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: applying expertise-and-support requirements to a time-pressured scenario fits Moderate Apply",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-105",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.1",
+    "Topic": "F.105 integrity-standard-recognition",
+    "UniqueConceptKey": "F-105-integrity-recognition",
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice - Integrity standard"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Remember",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CommonTrapReference": "Mixing Integrity's conflict rules with Competence or Credibility duties",
+    "Stem": "During ethics onboarding at Flash Industries, chief audit executive Ingrid Halvorsen quizzes new analysts with a composite case: an analyst discloses to management that a cousin manages a division bidding to supply Flash's packaging line, and the same analyst declines to adjust a variance analysis to flatter a plant manager's bonus metrics. Which standard of the IMA Statement of Ethical Professional Practice do both actions most directly operationalize?",
+    "Choices": {
+      "A": "Integrity",
+      "B": "Competence",
+      "C": "Credibility",
+      "D": "Confidentiality"
+    },
+    "CorrectChoice": "A",
+    "ExplanationWrongB": "Competence governs maintaining expertise and performing duties in accordance with technical standards using sufficient reliable data; neither conflict disclosure nor refusing to distort an analysis implicates skill levels, so it fails to fit Halvorsen's composite case.",
+    "ExplanationWrongC": "Credibility governs fair, objective communication and disclosure of all information reasonably expected to influence users' understanding; the case instead involves managing conflicts and resisting pressure to subvert legitimate objectives, which precede presentation choices.",
+    "ExplanationWrongD": "Confidentiality governs safeguarding information and releasing it only through authorized channels; nothing in the cousin disclosure or the variance-analysis refusal turns on protecting confidential data, making this standard a poor fit for either action.",
+    "ExplanationWrongA": "",
+    "ExplanationCorrect": "The IMA Integrity standard requires members to mitigate actual conflicts of interest and advise involved parties of them, to refrain from subverting attainment of the organization's legitimate and ethical objectives, and to abstain from conduct that would prejudice ethical performance of duties. Disclosing the cousin's bid is textbook conflict mitigation, and refusing to distort the variance analysis is a refusal to subvert legitimate objectives; both sit squarely within Integrity. Halvorsen uses the pairing to show Flash's analysts that Integrity governs conduct and loyalty, not expertise levels, communication completeness, or information safeguarding, which belong respectively to the other three standards of the Statement.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-standard recognition from definitions fits Easy Remember",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-106",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.3",
+    "Topic": "F.106 escalation-timing-judgment",
+    "UniqueConceptKey": "F-106-escalation-timing",
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice (resolution of ethical conflicts)",
+      "ASC 606 (transfer of control)"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CommonTrapReference": "Delaying escalation for system conversions, confirmations, or auditor fieldwork",
+    "Stem": "On October 3, divisional controller Yolanda Reyes of Flash Industries' Columbus components division documents that $1.9 million of the division's $48 million September-quarter revenue represents consigned units still sitting at customer sites with title untransferred. Division president Brad Huxley reads her memo, calls the shipment substantially conforming, and asks her to hold the issue until January, when the new ERP will supposedly sort everything out; the division's covenant certificate to lenders is due November 10. Reyes holds signed delivery exceptions proving control never passed. When and how should she proceed under the IMA resolution pathway?",
+    "Choices": {
+      "A": "Wait until the January ERP conversion completes so corrections post cleanly in the new system and the historical ledgers remain undisturbed.",
+      "B": "Obtain written confirmation from each customer's controller before raising the matter internally, so the escalation rests on perfected third-party proof rather than her own documentation.",
+      "C": "Defer the concern until Flash's external auditors reach the Columbus division during interim fieldwork and surface the question themselves through the attestation process.",
+      "D": "Escalate now to the next higher level of responsibility, because her evidence establishes a reasonable belief that the September quarter is misstated and Huxley has declined to act, so further private delay compounds the reporting-integrity exposure through the November covenant date."
+    },
+    "CorrectChoice": "D",
+    "ExplanationWrongA": "Choice A prioritizes ledger tidiness over reporting integrity. Waiting until January lets a misstated September quarter flow into certifications and the November 10 covenant certificate; corrections belong in the affected period, not in whichever system comes next.",
+    "ExplanationWrongB": "Choice B demands perfected third-party proof Reyes already effectively holds. Signed delivery exceptions establish reasonable belief now, and the resolution pathway escalates on that basis; chasing customer confirmations merely extends the delay while reliance events accumulate.",
+    "ExplanationWrongC": "Choice C outsources the duty to the auditors' fieldwork. Allowing the attestation process to surface the issue cedes control over timing while the covenant date approaches; Reyes must work Flash's internal escalation chain first rather than wait for external discovery.",
+    "ExplanationWrongD": "",
+    "ExplanationCorrect": "The IMA resolution pathway directs an accountant to raise concerns initially with the immediate supervisor and, when that person appears involved or fails to act and established policy does not resolve the matter, to submit the issue to the next higher managerial level. The evaluative question is timing: once Reyes holds signed delivery exceptions establishing that control did not transfer under ASC 606, her reasonable belief is sufficiently grounded, and the open reporting calendar, a certified quarter feeding a November 10 lender certificate, makes delay itself harmful since roughly four percent of divisional revenue rides on the question. Waiting for an ERP migration, redundant confirmations, or an auditor's arrival extends the misstatement through successive reliance events; prompt escalation above Huxley is the judgment the standard rewards.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Evaluate with named decision-maker, deadline tension, and three plausible deferral paths at the top tier",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-107",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.1",
+    "Topic": "F.107 credibility-full-communication",
+    "UniqueConceptKey": "F-107-credibility-definitional-change",
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice - Credibility standard"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Treating arithmetically correct figures as satisfying disclosure duties",
+    "Stem": "Flash Industries' October operating-review pack celebrates that the Toledo press shop cut its scrap rate from 6.2 percent to 4.1 percent, crediting new die maintenance. Financial planning director Owen Tran later learns the improvement is mostly definitional: under the prior measurement basis the September rate computes to 5.9 percent, while the new basis excludes rework-loop units from scrap entirely, producing 4.1 percent. The pack presents the 4.1 percent figure with no note about the change. Applying the IMA Credibility standard, what should Tran do before the leadership meeting?",
+    "Choices": {
+      "A": "Remove the Toledo page from the pack entirely until the scrap definition debate is settled, sparing leadership a misleading slide.",
+      "B": "Leave the presentation unchanged, since the 4.1 percent figure is arithmetically correct under the measurement basis the plant now uses.",
+      "C": "Present the trend with the definitional change fully disclosed, showing both bases side by side and quantifying how much of the apparent 2.1-point gain, about 1.8 points, is definitional rather than operational.",
+      "D": "Report only the old-basis 5.9 percent series in the pack and disregard the plant's new measurement basis until headquarters formally approves it."
+    },
+    "CorrectChoice": "C",
+    "ExplanationWrongA": "Choice A replaces disclosure with deletion. Removing the page hides both the improvement and its explanation, leaving leadership less informed than before; the Credibility standard requires communicating fairly and completely, not curating visibility downward.",
+    "ExplanationWrongB": "Choice B equates arithmetic correctness with fair presentation. The 4.1 percent figure computes correctly yet misleads by omission because users cannot know 1.8 points came from redefining scrap; disclosure duties extend well beyond numerical accuracy.",
+    "ExplanationWrongD": "Choice D freezes the old basis unilaterally. Suppressing the plant's current measurement basis distorts comparability in the opposite direction; the objective route presents both series with a bridge quantifying the definitional effect on the trend.",
+    "ExplanationWrongC": "",
+    "ExplanationCorrect": "The IMA Credibility standard requires management accountants to communicate information fairly and objectively and to disclose all relevant information reasonably expected to influence a user's understanding of reports and analyses. Leadership reading an unexplained drop from 6.2 percent to 4.1 percent would conclude the die-maintenance program delivered nearly seven times more benefit than it truly did, since about 1.8 of the 2.1 points comes from excluding rework loops rather than process gains. Tran's obligation is fuller communication, not less: show both bases, quantify the definitional component, and let capacity and maintenance decisions rest on the true 0.3-point operational improvement. Deleting the page or freezing the old basis substitutes silence for objectivity, and bare arithmetic correctness never satisfies the disclosure half of the standard.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: applying disclosure duties to a quantified definitional shift fits Moderate Apply",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-108",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.5",
+    "Topic": "F.108 sox-302-404-interplay",
+    "UniqueConceptKey": "F-108-sox-302-404-interplay",
+    "Authorities": [
+      "Sarbanes-Oxley Section 302",
+      "Sarbanes-Oxley Section 404(a)-(b)"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CommonTrapReference": "Deferring material-weakness disclosure to the annual 404 cycle",
+    "Stem": "On September 20, ten days before fiscal Q3 closes, VP of internal audit Sofia Lindqvist concludes that inventory cut-off failures at Flash Industries' Reno plant constitute a material weakness. CFO Elena Vasquez asks what the finding means for Flash's upcoming Form 10-Q versus the year-end process. Which analysis of how the Section 302 and Section 404 regimes interact is most accurate?",
+    "Choices": {
+      "A": "The material weakness must be evaluated now for disclosure in the upcoming 10-Q through the Section 302 certification and disclosure-controls regime, while the Section 404 management assessment of ICFR effectiveness and the auditor's attestation attach to the annual cycle, so the two clocks run on different schedules that converge at year end.",
+      "B": "Nothing about the weakness becomes public until the annual Section 404 assessment, because material weaknesses are exclusively a year-end reporting construct.",
+      "C": "Section 404 obligates Flash to commission a special interim auditor attestation on the inventory-cut-off weakness within 45 days of Lindqvist's determination.",
+      "D": "The Section 302 certifications remain untouched by the finding because officer certifications extend only to the fairness of the financial statements and not to disclosure controls or internal control over financial reporting."
+    },
+    "CorrectChoice": "A",
+    "ExplanationWrongB": "Choice B locks disclosure to the annual clock. Material weaknesses surface quarterly through Section 302 certifications and 10-Q controls disclosures, so waiting for the year-end 404 cycle leaves Flash's Q3 filing silent on a known, already-documented defect.",
+    "ExplanationWrongC": "Choice C invents an interim 45-day attestation. Section 404(b) attaches to the annual ICFR assessment reported in the Form 10-K; no special mid-year auditor attestation obligation is triggered when management identifies a material weakness.",
+    "ExplanationWrongD": "Choice D narrows certification scope incorrectly. Section 302 expressly covers effectiveness of disclosure controls and procedures and disclosure of changes in ICFR, so a material weakness bears directly on the officers' certifications rather than only on statement fairness.",
+    "ExplanationWrongA": "",
+    "ExplanationCorrect": "Section 302 operates every reporting period: the CEO and CFO certifications accompanying each Form 10-Q address the effectiveness of disclosure controls and procedures, require disclosure of material weaknesses to the auditors and audit committee, and require disclosure of material changes in internal control over financial reporting, so a weakness identified ten days before quarter end feeds directly into Flash's Q3 controls disclosure. Section 404 works annually: management's ICFR effectiveness assessment under 404(a) and, for accelerated filers, the auditor's attestation under 404(b) appear in the Form 10-K. The regimes therefore impose different clocks on the same defect, quarterly candor immediately and annual effectiveness judgment at year end, and Vasquez must coordinate remediation evidence now so that any year-end conclusion of effective ICFR can genuinely be supported. Treating the finding as a purely annual event misreads the certification architecture.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: reconciling two statutory clocks with different cadences warrants Difficult Analyze",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-109",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.2",
+    "Topic": "F.109 algorithmic-bias-fairness-issue",
+    "UniqueConceptKey": "F-109-algorithmic-bias-fairness",
+    "Authorities": [
+      "NIST AI Risk Management Framework",
+      "ACM Code of Ethics and Professional Conduct (fairness and accountability principles)"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CommonTrapReference": "Conflating algorithmic uniformity or developer intent with absence of bias",
+    "Stem": "Shared-services manager Lucia Ferrante learns that Flash Industries' machine-learning model for flagging potentially duplicate or inflated supplier invoices, trained on three years of historical approval decisions, subjects invoices from suppliers onboarded within the last two years to review holds at triple the rate of long-standing vendors even after controlling for invoice size. Asked to characterize the ethical issue for Flash's data-governance council, which statement identifies it most accurately?",
+    "Choices": {
+      "A": "The issue is confidentiality, because the model's scoring logic is proprietary information that may not be examined outside the data-science team.",
+      "B": "The issue is intentional discrimination, and the correct response is to dismiss whichever developer wrote the training pipeline.",
+      "C": "The issue is embedded unfairness: training data reflecting legacy approval habits teaches the model proxy patterns that systematically disadvantage newer, smaller suppliers, so management accountants must surface, measure, and monitor the disparate outcomes rather than search solely for individual intent.",
+      "D": "There is no fairness issue, because an algorithm applies identical scoring rules to every invoice, and uniform mechanical treatment is by definition even-handed."
+    },
+    "CorrectChoice": "C",
+    "ExplanationWrongA": "Choice A reframes a fairness problem as secrecy. Proprietary scoring logic may restrict public detail, but the governance council can still examine aggregate outcome rates; confidentiality provides no basis for declining to measure disparate impact on newer suppliers.",
+    "ExplanationWrongB": "Choice B leaps from observed disparity to individual culpability. Proxy discrimination emerges from historical training data without developer animus, so dismissal remedies nothing; the sound response measures outcomes, mitigates the proxy effect, and monitors drift.",
+    "ExplanationWrongD": "Choice D rests on the uniformity myth. Identical rules applied to skewed training data reproduce skew, so mechanical consistency is not evidence of fairness, and validation against disparate outcome rates remains essential before trusting the model.",
+    "ExplanationWrongC": "",
+    "ExplanationCorrect": "Algorithmic systems inherit the patterns of the data on which they train, and historical approval behavior can encode proxies, such as vendor tenure and size, that reproduce structural disadvantage even though the code treats every input identically and no individual acted with discriminatory intent. The ethical issue Ferrante should name for the council is therefore systemic unfairness in outcomes, which calls for the accountability practices reflected in the NIST AI Risk Management Framework and the ACM Code: documenting data lineage, measuring disparate impact rates, validating flagged populations, and monitoring drift as Flash's supplier base evolves. Unchecked holds against newer suppliers strain emerging vendor relationships and distort working-capital terms, giving the finance function a direct stake in the model's fairness review.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: identifying and explaining a contemporary ethical issue fits Moderate-Easy Understand",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-F-110",
+    "Section": "F",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "BlueprintDomain": "Professional Ethics",
+    "LOSTag": "F.4",
+    "Topic": "F.110 management-override-red-flags",
+    "UniqueConceptKey": "F-110-override-red-flags",
+    "Authorities": [
+      "AICPA AU-C 240 (management override of controls)",
+      "COSO Internal Control - Integrated Framework (2013)"
+    ],
+    "FormulaReference": "",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Overlooking clustered JE red flags: late posts, round dollars, vague narratives",
+    "Stem": "Internal auditor Kwame Boateng runs Flash Industries' quarter-close journal-entry analytics for Q2. One cluster stands out: four entries debiting cost of goods sold $750,000 in total and crediting accrued liabilities, posted at 11:52 p.m. on the final close day by a corporate user ID outside the usual preparer rotation, bearing the description \"adjust per direction,\" approved by a single senior manager, with no supporting attachment. Against which pattern does the cluster most clearly measure up, and what should Boateng conclude?",
+    "Choices": {
+      "A": "The entries show ordinary preparation attributes, since they originated within the finance function and were approved before the books closed, so no additional testing is indicated.",
+      "B": "The cluster combines the classic management-override indicators, late posting at period end, round-dollar amounts, a vague narrative, absent support, and an initiator outside the normal preparer population, so targeted substantive testing of the entries and the approving manager's rationale is warranted.",
+      "C": "The entries resemble routine system-generated adjustments comparable to ERP-calculated depreciation postings and merit only inclusion in the standard close sample.",
+      "D": "The entries parallel ordinary intercompany eliminations prepared from a standardized reconciliation matrix, so the appropriate response is confirmation that elimination balances tie rather than any fraud-directed procedure."
+    },
+    "CorrectChoice": "B",
+    "ExplanationWrongA": "Choice A accepts ordinary-looking provenance as safety. Originating inside finance does not neutralize late posting, round dollars, a vague narrative, absent support, and an out-of-rotation user; override risk attaches to the pattern of attributes, not the department of origin.",
+    "ExplanationWrongC": "Choice C likens the entries to ERP-calculated depreciation. System postings carry built-in calculation logic and audit trails, whereas these manual, unsupported COGS-to-accruals entries have neither, so routine-sampling treatment ignores their exceptional profile.",
+    "ExplanationWrongD": "Choice D maps the cluster onto standardized eliminations. Matrix-driven intercompany entries reconcile across entities by design, whereas this one-sided accrual credit lacks support and reconciliation, demanding fraud-directed procedures rather than tie-out confirmation.",
+    "ExplanationWrongB": "",
+    "ExplanationCorrect": "Auditing standards treat management override of controls as a presumed fraud risk in every audit, and the recognized red-flag profile centers on journal entries posted at or after period end, round or unusual amounts, vague descriptions, missing documentation, unexpected users, and approvals obtained with little challenge. Every attribute in Boateng's cluster matches that profile, and their concentration in one set of COGS-to-accruals entries, a pairing capable of smoothing margin or parking costs, elevates the concern from curiosity to targeted testing: examine the support, interview the approving manager, and evaluate whether the entries mask misstatement. Routine depreciation postings and matrix-driven eliminations carry calculation and reconciliation disciplines this cluster conspicuously lacks, so Boateng should treat it as the presumed-override signal AU-C 240 trains auditors to pursue.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: applying the override red-flag profile to journal-entry analytics fits Moderate Apply",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice",
+      "SEC Form 8-K Item 2.04 (accelerated disclosure of triggering events)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Prepare and support the Form 8-K disclosure on the required timeline and document in writing that Flash's 30-day policy cannot supersede the SEC deadline, escalating the policy conflict to the audit committee if the CFO does not withdraw the directive.",
+      "B": "Observe the full 30-day internal window because a written treasury policy is binding on all finance personnel and shields the company during waiver negotiations.",
+      "C": "Disclose on the SEC timeline this quarter, then amend the treasury policy retroactively so the earlier breach appears to have been handled consistently.",
+      "D": "Resign effective immediately and file an SEC tip before raising the conflict with anyone inside Flash."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Treating written employer policy as superior to law and SEC deadlines when they collide",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Under the IMA Statement of Ethical Professional Practice, conflicts between employer procedures and legal or regulatory requirements are resolved in favor of the law, and unresolved conflicts are escalated through senior management to the audit committee or board. SEC Form 8-K Item 2.04 requires disclosure of a covenant default within four business days, so Dana's duty is to support timely filing while documenting why the internal 30-day window is unenforceable against the deadline. The competing paths, policy loyalty versus regulatory compliance with escalation, are genuinely defensible on their face, which is what makes the judgment hard. In business terms, Flash avoids a late-filing enforcement exposure and preserves lender trust by correcting the policy prospectively rather than concealing the breach.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B treats an internal treasury procedure as superior to federal securities law. The misconception is that written company policy legitimizes noncompliance; the IMA Statement requires members to uphold legal and regulatory requirements first, so a 30-day internal window cannot justify missing the Form 8-K deadline for the covenant breach.",
+    "ExplanationWrongC": "Choice C pairs compliant disclosure this quarter with a retroactive policy edit designed to disguise the inconsistency. Fabricating a record of past compliance violates the honesty and credibility standards, creates a misleading paper trail for auditors and lenders, and does nothing to fix the conflicting policy that produced the problem.",
+    "ExplanationWrongD": "Choice D skips the internal escalation steps the IMA decision model requires before resignation. Immediate departure leaves Flash's filing obligation unaddressed, forfeits the chance to correct the defective policy, and treats resignation as a first move rather than a documented last resort after channels are exhausted.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-111",
+    "Section": "F",
+    "Stem": "Flash's treasury policy instructs finance staff to withhold notification of debt-covenant breaches for up to 30 days while management drafts waiver requests. On December 27, group controller Dana Whitfield confirms Flash has breached the leverage covenant on its $95 million revolver. CFO Gerald Pratt invokes the 30-day policy window, but SEC rules require the breach to be disclosed on Form 8-K within four business days. Which course of action should Dana take?",
+    "Topic": "F.111 legal-duty-over-treasury-policy-conflict",
+    "UniqueConceptKey": "F-111-legal-duty-over-employer-policy",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: officer must weigh policy loyalty against securities deadlines with escalation judgment; competing defensible paths",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice - Competence standard"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Circulate the projection unchanged because the vendor's published accuracy rate of 96 percent certifies the model for production use.",
+      "B": "Remove the model's volume lines from the package so the board evaluates only figures Flash staff computed manually.",
+      "C": "Independently test the Q3 projection against ERP order data and historical trends, document the drivers he cannot substantiate, and flag the model's limitations to users of the forecast.",
+      "D": "Transfer sign-off on the forecast to the vendor's data-science desk so responsibility for the numbers rests with the party that owns the algorithm."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Substituting vendor accuracy claims for the accountant's own validation of AI outputs",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The Competence standard of the IMA Statement requires management accountants to perform duties only in areas where they have the necessary knowledge and skills, to maintain those skills as technology evolves, and to provide decision support that is reliable. Applying it here means Luis must validate the machine-learning output himself, reconciling the 14 percent Q3 rebound against ERP order data and historical trend evidence, documenting which drivers he cannot substantiate, and disclosing the model's limits to the board users before distribution. Vendor marketing statistics and delegated sign-off are no substitute for his own verification. In context, board decisions on hiring and capacity at Flash will rest on this forecast, so unvalidated AI output is a direct threat to decision quality.",
+    "ExplanationWrongA": "Choice A outsources professional skepticism to a marketing statistic. Vendor accuracy claims describe aggregate back-testing across other clients' data, not the drivers of Flash's current quarter; the Competence standard makes validating inputs and outputs Luis's own professional duty, not something a vendor warranty can discharge.",
+    "ExplanationWrongB": "Choice B hides the model rather than governing it. Silently deleting modeled lines deprives the board of the forecast it expects and discards potentially useful validated components; candor about limitations, not quiet removal, is the credible response consistent with providing reliable decision support.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D attempts to relocate accountability. Sign-off authority cannot be delegated to a third party whose contract carries no duty of care to Flash's directors; the Competence standard keeps responsibility for the quality of decision-support information with the management accountant who presents it.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-112",
+    "Section": "F",
+    "Stem": "Flash's FP&A manager, Luis Ortega, built a machine-learning demand model whose outputs now drive the board's rolling forecast. The tool projects a 14 percent volume rebound for Q3, but Luis cannot trace how the model weights the two weakest product lines, and the vendor's documentation does not explain the drivers. Under the Competence standard of the IMA Statement of Ethical Professional Practice, what is Luis obligated to do before the forecast is circulated?",
+    "Topic": "F.112 ai-output-competence-validation",
+    "UniqueConceptKey": "F-112-ai-output-competence-limits",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: requires applying the Competence standard to an unfamiliar technology situation with several attractive shortcuts",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "ASC 606 (Revenue from Contracts with Customers)",
+      "IMA Statement of Ethical Professional Practice - Credibility standard"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Demand genuinely strengthened, and the higher DSO simply reflects a favorable shift toward larger, slower-paying but creditworthy national accounts.",
+      "B": "The convergence of a sell-through gap, deteriorating DSO, abnormal January return credits, and concentrated quarter-end shipments indicates probable channel stuffing, warranting expanded substantive testing of revenue cut-off and distributor inventory levels.",
+      "C": "The readings point to a corrupted ERP aging routine rather than a revenue problem, so the audit should pivot to IT general controls and leave cut-off testing untouched.",
+      "D": "The January credit memos prove the division booked entirely fictitious sales to invented customers, a conclusion channel-stuffing indicators alone cannot support."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Explaining away converging stuffing signals with a single benign cause",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Channel stuffing inflates current-period revenue under ASC 606 by pushing excess units into distributor inventories ahead of real end-customer demand, and it announces itself through converging analytics: billing growth far outpacing sell-through (18 percent versus 3 percent), lengthening DSO (47 to 63 days), post-period return credits running four times normal, and quarter-end shipment concentration at 31 percent versus a 12 percent norm. Analyzing these together supports a conclusion of probable stuffing and justifies expanding cut-off testing and verifying distributor stock. In business terms, any inflated fourth quarter reverses in the first, misleading Flash's lenders and board about demand durability, so early detection protects both reporting credibility and inventory planning.",
+    "ExplanationWrongA": "Choice A accepts one benign story while ignoring three corroborating signals. Larger accounts can lengthen DSO, but they do not explain quadrupled January return credits or a tripling of quarter-end shipment concentration; dismissing converging analytics on a single rationale is exactly how channel stuffing escapes detection.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C reframes a transactional pattern as an IT artifact without any system evidence. Multiple independent measures moving together indicate behavior in sales and collections, not a report defect; pivoting the audit to ITGCs on that hunch would abandon substantive coverage of precisely the period at risk.",
+    "ExplanationWrongD": "Choice D overshoots the evidence. Return credits and slow sell-through are hallmarks of real goods pushed into the distribution channel, not fabricated customers; alleging wholly fictitious sales claims a certainty the data cannot deliver and would misdirect the audit response away from cut-off testing.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-113",
+    "Section": "F",
+    "Stem": "Internal audit director Maya Osei is reviewing year-end data for Flash's appliance division. Fourth-quarter billings to two national distributors rose 18 percent over the prior year, while retail sell-through at those same accounts grew only 3 percent. Days sales outstanding climbed from 47 to 63 days, January credit memos for returned units ran four times the historical average, and the two distributors took 31 percent of fourth-quarter unit shipments against a 12 percent three-year norm. What conclusion is best supported?",
+    "Topic": "F.113 channel-stuffing-detection-signals",
+    "UniqueConceptKey": "F-113-channel-stuffing-analytics",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: four converging analytics must be weighed against benign rival explanations before concluding stuffing",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "COSO Internal Control - Integrated Framework (2013) - inherent limitations"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The controls failed because Flash skipped its annual key-control recertification; completing recertification will remove this fraud exposure going forward.",
+      "B": "Once two employees collaborate, the matter becomes an external-audit issue, because segregation-of-duties testing addresses only single-actor misconduct.",
+      "C": "Well-designed segregation should detect collusive fraud, so the loss proves the match-and-approve design itself was deficient.",
+      "D": "Segregation of duties lowers fraud risk but remains subject to the inherent limitation that employees acting in concert can override or bypass soundly designed controls, so residual exposure persists even in a compliant framework."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Expecting preventive controls such as segregation to withstand deliberate collusion",
+    "CorrectChoice": "D",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The COSO Internal Control - Integrated Framework (2013) expressly identifies collusion among individuals as an inherent limitation of internal control: controls provide reasonable, not absolute, assurance, and two or more employees acting together can defeat even well-designed segregation of duties. Understanding this caveat lets Tomas answer Ruth accurately, since the three-way match and separate receiving approvals were functioning as designed but were deliberately circumvented by the purchasing manager and receiving clerk acting in concert. For Flash, the takeaway is that anti-collusion exposure is managed through monitoring analytics, rotation, and culture rather than eliminated through structural control design alone.",
+    "ExplanationWrongA": "Choice A equates paperwork currency with fraud immunity. Recertification documents who holds access rights; it does nothing about two authorized people agreeing to defeat the three-way match, mistaking administrative hygiene for the inherent limitation COSO formally recognizes.",
+    "ExplanationWrongB": "Choice B relocates the issue to the external auditor. External audit provides reasonable assurance over financial statements, not a guarantee of fraud detection, and designing and operating internal controls remains Flash's own management responsibility regardless of how many actors colluded.",
+    "ExplanationWrongC": "Choice C reasons backward from outcome to design defect. Collusion defeats adequate designs precisely because approvals and receipting were honestly separated between people who then conspired; a realized loss demonstrates the acknowledged residual risk, not proof that the architecture was faulty.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-114",
+    "Section": "F",
+    "Stem": "After Flash's procurement fraud case, audit committee chair Ruth Calloway asks internal audit lead Tomas Reyes why the three-way-match and approval-segregation controls did not stop a purchasing manager and a receiving clerk from routing $1.4 million of phantom deliveries. Tomas answers with the standard control-design caveat. Which statement captures it correctly?",
+    "Difficulty": "Moderate-Easy",
+    "Topic": "F.114 collusion-inherent-limitation-control-design",
+    "UniqueConceptKey": "F-114-collusion-residual-risk",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-concept comprehension of an inherent limitation, tested in a fraud postmortem frame",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice",
+      "ASC 606 (variable consideration and customer return rights)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Shred her photocopy of the letter, since the sales vice president disowned it and the master contract governs the accounting.",
+      "B": "Take the letter and its revenue effect to her supervisor and, absent correction, keep escalating through Flash's channels, because enforceable return rights constrain how much of the $4.8 million qualifies for recognition under ASC 606.",
+      "C": "Book a $4.8 million revenue reversal herself that afternoon and defer telling anyone until her year-end wrap-up memorandum.",
+      "D": "Write to Meridian asking it to discard its counterpart of the letter so both companies' records align."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Accepting verbal disavowal of a written side agreement without escalating",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Applying the IMA ethical conflict-resolution pathway, Priya should identify and assess the facts, communicate the matter to her supervisor, and continue escalating if the accounting is not corrected. Under ASC 606, enforceable side agreements granting unlimited return rights through December 2027 mean control of the sensors has not unconditionally passed, constraining recognition of the $4.8 million recorded in the first half regardless of the sales vice president's verbal dismissal. Escalation with documentation is the prescribed step; unilateral or covert fixes bypass required review. For Flash, resolving the letter's status promptly prevents an overstated revenue figure from flowing into covenant certifications and the second-half close.",
+    "ExplanationWrongA": "Choice A destroys potential evidence on the strength of a verbal dismissal. A disavowed writing is a fact to be resolved through review, not eliminated; discarding it would compound a possible revenue misstatement with a records-integrity breach and leave no trail for the escalation she owes.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C seizes unilateral corrective power in secret. Adjustments of this size belong in the documented close process with preparer and reviewer sign-offs; a stealth reversal, however right-sized, breaks chain-of-command duties and the transparency expectations behind the credibility standard.",
+    "ExplanationWrongD": "Choice D tries to launder the discrepancy by suppressing the counterparty's copy. Soliciting deletion of an executed contractual instrument so files appear consistent is falsification-adjacent conduct that deepens rather than resolves the recognition question under ASC 606.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-115",
+    "Section": "F",
+    "Stem": "While clearing the sensor-line contract file, assistant controller Priya Nair finds a fully executed side letter between Flash and Meridian Retail committing Flash to accept unlimited returns of unsold sensors through December 2027. The master contract contains no such right, and Flash recognized $4.8 million of sensor revenue on shipments to Meridian in the first half. The vice president of sales dismisses the letter as a stale draft the customer kept by mistake. What should Priya do next?",
+    "Topic": "F.115 side-agreement-return-rights-discovery",
+    "UniqueConceptKey": "F-115-side-agreement-escalation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: direct application of the IMA resolution sequence to a concrete side-letter discovery",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Sarbanes-Oxley Act Section 402",
+      "Securities Exchange Act Section 13(k)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Section 402",
+      "B": "Section 302",
+      "C": "Section 404",
+      "D": "Section 806"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Confusing the SOX 402 loan ban with Sections 302, 404, and 806",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Sarbanes-Oxley Section 402, codified as Exchange Act Section 13(k), generally prohibits a listed issuer such as Flash from extending or maintaining credit, arranging personal loans, or renewing existing loans to its directors and executive officers, subject to narrow exceptions like home improvement and consumer-credit products, charge cards up to stated limits, and lending by regulated broker-dealer affiliates in the ordinary course. Recall of the section number is the tested skill. For Flash's governance program, the prohibition matters when structuring relocation assistance, housing advances, or emergency-loan benefits for named executives, all of which require legal review before extension.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Section 302 is the officer-certification rule requiring the CEO and CFO to personally certify periodic reports and disclose control deficiencies, a reporting-integrity duty unrelated to extending credit to insiders.",
+    "ExplanationWrongC": "Section 404 mandates management's assessment of internal control over financial reporting and, for accelerated filers, the external auditor's attestation, addressing control effectiveness rather than executive lending.",
+    "ExplanationWrongD": "Section 806 affords civil whistleblower protection against retaliation for employees of public companies who report suspected securities violations; it neither authorizes nor restricts loans to directors and officers.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-116",
+    "Section": "F",
+    "Stem": "Preparing onboarding materials for two newly elected Flash directors, corporate secretary Amara Diallo summarizes the Sarbanes-Oxley Act's governance provisions. She needs the correct citation for the rule that generally prohibits Flash, as a listed issuer, from extending or maintaining personal loans to its directors and executive officers. Which SOX section is it?",
+    "Topic": "F.116 sox-402-executive-loan-prohibition",
+    "UniqueConceptKey": "F-116-sox-402-loan-ban",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-fact recall of a named SOX section with familiar distractors",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice - ethics helpline and resolution pathway"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Use the helpline to lodge an SEC enforcement referral against Flash and start a formal investigation.",
+      "B": "Request a definitive ruling on whether capitalizing the repairs violates GAAP, then rely on the ruling as authoritative technical support in the ledger.",
+      "C": "Avoid the helpline on the assumption that any IMA contact automatically triggers notice to Flash's audit committee.",
+      "D": "Seek confidential guidance on applying the IMA Statement's conflict-resolution pathway, withholding Flash's identity until he chooses his next internal step."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Mistaking the IMA helpline for a regulator or a GAAP ruling authority",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The IMA ethics helpline exists to give members confidential guidance on applying the IMA Statement's standards and resolution steps to their situation; consultations may be anonymous and initiate no notification to the employer. Victor's proper use of the resource is to talk through whether his objections to capitalizing $2.1 million of routine repairs are proportionate and what his next internal steps should be, keeping Flash unidentified until he decides. The helpline is neither a securities regulator nor a technical-accounting arbiter, so expecting rulings or referrals misreads its purpose. Applied well, it strengthens Victor's position before he confronts the Evansville EBIT directive inside Flash's own escalation chain.",
+    "ExplanationWrongA": "Choice A mistakes a professional-society service for a government hotline. The IMA helpline advises on applying the ethics code; it neither receives nor forwards enforcement referrals to the SEC, so framing the call as a formal filing misunderstands the channel entirely.",
+    "ExplanationWrongB": "Choice B seeks an accounting ruling the helpline cannot issue. Determining whether repairs meet capitalization criteria is a GAAP judgment belonging to Flash's technical accounting staff and auditors; the helpline guides conduct under the Standards and does not produce citable positions for ledger support.",
+    "ExplanationWrongC": "Choice C rests on a false premise about confidentiality. Helpline consultations are confidential and trigger no notice to any employer, so letting fear of automatic audit-committee disclosure block a resource designed for exactly this kind of hesitant inquiry leaves Victor without guidance.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-117",
+    "Section": "F",
+    "Stem": "Flash plant controller Victor Imadu is instructed to move $2.1 million of routine repair invoices into the machinery asset account so the Evansville plant hits its quarterly EBIT commitment. Unsure whether his objections are proportionate and wary of alerting Flash's leadership prematurely, Victor wants outside perspective grounded in his professional code. How should he properly use the IMA ethics helpline?",
+    "Topic": "F.117 ima-ethics-helpline-consultation",
+    "UniqueConceptKey": "F-117-helpline-confidential-guidance",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: applies the helpline's proper role against three plausible misuses of the channel",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "ACFE Fraud Examiners Manual (lapping red-flag indicators)",
+      "COSO Internal Control - Integrated Framework (2013)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The exceptions reflect innocent master-data drift after a bank-file format change, so the pattern needs no fraud follow-up.",
+      "B": "The evidence indicates skimming of cash sales at branch counters, a scheme operating before recording, so the receivables-layer symptoms must stem from some separate cause entirely.",
+      "C": "Taken together, allocation anomalies, deferred postings, swelling unapplied cash, statement disputes, and vacation refusal are classic indicators of lapping by an employee controlling incoming receipts, warranting a targeted examination of that clerk's accounts.",
+      "D": "The analytics signal warehouse shrinkage of finished components, so receivables testing should be dropped in favor of a physical cycle count."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Reading converging receivables red flags as isolated clerical noise",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Lapping is the theft of one customer's remittance followed by crediting that customer's account with a later customer's payment, rolling the shortfall forward indefinitely. The analytic signature matches the Toledo data: receipts applied to wrong accounts, systematic gaps between deposit and posting dates, growing unapplied cash as the chain strains, customers disputing statements they have already paid, and a clerk refusing vacation because absence would expose the rolling reconciliation. Synthesizing these signals points to lapping by someone with sole custody of incoming receipts and justifies a targeted examination rather than broad retesting. For Flash, each month of delay widens the concealed shortage and complicates recovery under the employee's fidelity bond.",
+    "ExplanationWrongA": "Choice A folds four independent signals into one convenience explanation. A file-format change might scramble a field, but it does not simultaneously produce deposit-to-posting gaps, disputed statements, rising unapplied cash, and a clerk avoiding leave; benign labeling here is how lapping hides for years.",
+    "ExplanationWrongB": "Choice B misidentifies both the scheme and the mechanics. Skimming targets off-book receipts before recording, typically at point-of-sale collection points, while every observed symptom lives inside the receivables subledger; waving the subledger symptoms off to a separate cause abandons the coherent trail already in hand.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D jumps to an unrelated asset class. Nothing in receipt timing, allocation errors, or statement disputes touches physical inventory counts, so pivoting to cycle counts abandons a coherent receivables trail mid-analysis and leaves the suspected scheme undisturbed and running.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-118",
+    "Section": "F",
+    "Stem": "Flash's shared-services center runs monthly receivables analytics for the Toledo components site. Exception rates show receipts frequently posted to the wrong customer accounts, a growing pool of unapplied cash, systematic delays between bank deposit dates and posting dates, and a spike in customers disputing statements for invoices they say they already paid. The senior accounts-receivable clerk has declined vacation for two consecutive years. Which analytic conclusion is best supported?",
+    "Topic": "F.118 lapping-red-flag-analytics",
+    "UniqueConceptKey": "F-118-lapping-indicators",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-signal pattern synthesis distinguishing lapping from skimming and clerical error",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice - Integrity and Credibility standards"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "It fixes a dated record that she identified the defect and declined participation, protecting her credibility and locating approval responsibility with those who sign.",
+      "B": "It transfers personal legal liability for the inventory valuation to the CFO and removes Flash's exposure to a future restatement.",
+      "C": "It completes the documentation element of her ethical duty, ending any further obligation she has to pursue the valuation dispute.",
+      "D": "It gives her standing to reverse the NRV conclusion unilaterally if Flash's external auditors challenge the balance at year-end."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Viewing documented dissent as liability transfer rather than professional protection",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Under the Integrity and Credibility standards of the IMA Statement, a member asked to endorse work she believes is unsupported should decline to participate and create a contemporaneous record of her objection. Ingrid's email establishes when she identified the defect in the NRV memo, what she observed, and that she refused initialing, which protects her professional standing if the $1.9 million balance is later questioned and makes clear that approval responsibility rests with those who signed. Documentation is protective evidence, not a liability-transfer instrument, a terminal act, or a grant of corrective authority, and her obligation to keep escalating the valuation concern continues if it remains unresolved.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B invents a liability-transfer effect. Corporate obligations for reported values remain Flash's own; a dissent email allocates knowledge and decision accountability, it does not reassign statutory, civil, or restatement exposure to whichever executive signs the memo instead.",
+    "ExplanationWrongC": "Choice C treats the note as a terminus. Documentation records one step in the IMA resolution sequence; if the estimate stands without support, her duty to pursue the matter further, ultimately to higher levels such as the audit committee, continues unaffected by having written the email.",
+    "ExplanationWrongD": "Choice D confuses advocacy with authority. Auditors' questions confer no unilateral reversal powers on a declining reviewer; correcting an estimate runs through Flash's own approval hierarchy and journal-entry controls, not through a reviewer's dissent correspondence.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-119",
+    "Section": "F",
+    "Stem": "At Flash's third-quarter close, controller Ingrid Solberg concludes that the $1.9 million no-write-down recommendation in the finished-goods NRV memorandum rests on selling prices the commercial team has already marked down. The CFO asks her to initial the memo as reviewing preparer anyway. Ingrid declines to initial, and the next day circulates a short email stating what she saw, when she raised it, and why she could not endorse the estimate. Why is that contemporaneous documentation valuable to her?",
+    "Topic": "F.119 documented-refusal-without-signing",
+    "UniqueConceptKey": "F-119-dissent-documentation-value",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: comprehension of what contemporaneous dissent documentation achieves and does not achieve",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "SEC Regulation FD (Fair Disclosure)",
+      "SEC Form 8-K"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Nothing immediate; the information may be filed on Form 8-K within four business days because conference-question settings tolerate delayed broad disclosure.",
+      "B": "Prompt public disclosure the same trading day, by press release furnished on Form 8-K, because the briefing delivered material nonpublic information to a selectively informed audience.",
+      "C": "Distribution of the slide deck to Flash's registered holders of record, satisfying fair dissemination of the news to owners directly.",
+      "D": "No further action, provided Flash's share price absorbs the announcement quickly enough that the market is equally informed in practice."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Assuming rapid price movement or delayed 8-K timing satisfies Regulation FD",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Regulation FD prohibits selective disclosure of material nonpublic information by an issuer to security-market professionals and holders likely to trade on it; where a breach occurs intentionally, the issuer must make simultaneous public disclosure, and where unintentional, prompt disclosure, customarily via press release plus Form 8-K. Nathan applies the rule by ensuring Flash publicly releases news of the Halberd cancellation, an 11-percent-of-revenue customer plainly material, the same trading day. Analysts at an invitation-only briefing are quintessential Reg FD recipients, so the selective remark starts the clock immediately. Price speed and holder mailings are irrelevant; only public availability restores the informational level field the regulation protects.",
+    "ExplanationWrongA": "Choice A grafts the four-business-day 8-K filing clock onto a live selective-disclosure event. Regulation FD's remedy is contemporaneous public release, not a grace period; waiting days leaves the selectively briefed analysts free to trade on an informational edge the rule exists to eliminate.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C substitutes a holder-of-record mailing for public dissemination. Regulation FD measures disclosure by general public availability, and a registered-holder list excludes the far broader investing public that trades the stock, so the fair-dissemination premise fails.",
+    "ExplanationWrongD": "Choice D swaps a legal standard for a market-efficiency hope. How quickly prices adjust is irrelevant to compliance; the duty attaches to the manner and timing of release, and rapid price absorption neither ratifies the selective briefing nor cures the violation once it occurred.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-120",
+    "Section": "F",
+    "Stem": "At 9:40 a.m. Eastern, Flash's CFO tells twenty-five buy-side analysts attending Flash's invitation-only manufacturing briefing that Halberd Logistics, an 11-percent-of-revenue customer, has terminated its supply agreement effective next quarter. Flash's investor-relations head, Nathan Cho, learns of the remark within minutes. Under SEC Regulation FD, what should Nathan ensure happens?",
+    "Topic": "F.120 reg-fd-analyst-briefing-disclosure",
+    "UniqueConceptKey": "F-120-reg-fd-simultaneous-disclosure",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: applies Regulation FD's disclosure duty to an intentional analyst briefing against timing and mechanism traps",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "TCFD Final Report: Recommended Disclosures (2017)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Materiality, completeness, accuracy, and comparability",
+      "B": "Governance, strategy, external assurance, and verification statements",
+      "C": "Governance, strategy, risk management, and metrics and targets",
+      "D": "Scope 1 emissions, Scope 2 emissions, Scope 3 emissions, and offsets"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Confusing TCFD pillars with GHG Protocol scopes or GRI principles",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The Task Force on Climate-related Financial Disclosures structures its recommended disclosures around four pillars: governance, meaning board oversight of climate risk; strategy, covering climate-related risks and opportunities to the business plus scenario-resilience analysis; risk management, describing how climate risk is identified, assessed, and integrated into enterprise processes; and metrics and targets, the quantitative measures such as emissions and reduction goals used to manage progress. Grace's mapping should mirror these pillars so reviewers find Flash's disclosures where the framework expects them. The distractors borrow vocabulary from GRI principles, assurance practice, and GHG Protocol scopes, which serve adjacent purposes but do not organize TCFD reporting.",
+    "ExplanationWrongA": "Choice A recites GRI-style reporting principles, which govern the qualitative quality of sustainability information generally rather than TCFD's architecture; mapping Flash's report to them would leave board oversight and scenario-based strategy content without a home in the climate section.",
+    "ExplanationWrongB": "Choice B splices assurance language into the pillar set. External verification supports the credibility of sustainability disclosures generally but is not one of the TCFD's four recommended representation areas, leaving risk management, an actual pillar, missing from the structure.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D lists greenhouse-gas inventory categories from the GHG Protocol. Scopes classify emission sources for measurement purposes; they do not organize how a company describes board oversight, strategic resilience, or risk integration, which is the organizing task TCFD pillars perform.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-121",
+    "Section": "F",
+    "Stem": "Flash sustainability coordinator Grace Lindqvist is mapping next year's climate disclosures to the four structural pillars recommended by the Task Force on Climate-related Financial Disclosures so that Flash's report mirrors the framework investors and reviewers expect. Which listing names those pillars?",
+    "Topic": "F.121 tcfd-four-pillar-structure",
+    "UniqueConceptKey": "F-121-tcfd-pillars-recall",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: straight recall of the TCFD's four recommended pillars",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "SEC Regulation G",
+      "SEC Division of Corporation Finance Non-GAAP C&DIs (Questions 100.01, 100.04)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Present GAAP operating income with equal or greater prominence and retire the exclusions, because stripping costs that recur predictably manufactures a stability the business does not have and invites SEC scrutiny of the measure's credibility.",
+      "B": "Lead with Core Operating EBITDA and hold GAAP results in the footnote, since adjusted cash-generation optics are what investors reward at Flash's stage of the cycle.",
+      "C": "Keep the measure but relabel severance and transformation spend as nonrecurring events in the narrative, confining the exclusions to years in which they occur.",
+      "D": "Report Core Operating EBITDA only in quarters where the exclusions improve the trend line and present prior periods on a straight GAAP basis for consistency."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Excluding predictable recurring costs and burying GAAP beneath an adjusted headline",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Roberta must weigh investor-relations optics against SEC non-GAAP rules. Regulation G and the Division of Corporation Finance's Compliance and Disclosure Interpretations require equal or greater prominence for the nearest GAAP measure and treat exclusions of normal, recurring operating expenses as rendering an adjusted measure misleading. Severance incurred in each of the past three years and transformation spend budgeted annually fail the infrequency-and-unpredictability test, so presenting Core Operating EBITDA as drafted would invite comment letters and erode analyst trust precisely when GAAP results fell 22 percent. Retiring the exclusions and leading with GAAP is the defensible officer judgment, preserving Flash's credibility capital for future releases.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B optimizes for optics over compliance. Burying GAAP beneath an adjusted headline violates the equal-or-greater-prominence expectation and compounds the problem of exclusions regulators read as misleading, converting a presentation choice into an enforcement and credibility liability.",
+    "ExplanationWrongC": "Choice C launders the labels instead of the practice. Calling annually incurred severance and transformation costs nonrecurring does not change their character; renaming recurring items is precisely the cosmetic fix non-GAAP guidance rejects, and the measure remains misleading however worded.",
+    "ExplanationWrongD": "Choice D cherry-picks the measure's appearance window. Presenting adjusted results only when flattering, with unmatched GAAP comparatives, is asymmetric reporting that misleads more effectively than a consistently presented metric would and squarely contradicts equal-prominence expectations.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-122",
+    "Section": "F",
+    "Stem": "Flash's GAAP operating income fell 22 percent year over year. CFO Roberta Eng drafts the earnings release to headline 'Flash Core Operating EBITDA,' a measure excluding $6.2 million of severance costs that have recurred in each of the past three years and $3.4 million of transformation spend Flash expects to incur annually through the plan horizon, with GAAP figures relegated to a footnote below the adjusted reconciliation. As the officer accountable for the release, which presentation decision should Roberta make?",
+    "Topic": "F.122 non-gaap-metric-credibility-presentation",
+    "UniqueConceptKey": "F-122-non-gaap-prominence-judgment",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: CFO judgment balancing investor optics, recurring-cost character, and SEC non-GAAP prominence rules",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "ACFE Fraud Examiners Manual (fraud examination response protocol)",
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Confront the purchasing manager at once to secure cooperation, then preserve the invoice file, then inform the audit committee of the outcome.",
+      "B": "Terminate the manager immediately to halt further losses, then commission the investigation, then rebuild the affected controls.",
+      "C": "Extend the anomaly analytics for six months to accumulate statistical certainty, deferring any escalation until the pattern is unmistakable.",
+      "D": "Secure and image the relevant records while limiting access, engage counsel and the audit committee to charter the investigation, then schedule interviews starting farthest from the suspect so evidence hardens before he is approached."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Confronting or terminating the suspect before evidence is preserved and chartered",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Accepted fraud-response practice sequences response as: preserve evidence first through imaging and access restriction, engage counsel and governance, here the audit committee, to establish privilege and charter the investigation, then interview witnesses in an order that approaches the suspect last, so facts are locked before he can coordinate. Becca applies the protocol by recommending exactly that order. Confrontation or termination before preservation invites spoliation and coordinated stories, while indefinite analytics expansion lets losses compound past the point where recovery is practical. Sequencing matters because each premature or delayed step changes what evidence survives and what legal options remain available to Flash.",
+    "ExplanationWrongA": "Choice A leads with confrontation, the classic tipping error. Advance warning invites document destruction and coordinated narratives, so the evidence Becca eventually preserves arrives filtered by a suspect who has had time to prepare, weakening both the case and recovery prospects.",
+    "ExplanationWrongB": "Choice B trades speed for spoliation risk. Firing before collection alerts accomplices, ends cooperation avenues, and can convert a provable procurement fraud into an unprovable wrongful-termination dispute run ahead of the investigative facts and outside privileged channels.",
+    "ExplanationWrongC": "Choice C mistakes volume for proof. Six additional months of analytics add precision the existing indicators do not need while losses compound and trails cool; escalation thresholds respond to reasonable suspicion supported by documented red flags, not statistical saturation.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-123",
+    "Section": "F",
+    "Stem": "Flash internal auditor Becca Yamani notices that a purchasing manager has approved $740,000 of invoices from Northgate Fabrication, a vendor registered eleven weeks ago whose ownership traces to the manager's cousin and whose delivery receipts carry identical pallet counts week after week. Following accepted fraud-response practice, which sequence should Becca recommend?",
+    "Topic": "F.123 fraud-response-protocol-sequencing",
+    "UniqueConceptKey": "F-123-fraud-response-order",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: sequencing judgment within a known protocol; distractors invert realistic steps",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice - Integrity and Credibility standards"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The behaviors cancel: Midwest's padding sits opposite Southwest's sandbagging, so consolidated budgets remain statistically unbiased despite local gaming.",
+      "B": "Because pay rewards beating the plan rather than truthful forecasting, managers supply biased inputs, and the resulting budgets degrade in reliability for coordination, capacity decisions, and variance evaluation across every division.",
+      "C": "The gaming is efficiency-enhancing: each manager embeds private operational knowledge the center lacks, so manipulated budgets are more accurate than centrally imposed ones.",
+      "D": "The damage stays inside bonus arithmetic and vanishes once actuals replace budget figures, leaving variance reports and next-cycle planning unaffected."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Assuming offsetting divisional manipulations keep consolidated budgets neutral",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Ana's analysis traces incentive design into information quality: when 60 percent of bonus pay rides on budget attainment, rational managers pad cost budgets and sandbag revenue forecasts, so the plans Flash consumes are systematically biased at the input stage. Those corrupted baselines then propagate outward, distorting maintenance staffing and capacity commitments at Midwest, understating Southwest's demand in coordination meetings, flattering variance reports that compare actuals against gamed targets, and ratcheting next cycle's expectations off fictional numbers. Under the IMA Statement, management accountants bear integrity and credibility duties over the information feeding these systems, which is why identifying and mitigating budget gaming is an ethical obligation, not merely a forecasting nuisance.",
+    "ExplanationWrongA": "Choice A leans on an offset fallacy. Offsetting errors at consolidation mask distortion rather than mending it: capacity plans, staffing levels, and segment targets still consume the biased pieces, so an unbiased-looking total conceals locally corrupted operating decisions underneath it.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C romanticizes manipulation as information pooling. Private operational knowledge enters budgets through honest participation; padding and sandbagging subtract truth to manufacture headroom, so the efficiency argument justifies the exact bias it claims to correct.",
+    "ExplanationWrongD": "Choice D quarantines the harm incorrectly. Variances compute against gamed baselines, so favorable variances reward manipulation rather than performance, evaluation standards ratchet upward, and the following cycle's targets inherit this cycle's fiction instead of resetting toward reality.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-124",
+    "Section": "F",
+    "Stem": "Flash ties 60 percent of division-manager bonuses to budget attainment. The Midwest plant manager pads the maintenance budget 12 percent and sweeps unspent funds into discretionary projects each December, while the Southwest manager sandbagged the revenue forecast so actual orders beat plan two years running. Divisional controller Ana Ferreira must explain to the CFO how these practices propagate through Flash's planning system. What is the most accurate analysis?",
+    "Topic": "F.124 budget-gaming-systemic-distortion",
+    "UniqueConceptKey": "F-124-budget-gaming-propagation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: traces incentive-driven input bias through planning, coordination, and variance systems",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FCPA Anti-Bribery Provision (15 U.S.C. Section 78dd-1)",
+      "DOJ/SEC FCPA Resource Guide (second edition)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Both payments qualify for the facilitation-payment exception because each sought a routine governmental action Flash was entitled to receive.",
+      "B": "The $6,000 payment is an FCPA bribery violation because any transfer to a foreign official for favorable treatment meets the corrupt-intent threshold.",
+      "C": "The $6,000 payment made under duress lacked the corrupt intent the statute punishes, though it still must be recorded accurately, while the $45,000 payment was corruptly intended to obtain or retain business by influencing the license decision and violates the act.",
+      "D": "Neither payment implicates the FCPA because the trailer had already passed inspection and the license suspension, not Flash, initiated the paperwork."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Ignoring corrupt intent: duress payments versus paying to restore business advantage",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The FCPA's anti-bribery provision punishes payments corruptly intended to influence a foreign official's act or decision to obtain or retain business. Kofi's $6,000 surrender to an explicit threat against cargo and driver safety is extortion under duress, lacking corrupt intent, though books-and-records discipline requires recording the outlay exactly as made. The $45,000 wire to the director's consultancy is different in kind: it purchased reinstatement of a suspended import license, restoring access to a lucrative market, which is obtaining and retaining business through a discretionary official act and squarely violates the provision. Understanding where the intent boundary falls separates victimized payers from corrupt ones.",
+    "ExplanationWrongA": "Choice A stretches a narrow carve-out past its bounds. Facilitation payments cover non-discretionary routine processing such as permits or utilities; extracting a fee to reinstate a suspended license is a discretionary official act sold for gain, and duress payments are outside the exception too.",
+    "ExplanationWrongB": "Choice B deletes the intent element Congress wrote into the statute. Money surrendered to a credible threat of harm is extortion, not corruption; treating victims identically to bribers misconstrues the provision's purpose and would chill ordinary commerce under threatening regimes.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D invents procedural innocence tests. Inspection status and which party filed paperwork are irrelevant; what matters is paying a foreign official to exercise discretion in Flash's favor to win back commerce, which is the core conduct the anti-bribery provision reaches.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-125",
+    "Section": "F",
+    "Stem": "At a congested foreign port, a customs director tells Flash logistics manager Kofi Asante that Flash's refrigerated trailer will be forgotten in the yard unless $6,000 appears today; fearing spoilage and a threat to the driver's safety, Kofi pays and books the outlay exactly as paid. Separately, Flash's regional sales head wires $45,000 to a consultancy controlled by the same director, and the director reinstates Flash's suspended import license the following week, restoring access to a market worth millions annually. Which characterization is accurate under the FCPA's anti-bribery provisions?",
+    "Topic": "F.125 fcpa-duress-versus-corrupt-payment",
+    "UniqueConceptKey": "F-125-fcpa-corrupt-intent-boundary",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: distinguishes the duress-intent boundary from the facilitation exception in paired payments",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  }
+,
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "She disclosed material nonpublic information outside authorized channels, breaching the IMA confidentiality standard even though she named no dollar amounts.",
+      "B": "Her post is permissible because omitting the facility size and the lender name prevents readers from acting on the information.",
+      "C": "The disclosure creates no issue because a two-week announcement window makes the information effectively public already.",
+      "D": "The exposure is confined to insider-trading law, a legal question for regulators that sits apart from her professional ethics obligations entirely."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Believing vague or partial disclosure escapes confidentiality duties",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Under the IMA Statement of Ethical Professional Practice, members must refrain from disclosing confidential information acquired in the course of their work except when authorized or legally obligated, and must apprise subordinates of confidentiality limits. Treasury analyst Priya Nair's post reveals the existence and timing of a material unannounced financing; the market-sensitive fact is the deal itself, not merely its dollar size. Business interpretation: Flash's negotiating leverage, employee relations, and securities compliance all depend on controlled release, so the post forces premature disclosure decisions on management. Common trap: treating specificity as the trigger, when revealing any nonpublic fact about pending transactions is itself the breach.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B assumes vagueness neutralizes disclosure, a misconception that only quantified details count. Existence, timing, and purpose of the facility are themselves confidential facts capable of moving markets and negotiations; the remedy is withholding the post entirely, not trimming its particulars.",
+    "ExplanationWrongC": "Choice C mistakes a planned announcement for completed disclosure; information remains nonpublic until actually released, and front-running that date by even hours can shift counterparty behavior and expose Flash to regulatory criticism. The standard imposes restraint until release is authorized.",
+    "ExplanationWrongD": "Choice D reduces ethics to securities enforcement, ignoring that the IMA confidentiality duty stands independently of trading rules and applies to any unauthorized release, including to friends or followers who might trade indirectly. Professional discipline does not require a regulator to act first.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-126",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "Treasury analyst Priya Nair posted on her personal account that Flash Corporation is finalizing an unannounced bridge facility for a mid-year acquisition expected to be announced within two weeks. Which statement best identifies the ethical issue raised?",
+    "Topic": "F.126 social-media-confidentiality-breach",
+    "UniqueConceptKey": "F-126-nonpublic-deal-post",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Conceptual item; no arithmetic to recompute"
+    ]
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Competence, because holding invoices proves he failed to maintain the technical proficiency required for prompt transaction recording.",
+      "B": "Integrity, because deliberately moving recognized expenses between periods to manufacture covenant compliance prejudices the ethical discharge of his duties.",
+      "C": "Confidentiality, because supplier invoice amounts must remain sealed from other departments and outsiders until the checks have cleared and reconciled.",
+      "D": "Fairness, because vendors whose invoices are held receive slower payment than their peers, creating unequal commercial treatment."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Calling period-shifting timing discretion instead of an integrity breach",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The IMA Statement of Ethical Professional Practice centers integrity here: members must refrain from conduct that would prejudice carrying out their responsibilities ethically. Posting 418,000 dollars of June supplier-service expenses in July solely to clear a covenant threshold manufactures period-specific profit; the distortion flows directly into covenant certification and investor perception. Business interpretation: controller Raul Espinoza should decline and escalate, because compliance converts him from preparer into participant in a misstatement aimed at lenders. Common trap: framing late posting as permissible timing discretion, when intentional period-shifting to hit a metric is misrepresentation of results.",
+    "ExplanationWrongA": "Choice A confuses competence with obedience; competence concerns maintaining expertise and applying standards, while the defect in complying is intent to mislead. A technically excellent accountant can still commit a serious integrity failure.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C misreads confidentiality as document secrecy; nothing in the scenario involves releasing information outside Flash. The violation is internal misrepresentation of reported performance, which the integrity standard, not confidentiality, governs.",
+    "ExplanationWrongD": "Choice D identifies a genuine but secondary harm to vendors; the controlling breach is the manipulated representation to lenders and owners, not the relative payment timing among suppliers.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-127",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "Flash Corporation Chief Financial Officer Victor Hale instructs controller Raul Espinoza to hold 418,000 dollars of June supplier-service invoices for posting in July so second-quarter operating income clears a covenant threshold. If Espinoza complies, which IMA standard is most directly compromised?",
+    "Topic": "F.127 covenant-driven-period-shift",
+    "UniqueConceptKey": "F-127-invoice-deferral-integrity",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Figures cross-checked: 418,000 stated consistently in stem and explanation"
+    ]
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Accept the tickets because the value sits beneath the customary 1,000-dollar business-courtesy threshold many software-industry peers observe for customer entertainment.",
+      "B": "Accept but reimburse Meridian for half the ticket value so her personal benefit is reduced proportionally and the optics improve.",
+      "C": "Decline the tickets and report the offer to her supervisor under Flash policy, since gifts beyond the 50-dollar limit create an actual or apparent conflict compromising objective judgment on pending terms.",
+      "D": "Recuse herself from Meridian decisions yet keep the unsolicited tickets, because declining gifts after the fact would needlessly offend a strategic supplier."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using industry gift norms to override employer policy and IMA integrity",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The IMA integrity standard requires members to refrain from activities that would prejudice their ability to carry out duties ethically and to avoid actual or apparent conflicts of interest, including accepting anything of value that could influence, or appear to influence, professional judgment. A 900-dollar benefit from a counterparty seeking relaxed payment terms squarely exceeds Flash's 50-dollar cap. Credit manager Dana Whitfield should decline and disclose, preserving both the reality and the appearance of objectivity in the renewal negotiation. Common trap: substituting industry custom for employer policy, which the standard never permits as justification.",
+    "ExplanationWrongA": "Choice A imports an industry norm that carries no force against Flash's own 50-dollar cap or the IMA standard; customary practice elsewhere cannot cure a policy breach at the employer whose credit decisions she influences.",
+    "ExplanationWrongB": "Choice B treats partial reimbursement as purification; a subsidized benefit from an interested vendor still taints the appearance of impartiality, and the integrity standard regulates appearances alongside actual influence.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D separates the person from the decision, but retained benefits continue to color future interactions and signal to suppliers that policy bends; recusal addresses one negotiation, not the standing conflict the tickets create.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-128",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "During renewal talks, software vendor Meridian Systems offers Flash Corporation credit manager Dana Whitfield two season tickets valued at 900 dollars; Flash policy caps gifts at 50 dollars and Meridian seeks relaxed payment terms. What should Whitfield do?",
+    "Topic": "F.128 vendor-gift-policy-limit",
+    "UniqueConceptKey": "F-128-season-tickets-recusal",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Figures cross-checked: 900 and 50 stated consistently in stem and explanation"
+    ]
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Policy comes first: present the documentation through channels not implicated by the vice president's testimony, preserve workpapers, and hold audit-committee escalation, anonymous adviser consultation, and resignation-with-disclosure as later stages if internal routes stall.",
+      "B": "Escalate externally at once by filing a regulator complaint, because any implication of operations leadership disqualifies internal reporting channels from the outset.",
+      "C": "Confront the operations vice president informally to reconcile the conflicting accounts before any permanent documentation exists, since paperwork should follow only after dialogue fails to resolve the count discrepancies.",
+      "D": "Open with resignation and public disclosure, because the resolution model ranks personal exit ahead of organizational remediation whenever physical counts turn out to be falsified."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Skipping policy-first escalation or inverting resolution-sequence stages",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The IMA resolution model proceeds in order: identify the ethical issue, assess it, follow established policy, escalate to higher levels such as the audit committee or board if unresolved, consult an objective adviser anonymously where useful, and treat resignation with disclosure as a last resort. Internal auditor Marcus Bell's evidence of falsified cycle counts concealing 260,000 dollars of shrinkage is documented, so policy-first escalation through uninvolved management, with preserved workpapers, matches the model; later stages activate only upon obstruction or inaction. Business interpretation: disciplined sequencing protects both Flash's control environment and Bell's own position. Common trap: jumping to external whistleblowing or resignation before exhausting designated internal channels.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B skips the model's mandatory early stages; external reporting becomes appropriate only after internal escalation is exhausted or demonstrably futile, and premature regulator filings can breach confidentiality duties and company policy at the same time.",
+    "ExplanationWrongC": "Choice C inverts documentation and dialogue; confronting the witness whose committee testimony is contradicted invites evidence-tampering risk, whereas the model presumes contemporaneous records precede any confrontation over disputed facts.",
+    "ExplanationWrongD": "Choice D promotes the final remedy to the first step; resignation with disclosure exists in the model precisely as the terminal option after policy, escalation, and advisory consultation have been attempted in good faith.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-129",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "Flash Corporation internal auditor Marcus Bell documents falsified warehouse cycle counts that conceal 260,000 dollars of shrinkage, and his evidence contradicts testimony the operations vice president gave the audit committee. After reviewing Flash ethics policy, which analysis of correct sequencing under the IMA resolution model is sound?",
+    "Topic": "F.129 resolution-sequence-analysis",
+    "UniqueConceptKey": "F-129-cycle-count-escalation-order",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Figures cross-checked: 260,000 stated consistently in stem and explanation"
+    ]
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Embed the correction silently through fourth-quarter closing entries so the annual figures land true and no restatement headline or investor alarm ever materializes.",
+      "B": "Convene a private session with the chief financial officer alone and let management size the problem before the board takes any formal touch of the matter.",
+      "C": "Ask the controller to hold the memo outside the audit file until outside counsel completes a privilege review expected to run several quarters.",
+      "D": "Refer the controller's findings to the independent audit committee chair and commission an outside forensic review before deciding on restatement, disclosure, and accountability."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Preferring quiet absorption over audit-committee referral and timely disclosure",
+    "CorrectChoice": "D",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Board oversight in the SOX era designates the independent audit committee as the receiving channel for financial-reporting concerns; absorbing, privately containing, or shelving a documented 2.3-million-dollar inventory overstatement compounds a control failure into a concealment failure. Immediate referral to audit committee chair Elena Vasquez's peer forum preserves privilege properly through committee-directed counsel, prompts timely materiality evaluation against prior filings, and shields the controller from retaliation. Business interpretation: fiduciary exposure turns on speed and independence, not on avoiding headlines. Common trap: equating quiet correction with prudence, when delayed discovery typically multiplies legal and reputational cost.",
+    "ExplanationWrongA": "Choice A launders the error through subsequent periods; embedding corrections without disclosure misstates filed interim results for months and converts an inventory error into an ongoing misrepresentation scheme.",
+    "ExplanationWrongB": "Choice B routes the finding back into the management layer that produced it; the CFO supervising the controllership cannot credibly investigate himself, and the board forfeits its independent-oversight function.",
+    "ExplanationWrongC": "Choice C weaponizes privilege review as storage; removing records from the audit file invites obstruction and spoliation allegations while the misstated quarter remains outstanding to investors.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-130",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "Flash Corporation board member Elena Vasquez receives the controller's sealed memo showing third-quarter segment inventory was overstated by 2.3 million dollars because a scrap write-down was suppressed, and she must decide this week how the board proceeds. Which course of action should Vasquez direct?",
+    "Topic": "F.130 board-response-overstatement",
+    "UniqueConceptKey": "F-130-audit-committee-referral",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Figures cross-checked: 2.3 million stated consistently in stem and explanation"
+    ]
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice",
+      "SOX Section 806 whistleblower protection"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Sign the certificate as prepared and memorialize dissent in a private memo, because officer responsibility for certificate accuracy rests with the certifying signatory rather than supporting staff.",
+      "B": "Take the bank agreements and entries straight to the audit committee chair, naming the CFO as directing party, preserve originals, and if the committee stalls seek an objective outside adviser, weighing duties up to resignation with disclosure.",
+      "C": "Transmit copies of the certificate and bank agreements anonymously to a financial reporter, reasoning that public pressure is the fastest route to corrected balances.",
+      "D": "Resign quietly within the notice period and surrender his files, avoiding complicity while leaving correction entirely to successors who inherit the issue."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Mistaking private dissent or quiet exit for adequate escalation of a false certificate",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The IMA resolution model directs escalation past an implicated supervisor to the next governance level, here the audit committee; SOX Section 806 separately protects employees who lawfully report suspected securities violations. Treasurer Omar Haddad's preserved bank agreements anchor the restricted-cash definition against the 6-million-dollar recharacterization, and the staged fallback of outside adviser, then resignation with disclosure, tracks the model's ordered remedies. Business interpretation: a false revolver compliance certificate can trigger default acceleration, so escalation protects creditors and Flash alike. Common trap: treating dissent memos or silent exits as safe harbors, when neither halts the operative misstatement.",
+    "ExplanationWrongA": "Choice A hides behind signature hierarchy; staff who knowingly support a false certificate participate in the misrepresentation, and a buried dissent memo satisfies none of the escalation duties the resolution model imposes.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C chooses publicity before governance; media leakage breaches confidentiality, forfeits the cleaner whistleblower-protection posture available through lawful reporting channels, and can prejudice creditor negotiations before any internal correction is attempted.",
+    "ExplanationWrongD": "Choice D abandons the model's escalation stages; resignation without disclosure leaves the false certificate operative and the revolver exposed, making the exit adjacent to complicity rather than protective of stakeholders.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-131",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "Flash Corporation treasurer Omar Haddad discovers the chief financial officer, his direct supervisor and the named contact in Flash's ethics policy, directed reclassifying 6 million dollars of legally restricted cash into unrestricted balances on a revolver compliance certificate. Haddad holds the underlying bank agreements. Which action best satisfies his professional obligations?",
+    "Topic": "F.131 restricted-cash-escalation",
+    "UniqueConceptKey": "F-131-compliance-certificate-override",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Figures cross-checked: 6 million stated consistently in stem and explanation"
+    ]
+  },
+  {
+    "Authorities": [
+      "TCFD recommendations"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The Global Reporting Initiative Standards, whose topic standards catalogue impacts on the economy, environment, and people for a broad multi-stakeholder audience.",
+      "B": "The International Integrated Reporting Council framework, which weaves the six capitals into a single integrated value-creation narrative.",
+      "C": "The Task Force on Climate-related Financial Disclosures recommendations, whose disclosure structure comprises governance, strategy, risk management, and metrics and targets.",
+      "D": "The Sustainability Accounting Standards Board standards, which supply industry-specific metrics selected for financial materiality and investor decision usefulness."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Interchanging ESG frameworks instead of matching the requested disclosure structure",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The TCFD recommendations organize climate disclosure around four pillars: governance of climate-related risks, strategy including scenario resilience, risk-management processes, and the metrics and targets used to assess performance. The lending consortium asked for exactly that architecture, so director of corporate reporting Sofia Lindqvist should adopt TCFD to answer the request as specified rather than translating another framework's taxonomy. Business interpretation: lenders increasingly price climate transition risk, and pillar-aligned disclosure lets them map Flash's exposure into credit models. Common trap: treating ESG frameworks as interchangeable labels when each serves a distinct audience and structure.",
+    "ExplanationWrongA": "Choice A selects GRI, whose impact-oriented, multi-stakeholder design does not follow the four-pillar climate-risk architecture the lenders enumerated; adopting GRI would force restructuring rather than direct response.",
+    "ExplanationWrongB": "Choice B offers the IIRC integrated-reporting frame built on six capitals and value creation; it is broader storytelling architecture and lacks the requested climate pillar breakdown altogether.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D supplies SASB's financially material industry metrics, useful inputs, but SASB does not prescribe the governance, strategy, risk-management, and metrics structure the request demanded.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-132",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "A lending consortium asks Flash Corporation's director of corporate reporting, Sofia Lindqvist, for climate-risk disclosure organized around four pillars covering governance, strategy, risk management, and metrics with targets. Which framework should Lindqvist adopt to answer the request as specified?",
+    "Topic": "F.132 tcfd-four-pillar-request",
+    "UniqueConceptKey": "F-132-lender-climate-pillars",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Conceptual item; no arithmetic to recompute"
+    ]
+  },
+  {
+    "Authorities": [
+      "IIRC International Integrated Reporting Framework"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The Global Reporting Initiative Standards.",
+      "B": "The International Integrated Reporting Council framework.",
+      "C": "The Task Force on Climate-related Financial Disclosures recommendations.",
+      "D": "The Sustainability Accounting Standards Board standards."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Misattributing the six-capitals concept to GRI, SASB, or TCFD",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The International Integrated Reporting Council framework centers on integrated reporting: how an organization creates value over time by drawing on six capitals, namely financial, manufactured, intellectual, human, social and relationship, and natural capital. Recall-level accuracy on publisher-to-framework pairings keeps Flash board papers free of misattribution. Business interpretation: sustainability reporting lead Tomas Bergstrom must cite the right source in training materials so Flash reporters pull the correct guidance when assembling ESG disclosures. Common trap: attaching the capitals vocabulary to GRI or SASB, which organize around impact topics and industry metrics respectively.",
+    "ExplanationWrongA": "Choice A misassigns the capitals model to GRI, whose architecture is modular topic standards for impact reporting to a universal stakeholder set rather than a capitals-based value-creation narrative.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C attaches the capitals idea to TCFD, whose content is climate-risk disclosure across four pillars and contains no capitals taxonomy whatsoever.",
+    "ExplanationWrongD": "Choice D credits SASB, which codifies industry-level financially material metrics and leaves capitals framing outside its standard-setting scope.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-133",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "While drafting training materials, Flash Corporation sustainability reporting lead Tomas Bergstrom cites a framework whose guiding concept is value creation over time through six capitals: financial, manufactured, intellectual, human, social and relationship, and natural. Which framework is he describing?",
+    "Topic": "F.133 six-capitals-framework",
+    "UniqueConceptKey": "F-133-capitals-attribution",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Conceptual item; no arithmetic to recompute"
+    ]
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Two duties engage jointly: integrity bars anything compromising or appearing to compromise objectivity and requires disclosing the sibling interest, while confidentiality categorically prohibits sharing Flash's ceiling with the rival bidder.",
+      "B": "Only confidentiality engages, because a family relationship raises privacy at home rather than a disclosable workplace conflict, and the ceiling stays protected so long as she declines the advisory seat outright.",
+      "C": "Only fairness toward fellow bidders engages, because confidentiality attaches exclusively to regulator-facing filings and the sibling link stays private until money actually changes hands.",
+      "D": "No duty engages until money moves, because ethical standards attach at transaction completion rather than at the offer, solicitation, or relationship stage where Grant currently stands."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Netting integrity against confidentiality or delaying duties until payment",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The IMA Statement of Ethical Professional Practice operates conjunctively: integrity requires refusing advantages that impair, or appear to impair, objectivity and disclosing apparent conflicts, while confidentiality bars disclosing confidential information without authorization. M&A director Alicia Grant's situation layers both duties: her brother's pursuit of a Corliss subcontract creates a disclosable, recusal-worthy interest in deal outcomes, and the conditional advisory-seat inducement aimed at extracting Flash's bid ceiling tests the categorical confidentiality duty. Decomposing by duty isolates distinct required responses: disclosure plus distancing on one track, refusal on the other. Common trap: netting duties against each other, as if honoring one license breaches the other.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B collapses the analysis to a single duty and mislabels the family dimension; an undisclosed sibling interest in deal outcomes is a textbook apparent conflict requiring disclosure under integrity, not a household privacy question.",
+    "ExplanationWrongC": "Choice C invents a filing-only boundary for confidentiality and demotes the conflict to private life; the statement binds professional conduct continuously, and fairness presupposes the very confidentiality and integrity duties it attempts to substitute.",
+    "ExplanationWrongD": "Choice D delays ethics until consummation, reversing the preventive design of the statement, which governs offers, solicitations, and appearances precisely because waiting for money to move invites capture.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-134",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "Flash Corporation merger and acquisition director Alicia Grant runs diligence on target Corliss Industries. Her brother manages a machining firm bidding for a Corliss subcontract, and a rival bidder's representative offers Grant a paid advisory seat if Flash's bid ceiling were to slip out. Which IMA duties are engaged and what do they require?",
+    "Topic": "F.134 dual-duty-conflict-analysis",
+    "UniqueConceptKey": "F-134-sibling-subcontract-ceiling",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Conceptual item; no arithmetic to recompute"
+    ]
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Competence, which he satisfies by re-running the query until the visualization renders cleanly for the boardroom screen.",
+      "B": "Confidentiality, since internal margin detail must stay out of board decks until the minutes approving it are finalized.",
+      "C": "Credibility, which requires communicating information fairly, objectively, and completely, so the adverse trend belongs in the exhibit even though it complicates the growth narrative.",
+      "D": "Objectivity, which is satisfied so long as the complete workbook sits on the shared drive, available to any director who requests it before the vote."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Swapping completeness for aesthetics or backup-file availability",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The credibility standard obligates members to communicate information fairly, objectively, and completely, and to disclose all relevant information reasonably expected to influence a user's understanding. Planning lead Jordan Reyes deleting an adverse trailing-twelve-month margin series while showcasing favorable recent bars curates a misleading composite; directors allocating capital on that deck act on incomplete trends. Reyes should restore the full series or annotate the exclusion with equal prominence. Business interpretation: credibility failures corrode board trust faster than bad news itself. Common trap: outsourcing completeness to an accessible backup file, which no standard treats as substitute disclosure.",
+    "ExplanationWrongA": "Choice A reduces the duty to chart mechanics; rendering quality is competence territory, but the defect here is selective content, which credibility rather than technical polish governs.",
+    "ExplanationWrongB": "Choice B misfiles an internal completeness question under confidentiality; nothing about a board dashboard involves unauthorized external release, so the cited standard is inapposite.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D substitutes availability for disclosure; burying adverse data in an unrequested workbook fails fair-and-objective communication, because relevance is judged in the presentation users actually read.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-135",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "Flash Corporation planning lead Jordan Reyes builds the board dashboard and drops the trailing-twelve-month margin series because its downtrend clashes with the growth narrative, leaving only the two-quarter improvement bars. Which IMA standard governs how he completes the exhibit?",
+    "Topic": "F.135 dashboard-selective-disclosure",
+    "UniqueConceptKey": "F-135-board-exhibit-completeness",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Conceptual item; no arithmetic to recompute"
+    ]
+  },
+  {
+    "Authorities": [
+      "Fraud Triangle (Cressey)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Opportunity, rationalization, and raw greed, with greed having officially replaced pressure when the modern model was updated.",
+      "B": "Pressure, supervision intensity, and documentation quality, reflecting the process-control triad auditors test during fieldwork.",
+      "C": "Motive, means, and opportunity, the classic prosecutorial checklist applied to crimes of every variety.",
+      "D": "Perceived pressure or incentive, perceived opportunity, and rationalization, the three conditions Donald Cressey identified as converging in occupational fraud."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Substituting greed or motive-means-opportunity for pressure, opportunity, rationalization",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Donald Cressey's fraud triangle holds that occupational fraud typically emerges when perceived pressure or incentive, perceived opportunity arising from weak controls or misplaced trust, and rationalization reconciling the act with personal values converge; removing any leg reduces fraud likelihood. Precise vocabulary matters because Flash's anti-fraud program maps controls onto each element: pressure monitoring, opportunity-reducing segregation of duties, and culture work addressing rationalization. Business interpretation: internal auditor Grace Okafor teaching the elements correctly lets new analysts identify which leg a given red flag implicates. Common trap: swapping in greed, motive-means-opportunity, or control-process phrasing that resembles but misstates the model.",
+    "ExplanationWrongA": "Choice A swaps greed for pressure; greed is a colloquial trait word, while the triangle specifies perceived pressure or incentive, often external and situational rather than a fixed character feature.",
+    "ExplanationWrongB": "Choice B substitutes control-process nouns for the psychological legs; supervision and documentation quality are anti-fraud controls that respond to opportunity, not triangle elements themselves.",
+    "ExplanationWrongC": "Choice C borrows the general criminal triad of motive, means, and opportunity; the occupational-fraud model replaces means with rationalization to capture the offender's self-justification process.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-136",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "During onboarding, Flash Corporation internal auditor Grace Okafor teaches new analysts the fraud triangle. Which description states its three elements correctly?",
+    "Topic": "F.136 fraud-triangle-elements",
+    "UniqueConceptKey": "F-136-onboarding-triangle-vocabulary",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Conceptual item; no arithmetic to recompute"
+    ]
+  },
+  {
+    "Authorities": [
+      "Fraud Triangle (Cressey)",
+      "AICPA AU-C Section 240 (fraud in a financial statement audit)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The facts indicate asset misappropriation chiefly, because concentrating billing, collections, and credit approval lets a single clerk divert receipts while the revenue letters merely evidence sloppy sales hygiene.",
+      "B": "The pattern reads as benign high-growth management, since rising margin amid input inflation evidences procurement skill and the side letters await routine countersignature.",
+      "C": "The pattern most strongly indicates fraudulent financial reporting: entrenched executive dominance, opportunity created by incompatible duties in one clerk, and cutoff side letters engineered to reach revenue targets.",
+      "D": "Only the segregation-of-duties gap warrants action, because unsigned side letters and margin anomalies are ordinary commercial artifacts that audit sampling routinely clears."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Fragmenting convergent red flags into isolated operational quirks",
+    "CorrectChoice": "C",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Fraudulent-financial-reporting analysis maps indicators onto the fraud triangle and red-flag taxonomies: management dominance coupled with four years of declined vacation, implausible margin expansion against industry-wide resin inflation, cutoff manipulation through 700,000 dollars of revenue resting on unsigned side letters, and missing segregation permitting override collectively elevate reporting-fraud risk above theft or noise. An asset-misappropriation framing explains the clerk exposure alone; it cannot account for executive behavior and revenue engineering. CFO Daniel Mercer should expand substantive cutoff testing, interview the clerk away from division management, and engage internal audit. Common trap: treating each anomaly as isolated housekeeping instead of weighing the converging pattern.",
+    "ExplanationWrongA": "Choice A locks onto the narrowest indicator; clerk concentration threatens receipt diversion, but the executive entrenchment, side-letter cutoff, and margin trajectory against input costs point at reporting-level deception rather than cash larceny.",
+    "ExplanationWrongB": "Choice B normalizes every red flag; margins rising against sector-wide resin inflation and revenue resting on unsigned commitments are not procurement skill but hallmarks of managed numbers awaiting a countersignature that may never arrive.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D minimizes to a single control fix; repairing segregation helps, yet dismissing cutoff letters and anomalous margins overlooks that fraudulent-reporting schemes exploit exactly such supposedly routine artifacts.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-137",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "Chief financial officer Daniel Mercer reviews the Northeast division package of Flash Corporation: the president has declined vacation for four years, quarter-end revenue includes 700,000 dollars booked against unsigned side letters, gross margin rose while resin input prices climbed industry-wide, and one clerk performs billing, collections, and credit approval. Weighing the pattern, which conclusion best fits the evidence?",
+    "Topic": "F.137 division-red-flag-pattern",
+    "UniqueConceptKey": "F-137-side-letter-convergence",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Figures cross-checked: 700,000 stated consistently in stem and explanation"
+    ]
+  },
+  {
+    "Authorities": [
+      "SOX Section 302",
+      "SOX Section 404"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "They personally certify the report fairly presents results and contains no untrue material statements, that they bear responsibility for disclosure controls and internal control over financial reporting, and that control deficiencies and material weaknesses were disclosed to the auditors and audit committee; Section 404 additionally requires an annual management assessment of ICFR effectiveness.",
+      "B": "Their signatures hand primary liability to the external auditor once the opinion issues, so certification duties become largely delegable to the specialists who tested the controls.",
+      "C": "Section 404 obligates internal audit, rather than management, to render the formal ICFR effectiveness conclusion on a quarterly cadence throughout the fiscal year.",
+      "D": "The certifications reach only the consolidated statements, so segment schedules, subsidiary ledgers, and off-balance-sheet arrangements sit outside their personal attestation."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Believing audit opinions dilute or delegate executive certification liability",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "SOX Section 302 requires each periodic report to carry CEO and CFO certifications covering report accuracy, responsibility for disclosure controls and procedures and ICFR, and disclosure of control deficiencies and material weaknesses to the auditors and audit committee; SOX Section 404 adds management's annual ICFR effectiveness assessment, with auditor attestation for issuers subject to 404(b). Controller Nadia Petrov's briefing therefore stresses personal, nondelegable accountability extending across the full disclosure package. Business interpretation: certifications convert control awareness into individual legal exposure, sharpening incentives to surface problems early. Common trap: imagining that the audit opinion absorbs executive responsibility.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B misallocates responsibility; the audit opinion evaluates management's assertions and never absorbs them, and the certifications expressly bind the signing officers personally regardless of the audit outcome.",
+    "ExplanationWrongC": "Choice C relocates the Section 404 conclusion; management owns the annual ICFR assessment, internal audit merely supports it, and no quarterly formal conclusion is mandated, with attestation supplementing rather than replacing management's assertion.",
+    "ExplanationWrongD": "Choice D narrows certification scope artificially; Section 302 extends to the report as a whole, encompassing segment disclosures and off-balance-sheet arrangements that materially affect a reader's understanding.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-138",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "Before Flash Corporation files its Form 10-K, general counsel Priya Raman asks controller Nadia Petrov to brief the CEO and CFO on what their certifications commit them to. Which briefing statement is accurate?",
+    "Topic": "F.138 executive-certification-briefing",
+    "UniqueConceptKey": "F-138-sox-certification-scope",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Conceptual item; no arithmetic to recompute"
+    ]
+  },
+  {
+    "Authorities": [
+      "FCPA anti-bribery provisions",
+      "FCPA books-and-records provisions"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Record both disbursements as consulting fees so the ledger keeps uniform categories; the FCPA probes substance only at year-end review, and account labels are administrative conveniences.",
+      "B": "The 200-dollar expediter targets a routine governmental action and may qualify as facilitating, while the 5,000-dollar tender payment is an outright bribe; either way, entries must state each payment's true nature.",
+      "C": "Both payments stand prohibited, because the statute rejects every transfer of value to foreign officials regardless of its size, purpose, or the routine character of the underlying action.",
+      "D": "Neither payment creates FCPA exposure, since routing the funds through an independent licensed broker shifts legal responsibility wholesale onto the intermediary entity."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Treating broker routing or label tidiness as curing FCPA characterization",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The FCPA anti-bribery prohibition targets payments intended to induce officials to misuse discretionary authority to obtain or retain business, exemplified by the 5,000-dollar tender proposal; the statute carves out facilitating payments for routine governmental actions such as expediting permits at standard rates, which may fit the 200-dollar charge. Separately, the books-and-records provisions require entries that accurately and fairly reflect transactions, so mislabeling either payment as consulting fees violates the statute even absent a bribery finding. Regional finance director Camila Duarte should reject the tender payment outright and document the facilitation rationale contemporaneously. Common trap: letting intermediaries or tidy labels launder prohibited payments.",
+    "ExplanationWrongA": "Choice A weaponizes labeling; books-and-records rules judge entries against transactional truth, and disguising a bribe as consulting converts a bribery risk into a certain recordkeeping violation.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C overreads the statute; the facilitating-payment carve-out for routine governmental actions appears in the text itself, so collapsing every payment into bribery erases the exact distinction Duarte is obliged to apply.",
+    "ExplanationWrongD": "Choice D outsources accountability; the FCPA reaches conduct directed or knowingly sanctioned through third parties, and using a broker as conduit supplies the requisite intent on Flash's side of the arrangement.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-139",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "Flash Corporation's Peru clearance shipment sits at customs; regional finance director Camila Duarte's broker proposes a 200-dollar payment to expedite a routine permit already payable at standard rates, and separately quotes a 5,000-dollar payment to a procurement official to win Flash a hospital supply tender. Under the FCPA, how should Duarte characterize and handle the two payments?",
+    "Topic": "F.139 facilitating-versus-bribe",
+    "UniqueConceptKey": "F-139-customs-facilitation-tender",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Figures cross-checked: 200 and 5,000 stated consistently in stem and explanation"
+    ]
+  },
+  {
+    "Authorities": [
+      "AICPA attestation standards (AT-C 105 and AT-C 210)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Reasonable assurance costs less because it skips control walkthroughs entirely and leans on analytical procedures alone.",
+      "B": "Limited assurance culminates in the same positive-form opinion language that accompanies audited financial statements issued to shareholders.",
+      "C": "Assurance providers benchmark Flash's emissions against whatever regulatory filings happen to exist rather than criteria agreed in the engagement terms.",
+      "D": "Limited assurance yields negative-form conclusions, nothing came to our attention, at lower cost, while reasonable assurance supports positive conclusions through deeper procedures, so the board trades cost against confidence."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Treating assurance levels as wording variants rather than evidence-depth tiers",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Attestation practice distinguishes examination engagements yielding reasonable, positive-form assurance from review engagements yielding limited, negative-form assurance; procedure depth, sample sizes, and control testing scale accordingly, and fees follow scope. Sustainability manager Lena Fischer should present the cost-confidence tradeoff explicitly so Flash's board chooses deliberately rather than discovering scope limits at issuance. Business interpretation: first-time ESG reporters commonly begin at limited assurance, building data lineage toward reasonable assurance as measurement systems mature. Common trap: assuming assurance levels differ only in report wording rather than in evidence depth and cost.",
+    "ExplanationWrongA": "Choice A inverts both the economics and the scope; reasonable assurance demands more procedures, including control evaluation, and therefore commands greater cost, not less.",
+    "ExplanationWrongB": "Choice B conflates conclusion forms; positive opinions belong to examinations, while limited-assurance reviews speak in negative terms, and the wording difference mirrors genuinely different evidence depth.",
+    "ExplanationWrongC": "Choice C misstates the measurement basis; assurance evaluates subject matter against suitable criteria agreed in the engagement terms, not ad hoc comparisons to whatever filings happen to be on hand.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-140",
+    "Section": "F",
+    "question_state": "Unprocessed",
+    "Stem": "Flash Corporation's board wants its inaugural ESG report assured and asks sustainability manager Lena Fischer to explain the assurance levels available. Which explanation should Fischer deliver?",
+    "Topic": "F.140 esg-assurance-levels",
+    "UniqueConceptKey": "F-140-limited-vs-reasonable",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Conceptual item; no arithmetic to recompute"
+    ]
+  }
+,
+  {
+    "Authorities": [
+      "Fraud Triangle (Cressey)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Opportunity, because the broken segregation of duties gave the supervisor both the means to create the fictitious vendors and the ability to approve payment without timely detection",
+      "B": "Pressure, because supervising a busy warehouse through peak season generated the workload stress and personal strain that pushed him toward misappropriation",
+      "C": "Rationalization, because the supervisor convinced himself he deserved extra compensation to offset overtime the company had failed to pay him",
+      "D": "Capability, because formal supervisory authority over warehouse operations supplied the position and skill that fraudsters require to succeed"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Calling a control gap pressure instead of opportunity",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The fraud triangle attributed to criminologist Donald Cressey holds that occupational fraud generally requires three concurrent conditions: perceived pressure, perceived opportunity, and rationalization. Opportunity is the control-side condition, meaning access, authorization, or oversight gaps that allow someone to act and escape detection. Here the ERP role migration let one person originate and approve the same payments, which is precisely the opening the scheme exploited; Dana Whitfield's remediation therefore targets segregation of duties and system configuration rather than incentives or attitudes. Business interpretation: repairing the approval matrix removes the condition that turned a trusted employee into an actor. Common trap: candidates sense a stressful environment and reach for pressure, but pressure explains motive while self-approval access explains feasibility.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B misreads an enabling control gap as motive; pressure describes a perceived nonshareable need such as debt or aggressive targets, and nothing in the walkthrough ties the scheme to seasonal strain, whereas the dual entry-and-approval rights made execution feasible.",
+    "ExplanationWrongC": "Choice C confuses the justification story with the mechanism; rationalization explains how the supervisor reconciled theft with his self-image, but the question asks what the broken segregation of duties itself represents, which is the exploited opening.",
+    "ExplanationWrongD": "Choice D imports capability from the extended fraud diamond model rather than Cressey's three-condition triangle; authority and skill support execution, yet the specific defect identified, self-approval above documented limits, is textbook opportunity.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-141",
+    "Section": "F",
+    "Stem": "During a scheduled walkthrough, Flash Industrial Packaging internal auditor Dana Whitfield determined that a warehouse supervisor created three fictitious vendors and approved their invoices personally because a recent ERP role migration left his account able to both enter and approve payables far above his documented limit. In fraud triangle terms, the broken segregation of duties most directly represents which condition?",
+    "Topic": "F.141 erp-segregation-opportunity",
+    "UniqueConceptKey": "F-141-role-migration-opportunity",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-141 / F.2 / Easy / DS 1 / Understand / CC A",
+      "Part2OnlyFlag verified true",
+      "EW[A] empty for CC A (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match: Fraud Triangle (Cressey)",
+      "Qualitative item: no arithmetic dependency",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "SOX Section 302 certifications"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Withhold the certification until the interface posts a flawless full-quarter reconciliation, since any control deviation during the period voids the officer attestation entirely",
+      "B": "Sign after evaluating the deviation, disclosing any material effect on reported results and on internal control over financial reporting, and stating conclusions on effectiveness",
+      "C": "Route the statutory certification through the external engagement partner, whose signed audit opinion absorbs responsibility for management's control representations",
+      "D": "Execute the standard certification language unchanged and omit the interface episode, because corrected interim errors trigger disclosure duties only in annual filings"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Believing corrected errors erase 302 disclosure duties",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Section 302 of the Sarbanes-Oxley Act requires the principal executive and financial officers to personally certify that the report fairly presents results, that they bear responsibility for internal control over financial reporting, and that they have disclosed significant control deficiencies and any change in ICFR that materially affected or is reasonably likely to materially affect reporting. Marcus Bell must therefore evaluate the nine-day unreconciled window, quantify the revenue-timing effect, and let documented conclusions drive both the certification language and the control disclosure; certification is an informed attestation, not a ceremonial signature. Business interpretation: rigorous evaluation lets Flash Meridian certify truthfully while giving investors the control narrative they are owed. Common trap: assuming that correcting an error extinguishes the accompanying disclosure obligations.",
+    "ExplanationWrongA": "Choice A treats perfection as the certification bar; the statute contemplates disclosed deficiencies and reasoned materiality judgments, so demanding a flawless quarter misunderstands the standard and would groundlessly delay the filing.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C misassigns statutory duty; the certification belongs to the issuer's own principal officers, while the engagement partner signs an opinion on the financial statements, a separate instrument carrying separate responsibility.",
+    "ExplanationWrongD": "Choice D assumes correction cures disclosure; interim certifications carry the same disclosure expectations as annual ones, and suppressing a known control lapse multiplies the certifying officers' personal exposure.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-142",
+    "Section": "F",
+    "Stem": "Flash Meridian Systems, a public filer, is finalizing its second-quarter Form 10-Q. Controller Priya Raman has advised CFO Marcus Bell that the billing-to-general-ledger interface failed to reconcile for nine consecutive business days mid-quarter before correction, and the lapse shifted timing of recognized revenue on several large contracts. Under the officer certification requirements of Sarbanes-Oxley, how should Bell approach signing the quarterly certification?",
+    "Topic": "F.142 officer-certification-controls",
+    "UniqueConceptKey": "F-142-q2-cert-evaluation",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-142 / F.3 / Moderate-Easy / DS 2 / Apply / CC B",
+      "Part2OnlyFlag verified true",
+      "EW[B] empty for CC B (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match: SOX Section 302 certifications",
+      "Qualitative item: no arithmetic dependency",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Award the contract to Corrigan to protect internal working relationships, noting in the file that relationship continuity carried meaningful weight in the final scores",
+      "B": "Cancel the current solicitation and shelve the award until enough time passes for the family connection to feel less conspicuous to outside observers",
+      "C": "Disclose the relationship to the audit committee, recuse Kowalczyk from evaluation and approval, and score both finalists strictly on the published criteria",
+      "D": "Refer Kowalczyk to prosecutors immediately, taking favoritism toward a relative in competitive bidding as completed criminal conduct requiring no internal processing"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Treating conflict management as either accommodation or accusation",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The integrity standard in the IMA Statement of Ethical Professional Practice requires members to mitigate actual and apparent conflicts of interest and to abstain from activity that might prejudice fair dealing or discredit the profession. The established mechanics are disclosure, recusal, and criterion-based scoring, which preserve objectivity while eliminating concealed influence. Elena Vasquez protects the process rather than the personalities: Harlan competes on its merits, Corrigan forfeits nothing it was entitled to, and the audit committee holds a transparency record that survives later challenge from the losing bidder. Business interpretation: documented recusal converts an awkward family connection into an ordinary governed event. Common trap: jumping straight to criminal allegations before exhausting the internal controls built precisely for this configuration.",
+    "ExplanationWrongA": "Choice A sacrifices objectivity to harmony; letting undocumented relationship continuity outweigh price and qualification is exactly the compromised judgment the integrity standard forbids, whatever notation follows the award.",
+    "ExplanationWrongB": "Choice B substitutes delay for governance; canceling a sound solicitation penalizes both bidders and leaves the conflict unresolved, whereas disclosure plus recusal addresses it directly at zero cost to the competition.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D escalates prematurely; a manageable conflict of interest is not yet criminal fraud, and the proportionate first response is recusal and audit-committee notification, with referral reserved for proven misconduct.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-143",
+    "Section": "F",
+    "Stem": "Flash Precision Tooling is awarding a five-year maintenance contract. Scoring sheets show Harlan Mechanical, the lowest qualified bidder, priced twelve percent below Corrigan Services, a firm co-owned by the brother-in-law of vice president of operations Ray Kowalczyk. Kowalczyk has pressed the evaluation panel to reward relationship continuity by selecting Corrigan. Chairing the award review, CFO Elena Vasquez should take which course to uphold the integrity and objectivity expectations of professional ethics?",
+    "Topic": "F.143 bid-recusal-conflict-disclosure",
+    "UniqueConceptKey": "F-143-lowest-bid-recusal",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-143 / F.7 / Moderate / DS 3 / Apply / CC C",
+      "Part2OnlyFlag verified true",
+      "EW[C] empty for CC C (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match: IMA Statement of Ethical Professional Practice",
+      "Qualitative item: no arithmetic dependency",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Deliberately parking the invoice in January violates the accrual principle and breaches the integrity and credibility standards, since the shift misstates performance to sway the lender",
+      "B": "Treat the placement as an acceptable cut-off estimate, arguing that marketing spend lacks a precise service date and that auditors tolerate modest period-end judgment calls",
+      "C": "Conclude no standard is engaged, reasoning that covenant math belongs to the lender and that Flash Brightline owes the syndicate nothing beyond scheduled repayment",
+      "D": "Leave the entry in January provided the treasurer warns the syndicate agent verbally, treating informal notice as sufficient cure for any presentation effect"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Recasting deliberate period shifts as routine cut-off judgment",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Accrual accounting places the $180,000 expense in the period the benefit was consumed, here December, and deliberate departure crosses from error into misrepresentation. Within the IMA Statement of Ethical Professional Practice, integrity bars conduct that prejudices fair dealing or discredits the profession, while credibility demands fair, objective communication of financial information; an invoice moved specifically to flatter adjusted EBITDA fails both at once. Fatima Nasser's analysis should decompose the proposal into its parts, a GAAP violation, intent to alter lender perception, and a paper trail proving knowledge, and reject it on every ground. Business interpretation: covenant pressure never converts presentation preferences into license. Common trap: framing the shift as harmless timing preference rather than purposeful distortion with evidentiary consequences.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B romanticizes estimation latitude; the invoice carries a definite service period documented by the campaign schedule, so genuine ambiguity is absent, and tolerance for judgment never extends to entries moved with covenant intent.",
+    "ExplanationWrongC": "Choice C mistakes counterparty identity for obligation; the duty to present results fairly runs to investors and the profession broadly, and the covenant context is exactly what makes the distortion material and intended.",
+    "ExplanationWrongD": "Choice D invents an oral-notice cure; verbal warnings neither correct the ledger nor neutralize a knowing misstatement, and contemporaneous documents would still evidence the deliberate misplacement.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-144",
+    "Section": "F",
+    "Stem": "Flash Brightline Retail missed one covenant ratio in its credit agreement because a $180,000 December marketing invoice sat unprocessed until late January. Treasurer Tom Okafor calculates that charging the expense to December would push adjusted EBITDA below the required floor and hand the lending group repricing rights. He asks controller Fatima Nasser to endorse leaving the invoice in January. Which analysis states the professional-ethics position on that proposal?",
+    "Topic": "F.144 covenant-expense-deferral",
+    "UniqueConceptKey": "F-144-december-invoice-shift",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-144 / F.1 / Moderate / DS 3 / Analyze / CC A",
+      "Analyze gate: standards decomposition satisfied",
+      "Part2OnlyFlag verified true",
+      "EW[A] empty for CC A (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match: IMA Statement of Ethical Professional Practice",
+      "Qualitative decomposition item: no arithmetic dependency",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "GRI sustainability reporting framework",
+      "Limited versus reasonable assurance engagements (ISAE 3000)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Publish the report without external assurance this cycle, leaning on internal review and the sustainability team's own reconciliations to conserve cost during data ramp-up",
+      "B": "Commission reasonable assurance across every reported metric immediately, on the view that green-bond investors extend credit only against audit-level certainty on all figures",
+      "C": "Buy reasonable assurance for emissions data and quietly drop the immature social metrics from the report, removing them before any assurance conversation can arise",
+      "D": "Take limited assurance this cycle over the priority metrics investors will price, paired with a disclosed roadmap toward reasonable assurance as data matures"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Equating credibility with maximum assurance regardless of evidence",
+    "CorrectChoice": "D",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Assurance engagements run on a spectrum: reasonable assurance delivers an audit-level positive conclusion, while limited assurance delivers a negative-form conclusion under substantially reduced procedures. Weighing data maturity, cost, and the reliance green-bond investors place on verified figures, Daniel Reyes's defensible path is limited assurance scoped to decision-useful metrics plus a transparent maturation roadmap; it supplies third-party credibility where capital markets look first while acknowledging that first-year social estimates cannot yet support positive assurance. Full reasonable assurance today invites qualifications on weak datasets, and zero assurance undermines the certification premise of the bond itself. Common trap: equating credibility automatically with maximum assurance regardless of whether the underlying evidence can bear it.",
+    "ExplanationWrongA": "Choice A optimizes cost and forfeits credibility; an uncertified debut report invites skepticism precisely when the offering narrative depends on trust, and internal review cannot substitute for independent assurance in market practice.",
+    "ExplanationWrongB": "Choice B ignores evidentiary reality; reasonable assurance over first-year estimated social data would likely produce qualifications or scope withdrawal, converting an ambitious posture into public embarrassment during the offering window.",
+    "ExplanationWrongC": "Choice C solves assurance by deletion; dropping immature metrics conceals relevant stakeholder information rather than calibrating assurance to evidence quality, and selective omission feeds the very greenwashing challenge such reports must rebut.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-145",
+    "Section": "F",
+    "Stem": "Flash Verdant Energy will issue a certified green bond and publish its first sustainability report alongside it. Evidence maturity diverges sharply: twelve quarters of auditable emissions data exist, while social and supply-chain metrics rest on first-year estimates. CFO Daniel Reyes must recommend an assurance approach, weighing investor reliance for the bond offering against cost and the reliability limits of immature datasets. Which recommendation is best supported?",
+    "Topic": "F.145 assurance-level-roadmap",
+    "UniqueConceptKey": "F-145-green-bond-assurance",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-145 / F.4 / Difficult / DS 4 / Evaluate / CC D",
+      "Evaluate gate: named decision-maker Reyes judging defensible alternatives",
+      "Part2OnlyFlag verified true",
+      "EW[D] empty for CC D (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Qualitative item: no arithmetic dependency",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FCPA anti-bribery provisions",
+      "FCPA books-and-records provisions"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Pay the officer immediately and book the cash as an incremental freight surcharge, since modest facilitation amounts of this size fall outside any meaningful accounting requirement",
+      "B": "Verify the fee targets a routine, nondiscretionary governmental act, refer the decision to the chief compliance officer before paying, and record any payment truthfully",
+      "C": "Refuse outright and instruct the port agent likewise, because cash moving to officials is bribery and no further characterization exercise is warranted or permitted",
+      "D": "Haggle the amount down as an ordinary port congestion charge and settle in cash without documentation, treating the official as just another commercial counterparty"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Treating the facilitation exception as a license for off-book cash",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The FCPA separates bribes offered to obtain or retain business from facilitating payments that expedite routine, nondiscretionary governmental action to which the payer is already entitled. The described fee sits in that narrow lane, but characterization is a consequential judgment: books-and-records provisions demand truthful recording regardless, and many companies prohibit facilitation payments by policy even where the statutory exception exists. The defensible course confirms the routine nature, routes the decision to compliance before any money moves, and records any payment honestly; quiet cash booked as freight disguises the transaction and manufactures liability. Amir Haddad holds a genuine judgment call among imperfect options, which is why escalation before payment is the controlling discipline. Common trap: reading the facilitation exception as an accounting exemption, when it addresses bribery exposure only and leaves recordkeeping duties fully intact.",
+    "ExplanationWrongA": "Choice A commits two errors at once; relabeling a discretionary-looking cash request as freight falsifies the books, and the facilitation exception never suspends the FCPA accounting provisions that attach to every payment.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C discards the lawful distinction the statute itself draws; categorical refusal may be sound corporate policy, but presenting it as the sole legal reading misstates the facilitating-payment carve-out and skips the required pre-decision escalation.",
+    "ExplanationWrongD": "Choice D reframes a government fee as a haggle with a vendor; the officer exercises sovereign discretion over clearance, so treating the payment as an ordinary commercial charge evades both the characterization test and the recordkeeping duty.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-146",
+    "Section": "F",
+    "Stem": "A Flash Global Freight consolidation of temperature-sensitive medical supplies is held at a coastal port abroad while a customs official signals that a $200 cash payment will complete routine, already-approved clearance paperwork by nightfall; refusal strands the shipment roughly a week in costly cold storage. Regional operations director Amir Haddad must decide. Which evaluation best characterizes the payment and the proper course under the Foreign Corrupt Practices Act and Flash policy?",
+    "Topic": "F.146 customs-facilitating-payment",
+    "UniqueConceptKey": "F-146-port-expedite-characterization",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-146 / F.5 / Very Difficult / DS 5 / Evaluate / CC B",
+      "Evaluate gate: named decision-maker Haddad among defensible alternatives",
+      "Part2OnlyFlag verified true",
+      "EW[B] empty for CC B (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Qualitative item: no arithmetic dependency",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Forward the post throughout the finance organization so teammates immediately grasp which figures was prohibited from being discussed outside closed rooms",
+      "B": "Reply publicly beneath the post urging deletion, creating a timestamped objection visible to colleagues, clients, and anyone following the thread",
+      "C": "Trigger the escalation protocol at once, alerting the disclosure committee and legal so authorized owners can force takedown and assess securities exposure",
+      "D": "Log the item for review once the announcement publishes, reasoning that imminent disclosure shrinks the harm and early intervention accomplishes little"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Responding to leaks with circulation or silence instead of escalation",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The confidentiality standard of the IMA Statement of Ethical Professional Practice obliges professionals to keep confidential information secure, refrain from using it improperly, and follow defined escalation channels when protection fails. A public post describing unannounced, material results is a live leak: the remedy is immediate internal escalation to the people empowered to compel removal and evaluate trading and disclosure consequences, not wider circulation, public commentary, or patient logging. Renata Kovacs's duty is to activate the protocol promptly and factually, preserving evidence and timelines. Business interpretation: minutes matter, because dissemination compounds exposure with every additional viewer. Common trap: treating confidentiality as passive silence rather than active safeguarding through authorized response.",
+    "ExplanationWrongA": "Choice A fights leakage with amplification; broadcasting the content internally multiplies the population aware of material nonpublic detail and deepens the exact exposure the confidentiality standard charges Kovacs to contain.",
+    "ExplanationWrongB": "Choice B negotiates in public; a visible reply confirms the teaser, timestamps the company's awareness, and leaves deletion to the author's goodwill rather than to officials holding authority to act.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D prices the breach as tolerable until launch; material nonpublic information harms the company from the first unauthorized viewer, and deferral abandons the standard's mandate of prompt protective action.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-147",
+    "Section": "F",
+    "Stem": "A deal-team colleague at Flash Northwind Software posted on a public professional network that the company's quarter benefited from unusually rich licensing margins tied to a transaction closing within weeks; the deal is unannounced and material. Treasury analyst Jordan Blake forwarded a screenshot to assistant controller Renata Kovacs. Applying the confidentiality standard, what is Kovacs's best immediate action?",
+    "Topic": "F.147 public-post-leak-response",
+    "UniqueConceptKey": "F-147-network-teaser-escalation",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-147 / F.6 / Moderate / DS 3 / Apply / CC C",
+      "Part2OnlyFlag verified true",
+      "EW[C] empty for CC C (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match: IMA Statement of Ethical Professional Practice",
+      "Qualitative item: no arithmetic dependency",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Fraud Triangle (Cressey)"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Motive, means, and alibi, the investigative triad detectives confirm before publicly naming a suspect in an occupational fraud matter",
+      "B": "Perceived pressure, perceived opportunity, and rationalization, the three conditions Donald Cressey associated with violations of trust",
+      "C": "Greed, secrecy, and superior technology, the drivers most often observed across contemporary cyber-enabled asset misappropriation schemes",
+      "D": "Collusion, concealment, and conversion, the sequential stages through which misappropriated assets typically travel from company books to personal benefit"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Swapping adjacent fraud vocabularies for Cressey's three conditions",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Donald Cressey's fraud triangle identifies perceived pressure, sometimes framed as incentive, perceived opportunity, and rationalization as the three conditions whose convergence accompanies most occupational fraud. The model remains the organizing spine of fraud-risk curricula and of control design, where opportunity is the leg management attacks directly through authorization limits, segregation of duties, and monitoring. Rosa Delgado's slide should present the triad verbatim so trainees learn to probe controls, incentives, and attitudes as an integrated set. Business interpretation: shared vocabulary lets audit, management, and the board discuss fraud exposure without translation loss across functions. Common trap: substituting adjacent vocabularies, such as investigator heuristics or asset-travel stages, for the canonical three conditions.",
+    "ExplanationWrongA": "Choice A offers detective folklore rather than theory; motive, means, and alibi describe suspect vetting in casework practice, not the conditions under which trusted individuals violate entrusted duties.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C modernizes the triangle out of existence; greed and secrecy color human motive and technology shapes method, yet none belongs to Cressey's enumerated set of conditions behind trust violation.",
+    "ExplanationWrongD": "Choice D borrows the anatomy of an executed scheme; collusion, concealment, and conversion describe how misappropriation proceeds and hides, complementary vocabulary rather than the triangle itself.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-148",
+    "Section": "F",
+    "Stem": "While assembling materials for Flash Copperline Manufacturing's annual fraud-awareness session, chief compliance officer Rosa Delgado wants an opening slide that states the classical fraud triangle with textbook fidelity. Which formulation should the slide carry?",
+    "Topic": "F.148 triangle-slide-formulation",
+    "UniqueConceptKey": "F-148-canonical-triad-recall",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-148 / F.2 / Moderate-Easy / DS 2 / Remember / CC B",
+      "Rule 11 floor: Remember at DS 2 within ceiling",
+      "Part2OnlyFlag verified true",
+      "EW[B] empty for CC B (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match: Fraud Triangle (Cressey)",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Sarbanes-Oxley Section 806 whistleblower protection",
+      "Dodd-Frank Act whistleblower provisions"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "SOX shields public-company employees reporting covered fraud via an administrative track then de novo court review, while Dodd-Frank adds independent anti-retaliation for SEC reporting plus award percentages for original tips",
+      "B": "Both statutes condition protection on exhausting the employer hotline first, so Liu's committee report started her clock only after management declined to act on her findings",
+      "C": "Dodd-Frank reaches employees of private subsidiaries exclusively, leaving SOX to govern public-company parents together with their consolidated affiliates",
+      "D": "Monetary awards flow from SOX, which pays percentages of collected sanctions, while Dodd-Frank supplies only reinstatement and back-pay remedies"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Inventing hotline-exhaustion gates or swapping the statutes' remedies",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Decomposing the regimes: Sarbanes-Oxley protects employees of public companies and their contractors or affiliates who report conduct they reasonably believe constitutes securities fraud, an SEC rule violation, or a related federal offense; complaints run through the administrative labor process with de novo federal court review available afterward. Dodd-Frank layers an independent anti-retaliation cause of action tied to SEC whistle-blowing plus an award program paying percentages of sanctions exceeding one million dollars for voluntary original information. Grace Liu's audit-committee report anchors the SOX protected-conduct prong, and any parallel SEC submission could open the Dodd-Frank track with its own forum and clock. Business interpretation: mapping each element, protected person, protected activity, forum, remedy, prevents forfeiting viable claims. Common trap: assuming hotline exhaustion or purely internal reporting forfeits protection, an assumption modern precedent rejects.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B hard-codes an exhaustion precondition neither statute imposes as a blanket rule; protection attaches to covered reporting activity itself, and demanding prior internal futility reads a gatekeeper clause into text containing none.",
+    "ExplanationWrongC": "Choice C flips the scopes; Dodd-Frank's machinery centers on SEC-related reporting with breadth beyond SOX's employment base, while SOX expressly covers public-company personnel and their service providers, the reverse of the described split.",
+    "ExplanationWrongD": "Choice D swaps the remedies; the monetary-award program lives in Dodd-Frank's SEC fund, whereas SOX supplies reinstatement, back pay, and related damages through its labor-law enforcement track.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-149",
+    "Section": "F",
+    "Stem": "After reporting suspected revenue-manipulation entries to the audit committee of Flash Harborline Terminals, senior accountant Grace Liu was reassigned to a basement records room and struck from meeting invitations. Her counsel is evaluating claims under the whistleblower provisions of the Sarbanes-Oxley Act and the Dodd-Frank Act. Which analysis correctly distinguishes the two protection regimes available to her?",
+    "Topic": "F.149 retaliation-regime-comparison",
+    "UniqueConceptKey": "F-149-basement-reassignment-claims",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-149 / F.3 / Difficult / DS 4 / Analyze / CC A",
+      "Analyze gate: regime-by-regime decomposition satisfied",
+      "Part2OnlyFlag verified true",
+      "EW[A] empty for CC A (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Qualitative comparison item: no arithmetic dependency",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Keep the wine and enter it in the gift register at year end, trusting that transparent recording neutralizes the awkward timing against the live renewal",
+      "B": "Divide the bottles among the procurement team and proceed exactly as planned, since shared consumption dissolves any personal obligation toward the vendor",
+      "C": "Return the wine, record the incident in the gift register, brief compliance, and firewall the renewal scoring from everyone aware of the delivery",
+      "D": "Store the wine unopened until contracts are signed, then accept it as a congratulatory courtesy falling safely outside the active sourcing window"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Mistaking registration or redistribution for compliance with gift caps",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Integrity under the IMA Statement of Ethical Professional Practice requires mitigating actual and apparent conflicts and refusing anything that would compromise, or appear to compromise, professional judgment. The $50 cap exists because value and timing together signal influence, and roughly $400 arriving mid-negotiation, about $100 per bottle, fails both tests decisively. Alicia Moreno's compliant path declines or returns the gift, creates a register record, alerts compliance, and preserves a scoring process untainted by awareness of the vendor's gesture. Business interpretation: visible discipline protects Moreno personally and keeps any award defensible if losing bidders later protest. Common trap: believing registration legitimizes retention, when the register documents refusal history rather than laundering prohibited gifts.",
+    "ExplanationWrongA": "Choice A converts disclosure into permission; the register supports the policy regime, it cannot bless a retained gift that the cap plainly prohibits during a live sourcing event.",
+    "ExplanationWrongB": "Choice B relocates rather than removes the conflict; departmental consumption still banks goodwill toward the team controlling the award, and the policy's purpose is untainted decisions, not redistributed bottles.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D launders timing; parking the gift until signature preserves the inducement across the decisive period and reads, in hindsight, like a deferred commission on the renewal itself.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-150",
+    "Section": "F",
+    "Stem": "During renegotiation of Flash Culinary Brands' flagship carton contract, the incumbent vendor delivered four bottles of reserve wine valued near $400 in total to procurement director Alicia Moreno. Flash policy caps individual gifts at $50 and bars anything of substance during live sourcing events. How should Moreno apply the integrity standard and the policy?",
+    "Topic": "F.150 wine-gift-cap-application",
+    "UniqueConceptKey": "F-150-carton-renewal-gesture",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-150 / F.7 / Moderate / DS 3 / Apply / CC C",
+      "Recomputed: 400 / 4 = 100 per bottle, double the $50 cap; second-pass agreement confirmed",
+      "Part2OnlyFlag verified true",
+      "EW[C] empty for CC C (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Resign immediately and remain silent about the reclassifications, since continued employment beside an unresolved conflict necessarily implies personal complicity",
+      "B": "Contact the grantor agency before any internal conversation, holding that the external funder holds the primary interest in the integrity of its cost pools",
+      "C": "Raise the matter anonymously with a business journalist, treating publicity as the fastest reliable disinfectant for misconduct committed under supervisory direction",
+      "D": "Advance the concern to the next higher managerial level, such as the audit committee or board, because involvement of the immediate supervisor forecloses the usual first discussion"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Skipping to exit, regulators, or press before the internal next level",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The resolution pathway in the IMA Statement begins with fact gathering and discussion with the immediate supervisor unless that supervisor appears involved, in which case the concept is to move the concern to the next higher level of management responsibility, commonly the audit committee or board. Understanding this sequence prevents two symmetrical failures: skipping legitimate internal channels prematurely, and stalling indefinitely behind the implicated party. Nina Petrov's involvement-based trigger moves her directly upward with documentation intact. Business interpretation: the model channels good faith inside governance structures first, preserving fairness to the accused and protection for the reporter. Common trap: treating resignation, regulators, or press as default openings rather than later, carefully weighed options.",
+    "ExplanationWrongA": "Choice A leaps past the framework; resignation may ultimately prove honorable, but the model exists to produce structured escalation, and silence forfeits the organization's chance to correct the misclassification.",
+    "ExplanationWrongB": "Choice B inverts the ladder; regulators become appropriate after internal avenues are exhausted or where law compels immediacy, not before governance has been informed and given the opportunity to act.",
+    "ExplanationWrongC": "Choice C selects the most damaging channel first; anonymous media contact strips the process of documentation and due process, and nothing in the guidance endorses publicity as an initial step.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-151",
+    "Section": "F",
+    "Stem": "Staff accountant Nina Petrov at Flash Silverpine Health found entries her direct supervisor instructed her to post that shifted expired grant balances into still-allowable cost pools. Turning to the resolution guidance in the IMA Statement of Ethical Professional Practice, which statement reflects the correct next step when the conflict involves her own supervisor?",
+    "Topic": "F.151 supervisor-involved-next-step",
+    "UniqueConceptKey": "F-151-grant-reclass-escalation",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-151 / F.1 / Easy / DS 1 / Understand / CC D",
+      "Part2OnlyFlag verified true",
+      "EW[D] empty for CC D (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match: IMA Statement of Ethical Professional Practice",
+      "Qualitative item: no arithmetic dependency",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "TCFD recommendations",
+      "SASB standards",
+      "GRI sustainability reporting framework"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Consolidate everything under GRI alone, on the theory that its universal standards already deliver investor-grade metrics, climate scenario structure, and community storytelling in a single document",
+      "B": "Standardize on SASB alone, treating it as the definitive investor framework whose industry metrics render the climate-pillar and stakeholder-impact architectures unnecessary duplication",
+      "C": "Build climate disclosure on TCFD pillars, adopt SASB apparel-industry metrics for financially material KPIs, and reserve GRI reporting for the broader stakeholder impact narrative",
+      "D": "Treat the three as interchangeable shells and adopt whichever template closes fastest, reasoning that identical source data makes structural differences cosmetic"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Forcing one framework's lens onto three different audience decisions",
+    "CorrectChoice": "C",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The frameworks solve different problems: TCFD organizes climate exposure around governance, strategy, risk management, and metrics including scenario analysis, answering lenders pricing transition risk; SASB supplies industry-specific, financially material metrics designed for investors, answering comparability demands; GRI centers impact materiality across all stakeholders, serving community and civil-society narratives. Sandra Yip's stack assigns each tool to its native audience rather than forcing one lens onto three decision contexts. Business interpretation: mapped correctly, the frameworks draw on shared data inputs while serving distinct judgments, containing preparation cost and reducing questionnaire fatigue. Common trap: treating framework selection as branding rather than matching disclosure logic to what each user actually decides.",
+    "ExplanationWrongA": "Choice A overloads a stakeholder-impact lens with investor tasks; GRI excels at impact narratives but does not natively deliver SASB-style financial KPIs or TCFD scenario architecture, so single-framework coverage is illusory.",
+    "ExplanationWrongB": "Choice B amputates climate strategy; SASB metrics describe point-in-time financial materiality, yet lenders requested governance, scenario, and risk-management architecture only the TCFD pillar set provides.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D confuses data plumbing with disclosure logic; identical inputs can populate every framework, but each imposes distinct materiality filters and structures, and pretending otherwise produces reports answering no audience precisely.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-152",
+    "Section": "F",
+    "Stem": "Institutional lenders structuring a sustainability-linked facility have asked Flash Aurora Apparel for climate-risk disclosure built on recognized architecture, equity analysts want comparable industry KPIs, and community coalitions seek broader impact narratives. Controller Sandra Yip must recommend how to assemble the reporting stack. Which analysis correctly matches each framework to the audience demand it natively serves?",
+    "Topic": "F.152 framework-stack-matching",
+    "UniqueConceptKey": "F-152-lender-analyst-community",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-152 / F.4 / Very Difficult / DS 5 / Analyze / CC C",
+      "Analyze gate: three-framework decomposition and audience mapping satisfied",
+      "Part2OnlyFlag verified true",
+      "EW[C] empty for CC C (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Qualitative item: no arithmetic dependency",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FCPA anti-bribery provisions"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Suspend the engagement pending enhanced diligence on ownership, deliverables, and government contacts, conditioning any contract on anti-corruption representations, audit rights, and termination triggers",
+      "B": "Proceed, because commissions paid to private consultants are commercial expenses lying outside the statute's reach regardless of how the funds travel onward",
+      "C": "Engage but absorb the commission inside the tender's overhead rate, letting project margin dilute the differential away from separate scrutiny",
+      "D": "Obtain a signed assurance of legality from the consultant and treat that representation as satisfying every diligence obligation owed"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Letting consultant invoices and assurances substitute for diligence",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Anti-bribery provisions reach payments made directly or through intermediaries when the payer knows the funds will improperly influence a foreign official; outsized economics, four times the customary rate here at 8 percent against 2 percent, opaque deliverables, and third-jurisdiction routing aimed at a government tender are canonical red flags that support knowledge imputation. Diligence therefore precedes engagement: verify ownership and capabilities, benchmark the commission, embed anti-corruption covenants with audit and termination rights, and walk away when explanations fail. Marco Ferreira's leverage is highest before signature, which is why suspension pending enhanced diligence applies the standard correctly. Common trap: treating form, a consulting invoice, as dispositive over substance, whom the money ultimately touches and why.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B worships the intermediary veil; liability follows knowing use of any person to convey improper influence, and layered routing toward a tender context supplies precisely the knowledge inference the veil cannot block.",
+    "ExplanationWrongC": "Choice C buries the anomaly; folding a quadruple-market commission into overhead obscures the payment from the scrutiny its profile demands and compounds exposure with a records-integrity problem.",
+    "ExplanationWrongD": "Choice D collects paper instead of evidence; boilerplate assurances carry weight only alongside verification of ownership, deliverables, and economics, which is the diligence this profile conspicuously fails.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-153",
+    "Section": "F",
+    "Stem": "Flash Solstice Medical is pursuing a state-hospital equipment tender abroad. The proposed in-country consultant, introduced by a respected broker, demands an 8 percent success commission where comparable advisory mandates clear at 2 percent, declines to specify deliverables, and asks that fees route through a third jurisdiction once the award letter issues. Vice president of international sales Marco Ferreira must decide whether to engage. Which action best applies anti-corruption diligence?",
+    "Topic": "F.153 consultant-redflag-suspension",
+    "UniqueConceptKey": "F-153-tender-commission-redflags",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-153 / F.5 / Moderate / DS 3 / Apply / CC A",
+      "Recomputed: 8 / 2 = 4.0x customary benchmark rate; second-pass agreement confirmed",
+      "Part2OnlyFlag verified true",
+      "EW[A] empty for CC A (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match: FCPA anti-bribery provisions",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Book a quiet correcting entry against inventory and reserves, leaving the board uninformed until external auditors stumble onto the pattern during their own testing",
+      "B": "Quantify and document the finding with supporting evidence, then escalate directly to the audit committee under the protocol, because implicated seniority outranks the normal chain",
+      "C": "Arrange a private session with the regional head to agree corrected counts informally, protecting relationships and sparing the close calendar any governance commotion",
+      "D": "Stand down until external audit fieldwork begins, treating independent count verification as the designed detective control that should own discovery"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Routing senior-management misstatement anywhere but the audit committee",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Suspected misstatement attributable to senior management invokes both the resolution model's next-level rule and financial-reporting controls: quantify the error, preserve evidence, and route the finding to the audit committee, the body positioned to oversee officers rather than be overseen by them. The $1,400,000 overstatement equals about 6 percent of approximately $23.3 million pretax income, plainly material, and the eight-day window heightens the urgency of governance awareness before certifications are signed. Derek Chan's duty runs past chain-of-command courtesy whenever the chain itself is implicated. Business interpretation: early committee involvement lets remediation, control evaluation, and disclosure judgments proceed in parallel with the close. Common trap: equating managerial politeness with fiduciary duty when seniority sits inside the suspected scheme.",
+    "ExplanationWrongA": "Choice A repairs the number while burying the lesson; an unannounced adjustment conceals a senior-officer override, denies the board its oversight moment, and leaves Chan exposed for muffling a material event.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C hands the evidence to its subject; private negotiation with the implicated executive risks coaching, destruction, or intimidation, and substitutes relational comfort for the governance protocol built for exactly this configuration.",
+    "ExplanationWrongD": "Choice D misreads external audit as the first line; auditors test counts and controls, but detection responsibility inside management rests with management, and deferral squanders the remaining close window governance needs.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-154",
+    "Section": "F",
+    "Stem": "Controller Derek Chan of Flash Hearthstone Goods traced a $1,400,000 overstatement in finished-goods inventory, roughly 6 percent of pretax income of approximately $23.3 million, to inflated physical counts directed by the regional operations head, a senior officer two levels above the plant accounting staff involved. Eight days remain before year-end close. Applying escalation responsibilities for suspected financial misstatement, what should Chan do?",
+    "Topic": "F.154 count-overstatement-committee",
+    "UniqueConceptKey": "F-154-count-inflation-committee",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-154 / F.6 / Difficult / DS 4 / Apply / CC B",
+      "Recomputed: 1400000 / 23300000 = 0.0601, rounds to 6.0% of pretax income; second-pass agreement confirmed",
+      "Part2OnlyFlag verified true",
+      "EW[B] empty for CC B (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Step aside from the project until finishing a graduate curriculum in machine learning, holding that competence demands personal command of every technique inside the model",
+      "B": "Carry the vendor's accuracy claims into the deck verbatim, delegating all technical validation to the supplier's marketing white papers and reference calls",
+      "C": "Present the forecasts as settled fact and strip methodology caveats from the pack, keeping committee materials short, confident, and free of statistical hedging",
+      "D": "Train on the model's mechanics and limits, validate back-tested output against actual flows before relying on it, and disclose assumptions and error ranges to the committee"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Reading competence as absolute mastery or absolute delegation",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Competence under the IMA Statement obliges members to maintain appropriate professional expertise, perform duties under relevant standards, and provide decision-useful information; in a new-technology setting this translates to acquiring working fluency, validating outputs against observed reality, and communicating limitations honestly, in tandem with the credibility standard's demand for full disclosure. Sofia Marchetti need not become a data scientist, but she owns the reasonableness of whatever she presents: targeted training, back-testing against actual cash flows, and disclosed error ranges discharge the duty, while blind delegation or unwarranted certainty breaches it. Business interpretation: validated humility expands the analytical toolkit; unexamined confidence imports silent model risk into liquidity decisions. Common trap: reading competence as either total personal mastery or total outsourcing to the vendor.",
+    "ExplanationWrongA": "Choice A inflates the duty into impossibility; competence requires fitness for the task performed, and demanding doctoral mastery before touching a vendor model would freeze adoption rather than govern it.",
+    "ExplanationWrongB": "Choice B outsources judgment wholesale; marketing collateral is advocacy rather than validation, and the competence standard pins accountability for presented outputs on the professional who presents them.",
+    "ExplanationWrongC": "Choice C purchases confidence with candor; stripping assumptions and error bands violates the companion credibility duty and hands the committee a precision the model cannot support.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "F.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-F-155",
+    "Section": "F",
+    "Stem": "Flash Cobalt Logistics is deploying a machine-learning cash-flow forecast that treasury analyst Sofia Marchetti, an experienced treasury practitioner with no data-science background, must present to the finance committee as an input to revolver sizing. Applying the competence standard of the IMA Statement of Ethical Professional Practice, which course best discharges her professional obligation?",
+    "Topic": "F.155 ml-forecast-competence",
+    "UniqueConceptKey": "F-155-backtest-before-reliance",
+    "VerifiedChecks": [
+      "Slot table match: P2-F-155 / F.1 / Moderate-Easy / DS 2 / Apply / CC D",
+      "Part2OnlyFlag verified true",
+      "EW[D] empty for CC D (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match: IMA Statement of Ethical Professional Practice",
+      "Qualitative item: no arithmetic dependency",
+      "First-80-character stem uniqueness verified"
+    ],
+    "question_state": "Unprocessed"
+  }
 ];

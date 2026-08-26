@@ -24,7 +24,7 @@
     "statistics": {
       "Cases Checked": 75
     },
-    "duration": 281,
+    "duration": 175,
     "confidence": 100
   },
   {
@@ -113,7 +113,7 @@
       "Domain: Planning, Budgeting, and Forecasting": 12,
       "Domain: Technology and Analytics": 11
     },
-    "duration": 159,
+    "duration": 117,
     "confidence": 100
   },
   {
@@ -191,7 +191,7 @@
       "Cognitive: Remember": 1,
       "Cognitive: Understand": 37
     },
-    "duration": 131,
+    "duration": 117,
     "confidence": 100
   },
   {
@@ -365,7 +365,7 @@
       "Orphan Exhibits (unreferenced)": 115,
       "Orphan References (missing exhibits)": 0
     },
-    "duration": 112,
+    "duration": 118,
     "confidence": 100
   },
   {
@@ -407,7 +407,7 @@
       "Correct Explanation Avg Length": 527,
       "Wrong Explanation Avg Length": 345
     },
-    "duration": 498,
+    "duration": 392,
     "confidence": 100
   },
   {
@@ -439,7 +439,7 @@
       "Cases with Duplicate Explanations": 0,
       "Cases with Missing Exhibits": 0
     },
-    "duration": 40,
+    "duration": 36,
     "confidence": 100
   },
   {
@@ -2136,7 +2136,7 @@
       "totalErrors": 0,
       "totalWarnings": 1662
     },
-    "duration": 1118,
+    "duration": 1152,
     "confidence": 100
   }
 ]

@@ -5539,7 +5539,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: CM ratio = 0.36; ($810K + $270K) / 0.36 = $3,000,000",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -5582,7 +5583,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: BE = $640,000; ($960K - $640K) / $960K = 33.3%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -5625,7 +5627,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: housing $120/h, coupling $180/h; 3,000 couplings + 625 housings = $165,000",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -5668,7 +5671,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: CM = $480K; OI = $180K; DOL = 2.67",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -5711,7 +5715,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: CM = $27,000; avoidable FC saved = $28,000; suspend improves OI by $1,000",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -5754,7 +5759,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: order CM = $84,000; displaced CM = $42,000; net +$42,000 accept",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -5797,7 +5803,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: make = $1,360K + $150K = $1,510K; buy = $1,480K - $150K = $1,330K; buy saves $180K",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -5840,7 +5847,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: OC = $60 - $42 = $18; min TP = $42 + $18 = $60",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -5883,7 +5891,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: $120K + $90K - $18K = $192,000",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -5926,7 +5935,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: EV analyzer $220K vs sensor $204K; EVPI = $276K - $220K = $56K",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -5969,7 +5979,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: conceptual item; no calculation required",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -6012,7 +6023,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: conceptual item; no calculation required",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -6055,7 +6067,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: conceptual item; no calculation required",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -6098,7 +6111,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: Q $60/h, R $75/h, S $48/h; rank R, Q, S",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -6141,7 +6155,8 @@ var pack_p2_c_questions = [
   "Independent answer derived: generator contribution = $110K > $95K switch redeployment; keep the line",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 }
 ,
   {
@@ -8782,5 +8797,3929 @@ var pack_p2_c_questions = [
     "Independent: P1 floor 150h; P2 350h->700; outsource 200 P2 at 22 -> 29,900",
     "Authority citations match tested concept"
    ]
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory; CVP analysis (per ICMA CMA Content Specification Outline, Domain C)"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "9,000 pumps",
+      "B": "12,000 pumps",
+      "C": "4,800 pumps",
+      "D": "13,000 pumps"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Omitting target profit from the numerator or dividing by price instead of CM per unit",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is B. Under CVP analysis, required unit volume equals (fixed costs + target operating income) divided by contribution margin per unit (DA-03): ($1,728,000 + $576,000) / ($480 - $288) = $2,304,000 / $192 = 12,000 pumps. At 12,000 units, contribution margin of $2,304,000 exactly covers the $1,728,000 of fixed costs and delivers the $576,000 target. For Flash Industries, this means the Cedar Rapids plant must produce roughly 12,000 pumps per quarter - a concrete production-planning target Daniel Okafor can cascade into the divisional master budget.",
+    "ExplanationWrongA": "Choice A reports the breakeven point alone: $1,728,000 / $192 = 9,000 units covers fixed costs but earns zero profit. A candidate choosing it omitted the $576,000 target operating income from the numerator; the formula is (fixed costs + target profit) / CM per unit, so 3,000 additional units beyond breakeven are needed.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C divides the $2,304,000 requirement by the $480 selling price instead of the $192 contribution margin per unit. Using price as the divisor implicitly assumes zero variable costs; every pump actually absorbs $288 of variable cost, so 12,000 units - not 4,800 - are required to cover fixed costs and earn the target income.",
+    "ExplanationWrongD": "Choice D treats the stated $576,000 as an after-tax figure and grosses it up at an assumed 25% tax rate to $768,000 before adding fixed costs. The stem specifies target OPERATING income, which is pre-tax by definition, so no gross-up applies; the numerator remains $2,304,000 and the required volume stays at 12,000 units.",
+    "FormulaReference": "DA-03",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-201",
+    "Section": "C",
+    "Stem": "Flash Industries, a diversified manufacturer with $84 million in annual revenue, produces industrial water pumps at its Cedar Rapids plant. Vice President of Finance Daniel Okafor needs the pump line to earn a target operating income of $576,000 next quarter. Each pump sells for $480, variable cost is $288 per unit, and quarterly fixed costs total $1,728,000. How many pumps must Flash sell next quarter to reach the target operating income?",
+    "Topic": "C.201 cvp-target-profit-units",
+    "UniqueConceptKey": "C-201-cvp-target-profit-units",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-component CVP computation requiring correct numerator assembly and CM-per-unit divisor; standard Apply-level item",
+      "(1,728,000 + 576,000) / (480 - 288) = 2,304,000 / 192 = 12,000 (recomputed twice: 192 x 12,000 = 2,304,000)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA on relevant costing - qualitative factors in outsourcing; ICMA CMA Content Specification Outline, Domain C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The supplier's quoted price is 8% below Flash's internal avoidable cost per enclosure",
+      "B": "Supervisory salaries and depreciation on the fabrication line would be avoided each year under outsourcing",
+      "C": "Outsourcing would erode in-house fabrication expertise that supports rapid prototype redesigns for customers",
+      "D": "Vacated floor space could be sublet to a neighboring distributor for $95,000 per year"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Treating rental income or supplier quotes as decisive while ignoring loss of proprietary know-how",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is C. Qualitative factors in an outsourcing decision are considerations that affect the firm's long-term capabilities, quality, or risk profile but are not readily expressed in the cost comparison. Erosion of proprietary fabrication know-how that speeds prototype redesigns is a genuine capability loss whose cost is real yet unquantified in the favorable 8% differential - precisely the kind of non-financial consideration IMA relevant-costing guidance says must accompany, and on occasion override, the numerical model. The other three options are all dollar-denominated inputs that belong inside the quantitative comparison itself rather than in the qualitative overlay Renee Alvarado needs to present to the executive committee.",
+    "ExplanationWrongA": "Choice A merely restates the quantitative advantage already built into the sourcing model. It is the measured result itself, not a qualitative consideration; citing it adds nothing about capability retention, supplier dependability, quality control, or strategic risk, which is exactly what Alvarado must surface before the committee votes on the recommendation.",
+    "ExplanationWrongB": "Choice B identifies avoidable fixed costs, which belong inside the quantitative comparison as projected cost savings, not among qualitative factors. Selecting it confuses the contents of the cost model with the non-financial overlay the question asks Alvarado to flag; supervisory and depreciation avoidance is already priced into the 8% advantage.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D describes sublease income, another dollar amount that enters the quantitative side of the ledger as an opportunity benefit of vacating space. It does not address skill retention, supplier dependability, or strategic control of fabrication capability, so it fails the qualitative test the question sets for the committee briefing.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-202",
+    "Section": "C",
+    "Stem": "Flash Industries' sourcing team, led by supply chain director Renee Alvarado, has compared quotes for outsourcing the fabrication of enclosures used across Flash's product lines. The financial model shows the winning supplier is 8% below Flash's internal avoidable cost, and every quantified element of the analysis is otherwise favorable. Before taking the recommendation to the executive committee, Alvarado wants to flag the key non-financial consideration. Which factor is the clearest example of a qualitative factor that could offset the favorable cost difference?",
+    "Topic": "C.202 outsourcing-qualitative-factors",
+    "UniqueConceptKey": "C-202-outsourcing-qualitative-factors",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-concept classification at Understand level; no computation, moderate discrimination required",
+      "Conceptual item - no arithmetic to recompute; classification verified against LOS C.7 qualitative-factor guidance",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA - Management Accounting Concepts; ICMA CMA Content Specification Outline, Domain C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Opportunity cost",
+      "B": "Sunk cost",
+      "C": "Differential cost",
+      "D": "Avoidable cost"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Confusing opportunity cost with sunk, differential, or avoidable cost terminology",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The correct answer is A. Opportunity cost is defined in managerial accounting as the benefit forgone when one course of action is selected over the next-best alternative - for example, the rental income Flash gives up if it uses idle warehouse space for extra production rather than leasing it out. Sunk cost (choice B) is a past expenditure that no decision can recover; differential cost (choice C) is the difference in total cost between two alternatives; avoidable cost (choice D) is the portion of cost that disappears if an activity is discontinued. Only opportunity cost captures benefit sacrificed, which is why it belongs in relevant-cost comparisons even though it never appears in the accounting records Amara Diallo's analysts maintain.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B names sunk cost - a past, unrecoverable expenditure such as tooling Flash bought two years ago that no current decision can retrieve. Sunk costs are excluded from decisions entirely; the term the controller defined concerns future benefits given up by the path not chosen, not money already spent.",
+    "ExplanationWrongC": "Choice C, differential cost, is the amount by which total costs differ BETWEEN two alternatives under consideration. It measures a comparison of costs actually incurred under each path, whereas Diallo's definition points to income forfeited from the road not taken - a benefit measure rather than a cost-difference measure.",
+    "ExplanationWrongD": "Choice D, avoidable cost, refers to expenditures that cease if an activity is dropped - a supervisor's salary eliminated when a shift closes, for instance. It is defined by elimination of a cost under one alternative, whereas Diallo's definition points to the income forfeited from an unselected alternative, which is a benefit measure.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-203",
+    "Section": "C",
+    "Stem": "During a training session for newly hired financial analysts, Flash Industries' controller, Amara Diallo, reviews the vocabulary of short-term decision analysis. She asks the group to identify the term for the benefit that is sacrificed when one course of action is chosen over the next-best alternative. Which term is she describing?",
+    "Topic": "C.203 opportunity-cost-definition",
+    "UniqueConceptKey": "C-203-opportunity-cost-definition",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: pure terminology recall at Easy level; distractors are adjacent standard terms with clean distinctions",
+      "Conceptual item - no arithmetic to recompute; definition verified against IMA management accounting concepts",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA on relevant costing (special orders); ICMA CMA Content Specification Outline, Domain C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Increase of $180,000",
+      "B": "Decrease of $30,000",
+      "C": "Decrease of $155,000",
+      "D": "Increase of $155,000"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Loading allocated fixed overhead into a special-order evaluation when idle capacity exists",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is D. With 20,000 units of idle capacity and no displacement of regular sales, the relevant analysis compares incremental revenue with incremental costs only: incremental contribution margin = 15,000 x ($70 - $58) = $180,000; less the one-time $25,000 fixture modification = $155,000 net increase in monthly operating income. The $14 per-unit allocated fixed overhead is irrelevant because it continues whether or not Priya Raman accepts the order - only costs that change with the decision count. For Flash, filling idle mixer capacity at a below-list price still adds $155,000 of profit each month, the classic special-order conclusion under marginal analysis.",
+    "ExplanationWrongA": "Choice A counts the full $180,000 contribution margin but omits the one-time $25,000 fixture modification required to run the cooperative's configuration. Incremental analysis must net ALL costs caused by the decision, so the correct monthly increase is $155,000, not $180,000; the setup is as decision-driven as the variable costs themselves.",
+    "ExplanationWrongB": "Choice B applies the full-cost fallacy: total unit cost of $72 ($58 variable + $14 allocated fixed) exceeds the $70 price, suggesting a $2 x 15,000 = $30,000 monthly loss. The $14 allocation continues regardless of the order; on relevant costs alone each unit contributes $12 and monthly operating income rises.",
+    "ExplanationWrongC": "Choice C performs the netting in reverse, subtracting the $180,000 contribution margin from the $25,000 fixture cost and reporting a $155,000 decrease. The contribution generated by the order vastly exceeds the one-time setup, so acceptance raises monthly operating income; the direction of the comparison has been inverted.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-204",
+    "Section": "C",
+    "Stem": "Flash Industries' appliance division, overseen by controller Priya Raman, has 20,000 units of idle monthly capacity in its mixer plant. A restaurant-supply cooperative offers to buy 15,000 mixers per month at $70 per unit - below the regular $92 wholesale price. Variable cost is $58 per unit (materials $30, direct labor $20, variable overhead $8); allocated fixed overhead is $14 per unit, and accepting the order would require a one-time $25,000 fixture-modification cost. Regular sales would be unaffected. What is the effect on Flash's monthly operating income if the special order is accepted?",
+    "Topic": "C.204 special-order-capacity-analysis",
+    "UniqueConceptKey": "C-204-special-order-capacity-analysis",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: requires separating relevant variable and one-time costs from allocated fixed overhead; standard Apply-level special-order item",
+      "15,000 x (70 - 58) - 25,000 = 180,000 - 25,000 = 155,000 (recomputed twice; full-cost check: 72 > 70 is the tested fallacy)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory - constrained resource decisions; ICMA CMA Content Specification Outline, Domain C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$810,000",
+      "B": "$1,302,000",
+      "C": "$1,314,000",
+      "D": "$1,482,000"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Ranking products by unit CM or demand size instead of CM per bottleneck hour",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is C. When one constraint binds, products are ranked by contribution margin per unit of the scarce resource: X-9 earns $90 / 3.0 = $30 per CNC hour versus Y-4's $56 / 2.0 = $28. X-9 is scheduled first: 9,000 units x 3.0 hours = 27,000 hours, leaving 18,000 hours for Y-4, or 9,000 units (within its 12,000-unit demand). Total contribution margin = 9,000 x $90 + 9,000 x $56 = $810,000 + $504,000 = $1,314,000. Ranking by unit contribution or by demand size instead of contribution per bottleneck hour sacrifices $12,000 relative to the schedule Marcus Webb requested, illustrating how the constraint - not the product label - drives optimal mix.",
+    "ExplanationWrongA": "Choice A reports only X-9's $810,000 contribution and abandons the 18,000 leftover CNC hours entirely. Any positive-contribution use of idle bottleneck hours adds profit, so leaving them unused cannot be maximal; filling them with Y-4 at $28 per hour adds $504,000 and lifts the achievable total to the ranked optimum.",
+    "ExplanationWrongB": "Choice B arises from scheduling all 12,000 units of Y-4 first (24,000 hours), leaving only 21,000 hours for X-9, or 7,000 units: $630,000 + $672,000 = $1,302,000. It places Y-4 ahead although X-9 earns more per bottleneck hour ($30 versus $28), costing the plant $12,000 of annual margin against the ranked optimum.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D sums contribution at full demand for both products ($810,000 + $672,000 = $1,482,000), which would consume 27,000 + 24,000 = 51,000 CNC hours against the 45,000 available. Ignoring the capacity constraint makes the plan infeasible; the figure measures demand-side potential without the resource ceiling Tomas Lindqvist must respect.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-205",
+    "Section": "C",
+    "Stem": "Flash Industries' electronics plant runs two circuit assemblies through a single CNC machining center that is the plant's only bottleneck, with 45,000 machine hours available per year. Product X-9 contributes $90 per unit, requires 3.0 CNC hours per unit, and has firm demand for 9,000 units. Product Y-4 contributes $56 per unit, requires 2.0 CNC hours per unit, and has firm demand for 12,000 units. Operations vice president Marcus Webb asks analyst Tomas Lindqvist to build the production schedule that maximizes total contribution margin. Under the profit-maximizing schedule, what total contribution margin will the plant earn?",
+    "Topic": "C.205 constraint-ranking-total-cm",
+    "UniqueConceptKey": "C-205-constraint-ranking-total-cm",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-step constrained-resource analysis with ranking, demand caps, and hour budgeting at Analyze level",
+      "Rank X-9 ($90/3=$30/hr) first: 9,000x3=27,000 hrs; Y-4=(45,000-27,000)/2=9,000 units; CM=9,000x90+9,000x56=1,314,000 (recomputed twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA on relevant costing (joint products); ICMA CMA Content Specification Outline, Domain C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Increase of $7,000",
+      "B": "Increase of $37,000",
+      "C": "Increase of $77,000",
+      "D": "Decrease of $37,000"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Deducting allocated joint costs, which are sunk at split-off, from the process-further comparison",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is B. The sell-or-process-further rule (DA-08) compares incremental revenue with incremental cost beyond split-off: incremental revenue = $95,000 mulch sales - $40,000 forgone chip sales = $55,000; incremental processing cost = $18,000; net advantage = $37,000 per month, so Grace Osei should recommend pelletizing the chips into mulch. The $30,000 joint-cost allocation charged to the chips is incurred by the main split-off process regardless of the chips' destiny and is therefore sunk at split-off - irrelevant to this choice. For Flash's millwork division, further processing converts a $40,000 revenue stream into a $77,000 stream net of processing, lifting monthly divisional income by $37,000.",
+    "ExplanationWrongA": "Choice A nets the $30,000 joint-cost allocation against the incremental figures ($55,000 - $18,000 - $30,000 = $7,000). Joint costs are already sunk at split-off and must stay out of the comparison; dragging the allocation in understates the true $37,000 monthly advantage and could reverse a profitable decision near breakeven.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C subtracts only the $18,000 processing cost from full mulch revenue ($95,000 - $18,000 = $77,000), ignoring the $40,000 of split-off sales surrendered by processing. Incremental revenue is the difference between the two revenue streams; failing to deduct the forgone $40,000 overstates the gain by exactly that amount.",
+    "ExplanationWrongD": "Choice D reaches the right magnitude, $37,000, but reverses the direction, concluding that further processing reduces income. Because incremental revenue of $55,000 exceeds incremental cost of $18,000, processing adds $37,000 monthly; acting on the inverted sign would strand a clearly profitable use of the byproduct stream.",
+    "FormulaReference": "DA-08",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-206",
+    "Section": "C",
+    "Stem": "Flash Industries' millwork division cuts premium hardwood that yields cabinet panels and a sawdust-and-chip byproduct. Division controller Grace Osei is evaluating the chips. Selling them at split-off brings $40,000 per month. Running them through the pelletizing line instead converts them into landscape mulch selling for $95,000 per month, with additional processing cost of $18,000 per month. The monthly joint-cost allocation charged to the chips is $30,000. By how much would monthly operating income change if the chips are processed further into mulch?",
+    "Topic": "C.206 sell-or-process-further",
+    "UniqueConceptKey": "C-206-sell-or-process-further",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single incremental-revenue-minus-incremental-cost test with a joint-cost trap; straightforward Apply level",
+      "(95,000 - 40,000) - 18,000 = 55,000 - 18,000 = 37,000 (recomputed twice; joint allocation correctly excluded)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA on relevant costing (make-or-buy, opportunity cost); ICMA CMA Content Specification Outline, Domain C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Continue making QR-7, because its $288,000 annual relevant-cost saving versus purchasing stands regardless of how the freed capacity is used",
+      "B": "Purchase QR-7 and rent the freed space to the logistics firm for $300,000 per year",
+      "C": "Purchase QR-7 and hold the freed capacity idle pending a future expansion decision",
+      "D": "Purchase QR-7 and launch the complementary product line, improving annual operating results by $112,000 versus continued in-house production"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Ignoring the opportunity cost of released capacity when comparing make and buy alternatives",
+    "CorrectChoice": "D",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The correct answer is D. Relevant cost to make = 24,000 x $46 + $96,000 supervisor = $1,200,000 (the $264,000 corporate allocation is unavoidable and excluded); cost to buy = 24,000 x $62 = $1,488,000. Buying looks $288,000 worse until the capacity opportunity is priced. Launching the complementary line recovers $400,000, making buy-plus-launch an effective $1,488,000 - $400,000 = $1,088,000 - which beats making ($1,200,000) by $112,000 and beats buying-and-renting ($1,188,000) by $100,000. CFO Elena Vasquez should therefore purchase QR-7 and dedicate the released capacity to the complementary line: the value of the displaced capacity use, not the production quote alone, determines the economically correct course among defensible alternatives.",
+    "ExplanationWrongA": "Choice A freezes the comparison at the $288,000 production-cost gap and never prices the capacity. Once the $400,000 complementary-line contribution - itself superior to the $300,000 rent - is credited to the buy option, purchasing wins by $112,000; ignoring opportunity cost is precisely the make-vs-buy trap this data set exposes.",
+    "ExplanationWrongB": "Choice B correctly recognizes that buying frees the space but monetizes it at the lesser of the two available uses. Renting nets $1,188,000 effective cost versus $1,088,000 for the launch, leaving $100,000 of annual contribution unclaimed; the recommendation is directionally sound yet economically second-best for Vasquez's committee.",
+    "ExplanationWrongC": "Choice C pays the full $1,488,000 purchase price while earning nothing from the vacated capacity - the weakest of the four courses of action. Holding the space idle forfeits both the $300,000 rent and the $400,000 line contribution that would more than justify the outsourcing move under evaluation.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-207",
+    "Section": "C",
+    "Stem": "Flash Industries manufactures 24,000 units of component QR-7 annually. Making QR-7 costs $46 of variable cost per unit plus a $96,000 supervisory salary that would be eliminated if production stopped; $264,000 of allocated corporate overhead continues under either alternative. An outside supplier quotes $62 per unit. If Flash stops making QR-7, the freed capacity could launch a complementary product line contributing $400,000 of annual segment contribution margin, or the space could be rented to a logistics firm for $300,000 per year; production occupies the space, so these uses are possible only if in-house manufacture ends. CFO Elena Vasquez must recommend a course of action. Which recommendation is best supported by the analysis?",
+    "Topic": "C.207 make-vs-buy-opportunity-cost",
+    "UniqueConceptKey": "C-207-make-vs-buy-opportunity-cost",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: layers opportunity cost over a differential-cost core and ranks three mutually exclusive capacity uses at Evaluate level with named decision-maker",
+      "Make=24,000x46+96,000=1,200,000; Buy+line=1,488,000-400,000=1,088,000; Buy+rent=1,188,000; advantage vs make=1,200,000-1,088,000=112,000 (recomputed twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting pricing theory (target costing); ICMA CMA Content Specification Outline, Domain C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$144.30",
+      "B": "$152.40",
+      "C": "$151.64",
+      "D": "$138.84"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Applying the required margin to cost instead of subtracting it from the market-based target price",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is A. Target costing is market-driven: allowable cost is derived by subtracting the required profit from the price the market will bear, not by marking up engineered cost. Allowable cost = $185 x (1 - 0.22) = $185 x 0.78 = $144.30. Flash's current estimate of $152.40 therefore reveals a cost gap of $8.10 per unit that Yusuf Haddad's team must close through value engineering before launch. The competitor's $178 price is useful context, but the allowable cost anchors to Flash's own target price and required return on sales - the defining discipline that separates target costing from traditional cost-plus methods and keeps the design budget honest from day one.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B restates the current engineering estimate of $152.40 as if it were the allowable cost. Target costing reverses that logic - cost is the dependent variable derived from price minus required profit - so anchoring on today's estimate skips the $8.10 value-engineering gap the method exists to expose before tooling commitments lock it in.",
+    "ExplanationWrongC": "Choice C divides the target price by 1.22 ($185 / 1.22 = $151.64), treating the 22% return on SALES as a 22% markup on cost. Return on sales applies to price ($185 x 0.78); the markup-on-cost construction answers a different question and lands $7.34 above the true allowable cost, understating the design challenge Haddad faces.",
+    "ExplanationWrongD": "Choice D applies the 78% cost ratio to the competitor's $178 shelf price ($178 x 0.78 = $138.84) instead of Flash's own $185 target price. Market research set the achievable price at $185; benchmarking the allowable cost to a rival's sticker understates it by $5.46 and imposes an artificially tight - and wrong - design target.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-208",
+    "Section": "C",
+    "Stem": "Flash Industries plans a connected smart thermostat for which market research supports a target selling price of $185. Product-line finance director Yusuf Haddad requires a 22% return on sales at that target price. Flash's current engineering estimate to build the thermostat is $152.40 per unit, and the nearest competitor's unit retails at $178. Under target costing, what is the maximum allowable unit cost to which Flash's design team should commit?",
+    "Topic": "C.208 target-cost-allowable",
+    "UniqueConceptKey": "C-208-target-cost-allowable",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: market-based derivation with three realistic computational traps; Apply level within pricing LOS",
+      "185 x (1 - 0.22) = 185 x 0.78 = 144.30; gap = 152.40 - 144.30 = 8.10 (recomputed twice; cross-check 185/1.22 = 151.64 distractor)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory - product mix under capacity constraints; ICMA CMA Content Specification Outline, Domain C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "1,200 units",
+      "B": "4,200 units",
+      "C": "3,000 units",
+      "D": "6,000 units"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Scheduling the highest unit-CM product first rather than the highest CM per constraint hour",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is A. Despite SI-3's larger unit contribution, the binding constraint decides priority: BP-9 earns $80 / 2.0 = $40 per assembly hour versus SI-3's $150 / 5.0 = $30. BP-9 is scheduled first: 12,000 units x 2.0 hours = 24,000 hours, leaving 6,000 hours for the inverter line: 6,000 / 5.0 = 1,200 units of SI-3, well within its 4,200-unit demand. The resulting plan earns $960,000 + $180,000 = $1,140,000 of total contribution margin. Ingrid Solberg's counterintuitive conclusion - build the cheaper battery pack first - is the analytical heart of constrained-resource decisions: ranking by unit contribution or instinct strands high-yield bottleneck hours and forfeits measurable profit.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B fills SI-3's entire 4,200-unit demand first because its $150 unit contribution looks dominant. That schedule spends 21,000 hours at only $30 of contribution per hour and leaves just 9,000 hours for BP-9 (4,500 units); it ranks by unit CM rather than CM per constraint hour, the central error in mix decisions.",
+    "ExplanationWrongC": "Choice C splits the line's hours evenly between products (15,000 each), yielding 3,000 SI-3 units alongside 7,500 BP-9. Equal time-sharing has no economic basis when contributions per hour differ ($30 versus $40); it diverts 3,000 hours away from the pack line's $10-per-hour advantage and lowers total contribution accordingly.",
+    "ExplanationWrongD": "Choice D converts the 6,000 residual assembly hours directly into 6,000 SI-3 units, forgetting each inverter absorbs 5.0 hours. Only 6,000 / 5.0 = 1,200 units fit the leftover window; treating scarce constraint hours as if they were output units is a mechanical slip that would overload the automated line five-fold.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-209",
+    "Section": "C",
+    "Stem": "Flash Industries' energy-products plant assembles two SKUs on one automated line limited to 30,000 hours per year. Battery pack BP-9 contributes $80 per unit, needs 2.0 assembly hours per unit, and has confirmed demand for 12,000 units. Solar inverter SI-3 contributes $150 per unit, needs 5.0 assembly hours per unit, and has confirmed demand for 4,200 units. Plant controller Ingrid Solberg must set the production plan that maximizes total contribution margin. How many units of SI-3 should Solberg's optimal plan include?",
+    "Topic": "C.209 optimal-mix-units",
+    "UniqueConceptKey": "C-209-optimal-mix-units",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: counterintuitive ranking (lower unit-CM product first) plus hour-budget arithmetic; Analyze floor met at score 4",
+      "BP-9 first (80/2=$40/hr > 150/5=$30/hr): 12,000x2=24,000 hrs; SI-3=(30,000-24,000)/5=1,200 units; total CM=960,000+180,000=1,140,000 (recomputed twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory; CVP analysis (per ICMA CMA Content Specification Outline, Domain C)"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "38.89%",
+      "B": "72.00%",
+      "C": "28.00%",
+      "D": "88.48%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Dividing the safety margin by breakeven sales instead of actual sales",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is C. Margin of safety (DA-04) = (actual sales - breakeven sales) / actual sales. Breakeven sales = fixed costs / CM ratio = $1,800,000 / 0.40 = $4,500,000. Safety margin = ($6,250,000 - $4,500,000) / $6,250,000 = $1,750,000 / $6,250,000 = 28.00%. Leo Tanaka can tell the board that power-tools revenue could decline 28% before the segment reaches breakeven - the standard CVP risk gauge, directly usable for downside planning in the annual operating review and consistent with the segment's $700,000 budgeted operating income ($2,500,000 CM less $1,800,000 fixed).",
+    "ExplanationWrongA": "Choice A divides the $1,750,000 safety margin by breakeven sales of $4,500,000, producing about 38.89%. The denominator must be ACTUAL sales; expressing the cushion against the breakeven level inflates it and answers how far above breakeven the dollars stretch, not how far sales can fall before losses begin.",
+    "ExplanationWrongB": "Choice B inverts the ratio, reporting breakeven sales over actual sales ($4,500,000 / $6,250,000 = 72.00%). That figure measures how much of each revenue dollar is consumed reaching breakeven coverage, not the cushion; the margin of safety gauges the decline absorbed before losses start, measured against actual sales.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D compounds an upstream formula error: breakeven computed as $1,800,000 x 0.40 = $720,000 (multiplying by the CM ratio instead of dividing), then reported as ($6,250,000 - $720,000) / $6,250,000 = 88.48%. The phantom-low breakeven manufactures a cushion nearly two-thirds larger than reality and would mislead the board's risk discussion.",
+    "FormulaReference": "DA-04",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-210",
+    "Section": "C",
+    "Stem": "Flash Industries' power-tools segment reports annual sales of $6,250,000, fixed costs of $1,800,000, and a contribution margin ratio of 40%. Segment finance manager Leo Tanaka is preparing the board deck and needs the margin-of-safety percentage - the percentage decline in sales the segment could absorb before turning loss-making. What margin-of-safety percentage should Tanaka report?",
+    "Topic": "C.210 margin-of-safety-percent",
+    "UniqueConceptKey": "C-210-margin-of-safety-percent",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two-step CVP computation (breakeven then ratio) with denominator traps; standard Apply level",
+      "BE=1,800,000/0.40=4,500,000; MOS=(6,250,000-4,500,000)/6,250,000=1,750,000/6,250,000=28.00% (recomputed twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Decision theory (Raiffa, 1968); ICMA CMA Content Specification Outline, Domain C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Flash will earn $420,000 if the most likely outcome occurs",
+      "B": "$420,000 is the probability-weighted average result Flash would approximate over many repetitions of comparable decisions",
+      "C": "Because the probabilities sum to 1.0, the $420,000 outcome is assured",
+      "D": "$420,000 is the maximum loss exposure Flash should reserve against"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Reading expected value as a guaranteed, most-likely, or worst-case single outcome",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is B. Expected value (the DA-10 concept applied qualitatively) is the probability-weighted average of all outcomes: EV = sum of P_i x Outcome_i. It is a long-run averaging construct - across many statistically similar decisions, realized results converge toward the weighted mean - and carries no promise about any single occurrence. Naomi Feldman should stress that Flash will experience exactly one discrete outcome between the $1.1 million gain and the $250,000 loss; the $420,000 figure is the decision-weighting benchmark that made expansion attractive on average. Interpreting expected value as guaranteed, most-likely, or worst-case corrupts both project selection and the later evaluation of performance against the projection.",
+    "ExplanationWrongA": "Choice A conflates expected value with the MODE, the single most probable state. The most likely outcome carries its own dollar result, generally unequal to the probability blend; presenting $420,000 as the likely realization overstates precision and misleads the capital committee about the dispersion Feldman's model actually contains.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C infers certainty from the fact that probabilities total 1.0. Probabilities summing to one merely completes the distribution - it confirms every scenario is represented, not that the average occurs. Expected value remains an expectation across mutually exclusive futures, exactly one of which will actually materialize for the warehouse project.",
+    "ExplanationWrongD": "Choice D mistakes the expected value for a downside risk measure such as value at risk. Reserving against adverse outcomes would reference the $250,000 loss endpoint plus tail exposure, not the weighted mean; using $420,000 as a loss reserve understates downside exposure and confuses a selection criterion with a risk limit.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-211",
+    "Section": "C",
+    "Stem": "Treasurer Naomi Feldman presents a regional warehouse-expansion proposal to Flash Industries' capital committee with an expected value of $420,000, computed from probability-weighted outcomes ranging from a $1.1 million gain to a $250,000 loss. A committee member asks what the $420,000 figure actually represents. Which interpretation should Feldman give?",
+    "Topic": "C.211 expected-value-interpretation",
+    "UniqueConceptKey": "C-211-expected-value-interpretation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: conceptual discrimination among four interpretations of EV; Understand level capped at score 2",
+      "Conceptual item - no arithmetic to recompute; interpretation consistent with DA-10 expected-value theory",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "COSO ERM 2017 - Risk Response component",
+      "AICPA Trust Services Criteria (SOC 2)",
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Defer signing and condition any future contract on Meridian completing an independent SOC 2 Type II examination with remediated findings, accepting one year of forgone savings",
+      "B": "Sign immediately to capture the $240,000 annual saving; contractual liability shifting makes the vendor's breach history financially manageable",
+      "C": "Reject outsourcing outright and retain payroll in-house, treating the vendor's breach record as disqualifying irrespective of audit evidence",
+      "D": "Postpone the decision to the next budget cycle so the transition does not disrupt year-end payroll processing"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Letting a measurable cost saving override unresolved vendor security and control risk",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The correct answer is A. This is a risk-response decision under COSO ERM 2017: a quantified benefit ($240,000 annually) confronts a documented, elevated threat (two breaches of client payroll data at Meridian in 18 months) touching data Flash policy classifies as high-sensitivity. The defensible response mitigates rather than accepts or ignores: conditioning any award on an independent SOC 2 Type II examination with remediated findings directly tests whether Meridian's control failures persist, while deferral prices the caution at one year of savings - a modest, known cost against an open-ended breach exposure. Dana Kimura's obligation under the IMA Statement of Ethical Professional Practice to safeguard confidential information favors verifying controls before transferring custody of employee data; signing now accepts the risk on contractual fiction, blanket rejection ignores verifiable remediation, and mere postponement addresses scheduling rather than control adequacy.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B converts an unremediated control history into an accepted risk based on indemnification language alone. Liability shifting does not prevent harm to employees, regulatory scrutiny, or reputational damage, and a signing discount does not cure deficient safeguards; the option prioritizes the measurable saving over unresolved exposure Camargo documented.",
+    "ExplanationWrongC": "Choice C imposes a permanent prohibition from a snapshot of past performance, ignoring that independent audits exist precisely to verify remediation. Refusing even to consider evidence-backed improvement forfeits $240,000 of recurring value without demonstrating current risk; categorical rejection is as evidentially unjustified as unconditional acceptance.",
+    "ExplanationWrongD": "Choice D defers timing for administrative convenience while leaving the decisive question - the present state of Meridian's controls - unanswered. Delay neither reduces breach likelihood nor preserves optionality beyond what choice A's audit requirement achieves, and it surrenders a year of savings with no corresponding mitigation obtained.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-212",
+    "Section": "C",
+    "Stem": "Flash Industries is weighing full outsourcing of payroll administration to Meridian Business Services, which bids annual net savings of $240,000 after transition costs. During diligence, IT risk officer Beatriz Camargo documents two data breaches at Meridian within the past 18 months involving client payroll records, alongside Flash's policy classifying employee personal data as high-sensitivity. Meridian asserts its contracts shift breach liability to clients and offers a discount if Flash signs this quarter. CFO Dana Kimura must recommend a course of action. Which recommendation is best supported by the combined financial and control evidence?",
+    "Topic": "C.212 outsourcing-risk-governance",
+    "UniqueConceptKey": "C-212-outsourcing-risk-governance",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: integrates quantified benefit with documented control risk across four defensible responses at executive-judgment Evaluate level (score 5)",
+      "Conceptual/judgment item - financial figures contextual only; response framework verified against COSO ERM 2017 risk-response taxonomy",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory; CVP cost-structure analysis (per ICMA CMA Content Specification Outline, Domain C)"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "3,808 units",
+      "B": "14,808 units",
+      "C": "2,829 units",
+      "D": "11,000 units"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Using the old or new CM alone instead of the CM difference over the fixed-cost difference",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is D. The indifference volume equates the two profit functions: current contribution margin = $340 - $210 = $130 per unit; automated CM = $340 - $165 = $175. Setting 130Q - 1,430,000 = 175Q - 1,925,000 gives 45Q = 495,000, so Q = 11,000 units - equivalently, added fixed cost of $495,000 divided by the $45 per-unit CM improvement. Below 11,000 units the labor-intensive structure earns more; above it, Ravi Chandran's automation dominates, and Karen Whitfield's division is exactly indifferent at 11,000. Consistency check: both structures break even at the same 11,000 units ($1,430,000/$130 and $1,925,000/$175), confirming the crossover algebra from two independent directions.",
+    "ExplanationWrongA": "Choice A divides the added fixed cost by the CURRENT contribution margin ($495,000 / $130 = about 3,808 units). The crossover must be driven by the CHANGE in contribution margin ($175 - $130 = $45), because automation recovers its extra fixed cost solely through the per-unit savings it creates over the old process.",
+    "ExplanationWrongB": "Choice B divides total proposed fixed cost by the OLD margin ($1,925,000 / $130 = about 14,808 units), pairing the automated cost base with the manual contribution rate. Each structure must be matched with its own CM; cross-pairing produces a meaningless hybrid breakeven far to the right of the true crossover volume.",
+    "ExplanationWrongC": "Choice C divides the added fixed cost by the NEW contribution margin ($495,000 / $175 = about 2,829 units), effectively asking how many units the increment alone must sell at the automated rate. The increment competes against the margin it REPLACES ($130), so the operative denominator is the $45 difference, not $175.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-213",
+    "Section": "C",
+    "Stem": "Flash Industries' fitness-equipment division welds frames on a semi-automated line: selling price $340 per unit, variable cost $210 per unit, annual fixed costs $1,430,000. Process engineer Ravi Chandran proposes automating the weld cell; the change adds $495,000 of annualized fixed cost and cuts variable cost to $165 per unit, with selling price unchanged. Division controller Karen Whitfield asks at what annual volume the two cost structures would produce identical operating income. At what annual unit volume are Flash's profits the same under either process?",
+    "Topic": "C.213 cost-structure-indifference",
+    "UniqueConceptKey": "C-213-cost-structure-indifference",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: equating two profit functions (crossover analysis) with paired CM/FC structures; Analyze floor met at score 3",
+      "(175-130)Q=495,000; Q=495,000/45=11,000; cross-check BE: 1,430,000/130=11,000 and 1,925,000/175=11,000 (recomputed twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA on relevant costing (make-or-buy); ICMA CMA Content Specification Outline, Domain C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$540,000",
+      "B": "$120,000",
+      "C": "$420,000",
+      "D": "Negative $120,000, meaning in-house production would add $120,000 of annual cost"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Quoting total purchase or total variable cost instead of the per-unit differential times volume",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The correct answer is B. Relevant costing compares the two future cost streams: buying costs 30,000 x $18 = $540,000 per year; making costs 30,000 x $14 = $420,000 of variable cost, with total fixed costs unchanged and therefore irrelevant to the choice. Switching saves ($18 - $14) x 30,000 = $120,000 per year using equipment that sits idle today. The decision-grade number is the DIFFERENTIAL cost, neither total; Mei-Lin Chu should report the $120,000 annual saving as the quantifiable benefit of bringing housing production in-house, noting the assumption that idle capacity absorbs the work without displacing other output or adding any incremental fixed cost.",
+    "ExplanationWrongA": "Choice A reports the entire purchase bill, $540,000, as the saving. That is the spending Flash avoids in TOTAL, but in-house production still consumes $420,000; quoting the gross figure inflates the benefit by the full make cost and would materially misstate the switch's economics to Ortega's division management.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C reports the in-house variable total, $420,000, as the saving - the mirror image of the gross-figure error. Savings equal the difference between what stops being spent ($540,000) and what begins being spent ($420,000); presenting the new spending itself as the benefit reverses the meaning of the comparison Chu was asked to prepare.",
+    "ExplanationWrongD": "Choice D flips the direction, claiming in-house production ADDS $120,000 of annual cost. The differential runs in favor of making ($14 versus $18 per unit); asserting the opposite sign would lead Luis Ortega and Mei-Lin Chu to reject a straightforward $120,000 annual improvement supported by idle equipment already on hand.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-214",
+    "Section": "C",
+    "Stem": "Flash Industries' signage division currently purchases 30,000 housing assemblies per year from Cascade Components at $18 each. Fabrication manager Luis Ortega determines Flash can make the housing in-house at a variable cost of $14 per unit using existing idle equipment, with no change in total fixed costs. Division accountant Mei-Lin Chu is asked to quantify the annual benefit of switching to in-house production. What annual cost saving should Chu report?",
+    "Topic": "C.214 housing-make-saving",
+    "UniqueConceptKey": "C-214-housing-make-saving",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single differential computation at Easy level; distractors test gross-figure and sign errors",
+      "Save=(18-14)x30,000=120,000; totals: buy 540,000 vs make 420,000 (recomputed twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting pricing theory (ROI-based full-cost pricing); ICMA CMA Content Specification Outline, Domain C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$400.00",
+      "B": "$365.80",
+      "C": "$450.00",
+      "D": "$424.80"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Confusing an ROI-per-unit target with a markup percentage applied to cost",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is C. Return-on-investment pricing builds the required profit into unit cost: desired annual operating income = $8,000,000 x 18% = $1,440,000, which is $1,440,000 / 16,000 = $90 per unit at planned volume. Price = manufacturing cost + S&A per unit + required ROI per unit = $310 + $50 + $90 = $450.00. Selling V-220 at $450 returns exactly the 18% target on invested capital across the 16,000-unit plan. Sofia Marchetti must keep the investment anchor distinct from a conventional markup-on-cost percentage - the asset base supporting the valve line, not spend alone, defines the required $90 per-unit profit, which is why percentage shortcuts systematically misprice capital-supported products.",
+    "ExplanationWrongA": "Choice A adds manufacturing cost and the $90 ROI component but omits the $50 per-unit selling and administrative expense. Recovering S&A is necessary for the division to realize targeted income; dropping it prices V-220 at $400 and forfeits $800,000 of required expense coverage across the 16,000-unit volume plan.",
+    "ExplanationWrongB": "Choice B applies 18% as a markup on manufacturing cost ($310 x 1.18 = $365.80). That confuses an ROI target - anchored to the $8 million asset base and converted to $90 per unit - with a cost-markup percentage, and it also neglects S&A expense; the resulting price captures barely half the required profit Marchetti needs.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D marks up total unit cost including S&A by 18% (($310 + $50) x 1.18 = $424.80). Percent-marking-up all costs still ignores the invested-capital anchor: required profit is $90 per unit here, not 18% of spend, and the shortcut lands $25.20 below the price that satisfies the return objective on the $8 million base.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-215",
+    "Section": "C",
+    "Stem": "Flash Industries' industrial-valve division prices flagship model V-220 using full cost plus a return-on-investment markup. Budgeted figures: manufacturing cost $310 per unit, selling and administrative expenses $50 per unit, invested capital $8,000,000, target return 18%, planned volume 16,000 units per year. Division pricing manager Sofia Marchetti must set V-220's unit price for the coming year. What price should Marchetti establish?",
+    "Topic": "C.215 cost-plus-roi-pricing",
+    "UniqueConceptKey": "C-215-cost-plus-roi-pricing",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-component ROI pricing (investment conversion to per-unit profit plus full-cost stacking); upper-Apply item scored Difficult",
+      "Profit=8,000,000x0.18=1,440,000; per unit=1,440,000/16,000=90; price=310+50+90=450.00 (recomputed twice; cross-checks 310x1.18=365.80, 360x1.18=424.80)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA Statements on Management Accounting (relevant costing)",
+      "Managerial accounting theory"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Drop Vega: the $480,000 traceable charge exceeds the $310,000 pre-allocation margin, so continuing the line destroys $170,000 of value each quarter.",
+      "B": "Retain Vega but demand a revenue-based allocation base, since square footage understates the corporate resources the valve line actually consumes.",
+      "C": "The $480,000 occupancy charge survives either choice, so it cannot be saved by dropping Vega; the decision rests on Vega's $2,100,000 of revenue against its $1,790,000 of avoidable cost.",
+      "D": "Freeze the decision until the consolidation-study allocation is recalculated on current headcount, because stale bases invalidate every segment margin at Flash."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Importing allocations built for one study into another decision as if avoidable",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Under relevant-costing doctrine, only future cash flows that differ between alternatives enter a keep-or-drop decision. Omar verified that the $480,000 headquarters occupancy charge persists in full whether Vega continues or ends - it is a common cost created for a different study, not an avoidable outflow. Dropping Vega therefore saves at most the $1,790,000 of avoidable cost while surrendering $2,100,000 of revenue: the line truly contributes $310,000 before any allocation. Netting that contribution against a non-avoidable allocation manufactured the illusory $170,000 loss. Flash should retain Vega; the occupancy figure belongs to the facility-consolidation analysis, not to this product-line decision.",
+    "ExplanationWrongA": "Reads the $480,000 allocation as cash that leaves Flash only if Vega survives; the charge is a bookkeeping construct imported from the consolidation study, and Omar confirmed the headquarters footprint and its occupancy bill continue intact after a drop, so nothing is avoided by exiting.",
+    "ExplanationWrongB": "Attacks the fairness of the square-footage base rather than the decision logic; refining an allocation base can rebalance reported margins across segments, but no reallocation can convert a common cost that persists under both alternatives into a saving from dropping Vega.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Delays the decision pending a methodology refresh; even a perfect reallocation of the same unavoidable headquarters occupancy would leave unchanged what Flash saves by dropping Vega, which is the only question a keep-or-drop analysis answers.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-216",
+    "Section": "C",
+    "Stem": "Flash Industries reviews its Vega industrial-valve line at quarter close. Senior analyst Omar Haddad compiles the record: Vega revenues of $2,100,000, avoidable direct costs of $1,790,000, and a $480,000 charge for corporate headquarters occupancy that originated in last year's facility-consolidation study on a square-footage base. Haddad verifies that Flash retains the identical headquarters footprint - and the identical occupancy bill - whether or not Vega continues. A colleague recommends dropping Vega because the line reports a $170,000 loss after the allocation. Which assessment should guide the keep-or-drop decision?",
+    "Topic": "C.216 cross-decision-cost-contamination",
+    "UniqueConceptKey": "C-216-cross-decision-cost-contamination",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Analyze requires separating allocation artifacts from avoidable costs across two decision contexts (score 4)",
+      "Conceptual item - relevance logic verified against LOS C.4; no arithmetic dependency beyond stated sums",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory; multi-product CVP analysis"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "45,000 units",
+      "B": "39,169 units",
+      "C": "66,000 units",
+      "D": "26,400 units"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using simple-average CM or one product's CM instead of the weighted-average CM",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Multi-product breakeven uses the weighted-average contribution margin: WACM = 0.50($18) + 0.30($28) + 0.20($45) = $9.00 + $8.40 + $9.00 = $26.40 per blended unit. Breakeven units = $1,188,000 / $26.40 = 45,000 total units (27,000 Flex, 13,500 Mid, 9,000 Max at the 50/30/20 mix). The stable mix lets Marta treat the three models as one composite unit earning $26.40; below 45,000 blended units contribution falls short of fixed cost, above it operating income emerges. Dividing by the unweighted $30.33 mean or by any single model's CM ignores the proportions in which the plant actually sells.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Arrives at 39,169 units by dividing $1,188,000 by the simple average CM of $30.33 ((18+28+45)/3), treating all three models as equally important; the plant's mix runs 50/30/20, so the weighted-average CM of $26.40 - not the unweighted mean - drives breakeven.",
+    "ExplanationWrongC": "Gets 66,000 units by dividing fixed costs by Flex's standalone $18 CM; breakeven for a multi-model plant depends on the blend actually sold, and anchoring on the lowest-CM model ignores the Mid and Max units that lift the blended margin to $26.40.",
+    "ExplanationWrongD": "Produces 26,400 units by dividing by Max's $45 CM alone, overstating the blended margin; Max is only 20 percent of volume, so pricing the whole mix at the richest model's margin understates the units Flash must sell across all three conveyors.",
+    "FormulaReference": "DA-06",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-217",
+    "Section": "C",
+    "Stem": "Flash's Apex assembly plant builds three conveyor models in a stable unit mix: Flex 50 percent (CM $18/unit), Mid 30 percent (CM $28/unit), and Max 20 percent (CM $45/unit). Annual fixed costs total $1,188,000. FP&A manager Marta Reyes needs the plantwide breakeven point in units for next year's operating plan. How many total units must Flash sell across all three models combined to break even?",
+    "Topic": "C.217 multiproduct-breakeven-wacm",
+    "UniqueConceptKey": "C-217-multiproduct-breakeven-wacm",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-formula WACM application with clean mix weights (score 3)",
+      "Recomputation: WACM = 0.50x18 + 0.30x28 + 0.20x45 = 26.40; BE = 1,188,000 / 26.40 = 45,000 units",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Decision theory (Raiffa, 1968)"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Maximin",
+      "B": "Minimax regret",
+      "C": "Expected monetary value",
+      "D": "Maximax"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Confusing maximax with maximin or regret criteria under uncertainty",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The worksheet's two-step pattern - isolate each alternative's single best payoff across demand states, then keep the alternative holding the highest of those maxima - is the maximax criterion, the optimistic extreme of decision-making under uncertainty (Raiffa, 1968). It gives weight to the most favorable state and none to the others. Maximin would rank alternatives by their worst payoffs instead, minimax regret would operate on a transformed opportunity-loss matrix, and expected monetary value would probability-weight every state before ranking. Recognizing which criterion a completed worksheet embodies is the comprehension skill Part 2 tests before candidates run the numbers themselves.",
+    "ExplanationWrongA": "Maximin is the pessimistic twin of the method described: it tags each alternative's worst payoff and selects the best of those floors, whereas Alan's worksheet compared each alternative's single best payoff across states and picked the top one.",
+    "ExplanationWrongB": "Minimax regret works on a transformed opportunity-loss matrix and minimizes each alternative's largest regret; the worksheet never built regret measures and ranked raw dollar payoffs, so the description cannot match this criterion.",
+    "ExplanationWrongC": "Expected monetary value probability-weights every state before ranking alternatives; the worksheet ignored probabilities altogether and screened on single best-case outcomes, which is the signature of maximax rather than EMV.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-218",
+    "Section": "C",
+    "Stem": "During Flash's annual planning retreat, planning director Alan Frey walks the leadership team through last cycle's expansion worksheet: for each site alternative the team located the single best payoff across the low/base/high demand states, then selected the alternative that owned the highest of those best-case figures. Which decision criterion under uncertainty did the worksheet apply?",
+    "Topic": "C.218 decision-criterion-maximax",
+    "UniqueConceptKey": "C-218-decision-criterion-maximax",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: criterion recognition at comprehension depth only (score 2)",
+      "Conceptual item - definition verified against LOS C.6 uncertainty-criteria canon",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Decision theory (Raiffa, 1968)",
+      "Value-of-information analysis"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Decline the study and license immediately, because licensing pays more than launching in both demand states, so no forecast could change the ranking.",
+      "B": "Commission the study: perfect demand information is worth $350,000 in expectation - the gap between the $787,500 perfect-information EV and the $437,500 license-now EV - comfortably above the $120,000 fee, and the signal would trigger a launch only in strong-demand states.",
+      "C": "Decline the study and launch outright, because the strong-state payoff of $1,600,000 dwarfs the fee while licensing caps the upside at $600,000.",
+      "D": "Commission the study only if the fee drops below $105,000, since research costing more than the launch's expected value can rarely repay itself."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Comparing the study fee to the wrong baseline instead of EVPI",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Worked chain: EV(launch) = 0.35($1,600,000) + 0.65(-$700,000) = $560,000 - $455,000 = $105,000. EV(license) = 0.35($600,000) + 0.65($350,000) = $210,000 + $227,500 = $437,500, so absent new information Flash licenses. EV with perfect information = 0.35(best-if-strong: $1,600,000) + 0.65(best-if-weak: $350,000) = $560,000 + $227,500 = $787,500. EVPI = $787,500 - $437,500 = $350,000. Because the information ceiling far exceeds the $120,000 fee, Dana should commission the study: perfect news switches the strong-state choice to launch ($1,600,000 beats $600,000) and holds license in the weak state. The dominance argument in choice A fails precisely because the forecast can flip the strong-state ranking.",
+    "ExplanationWrongA": "Claims no forecast can matter because licensing wins in both states; under strong demand the launch pays $1,600,000 against licensing's $600,000, so a reliable signal flips that choice and creates exactly the $350,000 expected-value gap this argument denies exists.",
+    "ExplanationWrongC": "Anchors on the $1,600,000 strong-state prize and dismisses the fee without probabilities; weighted properly, launching yields just $105,000 against licensing's $437,500, and the fee must be judged against the $350,000 EVPI, not against either branch's headline number.",
+    "ExplanationWrongD": "Benchmarks the fee against the launch's $105,000 standalone EV, the wrong baseline twice over; value of information equals the gap between acting with perfect knowledge ($787,500) and the best immediate alternative ($437,500), a $350,000 ceiling the current fee clears easily.",
+    "ExplanationWrongB": "",
+    "FormulaReference": "DA-11",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-219",
+    "Section": "C",
+    "Stem": "Flash must commit to Project Meridian this month. CFO Dana Whitfield frames the choices: launch now and earn $1,600,000 of operating income if demand proves strong (probability 0.35) but lose $700,000 if demand is weak (0.65); alternatively, license the technology to a partner for payoffs of $600,000 (strong) and $350,000 (weak). A research firm offers a study that would reveal demand with certainty before commitment, for a $120,000 fee. Which action should Whitfield take, and why?",
+    "Topic": "C.219 evpi-market-study-decision",
+    "UniqueConceptKey": "C-219-evpi-market-study-decision",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-step EVPI chain with counterfactual policy switch and fee benchmark judged by named CFO (score 5)",
+      "Recomputation: EV launch = 105,000; EV license = 437,500; EVwPI = 787,500; EVPI = 787,500 - 437,500 = 350,000 > 120,000 fee",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA on relevant costing",
+      "Joint-product decision theory"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Sell Kappa at split-off and process Lambda further: monthly income rises $17,000 versus selling both products at split-off.",
+      "B": "Process both products further: monthly income rises $5,000 versus selling both at split-off.",
+      "C": "Sell both at split-off: Lambda's $17,000 incremental gain cannot cover its $75,000 allocated share of the $195,000 joint cost.",
+      "D": "Process Kappa further and sell Lambda at split-off: Kappa's processed revenue of $152,000 is the larger prize and outweighs Lambda's step."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Netting incremental gains against allocated joint costs, which are sunk at split-off",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Sell-or-process-further doctrine compares incremental revenue with incremental cost past split-off; the $195,000 joint cost ($120,000/$75,000 allocation) is incurred under every plan and is sunk. Kappa: ($19 - $14) x 8,000 gal = $40,000 incremental revenue versus $52,000 added cost = -$12,000, so sell Kappa at split-off. Lambda: ($31 - $22) x 5,000 gal = $45,000 versus $28,000 = +$17,000, so process Lambda. Optimal plan versus the both-at-split-off baseline raises monthly income $17,000. Processing both nets only +$5,000 because Kappa's step destroys $12,000; charging Lambda's gain against its $75,000 allocation resurrects a sunk cost that cannot influence the choice.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongC": "Tests Lambda's $17,000 incremental gain against its $75,000 slice of the joint cost; that cost is sunk at split-off and recurs under both plans, so burdening Lambda with it wrongly cancels a processing step that adds $17,000 of real monthly income.",
+    "ExplanationWrongD": "Champions Kappa's $152,000 processed revenue while ignoring its $52,000 added cost; the increment is $40,000 against $52,000, a $12,000 income reduction, whereas Lambda's step earns $17,000 - the reverse of the plan this option proposes.",
+    "ExplanationWrongB": "Sums the increments correctly (+$17,000 Lambda less $12,000 Kappa = +$5,000) but stops at the dominated plan; cancelling Kappa's further processing captures the full $17,000, which is why mixed plans trail selling Kappa at split-off.",
+    "FormulaReference": "DA-08",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-220",
+    "Section": "C",
+    "Stem": "Flash's specialty-chemicals division splits a common feedstock into joint products Kappa and Lambda, incurring $195,000 of monthly joint processing cost (allocated $120,000 to Kappa and $75,000 to Lambda on gallonage). Plant controller Luis Ferrer evaluates month-end options. Kappa: sell 8,000 gallons at split-off for $14 per gallon ($112,000), or process further into premium grade selling for $19 per gallon with added processing cost of $52,000. Lambda: sell 5,000 gallons at split-off for $22 per gallon ($110,000), or process further to sell at $31 per gallon with added processing cost of $28,000. Relative to selling both products at split-off, which plan maximizes monthly income, and by how much?",
+    "Topic": "C.220 sell-or-process-joint-products",
+    "UniqueConceptKey": "C-220-sell-or-process-joint-products",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two-product incremental screen requiring joint-cost irrelevance insight (score 3)",
+      "Recomputation: Kappa 40,000 - 52,000 = -12,000 -> sell; Lambda 45,000 - 28,000 = +17,000 -> process; net vs split-off baseline = +17,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory (cost behavior classification)"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Committed fixed costs",
+      "B": "Engineered variable costs",
+      "C": "Discretionary fixed costs",
+      "D": "Mixed (semi-variable) costs"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Calling cancellable annual programs 'committed' costs",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Fixed costs divide by management's latitude. Committed fixed costs - depreciation on installed capacity, multi-year lease obligations - bind across horizons longer than one budget cycle. Discretionary (managed) fixed costs, such as advertising campaigns, training programs, and internship stipends, are set at an annual amount the management committee may resize or cancel without impairing physical capacity. Jenna's examples are textbook discretionary spending: no volume driver ties them to production, and their yearly level reflects policy choice, not engineering or contractual lock-in. The distinction matters practically because discretionary lines are where short-run savings are found first.",
+    "ExplanationWrongA": "Committed fixed costs - depreciation on installed molding capacity, multi-year facility leases - lock in across horizons longer than one budget cycle and survive nearly every short-run choice; that durability is precisely what the cancellable program list in the stem lacks.",
+    "ExplanationWrongB": "Engineered variable costs rise and fall with production volume and carry a measurable input-output link, such as direct materials per unit; advertising campaigns and training budgets do not flex with units produced, so the volume-driven label does not fit.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Mixed (semi-variable) costs combine a fixed base with a per-unit layer, like a utility bill with a service charge plus usage rates; the cited items are wholly fixed in amount and defined by renewal choice, not by any volume-linked structure.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-221",
+    "Section": "C",
+    "Stem": "At Flash's new-hire cost orientation, analyst Jenna Cole points to the budget book: advertising campaigns, entry-level training programs, and the summer internship stipend all sit in fixed-cost lines that the management committee renews, resizes, or cancels each annual budget cycle without touching physical capacity. Which cost-behavior classification covers these items?",
+    "Topic": "C.221 discretionary-fixed-costs",
+    "UniqueConceptKey": "C-221-discretionary-fixed-costs",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: term recall from a defining cue (score 1)",
+      "Conceptual item - classification verified against LOS C.4 committed-vs-discretionary canon",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA on relevant costing",
+      "Minimum-price (floor) analysis"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$32.00 per unit",
+      "B": "$36.00 per unit",
+      "C": "$41.00 per unit",
+      "D": "$43.20 per unit"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Loading floor bids with fixed overhead or margin beyond incremental cost",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "With the Coventry plant at 82 percent of capacity and no domestic displacement, the tender's opportunity cost is zero, so the floor equals incremental cost per tendered unit: $29 variable manufacturing + $3 packing/compliance + ($24,000 certification / 6,000 units) = $29 + $3 + $4 = $36.00. At $36.00 the award exactly covers every incremental outflow and leaves quarterly operating income unchanged; any bid above $36.00 adds income the plant has no competing use for. Loading the bid with $5.00 of absorbed fixed overhead or a 20 percent margin prices past the break-even threshold and needlessly risks losing contribution, the classic full-cost trap in one-time pricing.",
+    "ExplanationWrongA": "Bids $32.00, recovering only the $29 variable manufacturing cost and $3 packing while skipping the one-time certification; spreading the $24,000 fee over 6,000 tendered units adds $4.00 per unit, so a $32.00 award locks in a $24,000 quarterly income hit.",
+    "ExplanationWrongC": "Bids $41.00 by loading $5.00 of absorbed fixed plant overhead onto the floor; at 82 percent of capacity the tender displaces nothing, so fixed overhead is identical with or without the order and belongs outside a minimum-price computation.",
+    "ExplanationWrongD": "Bids $43.20 after stacking a 20 percent profit load on the $36.00 floor; a floor price answers the zero-income-impact question, so padding it with margin forfeits a tender that would have contributed positively at anything above $36.00.",
+    "ExplanationWrongB": "",
+    "FormulaReference": "DA-09",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-222",
+    "Section": "C",
+    "Stem": "Flash's Coventry plant operates at 82 percent of capacity when export sales manager Grace Lindqvist receives a one-time tender from an overseas buying cooperative for 6,000 units - far above any recurring order - with no displacement of domestic sales. Unit variable manufacturing cost is $29, incremental export packing and compliance adds $3 per unit, and the tender triggers a one-time certification and testing charge of $24,000. Ignoring taxes, what is the minimum per-unit bid at which the tender leaves Flash's quarterly operating income unchanged?",
+    "Topic": "C.222 export-tender-floor-price",
+    "UniqueConceptKey": "C-222-export-tender-floor-price",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: requires recognizing idle capacity (zero opportunity cost) plus amortizing a one-time fee into the floor (score 4)",
+      "Recomputation: floor = 29 + 3 + 24,000/6,000 = $36.00 per unit",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory; CVP analysis"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$4,090,909",
+      "B": "$1,237,500",
+      "C": "$10,000,000",
+      "D": "$5,000,000"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Dividing fixed costs by the variable-cost complement instead of the CM ratio",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Breakeven revenue = fixed costs / CM ratio = $2,250,000 / 0.45 = $5,000,000. The 45 percent CM ratio means $0.45 of every sales dollar survives variable costs; dividing the entire fixed base by that fraction returns the revenue whose contribution exactly absorbs it. Marcus can sanity-check the figure: at $5,000,000 of sales, contribution is $2,250,000, matching fixed cost with zero operating income. Substituting the 55 percent variable-cost complement shrinks the denominator and understates the requirement, while multiplying fixed costs by the complement produces a floor beneath the fixed-cost total itself - internally impossible-looking results that flag the mechanics error.",
+    "ExplanationWrongA": "Yields $4,090,909 by dividing $2,250,000 by the 55 percent variable-cost ratio; the complement tells how much of each sales dollar is variable, while breakeven revenue requires the 45 percent contribution ratio in the denominator, and understating the floor invites losses.",
+    "ExplanationWrongB": "Produces $1,237,500 by multiplying fixed costs by the 55 percent variable-cost ratio, reversing the relationship; fixed costs must be divided by the CM fraction, and multiplying here yields a 'floor' smaller than the fixed-cost total itself, an internal red flag.",
+    "ExplanationWrongC": "Doubles the true answer to $10,000,000 by working from a halved 22.5 percent ratio - a periodization slip that treats the annual 45 percent CM ratio as a half-year figure and demands twice the revenue Flash needs to cover $2,250,000.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "DA-02",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-223",
+    "Section": "C",
+    "Stem": "Flash's consumer-products group carries annual fixed costs of $2,250,000 and maintains a stable contribution-margin ratio of 45 percent across its catalog. FP&A manager Marcus Bell is preparing the group's revenue floor for the annual operating plan. What sales revenue must the group generate to break even?",
+    "Topic": "C.223 breakeven-revenue-cm-ratio",
+    "UniqueConceptKey": "C-223-breakeven-revenue-cm-ratio",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: direct breakeven-dollar application with recognizable ratio traps (score 2 within Apply band)",
+      "Recomputation: BE$ = 2,250,000 / 0.45 = 5,000,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Decision theory (Raiffa, 1968)"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Standard, with expected operating income of $390,000",
+      "B": "Hold, with expected operating income of $290,000",
+      "C": "Blitz, with expected operating income of $430,000",
+      "D": "Blitz, with expected operating income of $470,000"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Omitting a negative payoff or ignoring probability weights in expected value",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "EV = sum of probability-weighted payoffs. Blitz: 0.30($900K) + 0.50($400K) + 0.20(-$200K) = $270K + $200K - $40K = $430K. Standard: 0.30($500K) + 0.50($420K) + 0.20($150K) = $150K + $210K + $30K = $390K. Hold: 0.30($300K) + 0.50($300K) + 0.20($250K) = $90K + $150K + $50K = $290K. Blitz maximizes expected operating income at $430,000 despite carrying the only negative state; the 20-percent weak branch must be priced in - dropping it inflates Blitz to $470,000 and, while leaving Sofia's ranking intact, corrupts the number she would defend to the board. Expected value aggregates likelihood and magnitude; risk appetite is a separate overlay she may disclose alongside the ranking.",
+    "ExplanationWrongA": "Selects Standard for its steadier spread ($500/$420/$150) rather than for expected value; Standard's correctly computed $390,000 trails Blitz's $430,000, and preferring it substitutes risk comfort for the probability-weighted ranking the question demands.",
+    "ExplanationWrongB": "Backs Hold for its $250,000 worst case, a maximin habit rather than an expected-value test; Hold's probability-weighted total is $290,000, well behind both rivals, so caution alone cannot justify it once Sofia commits to the EV criterion.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Reports Blitz at $470,000 by adding only the strong- and steady-state pieces ($270K + $200K) and dropping the weak-state loss; omitting the negative 20-percent branch overstates EV by exactly the omitted -$40,000 and misstates the case Sofia would bring to the board.",
+    "FormulaReference": "DA-10",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-224",
+    "Section": "C",
+    "Stem": "Flash's marketing VP Sofia Brandt must pick the fall-promotion campaign before demand resolves into Strong (probability 0.30), Steady (0.50), or Weak (0.20) states. Budgeted operating income by campaign, in thousands of dollars: Blitz $900 / $400 / $(200); Standard $500 / $420 / $150; Hold $300 / $300 / $250. Applying expected-value logic, which campaign maximizes expected operating income, and what is that expected value?",
+    "Topic": "C.224 expected-value-payoff-table",
+    "UniqueConceptKey": "C-224-expected-value-payoff-table",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: probability-weighted ranking across three strategies with a negative branch (score 3)",
+      "Recomputation: Blitz = 270+200-40 = 430; Standard = 150+210+30 = 390; Hold = 90+150+50 = 290 (thousands); max = 430,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Theory of Constraints (Goldratt)",
+      "Constraint-based scheduling theory"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Plan 1 lifts near-term CM to $53,580, $1,980 above Plan 2's $51,600, but the roughly $9,000 of monthly service-contract margin riding on Solace continuity reverses the economic ranking - protect Solace in full while costing out finishing-cell overtime.",
+      "B": "Choose Plan 2: Solace's $60 unit CM beats Quell's $48, so any Solace shortfall is automatically value-destroying.",
+      "C": "Either plan lands at the same $52,590 expected CM, so the choice reduces to qualitative scheduling preferences.",
+      "D": "Choose Plan 2: CM-per-hour ranking is valid only where products face identical demand ceilings, which Solace and Quell do not share."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Ranking by unit CM instead of CM per constraint hour; ignoring linked margins",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Constraint logic ranks by CM per bottleneck hour: Quell $48/2.0 hrs = $24.00/hr outscores Solace $60/3.0 hrs = $20.00/hr. Plan 1: Quell 700 x 2.0 = 1,400 hrs; remaining 1,000 hrs yield 333 whole Solace units (999 hrs); CM = $33,600 + $19,980 = $53,580. Plan 2: Solace 500 x 3.0 = 1,500 hrs; remaining 900 hrs give 450 Quell units; CM = $30,000 + $21,600 = $51,600. Near-term arithmetic favors Plan 1 by $1,980 - yet Plan 1 shorts Solace buyers by 167 units, endangering about $9,000 of monthly aftermarket-contract margin, nearly five times the gap. Rachel's defensible judgment: quantify both layers, protect Solace continuity, and attack the constraint itself through overtime evaluation rather than optimizing a single month's CM.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Ranks by unit CM ($60 vs $48) instead of CM per finishing hour ($20 vs $24); on scarce hours Quell earns more, so leading with Solace strands capacity in the lower-yielding product and concedes the $1,980 near-term gap the schedule comparison exposes.",
+    "ExplanationWrongC": "Averages the two schedules into a fictional $52,590 midpoint ((53,580 + 51,600)/2); Flash executes one plan, and blending totals obscures both the $1,980 arithmetic winner and the $9,000 service-margin exposure that actually drives the recommendation.",
+    "ExplanationWrongD": "Justifies Plan 2 with a scope claim about demand ceilings, yet both schedules respect identical demand caps; the real differences are the $1,980 near-term CM gap favoring Plan 1 and the $9,000 service-margin exposure Plan 1 creates - neither turns on ceiling symmetry.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-225",
+    "Section": "C",
+    "Stem": "Flash's finishing cell supplies 2,400 machine-hours per month. Product Solace contributes $60 per unit and consumes 3.0 hours per unit against monthly demand of 500 units; product Quell contributes $48 per unit and consumes 2.0 hours against demand of 700 units. Total demand of 2,900 hours exceeds capacity, making the cell the binding constraint. VP of operations Rachel Osei compares two schedules: Plan 1 fills hours by contribution margin per machine-hour (Quell first, whole units only); Plan 2 completes the full 500-unit Solace commitment first, because Solace buyers anchor aftermarket service contracts worth about $9,000 of monthly margin. Which statement best captures Osei's decision economics?",
+    "Topic": "C.225 bottleneck-allocation-tradeoff",
+    "UniqueConceptKey": "C-225-bottleneck-allocation-tradeoff",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: constraint optimization plus quantified service-margin counterweight weighed by named executive (score 5)",
+      "Recomputation: Plan 1 = 700x48 + 333x60 = 53,580; Plan 2 = 500x60 + 450x48 = 51,600; delta = 1,980 vs ~9,000 exposure",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory; operating leverage (CVP)"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Increase 2.5%",
+      "B": "Increase 20.0%",
+      "C": "Increase 50.0%",
+      "D": "Increase 8.0%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Reading DOL as the percentage change, or building it from sales rather than CM",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Degree of operating leverage = contribution margin / operating income = $2,000,000 / $800,000 = 2.5. The multiplier converts a percentage sales change into a percentage operating-income change: 8.0% x 2.5 = 20.0%. Direct verification: sales rise 8% to $5,400,000; at the constant 40% CM ratio, contribution rises $160,000 to $2,160,000; fixed costs hold at $1,200,000, so operating income reaches $960,000 - exactly a 20.0% gain. Ethan should note the symmetry: the same 2.5x multiplier deepens any sales decline, so the projection belongs in a two-sided risk frame rather than as a one-way upside claim.",
+    "ExplanationWrongA": "Restates the leverage factor itself, 2.5, as the percentage response; DOL is a multiplier applied to the sales-change percentage, not the percentage change in operating income, so 2.5 percent conflates the index with the outcome it produces.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Builds DOL as sales divided by operating income ($5,000,000 / $800,000 = 6.25) and reports 50.0 percent; the numerator must be contribution margin, because the amplification between sales swings and income swings comes from fixed costs, not from total revenue.",
+    "ExplanationWrongD": "Answers 8.0 percent by letting operating income ride sales one-for-one; with $1,200,000 of fixed costs held constant, the leveraged structure amplifies the 8 percent sales gain to 20 percent at the operating line, which is the entire point of measuring DOL.",
+    "FormulaReference": "DA-05",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-226",
+    "Section": "C",
+    "Stem": "Flash's Midwest division reports annual sales of $5,000,000, variable costs of $3,000,000, and fixed costs of $1,200,000. Division controller Ethan Park expects an 8 percent sales increase next quarter with the cost structure unchanged. By what percentage should Park expect operating income to change?",
+    "Topic": "C.226 dol-operating-income-sensitivity",
+    "UniqueConceptKey": "C-226-dol-operating-income-sensitivity",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two-step DOL projection with independent verification at division level (score 3)",
+      "Recomputation: DOL = 2,000,000/800,000 = 2.5; OI change = 8% x 2.5 = 20%; check: OI 960,000 vs 800,000 = +20%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial economics",
+      "Short-run shut-down analysis"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Suspend the line: each unit adds $6 to losses because the $46 price sits below the $52 average total cost.",
+      "B": "Suspend the line: if price falls short of average total cost, suspension removes the operating loss.",
+      "C": "Continue operating: the $46 price exceeds the $41 minimum average variable cost, so each unit contributes $5 toward fixed costs Flash bears either way.",
+      "D": "Continue only if volume can double: diluting the $52 average total cost over greater volume is the sole route back to viability."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Suspending a line priced above AVC but below ATC despite unavoidable fixed costs",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Short-run shut-down doctrine: operate whenever price meets or exceeds minimum average variable cost, because unavoidable fixed cost arrives regardless of the decision. At $46 versus $41, each adhesives unit throws off $5 toward the fixed base, shrinking the short-run loss relative to suspension by $5 times volume. The $52 average total cost bundles that unavoidable fixed element and is the wrong hurdle for the horizon Victor is weighing; comparing $46 to it mistakes an accounting full-cost gap for a cash-relevant signal. Continuing is the better short-run course, with pricing or structural fixes reserved for the long-run agenda.",
+    "ExplanationWrongA": "Compares the $46 price with $52 average total cost and reads a $6 per-unit hole; that figure bundles unavoidable fixed cost, and on the variable yardstick of $41 the line contributes $5 per unit, so suspending widens the short-run loss rather than narrowing it.",
+    "ExplanationWrongB": "Assumes suspension wipes out losses whenever price sits below full cost; the adhesives fixed base continues during suspension, so the true comparison is a smaller operating loss while running against the same fixed burden while idle - suspension widens it by $5 per foregone unit.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Conditions survival on doubling volume to dilute the $52 average total cost; short-run optimality asks whether price clears minimum average variable cost today, and at $46 versus $41 it does, independent of any future scale cure.",
+    "FormulaReference": "DA-07",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-227",
+    "Section": "C",
+    "Stem": "Flash's legacy adhesives line sells at $46 per unit. A fresh cost study puts minimum average variable cost at $41 and average total cost at $52 at current volume, and the line's fixed costs are unavoidable over the short-run horizon the board is weighing. Division GM Victor Hale must recommend continue or suspend. Which course preserves the better short-run result, and on what grounds?",
+    "Topic": "C.227 shutdown-continue-adhesives",
+    "UniqueConceptKey": "C-227-shutdown-continue-adhesives",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: AVC-versus-ATC discrimination under unavoidable fixed costs (score 4)",
+      "Conceptual item - decision rule applied to given figures; per-unit spread 46 - 41 = 5 confirmed",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Theory of Constraints (Goldratt)",
+      "Constraint-based scheduling theory"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Contribution margin per unit sold",
+      "B": "Total contribution margin at full unconstrained demand",
+      "C": "Gross margin per unit",
+      "D": "Contribution margin per unit of the constrained resource"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Ranking constrained products by unit CM rather than per scarce hour",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "When one resource binds, products compete on yield per unit of that resource, not per unit sold: converting each product to dollars earned per scarce finishing hour puts everything in a common currency, and filling hours highest-first maximizes total contribution margin. Amy can show the failure mode with one contrast - a $60 item eating three hours yields $20/hour while a $48 item taking two yields $24/hour, so unit-CM logic strands capacity in the weaker earner. Unconstrained aggregate CM assumes away the cap; gross margin drags in absorption conventions unrelated to hours consumed. This is the scheduling corollary of Theory-of-Constraints reasoning Part 2 expects candidates to articulate.",
+    "ExplanationWrongA": "Unit contribution margin ignores how many scarce finishing hours each product consumes; a high-CM, hour-hungry item can starve the cell while two faster earners would have produced more total contribution from the same 2,400 hours.",
+    "ExplanationWrongB": "Aggregate CM at unconstrained demand is unreachable arithmetic once the cell caps output at 2,400 hours; totals built on full demand assume away the very constraint the schedule must respect and would rank products the cell cannot simultaneously produce.",
+    "ExplanationWrongC": "Gross margin per unit carries fixed-manufacturing absorption and excludes some variable selling costs, severing the link to both contribution logic and hours consumed; it measures reporting convention rather than scarce-resource yield, which is what the schedule must maximize.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-228",
+    "Section": "C",
+    "Stem": "Production-planning lead Amy Zhao is coaching Flash's new schedulers: the finishing cell caps output at 2,400 machine-hours per month, and several products compete for those hours with different margins and different hourly consumption rates. When a single constrained resource limits total output, which ranking basis identifies the product mix that maximizes total contribution margin?",
+    "Topic": "C.228 constraint-ranking-basis",
+    "UniqueConceptKey": "C-228-constraint-ranking-basis",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: explains why constraint-relative yield, not unit economics, ranks the mix (score 2)",
+      "Conceptual item - principle verified against LOS C.5 constraint-ranking canon",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory (relevant costing)"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$42,000 (current replacement cost of the pounds drawn)",
+      "B": "$27,000 (book value of the pounds drawn)",
+      "C": "$108,000 (replacement cost of the full 12,000-pound stock)",
+      "D": "$15,000 (scrap value of the pounds drawn at $5 per pound)"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Quoting sunk book value when material will be replaced at market cost",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Relevant materials cost equals the forward-looking sacrifice the job causes. Because Flash restocks this alloy routinely, drawing 3,000 pounds obliges a matching repurchase at the current $14 replacement price: 3,000 x $14 = $42,000. The $9 book value is a sunk accumulation of past invoices - it moves with no decision Ravi makes - so quoting it would understate the job's true economic cost by $15,000. Scrap value ($5/lb) governs only when the material has no forward use, a branch routine consumption forecloses; and pricing the entire 12,000-pound bin answers a quantity nobody ordered. Replacement cost is the basis that keeps the quote consistent with the cash Flash will actually spend.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Quotes $27,000 from the $9 book value (3,000 x $9); carrying value is a sunk artifact of past purchases that changes with no current decision, and because Flash restocks at $14 regardless, the forward-looking sacrifice is replacement cost, not history.",
+    "ExplanationWrongC": "Prices all 12,000 stored pounds at $14 ($108,000) instead of the 3,000-pound draw the bracket job consumes; the quote needs the replacement sacrifice this job triggers, not the value of the entire bin sitting in stores.",
+    "ExplanationWrongD": "Applies scrap value of $5 per pound ($15,000), the no-replacement branch of the relevance rule; Flash draws and restocks this alloy routinely, so the pounds return to stock rather than leaving as scrap, and the $14 replacement cost governs the quote.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-229",
+    "Section": "C",
+    "Stem": "Flash's stores hold 12,000 pounds of titanium alloy carried at a $9-per-pound book value; the alloy currently replaces at $14 per pound, and Flash draws and restocks this material routinely. Purchasing manager Ravi Patel must set the materials cost basis for quoting a 3,000-pound aerospace bracket job. What materials cost is relevant to the quote?",
+    "Topic": "C.229 replacement-cost-relevance",
+    "UniqueConceptKey": "C-229-replacement-cost-relevance",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: selects the relevant cost basis and prices the correct quantity (score 3)",
+      "Recomputation: relevant cost = 3,000 lb x $14 replacement = $42,000 (book value 3,000 x $9 = $27,000 rejected as sunk)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 CSO Section C (pricing methodology)",
+      "Target costing literature"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Full manufacturing cost plus a standardized markup percentage",
+      "B": "Projected selling price minus the desired operating profit per unit",
+      "C": "Variable cost per unit plus average fixed cost per unit",
+      "D": "Last year's realized unit cost adjusted downward by the annual productivity target"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Defining target cost from historical cost plus markup rather than price minus profit",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Target costing, institutionalized in Japanese practice and embedded in the Part 2 curriculum, reverses cost-plus logic: allowable (target) cost = projected market price - required profit per unit. The market sets the ceiling; engineering, sourcing, and process design must then deliver the product at or below the residual. Choice A is the traditional full-cost-plus method target costing replaced; C merely reconstructs absorption unit cost with no profit term to anchor design decisions; D rolls heritage cost forward with an improvement haircut, mistaking continuous-improvement deltas for the market-derived allowance Nadia will enforce on every new proposal.",
+    "ExplanationWrongA": "Describes full-cost-plus pricing, the traditional cost-led method target costing displaced; the target-costing identity runs the arrow the other way, deriving an allowable cost from what the market will pay and the profit Flash must earn.",
+    "ExplanationWrongC": "Sums variable cost and average fixed cost to rebuild full absorption unit cost; the expression reproduces historical-style cost buildups and contains no profit term, so it cannot function as the market-imposed allowance target costing assigns to designers.",
+    "ExplanationWrongD": "Rolls last year's realized cost forward with a productivity haircut - an improvement-knob view of cost; target costing starts from projected price and required profit, so prior-year cost sets the starting gap to close, never the standard itself.",
+    "ExplanationWrongB": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-230",
+    "Section": "C",
+    "Stem": "Opening Flash's engineering-pricing seminar, corporate controller Nadia Brooks tells the room that every new-product proposal will be screened against one identity before any cost sheet is accepted. Which expression states the target-costing identity Brooks means?",
+    "Topic": "C.230 target-costing-identity",
+    "UniqueConceptKey": "C-230-target-costing-identity",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: identity recall from pricing-seminar framing (score 1)",
+      "Conceptual item - definition verified against LOS C.3 target-costing canon",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory (CVP / profit-volume analysis)",
+      "IMA CMA Part 2 CSO Section C.1"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The vertical intercept of -$2,100,000 represents Sentinel's total variable costs at zero sales volume.",
+      "B": "The slope of the profit line is the gross-margin ratio of 35 percent.",
+      "C": "At budgeted sales of $9,000,000, Sentinel earns a profit of $3,150,000, equal to sales multiplied by the slope.",
+      "D": "The horizontal-axis crossing at $6,000,000 is the breakeven sales level, and the 35-percent slope is the contribution-margin ratio, so budgeted profit equals $9,000,000 x 0.35 - $2,100,000 = $1,050,000."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Reading the PV intercept as variable cost; confusing CM-ratio slope with gross margin",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is D. On a profit-volume chart, the point where the profit line crosses the horizontal axis is breakeven: sales of $6,000,000 generate exactly zero operating income. The slope of the line is the contribution-margin ratio: $2,100,000 of fixed cost recovered over $6,000,000 of sales equals 35 percent, and that same $2,100,000 is the vertical intercept (the loss if no units are sold). Verification at budget: $9,000,000 x 0.35 = $3,150,000 contribution margin less $2,100,000 fixed costs = $1,050,000 profit, matching the plotted point. Priya Chen can therefore tell management that Sentinel covers all fixed costs at $6,000,000 of sales and converts 35 cents of every incremental sales dollar into profit beyond that point.",
+    "ExplanationWrongA": "Choice A misreads the vertical intercept: at zero sales volume there are no variable costs incurring at all, so the negative $2,100,000 is the period loss equal entirely to fixed costs. Variable costs enter a PV chart only through the steepness of the slope, not through the intercept position.",
+    "ExplanationWrongB": "Choice B confuses contribution margin with gross margin. The PV-chart slope nets out all variable costs, both manufacturing and selling, whereas gross margin deducts only cost of goods sold. The 35-percent slope on Chen's chart is the contribution-margin ratio, a broader measure than any gross-margin figure would be.",
+    "ExplanationWrongC": "Choice C forgets the fixed-cost block below breakeven: multiplying $9,000,000 by the 35-percent slope yields contribution margin of $3,150,000, from which the $2,100,000 of fixed costs must still be deducted, leaving exactly the $1,050,000 profit actually plotted on the chart rather than $3,150,000.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-231",
+    "Section": "C",
+    "Stem": "During the annual budget review, Flash Industries controller Priya Chen presents the profit-volume (PV) chart for the Sentinel product group. The chart's profit line intersects the vertical axis at -$2,100,000, crosses the horizontal axis at $6,000,000 of sales, and reads a profit of $1,050,000 at budgeted sales of $9,000,000. Which statement best interprets the chart?",
+    "Topic": "C.231 profit-volume-chart-interpretation",
+    "UniqueConceptKey": "C-231-pv-chart-breakeven-crossing",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: chart interpretation at Understand needs only guided reading, ME(2) fits Rule 11 cap for U-level",
+      "Slope = 2,100,000/6,000,000 = 35%; check profit = 9,000,000 x 0.35 - 2,100,000 = 1,050,000 (matches plotted value)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA on relevant costing",
+      "IMA CMA Part 2 CSO Section C.2"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Operating income increases by $245,000 because the reported segment loss disappears.",
+      "B": "Operating income decreases by $505,000.",
+      "C": "Operating income decreases by $600,000.",
+      "D": "Operating income decreases by $840,000."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Treating allocated common costs as avoidable in a keep-or-drop analysis",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is B. Under relevant-costing rules (IMA SMA on relevant costing), only avoidable costs matter in a drop decision; the $260,000 headquarters allocation survives and merely reallocates to surviving lines. Dropping Sable surrenders contribution margin of $2,400,000 - $1,560,000 = $840,000 while removing avoidable direct fixed costs of $335,000 ($180,000 advertising + $95,000 supervisor salary + $60,000 equipment lease). Net effect on company operating income: -$840,000 + $335,000 = a $505,000 decrease. The reported $245,000 segment loss is an artifact of the allocation ($840,000 - $335,000 - $260,000); economically Sable contributes $505,000 toward common costs, which is precisely what Whitfield's company forfeits by dropping it.",
+    "ExplanationWrongA": "Choice A trusts the segment report at face value: the $245,000 reported loss embeds the $260,000 headquarters allocation that continues after the drop, so eliminating the report's loss actually removes $505,000 of real contribution, and total operating income falls rather than rises.",
+    "ExplanationWrongC": "Choice C wrongly treats the $95,000 supervisor salary as unavoidable; Chen confirmed the dedicated position ends with the line, so avoidable fixed costs are the full $335,000 and the decline is $840,000 - $335,000 = $505,000, not $600,000.",
+    "ExplanationWrongD": "Choice D assumes no fixed cost escapes when the line closes; the advertising commitment, supervision, and dedicated lease totaling $335,000 are all avoidable, capping the damage at $505,000 instead of surrendering the entire $840,000 contribution margin.",
+    "ExplanationWrongB": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-232",
+    "Section": "C",
+    "Stem": "Flash Industries' Sable product line reports an annual segment loss of $245,000: sales of $2,400,000, variable costs of $1,560,000, direct fixed costs of $335,000 (advertising $180,000, line supervisor salary $95,000, dedicated equipment lease $60,000), and $260,000 of allocated headquarters costs. Controller Priya Chen confirms the $260,000 allocation would simply shift to surviving lines if Sable is dropped. CEO Dana Whitfield asks what happens to total company operating income if Sable is discontinued.",
+    "Topic": "C.232 drop-line-allocated-cost-trap",
+    "UniqueConceptKey": "C-232-segment-drop-common-cost-reallocation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: requires separating avoidable from allocated costs across three fixed components, Analyze D(4)",
+      "CM = 2,400,000 - 1,560,000 = 840,000; avoidable FC = 180,000 + 95,000 + 60,000 = 335,000; effect = -840,000 + 335,000 = -505,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting target costing theory",
+      "IMA CMA Part 2 CSO Section C.3"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$210,000",
+      "B": "$924,000",
+      "C": "$714,000",
+      "D": "No reduction is required because projected cost is already below the market price."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Confusing the required profit margin with the cost-reduction gap in target costing",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is A. Target costing defines allowable cost as market price minus required profit: $88 - (0.25 x $88 = $22) = $66 per unit. Against the projected full cost of $71, the per-unit gap is $71 - $66 = $5, so Ferrero's value-engineering program must remove $5 x 42,000 = $210,000 of annual cost. The discipline comes from the mandated 25-percent return on price, not from loss avoidance: projected cost already sits $17 below the market price, yet Flash would still earn only $17 per unit versus the required $22. Reporting the gap as a concrete dollar quota gives design and sourcing teams a measurable savings target tied directly to board-approved profitability.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B reports the profit requirement itself as the closure need: $22 x 42,000 = $924,000 is the return Flash must earn at the $88 price, but the engineering task is only to close the $5 spread between projected cost of $71 and the $66 allowable cost, which totals $210,000.",
+    "ExplanationWrongC": "Choice C measures the spread between price and current cost ($88 - $71 = $17 per unit, $714,000 annually); that figure is today's total dollar margin, not the reduction needed, because the $66 target already contains the required $22 profit inside it.",
+    "ExplanationWrongD": "Choice D stops after comparing $71 with the $88 price and declares success; ignoring the 25-percent return requirement misses that allowable cost is $66 per unit, leaving a genuine $5-per-unit, $210,000 gap that value engineering must still close.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-233",
+    "Section": "C",
+    "Stem": "Flash Industries plans the Meridian pressure sensor for its process-instruments division. Market research sets the competitive selling price at $88 per unit, and management requires a 25-percent return on selling price. Process engineers project a current full manufacturing cost of $71 per unit at the planned volume of 42,000 units per year. Product manager Luis Ferrero must report the total annual cost reduction required to meet the target cost.",
+    "Topic": "C.233 target-cost-gap-closure",
+    "UniqueConceptKey": "C-233-target-cost-closing-gap",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two-step allowable-cost derivation then volume scaling, Apply M(3)",
+      "Allowable cost = 88 - 0.25x88 = 66; gap = 71 - 66 = 5/unit; total = 5 x 42,000 = 210,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Decision theory (von Neumann-Morgenstern expected utility)",
+      "IMA CMA Part 2 CSO Section C.6"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Risk-neutral, because he compared the two options solely on expected value.",
+      "B": "Risk-seeking, because he protected principal by rejecting the gamble.",
+      "C": "Risk-averse, reflecting a concave utility-of-money function in which the certain outcome outranks a gamble of equal expected value.",
+      "D": "The maximax criterion, because he chose the option with the highest guaranteed floor."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Calling certainty preference risk-neutral; risk neutrality requires indifference at equal EV",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The correct answer is C. In von Neumann-Morgenstern terms, a decision-maker who prefers a certain outcome to a risky prospect with the same expected value exhibits risk aversion, represented by a concave utility-of-money function whose marginal utility declines as wealth rises. Webb sacrifices nothing in expected return (both options carry a 4.2-percent expectation) yet pays an implicit insurance premium for certainty, the defining behavioral signature of risk aversion. Flash's treasury policy institutionalizes this posture for idle cash, prioritizing liquidity and principal safety, so Webb's T-bill choice is the textbook label in action rather than a discretionary deviation from policy.",
+    "ExplanationWrongA": "Choice A mislabels the behavior: a risk-neutral decision-maker is indifferent between gambles and certainties of equal expected value and could rationally accept either, whereas Webb systematically preferred the certain outcome, which is exactly what risk neutrality rules out.",
+    "ExplanationWrongB": "Choice B attaches the wrong temperament: risk seeking describes a preference FOR gambles of equal expected value (convex utility), yet Webb rejected the gamble. Protecting principal is characteristic of a risk-averse treasurer, the opposite of the risk-seeking profile.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D borrows a payoff-matrix label incorrectly: maximax selects the act containing the best possible outcome and suits optimism about upside, while Webb selected the highest worst-case floor, a defensive posture described by risk aversion rather than by the maximax rule.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-234",
+    "Section": "C",
+    "Stem": "Treasurer Marcus Webb must invest $2,000,000 of Flash Industries' short-term cash. Option one returns a certain 4.2 percent in Treasury bills. Option two is a speculative placement paying either +14 percent or -5.6 percent with equal probability; both options have an identical 4.2-percent expected return. Webb selects the certain T-bill investment. Which decision-theory term correctly describes his revealed preference?",
+    "Topic": "C.234 risk-aversion-utility-concept",
+    "UniqueConceptKey": "C-234-risk-averse-concave-utility",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: pure term recognition at Remember, Easy(1) fits Rule 11 cap for R-level",
+      "Conceptual item; EV parity verified: (14% + (-5.6%))/2 = 4.2% equals the certain rate",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "State PUC cost-of-service ratemaking doctrine",
+      "IMA CMA Part 2 CSO Section C.3"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Defer the filing for two years; the $1,600,000 cumulative shortfall costs less than the expense and risk of a contested case.",
+      "B": "File immediately for the full allowed $3,000,000 return, supported by an audited cost-of-service study and a published productivity commitment, accepting regulatory-lag risk because deferral locks in a compounding $800,000 annual erosion and deferred maintenance invites future disallowance.",
+      "C": "Bridge the shortfall by deferring $800,000 of transformer maintenance each year until the next scheduled review resets rates automatically.",
+      "D": "File immediately but demand a 12-percent equity return, anchoring negotiations above the authorized 9 percent to create bargaining room."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Treating the allowed ROE as negotiable; rate cases succeed on demonstrated prudent cost",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The correct answer is B. Cost-of-service ratemaking permits recovery of prudently incurred costs plus the authorized return, so the binding constraint is demonstrating prudence with evidence, not the size of the ask. Option B claims exactly the authorized $3,000,000 ($20,000,000 x 0.06 = $1,200,000 debt cost plus $20,000,000 x 0.09 = $1,800,000 equity return) using the documentation regulators accept, converting the $800,000 annual shortfall into recovered revenue a filing cycle sooner than any alternative. Deferral concedes $800,000 x 2 = $1,600,000 with no offsetting benefit; deferred maintenance trades a cash saving for asset-condition findings that historically trigger disallowances at the next case; and demanding 12 percent exceeds the authorized return, inviting rejection that delays even the fully supportable claim behind it. Among four defensible courses, B maximizes recoverable revenue per unit of regulatory risk borne.",
+    "ExplanationWrongA": "Option A books the loss as a bargain: two years of deferral surrender $1,600,000 of authorized revenue and weaken the subsidiary's equity build-up, while the audited-study route caps downside near filing costs, a poor exchange for a CFO accountable to Flash's shareholders.",
+    "ExplanationWrongC": "Option C converts an authorized-recovery problem into an asset-integrity problem: skipping $800,000 of transformer upkeep saves cash this year but manufactures exactly the imprudence evidence regulators use to deny the recovery Vasquez ultimately needs, worsening the next rate case.",
+    "ExplanationWrongD": "Option D overshoots the tariff: a 12-percent request exceeds the authorized 9 percent, hands interveners an easy credibility attack, and risks a rejected schedule that strands the provable $3,000,000 claim behind it for another regulatory cycle.",
+    "ExplanationWrongB": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-235",
+    "Section": "C",
+    "Stem": "Flash Industries' wholly owned cogeneration subsidiary sells electric capacity to the regional grid under a cost-of-service tariff. Regulators authorize a 9-percent return on a rate base financed half with debt costing 6 percent and half with equity, producing an allowed operating income of $3,000,000 ($20,000,000 x 0.06 + $20,000,000 x 0.09). Current tariffs deliver only $2,200,000, leaving an $800,000 annual shortfall against the allowed level. CFO Elena Vasquez must recommend one course to the board: defer filing a rate case for two years; bridge the gap by deferring transformer maintenance; file demanding a 12-percent equity return; or file immediately for the full allowed $3,000,000 backed by an audited cost-of-service study and a published productivity commitment. Which recommendation should Vasquez advance?",
+    "Topic": "C.235 regulated-rate-case-pricing",
+    "UniqueConceptKey": "C-235-cost-of-service-rate-case",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: named CFO weighing four defensible courses with asymmetric regulatory risk, Evaluate VD(5) satisfies Rule 11 floor",
+      "Allowed OI = 1,200,000 + 1,800,000 = 3,000,000; shortfall = 800,000/yr; two-year deferral cost = 1,600,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial economics (Lerner index / marginalist pricing)",
+      "IMA CMA Part 2 CSO Section C.3"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$40.50",
+      "B": "$81.00",
+      "C": "$60.00",
+      "D": "$72.00"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Multiplying by (1 - 1/elasticity) instead of dividing, flipping price below cost",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is D. Under the Lerner markup rule, the profit-maximizing price satisfies (P - MC)/P = 1/|ED|, equivalently P = MC / (1 - 1/|ED|). Substituting Marchetti's figures: P = $54 / (1 - 1/4) = $54 / 0.75 = $72.00. Consistency check: the implied margin on price is ($72 - $54)/$72 = 25 percent, exactly the reciprocal of the elasticity magnitude 4. The $72 price balances forgone volume against richer unit margin; the $60 absorption cost plays no role in the short-run optimum because allocated fixed costs do not vary with cartridge volume, and pricing from them would embed arbitrary allocations in a demand-driven decision.",
+    "ExplanationWrongA": "Choice A inverts the rule by multiplying $54 by 0.75 to reach $40.50, a price BELOW marginal cost; dividing by (1 - 1/|ED|) is what builds margin above cost. The failure is visible in the Lerner check: ($40.50 - $54)/$40.50 implies a negative 33-percent margin, impossible to sustain at an elasticity of 4.",
+    "ExplanationWrongB": "Choice B defaults to a flat 50-percent cost-plus markup ($54 x 1.5 = $81.00) without consulting demand conditions; at $81 the implied Lerner margin is 33 percent, which presumes customers tolerate an elasticity near 3, overstating their price insensitivity and sacrificing cartridge volume Flash could profitably serve.",
+    "ExplanationWrongC": "Choice C anchors on full absorption cost of $60; comforting for long-run coverage perhaps, but allocated fixed costs are inadmissible in the marginal optimum, and a $60 price leaves a 10-percent Lerner margin implying an elasticity of 10, five times more price-sensitive than the measured 4.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-236",
+    "Section": "C",
+    "Stem": "Flash Industries' power-tool accessories line sells its Pro-Cut blade cartridge in a market where the price elasticity of demand measures -4. Marginal (variable) cost is $54 per cartridge and full absorption cost is $60. Pricing manager Sofia Marchetti applies the marginalist rule that the profit-maximizing price equals marginal cost divided by (1 minus the reciprocal of the elasticity's absolute value). What price should she set?",
+    "Topic": "C.236 elasticity-based-markup-application",
+    "UniqueConceptKey": "C-236-lerner-elasticity-price-setting",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: formula application plus implied-margin verification step, Apply M(3)",
+      "P = 54/(1 - 1/4) = 54/0.75 = 72.00; check (72-54)/72 = 25% = 1/4",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Decision theory (Bayes' theorem; Raiffa, 1968)",
+      "IMA CMA Part 2 CSO Section C.6"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Revision of prior probabilities into posterior probabilities using conditional sample evidence, after which downstream branch payoffs are reweighted before expected values are recomputed.",
+      "B": "Computation of the value of perfect information, because the pilot results reveal the true market state.",
+      "C": "Sensitivity analysis, because one input probability was flexed to observe the effect on the decision.",
+      "D": "Application of the minimax-regret criterion, because disappointing pilot data raises the opportunity-loss weight on the launch branch."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Treating sample survey results as perfect information when valuing research",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is A. Decision trees are evaluated with probabilities reflecting the best current information; when new evidence arrives, Bayes' theorem converts priors into posteriors - here 0.55 becomes 0.78 conditioned on a favorable pilot - and every expected value downstream of the information node must be recomputed before the go/no-go comparison. The pilot delivers imperfect (sample) information, whose worth is measured by the expected value of sample information, a fraction of the EVPI ceiling, not by EVPI itself. Osei's sequencing matters: averaging stale priors with fresh branch data, or leaving old weights in place after evidence lands, would understate exactly the launch branch the pilot supports and distort Iglesias's decision memo.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B inflates the pilot's power: only a source revealing the true state with certainty supports an EVPI computation, whereas a favorable pilot merely moves the strong-market probability to 0.78. Treating sample evidence as perfection would overstate what Flash may rationally pay for market research.",
+    "ExplanationWrongC": "Choice C misnames the procedure: sensitivity analysis flexes an input across a range to locate decision thresholds, but Osei replaced the prior with a likelihood-derived posterior computed from observed pilot data, an evidential update rather than a what-if stress test.",
+    "ExplanationWrongD": "Choice D imports the wrong criterion: minimax regret ranks acts by their worst opportunity loss across states and involves no revision of probabilities whatsoever; the 0.78 figure emerged from conditional likelihoods applied to Bayes' rule, not from any regret table.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-237",
+    "Section": "C",
+    "Stem": "Analyst Amara Osei builds the decision tree for Flash Industries' Helio battery-pack launch. Her prior probability of a strong market is 0.55. Pilot-store results arrive, and conditioning on a favorable pilot she updates the strong-market probability to 0.78, then recomputes every branch's expected value ahead of the go/no-go meeting. Vice president Tomas Iglesias asks Osei what this updating step formally represents.",
+    "Topic": "C.237 bayesian-probability-revision",
+    "UniqueConceptKey": "C-237-posterior-probability-updating",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: concept comprehension of tree mechanics, Understand ME(2) fits Rule 11 cap for U-level",
+      "Conceptual item; prior-to-posterior movement 0.55 -> 0.78 stated in stem, no computation requested",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Theory of Constraints (Goldratt); IMA SMA on relevant costing",
+      "IMA CMA Part 2 CSO Section C.5"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Make AX-9 internally; making avoids the $72,000 annual purchase premium over variable cost.",
+      "B": "Buy AX-9 externally; net operating income improves by $114,000 per year after charging the purchase premium.",
+      "C": "Buy AX-9 externally; the freed capacity adds $186,000 of contribution margin annually.",
+      "D": "Keep making AX-9; the cell is fully scheduled, so releasing hours creates no measurable benefit."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Ignoring the opportunity cost of bottleneck hours freed by outsourcing a component",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is B. Bottleneck-constrained make-or-buy analysis must price the constraint-hours the part consumes. Buying raises cash cost by ($44 - $38) x 12,000 = $72,000 per year. Those 12,000 x 0.25 = 3,000 released bottleneck hours, redirected to backlogged Zephyr orders, add 3,000 x $62 = $186,000 of contribution margin. Net effect: $186,000 - $72,000 = +$114,000 of annual operating income, so Reyes should buy. Under Theory-of-Constraints logic the $62-per-bottleneck-hour contribution is the opportunity cost of continuing to make AX-9 in house; treating those hours as free, as the make-side options implicitly do, values the decision against a constraint that has no slack anywhere else in the plant.",
+    "ExplanationWrongA": "Choice A compares only the $6-per-unit purchase premium and banks the apparent $72,000 saving; it silently discards the $186,000 of Zephyr contribution the vacated 3,000 bottleneck hours would earn, reversing a genuine $114,000 gain from buying into a fictitious reason to keep making.",
+    "ExplanationWrongC": "Choice C books the full $186,000 of freed-capacity contribution but never charges the $72,000 premium paid to Kellerman; netting the two streams is mandatory, and the omission overstates the benefit of buying by exactly the amount of the incremental purchase cost.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongD": "Choice D assumes a full schedule means released hours are worthless; the cell runs full precisely because profitable Zephyr backlog exists, so each freed hour carries $62 of foregone contribution. Equating high utilization with absence of opportunity cost is the classic bottleneck misread.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-238",
+    "Section": "C",
+    "Stem": "Flash Industries' machining cell is the plant's sole bottleneck, fully committed at 10,000 hours per year. The cell produces 12,000 units of component AX-9 annually, consuming 0.25 bottleneck hours per unit at a variable cost of $38 per unit made. Supplier Kellerman Components offers AX-9 at $44 per unit delivered. Production chief Daniel Reyes confirms the freed 3,000 hours would be filled immediately by backlogged Zephyr orders that contribute $62 of margin per bottleneck hour after all variable costs. What should Flash Industries do?",
+    "Topic": "C.238 make-or-buy-capacity-interaction",
+    "UniqueConceptKey": "C-238-freed-bottleneck-opportunity-gain",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: interactive opportunity-cost layering on a standard make-or-buy, Analyze D(4)",
+      "Premium = (44-38)x12,000 = 72,000; hours freed = 12,000x0.25 = 3,000; CM gained = 3,000x62 = 186,000; net = +114,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA on relevant costing",
+      "IMA CMA Part 2 CSO Section C.2"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Reject the counteroffer; $84 is $36 below the $120 regular price and would undermine Corvid's price structure.",
+      "B": "Accept the counteroffer; the order contributes $56,000 to operating income.",
+      "C": "Accept the counteroffer; the order adds $43,600 to operating income.",
+      "D": "Reject the counteroffer; the $7 unit contribution fails to cover the $34 of allocated fixed cost per unit."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Forgetting one-time setup costs and allocated-overhead traps in special-order analysis",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is C. Special-order analysis accepts any one-time price above incremental cost when capacity sits idle. Net counteroffer price: $84 - $3 freight = $81. Unit contribution: $81 - $74 variable cost = $7. Order margin: 8,000 x $7 = $56,000. Deducting the one-time $12,400 test-and-changeover charge leaves +$43,600, so Watanabe should accept. With 15,000 units of idle monthly capacity no regular sale is displaced, and the $34-per-unit overhead allocation ($510,000 / 15,000 normal units) is a bookkeeping artifact that continues whether or not Veyra buys. The counteroffer converts dormant capacity into positive income without touching the $120 regular market or repricing a single ongoing order.",
+    "ExplanationWrongA": "Choice A anchors on the $120 catalog price; with idle capacity no regular unit is displaced, so the regular price is not actually at stake in this transaction, and price-structure concerns belong to long-run strategy rather than to a one-time incremental test that adds real dollars.",
+    "ExplanationWrongB": "Choice B stops one step early: $56,000 (8,000 x $7) is the order margin gross of the one-time $12,400 test-and-changeover charge. Acceptance remains the right call, but on the properly netted $43,600 rather than the inflated figure.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D allocates $34 of fixed overhead to the order although that cost continues unchanged whether Veyra buys or not; charging unavoidable corporate burden to idle-capacity volume manufactures a fictitious loss and would reject a deal that genuinely adds $43,600.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-239",
+    "Section": "C",
+    "Stem": "Flash Industries operates with 15,000 units of otherwise idle monthly capacity. Veyra Retail Group proposes a one-time purchase of 8,000 units of the Corvid storage system. Flash's regular price is $120 and variable cost is $74 per unit. After Flash declines Veyra's opening offer of $78, Veyra counters at $84 per unit with Flash absorbing $3 per unit of outbound freight. Fulfillment requires a one-time test-and-changeover charge of $12,400. Division manager Kenji Watanabe must decide; monthly fixed manufacturing overhead of $510,000 is allocated at $34 per unit at normal volume. Should Flash accept the counteroffer?",
+    "Topic": "C.239 one-time-counteroffer-evaluation",
+    "UniqueConceptKey": "C-239-counteroffer-net-contribution",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-component netting (freight, setup, allocation trap), Apply M(3)",
+      "Net price = 84-3 = 81; CM = 81-74 = 7; order margin = 8,000x7 = 56,000; net = 56,000-12,400 = 43,600",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial economics pricing strategy theory",
+      "IMA CMA Part 2 CSO Section C.3"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Tan is using penetration pricing; the competitor is using price skimming.",
+      "B": "Tan is using price skimming; the competitor is using penetration pricing.",
+      "C": "Both firms are using price discrimination, because each charges different customer groups different margins.",
+      "D": "Tan is using bundle pricing; the competitor is using loss-leader pricing."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Swapping penetration (start low, raise later) with skimming (start high, lower later)",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The correct answer is A. Penetration pricing launches below prevailing market levels to accelerate share capture and discourage rivals, raising prices once loyalty is established, exactly Tan's $89 entry against $129 comparables. Price skimming opens high to harvest surplus from early adopters least sensitive to price, then steps down along the demand curve, the competitor's $159 playbook. The strategies are mirror-image temporal approaches aimed at opposite ends of the adoption curve. Both differ categorically from price discrimination, which prices segments simultaneously, and from bundling or loss-leading, which restructure the offer itself rather than the trajectory of a single product's posted price.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B swaps the definitions wholesale: skimming enters HIGH to skim early-adopter surplus and descends over time, while penetration enters LOW to seize share and ascends. Matching Tan's deliberately low $89 with skimming inverts both labels and would misdirect any follow-on pricing recommendation.",
+    "ExplanationWrongC": "Choice C reaches for price discrimination, which sells to different segments at the same time based on willingness to pay, such as student discounts or peak versus off-peak fares. Both trimmer launches use a single sequence of posted prices over time, which is intertemporal strategy, not simultaneous segmentation.",
+    "ExplanationWrongD": "Choice D invokes the wrong constructs entirely: bundle pricing joins multiple products under one package price and loss-leader pricing sacrifices one item's margin to drive store traffic. The Quicksilver scenario varies a single product's price across its life cycle, matching neither construct.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-240",
+    "Section": "C",
+    "Stem": "Flash Industries launches the Quicksilver cordless trimmer. Chief marketing officer Rachel Tan sets the introductory price at $89, deliberately below the $129 commanded by comparable brands, planning to raise the price once market share is secured. A competitor simultaneously launches a similar trimmer at $159, intending to harvest early adopters before stepping its price down over successive quarters. Which pair of labels correctly identifies the two pricing strategies?",
+    "Topic": "C.240 penetration-versus-skimming-concepts",
+    "UniqueConceptKey": "C-240-entry-pricing-strategy-definitions",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: definition recognition of paired strategy terms, Remember Easy(1) fits Rule 11 cap for R-level",
+      "Conceptual item; no computation; strategy directions verified against canon (penetration low-entry, skimming high-entry)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Theory of Constraints (Goldratt) throughput accounting",
+      "IMA CMA Part 2 CSO Section C.5"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Add the Saturday shifts; 600 incremental hours of bottleneck capacity justify the premium cost.",
+      "B": "Subcontract to Marrow Finishing; outside capacity relieves the constraint at a predictable hourly rate.",
+      "C": "Maintain the status quo; none of the proposals clears the $480-per-hour throughput benchmark.",
+      "D": "Install the quick-change tooling; its approximately $322,500 net annual benefit leads all alternatives."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Assuming added bottleneck capacity helps; compare elevation cost per hour to throughput value",
+    "CorrectChoice": "D",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The correct answer is D. Elevating a constraint creates value only when its hourly cost runs below the $480 of throughput earned per bottleneck hour. Tooling: 750 released hours x $480 = $360,000 of added contribution against $140,000/5 + $9,500 = $37,500 of annual cost, a net gain of $322,500 (about $50 of cost per liberated hour). Saturday shifts: 600 x $480 = $288,000 against $310,000, a $22,000 annual loss despite adding capacity. Subcontracting: Marrow charges $520 against $480 earned, locking in $40 per relieved hour, or $20,000 across 500 hours. Status quo forfeits the tooling gain entirely. Reyes should install the quick-change tooling and revisit the other levers only if throughput value per hour rises above their respective break-even costs.",
+    "ExplanationWrongA": "Choice A equates capacity with value: the 600 new Saturday hours generate only $288,000 against $310,000 of premium labor and utilities, so each added hour costs roughly $517 to create $480 of throughput, an expansion that destroys $22,000 of income annually.",
+    "ExplanationWrongB": "Choice B pays Marrow $520 per hour to relieve a constraint monetizing at $480, a locked-in $40 negative spread per hour. Predictable pricing cannot rescue a proposal whose unit cost exceeds the unit value of the output it liberates, and 500 such hours compound the loss to $20,000.",
+    "ExplanationWrongC": "Choice C hides behind the benchmark incorrectly: although shifts and subcontracting fail the $480 test, the tooling passes decisively at about $50 of annual cost per released hour against $480 earned, so standing pat forfeits $322,500 of attainable annual income rather than avoiding a mistake.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-241",
+    "Section": "C",
+    "Stem": "The coating line is Flash Industries' sole production bottleneck: 7,200 hours per year, fully consumed, currently yielding an average of $480 of contribution margin per bottleneck hour after variable costs. VP of operations Daniel Reyes must choose among proposals: add Saturday shifts creating 600 extra hours per year for $310,000 of annual premium labor and utilities; install quick-change tooling, a $140,000 investment depreciated straight-line over five years plus $9,500 annual maintenance, which releases 750 hours per year; subcontract 500 coating hours to Marrow Finishing at $520 per hour; or leave the line as is. Which action should Reyes recommend?",
+    "Topic": "C.241 bottleneck-expansion-economics",
+    "UniqueConceptKey": "C-241-throughput-per-bottleneck-hour",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: named VP ranking three quantified levers plus status quo with sign flips across options, Evaluate VD(5) satisfies Rule 11 floor",
+      "Tooling: 750x480=360,000 vs 140,000/5+9,500=37,500 -> +322,500; shifts: 600x480-310,000=-22,000; subcontract: 500x(480-520)=-20,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA on relevant costing",
+      "IMA CMA Part 2 CSO Section C.4"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Sell as-is; rework would add $15,300 of cost while generating no incremental revenue.",
+      "B": "Sell as-is; the $52,200 already invested in machining makes further spending unrecoverable.",
+      "C": "Rework; operating income will be $54,000 higher than selling the units as-is.",
+      "D": "Rework; operating income will be $62,100 higher than selling the units as-is."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Counting the full reworked sales price without deducting forgone scrap revenue",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is C. Relevant costing compares only future, differential amounts: the $52,200 of machining (900 units x $58) is sunk and identical under both paths, so it drops out. Reworking versus selling as-is: incremental revenue = $86 - $9 = $77 per unit against incremental cost of $17, a net advantage of $60 per unit, or 900 x $60 = $54,000 in favor of rework. Cross-check by totals: reworked income = 900 x ($86 - $17) = $62,100 versus as-is income = 900 x $9 = $8,100, again a difference of $54,000. Okafor should authorize rework; the sunk machining investment neither favors nor penalizes either alternative and must not appear in the decision math.",
+    "ExplanationWrongA": "Choice A asserts rework produces no incremental revenue; defect-free housings sell at $86 versus $9 in the secondary market, generating $77 of additional revenue per unit, more than four times the $17 per-unit rework cost it claims goes unrewarded.",
+    "ExplanationWrongB": "Choice B reasons from the $52,200 sunk machining investment, which is common to both alternatives and therefore irrelevant; letting unrecoverable past spending dictate the future choice abandons a measurable $54,000 advantage sitting on the table.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D nets rework cost against the full regular selling price, 900 x ($86 - $17) = $62,100, but never credits the $8,100 of as-is scrap revenue forgone (900 x $9), overstating rework's advantage by exactly that amount relative to the correct $54,000.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-242",
+    "Section": "C",
+    "Stem": "Quality review at Flash Industries flagged 900 Castor gear housings with cosmetic defects discovered after $58 per unit of machining had been performed. The units can be sold as-is to a secondary-market buyer at $9 each, or reworked at an incremental cost of $17 per unit and sold through regular channels at $86 each. Cost accounting manager Grace Okafor prepares the recommendation; the $52,200 of machining cost already incurred applies to both paths. What should Flash Industries do?",
+    "Topic": "C.242 scrap-or-rework-relevant-cost",
+    "UniqueConceptKey": "C-242-rework-incremental-advantage",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: differential analysis with sunk-cost and forgone-scrap layers, Apply M(3)",
+      "Incremental rev = 86-9 = 77; net = 77-17 = 60/unit; 900x60 = 54,000; cross-check 900x69 = 62,100 vs 900x9 = 8,100 -> 54,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory (CVP analysis)",
+      "IMA CMA Part 2 CSO Section C.1"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Breakeven revenue increases by $100,000, moving from $8,000,000 to $8,100,000.",
+      "B": "Breakeven revenue increases by $771,000, tracking the fixed-cost increase directly.",
+      "C": "Breakeven revenue increases by $1,835,714.",
+      "D": "Breakeven revenue decreases by $1,411,765."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Dividing new fixed costs by the old CM ratio when both inputs change simultaneously",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is A. Breakeven revenue equals fixed costs divided by the contribution-margin ratio (formula DA-02). Before automation: $3,360,000 / 0.42 = $8,000,000. After automation: $4,131,000 / 0.51 = $8,100,000. Nair's finding is a net increase of $100,000: the 9-point ratio improvement absorbs most, but not quite all, of the $771,000 of added fixed burden. The result frames the strategic tension for management - beyond $8,100,000 of sales the richer 51-percent margin accumulates faster than before, but below that threshold Flash carries greater operating leverage and downside exposure, the classic risk-return trade-off of fixed-cost-intensive automation.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B rolls the $771,000 fixed-cost increase straight through and ignores that each automated sales dollar now contributes 51 cents rather than 42; the ratio improvement offsets all but $100,000 of the added burden, which is why breakeven barely moves.",
+    "ExplanationWrongC": "Choice C divides the new fixed costs by the old 42-percent ratio ($4,131,000 / 0.42 = $9,835,714), pretending the margin never improved; mixing tomorrow's cost base with yesterday's margin overstates breakeven by roughly $1.7 million and paints automation as far riskier than the numbers support.",
+    "ExplanationWrongD": "Choice D divides the old fixed costs by the new ratio ($3,360,000 / 0.51 = $6,588,235) and reads the gap to $8,000,000 as a decline; pairing last period's fixed burden with next period's margin flips the true direction of the change and mixes incompatible bases.",
+    "FormulaReference": "DA-02",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-243",
+    "Section": "C",
+    "Stem": "Flash Industries is studying automation of its Delta assembly cell. Current annual fixed costs run $3,360,000 with a 42-percent contribution-margin ratio. The proposed configuration lifts fixed costs to $4,131,000 but raises the contribution-margin ratio to 51 percent. Financial analyst Priya Nair has been asked to quantify how the automation changes Delta's breakeven sales revenue. What is the change?",
+    "Topic": "C.243 cm-ratio-breakeven-revenue-change",
+    "UniqueConceptKey": "C-243-automation-breakeven-shift",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: simultaneous two-input change with base-mismatch traps, Analyze D(4) exceeds Rule 11 floor of 3",
+      "Old BE = 3,360,000/0.42 = 8,000,000; new BE = 4,131,000/0.51 = 8,100,000; change = +100,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA on relevant costing (qualitative factors)",
+      "IMA CMA Part 2 CSO Section C.7"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Northgate's audited financial statements show stronger liquidity ratios than Flash Industries reports.",
+      "B": "Outsourced providers issue standardized monthly statements that simplify accounts-payable processing.",
+      "C": "Reliability of Northgate's delivery performance and the security of Flash inventory under third-party custody, because service failures at an outsourced link surface directly to Flash's own customers.",
+      "D": "Whether the job titles of vacated warehouse positions differ between the two organizations."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Judging outsourcing on cost alone while ignoring provider reliability and custody risk",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is C. Outsourcing transfers execution of a customer-facing process to another organization while accountability for outcomes stays with Flash; the decisive qualitative screens are provider reliability (on-time, in-full shipment performance) and custody/security of Flash-owned inventory, because stockouts, damage, or pilferage occurring inside Northgate's walls still present to customers as Flash failures. Financial-statement strength speaks to vendor survivability at the margin, invoicing format is clerical convenience, and job-title nomenclature is organizational trivia. Sound practice scores reliability and security dimensions alongside the modeled cost saving, weighting them heavily enough to veto an otherwise attractive price if service risk is unmanaged.",
+    "ExplanationWrongA": "Choice A substitutes balance-sheet optics for operational evidence; Northgate's liquidity ratios may hint at vendor longevity, but they say nothing about dock-to-stock accuracy, shrinkage control, or delivery reliability, the dimensions on which outsourcing engagements succeed or collapse.",
+    "ExplanationWrongB": "Choice B celebrates billing hygiene: standardized invoices shave clerical effort trivially but bear no relationship to the service-quality and custody risks that dominate outsourcing outcomes, qualifying at most as a tie-breaking administrative footnote.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D fixates on the nomenclature of vacated roles; title differences between organizations reshape org charts but have no bearing on whether Flash inventory reaches customers intact, and elevating such trivia obscures the reliability and security questions the committee exists to answer.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-244",
+    "Section": "C",
+    "Stem": "Flash Industries is evaluating a proposal to outsource finished-goods warehousing to Northgate Logistics. Controller Priya Chen reminds the sourcing committee that the financial model shows a modest four-year saving but that several non-financial factors could dominate the outcome. Committee chair Marcus Yaw asks which consideration deserves the greatest analytical weight in assessing the proposal itself.",
+    "Topic": "C.244 outsourcing-qualitative-factors",
+    "UniqueConceptKey": "C-244-outsourcing-qualitative-screen",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: discrimination among qualitative-factor salience levels, Understand ME(2) fits Rule 11 cap for U-level",
+      "Conceptual item; no computation; factor hierarchy verified against outsourcing canon (service reliability and custody dominant)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA SMA on relevant costing",
+      "IMA CMA Part 2 CSO Section C.7"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Outsource to Northgate; the arrangement saves $285,000 over the four years.",
+      "B": "Retain the warehouse in-house; outsourcing would cost $285,000 more over the four years.",
+      "C": "Outsource to Northgate; counting the equipment sale and the disappearing overhead, the deal improves results by $295,000.",
+      "D": "Retain the warehouse in-house; outsourcing would cost $380,000 more over the four years."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Treating allocated overhead as avoidable and omitting one-time sale proceeds",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is B. Only avoidable costs are relevant: $620,000 of labor + $210,000 of utilities and facility cash costs + $85,000 of maintenance = $915,000 per year disappears under outsourcing, while the $145,000 general-overhead allocation persists either way. The Northgate contract costs $1,010,000 per year, so outsourcing runs $1,010,000 - $915,000 = $95,000 MORE expensive annually, or $380,000 across the four-year term, partly offset by the one-time $95,000 equipment sale proceeds. Net four-year disadvantage of outsourcing: $380,000 - $95,000 = $285,000. Voss should recommend retention; the sale proceeds are real but too small to flip a gap that recurs every year of the contract.",
+    "ExplanationWrongA": "Choice A flips the arithmetic sign: the $95,000 annual excess of contract fees over avoidable costs accumulates AGAINST outsourcing ($380,000 less $95,000 of proceeds = $285,000), so the arrangement consumes $285,000 of income rather than creating it.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C double-counts two errors: it treats the $145,000 overhead allocation as avoidable (it continues regardless) and stacks the equipment proceeds on top, manufacturing a fictitious $295,000 advantage ((1,060,000 - 1,010,000) x 4 + 95,000) out of a genuine $285,000 disadvantage.",
+    "ExplanationWrongD": "Choice D reaches the right course through incomplete arithmetic: summing four years of the $95,000 annual excess yields $380,000, but the one-time $95,000 equipment sale never enters the tally, overstating outsourcing's penalty by exactly that recoverable amount.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-C-245",
+    "Section": "C",
+    "Stem": "Flash Industries is deciding whether to outsource finished-goods warehousing to Northgate Logistics under a four-year contract priced at $1,010,000 per year. Running the warehouse in-house costs $620,000 of labor, $210,000 of utilities and facility cash costs, and $85,000 of equipment maintenance annually; the $145,000 of general overhead currently allocated to the operation would continue under either course. Flash's handling equipment is fully depreciated but could be sold today for $95,000. Assistant controller Renata Voss prepares the comparison, ignoring taxes and time value of money. Which course minimizes Flash's cost over the four-year horizon?",
+    "Topic": "C.245 multi-year-outsourcing-comparison",
+    "UniqueConceptKey": "C-245-logistics-outsourcing-total-cost",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: avoidable-cost isolation plus one-time-proceeds netting across a multi-year term, Apply M(3)",
+      "Avoidable = 620,000+210,000+85,000 = 915,000; annual gap = 1,010,000-915,000 = 95,000 x4 = 380,000; net = 380,000-95,000 = 285,000 disadvantage",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-246",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.6",
+    "Topic": "C.246 expected-value-capacity-structure",
+    "UniqueConceptKey": "C-246-ev-capacity-structure",
+    "Stem": "Flash, a diversified manufacturer, is planning capacity for a proposed sensor-housing line and will implement exactly one of two structures for the coming year. CFO Elena Vasquez can lease a flexible cell for $180,000 per year that processes up to 40,000 units at a variable cost of $22 per unit, or she can forgo the lease and run the entire volume on overtime at a variable cost of $28 per unit with no fixed increment. Either way the line sells at $40 per unit. Demand research gives the following probabilities: 20,000 units (0.30), 35,000 units (0.50), and 50,000 units (0.20). On an expected-value basis, which capacity structure should Vasquez recommend?",
+    "Choices": {
+      "A": "Operate entirely on overtime; its expected value of $402,000 exceeds the leased cell's $387,000 by $15,000.",
+      "B": "Lease the flexible cell; its expected value is $423,000 because the high state contributes 50,000 units x $18.",
+      "C": "Lease the flexible cell; at the most likely demand of 35,000 units it earns $450,000 versus $420,000 on overtime.",
+      "D": "The structures are equivalent; expected values converge near $394,500 once high-state outcomes are averaged across both options."
+    },
+    "CorrectChoice": "A",
+    "CalculationItem": true,
+    "FormulaReference": "DA-10",
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Applying expected value while ignoring that a capacity ceiling truncates the highest-demand payoff",
+    "Authorities": [
+      "Decision theory under uncertainty (Raiffa, 1968)",
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "ExplanationCorrect": "Expected value requires probability-weighting each structure's state payoffs, and the lease's 40,000-unit ceiling must cap the high state. Lease: contribution $18/unit; payoffs are 20,000x$18-$180,000=$180,000; 35,000x$18-$180,000=$450,000; and 40,000x$18-$180,000=$540,000 (capped, not 50,000 units). EV = 0.30($180,000)+0.50($450,000)+0.20($540,000)=$387,000. Overtime: contribution $12/unit with no fixed increment; payoffs $240,000, $420,000, $600,000; EV = 0.30($240,000)+0.50($420,000)+0.20($600,000)=$402,000. Overtime wins by $15,000. For Flash, the leased cell's efficiency advantage in the modal state is outweighed by its fixed lease cost in weak demand and its ceiling in the strong state, so the variable-cost overtime structure carries the higher long-run average payoff.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This option computes the lease's high-state payoff on full 50,000-unit demand (50,000x$18-$180,000=$720,000), inflating the lease EV to $423,000. The misconception is treating demand as automatically deliverable; the cell physically processes only 40,000 units, so $180,000 of that contribution cannot occur. Capping the high state at 40,000 units drops the lease EV to $387,000, below overtime's $402,000.",
+    "ExplanationWrongC": "This option decides on the single most likely state (35,000 units), where the lease indeed earns $450,000 versus $420,000. The misconception is substituting the modal outcome for expected value, which averages all states by probability, including the weak state where the lease's fixed cost hurts and the strong state where its ceiling caps earnings at $540,000. Properly weighted, the lease yields $387,000 versus overtime's $402,000.",
+    "ExplanationWrongD": "This option blends the two structures' payoffs within each state and concludes the choices are economically identical. The misconception is that averaging across alternatives creates a valid comparison basis; each structure must be evaluated on its own probability-weighted payoffs. Computed separately, the lease yields $387,000 and overtime $402,000, a $15,000 expected advantage to overtime, so the decision is not a tie.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Evaluate with named CFO weighing two defensible capacity structures under probabilistic demand",
+      "EV_lease=(0.3x180,000)+(0.5x450,000)+(0.2x540,000)=387,000; EV_overtime=(0.3x240,000)+(0.5x420,000)+(0.2x600,000)=402,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-247",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.2",
+    "Topic": "C.247 special-order-displacement-floor",
+    "UniqueConceptKey": "C-247-special-order-displacement-floor",
+    "Stem": "Flash sells a standard pump module at $52 per unit; variable cost is $31 per unit and normal annual volume is 60,000 units against practical capacity of 68,000 units. An export broker offers a one-time order for 12,000 units. Because idle capacity is only 8,000 units, accepting the full order would displace 4,000 units of regular domestic sales, and the order also requires $18,000 of special crating and documentation costs. Controller Priya Chen must quote the minimum acceptable price per unit for the export order.",
+    "Choices": {
+      "A": "$32.50",
+      "B": "$36.00",
+      "C": "$39.50",
+      "D": "$49.83"
+    },
+    "CorrectChoice": "C",
+    "CalculationItem": true,
+    "FormulaReference": "DA-09",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Pricing a capacity-constrained special order without the lost contribution margin of displaced regular units",
+    "Authorities": [
+      "IMA management accounting guidance on relevant costing",
+      "Managerial accounting theory (opportunity cost of constrained capacity)"
+    ],
+    "ExplanationCorrect": "A capacity-constrained special order must cover its own variable costs, order-specific fixed costs, and the opportunity cost of displaced regular sales. Relevant cost = (12,000x$31) + $18,000 + (4,000x$21) = $372,000 + $18,000 + $84,000 = $474,000. Minimum price = $474,000 / 12,000 units = $39.50 per unit. At any price above $39.50, Flash's total contribution rises by accepting; below it, the $84,000 of displaced domestic contribution is surrendered for inadequate compensation. Chen should therefore quote at least $39.50 per unit for the export order.",
+    "ExplanationWrongA": "This price covers only incremental cash costs of the order itself ((12,000x$31)+$18,000)/12,000 = $390,000/12,000 = $32.50 and omits the opportunity cost entirely. The misconception is treating idle capacity as free even when the order exceeds it; because 4,000 regular units carrying $21 contribution each are displaced, the floor rises from $32.50 to the correct $39.50.",
+    "ExplanationWrongB": "This figure assumes only 2,000 regular units are displaced: ((12,000x$31)+$18,000+(2,000x$21))/$12,000 = $432,000/$12,000 = $36.00. The misconception is a capacity arithmetic slip; practical capacity of 68,000 less normal volume of 60,000 leaves 8,000 idle units, so a 12,000-unit order displaces 4,000 regular units. Restoring the full $84,000 opportunity cost raises the floor to $39.50.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "This price charges the order the full $52 selling price of the 4,000 displaced units: ((12,000x$31)+$18,000+(4,000x$52))/$12,000 = $598,000/$12,000 = $49.83. The misconception is treating lost revenue as the opportunity cost; the displaced units' $31 variable costs disappear with their sales, so only the $21 contribution margin per unit is truly sacrificed. Using contribution rather than price yields the correct $39.50 floor.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-component relevant-cost build (variable + order fixed + displacement) at routine Apply depth",
+      "Floor=(12,000x31+18,000+4,000x21)/12,000=474,000/12,000=$39.50",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-248",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.6",
+    "Topic": "C.248 minimax-regret-supplier-structure",
+    "UniqueConceptKey": "C-248-minimax-regret-supplier-structure",
+    "Stem": "Flash must configure sourcing for its actuator line, and VP of Operations Daniel Reyes is comparing two strategies across three demand states (payoffs in thousands of dollars). A dedicated low-cost line (S1) pays 120 in a weak market, 520 in steady conditions, and 480 in a surge; a flexible cellular layout (S2) pays 90, 430, and 700 respectively. Reyes builds the opportunity-loss (regret) table and will select the strategy that minimizes the maximum regret. Which decision follows?",
+    "Choices": {
+      "A": "Adopt S2; its regret entries total $120,000 against $220,000 for S1.",
+      "B": "Adopt S2; its largest regret entry is $90,000, below S1's maximum regret of $220,000.",
+      "C": "Retain S1; its average regret of about $73,333 sits well below its $220,000 worst entry, indicating contained downside.",
+      "D": "Retain S1; S2 shows a regret in every state whereas S1 shows a regret in only one state."
+    },
+    "CorrectChoice": "B",
+    "CalculationItem": true,
+    "FormulaReference": "",
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Summing or averaging regret entries instead of taking the maximum regret per strategy",
+    "Authorities": [
+      "Decision theory under uncertainty (Raiffa, 1968)",
+      "Luce and Raiffa, Games and Decisions (minimax regret criterion)"
+    ],
+    "ExplanationCorrect": "Regret equals the best payoff available in a state minus the payoff received. Column maxima are $120,000 (weak), $520,000 (steady), and $700,000 (surge). S1's regrets: 120-120=0, 520-520=0, 700-480=220, giving a maximum regret of $220,000. S2's regrets: 120-90=30, 520-430=90, 700-700=0, giving a maximum regret of $90,000. Minimax regret selects the smallest of these maxima, and $90,000 is below $220,000, so Reyes should adopt the flexible cellular layout (S2). For Flash, the flexible cell bounds the worst ex-post miss at $90,000 while the dedicated line carries $220,000 of regret exposure if demand surges.",
+    "ExplanationWrongA": "This option sums regret entries across states (S2: 30+90+0 = $120,000; S1: 0+0+220 = $220,000) instead of comparing maxima. The misconception treats total regret as the decision statistic; minimax regret deliberately examines only the single worst opportunity loss per strategy. On that criterion S2's maximum of $90,000 beats S1's $220,000, so the conclusion favors S2 but through an invalid measure that could reverse under different payoff patterns.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This option applies an average-of-regrets screen (S1: (0+0+220)/3 = about $73,333) rather than the minimax rule. The misconception is smoothing the regret distribution; minimax regret deliberately focuses on the single worst opportunity loss because the criterion guards against the most damaging ex-post mistake. Judged on its maximum, S1's $220,000 regret far exceeds S2's $90,000, so the criterion selects S2, not S1.",
+    "ExplanationWrongD": "This option counts how many states contain a nonzero regret instead of comparing the size of the largest regret. Frequency of regret is irrelevant to the criterion; a strategy may regret slightly in several states yet dominate one risking a huge single-state miss. Here S2's worst regret of $90,000 beats S1's $220,000, so the flexible layout wins even though its regret appears in two states.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Analyze requiring regret-table decomposition and criterion discrimination",
+      "Regrets S1=(0,0,220) max 220; S2=(30,90,0) max 90; minimax selects S2",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-249",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.3",
+    "Topic": "C.249 lifecycle-stage-pricing-emphasis",
+    "UniqueConceptKey": "C-249-lifecycle-stage-pricing-emphasis",
+    "Stem": "Product manager Lucia Grant is preparing Flash's pricing playbook for a new industrial filtration module and asks the pricing council which statement correctly links the product life-cycle stage to the appropriate pricing emphasis.",
+    "Choices": {
+      "A": "Maturity calls for skimming to recover development costs, while introduction pricing defends market share against imitators.",
+      "B": "Decline-stage prices should be raised steadily because shrinking industry volume makes remaining units scarcer and more valuable.",
+      "C": "Growth-stage pricing should be anchored strictly to the full-absorption cost floor, since competitive intensity is too low to matter yet.",
+      "D": "Introduction can support skimming to recoup development costs from less price-sensitive buyers, while maturity usually shifts toward defensive, competition-aware pricing as the offering becomes price-sensitive."
+    },
+    "CorrectChoice": "D",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Reversing the pricing emphases of introduction and maturity in the product life cycle",
+    "Authorities": [
+      "Life-cycle pricing theory (Dean, 1950; Kotler)",
+      "IMA CMA learning outcome: pricing decisions"
+    ],
+    "ExplanationCorrect": "Pricing objectives evolve across the life cycle. In introduction, demand comes from innovators who are relatively price-insensitive while recovery pressure from development spending is high, conditions that can support skimming (or penetration if share is the priority). By maturity, rival offerings are abundant, differentiation narrows, and buyers become price-sensitive, so pricing turns defensive and competition-aware, protecting share and contribution rather than funding cost recovery. Grant's playbook should therefore pair skimming potential with introduction and competitive defense with maturity, which is the relationship stated in the correct choice.",
+    "ExplanationWrongA": "This statement swaps the emphases of the two pivotal stages, assigning skimming to maturity and share-defense to introduction. The misconception reads the life cycle backwards; recovery pressure and price-insensitive early adopters characterize introduction, while mature markets feature intense rivalry and elastic demand that punish premium pricing. Applied literally, Flash would skim a commoditized product and discount away launch-period value.",
+    "ExplanationWrongB": "This option assumes declining industry volume lets a firm raise prices through the decline stage. The misconception equates smaller output with pricing power; in decline, excess capacity and the departure of price-conscious buyers typically force selective cuts, harvesting, or niche repositioning. Raising prices in decline usually accelerates volume loss without improving total contribution for a manufacturer of Flash's scale.",
+    "ExplanationWrongC": "This option locks growth-stage pricing to a full-absorption cost floor and dismisses competition during growth. The misconception treats mechanical cost-plus flooring as the governing tool when demand expands rapidly; growth-stage pricing must anticipate emerging rivals and scale economics, and absorption floors embed arbitrary capacity assumptions. Pricing emphasis in growth is strategic positioning, not pure cost recovery.",
+    "ExplanationWrongD": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Understand-level stage-to-strategy mapping at Moderate-Easy with no computation",
+      "Conceptual item; no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-250",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.1",
+    "Topic": "C.250 after-tax-target-profit-units",
+    "UniqueConceptKey": "C-250-after-tax-target-profit-units",
+    "Stem": "Flash's industrial valve division sells a manifold assembly with a contribution margin of $27 per unit and incurs fixed costs of $1,134,000 per year. Division managing director Omar Haddad has committed to an after-tax operating income target of $378,000; Flash's effective tax rate is 25%. Ignoring capacity limits, how many units must the division sell to reach the target?",
+    "Choices": {
+      "A": "56,000 units",
+      "B": "60,667 units",
+      "C": "18,667 units",
+      "D": "80,889 units"
+    },
+    "CorrectChoice": "B",
+    "CalculationItem": true,
+    "FormulaReference": "DA-03",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Inserting the after-tax profit directly into the target-profit numerator without grossing up for taxes",
+    "Authorities": [
+      "Managerial accounting theory; CVP target-profit model",
+      "IMA CMA learning outcome: CVP analysis"
+    ],
+    "ExplanationCorrect": "The CVP target-profit formula operates on pre-tax operating income, so the after-tax goal must first be grossed up: $378,000 / (1 - 0.25) = $504,000. Required units = (Fixed costs + Target pre-tax profit) / CM per unit = ($1,134,000 + $504,000) / $27 = $1,638,000 / $27 = 60,666.67, rounding up to 60,667 units. Haddad's division needs roughly 60,667 manifold assemblies; at that volume, contribution of $1,638,000 covers the $1,134,000 fixed base and leaves exactly the $504,000 pre-tax income that converts to $378,000 after Flash's 25% tax.",
+    "ExplanationWrongA": "This option skips the tax gross-up and inserts the after-tax goal directly into the numerator: ($1,134,000 + $378,000)/$27 = $1,512,000/$27 = 56,000 units. The misconception is forgetting that the CVP formula produces pre-tax income; 56,000 units would leave only $283,500 after Flash's 25% tax, short of Haddad's $378,000 commitment.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This option strips fixed costs from the numerator entirely: $504,000 / $27 = 18,667 units. The misconception is treating target profit as the only amount contribution must cover; contribution must first absorb the division's $1,134,000 fixed base before any income accrues. Adding fixed costs back produces the correct requirement of $1,638,000 of total contribution and 60,667 units.",
+    "ExplanationWrongD": "This option taxes the contribution margin itself ($27 x 0.75 = $20.25) and divides the pre-tax requirement by it: $1,638,000/$20.25 = 80,889 units. The misconception misapplies the tax rate to unit contribution; the correct sequence grosses up the profit target first and divides by the untaxed $27 contribution, since CVP operates on pre-tax operating income.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: chained tax gross-up plus fixed-cost addition at Apply level",
+      "Units=(1,134,000+378,000/0.75)/27=1,638,000/27=60,667",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-251",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.1",
+    "Topic": "C.251 margin-of-safety-units-formula",
+    "UniqueConceptKey": "C-251-margin-of-safety-units-formula",
+    "Stem": "During onboarding, Flash cost-accounting supervisor Maya Ito quizzes a new analyst on CVP definitions. She asks which expression states the margin of safety measured in units.",
+    "Choices": {
+      "A": "Budgeted (or actual) sales units minus breakeven sales units.",
+      "B": "Breakeven sales units minus budgeted (or actual) sales units.",
+      "C": "Fixed costs divided by the contribution margin ratio.",
+      "D": "Contribution margin per unit multiplied by breakeven sales units."
+    },
+    "CorrectChoice": "A",
+    "CalculationItem": false,
+    "FormulaReference": "DA-04",
+    "CognitiveLevel": "Remember",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Reversing the margin-of-safety subtraction or confusing unit, dollar, and ratio measures",
+    "Authorities": [
+      "Managerial accounting theory; CVP analysis",
+      "IMA CMA learning outcome: margin of safety"
+    ],
+    "ExplanationCorrect": "The margin of safety answers how far volume can fall before losses begin, so in units it is defined as budgeted (or actual) unit sales minus breakeven unit sales. The result is the cushion of units above the breakeven point; divided by budgeted units it becomes the margin-of-safety percentage, and multiplied by selling price it becomes the dollar margin of safety. Ito's analyst should recognize that the subtraction runs from expected volume down to breakeven volume, since a negative cushion would contradict operating above breakeven.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This option reverses the subtraction, placing breakeven units first. The misconception is treating the measure as a signed distance that works either way; the margin of safety is specifically the excess of planned volume over breakeven volume. Reversed, the expression yields a negative number whenever Flash operates above breakeven, which cannot represent a safety cushion.",
+    "ExplanationWrongC": "Fixed costs divided by the contribution margin ratio is the formula for the breakeven point in sales dollars, not a safety measure. The misconception confuses computing the loss threshold with measuring distance from that threshold; the margin of safety exists only after breakeven sales have been determined and then compares projected sales against them.",
+    "ExplanationWrongD": "Contribution margin per unit times breakeven units reproduces total fixed costs, because contribution exactly absorbs fixed costs at breakeven. The misconception multiplies two breakeven inputs and mistakes the product for a cushion measure; the margin of safety in units requires subtracting breakeven units from budgeted units instead.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-definition recall at Easy with formula-family distractors",
+      "Recall item; no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-252",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.2",
+    "Topic": "C.252 process-further-incremental-fixed",
+    "UniqueConceptKey": "C-252-process-further-incremental-fixed",
+    "Stem": "Flash runs a joint process yielding 6,000 gallons per run of an intermediate solvent, product Rigel. At split-off Rigel sells for $14 per gallon; processed into premium grade it sells for $23 per gallon but suffers 5% shrinkage, leaving 5,700 sellable gallons. Further processing adds variable cost of $2.50 per input gallon plus an incremental fixed charge of $9,500 per run for dedicated filtration and testing. Plant controller Renata Osei notes joint process costs of $88,000 per run, of which $52,800 is allocated to Rigel. Should Flash sell Rigel at split-off or process further, and by how much does the better choice change operating income per run?",
+    "Choices": {
+      "A": "Sell at split-off; further processing would reduce income by $30,200 per run.",
+      "B": "Process further; income rises $29,500 per run.",
+      "C": "Sell at split-off; the $47,100 incremental revenue fails to cover the $52,800 allocated joint cost.",
+      "D": "Process further; income rises $22,600 per run."
+    },
+    "CorrectChoice": "D",
+    "CalculationItem": true,
+    "FormulaReference": "DA-08",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Charging allocated joint costs or ignoring shrinkage in the sell-or-process-further comparison",
+    "Authorities": [
+      "IMA management accounting guidance on relevant costing and joint costs",
+      "Managerial accounting theory (sell-or-process-further)"
+    ],
+    "ExplanationCorrect": "Joint costs before split-off are sunk and excluded; only incremental revenues and costs beyond split-off matter. Incremental revenue = (5,700 x $23) - (6,000 x $14) = $131,100 - $84,000 = $47,100. Incremental cost = (6,000 input gallons x $2.50) + $9,500 incremental fixed = $15,000 + $9,500 = $24,500. Net advantage of processing = $47,100 - $24,500 = $22,600 per run, so Osei should recommend further processing. The dedicated filtration charge is relevant because it arises only in the process-further alternative, while the $52,800 allocation occurs under either choice and must stay out of the comparison.",
+    "ExplanationWrongA": "This option nets incremental revenue of $47,100 against $77,300 of costs, wrongly including the $52,800 joint-cost allocation alongside the true $24,500 of incremental spending, and concludes processing loses $30,200. The misconception charges sunk pre-split-off cost to one alternative; the allocation occurs under either choice, so removing it flips the answer to processing with a $22,600 gain.",
+    "ExplanationWrongB": "This option computes incremental revenue as if shrinkage did not occur: (6,000 x $23) - $84,000 = $54,000, then subtracts $24,500 of incremental cost for a $29,500 advantage. The misconception ignores the 5% volume loss; only 5,700 premium gallons are sellable, so real incremental revenue is $47,100 and the true gain is $22,600 per run, not $29,500.",
+    "ExplanationWrongC": "This option compares incremental revenue of $47,100 against the $52,800 joint-cost allocation and concludes processing destroys $5,700 of income. The misconception treats an allocated pre-split-off cost as an incremental burden of further processing; the $52,800 is incurred whether or not Rigel is processed, so it cancels out. Against the true incremental cost of $24,500, processing adds $22,600 per run.",
+    "ExplanationWrongD": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: incremental analysis with shrinkage plus incremental fixed cost at Apply level",
+      "IR=(5,700x23)-(6,000x14)=47,100; IC=(6,000x2.50)+9,500=24,500; advantage=22,600",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-253",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.5",
+    "Topic": "C.253 shadow-price-extra-machine-hours",
+    "UniqueConceptKey": "C-253-shadow-price-binding-machine-hour",
+    "Stem": "Flash's machining department has 3,000 machine hours per month, fully consumed at the current optimal product mix. FP&A director Sofia Marchetti's linear-programming solution assigns 1,000 hours to product Orion (contribution margin $41 per hour, produced up to its demand ceiling) and the remaining 2,000 hours to product Vega (contribution margin $64 per hour), whose demand remains unsatisfied. A neighboring shop will lease Flash an adjacent cell providing 200 additional machine hours per month. What is the maximum monthly lease payment Flash should justify for those hours on contribution grounds?",
+    "Choices": {
+      "A": "$8,200",
+      "B": "$10,500",
+      "C": "$12,800",
+      "D": "$0, because the department already runs at capacity"
+    },
+    "CorrectChoice": "C",
+    "CalculationItem": true,
+    "FormulaReference": "",
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Valuing extra constrained resource at a nonbinding product's rate or an average instead of the marginal rate",
+    "Authorities": [
+      "Linear programming sensitivity analysis (shadow price theory)",
+      "Managerial accounting theory; theory-of-constraints applications"
+    ],
+    "ExplanationCorrect": "The shadow price of a binding constraint equals the contribution generated by one more unit of that resource at the current optimum. Because Orion stops at its demand ceiling after 1,000 hours, every relaxed hour flows to demand-starved Vega at $64 per hour, making $64 the shadow price. Two hundred hours thus generate up to 200 x $64 = $12,800 of monthly contribution, the maximum lease payment that leaves Flash no worse off; paying below it creates net contribution and above it destroys value. Marchetti should treat $12,800 as the negotiating ceiling for the adjacent cell.",
+    "ExplanationWrongA": "This option values the extra hours at Orion's $41 hourly contribution (200 x $41 = $8,200). The misconception attaches the constraint's value to the wrong product; Orion already meets its demand ceiling, so additional hours cannot expand it. Every relaxed hour flows to Vega, whose unsatisfied demand supports $64 per hour, making the correct ceiling $12,800.",
+    "ExplanationWrongB": "This option averages the products' hourly contributions (($41+$64)/2 = $52.50) and values 200 hours at $10,500. The misconception blends rates across products when the marginal allocation is deterministic; with Orion capped by demand and Vega unconstrained, each added hour goes entirely to Vega. The governing rate is the marginal $64, giving $12,800 rather than a mixture of binding and non-binding contributions.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "This option claims added hours are worthless because the department is already fully loaded. The misconception confuses full utilization with zero marginal value; precisely because machine hours bind and Vega's demand is unserved, extra hours convert directly into sellable Vega output worth $64 of contribution per hour. Full utilization is the reason the hours are valuable, not evidence against value.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Analyze of LP sensitivity where a demand-capped mix determines the marginal hour's rate",
+      "Shadow price=$64/hour (Vega marginal); 200x64=$12,800",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-254",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.1",
+    "Topic": "C.254 automation-operating-leverage-shift",
+    "UniqueConceptKey": "C-254-automation-operating-leverage-shift",
+    "Stem": "Flash is automating a subassembly cell, replacing largely hourly direct labor with robotic equipment whose depreciation and maintenance are fixed. COO Ingrid Solberg asks the finance team to state correctly how the conversion affects the line's degree of operating leverage and risk profile.",
+    "Choices": {
+      "A": "Operating leverage rises: a larger fixed-cost base means each percentage change in sales produces a larger percentage change in operating income, magnifying results in favorable and unfavorable directions alike.",
+      "B": "Operating leverage falls, because replacing variable labor with fixed charges stabilizes operating income when volumes fluctuate.",
+      "C": "Operating leverage is unchanged, since the degree of operating leverage is governed by sales volume alone rather than the mix of fixed and variable costs.",
+      "D": "Operating leverage rises and breakeven volume falls together, because removing the hourly wage from variable cost automatically lowers the required contribution per unit."
+    },
+    "CorrectChoice": "A",
+    "CalculationItem": false,
+    "FormulaReference": "DA-05",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Believing cost-structure changes leave operating leverage unchanged or reduce business risk",
+    "Authorities": [
+      "Managerial accounting theory; CVP and operating leverage",
+      "Solomons, Divisional Performance (operating leverage exposition)"
+    ],
+    "ExplanationCorrect": "Degree of operating leverage equals contribution margin divided by operating income. Shifting cost from variable to fixed raises contribution margin per unit while enlarging the fixed base operating income must cover, so the ratio grows: at a given volume, a 1% swing in sales produces a larger percentage swing in operating income. Solberg should communicate that automation increases upside torque in strong demand and downside severity in weak demand, raising business risk even as unit economics improve. Breakeven volume typically rises with the added fixed costs, the opposite of what cheaper-variable-cost intuition suggests.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This option asserts leverage falls and earnings stabilize when fixed charges replace wages. The mistake associates cost certainty with earnings stability; fixed costs are owed regardless of volume, so they widen rather than narrow the percentage swing of operating income around any sales change. Stabilizing earnings would require lowering fixed costs, the reverse of the automation described.",
+    "ExplanationWrongC": "This option claims volume alone drives operating leverage and the cost mix is irrelevant. It ignores the formula's structure: fixed costs are precisely what separate contribution margin from operating income, so altering the mix changes the ratio mechanically even at constant volume. Holding sales fixed, adding depreciation while removing variable labor unambiguously raises measured leverage.",
+    "ExplanationWrongD": "This option pairs rising leverage with falling breakeven volume. The misconception assumes a lower variable cost per unit lowers breakeven; converting wages to depreciation raises the fixed-cost base contribution must cover each period, pushing breakeven up. Automation improves margin per unit while simultaneously increasing the volume needed to avoid losses, so the two effects move oppositely to this claim.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Understand-level directional reasoning on cost-structure change, no computation",
+      "Conceptual item; no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-255",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.2",
+    "Topic": "C.255 scrap-or-rework-defective-lot",
+    "UniqueConceptKey": "C-255-scrap-rework-defective-lot",
+    "Stem": "Quality assurance manager Tomas Lindqvist has flagged 2,400 finished pump housings that failed pressure testing; they originally cost $34 per unit to produce. A liquidator will take them as-is at $9 per unit. Alternatively, Flash can rework the lot at $11 per unit of additional variable cost plus a $4,800 incremental fixture charge, after which the units sell as B-grade at $27 per unit. On purely financial grounds, what should Flash do with the lot?",
+    "Choices": {
+      "A": "Sell as-is; the rework program recovers only $33,600 against the lot's original $81,600 investment.",
+      "B": "Rework; operating income improves $12,000 relative to selling as-is.",
+      "C": "Rework; income improves $16,800, the revenue gap net of variable rework cost alone.",
+      "D": "Rework; income improves $43,200, the full gap between reworked revenue and as-is liquidation proceeds."
+    },
+    "CorrectChoice": "B",
+    "CalculationItem": true,
+    "FormulaReference": "DA-08",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Anchoring on sunk production cost or dropping incremental fixed charges in scrap-versus-rework analysis",
+    "Authorities": [
+      "IMA management accounting guidance on relevant costing",
+      "Managerial accounting theory (sunk cost and incremental analysis)"
+    ],
+    "ExplanationCorrect": "The original $34-per-unit production cost is sunk and irrelevant; only future differences between the alternatives count. Rework: revenue 2,400 x $27 = $64,800, less variable rework 2,400 x $11 = $26,400 and the $4,800 fixture charge, for a net of $33,600. Sell as-is: 2,400 x $9 = $21,600. Rework beats selling as-is by $33,600 - $21,600 = $12,000, so Lindqvist should recommend reworking the lot into B-grade product. Both options leave the sunk manufacturing cost unaffected, which is why it never enters the ranking.",
+    "ExplanationWrongA": "This option anchors on the lot's historical cost of $81,600 (2,400 x $34) and rejects rework because its net recovery of $33,600 falls short of the investment. The misconception lets a sunk cost decide a future choice; the $81,600 is spent under either alternative. Comparing futures only, rework's $33,600 beats the $21,600 as-is proceeds by $12,000, favoring rework.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This option counts the revenue advantage over as-is proceeds ($64,800 - $21,600 = $43,200) less variable rework of $26,400, reaching $16,800, but drops the $4,800 incremental fixture charge. The misconception treats dedicated tooling as negligible; the charge exists only if rework proceeds, so it is fully relevant and reduces the advantage to the correct $12,000.",
+    "ExplanationWrongD": "This option reports the raw revenue difference ($64,800 - $21,600 = $43,200) without deducting any rework spending. The misconception compares revenues while ignoring the $26,400 variable rework cost and $4,800 fixture charge; netting both against the revenue gap leaves a $12,000 advantage, still favoring rework but by a much smaller margin.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: relevant-cost ranking with sunk anchor and incremental fixed charge at Apply depth",
+      "(2,400x27)-(2,400x11)-4,800=33,600 vs 2,400x9=21,600; advantage=12,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-256",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.3",
+    "Topic": "C.256 bundle-price-contribution-threshold",
+    "UniqueConceptKey": "C-256-bundle-contribution-threshold",
+    "Stem": "During a pricing-analyst orientation session, corporate controller Dev Patel poses Flash's standard screening question for proposed product bundles, such as pairing a rotary coupling with a matching filter kit sold as one SKU at a single price. He asks: for a bundle aimed at buyers who would otherwise purchase nothing, which threshold makes the bundle contribution-positive in itself?",
+    "Choices": {
+      "A": "The bundle price exceeds the average of the items' standalone selling prices.",
+      "B": "The bundle price exceeds the lowest standalone price among the items included.",
+      "C": "The bundle price exceeds the combined variable costs of the items included in the bundle.",
+      "D": "The bundle price exceeds the sum of the items' standalone contribution margins."
+    },
+    "CorrectChoice": "C",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "CognitiveLevel": "Remember",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Testing bundle profitability against standalone prices or margins instead of combined variable cost",
+    "Authorities": [
+      "Managerial accounting theory; contribution analysis",
+      "Pricing theory (bundling economics, Adams and Yellen, 1976)"
+    ],
+    "ExplanationCorrect": "For incremental bundle sales, customers who would otherwise buy nothing, the bundle creates positive contribution whenever its price covers the summed variable costs of the components; every dollar above that sum flows to fixed-cost recovery and profit. Standalone selling prices and contribution margins are negotiation anchors for cannibalization analysis, not the profitability threshold for genuinely new bundle volume. Patel's screen therefore starts with combined variable cost, and only when a bundle draws existing single-item buyers does Flash additionally test whether the discount versus standalone totals erodes contribution already being earned.",
+    "ExplanationWrongA": "This option benchmarks the bundle against the midpoint of standalone prices. The misconception imports a pricing-psychology anchor into a contribution screen; an average of two prices has no necessary relationship to combined variable cost, so a bundle clearing it can still destroy contribution or leave margin unexploited. The viability test sums component variable costs directly.",
+    "ExplanationWrongB": "This option benchmarks the bundle price against the cheapest component's standalone price. The misconception treats the low-ticket item as the economic floor; a two-item bundle priced above the cheaper item can still fall short of combined variable costs, and a price below it can still contribute. The decisive test sums the components' variable costs, not comparisons among standalone list prices.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "This option sets the threshold at the sum of standalone contribution margins. The misconception mixes measurement bases: contribution margins are surpluses remaining after variable costs, whereas a bundle's own viability test begins with covering variable cost itself. Requiring price to exceed summed margins would reject many bundles that are safely contribution-positive on incremental volume.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-principle recall at Easy within pricing-decision domain",
+      "Recall item; no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-257",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.6",
+    "Topic": "C.257 evpi-versus-study-fee-boundary",
+    "UniqueConceptKey": "C-257-evpi-study-fee-boundary",
+    "Stem": "Flash is sizing a regional expansion and treasurer Marcus Webb must choose between building a large facility or a small one. Payoffs under three market states (probabilities 0.35 strong, 0.40 base, 0.25 weak) are: large facility $900,000, $260,000, -$380,000; small facility $380,000, $300,000, $90,000. A research firm offers a perfectly predictive demand study for a $128,000 fee. Using expected value of perfect information, should Webb commission the study?",
+    "Choices": {
+      "A": "Commission the study; its $128,000 fee is below the $133,500 expected value of perfect information, leaving an expected net gain of $5,500.",
+      "B": "Commission the study; probability-weighted best-state outcomes total $457,500 against the $128,000 fee, an expected surplus of $329,500.",
+      "C": "Decline the study; information value is only $117,500 once the base state is assumed to keep the large facility, so the fee exceeds it.",
+      "D": "The study is worthless either way, because the large facility already maximizes the payoff in every market state."
+    },
+    "CorrectChoice": "A",
+    "CalculationItem": true,
+    "FormulaReference": "DA-11",
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Comparing the study fee to the with-information EV instead of the EVPI spread, or missing one state's improvement",
+    "Authorities": [
+      "Decision theory under uncertainty (Raiffa, 1968); EVPI",
+      "IMA CMA learning outcome: decision models under uncertainty"
+    ],
+    "ExplanationCorrect": "EV without information: large = 0.35(900,000)+0.40(260,000)+0.25(-380,000) = $324,000; small = 0.35(380,000)+0.40(300,000)+0.25(90,000) = $275,500; choose large at $324,000. With perfect information, pick the best action per state: strong keeps large ($900,000), base switches to small ($300,000), weak switches to small ($90,000); EV = 0.35(900,000)+0.40(300,000)+0.25(90,000) = $457,500. EVPI = $457,500 - $324,000 = $133,500. Since the $128,000 fee is below $133,500, Webb gains an expected $5,500 by buying the study, though the thin margin means the recommendation hinges entirely on exact probabilities and payoffs.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This option compares the fee directly to the $457,500 with-information expected value without subtracting the $324,000 achievable without information, overstating the surplus as $329,500. The misconception forgets EVPI is a spread: perfect information only improves on the best uninformed action, so its value is $457,500 - $324,000 = $133,500, leaving a much thinner $5,500 expected net gain.",
+    "ExplanationWrongC": "This option computes with-information EV as 0.35(900,000)+0.40(260,000)+0.25(90,000) = $441,500, keeping the large facility in the base state, and understates EVPI as $117,500. The misconception misses that the small facility beats the large one in the base state ($300,000 vs $260,000), which is exactly the improvement perfect information reveals. Correcting the base state restores EVPI to $133,500, above the fee.",
+    "ExplanationWrongD": "This option claims the large facility dominates every state, rendering information valueless. In fact the small facility pays more in the base state ($300,000 vs $260,000) and avoids the weak-state loss ($90,000 vs -$380,000), so foreknowledge would change two of three decisions. The dominance premise is false, and EVPI is a substantial $133,500, not zero.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Evaluate with named treasurer choosing between defensible actions at an EVPI boundary",
+      "EV_woPI=324,000; EV_wPI=457,500; EVPI=133,500; fee 128,000 leaves +5,500",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-258",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.7",
+    "Topic": "C.258 overflow-outsourcing-differential",
+    "UniqueConceptKey": "C-258-overflow-outsourcing-differential",
+    "Stem": "Flash's enclosure plant can produce 26,000 housings per month, but committed customer demand is 30,000 units at a $34 selling price. Internal variable cost is $18 per unit, and a qualified outside shop quotes $24 per unit for overflow volumes. Operations finance lead Kwame Boateng is evaluating whether to outsource the 4,000-unit excess or cap shipments at plant capacity. What is the monthly operating-income effect of outsourcing the overflow rather than turning those orders away?",
+    "Choices": {
+      "A": "Income decreases $24,000 per month.",
+      "B": "Income increases $64,000 per month.",
+      "C": "Income is unchanged, because outsourced units carry no internal contribution when the plant is full.",
+      "D": "Income increases $40,000 per month."
+    },
+    "CorrectChoice": "D",
+    "CalculationItem": true,
+    "FormulaReference": "",
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Comparing outside price to internal variable cost without recognizing that internal capacity cannot serve the units",
+    "Authorities": [
+      "IMA management accounting guidance on outsourcing decisions",
+      "Managerial accounting theory (relevant costing)"
+    ],
+    "ExplanationCorrect": "Because plant capacity is exhausted, the 4,000 excess units cannot be made internally; the realistic comparison is serving them through the outside shop versus not serving them at all. Each outsourced unit brings $34 of revenue against a $24 purchase cost, adding $10 of contribution, so outsourcing raises monthly operating income by 4,000 x $10 = $40,000. Boateng should accept the overflow arrangement: the internal $18 cost is unavailable for these units, so the $6-per-unit premium over internal cost is hypothetical, while the $40,000 gain is real and recurring at current demand levels.",
+    "ExplanationWrongA": "This option deducts the buy premium against internal cost: (4,000 x $24) - (4,000 x $18) = $96,000 - $72,000 = $24,000, concluding outsourcing hurts. The misconception compares the outside price with an internal cost Flash cannot actually incur, since the 26,000-hour plant is already committed to the first 26,000 units; measured against the true alternative of losing the sales, outsourcing adds $40,000.",
+    "ExplanationWrongB": "This option applies internal contribution per unit ($34 - $18 = $16) to the outsourced volume: 4,000 x $16 = $64,000. The misconception ignores that outsourced units carry the $24 purchase cost instead of $18 internal variable cost; their real contribution is $10 per unit, so the gain is $40,000, not $64,000.",
+    "ExplanationWrongC": "This option treats plant-full status as proof that overflow units add nothing. The misconception conflates internal contribution with total contribution; units produced outside still generate revenue and carry a real purchase cost, leaving $10 per unit. Capacity constraints limit what Flash can make internally, not what it can profitably resell through a qualified supplier.",
+    "ExplanationWrongD": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: segmented-volume outsourcing differential at Apply level",
+      "(34-24)x4,000=+40,000; wrong bases: (24-18)x4,000=24,000 and 16x4,000=64,000",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-259",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.4",
+    "Topic": "C.259 obsolete-inventory-hold-vs-scrap",
+    "UniqueConceptKey": "C-259-obsolete-inventory-hold-vs-scrap",
+    "Stem": "Flash's warehouse holds 8,000 legacy controller boards with a carrying value of $176,000 that no current product uses; assistant controller Ben Whitfield must recommend disposition. Immediate scrap returns $5 per unit, less a $12,000 certified-disposal fee. A reseller will instead take the entire lot next year at $9 per unit, but Flash would incur $26,000 of storage and insurance plus the same $12,000 disposal fee at sale. Treat cash flows as received when incurred and use a 10% one-year present-value factor of 0.909. Which disposition should Whitfield recommend?",
+    "Choices": {
+      "A": "Scrap immediately; acting now halts further erosion of the $176,000 carrying value already on the books.",
+      "B": "Hold for next year's sale; its present value of $30,906 exceeds immediate scrap proceeds of $28,000 by $2,906.",
+      "C": "Hold for next year's sale; the discounted advantage reaches $13,814 once storage costs alone are considered.",
+      "D": "Hold for next year's sale; the $6,000 nominal advantage stands without discounting because both amounts are certain."
+    },
+    "CorrectChoice": "B",
+    "CalculationItem": true,
+    "FormulaReference": "",
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Letting sunk carrying value drive disposal choice or omitting the year-two disposal fee from the comparison",
+    "Authorities": [
+      "Managerial accounting theory (relevant costing; sunk carrying values)",
+      "ASC 330 (Inventory) for lower-of-cost-or-NRV context"
+    ],
+    "ExplanationCorrect": "The $176,000 carrying value is sunk and identical under both paths, so it cannot influence the choice. Scrap now: (8,000 x $5) - $12,000 = $28,000 today. Hold and sell next year: (8,000 x $9) - $26,000 storage - $12,000 disposal = $34,000 received in one year, worth $34,000 x 0.909 = $30,906 today. Holding beats scrapping by $30,906 - $28,000 = $2,906 in present-value terms, so Whitfield should recommend storing the lot for the reseller sale. The margin is thin enough that a modest drop in the reseller price or rise in storage rates would flip the answer, which is why both years' cash flows needed explicit discounting.",
+    "ExplanationWrongA": "This option justifies immediate scrapping by stopping erosion of the $176,000 carrying value. The misconception lets an accounting balance drive a cash decision; the write-down is unavoidable regardless of timing, and the boards' economic value depends solely on future receipts. Discounted future receipts of $30,906 beat today's $28,000, so accelerating disposal sacrifices $2,906 of value.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "This option nets next-year revenue against storage only ((8,000 x $9) - $26,000 = $46,000), discounts to $41,814, and reports a $13,814 advantage. The misconception forgets the $12,000 certified-disposal fee recurs in year two under the resale path; discounting it (worth $10,908) lowers the hold option to the correct $30,906 and shrinks the advantage to $2,906.",
+    "ExplanationWrongD": "This option ranks the choices on undiscounted amounts ($34,000 vs $28,000, a $6,000 edge) despite the stem supplying a 10% factor. The misconception treats certain cash flows as immune to time value; certainty reduces risk but a dollar next year still buys less than a dollar today. Discounting trims the hold option to $30,906 and the advantage to $2,906.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Analyze separating sunk carrying value, period-specific cash flows, and discounting",
+      "Scrap=40,000-12,000=28,000; Hold PV=(72,000-26,000-12,000)x0.909=30,906; diff=2,906",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-C-260",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "C",
+    "BlueprintDomain": "Decision Analysis",
+    "LOSTag": "C.5",
+    "Topic": "C.260 non-binding-constraint-promotion",
+    "UniqueConceptKey": "C-260-non-binding-constraint-promotion",
+    "Stem": "Sales director Amir Haddadi reviews Flash's enclosure line, which offers 4,000 machine hours this period. Forecasted demand for both enclosure models would consume only 3,100 hours in total, leaving roughly 900 hours idle. Asked which model the promotion budget should emphasize, what guidance follows from product-mix analysis?",
+    "Choices": {
+      "A": "Rank the models by contribution margin per machine hour and push the top-ranked model even if some hours stay idle.",
+      "B": "Cut back the lower-margin model to build protective slack in the machining schedule.",
+      "C": "Both forecasts fit inside available hours, so no mix sacrifice exists; promote whichever model delivers the higher contribution margin per unit.",
+      "D": "Machine hours become the controlling constraint whenever utilization passes half of capacity, so mix ranking applies here."
+    },
+    "CorrectChoice": "C",
+    "CalculationItem": false,
+    "FormulaReference": "",
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ItemStyle": "single-select",
+    "CommonTrapReference": "Applying constrained-resource ranking logic when the resource is not binding",
+    "Authorities": [
+      "Managerial accounting theory; product-mix decisions under capacity constraints",
+      "Theory of constraints literature (non-binding resources)"
+    ],
+    "ExplanationCorrect": "Constrained-resource ranking matters only when demand exhausts the scarce resource. Here forecasted demand consumes 3,100 of 4,000 hours, so machine time is not binding: producing both models at full forecast sacrifices nothing, and leftover hours have no alternative contribution use. Promotion should therefore target the model with the higher contribution margin per unit, the ordinary criterion unconstrained mixes follow. Haddadi's team should re-run the ranking analysis only if demand growth pushes combined requirements toward the 4,000-hour ceiling, at which point contribution per hour regains control of the decision.",
+    "ExplanationWrongA": "This option applies contribution-per-hour ranking in a period with 900 idle hours. The misconception is reflexively using bottleneck logic when the resource is not binding; ranking exists to ration a scarce resource among competing demands, and here both demands fit comfortably. Promoting the top-ranked model while hours sit idle forfeits contribution the schedule could absorb.",
+    "ExplanationWrongB": "This option recommends suppressing the lower-margin model to create slack. The misconception imports scarcity management into a period with 900 idle hours; cutting output forfeits real contribution while protecting capacity that is not scarce. Slack has value only when the constraint binds and reliability matters, neither of which holds at 77.5% utilization driven by forecast rather than firm backlog.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "This option invents a 50%-utilization trigger for constraint status. The misconception substitutes an arbitrary threshold for the actual test: a resource constrains the mix only when total demand for it exceeds availability. At 3,100 of 4,000 hours the machining pool remains slack, so per-unit contribution, not any utilization benchmark, governs promotional emphasis.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Understand-level recognition of non-binding constraints, no computation",
+      "Conceptual item; no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  }
+,
+  {
+    "QuestionID": "P2-C-261",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-261-avoidable-cost-relevance",
+    "Topic": "C.261 avoidable-cost-relevance",
+    "Stem": "Flash Industrial Group's CFO, Marcus Webb, is reviewing a proposal to outsource production of the GX-4 bracket to an external fabricator. He asks the finance team which cost information should drive the decision. Which statement best identifies the costs that matter in a make-versus-buy evaluation?",
+    "Choices": {
+      "A": "Only avoidable costs - those Flash escapes if it buys externally - together with any opportunity costs of resources released by ending in-house production",
+      "B": "Total manufacturing cost per bracket, including allocated factory overhead that continues even if production stops entirely",
+      "C": "The historical purchase-price index for raw materials, since past spending patterns predict future supplier quotes reliably",
+      "D": "Depreciation on existing equipment, because spreading it over fewer remaining units raises the cost of continued in-house output"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "In a make-versus-buy decision the governing principle is relevance: only future costs that differ between the alternatives matter. Avoidable costs - direct materials, direct labor, variable overhead, and any fixed costs that cease when outsourcing begins - belong in the comparison, along with opportunity costs such as rent from freed capacity. Unavoidable allocations and sunk asset values continue under both options and cannot change the ranking. Business interpretation: Webb should screen every line for escapability before comparing totals, because a lower quoted price can still lose once avoidable savings are netted against what remains. Common trap: treating allocated overhead as a saving when it simply shifts onto surviving products.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B pulls in unavoidable allocated overhead that Flash will incur whether or not it outsources; because the cost does not differ between alternatives, it cannot influence the outcome. The correct approach isolates only the spend that disappears when the bracket line stops.",
+    "ExplanationWrongC": "Choice C leans on historical price trends, but past raw-material spending is sunk data; forward supplier quotes and expected future costs drive a make-versus-buy comparison. Decision relevance concerns future differential amounts, not purchasing history.",
+    "ExplanationWrongD": "Choice D elevates depreciation, a sunk charge embedded in prior equipment purchases; reallocating it across fewer units changes accounting allocation, not cash flow. Existing-asset book values are irrelevant unless disposal itself generates differential proceeds.",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Treating unavoidable allocated overhead as an outsourcing saving",
+    "Authorities": [
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.7 make-versus-buy)",
+      "Managerial accounting doctrine on relevant and avoidable costs for outsourcing decisions"
+    ],
+    "VerifiedChecks": [
+      "CalculationItem false - conceptual relevance test verified",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-262",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-262-outsourcing-relevant-cost-total",
+    "Topic": "C.262 outsourcing-relevant-cost-total",
+    "Stem": "Flash Appliance Works builds 12,000 compressor housings annually. Controller Ingrid Halvorsen's team compiled the following: variable manufacturing cost of $37 per housing; a supervisory salary of $54,000 that would be eliminated by outsourcing; other fixed overhead of $144,000 that would continue under either option. A supplier has quoted $45 per housing delivered. What should Halvorsen recommend?",
+    "Choices": {
+      "A": "Outsource, saving $48,000 per year, because full absorption cost of $49.00 per housing exceeds the $45.00 quoted price",
+      "B": "Continue making, saving $42,000 per year, because relevant costs of $498,000 to make sit below the $540,000 cost to buy",
+      "C": "Continue making, saving $96,000 per year, because the $444,000 variable spend alone is far below the $540,000 purchase bill",
+      "D": "Continue making, saving $186,000 per year, because buying would carry the $540,000 invoice plus the $144,000 continuing overhead"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The make-versus-buy principle compares avoidable (relevant) costs only. To make: 12,000 x $37 variable = $444,000 plus the $54,000 avoidable supervisory salary = $498,000. To buy: 12,000 x $45 = $540,000. The $144,000 of continuing overhead appears under both options and drops out of the comparison. Making is cheaper by $540,000 - $498,000 = $42,000, so Halvorsen should keep production in-house. Business interpretation: outsourcing would burn $42,000 of annual cash margin while freeing nothing, because the burden that remains is unavoidable either way. Common trap: quoting the $49.00 absorption unit cost, which embeds $12.00 per housing of unavoidable overhead and would reverse the recommendation.",
+    "ExplanationWrongA": "Choice A compares the $45.00 quote with a $49.00 absorption unit cost that includes $144,000 / 12,000 = $12.00 of unavoidable overhead per unit; that overhead survives outsourcing, so none of it can be saved. Stripping non-escapable costs from both sides restores the $42,000 advantage to making.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C drops the $54,000 supervisory salary from the make side, inflating the apparent saving to $96,000. That salary is precisely the kind of avoidable fixed cost that belongs in the analysis; including it lowers the true advantage of making to $42,000.",
+    "ExplanationWrongD": "Choice D charges the $144,000 continuing overhead against the buy option alone, manufacturing a phantom $186,000 saving. Costs that persist under both alternatives must be excluded from both columns; loading them onto one side distorts the ranking in either direction.",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Quoting absorption unit cost, embedding unavoidable overhead in the comparison",
+    "Authorities": [
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.7 total cost comparison)",
+      "Relevant-costing standard: differential analysis for outsourcing decisions"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: (12,000 x 37) + 54,000 = 498,000; 12,000 x 45 = 540,000; 540,000 - 498,000 = 42,000",
+      "Arithmetic verified twice - independent passes agree on 498,000 / 540,000 / 42,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-263",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-263-opportunity-rent-outsource",
+    "Topic": "C.263 opportunity-rent-outsource",
+    "Stem": "Flash Gearworks manufactures 20,000 pump housings a year at a variable cost of $26 each; $70,000 of the line's fixed supervision would disappear if production stopped, while $80,000 of shared plant costs would remain. Treasurer Desmond Okafor notes that stopping production releases a wing of the plant that a tenant has offered to lease for $95,000 per year. A supplier will deliver finished housings for $31 each. What should Okafor recommend?",
+    "Choices": {
+      "A": "Keep making, saving $30,000 per year, since avoidable production costs of $590,000 are less than the $620,000 purchase cost",
+      "B": "Keep making, saving $125,000 per year, because total buying cost of $715,000 including the lease value tops the $590,000 make cost",
+      "C": "Outsource, saving $65,000 per year, because the make option truly costs $685,000 once the $95,000 of forgone lease income is counted",
+      "D": "Outsource, saving $50,000 per year, because making costs $670,000 when the full $150,000 fixed burden is loaded onto production"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Marginal-analysis doctrine counts explicit differential costs plus opportunity costs of resources employed. Making: $26 x 20,000 = $520,000 variable + $70,000 avoidable supervision + $95,000 lease revenue sacrificed by continuing production = $685,000. Buying: $31 x 20,000 = $620,000; the $80,000 shared plant cost persists either way and is excluded. Outsourcing frees the wing for its higher-value use, saving $685,000 - $620,000 = $65,000 annually. Business interpretation: the tenant offer converts idle capacity into a measurable opportunity cost that tips the decision toward the supplier. Common trap: crediting the rent to the buy option instead of debiting it to the keep-making option, or ignoring it altogether.",
+    "ExplanationWrongA": "Choice A stops at explicit costs ($590,000 versus $620,000) and never prices the wing's $95,000 alternative use; omitting the opportunity cost understates the true cost of making by exactly the annual rent. Counting the lease flips the comparison to outsourcing by $65,000.",
+    "ExplanationWrongB": "Choice B books the lease income as an added cost of buying, inflating buy-side cost to $715,000 and flipping the answer. Rent is revenue Flash gains only if it stops making, so it enters as a cost of the make option, yielding the correct $65,000 edge for outsourcing.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D loads the entire $150,000 fixed burden onto the make column even though $80,000 persists under outsourcing; only the $70,000 avoidable slice may be charged. The error points the right way by the wrong margin - $50,000 instead of the correct $65,000.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Omitting the opportunity cost of facilities from the make option",
+    "Authorities": [
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.7 opportunity costs)",
+      "Opportunity-cost treatment in relevant-costing models for capacity decisions"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: (20,000 x 26) + 70,000 + 95,000 = 685,000; 20,000 x 31 = 620,000; 685,000 - 620,000 = 65,000",
+      "Arithmetic verified twice - independent passes agree on 685,000 / 620,000 / 65,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-264",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-264-wacm-breakeven-mix-split",
+    "Topic": "C.264 wacm-breakeven-mix-split",
+    "Stem": "Flash Beverage Systems sells its countertop carbonator at a contribution margin of $18 per unit (40 percent of volume) and its starter-kit bundle at a contribution margin of $9 per unit (60 percent of volume). Treasury analyst Priya Nair must break down next year's breakeven against $604,800 of fixed costs for the planning binder. On a constant sales mix, which analysis is correct?",
+    "Choices": {
+      "A": "Breakeven totals 48,000 units, splitting into 19,200 carbonators and 28,800 bundles, because the weighted-average contribution margin is $12.60; any mix shift toward bundles raises the required total",
+      "B": "Breakeven totals 44,800 units split evenly at 22,400 each, because the two products share the $13.50 simple-average margin equally",
+      "C": "Breakeven requires 33,600 carbonators and 67,200 bundles computed separately - 100,800 units in all - because each product must cover the full $604,800 on its own margin",
+      "D": "Breakeven totals 42,000 units, splitting into 25,200 carbonators and 16,800 bundles, reflecting the heavier weight the higher-margin carbonator carries"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Multi-product breakeven analysis requires a weighted-average contribution margin: 0.40 x $18 + 0.60 x $9 = $7.20 + $5.40 = $12.60 per unit. Breakeven units = $604,800 / $12.60 = 48,000, decomposing on the constant mix into 0.40 x 48,000 = 19,200 carbonators and 0.60 x 48,000 = 28,800 bundles. Because bundles carry half the carbonator's margin, every shift of volume toward them drags the blend below $12.60 and pushes the breakeven total upward. Business interpretation: Nair should flag mix sensitivity in the binder, since the 48,000-unit point holds only at the assumed 40/60 split and moves unit-for-unit with the weights. Common trap: averaging the two margins with equal weights, which silently rewrites the sales mix the company actually sells.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B averages $18 and $9 at 50/50 weights to get $13.50, but actual volume runs 40/60, so the true blend is $12.60. Equal weighting implies a mix Flash does not sell, cutting the breakeven to 44,800 units split evenly across two unequally weighted products.",
+    "ExplanationWrongC": "Choice C forces each product line to absorb the entire $604,800 independently, double-counting fixed costs and producing a fictitious 100,800-unit total. Fixed costs are covered once, jointly, through the blended $12.60 margin - hence 48,000 units, not the sum of two stand-alone break-evens.",
+    "ExplanationWrongD": "Choice D transposes the mix weights, applying 60 percent to the $18 carbonator and 40 percent to the $9 bundle for a $14.40 blend. With the real 40/60 weights the blend falls to $12.60, so breakeven is 48,000 units with the smaller share on the carbonator, not 42,000.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-06 Weighted Average CM",
+    "CommonTrapReference": "Equal-weight averaging of product margins, silently rewriting the sales mix",
+    "Authorities": [
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.1 CVP analysis)",
+      "Weighted-average contribution-margin method for multi-product breakeven decomposition"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 0.40 x 18 + 0.60 x 9 = 12.60; 604,800 / 12.60 = 48,000; 48,000 x 0.40 = 19,200; 48,000 x 0.60 = 28,800",
+      "Arithmetic verified twice - independent passes agree on 12.60 / 48,000 / 19,200 / 28,800",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-265",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-265-joint-process-further-increment",
+    "Topic": "C.265 joint-process-further-increment",
+    "Stem": "Flash Chemical Corporation runs a joint process costing $260,000 per batch that yields 10,000 gallons of Industrial Coolant and 15,000 gallons of Base Solvent. Coolant sells at split-off for $14 per gallon or can be refined further at an added $58,000 to sell for $21 per gallon. Solvent sells at split-off for $9 per gallon or can be polished further at an added $96,000 to sell for $15 per gallon. Controller Rosa Delgado must recommend a disposition for each product before month-end close. Which decision maximizes income from the batch?",
+    "Choices": {
+      "A": "Sell both products at split-off, because assigning the $260,000 joint cost across further processing erases the apparent gains on both lines",
+      "B": "Process both further: combined final revenue of $435,000 less $154,000 of added costs beats $275,000 of split-off revenue by $6,000",
+      "C": "The ranking depends on the joint-cost allocation basis: physical-units allocation makes polishing the Solvent pay, while sales-value allocation favors refining the Coolant",
+      "D": "Refine the Coolant further for a $12,000 advantage and sell the Solvent at split-off, since polishing it destroys $6,000; the $260,000 joint cost is irrelevant to either call"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Sell-or-process-further doctrine compares incremental revenue with incremental cost beyond split-off; the $260,000 joint cost is sunk at the split-off point and is excluded from every alternative. Coolant: ($21 - $14) x 10,000 = $70,000 incremental revenue versus $58,000 added cost, a $12,000 gain, so refine. Solvent: ($15 - $9) x 15,000 = $90,000 incremental revenue versus $96,000 added cost, a $6,000 loss, so sell at split-off. Batch income rises $12,000 relative to selling everything at split-off; processing the Solvent would hand back $6,000 of that gain. Business interpretation: Delgado locks in the maximum by judging each stream separately rather than pooling them. Common trap: aggregating the two streams, which nets the losses against gains and conceals value destruction on the Solvent line.",
+    "ExplanationWrongA": "Choice A lets the $260,000 joint cost masquerade as a barrier to further processing; that cost is already sunk at split-off and lands in the ledger under every disposition, so it cannot penalize refinement. Following it forfeits Coolant's certain $12,000 increment.",
+    "ExplanationWrongB": "Choice B pools the streams: $435,000 final revenue less $154,000 added cost beats $275,000 split-off revenue by $6,000, but pooling buries the fact that the Solvent contributes -$6,000 on its own. Selective processing captures $12,000; pooling settles for half and ships a known loser through extra work.",
+    "ExplanationWrongC": "Choice C ties the verdict to the allocation mechanic, yet any rational allocation assigns identical joint-cost dollars to a product whether it is sold or processed further, so allocation cancels out of the comparison. The increments alone decide: +$12,000 on Coolant, -$6,000 on Solvent, regardless of basis.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-08 Sell-or-Process-Further",
+    "CommonTrapReference": "Aggregating joint products, netting away a per-product loss",
+    "Authorities": [
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.2 sell-or-process-further)",
+      "Joint-cost irrelevance doctrine at the split-off point in managerial accounting"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: (21-14) x 10,000 = 70,000; 70,000 - 58,000 = 12,000; (15-9) x 15,000 = 90,000; 90,000 - 96,000 = -6,000",
+      "Arithmetic verified twice - independent passes agree on +12,000 / -6,000 dispositions",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-266",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-266-target-cost-gap-governance",
+    "Topic": "C.266 target-cost-gap-governance",
+    "Stem": "Market testing caps Flash Electronics' new sensor module at a competitive price of $148, where demand studies support 48,000 units annually. Board member Alan Reyes, chairing the investment review, holds management to a 16 percent required return on the $18,000,000 committed to the launch. Engineering's current design carries an estimated full cost of $96 per unit. Which course should Reyes approve?",
+    "Choices": {
+      "A": "Price the module at $156, the $96.00 full cost plus the $60.00 per-unit return, since cost-derived pricing protects invested capital automatically",
+      "B": "Hold price at $148 and mandate a redesign that removes at least $8.00 of unit cost, closing the gap between the $96.00 estimate and the $88.00 allowable target",
+      "C": "Approve the launch at $148 as designed and defer the return test until year-two cost reviews, since early market position outweighs first-year economics",
+      "D": "Relax the hurdle to 12 percent, which lifts the allowable cost to about $103 and validates the current $96 design without engineering change"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Target costing fixes price by the market and derives an allowable cost: required return 0.16 x $18,000,000 = $2,880,000, spread over 48,000 units = $60.00 per unit; allowable cost = $148 - $60 = $88.00. The $96.00 design overshoots by $8.00, so value engineering must close the gap before launch. Cost-based pricing at $156 ignores demonstrated willingness to pay and shrinks volume below the 48,000-unit base the return arithmetic assumes; deferral and hurdle-cutting transfer the problem to investors instead of solving it. Business interpretation: Reyes should gate funding on a signed cost-reduction plan reaching $88.00, preserving both the market position and the mandated return. Common trap: treating the required return as a markup on cost rather than as the residual of market price minus required profit.",
+    "ExplanationWrongA": "Choice A marks up full cost by the per-unit return to reach $156, eight dollars above the price the market accepts; volume would fall below the 48,000-unit base and the $2,880,000 return would fail precisely because pricing ignored demand. Target costing disciplines cost, not price.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C defers the return test, but the gap is structural: at $148 against $96 the design permanently forgoes $8.00 per unit of required profit - $384,000 each year - and post-launch cost surgery rarely recovers what design-stage engineering removes cheaply. Approval should follow the fix, not precede it.",
+    "ExplanationWrongD": "Choice D lowers the hurdle until the arithmetic flatters the design ($103 allowable against $96 actual), converting a governance control into a rubber stamp. The 16 percent rate represents investors' opportunity cost; trimming it approves value destruction rather than fixing the $8.00 gap.",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Treating the required return as a markup on cost instead of price minus profit",
+    "Authorities": [
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.3 target costing)",
+      "Target-costing governance practice: allowable cost from market price less required return"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 0.16 x 18,000,000 = 2,880,000; 2,880,000 / 48,000 = 60; 148 - 60 = 88; 96 - 88 = 8",
+      "Arithmetic verified twice - independent passes agree on 60 / 88 / 8 and the 103 figure at 12 percent",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-267",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-267-segment-drop-avoidable-fixed",
+    "Topic": "C.267 segment-drop-avoidable-fixed",
+    "Stem": "Flash Outdoor Products' Ridgeview division reported sales of $2,400,000 with variable expenses running at 62 percent of sales. Fixed costs consist of $640,000 traceable to Ridgeview that would vanish on shutdown and $310,000 of corporate allocations that would simply migrate to other divisions. CFO Yuki Tanaka must decide Ridgeview's fate. What does relevant-cost analysis support?",
+    "Choices": {
+      "A": "Shut down Ridgeview, which reports a $38,000 operating loss once the corporate allocation is absorbed",
+      "B": "Retain Ridgeview, because shutting it down would strip $912,000 of contribution margin from the company with no offsetting relief",
+      "C": "Retain Ridgeview; closing it would cut consolidated operating income by $272,000, the margin left after avoidable fixed costs",
+      "D": "Shut down Ridgeview, improving income by $348,000 once the $38,000 loss and the $310,000 reallocated overhead are counted"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Keep-or-drop analysis compares the contribution margin lost with the avoidable fixed costs saved; corporate allocations that survive the shutdown are irrelevant. Ridgeview contributes $2,400,000 x 0.38 = $912,000 against $640,000 of traceable avoidable fixed cost, leaving a positive segment margin of $272,000. Closing the division removes that $272,000 from consolidated income while the $310,000 allocation merely shifts onto surviving divisions - nobody's cash improves. Business interpretation: Tanaka should retain Ridgeview and, if the reported loss misleads the board, restate segment reporting below the allocation line rather than divest a profitable operation. Common trap: reading the post-allocation $38,000 loss as evidence that the division destroys enterprise value.",
+    "ExplanationWrongA": "Choice A accepts the $38,000 figure as decision-grade, but it nets the $310,000 allocation - a cost Flash bears with or without Ridgeview - against divisional performance. Strip the allocation and the division shows a positive $272,000 margin, reversing the call to retain.",
+    "ExplanationWrongB": "Choice B retains the division but overstates the stakes at $912,000 by assuming no fixed costs disappear on closure. Shutdown avoids $640,000 of traceable fixed cost, so the true income hit is the net $272,000 - material, yet far below the gross contribution cited.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D scores the $310,000 reallocation as a cash saving; shifting overhead to other divisions relieves nobody of it. Realizable savings stop at the $640,000 avoidable fixed, which falls short of the $912,000 contribution surrendered, so closure costs $272,000 instead of helping by $348,000.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Reading the post-allocation divisional loss as value destruction",
+    "Authorities": [
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.4 short-term relevant costing)",
+      "Segment-reporting convention: allocated common costs are not avoidable in drop decisions"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 2,400,000 x 0.38 = 912,000; 912,000 - 640,000 = 272,000; 912,000 - 640,000 - 310,000 = -38,000",
+      "Arithmetic verified twice - independent passes agree on 912,000 / 640,000 / 272,000 / -38,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-268",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-268-throughput-contribution-definition",
+    "Topic": "C.268 throughput-contribution-definition",
+    "Stem": "During an operational audit of Flash Fabrication's constraint-management program, internal auditor Owen Brady reviews how the plant reports its theory-of-constraints measures. Which definition correctly states throughput contribution as used under the Theory of Constraints?",
+    "Choices": {
+      "A": "Sales revenue less cost of goods sold as conventionally computed, including absorbed fixed manufacturing overhead",
+      "B": "Sales revenue less totally variable costs, chiefly direct materials, representing the rate at which the system generates money through sales",
+      "C": "All the money the system invests in inventory it intends to sell, measured at raw-material acquisition cost",
+      "D": "Operating expenses plus depreciation, the money spent turning inventory into throughput during the period"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Theory of Constraints accounting defines three measures: throughput (sales revenue minus totally variable costs, predominantly direct materials), inventory/investment (money committed to things intended to sell), and operating expense (all other money spent converting inventory into throughput). Throughput contribution therefore excludes absorbed fixed overhead, steady-state labor, and period allocations - it isolates the freshly created money per unit sold. Business interpretation: Brady should expect the bottleneck report to show contribution net of materials only, because mix choices at the constraint turn on that rate rather than on fully absorbed margins. Common trap: substituting conventional gross margin, which burdens throughput with fixed-overhead absorption the TOC framework deliberately strips out.",
+    "ExplanationWrongA": "Choice A recites conventional gross margin, which deducts cost of goods sold including absorbed fixed overhead; TOC excludes such allocations because they do not vary with sales through the constraint. Throughput is revenue minus totally variable cost, principally materials.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C defines the TOC measure called inventory or investment - money locked in assets the firm intends to resell - not throughput. Throughput flows only when a sale occurs; inventory sits until then and carries no revenue until converted.",
+    "ExplanationWrongD": "Choice D folds operating expense into the definition and inverts its role; operating expense is the separate TOC category for money spent turning inventory into throughput, deliberately excluded from throughput contribution so bottleneck decisions see clean incremental money.",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Remember",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Substituting conventional gross margin for TOC throughput",
+    "Authorities": [
+      "Goldratt theory-of-constraints measures: throughput, inventory, operating expense",
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.5 Theory of Constraints terminology)"
+    ],
+    "VerifiedChecks": [
+      "CalculationItem false - definitional accuracy verified against TOC measure set",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-269",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-269-credit-ev-letter-of-credit",
+    "Topic": "C.269 credit-ev-letter-of-credit",
+    "Stem": "Flash Office Supply is deciding how to ship a $400,000 order to a new regional chain. Credit manager Dana Whitfield estimates an 80 percent chance the chain pays in full, generating a $120,000 margin, and a 20 percent chance of default that would strand the $280,000 of goods shipped. A confirmed letter of credit from the chain's bank costs $30,000 and removes the default risk; declining the deal yields nothing. Decomposing the alternatives, which evaluation is correct?",
+    "Choices": {
+      "A": "Extending open credit carries an expected value of $40,000, while the letter of credit delivers a certain $90,000; Whitfield should require the LC",
+      "B": "Extending open credit carries an expected value of $16,000, writing off the full $400,000 invoice on default, so the LC's $90,000 dominates by a wider margin",
+      "C": "Extending open credit expects the full $120,000 margin, since payment odds of 80 percent reduce default to a tail event; take the open terms",
+      "D": "Decline the order, because any 20 percent default probability is unacceptable for a new counterparty regardless of payoff magnitudes"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Expected-value decision analysis weights each outcome by its probability and sums the branches. Open credit: 0.80 x $120,000 - 0.20 x $280,000 = $96,000 - $56,000 = $40,000. Letter of credit: the margin arrives with certainty, so $120,000 - $30,000 fee = $90,000. Declining yields $0. Decomposing the open-credit branch shows the 20 percent default limb destroys $56,000 of expectation; the $30,000 fee buys that risk away for a $50,000 uplift. Business interpretation: paying the bank to convert a risky $40,000 into a sure $90,000 is efficient risk transfer, and Whitfield should condition shipment on confirmed terms. Common trap: measuring default exposure at the $400,000 invoice value instead of the $280,000 of cash actually at risk.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B writes off the whole $400,000 invoice on default, overstating the loss limb by the $120,000 margin Flash never possessed; only the $280,000 shipped cost is exposure. Corrected, open credit's expectation is $40,000, not $16,000 - though the LC still wins.",
+    "ExplanationWrongC": "Choice C drops the default branch entirely, booking the $120,000 margin as if payment were assured; expected-value discipline prices every state of the world. Once the 0.20 x $280,000 limb enters, open credit falls to $40,000, well under the guaranteed $90,000.",
+    "ExplanationWrongD": "Choice D reacts to the probability label rather than the payoff structure; whether 20 percent is tolerable depends on what is won and lost, not on the percentage alone. Here magnitudes dominate: the LC converts the gamble into $90,000 certain, and declining forfeits it for zero.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.6",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-10 Expected Value",
+    "CommonTrapReference": "Measuring default exposure at invoice value rather than cash at risk",
+    "Authorities": [
+      "Expected-value decision criterion under uncertainty (probability-weighted payoffs)",
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.6 decision models under uncertainty)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 0.80 x 120,000 = 96,000; 0.20 x 280,000 = 56,000; 96,000 - 56,000 = 40,000; 120,000 - 30,000 = 90,000",
+      "Arithmetic verified twice - independent passes agree on 96,000 / 56,000 / 40,000 / 90,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-270",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-270-special-order-idle-capacity",
+    "Topic": "C.270 special-order-idle-capacity",
+    "Stem": "A big-box chain offers Flash Cookware a one-time order for 8,000 stockpot sets at $46 apiece, well under the $62 catalog price. Unit variable manufacturing cost is $34; regular orders carry $4 of variable selling cost, but this order ships collect, costing Flash only $2 per unit freight. Annual fixed overhead of $900,000 and normal volume of 60,000 units are unaffected, and the plant runs below capacity. What should treasurer Amara Diallo recommend?",
+    "Choices": {
+      "A": "Reject the offer, because full unit cost of $49.00 ($34.00 variable plus $15.00 absorbed fixed) exceeds the $46.00 bid",
+      "B": "Accept the order, which adds $48,000 after charging both the $2.00 freight and the regular $4.00 selling allowance",
+      "C": "Accept the order, which adds $80,000 to income: $368,000 of revenue less $288,000 of differential costs",
+      "D": "Reject the order, because its $10.00 unit contribution trails the $24.00 contribution earned on regular catalog sales"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Special-order analysis admits only costs that change because of the order; with idle capacity, the $900,000 of fixed overhead continues regardless and is excluded. Incremental revenue: 8,000 x $46 = $368,000. Differential costs: 8,000 x ($34 + $2) = $288,000. Net benefit: $368,000 - $288,000 = $80,000, so Diallo accepts. The $4 routine selling allowance does not apply because the customer hauls the freight, and catalog-price erosion is absent in a one-time sale to a distinct channel. Business interpretation: the order monetizes idle hours at $10.00 of contribution per pot without disturbing regular trade or fixed coverage. Common trap: benchmarking the bid against the $49.00 full cost, whose $15.00 fixed slice is irrelevant while spare capacity exists.",
+    "ExplanationWrongA": "Choice A rejects on full cost of $49.00, folding in $900,000 / 60,000 = $15.00 of fixed overhead that the under-capacity plant incurs with or without the deal; only the $36.00 differential unit cost matters, leaving $10.00 of contribution per set on the table.",
+    "ExplanationWrongB": "Choice B stacks the regular $4.00 selling allowance on top of the order's own $2.00 freight, double-charging distribution by $32,000 and shrinking the gain to $48,000. The chain's collect terms displace the routine selling cost, so it leaves the differential base entirely.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D compares unit contributions across channels and balks at $10.00 against $24.00, yet with spare capacity every incremental unit adds cash regardless of the catalog margin. Contribution-rate comparisons turn decisive only when capacity binds or regular sales are displaced - neither applies here.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Benchmarking a special order against full cost including idle-capacity overhead",
+    "Authorities": [
+      "Special-order relevant-costing rule under idle capacity",
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.2 marginal analysis, special orders)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 8,000 x 46 = 368,000; 8,000 x 36 = 288,000; 368,000 - 288,000 = 80,000",
+      "Arithmetic verified twice - independent passes agree on 368,000 / 288,000 / 80,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-271",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-271-scarce-resource-cm-per-hour",
+    "Topic": "C.271 scarce-resource-cm-per-hour",
+    "Stem": "Flash Furniture's plant can run only 9,000 machine hours next quarter, and demand exceeds capacity for every chair model it makes. Internal auditor Grace Lindqvist reviews the scheduling policy document with the planning team. Which ranking rule should govern which chairs get produced first?",
+    "Choices": {
+      "A": "Rank models by unit selling price, since the goal is maximizing the revenue generated by each scheduled hour of production",
+      "B": "Rank models by total unit contribution margin, because higher-margin chairs contribute more dollars per unit manufactured",
+      "C": "Rank models by their share of last quarter's sales volume, preserving the historical mix customers have come to expect",
+      "D": "Rank models by contribution margin per machine hour, the binding resource, so each scarce hour yields the greatest possible contribution"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "When a binding constraint limits output, products rank by contribution margin per unit of the scarce resource - not per unit of product - because the objective is maximizing total contribution from the fixed pool of 9,000 machine hours. A chair with a modest unit margin but small hour consumption can outrank a glamorous high-margin chair that hogs the bottleneck. Selling price ignores variable costs entirely, and last quarter's mix merely replicates priorities formed before the shortage appeared. Business interpretation: Lindqvist should find the schedule built from a contribution-per-hour league table, cross-checked against demand so no ranked hour is scheduled past what customers will buy. Common trap: letting unit-margin rankings starve the bottleneck of quick-turn products that earn more per hour than per chair.",
+    "ExplanationWrongA": "Choice A chases revenue while ignoring variable costs; a high-priced chair can consume bottleneck hours and materials yet leave less cash per hour than a humbler model. Constraint optimization prices each hour's contribution, not its gross sales yield.",
+    "ExplanationWrongB": "Choice B optimizes the wrong denominator: unit contribution measures a chair's productivity, but the binding scarcity is the machine hour. Maximizing dollars per unit can strand hours that a lower-margin, faster-running model would have monetized.",
+    "ExplanationWrongC": "Choice C hard-codes last quarter's demand pattern into a capacity-constrained decision; the historical mix was formed without today's shortage and carries no optimality property. Under a binding constraint, mix follows contribution per scarce hour, not tradition.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Ranking the mix by unit contribution instead of contribution per scarce hour",
+    "Authorities": [
+      "Contribution margin per unit of scarce resource under binding constraints",
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.5 capacity constraints and product mix)"
+    ],
+    "VerifiedChecks": [
+      "CalculationItem false - conceptual ranking-rule test verified",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-272",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-272-tax-target-breakeven-mos-dol",
+    "Topic": "C.272 tax-target-breakeven-mos-dol",
+    "Stem": "Flash Fitness Equipment sells a rowing machine at $120 per unit with variable costs at 40 percent of sales and fixed costs of $1,440,000. Sofia Grant, senior analyst covering Flash, is stress-testing management's plan targeting after-tax income of $540,000 (tax rate 25 percent) on forecast volume of 36,000 units. Which set of figures survives her independent recomputation?",
+    "Choices": {
+      "A": "Target volume of 27,500 units, because the $540,000 goal is met once fixed costs are covered at the $72.00 unit margin, leaving 8,500 units of cushion",
+      "B": "Target volume of 30,000 units, a unit-basis margin of safety of 20.00 percent, and degree of operating leverage of 6.00x at forecast",
+      "C": "Target volume of 30,000 units ($3,600,000 of sales), a unit-basis margin of safety of 16.67 percent, and operating leverage of 2.25x at the 36,000-unit forecast",
+      "D": "Target volume of 30,000 units, a unit-basis margin of safety of 44.44 percent, and degree of operating leverage of 6.00x at forecast"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "CVP with taxes restates the after-tax target first: $540,000 / (1 - 0.25) = $720,000 pre-tax. Required contribution = $1,440,000 + $720,000 = $2,160,000; at a $72.00 unit margin ($120 less 40 percent variable), that is 30,000 units, or $3,600,000 of sales. At the 36,000-unit forecast, unit-basis margin of safety = (36,000 - 30,000) / 36,000 = 16.67 percent. Degree of operating leverage = total contribution / operating income = (36,000 x $72.00) / ($2,592,000 - $1,440,000) = $2,592,000 / $1,152,000 = 2.25x, meaning each 1 percent sales slip dents operating income by about 2.25 percent. Grant's note should pair the healthy cushion with that leverage warning. Common traps: skipping the tax gross-up, and computing margin of safety against breakeven volume instead of forecast volume.",
+    "ExplanationWrongA": "Choice A skips the tax gross-up, chasing $540,000 of after-tax profit with pre-tax arithmetic: ($1,440,000 + $540,000) / $72 = 27,500 units. Tax takes a quarter of pre-tax income, so the true requirement is $720,000 pre-tax and 30,000 units - 2,500 more than the choice concedes.",
+    "ExplanationWrongB": "Choice B reaches the right 30,000 units but divides the 6,000-unit cushion by breakeven (30,000) for its 20.00 percent ratio; margin of safety is expressed against forecast volume (36,000), giving 16.67 percent. Its 6.00x leverage simply inverts that defective ratio.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D pastes the dollar-sales safety ratio ($1,920,000 / $4,320,000 = 44.44 percent) onto a unit-volume caption and then inverts it into 6.00x leverage. On consistent definitions the unit ratio is 16.67 percent and operating leverage is 2.25x, the reciprocal of the dollar-basis ratio.",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-03 Target Profit Units",
+    "CommonTrapReference": "Skipping the tax gross-up on the target profit",
+    "Authorities": [
+      "Cost-volume-profit analysis with income taxes: target profit grossed up to pre-tax",
+      "Margin of safety and degree-of-operating-leverage definitions in managerial accounting"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 540,000 / 0.75 = 720,000; (1,440,000 + 720,000) / 72 = 30,000; (36,000 - 30,000) / 36,000 = 0.1667; 2,592,000 / 1,152,000 = 2.25",
+      "Arithmetic verified twice - independent passes agree on 720,000 / 30,000 / 16.67% / 2.25x",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-273",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-273-cost-plus-required-return-price",
+    "Topic": "C.273 cost-plus-required-return-price",
+    "Stem": "Flash Power Tools plans to price a redesigned sander. Projected volume is 40,000 units; unit costs comprise $52 variable production, $8 variable selling and administrative, $20 absorbed fixed production overhead, and $12 fixed administrative. Management targets a 20 percent annual return on the $6,000,000 of assets devoted to the line. M&A director Viktor Hale, vetting the carve-out unit's pricing policy, expects the cost-plus quote to be:",
+    "Choices": {
+      "A": "$122.00, adding the $30.00 per-unit required return to the $92.00 total unit cost",
+      "B": "$90.00, building the quote on the $60.00 of variable costs plus the required return",
+      "C": "$110.40, applying a 20.00 percent markup directly to the $92.00 unit cost",
+      "D": "$102.00, quoting the $72.00 of production-related costs plus the $30.00 return, dropping both administrative elements"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Cost-plus pricing with a required-return overlay computes total unit cost, then adds the per-unit profit demanded by the investment base. Total unit cost: $52 + $8 + $20 + $12 = $92. Required return: 0.20 x $6,000,000 = $1,200,000, spread over 40,000 units = $30.00 per unit. Quote: $92 + $30 = $122.00. The return is a fixed-dollar obligation of the asset base, not a percentage of cost; marking up cost by 20 percent answers a different question and collects only $18.40 per unit, leaving $464,000 of required profit unpriced ($736,000 marked up versus $1,200,000 required). Business interpretation: absent strategic discounts, Hale's floor quote is $122.00. Common trap: conflating return on investment with a markup-on-cost percentage living on a different denominator.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B prices on variable cost alone ($52 + $8 = $60), treating fixed overhead and administrative spend as free; at 40,000 units those fixed elements total $1,280,000 ((20 + 12) x 40,000) that the $90.00 quote never recovers. Full-cost-based pricing governs here.",
+    "ExplanationWrongC": "Choice C converts '20 percent return on assets' into '20 percent markup on cost,' yielding $18.40 per unit instead of the $30.00 the $6,000,000 base demands. The two percentages sit on different denominators - invested capital versus unit cost - and coincide only by accident.",
+    "ExplanationWrongD": "Choice D strips the $8 variable selling and $12 fixed administrative components, quoting on a $72.00 production-only base. Administrative function is part of full cost under this pricing policy; dropping it surrenders $20.00 per unit of legitimate recovery and underprices the line.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Conflating return on investment with a markup on cost",
+    "Authorities": [
+      "Cost-plus pricing construction: full cost plus required return per unit",
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.3 pricing decisions, cost-plus)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 52 + 8 + 20 + 12 = 92; 0.20 x 6,000,000 = 1,200,000; 1,200,000 / 40,000 = 30; 92 + 30 = 122",
+      "Arithmetic verified twice - independent passes agree on 92 / 1,200,000 / 30 / 122",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-274",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-274-keep-replace-opportunity-salvage",
+    "Topic": "C.274 keep-replace-opportunity-salvage",
+    "Stem": "Flash Machine Shop operates a CNC lathe carried at a $180,000 book value on original cost of $420,000. It could be scrapped today for $70,000 or run four more years, salvaging $10,000 at the end, while incurring $130,000 of annual operating cost. A replacement lathe costs $350,000, would operate for $82,000 per year, and would carry a $40,000 salvage after four years. Controller Felix Nowak's four-year relevant-cost comparison supports:",
+    "Choices": {
+      "A": "Replace now, saving $52,000, because the lathe's $180,000 carrying value joins its $520,000 operating bill against a $638,000 replacement track",
+      "B": "Keep the lathe, whose four-year relevant cost of $580,000 - including the $70,000 salvage forgone by retaining it - undercuts the $638,000 replacement path",
+      "C": "Keep the lathe, saving $128,000, since $510,000 of operating-plus-salvage costs compare with $638,000 to replace",
+      "D": "Replace now, because the $192,000 four-year operating saving ($48,000 per year) repays the swap immediately"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Equipment-replacement analysis treats the $180,000 book value as sunk; the true cost of keeping is the salvage position surrendered plus future operating outflows. Keep: $130,000 x 4 = $520,000 operating + $70,000 salvage forgone by retaining - $10,000 residual received = $580,000. Replace: $350,000 purchase + $82,000 x 4 = $328,000 operating - $40,000 residual = $638,000. Keeping wins by $58,000 over the horizon. Business interpretation: Nowak should run the existing lathe out its remaining life and re-tender then; the paper loss on the ledger exerts no pull on cash along either path. Common trap: dragging historical cost or carrying value into a future-facing comparison, or forgetting that scrapping today harvests proceeds that retention gives up.",
+    "ExplanationWrongA": "Choice A reinstates the $180,000 carrying value as though it were a future outflow of keeping; that amount was spent years ago and vanishes from every path. Restored to relevance, keeping costs $580,000, not $690,000, and the recommendation flips to retention by $58,000.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C nets only the $10,000 terminal salvage and forgets that scrapping today would harvest $70,000; forgone proceeds are a genuine cost of retention. Adding them moves the keep-side tally from $510,000 to $580,000, shrinking the claimed $128,000 saving to the true $58,000.",
+    "ExplanationWrongD": "Choice D celebrates $192,000 of operating savings while waving through the $350,000 purchase price and the divergent salvage positions; netted properly, swapping machines costs $58,000 more over the horizon. Annualized shortcuts that ignore acquisition outlays invert capital decisions.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Dragging sunk book value into a future-facing replacement decision",
+    "Authorities": [
+      "Equipment replacement doctrine: book value is sunk; salvage forgone is an opportunity cost",
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.4 relevant costing, keep-or-replace)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 520,000 + 70,000 - 10,000 = 580,000; 350,000 + 328,000 - 40,000 = 638,000; 638,000 - 580,000 = 58,000",
+      "Arithmetic verified twice - independent passes agree on 580,000 / 638,000 / 58,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "QuestionID": "P2-C-275",
+    "Part": 2,
+    "Section": "C",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-275-seasonal-order-expected-value",
+    "Topic": "C.275 seasonal-order-expected-value",
+    "Stem": "Flash Rainwear commits to a single production run of 5,000 umbrellas at $20 each for the coming season at a $38 retail price. Treasury analyst Marco Ellis models demand: 5,000 units with probability 0.50, 3,000 units with probability 0.30, and 1,500 units with probability 0.20; unsold umbrellas are discarded with no recovery value. The expected value of the season is:",
+    "Choices": {
+      "A": "$20,333, splitting the three scenario profits equally across the demand states",
+      "B": "$49,200, weighting the two profitable-demand states and setting the low-demand result aside",
+      "C": "$57,800, entering the low-demand result as a gain rather than a deduction",
+      "D": "$40,600, the probability-weighted sum of $90,000, $14,000, and negative $43,000"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Expected-value analysis multiplies each scenario's cash outcome by its probability and sums: 0.50 x $90,000 + 0.30 x $14,000 + 0.20 x (-$43,000) = $45,000 + $4,200 - $8,600 = $40,600. Scenario profits derive from $18 of contribution per umbrella sold ($38 - $20) against the full $100,000 outlay: selling 5,000 leaves $90,000; selling 3,000 leaves $14,000; selling 1,500 sinks to -$43,000. Business interpretation: Ellis should present the run as attractive on average while flagging the one-in-five chance of a $43,000 hit - expected value summarizes the distribution, it does not remove the downside. Common trap: discarding the adverse branch or reweighting scenarios to convenience, both of which flatter the number and misprice the bet.",
+    "ExplanationWrongA": "Choice A averages the three profits with equal one-third weights, ignoring the modeled probabilities; the actual weights (0.50/0.30/0.20) tilt mass toward the strong-demand outcome and lift the expectation from $20,333 to $40,600.",
+    "ExplanationWrongB": "Choice B sums only the sunny branches (0.50 x $90,000 + 0.30 x $14,000 = $49,200) and drops the 20 percent chance of a $43,000 loss; expected value prices every state of the world, favorable or otherwise. Restoring the loss branch trims the figure to $40,600.",
+    "ExplanationWrongC": "Choice C flips the sign on the low-demand scenario, adding $8,600 instead of subtracting it; a season recovering only $27,000 of contribution against $100,000 spent loses $43,000, and its weighted effect is a deduction, not a bonus.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.6",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-10 Expected Value",
+    "CommonTrapReference": "Discarding the adverse branch of the probability tree",
+    "Authorities": [
+      "Expected-value computation: probability-weighted summation of scenario outcomes",
+      "IMA CMA Part 2 CSO Section C - Decision Analysis (C.6 decision models under uncertainty)"
+    ],
+    "VerifiedChecks": [
+      "Recomputed: 0.50 x 90,000 = 45,000; 0.30 x 14,000 = 4,200; 0.20 x -43,000 = -8,600; 45,000 + 4,200 - 8,600 = 40,600",
+      "Arithmetic verified twice - independent passes agree on 45,000 / 4,200 / -8,600 / 40,600",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  }
+,
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-276",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-276-vendor-service-reliability",
+    "Stem": "Flash Fabworks is weighing whether to outsource its fleet-maintenance program to an outside vendor. Controller Marcus Bell tells the operations review committee that Flash's relevant-cost study shows outsourcing would save $74,000 a year on paper. Which consideration is a qualitative factor that Bell should raise alongside the dollar comparison?",
+    "Choices": {
+      "A": "Whether the outside vendor's service reliability and emergency response times protect Flash's production uptime commitments",
+      "B": "How the projected $74,000 saving flows through Flash's quarterly operating budget after the transition date",
+      "C": "How much depreciation remains on the maintenance-garage equipment Flash currently owns",
+      "D": "Whether the maintenance crew's payroll burden rate was correctly included in the cost study"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Governing principle: make-or-buy (outsourcing) decisions compare avoidable differential costs, but qualitative factors such as vendor reliability, quality control, workforce morale, loss of in-house capability, and strategic flexibility sit outside the spreadsheet and can override a favorable numeric gap. Here the decisive qualitative question is whether the vendor's service reliability and response times protect production uptime; a $74,000 annual paper saving evaporates if a single slow emergency response idles a line whose output is worth far more than the saving. Business interpretation: Bell should place vendor service-level terms, transition risk, and crew-morale effects beside the $74,000 so the committee sees the full trade. Common trap: treating outsourcing as purely arithmetic and assuming the lowest relevant-cost total automatically wins.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B describes budget mechanics, not a qualitative factor; the misconception is that the timing of the saving changes the decision. Whether the $74,000 lands in quarterly budgets early or late affects reporting only, so it neither strengthens nor weakens the outsourcing case the way vendor reliability and downtime exposure do.",
+    "ExplanationWrongC": "Choice C reaches for a sunk cost; remaining depreciation on owned garage equipment is a past, unavoidable amount that no alternative recovers, and it carries no qualitative signal about future service performance. The qualitative dimension concerns forward-looking reliability and workforce effects, not book values already recorded.",
+    "ExplanationWrongD": "Choice D treats verification of the cost study as the qualitative issue; auditing the payroll burden rate sharpens the quantitative estimate but stays entirely inside the numerical comparison. The question asks which factor lies outside the spreadsheet, and vendor dependability, not data hygiene, is what can veto the favorable dollar result.",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Treating make-or-buy as purely arithmetic and overlooking qualitative factors",
+    "Authorities": [
+      "Managerial accounting theory (relevant costing and qualitative considerations in outsourcing decisions; Horngren et al.)"
+    ],
+    "Topic": "C.276 outsourcing-qualitative-factors",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Two-pass content review agreed: A is qualitative; B, C, D are quantitative-study details"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-277",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-277-supervisory-block-escapable",
+    "Stem": "Flash Precision Gears currently buys 12,000 gearbox housings a year from Corrigan Tooling at $21 each. Controller Dana Whitfield's study shows Flash could make the housing for $18 of variable cost per unit, and $50,000 of the $80,000 fixed supervisory and equipment cost tied to the part would be eliminated if production stayed outsourced. What should Flash do?",
+    "Choices": {
+      "A": "Make the housing in-house; variable cost of $216,000 beats Corrigan's $252,000 invoice by $36,000 a year",
+      "B": "Keep buying from Corrigan; the relevant cost to make is $266,000 against $252,000 to purchase",
+      "C": "Keep buying from Corrigan; the advantage reaches $44,000 once the entire $80,000 fixed block is treated as escapable",
+      "D": "Make the housing in-house; at $20.50 per unit versus $21.00, making edges out buying by $6,000 a year"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Governing principle: a make-or-buy decision compares only costs that differ between alternatives; unavoidable fixed allocations continue under either choice and are excluded, while escapable fixed cost belongs to the make option. Relevant cost to make = 12,000 x $18 + $50,000 = $266,000. Cost to buy = 12,000 x $21 = $252,000. Purchasing is cheaper by $266,000 - $252,000 = $14,000 per year, so Flash should keep buying from Corrigan. Business interpretation: the $30,000 of fixed cost that survives outsourcing, such as reassigned supervision and depreciation, sits outside the decision entirely. Common trap: comparing variable costs only, or loading the unavoidable $30,000 into the make option, both of which distort the $14,000 answer.",
+    "ExplanationWrongA": "Choice A compares variable manufacturing cost alone against the purchase invoice and ignores the $50,000 of supervisory and equipment cost that in-house production would trigger; adding that escapable block lifts make cost from $216,000 to $266,000 and flips the conclusion in favor of buying by $14,000 a year.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C overstates escapability; only $50,000 of the $80,000 block disappears with outsourcing, while $30,000 persists regardless of the decision. Treating the whole block as escapable inflates make cost to $296,000 and fabricates a $44,000 advantage instead of the true $14,000, though it preserves the buy recommendation.",
+    "ExplanationWrongD": "Choice D drops the $50,000 escapable supervisory block from the unit build-up and prices make cost at $18.00 plus the $2.50 unavoidable allocation ($20.50); that escapable block is precisely the relevant piece, and restoring it lifts make cost to $266,000, confirming buying wins by $14,000 rather than making winning by $6,000.",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Comparing variable costs only or burying unavoidable fixed cost in the make option",
+    "Authorities": [
+      "Managerial accounting theory (differential and avoidable cost analysis in make-or-buy decisions; Horngren et al.)"
+    ],
+    "Topic": "C.277 avoidable-fixed-make-versus-buy",
+    "VerifiedChecks": [
+      "Recomputed: 12,000 x 18 = 216,000; 216,000 + 50,000 = 266,000; 12,000 x 21 = 252,000; 266,000 - 252,000 = 14,000",
+      "Second independent pass agreed: buy 252,000 vs make 266,000 favors buying by 14,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-278",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-278-summit-mix-share",
+    "Stem": "Flash Outdoor Gear sells its Ridgeline stove and Summit stove in a constant 3:2 unit mix. Controller Elena Vasquez reports unit contribution margins of $24 for Ridgeline and $40 for Summit, and total fixed costs of $380,000 are budgeted for the coming year. How many Summit stoves must Flash sell to break even?",
+    "Choices": {
+      "A": "9,500 stoves, the point where Summit contribution alone absorbs all fixed costs",
+      "B": "4,750 stoves, based on a simple average of the two contribution margins",
+      "C": "5,000 stoves, the Summit share of the 12,500-unit composite breakeven volume",
+      "D": "7,500 stoves, the larger share of the composite breakeven volume"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Governing principle: multi-product breakeven uses the weighted-average contribution margin, weighting each product's unit CM by its mix share, then splits composite breakeven units back to products using that same mix. WACM = (3 x $24 + 2 x $40) / 5 = ($72 + $80) / 5 = $30.40. Composite breakeven = $380,000 / $30.40 = 12,500 units. Summit share = 12,500 x 2/5 = 5,000 stoves, with Ridgeline at 7,500. Verification: 7,500 x $24 + 5,000 x $40 = $180,000 + $200,000 = $380,000, exactly absorbing fixed costs. Business interpretation: the 3:2 mix must hold; a drift toward the lower-margin stove pushes breakeven higher. Common trap: using a single product's CM or reversing the mix shares when splitting the composite total.",
+    "ExplanationWrongA": "Choice A solves a single-product problem by dividing $380,000 by Summit's $40 margin to get 9,500 units; because both stoves share the same fixed costs under a constant 3:2 mix, breakeven must be computed on the $30.40 weighted-average margin, which puts Summit's requirement at only 5,000 units.",
+    "ExplanationWrongB": "Choice B averages the two margins equally at $32.00 instead of weighting them 3:2 toward Ridgeline's lower CM; equal weighting overstates the true $30.40 mix-weighted margin, shrinks composite breakeven to 11,875 units, and splits off just 4,750 Summits rather than the correct 5,000.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D assigns Summit the 3/5 Ridgeline share, reversing the stated mix; the 3:2 ratio means Ridgeline takes three units for every two Summits, so the 7,500 figure belongs to Ridgeline and Summit's breakeven volume is 5,000. Mix inversion is the classic multi-product breakeven error.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-06 Weighted Avg CM",
+    "CommonTrapReference": "Using a single product CM or reversing the sales mix when splitting breakeven units",
+    "Authorities": [
+      "Managerial accounting theory (multi-product CVP with constant sales mix and weighted-average contribution margin; Horngren et al.)"
+    ],
+    "Topic": "C.278 multiproduct-breakeven-wacm",
+    "VerifiedChecks": [
+      "Recomputed: (3 x 24 + 2 x 40)/5 = 30.40; 380,000/30.40 = 12,500; 12,500 x 2/5 = 5,000",
+      "Cross-foot agreed: 7,500 x 24 = 180,000; 5,000 x 40 = 200,000; sum = 380,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-279",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-279-changeover-package-slack",
+    "Stem": "Flash Drinkware runs a bottling line at 82,000 units against 100,000-unit practical capacity. CFO Adrian Cole receives a special order from Meridian Retail Group for 12,000 bottles at $26 each, well below the $38 regular price. Variable cost is $19 per unit, annual fixed overhead of $900,000 is committed either way, and the order needs a one-time $15,000 changeover-and-shipping package. Which analysis should the CFO present?",
+    "Choices": {
+      "A": "Accept; the order adds $69,000 to operating income because only the $19 variable cost and the $15,000 changeover package are incremental",
+      "B": "Decline; the $26 offer sits below the $28.00 full cost per unit built from $19 variable plus the $9.00 fixed allocation",
+      "C": "Accept; the order adds $84,000 because the changeover package is absorbed by the existing overhead pool",
+      "D": "Decline; filling the order displaces 12,000 units of regular $38 sales and forfeits $228,000 of regular contribution"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Governing principle: short-run special-order decisions compare incremental revenue with incremental costs; committed fixed overhead is unavoidable and excluded, and idle capacity means no regular sales are displaced, so there is no opportunity cost. Incremental revenue = 12,000 x $26 = $312,000. Incremental variable cost = 12,000 x $19 = $228,000. One-time incremental fixed = $15,000. Net effect = $312,000 - $228,000 - $15,000 = +$69,000 of operating income. Business interpretation: the 18,000-unit slack comfortably covers 12,000 units, regular channels stay untouched, and the $69,000 is contribution net of the changeover. Common trap: charging the $9.00-per-unit fixed allocation ($900,000 / 100,000) to the order, or assuming cannibalization of regular sales when slack exists.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B applies full absorption costing to a short-run decision; the $9.00 fixed allocation continues whether or not Flash accepts, so the $28.00 full cost is not incremental. With 18,000 units of slack the relevant figures are the $19 variable cost, the $15,000 package, and the $26 price, which together yield +$69,000.",
+    "ExplanationWrongC": "Choice C computes contribution correctly but forgets the order-specific $15,000 changeover-and-shipping package; that cost exists only if Meridian's order is accepted, so the true increment is $84,000 - $15,000 = $69,000, not $84,000. Order-driven fixed costs are just as incremental as variable ones.",
+    "ExplanationWrongD": "Choice D assumes displacement that the facts exclude; 82,000 plus 12,000 units equals 94,000, inside the 100,000-unit capacity, so no regular $38 sales are lost and the $228,000 sacrifice never occurs. Misreading the capacity constraint converts a profitable order into an apparent loser.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Charging full absorption cost or phantom displacement to a special order inside slack capacity",
+    "Authorities": [
+      "Managerial accounting theory (special-order relevant costing with capacity slack and incremental fixed costs; Horngren et al.)"
+    ],
+    "Topic": "C.279 special-order-idle-capacity",
+    "VerifiedChecks": [
+      "Recomputed: 12,000 x 26 = 312,000; 12,000 x 19 = 228,000; 312,000 - 228,000 - 15,000 = 69,000",
+      "Capacity check agreed: 82,000 + 12,000 = 94,000 <= 100,000, no displacement",
+      "Full-cost cross-check agreed: 900,000/100,000 = 9.00; 19 + 9 = 28.00",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-280",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-280-board-dual-constraint-pricing",
+    "Stem": "The board directed CFO Rowan Ibarra to price Flash Climateworks' new Solstice heat pump so it recovers full absorption cost and earns an 18 percent return on the $2,400,000 invested in the launch. Engineering plans 48,000 units at $34 variable cost per unit with $672,000 of annual fixed cost, so absorption cost is $48.00 per unit. Market research shows comparable units retail between $52 and $60, with the closest competitor at $58. Which recommendation should Ibarra bring to the board?",
+    "Choices": {
+      "A": "Price at $48.00 to match full absorption cost and rely on volume beyond the 48,000-unit plan to generate the profit",
+      "B": "Price at $56.64 by applying the 18 percent target directly as a markup on the $48.00 absorption cost",
+      "C": "Price at $52.00 to undercut the competitor decisively and win share even though planned volume returns only about 8 percent",
+      "D": "Price at $57.00, which covers the $672,000 fixed base and delivers exactly $432,000, the 18 percent return, inside the observed $52 to $60 market range"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Governing principle: ROI-based target pricing sets price equal to unit variable cost plus unit fixed cost plus required return per unit, where required return per unit = (investment x target ROI) / planned volume. Required profit = $2,400,000 x 0.18 = $432,000, or $9.00 per unit at 48,000 units. Unit fixed cost = $672,000 / 48,000 = $14.00. Price = $34 + $14 + $9 = $57.00. Verification: ($57 - $34) x 48,000 - $672,000 = $1,104,000 - $672,000 = $432,000 = 18.00% of investment, and $57 sits within the $52-$60 market band. Business interpretation: only $57.00 satisfies both board constraints simultaneously; $48.00 recovers cost but earns nothing, $56.64 falls $17,280 short of the return, and $52.00 yields $192,000 (8.00%). Common trap: applying the ROI percentage as a cost markup instead of converting required profit into dollars per unit.",
+    "ExplanationWrongA": "Choice A meets the cost-recovery half of the mandate but earns zero profit at planned volume, returning 0.00% on the $2,400,000 investment; the board required an 18 percent return, and deferring to unspecified volume beyond the 48,000-unit plan does not satisfy the directive.",
+    "ExplanationWrongB": "Choice B conflates the ROI target with a markup on cost; $48.00 x 1.18 = $56.64 generates ($56.64 - $34) x 48,000 - $672,000 = $414,720 of profit, falling $17,280 short of the required $432,000 because a markup applies to unit cost, not to the invested capital base.",
+    "ExplanationWrongC": "Choice C wins share on paper but returns ($52 - $34) x 48,000 - $672,000 = $192,000, about 8.00% on investment; the deep undercut sacrifices roughly $240,000 of annual profit versus the compliant $57.00 price without any board authorization to miss the return hurdle.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-03 Target Profit",
+    "CommonTrapReference": "Applying the ROI percentage as a cost markup instead of required profit per unit",
+    "Authorities": [
+      "Managerial accounting theory (ROI-based target pricing balancing cost recovery and required return; Horngren et al.)"
+    ],
+    "Topic": "C.280 roi-target-pricing-recommendation",
+    "VerifiedChecks": [
+      "Recomputed: 2,400,000 x 0.18 = 432,000; 672,000/48,000 = 14.00; 34 + 14 + 9 = 57.00",
+      "Markup-error path agreed: 48 x 1.18 = 56.64; (56.64 - 34) x 48,000 - 672,000 = 414,720, short 17,280",
+      "Market-fit path agreed: (52 - 34) x 48,000 - 672,000 = 192,000; 192,000/2,400,000 = 8.00%",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-281",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-281-two-tier-opportunity-floor",
+    "Stem": "CFO Lena Hartmann is arbitrating a transfer-price dispute between two Flash divisions. Flash Drivetrains operates 45,000 units of capacity, currently sells 39,000 shafts to outside customers at $36, and spends $22 of variable cost per shaft; outside demand is capped at 39,000 units. Flash Assembly wants 10,000 shafts transferred internally and can alternatively buy them from an outside supplier at $31. What is the minimum transfer price Drivetrains should accept for the full 10,000-unit order?",
+    "Choices": {
+      "A": "$22.00, the variable cost, because 10,000 units fit within the division's 45,000-unit capacity",
+      "B": "$27.60, blending the $22.00 floor on 6,000 slack-capacity units with $36.00 on the 4,000 units pulled from outside sales",
+      "C": "$31.00, Assembly's outside quote, because any lower price simply hands surplus to the buying division",
+      "D": "$36.00, the outside market price applied to the entire order to protect Drivetrains' reported margin"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Governing principle: the general transfer-pricing rule sets the floor at incremental outlay cost plus opportunity cost of the capacity consumed. Drivetrains holds only 6,000 units of true slack (45,000 capacity - 39,000 external demand), so the first 6,000 transferred units carry just the $22.00 variable cost, while the remaining 4,000 displace outside sales priced at $36.00 and carry an opportunity cost equal to their $14.00 forgone contribution ($36 - $22), pricing those units at $36.00. Weighted floor = (6,000 x $22 + 4,000 x $36) / 10,000 = ($132,000 + $144,000) / 10,000 = $27.60. Business interpretation: any negotiated price between $27.60 and Assembly's $31.00 alternative benefits the company as a whole, giving Hartmann a workable settlement zone. Common trap: quoting variable cost whenever idle capacity appears without testing whether the internal order exceeds that slack.",
+    "ExplanationWrongA": "Choice A reads total capacity instead of available slack; outside customers already absorb 39,000 units, leaving only 6,000 idle. Applying $22.00 to all 10,000 ignores the $14-per-unit contribution surrendered on the 4,000 displaced shafts, understating the true floor by $5.60 per unit on average.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C quotes the buying division's outside option, which acts as a ceiling on company-wide benefit rather than Drivetrains' floor; at $31.00 the selling division captures the entire internal surplus and Assembly gains nothing against its alternative. The floor question concerns outlay cost plus sacrificed contribution, computed at $27.60.",
+    "ExplanationWrongD": "Choice D applies the $36 market price to all 10,000 units even though 6,000 can come from slack that no outside buyer wants; that overstates the floor, pushes Assembly toward its $31.00 supplier, and forfeits up to $34,000 of company-wide benefit relative to a transfer inside the $27.60-$31.00 zone.",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-09 Min Transfer Price",
+    "CommonTrapReference": "Quoting variable cost as the floor without testing whether the order exceeds slack capacity",
+    "Authorities": [
+      "Managerial accounting theory (general transfer-pricing rule: outlay cost plus opportunity cost under partial capacity constraint; Horngren et al.)"
+    ],
+    "Topic": "C.281 transfer-floor-partial-displacement",
+    "VerifiedChecks": [
+      "Recomputed: 6,000 x 22 = 132,000; 4,000 x 36 = 144,000; (132,000 + 144,000)/10,000 = 27.60",
+      "Opportunity-cost pass agreed: displaced-unit floor = 22 + (36 - 22) = 36",
+      "Zone check agreed: (31 - 27.60) x 10,000 = 34,000 negotiable benefit",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-282",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-282-beta-milling-yield",
+    "Stem": "Flash Fluidpower's CNC milling center is the binding constraint on its valve line. Operations controller Tomas Lindgren is ranking products by throughput contribution per milling hour. For the Beta valve, the selling price is $90 per unit, materials are the only totally variable cost at $30 per unit (labor and overhead of $15 per unit are committed and expensed as period costs), and each unit occupies 10 minutes of milling time. What throughput contribution does one milling hour of Beta production generate?",
+    "Choices": {
+      "A": "$540 per hour, crediting the mill with six units at the full $90 selling price",
+      "B": "$90 per hour, reporting the single-unit selling price as the hourly yield",
+      "C": "$360 per hour, netting materials first and crediting six units per milling hour",
+      "D": "$270 per hour, after deducting the $15-per-unit committed conversion charge"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Governing principle: Theory of Constraints throughput contribution equals selling price minus totally variable costs, conventionally direct materials; all other operating expenses are treated as fixed period costs, so products are ranked by throughput earned per hour of the binding constraint. Beta throughput per unit = $90 - $30 = $60. Units per milling hour = 60 minutes / 10 minutes = 6. Throughput per hour = $60 x 6 = $360. Business interpretation: every milling hour devoted to Beta returns $360 toward covering Flash's operating expenses and profit, so Beta outranks any product yielding less per constraint hour regardless of its unit margin. Common trap: deducting the $15 committed conversion charge or ranking products by unit contribution margin instead of constraint-hour throughput.",
+    "ExplanationWrongA": "Choice A prices the hour at $90 x 6 units = $540 by using full selling price; throughput accounting nets the $30 totally variable material cost from every unit first, leaving $60 x 6 = $360. Revenue alone overstates what the constraint earns because each unit consumes materials.",
+    "ExplanationWrongB": "Choice B reports the raw selling price as the hourly yield, skipping both the contribution calculation and the cycle-time conversion; one hour produces six Beta units worth $60 each after materials, so the hour yields $360, not the $90 single-unit price.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D deducts the $15-per-unit committed conversion charge, computing ($90 - $30 - $15) x 6 = $270; under throughput accounting that conversion spend is a fixed period cost identical whether the mill runs or sits idle, so it stays out of the per-product ranking and only truly variable materials reduce throughput.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Deducting committed conversion cost or ranking by unit margin instead of constraint-hour throughput",
+    "Authorities": [
+      "Managerial accounting theory (Theory of Constraints throughput contribution and bottleneck-hour ranking; Goldratt; Horngren et al.)"
+    ],
+    "Topic": "C.282 throughput-constraint-hour",
+    "VerifiedChecks": [
+      "Recomputed: (90 - 30) = 60; 60/10 minutes = 6 units x 60 = 360",
+      "Error-path checks agreed: 90 x 6 = 540; (90 - 30 - 15) x 6 = 270",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-283",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-283-perfect-foresight-ceiling",
+    "Stem": "During a working-capital briefing, credit manager Sofia Anders asks analyst Dev Patel how Flash should value a proposed upgrade to its demand-forecasting service before negotiating the contract. Which statement correctly defines the expected value of perfect information (EVPI)?",
+    "Choices": {
+      "A": "It is the probability-weighted average of the payoffs across all demand scenarios",
+      "B": "It is the gap between the expected payoff under perfect foresight and the expected payoff of the best choice made under uncertainty",
+      "C": "It is the spread between the highest and lowest payoff observed across the demand scenarios",
+      "D": "It is the invoice amount the forecasting vendor charges for its service"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Governing principle: EVPI measures the worth of eliminating uncertainty entirely; it equals the expected payoff with perfect information minus the expected payoff of the optimal decision made without it, where the perfectly informed figure weights the best payoff in each state and the unaided figure belongs to the single act with the highest expected value. Because foreknowledge lets Flash pick the best payoff in every scenario while the ordinary decision commits to one course across all states, the difference is always zero or positive. Business interpretation: EVPI caps what Anders should pay for the forecast upgrade; contracting above that gap destroys value however accurate the service proves. Common trap: confusing EVPI with expected monetary value itself, with the payoff range, or with the vendor's invoice price.",
+    "ExplanationWrongA": "Choice A defines expected monetary value for a single course of action rather than the value of information; EVPI compares two expected figures, the perfectly informed result against the best uninformed choice, instead of averaging payoffs within one strategy.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C describes the payoff range, a dispersion statistic that ignores probabilities and choice; EVPI depends on both the likelihood of each state and which act Flash would select, so two problems sharing an identical range can carry entirely different values of perfect information.",
+    "ExplanationWrongD": "Choice D mistakes a market price for a decision measure; the vendor's invoice is what Flash pays, while EVPI is the most that payment could rationally justify. Comparing the two determines whether to buy the service, but they remain separate concepts that answer different questions.",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Remember",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.6",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-11 Value of Perfect Information",
+    "CommonTrapReference": "Confusing EVPI with expected monetary value or with the vendor's invoice price",
+    "Authorities": [
+      "Decision analysis theory (expected monetary value, perfect information, and EVPI definition; CMA Part 2 CSO Decision Analysis)"
+    ],
+    "Topic": "C.283 evpi-definition",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Two-pass definitional review agreed: B states EVwithPI minus EVwithoutPI"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-284",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-284-forecast-cushion-compression",
+    "Stem": "Treasurer Nathan Okoye is briefing Flash Ceramics' finance committee on risk. Last year sales were $1,250,000 with variable expenses at 62 percent of sales and fixed costs of $304,000. The forecast now on the table shows revenue falling 20 percent to $1,000,000 while fixed commitments climb to $340,000 and the variable ratio holds. Which assessment best characterizes how Flash's cushion changes?",
+    "Choices": {
+      "A": "Breakeven climbs from $800,000 to about $894,737, so the margin of safety thins from 36.00% to 10.53% and leaves little room for forecast error",
+      "B": "Measured against breakeven rather than sales, the cushion runs from 56.25% down to 11.77%",
+      "C": "The cushion holds near 38.00% in both years because the contribution margin ratio stays steady across the volume levels",
+      "D": "Breakeven remains at last year's $800,000, so the safety margin merely slips from 36.00% to 20.00%"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Governing principle: breakeven sales equal fixed costs divided by the contribution margin ratio, and the margin-of-safety percentage equals (sales - breakeven sales) / sales. CM ratio = 1 - 0.62 = 0.38. Last year: breakeven = $304,000 / 0.38 = $800,000; MOS% = ($1,250,000 - $800,000) / $1,250,000 = 36.00%. Forecast: breakeven = $340,000 / 0.38 = $894,736.84 (about $894,737); safety margin = $105,263 / $1,000,000 = 10.53%. Business interpretation: a further revenue shortfall of roughly 10.5 percent would erase all forecast profit, against a 36-point buffer last year, so Okoye should flag severe compression of the downside cushion. Common trap: dividing the dollar margin by breakeven instead of sales, or freezing breakeven at last year's fixed-cost base.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B swaps the denominator, dividing each dollar safety margin by breakeven sales ($450,000 / $800,000 = 56.25%; $105,263 / $894,737 = 11.77%); the standard margin-of-safety percentage uses actual or budgeted sales as its base, giving 36.00% and 10.53% respectively.",
+    "ExplanationWrongC": "Choice C equates the contribution-margin ratio with the margin of safety; the 38.00% ratio measures contribution earned per sales dollar, while the safety margin measures distance above breakeven. Rising fixed costs compress the cushion even when the contribution ratio holds perfectly steady.",
+    "ExplanationWrongD": "Choice D freezes breakeven at $800,000 by ignoring the fixed-cost climb to $340,000; recomputing moves breakeven to about $894,737, cutting the forecast cushion to 10.53%, far below the 20.00% that the stale-base shortcut reports and materially understating the risk.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.1",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-04 Margin of Safety",
+    "CommonTrapReference": "Dividing safety margin by breakeven sales or holding breakeven at the prior fixed-cost base",
+    "Authorities": [
+      "Managerial accounting theory (breakeven and margin-of-safety analysis under changing cost structure; Horngren et al.)"
+    ],
+    "Topic": "C.284 margin-of-safety-erosion",
+    "VerifiedChecks": [
+      "Recomputed: 304,000/0.38 = 800,000; 450,000/1,250,000 = 36.00%; 340,000/0.38 = 894,737; (1,000,000 - 894,737)/1,000,000 = 10.53%",
+      "Consistency pass agreed: forecast OI = 1,000,000 x 0.38 - 340,000 = 40,000, matching MOS$ x CMR",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-285",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-285-glycol-separable-increments",
+    "Stem": "One distillation batch at Flash Specialty Chemicals, jointly costing $250,000, yields 12,000 gallons of Glycol J and 8,000 gallons of Glycol K. Glycol J sells at split-off for $16 per gallon but becomes a $26 premium product after separable processing that costs $9 per gallon. Glycol K sells at split-off for $11 per gallon, and processing it further costs $6 per gallon to reach a $16 grade. Controller Ingrid Halvorsen must recommend the plan that maximizes income from the batch. Which plan should she recommend?",
+    "Choices": {
+      "A": "Sell both glycols at split-off and skip all further processing",
+      "B": "Process both glycols into their premium grades",
+      "C": "Process Glycol J further and sell Glycol K at split-off",
+      "D": "Process Glycol K further and sell Glycol J at split-off"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Governing principle: joint costs are sunk at the split-off point and stay irrelevant; each product is judged separately on incremental revenue versus separable processing cost. Glycol J: incremental revenue = ($26 - $16) x 12,000 = $120,000 versus separable cost = $9 x 12,000 = $108,000, a gain of $12,000, so process further. Glycol K: incremental revenue = ($16 - $11) x 8,000 = $40,000 versus separable cost = $6 x 8,000 = $48,000, a loss of $8,000, so sell at split-off. Business interpretation: Halvorsen's mixed plan earns $12,000 more than selling both at split-off and $8,000 more than processing both, capturing J's upside while dodging K's drag. Common trap: allocating the $250,000 joint cost per gallon and letting that allocation drive the decision.",
+    "ExplanationWrongA": "Choice A forgoes Glycol J's positive increment; processing J adds $120,000 of revenue against $108,000 of separable cost, so skipping all further processing leaves $12,000 of income unearned even though K genuinely belongs at split-off.",
+    "ExplanationWrongB": "Choice B processes Glycol K despite a negative increment; K's added revenue of $40,000 falls short of its $48,000 processing bill, destroying $8,000. The favorable case for J does not extend to K, because each product must clear its own separable-cost test.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D reverses the increments, processing K while withholding J; the swap abandons J's +$12,000 gain and books K's -$8,000 loss anyway, landing $20,000 below the optimal mixed plan. Transposing product-by-product conclusions like this is a common copy error in joint-cost settings.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.2",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-08 Sell-or-Process-Further",
+    "CommonTrapReference": "Allocating joint cost per gallon instead of weighing incremental revenue against separable cost",
+    "Authorities": [
+      "Managerial accounting theory (joint and byproduct costing: sell-or-process-further at split-off; Horngren et al.)"
+    ],
+    "Topic": "C.285 joint-splitoff-plan",
+    "VerifiedChecks": [
+      "Recomputed: (26-16) x 12,000 = 120,000 vs 9 x 12,000 = 108,000, gain 12,000; (16-11) x 8,000 = 40,000 vs 6 x 8,000 = 48,000, loss 8,000",
+      "Plan comparison agreed: mixed +12,000 beats process-both +4,000 by 8,000 and sell-both 0 by 12,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-286",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-286-market-derived-design-target",
+    "Stem": "Retailers tell Flash Home Systems that its next connected thermostat cannot command more than a $92 shelf price, yet the board still requires its normal profit margin on the model. Controller Amara Diallo is explaining target costing to the design team. Which statement describes how the allowable unit cost is determined?",
+    "Choices": {
+      "A": "Add the standard markup to the engineered bill-of-materials cost and test whether shoppers accept the resulting price",
+      "B": "Carry forward last year's actual unit cost adjusted for component inflation as the allowable cost",
+      "C": "Set the allowable cost from Flash's internal efficiency studies, since competitor prices stay outside the calculation",
+      "D": "Subtract the required profit margin from the market-established selling price and challenge engineering to build the product to that cost"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Governing principle: target costing reverses cost-plus logic; the market fixes the selling price, management deducts the required profit margin, and the residual becomes the allowable cost that design, sourcing, and production must achieve. Allowable cost = market-established price - required profit per unit, so the thermostat team receives $92 less the board's margin as its cost challenge, closed through value engineering and design-to-cost iterations. Business interpretation: cost becomes a planning target derived from customers and competitors rather than a starting point marked up, aligning the product with what the channel will bear before a single component is specified. Common trap: sliding back into cost-plus reasoning by marking up engineered cost and hoping the market absorbs the price.",
+    "ExplanationWrongA": "Choice A restates cost-plus pricing, the approach target costing replaces; marking up engineered cost and testing shopper tolerance puts Flash's internals ahead of the market and risks pricing past the $92 ceiling the retailers have already imposed.",
+    "ExplanationWrongB": "Choice B anchors the allowable cost in history; last year's actuals inflated forward ignore both the current $92 market constraint and the required margin, which together define the target regardless of what the previous thermostat cost to build.",
+    "ExplanationWrongC": "Choice C excludes competitors and the market from the computation; under target costing the allowable cost exists precisely because market conditions cap the price at $92, so internal efficiency studies shape how the target is met, not what the target is.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.3",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Sliding back into cost-plus markup logic when the market caps the price",
+    "Authorities": [
+      "Managerial accounting theory (target costing: allowable cost derived from market price minus required profit; Horngren et al.)"
+    ],
+    "Topic": "C.286 target-costing-allowable-cost",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Two-pass review agreed: D states the market-derived allowable-cost logic"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-287",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-287-bundle-spillover-waterfall",
+    "Stem": "Flash Instruments' Niche line reports a $35,000 annual loss: revenue $420,000, variable costs $300,000, avoidable direct fixed costs $85,000, and $70,000 of allocated corporate charges. Controller Yusuf Adeyemi's follow-up study shows closing Niche would free laboratory space renting for $28,000, but about 10 percent of the Edge line's $500,000 contribution margin comes from buyers who bundle Edge with Niche and would drift away. Should Flash drop Niche, and why?",
+    "Choices": {
+      "A": "Drop the line; eliminating its reported $35,000 loss is pure improvement to company results",
+      "B": "Drop the line; removing the $35,000 reported loss while collecting $28,000 of rent lifts income by $63,000",
+      "C": "Keep the line; dropping it would cut total income by $57,000 once recovered rent and lost Edge bundling are counted",
+      "D": "Drop the line; treating the $70,000 corporate allocation as avoidable swings the verdict positive by $13,000"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Governing principle: a segment-drop decision compares contribution margin preserved against escapable fixed cost saved, adding opportunity inflows and spillover effects, while allocated common costs continue either way and stay out of the analysis. Waterfall from dropping: lose Niche contribution -$120,000 ($420,000 - $300,000); save avoidable fixed +$85,000; collect rent +$28,000; lose bundled Edge contribution -$50,000 (10% x $500,000); net change = -$120,000 + $85,000 + $28,000 - $50,000 = -$57,000. Business interpretation: Niche covers its own escapable costs, funds $35,000 of common charges, and anchors Edge demand, so the reported loss is an artifact of the allocation. Common trap: reading the reported segment loss, or the allocation line, as the decision quantity instead of rebuilding the relevant waterfall.",
+    "ExplanationWrongA": "Choice A treats the reported $35,000 loss as removable; that figure embeds $70,000 of corporate charges that persist after closure, while dropping also surrenders $120,000 of contribution against only $85,000 of avoided fixed cost, so closure damages results.",
+    "ExplanationWrongB": "Choice B assumes closure erases the whole reported loss; only $85,000 of Niche's cost structure escapes, and the $50,000 Edge bundling bleed is missing entirely, so the $28,000 rent offsets barely half of the net damage rather than producing a $63,000 gain.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D flips the call by declaring the $70,000 corporate allocation avoidable; those charges survive closure by definition, and adding them fabricates a $13,000 improvement where the honest waterfall shows a $57,000 decline.",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.4",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Reading the reported segment loss or allocated charges as the drop-decision quantity",
+    "Authorities": [
+      "Managerial accounting theory (segment reporting and keep-or-drop relevant costing with spillover and opportunity effects; Horngren et al.)"
+    ],
+    "Topic": "C.287 niche-line-drop-analysis",
+    "VerifiedChecks": [
+      "Recomputed: -120,000 + 85,000 + 28,000 - 50,000 = -57,000 favors keeping",
+      "Error paths agreed: allocation-as-avoidable gives -120,000 + 85,000 + 70,000 + 28,000 - 50,000 = +13,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-288",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-288-binding-hour-rental-spread",
+    "Stem": "Flash Metalcraft's linear program schedules all 3,000 monthly milling hours, and the solver tags milling time as binding with an $85 shadow price per hour. Plant controller Rita Kovacs learns a neighboring shop will rent Flash 150 additional milling hours next month at $40 per hour. Ignoring any range-limit concerns, by how much would total monthly contribution margin change if Kovacs accepts the rental?",
+    "Choices": {
+      "A": "Increase by $6,750, the $45-per-hour spread earned on 150 rented hours",
+      "B": "Increase by $12,750, the full shadow-price valuation of 150 added hours",
+      "C": "Increase by $6,000, reflecting the rental charge converted into added contribution",
+      "D": "Decrease by $6,750, because the shadow price represents the hourly cost of consuming milling time"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Governing principle: the shadow price of a binding resource measures how much the objective function, here total contribution margin, improves per additional unit of that resource within the valid range. Renting at $40 buys capacity worth $85 per hour, so each rented hour nets $85 - $40 = $45, and 150 hours add $45 x 150 = $6,750 to contribution. Business interpretation: Kovacs should take the deal and could pay up to $85 per hour before the rental stops creating value for Flash. Common trap: reading the shadow price as a cost of using the resource, pocketing the gross $12,750 without deducting the $6,000 rental bill, or treating the rental payment itself as the gain.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B pockets the entire $85 x 150 = $12,750 shadow-price value and forgets the $6,000 rental payment owed to the neighboring shop; only the $45-per-hour surplus accrues to Flash, producing a $6,750 improvement rather than $12,750.",
+    "ExplanationWrongC": "Choice C books the $6,000 rental charge as the contribution gain; the rental is a cost incurred to obtain hours worth $85 each, so the benefit is the spread above the $40 price, not the price itself.",
+    "ExplanationWrongD": "Choice D flips the sign, treating $85 as an expense of consuming hours; the shadow price is the marginal value an extra hour creates, so acquiring cheap hours raises contribution rather than draining it, and the direction of the change reverses.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.5",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "",
+    "CommonTrapReference": "Reading the shadow price as a cost or ignoring the rental outlay against capacity value",
+    "Authorities": [
+      "Management science theory (linear programming shadow prices and binding-resource valuation; CMA Part 2 CSO Decision Analysis)"
+    ],
+    "Topic": "C.288 shadow-price-capacity-rental",
+    "VerifiedChecks": [
+      "Recomputed: (85 - 40) x 150 = 45 x 150 = 6,750",
+      "Error paths agreed: 85 x 150 = 12,750; 40 x 150 = 6,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-289",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-289-abandonment-rollback-value",
+    "Stem": "M&A director Priya Raman maps Flash Robotics' warehouse-robot rollout as a two-stage decision. Launching nationally now costs $500,000, with a 0.55 chance of a $2,000,000 contribution payoff and a 0.45 chance of losing $1,200,000. Running a regional pilot first costs $80,000; a strong pilot, with probability 0.60, lifts national success odds to 0.80, while a weak pilot drops them to 0.30, at which point Raman can abandon and lose nothing further beyond the pilot fee. Which expected value applies to the optimal strategy?",
+    "Choices": {
+      "A": "$816,000, the probability-weighted launch value along the strong-pilot branch before fees",
+      "B": "$736,000, achieved by piloting first, launching after a strong pilot, and abandoning after a weak one",
+      "C": "$560,000, the expected gross payoff of an immediate national launch",
+      "D": "$656,000, the pilot-path value after deducting the $80,000 fee twice"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Governing principle: sequential decisions are solved by rolling back the tree, replacing each later decision node with its best expected value and folding outcomes back through their probabilities. Strong-pilot node: 0.80 x $2,000,000 + 0.20 x (-$1,200,000) = $1,600,000 - $240,000 = $1,360,000. Weak-pilot node: launching yields 0.30 x $2,000,000 + 0.70 x (-$1,200,000) = $600,000 - $840,000 = -$240,000, worse than abandoning at $0, so abandon. Pilot root: 0.60 x $1,360,000 + 0.40 x $0 - $80,000 = $816,000 - $80,000 = $736,000. Immediate launch nets only $60,000 ($1,100,000 - $540,000 - $500,000), so piloting dominates by $676,000. Business interpretation: the pilot's information plus the abandonment option carries most of the strategy's worth. Common trap: omitting stage costs or skipping the abandonment branch when rolling back.",
+    "ExplanationWrongA": "Choice A reports the $816,000 probability-weighted strong-pilot expectation and skips the $80,000 pilot fee; the root-node value must absorb that stage cost, reducing the strategy's worth to $736,000 before any comparison with immediate launch.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C quotes $560,000, the immediate-launch expectation before its own $500,000 outlay; charging that cost leaves just $60,000, which is precisely why the staged pilot strategy wins rather than the direct rollout.",
+    "ExplanationWrongD": "Choice D subtracts the pilot fee twice, cutting $160,000 from the $816,000 branch expectation; the $80,000 is paid once at the pilot stage, so the correct roll-back stands at $736,000.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.6",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-10 Expected Value",
+    "CommonTrapReference": "Omitting stage costs or forgetting the abandonment branch during tree rollback",
+    "Authorities": [
+      "Decision analysis theory (decision trees, rollback averaging-out, and abandonment options; CMA Part 2 CSO Decision Analysis)"
+    ],
+    "Topic": "C.289 two-stage-rollout-tree",
+    "VerifiedChecks": [
+      "Recomputed twice: inner node 0.8 x 2,000,000 - 0.2 x 1,200,000 = 1,360,000; root 0.6 x 1,360,000 + 0.4 x 0 - 80,000 = 736,000",
+      "Direct-launch check agreed: 0.55 x 2,000,000 - 0.45 x 1,200,000 - 500,000 = 60,000; weak-pilot launch EV = -240,000 < 0 abandon",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "C",
+    "QuestionID": "P2-C-290",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "C-290-cell-crossover-volume",
+    "Stem": "Flash Appliance Works buys 7,600 latch assemblies a year at $30 each from an outside supplier. Manufacturing studies gathered by controller Owen Gallagher show in-house output would require a dedicated cell carrying $120,000 of annual fixed cost and $18 of variable cost per latch. At what annual volume does making become the cheaper route?",
+    "Choices": {
+      "A": "4,000 latches, where the $30 purchase price covers the cell's fixed cost",
+      "B": "6,667 latches, where the cell's fixed cost spreads over units at the $18 variable rate",
+      "C": "12,500 latches, after folding $30,000 of unavoidable plant allocation into the cell's fixed base",
+      "D": "10,000 latches, where the $12-per-unit buying premium has covered the $120,000 cell cost"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Governing principle: the make-versus-buy indifference volume equates the two cost functions and solves like a breakeven in units: purchase cost $30Q equals make cost $18Q + $120,000, so $12Q = $120,000 and Q = 10,000 latches. Below 10,000 units buying is cheaper; above it, making wins. At the current 7,600-unit requirement Flash should stay with the supplier and revisit as volume approaches the crossover. Business interpretation: each latch carries a $12 differential saving that must amortize the dedicated cell before insourcing pays. Common trap: dividing the fixed base by the purchase price or by the variable rate alone, or polluting the differential with unavoidable allocations that continue under either option.",
+    "ExplanationWrongA": "Choice A divides $120,000 by the $30 purchase price; the fixed base is recovered through the $12-per-unit differential saving rather than through the full price, so the crossover sits at 10,000 units instead of 4,000.",
+    "ExplanationWrongB": "Choice B divides the fixed base by the $18 variable rate; variable cost recurs under the make option and recovers nothing on its own, whereas only the $12 gap between buying and making accumulates toward the $120,000 commitment.",
+    "ExplanationWrongC": "Choice C folds $30,000 of unavoidable plant allocation into the cell base, inflating the hurdle to $150,000 and stretching the crossover to 12,500; that allocation persists whether Flash makes or buys, so it stays out of the equation entirely.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "C.7",
+    "BlueprintDomain": "Decision Analysis",
+    "FormulaReference": "DA-01 BE Units",
+    "CommonTrapReference": "Dividing fixed cost by price or variable rate instead of the per-unit differential saving",
+    "Authorities": [
+      "Managerial accounting theory (cost-volume-profit indifference analysis applied to make-versus-buy crossovers; Horngren et al.)"
+    ],
+    "Topic": "C.290 indifference-volume-latches",
+    "VerifiedChecks": [
+      "Recomputed: (30 - 18) = 12; 120,000/12 = 10,000",
+      "Error paths agreed: 120,000/30 = 4,000; 120,000/18 = 6,667; (120,000 + 30,000)/12 = 12,500",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
   }
 ];

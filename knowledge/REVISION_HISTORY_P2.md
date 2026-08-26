@@ -1,3 +1,126 @@
+## Session P2-061 — Authoring Program: 360 MCQs (60/Pack, 4×15 Waves) + 9 Cases — COMPLETE
+
+**Date:** 2026-08-25
+**Session Type:** Content Authoring (Full Governance Lane — staged subagents, orchestrator-only integration per DL-019 prevention)
+**User approval:** "write 60 new questions for each pack in sessions of 15 questions each for packs a, b, c, d, e, and f. Plus an additional 3 case studies for each of the three packs" (2026-08-25)
+
+### Program design
+
+- QID ranges: A 191–250, B 116–175, C 201–260, D 066–125, E 076–135, F 066–125
+- Per-wave: 6 parallel general subagents, one per pack, each authoring exactly 15 items to temp staging; zero repo writes by agents
+- LOS targeting closes the 11 P2-051 coverage gaps first (A.5–A.8, B.6, B.8, C.7, E.3, F.2, F.3, F.7) plus breadth
+- Fixed sequences per wave: CC balance 4/4/4/3 with max streak 2; difficulty mix per batch 2E/3ME/5M/3D/2VD (fixes the pool's zero-Very-Difficult note); cognitive floors Rule 11-enforced (Evaluate≥DS4 on VD positions, Analyze≥DS3, R/U capped at DS≤2)
+- Legacy v1.0 schema shape (no evidence fields) consistent with pool convention — validate:p2 stays GRANDFATHERED-classified
+
+### Wave 1 (P2-A/B/C/D/E/F −191/−116/−201/−066/−076/−066 batches) — INTEGRATED 2026-08-25
+
+- Orchestrator gate harness over all 90 staged items: **0 findings** (schema presence, QID ranges/order/uniqueness vs pool, UCK/Topic collision scan, EW[CC] empty, non-CC ≥75 chars choice-specific, EC ≥200, forbidden absolutes/all-of-above/polarity, Rule 11 floors/caps, LOSTag format, FormulaReference allowlist, Flash-anchor check, stem clone fingerprint scan). Two initial findings were validator bugs (numeric-choice length floor; `""` conceptual FR allowlist) — fixed in harness, not content.
+- Certifier arithmetic spot-check: **12/12 keys verified** (A-191 DOL 3.50, A-194 turnover 6.00, A-195 DCL 32% EPS drop, B-116 bond price $877.60, B-125 WACC 9.80%, C-204 special order +$155K/mo, C-213 indifference 11,000u, D-072 reduce $1.0M least-cost, D-075 EL $600K<$750K, E-079 ATCF construction, E-088 rationing combo $1,056,000, F-075 FCPA facilitation exception)
+- Integration: splice-append before array closer (byte-preserving); post-parse order/length asserted per pack before write
+- Post-integration: packs parse at 205/130/215/80/90/80; `preflight_p2` 0 divergences (708 Certified unchanged — new items correctly Unprocessed)
+- Process note: Pack C's first agent run returned empty (DL-045 silent-empty class) — no file written; re-run with explicit write-verification instruction produced the batch. Recorded as DL-045 recurrence evidence.
+- Backups: `pack_p2_{a..f}.js.bak-w1-20260825182557`, `REVISION_HISTORY_P2.md.bak-20260825182633`
+
+### Wave 2 (P2-A/B/C/D/E/F −206/−131/−216/−081/−091/−081 batches) — INTEGRATED 2026-08-25
+
+- Gate harness: 3 ANCHOR findings (Flash missing from stems A-216, F-088, F-091) — patched in staging via exact-prefix insertions; re-run 0 findings.
+- Arithmetic spot-checks: B-131 pro-forma EPS $2.88 (−4.0%), B-135 trade-discount 21.28%, E-091 breakeven rate ≈10.4% interpolation, E-097 replacement-chain NPV $172,400 — all verified.
+- Agents self-reported guard Rule 6 blocks during authoring (empty-slot slips corrected pre-staging) — plugin functioning as designed; no repo impact.
+- Backups: `pack_p2_{a..f}.js.bak-w2-*`; packs → 220/145/230/95/105/95.
+
+### Wave 3 (P2-A/B/C/D/E/F −221/−146/−231/−096/−106/−096 batches) — INTEGRATED 2026-08-25
+
+- Gate harness: 1 ANCHOR finding (A-228) patched in staging; 0 findings on re-run.
+- Brief arithmetic note: Pack C brief summed to 14 LOS slots; agent self-resolved with C.7×2 (documented, acceptable). Pack D flagged D-100 adjacency to a wave-2 exclusion — noted for certification review.
+- Arithmetic spot-checks: B-148 RE breakpoint $36M/marginal WACC 9.71%, B-154 revolver effective 8.21%, C-236 Lerner price $72, E-111 ARR 22.50% w/salvage, E-117 abandonment +$181,760 — all verified.
+- Backups: `pack_p2_{a..f}.js.bak-w3-*`; packs → 235/160/245/110/120/110.
+
+### Wave 4 (P2-A/B/C/D/E/F −236/−161/−246/−111/−121/−111 batches) — INTEGRATED 2026-08-25
+
+- Pack E agent returned empty again (DL-045 second occurrence this session); retry with write-verification instruction succeeded.
+- Gate harness: 0 findings across all six batches.
+- Arithmetic spot-checks: A-236 SGR gap 10.80%→13.50% payout fix, E-122 after-tax salvage $1,020,000 (Sec.1245 recapture), E-125 staged-outlay NPV −$279,900, C-250 grossed-up target units 60,667 — all verified.
+- Backups: `pack_p2_{a..f}.js.bak-w4-*`; final pack sizes 250/175/260/125/135/125 = **1,070 MCQs** [corrected 2026-08-25; originally misstated 1,068].
+
+### Case wave (9 cases: CBQ21-A2/C2/F1, CBQ22-C1/E1/B2, CBQ23-A1/B1/D1) — INTEGRATED 2026-08-25
+
+- Authored by 3 parallel subagents (one per case pack), staged as JSON arrays.
+- Case gate harness (schema presence incl. Part/Part2OnlyFlag/question_state, CaseID format/collisions, QC==Items==6, EC==Exhibits, numeric→match progression, CF4 ±1, multi 3-of-5 verbatim integrity, match RightItems verbatim integrity, ReferencedBy resolution both directions, exhibit table fields): **0 findings** (after validator fix for object-form Choices).
+- Certifier arithmetic spot-checks 9/9: TIE 4.00 (A2-Q1), segment loss −$58K (C2-Q1), misstatement $230K (F1-Q1), constrained mix $378K (C1-Q1), rationing bundle $322K (E1-Q1), blended debt cost 6.67% (B2-Q1), current ratio 2.35 (A1-Q1), payout 50.0% (B1-Q1), risk score 20 (D1-Q1).
+- Integration: splice-append with write-time collision guard; case packs now 10/7/7 = **24 cases / 144 items**; new cases Unprocessed with Part=2, Part2OnlyFlag=true.
+- Backups: `case_pack_p2_{1,2,3}.js.bak-cases-20260825203011`.
+
+### Session interruption note
+
+User exited mid-session after wave integrations; case integration was staged-but-unwritten at exit and executed on resume ("continue") the same day. No other work was deferred or lost.
+
+### Final battery (post-resume)
+
+- `validate:p2`: **1,070 MCQ items scanned, 0 errors**, 362 non-certified (360 new + 2 Archived), 0 MIGRATION_REQUIRED
+- `preflight_p2`: 0 divergences; Certified unchanged at 708
+- `npm run preflight`: P1 untouched, 0 divergences
+- `npm run pipeline`: GREEN
+- `CURRENT_BASELINES_P2.md` refreshed
+
+### Status
+
+All 450 authored units are `Unprocessed` — certification is a separate future wave requiring user direction. Remaining toward the 2,500-item target: 1,432 MCQ slots.
+
+---
+
+## Session P2-060 — Certification Wave: 90 Flash-Wave MCQs + Case Trio (Close-Out)
+
+**Date:** 2026-08-25
+**Session Type:** Certification (P2002 §B.3) — Full Governance Lane
+**Scope:** All remaining uncertified P2 content: 90 Unprocessed flash-wave MCQs (P2-047) + case trio CBQ21-B1/C1/E1 (P2-045/046). Closes out all current P2 content.
+
+### Pre-flip repairs (this session, before any state change)
+
+| QID | Repair | Authority |
+|-----|--------|-----------|
+| P2-F-065 | Rewritten to distinct concept (confidentiality boundary during post-escalation review) per P2-051 mandated disposition of F-056/F-065 near-duplicate. CC stays B; Evaluate/Difficult(4) preserved; UniqueConceptKey → F-065-confidentiality-during-review | P2_FLASH_WAVE_DOUBLECHECK.md deferred-findings table |
+| P2-B-112 | Distractors C/D: removed "always" absolutes (double elimination-cue); misconceptions preserved | DL-003 Batch 2 precedent |
+| P2-E-070 | Choice C "always" removed; EWC rephrased to match | DL-003 Batch 2 precedent |
+| P2-F-064 | Choice A "never misreported" → "fifteen-year spotless record"; DifficultyScore 2→3 / Moderate (Analyze floor ≥3 per Rule 11 AF gate; P2-049 precedent) | Rule 11 |
+
+Backups before each repair write: `pack_p2_f.js.bak-20260825163301`, `pack_p2_{b,e,f}.js.bak-certwave-20260825163612`.
+
+### Verification evidence
+
+1. **Mechanical gates (harness, read-only): 90/90 checked, 0 findings** — Part2OnlyFlag true, EW[CC]="" (DL-008), non-CC EW ≥75 chars choice-specific (DL-026/DL-021), EC ≥200 chars, no boilerplate (DL-013), no polarity inversions (DL-037), no strong absolutes in distractor choices, Rule 11 floors (Evaluate≥4, Analyze≥3), LOSTag format, schema fields present, QID/UniqueConceptKey uniqueness, per-pack position balance 4/4/4/3 (D 3/4/4/4), max streak 2.
+2. **Dimension 1 (Correctness): all 48 calculation items independently recomputed by the certifier this session** — every stored key matches (incl. B-105 WACC 9.72%, C-131 net +$42K after displacement, E-065 disc. payback 2.9yr, E-066 EAA $8,454 vs $5,633, E-071 optimal combo $117K). Conceptual keys consistent with CAPM/COSO ERM 2017/IMA Statement/SOX authorities.
+3. Prior passes on record: P2-048 six-agent independent solve (90/90 keys correct), P2-051 adversarial double-check (90/90), P2-049 repairs verified applied.
+
+### State changes (question_state)
+
+- Certified (+15): P2-A-161..175 — Batch 1
+- Certified (+15): P2-B-101..115 — Batch 2
+- Certified (+15): P2-C-126..140 — Batch 3
+- Certified (+15): P2-D-051..065 — Batch 4
+- Certified (+15): P2-E-061..075 — Batch 5
+- Certified (+15): P2-F-051..065 — Batch 6
+- All flips carry `certification_session: "P2-060"`. P2-C-198/C-199 remain Archived per P2-059 disposition (untouched).
+
+### Case trio certification (Batch 7)
+
+CBQ21-B1, CBQ21-C1, CBQ21-E1 → `question_state: "Certified"`, `certification_session: "P2-060"`, plus `"Part": 2` / `"Part2OnlyFlag": true` added for schema parity with the twelve P2-059-certified cases (Rule 13 is MCQ-scoped; case-level flag added for uniformity). ProductionStatus left at "Draft" matching the pool convention of the certified 12.
+
+**Independent certifier verification this session:** every numeric key recomputed from exhibits — B1 DSO 103.7 / CCC 131.0 / component deltas +12.4/+11.9/−3.3/+27.7 / $99,041 release; C1 segment margin $70K / special order $21K (commission-adjusted $31 relevant VC) / outsourcing $77,500 expected-value comparison; E1 PI 1.33 confirmed highest of six / variance −$80K / exhaustive enumeration confirming A+C+D+F optimum $1.48M within $5.0M. Select/multi/match keys verified against exhibit data; exhibit headers present; ReferencedBy resolves (P2-059 metadata pass). These cases had passed P2-046's external-review repair battery (24 recomputation checks) after the original ERROR verdict; this session supplies the re-review that verdict required.
+
+### Post-wave verification
+
+- All six pack files re-parse via Function constructor; object counts unchanged (A 190, B 115, C 200, D 65, E 75, F 65); **0 Unprocessed items remain in any P2 pack**; Pack C Certified = 198/200 (2 Archived by design)
+- Certification gate harness re-run after flips: 90/90 checked, 0 findings
+- Case pack p2_1 re-parses: 7/7 cases Certified, QuestionCount == Items.length, ExhibitCount == Exhibits.length on all 15 pool cases
+- Backups before flips: `pack_p2_{a..f}.js.bak-p2-060flip-20260825164251`, `REVISION_HISTORY_P2.md.bak-20260825164432`, `case_pack_p2_1.js.bak-p2-060postflip-20260825165229`
+- **Backup-protocol deviation (disclosed):** the case-trio edit was applied before a fresh case-pack backup was taken; recovery for the pre-edit state exists via `case_pack_p2_1.js.bak-1787605837969` (P2-059 pre-flip, 84,729 bytes) + this session's three exact-string edit records above. A post-flip backup (`...p2-060postflip-20260825165229`) now guards against future corruption. Process lesson recorded: backup must precede EVERY target-file write regardless of how small the change-set is.
+
+### User approval
+
+User instruction 2026-08-25: "lets start a certification wave to close out current content" — documented as certification approval per P2002 §B.3(2).
+
+---
+
 ## Session P2-059 — Certification of P2-053..057 Output (75 MCQ + 12 Cases) After Certifier Review
 
 **Date:** 2026-08-24
@@ -2761,3 +2884,134 @@ CASE CBQ23-F2 (Misappropriation at the Branch) :: state=Certified session=P2-059
   CBQ23-F2-Q4 CC=C | wrong: Preserving system logs, invoice images,â€¦ | Noting in working papers that suspicionâ€¦ | Confirming with the bank â€” through counâ€¦
   CBQ23-F2-Q5 CC=B | wrong: Terminate the manager immediately upon â€¦ | Publicly announce the fraud to reassureâ€¦ | Handle everything internally without inâ€¦
   CBQ23-F2-Q6 CC=D | wrong: Mandate annual signed ethics codes at eâ€¦ | Increase branch manager base salaries câ€¦ | Concentrate all vendor approvals in corâ€¦
+
+## Session P2-064 — Overnight Completion Program, Cycle 1 (Wave 1) — COMPLETE
+
+**Date:** 2026-08-25/26
+**Session Type:** Content Authoring (Full Governance Lane — staged subagents, orchestrator-only integration)
+**Mission:** P2 pool to blueprint shares (2,500 MCQs) + cases to 25/case pack. Phase 1 anchor verified at T0: A 250/500, B 175/500, C 260/625, D 125/250, E 135/250, F 125/375 (exact match; remaining 1,430).
+
+### Wave 1 (Cycle 1) — 6 x 15 items = +90 MCQs, all Unprocessed
+
+| Pack | QIDs added | New tail | Backup |
+|------|-----------|----------|--------|
+| A | P2-A-251..265 | 265 | backups/pack_p2_a.js.bak-P2-064-20260826022129 |
+| B | P2-B-176..190 | 190 | backups/pack_p2_b.js.bak-P2-064-20260826022129 |
+| C | P2-C-261..275 | 275 | backups/pack_p2_c.js.bak-P2-064-20260826022129 |
+| D | P2-D-126..140 | 140 | backups/pack_p2_d.js.bak-P2-064-20260826022130 |
+| E | P2-E-136..150 | 150 | backups/pack_p2_e.js.bak-P2-064-20260826022130 |
+| F | P2-F-126..140 | 140 | backups/pack_p2_f.js.bak-P2-064-20260826022130 |
+
+**LOS coverage this wave:** gap-first per mission — A.5-A.8 (8 items), B.6/B.8 (6), C.7 (3), D breadth D.1-D.5, E.3 (3), F.2/F.3/F.7 (8); remainder spread across other LOS for breadth.
+
+**Fixed slot plan per batch:** CC 4A/4B/4C/3D max streak 1-2; difficulty 2E/3ME/5M/3D/2VD; cognitive 6-7 Apply / 3 Analyze / 2 Evaluate / 2U+1R; Rule 11 floors enforced (Evaluate slots DS>=4 with named Flash decision-maker + alternatives; Analyze DS>=3; U/R capped DS<=2).
+
+### Validation-gate findings and repairs (all pre-integration, staged only)
+
+1. **Pack A:** P2-A-263 authored Difficult-4 against assigned Moderate-3 slot → normalized to Moderate-3 at gate (slot conformance). Numeric choices ("9.00%") tripped an over-strict 8-char choice floor in the wave validator; floor corrected (validator defect, not content).
+2. **Pack B/C:** FormulaReference values carried descriptive suffixes ("CB-04 CAPM"); existing pool convention is ID-prefixed free text, so validator tightened to prefix-match (^CB-NN etc.) rather than exact-id match.
+3. **Pack F:** P2-F-137 stem lacked "Flash" → minimal repair inserting "of Flash Corporation" into stem.
+4. **Pack E:** two consecutive subagent delegations returned silent-empty (DL-045 signature; no file produced either attempt). Orchestrator authored the 15 items directly with double-computed arithmetic. Governance guard blocked two staging attempts mid-authoring (Rule 6 empty-distractor-slot placement errors on EW slots vs CC; one Rule 10 absent-field) — guard worked as designed on staged writes; all three defects fixed before any repo write.
+5. **Pack E post-fixes:** two absolute-term choices (P2-E-139/D, P2-E-144/C) reworded; P2-E-145 FormulaReference DA-10 invalid-for-pack cleared to "".
+
+### Verification battery (post-integration)
+
+- Function-constructor re-parse: all six packs parse; counts 265/190/275/140/150/140; QIDs sequential, order asserted before write
+- **Arithmetic spot-checks: 8/8 AGREE** (solved from stems before reading stored keys): P2-A-253 real growth 2.83% (Fisher), P2-B-182 CAPM 12.70%, P2-B-189 WACC 9.55%, P2-C-266 allowable cost $88 target-cost gap, P2-C-269 EV $40k open credit vs $90k certain LC, P2-D-129 composite scores 12/10/8/5 banding, P2-D-138 $600k tolerance banding, P2-F-130 audit-committee escalation path. Plus Pack E's 15 keys double-computed during direct authoring.
+- `node scripts/preflight_p2.js`: 0 divergences; 1,160 unique QIDs; Certified unchanged at 708; guard tests 74/74 PASS
+- No question_state changes to any existing item; no deletions; certification out of scope (all new items Unprocessed)
+
+### Progress census after Cycle 1
+A 265/500 | B 190/500 | C 275/625 | D 140/250 | E 150/250 | F 140/375 | total 1,160/2,500 (+90)
+
+
+## Session P2-064 — Cycle 2 (Wave 2) — COMPLETE
+
+**Date:** 2026-08-26
++90 MCQs (6 x 15), all Unprocessed. QIDs: A 266-280, B 191-205, C 276-290, D 141-155, E 151-165, F 141-155.
+Backups: backups/pack_p2_{a,b,c,d,e,f}.js.bak-P2-064-2026082603402*.
+
+### Gate findings and repairs (staged only, pre-integration)
+1. Packs B and C subagent delegations returned silent-empty on first attempt (DL-045 signature; no file produced); authorized single retry succeeded both packs.
+2. Pack E rewrite dropped question_state on all 15 items -> mechanically restored "Unprocessed".
+3. Absolute-term residuals in choices reworded: P2-A-276/D ("never records"->"does not record"), P2-F-141/C, P2-F-147/A, P2-E-162/B.
+4. Wave-validator regex hardened for Pack D suffixed RM ids (prefix-match aligned to existing pool convention) - validator fix, not content.
+
+### Verification battery
+- Arithmetic spot-checks 9/9 AGREE (solved pre-key): P2-A-267 DSO 25.4d avg-receivables/credit-sales; P2-B-191 discount amortization; P2-B-203 EOQ quantity-break $4,200 net; P2-C-282 throughput $360/hr; P2-C-289 decision tree pilot-first EV 736; P2-D-146 governance redesign; P2-E-154 NPV-IRR timing attribution; P2-E-164 ARR 26.43% avg-investment; P2-F-144 accrual/integrity breach.
+- Post-integration: Function-constructor re-parse OK (280/205/290/155/165/155); preflight_p2 0 divergences; Certified unchanged 708; guard 74/74.
+
+### Progress census after Cycle 2
+A 280/500 | B 205/500 | C 290/625 | D 155/250 | E 165/250 | F 155/375 | total 1,250/2,500 (+180 overall)
+
+
+## Session P2-064 — Case Wave 1 — COMPLETE
+
+**Date:** 2026-08-26
++9 cases (3 per case pack), all Unprocessed, ProductionStatus Draft, Author "P2-064 authoring wave".
+
+| Pack | Cases added | New count | Backup |
+|------|------------|-----------|--------|
+| case_pack_p2_1.js | CBQ21-A3 (Northwind Ceramics, FSA/DuPont), CBQ21-B3 (Copperline Manufacturing, bond pricing/amortization), CBQ21-C3 (Silverpine Furniture, special order w/ opportunity cost) | 10 -> 13 | backups/case_pack_p2_1.js.bak-P2-064case-20260826041301 |
+| case_pack_p2_2.js | CBQ22-C2 (Kestrel Instruments, make-vs-buy), CBQ22-D3 (Harborview Logistics, ERM register/residual scoring), CBQ22-F2 (Atlas Greenhouses, covenant invoice deferral ethics) | 7 -> 10 | backups/case_pack_p2_2.js.bak-P2-064case-20260826041301 |
+| case_pack_p2_3.js | CBQ23-A2 (Bright Meadow Foods, earnings quality/CFO gap), CBQ23-E2 (Redstone Medical Devices, NPV mutually exclusive w/ stated PV factors), CBQ23-F3 (Meridian Solar Components, FCPA classification) | 7 -> 10 | backups/case_pack_p2_3.js.bak-P2-064case-20260826041302 |
+
+### Gate findings
+1. Case-pipeline validator initially built CaseID regex from file number (1/2/3) instead of ID prefix (21/22/23) -> fixed mapping; content unaffected.
+2. No content defects found by gate; all multi items exactly 3-of-5 verbatim; all match Correct values verbatim in RightItems; every table exhibit Headers/Rows width-consistent; ReferencedBy resolved bidirectionally.
+
+### Case arithmetic spot-checks (independent, from exhibits before reading keys)
+CBQ21-A3 Q1 NPM 6.00% / Q2 DuPont 15.63% AGREE; CBQ21-B3 Q1 price 300,000x8.11090+10,000,000x0.67556 = 9,188,870 / Q2 P2 expense 370,257 AGREE; CBQ21-C3 Q1 order CM 3,000x(150-132)=54,000 (freight/marketing borne by buyer per Exhibit 2 email) / Q2 displacement 1,000x90=90,000 AGREE; CBQ22-C2 Q1 avoidable 864,000 / Q2 disadvantage 162,000 internally consistent AGREE; CBQ22-D3 Q1 12 / Q2 10 AGREE; CBQ22-F2 Q1 4,200/3,110=1.35 / Q2 0.15 AGREE; CBQ23-A2 Q1 CFO 3,820 / Q2 accruals gap 11.6% AGREE; CBQ23-E2 Q1 Atlas NPV 264,000x3.791+60,000x0.621-900,000=138,084 / Q2 Delta 115,576 AGREE; CBQ23-F3 Q1 25,000+2%x1,800,000=61,000 / Q2 3,575/11=325 AGREE. Total: 18 numeric keys verified across 9 cases, 0 mismatches.
+
+### Post-integration battery
+preflight_p2 0 divergences; validate:p2 base-schema ERROR 0; Certified unchanged 708; guard tests 74/74 PASS.
+
+
+## Session P2-064 — CHECKPOINT CLOSEOUT — COMPLETE
+
+**Date:** 2026-08-26
+**Status:** Checkpoint executed cleanly at a wave boundary (no staged-but-unintegrated content held). Mission NOT fully complete — Phase 1 remains open; see resume note.
+
+### Closeout battery (all GREEN)
+- npm run validate:p2: base-schema ERROR 0; HOLD_FOR_SOURCE 0; MIGRATION_REQUIRED 0
+- node scripts/preflight_p2.js: 0 divergences; guard tests 74/74 PASS
+- npm run preflight: 0 divergences; P1 Certified unchanged 2,620
+- npm run pipeline: GREEN (validate -> registry rebuild -> dashboard)
+- CURRENT_BASELINES_P2.md updated to post-P2-064 state
+
+### Final raw-parse census (Function-constructor, this session)
+| Pack | Current | Target | Remaining |
+|------|---------|--------|-----------|
+| A | 280 | 500 | 220 |
+| B | 205 | 500 | 295 |
+| C | 290 | 625 | 335 |
+| D | 155 | 250 | 95 |
+| E | 165 | 250 | 85 |
+| F | 155 | 375 | 220 |
+| **Total** | **1,250** | **2,500** | **1,250** |
+
+Certified unchanged at 708 across all waves (certification out of scope). Unprocessed added this session: +180 MCQs / +9 cases.
+Cases: case_pack_p2_1 13/25 | p2_2 10/25 | p2_3 10/25 (42 remaining).
+
+### RESUME NOTE for successor session (collision-free continuation)
+
+**Next QID allocations (sequential append, verify by Function-constructor parse first):**
+- Pack A: start P2-A-281 (220 remaining through P2-A-500)
+- Pack B: start P2-B-206 (295 remaining through P2-B-500)
+- Pack C: start P2-C-291 (335 remaining through P2-C-625)
+- Pack D: start P2-D-156 (95 remaining through P2-D-250)
+- Pack E: start P2-E-166 (85 remaining through P2-E-250)
+- Pack F: start P2-F-156 (220 remaining through P2-F-375)
+
+**Next CaseID allocations (lowest-unused-sequence-per-section after current tails):**
+- case_pack_p2_1 (13 cases): used A1,A2,A3 B1,B2,B3 C1,C2,C3 D1 E1,E2 E3? no - E1,E2 F1. Next free: D2, E3, F2, then A4, B4, C4, D3...
+- case_pack_p2_2 (10 cases): used A2 B1,B2 C1,C2 D2,D3 E1 F1,F2. Next free: A3, B3, C3, D4, E2, F3.
+- case_pack_p2_3 (10 cases): used A1,A2 B1 C1,C2 D1 E1,E2 F2,F3. Next free: A3, B2, C3, D2, E3, F4.
+
+**Reusable infrastructure (temp dir survives):**
+- Validator/integrator: %TEMP%/opencode/P2-064/mcq_pipeline.js (commands: validate <file> <pack> <startNum> 15; integrate <file> <pack>) and case_pipeline.js (validate <file> <fileNum 1|2|3> <expectedCount> <allowedCaseIdsCsv>; integrate <file> <fileNum>). NOTE argv destructure uses three leading skips.
+- Authoring specs: %TEMP%/opencode/P2-064/AUTHOR_SPEC.md (MCQ contract) and CASE_SPEC.md (case contract).
+- Slot table template that passed all gates (reuse verbatim, shift QIDs): rows 1-15 = [Easy/U/A, ME-Apply/B, M-Apply/C, M-Analyze/A, D-Evaluate/D, VD-Evaluate/B, M-Apply/C, ME-Remember/B, D-Analyze/A, M-Apply/C, Easy-U/D, VD-Analyze/C, M-Apply/A, D-Apply/B, ME-Apply/D].
+- Known failure mode: ~1-in-3 subagent delegations returns silent-empty (DL-045) or omits fields under rewrite pressure; ALWAYS run the validator gate on staged files and repair mechanically before integration. Governance-guard Rule 2/6/10 BLOCKs on staged writes are working as designed — fix slot placement, never bypass.
+- LOS gap priority already heavily covered in P2-064 waves: A.5-A.8, B.6, B.8, C.7, E.3, F.2/F.3/F.7 (each got 6-9 fresh items). Successor should re-run a coverage scan before choosing further LOS emphasis, then fill breadth.
+

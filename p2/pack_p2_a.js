@@ -6923,7 +6923,8 @@ var pack_p2_a_questions = [
   "Independent: (4.5+1.5)/12 = 0.50; quick 13/12 = 1.08; current 18/12 = 1.50; cash-only 0.375",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -6966,7 +6967,8 @@ var pack_p2_a_questions = [
   "Independent: avg inv 180; 900/180 = 5.0; DIO 365/5 = 73; ending 4.09/89; sales 6.0/61",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7009,7 +7011,8 @@ var pack_p2_a_questions = [
   "Independent: avg AR 100; 100/730×365 = 50; ending 60; beginning 40; no-×365 13.7%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7052,7 +7055,8 @@ var pack_p2_a_questions = [
   "Independent: avg AP 80; 80/730×365 = 40; beginning 30; COGS 32.4; ending 50",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7095,7 +7099,8 @@ var pack_p2_a_questions = [
   "Independent: 720/480 = 1.50; debt ratio 0.60; equity ratio 0.40; EM 2.50",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7138,7 +7143,8 @@ var pack_p2_a_questions = [
   "Independent: 48/12 = 4.0; (24+12)/12 = 3.0; 24/12 = 2.0; 12/48 = 0.25",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7180,7 +7186,8 @@ var pack_p2_a_questions = [
   "Independent: definition item — gross margin = (Sales - COGS) / Sales",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7223,7 +7230,8 @@ var pack_p2_a_questions = [
   "Independent: avg assets 600; 54/600 = 9% = 6% x 1.5; turnover to match 12% = 2.0; ending 8.18%; beginning 10%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7266,7 +7274,8 @@ var pack_p2_a_questions = [
   "Independent: 5% x 1.5 x 2.0 = 15%; omitting EM 7.5%; omitting turnover 10%; ending-equity EM 3.0 → 22.5%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7309,7 +7318,8 @@ var pack_p2_a_questions = [
   "Independent: wtd 20 + 8×6/12 = 24; (60−6)/24 = $2.25; no-pref-div 2.50; 60/20 = 3.00; 54/28 = 1.93",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7351,7 +7361,8 @@ var pack_p2_a_questions = [
   "Independent: conceptual — P/E = price/EPS; higher P/E → higher expected growth",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7394,7 +7405,8 @@ var pack_p2_a_questions = [
   "Independent: 15% x 0.6 = 9%; payout 6%; ending-equity 54/432 = 12.5% x 0.6 = 7.5%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7437,7 +7449,8 @@ var pack_p2_a_questions = [
   "Independent: 128 - 48 = $80M; minus dividends 56; plus depreciation 112; dep-only 32",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7479,7 +7492,8 @@ var pack_p2_a_questions = [
   "Independent: conceptual — vertical = common-size, horizontal = trend vs base year",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -7522,7 +7536,8 @@ var pack_p2_a_questions = [
   "Independent: conceptual — revenue/CFO divergence is the strongest composite red flag",
   "Authority citations match tested concept"
 ],
-  "question_state": "Unprocessed"
+  "question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
   "Authorities": [
@@ -8185,5 +8200,3904 @@ var pack_p2_a_questions = [
     "Independent: (146.41/100)^(1/4)-1 = 10.0%",
     "Authority citations match tested concept"
    ]
+  },
+  {
+    "QuestionID": "P2-A-191",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.8",
+    "Topic": "A.191 operating-leverage-dol",
+    "UniqueConceptKey": "A-191-operating-leverage-point-elasticity",
+    "Authorities": [
+      "Managerial accounting leverage theory (contribution margin framework)"
+    ],
+    "FormulaReference": "FA-19",
+    "ItemStyle": "single-select",
+    "CalculationItem": true,
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Computing DOL with gross margin instead of contribution margin",
+    "Stem": "Flash is a diversified manufacturer. Controller Priya Chen is preparing a risk briefing on the industrial automation division for CFO Elena Vasquez. For the most recent fiscal year the division reported net sales of $84.0 million, total variable costs of $58.8 million, and total fixed costs of $18.0 million. What is the division's degree of operating leverage (DOL) at this sales level?",
+    "Choices": {
+      "A": "0.29",
+      "B": "3.50",
+      "C": "4.67",
+      "D": "2.33"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Degree of operating leverage is defined in managerial accounting leverage theory as contribution margin divided by operating income at a specific sales level. Contribution margin = $84.0M - $58.8M = $25.2M; operating income = $25.2M - $18.0M = $7.2M; DOL = $25.2M / $7.2M = 3.50. For Priya Chen's briefing this means each 1% movement in divisional sales swings operating income by roughly 3.5%, because the $18.0M fixed-cost block does not flex with volume. DOL is a point elasticity, so its value rises as the division operates closer to breakeven and falls as volume grows.",
+    "ExplanationWrongA": "Option A (0.29) flips the ratio, dividing operating income by contribution margin ($7.2M / $25.2M). Reading the elasticity backwards would tell Priya Chen that sales swings barely matter, when the correct reading is the reciprocal, 3.50, meaning profits amplify demand changes.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (4.67) divides sales by fixed costs ($84.0M / $18.0M), pairing the wrong inputs entirely. Revenue over a fixed-cost block ignores variable-cost absorption and is not an elasticity; DOL must pit contribution margin against operating income.",
+    "ExplanationWrongD": "Option D (2.33) drops the $3.6M of fixed selling and administrative cost from the fixed base, inflating operating income to $10.8M and depressing the quotient. Fixed SG&A still magnifies volume swings, so omitting it understates true leverage.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Moderate - single-formula DOL computation with clean extraction of CM and OI",
+      "Independent recompute: DOL = (84.0-58.8)/(84.0-58.8-18.0) = 25.2/7.2 = 3.50",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-192",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.5",
+    "Topic": "A.192 translation-vs-transaction-exposure",
+    "UniqueConceptKey": "A-192-exposure-type-discrimination",
+    "Authorities": [
+      "FASB ASC 830 (Foreign Currency Matters)"
+    ],
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CommonTrapReference": "Treating translation adjustments as cash-flow losses, or vice versa",
+    "Stem": "Flash is a diversified manufacturer. Treasurer Marcus Webb is briefing Flash's audit committee on currency risks arising from the Munich manufacturing subsidiary, whose books are kept in euros and whose results consolidate into Flash's U.S. dollar statements. Which statement best distinguishes transaction exposure from translation exposure for this subsidiary?",
+    "Choices": {
+      "A": "Transaction exposure arises only when the subsidiary's statements are consolidated into Flash's reporting currency.",
+      "B": "Both exposures arise solely at the moment a foreign-currency amount is settled in cash.",
+      "C": "Transaction exposure affects cash flows of specific euro-denominated transactions, such as a parts payable balance, as rates move before settlement; translation exposure affects only reported consolidated results when the subsidiary's statements are translated into U.S. dollars, with no immediate cash flow effect.",
+      "D": "Translation exposure requires remeasuring nonmonetary items at historical rates with gains and losses recognized in net income."
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Under FASB ASC 830, transaction exposure concerns exchange gains or losses on individual foreign-currency transactions, such as Flash's euro-denominated parts payable, as spot rates move before settlement, and those effects reach net income when recognized. Translation exposure arises only when Marcus Webb consolidates the Munich subsidiary: assets, liabilities, and results are restated into U.S. dollars, producing a translation adjustment reported in other comprehensive income with no immediate cash effect. Keeping the two categories distinct ensures hedging effort targets exposures that actually move cash rather than consolidation mechanics.",
+    "ExplanationWrongA": "Option A relocates translation exposure onto individual deals: consolidation restatements produce no cash settlement, so calling the translation adjustment a transaction gain or loss reverses the two ASC 830 categories and would misdirect Webb's hedging toward non-cash items.",
+    "ExplanationWrongB": "Option B asserts both exposures crystallize only at cash settlement. Transaction exposure builds continuously as spot rates drift before settlement, and translation exposure arises at each reporting-date consolidation, so neither category waits for a cash event to exist.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D assigns historical-rate remeasurement of nonmonetary items with net-income recognition to translation. Under current-rate translation the adjustment bypasses net income into OCI; historical-rate remeasurement belongs to the temporal method used when the dollar is functional.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Moderate-Easy - single-concept discrimination between two ASC 830 exposure types",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-193",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.1",
+    "Topic": "A.193 quick-ratio-components",
+    "UniqueConceptKey": "A-193-quick-ratio-numerator",
+    "Authorities": [
+      "FASB ASC 205-10 (Presentation of Financial Statements)"
+    ],
+    "FormulaReference": "FA-02",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "CognitiveLevel": "Remember",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CommonTrapReference": "Including inventory in the quick ratio numerator",
+    "Stem": "During an analyst onboarding session at Flash, a diversified manufacturer, assistant controller Derek Malone asks the new hires which current assets belong in the numerator of the quick (acid-test) ratio.",
+    "Choices": {
+      "A": "Cash and cash equivalents, marketable securities, and accounts receivable",
+      "B": "Cash and cash equivalents, marketable securities, and inventory",
+      "C": "Cash and cash equivalents, inventory, and prepaid expenses",
+      "D": "Cash and cash equivalents plus marketable securities only"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The acid-test construction referenced in ASC 205-10-based analysis includes only the most liquid current assets in the numerator: cash and cash equivalents, marketable securities, and net accounts receivable. Quick ratio = (Cash + Marketable securities + Accounts receivable) / Current liabilities. Inventory is excluded because converting it to cash requires a full sales-and-collection cycle, and prepaid expenses are excluded because they are consumed rather than converted to cash. Derek Malone's contrast point: the cash ratio is narrower still, containing only cash plus marketable securities, so the three liquidity ratios form a conservative-to-aggressive spectrum.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B pulls inventory into the numerator, effectively rebuilding the current ratio's coverage. Inventory needs a sales-and-collection cycle before becoming spendable cash, which is precisely why the acid-test strips it out to give Derek Malone's trainees a stress view of liquidity.",
+    "ExplanationWrongC": "Option C swaps in inventory and prepaid expenses, two of the least liquid current assets. Prepaids are consumed rather than collected, so including them overstates Flash's capacity to satisfy near-term obligations and defeats the ratio's conservative purpose.",
+    "ExplanationWrongD": "Option D describes the cash ratio, not the quick ratio: only cash plus marketable securities. Dropping trade receivables is overly severe for most manufacturers like Flash, whose receivables convert quickly and belong in an acid-test measure.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Easy - direct recall of quick-ratio numerator components",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-194",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.1",
+    "Topic": "A.194 inventory-turnover-calculation",
+    "UniqueConceptKey": "A-194-average-inventory-turnover",
+    "Authorities": [
+      "FASB ASC 330 (Inventory)"
+    ],
+    "FormulaReference": "FA-04",
+    "ItemStyle": "single-select",
+    "CalculationItem": true,
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Using ending inventory or sales instead of average inventory and COGS",
+    "Stem": "Flash is a diversified manufacturer. FP&A director Tomas Reyes is compiling fiscal 2025 working-capital metrics for CFO Elena Vasquez. Cost of goods sold was $96.0 million for the year, and inventories were $14.0 million at January 1 and $18.0 million at December 31. What was Flash's inventory turnover for fiscal 2025?",
+    "Choices": {
+      "A": "5.33 times",
+      "B": "6.86 times",
+      "C": "8.25 times",
+      "D": "6.00 times"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Inventory turnover under ASC 330-based analysis equals cost of goods sold divided by average inventory. Average inventory = ($14.0M + $18.0M) / 2 = $16.0M. Turnover = $96.0M / $16.0M = 6.00 times. For Tomas Reyes this indicates Flash converts its inventory investment into cost of sales about six times per year, roughly every 61 days using 365 / 6. Using ending inventory alone ($96.0M / $18.0M = 5.33) or beginning inventory ($96.0M / $14.0M = 6.86) misstates efficiency whenever balances shifted during the year, and substituting the $132.0M of sales for COGS would inflate the figure by importing pricing margin unrelated to inventory cost.",
+    "ExplanationWrongA": "Option A (5.33) divides COGS by ending inventory of $18.0M. The year-end date embeds any seasonal build-up, so a single-date denominator understates velocity; averaging $14.0M and $18.0M into $16.0M aligns the denominator with the whole period of activity.",
+    "ExplanationWrongB": "Option B (6.86) divides by beginning inventory of $14.0M, overstating turns after inventory grew through the year. Either single-date endpoint distorts the measure; the $16.0M mean matches cost of goods sold earned across all twelve months.",
+    "ExplanationWrongC": "Option C (8.25) substitutes sales of $132.0M for COGS. Revenue carries margin that inventory never cost, inflating turnover and mixing pricing effects into an operating-efficiency metric; the numerator must be the cost flow matched to the inventory investment.",
+    "ExplanationWrongD": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Moderate - two-step average-inventory computation plus correct numerator choice",
+      "Independent recompute: avg inv = (14.0+18.0)/2 = 16.0; turnover = 96.0/16.0 = 6.00",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-195",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.8",
+    "Topic": "A.195 combined-leverage-eps-impact",
+    "UniqueConceptKey": "A-195-combined-leverage-propagation",
+    "Authorities": [
+      "Corporate finance theory (DOL/DFL combined leverage framework)"
+    ],
+    "FormulaReference": "FA-19",
+    "ItemStyle": "single-select",
+    "CalculationItem": true,
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CommonTrapReference": "Applying DOL and DFL additively instead of multiplicatively",
+    "Stem": "Flash is a diversified manufacturer. Financial analyst Rafael Ortiz informs Flash's board that, at the current consolidated sales level, the degree of operating leverage is 2.5 and the degree of financial leverage is 1.6. He models a downside scenario in which consolidated sales decline by 8%. Under this scenario, the percentage change in operating income and in earnings per share will be closest to:",
+    "Choices": {
+      "A": "Operating income falls 20%; EPS falls 20%",
+      "B": "Operating income falls 16%; EPS falls 16%",
+      "C": "Operating income falls 20%; EPS falls 32%",
+      "D": "Operating income falls 8%; EPS falls 12.8%"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Operating and financial leverage compound multiplicatively down the income statement. Operating income responds first through the degree of operating leverage: -8% x 2.5 = -20%. Earnings per share then respond through the degree of financial leverage applied to operating income: combined leverage = 2.5 x 1.6 = 4.0, so EPS changes by -8% x 4.0 = -32%. Rafael Ortiz's message to the board is that a modest 8% demand contraction doubles to a 20% profit decline and nearly quadruples to a 32% EPS decline, quantifying downside risk from stacking fixed financing costs on top of a heavy fixed operating base.",
+    "ExplanationWrongA": "Option A stops after the operating stage, carrying the -20% operating-income hit straight through to EPS and dropping DFL. Fixed interest still must be paid regardless of demand, so EPS absorbs the second multiplier and falls 32%, not 20%.",
+    "ExplanationWrongB": "Option B applies a 2.0 factor as if the two leverage components averaged together (-8% x 2 = -16%). Leverage components do not average; they multiply: 2.5 x 1.6 = 4.0, which doubles the assumed damage to a 32% EPS decline.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D lets the sales decline pass through undamped at the operating line (-8%) and then misapplies a partial factor to EPS (-12.8%). Leverage magnifies rather than filters downside moves, and the propagation order runs DOL first at the operating line, then DFL at the EPS line.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Difficult - multiplicative chaining of DOL and DFL across two income-statement levels under a downside scenario",
+      "Independent recompute: dOI = 2.5 x 8% = 20%; DCL = 2.5 x 1.6 = 4.0; dEPS = 4.0 x 8% = 32%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-196",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.7",
+    "Topic": "A.196 off-balance-sheet-guarantee-adjustment",
+    "UniqueConceptKey": "A-196-guarantee-debt-equivalence",
+    "Authorities": [
+      "FASB ASC 460 (Guarantees)"
+    ],
+    "FormulaReference": "FA-07",
+    "ItemStyle": "single-select",
+    "CalculationItem": true,
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CommonTrapReference": "Leaving disclosed guarantees out of adjusted leverage ratios",
+    "Stem": "Flash is a diversified manufacturer. Its year-end balance sheet shows total liabilities of $48.0 million and total shareholders' equity of $32.0 million. Flash has also guaranteed an $8.0 million term loan of an unconsolidated joint-venture affiliate; the guarantee is disclosed in the notes but not recorded as a liability. Credit analyst Jordan Blake, preparing Flash's covenant review for lender meetings, adjusts the debt-to-equity ratio to treat the guarantee as debt-equivalent. What adjusted debt-to-equity ratio should Jordan present?",
+    "Choices": {
+      "A": "1.50",
+      "B": "1.75",
+      "C": "2.00",
+      "D": "1.40"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Analysts treat a disclosed loan guarantee as debt-equivalent because Flash stands ready to absorb the obligation if the affiliate defaults, even though ASC 460 keeps it off the balance sheet until payment becomes probable. Reported debt-to-equity = $48.0M / $32.0M = 1.50. Adjusted = ($48.0M + $8.0M guarantee) / $32.0M = $56.0M / $32.0M = 1.75. For Jordan Blake's lender presentation the quarter-turn increase matters: covenant tests and credit models keyed to reported leverage would otherwise understate Flash's committed risk exposure by ignoring a contingent claim Flash may have to fund.",
+    "ExplanationWrongA": "Option A (1.50) reports the unadjusted book ratio and ignores the very guarantee Jordan Blake exists to capture. Disclosed contingent obligations are debt-equivalent for credit work because Flash would fund them upon an affiliate default.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C (2.00) double-counts the exposure by adding the $8.0M twice as if total debt were $64.0M. One guarantee dollar creates one dollar of contingent debt, so the adjusted quotient is $56.0M / $32.0M = 1.75.",
+    "ExplanationWrongD": "Option D (1.40) adds the guarantee to both sides ($56.0M / $40.0M). A guarantee creates no equity; padding shareholders' equity with a contingent liability artificially understates leverage relative even to the unadjusted 1.50 basis.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Moderate-Easy - one-step guarantee add-back applied to a familiar leverage ratio",
+      "Independent recompute: (48.0+8.0)/32.0 = 56.0/32.0 = 1.75",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-197",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.9",
+    "Topic": "A.197 sustainable-growth-dividend-policy",
+    "UniqueConceptKey": "A-197-sgr-payout-constraint",
+    "Authorities": [
+      "Higgins sustainable growth model (corporate finance theory)"
+    ],
+    "FormulaReference": "FA-21",
+    "ItemStyle": "single-select",
+    "CalculationItem": true,
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CommonTrapReference": "Confusing dividend yield with payout ratio in the SGR formula",
+    "Stem": "Flash is a diversified manufacturer. Flash earns a return on equity of 18% and pays out 40% of earnings as dividends. The board has mandated 14% annual sales growth without issuing new outside equity and without increasing financial leverage beyond current levels. CFO Elena Vasquez must recommend a course of action reconciling the target with the sustainable growth rate framework. Which recommendation is most consistent with that analysis?",
+    "Choices": {
+      "A": "Hold the 40% payout and cover the growth-funding shortfall with additional borrowing while leaving asset turnover unchanged",
+      "B": "Hold the 40% payout, issue no new equity, and accept that actual growth will run near 10.8%",
+      "C": "Raise the dividend payout above 40% to signal confidence and thereby accelerate growth toward 14%",
+      "D": "Cut the dividend payout to approximately 22% so the retention-driven sustainable growth rate reaches the 14% target with no new equity or added leverage"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The Higgins model states SGR = ROE x retention ratio, assuming constant margins, turnover, and capital structure with no new outside equity. Flash's current SGR = 18% x (1 - 0.40) = 10.8%. To reach 14% internally, required retention = 14% / 18% = 77.8%, implying a maximum payout near 22.2%; verification: 18% x 0.778 = 14.0%. Elena Vasquez's payout cut therefore reconciles the board's target with the model's constraints. Holding 40% caps growth near 10.8%, new borrowing breaks both the constant-leverage assumption and the explicit mandate, and raising the payout arithmetically lowers SGR further below target.",
+    "ExplanationWrongA": "Option A plugs the gap with new debt, breaking the SGR model's constant-leverage assumption and Elena Vasquez's own constraint. Added borrowing also raises interest expense, depressing ROE and pulling SGR below the naive arithmetic before the plan is even tested.",
+    "ExplanationWrongB": "Option B is arithmetically consistent but concedes the board-mandated objective, settling near 10.8% instead of the required 14%. The exercise demands reconciling the target within the model's constraints, not abandoning the target while calling the residual growth sustainable.",
+    "ExplanationWrongC": "Option C inverts the payout logic: SGR = ROE x (1 - payout), so lifting the payout from 40% shrinks retention and drags SGR away from 14% toward roughly 9.9% at a 45% payout, compounding the shortfall it claims to cure.",
+    "ExplanationWrongD": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Very Difficult - solving for the required payout and defending the choice against three plausible alternatives under binding constraints",
+      "Independent recompute: SGR = 18% x 0.60 = 10.8%; required retention = 14/18 = 77.8%; required payout = 22.2%; check 0.18 x 0.778 = 14.0%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-198",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.5",
+    "Topic": "A.198 temporal-method-rate-selection",
+    "UniqueConceptKey": "A-198-temporal-nonmonetary-historical-rate",
+    "Authorities": [
+      "FASB ASC 830 (Foreign Currency Matters) - temporal method"
+    ],
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Remeasuring nonmonetary assets at the current rate under the temporal method",
+    "Stem": "Flash is a diversified manufacturer. Its Monterrey assembly plant keeps its books in Mexican pesos, but the accounting policy team, working with treasurer Marcus Webb, has determined that the peso amounts measured by the plant's assets and liabilities are ultimately settled in U.S. dollars; the U.S. dollar is therefore the functional currency and the temporal (remeasurement) method applies. Controller Alicia Grant asks how the plant's production equipment, acquired several years ago when the exchange rate was 17.2 pesos per dollar, should be remeasured into Flash's reporting currency, given a year-end rate of 18.5 and an average rate for the year of 17.9.",
+    "Choices": {
+      "A": "At the historical exchange rate in effect when the equipment was acquired, 17.2 pesos per dollar",
+      "B": "At the current exchange rate at the balance sheet date, 18.5 pesos per dollar",
+      "C": "At the weighted-average exchange rate for the year, 17.9 pesos per dollar",
+      "D": "At the forward exchange rate for the period in which disposal is expected"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under the temporal method of ASC 830, when the U.S. dollar is the functional currency, monetary items are remeasured at the current rate, but nonmonetary assets and their related expense flows are carried at the historical exchange rates in force when they were acquired or incurred. The Monterrey production equipment is nonmonetary, so Alicia Grant remeasures it at the 17.2 acquisition-date rate rather than the 18.5 closing or 17.9 average rate. Remeasurement differences on monetary items run through net income, which is why correct rate selection materially shapes reported results whenever the peso moves against the dollar.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B applies the 18.5 current rate to a nonmonetary asset. Current-rate treatment belongs to the current-rate translation method; under the temporal method dictated by the dollar functional currency, only monetary items take the closing rate.",
+    "ExplanationWrongC": "Option C remeasures the equipment at the 17.9 average rate. Average rates serve flow items such as revenue and expense when the temporal method applies; stock items like equipment acquired on a past date retain their acquisition-date rate of 17.2.",
+    "ExplanationWrongD": "Option D reaches for a forward rate tied to hypothetical disposal. ASC 830 provides no forward-rate basis for carrying nonmonetary assets; remeasurement uses rates existing at transaction or reporting dates, not anticipated future settlement dates.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Moderate - selecting the governing rate requires applying temporal-method classification rules to each item type",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-199",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.8",
+    "Topic": "A.199 comparative-operating-risk-analysis",
+    "UniqueConceptKey": "A-199-fixed-cost-wedge-risk-ranking",
+    "Authorities": [
+      "Managerial accounting leverage theory (cost-structure risk analysis)"
+    ],
+    "FormulaReference": "FA-19",
+    "ItemStyle": "single-select",
+    "CalculationItem": true,
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CommonTrapReference": "Equating low contribution margin ratio with high operating leverage",
+    "Stem": "Flash is a diversified manufacturer. Director of financial planning Nadia Petrov is comparing two same-revenue divisions for COO Diane Foster. Robotics reported sales of $60.0 million, variable costs of $24.0 million, and fixed costs of $27.0 million. Sensors reported sales of $60.0 million, variable costs of $42.0 million, and fixed costs of $12.0 million. If a downturn cuts sales of BOTH divisions by 10%, which conclusion about the profit impact is accurate?",
+    "Choices": {
+      "A": "Robotics operating income falls about 40% versus about 30% for Sensors; Robotics carries the higher operating risk despite identical revenue",
+      "B": "Sensors carries higher operating risk because its contribution margin ratio is lower than Robotics'",
+      "C": "Both divisions lose approximately the same dollar amount of operating income, about $3.6 million each",
+      "D": "Robotics loses about 30% of operating income and Sensors loses about 40%, reversing the intuitive ranking"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Operating risk tracks the fixed-cost wedge between contribution margin and operating income, not revenue or margin level alone. Robotics: contribution margin $36.0M / operating income $9.0M = DOL 4.0, so a 10% sales decline cuts operating income 40% ($9.0M to $5.4M, a $3.6M hit). Sensors: contribution margin $18.0M / operating income $6.0M = DOL 3.0, so the same decline cuts operating income 30% ($6.0M to $4.2M, a $1.8M hit). Nadia Petrov's takeaway for Diane Foster: Robotics' heavier fixed-cost base ($27.0M versus $12.0M) makes its profit stream more volatile despite equal revenue, so downturn buffers and breakeven planning differ sharply by division.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B equates a thinner contribution margin ratio (30% for Sensors versus 60% for Robotics) with greater risk. Risk follows the fixed-cost block sitting below contribution margin, and Sensors' small $12.0M fixed base produces the lower DOL of 3.0 and milder profit sensitivity.",
+    "ExplanationWrongC": "Option C assumes symmetric dollar losses. Robotics sheds $3.6M (40% of $9.0M) while Sensors sheds $1.8M (30% of $6.0M); an equal percentage sales shock does not produce equal dollar profit hits across different cost structures.",
+    "ExplanationWrongD": "Option D reverses the multipliers, assigning 30% to Robotics and 40% to Sensors. The arithmetic runs the other way: DOL 4.0 x 10% = 40% for Robotics and DOL 3.0 x 10% = 30% for Sensors, preserving Robotics as the riskier structure.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Difficult - dual-division DOL derivation followed by downside-scenario interpretation across cost structures",
+      "Independent recompute: Robotics CM 36.0/OI 9.0 = 4.0 -> 40% decline ($9.0 to $5.4); Sensors CM 18.0/OI 6.0 = 3.0 -> 30% decline ($6.0 to $4.2)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-200",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.5",
+    "Topic": "A.200 functional-currency-indicators",
+    "UniqueConceptKey": "A-200-functional-currency-autonomy-indicators",
+    "Authorities": [
+      "FASB ASC 830 (Foreign Currency Matters) - functional currency indicators"
+    ],
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Defaulting to the parent's currency without testing ASC 830 indicators",
+    "Stem": "Flash is a diversified manufacturer. Group controller Wei Zhang must determine the functional currency of Flash's Sao Paulo components subsidiary for ASC 830 purposes. Fieldwork shows the subsidiary sells predominantly inside Brazil with prices set competitively in reais, incurs most materials and labor costs in reais, and retains and reinvests its operating cash flows locally with only modest routine remittances to the parent. Which conclusion should Wei Zhang support?",
+    "Choices": {
+      "A": "The U.S. dollar is functional because Flash's consolidated reporting currency anchors all subsidiaries by default",
+      "B": "The U.S. dollar is functional because the parent's shares trade in a dollar market",
+      "C": "The Brazilian real is functional because local pricing, local costs, and locally retained cash flows show the subsidiary's operations are largely autonomous of the parent's currency",
+      "D": "The currency with the least historical volatility against the dollar should be adopted as functional to stabilize reported results"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "ASC 830 functional-currency indicators weigh which currency mainly influences sales prices, cost inputs, financing, and the autonomy of cash flows. Local-currency signals include prices set competitively in reais, predominantly local-currency costs, and operating cash flows retained and reinvested locally rather than serving as a conduit to the parent. Wei Zhang should designate the real on these facts. Dollar contracting for major costs, dollar price-setting responsive to exchange rates, or cash flows servicing parent obligations would point instead to the U.S. dollar, and the designation matters because it determines whether Flash translates under the current-rate method or remeasures under the temporal method.",
+    "ExplanationWrongA": "Option A defaults to the parent's reporting currency without testing any ASC 830 indicator. Functional currency follows the economics of the subsidiary's operations, and nothing in the fact pattern ties Sao Paulo pricing, costs, or cash flows primarily to the dollar.",
+    "ExplanationWrongB": "Option B leans on where the parent's shares trade. The listing venue of Flash's equity has no bearing on which currency drives the subsidiary's prices, costs, and cash flows under the ASC 830 indicator framework Wei Zhang must apply.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D imports a volatility-management criterion foreign to ASC 830. The standard asks which currency economically influences operations and cash flows; smoothing reported results is not a permitted basis and would misstate the subsidiary's underlying exposure profile.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Moderate - applying multiple ASC 830 functional-currency indicators to a coordinated fact pattern",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-201",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.6",
+    "Topic": "A.201 inflation-historical-cost-distortion",
+    "UniqueConceptKey": "A-201-price-level-denominator-drift",
+    "Authorities": [
+      "FASB ASC 330 (Inventory) - LIFO historical-cost layering",
+      "Price-level analysis theory"
+    ],
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "CognitiveLevel": "Understand",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CommonTrapReference": "Assuming percentage ratios self-adjust for price-level changes",
+    "Stem": "Flash is a diversified manufacturer. Internal audit lead Sofia Ramirez is reviewing why several of Flash's five-year ratio trends look steadily better even though operational interviews report no genuine efficiency gains during an extended inflationary period. Which statement best explains the distortion inflation introduces into historical-cost ratio trend analysis?",
+    "Choices": {
+      "A": "Inflation raises nominal sales faster than costs, so profitability ratios become understated relative to real performance",
+      "B": "Because long-lived assets and LIFO inventory layers remain at older, lower historical costs while revenues reflect current price levels, return-on-asset and turnover-type ratios drift upward with no real improvement in efficiency",
+      "C": "Inflation affects only income-statement captions, leaving every balance-sheet denominator at current economics",
+      "D": "Ratios expressed as percentages neutralize inflation automatically because both numerator and denominator adjust to current prices"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Historical-cost measurement leaves long-lived assets and LIFO inventory layers at older, lower-dollar amounts while revenues and current-year costs reflect prevailing price levels. As inflation persists, denominators such as total assets and average inventory sit understated relative to current economics, so return on assets and turnover-style ratios drift upward with no underlying operational improvement, eroding year-over-year comparability. Sofia Ramirez should flag this artifact when certifying trend dashboards: part of the apparent gain is measurement noise, and analysts commonly supplement with replacement-cost or indexed data before crediting management with efficiency improvements.",
+    "ExplanationWrongA": "Option A gets the direction wrong: inflation lifts nominal revenues and costs together, and the documented artifact here is understated asset bases inflating returns and turnover, not depressed profitability relative to real performance.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C confines inflation to the income statement. Price-level change also freezes balance-sheet carrying amounts, such as plant and LIFO layers, at dated dollars, which is exactly why ratio denominators drift away from current economics over time.",
+    "ExplanationWrongD": "Option D claims percentage-form ratios self-neutralize. A ratio mixes a current-priced numerator with a historical-cost denominator, so the percentage itself inherits the mismatch rather than canceling it, which is what Sofia Ramirez observes in the trends.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Moderate-Easy - explaining a known measurement artifact at concept level with direction-of-effect reasoning",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-202",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.7",
+    "Topic": "A.202 off-balance-sheet-financing-choice",
+    "UniqueConceptKey": "A-202-constrained-obbs-structuring",
+    "Authorities": [
+      "FASB ASC 842 (Leases)",
+      "FASB ASC 460 (Guarantees)",
+      "Legacy pre-ASC 842 operating-lease structuring practice"
+    ],
+    "FormulaReference": "FA-07",
+    "ItemStyle": "single-select",
+    "CalculationItem": true,
+    "CognitiveLevel": "Evaluate",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CommonTrapReference": "Treating recourse factoring as true off-balance-sheet financing",
+    "Stem": "Flash is a diversified manufacturer. Flash's balance sheet carries total liabilities of $120.0 million against shareholders' equity of $80.0 million, and its credit agreement caps debt-to-equity at 1.60. CFO Elena Vasquez must fund a $45.0 million distribution-center expansion without issuing new equity and without breaching the covenant; Flash's trade receivables pool totals $30.0 million. Structuring precedent at Flash permits legacy pre-ASC 842 style operating-lease arrangements with footnote disclosure. Which recommendation best satisfies the funding need and both constraints simultaneously?",
+    "Choices": {
+      "A": "Structure the expansion through a sale-leaseback accounted for as an operating lease with a third-party lessor, keeping the obligation off the balance sheet with footnote disclosure and preserving covenant headroom",
+      "B": "Borrow the full $45.0 million under a term loan and rely on future earnings growth to restore headroom",
+      "C": "Factor the entire receivables pool with recourse and apply the proceeds to the expansion",
+      "D": "Issue $45.0 million of new common equity to fund the project outright"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Reported leverage stands at $120.0M / $80.0M = 1.50 against a 1.60 ceiling, so headroom is thin. Straight borrowing of $45.0M pushes debt-to-equity to $165.0M / $80.0M = 2.06, an immediate breach; even a $20.0M draw breaches at 1.75. A sale-leaseback structured as a legacy-style operating lease funds the facility while the obligation remains off balance sheet with footnote disclosure, preserving headroom under both constraints. Recourse factoring tops out near the $30.0M receivables pool, well short of the $45.0M requirement, and invites secured-borrowing characterization; a $45.0M equity issuance restores ratios comfortably but directly violates Elena Vasquez's stated no-new-equity constraint.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B books the full $45.0M loan, driving leverage to $165.0M / $80.0M = 2.06 against the 1.60 ceiling, an immediate covenant breach inviting repricing or acceleration, so hoped-for earnings growth never gets the chance to matter.",
+    "ExplanationWrongC": "Option C relies on recourse factoring capped by the ~$30.0M receivables pool, far short of the $45.0M need, and recourse terms invite secured-borrowing characterization that could push the arrangement back onto the balance sheet anyway.",
+    "ExplanationWrongD": "Option D issues $45.0M of equity, which would repair the ratio but expressly violates Elena Vasquez's no-new-equity directive and dilutes existing holders; a constraint-satisfying answer cannot simply discard one of the constraints.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Very Difficult - constrained recommendation weighing covenant arithmetic, funding capacity, treatment risk, and a binding prohibition",
+      "Independent recompute: 120/80 = 1.50 baseline; 165/80 = 2.06 > 1.60 breach; 140/80 = 1.75 > 1.60 breach; factor capacity 30.0 < 45.0 needed",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-203",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.6",
+    "Topic": "A.203 lifo-fifo-turnover-comparability",
+    "UniqueConceptKey": "A-203-lifo-fifo-turnover-bias",
+    "Authorities": [
+      "FASB ASC 330 (Inventory) - LIFO/FIFO cost-flow assumptions"
+    ],
+    "FormulaReference": "FA-04",
+    "ItemStyle": "single-select",
+    "CalculationItem": false,
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CommonTrapReference": "Comparing LIFO and FIFO reporters' turnovers without valuation adjustment",
+    "Stem": "Flash is a diversified manufacturer that accounts for resin inventory on a FIFO basis. Supply-chain analyst Marco Bellini is benchmarking Flash's inventory turnover against its closest competitor, an otherwise similar maker that uses LIFO, during a period of steadily rising resin prices. Marco wants to know how the accounting-method difference bears on the comparison. Which conclusion is analytically sound?",
+    "Choices": {
+      "A": "The LIFO reporter's turnover appears lower because LIFO reports smaller cost of goods sold during inflation",
+      "B": "The two turnovers compare cleanly as published because both formulas divide COGS by inventory",
+      "C": "The FIFO reporter's cost of goods sold is higher because FIFO charges the newest costs to expense",
+      "D": "The LIFO reporter's turnover is overstated relative to the FIFO reporter's because LIFO pairs current, higher replacement costs in the numerator with older, cheaper layers in the denominator"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Under ASC 330 cost-flow assumptions, LIFO charges cost of goods sold at current, higher replacement costs while leaving ending inventory at older, cheaper layers; FIFO does the reverse. Inventory turnover equals COGS divided by average inventory, so the LIFO reporter's numerator is inflated and its denominator deflated relative to the FIFO reporter's, overstating apparent velocity during rising prices. Marco Bellini's sound conclusion is that the published turnovers cannot be compared without restatement, adjusting either company's inventory to a current-cost or common basis, because the divergence reflects accounting-method artifacts rather than genuine supply-chain speed differences between the two manufacturers.",
+    "ExplanationWrongA": "Option A reverses the mechanics: LIFO raises COGS by charging current costs and shrinks reported inventory values, pushing the published turnover higher than FIFO during inflation, not lower as the option asserts.",
+    "ExplanationWrongB": "Option B accepts face-value comparability. Identical formulas do not yield comparable outputs when the numerator and denominator embed different vintages of input prices under LIFO versus FIFO, so the raw quotients embed opposite biases.",
+    "ExplanationWrongC": "Option C claims FIFO produces the higher COGS. FIFO releases the oldest, cheapest layers to cost of goods sold while LIFO releases the newest replacement-cost layers, so during inflation FIFO's COGS is lower, not higher.",
+    "ExplanationWrongD": "",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Moderate - tracing a cost-flow assumption through both the numerator and the denominator of a benchmarking ratio",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-204",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.2",
+    "Topic": "A.204 window-dressing-current-ratio",
+    "UniqueConceptKey": "A-204-proportional-payment-ratio-mechanic",
+    "Authorities": [
+      "FASB ASC 205-10 (Presentation of Financial Statements)",
+      "Ratio-analysis limitation theory (window dressing)"
+    ],
+    "FormulaReference": "FA-01",
+    "ItemStyle": "single-select",
+    "CalculationItem": true,
+    "CognitiveLevel": "Apply",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CommonTrapReference": "Missing that paying current liabilities raises the current ratio when above 1.0",
+    "Stem": "Just before year-end, staff accountant Lucia Fernandez learns that Flash, a diversified manufacturer, paid $2.0 million of accounts payable out of cash on December 29. Prepayment figures showed current assets of $12.0 million and current liabilities of $8.0 million. What happened to Flash's current ratio as a result of the payment?",
+    "Choices": {
+      "A": "It fell from 1.50 to about 1.25",
+      "B": "It rose from 1.50 to about 1.67",
+      "C": "It remained unchanged at 1.50",
+      "D": "It rose from 1.50 to about 1.43"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Paying $2.0M of accounts payable with cash reduces current assets and current liabilities by equal dollar amounts. Before: $12.0M / $8.0M = 1.50. After: ($12.0M - $2.0M) / ($8.0M - $2.0M) = $10.0M / $6.0M = 1.67. Whenever the current ratio exceeds 1.0, equal reductions on both sides raise the ratio, a classic window-dressing mechanic Lucia Fernandez surfaces as a limitation of point-in-time ratio analysis: underlying liquidity is unchanged and only the snapshot improves, which is why lenders routinely request pre-year-end transaction detail before relying on reported ratios.",
+    "ExplanationWrongA": "Option A (1.25) cuts cash to $10.0M but forgets the matching $2.0M drop in current liabilities to $6.0M. Equal-sided payments raise the ratio whenever it starts above 1.0, so treating the payment as a pure asset reduction misreads the mechanics.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C holds the ratio at 1.50 as if equal dollar payments were proportionally neutral. Proportions shift: $10.0M / $6.0M = 1.67, because the liability base shrinks faster in percentage terms than the asset base does.",
+    "ExplanationWrongD": "Option D's 1.43 applies only half the payoff (as in $10.0M / $7.0M). Both accounts move by the full $2.0M, so stopping halfway misstates the post-payment snapshot Lucia Fernandez must explain to the year-end review team.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Easy - single-step ratio update with one counterintuitive directional insight",
+      "Independent recompute: (12.0-2.0)/(8.0-2.0) = 10.0/6.0 = 1.6667 ~ 1.67",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "QuestionID": "P2-A-205",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "Section": "A",
+    "BlueprintDomain": "Financial Statement Analysis",
+    "LOSTag": "A.8",
+    "Topic": "A.205 dfl-preferred-dividend-grossup",
+    "UniqueConceptKey": "A-205-preferred-dividend-tax-grossup",
+    "Authorities": [
+      "Corporate finance theory (DFL with preferred dividend tax gross-up)"
+    ],
+    "FormulaReference": "FA-20",
+    "ItemStyle": "single-select",
+    "CalculationItem": true,
+    "CognitiveLevel": "Analyze",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CommonTrapReference": "Omitting the preferred-dividend tax gross-up in the DFL denominator",
+    "Stem": "Flash is a diversified manufacturer. Consolidated operating income is $20.0 million, interest expense is $8.0 million, the marginal tax rate is 25%, and Flash pays $3.0 million of preferred dividends. Capital reporting manager Grace Lin is computing the degree of financial leverage for the board's risk dashboard, correctly adjusting for the after-tax nature of preferred dividends. What degree of financial leverage should Grace report?",
+    "Choices": {
+      "A": "1.67",
+      "B": "2.22",
+      "C": "2.50",
+      "D": "3.75"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The degree of financial leverage equals EBIT divided by (EBIT - interest - preferred dividends grossed up for taxes), because preferred dividends are paid from after-tax dollars while EBIT is a pre-tax measure. Preferred burden = $3.0M / (1 - 0.25) = $4.0M. Denominator = $20.0M - $8.0M - $4.0M = $8.0M. DFL = $20.0M / $8.0M = 2.50. Grace Lin's figure tells the board that a 1% change in operating income moves earnings available to common shareholders by about 2.5%; ignoring the gross-up would understate leverage at 2.22, and dropping preferred dividends entirely would mask the senior claim at a misleading 1.67.",
+    "ExplanationWrongA": "Option A (1.67) omits preferred dividends altogether, dividing $20.0M by $12.0M. Preferred claims rank ahead of common earnings, so skipping them understates the squeeze common holders experience and flatters the risk dashboard.",
+    "ExplanationWrongB": "Option B (2.22) subtracts the $3.0M preferred dividend without the tax gross-up. Preferred dividends come from after-tax dollars while EBIT is pre-tax, so the divisor must charge $3.0M / 0.75 = $4.0M, which yields 2.50 rather than 2.22.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D (3.75) grosses up interest as well ($8.0M / 0.75 = $10.67M). Interest is already a pre-tax deduction; only the preferred dividend requires the (1 - t) conversion, so double-adjusting shrinks the denominator improperly and inflates DFL.",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Difficult - DFL computation requiring the preferred-dividend tax gross-up among four precise computational paths",
+      "Independent recompute: PD/(1-t) = 3.0/0.75 = 4.0; DFL = 20.0/(20.0-8.0-4.0) = 20.0/8.0 = 2.50",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 860 (Transfers and Servicing)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Treat the transaction as a true sale: remove the $8.5 million of receivables, record a $340,000 factoring loss, and show no new liability",
+      "B": "Treat the transaction as a sale for presentation purposes while disclosing the recourse obligation entirely in the footnotes",
+      "C": "Treat the transaction as a secured borrowing: record the $8.16 million of proceeds as a liability to Meridian and leave the receivables on Flash's balance sheet",
+      "D": "Treat the transferred receivables as hedged derivative positions and remeasure the portfolio at fair value each period"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Assuming receipt of cash equals a true sale when credit risk is retained",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "ASC 860 permits sale (derecognition) treatment only when the transferor surrenders control of the transferred assets, and Flash's retention of full recourse means it keeps the credit risk, so the sale conditions fail. The arrangement is therefore a collateralized borrowing: debit cash $8.16 million and credit a liability to Meridian for $8.16 million, while the $8.5 million of receivables remain on the balance sheet and the $340,000 difference is accounted for as financing cost over the collection period. For ratio purposes, debt-to-equity and reported current liabilities are effectively unchanged, so the leverage metrics Marcus Webb gives lenders are not improved by the transfer. Business interpretation: analysts add recourse arrangements like this back when screening for off-balance-sheet financing, so treating the cash receipt as a sale would overstate Flash's apparent de-leveraging.",
+    "ExplanationWrongA": "Choice A applies true-sale accounting, removing $8.5 million of receivables and booking a $340,000 loss, but Flash retained full recourse and therefore the credit risk, so ASC 860's surrender-of-control condition fails and derecognition is unavailable. The error assumes that receiving cash converts a transfer into a sale; because risk was retained, the correct characterization is a secured borrowing with both sides staying on the books.",
+    "ExplanationWrongB": "Choice B records a sale and pushes the recourse exposure to footnote disclosure, but ASC 860 does not permit disclosure to substitute for recognition when sale accounting fails; the entire arrangement remains on the balance sheet. The underlying mistake is believing presentation can be engineered around recognition rules; the controlling question is whether control of the receivables passed, not how the commitment is described.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D imports hedge-accounting mechanics, which have no application here because no hedged item or hedging instrument exists in the fact pattern; the transfer is a financing with recourse. The confusion blends ASC 815 fair-value remeasurement with ASC 860 transfer analysis, whereas the correct treatment leaves carrying amounts untouched until the receivables are collected or the borrowing repaid.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-206",
+    "Section": "A",
+    "Stem": "Flash Industries, a diversified manufacturer, sold $8.5 million of trade receivables to Meridian Capital Factors for cash proceeds of $8.16 million, with Flash retaining full recourse for customer nonpayment; Meridian may return uncollectible accounts to Flash. Treasurer Marcus Webb tells CFO Elena Vasquez that lenders will recompute Flash's debt-to-equity ratio at year end using the reported statements. How should this transaction affect the leverage ratios Flash reports?",
+    "Topic": "A.206 factoring-with-recourse-derecognition",
+    "UniqueConceptKey": "A-206-recourse-factoring-derecognition",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Analyze of derecognition conditions under retained recourse requires multi-step control-risk reasoning (DS 4)",
+      "Conceptual item; embedded arithmetic verified: 8.50M - 8.16M = 0.34M fee",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (degree of financial leverage)",
+      "IRC Sec. 163 (corporate interest deductibility context)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "1.64",
+      "B": "1.51",
+      "C": "1.29",
+      "D": "0.61"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Subtracting preferred dividends without the (1 - t) gross-up",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "DFL = EBIT / [EBIT - Interest - Preferred dividends / (1 - t)]. Preferred dividends are paid from after-tax income while EBIT is pre-tax, so they must be grossed up to a pre-tax equivalent: $1.05M / 0.70 = $1.50M. The denominator becomes $9.0M - $2.0M - $1.5M = $5.5M, giving DFL = $9.0M / $5.5M = 1.64. Elena can tell the audit committee that each 1 percent change in EBIT should move earnings per share by about 1.64 percent, a moderate amplification from fixed financing charges. Business interpretation: the gross-up matters because comparing an after-tax dividend stream directly against pre-tax operating income would understate Flash's fixed financial burden and understate the leverage embedded in its capital structure.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B, 1.51, comes from dividing $9.0M by ($9.0M - $2.0M - $1.05M) = $5.95M, subtracting the preferred dividend without converting it to its pre-tax equivalent. Because preferred dividends come out of after-tax income while the numerator is pre-tax, the unadjusted figure mixes tax bases; restoring the dividend to $1.05M / 0.70 = $1.50M yields the correct denominator of $5.5M.",
+    "ExplanationWrongC": "Choice C, 1.29, ignores the preferred issue entirely and computes $9.0M / ($9.0M - $2.0M) = 1.29. That treats preferred dividends as discretionary rather than a fixed charge akin to interest, understating leverage; the correct computation must absorb the $1.50M grossed-up preferred burden alongside the $2.0M of interest.",
+    "ExplanationWrongD": "Choice D, 0.61, inverts the formula and computes $5.5M / $9.0M. DFL relates a percentage change in EPS to a percentage change in EBIT, so EBIT belongs in the numerator; an inverted figure below 1.0 would imply financing dampens earnings swings, contradicting the fixed-charge mechanics that magnify them.",
+    "FormulaReference": "FA-20",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-207",
+    "Section": "A",
+    "Stem": "At fiscal year-end, CFO Elena Vasquez prepares Flash Industries' leverage briefing for the audit committee. Next year's budget shows expected operating income (EBIT) of $9.0 million, interest expense of $2.0 million on term debt, and cumulative preferred dividends of $1.05 million; the marginal tax rate is 30 percent. What is Flash's degree of financial leverage (DFL)?",
+    "Topic": "A.207 dfl-preferred-dividend-gross-up",
+    "UniqueConceptKey": "A-207-dfl-preferred-gross-up",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-component fixed-charge computation with tax gross-up (DS 3)",
+      "DFL recomputed twice: 1.05/0.70 = 1.50; 9.00 - 2.00 - 1.50 = 5.50; 9.00/5.50 = 1.6364 -> 1.64; distractors 9/5.95 = 1.51, 9/7 = 1.29, 5.5/9 = 0.61 verified",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 460 (Guarantees)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Disclose the guarantee in the footnotes only, recognizing a liability if and when Halstead's default becomes probable",
+      "B": "Record nothing at inception because Flash has neither paid nor received consideration for issuing the guarantee yet",
+      "C": "Expense the full $6.0 million covered amount immediately as a loss contingency",
+      "D": "Recognize a liability equal to the fair value of the obligation to stand ready, with an offsetting premium recorded and amortized over the guarantee term"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Deferring recognition until default becomes probable (legacy practice)",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "ASC 460 requires a guarantor to recognize, on the day the guarantee is issued, a liability measured at the fair value of the stand-ready obligation rather than waiting for a probable default. In practice the initial amount often approximates the market-based fee Flash would charge an unrelated party to issue the same guarantee; the offsetting entry is a premium carried as a deferred credit and amortized into income over the coverage period, with later measurement following contingency guidance. Priya's point for the analyst is that signing the commitment itself creates a measurable balance-sheet obligation, which is why rating agencies and credit analysts add guarantee exposures to Flash's effective leverage when assessing support commitments to related suppliers.",
+    "ExplanationWrongA": "Choice A applies the pre-ASC 460 habit of footnote-only treatment until default becomes probable; the standard moved initial recognition forward to inception at fair value, reserving probability thresholds for subsequent measurement. Waiting for a probable default omits a liability that exists from the day the commitment is signed.",
+    "ExplanationWrongB": "Choice B assumes no entry follows from an unbilled, unpaid promise, but the guarantor's obligation is precisely what ASC 460 brings onto the books; consideration normally exists explicitly or implicitly as a guarantee premium, and recording nothing leaves the stand-ready duty unrecognized at inception.",
+    "ExplanationWrongC": "Choice C expenses the maximum covered amount, $6.0 million, confusing the guarantee's face limit with the fair value of the obligation. The initial liability reflects what the promise to stand ready is worth, generally far below the covered amount, and it is matched by a deferred premium rather than charged straight to loss.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-208",
+    "Section": "A",
+    "Stem": "Flash guarantees a $6.0 million working-capital line for Halstead Components, its sole source of a proprietary bearing assembly. At signing, controller Priya Chen walks a newly hired staff analyst through the journal entries Flash must make. Under FASB ASC 460, how must Flash account for the guarantee at inception?",
+    "Topic": "A.208 guarantee-inception-recognition",
+    "UniqueConceptKey": "A-208-guarantee-fair-value-recognition",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-standard comprehension of recognition timing (Moderate-Easy, DS 2)",
+      "Conceptual item; no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Quality-of-earnings doctrine (CFO-to-net-income ratio)",
+      "FASB ASC 230 (Statement of Cash Flows)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Proceed at $95 million because a 10x multiple of reported earnings already embeds conservatism appropriate for a manufacturing target",
+      "B": "Renegotiate toward a price supported by recurring, cash-backed earnings, since weak cash conversion, receivables divergence, and the reserve release indicate reported income overstates sustainable earning power",
+      "C": "Reject the transaction categorically because any target whose cash flow trails net income is unsuitable for acquisition",
+      "D": "Proceed at $95 million relying on customary representations and warranties alone, because earnings-quality screens are unreliable for industrial targets"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Paying the headline multiple without normalizing nonrecurring accruals",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Earnings-quality doctrine asks how faithfully reported income represents sustainable, cash-generating performance before it is capitalized into price. Kestrel's five-year quality-of-income ratio of CFO/net income at 0.55 means only about $0.55 of each reported dollar was backed by operating cash; receivables growing 35 percent against 8 percent sales growth suggests revenue may be pulled forward or recognized aggressively; and the $1.8 million warranty-reserve release is nonrecurring, so core income approximates $9.5M - $1.8M = $7.7M and the effective multiple is $95M / $7.7M = roughly 12.3x rather than the advertised 10x. Against convergent evidence of low earnings quality, anchoring the offer to recurring, cash-supported earnings through renegotiation preserves a strategically sound deal while refusing to pay for accrual-inflated income; proceeding at the ask overpays for earnings that may never convert to cash, and categorical rejection discards a negotiable opportunity without proportionate cause.",
+    "ExplanationWrongA": "Choice A trusts the headline multiple, but a multiple inherits every weakness in the earnings beneath it; with 45 percent of reported dollars lacking cash backing and a reserve release inflating the base, the effective multiple on durable earnings approaches 12.3x, so the asking price embeds optimism rather than conservatism.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C converts one red flag into an absolute veto; weak cash conversion warrants scrutiny and repricing, not automatic rejection, because causes range from aggressive recognition to temporary working-capital investment. The evidence supports the proportional response of renegotiation, which addresses the findings while keeping optionality alive.",
+    "ExplanationWrongD": "Choice D dismisses earnings-quality analysis as unreliable, yet persistent CFO-to-income divergence and receivables outgrowing sales are among the most documented precursors of restatement and earnings disappointment; relying solely on representations leaves Elena paying today for income that may never arrive as cash.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-209",
+    "Section": "A",
+    "Stem": "Flash is considering acquiring Kestrel Tooling for $95 million, a 10x multiple of Kestrel's reported net income of $9.5 million. Before the board vote, CFO Elena Vasquez reviews five years of Kestrel data: operating cash flow averaged only 55 percent of net income; receivables grew 35 percent last year against 8 percent sales growth; and current-year income includes a one-time release of warranty reserves worth $1.8 million. Elena must recommend whether to proceed at $95 million or renegotiate the price. Which recommendation is best supported by the evidence?",
+    "Topic": "A.209 earnings-quality-acquisition-pricing",
+    "UniqueConceptKey": "A-209-earnings-quality-renegotiation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: evaluation weighing competing acquisition responses against convergent red-flag evidence (Very Difficult, DS 5); named decision-maker with competing defensible alternatives",
+      "Embedded arithmetic verified: 9.5 - 1.8 = 7.7; 95 / 7.7 = ~12.34",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 830 (Foreign Currency Matters)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The euro, because the subsidiary's sales prices, costs, and operating cash flows are overwhelmingly denominated in and settled with the local currency",
+      "B": "The U.S. dollar, because the reporting currency of the consolidated group governs every subsidiary's functional currency",
+      "C": "The U.S. dollar, because the parent's dollar-denominated financing is the decisive indicator whenever intercompany funding exists",
+      "D": "Neither currency can be selected until the subsidiary's individual statements are restated to a common measurement basis"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Letting parent-loan currency outweigh local cash-flow indicators",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "ASC 830 weighs indicators across cash-flow, sales-price, expense, financing, and intercompany dimensions. Dresden Precision Tools' economics point squarely to the euro: selling prices respond to eurozone competition, materials and labor are locally incurred, and collections arrive in euros, while the dollar loan and limited intercompany activity are secondary financing-side signals that do not dominate. Concluding the euro means the unit is a foreign operation translated under the current-rate method, with translation adjustments accumulated in other comprehensive income instead of flowing through net income. Marcus's determination matters operationally because functional currency dictates which exchange rate translates each statement line and where currency effects land, directly shaping the volatility Flash reports to investors.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B elevates group reporting convenience over economic substance; ASC 830 assigns functional currency from the subsidiary's own cash flows, prices, and costs, and designating dollars for a euro-based operation would misstate its economics simply to match the parent's reporting orientation.",
+    "ExplanationWrongC": "Choice C lets a single financing indicator override the cash-flow, pricing, and expense indicators that clearly dominate; a parent loan denominated in dollars is a relevant signal, but the standard directs a weighing of all factors, and here the operational evidence uniformly favors the euro.",
+    "ExplanationWrongD": "Choice D invents a restatement prerequisite; functional currency is determined from the indicators themselves, and the designation then drives translation mechanics rather than depending on any prior common-basis restatement of the local accounts.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-210",
+    "Section": "A",
+    "Stem": "Flash's newly acquired Dresden Precision Tools subsidiary manufactures and sells almost exclusively within the eurozone: sales prices are set and billed in euros, materials and labor costs are incurred in euros, and cash collections arrive in euros. Parent-level financing included a $12 million dollar-denominated intercompany loan, and routine transactions with the U.S. parent are limited. Under FASB ASC 830's functional-currency indicators, what functional currency should treasurer Marcus Webb conclude applies to the subsidiary?",
+    "Topic": "A.210 functional-currency-indicator-analysis",
+    "UniqueConceptKey": "A-210-euro-functional-currency-indicators",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: application of a multi-factor standard to a fact pattern (Moderate, DS 3)",
+      "Conceptual item; no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory (cost behavior and operating leverage)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The percentage change in earnings per share produced by a 1 percent change in earnings before interest and taxes",
+      "B": "The ratio of total fixed costs to total variable costs at the current sales level",
+      "C": "The percentage change in operating income that accompanies a 1 percent change in sales at a given sales level",
+      "D": "Operating income divided by interest expense, measuring the cushion available to service debt"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Confusing DOL with DFL or coverage-ratio definitions",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Degree of operating leverage is defined as the percentage change in operating income divided by the percentage change in sales, equivalently the operating-income response to a 1 percent sales change at a specified volume; mechanically it equals contribution margin divided by operating income. Priya stresses the qualifier 'at a given sales level' because DOL is a point elasticity that grows toward its maximum as volume approaches breakeven and declines as volume rises above it. In Flash's planning decks the figure signals how sharply divisional operating income would swing if volumes deviate from plan, isolating cost-structure risk from the financing risk captured separately by the degree of financial leverage.",
+    "ExplanationWrongA": "Choice A defines degree of financial leverage, the EPS response to an EBIT change, capturing financing amplification rather than the cost-structure amplification DOL isolates; swapping the two muddles which management lever, plant capacity and fixed costs versus capital structure, is under discussion.",
+    "ExplanationWrongB": "Choice B offers a raw cost-mix ratio, which influences DOL but is not itself the elasticity measure; two divisions with identical fixed-to-variable mixes operating at different volumes report different DOL values, so the mix ratio cannot substitute for the percentage-response definition.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D states times interest earned, a solvency-coverage metric containing no sales sensitivity at all; it answers a creditor-protection question rather than the operating-risk elasticity Priya asked about, and citing it reveals category confusion between leverage measures and coverage ratios.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-211",
+    "Section": "A",
+    "Stem": "During onboarding, Flash controller Priya Chen quizzes a new FP&A analyst on the leverage vocabulary used throughout Flash's planning decks. She asks for the precise definition of the degree of operating leverage (DOL). Which response is correct?",
+    "Topic": "A.211 dol-definition-recall",
+    "UniqueConceptKey": "A-211-degree-operating-leverage-definition",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-definition recall with familiar distractor boundaries (Easy, DS 1)",
+      "Conceptual item; no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IAS 29 (Financial Reporting in Hyperinflationary Economies)",
+      "Legacy constant-dollar doctrine (SFAS 33 lineage)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The affiliate's current ratio is materially overstated because its payables are recorded at stale exchange values",
+      "B": "The affiliate's return on assets and fixed-asset turnover are overstated because revenues reflect current prices while the asset base is carried at outdated, understated historical costs",
+      "C": "The affiliate's gross margin is understated because cost of goods sold absorbs current replacement costs",
+      "D": "The affiliate's debt-to-equity ratio is overstated because liabilities are indexed upward while equity remains at historical amounts"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Comparing inflationary affiliates to home-country divisions without restatement",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Inflation splits historical-cost statements onto mismatched measurement bases. Revenues price at current levels while COGS draws older, cheaper inventory layers, flattering gross margin, and the denominator effect compounds the distortion: plant carried at roughly 20 percent of replacement cost shrinks total assets, so ROA and fixed-asset turnover inflate mechanically even with zero operational improvement. Priya's cross-division review therefore shows the Buenos Aires affiliate beating U.S. divisions on efficiency and returns largely as an accounting artifact, and any conclusion feeding capital allocation should require inflation-adjusted restatement or an explicit comparability caveat before the ratios are treated as performance.",
+    "ExplanationWrongA": "Choice A ties the distortion to payables at stale exchange values, but monetary items such as payables carry nominal amounts whose measurement is not the source of the classic inflation bias; the misstatement sits in understated non-monetary assets, so the current-ratio claim misidentifies both cause and effect.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C reverses the direction of the distortion: older, cheaper inventory layers mean COGS understates replacement cost, so gross margin is flattered rather than compressed; the conclusion mistakes the direction in which the historical-cost lag operates under rising prices.",
+    "ExplanationWrongD": "Choice D asserts liabilities are indexed upward under historical-cost reporting; absent formal restatement they remain at nominal amounts, and equity is likewise not indexed, so there is no mechanism producing the claimed overstatement of leverage.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-212",
+    "Section": "A",
+    "Stem": "Flash's Buenos Aires assembly affiliate operates amid 45 percent annual inflation yet reports on a historical-cost basis. Its principal plant was purchased eight years ago and is carried at heavily depreciated original cost, roughly 20 percent of current replacement cost, while inventory layers date from earlier, cheaper periods. Controller Priya Chen is preparing the annual comparison of the affiliate's ratios against Flash's U.S. divisions. Which analytical conclusion is best supported?",
+    "Topic": "A.212 inflation-distorted-ratio-analysis",
+    "UniqueConceptKey": "A-212-historical-cost-ratio-overstatement",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-statement decomposition of inflation-induced ratio bias (Difficult, DS 4)",
+      "Conceptual item; no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory (operating leverage elasticity)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "1.20",
+      "B": "0.40",
+      "C": "0.31",
+      "D": "2.50"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Dividing dollar changes instead of percentage changes",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Measured from observed results, DOL = percentage change in operating income / percentage change in sales = 20.0% / 8.0% = 2.50. Rosa can tell division leadership that if next quarter's sales move 1 percent from the current base, operating income should move about 2.5 percent in the same direction, with symmetric force on the downside. The percentage-on-percentage construction matches the elasticity definition and avoids mixing dollar deltas with percentage bases; over a linear cost-behavior range it reproduces the contribution-margin-divided-by-operating-income formulation, which is why history-based and budget-based estimates should agree when volumes stay near plan.",
+    "ExplanationWrongA": "Choice A, 1.20, divides ending operating income by beginning operating income ($7.44M / $6.2M); that growth factor confirms income rose 20 percent but contains no sales information whatsoever, so it cannot express the elasticity of income to sales that Rosa intends to measure.",
+    "ExplanationWrongB": "Choice B, 0.40, inverts the inputs, dividing the 8.0 percent sales change by the 20.0 percent income change; the result describes sales movement per unit of income movement, the reverse of the leverage question, and would wrongly suggest income swings less than sales.",
+    "ExplanationWrongC": "Choice C, 0.31, divides dollar changes ($1.24M / $4.0M); pairing raw dollar deltas yields a ratio with no elasticity meaning and contradicts the percentage-based definition, since the dollar changes must each be expressed relative to their own bases before division.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "FA-19",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-213",
+    "Section": "A",
+    "Stem": "Last quarter Flash's appliance division grew sales from $50.0 million to $54.0 million, an 8.0 percent increase, while operating income climbed from $6.2 million to $7.44 million, a 20.0 percent increase. Budget analyst Rosa Delgado computes the division's degree of operating leverage from this observed history to frame next quarter's sensitivity briefing. What DOL figure should she report?",
+    "Topic": "A.213 dol-from-observed-changes",
+    "UniqueConceptKey": "A-213-dol-percent-change-method",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: direct elasticity computation with three plausible mechanical slips (Moderate-Easy, DS 2)",
+      "DOL recomputed twice: 20.0%/8.0% = 2.50; distractors 7.44/6.20 = 1.20, 8/20 = 0.40, 1.24/4.00 = 0.31 verified",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 830 (Foreign Currency Matters - remeasurement)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "A $1.0 million remeasurement loss in net income, because the franc's strength reduces the dollar value of the unit's obligations",
+      "B": "No remeasurement effect, because monetary items continue to be carried at their historical exchange rates between closings",
+      "C": "A $1.0 million remeasurement gain in net income, reflecting the higher dollar value of the unit's net monetary asset position",
+      "D": "A $1.0 million gain presented in other comprehensive income as a currency translation adjustment"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Routing remeasurement gains to OCI instead of net income",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "When the functional currency is the U.S. dollar, foreign-currency monetary items are remeasured at the current rate at each close, and the net monetary position determines the result. The Zurich unit's CHF 20.0 million of net monetary assets gains $0.05 per franc as the rate moves from $0.90 to $0.95: CHF 20.0M x $0.05 = a $1.0 million remeasurement gain, which ASC 830 routes through net income within other income (expense). Priya's reporting distinction matters to readers: had the franc been the functional currency instead, currency effects would surface as a translation adjustment in other comprehensive income, leaving the earnings line insulated from the rate move that here flows directly through it.",
+    "ExplanationWrongA": "Choice A gets the direction backwards: appreciation of the currency in which the unit holds net monetary assets increases, not decreases, their dollar value; a remeasurement loss would arise from depreciation of that currency or from a net monetary liability position, neither of which fits these facts.",
+    "ExplanationWrongB": "Choice B freezes monetary items at historical rates, inverting the core rule of remeasurement: monetary assets and liabilities are exactly the categories carried at the current rate, while non-monetary items retain historical rates, so the stated treatment reverses the standard's classification logic.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D parks a remeasurement gain in other comprehensive income, geography reserved for the current-rate translation method; under a U.S.-dollar functional currency the remeasurement runs through net income by design, so the proposed presentation hides the effect where analysts expect earnings impact.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-214",
+    "Section": "A",
+    "Stem": "Flash's Zurich distribution unit keeps its books in Swiss francs although the U.S. dollar is its functional currency, because financing and most sales contracts are dollar-denominated. The unit carries net monetary assets of CHF 20.0 million. During the quarter the franc strengthens from $0.90 to $0.95 per franc. Following ASC 830 remeasurement procedures, what amount and statement location should controller Priya Chen report?",
+    "Topic": "A.214 remeasurement-net-monetary-position",
+    "UniqueConceptKey": "A-214-franc-remeasurement-gain-location",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: rate-direction plus income-statement-versus-OCI classification application (Moderate, DS 3)",
+      "Embedded arithmetic recomputed twice: 20.0M x (0.95 - 0.90) = 1.0M gain; direction check vs net monetary asset position confirmed",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "DuPont analysis (three-component ROE decomposition)",
+      "Corporate finance theory (financial risk and leverage)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Fund Electronics Enclosures: its ROE rests on margin and turnover, whereas Industrial Pumps reaches the same ROE through a 2.25 equity multiplier implying debt-heavy financing near the covenant ceiling and greater downside amplification",
+      "B": "Fund Industrial Pumps: its turnover of 2.0 demonstrates superior asset efficiency, and efficiency-driven returns carry less risk than margin-driven returns in cyclical equipment markets",
+      "C": "Treat the divisions as equivalent for funding purposes because identical ROE signifies identical value creation and identical shareholder risk",
+      "D": "Fund Industrial Pumps because its higher equity multiplier evidences stronger lender confidence and cheaper incremental debt for the expansion"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Reading identical ROE as identical risk across capital structures",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "DuPont decomposes ROE = margin x turnover x leverage, exposing how each division assembles its 18 percent. Electronics Enclosures earns it with a 10.0 percent margin on 1.2 turns at modest 1.5 leverage; Industrial Pumps manages only a 4.0 percent margin and compensates with 2.0 turns and a 2.25 equity multiplier, implying total liabilities near 55.6 percent of assets (1 - 1/2.25), uncomfortably close to the 0.60 covenant cap in Flash's revolver. Identical headline ROE therefore conceals materially different risk: Pumps' return is amplified by fixed charges and would compress faster in a downturn, and its thin covenant headroom constrains the very expansion being funded. Elena's recommendation directs the $30 million toward the structurally safer compounding engine and conditions any Pumps support on deleveraging, illustrating why attribution precedes allocation when ROEs tie.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B equates turnover with safety, but turnover ignores that Pumps' 4 percent margin provides little buffer against cost shocks and that its 2.25 multiplier, not its efficiency, completes the ROE; praising asset productivity does not neutralize fixed-charge fragility beside a live covenant limit.",
+    "ExplanationWrongC": "Choice C reads identical ROE as identical risk; decomposition exists precisely because the same return can be assembled from different combinations of margin, turnover, and leverage, and the leverage component changes earnings volatility and covenant exposure even when the arithmetic product matches exactly.",
+    "ExplanationWrongD": "Choice D interprets a high equity multiplier as lender endorsement; it actually measures the fraction of assets financed by creditors, and a multiplier pushing implied debt-to-assets toward the contractual ceiling signals constrained, costlier future borrowing rather than cheap expansion funding.",
+    "FormulaReference": "FA-14",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-215",
+    "Section": "A",
+    "Stem": "Two Flash divisions report identical 18.0 percent return on equity. Industrial Pumps posts a 4.0 percent net profit margin, total asset turnover of 2.0, and an equity multiplier of 2.25; Electronics Enclosures posts a 10.0 percent margin, turnover of 1.2, and an equity multiplier of 1.5. Flash's revolving credit agreement caps debt-to-total-assets at 0.60, and CFO Elena Vasquez must recommend which division receives next year's $30 million expansion budget. Which recommendation is best supported by the DuPont decomposition?",
+    "Topic": "A.215 dupont-return-quality-allocation",
+    "UniqueConceptKey": "A-215-dupont-roe-driver-decomposition",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: trade-off adjudication across equal-return unequal-risk structures with a live covenant constraint (Very Difficult, DS 5); named decision-maker facing competing defensible alternatives",
+      "ROE recomputed twice: 0.04 x 2.0 x 2.25 = 0.180; 0.10 x 1.2 x 1.5 = 0.180; Pumps implied D/A = 1 - 1/2.25 = 0.556",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Managerial accounting theory (combined leverage)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "15.0%",
+      "B": "24.0%",
+      "C": "9.6%",
+      "D": "4.0%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Applying a single leverage leg instead of DOL times DFL",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Combined leverage links top line to bottom line multiplicatively: DCL = DOL x DFL = 2.5 x 1.6 = 4.0, so a 6.0 percent sales increase implies a 4.0 x 6.0% = 24.0 percent increase in EPS. Daniel should present the estimate as symmetrical, because the same cost and financing structure would compound a 6 percent shortfall into a 24 percent EPS decline, framing the division's aggregate business-and-financing risk for the board. The multiplicative chain holds because DOL scales sales changes into EBIT changes and DFL then scales EBIT changes into EPS changes, with each factor valid at the planned volume level stated in the budget.",
+    "ExplanationWrongA": "Choice A, 15.0 percent, applies only the operating leg (2.5 x 6.0%), letting the EPS forecast ignore interest and preferred charges entirely; the omission understates the swing whenever fixed financing exists, which it does here given a DFL of 1.6 above 1.0.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C, 9.6 percent, applies only the financing leg (1.6 x 6.0%), treating the sales change as if it reached EPS without first passing through the cost structure; the operating amplifier is skipped and the chain is broken at its first link.",
+    "ExplanationWrongD": "Choice D, 4.0 percent, quotes the combined-leverage coefficient itself as the percentage outcome; the coefficient multiplies the sales change rather than substituting for it, so reporting 4 percent conflates the elasticity with its application to the 6 percent forecast.",
+    "FormulaReference": "FA-19",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-216",
+    "Section": "A",
+    "Stem": "Flash’s packaging-systems division’s budget embeds a degree of operating leverage of 2.5 and a degree of financial leverage of 1.6 at planned volume. VP of Finance Daniel Reyes asks what earnings-per-share movement to communicate if division sales rise 6.0 percent above plan next year. What percentage change in EPS should he report?",
+    "Topic": "A.216 combined-leverage-eps-forecast",
+    "UniqueConceptKey": "A-216-dcl-eps-sensitivity",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two-factor chaining with coefficient-versus-outcome slip (Moderate, DS 3)",
+      "DCL recomputed twice: 2.5 x 1.6 = 4.0; EPS delta = 4.0 x 6.0% = 24.0%; legs 2.5x6% = 15.0% and 1.6x6% = 9.6% verified",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Constant-dollar accounting doctrine (SFAS 33 lineage)",
+      "IAS 29 (hyperinflation restatement principles)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Real income rose in step with nominal income because monetary assets preserve purchasing power automatically during inflation",
+      "B": "Flash earns a purchasing-power gain because holding net monetary assets benefits the holder as prices rise",
+      "C": "Flash incurs a general purchasing-power loss of $12.0 million on its net monetary asset position, so nominal earnings growth materially overstates real performance",
+      "D": "Purchasing-power effects attach only to non-monetary items, leaving Flash's monetary posture neutral to inflation"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Expecting gains on monetary assets during inflation",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Constant-dollar reasoning separates monetary from non-monetary items: money and fixed claims lose purchasing power as the price level climbs, so a net monetary asset position absorbs a loss equal to the position multiplied by the inflation rate, $60.0M x 20% = $12.0 million. Setting that loss against the 14 percent nominal income improvement shows Flash's command over real resources deteriorating once price-level effects are counted, which is the message Priya needs Elena to hear before celebrating the headline. Inventory and plant, being non-monetary, tend to track replacement values in inflation and escape this particular exposure, which concentrates the loss in the $60.0 million net money position Flash carries.",
+    "ExplanationWrongA": "Choice A assumes monetary holdings self-protect; fixed nominal claims buy progressively fewer goods as prices rise, so real value falls mechanically and no automatic preservation occurs, making the claimed parity between real and nominal income unsupported.",
+    "ExplanationWrongB": "Choice B flips the economics of inflation: rising prices transfer purchasing power from holders of net monetary assets to holders of net monetary liabilities, so a gain would belong to a debtor-style position, the opposite of Flash's $60.0 million net asset stance.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D attaches the effect to non-monetary items, reversing the classification; non-monetary assets tend to reprice with inflation while monetary items carry frozen nominal amounts, which is exactly why purchasing-power gains and losses arise on monetary positions.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-217",
+    "Section": "A",
+    "Stem": "With consumer prices rising 20 percent annually, Flash carries average net monetary assets - cash plus receivables minus payables and debt - of $60.0 million. Nominal net income improved 14 percent year over year, and controller Priya Chen must explain to CFO Elena Vasquez why the improvement overstates real economic progress. Which analysis is best supported?",
+    "Topic": "A.217 purchasing-power-loss-analysis",
+    "UniqueConceptKey": "A-217-purchasing-power-loss-monetary",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: monetary/non-monetary decomposition with directional inference (Difficult, DS 4)",
+      "Embedded arithmetic recomputed twice: PP loss = 60.0M x 0.20 = 12.0M; direction check (net monetary assets + inflation -> loss) confirmed",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Financial statement analysis doctrine (comparability limitations)",
+      "FASB ASC 842 (Leases) as a policy-divergence example"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Audited financial statements remove comparability problems, so any gap in the benchmark reflects measurement noise rather than accounting differences",
+      "B": "Consolidated statements of larger companies cannot legitimately be converted into ratios, so comparisons across firms of different size fail on principle",
+      "C": "Seasonally affected companies cannot publish meaningful period-end ratios under any circumstances",
+      "D": "Divergent accounting policies, such as lease structures, depreciation methods, and inventory costing, can make numerically similar ratios describe different underlying economics, limiting direct comparison"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Treating audit opinions as cross-company standardization",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Ratio analysis presumes both sides of each comparison are built on comparable measurement bases; when Flash capitalizes leases onto its asset base and debt while the competitor expenses rent, asset turnover, leverage, and coverage ratios diverge for reasons unrelated to operating performance, and similar frictions arise from differing depreciation lives and inventory costing. Priya's remedy is analytical rather than fatal: normalize the policy differences or footnote-adjust the ratios before benchmarking. The board member's takeaway is that a ratio is a summary statistic whose meaning inherits every estimate and policy election buried in the underlying statements, so identical figures can mask genuinely different economics across companies.",
+    "ExplanationWrongA": "Choice A overstates assurance; an audit opines that statements conform to GAAP including whatever policy elections were made, and expressly does not standardize those choices across firms, so the comparability gap survives a clean opinion untouched.",
+    "ExplanationWrongB": "Choice B attacks consolidation, yet ratio analysis routinely and validly handles scale differences by dividing one aggregate by another; the obstacle in this scenario is policy asymmetry between the firms, not company size or the existence of consolidated statements.",
+    "ExplanationWrongC": "Choice C declares seasonal ratios impossible, which overshoots the real caution; averages of quarterly balances restore meaningfulness, and seasonality is a timing-measurement caveat rather than an absolute bar to publication or use.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-218",
+    "Section": "A",
+    "Stem": "A new Flash board member questions why Flash's published ratios cannot be benchmarked directly against a privately held competitor of half Flash's size that leases nearly all of its facilities and expenses them as operating costs. Controller Priya Chen is asked to identify the underlying analytical limitation. Which explanation is correct?",
+    "Topic": "A.218 ratio-comparability-limitations",
+    "UniqueConceptKey": "A-218-accounting-policy-comparability-limit",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: comprehension of comparability constraints among overstated alternatives (Moderate-Easy, DS 2)",
+      "Conceptual item; no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 230 (Statement of Cash Flows)",
+      "Free-cash-flow doctrine (operating cash flow less net capex)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$26.2 million",
+      "B": "$20.2 million",
+      "C": "$22.3 million",
+      "D": "$29.0 million"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Re-deducting dividends or interest already inside OCF",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Free cash flow equals operating cash flow minus net capital expenditures, the cash remaining after the business funds its own productive capacity. Applying the definition: $47.5M - $21.3M = $26.2 million, the discretionary pool Elena can weigh for voluntary prepayment. Dividends distribute the surplus after it exists rather than constituting a reinvestment requirement, interest paid already reduced operating cash flow under Flash's classification policy, and disposal proceeds are already netted inside the stated capex figure, so none of those three may be deducted or added again. The metric tells lenders and the board how much internally generated cash remains available for discretionary uses such as prepayment, buybacks, or acquisitions.",
+    "ExplanationWrongB": "Choice B, $20.2 million, subtracts the $6.0 million of dividends as though they were a capital-maintenance cost; dividends distribute free cash flow after it exists and belong outside the FCF construction, so their inclusion double-counts a downstream distribution.",
+    "ExplanationWrongC": "Choice C, $22.3 million, deducts the $3.9 million of interest a second time; interest paid already reduced operating cash flow, and the definition calls only for capital expenditures, so the extra deduction double-counts a financing-related outflow.",
+    "ExplanationWrongD": "Choice D, $29.0 million, adds back the $2.8 million of disposal proceeds even though the stated $21.3 million capex is already net of disposals, crediting the same cash twice and overstating Flash's discretionary capacity by exactly that amount.",
+    "ExplanationWrongA": "",
+    "FormulaReference": "FA-23",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-219",
+    "Section": "A",
+    "Stem": "For the fiscal year just closed, Flash generated operating cash flow of $47.5 million. Investing activities show capital expenditures of $21.3 million, a figure already net of $2.8 million of disposal proceeds. Financing activities include dividends paid of $6.0 million, and interest paid of $3.9 million is classified within operations per Flash's stated policy. CFO Elena Vasquez wants free cash flow to size voluntary debt-prepayment capacity for the treasury team. What FCF figure should her team report?",
+    "Topic": "A.219 free-cash-flow-computation",
+    "UniqueConceptKey": "A-219-fcf-discretionary-capacity",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: definition-bound computation with three component-handling traps (Moderate, DS 3)",
+      "FCF recomputed twice: 47.5 - 21.3 = 26.2; variants 26.2 - 6.0 = 20.2, 26.2 - 3.9 = 22.3, 26.2 + 2.8 = 29.0 verified",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 810 (Consolidation)",
+      "Legacy FIN 46(R) guidance on variable interest entities"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "To reduce the consolidated group's income taxes owed to statutory taxing authorities",
+      "B": "To hold assets and their supporting debt outside the sponsor's consolidated balance sheet, improving apparent leverage, return on assets, and covenant optics",
+      "C": "To exempt securitized asset pools from independent audit and external attestation requirements",
+      "D": "To transform fixed-rate borrowings into floating-rate exposure through structured agreements"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Confusing SPE reporting motives with tax or swap objectives",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The historic appeal of special-purpose entities was representational: by isolating assets and the borrowing that funded them in a nominally separate vehicle that escaped consolidation, a sponsor could report less debt and a smaller asset base, flattering leverage ratios, ROA, and covenant compliance without changing the underlying economics. U.S. GAAP responded with the variable-interest-entity model in ASC 810, which looks through legal form to whoever absorbs the entity's expected losses and residuals and forces consolidation of sponsored VIEs onto the sponsor's books. Rachel's lesson for the audit hires is that detecting off-balance-sheet ambition redirects attention to consolidation analysis rather than to tax posture, audit scope, or interest-rate mechanics.",
+    "ExplanationWrongA": "Choice A reaches for tax motives; SPE structures can interact with taxation, but the reporting motivation concerns the shape of the consolidated balance sheet, and ASC 810 generally reabsorbs the entity for book purposes regardless of the sponsor's tax posture.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C invents an audit exemption; isolation of assets does not remove a vehicle's activities or the sponsor's involvement from attestation requirements, and post-Enron oversight tightened rather than relaxed scrutiny of structured entities and their sponsors.",
+    "ExplanationWrongD": "Choice D describes an interest-rate swap objective, a derivatives tool unrelated to why sponsors formed SPEs; altering rate exposure changes a risk profile, not whether assets and their debt appear on anyone's balance sheet.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-220",
+    "Section": "A",
+    "Stem": "During internal-audit orientation at Flash, compliance officer Rachel Nguyen reviews why sponsoring companies historically created special-purpose entities for project ventures and receivables programs. She asks which statement captures the primary financial-reporting motivation behind those structures. Which response is correct?",
+    "Topic": "A.220 spe-off-balance-sheet-purpose",
+    "UniqueConceptKey": "A-220-spe-consolidation-motivation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: recall of a canonical concept with domain-confusion distractors (Easy, DS 1)",
+      "Conceptual item; no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 205-10 (Presentation of Financial Statements)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "It expresses every expense line as a percentage of net sales for a single year so that cost structure can be compared across periods.",
+      "B": "It compares Flash's liquidity, leverage, and profitability ratios with published industry medians for diversified manufacturers.",
+      "C": "It converts prior-year dollar amounts into current-year purchasing power using a general price index before comparing them.",
+      "D": "It tracks the dollar and percentage movement of each line item across periods, revealing the direction and pace of change in revenues and costs."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Confusing horizontal period-over-period analysis with vertical common-size format",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is D. Horizontal (comparative) analysis restates each financial statement line to show its change versus a base period in both dollars and percentages — here net sales rose $9.6 million, or 12.0%. Under ASC 205-10 comparative presentation, this technique isolates which lines moved and how fast, letting Priya show the board whether sales growth outran or lagged individual cost movements. Vertical (common-size) analysis, industry benchmarking, and constant-dollar restatement each answer different questions. Business meaning: the board sees momentum and emerging cost pressure period over period rather than a single static snapshot of one year.",
+    "ExplanationWrongA": "Choice A describes vertical (common-size) analysis, not horizontal analysis. The misconception is that any percentage-based statement is 'horizontal.' Percent-of-sales formatting holds one period's own sales as the base inside a single column; Priya's schedule instead anchors each line to its own prior-year value to expose movement over time.",
+    "ExplanationWrongB": "Choice B describes external benchmarking against industry medians, which compares Flash with peer companies rather than with its own past. The director asked what the side-by-side change columns show; those columns contain only Flash-versus-Flash movement across two fiscal years, so peer positioning is entirely outside what this exhibit demonstrates.",
+    "ExplanationWrongC": "Choice C describes constant-dollar (general-price-level) restatement, an inflation-adjustment technique. Priya made no price-index conversion; her percentages are nominal changes measured at historical dollars. A candidate picking C confuses time-series comparison with purchasing-power restatement, a separate analytical treatment covered under changing-price analysis.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-221",
+    "Section": "A",
+    "Stem": "For the February board meeting, controller Priya Chen presents Flash's income statements for 2024 and 2025 side by side, with each line item restated to show its dollar change and percentage change versus the prior year (net sales +$9.6 million, +12.0%). A director asks what analytical purpose this particular presentation serves. Which statement best answers the director?",
+    "Topic": "A.221-horizontal-analysis-interpretation",
+    "UniqueConceptKey": "A-221-horizontal-analysis-meaning",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Understand capped at DS2; single-definition discrimination, no computation)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 205-10 (Presentation of Financial Statements)",
+      "FASB ASC 842 (Leases)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Debt-to-assets is 1.50 and debt-to-equity is 0.60; Marcus inverted the numerators when he pulled the figures.",
+      "B": "Debt-to-assets is 0.60 and debt-to-equity is 1.50; because equity of $64 million is far smaller than assets of $160 million, the equity-based ratio is mechanically the larger figure.",
+      "C": "Both ratios converge at 0.60 because total assets equal total liabilities plus shareholders' equity.",
+      "D": "Debt-to-equity exceeding 1.00 signals a misclassification, because the ratio is capped at unity by construction."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Swapping D/A and D/E denominators; assuming D/E is capped at 1.00",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is B. Debt-to-assets divides total liabilities by total assets: $96.0M / $160.0M = 0.60. Debt-to-equity divides the same numerator by equity: $96.0M / $64.0M = 1.50. Because assets equal liabilities plus equity, the equity pool ($64.0M) is smaller than the asset pool ($160.0M), so the equity-based quotient is mechanically larger — the two metrics describe one capital structure from different denominators. Marcus can assure both audiences they are consistent: Flash funds $0.60 of every asset dollar with liabilities, and creditor claims run 1.5 times owner claims. Including operating lease liabilities in total liabilities per ASC 842 keeps both measures complete.",
+    "ExplanationWrongA": "Choice A swaps the denominators, reporting the equity-based quotient against assets and vice versa. The misconception is that the bigger ratio must pair with the bigger base; in fact dividing the same numerator by the smaller pool (equity) yields the larger quotient. A thirty-second sanity check — 1.50 cannot arise from dividing by the largest figure in sight — catches the flip before either lender sees it.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C assumes the ratios converge because of the balance-sheet identity assets = liabilities + equity. The identity fixes totals, not quotients: the same $96.0 million numerator over two different denominators ($160.0M versus $64.0M) must produce 0.60 and 1.50. Convergence would require equity to equal total assets, which happens only on an implausible zero-liability balance sheet.",
+    "ExplanationWrongD": "Choice D treats 1.00 as a mathematical ceiling on debt-to-equity. Nothing in the ratio's construction caps it: whenever liabilities exceed equity the quotient passes 1.00, and highly leveraged industrials routinely print readings between 1.50 and 3.00. Dismissing the agency's 1.50 as an error would hide genuine leverage from the covenant conversation rather than correct it.",
+    "FormulaReference": "FA-25",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-222",
+    "Section": "A",
+    "Stem": "Lender First Cascade underwrites Flash's revolving credit facility using debt-to-assets, while the rating agency report quotes debt-to-equity. Treasurer Marcus Webb pulls year-end figures: total liabilities $96.0 million, total shareholders' equity $64.0 million, total assets $160.0 million. Which analysis correctly computes and reconciles the two leverage views for Marcus?",
+    "Topic": "A.222-debt-to-assets-vs-debt-to-equity",
+    "UniqueConceptKey": "A-222-leverage-denominator-reconciliation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Analyze DS4: dual-metric reconciliation with distractor traps on inversion/bounds)",
+      "Recomputed: D/A = 96.0/160.0 = 0.60; D/E = 96.0/64.0 = 1.50",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 205-10 (Presentation of Financial Statements)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "40.00%",
+      "B": "42.90%",
+      "C": "60.00%",
+      "D": "66.67%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using gross sales instead of net sales; quoting markup-on-cost as margin",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is A. Net sales = $62.0M gross sales − $2.0M returns and allowances − $1.0M discounts = $59.0M. Gross profit = $59.0M − $35.4M COGS = $23.6M. Gross margin percentage = $23.6M / $59.0M = 40.00%. Per ASC 205-10 presentation conventions, margin percentages are computed on net sales after returns, allowances, and discounts. Interpretation for Daniel's pricing committee: 40 cents of every net sales dollar survives production cost, so any price concession must be weighed against that residual — and the 42.90% headline-billings version would overstate the cushion the committee can actually spend.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B divides gross profit computed off gross sales ($62.0M − $35.4M = $26.6M) by the unadjusted $62.0M, yielding 42.90%. The error is skipping the $3.0 million of returns, allowances, and discounts — treating headline billings as the margin base. Margin must sit on revenue Flash expects to keep, so the base drops to $59.0M and the margin to 40.00%.",
+    "ExplanationWrongC": "Choice C reports cost of goods sold as a percentage of net sales ($35.4M / $59.0M = 60.00%) — the cost-of-sales ratio, not the margin. The candidate read the complement as the answer itself. Gross margin is what remains after covering COGS: 100% − 60% = 40%. Presenting 60.00% would tell the committee the opposite fact about identical data.",
+    "ExplanationWrongD": "Choice D computes markup on cost: $23.6M gross profit / $35.4M COGS = 66.67%. Markup and margin are different lenses — markup expresses profit as a load added to cost, margin expresses it as a share of selling price. Quoting 66.67% to the pricing committee would overstate profitability by more than 26 points and invite discounting the business cannot sustain.",
+    "FormulaReference": "FA-09",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-223",
+    "Section": "A",
+    "Stem": "Flash's fiscal 2025 income statement shows gross sales of $62.0 million, sales returns and allowances of $2.0 million, and sales discounts of $1.0 million; cost of goods sold was $35.4 million. For the pricing committee, VP of finance Daniel Okafor calculates the gross margin percentage on net sales. What figure should Daniel present?",
+    "Topic": "A.223-gross-margin-percentage-net-sales",
+    "UniqueConceptKey": "A-223-net-sales-gross-margin-calc",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Apply DS3: multi-step net-sales base with three classic computational traps)",
+      "Recomputed: NS = 62.0 - 2.0 - 1.0 = 59.0; GP = 59.0 - 35.4 = 23.6; 23.6/59.0 = 40.00%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 830 (Foreign Currency Matters)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The current exchange rate in effect at the balance sheet date.",
+      "B": "The weighted-average exchange rate for the fiscal period.",
+      "C": "The historical exchange rate prevailing when the machinery was acquired.",
+      "D": "The twelve-month forward rate quoted for the euro at the reporting date."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Applying current-rate-method rates to remeasured nonmonetary assets",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The correct answer is C. Under ASC 830's temporal (remeasurement) method, monetary assets and liabilities are remeasured at the current rate, but nonmonetary items carried at historical cost — plant, equipment, and the inventory and depreciation built upon them — stay at the historical exchange rates of their acquisition dates. The resulting remeasurement gain or loss lands in net income. Lena should pull acquisition-date rates from the machinery ledger. Business effect: a weakening dollar inflates newly purchased equipment's dollar basis but leaves older machinery at its original cost basis, preserving Flash's historical-cost model across the consolidation.",
+    "ExplanationWrongA": "Choice A applies the closing spot rate, which ASC 830 reserves for monetary items such as cash, receivables, and payables under the temporal method. Machinery is nonmonetary and historically carried, so a year-end spot-rate remeasurement would silently convert Flash's historical-cost plant account into a fluctuating current-value account, distorting depreciation expense every period.",
+    "ExplanationWrongB": "Choice B offers the period's weighted-average rate, the convention for flow items — revenues, expenses, and translated income statements — not for balance-sheet nonmonetary carryforwards. Equipment persists across many reporting periods, so averaging one year's rates would attach an unrelated blended currency basis to an asset purchased on a single identifiable date.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D substitutes a derivative-market quote for a GAAP-prescribed rate. Forward rates serve hedging valuation under ASC 815, not the remeasurement of recorded historical-cost assets; importing a forward quote would embed Flash's own expectations about future euro weakness into a cost-based carrying amount that accounting rules keep expectation-free.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-224",
+    "Section": "A",
+    "Stem": "Flash's Frankfurt tooling unit keeps books in euros, but its activities are an extension of Flash's U.S. operations and its functional currency is the U.S. dollar, so ASC 830 requires remeasurement under the temporal method. Assistant controller Lena Fischer asks which exchange rate applies to the unit's factory machinery carried at historical cost when the year-end remeasurement is performed.",
+    "Topic": "A.224-temporal-method-historical-rates",
+    "UniqueConceptKey": "A-224-temporal-nonmonetary-historical-rate",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Remember DS1: single ASC 830 rate-rule fact recalled directly)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance purchasing-power theory",
+      "FASB Statement No. 33 (Financial Reporting and Changing Prices) - historical changing-prices framework"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Take the CPI-indexed proposal because it opens $1.2 million cheaper in year one, an advantage inflation cannot reverse.",
+      "B": "Lock the $30.0 million fixed price; at 4% inflation the indexed path compounds to roughly $33.7 million by year five and about $156.0 million cumulative versus $150.0 million fixed, hedging purchasing-power erosion at the cost of missing relief if inflation undershoots 4%.",
+      "C": "Award Meridian a 50/50 blend of the two structures so the mixed exposure neutralizes price risk by construction.",
+      "D": "Postpone signing until inflation prints arrive, because general inflation changes the value of money held rather than the invoices charged for physical inputs."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Judging a price lock by year-one savings instead of compounded purchasing power",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The correct answer is B. At 4% inflation the indexed invoice grows by 1.04^t: the year-five invoice equals 28.8 × 1.16986 = $33.69M, and the five-year cumulative equals 28.8 × (1 + 1.04 + 1.0816 + 1.12486 + 1.16986) = 28.8 × 5.41632 = $155.99M versus $150.0M fixed — locking saves $5.99M on planning assumptions. Fixed pricing converts an uncertain purchasing-power exposure into a known cost, classic hedge logic for a manufacturer whose output prices may lag input inflation. Elena should state the honest trade-off: if inflation averages below 4%, indexing wins, so the recommendation rests on the planning forecast and risk tolerance, not on the index being inherently inferior.",
+    "ExplanationWrongA": "Choice A reasons from the year-one invoice and declares the opening $1.2 million advantage permanent. Compounding reverses the ranking quickly — by year four the indexed price (28.8 × 1.0816 = $31.15M) already exceeds the $30.0M lock, and the cumulative gap widens thereafter. Anchoring a multiyear commitment on its first-year price is the central purchasing-power error the question tests.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C splits the award arbitrarily and asserts the mixture neutralizes risk by construction. A 50/50 blend merely halves both tails: Flash still carries half the escalation exposure above 4% inflation and surrenders half the benefit below it. Blending is defensible only when sized to a stated risk tolerance and negotiated price, not offered as a self-executing hedge.",
+    "ExplanationWrongD": "Choice D conflates two distinct inflation channels. Purchasing-power loss does erode monetary items such as cash and receivables, but input-price inflation directly reprices physical resin invoices independent of Flash's cash position. Waiting for realized CPI data also forfeits Meridian's pricing window without reducing the underlying exposure one dollar.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-225",
+    "Section": "A",
+    "Stem": "Flash consumes roughly $30 million of engineering resin annually. Supplier Meridian Polymers proposes either (1) a fixed nominal price of $30.0 million per year for five years, or (2) a starting price of $28.8 million in year one with an annual escalator equal to CPI; Flash's planning assumption is 4% inflation each year. CFO Elena Vasquez must recommend terms to the executive committee, knowing the choice trades budget certainty against inflation outcomes. Which recommendation is best supported?",
+    "Topic": "A.225-inflation-indexed-supply-contract",
+    "UniqueConceptKey": "A-225-purchasing-power-contract-economics",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Evaluate DS5: CFO weighs defensible contract structures under compounding uncertainty)",
+      "Recomputed: Yr5 = 28.8 x 1.04^4 = 33.69; cumulative = 28.8 x 5.41632 = 155.99 vs fixed 150.00 (+5.99 saved)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Market-based valuation convention; financial ratio analysis theory",
+      "FASB ASC 260 (Earnings Per Share)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "5.56 times, calculated as diluted EPS divided by the market price per share.",
+      "B": "20.00 times, calculated using next year's projected EPS of $2.43 together with the year-end market price.",
+      "C": "13.50 times, calculated using basic EPS of $3.60 per share.",
+      "D": "18.00 times, calculated as the $48.60 market price divided by diluted EPS of $2.70."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Inverting P/E into earnings yield; pairing trailing price with forward EPS",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is D. Diluted EPS = $54.0M net income available to common / 20.0M diluted weighted-average shares = $2.70. Trailing P/E = $48.60 market price / $2.70 diluted EPS = 18.00 times. Multiples convention pairs the current price with the most conservative trailing earnings figure (diluted, per ASC 260) so investors see earnings per existing share after all potential claims. Interpretation for Sofia's annual-report note: buyers paid $18.00 for each trailing diluted dollar Flash earned — meaningful mainly against peer multiples and Flash's own history, since a high multiple can reflect expected growth or temporarily depressed earnings alike.",
+    "ExplanationWrongA": "Choice A inverts the ratio, dividing EPS by price ($2.70 / $48.60 = 5.56%). That computation produces the earnings yield, a different metric expressed in percent; quoting it as 'times' mislabels the instrument and reverses the magnitude relationship investors expect between price and earnings.",
+    "ExplanationWrongB": "Choice B pairs the current price with forward EPS ($48.60 / $2.43 = 20.00), producing a forward multiple while labeling it trailing. Mixing bases overstates the multiple by two full turns and breaks comparability with peers reporting trailing figures; next year's projection belongs in guidance commentary, not inside the trailing statistic.",
+    "ExplanationWrongC": "Choice C uses basic EPS ($48.60 / $3.60 = 13.50), ignoring the 5.0 million dilutive shares from convertible preferred. ASC 260 requires the diluted figure when potential common shares exist; the basic-based multiple understates P/E by 4.50 turns and presents Flash as materially cheaper than its fully diluted economics warrant.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "FA-16",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-226",
+    "Section": "A",
+    "Stem": "Flash closed the year with net income available to common shareholders of $54.0 million, basic weighted-average shares of 15.0 million, and diluted weighted-average shares of 20.0 million after convertible preferred dilution; the stock traded at $48.60 at year-end. Investor relations director Sofia Marchetti must quote a trailing P/E ratio in the annual report. What should she report, and on what basis?",
+    "Topic": "A.226-price-to-earnings-trailing-diluted",
+    "UniqueConceptKey": "A-226-trailing-pe-earnings-yield-inversion",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Apply DS3: EPS basis selection plus P/E mechanics with three numeric traps)",
+      "Recomputed: diluted EPS = 54.0/20.0 = 2.70; P/E = 48.60/2.70 = 18.00",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Financial statement analysis theory - limitations of ratio analysis"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Year-end snapshots taken at a seasonal trough misstate normal liquidity, so the deck should footnote the pattern and supplement the ratio with monthly or quarterly average balances.",
+      "B": "Ratios self-correct for seasonality because the income statement aggregates a full year of activity, smoothing the balance sheet beneath them.",
+      "C": "Seasonality distorts profitability measures such as margins, but liquidity ratios are insensitive to shipment timing.",
+      "D": "Benchmarking the December ratio against a steady-demand competitor cancels the seasonal distortion out of the comparison."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Treating a trough-date balance sheet as representative of normal liquidity",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is A. Balance-sheet ratios divide point-in-time amounts by point-in-time amounts, so a December 31 close lands wherever the seasonal cycle puts it — for Flash, a trough with lean inventories and cleared payables that prints a 3.1 current ratio against typical mid-year readings near 1.9. Sound practice discloses the seasonal pattern and supplements the snapshot with intra-year averages, giving users a representative liquidity picture. Ravi's caution protects the board from reading cyclical slack as structural strength, a distinction credit analysts rely on when setting terms through the cycle.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B assumes full-year flow statements sanitize point-in-time ratios. Smoothing appears only in turnover-style measures whose numerators aggregate activity; the current ratio's numerator and denominator remain single-day balances at December 31, untouched by how activity averaged across the rest of the year.",
+    "ExplanationWrongC": "Choice C confines seasonal distortion to margins. Liquidity positions swing hardest with cycle timing — inventory builds ahead of peak shipments and unwinds afterward — so Flash's current and quick readings move with the calendar even when quarterly margins hold steady, exactly the 3.1-versus-1.9 spread Ravi documented.",
+    "ExplanationWrongD": "Choice D selects a benchmark that worsens the problem: a non-seasonal peer's December reflects ordinary-course conditions, so the comparison mixes cycle phase with business-model differences and manufactures a false strength signal instead of canceling anything.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-227",
+    "Section": "A",
+    "Stem": "Flash's lawn-and-garden product line concentrates shipments in the spring and early summer, leaving inventories lean and payables settled by the December 31 close. Internal auditor Ravi Patel notices the year-end current ratio of 3.1 far exceeds mid-year readings near 1.9 that he samples monthly, and drafts a caution for the board deck. Which statement captures the measurement issue and the proper response?",
+    "Topic": "A.227-seasonality-year-end-ratio-distortion",
+    "UniqueConceptKey": "A-227-seasonal-balance-snapshot-limitation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Understand DS2: recognizes snapshot-vs-cycle distortion and remedy, no computation)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 205-10 (Presentation of Financial Statements)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Operating margin compressed because SG&A consumed a growing share of each sales dollar between the two years.",
+      "B": "Cost of sales absorbed 3.0 additional points of every sales dollar; the 2.5-point SG&A reduction recouped only part of that drift, leaving operating margin 0.5 points lower despite 12% sales growth.",
+      "C": "Because both years posted healthy positive operating income, common-size percentages cannot attribute the compression to any particular cost block.",
+      "D": "A 12% sales increase should scale operating margin upward proportionally, so the 0.5-point decline indicates an arithmetic error in the schedules."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Reading common-size shifts as proportional sales effects instead of mix points",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is B. Common-size framing isolates composition: cost of sales climbed from 62.0% to 65.0% of sales (+3.0 points), while SG&A discipline recovered 2.5 points (22.0% down to 19.5%), netting to a 0.5-point operating-margin slide (16.0% down to 15.5%). That attribution — input-cost or pricing pressure inside the production block, partly offset by overhead restraint — is precisely what vertical analysis exists to surface. Priya's schedules direct management attention to sourcing and price realization rather than to discretionary spending, and quantify how much SG&A improvement would be needed to neutralize another year of COGS drift.",
+    "ExplanationWrongA": "Choice A reads the schedule backwards: SG&A fell from 22.0% to 19.5% of sales. Assigning the compression to the shrinking block mistakes the improving line for the deteriorating one and would send corrective effort at the very cost pool already contributing the offset that limited the margin decline.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C declares the exercise impotent while both margins are positive. The sign of the level is irrelevant to attribution: the purpose of common-size columns is decomposing the change — here +3.0 and −2.5 points — into block-level contributors, which is exactly what identifies where the 0.5-point leak arose.",
+    "ExplanationWrongD": "Choice D imposes a mechanical expectation that margin scales with revenue growth. Mix shifts, input inflation, and price concessions routinely decouple the two; a falling margin alongside rising sales is a common internally consistent result, not evidence of defective arithmetic in Priya's schedules.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-228",
+    "Section": "A",
+    "Stem": "At Flash’s quarterly operating review, controller Priya Chen distributes common-size income statements, expressing each line as a percentage of net sales: cost of sales was 62.0% in 2024 and 65.0% in 2025, SG&A was 22.0% and 19.5%, and operating income was 16.0% and 15.5%; net sales grew 12% nominally over the year. Asked to pinpoint the margin story, which diagnosis is supported by her schedules?",
+    "Topic": "A.228-common-size-margin-squeeze-diagnosis",
+    "UniqueConceptKey": "A-228-commonsize-cost-block-attribution",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Analyze DS4: attributes margin change across common-size blocks with offsetting shifts)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 205-10 (Presentation of Financial Statements)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$5.83 per share.",
+      "B": "$6.25 per share.",
+      "C": "$5.00 per share.",
+      "D": "$4.50 per share."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Skipping the preferred-equity deduction or using issued/average shares",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is C. Book value per common share = (total equity − preferred equity) / common shares outstanding = ($210.0M − $30.0M) / 36.0M = $180.0M / 36.0M = $5.00. Preferred claims rank ahead of common, so the $30.0 million carrying value is deducted before dividing; the denominator uses period-end shares outstanding (40.0M issued less 4.0M treasury). Marcus's published figure tells common holders their residual book claim per share — a historical-cost anchor for the FAQ, not an estimate of market value, which reflects future earnings power rather than recorded equity.",
+    "ExplanationWrongA": "Choice A divides undeducted total equity by shares outstanding ($210.0M / 36.0M = $5.83), folding the preferred stock's $30.0 million into the common pool. Preferred ranks senior; leaving it in overstates each common share's residual book claim by $0.83 and defeats the metric's purpose of measuring what remains for common holders specifically.",
+    "ExplanationWrongB": "Choice B uses an average share count ($180.0M / 28.8M = $6.25). Book value is a point-in-time stock measure paired by convention with period-end outstanding shares; substituting an average denominator imports flow-measure logic and inflates the result whenever shares were repurchased or retired during the year, as Flash's treasury activity did here.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D divides by shares issued (40.0M, giving $180.0M / 40.0M = $4.50). Treasury shares carry no outstanding claim, so issued-count division spreads common equity across 4.0 million phantom shares and understates book value per actual share by $0.50 — the mirror image of the outstanding-share requirement.",
+    "FormulaReference": "FA-18",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-229",
+    "Section": "A",
+    "Stem": "For the investor-relations FAQ, treasurer Marcus Webb computes book value per common share from Flash's year-end equity section: total shareholders' equity $210.0 million, including preferred stock carried at $30.0 million; 40.0 million common shares issued less 4.0 million treasury shares, leaving 36.0 million outstanding. What figure should Marcus publish?",
+    "Topic": "A.229-book-value-per-share-preferred-deduction",
+    "UniqueConceptKey": "A-229-bvps-preferred-and-sharecount-basis",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Apply DS3: preferred deduction plus share-count basis traps around a clean division)",
+      "Recomputed: (210.0 - 30.0)/36.0 = 180.0/36.0 = 5.00",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 830 (Foreign Currency Matters)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The weighted-average exchange rate for the fiscal period.",
+      "B": "The historical rate in effect when each sale or cost was originally recorded.",
+      "C": "The closing spot rate on the final day of the fiscal year.",
+      "D": "The rate embedded in the parent's intercompany funding agreement."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Translating income items at closing spot instead of weighted-average rate",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The correct answer is A. Under the current-rate method, ASC 830 translates income-statement amounts at the weighted-average rate for the period — a practical convention matching a year of franc flows to the year's average dollar value — while assets and liabilities translate at the closing rate and the residual translation adjustment accumulates in other comprehensive income rather than net income. Omar's revenue and expense lines therefore take the average rate, keeping translated margin relationships intact and separating currency movement from operating performance in Flash's consolidated trend analysis.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B applies historical transaction rates, the signature of the temporal remeasurement method tied to historical-cost amounts. Zurich's self-contained franc operations call for translation, not remeasurement; dating every translation to original transaction rates would rebuild a mosaic of stale conversions and blur the year's average economics into unrecognizable form.",
+    "ExplanationWrongC": "Choice C stretches the closing spot rate across twelve months of flows. The year-end rate belongs to balance-sheet translation under this method; applying one day's price to the whole income statement would import the final-day franc movement into every revenue line and distort comparisons against prior-year averages.",
+    "ExplanationWrongD": "Choice D sources a contractual rate from intercompany funding documents. Loan-agreement rates govern settlement of those specific obligations; they hold no GAAP standing for translating third-party operating results and would couple Flash's consolidated income statement to the outcome of a financing negotiation.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-230",
+    "Section": "A",
+    "Stem": "Flash's Zurich instruments subsidiary keeps books in Swiss francs, and its franc operations are relatively self-contained, so its functional currency is the franc and ASC 830's current-rate translation method applies. Staff accountant Omar Haddad prepares the year-end consolidation and asks which rate translates the subsidiary's revenue and expense lines into U.S. dollars.",
+    "Topic": "A.230-current-rate-method-income-translation",
+    "UniqueConceptKey": "A-230-currentrate-income-average-rate",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Remember DS1: single current-rate-method income-translation rule)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Sarbanes-Oxley Section 401 / Regulation S-K Item 303 (off-balance-sheet arrangement disclosure)",
+      "FASB ASC 440 (Commitments)",
+      "IMA Statement of Ethical Professional Practice"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Sign as drafted and omit quantitative disclosure of the purchase minima, since GAAP recognizes no liability for an executory contract and undisclosed terms bind nobody outside the contract parties.",
+      "B": "Restructure with a capitalized prepayment because any long-term purchase commitment is functionally debt that GAAP requires on the face of the balance sheet.",
+      "C": "Negotiate the guaranteed minimum down to $9.9 million so the commitment slips below disclosure thresholds and the covenant file stays clean.",
+      "D": "Sign the executory agreement, disclose the $14.0 million annual minimums among off-balance-sheet arrangements in the notes and MD&A, and present covenant sensitivity analysis — acknowledging that the economic burden survives even though no liability is booked."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Equating unrecognized liability with no disclosure duty for committed minimums",
+    "CorrectChoice": "D",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The correct answer is D. Executory contracts for future purchases create no GAAP asset or liability until performance occurs, so signing as drafted is permissible accounting — but material off-balance-sheet arrangements demand prominent quantified disclosure under Sarbanes-Oxley Section 401 and Regulation S-K Item 303. Elena and Dana should also show lenders the modeled sensitivity: the $9.0 million prepay route drives D/E from $219.6M/$180.0M = 1.22 to $228.6M/$180.0M = 1.27, breaching the 1.25 covenant, whereas the executory structure preserves headroom honestly. Disclosure does not shrink the $14.0-million-a-year obligation; it makes the commitment visible to users who price Flash's risk, which is the substance-over-form standard the securities rules enforce.",
+    "ExplanationWrongA": "Choice A leaps from 'no recognized liability' to 'no disclosure duty,' the opacity error Sarbanes-Oxley Section 401 was enacted to end. Material committed purchase minima shape creditors' expectations regardless of balance-sheet placement; suppressing the numbers invites exactly the credibility collapse the off-balance-sheet disclosure regime was built to prevent.",
+    "ExplanationWrongB": "Choice B overcorrects, asserting GAAP forces recognition of every long-term purchase promise. Executory contracts remain off balance sheet unless an asset or liability exists at inception, as with financed arrangements or ASC 460-type guarantees; forced capitalization here would misstate the accounting model even as it flatters a substance-over-form instinct.",
+    "ExplanationWrongC": "Choice C engineers the commitment underneath a perceived disclosure floor. Materiality carries qualitative as well as quantitative dimensions — a decade-long take-or-pay deliberately trimmed to dodge thresholds is itself a disclosure-triggering fact, and shaping terms to defeat user information rights conflicts with IMA integrity and credibility standards.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-231",
+    "Section": "A",
+    "Stem": "To secure dedicated alloy capacity, Flash negotiates a ten-year take-or-pay agreement with Kestrel Alloys guaranteeing $14.0 million of minimum annual purchases; no asset title passes and the executory contract creates no recognized obligation at signing. Flash's debt-to-equity stands at 1.22 against a 1.25 covenant (liabilities $219.6 million, equity $180.0 million); modeling a debt-funded $9.0 million prepayment alternative lifts the ratio to 1.27, breaching the covenant. CFO Elena Vasquez and general counsel Dana Whitfield weigh signing as drafted versus restructuring to bring the commitment onto the balance sheet. Which course is best supported?",
+    "Topic": "A.231-take-or-pay-off-balance-sheet-disclosure",
+    "UniqueConceptKey": "A-231-executory-commitment-disclosure-duty",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Evaluate DS5: named executives trade covenant optics against disclosure duties)",
+      "Recomputed: current D/E = 219.6/180.0 = 1.22; prepay route = (219.6+9.0)/180.0 = 228.6/180.0 = 1.27 vs 1.25 covenant",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB Statement No. 33 (Financial Reporting and Changing Prices) - historical constant-dollar model"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$52.0 million, because historical cost is the only supportable measurement basis for the memo.",
+      "B": "$91.5 million.",
+      "C": "$83.2 million.",
+      "D": "$32.5 million."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Restating with 100 base instead of acquisition-year index; inverting the factor",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is C. Constant-dollar restatement scales historical cost by the movement in the general price level from acquisition to present: $52.0M × (176 / 110) = $52.0M × 1.60 = $83.2M. The ratio runs between indexes (176/110, not 176/100) because inflation is measured from Flash's own purchase date. Interpretation for Priya's memo: in today's purchasing power the plant represents $83.2 million of resources, so historical-cost depreciation and asset bases understate replacement economics by $31.2 million — flattering reported ROA and understating the real cost of standing still on capacity investment.",
+    "ExplanationWrongA": "Choice A declines the restatement on nominalist grounds. Historical cost is indeed the GAAP carrying basis, but the memo's stated purpose is purchasing-power analysis; refusing the index conversion answers a question the memo did not ask and leaves the $31.2 million measurement gap invisible to the capacity debate Priya is informing.",
+    "ExplanationWrongB": "Choice B divides by the index base of 100 ($52.0M × 176/100 = $91.52M), restating as if the plant had been bought at the index's origin year. Skipping the acquisition-date index of 110 overstates the inflation factor by 60% and exaggerates the understatement the memo exists to quantify precisely.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D inverts the conversion factor ($52.0M × 110/176 = $32.5M), deflating a past cost toward a smaller present figure. Inflation raises the current purchasing-power equivalent of old spending; reversing the ratio implies yesterday's dollars were worth less than today's, backwards from what the index data say.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-232",
+    "Section": "A",
+    "Stem": "Flash acquired its Riverside stamping plant for $52.0 million in a year when the consumer price index stood at 110; the index now reads 176. Controller Priya Chen restates the plant to current general purchasing power for a strategy memo on capacity investment. What restated figure should she show?",
+    "Topic": "A.232-constant-dollar-restatement-acquisition-index",
+    "UniqueConceptKey": "A-232-general-price-level-restatement",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Apply DS3: index-base selection and factor orientation around one multiplication)",
+      "Recomputed: 52.0 x (176/110) = 52.0 x 1.60 = 83.2",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 280 (Segment Reporting)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Industrial Automation powered the consolidated improvement — revenue up 38% with segment margins expanding 3.0 points — while Consumer Appliances shrank on both dimensions, so rising mix weight toward Automation explains consolidated margin lift.",
+      "B": "Consumer Appliances remains Flash's larger segment in 2025, so consolidated performance still follows the Consumer trajectory.",
+      "C": "One segment's gains and the other's losses offset, leaving consolidated margin essentially unchanged over the three-year window.",
+      "D": "Extrapolating Industrial Automation's trajectory proves the segment margin will reach 25% in 2026."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Extrapolating segment trends as certainties; anchoring on stale size rankings",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is A. Industrial Automation grew revenue 38% (from $80.0M to $110.4M) while expanding segment margin 3.0 points (16.0% to 19.0%); Consumer Appliances contracted revenue 10% (to $86.4M) and shed 3.0 margin points (14.0% to 11.0%). Both vectors push the same direction: the improving, faster-growing segment gains mix weight in consolidation, lifting consolidated margin beyond either standalone trend. Renata's portfolio takeaway — reinvest behind Automation while deciding Consumer's turnaround-or-divest path — follows from the cross-segment comparison under ASC 280 disclosures rather than from either column alone.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B anchors on the historical size ranking. By 2025 Automation ($110.4M) has overtaken Consumer ($86.4M); clinging to the stale larger-segment frame weights the deteriorating business more heavily than current reality supports and misdirects the consolidated narrative Renata will present.",
+    "ExplanationWrongC": "Choice C assumes symmetric offset. The segments moved in opposite directions on both measures, which reinforces rather than cancels: gains concentrate in the growing segment while deterioration concentrates in the shrinking one, so consolidated margin migrates toward Automation's profile instead of holding flat.",
+    "ExplanationWrongD": "Choice D converts a trend into a certainty. Three data points establish direction, not destiny — extrapolating to a precise 25% margin ignores competitive response, capacity limits, and cyclicality, and dresses projection up as proof in front of a live portfolio decision.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-233",
+    "Section": "A",
+    "Stem": "Flash reports two segments under ASC 280. Industrial Automation revenue ran $80.0M, $94.0M, and $110.4M over 2023-2025 with segment operating margins of 16.0%, 17.5%, and 19.0%; Consumer Appliances ran $96.0M, $91.2M, and $86.4M with margins of 14.0%, 12.5%, and 11.0%. Chief strategy officer Renata Kovacs asks which conclusion the three-year trend comparison supports for the portfolio review.",
+    "Topic": "A.233-segment-trend-mix-shift-analysis",
+    "UniqueConceptKey": "A-233-segment-mix-shift-diagnosis",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Analyze DS4: cross-segment trend synthesis with mix-weight reasoning)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Financial statement analysis theory - benchmarking methodology"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "A net margin under 10 percent marks weak operational execution irrespective of the industry or business model involved.",
+      "B": "Figures drawn from audited statements carry standardized meaning, so the 6.8% reading speaks for itself without further framing.",
+      "C": "A ratio acquires meaning only against a benchmark — Flash's own multi-year trend, its industry norms, or matched peers — because healthy levels differ sharply across business models.",
+      "D": "Benchmarking replaces statement analysis, so Jordan should substitute peer averages for reading Flash's underlying financial statements."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Judging a ratio good or bad without trend, industry, or peer context",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is C. Ratios are relative instruments: 6.8% may signal excellence in distribution-heavy hardware retailing and distress in branded pharmaceuticals, so the number means little until compared with Flash's own trajectory, sector norms, or closely matched competitors. Amara's correction teaches the core limitation of ratio analysis — a computed figure describes, and only context evaluates. Jordan's revision should place 6.8% beside Flash's prior years and the appropriate peer set before attaching any quality label, turning an isolated reading into an interpretable benchmark comparison for the draft summary.",
+    "ExplanationWrongA": "Choice A hard-codes a universal threshold. Margin adequacy varies with asset intensity, pricing power, and channel economics; a fixed 10% bar would condemn structurally thinner industries wholesale and excuse fragile high-margin niches, substituting folklore for the analysis Amara is training Jordan to perform.",
+    "ExplanationWrongB": "Choice B mistakes audit assurance for interpretive sufficiency. Auditors verify fair presentation, not the strategic meaning of a percentage; 'audited' addresses the reliability of inputs and leaves the evaluative step — against what, compared with whom — completely unanswered in Jordan's draft.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D elevates benchmarking into a substitute for reading the statements themselves. Peer averages summarize outcomes; they cannot reveal why Flash earns its margin or which line items drive gaps with comparables, and leaning on them alone trades genuine understanding for a table lookup.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-234",
+    "Section": "A",
+    "Stem": "New FP&A analyst Jordan Lee computes Flash's net margin at 6.8% and labels it weak in a draft summary. Finance director Amara Diallo returns the draft, asking Jordan to reconsider what a lone ratio can support. Which principle should guide the revision?",
+    "Topic": "A.234-ratio-benchmark-context-principle",
+    "UniqueConceptKey": "A-234-benchmark-relative-meaning",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Understand DS2: states the benchmark-dependence principle, no computation)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "SEC Regulation G / Regulation S-K Item 10(e) (non-GAAP presentation)",
+      "FASB ASC 360-10 (Property, Plant, and Equipment - disposal gains)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "17.00%, because the disposal gain is a legitimate component of GAAP net income and requires no adjustment for planning purposes.",
+      "B": "14.75%, removing the $6.3 million after-tax gain so the metric reflects recurring earning power of the ongoing asset base.",
+      "C": "14.00%, stripping the full $8.4 million pre-tax gain from reported net income.",
+      "D": "19.25%, adding the after-tax gain to reported net income to capture total resource productivity."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Leaving nonrecurring gains inside core-return metrics; ignoring tax on the gain",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is B. Reported ROA = $47.6M / $280.0M average total assets = 17.00%. The packaging-line sale is nonrecurring: removing its after-tax effect ($8.4M × (1 − 0.25) = $6.3M) yields core net income of $41.3M and core ROA = $41.3M / $280.0M = 14.75%. Victor's earnings-quality point stands: 2.25 points of the headline return came from a one-time disposal rather than operating assets, and planning on 17.00% overstates sustainable profitability. Presenting the adjustment with reconciliation follows non-GAAP discipline (Regulation G / Item 10(e)) and keeps the core figure auditable rather than promotional.",
+    "ExplanationWrongA": "Choice A defends the headline on GAAP-compliance grounds. The gain is properly included in net income — but earnings quality asks whether the level repeats; a planning ROA riding a one-time disposal overstates the return the surviving asset base can generate, which is precisely the overstatement Victor flagged to management.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C deducts the gain pre-tax, computing $47.6M − $8.4M = $39.2M and 14.00%. Disposal gains are taxed, so only $6.3 million of the $8.4 million enriched net income; stripping the full amount overstates the adjustment and understates core ROA by 0.75 points below the correctly tax-effected figure.",
+    "ExplanationWrongD": "Choice D moves the gain the wrong way, adding $6.3 million on top of income that already contains it ($53.9M / $280.0M = 19.25%). Double counting inflates the very distortion Victor challenged and would compound, not cure, the planning error the audit committee asked him to quantify.",
+    "FormulaReference": "FA-12",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-235",
+    "Section": "A",
+    "Stem": "Flash's 2025 net income of $47.6 million includes an $8.4 million pre-tax gain on the sale of a packaging line; the marginal tax rate is 25%, making the after-tax contribution $6.3 million. Chief audit executive Victor Nakamura challenges the headline return on assets of 17.0% (net income divided by average total assets of $280.0 million) as overstated for planning purposes. What core ROA should Victor present, and why?",
+    "Topic": "A.235-adjusted-roa-nonrecurring-gain",
+    "UniqueConceptKey": "A-235-core-roa-disposal-gain-exclusion",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified (Apply DS3: tax-effected exclusion arithmetic inside an earnings-quality frame)",
+      "Recomputed: reported ROA = 47.6/280.0 = 17.00%; core NI = 47.6 - 8.4x0.75 = 41.3; core ROA = 41.3/280.0 = 14.75%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Higgins (1977) sustainable growth model",
+      "Corporate finance theory (growth-financing trade-off)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Reduce the dividend payout to 25%, lifting the sustainable growth rate to 13.50%, which clears the 13.0% target while retaining a positive shareholder distribution",
+      "B": "Maintain the 40% payout and layer on debt until return on equity reaches 21.7%, exactly meeting 13.0% growth with no cushion for a downturn",
+      "C": "Raise the payout temporarily to lift the share price, then issue new common equity to fund the gap",
+      "D": "Cap FY2027 sales growth at the current 10.80% sustainable rate and revisit the target after margins recover"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Treating SGR as fixed and ignoring payout/leverage levers that change it",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The governing framework is Higgins' sustainable growth model: SGR = ROE x retention ratio. Flash's current SGR = 18.0% x (1 - 0.40) = 18.0% x 0.60 = 10.80%, which falls 2.20 percentage points short of Elena Vasquez's 13.0% target, so growth above 10.80% requires a higher retention rate, higher leverage, or new common equity, and the board has barred new equity issuance. Cutting the payout to 25% raises retention to 0.75, giving SGR = 18.0% x 0.75 = 13.50%, clearing the target with a 0.50-point buffer and no added financial risk. Business interpretation: because Flash's operating performance (ROE of 18.0%) is strong, the cheapest source of incremental growth funding is Flash's own earnings; redistributing less cash to shareholders closes the financing gap without the covenant and interest-rate exposure that additional borrowing would create.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B can hit 13.0% only by engineering ROE of 21.7% through added borrowing (21.7% x 0.60 = 13.02%); the misconception is that leverage is a free growth lever, when it raises fixed interest claims, magnifies downside EPS volatility, and consumes covenant headroom Flash may need in a recession. The correct approach adjusts the payout ratio first because retained earnings carry no fixed charge.",
+    "ExplanationWrongC": "Choice C contradicts the board's standing prohibition on new common equity issuance, so it cannot be executed regardless of its arithmetic; the underlying misconception is that a temporarily elevated payout reliably lifts valuation enough to make equity issuance cheap. The correct path funds the gap internally through retention rather than relying on market timing.",
+    "ExplanationWrongD": "Choice D accepts 10.80% growth and abandons the strategic 13.0% target without testing whether the gap could be closed from existing levers; the misconception is equating the current sustainable rate with the maximum achievable rate. Because a 25% payout already clears the target at 13.50%, surrendering 2.20 points of growth is unnecessarily conservative.",
+    "FormulaReference": "FA-21",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-236",
+    "Section": "A",
+    "Stem": "Flash Corporation targets 13.0% annual sales growth for FY2027, but CFO Elena Vasquez projects the sustainable growth rate at only 10.80%, based on return on equity of 18.0% and a dividend payout ratio of 40%. The board has prohibited any new issuance of common stock, and the credit committee warns that material additions to debt would pressure Flash's leverage covenants. Vasquez must recommend to the executive committee which financing adjustment closes the growth gap. Which recommendation should she present?",
+    "Topic": "A.236 sgr-financing-gap-strategy",
+    "UniqueConceptKey": "A-236-sgr-financing-gap",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Evaluate at VD — CFO weighs three defensible funding levers with multi-step SGR recomputation under each",
+      "Independent recomputation: SGR = 18.0%x0.60 = 10.80%; at 25% payout SGR = 18.0%x0.75 = 13.50%; leverage route 21.7%x0.60 = 13.02%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 205-10 (Income Statement Presentation)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "15.90%",
+      "B": "38.48%",
+      "C": "13.65%",
+      "D": "9.99%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Adding non-operating gains or deducting interest when computing operating margin",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Operating margin under standard income-statement presentation (ASC 205-10) is operating income divided by net sales, where operating income excludes interest and non-operating gains. Gross profit = $84.60M - $52.05M = $32.55M; operating income = $32.55M - $21.00M = $11.55M; operating margin = $11.55M / $84.60M = 13.65%. The $1.90 million tooling-sale gain is a non-operating item and the $3.10 million interest charge sits below operating income, so neither enters the calculation. Business interpretation: Flash earns roughly 13.65 cents of operating profit per sales dollar before financing and tax effects, a gauge of manufacturing efficiency independent of how Flash is capitalized.",
+    "ExplanationWrongA": "Choice A of 15.90% adds the $1.90 million disposal gain to operating income (($11.55M + $1.90M) / $84.60M); the misconception is that any credit-balance income item belongs in operating results, when gains on disposing surplus assets are non-operating under ASC 205-10 presentation. Operating margin must isolate recurring trading performance, which is why the correct figure is 13.65%.",
+    "ExplanationWrongB": "Choice B of 38.48% reports the gross margin percentage ($32.55M / $84.60M); the misconception is stopping at gross profit, which ignores the $21.00 million of operating expenses Flash incurs to run the business. Operating margin subtracts SG&A and depreciation from gross profit, producing the materially lower 13.65% that reflects full operating cost recovery.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D of 9.99% deducts the $3.10 million interest expense from operating income (($11.55M - $3.10M) / $84.60M), which computes net margin rather than operating margin; the misconception is blending financing cost into operating performance. Interest reflects Flash's capital structure choices, so analysts exclude it when judging operational efficiency, giving 13.65%.",
+    "FormulaReference": "FA-10",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-237",
+    "Section": "A",
+    "Stem": "Controller Priya Chen is preparing Flash's FY2026 margin summary for the audit committee. FY2026 results: net sales of $84.60 million; cost of goods sold of $52.05 million; operating expenses of $21.00 million, consisting of SG&A of $14.80 million and depreciation of $6.20 million; interest expense of $3.10 million; and a $1.90 million gain on the sale of surplus tooling equipment. Chen needs Flash's operating margin percentage on net sales. What figure should she report?",
+    "Topic": "A.237 operating-margin-computation",
+    "UniqueConceptKey": "A-237-operating-margin",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Apply/Moderate — multi-component income statement assembly with three realistic non-operating traps",
+      "Independent recomputation: OI = 84.60 - 52.05 - 21.00 = 11.55; 11.55/84.60 = 13.65%; distractors: 13.45/84.60 = 15.90%, 32.55/84.60 = 38.48%, 8.45/84.60 = 9.99%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Financial statement analysis theory (horizontal and trend analysis methodology)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Warranty costs are exploding, and the +675% horizontal trend confirms the warranty reserve is inadequate",
+      "B": "The +675% reflects comparison against a deliberately small launch-year base; the FY2025-to-FY2026 increase moderated to about 10.7%, indicating the program has reached a stable run-rate rather than escalating risk",
+      "C": "Percentage trend analysis is unreliable here, so the committee should rely on raw dollar amounts and disregard growth rates altogether",
+      "D": "Horizontal trend percentages are invalid whenever the base year is the first year of a program, so no meaningful trend conclusion can be drawn from such a series"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Reading large percentage growth off a near-zero base as economic escalation",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Sound comparative analysis evaluates percentage changes against the size and character of the base period: a percentage computed from a near-zero base carries little economic meaning. The cumulative change is ($3.10M - $0.40M) / $0.40M = +675%, but that base captures only a partial launch year of the extended-coverage program. Measured period over period, growth was ($3.10M - $2.80M) / $2.80M = +10.71%, showing sharp deceleration toward a stable run-rate. Business interpretation: Priya Chen can tell the audit committee that the alarming headline percentage is a base-year artifact; the program matured in FY2025, and the modest $0.30 million FY2026 increase poses no escalation signal warranting reserve action.",
+    "ExplanationWrongA": "Choice A treats the +675% as evidence of runaway escalation; the misconception is accepting a percentage computed from a $0.40 million launch-year base as economically meaningful, when that base captures only a partial year of the new program. Measured period over period, growth decelerated to 10.7%, contradicting the explosion narrative.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C swings to the opposite error of discarding percentages and relying only on dollar amounts; the misconception is that base distortion invalidates ratio analysis generally. Dollars and percentages are complements: the $0.30 million FY2026 dollar increase looks small precisely because the 10.7% rate shows deceleration, and both lenses together support stabilization rather than alarm.",
+    "ExplanationWrongD": "Choice D declares trend analysis unusable for any series whose first year is a program launch; the misconception is confusing a caution about interpreting the base with a prohibition on the technique. The FY2025-to-FY2026 comparison avoids the distorted base entirely and yields a perfectly valid 10.7% growth reading.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-238",
+    "Section": "A",
+    "Stem": "Controller Priya Chen is defending Flash's warranty expense trend before the audit committee. Extended-coverage warranties launched mid-FY2024, so the base-year figure was only $0.40 million; expense rose to $2.80 million in FY2025 and $3.10 million in FY2026. A board member notes that the FY2024-to-FY2026 horizontal change is +675% and accuses management of letting warranty costs explode. Chen must respond with the soundest reading of the data. Which conclusion is best supported?",
+    "Topic": "A.238 small-base-trend-distortion",
+    "UniqueConceptKey": "A-238-base-year-trend",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Analyze/Difficult — requires diagnosing base-period distortion and reconciling two growth rates",
+      "Verification: (3.10-0.40)/0.40 = +675%; (3.10-2.80)/2.80 = +10.71%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 830-20 (Foreign Currency Transactions)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The extra dollars owed were recorded as a translation adjustment in other comprehensive income, consistent with translating Flash's German subsidiary",
+      "B": "Flash reports a transaction gain because the euro's movement reduced the carrying amount of the payable",
+      "C": "No income statement effect arises because the purchase contract was executory until the equipment shipped",
+      "D": "Flash recognizes a transaction loss of approximately $180,000 in net income upon settlement, because strengthening of the euro increased the dollar cost of the payable above its recorded amount"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Confusing transaction gains/losses in net income with OCI translation adjustments",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Under ASC 830-20, foreign-currency-denominated assets and liabilities are remeasured at the spot rate at each balance-sheet date and at settlement, with resulting transaction gains or losses recognized in net income. Flash's payable was recorded near EUR 4.00M x $1.1000 = $4.400 million; at settlement it cost EUR 4.00M x $1.1450 = $4.580 million, producing a $180,000 loss. Business interpretation: this is transaction exposure — risk from exchange-rate movement between commitment and settlement — distinct from translation of a foreign subsidiary's statements, and it flows through earnings rather than other comprehensive income, so Marcus Webb should expect the loss in Flash's operating results discussion.",
+    "ExplanationWrongA": "Choice A routes the effect to OCI as a translation adjustment; the misconception is conflating translation of a foreign entity's financial statements (current-rate method, reported in OCI) with remeasurement of Flash's own euro-denominated payable. ASC 830-20 sends transaction gains and losses on settled obligations to net income, not other comprehensive income.",
+    "ExplanationWrongB": "Choice B reverses the direction of the effect; the misconception is reasoning that a stronger euro benefits the buyer, when a euro-denominated payable becomes more expensive in dollars as the euro strengthens. Flash paid $4.58 million against a recorded liability near $4.40 million, which is a loss rather than a gain.",
+    "ExplanationWrongC": "Choice C assumes an unperformed contract shields earnings from currency effects until shipment; the misconception is overlooking that Flash recognized the payable when it recorded the asset, and remeasurement at each reporting date culminated in the $180,000 settlement loss recognized in net income.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-239",
+    "Section": "A",
+    "Stem": "Treasurer Marcus Webb is explaining currency effects to Flash's audit committee. On March 1, Flash ordered production equipment from a German supplier and agreed to pay EUR 4.00 million on delivery. Payment occurred on September 1, by which time the euro had strengthened from $1.1000 to $1.1450 per euro. Webb wants the committee to understand how this settled foreign-currency obligation affected Flash's financial statements. Which statement is correct?",
+    "Topic": "A.239 transaction-exposure-settlement",
+    "UniqueConceptKey": "A-239-fx-transaction-loss",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Understand/ME — single-concept identification capped at score 2 per Rule 11",
+      "Verification: Loss = EUR 4.00M x (1.1450 - 1.1000) = $180,000 recognized in net income",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 842 (Leases)",
+      "FASB ASC 205-10 (Balance Sheet Presentation)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "1.66",
+      "B": "1.80",
+      "C": "1.52",
+      "D": "1.50"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Netting the ROU asset against the lease liability or omitting leases from leverage",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Debt-to-equity is total liabilities divided by total equity (ASC 205-10 presentation metrics), and ASC 842 places operating lease liabilities on the balance sheet. Reported D/E = $96.00M / $64.00M = 1.50. An adjusted lender view adds the full $19.20 million lease liability to liabilities: adjusted liabilities = $96.00M + $19.20M = $115.20M, so adjusted D/E = $115.20M / $64.00M = 1.80. The right-of-use asset is already inside total assets and is not netted against the liability. Business interpretation: capitalizing lease obligations reveals that Flash's effective financial leverage runs 20% above the face of the balance sheet, which matters when treasurer Marcus Webb positions Flash against peers that own rather than lease their capacity.",
+    "ExplanationWrongA": "Choice A of 1.66 includes only part of the lease obligation (($96.00M + $10.20M) / $64.00M = 1.66); the misconception is adjusting for just the current portion of the lease liability. The rating-agency style measure requires the entire $19.20 million ASC 842 liability, which produces 1.80 rather than 1.66.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C of 1.52 nets the $18.00 million right-of-use asset against the $19.20 million lease liability before adding (($96.00M + $1.20M) / $64.00M = 1.52); the misconception is treating the lease as a net item. Liabilities and assets are not offset — the ROU asset sits within total assets while the full liability belongs in total liabilities, giving an adjusted ratio of 1.80.",
+    "ExplanationWrongD": "Choice D of 1.50 leaves the ratio at the reported figure; the misconception is that operating leases remain wholly off-balance-sheet as under legacy practice. Since ASC 842, lessees recognize right-of-use assets and lease liabilities, so an adjusted lender view must capture the $19.20 million obligation and restate leverage to 1.80.",
+    "FormulaReference": "FA-07",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-240",
+    "Section": "A",
+    "Stem": "For Flash's annual lender review, treasurer Marcus Webb must present a rating-agency-style adjusted debt-to-equity ratio that includes operating lease obligations. Flash's balance sheet shows total liabilities of $96.00 million and total equity of $64.00 million, and footnote disclosure under ASC 842 reports total operating lease liabilities of $19.20 million (related right-of-use assets of $18.00 million). Webb's methodology adds the full lease liability to reported liabilities. What adjusted debt-to-equity ratio should Webb present?",
+    "Topic": "A.240 asc842-adjusted-de-ratio",
+    "UniqueConceptKey": "A-240-asc842-adjusted-de",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Apply/Moderate — single adjustment computation with partial-inclusion, netting, and omission traps",
+      "Independent recomputation: (96.00+19.20)/64.00 = 115.20/64.00 = 1.80; distractors: 106.20/64.00 = 1.66, 97.20/64.00 = 1.52",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 Content Specification Outline, Section A (ratio categories)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Leverage (solvency) ratios",
+      "B": "Liquidity ratios",
+      "C": "Activity (efficiency) ratios",
+      "D": "Profitability margin ratios"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Matching a long-term solvency question to liquidity or efficiency ratios",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Ratio families map to user questions: leverage or solvency ratios (debt-to-equity, debt-to-assets, times-interest-earned) measure the extent of fixed-charge financing and the cushion for meeting long-term obligations, which is precisely what lenders weigh in a refinancing. Liquidity ratios judge near-term bill paying, activity ratios judge asset-use efficiency, and profitability margins judge earning power — related perspectives, but none directly measures long-horizon solvency. Business interpretation: Renata Kovacs can tell the analyst that Flash's refinancing conversation will center on how much of its capital structure is debt-financed and how comfortably operating earnings cover fixed charges.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B selects liquidity ratios such as the current and quick ratios; the misconception is treating near-term bill-paying capacity as evidence of long-run solvency. Liquidity addresses the twelve-month horizon, whereas the lender question concerns survival across years, which is the province of leverage ratios.",
+    "ExplanationWrongC": "Choice C selects activity ratios measuring how efficiently assets convert to sales; the misconception is equating operational speed with solvency strength. Efficient turnover supports cash generation, but it says nothing about the mix of debt versus equity financing that defines long-term repayment capacity.",
+    "ExplanationWrongD": "Choice D selects profitability margins; the misconception is assuming strong margins guarantee debt service. High margins earned on a heavily leveraged structure can still fail fixed charges in a downturn, so lenders anchor on leverage and coverage measures rather than margin percentages alone.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-241",
+    "Section": "A",
+    "Stem": "During a rotating internship at Flash, finance director Renata Kovacs assigns a new analyst to support Flash's upcoming refinancing discussion with its lending group. She asks the analyst which family of ratios the lending team will emphasize to judge Flash's ability to satisfy long-term obligations and remain viable over an extended horizon. Which ratio family answers that question?",
+    "Topic": "A.241 ratio-family-purpose",
+    "UniqueConceptKey": "A-241-ratio-category-selection",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Remember/Easy — direct classification recall capped at score 1 per Rule 11",
+      "Verification: conceptual item — no computation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 205-20 (Discontinued Operations)",
+      "FASB ASC 205-10 (Income Statement Presentation)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "13.19%",
+      "B": "15.06%",
+      "C": "17.56%",
+      "D": "16.94%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using headline net income or pre-tax amounts when isolating continuing operations",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Per ASC 205-20, discontinued operations are reported separately, after tax, below income from continuing operations, so analysis of the ongoing business removes them from earnings. Continuing-operations net income = $48.20M + $6.00M = $54.20M; net margin = $54.20M / $320.00M = 16.94%. Business interpretation: the divested packaging unit depressed headline results, and controller Priya Chen should present 16.94% as the pricing and cost discipline of the business Flash will actually carry forward — the relevant base when guiding analysts toward next year's margins.",
+    "ExplanationWrongA": "Choice A of 13.19% subtracts the discontinued-operations loss from net income again (($48.20M - $6.00M) / $320.00M = 13.19%); the misconception is double-counting the loss, which is already embedded in the reported $48.20 million. Normalization adds the loss back, lifting continuing earnings to $54.20 million and the margin to 16.94%.",
+    "ExplanationWrongB": "Choice B of 15.06% divides total reported net income by sales ($48.20M / $320.00M = 15.06%); the misconception is using the headline bottom line for a continuing-operations metric. Because the $6.00 million divestiture loss does not recur in the ongoing business, the unadjusted 15.06% understates the sustainable margin.",
+    "ExplanationWrongC": "Choice C of 17.56% adds back the $8.00 million pre-tax loss (($48.20M + $8.00M) / $320.00M = 17.56%); the misconception is ignoring the tax effect. Discontinued operations are presented after tax ($8.00M x 75% = $6.00M), so normalization restores $6.00 million rather than $8.00 million, and the margin is 16.94%.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "FA-11",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-242",
+    "Section": "A",
+    "Stem": "Controller Priya Chen is building the investor deck for Flash's FY2026 results. Reported net income was $48.20 million, which includes a $6.00 million after-tax loss from the packaging division classified as discontinued operations and sold in Q3 (pre-tax loss of $8.00 million; 25% tax rate). Continuing operations generated net sales of $320.00 million. Chen wants the net margin on sales from continuing operations. What percentage should the deck show?",
+    "Topic": "A.242 continuing-operations-margin",
+    "UniqueConceptKey": "A-242-discontinued-ops-margin",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Apply/Moderate — normalization arithmetic with double-count, headline, and pre-tax traps",
+      "Independent recomputation: Continuing NI = 48.20 + 6.00 = 54.20; 54.20/320.00 = 16.94%; distractors: 42.20/320.00 = 13.19%, 48.20/320.00 = 15.06%, 56.20/320.00 = 17.56%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Financial statement analysis theory (vertical/common-size methodology)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Asset expansion was financed predominantly from internally generated equity, preserving creditor cushions across the period",
+      "B": "The rising liability percentages prove Flash faces an imminent liquidity crisis and cannot pay near-term obligations",
+      "C": "Reliance on liability financing increased materially — liabilities absorb $0.58 of every asset dollar in FY2026 versus $0.46 in FY2024, shrinking the equity cushion from 54% to 42% and weakening creditor protection even as assets grew",
+      "D": "Common-size balance sheets are unsuitable for tracking financing structure because they obscure dollar magnitudes entirely"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Inferring liquidity distress from capital-structure percentages",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Vertical (common-size) analysis expresses each financing source as a percent of total assets, isolating structural shifts from growth effects. Flash's liability share climbed eight points in two years (46% to 52% to 58%), and the dollar detail corroborates the structural reading: liabilities rose from $55.20M (46% x $120.00M) to $97.44M (58% x $168.00M), up 76.5%, versus asset growth of 40.0% ($120.00M to $168.00M) — external debt, not retained earnings, drove expansion. Business interpretation: Priya Chen should report that Flash's equity buffer thinned from 54% to 42% of assets, so the board should expect lenders to probe whether the mix shift funds productive capacity or substitutes for weaker internal cash generation.",
+    "ExplanationWrongA": "Choice A asserts internally financed expansion; the misconception is reading asset growth as evidence of self-funding. If equity had financed growth, its percentage would hold or rise; instead equity fell from 54% to 42% of assets while liabilities grew 76.5% against 40.0% asset growth — external debt carried the expansion.",
+    "ExplanationWrongB": "Choice B leaps from a rising liability percentage to an imminent liquidity crisis; the misconception is treating capital-structure mix as a measure of near-term cash adequacy. Solvency mix and liquidity are distinct: the common-size data show heavier reliance on debt but say nothing about obligation maturities or the cash available to retire near-term claims.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D dismisses common-size statements for financing analysis; the misconception is that percentage presentation destroys informational value. Percentages are precisely what reveal the structural mix shift (46% to 58%) that absolute growth conceals, and they can be paired with dollar figures, as the 76.5%-versus-40.0% liability-versus-asset comparison shows.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-243",
+    "Section": "A",
+    "Stem": "Controller Priya Chen prepared common-size balance sheets for Flash's strategic review: total liabilities were 46% of total assets in FY2024, 52% in FY2025, and 58% in FY2026, while total assets grew from $120.00 million to $150.00 million to $168.00 million across those years. The CFO asks Chen to characterize what the common-size trend reveals about Flash's financing posture. Which conclusion is best supported?",
+    "Topic": "A.243 commonsize-financing-mix",
+    "UniqueConceptKey": "A-243-vertical-balance-shift",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Analyze/Difficult — requires integrating percentage trend with corroborating dollar growth rates",
+      "Verification: 0.46x120.00 = 55.20; 0.58x168.00 = 97.44; 97.44/55.20 - 1 = +76.5%; 168.00/120.00 - 1 = +40.0%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB Statement No. 89 (Financial Reporting and Changing Prices)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Depreciation expense is based on decades-old acquisition costs, so it understates the current cost of consuming productive capacity while sales are priced at current levels, overstating margins",
+      "B": "Inflation raises revenues and historical-cost expenses by the same proportion, leaving reported margins essentially unaffected",
+      "C": "Inflation compresses reported margins because older assets generate smaller depreciation charges than newer assets would",
+      "D": "GAAP requires revaluing depreciable assets to replacement cost each year, so historical-cost margins already reflect current prices"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Assuming inflation-neutral margins or GAAP-mandated replacement-cost revaluation",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Under the historical-cost convention — with SFAS No. 89 providing only supplemental price-change disclosures, not restatement — depreciation is charged on original acquisition cost. Presses bought at far lower price levels generate small depreciation charges while Flash prices output at today's levels; pairing current-dollar revenue against outdated cost consumption overstates margin, contributing to the reported 21%. Business interpretation: controller Priya Chen should explain to the audit committee that part of the margin expansion is a measurement artifact rather than operating improvement, because sustaining capacity will cost more than the books imply — analysts therefore adjust depreciation toward replacement cost when comparing profitability across inflationary periods.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B presumes inflation is neutral because revenues and costs both rise; the misconception misses the timing asymmetry — costs anchored to old prices (depreciation) lag behind current-price revenues. That wedge is exactly what inflates Flash's margin, so neutrality does not hold under historical-cost accounting.",
+    "ExplanationWrongC": "Choice C inverts the effect, claiming smaller depreciation charges compress margins; the misconception is confusing the direction of the bias. Lower depreciation expense raises reported operating income, which is why margins expand rather than compress during inflation under historical-cost rules.",
+    "ExplanationWrongD": "Choice D assumes GAAP mandates annual replacement-cost revaluation; the misconception is confusing revaluation-model frameworks with U.S. GAAP practice. U.S. GAAP keeps depreciable assets at historical cost, with SFAS No. 89 offering disclosure only, so reported margins retain the inflation bias instead of reflecting current prices.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-244",
+    "Section": "A",
+    "Stem": "Controller Priya Chen reviews Flash's FY2026 results with the audit committee: reported operating margin reached 21% even though replacement prices for Flash's metal-forming presses rose roughly 9% per year throughout the decade in which those presses were acquired, and they are depreciated over 15 years at original cost. The committee asks why historical-cost financial statements can flatter profitability during sustained inflation. Which explanation is correct?",
+    "Topic": "A.244 inflation-margin-overstatement",
+    "UniqueConceptKey": "A-244-historicalcost-inflation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Understand/ME — single-mechanism explanation capped at score 2 per Rule 11",
+      "Verification: conceptual item — no computation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Market-based ratio conventions (financial ratio analysis theory)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "1.25%",
+      "B": "5.00%",
+      "C": "20.00%",
+      "D": "4.17%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Annualizing one quarter's dividend or dividing price by dividends",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Dividend yield relates annual cash distributions to the current market price: annual dividends per share divided by market price per share. Flash distributed $0.60 x 4 = $2.40 per share during FY2026, so yield = $2.40 / $48.00 = 5.00%. Business interpretation: investor relations lead Sofia Almeida can tell analysts that holders earn a 5.00% cash return at the fiscal-year closing price independent of price appreciation — and she should note that the yield moves inversely with the quote, so a falling price would mechanically raise the published yield without any board dividend action.",
+    "ExplanationWrongA": "Choice A of 1.25% uses a single quarter's dividend against the annual price basis ($0.60 / $48.00); the misconception is forgetting to annualize the quarterly rate. Four declared quarters total $2.40 per share, and $2.40 / $48.00 yields the correct 5.00%.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C of 20.00% inverts the ratio ($48.00 / $2.40); the misconception is dividing price by dividends, which computes a reciprocal multiple rather than a yield. Yield measures income per dollar invested, so dividends belong in the numerator and price in the denominator, giving 5.00%.",
+    "ExplanationWrongD": "Choice D of 4.17% pairs the annual dividend with a price other than the stated $48.00 closing quote; the misconception is mixing measurement dates or substituting a projected price. Yield uses annual dividends over the specified market price, and $2.40 / $48.00 equals exactly 5.00%.",
+    "FormulaReference": "FA-17",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-245",
+    "Section": "A",
+    "Stem": "Investor relations lead Sofia Almeida is preparing materials for Flash's year-end analyst call. During FY2026, Flash declared a quarterly dividend of $0.60 per common share in each of the four quarters, and the shares closed the fiscal year at $48.00 per share. Almeida wants the dividend yield for the call deck. What yield should she report?",
+    "Topic": "A.245 dividend-yield-computation",
+    "UniqueConceptKey": "A-245-dividend-yield",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Apply/Moderate — requires annualization plus ratio orientation among four plausible figures",
+      "Independent recomputation: $0.60x4 = $2.40; 2.40/48.00 = 5.00%; distractors: 0.60/48.00 = 1.25%, 48.00/2.40 = 20.00%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IMA CMA Part 2 Content Specification Outline, Section A (ratio terminology)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Quick ratio",
+      "B": "Cash ratio",
+      "C": "Current ratio",
+      "D": "Debt-to-assets ratio"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Attributing the legacy 'working capital ratio' label to the quick or cash ratio",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The working capital ratio is the traditional name for the current ratio — current assets divided by current liabilities — because it compares the resources constituting working capital against claims due within one year. Bank credit agreements drafted decades ago commonly use this legacy label. The quick ratio strips out inventory, the cash ratio keeps only cash and marketable securities, and debt-to-assets is a leverage measure, so none matches the traditional term. Business interpretation: finance director Renata Kovacs can map Flash's legacy covenant language directly onto the statements, because the 'working capital ratio' covenant line tests the same aggregate liquidity cushion modern analysts call the current ratio.",
+    "ExplanationWrongA": "Choice A picks the quick ratio, which excludes inventory from the numerator; the misconception is associating the more conservative test with the older umbrella term. The working capital ratio traditionally spans the complete set of current assets, which describes the current ratio rather than its acid-test refinement.",
+    "ExplanationWrongB": "Choice B picks the cash ratio, the narrowest liquidity measure counting only cash and marketable securities; the misconception is assuming the most stringent ratio carries the generic historical label. The traditional working capital ratio is the broadest liquidity comparison — total current assets against current liabilities.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D picks the debt-to-assets ratio, a solvency measure with no working capital linkage; the misconception is grabbing another familiar balance-sheet ratio without noting that working capital is by definition current assets minus current liabilities, a concept pointing squarely to the current ratio.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-246",
+    "Section": "A",
+    "Stem": "While onboarding a new financial analyst, Flash finance director Renata Kovacs runs a terminology check: several of Flash's legacy banking documents refer to the 'working capital ratio,' and she wants the analyst connecting that lender language to modern reporting terms. Which ratio is traditionally known as the working capital ratio?",
+    "Topic": "A.246 workingcapital-ratio-name",
+    "UniqueConceptKey": "A-246-working-capital-synonym",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Remember/Easy — single-fact nomenclature recall capped at score 1 per Rule 11",
+      "Verification: conceptual item — no computation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Higgins (1977) sustainable growth framework",
+      "Corporate dividend policy theory"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Hold the dividend at $3.60 per share: at projected EPS of $6.30 the payout falls to about 57.1%, and retention supports a sustainable growth rate of roughly 6.43% (15.0% x 0.429), exceeding the 6.0% target without approaching the 1.75 leverage cap",
+      "B": "Raise the dividend to $4.20 per share to reward shareholders: the payout climbs to about 66.7%, retention drops to one-third, and the sustainable growth rate falls to roughly 5.0% (15.0% x 0.333), making growth beyond that point dependent on added debt",
+      "C": "Suspend the dividend entirely to fund the expansion from 100% retention, maximizing the sustainable growth rate at 15.0% and eliminating covenant pressure",
+      "D": "Raise the dividend to $4.20 and cover the expansion gap with a short-term borrowing facility structured to sit outside the debt-to-equity covenant calculation"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Judging dividend affordability apart from retention-driven sustainable growth",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The Higgins sustainable growth lens ties dividend policy to achievable growth: SGR = ROE x retention. Holding $3.60 gives a payout of $3.60 / $6.30 = 57.14% and retention of 42.86%, so SGR = 15.0% x 0.4286 = 6.43% — above the 6.0% target with no incremental leverage. The activist proposal cuts retention to 33.3% (SGR of 5.0%), forcing expansion spending above 5.0% growth to be debt-financed against thin covenant room; full suspension over-retains, sacrificing shareholder returns for capacity the plan does not require. Vasquez should therefore hold the payout and commit to resuming distribution growth as expansion cash flows arrive. Business interpretation: the dividend is affordable only to the extent residual retention still finances strategy — here it does, but only at the current rate, which is the defensible balance between activist pressure and covenant discipline.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B is arithmetically coherent — a sustainable growth rate near 5.0% — but it inverts the priority: the misconception is that signaling generosity today is costless, when dropping below the 6.0% growth target shifts expansion funding into debt precisely when covenant headroom is limited. It remains a defensible shareholder-first stance, yet it fails the balanced-objective test Vasquez was asked to apply.",
+    "ExplanationWrongC": "Choice C maximizes retention but overshoots the requirement; the misconception is treating maximum growth as an end in itself. With the 6.0% target met at roughly 43% retention, retaining 100% confiscates cash from shareholders without a disclosed use, inviting the very activist pressure the committee is managing and signaling weak reinvestment discipline.",
+    "ExplanationWrongD": "Choice D engineers around the covenant rather than within it; the misconception is that form-over-substance structuring of a borrowing facility neutralizes leverage risk. Lenders and rating agencies look through such arrangements, and the governance exposure of appearing to evade the credit agreement compounds the financial risk created by the higher payout.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-247",
+    "Section": "A",
+    "Stem": "Flash's board dividend committee, chaired by CFO Elena Vasquez, confronts competing pressures: activist shareholders want the dividend raised from $3.60 to $4.20 per share, while management plans a plant expansion requiring maximum internal funding. Flash earned $6.00 per share in FY2026 with return on equity of 15.0%; FY2027 EPS is projected at $6.30, and management targets at least 6.0% annual growth. The credit agreement caps debt-to-equity at 1.75, leaving limited room for debt-funded payouts. Vasquez must recommend a dividend course to the committee. Which recommendation best balances the competing objectives?",
+    "Topic": "A.247 dividend-policy-committee",
+    "UniqueConceptKey": "A-247-payout-sustainability-decision",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Evaluate at VD — named chair weighs competing defensible alternatives with SGR recomputation per proposal",
+      "Independent recomputation: 3.60/6.30 = 57.14% payout; SGR = 15.0%x0.4286 = 6.43% vs 6.0% target; $4.20 route: 4.20/6.30 = 66.67% payout, SGR = 15.0%x0.3333 = 5.0%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Financial statement analysis theory (earnings-quality red flags)",
+      "FASB ASC 606 (Revenue from Contracts with Customers)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The pattern is benign because receivables naturally track sales growth, and the DSO lengthening merely reflects normal seasonality",
+      "B": "The divergence proves fraudulent revenue recognition has occurred and warrants immediate restatement of FY2026 results",
+      "C": "The data indicate customers are paying earlier than in prior years, improving Flash's cash conversion",
+      "D": "Receivables growing 2.25 times as fast as revenue, with DSO lengthening about 6.5 days, is a classic channel-stuffing indicator suggesting possible premature or accelerated revenue recognition that warrants cutoff testing and credit-file review"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Treating AR-outpacing-sales divergence as benign or as conclusive proof",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Earnings-quality analysis screens for divergence between revenue growth and its cash conversion. Receivables grew 27.0% against sales growth of 12.0% — a factor of 27.0/12.0 = 2.25 — stretching days sales outstanding from 48.7 to 55.2 days (+6.5 days) precisely when quota pressure was intense. That combination matches the documented signature of potential channel stuffing or aggressive credit extension under ASC 606 (revenue recognized before control transfers). The pattern is an investigative trigger, not proof: Grace Whitfield should commission quarter-end cutoff testing and review credit approvals. Business interpretation: until cleared, the quality of Flash's incremental 12.0% revenue growth should be discounted, because earnings backed by receivables rather than cash are lower-quality earnings.",
+    "ExplanationWrongA": "Choice A waves off the divergence as natural tracking; the misconception is ignoring proportionality — receivables rose 27.0% against sales growth of 12.0%, and DSO does not lengthen 6.5 days through seasonality alone absent a shift in billing or collection terms. Benign patterns keep DSO roughly stable when customer mix is unchanged.",
+    "ExplanationWrongB": "Choice B converts an indicator into a verdict; the misconception is jumping from statistical anomaly to proven fraud and restatement. Red-flag analytics establish suspicion sufficient to justify procedures such as quarter-end cutoff testing and receivable confirmations, but concluding fraud requires documented evidence the screen cannot supply.",
+    "ExplanationWrongC": "Choice C reverses the direction of the deterioration; the misconception is misreading a lengthening DSO as faster collection. Faster-paying customers shrink receivables relative to sales, whereas Flash's receivables ballooned relative to sales — cash arrived more slowly, degrading rather than improving conversion quality.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-248",
+    "Section": "A",
+    "Stem": "Internal audit lead Grace Whitfield is reviewing Flash's FY2026 revenue cycle for the audit committee. Net sales grew 12.0%, from $300.00 million to $336.00 million, while trade receivables grew 27.0%, from $40.00 million to $50.80 million; days sales outstanding lengthened from 48.7 to 55.2 days. Regional managers exceeded stretch sales quotas two quarters running. Whitfield must characterize the earnings-quality implication for the committee. Which inference is best supported?",
+    "Topic": "A.248 receivables-revenue-divergence",
+    "UniqueConceptKey": "A-248-ar-sales-redflag",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Apply/Moderate — quantitative divergence interpretation with benign, overclaim, and inversion traps",
+      "Verification: 27.0/12.0 = 2.25x divergence; DSO 55.2 - 48.7 = +6.5 days",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (operating and financial leverage interaction)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Ashford is riskier because its $36.00 million contribution margin is larger, so sales fluctuations move more dollars of profit",
+      "B": "Brookfield is riskier because identical operating leverage (DOL 3.00) multiplies through a higher financial leverage factor (DFL 2.50 versus 1.50), producing combined leverage of 7.50 versus 4.50 — a 1% sales decline cuts Brookfield's earnings about 7.5% versus about 4.5% at Ashford",
+      "C": "Risk is equal because both plants operate at DOL 3.00, and financing structure has no bearing on earnings sensitivity to sales",
+      "D": "Plant-level risk cannot be compared because diversification across the two plants eliminates earnings sensitivity attributable to leverage"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Stopping at DOL and ignoring the DFL multiplier when ranking total risk",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Total earnings sensitivity combines the operating and financing layers: combined leverage = DOL x DFL, where DFL = operating income / (operating income - interest). Ashford: DFL = $12.00M / $8.00M = 1.50, so combined leverage = 3.00 x 1.50 = 4.50. Brookfield: DFL = $10.00M / $4.00M = 2.50, so combined leverage = 3.00 x 2.50 = 7.50. Identical operating structures therefore translate a given sales shock about 1.67 times more violently at Brookfield. Business interpretation: Omar Haddad's message to the CFO is that Brookfield's heavier debt load — not its operations — is the risk differentiator; deleveraging Brookfield would narrow EPS swings more than any operational change of comparable cost.",
+    "ExplanationWrongA": "Choice A mistakes dollar magnitude for sensitivity; the misconception is equating a bigger contribution margin pool with greater proportional risk. Leverage measures percentage response to a percentage sales change — Ashford's larger dollar base dilutes its elasticity, and its lighter debt load holds combined leverage at 4.50 versus Brookfield's 7.50.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C stops the analysis at the operating layer; the misconception is that matching DOL of 3.00 equalizes risk. Financing is a second multiplier: Brookfield's DFL of 2.50 stacks onto the same 3.00 to compound swings that Ashford's DFL of 1.50 amplifies far less, so total risk diverges sharply despite identical operations.",
+    "ExplanationWrongD": "Choice D invokes diversification to avoid the comparison; the misconception is conflating portfolio-level variance reduction with the mechanical leverage arithmetic inside each plant. For a given plant's sales change, the DOL x DFL chain applies deterministically — diversification may smooth consolidated results but does not erase Brookfield's higher per-unit sensitivity.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-249",
+    "Section": "A",
+    "Stem": "FP&A director Omar Haddad is briefing Flash's CFO on relative risk across the company's two stamping plants. Plant Ashford produces contribution margin of $36.00 million on operating income of $12.00 million, with allocated interest expense of $4.00 million; Plant Brookfield produces contribution margin of $30.00 million on operating income of $10.00 million, with allocated interest expense of $6.00 million. Both plants carry identical operating leverage (DOL 3.00), but their financing differs. Haddad must explain which plant subjects Flash's earnings to greater percentage swings from a given change in plant sales, and why. Which assessment is correct?",
+    "Topic": "A.249 leverage-interaction-risk",
+    "UniqueConceptKey": "A-249-dol-dfl-composition",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Analyze/Difficult — two-stage leverage decomposition and cross-plant comparison",
+      "Independent recomputation: DFL_A = 12/(12-4) = 1.50; DFL_B = 10/(10-6) = 2.50; combined leverage = 3.00x1.50 = 4.50 vs 3.00x2.50 = 7.50",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (dividend payout and retention; Higgins sustainable growth)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Rising dividends alongside flat EPS demonstrate that Flash's underlying earnings power has been strengthening each year",
+      "B": "The payout ratio measures the dividend return on Flash's market price, so the climb signals a richer yield for income investors",
+      "C": "Flash is distributing a growing share of flat earnings, so the retention ratio has fallen from 75.0% to 35.0%, narrowing the internally generated funding available for sustainable growth unless return on equity improves",
+      "D": "A payout above 50% triggers mandatory dividend suspension under standard credit agreements, so Flash's policy is unsustainable by construction"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Confusing payout ratio with dividend yield or earnings growth",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The payout ratio — dividends per share divided by earnings per share — determines retention, the engine of the sustainable growth rate (SGR = ROE x retention). Here $1.00 / $4.00 = 25.0% rose to $2.60 / $4.00 = 65.0%. Flat EPS means the dividend climb came entirely from redistribution: retention shrank from 75.0% to 35.0%, so for any given ROE, Flash's self-funded growth ceiling fell by more than half. Business interpretation: treasury analyst Lena Fischer should tell the finance committee that the policy remains affordable only while ROE holds or improves; otherwise the shrinking retained-earnings stream will force slower growth, additional borrowing, or an eventual dividend reset.",
+    "ExplanationWrongA": "Choice A reads distribution growth as earnings growth; the misconception is confusing the payout share with earnings power. EPS stayed near $4.00 throughout — the dividend increase came from paying out a larger slice of unchanged earnings, not from any strengthening of profitability.",
+    "ExplanationWrongB": "Choice B swaps in the dividend yield definition; the misconception is mixing market-relative income measures (dividends divided by price) with the earnings-relative payout ratio (dividends divided by EPS). The trend says nothing about price or yield — it measures how much of each earned dollar Flash returns versus retains.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D invents an automatic suspension rule at the 50% threshold; the misconception is treating a rule of thumb as a binding covenant. Credit agreements set negotiated thresholds specific to each borrower, and many mature firms sustain payouts above 50% — the genuine concern in Flash's trend is the shrinking retention ratio, not a universal trigger point.",
+    "FormulaReference": "FA-22",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-250",
+    "Section": "A",
+    "Stem": "Treasury analyst Lena Fischer is preparing Flash's five-year dividend retrospective for the finance committee. Over FY2022 through FY2026, EPS held essentially flat near $4.00 while dividends per share climbed steadily from $1.00 to $2.60, lifting the payout ratio from 25.0% to 65.0%. A committee member asks what the trend implies for Flash's future self-funded growth. Which interpretation is correct?",
+    "Topic": "A.250 payout-trend-interpretation",
+    "UniqueConceptKey": "A-250-payout-ratio-trend",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Understand/ME — single-trend interpretation capped at score 2 per Rule 11",
+      "Verification: 1.00/4.00 = 25.0% rising to 2.60/4.00 = 65.0%; retention 75.0% falling to 35.0%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  }
+,
+  {
+    "Authorities": [
+      "ASC 830 Foreign Currency Matters"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Transaction exposure is the cash-effecting gain or loss on specific foreign-currency-denominated items such as receivables, payables, and loans already recorded on the books, while translation exposure is the consolidated reporting effect of restating the subsidiary's financial statements into U.S. dollars, producing no necessary cash flow",
+      "B": "Both exposures produce realized cash gains or losses that must be recognized in Flash's operating income in the period the exchange rate moves",
+      "C": "Translation exposure applies only to monetary accounts such as cash and payables, while transaction exposure covers the entire balance sheet of the German subsidiary",
+      "D": "Transaction exposure is measured only when each invoice settles in cash, while translation exposure represents the cash gain or loss on individual customer invoices denominated in euros"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Reversing the definitions of transaction and translation exposure",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Under ASC 830 Foreign Currency Matters, transaction exposure arises from foreign-currency-denominated assets and liabilities already on the books - each euro receivable or payable Flash holds will settle in cash, so rate movements create measurable gains or losses recognized in income. Translation exposure, by contrast, is purely an accounting consequence: consolidating the German subsidiary requires converting its statements from euros into U.S. dollars at current rates for equity and mixed rates elsewhere, producing a translation adjustment that bypasses income entirely. Business interpretation: controller Marcus Webb can explain to the new hire that hedging priorities differ because transaction exposure affects cash and earnings directly while translation exposure affects reported equity until disposal. The common trap is treating the consolidated translation adjustment as a cash-flow risk equivalent to open monetary payables.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B asserts both exposures are realized cash events; the misconception ignores that translation exposure under ASC 830 is a restatement artifact flowing through other comprehensive income. Only transaction exposure - settled receivables, payables, and debt - produces cash gains or losses recognized in income.",
+    "ExplanationWrongC": "Choice C reverses the scope of the two concepts; restricting translation to monetary accounts describes remeasurement under the temporal method for a USD functional currency. Translation converts the entire set of financial statements, including nonmonetary assets carried at historical exchange rates.",
+    "ExplanationWrongD": "Choice D swaps the definitions outright; the misconception maps invoice-level cash effects onto translation and consolidated reporting onto transactions. ASC 830 assigns them the opposite way, which is why hedging programs target open monetary items rather than the consolidation entry.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-251",
+    "Section": "A",
+    "Stem": "Controller Marcus Webb is orienting a new hire on Flash's euro-denominated German subsidiary ahead of the quarterly close. He explains that Flash faces two distinct currency exposures tied to the subsidiary's operations and financing. The hire asks how translation exposure differs from transaction exposure under ASC 830. Which response is accurate?",
+    "Topic": "A.251 translation-vs-transaction-exposure",
+    "UniqueConceptKey": "A-251-asc830-exposure-distinction",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: Easy/Understand recall of ASC 830 exposure taxonomy"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "ASC 830 Foreign Currency Matters (temporal method remeasurement)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$10,000 gain",
+      "B": "$12,500 gain",
+      "C": "$12,500 loss",
+      "D": "$25,000 gain"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Remeasuring only cash or flipping the gain/loss sign on net monetary position",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Under the temporal method of ASC 830, monetary assets and liabilities are remeasured at the current exchange rate, so the rate movement on the net monetary position drives the remeasurement result through income. Net monetary assets = 200,000 + 300,000 - 250,000 = 250,000 euros. The euro strengthened from $1.15 to $1.20, so the gain = 250,000 x ($1.20 - $1.15) = $12,500. Business interpretation: treasury analyst Dana Okafor records a $12,500 remeasurement gain in second-quarter income because Flash's net euro claims purchase more dollars at quarter end than at quarter start. The classic traps are remeasuring nonmonetary items at the current rate, dropping the payables offset from the exposed base, or flipping the direction of the gain.",
+    "ExplanationWrongA": "Choice A remeasures only the cash balance (200,000 x $0.05 = $10,000); the misconception forgets that receivables and payables are equally exposed monetary items. The temporal method captures the whole net monetary position, not cash alone.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C flips the sign; the misconception treats a strengthening euro as harmful to a net monetary asset position. Holding net euro claims when the euro appreciates produces a remeasurement gain, not a loss - the loss case belongs to a net monetary liability position.",
+    "ExplanationWrongD": "Choice D remeasures gross monetary assets before netting payables (500,000 x $0.05 = $25,000); the misconception ignores that the 250,000-euro payable offsets exposure dollar for dollar. Only the net 250,000-euro position carries exchange risk.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-252",
+    "Section": "A",
+    "Stem": "Treasury analyst Dana Okafor is closing Flash's second quarter. Flash's German subsidiary keeps its books in euros, but ASC 830 classifies the U.S. dollar as the functional currency, so the euro-denominated accounts must be remeasured under the temporal method. At quarter start the spot rate was $1.15 per euro and at quarter end it was $1.20 per euro. Throughout the quarter the subsidiary held cash of 200,000 euros, receivables of 300,000 euros, and payables of 250,000 euros; nonmonetary items remained at historical rates that did not move. What remeasurement result should Dana record?",
+    "Topic": "A.252 temporal-remeasurement-gain",
+    "UniqueConceptKey": "A-252-temporal-method-monetary-net",
+    "VerifiedChecks": [
+      "Verification: net monetary assets 200,000 + 300,000 - 250,000 = 250,000 EUR; 250,000 x (1.20 - 1.15) = 12,500 USD gain",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: ME/Apply single-formula remeasurement with distractor errors"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Constant-dollar measurement convention (nominal-to-real deflation)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "9.00%",
+      "B": "3.00%",
+      "C": "2.83%",
+      "D": "15.54%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Subtracting inflation from nominal growth instead of deflating the growth factor",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Converting nominal growth to real terms divides the growth factor by the inflation factor, consistent with constant-dollar measurement when prices change. Nominal growth = 2,180,000 / 2,000,000 - 1 = 9.00%. Real growth = (1 + 0.09) / (1 + 0.06) - 1 = 1.09 / 1.06 - 1 = 2.83%. Business interpretation: of the 9.00% headline increase, roughly two-thirds reflects price-level drift, leaving only 2.83% genuine volume-and-mix expansion - a materially weaker demand signal for Tomas Rivera's capacity planning and inventory commitments. The common trap is the subtraction shortcut (9.00% - 6.00% = 3.00%), which overstates real growth whenever inflation is meaningful; exact deflation compounds the factors.",
+    "ExplanationWrongA": "Choice A quotes the nominal rate as though it were real; the misconception skips the deflation step entirely. Dividing the 1.09 growth factor by the 1.06 price factor is what strips purchasing-power drift from the headline figure.",
+    "ExplanationWrongB": "Choice B applies the subtraction shortcut (9.00% minus 6.00% = 3.00%); this approximation error grows as inflation rises. Proper deflation compounds the factors: 1.09 / 1.06 yields 2.83%, seventeen basis points below the shortcut.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D multiplies the factors (1.09 x 1.06 - 1 = 15.54%), compounding nominal growth with inflation in the wrong direction. Inflation adjustment divides by the price factor to remove it; the arithmetic never adds inflation on top of nominal growth.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-253",
+    "Section": "A",
+    "Stem": "FP&A director Tomas Rivera is briefing Flash's executive team on last year's top-line performance. Flash reported net sales of $2,000,000 in the prior year and $2,180,000 this year. Over the same span, the regional price index most relevant to Flash's selling prices rose 6.0%. Tomas wants the team to quote growth in constant-dollar terms so the board does not mistake price drift for demand. What real growth rate should he present?",
+    "Topic": "A.253 real-vs-nominal-growth",
+    "UniqueConceptKey": "A-253-deflator-growth-adjustment",
+    "VerifiedChecks": [
+      "Verification: nominal 2,180,000/2,000,000 - 1 = 9.00%; real 1.09/1.06 - 1 = 0.0283 = 2.83%; cross-check 1.09 x 1.06 - 1 = 15.54% (distractor D reproduced)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: Moderate/Apply two-step deflation"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Constant-dollar segment analysis (price-level adjusted comparison)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Deflating FY2026 to constant dollars shows real sales growth of 9.52% rather than the 15.00% headline, and the 0.50-point margin gain reflects a modest genuine efficiency improvement layered on top of price-level drift",
+      "B": "Restating FY2026 operating income at $372,381 places it below FY2025 operating income, so the segment's real profitability actually declined during the year",
+      "C": "Because each year's margin is computed from same-period prices, inflation has no bearing on the comparison and the 8.50% margin is fully comparable to 8.00% without adjustment",
+      "D": "The data reveal that physical unit volume fell in FY2026, which explains why margin expansion lagged the sales growth rate"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Misreading deflated figures as declines or ignoring price-level drift",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Constant-dollar analysis deflates nominal amounts by the price index before comparing periods. Real FY2026 sales = 4,600,000 / 1.05 = $4,380,952, so real sales growth = 4,380,952 / 4,000,000 - 1 = 9.52%, far below the 15.00% nominal print. Deflated operating income = 391,000 / 1.05 = $372,381, up 16.37% versus $320,000 in real terms, and within-year margins (8.00% to 8.50%) remain legitimate same-price efficiency signals. Business interpretation: equity analyst Priya Raman can tell readers the Industrial Products segment genuinely improved, but nearly one-third of the headline growth is price rather than volume, tempering the momentum narrative. The trap is either dismissing nominal margins altogether or misreading the deflated comparison as deterioration.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B stops halfway through the deflation logic372,381 exceeds the $320,000 base, so real operating income rose 16.37%, not fell. The misconception compares a deflated current year against an unadjusted prior year and mislabels the direction.",
+    "ExplanationWrongC": "Choice C dismisses cross-period comparability concerns wholesale; while each year's margin ratio is internally consistent, the 15.00% sales growth framing the story is inflated by 5.0% of price drift unless deflated to the true 9.52%. The misconception conflates ratio validity with trend validity.",
+    "ExplanationWrongD": "Choice D invents a volume decline the data cannot support; deflated sales grew 9.52% in real terms, indicating positive unit-volume contribution. The misconception substitutes narrative for computation where the index math points the other way.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-254",
+    "Section": "A",
+    "Stem": "Equity analyst Priya Raman covers Flash and is decomposing segment profitability across two years for her initiation note. Flash's Industrial Products segment reported: FY2025 net sales $4,000,000 with operating income of $320,000 (an 8.00% margin); FY2026 net sales $4,600,000 with operating income of $391,000 (an 8.50% margin). The regional price index relevant to the segment's inputs and outputs rose 5.0% between the fiscal years. Priya must judge how much of the improvement survives inflation adjustment. Which conclusion follows from the data?",
+    "Topic": "A.254 inflation-margin-analysis",
+    "UniqueConceptKey": "A-254-price-level-segment-margin",
+    "VerifiedChecks": [
+      "Verification: 4,600,000/1.05 = 4,380,952; 4,380,952/4,000,000 - 1 = 9.52%; 391,000/1.05 = 372,381 vs 320,000 = +16.37%",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: Moderate/Analyze decomposition supported by stated data table"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "ASC 842 Leases (analytical capitalization perspective)",
+      "Credit covenant analysis convention"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Present the reported debt-to-equity ratio of 0.75 unchanged, because lease obligations sit outside the debt caption of the balance sheet and therefore do not belong in a leverage discussion with the committee",
+      "B": "Add the undiscounted $3,000,000 payment schedule to debt, producing debt-to-equity of 1.125, because contractual totals capture the full obligation regardless of payment timing",
+      "C": "Reduce shareholders' equity by the $2,400,000 present value to reflect the committed fleet spending, showing debt-to-equity of 6,000,000 / 5,600,000 = 1.07",
+      "D": "Capitalize the $2,400,000 present value into debt-like claims, presenting adjusted debt of $8,400,000 and adjusted debt-to-equity of 1.05, with the undiscounted schedule disclosed separately"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Omitting lease PV from debt or adding undiscounted payments",
+    "CorrectChoice": "D",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Sound credit analysis treats economically debt-like financing arrangements as debt regardless of balance-sheet classification, and discounting - not undiscounted summation - measures the obligation's economic weight. Adjusted debt = 6,000,000 + 2,400,000 = $8,400,000; adjusted debt-to-equity = 8,400,000 / 8,000,000 = 1.05 versus the unadjusted 0.75, a material escalation in measured fixed-claim intensity. Business interpretation: credit manager Samuel Ortiz gives the committee a faithful view of Flash's committed obligations while preserving transparency about the $3,000,000 contractual total, letting the bank price covenant headroom realistically. The traps are ignoring the obligation behind its presentation form, overstating it with undiscounted future dollars, or distorting equity, which corrupts every return metric computed off the same denominator.",
+    "ExplanationWrongA": "Choice A hides committed financing behind presentation form; the misconception equates balance-sheet captions with economic substance. Fixed lease payments compete with debt service for the same cash flows and belong in any leverage view presented to lenders.",
+    "ExplanationWrongB": "Choice B discounts nothing, adding $3,000,000 of future dollars to today's debt stock; the misconception confuses contractual gross outflows with present-value obligation. Discounting at the embedded borrowing rate yields $2,400,000, the economically comparable figure.",
+    "ExplanationWrongC": "Choice C nets the obligation against equity, shrinking the denominator from $8,000,000 to $5,600,000 and manufacturing 1.07; the misconception misclassifies a debt-like claim as an equity adjustment, corrupting ROE and other equity-based metrics built on the same base.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "FA-07",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-255",
+    "Section": "A",
+    "Stem": "Credit manager Samuel Ortiz is renewing Flash's $10,000,000 revolving facility and must present a leverage view to the bank's credit committee. Flash reports total debt of $6,000,000 and shareholders' equity of $8,000,000, a 0.75 ratio. Off balance sheet, Flash operates its delivery fleets under long-term leases with remaining undiscounted payments totaling $3,000,000; discounted at the incremental borrowing rates embedded in the contracts, the present value of those payments is $2,400,000. The committee asks Samuel which leverage presentation best supports a defensible lending decision. Which recommendation should he make?",
+    "Topic": "A.255 lease-adjusted-leverage",
+    "UniqueConceptKey": "A-255-pv-lease-capitalization",
+    "VerifiedChecks": [
+      "Verification: 6,000,000 + 2,400,000 = 8,400,000; 8,400,000/8,000,000 = 1.05; unadjusted 6,000,000/8,000,000 = 0.75",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: Difficult/Evaluate named decision-maker choosing among defensible presentations"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Substance-over-form doctrine (SEC off-balance-sheet disclosure principles)",
+      "Higgins off-balance-sheet financing analysis"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Endorse the reported debt-to-equity of 0.56 unchanged, because neither arrangement appears in the debt caption and off-balance-sheet items are governed by separate disclosure rules outside any leverage metric",
+      "B": "Aggregate the $4,160,610 take-or-pay present value with the $3,500,000 guaranteed entity debt for $7,660,610 of debt-like claims, lifting adjusted debt-to-equity to approximately 0.85, and disclose the aggregation basis in the committee materials",
+      "C": "Count only the $3,500,000 guarantee alongside reported debt for $8,500,000 and debt-to-equity of 0.94, treating the take-or-pay contract as an ordinary purchase commitment outside any leverage lens",
+      "D": "Add the undiscounted $5,400,000 of scheduled take-or-pay payments to the guarantee and reported debt for $13,900,000, presenting debt-to-equity above 1.5 as the conservative planning figure"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Excluding PV of take-or-pay or SPE debt from capacity analysis",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Off-balance-sheet financing analysis rests on substance over form: fixed, unavoidable commitments function as debt-like claims and belong in capacity assessment at present value, and guarantees of sponsored entities consolidate into the analysis. Take-or-pay PV = $900,000 x 4.6229 = $4,160,610; combined with the $3,500,000 guarantee, debt-like claims total $7,660,610, and adjusted debt-to-equity = 7,660,610 / 9,000,000 = 0.85 versus the reported 5,000,000 / 9,000,000 = 0.56 - an understatement of more than 50%. Business interpretation: board member Jonathan Hale's audit committee gains a truthful picture of Flash's fixed-claim burden for governance decisions, provided staff disclose exactly which commitments were aggregated and why. The traps are exclusion based on caption placement and undiscounted padding, which substitutes conservatism for measurement.",
+    "ExplanationWrongA": "Choice A accepts the balance-sheet surface; the misconception is that absence from the debt caption equals absence of economic obligation. Guaranteed debt and take-or-pay commitments are fixed claims ranking ahead of equity in any stress scenario the committee should contemplate.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C draws an arbitrary boundary at the guarantee; the misconception treats take-or-pay as ordinary trade purchasing even though its fixed-payment character regardless of deliveries makes it financing in substance worth $4,160,610 in present value. Half the hidden claim disappears from the analysis.",
+    "ExplanationWrongD": "Choice D abandons discounting and stacks $5,400,000 of future nominal dollars onto today's obligations; the misconception conflates contractual totals with obligation value. Undiscounted padding overstates leverage as dramatically as exclusion understates it, and neither extreme measures anything.",
+    "FormulaReference": "FA-07",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-256",
+    "Section": "A",
+    "Stem": "Board member Jonathan Hale chairs Flash's audit committee and is probing whether reported leverage understates Flash's committed obligations. Reported long-term debt is $5,000,000 against shareholders' equity of $9,000,000. Outside the balance sheet sit two arrangements: a six-year take-or-pay supply contract obligating Flash to pay $900,000 annually regardless of deliveries received, whose present value at Flash's 8% discount rate is $4,160,610 using the stated 4.6229 six-year annuity factor; and a legally separate equipment entity sponsored by Flash whose $3,500,000 of bank debt Flash guarantees. Jonathan asks staff which debt-capacity presentation the committee should endorse. Which presentation is most defensible?",
+    "Topic": "A.256 take-or-pay-debt-capacity",
+    "UniqueConceptKey": "A-256-spe-commitment-aggregation",
+    "VerifiedChecks": [
+      "Verification: 900,000 x 4.6229 = 4,160,610; 4,160,610 + 3,500,000 = 7,660,610; 7,660,610/9,000,000 = 0.85; reported 5,000,000/9,000,000 = 0.56; undiscounted 900,000 x 6 = 5,400,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: VD/Evaluate multi-instrument aggregation judgment by named board decision-maker"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Cost-volume-profit framework",
+      "Financial leverage theory (DOL-DFL-DCL chain)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "2.67",
+      "B": "1.50",
+      "C": "4.00",
+      "D": "5.00"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Reporting DOL or DFL alone, or deducting interest twice",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Combined leverage chains the operating and financial layers: DCL = DOL x DFL, equivalently contribution margin divided by earnings before interest and taxes less interest. Contribution margin = 1,000,000 x 40% = $400,000. EBIT = 400,000 - 250,000 = $150,000. DOL = 400,000 / 150,000 = 2.67. DFL = 150,000 / (150,000 - 50,000) = 150,000 / 100,000 = 1.50. DCL = 2.67 x 1.50 = 4.00, confirmed directly as 400,000 / 100,000 = 4.00. Business interpretation: finance director Elena Vasquez can tell the board that a 10% swing in sales moves EPS roughly 40% in either direction, so thin-cushion quarters will amplify volatility dramatically. The traps are stopping at one layer of the chain or deducting interest twice in the denominator.",
+    "ExplanationWrongA": "Choice A reports DOL alone (400,000 / 150,000 = 2.67); the misconception presents operating leverage as the combined measure and drops the financing layer entirely, understating EPS sensitivity to sales by half.",
+    "ExplanationWrongB": "Choice B reports DFL alone (150,000 / 100,000 = 1.50); the misconception isolates the interest wedge from the operating chain. Combined leverage multiplies the two elasticities rather than selecting whichever layer was computed last.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D divides contribution margin by $80,000, double-counting the interest deduction beneath EBIT; the misconception produces an inflated elasticity of 5.00. Interest is deducted once from the $150,000 EBIT, leaving $100,000 in the denominator and a correct answer of 4.00.",
+    "FormulaReference": "FA-19",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-257",
+    "Section": "A",
+    "Stem": "Finance director Elena Vasquez is stress-testing Flash's earnings sensitivity ahead of a volatile selling season. Flash projects sales of $1,000,000 with a 40% contribution margin ratio, fixed operating costs of $250,000, and interest expense of $50,000. Elena wants the degree of combined leverage to show the board how proportionally EPS responds to sales swings. What degree of combined leverage should she report?",
+    "Topic": "A.257 dcl-computation",
+    "UniqueConceptKey": "A-257-dol-dfl-chain",
+    "VerifiedChecks": [
+      "Verification: CM 400,000; EBIT 400,000 - 250,000 = 150,000; DOL 400,000/150,000 = 2.67; DFL 150,000/100,000 = 1.50; DCL 2.67 x 1.50 = 4.00 = 400,000/100,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: Moderate/Apply chained leverage computation"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (degree of financial leverage)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The percentage change in operating income that accompanies a given percentage change in sales revenue",
+      "B": "The percentage change in earnings per share that accompanies a given percentage change in operating income, computed as EBIT divided by EBIT minus interest expense",
+      "C": "The ratio of total liabilities to shareholders' equity that gauges the balance-sheet weight of borrowed funds",
+      "D": "The percentage change in sales required to offset a given percentage change in fixed financing costs"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Confusing DFL elasticity with debt-to-equity ratio",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The degree of financial leverage measures earnings-per-share elasticity with respect to operating income: DFL = EBIT / (EBIT - interest expense). Illustrating with Flash's own figures, EBIT of $150,000 against interest of $50,000 gives DFL = 150,000 / 100,000 = 1.50, meaning each 1% movement in EBIT shifts EPS by 1.5% in the same direction. Business interpretation: FP&A director Grace Liu emphasizes to associates that DFL isolates the financing layer only - operating leverage handles the sales-to-EBIT linkage, and the two chain multiplicatively into combined leverage for planning purposes. The common trap is confusing this elasticity with the debt-to-equity ratio, a static capital-structure stock measure rather than a sensitivity coefficient.",
+    "ExplanationWrongA": "Choice A defines the operating-leverage linkage (sales-driven EBIT elasticity); the misconception attaches the sales variable to the financing measure. DFL begins from EBIT, not revenue, because interest enters the income statement below operating income.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C describes the debt-to-equity ratio, a point-in-time capital-structure gauge; the misconception equates the amount of leverage with the sensitivity to leverage. DFL is an elasticity computed from income-statement flows, not a stock measure from the balance sheet.",
+    "ExplanationWrongD": "Choice D invents a breakeven-style sales requirement that matches no definition in leverage theory; the misconception pattern-matches financing vocabulary onto cost-volume-profit mechanics. No standard ratio expresses sales change needed to offset financing-cost changes.",
+    "FormulaReference": "FA-20",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-258",
+    "Section": "A",
+    "Stem": "During Flash's management development program, FP&A director Grace Liu quizzes associates on leverage terminology before opening the budgeting module. She puts a single definition question to the group: which statement correctly defines the degree of financial leverage? Which definition is correct?",
+    "Topic": "A.258 dfl-definition",
+    "UniqueConceptKey": "A-258-eps-elasticity-definition",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: ME/Remember definitional recall with worked illustration in explanation"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Working-capital liquidity analysis convention",
+      "Commercial lending credit-memo practice"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "The current ratio improved from 1.50 to 1.60 while the quick ratio collapsed from 1.13 to 0.70; the divergence shows the improvement came from an inventory build financed by added current liabilities, so headline liquidity strengthened while immediately available liquidity deteriorated",
+      "B": "Both liquidity measures improved in tandem across the year, confirming that larger current assets alongside moderate liability growth leave Flash better positioned to absorb short-term cash shocks",
+      "C": "The quick ratio held essentially steady near 1.13 through the fourth quarter, so the inventory movement is immaterial and the current-ratio gain stands as a reliable approval basis",
+      "D": "The deterioration traces to surging receivables, which roughly doubled inside the year and drained operating cash, warranting tighter collection covenants before any increase in the facility"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Approving on current ratio while quick ratio diverges",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Decomposing liquidity requires pairing the current ratio with the acid-test to locate where composition shifted. Q1: current ratio = 1,200,000 / 800,000 = 1.50; quick ratio = (400,000 + 500,000) / 800,000 = 1.13. Q4: current ratio = 1,600,000 / 1,000,000 = 1.60; quick ratio = (180,000 + 520,000) / 1,000,000 = 0.70. The 0.43-point quick-ratio collapse beside a rising current ratio isolates the $600,000 inventory build as the driver, compounded by cash falling $220,000 while receivables moved only $20,000 - slower-converting assets absorbed the new funding. Business interpretation: senior credit analyst Naomi Brooks should condition any line increase on inventory-turn evidence, because the cited improvement masks reduced immediate-payment capacity. The trap is approving on the current ratio alone when the pair diverges.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B reads both gauges upward together; recomputation shows the quick ratio fell 39% (1.13 to 0.70). The misconception averages asset composition into the headline, missing that the pair's divergence - improvement in one, collapse in the other - is itself the finding.",
+    "ExplanationWrongC": "Choice C freezes the quick ratio at its first-quarter value; applying fourth-quarter balances gives (180,000 + 520,000) / 1,000,000 = 0.70, a 0.43-point slide. The misconception carries stale subtotals forward instead of recalculating each period from raw components.",
+    "ExplanationWrongD": "Choice D pins the cause on receivables, which moved just $20,000 between quarters; the misconception skips the component bridge. Inventory absorbed $600,000 of the shift - thirty times the receivables movement - making the inventory account the sole plausible driver.",
+    "FormulaReference": "FA-02",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-259",
+    "Section": "A",
+    "Stem": "Senior credit analyst Naomi Brooks reviews Flash's year-end borrowing-base request and extracts these working-capital positions. Q1: cash $400,000, receivables $500,000, inventory $300,000, current liabilities $800,000. Q4: cash $180,000, receivables $520,000, inventory $900,000, current liabilities $1,000,000. In its request, Flash cites a stronger current ratio as evidence of improved short-term health. Naomi must determine what the ratio pair actually reveals before recommending approval. Which analysis is supported?",
+    "Topic": "A.259 liquidity-decomposition",
+    "UniqueConceptKey": "A-259-quick-ratio-divergence",
+    "VerifiedChecks": [
+      "Verification: Q1 CR 1,200,000/800,000 = 1.50; Q1 QR (400,000+500,000)/800,000 = 1.125 = 1.13; Q4 CR 1,600,000/1,000,000 = 1.60; Q4 QR (180,000+520,000)/1,000,000 = 0.70; inventory delta 900,000 - 300,000 = 600,000",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: Difficult/Analyze two-ratio decomposition over quarterly data table"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Income statement presentation conventions",
+      "GAAP operating income construction"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "36.00%",
+      "B": "64.00%",
+      "C": "18.00%",
+      "D": "50.00%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Quoting gross margin or cost ratio where operating margin is asked",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Operating margin equals operating income divided by net sales, capturing core profitability before financing and taxes. Gross profit = 5,000,000 - 3,200,000 = $1,800,000. Operating income = 1,800,000 - 900,000 = $900,000. Operating margin = 900,000 / 5,000,000 = 18.00%. Business interpretation: investor relations director Maya Patel can quote 18.00% as a clean peer-comparison figure free of capital-structure noise; a limitation worth footnoting is that the ratio says nothing about how operating assets were financed, and classification choices such as moving depreciation into cost of sales shift the split between gross and operating margins without changing operating income. The traps are quoting the gross margin, the cost-of-sales percentage, or scaling operating income against the wrong base.",
+    "ExplanationWrongA": "Choice A quotes the gross margin (1,800,000 / 5,000,000 = 36.00%); the misconception stops the income statement before operating expenses. SG&A of $900,000, depreciation included, belongs inside the operating measure being requested.",
+    "ExplanationWrongB": "Choice B reports the cost-of-goods-sold percentage (3,200,000 / 5,000,000 = 64.00%) rather than any margin; the misconception inverts a profitability question into a cost-share statistic and labels the remainder a margin.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D scales operating income by gross profit (900,000 / 1,800,000 = 50.00%); the misconception mismatches numerator and denominator bases. Margins divide income by net sales, the full revenue base that generated the profit, not by the intermediate subtotal.",
+    "FormulaReference": "FA-10",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-260",
+    "Section": "A",
+    "Stem": "Investor relations director Maya Patel is drafting Flash's annual-results commentary and must quote the operating margin for the just-closed fiscal year. The income statement shows net sales of $5,000,000, cost of goods sold of $3,200,000, and selling, general, and administrative expense (including depreciation) of $900,000, with no other operating items. What operating margin should Maya report?",
+    "Topic": "A.260 operating-margin-computation",
+    "UniqueConceptKey": "A-260-margin-waterfall-distinction",
+    "VerifiedChecks": [
+      "Verification: GP 5,000,000 - 3,200,000 = 1,800,000; OI 1,800,000 - 900,000 = 900,000; OM 900,000/5,000,000 = 18.00%",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: Moderate/Apply margin waterfall with limitation note per A.2"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Earnings quality framework (sustainable versus transitory earnings)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The climb from 12% to 17% demonstrates durable operating improvement and merits leading the prepared remarks without qualification",
+      "B": "One-time gains should be averaged into several future periods' ROE so the benefit of asset monetization is spread evenly across the reported trend line",
+      "C": "Because the sale generated cash proceeds, the gain represents a permanent step-up in earning assets and the 17% level becomes the new baseline for guidance",
+      "D": "The warehouse gain is nonrecurring; analysts will exclude it, and on a core basis ROE is little changed, so the script should attribute the headline to portfolio monetization rather than operating strength"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Booking one-time gains into recurring ROE trends",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Earnings-quality analysis separates sustainable recurring earnings from transitory items before drawing performance conclusions. A $1,400,000 pre-tax gain on selling a decade-held warehouse - disposed only because an unsolicited offer arrived - does not recur, and folding it mechanically into return on equity overstates the earning power of Flash's ongoing asset base. Excluding it leaves the underlying return close to the prior 12%, so honest framing attributes the headline jump to a discrete monetization event. Business interpretation: board member Robert Ellison protects credibility with the analyst community, who will normalize the figure themselves within minutes of the release. The traps are crediting operations for a portfolio event, artificially smoothing the windfall forward, or assuming cash proceeds instantly replicate the sold asset's returns.",
+    "ExplanationWrongA": "Choice A credits operations for a portfolio transaction; the misconception reads headline ROE without normalizing transitory items - precisely the first adjustment sophisticated investors run. Leading with the unqualified figure invites an awkward analyst correction on the call.",
+    "ExplanationWrongB": "Choice B averages a nonrecurring item forward across future periods; the misconception borrows later denominators to dilute a one-off instead of excluding it now. Normalization removes transitory gains from the current period; it does not amortize them into the trend.",
+    "ExplanationWrongC": "Choice C equates cash proceeds with permanent earning power; the misconception assumes redeployed sale proceeds instantly reproduce a 17% return. Until reinvested, idle cash depresses rather than extends elevated returns, and no reinvestment plan of equivalent yield is evidenced.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-261",
+    "Section": "A",
+    "Stem": "Ahead of Flash's investor call, board member Robert Ellison reviews draft talking points touting return on equity that climbed from 12% to 17% year over year. Internal schedules show the jump was driven principally by a $1,400,000 pre-tax gain on the sale of a distribution warehouse - a property Flash had owned for ten years and did not intend to sell until an unsolicited offer arrived. Robert asks which framing of the ROE trend is sound for the call script. Which interpretation should guide the prepared remarks?",
+    "Topic": "A.261 nonrecurring-gain-quality",
+    "UniqueConceptKey": "A-261-sustainable-earnings-screen",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: Easy/Understand conceptual earnings-quality screening"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Common-size and mix-variance decomposition convention"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "The reported blend is internally inconsistent; a two-point decline in the highest-margin line must pull the companywide margin below 21.00%, so the supplement requires correction before any analysis is attempted",
+      "B": "The blended gain came from Standard fixtures, whose absolute direct-margin dollars rose enough to outweigh Premium's per-dollar erosion during the year",
+      "C": "Revenue mix shifted toward Premium from 50% to 60% of sales; holding the FY2025 mix constant, the Premium rate cut alone would have dropped the blend to 20.00%, so the rate effect is about -1.00 point while the favorable mix effect contributes roughly +1.60 points, netting the observed +0.60",
+      "D": "Blended margins across periods with different product mixes are not comparable statistics, so the 21.00%-to-21.60% movement carries no information and no decomposition is possible"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Judging blended margin change without separating mix from rate",
+    "CorrectChoice": "C",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Mix-versus-rate decomposition separates what each driver contributed to the blended margin. FY2025 blend: (3,000,000 x 30% + 3,000,000 x 12%) / 6,000,000 = 1,260,000 / 6,000,000 = 21.00%. FY2026 blend: (3,600,000 x 28% + 2,400,000 x 12%) / 6,000,000 = (1,008,000 + 288,000) / 6,000,000 = 1,296,000 / 6,000,000 = 21.60%. Rate effect at constant FY2025 mix: 50% x 28% + 50% x 12% = 20.00%, a 1.00-point drag; migrating to the FY2026 mix lifts the blend the remaining 1.60 points to 21.60%. Business interpretation: portfolio manager Alicia Grant can show her associate that volume migrated toward the structurally richer line fast enough to overwhelm its per-dollar erosion - a mix story, not a pricing victory. The trap is judging blended ratios without decomposing composition from price.",
+    "ExplanationWrongA": "Choice A declares the outcome impossible and demands correction; the misconception treats the flagship's rate decline as destiny while ignoring that its revenue share grew from 50% to 60%, multiplying the weight the weakened 28% margin carries in the blend.",
+    "ExplanationWrongB": "Choice B credits the wrong line; Standard held a flat 12% margin on shrinking revenue, contributing $288,000 versus $360,000 the prior year. Its absolute margin dollars fell, ruling it out arithmetically as the source of the blended improvement.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D discards the comparison wholesale; common-size analysis exists precisely to compare blends across differing compositions. The misconception mistakes mix contamination for incomparability rather than recognizing a decomposable structure with quantifiable effects.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-262",
+    "Section": "A",
+    "Stem": "Portfolio manager Alicia Grant covers Flash and receives the company's product-line supplement. Premium fixtures: FY2025 revenue $3,000,000 at a 30% direct margin; FY2026 revenue $3,600,000 at a 28% direct margin. Standard fixtures: FY2025 revenue $3,000,000 at a 12% direct margin; FY2026 revenue $2,400,000 at a 12% direct margin. Companywide blended direct margin moved from 21.00% to 21.60% even though pricing pressure cut the flagship Premium line's margin by two points. Her associate insists the blend cannot rise while the highest-margin line weakens. Which decomposition resolves the puzzle?",
+    "Topic": "A.262 mix-rate-decomposition",
+    "UniqueConceptKey": "A-262-common-size-mix-effect",
+    "VerifiedChecks": [
+      "Verification: FY2025 blend (900,000 + 360,000)/6,000,000 = 21.00%; FY2026 blend (1,008,000 + 288,000)/6,000,000 = 21.60%; rate-only blend 0.5 x 28% + 0.5 x 12% = 20.00%; residual mix effect 21.60% - 20.00% = +1.60 pts; net +0.60 pts",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: VD/Analyze two-factor decomposition over product-line data table"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Higgins sustainable growth model"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "10.80%",
+      "B": "7.20%",
+      "C": "18.00%",
+      "D": "12.11%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Applying payout instead of retention in the SGR formula",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The Higgins sustainable growth model caps sales expansion at the pace retained earnings can fund without changing profitability, payout, or leverage: SGR = ROE x retention ratio. Retention = 1 - payout = 1 - 0.40 = 0.60. SGR = 0.18 x 0.60 = 10.80%. Business interpretation: treasurer Hana Suzuki can commit Flash's strategic plan to roughly 10.8% annual internal funding capacity; pushing beyond that ceiling forces one of the model's four levers - new debt, new equity, margin improvement, or a dividend cut - since retained earnings alone cannot carry faster growth. The traps are multiplying ROE by the payout ratio instead of retention (7.20%), quoting unadjusted ROE (18.00%), or invoking the beginning-equity variant 0.108 / (1 - 0.108) = 12.11% when steady-state ROE is already specified.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B multiplies ROE by the 40% payout (0.18 x 0.40 = 7.20%); the misconception rewards distribution rather than retention. Growth is financed by earnings kept inside the firm, not by earnings paid away to shareholders.",
+    "ExplanationWrongC": "Choice C presents ROE unadjusted (18.00%); the misconception assumes all earnings remain available for expansion. After the 40% dividend leaves the company, only 60% of the return compounds internally, cutting the fundable pace by nearly half.",
+    "ExplanationWrongD": "Choice D applies the beginning-of-period equity formulation, 0.108 / (1 - 0.108) = 12.11%; the mismatch is using that variant when the question already specifies ROE on the steady-state base the standard SGR expression assumes. Mixing formulations inflates the ceiling by 131 basis points.",
+    "FormulaReference": "FA-21",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-263",
+    "Section": "A",
+    "Stem": "Treasurer Hana Suzuki is setting the self-funding envelope for Flash's three-year strategic plan. Flash generates a return on equity of 18% and pays out 40% of earnings as dividends, and management intends to hold both policies constant along with current leverage. Using the sustainable growth rate relationship, what maximum annual sales growth can Flash finance internally?",
+    "Topic": "A.263 sgr-computation",
+    "UniqueConceptKey": "A-263-retention-multiplier",
+    "VerifiedChecks": [
+      "Verification: retention 1 - 0.40 = 0.60; SGR 0.18 x 0.60 = 10.80%; distractor check 0.18 x 0.40 = 7.20%; variant 0.108/(1-0.108) = 12.11%",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: Difficult/Apply formula selection plus variant discrimination",
+      "Slot conformance: CC=A, DS=3, Apply per P2-064 slot table"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Credit covenant analysis convention",
+      "Coverage ratio construction standards"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "4.00x",
+      "B": "3.54x",
+      "C": "3.97x",
+      "D": "4.48x"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Ignoring incremental interest or switching to EBITDA numerator",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Times Interest Earned divides EBIT by total interest expense, and covenant testing requires layering incremental interest into the denominator before comparing against the floor. Pro forma interest = 310,000 + (500,000 x 8%) = 310,000 + 40,000 = $350,000. Pro forma TIE = 1,240,000 / 350,000 = 3.54x, breaching the 4.00x floor by 0.46 turns. Depreciation of $150,000 is irrelevant here because TIE is an accrual-EBIT measure; adding it back constructs EBITDA coverage, a different covenant family. Business interpretation: division controller Owen Gallagher must flag the breach to the lender and negotiate a lower initial drawdown, an EBITDA-based test, or explicit headroom, since automation savings arrive later than the interest charge begins accruing. The traps are freezing the ratio at 4.00x or switching numerators mid-test.",
+    "ExplanationWrongA": "Choice A carries the current-year ratio forward untouched; the misconception omits the $40,000 incremental interest the covenant test explicitly requires once the term loan closes. The floor is breached, not met, on a pro forma basis.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C builds an EBITDA coverage figure ((1,240,000 + 150,000) / 350,000 = 3.97x) yet still fails to clear 4.00x; the misconception swaps the covenant numerator mid-calculation, converting a TIE test into an EBITDA test the agreement never authorized.",
+    "ExplanationWrongD": "Choice D pairs the EBITDA numerator with the old interest base ((1,240,000 + 150,000) / 310,000 = 4.48x); the misconception compounds two independent errors - upgrading the numerator and forgetting the new loan - to manufacture false compliance headroom.",
+    "FormulaReference": "FA-08",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-264",
+    "Section": "A",
+    "Stem": "Credit manager Victor Amadi monitors Flash's Times Interest Earned covenant, which requires a minimum of 4.00x. This year Flash produced EBIT of $1,240,000 against interest expense of $310,000 - exactly at threshold. Flash now proposes a $500,000 term loan priced at 8% to fund factory automation, adding $40,000 of annual interest once fully drawn; depreciation currently runs $150,000 per year. What pro forma Times Interest Earned should Victor report to the lender after giving full-year effect to the new loan?",
+    "Topic": "A.264 pro-forma-tie-covenant",
+    "UniqueConceptKey": "A-264-incremental-interest-proforma",
+    "VerifiedChecks": [
+      "Verification: pro forma interest 310,000 + 40,000 = 350,000; TIE 1,240,000/350,000 = 3.54; variants reproduced (1,390,000/350,000 = 3.97; 1,390,000/310,000 = 4.48)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: Difficult/Apply pro forma covenant layering with numerator-confusion distractors"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "DuPont analysis framework",
+      "Average-balance ratio convention"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "10.00%",
+      "B": "16.07%",
+      "C": "20.45%",
+      "D": "18.00%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using period-end or beginning equity instead of average",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Return on equity divides net income by average shareholders' equity, pairing a flow measure with the capital base that generated it across the period. Average equity = (2,200,000 + 2,800,000) / 2 = $2,500,000. ROE = 450,000 / 2,500,000 = 18.00%. For context, average assets = (4,000,000 + 5,000,000) / 2 = $4,500,000, so ROA = 10.00%, and the spread between the two returns reflects leverage amplification. Business interpretation: division controller Owen Gallagher reports 18.00% so benchmarking services and lenders compare Flash consistently - period-end denominators distort growing companies by crediting the full year's income against capital raised late in the year. The traps are substituting the ROA figure, year-end equity (16.07%), or opening equity (20.45%) for the average-balance convention the question specifies.",
+    "ExplanationWrongA": "Choice A answers the adjacent question, return on assets: 450,000 / 4,500,000 average assets = 10.00%. The misconception grabs the neighboring ratio from the review package instead of the equity-based measure requested.",
+    "ExplanationWrongB": "Choice B divides by year-end equity (450,000 / 2,800,000 = 16.07%); the misconception penalizes intra-year capital formation by weighting only the December balance, understating the return earned on capital actually employed during the year.",
+    "ExplanationWrongC": "Choice C divides by opening equity (450,000 / 2,200,000 = 20.45%); the misconception flatters results by ignoring the $600,000 of equity added during the year, crediting income to a capital base that was only partially in place.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "FA-13",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-A-265",
+    "Section": "A",
+    "Stem": "Division controller Owen Gallagher prepares Flash's annual review package for the lender meeting. Net income for the year was $450,000. Total assets were $4,000,000 at the start of the year and $5,000,000 at year end; shareholders' equity was $2,200,000 at the start and $2,800,000 at year end, and no dividends were declared. What return on equity should Owen report under the standard average-balance convention?",
+    "Topic": "A.265 roe-average-equity",
+    "UniqueConceptKey": "A-265-average-balance-denominator",
+    "VerifiedChecks": [
+      "Verification: avg equity (2,200,000 + 2,800,000)/2 = 2,500,000; ROE 450,000/2,500,000 = 18.00%; avg assets (4,000,000 + 5,000,000)/2 = 4,500,000; ROA 450,000/4,500,000 = 10.00%",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match",
+      "Difficulty justified: ME/Apply denominator-convention discrimination"
+    ],
+    "question_state": "Unprocessed"
+  }
+,
+  {
+    "Authorities": [
+      "Corporate finance theory (liquidity measurement hierarchy; cash ratio as most conservative solvency screen)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The cash ratio counts only cash and marketable securities against current liabilities, isolating what Flash could deploy within days, while the current ratio still counts inventory that may take months to convert.",
+      "B": "The cash ratio divides current liabilities by cash balances, so a falling value means Flash retired obligations faster than operating cash rebuilt the buffer.",
+      "C": "GAAP prohibits including customer receivables in liquidity measures until collected in cash, so the cash ratio strips them while the current ratio improperly keeps them.",
+      "D": "Loan covenants permit only the cash ratio, so the 1.85 current ratio is a disclosure artifact carrying no contractual significance for Flash's facility."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Treating the current ratio as equally protective of near-term default risk",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The liquidity hierarchy runs from the cash ratio (only cash and marketable securities) through the quick ratio to the current ratio (all current assets). Flash's cash ratio of 0.18 means cash and equivalents cover just 18 cents of each dollar of current obligations, while the 1.85 current ratio depends on converting inventory that may sit for months. For covenant monitoring, the most conservative measure best approximates what Flash could mobilize within days if trade terms tightened. Business interpretation: Ingrid Solberg should treat the wide spread between 0.18 and 1.85 as a warning that headline liquidity overstates immediately deployable resources. Common trap: assuming a healthy current ratio guarantees payment capacity under stress.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B inverts the construction: the cash ratio places cash and marketable securities in the numerator over current liabilities, not liabilities over cash, so a falling reading signals shrinking liquid coverage of obligations rather than faster debt repayment.",
+    "ExplanationWrongC": "Choice C invents a GAAP prohibition; receivables are entirely permissible inside the current ratio and the quick ratio. They are excluded from the cash ratio only because collection timing is uncertain, not because accounting rules forbid counting them.",
+    "ExplanationWrongD": "Choice D asserts contractual exclusivity that standard loan agreements do not contain; covenants routinely test current ratio, quick ratio, or leverage measures. The cash ratio matters here because of its conservatism, not because the current ratio lacks standing.",
+    "FormulaReference": "FA-03 Cash Ratio",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-266",
+    "Section": "A",
+    "Stem": "Flash's syndicate requires a quarterly compliance certificate, and credit manager Ingrid Solberg must decide which liquidity measure best protects the bank's near-term position. Flash reports a cash ratio of 0.18 against a current ratio of 1.85. Why does Ingrid weight the cash ratio more heavily when assessing Flash's immediate default exposure?",
+    "Topic": "A.266 cash-ratio-default-proximity",
+    "UniqueConceptKey": "A-266-cash-ratio-default-proximity",
+    "VerifiedChecks": [
+      "Definition check: cash ratio = (cash + marketable securities) / current liabilities; matches FA-03",
+      "Logic pass: conservatism hierarchy verified against FA-01/FA-02/FA-03 definitions",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (receivables activity metrics; DSO computed on credit sales over average balances)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "29.2 days",
+      "B": "25.4 days",
+      "C": "21.8 days",
+      "D": "25.1 days"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using total sales or ending receivables instead of credit sales and average balances",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Days Sales Outstanding links receivables to the credit sales that created them. Average receivables = ($520,000 + $700,000) / 2 = $610,000. Daily credit sales = $8,760,000 / 365 = $24,000. DSO = $610,000 / $24,000 = 25.4 days. Under the matching principle the denominator must be credit sales only, and the numerator should reflect the average balance carried during the period rather than a single snapshot. Business interpretation: Devon Marsh can report that Flash collects in roughly 25 days against the terms it grants, keeping receivables funding needs predictable for the treasury plan. Common trap: mixing cash sales into the denominator or snapshotting the year-end balance, both of which distort the collection clock.",
+    "ExplanationWrongA": "Choice A anchors on the $700,000 ending balance alone, overstating DSO at 29.2 days; the snapshot ignores balances built and collected earlier in the quarter, which the two-point average of $610,000 correctly absorbs into the metric.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C divides by total sales of $10,200,000 including $1,440,000 of cash sales; those sales never create receivables, so the inflated denominator understates DSO at 21.8 days. Only credit sales drive the receivables balance the metric measures.",
+    "ExplanationWrongD": "Choice D applies a 360-day convention to a fact pattern stated on a 365-day basis, trimming DSO to 25.1 days; switching the day-count without instruction changes the metric's scale rather than Flash's actual collection behavior.",
+    "FormulaReference": "FA-05 Days Sales Outstanding",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-267",
+    "Section": "A",
+    "Stem": "Closing the second quarter, controller Devon Marsh drafts receivables commentary for Flash. Flash posted credit sales of $8,760,000 (total sales $10,200,000, including $1,440,000 of cash sales). Receivables were $520,000 at the start of the quarter and $700,000 at the end. On a 365-day basis, what Days Sales Outstanding should Devon report?",
+    "Topic": "A.267 dso-average-credit-sales",
+    "UniqueConceptKey": "A-267-credit-sales-denominator",
+    "VerifiedChecks": [
+      "Recomputed: 610000/8760000 x 365 = 25.4 days",
+      "Second pass: daily credit sales 8760000/365 = 24000; 610000/24000 = 25.4 (agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "US GAAP EPS presentation (ASC 260 basic EPS weighted-average share computation)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$3.25",
+      "B": "$3.90",
+      "C": "$3.39",
+      "D": "$3.44"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Weighting shares at year-end count or ignoring the mid-year issuance date",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Basic EPS divides income available to common shareholders by the weighted-average shares outstanding during the period. The April 1 issuance of 120,000 shares was outstanding nine months: weighted shares = (600,000 x 3/12) + (720,000 x 9/12) = 150,000 + 540,000 = 690,000. EPS = $2,340,000 / 690,000 = $3.39. Time-weighting under ASC 260 matches earnings to the capital actually employed to generate them. Business interpretation: Sofia Grimaldi should carry $3.39 as the trailing base for multiples while recognizing the enlarged 720,000-share count going forward. Common trap: dividing by the year-end share count, which quietly credits the full year with capital raised only in April.",
+    "ExplanationWrongA": "Choice A divides by the 720,000 year-end share count for $3.25; it treats shares issued April 1 as outstanding from January 1, diluting EPS below the time-weighted figure ASC 260 requires for the period.",
+    "ExplanationWrongB": "Choice B divides by the original 600,000 shares for $3.90, ignoring the offering entirely and crediting the year's earnings to capital Flash did not actually possess during three quarters of the year.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D weights the two share blocks at four and eight months (200,000 + 480,000 = 680,000), effectively dating the offering to May 1; the correct split from the April 1 closing is three and nine months, giving 690,000 weighted shares and $3.39.",
+    "FormulaReference": "FA-15 Earnings per Share",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-268",
+    "Section": "A",
+    "Stem": "Equity research associate Sofia Grimaldi updates her Flash model after the April 1 closing of an equity offering that added 120,000 shares to the 600,000 shares outstanding since January 1. Income available to common shareholders totaled $2,340,000 for the year. What basic EPS should Sofia carry for Flash?",
+    "Topic": "A.268 eps-weighted-shares",
+    "UniqueConceptKey": "A-268-april-offering-weighting",
+    "VerifiedChecks": [
+      "Recomputed: 2340000/((600000 x 3 + 720000 x 9)/12) = 2340000/690000 = 3.39",
+      "Second pass: 150000 + 540000 = 690000; 2340000/690000 = 3.391 rounds to 3.39 (agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (liquidity ratio decomposition; quick versus current asset mix diagnostics)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Flash shifted the entire movement inside current assets: quick assets fell $1,050,000 while inventory rose the offsetting $1,050,000 against unchanged current liabilities, indicating an inventory build rather than any financing change.",
+      "B": "Flash reduced its reliance on short-term financing, and the quick-ratio decline merely reflects scheduled repayment of current liabilities during the year.",
+      "C": "Because the current ratio held at 2.10 in both years, Flash's working-capital risk is essentially unchanged and the quick-ratio movement is noise.",
+      "D": "The quick-ratio slide evidences deteriorating receivables collections, since receivables dominate the quick-asset base in both years."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Reading a stable current ratio as proof working-capital quality is unchanged",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Decomposing the two ratios separates asset-mix effects from financing effects. Current liabilities held at $3,000,000 and total current assets at $6,300,000, so the 2.10 current ratio is unchanged by construction. Inside current assets, quick assets fell from $4,200,000 (quick ratio 1.40) to $3,150,000 (quick ratio 1.05), a $1,050,000 drop exactly mirrored by inventory rising from $2,100,000 to $3,150,000. The pattern therefore identifies an inventory build absorbed within an unchanged working-capital envelope. Business interpretation: Marcus Oyelaran should probe purchasing commitments and demand signals behind the 50 percent inventory increase rather than flag liquidity generically. Common trap: citing the stable current ratio as proof that working-capital risk is unchanged.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B asserts a liability reduction; the data show current liabilities flat at $3,000,000 in both years, so the quick-ratio slide originates wholly inside the current-asset mix, not in the financing side of the ratio.",
+    "ExplanationWrongC": "Choice C treats the unchanged 2.10 current ratio as reassurance; that ratio aggregates inventory with cash-like assets and is structurally blind to the substitution that pushed quick assets down $1,050,000 beneath the same total.",
+    "ExplanationWrongD": "Choice D pins the cause on receivables collections, yet the aggregate quick-asset decline cannot be attributed to receivables alone; cash and receivables together comprise the movement from $4,200,000 to $3,150,000 and no split between them is provided.",
+    "FormulaReference": "FA-02 Quick Ratio",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-269",
+    "Section": "A",
+    "Stem": "Reviewing year-end working papers, internal auditor Marcus Oyelaran finds Flash's current ratio steady at 2.10 in both years on current assets of $6,300,000 and current liabilities of $3,000,000, yet quick assets fell from $4,200,000 (quick ratio 1.40) to $3,150,000 (quick ratio 1.05) as inventory rose from $2,100,000 to $3,150,000. Which conclusion is best supported?",
+    "Topic": "A.269 quick-current-divergence",
+    "UniqueConceptKey": "A-269-inventory-build-diagnosis",
+    "VerifiedChecks": [
+      "Delta check: quick assets 4200000 - 3150000 = -1050000 mirrors inventory 3150000 - 2100000 = +1050000",
+      "Ratio check: 4200000/3000000 = 1.40 and 3150000/3000000 = 1.05 reproduce stated quick ratios; 6300000/3000000 = 2.10",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (quick ratio mechanics; covenant compliance and working-capital levers)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Pay down $800,000 of accounts payable immediately using cash on hand, reducing both current liabilities and cash balances.",
+      "B": "Draw $1,200,000 on the 364-day revolving credit facility and hold the proceeds in cash until the certificate date.",
+      "C": "Offer 2/10 net 30 discounts on selected invoices to accelerate $600,000 of collections from customers.",
+      "D": "Convert $900,000 of slow-moving inventory into $900,000 of cash through the clearance channel at carrying value."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Assuming any cash increase lifts a sub-1.0 quick ratio regardless of offsets",
+    "CorrectChoice": "D",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "With quick assets of $5,600,000 against $6,000,000 of current liabilities (quick ratio 0.93), the binding constraint is convertible quick coverage, so the chosen action must raise the numerator without enlarging current liabilities. Selling $900,000 of slow-moving inventory at carrying value converts a non-quick asset into cash: quick assets become $6,500,000 and the quick ratio = $6,500,000 / $6,000,000 = 1.08, clearing the 1.00 floor with no new debt, no interest, and no discount leakage. Business interpretation: Omar Haddad should certify compliance on the clearance-sale route because it repairs the covenant durably rather than dressing the ratio for one quarter. Common trap: assuming any increase in cash lifts a sub-1.0 quick ratio; entries that add an equal current liability pull the ratio toward, not past, 1.00.",
+    "ExplanationWrongA": "Choice A pays down $800,000 of payables with cash, moving the quick ratio to $4,800,000 / $5,200,000 = 0.92; when the ratio sits below 1.00, stripping equal amounts from numerator and denominator drives it further down rather than up.",
+    "ExplanationWrongB": "Choice B draws $1,200,000 on the revolver, lifting the quick ratio only to $6,800,000 / $7,200,000 = 0.94 because the proceeds create an identical current liability; the covenant still fails while committed borrowing costs begin accruing.",
+    "ExplanationWrongC": "Choice C accelerates collections through discounts, swapping receivables for cash; both are quick assets, so the quick ratio stays pinned at $5,600,000 / $6,000,000 = 0.93 while the discount forfeits selling margin for zero covenant benefit.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "FA-02 Quick Ratio",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-270",
+    "Section": "A",
+    "Stem": "Flash's amended credit agreement certifies a quick ratio of at least 1.00 within thirty days. Treasurer Omar Haddad faces current assets of $9,600,000 (cash $2,400,000, receivables $3,200,000, inventory $4,000,000) against $6,000,000 of current liabilities, a quick ratio of 0.93. Which single action should Omar take for the compliance certificate?",
+    "Topic": "A.270 covenant-quick-ratio-action",
+    "UniqueConceptKey": "A-270-clearance-sale-fix",
+    "VerifiedChecks": [
+      "Recomputed: base quick ratio 5600000/6000000 = 0.93",
+      "Action A: (5600000 - 800000)/(6000000 - 800000) = 4800000/5200000 = 0.92 (worsens)",
+      "Action B: (5600000 + 1200000)/(6000000 + 1200000) = 6800000/7200000 = 0.94 (still fails)",
+      "Action C: AR-to-cash swap leaves 5600000/6000000 = 0.93 unchanged",
+      "Action D: 6500000/6000000 = 1.08 clears the 1.00 floor",
+      "Second pass confirms all four quotients independently",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "US GAAP inventory cost flows (ASC 330 LIFO; LIFO reserve disclosure and FIFO-equivalent conversion)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Accept Keystone's reported $3,900,000 gross profit as-is, since both issuers report under US GAAP and costing differences wash out over successive periods.",
+      "B": "Restate Keystone's gross profit upward by the $150,000 increase in the LIFO reserve to a FIFO-equivalent $4,050,000, because only the current-period change in the reserve flows through that year's COGS.",
+      "C": "Restate Keystone's gross profit upward by the full $450,000 ending LIFO reserve to $4,350,000, since the entire reserve represents cumulative benefits of FIFO costing.",
+      "D": "Restate Keystone's gross profit downward by $450,000 to $3,450,000, penalizing the tax-driven understatement of inventory carrying value that LIFO produces."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Adding the entire cumulative LIFO reserve to one year's gross profit",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Cross-company margin comparability requires aligning inventory cost-flow assumptions. Under rising prices, Keystone's LIFO COGS embeds current costs; converting to a FIFO-equivalent basis removes only the year-over-year change in the reserve: FIFO COGS = $8,200,000 - ($450,000 - $300,000) = $8,050,000. Normalized gross profit = $12,100,000 - $8,050,000 = $4,050,000, i.e., reported $3,900,000 plus the $150,000 current-year LIFO effect. The cumulative $450,000 reserve spans many prior periods and never enters one year's earnings. Business interpretation: Priya Raghavan should present the $4,050,000 figure beside Flash's FIFO margins so the fairness opinion compares like methodologies rather than penalizing or crediting an accounting election. Common trap: dumping the entire cumulative reserve into a single year's profit.",
+    "ExplanationWrongA": "Choice A accepts the reported margin because both issuers follow US GAAP; GAAP permits either cost flow, but permitting both is exactly why unadjusted gross profits diverge structurally when prices trend, so as-reported figures embed a costing artifact Flash does not carry.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C adds the full $450,000 ending reserve, inflating normalized gross profit to $4,350,000; the reserve accumulated across many years of price increases, so only its $150,000 current-period increase belongs in this year's COGS bridge.",
+    "ExplanationWrongD": "Choice D subtracts $450,000 to reach $3,450,000, erring in both direction and magnitude; moving LIFO toward FIFO under rising prices raises gross profit because FIFO carries older, cheaper cost layers into COGS than LIFO charges.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-271",
+    "Section": "A",
+    "Stem": "In diligence on acquisition target Keystone Components, M&A director Priya Raghavan must normalize margins against Flash's FIFO reporting. Keystone (LIFO) reports sales of $12,100,000, COGS of $8,200,000, and gross profit of $3,900,000, with a LIFO reserve of $300,000 at the start of the year and $450,000 at the end in a rising-price environment. Which normalization should Priya adopt for the comparability schedule?",
+    "Topic": "A.271 lifo-reserve-normalization",
+    "UniqueConceptKey": "A-271-fifo-equivalent-bridge",
+    "VerifiedChecks": [
+      "Recomputed: reserve change 450000 - 300000 = 150000",
+      "FIFO COGS: 8200000 - 150000 = 8050000",
+      "Normalized GP: 12100000 - 8050000 = 4050000",
+      "Second pass: 3900000 + 150000 = 4050000 (agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "Management accounting practice (vertical common-size analysis; contemporaneous revenue base convention)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "22.80%, an increase of 3.30 percentage points versus the prior-year column.",
+      "B": "16.92%, a decrease demonstrating that scale economies compressed the expense base.",
+      "C": "19.00%, a decrease of 0.50 percentage points from the prior-year 19.50%.",
+      "D": "19.50%, unchanged from the prior year on a comparable basis."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Quoting a horizontal growth rate as a vertical common-size percentage",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Common-size analysis restates each income-statement line as a percentage of the same period's revenue, isolating intensity from scale. Current-year SG&A intensity = $4,560,000 / $24,000,000 = 19.00%, versus prior-year $3,900,000 / $20,000,000 = 19.50%, a decrease of 0.50 percentage points. The vertical base must be contemporaneous revenue for each year; comparing this year's dollars against last year's revenue answers a different question entirely. Business interpretation: Dana Whitfield can show the board that SG&A grew 16.92% while revenue grew 20.00%, delivering positive operating leverage worth half a point of margin. Common trap: quoting the 16.92% growth rate, a horizontal measure, as though it were the common-size percentage.",
+    "ExplanationWrongA": "Choice A divides current SG&A of $4,560,000 by prior-year revenue of $20,000,000 to manufacture 22.80%; mixing periods breaks the vertical base and fabricates an intensity increase that never occurred in either column.",
+    "ExplanationWrongB": "Choice B reports 16.92%, which is the year-over-year growth rate in SG&A dollars ($4,560,000 / $3,900,000 - 1), not a share of revenue; horizontal trend rates describe expansion speed, not expense intensity.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D carries forward the prior-year 19.50% unchanged, failing to recompute on current revenue and masking exactly the favorable 0.50-point improvement the common-size schedule exists to reveal to the board.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-272",
+    "Section": "A",
+    "Stem": "Preparing the board package, controller Dana Whitfield builds a common-size income statement for Flash. Current-year revenue is $24,000,000 with SG&A of $4,560,000; prior-year revenue was $20,000,000 with SG&A of $3,900,000. What SG&A percentage should the current-year column show, and what movement does it reveal?",
+    "Topic": "A.272 commonsize-sga-intensity",
+    "UniqueConceptKey": "A-272-vertical-base-discipline",
+    "VerifiedChecks": [
+      "Recomputed: 4560000/24000000 = 0.1900 = 19.00%",
+      "Prior year: 3900000/20000000 = 0.1950; movement = -0.50 pp",
+      "Growth cross-check: 4560000/3900000 - 1 = 0.1692 = 16.92%; 4560000/20000000 = 22.80%",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (financial leverage and trading on the equity; Higgins framework)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Issuing additional common shares so ownership of Flash trades on public exchanges at improving valuation multiples over time.",
+      "B": "Employing fixed-cost debt financing so shareholders capture the spread whenever Flash earns more on invested funds than the after-tax cost of that debt, amplifying both expected ROE and its variability.",
+      "C": "Selling minority stakes in Flash's subsidiaries to monetize hidden asset value while retaining day-to-day operational control of each business.",
+      "D": "Timing share repurchases around option-grant dates so reported earnings per share optics improve for incentive-plan measurement."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Hearing equity and thinking exchange listings or buyback timing, not fixed-cost leverage",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Trading on the equity denotes using fixed-cost capital, principally debt, to lever shareholder returns: whenever the return earned on invested funds exceeds the after-tax cost of the fixed charges, residual return on equity is amplified; below that threshold, losses amplify symmetrically. The mechanism is measured through debt-to-equity and coverage relationships, not through share-market activity of any kind. Business interpretation: Eleanor Vance should connect the term to Flash's capital-structure debate, where incremental borrowing raises both expected ROE and earnings volatility together, which is precisely the trade-off the treasurer was describing. Common trap: hearing the word equity and thinking of exchange trading, spin-offs, or buyback timing rather than the fixed-charge leverage mechanic.",
+    "ExplanationWrongA": "Choice A recasts the phrase as listing or exchanging shares; the idiom concerns capital structure and the spread between earned returns and fixed financing costs, not where or how Flash's stock trades on any exchange.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C describes partial sell-downs of subsidiaries, a portfolio action affecting consolidation scope; it leaves Flash's own fixed-charge financing untouched and has no connection to leverage trading on the equity.",
+    "ExplanationWrongD": "Choice D frames repurchase timing around option grants, an EPS-optics tactic; buybacks alter share count, but the term targets the debt-fixed-cost spread that swings returns earned on common shareholders' capital.",
+    "FormulaReference": "FA-07 Debt-to-Equity Ratio",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-273",
+    "Section": "A",
+    "Stem": "At a governance orientation, board member Eleanor Vance asks which statement correctly captures the term 'trading on the equity' as Flash's treasurer applied it when arguing for the new term-loan structure.",
+    "Topic": "A.273 trading-on-the-equity",
+    "UniqueConceptKey": "A-273-fixed-charge-leverage-meaning",
+    "VerifiedChecks": [
+      "Definition check: leverage amplifies ROE when return on invested funds > after-tax cost of debt",
+      "Concept verified against FA-07 leverage framing; no arithmetic required",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (times interest earned; sequential driver attribution in coverage analysis)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Holding interest at the prior $1,050,000, the EBIT decline alone would have taken coverage to 3.47x (a 0.53x operating drag), and the remaining 0.67x came from the interest step-up to $1,300,000, so costlier financing drove the larger share of the fall.",
+      "B": "Operations dominated the decline because EBIT fell $560,000 while interest rose only $250,000, a difference of more than double in raw dollar impact.",
+      "C": "The decline is entirely a financing event; once the interest charge is fixed by contract, operating performance has no bearing on coverage outcomes for the year.",
+      "D": "Using average interest of $1,175,000 across the two years gives the economically meaningful reading of 3.10x, showing only modest erosion rather than a 1.20x collapse."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Ranking coverage drivers by dollar changes instead of sequential ratio effects",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Times interest earned = EBIT / interest. Sequential decomposition isolates each driver: start from last year's 4.00x ($4,200,000 / $1,050,000). Holding interest at $1,050,000, the EBIT slide to $3,640,000 takes coverage to $3,640,000 / $1,050,000 = 3.47x, an operating drag of 0.53x. Applying the new interest charge of $1,300,000 completes the fall to $3,640,000 / $1,300,000 = 2.80x, a financing drag of 0.67x. Costlier debt, not operations, supplied the majority (0.67 of the total 1.20x) of the deterioration. Business interpretation: Tomas Lindqvist should anchor repricing negotiations on the interest step-up, since restoring EBIT alone recovers less than half of the lost covenant headroom. Common trap: ranking causes by raw dollar changes instead of their ratio-level sensitivity.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B ranks causes by absolute dollars, EBIT down $560,000 against interest up $250,000; ratio impact scales each change by its base, and the smaller interest increase sits on a far smaller divisor, magnifying its coverage effect to 0.67x versus 0.53x.",
+    "ExplanationWrongC": "Choice C dismisses operations entirely; the decomposition attributes 0.53x of the 1.20x fall to the EBIT decline, a material headroom loss that no financing-only narrative should erase from the repricing discussion.",
+    "ExplanationWrongD": "Choice D averages the two years' interest to $1,175,000 and reports 3.10x; blending periods manufactures a hybrid neither year produced and obscures the year-end 2.80x coverage the covenant actually tests.",
+    "FormulaReference": "FA-08 Times Interest Earned",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-274",
+    "Section": "A",
+    "Stem": "Ahead of repricing talks on Flash's revolver, treasury analyst Tomas Lindqvist decomposes the coverage decline. Last year EBIT was $4,200,000 against interest of $1,050,000 (coverage 4.00x); this year EBIT is $3,640,000 against interest of $1,300,000 (coverage 2.80x). Which attribution of the 1.20x decline is analytically sound?",
+    "Topic": "A.274 tie-driver-attribution",
+    "UniqueConceptKey": "A-274-coverage-step-decomposition",
+    "VerifiedChecks": [
+      "Recomputed: 4200000/1050000 = 4.00; 3640000/1050000 = 3.47; 3640000/1300000 = 2.80",
+      "Drag split: operating 4.00 - 3.47 = 0.53; financing 3.47 - 2.80 = 0.67; total = 1.20 (agrees)",
+      "Cross-check: average-interest variant 3640000/1175000 = 3.10 rejected as methodology error",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (activity ratios; total asset turnover on average total assets)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "1.44 times",
+      "B": "1.70 times",
+      "C": "1.56 times",
+      "D": "1.30 times"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Dividing by year-end or beginning assets instead of the two-point average",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Total asset turnover measures revenue generated per dollar of assets employed: TAT = revenue / average total assets. Average total assets = ($18,400,000 + $21,600,000) / 2 = $20,000,000. TAT = $31,200,000 / $20,000,000 = 1.56 times. The two-point average matches the income-statement flow to the balance-sheet capacity actually available across the period, the same convention used for ROA and inventory turns. Business interpretation: Grace Okafor can present 1.56x as Flash's baseline efficiency and track whether the asset additions implied by the growing balance translate proportionally into sales next period. Common trap: dividing by the year-end balance, which penalizes late-year capacity purchased too recently to produce any revenue yet.",
+    "ExplanationWrongA": "Choice A uses ending assets of $21,600,000 for 1.44 times; the year-end base double-counts capacity added near the close and understates the turnover earned on assets actually available through the year.",
+    "ExplanationWrongB": "Choice B uses beginning assets of $18,400,000 for 1.70 times, crediting the full year's revenue to a base that had already grown roughly 17 percent before mid-year expansions landed on the books.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D divides by average net fixed assets of $24,000,000 for 1.30 times; fixed assets exclude working-capital balances entirely, and the metric specified is total asset turnover on the full asset base.",
+    "FormulaReference": "FA-24 Total Asset Turnover",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-275",
+    "Section": "A",
+    "Stem": "Assembling the lender deck, assistant treasurer Grace Okafor presents Flash's asset efficiency. Revenue for the year was $31,200,000; total assets were $18,400,000 at the start and $21,600,000 at the end; average net fixed assets were $24,000,000. What total asset turnover should Grace present?",
+    "Topic": "A.275 tat-average-assets",
+    "UniqueConceptKey": "A-275-two-point-asset-base",
+    "VerifiedChecks": [
+      "Recomputed: (18400000 + 21600000)/2 = 20000000; 31200000/20000000 = 1.56",
+      "Second pass: 1.56 x 20000000 = 31200000 reproduces revenue (agrees)",
+      "Distractor checks: 31200000/21600000 = 1.44; 31200000/18400000 = 1.70; 31200000/24000000 = 1.30",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "US GAAP intangible asset accounting (ASC 350 internally developed intangibles expensed as incurred)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The gap reflects a near-term takeover premium that the market is pricing in with certainty ahead of an expected bidding process.",
+      "B": "The gap proves Flash's recorded assets are carried above fair value and will require impairment charges to close the distance to market.",
+      "C": "Book value and market price converge once dividends are reinvested over time, so the persistent gap is timing noise rather than information.",
+      "D": "Book value omits internally generated intangibles such as brand equity, engineering know-how, and customer relationships, which GAAP expenses as incurred, so the market price capitalizes earning power the balance sheet does not record."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Reading a high market-to-book multiple as evidence of overstated assets",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Market-to-book gaps persist when economically valuable resources never enter the balance sheet. GAAP expenses internally developed brands, accumulated engineering know-how, trained teams, and customer relationships as incurred, so Flash's book value of $12.40 per share captures mainly tangible, purchased, or acquired assets, while the $58.00 price capitalizes the future earnings those unrecorded intangibles generate. The multiple therefore usually signals unrecorded value creation rather than inflated carrying values. Business interpretation: Rajan Mehta can explain to shareholders that book value is a conservative floor assembled under historical-cost rules, not a ceiling on what the business is worth. Common trap: reading a high market-to-book ratio as evidence of aggressive asset values awaiting impairment.",
+    "ExplanationWrongA": "Choice A hard-codes a takeover outcome; premiums may explain part of any share price, but the durable structural gap between $12.40 book and $58.00 market requires no deal to justify, and anticipated deals are never certain events.",
+    "ExplanationWrongB": "Choice B inverts the accounting logic; overstatement would imply assets carried above recoverable amounts, yet the standard explanation runs the other way, through omission of unrecorded intangible value rather than inflation of recorded balances.",
+    "ExplanationWrongC": "Choice C invents a dividend-reinvestment convergence that no valuation principle supports; reinvesting dividends compounds investor wealth but never forces market price onto historical-cost book value at any horizon.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "FA-18 Book Value per Share",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-276",
+    "Section": "A",
+    "Stem": "At the annual meeting, board member Rajan Mehta observes that Flash's book value per share stands at $12.40 while the shares trade at $58.00 and asks for the most reasonable reading of the persistent gap. Which explanation should the board adopt?",
+    "Topic": "A.276 bvps-unrecorded-intangibles",
+    "UniqueConceptKey": "A-276-gap-explains-omission",
+    "VerifiedChecks": [
+      "Valuation logic check: BVPS $12.40 vs price $58.00 implies market/book = 58/12.4 = 4.68 attributable to unrecorded intangibles",
+      "Concept verified against ASC 350 internal-intangible expensing; no further arithmetic required",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "Management accounting practice (multi-line common-size balance sheet interpretation)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Flash deleveraged during the period, evidenced by the long-term debt share easing six points from 28% to 22% of total assets.",
+      "B": "Flash's equity cushion strengthened relative to creditor claims, positioning the company for expanded borrowing capacity ahead.",
+      "C": "Asset mix shifted toward inventory while funding migrated to short-term sources, since payables plus short-term borrowings added twelve combined points even as long-term debt and equity shares contracted, raising rollover risk if inventory slows.",
+      "D": "Cash generation strengthened operationally, leaving Flash better placed than last year to absorb demand or funding shocks."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Judging leverage from the long-term debt line alone in a common-size series",
+    "CorrectChoice": "C",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Reading the common-size columns jointly reveals a coordinated shift. Assets: inventory climbed from 22% to 31% of total assets while cash thinned from 8% to 3%, so the balance sheet bulked up in its least liquid current asset. Financing mirrored the move: accounts payable rose from 12% to 17% and short-term borrowings from 5% to 12%, together supplying twelve points of new weight, while long-term debt fell to 22% and equity narrowed to 46%. Flash has been funding an inventory accumulation with the shortest-maturity liabilities available. Business interpretation: Marisol Vega should brief the audit committee on rollover risk, because the strategy survives only while inventory converts on schedule and a demand stall would strand short-term claims against slow stock. Common trap: declaring deleveraging from the falling long-term-debt line alone.",
+    "ExplanationWrongA": "Choice A celebrates the six-point drop in long-term debt as deleveraging; total leverage actually rose once the eleven combined points added to payables and short-term borrowings are counted, and the liability profile shortened in maturity besides.",
+    "ExplanationWrongB": "Choice B claims the equity cushion strengthened; equity's common-size weight fell from 55% to 46%, the opposite direction, absorbed by the expansion in payables and short-term borrowings that choice C identifies.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D cites operational cash strength, yet cash fell from 8% to 3% of total assets; that decline alongside swelling inventory is itself part of the warning pattern, not evidence of a stronger shock-absorber.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-277",
+    "Section": "A",
+    "Stem": "Briefing the audit committee, CFO Marisol Vega walks through Flash's common-size balance sheets. From last year to this year: cash slipped from 8% to 3% of total assets; inventory swelled from 22% to 31%; accounts payable climbed from 12% to 17%; short-term borrowings jumped from 5% to 12%; long-term debt eased from 28% to 22%; and total equity narrowed from 55% to 46%. Which conclusion is best supported?",
+    "Topic": "A.277 commonsize-liability-shift",
+    "UniqueConceptKey": "A-277-short-term-migration-read",
+    "VerifiedChecks": [
+      "Composition check: payables +5 pp plus short-term borrowings +7 pp = +12 pp versus LT debt -6 pp and equity -9 pp",
+      "Asset-side check: inventory +9 pp against cash -5 pp confirms mix shift toward less liquid current assets",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (dividend yield versus payout ratio; spot versus forward yield distinctions)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "3.00%",
+      "B": "3.45%",
+      "C": "3.30%",
+      "D": "50.00%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Substituting payout ratio, cost basis, or forward dividends into current yield",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Dividend yield relates the cash distribution to the price an investor pays in the market today: yield = annual dividends per share / current market price = $1.38 / $46.00 = 3.00%. The measure is keyed to prevailing price; the payout ratio (dividends / EPS = $1.38 / $2.76 = 50.00%) belongs to distribution-policy analysis, and a buyer's original cost fixes personal return history rather than the security's quoted yield. Business interpretation: Felix Nowak should quote 3.00% to income clients evaluating Flash at today's quote and disclose separately that management's signaled $1.52 implies a forward figure of $1.52 / $46.00 = 3.30%. Common trap: substituting payout ratio, cost basis, or next-year dividends into the spot-yield formula.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B computes $1.38 / $40.00 = 3.45% off the client's purchase price; cost basis shapes that holder's personal yield-on-cost but not Flash's current quoted yield at the $46.00 market price.",
+    "ExplanationWrongC": "Choice C projects $1.52 / $46.00 = 3.30% using next year's signaled dividend; a forward yield is a distinct disclosure, and presenting it as today's yield overstates current income by thirty basis points.",
+    "ExplanationWrongD": "Choice D reports 50.00%, which is the payout ratio ($1.38 / $2.76); it measures the share of earnings distributed and says nothing about the return a purchaser earns per dollar of stock price.",
+    "FormulaReference": "FA-17 Dividend Yield",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-278",
+    "Section": "A",
+    "Stem": "Refreshing coverage for income-focused clients, equity research associate Felix Nowak notes Flash pays an annual dividend of $1.38 per share on EPS of $2.76, with the stock quoted at $46.00; management has signaled next year's dividend of $1.52. One client bought at $40.00. What current dividend yield should Felix quote?",
+    "Topic": "A.278 dividend-yield-spot",
+    "UniqueConceptKey": "A-278-spot-price-yield-keying",
+    "VerifiedChecks": [
+      "Recomputed: 1.38/46 = 0.0300 = 3.00%",
+      "Distractor checks: 1.38/40 = 3.45%; 1.52/46 = 3.30%; 1.38/2.76 = 50.00%",
+      "Second pass: 3.00% x 46 = 1.38 reproduces the declared dividend (agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (return on common equity; preferred deduction and average equity conventions)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "24.13%",
+      "B": "22.50%",
+      "C": "20.22%",
+      "D": "12.00%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Skipping the preferred-dividend deduction or anchoring on year-end equity",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Return on equity measures profit generated on common shareholders' capital: ROE = (net income - preferred dividends) / average common equity = ($3,860,000 - $260,000) / (($14,200,000 + $17,800,000) / 2) = $3,600,000 / $16,000,000 = 22.50%. Deducting preferred dividends reserves earnings for the residual claimants, and averaging equity matches the year's earnings to the capital actually in place across the period rather than at one snapshot date. Business interpretation: Yusuf Demirci can quote 22.50% to the lender as Flash's clean common-equity productivity, comfortably inside the benchmark band the credit memo cites. Common trap: skipping the preferred deduction or anchoring the denominator on year-end equity after capital was raised late in the year.",
+    "ExplanationWrongA": "Choice A skips the preferred-dividend deduction and reports $3,860,000 / $16,000,000 = 24.13%, crediting common shareholders with income contractually promised first to the preferred holders.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C anchors on year-end common equity of $17,800,000 for 20.22%; late-year equity growth depresses the snapshot without reflecting the smaller base that actually earned most of the year's income.",
+    "ExplanationWrongD": "Choice D slides to return on assets, $3,600,000 / $30,000,000 average total assets = 12.00%; total assets include creditor-financed capacity, so the figure answers a different question than common-equity productivity.",
+    "FormulaReference": "FA-13 Return on Equity",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-279",
+    "Section": "A",
+    "Stem": "Responding to a lender analytics request, controller Yusuf Demirci refines Flash's return on equity. Net income was $3,860,000, preferred dividends were $260,000, common equity was $14,200,000 at the start and $17,800,000 at the end, and average total assets were $30,000,000. What ROE should Yusuf report on common equity?",
+    "Topic": "A.279 roe-common-refinement",
+    "UniqueConceptKey": "A-279-preferred-and-average-equity",
+    "VerifiedChecks": [
+      "Recomputed: 3860000 - 260000 = 3600000; (14200000 + 17800000)/2 = 16000000; 3600000/16000000 = 22.50%",
+      "Second pass: 22.50% x 16000000 = 3600000 reproduces income to common (agrees)",
+      "Distractor checks: 3860000/16000000 = 24.13%; 3600000/17800000 = 20.22%; 3600000/30000000 = 12.00%",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Authorities": [
+      "US GAAP equity presentation (ASC 505 preferred equity attribution; treasury share exclusion)"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$13.80",
+      "B": "$12.19",
+      "C": "$26.00",
+      "D": "$13.00"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Omitting the preferred-equity deduction or the treasury-share exclusion",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Book value per share divides equity attributable to common shareholders by shares outstanding. Common equity = $20,700,000 total equity - $1,200,000 preferred = $19,500,000. Outstanding shares = 1,600,000 issued - 100,000 treasury = 1,500,000. BVPS = $19,500,000 / 1,500,000 = $13.00. Preferred is deducted because BVPS is a common-shareholder measure, and treasury shares are excluded because they hold no claim on assets or earnings. Business interpretation: Naomi Castellanos can frame the $26.00 market price as exactly 2.0 times book ($26.00 / $13.00), letting the client weigh Flash's unrecorded intangible value against its historical-cost net worth per share. Common trap: forgetting the preferred deduction or the treasury-share exclusion before dividing.",
+    "ExplanationWrongA": "Choice A divides total equity of $20,700,000 by 1,500,000 outstanding shares for $13.80; leaving preferred capital in the numerator assigns a common-shareholder metric to capital carrying senior claims ahead of the client's shares.",
+    "ExplanationWrongB": "Choice B divides common equity by the 1,600,000 issued shares for $12.19; the 100,000 treasury shares Flash holds earn nothing and bear no claims, so outstanding shares, not issued shares, belong in the denominator.",
+    "ExplanationWrongC": "Choice C substitutes the $26.00 market price for book value per share; market price embeds expectations about future earnings and growth, while the question asks for the historical-cost residual attributable to each outstanding common share.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "FA-18 Book Value per Share",
+    "ItemStyle": "single-select",
+    "LOSTag": "A.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed",
+    "QuestionID": "P2-A-280",
+    "Section": "A",
+    "Stem": "Walking a client through Flash's balance sheet, private-wealth advisor Naomi Castellanos sizes accounting net worth per share. Total equity is $20,700,000, including $1,200,000 of preferred equity; 1,600,000 shares were issued with 100,000 held in treasury; the stock trades at $26.00. What book value per share should Naomi present?",
+    "Topic": "A.280 bvps-mechanics",
+    "UniqueConceptKey": "A-280-outstanding-common-residual",
+    "VerifiedChecks": [
+      "Recomputed: 20700000 - 1200000 = 19500000; 1600000 - 100000 = 1500000; 19500000/1500000 = 13.00",
+      "Second pass: 13.00 x 1500000 = 19500000 reproduces common equity (agrees)",
+      "Distractor checks: 20700000/1500000 = 13.80; 19500000/1600000 = 12.19; 26.00 is the market-price substitution",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
   }
 ];

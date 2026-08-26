@@ -1,6 +1,6 @@
 # Validation Report Summary
 
-**Generated:** 2026-08-25T02:34:07.791Z
+**Generated:** 2026-08-26T04:14:31.639Z
 **Project:** CMA Part 1 Exam Simulator v2.0
 
 ## Results
@@ -8,14 +8,14 @@
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
 | Repository Validator | PASS | 0 | 0 | 1ms |
-| Metadata Validator | WARN | 0 | 4 | 281ms |
-| Blueprint Validator | WARN | 0 | 70 | 159ms |
+| Metadata Validator | WARN | 0 | 4 | 175ms |
+| Blueprint Validator | WARN | 0 | 70 | 117ms |
 | Part 2 Blueprint Validator | WARN | 0 | 1 | 0ms |
-| Difficulty Validator | WARN | 0 | 39 | 131ms |
-| Reference Validator | WARN | 0 | 159 | 112ms |
-| Explanation Validator | WARN | 0 | 24 | 498ms |
-| Case Integrity Validator | WARN | 0 | 10 | 40ms |
-| PsychometricValidator | WARN | 0 | 1662 | 1118ms |
+| Difficulty Validator | WARN | 0 | 39 | 117ms |
+| Reference Validator | WARN | 0 | 159 | 118ms |
+| Explanation Validator | WARN | 0 | 24 | 392ms |
+| Case Integrity Validator | WARN | 0 | 10 | 36ms |
+| PsychometricValidator | WARN | 0 | 1662 | 1152ms |
 
 **Total Errors:** 0
 **Total Warnings:** 1969
@@ -32,7 +32,7 @@
 
 ### Metadata Validator
 **Status:** WARN
-**Duration:** 281ms
+**Duration:** 175ms
 **Statistics:**
 - Cases Checked: 75
 **Warnings:**
@@ -43,7 +43,7 @@
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 159ms
+**Duration:** 117ms
 **Statistics:**
 - Cases Checked: 75
 - Cross-Domain Cases: 2
@@ -138,7 +138,7 @@
 
 ### Difficulty Validator
 **Status:** WARN
-**Duration:** 131ms
+**Duration:** 117ms
 **Statistics:**
 - Cases Checked: 75
 - Items Checked: 400
@@ -195,7 +195,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 112ms
+**Duration:** 118ms
 **Statistics:**
 - Cases Checked: 75
 - Total References: 0
@@ -364,7 +364,7 @@
 
 ### Explanation Validator
 **Status:** WARN
-**Duration:** 498ms
+**Duration:** 392ms
 **Statistics:**
 - MCQ Questions Checked: 2620
 - Case Items Checked: 400
@@ -401,7 +401,7 @@
 
 ### Case Integrity Validator
 **Status:** WARN
-**Duration:** 40ms
+**Duration:** 36ms
 **Statistics:**
 - Total Cases Checked: 75
 - Total Items Checked: 400
@@ -428,7 +428,7 @@
 
 ### PsychometricValidator
 **Status:** WARN
-**Duration:** 1118ms
+**Duration:** 1152ms
 **Statistics:**
 - AbsoluteLanguageValidator.questionsScanned: 2120
 - AbsoluteLanguageValidator.findings: 794

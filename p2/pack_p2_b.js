@@ -4365,7 +4365,8 @@ var pack_p2_b_questions = [
   "Independent: 0.30×18=5.40; 0.50×9=4.50; 0.20×-5=-1.00; total 8.90%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4408,7 +4409,8 @@ var pack_p2_b_questions = [
   "Independent: E(R)=7.5%; variance=5.0625+0.125+7.5625=12.75; σ=3.57%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4451,7 +4453,8 @@ var pack_p2_b_questions = [
   "Independent: CV = 3.5/14 = 0.25; Beta CV = 3.6/9 = 0.40",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4494,7 +4497,8 @@ var pack_p2_b_questions = [
   "Independent: 3 + 1.4×(10−3) = 3 + 9.8 = 12.80%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4537,7 +4541,8 @@ var pack_p2_b_questions = [
   "Independent: 2.52+0.70+6.50=9.72%; book-value alternative=8.38%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4580,7 +4585,8 @@ var pack_p2_b_questions = [
   "Independent: 8/76 = 10.526% ≈ 10.53%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4623,7 +4629,8 @@ var pack_p2_b_questions = [
   "Independent: 90/960 = 9.375%; ×0.75 = 7.03125 ≈ 7.03%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4666,7 +4673,8 @@ var pack_p2_b_questions = [
   "Independent: √360,000 = 600; check 6 orders × $50 = 300 = 300 × $1",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4709,7 +4717,8 @@ var pack_p2_b_questions = [
   "Independent: 0.012/1.2 = 1.00%; ×4 = 4.00% premium",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4752,7 +4761,8 @@ var pack_p2_b_questions = [
   "Independent: D1 = 2.496; 2.496/52 = 4.80% + 4% = 8.80%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4794,7 +4804,8 @@ var pack_p2_b_questions = [
   "Independent: Aggressive = higher ROA, lower liquidity; conservative = reverse",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4805,8 +4816,8 @@ var pack_p2_b_questions = [
 "Choices": {
   "A": "Because interest is tax deductible, the optimal structure is 100% debt — the tax shield is maximized at full leverage",
   "B": "With corporate taxes, debt adds value through the interest tax shield, but rising financial distress costs eventually offset the benefit, producing an interior optimum where WACC is minimized",
-  "C": "Modigliani-Miller's irrelevance result proves that debt always reduces WACC in any tax environment",
-  "D": "Trade-off theory holds that the optimal structure contains no debt because distress costs always exceed the tax shield"
+  "C": "Modigliani-Miller's irrelevance result proves that debt reduces WACC in any tax environment",
+  "D": "Trade-off theory holds that the optimal structure contains no debt because distress costs exceed the tax shield from the first dollar of leverage",
 },
 "CognitiveLevel": "Analyze",
 "CommonTrapReference": "Corner solutions — 100% debt or zero debt — instead of the interior optimum",
@@ -4836,7 +4847,8 @@ var pack_p2_b_questions = [
   "Independent: Trade-off = shield benefit vs rising distress cost; interior optimum",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4878,7 +4890,8 @@ var pack_p2_b_questions = [
   "Independent: Residual = pay remainder after funding positive-NPV projects",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4921,7 +4934,8 @@ var pack_p2_b_questions = [
   "Independent: 90/960 = 9.375%; ×0.75 = 7.03% vs 6.75% (Δ 28 bp)",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
+"question_state": "Certified",
+    "certification_session": "P2-060"
 },
   {
 "Authorities": [
@@ -4963,6 +4977,3918 @@ var pack_p2_b_questions = [
   "Independent: (1.02)^4 = 1.08243; EAR = 8.24%",
   "Authority citations match tested concept"
 ],
-"question_state": "Unprocessed"
-}
+"question_state": "Certified",
+    "certification_session": "P2-060"
+},
+  {
+    "Authorities": [
+      "FASB ASC 825 (Financial Instruments)",
+      "Corporate finance bond valuation theory"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$1,000.00 par, since bonds are retired at face value at maturity",
+      "B": "$877.60",
+      "C": "$1,122.40",
+      "D": "$694.80"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Pricing a coupon bond by discounting all coupons as one lump sum",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is B. Price = PV of coupons + PV of face = $80 x 6.145 + $1,000 x 0.386 = $491.60 + $386.00 = $877.60 per $1,000 bond. Because the 8% coupon sits below the 10% market yield, the bonds price at a discount so a buyer's total return rises to the market rate; on the full $40 million issue, Flash would net roughly $35.1 million before flotation costs. Marcus Webb can either accept discount pricing as computed or move the coupon toward 10% to issue nearer par.",
+    "ExplanationWrongA": "Choice A confuses the maturity redemption value with today's issue price. A bond sells at par only when its coupon rate equals the prevailing market yield; here the 8% coupon trails the 10% yield, so investors will pay less than face value, not the full $1,000.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C computes the correct $122.40 discount but then adds it to the $1,000 face instead of subtracting it. The misconception is treating the discount as an amount received rather than a price reduction; the correct arithmetic is $1,000 - $122.40 = $877.60.",
+    "ExplanationWrongD": "Choice D discounts the entire $800 of coupons as one lump sum in year ten ($800 x 0.386), ignoring that coupons arrive annually. Annuity discounting at 6.145 values them at $491.60, so the lump-sum shortcut strips most of the coupons' present value out of the price.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-116",
+    "Section": "B",
+    "Stem": "Treasurer Marcus Webb is preparing Flash's registration statement for a $40 million issue of 10-year bonds carrying an 8% annual coupon paid annually. Comparable-risk bonds currently yield 10% to maturity. Webb asks the capital-markets team what price per $1,000 face value Flash should expect at issuance. Present-value factors at 10% for 10 years: PV of $1 = 0.386; PV annuity of $1 = 6.145.",
+    "Topic": "B.116 bond-valuation-discount-issue",
+    "UniqueConceptKey": "B-116-bond-price-yield-inverse",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-factor PV computation plus discount-pricing interpretation = Moderate",
+      "Recompute: 80 x 6.145 = 491.60; 1,000 x 0.386 = 386.00; total = 877.60",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IRC Section 163 (Interest Deductibility)",
+      "Corporate finance component-cost theory"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Preferred dividends are cumulative, so Flash accrues them each year whether or not the board declares payment",
+      "B": "Preferred shareholders stand ahead of bondholders if Flash ever liquidates, so the market demands a higher preferred return",
+      "C": "Bond interest is deductible when Flash computes taxable income, while preferred dividends come out of after-tax earnings, so one dollar of preferred dividend costs more after tax than one dollar of bond interest",
+      "D": "Underwriting fees on preferred issues are capitalized into the dividend rate, mechanically raising the stated percentage above comparable debt coupons"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Comparing stated rates without the interest tax shield on debt",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is C. Corporate bond interest is deductible under IRC Section 163, so Flash's retired 7% debt carried an after-tax cost of roughly 5.25% at a 25% rate. Preferred dividends are distributions of after-tax income with no deduction, so the full 6% payout is the true cost to shareholders. This tax asymmetry is why a security with a smaller stated rate can still be the more expensive source of long-term capital, which is exactly the point Elena Vasquez makes when sequencing Flash's financing choices.",
+    "ExplanationWrongA": "Choice A cites a real feature of most preferred issues but misreads its relevance. Cumulative status protects investors during skipped dividends and aids marketability; the cost ranking versus debt comes from taxes, because bond interest shields taxable income while preferred payouts do not.",
+    "ExplanationWrongB": "Choice B inverts the bankruptcy queue. Bondholders and other creditors are paid ahead of preferred shareholders in liquidation, and greater seniority commands lower, not higher, required returns, so this logic predicts the opposite of the observed cost ordering.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D overstates what flotation does. Issuance costs reduce net proceeds and modestly raise the effective percentage cost of any security, but underwriters do not add fees into the stated dividend rate, and flotation cannot create the structural after-tax gap between debt and preferred.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-117",
+    "Section": "B",
+    "Stem": "At Flash's quarterly finance briefing, CFO Elena Vasquez tells the board that the company's newly priced 6% preferred stock will carry a higher after-tax cost than the 7% bonds Flash retired last year. A director asks why a lower stated payout costs more. Which explanation best supports Vasquez's point?",
+    "Topic": "B.117 preferred-dividend-no-tax-shield",
+    "UniqueConceptKey": "B-117-preferred-after-tax-cost",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-concept explanation at Understand level = Moderate-Easy",
+      "Conceptual verification: after-tax asymmetry cross-checked against IRC Section 163 treatment",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 842 (Leases)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Flash records a right-of-use asset and a lease liability on the balance sheet and recognizes a single straight-line lease expense over the term for an operating lease",
+      "B": "Lease payments are expensed as paid, and nothing appears on the balance sheet until the arrangement is reclassified by the auditor",
+      "C": "The lease liability equals the sum of the undiscounted payments scheduled over the remaining lease term",
+      "D": "Classification turns primarily on whether legal title transfers to Flash by the end of the lease term"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Assuming operating leases stay off the balance sheet under ASC 842",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The correct answer is A. Under FASB ASC 842, a lessee records a right-of-use asset and a corresponding lease liability at commencement for both finance and operating leases. For an operating lease the income-statement effect is a single straight-line lease cost across the term, unlike a finance lease, which separates amortization from interest expense. Priya Chen should therefore tell the audit committee that the Greenville facility moves onto Flash's balance sheet even though the lease is classified as operating.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B restates the former operating-lease convention that ASC 842 ended for calendar-year filers in 2019. Lessees now capitalize nearly all leases; classification changes the expense pattern, not whether an asset and liability reach the balance sheet.",
+    "ExplanationWrongC": "Choice C measures the liability at gross undiscounted payments. ASC 842 requires the present value of unpaid lease payments, discounted at the rate implicit in the lease or, when that rate is impracticable to determine, Flash's incremental borrowing rate.",
+    "ExplanationWrongD": "Choice D elevates one input of the five-part ASC 842 classification test into the deciding factor. Title transfer, purchase options, the major-part threshold, and the substantially-all economic-benefit and useful-life tests are weighed together; title transfer settles the question only when it is conclusive on its own.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-118",
+    "Section": "B",
+    "Stem": "Controller Priya Chen is briefing Flash's audit committee on how the company's new eight-year operating lease for the Greenville assembly facility will be reported under ASC 842. Which statement describes the required lessee accounting?",
+    "Topic": "B.118 asc842-operating-lease-recognition",
+    "UniqueConceptKey": "B-118-rou-asset-recognition",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-standard recall at Remember level = Easy",
+      "Conceptual verification: recognition model cross-checked against ASC 842 lessee guidance",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Working capital management theory (cash conversion cycle)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "41 days",
+      "B": "102 days",
+      "C": "175 days",
+      "D": "29 days"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Adding days payable outstanding instead of subtracting it in the CCC formula",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is D. Projected CCC = DIO + DSO - DPO = 57 + 45 - 73 = 29 days, down from the current 65 days (72 + 54 - 61). All three initiatives push the same direction: less inventory time, faster customer collection, and slower supplier payment each free working capital. Daniel Reyes can translate the 36-day improvement into released cash for Flash by multiplying daily cost of sales by 36, giving the division measurable funding relief for next year's budget.",
+    "ExplanationWrongA": "Choice A updates inventory and receivables but keeps the old 61-day DPO, ignoring the renegotiated supplier terms. Payables financing belongs inside the cycle; extending it to 73 days shortens the cycle another 12 days beyond the 41-day figure shown.",
+    "ExplanationWrongB": "Choice B sums days inventory and days sales outstanding but drops the payables leg of the formula. CCC = DIO + DSO - DPO; omitting DPO treats supplier financing as if it tied up cash, overstating the cycle at 102 days.",
+    "ExplanationWrongC": "Choice C adds DPO rather than subtracting it (57 + 45 + 73 = 175). The sign error treats longer supplier terms as consuming cash, when each additional payable day is actually a day Flash holds cash before paying suppliers.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "CB-10",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-119",
+    "Section": "B",
+    "Stem": "Flash's electrical-components division reports days inventory outstanding of 72 days, days sales outstanding of 54 days, and days payable outstanding of 61 days. Operations finance lead Daniel Reyes has won three commitments for next year: lean cells cut DIO by 15 days, a dedicated collections team cuts DSO by 9 days, and renegotiated supplier terms extend DPO by 12 days. What is the division's projected cash conversion cycle?",
+    "Topic": "B.119 cash-conversion-cycle-improvement",
+    "UniqueConceptKey": "B-119-ccc-component-changes",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: three simultaneous component updates applied to a formula = Moderate",
+      "Recompute: new CCC = 57 + 45 - 73 = 29 (current 72 + 54 - 61 = 65)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Modern Portfolio Theory (Markowitz, 1952)",
+      "Coefficient-of-variation methodology"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Portfolio One, because its 7.0% standard deviation is smaller than Portfolio Two's 10.0%",
+      "B": "Either portfolio, because expected returns and standard deviations move together in equal proportion across the two funds",
+      "C": "Portfolio Two, whose coefficient of variation of about 0.67 beats Portfolio One's 0.70, meaning less dispersion per point of expected return",
+      "D": "Portfolio One, because dividing standard deviation by expected return penalizes higher-return assets and flags instability"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Ranking investments on absolute standard deviation when expected returns differ",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is C. Coefficient of variation = sigma / E(R): Portfolio One = 7.0 / 10.0 = 0.70; Portfolio Two = 10.0 / 15.0 = 0.667. Because expected returns differ, the ratio rather than the raw standard deviation ranks relative efficiency. Portfolio Two supplies about 1.50 points of expected return per point of standard deviation against roughly 1.43 for Portfolio One. Elena Vasquez can therefore defend directing Flash's seasonal surplus toward Portfolio Two on a risk-per-unit basis, provided liquidity needs stay within either fund's redemption terms.",
+    "ExplanationWrongA": "Choice A compares raw standard deviations without scaling for expected return. Absolute dispersion is larger for Portfolio Two, but each point of its expected return carries only about 0.67 units of risk versus 0.70 for Portfolio One, so the raw comparison answers a different question than the one asked.",
+    "ExplanationWrongB": "Choice B assumes proportional scaling that the data refute. Expected return rises by half (10% to 15%) while risk rises by roughly 43% (7.0% to 10.0%), leaving coefficients of variation of 0.70 and 0.67; the funds sit close together but are not equivalent on risk per unit of return.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D reverses the reading of the ratio. A coefficient of variation expresses risk per unit of return, and a lower value is better; it does not brand higher-return assets as unstable. On these figures, 0.67 for Portfolio Two is the stronger risk-adjusted profile, not a warning sign.",
+    "FormulaReference": "CB-03",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-120",
+    "Section": "B",
+    "Stem": "Flash's treasury invests surplus cash from seasonal operations through two externally managed portfolios. Portfolio One carries an expected return of 10.0% with a standard deviation of 7.0%; Portfolio Two offers an expected return of 15.0% with a standard deviation of 10.0%. CFO Elena Vasquez asks which portfolio delivers less risk for the return it produces. Which conclusion should her analyst support?",
+    "Topic": "B.120 coefficient-of-variation-ranking",
+    "UniqueConceptKey": "B-120-cv-risk-per-unit-return",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: requires rejecting the intuitive absolute-disposition comparison and computing scaled ratios = Difficult",
+      "Recompute: CV = 7/10 = 0.70 vs 10/15 = 0.667, Portfolio Two lower risk per unit of return",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance short-term financing theory (compensating balances)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "6.00%",
+      "B": "6.67%",
+      "C": "6.38%",
+      "D": "5.40%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Dividing loan interest by face amount instead of usable proceeds after a compensating balance",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is B. Interest = $8,000,000 x 6.0% = $480,000. Usable proceeds = $8,000,000 - (10% x $8,000,000) = $7,200,000. Effective annual rate = $480,000 / $7,200,000 = 6.67%. The compensating balance converts a 6.0% quote into a 6.67% cost because Flash pays interest on funds it cannot deploy. Marcus Webb should weigh that drag when comparing Meridian's proposal against commercial paper or a facility that charges fees instead of requiring balances.",
+    "ExplanationWrongA": "Choice A reports the stated coupon and ignores the compensating balance altogether. Because Flash must leave $800,000 on deposit while paying interest on the full $8 million, the true base is $7.2 million and the effective cost exceeds the quoted 6.00%.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C nets the $480,000 interest against proceeds but overlooks the compensating balance, dividing by $7.52 million. Both frictions apply: usable funds fall to $7.2 million once the deposit requirement is met, which pushes the effective rate above 6.38%.",
+    "ExplanationWrongD": "Choice D scales the stated rate down by the 90% usable fraction, treating the balance requirement as a discount. The restriction shrinks the money Flash can use while the interest bill stays fixed, which raises rather than lowers the percentage cost of the credit.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-121",
+    "Section": "B",
+    "Stem": "Flash arranges a one-year, $8 million term loan with Meridian National Bank at a 6.0% stated rate. The agreement requires Flash to hold a compensating balance equal to 10% of the loan face for the full year, and Flash keeps no other funds at the bank. Treasurer Marcus Webb calculates the effective annual cost of the credit. What rate should Webb report?",
+    "Topic": "B.121 compensating-balance-effective-rate",
+    "UniqueConceptKey": "B-121-compensating-balance-cost",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two-step proceeds adjustment with interpretation = Moderate-Easy",
+      "Recompute: 480,000 / (8,000,000 - 800,000) = 480,000 / 7,200,000 = 6.67%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "DCF synergy valuation methodology",
+      "Capital allocation under mutually exclusive alternatives"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Decline the acquisition because the $3 million deal NPV is too thin to absorb synergy-estimate risk, and redirect the capital to the automation program",
+      "B": "Proceed, because revenue synergies between the two salesforces historically exceed initial estimates and would widen the margin further",
+      "C": "Counter at $86 million to improve the entry margin before signing anything",
+      "D": "Proceed at the $92 million asking price: integrated value of $95 million minus price leaves a $3 million NPV that exceeds the $2.5 million NPV of the automation alternative"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Judging a deal by absolute NPV size without comparing the next-best use of capital",
+    "CorrectChoice": "D",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The correct answer is D. Integrated value = $84 million standalone + $16 million synergies - $5 million integration costs = $95 million. Deal NPV = $95 million - $92 million price = $3 million, versus $2.5 million for the organic program. With Helix firm on price and a rival bidder present, the decision reduces to comparing two quantified uses of capital, and proceeding captures the larger NPV while staying disciplined: Elena Vasquez should present the $3 million figure as the floor case, before any unbooked synergies.",
+    "ExplanationWrongA": "Choice A applies a risk haircut the analysis does not support. Synergy estimates are already net of the $5 million integration spend, and the relevant comparison is against the alternative's own $2.5 million NPV, which is thinner than the deal; declining forfeits $0.5 million of measured net advantage rather than avoiding risk.",
+    "ExplanationWrongB": "Choice B rests on hoped-for upside instead of the quantified case. Even with zero extra synergies the transaction beats the alternative by $0.5 million, so the recommendation should cite measured NPV; anchoring on optimistic synergy history invites exactly the overpayment discipline an acquisition policy exists to prevent.",
+    "ExplanationWrongC": "Choice C ignores the stated constraints: Helix has rejected further negotiation and a rival bidder stands ready to close. A counteroffer risks converting a positive-NPV transaction into nothing over a margin the board has no leverage to obtain.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-122",
+    "Section": "B",
+    "Stem": "Helix Fabrication Group has rejected further negotiation and set its sale price at $92 million, with a rival bidder prepared to close. Flash's integration team values Helix standalone at $84 million, quantifies synergies at a $16 million present value, and estimates integration costs of $5 million in present-value terms. If Flash walks away, it could fund an organic automation program with an NPV of $2.5 million. CFO Elena Vasquez must recommend a course to CEO Daniel Osei at tomorrow's board call. Which recommendation is best supported?",
+    "Topic": "B.122 acquisition-npv-vs-alternative",
+    "UniqueConceptKey": "B-122-deal-npv-capital-allocation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Evaluate floor met (score 5); named decision-maker choosing among defensible alternatives",
+      "Recompute: (84 + 16 - 5) - 92 = 3.0 vs organic 2.5, proceed",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "CAPM (Sharpe, 1964; Lintner, 1965)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "11.20%",
+      "B": "16.45%",
+      "C": "8.68%",
+      "D": "7.00%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using beta times the market return rather than the market risk premium in CAPM",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is A. CAPM: R(e) = R(f) + beta x (R(m) - R(f)) = 4.2% + 1.25 x (9.8% - 4.2%) = 4.2% + 7.0% = 11.20%. A beta of 1.25 marks the components unit as 25 percent more volatile than the market, so Alan Whitfield adds a 7.0% systematic-risk premium to the 4.2% time-value base. Flash uses the resulting 11.20% as the divisional equity hurdle before blending it into the unit's WACC.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B multiplies beta by the full 9.8% market return instead of the 5.6% market risk premium (4.2% + 1.25 x 9.8% = 16.45%). The risk-free base is already embedded in the market return, so this double-counts it and inflates the required return by 5.25 percentage points.",
+    "ExplanationWrongC": "Choice C divides the market risk premium by beta (4.2% + 5.6/1.25 = 8.68%), inverting beta's role. Beta scales systematic exposure up for values above one: a beta of 1.25 raises the premium to 7.0%, it does not dilute it to 4.48%.",
+    "ExplanationWrongD": "Choice D stops at the risk premium itself, reporting beta times the market spread (1.25 x 5.6% = 7.00%). CAPM requires compensation for pure time value first, so omitting the 4.2% risk-free base understates what equity holders demand from Flash.",
+    "FormulaReference": "CB-04",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-123",
+    "Section": "B",
+    "Stem": "Flash's investment committee prices equity risk using CAPM. Finance director Alan Whitfield gathers inputs for the components business: a 4.2% risk-free rate, an expected market return of 9.8%, and a divisional beta of 1.25. What required return on equity should Whitfield report?",
+    "Topic": "B.123 capm-required-return",
+    "UniqueConceptKey": "B-123-capm-equity-hurdle",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: formula application with three inputs and premium derivation = Moderate",
+      "Recompute: 4.2 + 1.25 x (9.8 - 4.2) = 4.2 + 7.0 = 11.20",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Relevant costing / incremental analysis (management accounting theory)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Retain the segment: it covers all avoidable costs and contributes $6 million, and the reported loss exists only because $9 million of corporate overhead stays with Flash after any divestiture",
+      "B": "Divest promptly: last year's $3 million loss will recur and drain consolidated results indefinitely",
+      "C": "Divest only if a buyer pays more than $44 million, the segment's annual revenue",
+      "D": "Retain, and eliminate the $9 million corporate allocation so the segment reports fairly"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Treating allocated corporate overhead as avoidable in a divestiture decision",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is A. Avoidable-cost view: contribution = $44 million - $30 million = $14 million; less avoidable fixed costs of $8 million leaves $6 million of segment margin. The reported $(3) million arises solely from $9 million of allocated corporate costs that persist after a sale. Divesting therefore removes $6 million of annual contribution while the overhead remains, cutting Flash's consolidated operating income by $6 million. Ingrid Halvorsen's review should retain the tooling segment unless corporate overhead itself is restructured.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B takes the reported loss at face value. Of the $47 million charged to the segment ($30M variable + $8M avoidable fixed + $9M allocated), the $9 million allocation continues regardless of ownership, so divesting removes $6 million of positive avoidable margin and deepens Flash's consolidated loss by that amount.",
+    "ExplanationWrongC": "Choice C anchors on the $44 million revenue figure, which measures sales volume rather than the keep-or-drop comparison. The economics turn on $6 million of ongoing avoidable margin versus whatever proceeds a buyer offers; revenue itself neither generates the decision nor sets a floor price.",
+    "ExplanationWrongD": "Choice D confuses reporting with economics. Reassigning the allocation would erase the optics of a loss, yet cash flows are unchanged: corporate costs remain real, and shifting the charge simply relocates it to other segments of Flash.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-124",
+    "Section": "B",
+    "Stem": "Flash's industrial tooling segment shows a reported operating loss of $3 million, prompting strategy VP Ingrid Halvorsen to open a divestiture review. Segment data: revenue of $44 million; variable costs of $30 million; avoidable fixed costs of $8 million; and $9 million of allocated corporate overhead that would continue after any sale. Based on segment economics, what should Halvorsen conclude?",
+    "Topic": "B.124 divestiture-avoidable-cost-analysis",
+    "UniqueConceptKey": "B-124-keep-or-drop-allocation-trap",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Analyze floor met (score 4); requires separating avoidable from allocated costs against a reported loss",
+      "Recompute: CM 44 - 30 = 14; avoidable margin 14 - 8 = 6; reported 6 - 9 = -3",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "WACC methodology (Brealey-Myers); Modigliani-Miller with taxes"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "10.33%",
+      "B": "9.69%",
+      "C": "9.80%",
+      "D": "10.03%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Omitting the tax shield on debt or applying it to preferred stock in WACC",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is C. WACC = (60/200)(7.0%)(1 - 0.25) + (10/200)(8.5%) + (130/200)(12.0%) = 1.575% + 0.425% + 7.800% = 9.80%. Weights follow market values totaling $200 million, and only the debt component receives the tax adjustment because interest alone is deductible. Samuel Ortiz applies 9.80% as the blended hurdle for average-risk projects financed within Flash's existing capital structure.",
+    "ExplanationWrongA": "Choice A skips the tax shield, weighting debt at its full 7.0% pre-tax cost (0.30 x 7.0 = 2.1 instead of 1.575). Interest is deductible at Flash's 25% marginal rate, so the after-tax debt component is 5.25% and WACC falls to 9.80%.",
+    "ExplanationWrongB": "Choice B extends the (1 - t) adjustment to preferred stock (0.05 x 8.5% x 0.75 = 0.32 instead of 0.43). Preferred dividends are paid from after-tax income with no deduction available, so shielding them understates WACC by roughly 11 basis points.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D plugs the 8.0% coupon into the debt term instead of the 7.0% yield to maturity (0.30 x 8.0% x 0.75 = 1.80 versus 1.575). Market pricing, not the printed coupon, sets the opportunity cost of Flash's debt capital.",
+    "FormulaReference": "CB-05",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-125",
+    "Section": "B",
+    "Stem": "Flash's target capital structure at market values comprises $60 million of debt carrying an 8.0% coupon and currently yielding 7.0% to maturity, $10 million of preferred stock costing 8.5%, and $130 million of common equity costing 12.0%. Director of corporate finance Samuel Ortiz computes the weighted average cost of capital using a 25% marginal tax rate. What WACC should Ortiz report?",
+    "Topic": "B.125 wacc-market-weight-computation",
+    "UniqueConceptKey": "B-125-wacc-blended-hurdle",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: three-component weighted computation with tax adjustment = Moderate",
+      "Recompute: 0.30 x 7 x 0.75 + 0.05 x 8.5 + 0.65 x 12 = 1.575 + 0.425 + 7.800 = 9.80",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "EOQ inventory model (Harris, 1913; Wilson, 1934)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "EOQ rises with holding costs, so fewer, larger orders will be placed each year",
+      "B": "EOQ declines according to the square-root response, so Flash places more orders per year",
+      "C": "EOQ is unaffected; only the safety-stock level responds to holding-cost changes",
+      "D": "EOQ halves as holding costs double, reflecting a one-to-one offset between the two inputs"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Assuming EOQ changes one-for-one rather than by the square root when input costs shift",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The correct answer is B. EOQ = sqrt(2DS/H), where S is the fixed cost per order and H the annual holding cost per unit. Raising H enlarges the denominator, so the optimal order quantity falls, though by the square root of the change rather than one-for-one. Smaller lots mean more orders per year, since annual demand D is divided by a smaller Q. Grace Lindqvist should expect Flash's resin purchasing to shift toward smaller, more frequent deliveries, the least-cost response to more expensive warehousing.",
+    "ExplanationWrongA": "Choice A inverts the trade-off. Higher holding cost makes large inventories more expensive to keep, so the optimal lot shrinks and Flash orders more often in smaller quantities; rising storage economics punish rather than reward bigger orders.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C disconnects EOQ from its own input. Holding cost sits in the denominator inside the radical, so a sustained increase in H lowers the optimal lot size; safety stock reacts to demand variability and lead time, but the base order quantity moves as well.",
+    "ExplanationWrongD": "Choice D imposes a one-for-one response that the square root damps. Doubling H cuts EOQ by a factor of about 1.414 (roughly 29 percent smaller), not by half, which is why moderate insurance or storage increases seldom justify rebuilding the replenishment schedule.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-126",
+    "Section": "B",
+    "Stem": "Flash's procurement director Grace Lindqvist reviews the economic order quantity for resin pellets after the insurer raises warehouse coverage, lifting the annual holding cost per unit. Using the EOQ framework, how should Lindqvist explain the effect on order sizing and order frequency?",
+    "Topic": "B.126 eoq-holding-cost-response",
+    "UniqueConceptKey": "B-126-eoq-square-root-behavior",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: conceptual relationship explanation at Understand level = Moderate-Easy",
+      "Conceptual verification: inverse square-root relationship cross-checked against the EOQ model definition",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "LBO structuring practice (senior leverage and coverage covenants)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$110 million of senior debt, exactly 5.5x EBITDA, with Flash carrying a $40 million seller note, producing coverage near 2.0x at the 9.0% coupon",
+      "B": "$130 million of senior debt underwritten on pro-forma EBITDA of $23 million, crediting $3 million of expected synergies",
+      "C": "$130 million of senior debt repriced to 7.0% so that EBITDA-to-interest coverage clears the 2.0x minimum",
+      "D": "A reduced $138 million headline price still funded with $130 million of senior debt, keeping the sponsor's leverage target intact"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Testing only one LBO covenant; price cuts or cheaper coupons do not cure leverage-cap breaches",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The correct answer is A. Senior debt of $110 million equals exactly 5.5x the $20 million EBITDA, meeting the lender cap, and interest of $110 million x 9.0% = $9.9 million gives coverage of $20 million / $9.9 million = 2.02x, clearing the 2.0x floor. The remaining $40 million sits in a subordinated Flash seller note outside senior covenant math, letting the sponsor still close at the $150 million headline. Marcus Webb can recommend this structure because every alternative breaches at least one test.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B leans on unearned EBITDA. Even granting the full $3 million add-back, coverage is $23 / $11.7 = 1.97x, below the 2.0x floor, and leverage of $130/$20 = 6.5x breaches the 5.5x cap outright; lenders underwrite delivered cash flow rather than pipeline synergies.",
+    "ExplanationWrongC": "Choice C fixes the wrong constraint. Cheaper interest lifts coverage to $20 / $9.1 = 2.20x, but the leverage test compares debt to EBITDA, and $130 million against $20 million is 6.5x, violating the 5.5x cap regardless of coupon.",
+    "ExplanationWrongD": "Choice D mistakes price for covenant inputs. Trimming the headline to $138 million leaves senior debt of $130 million against $20 million of EBITDA, so both the 6.5x leverage breach and the 1.7x coverage shortfall survive untouched.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-127",
+    "Section": "B",
+    "Stem": "A private-equity sponsor offers $150 million for Flash's packaging unit and proposes financing with $130 million of senior debt, 6.5x the unit's $20 million EBITDA, priced at 9.0%. Lender policy caps senior leverage at 5.5x EBITDA and requires EBITDA-to-interest coverage of at least 2.0x. Group treasurer Marcus Webb presents competing closing structures to Flash's divestiture committee. Which structure can realistically close at the $150 million headline price while satisfying the lender tests?",
+    "Topic": "B.127 lbo-covenant-feasibility-structuring",
+    "UniqueConceptKey": "B-127-leverage-cap-seller-note",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Evaluate floor met (score 5); named treasurer choosing among defensible structures against dual covenants",
+      "Recompute: 110/20 = 5.5x pass; interest 110 x 9% = 9.9; 20/9.9 = 2.02x pass; alternatives 130/20 = 6.5x fail",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 842 (Leases)",
+      "Net-advantage-of-leasing DCF methodology"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Buy: ownership saves about $47,000 in present-value cost versus the lease",
+      "B": "Lease: skipping the purchase frees about $190,000 in present-value terms, the gap between the $600,000 invoice and the discounted lease stream",
+      "C": "Buy: the depreciation tax shields alone, about $111,000 in present value, outweigh any lease advantage at a 6% discount rate",
+      "D": "Lease: the net advantage of leasing is approximately $47,000, the excess of the buy option's after-tax cost over the lease's after-tax cost"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Counting tax deductibility on only one side of the lease-versus-buy comparison",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The correct answer is D. Buy: PV cost = $600,000 - PV of depreciation shields ($22,500 x 4.917 = $110,633) - PV of after-tax salvage ($45,000 x 0.705 = $31,725) = $457,642. Lease: after-tax payment $105,000 x 0.75 = $78,750 due at the start of each year; PV = $78,750 x 5.212 (annuity-due factor) = $410,447. Net advantage of leasing = $457,642 - $410,447 = about $47,000, so Rosa Delgado should recommend leasing; ASC 842 balance-sheet recognition affects presentation but not this cash-flow comparison.",
+    "ExplanationWrongA": "Choice A reverses the direction of the comparison. The buy option costs about $457,600 after tax against roughly $410,400 for the lease, so leasing is the cheaper stream; claiming savings for ownership reads the $47,000 gap backward.",
+    "ExplanationWrongB": "Choice B pits the $600,000 gross invoice against the lease's after-tax stream. Ownership generates offsetting inflows of about $110,600 from depreciation shields plus $31,700 of after-tax salvage, cutting its true cost to roughly $457,600; the exaggerated $190,000 saving disappears once taxes enter both legs.",
+    "ExplanationWrongC": "Choice C credits the buy side with depreciation shields but forgets lease payments are also deductible. After-tax lease outflows drop to $78,750 per payment, so counting the tax benefit on only one arm of the comparison manufactures a phantom advantage for purchase.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-128",
+    "Section": "B",
+    "Stem": "Flash must acquire a $600,000 automated palletizing cell for its Dayton plant. Purchase: the cell depreciates straight-line to a zero book value over six years, should resell for $60,000 at the end of year six, and maintenance cost matches the service included in the lease alternative. Lease: six annual payments of $105,000 due at the beginning of each year. Flash's tax rate is 25%, the after-tax discount rate is 6%, and plant controller Rosa Delgado holds PV factors of 4.917 (annuity, 6 years, 6%), 0.705 ($1, 6 years, 6%), and 1.06 (annuity-due adjustment). Which course minimizes present-value cost?",
+    "Topic": "B.128 lease-versus-buy-nal",
+    "UniqueConceptKey": "B-128-net-advantage-of-leasing",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Analyze floor met (score 3); two-leg after-tax DCF comparison under ASC 842 context",
+      "Recompute: Buy 600 - 22.5x4.917 - 45x0.705 = 457.6; Lease 78.75x(4.917x1.06) = 410.4; NAL = 47.2",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Cost-of-capital component theory (preferred stock)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "8.00%",
+      "B": "8.33%",
+      "C": "12.50%",
+      "D": "4.17%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Ignoring flotation costs or subtracting them from the dividend rather than the price",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The correct answer is B. Cost of preferred = annual dividend / net proceeds per share = $4.00 / ($50.00 - $2.00) = $4.00 / $48.00 = 8.33%. Flotation costs shrink the capital Flash actually deploys, raising the effective cost above the quoted 8.00% dividend yield. Nadia Okafor carries the 8.33% figure into WACC with no tax adjustment, because preferred dividends are paid out of after-tax earnings and generate no deduction.",
+    "ExplanationWrongA": "Choice A divides the $4.00 dividend by the $50.00 offering price, ignoring the $2.00-per-share flotation drag. Flash cannot invest the full $50; net proceeds of $48 are what the promised dividend competes against, so the component cost runs higher than 8.00%.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C flips the fraction, dividing price by dividend (50 / 4 = 12.50). Cost of preferred runs dividend over net proceeds; inverted, the number measures dollars of price per dollar of annual dividend and reads as a percentage only by accident.",
+    "ExplanationWrongD": "Choice D nets the flotation charge against the dividend (2 / 48 = 4.17%) rather than against the share price. Issuance costs reduce proceeds, not the contractual payout; the $4.00 dividend is fixed while $48 is what Flash actually banks per share sold.",
+    "FormulaReference": "CB-06",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-129",
+    "Section": "B",
+    "Stem": "Flash issues new preferred stock at a $50.00 market price per share carrying a $4.00 annual dividend. Underwriting and filing costs consume $2.00 per share. Assistant treasurer Nadia Okafor computes the cost of the preferred component for Flash's WACC. What rate should Okafor use?",
+    "Topic": "B.129 cost-of-preferred-net-proceeds",
+    "UniqueConceptKey": "B-129-preferred-flotation-adjustment",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-ratio computation with one adjustment = Easy Apply",
+      "Recompute: 4 / (50 - 2) = 4 / 48 = 0.0833 = 8.33%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "International finance forward-premium convention (360-day year)",
+      "FASB ASC 830 (Foreign Currency) context"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "+1.97% premium",
+      "B": "-0.49% discount",
+      "C": "-1.97% discount",
+      "D": "-1.97% premium"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Skipping the 360-day annualization or reversing the forward-minus-spot numerator",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The correct answer is C. Annualized forward position = ((F - S) / S) x (360 / days) x 100 = ((1.1742 - 1.1800) / 1.1800) x (360 / 90) x 100 = (-0.4915%) x 4 = -1.97%. The euro is 0.58 cents cheaper forward than spot, and scaling to a 360-day year shows a 1.97% annualized discount. Omar Haddad therefore locks in fewer dollars per euro by hedging forward, and Flash must weigh that negative forward margin against its appetite for leaving the receivable unhedged.",
+    "ExplanationWrongA": "Choice A reverses the numerator by subtracting the forward from spot. Since the forward rate sits below spot, the signed differential is negative; recomputing with (F - S)/S shows the euro weakening forward, which is a discount rather than a premium.",
+    "ExplanationWrongB": "Choice B stops at the period rate. (F - S)/S = -0.49% measures the discount across 90 days only; FX convention annualizes by multiplying by 360/90, quadrupling the figure to -1.97% on a yearly basis.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D computes the correct -1.97% magnitude but labels a negative result a premium. By convention a negative forward differential means the currency is cheaper forward than spot, which is a discount; premiums carry positive signs.",
+    "FormulaReference": "CB-09",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-130",
+    "Section": "B",
+    "Stem": "Flash sold turbine housings to a German customer on terms calling for EUR 5 million due in 90 days. The spot rate is $1.1800 per euro and the 90-day forward rate is $1.1742 per euro. Treasury analyst Omar Haddad quantifies the euro's forward position using the FX 360-day convention. What is the euro's annualized forward premium or discount?",
+    "Topic": "B.130 annualized-forward-discount-eur",
+    "UniqueConceptKey": "B-130-forward-premium-annualization",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: sign-sensitive ratio plus 360-day annualization convention = Difficult Apply",
+      "Recompute: ((1.1742 - 1.1800) / 1.1800) x (360/90) x 100 = (-0.4915%) x 4 = -1.97%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 805 (Business Combinations)",
+      "FASB ASC 260 (Earnings Per Share)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Pro forma EPS of $2.40, which is dilutive by 20.0% versus Flash's standalone EPS of $3.00.",
+      "B": "Pro forma EPS of $3.60, which is accretive by 20.0% versus Flash's standalone EPS of $3.00.",
+      "C": "Pro forma EPS of $2.88, which is dilutive by $0.12, or 4.0%, versus Flash's standalone EPS of $3.00.",
+      "D": "Pro forma EPS of $3.00, indicating the transaction is EPS-neutral and neither accretive nor dilutive."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Dividing combined income by acquirer-only shares, ignoring newly issued stock",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Merger EPS analysis combines the acquirer's and target's net incomes and divides by the pro-forma share count, per ASC 805 purchase accounting and ASC 260 EPS presentation. Combined net income = $48.0M + $9.6M = $57.6M. Pro-forma shares = 16.0M + 4.0M = 20.0M. Pro forma EPS = $57.6M / 20.0M = $2.88 versus $3.00 standalone, a decline of $0.12 per share (-4.0%). Because Flash issues roughly 25% more shares while gaining only 20% more earnings, the deal is dilutive in year one; the board should weigh whether synergy growth beyond year one reverses the dilution before judging the price paid.",
+    "ExplanationWrongA": "Choice A divides Flash's $48.0M income alone by the full 20.0M pro-forma share count, dropping Corvex's $9.6M contribution entirely. This error treats the newly issued shares as if they brought no earnings. Accretion analysis requires combined income of $57.6M over 20.0M shares, giving $2.88, not $2.40.",
+    "ExplanationWrongB": "Choice B divides combined income of $57.6M by Flash's pre-deal 16.0M shares, overlooking the 4.0 million new shares issued to Corvex's owners. This mistake assumes the target's earnings arrive free of dilution. The correct denominator counts all 20.0M post-issue shares, producing $2.88 and dilution rather than 20% accretion.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D reports neutrality, which only occurs if the share count rises to 19.2M instead of 20.0M - a misapplication of the exchange ratio that adds just 3.2M shares. With the agreed 4.0M-share issuance, combined EPS is $57.6M / 20.0M = $2.88, a genuine 4.0% dilution, so the neutral conclusion understates the earnings cost.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-131",
+    "Section": "B",
+    "Stem": "Flash, a diversified manufacturer, reported net income of $48.0 million on 16.0 million weighted-average common shares. Flash is acquiring Corvex Industries in an all-stock merger; under the agreement Flash will issue 4.0 million new common shares to Corvex's shareholders, and Corvex is expected to contribute $9.6 million of annual net income with no change in the combined tax profile. Controller Priya Chen must tell the board whether the deal is accretive or dilutive to earnings per share in year one, ignoring intangible amortization and integration costs. What should she report?",
+    "Topic": "B.131 merger-pro-forma-eps-accretion",
+    "UniqueConceptKey": "B-131-merger-proforma-eps-accretion",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-step pro forma combination plus accretion/dilution judgment for the board supports Difficult",
+      "Independent recomputation: (48.0M + 9.6M) / (16.0M + 4.0M) = 57.6 / 20.0 = $2.88; vs 3.00 = -4.0% (verified twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IRC Section 163 (interest deductibility)",
+      "Corporate finance cost-of-capital theory"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "6.00%",
+      "B": "8.00%",
+      "C": "10.67%",
+      "D": "2.00%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Applying the tax rate inversely or skipping the (1 - t) adjustment",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Corporate interest expense is tax-deductible under IRC Section 163, so the debt component entered in WACC is the after-tax yield: pre-tax cost multiplied by (1 - t). After-tax cost = 8.0% x (1 - 0.25) = 8.0% x 0.75 = 6.00%. The tax shield effectively refunds 25 cents of each interest dollar, so Flash's true economic borrowing cost is 6.00%. Entering 8.00% would overstate WACC and could wrongly reject projects whose expected returns fall between 6.00% and 8.00%, distorting the capital-budgeting screen Webb feeds.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B enters the pre-tax yield to maturity with no (1 - t) adjustment, ignoring the deductibility of the $2.4 million annual interest expense on the $30 million issue. The 25% shield lowers the component cost to 6.00%; skipping it inflates WACC by two full points on this input.",
+    "ExplanationWrongC": "Choice C divides by 0.75 (8.0% / 0.75 = 10.67%), inverting the adjustment so the tax shield enlarges the cost instead of shrinking it. Dividing by (1 - t) grosses an after-tax figure up to pre-tax; converting an observed pre-tax yield to an after-tax cost requires multiplication, giving 6.00%.",
+    "ExplanationWrongD": "Choice D multiplies the 8.0% yield by the 25% tax rate itself, mistaking the size of the annual tax saving ($0.6 million on $30 million borrowed) for the cost of debt. The shield reduces the 8.0% cost to 6.00%; it does not replace the yield as the component cost.",
+    "FormulaReference": "CB-07",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-132",
+    "Section": "B",
+    "Stem": "Treasurer Marcus Webb is pricing a $30 million private-placement note issue for Flash. Indicative terms put the yield to maturity at 8.0%, and Flash's marginal federal-plus-state income tax rate is 25%. For the weighted-average cost of capital model he maintains for the CFO, what after-tax cost of debt should Webb enter?",
+    "Topic": "B.132 after-tax-cost-of-debt",
+    "UniqueConceptKey": "B-132-aftertax-cost-of-debt",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-formula application with distractor traps around the tax adjustment supports Moderate",
+      "Independent recomputation: 8.0% x (1 - 0.25) = 8.0% x 0.75 = 6.00% (verified twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate bond valuation theory (Macaulay duration and immunization)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Zero-coupon notes carry no default exposure because no periodic payments can be missed, so their quoted prices move only with inflation expectations.",
+      "B": "Zero-coupon notes are issued at a deep discount, and securities sold below par are contractually protected from price declines until maturity.",
+      "C": "Coupon debentures are riskier because their semiannual payments expose holders to reinvestment at unfavorable rates, so they fall farther when yields rise.",
+      "D": "With no interim cash flows, a zero-coupon note's entire return depends on a single maturity payment, giving it the longest duration and the largest percentage price swing for a given yield change."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Assuming deep-discount pricing makes zeros insensitive to rate moves",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Price sensitivity to interest rates is governed by duration, the weighted-average time to receive a bond's cash flows. A zero-coupon note pays nothing until maturity, so its duration equals its term - about ten years here - while the 6.5% debenture's duration is shorter because coupons return cash earlier. Since percentage price change approximates minus modified duration times the yield change, the longer-duration zero falls proportionately more when rates rise and gains more when rates fall. Vasquez should frame the zeros as cheap in coupon terms but carrying materially greater mark-to-market volatility, which matters if the notes ever need early repurchase or sit in marked portfolios.",
+    "ExplanationWrongA": "Choice A confuses payment structure with credit risk: a zero's entire principal rides on one maturity payment, so default exposure is concentrated, not absent. It also misattributes price behavior to inflation expectations, when the actual driver is duration - longest for zeros - which magnifies price swings as yields move.",
+    "ExplanationWrongB": "Choice B asserts that below-par issuance shields market value, conflating a locked-in yield-to-maturity with day-to-day pricing. Deep-discount zeros exhibit the sharpest percentage price declines in rising-rate environments precisely because all cash sits at maturity; only holding to maturity neutralizes interim quote fluctuation.",
+    "ExplanationWrongC": "Choice C inverts the relationship: reinvestment risk on coupons affects realized compound returns, not the price sensitivity of the instrument itself. Shorter-duration coupon debentures fall less than zeros when yields rise, so calling them the bigger decliners mistakes reinvestment effects for duration-driven price risk.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-133",
+    "Section": "B",
+    "Stem": "Flash's CFO Elena Vasquez is considering funding a plant modernization with ten-year zero-coupon notes and asks a treasury analyst to brief the audit committee on why these instruments respond more sharply to interest-rate movements than Flash's existing ten-year 6.5% coupon debentures of comparable credit quality. Which explanation is correct?",
+    "Topic": "B.133 zero-coupon-rate-sensitivity",
+    "UniqueConceptKey": "B-133-zero-coupon-duration-sensitivity",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-concept explanation with confusable alternatives supports Moderate-Easy",
+      "Concept verification: duration of a pure zero equals its maturity; percent price change = -MD x yield change explains larger zero sensitivity",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Delaware General Corporation Law Section 203",
+      "SEC Williams Act tender-offer rules"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Accept the $58 offer promptly, because a 32% premium over the unaffected price is conclusive evidence of full value.",
+      "B": "Adopt a shareholder-rights plan as a temporary brake while the committee solicits a binding competing proposal from the friendly partner and invites Kessler to raise its bid.",
+      "C": "Sell Flash's most profitable automation division immediately so the company becomes unattractive and Kessler withdraws its offer.",
+      "D": "Announce a large debt-funded share repurchase intended to push the trading price above $58 and end the tender on that basis."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Equating headline premium with fair value; scorched-earth defenses destroy value",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Defense selection balances fiduciary duties under Delaware law and Williams Act tender-offer rules against bargaining value. Chair Okafor's most defensible path is B: a rights plan is a time-limited device that rejects no value by itself; it forces any bidder to negotiate with the board, giving the friendly partner room to bid and Kessler an incentive to improve on $58 - a price below the $63-$70 standalone DCF range. Accepting at $58 locks in a below-intrinsic outcome, while scorched-earth divestiture or a leveraged buyback impairs assets or balance-sheet strength merely to repel a bidder, conduct for which directors have faced liability when it foreclosed superior outcomes. Choice B keeps every value-maximizing exit open while restoring auction tension.",
+    "ExplanationWrongA": "Choice A treats the 32% premium as proof of full value, but premium-over-unaffected comparisons ignore management's $63-$70 standalone valuation and the signaled competing interest. Accepting quickly surrenders both the higher intrinsically supported price and the auction dynamics the committee is duty-bound to test.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C is a scorched-earth response: selling the automation division would liquidate the very cash flows behind the $63-$70 valuation, leaving remaining holders with a structurally weaker company even if Kessler departs. Defenses that permanently impair asset value to deter a bidder expose directors to fiduciary challenge.",
+    "ExplanationWrongD": "Choice D commits Flash to heavy leverage purely to manipulate the quote above $58, adding interest burden and risk without creating operating value. Unlike a rights plan, a debt-funded buyback narrows future flexibility and strands the balance sheet if the tactic fails to draw a genuinely higher offer.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-134",
+    "Section": "B",
+    "Stem": "The Kessler Group has launched an unsolicited all-cash tender offer for Flash at $58 per share against a pre-offer price of $44, a 32% premium. Internal DCF work by CFO Elena Vasquez values Flash at $63-$70 per share on standalone plans, and a friendly strategic partner has signaled willingness to top the bid if invited. Board chair Diane Okafor convenes the special committee to select a response that satisfies the directors' duty to maximize shareholder value while preserving negotiating leverage. Which course of action is most defensible?",
+    "Topic": "B.134 hostile-takeover-defense-selection",
+    "UniqueConceptKey": "B-134-takeover-defense-board-response",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: fiduciary trade-off among four defensible-seeming responses with valuation and legal constraints supports Very Difficult",
+      "Qualitative verification: $58 bid sits below the $63-$70 DCF range; rights plan preserves auction leverage per stem facts",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Working-capital management theory (cost of trade credit)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Approximately 21.28%",
+      "B": "Approximately 20.99%",
+      "C": "Approximately 16.55%",
+      "D": "Approximately 2.04%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using the gross 2% discount or failing to net discount days from the period",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Forgoing a cash discount converts free trade credit into expensive financing. The annualized cost equals [discount percent / (100 - discount percent)] x [365 / (net days - discount days)] = (2/98) x (365/35) = 0.020408 x 10.428571 = 21.28%. By paying on day 45 instead of day 10, Flash effectively borrows the 98% balance for 35 extra days at an annual rate near 21.28%, far above the company's 8% opportunity cost of funds. Whitfield should recommend capturing the discount even if it requires drawing on the revolving credit line, treating these supplier terms as a costly financing source rather than a free grace period.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B applies a 360-day year, computing (2/98) x (360/35) = 20.99% and importing money-market day-count convention into a trade-credit costing exercise. The stated convention here is 365 days, which raises the factor from 10.2857 to 10.4286 and the cost to 21.28%; day-count slips systematically understate the financing penalty.",
+    "ExplanationWrongC": "Choice C divides by the full net period, computing (2/98) x (365/45) = 16.55% and thereby charging the discount cost across days Flash already had for free. Only the stretch between day 10 and day 45 - thirty-five days - is financed by forgoing the discount, so the denominator nets out the discount window.",
+    "ExplanationWrongD": "Choice D quotes the per-period discount rate (2/98 = 2.04%) as though it were an annual figure, ignoring compounding across roughly ten 35-day stretches in a year. Annualizing with the 365/35 factor multiplies the periodic cost up to 21.28%, revealing trade credit as expensive short-term financing.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-135",
+    "Section": "B",
+    "Stem": "Flash buys polymer resin on terms of 2/10, net 45, invoicing about $1.9 million per month. Assistant treasurer Dana Whitfield is preparing the quarterly cash-flow briefing and wants the implicit annualized cost of paying on day 45 and forgoing the cash discount. Using a 365-day year, what effective annual cost should she present?",
+    "Topic": "B.135 cost-of-forgoing-cash-discount",
+    "UniqueConceptKey": "B-135-trade-credit-implicit-cost",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-step annualization formula with day-count traps supports Moderate",
+      "Independent recomputation: (2/98) x (365/35) = 0.020408 x 10.428571 = 0.21283 = 21.28% (verified twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Contractual preferred-stock indenture provisions",
+      "Corporate finance security-valuation theory"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Holders may exchange each preferred share for a preset number of Flash common shares at any time after the vesting date.",
+      "B": "Preferred holders receive the stated $4.00 dividend and then join common shareholders in any additional dividend declared above that rate.",
+      "C": "Any preferred dividend Flash omits accumulates as an arrearage that must be paid in full before any common dividend may be declared.",
+      "D": "Flash may retire the preferred shares at a fixed call price of $52 per share on or after the fifth anniversary of issuance."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Confusing cumulative with participating, convertible, or callable features",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The cumulative feature of preferred stock requires that skipped dividends accrue as arrears on the preferred class, and common shareholders receive nothing until every accumulated amount is cleared - a protection ranking senior to common payouts. Series K's language therefore obligates Flash to cure any missed $4.00 dividends before its board may resume common distributions. The exchange right described in one alternative is a conversion feature, extra-dividend sharing is participation, and the fixed-price retirement right is a call provision; none of these constitutes cumulativity, so Ortega's new analyst should anchor on dividend priority and arrears accumulation as the defining test.",
+    "ExplanationWrongA": "Choice A describes a conversion feature, which lets preferred holders swap into common equity at a set ratio. Cumulativity concerns instead the accumulation and priority of missed cash dividends, and it operates regardless of whether the shares carry any exchange right at all.",
+    "ExplanationWrongB": "Choice B describes participation - sharing in dividends beyond the stated rate alongside common holders. A cumulative clause addresses unpaid prior dividends, which stack as arrears senior to any common distribution; the two features are independent and frequently appear separately in indentures.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D restates a call or redemption provision, the issuer's right to retire shares at a fixed price. Redemption timing is unrelated to cumulativity, which governs the ordering of dividend payments; even a called preferred must first have accrued arrears settled under a cumulative clause.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-136",
+    "Section": "B",
+    "Stem": "During onboarding for Flash's treasury group, finance director Luis Ortega reviews the terms of the company's Series K preferred stock and asks a new analyst which statement correctly describes what the cumulative feature requires.",
+    "Topic": "B.136 cumulative-preferred-feature-definition",
+    "UniqueConceptKey": "B-136-cumulative-preferred-dividend-feature",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-fact recall of a standard security feature supports Easy",
+      "Definition verification: cumulative preferred arrears rank ahead of common dividends (standard security-feature taxonomy)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "SEC Rule 10b-18 (issuer repurchase safe harbor)",
+      "Corporate finance payout theory"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "EPS rises to $3.43 and book value per share rises to $17.14.",
+      "B": "EPS rises to $3.43 while book value per share falls to $14.57.",
+      "C": "Both metrics stay anchored near EPS of $3.00 and book value of $15.00 because a buyback redistributes value without changing totals.",
+      "D": "EPS rises to $3.43 while book value per share is unchanged at $15.00."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Leaving spent cash in equity, showing BVPS rising after an above-book buyback",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "A repurchase removes both cash and shares from the balance sheet. Cash out = 1.5M x $18.00 = $27.0M, cutting equity to $180.0M - $27.0M = $153.0M; shares fall to 12.0M - 1.5M = 10.5M. New EPS = $36.0M / 10.5M = $3.43, up from $3.00. New book value per share = $153.0M / 10.5M = $14.57, down from $15.00, because the $18.00 repurchase price exceeds pre-buyback book value of $15.00, transferring book claim to selling holders. Brandt should flag the accounting optics for the board: earnings leverage improves while per-share book metrics deteriorate whenever buybacks clear above book, with no necessary link to economic value creation.",
+    "ExplanationWrongA": "Choice A keeps the full $180.0M of equity in the numerator after the $27.0M outlay, computing $180.0M / 10.5M = $17.14. Cash paid out leaves the balance sheet, so equity drops to $153.0M and book value per share falls to $14.57; a rising BVPS contradicts the above-book purchase price.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C assumes buybacks leave per-share figures untouched, treating the transaction as pure redistribution. Shares shrink to 10.5M while equity shrinks proportionally faster in per-share terms because the $18.00 price exceeds $15.00 book, so BVPS lands at $14.57 and EPS at $3.43 - both metrics demonstrably move.",
+    "ExplanationWrongD": "Choice D correctly lifts EPS to $3.43 but freezes book value per share at $15.00, forgetting that the $27.0M purchase reduces common equity to $153.0M. Dividing that smaller equity base by 10.5M shares yields $14.57; holding BVPS flat double-counts cash that has already left the company.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-137",
+    "Section": "B",
+    "Stem": "Flash's board approved an open-market buyback under the Rule 10b-18 safe harbor. Before the program, Flash reports net income of $36.0 million, 12.0 million shares outstanding, and common equity of $180.0 million (book value $15.00 per share). FP&A manager Sofia Brandt models the repurchase of 1.5 million shares at $18.00 each - a price above book - funded with excess cash. Which conclusion should Brandt present on the program's per-share effects?",
+    "Topic": "B.137 buyback-per-share-effects",
+    "UniqueConceptKey": "B-137-buyback-book-value-effect",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: coupled dual-metric recomputation with above-book pricing judgment supports Difficult",
+      "Independent recomputation: EPS = 36.0 / 10.5 = 3.4286 = $3.43; BVPS = (180.0 - 27.0) / 10.5 = 153.0 / 10.5 = 14.5714 = $14.57 (verified twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 360-10 (Property, Plant, and Equipment - derecognition of long-lived assets)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$23.40 million",
+      "B": "$22.00 million",
+      "C": "$24.00 million",
+      "D": "$22.15 million"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Reporting gross proceeds or a pre-tax gain as the after-tax cash inflow",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Under ASC 360-10 derecognition logic, the taxable gain on the divestiture equals proceeds minus direct selling costs minus carrying amount: $24.0M - $0.6M - $18.4M = $5.0M. Tax on the gain = $5.0M x 25% = $1.25M. After-tax closing cash therefore equals proceeds minus selling costs minus tax = $24.0M - $0.6M - $1.25M = $22.15M. Solano's redeployment schedule should be built on $22.15 million; budgeting the gross $24.0M would overstate deployable capital by $1.85 million and distort the return math on every successor investment the divisional sale is meant to fund.",
+    "ExplanationWrongA": "Choice A nets only the $0.6M selling costs from proceeds and ignores the $1.25M tax on the $5.0M gain, overstating available cash. Taxes on divestiture gains are a certain closing-date outflow; $23.4M is merely net pre-tax proceeds and the true after-tax figure is $22.15M.",
+    "ExplanationWrongB": "Choice B computes the gain without deducting selling costs, taxing $5.6M ($24.0M - $18.4M) for a $1.4M liability and arriving at $22.00M. Direct selling costs reduce the realized gain under ASC 360-10, so taxable gain is $5.0M, tax is $1.25M, and closing cash is $22.15M.",
+    "ExplanationWrongC": "Choice C reports gross contract proceeds, omitting both the $0.6M of selling costs and the $1.25M gain tax. Presenting $24.0M as deployable cash inflates the redeployment plan by $1.85M relative to the correct $22.15M after-tax inflow and misleads downstream investment screening.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-138",
+    "Section": "B",
+    "Stem": "Flash has signed a definitive agreement to sell its industrial-fasteners division for $24.0 million in cash. The division's net assets are carried at $18.4 million, direct selling costs are estimated at $0.6 million, and Flash's marginal tax rate is 25%. VP of corporate development Ray Solano needs the after-tax cash inflow the divestiture will deliver at closing for his redeployment plan. What amount should Solano report?",
+    "Topic": "B.138 divestiture-after-tax-proceeds",
+    "UniqueConceptKey": "B-138-divestiture-aftertax-proceeds",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: short three-step chain (gain, tax, netting) fits Moderate-Easy Apply",
+      "Independent recomputation: gain = 24.0 - 0.6 - 18.4 = 5.0; tax = 1.25; inflow = 24.0 - 0.6 - 1.25 = 22.15 (verified twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate bond-refunding theory",
+      "Indenture call provisions"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Premium of $120,000; annual savings of $480,000.",
+      "B": "Premium of $1.20 million; annual savings of $2.32 million.",
+      "C": "Premium of $1.20 million; annual savings of $480,000.",
+      "D": "Premium of $2.80 million; annual savings of $480,000."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Computing savings on the full new coupon instead of the coupon differential",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Callable-at-103 means redemption at 103% of par, so the call premium is 3% x $40.0M = $1.20 million above face value. Annual interest savings equal the coupon differential times principal: $40.0M x (7.0% - 5.8%) = $40.0M x 1.2% = $480,000 per year. Webb's refunding memo should show the one-time $1.2 million premium recouped through $480,000 of yearly savings - roughly a 2.5-year payback before issuance costs and tax-timing effects - which supports proceeding if management expects the lower 5.8% rate environment to persist over the horizon.",
+    "ExplanationWrongA": "Choice A turns the 103 call price into a 0.3% premium ($40.0M x 0.003 = $120,000), a decimal slip that understates the redemption cost tenfold. Call premiums price off full percentage points above par: three points on $40 million is $1.20 million, paired here with the correct $480,000 savings figure.",
+    "ExplanationWrongB": "Choice B sizes savings on the entire new 5.8% coupon ($40.0M x 5.8% = $2.32M) instead of the 1.2-point differential. Existing 7.0% interest must be serviced either way until redemption; only the spread between 7.0% and 5.8%, or $480,000 annually, is actually saved by refinancing.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D confuses the 7.0% coupon with the call schedule, charging a 7% premium ($40.0M x 7% = $2.80M). The indenture sets redemption at 103% of par, so the premium is three points or $1.20 million; the coupon rate drives the savings side of the memo, not the redemption cost.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-139",
+    "Section": "B",
+    "Stem": "Three years ago Flash issued $40 million of 7.0% coupon bonds at par; the indenture makes them callable at 103 starting next quarter. Market yields on comparable credits have fallen about 120 basis points, and treasurer Marcus Webb can refinance the outstanding balance at 5.8%. As Webb frames the refunding memo, what call premium would Flash pay and how much annual interest expense would the refinancing save?",
+    "Topic": "B.139 callable-bond-refunding-economics",
+    "UniqueConceptKey": "B-139-bond-call-refunding-economics",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two-part computation (call premium plus differential savings) with decimal traps supports Moderate",
+      "Independent recomputation: premium = 40.0 x 0.03 = 1.20; savings = 40.0 x (0.070 - 0.058) = 40.0 x 0.012 = 0.48 (verified twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Modigliani-Miller with taxes",
+      "Trade-off theory of capital structure"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Fund with roughly half debt and half equity: about $1.75 million of added interest keeps downside coverage near 3.7x, satisfying the 3.5x floor while capturing part of the debt tax shield and limiting dilution to half the all-equity alternative.",
+      "B": "Fund entirely with debt: the after-tax cost near 5.25% sits well below expected returns on the new capacity, and base-case coverage of about 4.6x shows ample headroom.",
+      "C": "Fund entirely with new equity: eliminating incremental interest removes downside coverage risk altogether and protects the balance sheet.",
+      "D": "Defer the expansion until operations generate the full $50 million internally, avoiding both dilution and new leverage."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Maximizing the tax shield without testing covenant coverage under stress",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Capital-structure choice weighs the corporate tax shield (Modigliani-Miller with taxes and trade-off theory) against distress risk and covenant constraints. Downside EBIT = $72M x 0.70 = $50.4M. All-debt adds $3.5M interest, so stressed coverage = $50.4M / ($12.0M + $3.5M) = 3.25x - below the board's 3.5x floor; option B breaches policy despite its cheap 5.25% after-tax cost. All-equity clears the test but doubles dilution at 11x earnings and forfeits deductible financing. The half-and-half structure adds only $1.75M interest: stressed coverage = $50.4M / $13.75M = 3.66x, passing the floor while retaining about half the shield and capping dilution. Deferral sacrifices capacity for no structural gain. Vasquez should carry the balanced structure to the committee.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B leans on the 5.25% after-tax cost and base-case coverage of 4.6x, but the binding constraint is the downside test: at $50.4M stressed EBIT, coverage falls to $50.4M / $15.5M = 3.25x, violating the board's 3.5x floor. Maximizing the tax shield without surviving the modeled downturn is exactly what the policy polices.",
+    "ExplanationWrongC": "Choice C overcorrects: zero incremental interest trivially passes any coverage test, but issuing $50M of stock at a depressed 11x earnings imposes maximum dilution on existing holders and abandons tax-deductible debt that the balanced mix safely absorbs within policy. Passing the floor is not a reason to forfeit the whole shield.",
+    "ExplanationWrongD": "Choice D treats inaction as safety, yet waiting years to accumulate $50M internally cedes capacity to rivals during the gap and leaves healthy 6.0x coverage unutilized. The coverage floor is satisfied today by the balanced structure, so deferral forgoes competitive value without reducing any modeled risk.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-140",
+    "Section": "B",
+    "Stem": "Flash must fund a $50 million capacity expansion. Current run-rate EBIT is $72 million against $12 million of existing interest expense (6.0x coverage), the marginal tax rate is 25%, seven-year debt prices at 7.0%, and Flash's stock trades at a depressed 11x earnings, making equity costly in dilution terms. The board's risk policy requires pro-forma interest coverage of at least 3.5x even in the finance committee's downside case of a 30% EBIT decline. CFO Elena Vasquez must recommend a financing structure. Which recommendation is most defensible?",
+    "Topic": "B.140 expansion-financing-structure-choice",
+    "UniqueConceptKey": "B-140-expansion-financing-mix-choice",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: constrained choice across tax shield, covenant floor, dilution, and timing with quantified stress case supports Very Difficult",
+      "Independent verification: downside EBIT = 72 x 0.70 = 50.4; all-debt coverage = 50.4 / 15.5 = 3.25x (fails); half-debt = 50.4 / 13.75 = 3.66x (passes) (verified twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Dividend Discount Model (Gordon, 1962)",
+      "Corporate finance cost-of-capital theory"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "9.80%",
+      "B": "10.04%",
+      "C": "10.29%",
+      "D": "5.04%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using last-paid D0 instead of next-year D1 in the numerator",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The constant-growth dividend discount model prices the cost of retained earnings as Re = D1 / P0 + g, where D1 is next year's dividend rather than the amount just paid. D1 = $2.40 x 1.05 = $2.52. D1 / P0 = $2.52 / $50.00 = 5.04%. Re = 5.04% + 5.00% = 10.04%. Tran should carry 10.04% into the WACC build-up as the equity component for internally generated funds; substituting the stale $2.40 understates the forward yield investors require, biasing project hurdle rates downward and risking acceptance of marginal capacity additions across Flash's screening process.",
+    "ExplanationWrongA": "Choice A substitutes last year's dividend for the forward dividend: $2.40 / $50.00 = 4.80% plus 5.00% growth = 9.80%. The model discounts next period's cash flow, so D1 must embed one year of growth ($2.52), lifting the cost to 10.04%; the 24-basis-point shortfall compounds across every project screened.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C grows the dividend twice, feeding $2.52 x 1.05 = $2.646 into the numerator ($2.646 / $50.00 = 5.29% plus 5.00% = 10.29%). Growth belongs once in converting D0 to D1 and once in the terminal g term; double-counting inflates the equity cost and unfairly penalizes long-lived projects.",
+    "ExplanationWrongD": "Choice D reports only the forward dividend yield ($2.52 / $50.00 = 5.04%) and drops the constant-growth component entirely. Investors earn both the yield and expected appreciation of about 5%, so the required return sums to 10.04%; omitting g would nearly halve the hurdle rate applied to Flash's projects.",
+    "FormulaReference": "CB-11",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-141",
+    "Section": "B",
+    "Stem": "Capital-markets manager Owen Tran is updating Flash's weighted-average cost of capital build-up. Flash paid an annual common dividend of $2.40 last year (D0), the dividend is expected to grow at a constant 5.0%, and the stock trades at $50.00. Using the constant-growth dividend discount model for the cost of retained earnings, what rate should Tran insert?",
+    "Topic": "B.141 cost-of-retained-earnings-ddm",
+    "UniqueConceptKey": "B-141-ddm-retained-earnings-cost",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: formula application with D0-versus-D1 trap supports Moderate",
+      "Independent recomputation: D1 = 2.40 x 1.05 = 2.52; 2.52 / 50 = 0.0504; + 0.05 = 0.1004 = 10.04% (verified twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Macaulay duration theory; modified-duration price approximation"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "A loss of approximately $255,000.",
+      "B": "A loss of approximately $720,000.",
+      "C": "A loss of approximately $510,000.",
+      "D": "A loss of approximately $300,000."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Applying one bond's duration to the whole portfolio instead of weighting positions",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Modified duration translates yield shifts into percentage price changes: percent price change equals minus modified duration times the yield change. Long corporates: 7.2 x 0.0050 = 3.60% on $10M = $360,000 loss. Intermediates: 3.0 x 0.0050 = 1.50% on $10M = $150,000 loss. Aggregate loss = $510,000, or 2.55% of the $20 million trust allocation. Chow should add two caveats for the investment committee: the linear approximation slightly overstates losses because convexity cushions real repricing, and portfolio duration works out to the asset-weighted average of 5.1 years, meaning the long sleeve contributes 70% of total rate risk despite being half the assets.",
+    "ExplanationWrongA": "Choice A averages the durations to 5.1 years but then applies that figure to only one $10 million sleeve, halving the true exposure. Weighted across both $10 million positions the portfolio duration is also 5.1 years, so the estimate must be $20M x 5.1 x 0.005 = $510,000, not $255,000.",
+    "ExplanationWrongB": "Choice B smears the long bond's 7.2-year duration across the entire $20 million portfolio ($20M x 7.2 x 0.005 = $720,000), pretending the intermediate holdings carry identical rate risk. Their 3.0-year duration limits their share of the loss to $150,000; blending the sleeves gives $510,000.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D applies the short sleeve's 3.0-year duration to the whole $20 million ($20M x 3.0 x 0.005 = $300,000), erasing the dominant exposure of the long bonds. Duration-weighting each position separately - $360,000 plus $150,000 - is required to reach the correct $510,000 aggregate.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-142",
+    "Section": "B",
+    "Stem": "Flash's supplementary pension trust holds $10 million market value of long corporate bonds with a modified duration of 7.2 years and $10 million of intermediate corporates with a modified duration of 3.0 years. Risk analyst Mei-Ling Chow is asked to estimate the immediate mark-to-market impact of a parallel 50-basis-point rise in yields, using the linear duration approximation. What should Chow report?",
+    "Topic": "B.142 duration-based-price-impact-estimate",
+    "UniqueConceptKey": "B-142-modified-duration-price-impact",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: position-weighted aggregation across two durations plus interpretation supports Difficult",
+      "Independent recomputation: loss = 10M x 7.2 x 0.005 + 10M x 3.0 x 0.005 = 360,000 + 150,000 = 510,000 = 2.55% of 20M (verified twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Internal Revenue Code Section 355 (tax-free spin-offs)",
+      "Corporate restructuring theory"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "A spin-off hands Flash immediate cash proceeds, while a sell-off distributes the unit's shares pro rata to existing shareholders.",
+      "B": "A sell-off leaves the coatings unit under Flash's common control, while a spin-off places it under creditor trusteeship.",
+      "C": "A spin-off triggers recognition of the unit's entire built-in gain on Flash's tax return in the year of distribution, while a sell-off is generally tax-free to the seller.",
+      "D": "A spin-off distributes the unit's shares pro rata to Flash's own shareholders, who end up owning it directly, while a sell-off conveys the business to an outside buyer for cash consideration."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Assuming a spin-off delivers immediate cash like a sell-off",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Restructuring form determines who owns the separated business and when cash arrives. In a spin-off - potentially tax-deferred to the distributing corporation when it meets IRC Section 355 conditions - Flash declares a pro rata dividend of specialty-coatings shares, so existing shareholders retain the enterprise directly and no cash reaches Flash. In a sell-off, an outside buyer pays negotiated cash consideration and the unit leaves the group entirely. Reyes' framing matters for the board vote: the spin preserves upside within the shareholder base but adds no liquidity, while the sale monetizes the asset at a fixed price and ends Flash's exposure to coatings-market risk from closing day forward.",
+    "ExplanationWrongA": "Choice A swaps the two structures: immediate cash proceeds characterize a sell-off to a buyer, while pro-rata share distribution to existing holders defines a spin-off. Directors relying on this reversal would wrongly expect liquidity from a transaction that generates no cash for Flash at all.",
+    "ExplanationWrongB": "Choice B invents a creditor-trusteeship outcome that neither structure produces. A sell-off extinguishes Flash's ownership for cash; a spin-off leaves the unit independent under the same shareholder register. Control passes to buyers in a sale and to shareholders in a spin - never to trustees by default.",
+    "ExplanationWrongC": "Choice C inverts the tax posture: qualifying spin-offs generally escape current corporate-level tax under IRC Section 355, whereas selling the unit realizes gain on the spread between price and tax basis. Presenting the opposite misprices the after-tax comparison the board must weigh between paths.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-143",
+    "Section": "B",
+    "Stem": "Flash's board is weighing two paths to separate its specialty-coatings unit: spinning it off to shareholders or selling it to a private-equity buyer. Strategy director Paulina Reyes briefs the directors on the essential distinction before the vote. Which statement is correct?",
+    "Topic": "B.143 spin-off-versus-sell-off",
+    "UniqueConceptKey": "B-143-spinoff-versus-selloff",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: concept discrimination among confusable restructuring forms supports Moderate-Easy",
+      "Concept verification: spin-off = pro-rata share distribution with possible Section 355 deferral; sell-off = cash sale to third party",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate treasury management practice (collection float economics)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Net benefit of $14,400 per year; Flash should adopt the lockbox.",
+      "B": "Benefit of $62,400 per year before fees, which is decisive without further analysis of the service charge.",
+      "C": "Net benefit of $110,400 per year, confirming the lockbox strongly.",
+      "D": "No meaningful benefit; the $48,000 fee outweighs anything a three-day float improvement can earn."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Netting the fee against float dollars instead of the earnings on released funds",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Collection-float economics compare the earnings on released funds with the cost of the service. Float released = $260,000/day x 3.0 days = $780,000. Annual earnings at the 8.0% opportunity rate = $780,000 x 0.08 = $62,400. Net benefit = $62,400 earnings - $48,000 fee = $14,400 per year. Because earnings exceed the fee, Imasu should recommend adopting the lockbox; equivalently, the bank could charge up to $62,400 annually before the arrangement stops adding value at an 8% opportunity cost, so the current quote leaves positive economic value for Flash's cash-management program.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B stops at gross earnings on released float and skips the $48,000 service charge, overstating decision value by the entire fee. The comparison that drives adoption nets $62,400 of earnings down to $14,400; presenting the gross figure invites approving arrangements that could be uneconomic at higher quotes.",
+    "ExplanationWrongC": "Choice C adds the fee to the earnings ($62,400 + $48,000 = $110,400), reversing the sign of the cost side. Service charges reduce the benefit of freed balances; the correct ledger pairs $62,400 of opportunity earnings against a $48,000 deduction, leaving a $14,400 net gain.",
+    "ExplanationWrongD": "Choice D dismisses float earnings qualitatively without computing them: three days of $260,000 daily collections releases $780,000 of balances worth $62,400 a year at 8%, comfortably above the $48,000 fee. Rejecting on intuition forfeits a positive $14,400 net annual benefit.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-144",
+    "Section": "B",
+    "Stem": "Flash's remittances average $260,000 per day. A bank proposes a lockbox arrangement that would cut Flash's mail and processing float by 3.0 days, freeing those collections for productive use. Cash manager Victor Imasu applies Flash's 8.0% opportunity cost of funds and compares the earnings on released balances with the lockbox's $48,000 annual service fee. What net annual benefit should Imasu report, and what should Flash do?",
+    "Topic": "B.144 lockbox-net-annual-benefit",
+    "UniqueConceptKey": "B-144-lockbox-net-benefit",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: float-release economics with fee netting and a recommendation supports Moderate",
+      "Independent recomputation: released = 260,000 x 3 = 780,000; earnings = 780,000 x 0.08 = 62,400; net = 62,400 - 48,000 = 14,400 (verified twice)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Modigliani-Miller dividend irrelevance theorem (Miller & Modigliani, 1961)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Investors prize certain current dividends over uncertain future capital gains, so raising the payout raises Flash's share price.",
+      "B": "In perfect capital markets, firm value depends on investment policy and earning power rather than on how earnings are split between dividends and retention, so payout timing does not affect shareholder wealth.",
+      "C": "Because dividends are taxed more heavily than capital gains, Flash maximizes shareholder wealth by minimizing the payout ratio.",
+      "D": "Dividend increases signal durable earnings strength to the market, so announced hikes produce lasting price gains independent of fundamentals."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Attributing value effects to payout timing that perfect markets neutralize",
+    "CorrectChoice": "B",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Miller and Modigliani's 1961 irrelevance theorem holds that in perfect markets - no taxes, no flotation costs, no information asymmetry - any dividend stream can be replicated by homemade dividends through share transactions, leaving firm value a function of investment policy and earning power alone rather than payout timing. Cho's orientation group should connect each rival statement to its school so recall sticks: the certainty-preference claim reflects the bird-in-hand argument, the tax-minimization claim is tax-preference theory, and the announcement effect is signaling theory - each relaxing a different perfect-market assumption that the irrelevance proposition requires to hold.",
+    "ExplanationWrongA": "Choice A states the bird-in-hand counter-argument associated with Gordon and Lintner, which rests on investor preference for certain dividends under uncertainty. Irrelevance denies this channel: with perfect markets investors convert capital gains into income at no cost, so payout certainty adds nothing to wealth.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C expresses tax-preference theory, which depends on dividends being taxed more heavily than capital gains - precisely one of the real-world frictions the perfect-market setting of the irrelevance theorem excludes. Within Miller-Modigliani assumptions, payout level leaves shareholder wealth unchanged.",
+    "ExplanationWrongD": "Choice D describes signaling or information-content theory, in which dividend changes move prices because managers reveal asymmetric information. The irrelevance proposition presumes symmetric information, so announcements convey nothing incremental and price stays pinned to investment quality and earning power.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-145",
+    "Section": "B",
+    "Stem": "At Flash's new-analyst orientation, learning lead Hannah Cho reviews payout-policy theory and asks the group which statement captures the Modigliani-Miller dividend irrelevance proposition as it applies to Flash's dividend decisions.",
+    "Topic": "B.145 mm-dividend-irrelevance-proposition",
+    "UniqueConceptKey": "B-145-mm-dividend-irrelevance",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-theorem recall with named rival theories as distractors supports Easy",
+      "Attribution verification: bird-in-hand = Gordon/Lintner lineage; tax-preference and signaling are distinct schools; irrelevance = M&M 1961",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "FASB ASC 830 (Foreign Currency Matters)",
+      "International finance theory (transaction vs. operating exposure)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Transaction exposure arises only on translated balance-sheet account balances, while operating exposure applies to budgeted future revenues already contracted in foreign currency.",
+      "B": "Operating exposure can be eliminated by matching each individual foreign-currency invoice with a forward contract of identical size and tenor, while transaction exposure cannot be hedged with derivatives.",
+      "C": "Transaction exposure and operating exposure are alternative labels for remeasurement under ASC 830, so both call for the identical hedging response.",
+      "D": "Transaction exposure is the FX effect on contracted foreign-currency cash flows already booked, such as a EUR 2.0 million receivable due in 60 days, whereas operating exposure is the effect of unexpected exchange-rate changes on expected long-run operating cash flows across all markets, including competitors' responses."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Treating translation remeasurement as equivalent to economic exposure",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "International finance theory, situated within FASB ASC 830 reporting contexts, distinguishes two constructs. Transaction exposure covers existing foreign-currency-denominated contractual items such as Flash's booked EUR 2.0 million receivable; operating (economic) exposure captures how unanticipated rate moves alter the present value of future operating cash flows across Flash's roughly EUR 25 million annual euro-zone billings and its wholly-owned German subsidiary, including competitive repricing responses. For treasurer Marcus Webb the distinction drives tooling: forwards and options neutralize transaction exposure contract by contract, while operating exposure requires structural responses such as sourcing flexibility, plant location, and pricing strategy because it extends beyond any single booked invoice into Flash's competitive position.",
+    "ExplanationWrongA": "Choice A attaches transaction exposure to translated balance-sheet balances, which describes accounting translation under ASC 830 rather than transaction exposure on contracted cash flows. A candidate picking this has merged translation with transaction concepts; transaction exposure concerns real receivables and payables that settle in foreign currency, not the periodic restatement of reported balances.",
+    "ExplanationWrongB": "Choice B reverses the constructs. Invoice-by-invoice forward matching is precisely the remedy for transaction exposure on booked items, and the claim that transaction exposure lacks derivative hedges is false. Operating exposure instead stems from ongoing competitive positioning that no single forward can offset, so the candidate should swap the hedging logic between the two categories.",
+    "ExplanationWrongC": "Choice C collapses two distinct constructs into one accounting label. ASC 830 remeasurement and translation are measurement conventions for financial reporting; operating exposure is an economic concept about future cash-flow sensitivity that no translation rule defines. Equating them would lead Marcus Webb to apply bookkeeping remedies to a strategic problem requiring sourcing, pricing, and footprint decisions.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-146",
+    "Section": "B",
+    "Stem": "At Flash, CFO Elena Vasquez reviews a treasury briefing prepared by assistant treasurer Marcus Webb covering euro-zone sales billed at approximately EUR 25 million per year plus a wholly-owned German manufacturing subsidiary whose results consolidate into Flash's statements. Webb asks which exposures require which management response. Which statement correctly distinguishes transaction exposure from operating (economic) exposure?",
+    "Topic": "B.146 fx-transaction-versus-operating-exposure",
+    "UniqueConceptKey": "B-146-exposure-taxonomy",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: conceptual taxonomy discrimination fits Understand at Moderate-Easy (2)",
+      "Conceptual item - no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IRC §482 (allocation of income among related entities)",
+      "OECD Transfer Pricing Guidelines (2022)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Worldwide after-tax cash flow is unchanged because consolidated revenue of $12,000 per unit and manufacturing cost of $8,000 per unit are identical under either transfer price.",
+      "B": "Worldwide after-tax cash flow rises by $312,500 per year because $2.5 million of annual profit shifts from the 25% US rate to the 12.5% Irish rate, but pricing below the supported arm's-length range invites IRC §482 adjustments, penalties, and potential double taxation that can erase the saving.",
+      "C": "Worldwide after-tax cash flow rises by $1,250,000 per year because the full $2.5 million of shifted profit escapes taxation entirely once it leaves the US jurisdiction.",
+      "D": "Worldwide after-tax cash flow falls by $625,000 per year because the Irish tax increase on the added subsidiary profit exceeds the US tax decrease on the smaller parent margin."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Ignoring separate taxing jurisdictions when transfer prices shift profit",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Under IRC §482 and OECD principles, related-party prices allocate taxable income among jurisdictions even though Flash's consolidated pre-tax income is fixed at $4,000 per unit. Reducing the price from $9,000 to $8,500 shifts $500 per unit of profit from Flash US (25% tax) to the Irish subsidiary (12.5% tax): US tax falls $125 per unit while Irish tax rises only $62.50 per unit, a net worldwide saving of $62.50 x 5,000 units = $312,500 annually, equal to $2.5 million shifted profit times the 12.5-point rate differential. For VP of Tax Daniel Okafor the analysis cuts both ways: the cash-flow gain is real, but pricing below the defensible cost-plus range exposes the group to §482 reallocations, accuracy-related penalties, and denied deductions abroad that can exceed the $312,500 benefit, so the saving must be weighed against audit risk rather than booked as free cash.",
+    "ExplanationWrongA": "Choice A reasons from consolidated pre-tax figures and concludes neutrality, ignoring that Flash US and the Irish subsidiary file in separate jurisdictions with 25% and 12.5% rates. The same $500-per-unit shift changes total tax paid even though combined revenue and cost are fixed; the misconception is treating the group as a single taxpayer.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C credits the entire $2.5 million shifted profit as escaping tax. Ireland taxes that profit at 12.5%, so only the rate differential of 12.5 points ($312,500) becomes a worldwide saving. A candidate choosing this has ignored the destination jurisdiction's charge; correct practice nets the US decrease of $125 per unit against the Irish increase of $62.50 per unit across 5,000 units.",
+    "ExplanationWrongD": "Choice D gets the direction backwards: it assumes the Irish tax increase outweighs the US decrease. In fact the low-rate jurisdiction absorbs the profit, so the Irish increase ($62.50 per unit) is smaller than the US decrease ($125 per unit), producing a net gain of $312,500 rather than a loss of $625,000. The error typically comes from applying the 25% rate to the Irish increment.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-147",
+    "Section": "B",
+    "Stem": "Flash's US parent builds industrial gearboxes at $8,000 per unit and sells them to its wholly-owned Irish distribution subsidiary, which resells to external customers at $12,000 per unit; volume runs 5,000 units per year. The current transfer price is $9,000 per unit, supported by a cost-plus functional analysis, and the bottom of that defensible range is $8,500. The US combined federal and state rate is 25% and the Irish corporate rate is 12.5%. VP of Tax Daniel Okafor analyzes lowering the transfer price to $8,500. Which analysis best captures the effect on Flash's total worldwide after-tax cash flow?",
+    "Topic": "B.147 transfer-pricing-worldwide-cash-flow-effects",
+    "UniqueConceptKey": "B-147-tp-cash-flow-shift",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-jurisdiction decomposition plus audit-risk trade-off supports Analyze at Difficult (4)",
+      "Recomputation: dTP 500 x (25.0% - 12.5%) = 62.50/unit x 5,000 units = $312,500 saved annually",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (marginal cost of capital schedule; WACC component costs)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "9.71%",
+      "B": "8.96%",
+      "C": "11.15%",
+      "D": "8.91%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using retained-earnings cost beyond the breakpoint instead of new-issue equity cost",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The marginal cost of capital schedule steps up where internal equity runs out. The retained-earnings breakpoint equals retained earnings divided by the equity weight: $18.0M / 0.50 = $36.0 million of total financing. Beyond that point each new equity dollar is newly issued stock costing 13.50%, so under catalog formula CB-05 the marginal WACC = 0.40 x 5.40% + 0.10 x 8.00% + 0.50 x 13.50% = 2.16% + 0.80% + 6.75% = 9.71%. For FP&A director Tom Reilly the practical consequence is that Flash projects funded above the first $36.0 million tier must clear 9.71%, not the 8.96% available inside the retained-earnings tier; screening marginal investments at the lower figure would accept projects that dilute shareholder returns.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B computes the WACC inside the retained-earnings tier by keeping the 12.00% internal-equity cost (2.16% + 0.80% + 6.00% = 8.96%) instead of the 13.50% new-issue cost that applies beyond the breakpoint. The error applies exhausted internal funds to marginal dollars; past $36.0 million every equity component must be raised externally at the higher cost.",
+    "ExplanationWrongC": "Choice C drops the debt tax shield, weighting the pre-tax 9.00% borrowing cost: 0.40 x 9.00% + 0.10 x 8.00% + 0.50 x 13.50% = 3.60% + 0.80% + 6.75% = 11.15%. Interest is deductible, so CB-05 requires the after-tax 5.40%; using the pre-tax figure overstates the hurdle by 144 basis points and would wrongly reject marginal projects near the true 9.71% threshold.",
+    "ExplanationWrongD": "Choice D omits preferred stock entirely without renormalizing weights, summing only 0.40 x 5.40% + 0.50 x 13.50% = 2.16% + 6.75% = 8.91%. Dropping the 10% preferred slice understates the blend; every financing dollar still carries the preferred dividend obligation, so the correct schedule retains all three components at their 40/10/50 target weights.",
+    "FormulaReference": "CB-05",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-148",
+    "Section": "B",
+    "Stem": "Flash finances at a target structure of 40% debt, 10% preferred stock, and 50% common equity. Component costs are: after-tax debt 5.40%, preferred 8.00%, retained earnings 12.00%, and newly issued common equity 13.50%. FP&A director Tom Reilly projects $18.0 million of retained earnings available for the coming year's capital program. What is Flash's marginal weighted-average cost of capital for capital-budgeting dollars raised beyond the retained-earnings breakpoint?",
+    "Topic": "B.148 marginal-wacc-above-retained-earnings-breakpoint",
+    "UniqueConceptKey": "B-148-marginal-wacc-breakpoint",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: breakpoint identification plus stepped schedule computation fits Apply at Moderate (3)",
+      "Recomputation: BP = 18.0 / 0.50 = 36.0M; WACC = 0.40(5.40) + 0.10(8.00) + 0.50(13.50) = 2.16 + 0.80 + 6.75 = 9.71%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "CAPM (Sharpe, 1964; Lintner, 1965)",
+      "Modern Portfolio Theory (Markowitz, 1952)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Beta measures a security's total return volatility measured standalone, capturing every source of movement in its own price series.",
+      "B": "Beta measures the covariance between a security's returns and the returns on the risk-free asset used as the baseline input in portfolio construction.",
+      "C": "Beta measures a security's sensitivity to systematic market movements - the tendency of its returns to move with the overall market - and represents the risk component that diversification cannot eliminate.",
+      "D": "Beta measures firm-specific variance arising from events such as labor disputes or product recalls, which investors can diversify away by holding many unrelated securities."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Confusing beta (systematic risk) with standard deviation (total risk)",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Within Modern Portfolio Theory and CAPM (Sharpe-Lintner), beta is defined as the sensitivity of a security's returns to systematic market movements, estimated as the covariance of the security with the market divided by market variance; the market itself carries beta 1.0. Diversification removes unsystematic, firm-specific risk but leaves systematic risk untouched, so beta prices the only risk the market rewards. For controller Priya Chen's analyst onboarding at Flash, the practical reading is that a stock with beta 1.3 tends to amplify market swings by roughly 30%, and CAPM feeds that beta directly into the required return Rf + beta(Rm - Rf) when Flash evaluates its own equity cost.",
+    "ExplanationWrongA": "Choice A defines total risk (standard deviation), the measure behind portfolio variance, not beta. Standalone volatility mixes systematic and diversifiable sources, whereas beta isolates only the market-linked component; the candidate should connect this answer to sigma-based rankings rather than to CAPM inputs.",
+    "ExplanationWrongB": "Choice B anchors covariance to the wrong benchmark. Beta is computed against the market portfolio's returns, not against the risk-free asset, whose returns carry essentially zero covariance with equities. The misconception confuses the CAPM baseline rate Rf with the reference series used to estimate relative sensitivity.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D describes unsystematic risk - idiosyncratic events such as labor disputes and product recalls - which diversification eliminates and which beta deliberately excludes. A candidate choosing this has inverted the classification: beta captures precisely the residual, undiversifiable market exposure that remains after holding a broad portfolio.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-149",
+    "Section": "B",
+    "Stem": "During finance-team onboarding at Flash, controller Priya Chen asks new analysts to state the textbook definition of beta as used in portfolio theory and the Capital Asset Pricing Model. Which statement correctly defines beta?",
+    "Topic": "B.149 beta-systematic-risk-definition",
+    "UniqueConceptKey": "B-149-beta-definition",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-definition recall at Easy (1) matches Remember cap",
+      "Conceptual item - no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "COSO ERM 2017 (risk response: accept, avoid, reduce, share)",
+      "International finance theory (political risk management)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Fund the plant entirely with Flash equity held at the US parent to preserve sole strategic control, accepting that uninsured exposure to expropriation and transfer restriction sits wholly on Flash's balance sheet.",
+      "B": "Structure a 50/50 joint venture with a well-connected local industrial group and layer multilateral political-risk insurance covering expropriation and currency inconvertibility, trading some control for shared political access and insured downside protection.",
+      "C": "Fund the plant primarily with local-currency bank debt so local lenders absorb the transfer risk, keeping Flash's own equity contribution minimal while retaining operational direction.",
+      "D": "Postpone entry until after next year's contested elections, avoiding current political uncertainty and preserving the option to invest later once the policy environment settles."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Equating local-currency debt funding with complete political-risk insulation",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "COSO ERM 2017 frames the choice among accept, avoid, reduce, and share responses, and CFO Elena Vasquez must weigh protection against control and opportunity for a EUR 60 million commitment facing election-driven transfer restrictions. Option B shares risk with a partner whose local standing lowers the probability of arbitrary action, while multilateral insurance transfers residual expropriation and inconvertibility severity off Flash's balance sheet at premium cost - a combined reduce-and-share posture consistent with board risk appetite. Options A and C each mitigate one dimension while concentrating another (uninsured seizure exposure; lender leverage plus refinancing fragility), and D avoids the exposure at the cost of ceding first-mover supply contracts in a region central to Flash's growth plan. The recommendation rests on judgment between genuinely defensible structures, which is why pairing risk sharing with insurance outranks reliance on any single funding lever.",
+    "ExplanationWrongA": "Choice A maximizes control but concentrates uninsured exposure: full parent-held equity gives expropriating authorities and exchange-control regulators a single, visible target, and no insurance or partner standing tempers severity. The candidate overweighted the control dimension while leaving the board's downside unprotected - the opposite trade-off from the reduce-and-share package the risk assessment supports.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C mistakes funding currency for comprehensive protection. Local-currency debt shifts convertibility exposure toward local lenders and can cheapen financing, but it introduces covenant and refinancing pressure precisely when crisis hits, grants creditors influence during distress, and does nothing about expropriation of Flash's thin equity stake or operational interference. Single-lever fixes fail where probability and severity must both be addressed.",
+    "ExplanationWrongD": "Choice D selects pure avoidance, controlling uncertainty at a strategic price the facts do not justify: deferral forfeits locked-in customer contracts, lets competitors occupy the supply position, and still leaves election outcomes unresolved when the option window closes. COSO ERM treats avoidance as one response among four; here the insured-share alternatives deliver protection without abandoning the growth thesis.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-150",
+    "Section": "B",
+    "Stem": "Flash weighs building a EUR 60 million components plant in a country facing contested national elections and possible currency-transfer restrictions within twelve months. CFO Elena Vasquez presents three structures to the board: full owner equity funded from the US parent; a 50/50 joint venture with a well-connected local industrial group combined with multilateral political-risk insurance covering expropriation and inconvertibility; or primary funding through local-currency bank debt with a minimal equity stake. Which recommendation is most defensible given competing protection, control, and opportunity considerations?",
+    "Topic": "B.150 political-risk-mitigation-structure-choice",
+    "UniqueConceptKey": "B-150-political-risk-mitigation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: named decision-maker weighing three defensible structures meets Evaluate floor (5 >= 4)",
+      "Conceptual item - no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Working-capital management theory (cash budgeting)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "No borrowing is required because April receipts cover supplier payments with a surplus of $6.4 million.",
+      "B": "$0.6 million, enough to cover the month's cash shortfall.",
+      "C": "$3.5 million, reflecting the deficit after recording depreciation of $0.9 million as an operating disbursement.",
+      "D": "$2.6 million, the amount needed to restore the projected ending balance to the $2.0 million policy minimum."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Counting non-cash depreciation as a disbursement in the cash budget",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "A cash budget tracks only cash movements. Total receipts = beginning cash $1.2M + collections $14.8M = $16.0M. Total disbursements = suppliers $9.6M + wages $3.1M + other operating cash costs $1.4M + equipment $2.5M = $16.6M; the $0.9M depreciation is non-cash and stays outside the schedule. Projected ending balance before financing = $16.0M - $16.6M = $(0.6)M, so treasurer Marcus Webb must arrange borrowings of $2.0M - $(0.6)M = $2.6 million to satisfy the minimum-balance policy. In business terms Flash needs a committed line draw of $2.6M even though April looks close to break-even - exactly the visibility the budget exists to create before payroll and supplier dates arrive.",
+    "ExplanationWrongA": "Choice A compares receipts only against supplier payments ($14.8M + $1.2M beginning cash versus $9.6M) and ignores wages, other operating costs, and the equipment purchase totaling $7.0M. Once all disbursements enter, the month runs a $0.6M deficit before financing, so the surplus conclusion collapses; partial-budget comparisons are the classic cash-planning trap.",
+    "ExplanationWrongB": "Choice B nets the month correctly ($16.0M receipts less $16.6M disbursements = $0.6M deficit) but stops at restoring zero instead of reaching the policy floor. The misconception treats the $2.0M minimum as optional; the draw must lift the projected ending balance to $2.0M, adding $2.0M on top of the $0.6M gap for $2.6M in total borrowings.",
+    "ExplanationWrongC": "Choice C inserts depreciation into the disbursement schedule, inflating outflows to $17.5M and the apparent deficit to $1.5M before the minimum, which yields a $3.5M draw. Depreciation allocates prior capital spending; the equipment outflow already appears as the separate $2.5M purchase line, so counting both double-charges April. Cash budgets record only actual cash movements.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-151",
+    "Section": "B",
+    "Stem": "Treasurer Marcus Webb drafts Flash's April cash budget: beginning cash $1.2 million; scheduled collections $14.8 million; supplier payments $9.6 million; wages $3.1 million; other operating cash expenses $1.4 million (depreciation of $0.9 million is excluded from these figures); and an equipment purchase of $2.5 million. Flash policy requires an ending cash balance of at least $2.0 million, with any shortfall funded by a line-of-credit draw. How much must Flash borrow in April?",
+    "Topic": "B.151 cash-budget-financing-requirement",
+    "UniqueConceptKey": "B-151-cash-budget-borrowing",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-line budget assembly with minimum-balance rule fits Apply at Moderate (3)",
+      "Recomputation: inflows 1.2+14.8=16.0; outflows 9.6+3.1+1.4+2.5=16.6; pre-financing end (0.6); borrow 2.0-(0.6)=2.6M",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Signaling theory (Bhattacharya, 1979; Miller-Rock, 1985)",
+      "Modigliani-Miller dividend irrelevance (contrasting framework)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Because managers hold private earnings forecasts and reversing a raise damages credibility and financing access, a sustained increase credibly signals durable cash-flow confidence, moving price by more than the dividend's cash value.",
+      "B": "The increase mechanically raises firm value by the present value of the perpetuity of incremental dividends, so the 6% move simply capitalizes the extra cash stream at the cost of equity.",
+      "C": "The increase tells the market that Flash has run short of positive-NPV reinvestment opportunities and is returning residual cash, which sophisticated investors reward as capital discipline.",
+      "D": "Investors irrationally prize cash dividends over equivalent retained value regardless of information content, so any increase attracts dividend-seeking buyers and lifts the price through demand alone."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Attributing announcement returns solely to the dividend's cash content",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Signaling theory (Bhattacharya; Miller-Rock) explains announcement returns through information asymmetry: managers know more about prospective earnings than outside investors, and a dividend increase is a costly-to-reverse commitment because cutting it later embarrasses management and raises Flash's future financing costs. The action therefore credibly communicates durable cash-flow confidence, so the observed price reaction embeds revised earnings expectations well beyond the few cents of incremental cash distributed. CFO Elena Vasquez accordingly frames the increase to the board as an information commitment rather than a mechanical value transfer; under MM irrelevance the payout itself would not move value absent information, and signaling supplies precisely that informational channel.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B restates the mechanical Miller-Modigliani view that value moves only by the capitalized cash stream, an argument that assumes symmetric information. If the move merely capitalized the increment, the price change would approximate the modest perpetuity value of eight cents per quarter rather than 6%; the oversized reaction is evidence of information content the mechanical framing cannot accommodate.",
+    "ExplanationWrongC": "Choice C grafts the pecking-order and residual-payout story onto a signaling event. A mature-firm narrative about scarce reinvestment opportunities explains why free cash may be returned, but it neither predicts nor requires a positive price surprise tied to private forecasts - it can accompany weak outlooks equally well. What the increase communicated was durable earnings confidence, not investment-set exhaustion.",
+    "ExplanationWrongD": "Choice D appeals to irrational dividend preference regardless of information, which belongs to behavioral or bird-in-hand arguments rather than signaling theory. Under signaling, rational investors read the costly commitment itself; demand-from-dividend-buyer stories explain persistence of payout preference but not why a small, credibly informative raise moved Flash's price by more than its cash value.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-152",
+    "Section": "B",
+    "Stem": "Flash announces its first common-dividend increase in six years - a raise from $0.40 to $0.48 per quarter - and the share price rises about 6% over the following day despite the modest size of the increment. Board questions reach CFO Elena Vasquez asking why the market reacted so strongly. Which explanation reflects dividend signaling theory?",
+    "Topic": "B.152 dividend-increase-signaling-content",
+    "UniqueConceptKey": "B-152-dividend-signaling",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: theory discrimination at Understand fits Moderate-Easy (2)",
+      "Conceptual item - no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (earnouts and contingent consideration in M&A structuring)",
+      "Contract theory (risk allocation and incentive alignment)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The earnout functions as costless deferred financing: payment timing shifts without economic consequence because total consideration stays inside the negotiated envelope.",
+      "B": "The earnout shifts downside valuation risk from Flash to the seller and aligns her incentives, but because Flash controls post-close budgets and effectively shapes the EBITDA measure, she bears discretion risk and will demand defined metrics, agreed budget floors, audit rights, dispute mechanics - and will price the expected payout materially below the $45M cap given threshold probabilities near 55% and 35%.",
+      "C": "Post-close budget authority over Halberd typically stays with the seller's continuing managers under retention arrangements, so measurement discretion rests with the seller and Flash bears the manipulation risk.",
+      "D": "Because the earnout keys to objective EBITDA definitions, the mechanism removes meaningful post-closing disagreement risk between buyer and seller."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Treating capped earnouts as costless deferral rather than repriced risk sharing",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Earnout design reallocates valuation risk and reshapes incentives simultaneously, and the analysis must capture both. Treating the two gates additively, expected contingent consideration approximates (55% + 35%) x $22.5M = $20.25M, so the structure is worth roughly $135M + $20M = $155M to the seller against her $190M ask - she is selling upside and will reprice accordingly. The deeper point for Corporate Development VP Nathan Cole is control asymmetry: after closing, Flash sets Halberd's sales-pipeline spending and shapes how EBITDA is computed in practice, so the counterparty bearing payout uncertainty lacks measurement power. Sound structure therefore couples the earnout to negotiated EBITDA definitions, minimum budget commitments, audit rights, and dispute clauses. This decomposition - risk transfer, incentive alignment, and measurement safeguards together - is what separates a workable bridge from a future lawsuit.",
+    "ExplanationWrongA": "Choice A treats deferred consideration as free. Deferral carries time-value cost to the seller, invites repricing of her expected receipt (roughly $20.25M expected against the $45M cap), and creates incentive and measurement frictions that shape post-close behavior. Calling the mechanism costless ignores that the seller prices every transferred risk back into negotiations.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C misassigns post-close control. Retention packages keep founders employed, but acquirers set budgets, spending authority, and accounting policies - so consolidation places measurement discretion with Flash, which is why the seller, not Flash, faces discretion risk over the metric determining her payout. The misconception flips the principal-agent relationship; whoever controls the inputs controls the measure, and contracts must compensate for that imbalance.",
+    "ExplanationWrongD": "Choice D overtrusts metric objectivity. Even with a written EBITDA definition, disputes arise over revenue-recognition cutoffs on pipeline deals, allocation of shared corporate costs, treatment of extraordinary items, and budget cuts that suppress the very spending generating the earnout. Objective-sounding formulas narrow ambiguity at the margin yet sharpen incentives to litigate definitions; audit and dispute clauses exist precisely because definitional agreement alone settles little.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-153",
+    "Section": "B",
+    "Stem": "Flash negotiates the acquisition of sensor maker Halberd Systems. Founder and CEO Mara Lindqvist asks $190 million. Corporate Development VP Nathan Cole counters with $135 million at closing plus an earnout capped at $45 million: $22.5 million payable if Halberd's next-year EBITDA reaches $18 million, and a further $22.5 million if the following-year EBITDA reaches $22 million. Halberd's standalone forecast puts those thresholds at roughly 55% and 35% likelihood, and Flash will control the acquired unit's sales-pipeline budgets after closing. Which analysis best captures the structural consequences of the earnout?",
+    "Topic": "B.153 earnout-structure-risk-and-incentives",
+    "UniqueConceptKey": "B-153-earnout-analysis",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-factor structuring decomposition supports Analyze at Difficult (4)",
+      "Illustrative expectation check: (0.55+0.35) x 22.5 = $20.25M expected contingent consideration; the answer key does not hinge on it",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (revolver pricing and effective borrowing cost)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "8.00%",
+      "B": "8.71%",
+      "C": "8.21%",
+      "D": "11.64%"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Charging the commitment fee on the full facility rather than the undrawn portion",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Effective revolver cost combines interest on drawn balances with fees on the unused commitment. Interest = $28.0M x 8.00% = $2.24M. The commitment fee attaches only to the undrawn portion: ($40.0M - $28.0M) = $12.0M x 0.50% = $0.06M. Total annual carrying cost = $2.30M against average funds used of $28.0M, giving $2.30M / $28.0M = 8.2143%, rounded to 8.21%. For assistant treasurer Lena Fischer the interpretation matters for facility selection: although the stated drawn rate is 8.00%, the standby fee adds about 21 basis points on utilized dollars, so Flash should compare this 8.21% all-in figure against term-loan and commercial-paper alternatives rather than quoting the headline spread alone.",
+    "ExplanationWrongA": "Choice A quotes the stated drawn rate and drops the standby fee altogether. The fee compensates the bank for reserving the unused $12M capacity whether or not Flash draws, so the true cost of utilized funds exceeds 8.00%; effective-rate comparisons require adding the $0.06M reservation charge to the $2.24M of interest before dividing by amounts used.",
+    "ExplanationWrongB": "Choice B computes the fee on the entire $40M commitment ($40.0M x 0.50% = $0.20M) instead of the $12.0M undrawn portion, yielding ($2.24M + $0.20M)/$28.0M = 8.71%. Commitment fees attach to what Flash leaves unused; charging them on borrowed dollars double-counts capacity that was actually drawn down and converted into interest-bearing balances.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D accrues interest on the full facility ($40.0M x 8.00% = $3.20M) plus the undrawn fee, producing ($3.20M + $0.06M)/$28.0M = 11.64%. Interest accrues only on outstanding borrowings; the idle $12M carries just the 0.50% reservation fee. The error conflates commitment size with utilization and grossly overstates the effective rate Flash actually pays.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-154",
+    "Section": "B",
+    "Stem": "Flash maintains a $40 million revolving credit facility priced at 8.00% interest on outstanding borrowings plus a 0.50% annual commitment fee on the undrawn portion, both settled on average balances. Assistant treasurer Lena Fischer plans average drawings of $28 million across the coming year, with no other facility charges anticipated. What is the effective annual cost of the facility on the funds Flash uses?",
+    "Topic": "B.154 revolver-commitment-fee-effective-cost",
+    "UniqueConceptKey": "B-154-revolver-effective-cost",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: two-component effective-rate build fits Apply at Moderate (3)",
+      "Recomputation: fee 12.0 x 0.50% = 0.06M; interest 28 x 8.00% = 2.24M; (2.24+0.06)/28 = 8.2143% -> 8.21%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Securities Act of 1933 §3(a)(3) (commercial paper exemption)",
+      "Corporate finance theory (short-term financing instruments)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Commercial paper consists of unsecured short-term promissory notes issued by highly rated corporations, customarily sold at a discount from face value and typically maturing within 270 days so issuance avoids Securities Act registration.",
+      "B": "Commercial paper is short-term debt secured by a pledge of accounts receivable and inventory, with collateral released as the underlying assets convert to cash.",
+      "C": "Commercial paper is a long-term capital-market instrument paying semiannual coupon interest and ranking senior to secured bank loans in liquidation.",
+      "D": "Commercial paper is issued primarily by commercial banks, with principal and discount guaranteed by the FDIC's deposit-insurance framework."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Assuming commercial paper is secured short-term bank debt",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "By definition, and under the Securities Act of 1933 §3(a)(3) exemption, commercial paper comprises unsecured short-term promissory notes of highly rated corporations and finance companies, customarily issued at a discount from face and typically maturing in 270 days or less - the ceiling that keeps issuance outside SEC registration. Flash-sized industrials use CP as a low-cost seasonal working-capital source sold largely through dealers or direct placement to money-market funds, with backup bank lines supporting rollover. For assistant treasurer Lena Fischer's training session the takeaway is the instrument's twin identity: cheapest routine short-term funding available to strong credits, yet unsecured fallback-free paper whose safety depends wholly on issuer rating.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B describes asset-backed borrowing, not commercial paper. CP carries no pledge of receivables or inventory - its credit rests entirely on the issuer's rating and backup liquidity lines. The misconception imports secured-lending logic into an unsecured discount instrument; the contrast to teach is collateralized working-capital loans versus signature-based paper.",
+    "ExplanationWrongC": "Choice C relocates the instrument to the long-term market and adds coupon interest plus seniority over secured claims. CP matures within months, pays discount interest rather than coupons, and as unsecured debt ranks behind secured creditors in liquidation. Each attribute listed belongs to bond-market debt; none survives contact with the statutory definition under §3(a)(3).",
+    "ExplanationWrongD": "Choice D misidentifies issuer and protection. Banks do sell CP, but the instrument is overwhelmingly a corporate and finance-company obligation, and FDIC insurance covers deposits at member banks - it guarantees no money-market security. Holders of commercial paper bear unsecured issuer credit risk, which is precisely why ratings and backup lines dominate its market.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-155",
+    "Section": "B",
+    "Stem": "As part of treasury staff cross-training at Flash, assistant treasurer Lena Fischer quizzes a rotating analyst on money-market instruments. Which statement accurately describes commercial paper?",
+    "Topic": "B.155 commercial-paper-characteristics",
+    "UniqueConceptKey": "B-155-commercial-paper",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: instrument-characteristic recall at Easy (1) matches Remember cap",
+      "Conceptual item - no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "UCC Article 9 (assignment of accounts receivable)",
+      "Corporate finance theory (receivables financing and factoring)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Choose the bank line: the factor's 1.5% fee on face amounts is visibly expensive compared with a 10% loan rate, and relationship lending keeps Flash's credit function intact.",
+      "B": "Choose factoring WITH recourse: collecting from customers internally preserves relationships, and the quoted fee already compensates the factor for the service.",
+      "C": "Continue self-managing collections and decline both proposals: factoring fees exceed any realistic savings available from outsourcing the credit function.",
+      "D": "Choose the WITHOUT-recourse factoring arrangement: all-in monthly economic cost is roughly $41k versus about $137k under the loan path once eliminated bad debts and credit-department costs are counted, and default risk transfers to the factor."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Comparing stated factor fees with loan interest without netting transferred costs",
+    "CorrectChoice": "D",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "The decision turns on total economic cost, not headline rates. Loan path per month: interest $4.8M x (10%/12) = $40k, plus credit department $25k, plus bad debts $6.0M x 1.2% = $72k - about $137k. Without-recourse factoring: advance interest $4.8M x 1% = $48k plus factor fee $6.0M x 1.5% = $90k, offset by the $72k of losses the factor now absorbs and the $25k department Flash retires - about $41k net. That ~$96k monthly (~$1.15M annual) advantage, together with transfer of default risk under UCC Article 9 assignment rules, makes CFO Elena Vasquez's board recommendation clear: the expensive-looking 1.5% fee is cheaper than the risk and overhead it replaces. Judgment enters because the comparison spans financing cost, operating cost, and risk transfer simultaneously - no single number decides it, which is what qualifies this as a genuine evaluate-level call between defensible proposals.",
+    "ExplanationWrongA": "Choice A compares the factor's stated 1.5% fee against the loan's 10% rate without completing either column. Netting all monthly components - $40k interest + $25k department + $72k losses for the loan versus $48k + $90k less $97k of avoided costs for the factor - reverses the surface impression; headline-rate comparisons are precisely the evaluation error the numbers expose.",
+    "ExplanationWrongB": "Choice B keeps recourse, which preserves the $72k monthly bad-debt expense on Flash's books: $48k + $90k - $25k = $113k net versus $41k for the without-recourse version on the same quoted terms. Relationship preservation has value, but paying nearly triple the net cost to retain default risk the factor offered to absorb fails the arithmetic test the memo must survive.",
+    "ExplanationWrongC": "Choice C declines both options after eyeballing fees against savings. The quantified comparison shows outsourcing saves roughly $96k per month even net of the factor's charges, so status quo is the most expensive path on the table. The error is rejecting a proposal on label impressions where the assembled cost columns decide decisively the other way.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-156",
+    "Section": "B",
+    "Stem": "Flash records credit sales of $6.0 million per month, historical bad debts of 1.2% of credit sales, and a credit department costing $25,000 per month. To fund its receivables investment, Flash compares a committed $4.8 million bank line at 10% APR against a factor's without-recourse proposal: purchase of the receivables with a 1.5% fee on face amounts and advances of 80% of face at 12% APR. CFO Elena Vasquez must recommend a course to the board. Which recommendation is best supported?",
+    "Topic": "B.156 without-recourse-factoring-recommendation",
+    "UniqueConceptKey": "B-156-factoring-decision",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: named decision-maker integrating financing, operations, and risk transfer meets Evaluate floor (5 >= 4)",
+      "Recomputation: loan path 40+25+72 = 137k/mo; factoring net 48+90-72-25 = 41k/mo; advantage ~96k/mo",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (serial bond debt-service scheduling)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$13.0 million",
+      "B": "$12.4 million",
+      "C": "$11.8 million",
+      "D": "$10.0 million"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Computing interest on the original $50M face throughout the serial life",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Serial obligations retire principal in installments, so interest follows the declining outstanding balance rather than the original face. Entering Year 3, two $10M retirements have occurred, leaving $50M - $20M = $30M outstanding. Year 3 debt service = interest $30M x 6.00% = $1.8M plus principal retirement $10M, totaling $11.8 million. Finance manager Raj Patel needs this declining profile for treasury planning: Flash's aggregate burden falls each year ($13.0M in Year 1, $12.4M in Year 2, $11.8M in Year 3), which is the amortization property that makes serial structures attractive against a bullet issue whose single maturity forces one large refinancing event.",
+    "ExplanationWrongA": "Choice A holds interest constant at the original-face level ($50M x 6% = $3.0M) and adds the $10M installment for $13.0M. After $20M has retired, only $30M remains outstanding, so Year 3 interest is $1.8M; carrying the initial balance through the schedule overstates service by $1.2M and misstates every later year as well.",
+    "ExplanationWrongB": "Choice B reproduces the Year 2 figure: opening balance $40M x 6% = $2.4M interest plus $10M principal = $12.4M. It is off by one retirement - by Year 3 the second installment has already been paid, cutting the balance to $30M; off-by-one-period errors are the standard failure mode in declining-balance schedules.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D reports principal alone, omitting the $1.8M interest accrued on the $30M still outstanding during Year 3. Debt-service budgeting includes both the retirement installment and the period's coupon cost; dropping interest understates Flash's cash requirement and distorts sinking-fund planning for the notes.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-157",
+    "Section": "B",
+    "Stem": "Flash issued $50 million of serial equipment notes bearing 6.00% annual interest on the outstanding principal, with $10 million of principal retiring at the end of each of Years 1 through 5. Finance manager Raj Patel is building the debt-service schedule for treasury planning. What total debt service (interest plus principal) falls due in Year 3?",
+    "Topic": "B.157 serial-notes-year-three-debt-service",
+    "UniqueConceptKey": "B-157-serial-debt-service",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: declining-balance scheduling fits Apply at Moderate (3)",
+      "Recomputation: Yr3 opening principal 50 - 2(10) = 30; interest 30 x 6% = 1.8; + 10 principal = 11.8M",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "IRC §1(h) and §1411 (capital gain and NIIT rates)",
+      "Corporate finance theory (tax-preference explanation for repurchase preference)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "The repurchase returns value with only appreciation taxed at realization for tendering holders - roughly $5.95M now versus $14.28M under the dividend - while nontendering shareholders defer entirely, leaving substantially more after-tax wealth in shareholders' hands under the same $60M outlay.",
+      "B": "The two routes are economically identical for shareholders because qualified dividends and long-term gains are taxed at the same 23.8% combined federal rate, so the form of distribution carries no consequence.",
+      "C": "The dividend dominates because qualified-dividend taxation is lighter than the treatment repurchasing shareholders receive, making the cash payout the tax-efficient channel for returning Flash's $60 million.",
+      "D": "The repurchase raises total shareholder taxes because tendering shareholders pay tax on the entire $120-per-share proceeds rather than on the gain element, effectively converting basis recovery into taxable income."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Ignoring cost basis when taxing repurchase proceeds versus dividends",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Tax asymmetry between distribution forms drives modern buyback preference, and the decomposition runs through basis and timing. Dividend route: every one of Flash's 10 million shares receives $6.00 taxable currently, generating 10M x $6.00 x 23.8% = $14.28M of immediate shareholder-level tax. Repurchase route at $120 with $70 average basis: tendering holders recognize gain of $50 per share, paying 500,000 x $50 x 23.8% = $5.95M now, recover basis tax-free, and the remaining 9.5 million holders owe nothing until they choose to sell - a valuable deferral option. The same $60M leaves the company either way, but current tax differs by $8.33M and the remainder merely shifts into the future at shareholder discretion. Controller Priya Chen's committee analysis therefore shows why equal statutory rates do not imply equal outcomes: basis recovery and timing control, not the headline rate, produce the asymmetry.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B fixes on equal statutory rates (23.8% on qualified dividends and long-term gains alike) and concludes equivalence. It misses both asymmetries that matter: repurchase tax applies only to gain over basis rather than the full distribution, and nontendering holders realize nothing currently. Equal rates applied to different bases at different times yield materially different wealth, as the $14.28M-versus-$5.95M contrast demonstrates.",
+    "ExplanationWrongC": "Choice C inverts the comparison, treating the qualified-dividend rate as an advantage over repurchases. Buyback gains sit in the same 23.8% combined bracket but apply to a smaller amount (gain only, after basis recovery) and permit deferral - both advantages running toward the repurchase, away from the dividend. The misconception confuses a favorable label with favorable economics.",
+    "ExplanationWrongD": "Choice D taxes the full $120 of repurchase proceeds, ignoring the $70 average basis that returns to tendering shareholders tax-free. Only the $50-per-share appreciation is taxable, which is exactly why the buyback liability falls to $5.95M; taxing basis converts a return of capital into phantom income and manufactures the very disadvantage the choice asserts.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-158",
+    "Section": "B",
+    "Stem": "Flash plans to distribute $60 million to holders of its 10 million shares (price $120). Controller Priya Chen compares a $6.00-per-share cash dividend against a tender repurchase retiring 500,000 shares, where tendering holders' average tax basis is $70 per share. Shareholder-level federal tax on both qualified dividends and long-term gains is 23.8% including the net investment income tax. Which analysis correctly characterizes the tax asymmetry between the two distribution forms?",
+    "Topic": "B.158 repurchase-versus-dividend-tax-asymmetry",
+    "UniqueConceptKey": "B-158-buyback-tax-asymmetry",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: decomposition of bases, rates, and timing across holder groups supports Analyze at Difficult (4)",
+      "Recomputation: dividend tax 10M x 6.00 x 23.8% = 14.28M; buyback tax 0.5M x (120-70) x 23.8% = 5.95M",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "UCC Article 9 (secured transactions)",
+      "UCC Article 7 (warehouse receipts)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Under a floating lien arrangement the lender holds a claim on specifically identified, segregated inventory items whose serial numbers appear in the security agreement and remain fixed during the loan.",
+      "B": "Trust receipt financing suits publicly traded commodity inventories such as grain or fuel oil that are resold anonymously into terminal markets.",
+      "C": "Under a field warehouse arrangement an independent warehousing company erects a controlled enclosure on the borrower's premises, issues a warehouse receipt for the stored goods, and releases inventory only against repayment - tight collateral control with the stock kept nearby.",
+      "D": "Terminal warehousing requires pledged goods to remain on Flash's own production floor, with lenders verifying counts through periodic site inspections."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Treating a floating lien as specific-item collateral control",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Secured inventory-financing forms differ chiefly in degree of lender control, under UCC Article 9 security-interest rules and UCC Article 7 warehouse-receipt doctrine. In a field warehouse setup an independent warehousing company erects a locked, controlled enclosure on the borrower's site, issues a warehouse receipt covering the goods, and releases inventory only as loans are repaid - so Flash keeps high-value components nearby while the lender gains receipt-backed possession rights. The spectrum runs from the floating lien's loose blanket claim over a changing pool (weakest control), through trust receipts for identifiable serialized merchandise released for sale in trust, to off-site terminal warehousing (strongest control, least convenience). Understanding where each form sits on the control-versus-cost continuum is the learning objective assistant treasurer Lena Fischer sets for the rotation.",
+    "ExplanationWrongA": "Choice A describes specific-item collateral with frozen serial numbers, which is the opposite of a floating lien. A floating lien is the loosest security interest: a general claim over a fluctuating pool of inventory that the borrower consumes and replenishes in the ordinary course, giving the lender little item-level control. The misconception upgrades the weakest arrangement into the strongest.",
+    "ExplanationWrongB": "Choice B pairs trust receipts with the wrong inventory type. Trust-receipt financing fits identifiable, serialized durable goods - dealer auto or appliance inventories are classic - released to the borrower for sale in trust with proceeds remitted to the lender; anonymous fungible commodities flowing into terminal markets defeat item-level tracing. The candidate has swapped the paradigm cases between financing forms.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D relocates terminal warehousing onto the borrower's premises, describing nearly the reverse of the arrangement. Terminal (public) warehousing stores pledged goods at the warehouse company's licensed off-site facility, with lender control exercised through possession and receipt issuance rather than borrower-site inspection visits; goods remaining on Flash's production floor under occasional lender walkthroughs describe, at best, an informal floating lien with weak perfection.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-159",
+    "Section": "B",
+    "Stem": "During a treasury rotation review at Flash, assistant treasurer Lena Fischer explains secured inventory-financing alternatives to a new analyst who must distinguish floating liens, trust receipts, field warehousing, and terminal warehousing. Which statement correctly characterizes one of these arrangements?",
+    "Topic": "B.159 secured-inventory-financing-forms",
+    "UniqueConceptKey": "B-159-inventory-financing-forms",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: four-way conceptual discrimination at Understand fits Moderate-Easy (2)",
+      "Conceptual item - no recomputation required",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (divisional cost of capital and risk-adjusted hurdle rates)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "1.40 percentage points; accept, because the IRR exceeds the corporate WACC of 9.20% that governs screening.",
+      "B": "0.60 percentage points; reject, because the project must clear its emerging-products divisional requirement of 11.20%, not the blended corporate rate.",
+      "C": "2.00 percentage points; reject, because the divisional risk adjustment itself defines the acceptance gap.",
+      "D": "3.40 percentage points; accept, because the corporate-minus and division-plus adjustments combine in the project's favor."
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Screening all divisions at the single corporate WACC",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Risk-adjusted hurdle rates prevent cross-subsidy between divisions of differing risk. The emerging-products division's requirement = corporate WACC 9.20% + adjustment 2.00 pp = 11.20%. Against the project's 10.60% IRR the shortfall = 11.20% - 10.60% = 0.60 percentage points, so FP&A director Tom Reilly should reject even though the IRR clears the 9.20% corporate blend. The business logic: accepting risky projects at the blended rate shifts value away from shareholders of safer divisions, whose capital implicitly subsidizes ventures earning less than their risk-adjusted cost; the stable aftermarket-services division correspondingly screens at 8.20%. Single-rate screening systematically over-invests in risky units and under-invests in safe ones, which is the distortion divisional hurdles exist to stop.",
+    "ExplanationWrongA": "Choice A screens at the blended corporate WACC (10.60% - 9.20% = 1.40 pp cushion) and accepts. The error is applying one enterprise-wide rate to a high-risk unit: the project earns less than its 11.20% divisional requirement, so acceptance transfers wealth from low-risk divisions and destroys value even though the corporate-average hurdle appears cleared.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C reports the calibration input - the 2.00 pp risk premium - as though it were the acceptance gap. The premium calibrates the hurdle from the corporate base; the decision quantity is the distance between the calibrated hurdle (11.20%) and the project IRR (10.60%). Confusing parameter with result happens to give the right sign here but would misclassify borderline projects in either direction.",
+    "ExplanationWrongD": "Choice D sums distances with opposite signs (1.40 pp above the corporate rate plus the 2.00 pp adjustment = 3.40 pp) into a composite with no economic meaning and draws an accept conclusion from it. Additive combinations of differently directed adjustments are arbitrary; the discipline is to compute the divisional hurdle once (9.20% + 2.00% = 11.20%) and compare it directly with the project return.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-160",
+    "Section": "B",
+    "Stem": "Flash applies a corporate WACC of 9.20% with divisional risk adjustments: minus 1.00 percentage point for the stable aftermarket-services division and plus 2.00 percentage points for the emerging-products division. FP&A director Tom Reilly screens a proposed emerging-products project with an internal rate of return of 10.60%. By how many percentage points does the project fall short of its risk-adjusted requirement, and what screening decision follows?",
+    "Topic": "B.160 divisional-risk-adjusted-hurdle-shortfall",
+    "UniqueConceptKey": "B-160-divisional-hurdle-gap",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: hurdle calibration plus shortfall computation fits Apply at Moderate (3)",
+      "Recomputation: hurdle 9.20 + 2.00 = 11.20; shortfall 11.20 - 10.60 = 0.60 pp; decision reject",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Trade-off theory of capital structure (Kraus-Litzenberger)",
+      "Modigliani-Miller with corporate taxes",
+      "IRC Section 163 (interest deductibility)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Close now with all-debt funding, publish a 24-month plan to return inside the 40%-45% range out of the $9 million annual free cash flow, and accept the temporary ratings review, because $6.5 million of synergy value far exceeds the roughly $2.2 million annual after-tax carrying cost of the bridge leverage.",
+      "B": "Defer the acquisition for two years and accumulate internal cash for the purchase, preserving the target range and avoiding the ratings review entirely.",
+      "C": "Fund the full $42 million with newly issued equity at trough valuations so the capital structure stays inside the approved range.",
+      "D": "Proceed with debt and formally reset the target range to 52%, since interest tax shields continue to add value at any leverage level."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Treating a target capital range as a hard cap and forfeiting positive-NPV projects",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Trade-off theory governs this call: firm value rises with leverage only while interest tax shields exceed the marginal cost of financial distress. All-debt funding takes debt to $141 million on $302 million of assets (141/302 = 46.7%), breaching the 45% ceiling and the 46% review threshold. The cost of a temporary breach is modest: incremental after-tax interest is $42 million x 7.0% x (1 - 0.25) = $2.205 million per year, versus $6.5 million of synergy value, and the $9 million of free cash flow retires the excess within roughly two years. Recommending the deal with a credible, published path back into the range captures the synergy while containing distress and ratings risk, which is precisely the judgment trade-off theory prescribes for a board weighing competing defensible structures.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Deferring forfeits the $6.5 million synergy value while Flash waits and invites a rival bid for Meridian Components; it also treats the target range as a hard cap rather than the guidepost it is. A two-year internal-accumulation strategy leaves the supplier's cash flows unrealized during the entire wait, a far larger sacrifice than the temporary scrutiny the debt route provokes.",
+    "ExplanationWrongC": "Issuing equity at depressed trough earnings transfers value from existing shareholders by selling cheap stock, and new equity carries the highest component cost of any financing source. Preserving the accounting range is a cosmetic benefit that costs real value here; the range exists to control distress risk, not to block positive-net-present-value acquisitions.",
+    "ExplanationWrongD": "Resetting the target upward to 52% on the strength of tax shields alone ignores the other half of the trade-off: expected distress costs rise sharply once leverage passes sustainable levels, and the ratings review signals exactly that pressure. Deductibility of interest under IRC Section 163 does not make leverage costless at any level the firm chooses.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-161",
+    "Section": "B",
+    "Stem": "Flash Industries' board convenes to decide funding for the $42 million acquisition of Meridian Components, a supplier projected to contribute $6.5 million in present-value synergies. CFO Elena Vasquez reports total assets of $260 million and total debt of $99 million (38.1%), against a board-approved target debt-to-assets range of 40%-45%. Funding entirely with new 7.0% debt lifts total debt to $141 million on pro-forma assets of $302 million (46.7%), crossing a ratings-agency review threshold set at 46%. Flash generates $9 million of annual free cash flow, its stock trades at depressed trough earnings, and existing covenants permit the increase. Which recommendation should Vasquez present to the board?",
+    "Topic": "B.161 target-range-leverage-evaluation",
+    "UniqueConceptKey": "B-161-target-range-leverage-evaluation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: board-level Evaluate weighing quantified shield, distress, rating, and synergy effects across defensible structures",
+      "Key arithmetic: 99+42=141; 141/302=46.7%; carry 42M x 7% x 0.75 = 2.205M/yr",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "CAPM (Sharpe 1964; Lintner 1965)",
+      "Modern Portfolio Theory (Markowitz 1952)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "0.31, obtained by dividing the covariance by the variance of Flash's own returns (0.0020 / 0.0064)",
+      "B": "0.50, the correlation coefficient computed as 0.0020 / (0.0800 x 0.0500)",
+      "C": "0.80, computed as covariance divided by market variance (0.0020 / 0.0025)",
+      "D": "1.60, the relative-volatility ratio of Flash's standard deviation to the market's (0.0800 / 0.0500)"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Dividing covariance by the stock's own variance rather than market variance",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Beta is defined as the covariance of the asset's returns with market returns divided by the variance of market returns: beta = 0.0020 / 0.0025 = 0.80. Under the CAPM framework this beta measures only Flash's systematic, market-related risk, which is why the market's variance - not Flash's own - is the proper denominator. A beta of 0.80 tells Webb's treasury team that Flash shares move less than one-for-one with broad market swings, so the equity return demanded under CAPM will sit at the risk-free rate plus 0.80 times the market risk premium rather than the full premium.",
+    "ExplanationWrongA": "Dividing by 0.0064, the variance of Flash's own returns, mixes the asset into the denominator and yields 0.3125, rounded to 0.31. The definitional beta isolates co-movement with the market, so the market's variance of 0.0025 belongs in the denominator; using the stock's own variance measures nothing meaningful about systematic risk.",
+    "ExplanationWrongB": "The quantity 0.50 is the correlation coefficient, 0.0020 / (0.0800 x 0.0500), a unitless scaling of co-movement that omits relative volatility. Correlation becomes beta only after multiplying by sigma(stock)/sigma(market): 0.50 x (0.0800/0.0500) = 0.80. Reading the correlation off as beta understates Flash's systematic risk here by half.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "The ratio 0.0800 / 0.0500 = 1.60 is relative total volatility, which counts Flash's diversifiable company-specific swings alongside market risk. Beta deliberately strips idiosyncratic movement out through the covariance construction; treating total relative volatility as beta would overstate the systematic component and inflate the CAPM-required return on Flash equity.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-162",
+    "Section": "B",
+    "Stem": "Treasurer Marcus Webb is updating Flash Industries' cost-of-equity inputs. Regression work over the past five years produces a covariance between Flash common-stock returns and broad market returns of 0.0020, a market-return variance of 0.0025, and a standard deviation of Flash's own returns of 0.0800. Using the definitional relationship among beta, covariance, and market variance, what is Flash's beta?",
+    "Topic": "B.162 beta-covariance-computation",
+    "UniqueConceptKey": "B-162-beta-covariance-computation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: single-formula computation requiring correct denominator selection among plausible bases",
+      "Beta = 0.0020 / 0.0025 = 0.80; cross-checks: rho = 0.0020/(0.08x0.05) = 0.50; 0.08/0.05 = 1.60",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Modern Portfolio Theory (Markowitz 1952)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Combining assets lowered systematic risk, which is what standard deviation captures, so the portfolio beta should drift downward as well.",
+      "B": "Correlation below +1 let company-specific return swings cancel, destroying unsystematic risk and pulling total risk below the weighted average, while systematic risk is non-diversifiable and therefore remained at the 0.85 weighted-average beta.",
+      "C": "Whenever total risk falls, portfolio beta falls proportionally, so the steady 0.85 beta indicates the standard deviation was measured incorrectly.",
+      "D": "A combined standard deviation below the weighted average proves the two holdings were negatively correlated over the measurement window."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Assuming portfolio beta shrinks when diversification cuts total risk",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "This is the core prediction of Modern Portfolio Theory: total risk decomposes into systematic plus unsystematic components, and only the unsystematic piece responds to diversification. With imperfect correlation (implied near +0.32 by the figures), idiosyncratic swings of the leasing partnership and the index offset one another, cutting portfolio standard deviation to 11.6% - well under the 14% weighted average of standalone risks. Market-driven movement cannot be cancelled this way because every security shares exposure to the same common factors; hence beta simply remained at the 0.85 weighted average. For Priya Chen's committee, the lesson is that the achieved reduction is real but confined to diversifiable risk, so expected-return compensation continues to attach only to the systematic component that remains.",
+    "ExplanationWrongA": "Systematic risk is, by definition, the non-diversifiable component tied to common market factors. Standard deviation measures total risk, and the observed decline came entirely from the unsystematic side; the unchanged weighted-average beta confirms systematic exposure never moved, contradicting this reading outright.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Total risk and beta measure different constructs and need not move together. The stable 0.85 beta is exactly what theory predicts when diversification eliminates only idiosyncratic volatility, so it corroborates the standard-deviation measurement rather than impeaching it; no measurement error is required to reconcile the two observations.",
+    "ExplanationWrongD": "Negative correlation is sufficient to push combined risk far below the weighted average, but it is not necessary; any correlation below +1 produces some offsetting. The observed 11.6% result is consistent with a mildly positive correlation of roughly +0.32, so the data support no such strong claim about negative co-movement.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-163",
+    "Section": "B",
+    "Stem": "Flash Industries' pension oversight committee, chaired by controller Priya Chen, added a specialized equipment-leasing partnership to an established index allocation at a 50/50 weighting. Standalone annualized return standard deviations are 18% for the leasing partnership and 10% for the index portion - a 14% weighted average at equal weights - yet the combined portfolio's standard deviation came in at 11.6%. At the same time, the portfolio's beta landed almost exactly on the 0.85 weighted average of the two holdings' betas. Which analysis best explains this outcome?",
+    "Topic": "B.163 diversification-total-risk-decomposition",
+    "UniqueConceptKey": "B-163-diversification-total-risk-decomposition",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: requires reconciling two conflicting observations via systematic/unsystematic decomposition",
+      "Implied correlation check: 0.25(0.0324)+0.25(0.0100)+0.5(rho)(0.0180)=0.013456 gives rho ~= +0.32, i.e. below +1",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Pecking-order theory (Myers-Majluf 1984)",
+      "Trade-off theory of capital structure",
+      "Modigliani-Miller propositions"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Both theories predict that firms converge on a specific optimal debt ratio determined by balancing tax shields against distress costs.",
+      "B": "Pecking-order theory favors issuing new equity first, because information asymmetry makes equity the cheapest external source for outside investors to evaluate.",
+      "C": "Trade-off theory concludes that capital structure is irrelevant to firm value, leaving managers free to select financing without consequence.",
+      "D": "Trade-off theory weighs interest tax shields against financial distress costs and therefore implies a target leverage zone, whereas pecking-order theory, driven by asymmetric information, ranks financing choices from internal funds to debt to new equity and implies no leverage target."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Attributing a leverage target to pecking-order theory",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Trade-off theory (rooted in Modigliani-Miller with corporate taxes) treats leverage as a balance: interest deductions add value while rising default probability subtracts it, so each firm has a target or range where the marginal effects offset. Pecking-order theory (Myers and Majluf, 1984) starts from asymmetric information: insiders know more than outside investors, so newly issued equity is the most information-sensitive and expensive source of funds. Firms therefore spend retained earnings first, issue debt second, and sell equity last - accumulating whatever debt ratio results from cumulative financing surpluses and deficits rather than aiming at a target. Okafor's point for the analysts is that one theory explains where leverage should settle, while the other explains the sequencing of financing choices; the two frameworks answer different questions.",
+    "ExplanationWrongA": "Assigning a convergence target to both theories reverses pecking-order's central claim: because financing follows a strict spending hierarchy, observed debt ratios are the cumulative residue of financing surpluses and deficits, not an optimum. Only the trade-off framework produces a tax-shield-versus-distress balancing point.",
+    "ExplanationWrongB": "Information asymmetry raises the perceived cost of new equity, because outside investors discount shares offered by better-informed managers. That is precisely why pecking-order theory places equity last, not first; this statement stands the financing hierarchy on its head and would misdirect Okafor's analysts on sequencing.",
+    "ExplanationWrongC": "Capital-structure irrelevance is the Modigliani-Miller proposition under perfect, frictionless markets - no taxes, no distress, no asymmetry. Trade-off theory departs from that benchmark precisely by introducing real-world frictions, and it is those frictions that generate an interior optimum rather than indifference among mixes.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-164",
+    "Section": "B",
+    "Stem": "During onboarding for Flash Industries' new financial analysts, vice president of finance Daniel Okafor contrasts the two dominant capital-structure theories. Which statement correctly distinguishes trade-off theory from pecking-order theory?",
+    "Topic": "B.164 tradeoff-pecking-order-distinction",
+    "UniqueConceptKey": "B-164-tradeoff-pecking-order-distinction",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Understand-level conceptual contrast capped at score 2 per Rule 11",
+      "Consistency check: correct choice pairs trade-off=target zone with pecking-order=hierarchy/no target per Myers-Majluf",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Modern Portfolio Theory (Markowitz 1952)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "0.00%, because the two weighted risk contributions (60% x 8.0% = 4.8% and 40% x 12.0% = 4.8%) exactly offset one another",
+      "B": "8.31%, from the square root of [0.60^2(8.0%)^2 + 0.40^2(12.0%)^2 + 2(0.60)(0.40)(0.50)(8.0%)(12.0%)]",
+      "C": "6.79%, from the square root of [0.60^2(8.0%)^2 + 0.40^2(12.0%)^2], omitting the covariance term",
+      "D": "9.60%, the weighted average of the two standalone standard deviations (0.60 x 8.0% + 0.40 x 12.0%)"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Substituting the weighted average of standalone risks for the two-asset formula",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Portfolio risk combines variances and a covariance: sigma(p)^2 = (0.60^2)(0.0800^2) + (0.40^2)(0.1200^2) + 2(0.60)(0.40)(0.50)(0.0800)(0.1200) = 0.002304 + 0.002304 + 0.002304 = 0.006912, so sigma(p) = sqrt(0.006912) = 0.0831, or 8.31%. Because the +0.50 correlation sits well below +1, the venture fund's idiosyncratic swings partly cancel the index's, and total risk lands nearly two percentage points under the 9.6% weighted average of the standalone deviations. Webb's committee obtains genuine diversification benefit without giving up the 10.2% blended expected return (0.60 x 9% + 0.40 x 12%) - the essential Markowitz argument for spreading the strategic reserve across imperfectly correlated vehicles.",
+    "ExplanationWrongA": "Perfect-negative-correlation reasoning produced the 0.00% figure: with equal weighted risk contributions of 4.8% each, a correlation of -1 would indeed annihilate all risk. The estimate supplied is +0.50, so the cross term adds 0.002304 to total variance rather than subtracting an equal amount; assuming full offset discards the correlation input entirely.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Dropping the covariance term 2(0.60)(0.40)(0.50)(0.0800)(0.1200) = 0.002304 treats the two assets as uncorrelated and understates combined risk at 6.79%. The committee's own estimate of +0.50 correlation means co-movement contributes positively to variance, so the cross term belongs in the formula; ignoring it flatters the diversification actually available.",
+    "ExplanationWrongD": "The 9.60% weighted average is the combined risk level that would obtain only under perfect positive correlation (+1). Diversification at +0.50 correlation necessarily produces lower total risk than either the weighted average or the riskier asset alone, which is the entire analytical basis for allocating the reserve across both positions.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-165",
+    "Section": "B",
+    "Stem": "Flash Industries' investment committee, led by treasurer Marcus Webb, allocates a $20 million strategic reserve: 60% to a machinery-alliance venture fund expected to return 9% with a return standard deviation of 8.0%, and 40% to a broad equity index expected to return 12% with a standard deviation of 12.0%. The correlation between the two return streams is estimated at +0.50. What is the expected standard deviation of the combined portfolio's returns?",
+    "Topic": "B.165 two-asset-portfolio-standard-deviation",
+    "UniqueConceptKey": "B-165-two-asset-portfolio-sd-correlation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: multi-term formula execution where every input must land in its proper place",
+      "sigma^2 = 0.002304+0.002304+0.002304 = 0.006912; sqrt = 0.083138 -> 8.31%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (Brealey-Myers)",
+      "Trade-off theory of capital structure"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The particular mix of debt and equity financing that minimizes the firm's weighted-average cost of capital and thereby maximizes firm value for shareholders.",
+      "B": "The financing mix that minimizes the income tax expense the corporation reports in the current fiscal year.",
+      "C": "The combination of securities that maximizes the total dollar amount of interest tax shields the firm can generate.",
+      "D": "The proportion of debt that brings the firm's leverage ratio in line with the published average of its industry peer group."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Equating optimal structure with minimum taxes or peer-average leverage",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "By definition, the optimal capital structure is the debt-equity mix that minimizes WACC; because firm value equals the discounted stream of operating cash flows, a cheaper weighted-average cost of capital raises firm value and shareholder wealth. The concept arises from the trade-off framework: tax-deductible interest cheapens the composite cost of capital up to the point where mounting financial distress risk begins to raise both the cost of debt and the cost of equity. Minimizing the current tax line, maximizing gross shields without regard to risk, or mimicking an industry average are recognizable distractor objectives, but none defines optimality in the corporate finance canon the assistant treasurer is teaching.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Minimizing current income tax expense points toward zero leverage or aggressive shelters, since equity returns face corporate taxation as well, and neither defines financing optimality. The objective function in capital-structure theory is the weighted-average cost of capital, not the tax line of a single fiscal year.",
+    "ExplanationWrongC": "Maximizing gross interest tax shields ignores the offsetting half of the trade-off: distress and agency costs climb with leverage and eventually push WACC upward rather than down. Value peaks where the marginal shield equals the marginal distress cost, not where the shield itself reaches its largest dollar amount.",
+    "ExplanationWrongD": "Industry-average leverage is a benchmarking reference, occasionally useful as a starting estimate, but peer averages blend heterogeneous risk profiles, growth rates, and target ranges. Optimality is an internal WACC-minimization calculation tied to the firm's own cash-flow risk, not conformity with a published statistic.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-166",
+    "Section": "B",
+    "Stem": "At a treasury-department orientation session, Flash Industries' assistant treasurer asks new hires for the textbook definition of a firm's optimal capital structure. Which response is correct?",
+    "Topic": "B.166 optimal-capital-structure-definition",
+    "UniqueConceptKey": "B-166-optimal-capital-structure-recall",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: straight definitional recall capped at score 1 per Rule 11",
+      "Consistency check: definition keyed to WACC-minimization/value-maximization objective function",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (approximate yield to maturity)",
+      "IRC Section 163 (interest deductibility)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "5.40%, the after-tax coupon rate (7.2% x 0.75)",
+      "B": "7.79%, the approximate pre-tax yield to maturity",
+      "C": "5.23%, from subtracting rather than adding the $4 annual principal accretion in the numerator",
+      "D": "5.84%, from an approximate yield to maturity of 7.79% reduced by the 25% tax shield"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using the coupon rate instead of the yield to maturity for debt cost",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The pre-tax cost of debt is the bond's yield to maturity, not its coupon, because the $48 discount below par adds return as principal accretes to $1,000 at maturity. Approximate YTM = [72 + (1,000 - 952)/12] / [(1,000 + 952)/2] = (72 + 4)/976 = 76/976 = 7.7869%, about 7.79%. Interest is deductible under IRC Section 163, so the component enters WACC after tax: 7.7869% x (1 - 0.25) = 5.8402%, or 5.84%. Precision matters for Chen's packet because an understated cost of debt - such as the 5.40% after-tax coupon - biases WACC downward and can admit marginal capital projects that destroy shareholder value.",
+    "ExplanationWrongA": "Multiplying the coupon by (1 - t) prices the debt at its contract rate and ignores the capital gain embedded in buying at $952 and redeeming at $1,000. The market-required return on these debentures is 7.79% pre-tax; the coupon understates it whenever a bond sells below par, which is exactly Flash's situation.",
+    "ExplanationWrongB": "Forgetting the (1 - t) adjustment discards the interest tax shield that makes debt uniquely cheap among financing sources. Only debt receives the deduction, which is exactly why the WACC expression multiplies the debt component by 0.75 while the equity and preferred components enter at their full unadjusted costs.",
+    "ExplanationWrongC": "Subtracting the $4 accretion, (72 - 4)/976 = 6.97% pre-tax and 5.23% after tax, applies the premium-bond version of the formula, where price exceeds par and holders lose principal over time. Flash's debentures sell at a discount to par, so the $4 per year of pull-to-par must be added to the coupon, not deducted.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "CB-07",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-167",
+    "Section": "B",
+    "Stem": "Controller Priya Chen must estimate Flash Industries' after-tax cost of debt for the annual capital-budgeting packet. Flash's outstanding debentures carry a 7.2% coupon on $1,000 par, currently trade at $952, mature in 12 years, and pay interest annually. Using the approximate yield-to-maturity formula, [annual interest + (par - price)/years] / [(par + price)/2], and a 25% marginal tax rate, what after-tax cost of debt should Chen enter?",
+    "Topic": "B.167 after-tax-bond-ytm-approximation",
+    "UniqueConceptKey": "B-167-after-tax-bond-ytm-approximation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: chained two-step computation (YTM approximation then tax adjustment) with four plausible bases",
+      "[(72+(48/12))/976] = 76/976 = 7.7869%; x 0.75 = 5.8402% -> 5.84%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Working capital management practice (credit and collections policy)",
+      "ASC 326 (Credit Losses - aging as loss evidence)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Relax credit screening standards to accelerate order flow, since the growing past-due percentages signal that overly tight terms are choking collections.",
+      "B": "Sell the entire receivables book to a factoring intermediary with recourse, outsourcing the collection function wholesale to arrest the drift.",
+      "C": "Escalate collection activity on the over-60-day accounts specifically - final notices, structured payment plans, and referral to counsel - and suspend new shipments to chronically delinquent customers pending cure.",
+      "D": "Extend standard net terms from 30 to 45 days across the customer base, which will mechanically shrink measured past-due balances next quarter."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Reading aging deterioration as grounds for looser credit terms",
+    "CorrectChoice": "C",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The schedule localizes the deterioration: the over-60-day segment more than doubled its share from 3% to 8% while the current bucket slid from 71% to 62%, against billings growth of only 4%, so the cause is collection failure concentrated in an identifiable aged tail - roughly $1.28 million - rather than volume effects or universally excessive terms. Targeted escalation on that segment attacks the diagnosed problem while preserving sales to the performing majority of customers; it simultaneously sharpens the ASC 326 expected-loss evidence base, since aged buckets carry the highest loss attribution. Broad remedies respond to problems the schedule does not show: looser screening would admit weaker payers, whole-book factoring is disproportionate to the defect, and longer stated terms merely relabel delinquency without collecting a dollar.",
+    "ExplanationWrongA": "Looser screening admits weaker payers and would deepen exactly the delinquency curve the schedule exposes; the 1-30 and 31-60 buckets (30% combined) reflect ordinary slippage, while the alarm sits in the old tail. Reading rising past-due shares as evidence of excessively tight terms inverts Delgado's diagnostic.",
+    "ExplanationWrongB": "With-recourse factoring of the full book transfers collection labor but keeps Flash bearing credit losses, and it surrenders margin in fees on all $16 million of receivables to fix a problem residing in about $1.28 million of aged accounts. Wholesale outsourcing is disproportionate to the localized defect the schedule identifies.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Stretching stated terms to 45 days reclassifies day-31-to-45 balances as current and flatters next quarter's aging print without collecting anything additional. It lengthens DSO, ties up more working capital in receivables, and masks the very deterioration Delgado is charged with surfacing to the operations review committee.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-168",
+    "Section": "B",
+    "Stem": "Credit manager Rosa Delgado presents Flash Industries' June 30 receivables aging to the operations review committee: total receivables of $16.0 million split 62% current ($9.92 million), 18% at 1-30 days past due ($2.88 million), 12% at 31-60 days past due ($1.92 million), and 8% at more than 60 days past due ($1.28 million). One year earlier the over-60-day bucket held 3% of a smaller book, the current bucket held 71%, and billings have grown only 4% year over year since. Which course of action is best supported by Delgado's schedule?",
+    "Topic": "B.168 aging-schedule-collection-action",
+    "UniqueConceptKey": "B-168-aging-schedule-diagnosis-action",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: data-diagnosis-to-intervention mapping across competing targeted vs broad remedies",
+      "Bucket dollars: 16.0 x .62/.18/.12/.08 = 9.92/2.88/1.92/1.28 (sums 16.00); over-60 share 3% -> 8% vs 4% billings growth",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Lean production / JIT inventory theory (Toyota Production System)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "JIT fits operations with dependable, geographically close suppliers, stable demand patterns, quick changeovers, and heavy inventory carrying costs, because synchronized deliveries minimize inventory investment while keeping stockout risk manageable.",
+      "B": "JIT is the preferred system when input prices are forecast to climb, because frequent small purchases accumulate stock ahead of each increase.",
+      "C": "JIT functions smoothly without disciplined delivery schedules, since parts are consumed the moment they arrive on the production floor.",
+      "D": "JIT calls for enlarged raw-material warehouses, because buffer depth is what protects machining lines from supplier disruption."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Presenting JIT as appropriate regardless of supplier reliability and demand stability",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Just-in-time replenishment succeeds only where supply and demand are predictable enough that minimal buffers suffice: reliable nearby suppliers, level production schedules, short setup times, and stockout exposure controlled through quality at the source. Under those conditions JIT slashes carrying costs - storage, insurance, obsolescence, and cash tied up in coil steel - which for a stamped-components plant is substantial. Watanabe's message to the audit committee is that JIT is a fit-based selection, not a universal upgrade: where suppliers are distant or erratic, the model simply relocates risk from the warehouse to the production line, and safety stock remains necessary despite the philosophy of thin pipelines.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Expected price increases argue for forward buying and larger strategic inventories - the opposite of JIT's thin-pipeline logic. Frequent small purchases at rising prices raise acquisition cost and leave the plant holding little metal to exploit today's pricing, so the stated condition undermines rather than supports adopting JIT.",
+    "ExplanationWrongC": "Consumption-on-arrival is a consequence of synchronization, not a substitute for it. JIT depends on precisely scheduled, high-frequency deliveries and certified suppliers; without that scheduling spine a single late truck halts production, so disciplined logistics is the backbone of the system rather than an optional refinement.",
+    "ExplanationWrongD": "Enlarged warehousing contradicts JIT's defining objective of shrinking inventory footprints and the carrying costs attached to them. Buffer depth is the traditional-system answer to unreliable supply; JIT answers the same risk through supplier proximity, redundancy agreements, and rapid-response contracts instead of steel sitting on racks.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-169",
+    "Section": "B",
+    "Stem": "Supply chain director Kenji Watanabe tells Flash Industries' audit committee that the stamped-components plant will shift to just-in-time replenishment of steel coil and fasteners, with deliveries timed to daily production pull. Which statement correctly identifies the conditions under which a JIT inventory system is appropriate?",
+    "Topic": "B.169 jit-applicability-conditions",
+    "UniqueConceptKey": "B-169-jit-fit-reliable-suppliers",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Understand-level condition-matching capped at score 2 per Rule 11",
+      "Consistency check: JIT preconditions - supplier dependability, stable demand, short setups, high carrying cost",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Dividend Discount Model (Gordon 1962)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "11.30%, retaining the existing-shareholders' cost (2.52/40.00 + 0.05)",
+      "B": "11.70%, from 2.52/(40.00 x 0.94) + 0.05",
+      "C": "11.38%, from 2.40/(40.00 x 0.94) + 0.05",
+      "D": "10.92%, from applying the 6.0% flotation factor to the dividend rather than the price"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Omitting the flotation adjustment or using D0 instead of D1 for new equity",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "New-issue equity must earn enough to deliver investors their required return after absorbing flotation costs, so the price term shrinks: kn = D1/[P0 x (1 - F)] + g. Here D1 = $2.40 x 1.05 = $2.52, net proceeds per share are $40.00 x 0.94 = $37.60, and kn = 2.52/37.60 + 0.05 = 0.067021 + 0.05 = 11.70%. Existing retained earnings carry the lower 11.30% cost (2.52/40.00 + 0.05) because internally generated funds pay no underwriting spread. The 40-basis-point gap is the flotation penalty, and it explains why Vasquez exhausts internal equity before selling new shares - the same sequencing pecking-order theory predicts firms follow when asymmetric information makes external equity the most expensive claim.",
+    "ExplanationWrongA": "Quoting 11.30% answers the retained-earnings question, not the new-equity question. Internally generated funds avoid underwriting spreads entirely, so their cost omits the flotation adjustment; using that figure for freshly sold shares understates the hurdle the offering proceeds must clear by the full flotation drag.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Feeding last year's $2.40 dividend into the numerator skips one year of growth: D1 = 2.40 x 1.05 = $2.52. The Gordon model prices next period's dividend because buyers of new shares receive the first growing cash flow one period after purchase; the stale numerator shaves the result to 11.38% and understates the true component cost.",
+    "ExplanationWrongD": "Flotation costs reduce proceeds per share sold; they are not a haircut to the dividend stream. Computing 2.52 x 0.94 = $2.3688 over the full $40.00 price yields 10.92%, which paradoxically prices new money below retained earnings and rewards paying underwriters - the reverse of the actual economics of issuance costs.",
+    "FormulaReference": "CB-11",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-170",
+    "Section": "B",
+    "Stem": "Flash Industries last paid a common dividend of $2.40 per share; dividends are expected to grow at 5.0% indefinitely, the stock trades at $40.00, and underwriting the planned equity offering would absorb 6.0% of sale proceeds. CFO Elena Vasquez needs the required return on newly issued common equity for the WACC build. Using the dividend-discount (Gordon growth) model adjusted for flotation costs, what figure should she use?",
+    "Topic": "B.170 flotation-adjusted-new-equity-cost",
+    "UniqueConceptKey": "B-170-gordon-flotation-new-equity-cost",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: contrast computation distinguishing RE cost from flotation-adjusted new-issue cost",
+      "D1=2.40x1.05=2.52; 40.00x0.94=37.60; 2.52/37.60=0.067021; +0.05=11.70%; RE contrast 2.52/40+0.05=11.30%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Miller-Orr cash management model (Miller & Orr 1966)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The economic order quantity model, adapted from inventory theory to pace cash injections.",
+      "B": "The Baumol model, which fixes an optimal batch size of cash raised on a regular cycle.",
+      "C": "The Miller-Orr model, built for stochastic cash flows with control limits and a return point.",
+      "D": "The cash conversion cycle, which gauges the span between supplier payment and customer collection."
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Confusing the Baumol deterministic batch model with the Miller-Orr control-limit model",
+    "CorrectChoice": "C",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "The Miller-Orr model (Miller and Orr, 1966) was constructed precisely for volatile, random daily cash flows: the balance drifts freely between a lower bound L and an upper bound set three spread-widths above it, and touching either bound triggers a transfer that returns the balance to a statistically derived return point. Flash's assembly division, whose receipts and disbursements arrive irregularly, is the model's intended case. The Baumol model instead assumes steady, known cash usage and solves for an optimal order quantity much like EOQ, while the cash conversion cycle is a diagnostic metric measured in days, not a control mechanism issuing transfer instructions.",
+    "ExplanationWrongA": "The EOQ formula belongs to inventory lot-sizing; importing it into cash management produces the Baumol framework, which assumes constant deterministic drawdown. Neither EOQ nor its Baumol derivative defines stochastic control limits with a return point, so attributing the described tool to EOQ misses the volatility feature entirely.",
+    "ExplanationWrongB": "The Baumol model optimizes a fixed cash batch under predictable usage - the mirror image of the assembly division's irregular swings. Its output is a single reorder quantity on a recurring cycle rather than an upper-lower band with a statistical return trigger, which is the Miller-Orr signature the workshop described.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "The cash conversion cycle measures working-capital efficiency in days (DIO + DSO - DPO); it monitors timing but issues no instructions. A metric cannot serve as the control-limit mechanism described, however useful it is for diagnosing the balances those controls manage between transfers.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-171",
+    "Section": "B",
+    "Stem": "During a treasury workshop, Flash Industries' cash manager describes the tool used for the assembly division, whose daily cash balances swing unpredictably between wide extremes. The tool sets an upper control limit, a lower control limit, and a return point; balances drifting outside the band trigger transfers between the cash account and the marketable-securities portfolio. Which cash-management model is being described?",
+    "Topic": "B.171 miller-orr-model-recognition",
+    "UniqueConceptKey": "B-171-miller-orr-control-limits",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: direct model-recognition recall capped at score 1 per Rule 11",
+      "Consistency check: stochastic flows + upper/lower limits + return point = Miller-Orr",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Convertible bond valuation theory (embedded call option)",
+      "ASC 470-20 (Debt with Conversion Option)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Take the convertible: a $58 forecast puts the share price clearly above the $46.00 conversion price, so conversion - and roughly a 9.1% expansion of the 12.0 million share count (about 1.09 million new shares) - is the probable outcome, but the trade buys a 300-basis-point coupon saving worth $1.125 million after tax each year.",
+      "B": "Take the straight debenture, because any conversion would dilute earnings per share and the coupon saving cannot compensate existing holders for that loss.",
+      "C": "Take the convertible and treat dilution as remote, since holders of appreciated converts customarily decline to convert and keep collecting coupons.",
+      "D": "Take the convertible but negotiate the conversion price up to $58.00, which removes dilution risk while preserving the low 4.5% coupon."
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Weighing convertible dilution while ignoring the quantified after-tax coupon saving",
+    "CorrectChoice": "A",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "This is a priced trade-off, and the numbers favor the convertible. Coupon relief of 7.5% - 4.5% = 3.0% on $50 million is $1.5 million pre-tax, or $1.125 million after tax at the 25% rate, every year for eight years. Conversion mechanics: 50,000 bonds x 21.7391 shares = about 1,087,000 potential new shares on a 12.0 million base, roughly 9.1% dilution. With the stock forecast at $58 versus the $46.00 strike, rational holders convert - extinguishing $50 million of debt and swapping it for equity priced well above the strike - so the cost is sharing ownership, not cash strain. Against a straight 7.5% burden, the committee exchanges a bounded, quantified dilution for materially cheaper financing and, upon conversion, automatic deleveraging. Straight debt avoids the 9.1% but surrenders the savings and keeps leverage high; under these forecasts it is the weaker recommendation.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Declaring that the coupon saving cannot compensate skips the quantification: the benefit is $1.125 million after tax annually, while the dilution is a one-time 9.1% share-count expansion that occurs only if holders convert - an event that simultaneously retires $50 million of debt. A recommendation resting on naming one side of a measurable trade fails the finance committee.",
+    "ExplanationWrongC": "Holder behavior runs the other way: when the stock rises above the conversion price, converting captures intrinsic value, so appreciation makes conversion likelier, not rarer. Calling dilution remote inverts the economics of the embedded call option and blinds the committee to the very scenario its own three-year forecast predicts.",
+    "ExplanationWrongD": "Lifting the strike to $58.00 does not come free: investors demand a fatter coupon or richer conversion terms when the option is set further out of the money, so the 4.5% coupon and the $46.00 strike travel together. The proposal imagines keeping the cheap coupon while wishing away the consideration investors extract for granting it.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-172",
+    "Section": "B",
+    "Stem": "Flash Industries must raise $50 million for an eight-year capacity expansion. CFO Elena Vasquez frames two structures for the finance committee: straight debentures at a 7.5% coupon, or convertible debentures at 4.5% with a $46.00 conversion price, implying a conversion ratio of 21.7391 shares per $1,000 bond across 50,000 bonds issued. Flash has 12.0 million shares outstanding, pays tax at 25%, and internal forecasts put the share price at $58 within three years. Which recommendation should Vasquez advance?",
+    "Topic": "B.172 convertible-bond-financing-evaluation",
+    "UniqueConceptKey": "B-172-convertible-dilution-financing-choice",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: committee-level Evaluate quantifying dilution mechanics against probabilistic conversion economics",
+      "Conversion check: 50,000 x 21.7391 ~= 1,087,000 shares; /12,000,000 = 9.06%; saving 50M x 3.0% x 0.75 = $1.125M/yr",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (bond-yield-plus-risk-premium component cost)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "3.50%, the stock-over-own-bond premium on its own",
+      "B": "7.20%, the debenture yield without any equity increment",
+      "C": "12.70%, adding the 5.50-point general market risk premium to the bond yield",
+      "D": "10.70%, the 7.20% bond yield plus the 3.50-point stock-over-own-bond premium"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Adding the general market risk premium instead of the stock-over-own-bond premium",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The bond-yield-plus-risk-premium method prices retained earnings off the firm's own observed debt cost: risky-equity investors demand the debenture yield plus a premium compensating the residual claim's extra exposure. Ortega's inputs give k(s) = 7.20% + 3.50% = 10.70%. The applicable premium is the stock-over-OWN-bond spread, a firm-specific figure; the 5.50% general market premium belongs to the CAPM construction, where it multiplies beta, and splicing it onto a bond yield double-counts market-wide compensation. The method's appeal is practicality - it leans on a traded debenture price when dividend growth is unstable or beta estimates are noisy - and for a firm like Flash it typically lands near independently estimated CAPM and Gordon-growth figures, providing a useful triangulation check for the WACC build.",
+    "ExplanationWrongA": "Recording the bare 3.50% premium as the cost of equity confuses the increment with the level: the premium is compensation added on top of the debenture yield, not a stand-alone required return. By construction of the method, equity holders receive the bond investors' return plus the premium, never the premium in isolation.",
+    "ExplanationWrongB": "Presenting the 7.20% debenture yield as the equity cost erases the very risk differential the method exists to capture: senior creditors hold contractual priority in liquidation, while common shareholders stand behind every creditor and must be offered a larger expected return than the 7.20% senior claim provides.",
+    "ExplanationWrongC": "Splicing the 5.50-point general market premium onto the bond yield produces 12.70% by mixing frameworks: in CAPM that premium is scaled by beta (here well below 1), and it already embodies average market-wide exposure rather than Flash-specific equity-over-debt risk. The firm-specific 3.50-point spread is the calibrated input for this method.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-173",
+    "Section": "B",
+    "Stem": "Assistant controller Luis Ortega is building Flash Industries' WACC and needs the cost of retained earnings. Flash's senior debentures trade to yield 7.20%, equity research assigns Flash a stock-over-own-bond risk premium of 3.50 percentage points, and the general equity market risk premium is quoted at 5.50 percentage points. Using the bond-yield-plus-risk-premium approach, what cost of retained earnings should Ortega record?",
+    "Topic": "B.173 bond-yield-risk-premium-method",
+    "UniqueConceptKey": "B-173-byprp-component-cost",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: method selection among three supplied premiums tests component-cost framework knowledge",
+      "k(s) = 7.20% + 3.50% = 10.70%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Working capital management practice (trade credit and payables stretching)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Drawing the revolver to pay on day 10 is strictly cheaper, because stretching genuinely costs 12.29% once the forgone discount is annualized over the standard 30-day credit window.",
+      "B": "Stretching computes to (0.01/0.99) x (365/45) = 8.19% annualized, about 81 basis points below the 9.00% line, but the recommendation should weigh supplier-relationship erosion and the risk of losing cooperative terms before endorsing routine stretching.",
+      "C": "Restating the calculation on a 360-day banker's year drops the cost to 8.08%, so the saving is settled arithmetic and no relationship consequences merit attention.",
+      "D": "Forgoing a 1.0% discount costs approximately 1.0% per year, so the payment-timing choice is financially immaterial and can rest on convenience alone."
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Annualizing forgone discounts over the stated credit period instead of the realized stretched period",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The annualized cost of forgoing a cash discount depends on how long the cash is actually withheld: cost = [d/(1-d)] x [365/(payment day - discount period)]. Paying at day 55 extends the benefit window to 45 days beyond the discount deadline, so the cost is (0.01/0.99) x (365/45) = 0.010101 x 8.1111 = 8.19%. Against the 9.00% revolver, stretching appears 81 basis points cheaper, and that arithmetic is correct as far as it goes - but the analysis is incomplete. Routine late payment erodes supplier goodwill and invites tighter terms, deposit demands, or lost allocation priority, damaging trade references Flash relies on during shortages. The documented conclusion should treat the 81-basis-point saving as gross of those risks and require a supplier-by-supplier judgment rather than blanket endorsement of stretching.",
+    "ExplanationWrongA": "Annualizing over 30 days, (0.01/0.99) x (365/30) = 12.29%, prices the normal net-40 window rather than the practiced day-55 payment. The relevant window is the 45 days the cash is actually held past the discount date; the longer realized window dilutes the annualized rate to 8.19%, flipping the ranking against the revolver.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "The 360-day convention does trim the rate to 8.08%, but an eleven-basis-point day-count tweak settles nothing substantive: the statement leaps from convention arithmetic to settled conclusions while dismissing the relationship damage that constitutes the real exposure. Suppliers react to payment behavior, not to the banker's-year assumption inside a spreadsheet.",
+    "ExplanationWrongD": "The surrendered 1.0% discount is not an annual rate; it is earned for withholding roughly $0.99 of cash for 45 days. Compounded to an annual horizon the cost is 8.19% - comparable to short-term borrowing rates and far from immaterial for a manufacturer whose coil purchases run into millions of dollars each year.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-174",
+    "Section": "B",
+    "Stem": "Flash Industries buys coil steel on terms of 1/10 net 40. Accounts-payable supervisor Grace Liu reports that the plant has been paying on day 55 - fifteen days beyond the net due date - and asks the controllership team to quantify the practice before the quarterly treasury review. Flash's revolving credit facility prices at 9.00% APR. Which conclusion should the team document?",
+    "Topic": "B.174 stretched-payables-annualized-cost",
+    "UniqueConceptKey": "B-174-stretched-payables-forgone-discount-cost",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: integrates quantification, benchmark comparison, and qualitative-risk judgment (Analyze)",
+      "(1/99) x (365/45) = 0.010101 x 8.11111 = 8.19%; unstretched-window error (1/99) x (365/30) = 12.29%",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Relative purchasing power parity",
+      "International Fisher effect (related parity framework)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Interest rate parity, under which the higher-inflation currency commands a forward premium.",
+      "B": "The Fisher effect as applied domestically, which ties nominal interest rates to expected inflation within one economy.",
+      "C": "Relative purchasing power parity, under which the currency of the higher-inflation country depreciates by approximately the inflation differential - here about 4% per year against the dollar.",
+      "D": "Absolute purchasing power parity applied to price levels, implying instantaneous full adjustment of the spot rate to the 6% Brazilian inflation rate."
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Projecting depreciation by the foreign inflation rate itself instead of the differential",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Relative purchasing power parity links exchange-rate movement to inflation differentials: over the planning horizon, the currency of the higher-inflation country depreciates by roughly that differential, so the real loses about 4% per year against the dollar (6% - 2%). Diallo's gradual-depreciation assumption is therefore the parity-consistent neutral forecast, protecting Flash from booking revenue gains that are really Brazilian inflation wearing a currency label. The principle matters operationally: transfer pricing, hedge ratios, and the dollar value of remitted earnings all inherit this drift assumption, and treating nominal real-denominated revenue growth as real growth would overstate planned profitability in dollar terms.",
+    "ExplanationWrongA": "Interest rate parity relates forward-spot differentials to nominal INTEREST differentials, and the currency of the high-interest, typically high-inflation, country trades at a forward discount rather than a premium. Misstating the direction would flip Diallo's projection into appreciation and corrupt the five-year plan's dollar translations.",
+    "ExplanationWrongB": "The domestic Fisher effect links nominal rates, real rates, and expected inflation within a single economy; it says nothing about exchange rates. Bridging two currencies requires the international extension or another parity condition, so invoking the closed-economy version leaves the real-dollar projection unsupported.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Absolute PPP concerns the LEVEL of exchange rates equalizing price baskets across countries and does not prescribe instant, complete pass-through of one nation's inflation each period; relative PPP is the operational version linking rates of change. Even under parity logic, expected depreciation tracks the 4% differential, not Brazil's 6% in isolation.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-175",
+    "Section": "B",
+    "Stem": "FP&A lead Amara Diallo walks Flash Industries' new hires through the assumptions behind the five-year plan: Brazilian sales, booked in reais, are projected with gradual depreciation of that currency against the U.S. dollar, because Brazilian inflation is assumed at 6% annually against 2% in the United States. Which economic principle supports Diallo's projection?",
+    "Topic": "B.175 relative-ppp-currency-projection",
+    "UniqueConceptKey": "B-175-ppp-inflation-differential-depreciation",
+    "VerifiedChecks": [
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW slots >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Difficulty justified: Understand-level principle identification capped at score 2 per Rule 11",
+      "Differential check: 6% Brazil - 2% US = 4% expected annual real depreciation",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  }
+,
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-176",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-176-coupon-exceeds-market-yield",
+    "Stem": "During the quarterly audit committee briefing, Flash Meridian Components controller David Okafor notes that the company's six-year bonds issued last spring at par now trade at 104 percent of face value even though the printed coupon is unchanged, and he asks the team why investors will pay more than par for the very same certificates. Which explanation is most accurate?",
+    "Choices": {
+      "A": "The bonds' fixed coupon exceeds the yield investors currently require, so buyers bid the price above face value until the bond's overall return is pulled down to the prevailing market rate",
+      "B": "Trading above par means Flash's credit rating improved after issuance, which mechanically converts part of the principal into a capitalized gain for each holder",
+      "C": "Premium pricing signals that the issue was undersubscribed, so the underwriters absorbed unsold certificates and resold them later at higher prices",
+      "D": "Bond prices drift upward toward maturity regardless of rates, so any bond with several years remaining must quote above its face value"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Bond prices move inversely to market yields: a fixed coupon worth more than the going required return makes the bond attractive enough to bid above par. Flash's 4-percent-over-par quotation tells controller David Okafor that investors accept a current yield below the coupon because the premium they pay upfront is gradually surrendered through pull-to-par by maturity, holding their total return in line with prevailing rates. Business meaning: the premium is compensation timing, not bonus value, and Flash's true market cost of the debt equals the lower market yield rather than the printed face rate. Common trap: reading a premium as evidence of a credit upgrade or of a guaranteed gain.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B confuses price level with credit quality; a rating upgrade narrows the required yield and would nudge price up, but premiums arise routinely for ordinary investment-grade paper whose coupon simply exceeds the current market rate, and no conversion of principal occurs.",
+    "ExplanationWrongC": "Choice C imports an equity-style offering narrative that does not fit secondary bond trading; underwriters do not warehouse unsold bonds, and aftermarket premiums reflect the coupon-versus-yield arithmetic rather than leftover supply being resold.",
+    "ExplanationWrongD": "Choice D asserts a mechanical drift that contradicts pull-to-par: below-par bonds rise toward face while premium bonds fall toward face, so the passage of time alone pushes this issue downward, not upward, absent offsetting moves in rates.",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "",
+    "CommonTrapReference": "Reading a premium as a rating upgrade rather than a coupon-versus-market-yield gap",
+    "Authorities": [
+      "Corporate finance theory (bond valuation; inverse rate-price relationship)",
+      "IMA CSO B.6 long-term financing"
+    ],
+    "Topic": "B.176 bond-premium-pricing-relationship",
+    "VerifiedChecks": [
+      "Concept cross-checked against bond price-yield relationship (price above par when coupon exceeds market yield)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-177",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-177-discount-issue-present-value",
+    "Stem": "Treasurer Elena Vasquez at Flash Precision Instruments is preparing a $500,000 face value, five-year note issue paying an 8 percent annual coupon, but market conditions demand a 10 percent return for Flash's risk level. Using the stated factors (present value of $1 at 10 percent for five periods 0.62092; present value of an ordinary annuity of $1 at 10 percent for five periods 3.79079), what price should the notes fetch at issuance?",
+    "Choices": {
+      "A": "$500,000, since the notes redeem at par at maturity and the coupon equals the printed face rate",
+      "B": "$462,092",
+      "C": "$310,460",
+      "D": "$542,124"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Price = present value of the coupons plus present value of the principal, both discounted at the market yield. Coupons: $40,000 x 3.79079 = $151,632. Principal: $500,000 x 0.62092 = $310,460. Total = $462,092, about $37,908 below par. Because the 8 percent coupon falls short of the 10 percent return the market demands for Flash's risk, buyers absorb the notes only at a discount; the discount tops up the coupon stream until the holder's overall return compounds to 10 percent. Treasurer Elena Vasquez should budget proceeds of $462,092 rather than the $500,000 face. Common trap: discounting at the coupon rate, which forces price to par and masks the true cost of the borrowing.",
+    "ExplanationWrongA": "Choice A anchors on face value and the printed coupon, implicitly discounting cash flows at the coupon rate itself; that circular approach returns par by construction and hides the $37,908 haircut the 10 percent market demand imposes.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C prices only the principal ($500,000 x 0.62092 = $310,460) and discards the present value of the five coupons totaling $151,632; no rational holder surrenders the contractual coupon stream for free.",
+    "ExplanationWrongD": "Choice D reverses the rate relationship and produces a premium near $542,124 as if the market yield were only 6 percent; when the required return exceeds the coupon, price must sit below par, not above it.",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "",
+    "CommonTrapReference": "Discounting bond cash flows at the coupon rate instead of the market yield",
+    "Authorities": [
+      "Corporate finance theory (bond pricing; present value of coupons plus principal)",
+      "IMA CSO B.6 long-term financing"
+    ],
+    "Topic": "B.177 bond-price-present-value",
+    "VerifiedChecks": [
+      "Recomputed: 40,000 x 3.79079 = 151,632; 500,000 x 0.62092 = 310,460; 151,632 + 310,460 = 462,092 (second independent pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-178",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-178-effective-interest-amortization",
+    "Stem": "CFO Raymond Liu of Flash Atlantic Systems is reviewing the year-end entries for bonds issued two years ago at a premium: $1,000,000 face value, a 9 percent annual coupon, a carrying amount of $1,042,000 at the start of the current year, and an effective market rate of 8 percent fixed at issuance. What interest expense should the current year carry under the effective interest method?",
+    "Choices": {
+      "A": "$90,000",
+      "B": "$80,000",
+      "C": "$83,360",
+      "D": "$96,640"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Under the effective interest method, expense = carrying amount x the market rate fixed at issuance: $1,042,000 x 8% = $83,360. Cash paid is the coupon, $1,000,000 x 9% = $90,000, so the $6,640 excess amortizes the premium and walks the carrying amount down toward $1,000,000 by maturity. CFO Raymond Liu should book $83,360 of expense; the $90,000 outflow splits between expense and balance-sheet amortization. Business meaning: interest expense tracks the economic cost of the funds, not the check amount. Common trap: expensing the full cash coupon, which overstates interest and never converges the recorded liability to face value.",
+    "ExplanationWrongA": "Choice A books the $90,000 cash coupon as expense, ignoring that $6,640 of it amortizes the premium; expense under the effective interest method follows the carrying amount multiplied by the 8 percent market rate, not the check written.",
+    "ExplanationWrongB": "Choice B applies the 8 percent effective rate to the $1,000,000 face value instead of the $1,042,000 carrying amount, understating expense by $3,360 and stalling the convergence of the recorded liability to par.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D stacks the $6,640 amortization on top of the coupon as though premium amortization were an extra cost; amortization moves the other way, reducing both the liability and reported expense relative to cash paid.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "",
+    "CommonTrapReference": "Expensing the cash coupon instead of carrying amount times effective rate",
+    "Authorities": [
+      "Corporate finance theory (effective interest method of premium amortization)",
+      "IMA CSO B.6 long-term financing"
+    ],
+    "Topic": "B.178 effective-interest-expense",
+    "VerifiedChecks": [
+      "Recomputed: 1,042,000 x 0.08 = 83,360; coupon 1,000,000 x 0.09 = 90,000; amortization 90,000 - 83,360 = 6,640 (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-179",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-179-cash-versus-stock-consideration",
+    "Stem": "M&A director Priya Raman at Flash Global Logistics is weighing two offers for Corvex Freight, a 400,000-share target: $28 per share in cash funded entirely with 6 percent debt, or 0.9 Flash shares per Corvex share. Flash trades at $35 with 2,000,000 shares outstanding and standalone net income of $5,400,000; Corvex earns $900,000; the tax rate is 25 percent. Which analysis of the per-share impact is accurate?",
+    "Choices": {
+      "A": "The cash deal lifts EPS to $2.90 from $2.70 because after-tax interest of $504,000 costs less than the $900,000 of acquired earnings, while the stock deal dilutes EPS to $2.67 by spreading income over 2,360,000 shares",
+      "B": "Both structures are automatically accretive because Corvex contributes $900,000 of fresh income, and per-share results cannot fall when the earnings numerator grows",
+      "C": "The stock deal shields EPS because avoiding $672,000 of interest keeps combined income of $6,300,000 intact for existing holders, while debt service visibly drains the cash structure",
+      "D": "Debt financing is EPS-neutral whenever the pre-tax borrowing rate sits below the target's earnings yield, so both paths settle at the standalone $2.70"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Accretion and dilution compare pro forma EPS with Flash's standalone $2.70 ($5,400,000 / 2,000,000 shares). Cash: debt of $11,200,000 (400,000 x $28) costs $672,000 pre-tax and $504,000 after tax at 25 percent; pro forma EPS = ($5,400,000 + $900,000 - $504,000) / 2,000,000 = $2.90. Stock: 0.9 x 400,000 = 360,000 new shares; EPS = $6,300,000 / 2,360,000 = $2.67. The cash deal is accretive because the after-tax cost of each acquired dollar is below the earnings it delivers; the stock deal dilutes because Flash, valued at 12.96 times earnings ($35 / $2.70), is effectively paying 14.00 times for Corvex ($31.50 of stock / $2.25 per-share earnings). Common trap: treating avoided cash interest as free financing while ignoring the shares issued.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B assumes added income cannot dilute; per-share results depend on financing, and issuing 360,000 shares against earnings that support fewer equivalent claims drags EPS to $2.67 despite the larger numerator.",
+    "ExplanationWrongC": "Choice C credits the stock deal for avoided interest yet overlooks the 360,000 new claimants; spreading $6,300,000 over 2,360,000 shares yields $2.67, below the cash deal's $2.90, because equity financing is effectively dearer here than 5.25 percent after-tax debt.",
+    "ExplanationWrongD": "Choice D leans on a loose rate-comparison slogan and concludes neutrality; the operative tests are after-tax cost per acquired dollar versus earnings contributed, which show $2.90 accretive and $2.67 dilutive rather than a uniform $2.70.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "",
+    "CommonTrapReference": "Judging merger EPS impact without netting after-tax financing cost or new shares",
+    "Authorities": [
+      "Corporate finance theory (merger consideration; EPS accretion and dilution mechanics)",
+      "IMA CSO B.8 corporate restructuring"
+    ],
+    "Topic": "B.179 merger-financing-eps-effect",
+    "VerifiedChecks": [
+      "Recomputed: 400,000 x 28 = 11,200,000; 11,200,000 x 0.06 x 0.75 = 504,000; (5,400,000 + 900,000 - 504,000) / 2,000,000 = 2.90; 6,300,000 / 2,360,000 = 2.67 (second pass agrees)",
+      "Decomposition check passed: financing leg separated from share-count leg (AF-A2)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-180",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-180-npv-bid-ceiling-integration-costs",
+    "Stem": "Board member Helena Strauss chairs the Flash Robotics finance committee as it considers Corvex Automation, whose owner insists on $23,000,000. Independent diligence values Corvex's standalone free cash flows at $19,500,000 in present value, identifies $3,600,000 of present-value synergies, and estimates $750,000 of present-value integration and retention costs. Which course should the committee adopt?",
+    "Choices": {
+      "A": "Proceed at the $23,000,000 asking price, because the $3,600,000 synergy pool alone covers the $650,000 gap many times over",
+      "B": "Proceed without negotiation, since integration costs are one-time estimates that historically come in below budget and should not cap the bid",
+      "C": "Offer $23,750,000 to preempt rival bidders, because winning the auction ensures the modeled synergies will ultimately be captured",
+      "D": "Decline at the ask and counter at no more than $22,350,000, since paying above standalone value plus net synergies transfers $650,000 of value from Flash to the seller"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Value-based acquisition logic caps any bid at standalone value plus synergies net of the investment needed to obtain them: $19,500,000 + $3,600,000 - $750,000 = $22,350,000. At the $23,000,000 ask, Flash would pay $650,000 more than the combined present value, transferring value to the seller even if every modeled synergy lands on schedule. Board member Helena Strauss should therefore decline at the ask or counter at or below $22,350,000, reopening only if diligence materially upgrades the synergy estimate. Business meaning: the bid ceiling is an economic boundary, not a negotiating position. Common trap: letting headline synergy estimates justify any price; synergies belong to the combined firm, and paying them away defeats the purpose of the deal.",
+    "ExplanationWrongA": "Choice A lets the $3,600,000 synergy pool excuse the $650,000 overpayment, but synergies are inputs to the ceiling rather than slack above it; paying $23,000,000 hands the entire net-synergy cushion, plus $650,000 of Flash's own value, to the seller.",
+    "ExplanationWrongB": "Choice B dismisses integration costs as optimists' one-timers; disciplined bidding includes them at modeled value, and deal history runs the other way, with integration overruns rather than windfalls eroding transaction NPV.",
+    "ExplanationWrongC": "Choice C treats a preemptive bid as insurance on synergy delivery; raising the offer to $23,750,000 deepens the value transfer to $1,400,000 and secures nothing about execution risk, which already lives inside the $750,000 estimate.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "",
+    "CommonTrapReference": "Justifying a bid above standalone-plus-net-synergy value with gross synergy talk",
+    "Authorities": [
+      "Corporate finance theory (acquisition NPV; maximum bid equals standalone value plus net synergies)",
+      "IMA CSO B.8 corporate restructuring"
+    ],
+    "Topic": "B.180 acquisition-maximum-bid",
+    "VerifiedChecks": [
+      "Recomputed: 19,500,000 + 3,600,000 - 750,000 = 22,350,000; 23,000,000 - 22,350,000 = 650,000 overpayment (second pass agrees)",
+      "Evaluate floor met: named board decision-maker choosing among defensible bids (AF-E4)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-181",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-181-retention-versus-net-proceeds",
+    "Stem": "CFO Ade Balogun of Flash Industrial Group brings the Fabrication cell to the board: the unit reported a $1,400,000 loss for the year after absorbing $1,900,000 of allocated corporate overhead, only $300,000 of which would disappear if the cell were sold; before allocations the unit earns roughly $500,000. Discounted after-tax cash flows from keeping the cell total $24,800,000, and a buyer's all-cash offer nets $21,500,000 after tax. What should the board do?",
+    "Choices": {
+      "A": "Accept the offer promptly, because a division posting losses erodes shareholder value the longer it remains on the books",
+      "B": "Reject the offer and retain the cell, because keep-value of $24,800,000 exceeds net proceeds by $3,300,000 and the reported loss reflects largely unavoidable allocations rather than cash drain",
+      "C": "Sell and reinvest the $21,500,000 in the core business, since redeploying capital away from a loss-reporting unit should beat keeping it",
+      "D": "Cut the cell's overhead allocation by half before the next review, because reducing the allocation will restore the unit to reported profitability and raise its cash value"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Divestiture decisions turn on incremental cash flows, not reported profit. Retaining the cell preserves after-tax cash flows worth $24,800,000 in present value versus $21,500,000 of net after-tax proceeds, a $3,300,000 advantage to keeping it. The $1,400,000 accounting loss is dominated by $1,600,000 of allocations Flash continues to incur after a sale ($1,900,000 allocated, only $300,000 avoidable), and the unit actually earns about $500,000 before those charges. CFO Ade Balogun should recommend rejection of the offer. Business meaning: the allocation line manufactures the loss; the cash says keep. Common trap: selling a cash-generative unit because unavoidable overhead paints it red.",
+    "ExplanationWrongA": "Choice A equates reported losses with value destruction; the cell supports $24,800,000 of present-value cash flow, and most of its red ink is produced by $1,600,000 of allocations Flash would keep paying even after handing the unit to a buyer.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C presumes reinvestment wins without running the comparison; redeployed funds would have to clear a $3,300,000 present-value hurdle over the retained alternative, a demanding bar for incremental core projects at current returns.",
+    "ExplanationWrongD": "Choice D attacks the allocation itself, but allocations are reporting conventions; halving them repaints the segment's optics while leaving both the $24,800,000 keep-value and the $21,500,000 offer exactly where they stand.",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Evaluate",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "",
+    "CommonTrapReference": "Divesting on reported losses while ignoring non-avoidable overhead allocations",
+    "Authorities": [
+      "Corporate finance theory (divestiture analysis; incremental cash flow versus allocated costs)",
+      "IMA CSO B.8 corporate restructuring"
+    ],
+    "Topic": "B.181 divestiture-value-comparison",
+    "VerifiedChecks": [
+      "Recomputed: 24,800,000 - 21,500,000 = 3,300,000; unavoidable allocation 1,900,000 - 300,000 = 1,600,000 (second pass agrees)",
+      "Evaluate floor met: board-level judgment among defensible courses with allocation trap (AF-E4)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-182",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-182-capm-equity-hurdle",
+    "Stem": "Treasury analyst Kenji Watanabe at Flash Mobility Systems is building the hurdle rate for an expansion tranche and needs the cost of common equity. Short-term government securities yield 4.25 percent, Flash's equity beta is 1.30, and the expected market risk premium is 6.50 percent. Using CAPM, what cost of equity should Kenji carry into the model?",
+    "Choices": {
+      "A": "10.75%",
+      "B": "12.03%",
+      "C": "12.70%",
+      "D": "9.25%"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "CAPM prices systematic risk only: cost of equity = risk-free rate + beta x market risk premium = 4.25% + 1.30 x 6.50% = 4.25% + 8.45% = 12.70%. Beta scales the market-wide reward; company-specific volatility earns no expected premium because diversifiable. Treasury analyst Kenji Watanabe should carry 12.70 percent into Flash's equity-funded hurdle build-up. Business meaning: each tenth of beta above one adds sixty-five basis points of required return at this premium. Common trap: adding the raw premium without beta (10.75 percent) or attaching beta to the risk-free rate instead of the premium (12.03 percent), both of which misprice risk.",
+    "ExplanationWrongA": "Choice A omits beta entirely and adds the raw 6.50 percent premium to the risk-free rate, pricing Flash as if it bore no more systematic risk than the average market portfolio; at beta 1.30 the risk charge must scale to 8.45 points.",
+    "ExplanationWrongB": "Choice B attaches beta to the wrong variable, computing 4.25% x 1.30 + 6.50% = 12.03 percent; CAPM scales the market risk premium by beta and leaves the risk-free anchor unscaled.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D divides the premium by beta (6.50 / 1.30 = 5.00 percent) before adding the risk-free rate, inverting the model and rewarding rather than charging Flash's above-market sensitivity.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "CB-04 CAPM",
+    "CommonTrapReference": "Adding the market premium without scaling it by beta",
+    "Authorities": [
+      "Corporate finance theory (CAPM; Sharpe-Lintner risk premium scaling)",
+      "IMA CSO B.1 risk and return"
+    ],
+    "Topic": "B.182 capm-cost-of-equity",
+    "VerifiedChecks": [
+      "Recomputed: 1.30 x 6.50 = 8.45; 4.25 + 8.45 = 12.70 (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-183",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-183-weighting-basis-wacc",
+    "Stem": "Controller Sofia Marchetti is drafting the weighted average cost of capital memo for Flash Ceramics' audit committee and pauses at the weights section, asking which basis the standard framework calls for when blending the component costs. Which answer should the memo give?",
+    "Choices": {
+      "A": "Book values from the most recent balance sheet, because they are audited and independently verifiable",
+      "B": "Market values of debt, preferred, and common equity at target proportions, because market values reflect the current opportunity cost of each kind of funds",
+      "C": "Total assets, because every asset on the balance sheet must be financed by some component of capital",
+      "D": "Original proceeds from each historical issuance, because amounts actually raised represent the sunk cost of funding already in place"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Standard practice weights each capital component at its market value within the target capital structure. Market values measure what investors currently charge for each type of money, so they capture the current opportunity cost the company must overcome; book values record historical issuance prices that can drift arbitrarily far from today's terms. Controller Sofia Marchetti should therefore weight Flash Ceramics' debt, preferred, and common equity at market-derived target proportions. Business meaning: WACC is a forward-looking rate, so its weights must be forward-looking too. Common trap: defaulting to audited book figures for convenience, which silently distorts the blend whenever rates or the share price have moved since issuance.",
+    "ExplanationWrongA": "Choice A prizes auditability, yet book values describe what capital cost when it was raised rather than what it costs now; stale balances quietly reweight the blend away from current market terms.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C weights by total assets, mixing the operating and financing sides of the balance sheet; asset totals say nothing about the relative market amounts of debt, preferred, and equity that fund them.",
+    "ExplanationWrongD": "Choice D freezes the structure at original proceeds; historical amounts ignore subsequent retention, repurchases, and repricing, so the weights drift ever further from the opportunity costs WACC is meant to measure.",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Remember",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "CB-05 WACC",
+    "CommonTrapReference": "Using book values instead of market-value target weights in WACC",
+    "Authorities": [
+      "Corporate finance theory (WACC construction; market-value target weights)",
+      "IMA CSO B.2 cost of capital"
+    ],
+    "Topic": "B.183 wacc-market-value-weights",
+    "VerifiedChecks": [
+      "Definition cross-checked against WACC weighting convention (target market-value weights)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-184",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-184-leverage-spread-analysis",
+    "Stem": "CFO Tomas Herrera of Flash Textile Group is evaluating a recapitalization. Flash is all-equity with 800,000 shares priced at $40 (equity of $32,000,000) and stable EBIT of $3,200,000; the tax rate is 25 percent. The proposal issues $8,000,000 of 7 percent debt and repurchases 200,000 shares at $40. Which analysis of the effect on shareholder returns is accurate?",
+    "Choices": {
+      "A": "Return on equity rises from 7.50% to 8.25% and EPS from $3.00 to $3.30 because Flash earns 10.00% on assets against a 5.25% after-tax borrowing cost, so the 4.75-point spread accrues to the smaller equity base",
+      "B": "Return on equity falls because $560,000 of interest cuts net income from $2,400,000 to $1,980,000, and a lower numerator must lower the ratio however the denominator moves",
+      "C": "Leveraged return on equity reaches 11.00% because the proposal divides the pre-interest profit of $2,640,000 by the reduced equity base of $24,000,000",
+      "D": "EPS improves to $3.30 while return on equity collapses to 2.48%, revealing that buybacks manufacture per-share gains purely by shrinking the shareholder count"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Unlevered: net income = $3,200,000 x 75% = $2,400,000 on $32,000,000 of equity, giving 7.50% ROE and $3.00 EPS. Levered: interest = $8,000,000 x 7% = $560,000; net income = ($3,200,000 - $560,000) x 75% = $1,980,000 on $24,000,000 of equity, giving 8.25% ROE and $1,980,000 / 600,000 = $3.30 EPS. Leverage helps because Flash earns 10.00% on assets ($3,200,000 / $32,000,000) against a 5.25% after-tax debt cost, and the 4.75-point spread flows to the smaller equity base. CFO Tomas Herrera should also brief the board that the identical mechanics magnify downside if EBIT declines. Common trap: comparing net incomes while ignoring that the equity denominator shrank by a quarter.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B reasons from the shrinking numerator alone; equity simultaneously shrinks by $8,000,000, and because income falls proportionally less than the base, ROE climbs from 7.50 percent to 8.25 percent despite lower net income.",
+    "ExplanationWrongC": "Choice C skips the 25 percent tax adjustment and divides pre-tax income of $2,640,000 by $24,000,000 for an inflated 11.00 percent; shareholders earn returns after tax, which gives 8.25 percent.",
+    "ExplanationWrongD": "Choice D pairs the correct EPS with a wrong-denominator ROE computed over the original 800,000-share base, deriving a bogus 2.48 percent; after the repurchase only $24,000,000 of equity remains, supporting 8.25 percent.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.3",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "",
+    "CommonTrapReference": "Reading leverage effects off the numerator while ignoring the shrunken equity base",
+    "Authorities": [
+      "Corporate finance theory (financial leverage; ROE decomposition and the asset-return spread)",
+      "IMA CSO B.3 capital structure"
+    ],
+    "Topic": "B.184 financial-leverage-roe",
+    "VerifiedChecks": [
+      "Recomputed: 3,200,000 x 0.75 = 2,400,000; 2,400,000 / 32,000,000 = 7.50%; (3,200,000 - 560,000) x 0.75 = 1,980,000; 1,980,000 / 24,000,000 = 8.25%; 1,980,000 / 600,000 = 3.30 (second pass agrees)",
+      "Decomposition check passed: spread between 10.00% asset return and 5.25% after-tax cost isolated (AF-A2)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-185",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-185-eoq-order-size",
+    "Stem": "Controller Lena Petrov at Flash Beverage Packaging is resetting purchasing rules for closure lids: annual demand is 48,000 units, each purchase order costs $120 to place and process, and carrying one unit in inventory for a year costs $6. Applying the economic order quantity model, what order size minimizes the combined ordering and carrying cost?",
+    "Choices": {
+      "A": "980 units",
+      "B": "400 units",
+      "C": "1,386 units",
+      "D": "69 units"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "EOQ = square root of (2 x annual demand x cost per order / annual carrying cost per unit) = sqrt(2 x 48,000 x $120 / $6) = sqrt($1,920,000) = about 1,385.64, rounded to 1,386 units. Ordering 1,386 units roughly 34.6 times a year balances about 35 order-setups against an average inventory near 693 units. Controller Lena Petrov can fix the lot size at 1,386 unless demand or either cost moves materially. Business meaning: the model locates the exact point where marginal ordering cost equals marginal carrying cost. Common trap: dropping the leading factor of two (yielding about 980) or inverting the cost ratio (yielding about 69), both of which unbalance the true trade-off.",
+    "ExplanationWrongA": "Choice A drops the leading 2 under the radical, computing sqrt(48,000 x 120 / 6) = about 980; halving the order size nearly doubles order frequency and inflates annual ordering cost well past the carrying savings.",
+    "ExplanationWrongB": "Choice B matches sqrt(2 x 4,000 x 120 / 6) = 400, the signature of running monthly demand (48,000 / 12) through the annual formula; the unit-time mismatch shrinks the lot and multiplies setups.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D inverts the cost fraction, computing sqrt(2 x 48,000 x 6 / 120) = about 69; lots that small would force nearly 700 orders a year, an administrative burden no storage saving could justify.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "CB-08 EOQ",
+    "CommonTrapReference": "Dropping the factor of two or inverting the ordering-carrying ratio under the radical",
+    "Authorities": [
+      "Corporate finance theory (economic order quantity; balancing setup and carrying costs)",
+      "IMA CSO B.4 working capital management"
+    ],
+    "Topic": "B.185 economic-order-quantity",
+    "VerifiedChecks": [
+      "Recomputed: 2 x 48,000 x 120 = 11,520,000; 11,520,000 / 6 = 1,920,000; sqrt(1,920,000) = 1,385.64 rounds to 1,386 (second pass agrees)",
+      "Cross-checked error paths: sqrt(960,000) = 979.80; sqrt(160,000) = 400.00; sqrt(4,800) = 69.28",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-186",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-186-compensating-balance-effective-rate",
+    "Stem": "Treasurer Omar Haddad at Flash Outdoor Gear is renewing a $2,000,000 credit line quoted at a stated 8 percent with a 10 percent compensating balance requirement, and a staff accountant asks him why the true annual cost will exceed 8 percent. Which explanation is correct?",
+    "Choices": {
+      "A": "Compensating balances are refundable deposits that earn interest for the borrower, offsetting the stated rate nearly dollar for dollar",
+      "B": "The bank charges its fee only on the unused portion of the line, so drawing the full amount keeps the effective cost at the stated 8 percent",
+      "C": "Compensating balances shrink the lender's regulatory capital requirement, a saving the bank passes back to Flash as a lower all-in rate",
+      "D": "The required balance sits idle at the bank, so Flash pays interest on the full $2,000,000 while putting only $1,800,000 to work, lifting the effective rate to about 8.89 percent"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "A compensating balance is a required idle deposit, so usable funds fall to $1,800,000 while interest accrues on the entire $2,000,000 drawn: $160,000 / $1,800,000 = about 8.89 percent effective. Treasurer Omar Haddad should treat the blocked deposit as part of the borrowing cost rather than harmless housekeeping. Business meaning: the 0.89-point gap between the stated and effective rate is pure liquidity rent collected by the bank. Common trap: quoting the stated rate internally and discovering the shortfall only when projected cash fails to cover the blocked 10 percent slice.",
+    "ExplanationWrongA": "Choice A assumes the blocked deposit earns borrower-side interest that rebates the cost; compensating balances customarily sit non-interest-bearing, which is exactly why the effective rate climbs toward 8.89 percent.",
+    "ExplanationWrongB": "Choice B ties cost to unused-line fees; once Flash draws the full $2,000,000, commitment fees exit the picture and only the usability gap between $1,800,000 of working funds and the $2,000,000 interest base matters.",
+    "ExplanationWrongC": "Choice C credits a regulatory pass-through that runs backwards; the balance requirement cheapens the bank's own funding, and that benefit accrues to the lender rather than returning as a rate cut for the borrower.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand",
+    "CalculationItem": false,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.5",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "",
+    "CommonTrapReference": "Quoting the stated rate while ignoring the unusable compensating balance",
+    "Authorities": [
+      "Corporate finance theory (compensating balances; effective versus stated interest cost)",
+      "IMA CSO B.5 short-term financing and cash management"
+    ],
+    "Topic": "B.186 compensating-balance-cost",
+    "VerifiedChecks": [
+      "Illustrative rate cross-checked: 160,000 / 1,800,000 = 0.0889 (about 8.89 percent effective)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-187",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-187-payout-channel-wealth-comparison",
+    "Stem": "Jordan Blake, senior analyst at Crestline Partners covering Flash Retail Brands, is modeling a one-time distribution of $4,500,000 of excess cash. Flash has 2,000,000 shares trading at $45, net income of $6,000,000, a constant P/E of 15, cash temporarily earning 4 percent before tax, and a 25 percent tax rate. Comparing an open-market repurchase at $45 against an equal special dividend, which analysis holds up?",
+    "Choices": {
+      "A": "The repurchase creates roughly $2.31 more wealth per share because the price climbs from $45.00 toward $46.30, while dividend recipients merely receive money the price adjustment takes straight back",
+      "B": "The special dividend is the safer outcome for shareholders because cash in hand cannot fall with the market, whereas repurchase sellers carry execution-date price risk that steadily erodes value",
+      "C": "Wealth converges near $46.25-$46.30 per share either way: the repurchase lifts EPS to $3.09 and price to about $46.30 only after forfeiting $135,000 of after-tax interest income, while the dividend pays $2.25 against an ex-dividend price near $43.99, so channel choice hinges on investor taxes rather than value creation",
+      "D": "Post-distribution EPS of $2.93 prices the stock at $43.99, and adding back the undistributed cash shows the dividend route leaves holders $2.25 per share ahead of the repurchase route"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "With a constant 15x multiple and symmetric taxation, the payout channel is wealth-neutral. Repurchase: $4,500,000 / $45 retires 100,000 shares; foregone after-tax interest = $4,500,000 x 4% x 75% = $135,000; EPS = $5,865,000 / 1,900,000 = $3.0868; price = 15 x $3.0868 = about $46.30. Dividend: $2.25 per share; EPS = $5,865,000 / 2,000,000 = $2.9325; ex-dividend price = 15 x $2.9325 = $43.99, plus $2.25 cash = $46.24. The pennies of gap are rounding, not economics; genuine differences arise only from dividend versus capital-gains tax treatment. Analyst Jordan Blake should tell clients the choice is about tax clienteles and signaling, not value creation. Common trap: crediting the EPS lift from buybacks while ignoring the earnings the distributed cash used to produce.",
+    "ExplanationWrongA": "Choice A counts the climb toward $46.30 but ignores the $135,000 of after-tax interest income the distributed cash stops earning; netting both legs leaves repurchase wealth essentially equal to the dividend path near $46.25.",
+    "ExplanationWrongB": "Choice B elevates certainty into extra value; both routes deliver roughly $46.25-$46.30 per share in the model, and a preference for cash in hand is a risk-preference or tax argument rather than a wealth difference.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D adds the $2.25 dividend back onto an already ex-dividend price as though the market had not detached it; the $43.99 quote already excludes the paid-out cash, so no extra $2.25 of value survives the comparison.",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "CognitiveLevel": "Analyze",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.7",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "",
+    "CommonTrapReference": "Attributing buyback EPS accretion to wealth creation while ignoring lost interest income",
+    "Authorities": [
+      "Corporate finance theory (dividends versus repurchases; payout neutrality with offsetting adjustments)",
+      "IMA CSO B.7 dividend policy and share repurchases"
+    ],
+    "Topic": "B.187 repurchase-dividend-wealth-parity",
+    "VerifiedChecks": [
+      "Recomputed: 4,500,000 / 45 = 100,000 shares; 4,500,000 x 0.04 x 0.75 = 135,000; 5,865,000 / 1,900,000 = 3.0868; 15 x 3.0868 = 46.30; 5,865,000 / 2,000,000 = 2.9325; 15 x 2.9325 = 43.99; 43.99 + 2.25 = 46.24 (second pass agrees)",
+      "Decomposition check passed: earnings leg, share-count leg, and price-adjustment leg separated (AF-A2)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-188",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-188-forward-yen-discount",
+    "Stem": "Treasurer Nadia Rahimi of Flash Semiconductor Imports hedges quarterly yen purchases. Today's spot rate is 110.00 yen per dollar and the 90-day forward rate is 108.50 yen per dollar. Computing the annualized forward premium or discount on the yen as (forward minus spot) divided by spot, times 360 over 90, what does the quote show?",
+    "Choices": {
+      "A": "A 5.45 percent annualized forward discount on the yen",
+      "B": "A 5.53 percent annualized forward discount on the yen",
+      "C": "A 5.45 percent annualized forward premium on the yen",
+      "D": "A 1.36 percent annualized forward discount on the yen"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Forward premium or discount on the foreign currency = (forward - spot) / spot x (360 / days) = (108.50 - 110.00) / 110.00 x (360 / 90) = -1.3636% x 4 = -5.45 percent, an annualized 5.45 percent forward discount on the yen: forward yen convert into fewer dollars than spot yen because more yen per dollar are promised forward, consistent with yen rates sitting below dollar rates. Treasurer Nadia Rahimi locking the forward effectively sheds that discount relative to waiting for spot. Common trap: flipping the sign into a premium, measuring against the forward instead of the spot (which gives 5.53 percent), or skipping annualization (which leaves just 1.36 percent).",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B measures the gap against the forward rate (1.50 / 108.50 x 4 = about 5.53 percent); the convention quotes the deviation from today's spot, which gives 5.45 percent.",
+    "ExplanationWrongC": "Choice C flips the sign and calls the move a premium; forward yen convert into fewer dollars than spot yen (108.50 versus 110.00 per dollar), which is the definition of a discount on the currency.",
+    "ExplanationWrongD": "Choice D forgets annualization and reports the raw 90-day gap of 1.36 percent as the yearly figure; multiplying by 360 / 90 scales the quote to 5.45 percent so it compares cleanly with annual rates.",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.9",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "CB-09 Forward Premium or Discount",
+    "CommonTrapReference": "Sign flip between premium and discount or failure to annualize the forward gap",
+    "Authorities": [
+      "Corporate finance theory (forward premium and discount; covered interest parity intuition)",
+      "IMA CSO B.9 international finance"
+    ],
+    "Topic": "B.188 forward-premium-discount",
+    "VerifiedChecks": [
+      "Recomputed: (108.50 - 110.00) / 110.00 = -0.013636; x 4 = -0.054545 rounds to -5.45 percent (second pass agrees); error paths 5.53 percent and unannualized 1.36 percent confirmed",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-189",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-189-full-wacc-components",
+    "Stem": "Controller Marcus Reyes at Flash Aerospace Components is assembling the weighted average cost of capital at the adopted target structure of 40 percent debt, 10 percent preferred stock, and 50 percent common equity. Pre-tax debt costs 8 percent, the tax rate is 25 percent, the $100-par preferred paying a $6 dividend trades at $92, and common equity carries an expected dividend of $3.20 next year, a $40 price, and 5 percent growth. What WACC should Marcus report?",
+    "Choices": {
+      "A": "7.05%",
+      "B": "9.55%",
+      "C": "10.35%",
+      "D": "9.50%"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Component costs: after-tax debt = 8% x (1 - 25%) = 6.00%; preferred = $6 / $92 = 6.52%; common equity (Gordon growth) = $3.20 / $40 + 5% = 8.00% + 5.00% = 13.00%. WACC = 40% x 6.00% + 10% x 6.52% + 50% x 13.00% = 2.40% + 0.65% + 6.50% = 9.55%. Controller Marcus Reyes should apply 9.55 percent to average-risk projects evaluated at the target structure. Business meaning: the after-tax debt subsidy is what pulls the blended rate well below the 13.00 percent equity cost. Common trap: skipping the debt tax shield (10.35 percent), pricing preferred at par instead of its $92 market price (9.50 percent), or dropping the growth term in the equity cost (7.05 percent).",
+    "ExplanationWrongA": "Choice A omits growth in the Gordon input, costing equity at $3.20 / $40 = 8.00 percent and collapsing WACC to 7.05 percent; the 5 percent growth term is the model's engine and cannot be discarded.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C pays interest pre-tax at 8.00 percent instead of the 6.00 percent after-tax figure, inflating WACC to 10.35 percent; the 25 percent shield is a real cash saving that belongs inside the component cost.",
+    "ExplanationWrongD": "Choice D prices preferred at $100 par rather than the $92 market price, understating that component (6.00 versus 6.52 percent) and landing at 9.50 percent; the required yield follows the traded price investors actually pay.",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "CB-05 WACC",
+    "CommonTrapReference": "Skipping the debt tax shield or pricing preferred off par instead of market",
+    "Authorities": [
+      "Corporate finance theory (WACC assembly; after-tax component costs at market weights)",
+      "IMA CSO B.2 cost of capital"
+    ],
+    "Topic": "B.189 weighted-average-capital-cost",
+    "VerifiedChecks": [
+      "Recomputed: 0.40 x 8 x 0.75 = 2.40; 6 / 92 = 6.52; 3.20 / 40 + 5 = 13.00; 2.40 + 0.652 + 6.500 = 9.55 (second pass agrees); error paths 10.35, 9.50, 7.05 confirmed",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  },
+  {
+    "Part": 2,
+    "Section": "B",
+    "QuestionID": "P2-B-190",
+    "question_state": "Unprocessed",
+    "Part2OnlyFlag": true,
+    "UniqueConceptKey": "B-190-ccc-shortening-plan",
+    "Stem": "Treasury analyst Camille Duarte of Flash Home Furnishings is pitching a working-capital initiative to the CFO. Flash's cycle currently runs 60.0 days of inventory and 45.0 days of receivables against 30.0 days of payables; the initiative targets inventory at 52.0 days, receivables at 41.0 days, and payables stretched to 38.0 days. What cash conversion cycle and change should Camille present?",
+    "Choices": {
+      "A": "93.0 days, an increase of 18.0 days",
+      "B": "63.0 days, a reduction of 12.0 days",
+      "C": "131.0 days, an increase of 56.0 days",
+      "D": "55.0 days, a reduction of 20.0 days"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "CCC = inventory days + receivable days - payable days. Current: 60.0 + 45.0 - 30.0 = 75.0 days. Proposed: 52.0 + 41.0 - 38.0 = 55.0 days, a shortening of 20.0 days, which releases one day of operating cash for each day cut across the full sales year. Treasury analyst Camille Duarte should quantify the release as 20 days of daily cost of sales plus the collection acceleration when presenting the initiative. Business meaning: payables are free financing inside the cycle, so stretching them shrinks the net funding window. Common trap: adding payables instead of subtracting them, or forgetting that supplier credit finances the cycle rather than burdening it.",
+    "ExplanationWrongA": "Choice A adds the shortened inventory and receivable days (52.0 + 41.0 = 93.0) and never subtracts payables, misreading a financing source as an operating burden; the cycle measures net exposure, not gross operating days.",
+    "ExplanationWrongB": "Choice B plugs the new inventory and receivable figures against the old 30.0-day payable term and arrives at 63.0 days; the initiative extends payables to 38.0 days, so stale inputs understate the improvement by 8.0 days.",
+    "ExplanationWrongC": "Choice C adds all three components (52.0 + 41.0 + 38.0 = 131.0), treating supplier credit as if it lengthened the cash gap; payables finance the cycle and must be deducted.",
+    "ExplanationWrongD": "",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "CognitiveLevel": "Apply",
+    "CalculationItem": true,
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "BlueprintDomain": "Corporate Finance",
+    "FormulaReference": "CB-10 Cash Conversion Cycle",
+    "CommonTrapReference": "Adding payables instead of subtracting them from the conversion cycle",
+    "Authorities": [
+      "Corporate finance theory (cash conversion cycle; inventory plus receivables less payables)",
+      "IMA CSO B.4 working capital management"
+    ],
+    "Topic": "B.190 cash-conversion-cycle-change",
+    "VerifiedChecks": [
+      "Recomputed: current 60 + 45 - 30 = 75.0; proposed 52 + 41 - 38 = 55.0; change 75.0 - 55.0 = 20.0-day reduction (second pass agrees)",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ]
+  }
+,
+  {
+    "Authorities": [
+      "U.S. GAAP long-term debt recognition (ASC 835-30 effective-interest method); corporate finance theory (bond discount as deferred borrowing cost)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "The issuance discount represents an additional borrowing cost that is amortized into interest expense over the bonds' life, so expense equals the $30,000 coupon plus a portion of the discount each period",
+      "B": "Interest expense tracks the cash coupon directly because the 6% stated rate printed on the bonds governs the accounting entry",
+      "C": "The discount is capitalized as a long-term asset and is charged to interest expense only when the bonds mature at the end of year five",
+      "D": "Because Flash received less cash than face value, the discount permanently reduces interest expense to a level below the annual coupon"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Treating bond discount as an asset or equating expense with cash coupon",
+    "CorrectChoice": "A",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Under the effective-interest method (ASC 835-30), periodic interest expense equals the market yield multiplied by the bond's carrying value, while cash paid equals the stated coupon on face. Here expense begins near 7% applied to proceeds below $500,000 rather than 6% applied to face, and the shortfall between proceeds and the $500,000 face amount is amortized as extra interest cost, so expense exceeds the $30,000 cash coupon every period until carrying value converges to face at maturity. Interpretation: Marcus Bell can tell the new staff accountant that a discount is prepaid financing cost, not a loss parked aside. Common trap: equating interest expense with cash interest and treating the discount balance as an asset awaiting write-off.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B assumes the stated coupon drives reported expense; the misconception is confusing cash interest with effective interest. Under ASC 835-30 the 7% market yield applied to carrying value sets expense, so reported cost starts above the $30,000 coupon and the gap closes through discount amortization each period.",
+    "ExplanationWrongC": "Choice C misclassifies the discount as an asset awaiting maturity; the correct treatment amortizes it into interest expense every period, which is precisely why expense runs ahead of cash paid rather than waiting for a single charge in year five.",
+    "ExplanationWrongD": "Choice D reverses the direction of the effect; receiving less cash raises, not lowers, the borrower's effective rate, so the discount increases interest expense above the coupon instead of suppressing it beneath that line.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-191",
+    "Section": "B",
+    "Stem": "During a quarterly review, Marcus Bell, Flash Industries' internal auditor, walks a new staff accountant through the January issuance of $500,000 face value, five-year, 6% bonds priced when investors demanded a 7% effective market yield, producing net proceeds below face value. Which statement best explains why Flash's annual interest expense will exceed the $30,000 of cash coupon payments?",
+    "Topic": "B.191 bond-discount-interest-expense",
+    "UniqueConceptKey": "B-191-discount-amortizes-extra-interest",
+    "VerifiedChecks": [
+      "Recomputed: 0.06 x 500000 = 30000 coupon baseline confirmed",
+      "Effective-yield logic cross-checked against ASC 835-30 effective-interest treatment; both passes agree",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (M&A valuation: NPV of acquisition equals target standalone value plus synergies less purchase price)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$3,400,000, because the synergy estimate measures the entire economic gain from completing the transaction at any price",
+      "B": "$900,000, because combined value of $18,900,000 exceeds the $18,000,000 price paid by exactly that margin",
+      "C": "$2,500,000, because the excess of price over standalone value represents the gain Flash captures from the sellers",
+      "D": "$5,900,000, because synergy of $3,400,000 and the $2,500,000 step-up over standalone value both accrue to Flash"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Counting synergy or premium alone as the acquirer's gain",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "Acquisition NPV under standard corporate-finance deal math equals target standalone value plus synergies minus price: $15,500,000 + $3,400,000 - $18,000,000 = $900,000. The premium Flash pays ($18,000,000 - $15,500,000 = $2,500,000) consumes most of the synergy pie, leaving $900,000 of net value for Flash shareholders. Business interpretation: Elena Marsh should caution the board that the deal survives only if the synergy estimate holds; roughly a 27% synergy shortfall would erase the entire gain, so integration planning carries the economics. Common trap: reporting the premium or the synergy figure alone as the transaction's payoff to the acquirer instead of netting them against the price actually surrendered.",
+    "ExplanationWrongA": "Choice A books the full synergy estimate as Flash's gain and ignores the $2,500,000 premium embedded in the price; the correct approach nets price against combined value of $18,900,000, leaving only $900,000 rather than crediting the whole synergy pool.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C presents the premium itself as value created; the premium is a cost Flash surrenders to Corvane's selling shareholders, so gains must be measured after recovering it through synergies, not by restating the concession as profit.",
+    "ExplanationWrongD": "Choice D double counts by adding synergy and premium together; the premium is already deducted inside the $18,000,000 price, so summing both inflates the payoff to a level no cash-flow model of the deal supports.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-192",
+    "Section": "B",
+    "Stem": "Elena Marsh, Flash's M&A director, is preparing the board memo on a proposed all-cash acquisition of Corvane Tools for $18,000,000. Corvane's standalone operations carry a present value of $15,500,000, and Flash estimates the present value of combining synergies at $3,400,000. What is the net value created for Flash by completing the deal at the proposed price?",
+    "Topic": "B.192 acquisition-synergy-npv",
+    "UniqueConceptKey": "B-192-synergy-minus-premium",
+    "VerifiedChecks": [
+      "Recomputed: 15500000 + 3400000 - 18000000 = 900000",
+      "Second pass: premium 18000000 - 15500000 = 2500000; 3400000 - 2500000 = 900000 agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "U.S. GAAP lease classification framework (ASC 842 five-criteria model); corporate finance theory (time value of money in payment streams)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Finance lease, because undiscounted payments total $425,000, clearing the $360,000 substantial-part benchmark outright",
+      "B": "Finance lease, because payments discounted at 8% over six periods equal $392,947, which exceeds the $360,000 benchmark",
+      "C": "Operating lease, because payments discounted at 8% for five periods equal $339,380, which falls short of the $360,000 benchmark",
+      "D": "Operating lease, because title stays with the lessor, which settles classification regardless of the payment amounts involved"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using undiscounted payment totals or the wrong annuity horizon in the 90%-of-fair-value test",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "The classification test compares the present value of lease payments with 90% of fair value: 0.90 x $400,000 = $360,000. Discounting the five contractual payments at the 8% incremental borrowing rate gives $85,000 x 3.9927 = $339,379.50, about $339,380, which sits below the $360,000 threshold, so the substantial-part criterion fails and the arrangement is an operating lease (remaining criteria assumed unmet). Business interpretation: Dana Whitfield can close the quarter without recognizing a finance asset and liability, keeping covenant metrics built on lease-inclusive debt comfortable. Common trap: summing undiscounted payments or stretching the discount horizon to force the threshold into finance territory.",
+    "ExplanationWrongA": "Choice A skips discounting altogether and stacks five nominal payments of $85,000 into $425,000; the test is defined on present values, so the time value of money at the 8% borrowing rate must be applied before any comparison against the $360,000 benchmark.",
+    "ExplanationWrongB": "Choice B stretches the annuity to six periods and lands on $392,947; the contract specifies five annual payments, and importing a sixth-period factor manufactures a breach of the $360,000 benchmark that the actual cash-flow stream never produces.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D treats title retention as dispositive; failure to transfer title is one criterion within the five-part model, and the arrangement still has to be tested against the present-value benchmark, which is what the $339,380 computation addresses directly.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.6",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-193",
+    "Section": "B",
+    "Stem": "Dana Whitfield, controller at Flash, is classifying a proposed equipment lease before quarter close. Terms call for five annual payments of $85,000 due at each year-end, the equipment's fair value is $400,000, and Flash's incremental borrowing rate is 8%. Dana has been given these factors: ordinary annuity, 8%, five periods = 3.9927; ordinary annuity, 8%, six periods = 4.6229. Under the classification test in which payments whose present value reaches substantially all (90%) of fair value indicate finance treatment, how should this lease be classified?",
+    "Topic": "B.193 lease-pv-classification-test",
+    "UniqueConceptKey": "B-193-substantially-all-pv-threshold",
+    "VerifiedChecks": [
+      "Recomputed: 85000 x 3.9927 = 339379.50 -> 339380; 0.90 x 400000 = 360000",
+      "Second pass: 85000 x 3.9927 re-derived as 340000 - 620.50 = 339379.50 agrees; 85000 x 4.6229 = 392946.50 -> 392947 agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (residual income screening and capital charges in portfolio strategy; divestiture economics)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Gamma is the natural candidate: its 7.5% margin leaves only $300,000 after the $600,000 capital charge, and it contributes no shared customers or technology that other divisions consume",
+      "B": "Alpha should lead the agenda because mature, high-margin franchises attract premium prices from buyers even when they anchor current group profitability",
+      "C": "Beta should be sold because its falling revenue confirms structural decline regardless of the one-time contract explanation attached in the segment pack",
+      "D": "No division merits sale because every segment reports positive EBITDA, and positive EBITDA by itself proves each franchise covers its cost of capital"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Judging segments on EBITDA without charging for invested capital",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Residual-income screening subtracts a capital charge from segment earnings before judging adequacy: Gamma's $900,000 EBITDA less 10% x $6,000,000 = $600,000 leaves only $300,000, a thin residual beside Alpha's $4,200,000 and Beta's $1,800,000 on lighter capital bases, and Gamma's isolation from shared customers and technology strips away synergy reasons to retain it. Decomposing margin, capital intensity, and interdependencies converges on Gamma. Business interpretation: Raymond Osei can frame Gamma as a business whose returns barely clear its capital bill, freeing sale proceeds for redeployment into Alpha-type franchises compounding at far higher margins. Common trap: reading positive EBITDA as proof of economic adequacy without charging for the capital the segment consumes.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B inverts the logic of portfolio pruning; high-margin Alpha is the engine funding the group and earning the strongest internal returns, so selling the best performer to chase a buyer's premium sacrifices durable earnings power for a one-time gain.",
+    "ExplanationWrongC": "Choice C converts a documented one-time contract expiration into a structural verdict; the pack shows Beta holding a healthy 13.3% margin, and sound analysis separates event-driven revenue dips from deteriorating unit economics before nominating a division for sale.",
+    "ExplanationWrongD": "Choice D treats any positive EBITDA as sufficient; without subtracting the opportunity cost of capital, a profitable-looking division like Gamma can still destroy value, which is precisely the distortion the capital-charge screen exists to expose.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.8",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-194",
+    "Section": "B",
+    "Stem": "Raymond Osei, a Flash board member chairing the portfolio review, receives the segment pack: Alpha earns $4,200,000 EBITDA on $21,000,000 revenue (20.0% margin); Beta earns $1,800,000 EBITDA on $13,500,000 revenue (13.3% margin), with its revenue dip traced to a one-time contract expiration while unit margins hold; Gamma earns $900,000 EBITDA on $12,000,000 revenue (7.5% margin) and ties up $6,000,000 of capital charged internally at 10%. Gamma shares no customers or technology with the other divisions. Breaking down residual performance after capital charges, which conclusion best supports the divestiture discussion?",
+    "Topic": "B.194 divestiture-segment-residual",
+    "UniqueConceptKey": "B-194-capital-charge-segment-screen",
+    "VerifiedChecks": [
+      "Recomputed: 900000 - (0.10 x 6000000) = 900000 - 600000 = 300000 residual for Gamma",
+      "Margin checks agree: 4200000/21000000 = 0.2000; 1800000/13500000 = 0.1333; 900000/12000000 = 0.0750",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (Markowitz risk-return tradeoff; coefficient of variation as return-normalized risk measure)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Fund X, because its middle-of-range dispersion paired with a double-digit expected return gives the best intuitive blend of upside and stability",
+      "B": "Fund Z, because the committee's duty is maximizing expected wealth and its 14.0% expected return leads the approved list",
+      "C": "Fund X, because its coefficient of variation of 0.67 is the lowest risk measure among the three approved candidates",
+      "D": "Fund Y, because its coefficient of variation of 0.50 is the lowest risk per unit of return, matching the policy's preservation-first language"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Ranking investments on raw return or raw standard deviation instead of return-normalized risk",
+    "CorrectChoice": "D",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Risk-normalizing each fund with the coefficient of variation (standard deviation divided by expected return) gives Fund X: 8.0/12.0 = 0.67, Fund Y: 4.5/9.0 = 0.50, Fund Z: 10.5/14.0 = 0.75. Under a mandate ranking candidates by risk borne per unit of expected return, Fund Y's 0.50 dominates, and Priya Raman can defend the recommendation as policy-driven rather than return-shy; a return-seeking committee could rationally rank Z first, which is what makes this a judgment call rather than pure arithmetic. Business meaning: the lower ratio implies tighter outcome dispersion per percentage point of return on the $2,500,000 placement. Common trap: ranking raw standard deviations or raw returns without normalizing one against the other.",
+    "ExplanationWrongA": "Choice A substitutes intuition for measurement; once dispersion is normalized by return, Fund X carries 0.67 units of risk per unit of return versus Y's 0.50, so the intuitive-balance argument collapses under the policy's own ranking metric.",
+    "ExplanationWrongB": "Choice B optimizes for expected wealth and disregards the preservation-first mandate; while 14.0% tops the list, Fund Z's coefficient of variation of 0.75 is the worst of the three, so recommending it asks the committee to rewrite policy rather than apply it.",
+    "ExplanationWrongC": "Choice C computes the right statistic for the wrong fund; 8.0/12.0 yields 0.67 for Fund X, which sits above Y's 0.50, so the choice mislabels a mid-ranked measure as the minimum and flips the recommendation away from the compliant option.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "CB-03 CV",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-195",
+    "Section": "B",
+    "Stem": "Priya Raman, treasurer of Flash, must place $2,500,000 of reserve cash under an investment-policy mandate that prioritizes preservation of capital per unit of expected return. Three approved instruments show: Fund X, expected return 12.0% with standard deviation 8.0%; Fund Y, expected return 9.0% with standard deviation 4.5%; Fund Z, expected return 14.0% with standard deviation 10.5%. Which placement should Priya recommend to the finance committee?",
+    "Topic": "B.195 risk-adjusted-selection-cv",
+    "UniqueConceptKey": "B-195-cv-conservative-mandate",
+    "VerifiedChecks": [
+      "Recomputed: 8.0/12.0 = 0.67; 4.5/9.0 = 0.50; 10.5/14.0 = 0.75",
+      "Second pass via decimals: 0.6667, 0.5000, 0.7500 agree; ordering Y < X < Z holds",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (dividend growth cost of equity with flotation-cost adjustment; marginal cost of capital decision rule)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Proceed, because the 10.20% project return clears the 10.00% retained-earnings cost of equity derived from the dividend-growth model",
+      "B": "Defer the project, because with retained earnings exhausted the marginal funding is new common equity costing about 10.43%, above the 10.20% return",
+      "C": "Proceed, because flotation costs are a one-time transaction deduction whose annualized drag on an ongoing dividend stream is immaterial to the ranking",
+      "D": "Defer the project, because dividend-growth inputs are estimates, making any required return resting on them too unreliable for a marginal call"
+    },
+    "CognitiveLevel": "Evaluate",
+    "CommonTrapReference": "Hurdling projects at retained-earnings cost when the marginal source is flotation-loaded equity",
+    "CorrectChoice": "B",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Cost of retained earnings via the Gordon growth relation: $2.30/$46.00 + 0.050 = 0.0500 + 0.0500 = 0.1000, or 10.00%. Adjusting for flotation on new common: $2.30/($46.00 x 0.92) + 0.050 = $2.30/$42.32 + 0.050 = 0.0543 + 0.0500 = 0.1043, about 10.43%. Because the retention bucket is committed to the announced debt-reduction program, the true marginal dollar costs 10.43%, which exceeds the project's 10.20%, so proceeding destroys roughly 0.23 points per dollar raised at the margin; deferral preserves value until flotation terms improve or the project's return firms. Judgment framing: Alan Reyes retains defensible alternatives, including re-cutting the project scope to lift its return above the marginal rate. Common trap: testing projects against the retained-earnings rate when the binding funding source is a flotation-loaded new issue.",
+    "ExplanationWrongA": "Choice A applies the right model to the wrong funding source; the 10.00% figure prices internally generated equity, yet the debt-commitment resolution removes that bucket, so the relevant hurdle is the 10.43% flotation-adjusted rate, which the 10.20% return fails to clear.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C waves off flotation as immaterial; spreading the 8.0% proceeds haircut across the ongoing dividend stream lifts the cost of equity by 0.43 percentage points here, and that spread is exactly the margin by which the project fails, making the drag decisive rather than cosmetic.",
+    "ExplanationWrongD": "Choice D retreats into estimation uncertainty; every hurdle-rate decision rests on estimated inputs, and sound governance acts on best estimates with sensitivity checks rather than suspending marginal decisions because parameters carry ranges.",
+    "FormulaReference": "CB-11 Gordon Growth",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.2",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-196",
+    "Section": "B",
+    "Stem": "Alan Reyes, CFO of Flash, faces a funding decision on a capacity-expansion project returning 10.20%. Flash stock trades at $46.00, the next annual dividend projects at $2.30, perpetual dividend growth is estimated at 5.0%, and a new common issue would carry flotation costs of 8.0% of proceeds. Retained earnings for the year are fully committed to an announced debt-reduction program. Which decision should Alan take?",
+    "Topic": "B.196 new-equity-flotation-hurdle",
+    "UniqueConceptKey": "B-196-flotation-marginal-cost-reject",
+    "VerifiedChecks": [
+      "Recomputed: 2.30/46.00 = 0.0500; 46.00 x 0.92 = 42.32; 2.30/42.32 = 0.0543; +0.0500 -> 0.1043",
+      "Second pass: 10.43% - 10.20% = 0.23 point negative spread confirms deferral logic",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (capital structure leverage; debt-to-equity dynamics of debt-financed share repurchases)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "0.65, reflecting debt rising to $6,500,000 while the equity base is left intact at $10,000,000 after the buyback",
+      "B": "0.53, dividing the original $4,000,000 of debt by the reduced $7,500,000 equity base remaining post-retirement",
+      "C": "0.87, reflecting debt of $6,500,000 against equity shrunk to $7,500,000 by the retired shares",
+      "D": "0.40, on the view that swapping one capital component for another leaves the leverage position unchanged"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Adjusting only one side of the debt-to-equity ratio after a debt-funded buyback",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "A debt-funded repurchase moves both sides of the ratio simultaneously: debt climbs from $4,000,000 to $6,500,000 while equity falls from $10,000,000 to $7,500,000, giving $6,500,000/$7,500,000 = 0.8667, about 0.87 versus the prior 0.40. Leverage more than doubles because the numerator grows and the denominator shrinks at the same time. Business interpretation: Tobias Grant should flag to readers that Flash's coverage metrics and covenant headroom compress materially even though total assets barely move, since cash left the balance sheet with the repurchase. Common trap: updating only one side of the ratio and missing the compounding effect of the smaller equity base.",
+    "ExplanationWrongA": "Choice A raises debt but forgets the retirement; the $2,500,000 paid out comes from newly borrowed funds and removes shares from the equity account, so the base drops to $7,500,000, and holding the denominator flat understates the leverage shift.",
+    "ExplanationWrongB": "Choice B pairs the wrong numerator with the right denominator; the original $4,000,000 of debt predates the financing, whereas the transaction layers on $2,500,000 of fresh borrowings, so the numerator must be rebuilt at $6,500,000 before dividing.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D assumes neutrality between financing instruments; a repurchase funded with debt exchanges equity claims for fixed-charge obligations, mechanically lifting the debt-to-equity ratio from 0.40 to 0.87 rather than leaving it stationary.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.3",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-197",
+    "Section": "B",
+    "Stem": "Tobias Grant, senior analyst covering Flash, models the balance-sheet effect of a planned $2,500,000 debt-financed share repurchase. Flash currently reports $4,000,000 of interest-bearing debt against $10,000,000 of book equity, and the buyback will be executed at book value with immediate retirement of the shares purchased. What debt-to-equity ratio results after the transaction closes?",
+    "Topic": "B.197 debt-funded-buyback-leverage",
+    "UniqueConceptKey": "B-197-denominator-shrinks-leverage",
+    "VerifiedChecks": [
+      "Recomputed: 4000000 + 2500000 = 6500000; 10000000 - 2500000 = 7500000; 6500000/7500000 = 0.8667 -> 0.87",
+      "Second pass: prior ratio 4000000/10000000 = 0.40; doubling sanity check on both-side movement agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (matching/hedging principle for financing permanent versus temporary working capital)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Temporary working capital is the plant and machinery floor persisting across production cycles, while permanent working capital covers seasonal demand spikes",
+      "B": "Permanent working capital is the minimum current-asset investment carried throughout the cycle, while temporary working capital is the seasonal or cyclical increment layered on top of it",
+      "C": "Permanent working capital swings with the seasons, while temporary working capital is the stable base that stays constant across the year",
+      "D": "Both layers are best financed with revolving short-term credit, which is why the distinction matters mainly for tax reporting purposes"
+    },
+    "CognitiveLevel": "Remember",
+    "CommonTrapReference": "Reversing the permanent and temporary working-capital definitions",
+    "CorrectChoice": "B",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The matching (hedging) principle of working-capital finance pairs the permanent component, the baseline level of cash, receivables, and inventory present in every month of the cycle, with long-term or stable spontaneous funding, and pairs the temporary component, the seasonal build, with short-term credit that rolls off when the need subsides. Recall of the two-layer structure lets Meera Patel's analysts see why Flash's revolver peaks in peak-season quarters while term debt stays flat across the year. Common trap: memorizing the labels backward and financing the permanent base with short-term money, inviting rollover and repricing risk onto the steadiest slice of current assets.",
+    "ExplanationWrongA": "Choice A attaches the seasonal label to fixed assets and swaps the two categories outright; plant and machinery sit in long-term assets, while the permanent-versus-temporary split lives entirely inside current assets and their financing tenor.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C reverses the definitions; the seasonal layer is the temporary increment expanding and contracting with demand, and assigning permanence to the swinging component would push analysts to fund steady baseline inventory with maturing paper.",
+    "ExplanationWrongD": "Choice D erases the distinction the question targets; blanket short-term funding exposes the permanent base to rollover and rate risk, and the two-layer lens drives financing maturity selection rather than any tax-reporting outcome.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-198",
+    "Section": "B",
+    "Stem": "During analyst onboarding, Meera Patel, controller at Flash, quizzes new hires on working-capital doctrine before they touch the forecast model. Which statement correctly distinguishes permanent from temporary working capital?",
+    "Topic": "B.198 permanent-temporary-working-capital",
+    "UniqueConceptKey": "B-198-matching-principle-tiering",
+    "VerifiedChecks": [
+      "Definition recall cross-checked against matching/hedging principle treatments in two references; wording agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (Baumol-Miller-Orr cash management models; asymmetric conversion costs in control-band design)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$45,000, because the target sits one-third of the $60,000 band above the lower limit, biasing average cash toward the cheaper side of the corridor",
+      "B": "$55,000, because the target naturally rests at the arithmetic center of the $25,000-to-$85,000 corridor",
+      "C": "$65,000, because the target belongs two-thirds of the way up the band, mirroring the distance the lower trigger sits from zero",
+      "D": "$36,667, because the two bounds summed and divided by three locate the point minimizing combined conversion costs"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Targeting the corridor midpoint and overlooking the one-third-above-lower-limit construction",
+    "CorrectChoice": "A",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "The Miller-Orr model fixes the return point at the lower limit plus one-third of the spread: $25,000 + (($85,000 - $25,000)/3) = $25,000 + $20,000 = $45,000. The asymmetric pull toward the lower bound reflects cost structure: converting securities to cash incurs the transaction fee plus forgone yield, while letting cash run toward the floor economizes on opportunity cost. Deconstructing trigger-to-target distances shows Owen Hartley's team why balances gravitate nearer the bottom of the corridor than its middle, and why the upper bound sits farther from the target than the lower bound does. Common trap: assuming symmetry and targeting the corridor midpoint instead of deriving the one-third construction.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B imposes geometric symmetry the model rejects; a midpoint of $55,000 would suit equal upward and downward conversion costs, but forgone yield on idle cash tilts the optimum to one-third of the band above the floor, not half of it.",
+    "ExplanationWrongC": "Choice C places the target two-thirds up the corridor at $65,000, which maximizes rather than minimizes average idle balances; the model's cost asymmetry pulls the target toward the lower trigger, the opposite direction of this placement.",
+    "ExplanationWrongD": "Choice D garbles the formula by averaging the bounds over three instead of weighting the lower limit triple; the prescribed construction is $25,000 plus one-third of the $60,000 spread, yielding $45,000 rather than $36,667.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-199",
+    "Section": "B",
+    "Stem": "Owen Hartley, treasury analyst at Flash, is documenting why the cash-management model keeps pulling the concentration account back to a fixed target. Policy sets a lower bound of $25,000 and an upper bound of $85,000 on the account; between triggers the balance wanders freely, and touching either bound launches a trade restoring the target. Decomposing the control band, what return point does the Miller-Orr logic prescribe and why?",
+    "Topic": "B.199 miller-orr-return-point",
+    "UniqueConceptKey": "B-199-lower-limit-plus-third-spread",
+    "VerifiedChecks": [
+      "Recomputed: 85000 - 25000 = 60000; 60000/3 = 20000; 25000 + 20000 = 45000",
+      "Second pass via (2L+U)/3: (50000 + 85000)/3 = 135000/3 = 45000 agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (share repurchase mechanics; EPS accretion from share-count reduction; signaling distinctions versus dividends)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "$2.40, because retiring shares redistributes ownership without touching the earnings pool or the count used for reporting",
+      "B": "$2.18, because the transaction effectively enlarges the share base to 3,025,000 as treasury activity resets the reported count",
+      "C": "$2.67, because the earnings pool spreads over 2,475,000 remaining shares after the retirement settles",
+      "D": "$3.00, because the $11,000,000 outlay doubles the effective share reduction beyond the 275,000 shares actually retired"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Quoting the pre-buyback share count or overstating the retired-share reduction",
+    "CorrectChoice": "C",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Post-buyback EPS equals net income divided by remaining shares: $6,600,000/(2,750,000 - 275,000) = $6,600,000/2,475,000 = $2.67, up from $2.40, an accretion near 11% driven purely by the smaller denominator. Business interpretation for Helena Ruiz: the investor letter can describe the accretion honestly as mechanical, while the signaling literature cautions that markets read repurchases as management confidence in undervaluation, a flexible signal distinct from the recurring commitment implied by a maintained cash dividend. Common trap: quoting the old share count, treating EPS as frozen, or narrating denominator-driven accretion as operational improvement in the underlying business.",
+    "ExplanationWrongA": "Choice A freezes the share count despite an explicit retirement of 275,000 shares; with the numerator unchanged and 2,475,000 shares remaining outstanding, holding EPS at $2.40 contradicts arithmetic the transaction guarantees.",
+    "ExplanationWrongB": "Choice B runs the count in reverse, expanding the base to 3,025,000 as though Flash issued shares; a buyback removes equity claims, so the denominator shrinks and reported EPS rises rather than settling at a diluted $2.18.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D invents a doubled reduction of 550,000 shares; the announcement retires exactly 275,000, and padding the reduction to manufacture $3.00 misstates both the cash outlay mechanics and the resulting per-share figure.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.7",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-200",
+    "Section": "B",
+    "Stem": "Helena Ruiz, a Flash board member, wants investor-letter language ready before the buyback announcement crosses the wire. Flash earned net income of $6,600,000 on 2,750,000 outstanding shares and will repurchase 275,000 shares at $40.00 each, retiring them immediately upon purchase. Computing the post-repurchase earnings-per-share figure for the letter, what should Helena expect?",
+    "Topic": "B.200 buyback-share-reduction-eps",
+    "UniqueConceptKey": "B-200-share-count-shrink-eps",
+    "VerifiedChecks": [
+      "Recomputed: 2750000 - 275000 = 2475000; 6600000/2475000 = 2.6667 -> 2.67",
+      "Second pass: prior EPS 6600000/2750000 = 2.40; uplift check 2.6667/2.40 = 1.1111 agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "International finance theory (political risk mitigation via financing structure; country risk management practice)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": false,
+    "Choices": {
+      "A": "Rolling forward foreign-currency forward contracts each quarter offsets any seizure event because both exposures settle inside the same currency window",
+      "B": "Buying complete political-risk insurance transfers the underlying danger away, letting Flash ignore host-country structure when sizing the commitment",
+      "C": "Concentrating the investment in parent-owned hard assets strengthens deterrence, since visible property signals long-run commitment to local authorities",
+      "D": "Funding through local-currency bank debt aligns host-country lenders with project survival, so interference damages institutions within the government's own jurisdiction"
+    },
+    "CognitiveLevel": "Understand",
+    "CommonTrapReference": "Substituting market hedges or insurance for structural political-risk mitigation",
+    "CorrectChoice": "D",
+    "Difficulty": "Easy",
+    "DifficultyScore": 1,
+    "ExplanationCorrect": "Political-risk mitigation works by changing who bears loss if a host government acts. Local-currency borrowing plants creditors inside the affected jurisdiction, so expropriation impairs loans held by domestic banks whose distress feeds back on the government itself, raising the actor's own costs; pairing modest parent equity with local debt thins the seizure prize. Understanding this alignment lets Farah Aziz distinguish genuine structural protection from instruments like forwards, which address currency movement rather than confiscation risk. Common trap: reaching for familiar market hedges that manage price exposure while leaving the ownership structure, and therefore the political exposure, untouched.",
+    "ExplanationWrongA": "Choice A imports a transaction-exposure tool into a political-risk problem; forwards fix exchange rates on contracted flows but pay nothing when assets are seized, leaving Flash's equity stake fully exposed to the confiscation event itself.",
+    "ExplanationWrongB": "Choice B overstates what insurance accomplishes; policies reimburse defined losses subject to limits, exclusions, and waiting periods, so treating cover as a substitute for structural design invites oversized, thinly protected commitments abroad.",
+    "ExplanationWrongC": "Choice C reverses the deterrence logic; concentrating value in immovable parent-owned assets enlarges the prize a host government could capture and deepens losses if deterrence fails, the opposite of the thin-footprint approach the briefing should endorse.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-201",
+    "Section": "B",
+    "Stem": "Farah Aziz, treasurer of Flash, briefs the audit committee on structuring the planned assembly plant in a country carrying elevated expropriation risk. She lays out four financing architectures and asks which reasoning correctly links structure to protection. Which statement captures the protective mechanism?",
+    "Topic": "B.201 political-risk-local-financing",
+    "UniqueConceptKey": "B-201-host-country-lender-alignment",
+    "VerifiedChecks": [
+      "Mechanism mapping cross-checked against country-risk structuring treatments in two references; alignment logic agrees",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (two-asset portfolio variance; Markowitz diversification and the correlation-scaled covariance term)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "10.80%, the straight weighted average of the two funds' dispersions, weighting Fund M at 60% and Fund N at 40%",
+      "B": "8.40%, the allocation-weighted expected return of the sleeve mistakenly carried into the dispersion column",
+      "C": "8.96%, the square root of variance built from both funds' weighted variances plus their correlation-scaled cross term",
+      "D": "8.05%, the square root of the summed weighted variances with the co-movement term dropped entirely"
+    },
+    "CognitiveLevel": "Analyze",
+    "CommonTrapReference": "Omitting the covariance term or swapping expected return into the dispersion figure",
+    "CorrectChoice": "C",
+    "Difficulty": "Very Difficult",
+    "DifficultyScore": 5,
+    "ExplanationCorrect": "Two-fund portfolio variance combines weighted variances plus a covariance term: (0.60 x 0.60 x 12.0 x 12.0) + (0.40 x 0.40 x 9.0 x 9.0) + (2 x 0.60 x 0.40 x 0.30 x 12.0 x 9.0) = 51.84 + 12.96 + 15.552 = 80.352, whose square root is 8.9639%, published as 8.96%. Decomposition shows the cross term contributing 15.552 of total variance: the 0.30 correlation preserves real diversification relief, pulling risk well under the 10.80% weighted-average figure while expected return stands independently at 8.40%. Business interpretation: Grace Kim can attribute the sleeve's efficiency to sub-unity correlation rather than to either fund's standalone volatility, sharpening the pension commentary. Common trap: dropping the covariance term or substituting expected return for dispersion.",
+    "ExplanationWrongA": "Choice A averages dispersions linearly, a shortcut valid only at perfect correlation; with the pair linked at 0.30, the cross term pulls combined risk down to 8.96%, so publishing 10.80% overstates sleeve volatility by nearly two full points.",
+    "ExplanationWrongB": "Choice B pastes expected-return math into the risk slot; 8.40% describes the mean of the distribution, not its spread, and presenting it as a standard deviation conflates the two moments the commentary must keep separate.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Choice D deletes the co-movement term and reports 8.05%; the omitted 15.552 of variance is exactly what the 0.30 correlation input contributes, so the figure understates sleeve risk by nearly a full point and misleads allocation readers.",
+    "FormulaReference": "CB-02 Std Dev",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.1",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-202",
+    "Section": "B",
+    "Stem": "Grace Kim, the senior analyst covering Flash, stress-tests a proposed two-fund sleeve for Flash's pension commentary. Allocation runs 60% Fund M and 40% Fund N. Inputs: Fund M expected return 10.0% with standard deviation 12.0%; Fund N expected return 6.0% with standard deviation 9.0%; correlation between the funds 0.30. Decomposing the sleeve's risk into its variance components, what standard deviation should Grace publish?",
+    "Topic": "B.202 portfolio-standard-deviation-correlation",
+    "UniqueConceptKey": "B-202-covariance-term-diversification",
+    "VerifiedChecks": [
+      "Recomputed: 0.36 x 144 = 51.84; 0.16 x 81 = 12.96; 2 x 0.60 x 0.40 x 0.30 x 108 = 15.552; sum 80.352; sqrt 8.9639 -> 8.96",
+      "Second pass: sqrt(64.8) = 8.05 no-covariance check; 0.60 x 12 + 0.40 x 9 = 10.80 weighted-average check agree",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Operations management quantitative methods (EOQ with quantity discounts; total relevant cost comparison including purchase-price term)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "Order 1,400-unit lines: the $4,900 rebate outweighs the $700 rise in combined ordering and carrying costs, a net annual gain of $4,200",
+      "B": "Hold 700-unit lines: the EOQ minimizes combined ordering and carrying cost, and deviating from it cannot be justified however large the rebate runs",
+      "C": "Order 1,400-unit lines: the full $4,900 rebate drops through as net savings because ordering and carrying costs net to zero at the larger lot size",
+      "D": "Order 1,400-unit lines: the net gain is $3,500 after absorbing the $1,400 increase in carrying cost attributable to the bigger lots"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Treating the EOQ as globally binding or skipping the purchase-price term in lot-size comparisons",
+    "CorrectChoice": "A",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ExplanationCorrect": "Quantity-discount analysis compares total relevant cost across candidate order sizes including the purchase-price term. At 700 units: ordering runs 14 orders x $100 = $1,400 and carrying runs 350 average units x $4 = $1,400, combining to $2,800. At 1,400 units: ordering falls to 7 x $100 = $700 while carrying climbs to 700 x $4 = $2,800, combining to $3,500, a $700 penalty. The rebate delivers 9,800 x $0.50 = $4,900, so switching nets $4,900 - $700 = $4,200 of annual benefit, and Yusuf Adler's audit note should endorse the larger lot despite the EOQ's local optimality. Business interpretation: the EOQ minimizes only ordering-plus-carrying cost and stays silent on price breaks, which is where the economics moved. Common trap: treating the EOQ as globally binding or crediting the rebate without repricing the lot-size penalties.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Choice B freezes the analysis at the EOQ's local minimum; the EOQ minimizes ordering plus carrying cost alone and is silent on purchase price, so a rebate large enough to swamp the $700 penalty reverses the conclusion the narrow model suggests.",
+    "ExplanationWrongC": "Choice C books the entire $4,900 as free money; moving to 1,400-unit lots adds $700 of net ordering-and-carrying burden, and ignoring that offset overstates the gain by exactly the penalty a total-cost comparison exists to surface.",
+    "ExplanationWrongD": "Choice D tells half the cost story; carrying cost rises by $1,400 but ordering cost simultaneously falls by $700, so the true net penalty is $700 and the netted gain lands at $4,200 rather than $3,500.",
+    "FormulaReference": "CB-08 EOQ",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.4",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-203",
+    "Section": "B",
+    "Stem": "Yusuf Adler, internal auditor at Flash, reviews the replenishment policy for a fast-moving component. Annual demand is 9,800 units, ordering cost is $100 per order, and carrying cost is $4 per unit per year regardless of price breaks. The supplier now grants a $0.50 per-unit rebate on all units whenever an order line reaches 1,400 units. Ordering economics place the EOQ at 700 units. Weighing total relevant costs, what should the audit note conclude?",
+    "Topic": "B.203 eoq-quantity-discount-break",
+    "UniqueConceptKey": "B-203-total-cost-with-purchase-savings",
+    "VerifiedChecks": [
+      "Recomputed: sqrt(2 x 9800 x 100 / 4) = sqrt(490000) = 700; at 1400 units cost 700 + 2800 = 3500 vs 2800; delta 700; rebate 9800 x 0.50 = 4900; net 4200",
+      "Second pass: order counts 9800/700 = 14 and 9800/1400 = 7; ordering 1400 vs 700 agree",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "Corporate finance theory (annualized cost of forgoing cash discounts in trade credit; incremental financing window convention)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "20.86%, obtained by applying the 2.0% discount rate straight against a 35-day deferral window",
+      "B": "21.28%, obtained by grossing the discount up to the 98% net outlay and annualizing over the 35 extra financed days",
+      "C": "16.55%, obtained by spreading the forgone discount across the full 45-day net period",
+      "D": "20.99%, obtained by running the same computation on a 360-day banker's year"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Using the gross discount rate or the full net period instead of net outlay and incremental days",
+    "CorrectChoice": "B",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ExplanationCorrect": "Trade-credit pricing follows the periodic rate times periods per year: periodic rate = 2/98 = 0.020408 on the cash actually surrendered; deferral window = 45 - 10 = 35 days beyond the discount date; annualization = 365/35 = 10.4286 periods under the policy's 365-day directive. Product: 0.020408 x 10.4286 = 0.2128, about 21.28% annualized. Business interpretation: Amara Diallo can benchmark this against Flash's short-term borrowing rate; if the revolver prices below 21.28%, taking discounts and drawing the line creates value, while stretched payables function as an expensive hidden loan from the vendor. Common trap: using the gross 2% as the periodic rate or counting the full 45 days instead of the incremental 35 financed days.",
+    "ExplanationWrongA": "Choice A skips the gross-up and divides 2.0% implicitly against a 100 outlay; because the buyer releases 2 of cost by paying 98 rather than 100, the honest periodic rate is 2.0408%, and the shortcut shaves the annualized figure to 20.86%.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Choice C measures the deferral from day zero instead of day 10; the discount is forfeited at day 10, so only the 35 additional days are supplier-financed, and stretching the denominator to 45 understates the true annual carrying cost.",
+    "ExplanationWrongD": "Choice D swaps in the 360-day convention against the policy manual's explicit 365-day directive; the difference compounds through 10.2857 versus 10.4286 periods, landing at 20.99% and breaching the standard the calendar review must follow.",
+    "FormulaReference": "",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.5",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-204",
+    "Section": "B",
+    "Stem": "Amara Diallo, controller at Flash, is reviewing supplier terms before signing the annual procurement calendar. Key vendor terms run 2/10 net 45 on a $100 invoice basis, with Flash's policy manual requiring a 365-day year in financing calculations. Paying on day 45 forgoes the discount entirely. What annualized cost of forgoing the discount should Amara attach to the calendar review?",
+    "Topic": "B.204 trade-credit-effective-cost",
+    "UniqueConceptKey": "B-204-incremental-days-net-of-discount",
+    "VerifiedChecks": [
+      "Recomputed: 2/98 = 0.020408; 365/35 = 10.4286; product 0.2128 -> 21.28%",
+      "Second pass: 0.02 x 10.4286 = 0.2086; 0.020408 x (365/45) = 0.1655; 0.020408 x (360/35) = 0.2099 all agree",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  },
+  {
+    "Authorities": [
+      "International finance theory (forward exchange premium and discount quotation conventions; spot-base annualization on a 360-day year)"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "CalculationItem": true,
+    "Choices": {
+      "A": "3.00%, the raw 180-day spread between forward and spot expressed against the spot rate",
+      "B": "6.08%, the spread annualized with a 365-day year applied to the 180-day contract",
+      "C": "5.83%, the spread scaled against the forward rate rather than the spot rate",
+      "D": "6.00%, the spread divided by spot and annualized under the 360-day market convention"
+    },
+    "CognitiveLevel": "Apply",
+    "CommonTrapReference": "Skipping annualization or scaling the forward premium against the forward rate",
+    "CorrectChoice": "D",
+    "Difficulty": "Moderate-Easy",
+    "DifficultyScore": 2,
+    "ExplanationCorrect": "The forward premium annualizes the proportional gap between forward and spot using the spot rate as base: ($1.2360 - $1.2000)/$1.2000 x (360/180) = 0.0300 x 2 = 0.0600, or 6.00%. Business interpretation: Nadia Petrov's weekly note tells hedgers that locking euro purchases forward costs about 6.00% per year over spot, the carry Flash absorbs for certainty on 180-day euro payables. Convention notes matter because interbank quotations run on a 360-day year, and anchoring on spot keeps the premium symmetric with the discount definition used when the forward sits below spot. Common trap: skipping annualization on sub-year contracts or anchoring the percentage to the forward rate instead of spot.",
+    "ExplanationWrongA": "Choice A reports the period rate without annualizing; 3.00% describes only the 180-day carry, and quoting it as an annual premium understates hedging cost by half whenever contract tenors run shorter than a year.",
+    "ExplanationWrongB": "Choice B reaches for a 365-day year against prevailing quotation practice; 0.0300 x (365/180) produces 6.08%, inconsistent with the money-market 360-day convention the desk counterparties price on.",
+    "ExplanationWrongC": "Choice C anchors the ratio on the forward price; dividing $0.0360 by $1.2360 yields 0.029125 per period and 5.83% annualized, inverting the base the premium definition fixes on spot and breaking comparability with quoted discounts.",
+    "ExplanationWrongD": "",
+    "FormulaReference": "CB-09 FX Premium/Discount",
+    "ItemStyle": "single-select",
+    "LOSTag": "B.9",
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "QuestionID": "P2-B-205",
+    "Section": "B",
+    "Stem": "Nadia Petrov, treasury analyst at Flash, prepares the weekly FX note for the derivatives desk. The euro trades at a spot rate of $1.2000, and the 180-day forward quote stands at $1.2360. Following the market convention of annualizing over a 360-day year, what forward premium on the euro should Nadia report?",
+    "Topic": "B.205 forward-premium-annualized",
+    "UniqueConceptKey": "B-205-spot-base-annualize-360",
+    "VerifiedChecks": [
+      "Recomputed: (1.2360 - 1.2000)/1.2000 = 0.03; 0.03 x (360/180) = 0.06 -> 6.00%",
+      "Second pass: 0.03 x (365/180) = 0.060833 -> 6.08%; 0.036/1.236 x 2 = 0.05825 -> 5.83% agree",
+      "Part2OnlyFlag verified true",
+      "EW[CC] empty (DL-008)",
+      "Non-CC EW >=75 chars (DL-026)",
+      "No boilerplate (DL-013)",
+      "Authorities match"
+    ],
+    "question_state": "Unprocessed"
+  }
 ];

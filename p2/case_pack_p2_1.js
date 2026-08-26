@@ -49,6 +49,10 @@ var casePackP2_1 = [
       "Summary": "Stated the annualized-flow measurement convention in Exhibit 1; clarified Q2's cross-reference to Question 1; corrected the Q3 DPO distractor from 3.7 to 3.3 days"
     }
   ],
+  "question_state": "Certified",
+  "certification_session": "P2-060",
+  "Part": 2,
+  "Part2OnlyFlag": true,
   "Dependencies": [],
   "LearningObjectives": [
     "Compute DIO, DSO, and DPO from operating data",
@@ -344,6 +348,10 @@ var casePackP2_1 = [
       "Summary": "Reordered items to satisfy the numeric(2)-select(2)-multi-match progression; expanded Q3 to five choices with a relative-margin distractor that consumes the Cookware and Utensils exhibit rows; updated exhibit ReferencedBy"
     }
   ],
+  "question_state": "Certified",
+  "certification_session": "P2-060",
+  "Part": 2,
+  "Part2OnlyFlag": true,
   "Dependencies": [],
   "LearningObjectives": [
     "Compute segment margin and apply the keep-or-drop rule",
@@ -679,6 +687,10 @@ var casePackP2_1 = [
       "Summary": "Q1 corrected to standard PI convention (1.33, PV of inflows / investment); Q2 rebuilt around the true optimum A+C+D+F ($5.0M, $1.48M) with the PI-greedy trap as a distractor; items reordered to numeric-numeric-select-select-multi-match; Q3/Q4 FormulaReference corrected from after-tax cash flow to post-audit variance analysis; Q5/Q6 blank FormulaReference fields populated; Q6 match text updated to standard PI terminology"
     }
   ],
+  "question_state": "Certified",
+  "certification_session": "P2-060",
+  "Part": 2,
+  "Part2OnlyFlag": true,
   "Dependencies": [],
   "LearningObjectives": [
     "Compute the profitability index",
@@ -2108,5 +2120,1776 @@ var casePackP2_1 = [
    "Dependencies": []
   }
  ]
-}
+},
+  {
+    "CaseID": "CBQ21-A2",
+    "Title": "Lender Credit Review Analysis",
+    "SectionTags": [
+      "A"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "BlueprintObjectives": [
+      "Compute and interpret creditor-focused coverage ratios, including times interest earned",
+      "Decompose return on equity using the three-component DuPont identity",
+      "Assess earnings quality by distinguishing recurring operating performance from non-recurring items and working-capital-driven accruals"
+    ],
+    "PrimaryCompetency": "Analysis",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Harborline Industrial Manufacturing, Inc., a mid-size producer of commercial HVAC components, is preparing for its annual credit review with Meridian National Bank ahead of renewing an 18,000,000 dollar revolving credit facility. CFO Elena Vasquez must deliver a ratio package and an earnings-quality assessment after FY2026 net income jumped roughly 60 percent on an 11.5 percent sales increase. The bank's credit committee has flagged receivables and inventory growth and asked specifically how much of FY2026 earnings is sustainable. Elena will present times-interest-earned coverage, a DuPont decomposition of return on equity, and a candid assessment of earnings quality to support the renewal request.",
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-A2-E1",
+        "CaseID": "CBQ21-A2",
+        "Type": "table",
+        "Title": "Exhibit 1 - Condensed Income Statements, FY2026 versus FY2025",
+        "Purpose": "Provides the FY2026 and FY2025 income statement lines used for the TIE computation (Q1), the DuPont margin input and net income tie-out (Q2), identification of the non-recurring gain (Q3), sales growth rates (Q4), the disclosure-package items (Q5), and gross margin in the matching exercise (Q6).",
+        "ReferencedBy": [
+          "CBQ21-A2-Q1",
+          "CBQ21-A2-Q2",
+          "CBQ21-A2-Q3",
+          "CBQ21-A2-Q4",
+          "CBQ21-A2-Q5",
+          "CBQ21-A2-Q6"
+        ],
+        "Headers": [
+          "Line item",
+          "FY2026",
+          "FY2025"
+        ],
+        "Rows": [
+          [
+            "Net sales",
+            "42,800,000",
+            "38,400,000"
+          ],
+          [
+            "Cost of goods sold",
+            "29,960,000",
+            "27,264,000"
+          ],
+          [
+            "Gross profit",
+            "12,840,000",
+            "11,136,000"
+          ],
+          [
+            "Selling, general and administrative expenses",
+            "7,704,000",
+            "6,720,000"
+          ],
+          [
+            "Operating income (EBIT)",
+            "5,136,000",
+            "4,416,000"
+          ],
+          [
+            "Interest expense",
+            "1,284,000",
+            "1,452,000"
+          ],
+          [
+            "Gain on sale of surplus equipment",
+            "900,000",
+            "0"
+          ],
+          [
+            "Income before income taxes",
+            "4,752,000",
+            "2,964,000"
+          ],
+          [
+            "Income tax expense (25%)",
+            "1,188,000",
+            "741,000"
+          ],
+          [
+            "Net income",
+            "3,564,000",
+            "2,223,000"
+          ]
+        ],
+        "DataFormat": "USD whole dollars; percentages where labeled.",
+        "AccuracyCheck": "Column sums verified: 42,800,000 - 29,960,000 = 12,840,000; 12,840,000 - 7,704,000 = 5,136,000; 5,136,000 - 1,284,000 + 900,000 = 4,752,000; 4,752,000 x 25% = 1,188,000; 4,752,000 - 1,188,000 = 3,564,000. Same checks pass for FY2025: 38,400,000 - 27,264,000 = 11,136,000; 11,136,000 - 6,720,000 = 4,416,000; 4,416,000 - 1,452,000 = 2,964,000; 2,964,000 - 741,000 = 2,223,000."
+      },
+      {
+        "ExhibitID": "CBQ21-A2-E2",
+        "CaseID": "CBQ21-A2",
+        "Type": "table",
+        "Title": "Exhibit 2 - Balance Sheet Data and Financing Memos",
+        "Purpose": "Supplies average-balance inputs for asset turnover and the equity multiplier (Q2), working-capital growth rates used in the earnings-quality inference (Q4), and the debt and equity figures for the leverage reading in Q6.",
+        "ReferencedBy": [
+          "CBQ21-A2-Q2",
+          "CBQ21-A2-Q4",
+          "CBQ21-A2-Q6"
+        ],
+        "Headers": [
+          "Balance sheet item",
+          "FY2026",
+          "FY2025"
+        ],
+        "Rows": [
+          [
+            "Cash and equivalents",
+            "2,600,000",
+            "2,150,000"
+          ],
+          [
+            "Accounts receivable, net",
+            "8,560,000",
+            "6,420,000"
+          ],
+          [
+            "Inventory",
+            "7,480,000",
+            "6,110,000"
+          ],
+          [
+            "Other current assets",
+            "1,360,000",
+            "1,240,000"
+          ],
+          [
+            "Total current assets",
+            "20,000,000",
+            "15,920,000"
+          ],
+          [
+            "Total assets",
+            "46,000,000",
+            "41,200,000"
+          ],
+          [
+            "Total current liabilities",
+            "10,000,000",
+            "9,280,000"
+          ],
+          [
+            "Long-term debt",
+            "13,000,000",
+            "14,500,000"
+          ],
+          [
+            "Total liabilities",
+            "23,000,000",
+            "23,780,000"
+          ],
+          [
+            "Shareholders' equity",
+            "23,000,000",
+            "17,420,000"
+          ],
+          [
+            "Memo: common stock issued during the year",
+            "3,000,000",
+            "-"
+          ],
+          [
+            "Memo: dividends declared during the year",
+            "984,000",
+            "-"
+          ]
+        ],
+        "DataFormat": "USD whole dollars at fiscal year end; memo rows are flows during the year; dash denotes not presented.",
+        "AccuracyCheck": "Totals reconcile: current asset components sum to 20,000,000 (FY2026) and 15,920,000 (FY2025); liabilities plus equity equal total assets in both years (23,000,000 + 23,000,000 = 46,000,000; 23,780,000 + 17,420,000 = 41,200,000); FY2026 equity rolls forward as 17,420,000 + 3,564,000 net income + 3,000,000 issuance - 984,000 dividends = 23,000,000."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-A2-Q1",
+        "Type": "numeric",
+        "Prompt": "Using Exhibit 1, compute Harborline's FY2026 times-interest-earned ratio (EBIT divided by interest expense). Enter as a plain number rounded to two decimal places (tolerance +/-0.01).",
+        "Correct": "4.00",
+        "Explanation": "Times interest earned divides earnings before interest and taxes by interest expense. Harborline's FY2026 EBIT is 5,136,000 (gross profit 12,840,000 less SG&A of 7,704,000) and interest expense is 1,284,000, so TIE = 5,136,000 / 1,284,000 = 4.00x. Coverage of four times comfortably services the revolver today, though the bank will also test durability using EBIT before the one-time gain: 4,236,000 / 1,284,000 = 3.30x. In business terms, EBIT could fall by three quarters before cash coverage of interest is threatened. The classic trap is using earnings before tax or net income in the numerator; both omit the required add-back of interest and understate true coverage.",
+        "Topic": "Times interest earned",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-08",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A2-Q2",
+        "Type": "numeric",
+        "Prompt": "Using Exhibits 1 and 2, compute Harborline's FY2026 return on equity through the three-component DuPont decomposition (net profit margin x total asset turnover x equity multiplier). Express the result as a percentage rounded to two decimal places (tolerance +/-0.01 percentage points) and use average total assets and average shareholders' equity.",
+        "Correct": "17.63",
+        "Explanation": "The DuPont identity decomposes ROE into net profit margin x total asset turnover x equity multiplier. Margin = 3,564,000 / 42,800,000 = 0.0833; turnover = 42,800,000 / 43,600,000 average assets = 0.9817; multiplier = 43,600,000 / 20,210,000 average equity = 2.1573. Multiplying: 0.0833 x 0.9817 x 2.1573 = 0.1763, i.e., 17.63 percent, which ties exactly to the direct computation of net income over average equity (3,564,000 / 20,210,000). For the lender, an equity multiplier above 2 shows ROE is materially leverage-assisted, so coverage and liquidity metrics carry extra weight in the credit decision. The common trap is using year-end rather than average balances for assets and equity, which inflates the multiplier and overstates ROE.",
+        "Topic": "DuPont ROE decomposition",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "FA-14",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A2-Q3",
+        "Type": "select",
+        "Prompt": "In assessing FY2026 earnings quality for the credit committee, which observation represents the most significant limitation on the sustainability of reported net income?",
+        "Correct": "B",
+        "Choices": {
+          "A": "Gross margin improved from 29.0 percent to 30.0 percent, indicating durable pricing power in the component business.",
+          "B": "Reported net income includes a 900,000 pre-tax gain on the sale of surplus equipment; the gain is non-recurring and sits below operating income.",
+          "C": "Interest expense declined from 1,452,000 to 1,284,000, flattering the year-over-year net income comparison.",
+          "D": "The 3,000,000 common stock issuance raised book equity and mechanically inflated the reported return on equity."
+        },
+        "Explanation": "Earnings quality asks how much reported profit will recur. The 900,000 pre-tax gain on surplus equipment sits below operating income, is by nature non-recurring, and equals roughly 19 percent of pre-tax income (900,000 / 4,752,000 = 0.189), so sustainable covenant EBITDA is correspondingly lower than headline results suggest. Improving gross margin and declining interest expense are favorable, durable developments rather than limitations, and the equity issuance changes leverage, not the content of earnings. The trap is treating any sharp net-income jump as operating momentum; lenders strip identified one-time items before setting covenants and pricing.",
+        "Topic": "Earnings quality",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A2-Q4",
+        "Type": "select",
+        "Prompt": "Receivables grew 33.3 percent and inventory grew 22.4 percent in FY2026 while net sales grew 11.5 percent. Based on Exhibits 1 and 2, which conclusion should anchor the earnings-quality section of the lender presentation?",
+        "Correct": "D",
+        "Choices": {
+          "A": "The divergent growth rates establish deliberate channel stuffing and require immediate referral to securities regulators.",
+          "B": "Working capital grew more slowly than sales, confirming that earnings converted fully into operating cash.",
+          "C": "Inventory growth at roughly twice the rate of sales reflects superior demand planning that the bank should highlight.",
+          "D": "Working capital is absorbing cash faster than operations generate it, so FY2026 earnings likely overstate cash generation and covenant headroom."
+        },
+        "Explanation": "Receivables rose 33.3 percent (2,140,000 / 6,420,000) and inventory rose 22.4 percent (1,370,000 / 6,110,000) against sales growth of 11.5 percent (4,400,000 / 38,400,000). When working capital outruns sales, accrual earnings run ahead of cash: the current ratio did improve to 2.00 from 1.72 (20,000,000 / 10,000,000 vs. 15,920,000 / 9,280,000), but largely because the 3,000,000 equity issuance funded receivables and inventory rather than debt reduction, as long-term debt fell only 1,500,000. The honest message to the credit committee is that FY2026 earnings overstate cash generation. The trap is citing the healthier liquidity ratios as proof of strength without tracing where the funding came from.",
+        "Topic": "Working capital and earnings quality",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A2-Q5",
+        "Type": "multi",
+        "Prompt": "Which three actions should CFO Elena Vasquez include in the renewal package to address the bank's earnings-quality concerns? Select the three appropriate actions.",
+        "Correct": [
+          "Prepare a supplemental schedule presenting covenant EBITDA and operating results excluding the 900,000 non-recurring equipment-sale gain.",
+          "Provide an aged accounts receivable schedule with customer concentration detail explaining the 2,140,000 increase in receivables.",
+          "Include a reconciliation of net income to cash flow from operations highlighting the FY2026 conversion ratio."
+        ],
+        "Choices": {
+          "A": "Prepare a supplemental schedule presenting covenant EBITDA and operating results excluding the 900,000 non-recurring equipment-sale gain.",
+          "B": "Reclassify the equipment-sale gain into net sales so the revenue trend appears smoother across periods.",
+          "C": "Provide an aged accounts receivable schedule with customer concentration detail explaining the 2,140,000 increase in receivables.",
+          "D": "Request that the bank suspend quarterly covenant certificate filings for the renewal term to reduce administrative burden.",
+          "E": "Include a reconciliation of net income to cash flow from operations highlighting the FY2026 conversion ratio."
+        },
+        "Explanation": "A credible lender package separates recurring from non-recurring content and explains balance-sheet drivers. Supplemental schedules excluding the 900,000 gain (A), aged receivables detail explaining the 2,140,000 build (C), and a net-income-to-operating-cash-flow reconciliation (E) each answer concerns the credit committee has already raised. Reclassifying a gain into net sales misstates revenue presentation, and asking to suspend covenant reporting weakens rather than builds lender confidence. The trap is padding the package with supportive but irrelevant schedules while leaving the one-time gain and the working-capital drain unexplained.",
+        "Topic": "Lender disclosure package",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A2-Q6",
+        "Type": "match",
+        "Prompt": "Match each credit metric to its correct FY2026 value or reading, computed from Exhibits 1 and 2.",
+        "LeftItems": [
+          "Times interest earned (FY2026)",
+          "Return on equity via DuPont (FY2026)",
+          "Gross margin percentage (FY2026)",
+          "Debt-to-equity at year-end FY2026"
+        ],
+        "RightItems": [
+          "4.00x",
+          "17.63%",
+          "30.00%",
+          "1.00",
+          "12.00%"
+        ],
+        "Correct": {
+          "Times interest earned (FY2026)": "4.00x",
+          "Return on equity via DuPont (FY2026)": "17.63%",
+          "Gross margin percentage (FY2026)": "30.00%",
+          "Debt-to-equity at year-end FY2026": "1.00"
+        },
+        "Explanation": "Each metric reads directly from the exhibits: TIE = 5,136,000 / 1,284,000 = 4.00x; DuPont ROE = 3,564,000 / 20,210,000 average equity = 17.63 percent; gross margin = 12,840,000 / 42,800,000 = 30.00 percent; debt-to-equity = 23,000,000 / 23,000,000 = 1.00. The unused 12.00 percent figure is FY2026 operating margin (5,136,000 / 42,800,000), a profitability measure rather than a solvency or shareholder-return measure. Pairing each ratio with the right decision lens - coverage for interest service, returns for owners, margin for pricing power, leverage for solvency - is the core skill; the trap is quoting a ratio accurately while interpreting it against the wrong benchmark.",
+        "Topic": "Ratio interpretation",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      }
+    ],
+    "Industry": "Commercial HVAC components manufacturing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Harborline Industrial Manufacturing, Inc.",
+    "Stakeholder": "Elena Vasquez, Chief Financial Officer",
+    "BusinessFunction": "Treasury",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "CreatedDate": "2026-08-25",
+    "ModifiedDate": "2026-08-25",
+    "Author": "P2-061 authoring wave",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-25",
+        "Version": "1.0",
+        "Author": "P2-061 authoring wave",
+        "Summary": "Initial creation"
+      }
+    ],
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Compute creditor-focused coverage from a condensed income statement",
+      "Apply the DuPont identity with average balance-sheet bases and explain what drives ROE",
+      "Evaluate earnings quality using non-recurring items, growth divergence, and cash conversion signals"
+    ],
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed"
+  },
+  {
+    "CaseID": "CBQ21-C2",
+    "Title": "Capacity-Constrained Line Decisions",
+    "SectionTags": [
+      "C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "BlueprintObjectives": [
+      "Apply relevant-cost analysis to keep-or-drop decisions by separating traceable avoidable costs from allocated common costs",
+      "Evaluate an outsourcing proposal against internal manufacture using incremental contribution margin",
+      "Integrate a special-order acceptance with a capacity-constrained product-mix change into a single quantified recommendation"
+    ],
+    "PrimaryCompetency": "Analysis",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ScenarioText": "Corvid Precision Components manufactures hydraulic valve assemblies (V-200) and standard fittings (F-100) in a single machining center capped at 60,000 machine hours per year, currently fully utilized. Corporate Controller Dana Whitfield must brief the Executive Committee, which is weighing three linked actions: dropping the F-100 line that reports a segment loss, accepting a one-time export order for V-200 units priced below list, and outsourcing F-100 production to a qualified supplier. The committee wants a single quantified recommendation that respects the capacity constraint. Dana's briefing must separate avoidable from allocated costs before any commitment is made.",
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-C2-E1",
+        "CaseID": "CBQ21-C2",
+        "Type": "table",
+        "Title": "Exhibit 1 - Product Line Operating Data and Machining Capacity",
+        "Purpose": "Provides volumes, prices, unit variable costs, unit contribution margins, and machine-hour consumption for both lines; supports the segment computations (Q1, Q2), the outsourcing comparison (Q3), the combined recommendation and capacity feasibility check (Q4), and the special-order relevance reasoning (Q5, Q6).",
+        "ReferencedBy": [
+          "CBQ21-C2-Q1",
+          "CBQ21-C2-Q2",
+          "CBQ21-C2-Q3",
+          "CBQ21-C2-Q4",
+          "CBQ21-C2-Q5",
+          "CBQ21-C2-Q6"
+        ],
+        "Headers": [
+          "Product line",
+          "Annual volume (units)",
+          "Price per unit",
+          "Variable cost per unit",
+          "Contribution margin per unit",
+          "Machine hours per unit",
+          "Annual machine hours consumed"
+        ],
+        "Rows": [
+          [
+            "V-200 valve assemblies",
+            "24,000",
+            "$92",
+            "$58",
+            "$34",
+            "2.0",
+            "48,000"
+          ],
+          [
+            "F-100 standard fittings",
+            "30,000",
+            "$36",
+            "$22",
+            "$14",
+            "0.4",
+            "12,000"
+          ],
+          [
+            "Machining center capacity check",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "60,000 available; 60,000 consumed"
+          ]
+        ],
+        "DataFormat": "USD whole dollars except per-unit amounts in dollars; hours in whole machine hours.",
+        "AccuracyCheck": "Unit margins verified: 92 - 58 = 34; 36 - 22 = 14. Hours verified: 24,000 x 2.0 = 48,000; 30,000 x 0.4 = 12,000; 48,000 + 12,000 = 60,000, equaling available capacity."
+      },
+      {
+        "ExhibitID": "CBQ21-C2-E2",
+        "CaseID": "CBQ21-C2",
+        "Type": "table",
+        "Title": "Exhibit 2 - F-100 Profitability Detail and Transaction Terms",
+        "Purpose": "Details F-100 contribution margin, the traceable fixed-cost breakdown, the corporate allocation, the supplier quote and retained supervision cost, and the special-order terms; feeds the segment result and drop penalty (Q1, Q2), the outsourcing advantage (Q3), the combined recommendation (Q4), and the matching values (Q6).",
+        "ReferencedBy": [
+          "CBQ21-C2-Q1",
+          "CBQ21-C2-Q2",
+          "CBQ21-C2-Q3",
+          "CBQ21-C2-Q4",
+          "CBQ21-C2-Q5",
+          "CBQ21-C2-Q6"
+        ],
+        "Headers": [
+          "Item",
+          "Amount or terms"
+        ],
+        "Rows": [
+          [
+            "F-100 contribution margin (30,000 units x $14)",
+            "$420,000"
+          ],
+          [
+            "Traceable fixed: dedicated equipment lease",
+            "$148,000"
+          ],
+          [
+            "Traceable fixed: line-specific marketing",
+            "$120,000"
+          ],
+          [
+            "Total traceable fixed costs (avoidable if line ends)",
+            "$268,000"
+          ],
+          [
+            "Allocated corporate fixed costs charged to F-100 segment",
+            "$210,000"
+          ],
+          [
+            "Supplier quote: outsourced F-100 supply price per unit (delivered)",
+            "$25"
+          ],
+          [
+            "Line supervision cost retained if production is outsourced",
+            "$32,000"
+          ],
+          [
+            "Export offer: 6,000 V-200 units at $70 per unit; requires 2.0 machine hours per unit (12,000 hours total)",
+            "One-time order; no incremental fixed cost"
+          ]
+        ],
+        "DataFormat": "USD whole dollars except the per-unit supply price; terms column states transaction conditions.",
+        "AccuracyCheck": "Traceable fixed verified: 148,000 + 120,000 = 268,000. Reported segment result verified: 420,000 - 268,000 - 210,000 = -58,000. Special-order hours verified: 6,000 x 2.0 = 12,000, exactly the hours freed by outsourcing F-100."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-C2-Q1",
+        "Type": "numeric",
+        "Prompt": "Using Exhibits 1 and 2, compute F-100's segment result as currently reported (contribution margin less traceable fixed costs less allocated corporate fixed costs). Enter the LOSS as a positive whole dollar amount (tolerance +/- $1).",
+        "Correct": "58000",
+        "Explanation": "The reported segment result nets F-100's contribution margin against both traceable and allocated fixed costs: 420,000 - 268,000 - 210,000 = a 58,000 loss. This reported loss anchors the drop proposal now before the Executive Committee. Contribution margin itself is 30,000 units x (36 - 22) = 420,000, which more than covers the traceable costs the company would actually shed. In the briefing, present the 58,000 figure only as the reported result and label the 210,000 allocation as a common cost that persists regardless of the line's fate. The trap is letting an allocation drive a decision that cannot change it - the classic segment-reporting distortion tested on the CMA exam.",
+        "Topic": "Segment reporting",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-C2-Q2",
+        "Type": "numeric",
+        "Prompt": "If F-100 were dropped outright with no replacement use of the freed machine hours, by how many dollars would Corvid's annual operating income decrease? Enter as a positive whole dollar amount (tolerance +/- $1).",
+        "Correct": "152000",
+        "Explanation": "Dropping F-100 removes its contribution margin of 420,000 and saves only the traceable, avoidable fixed costs of 268,000 (equipment lease 148,000 plus line-specific marketing 120,000), so operating income falls by 152,000 per year (420,000 - 268,000). The allocated 210,000 stays with the company either way and is excluded from the computation. This 152,000 penalty explains why the raw reported segment loss understates the line's true economic value to Corvid. The trap is equating elimination of a reported segment loss with an equivalent operating-income gain; the loss figure includes unavoidable common costs that no decision can recover.",
+        "Topic": "Avoidable cost analysis",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-C2-Q3",
+        "Type": "select",
+        "Prompt": "Before considering any use of the freed machine hours, what is the annual dollar advantage of outsourcing F-100 production versus continuing to manufacture it, based on Exhibits 1 and 2?",
+        "Correct": "C",
+        "Choices": {
+          "A": "356,000 advantage - the swing from the reported 58,000 segment loss to the positive outsourced margin.",
+          "B": "90,000 disadvantage - the added 3 per unit purchase cost across 30,000 units.",
+          "C": "146,000 advantage - avoided traceable fixed costs of 268,000, less 90,000 of added purchase cost, less 32,000 of retained supervision.",
+          "D": "178,000 advantage - the correct computation without subtracting the 32,000 of retained supervision."
+        },
+        "Explanation": "Outsourcing converts F-100 into a purchased-for-resale item: margin becomes 30,000 x (36 - 25) = 330,000, and 32,000 of supervision remains, giving 298,000 net versus 152,000 earned today - an annual advantage of 146,000. Cross-check: avoided traceable fixed 268,000, less added purchase cost of 3 per unit (90,000), less retained supervision 32,000 = 146,000; both routes agree. The 356,000 swing overstates the case because it credits the line with escaping allocated costs it never truly absorbed, and 178,000 forgets the supervisors kept on payroll. The trap is anchoring on the reported segment loss instead of comparing incremental streams.",
+        "Topic": "Outsourcing relevant costs",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-C2-Q4",
+        "Type": "select",
+        "Prompt": "Which combined course of action should Dana Whitfield recommend to the Executive Committee, and what is its total annual operating-income effect versus the status quo?",
+        "Correct": "A",
+        "Choices": {
+          "A": "Outsource F-100 production and accept the export order; combined annual operating income improves by 218,000.",
+          "B": "Drop F-100 production and accept the export order; combined annual operating income improves by 218,000.",
+          "C": "Continue manufacturing F-100 and reject the export order because 70 is below the 92 list price on regular valve sales.",
+          "D": "Drop F-100 production without replacement activity; eliminating the reported 58,000 segment loss raises operating income by that amount."
+        },
+        "Explanation": "The binding constraint is 60,000 machine hours, fully consumed (48,000 by V-200, 12,000 by F-100). Outsourcing releases 12,000 hours, exactly enough for the 6,000-unit export order at 2.0 hours each, so the order carries zero opportunity cost. The combined plan lifts operating income by 146,000 (outsourcing advantage) plus 72,000 (order contribution of 6,000 x (70 - 58)) = 218,000. Dropping instead of outsourcing destroys 152,000 of net contribution to free the same hours, making option B inferior despite its identical-sounding total, and option D actually reduces income by 152,000. The trap is evaluating the three actions in isolation when the shared capacity constraint links them.",
+        "Topic": "Combined decision evaluation",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-C2-Q5",
+        "Type": "multi",
+        "Prompt": "Which three considerations justify accepting the export order at 70 dollars per unit? Select the three appropriate statements.",
+        "Correct": [
+          "The order consumes machine hours freed by the outsourcing arrangement, so its opportunity cost is zero.",
+          "The 70 offer price exceeds the 58 variable manufacturing cost per unit, generating positive contribution of 12 per unit.",
+          "As a one-time transaction with an export distributor, the order is unlikely to disturb the 92 list price earned on regular V-200 sales."
+        ],
+        "Choices": {
+          "A": "The order consumes machine hours freed by the outsourcing arrangement, so its opportunity cost is zero.",
+          "B": "The 70 offer price exceeds the 58 variable manufacturing cost per unit, generating positive contribution of 12 per unit.",
+          "C": "Allocating 210,000 of corporate fixed costs across the special-order units lowers their apparent profitability and should block acceptance.",
+          "D": "As a one-time transaction with an export distributor, the order is unlikely to disturb the 92 list price earned on regular V-200 sales.",
+          "E": "Extending the same 70 price to regular domestic customers next year would expand V-200 market share durably."
+        },
+        "Explanation": "At 70 versus 58 variable cost, each special unit contributes 12 on capacity whose alternative use has already been monetized through outsourcing, so the order faces zero opportunity cost (A) and price exceeds incremental variable cost (B). Because the buyer is a one-time export channel, erosion of the 92 list price is limited (D). Option C applies allocation thinking that is irrelevant to short-run capacity decisions, and option E describes precisely the channel-damage risk that the one-time structure avoids. The trap is applying full-cost logic - loading fixed cost or allocations per unit - onto a marginal-capacity pricing decision.",
+        "Topic": "Special order relevance",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-C2-Q6",
+        "Type": "match",
+        "Prompt": "Match each decision element to its correct dollar effect for the coming year, based on the case analysis.",
+        "LeftItems": [
+          "F-100 segment result as currently reported",
+          "Annual penalty if F-100 is dropped outright with no replacement use of capacity",
+          "Annual advantage of outsourcing F-100 before considering freed capacity",
+          "Contribution margin generated by the export order"
+        ],
+        "RightItems": [
+          "$58,000 segment loss",
+          "$152,000 decrease",
+          "$146,000 advantage",
+          "$72,000 contribution",
+          "$80,000 decrease"
+        ],
+        "Correct": {
+          "F-100 segment result as currently reported": "$58,000 segment loss",
+          "Annual penalty if F-100 is dropped outright with no replacement use of capacity": "$152,000 decrease",
+          "Annual advantage of outsourcing F-100 before considering freed capacity": "$146,000 advantage",
+          "Contribution margin generated by the export order": "$72,000 contribution"
+        },
+        "Explanation": "Each figure traces to the analysis: reported segment loss 58,000 (420,000 - 268,000 - 210,000); drop-without-replacement penalty 152,000 (420,000 - 268,000); outsourcing advantage 146,000 (298,000 net outsourced margin versus 152,000 insourced); order contribution 72,000 (6,000 units x 12). The unused 80,000-decrease figure belongs to the wrong combination - dropping F-100 while still taking the order nets 72,000 - 152,000 = negative 80,000. Pairing each element with its isolated effect lets the committee see why sequencing matters; the trap is letting the reported-loss anchor contaminate the incremental arithmetic.",
+        "Topic": "Decision quantification",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      }
+    ],
+    "Industry": "Industrial valves and fittings manufacturing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Corvid Precision Components",
+    "Stakeholder": "Dana Whitfield, Corporate Controller",
+    "BusinessFunction": "Cost accounting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "CreatedDate": "2026-08-25",
+    "ModifiedDate": "2026-08-25",
+    "Author": "P2-061 authoring wave",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-25",
+        "Version": "1.0",
+        "Author": "P2-061 authoring wave",
+        "Summary": "Initial creation"
+      }
+    ],
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Identify avoidable versus allocated costs in keep-or-drop analyses",
+      "Quantify outsourcing advantages using incremental contribution streams",
+      "Sequence linked decisions under a binding capacity constraint and state the combined dollar effect"
+    ],
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed"
+  },
+  {
+    "CaseID": "CBQ21-F1",
+    "Title": "Misclassification Pressure and Escalation",
+    "SectionTags": [
+      "F"
+    ],
+    "BlueprintDomain": "Professional Ethics",
+    "BlueprintObjectives": [
+      "Quantify the financial-statement impact of an improper expense capitalization directed by senior management",
+      "Identify the IMA Statement of Ethical Professional Practice standard breached by misleading classification",
+      "Apply the IMA conflict-resolution pathway and SOX obligations, including documentation duties and escalation to those charged with governance"
+    ],
+    "PrimaryCompetency": "Judgment",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Bluepine Foods, Inc., a frozen-meal manufacturer, is refinancing a 40,000,000 dollar term loan whose lenders will reprice off adjusted EBITDA trends. CFO Diane Kessler directed Corporate Controller Marcus Reyes to record the full 750,000 dollar plant-overhaul invoice package within Machinery and Equipment and to revisit the treatment after the year-end audit. Marcus determined that only 520,000 dollars qualifies for capitalization under ASC 360, leaving 230,000 dollars of routine maintenance improperly capitalized. He must quantify the misstatement and resolve the directive under the IMA Statement of Ethical Professional Practice and the Sarbanes-Oxley framework.",
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-F1-E1",
+        "CaseID": "CBQ21-F1",
+        "Type": "email",
+        "Title": "Exhibit 1 - Email from CFO Diane Kessler to Controller Marcus Reyes",
+        "Purpose": "Establishes the management directive, its refinancing motive, the timing pressure, and the concealment instruction; frames every item's ethical analysis from quantification (Q1, Q2) through escalation and documentation duties (Q3-Q6).",
+        "ReferencedBy": [
+          "CBQ21-F1-Q1",
+          "CBQ21-F1-Q2",
+          "CBQ21-F1-Q3",
+          "CBQ21-F1-Q4",
+          "CBQ21-F1-Q5",
+          "CBQ21-F1-Q6"
+        ],
+        "Body": "From: Diane Kessler, Chief Financial Officer\nTo: Marcus Reyes, Corporate Controller\nSubject: Overhaul invoice package - accounting treatment\n\nMarcus,\n\nWe close the term-loan refinancing in six weeks, and the lenders will reprice off our adjusted EBITDA trend. Record the full 750,000 Line 2 press invoice package to Machinery and Equipment this quarter. We can revisit the classification once the audit is behind us.\n\nPlease keep this between us until then; the plant controllers do not need the distraction. Our guidance range to the board, our covenant headroom, and our incentive targets all depend on hitting the number.\n\nDiane"
+      },
+      {
+        "ExhibitID": "CBQ21-F1-E2",
+        "CaseID": "CBQ21-F1",
+        "Type": "table",
+        "Title": "Exhibit 2 - Invoice Package Classification Schedule",
+        "Purpose": "Splits the invoice package between capitalizable overhaul work and routine maintenance, states proper treatments, and provides division operating income and the effective tax rate; supplies the quantification inputs for Q1 and Q2 and context for the qualitative items.",
+        "ReferencedBy": [
+          "CBQ21-F1-Q1",
+          "CBQ21-F1-Q2",
+          "CBQ21-F1-Q3",
+          "CBQ21-F1-Q4",
+          "CBQ21-F1-Q5",
+          "CBQ21-F1-Q6"
+        ],
+        "Headers": [
+          "Invoice component",
+          "Amount",
+          "Proper treatment under ASC 360"
+        ],
+        "Rows": [
+          [
+            "Major overhaul - Line 2 press (extends useful life)",
+            "$520,000",
+            "Capitalize to Machinery and Equipment; depreciate over remaining life"
+          ],
+          [
+            "Routine maintenance and calibration - multiple plants",
+            "$230,000",
+            "Expense as incurred; benefits current period"
+          ],
+          [
+            "Total recorded to Machinery and Equipment per CFO direction",
+            "$750,000",
+            "Only the overhaul portion qualifies for capitalization"
+          ],
+          [
+            "Preliminary division operating income (before any correction)",
+            "$4,100,000",
+            "Misclassification inflates this measure"
+          ],
+          [
+            "Effective tax rate for the period",
+            "25%",
+            "Applies to quantify after-tax effects"
+          ]
+        ],
+        "DataFormat": "USD whole dollars; tax rate in percent.",
+        "AccuracyCheck": "Package reconciles: 520,000 + 230,000 = 750,000 recorded to Machinery and Equipment; the 230,000 routine-maintenance component is the entire misstatement because the 520,000 overhaul was properly capitalized."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-F1-Q1",
+        "Type": "numeric",
+        "Prompt": "Per the classification analysis in Exhibit 2, and disregarding any related depreciation effects, by how many dollars does the CFO's directive overstate Bluepine's operating income this period? Enter as a whole dollar amount (tolerance +/- $1).",
+        "Correct": "230000",
+        "Explanation": "ASC 360 permits capitalization only for expenditures that extend an asset's useful life or increase its capacity; routine maintenance benefits only the current period and must be expensed as incurred. Of the 750,000 package, 520,000 qualifies as a major overhaul, leaving 230,000 improperly capitalized. Operating income is therefore overstated by the full 230,000, roughly 5.6 percent of the 4,100,000 preliminary division operating income - large enough to matter for covenant EBITDA and bonus targets. The trap is assuming an invoice package shares a single accounting treatment; mixed packages must be evaluated component by component before posting.",
+        "Topic": "Expense misclassification",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-F1-Q2",
+        "Type": "numeric",
+        "Prompt": "Using Bluepine's 25 percent effective tax rate from Exhibit 2, by how many dollars is NET income overstated by the misclassification? Round to the nearest whole dollar (tolerance +/- $1).",
+        "Correct": "172500",
+        "Explanation": "With a 25 percent effective rate, the tax effect of the 230,000 pre-tax overstatement is 57,500 (230,000 x 0.25), so net income is overstated by 172,500 (230,000 x 0.75). Taxes do not excuse the misclassification; they merely scale its after-tax footprint, and lenders frequently define covenant EBITDA without tax effects anyway, keeping the full 230,000 in view. Marcus needs both measures when he briefs the audit committee: 230,000 overstating operating income and 172,500 overstating net income. The trap is stopping at the pre-tax figure and leaving governance without the bottom-line magnitude they will ask about first.",
+        "Topic": "After-tax misstatement",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-F1-Q3",
+        "Type": "select",
+        "Prompt": "Which principle within the IMA Statement of Ethical Professional Practice is most directly compromised by recording routine maintenance as machinery and equipment?",
+        "Correct": "B",
+        "Choices": {
+          "A": "Competence, because the plant engineering staff lacked the training to perform the overhaul work properly.",
+          "B": "Credibility, because the classification presents financial information that fails to communicate fairly and objectively the sources and composition of reported operating income.",
+          "C": "Confidentiality, because the invoice amounts were discussed with plant controllers outside the corporate finance function.",
+          "D": "Integrity, because the controller accepted gifts from the overhaul vendor during the contract negotiation."
+        },
+        "Explanation": "The IMA Credibility standard requires members to communicate information fairly and objectively and to disclose all relevant information that could reasonably influence a user's understanding. Reclassifying maintenance as machinery changes what reported operating income appears to consist of and misleads EBITDA users - squarely a credibility failure. Competence concerns professional expertise and lawful performance, confidentiality protects unauthorized disclosure, and integrity is implicated by the pressure itself even though the defect in the reported numbers is credibility. The trap is defaulting to integrity terminology for every ethical conflict; classify by the specific duty the conduct breaches.",
+        "Topic": "IMA credibility standard",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-F1-Q4",
+        "Type": "select",
+        "Prompt": "After completing his written analysis, what is Marcus's appropriate first course of action under the IMA resolution pathway?",
+        "Correct": "C",
+        "Choices": {
+          "A": "Resign immediately and file a retaliation claim under SOX Section 806 without raising the issue inside Bluepine.",
+          "B": "Comply with the CFO's direction, since certification responsibility rests with the CEO and CFO rather than the controller.",
+          "C": "Present the facts through Bluepine's established ethics escalation channel, advancing past the CFO to the audit committee because the CFO is implicated in the directive.",
+          "D": "Discuss the reclassification informally with controllers at competing companies to gauge prevailing industry practice."
+        },
+        "Explanation": "Under the IMA resolution pathway, the first step is the organization's own established policy: present the facts to the next-higher managerial level not involved in the conflict. Because CFO Kessler originated the directive, escalation moves past her to those charged with governance - the audit committee or its chair - through Bluepine's ethics mechanism. Immediate resignation forfeits the chance to correct the misstatement internally, compliance leaves the controller complicit while transferring certification exposure upward, and external shop talk breaches confidentiality and accomplishes nothing. The trap is treating resignation or leaking as opening moves; the standards sequence internal escalation first.",
+        "Topic": "Ethical conflict resolution",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-F1-Q5",
+        "Type": "multi",
+        "Prompt": "Which three responses represent appropriate professional conduct for Marcus under the IMA Statement and the SOX framework? Select the three appropriate actions.",
+        "Correct": [
+          "Record the classification analysis, supporting invoices, and management directives contemporaneously in the accounting workpapers.",
+          "Quantify the misstatement's effect on operating income, net income, and covenant metrics so the audit committee understands its magnitude.",
+          "Escalate through Bluepine's established ethics channel and, if unresolved, present the matter to the audit committee."
+        ],
+        "Choices": {
+          "A": "Postpone any correcting entry until the term-loan refinancing closes so the stronger EBITDA presentation is preserved through negotiations.",
+          "B": "Record the classification analysis, supporting invoices, and management directives contemporaneously in the accounting workpapers.",
+          "C": "Quantify the misstatement's effect on operating income, net income, and covenant metrics so the audit committee understands its magnitude.",
+          "D": "Remove the CFO's email from the accounting files once the external auditors request invoice support.",
+          "E": "Escalate through Bluepine's established ethics channel and, if unresolved, present the matter to the audit committee."
+        },
+        "Explanation": "Contemporaneous documentation (B), quantified impact (C), and escalation through recognized channels (E) align with IMA guidance and preserve the evidentiary record that SOX contemplates. Deferring correction until the refinancing closes knowingly maintains a misstatement through a financing event, and destroying or withholding the CFO's email once auditors ask would constitute obstruction of the kind SOX Section 802 criminalizes. The trap is believing that private discomfort plus eventual quiet correction satisfies a controller's duties; the standards demand affirmative communication through proper channels, supported by a documented record.",
+        "Topic": "Ethical response actions",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-F1-Q6",
+        "Type": "match",
+        "Prompt": "Match each professional duty or protection to the framework provision that establishes it.",
+        "LeftItems": [
+          "Communicating complete information fairly and objectively to financial statement users",
+          "Officer certification of financial reports and disclosure controls in each periodic report",
+          "Employment protection for individuals who report suspected securities law violations",
+          "Criminal penalties for altering or destroying records to impede an official proceeding"
+        ],
+        "RightItems": [
+          "IMA Statement of Ethical Professional Practice - Credibility standard",
+          "SOX Section 302 - Corporate responsibility for financial reports",
+          "SOX Section 806 - Whistleblower protection",
+          "SOX Section 802 - Criminal document alteration penalties",
+          "SOX Section 404 - Management assessment of internal controls"
+        ],
+        "Correct": {
+          "Communicating complete information fairly and objectively to financial statement users": "IMA Statement of Ethical Professional Practice - Credibility standard",
+          "Officer certification of financial reports and disclosure controls in each periodic report": "SOX Section 302 - Corporate responsibility for financial reports",
+          "Employment protection for individuals who report suspected securities law violations": "SOX Section 806 - Whistleblower protection",
+          "Criminal penalties for altering or destroying records to impede an official proceeding": "SOX Section 802 - Criminal document alteration penalties"
+        },
+        "Explanation": "Map each duty to its source: fair, objective communication of complete information is the IMA Credibility standard; officer certification of reports and disclosure controls each period sits in SOX Section 302; employment protection for reporting suspected securities violations is SOX Section 806; and criminal penalties for altering records to impede proceedings sit in SOX Section 802. Section 404 - management's internal-control assessment - is genuine law but matches none of the listed duties, making it the decoy. The trap is memorizing section numbers in isolation; anchor each provision to the specific obligation or protection it creates.",
+        "Topic": "Governance frameworks",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      }
+    ],
+    "Industry": "Frozen food processing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Bluepine Foods, Inc.",
+    "Stakeholder": "Marcus Reyes, Corporate Controller",
+    "BusinessFunction": "Financial reporting",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "CreatedDate": "2026-08-25",
+    "ModifiedDate": "2026-08-25",
+    "Author": "P2-061 authoring wave",
+    "Confidence": 90,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-25",
+        "Version": "1.0",
+        "Author": "P2-061 authoring wave",
+        "Summary": "Initial creation"
+      }
+    ],
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Quantify pre-tax and after-tax effects of improperly capitalized period costs",
+      "Classify ethical breaches against the IMA Statement's four standards",
+      "Sequence the IMA resolution pathway and identify the SOX provisions governing certification, documentation, and whistleblower protection"
+    ],
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed"
+  }
+,
+  {
+    "CaseID": "CBQ21-A3",
+    "Title": "DuPont Diagnosis for Board Review",
+    "SectionTags": [
+      "A"
+    ],
+    "BlueprintDomain": "Financial Statement Analysis",
+    "BlueprintObjectives": [
+      "Calculate profitability, activity, and leverage ratios from condensed financial statements",
+      "Decompose return on equity with the DuPont framework",
+      "Interpret year-over-year component trends for governance reporting"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Northwind Ceramics, a mid-sized producer of glazed porcelain tile, watched return on equity slide even though sales grew during FY2025. Board chair Alan Whitfield has asked CFO Elena Marsh to explain the decline using DuPont decomposition ahead of the autumn strategy session, so the board can judge whether softer margins or balance-sheet choices deserve priority attention.",
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-A3-E1",
+        "CaseID": "CBQ21-A3",
+        "Type": "email",
+        "Title": "Exhibit 1 - Finance Committee Request",
+        "Purpose": "Frames the board task: attribute the ROE decline by DuPont component and assess coverage soundness.",
+        "ReferencedBy": [
+          "CBQ21-A3-Q3",
+          "CBQ21-A3-Q5",
+          "CBQ21-A3-Q6"
+        ],
+        "Body": "From: Alan Whitfield, Chair, Finance Committee, Northwind Ceramics Board of Directors. To: Elena Marsh, CFO. Subject: ROE walk for the autumn strategy session. Elena - the committee wants a clear walk from last year's return on equity to this year's before we meet. Please come prepared to show which DuPont component moved the needle, what the balance sheet contributed, and whether our coverage position remains sound. Keep it brief, and attach the condensed statements as support."
+      },
+      {
+        "ExhibitID": "CBQ21-A3-E2",
+        "CaseID": "CBQ21-A3",
+        "Type": "table",
+        "Title": "Exhibit 2 - Condensed Income Statements",
+        "Purpose": "Provides sales, operating income, interest, tax, and net income for both fiscal years consumed by margin, DuPont, and coverage computations.",
+        "ReferencedBy": [
+          "CBQ21-A3-Q1",
+          "CBQ21-A3-Q2",
+          "CBQ21-A3-Q3",
+          "CBQ21-A3-Q4",
+          "CBQ21-A3-Q6"
+        ],
+        "Headers": [
+          "Line Item",
+          "FY2025",
+          "FY2024"
+        ],
+        "Rows": [
+          [
+            "Net sales",
+            "$12,500,000",
+            "$11,800,000"
+          ],
+          [
+            "Operating income (EBIT)",
+            "$1,240,000",
+            "$1,440,000"
+          ],
+          [
+            "Interest expense",
+            "$240,000",
+            "$260,000"
+          ],
+          [
+            "Income before income taxes",
+            "$1,000,000",
+            "$1,180,000"
+          ],
+          [
+            "Income tax expense (25%)",
+            "$250,000",
+            "$295,000"
+          ],
+          [
+            "Net income",
+            "$750,000",
+            "$885,000"
+          ]
+        ],
+        "DataFormat": "US dollars, whole dollars; fiscal years ended December 31",
+        "AccuracyCheck": "EBIT minus interest equals pre-tax income in both years; tax at 25% reconciles to net income ($1,000,000 x 0.75 = $750,000; $1,180,000 x 0.75 = $885,000). Verified twice."
+      },
+      {
+        "ExhibitID": "CBQ21-A3-E3",
+        "CaseID": "CBQ21-A3",
+        "Type": "table",
+        "Title": "Exhibit 3 - Condensed Balance Sheets",
+        "Purpose": "Provides year-end assets, liabilities, and equity used for turnover, equity multiplier, and return on equity.",
+        "ReferencedBy": [
+          "CBQ21-A3-Q2",
+          "CBQ21-A3-Q3",
+          "CBQ21-A3-Q5",
+          "CBQ21-A3-Q6"
+        ],
+        "Headers": [
+          "Line Item",
+          "FY2025",
+          "FY2024"
+        ],
+        "Rows": [
+          [
+            "Total assets",
+            "$8,000,000",
+            "$7,200,000"
+          ],
+          [
+            "Total liabilities",
+            "$3,200,000",
+            "$2,800,000"
+          ],
+          [
+            "Total shareholders' equity",
+            "$4,800,000",
+            "$4,400,000"
+          ]
+        ],
+        "DataFormat": "US dollars, whole dollars; year-end balances are the stated measurement basis",
+        "AccuracyCheck": "Liabilities plus equity equals total assets in both years ($3,200,000 + $4,800,000 = $8,000,000; $2,800,000 + $4,400,000 = $7,200,000). Verified twice."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-A3-Q1",
+        "Type": "numeric",
+        "Prompt": "Using Exhibit 2, compute Northwind Ceramics' FY2025 net profit margin as a percentage of net sales. Enter the percentage rounded to two decimal places (digits only).",
+        "Correct": "6.00",
+        "Explanation": "Governing principle: profitability ratios measure how much of each sales dollar becomes profit after all costs and taxes (financial statement analysis standards). Net profit margin = Net income / Net sales = $750,000 / $12,500,000 = 0.0600 = 6.00%. In board terms, Northwind kept about six cents of every FY2025 sales dollar. A common trap is dividing net income by total assets or equity instead of sales, which produces turnover or return measures rather than margin.",
+        "Topic": "Profitability ratios",
+        "Subtopic": "Net profit margin",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "Net profit margin = Net income / Net sales",
+        "CommonTrapReference": "Dividing net income by assets or equity instead of sales produces turnover or ROE, not margin",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A3-Q2",
+        "Type": "numeric",
+        "Prompt": "Using three-step DuPont decomposition with the year-end balances shown in Exhibits 2 and 3, compute Northwind Ceramics' FY2025 return on equity as a percentage. Round to two decimal places (digits only).",
+        "Correct": "15.63",
+        "Explanation": "Governing principle: the three-step DuPont model decomposes ROE into margin, activity, and leverage. ROE = Net profit margin x Total asset turnover x Equity multiplier = 0.0600 x 1.5625 x 1.6667 = 15.63%. Cross-check: Net income / Equity = $750,000 / $4,800,000 = 15.63%, confirming internal consistency of the exhibits. Economically, Northwind earned about 15.6 cents per dollar of shareholder capital in FY2025. The common trap is importing an average-balance convention into a presentation whose stated basis is year-end balances.",
+        "Topic": "Return on equity",
+        "Subtopic": "DuPont decomposition",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "ROE = Margin x Turnover x Equity Multiplier",
+        "CommonTrapReference": "Mixing average-balance conventions into a year-end balance presentation distorts turnover",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A3-Q3",
+        "Type": "select",
+        "Prompt": "At the strategy session, Elena must attribute the year-over-year ROE decline to its source. Based on Exhibits 2 and 3, which statement should she present?",
+        "Choices": [
+          "Total asset turnover improved enough to offset most of the margin decline.",
+          "Financial leverage fell during FY2025 and dragged ROE down with it.",
+          "Net profit margin contracted from 7.50% to 6.00% and is the primary driver of the ROE decline.",
+          "Deterioration in times interest earned is the main reason ROE declined."
+        ],
+        "Correct": "C",
+        "Explanation": "Governing principle: DuPont diagnosis attributes ROE change to its components rather than to non-DuPont ratios. Holding FY2024 turnover (1.64) and multiplier (1.64) constant, the margin fall from 7.50% to 6.00% alone would cut ROE from 20.11% to about 16.09%, roughly four points - far larger than the turnover drag (under one point), while higher leverage actually cushions the fall. EBIT dropped from $1,440,000 to $1,240,000 despite higher sales, confirming margin weakness. Traps: blaming leverage reverses its favorable direction; times interest earned is not a DuPont component at all.",
+        "Topic": "Ratio trend interpretation",
+        "Subtopic": "Component attribution",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Attributing ROE declines to leverage when leverage rose and cushioned the fall",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A3-Q4",
+        "Type": "select",
+        "Prompt": "The company's lender reviews Northwind's credit file annually. Compute FY2025 times interest earned from Exhibit 2 and choose the correct figure.",
+        "Choices": [
+          "4.13 times, computed as net income plus interest expense divided by interest expense.",
+          "5.17 times, computed as operating income (EBIT) divided by interest expense.",
+          "4.17 times, computed as pre-tax income divided by interest expense.",
+          "6.89 times, computed as EBIT divided by after-tax interest expense."
+        ],
+        "Correct": "B",
+        "Explanation": "Governing principle: coverage ratios compare operating profit available to service debt against financing cost. Times interest earned = EBIT / Interest expense = $1,240,000 / $240,000 = 5.17 times (FY2024 was $1,440,000 / $260,000 = 5.54 times). Coverage weakened modestly yet remains comfortable for a manufacturer with stable demand. Traps: using pre-tax income ($1,000,000 / $240,000 = 4.17) omits the interest add-back; using net income plus interest ($990,000 / $240,000 = 4.13) skips the tax gross-up; dividing by after-tax interest ($1,240,000 / $180,000 = 6.89) misapplies a capital-structure adjustment outside its purpose.",
+        "Topic": "Leverage ratios",
+        "Subtopic": "Times interest earned",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "Times interest earned = EBIT / Interest expense",
+        "CommonTrapReference": "Omitting the interest add-back or the tax gross-up when building numerator EBIT",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A3-Q5",
+        "Type": "multi",
+        "Prompt": "Which three conclusions are supported by the DuPont analysis of the two years shown in Exhibits 2 and 3?",
+        "Choices": [
+          "Net profit margin fell from 7.50% to 6.00% and is the largest contributor to the ROE decline.",
+          "Total asset turnover rose above 1.60 times in FY2025.",
+          "Higher financial leverage partially offset the impact of the weaker operating margin on ROE.",
+          "Return on equity declined by more than four percentage points year over year.",
+          "The company reduced its reliance on debt financing during FY2025."
+        ],
+        "Correct": [
+          "Net profit margin fell from 7.50% to 6.00% and is the largest contributor to the ROE decline.",
+          "Higher financial leverage partially offset the impact of the weaker operating margin on ROE.",
+          "Return on equity declined by more than four percentage points year over year."
+        ],
+        "Explanation": "Relevant principle: component trend analysis within the DuPont framework. Statement one is true: margin fell 7.50% to 6.00% and contributes the largest share of the decline. Turnover claim fails: it slipped from 1.64 to 1.56 times, below 1.60. Leverage offset is true: the multiplier rose from 1.64 to 1.67, softening the fall. The magnitude claim is true: ROE fell from 20.11% to 15.63%, a 4.48-point drop. Debt-reduction is false: liabilities grew faster than equity ($400,000 vs $400,000 on a smaller base), raising leverage. The trap is treating any single-component move as proof overall returns improved.",
+        "Topic": "Financial statement analysis",
+        "Subtopic": "DuPont component trends",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Reading a single-component improvement as proof that overall returns improved",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-A3-Q6",
+        "Type": "match",
+        "Prompt": "Prepare the board scorecard Elena will distribute: match each metric to its correct value for the year indicated, using Exhibits 2 and 3.",
+        "LeftItems": [
+          "FY2025 net profit margin",
+          "FY2025 total asset turnover",
+          "FY2025 equity multiplier",
+          "FY2024 return on equity"
+        ],
+        "RightItems": [
+          "6.00%",
+          "1.56 times",
+          "1.67 times",
+          "20.11%",
+          "7.50%",
+          "1.64 times"
+        ],
+        "Correct": {
+          "FY2025 net profit margin": "6.00%",
+          "FY2025 total asset turnover": "1.56 times",
+          "FY2025 equity multiplier": "1.67 times",
+          "FY2024 return on equity": "20.11%"
+        },
+        "Explanation": "Each metric follows directly from the exhibits: margin = $750,000 / $12,500,000 = 6.00%; turnover = $12,500,000 / $8,000,000 = 1.56 times; multiplier = $8,000,000 / $4,800,000 = 1.67 times; prior-year ROE = $885,000 / $4,400,000 = 20.11%. The distractors are deliberate near-misses: 7.50% is the FY2024 margin and 1.64 times matches FY2024 turnover. Matching exercises reward precise period alignment - pairing a prior-year figure with a current-year label is the classic scorecard error and would misstate the board's trend narrative.",
+        "Topic": "Ratio computation",
+        "Subtopic": "Year-over-year metrics",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": true,
+        "FormulaReference": "",
+        "CommonTrapReference": "Pairing prior-year values with current-year labels in matching scorecards",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      }
+    ],
+    "Industry": "Ceramic tile manufacturing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Northwind Ceramics",
+    "Stakeholder": "CFO Elena Marsh",
+    "BusinessFunction": "Financial reporting and analysis",
+    "QuestionCount": 6,
+    "ExhibitCount": 3,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "DuPont",
+      "ROE",
+      "ratio analysis",
+      "board reporting"
+    ],
+    "CreatedDate": "2026-08-26",
+    "ModifiedDate": "2026-08-26",
+    "Author": "P2-064 authoring wave",
+    "Confidence": 94,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-26",
+        "Version": "1.0",
+        "Author": "P2-064 authoring wave",
+        "Summary": "Initial creation"
+      }
+    ],
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Compute net profit margin, asset turnover, equity multiplier, and ROE from condensed statements",
+      "Attribute ROE change to margin, turnover, and leverage components",
+      "Evaluate whether added leverage offsets operating weakness",
+      "Communicate ratio findings in a board-ready format"
+    ],
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed"
+  },
+  {
+    "CaseID": "CBQ21-B3",
+    "Title": "Bond Pricing and Covenant Compliance Review",
+    "SectionTags": [
+      "B"
+    ],
+    "BlueprintDomain": "Corporate Finance",
+    "BlueprintObjectives": [
+      "Value bonds using present-value factors at the market yield",
+      "Amortize bond discounts under the effective interest method",
+      "Assess covenant compliance with interest coverage measures"
+    ],
+    "PrimaryCompetency": "Calculation",
+    "EstimatedMinutes": 31,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Copperline Manufacturing plans a five-year, $10,000,000 bond issue to fund a new press line at its Dayton plant. With market yields at 8% against a 6% coupon, treasury expects a discounted sale. CFO Dana Whitaker must confirm the issue price, validate the effective-interest amortization schedule, and reassure lender First Meridian Bank that the interest-coverage covenant will hold in year one.",
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-B3-E1",
+        "CaseID": "CBQ21-B3",
+        "Type": "table",
+        "Title": "Exhibit 1 - Bond Terms and Present Value Factors",
+        "Purpose": "Supplies every input needed to price the issue and build the early amortization periods under the effective interest method.",
+        "ReferencedBy": [
+          "CBQ21-B3-Q1",
+          "CBQ21-B3-Q2",
+          "CBQ21-B3-Q3",
+          "CBQ21-B3-Q5",
+          "CBQ21-B3-Q6"
+        ],
+        "Headers": [
+          "Term",
+          "Value"
+        ],
+        "Rows": [
+          [
+            "Face value",
+            "$10,000,000"
+          ],
+          [
+            "Stated coupon rate (annual)",
+            "6%"
+          ],
+          [
+            "Payment frequency",
+            "Semiannual"
+          ],
+          [
+            "Term to maturity",
+            "5 years"
+          ],
+          [
+            "Semiannual coupon payment",
+            "$300,000"
+          ],
+          [
+            "Market yield at issuance (annual)",
+            "8%"
+          ],
+          [
+            "Periodic market rate",
+            "4% per half-year"
+          ],
+          [
+            "Number of periods",
+            "10"
+          ],
+          [
+            "PV of $1 at 4%, 10 periods",
+            "0.67556"
+          ],
+          [
+            "PV of ordinary annuity of $1 at 4%, 10 periods",
+            "8.11090"
+          ]
+        ],
+        "DataFormat": "US dollars; rates are nominal annual unless noted; factors carried to five decimals",
+        "AccuracyCheck": "Coupon = $10,000,000 x 6% / 2 = $300,000; price = $300,000 x 8.11090 + $10,000,000 x 0.67556 = $9,188,870. Computed twice independently."
+      },
+      {
+        "ExhibitID": "CBQ21-B3-E2",
+        "CaseID": "CBQ21-B3",
+        "Type": "email",
+        "Title": "Exhibit 2 - Lender Covenant Inquiry",
+        "Purpose": "States the covenant definition (EBIT over GAAP interest expense, floor 4.0x) and projected EBIT consumed by the compliance decision.",
+        "ReferencedBy": [
+          "CBQ21-B3-Q4",
+          "CBQ21-B3-Q5"
+        ],
+        "Body": "From: Marcus Bell, Treasurer, Copperline Manufacturing. To: Dana Whitaker, CFO. Subject: Coverage headroom on the new notes. Dana - First Meridian confirmed the covenant language on the proposed notes: EBIT divided by GAAP interest expense must stay at or above 4.0 times, tested annually starting at issuance. Our planning estimate for next-year EBIT is $3,600,000. Before we sign, please confirm the year-one GAAP interest expense implied by the discounted issue and tell me whether we clear the covenant, including how the number differs from the $600,000 of cash coupons we will actually pay each year."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-B3-Q1",
+        "Type": "numeric",
+        "Prompt": "Using the present value factors in Exhibit 1, compute the issue price of Copperline's bond offering. Round to the nearest whole dollar (digits only).",
+        "Correct": "9188870",
+        "Explanation": "Governing principle: bond valuation under ASC 835 prices debt at the present value of future cash flows discounted at the market yield. Price = PV of coupons + PV of face = $300,000 x 8.11090 + $10,000,000 x 0.67556 = $2,433,270 + $6,755,600 = $9,188,870. Investors pay $811,130 less than face because the 6% coupon trails the 8% market yield they require. The common trap is discounting cash flows at the stated rate, which would circularly produce par value regardless of market conditions.",
+        "Topic": "Bond valuation",
+        "Subtopic": "Present value pricing",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "Bond price = PV(coupons) + PV(face) at market yield",
+        "CommonTrapReference": "Discounting bond cash flows at the stated coupon rate instead of the market yield",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-B3-Q2",
+        "Type": "numeric",
+        "Prompt": "Under the effective interest method beginning from the issue price, compute Copperline's interest expense for Period 2 (the second semiannual period). Round to the nearest whole dollar (digits only).",
+        "Correct": "370257",
+        "Explanation": "Governing principle: the effective interest method (ASC 835) charges each period at the periodic market rate applied to carrying value. Period 1 expense = $9,188,870 x 4% = $367,555; discount amortized = $367,555 - $300,000 = $67,555; carrying value rises to $9,256,425. Period 2 expense = $9,256,425 x 4% = $370,257. Expense grows every period because accretion walks carrying value up toward face. The trap is reusing the issue price as the base each period, which freezes expense and defeats the compounding logic of the method.",
+        "Topic": "Debt amortization",
+        "Subtopic": "Effective interest method",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "Effective interest = Carrying value x Periodic market rate",
+        "CommonTrapReference": "Reapplying the periodic rate to the issue price instead of the growing carrying value",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": [
+          "CBQ21-B3-Q1"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-B3-Q3",
+        "Type": "select",
+        "Prompt": "For the audit committee briefing, which characterization of the issuance is accurate?",
+        "Choices": [
+          "Sold at a discount of $811,130 because the 8% market yield exceeds the 6% coupon rate.",
+          "Sold at par because the stated rate and the market rate both compound semiannually.",
+          "Sold at a premium of $811,130 because investors reward above-market coupons.",
+          "Sold at a discount of $188,870 reflecting underwriting fees deducted at closing."
+        ],
+        "Correct": "A",
+        "Explanation": "Issuance economics follow from comparing coupon to market yield. Because the 8% market yield exceeds the 6% stated rate, investors bid the price down to $9,188,870 - a discount of $10,000,000 - $9,188,870 = $811,130 carried in Discount on Bonds Payable and recognized as extra interest cost over the term. Business meaning: Copperline pays the market rate in substance through cheaper proceeds plus accretion. Traps: calling it a premium reverses the rate relationship; quoting $188,870 invents a magnitude tied to no exhibit figure and confuses the discount with issuance costs.",
+        "Topic": "Debt issuance",
+        "Subtopic": "Discount recognition",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Calling a below-coupon issuance a premium or misstating the discount magnitude",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-B3-Q4",
+        "Type": "select",
+        "Prompt": "Marcus needs an answer for First Meridian before signing. Applying the covenant definition stated in Exhibit 2, which conclusion should Dana deliver?",
+        "Choices": [
+          "Coverage is about 6.00 times measured on cash coupons, satisfying the covenant without further analysis.",
+          "Coverage is about 4.50 times applying the 8% market yield to face value, satisfying the covenant.",
+          "Coverage is about 4.88 times on GAAP interest expense, breaching the covenant because lenders test only cash interest.",
+          "Coverage is about 4.88 times on GAAP interest expense, clearing the 4.0x covenant, with cash-basis coverage higher at about 6.00 times."
+        ],
+        "Correct": "D",
+        "Explanation": "Covenant testing applies the agreement's own definition: projected EBIT over GAAP interest expense. Year-one GAAP interest = $367,555 + $370,257 = $737,812; coverage = $3,600,000 / $737,812 = 4.88 times, above the 4.0x floor. Cash-basis coverage = $3,600,000 / $600,000 = 6.00 times, higher because cash coupons exclude discount accretion. Treasury can assure First Meridian of compliance with headroom. Traps: substituting cash coupons understates the GAAP denominator the agreement names; applying the 8% yield to face gives $800,000 and 4.50 times; inverting the basis rule reaches the opposite conclusion from the same ratio.",
+        "Topic": "Credit analysis",
+        "Subtopic": "Interest coverage covenant",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "Interest coverage = EBIT / Interest expense",
+        "CommonTrapReference": "Testing covenants on cash interest when the agreement defines GAAP interest expense",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-B3-Q5",
+        "Type": "multi",
+        "Prompt": "Which three statements about the notes and the covenant position are accurate?",
+        "Choices": [
+          "Effective interest expense increases each semiannual period as discount amortization raises the carrying value.",
+          "Lifetime interest cost totals $3,811,130, comprising $3,000,000 of coupons plus the $811,130 discount.",
+          "The opening carrying amount of the notes exceeds face value at the date of issuance.",
+          "Straight-line amortization would hold periodic interest expense equal to the $300,000 cash coupon.",
+          "Measured on cash interest instead of GAAP expense, covenant coverage appears stronger because cash coupons exclude discount accretion."
+        ],
+        "Correct": [
+          "Effective interest expense increases each semiannual period as discount amortization raises the carrying value.",
+          "Lifetime interest cost totals $3,811,130, comprising $3,000,000 of coupons plus the $811,130 discount.",
+          "Measured on cash interest instead of GAAP expense, covenant coverage appears stronger because cash coupons exclude discount accretion."
+        ],
+        "Explanation": "Statement one is true: expense steps from $367,555 to $370,257, then $373,067 and $375,990, tracking carrying-value growth. Lifetime cost is true: ten coupons of $300,000 total $3,000,000, plus the $811,130 discount, equals $3,811,130. Opening-above-face is false: a discount means carrying value starts below face. Straight-line-equals-coupon is false: straight-line expense would be $381,113 per period ($300,000 + $81,113 of amortization). Cash-versus-GAAP is true: $600,000 cash is smaller than $737,812 GAAP expense, so cash-basis coverage screens stronger. The trap is equating interest expense with cash paid on discounted debt.",
+        "Topic": "Long-term debt",
+        "Subtopic": "Discount accretion effects",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Equating interest expense with cash coupons and missing discount accretion",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-B3-Q6",
+        "Type": "match",
+        "Prompt": "Complete the treasury memo Marcus will file with the loan package: match each schedule element to its correct amount.",
+        "LeftItems": [
+          "Issue price at date of sale",
+          "Period 1 interest expense",
+          "Period 2 discount amortization",
+          "Carrying value after Period 3"
+        ],
+        "RightItems": [
+          "$9,188,870",
+          "$367,555",
+          "$70,257",
+          "$9,399,749",
+          "$600,000",
+          "$811,130"
+        ],
+        "Correct": {
+          "Issue price at date of sale": "$9,188,870",
+          "Period 1 interest expense": "$367,555",
+          "Period 2 discount amortization": "$70,257",
+          "Carrying value after Period 3": "$9,399,749"
+        },
+        "Explanation": "Derivations from Exhibit 1 and the pricing step: issue price $9,188,870; Period 1 expense $9,188,870 x 4% = $367,555; Period 2 amortization = $370,257 - $300,000 = $70,257; carrying value after Period 3 = $9,188,870 + $67,555 + $70,257 + $73,067 = $9,399,749. Distractors are real but misplaced figures: $600,000 is a full year of cash coupons and $811,130 is the total discount. Typical scheduling errors come from skipping the round-to-dollar step or amortizing before accruing interest in the early periods.",
+        "Topic": "Amortization schedule",
+        "Subtopic": "Early-period balances",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": true,
+        "FormulaReference": "Effective interest = Carrying value x Periodic market rate",
+        "CommonTrapReference": "Skipping dollar rounding or amortizing before accruing interest in early periods",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": [
+          "CBQ21-B3-Q1"
+        ]
+      }
+    ],
+    "Industry": "Capital equipment manufacturing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Copperline Manufacturing",
+    "Stakeholder": "CFO Dana Whitaker",
+    "BusinessFunction": "Treasury and corporate finance",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "bond pricing",
+      "effective interest",
+      "covenant",
+      "coverage ratio"
+    ],
+    "CreatedDate": "2026-08-26",
+    "ModifiedDate": "2026-08-26",
+    "Author": "P2-064 authoring wave",
+    "Confidence": 93,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-26",
+        "Version": "1.0",
+        "Author": "P2-064 authoring wave",
+        "Summary": "Initial creation"
+      }
+    ],
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Price a semiannual bond using present value factors",
+      "Build early-period amortization entries under the effective interest method",
+      "Test an interest-coverage covenant on GAAP and cash bases",
+      "Distinguish discount accretion from cash interest"
+    ],
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed"
+  },
+  {
+    "CaseID": "CBQ21-C3",
+    "Title": "Special Order Under a Capacity Constraint",
+    "SectionTags": [
+      "C"
+    ],
+    "BlueprintDomain": "Decision Analysis",
+    "BlueprintObjectives": [
+      "Identify relevant revenues and costs for a special-order decision",
+      "Quantify opportunity cost of capacity consumed by a special order",
+      "Recommend accept-or-decline actions supported by contribution analysis"
+    ],
+    "PrimaryCompetency": "Judgment",
+    "EstimatedMinutes": 30,
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ScenarioText": "Silverpine Furniture runs its Oregon workshop near practical capacity filling standing orders from regional retailers. Purchasing director Priya Raman of Cascadia Home Stores proposes a one-time purchase of 3,000 accent chairs at $150 per unit, well below the regular price, with six-week delivery. CFO Rebecca Hale must recommend whether founder Sam Ortiz should accept, quantifying relevant costs, the cost of displaced orders, and the minimum price at which the deal creates value.",
+    "Exhibits": [
+      {
+        "ExhibitID": "CBQ21-C3-E1",
+        "CaseID": "CBQ21-C3",
+        "Type": "table",
+        "Title": "Exhibit 1 - Monthly Operating Data, Regular Operations",
+        "Purpose": "Provides volumes, prices, variable costs, and fixed overhead consumed by the contribution, opportunity-cost, and pricing computations.",
+        "ReferencedBy": [
+          "CBQ21-C3-Q1",
+          "CBQ21-C3-Q2",
+          "CBQ21-C3-Q3",
+          "CBQ21-C3-Q5",
+          "CBQ21-C3-Q6"
+        ],
+        "Headers": [
+          "Item",
+          "Amount"
+        ],
+        "Rows": [
+          [
+            "Current monthly production",
+            "18,000 units"
+          ],
+          [
+            "Practical monthly capacity",
+            "20,000 units"
+          ],
+          [
+            "Regular wholesale price per unit",
+            "$240"
+          ],
+          [
+            "Variable manufacturing cost per unit",
+            "$132"
+          ],
+          [
+            "Variable selling expense per unit",
+            "$18"
+          ],
+          [
+            "Fixed manufacturing overhead per month",
+            "$1,296,000"
+          ]
+        ],
+        "DataFormat": "US dollars; volumes in units per month",
+        "AccuracyCheck": "Regular contribution per unit = $240 - $132 - $18 = $90; idle capacity = 20,000 - 18,000 = 2,000 units; allocated fixed overhead = $1,296,000 / 18,000 = $72 per unit. Verified twice."
+      },
+      {
+        "ExhibitID": "CBQ21-C3-E2",
+        "CaseID": "CBQ21-C3",
+        "Type": "email",
+        "Title": "Exhibit 2 - Customer Offer",
+        "Purpose": "States the special-order terms consumed throughout the decision: 3,000 units, $150 price, buyer-handled distribution, seller-funded one-time jig.",
+        "ReferencedBy": [
+          "CBQ21-C3-Q1",
+          "CBQ21-C3-Q3",
+          "CBQ21-C3-Q4",
+          "CBQ21-C3-Q5"
+        ],
+        "Body": "From: Priya Raman, Purchasing Director, Cascadia Home Stores. To: Tom Alderman, Sales Director, Silverpine Furniture. Subject: One-time buy - Cascade accent chairs. Tom - our spring promotion needs 3,000 Cascade accent chairs delivered within six weeks of purchase-order acceptance. We can pay $150 per unit. Two conditions: your team builds the required finishing jig at your cost as a one-time setup, and we handle all outbound freight and store marketing ourselves. If the numbers work on your side, we can wire a deposit immediately."
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "CBQ21-C3-Q1",
+        "Type": "numeric",
+        "Prompt": "Setting aside capacity effects and the one-time setup for the moment, compute the incremental contribution margin the Cascadia order itself would generate. Round to the nearest whole dollar (digits only).",
+        "Correct": "54000",
+        "Explanation": "Governing principle: relevant costing includes only future, differential cash flows affected by the decision. The order incurs variable manufacturing of $132 per unit and no variable selling expense because Cascadia handles freight and marketing (Exhibit 2). Incremental contribution = 3,000 x ($150 - $132) = $54,000. This figure is gross of capacity effects and the one-time jig, so it is an upper bound before displacement. Traps: deducting the $18 selling expense this order avoids, or burdening the order with fixed manufacturing overhead that continues either way.",
+        "Topic": "Relevant costing",
+        "Subtopic": "Incremental contribution",
+        "Difficulty": "Moderate-Easy",
+        "DifficultyScore": 2,
+        "CognitiveLevel": "Apply",
+        "CalculationRequired": true,
+        "FormulaReference": "Incremental CM = Units x (Offer price - Variable cost per unit)",
+        "CommonTrapReference": "Burdening special orders with fixed overhead or excluded selling expenses",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-C3-Q2",
+        "Type": "numeric",
+        "Prompt": "Compute the opportunity cost of regular contribution displaced if Silverpine accepts the Cascadia order at current production levels. Round to the nearest whole dollar (digits only).",
+        "Correct": "90000",
+        "Explanation": "Governing principle: opportunity cost is the contribution forgone on the best alternative use of scarce capacity. Idle capacity = 20,000 - 18,000 = 2,000 units, so the 3,000-unit order displaces 1,000 units of regular production (18,000 + 3,000 - 20,000). Regular contribution per unit = $240 - $132 - $18 = $90. Opportunity cost = 1,000 x $90 = $90,000. Traps: assuming the entire order displaces regular sales, overstating the cost at $270,000; or ignoring displacement entirely because the offer looks profitable viewed in isolation from Exhibit 1 capacity data.",
+        "Topic": "Opportunity cost",
+        "Subtopic": "Capacity constraints",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "Opportunity cost = Displaced units x Regular CM per unit",
+        "CommonTrapReference": "Displacing the full order quantity instead of the excess over idle capacity",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-C3-Q3",
+        "Type": "select",
+        "Prompt": "Weighing all relevant amounts from Exhibits 1 and 2, what should Rebecca Hale recommend to Sam Ortiz?",
+        "Choices": [
+          "Accept: the order adds $42,000 of profit after tooling and lifts plant utilization.",
+          "Decline: accepting would cut profit by $48,000 after tooling and displaced contribution.",
+          "Accept: the order adds $54,000 of contribution at no additional fixed cost.",
+          "Decline: accepting would cut profit by $102,000 once tooling and lost contribution are counted."
+        ],
+        "Correct": "B",
+        "Explanation": "Short-run decisions compare incremental contribution against avoidable costs plus opportunity cost (contribution-margin decision framework). Accepting yields $54,000 contribution - $12,000 jig - $90,000 displaced contribution = -$48,000, so Silverpine should decline: displaced regular units earn $90 each versus the order's $18, so filling to capacity destroys value. Traps: stopping at $42,000 (omitting opportunity cost) supports exactly the wrong call; reporting -$102,000 nets only the outflows ($90,000 + $12,000) and drops the order's own $54,000 contribution from the comparison.",
+        "Topic": "Special orders",
+        "Subtopic": "Accept-or-decline analysis",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "Net effect = Incremental CM - Avoidable costs - Opportunity cost",
+        "CommonTrapReference": "Judging the order on contribution alone without the opportunity cost of lost sales",
+        "EstimatedMinutes": 5,
+        "ExplanationVersion": 1,
+        "Dependencies": [
+          "CBQ21-C3-Q1",
+          "CBQ21-C3-Q2"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-C3-Q4",
+        "Type": "select",
+        "Prompt": "If Silverpine counter-offers instead of walking away, what minimum unit price leaves the company indifferent between accepting and declining the 3,000-unit order?",
+        "Choices": [
+          "$132, equal to variable manufacturing cost per unit.",
+          "$150, matching the price Cascadia originally offered.",
+          "$166, covering variable cost plus tooling and displaced contribution spread across the order.",
+          "$184, adding the avoided selling expense back onto the indifference price."
+        ],
+        "Correct": "C",
+        "Explanation": "Indifference pricing sets the net benefit of acceptance to zero: 3,000 x (P - $132) - $12,000 - $90,000 = 0, so P - $132 = $102,000 / 3,000 = $34 and P = $166 per unit. Above $166 the deal beats displaced production; below it, declining preserves more profit. Business meaning: scarce capacity, not book cost, sets the floor. Traps: quoting the $132 variable floor ignores what capacity is worth; anchoring on the offered $150 confirms rather than tests the deal; adding the avoided $18 selling expense back onto the floor overstates the requirement at $184.",
+        "Topic": "Pricing decisions",
+        "Subtopic": "Indifference price",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze",
+        "CalculationRequired": true,
+        "FormulaReference": "Minimum price = Variable cost + (Avoidable cost + Opportunity cost) / Order units",
+        "CommonTrapReference": "Quoting variable cost as the floor when capacity is scarce",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Dependencies": [
+          "CBQ21-C3-Q2"
+        ]
+      },
+      {
+        "ItemID": "CBQ21-C3-Q5",
+        "Type": "multi",
+        "Prompt": "Which three statements about the decision analysis are accurate?",
+        "Choices": [
+          "The $12,000 finishing jig is a relevant cost because it is incurred only if the order is accepted.",
+          "Fixed manufacturing overhead charged at $72 per unit is a relevant cost of the order.",
+          "Accepting displaces 1,000 units of regular production because idle capacity is only 2,000 units.",
+          "The $18 variable selling expense belongs in the special order's incremental cost per unit.",
+          "At the offered $150 price the order should be declined because its contribution falls short of the opportunity cost of displaced sales."
+        ],
+        "Correct": [
+          "The $12,000 finishing jig is a relevant cost because it is incurred only if the order is accepted.",
+          "Accepting displaces 1,000 units of regular production because idle capacity is only 2,000 units.",
+          "At the offered $150 price the order should be declined because its contribution falls short of the opportunity cost of displaced sales."
+        ],
+        "Explanation": "Statement one is true: the jig is order-specific and avoidable, hence relevant. The overhead claim is false: the $72 charge ($1,296,000 / 18,000 units) continues regardless of the decision and is irrelevant. Displacement is true: 2,000 idle units against a 3,000-unit order forces 1,000 regular units out. The selling-expense claim is false: Cascadia handles distribution, so the $18 does not arise on this order. The final statement is true: $18 of unit contribution cannot cover the $34 blended burden of tooling plus displaced contribution. The trap is treating allocated fixed cost as decision-relevant.",
+        "Topic": "Decision analysis",
+        "Subtopic": "Cost relevance",
+        "Difficulty": "Difficult",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": false,
+        "FormulaReference": "",
+        "CommonTrapReference": "Treating allocated fixed cost and avoided selling expense as decision-relevant",
+        "EstimatedMinutes": 6,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      },
+      {
+        "ItemID": "CBQ21-C3-Q6",
+        "Type": "match",
+        "Prompt": "Summarize the decision inputs for the leadership meeting: match each quantity to its correct value.",
+        "LeftItems": [
+          "Contribution margin per regular unit",
+          "Idle capacity before the special order",
+          "Special-order contribution margin per unit",
+          "Minimum acceptable special-order price"
+        ],
+        "RightItems": [
+          "$90",
+          "2,000 units",
+          "$18",
+          "$166",
+          "$72",
+          "$240"
+        ],
+        "Correct": {
+          "Contribution margin per regular unit": "$90",
+          "Idle capacity before the special order": "2,000 units",
+          "Special-order contribution margin per unit": "$18",
+          "Minimum acceptable special-order price": "$166"
+        },
+        "Explanation": "From Exhibit 1 and the offer analysis: regular contribution per unit = $240 - $132 - $18 = $90; idle capacity = 20,000 - 18,000 = 2,000 units; special-order contribution = $150 - $132 = $18 per unit; minimum price = $132 + ($12,000 + $90,000) / 3,000 = $166. Distractors are real figures from the case that do not belong in incremental analysis: $72 is allocated fixed overhead per unit and $240 is the regular catalog price. Substituting catalog price into relevant-cost schedules is the classic special-order error this matching drill reinforces against.",
+        "Topic": "Contribution analysis",
+        "Subtopic": "Decision inputs",
+        "Difficulty": "Moderate",
+        "DifficultyScore": 3,
+        "CognitiveLevel": "Evaluate",
+        "CalculationRequired": true,
+        "FormulaReference": "",
+        "CommonTrapReference": "Substituting catalog price for relevant-cost figures in decision summaries",
+        "EstimatedMinutes": 4,
+        "ExplanationVersion": 1,
+        "Dependencies": []
+      }
+    ],
+    "Industry": "Furniture manufacturing",
+    "CompanyType": "Manufacturer",
+    "CompanyName": "Silverpine Furniture",
+    "Stakeholder": "CFO Rebecca Hale",
+    "BusinessFunction": "Cost management and pricing",
+    "QuestionCount": 6,
+    "ExhibitCount": 2,
+    "ProductionStatus": "Draft",
+    "Version": "1.0",
+    "Tags": [
+      "special order",
+      "relevant costs",
+      "capacity",
+      "opportunity cost"
+    ],
+    "CreatedDate": "2026-08-26",
+    "ModifiedDate": "2026-08-26",
+    "Author": "P2-064 authoring wave",
+    "Confidence": 94,
+    "RevisionHistory": [
+      {
+        "Date": "2026-08-26",
+        "Version": "1.0",
+        "Author": "P2-064 authoring wave",
+        "Summary": "Initial creation"
+      }
+    ],
+    "Dependencies": [],
+    "LearningObjectives": [
+      "Separate relevant from irrelevant costs in order evaluation",
+      "Measure displacement when orders exceed idle capacity",
+      "Derive a minimum acceptable price for constrained capacity",
+      "Defend accept-or-decline recommendations quantitatively"
+    ],
+    "Part": 2,
+    "Part2OnlyFlag": true,
+    "question_state": "Unprocessed"
+  }
 ];

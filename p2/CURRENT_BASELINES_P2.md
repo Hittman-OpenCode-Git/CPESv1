@@ -1,8 +1,8 @@
-# CURRENT_BASELINES_P2.md — Part 2 Certified Pool Snapshot
+﻿# CURRENT_BASELINES_P2.md — Part 2 Certified Pool Snapshot
 
 **Purpose:** Authoritative reference for P2 preflight cross-checks.  
 **Status:** Active  
-**Updated:** 2026-08-24 — Flash wave (P2-047): +90 Unprocessed MCQs (A 175, B 115, C 140, D 65, E 75, F 65; Certified unchanged at 545)
+**Updated:** 2026-08-26 — Session P2-064 Overnight Completion Program checkpoint: +180 MCQs (3 waves x 60) + 9 cases; pool now 1,250 MCQs (708 Certified / 542 Unprocessed / 0 Archived... see ledger) and 33 cases (15 Certified / 18 Unprocessed).
 **Preflight script:** `scripts/preflight_p2.js`
 
 ---
@@ -11,13 +11,22 @@
 
 | Pack | File | Target QIDs | Current QIDs | Certified | Hash (SHA256) |
 |------|------|-------------|-------------|-----------|---------------|
-| A | p2/pack_p2_a.js | 500 | 175 | 160 | — |
-| B | p2/pack_p2_b.js | 500 | 115 | 100 | — |
-| C | p2/pack_p2_c.js | 625 | 140 | 125 | — |
-| D | p2/pack_p2_d.js | 250 | 65 | 50 | — |
-| E | p2/pack_p2_e.js | 250 | 75 | 60 | — |
-| F | p2/pack_p2_f.js | 375 | 65 | 50 | — |
-| **Total** | | **2,500** | **635** | **545** | | |
+| A | p2/pack_p2_a.js | 500 | 280 | 190 | — |
+| B | p2/pack_p2_b.js | 500 | 205 | 115 | — |
+| C | p2/pack_p2_c.js | 625 | 290 | 198 | — |
+| D | p2/pack_p2_d.js | 250 | 155 | 65 | — |
+| E | p2/pack_p2_e.js | 250 | 165 | 75 | — |
+| F | p2/pack_p2_f.js | 375 | 155 | 65 | — |
+| **Total** | | **2,500** | **1,250** | **708** | |
+
+## §1b. Case Pack Baselines
+
+| File | Target Cases | Current Cases |
+|------|--------------|---------------|
+| p2/case_pack_p2_1.js | 25 | 13 |
+| p2/case_pack_p2_2.js | 25 | 10 |
+| p2/case_pack_p2_3.js | 25 | 10 |
+| **Total** | **75** | **33** |
 
 ---
 
@@ -25,11 +34,11 @@
 
 | Rule | Summary | Status |
 |------|---------|--------|
-| 1 | question_state → REVISION_HISTORY.md | BLOCK |
+| 1 | question_state -> REVISION_HISTORY.md | BLOCK |
 | 2 | DL-008 (non-empty EW[CC]) | BLOCK |
 | 3 | Registry not hand-edited | BLOCK |
-| 4 | Answer-key → recomputed note | BLOCK |
-| 5 | ≤30 items per change-set | BLOCK |
+| 4 | Answer-key -> recomputed note | BLOCK |
+| 5 | <=30 items per change-set | BLOCK |
 | 6 | DL-026 (empty distractor EW) | BLOCK |
 | 7 | Derived registry not authoritative | BLOCK |
 | 8 | Session packages must be registered | BLOCK |
@@ -58,15 +67,16 @@
 
 ## §4. Schema Version
 
-**Active:** P2_SCHEMA_STANDARD.md v1.0 (ratified 2026-08-04)
+**Active:** P2_SCHEMA_STANDARD.md v1.1 (ratified 2026-08-04; amended 2026-08-24)
 
 | Field | Status |
 |-------|--------|
 | ItemStyle (not Type) | Enforced |
 | VerifiedChecks (not VerificationChecks) | Enforced |
 | UniqueConceptKey | Required |
-| CrossDomainTags | Available (replaces phantom cross-domain pack) |
+| CrossDomainTags | Available |
 | Part2OnlyFlag: true | Rule 13 BLOCK |
+| v1.1 evidence fields | Report-only mode (new items grandfathered under v1.1 policy; migration gate not yet blocking) |
 
 ---
 
