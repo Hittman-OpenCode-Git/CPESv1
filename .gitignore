@@ -35,3 +35,8 @@ temp_*.txt
 
 # OpenCode internal session/goal state (transient, not committed)
 .opencode/goals/
+
+# ML model binaries (generated/downloaded, not source) — keep git lean.
+# App source under app/may/providers/ is committed; only the large on-device
+# ONNX model artifacts are excluded.
+app/may/providers/models/**/*.onnx
