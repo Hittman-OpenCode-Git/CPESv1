@@ -159,6 +159,98 @@ async function main() {
     results._hasMayCoachingOrchestrator =
       typeof window !== "undefined" &&
       typeof window.MayCoachingOrchestrator !== "undefined";
+    // Phase 0b — real-intent provider (always registered, may not be available until Worker loads model)
+    results._hasRealIntentProvider =
+      typeof window !== "undefined" &&
+      typeof window.MayLLMProviderRegistry !== "undefined" &&
+      !!window.MayLLMProviderRegistry.getProvider &&
+      !!window.MayLLMProviderRegistry.getProvider('real-intent');
+    results._realIntentAvailable =
+      typeof window !== "undefined" &&
+      typeof window.MayLLMProviderRegistry !== "undefined" &&
+      !!window.MayLLMProviderRegistry.getProvider &&
+      window.MayLLMProviderRegistry.getProvider('real-intent')
+        ? window.MayLLMProviderRegistry.getProvider('real-intent').isAvailable()
+        : false;
+    results._hasStubIntentProvider =
+      typeof window !== "undefined" &&
+      typeof window.MayLLMProviderRegistry !== "undefined" &&
+      !!window.MayLLMProviderRegistry.getProvider &&
+      !!window.MayLLMProviderRegistry.getProvider('stub-intent');
+    // Phase 1 — gated routing surface
+    results._hasRouteWithGate =
+      typeof window !== "undefined" &&
+      typeof window.MayLLMProviderRegistry !== "undefined" &&
+      typeof window.MayLLMProviderRegistry.routeWithGate === "function";
+    results._gateThreshold =
+      typeof window !== "undefined" &&
+      typeof window.MayLLMProviderRegistry !== "undefined" &&
+      typeof window.MayLLMProviderRegistry.getConfidenceGateThreshold === "function"
+        ? window.MayLLMProviderRegistry.getConfidenceGateThreshold()
+        : null;
+    // Phase 2a — per-pipeline threshold
+    results._thresholdZeroShot =
+      typeof window !== "undefined" &&
+      typeof window.MayLLMProviderRegistry !== "undefined" &&
+      typeof window.MayLLMProviderRegistry.getThresholdForPipeline === "function"
+        ? window.MayLLMProviderRegistry.getThresholdForPipeline('zero-shot-classification')
+        : null;
+    results._thresholdTextClass =
+      typeof window !== "undefined" &&
+      typeof window.MayLLMProviderRegistry !== "undefined" &&
+      typeof window.MayLLMProviderRegistry.getThresholdForPipeline === "function"
+        ? window.MayLLMProviderRegistry.getThresholdForPipeline('text-classification')
+        : null;
+    // Phase 2b — micro-agents. Check provider classes are loaded into window
+    // (script tags wired them). Hidden-beta: providers.isAvailable()=false
+    // because ENABLE_*_AGENT flags default to false; the agents are
+    // registered as classes but not "routed" via selectProvider() — they
+    // are called directly from integration points.
+    results._hasMisconceptionAgent =
+      typeof window !== "undefined" && typeof window.MisconceptionClassifierProvider === "function";
+    results._hasFormulaRetriever =
+      typeof window !== "undefined" && typeof window.FormulaRetrieverProvider === "function";
+    results._hasHintCalibrator =
+      typeof window !== "undefined" && typeof window.HintCalibratorProvider === "function";
+    results._misconceptionAgentHidden =
+      results._hasMisconceptionAgent
+        ? !window.MisconceptionClassifierProvider.prototype.isAvailable.call({})
+        : true;
+    results._formulaRetrieverHidden =
+      results._hasFormulaRetriever
+        ? !window.FormulaRetrieverProvider.prototype.isAvailable.call({})
+        : true;
+    results._hintCalibratorHidden =
+      results._hasHintCalibrator
+        ? !window.HintCalibratorProvider.prototype.isAvailable.call({})
+        : true;
+    // Phase 2b+ — additional micro-agents
+    results._hasWhisperer =
+      typeof window !== "undefined" && typeof window.WhispererProvider === "function";
+    results._hasGuard =
+      typeof window !== "undefined" && typeof window.GuardProvider === "function";
+    results._hasPlanner =
+      typeof window !== "undefined" && typeof window.PlannerProvider === "function";
+    results._whispererHidden =
+      results._hasWhisperer
+        ? !window.WhispererProvider.prototype.isAvailable.call({})
+        : true;
+    results._guardHidden =
+      results._hasGuard
+        ? !window.GuardProvider.prototype.isAvailable.call({})
+        : true;
+    results._plannerHidden =
+      results._hasPlanner
+        ? !window.PlannerProvider.prototype.isAvailable.call({})
+        : true;
+    results._hasTrackFallback =
+      typeof window !== "undefined" &&
+      typeof window.MayTelemetry !== "undefined" &&
+      typeof window.MayTelemetry.trackFallback === "function";
+    results._routerHasPendingSignal =
+      typeof window !== "undefined" &&
+      typeof window.MayCoachingRouter !== "undefined" &&
+      typeof window.MayCoachingRouter.getPendingIntentSignal === "function";
     results._orchestratorHealth = null;
     try {
       if (typeof window.MayCoachingOrchestrator !== 'undefined' &&
@@ -204,6 +296,112 @@ async function main() {
   scriptsLoaded._hasMayCoachingOrchestrator
     ? pass("MayCoachingOrchestrator loaded (MAY-006)")
     : fail("MayCoachingOrchestrator missing (MAY-006)");
+
+  // Phase 0b — real intent provider registered, not available until Worker loads model
+  scriptsLoaded._hasRealIntentProvider
+    ? pass("RealIntentProvider registered (Phase 0b)")
+    : fail("RealIntentProvider not registered (Phase 0b regression)");
+
+  // Hidden beta invariant: flag is off by default, so real provider must NOT be available
+  // (no Worker load triggered) — production behavior unchanged
+  scriptsLoaded._realIntentAvailable === false
+    ? pass("RealIntentProvider hidden-beta: isAvailable()=false (flag off, no Worker load)")
+    : fail("RealIntentProvider hidden-beta INVARIANT BROKEN: isAvailable()=" + scriptsLoaded._realIntentAvailable);
+
+  scriptsLoaded._hasStubIntentProvider
+    ? pass("StubIntentProvider registered (Phase 0 preserved)")
+    : fail("StubIntentProvider missing (Phase 0 regression)");
+
+  // Phase 1 — gated routing surface
+  scriptsLoaded._hasRouteWithGate
+    ? pass("routeWithGate exposed on registry (Phase 1)")
+    : fail("routeWithGate missing (Phase 1 regression)");
+
+  scriptsLoaded._gateThreshold === 0.60
+    ? pass("Confidence gate threshold = 0.60 (Phase 1 default — zero-shot fallback)")
+    : fail("Confidence gate threshold = " + scriptsLoaded._gateThreshold + " (expected 0.60)");
+
+  // Phase 2a — per-pipeline thresholds
+  scriptsLoaded._thresholdZeroShot === 0.60
+    ? pass("Per-pipeline threshold: zero-shot-classification = 0.60 (Phase 2a)")
+    : fail("Per-pipeline threshold zero-shot = " + scriptsLoaded._thresholdZeroShot + " (expected 0.60)");
+
+  scriptsLoaded._thresholdTextClass === 0.20
+    ? pass("Per-pipeline threshold: text-classification = 0.20 (Phase 2a — Phase 1b fine-tuned, post Phase 2b+ calibration)")
+    : fail("Per-pipeline threshold text-classification = " + scriptsLoaded._thresholdTextClass + " (expected 0.20)");
+
+  scriptsLoaded._hasTrackFallback
+    ? pass("MayTelemetry.trackFallback exposed (Phase 1)")
+    : fail("MayTelemetry.trackFallback missing (Phase 1 regression)");
+
+  scriptsLoaded._routerHasPendingSignal
+    ? pass("MayCoachingRouter.getPendingIntentSignal exposed (Phase 1)")
+    : fail("MayCoachingRouter.getPendingIntentSignal missing (Phase 1 regression)");
+
+  // Phase 1b — fine-tuned local model artifacts present on disk (Node-side check)
+  (function () {
+    try {
+      const dir = path.join(ROOT, "app/may/providers/models/mobilebert-intent-q8");
+      const ok = fs.existsSync(path.join(dir, "onnx", "model.onnx"))
+              && fs.existsSync(path.join(dir, "config.json"));
+      ok
+        ? pass("Fine-tuned model artifacts present (app/may/providers/models/mobilebert-intent-q8)")
+        : fail("Fine-tuned model missing on disk (Phase 1b regression)");
+    } catch (e) {
+      fail("Fine-tuned model filesystem check error: " + e.message);
+    }
+  })();
+
+  // Phase 2b — micro-agents loaded and hidden
+  scriptsLoaded._hasMisconceptionAgent
+    ? pass("MisconceptionClassifierProvider loaded (Phase 2b)")
+    : fail("MisconceptionClassifierProvider not loaded (Phase 2b regression)");
+
+  scriptsLoaded._hasFormulaRetriever
+    ? pass("FormulaRetrieverProvider loaded (Phase 2b)")
+    : fail("FormulaRetrieverProvider not loaded (Phase 2b regression)");
+
+  scriptsLoaded._hasHintCalibrator
+    ? pass("HintCalibratorProvider loaded (Phase 2b)")
+    : fail("HintCalibratorProvider not loaded (Phase 2b regression)");
+
+  // Hidden-beta invariant: providers.isAvailable() === false when flags default to off
+  scriptsLoaded._misconceptionAgentHidden
+    ? pass("MisconceptionClassifierProvider hidden-beta (flag off → not available)")
+    : fail("MisconceptionClassifierProvider INVARIANT BROKEN: available with flag off");
+
+  scriptsLoaded._formulaRetrieverHidden
+    ? pass("FormulaRetrieverProvider hidden-beta (flag off → not available)")
+    : fail("FormulaRetrieverProvider INVARIANT BROKEN: available with flag off");
+
+  scriptsLoaded._hintCalibratorHidden
+    ? pass("HintCalibratorProvider hidden-beta (flag off → not available)")
+    : fail("HintCalibratorProvider INVARIANT BROKEN: available with flag off");
+
+  // Phase 2b+ — additional micro-agents loaded + hidden
+  scriptsLoaded._hasWhisperer
+    ? pass("WhispererProvider loaded (Phase 2b+)")
+    : fail("WhispererProvider not loaded (Phase 2b+ regression)");
+
+  scriptsLoaded._hasGuard
+    ? pass("GuardProvider loaded (Phase 2b+)")
+    : fail("GuardProvider not loaded (Phase 2b+ regression)");
+
+  scriptsLoaded._hasPlanner
+    ? pass("PlannerProvider loaded (Phase 2b+)")
+    : fail("PlannerProvider not loaded (Phase 2b+ regression)");
+
+  scriptsLoaded._whispererHidden
+    ? pass("WhispererProvider hidden-beta (flag off → not available)")
+    : fail("WhispererProvider INVARIANT BROKEN: available with flag off");
+
+  scriptsLoaded._guardHidden
+    ? pass("GuardProvider hidden-beta (flag off → not available)")
+    : fail("GuardProvider INVARIANT BROKEN: available with flag off");
+
+  scriptsLoaded._plannerHidden
+    ? pass("PlannerProvider hidden-beta (flag off → not available)")
+    : fail("PlannerProvider INVARIANT BROKEN: available with flag off");
 
   // ── Orchestrator Health Check ──────────────────────────────────
 
