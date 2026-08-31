@@ -101,8 +101,31 @@ const MayCoachingMemory = (function() {
       topic: data.topic || null,
       mode: data.mode || null,
       outcome: data.outcome || null,
-      decisionId: data.decisionId || null
+      decisionId: data.decisionId || null,
+      _whisperNudge: null
     };
+    // Phase 2b+ — Whisperer integration on recordInteraction. Hidden beta;
+    // only runs when flag is on. Exam-integrity hard block lives inside
+    // the agent (whisperer/index.js:whisper).
+    try {
+      if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_WHISPERER')) {
+        if (typeof window !== 'undefined' && typeof window.WhispererWhisper === 'function') {
+          var elapsedMs = (entry.timestamp ? Date.now() - Date.parse(entry.timestamp) : 0) || 0;
+          var dwellMs = (data && typeof data.dwellMs === 'number') ? data.dwellMs : 0;
+          var errorStreak = (data && typeof data.errorStreak === 'number') ? data.errorStreak : 0;
+          var examIntegrity = !!(data && data.examIntegrity);
+          var whisper = window.WhispererWhisper({
+            elapsedMs: elapsedMs, dwellMs: dwellMs,
+            errorStreak: errorStreak, examIntegrity: examIntegrity,
+            mode: entry.mode
+          });
+          if (whisper && whisper.nudge) {
+            entry._whisperNudge = whisper.nudge;
+            entry._whisperTiming = whisper.timing || null;
+          }
+        }
+      }
+    } catch (e) { /* never break recordInteraction */ }
 
     // Track coaching mode history
     if (entry.mode) {

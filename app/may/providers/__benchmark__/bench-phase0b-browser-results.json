@@ -1,0 +1,229 @@
+{
+  "phase": "Phase 0b browser benchmark",
+  "generatedAt": "2026-08-26T21:36:52.862Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "viewport": "mobile"
+  },
+  "candidate": "mobilebert-uncased-mnli",
+  "dtype": "q8",
+  "viewport": {
+    "width": 375,
+    "height": 667,
+    "deviceScaleFactor": 2,
+    "isMobile": true,
+    "hasTouch": true,
+    "cpuThrottle": 4
+  },
+  "coldStartMs": 28392.5,
+  "heapDeltaMB": 0,
+  "latency": {
+    "p50": 1062.4000000357628,
+    "p95": 1253.800000011921,
+    "p99": 1281.6000000238419,
+    "mean": 1079.562499995033,
+    "count": 24
+  },
+  "modeAccuracy": {
+    "correct": 5,
+    "total": 20,
+    "pct": 25
+  },
+  "perItem": [
+    {
+      "id": "H001",
+      "expected": "EXPLAIN",
+      "text": "walk me through the math on this one",
+      "topLabel": "help me figure this out",
+      "topScore": 0.6127804553544436,
+      "latencyMs": 1281.6000000238419
+    },
+    {
+      "id": "H002",
+      "expected": "EXPLAIN",
+      "text": "what's the principle behind the correct choice",
+      "topLabel": "help me figure this out",
+      "topScore": 0.5135701338061123,
+      "latencyMs": 1124.199999988079
+    },
+    {
+      "id": "H003",
+      "expected": "EXPLAIN",
+      "text": "why does that distractor fail",
+      "topLabel": "explain this to me",
+      "topScore": 0.4708045664576536,
+      "latencyMs": 1059.300000011921
+    },
+    {
+      "id": "H004",
+      "expected": "EXPLAIN",
+      "text": "show the reasoning for the answer",
+      "topLabel": "help me figure this out",
+      "topScore": 0.7861402715815806,
+      "latencyMs": 1054.3999999761581
+    },
+    {
+      "id": "H005",
+      "expected": "EXPLAIN",
+      "text": "break down the logic step by step",
+      "topLabel": "explain this to me",
+      "topScore": 0.4372668109431636,
+      "latencyMs": 1085
+    },
+    {
+      "id": "H006",
+      "expected": "QUIZ",
+      "text": "hit me with some practice problems",
+      "topLabel": "give me a practice question",
+      "topScore": 0.8500440264542174,
+      "latencyMs": 915.4000000357628
+    },
+    {
+      "id": "H007",
+      "expected": "QUIZ",
+      "text": "throw a few questions my way",
+      "topLabel": "explain this to me",
+      "topScore": 0.6724790881369123,
+      "latencyMs": 960.7999999523163
+    },
+    {
+      "id": "H008",
+      "expected": "QUIZ",
+      "text": "test my knowledge on this topic",
+      "topLabel": "help me figure this out",
+      "topScore": 0.7533167447759019,
+      "latencyMs": 1216.699999988079
+    },
+    {
+      "id": "H009",
+      "expected": "QUIZ",
+      "text": "give me a quick drill",
+      "topLabel": "help me figure this out",
+      "topScore": 0.4842527199740508,
+      "latencyMs": 1020
+    },
+    {
+      "id": "H010",
+      "expected": "QUIZ",
+      "text": "I want to practice similar items",
+      "topLabel": "give me a practice question",
+      "topScore": 0.5702696340258497,
+      "latencyMs": 1182.199999988079
+    },
+    {
+      "id": "H011",
+      "expected": "SOCRATIC",
+      "text": "nudge me in the right direction",
+      "topLabel": "explain this to me",
+      "topScore": 0.4962161541393761,
+      "latencyMs": 1030.199999988079
+    },
+    {
+      "id": "H012",
+      "expected": "SOCRATIC",
+      "text": "what should I look at first",
+      "topLabel": "explain this to me",
+      "topScore": 0.4034343663960912,
+      "latencyMs": 1213.3999999761581
+    },
+    {
+      "id": "H013",
+      "expected": "SOCRATIC",
+      "text": "help me reason through this",
+      "topLabel": "explain this to me",
+      "topScore": 0.6128644863176349,
+      "latencyMs": 1096
+    },
+    {
+      "id": "H014",
+      "expected": "SOCRATIC",
+      "text": "point me toward the right approach",
+      "topLabel": "explain this to me",
+      "topScore": 0.585243485873626,
+      "latencyMs": 1033.2999999523163
+    },
+    {
+      "id": "H015",
+      "expected": "SOCRATIC",
+      "text": "what's the first thing to check",
+      "topLabel": "help me figure this out",
+      "topScore": 0.635968989165364,
+      "latencyMs": 1060.5
+    },
+    {
+      "id": "H016",
+      "expected": "STUDY_PLAN",
+      "text": "what's my priority for tomorrow",
+      "topLabel": "explain this to me",
+      "topScore": 0.45113301324066785,
+      "latencyMs": 1065.4000000357628
+    },
+    {
+      "id": "H017",
+      "expected": "STUDY_PLAN",
+      "text": "where should I focus my time",
+      "topLabel": "explain this to me",
+      "topScore": 0.3866286172230624,
+      "latencyMs": 1002.5
+    },
+    {
+      "id": "H018",
+      "expected": "STUDY_PLAN",
+      "text": "build me a review plan",
+      "topLabel": "help me figure this out",
+      "topScore": 0.5835159974943285,
+      "latencyMs": 947.3000000119209
+    },
+    {
+      "id": "H019",
+      "expected": "STUDY_PLAN",
+      "text": "what topics need work",
+      "topLabel": "help me figure this out",
+      "topScore": 0.36970919302968547,
+      "latencyMs": 1026.199999988079
+    },
+    {
+      "id": "H020",
+      "expected": "STUDY_PLAN",
+      "text": "how do I close my gaps",
+      "topLabel": "help me figure this out",
+      "topScore": 0.612016511370082,
+      "latencyMs": 990.2999999523163
+    },
+    {
+      "id": "H021",
+      "expected": "AMBIGUOUS",
+      "text": "this makes no sense to me",
+      "topLabel": "help me figure this out",
+      "topScore": 0.364018465166145,
+      "latencyMs": 1118.8999999761581
+    },
+    {
+      "id": "H022",
+      "expected": "MULTI",
+      "text": "explain then test me",
+      "topLabel": "explain this to me",
+      "topScore": 0.6673363498630888,
+      "latencyMs": 1062.4000000357628
+    },
+    {
+      "id": "H023",
+      "expected": "EXPLAIN",
+      "text": "why is B wrng for P1-B-040",
+      "topLabel": "explain this to me",
+      "topScore": 0.3239508881271275,
+      "latencyMs": 1253.800000011921
+    },
+    {
+      "id": "H024",
+      "expected": "OOD",
+      "text": "tell me a joke",
+      "topLabel": "explain this to me",
+      "topScore": 0.7886574952278801,
+      "latencyMs": 1109.699999988079
+    }
+  ],
+  "verdict": "GO",
+  "pageErrors": []
+}

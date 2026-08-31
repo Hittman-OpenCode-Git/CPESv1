@@ -1,0 +1,551 @@
+{
+  "phase": "Phase 1b fine-tuned model benchmark",
+  "generatedAt": "2026-08-27T00:05:41.562Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "modelDir": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\app\\may\\providers\\models\\mobilebert-intent-q8",
+  "confidenceThreshold": 0.6,
+  "realColdStartMs": 236,
+  "heapFinalDeltaMB": 6.19561767578125,
+  "metrics": {
+    "realAccuracy": {
+      "correct": 9,
+      "total": 20,
+      "pct": 45
+    },
+    "stubAccuracy": {
+      "correct": 7,
+      "total": 20,
+      "pct": 35
+    },
+    "gatedAccuracy": {
+      "correct": 7,
+      "total": 20,
+      "pct": 35
+    },
+    "fallbackRate": {
+      "count": 20,
+      "total": 20,
+      "pct": 100
+    },
+    "perMode": {
+      "real": {
+        "EXPLAIN": {
+          "correct": 0,
+          "total": 5
+        },
+        "QUIZ": {
+          "correct": 5,
+          "total": 5
+        },
+        "SOCRATIC": {
+          "correct": 0,
+          "total": 5
+        },
+        "STUDY_PLAN": {
+          "correct": 4,
+          "total": 5
+        }
+      },
+      "stub": {
+        "EXPLAIN": {
+          "correct": 4,
+          "total": 5
+        },
+        "QUIZ": {
+          "correct": 2,
+          "total": 5
+        },
+        "SOCRATIC": {
+          "correct": 1,
+          "total": 5
+        },
+        "STUDY_PLAN": {
+          "correct": 0,
+          "total": 5
+        }
+      }
+    },
+    "realConfidence": {
+      "p50": 0.25698891282081604,
+      "p95": 0.26009249687194824,
+      "mean": 0.25679400861263274,
+      "min": 0.2539050579071045,
+      "max": 0.26009249687194824
+    },
+    "realLatencyMs": {
+      "p50": 2,
+      "p95": 5,
+      "mean": 2.7083333333333335
+    },
+    "stubLatencyMs": {
+      "p50": 0,
+      "p95": 1,
+      "mean": 0.125
+    }
+  },
+  "thresholdSweep": {
+    "0.20": {
+      "correct": 9,
+      "total": 20,
+      "fallback": 0,
+      "accuracy": 45,
+      "fallbackRate": 0
+    },
+    "0.25": {
+      "correct": 9,
+      "total": 20,
+      "fallback": 0,
+      "accuracy": 45,
+      "fallbackRate": 0
+    },
+    "0.30": {
+      "correct": 7,
+      "total": 20,
+      "fallback": 20,
+      "accuracy": 35,
+      "fallbackRate": 100
+    },
+    "0.40": {
+      "correct": 7,
+      "total": 20,
+      "fallback": 20,
+      "accuracy": 35,
+      "fallbackRate": 100
+    },
+    "0.50": {
+      "correct": 7,
+      "total": 20,
+      "fallback": 20,
+      "accuracy": 35,
+      "fallbackRate": 100
+    },
+    "0.55": {
+      "correct": 7,
+      "total": 20,
+      "fallback": 20,
+      "accuracy": 35,
+      "fallbackRate": 100
+    },
+    "0.60": {
+      "correct": 7,
+      "total": 20,
+      "fallback": 20,
+      "accuracy": 35,
+      "fallbackRate": 100
+    },
+    "0.65": {
+      "correct": 7,
+      "total": 20,
+      "fallback": 20,
+      "accuracy": 35,
+      "fallbackRate": 100
+    },
+    "0.70": {
+      "correct": 7,
+      "total": 20,
+      "fallback": 20,
+      "accuracy": 35,
+      "fallbackRate": 100
+    },
+    "0.80": {
+      "correct": 7,
+      "total": 20,
+      "fallback": 20,
+      "accuracy": 35,
+      "fallbackRate": 100
+    }
+  },
+  "optimalThreshold": "0.20",
+  "optimalAccuracy": 45,
+  "optimalFallbackRate": 0,
+  "perItem": [
+    {
+      "id": "H001",
+      "text": "walk me through the math on this one",
+      "expected": "EXPLAIN",
+      "realMode": "QUIZ",
+      "realConfidence": 0.2573707401752472,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": true,
+      "gatedCorrect": true,
+      "realLatencyMs": 7,
+      "stubLatencyMs": 2
+    },
+    {
+      "id": "H002",
+      "text": "what's the principle behind the correct choice",
+      "expected": "EXPLAIN",
+      "realMode": "STUDY_PLAN",
+      "realConfidence": 0.25415274500846863,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": true,
+      "gatedCorrect": true,
+      "realLatencyMs": 3,
+      "stubLatencyMs": 1
+    },
+    {
+      "id": "H003",
+      "text": "why does that distractor fail",
+      "expected": "EXPLAIN",
+      "realMode": "QUIZ",
+      "realConfidence": 0.25581854581832886,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": true,
+      "gatedCorrect": true,
+      "realLatencyMs": 3,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H004",
+      "text": "show the reasoning for the answer",
+      "expected": "EXPLAIN",
+      "realMode": "QUIZ",
+      "realConfidence": 0.2539050579071045,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 1,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": true,
+      "gatedCorrect": true,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H005",
+      "text": "break down the logic step by step",
+      "expected": "EXPLAIN",
+      "realMode": "QUIZ",
+      "realConfidence": 0.25698891282081604,
+      "stubMode": "SOCRATIC",
+      "stubConfidence": 1,
+      "gatedMode": "SOCRATIC",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 4,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H006",
+      "text": "hit me with some practice problems",
+      "expected": "QUIZ",
+      "realMode": "QUIZ",
+      "realConfidence": 0.25946536660194397,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": true,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 5,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H007",
+      "text": "throw a few questions my way",
+      "expected": "QUIZ",
+      "realMode": "QUIZ",
+      "realConfidence": 0.25782644748687744,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": true,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H008",
+      "text": "test my knowledge on this topic",
+      "expected": "QUIZ",
+      "realMode": "QUIZ",
+      "realConfidence": 0.2571045160293579,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": true,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H009",
+      "text": "give me a quick drill",
+      "expected": "QUIZ",
+      "realMode": "QUIZ",
+      "realConfidence": 0.25798359513282776,
+      "stubMode": "QUIZ",
+      "stubConfidence": 1,
+      "gatedMode": "QUIZ",
+      "gatedSource": "fallback",
+      "realCorrect": true,
+      "stubCorrect": true,
+      "gatedCorrect": true,
+      "realLatencyMs": 3,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H010",
+      "text": "I want to practice similar items",
+      "expected": "QUIZ",
+      "realMode": "QUIZ",
+      "realConfidence": 0.26009249687194824,
+      "stubMode": "QUIZ",
+      "stubConfidence": 1,
+      "gatedMode": "QUIZ",
+      "gatedSource": "fallback",
+      "realCorrect": true,
+      "stubCorrect": true,
+      "gatedCorrect": true,
+      "realLatencyMs": 4,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H011",
+      "text": "nudge me in the right direction",
+      "expected": "SOCRATIC",
+      "realMode": "QUIZ",
+      "realConfidence": 0.2552405893802643,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 3,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H012",
+      "text": "what should I look at first",
+      "expected": "SOCRATIC",
+      "realMode": "STUDY_PLAN",
+      "realConfidence": 0.25573620200157166,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H013",
+      "text": "help me reason through this",
+      "expected": "SOCRATIC",
+      "realMode": "QUIZ",
+      "realConfidence": 0.2568337321281433,
+      "stubMode": "SOCRATIC",
+      "stubConfidence": 1,
+      "gatedMode": "SOCRATIC",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": true,
+      "gatedCorrect": true,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H014",
+      "text": "point me toward the right approach",
+      "expected": "SOCRATIC",
+      "realMode": "QUIZ",
+      "realConfidence": 0.2564907371997833,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H015",
+      "text": "what's the first thing to check",
+      "expected": "SOCRATIC",
+      "realMode": "STUDY_PLAN",
+      "realConfidence": 0.2547028362751007,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H016",
+      "text": "what's my priority for tomorrow",
+      "expected": "STUDY_PLAN",
+      "realMode": "STUDY_PLAN",
+      "realConfidence": 0.25638505816459656,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": true,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H017",
+      "text": "where should I focus my time",
+      "expected": "STUDY_PLAN",
+      "realMode": "STUDY_PLAN",
+      "realConfidence": 0.2582971751689911,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": true,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H018",
+      "text": "build me a review plan",
+      "expected": "STUDY_PLAN",
+      "realMode": "STUDY_PLAN",
+      "realConfidence": 0.2574421167373657,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": true,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H019",
+      "text": "what topics need work",
+      "expected": "STUDY_PLAN",
+      "realMode": "STUDY_PLAN",
+      "realConfidence": 0.25875723361968994,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": true,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H020",
+      "text": "how do I close my gaps",
+      "expected": "STUDY_PLAN",
+      "realMode": "QUIZ",
+      "realConfidence": 0.2552860677242279,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H021",
+      "text": "this makes no sense to me",
+      "expected": "AMBIGUOUS",
+      "realMode": "QUIZ",
+      "realConfidence": 0.25386711955070496,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H022",
+      "text": "explain then test me",
+      "expected": "MULTI",
+      "realMode": "QUIZ",
+      "realConfidence": 0.2613505721092224,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 1,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H023",
+      "text": "why is B wrng for P1-B-040",
+      "expected": "EXPLAIN",
+      "realMode": "EXPLAIN",
+      "realConfidence": 0.2535437047481537,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": true,
+      "stubCorrect": true,
+      "gatedCorrect": true,
+      "realLatencyMs": 3,
+      "stubLatencyMs": 0
+    },
+    {
+      "id": "H024",
+      "text": "tell me a joke",
+      "expected": "OOD",
+      "realMode": "QUIZ",
+      "realConfidence": 0.2549636662006378,
+      "stubMode": "EXPLAIN",
+      "stubConfidence": 0.5,
+      "gatedMode": "EXPLAIN",
+      "gatedSource": "fallback",
+      "realCorrect": false,
+      "stubCorrect": false,
+      "gatedCorrect": false,
+      "realLatencyMs": 2,
+      "stubLatencyMs": 0
+    }
+  ]
+}

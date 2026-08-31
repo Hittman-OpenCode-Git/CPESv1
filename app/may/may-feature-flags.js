@@ -23,11 +23,20 @@ const MayFeatureFlags = (function() {
     ENABLE_LLM_SUMMARIES: false,
     ENABLE_AZURE_OPENAI_PROVIDER: false,
     ENABLE_OPENAI_PROVIDER: false,
+    ENABLE_NEEDLE_ROUTER: false,
     ENABLE_ADAPTIVE_COACHING: false,
     ENABLE_READINESS_SCORING: false,
     ENABLE_ADAPTIVE_ORCHESTRATION: false,
     ENABLE_COACHING_MEMORY: false,
-    ENABLE_PRODUCTION_MAY_INTEGRATION: true
+    ENABLE_PRODUCTION_MAY_INTEGRATION: true,
+    // Phase 2b — micro-agents (hidden beta, default off)
+    ENABLE_MISCONCEPTION_AGENT: false,
+    ENABLE_FORMULA_RETRIEVER: false,
+    ENABLE_HINT_CALIBRATOR: false,
+    // Phase 2b+ — additional micro-agents (hidden beta, default off)
+    ENABLE_WHISPERER: false,
+    ENABLE_GUARD_AGENT: false,
+    ENABLE_PLANNER_AGENT: false
   };
 
   var _changeLog = [];
@@ -108,6 +117,16 @@ const MayFeatureFlags = (function() {
         if (process.env.MAY_ENABLE_OPENAI_PROVIDER === '1') _flags.ENABLE_OPENAI_PROVIDER = true;
         if (process.env.MAY_ENABLE_ADAPTIVE_COACHING === '1') _flags.ENABLE_ADAPTIVE_COACHING = true;
         if (process.env.MAY_ENABLE_READINESS_SCORING === '1') _flags.ENABLE_READINESS_SCORING = true;
+        if (process.env.MAY_ENABLE_NEEDLE_ROUTER === '1') _flags.ENABLE_NEEDLE_ROUTER = true;
+        if (process.env.MAY_ENABLE_INTENT_ROUTER === '1') _flags.ENABLE_NEEDLE_ROUTER = true;
+        // Phase 2b — micro-agent flags
+        if (process.env.MAY_ENABLE_MISCONCEPTION_AGENT === '1') _flags.ENABLE_MISCONCEPTION_AGENT = true;
+        if (process.env.MAY_ENABLE_FORMULA_RETRIEVER === '1') _flags.ENABLE_FORMULA_RETRIEVER = true;
+        if (process.env.MAY_ENABLE_HINT_CALIBRATOR === '1') _flags.ENABLE_HINT_CALIBRATOR = true;
+        // Phase 2b+ — additional micro-agent flags
+        if (process.env.MAY_ENABLE_WHISPERER === '1') _flags.ENABLE_WHISPERER = true;
+        if (process.env.MAY_ENABLE_GUARD_AGENT === '1') _flags.ENABLE_GUARD_AGENT = true;
+        if (process.env.MAY_ENABLE_PLANNER_AGENT === '1') _flags.ENABLE_PLANNER_AGENT = true;
       }
       if (typeof process !== 'undefined' && process.env && process.env.CMA_MAY_PILOT === '1') {
         _flags.ENABLE_CONTEXT_BUILDER = true;

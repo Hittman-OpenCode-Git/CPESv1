@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+  bench.html — Phase 0 benchmark harness for stub-intent-provider.
+  Author: Phase 0 spike (MAY-Phase-0)
+
+  Usage (browser):
+    - Open this file in a Chromium-based browser
+    - Provider and gold labels load from relative paths
+    - Browser measurement: cold-start, latency, heap delta via performance.memory
+
+  Usage (Node.js validation):
+    - Run via: node __benchmark__/bench.html.js
+    - Validates parseIntent() against all 48 gold labels
+    - Browser-specific measurements reported as N/A
+
+  Hidden beta: ENABLE_NEEDLE_ROUTER must be false. No production effect.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Phase 0 Bench — Stub Intent Provider</title>
+<style>
+  body { font-family: monospace; padding: 1rem; max-width: 80rem; }
+  h1, h2 { color: #333; }
+  pre { background: #f5f5f5; padding: 0.5rem; overflow-x: auto; }
+  .pass { color: green; }
+  .fail { color: red; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  td, th { border: 1px solid #ccc; padding: 0.25rem 0.5rem; text-align: left; }
+  th { background: #eee; }
+</style>
+</head>
+<body>
+<h1>Phase 0 Benchmark — Stub Intent Provider</h1>
+<p>Phase: Phase 0 spike | Governance: Light Lane | Hidden beta behind ENABLE_NEEDLE_ROUTER=false</p>
+
+<h2>Run</h2>
+<pre id="status">Loading...</pre>
+
+<h2>Results</h2>
+<pre id="results">Run pending...</pre>
+
+<h2>Per-Intent Detail</h2>
+<table id="detail">
+<thead>
+  <tr><th>ID</th><th>Expected Mode</th><th>Predicted Mode</th><th>Match</th><th>Args Match</th><th>Latency (ms)</th></tr>
+</thead>
+<tbody id="detail-body"></tbody>
+</table>
+
+<script src="../stub-intent-provider.js"></script>
+<script>
+'use strict';
+
+// Browser-side benchmark execution
+(async function() {
+  const statusEl = document.getElementById('status');
+  const resultsEl = document.getElementById('results');
+  const detailBody = document.getElementById('detail-body');
+
+  function setStatus(s) {
+    statusEl.textContent = s;
+    console.log(s);
+  }
+
+  try {
+    setStatus('Phase 0 bench starting (browser)...');
+
+    const initStart = performance.now();
+    const provider = new StubIntentProvider();
+    await provider.initialize();
+    const initEnd = performance.now();
+    const coldStartMs = initEnd - initStart;
+
+    // Load gold labels via fetch
+    const goldResponse = await fetch('./gold.intents.json');
+    if (!goldResponse.ok) {
+      throw new Error('Failed to load gold.intents.json: ' + goldResponse.status);
+    }
+    const gold = await goldResponse.json();
+
+    setStatus('Provider ready, gold loaded. Cold-start: ' + coldStartMs.toFixed(2) + 'ms. Running ' + gold.length + ' intents...');
+
+    // Warm-up (1 invocation to JIT)
+    await provider.send({ mode: 'EXPLAIN', context: { freeText: 'warm up' }, prompt: 'warm up', metadata: {} });
+
+    // Measure each intent
+    const results = [];
+    const latencies = [];
+    let modeCorrect = 0;
+    let argsCorrect = 0;
+    let totalArgs = 0;
+    const heapBefore = performance.memory ? performance.memory.usedJSHeapSize : null;
+
+    for (const goldItem of gold) {
+      const req = {
+        mode: goldItem.mode,
+        context: { freeText: goldItem.text },
+        prompt: goldItem.text,
+        metadata: { requestId: goldItem.id }
+      };
+      const t0 = performance.now();
+      const resp = await provider.send(req);
+      const t1 = performance.now();
+      const latency = t1 - t0;
+      latencies.push(latency);
+
+      let parsed;
+      try {
+        parsed = JSON.parse(resp.content);
+      } catch (e) {
+        parsed = null;
+      }
+
+      const modeMatch = parsed && parsed.mode === goldItem.mode;
+      if (modeMatch) modeCorrect++;
+
+      // Args check
+      const goldArgs = goldItem.args || {};
+      let argsMatch = true;
+      for (const key of Object.keys(goldArgs)) {
+        if (!parsed || !parsed.args || parsed.args[key] !== goldArgs[key]) {
+          argsMatch = false;
+          break;
+        }
+        totalArgs++;
+      }
+      if (argsMatch) argsCorrect++;
+
+      results.push({
+        id: goldItem.id,
+        expected: goldItem.mode,
+        predicted: parsed ? parsed.mode : 'PARSE_FAIL',
+        modeMatch,
+        argsMatch,
+        latency
+      });
+
+      // Append row
+      const tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + goldItem.id + '</td>' +
+        '<td>' + goldItem.mode + '</td>' +
+        '<td>' + (parsed ? parsed.mode : 'PARSE_FAIL') + '</td>' +
+        '<td class="' + (modeMatch ? 'pass' : 'fail') + '">' + (modeMatch ? '✓' : '✗') + '</td>' +
+        '<td class="' + (argsMatch ? 'pass' : 'fail') + '">' + (argsMatch ? '✓' : '✗') + '</td>' +
+        '<td>' + latency.toFixed(2) + '</td>';
+      detailBody.appendChild(tr);
+    }
+
+    const heapAfter = performance.memory ? performance.memory.usedJSHeapSize : null;
+    const heapDelta = heapBefore && heapAfter ? (heapAfter - heapBefore) : null;
+
+    // Latency stats
+    const sorted = latencies.slice().sort((a, b) => a - b);
+    const p50 = sorted[Math.floor(sorted.length * 0.5)];
+    const p95 = sorted[Math.floor(sorted.length * 0.95)];
+    const p99 = sorted[Math.floor(sorted.length * 0.99)];
+    const mean = sorted.reduce((s, v) => s + v, 0) / sorted.length;
+
+    const modeAcc = modeCorrect / gold.length;
+    const argsAcc = totalArgs > 0 ? argsCorrect / totalArgs : null;
+
+    const summary = {
+      environment: 'browser',
+      totalIntents: gold.length,
+      coldStartMs: coldStartMs.toFixed(2),
+      meanLatencyMs: mean.toFixed(2),
+      p50LatencyMs: p50.toFixed(2),
+      p95LatencyMs: p95.toFixed(2),
+      p99LatencyMs: p99.toFixed(2),
+      modeAccuracy: modeAcc.toFixed(4),
+      modeCorrect: modeCorrect,
+      argsAccuracy: argsAcc !== null ? argsAcc.toFixed(4) : 'N/A',
+      argsTotal: totalArgs,
+      argsCorrect: argsCorrect,
+      heapBefore: heapBefore,
+      heapAfter: heapAfter,
+      heapDeltaBytes: heapDelta,
+      offlineCapable: 'N/A (requires DevTools toggle)'
+    };
+
+    resultsEl.textContent = JSON.stringify(summary, null, 2);
+    setStatus('Phase 0 bench complete: ' + modeCorrect + '/' + gold.length + ' mode-correct, ' + argsCorrect + '/' + totalArgs + ' args-correct');
+  } catch (e) {
+    setStatus('FATAL: ' + e.message);
+    console.error(e);
+  }
+})();
+</script>
+</body>
+</html>

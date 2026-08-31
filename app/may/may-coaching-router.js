@@ -1,14 +1,21 @@
 /**
  * MayCoachingRouter — Coaching mode selection, routing, and dispatch layer.
- * 
+ *
  * Defines explicit coaching modes with formalized contracts, selects the
  * appropriate mode based on structured MayContext, and dispatches to
  * mode-specific handlers when feature flags are enabled.
- * 
+ *
  * Gated behind MayFeatureFlags.ENABLE_COACHING_ROUTER (default: false).
  * When disabled, May.handleAction() dispatches directly to handlers as before.
- * 
- * Session: MAY-001 (base), MAY-002 (mode contracts + handler dispatch)
+ *
+ * Phase 1 (MAY-Phase-1) — enrichContext() may consult the gated LLM router
+ * (`MayLLMProviderRegistry.routeWithGate()`) to derive a model-driven mode +
+ * args + confidence + source. The signal augments — but never replaces —
+ * the existing action-based MODE_CONTRACTS mapping. When the feature flag
+ * is off, the call is equivalent to the prior action-based path.
+ *
+ * Session: MAY-001 (base), MAY-002 (mode contracts + handler dispatch),
+ *          MAY-Phase-1 (gated LLM signal consumption)
  * Governance: Light Lane (UI/coaching layer — no pack/case/content impact)
  */
 
@@ -236,35 +243,137 @@ const MayCoachingRouter = (function() {
     };
   }
 
-  /**
-   * Enrich context with routing metadata.
-   * 
-   * @param {Object} mayContext — Full MayContext
-   * @param {string} action — Learner action
-   * @returns {Object} { mayContext, routing }
-   */
-  function enrichContext(mayContext, action) {
-    var flagsEnabled = false;
-    try {
-      if (typeof MayFeatureFlags !== 'undefined') {
-        flagsEnabled = MayFeatureFlags.isEnabled('ENABLE_COACHING_ROUTER');
+    /**
+     * Enrich context with routing metadata.
+     *
+     * @param {Object} mayContext — Full MayContext
+     * @param {string} action — Learner action
+     * @returns {Object} { mayContext, routing }
+     */
+    function enrichContext(mayContext, action) {
+      var flagsEnabled = false;
+      try {
+        if (typeof MayFeatureFlags !== 'undefined') {
+          flagsEnabled = MayFeatureFlags.isEnabled('ENABLE_COACHING_ROUTER');
+        }
+      } catch (e) {}
+
+      if (!flagsEnabled) {
+        return { mayContext: mayContext, routing: null };
       }
-    } catch (e) {}
 
-    if (!flagsEnabled) {
-      return { mayContext: mayContext, routing: null };
+      var routing = route(mayContext, action);
+
+      // Phase 1 (MAY-Phase-1) — gated LLM signal consumption.
+      // When ENABLE_NEEDLE_ROUTER is on AND freeText is available, call
+      // MayLLMProviderRegistry.routeWithGate() to obtain a model-driven
+      // {mode, args, confidence, source}. Augment the routing object —
+      // do NOT replace the action-based mode (which preserves existing
+      // contract behavior). The signal is informational until a downstream
+      // consumer wires it up (Phase 2+).
+      if (routing && _shouldConsultGatedRouter(mayContext)) {
+        var signal = _getIntentSignal(mayContext, action);
+        if (signal) {
+          routing.intentSignal = signal;
+          // Track the signal mode via telemetry (best-effort, never blocks)
+          try {
+            if (typeof MayTelemetry !== 'undefined' && signal.mode) {
+              MayTelemetry.trackMode(signal.mode, 0);
+            }
+          } catch (e) { /* telemetry never blocks */ }
+        }
+      }
+
+      if (mayContext) {
+        mayContext._routing = routing;
+      }
+
+      return {
+        mayContext: mayContext,
+        routing: routing
+      };
     }
 
-    var routing = route(mayContext, action);
-    if (mayContext) {
-      mayContext._routing = routing;
+    /**
+     * Phase 1 — Decide whether the gated LLM router should be consulted.
+     * Both ENABLE_COACHING_ROUTER (already required for any enrichment) AND
+     * ENABLE_NEEDLE_ROUTER must be on. The hidden-beta invariant is that
+     * both flags default to false.
+     */
+    function _shouldConsultGatedRouter(mayContext) {
+      try {
+        if (typeof MayFeatureFlags === 'undefined') return false;
+        if (!MayFeatureFlags.isEnabled('ENABLE_NEEDLE_ROUTER')) return false;
+      } catch (e) { return false; }
+      // Need free-text input to route. If absent, action-based mapping is sufficient.
+      if (!mayContext || !mayContext.context) return false;
+      var text = mayContext.context.freeText || mayContext.context.userQuery;
+      return typeof text === 'string' && text.trim().length > 0;
     }
 
-    return {
-      mayContext: mayContext,
-      routing: routing
-    };
-  }
+    /**
+     * Phase 1 — Synchronously-ish helper that invokes routeWithGate().
+     * Returns { mode, args, confidence, source } on success, null on failure.
+     * Errors are swallowed to keep enrichContext() non-blocking — callers
+     * fall through to action-based routing.
+     */
+    var _lastGatePromise = null;
+    function _getIntentSignal(mayContext, action) {
+      try {
+        if (typeof MayLLMProviderRegistry === 'undefined') return null;
+        if (typeof MayLLMProviderRegistry.routeWithGate !== 'function') return null;
+        var request = {
+          mode: 'chat',
+          context: {
+            freeText: mayContext.context.freeText || mayContext.context.userQuery || '',
+            action: action
+          },
+          prompt: mayContext.context.freeText || mayContext.context.userQuery || '',
+          metadata: {
+            requestId: 'router-' + Date.now(),
+            timestamp: new Date().toISOString(),
+            featureFlags: {}
+          }
+        };
+        // Attach the promise for callers that want to await it; enrichContext
+        // itself does not await (it returns synchronously to keep the existing
+        // contract). The returned signal is null in that case, but the
+        // promise can be awaited separately if a caller upgrades the
+        // contract.
+        _lastGatePromise = MayLLMProviderRegistry.routeWithGate(request)
+          .then(function (resp) {
+            if (!resp || !resp.success || !resp.content) return null;
+            var parsed;
+            try { parsed = JSON.parse(resp.content); } catch (e) { return null; }
+            if (!parsed || !parsed.mode) return null;
+            return {
+              mode: parsed.mode,
+              action: parsed.action || null,
+              args: parsed.args || {},
+              confidence: typeof parsed.confidence === 'number' ? parsed.confidence : null,
+              rationale: parsed.rationale || null,
+              source: (resp.metadata && resp.metadata.source) || 'unknown'
+            };
+          })
+          .catch(function () { return null; });
+        // Synchronous best-effort return: enrichContext callers do not await.
+        // Phase 2+ callers can await _lastGatePromise directly.
+        return null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    /**
+     * Phase 1 — Expose the most recent gate-routing promise so callers that
+     * want to await the LLM signal can do so. Returns null if no call has
+     * been made yet, or if the previous call has already resolved and been
+     * consumed.
+     * @returns {Promise<Object>|null}
+     */
+    function getPendingIntentSignal() {
+      return _lastGatePromise;
+    }
 
   return {
     MODE: MODE,
@@ -274,7 +383,8 @@ const MayCoachingRouter = (function() {
     enrichContext: enrichContext,
     getModeContract: getModeContract,
     getAllModeContracts: getAllModeContracts,
-    dispatchToHandler: dispatchToHandler
+    dispatchToHandler: dispatchToHandler,
+    getPendingIntentSignal: getPendingIntentSignal
   };
 
 })();

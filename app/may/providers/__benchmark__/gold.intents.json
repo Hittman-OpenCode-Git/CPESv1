@@ -1,0 +1,341 @@
+[
+  {
+    "id": "G001",
+    "mode": "EXPLAIN",
+    "text": "why is B wrong for P1-B-040",
+    "args": { "qid": "P1-B-040" },
+    "rationale": "explicit why + wrong, contains QID"
+  },
+  {
+    "id": "G002",
+    "mode": "EXPLAIN",
+    "text": "explain the answer to P1-A-001",
+    "args": { "qid": "P1-A-001" },
+    "rationale": "explain + answer, contains QID"
+  },
+  {
+    "id": "G003",
+    "mode": "EXPLAIN",
+    "text": "why is my answer wrong on P1-C-020",
+    "args": { "qid": "P1-C-020" },
+    "rationale": "why + wrong + my answer pattern, contains QID"
+  },
+  {
+    "id": "G004",
+    "mode": "EXPLAIN",
+    "text": "explain the correct answer",
+    "args": {},
+    "rationale": "explain + answer pattern, no QID"
+  },
+  {
+    "id": "G005",
+    "mode": "EXPLAIN",
+    "text": "simplify this for me",
+    "args": {},
+    "rationale": "simplify pattern"
+  },
+  {
+    "id": "G006",
+    "mode": "EXPLAIN",
+    "text": "break it down in simpler terms",
+    "args": {},
+    "rationale": "break it down pattern"
+  },
+  {
+    "id": "G007",
+    "mode": "EXPLAIN",
+    "text": "what is the right answer for P1-D-015",
+    "args": { "qid": "P1-D-015" },
+    "rationale": "the answer pattern, contains QID"
+  },
+  {
+    "id": "G008",
+    "mode": "EXPLAIN",
+    "text": "my mistake on P1-E-022",
+    "args": { "qid": "P1-E-022" },
+    "rationale": "my mistake pattern, contains QID"
+  },
+  {
+    "id": "G009",
+    "mode": "EXPLAIN",
+    "text": "where did i go wrong",
+    "args": {},
+    "rationale": "where did i pattern"
+  },
+  {
+    "id": "G010",
+    "mode": "EXPLAIN",
+    "text": "what did i get wrong on P1-F-018",
+    "args": { "qid": "P1-F-018" },
+    "rationale": "what did i pattern, contains QID"
+  },
+  {
+    "id": "G011",
+    "mode": "EXPLAIN",
+    "text": "explain why the correct answer is B",
+    "args": {},
+    "rationale": "explain + correct answer"
+  },
+  {
+    "id": "G012",
+    "mode": "EXPLAIN",
+    "text": "can you explain the answer",
+    "args": {},
+    "rationale": "explain + answer pattern"
+  },
+
+  {
+    "id": "G013",
+    "mode": "QUIZ",
+    "text": "quiz me on cash collections",
+    "args": { "topic": "cash collections" },
+    "rationale": "quiz pattern, with topic phrase"
+  },
+  {
+    "id": "G014",
+    "mode": "QUIZ",
+    "text": "give me another similar question",
+    "args": {},
+    "rationale": "another + similar pattern"
+  },
+  {
+    "id": "G015",
+    "mode": "QUIZ",
+    "text": "next question please",
+    "args": {},
+    "rationale": "next + question pattern"
+  },
+  {
+    "id": "G016",
+    "mode": "QUIZ",
+    "text": "more like this one",
+    "args": {},
+    "rationale": "more like pattern"
+  },
+  {
+    "id": "G017",
+    "mode": "QUIZ",
+    "text": "give me a recovery drill on variance analysis",
+    "args": { "topic": "variance analysis" },
+    "rationale": "recovery + drill pattern, with topic"
+  },
+  {
+    "id": "G018",
+    "mode": "QUIZ",
+    "text": "I need a targeted set on inventory",
+    "args": { "topic": "inventory" },
+    "rationale": "targeted set pattern, with topic"
+  },
+  {
+    "id": "G019",
+    "mode": "QUIZ",
+    "text": "weak set please",
+    "args": {},
+    "rationale": "weak set pattern"
+  },
+  {
+    "id": "G020",
+    "mode": "QUIZ",
+    "text": "practice more on standard costing",
+    "args": { "topic": "standard costing" },
+    "rationale": "practice + more pattern"
+  },
+  {
+    "id": "G021",
+    "mode": "QUIZ",
+    "text": "another similar problem on capital budgeting",
+    "args": { "topic": "capital budgeting" },
+    "rationale": "another + similar pattern"
+  },
+  {
+    "id": "G022",
+    "mode": "QUIZ",
+    "text": "quiz me",
+    "args": {},
+    "rationale": "quiz pattern, no topic"
+  },
+  {
+    "id": "G023",
+    "mode": "QUIZ",
+    "text": "give me similar questions on ratios",
+    "args": { "topic": "ratios" },
+    "rationale": "similar pattern, with topic"
+  },
+  {
+    "id": "G024",
+    "mode": "QUIZ",
+    "text": "next question",
+    "args": {},
+    "rationale": "next + question pattern"
+  },
+
+  {
+    "id": "G025",
+    "mode": "SOCRATIC",
+    "text": "give me a hint",
+    "args": {},
+    "rationale": "hint pattern"
+  },
+  {
+    "id": "G026",
+    "mode": "SOCRATIC",
+    "text": "I need help with this one",
+    "args": {},
+    "rationale": "help pattern"
+  },
+  {
+    "id": "G027",
+    "mode": "SOCRATIC",
+    "text": "any clue",
+    "args": {},
+    "rationale": "clue pattern"
+  },
+  {
+    "id": "G028",
+    "mode": "SOCRATIC",
+    "text": "I'm stuck",
+    "args": {},
+    "rationale": "stuck pattern"
+  },
+  {
+    "id": "G029",
+    "mode": "SOCRATIC",
+    "text": "what's the answer",
+    "args": {},
+    "rationale": "what's the answer pattern"
+  },
+  {
+    "id": "G030",
+    "mode": "SOCRATIC",
+    "text": "just give me the answer",
+    "args": {},
+    "rationale": "just give me the answer pattern"
+  },
+  {
+    "id": "G031",
+    "mode": "SOCRATIC",
+    "text": "tell me the answer",
+    "args": {},
+    "rationale": "tell me the answer pattern"
+  },
+  {
+    "id": "G032",
+    "mode": "SOCRATIC",
+    "text": "which one is right",
+    "args": {},
+    "rationale": "which one is right pattern"
+  },
+  {
+    "id": "G033",
+    "mode": "SOCRATIC",
+    "text": "give me a small hint",
+    "args": { "hintLevel": "nudge" },
+    "rationale": "hint + nudge pattern"
+  },
+  {
+    "id": "G034",
+    "mode": "SOCRATIC",
+    "text": "scaffold me step by step through this",
+    "args": { "hintLevel": "scaffold" },
+    "rationale": "scaffold pattern"
+  },
+  {
+    "id": "G035",
+    "mode": "SOCRATIC",
+    "text": "just tell me straight",
+    "args": { "hintLevel": "direct" },
+    "rationale": "direct hint pattern"
+  },
+  {
+    "id": "G036",
+    "mode": "SOCRATIC",
+    "text": "I need a hint on P1-A-005",
+    "args": { "qid": "P1-A-005" },
+    "rationale": "hint pattern, with QID"
+  },
+
+  {
+    "id": "G037",
+    "mode": "STUDY_PLAN",
+    "text": "what should I study next",
+    "args": {},
+    "rationale": "what should i study pattern"
+  },
+  {
+    "id": "G038",
+    "mode": "STUDY_PLAN",
+    "text": "show me my progress",
+    "args": {},
+    "rationale": "progress pattern"
+  },
+  {
+    "id": "G039",
+    "mode": "STUDY_PLAN",
+    "text": "what are my weaknesses",
+    "args": {},
+    "rationale": "weak pattern"
+  },
+  {
+    "id": "G040",
+    "mode": "STUDY_PLAN",
+    "text": "I am struggling with budgeting",
+    "args": { "topic": "budgeting" },
+    "rationale": "struggling pattern"
+  },
+  {
+    "id": "G041",
+    "mode": "STUDY_PLAN",
+    "text": "summarize my progress please",
+    "args": {},
+    "rationale": "summary + progress pattern"
+  },
+  {
+    "id": "G042",
+    "mode": "STUDY_PLAN",
+    "text": "weekly digest",
+    "args": {},
+    "rationale": "weekly + digest pattern"
+  },
+  {
+    "id": "G043",
+    "mode": "STUDY_PLAN",
+    "text": "what's my study plan",
+    "args": {},
+    "rationale": "study plan pattern"
+  },
+  {
+    "id": "G044",
+    "mode": "STUDY_PLAN",
+    "text": "what should I focus on",
+    "args": {},
+    "rationale": "what should i focus pattern"
+  },
+  {
+    "id": "G045",
+    "mode": "STUDY_PLAN",
+    "text": "plan my next study session",
+    "args": {},
+    "rationale": "plan my pattern"
+  },
+  {
+    "id": "G046",
+    "mode": "STUDY_PLAN",
+    "text": "show me my effectiveness report",
+    "args": {},
+    "rationale": "effective pattern"
+  },
+  {
+    "id": "G047",
+    "mode": "STUDY_PLAN",
+    "text": "what should I work on next",
+    "args": {},
+    "rationale": "what should i + next pattern"
+  },
+  {
+    "id": "G048",
+    "mode": "STUDY_PLAN",
+    "text": "I am bad at ratios",
+    "args": { "topic": "ratios" },
+    "rationale": "bad at pattern, with topic"
+  }
+]

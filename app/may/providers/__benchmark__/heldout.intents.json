@@ -1,0 +1,170 @@
+[
+  {
+    "id": "H001",
+    "mode": "EXPLAIN",
+    "text": "walk me through the math on this one",
+    "args": {},
+    "rationale": "EXPLAIN using 'walk through' + 'math' — distinct from gold's 'explain'/'why' patterns"
+  },
+  {
+    "id": "H002",
+    "mode": "EXPLAIN",
+    "text": "what's the principle behind the correct choice",
+    "args": {},
+    "rationale": "EXPLAIN using 'principle' — new vocabulary absent from gold"
+  },
+  {
+    "id": "H003",
+    "mode": "EXPLAIN",
+    "text": "why does that distractor fail",
+    "args": {},
+    "rationale": "EXPLAIN using 'distractor' — exam-specific jargon absent from gold"
+  },
+  {
+    "id": "H004",
+    "mode": "EXPLAIN",
+    "text": "show the reasoning for the answer",
+    "args": {},
+    "rationale": "EXPLAIN without 'explain' keyword"
+  },
+  {
+    "id": "H005",
+    "mode": "EXPLAIN",
+    "text": "break down the logic step by step",
+    "args": {},
+    "rationale": "EXPLAIN using 'break down' + 'logic' — distinct from gold"
+  },
+  {
+    "id": "H006",
+    "mode": "QUIZ",
+    "text": "hit me with some practice problems",
+    "args": {},
+    "rationale": "QUIZ using 'hit me' + 'practice' — casual phrasing"
+  },
+  {
+    "id": "H007",
+    "mode": "QUIZ",
+    "text": "throw a few questions my way",
+    "args": {},
+    "rationale": "QUIZ using 'throw questions' — distinct from gold"
+  },
+  {
+    "id": "H008",
+    "mode": "QUIZ",
+    "text": "test my knowledge on this topic",
+    "args": {},
+    "rationale": "QUIZ using 'test my knowledge' — distinct from gold's 'drill'/'quiz'"
+  },
+  {
+    "id": "H009",
+    "mode": "QUIZ",
+    "text": "give me a quick drill",
+    "args": {},
+    "rationale": "QUIZ using 'quick drill' — distinct from gold's bare 'drill'"
+  },
+  {
+    "id": "H010",
+    "mode": "QUIZ",
+    "text": "I want to practice similar items",
+    "args": {},
+    "rationale": "QUIZ using first-person 'I want' + 'items'"
+  },
+  {
+    "id": "H011",
+    "mode": "SOCRATIC",
+    "text": "nudge me in the right direction",
+    "args": {},
+    "rationale": "SOCRATIC using 'nudge' — gold uses 'nudge' only in EXPLAIN context"
+  },
+  {
+    "id": "H012",
+    "mode": "SOCRATIC",
+    "text": "what should I look at first",
+    "args": {},
+    "rationale": "SOCRATIC using 'look at first' — distinct from gold"
+  },
+  {
+    "id": "H013",
+    "mode": "SOCRATIC",
+    "text": "help me reason through this",
+    "args": {},
+    "rationale": "SOCRATIC using 'reason through' — distinct from gold's 'reason'"
+  },
+  {
+    "id": "H014",
+    "mode": "SOCRATIC",
+    "text": "point me toward the right approach",
+    "args": {},
+    "rationale": "SOCRATIC using 'point me toward' — distinct from gold"
+  },
+  {
+    "id": "H015",
+    "mode": "SOCRATIC",
+    "text": "what's the first thing to check",
+    "args": {},
+    "rationale": "SOCRATIC using 'first thing to check' — distinct from gold"
+  },
+  {
+    "id": "H016",
+    "mode": "STUDY_PLAN",
+    "text": "what's my priority for tomorrow",
+    "args": {},
+    "rationale": "STUDY_PLAN using 'priority' + 'tomorrow' — distinct from gold"
+  },
+  {
+    "id": "H017",
+    "mode": "STUDY_PLAN",
+    "text": "where should I focus my time",
+    "args": {},
+    "rationale": "STUDY_PLAN using 'focus my time' — distinct from gold"
+  },
+  {
+    "id": "H018",
+    "mode": "STUDY_PLAN",
+    "text": "build me a review plan",
+    "args": {},
+    "rationale": "STUDY_PLAN using 'review plan' — distinct from gold"
+  },
+  {
+    "id": "H019",
+    "mode": "STUDY_PLAN",
+    "text": "what topics need work",
+    "args": {},
+    "rationale": "STUDY_PLAN using 'need work' — distinct from gold"
+  },
+  {
+    "id": "H020",
+    "mode": "STUDY_PLAN",
+    "text": "how do I close my gaps",
+    "args": {},
+    "rationale": "STUDY_PLAN using 'close my gaps' — distinct from gold"
+  },
+  {
+    "id": "H021",
+    "mode": "AMBIGUOUS",
+    "text": "this makes no sense to me",
+    "args": {},
+    "rationale": "Edge case — ambiguous (no clear mode), should default or hit lowest-confidence bucket"
+  },
+  {
+    "id": "H022",
+    "mode": "MULTI",
+    "text": "explain then test me",
+    "args": {},
+    "rationale": "Edge case — multi-intent (EXPLAIN+QUIZ), first-mode-wins acceptable"
+  },
+  {
+    "id": "H023",
+    "mode": "EXPLAIN",
+    "text": "why is B wrng for P1-B-040",
+    "args": { "qid": "P1-B-040" },
+    "rationale": "Edge case — typo test ('wrng' for 'wrong'); only QID overlap with gold G001 by design"
+  },
+  {
+    "id": "H024",
+    "mode": "OOD",
+    "text": "tell me a joke",
+    "args": {},
+    "rationale": "Edge case — out-of-domain; should classify as default or lowest-confidence mode"
+  }
+]

@@ -197,25 +197,57 @@ const MayLearnerState = {
     _trackMisconception(data, qid, topic, answer, question) {
         let patternKey = null;
         let choices = question.Choices;
+        let wrongText = null;
         if (choices && typeof choices === 'object') {
-            let wrongText = choices[answer];
-            if (wrongText) {
-                let t = topic.toLowerCase();
-                if (t.includes('classification') || t.includes('current')) patternKey = 'misclassification';
-                else if (t.includes('variance')) patternKey = 'variance_sign_confusion';
-                else if (t.includes('budget') || t.includes('forecast')) patternKey = 'budget_component_error';
-                else if (t.includes('cost') && t.includes('standard')) patternKey = 'cost_method_confusion';
-                else if (t.includes('depreciation')) patternKey = 'depreciation_method_error';
-                else if (t.includes('cash') && t.includes('flow')) patternKey = 'cash_flow_classification';
-                else if (t.includes('ratio') || t.includes('analysis')) patternKey = 'ratio_misapplication';
-                else if (t.includes('control') || t.includes('coso')) patternKey = 'control_framework_error';
-                else patternKey = 'general_error';
-            }
+            wrongText = choices[answer];
         }
+
+        // Deterministic keyword chain (existing behavior, runs unconditionally).
+        if (wrongText) {
+            let t = topic.toLowerCase();
+            if (t.includes('classification') || t.includes('current')) patternKey = 'misclassification';
+            else if (t.includes('variance')) patternKey = 'variance_sign_confusion';
+            else if (t.includes('budget') || t.includes('forecast')) patternKey = 'budget_component_error';
+            else if (t.includes('cost') && t.includes('standard')) patternKey = 'cost_method_confusion';
+            else if (t.includes('depreciation')) patternKey = 'depreciation_method_error';
+            else if (t.includes('cash') && t.includes('flow')) patternKey = 'cash_flow_classification';
+            else if (t.includes('ratio') || t.includes('analysis')) patternKey = 'ratio_misapplication';
+            else if (t.includes('control') || t.includes('coso')) patternKey = 'control_framework_error';
+            else patternKey = 'general_error';
+        }
+
+        // Phase 2b — agent augmentation (hidden beta). Overrides the keyword
+        // chain when the flag is on AND the agent has a higher-confidence match
+        // for this (wrongText, topic, stem) input. Otherwise keyword wins.
+        let agentDlTag = null;
+        try {
+            if (typeof window !== 'undefined' && typeof window.MisconceptionClassifierClassify === 'function') {
+                if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_MISCONCEPTION_AGENT')) {
+                    const stem = (question && question.Stem) ? String(question.Stem) : '';
+                    const agentResult = window.MisconceptionClassifierClassify({
+                        wrongText: wrongText || '', topic: topic || '', stem: stem
+                    });
+                    if (agentResult && agentResult.confidence >= 0.7 && agentResult.pattern) {
+                        patternKey = agentResult.pattern;
+                        agentDlTag = agentResult.dlTag || null;
+                    }
+                }
+            }
+        } catch (e) { /* agent failure → keep keyword result */ }
+
         if (patternKey) {
             let existing = data.misconceptionPatterns.find(p => p.pattern === patternKey);
-            if (existing) { existing.count++; if (!existing.questionIds.includes(qid)) existing.questionIds.push(qid); if (!existing._topics.includes(topic)) existing._topics.push(topic); existing.lastSeen = new Date().toISOString(); }
-            else { data.misconceptionPatterns.push({ pattern: patternKey, count: 1, questionIds: [qid], _topics: [topic], firstSeen: new Date().toISOString(), lastSeen: new Date().toISOString() }); }
+            const entryBase = { pattern: patternKey, count: 1, questionIds: [qid], _topics: [topic], firstSeen: new Date().toISOString(), lastSeen: new Date().toISOString() };
+            if (agentDlTag) entryBase.dlTag = agentDlTag;
+            if (existing) {
+                existing.count++;
+                if (!existing.questionIds.includes(qid)) existing.questionIds.push(qid);
+                if (!existing._topics.includes(topic)) existing._topics.push(topic);
+                if (agentDlTag && !existing.dlTag) existing.dlTag = agentDlTag;
+                existing.lastSeen = new Date().toISOString();
+            } else {
+                data.misconceptionPatterns.push(entryBase);
+            }
         }
     },
 

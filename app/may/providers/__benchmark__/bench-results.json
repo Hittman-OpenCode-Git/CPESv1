@@ -1,0 +1,20 @@
+{
+  "phase": "Phase 0 architecture validation spike",
+  "generatedAt": "2026-08-26T19:45:50.716Z",
+  "environment": "Node.js v24.19.0",
+  "totalIntents": 48,
+  "modeAccuracy": 1,
+  "modeCorrect": 48,
+  "modeTotal": 48,
+  "argsCorrect": 48,
+  "argsTotal": 18,
+  "latencyMs": {
+    "p50": 0.0056,
+    "p95": 0.1658,
+    "p99": 1.764,
+    "mean": 0.06940833333333334,
+    "max": 1.764
+  },
+  "failures": [],
+  "failuresCount": 0
+}

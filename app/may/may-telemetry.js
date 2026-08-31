@@ -107,6 +107,68 @@ var MayTelemetry = (function() {
     if (_shouldLog()) {
       try { console.debug('[MayTelemetry] Engagement:', data.action); } catch (e) {}
     }
+    // Phase 2b+ — Whisperer agent. Hidden beta: only runs when flag is on AND
+    // the agent is available. The agent returns a short nudge string;
+    // when off, no nudge is emitted and the existing telemetry path runs
+    // unchanged. The hard exam-integrity block lives inside the agent
+    // (whisperer/index.js:whisper).
+    try {
+      if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_WHISPERER')) {
+        if (typeof window !== 'undefined' && typeof window.WhispererWhisper === 'function') {
+          var elapsedMs = (entry.timestamp ? Date.now() - Date.parse(entry.timestamp) : 0) || 0;
+          var dwellMs = (data && typeof data.dwellMs === 'number') ? data.dwellMs : 0;
+          var errorStreak = (data && typeof data.errorStreak === 'number') ? data.errorStreak : 0;
+          var examIntegrity = !!(data && data.examIntegrity);
+          var whisper = window.WhispererWhisper({
+            elapsedMs: elapsedMs, dwellMs: dwellMs,
+            errorStreak: errorStreak, examIntegrity: examIntegrity,
+            mode: (data && data.mode) || null
+          });
+          if (whisper && whisper.nudge) {
+            entry.data.whisper = {
+              nudge: whisper.nudge,
+              delayMs: whisper.timing ? whisper.timing.delayMs : 0,
+              maxShownMs: whisper.timing ? whisper.timing.maxShownMs : 0,
+              rationale: whisper.rationale || null
+            };
+          }
+        }
+      }
+    } catch (e) { /* whisper failure → never break telemetry */ }
+    return entry;
+  }
+
+  /**
+   * trackFallback — Phase 1 (MAY-Phase-1).
+   * Logs a routing fallback event when the real-intent provider is bypassed
+   * in favor of the deterministic stub due to low confidence.
+   *
+   * @param {Object} data
+   *   - from: provider id that was bypassed ('real-intent')
+   *   - to: provider id that handled the request ('stub-intent')
+   *   - confidence: real provider's NLI entailment score (0..1)
+   *   - threshold: gate threshold that triggered the fallback (e.g., 0.60)
+   *   - reason: 'low_confidence' | 'provider_unavailable' | 'worker_error'
+   *   - text: optional source text (truncated to 80 chars for buffer)
+   */
+  function trackFallback(data) {
+    var entry = {
+      type: 'fallback',
+      timestamp: _now(),
+      data: {
+        from: data.from || null,
+        to: data.to || null,
+        confidence: typeof data.confidence === 'number' ? data.confidence : null,
+        threshold: typeof data.threshold === 'number' ? data.threshold : null,
+        reason: data.reason || 'unspecified',
+        text: data.text ? String(data.text).slice(0, 80) : null
+      }
+    };
+    _buffer.push(entry);
+    if (_buffer.length > MAX_BUFFER) _buffer.shift();
+    if (_shouldLog()) {
+      try { console.debug('[MayTelemetry] Fallback:', entry.data.from, '→', entry.data.to, 'confidence=' + entry.data.confidence + ' reason=' + entry.data.reason); } catch (e) {}
+    }
     return entry;
   }
 
@@ -156,6 +218,7 @@ var MayTelemetry = (function() {
     trackIntervention: trackIntervention,
     trackAdoption: trackAdoption,
     trackEngagement: trackEngagement,
+    trackFallback: trackFallback,
     startTimer: startTimer,
     endTimer: endTimer,
     snapshot: snapshot,

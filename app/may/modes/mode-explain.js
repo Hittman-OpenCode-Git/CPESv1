@@ -87,6 +87,21 @@ const MayCoachingModeExplain = (function() {
 
   function _extractPrinciple(question) {
     var ec = question.explanationCorrect || '';
+    // Phase 2b — when ENABLE_FORMULA_RETRIEVER is on, agent augments/overrides
+    // the regex chain. Hidden-beta; existing regex chain is the fallback.
+    var agentHit = null;
+    try {
+      if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_FORMULA_RETRIEVER')) {
+        if (typeof FormulaRetrieverRetrieve === 'function') {
+          var stem = (question && question.Stem) ? String(question.Stem) : '';
+          var res = FormulaRetrieverRetrieve({ questionContext: ec, stem: stem, explanationCorrect: ec });
+          if (res && res.asc) agentHit = res;
+        }
+      }
+    } catch (e) { /* keep regex fallback */ }
+    if (agentHit && agentHit.asc) {
+      return agentHit.formula ? (agentHit.asc + ' — ' + agentHit.formula) : agentHit.asc;
+    }
     var ascMatch = ec.match(/ASC\s+\d{3}(-\d{2}(-\d{2})?)?/);
     if (ascMatch) return ascMatch[0];
     var cosoMatch = ec.match(/COSO/);

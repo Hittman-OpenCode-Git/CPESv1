@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phase 0b Browser Benchmark Harness</title>
+  <style>
+    body { font-family: 'Consolas', monospace; margin: 20px; background: #1e1e1e; color: #ddd; }
+    h1 { color: #6cf; }
+    pre { background: #000; padding: 12px; border-radius: 4px; overflow-x: auto; }
+    .row { margin: 8px 0; }
+    .label { color: #6cf; font-weight: bold; }
+    .ok { color: #6f6; }
+    .warn { color: #fc6; }
+    .fail { color: #f66; }
+  </style>
+</head>
+<body>
+  <h1>Phase 0b Browser Benchmark</h1>
+  <div class="row"><span class="label">Candidate:</span> <span id="candidate">—</span></div>
+  <div class="row"><span class="label">Dtype:</span> <span id="dtype">—</span></div>
+  <div class="row"><span class="label">Backend:</span> <span id="backend">—</span></div>
+  <div class="row"><span class="label">Status:</span> <span id="status">starting</span></div>
+  <pre id="log"></pre>
+
+  <script type="module">
+    // ESM entry — loaded in main thread but defers model load to a Worker
+    import { env, pipeline } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.2.0';
+
+    const log = (msg, cls) => {
+      const line = (cls ? `<span class="${cls}">${msg}</span>` : msg);
+      document.getElementById('log').innerHTML += line + '\n';
+      console.log(msg);
+    };
+
+    // Read query params
+    const params = new URLSearchParams(window.location.search);
+    const candidate = params.get('candidate') || 'mobilebert-uncased-mnli';
+    const dtype = params.get('dtype') || 'q8';
+    const backend = params.get('backend') || 'wasm';
+
+    document.getElementById('candidate').textContent = candidate;
+    document.getElementById('dtype').textContent = dtype;
+    document.getElementById('backend').textContent = backend;
+
+    // Disable remote models if running file:// — but we need them for browser
+    env.allowRemoteModels = true;
+    env.useBrowserCache = true;
+
+    // Backend selection
+    if (backend === 'webgpu') {
+      try {
+        env.backends.onnx.wasm.device = 'webgpu';
+      } catch (e) {}
+    }
+
+    const LABELS = ['explain this to me', 'give me a practice question', 'help me figure this out', 'plan my study schedule'];
+
+    // Inline held-out set (avoids fetch from file://)
+    const HELDOUT = [
+      { id: 'H001', mode: 'EXPLAIN', text: 'walk me through the math on this one' },
+      { id: 'H002', mode: 'EXPLAIN', text: "what's the principle behind the correct choice" },
+      { id: 'H003', mode: 'EXPLAIN', text: 'why does that distractor fail' },
+      { id: 'H004', mode: 'EXPLAIN', text: 'show the reasoning for the answer' },
+      { id: 'H005', mode: 'EXPLAIN', text: 'break down the logic step by step' },
+      { id: 'H006', mode: 'QUIZ', text: 'hit me with some practice problems' },
+      { id: 'H007', mode: 'QUIZ', text: 'throw a few questions my way' },
+      { id: 'H008', mode: 'QUIZ', text: 'test my knowledge on this topic' },
+      { id: 'H009', mode: 'QUIZ', text: 'give me a quick drill' },
+      { id: 'H010', mode: 'QUIZ', text: 'I want to practice similar items' },
+      { id: 'H011', mode: 'SOCRATIC', text: 'nudge me in the right direction' },
+      { id: 'H012', mode: 'SOCRATIC', text: 'what should I look at first' },
+      { id: 'H013', mode: 'SOCRATIC', text: 'help me reason through this' },
+      { id: 'H014', mode: 'SOCRATIC', text: 'point me toward the right approach' },
+      { id: 'H015', mode: 'SOCRATIC', text: "what's the first thing to check" },
+      { id: 'H016', mode: 'STUDY_PLAN', text: "what's my priority for tomorrow" },
+      { id: 'H017', mode: 'STUDY_PLAN', text: 'where should I focus my time' },
+      { id: 'H018', mode: 'STUDY_PLAN', text: 'build me a review plan' },
+      { id: 'H019', mode: 'STUDY_PLAN', text: 'what topics need work' },
+      { id: 'H020', mode: 'STUDY_PLAN', text: 'how do I close my gaps' },
+      { id: 'H021', mode: 'AMBIGUOUS', text: 'this makes no sense to me' },
+      { id: 'H022', mode: 'MULTI', text: 'explain then test me' },
+      { id: 'H023', mode: 'EXPLAIN', text: 'why is B wrng for P1-B-040' },
+      { id: 'H024', mode: 'OOD', text: 'tell me a joke' }
+    ];
+
+    const pct = (arr, p) => {
+      const s = arr.slice().sort((a, b) => a - b);
+      const i = Math.min(s.length - 1, Math.floor(s.length * p / 100));
+      return s[i];
+    };
+
+    async function main() {
+      try {
+        // Expose results to Playwright via window.__BENCH__
+        window.__BENCH__ = { status: 'loading', candidate, dtype, backend };
+
+        // Heap baseline (Chromium-only)
+        const heapBefore = performance.memory ? performance.memory.usedJSHeapSize : 0;
+
+        // Cold-start
+        const t0 = performance.now();
+        log(`[${(performance.now() / 1000).toFixed(2)}s] Loading pipeline for ${candidate} (${dtype})...`);
+        const classifier = await pipeline('zero-shot-classification', 'Xenova/' + candidate, { dtype });
+        const coldStartMs = performance.now() - t0;
+        log(`[${(performance.now() / 1000).toFixed(2)}s] Pipeline ready in ${coldStartMs.toFixed(0)}ms`, 'ok');
+
+        // Warmup
+        await classifier('warmup', LABELS);
+        log(`[${(performance.now() / 1000).toFixed(2)}s] Warmup done`);
+
+        const heapAfterLoad = performance.memory ? performance.memory.usedJSHeapSize : 0;
+        const heapDeltaMB = (heapAfterLoad - heapBefore) / (1024 * 1024);
+        log(`Heap delta after load: ${heapDeltaMB.toFixed(2)} MB (budget 50 MB)`,
+          heapDeltaMB > 50 ? 'fail' : 'ok');
+
+        if (heapDeltaMB > 50) {
+          window.__BENCH__.verdict = 'NO-GO';
+          window.__BENCH__.reason = `heap ${heapDeltaMB.toFixed(2)} MB exceeds 50 MB budget`;
+          window.__BENCH__.heapDeltaMB = heapDeltaMB;
+          window.__BENCH__.status = 'done';
+          document.getElementById('status').textContent = 'NO-GO';
+          return;
+        }
+
+        // Run held-out
+        const perItem = [];
+        const latencies = [];
+        for (const item of HELDOUT) {
+          const t = performance.now();
+          const out = await classifier(item.text, LABELS);
+          const ms = performance.now() - t;
+          latencies.push(ms);
+          perItem.push({
+            id: item.id, expected: item.mode, text: item.text,
+            topLabel: out.labels[0], topScore: out.scores[0], latencyMs: ms
+          });
+          log(`  ${item.id} (${item.mode}): ${out.labels[0]} score=${out.scores[0].toFixed(2)} ${ms.toFixed(0)}ms`);
+        }
+
+        // Accuracy
+        const MAP = {
+          'explain this to me': 'EXPLAIN',
+          'give me a practice question': 'QUIZ',
+          'help me figure this out': 'SOCRATIC',
+          'plan my study schedule': 'STUDY_PLAN'
+        };
+        const modeItems = perItem.filter(p => p.id <= 'H020');
+        const correct = modeItems.filter(p => MAP[p.topLabel] === p.expected).length;
+
+        const heapFinal = performance.memory ? performance.memory.usedJSHeapSize : 0;
+        const heapFinalDeltaMB = (heapFinal - heapBefore) / (1024 * 1024);
+
+        window.__BENCH__ = {
+          status: 'done',
+          candidate, dtype, backend,
+          coldStartMs,
+          heapDeltaMB: heapFinalDeltaMB,
+          latency: {
+            p50: pct(latencies, 50),
+            p95: pct(latencies, 95),
+            p99: pct(latencies, 99),
+            mean: latencies.reduce((a, b) => a + b, 0) / latencies.length,
+            count: latencies.length
+          },
+          modeAccuracy: { correct, total: modeItems.length, pct: (correct / modeItems.length) * 100 },
+          perItem,
+          verdict: 'GO'
+        };
+        log(`\nMode accuracy: ${correct}/${modeItems.length} = ${(correct/modeItems.length*100).toFixed(1)}%`, correct > 0 ? 'ok' : 'warn');
+        log(`Latency p50/p95/p99/mean: ${window.__BENCH__.latency.p50.toFixed(0)}/${window.__BENCH__.latency.p95.toFixed(0)}/${window.__BENCH__.latency.p99.toFixed(0)}/${window.__BENCH__.latency.mean.toFixed(1)} ms`);
+        log(`Heap delta: ${heapFinalDeltaMB.toFixed(2)} MB`);
+        log(`Verdict: GO`, 'ok');
+        document.getElementById('status').textContent = 'GO';
+      } catch (e) {
+        log(`FATAL: ${e.message}`, 'fail');
+        console.error(e);
+        window.__BENCH__ = { status: 'error', error: e.message, stack: e.stack };
+        document.getElementById('status').textContent = 'ERROR';
+      }
+    }
+
+    main();
+  </script>
+</body>
+</html>

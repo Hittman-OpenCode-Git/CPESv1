@@ -376,6 +376,64 @@ const MayDecisionEngine = (function() {
       decisionEngineVersion: 'MAY019-1.0',
       computedAt: new Date().toISOString()
     };
+    // Phase 2b+ — Planner agent decoration. Hidden beta: only engages for
+    // study-plan-family rules (D4, D6, D9) when the flag is on AND the
+    // agent is available. When off or for non-study rules, nextAction is null
+    // and the upstream decision is preserved unchanged.
+    try {
+      if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_PLANNER_AGENT')) {
+        if (typeof window !== 'undefined' && typeof window.PlannerPlan === 'function' && decision && decision._meta && decision._meta.triggeringRule) {
+          var weakTopics = (decision && Array.isArray(decision.weakTopics)) ? decision.weakTopics : [];
+          var readinessScore = (decision && typeof decision.readinessScore === 'number') ? decision.readinessScore : null;
+          var daysUntilExam = (decision && typeof decision.daysUntilExam === 'number') ? decision.daysUntilExam : null;
+          var hintDep = (decision && decision.hintDependency) ? decision.hintDependency : null;
+          var planResult = window.PlannerPlan({
+            upstreamRuleId: decision._meta.triggeringRule,
+            daysUntilExam: daysUntilExam,
+            readinessScore: readinessScore,
+            weakTopics: weakTopics,
+            hintDependency: hintDep
+          });
+          if (planResult && planResult.nextAction) {
+            decision._meta.nextAction = planResult.nextAction;
+            decision._meta.nextActionRationale = planResult.rationale || null;
+          }
+        }
+      }
+    } catch (e) { /* planner failure → no nextAction added */ }
+    // Phase 2b — annotate with hint-level from the hint-calibrator agent when
+    // its flag is on. Hidden-beta default false: when off, hintLevel is the
+    // legacy mapping (priority → hint level).
+    try {
+      if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_HINT_CALIBRATOR')) {
+        if (typeof HintCalibratorCalibrate === 'function') {
+          var accuracy = (decision && decision._meta && typeof decision._meta.accuracy === 'number')
+            ? decision._meta.accuracy : null;
+          // The calibrator takes accuracy/hintRate/cognitiveLevel; we have
+          // limited signals here, so fall back to a `priority` → base accuracy mapping.
+          if (accuracy === null) {
+            var priority = (decision && decision.priority) ? decision.priority : 'medium';
+            accuracy = priority === 'critical' ? 30 : (priority === 'high' ? 50 : (priority === 'medium' ? 65 : 80));
+          }
+          var hintRate = (decision && decision._meta && typeof decision._meta.hintRate === 'number')
+            ? decision._meta.hintRate : 30;
+          var cog = (decision && decision._meta && decision._meta.cognitiveLevel) || 'APPLY';
+          var cal = HintCalibratorCalibrate({
+            accuracy: accuracy, hintRate: hintRate, cognitiveLevel: cog,
+            decisionRuleId: (decision && decision._meta && decision._meta.triggeringRule) || null
+          });
+          if (cal && typeof cal.hintLevel === 'number') {
+            decision._meta.hintLevel = cal.hintLevel;
+            decision._meta.hintLevelRationale = cal.rationale || null;
+          }
+        }
+      } else {
+        // Legacy mapping: critical → 5 (full direct), high → 4, medium → 3, low → 2.
+        var p = (decision && decision.priority) ? decision.priority : 'medium';
+        var map = { 'critical': 5, 'high': 4, 'medium': 3, 'low': 2 };
+        decision._meta.hintLevel = map[p] || 3;
+      }
+    } catch (e) { /* never break dispatch */ }
     return decision;
   }
 

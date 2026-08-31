@@ -1,0 +1,232 @@
+{
+  "phase": "Phase 0b Node.js pre-screen",
+  "generatedAt": "2026-08-26T21:32:44.424Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "candidate": "nli-deberta-v3-xsmall",
+  "dtype": "q4",
+  "pipeline": "zero-shot-classification",
+  "labels": [
+    "explain this to me",
+    "give me a practice question",
+    "help me figure this out",
+    "plan my study schedule"
+  ],
+  "heapBudgetMB": 50,
+  "coldStartMs": 48864,
+  "heapAfterLoadMB": 95.91108703613281,
+  "heapDeltaAtLoadMB": 82.7160415649414,
+  "heapAfterBenchMB": 95.98889923095703,
+  "heapDeltaFinalMB": 82.79385375976562,
+  "verdict": "NO-GO",
+  "reason": "final heap delta 82.79MB exceeds budget 50MB",
+  "latencyMs": {
+    "p50": 70,
+    "p95": 78,
+    "p99": 79,
+    "mean": 69.75,
+    "count": 24
+  },
+  "heldoutModeAccuracy": {
+    "correct": 7,
+    "total": 20,
+    "pct": 35
+  },
+  "perItem": [
+    {
+      "id": "H001",
+      "text": "walk me through the math on this one",
+      "expected": "EXPLAIN",
+      "topLabel": "explain this to me",
+      "topScore": 0.47892767197808384,
+      "latencyMs": 78
+    },
+    {
+      "id": "H002",
+      "text": "what's the principle behind the correct choice",
+      "expected": "EXPLAIN",
+      "topLabel": "give me a practice question",
+      "topScore": 0.4489729196441279,
+      "latencyMs": 74
+    },
+    {
+      "id": "H003",
+      "text": "why does that distractor fail",
+      "expected": "EXPLAIN",
+      "topLabel": "explain this to me",
+      "topScore": 0.3674658541923919,
+      "latencyMs": 74
+    },
+    {
+      "id": "H004",
+      "text": "show the reasoning for the answer",
+      "expected": "EXPLAIN",
+      "topLabel": "help me figure this out",
+      "topScore": 0.5445480852002842,
+      "latencyMs": 71
+    },
+    {
+      "id": "H005",
+      "text": "break down the logic step by step",
+      "expected": "EXPLAIN",
+      "topLabel": "help me figure this out",
+      "topScore": 0.49141126117990547,
+      "latencyMs": 72
+    },
+    {
+      "id": "H006",
+      "text": "hit me with some practice problems",
+      "expected": "QUIZ",
+      "topLabel": "give me a practice question",
+      "topScore": 0.7194452897674117,
+      "latencyMs": 67
+    },
+    {
+      "id": "H007",
+      "text": "throw a few questions my way",
+      "expected": "QUIZ",
+      "topLabel": "help me figure this out",
+      "topScore": 0.4474224366731495,
+      "latencyMs": 68
+    },
+    {
+      "id": "H008",
+      "text": "test my knowledge on this topic",
+      "expected": "QUIZ",
+      "topLabel": "help me figure this out",
+      "topScore": 0.5187915953995569,
+      "latencyMs": 70
+    },
+    {
+      "id": "H009",
+      "text": "give me a quick drill",
+      "expected": "QUIZ",
+      "topLabel": "explain this to me",
+      "topScore": 0.4818774099886001,
+      "latencyMs": 67
+    },
+    {
+      "id": "H010",
+      "text": "I want to practice similar items",
+      "expected": "QUIZ",
+      "topLabel": "give me a practice question",
+      "topScore": 0.3897589888676948,
+      "latencyMs": 63
+    },
+    {
+      "id": "H011",
+      "text": "nudge me in the right direction",
+      "expected": "SOCRATIC",
+      "topLabel": "help me figure this out",
+      "topScore": 0.4539523177400199,
+      "latencyMs": 68
+    },
+    {
+      "id": "H012",
+      "text": "what should I look at first",
+      "expected": "SOCRATIC",
+      "topLabel": "help me figure this out",
+      "topScore": 0.37118022500210157,
+      "latencyMs": 68
+    },
+    {
+      "id": "H013",
+      "text": "help me reason through this",
+      "expected": "SOCRATIC",
+      "topLabel": "explain this to me",
+      "topScore": 0.4694512355168706,
+      "latencyMs": 67
+    },
+    {
+      "id": "H014",
+      "text": "point me toward the right approach",
+      "expected": "SOCRATIC",
+      "topLabel": "explain this to me",
+      "topScore": 0.5684893784324477,
+      "latencyMs": 70
+    },
+    {
+      "id": "H015",
+      "text": "what's the first thing to check",
+      "expected": "SOCRATIC",
+      "topLabel": "give me a practice question",
+      "topScore": 0.37496050884754795,
+      "latencyMs": 75
+    },
+    {
+      "id": "H016",
+      "text": "what's my priority for tomorrow",
+      "expected": "STUDY_PLAN",
+      "topLabel": "give me a practice question",
+      "topScore": 0.43381160306041266,
+      "latencyMs": 70
+    },
+    {
+      "id": "H017",
+      "text": "where should I focus my time",
+      "expected": "STUDY_PLAN",
+      "topLabel": "explain this to me",
+      "topScore": 0.46503302709786065,
+      "latencyMs": 75
+    },
+    {
+      "id": "H018",
+      "text": "build me a review plan",
+      "expected": "STUDY_PLAN",
+      "topLabel": "plan my study schedule",
+      "topScore": 0.3567471637247078,
+      "latencyMs": 64
+    },
+    {
+      "id": "H019",
+      "text": "what topics need work",
+      "expected": "STUDY_PLAN",
+      "topLabel": "give me a practice question",
+      "topScore": 0.4489773919107293,
+      "latencyMs": 63
+    },
+    {
+      "id": "H020",
+      "text": "how do I close my gaps",
+      "expected": "STUDY_PLAN",
+      "topLabel": "explain this to me",
+      "topScore": 0.5062333808667818,
+      "latencyMs": 72
+    },
+    {
+      "id": "H021",
+      "text": "this makes no sense to me",
+      "expected": "AMBIGUOUS",
+      "topLabel": "give me a practice question",
+      "topScore": 0.4538343306339793,
+      "latencyMs": 70
+    },
+    {
+      "id": "H022",
+      "text": "explain then test me",
+      "expected": "MULTI",
+      "topLabel": "explain this to me",
+      "topScore": 0.7252905938020271,
+      "latencyMs": 66
+    },
+    {
+      "id": "H023",
+      "text": "why is B wrng for P1-B-040",
+      "expected": "EXPLAIN",
+      "topLabel": "help me figure this out",
+      "topScore": 0.41543236274538264,
+      "latencyMs": 79
+    },
+    {
+      "id": "H024",
+      "text": "tell me a joke",
+      "expected": "OOD",
+      "topLabel": "explain this to me",
+      "topScore": 0.6284461094797581,
+      "latencyMs": 63
+    }
+  ]
+}

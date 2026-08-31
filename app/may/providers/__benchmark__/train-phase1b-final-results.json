@@ -1,0 +1,78 @@
+{
+  "phase": "Phase 1b final training",
+  "model": "nreimers/MiniLM-L6-H384-uncased",
+  "labels": [
+    "EXPLAIN",
+    "QUIZ",
+    "SOCRATIC",
+    "STUDY_PLAN"
+  ],
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.3875
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.387
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.3854
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.3817
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.3778
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.3724
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.3709
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.3697
+    }
+  ],
+  "heldOutAccuracy": 0.4166666666666667,
+  "perMode": {
+    "EXPLAIN": {
+      "correct": 1,
+      "total": 6
+    },
+    "QUIZ": {
+      "correct": 4,
+      "total": 5
+    },
+    "SOCRATIC": {
+      "correct": 0,
+      "total": 5
+    },
+    "STUDY_PLAN": {
+      "correct": 5,
+      "total": 5
+    },
+    "AMBIGUOUS": {
+      "correct": 0,
+      "total": 1
+    },
+    "MULTI": {
+      "correct": 0,
+      "total": 1
+    },
+    "OOD": {
+      "correct": 0,
+      "total": 1
+    }
+  },
+  "generatedAt": "2026-08-26T23:41:01Z",
+  "exportDir": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\app\\may\\providers\\models\\mobilebert-intent-q8",
+  "exportSizeMB": 22.84775447845459
+}

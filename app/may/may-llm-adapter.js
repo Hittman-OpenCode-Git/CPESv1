@@ -255,10 +255,45 @@ const MayLLMAdapter = (function() {
           _config.stats.successCount++;
           _config.stats.totalLatencyMs += elapsed;
 
+          // Phase 2b+ — Guard post-filter. Hidden beta. When the flag is on
+          // AND the agent blocks the draft, substitute the deterministic
+          // ExplanationCorrect bank text from may-context-builder.js:182.
+          var content = response.content || null;
+          var blockedByGuard = false;
+          try {
+            if (typeof MayFeatureFlags !== 'undefined' && MayFeatureFlags.isEnabled('ENABLE_GUARD_AGENT')) {
+              if (typeof window !== 'undefined' && typeof window.GuardCheck === 'function') {
+                var qData = (context && context.question) ? context.question : null;
+                var bankText = (qData && (qData.ExplanationCorrect || qData.explanationCorrect))
+                  ? (qData.ExplanationCorrect || qData.explanationCorrect) : '';
+                var bankArr = bankText ? [bankText] : [];
+                var parsed = null;
+                if (content) {
+                  try { parsed = (typeof content === 'string') ? JSON.parse(content) : content; } catch (e) { parsed = null; }
+                }
+                var draftText = (parsed && parsed.explanation) ? parsed.explanation
+                  : (parsed && parsed.rationale) ? parsed.rationale
+                  : (typeof content === 'string' ? content : '');
+                var gResult = window.GuardCheck({
+                  draftResponse: draftText,
+                  citedBank: bankArr,
+                  mode: mode
+                });
+                if (gResult && gResult.block) {
+                  blockedByGuard = true;
+                  // Replace with bank text (deterministic — no invention).
+                  content = bankText
+                    ? JSON.stringify({ explanation: bankText, mode: mode, guardBlocked: true })
+                    : JSON.stringify({ explanation: '[Guard blocked draft; no bank text available]', mode: mode, guardBlocked: true });
+                }
+              }
+            }
+          } catch (e) { /* guard failure → keep provider content */ }
+
           // Ensure response has all required fields
           return {
             success: true,
-            content: response.content || null,
+            content: content,
             confidence: (typeof response.confidence === 'number') ? response.confidence : 0.8,
             provider: response.provider || provider.getProviderId(),
             latency: response.latency || elapsed,
@@ -267,7 +302,8 @@ const MayLLMAdapter = (function() {
             metadata: {
               requestId: requestId,
               timestamp: new Date().toISOString(),
-              mode: mode
+              mode: mode,
+              _guardBlocked: blockedByGuard || undefined
             }
           };
         }
