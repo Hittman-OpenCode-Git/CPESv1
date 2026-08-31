@@ -8,7 +8,7 @@
       "Question Packs": 5,
       "Case Banks": 5
     },
-    "duration": 1,
+    "duration": 6,
     "confidence": 100
   },
   {
@@ -24,7 +24,7 @@
     "statistics": {
       "Cases Checked": 75
     },
-    "duration": 175,
+    "duration": 640,
     "confidence": 100
   },
   {
@@ -113,7 +113,7 @@
       "Domain: Planning, Budgeting, and Forecasting": 12,
       "Domain: Technology and Analytics": 11
     },
-    "duration": 117,
+    "duration": 275,
     "confidence": 100
   },
   {
@@ -129,7 +129,7 @@
       "P2 Items Checked": 0,
       "P2 Cases Checked": 0
     },
-    "duration": 0,
+    "duration": 2,
     "confidence": 100
   },
   {
@@ -191,7 +191,7 @@
       "Cognitive: Remember": 1,
       "Cognitive: Understand": 37
     },
-    "duration": 117,
+    "duration": 298,
     "confidence": 100
   },
   {
@@ -365,7 +365,7 @@
       "Orphan Exhibits (unreferenced)": 115,
       "Orphan References (missing exhibits)": 0
     },
-    "duration": 118,
+    "duration": 210,
     "confidence": 100
   },
   {
@@ -407,7 +407,7 @@
       "Correct Explanation Avg Length": 527,
       "Wrong Explanation Avg Length": 345
     },
-    "duration": 392,
+    "duration": 1448,
     "confidence": 100
   },
   {
@@ -2136,7 +2136,7 @@
       "totalErrors": 0,
       "totalWarnings": 1662
     },
-    "duration": 1152,
+    "duration": 1417,
     "confidence": 100
   }
 ]

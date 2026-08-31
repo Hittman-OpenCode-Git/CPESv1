@@ -145,6 +145,16 @@
 <!-- MAY: Engine + Dashboard Layer -->
 <script src="app/may/may-core.js"></script>
 <script src="app/may/may-llm-types.js"></script>
+<script src="app/may/providers/stub-intent-provider.js"></script>
+<script src="app/may/providers/real-intent-provider.js"></script>
+<!-- Phase 2b — micro-agents -->
+<script src="app/may/agents/misconception-classifier/index.js"></script>
+<script src="app/may/agents/formula-retriever/index.js"></script>
+<script src="app/may/agents/hint-calibrator/index.js"></script>
+<!-- Phase 2b+ — additional micro-agents (worker.js loaded by Worker constructor) -->
+<script src="app/may/agents/whisperer/index.js"></script>
+<script src="app/may/agents/guard/index.js"></script>
+<script src="app/may/agents/planner/index.js"></script>
 <script src="app/may/may-llm-provider-registry.js"></script>
 <script src="app/may/may-llm-adapter.js"></script>
 <script src="app/may/may-learner-profile.js"></script>

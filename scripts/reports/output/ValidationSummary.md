@@ -1,21 +1,21 @@
 # Validation Report Summary
 
-**Generated:** 2026-08-26T04:14:31.639Z
+**Generated:** 2026-08-30T01:17:47.481Z
 **Project:** CMA Part 1 Exam Simulator v2.0
 
 ## Results
 
 | Validator | Status | Errors | Warnings | Duration |
 |-----------|--------|--------|----------|----------|
-| Repository Validator | PASS | 0 | 0 | 1ms |
-| Metadata Validator | WARN | 0 | 4 | 175ms |
-| Blueprint Validator | WARN | 0 | 70 | 117ms |
-| Part 2 Blueprint Validator | WARN | 0 | 1 | 0ms |
-| Difficulty Validator | WARN | 0 | 39 | 117ms |
-| Reference Validator | WARN | 0 | 159 | 118ms |
-| Explanation Validator | WARN | 0 | 24 | 392ms |
+| Repository Validator | PASS | 0 | 0 | 6ms |
+| Metadata Validator | WARN | 0 | 4 | 640ms |
+| Blueprint Validator | WARN | 0 | 70 | 275ms |
+| Part 2 Blueprint Validator | WARN | 0 | 1 | 2ms |
+| Difficulty Validator | WARN | 0 | 39 | 298ms |
+| Reference Validator | WARN | 0 | 159 | 210ms |
+| Explanation Validator | WARN | 0 | 24 | 1448ms |
 | Case Integrity Validator | WARN | 0 | 10 | 36ms |
-| PsychometricValidator | WARN | 0 | 1662 | 1152ms |
+| PsychometricValidator | WARN | 0 | 1662 | 1417ms |
 
 **Total Errors:** 0
 **Total Warnings:** 1969
@@ -25,14 +25,14 @@
 
 ### Repository Validator
 **Status:** PASS
-**Duration:** 1ms
+**Duration:** 6ms
 **Statistics:**
 - Question Packs: 5
 - Case Banks: 5
 
 ### Metadata Validator
 **Status:** WARN
-**Duration:** 175ms
+**Duration:** 640ms
 **Statistics:**
 - Cases Checked: 75
 **Warnings:**
@@ -43,7 +43,7 @@
 
 ### Blueprint Validator
 **Status:** WARN
-**Duration:** 117ms
+**Duration:** 275ms
 **Statistics:**
 - Cases Checked: 75
 - Cross-Domain Cases: 2
@@ -127,7 +127,7 @@
 
 ### Part 2 Blueprint Validator
 **Status:** WARN
-**Duration:** 0ms
+**Duration:** 2ms
 **Statistics:**
 - P2 MCQ Packs Found: 0
 - P2 Case Packs Found: 0
@@ -138,7 +138,7 @@
 
 ### Difficulty Validator
 **Status:** WARN
-**Duration:** 117ms
+**Duration:** 298ms
 **Statistics:**
 - Cases Checked: 75
 - Items Checked: 400
@@ -195,7 +195,7 @@
 
 ### Reference Validator
 **Status:** WARN
-**Duration:** 118ms
+**Duration:** 210ms
 **Statistics:**
 - Cases Checked: 75
 - Total References: 0
@@ -364,7 +364,7 @@
 
 ### Explanation Validator
 **Status:** WARN
-**Duration:** 392ms
+**Duration:** 1448ms
 **Statistics:**
 - MCQ Questions Checked: 2620
 - Case Items Checked: 400
@@ -428,7 +428,7 @@
 
 ### PsychometricValidator
 **Status:** WARN
-**Duration:** 1152ms
+**Duration:** 1417ms
 **Statistics:**
 - AbsoluteLanguageValidator.questionsScanned: 2120
 - AbsoluteLanguageValidator.findings: 794
