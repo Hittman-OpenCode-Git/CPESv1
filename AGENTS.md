@@ -447,3 +447,40 @@ Reference implementation: `C:\Users\User\AppData\Local\Temp\opencode\split_p2a_f
 ### 18.5 Closeout Logging
 
 Third-party review closeouts are logged in the governing revision history (Part 2: `knowledge/REVISION_HISTORY_P2.md`) including: reviewer, scope, verdict, open recommendations closed, and process lessons. Precedent: P2-031 (160/160 Pack A verification closeout).
+
+---
+
+## 19. Board-Approved Guidance (2026-08-31)
+
+**Effective:** 2026-08-31. Approved by project governance board following the pause-timer/submission-guard session and recent Part 2 authoring waves. These directives are standing guidance; they extend, not replace, §14 (Authoring Priority) and §16/§17.
+
+### 19.1 Exam-Integrity Timer Rule (Session 2026-08-31 — Pause Bug)
+
+The elapsed-time clock must reflect only **actively-running** time. Paused time must never count as elapsed.
+
+1. Any resume path (pause overlay resume, `recoveryResume` on reload) must advance the session start epoch by the paused duration so the countdown does not leap toward zero or force an unintended submit.
+2. Do not introduce or retain "dead" timing fields that are declared but never read (precedent: `pausedElapsed` masked the pause bug for an extended period). If a timing field is not consumed, either consume it or remove it during the change that touches it.
+3. The forced-submit path at `remaining() === 0` is a legitimate time-expiry behavior; it must not be gated behind user confirmation.
+
+### 19.2 Behavior-Change/Test-Coupling Rule (Session 2026-08-31 — Submit Guard)
+
+When a learner-facing behavior changes (timing, submission, navigation, integrity gating), the **same change-set must update the automated test assertions** that encode the prior behavior.
+
+- Precedent: `scripts/thorough_test.js` encoded single-click-submit; the new two-stage confirmation required updating three submit flows (normal, zero-answer, double-submit) in the same change-set. A suite that encodes old behavior is a false-green risk, not a correctness signal.
+- Verification must be re-run in the same session: `thorough_test`, `smoke_test`, and `npm run preflight` all green before closeout.
+
+### 19.3 Learner-Submission Guard Rule (Session 2026-08-31)
+
+User-initiated exam submission requires **two affirmative responses in two different screen locations** before finalizing — centered modal, then a bottom-anchored confirmation bar — **unless the exam timer has elapsed** (time-expiry submits immediately, no confirmation).
+
+- Both stages must expose a Cancel/abort path that returns to the session without submitting.
+- The two affirmations must be physically distinct screen locations so a single double-click at one spot cannot submit.
+- All learner-facing submission entry points (review-screen Submit, gate-fail Submit) must route through the same guard (`ExamSessionManager.confirmFinish()`).
+
+### 19.4 Part 2 Certification Clone Gate (Precedent DL-046-P2, P2-059)
+
+Before any Part 2 certification batch flips state, run a **clone scan across ALL packs** (not just the batch) comparing candidate items pairwise on **(normalized numeric-literal multiset + Topic string)**.
+
+- Identical multiset + identical Topic = suspected rotation-clone; confirm by human review before archiving the newer duplicate.
+- Jaccard/similarity checks alone miss these (prose differs across the traded pair); the numeric-multiset + Topic pair is the reliable screen.
+- Survivor repair must also fix any shared distractor value errors inherited by the paired items (precedent: P2-C-181 $1,364,000 padding distractor corrected to $1,369,600).

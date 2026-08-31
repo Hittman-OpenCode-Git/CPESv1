@@ -2608,12 +2608,22 @@ const ExamSessionManager = {
 
     pause() {
         if (!state.session || isExamIntegrityMode(state.session)) return;
-        state.session.paused = !state.session.paused;
-        if (state.session.paused) {
+        let s = state.session;
+        s.paused = !s.paused;
+        if (s.paused) {
+            // Record when the current pause began so the elapsed-time computation
+            // can exclude it when the session is resumed.
+            s._pausedAt = Date.now();
             clearInterval(timerInt);
             clearInterval(autoSaveInt);
             AnalyticsCollector.logEvent('session_pause', {});
         } else {
+            // Fold the just-ended pause period out of elapsed time by advancing
+            // the session start epoch. This prevents the stalled timer from
+            // counting down to zero (and force-submitting) immediately on resume.
+            let pausedMs = Date.now() - (s._pausedAt || Date.now());
+            if (pausedMs > 0) s.start += pausedMs;
+            s._pausedAt = null;
             this.startTimer();
             this.startAutoSave();
             AnalyticsCollector.logEvent('session_resume', {});
@@ -2644,6 +2654,79 @@ const ExamSessionManager = {
         }
     },
 
+    // ============================================================
+    // Submit confirmation — guards against accidental exam submission.
+    // Two affirmative responses are required in two DIFFERENT screen
+    // locations (a centered modal, then a bottom-anchored bar) before
+    // the session is finalized. If time has fully elapsed, submission
+    // proceeds immediately without confirmation (a timeout submits).
+    // ============================================================
+    confirmFinish() {
+        let s = state.session;
+        if (!s || s.completed) return;
+        if (this._confirmActive) return;
+        // Time has elapsed — submit immediately; no confirmation required.
+        if (this.remaining() === 0) { this.finish(); return; }
+
+        this._confirmActive = true;
+
+        const clearConfirm = () => {
+            this._confirmActive = false;
+            const m = document.getElementById('submitConfirmModal');
+            const b = document.getElementById('submitConfirmBar');
+            if (m) m.remove();
+            if (b) b.remove();
+        };
+        // If time expires while a confirmation is open, auto-submit directly.
+        const guard = setInterval(() => {
+            if (!this._confirmActive) { clearInterval(guard); return; }
+            if (this.remaining() === 0) {
+                clearInterval(guard);
+                clearConfirm();
+                this.finish();
+            }
+        }, 500);
+
+        // Stage 1 — centered modal (affirmative button mid-viewport).
+        const modal = document.createElement('div');
+        modal.id = 'submitConfirmModal';
+        modal.className = 'confirm-modal';
+        modal.innerHTML =
+            '<div class="confirm-backdrop"></div>' +
+            '<div class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="confirmTitle1">' +
+            '<h2 id="confirmTitle1">Submit Your Exam?</h2>' +
+            '<p>Ending this session will submit your answers for scoring and cannot be undone.</p>' +
+            '<div class="confirm-actions-top">' +
+            '<button id="confirmCancel1" class="secondary">Cancel</button>' +
+            '<button id="confirmYes1" class="primary">Yes, I&#39;m finished</button>' +
+            '</div></div>';
+        document.body.appendChild(modal);
+
+        const cancel = () => { clearInterval(guard); clearConfirm(); };
+
+        $('confirmCancel1').onclick = cancel;
+
+        $('confirmYes1').onclick = () => {
+            modal.remove();
+            // Stage 2 — bottom-anchored bar (affirmative button at bottom edge
+            // of the viewport — a different screen location from Stage 1).
+            // Ensure the review content is scrolled to the bottom so the
+            // final-confirmation bar is fully visible in context.
+            window.scrollTo(0, document.body.scrollHeight);
+            document.documentElement.scrollTop = document.documentElement.scrollHeight;
+            const bar = document.createElement('div');
+            bar.id = 'submitConfirmBar';
+            bar.className = 'confirm-bar';
+            bar.innerHTML =
+                '<span class="confirm-bar-label">Final confirmation — submitting ends this session.</span>' +
+                '<button id="confirmCancel2" class="secondary">Cancel</button>' +
+                '<button id="confirmYes2" class="danger-cta">Confirm Final Submission</button>';
+            document.body.appendChild(bar);
+            $('confirmCancel2').onclick = cancel;
+            $('confirmYes2').onclick = () => { clearInterval(guard); clearConfirm(); this.finish(); };
+        };
+    },
+
     // S130 — Auto-save all missed question IDs to recovery-candidates collection
     _saveMissedToCollection(s) {
         if (!s) return;
@@ -2672,7 +2755,14 @@ const ExamSessionManager = {
     remaining() {
         let s = state.session;
         if (!s) return 0;
-        return Math.max(0, s.duration - Math.floor((Date.now() - s.start) / 1000));
+        // Elapsed time must exclude any currently-active pause period, otherwise
+        // a rendered/displayed paused session would show time draining.
+        let elapsedActiveMs = Date.now() - s.start;
+        if (s.paused) {
+            let pausedMs = Date.now() - (s._pausedAt || Date.now());
+            if (pausedMs > 0) elapsedActiveMs -= pausedMs;
+        }
+        return Math.max(0, s.duration - Math.floor(elapsedActiveMs / 1000));
     },
 
     render() {
@@ -2704,7 +2794,7 @@ const ExamSessionManager = {
               <button id="reviewMcqsGate" class="secondary">Return to Review</button>
               ${CmaScoringDisclaimer('compact')}
             </div>`;
-                    $('submitEarlyGate').onclick = () => ExamSessionManager.finish();
+                    $('submitEarlyGate').onclick = () => ExamSessionManager.confirmFinish();
                     $('reviewMcqsGate').onclick = () => { s.qIndex = Math.max(0, s.mcqs.length - 1); ExamSessionManager.render(); };
                     return;
                 }
@@ -3279,7 +3369,7 @@ const ExamSessionManager = {
             let b = $('backToItems');
             if (b) b.onclick = () => this.render();
             let f = $('finishExam');
-            if (f) f.onclick = this.finish.bind(this);
+            if (f) f.onclick = this.confirmFinish.bind(this);
         } catch (e) {
             console.error('renderReviewScreen error:', e);
             $('sessionView').innerHTML = '<div class="empty-state"><h2>Something went wrong</h2><p>Your session is auto-saved. <a href="#" onclick="location.reload()" style="text-decoration:underline;cursor:pointer;">Reload the page</a> to resume.</p></div>';
@@ -5609,6 +5699,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             document.body.classList.add('session-active');
             showView('sessionView');
+            // Fold any persisted paused time out of the elapsed clock before the
+            // timer starts, so a restored paused session does not count its own
+            // pause period as elapsed on the next resume (prevents forced submit).
+            if (state.session.paused && state.session._pausedAt) {
+                state.session.start += (Date.now() - state.session._pausedAt);
+                state.session._pausedAt = null;
+            }
             ExamSessionManager.render();
             ExamSessionManager.startTimer();
             ExamSessionManager.startAutoSave();
@@ -5776,7 +5873,7 @@ function updateSliderNote() {
     let note = $('sliderNote');
     if (!slider || !note) return;
     let val = parseInt(slider.value);
-    let labels = { 1: 'Easiest — 50% Easy, 20% Mod-Easy, 15% Moderate', 2: 'Easier — 30% Easy, 25% Mod-Easy, 25% Moderate', 3: 'Balanced — spread across all 5 difficulty levels', 4: 'Harder — focus on Moderate, Difficult, Very Difficult', 5: 'Hardest — 40% Difficult, 35% Very Difficult' };
+    let labels = { 1: 'Easiest — 50% Easy, 20% Mod-Easy, 15% Moderate, 10% Difficult, 5% Very Difficult', 2: 'Easier — 30% Easy, 25% Mod-Easy, 25% Moderate, 15% Difficult, 5% Very Difficult', 3: 'Balanced — spread across all 5 difficulty levels', 4: 'Harder — focus on Moderate, Difficult, Very Difficult', 5: 'Hardest — 40% Difficult, 35% Very Difficult' };
     note.textContent = 'Distribution: ' + (labels[val] || 'Balanced — spread across all 5 difficulty levels');
 }
 
